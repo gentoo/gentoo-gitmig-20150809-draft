@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/kdeutils-meta-4.8.2.ebuild,v 1.1 2012/04/04 23:59:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/kdeutils-meta-4.8.2.ebuild,v 1.2 2012/04/05 16:50:29 dilfridge Exp $
 
 EAPI=4
 inherit kde4-meta-pkg
@@ -17,7 +17,6 @@ RDEPEND="
 	$(add_kdebase_dep kdf)
 	$(add_kdebase_dep kgpg)
 	$(add_kdebase_dep kremotecontrol)
-	$(add_kdebase_dep ksecrets)
 	$(add_kdebase_dep ktimer)
 	$(add_kdebase_dep kwallet)
 	$(add_kdebase_dep superkaramba)

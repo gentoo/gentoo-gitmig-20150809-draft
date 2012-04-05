@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.8.1.ebuild,v 1.3 2012/04/04 17:18:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.8.1.ebuild,v 1.4 2012/04/05 16:49:36 dilfridge Exp $
 
 EAPI=4
 inherit kde4-meta-pkg
@@ -32,7 +32,6 @@ RDEPEND="
 	$(add_kdebase_dep knewstuff)
 	$(add_kdebase_dep kpasswdserver)
 	$(add_kdebase_dep kquitapp)
-	$(add_kdebase_dep ksecrets)
 	$(add_kdebase_dep kstart)
 	$(add_kdebase_dep ktimezoned)
 	$(add_kdebase_dep ktraderclient)

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-runtime-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.70 2012/04/04 23:59:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.71 2012/04/05 16:49:36 dilfridge Exp $
+
+  05 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdebase-runtime-meta-4.8.1.ebuild, kdebase-runtime-meta-4.8.2.ebuild:
+  Drop ksecrets as it's alpha code
 
 *kdebase-runtime-meta-4.8.2 (04 Apr 2012)
 
