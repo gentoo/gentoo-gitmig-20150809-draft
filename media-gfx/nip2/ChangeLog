@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/nip2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.45 2012/03/28 07:29:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.46 2012/04/05 03:33:33 jdhore Exp $
+
+  05 Apr 2012; Jeff Horelick <jdhore@gentoo.org> nip2-7.26.4.ebuild:
+  marked x86 per bug 404783
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> nip2-7.26.4.ebuild:
   Stable for amd64, wrt bug #404783
