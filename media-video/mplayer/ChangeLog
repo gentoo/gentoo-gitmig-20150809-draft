@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.846 2012/04/05 12:02:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.847 2012/04/05 18:42:48 vapier Exp $
+
+  05 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  mplayer-1.0_rc4_p20120405.ebuild, +files/mplayer-1.0_rc4-pkg-config.patch:
+  Fix pkg-config handling with libdvd{nav,read} #410189.
 
   05 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   mplayer-1.0_rc4_p20120405.ebuild, mplayer-9999.ebuild:
