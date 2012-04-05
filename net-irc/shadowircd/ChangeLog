@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/shadowircd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/shadowircd/ChangeLog,v 1.5 2012/04/05 10:17:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/shadowircd/ChangeLog,v 1.6 2012/04/05 20:37:32 jdhore Exp $
+
+  05 Apr 2012; Jeff Horelick <jdhore@gentoo.org> shadowircd-6.3.2.1.ebuild:
+  marked x86 per bug 410849
 
   05 Apr 2012; Agostino Sarubbo <ago@gentoo.org> shadowircd-6.3.2.1.ebuild:
   Stable for amd64, wrt bug #410849
