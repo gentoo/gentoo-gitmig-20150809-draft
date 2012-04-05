@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/wt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.8 2012/04/05 15:10:50 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.9 2012/04/05 15:15:53 mattm Exp $
+
+*wt-3.2.1 (05 Apr 2012)
+
+  05 Apr 2012; Matthew Marlowe <mattm@gentoo.org> +wt-3.2.1.ebuild:
+  bump for newest release with temporary mask
 
   05 Apr 2012; Matthew Marlowe <mattm@gentoo.org> -wt-3.1.5.ebuild,
   -wt-3.1.6.ebuild, -wt-3.1.7.ebuild, -wt-3.2.0.ebuild:
