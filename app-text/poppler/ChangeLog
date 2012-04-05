@@ -1,6 +1,13 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.308 2012/03/07 22:09:55 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.309 2012/04/05 20:01:05 dilfridge Exp $
+
+*poppler-0.18.4-r1 (05 Apr 2012)
+
+  05 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -poppler-0.18.3.ebuild, +poppler-0.18.4-r1.ebuild,
+  +files/poppler-0.18.4-newline.patch:
+  Do not add a newline at file end on copy, bug 402071
 
 *poppler-0.18.4 (07 Mar 2012)
 
