@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.26 2012/04/04 04:09:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.27 2012/04/05 11:15:27 mgorny Exp $
+
+*systemd-44 (05 Apr 2012)
+
+  05 Apr 2012; Michał Górny <mgorny@gentoo.org> -systemd-43.ebuild,
+  +systemd-44.ebuild,
+  +files/0001-util-never-follow-symlinks-in-rm_rf_children.patch:
+  Version bump wrt bug #376047.
 
   04 Apr 2012; Michał Górny <mgorny@gentoo.org> systemd-29-r3.ebuild,
   systemd-29-r6.ebuild, systemd-39.ebuild, systemd-43.ebuild:

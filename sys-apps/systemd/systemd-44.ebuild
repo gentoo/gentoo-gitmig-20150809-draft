@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-43.ebuild,v 1.3 2012/04/04 04:09:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44.ebuild,v 1.1 2012/04/05 11:15:27 mgorny Exp $
 
 EAPI=4
 
@@ -13,10 +13,11 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="acl audit cryptsetup gtk lzma pam plymouth selinux tcpd"
+IUSE="acl audit cryptsetup lzma pam plymouth selinux tcpd"
 
-# Vala-0.10 doesn't work with libnotify 0.7.1
-VALASLOT="0.14"
+# We need to depend on sysvinit for sulogin which is used in the rescue
+# mode. Bug #399615.
+
 # A little higher than upstream requires
 # but I had real trouble with 2.6.37 and systemd.
 MINKV="2.6.38"
@@ -32,13 +33,6 @@ RDEPEND=">=sys-apps/dbus-1.4.10
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
 	cryptsetup? ( sys-fs/cryptsetup )
-	gtk? (
-		dev-libs/dbus-glib
-		>=dev-libs/glib-2.26
-		dev-libs/libgee:0
-		x11-libs/gtk+:2
-		>=x11-libs/libnotify-0.7
-		!sys-apps/systemd-ui )
 	lzma? ( app-arch/xz-utils )
 	pam? ( virtual/pam )
 	plymouth? ( sys-boot/plymouth )
@@ -51,25 +45,16 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-util/gperf
 	dev-util/intltool
-	gtk? ( dev-lang/vala:${VALASLOT} )
 	>=sys-kernel/linux-headers-${MINKV}"
 
-# Due to vala being broken.
-AUTOTOOLS_IN_SOURCE_BUILD=1
+PATCHES=(
+	# bug #408879: Session Logout File Deletion Weakness (CVE-2012-1174)
+	"${FILESDIR}"/0001-util-never-follow-symlinks-in-rm_rf_children.patch
+)
 
 pkg_setup() {
 	enewgroup lock # used by var-lock.mount
 	enewgroup tty 5 # used by mount-setup for /dev/pts
-}
-
-src_prepare() {
-	# Force the rebuild of .vala sources
-	touch src/*.vala || die
-
-	# Fix hardcoded path in .vala.
-	sed -i -e 's:/lib/systemd:/usr/lib/systemd:g' src/*.vala || die
-
-	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -86,17 +71,14 @@ src_configure() {
 		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
-		$(use_enable gtk)
 		$(use_enable lzma xz)
 		$(use_enable pam)
 		$(use_enable plymouth)
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
+		# now in sys-apps/systemd-ui
+		--disable-gtk
 	)
-
-	if use gtk; then
-		export VALAC="$(type -p valac-${VALASLOT})"
-	fi
 
 	autotools-utils_src_configure
 }
@@ -161,6 +143,7 @@ pkg_postinst() {
 	elog "be installed:"
 	optfeature 'dev-python/dbus-python' 'for systemd-analyze'
 	optfeature 'dev-python/pycairo[svg]' 'for systemd-analyze plotting ability'
+	optfeature 'sys-apps/systemd-ui' 'for GTK+ systemadm UI and gnome-ask-password-agent'
 	elog
 
 	ewarn "Please note this is a work-in-progress and many packages in Gentoo"
