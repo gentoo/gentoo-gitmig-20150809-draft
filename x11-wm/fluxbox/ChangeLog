@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.300 2012/04/03 21:14:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.301 2012/04/05 21:01:24 phajdan.jr Exp $
+
+  05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> fluxbox-1.3.2.ebuild:
+  x86 stable wrt bug #409339
 
   03 Apr 2012; Jeroen Roovers <jer@gentoo.org> fluxbox-1.3.2.ebuild:
   Stable for HPPA (bug #409339).
