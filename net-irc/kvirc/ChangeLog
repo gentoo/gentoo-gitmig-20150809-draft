@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.142 2012/03/24 11:57:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.143 2012/04/05 21:02:40 phajdan.jr Exp $
+
+  05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kvirc-4.2_pre6066.ebuild:
+  x86 stable wrt bug #408789
 
   24 Mar 2012; Agostino Sarubbo <ago@gentoo.org> kvirc-4.2_pre6066.ebuild:
   Stable for amd64, wrt bug #408789
