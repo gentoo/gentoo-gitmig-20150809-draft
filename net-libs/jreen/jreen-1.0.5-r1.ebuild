@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.0.3.ebuild,v 1.2 2012/04/01 08:13:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.0.5-r1.ebuild,v 1.1 2012/04/05 18:36:12 johu Exp $
 
 EAPI=4
 
@@ -31,5 +31,9 @@ DEPEND="
 	>=x11-libs/qt-gui-4.6.0:4
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-fix-typo.patch"
+)
 
 S="${WORKDIR}/${MY_P}"
