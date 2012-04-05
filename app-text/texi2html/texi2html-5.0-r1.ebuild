@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-5.0-r1.ebuild,v 1.2 2012/03/21 20:40:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-5.0-r1.ebuild,v 1.3 2012/04/05 17:42:57 ssuominen Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~hppa ~mips ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-lin
 IUSE="unicode"
 
 RDEPEND=">=dev-lang/perl-5.10.1
-	dev-perl/libintl-perl
+	>=dev-perl/libintl-perl-1.200
 	unicode? (
 		dev-perl/Text-Unidecode
 		dev-perl/Unicode-EastAsianWidth
