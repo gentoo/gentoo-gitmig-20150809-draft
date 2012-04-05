@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logsurfer+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/ChangeLog,v 1.8 2012/03/28 07:42:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/ChangeLog,v 1.9 2012/04/05 05:24:08 jdhore Exp $
+
+  05 Apr 2012; Jeff Horelick <jdhore@gentoo.org> logsurfer+-1.8-r1.ebuild:
+  marked x86 per bug 404591
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> logsurfer+-1.8-r1.ebuild:
   Stable for amd64, wrt bug #404591
