@@ -1,6 +1,10 @@
 # ChangeLog for app-office/pybliographer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.24 2011/07/29 22:05:54 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.25 2012/04/05 20:42:02 phajdan.jr Exp $
+
+  05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pybliographer-1.2.14.ebuild:
+  x86 stable wrt bug #404615
 
 *pybliographer-1.2.14 (29 Jul 2011)
 

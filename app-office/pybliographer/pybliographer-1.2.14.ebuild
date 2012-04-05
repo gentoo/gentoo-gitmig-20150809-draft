@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.14.ebuild,v 1.1 2011/07/29 22:05:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.14.ebuild,v 1.2 2012/04/05 20:42:02 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/pybliographer/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DOCS="AUTHORS ChangeLog* NEWS TODO README"
