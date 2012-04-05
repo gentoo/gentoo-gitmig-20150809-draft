@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.1.6.ebuild,v 1.1 2012/03/31 11:03:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.1.6.ebuild,v 1.2 2012/04/05 16:47:51 swift Exp $
 
 EAPI="3"
 # Support for 4 depends on python.eclass
@@ -30,8 +30,8 @@ RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
-	ruby? ( dev-lang/swig )
-	python? ( dev-lang/swig )"
+	ruby? ( >=dev-lang/swig-2.0.4-r1 )
+	python? ( >=dev-lang/swig-2.0.4-r1 )"
 
 # tests are not meant to be run outside of the
 # full SELinux userland repo
