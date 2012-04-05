@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mongo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/ChangeLog,v 1.3 2012/03/08 01:31:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/ChangeLog,v 1.4 2012/04/05 19:40:37 flameeyes Exp $
+
+*mongo-1.6.2 (05 Apr 2012)
+
+  05 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> +mongo-1.6.2.ebuild:
+  Version bump.
 
 *mongo-1.6.1 (08 Mar 2012)
 
