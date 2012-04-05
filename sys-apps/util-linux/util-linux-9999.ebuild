@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.28 2012/02/24 16:35:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.29 2012/04/05 18:38:40 vapier Exp $
 
 EAPI="3"
 
@@ -30,6 +30,7 @@ IUSE="+cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang stat
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
 	!<sys-apps/sysvinit-2.88-r3
+	!sys-block/eject
 	!<sys-libs/e2fsprogs-libs-1.41.8
 	!<sys-fs/e2fsprogs-1.41.8
 	cramfs? ( sys-libs/zlib )
