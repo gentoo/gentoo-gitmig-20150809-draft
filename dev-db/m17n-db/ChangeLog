@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.51 2012/04/04 18:01:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.52 2012/04/05 08:18:09 jdhore Exp $
+
+  05 Apr 2012; Jeff Horelick <jdhore@gentoo.org> m17n-db-1.6.3.ebuild:
+  marked x86 per bug 404627
 
   04 Apr 2012; Jeroen Roovers <jer@gentoo.org> m17n-db-1.6.3.ebuild:
   Stable for HPPA (bug #404627).
