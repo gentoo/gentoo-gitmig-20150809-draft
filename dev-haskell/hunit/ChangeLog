@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.46 2012/03/28 07:01:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.47 2012/04/05 20:47:28 phajdan.jr Exp $
+
+  05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> hunit-1.2.4.2.ebuild:
+  x86 stable wrt bug #404637
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> hunit-1.2.4.2.ebuild:
   Stable for amd64, wrt bug #404637
