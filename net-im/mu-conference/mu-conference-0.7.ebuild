@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.7.ebuild,v 1.2 2009/03/06 18:12:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.7.ebuild,v 1.3 2012/04/05 21:19:14 phajdan.jr Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="https://gna.org/projects/mu-conference/"
 SRC_URI="http://download.gna.org/mu-conference/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 SLOT="0"
 
 DEPEND="dev-libs/expat
