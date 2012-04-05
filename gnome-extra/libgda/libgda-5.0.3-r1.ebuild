@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.1 2012/04/01 18:20:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.2 2012/04/05 09:47:46 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -47,7 +47,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.35.5
 	>=app-text/gnome-doc-utils-0.9
-	doc? ( >=dev-util/gtk-doc-1 )"
+	doc? ( >=dev-util/gtk-doc-1 )
+	java? ( virtual/jdk:1.6 )"
 #	vala? ( >=dev-lang/vala-0.14:0.14[vapigen] )
 
 pkg_setup() {
