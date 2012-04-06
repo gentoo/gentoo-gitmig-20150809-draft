@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Load-XS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load-XS/ChangeLog,v 1.4 2012/03/19 11:29:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load-XS/ChangeLog,v 1.5 2012/04/06 19:10:10 ago Exp $
+
+  06 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Class-Load-XS-0.40.0.ebuild:
+  Stable for amd64, wrt bug #395297
 
 *Class-Load-XS-0.40.0 (19 Mar 2012)
 

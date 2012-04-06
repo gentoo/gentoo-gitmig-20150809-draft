@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Package-Stash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.34 2012/04/01 16:37:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.35 2012/04/06 19:09:26 ago Exp $
+
+  06 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Package-Stash-0.330.0.ebuild:
+  Stable for amd64, wrt bug #395297
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> Package-Stash-0.330.0.ebuild:
   Add ~alpha/~ia64/~s390/~sh/~sparc wrt #403413
