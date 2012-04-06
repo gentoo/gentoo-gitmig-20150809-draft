@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>mrness@gentoo.org</email>
-  <name>Alin Nastac</name>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription> SendEmail is a lightweight, completely command line based, 
 SMTP email agent. If you have the need to send email from a command prompt 
