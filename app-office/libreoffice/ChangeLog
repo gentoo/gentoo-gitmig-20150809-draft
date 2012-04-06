@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.278 2012/04/03 16:07:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.279 2012/04/06 10:57:26 scarabeus Exp $
+
+  06 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.5.2.2.ebuild,
+  libreoffice-3.5.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Disable quickstarter feature as it is broken yet again. Wrt bug#408685. If
+  anyone wants this feature contact upstream about rewritting it properly.
 
   03 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/libreoffice-3.5.2-icu-49-part2.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.44 2012/04/02 07:39:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.45 2012/04/06 10:57:26 scarabeus Exp $
 
 EAPI=4
 
@@ -244,12 +244,6 @@ pkg_setup() {
 	python_pkg_setup
 
 	[[ ${MERGE_TYPE} != binary ]] && check-reqs_pkg_pretend
-
-	if ! use gtk; then
-		ewarn "If you want the LibreOffice systray quickstarter to work"
-		ewarn "activate the 'gtk' use flag."
-		ewarn
-	fi
 }
 
 src_unpack() {
@@ -376,6 +370,8 @@ src_configure() {
 	#   affecting the nsplugin that is always ON
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
+	# --disable-systray: quickstarter does not actually work at all so do not
+	#   promote it
 	# --disable-zenity: disable build icon
 	# --enable-extension-integration: enable any extension integration support
 	# --with-{max-jobs,num-cpus}: ensuring parallel building
@@ -410,6 +406,7 @@ src_configure() {
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
+		--disable-systray \
 		--disable-strip-solver \
 		--disable-zenity \
 		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
@@ -443,7 +440,6 @@ src_configure() {
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
 		$(use_enable gtk3) \
-		$(use_enable gtk systray) \
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \

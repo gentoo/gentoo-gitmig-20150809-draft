@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.35 2012/04/03 12:53:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.36 2012/04/06 10:57:26 scarabeus Exp $
 
 EAPI=4
 
@@ -243,11 +243,6 @@ pkg_setup() {
 		CHECKREQS_DISK_BUILD="6G"
 		check-reqs_pkg_pretend
 	fi
-	if ! use gtk; then
-		ewarn "If you want the LibreOffice systray quickstarter to work"
-		ewarn "activate the 'gtk' use flag."
-		ewarn
-	fi
 }
 
 src_unpack() {
@@ -412,6 +407,7 @@ src_configure() {
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
+		--disable-systray \
 		--disable-static-gtk \
 		--disable-strip-solver \
 		--disable-ugly \
@@ -447,7 +443,6 @@ src_configure() {
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
 		--disable-gtk3 \
-		$(use_enable gtk systray) \
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
