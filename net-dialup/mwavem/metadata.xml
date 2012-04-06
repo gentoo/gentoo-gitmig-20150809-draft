@@ -2,10 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-dialup</herd>
-<maintainer>
-  <email>mrness@gentoo.org</email>
-  <name>Alin Nastac</name>
-  <description>Primary Maintainer</description>
-</maintainer>
 <longdescription>User level application for IBM Mwave modem.</longdescription>
 </pkgmetadata>

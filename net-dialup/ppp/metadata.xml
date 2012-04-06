@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>net-dialup</herd>
-  <maintainer>
-    <email>mrness@gentoo.org</email>
-    <name>Alin Nastac</name>
-  </maintainer>
   <longdescription>ppp (Paul's PPP Package) is an open source package which
   implements the Point-to-Point Protocol</longdescription>
   <use>
