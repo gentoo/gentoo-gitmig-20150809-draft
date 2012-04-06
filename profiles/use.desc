@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.479 2012/03/18 14:12:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.480 2012/04/06 14:56:10 pesa Exp $
 
 # Keep them sorted
 
@@ -162,7 +162,7 @@ jingle - Enables voice calls for jabber
 joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
 jpeg2k - Support for JPEG 2000, a wavelet-based image compression format
-kde - Adds support for kde-base/kde (K Desktop Enviroment)
+kde - Adds support for KDE (K Desktop Environment)
 kdeprefix - Makes a KDE prefixed install into /usr/kde/${SLOT} if enabled or into /usr (FHS compatible) otherwise
 kerberos - Adds kerberos support
 kolab - Adds support for the Kolab groupware server
