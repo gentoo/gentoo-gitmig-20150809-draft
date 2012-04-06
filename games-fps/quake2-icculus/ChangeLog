@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.45 2012/04/01 20:04:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.46 2012/04/06 19:23:15 tupone Exp $
+
+  06 Apr 2012; Tupone Alfredo <tupone@gentoo.org>
+  quake2-icculus-0.16.1-r1.ebuild,
+  +files/quake2-icculus-0.16.1-x11_mouse.patch:
+  Fix x11 mouse. Patch from bug #358955 by ocrbj
 
   01 Apr 2012; Tupone Alfredo <tupone@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild, +files/quake2-icculus-0.16.1-x11_soft.patch:

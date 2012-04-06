@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.26 2012/04/01 20:04:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.27 2012/04/06 19:23:15 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -82,6 +82,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-no-asm-io.patch \
 		"${FILESDIR}"/${P}-gnusource.patch \
 		"${FILESDIR}"/${P}-x11_soft.patch \
+		"${FILESDIR}"/${P}-x11_mouse.patch \
 		"${FILESDIR}"/${P}-alsa.patch
 
 	if use xatrix ; then
