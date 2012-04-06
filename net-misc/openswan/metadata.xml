@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>floppym@gentoo.org</email>
+	<name>Mike Gilbert</name>
   </maintainer>
   <longdescription>From the Openswan web site: Openswan is an Open Source 
 implementation of IPsec for the Linux operating system. Is it a code fork 
