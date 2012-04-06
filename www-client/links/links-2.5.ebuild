@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.5.ebuild,v 1.12 2012/03/31 18:04:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.5.ebuild,v 1.13 2012/04/06 20:34:22 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -103,8 +103,10 @@ src_install() {
 	if use X; then
 		newicon Links_logo.png ${PN}.png
 		make_desktop_entry "${PN} -g" Links ${PN} 'Network;WebBrowser'
-		echo 'MimeType=x-scheme-handler/http;x-scheme-handler/https;' \
-			>> "${ED}"usr/share/applications/*.desktop
+		local d="${ED}"/usr/share/applications
+		echo 'MimeType=x-scheme-handler/http;' >> "${d}"/*.desktop
+		use ssl && sed -i -e 's:x-scheme-handler/http;:&x-scheme-handler/https;:' \
+			"${d}"/*.desktop
 	fi
 
 	dohtml doc/links_cal/*
