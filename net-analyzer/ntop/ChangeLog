@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.110 2012/01/06 17:53:58 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.111 2012/04/06 21:53:23 pacho Exp $
+
+  06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #63588
 
   06 Jan 2012; Mark Loeser <halcy0n@gentoo.org> ntop-4.0.3.ebuild:
   Stable for ppc/ppc64; bug #382091
