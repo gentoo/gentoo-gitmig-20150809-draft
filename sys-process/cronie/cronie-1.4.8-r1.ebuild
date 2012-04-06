@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8-r1.ebuild,v 1.3 2012/02/13 17:44:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8-r1.ebuild,v 1.4 2012/04/06 18:26:25 swift Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ HOMEPAGE="https://fedorahosted.org/cronie/wiki"
 
 LICENSE="ISC BSD BSD-2"
 KEYWORDS="~amd64 ~arm ~sparc ~x86"
-IUSE="anacron inotify pam"
+IUSE="anacron inotify pam selinux"
 
 DEPEND="pam? ( virtual/pam )
 	anacron? ( !sys-process/anacron )"
@@ -29,6 +29,7 @@ src_configure() {
 	SPOOL_DIR="/var/spool/cron/crontabs" econf \
 		$(use_with inotify ) \
 		$(use_with pam ) \
+		$(use_with selinux ) \
 		$(use_enable anacron ) \
 		--with-daemon_username=cron \
 		--with-daemon_groupname=cron \
