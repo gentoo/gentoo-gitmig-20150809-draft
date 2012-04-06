@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
-<maintainer>
-  <email>mrness@gentoo.org</email>
-  <name>Alin Nastac</name>
-</maintainer>
 <longdescription>Web Administrative interface for a statistical-algorithmic hybrid anti-spam filter</longdescription>
 </pkgmetadata>
