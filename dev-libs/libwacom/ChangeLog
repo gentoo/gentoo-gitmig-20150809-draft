@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libwacom
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.1 2012/04/06 05:31:06 tetromino Exp $
+
+*libwacom-0.4 (06 Apr 2012)
+
+  06 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libwacom-0.4.ebuild, +metadata.xml:
+  New ebuild for a library to identify Wacom tablet features; used by
+  gnome-3.4.
+
