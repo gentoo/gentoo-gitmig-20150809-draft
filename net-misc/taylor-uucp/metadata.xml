@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>mrness@gentoo.org</email>
-  <name>Alin Nastac</name>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>The standard UUCP package of the Free Software Foundation.
 It provides everything you need to make a UUCP connection.</longdescription>

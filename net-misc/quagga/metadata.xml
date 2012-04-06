@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>mrness@gentoo.org</email>
-    <description>Primary Maintainer (until Amir returns...)</description>
-  </maintainer>
-  <maintainer>
     <email>flameeyes@gentoo.org</email>
   </maintainer>
   <longdescription>
