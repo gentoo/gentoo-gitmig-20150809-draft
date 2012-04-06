@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.32 2012/01/15 15:16:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.33 2012/04/06 12:29:10 pesa Exp $
+
+  06 Apr 2012; Davide Pesavento <pesa@gentoo.org> -q4wine-0.120-r1.ebuild:
+  Remove old.
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> q4wine-0.121.ebuild:
   x86 stable wrt bug #396801
