@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.0.ebuild,v 1.3 2012/02/17 04:50:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.0.ebuild,v 1.4 2012/04/06 08:00:09 tetromino Exp $
 
 EAPI="4"
 
 PYTHON_DEPEND="python? 2"
 
-inherit base eutils gnome.org python
+inherit autotools base eutils gnome.org python
 
 DESCRIPTION="VNC viewer widget for GTK"
 HOMEPAGE="http://live.gnome.org/gtk-vnc"
@@ -14,7 +14,7 @@ HOMEPAGE="http://live.gnome.org/gtk-vnc"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="examples gtk3 +introspection python sasl vala"
+IUSE="examples gtk3 +introspection pulseaudio python sasl vala"
 
 # libview is used in examples/gvncviewer -- no need
 # glib-2.30.1 needed to avoid linking failure due to .la files (bug #399129)
@@ -23,13 +23,13 @@ IUSE="examples gtk3 +introspection python sasl vala"
 COMMON_DEPEND=">=dev-libs/glib-2.30.1:2
 	>=dev-libs/libgcrypt-1.4.2
 	dev-libs/libgpg-error
-	media-sound/pulseaudio
 	>=net-libs/gnutls-1.4
 	>=x11-libs/cairo-1.2
 	>=x11-libs/gtk+-2.18:2
 	x11-libs/libX11
 	gtk3? ( >=x11-libs/gtk+-2.91.3:3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.4 )
+	pulseaudio? ( media-sound/pulseaudio )
 	python? ( >=dev-python/pygtk-2:2 )
 	sasl? ( dev-libs/cyrus-sasl )"
 RDEPEND="${COMMON_DEPEND}"
@@ -38,10 +38,14 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
+
+	gnome-base/gnome-common
+
 	vala? (
 		dev-lang/vala:0.14[vapigen]
 		>=dev-libs/gobject-introspection-0.9.4 )
 "
+# eautoreconf requires gnome-common
 
 GTK2_BUILDDIR="${WORKDIR}/${P}_gtk2"
 GTK3_BUILDDIR="${WORKDIR}/${P}_gtk3"
@@ -59,6 +63,10 @@ src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=667943
 	epatch "${FILESDIR}/${PN}-0.5.0-pod.patch"
 
+	# bug #399111, https://bugzilla.gnome.org/show_bug.cgi?id=673570
+	# requires eautoreconf
+	epatch "${FILESDIR}/${PN}-0.5.0-pulseaudio-automagic.patch"
+
 	python_convert_shebangs -r 2 .
 	mkdir "${GTK2_BUILDDIR}" || die
 	mkdir "${GTK3_BUILDDIR}" || die
@@ -73,6 +81,8 @@ src_prepare() {
 	sed -e 's/codegendir pygtk-2.0/codegendir pygobject-2.0/g' \
 		-i src/Makefile.* || die
 
+	eautoreconf
+
 	# Work around https://bugzilla.gnome.org/show_bug.cgi?id=667941
 	[[ -e GNUmakefile ]] || touch GNUmakefile
 }
@@ -82,6 +92,7 @@ src_configure() {
 	myconf="
 		$(use_with examples) \
 		$(use_enable introspection) \
+		$(use_with pulseaudio) \
 		$(use_with sasl) \
 		--with-coroutine=gthread \
 		--without-libview \
