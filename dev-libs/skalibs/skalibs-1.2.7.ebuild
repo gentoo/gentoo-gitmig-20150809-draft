@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-1.2.7.ebuild,v 1.1 2012/04/06 14:33:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-1.2.7.ebuild,v 1.2 2012/04/06 21:05:14 mr_bones_ Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ src_install() {
 	if use static-libs ; then
 		doins library/*
 	fi
-	
+
 	dodir /etc/ld.so.conf.d/
 	echo "/usr/$(get_libdir)/${PN}" > ${ED}/etc/ld.so.conf.d/10${PN}.conf || die
 
