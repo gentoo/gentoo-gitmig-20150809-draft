@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.22 2012/03/01 20:16:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.23 2012/04/06 10:23:57 scarabeus Exp $
+
+  06 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libvisio-0.0.14-r1.ebuild,
+  libvisio-0.0.15.ebuild:
+  Stabilise 0.0.15 on amd64 and x86. Drop overshadowed.
 
 *libvisio-0.0.15 (01 Mar 2012)
 
