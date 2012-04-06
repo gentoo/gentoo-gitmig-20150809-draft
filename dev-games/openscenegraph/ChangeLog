@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.46 2012/03/11 22:39:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.47 2012/04/06 10:51:42 nativemad Exp $
+
+  06 Apr 2012; Andreas Schuerch <nativemad@gentoo.org>
+  openscenegraph-3.0.1.ebuild:
+  x86 stable, see bug 405665
 
   11 Mar 2012; Tony Vroon <chainsaw@gentoo.org> openscenegraph-3.0.1.ebuild:
   Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &

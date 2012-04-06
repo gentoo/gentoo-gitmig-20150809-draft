@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/simgear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.48 2012/03/11 22:40:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.49 2012/04/06 10:48:32 nativemad Exp $
+
+  06 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> simgear-2.4.0.ebuild:
+  x86 stable, see bug 405665
 
   11 Mar 2012; Tony Vroon <chainsaw@gentoo.org> simgear-2.4.0.ebuild:
   Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &
