@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.84 2012/04/06 08:00:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.85 2012/04/06 08:11:20 tetromino Exp $
+
+*gtk-vnc-0.5.0-r1 (06 Apr 2012)
+
+  06 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk-vnc-0.5.0.ebuild, +gtk-vnc-0.5.0-r1.ebuild:
+  Revbump for optional pulseaudio since gtk-vnc may used in profiles where
+  pulseaudio is not enabled by default.
 
   06 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gtk-vnc-0.5.0.ebuild, +files/gtk-vnc-0.5.0-pulseaudio-automagic.patch:
