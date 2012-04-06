@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.58 2012/01/24 17:08:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.59 2012/04/06 19:10:40 ago Exp $
+
+  06 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Cairo-1.90.0.ebuild:
+  Stable for amd64, wrt bug #411055
 
 *Cairo-1.90.0 (24 Jan 2012)
 
