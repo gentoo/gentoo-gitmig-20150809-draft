@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>mrness@gentoo.org</email>
-    <name>Alin Nastac</name>
-  </maintainer>
-  <maintainer>
     <email>cedk@gentoo.org</email>
     <name>Cédric Krier</name>
   </maintainer>
