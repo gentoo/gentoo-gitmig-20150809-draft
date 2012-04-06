@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.1-r1.ebuild,v 1.2 2012/03/27 18:34:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.1-r1.ebuild,v 1.3 2012/04/06 15:11:53 ssuominen Exp $
 
 EAPI=4
 
@@ -81,6 +81,10 @@ src_prepare() {
 	sed -i \
 		-e '/add_test_file(translations_test.cpp/d' \
 		tests/CMakeLists.txt || die
+
+	# API changed, see http://bugs.gentoo.org/410933
+	has_version '>=app-pda/libimobiledevice-1.1.2' && \
+		sed -i -e 's:event->uuid:event->udid:' src/devices/ilister.cpp
 
 	epatch "${FILESDIR}"/${P}-fresh-start.patch
 }
