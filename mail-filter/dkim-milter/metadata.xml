@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-mail</herd>
-<maintainer>
-  <email>mrness@gentoo.org</email>
-    <name>Alin Năstac</name>
-</maintainer>
 <longdescription>A program implementing the Milter API that signs and verifies
 using the DKIM standard</longdescription>
 <use>

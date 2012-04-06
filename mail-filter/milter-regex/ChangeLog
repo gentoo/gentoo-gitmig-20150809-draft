@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/milter-regex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.9 2011/08/11 02:29:24 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.10 2012/04/06 21:52:12 pacho Exp $
+
+  06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #63588
 
   11 Aug 2011; Mike Frysinger <vapier@gentoo.org> milter-regex-1.7-r2.ebuild,
   milter-regex-1.8.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/sid-milter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.16 2009/12/12 10:53:15 mrness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.17 2012/04/06 21:52:41 pacho Exp $
+
+  06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #63588
 
   12 Dec 2009; Alin Năstac <mrness@gentoo.org> files/sid-filter.init:
   Force pidfile usage (#291651).

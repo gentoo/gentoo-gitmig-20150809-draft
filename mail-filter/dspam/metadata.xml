@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-mail</herd>
-<maintainer>
-  <email>mrness@gentoo.org</email>
-  <name>Alin Nastac</name>
-</maintainer>
 <longdescription>A statistical-algorithmic hybrid anti-spam filter</longdescription>
 <use>
 	<flag name='daemon'>
