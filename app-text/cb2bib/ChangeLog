@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cb2bib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.8 2012/01/19 13:30:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.9 2012/04/06 00:36:53 jdhore Exp $
+
+  06 Apr 2012; Jeff Horelick <jdhore@gentoo.org> cb2bib-1.4.7.ebuild:
+  marked x86 per bug 410889
 
 *cb2bib-1.4.7 (19 Jan 2012)
 
