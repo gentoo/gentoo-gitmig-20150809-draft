@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cpp</herd>
-<maintainer>
-  <email>mrness@gentoo.org</email>
-  <name>Alin Nastac</name>
-</maintainer>
 <longdescription>cross platform lightweight components library for C++</longdescription>
 </pkgmetadata>
