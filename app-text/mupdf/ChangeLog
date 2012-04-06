@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.30 2012/03/25 23:06:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.31 2012/04/06 17:18:41 xmw Exp $
+
+  06 Apr 2012; Michael Weber <xmw@gentoo.org> mupdf-0.9.ebuild,
+  mupdf-0.9_p20120221.ebuild, mupdf-9999.ebuild:
+  Add prefix support (thanks Palmer Dabbelt, bug 410991)
 
 *mupdf-0.9_p20120221 (25 Mar 2012)
 
