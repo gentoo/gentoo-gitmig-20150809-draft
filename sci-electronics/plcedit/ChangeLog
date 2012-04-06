@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/plcedit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/ChangeLog,v 1.12 2011/08/28 10:27:12 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/ChangeLog,v 1.13 2012/04/06 10:58:38 ago Exp $
+
+  06 Apr 2012; Agostino Sarubbo <ago@gentoo.org> plcedit-2.2.1.ebuild:
+  Stable for amd64, wrt bug #410899
 
 *plcedit-2.2.1 (28 Aug 2011)
 
