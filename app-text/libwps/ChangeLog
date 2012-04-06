@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.18 2012/03/26 15:50:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.19 2012/04/06 10:26:38 scarabeus Exp $
+
+  06 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libwps-0.2.3.ebuild:
+  Remove old.
 
   26 Mar 2012; Brent Baude <ranger@gentoo.org> libwps-0.2.4.ebuild:
   Marking libwps-0.2.4 ~ppc64 for bug 398521
