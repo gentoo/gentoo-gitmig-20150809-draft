@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>ada</herd>
-<longdescription>
-QtAda is an Ada2005 language bindings to the Qt libraries and a set of useful tools. Qt is a cross-platform C++ development framework developed and supported by Qt Software. QtAda supports Qt version 4.4 and later.
-QtAda allows easly to create cross-platform powerful graphical user interface completely on Ada 2005. QtAda applications will work on most popular platforms — Microsoft Windows, Mac OS X, Linux/Unix — without any changes and platform specific code. QtAda applications use native look and feel (and even use user's Control Panel setting) on every supported platforms.
-</longdescription>
-</pkgmetadata>
