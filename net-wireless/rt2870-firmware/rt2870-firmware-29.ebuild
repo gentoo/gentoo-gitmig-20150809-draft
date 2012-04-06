@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2870-firmware/rt2870-firmware-29.ebuild,v 1.1 2012/02/29 14:25:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2870-firmware/rt2870-firmware-29.ebuild,v 1.2 2012/04/06 10:22:32 maekke Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="ralink-firmware"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="|| ( sys-fs/udev sys-apps/hotplug )"

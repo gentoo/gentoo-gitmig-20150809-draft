@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt2870-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2870-firmware/ChangeLog,v 1.1 2012/02/29 14:25:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2870-firmware/ChangeLog,v 1.2 2012/04/06 10:22:32 maekke Exp $
+
+  06 Apr 2012; Markus Meier <maekke@gentoo.org> rt2870-firmware-29.ebuild:
+  add ~arm, bug #406575
 
 *rt2870-firmware-29 (29 Feb 2012)
 
