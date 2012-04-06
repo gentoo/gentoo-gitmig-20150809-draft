@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/mosh
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.1 2012/04/06 14:43:06 xmw Exp $
+
+*mosh-9999 (06 Apr 2012)
+*mosh-1.1.3 (06 Apr 2012)
+
+  06 Apr 2012; Michael Weber <xmw@gentoo.org> +mosh-1.1.3.ebuild,
+  +mosh-9999.ebuild, +metadata.xml:
+  Initial import.
+
