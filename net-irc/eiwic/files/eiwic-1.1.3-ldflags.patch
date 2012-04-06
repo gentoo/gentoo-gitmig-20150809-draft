@@ -1,5 +1,5 @@
---- modules/Makefile.am.orig	2009-02-09 17:47:30.237896861 +0100
-+++ modules/Makefile.am	2009-02-09 17:47:48.382983848 +0100
+--- modules/Makefile.am
++++ modules/Makefile.am
 @@ -15,8 +15,8 @@
  		echo "$@ skipped."; \
  	else :;\
