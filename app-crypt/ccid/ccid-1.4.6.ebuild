@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.4.ebuild,v 1.1 2011/07/03 17:42:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.6.ebuild,v 1.1 2012/04/06 17:29:48 flameeyes Exp $
 
-EAPI="3"
+EAPI="4"
 
-STUPID_NUM="3579"
+STUPID_NUM="3711"
 
 inherit eutils
 
@@ -21,6 +21,8 @@ DEPEND=">=sys-apps/pcsc-lite-1.6.5
 	usb? ( virtual/libusb:1 )"
 RDEPEND="${DEPEND}"
 
+DOCS=( README AUTHORS )
+
 src_prepare() {
 	sed -i -e 's:GROUP="pcscd":ENV{PCSCD}="1":' \
 		src/92_pcscd_ccid.rules || die
@@ -35,8 +37,10 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README AUTHORS || die
-	insinto /lib/udev/rules.d
-	doins src/92_pcscd_ccid.rules || die
+	default
+
+	if use kernel_linux; then
+		insinto /lib/udev/rules.d
+		newins src/92_pcscd_ccid.rules 92-pcsc-ccid.rules
+	fi
 }
