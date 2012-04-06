@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/overlint
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.1 2012/04/06 23:14:51 sping Exp $
+
+*overlint-0.4.1 (06 Apr 2012)
+
+  06 Apr 2012; Sebastian Pipping <sping@gentoo.org> +overlint-0.4.1.ebuild,
+  +metadata.xml:
+  New package
+
