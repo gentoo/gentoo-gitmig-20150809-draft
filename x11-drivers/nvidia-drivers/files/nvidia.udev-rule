@@ -1,0 +1,1 @@
+ACTION=="add|remove", DEVPATH=="/module/nvidia", SUBSYSTEM=="module", RUN+="nvidia-udev.sh $env{ACTION}"

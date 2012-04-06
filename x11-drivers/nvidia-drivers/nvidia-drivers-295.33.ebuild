@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.33.ebuild,v 1.2 2012/03/26 18:11:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.33.ebuild,v 1.3 2012/04/06 01:52:26 cardoe Exp $
 
 EAPI="2"
 
@@ -330,6 +330,13 @@ src_install() {
 			"${WORKDIR}"/nvidia
 		insinto /etc/modprobe.d
 		newins "${WORKDIR}"/nvidia nvidia.conf || die
+
+		# Ensures that our device nodes are created when not using X
+		insinto /lib/udev
+		doins "${FILESDIR}"/nvidia-udev.sh
+
+		insinto /lib/udev/rules.d
+		newins "${FILESDIR}"/nvidia.udev-rule 99-nvidia.rules
 	elif use x86-fbsd; then
 		insinto /boot/modules
 		doins "${WORKDIR}/${NV_PACKAGE}/src/nvidia.kld" || die
