@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.14.1.ebuild,v 1.1 2011/11/25 00:08:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.14.1.ebuild,v 1.2 2012/04/06 18:39:34 ago Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.7"
@@ -15,7 +15,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-linux ~ppc-macos"
 IUSE="lua perl python php ruby"
 
 RDEPEND=">=dev-libs/redland-1.0.14
