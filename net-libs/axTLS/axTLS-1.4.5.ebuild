@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axTLS/axTLS-1.4.5.ebuild,v 1.1 2012/04/06 17:39:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axTLS/axTLS-1.4.5.ebuild,v 1.2 2012/04/06 21:05:45 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ inherit user savedconfig toolchain-funcs
 # Now configure axTLS as you want.  Finally save your config file:
 #
 #			cp config/.config /etc/portage/savedconfig/net-libs/axTLS-1.4.5
-# 
+#
 # changing 1.4.5 to the current version.  You can then run emerge again with
 # your configuration by doing
 #
