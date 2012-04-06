@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/xfce4-smartbookmark-plugin-0.4.4-r1.ebuild,v 1.2 2012/04/02 11:57:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/xfce4-smartbookmark-plugin-0.4.4-r1.ebuild,v 1.3 2012/04/06 17:05:06 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -35,6 +35,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# http://bugzilla.xfce.org/show_bug.cgi?id=8642
 	sed -i \
 		-e 's:xfbrowser4:exo-open --launch WebBrowser:' \
 		-e 's:bugs.debian:bugs.gentoo:' \
