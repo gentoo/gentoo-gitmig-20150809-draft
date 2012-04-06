@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/netifaces
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.3 2012/02/22 08:34:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.4 2012/04/06 17:27:43 xmw Exp $
+
+*netifaces-0.8 (06 Apr 2012)
+
+  06 Apr 2012; Michael Weber <xmw@gentoo.org> +netifaces-0.8.ebuild:
+  Version bump.
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> netifaces-0.5.ebuild,
   netifaces-0.6.ebuild:
