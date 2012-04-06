@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/atool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.39 2012/03/25 17:11:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.40 2012/04/06 04:02:56 radhermit Exp $
+
+*atool-0.39.0 (06 Apr 2012)
+
+  06 Apr 2012; Tim Harder <radhermit@gentoo.org> +atool-0.39.0.ebuild:
+  Version bump.
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> atool-0.37.0.ebuild,
   atool-0.38.0.ebuild:
