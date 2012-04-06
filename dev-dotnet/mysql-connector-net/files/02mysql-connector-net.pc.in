@@ -1,8 +1,0 @@
-prefix=/usr
-exec_prefix=${prefix}
-libdir=${exec_prefix}/@LIBDIR@
-
-Name: mysql-connector-net
-Description: mysql-connector-net - MySql ADO.NET connector
-Version: @VERSION@
-Libs: -r:${libdir}/mono/mysql-connector-net/MySql.Data.dll -r:${libdir}/mono/mysql-connector-net/MySql.Web.dll
