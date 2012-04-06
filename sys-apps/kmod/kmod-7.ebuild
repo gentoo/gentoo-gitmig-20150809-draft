@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-7.ebuild,v 1.8 2012/04/02 12:40:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-7.ebuild,v 1.9 2012/04/06 21:04:02 ssuominen Exp $
 
 EAPI=4
 
@@ -53,6 +53,12 @@ src_prepare()
 
 src_configure()
 {
+	# http://bugs.gentoo.org/410865
+	if has_version '<sys-libs/zlib-1.2.6'; then
+		export zlib_CFLAGS="-I/usr/include"
+		export zlib_LIBS="-lz"
+	fi
+
 	local myconf
 	[[ ${PV} == 9999 ]] && myconf="$(use_enable doc gtk-doc)"
 
