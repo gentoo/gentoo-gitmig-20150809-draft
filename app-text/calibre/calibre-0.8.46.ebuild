@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.44.ebuild,v 1.3 2012/04/01 04:39:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.46.ebuild,v 1.1 2012/04/06 16:48:10 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -34,20 +34,17 @@ COMMON_DEPEND="
 	>=dev-python/lxml-2.2.1
 	>=dev-python/mechanize-0.1.11
 	>=dev-python/python-dateutil-1.4.1
-	>=dev-python/PyQt4-4.8.2[X,svg,webkit]
+	>=dev-python/PyQt4-4.9.1[X,svg,webkit]
 	>=media-gfx/imagemagick-6.5.9[jpeg,png]
 	>=media-libs/libwmf-0.2.8
 	virtual/libusb:0
-	>=x11-misc/xdg-utils-1.0.2"
+	>=x11-misc/xdg-utils-1.0.2-r2"
 
 RDEPEND="${COMMON_DEPEND}
-	>=dev-python/reportlab-2.1
 	udisks? ( sys-fs/udisks:0 )"
 
 DEPEND="${COMMON_DEPEND}
-	>=dev-python/setuptools-0.6_rc5
-	>=gnome-base/librsvg-2.0.0
-	>=x11-misc/xdg-utils-1.0.2-r2"
+	>=dev-python/setuptools-0.6_rc5"
 
 S=${WORKDIR}/${PN}
 
@@ -66,6 +63,8 @@ src_prepare() {
 	# calls xdg-* (bug #258938).
 	sed -e "s:'xdg-desktop-menu', 'install':\\0, '--mode', 'user':" \
 		-e "s:check_call(\\['xdg-desktop-menu', 'forceupdate'\\]):#\\0:" \
+		-e "s|\\(CurrentDir(tdir)\\), \\\\\$|\\1:|" \
+		-e "s|PreserveMIMEDefaults():||" \
 		-e "s:xdg-icon-resource install:\\0 --mode user:" \
 		-e "s:xdg-mime install:\\0 --mode user:" \
 		-i src/calibre/linux.py || die "sed failed to patch linux.py"
