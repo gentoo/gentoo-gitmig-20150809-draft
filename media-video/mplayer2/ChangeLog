@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.41 2012/03/28 13:20:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.42 2012/04/06 18:19:43 vapier Exp $
+
+  06 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:
+  Respect $PKG_CONFIG, and quote the cc flags as people sometimes do CC="gcc
+  -flag".
 
   28 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/2.0-ffmpeg.patch,
   -files/2.0-fmt-conversion.patch:

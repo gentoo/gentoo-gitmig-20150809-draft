@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120309.ebuild,v 1.1 2012/03/28 07:38:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120309.ebuild,v 1.2 2012/04/06 18:19:43 vapier Exp $
 
 EAPI=4
 
@@ -508,8 +508,9 @@ src_configure() {
 	fi
 
 	./configure \
-		--cc=$(tc-getCC) \
-		--host-cc=$(tc-getBUILD_CC) \
+		--cc="$(tc-getCC)" \
+		--host-cc="$(tc-getBUILD_CC)" \
+		--pkg-config="$(tc-getPKG_CONFIG)" \
 		--prefix="${EPREFIX}"/usr \
 		--bindir="${EPREFIX}"/usr/bin \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
