@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.99.ebuild,v 1.1 2012/03/08 09:49:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.99.ebuild,v 1.2 2012/04/06 15:32:29 ssuominen Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -36,7 +36,7 @@ CDEPEND="
 		>=media-libs/gstreamer-0.10:0.10
 		>=media-libs/gst-plugins-base-0.10:0.10
 	)
-	usb? ( dev-libs/libusb:1 )
+	usb? ( dev-libs/libusb:0 )
 	readline? ( sys-libs/readline )
 "
 DEPEND="${CDEPEND}
