@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quazip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.15 2012/04/04 07:33:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.16 2012/04/06 09:55:16 maekke Exp $
+
+  06 Apr 2012; Markus Meier <maekke@gentoo.org> quazip-0.4.4.ebuild:
+  arm stable, bug #410145
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> quazip-0.4.4.ebuild:
   marked x86 per bug 410145
