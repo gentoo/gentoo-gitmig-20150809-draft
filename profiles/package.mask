@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13655 2012/04/06 18:59:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13656 2012/04/06 19:43:36 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -418,95 +418,6 @@ app-pda/syncevolution
 # every reverse dependency wrt bug 407091
 >=dev-lang/lua-5.2.0
 
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Mask for removal as it fails to compile with recent
-# kernels. Use kernel driver instead, bug #209474
-# Removal in a month.
-net-wireless/orinoco-sn
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Doesn't work with recent kernels, use kernel driver
-# instead, bug #214164. Removal in a month.
-net-wireless/zd1201
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Doesn't work with recent kernels, use kernel driver
-# instead, bug #246986. Removal in a month.
-net-wireless/hostap-driver
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Our version is old and buggy, nobody willing to
-# update due deep changes in its way to be installed,
-# download it directly from upstream instead, bug #248588
-# Removal in a month.
-x11-misc/periodic-calendar
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Pre-stripped files, no update since 2002, nothing
-# needs it, bug #251955. Removal in a month.
-media-libs/libswf
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Old, unmaintained and with security bug #269922
-# Removal in a month.
-net-misc/ajaxterm
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Bundles some libraries, has an overflow, installs
-# broken symlinks, security issues. See bug #332649
-# Removal in a month
-media-gfx/swftools
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Outdated, hard to bump and nobody willing to take
-# care of it. See bug #334927. Removal in a month.
-dev-dotnet/mysql-connector-net
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Doesn't respect LDFLAGS, old and replaced by kernel
-# driver for years, bug #339655. Removal in a month.
-app-laptop/acpi4asus
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Replaced by gnome-extra/panflute, bug #354245.
-# Removal in a month.
-gnome-extra/music-applet
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# It spams dmesg, use kernel >= 3.0 driver instead.
-# See bug #367483, removal in a month.
-net-wireless/rtl8192se
-net-wireless/rtl8192se-firmware
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Our current version is too old, nobody wants to take
-# care of this package and upstream have changed their 
-# build system completely, bug #372449. Removal in a month.
-dev-dotnet/edtftpnet
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Broken with gcc-4.6, old, unmaintained, upstream dead,
-# nothing needs it, bug #374803. Removal in a month.
-dev-python/PyQrcodec
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# Broken for some time (bug #383933), upstream dead,
-# last release from 2008. Removal in a month.
-net-ftp/twoftpd
-
-# Pacho Ramos <pacho@gentoo.org> (06 Mar 2012)
-# No upstream, outdated, see bug #403377. Removal in a
-# month.
-app-i18n/man-pages-cs
-
-# Samuli Suominen <ssuominen@gentoo.org> (29 Feb 2012)
-# The old version of gnunet in portage is broken with the
-# new libextractor API.
-# Bugs 338909, #403461, #367677 and #260113.
-# Removal in 30 days unless fixed.
-net-p2p/gnunet
-net-p2p/gnunet-gtk
-
 # Aaron W. Swenson <titanofold@gentoo.org> (27 Feb 2012)
 # End of life. Upgrade to 8.3 or later. Multiple vulnerabilities. (Bug 406037)
 # Removal on 27 April 2012.
@@ -523,11 +434,6 @@ net-p2p/gnunet-gtk
 # DEPENDs.
 >=net-misc/npapi-sdk-0.27.1
 
-# Ole Markus With <olemarkus@gentoo.org> (21 Feb 2012)
-# Dead upstream. Bug 396977. Removing in 30 days.
-dev-php/PEAR-Image_Color
-dev-php/PEAR-Image_Canvas
-
 # Samuli Suominen <ssuominen@gentoo.org> (20 Feb 2012)
 # Mask what will be the Xfce Desktop Environment 4.10 for testing
 >=xfce-base/libxfce4util-4.9.0
@@ -543,11 +449,6 @@ dev-php/PEAR-Image_Canvas
 >=xfce-base/xfce4-settings-4.9.0
 >=xfce-base/xfce4-appfinder-4.9.0
 >=xfce-base/libxfcegui4-4.8.1-r1
-
-# Markos Chandras <hwoarang@gentoo.org> (19 Feb 2012)
-# Illegal license. Bug #390205
-# Removal in 30 days
-app-text/notecase-pro
 
 # Michael Weber <xmw@gentoo.org> (18 Feb 2012)
 # Project was renamed to x11-wm/spectrwm
