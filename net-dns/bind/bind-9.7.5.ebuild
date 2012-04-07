@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.0.ebuild,v 1.4 2012/04/07 17:37:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.5.ebuild,v 1.1 2012/04/07 17:37:26 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -13,19 +13,16 @@
 
 EAPI="4"
 
-inherit eutils autotools toolchain-funcs flag-o-matic multilib db-use
+inherit eutils autotools toolchain-funcs flag-o-matic db-use
 
 MY_PV="${PV/_p/-P}"
-MY_PV="${MY_PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
 SDB_LDAP_VER="1.1.0-fc14"
 
-# bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
-#GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.9.0"
-GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
+GEOIP_PV_AGAINST="9.7.2-P2"
+GEOIP_P="bind-geoip-${GEOIP_PV}-${GEOIP_PV_AGAINST}"
 GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
 GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
@@ -40,9 +37,9 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc pkcs11 postgres rpz sdb-ldap
-selinux ssl static-libs threads urandom xml"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="berkdb caps dlz doc geoip gssapi idn ipv6 ldap mysql odbc pkcs11
+postgres sdb-ldap selinux ssl static-libs threads urandom xml"
 
 REQUIRED_USE="postgres? ( dlz )
 	berkdb? ( dlz )
@@ -50,7 +47,6 @@ REQUIRED_USE="postgres? ( dlz )
 	odbc? ( dlz )
 	ldap? ( dlz )
 	sdb-ldap? ( dlz )
-	gost? ( ssl )
 	threads? ( caps )"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
@@ -63,8 +59,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
 	gssapi? ( virtual/krb5 )
-	sdb-ldap? ( net-nds/openldap )
-	gost? ( >=dev-libs/openssl-1.0.0 )"
+	sdb-ldap? ( net-nds/openldap )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -97,7 +92,7 @@ src_prepare() {
 		fi
 
 		if use odbc; then
-			epatch "${FILESDIR}/${PN}-9.7.3-odbc-dlz-detect.patch"
+			epatch "${FILESDIR}/bind-9.7.3-odbc-dlz-detect.patch"
 		fi
 
 		# sdb-ldap patch as per  bug #160567
@@ -116,6 +111,9 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
+		sed -i -e 's:^ RELEASETYPE=-P: RELEASETYPE=:' \
+			-e 's:RELEASEVER=2:RELEASEVER=:' \
+			${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
@@ -147,7 +145,6 @@ src_configure() {
 		--localstatedir=/var \
 		--with-libtool \
 		$(use_enable threads) \
-		$(use_with dlz dlopen) \
 		$(use_with dlz dlz-filesystem) \
 		$(use_with dlz dlz-stub) \
 		$(use_with postgres dlz-postgres) \
@@ -160,15 +157,9 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_with xml libxml2) \
 		$(use_with gssapi) \
-		$(use_enable rpz rpz-nsip) \
-		$(use_enable rpz rpz-nsdname) \
 		$(use_with pkcs11) \
 		$(use_enable caps linux-caps) \
-		$(use_with gost) \
-		--without-readline \
 		${myconf}
-
-	# $(use_enable static-libs static) \
 
 	# bug #151839
 	echo '#undef SO_BSDCOMPAT' >> config.h
@@ -217,12 +208,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/named.init-r11 named
 	newconfd "${FILESDIR}"/named.confd-r6 named
-
-	if use gost; then
-		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}/' "${D}/etc/init.d/named" || die
-	else
-		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}/' "${D}/etc/init.d/named" || die
-	fi
 
 	newenvd "${FILESDIR}"/10bind.env 10bind
 
@@ -334,15 +319,6 @@ pkg_config() {
 	mkdir -m 0755 -p ${CHROOT}/{dev,etc,var/{run,log}}
 	mkdir -m 0750 -p ${CHROOT}/etc/bind
 	mkdir -m 0770 -p ${CHROOT}/var/{bind,{run,log}/named}
-	# As of bind 9.8.0
-	if has_version net-dns/bind[gost]; then
-		if [ "$(get_libdir)" = "lib64" ]; then
-			mkdir -m 0755 -p ${CHROOT}/usr/lib64/engines
-			ln -s lib64 ${CHROOT}/usr/lib
-		else
-			mkdir -m 0755 -p ${CHROOT}/usr/lib/engines
-		fi
-	fi
 	chown root:named ${CHROOT} ${CHROOT}/var/{bind,{run,log}/named} ${CHROOT}/etc/bind
 
 	mknod ${CHROOT}/dev/null c 1 3
