@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9_p20120221.ebuild,v 1.4 2012/04/07 18:15:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9_p20120221.ebuild,v 1.5 2012/04/07 22:10:06 xmw Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix="${ED}usr" LIBDIR="${ED}usr/$(get_libdir)" \
+	emake prefix="${ED}usr" libdir="${ED}usr/$(get_libdir)" \
 		build=debug verbose=true ${my_nox11} install
 
 	insinto /usr/include
