@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r1.ebuild,v 1.1 2012/04/07 06:14:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r1.ebuild,v 1.2 2012/04/07 06:38:17 radhermit Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ IUSE="custom-cflags -minimal mmx mpi openmp sse2"
 REQUIRED_USE="openmp? ( !minimal )
 	mpi? ( !minimal )"
 
-RDEPEND="!minimal? ( >=dev-libs/openssl-0.9.7 )
+RDEPEND="!minimal? ( >=dev-libs/openssl-0.9.7:0 )
 	mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}"
 

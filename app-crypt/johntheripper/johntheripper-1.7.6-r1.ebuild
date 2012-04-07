@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.13 2011/03/08 19:33:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.14 2012/04/07 06:38:17 radhermit Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ IUSE="custom-cflags -minimal mmx openmp sse2"
 #IUSE="altivec custom-cflags -minimal mmx -mpi sse2"
 
 # Seems a bit fussy with other MPI implementations.
-RDEPEND="!minimal? ( >=dev-libs/openssl-0.9.7 )"
+RDEPEND="!minimal? ( >=dev-libs/openssl-0.9.7:0 )"
 #	mpi? ( sys-cluster/openmpi )
 DEPEND="${RDEPEND}
 	openmp? ( >=sys-devel/gcc-4.2[openmp] )"
