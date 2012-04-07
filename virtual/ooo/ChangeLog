@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ooo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ChangeLog,v 1.3 2011/09/02 10:20:40 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ChangeLog,v 1.4 2012/04/07 15:19:36 scarabeus Exp $
+
+  07 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> ooo-0.ebuild:
+  Add use for java wrt deps on extensions, preffer source build over the binary.
 
   02 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> ooo-0.ebuild:
   Punt openoffice as it is gone from main tree for now.
