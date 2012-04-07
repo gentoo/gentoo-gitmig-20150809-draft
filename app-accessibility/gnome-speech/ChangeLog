@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/gnome-speech
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.151 2011/10/23 16:49:03 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.152 2012/04/07 21:30:37 tetromino Exp $
+
+  07 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-speech-0.4.25-r1.ebuild, +files/gnome-speech-0.4.25-glib-2.31.patch:
+  Fix building with >=glib-2.31; thanks to biohazrd for reporting in bug
+  #401437 comment #1.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> gnome-speech-0.4.25-r1.ebuild:
   alpha stable

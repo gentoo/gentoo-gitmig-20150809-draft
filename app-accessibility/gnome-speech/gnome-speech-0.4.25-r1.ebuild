@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25-r1.ebuild,v 1.7 2011/10/23 16:49:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25-r1.ebuild,v 1.8 2012/04/07 21:30:37 tetromino Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -42,6 +42,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	epatch "${FILESDIR}/${P}-disable-java.patch"
+	epatch "${FILESDIR}/${P}-glib-2.31.patch"
 
 	sed -i \
 		-e 's:\(GNOME_SPEECH_JAR_DIR=\).*:\1"/usr/share/java-access-bridge/lib/":' \
