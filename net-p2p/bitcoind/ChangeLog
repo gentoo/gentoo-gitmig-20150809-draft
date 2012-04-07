@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.23 2012/04/04 13:36:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.24 2012/04/07 01:03:09 blueness Exp $
+
+*bitcoind-0.5.4_rc3 (07 Apr 2012)
+*bitcoind-0.5.0.6_rc3 (07 Apr 2012)
+*bitcoind-0.4.5_rc3 (07 Apr 2012)
+
+  07 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.5_rc2.ebuild, +bitcoind-0.4.5_rc3.ebuild,
+  -bitcoind-0.5.0.6_rc2.ebuild, +bitcoind-0.5.0.6_rc3.ebuild,
+  -bitcoind-0.5.4_rc2.ebuild, +bitcoind-0.5.4_rc3.ebuild:
+  Version bump rc2's to rc3's
 
   04 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
   -files/9999-eligius_sendfee.patch:
