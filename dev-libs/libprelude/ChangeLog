@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.79 2012/02/21 16:16:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.80 2012/04/07 17:56:09 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> libprelude-1.0.0-r1.ebuild:
+  x86 stable, bug #402165
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libprelude-1.0.0-r1.ebuild:
   Stable for amd64, wrt bug #383391
