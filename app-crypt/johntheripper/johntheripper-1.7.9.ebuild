@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9.ebuild,v 1.3 2012/04/07 06:38:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9.ebuild,v 1.4 2012/04/07 06:44:47 radhermit Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ SRC_URI="http://www.openwall.com/john/g/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 # This package can't be marked stable for ppc or ppc64 before bug 327211 is closed.
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="custom-cflags -minimal mmx openmp sse2"
 REQUIRED_USE="openmp? ( !minimal )"
 #Remove AltiVec USE flag. Appears to be an upstream issue.
@@ -99,6 +99,16 @@ get_target() {
 		fi
 	elif use x86-solaris; then
 		echo "solaris-x86-any"
+	elif use x86-fbsd; then
+		if use sse2; then
+			echo "freebsd-x86-sse2"
+		elif use mmx; then
+			echo "freebsd-x86-mmx"
+		else
+			echo "freebsd-x86-any"
+		fi
+	elif use amd64-fbsd; then
+		echo "freebsd-x86-64"
 	else
 		echo "generic"
 	fi

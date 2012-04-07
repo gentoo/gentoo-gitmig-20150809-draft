@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.138 2012/04/07 06:38:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.139 2012/04/07 06:44:47 radhermit Exp $
+
+  07 Apr 2012; Tim Harder <radhermit@gentoo.org> johntheripper-1.7.9.ebuild,
+  johntheripper-1.7.9-r1.ebuild:
+  Keywording latest versions for ~x86-fbsd as well.
 
   07 Apr 2012; Tim Harder <radhermit@gentoo.org> johntheripper-1.7.6-r1.ebuild,
   johntheripper-1.7.8.ebuild, johntheripper-1.7.9.ebuild,
