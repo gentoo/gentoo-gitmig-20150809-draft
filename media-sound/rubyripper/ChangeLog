@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.40 2012/01/28 15:23:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.41 2012/04/07 13:38:37 billie Exp $
+
+  07 Apr 2012; Daniel Pielmeier <billie@gentoo.org> -rubyripper-0.6.1.ebuild:
+  Remove old.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> rubyripper-0.6.2.ebuild:
   x86 stable wrt bug #400811
