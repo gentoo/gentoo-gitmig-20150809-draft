@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.4.ebuild,v 1.1 2012/03/09 15:51:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.4.ebuild,v 1.2 2012/04/07 15:46:02 jer Exp $
 
 EAPI="4"
 
@@ -57,17 +57,16 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=""
-	use doc || myconf="--disable-documentation"
 	sa_lib_dir=/usr/$(get_libdir)/sa \
-		econf ${myconf} \
-			rcdir="Gentoo-does-not-use-rc.d" \
+		conf_dir=/etc \
+		rcdir=Gentoo-does-not-use-rc.d \
+		econf \
 			$(use_enable cron install-cron) \
 			$(use_enable debug debuginfo) \
+			$(use_enable doc documentation ) \
 			$(use_enable isag install-isag) \
-			$(use_enable nls) \
 			$(use_enable lm_sensors sensors) \
-			conf_dir=/etc
+			$(use_enable nls)
 }
 
 src_compile() {
