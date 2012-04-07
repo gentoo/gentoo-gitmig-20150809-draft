@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axTLS/axTLS-1.4.5.ebuild,v 1.2 2012/04/06 21:05:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axTLS/axTLS-1.4.5.ebuild,v 1.3 2012/04/07 02:23:52 blueness Exp $
 
 EAPI="4"
 
@@ -44,8 +44,8 @@ IUSE="httpd cgi-lua cgi-php static doc"
 
 # TODO: add ipv6, and c#, java, lua, perl bindings
 # Currently these all have some issue
-DEPEND=""
-RDEPEND="${DEPEND}
+DEPEND="doc? ( app-doc/doxygen )"
+RDEPEND="
 	httpd? (
 		cgi-lua? ( dev-lang/lua )
 		cgi-php? ( dev-lang/php[cgi] )
