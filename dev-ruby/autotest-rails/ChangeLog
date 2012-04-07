@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/autotest-rails
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.14 2011/09/10 08:08:48 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.15 2012/04/07 06:27:46 graaff Exp $
+
+*autotest-rails-4.1.2 (07 Apr 2012)
+
+  07 Apr 2012; Hans de Graaff <graaff@gentoo.org> +autotest-rails-4.1.2.ebuild:
+  Version bump.
 
 *autotest-rails-4.1.1 (10 Sep 2011)
 
