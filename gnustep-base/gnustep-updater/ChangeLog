@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-updater
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-updater/ChangeLog,v 1.5 2012/04/05 09:28:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-updater/ChangeLog,v 1.6 2012/04/07 14:41:41 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> gnustep-updater-0.2.ebuild:
+  x86 stable, bug #410601
 
   05 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gnustep-updater-0.2.ebuild:
   Stable for amd64, wrt bug #410601
