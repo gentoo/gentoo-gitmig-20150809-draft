@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.194 2012/04/01 21:28:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.195 2012/04/07 21:33:13 floppym Exp $
+
+*grub-2.00_beta3-r1 (07 Apr 2012)
+
+  07 Apr 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/grub-2.00-10_linux-genkernel.patch, +grub-2.00_beta3-r1.ebuild:
+  Add patch to support genkernel initramfs in 10_linux.
 
 *grub-2.00_beta3 (01 Apr 2012)
 

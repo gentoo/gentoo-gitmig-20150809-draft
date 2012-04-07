@@ -1,0 +1,49 @@
+=== modified file 'util/grub.d/10_linux.in'
+--- util/grub.d/10_linux.in	2012-03-10 14:21:25 +0000
++++ util/grub.d/10_linux.in	2012-04-07 21:24:06 +0000
+@@ -135,7 +135,7 @@
+   message="$(gettext_printf "Loading Linux %s ..." ${version})"
+   sed "s/^/$submenu_indentation/" << EOF
+ 	echo	'$message'
+-	linux	${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args}
++	linux	${rel_dirname}/${basename} ${rootcmd}=${linux_root_device_thisversion} ro ${args}
+ EOF
+   if test -n "${initrd}" ; then
+     # TRANSLATORS: ramdisk isn't identifier. Should be translated.
+@@ -181,19 +181,31 @@
+   alt_version=`echo $version | sed -e "s,\.old$,,g"`
+   linux_root_device_thisversion="${LINUX_ROOT_DEVICE}"
+ 
++  rootcmd=root
+   initrd=
++  pushd "${dirname}" > /dev/null
+   for i in "initrd.img-${version}" "initrd-${version}.img" "initrd-${version}.gz" \
+ 	   "initrd-${version}" "initramfs-${version}.img" \
+ 	   "initrd.img-${alt_version}" "initrd-${alt_version}.img" \
+-	   "initrd-${alt_version}" "initramfs-${alt_version}.img" \
+-	   "initramfs-genkernel-${version}" \
+-	   "initramfs-genkernel-${alt_version}"; do
+-    if test -e "${dirname}/${i}" ; then
++	   "initrd-${alt_version}" "initramfs-${alt_version}.img"; do
++    if test -e "${i}" ; then
+       initrd="$i"
+       break
+     fi
+   done
+ 
++  if [ "x$initrd" = x ]; then
++    for i in "initramfs-genkernel"*"-${version}" \
++	     "initramfs-genkernel"*"-${alt_version}"; do
++      if test -e "${i}"; then
++	initrd="$i"
++	rootcmd=real_root
++	break
++      fi
++    done
++  fi
++  popd > /dev/null
++
+   config=
+   for i in "${dirname}/config-${version}" "${dirname}/config-${alt_version}" "/etc/kernels/kernel-config-${version}" ; do
+     if test -e "${i}" ; then
+
