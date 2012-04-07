@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.36 2012/03/07 18:06:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.37 2012/04/07 15:02:39 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> bundler-1.0.18.ebuild:
+  x86 stable, bug #398847
 
   07 Mar 2012; Naohiro Aota <naota@gentoo.org> bundler-1.0.22.ebuild:
   Add ~x86-fbsd
