@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.7 2010/11/21 11:13:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.8 2012/04/07 14:58:43 ulm Exp $
 
 inherit common-lisp elisp eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="doc"
 
-RDEPEND="virtual/commonlisp dev-lisp/cl-asdf"
+RDEPEND="virtual/commonlisp dev-lisp/asdf"
 DEPEND="${RDEPEND}
 	doc? ( virtual/texi2dvi )"
 

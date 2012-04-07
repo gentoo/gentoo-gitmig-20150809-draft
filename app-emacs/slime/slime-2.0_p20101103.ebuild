@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20101103.ebuild,v 1.1 2010/11/21 11:13:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20101103.ebuild,v 1.2 2012/04/07 14:58:43 ulm Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc xref"
 
 RDEPEND="virtual/commonlisp
-	dev-lisp/cl-asdf"
+	dev-lisp/asdf"
 DEPEND="${RDEPEND}
 	doc? ( virtual/texi2dvi )"
 
