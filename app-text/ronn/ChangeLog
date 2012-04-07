@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ronn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.10 2012/03/02 16:31:28 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.11 2012/04/07 14:59:34 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> ronn-0.7.3.ebuild:
+  x86 stable, bug #398847
 
   02 Mar 2012; Naohiro Aota <naota@gentoo.org> ronn-0.7.3-r1.ebuild:
   Add ~x86-fbsd
