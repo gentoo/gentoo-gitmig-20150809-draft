@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Data-Dumper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Data-Dumper/ChangeLog,v 1.5 2012/03/20 22:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Data-Dumper/ChangeLog,v 1.6 2012/04/07 17:49:21 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> Data-Dumper-2.131.0.ebuild:
+  x86 stable, bug #403737
 
   20 Mar 2012; Jeroen Roovers <jer@gentoo.org> Data-Dumper-2.131.0.ebuild:
   Stable for HPPA (bug #408579).
