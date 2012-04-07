@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2.ebuild,v 1.13 2012/04/07 23:55:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2-r1.ebuild,v 1.1 2012/04/07 23:55:39 tetromino Exp $
 
-EAPI="2"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2 fixheadtails
+inherit autotools eutils gnome2 fixheadtails
 
 DESCRIPTION="A gtk+ frontend for libgksu"
 HOMEPAGE="http://www.nongnu.org/gksu/"
@@ -13,7 +14,7 @@ SRC_URI="http://people.debian.org/~kov/gksu/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc gnome"
 
 RDEPEND=">=x11-libs/libgksu-2.0.8
@@ -35,8 +36,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	ht_fix_file "${S}/gksu-migrate-conf.sh"
 
 	# https://savannah.nongnu.org/bugs/index.php?36127
@@ -45,18 +44,22 @@ src_prepare() {
 	if use gnome ; then
 		sed 's/x-terminal-emulator/gnome-terminal/' \
 			-i gksu.desktop || die "sed 1 failed"
+
+		# Conditional patch to avoid eautoreconf
+		# https://savannah.nongnu.org/bugs/index.php?36129
+		epatch "${FILESDIR}/${PN}-2.0.2-nautilus-dir.patch"
+		eautoreconf
 	else
 		sed 's/dist_desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)/dist_desktop_DATA =/' \
 			-i Makefile.am Makefile.in || die "sed 2 failed"
 	fi
+
+	gnome2_src_prepare
 }
 
 src_install() {
 	gnome2_src_install
 	chmod +x "${D}/usr/share/gksu/gksu-migrate-conf.sh"
-	if use gnome; then
-		find "${D}" -name "*.la" -delete || die "la file removal failed"
-	fi
 }
 
 pkg_postinst() {

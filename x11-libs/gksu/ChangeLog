@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gksu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.62 2011/01/06 21:27:29 dang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.63 2012/04/07 23:55:39 tetromino Exp $
+
+*gksu-2.0.2-r1 (07 Apr 2012)
+
+  07 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gksu-2.0.2.ebuild,
+  +gksu-2.0.2-r1.ebuild, +files/gksu-2.0.2-glib-2.31.patch,
+  +files/gksu-2.0.2-nautilus-dir.patch:
+  Fix nautilus extension directoryfor nautilus-3. Add patch for building with
+  >=glib-2.31 (thanks to biohazrd for reporting in bug #401437 comment #1). Add
+  some missing dependencies.
 
   06 Jan 2011; Daniel Gryniewicz <dang@gentoo.org>
   -files/gksu-2.0.0-gnome-2.22.patch:
