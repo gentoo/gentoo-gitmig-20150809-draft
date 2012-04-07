@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.205 2012/04/07 10:12:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.206 2012/04/07 10:18:24 hd_brummy Exp $
+
+  07 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
+  vdr-vdrmanager added for gettext handling
 
   07 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
   some plugins gives false positive results on gettext handling, add this
