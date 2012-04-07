@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.6.4.ebuild,v 1.4 2012/04/07 15:03:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.6.4.ebuild,v 1.5 2012/04/07 16:01:07 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs versionator
@@ -129,7 +129,11 @@ src_configure() {
 }
 
 src_test() {
-	has_version media-gfx/imagemagick || emake -j1 check
+	if has_version ~${CATEGORY}/${P}; then
+		emake -j1 check
+	else
+		ewarn "Skipping testsuite because installed version doesn't match."
+	fi
 }
 
 src_install() {
