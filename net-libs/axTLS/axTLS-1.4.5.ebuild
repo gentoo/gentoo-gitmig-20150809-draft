@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axTLS/axTLS-1.4.5.ebuild,v 1.3 2012/04/07 02:23:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axTLS/axTLS-1.4.5.ebuild,v 1.4 2012/04/07 21:47:08 blueness Exp $
 
 EAPI="4"
 
-inherit user savedconfig toolchain-funcs
+inherit eutils savedconfig toolchain-funcs user
 
 ################################################################################
 # axTLS CONFIG MINI-HOWTO
@@ -70,6 +70,8 @@ pkg_setup() {
 
 src_prepare() {
 	tc-export CC
+
+	epatch "${FILESDIR}"/${PN}-add-missing-include.patch
 
 	#Use CC as the host compiler for mconf
 	sed -i -e "s:^HOSTCC.*:HOSTCC=${CC}:" \
