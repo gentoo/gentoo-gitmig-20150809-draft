@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.71 2012/04/06 17:29:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.72 2012/04/07 20:18:18 flameeyes Exp $
+
+  07 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> ccid-1.4.6.ebuild:
+  Bump dependency on pcsc-lite, thanks idl0r.
 
 *ccid-1.4.6 (06 Apr 2012)
 
