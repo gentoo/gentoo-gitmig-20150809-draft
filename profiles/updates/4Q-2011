@@ -108,5 +108,3 @@ move dev-php5/propel-runtime dev-php/propel-runtime
 move dev-php5/SabreAMF dev-php/SabreAMF
 move dev-php5/Savant3 dev-php/Savant3
 move dev-php5/Savant3-Plugin-Form dev-php/Savant3-Plugin-Form
-move dev-lisp/cl-asdf dev-lisp/asdf
-move dev-lisp/cl-asdf-binary-locations dev-lisp/asdf-binary-locations
