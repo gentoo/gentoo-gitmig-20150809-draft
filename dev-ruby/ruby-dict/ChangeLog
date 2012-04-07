@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dict
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.8 2010/02/01 09:49:12 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.9 2012/04/07 16:50:44 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> ruby-dict-0.9.4-r1.ebuild:
+  x86 stable, bug #399581
 
 *ruby-dict-0.9.4-r1 (01 Feb 2010)
 
