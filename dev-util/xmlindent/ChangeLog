@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xmlindent
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.4 2010/05/07 00:38:42 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.5 2012/04/07 21:47:26 jdhore Exp $
+
+  07 Apr 2012; Jeff Horelick <jdhore@gentoo.org> xmlindent-0.2.17-r1.ebuild:
+  marked x86 per bug 411165
 
 *xmlindent-0.2.17-r1 (07 May 2010)
 
