@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.40 2012/04/07 17:51:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.41 2012/04/07 17:58:50 ssuominen Exp $
+
+  07 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -moreutils-0.45.ebuild:
+  old
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> moreutils-0.45-r1.ebuild:
   x86 stable, bug #403737
