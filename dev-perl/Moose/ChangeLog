@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.94 2012/04/06 19:07:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.95 2012/04/07 12:02:32 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> Moose-2.40.200.ebuild:
+  x86 stable, bug #395297
 
   06 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Moose-2.40.200.ebuild:
   Stable for amd64, wrt bug #395297
