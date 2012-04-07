@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.39 2012/03/06 21:24:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.40 2012/04/07 17:51:24 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> moreutils-0.45-r1.ebuild:
+  x86 stable, bug #403737
 
   06 Mar 2012; Markos Chandras <hwoarang@gentoo.org> moreutils-0.45-r1.ebuild:
   Fix build failure when using -doc. Bug #400675. Restore stable amd64 keywords
