@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r3.ebuild,v 1.2 2012/01/28 11:44:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r4.ebuild,v 1.1 2012/04/07 15:43:49 ulm Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools elisp-common eutils flag-o-matic multilib
 
 if [[ ${PV##*.} = 9999 ]]; then
 	EBZR_PROJECT="emacs"
-	EBZR_BRANCH="trunk"
+	EBZR_BRANCH="emacs-24"
 	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
 	# "Nosmart" is much faster for initial branching.
 	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
@@ -16,7 +16,7 @@ if [[ ${PV##*.} = 9999 ]]; then
 	SRC_URI=""
 else
 	SRC_URI="mirror://gentoo/emacs-${PV}.tar.gz
-		ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-${PV}.tar.gz"
+		mirror://gnu-alpha/emacs/pretest/emacs-${PV}.tar.gz"
 	# FULL_VERSION keeps the full version number, which is needed in
 	# order to determine some path information correctly for copy/move
 	# operations later on

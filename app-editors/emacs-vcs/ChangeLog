@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.85 2012/04/02 17:29:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.86 2012/04/07 15:43:49 ulm Exp $
+
+*emacs-vcs-24.0.9999-r50 (07 Apr 2012)
+*emacs-vcs-24.0.9999-r4 (07 Apr 2012)
+
+  07 Apr 2012; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-23.4.9999.ebuild,
+  -emacs-vcs-24.0.9999-r3.ebuild, +emacs-vcs-24.0.9999-r4.ebuild,
+  +emacs-vcs-24.0.9999-r50.ebuild:
+  The upstream repository has been branched for the 24.1 release. 24.0.9999-r4
+  is the live ebuild for the emacs-24 branch, 24.0.9999-r50 for the trunk.
+  Remove emacs-23 live ebuild.
 
 *emacs-vcs-24.0.95 (02 Apr 2012)
 
