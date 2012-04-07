@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rabbitmq-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.15 2012/03/19 09:17:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.16 2012/04/07 08:10:18 patrick Exp $
+
+*rabbitmq-server-2.8.1 (07 Apr 2012)
+
+  07 Apr 2012; Patrick Lauer <patrick@gentoo.org> +rabbitmq-server-2.8.1.ebuild:
+  Bump
 
   19 Mar 2012; Benedikt Böhm <hollow@gentoo.org> rabbitmq-server-2.7.9.ebuild:
   fix #399831
