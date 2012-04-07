@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9.ebuild,v 1.5 2012/04/06 17:18:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9.ebuild,v 1.6 2012/04/07 18:15:30 xmw Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils multilib toolchain-funcs
 
@@ -35,30 +35,29 @@ src_prepare() {
 }
 
 src_compile() {
-	local my_pdfexe=
 	use X || my_nox11="NOX11=yes MUPDF= "
 
 	emake CC="$(tc-getCC)" \
-		build=debug verbose=true ${my_nox11} -j1 || die
+		build=debug verbose=true ${my_nox11} -j1
 }
 
 src_install() {
 	emake prefix="${ED}usr" LIBDIR="${ED}usr/$(get_libdir)" \
-		build=debug verbose=true ${my_nox11} install || die
+		build=debug verbose=true ${my_nox11} install
 
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins debian/mupdf.pc || die
+	doins debian/mupdf.pc
 
 	if use X ; then
-		domenu debian/mupdf.desktop || die
-		doicon debian/mupdf.xpm || die
-		doman apps/man/mupdf.1 || die
+		domenu debian/mupdf.desktop
+		doicon debian/mupdf.xpm
+		doman apps/man/mupdf.1
 	fi
-	doman apps/man/pdf{clean,draw,show}.1 || die
-	dodoc README || die
+	doman apps/man/pdf{clean,draw,show}.1
+	dodoc README
 
 	# avoid collision with app-text/poppler-utils
-	mv "${D}"usr/bin/pdfinfo "${ED}"usr/bin/mupdf_pdfinfo || die
+	mv "${ED}"usr/bin/pdfinfo "${ED}"usr/bin/mupdf_pdfinfo || die
 }
 
 pkg_postinst() {
