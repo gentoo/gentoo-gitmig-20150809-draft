@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/ispell-de
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ChangeLog,v 1.19 2012/03/18 18:37:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ChangeLog,v 1.20 2012/04/07 07:21:58 scarabeus Exp $
+
+*ispell-de-20110609 (07 Apr 2012)
+
+  07 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +ispell-de-20110609.ebuild,
+  -ispell-de-20011124.ebuild, -ispell-de-20030222.ebuild:
+  Version bump to latest wrt bugs #401945 and #403351. Drop older.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> ispell-de-20071211.ebuild:
   sparc stable wrt #396779
