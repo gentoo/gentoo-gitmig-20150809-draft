@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.25 2012/02/04 14:07:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.26 2012/04/07 16:50:11 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> terminal-0.9.7.ebuild:
+  x86 stable, bug #397049
 
   04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> terminal-0.9.7.ebuild:
   Stable for amd64, wrt bug #397049
