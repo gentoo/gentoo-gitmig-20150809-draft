@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.92 2012/01/20 13:23:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.93 2012/04/07 12:06:53 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> aqbanking-5.0.14.ebuild:
+  x86 stable, bug #397849
 
   20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> aqbanking-5.0.14.ebuild:
   Stable for AMD64, wrt bug #397849
