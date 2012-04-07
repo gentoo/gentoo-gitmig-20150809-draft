@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.22 2012/02/24 15:00:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.23 2012/04/07 08:19:15 patrick Exp $
+
+*zeromq-2.2.0 (07 Apr 2012)
+
+  07 Apr 2012; Patrick Lauer <patrick@gentoo.org> +zeromq-2.2.0.ebuild:
+  Bump
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> zeromq-2.1.11.ebuild:
   x86 stable wrt bug #404829
