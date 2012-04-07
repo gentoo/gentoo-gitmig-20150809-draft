@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/libxfce4ui-4.9.1.ebuild,v 1.2 2012/03/31 05:50:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/libxfce4ui-4.9.1.ebuild,v 1.3 2012/04/07 18:20:25 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug glade startup-notification"
 
-RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.14:2
+RDEPEND=">=dev-libs/glib-2.24
+	>=x11-libs/gtk+-2.20:2
 	x11-libs/libX11
 	x11-libs/libICE
 	x11-libs/libSM
