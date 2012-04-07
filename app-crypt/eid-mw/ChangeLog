@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/eid-mw
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.1 2012/04/07 22:58:18 flameeyes Exp $
+
+*eid-mw-4.0.2_p1188 (07 Apr 2012)
+
+  07 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +eid-mw-4.0.2_p1188.ebuild, +metadata.xml:
+  Initial import of eid-mw by Vincent Hardy.
+
