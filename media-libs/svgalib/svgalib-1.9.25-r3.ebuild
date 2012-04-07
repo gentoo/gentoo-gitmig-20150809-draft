@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25-r2.ebuild,v 1.1 2012/03/03 12:36:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25-r3.ebuild,v 1.1 2012/04/07 12:10:38 pacho Exp $
 
 EAPI="4"
 
@@ -96,7 +96,7 @@ src_install() {
 
 	insinto /usr/include
 	doins src/vga.h gl/vgagl.h src/mouse/vgamouse.h src/joystick/vgajoystick.h
-	doins src/keyboard/vgakeyboard.h src/svgalib_helper.h
+	doins src/keyboard/vgakeyboard.h kernel/svgalib_helper/svgalib_helper.h
 
 	insinto /etc/udev/rules.d
 	newins "${FILESDIR}"/svgalib.udev.rules.d.2 30-svgalib.rules
