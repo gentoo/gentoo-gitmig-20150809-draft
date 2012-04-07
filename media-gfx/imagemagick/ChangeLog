@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.470 2012/04/06 18:40:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.471 2012/04/07 15:03:51 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> imagemagick-6.7.6.4.ebuild:
+  arm stable, bug #410867
 
   06 Apr 2012; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.7.6.4.ebuild:
   Stable for amd64, wrt bug #410867
