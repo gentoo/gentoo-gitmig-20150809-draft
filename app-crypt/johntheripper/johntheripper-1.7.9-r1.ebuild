@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r1.ebuild,v 1.3 2012/04/07 06:44:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r1.ebuild,v 1.4 2012/04/07 20:36:41 radhermit Exp $
 
 EAPI="4"
 
@@ -148,7 +148,6 @@ src_compile() {
 	echo "#define JOHN_SYSTEMWIDE_HOME \"${EPREFIX}/etc/john\"" >> config.gentoo
 	echo "#define JOHN_SYSTEMWIDE_EXEC \"${EPREFIX}/usr/libexec/john\"" >> config.gentoo
 	append-flags -fPIC -fPIE
-	CFLAGS="${CFLAGS} -include \\\"${S}\\\"/config.gentoo"
 	gcc-specs-pie && append-ldflags -nopie
 	use openmp && OMP="-fopenmp"
 
@@ -157,7 +156,7 @@ src_compile() {
 
 	emake -C src/ \
 		CPP="${CPP}" CC="${CC}" AS="${AS}" LD="${LD}" \
-		CFLAGS="-c -Wall ${CFLAGS} ${OMP}" \
+		CFLAGS="-c -Wall -include \\\"${S}\\\"/config.gentoo ${CFLAGS} ${OMP}" \
 		LDFLAGS="${LDFLAGS}" \
 		OPT_NORMAL="" \
 		OMPFLAGS="${OMP}" \
