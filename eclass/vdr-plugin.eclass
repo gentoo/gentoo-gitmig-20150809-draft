@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.84 2012/03/18 23:33:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.85 2012/04/07 10:12:21 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin.eclass
 # @MAINTAINER:
@@ -229,6 +229,9 @@ vdr_has_gettext() {
 
 plugin_has_gettext() {
 	[[ -d po ]]
+	# some plugins gives false positive results, keep this list short
+	# temporary workout, ToDo: fix the plugins/eclass
+	has_version ">=media-plugins/vdr-streamdev-0.5.0"
 }
 
 vdr_i18n_convert_to_gettext() {

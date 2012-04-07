@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.204 2012/04/04 16:37:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.205 2012/04/07 10:12:21 hd_brummy Exp $
+
+  07 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
+  some plugins gives false positive results on gettext handling, add this
+  plugins here
 
   04 Apr 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Update from qt overlay, fixes #407523.
