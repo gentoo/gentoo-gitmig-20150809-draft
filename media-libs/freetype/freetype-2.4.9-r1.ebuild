@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.9-r1.ebuild,v 1.1 2012/03/21 04:24:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.9-r1.ebuild,v 1.2 2012/04/07 19:35:08 ssuominen Exp $
 
 EAPI="4"
 
@@ -105,6 +105,10 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+
+	# This is replaced by Libs.private: from freetype2.pc for static linking:
+	# pkg-config --static --libs freetype2
+	rm -f "${ED}"/usr/lib*/libfreetype.la
 
 	dodoc ChangeLog README
 	dodoc docs/{CHANGES,CUSTOMIZE,DEBUG,*.txt,PROBLEMS,TODO}
