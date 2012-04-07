@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Runtime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Runtime/ChangeLog,v 1.15 2012/04/06 19:08:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Runtime/ChangeLog,v 1.16 2012/04/07 11:51:24 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> Module-Runtime-0.13.0.ebuild:
+  x86 stable, bug #395297
 
   06 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Module-Runtime-0.13.0.ebuild:
   Stable for amd64, wrt bug #395297
