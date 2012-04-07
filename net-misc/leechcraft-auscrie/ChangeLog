@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-auscrie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-auscrie/ChangeLog,v 1.9 2012/03/20 12:41:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-auscrie/ChangeLog,v 1.10 2012/04/07 17:16:19 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org>
+  leechcraft-auscrie-0.4.99.ebuild:
+  x86 stable, bug #400605
 
 *leechcraft-auscrie-0.5.60 (20 Mar 2012)
 
