@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hs-bibutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-bibutils/ChangeLog,v 1.2 2011/06/17 19:49:10 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-bibutils/ChangeLog,v 1.3 2012/04/07 05:18:35 gienah Exp $
+
+  07 Apr 2012; Mark Wright <gienah@gentoo.org> hs-bibutils-4.12.ebuild:
+  EAPI=4, [profile?] for dependent haskell libraries
 
   17 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> hs-bibutils-4.12.ebuild:
   Fixed broken homepage to http://gorgias.mine.nu/repos/hs-bibutils/ (bug

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/regex-pcre-builtin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-pcre-builtin/ChangeLog,v 1.1 2011/04/25 09:44:20 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-pcre-builtin/ChangeLog,v 1.2 2012/04/07 05:19:59 gienah Exp $
+
+  07 Apr 2012; Mark Wright <gienah@gentoo.org>
+  regex-pcre-builtin-0.94.2.1.7.7.ebuild:
+  EAPI=4, [profile?] for dependent haskell libraries
 
 *regex-pcre-builtin-0.94.2.1.7.7 (25 Apr 2011)
 
