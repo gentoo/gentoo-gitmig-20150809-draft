@@ -1,6 +1,10 @@
 # ChangeLog for virtual/leechcraft-search-show
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-search-show/ChangeLog,v 1.10 2012/03/20 13:05:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-search-show/ChangeLog,v 1.11 2012/04/07 17:26:39 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org>
+  leechcraft-search-show-0.4.99.ebuild:
+  x86 stable, bug #400605
 
 *leechcraft-search-show-0.5.60 (20 Mar 2012)
 
