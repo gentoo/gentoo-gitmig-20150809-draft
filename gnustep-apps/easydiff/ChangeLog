@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/easydiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.21 2012/02/04 14:09:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.22 2012/04/07 14:52:10 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> easydiff-0.4.0.ebuild:
+  x86 stable, bug #410601
 
   04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> easydiff-0.4.0.ebuild:
   Stable for amd64, wrt bug #397045

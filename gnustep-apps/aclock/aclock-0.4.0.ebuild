@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/aclock-0.4.0.ebuild,v 1.2 2012/03/28 06:58:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/aclock/aclock-0.4.0.ebuild,v 1.3 2012/04/07 14:51:25 maekke Exp $
 
 EAPI=4
 inherit gnustep-2
@@ -11,7 +11,7 @@ HOMEPAGE="http://gap.nongnu.org/aclock/"
 SRC_URI="http://savannah.nongnu.org/download/gap/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
