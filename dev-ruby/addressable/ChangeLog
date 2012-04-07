@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/addressable
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.19 2011/09/19 18:33:51 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.20 2012/04/07 06:17:46 graaff Exp $
+
+*addressable-2.2.7 (07 Apr 2012)
+
+  07 Apr 2012; Hans de Graaff <graaff@gentoo.org> +addressable-2.2.7.ebuild:
+  Version bump.
 
   19 Sep 2011; Hans de Graaff <graaff@gentoo.org> addressable-2.2.6.ebuild:
   Frob build system so that we don't need rspec just to build the
