@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.20 2012/03/25 09:04:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.21 2012/04/07 11:15:44 eva Exp $
+
+*rygel-0.14.0 (07 Apr 2012)
+
+  07 Apr 2012; Gilles Dartiguelongue <eva@gentoo.org> -rygel-0.10.4.ebuild,
+  -rygel-0.12.4.ebuild, -rygel-0.12.5.ebuild, +rygel-0.14.0.ebuild:
+  Version bump. Remove old.
 
   25 Mar 2012; Pacho Ramos <pacho@gentoo.org> rygel-0.12.7.ebuild:
   Add missing RDEPEND on x11-misc/shared-mime-info, bug #409481 by Stefan

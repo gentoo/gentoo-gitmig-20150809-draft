@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.12.5.ebuild,v 1.1 2011/11/08 21:06:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.14.0.ebuild,v 1.1 2012/04/07 11:15:44 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://live.gnome.org/Rygel"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X nls +sqlite tracker transcode"
+IUSE="X nls +sqlite tracker test transcode"
 
 # The deps for tracker? and transcode? are just the earliest available
 # version at the time of writing this ebuild
@@ -22,13 +22,14 @@ RDEPEND="
 	>=dev-libs/glib-2.26:2
 	>=dev-libs/libgee-0.5.2:0
 	>=media-libs/gupnp-dlna-0.5
-	>=media-libs/gstreamer-0.10.28
-	>=media-libs/gst-plugins-base-0.10.28
+	>=media-libs/gstreamer-0.10.35
+	>=media-libs/gst-plugins-base-0.10.35
 	>=net-libs/gssdp-0.11
 	>=net-libs/gupnp-0.17.1
 	>=net-libs/gupnp-av-0.9
 	>=net-libs/libsoup-2.34:2.4
 	>=sys-libs/e2fsprogs-libs-1.41.3
+	x11-misc/shared-mime-info
 	sqlite? ( >=dev-db/sqlite-3.5:3 )
 	tracker? ( >=app-misc/tracker-0.8.17 )
 	transcode? (
@@ -44,8 +45,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 "
 # Maintainer only
-#	>=dev-lang/vala-0.11.6
-#	>=net-libs/gupnp-vala-0.9
+#	>=dev-lang/vala-0.14.1
+#	>=net-libs/gupnp-vala-0.10.2
 #   dev-libs/libxslt
 
 pkg_setup() {
@@ -55,6 +56,15 @@ pkg_setup() {
 		--enable-mediathek-plugin
 		$(use_enable nls)
 		$(use_enable sqlite media-export-plugin)
+		$(use_enable test tests)
 		$(use_enable tracker tracker-plugin)
 		$(use_with X ui)"
+}
+
+src_install() {
+	gnome2_src_install
+	# Autostart file is not placed correctly, bug #402745
+	insinto /etc/xdg/autostart
+	doins "${D}"/usr/share/applications/rygel.desktop
+	rm "${D}"/usr/share/applications/rygel.desktop
 }
