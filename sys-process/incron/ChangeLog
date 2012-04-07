@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/incron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.17 2012/01/09 19:05:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.18 2012/04/07 15:11:02 idl0r Exp $
+
+*incron-0.5.10 (07 Apr 2012)
+
+  07 Apr 2012; Christian Ruppert <idl0r@gentoo.org> +incron-0.5.10.ebuild:
+  Version bump.
 
   09 Jan 2012; Brent Baude <ranger@gentoo.org> incron-0.5.9-r1.ebuild:
   Marking incron-0.5.9-r1 ppc for bug 361099
