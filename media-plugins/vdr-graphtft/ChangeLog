@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-graphtft
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.29 2012/03/12 17:30:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.30 2012/04/07 01:36:55 hd_brummy Exp $
+
+  07 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-graphtft-0.3.4.ebuild, +files/vdr-1.7.27.diff:
+  compilefix >=vdr-1.7.27
 
   12 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-graphtft-0.2.2-r1.ebuild, -files/vdr-graphtft-0.2.2-avutil50.patch,

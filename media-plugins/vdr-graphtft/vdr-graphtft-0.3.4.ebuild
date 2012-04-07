@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.4.ebuild,v 1.1 2012/03/12 17:22:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.4.ebuild,v 1.2 2012/04/07 01:36:55 hd_brummy Exp $
 
 EAPI="4"
 
@@ -58,6 +58,10 @@ src_prepare() {
 
 	# UINT64_C is needed by ffmpeg headers
 	append-flags -D__STDC_CONSTANT_MACROS
+
+	if has_version ">=media-video/vdr-1.7.27"; then
+		epatch "${FILESDIR}/vdr-1.7.27.diff"
+	fi
 }
 
 src_compile() {
