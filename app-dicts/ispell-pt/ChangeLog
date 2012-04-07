@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/ispell-pt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt/ChangeLog,v 1.14 2011/09/09 20:38:46 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt/ChangeLog,v 1.15 2012/04/07 07:16:50 scarabeus Exp $
+
+*ispell-pt-20120312 (07 Apr 2012)
+
+  07 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +ispell-pt-20120312.ebuild:
+  Version bump to latest.
 
 *ispell-pt-20110909 (09 Sep 2011)
 
