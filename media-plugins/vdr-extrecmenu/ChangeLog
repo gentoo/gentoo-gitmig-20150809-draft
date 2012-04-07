@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-extrecmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.33 2012/02/11 18:49:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.34 2012/04/07 08:24:58 hd_brummy Exp $
+
+  07 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-extrecmenu-1.2.1.ebuild, +files/vdr-1.7.27.diff:
+  eapi=4; compilefix >=vdr-1.7.27
 
   11 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/dvdarchive-2.3-beta-configfile.patch:
