@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.8 2012/03/26 15:52:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.9 2012/04/07 15:36:12 scarabeus Exp $
+
+*mdds-0.5.4 (07 Apr 2012)
+
+  07 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +mdds-0.5.4.ebuild:
+  Version bump wrt bug#411147.
 
   26 Mar 2012; Brent Baude <ranger@gentoo.org> mdds-0.5.3-r1.ebuild:
   Marking mdds-0.5.3-r1 ~ppc64 for bug 398521
