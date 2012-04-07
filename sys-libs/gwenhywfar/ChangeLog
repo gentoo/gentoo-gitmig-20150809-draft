@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.95 2012/01/17 21:30:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.96 2012/04/07 12:04:28 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> gwenhywfar-4.2.1.ebuild:
+  x86 stable, bug #397851
 
   17 Jan 2012; Jeroen Roovers <jer@gentoo.org> gwenhywfar-4.2.1.ebuild:
   Stable for HPPA (bug #397851).
