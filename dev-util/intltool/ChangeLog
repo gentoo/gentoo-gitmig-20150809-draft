@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.153 2012/03/02 01:11:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.154 2012/04/07 22:06:39 jdhore Exp $
+
+  07 Apr 2012; Jeff Horelick <jdhore@gentoo.org> intltool-0.50.2.ebuild:
+  marked x86 per bug 411177
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -intltool-0.41.1.ebuild,
   -intltool-0.50.1.ebuild:
