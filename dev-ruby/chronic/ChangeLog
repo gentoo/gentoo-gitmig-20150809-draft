@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/chronic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.6 2012/03/07 16:22:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.7 2012/04/07 08:33:44 graaff Exp $
+
+*chronic-0.6.7 (07 Apr 2012)
+
+  07 Apr 2012; Hans de Graaff <graaff@gentoo.org> +chronic-0.6.7.ebuild:
+  Version bump.
 
   07 Mar 2012; Naohiro Aota <naota@gentoo.org> chronic-0.6.6.ebuild:
   Add ~x86-fbsd
