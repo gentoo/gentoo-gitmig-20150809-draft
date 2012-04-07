@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/cri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.3 2012/03/09 09:45:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.4 2012/04/07 08:59:26 graaff Exp $
+
+*cri-2.2.1 (07 Apr 2012)
+
+  07 Apr 2012; Hans de Graaff <graaff@gentoo.org> +cri-2.2.1.ebuild:
+  Version bump.
 
   09 Mar 2012; Naohiro Aota <naota@gentoo.org> cri-2.2.0.ebuild:
   Add ~x86-fbsd.
