@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/projectcenter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.21 2012/02/14 18:25:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectcenter/ChangeLog,v 1.22 2012/04/07 16:48:54 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> projectcenter-0.6.0.ebuild:
+  x86 stable, bug #397047
 
   14 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
   projectcenter-0.6.0.ebuild, +files/projectcenter-0.6.0-32788+33818.patch:
