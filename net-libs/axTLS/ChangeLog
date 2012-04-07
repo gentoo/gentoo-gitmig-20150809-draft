@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/axTLS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axTLS/ChangeLog,v 1.2 2012/04/07 02:23:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axTLS/ChangeLog,v 1.3 2012/04/07 14:14:30 blueness Exp $
+
+  07 Apr 2012; Anthony G. Basile <blueness@gentoo.org> files/config:
+  Increase max X509 CA certs and chain length to work with ca-certificates
 
   07 Apr 2012; Anthony G. Basile <blueness@gentoo.org> axTLS-1.4.5.ebuild:
   Add missing depend on doxygen if USE=doc
