@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.8.1.ebuild,v 1.4 2012/04/05 16:49:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.8.1-r1.ebuild,v 1.1 2012/04/07 15:41:24 dilfridge Exp $
 
 EAPI=4
 inherit kde4-meta-pkg
