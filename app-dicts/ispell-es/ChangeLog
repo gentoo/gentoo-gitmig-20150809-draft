@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/ispell-es
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ChangeLog,v 1.20 2008/11/01 18:36:58 pva Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ChangeLog,v 1.21 2012/04/07 06:58:18 scarabeus Exp $
+
+*ispell-es-1.11 (07 Apr 2012)
+
+  07 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +ispell-es-1.11.ebuild:
+  Version bump to latest.
 
   01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-es-1.10.ebuild:
   Dropped fperms, thus removing remaining lib/ reference which should be
