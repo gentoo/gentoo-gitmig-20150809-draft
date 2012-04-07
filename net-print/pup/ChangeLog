@@ -1,6 +1,9 @@
 # ChangeLog for net-print/pup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.10 2012/04/05 19:40:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pup/ChangeLog,v 1.11 2012/04/07 12:03:17 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> pup-1.1-r1.ebuild:
+  x86 stable, bug #397191
 
   05 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> pup-1.1.ebuild,
   pup-1.1-r1.ebuild:
