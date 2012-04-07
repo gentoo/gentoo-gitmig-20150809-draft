@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.604 2012/04/06 00:00:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.605 2012/04/07 06:45:49 nativemad Exp $
+
+  07 Apr 2012; Andreas Schuerch <nativemad@gentoo.org>
+  chromium-18.0.1025.151.ebuild:
+  x86 stable, see bug 410963
 
   05 Apr 2012; Richard Freeman <rich0@gentoo.org>
   chromium-18.0.1025.151.ebuild:
