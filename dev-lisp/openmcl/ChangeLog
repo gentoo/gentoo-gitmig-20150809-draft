@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/openmcl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/ChangeLog,v 1.6 2010/12/17 20:18:50 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/ChangeLog,v 1.7 2012/04/07 10:40:42 neurogeek Exp $
+
+  07 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> openmcl-0.14.2_p1.ebuild:
+  Changed DEPEND to depend on dev-lisp/asdf instead of dev-lisp/cl-asdf
 
   17 Dec 2010; Ulrich Mueller <ulm@gentoo.org> openmcl-0.14.2_p1.ebuild,
   openmcl-0.14.2_p1-r1.ebuild:
