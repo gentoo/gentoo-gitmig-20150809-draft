@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sagan-rules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/ChangeLog,v 1.5 2012/02/23 11:49:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/ChangeLog,v 1.6 2012/04/07 17:57:41 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> sagan-rules-20110822.ebuild:
+  x86 stable, bug #402165
 
   23 Feb 2012; Agostino Sarubbo <ago@gentoo.org> sagan-rules-20110822.ebuild:
   Stable for amd64, wrt bug #402165
