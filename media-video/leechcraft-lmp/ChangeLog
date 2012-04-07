@@ -1,6 +1,9 @@
 # ChangeLog for media-video/leechcraft-lmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/leechcraft-lmp/ChangeLog,v 1.9 2012/03/20 12:39:24 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/leechcraft-lmp/ChangeLog,v 1.10 2012/04/07 16:58:14 maekke Exp $
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> leechcraft-lmp-0.4.99.ebuild:
+  x86 stable, bug #400605
 
 *leechcraft-lmp-0.5.60 (20 Mar 2012)
 
