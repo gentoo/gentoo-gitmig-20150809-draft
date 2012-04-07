@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.2 2012/03/06 20:20:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.3 2012/04/07 02:06:09 hd_brummy Exp $
 
 EAPI="4"
 
@@ -53,6 +53,10 @@ src_prepare() {
 		-e 's:^ISODIR=.*$:ISODIR=/var/vdr/video/dvd-images:'
 
 	sed -i Makefile -e 's:DEFINES += -DTTXT_SUBTITLES:#DEFINES += -DTTXT_SUBTITLES:'
+
+	if has_version ">=media-video/vdr-1.7.27"; then
+		epatch "${FILESDIR}/vdr-1.7.27.diff"
+	fi
 
 	fix_vdr_libsi_include scanner.c
 }

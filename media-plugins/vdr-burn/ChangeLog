@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.53 2012/03/06 20:20:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.54 2012/04/07 02:06:09 hd_brummy Exp $
+
+  07 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-burn-0.2.0.ebuild,
+  +files/vdr-1.7.27.diff:
+  compilefix >=vdr-1.7.27
 
   06 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-burn-0.2.0.ebuild:
   disabled ttxtsubs check, false positiv results
