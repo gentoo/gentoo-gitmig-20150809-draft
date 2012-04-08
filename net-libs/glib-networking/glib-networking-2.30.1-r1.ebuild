@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.30.1-r1.ebuild,v 1.9 2012/03/25 17:08:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.30.1-r1.ebuild,v 1.10 2012/04/08 05:55:23 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -11,6 +11,9 @@ inherit autotools eutils gnome2
 
 DESCRIPTION="Network-related giomodules for glib"
 HOMEPAGE="http://git.gnome.org/browse/glib-networking/"
+# for eautoreconf
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~tetromino/distfiles/aclocal/libgcrypt.m4.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -22,6 +25,7 @@ RDEPEND=">=dev-libs/glib-2.29.16:2
 	libproxy? ( >=net-libs/libproxy-0.4.6-r3 )
 	ssl? (
 		app-misc/ca-certificates
+		dev-libs/libgcrypt
 		>=net-libs/gnutls-2.1.7 )
 "
 DEPEND="${RDEPEND}
@@ -56,6 +60,8 @@ src_prepare() {
 	# Fixed in upstream git master
 	epatch "${FILESDIR}/${P}-gnome-proxy-test.patch"
 	mkdir m4
+	# libgcrypt.m4 needed for eautoreconf, bug #411139
+	mv "${WORKDIR}/libgcrypt.m4" m4/ || die
 	eautoreconf
 
 	gnome2_src_prepare

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.30.2.ebuild,v 1.2 2012/01/18 06:48:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.30.2.ebuild,v 1.3 2012/04/08 05:55:23 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/glib-2.29.16:2
 	libproxy? ( >=net-libs/libproxy-0.4.6-r3 )
 	ssl? (
 		app-misc/ca-certificates
+		dev-libs/libgcrypt
 		>=net-libs/gnutls-2.1.7 )
 "
 DEPEND="${RDEPEND}
