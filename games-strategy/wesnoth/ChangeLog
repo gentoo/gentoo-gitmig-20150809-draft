@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.202 2012/03/22 00:35:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.203 2012/04/08 06:16:42 mr_bones_ Exp $
+
+*wesnoth-1.10.2 (08 Apr 2012)
+
+  08 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> +wesnoth-1.10.2.ebuild:
+  version bump
 
 *wesnoth-1.10.1 (22 Mar 2012)
 
