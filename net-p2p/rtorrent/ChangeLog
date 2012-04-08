@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.173 2012/03/09 00:15:08 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.174 2012/04/08 18:21:45 sochotnicky Exp $
+
+*rtorrent-0.9.1 (08 Apr 2012)
+
+  08 Apr 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  -rtorrent-0.9.0.ebuild, -files/rtorrent-0.9.0-canvas-fix.patch,
+  -files/rtorrent-0.9.0-clang.patch, -files/rtorrent-0.9.0-gold.patch,
+  +rtorrent-0.9.1.ebuild, +files/rtorrent-0.9.1-ncurses.patch:
+  Version bump (#411041), drop upstreamed patches and support for color. Too
+  much work to keep working and delays updates.
 
   09 Mar 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   rtorrent-0.9.0.ebuild, +files/rtorrent-0.9.0-clang.patch:

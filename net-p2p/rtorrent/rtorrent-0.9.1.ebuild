@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.0.ebuild,v 1.4 2012/03/09 00:15:08 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.1.ebuild,v 1.1 2012/04/08 18:21:45 sochotnicky Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://libtorrent.rakshasa.no/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="color daemon debug ipv6 test xmlrpc"
+IUSE="daemon debug ipv6 test xmlrpc"
 
 COMMON_DEPEND=">=net-libs/libtorrent-0.13.${PV##*.}
 	>=dev-libs/libsigc++-2.2.2:2
@@ -29,9 +29,6 @@ DEPEND="${COMMON_DEPEND}
 src_prepare() {
 	# bug #358271
 	epatch "${FILESDIR}"/${P}-ncurses.patch
-	epatch "${FILESDIR}"/${P}-gold.patch
-	epatch "${FILESDIR}"/${P}-clang.patch
-	use color && EPATCH_OPTS="-p1" epatch "${FILESDIR}"/${P}-canvas-fix.patch
 }
 
 src_configure() {
@@ -49,16 +46,5 @@ src_install() {
 	if use daemon; then
 		newinitd "${FILESDIR}/rtorrentd.init" rtorrentd || die "newinitd failed"
 		newconfd "${FILESDIR}/rtorrentd.conf" rtorrentd || die "newconfd failed"
-	fi
-}
-
-pkg_postinst() {
-	if use color; then
-		elog "rtorrent colors patch"
-		elog "Set colors using the options below in .rtorrent.rc:"
-		elog "Options: done_fg_color, done_bg_color, active_fg_color, active_bg_color"
-		elog "Colors: 0 = black, 1 = red, 2 = green, 3 = yellow, 4 = blue,"
-		elog "5 = magenta, 6 = cyan and 7 = white"
-		elog "Example: done_fg_color = 1"
 	fi
 }
