@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-2.3.0.ebuild,v 1.3 2011/12/07 22:08:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-2.6.0_beta3.ebuild,v 1.1 2012/04/08 19:47:13 dilfridge Exp $
 
 EAPI=4
 
 DIGIKAMPN=digikam
 
 KDE_LINGUAS=""
-KDE_MINIMAL="4.7"
+KDE_MINIMAL="4.8"
 
 CMAKE_MIN_VERSION=2.8
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.digikam.org/"
 SRC_URI="mirror://sourceforge/${DIGIKAMPN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 IUSE=""
 SLOT=4
 
