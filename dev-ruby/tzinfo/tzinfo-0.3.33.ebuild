@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.32-r1.ebuild,v 1.1 2012/03/12 17:27:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.33.ebuild,v 1.1 2012/04/08 21:36:04 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
