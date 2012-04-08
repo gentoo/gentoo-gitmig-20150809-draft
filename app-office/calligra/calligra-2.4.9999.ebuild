@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.9999.ebuild,v 1.2 2012/04/08 09:45:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.9999.ebuild,v 1.3 2012/04/08 13:39:59 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -116,6 +116,8 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}-2.4.0-rdf.patch" )
 
 RESTRICT=test
 # bug 394273
