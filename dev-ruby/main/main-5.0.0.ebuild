@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/main/main-4.8.1.ebuild,v 1.1 2011/12/18 14:45:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/main/main-5.0.0.ebuild,v 1.1 2012/04/08 09:49:46 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -21,8 +21,6 @@ IUSE="doc test"
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
-# Has ~ dependencies on minor versions in gemspec and main.rb. Fix or
-# make explicit here?
 ruby_add_rdepend ">=dev-ruby/chronic-0.6.2
 	>=dev-ruby/fattr-2.2.0
 	>=dev-ruby/arrayfields-4.7.4
