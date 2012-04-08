@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/espresso
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.7 2012/03/24 22:38:49 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.8 2012/04/08 11:11:55 alexxy Exp $
+
+  08 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> espresso-3.1.0.ebuild:
+  [sci-physics/espresso] Add ~amd64 keyword
 
   24 Mar 2012; Christoph Junghans <ottxor@gentoo.org> espresso-3.1.0.ebuild:
   Fixes bug #405455, again

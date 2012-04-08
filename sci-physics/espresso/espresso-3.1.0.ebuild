@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.1.0.ebuild,v 1.2 2012/03/24 22:38:49 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.1.0.ebuild,v 1.3 2012/04/08 11:11:55 alexxy Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X doc examples fftw mpi packages test -tk"
 REQUIRED_USE="tk? ( X )"
 
