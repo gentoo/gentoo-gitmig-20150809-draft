@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.37 2012/03/02 08:57:11 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.38 2012/04/08 00:41:20 robbat2 Exp $
+
+*redis-2.4.10 (08 Apr 2012)
+
+  08 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> +redis-2.4.10.ebuild:
+  Version bump, bug #408777: fixes replication bugs.
 
 *redis-2.4.8 (02 Mar 2012)
 
