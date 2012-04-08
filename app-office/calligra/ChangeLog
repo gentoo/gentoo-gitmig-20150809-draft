@@ -1,6 +1,10 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.31 2012/04/06 21:53:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.32 2012/04/08 09:45:31 dilfridge Exp $
+
+  08 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> calligra-2.4.0.ebuild,
+  calligra-2.4.9999.ebuild:
+  Disable Active, bug 411021
 
 *calligra-2.4.9999 (06 Apr 2012)
 

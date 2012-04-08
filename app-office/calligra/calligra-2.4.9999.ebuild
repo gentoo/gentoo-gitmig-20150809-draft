@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.9999.ebuild,v 1.1 2012/04/06 21:53:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.9999.ebuild,v 1.2 2012/04/08 09:45:31 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -137,8 +137,9 @@ src_configure() {
 
 	# default disablers
 	mycmakeargs+=(
-		"-DBUILD_mobile=OFF" # we dont suppor mobile gui, maybe arm could
-		"-DWITH_LCMS=OFF" # we use lcms:2
+		"-DBUILD_mobile=OFF"         # we dont support mobile gui, maybe arm could
+		"-DBUILD_active=OFF"         # we dont support active gui, maybe arm could
+		"-DWITH_LCMS=OFF"            # we use lcms:2
 		"-DCREATIVEONLY=OFF"
 		"-DWITH_TINY=OFF"
 		"-DWITH_CreateResources=OFF" # NOT PACKAGED: http://create.freedesktop.org/
