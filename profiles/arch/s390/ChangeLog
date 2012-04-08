@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.45 2012/02/21 06:45:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.46 2012/04/08 15:06:22 armin76 Exp $
+
+  08 Apr 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Unmask pyxattr
 
   21 Feb 2012; Zac Medico <zmedico@gentoo.org> package.use.mask:
   Bug #402215: Mask USE=xattr for sys-apps/portage, pending ~s390 keyword for

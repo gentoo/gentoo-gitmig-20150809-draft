@@ -1,11 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.77 2012/02/21 06:45:18 zmedico Exp $
-
-# Zac Medico <zmedico@gentoo.org> (21 Feb 2012)
-# Bug #402215: Mask USE=xattr for sys-apps/portage, pending ~alpha keyword for
-# dev-python/pyxattr.
-sys-apps/portage xattr
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.78 2012/04/08 15:07:32 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
 # Fails to build

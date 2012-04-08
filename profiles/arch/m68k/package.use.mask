@@ -1,11 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.9 2012/02/21 06:45:18 zmedico Exp $
-
-# Zac Medico <zmedico@gentoo.org> (21 Feb 2012)
-# Bug #402215: Mask USE=xattr for sys-apps/portage, pending ~m68k keyword for
-# dev-python/pyxattr.
-sys-apps/portage xattr
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.10 2012/04/08 15:08:09 armin76 Exp $
 
 # Ryan Hill <dirtyepic@gentoo.org> (20 Jul 2011)
 # graphite requires dev-libs/ppl & dev-libs/cloog-ppl
