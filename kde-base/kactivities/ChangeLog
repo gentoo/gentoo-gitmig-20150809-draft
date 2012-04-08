@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kactivities
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.19 2012/04/04 23:59:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.20 2012/04/08 14:52:42 dilfridge Exp $
+
+*kactivities-4.8.1-r1 (08 Apr 2012)
+
+  08 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kactivities-4.8.1-r1.ebuild, +files/kactivities-4.8.1-nepomuk.patch:
+  Manually patch kactivities-4.8.1 to kde-4.8.2 state, to prevent (most of the)
+  crashes as in bug 411279
 
 *kactivities-4.8.2 (04 Apr 2012)
 
