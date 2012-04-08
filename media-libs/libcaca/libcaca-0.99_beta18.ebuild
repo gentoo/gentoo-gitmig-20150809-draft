@@ -1,12 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.1 2012/04/08 08:56:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.2 2012/04/08 11:03:33 radhermit Exp $
 
 EAPI=4
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_MODNAME="caca"
+DISTUTILS_SETUP_FILES=("python|setup.py")
 
-inherit autotools flag-o-matic mono multilib java-pkg-opt-2 python
+inherit autotools flag-o-matic mono multilib java-pkg-opt-2 distutils
 
 MY_P=${P/_/.}
 
@@ -81,14 +84,15 @@ src_configure() {
 	use mono && export CSC=gmcs #329651
 	export VARTEXFONTS="${T}/fonts" #44128
 
+	# python bindings are built via distutils
 	econf \
+		--disable-python \
 		$(use_enable static-libs static) \
 		$(use_enable slang) \
 		$(use_enable ncurses) \
 		$(use_enable X x11) $(use_with X x) --x-libraries=/usr/$(get_libdir) \
 		$(use_enable opengl gl) \
 		$(use_enable mono csharp) \
-		$(use_enable python) \
 		$(use_enable java) \
 		$(use_enable cxx) \
 		$(use_enable ruby) \
@@ -96,8 +100,20 @@ src_configure() {
 		$(use_enable doc)
 }
 
+src_compile() {
+	default
+
+	if use python ; then
+		distutils_src_compile
+	fi
+}
+
 src_install() {
 	default
+
+	if use python ; then
+		distutils_src_install
+	fi
 
 	if use java; then
 		java-pkg_newjar java/libjava.jar
