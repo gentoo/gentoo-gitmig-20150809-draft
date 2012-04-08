@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.82 2012/02/10 21:37:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.83 2012/04/08 15:04:44 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -103,6 +103,7 @@ barcode
 xmms2
 gme
 quvi
+aacplus
 
 # No hardware to test
 ifp

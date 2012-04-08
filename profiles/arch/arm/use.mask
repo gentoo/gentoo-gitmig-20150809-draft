@@ -139,6 +139,7 @@ quvi
 bluray
 libtar
 zvbi
+aacplus
 
 # Unmask ARM-only video-cards
 -video_cards_omapfb

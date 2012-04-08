@@ -84,6 +84,7 @@ lpsol
 libev
 prelude
 ladspa
+aacplus
 
 # Stuff that doesn't compile on ia64
 chicken

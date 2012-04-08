@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.153 2012/02/10 21:29:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.154 2012/04/08 15:02:59 armin76 Exp $
+
+  08 Apr 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask aacplus
 
   10 Feb 2012; Matt Turner <mattst88@gentoo.org> use.mask:
   Mask wayland USE flag.
