@@ -1,9 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.333 2012/04/05 18:08:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.334 2012/04/08 14:43:35 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexis Ballier <aballier@gentoo.org> (8 Apr 2012)
+# mask x264-encoder[ffmpegsource] on all versions but latest one
+# ffmpegsource which is pulled in is only ~arch and not ready to be
+# stabilised ( bug #410341 ). x264 needs to be stabilied for bug #401069
+<media-video/x264-encoder-0.0.20120327 ffmpegsource
 
 # Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2012)
 # Broken for awhile.  Unmask when dev-util/kdevelop-php-docs is keyworded properly
