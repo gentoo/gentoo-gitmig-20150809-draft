@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.5.ebuild,v 1.10 2012/04/07 11:23:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.5.ebuild,v 1.11 2012/04/08 16:43:07 armin76 Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ if [ "$PV" == "9999" ]; then
 	S=${WORKDIR}/hg
 else
 	SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.gz"
-	KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 fi
 
 LICENSE="GPL-2"
