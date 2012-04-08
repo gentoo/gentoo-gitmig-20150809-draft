@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcaca
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.97 2011/10/05 18:57:44 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.98 2012/04/08 08:56:25 radhermit Exp $
+
+*libcaca-0.99_beta18 (08 Apr 2012)
+
+  08 Apr 2012; Tim Harder <radhermit@gentoo.org> +libcaca-0.99_beta18.ebuild:
+  Version bump. Add python USE flag.
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> libcaca-0.99_beta17.ebuild:
   remove ptex dep as it is going away
