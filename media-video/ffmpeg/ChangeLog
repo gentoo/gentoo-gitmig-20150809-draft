@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.536 2012/04/05 11:59:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.537 2012/04/08 14:37:03 aballier Exp $
+
+  08 Apr 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.2.ebuild,
+  +files/freiordl.patch:
+  backport upstream patch to link with libdl when using frei0r, bug #409047
 
   05 Apr 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.2.ebuild,
   ffmpeg-9999.ebuild:
