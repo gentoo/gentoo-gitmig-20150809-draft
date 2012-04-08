@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.96 2012/03/25 17:28:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.97 2012/04/08 02:24:05 tetromino Exp $
+
+  08 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> pan-0.135.ebuild,
+  +files/pan-0.135-glib-2.31.patch:
+  Fix building with >=glib-2.31 (bug #401437, thanks to Mathias for reporting).
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> pan-0.135.ebuild:
   alpha/sparc stable wrt #393007
