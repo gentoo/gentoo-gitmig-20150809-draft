@@ -1,17 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.3.0.ebuild,v 1.5 2012/02/12 16:01:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.6.0_beta3.ebuild,v 1.1 2012/04/08 19:54:28 dilfridge Exp $
 
 EAPI=4
 
-KDE_LINGUAS="af ar az be bg bn br bs ca cs csb cy da de el en_GB eo es et eu fa fi fo
-fr fy ga gl ha he hi hr hsb hu id is it ja ka kk km ko ku lb lo lt lv mi mk mn ms mt
-nb nds ne nl nn nso oc pa pl pt pt_BR ro ru rw se sk sl sq sr sr@Latn ss sv ta te tg
-th tr tt uk uz uz@cyrillic ven vi wa xh zh_CN zh_HK zh_TW zu"
+KDE_LINGUAS="af ar az be bg bn br bs ca cs csb cy da de el en_GB eo es et eu fa fi fo fr fy ga gl ha he hi hr hsb
+hu id is it ja ka kk km ko ku lb lo lt lv mi mk mn ms mt nb nds ne nl nn nso oc pa pl pt pt_BR ro ru
+rw se sk sl sq sr sr@Latn ss sv ta te tg th tr tt uk uz uz@cyrillic ven vi wa xh zh_CN zh_HK zh_TW zu"
 
 KDE_HANDBOOK="optional"
 CMAKE_MIN_VERSION="2.8"
-KDE_MINIMAL="4.7"
+KDE_MINIMAL="4.8"
+
+KDE_DOC_DIRS="doc-digikam doc-showfoto"
 
 inherit kde4-base
 
@@ -23,12 +24,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 SLOT="4"
 IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
 
 CDEPEND="
-	!!=media-gfx/digikam-2.1.0-r1
 	$(add_kdebase_dep kdelibs 'semantic-desktop=')
 	$(add_kdebase_dep libkdcraw)
 	$(add_kdebase_dep libkexiv2)
@@ -38,8 +38,8 @@ CDEPEND="
 	media-libs/jasper
 	media-libs/lcms:0
 	>=media-libs/lensfun-0.2.5
-	>=media-libs/libkface-${PV}
-	>=media-libs/libkgeomap-${PV}
+	media-libs/libkface
+	media-libs/libkgeomap
 	media-libs/liblqr
 	>=media-libs/libpgf-6.11.28
 	media-libs/libpng
@@ -78,9 +78,12 @@ src_prepare() {
 	rm -rf "${WORKDIR}/${MY_P}/extra" || die
 
 	# prepare the handbook
-	mv "${WORKDIR}/${MY_P}/doc/${PN}" doc || die
-	echo "add_subdirectory( digikam )" > doc/CMakeLists.txt
-	echo "add_subdirectory( showfoto )" >> doc/CMakeLists.txt
+	mkdir doc-digikam doc-showfoto || die
+	echo "add_subdirectory( en )" > doc-digikam/CMakeLists.txt || die
+	mv "${WORKDIR}/${MY_P}/doc/${PN}/digikam" doc-digikam/en || die
+	echo "add_subdirectory( en )" > doc-showfoto/CMakeLists.txt || die
+	mv "${WORKDIR}/${MY_P}/doc/${PN}/showfoto" doc-showfoto/en || die
+	sed -i -e 's:../digikam/:../../doc-digikam/en/:g' doc-showfoto/en/index.docbook || die
 
 	# prepare the translations
 	mv "${WORKDIR}/${MY_P}/po" po || die
@@ -93,7 +96,8 @@ src_prepare() {
 	kde4-base_src_prepare
 
 	if use handbook; then
-		echo "add_subdirectory( doc )" >> CMakeLists.txt
+		echo "add_subdirectory( doc-digikam )" >> CMakeLists.txt
+		echo "add_subdirectory( doc-showfoto )" >> CMakeLists.txt
 	fi
 }
 
@@ -130,11 +134,6 @@ src_compile() {
 
 src_install() {
 	kde4-base_src_install
-
-	# someone had the great idea to install duplicate icons
-	einfo Removing duplicate icons
-	find "${ED}/usr/share/icons/oxygen" -name digikam.png -exec rm -v {} +
-	find "${ED}/usr/share/icons/oxygen" -name showfoto.png -exec rm -v {} +
 
 	if use doc; then
 		# install the api documentation
