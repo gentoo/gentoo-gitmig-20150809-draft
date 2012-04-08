@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/ebookmerge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.14 2012/03/20 10:35:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.15 2012/04/08 03:51:41 dirtyepic Exp $
+
+  08 Apr 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
 *ebookmerge-0.9.3-r1 (20 Mar 2012)
 
