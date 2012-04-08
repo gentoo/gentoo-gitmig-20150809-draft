@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.1-r1.ebuild,v 1.1 2011/09/29 16:55:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.1-r3.ebuild,v 1.1 2012/04/08 21:04:02 flameeyes Exp $
 
 EAPI="4"
 
@@ -39,6 +39,7 @@ RDEPEND=">=sys-libs/db-4.2.52
 	)
 	"
 DEPEND="${RDEPEND}"
+RDEPEND="sys-apps/openrc"
 
 REQUIRED_USE="ldap? ( acl )"
 
@@ -89,13 +90,13 @@ src_configure() {
 src_install() {
 	default
 
-	newinitd "${FILESDIR}"/afpd.init afpd
-	newinitd "${FILESDIR}"/cnid_metad.init cnid_metad
+	newinitd "${FILESDIR}"/afpd.init.3 afpd
+	newinitd "${FILESDIR}"/cnid_metad.init.2 cnid_metad
 
 	if use appletalk; then
 		newinitd "${FILESDIR}"/atalkd.init atalkd
-		newinitd "${FILESDIR}"/atalk_service.init timelord
-		newinitd "${FILESDIR}"/atalk_service.init papd
+		newinitd "${FILESDIR}"/atalk_service.init.2 timelord
+		newinitd "${FILESDIR}"/atalk_service.init.2 papd
 	fi
 
 	use avahi || sed -i -e '/need avahi-daemon/d' "${D}"/etc/init.d/afpd
