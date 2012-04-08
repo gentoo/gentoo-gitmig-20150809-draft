@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.99 2012/01/11 23:01:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.100 2012/04/08 22:04:23 flameeyes Exp $
+
+*lshw-02.16b-r1 (08 Apr 2012)
+
+  08 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/lshw-02.16b-build-v2.patch, +lshw-02.16b-r1.ebuild:
+  Update patch so that USE=gtk won't fail if sqlite3 is not present. Make the
+  ebuild depend on hwids and not install its own ids files.
 
 *lshw-02.16b (11 Jan 2012)
 
