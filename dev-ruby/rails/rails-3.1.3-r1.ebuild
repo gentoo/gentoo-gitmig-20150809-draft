@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-3.1.3-r1.ebuild,v 1.1 2012/01/02 20:15:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-3.1.3-r1.ebuild,v 1.2 2012/04/08 08:44:06 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -32,7 +32,7 @@ ruby_add_rdepend "
 	=dev-ruby/bundler-1*
 	~dev-ruby/railties-${PV}
 	asset-pipeline? (
-		dev-ruby/jquery-rails
+		dev-ruby/jquery-rails:0
 		dev-ruby/sass-rails
 		dev-ruby/uglifier
 		dev-ruby/coffee-rails
