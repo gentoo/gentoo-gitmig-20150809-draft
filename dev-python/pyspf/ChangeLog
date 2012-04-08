@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.16 2012/02/08 06:05:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.17 2012/04/08 19:47:52 floppym Exp $
+
+  08 Apr 2012; Mike Gilbert <floppym@gentoo.org> pyspf-2.0.5.ebuild,
+  pyspf-2.0.6.ebuild:
+  Add slot to dev-python/pydns dependency. #411035 by Lutz Schildt.
 
   08 Feb 2012; Patrick Lauer <patrick@gentoo.org> Manifest:
   Manifest fix

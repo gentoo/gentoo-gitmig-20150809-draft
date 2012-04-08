@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/pyspf-2.0.5.ebuild,v 1.4 2011/11/04 22:21:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/pyspf-2.0.5.ebuild,v 1.5 2012/04/08 19:47:51 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-python/pydns"
-RDEPEND="dev-python/pydns"
+DEPEND="|| ( dev-python/pydns:2 dev-python/pydns:0 )"
+RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="spf.py"
