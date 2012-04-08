@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.0_rc1.ebuild,v 1.2 2012/04/07 22:10:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.0_rc1.ebuild,v 1.3 2012/04/08 07:10:24 mr_bones_ Exp $
 
 EAPI=4
 
@@ -47,7 +47,7 @@ src_install() {
 		build=debug verbose=true ${my_nox11} install
 
 	insinto /usr/include
-	doins pdf/mupdf{,-internal}.h 
+	doins pdf/mupdf{,-internal}.h
 	doins fitz/fitz{,-internal}.h
 	doins xps/muxps{,-internal}.h
 
