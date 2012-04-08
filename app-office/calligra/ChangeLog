@@ -1,6 +1,13 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.33 2012/04/08 13:39:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.34 2012/04/08 13:54:06 dilfridge Exp $
+
+*calligra-2.3.92-r1 (08 Apr 2012)
+
+  08 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +calligra-2.3.92-r1.ebuild, +files/calligra-2.3.92-language.patch,
+  +files/calligra-2.3.92-table.patch:
+  Add several crash fixes, thanks to Franz Fellner, bug 410109 and bug 410187
 
   08 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   calligra-2.3.92.ebuild, calligra-2.4.0.ebuild,
