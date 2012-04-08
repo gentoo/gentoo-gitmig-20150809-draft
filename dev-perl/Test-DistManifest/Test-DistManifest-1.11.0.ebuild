@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-DistManifest/Test-DistManifest-1.011.ebuild,v 1.1 2012/02/26 13:33:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-DistManifest/Test-DistManifest-1.11.0.ebuild,v 1.1 2012/04/08 13:28:12 tove Exp $
 
 EAPI=4
 
@@ -16,8 +16,11 @@ IUSE="test"
 
 RDEPEND="
 	dev-perl/Module-Manifest
-	dev-perl/Test-NoWarnings
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? (
+		dev-perl/Test-NoWarnings
+	)
+"
 
 SRC_TEST="do"
