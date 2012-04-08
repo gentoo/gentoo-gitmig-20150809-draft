@@ -1,0 +1,20 @@
+------------------------------------------------------------------------
+r30479 | hub | 2011-11-29 00:39:09 -0500 (Tue, 29 Nov 2011) | 2 lines
+Changed paths:
+   M /abiword/trunk/src/af/util/xp/ut_go_file.h
+
+Bug 13197: only import glib.h
+Patch by Dominique Leuenberger.
+------------------------------------------------------------------------
+Index: src/af/util/xp/ut_go_file.h
+===================================================================
+--- src/af/util/xp/ut_go_file.h	(revision 30478)
++++ src/af/util/xp/ut_go_file.h	(revision 30479)
+@@ -31,7 +31,6 @@
+ 
+ #include <glib.h>
+ #include <gsf/gsf.h>
+-#include <glib/gerror.h>
+ #include <time.h>
+ 
+ G_BEGIN_DECLS

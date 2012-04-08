@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r2.ebuild,v 1.6 2012/02/12 14:34:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r2.ebuild,v 1.7 2012/04/08 01:57:38 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -90,6 +90,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng15.patch
 	epatch "${FILESDIR}"/${P}-gcc46.patch
 	epatch "${FILESDIR}"/${P}-libwpd.patch
+	epatch "${FILESDIR}"/${P}-glib-2.31.patch
 
 	# install icon to pixmaps (bug #220097)
 	sed 's:$(datadir)/icons:$(datadir)/pixmaps:' \
