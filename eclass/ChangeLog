@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.206 2012/04/07 10:18:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.207 2012/04/08 02:29:44 tetromino Exp $
+
+  08 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnome2-utils.eclass:
+  Punt stale icon-theme.cache files and empty icon theme directories after
+  theme uninstallation (bug #410495, thanks to Maxim Kammerer for reporting).
 
   07 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
   vdr-vdrmanager added for gettext handling

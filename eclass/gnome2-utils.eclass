@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.25 2011/12/14 19:47:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.26 2012/04/08 02:29:44 tetromino Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -242,6 +242,14 @@ gnome2_icon_cache_update() {
 
 				retval=2
 			fi
+		elif [[ $(ls "${EROOT}${dir}") = "icon-theme.cache" ]]; then
+			# Clear stale cache files after theme uninstallation
+			rm "${EROOT}${dir}/icon-theme.cache"
+		fi
+
+		if [[ -z $(ls "${EROOT}${dir}") ]]; then
+			# Clear empty theme directories after theme uninstallation
+			rmdir "${EROOT}${dir}"
 		fi
 	done
 
