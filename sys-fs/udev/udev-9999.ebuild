@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.95 2012/03/28 21:54:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.96 2012/04/08 06:37:43 ssuominen Exp $
 
 EAPI=4
 
@@ -58,10 +58,7 @@ else
 fi
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? (
-		>=sys-apps/usbutils-0.82
-		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db] <sys-apps/pciutils-3.1.9-r1[-zlib] )
-		)
+	hwdb? ( sys-apps/hwids )
 	openrc? ( >=sys-fs/udev-init-scripts-10
 		!<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
