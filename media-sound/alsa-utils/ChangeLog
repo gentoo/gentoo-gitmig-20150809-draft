@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.322 2012/04/01 15:13:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.323 2012/04/08 19:43:31 flameeyes Exp $
+
+*alsa-utils-1.0.25-r2 (08 Apr 2012)
+
+  08 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +alsa-utils-1.0.25-r2.ebuild:
+  Make sure that the minimal USE flag also does not install the alsaconf script,
+  not just ignore the dependency.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> alsa-utils-1.0.25-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #406101
