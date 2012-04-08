@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.112 2012/04/07 07:37:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.113 2012/04/08 16:39:46 armin76 Exp $
+
+  08 Apr 2012; Raúl Porcel <armin76@gentoo.org> apache-tools-2.2.22.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #401761
 
   07 Apr 2012; Jeff Horelick <jdhore@gentoo.org> apache-tools-2.2.22.ebuild:
   marked x86 per bug 401761
