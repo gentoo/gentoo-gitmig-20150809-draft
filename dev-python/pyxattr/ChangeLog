@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.30 2011/12/10 01:06:28 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.31 2012/04/08 15:06:21 armin76 Exp $
+
+  08 Apr 2012; Raúl Porcel <armin76@gentoo.org> pyxattr-0.5.0.ebuild:
+  alpha/m68k/s390 stable
 
   10 Dec 2011; Zac Medico <zmedico@gentoo.org> pyxattr-0.5.0.ebuild:
   Add ~x86-linux keyword.
