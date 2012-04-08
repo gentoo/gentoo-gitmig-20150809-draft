@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.81 2012/03/03 15:06:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.82 2012/04/08 16:34:31 armin76 Exp $
+
+  08 Apr 2012; Raúl Porcel <armin76@gentoo.org> e2fsprogs-libs-1.42.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #403405
 
   03 Mar 2012; Markus Meier <maekke@gentoo.org> e2fsprogs-libs-1.42.ebuild:
   arm stable, bug #403405
