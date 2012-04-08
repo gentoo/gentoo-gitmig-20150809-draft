@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/languagetool/languagetool-1.7.ebuild,v 1.1 2012/04/07 15:31:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/languagetool/languagetool-1.7.ebuild,v 1.2 2012/04/08 08:22:31 scarabeus Exp $
 
 EAPI=4
 
@@ -30,4 +30,10 @@ S=${WORKDIR}
 
 src_unpack() {
 	cp -v "${DISTDIR}/${MY_P}.oxt" "${S}"
+}
+
+pkg_postinst() {
+	office-ext_pkg_postinst
+	einfo "Be warned that this extension is serious resource hog and thus"
+	einfo "it might result in slower operations."
 }
