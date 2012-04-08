@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask-script
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/ChangeLog,v 1.3 2011/10/08 17:47:49 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/ChangeLog,v 1.4 2012/04/08 19:05:57 floppym Exp $
+
+*flask-script-0.3.3 (08 Apr 2012)
+
+  08 Apr 2012; Mike Gilbert <floppym@gentoo.org> +flask-script-0.3.3.ebuild:
+  Version bump, #411151 by Ian Delaney.
 
   08 Oct 2011; Mike Gilbert <floppym@gentoo.org> flask-script-0.3.1.ebuild:
   Restrict py2.4 due to bug 382765.
