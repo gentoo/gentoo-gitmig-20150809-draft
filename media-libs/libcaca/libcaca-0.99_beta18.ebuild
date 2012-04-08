@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.2 2012/04/08 11:03:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.3 2012/04/08 20:43:30 floppym Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -49,6 +49,12 @@ DEPEND="${COMMON_DEPEND}
 S=${WORKDIR}/${MY_P}
 
 DOCS=( AUTHORS ChangeLog NEWS NOTES README THANKS )
+
+pkg_setup() {
+	if use python; then
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	sed -i -e '/doxygen_tests = check-doxygen/d' test/Makefile.am || die #339962
@@ -121,4 +127,16 @@ src_install() {
 
 	rm -rf "${D}"/usr/share/java
 	find "${D}" -name '*.la' -delete
+}
+
+pkg_postinst() {
+	if use python; then
+		distutils_pkg_postinst
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		distutils_pkg_postrm
+	fi
 }
