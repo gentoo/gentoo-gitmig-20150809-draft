@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.7.0.ebuild,v 1.2 2012/03/05 18:00:21 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.8.1-r1.ebuild,v 1.1 2012/04/08 18:09:34 maksbotan Exp $
 
 EAPI=4
 
@@ -15,15 +15,12 @@ SRC_URI="http://fedorahosted.org/released/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="glib doc +locator logrotate netlink nls python +libunistring selinux test"
-
-REQUIRED_USE="^^ ( glib libunistring )"
+IUSE="doc +locator netlink nls python selinux test"
 
 COMMON_DEP="
 	virtual/pam
 	dev-libs/popt
-	!glib? ( >=dev-libs/libunistring-0.9.3 )
-	glib? ( dev-libs/glib:2 )
+	dev-libs/glib:2
 	>=dev-libs/ding-libs-0.1.2
 	>=sys-libs/talloc-2.0
 	sys-libs/tdb
@@ -36,7 +33,11 @@ COMMON_DEP="
 	sys-apps/keyutils
 	>=net-dns/c-ares-1.7.4
 	>=dev-libs/nss-3.12.9
-	selinux? ( >=sys-libs/libselinux-2.0.94 >=sys-libs/libsemanage-2.0.45 )
+	selinux? (
+		>=sys-libs/libselinux-2.0.94
+		>=sys-libs/libsemanage-2.0.45
+		sec-policy/selinux-sssd
+	)
 	net-dns/bind-tools
 	dev-libs/cyrus-sasl
 	sys-apps/dbus
@@ -53,7 +54,6 @@ DEPEND="${COMMON_DEP}
 	doc? ( app-doc/doxygen )"
 
 CONFIG_CHECK="~KEYS"
-#AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup(){
 	if use python; then
@@ -69,13 +69,6 @@ src_prepare() {
 }
 
 src_configure(){
-	myconf=""
-	if use glib; then
-		myconf="glib2"
-	else
-		myconf="libunistring"
-	fi
-
 	local myeconfargs=(
 		--localstatedir="${EPREFIX}"/var
 		--enable-nsslibdir="${EPREFIX}"/$(get_libdir)
@@ -83,7 +76,7 @@ src_configure(){
 		--enable-pammoddir="${EPREFIX}"/$(getpam_mod_dir)
 		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules/ldb
 		--without-nscd
-		--with-unicode-lib=${myconf}
+		--with-unicode-lib="glib2"
 		$(use_with selinux)
 		$(use_with selinux semanage)
 		$(use_with python python-bindings)
@@ -102,11 +95,9 @@ src_install(){
 	insopts -m600
 	doins "${S}"/src/examples/sssd-example.conf
 
-	if use logrotate; then
-		insinto /etc/logrotate.d
-		insopts -m644
-		newins "${S}"/src/examples/logrotate sssd
-	fi
+	insinto /etc/logrotate.d
+	insopts -m644
+	newins "${S}"/src/examples/logrotate sssd
 
 	if use python; then
 		python_clean_installation_image
