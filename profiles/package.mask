@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13659 2012/04/07 19:40:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13660 2012/04/08 09:32:46 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (08 Apr 2012)
+# Setting PYTHON_MODNAME but doesn't use distutils
+# Building python bindings only for latest, no 2.x
+# Installing .pyc and .pyo as part of the package
+# Missing python_mod_optimize and cleanup functions
+# And propably more... Masked until completed
+=media-libs/libcaca-0.99_beta18
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (06 Apr 2012)
 # Mask calligra-2.4.0 until it is released
