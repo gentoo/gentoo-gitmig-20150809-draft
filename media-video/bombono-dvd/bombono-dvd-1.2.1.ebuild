@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1.ebuild,v 1.1 2012/02/12 16:48:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1.ebuild,v 1.2 2012/04/09 19:14:01 dilfridge Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="0.96.1"
@@ -60,7 +60,7 @@ src_configure() {
 
 src_compile() {
 	nonfatal escons \
-		|| die 'Please add "${S}/config.opts" when filing bugs reports!'
+		|| die "Please add ${S}/config.opts when filing bugs reports!"
 }
 
 src_test() {
@@ -68,5 +68,5 @@ src_test() {
 }
 
 src_install() {
-	nonfatal escons install || die 'Please add "${S}/config.opts" when filing bugs reports!'
+	nonfatal escons install || die "Please add ${S}/config.opts when filing bugs reports!"
 }

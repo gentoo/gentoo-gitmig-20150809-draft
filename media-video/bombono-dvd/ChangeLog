@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.24 2012/02/25 23:03:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.25 2012/04/09 19:14:01 dilfridge Exp $
+
+  09 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  bombono-dvd-1.2.1.ebuild:
+  Improve error messages
 
   25 Feb 2012; Alexis Ballier <aballier@gentoo.org> bombono-dvd-1.0.0.ebuild,
   +files/bombono-dvd-1.0.0-ffmpeg.patch:
