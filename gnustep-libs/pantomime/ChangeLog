@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/pantomime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.26 2012/03/28 07:36:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.27 2012/04/09 12:15:38 maekke Exp $
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> pantomime-1.2.0.ebuild:
+  x86 stable, bug #404769
 
   28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> pantomime-1.2.0.ebuild:
   Stable for amd64, wrt bug #404769
