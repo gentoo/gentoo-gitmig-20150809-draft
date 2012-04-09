@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemud
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.24 2012/03/20 09:03:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.25 2012/04/09 12:10:03 maekke Exp $
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> cdemud-1.5.0.ebuild:
+  x86 stable, bug #406941
 
   20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> cdemud-1.5.0.ebuild:
   Stable for amd64, wrt bug #406941
