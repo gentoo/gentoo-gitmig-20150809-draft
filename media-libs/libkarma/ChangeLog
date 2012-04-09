@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkarma
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.17 2012/01/22 12:11:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.18 2012/04/09 14:49:01 maekke Exp $
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> libkarma-0.1.2.ebuild:
+  x86 stable, bug #407701
 
 *libkarma-0.1.2 (22 Jan 2012)
 
