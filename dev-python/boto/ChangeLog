@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.43 2012/04/09 00:05:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.44 2012/04/09 03:24:51 floppym Exp $
+
+*boto-2.3.0 (09 Apr 2012)
+
+  09 Apr 2012; Mike Gilbert <floppym@gentoo.org> +boto-2.3.0.ebuild:
+  Version bump, round 2.
 
   09 Apr 2012; Mike Gilbert <floppym@gentoo.org> -boto-2.3.0.ebuild:
   Remove broken ebuild.
