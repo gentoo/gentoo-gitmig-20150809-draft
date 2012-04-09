@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13661 2012/04/08 11:14:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13662 2012/04/09 11:53:30 naota Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -461,7 +461,6 @@ x11-plugins/compiz-plugins-extra
 x11-plugins/compiz-plugins-main
 x11-plugins/compiz-plugins-unsupported
 x11-themes/emerald-themes
-x11-wm/compiz
 x11-wm/compiz-fusion
 x11-wm/emerald
 
