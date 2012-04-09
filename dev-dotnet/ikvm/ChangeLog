@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/ikvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.31 2012/02/28 08:30:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.32 2012/04/09 14:40:40 maekke Exp $
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> ikvm-0.46.0.2.ebuild:
+  x86 stable, bug #407701
 
   28 Feb 2012; Pacho Ramos <pacho@gentoo.org>
   +files/ikvm-0.46.0.2-unmappable-character.patch, ikvm-0.46.0.2.ebuild:

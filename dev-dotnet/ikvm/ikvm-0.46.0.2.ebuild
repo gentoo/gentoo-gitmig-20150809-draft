@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.2.ebuild,v 1.2 2012/02/28 08:30:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.2.ebuild,v 1.3 2012/04/09 14:40:40 maekke Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.frijters.net/openjdk6-b22-stripped.zip
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2
