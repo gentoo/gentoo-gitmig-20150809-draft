@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/c++-gtk-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/c++-gtk-utils/ChangeLog,v 1.3 2012/02/21 17:59:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/c++-gtk-utils/ChangeLog,v 1.4 2012/04/09 12:14:11 maekke Exp $
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> c++-gtk-utils-2.0.4.ebuild:
+  x86 stable, bug #405007
 
   21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> c++-gtk-utils-2.0.4.ebuild:
   Stable for amd64, wrt bug #405007
