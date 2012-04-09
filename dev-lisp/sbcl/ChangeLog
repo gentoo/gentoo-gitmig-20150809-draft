@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.172 2012/04/07 10:58:44 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.173 2012/04/09 22:21:40 neurogeek Exp $
+
+  09 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> +sbcl-1.0.55-r1.ebuild:
+  Version bump
 
   07 Apr 2012; Jesus Rivero <neurogeek@gentoo.org>
   -files/sbcl-1.0.36-fix_linux-os-c.patch,
