@@ -1,0 +1,62 @@
+Applied upstream repo @
+http://rkhunter.cvs.sourceforge.net/viewvc/rkhunter/rkhunter/files/rkhunter?r1=1.396&r2=1.397
+
+--- rkhunter	2011/04/11 22:29:08	1.396
++++ rkhunter	2011/06/01 21:49:23	1.397
+@@ -3,7 +3,7 @@
+ #
+ # rkhunter -- Scan the system for rootkits and other known security issues.
+ #
+-# Copyright (c) 2003-2010, Michael Boelen ( michael AT rootkit DOT nl )
++# Copyright (c) 2003-2011, Michael Boelen ( michael AT rootkit DOT nl )
+ #
+ #     This program is free software; you can redistribute it and/or modify
+ #     it under the terms of the GNU General Public License as published by
+@@ -725,7 +725,7 @@
+ 	#
+ 
+ 	if [ $STRICT -eq 1 ]; then
+-		if [ -n "`echo \"${RKHTMPVAR}\" | grep '[][?*{}]'`" ]; then
++		if [ -n "`echo \"${RKHTMPVAR}\" | grep '[][?*]'`" ]; then
+ 			ERRCODE=1
+ 			test $CONFIG_CHECK -eq 1 && RET_CODE=1
+ 			echo "Invalid ${OPT_NAME} configuration option: Invalid pathname: ${RKHTMPVAR}"
+@@ -3987,7 +3987,7 @@
+ 		HASH_CMD=`echo "${HASH_FUNC}" | cut -d' ' -f1`
+ 
+ 		# Stop globbing from being expanded.
+-		if [ -z "`echo \"${HASH_CMD}\" | grep '[][*?{}]'`" ]; then
++		if [ -z "`echo \"${HASH_CMD}\" | grep '[][*?]'`" ]; then
+ 			HASH_FUNC=`echo ${HASH_FUNC}`
+ 		else
+ 			LEAVE=1
+@@ -4756,7 +4756,7 @@
+ 
+ 		test -z "${FNAME}" && break
+ 
+-		if [ -n "`echo \"${FNAME}\" | grep '^[^/]*[][*?{}][^/]*$'`" ]; then
++		if [ -n "`echo \"${FNAME}\" | grep '^[^/]*[][*?][^/]*$'`" ]; then
+ 			ERRCODE=1
+ 			echo "Invalid USER_FILEPROP_FILES_DIRS configuration option: Invalid pathname: ${FNAME}"
+ 		fi
+@@ -9898,9 +9898,9 @@
+ 					test -n "${BASENAME_CMD}" && RKHTMPVAR=`${BASENAME_CMD} ${FNAME}` || RKHTMPVAR=`echo "${FNAME}" | sed -e 's:^.*/::'`
+ 
+ 					if [ "${RKHTMPVAR}" = "rkhunter" ]; then
+-						SYSSCRIPT=`${FILE_CMD} ${FNAME} 2>&1 | tr -s '	' ' ' | cat -v | egrep -i -v '(shell|/bin/sh) script( |$)'`
++						SYSSCRIPT=`${FILE_CMD} ${FNAME} 2>&1 | tr -s '	' ' ' | cat -v | egrep -i -v '(shell|/bin/sh) script( |,|$)'`
+ 					else
+-						SYSSCRIPT=`${FILE_CMD} ${FNAME} 2>&1 | tr -s '	' ' ' | cat -v | egrep -i ' script( |$)'`
++						SYSSCRIPT=`${FILE_CMD} ${FNAME} 2>&1 | tr -s '	' ' ' | cat -v | egrep -i ' script( |,|$)'`
+ 					fi
+ 
+ 					test -n "${SYSSCRIPT}" && TEST_RESULT="${TEST_RESULT} script"
+@@ -16508,7 +16508,7 @@
+ PROGRAM_NAME="Rootkit Hunter"
+ PROGRAM_version="1.3.9"
+ PROGRAM_copyright_owner="Michael Boelen"
+-PROGRAM_copyright="Copyright (c) 2003-2010, ${PROGRAM_copyright_owner}"
++PROGRAM_copyright="Copyright (c) 2003-2011, ${PROGRAM_copyright_owner}"
+ PROGRAM_blurb="
+ Currently under active development by the ${PROGRAM_NAME} project team.
+ Please review your rkhunter.conf before using.
