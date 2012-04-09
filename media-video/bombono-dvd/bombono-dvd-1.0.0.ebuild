@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.0.0.ebuild,v 1.8 2012/02/25 23:03:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.0.0.ebuild,v 1.9 2012/04/09 19:18:58 dilfridge Exp $
 
 EAPI=2
 
@@ -45,9 +45,9 @@ src_compile() {
 	scons CC="$(tc-getCC)" CXX="$(tc-getCXX)" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		LDFLAGS="${LDFLAGS}" ${sconsopts} DESTDIR="${D}" PREFIX="/usr" \
 		CPPFLAGS='-UBOOST_SYSTEM_NO_DEPRECATED' USE_EXT_BOOST=1 \
-		|| die 'Please add "${S}/config.opts" when filing bugs reports!'
+		|| die "Please add ${S}/config.opts when filing bugs reports!"
 }
 
 src_install() {
-	scons install || die 'Please add "${S}/config.opts" when filing bugs reports!'
+	scons install || die "Please add ${S}/config.opts when filing bugs reports!"
 }
