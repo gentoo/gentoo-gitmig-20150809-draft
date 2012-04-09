@@ -1,0 +1,10 @@
+--- protocols/jabber/CMakeLists.txt
++++ protocols/jabber/CMakeLists.txt
+@@ -6,6 +6,7 @@
+ 	if( SYSTEM_JREEN )
+ 		find_package( PkgConfig )
+ 		pkg_check_modules( JREEN REQUIRED libjreen )
++		link_directories( ${JREEN_LIBRARY_DIRS} )
+ 	else()
+ 		ADD_SUBDIRECTORY(jreen)
+ 		LIST(APPEND INCLUDE_DIRS "${JREEN_INCLUDE_DIRS}")
