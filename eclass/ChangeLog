@@ -1,6 +1,14 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.207 2012/04/08 02:29:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.208 2012/04/09 18:08:45 slyfox Exp $
+
+  09 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass,
+  haskell-cabal.eclass:
+  Remove outdated bits for <ghc-6.10 and <cabal-1.8. Switch from 'eerror' to
+  'eqawarn' as suggested by Paweł Hajdan, Jr.
+  (http://www.gossamer-threads.com/lists/gentoo/dev/251259). Install empty
+  '.conf' files for binaries to help 'haskell-updater' pick binaries built with
+  onder haskell toolchain on ghc upgrade.
 
   08 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnome2-utils.eclass:
   Punt stale icon-theme.cache files and empty icon theme directories after
