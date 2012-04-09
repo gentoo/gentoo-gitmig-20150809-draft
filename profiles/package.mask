@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13662 2012/04/09 11:53:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13663 2012/04/09 15:54:54 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Ruppert <idl0r@gentoo.org> (09 Apr 2012)
+# Masked for removal in 30 days.
+# It doesn't work with recent portage version and the author has no time to fix
+# it anytime soon. bug 404973.
+app-portage/portato
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (06 Apr 2012)
 # Mask calligra-2.4.0 until it is released
