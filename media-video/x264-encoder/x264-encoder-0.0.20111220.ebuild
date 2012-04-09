@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20111220.ebuild,v 1.1 2011/12/21 23:10:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20111220.ebuild,v 1.2 2012/04/09 15:58:31 ago Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ SLOT="0"
 if [ "${PV#9999}" != "${PV}" ] ; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+	KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
 IUSE="10bit custom-cflags debug ffmpeg ffmpegsource +interlaced mp4 +threads"
 
