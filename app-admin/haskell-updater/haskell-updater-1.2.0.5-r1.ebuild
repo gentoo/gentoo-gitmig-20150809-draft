@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.0.3.ebuild,v 1.1 2012/01/02 15:50:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.0.5-r1.ebuild,v 1.1 2012/04/09 18:32:24 slyfox Exp $
 
 EAPI="3"
 
@@ -34,7 +34,9 @@ src_prepare() {
 }
 
 src_configure() {
-	cabal_src_configure --bindir="${EPREFIX}/usr/sbin"
+	cabal_src_configure \
+		--bindir="${EPREFIX}/usr/sbin" \
+		--constraint="Cabal == $(cabal-version)"
 }
 
 src_install() {
