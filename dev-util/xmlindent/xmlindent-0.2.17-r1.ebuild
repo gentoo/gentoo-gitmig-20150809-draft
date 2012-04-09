@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/xmlindent-0.2.17-r1.ebuild,v 1.2 2012/04/07 21:47:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/xmlindent-0.2.17-r1.ebuild,v 1.3 2012/04/09 16:00:04 ago Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://xmlindent.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xmlindent/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 
 IUSE=""
 DEPEND="sys-devel/flex"
