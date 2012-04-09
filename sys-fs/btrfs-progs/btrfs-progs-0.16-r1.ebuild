@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.16-r1.ebuild,v 1.4 2009/09/21 15:57:42 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.16-r1.ebuild,v 1.5 2012/04/09 02:20:07 lavajoe Exp $
 
 inherit eutils
 
 DESCRIPTION="Btrfs filesystem utilities"
 HOMEPAGE="http://btrfs.wiki.kernel.org/"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/people/mason/btrfs/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
