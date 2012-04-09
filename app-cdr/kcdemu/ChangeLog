@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kcdemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdemu/ChangeLog,v 1.7 2012/02/26 15:44:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdemu/ChangeLog,v 1.8 2012/04/09 12:13:32 maekke Exp $
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> kcdemu-0.4.ebuild:
+  x86 stable, bug #404275
 
   26 Feb 2012; Agostino Sarubbo <ago@gentoo.org> kcdemu-0.4.ebuild:
   Stable for amd64, wrt bug #404275
