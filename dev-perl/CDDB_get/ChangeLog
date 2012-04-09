@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/CDDB_get
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.45 2012/03/01 16:17:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/ChangeLog,v 1.46 2012/04/09 07:38:20 tove Exp $
+
+*CDDB_get-2.280.0 (09 Apr 2012)
+
+  09 Apr 2012; Torsten Veller <tove@gentoo.org> +CDDB_get-2.280.0.ebuild:
+  Version bump
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
