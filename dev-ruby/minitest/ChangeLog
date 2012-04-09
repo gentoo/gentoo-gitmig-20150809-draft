@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.70 2012/03/08 17:40:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.71 2012/04/09 08:16:12 graaff Exp $
+
+*minitest-2.12.0 (09 Apr 2012)
+
+  09 Apr 2012; Hans de Graaff <graaff@gentoo.org> +minitest-2.12.0.ebuild:
+  Version bump.
 
   08 Mar 2012; Naohiro Aota <naota@gentoo.org> minitest-2.10.0.ebuild:
   Add ~x86-fbsd.
