@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.46 2012/03/17 22:06:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.47 2012/04/09 18:17:31 slyfox Exp $
+
+*c2hs-0.16.3-r1 (09 Apr 2012)
+
+  09 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> +c2hs-0.16.3-r1.ebuild,
+  +files/c2hs-0.16.3-language-c-0.4.patch, -c2hs-0.16.2.ebuild:
+  Version bump. Remove old.
 
   17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> c2hs-0.16.3.ebuild:
   alpha/ia64/sparc stable (bug #399971).
