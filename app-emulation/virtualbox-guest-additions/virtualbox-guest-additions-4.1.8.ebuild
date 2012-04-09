@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.8.ebuild,v 1.2 2012/02/21 17:09:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.8.ebuild,v 1.3 2012/04/09 12:06:08 maekke Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="X"
 
 RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}

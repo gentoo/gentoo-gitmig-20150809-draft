@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.104 2012/04/05 07:44:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.105 2012/04/09 12:07:27 maekke Exp $
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> virtualbox-4.1.8.ebuild:
+  x86 stable, bug #403441
 
 *virtualbox-4.1.12 (05 Apr 2012)
 
