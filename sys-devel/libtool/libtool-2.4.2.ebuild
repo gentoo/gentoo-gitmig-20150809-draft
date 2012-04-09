@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.2.ebuild,v 1.3 2011/11/13 18:11:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.2.ebuild,v 1.4 2012/04/09 00:32:11 vapier Exp $
 
 EAPI="2" #356089
 
@@ -47,7 +47,6 @@ src_unpack() {
 src_prepare() {
 	use vanilla && return 0
 
-	epunt_cxx
 	cd libltdl/m4
 	epatch "${FILESDIR}"/1.5.20/${PN}-1.5.20-use-linux-version-in-fbsd.patch #109105
 	cd ..
