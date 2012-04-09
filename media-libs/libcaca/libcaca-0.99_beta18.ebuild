@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.3 2012/04/08 20:43:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.4 2012/04/09 18:21:35 floppym Exp $
 
 EAPI=4
-PYTHON_DEPEND="python? 2"
+PYTHON_DEPEND="python? 2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.5 3.*"
 PYTHON_MODNAME="caca"
 DISTUTILS_SETUP_FILES=("python|setup.py")
 
