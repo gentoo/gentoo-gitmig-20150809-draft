@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-3.0.8.ebuild,v 1.2 2011/12/05 00:54:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-3.0.8.ebuild,v 1.3 2012/04/09 13:15:52 graaff Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86
 IUSE=""
 
 ruby_add_rdepend '
-	>=dev-ruby/ruby-inline-3.7.0
+	>=dev-ruby/ruby-inline-3.10.0
 	>=dev-ruby/sexp-processor-3.0.0'
 ruby_add_bdepend "
 	test? (
@@ -66,7 +66,7 @@ each_ruby_compile() {
 	INLINEDIR="${PWD}" ${RUBY} -Ilib -rparse_tree -e '' || die "Unable to load ${PN}"
 
 	mkdir lib/inline
-	cp .ruby_inline/*$(get_modname) lib/inline/ || die
+	cp .ruby_inline/*/*$(get_modname) lib/inline/ || die
 }
 
 src_test() {
