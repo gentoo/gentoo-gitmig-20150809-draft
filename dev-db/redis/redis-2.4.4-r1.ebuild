@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.4-r1.ebuild,v 1.2 2012/02/16 13:27:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.4-r1.ebuild,v 1.3 2012/04/09 12:12:50 maekke Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://redis.io/"
 SRC_URI="http://redis.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="amd64 ~x86 ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 x86 ~x86-macos ~x86-solaris"
 IUSE="+jemalloc tcmalloc test"
 SLOT="0"
 
