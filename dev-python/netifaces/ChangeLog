@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/netifaces
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.5 2012/04/07 21:53:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.6 2012/04/09 16:00:26 ago Exp $
+
+  09 Apr 2012; Agostino Sarubbo <ago@gentoo.org> netifaces-0.6.ebuild:
+  Stable for amd64, wrt bug #411007
 
   07 Apr 2012; Jeff Horelick <jdhore@gentoo.org> netifaces-0.6.ebuild:
   marked x86 per bug 411007
