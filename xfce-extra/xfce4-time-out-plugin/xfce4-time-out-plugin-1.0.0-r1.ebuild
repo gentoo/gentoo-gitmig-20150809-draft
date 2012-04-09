@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out-plugin/xfce4-time-out-plugin-1.0.0-r1.ebuild,v 1.1 2012/02/15 04:57:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-time-out-plugin/xfce4-time-out-plugin-1.0.0-r1.ebuild,v 1.2 2012/04/09 19:25:35 ssuominen Exp $
 
 EAPI=4
-inherit xfconf
+inherit multilib xfconf
 
 DESCRIPTION="A panel plug-in to take periodical breaks from the computer"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-time-out-plugin"
@@ -24,5 +24,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${P}-assertion_percentage_failed.patch )
+
+	XFCONF=(
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir)
+		)
+
 	DOCS=( AUTHORS ChangeLog NEWS README THANKS )
 }
