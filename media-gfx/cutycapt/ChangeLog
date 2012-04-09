@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/cutycapt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/ChangeLog,v 1.3 2011/06/07 00:35:25 mattm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/ChangeLog,v 1.4 2012/04/09 08:07:04 mattm Exp $
+
+*cutycapt-0_p20120409 (09 Apr 2012)
+
+  09 Apr 2012; Matthew Marlowe <mattm@gentoo.org> -cutycapt-0_p20110502.ebuild,
+  -cutycapt-0_p20110502-r1.ebuild, -cutycapt-0_p20110502-r2.ebuild,
+  +cutycapt-0_p20120409.ebuild:
+  Upstream is no longer developing cutycapt. Recommends switch to PhantomJS.
+  Packaging up last snapshot which includes license change to LGPL-2.1. Removed
+  obsolete versions.
 
 *cutycapt-0_p20110502-r2 (07 Jun 2011)
 
