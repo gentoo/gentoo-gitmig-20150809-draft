@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.17 2012/04/09 02:20:07 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.18 2012/04/09 02:46:07 floppym Exp $
 
 EAPI=4
 
-inherit eutils git-2 toolchain-funcs
+inherit git-2 toolchain-funcs
 
 DESCRIPTION="Btrfs filesystem utilities"
 HOMEPAGE="http://btrfs.wiki.kernel.org/"
@@ -20,7 +20,8 @@ DEPEND="sys-libs/zlib
 	sys-fs/e2fsprogs"
 RDEPEND="${DEPEND}"
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git"
+EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git
+	https://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git"
 
 src_prepare() {
 	# Fix hardcoded "gcc" and "make"
