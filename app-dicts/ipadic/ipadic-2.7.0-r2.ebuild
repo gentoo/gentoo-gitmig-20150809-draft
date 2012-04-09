@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.7.0-r2.ebuild,v 1.1 2011/09/02 14:33:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.7.0-r2.ebuild,v 1.2 2012/04/09 12:14:57 naota Exp $
 
 EAPI="4"
 inherit autotools eutils
 
 DESCRIPTION="Japanese dictionary for ChaSen"
-HOMEPAGE="http://chasen.aist-nara.ac.jp/chasen/distribution.html.en"
-SRC_URI="http://chasen.aist-nara.ac.jp/stable/ipadic/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.jp/projects/ipadic/"
+SRC_URI="mirror://sourceforge.jp/${PN}/24435/${P}.tar.gz"
 
 LICENSE="ipadic"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
