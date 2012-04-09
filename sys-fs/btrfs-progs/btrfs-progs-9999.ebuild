@@ -1,13 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.18 2012/04/09 02:46:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.19 2012/04/09 13:04:05 lavajoe Exp $
 
 EAPI=4
 
 inherit git-2 toolchain-funcs
 
 DESCRIPTION="Btrfs filesystem utilities"
-HOMEPAGE="http://btrfs.wiki.kernel.org/"
+# Homepage has been moved, perhaps temporarily, due to a breakin
+#HOMEPAGE="http://btrfs.wiki.kernel.org/"
+HOMEPAGE="http://btrfs.ipv5.de/"
 SRC_URI=""
 
 LICENSE="GPL-2"
