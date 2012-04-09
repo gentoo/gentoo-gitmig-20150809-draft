@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.236 2012/03/18 13:07:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.237 2012/04/09 14:44:12 maekke Exp $
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> mono-2.10.8.ebuild:
+  x86 stable, bug #407701
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> -mono-2.10.6.ebuild,
   mono-2.10.8.ebuild:
