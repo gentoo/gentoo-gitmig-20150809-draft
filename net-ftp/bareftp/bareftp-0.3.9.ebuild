@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/bareftp/bareftp-0.3.9.ebuild,v 1.1 2012/01/22 12:25:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/bareftp/bareftp-0.3.9.ebuild,v 1.2 2012/04/09 14:51:09 maekke Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="http://www.bareftp.org/release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="gnome-keyring"
 
 RDEPEND=">=dev-lang/mono-2.0
