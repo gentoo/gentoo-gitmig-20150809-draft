@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/efax-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.37 2012/04/09 12:14:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.38 2012/04/09 21:35:26 ssuominen Exp $
+
+  09 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> efax-gtk-3.2.9.ebuild:
+  Keyword ~ppc/~ppc64 wrt #398859
 
   09 Apr 2012; Markus Meier <maekke@gentoo.org> efax-gtk-3.2.9.ebuild:
   x86 stable, bug #405007
