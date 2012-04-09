@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.5.ebuild,v 1.3 2012/03/26 15:46:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.5.ebuild,v 1.4 2012/04/09 12:12:11 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.canonware.com/download/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ppc64 x86"
 
 IUSE="debug stats"
 
