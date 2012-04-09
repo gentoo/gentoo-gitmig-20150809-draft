@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.81 2012/03/21 06:01:49 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.82 2012/04/09 05:51:43 mattm Exp $
+
+  09 Apr 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-1.8.11-r1.ebuild,
+  metadata.xml:
+  Added support for static binary build and reviewed all use flags and
+  clarified descriptions in metadata
+
+*zabbix-1.8.11-r1 (09 Apr 2012)
+
+  09 Apr 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-1.8.11-r1.ebuild,
+  metadata.xml:
+  add support for odbc and iodbc use flags to enable zabbix database monitoring
+  with either unixodbc or iodbc libraries
 
   21 Mar 2012; Matthew Marlowe <mattm@gentoo.org>
   -files/zabbix-1.8.2-as-needed.patch, -files/zabbix-1.8.3-as-needed.patch,

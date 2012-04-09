@@ -17,7 +17,9 @@ configure different types of notifications for pre-defined events.
 	<flag name='proxy'>Enable proxy support</flag>
 	<flag name='openipmi'>Enable openipmi things</flag>
 	<flag name='server'>Enable zabbix server</flag>
-	<flag name='ssh'>Enable ssh.run items</flag>
-
+	<flag name='ssh'>SSH v2 based checks</flag>
+	<flag name='odbc'>Enable Database Monitor and use UnixODBC Library by default</flag>
+	<flag name='iodbc'>Use iodbc rather than unixodbc for ODBC functions</flag>
+	<flag name='static'>Build statically linked binaries</flag>
 </use>
 </pkgmetadata>
