@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.605 2012/04/07 06:45:49 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.606 2012/04/10 10:21:44 phajdan.jr Exp $
+
+*chromium-19.0.1084.15 (10 Apr 2012)
+
+  10 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-18.0.1025.142.ebuild, -chromium-19.0.1081.2.ebuild,
+  +chromium-19.0.1084.15.ebuild, chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Attempt to fix bug #410883 by Str4nger.
+  Remove old.
 
   07 Apr 2012; Andreas Schuerch <nativemad@gentoo.org>
   chromium-18.0.1025.151.ebuild:
