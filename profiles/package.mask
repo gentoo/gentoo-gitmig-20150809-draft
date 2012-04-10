@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13665 2012/04/10 06:28:48 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13666 2012/04/10 15:22:34 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (10 Apr 2012)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-20
+>=www-client/google-chrome-20
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (10 Apr 2012)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+>=dev-lang/v8-3.10
 
 # Eray Aslan <eras@gentoo.org> (10 Apr 2012)
 # Dead upstream. Use mail-filter/opendkim instead.
@@ -448,18 +458,6 @@ x11-wm/scrotwm
 # to force upgrade to arduino-1.0
 =dev-embedded/arduino-0015-r1
 =dev-embedded/arduino-0017
-
-# Mike Gilbert <floppym@gentoo.org> (09 Feb 2012)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-19
->=www-client/google-chrome-19
-
-# Mike Gilbert <floppym@gentoo.org> (09 Feb 2012)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# newer nodejs depends on it, added - patrick
->=dev-lang/v8-3.9
->=net-libs/nodejs-0.7
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Masked for testing
