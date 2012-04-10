@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.2.ebuild,v 1.1 2012/03/29 13:19:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.2.ebuild,v 1.2 2012/04/10 11:36:04 scarabeus Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ IUSE="nls python spell"
 RDEPEND="
 	x11-libs/gtk+:3
 	gnome-extra/gucharmap:2.90
+	sys-libs/zlib
 	spell? ( app-text/enchant )"
 DEPEND="${RDEPEND}
 	>=dev-libs/glib-2.16:2
