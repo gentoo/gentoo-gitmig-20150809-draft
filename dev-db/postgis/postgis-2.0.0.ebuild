@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.0.ebuild,v 1.1 2012/04/04 07:42:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.0.ebuild,v 1.2 2012/04/10 14:01:19 titanofold Exp $
 
 EAPI="4"
 
@@ -16,13 +16,12 @@ IUSE="doc gtk"
 
 RDEPEND="
 		|| (
+			dev-db/postgresql-server:9.1
 			dev-db/postgresql-server:9.0
 			dev-db/postgresql-server:8.4
-			dev-db/postgresql-server:8.3
-			dev-db/postgresql-server:9.1
 		)
 		dev-libs/libxml2:2
-		>=sci-libs/geos-3.2
+		>=sci-libs/geos-3.3.2
 		>=sci-libs/proj-4.6.0
 		sci-libs/gdal
 		gtk? ( x11-libs/gtk+:2 )
@@ -49,18 +48,18 @@ MAKEOPTS+=" -j1"
 
 pkg_setup() {
 	export PGSLOT="$(postgresql-config show)"
-	if [[ ${PGSLOT//.} < 83 ]] ; then
-		eerror "You must build ${CATEGORY}/${PN} against PostgreSQL 8.3 or higher."
+	if [[ ${PGSLOT//.} < 84 ]] ; then
+		eerror "You must build ${CATEGORY}/${PN} against PostgreSQL 8.4 or higher."
 		eerror "Set an appropriate slot with postgresql-config."
-		die "postgresql-config not set to 8.3 or higher."
+		die "postgresql-config not set to 8.4 or higher."
 	fi
 
-	if [[ ${PGSLOT//.} > 90 ]] ; then
-		ewarn "You are building ${CATEGORY}/${PN} against a version of PostgreSQL greater than 9.0."
-		ewarn "This is neither supported here nor upstream."
-		ewarn "However, all indicators show that this should work."
-		ewarn "Any bugs you encounter should be reported upstream."
-	fi
+#	if [[ ${PGSLOT//.} > 90 ]] ; then
+#		ewarn "You are building ${CATEGORY}/${PN} against a version of PostgreSQL greater than 9.0."
+#		ewarn "This is neither supported here nor upstream."
+#		ewarn "However, all indicators show that this should work."
+#		ewarn "Any bugs you encounter should be reported upstream."
+#	fi
 }
 
 src_configure() {
