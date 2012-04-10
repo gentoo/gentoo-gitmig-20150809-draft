@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.16 2012/04/03 05:51:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.17 2012/04/10 09:44:50 xmw Exp $
+
+*spacefm-9999 (10 Apr 2012)
+
+  10 Apr 2012; Michael Weber <xmw@gentoo.org> +spacefm-9999.ebuild:
+  Add liveVCS ebuild by Julian Ospald.
 
 *spacefm-0.7.4 (03 Apr 2012)
 
