@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.174 2012/04/08 18:21:45 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.175 2012/04/10 21:53:47 sochotnicky Exp $
+
+  10 Apr 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  rtorrent-0.8.9.ebuild, rtorrent-0.9.1.ebuild:
+  Fix to depend on exact minor version of net-libs/libtorrent to prevent
+  incompatible versions. Each minor version of rtorrent has minor version of
+  net-libs/libtorrent associated with it
 
 *rtorrent-0.9.1 (08 Apr 2012)
 

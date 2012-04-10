@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.1.ebuild,v 1.1 2012/04/08 18:21:45 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.1.ebuild,v 1.2 2012/04/10 21:53:47 sochotnicky Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="daemon debug ipv6 test xmlrpc"
 
-COMMON_DEPEND=">=net-libs/libtorrent-0.13.${PV##*.}
+COMMON_DEPEND="~net-libs/libtorrent-0.13.${PV##*.}
 	>=dev-libs/libsigc++-2.2.2:2
 	>=net-misc/curl-7.19.1
 	sys-libs/ncurses
