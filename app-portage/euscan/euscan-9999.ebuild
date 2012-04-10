@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euscan/euscan-9999.ebuild,v 1.1 2011/09/25 17:41:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euscan/euscan-9999.ebuild,v 1.2 2012/04/10 13:07:50 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -10,7 +10,7 @@ PYTHON_NONVERSIONED_EXECUTABLES=(".*")
 
 inherit distutils python git-2
 
-EGIT_REPO_URI="git://git.iksaif.net/euscan.git"
+EGIT_REPO_URI="git://github.com/iksaif/euscan.git"
 
 DESCRIPTION="Ebuild upstream scan utility"
 HOMEPAGE="http://euscan.iksaif.net"
