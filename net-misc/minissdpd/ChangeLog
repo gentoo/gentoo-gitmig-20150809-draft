@@ -1,5 +1,14 @@
 
 
+  10 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -minissdpd-1.1.20111007.ebuild, -minissdpd-1.1.20111007-r1.ebuild,
+  minissdpd-1.1.20120121.ebuild,
+  +files/minissdpd-1.1.20120121-respect-CFLAGS.patch,
+  minissdpd-1.1.20120410.ebuild, -files/minissdpd.initd-r1,
+  -files/minissdpd-remove-initd.patch, -files/minissdpd-respect-CFLAGS.patch,
+  files/minissdpd.initd:
+  Remove older unstables, and sanitize file names in FILESDIR
+
 *minissdpd-1.1.20120410 (10 Apr 2012)
 
   10 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
