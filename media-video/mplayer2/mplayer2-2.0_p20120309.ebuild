@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120309.ebuild,v 1.2 2012/04/06 18:19:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120309.ebuild,v 1.3 2012/04/10 06:36:55 scarabeus Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
 bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts
 debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad fbcon ftp
-gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc +live
+gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc live
 mad md5sum +mmx mmxext mng +mp3 nas +network nut +opengl oss png pnm pulseaudio
 pvr +quicktime radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga
 +theora +truetype +unicode v4l vdpau +vorbis win32codecs +X xanim xinerama
@@ -355,11 +355,12 @@ src_configure() {
 	myconf+=" --disable-musepack" # deprecated, libavcodec Musepack decoder is preferred
 	use dts || myconf+=" --disable-libdca"
 	use mp3 || myconf+=" --disable-mpg123"
+	use live && myconf+=" --enable-live"
 	uses="a52 bs2b dv vorbis"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-lib${i}"
 	done
-	uses="faad gif jpeg live mad mng png pnm speex tga theora xanim xvid"
+	uses="faad gif jpeg mad mng png pnm speex tga theora xanim xvid"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done

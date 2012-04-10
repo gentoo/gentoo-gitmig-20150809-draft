@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.42 2012/04/06 18:19:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.43 2012/04/10 06:36:55 scarabeus Exp $
+
+  10 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:
+  Pass --enable-live instead of --disable-live. Fixing bug#411313. Thanks to
+  Nikoli for report.
 
   06 Apr 2012; Mike Frysinger <vapier@gentoo.org>
   mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:
