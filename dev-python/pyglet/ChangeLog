@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyglet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/ChangeLog,v 1.5 2012/02/23 07:59:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/ChangeLog,v 1.6 2012/04/10 23:58:20 floppym Exp $
+
+*pyglet-1.1.4-r1 (10 Apr 2012)
+
+  10 Apr 2012; Mike Gilbert <floppym@gentoo.org> +pyglet-1.1.4-r1.ebuild:
+  Fix html installation path and move examples to doc directory.
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyglet-1.1.4.ebuild:
   Restricting pypy and jython
