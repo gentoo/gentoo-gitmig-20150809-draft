@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chasen
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.43 2011/12/18 06:30:57 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.44 2012/04/10 20:13:42 nativemad Exp $
+
+  10 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> chasen-2.4.4-r2.ebuild:
+  x86 stable, see bug 390769
 
 *chasen-2.4.4-r2 (18 Dec 2011)
 
