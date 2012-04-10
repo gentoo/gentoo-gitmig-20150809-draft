@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.25 2012/04/10 00:30:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.26 2012/04/10 00:55:07 robbat2 Exp $
+
+*drizzle-7.0.2011.03.13 (10 Apr 2012)
+
+  10 Apr 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +drizzle-7.0.2011.03.13.ebuild:
+  Accidently removed my work that should have committed due to bad hotel wifi.
+  Sorry. Add the last version of 7.0 back instead now, was all ~arch anyway.
 
 *drizzle-7.1.33 (10 Apr 2012)
 
