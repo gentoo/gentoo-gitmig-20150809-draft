@@ -1,5 +1,8 @@
 
 
+  10 Apr 2012; Jeff Horelick <jdhore@gentoo.org> bitflu-1.41.ebuild:
+  marked x86 per bug 411347
+
   09 Apr 2012; Agostino Sarubbo <ago@gentoo.org> bitflu-1.41.ebuild:
   Stable for amd64, wrt bug #411347
 
