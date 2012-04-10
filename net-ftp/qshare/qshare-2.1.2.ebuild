@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/qshare-2.1.2.ebuild,v 1.2 2012/04/05 22:57:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/qshare-2.1.2.ebuild,v 1.3 2012/04/10 14:29:36 pesa Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ LANGS="en es fr ru"
 
 inherit eutils qt4-r2
 
-DESCRIPTION="FTP server with a service discovery feature."
+DESCRIPTION="FTP server with a service discovery feature"
 HOMEPAGE="http://www.zuzuf.net/qshare/"
 SRC_URI="http://www.zuzuf.net/qshare/files/${P}-src.tar.gz"
 
@@ -26,8 +26,12 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	sed -i "s:i18n:usr\/share\/${PN}\/translations:" src/config.cpp \
+	sed -i -e "s:i18n:usr\/share\/${PN}\/translations:" src/config.cpp \
 		|| die "failed to fix translations path"
+
+	# Respect CXXFLAGS, bug 411445
+	sed -i -e '/^QMAKE_CXXFLAGS_RELEASE/d' ${PN}.pro || die
+
 	qt4-r2_src_prepare
 }
 
