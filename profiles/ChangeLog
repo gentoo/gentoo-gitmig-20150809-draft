@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6407 2012/04/09 20:57:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6408 2012/04/10 06:28:48 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Apr 2012; Eray Aslan <eras@gentoo.org> package.mask:
+  Mask mail-filter/dk-milter and mail-filter/dkim-milter for removal
 
   09 Apr 2012; Ulrich Müller <ulm@gentoo.org> package.mask:
   Update mask for emacs-vcs live ebuilds.
