@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.6.0.ebuild,v 1.4 2012/03/17 23:22:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ispell-da-1.6.34.ebuild,v 1.1 2012/04/10 11:13:05 scarabeus Exp $
+
+EAPI=4
+
+inherit multilib
 
 DESCRIPTION="A danish dictionary for ispell"
 HOMEPAGE="http://da.speling.org/"
@@ -15,11 +19,11 @@ DEPEND="app-text/ispell"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	emake || die
+	default
 }
 
 src_install() {
-	insinto /usr/lib/ispell
+	insinto /usr/$(get_libdir)/ispell
 	doins dansk.aff dansk.hash
 	dodoc README contributors
 }

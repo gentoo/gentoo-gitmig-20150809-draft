@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/ispell-da
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.74 2012/03/17 23:22:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.75 2012/04/10 11:13:05 scarabeus Exp $
+
+*ispell-da-1.6.34 (10 Apr 2012)
+
+  10 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +ispell-da-1.6.34.ebuild,
+  -ispell-da-1.4.48.ebuild, -ispell-da-1.4.54.ebuild, -ispell-da-1.6.0.ebuild:
+  Add latest 1.6 series version. I was unable to figure out if 1.7 is testing
+  series or not.
 
   17 Mar 2012; Matt Turner <mattst88@gentoo.org> ispell-da-1.4.48.ebuild,
   ispell-da-1.4.54.ebuild, ispell-da-1.6.0.ebuild, ispell-da-1.6.18.ebuild:
