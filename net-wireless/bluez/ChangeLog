@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.128 2012/04/06 15:32:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.129 2012/04/10 08:15:52 ago Exp $
+
+  10 Apr 2012; Agostino Sarubbo <ago@gentoo.org> bluez-4.99.ebuild:
+  Stable for amd64, wrt bug #411015
 
   06 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> bluez-4.99.ebuild:
   Both hid2hci and dfutool are still using libusb-0.1 (virtual/libusb:0) wrt
