@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-openvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.3 2012/03/29 22:13:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.4 2012/04/10 17:17:03 pesa Exp $
+
+  10 Apr 2012; Davide Pesavento <pesa@gentoo.org> -qt-openvg-4.8.0-r2.ebuild:
+  Drop Qt-4.8.0
 
 *qt-openvg-4.8.1 (29 Mar 2012)
 
