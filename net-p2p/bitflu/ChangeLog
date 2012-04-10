@@ -1,5 +1,9 @@
 
 
+  10 Apr 2012; Anthony G. Basile <blueness@gentoo.org> -bitflu-1.38.ebuild,
+  -bitflu-1.39.ebuild, -bitflu-1.40.ebuild:
+  Remove older unstable versions
+
   10 Apr 2012; Jeff Horelick <jdhore@gentoo.org> bitflu-1.41.ebuild:
   marked x86 per bug 411347
 
