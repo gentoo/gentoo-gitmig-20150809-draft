@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.6.ebuild,v 1.3 2012/04/07 15:27:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.6.ebuild,v 1.4 2012/04/10 16:28:05 jer Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
-inherit libtool flag-o-matic eutils toolchain-funcs python
+inherit eutils flag-o-matic libtool python toolchain-funcs
 
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -100,6 +100,10 @@ pkg_setup() {
 	fi
 	# Add group for users allowed to sniff.
 	enewgroup wireshark
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gtk-pcap.patch
 }
 
 src_configure() {

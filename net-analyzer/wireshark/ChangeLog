@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.330 2012/04/07 15:27:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.331 2012/04/10 16:28:05 jer Exp $
+
+  10 Apr 2012; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.6.ebuild,
+  +files/wireshark-1.6.6-gtk-pcap.patch:
+  Fix building with USE="gtk -pcap" by Andreas Schürch (bug #411175).
 
   07 Apr 2012; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.6.ebuild:
   Stable for HPPA (bug #410871).
