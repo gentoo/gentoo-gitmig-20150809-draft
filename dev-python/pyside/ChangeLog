@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.27 2012/03/07 00:12:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.28 2012/04/10 20:56:38 pesa Exp $
+
+  10 Apr 2012; Davide Pesavento <pesa@gentoo.org> -pyside-1.1.0.ebuild,
+  metadata.xml:
+  Remove old.
 
   07 Mar 2012; Davide Pesavento <pesa@gentoo.org>
   -files/pyside-find-kde-phonon.patch, -pyside-1.0.6.ebuild,

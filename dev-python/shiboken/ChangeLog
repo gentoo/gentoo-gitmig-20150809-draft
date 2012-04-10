@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.21 2012/03/13 21:48:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.22 2012/04/10 20:58:28 pesa Exp $
+
+  10 Apr 2012; Davide Pesavento <pesa@gentoo.org>
+  -files/shiboken-1.0.9-fix-pkgconfig.patch, -shiboken-1.1.0.ebuild:
+  Remove old.
 
   13 Mar 2012; Davide Pesavento <pesa@gentoo.org> shiboken-1.1.0-r2.ebuild:
   Use "-python${PYTHON_ABI}" instead of "$(PYTHON)" as suffix, for consistency

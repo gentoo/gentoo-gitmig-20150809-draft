@@ -8,7 +8,6 @@
 	</maintainer>
 	<use>
 		<flag name="X">Build QtGui, QtDesigner, QtTest and QtUiTools modules</flag>
-		<flag name="assistant">Build QtHelp module</flag>
 		<flag name="declarative">Build QtDeclarative module</flag>
 		<flag name="help">Build QtHelp module</flag>
 		<flag name="kde">Select <pkg>media-sound/phonon</pkg> as phonon variant, needed for KDE4</flag>
