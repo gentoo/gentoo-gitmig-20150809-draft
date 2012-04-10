@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.12-r2.ebuild,v 1.1 2012/03/22 00:39:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.12-r2.ebuild,v 1.2 2012/04/10 02:58:04 sping Exp $
 
 EAPI="4"
 
@@ -15,26 +15,29 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="ssl diet"
+REQUIRED_USE="ssl? ( !diet )"
 
-DEPEND=">=dev-libs/libowfat-0.25
+DEPEND=">=dev-libs/libowfat-0.25[diet=]
 	diet? ( dev-libs/dietlibc )
 	ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	rm Makefile  # leaves GNUmakefile
-	epatch "${FILESDIR}/${P}-FLAGS.patch"
+	rm Makefile  # leaves us with GNUmakefile
+	epatch "${FILESDIR}/${P}-compile.patch"
 }
 
 src_compile() {
-	local diet_conf='DIET=env'
-	use diet && diet_conf=
+	local DIET=
+	use diet && DIET='/usr/bin/diet'
 
-	local targets=gatling
+	local targets='gatling'
 	use ssl && targets+=' tlsgatling'
 
-	emake CC="$(tc-getCC)" ${diet_conf} ${targets} \
-		|| die "emake ${targets} failed"
+	emake DIET="${DIET}" CC="$(tc-getCC)" \
+			CFLAGS="${CFLAGS} -I/usr/include/libowfat" \
+			LDFLAGS="${LDFLAGS}" prefix=/usr ${targets} \
+			|| die "emake ${targets} failed"
 }
 
 src_install() {
@@ -46,6 +49,7 @@ src_install() {
 
 	dobin gatling || die "installing gatling binary failed"
 	use ssl && {
+		dodoc README.tls || die "installing docs failed"
 		dobin tlsgatling || die "installing tlsgatling binary failed"
 	}
 }

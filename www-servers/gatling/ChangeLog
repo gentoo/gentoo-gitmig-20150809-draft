@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/gatling
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.10 2012/03/22 00:39:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.11 2012/04/10 02:58:04 sping Exp $
+
+  10 Apr 2012; Sebastian Pipping <sping@gentoo.org> gatling-0.12-r2.ebuild,
+  +files/gatling-0.12-compile.patch:
+  Unbreak diet mode (bug #314115)
 
 *gatling-0.12-r2 (22 Mar 2012)
 
