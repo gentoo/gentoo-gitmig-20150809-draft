@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Contextual-Return
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Contextual-Return/ChangeLog,v 1.7 2012/03/04 17:59:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Contextual-Return/ChangeLog,v 1.8 2012/04/11 15:31:48 tove Exp $
+
+*Contextual-Return-0.4.3 (11 Apr 2012)
+
+  11 Apr 2012; Torsten Veller <tove@gentoo.org>
+  +Contextual-Return-0.4.3.ebuild:
+  Version bump
 
 *Contextual-Return-0.4.2 (04 Mar 2012)
 
