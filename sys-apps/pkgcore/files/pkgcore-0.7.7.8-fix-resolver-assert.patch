@@ -1,0 +1,113 @@
+From ac3e8f392ad61d8a3d455776a3df05e08e8d993c Mon Sep 17 00:00:00 2001
+From: Brian Harring <ferringb@gmail.com>
+Date: Wed, 11 Apr 2012 12:17:55 -0700
+Subject: [PATCH] Fix rollback support when reverting a replace affected by a
+ blocker.
+
+Specifically, if the state is blocker !a:1 w/ a replace operation of
+a-1:1 -> a-2:2, that replace is fine.  Reverting the replace however
+would fail w/ an assertion error due to !a:1 catching a-1:1 during
+revert.
+
+Thus track the state, and only through the error if the blocker state
+for that package has somehow changed since we last looked (unlikely).
+---
+ pkgcore/resolver/pigeonholes.py |   11 ++++++++---
+ pkgcore/resolver/state.py       |   14 ++++++++++----
+ 2 files changed, 18 insertions(+), 7 deletions(-)
+
+diff --git a/pkgcore/resolver/pigeonholes.py b/pkgcore/resolver/pigeonholes.py
+index 112d53b..fc010e9 100644
+--- a/pkgcore/resolver/pigeonholes.py
++++ b/pkgcore/resolver/pigeonholes.py
+@@ -22,9 +22,10 @@ class PigeonHoledSlots(object):
+ 
+         :return: any conflicting objs (empty list if inserted successfully).
+         """
+-        key = obj.key
+-        l = [x for x in self.limiters.get(key, ()) if x.match(obj)]
+ 
++        l = self.check_limiters(obj)
++
++        key = obj.key
+         dslot = obj.slot
+         l.extend(x for x in self.slot_dict.get(key, ()) if x.slot == dslot)
+ 
+@@ -32,7 +33,6 @@ class PigeonHoledSlots(object):
+             self.slot_dict.setdefault(key, []).append(obj)
+         return l
+ 
+-
+     def get_conflicting_slot(self, pkg):
+         for x in self.slot_dict.get(pkg.key, ()):
+             if pkg.slot == x.slot:
+@@ -56,6 +56,11 @@ class PigeonHoledSlots(object):
+         self.limiters.setdefault(key, []).append(atom)
+         return self.find_atom_matches(atom, key=key)
+ 
++    def check_limiters(self, obj):
++        """return any limiters conflicting w/ the psased in obj"""
++        key = obj.key
++        return [x for x in self.limiters.get(key, ()) if x.match(obj)]
++
+     def remove_slotting(self, obj):
+         key = obj.key
+         # let the key error be thrown if they screwed up.
+diff --git a/pkgcore/resolver/state.py b/pkgcore/resolver/state.py
+index f4ad3c4..c14d9f9 100644
+--- a/pkgcore/resolver/state.py
++++ b/pkgcore/resolver/state.py
+@@ -198,24 +198,26 @@ class remove_op(base_op_state):
+         plan.vdb_filter.add(self.pkg)
+ 
+     def revert(self, plan):
+-        plan.state.fill_slotting(self.pkg, force=self.force)
++        plan.state.fill_slotting(self.pkg, force=True)
+         plan.pkg_choices[self.pkg] = self.choices
+         plan.vdb_filter.remove(self.pkg)
+ 
+ 
+ class replace_op(base_op_state):
+ 
+-    __slots__ = ("old_pkg", "old_choices")
++    __slots__ = ("old_pkg", "old_choices", "force_old")
+     desc = "replace"
+ 
+     def __init__(self, *args, **kwds):
+         base_op_state.__init__(self, *args, **kwds)
+         self.old_pkg, self.old_choices = None, None
++        self.force_old = False
+ 
+     def apply(self, plan):
+         revert_point = plan.current_state
+         old = plan.state.get_conflicting_slot(self.pkg)
+         # probably should just convert to an add...
++        force_old = bool(plan.state.check_limiters(old))
+         assert old is not None
+         plan.state.remove_slotting(old)
+         old_choices = plan.pkg_choices[old]
+@@ -233,6 +235,7 @@ class replace_op(base_op_state):
+         # wipe olds blockers.
+ 
+         self.old_pkg = old
++        self.force_old = force_old
+         self.old_choices = old_choices
+         del plan.pkg_choices[old]
+         plan.pkg_choices[self.pkg] = self.choices
+@@ -243,8 +246,11 @@ class replace_op(base_op_state):
+         # far simpler, since the apply op generates multiple ops on it's own.
+         # all we have to care about is swap.
+         plan.state.remove_slotting(self.pkg)
+-        l = plan.state.fill_slotting(self.old_pkg, force=self.force)
+-        assert not l, "reverting a replace op %r, got %r from slotting" % (self, l)
++        l = plan.state.fill_slotting(self.old_pkg, force=self.force_old)
++        if bool(l) != self.force_old:
++            raise AssertionError(
++                "Internal error detected, unable to revert %s; got %s, "
++                "force_old=%s " % (self, l, self.force_old))
+         del plan.pkg_choices[self.pkg]
+         plan.pkg_choices[self.old_pkg] = self.old_choices
+         plan.vdb_filter.remove(self.old_pkg)
+-- 
+1.7.8.5
+
