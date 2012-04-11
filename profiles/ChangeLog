@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6409 2012/04/10 15:22:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6410 2012/04/11 10:07:21 xarthisius Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> updates/2Q-2012:
+  Slotmove media-libs/libharu from 2 to 0.
 
   10 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Unmask chromium-19.x, v8-3.9.x (and also nodejs-0.7). Mask chromium-20.x,
