@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/libzpaq-5.01.ebuild,v 1.1 2012/04/10 15:01:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/libzpaq-5.01.ebuild,v 1.2 2012/04/11 18:28:25 mgorny Exp $
 
 EAPI=3
 
 AUTOTOOLS_AUTORECONF=1
-inherit autotools-utils
+inherit autotools-utils flag-o-matic
 
 MY_P=${PN}${PV/./}
 DESCRIPTION="Library to compress files or objects in the ZPAQ format"
@@ -15,7 +15,7 @@ SRC_URI="http://mattmahoney.net/dc/${MY_P}.zip"
 LICENSE="zpaq"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="static-libs"
+IUSE="+jit static-libs"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
@@ -33,6 +33,8 @@ src_configure() {
 	local myeconfargs=(
 		--with-library-version=2:0:0
 	)
+
+	use jit || append-flags -DNOJIT
 
 	autotools-utils_src_configure
 }
