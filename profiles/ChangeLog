@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6410 2012/04/11 10:07:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6411 2012/04/11 18:02:12 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Apr 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add ipadic license to MISC-FREE group, bug 397833.
 
   11 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> updates/2Q-2012:
   Slotmove media-libs/libharu from 2 to 0.
