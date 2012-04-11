@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Math-Random-MT
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random-MT/ChangeLog,v 1.1 2012/04/11 16:52:44 flameeyes Exp $
+
+*Math-Random-MT-1.13 (11 Apr 2012)
+
+  11 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +Math-Random-MT-1.13.ebuild, +metadata.xml:
+  Initial import of dependencies of google-api-adwords-perl.
+
