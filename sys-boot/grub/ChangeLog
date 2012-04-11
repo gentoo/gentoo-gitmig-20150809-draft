@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.196 2012/04/07 21:35:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.197 2012/04/11 02:41:33 floppym Exp $
+
+  11 Apr 2012; Mike Gilbert <floppym@gentoo.org>
+  files/grub-2.00-10_linux-genkernel.patch:
+  Remove real_root logic from patch, #411421 by Xake.
 
   07 Apr 2012; Mike Gilbert <floppym@gentoo.org> grub-9999.ebuild:
   Synchronize live ebuild.
