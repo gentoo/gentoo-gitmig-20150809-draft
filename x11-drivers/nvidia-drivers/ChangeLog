@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.331 2012/04/11 02:42:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.332 2012/04/11 17:48:11 cardoe Exp $
+
+  11 Apr 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-290.10.ebuild,
+  nvidia-drivers-290.10-r2.ebuild, nvidia-drivers-295.20-r1.ebuild:
+  Mark drivers that don't work with glibc 2.15 as depending on earlier
+  versions. bug #490905
 
   11 Apr 2012; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-275.09.07.ebuild, -nvidia-drivers-275.43.ebuild:
