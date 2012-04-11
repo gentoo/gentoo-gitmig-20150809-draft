@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.336 2012/04/11 23:08:32 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.337 2012/04/11 23:32:47 sping Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -10,6 +10,7 @@
 # that has yet to be resolved upstream.
 # See <https://bugzilla.gnome.org/show_bug.cgi?id=673580#c5> for details
 >=media-libs/babl-0.1.8 introspection
+>=media-libs/gegl-0.2 introspection
 
 # Michał Górny <mgorny@gentoo.org> (11 Apr 2012)
 # JIT compilation in libzpaq generates code for x86/amd64.
