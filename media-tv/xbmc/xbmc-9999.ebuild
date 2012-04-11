@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.110 2012/04/05 00:26:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.111 2012/04/11 03:20:29 vapier Exp $
 
 EAPI="4"
 
@@ -157,11 +157,6 @@ src_prepare() {
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.
 	export HAVE_GIT=no GIT_REV=${EGIT_VERSION:-exported}
-
-	# Avoid lsb-release dependency
-	sed -i \
-		-e 's:lsb_release -d:cat /etc/gentoo-release:' \
-		xbmc/utils/SystemInfo.cpp || die
 
 	# avoid long delays when powerkit isn't running #348580
 	sed -i \

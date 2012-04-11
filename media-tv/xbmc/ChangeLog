@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.130 2012/04/05 00:26:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.131 2012/04/11 03:20:29 vapier Exp $
+
+  11 Apr 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Drop lsb_release hack now that upsream is good #411219 by BT.
 
   05 Apr 2012; Mike Frysinger <vapier@gentoo.org> xbmc-11.0.ebuild,
   xbmc-9999.ebuild, metadata.xml:
