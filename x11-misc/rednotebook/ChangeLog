@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rednotebook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.57 2012/02/06 20:52:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.58 2012/04/11 13:33:24 hwoarang Exp $
+
+*rednotebook-1.4.0 (11 Apr 2012)
+
+  11 Apr 2012; Markos Chandras <hwoarang@gentoo.org> +rednotebook-1.4.0.ebuild:
+  version bump. Bug #411581
 
   06 Feb 2012; Markos Chandras <hwoarang@gentoo.org> rednotebook-1.3.0.ebuild:
   Fix patch name. Bug #402391
