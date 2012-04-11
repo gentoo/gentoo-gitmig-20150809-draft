@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.187 2012/04/01 11:14:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.188 2012/04/11 05:46:52 mr_bones_ Exp $
+
+*libsdl-1.2.15-r1 (11 Apr 2012)
+
+  11 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +libsdl-1.2.15-r1.ebuild, +files/libsdl-1.2.15-resizing.patch:
+  add patch from Debian to work around resizing bug (bug #411539)
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> libsdl-1.2.15.ebuild:
   alpha/ia64/sh/sparc stable wrt #405217
