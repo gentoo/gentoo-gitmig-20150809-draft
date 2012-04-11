@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.4.ebuild,v 1.1 2012/04/11 03:47:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.4.ebuild,v 1.2 2012/04/11 15:20:15 jer Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
 	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes
 	swat syslog winbind"
