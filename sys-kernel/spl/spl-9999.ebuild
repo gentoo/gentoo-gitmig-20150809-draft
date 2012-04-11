@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.12 2012/04/04 00:21:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.13 2012/04/11 00:11:41 floppym Exp $
 
 EAPI="4"
 
@@ -46,8 +46,8 @@ src_configure() {
 	use custom-cflags || strip-flags
 	set_arch_to_kernel
 	local myeconfargs=(
-		--bindir=${EPREFIX}/bin
-		--sbindir=${EPREFIX}/sbin
+		--bindir="${EPREFIX}/bin"
+		--sbindir="${EPREFIX}/sbin"
 		--with-config=all
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
