@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.17.2.ebuild,v 1.1 2012/03/22 01:08:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.17.2-r1.ebuild,v 1.1 2012/04/11 22:32:10 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -9,25 +9,16 @@ inherit eutils multilib python java-pkg-opt-2 scons-utils toolchain-funcs versio
 
 MY_PN="${PN/c/C}"
 MY_P="${MY_PN}${PV}"
-DOCS_P="${MY_PN}$(get_version_component_range 1-2)"
 
 DESCRIPTION="A sound design and signal processing system providing facilities for composition and performance"
 HOMEPAGE="http://csounds.com/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
-	html? (
-		linguas_fr? ( mirror://sourceforge/${PN}/${DOCS_P}_manual-fr_html.zip )
-		!linguas_fr? ( mirror://sourceforge/${PN}/${DOCS_P}_manual_html.zip )
-	)
-	doc? (
-		linguas_fr? ( mirror://sourceforge/${PN}/${DOCS_P}_manual-fr_pdf.zip )
-		!linguas_fr? ( mirror://sourceforge/${PN}/${DOCS_P}_manual_pdf.zip )
-	)"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+alsa beats chua csoundac +cxx debug doc double-precision dssi examples fltk +fluidsynth
-html +image jack java keyboard linear lua luajit nls osc openmp portaudio portmidi pulseaudio
+IUSE="+alsa beats chua csoundac +cxx debug double-precision dssi examples fltk +fluidsynth
++image jack java keyboard linear lua luajit nls osc openmp portaudio portmidi pulseaudio
 python samples static-libs stk tcl test +threads +utils vim-syntax vst"
 
 LANGS=" de en_GB en_US es_CO fr it ro ru"
@@ -67,8 +58,6 @@ DEPEND="${RDEPEND}
 	virtual/yacc
 	chua? ( dev-libs/boost )
 	csoundac? ( dev-lang/swig )
-	html? ( app-arch/unzip )
-	doc? ( app-arch/unzip )
 	nls? ( sys-devel/gettext )
 	test? ( =dev-lang/python-2* )
 	vst? ( dev-lang/swig )"
@@ -192,18 +181,6 @@ src_install() {
 	if use examples ; then
 		dodoc -r examples
 		docompress -x /usr/share/doc/${PF}/examples
-	fi
-
-	if use html ; then
-		dohtml -r "${WORKDIR}"/html/*
-	fi
-
-	if use doc ; then
-		if use linguas_fr ; then
-			dodoc "${WORKDIR}"/${DOCS_P}_manual-fr.pdf
-		else
-			dodoc "${WORKDIR}"/${DOCS_P}_manual.pdf
-		fi
 	fi
 
 	use samples && dodoc -r samples

@@ -10,11 +10,9 @@
 		<flag name="beats">Build the beats score frontend</flag>
 		<flag name="chua">Build the chua opcodes</flag>
 		<flag name="csoundac">Build the CsoundAC extension module</flag>
-		<flag name="doc">Install the pdf version of the manual</flag>
 		<flag name="double-precision">Use double-precision floating point for audio samples</flag>
 		<flag name="dssi">Build the DSSI opcodes</flag>
 		<flag name="fluidsynth">Build the fluidsynth opcodes</flag>
-		<flag name="html">Install the html version of the manual</flag>
 		<flag name="image">Build the image opcodes</flag>
 		<flag name="keyboard">Build Virtual MIDI keyboard</flag>
 		<flag name="linear">Build the linear algebra Opcodes</flag>
