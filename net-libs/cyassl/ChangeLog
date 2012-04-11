@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/cyassl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.1 2012/04/11 01:58:09 blueness Exp $
+
+*cyassl-2.0.8 (11 Apr 2012)
+
+  11 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +cyassl-2.0.8.ebuild,
+  +files/cyassl-2.0.8-disable-testsuit-ifnothreads.patch,
+  +files/cyassl-2.0.8-fix-gnustack.patch, +metadata.xml:
+  Initial commit
+
