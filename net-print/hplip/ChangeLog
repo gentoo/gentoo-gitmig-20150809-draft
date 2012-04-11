@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.219 2012/04/11 18:19:01 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.220 2012/04/11 18:33:38 billie Exp $
+
+*hplip-3.12.4 (11 Apr 2012)
+
+  11 Apr 2012; Daniel Pielmeier <billie@gentoo.org> +hplip-3.12.4.ebuild,
+  +files/hplip-3.12.4-cupsddk.patch, +files/hplip-3.12.4-desktop.patch,
+  +files/hplip-3.12.4-fast-pp.patch, +files/hplip-3.12.4-htmldir.patch:
+  Version bump.
 
   11 Apr 2012; Daniel Pielmeier <billie@gentoo.org>
   -files/hplip-3.11.1-udev-attrs.patch:

@@ -1,0 +1,14 @@
+--- installer/core_install.py.old	2012-04-11 19:19:24.788467395 +0200
++++ installer/core_install.py	2012-04-11 19:22:31.548172475 +0200
+@@ -1063,9 +1063,8 @@
+     def check_cupsddk(self):
+         log.debug("Checking for cups-ddk...")
+         # TODO: Compute these paths some way or another...
+-        #return check_tool("/usr/lib/cups/driver/drv list") and os.path.exists("/usr/share/cupsddk/include/media.defs")
+-        return (check_file('drv', "/usr/lib/cups/driver") or check_file('drv', "/usr/lib64/cups/driver")) and \
+-            check_file('media.defs', "/usr/share/cupsddk/include")
++        #return check_tool(commands.getoutput("cups-config --serverbin") + "/driver/drv list") and os.path.exists("/usr/share/cupsddk/include/media.defs")
++        return check_file('drv', commands.getoutput("cups-config --serverbin") + "/driver") and check_file('media.defs', "/usr/share/cupsddk/include")
+ 
+ 
+     def check_policykit(self):

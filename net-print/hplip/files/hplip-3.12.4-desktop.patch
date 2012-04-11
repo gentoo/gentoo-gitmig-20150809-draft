@@ -1,0 +1,18 @@
+--- Makefile.am.old	2012-04-10 10:35:14.000000000 +0200
++++ Makefile.am	2012-04-11 19:17:34.276681669 +0200
+@@ -341,6 +341,7 @@
+ hppgsz_CFLAGS = $(libapdk_la_CFLAGS)
+ hppgsz_LDADD = libapdk.la -ljpeg -ldl
+ 
++if GUI_BUILD
+ # hplip.desktop
+ hplip_desktopdir = $(icondir)
+ hplip_desktop_DATA = hplip.desktop
+@@ -348,6 +349,7 @@
+ # hplip-systray.desktop
+ hplip_systraydir = $(systraydir)
+ hplip_systray_DATA = hplip-systray.desktop
++endif
+ 
+ # hpipjs (CUPS filter)
+ hplipjsdir = $(cupsfilterdir)
