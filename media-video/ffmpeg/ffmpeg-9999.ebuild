@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.84 2012/04/05 11:59:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.85 2012/04/11 13:44:41 aballier Exp $
 
 EAPI="4"
 
@@ -30,9 +30,9 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	aac aacplus alsa amr ass bindist bluray +bzip2 cdio celt cpudetection debug
-	dirac doc +encode faac frei0r gnutls gsm +hardcoded-tables ieee1394 jack
-	jpeg2k libv4l modplug mp3 network openal openssl oss pic pulseaudio
-	rtmp schroedinger sdl speex static-libs test theora threads
+	dirac doc +encode faac fontconfig frei0r gnutls gsm +hardcoded-tables
+	ieee1394 jack jpeg2k libv4l modplug mp3 network openal openssl oss pic
+	pulseaudio rtmp schroedinger sdl speex static-libs test theora threads
 	truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
@@ -70,6 +70,7 @@ RDEPEND="
 		x264? ( >=media-libs/x264-0.0.20111017 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
+	fontconfig? ( media-libs/fontconfig )
 	frei0r? ( media-plugins/frei0r-plugins )
 	gnutls? ( >=net-libs/gnutls-2.12.16 )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
@@ -173,7 +174,9 @@ src_configure() {
 		use ${i} || myconf="${myconf} --disable-outdev=${i}"
 	done
 	# libavfilter options
-	use frei0r && myconf="${myconf} --enable-frei0r"
+	for i in frei0r fontconfig ; do
+		use ${i} && myconf="${myconf} --enable-${i}"
+	done
 	use truetype && myconf="${myconf} --enable-libfreetype"
 	use ass && myconf="${myconf} --enable-libass"
 
