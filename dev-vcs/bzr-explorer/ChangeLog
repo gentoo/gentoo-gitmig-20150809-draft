@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr-explorer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-explorer/ChangeLog,v 1.17 2012/03/16 23:48:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-explorer/ChangeLog,v 1.18 2012/04/11 21:13:05 fauli Exp $
+
+  11 Apr 2012; Christian Faulhammer <fauli@gentoo.org>
+  -bzr-explorer-1.1.1.ebuild:
+  clean up
 
 *bzr-explorer-1.2.2 (16 Mar 2012)
 
