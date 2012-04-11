@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.121 2012/03/28 18:43:52 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.122 2012/04/11 18:36:47 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (11 Apr 2012)
+# JIT compilation in libzpaq generates code for x86/amd64.
+app-arch/libzpaq -jit
 
 # Arun Raghavan <ford_prefect@gentoo.org> (29 Mar 2012)
 # webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
