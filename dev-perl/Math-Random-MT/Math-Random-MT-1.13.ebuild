@@ -6,7 +6,6 @@ EAPI="2"
 
 MODULE_AUTHOR="AMS"
 
-
 inherit perl-module
 
 DESCRIPTION="The Mersenne Twister PRNG"
