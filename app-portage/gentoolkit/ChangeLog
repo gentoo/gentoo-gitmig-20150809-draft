@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.253 2012/04/11 15:12:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.254 2012/04/11 16:06:42 fuzzyray Exp $
+
+  11 Apr 2012; Paul Varner <fuzzyray@gentoo.org>
+  -gentoolkit-0.2.4.6.1-r1.ebuild, -gentoolkit-0.3.0.4.ebuild,
+  -gentoolkit-0.3.0.4-r4.ebuild:
+  Remove unused versions.
 
   11 Apr 2012; Jeroen Roovers <jer@gentoo.org> gentoolkit-0.3.0.5.ebuild:
   Stable for HPPA (bug #411479).
