@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/rt-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.13 2012/01/15 19:15:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.14 2012/04/11 14:35:42 psomas Exp $
+
+*rt-sources-3.2.14_p24 (11 Apr 2012)
+
+  11 Apr 2012; <psomas@gentoo.org> +rt-sources-3.2.14_p24.ebuild:
+  Version bump
 
   15 Jan 2012; Torsten Veller <tove@gentoo.org> rt-sources-3.0.8_p23.ebuild,
   rt-sources-3.0.9_p25.ebuild, rt-sources-3.0.10_p27.ebuild,
