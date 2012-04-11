@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13666 2012/04/10 15:22:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13667 2012/04/11 21:39:26 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -63,11 +63,6 @@ mail-filter/dk-milter
 # It doesn't work with recent portage version and the author has no time to fix
 # it anytime soon. bug 404973.
 app-portage/portato
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (06 Apr 2012)
-# Mask calligra-2.4.0 until it is released
-~app-office/calligra-2.4.0
-~app-office/calligra-l10n-2.4.0
 
 # Hans de Graaff <graaff@gentoo.org> (06 Apr 2012)
 # Mask parts of Rails 3.2 until the whole package is ready.
