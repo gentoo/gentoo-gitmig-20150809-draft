@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.9.0-r1.ebuild,v 1.1 2012/04/09 12:26:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.9.0-r1.ebuild,v 1.2 2012/04/11 12:33:54 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -25,6 +25,8 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 	gnome-keyring? ( >=gnome-base/libgnome-keyring-2.22 )
 	!xfce-base/xfce-utils"
 RDEPEND="${COMMON_DEPEND}
+	x11-apps/xrdb
+	x11-misc/xdg-user-dirs
 	consolekit? ( || ( sys-auth/consolekit sys-apps/systemd ) )
 	udev? ( sys-power/upower )"
 DEPEND="${COMMON_DEPEND}
