@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.100 2012/03/13 02:40:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.101 2012/04/11 07:32:29 patrick Exp $
+
+*logilab-common-0.57.2 (11 Apr 2012)
+
+  11 Apr 2012; Patrick Lauer <patrick@gentoo.org> +logilab-common-0.57.2.ebuild:
+  Bump for #411441
 
   13 Mar 2012; Mike Gilbert <floppym@gentoo.org> logilab-common-0.57.1.ebuild:
   Revert previous commit; handled in logilab-constraint.
