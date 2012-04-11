@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.92-r1.ebuild,v 1.1 2012/04/08 13:54:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.92-r1.ebuild,v 1.2 2012/04/11 21:00:29 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -18,7 +18,7 @@ KDE_LINGUAS_LIVE_OVERRIDE=true
 inherit kde4-base
 
 DESCRIPTION="KDE Office Suite"
-HOMEPAGE="http://www.calligra-suite.org/"
+HOMEPAGE="http://www.calligra.org/"
 [[ ${PV} == 9999 ]] || SRC_URI="mirror://kde/unstable/${P}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
