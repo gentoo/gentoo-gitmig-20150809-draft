@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.6.ebuild,v 1.3 2012/04/11 02:55:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.6.ebuild,v 1.4 2012/04/11 18:25:35 mr_bones_ Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -60,7 +60,7 @@ src_prepare() {
 	# error: conditional "am__fastdepCXX" was never defined (for eautoreconf)
 	sed -i -e '/AC_PROG_CXX/s:#::' configure.in || die
 
-	# Upstream configure produced by broken autoconf-2.13. This also fixes 
+	# Upstream configure produced by broken autoconf-2.13. This also fixes
 	# toolchain detection.
 	eautoreconf #131440 and #103483#c23
 }
