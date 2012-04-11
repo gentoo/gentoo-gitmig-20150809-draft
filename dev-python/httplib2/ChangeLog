@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/httplib2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.27 2011/11/30 15:56:32 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.28 2012/04/11 07:19:58 patrick Exp $
+
+*httplib2-0.7.4 (11 Apr 2012)
+
+  11 Apr 2012; Patrick Lauer <patrick@gentoo.org> +httplib2-0.7.4.ebuild:
+  Bump for #410803, restricting tests
 
 *httplib2-0.7.2 (30 Nov 2011)
 
