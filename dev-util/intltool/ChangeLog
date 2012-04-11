@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.155 2012/04/09 15:55:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.156 2012/04/11 16:06:42 jer Exp $
+
+  11 Apr 2012; Jeroen Roovers <jer@gentoo.org> intltool-0.50.2.ebuild:
+  Stable for HPPA (bug #411177).
 
   09 Apr 2012; Agostino Sarubbo <ago@gentoo.org> intltool-0.50.2.ebuild:
   Stable for amd64, wrt bug #411177
