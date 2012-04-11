@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.334 2012/04/08 14:43:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.335 2012/04/11 18:33:22 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michał Górny <mgorny@gentoo.org> (11 Apr 2012)
+# JIT compilation in libzpaq generates code for x86/amd64.
+app-arch/libzpaq jit
 
 # Alexis Ballier <aballier@gentoo.org> (8 Apr 2012)
 # mask x264-encoder[ffmpegsource] on all versions but latest one
