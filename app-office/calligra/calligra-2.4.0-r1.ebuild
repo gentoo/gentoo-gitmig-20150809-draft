@@ -1,15 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.92.ebuild,v 1.3 2012/04/08 13:39:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.0-r1.ebuild,v 1.1 2012/04/11 20:49:12 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
 # krita/CMakeLists.txt
 
+EGIT_BRANCH="calligra/2.4"
+
 EAPI=4
 
 KDE_SCM=git
 KDE_MINIMAL=4.6.4
+QT_MINIMAL=4.8.1
 OPENGL_REQUIRED=optional
 
 KDE_HANDBOOK=optional
@@ -19,11 +22,11 @@ inherit kde4-base
 
 DESCRIPTION="KDE Office Suite"
 HOMEPAGE="http://www.calligra-suite.org/"
-[[ ${PV} == 9999 ]] || SRC_URI="mirror://kde/unstable/${P}/${P}.tar.bz2"
+[[ ${PV} == *9999 ]] || SRC_URI="mirror://kde/stable/${P}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == *9999 ]] || KEYWORDS="~amd64 ~x86"
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
 +pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
@@ -63,6 +66,7 @@ RDEPEND="
 	$(add_kdebase_dep knewstuff)
 	media-libs/libpng
 	sys-libs/zlib
+	>=x11-libs/qt-gui-4.8.1-r1
 	attica? ( dev-libs/libattica )
 	crypt? ( app-crypt/qca:2 )
 	eigen? ( dev-cpp/eigen:2 )
@@ -123,6 +127,7 @@ src_configure() {
 
 	# first write out things we want to hard-enable
 	local mycmakeargs=(
+		"-DIHAVEPATCHEDQT=ON"
 		"-DWITH_Boost=ON"
 		"-DWITH_LibXml2=ON"
 		"-DWITH_PNG=ON"
@@ -135,8 +140,9 @@ src_configure() {
 
 	# default disablers
 	mycmakeargs+=(
-		"-DBUILD_mobile=OFF" # we dont suppor mobile gui, maybe arm could
-		"-DWITH_LCMS=OFF" # we use lcms:2
+		"-DBUILD_mobile=OFF"         # we dont support mobile gui, maybe arm could
+		"-DBUILD_active=OFF"         # we dont support active gui, maybe arm could
+		"-DWITH_LCMS=OFF"            # we use lcms:2
 		"-DCREATIVEONLY=OFF"
 		"-DWITH_TINY=OFF"
 		"-DWITH_CreateResources=OFF" # NOT PACKAGED: http://create.freedesktop.org/

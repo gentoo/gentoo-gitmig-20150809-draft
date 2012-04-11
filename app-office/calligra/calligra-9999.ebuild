@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.14 2012/04/06 21:53:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.15 2012/04/11 20:49:12 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -123,6 +123,7 @@ src_configure() {
 
 	# first write out things we want to hard-enable
 	local mycmakeargs=(
+		"-DIHAVEPATCHEDQT=ON"
 		"-DWITH_Boost=ON"
 		"-DWITH_LibXml2=ON"
 		"-DWITH_PNG=ON"
