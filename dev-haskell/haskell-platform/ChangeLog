@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/haskell-platform
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.5 2011/12/11 20:20:31 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.6 2012/04/11 20:37:49 slyfox Exp $
+
+*haskell-platform-2011.2.0.1-r2 (11 Apr 2012)
+
+  11 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +haskell-platform-2011.2.0.1-r2.ebuild:
+  Version bump to newer platform version (should help bug #411393 by Leonid
+  Podolny)
 
 *haskell-platform-2009.2.0.2-r1 (11 Dec 2011)
 
