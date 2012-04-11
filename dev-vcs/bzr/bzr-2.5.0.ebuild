@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.5.0.ebuild,v 1.1 2012/03/16 23:32:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.5.0.ebuild,v 1.2 2012/04/11 21:30:18 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-PYTHON_USE_WITH="threads"
+PYTHON_USE_WITH="threads ssl"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.* 2.7-pypy-*"
 
