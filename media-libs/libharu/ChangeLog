@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libharu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/ChangeLog,v 1.4 2011/07/10 15:49:38 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/ChangeLog,v 1.5 2012/04/11 09:47:09 xarthisius Exp $
+
+*libharu-2.2.1-r1 (11 Apr 2012)
+
+  11 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> +libharu-2.2.1-r1.ebuild,
+  -libharu-2.1.0.ebuild, -libharu-2.2.1.ebuild:
+  Remove .la file, unslot, drop old
 
   10 Jul 2011; Justin Lecher <jlec@gentoo.org> libharu-2.1.0.ebuild,
   libharu-2.2.1.ebuild, +files/libharu-2.2.1-libpng-1.5.patch, metadata.xml:
