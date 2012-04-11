@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.9 2012/04/11 23:34:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0.ebuild,v 1.1 2012/04/11 23:34:40 sping Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="cairo debug exif ffmpeg graphviz introspection jpeg jpeg2k lensfun lua mmx
 
 VALASLOT="0.14"
 
-RDEPEND=">=media-libs/babl-0.1.6[introspection?]
+RDEPEND=">=media-libs/babl-0.1.10[introspection?]
 	>=dev-libs/glib-2.28:2
 	>=x11-libs/gdk-pixbuf-2.18:2
 	x11-libs/pango
@@ -42,6 +42,7 @@ RDEPEND=">=media-libs/babl-0.1.6[introspection?]
 			>=dev-python/pygobject-2.26:2 )
 	lensfun? ( >=media-libs/lensfun-0.2.5 )"
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.40.1
 	dev-util/pkgconfig
 	>=sys-devel/libtool-2.2
 	vala? ( dev-lang/vala:${VALASLOT}[vapigen] )"
@@ -53,10 +54,6 @@ RESTRICT="test"
 DOCS=( ChangeLog INSTALL README NEWS )
 
 src_prepare() {
-	# Fix for upstream bug "gegl/gegl-0.1.deps missing from gegl-0.1.8 tarball"
-	# https://bugzilla.gnome.org/show_bug.cgi?id=666737
-	[ -f gegl/gegl-0.1.deps ] || echo 'Babl-0.1' > gegl/gegl-0.1.deps
-
 	# fix OSX loadable module filename extension
 	sed -i -e 's/\.dylib/.bundle/' configure.ac || die
 	eautoreconf
