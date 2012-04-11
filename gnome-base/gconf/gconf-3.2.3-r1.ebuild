@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.3-r1.ebuild,v 1.1 2012/04/11 06:24:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.3-r1.ebuild,v 1.2 2012/04/11 15:47:21 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -87,6 +87,15 @@ pkg_postinst() {
 
 	einfo "changing permissions for gconf files"
 	find  /etc/gconf/ -type f -exec chmod ugo+r "{}" \;
+
+	if ! use orbit; then
+		ewarn "You are using dbus for GConf's IPC. If you are upgrading from"
+		ewarn "<=gconf-3.2.3, or were previously using gconf with USE=orbit,"
+		ewarn "you will need to now restart your desktop session (for example,"
+		ewarn "by logging out and then back in)."
+		ewarn "Otherwise, gconf-based applications may crash with 'Method ..."
+		ewarn "on interface \"org.gnome.GConf.Server\" doesn't exist' errors."
+	fi
 }
 
 kill_gconf() {
