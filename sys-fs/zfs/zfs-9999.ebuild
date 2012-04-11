@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.16 2012/04/04 00:21:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.17 2012/04/11 00:09:22 floppym Exp $
 
 EAPI="4"
 
@@ -43,13 +43,15 @@ AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 pkg_setup() {
-	CONFIG_CHECK="MODULES
+	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
 		!PREEMPT
 		!PREEMPT_VOLUNTARY
-		!DEBUG_LOCK_ALLOC
+		BLK_DEV_LOOP
+		EFI_PARTITION
+		MODULES
+		PREEMPT_NONE
 		ZLIB_DEFLATE
-		ZLIB_INFLATE
-		BLK_DEV_LOOP"
+		ZLIB_INFLATE"
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
 	use x86 && ewarn "32-bit kernels are unsupported by ZFSOnLinux upstream. Do not file bug reports."

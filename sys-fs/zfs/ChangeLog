@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.15 2012/04/04 00:21:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.16 2012/04/11 00:09:22 floppym Exp $
+
+  11 Apr 2012; Mike Gilbert <floppym@gentoo.org> zfs-9999.ebuild:
+  Add kernel checks for EFI_PARTITION and PREEMPT_NONE. Patch by Richard Yao.
 
   04 Apr 2012; Mike Gilbert <floppym@gentoo.org> zfs-9999.ebuild:
   Implement fix for ZFSOnLinux upstream issue #631 and make improvements toward
