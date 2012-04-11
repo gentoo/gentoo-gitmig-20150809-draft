@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.501 2012/04/11 03:47:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.502 2012/04/11 07:49:39 nativemad Exp $
+
+  11 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> samba-3.5.14.ebuild:
+  x86 stable, see bug 411487
 
 *samba-3.5.14 (11 Apr 2012)
 *samba-3.6.4 (11 Apr 2012)
