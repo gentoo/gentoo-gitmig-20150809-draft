@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.315 2012/03/23 14:05:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.316 2012/04/11 13:52:50 eras Exp $
+
+*mit-krb5-1.10.1-r2 (11 Apr 2012)
+
+  11 Apr 2012; Eray Aslan <eras@gentoo.org> +mit-krb5-1.10.1-r2.ebuild,
+  +files/mit-krb5-1.10.1_uninitialized_extra-2.patch:
+  Fix some more -Werror=uninitialized errors - bug #410431. Thanks to Alexander
+  Adam
 
 *mit-krb5-1.10.1-r1 (23 Mar 2012)
 
