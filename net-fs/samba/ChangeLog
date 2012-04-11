@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.500 2012/03/28 21:02:26 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.501 2012/04/11 03:47:40 patrick Exp $
+
+*samba-3.5.14 (11 Apr 2012)
+*samba-3.6.4 (11 Apr 2012)
+
+  11 Apr 2012; Patrick Lauer <patrick@gentoo.org> +samba-3.5.14.ebuild,
+  +samba-3.6.4.ebuild:
+  Bump for #411487
 
   28 Mar 2012; Víctor Ostorga <vostorga@gentoo.org> samba-3.6.3.ebuild:
   Fixing DEPEND on ctdb, bug 404409
