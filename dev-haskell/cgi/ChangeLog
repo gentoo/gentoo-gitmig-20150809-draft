@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cgi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.19 2011/12/26 12:18:45 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.20 2012/04/11 20:33:41 slyfox Exp $
+
+*cgi-3001.1.8.2 (11 Apr 2012)
+
+  11 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> +cgi-3001.1.8.2.ebuild:
+  Version bump. Dropped alpha/ppc/sparc due to new depend. Will rekeyword.
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> cgi-3001.1.7.1.ebuild:
   x86 stable, bug #394051
