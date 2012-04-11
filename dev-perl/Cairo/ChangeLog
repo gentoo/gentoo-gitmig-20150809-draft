@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.60 2012/04/07 05:12:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.61 2012/04/11 14:07:53 jer Exp $
+
+  11 Apr 2012; Jeroen Roovers <jer@gentoo.org> Cairo-1.90.0.ebuild:
+  Stable for HPPA (bug #411055).
 
   07 Apr 2012; Jeff Horelick <jdhore@gentoo.org> Cairo-1.90.0.ebuild:
   marked x86 per bug 411055
