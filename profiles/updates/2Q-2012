@@ -1,3 +1,4 @@
 move xfce-extra/xfce4-appfinder xfce-base/xfce4-appfinder
 move dev-lisp/cl-asdf dev-lisp/asdf
 move dev-lisp/cl-asdf-binary-locations dev-lisp/asdf-binary-locations
+slotmove media-libs/libharu 2 0
