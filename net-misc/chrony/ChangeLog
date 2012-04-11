@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.87 2012/02/15 13:21:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.88 2012/04/11 21:38:59 jer Exp $
+
+*chrony-1.27_pre1 (11 Apr 2012)
+
+  11 Apr 2012; Jeroen Roovers <jer@gentoo.org> +chrony-1.27_pre1.ebuild,
+  chrony-1.26.ebuild:
+  Do not use dev-libs/libtomcrypt even if found (bug #262601). Add pre-release
+  version, reintroduce USE=ipv6, clean up a lot.
 
   15 Feb 2012; Jeroen Roovers <jer@gentoo.org> -chrony-1.25.ebuild,
   -files/chrony-1.25-linux3.patch:
