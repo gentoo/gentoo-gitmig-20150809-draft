@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.27 2012/03/11 04:36:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.28 2012/04/11 04:54:08 dirtyepic Exp $
+
+*mediatomb-0.12.1-r2 (11 Apr 2012)
+
+  11 Apr 2012; Ryan Hill <dirtyepic@gentoo.org> +mediatomb-0.12.1-r2.ebuild,
+  +files/mediatomb-0.12.1-gcc47.patch, +files/mediatomb-0.12.1-libmp4v2.patch:
+  Fix bug #407753 (GCC 4.7 build failure) and bug #410235 (libmp4v2 API
+  breakage, patch by Peter Asplund).
 
   11 Mar 2012; Jeremy Olexa <darkside@gentoo.org> mediatomb-0.12.1-r1.ebuild:
   stabilize for amd64/x86 (compilation failure that didn't need to be a
