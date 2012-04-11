@@ -1,6 +1,11 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.53 2012/04/05 19:26:27 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.54 2012/04/11 18:17:06 billie Exp $
+
+  11 Apr 2012; Daniel Pielmeier <billie@gentoo.org>
+  -files/epdfview-0.1.6-gcc-4.3.patch,
+  -files/epdfview-0.1.6-print-segfault.patch:
+  Remove unused patches.
 
   05 Apr 2012; Daniel Pielmeier <billie@gentoo.org> -epdfview-0.1.6-r1.ebuild:
   Remove old.
