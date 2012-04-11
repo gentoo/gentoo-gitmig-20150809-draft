@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.4.0.ebuild,v 1.1 2012/03/19 10:15:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.4.2.ebuild,v 1.1 2012/04/11 09:13:44 johu Exp $
 
 EAPI=4
 
@@ -55,7 +55,7 @@ PATCHES=(
 )
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		$(cmake-utils_use_with jabber Jreen)
 		$(cmake-utils_use_with resolver LibAttica)
 		$(cmake-utils_use_with resolver QuaZip)
