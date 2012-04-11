@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.33.ebuild,v 1.4 2012/04/06 06:46:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.33.ebuild,v 1.5 2012/04/11 17:51:45 cardoe Exp $
 
 EAPI="2"
 
@@ -287,6 +287,11 @@ src_prepare() {
 		sed -i \
 			-e 's:-Wsign-compare::g' \
 			"${NV_SRC}"/Makefile.kbuild
+
+		# Fix building with Linux 3.3.x wrt #408841
+		sed -i \
+			-e '/CFLAGS="$CFLAGS/s:-I$SOURCES/arch/x86/include:& -I$OUTPUT/arch/x86/include/generated:' \
+			kernel/conftest.sh || die
 
 		# If you set this then it's your own fault when stuff breaks :)
 		use custom-cflags && sed -i "s:-O:${CFLAGS}:" "${NV_SRC}"/Makefile.*
