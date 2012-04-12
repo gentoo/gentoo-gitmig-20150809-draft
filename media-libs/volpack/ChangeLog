@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/volpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/volpack/ChangeLog,v 1.3 2012/03/29 19:13:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/volpack/ChangeLog,v 1.4 2012/04/12 23:07:37 bicatali Exp $
+
+  12 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> volpack-1.0_p7.ebuild:
+  Added static-libs flag
 
   29 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> volpack-1.0_p7.ebuild:
   Switch to EAPI4, cleanup and fix bug #408853
