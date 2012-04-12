@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/fms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/ChangeLog,v 1.28 2012/03/08 21:20:24 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/ChangeLog,v 1.29 2012/04/12 13:57:49 tommy Exp $
+
+*fms-0.3.67 (12 Apr 2012)
+
+  12 Apr 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +fms-0.3.67.ebuild:
+  Version bump
 
 *fms-0.3.66 (08 Mar 2012)
 
