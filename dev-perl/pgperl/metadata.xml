@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>perl</herd>
+<!--
   <upstream>
-    <remote-id type="cpan">Pg</remote-id>
+    <remote-id type="cpan">pgsql_perl5</remote-id>
   </upstream>
+-->
 </pkgmetadata>
