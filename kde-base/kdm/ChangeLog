@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.286 2012/04/04 23:59:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.287 2012/04/12 08:02:03 johu Exp $
+
+  12 Apr 2012; Johannes Huber <johu@gentoo.org> +files/kdm-4.8.2-gold.patch,
+  kdm-4.8.1.ebuild, kdm-4.8.2.ebuild:
+  Add patch to build with gold linker and kerberos use flag by Michael
+  (kensington) <gentoo@scribeofthenile.com>. Fixes bug #410879.
 
 *kdm-4.8.2 (04 Apr 2012)
 

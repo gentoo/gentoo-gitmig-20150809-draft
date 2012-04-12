@@ -1,0 +1,28 @@
+diff --git a/kdm/ConfigureChecks.cmake b/kdm/ConfigureChecks.cmake
+index 0f969f73780e0b45edcb894084e0a3aaa8f72d69..cc2e37a7e5f56ba06040f85e0ded4258b6feb958 100644
+--- a/kdm/ConfigureChecks.cmake
++++ b/kdm/ConfigureChecks.cmake
+@@ -170,6 +170,11 @@ if (KDE4_KRB5AUTH)
+ Due to a problem with X includes you probably have to run \"ln -s . krb5\"
+ in the directory where the krb5.h include resides to make things actually work.")
+         endif (KRB5_INCLUDE_DIR)
++        find_library(COMERR_LIBRARY com_err)
++        if (NOT COMERR_LIBRARY)
++            message(FATAL_ERROR "Kerberos5 support is enabled, but required libcomerr
++could not be found.")
++        endif (NOT COMERR_LIBRARY)
+     endif (KRB5_LIBRARIES)
+     mark_as_advanced(KRB5_INCLUDE_DIR KRB5_LIBRARIES)
+     macro_bool_to_01(KRB5AUTH_FOUND K5AUTH)
+diff --git a/kdm/backend/CMakeLists.txt b/kdm/backend/CMakeLists.txt
+index e94a3b9c68b0da0b5f2ef794e2e67cc7f4c3db5f..25f383f3148a1369d63cf0150ae8c63bb95d7790 100644
+--- a/kdm/backend/CMakeLists.txt
++++ b/kdm/backend/CMakeLists.txt
+@@ -56,6 +56,7 @@ target_link_libraries( kdm
+ 	${S_LIBRARIES}
+ 	${KRB4_LIBRARIES}
+ 	${KRB5_LIBRARIES}
++	${COMERR_LIBRARY}
+ 	${NSL_LIBRARIES}
+ 	${RESOLV_LIBRARIES}
+ 	${SOCKET_LIBRARIES}

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.8.1.ebuild,v 1.3 2012/04/04 18:04:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.8.1.ebuild,v 1.4 2012/04/12 08:02:03 johu Exp $
 
 EAPI=4
 
@@ -40,6 +40,7 @@ KMEXTRA="
 PATCHES=(
 	"${FILESDIR}/${PN}-4-gentoo-xinitrc.d.patch"
 	"${FILESDIR}/${PN}-4.7.3-revertcrashlogic.patch"
+	"${FILESDIR}/${PN}-4.8.2-gold.patch"
 )
 
 pkg_setup() {
