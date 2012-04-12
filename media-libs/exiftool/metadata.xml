@@ -13,6 +13,6 @@
       Minolta/Konica- Minolta, Nikon, Olympus/Epson, Panasonic/Leica,
       Pentax/Asahi, Ricoh, Sanyo, Sigma/Foveon and Sony.</longdescription>
 	<upstream>
-		<remote-id type="cpan">exiftool</remote-id>
+		<remote-id type="cpan">Image-ExifTool</remote-id>
 	</upstream>
 </pkgmetadata>
