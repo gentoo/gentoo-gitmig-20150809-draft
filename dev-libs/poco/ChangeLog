@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.12 2012/04/12 13:53:00 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.13 2012/04/12 13:55:14 tommy Exp $
+
+  12 Apr 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> metadata.xml:
+  Add myself as maintainer
 
 *poco-1.4.3_p1 (12 Apr 2012)
 
