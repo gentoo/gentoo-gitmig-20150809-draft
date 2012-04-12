@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/rox-media-0.0.3.ebuild,v 1.2 2010/07/29 02:08:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/rox-media-0.0.3.ebuild,v 1.3 2012/04/12 09:25:21 tetromino Exp $
 
 EAPI=3
 inherit rox
@@ -16,7 +16,10 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11
 	gnome-base/gconf:2
-	sys-apps/gnome-disk-utility
+	|| (
+		gnome-base/libgdu
+		=sys-apps/gnome-disk-utility-3.0.2-r300
+		<=sys-apps/gnome-disk-utility-3.0.2-r200 )
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/scons"
