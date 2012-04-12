@@ -6,7 +6,6 @@
 	<flag name="html">Support conversion between po and html files</flag>
 	<flag name="ical">Support conversion between po and ical files</flag>
 	<flag name="ini">Support conversion between po and ini files</flag>
-	<flag name="psyco">Use <pkg>dev-python/psyco</pkg> to speed up the execution time</flag>
 	<flag name="subtitles">Support conversion between po and sub files</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/translate-toolkit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/ChangeLog,v 1.4 2011/11/02 18:15:59 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/ChangeLog,v 1.5 2012/04/12 15:58:26 xarthisius Exp $
+
+  12 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml,
+  translate-toolkit-1.9.0.ebuild:
+  Drop psyco wrt #410351 by Pacho Ramos <pacho@gentoo.org>
 
   02 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Not used in libreo anymore, drop oo herd.
