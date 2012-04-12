@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.311 2011/10/27 06:42:00 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.312 2012/04/12 21:00:43 polynomial-c Exp $
+
+  12 Apr 2012; Lars Wendler <polynomial-c@gentoo.org> -xchat-2.8.8-r1.ebuild,
+  xchat-2.8.8-r2.ebuild, +files/xchat-2.8.8-glib-2.31.patch:
+  Fixed compilation with >=dev-libs/glib-2.31. Thanks to Alexandre Rostovtsev
+  (tetromino) for filing bug #411195 and providing a working patch.
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   xchat-2.8.6-r2.ebuild, xchat-2.8.8-r1.ebuild, xchat-2.8.8-r2.ebuild:
