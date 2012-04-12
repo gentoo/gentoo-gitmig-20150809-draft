@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.40-r3.ebuild,v 1.1 2011/06/17 13:27:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.40-r3.ebuild,v 1.2 2012/04/12 12:23:54 lxnay Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ pkg_pretend() {
 		MODULE_NAMES="${MODULE_NAMES} hdaps(extra:)"
 		BUILD_PARAMS="${BUILD_PARAMS} HDAPS=1"
 
-		CONFIG_CHECK="!SENSORS_HDAPS"
+		CONFIG_CHECK="~!SENSORS_HDAPS"
 		ERROR_SENSORS_HDAPS="${P} with USE=hdaps conflicts with in-kernel HDAPS (CONFIG_SENSORS_HDAPS)"
 		linux-info_pkg_setup
 	fi
