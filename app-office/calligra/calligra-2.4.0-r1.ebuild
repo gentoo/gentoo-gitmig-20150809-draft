@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.0-r1.ebuild,v 1.2 2012/04/11 21:00:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.0-r1.ebuild,v 1.3 2012/04/12 20:16:22 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -30,7 +30,7 @@ SLOT="4"
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
 +pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
-+wmf word-perfect xbase +xml +xslt"
+word-perfect xbase +xml +xslt"
 
 # please do not sort here, order is same as in CMakeLists.txt
 CAL_FTS="kexi words flow plan stage sheets krita karbon braindump"
@@ -191,7 +191,6 @@ src_configure() {
 		$(cmake-utils_use_with word-perfect WPG)
 		$(cmake-utils_use_with xbase XBase)
 		$(cmake-utils_use_with xslt LibXslt)
-		$(cmake-utils_use_build wmf libkowmf)
 		$(cmake-utils_use_build mso libmsooxml)
 	)
 
