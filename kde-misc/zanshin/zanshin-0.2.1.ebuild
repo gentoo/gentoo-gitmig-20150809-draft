@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/zanshin/zanshin-0.2.1.ebuild,v 1.2 2012/04/04 19:37:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/zanshin/zanshin-0.2.1.ebuild,v 1.3 2012/04/12 06:42:01 johu Exp $
 
 EAPI=4
+
+VIRTUALX_REQUIRED="test"
 inherit kde4-base
 
 DESCRIPTION="Todo management application for KDE"

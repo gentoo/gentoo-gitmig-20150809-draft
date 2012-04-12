@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/zanshin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/zanshin/ChangeLog,v 1.6 2012/04/04 19:37:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/zanshin/ChangeLog,v 1.7 2012/04/12 06:42:01 johu Exp $
+
+  12 Apr 2012; Johannes Huber <johu@gentoo.org> zanshin-0.2.0.ebuild,
+  zanshin-0.2.1.ebuild:
+  Virtual X is required for test phase, pointed out by Michael (kensington)
+  <gentoo@scribeofthenile.com>. Fixes bug #411491.
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> zanshin-0.2.1.ebuild:
   Stable for amd64, wrt bug #409403
