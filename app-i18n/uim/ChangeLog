@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.239 2012/03/08 08:23:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.240 2012/04/12 11:46:38 naota Exp $
+
+*uim-1.8.0 (12 Apr 2012)
+
+  12 Apr 2012; Naohiro Aota <naota@gentoo.org> +uim-1.8.0.ebuild:
+  Version bump. #411589
 
 *uim-1.7.3 (08 Mar 2012)
 
