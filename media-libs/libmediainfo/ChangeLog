@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.40 2012/04/07 21:18:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.41 2012/04/12 23:45:48 radhermit Exp $
+
+*libmediainfo-0.7.56 (12 Apr 2012)
+
+  12 Apr 2012; Tim Harder <radhermit@gentoo.org> +libmediainfo-0.7.56.ebuild:
+  Version bump.
 
   07 Apr 2012; Tim Harder <radhermit@gentoo.org> -libmediainfo-0.7.50.ebuild,
   -libmediainfo-0.7.52.ebuild, -libmediainfo-0.7.53.ebuild,
