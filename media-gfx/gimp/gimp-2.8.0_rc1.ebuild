@@ -1,21 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.42 2012/04/12 00:33:57 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0_rc1.ebuild,v 1.1 2012/04/12 00:33:57 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit git-2 eutils gnome2 fdo-mime multilib python
-
-EGIT_REPO_URI="git://git.gnome.org/gimp"
+inherit versionator autotools eutils gnome2 fdo-mime multilib python
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
-SRC_URI=""
-
+SRC_URI="mirror://gimp/v$(get_version_component_range 1-2)/${PN}-${PV/_rc/-RC}.tar.bz2"
 LICENSE="GPL-3 LGPL-3"
 SLOT="2"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec bzip2 curl dbus debug doc exif gnome gs jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
 
@@ -63,11 +60,12 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1 )
 	>=sys-devel/libtool-2.2
-	>=sys-devel/autoconf-2.54
 	>=sys-devel/automake-1.11
 	dev-util/gtk-doc-am"  # due to our call to eautoreconf below (bug #386453)
 
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
+
+S="${WORKDIR}"/${PN}-${PV/_rc/-RC}
 
 pkg_setup() {
 	G2CONF="--enable-default-binary \
@@ -106,19 +104,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	git-2_src_unpack
-}
-
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.7.4-no-deprecation.patch  # bug 395695, comment 9 and 16
+	eautoreconf  # If you remove this: remove dev-util/gtk-doc-am from DEPEND, too
+
 	echo '#!/bin/sh' > py-compile
-	chmod a+x py-compile || die
-	sed -i -e 's:\$srcdir/configure:#:g' autogen.sh
-	local myconf
-	if ! use doc; then
-	    myconf="${myconf} --disable-gtk-doc"
-	fi
-	./autogen.sh ${myconf} || die
 	gnome2_src_prepare
 }
 
