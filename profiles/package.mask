@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13667 2012/04/11 21:39:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13668 2012/04/12 02:42:02 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -203,24 +203,6 @@ dev-php/Horde_Yaml
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Mar 2012)
 # This is now the GNOME 3.4 mask
-# Core libraries to be unmasked first:
-=dev-libs/atk-2.4*
-=dev-libs/gjs-1.32*
-=dev-libs/glib-2.32*:2
-=net-libs/glib-networking-2.32*
-=dev-libs/gobject-introspection-1.32*
-=dev-libs/gobject-introspection-common-1.32*
-=dev-python/pygobject-3.2*
-=dev-util/gdbus-codegen-2.32*
-=gnome-base/dconf-0.12*
-=gnome-base/gvfs-1.12*
->=sys-fs/udisks-1.90.0:2
-=x11-libs/gdk-pixbuf-2.26*:2
-=x11-libs/gtk+-3.4*:3
-=x11-libs/gnome-pty-helper-0.32*
-=x11-libs/pango-1.30*
-=x11-libs/vte-0.32*:2.90
-=x11-themes/gnome-themes-standard-3.4*
 # Other stuff:
 >=net-libs/telepathy-farstream-0.2
 # New clutter API breaks almost everything
@@ -232,8 +214,6 @@ dev-php/Horde_Yaml
 # Farsight2 conflicts with Farstream
 # So pidgin needs a patch
 =net-im/pidgin-2.10.3-r100
-# Needs >=glib-2.32
->=gnome-extra/gnome-dvb-daemon-0.2.8
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Mar 2012)
 # Causes font corruption, bug #409593.
