@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/oxygen-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.29 2012/03/12 12:46:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.30 2012/04/12 08:49:33 johu Exp $
+
+*oxygen-gtk-1.2.2-r1 (12 Apr 2012)
+
+  12 Apr 2012; Johannes Huber <johu@gentoo.org>
+  +files/oxygen-gtk-1.2.2-fix-filezilla-crash.patch,
+  +oxygen-gtk-1.2.2-r1.ebuild:
+  Revision bump in slot 2. Add upstream patch to fix crash with filezilla wrt
+  bug #410817.
 
 *oxygen-gtk-1.0.2 (12 Mar 2012)
 
