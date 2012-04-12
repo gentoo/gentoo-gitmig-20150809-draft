@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacplus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/ChangeLog,v 1.8 2012/04/09 15:58:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/ChangeLog,v 1.9 2012/04/12 10:21:36 nativemad Exp $
+
+  12 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> libaacplus-2.0.2.ebuild:
+  x86 stable, see bug 411369
 
   09 Apr 2012; Agostino Sarubbo <ago@gentoo.org> libaacplus-2.0.2.ebuild:
   Stable for amd64, wrt bug #401069
