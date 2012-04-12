@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.145 2012/01/08 14:11:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.146 2012/04/12 10:12:30 hwoarang Exp $
+
+  12 Apr 2012; Markos Chandras <hwoarang@gentoo.org> vsftpd-2.3.4.ebuild,
+  vsftpd-2.3.5.ebuild:
+  Drop alpha keywords per bug #405829
 
 *vsftpd-2.3.5 (08 Jan 2012)
 
