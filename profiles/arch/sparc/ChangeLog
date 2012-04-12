@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.149 2012/04/08 15:04:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.150 2012/04/12 17:05:56 tetromino Exp $
+
+  12 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask glib-networking[smartcard], it requires gnutls[pkcs11], which is
+  use.masked on sparc. Temporary mask-in-base, unmask-in-arch for
+  dev-python/mako keywording for gobject-introspection[doctool], bug #411761.
 
   08 Apr 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask aacplus

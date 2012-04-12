@@ -1,9 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.338 2012/04/12 04:14:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.339 2012/04/12 17:05:56 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
+# Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
+# gobject-introspection[doctool], bug #411761
+dev-libs/gobject-introspection doctool
 
 # Sebastian Pipping <sping@gentoo.org> (12 Apr 2012)
 # Compilation fails due to a bug in dev-libs/gobject-introspection

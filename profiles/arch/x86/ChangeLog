@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.98 2012/04/11 18:36:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.99 2012/04/12 17:05:56 tetromino Exp $
+
+  12 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
+  gobject-introspection[doctool], bug #411761.
 
   11 Apr 2012; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Unmask USE=jit on libzpaq for x86/amd64.

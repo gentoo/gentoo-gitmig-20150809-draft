@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.69 2012/01/30 10:44:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.70 2012/04/12 17:05:56 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
+# Requires gnutls[pkcs11], which is use.masked on ia64
+net-libs/glib-networking smartcard
 
 # Ralph Sennhauser <sera@gentoo.org> (31 Dec 2011)
 # Needs dev-java/fop which is not available for ia64 due to missing JVM #345433
