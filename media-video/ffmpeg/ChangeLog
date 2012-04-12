@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.542 2012/04/11 14:14:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.543 2012/04/12 12:21:37 nativemad Exp $
+
+  12 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> ffmpeg-0.10.2.ebuild:
+  x86 stable, see bug 411369
 
   11 Apr 2012; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.10.2.ebuild:
   Stable for HPPA (bug #411369).
