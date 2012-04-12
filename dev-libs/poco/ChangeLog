@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.13 2012/04/12 13:55:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.14 2012/04/12 15:00:40 dev-zero Exp $
+
+  12 Apr 2012; Tiziano Müller <dev-zero@gentoo.org> poco-1.4.3_p1.ebuild:
+  Fix dep to match libpcre >=8.13, use virtual/mysql instead of dev-db/mysql.
 
   12 Apr 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> metadata.xml:
   Add myself as maintainer

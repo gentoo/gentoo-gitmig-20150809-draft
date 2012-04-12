@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.4.3_p1.ebuild,v 1.1 2012/04/12 13:53:00 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.4.3_p1.ebuild,v 1.2 2012/04/12 15:00:40 dev-zero Exp $
 
 EAPI="2"
 
@@ -18,10 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples iodbc mysql odbc sqlite ssl test"
 
-DEPEND="dev-libs/libpcre
+DEPEND=">=dev-libs/libpcre-8.13
 	dev-libs/expat
 	sys-libs/zlib
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	odbc? ( iodbc? ( dev-db/libiodbc )
 		!iodbc? ( dev-db/unixODBC ) )
 	ssl? ( dev-libs/openssl )
@@ -31,7 +31,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}-all"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-gentoo.patch \
+	epatch \
+		"${FILESDIR}"/${PV}-gentoo.patch \
 		"${FILESDIR}"/libpcre-8.13.patch
 }
 
