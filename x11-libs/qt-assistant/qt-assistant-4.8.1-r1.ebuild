@@ -1,15 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.1-r1.ebuild,v 1.1 2012/03/30 13:55:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.1-r1.ebuild,v 1.2 2012/04/12 23:47:32 pesa Exp $
 
 EAPI=4
 
 inherit qt4-build
 
 DESCRIPTION="The Help module and Assistant application for the Qt toolkit"
-SRC_URI+=" compat? ( ftp://ftp.qt.nokia.com/qt/source/${PN}-qassistantclient-library-compat-src-4.6.3.tar.gz )"
-SLOT="4"
+SRC_URI+="
+	compat? (
+		ftp://ftp.qt.nokia.com/qt/source/${PN}-qassistantclient-library-compat-src-4.6.3.tar.gz
+		http://dev.gentoo.org/~pesa/distfiles/${PN}-compat-headers-4.7.tar.gz
+	)"
 
+SLOT="4"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~ppc-macos"
 IUSE="compat doc +glib qt3support trace webkit"
 
@@ -49,12 +53,11 @@ src_unpack() {
 	# compat version
 	# http://labs.qt.nokia.com/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 	if use compat; then
-		unpack ${PN}-qassistantclient-library-compat-src-4.6.3.tar.gz
+		unpack ${PN}-qassistantclient-library-compat-src-4.6.3.tar.gz \
+			${PN}-compat-headers-4.7.tar.gz
 		mv "${WORKDIR}"/${PN}-qassistantclient-library-compat-version-4.6.3 \
-			"${S}"/tools/assistant/compat ||
-				die "moving compat to the right place failed"
-		tar xzf "${FILESDIR}"/${PN}-4.7-include.tar.gz -C "${S}"/include/ ||
-			die "unpacking the include files failed"
+			"${S}"/tools/assistant/compat || die
+		mv "${WORKDIR}"/QtAssistant "${S}"/include/ || die
 	fi
 }
 

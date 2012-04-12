@@ -1,15 +1,20 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.2.ebuild,v 1.6 2011/07/13 12:55:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.2.ebuild,v 1.7 2012/04/12 23:47:32 pesa Exp $
 
 EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="The assistant help module for the Qt toolkit"
+SRC_URI+="
+	compat? (
+		ftp://ftp.qt.nokia.com/qt/source/${PN}-qassistantclient-library-compat-src-4.6.3.tar.gz
+		http://dev.gentoo.org/~pesa/distfiles/${PN}-compat-headers-4.7.tar.gz
+	)"
+
 SLOT="4"
 KEYWORDS="amd64 arm ~ia64 ppc ppc64 x86"
 IUSE="compat doc +glib qt3support trace"
-SRC_URI+=" compat? ( ftp://ftp.qt.nokia.com/qt/source/${PN}-qassistantclient-library-compat-src-4.6.3.tar.gz )"
 
 DEPEND="~x11-libs/qt-gui-${PV}[aqua=,debug=,glib=,qt3support=,trace?]
 	~x11-libs/qt-sql-${PV}[aqua=,debug=,qt3support=,sqlite]
@@ -19,7 +24,7 @@ RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	# Pixeltool isn't really assistant related, but it relies on
-	# the assistant libraries. doc/qch/
+	# the assistant libraries.
 	QT4_TARGET_DIRECTORIES="
 		tools/assistant
 		tools/pixeltool
@@ -34,30 +39,31 @@ pkg_setup() {
 
 	use trace && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
 		tools/qttracereplay"
+
 	QT4_EXTRACT_DIRECTORIES="${QT4_TARGET_DIRECTORIES}
 		${QT4_EXTRACT_DIRECTORIES}"
+
 	qt4-build_pkg_setup
 }
 
 src_unpack() {
 	qt4-build_src_unpack
+
 	# compat version
 	# http://labs.qt.nokia.com/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 	if use compat; then
-		unpack "${PN}"-qassistantclient-library-compat-src-4.6.3.tar.gz
-		mv "${WORKDIR}"/"${PN}"-qassistantclient-library-compat-version-4.6.3 \
-			"${S}"/tools/assistant/compat ||
-				die "moving compat to the right place failed"
-		tar xzf "${FILESDIR}"/"${PN}"-4.7-include.tar.gz -C "${S}"/include/ ||
-			die "unpacking the include files failed"
+		unpack ${PN}-qassistantclient-library-compat-src-4.6.3.tar.gz \
+			${PN}-compat-headers-4.7.tar.gz
+		mv "${WORKDIR}"/${PN}-qassistantclient-library-compat-version-4.6.3 \
+			"${S}"/tools/assistant/compat || die
+		mv "${WORKDIR}"/QtAssistant "${S}"/include/ || die
 	fi
 }
 
 src_prepare() {
 	qt4-build_src_prepare
-	if use compat; then
-		epatch "${FILESDIR}"/"${PN}"-4.7-fix-compat.patch
-	fi
+
+	use compat && epatch "${FILESDIR}"/${PN}-4.7-fix-compat.patch
 }
 
 src_configure() {
