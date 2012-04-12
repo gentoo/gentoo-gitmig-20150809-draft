@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-2.1.2.ebuild,v 1.1 2012/02/02 17:17:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-2.1.3.ebuild,v 1.1 2012/04/12 17:53:10 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4-r2 games
