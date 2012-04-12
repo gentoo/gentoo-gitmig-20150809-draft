@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.0.ebuild,v 1.1 2012/04/12 02:49:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.0.ebuild,v 1.2 2012/04/12 18:42:29 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -61,6 +61,12 @@ src_prepare() {
 
 	eautoreconf
 	gnome2_src_prepare
+}
+
+src_compile() {
+	# causes segfault if set, see bug #411765
+	unset __GL_NO_DSO_FINALIZER
+	gnome2_src_compile
 }
 
 pkg_postinst() {

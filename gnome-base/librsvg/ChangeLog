@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.272 2012/04/12 02:49:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.273 2012/04/12 18:42:29 tetromino Exp $
+
+  12 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  librsvg-2.36.0.ebuild:
+  __GL_NO_DSO_FINALIZER also needs to be unset in src_compile for 2.36.0 to fix
+  build error for nvidia-drivers users (bug  #411765, thanks to Chris Smith for
+  reporting).
 
 *librsvg-2.36.0 (12 Apr 2012)
 
