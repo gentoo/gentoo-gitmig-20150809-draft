@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.7 2012/03/13 02:38:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.8 2012/04/12 16:00:56 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -38,15 +38,5 @@ src_install() {
 		dohtml doc/documentation.html
 		insinto /usr/share/doc/${PF}
 		doins -r examples
-	fi
-}
-
-pkg_postinst() {
-	distutils_pkg_postinst
-	if use x86 && ! has_version dev-python/psyco; then
-		einfo ""
-		einfo "Although it is not required, you should consider installing"
-		einfo "\"dev-python/psyco\". It can speed up this module a lot."
-		einfo ""
 	fi
 }
