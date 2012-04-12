@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.47 2012/03/30 19:29:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.48 2012/04/12 17:04:23 tetromino Exp $
+
+  12 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gdk-pixbuf-2.26.0.ebuild:
+  autotools eclass not needed.
 
   30 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> gdk-pixbuf-2.26.0.ebuild:
   Avoid eautoreconf
