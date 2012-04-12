@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.90.2.ebuild,v 1.4 2011/04/25 20:31:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.90.2.ebuild,v 1.5 2012/04/12 07:21:10 tupone Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -106,7 +106,13 @@ EOF
 		fi
 	done
 
-	cp -r locale/* "${D}/${_LOCALEDIR}" || die
+	if [[ ${LINGUAS+set} ]]; then
+		for lang in $LINGUAS; do
+			[[ -d locale/$lang ]] && cp -r locale/$lang "${D}/${_LOCALEDIR}"
+		done
+	else
+		cp -r locale/* "${D}/${_LOCALEDIR}" || die
+	fi
 	cp -r assetml/* "${D}/${_ASSETMLDIR}" || die
 
 	# initialize the score file
