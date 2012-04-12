@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.142 2012/04/12 17:13:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.143 2012/04/12 17:59:45 pesa Exp $
+
+  12 Apr 2012; Davide Pesavento <pesa@gentoo.org> -qt-webkit-4.6.3.ebuild:
+  Remove old version.
 
   12 Apr 2012; Davide Pesavento <pesa@gentoo.org> qt-webkit-4.8.1.ebuild:
   Make dev-libs/icu optional as requested in bug 411091.
