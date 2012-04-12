@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<herd>sci-biology</herd>
 	<upstream>
-		<remote-id type="cpan">bioperl-run</remote-id>
+		<remote-id type="cpan">BioPerl-Run</remote-id>
 	</upstream>
 </pkgmetadata>

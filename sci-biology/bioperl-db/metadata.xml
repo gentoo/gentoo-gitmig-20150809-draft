@@ -7,6 +7,6 @@
 	</maintainer>
 	<herd>sci-biology</herd>
 	<upstream>
-		<remote-id type="cpan">bioperl-db</remote-id>
+		<remote-id type="cpan">BioPerl-DB</remote-id>
 	</upstream>
 </pkgmetadata>

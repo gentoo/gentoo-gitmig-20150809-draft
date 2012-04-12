@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl-run
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.22 2011/09/20 22:19:00 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.23 2012/04/12 17:39:17 tove Exp $
+
+  12 Apr 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Fix cpan distribution in metadata.xml
 
   20 Sep 2011; Michał Górny <mgorny@gentoo.org> bioperl-run-9999-r1.ebuild:
   Migrate to git-2.

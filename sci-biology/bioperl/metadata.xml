@@ -8,6 +8,6 @@
 		<flag name="db">Install sci-biology/bioperl-run</flag>
 	</use>
 	<upstream>
-		<remote-id type="cpan">bioperl</remote-id>
+		<remote-id type="cpan">BioPerl</remote-id>
 	</upstream>
 </pkgmetadata>
