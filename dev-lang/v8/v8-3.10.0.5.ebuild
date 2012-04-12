@@ -1,31 +1,25 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.27 2012/04/12 12:36:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.10.0.5.ebuild,v 1.1 2012/04/12 12:36:21 phajdan.jr Exp $
 
 EAPI="4"
 
 PYTHON_DEPEND="2:2.6"
 
-inherit eutils multilib pax-utils python subversion toolchain-funcs
+inherit eutils multilib pax-utils python toolchain-funcs versionator
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
-ESVN_REPO_URI="http://v8.googlecode.com/svn/trunk"
+SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~x64-macos ~x86-macos"
 IUSE=""
 
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
-}
-
-src_unpack() {
-	subversion_src_unpack
-	cd "${S}"
-	make dependencies || die
 }
 
 src_compile() {
@@ -45,8 +39,7 @@ src_compile() {
 	esac
 	mytarget=${myarch}.release
 
-	subversion_wc_info
-	soname_version="${PV}.${ESVN_WC_REVISION}"
+	soname_version="$(get_version_component_range 1-3)"
 
 	local snapshot=on
 	host-is-pax && snapshot=off
