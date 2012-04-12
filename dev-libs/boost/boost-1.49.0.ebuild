@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0.ebuild,v 1.1 2012/04/02 01:06:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0.ebuild,v 1.2 2012/04/12 18:08:53 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -93,12 +93,11 @@ pkg_pretend() {
 
 		ewarn "The tests may take several hours on a recent machine"
 		ewarn "but they will not fail (unless something weird happens ;-)"
-		ewarn "This is because the tests depend on the used compiler/-version"
+		ewarn "This is because the tests depend on the used compiler version"
 		ewarn "and the platform and upstream says that this is normal."
 		ewarn "If you are interested in the results, please take a look at the"
 		ewarn "generated results page:"
 		ewarn "  ${ROOT}usr/share/doc/${PF}/status/cs-$(uname).html"
-		ebeep 5
 	fi
 }
 
@@ -569,7 +568,7 @@ src_test() {
 			--dump-tests 2>&1 | tee regress.log || die
 
 		# Postprocessing
-		cat regress.log | tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease/pch-off/process_jam_log --v2
+		cat regress.log | ../tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease/pch-off/process_jam_log --v2
 		if test $? != 0; then
 			die "Postprocessing the build log failed"
 		fi
@@ -579,8 +578,8 @@ src_test() {
 __EOF__
 
 		# Generate the build log html summary page
-		tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease/pch-off/compiler_status --v2 \
-			--comment comment.html .. \
+		../tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease/pch-off/compiler_status --v2 \
+			--comment comment.html "${S}" \
 			cs-$(uname).html cs-$(uname)-links.html
 		if test $? != 0; then
 			die "Generating the build log html summary page failed"
