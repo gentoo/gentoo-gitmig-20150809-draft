@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/usbmuxd-1.0.8.ebuild,v 1.1 2012/04/12 14:28:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/usbmuxd-1.0.8.ebuild,v 1.2 2012/04/12 14:46:23 ssuominen Exp $
 
 EAPI=4
-inherit cmake-utils eutils
+inherit cmake-utils user
 
 DESCRIPTION="USB multiplex daemon for use with Apple iPhone/iPod Touch devices"
 HOMEPAGE="http://www.libimobiledevice.org/"
