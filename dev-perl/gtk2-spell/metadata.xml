@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan">gtk2-spell</remote-id>
+    <remote-id type="cpan">Gtk2-Spell</remote-id>
   </upstream>
 </pkgmetadata>

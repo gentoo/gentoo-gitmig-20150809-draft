@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan">Period</remote-id>
+    <remote-id type="cpan">Time-Period</remote-id>
   </upstream>
 </pkgmetadata>

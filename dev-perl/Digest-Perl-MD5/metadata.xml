@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan">Crypt-RC4</remote-id>
+    <remote-id type="cpan">Digest-Perl-MD5</remote-id>
   </upstream>
 </pkgmetadata>

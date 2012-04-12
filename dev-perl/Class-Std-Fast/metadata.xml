@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan">Class-Std-Metadata</remote-id>
+    <remote-id type="cpan">Class-Std-Fast</remote-id>
   </upstream>
 </pkgmetadata>

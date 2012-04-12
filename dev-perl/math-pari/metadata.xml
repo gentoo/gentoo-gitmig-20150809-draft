@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan">pari</remote-id>
+    <remote-id type="cpan">Math-Pari</remote-id>
   </upstream>
 </pkgmetadata>

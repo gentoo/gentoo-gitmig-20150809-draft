@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-Perl-MD5
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.1 2011/09/11 02:00:27 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.2 2012/04/12 17:50:44 tove Exp $
+
+  12 Apr 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Fix cpan distribution in metadata.xml
 
 *Digest-Perl-MD5-1.800.0 (11 Sep 2011)
 

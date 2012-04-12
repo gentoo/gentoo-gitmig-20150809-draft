@@ -7,6 +7,6 @@
     <description>Primary Maintainer</description>
   </maintainer>
   <upstream>
-    <remote-id type="cpan">mogilefs-server</remote-id>
+    <remote-id type="cpan">MogileFS-Server</remote-id>
   </upstream>
 </pkgmetadata>
