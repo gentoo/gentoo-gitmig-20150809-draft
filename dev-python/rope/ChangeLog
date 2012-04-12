@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rope
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.8 2010/07/01 04:34:23 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.9 2012/04/12 15:44:54 xarthisius Exp $
+
+  12 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/rope-0.9.3-python2.7.patch, rope-0.9.3.ebuild:
+  Apply upstream changesets to fix tests failures with python 2.7 wrt #326401 by
+  Arfrever Frehtes Taifersar Arahesis
 
   01 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   rope-0.9.3.ebuild, +files/rope-0.9.3-fix_tests_results.patch:

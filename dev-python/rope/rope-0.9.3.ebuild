@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/rope-0.9.3.ebuild,v 1.4 2010/12/26 15:42:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/rope-0.9.3.ebuild,v 1.5 2012/04/12 15:44:54 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -23,7 +23,8 @@ RDEPEND=""
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}/${P}-fix_tests_results.patch"
+	epatch "${FILESDIR}/${P}-fix_tests_results.patch" \
+		"${FILESDIR}"/${P}-python2.7.patch
 }
 
 src_test() {
