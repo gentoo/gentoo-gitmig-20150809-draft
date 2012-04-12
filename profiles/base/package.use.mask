@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.337 2012/04/11 23:32:47 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.338 2012/04/12 04:14:39 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -38,6 +38,7 @@ net-misc/networkmanager systemd
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
 # Requires libxkbcommon from the x11 overlay
+dev-cpp/gtkmm wayland
 x11-libs/gtk+ wayland
 
 # Johannes Huber <johu@gentoo.org> (23 Mar 2012)
