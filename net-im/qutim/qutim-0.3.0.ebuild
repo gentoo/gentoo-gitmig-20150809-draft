@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.0.ebuild,v 1.2 2012/04/09 22:26:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.0.ebuild,v 1.3 2012/04/12 16:35:12 pesa Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ REQUIRED_USE="
 
 QT_PV="4.7.0:4"
 
-RDEPEND="
+CDEPEND="
 	x11-libs/libqxt
 	>=x11-libs/qt-core-${QT_PV}[ssl?]
 	>=x11-libs/qt-gui-${QT_PV}
@@ -55,14 +55,17 @@ RDEPEND="
 		>=x11-libs/qt-opengl-${QT_PV}
 	)
 	sdl? ( media-libs/sdl-mixer )
-	telepathy? ( net-libs/telepathy-qt )
+	telepathy? ( =net-libs/telepathy-qt-0.8* )
 	vkontakte? ( >=x11-libs/qt-webkit-${QT_PV} )
 	webkit? ( >=x11-libs/qt-webkit-${QT_PV} )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 "
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )
+"
+RDEPEND="${CDEPEND}
+	oscar? ( app-crypt/qca-ossl:2 )
 "
 
 PATCHES=(
