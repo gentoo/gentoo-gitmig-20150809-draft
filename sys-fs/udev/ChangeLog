@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.678 2012/04/08 06:37:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.679 2012/04/12 16:29:08 ssuominen Exp $
+
+  12 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> udev-171-r5.ebuild:
+  Try to support sys-apps/hwids also in 171-r5 for people who have temporarily
+  masked >= 180 wrt #411737 by Martin von Gagern
 
   08 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Use sys-apps/hwids for -9999 too. See commit 01 Apr 2012 to udev-182-r3.

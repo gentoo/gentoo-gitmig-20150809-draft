@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.10 2012/03/15 08:48:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.11 2012/04/12 16:29:08 ssuominen Exp $
 
 EAPI=4
 
@@ -65,7 +65,11 @@ RDEPEND="${COMMON_DEPEND}
 	hwdb?
 	(
 		>=sys-apps/usbutils-0.82
-		|| ( >=sys-apps/pciutils-3.1.9-r1[-compress-db] <sys-apps/pciutils-3.1.9-r1[-zlib] )
+		|| (
+			( sys-apps/hwids >=sys-apps/pciutils-3.1.9-r2 )
+			>=sys-apps/pciutils-3.1.9-r1[-compress-db]
+			<sys-apps/pciutils-3.1.9-r1[-zlib]
+			)
 	)
 	extras?
 	(
