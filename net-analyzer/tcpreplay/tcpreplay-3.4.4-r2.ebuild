@@ -1,14 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.5_beta3.ebuild,v 1.2 2012/04/12 04:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.4-r2.ebuild,v 1.1 2012/04/12 04:04:47 jer Exp $
 
 EAPI=4
-inherit eutils
+inherit autotools eutils
 
-MY_P="${P/_/}"
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
 HOMEPAGE="http://tcpreplay.synfin.net/"
-SRC_URI="http://synfin.net/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,16 +19,17 @@ DEPEND="
 	dev-libs/libdnet
 	>=net-libs/libpcap-0.9
 	tcpdump? ( net-analyzer/tcpdump )
-	pcapnav? ( net-libs/libpcapnav )"
-
+	pcapnav? ( net-libs/libpcapnav )
+"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${MY_P}"
+DOCS=( README docs/{CHANGELOG,CREDIT,HACKING,TODO} )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.4.4-cross-compile.patch
 	echo "We don't use bundled libopts" > libopts/options.h
-	./autogen.sh
+	epatch \
+		"${FILESDIR}"/${P}-crash.patch \
+		"${FILESDIR}"/${P}-cross-compile.patch
+	eautoreconf
 }
 
 src_configure() {
@@ -48,15 +48,10 @@ src_test() {
 		ewarn "Some tests were disabled due to FEATURES=userpriv"
 		ewarn "To run all tests issue the following command as root:"
 		ewarn " # make -C ${S}/test"
-		make -C test tcpprep || die "self test failed - see ${S}/test/test.log"
+		emake -j1 -C test tcpprep || die "self test failed - see ${S}/test/test.log"
 	else
-		make test || {
+		emake -j1 test || {
 			ewarn "Note, that some tests require eth0 iface to be UP." ;
 			die "self test failed - see ${S}/test/test.log" ; }
 	fi
-}
-
-src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc README docs/{CHANGELOG,CREDIT,HACKING,TODO} || die
 }
