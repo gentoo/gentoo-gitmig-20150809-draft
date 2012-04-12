@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.141 2012/04/12 04:10:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.142 2012/04/12 04:12:01 ssuominen Exp $
+
+  12 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -libffi-3.0.9-r2.ebuild,
+  -files/libffi-3.0.9-arm-oabi.patch,
+  -files/libffi-3.0.9-define-generic-symbols-carefully.patch,
+  -files/libffi-3.0.9-interix.patch, -files/libffi-3.0.9-irix.patch,
+  -files/libffi-3.0.9-powerpc64-darwin.patch,
+  -files/libffi-3.0.9-strncmp.patch, -libffi-3.0.11_rc3.ebuild:
+  old
 
 *libffi-3.0.11 (12 Apr 2012)
 
