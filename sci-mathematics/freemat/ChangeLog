@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.26 2012/04/05 20:43:03 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.27 2012/04/12 23:38:41 bicatali Exp $
+
+  12 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> freemat-4.1.ebuild,
+  +files/freemat-4.1-python3.patch, metadata.xml:
+  Fix python3 generation (bug #411699), add vtk flag to avoid automagic, prefix
+  fixes for liffi and messages
 
 *freemat-4.1 (05 Apr 2012)
 

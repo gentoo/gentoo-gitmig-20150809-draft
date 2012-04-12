@@ -11,7 +11,7 @@
   and visualization capabilities.
 </longdescription>
 <use>
-  <flag name='volpack'>Add volume rendering
-  via <pkg>media-libs/volpack</pkg></flag> 
+  <flag name='volpack'>Add volume rendering via <pkg>media-libs/volpack</pkg></flag> 
+  <flag name='vtk'>Add 3D capabilities via <pkg>sci-libs/vtk</pkg></flag> 
 </use>
 </pkgmetadata>
