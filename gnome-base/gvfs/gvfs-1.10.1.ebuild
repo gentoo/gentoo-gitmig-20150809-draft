@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.13 2012/04/02 07:34:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.14 2012/04/12 09:24:58 tetromino Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -44,7 +44,10 @@ RDEPEND=">=dev-libs/glib-2.29.14
 		dev-libs/expat )
 	bluray? ( media-libs/libbluray )
 	fuse? ( >=sys-fs/fuse-2.8.0 )
-	gdu? ( >=sys-apps/gnome-disk-utility-3.0.2 )
+	gdu? ( || (
+		>=gnome-base/libgdu-3.0.2
+		=sys-apps/gnome-disk-utility-3.0.2-r300
+		=sys-apps/gnome-disk-utility-3.0.2-r200 ) )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-1.0 )
 	gphoto2? ( >=media-libs/libgphoto2-2.4.7 )
 	ios? (
