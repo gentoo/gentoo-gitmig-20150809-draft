@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/clapack
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.19 2011/12/07 22:09:32 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.20 2012/04/12 19:55:43 dilfridge Exp $
+
+  12 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -clapack-3.2.1-r4.ebuild, clapack-3.2.1-r6.ebuild:
+  Remove old; filter -ftree-vectorize as it causes an internal compiler error
+  on gcc-4.6.2
 
   07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> clapack-3.2.1-r6.ebuild:
   Stable on amd64 wrt bug #388279

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/clapack-3.2.1-r6.ebuild,v 1.4 2011/12/07 22:09:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/clapack-3.2.1-r6.ebuild,v 1.5 2012/04/12 19:55:43 dilfridge Exp $
 
 EAPI=4
 
-inherit base cmake-utils
+inherit flag-o-matic base cmake-utils
 
 DESCRIPTION="f2c'ed version of LAPACK"
 HOMEPAGE="http://www.netlib.org/clapack/"
@@ -29,6 +29,9 @@ PATCHES=(
 )
 
 src_configure() {
+	filter-flags -ftree-vectorize
+	# causes an internal compiler error with gcc-4.6.2
+
 	local mycmakeargs=( $(cmake-utils_use_enable test TESTS) )
 	cmake-utils_src_configure
 }
