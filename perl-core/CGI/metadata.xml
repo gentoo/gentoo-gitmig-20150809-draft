@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan">CGI.pm</remote-id>
+    <remote-id type="cpan">CGI</remote-id>
   </upstream>
 </pkgmetadata>

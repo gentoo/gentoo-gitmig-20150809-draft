@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CGI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.100 2012/01/28 08:50:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.101 2012/04/12 17:37:46 tove Exp $
+
+  12 Apr 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Fix cpan distribution in metadata.xml
 
 *CGI-3.590.0 (28 Jan 2012)
 

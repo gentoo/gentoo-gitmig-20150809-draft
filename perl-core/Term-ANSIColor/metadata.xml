@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan">ANSIColor</remote-id>
+    <remote-id type="cpan">Term-ANSIColor</remote-id>
   </upstream>
 </pkgmetadata>
