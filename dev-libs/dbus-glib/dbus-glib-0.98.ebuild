@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.98.ebuild,v 1.7 2012/02/01 01:56:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.98.ebuild,v 1.8 2012/04/12 18:21:44 darkside Exp $
 
 EAPI=4
 inherit bash-completion-r1
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="debug doc static-libs test"
 
 RDEPEND=">=sys-apps/dbus-1.4.1
@@ -29,13 +29,13 @@ TBD=${WORKDIR}/${P}-tests-build
 src_configure() {
 	local my_conf
 
-	my_conf="--localstatedir=/var
+	my_conf="--localstatedir=${EPREFIX}/var
 		--enable-bash-completion
 		$(use_enable debug verbose-mode)
 		$(use_enable debug asserts)
 		$(use_enable static-libs static)
 		$(use_enable doc gtk-doc)
-		--with-html-dir=/usr/share/doc/${PF}/html"
+		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
 
 	mkdir "${BD}"
 	cd "${BD}"
@@ -80,8 +80,8 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	# FIXME: We need --with-bash-completion-dir
-	newbashcomp "${D}"/etc/bash_completion.d/dbus-bash-completion.sh dbus
-	rm -rf "${D}"/etc/bash_completion.d || die
+	newbashcomp "${ED}"/etc/bash_completion.d/dbus-bash-completion.sh dbus
+	rm -rf "${ED}"/etc/bash_completion.d || die
 
-	find "${D}" -name '*.la' -exec rm -f {} +
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
