@@ -2,9 +2,10 @@ Apply upstream changesets:
 https://bitbucket.org/agr/rope/changeset/1c100ebabc16
 https://bitbucket.org/agr/rope/changeset/f5eb880e0be2
 
-to fix tests failures with python 2.7
+to fix issues with python 2.7
 
 https://bugs.gentoo.org/show_bug.cgi?id=326401
+https://bitbucket.org/agr/rope/issue/8/
 
 --- a/rope/base/ast.py
 +++ b/rope/base/ast.py

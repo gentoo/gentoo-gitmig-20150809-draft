@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.9 2012/04/12 15:44:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.10 2012/04/12 17:32:58 xarthisius Exp $
+
+  12 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  files/rope-0.9.3-python2.7.patch:
+  Fix patch description. Thanks to Arfrever
 
   12 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +files/rope-0.9.3-python2.7.patch, rope-0.9.3.ebuild:
