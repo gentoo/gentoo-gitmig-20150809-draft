@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rednotebook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.58 2012/04/11 13:33:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.59 2012/04/12 02:04:53 mattm Exp $
+
+  12 Apr 2012; Matthew Marlowe <mattm@gentoo.org> metadata.xml:
+  Taking rednotebook maintainership from hwoarang.
 
 *rednotebook-1.4.0 (11 Apr 2012)
 

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>desktop-misc</herd>
 <use>
 	<flag name='libyaml'>enable libyaml support</flag>
 	<flag name='webkit'>enable previews using webkit engine</flag>
 </use>
 <maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
+<email>mattm@gentoo.org</email>
+<name>Matthew Marlowe</name>
 </maintainer>
 <longdescription lang="en">
+A graphical journal with calendar, templates, tags, keyword searching, and export functionality.
 </longdescription>
 </pkgmetadata>
 
