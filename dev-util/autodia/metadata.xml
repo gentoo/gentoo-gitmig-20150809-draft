@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<herd>perl</herd>
 	<upstream>
-		<remote-id type="cpan">autodia</remote-id>
+		<remote-id type="cpan">Autodia</remote-id>
 	</upstream>
 </pkgmetadata>
