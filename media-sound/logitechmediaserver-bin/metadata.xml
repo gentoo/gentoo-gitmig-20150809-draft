@@ -10,11 +10,10 @@
     <name>Stuart Hickinbottom</name>
   </maintainer>
   <longdescription lang="en">
-	This package provides the Logitech Squeezebox Server audio server (binary
-	version).  Squeezebox Server will allow access to your audio collection over
-	local and wide-area networks, as well as serving content to the Logitech
-	Squeezebox and Transporter streaming media players.  In addition to local
-	content, Squeezebox Server will also provide access to internet radio and
-	audio podcasts.
+	This package provides the Logitech Media Server (binary version), which
+        is a streaming audio server that allows Squeezebox and Transporter
+        media players to access your audio collection over local and wide-area
+        networks.  In addition to serving local content, Logitech Media Server
+        will also provide access to internet radio and audio podcasts.
   </longdescription>
 </pkgmetadata>
