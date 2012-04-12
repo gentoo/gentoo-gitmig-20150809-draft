@@ -10,6 +10,6 @@
 		<flag name="patch">Enable patch creation, import support</flag>
 	</use>
 	<upstream>
-		<remote-id type="cpan">svk</remote-id>
+		<remote-id type="cpan">SVK</remote-id>
 	</upstream>
 </pkgmetadata>
