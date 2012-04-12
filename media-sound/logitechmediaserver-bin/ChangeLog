@@ -1,0 +1,15 @@
+# ChangeLog for media-sound/logitechmediaserver-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/ChangeLog,v 1.1 2012/04/12 05:56:03 lavajoe Exp $
+
+*logitechmediaserver-bin-7.7.2 (12 Apr 2012)
+
+  12 Apr 2012; Joe Peterson <lavajoe@gentoo.org>
+  +logitechmediaserver-bin-7.7.2.ebuild,
+  +files/logitechmediaserver-bin-7.7.2-uuid-gentoo.patch,
+  +files/Gentoo-detailed-changelog.txt, +files/Gentoo-plugins-README.txt,
+  +files/gentoo-filepaths.pm, +files/logitechmediaserver.conf.d,
+  +files/logitechmediaserver.init.d, +files/logitechmediaserver.logrotate.d,
+  +metadata.xml:
+  New package that replaces media-sound/squeezeboxserver
+
