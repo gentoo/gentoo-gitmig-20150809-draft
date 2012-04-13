@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/font-misc-ethiopic-1.0.3.ebuild,v 1.8 2011/02/14 13:21:40 xarthisius Exp $
-
-FONT_DIR="OTF"
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-ethiopic/font-misc-ethiopic-1.0.3.ebuild,v 1.9 2012/04/13 19:25:28 ulm Exp $
 
 EAPI=3
+FONT_DIR="OTF"
+
 inherit xorg-2
 
 DESCRIPTION="Miscellaneous Ethiopic fonts"
