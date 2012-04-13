@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.3.ebuild,v 1.2 2011/10/31 17:15:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.3.ebuild,v 1.3 2012/04/13 09:02:08 hwoarang Exp $
 
 EAPI=4
 
@@ -128,15 +128,14 @@ src_install() {
 			newins "$mod/config" "mod-$mod.conf"
 			use userpriv && { fowners root:${PN} "/etc/${PN}/mod-$mod.conf" ; }
 			fperms 660 "/etc/${PN}/mod-$mod.conf"
+			# Rest of the module in its expected location
+			insinto /usr/share/prey/modules
+			doins -r "$mod"
 			if [[ $mod == "lock" ]]; then
 				fperms 555 \
 					"/usr/share/${PN}/modules/lock/platform/linux/${PN}-lock"
 			fi
 		fi
-
-		# Rest of the module in its expected location
-		insinto /usr/share/prey/modules
-		doins -r "$mod"
 	done
 
 }
