@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.24 2012/03/10 16:26:55 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.25 2012/04/13 19:54:57 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> xmonad-0.9.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml,
   xmonad-0.10.ebuild:

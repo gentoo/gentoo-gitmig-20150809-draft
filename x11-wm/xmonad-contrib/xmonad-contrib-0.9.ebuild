@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/xmonad-contrib-0.9.ebuild,v 1.5 2011/04/19 13:22:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/xmonad-contrib-0.9.ebuild,v 1.6 2012/04/13 19:56:14 ulm Exp $
 
-CABAL_FEATURES="lib profile haddock"
 EAPI=3
+CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
 
 DESCRIPTION="Third party extensions for xmonad"
