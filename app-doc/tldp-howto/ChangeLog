@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/tldp-howto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.5 2010/10/26 17:42:40 dirtyepic Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.6 2012/04/13 17:40:52 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> tldp-howto-20100101.ebuild,
+  tldp-howto-20100701.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   26 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> tldp-howto-20100101.ebuild,
   tldp-howto-20100701.ebuild:
