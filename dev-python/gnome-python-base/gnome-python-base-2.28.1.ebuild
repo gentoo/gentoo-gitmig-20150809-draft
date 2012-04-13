@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.28.1.ebuild,v 1.9 2011/03/11 19:09:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.28.1.ebuild,v 1.10 2012/04/13 19:11:37 ulm Exp $
 
-GCONF_DEBUG="no"
 EAPI="3"
+GCONF_DEBUG="no"
 PYTHON_DEPEND="2"
 
 inherit versionator eutils gnome2 python
