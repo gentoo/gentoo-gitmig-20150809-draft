@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.116 2012/03/07 16:12:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.117 2012/04/13 07:43:18 tomka Exp $
+
+*wicd-1.7.2.1 (13 Apr 2012)
+
+  13 Apr 2012; Thomas Kahle <tomka@gentoo.org> +wicd-1.7.2.1.ebuild:
+  Security bump (bug 411729)
 
   07 Mar 2012; Thomas Kahle <tomka@gentoo.org> wicd-1.7.1-r3.ebuild:
   Don't compile translations without USE='nls'
