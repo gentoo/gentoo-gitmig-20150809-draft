@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.11 2012/04/02 13:34:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.12 2012/04/13 19:28:35 ulm Exp $
 
-PYTHON_DEPEND="3:3.2"
 EAPI=4
+PYTHON_DEPEND="3:3.2"
 
 if [[ ${PV} == *9999 ]] ; then
 SCM="subversion"
