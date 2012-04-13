@@ -1,0 +1,26 @@
+From 384e7b838570fce794cea368fcbaa97b9ad72df2 Mon Sep 17 00:00:00 2001
+From: Antoine Jacoutot <ajacoutot@gnome.org>
+Date: Fri, 23 Mar 2012 18:33:40 +0100
+Subject: [PATCH] gvfsafp: Prevent redefinition of GVfsAfpServer.
+
+GVfsAfpServer is already included in gvfsafpvolume.h which gvfsafpserver.h
+includes; so no need to declare GVfsAfpServer here.
+---
+ daemon/gvfsafpserver.h |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+diff --git a/daemon/gvfsafpserver.h b/daemon/gvfsafpserver.h
+index 25753ca..5cf6fc4 100644
+--- a/daemon/gvfsafpserver.h
++++ b/daemon/gvfsafpserver.h
+@@ -48,7 +48,6 @@ typedef enum
+ #define G_VFS_AFP_SERVER_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), G_VFS_TYPE_AFP_SERVER, GVfsAfpServerClass))
+ 
+ typedef struct _GVfsAfpServerClass GVfsAfpServerClass;
+-typedef struct _GVfsAfpServer GVfsAfpServer;
+ 
+ struct _GVfsAfpServerClass
+ {
+-- 
+1.7.6
+
