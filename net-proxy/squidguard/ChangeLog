@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squidguard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.42 2011/11/06 17:34:04 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.43 2012/04/13 19:38:44 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> squidguard-1.4-r4.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   06 Nov 2011; Raúl Porcel <armin76@gentoo.org> squidguard-1.4-r4.ebuild:
   sparc stable wrt #361795
