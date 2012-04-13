@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/Net-IRC-0.79.ebuild,v 1.4 2011/12/13 23:02:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/Net-IRC-0.79.ebuild,v 1.5 2012/04/13 18:57:32 ulm Exp $
 
-MODULE_AUTHOR="APEIRON"
 EAPI=2
+MODULE_AUTHOR="APEIRON"
 inherit perl-module
 
 DESCRIPTION="Perl IRC module"
