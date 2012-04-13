@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/libmpd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libmpd/ChangeLog,v 1.1 2012/04/13 21:10:59 slyfox Exp $
+
+*libmpd-0.7.2 (13 Apr 2012)
+
+  13 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> +libmpd-0.7.2.ebuild,
+  +metadata.xml:
+  Initial version. An MPD client library for haskell. Depend for
+  x11-misc/xmobar-0.14
+
