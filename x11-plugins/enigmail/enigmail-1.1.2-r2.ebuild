@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.1.2-r2.ebuild,v 1.9 2011/03/14 17:09:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.1.2-r2.ebuild,v 1.10 2012/04/13 19:53:29 ulm Exp $
 
-WANT_AUTOCONF="2.1"
 EAPI="3"
+WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools
 MY_P="${P/_beta/b}"

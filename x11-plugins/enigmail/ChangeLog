@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/enigmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.207 2011/04/20 08:30:37 dirtyepic Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.208 2012/04/13 19:53:29 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> enigmail-1.1.2-r2.ebuild,
+  enigmail-1.1.2-r3.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   20 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> enigmail-1.1.2-r3.ebuild:
   Work around build failure w/ GCC 4.6 (bug #346825).
