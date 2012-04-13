@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.288 2012/02/10 03:27:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.289 2012/04/13 08:21:24 tetromino Exp $
+
+*eog-3.4.0 (13 Apr 2012)
+
+  13 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -eog-3.2.1.ebuild,
+  +eog-3.4.0.ebuild:
+  Version bump, fixes hang at startup with gtk+-3.4 (bug #411823, thanks to
+  Nikolay S. Rybaloff for reporting). Drop old.
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> eog-2.32.1.ebuild:
   Changing python deps in preparation for 2.4 removal

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.2.1.ebuild,v 1.1 2011/11/03 05:42:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.4.0.ebuild,v 1.1 2012/04/13 08:21:24 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -16,8 +16,8 @@ SLOT="1"
 IUSE="doc +exif +introspection +jpeg lcms +svg tiff xmp"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
-RDEPEND=">=x11-libs/gtk+-3.0.2:3[introspection]
-	>=dev-libs/glib-2.29.4:2
+RDEPEND=">=x11-libs/gtk+-3.3.6:3[introspection,X]
+	>=dev-libs/glib-2.31.0:2
 	>=dev-libs/libxml2-2:2
 	>=dev-libs/libpeas-0.7.4[gtk]
 	>=gnome-base/gnome-desktop-2.91.2:3
