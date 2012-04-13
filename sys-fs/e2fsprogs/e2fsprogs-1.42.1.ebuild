@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.1.ebuild,v 1.3 2012/03/05 05:40:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.1.ebuild,v 1.4 2012/04/13 19:44:53 ulm Exp $
+
+EAPI=3
 
 case ${PV} in
 *_pre*) UP_PV="${PV%_pre*}-WIP-${PV#*_pre}" ;;
 *)      UP_PV=${PV} ;;
 esac
-
-EAPI="3"
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
