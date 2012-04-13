@@ -25,6 +25,8 @@
 		<flag name="dhcpcd">Use <pkg>net-misc/dhcpcd</pkg> for getting ip</flag>
 		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
 			for introspection</flag>
+		<flag name="modemmanager">Enable support for mobile broadband devices
+			using <pkg>net-misc/modemmanager</pkg></flag>
 		<flag name="nss">Use <pkg>dev-libs/nss</pkg> for cryptography</flag>
 		<flag name="ppp">Enable support for mobile broadband and PPPoE
 			connections using <pkg>net-dialup/ppp</pkg></flag>
@@ -32,6 +34,8 @@
 			DNS information</flag>
 		<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> instead of
 			<pkg>sys-auth/consolekit</pkg> for session tracking</flag>
+		<flag name="wext">Enable support for the deprecated Wext (Wireless
+			Extensions) API; not needed for modern kernels</flag>
 		<flag name="wimax">Enable support for WiMAX connections using
 			<pkg>net-wireless/wimax</pkg></flag>
 	</use>
