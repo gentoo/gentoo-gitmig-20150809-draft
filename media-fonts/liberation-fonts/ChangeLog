@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/liberation-fonts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.32 2012/04/01 15:34:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.33 2012/04/13 08:03:26 je_fro Exp $
+
+  13 Apr 2012; Jeff Gardner <je_fro@gentoo.org> liberation-fonts-1.07.1.ebuild,
+  liberation-fonts-1.07.2.ebuild:
+  Removing stale unzip dependency thanks to df in bug #411243
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org>
   liberation-fonts-1.07.2.ebuild:
