@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.14.3-r300.ebuild,v 1.1 2012/03/26 09:00:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.14.3-r300.ebuild,v 1.2 2012/04/13 15:10:54 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="cdr exif gnome-keyring gstreamer http jpeg raw slideshow tiff test"
 
 # We can't link against libbrasero-burn3
-RDEPEND=">=dev-libs/glib-2.28.0:2
+COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	>=x11-libs/gtk+-2.24.0:2
 	>=gnome-base/gconf-2.6
 	>=dev-libs/libunique-1.1.2:1
@@ -43,7 +43,9 @@ RDEPEND=">=dev-libs/glib-2.28.0:2
 	tiff? ( media-libs/tiff )
 	raw? ( >=media-libs/libopenraw-0.0.8 )
 	!raw? ( media-gfx/dcraw )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	>=gnome-base/gsettings-desktop-schemas-0.1.4"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
