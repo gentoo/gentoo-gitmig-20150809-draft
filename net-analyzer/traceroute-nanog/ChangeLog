@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/traceroute-nanog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.22 2011/12/18 20:10:04 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.23 2012/04/13 16:29:35 jer Exp $
+
+  13 Apr 2012; Jeroen Roovers <jer@gentoo.org>
+  -traceroute-nanog-6.3.10-r1.ebuild, traceroute-nanog-6.4.2-r1.ebuild:
+  Fix SRC_URI now that Debian has stopped supporting this package, by Marcin
+  Mirosław (bug #411841).
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   traceroute-nanog-6.4.2-r1.ebuild:
