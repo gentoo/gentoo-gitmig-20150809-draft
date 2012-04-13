@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.60 2012/01/29 09:57:39 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.61 2012/04/13 18:54:06 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> xom-1.0-r6.ebuild,
+  xom-1.0-r7.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
 *xom-1.2.6-r1 (29 Jan 2012)
 

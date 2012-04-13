@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/l2fprod-common
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/ChangeLog,v 1.5 2008/07/21 21:39:39 serkan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/ChangeLog,v 1.6 2012/04/13 18:48:55 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> l2fprod-common-7.3-r1.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
 *l2fprod-common-7.3-r1 (21 Jul 2008)
 

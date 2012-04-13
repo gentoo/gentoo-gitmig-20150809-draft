@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/l2fprod-common-7.3-r1.ebuild,v 1.1 2008/07/21 21:39:39 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/l2fprod-common/l2fprod-common-7.3-r1.ebuild,v 1.2 2012/04/13 18:48:55 ulm Exp $
 
-WANT_ANT_TASKS="ant-trax"
 EAPI="1"
+WANT_ANT_TASKS="ant-trax"
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Java/Swing GUI components and libraries for building desktop applications"

@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r6.ebuild,v 1.7 2012/01/01 14:51:59 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0-r6.ebuild,v 1.8 2012/04/13 18:54:06 ulm Exp $
 
-JAVA_PKG_IUSE="doc examples source"
 EAPI=1
+JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 java-ant-2
 

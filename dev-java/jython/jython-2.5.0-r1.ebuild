@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.0-r1.ebuild,v 1.3 2011/11/16 19:05:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.0-r1.ebuild,v 1.4 2012/04/13 18:47:54 ulm Exp $
+
+EAPI="2"
 
 JAVA_PKG_IUSE="source doc examples oracle"
 #informix missing.  This is a jdbc driver, similar to oracle use flag
 #functionality.
-
-EAPI="2"
 
 inherit base java-pkg-2 java-ant-2
 
