@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/libharu-2.2.1-r1.ebuild,v 1.1 2012/04/11 09:47:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/libharu-2.2.1-r1.ebuild,v 1.2 2012/04/13 09:11:26 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://libharu.org/files/${P}.tar.bz2"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="png static-libs zlib"
 
 DEPEND="
