@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.40 2012/02/22 22:20:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.41 2012/04/13 20:24:43 neurogeek Exp $
+
+  13 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> flite-1.4-r1.ebuild:
+  Added media-libs/alsa-lib as DEPEND and bumped EAPI. Fixes bug #390597
 
   22 Feb 2012; Jeroen Roovers <jer@gentoo.org> flite-1.4-r1.ebuild:
   Does not work on HPPA (bug #307241).
