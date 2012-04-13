@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6415 2012/04/12 22:36:28 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6416 2012/04/13 05:22:06 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Apr 2012; Patrick Lauer <patrick@gentoo.org> package.mask,
+  thirdpartymirrors:
+  Masking apache 2.4 for now
 
   12 Apr 2012; Joe Peterson <lavajoe@gentoo.org> package.mask:
   Mask media-sound/squeezeboxserver for removal

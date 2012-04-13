@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13669 2012/04/12 22:36:28 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13670 2012/04/13 05:22:06 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (13 Apr 2012)
+# Needs lots of fixes, plus modules fail, so mask until it's
+# generally useful and proper
+>=www-servers/apache-2.4
+>=app-admin/apache-tools-2.4
 
 # Joe Peterson <lavajoe@gentoo.org> (12 Apr 2012)
 # Replaced by new package: media-sound/logitechmediaserver-bin
