@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.9 2010/05/05 05:16:19 tupone Exp $
-PYTHON_DEPEND="2"
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.10 2012/04/13 19:23:51 ulm Exp $
+
 EAPI=2
+PYTHON_DEPEND="2"
+
 inherit eutils python games
 
 DESCRIPTION="role playing game to showcase the adonthell engine"

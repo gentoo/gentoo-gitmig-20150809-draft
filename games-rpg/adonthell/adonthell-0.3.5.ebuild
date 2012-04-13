@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.6 2011/04/18 07:16:37 tupone Exp $
-PYTHON_DEPEND="2"
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.7 2012/04/13 19:22:44 ulm Exp $
+
 EAPI=2
+PYTHON_DEPEND="2"
+
 inherit autotools eutils python games
 
 DESCRIPTION="roleplaying game engine"
