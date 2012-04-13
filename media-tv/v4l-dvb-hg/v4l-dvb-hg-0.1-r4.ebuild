@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r4.ebuild,v 1.3 2011/06/06 07:13:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r4.ebuild,v 1.4 2012/04/13 19:36:13 ulm Exp $
+
+EAPI=2
 
 : ${EHG_REPO_URI:=${V4L_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
-
-EAPI="2"
 
 inherit linux-mod eutils toolchain-funcs mercurial savedconfig
 

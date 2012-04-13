@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-3.1.ebuild,v 1.2 2012/02/08 05:23:07 mr_bones_ Exp $
-
-JAVA_PKG_IUSE="doc source test"
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-3.1.ebuild,v 1.3 2012/04/13 19:33:55 ulm Exp $
 
 EAPI=4
+JAVA_PKG_IUSE="doc source test"
 
 inherit eutils java-pkg-2 java-ant-2 flag-o-matic
 
