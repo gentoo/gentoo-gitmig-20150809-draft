@@ -1,0 +1,10 @@
+# ChangeLog for sci-electronics/osqoop
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/osqoop/ChangeLog,v 1.1 2012/04/13 22:37:46 xmw Exp $
+
+*osqoop-1.1.1 (13 Apr 2012)
+
+  13 Apr 2012; Michael Weber <xmw@gentoo.org> +osqoop-1.1.1.ebuild,
+  +metadata.xml:
+  Initial import (bug 219147)
+
