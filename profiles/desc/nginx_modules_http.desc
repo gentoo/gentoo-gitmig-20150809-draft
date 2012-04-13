@@ -1,6 +1,6 @@
 # Copyright 2010-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.8 2012/04/13 15:06:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.9 2012/04/13 15:14:11 darkside Exp $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 
@@ -39,6 +39,7 @@ referer - This module makes it possible to block access to the site with the inc
 rewrite - This module makes it possible to change URI using regular expressions (PCRE), and to redirect and select configuration depending on variables.
 scgi - An implementation of the Simple Common Gateway Interface.
 secure_link - This module computes and checks request URLs for a required security token.
+slowfs_cache - This module adds the ability to cache static files
 split_clients - This module provides A/B testing support.
 ssi - This module provides a filter which processes Server-Side Includes (SSI) in the input.
 stub_status - This module provides the ability to get some status from nginx.
