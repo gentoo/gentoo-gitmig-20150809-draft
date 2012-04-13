@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.7 2011/04/20 13:33:42 tupone Exp $
-PYTHON_DEPEND="2"
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.8 2012/04/13 19:21:33 ulm Exp $
+
 EAPI=2
+PYTHON_DEPEND="2"
+
 inherit eutils python toolchain-funcs games
 
 DESCRIPTION="Fun 3D puzzle game using SDL/OpenGL"
