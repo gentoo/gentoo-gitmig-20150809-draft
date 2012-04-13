@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/agda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.14 2012/04/13 10:56:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.15 2012/04/13 14:58:33 gienah Exp $
+
+  13 Apr 2012; Mark Wright <gienah@gentoo.org> agda-2.3.0.1.ebuild,
+  agda-2.3.0.ebuild:
+  agda 2.3.0 and 2.3.0.1 requires syb, add more range checks to deps
 
   13 Apr 2012; Mark Wright <gienah@gentoo.org>
   +files/agda-2.3.0.1-mtl-2.1.patch, agda-2.3.0.1.ebuild:
