@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.12.ebuild,v 1.1 2012/04/13 05:04:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.12.ebuild,v 1.2 2012/04/13 05:16:41 dirtyepic Exp $
 
 EAPI="3"
 
@@ -30,8 +30,6 @@ pkg_setup() {
 }
 
 src_configure() {
-	# --disable-check doesn't work
-	use test && want_check="--enable-check=quick"
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-debugging \
