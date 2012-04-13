@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.153 2012/03/22 07:03:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.154 2012/04/13 15:38:48 marienz Exp $
+
+  13 Apr 2012; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-12.0.0-fix-test-timeFormatting.patch, twisted-12.0.0.ebuild:
+  Fix a test that fails in some timezones (bug #409329).
 
 *twisted-12.0.0 (22 Mar 2012)
 

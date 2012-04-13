@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-12.0.0.ebuild,v 1.1 2012/03/22 07:03:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-12.0.0.ebuild,v 1.2 2012/04/13 15:38:48 marienz Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -33,6 +33,9 @@ src_prepare(){
 
 	# Respect TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE variable.
 	epatch "${FILESDIR}/${PN}-9.0.0-respect_TWISTED_DISABLE_WRITING_OF_PLUGIN_CACHE.patch"
+
+	# Fix a test that fails in some timezones.
+	epatch "${FILESDIR}/${P}-fix-test-timeFormatting.patch"
 
 	if [[ "${EUID}" -eq 0 ]]; then
 		# Disable tests failing with root permissions.
