@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.24 2012/01/21 12:00:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.25 2012/04/13 02:19:32 bicatali Exp $
+
+*hdf-4.2.7_p1 (13 Apr 2012)
+
+  13 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/4.2.7_p1-autotools.patch, +hdf-4.2.7_p1.ebuild:
+  Version bump, fixing a few autotools mistakes
 
   21 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
   files/4.2.6-autotools.patch:
