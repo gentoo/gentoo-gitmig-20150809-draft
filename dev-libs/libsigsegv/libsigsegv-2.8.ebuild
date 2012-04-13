@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.8.ebuild,v 1.6 2010/05/25 15:16:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.8.ebuild,v 1.7 2012/04/13 18:56:07 ulm Exp $
+
+EAPI=2
 
 DESCRIPTION="library for handling page faults in user mode"
 HOMEPAGE="http://libsigsegv.sourceforge.net/"
 SRC_URI="mirror://gnu/libsigsegv/${P}.tar.gz"
-
-EAPI="2"
 
 LICENSE="GPL-2"
 SLOT="0"

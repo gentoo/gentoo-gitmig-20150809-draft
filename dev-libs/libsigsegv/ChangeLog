@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsigsegv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.45 2011/04/12 18:19:40 pchrist Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/ChangeLog,v 1.46 2012/04/13 18:56:07 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> libsigsegv-2.8.ebuild,
+  libsigsegv-2.9.ebuild, libsigsegv-2.10.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
 *libsigsegv-2.10 (12 Apr 2011)
 
