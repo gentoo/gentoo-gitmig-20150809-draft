@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/html2text-3.200.3.ebuild,v 1.1 2012/04/13 07:28:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/html2text-3.200.3.ebuild,v 1.2 2012/04/13 08:07:36 xarthisius Exp $
 
 EAPI=3
 
@@ -20,8 +20,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/chardet
-	dev-python/feedparser"
-DEPEND="${RDEPEND}
+	dev-python/feedparser
 	dev-python/setuptools"
+DEPEND="${RDEPEND}"
 
 PYTHON_MODNAME="${PN}.py"
