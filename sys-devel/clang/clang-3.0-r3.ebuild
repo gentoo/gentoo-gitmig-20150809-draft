@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r3.ebuild,v 1.4 2012/03/13 17:08:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r3.ebuild,v 1.5 2012/04/13 14:14:39 voyageur Exp $
 
 EAPI=3
 
@@ -72,6 +72,9 @@ src_prepare() {
 
 	# AMD K10 CPUs + SSE4a suppport, bug #398357
 	epatch "${FILESDIR}"/${P}-recognize-amd-k10-enable-sse4a.patch
+
+	# User patches
+	epatch_user
 }
 
 src_configure() {

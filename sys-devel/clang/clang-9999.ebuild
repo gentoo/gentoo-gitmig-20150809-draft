@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.28 2012/03/13 17:08:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.29 2012/04/13 14:14:39 voyageur Exp $
 
 EAPI=4
 
@@ -73,6 +73,9 @@ src_prepare() {
 	# Use system llc (from llvm ebuild) for tests
 	sed -e "/^llc_props =/s/os.path.join(llvm_tools_dir, 'llc')/'llc'/" \
 		-i tools/clang/test/lit.cfg  || die "test path sed failed"
+
+	# User patches
+	epatch_user
 }
 
 src_configure() {
