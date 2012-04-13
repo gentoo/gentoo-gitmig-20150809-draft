@@ -1,15 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r10.ebuild,v 1.1 2008/08/13 14:02:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r10.ebuild,v 1.2 2012/04/13 15:43:48 darkside Exp $
 
 inherit eutils toolchain-funcs
 
 PATCHLEVEL=36
 DESCRIPTION="Standard Linux telnet client and server"
-HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
+#old HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
+# This might be the best HOMEPAGE now?
+HOMEPAGE="https://launchpad.net/netkit-telnet"
 # http://packages.debian.org/stablesource/netkit-telnet
 # http://packages.debian.org/testing/source/netkit-telnet
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-telnet-${PV}.tar.gz
+# No upstream mirror exists anymore?
+# old ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-telnet-${PV}.tar.gz
+SRC_URI="mirror://gentoo/netkit-telnet-${PV}.tar.gz
 	mirror://debian/pool/main/n/netkit-telnet/netkit-telnet_0.17-${PATCHLEVEL}.diff.gz"
 
 LICENSE="BSD"
@@ -19,6 +23,7 @@ IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2
 	!net-misc/telnet-bsd"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/netkit-telnet-${PV}
 
@@ -50,27 +55,27 @@ src_compile() {
 		-e "s:-Wpointer-arith::" \
 		-e "s:^CC=.*:CC=$(tc-getCC):" \
 		-e "s:^CXX=.*:CXX=$(tc-getCXX):" \
-		MCONFIG
+		MCONFIG || die
 
-	make || die
-	cd telnetlogin && make || die
+	emake || die
+	cd telnetlogin && emake || die
 }
 
 src_install() {
 	dobin telnet/telnet || die
 
 	dosbin telnetd/telnetd || die
-	dosym telnetd /usr/sbin/in.telnetd
+	dosym telnetd /usr/sbin/in.telnetd || die
 	dosbin telnetlogin/telnetlogin || die
-	doman telnet/telnet.1
-	doman telnetd/*.8
-	doman telnetd/issue.net.5
-	dosym telnetd.8 /usr/share/man/man8/in.telnetd.8
-	doman telnetlogin/telnetlogin.8
-	dodoc BUGS ChangeLog README
-	dodoc "${FILESDIR}"/net.issue.sample
-	newdoc telnet/README README.telnet
-	newdoc telnet/TODO TODO.telnet
+	doman telnet/telnet.1 || die
+	doman telnetd/*.8 || die
+	doman telnetd/issue.net.5 || die
+	dosym telnetd.8 /usr/share/man/man8/in.telnetd.8 || die
+	doman telnetlogin/telnetlogin.8 || die
+	dodoc BUGS ChangeLog README || die
+	dodoc "${FILESDIR}"/net.issue.sample || die
+	newdoc telnet/README README.telnet || die
+	newdoc telnet/TODO TODO.telnet || die
 	insinto /etc/xinetd.d
-	newins "${FILESDIR}"/telnetd.xinetd telnetd
+	newins "${FILESDIR}"/telnetd.xinetd telnetd || die
 }

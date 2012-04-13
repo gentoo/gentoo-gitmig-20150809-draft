@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-telnetd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.48 2010/10/18 16:01:06 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.49 2012/04/13 15:43:48 darkside Exp $
+
+  13 Apr 2012; Jeremy Olexa <darkside@gentoo.org>
+  netkit-telnetd-0.17-r10.ebuild:
+  Cleanup -r10 ebuild with feedback by Maurizio Camisaschi, bug 381991
 
   18 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   netkit-telnetd-0.17-r6.ebuild:
