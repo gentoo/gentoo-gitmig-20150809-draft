@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.6.ebuild,v 1.5 2012/01/14 15:56:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.6.ebuild,v 1.6 2012/04/13 17:35:16 ulm Exp $
 
-PYTHON_DEPEND="2:2.6"
 EAPI="4"
+PYTHON_DEPEND="2:2.6"
 
 # Need gnome2-utils for gnome2_icon_cache_update
 inherit autotools eutils gnome2-utils python systemd

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/abrt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.9 2012/03/15 18:09:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.10 2012/04/13 17:35:16 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> abrt-2.0.6.ebuild,
+  abrt-2.0.8.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   15 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> abrt-2.0.8.ebuild:
   x86 stable wrt bug #407011
