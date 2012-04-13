@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.10-r1.ebuild,v 1.4 2010/02/09 20:39:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/dsiutils-1.0.10-r1.ebuild,v 1.5 2012/04/13 18:05:15 ulm Exp $
 
-JAVA_PKG_IUSE="doc source test"
 EAPI="2"
+JAVA_PKG_IUSE="doc source test"
 JAVA_ANT_CLASSPATH_TAGS="javac xjavac junit"
 
 inherit java-pkg-2 java-ant-2

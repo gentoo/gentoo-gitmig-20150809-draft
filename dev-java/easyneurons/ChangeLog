@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/easyneurons
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/ChangeLog,v 1.6 2010/01/10 21:24:00 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/ChangeLog,v 1.7 2012/04/13 18:06:26 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> easyneurons-2.2.ebuild,
+  easyneurons-2.3.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   10 Jan 2010; Markus Meier <maekke@gentoo.org> easyneurons-2.3.ebuild:
   amd64 stable, bug #298726

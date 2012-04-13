@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/easyneurons-2.3.ebuild,v 1.3 2010/01/10 21:24:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/easyneurons-2.3.ebuild,v 1.4 2012/04/13 18:06:26 ulm Exp $
 
-JAVA_PKG_IUSE="source"
 EAPI="2"
+JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
 

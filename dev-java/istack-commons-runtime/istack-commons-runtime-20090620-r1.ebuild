@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/istack-commons-runtime-20090620-r1.ebuild,v 1.1 2009/10/16 12:56:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/istack-commons-runtime-20090620-r1.ebuild,v 1.2 2012/04/13 18:08:40 ulm Exp $
 
-JAVA_PKG_IUSE="source"
 EAPI=2
+JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
 
