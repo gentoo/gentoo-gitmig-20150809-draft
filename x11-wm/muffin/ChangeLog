@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/muffin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.3 2012/03/15 06:05:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/ChangeLog,v 1.4 2012/04/13 16:04:42 tetromino Exp $
+
+*muffin-1.0.2-r1 (13 Apr 2012)
+
+  13 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +muffin-1.0.2-r1.ebuild,
+  +files/muffin-1.0.2-frame-initialize-style-contexts.patch:
+  Fix graphical corruption in window decorations with gtk+-3.4 (bug #411723
+  comment #3, thanks to Philipp Riegger).
 
 *muffin-1.0.2 (15 Mar 2012)
 
