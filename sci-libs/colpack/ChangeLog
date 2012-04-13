@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/colpack
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/ChangeLog,v 1.1 2012/04/13 03:24:24 bicatali Exp $
+
+*colpack-1.0.6 (13 Apr 2012)
+
+  13 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +colpack-1.0.6.ebuild,
+  +files/colpack-1.0.6-flags.patch, +metadata.xml:
+  Initial import
+
