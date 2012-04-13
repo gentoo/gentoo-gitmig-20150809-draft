@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.572 2012/03/30 16:31:05 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.573 2012/04/13 06:43:50 olemarkus Exp $
+
+*php-5.4.1_rc2 (13 Apr 2012)
+*php-5.3.11_rc2 (13 Apr 2012)
+
+  13 Apr 2012; Ole Markus With <olemarkus@gentoo.org> +php-5.3.11_rc2.ebuild,
+  +php-5.4.1_rc2.ebuild:
+  Bumping rc versions
 
   30 Mar 2012; Ole Markus With <olemarkus@gentoo.org> Manifest:
   Manifest fix
