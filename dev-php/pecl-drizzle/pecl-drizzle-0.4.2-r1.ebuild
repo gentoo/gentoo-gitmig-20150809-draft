@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-drizzle/pecl-drizzle-0.4.2-r1.ebuild,v 1.1 2011/09/18 11:11:12 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-drizzle/pecl-drizzle-0.4.2-r1.ebuild,v 1.2 2012/04/13 19:01:36 ulm Exp $
+
+EAPI=2
 
 PHP_EXT_NAME="drizzle"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
-
-EAPI=2
 
 inherit php-ext-pecl-r2
 

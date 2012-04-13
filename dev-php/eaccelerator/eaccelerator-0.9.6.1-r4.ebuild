@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.6.1-r4.ebuild,v 1.5 2011/11/02 14:51:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.6.1-r4.ebuild,v 1.6 2012/04/13 18:59:25 ulm Exp $
+
+EAPI="2"
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
-
-EAPI="2"
 
 [[ -z "${EACCELERATOR_CACHEDIR}" ]] && EACCELERATOR_CACHEDIR="/var/cache/eaccelerator-php5/"
 

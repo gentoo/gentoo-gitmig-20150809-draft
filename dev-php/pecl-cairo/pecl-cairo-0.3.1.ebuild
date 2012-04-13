@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-cairo/pecl-cairo-0.3.1.ebuild,v 1.2 2012/02/16 16:56:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-cairo/pecl-cairo-0.3.1.ebuild,v 1.3 2012/04/13 19:00:41 ulm Exp $
+
+EAPI="4"
 
 PHP_EXT_NAME="cairo"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="TODO"
-
-EAPI="4"
 
 USE_PHP="php5-3 php5-4"
 
