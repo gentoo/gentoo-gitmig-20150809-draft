@@ -1,6 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.73 2012/04/12 17:05:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.74 2012/04/13 06:12:10 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
+# Packages with optional systemd support. Masked in base and unmasked on arches
+# where sys-apps/systemd is available.
+gnome-extra/gnome-screensaver -systemd
+gnome-extra/gnome-system-monitor -systemd
+net-misc/networkmanager -systemd
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
 # Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
