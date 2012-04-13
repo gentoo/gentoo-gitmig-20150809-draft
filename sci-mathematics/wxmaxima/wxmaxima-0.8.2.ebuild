@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.2.ebuild,v 1.6 2011/03/02 21:10:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.2.ebuild,v 1.7 2012/04/13 19:41:45 ulm Exp $
 
-WX_GTK_VER="2.8"
 EAPI="2"
+WX_GTK_VER="2.8"
 inherit wxwidgets fdo-mime
 
 MYP=wxMaxima-${PV}

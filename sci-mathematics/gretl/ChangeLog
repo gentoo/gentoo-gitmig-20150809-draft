@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.35 2012/01/03 02:44:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.36 2012/04/13 19:39:59 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> gretl-1.9.5.ebuild,
+  gretl-1.9.6-r1.ebuild, gretl-1.9.7.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
 *gretl-1.9.7 (03 Jan 2012)
 

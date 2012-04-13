@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.7.ebuild,v 1.1 2012/01/03 02:44:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.7.ebuild,v 1.2 2012/04/13 19:39:59 ulm Exp $
 
-USE_EINSTALL=true
 EAPI=4
+USE_EINSTALL=true
 inherit eutils gnome2 elisp-common
 
 DESCRIPTION="Regression, econometrics and time-series library"
