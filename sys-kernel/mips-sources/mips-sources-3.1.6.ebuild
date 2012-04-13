@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.1.6.ebuild,v 1.1 2012/01/03 02:36:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.1.6.ebuild,v 1.2 2012/04/13 19:46:42 ulm Exp $
+
+# EAPI Version
+EAPI=4
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -28,9 +31,6 @@ K_NOUSENAME="0"
 K_NOUSEPR="0"
 K_USEPV="0"
 ETYPE="sources"
-
-# EAPI Version
-EAPI="4"
 
 # Inherit Eclasses
 inherit kernel-2 eutils
