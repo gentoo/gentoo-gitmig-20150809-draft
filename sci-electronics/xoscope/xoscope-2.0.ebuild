@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xoscope/xoscope-2.0.ebuild,v 1.1 2012/04/13 00:16:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xoscope/xoscope-2.0.ebuild,v 1.2 2012/04/13 07:56:37 mr_bones_ Exp $
 
 EAPI=4
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 
 CONFIG_CHECK="~!SND_PCM_OSS"
 ERROR_SND_PCM_OSS="CONFIG_SND_PCM_OSS is needed to support sound card input via /dev/dsp"
-
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-remove_bundled_gtkdatabox.patch
