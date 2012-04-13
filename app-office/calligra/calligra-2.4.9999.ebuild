@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.9999.ebuild,v 1.6 2012/04/12 20:16:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.9999.ebuild,v 1.7 2012/04/13 17:50:47 ulm Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
 # krita/CMakeLists.txt
 
-EGIT_BRANCH="calligra/2.4"
-
 EAPI=4
+
+EGIT_BRANCH="calligra/2.4"
 
 KDE_SCM=git
 KDE_MINIMAL=4.6.4

@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/hourglass-0.7.1.ebuild,v 1.1 2009/01/06 08:14:53 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/hourglass-0.7.1.ebuild,v 1.2 2012/04/13 17:52:05 ulm Exp $
 
-JAVA_PKG_IUSE="doc source"
 EAPI="1"
+JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils
 
