@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.3 2012/03/11 18:43:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.4 2012/04/13 19:01:18 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -470,7 +470,8 @@ src_configure() {
 
 src_compile() {
 	if ! use binary; then
-		emake all || die "make failed"
+		# ghc massively parallel make: #409631, #409873
+		emake -j1 all || die "make failed"
 	fi # ! use binary
 }
 

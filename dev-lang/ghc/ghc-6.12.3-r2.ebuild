@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.6 2012/04/04 18:21:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.7 2012/04/13 19:01:18 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -459,7 +459,7 @@ src_compile() {
 	if ! use binary; then
 		# LC_ALL needs to workaround ghc's ParseCmm failure on some (es) locales
 		# bug #202212 / http://hackage.haskell.org/trac/ghc/ticket/4207
-		LC_ALL=C emake all || die "make failed"
+		LC_ALL=C emake -j1 all || die "make failed"
 	fi # ! use binary
 }
 
