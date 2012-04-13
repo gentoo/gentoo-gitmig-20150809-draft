@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20100930.ebuild,v 1.4 2011/02/25 22:15:24 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20100930.ebuild,v 1.5 2012/04/13 19:17:29 ulm Exp $
+
+EAPI=2
 
 # Notes:
 #  - fmod support is based on an old version of fmod which is not in portage,
@@ -18,8 +20,6 @@
 
 MY_PV="2010.1"
 MY_P="${PN}-${MY_PV}"
-
-EAPI=2
 
 inherit eutils games
 

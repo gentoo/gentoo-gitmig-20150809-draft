@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/gemrb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/ChangeLog,v 1.21 2012/04/07 17:44:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/ChangeLog,v 1.22 2012/04/13 19:18:57 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> gemrb-0.6.4.ebuild,
+  gemrb-0.6.6.ebuild, gemrb-0.7.0.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> gemrb-0.7.0.ebuild:
   x86 stable, bug #402911

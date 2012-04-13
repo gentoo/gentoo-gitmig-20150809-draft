@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.6.4.ebuild,v 1.7 2012/01/10 05:35:10 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.6.4.ebuild,v 1.8 2012/04/13 19:18:57 ulm Exp $
 
-PYTHON_DEPEND="2"
 EAPI=2
+PYTHON_DEPEND="2"
 WANT_CMAKE=always
 inherit eutils python cmake-utils games
 
