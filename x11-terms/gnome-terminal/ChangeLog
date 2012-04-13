@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.241 2012/04/13 03:55:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.242 2012/04/13 03:59:38 tetromino Exp $
+
+  13 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-terminal-3.4.0.1.ebuild:
+  Remove stray comment.
 
 *gnome-terminal-3.4.0.1 (13 Apr 2012)
 

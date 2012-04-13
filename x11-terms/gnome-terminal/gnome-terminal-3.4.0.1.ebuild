@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.4.0.1.ebuild,v 1.1 2012/04/13 03:55:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.4.0.1.ebuild,v 1.2 2012/04/13 03:59:38 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -42,8 +42,6 @@ pkg_setup() {
 src_prepare() {
 	# Use login shell by default (#12900)
 	epatch "${FILESDIR}"/${PN}-2.22.0-default_shell.patch
-
-	# Make gtk X backend non-automagic
 
 	gnome2_src_prepare
 }
