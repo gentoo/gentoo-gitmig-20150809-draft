@@ -1,0 +1,13 @@
+# ChangeLog for sci-electronics/xoscope
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xoscope/ChangeLog,v 1.1 2012/04/13 00:16:01 xmw Exp $
+
+*xoscope-2.0 (13 Apr 2012)
+
+  13 Apr 2012; Michael Weber <xmw@gentoo.org> +xoscope-2.0.ebuild,
+  +files/xoscope-2.0-comedi_compile.patch,
+  +files/xoscope-2.0-implicit_decls.patch,
+  +files/xoscope-2.0-man_no_-Tutf8.patch,
+  +files/xoscope-2.0-remove_bundled_gtkdatabox.patch, +metadata.xml:
+  Initial import (bug 141462).
+
