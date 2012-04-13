@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.5.2.ebuild,v 1.6 2012/03/25 19:27:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.5.2-r2.ebuild,v 1.1 2012/04/13 10:33:55 gienah Exp $
 
-EAPI="3"
+EAPI="4"
 CABAL_FEATURES="bin lib profile haddock hscolour"
 inherit haskell-cabal bash-completion-r1
 
@@ -18,9 +18,9 @@ IUSE="doc test"
 RDEPEND="=dev-haskell/hashed-storage-0.5*[profile?]
 		=dev-haskell/haskeline-0.6*[profile?]
 		=dev-haskell/html-1.0*[profile?]
-		<dev-haskell/http-4000.2[profile?]
+		<dev-haskell/http-4000.3[profile?]
 		=dev-haskell/mmap-0.5*[profile?]
-		<dev-haskell/mtl-2.1[profile?]
+		<dev-haskell/mtl-2.2[profile?]
 		>=dev-haskell/network-2.2[profile?]
 		<dev-haskell/parsec-3.2[profile?]
 		=dev-haskell/random-1.0*[profile?]
@@ -55,6 +55,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.5.2-relax-regex-libs-deps.patch"
 	epatch "${FILESDIR}/${PN}-2.5.2-ghc-7.2.patch"
 	epatch "${FILESDIR}/${PN}-2.5.2-tests-ghc-7.2.patch"
+	epatch "${FILESDIR}/${PN}-2.5.2-relax-http-libs-deps.patch"
+	epatch "${FILESDIR}/${PN}-2.5.2-ghc-7.4.patch"
+	epatch "${FILESDIR}/${PN}-2.5.2-mtl-2.1.patch"
 
 	# hlint tests tend to break on every newly released hlint
 	rm "${S}/tests/haskell_policy.sh"
