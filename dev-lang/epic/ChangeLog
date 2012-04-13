@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/epic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/epic/ChangeLog,v 1.2 2012/03/25 13:48:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/epic/ChangeLog,v 1.3 2012/04/13 13:58:24 gienah Exp $
+
+  13 Apr 2012; Mark Wright <gienah@gentoo.org> epic-0.9.2.ebuild,
+  epic-0.9.3.ebuild:
+  epic build requires happy
 
 *epic-0.9.3 (25 Mar 2012)
 
