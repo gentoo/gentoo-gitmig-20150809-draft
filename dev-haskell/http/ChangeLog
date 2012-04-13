@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/http
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.20 2012/03/04 03:37:58 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.21 2012/04/13 10:25:51 gienah Exp $
+
+*http-4000.2.3 (13 Apr 2012)
+
+  13 Apr 2012; Mark Wright <gienah@gentoo.org> +http-4000.2.3.ebuild:
+  Bump http to 4000.2.3
 
 *http-4000.2.2 (04 Mar 2012)
 
