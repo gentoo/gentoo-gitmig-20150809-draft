@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.66 2012/01/07 16:32:12 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.67 2012/04/13 19:31:39 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> vdr-xineliboutput-1.0.4.ebuild,
+  vdr-xineliboutput-1.0.4_p20090810.ebuild,
+  vdr-xineliboutput-1.0.4_p20090820.ebuild,
+  vdr-xineliboutput-1.0.4_p20091118.ebuild, vdr-xineliboutput-1.0.5.ebuild,
+  vdr-xineliboutput-1.0.5-r1.ebuild, vdr-xineliboutput-9999.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   07 Jan 2012; Christian Ruppert <idl0r@gentoo.org>
   vdr-xineliboutput-9999.ebuild:

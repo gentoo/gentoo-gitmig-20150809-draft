@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.11 2012/01/07 16:32:12 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.12 2012/04/13 19:31:39 ulm Exp $
 
+EAPI=3
 GENTOO_VDR_CONDITIONAL=yes
-
-EAPI="3"
 
 inherit vdr-plugin cvs toolchain-funcs eutils
 
