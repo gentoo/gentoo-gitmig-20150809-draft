@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.6.ebuild,v 1.4 2012/04/11 18:25:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.6.ebuild,v 1.5 2012/04/13 09:17:25 ago Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.twibright.com/download/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bzip2 +deprecated directfb fbcon gpm jpeg livecd lzma ssl suid svga tiff unicode X zlib"
 
 GRAPHICS_DEPEND=">=media-libs/libpng-1.2:0" #75685
