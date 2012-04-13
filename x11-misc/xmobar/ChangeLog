@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xmobar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.14 2012/04/02 03:34:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.15 2012/04/13 21:33:35 slyfox Exp $
+
+*xmobar-0.14 (13 Apr 2012)
+
+  13 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/xmobar-0.14-stm-2.3.patch, +xmobar-0.14.ebuild, metadata.xml:
+  Version bump. Requested by fox in bug #411477.
 
   02 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/xmobar-0.13-fix-build-failure-against-ghc-7.2.patch,
