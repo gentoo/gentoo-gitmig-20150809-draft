@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.1.ebuild,v 1.3 2012/04/05 20:29:22 phajdan.jr Exp $
-
-#BACKPORTS=4
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.1.ebuild,v 1.4 2012/04/13 17:46:51 ulm Exp $
 
 EAPI=4
+
+#BACKPORTS=4
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="http://git.fedorahosted.org/git/virt-manager.git"

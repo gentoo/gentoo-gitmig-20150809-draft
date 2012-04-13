@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.10-r4.ebuild,v 1.4 2012/03/07 12:54:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.10-r4.ebuild,v 1.5 2012/04/13 17:43:45 ulm Exp $
+
+EAPI=4
 
 BACKPORTS=1
 #AUTOTOOLIZE=yes
-
-EAPI="4"
 
 MY_P="${P/_rc/-rc}"
 
