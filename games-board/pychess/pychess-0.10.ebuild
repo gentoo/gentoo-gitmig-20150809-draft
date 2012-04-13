@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.ebuild,v 1.6 2011/10/20 02:54:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.ebuild,v 1.7 2012/04/13 19:16:05 ulm Exp $
 
-PYTHON_DEPEND="2"
 EAPI=3
+PYTHON_DEPEND="2"
 inherit python games distutils
 
 DESCRIPTION="A chess client for Gnome"
