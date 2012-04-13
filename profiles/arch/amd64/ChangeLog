@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.172 2012/04/13 06:12:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.173 2012/04/13 23:26:52 tetromino Exp $
+
+  13 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask webkit-gtk[geoloc] in base and unmask on arches where app-misc/geoclue
+  and app-accessibility/at-spi2-core are available.
 
   13 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Consolidate USE=systemd mask, and add gnome-system-monitor.

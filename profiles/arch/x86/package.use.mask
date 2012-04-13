@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.84 2012/04/13 06:12:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.85 2012/04/13 23:26:52 tetromino Exp $
 
 # This file requires >=portage-2.1.1
+
+# Masked in base and unmasked on arches where app-misc/geoclue and
+# app-accessibility/at-spi2-core are available.
+net-libs/webkit-gtk -geoloc -webkit2
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches

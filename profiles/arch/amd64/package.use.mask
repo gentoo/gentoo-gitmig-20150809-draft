@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.124 2012/04/13 06:12:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.125 2012/04/13 23:26:52 tetromino Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,11 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
+# Masked in base and unmasked on arches where app-misc/geoclue and
+# app-accessibility/at-spi2-core are available.
+net-libs/webkit-gtk -geoloc -webkit2
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches
