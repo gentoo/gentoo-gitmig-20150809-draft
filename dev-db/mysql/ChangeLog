@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.609 2012/04/02 00:42:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.610 2012/04/13 18:00:05 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> mysql-5.0.91.ebuild,
+  mysql-5.0.92.ebuild, mysql-5.0.96.ebuild, mysql-5.1.51.ebuild,
+  mysql-5.1.52.ebuild, mysql-5.1.52-r1.ebuild, mysql-5.1.53.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   02 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.96.ebuild:
   Cleanup whitespace.

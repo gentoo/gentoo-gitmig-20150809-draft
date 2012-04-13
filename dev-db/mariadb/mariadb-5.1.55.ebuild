@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.1.55.ebuild,v 1.2 2012/01/06 20:27:23 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.1.55.ebuild,v 1.3 2012/04/13 17:55:05 ulm Exp $
 
-MY_EXTRAS_VER="20110426-1046Z"
 EAPI="4"
+MY_EXTRAS_VER="20110426-1046Z"
 
 # Build system
 BUILD="autotools"
