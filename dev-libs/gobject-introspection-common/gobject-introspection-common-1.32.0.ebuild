@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/gobject-introspection-common-1.32.0.ebuild,v 1.1 2012/03/28 00:58:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/gobject-introspection-common-1.32.0.ebuild,v 1.2 2012/04/13 04:57:43 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="gobject-introspection"
 
 inherit gnome.org
 
-DESCRIPTION="Common files for development with GObject Introspection"
+DESCRIPTION="Build infrastructure for GObject Introspection"
 HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
 
 LICENSE="as-is"
