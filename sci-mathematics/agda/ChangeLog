@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/agda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.13 2012/04/01 02:18:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.14 2012/04/13 10:56:39 gienah Exp $
+
+  13 Apr 2012; Mark Wright <gienah@gentoo.org>
+  +files/agda-2.3.0.1-mtl-2.1.patch, agda-2.3.0.1.ebuild:
+  Fix agda 2.3.0.1 build with mtl-2.1
 
   01 Apr 2012; Mark Wright <gienah@gentoo.org>
   +files/agda-2.3.0.1-haskell-src-exts-1.13.patch, agda-2.3.0.1.ebuild:
