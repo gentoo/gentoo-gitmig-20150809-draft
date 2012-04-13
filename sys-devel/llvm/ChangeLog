@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.65 2012/03/27 08:06:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.66 2012/04/13 10:52:10 voyageur Exp $
+
+  13 Apr 2012; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.0-r2.ebuild,
+  +files/llvm-3.0-PPCCompilationCallbackC_static.patch:
+  Fix TEXTREL on ppc, patch by and thanks to Kimura Masaru
+  <hiyuh.root@gmail.com> in bug #403519
 
 *llvm-3.0-r2 (27 Mar 2012)
 

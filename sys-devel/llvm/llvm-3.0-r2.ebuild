@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0-r2.ebuild,v 1.1 2012/03/27 08:06:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0-r2.ebuild,v 1.2 2012/04/13 10:52:10 voyageur Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -94,6 +94,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.9-nodoctargz.patch
 	epatch "${FILESDIR}"/${P}-ocaml_install.patch
 	epatch "${FILESDIR}"/${P}-PPC_macro.patch
+	epatch "${FILESDIR}"/${P}-PPCCompilationCallbackC_static.patch
 	epatch "${FILESDIR}"/${P}-gold_LTO_link.patch
 	epatch "${FILESDIR}"/${P}-set_soname.patch
 }
