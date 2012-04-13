@@ -11,7 +11,4 @@
     gives it the look and feel of an outliner. This tool is intended to keep
     track of TODO lists or to serve as a personal scratch book.
   </longdescription>
-  <use>
-    <flag name="screenshot">Enable screenshot support (using <pkg>media-gfx/scrot</pkg>)</flag>
-  </use>
 </pkgmetadata>

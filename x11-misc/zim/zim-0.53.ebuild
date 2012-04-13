@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.53.ebuild,v 1.1 2011/11/17 13:04:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.53.ebuild,v 1.2 2012/04/13 19:51:48 ulm Exp $
+
+EAPI=3
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2:2.5"
-
-EAPI=3
 
 inherit distutils eutils fdo-mime virtualx
 
