@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/vgabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/ChangeLog,v 1.11 2012/03/16 16:11:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/ChangeLog,v 1.12 2012/04/13 19:43:17 ulm Exp $
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> vgabios-0.6c-r1.ebuild,
+  vgabios-0.7a.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
   16 Mar 2012; Thomas Kahle <tomka@gentoo.org> vgabios-0.6c-r1.ebuild:
   marked x86 per bug 407345
