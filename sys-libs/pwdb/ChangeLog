@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pwdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.40 2011/02/06 21:35:40 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.41 2012/04/13 23:21:39 vapier Exp $
+
+  13 Apr 2012; Mike Frysinger <vapier@gentoo.org> pwdb-0.62.ebuild,
+  files/pwdb-0.62-build.patch:
+  Use libtirpc for nis logic #198134 by Wolfgang Thiess.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> pwdb-0.62.ebuild:
   Drop to ~mips

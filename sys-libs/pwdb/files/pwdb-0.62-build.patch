@@ -29,7 +29,7 @@ http://bugs.gentoo.org/137134
  
  $(LIBDYNAME): $(LIBOBJ)
 -	$(LD) -soname $(LIBSONAME) -x -shared -o $(LIBFILENAME) $(LIBOBJ) -lcrypt -lnsl -lc
-+	$(CC) $(LDFLAGS) -shared -Wl,-soname -Wl,$(LIBSONAME) -Wl,-x -o $(LIBFILENAME) $(LIBOBJ)  -lcrypt -lnsl -lc
++	$(CC) $(LDFLAGS) -shared -Wl,-soname -Wl,$(LIBSONAME) -Wl,-x -o $(LIBFILENAME) $(LIBOBJ)  -lcrypt -lnsl $(LDLIBS)
  	@ln -sf $(LIBFILENAME) $@
  
  $(LIBSTATIC): $(LIBOBJ)
