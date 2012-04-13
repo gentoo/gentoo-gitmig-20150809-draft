@@ -1,6 +1,19 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.313 2012/04/10 04:04:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.314 2012/04/13 15:16:46 darkside Exp $
+
+  13 Apr 2012; Jeremy Olexa <darkside@gentoo.org> -nginx-1.0.10.ebuild,
+  -nginx-1.1.17.ebuild, -nginx-1.1.18.ebuild, +nginx-1.1.19.ebuild,
+  metadata.xml:
+  Version bump from upstream (security bug 411751), addition of fancyindex
+  third party module (bug 411663). Cleanup metadata.xml
+
+*nginx-1.1.19 (13 Apr 2012)
+
+  13 Apr 2012; Jeremy Olexa <darkside@gentoo.org> -nginx-1.1.17.ebuild,
+  -nginx-1.1.18.ebuild, +nginx-1.1.19.ebuild, metadata.xml:
+  Version bump from upstream (security bug 411751), addition of fancyindex
+  third party module (bug 411663). Cleanup metadata.xml
 
 *nginx-1.1.18 (10 Apr 2012)
 
