@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.578 2012/04/01 17:27:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.579 2012/04/14 03:31:15 tetromino Exp $
+
+*gtk+-3.4.1 (14 Apr 2012)
+
+  14 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +gtk+-3.4.1.ebuild:
+  Version bump with various bugfixes, including better smooth scrolling
+  performance.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> gtk+-3.2.3.ebuild:
   alpha/ia64/sh/sparc stable wrt #407643
