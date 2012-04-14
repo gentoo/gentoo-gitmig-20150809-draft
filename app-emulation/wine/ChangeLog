@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.409 2012/04/03 06:39:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.410 2012/04/14 01:51:23 tetromino Exp $
+
+*wine-1.5.2 (14 Apr 2012)
+
+  14 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -wine-1.4_rc1.ebuild, -wine-1.4_rc2.ebuild, -wine-1.4_rc3.ebuild,
+  -wine-1.4_rc4.ebuild, -wine-1.4_rc5.ebuild, -wine-1.4_rc6.ebuild,
+  +wine-1.5.2.ebuild:
+  Bump, see http://www.winehq.org/announce/1.5.2 for the announcement. Drop 1.4
+  release candidates since they are unlikely to be of much interest now.
 
 *wine-1.5.1 (03 Apr 2012)
 
