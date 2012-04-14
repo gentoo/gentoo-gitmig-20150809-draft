@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.512 2012/04/14 16:12:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.513 2012/04/14 23:23:18 tetromino Exp $
+
+  14 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.32.0.ebuild,
+  glib-2.32.1.ebuild, +files/glib-2.32.1-fix-libelf-check.patch:
+  Add elfutils/libelf as a runtime dependency, and fix libelf detection. Fix
+  datetime tests in non-English locales (bug #411967, thanks to Marien Zwart).
 
   14 Apr 2012; Alexis Ballier <aballier@gentoo.org> glib-2.32.1.ebuild:
   allow to replace lelfutils by libelf. the former isnt keyworded and doesnt

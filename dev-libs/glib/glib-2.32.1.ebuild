@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.1.ebuild,v 1.3 2012/04/14 16:12:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.1.ebuild,v 1.4 2012/04/14 23:23:18 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -21,11 +21,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 RDEPEND="virtual/libiconv
 	virtual/libffi
 	sys-libs/zlib
+	|| (
+		>=dev-libs/elfutils-0.142
+		>=dev-libs/libelf-0.8.11 )
 	xattr? ( sys-apps/attr )
 	fam? ( virtual/fam )
 	utils? ( >=dev-util/gdbus-codegen-${PV} )"
 DEPEND="${RDEPEND}
-	|| ( dev-libs/elfutils dev-libs/libelf )
 	>=sys-devel/gettext-0.11
 	>=dev-util/gtk-doc-am-1.15
 	doc? (
@@ -110,6 +112,9 @@ src_prepare() {
 	# gdbus-codegen is a separate package
 	epatch "${FILESDIR}/${PN}-2.31.x-external-gdbus-codegen.patch"
 
+	# https://bugzilla.gnome.org/show_bug.cgi?id=673132
+	epatch "${FILESDIR}/${PN}-2.32.1-fix-libelf-check.patch"
+
 	# disable pyc compiling
 	use test && python_clean_py-compile_files
 
@@ -193,6 +198,7 @@ src_test() {
 	export XDG_DATA_DIRS=/usr/local/share:/usr/share
 	export G_DBUS_COOKIE_SHA1_KEYRING_DIR="${T}/temp"
 	unset GSETTINGS_BACKEND # bug 352451
+	export LC_TIME=C # bug #411967
 
 	# Related test is a bit nitpicking
 	mkdir "$G_DBUS_COOKIE_SHA1_KEYRING_DIR"
