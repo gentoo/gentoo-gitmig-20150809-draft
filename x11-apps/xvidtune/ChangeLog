@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xvidtune
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.34 2010/10/10 11:50:13 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.35 2012/04/14 17:04:36 mgorny Exp $
+
+*xvidtune-1.0.2-r1 (14 Apr 2012)
+
+  14 Apr 2012; Michał Górny <mgorny@gentoo.org> +xvidtune-1.0.2-r1.ebuild:
+  Update to use xorg-2 eclass.
 
   10 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xvidtune-1.0.1-r1.ebuild:
