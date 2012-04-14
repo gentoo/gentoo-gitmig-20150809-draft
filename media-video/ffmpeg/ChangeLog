@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.543 2012/04/12 12:21:37 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.544 2012/04/14 18:34:49 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> ffmpeg-0.10.2.ebuild,
+  ffmpeg-9999.ebuild:
+  Add ~amd64-linux keyword.
 
   12 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> ffmpeg-0.10.2.ebuild:
   x86 stable, see bug 411369
