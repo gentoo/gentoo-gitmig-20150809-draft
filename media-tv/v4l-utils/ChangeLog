@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/v4l-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/ChangeLog,v 1.17 2012/02/19 14:14:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/ChangeLog,v 1.18 2012/04/14 23:30:15 aballier Exp $
+
+*v4l-utils-0.8.8 (14 Apr 2012)
+
+  14 Apr 2012; Alexis Ballier <aballier@gentoo.org> +v4l-utils-0.8.8.ebuild:
+  version bump
 
 *v4l-utils-0.8.6 (19 Feb 2012)
 
