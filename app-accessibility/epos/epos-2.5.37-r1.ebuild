@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37-r1.ebuild,v 1.15 2012/04/14 08:57:13 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37-r1.ebuild,v 1.16 2012/04/14 09:28:58 neurogeek Exp $
+
+EAPI="4"
 
 inherit eutils autotools
 
@@ -16,10 +18,7 @@ IUSE=""
 DEPEND=">=app-text/sgmltools-lite-3.0.3-r9"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-gcc45.patch \
 		"${FILESDIR}"/${P}-disable-tests.patch
@@ -29,16 +28,15 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
-	econf --enable-charsets --disable-portaudio
-	emake || die
+src_configure() {
+	econf \
+		--enable-charsets \
+		--disable-portaudio
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	mv "${D}/usr/bin/say" "${D}/usr/bin/epos_say"
+	default
 
 	doinitd "${FILESDIR}/eposd"
-
 	dodoc WELCOME THANKS Changes "${FILESDIR}/README.gentoo"
 }
