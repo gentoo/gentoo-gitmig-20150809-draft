@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.1.19.ebuild,v 1.2 2012/04/14 09:20:53 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.15.ebuild,v 1.1 2012/04/14 09:20:54 hollow Exp $
 
 EAPI="4"
 
@@ -18,15 +18,15 @@ EAPI="4"
 GENTOO_DEPEND_ON_PERL="no"
 
 # http_uploadprogress (https://github.com/masterzen/nginx-upload-progress-module, BSD-2 license)
-HTTP_UPLOAD_PROGRESS_MODULE_PV="0.9.0"
+HTTP_UPLOAD_PROGRESS_MODULE_PV="0.8.3"
 HTTP_UPLOAD_PROGRESS_MODULE_P="ngx_upload_progress-${HTTP_UPLOAD_PROGRESS_MODULE_PV}"
-HTTP_UPLOAD_PROGRESS_MODULE_SHA1="a788dea"
+HTTP_UPLOAD_PROGRESS_MODULE_SHA1="c7c663f"
 HTTP_UPLOAD_PROGRESS_MODULE_URI="http://github.com/masterzen/nginx-upload-progress-module/tarball/v${HTTP_UPLOAD_PROGRESS_MODULE_PV}"
 
 # http_headers_more (http://github.com/agentzh/headers-more-nginx-module, BSD license)
-HTTP_HEADERS_MORE_MODULE_PV="0.17rc1"
+HTTP_HEADERS_MORE_MODULE_PV="0.15"
 HTTP_HEADERS_MORE_MODULE_P="ngx_http_headers_more-${HTTP_HEADERS_MORE_MODULE_PV}"
-HTTP_HEADERS_MORE_MODULE_SHA1="3580526"
+HTTP_HEADERS_MORE_MODULE_SHA1="137855d"
 HTTP_HEADERS_MORE_MODULE_URI="http://github.com/agentzh/headers-more-nginx-module/tarball/v${HTTP_HEADERS_MORE_MODULE_PV}"
 
 # http_push (http://pushmodule.slact.net/, MIT license)
@@ -35,7 +35,7 @@ HTTP_PUSH_MODULE_P="nginx_http_push_module-${HTTP_PUSH_MODULE_PV}"
 HTTP_PUSH_MODULE_URI="http://pushmodule.slact.net/downloads/${HTTP_PUSH_MODULE_P}.tar.gz"
 
 # http_cache_purge (http://labs.frickle.com/nginx_ngx_cache_purge/, BSD-2 license)
-HTTP_CACHE_PURGE_MODULE_PV="1.5"
+HTTP_CACHE_PURGE_MODULE_PV="1.4"
 HTTP_CACHE_PURGE_MODULE_P="ngx_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}"
 HTTP_CACHE_PURGE_MODULE_URI="http://labs.frickle.com/files/${HTTP_CACHE_PURGE_MODULE_P}.tar.gz"
 
@@ -46,17 +46,9 @@ HTTP_UPLOAD_MODULE_P="nginx_upload_module-${HTTP_UPLOAD_MODULE_PV}"
 HTTP_UPLOAD_MODULE_URI="http://www.grid.net.ru/nginx/download/${HTTP_UPLOAD_MODULE_P}.tar.gz"
 
 # http_slowfs_cache (http://labs.frickle.com/nginx_ngx_slowfs_cache/, BSD-2 license)
-HTTP_SLOWFS_CACHE_MODULE_PV="1.8"
+HTTP_SLOWFS_CACHE_MODULE_PV="1.6"
 HTTP_SLOWFS_CACHE_MODULE_P="ngx_slowfs_cache-${HTTP_SLOWFS_CACHE_MODULE_PV}"
 HTTP_SLOWFS_CACHE_MODULE_URI="http://labs.frickle.com/files/${HTTP_SLOWFS_CACHE_MODULE_P}.tar.gz"
-
-# http_fancyindex_module (http://wiki.nginx.org/NgxFancyIndex, BSD license)
-HTTP_FANCYINDEX_MODULE_PV="0.3.1"
-HTTP_FANCYINDEX_MODULE_PN="ngx-fancyindex"
-# gitorious names the tarbell oddly, hence PNPN
-HTTP_FANCYINDEX_MODULE_PNPN="ngx-fancyindex-ngx-fancyindex"
-HTTP_FANCYINDEX_MODULE_P="${HTTP_FANCYINDEX_MODULE_PN}-${HTTP_FANCYINDEX_MODULE_PV}"
-HTTP_FANCYINDEX_MODULE_URI="http://gitorious.org/${HTTP_FANCYINDEX_MODULE_PN}/${HTTP_FANCYINDEX_MODULE_PN}/archive-tarball/v${HTTP_FANCYINDEX_MODULE_PV}"
 
 inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic
 
@@ -68,12 +60,11 @@ SRC_URI="http://nginx.org/download/${P}.tar.gz
 	nginx_modules_http_push? ( ${HTTP_PUSH_MODULE_URI} )
 	nginx_modules_http_cache_purge? ( ${HTTP_CACHE_PURGE_MODULE_URI} )
 	nginx_modules_http_upload? ( ${HTTP_UPLOAD_MODULE_URI} )
-	nginx_modules_http_slowfs_cache? ( ${HTTP_SLOWFS_CACHE_MODULE_URI} )
-	nginx_modules_http_fancyindex? ( ${HTTP_FANCYINDEX_MODULE_URI} -> ${HTTP_FANCYINDEX_MODULE_P}.tar.gz )"
+	nginx_modules_http_slowfs_cache? ( ${HTTP_SLOWFS_CACHE_MODULE_URI} )"
 
 LICENSE="as-is BSD BSD-2 GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_zone map memcached proxy referer rewrite scgi ssi
@@ -88,10 +79,9 @@ NGINX_MODULES_3RD="
 	http_push
 	http_cache_purge
 	http_upload
-	http_slowfs_cache
-	http_fancyindex"
+	http_slowfs_cache"
 
-IUSE="aio debug +http +http-cache ipv6 libatomic +pcre pcre-jit ssl vim-syntax"
+IUSE="aio debug +http +http-cache ipv6 libatomic +pcre ssl vim-syntax"
 
 for mod in $NGINX_MODULES_STD; do
 	IUSE="${IUSE} +nginx_modules_http_${mod}"
@@ -126,7 +116,6 @@ DEPEND="${CDEPEND}
 	arm? ( dev-libs/libatomic_ops )
 	libatomic? ( dev-libs/libatomic_ops )"
 PDEPEND="vim-syntax? ( app-vim/nginx-syntax )"
-REQUIRED_USE="pcre-jit? ( pcre )"
 
 pkg_setup() {
 	if use nginx_modules_http_passenger; then
@@ -183,7 +172,6 @@ src_configure() {
 	use ipv6      && myconf+=" --with-ipv6"
 	use libatomic && myconf+=" --with-libatomic"
 	use pcre      && myconf+=" --with-pcre"
-	use pcre-jit  && myconf+=" --with-pcre-jit"
 
 	# HTTP modules
 	for mod in $NGINX_MODULES_STD; do
@@ -234,11 +222,6 @@ src_configure() {
 	if use nginx_modules_http_slowfs_cache; then
 		http_enabled=1
 		myconf+=" --add-module=${WORKDIR}/${HTTP_SLOWFS_CACHE_MODULE_P}"
-	fi
-
-	if use nginx_modules_http_fancyindex; then
-		http_enabled=1
-		myconf+=" --add-module=${WORKDIR}/${HTTP_FANCYINDEX_MODULE_PNPN}"
 	fi
 
 	if use http || use http-cache; then
@@ -347,12 +330,7 @@ src_install() {
 
 	if use nginx_modules_http_slowfs_cache; then
 		docinto ${HTTP_SLOWFS_CACHE_MODULE_P}
-		dodoc "${WORKDIR}"/${HTTP_SLOWFS_CACHE_MODULE_P}/{CHANGES,README.md}
-	fi
-
-	if use nginx_modules_http_fancyindex; then
-		docinto ${HTTP_FANCYINDEX_MODULE_P}
-		dodoc "${WORKDIR}"/${HTTP_FANCYINDEX_MODULE_PNPN}/README.rst
+		dodoc "${WORKDIR}"/${HTTP_SLOWFS_CACHE_MODULE_P}/{CHANGES,README}
 	fi
 }
 
