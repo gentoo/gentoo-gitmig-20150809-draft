@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.511 2012/04/14 04:45:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.512 2012/04/14 16:12:55 aballier Exp $
+
+  14 Apr 2012; Alexis Ballier <aballier@gentoo.org> glib-2.32.1.ebuild:
+  allow to replace lelfutils by libelf. the former isnt keyworded and doesnt
+  build on fbsd while the latter is fine
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> glib-2.32.1.ebuild:
   Add ~amd64-linux keyword.
