@@ -1,6 +1,16 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.280 2012/04/09 11:24:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.281 2012/04/14 03:22:45 tetromino Exp $
+
+*epiphany-3.4.0.1 (14 Apr 2012)
+
+  14 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/epiphany-3.3.90-paxctl-introspection.patch, +epiphany-3.4.0.1.ebuild,
+  metadata.xml:
+  Version bump with a much improved history storage and a new gtk3.4-style
+  application menu. Add a new jit USE flag to control whether to relax memory
+  protection on PaX systems and allow using jit-enabled webkit-gtk (bug
+  #410617, thanks to Maxim Kammerer for reporting).
 
 *epiphany-3.2.2 (09 Apr 2012)
 
