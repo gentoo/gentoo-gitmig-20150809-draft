@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.93.2.ebuild,v 1.3 2012/04/05 20:48:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.93.2.ebuild,v 1.4 2012/04/14 09:20:17 gienah Exp $
 
-CABAL_FEATURES="profile haddock lib"
+EAPI=4
+
+CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
 DESCRIPTION="Interface API for regex-posix,pcre,parsec,tdfa,dfa"
@@ -15,6 +17,6 @@ KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.6
-		dev-haskell/mtl"
+		dev-haskell/mtl[profile?]"
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.2"

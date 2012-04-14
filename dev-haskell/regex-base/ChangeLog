@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/regex-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/ChangeLog,v 1.33 2012/04/05 20:48:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/ChangeLog,v 1.34 2012/04/14 09:20:17 gienah Exp $
+
+  14 Apr 2012; Mark Wright <gienah@gentoo.org> regex-base-0.93.2.ebuild:
+  EAPI=4, add haddock hoogle hscolour to CABAL_FEATURES. [profile?] for haskell
+  library dependencies, part of fix for bug 341795 dev-haskell/* USE=profile
+  missing dependencies
 
   05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   regex-base-0.93.2.ebuild:
