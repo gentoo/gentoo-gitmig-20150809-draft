@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/chktex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.38 2011/10/16 17:16:33 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.39 2012/04/14 17:13:05 aballier Exp $
+
+*chktex-1.6.6 (14 Apr 2012)
+
+  14 Apr 2012; Alexis Ballier <aballier@gentoo.org> +chktex-1.6.6.ebuild:
+  version bump, by Shark in bug #411283
 
   16 Oct 2011; Fabian Groffen <grobian@gentoo.org> chktex-1.6.4.ebuild:
   Marked ~x86-macos
