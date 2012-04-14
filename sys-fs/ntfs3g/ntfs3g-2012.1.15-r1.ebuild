@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r1.ebuild,v 1.9 2012/03/30 08:26:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r1.ebuild,v 1.10 2012/04/14 04:25:44 zmedico Exp $
 
 EAPI=4
 inherit linux-info
@@ -14,7 +14,7 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~arm ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="acl crypt debug +external-fuse extras +ntfsprogs static-libs suid +udev xattr"
 
 RDEPEND="!sys-fs/ntfsprogs
@@ -44,8 +44,8 @@ pkg_setup() {
 
 src_configure() {
 	econf \
-		--exec-prefix=/usr \
-		--docdir=/usr/share/doc/${PF} \
+		--exec-prefix="${EPREFIX}/usr" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable debug) \
 		--enable-ldscript \
 		--disable-ldconfig \
@@ -72,8 +72,8 @@ src_install() {
 
 	# http://bugs.gentoo.org/398069
 	dodir /usr/sbin
-	mv -vf "${ED}"/sbin/* "${ED}"/usr/sbin || die
-	rm -rf "${ED}"/sbin
+	mv -vf "${D}"/sbin/* "${ED}"/usr/sbin || die
+	rm -rf "${D}"/sbin
 
 	dosym mount.ntfs-3g /usr/sbin/mount.ntfs #374197
 }
