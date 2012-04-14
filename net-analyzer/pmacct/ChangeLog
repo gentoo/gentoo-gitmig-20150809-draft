@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.77 2012/04/14 11:41:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.78 2012/04/14 23:42:42 jdhore Exp $
+
+  14 Apr 2012; Jeff Horelick <jdhore@gentoo.org> pmacct-0.12.5-r1.ebuild:
+  marked x86 per bug 411863
 
   14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> pmacct-0.12.5-r1.ebuild:
   Stable for amd64, wrt bug #411863
