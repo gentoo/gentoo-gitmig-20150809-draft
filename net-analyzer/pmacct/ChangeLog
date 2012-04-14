@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.76 2012/04/13 15:54:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.77 2012/04/14 11:41:51 ago Exp $
+
+  14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> pmacct-0.12.5-r1.ebuild:
+  Stable for amd64, wrt bug #411863
 
   13 Apr 2012; Jeroen Roovers <jer@gentoo.org> files/pmacctd-init.d:
   Fix run time configuration directory.
