@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/regex-posix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.32 2012/04/05 20:49:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.33 2012/04/14 09:36:38 gienah Exp $
+
+  14 Apr 2012; Mark Wright <gienah@gentoo.org> metadata.xml,
+  regex-posix-0.95.1.ebuild:
+  EAPI=4. [profile?] for haskell library dependencies, part of fix for bug
+  341795 dev-haskell/* USE=profile missing dependencies
 
   05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   regex-posix-0.95.1.ebuild:
