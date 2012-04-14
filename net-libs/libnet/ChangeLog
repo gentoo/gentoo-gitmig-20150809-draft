@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.77 2012/03/30 16:07:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.78 2012/04/14 07:26:34 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> libnet-1.1.6.ebuild:
+  Fix for USE=-static-libs for prefix.
 
 *libnet-1.1.6 (30 Mar 2012)
 
