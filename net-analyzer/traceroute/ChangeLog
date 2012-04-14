@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.90 2012/03/02 21:25:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.91 2012/04/14 08:33:06 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> traceroute-2.0.18.ebuild:
+  Add ~amd64-linux keyword.
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> traceroute-2.0.18.ebuild:
   Marking traceroute-2.0.18 ppc64 for bug 400431
