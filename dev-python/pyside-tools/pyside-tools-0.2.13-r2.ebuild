@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13-r2.ebuild,v 1.2 2012/04/14 12:46:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13-r2.ebuild,v 1.3 2012/04/14 18:05:23 pesa Exp $
 
 EAPI=4
 
@@ -10,7 +10,9 @@ PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 
-inherit eutils cmake-utils python
+VIRTUALX_COMMAND="cmake-utils_src_test"
+
+inherit eutils cmake-utils python virtualx
 
 DESCRIPTION="PySide development tools (lupdate, rcc, uic)"
 HOMEPAGE="http://www.pyside.org/"
@@ -65,7 +67,7 @@ src_compile() {
 
 src_test() {
 	testing() {
-		CMAKE_USE_DIR="${BUILDDIR}" cmake-utils_src_test
+		CMAKE_USE_DIR="${BUILDDIR}" virtualmake
 	}
 	python_execute_function -s testing
 }
