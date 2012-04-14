@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.63 2012/02/19 14:12:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.64 2012/04/14 22:57:28 aballier Exp $
+
+*libv4l-0.8.8 (14 Apr 2012)
+
+  14 Apr 2012; Alexis Ballier <aballier@gentoo.org> +libv4l-0.8.8.ebuild:
+  version bump
 
 *libv4l-0.8.6 (19 Feb 2012)
 
