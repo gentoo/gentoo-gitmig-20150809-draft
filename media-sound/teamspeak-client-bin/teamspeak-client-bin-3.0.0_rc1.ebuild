@@ -1,15 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.0_rc1.ebuild,v 1.3 2012/02/05 06:31:11 vapier Exp $
-
-# NOTE: The comments in this file are for instruction and documentation.
-# They're not meant to appear with your final, production ebuild.  Please
-# remember to remove them before submitting or committing your ebuild.  That
-# doesn't mean you can't add your own comments though.
-
-# The 'Header' on the third line should just be left alone.  When your ebuild
-# will be committed to cvs, the details on that line will be automatically
-# generated to contain the correct data.
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.0_rc1.ebuild,v 1.4 2012/04/14 11:14:33 pacho Exp $
 
 EAPI=1
 
