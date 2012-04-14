@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Simple/ChangeLog,v 1.5 2012/03/20 22:17:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Simple/ChangeLog,v 1.6 2012/04/14 15:14:43 maekke Exp $
+
+  14 Apr 2012; Markus Meier <maekke@gentoo.org> Tie-Simple-1.03.ebuild:
+  x86 stable, bug #408579
 
   20 Mar 2012; Jeroen Roovers <jer@gentoo.org> Tie-Simple-1.03.ebuild:
   Stable for HPPA (bug #408579).
