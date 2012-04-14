@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13670 2012/04/13 05:22:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13671 2012/04/14 05:52:44 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -226,6 +226,8 @@ dev-php/Horde_Yaml
 # Farsight2 conflicts with Farstream
 # So pidgin needs a patch
 =net-im/pidgin-2.10.3-r100
+# Needs gst-plugins-flac-0.10.31 + commit 265a5bfa to write seekable flac files
+=media-sound/sound-juicer-3.4*
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Mar 2012)
 # Causes font corruption, bug #409593.
