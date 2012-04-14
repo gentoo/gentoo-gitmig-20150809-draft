@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.117 2012/04/13 07:43:18 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.118 2012/04/14 11:41:22 ago Exp $
+
+  14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> wicd-1.7.2.1.ebuild:
+  Stable for amd64, wrt bug #411729
 
 *wicd-1.7.2.1 (13 Apr 2012)
 
