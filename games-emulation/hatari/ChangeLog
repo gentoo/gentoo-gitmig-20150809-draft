@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/hatari
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.34 2012/03/12 18:55:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.35 2012/04/14 11:43:53 ago Exp $
+
+  14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> hatari-1.6.1.ebuild:
+  Stable for amd64, wrt bug #411773
 
 *hatari-1.6.1 (12 Mar 2012)
 
