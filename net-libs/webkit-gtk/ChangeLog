@@ -1,6 +1,19 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.149 2012/04/02 21:58:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.150 2012/04/14 03:22:12 tetromino Exp $
+
+*webkit-gtk-1.8.0-r300 (14 Apr 2012)
+*webkit-gtk-1.8.0-r200 (14 Apr 2012)
+
+  14 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/webkit-gtk-1.7.5-linguas.patch,
+  +files/webkit-gtk-1.7.90-parallel-make-hack.patch,
+  +files/webkit-gtk-1.7.90-test_garbage_collection.patch,
+  +webkit-gtk-1.8.0-r200.ebuild, +webkit-gtk-1.8.0-r300.ebuild,
+  +files/webkit-gtk-1.8.0-svgimagebuffer-clip.patch, metadata.xml:
+  Version bump with performance improvements, geolocation support, and
+  experimental WebKit2 support (splits rendering and UI into separate
+  processes).
 
   02 Apr 2012; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-1.4.3-r200.ebuild,
   -webkit-gtk-1.4.3-r300.ebuild, files/webkit-gtk-1.6.1-double-conversion.patch:
