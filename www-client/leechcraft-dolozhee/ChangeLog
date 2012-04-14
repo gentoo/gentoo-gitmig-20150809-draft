@@ -1,0 +1,10 @@
+# ChangeLog for www-client/leechcraft-dolozhee
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-dolozhee/ChangeLog,v 1.1 2012/04/14 18:36:05 maksbotan Exp $
+
+*leechcraft-dolozhee-9999 (14 Apr 2012)
+
+  14 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-dolozhee-9999.ebuild, +metadata.xml:
+  Add www-client/leechcraft-dolozhee, thanks to 0xd34df00d
+
