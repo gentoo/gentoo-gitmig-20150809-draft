@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-19.0.1084.1.ebuild,v 1.1 2012/04/02 12:29:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-19.0.1084.24.ebuild,v 1.1 2012/04/14 03:34:07 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -253,11 +253,29 @@ src_configure() {
 }
 
 src_compile() {
-	emake chrome chrome_sandbox chromedriver BUILDTYPE=Release V=1 || die
+	local test_targets
+	for x in base cacheinvalidation crypto \
+		googleurl gpu media net printing; do
+		test_targets+=" ${x}_unittests"
+	done
+
+	local make_targets="chrome chrome_sandbox chromedriver"
+	if use test; then
+		make_targets+=$test_targets
+	fi
+
+	# See bug #410883 for more info about the .host mess.
+	emake ${make_targets} BUILDTYPE=Release V=1 \
+		CC.host="$(tc-getCC)" CFLAGS.host="${CFLAGS}" \
+		CXX.host="$(tc-getCXX)" CXXFLAGS.host="${CXXFLAGS}" \
+		LINK.host="$(tc-getCXX)" LDFLAGS.host="${LDFLAGS}" \
+		AR.host="$(tc-getAR)" || die
+
 	pax-mark m out/Release/chrome
 	if use test; then
-		emake {base,cacheinvalidation,crypto,googleurl,gpu,media,net,printing}_unittests BUILDTYPE=Release V=1 || die
-		pax-mark m out/Release/{base,cacheinvalidation,crypto,googleurl,gpu,media,net,printing}_unittests
+		for x in $test_targets; do
+			pax-mark m out/Release/${x}
+		done
 	fi
 }
 
