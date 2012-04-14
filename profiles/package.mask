@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13671 2012/04/14 05:52:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13672 2012/04/14 11:21:44 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (14 Apr 2012)
+# Incompatible with latest libxfcegui4 wrt bug #411949
+# Last upstrem release was for Xfce 4.6 and this has
+# been kept alive by custom patching until now
+# Removal in 30 days
+xfce-extra/xfce4-linelight-plugin
 
 # Patrick Lauer <patrick@gentoo.org> (13 Apr 2012)
 # Needs lots of fixes, plus modules fail, so mask until it's

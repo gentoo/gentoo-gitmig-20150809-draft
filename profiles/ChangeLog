@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6418 2012/04/14 05:52:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6419 2012/04/14 11:21:44 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite xfce4-linelight-plugin wrt #411949
 
   14 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Mask sound-juicer-3.4, needs gst-plugins-flac-0.10.31 + commit 265a5bfa to
