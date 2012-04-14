@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.228 2012/02/04 17:41:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.229 2012/04/14 07:47:41 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> hdparm-9.39.ebuild:
+  Add ~amd64-linux keyword.
 
 *hdparm-9.39 (04 Feb 2012)
 
