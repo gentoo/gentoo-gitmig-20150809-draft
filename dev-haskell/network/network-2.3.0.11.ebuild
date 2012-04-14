@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-2.3.0.11.ebuild,v 1.1 2012/03/04 03:56:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-2.3.0.11.ebuild,v 1.2 2012/04/14 01:51:41 gienah Exp $
 
 EAPI="4"
 
@@ -21,13 +21,15 @@ RDEPEND="dev-haskell/parsec[profile?]
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.8
 		test? ( <dev-haskell/hunit-1.3[profile?]
-			<dev-haskell/test-framework-0.6[profile?]
+			<dev-haskell/test-framework-0.7[profile?]
 			<dev-haskell/test-framework-hunit-0.3[profile?]
 		)"
 
 src_prepare() {
 	epatch "${FILESDIR}/network-2.2.0.0-eat-configure-opts.patch"
 	eautoreconf
+	sed -e 's@test-framework < 0.6@test-framework < 0.7@' \
+		-i "${S}/${PN}.cabal" || die "Could not loosen dependencies"
 }
 
 src_configure() {

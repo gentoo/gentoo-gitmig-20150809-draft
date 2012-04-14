@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.58 2012/03/04 03:56:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.59 2012/04/14 01:51:41 gienah Exp $
+
+  14 Apr 2012; Mark Wright <gienah@gentoo.org> network-2.3.0.11.ebuild:
+  Allow test-framework-0.6 for FEATURES=test
 
 *network-2.3.0.11 (04 Mar 2012)
 
