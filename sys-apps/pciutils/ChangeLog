@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.197 2012/04/02 04:00:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.198 2012/04/14 05:34:22 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> pciutils-3.1.9-r2.ebuild:
+  Fix for prefix and add keywords for ~amd64-linux and ~x86-linux.
 
   02 Apr 2012; Jeroen Roovers <jer@gentoo.org> pciutils-3.1.9-r2.ebuild:
   Marked ~hppa (bug #410401).
