@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.209 2012/04/14 19:30:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.210 2012/04/14 20:22:23 slyfox Exp $
+
+  14 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
+  move 'dev-haskell/cabal' santy check out from 'pkg_*' to 'src_*' function to
+  allow binary installation. Reported by tamiko.
 
   14 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
   fix -dynamic './setup configure' failures against newer libffi (bug #411789
