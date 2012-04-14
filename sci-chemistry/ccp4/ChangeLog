@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ccp4
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.32 2011/10/16 12:25:02 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ChangeLog,v 1.33 2012/04/14 09:59:34 nativemad Exp $
+
+  14 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> ccp4-6.1.3-r1.ebuild:
+  x86 stable, see bug 376463
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> ccp4-6.1.3-r1.ebuild:
   amd64 restable
