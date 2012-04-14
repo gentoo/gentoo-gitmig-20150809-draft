@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.21.ebuild,v 1.5 2012/02/24 14:11:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.21.ebuild,v 1.6 2012/04/14 21:42:23 zmedico Exp $
 
 EAPI=4
 inherit eutils gnome2-utils
@@ -14,7 +14,7 @@ SRC_URI="http://download.geany.org/${P}.tar.bz2"
 
 LICENSE="GPL-2 Scintilla"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="+vte"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.49 2012/02/24 14:11:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.50 2012/04/14 21:42:23 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> geany-0.21.ebuild:
+  Add ~amd64-linux keyword.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> geany-0.21.ebuild:
   x86 stable wrt bug #404537
