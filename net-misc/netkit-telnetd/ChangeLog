@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.50 2012/04/14 12:46:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.51 2012/04/14 15:13:09 maekke Exp $
+
+  14 Apr 2012; Markus Meier <maekke@gentoo.org> netkit-telnetd-0.17-r10.ebuild:
+  arm stable, bug #381991
 
   14 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
   netkit-telnetd-0.17-r10.ebuild:
