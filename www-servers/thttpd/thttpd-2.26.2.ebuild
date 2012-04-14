@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.2.ebuild,v 1.1 2012/04/04 12:24:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.2.ebuild,v 1.2 2012/04/14 03:57:26 zmedico Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=""
@@ -23,7 +23,7 @@ DEPEND=""
 
 THTTPD_USER=thttpd
 THTTPD_GROUP=thttpd
-THTTPD_DOCROOT="/var/www/localhost/htdocs"
+THTTPD_DOCROOT="${EPREFIX}/var/www/localhost/htdocs"
 
 DOCS=( README TODO )
 
@@ -51,9 +51,9 @@ src_install () {
 }
 
 pkg_postinst() {
-	chown root:${THTTPD_GROUP} "${ROOT}/usr/sbin/makeweb" \
+	chown root:${THTTPD_GROUP} "${EROOT}/usr/sbin/makeweb" \
 		|| die "Failed chown makeweb"
-	chmod 2751 "${ROOT}/usr/sbin/makeweb" \
+	chmod 2751 "${EROOT}/usr/sbin/makeweb" \
 		|| die "Failed chmod makeweb"
 	chmod 755 "${THTTPD_DOCROOT}/cgi-bin/printenv" \
 		|| die "Failed chmod printenv"
