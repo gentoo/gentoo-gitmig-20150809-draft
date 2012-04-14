@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Form
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Form/ChangeLog,v 1.14 2012/03/30 14:47:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Form/ChangeLog,v 1.15 2012/04/14 17:04:58 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> HTML-Form-6.30.0.ebuild:
+  Add ~amd64-linux keyword.
 
 *HTML-Form-6.30.0 (30 Mar 2012)
 
