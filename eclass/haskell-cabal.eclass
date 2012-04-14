@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.29 2012/04/09 18:08:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.30 2012/04/14 19:30:53 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -172,9 +172,12 @@ cabal-bootstrap() {
 		$(ghc-getghc) "$@"
 	}
 	if $(ghc-supports-shared-libraries); then
-		# some custom build systems might use external libraries,
-		# for which we don't have shared libs, so keep static fallback
-		make_setup -dynamic "$@" || make_setup "$@" || die "compiling ${setupmodule} failed"
+		# # some custom build systems might use external libraries,
+		# # for which we don't have shared libs, so keep static fallback
+		# Disabled '-dynamic' as ghc does not embed RPATH to used extra-libraries:
+		# bug #411789, http://hackage.haskell.org/trac/ghc/ticket/5743#comment:3
+		# make_setup -dynamic "$@" ||
+		make_setup "$@" || die "compiling ${setupmodule} failed"
 	else
 		make_setup "$@" || die "compiling ${setupmodule} failed"
 	fi
