@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leechcraft-otlozhu
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-otlozhu/ChangeLog,v 1.1 2012/04/14 18:31:39 maksbotan Exp $
+
+*leechcraft-otlozhu-9999 (14 Apr 2012)
+
+  14 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-otlozhu-9999.ebuild, +metadata.xml:
+  Add net-misc/leechcraft-otlozhu, thanks to 0xd34df00d
+
