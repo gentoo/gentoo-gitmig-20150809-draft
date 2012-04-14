@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20120323.ebuild,v 1.1 2012/03/25 23:40:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20120323.ebuild,v 1.2 2012/04/14 17:46:17 radhermit Exp $
 
 EAPI=4
 
@@ -23,7 +23,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch \
-		"${FILESDIR}"/${PN}-5.0.20110517-makefile.patch
+		"${FILESDIR}"/${PN}-5.0.20110517-makefile.patch \
+		"${FILESDIR}"/${P}-parallel-make.patch
 }
 
 src_configure() {
