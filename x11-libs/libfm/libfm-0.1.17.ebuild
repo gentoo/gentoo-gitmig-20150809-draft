@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.17.ebuild,v 1.7 2012/03/27 18:45:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.17.ebuild,v 1.8 2012/04/14 19:23:21 zmedico Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="A library for file management"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
 SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 
-KEYWORDS="~alpha amd64 arm ppc x86 ~x86-linux"
+KEYWORDS="~alpha amd64 arm ppc x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug examples udev"
