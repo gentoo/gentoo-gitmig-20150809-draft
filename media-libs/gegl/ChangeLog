@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.67 2012/04/11 23:34:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.68 2012/04/14 00:46:10 sping Exp $
+
+  14 Apr 2012; Sebastian Pipping <sping@gentoo.org> gegl-0.1.6.ebuild,
+  gegl-0.1.8.ebuild:
+  Make sure gegl <0.1.10 cannot be used with babl >=0.1.8 (bug #411703)
+
+  14 Apr 2012; Sebastian Pipping <sping@gentoo.org> gegl-0.1.6.ebuild,
+  gegl-0.1.8.ebuild:
+  Make sure gegl <0.1.10 cannot be used with babl >=0.1.8
 
 *gegl-0.2.0 (11 Apr 2012)
 

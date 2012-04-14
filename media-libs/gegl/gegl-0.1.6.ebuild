@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.19 2011/05/20 20:20:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.20 2012/04/14 00:46:10 sping Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc
 
 IUSE="cairo debug exif ffmpeg graphviz jpeg jpeg2k lua mmx openexr png raw sdl sse svg umfpack v4l"
 
-DEPEND=">=media-libs/babl-0.1.4
+DEPEND=">=media-libs/babl-0.1.4 <media-libs/babl-0.1.8
 	dev-libs/glib:2
 	x11-libs/gtk+:2
 	x11-libs/gdk-pixbuf:2

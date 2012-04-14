@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.9 2012/04/11 23:34:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.10 2012/04/14 00:46:10 sping Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="cairo debug exif ffmpeg graphviz introspection jpeg jpeg2k lensfun lua mmx
 
 VALASLOT="0.14"
 
-RDEPEND=">=media-libs/babl-0.1.6[introspection?]
+RDEPEND=">=media-libs/babl-0.1.6[introspection?] <media-libs/babl-0.1.8[introspection?]
 	>=dev-libs/glib-2.28:2
 	>=x11-libs/gdk-pixbuf-2.18:2
 	x11-libs/pango
