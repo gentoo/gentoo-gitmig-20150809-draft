@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.178 2012/03/28 21:07:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.179 2012/04/14 03:27:04 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> readline-6.2_p1-r1.ebuild:
+  Add ~amd64-linux and ~x86-linux keywords.
 
   28 Mar 2012; Mike Frysinger <vapier@gentoo.org> readline-6.2_p1.ebuild:
   Drop ancient bash depend in stable ebuild too.
