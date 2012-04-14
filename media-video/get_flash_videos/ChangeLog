@@ -1,6 +1,9 @@
 # ChangeLog for media-video/get_flash_videos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.12 2012/02/29 21:33:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.13 2012/04/14 18:53:53 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> get_flash_videos-1.24-r1.ebuild:
+  Add ~amd64-linux keyword.
 
 *get_flash_videos-1.24-r1 (29 Feb 2012)
 
