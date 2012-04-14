@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.136 2012/04/02 04:01:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.137 2012/04/14 05:40:53 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> usbutils-005-r1.ebuild:
+  Fix for prefix and add keywords for ~amd64-linux and ~x86-linux.
 
   02 Apr 2012; Jeroen Roovers <jer@gentoo.org> usbutils-005-r1.ebuild:
   Marked ~hppa (bug #410401).

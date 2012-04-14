@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-005-r1.ebuild,v 1.2 2012/04/02 04:01:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-005-r1.ebuild,v 1.3 2012/04/14 05:40:53 zmedico Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/u/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa"
+KEYWORDS="~amd64 ~hppa ~amd64-linux ~x86-linux"
 IUSE="python zlib"
 
 RDEPEND="virtual/libusb:1
@@ -45,8 +45,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--datarootdir=/usr/share \
-		--datadir=/usr/share/misc \
+		--datarootdir="${EPREFIX}/usr/share" \
+		--datadir="${EPREFIX}/usr/share/misc" \
 		$(use_enable zlib)
 }
 
