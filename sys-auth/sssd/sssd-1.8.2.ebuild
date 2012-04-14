@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.8.1.ebuild,v 1.1 2012/03/16 19:35:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.8.2.ebuild,v 1.1 2012/04/14 17:37:54 maksbotan Exp $
 
 EAPI=4
 
@@ -33,7 +33,11 @@ COMMON_DEP="
 	sys-apps/keyutils
 	>=net-dns/c-ares-1.7.4
 	>=dev-libs/nss-3.12.9
-	selinux? ( >=sys-libs/libselinux-2.0.94 >=sys-libs/libsemanage-2.0.45 )
+	selinux? (
+		>=sys-libs/libselinux-2.0.94
+		>=sys-libs/libsemanage-2.0.45
+		sec-policy/selinux-sssd
+	)
 	net-dns/bind-tools
 	dev-libs/cyrus-sasl
 	sys-apps/dbus
