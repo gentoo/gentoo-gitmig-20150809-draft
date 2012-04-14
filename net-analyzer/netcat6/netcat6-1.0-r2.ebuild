@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r2.ebuild,v 1.8 2011/08/03 23:44:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r2.ebuild,v 1.9 2012/04/14 18:47:21 zmedico Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.deepspace6.net/pub/ds6/sources/nc6/nc6-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ~ppc64 s390 sh sparc x86 ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ~ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE="ipv6 nls bluetooth"
 
 # need to block netcat as we provide the "nc" file now too

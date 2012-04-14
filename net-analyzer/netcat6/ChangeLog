@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat6
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.28 2011/08/03 23:44:29 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.29 2012/04/14 18:47:21 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> netcat6-1.0-r2.ebuild:
+  Add ~amd64-linux keyword.
 
   03 Aug 2011; Zac Medico <zmedico@gentoo.org> netcat6-1.0-r2.ebuild:
   Add ~x86-linux keyword.
