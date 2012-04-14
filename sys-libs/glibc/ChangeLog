@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.830 2012/04/14 02:04:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.831 2012/04/14 21:59:46 vapier Exp $
+
+  14 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_compile.eblit:
+  Disable building of static ELFs for ia64 cross-compiler targets to workaround
+  a broken gcc-stage1 libgcc #411677 by Michael Kosarev.
 
   14 Apr 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.13-r4.ebuild:
   Mark s390 stable #382377.

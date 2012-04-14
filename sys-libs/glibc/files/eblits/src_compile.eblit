@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.23 2012/01/17 23:51:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.24 2012/04/14 21:59:47 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -99,6 +99,16 @@ glibc_do_configure() {
 	cd "${GBUILDDIR}"
 	echo "${S}"/configure ${myconf}
 	"${S}"/configure ${myconf} || die "failed to configure glibc"
+
+	# ia64 static cross-compilers are a pita in so much that they
+	# can't produce static ELFs (as the libgcc.a is broken).  so
+	# disable building of the programs for those targets if it
+	# doesn't work.
+	# XXX: We could turn this into a compiler test, but ia64 is
+	# the only one that matters, so this should be fine for now.
+	if is_crosscompile && [[ ${CTARGET} == ia64* ]] ; then
+		sed -i '1i+link-static = touch $@' config.make
+	fi
 }
 
 toolchain-glibc_src_compile() {
