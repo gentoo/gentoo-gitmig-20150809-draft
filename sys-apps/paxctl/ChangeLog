@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.39 2012/04/05 16:38:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.40 2012/04/14 15:15:13 maekke Exp $
+
+  14 Apr 2012; Markus Meier <maekke@gentoo.org> paxctl-0.7-r1.ebuild:
+  arm stable, bug #410685
 
   05 Apr 2012; Jeroen Roovers <jer@gentoo.org> paxctl-0.7-r1.ebuild:
   Stable for HPPA (bug #410685).
