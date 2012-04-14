@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mrbump
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.8 2011/10/16 12:26:15 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.9 2012/04/14 09:52:34 nativemad Exp $
+
+  14 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> mrbump-0.4.4.ebuild:
+  x86 stable, see bug 375917, thanks all.
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> mrbump-0.4.4.ebuild:
   amd64 restable

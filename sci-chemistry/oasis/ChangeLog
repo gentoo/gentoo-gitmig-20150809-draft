@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/oasis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.16 2011/10/16 12:28:00 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.17 2012/04/14 09:50:57 nativemad Exp $
+
+  14 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> oasis-4.0-r2.ebuild:
+  x86 stable, see bug 375917, thanks all.
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> oasis-4.0-r2.ebuild:
   amd64 restable

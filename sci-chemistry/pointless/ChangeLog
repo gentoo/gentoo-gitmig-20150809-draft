@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pointless
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.31 2012/02/28 20:52:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.32 2012/04/14 09:46:56 nativemad Exp $
+
+  14 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> pointless-1.6.2.ebuild:
+  x86 stable, see bug 375917, thanks all.
 
 *pointless-1.6.14 (28 Feb 2012)
 

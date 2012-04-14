@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/xia2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.12 2012/02/28 20:57:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.13 2012/04/14 09:54:22 nativemad Exp $
+
+  14 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> xia2-0.3.3.1.ebuild:
+  x86 stable, see bug 375917, thanks all.
 
 *xia2-0.3.4.0 (28 Feb 2012)
 
