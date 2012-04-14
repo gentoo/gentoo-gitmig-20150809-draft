@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/lsb-release-1.4.ebuild,v 1.10 2012/03/21 06:16:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/lsb-release-1.4.ebuild,v 1.11 2012/04/14 19:35:49 vapier Exp $
 
 DESCRIPTION="LSB version query program"
 HOMEPAGE="http://www.linuxbase.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/lsb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 arm hppa ia64 ppc ppc64 s390 sh ~sparc x86"
 IUSE=""
 
 # Perl isn't needed at runtime, it is just used to generate the man page.
