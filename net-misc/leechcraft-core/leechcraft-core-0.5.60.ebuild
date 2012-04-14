@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-0.5.60.ebuild,v 1.1 2012/03/20 12:42:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-0.5.60.ebuild,v 1.2 2012/04/14 18:40:08 maksbotan Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +sqlite postgres"
 
-DEPEND=">=dev-libs/boost-1.39
+DEPEND=">=dev-libs/boost-1.46
 		x11-libs/qt-core
 		x11-libs/qt-gui
 		x11-libs/qt-script
