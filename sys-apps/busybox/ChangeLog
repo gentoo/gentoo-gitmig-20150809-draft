@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.298 2012/02/02 15:22:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.299 2012/04/14 07:54:34 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> busybox-1.19.3-r1.ebuild:
+  Add ~amd64-linux keyword.
 
   02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> busybox-1.19.3-r1.ebuild:
   ppc64 stable wrt #395427
