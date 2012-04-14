@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libxkbui
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.33 2011/02/06 10:42:28 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.34 2012/04/14 17:54:18 mgorny Exp $
+
+*libxkbui-1.0.2-r1 (14 Apr 2012)
+
+  14 Apr 2012; Michał Górny <mgorny@gentoo.org> +libxkbui-1.0.2-r1.ebuild:
+  Update to use xorg-2 eclass.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libxkbui-1.0.2.ebuild:
   Drop to ~mips
