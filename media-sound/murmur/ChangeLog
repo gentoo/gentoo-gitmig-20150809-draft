@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.28 2012/02/24 16:51:25 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.29 2012/04/14 19:41:23 vapier Exp $
+
+  14 Apr 2012; Mike Frysinger <vapier@gentoo.org> murmur-1.2.3-r3.ebuild:
+  Add ia64 love #282954 by Dennis Schridde.
 
 *murmur-1.2.3-r3 (24 Feb 2012)
 
