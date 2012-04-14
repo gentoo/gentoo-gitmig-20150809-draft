@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.10.1.ebuild,v 1.6 2012/03/25 17:05:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.10.1.ebuild,v 1.7 2012/04/14 22:08:30 zmedico Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-linux"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="gnome-keyring networkmanager +upower"
 # IUSE="test"
 
