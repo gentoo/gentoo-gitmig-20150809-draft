@@ -1,0 +1,91 @@
+From 1554ba408633397066d31c3d565c217b5a385fb8 Mon Sep 17 00:00:00 2001
+From: Michael Palimaka <kensington@astralcloak.net>
+Date: Sun, 15 Apr 2012 04:55:03 +1000
+Subject: [PATCH] Fix KWin build failure when OpenGL is disabled and OpenGLES
+ is enabled.
+
+Some old restructuring caused -DKWIN_HAVE_OPENGLES to no longer be
+passed to the compiler, causing OpenGL-specific code to be built
+while the libraries to link it were not available.
+
+REVIEW: 104558
+---
+ kwin/effects/CMakeLists.txt                 |    4 ++--
+ kwin/kcmkwin/kwincompositing/CMakeLists.txt |    8 ++++----
+ kwin/kcmkwin/kwinscreenedges/CMakeLists.txt |    8 ++++----
+ 3 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/kwin/effects/CMakeLists.txt b/kwin/effects/CMakeLists.txt
+index a9eea1d..88c8b32 100644
+--- a/kwin/effects/CMakeLists.txt
++++ b/kwin/effects/CMakeLists.txt
+@@ -113,9 +113,9 @@ if( NOT KWIN_MOBILE_EFFECTS )
+     include( windowgeometry/CMakeLists.txt )
+     include( zoom/CMakeLists.txt )
+ 
+-    if( NOT KWIN_HAVE_OPENGLES_COMPOSITING )
++    if( NOT OPENGLES_FOUND )
+     include( logout/CMakeLists.txt )
+-    endif( NOT KWIN_HAVE_OPENGLES_COMPOSITING )
++    endif( NOT OPENGLES_FOUND )
+ endif( NOT KWIN_MOBILE_EFFECTS )
+ 
+ # OpenGL-specific effects
+diff --git a/kwin/kcmkwin/kwincompositing/CMakeLists.txt b/kwin/kcmkwin/kwincompositing/CMakeLists.txt
+index 2d420c0..decc6b7 100644
+--- a/kwin/kcmkwin/kwincompositing/CMakeLists.txt
++++ b/kwin/kcmkwin/kwincompositing/CMakeLists.txt
+@@ -18,7 +18,7 @@ target_link_libraries(kcm_kwincompositing ${KDE4_KCMUTILS_LIBS} ${KDE4_KDEUI_LIB
+ install(TARGETS kcm_kwincompositing  DESTINATION ${PLUGIN_INSTALL_DIR} )
+ 
+ # CompositingPrefs uses OpenGL
+-if(OPENGL_FOUND AND NOT KWIN_HAVE_OPENGLES_COMPOSITING)
++if(OPENGL_FOUND)
+   target_link_libraries(kcm_kwincompositing kwinglutils ${OPENGL_gl_LIBRARY})
+   set_target_properties(kcm_kwincompositing PROPERTIES COMPILE_FLAGS -DKWIN_HAVE_OPENGL)
+   # -ldl used by OpenGL code
+@@ -26,11 +26,11 @@ if(OPENGL_FOUND AND NOT KWIN_HAVE_OPENGLES_COMPOSITING)
+   if (DL_LIBRARY)
+     target_link_libraries(kcm_kwincompositing ${DL_LIBRARY})
+   endif(DL_LIBRARY)
+-endif(OPENGL_FOUND AND NOT KWIN_HAVE_OPENGLES_COMPOSITING)
+-if(KWIN_HAVE_OPENGLES_COMPOSITING)
++endif(OPENGL_FOUND)
++if(OPENGLES_FOUND)
+   target_link_libraries(kcm_kwincompositing kwinglesutils ${OPENGLES_LIBRARIES})
+   set_target_properties(kcm_kwincompositing PROPERTIES COMPILE_FLAGS "-DKWIN_HAVE_OPENGL -DKWIN_HAVE_OPENGLES")
+-endif(KWIN_HAVE_OPENGLES_COMPOSITING)
++endif(OPENGLES_FOUND)
+ if (X11_Xrender_FOUND)
+   target_link_libraries(kcm_kwincompositing ${X11_Xrender_LIB})
+ endif (X11_Xrender_FOUND)
+diff --git a/kwin/kcmkwin/kwinscreenedges/CMakeLists.txt b/kwin/kcmkwin/kwinscreenedges/CMakeLists.txt
+index 2827350..cecff7c 100644
+--- a/kwin/kcmkwin/kwinscreenedges/CMakeLists.txt
++++ b/kwin/kcmkwin/kwinscreenedges/CMakeLists.txt
+@@ -14,7 +14,7 @@ target_link_libraries( kcm_kwinscreenedges ${X11_LIBRARIES} kworkspace ${KDE4_PL
+ install( TARGETS kcm_kwinscreenedges  DESTINATION ${PLUGIN_INSTALL_DIR} )
+ 
+ # CompositingPrefs uses OpenGL
+-if( OPENGL_FOUND AND NOT KWIN_HAVE_OPENGLES_COMPOSITING )
++if( OPENGL_FOUND )
+   target_link_libraries( kcm_kwinscreenedges kwinglutils ${OPENGL_gl_LIBRARY} )
+   set_target_properties(kcm_kwinscreenedges PROPERTIES COMPILE_FLAGS -DKWIN_HAVE_OPENGL)
+ # -ldl used by OpenGL code
+@@ -22,11 +22,11 @@ if( OPENGL_FOUND AND NOT KWIN_HAVE_OPENGLES_COMPOSITING )
+   if( DL_LIBRARY )
+     target_link_libraries( kcm_kwinscreenedges ${DL_LIBRARY} )
+   endif( DL_LIBRARY )
+-endif( OPENGL_FOUND AND NOT KWIN_HAVE_OPENGLES_COMPOSITING )
+-if(KWIN_HAVE_OPENGLES_COMPOSITING)
++endif( OPENGL_FOUND )
++if(OPENGLES_FOUND)
+   target_link_libraries(kcm_kwinscreenedges kwinglesutils ${OPENGLES_LIBRARIES})
+   set_target_properties(kcm_kwinscreenedges PROPERTIES COMPILE_FLAGS "-DKWIN_HAVE_OPENGL -DKWIN_HAVE_OPENGLES")
+-endif(KWIN_HAVE_OPENGLES_COMPOSITING)
++endif(OPENGLES_FOUND)
+ if( X11_Xrender_FOUND )
+   target_link_libraries( kcm_kwinscreenedges ${X11_Xrender_LIB} )
+ endif( X11_Xrender_FOUND )
+-- 
+1.7.10

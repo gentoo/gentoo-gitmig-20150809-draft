@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.8.2.ebuild,v 1.1 2012/04/04 23:59:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.8.2.ebuild,v 1.2 2012/04/14 19:36:28 johu Exp $
 
 EAPI=4
 
@@ -50,6 +50,7 @@ KMEXTRACTONLY="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.4.2-xinerama_cmake_automagic.patch"
+	"${FILESDIR}/${PN}-4.8.1-fix-opengl-disabled-build.patch"
 )
 
 # you need one of these
