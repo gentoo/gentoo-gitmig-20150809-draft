@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.216 2012/02/26 09:38:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.217 2012/04/14 06:09:29 tetromino Exp $
+
+*sound-juicer-3.4.0 (14 Apr 2012)
+
+  14 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +sound-juicer-3.4.0.ebuild:
+  Version bump to the first stable gtk3-based release. Note that unlike older
+  versions, in 3.4 encoding profiles cannot be customized.
 
   26 Feb 2012; Pacho Ramos <pacho@gentoo.org> -sound-juicer-2.32.0.ebuild,
   sound-juicer-2.32.0-r1.ebuild:
