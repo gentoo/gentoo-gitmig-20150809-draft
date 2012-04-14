@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.91 2012/04/13 09:11:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.92 2012/04/14 03:09:25 mr_bones_ Exp $
+
+  14 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> sdl-mixer-1.2.12.ebuild:
+  use LDFLAGS for playtools (bug #411735)
 
   13 Apr 2012; Agostino Sarubbo <ago@gentoo.org> sdl-mixer-1.2.12.ebuild:
   Stable for amd64, wrt bug #411531

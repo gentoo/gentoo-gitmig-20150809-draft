@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12.ebuild,v 1.7 2012/04/13 09:11:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12.ebuild,v 1.8 2012/04/14 03:09:25 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils
@@ -30,6 +30,9 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-wav.patch
+	sed -i \
+		-e '/link.*play/s/-o/$(LDFLAGS) -o/' \
+		Makefile.in || die
 }
 
 src_configure() {
