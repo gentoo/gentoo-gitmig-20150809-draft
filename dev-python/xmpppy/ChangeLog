@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xmpppy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.21 2012/04/14 12:44:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.22 2012/04/14 15:26:09 maekke Exp $
+
+  14 Apr 2012; Markus Meier <maekke@gentoo.org> xmpppy-0.5.0_rc1.ebuild:
+  x86 stable, bug #410587
 
   14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> xmpppy-0.5.0_rc1.ebuild:
   Stable for amd64, wrt bug #410587
