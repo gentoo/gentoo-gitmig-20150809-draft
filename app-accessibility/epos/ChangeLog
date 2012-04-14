@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/epos
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.40 2010/05/06 11:28:21 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.41 2012/04/14 08:57:13 neurogeek Exp $
+
+  14 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> epos-2.5.37-r1.ebuild,
+  +files/epos-2.5.37-disable-tests.patch:
+  Disabled tests that needed audio service up.
 
   06 May 2010; Samuli Suominen <ssuominen@gentoo.org> epos-2.5.37-r1.ebuild,
   +files/epos-2.5.37-gcc45.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37-r1.ebuild,v 1.14 2010/05/06 11:28:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37-r1.ebuild,v 1.15 2012/04/14 08:57:13 neurogeek Exp $
 
 inherit eutils autotools
 
@@ -21,7 +21,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-gcc45.patch
+		"${FILESDIR}"/${P}-gcc45.patch \
+		"${FILESDIR}"/${P}-disable-tests.patch
 
 	sed -i -e "s/CCC/#CCC/" configure.ac || die
 
