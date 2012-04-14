@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXTrap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXTrap/ChangeLog,v 1.25 2011/02/06 10:44:39 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXTrap/ChangeLog,v 1.26 2012/04/14 18:02:54 mgorny Exp $
+
+*libXTrap-1.0.0-r1 (14 Apr 2012)
+
+  14 Apr 2012; Michał Górny <mgorny@gentoo.org> +libXTrap-1.0.0-r1.ebuild:
+  Update to use xorg-2 eclass.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libXTrap-1.0.0.ebuild:
   Drop to ~mips
