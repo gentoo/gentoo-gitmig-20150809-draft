@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.0.ebuild,v 1.1 2011/12/28 07:56:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.0.ebuild,v 1.2 2012/04/14 09:48:37 xmw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -40,7 +40,7 @@ src_install() {
 		rm -rf "${ED}usr/share/bcfg2"
 		rm -rf "${ED}usr/share/man/man8"
 	else
-		newinitd "${FILESDIR}/bcfg2-server.rc" bcfg2-server
+		newinitd "${FILESDIR}/${PN}-server-${PV}.rc" bcfg2-server
 	fi
 
 	insinto /etc
