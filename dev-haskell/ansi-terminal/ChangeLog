@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/ansi-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.15 2012/03/17 19:18:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.16 2012/04/14 08:52:37 gienah Exp $
+
+  14 Apr 2012; Mark Wright <gienah@gentoo.org> ansi-terminal-0.5.5.ebuild,
+  metadata.xml:
+  EAPI=4, add hoogle to CABAL_FEATURES
 
   17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
   ansi-terminal-0.5.5.ebuild:
