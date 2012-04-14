@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.125 2012/03/17 17:55:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.126 2012/04/14 17:02:20 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> lm_sensors-3.3.1.ebuild:
+  Add ~amd64-linux keyword.
 
   17 Mar 2012; Raúl Porcel <armin76@gentoo.org> lm_sensors-3.3.1.ebuild:
   alpha/sparc stable wrt #396553
