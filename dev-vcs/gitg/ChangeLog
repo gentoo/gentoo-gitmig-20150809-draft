@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.15 2011/09/28 14:36:38 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.16 2012/04/14 20:11:50 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> gitg-0.2.5.ebuild:
+  Add ~amd64-linux keyword.
 
 *gitg-0.2.5 (28 Sep 2011)
 
