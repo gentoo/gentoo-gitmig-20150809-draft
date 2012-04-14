@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/lensfun
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.39 2011/10/30 19:13:18 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.40 2012/04/14 16:16:37 dilfridge Exp $
+
+*lensfun-0.2.5_p153 (14 Apr 2012)
+
+  14 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +lensfun-0.2.5_p153.ebuild, +files/lensfun-0.2.5_p153-build.patch:
+  Version bump to snapshot, using CMake build system, should fix bug 374547
 
   30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   lensfun-0.2.5-r2.ebuild:
