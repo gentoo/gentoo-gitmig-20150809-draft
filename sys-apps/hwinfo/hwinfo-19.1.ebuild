@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-19.1.ebuild,v 1.1 2012/02/24 05:07:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-19.1.ebuild,v 1.2 2012/04/14 08:01:46 zmedico Exp $
 
 EAPI=4
 inherit multilib rpm toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://download.opensuse.org/source/factory/repo/oss/suse/src/${P}-1.2.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="amd64? ( dev-libs/libx86emu )
