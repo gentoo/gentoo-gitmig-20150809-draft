@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.56 2012/02/25 07:09:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.57 2012/04/14 00:27:45 vapier Exp $
+
+  14 Apr 2012; Mike Frysinger <vapier@gentoo.org> -modutils-2.4.27.ebuild,
+  modutils-2.4.27-r1.ebuild:
+  Scrub all man(2) pages as those are kernel interfaces that man-pages itself
+  documents #410909 by Phil.
 
   25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> modutils-2.4.27-r1.ebuild,
   modutils-2.4.27.ebuild:
