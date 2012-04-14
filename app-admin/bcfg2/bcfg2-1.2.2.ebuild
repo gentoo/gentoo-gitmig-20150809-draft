@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.2.ebuild,v 1.1 2012/04/14 10:21:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.2.ebuild,v 1.2 2012/04/14 10:39:09 xmw Exp $
 
 EAPI="4"
 
@@ -23,8 +23,8 @@ IUSE="doc server"
 DEPEND="dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 RDEPEND="app-portage/gentoolkit
-	app-admin/gam-server
 	dev-python/genshi
+	virtual/fam
 	server? (
 		dev-python/lxml
 		dev-libs/libgamin[python] )"
