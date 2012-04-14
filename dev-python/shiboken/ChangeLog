@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.22 2012/04/10 20:58:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.23 2012/04/14 12:45:36 ago Exp $
+
+  14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> shiboken-1.1.0-r2.ebuild:
+  Stable for amd64, wrt bug #401789
 
   10 Apr 2012; Davide Pesavento <pesa@gentoo.org>
   -files/shiboken-1.0.9-fix-pkgconfig.patch, -shiboken-1.1.0.ebuild:

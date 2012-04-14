@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/generatorrunner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/generatorrunner/ChangeLog,v 1.14 2012/03/14 13:59:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/generatorrunner/ChangeLog,v 1.15 2012/04/14 12:45:17 ago Exp $
+
+  14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> generatorrunner-0.6.16.ebuild:
+  Stable for amd64, wrt bug #401789
 
   14 Mar 2012; Davide Pesavento <pesa@gentoo.org> generatorrunner-0.6.16.ebuild:
   Fix dependencies and LICENSE.

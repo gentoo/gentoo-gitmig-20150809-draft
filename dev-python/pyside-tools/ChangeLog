@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.16 2012/04/10 20:54:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.17 2012/04/14 12:46:31 ago Exp $
+
+  14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> pyside-tools-0.2.13-r2.ebuild:
+  Stable for amd64, wrt bug #401789
 
   10 Apr 2012; Davide Pesavento <pesa@gentoo.org> -pyside-tools-0.2.13.ebuild:
   Remove old.
