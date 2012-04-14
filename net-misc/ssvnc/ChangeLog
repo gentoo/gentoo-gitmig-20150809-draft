@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ssvnc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.24 2011/12/14 09:21:02 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.25 2012/04/14 19:09:34 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> ssvnc-1.0.29.ebuild:
+  Add ~amd64-linux keyword.
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ssvnc-1.0.28.ebuild:
   x86 stable wrt bug #393735
