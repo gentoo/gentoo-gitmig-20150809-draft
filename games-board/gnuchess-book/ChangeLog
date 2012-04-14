@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnuchess-book
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/ChangeLog,v 1.12 2012/03/04 18:21:53 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/ChangeLog,v 1.13 2012/04/14 11:42:13 ago Exp $
+
+  14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gnuchess-book-1.02.ebuild:
+  Stable for amd64, wrt bug #411769
 
   04 Mar 2012; Sebastian Pipping <sping@gentoo.org> gnuchess-book-1.02.ebuild:
   Migrate book 1.02 to gnuchess 6.x
