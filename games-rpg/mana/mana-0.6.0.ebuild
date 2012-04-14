@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.0.ebuild,v 1.1 2012/02/17 06:26:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.0.ebuild,v 1.2 2012/04/14 19:21:00 tupone Exp $
 
 EAPI=2
 inherit eutils cmake-utils games
@@ -45,6 +45,12 @@ src_prepare() {
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		CMakeLists.txt \
 		|| die "sed failed"
+
+	if [[ ${LINGUAS+set} ]]; then
+		for lang in $(grep -v ^# po/LINGUAS); do
+			has $lang $LINGUAS || sed -i "s:^${lang}:#${lang}:" po/LINGUAS
+		done
+	fi
 }
 
 src_configure() {

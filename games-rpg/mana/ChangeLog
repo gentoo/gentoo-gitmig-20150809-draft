@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/mana
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.5 2012/02/17 06:26:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.6 2012/04/14 19:21:00 tupone Exp $
+
+  14 Apr 2012; Tupone Alfredo <tupone@gentoo.org> mana-0.6.0.ebuild:
+  Honor LINGUAS. Bug #408771 by Piotr Szymaniak
 
 *mana-0.6.0 (17 Feb 2012)
 
