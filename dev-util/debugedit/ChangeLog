@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.24 2012/01/25 19:28:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.25 2012/04/14 23:25:40 zmedico Exp $
+
+  14 Apr 2012; Zac Medico <zmedico@gentoo.org> debugedit-5.3.5-r1.ebuild:
+  Add ~amd64-linux and ~x86-linux keywords.
 
 *debugedit-5.3.5-r1 (25 Jan 2012)
 
