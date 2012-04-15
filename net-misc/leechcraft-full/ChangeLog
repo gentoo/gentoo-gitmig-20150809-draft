@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.15 2012/04/07 17:39:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.16 2012/04/15 06:28:48 maksbotan Exp $
+
+  15 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-full-9999.ebuild:
+  Add new plugins to 9999, thanks to 0xd34df00d
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> leechcraft-full-0.4.99.ebuild:
   x86 stable, bug #400605
