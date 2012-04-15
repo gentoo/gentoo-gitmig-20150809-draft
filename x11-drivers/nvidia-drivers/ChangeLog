@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.334 2012/04/11 18:01:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.335 2012/04/15 14:03:45 ago Exp $
+
+  15 Apr 2012; Agostino Sarubbo <ago@gentoo.org> nvidia-drivers-295.40.ebuild:
+  Stable for amd64, wrt bug #411617
 
 *nvidia-drivers-295.40 (11 Apr 2012)
 
