@@ -1,6 +1,9 @@
 # ChangeLog for games-util/joystick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.14 2012/04/13 09:11:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.15 2012/04/15 16:53:35 maekke Exp $
+
+  15 Apr 2012; Markus Meier <maekke@gentoo.org> joystick-1.4.2.ebuild:
+  x86 stable, bug #411535
 
   13 Apr 2012; Agostino Sarubbo <ago@gentoo.org> joystick-1.4.2.ebuild:
   Stable for amd64, wrt bug #411535
