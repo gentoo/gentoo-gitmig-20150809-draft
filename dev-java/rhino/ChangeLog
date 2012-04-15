@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.71 2012/01/01 12:28:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.72 2012/04/15 18:16:05 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> rhino-1.7.2-r2.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> rhino-1.5.5-r4.ebuild,
   rhino-1.5.5-r5.ebuild, rhino-1.6.5.ebuild, rhino-1.7.2.ebuild,

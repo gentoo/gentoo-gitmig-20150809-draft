@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.28 2012/01/28 15:13:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.29 2012/04/15 18:12:37 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> qdox-1.6.3.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qdox-1.12.ebuild:
   x86 stable wrt bug #391993

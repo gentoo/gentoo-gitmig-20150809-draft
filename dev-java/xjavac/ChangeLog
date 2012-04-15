@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.39 2012/03/08 14:50:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.40 2012/04/15 18:05:55 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> xjavac-20110814.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> xjavac-20110814.ebuild:
   Marking xjavac-20110814 ppc64 for bug 384611

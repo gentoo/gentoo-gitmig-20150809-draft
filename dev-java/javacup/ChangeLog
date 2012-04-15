@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.31 2012/01/02 07:47:03 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.32 2012/04/15 18:03:30 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  javacup-0.11a_beta20060608.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   02 Jan 2012; Ralph Sennhauser <sera@gentoo.org> javacup-0.10k-r1.ebuild,
   javacup-0.11a_beta20060608.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/junit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.70 2012/03/09 14:24:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.71 2012/04/15 18:12:22 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> junit-3.8.2-r1.ebuild,
+  junit-4.8.2-r1.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> junit-4.8.2-r1.ebuild:
   Marking junit-4.8.2-r1 ppc64 for bug 403161

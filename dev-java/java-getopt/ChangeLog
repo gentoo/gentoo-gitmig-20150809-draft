@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-getopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/ChangeLog,v 1.22 2012/01/02 07:44:12 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/ChangeLog,v 1.23 2012/04/15 18:18:13 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> java-getopt-1.0.13.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   02 Jan 2012; Ralph Sennhauser <sera@gentoo.org> java-getopt-1.0.13.ebuild:
   Drop ia64 support #345433

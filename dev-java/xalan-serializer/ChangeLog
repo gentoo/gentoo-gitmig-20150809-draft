@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xalan-serializer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan-serializer/ChangeLog,v 1.13 2012/01/02 08:58:38 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan-serializer/ChangeLog,v 1.14 2012/04/15 18:05:05 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  xalan-serializer-2.7.1.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   02 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
   xalan-serializer-2.7.0.ebuild, xalan-serializer-2.7.1.ebuild:

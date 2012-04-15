@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.74 2012/01/01 22:27:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.75 2012/04/15 18:11:31 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> asm-2.0-r1.ebuild,
+  asm-2.2.3-r1.ebuild, asm-3.0.ebuild, asm-3.1.ebuild, asm-3.2.ebuild,
+  asm-3.3.1.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> asm-2.0-r1.ebuild:
   Drop ia64 support #345433

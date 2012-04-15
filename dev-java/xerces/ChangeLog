@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.115 2012/01/02 07:49:52 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.116 2012/04/15 18:14:03 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> xerces-2.9.1.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   02 Jan 2012; Ralph Sennhauser <sera@gentoo.org> xerces-2.9.1.ebuild:
   Drop ia64 support #345433

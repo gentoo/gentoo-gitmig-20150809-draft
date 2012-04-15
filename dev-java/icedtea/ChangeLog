@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.69 2012/03/29 19:39:13 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.70 2012/04/15 18:25:36 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> icedtea-7.2.1.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   29 Mar 2012; Ralph Sennhauser <sera@gentoo.org> -icedtea-6.1.10.5.ebuild,
   -icedtea-6.1.11.ebuild, -icedtea-7.2.0-r1.ebuild, -icedtea-7.2.0-r2.ebuild,

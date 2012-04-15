@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-xmlbeans
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.30 2012/01/01 13:55:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.31 2012/04/15 18:13:45 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  xml-xmlbeans-1.0.4_pre20041217.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
   xml-xmlbeans-1.0.4_pre20041217.ebuild:
