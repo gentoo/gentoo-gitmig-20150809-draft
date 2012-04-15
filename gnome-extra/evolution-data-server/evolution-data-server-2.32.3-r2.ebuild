@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r2.ebuild,v 1.1 2012/02/12 17:25:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r2.ebuild,v 1.2 2012/04/15 19:58:05 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -91,6 +91,9 @@ src_prepare() {
 
 	# Upstream bug #655167 - Messages moved from IMAP Inbox reappear
 	epatch "${FILESDIR}/${P}-imap-move.patch"
+
+	# Fix building with glib-2.32, bug #412109
+	epatch "${FILESDIR}/${P}-gmodule-explicit.patch"
 
 	# /usr/include/db.h is always db-1 on FreeBSD
 	# so include the right dir in CPPFLAGS
