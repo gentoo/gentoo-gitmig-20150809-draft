@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/libircclient-1.6.ebuild,v 1.1 2012/04/11 21:57:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/libircclient-1.6.ebuild,v 1.2 2012/04/15 16:24:00 mr_bones_ Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -17,7 +17,9 @@ IUSE="doc ipv6 ssl threads"
 DEPEND="ssl? ( dev-libs/openssl )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-include.patch
 	eautoconf
 }
 
