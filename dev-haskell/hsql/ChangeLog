@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hsql
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.15 2011/08/04 13:04:38 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.16 2012/04/15 10:02:17 gienah Exp $
+
+*hsql-1.8.2 (15 Apr 2012)
+
+  15 Apr 2012; Mark Wright <gienah@gentoo.org> +files/hsql-1.8.1-ghc-7.4.patch,
+  +hsql-1.8.2.ebuild, hsql-1.8.1.ebuild, metadata.xml:
+  Bump hsql to 1.8.2. Patch hsql 1.8.1 to build with ghc 7.4.1.
 
   04 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> -hsql-1.7.ebuild,
   -hsql-1.7.1.ebuild, -files/hsql-1.7-sqltext-to-int.patch:
