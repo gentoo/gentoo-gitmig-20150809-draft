@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.11.2.ebuild,v 1.1 2012/04/11 21:59:41 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.11.2.ebuild,v 1.2 2012/04/15 00:43:01 reavertm Exp $
 
 EAPI="4"
 
@@ -57,6 +57,7 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 	app-crypt/qca-ossl:2
+	>=x11-libs/qt-svg-4.7.0:4
 	speech? ( app-accessibility/powiedz )
 "
 
