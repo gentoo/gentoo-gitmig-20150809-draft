@@ -1,5 +1,10 @@
 
 
+*cgminer-2.3.3 (15 Apr 2012)
+
+  15 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.3.3.ebuild:
+  Version bump
+
   02 Apr 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Update luke-jr's email address
 
