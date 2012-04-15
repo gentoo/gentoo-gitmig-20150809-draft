@@ -1,17 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-3.0.0-r1.ebuild,v 1.2 2012/01/05 05:10:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-3.2.0.ebuild,v 1.1 2012/04/15 06:58:30 tetromino Exp $
 
 EAPI="4"
-GNOME_TARBALL_SUFFIX="bz2"
 GCONF_DEBUG="yes"
 
 inherit eutils gnome2
 
 DESCRIPTION="Collection of network tools"
 HOMEPAGE="http://www.gnome.org/projects/gnome-network/"
-SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}-patches-1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,7 +23,12 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-2.90.4:3
 	x11-libs/pango"
 RDEPEND="${COMMON_DEPEND}
-	|| ( net-analyzer/traceroute sys-freebsd/freebsd-usbin )
+	|| (
+		net-misc/iputils
+		net-anaylyzer/tcptraceroute
+		net-analyzer/traceroute
+		sys-freebsd/freebsd-usbin )
+	net-analyzer/nmap
 	net-dns/bind-tools
 	userland_GNU? ( net-misc/netkit-fingerd net-misc/whois )
 	userland_BSD? ( net-misc/bsdwhois )"
@@ -52,7 +54,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Useful upstream patches
-	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch
+	# https://bugzilla.gnome.org/show_bug.cgi?id=674126
+	epatch "${FILESDIR}/${PN}-3.2.0-extra-path.patch"
 	gnome2_src_prepare
 }
