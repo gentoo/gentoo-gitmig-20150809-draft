@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.0.5.ebuild,v 1.1 2012/04/01 08:13:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.1.0.ebuild,v 1.1 2012/04/15 22:15:10 johu Exp $
 
 EAPI=4
 
