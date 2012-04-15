@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/lklug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lklug/ChangeLog,v 1.4 2012/03/08 12:38:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lklug/ChangeLog,v 1.5 2012/04/15 17:59:47 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> lklug-0.6.ebuild:
+  Add ia64 love #349020 by Dennis Schridde.
 
 *lklug-0.6 (08 Mar 2012)
 
