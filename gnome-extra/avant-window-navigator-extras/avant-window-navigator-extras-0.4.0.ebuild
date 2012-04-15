@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.4.0.ebuild,v 1.5 2012/04/01 04:44:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.4.0.ebuild,v 1.6 2012/04/15 10:54:12 ssuominen Exp $
 
 EAPI=4
 
@@ -85,7 +85,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	epatch \
+		"${FILESDIR}"/${P}-libnotify-0.7.patch \
+		"${FILESDIR}"/${P}-glib-2.31.patch \
+		"${FILESDIR}"/${P}-to-do.py.patch
 
 	>py-compile
 
