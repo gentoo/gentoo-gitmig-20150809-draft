@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.125 2012/02/06 20:13:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.126 2012/04/15 05:47:38 vapier Exp $
+
+*portage-utils-0.10 (15 Apr 2012)
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> +portage-utils-0.10.ebuild:
+  Version bump.
 
   06 Feb 2012; Mike Frysinger <vapier@gentoo.org> portage-utils-0.8.ebuild:
   Mark ppc/ppc64 stable #395317.
