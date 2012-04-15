@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.113 2012/03/22 17:00:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.114 2012/04/15 16:03:12 pacho Exp $
 
 # Brent Baude <ranger@gentoo.org> (06 Mar 2012)
 # masking wimax use flag
@@ -147,9 +147,9 @@ sys-devel/llvm udis86
 # media-gfx/tachyon needed to be keyworded per bug #306549
 sci-chemistry/vmd tachyon
 
-# QA: This entry is moved from INVALID location from default/linux/powerpc.
+# Pacho Ramos <pacho@gentoo.org>
 # Not keyworded
-media-plugins/gst-plugins-meta dts mythtv vcd
+media-plugins/gst-plugins-meta dts mythtv vcd vpx
 
 # QA: This entry is moved from INVALID location from default/linux/powerpc.
 # VDPAU is currently not keyworded on PPC since its a nvidia-drivers feature
