@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.265 2012/01/04 18:23:20 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.266 2012/04/15 18:30:31 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> java-config-2.1.11-r3.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   04 Jan 2012; Ralph Sennhauser <sera@gentoo.org> Manifest:
   Drop ia64 support #345433

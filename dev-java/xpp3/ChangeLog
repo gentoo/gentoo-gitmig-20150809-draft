@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.27 2012/01/01 15:44:43 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.28 2012/04/15 18:46:14 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> xpp3-1.1.4c-r1.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> xpp3-1.1.4c.ebuild,
   xpp3-1.1.4c-r1.ebuild:

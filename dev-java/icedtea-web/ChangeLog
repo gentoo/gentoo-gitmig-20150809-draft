@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.21 2012/04/15 18:25:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.22 2012/04/15 18:28:35 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> icedtea-web-1.2.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> icedtea-web-1.2-r7.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.

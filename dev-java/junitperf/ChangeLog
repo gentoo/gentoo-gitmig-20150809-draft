@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junitperf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.23 2012/01/01 15:36:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.24 2012/04/15 18:47:02 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> junitperf-1.9.1-r1.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> junitperf-1.9.1-r1.ebuild:
   Drop ia64 support #345433
