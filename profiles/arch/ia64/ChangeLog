@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.127 2012/04/15 17:58:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.128 2012/04/15 18:35:42 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> use.mask:
+  Unmask java USE flag #349020 by Dennis Schridde.
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> package.use.mask:
   Mask dev-java/icedtea[systemtap].
