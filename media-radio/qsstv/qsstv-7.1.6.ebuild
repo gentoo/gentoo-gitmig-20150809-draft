@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/qsstv-7.1.6.ebuild,v 1.2 2012/01/09 16:04:18 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/qsstv-7.1.6.ebuild,v 1.3 2012/04/15 16:15:37 tomjbe Exp $
 
 EAPI=4
 
@@ -21,7 +21,8 @@ DEPEND="x11-libs/qt-core[qt3support]
 	media-libs/hamlib
 	media-libs/alsa-lib
 	sci-libs/fftw:3.0"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	x11-misc/xdg-utils"
 
 S="${WORKDIR}/${MY_P}"
 
