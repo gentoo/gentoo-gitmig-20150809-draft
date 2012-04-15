@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.147 2012/04/04 12:39:50 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.148 2012/04/15 22:09:34 tommy Exp $
+
+*freenet-0.7.5_p1407 (15 Apr 2012)
+
+  15 Apr 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +freenet-0.7.5_p1407.ebuild,
+  +files/libraryloader-revert-using-of-absolute-path.patch:
+  Version bump, drop old
 
 *freenet-0.7.5_p1406 (04 Apr 2012)
 
