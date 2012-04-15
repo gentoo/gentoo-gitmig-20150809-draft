@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.5.ebuild,v 1.1 2012/04/15 12:50:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.5.ebuild,v 1.2 2012/04/15 15:04:40 ssuominen Exp $
 
 EAPI=4
 
@@ -77,7 +77,8 @@ src_configure() {
 		 $(use_enable libnotify) \
 		--enable-addons \
 		$(use_enable nls) \
-		$(use_enable !deprecated gtk3)
+		$(use_enable !deprecated gtk3) \
+		--disable-granite
 }
 
 pkg_preinst() {
