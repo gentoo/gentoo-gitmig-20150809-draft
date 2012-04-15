@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.1.0.ebuild,v 1.1 2012/03/28 11:42:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.1.0.ebuild,v 1.2 2012/04/15 11:43:15 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool toolchain-funcs
@@ -82,5 +82,11 @@ src_install() {
 
 	# libgeom in /lib and ifconfig in /sbin require it on FreeBSD since we
 	# stripped the libbsdxml copy starting from freebsd-lib-8.2-r1
-	use elibc_FreeBSD && gen_usr_ldscript -a expat{,u,w}
+	if use elibc_FreeBSD; then
+		if use unicode; then
+			gen_usr_ldscript -a expat{,u,w}
+		else
+			gen_usr_ldscript -a expat
+		fi
+	fi
 }
