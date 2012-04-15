@@ -1,6 +1,10 @@
 # ChangeLog for media-video/isight-firmware-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.15 2011/12/18 14:05:25 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.16 2012/04/15 15:51:51 eva Exp $
+
+  15 Apr 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -isight-firmware-tools-1.5.92.ebuild, -isight-firmware-tools-1.5.93.ebuild:
+  Clean up old revision.
 
 *isight-firmware-tools-1.6 (18 Dec 2011)
 
