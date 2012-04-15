@@ -1,6 +1,12 @@
 # ChangeLog for media-radio/tucnak2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.42 2012/03/24 17:35:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.43 2012/04/15 14:03:32 tomjbe Exp $
+
+*tucnak2-2.48 (15 Apr 2012)
+
+  15 Apr 2012; Thomas Beierlein <tomjbe@gentoo.org> -tucnak2-2.43.ebuild,
+  +tucnak2-2.48.ebuild, +files/tucnak2-2.48-doc.diff:
+  Version bump. Remove old
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tucnak2-2.46.ebuild:
   x86 stable wrt bug #407151

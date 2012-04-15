@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.43.ebuild,v 1.2 2011/09/14 18:53:42 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.48.ebuild,v 1.1 2012/04/15 14:03:32 tomjbe Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils autotools
 
 DESCRIPTION="Amateur Radio VHF Contest Logbook"
@@ -27,9 +27,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.39-doc.diff" \
-		"${FILESDIR}/${PN}-2.42-appname.diff" \
-		"${FILESDIR}/${PN}-libpng15.patch"
+	epatch "${FILESDIR}/${P}-doc.diff" \
+		"${FILESDIR}/${PN}-2.42-appname.diff"
 	eautoreconf
 }
 
@@ -40,11 +39,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	doman debian/tucnak2.1 || die "doman failed"
-	dodoc AUTHORS ChangeLog TODO doc/NAVOD.pdf || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	doman debian.unofficial/tucnak2.1
+	dodoc AUTHORS ChangeLog TODO doc/NAVOD.pdf
 	if use suid ; then
-		fperms 4711 /usr/bin/soundwrapper || die "fperms failed"
+		fperms 4711 /usr/bin/soundwrapper
 	fi
 }
 
