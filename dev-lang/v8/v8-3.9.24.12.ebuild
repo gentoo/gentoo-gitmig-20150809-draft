@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.9.24.12.ebuild,v 1.1 2012/04/14 03:01:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.9.24.12.ebuild,v 1.2 2012/04/15 15:17:07 grobian Exp $
 
 EAPI="4"
 
@@ -24,18 +24,16 @@ pkg_setup() {
 
 src_prepare() {
 	# don't force 32-bits mode on Darwin
+	# http://code.google.com/p/v8/issues/detail?id=2085
 	sed -i -e '/-arch i386/d' build/gyp/pylib/gyp/generator/make.py || die
-	# force using Makefiles, instead of Xcode project file on Darwin
-	sed -i -e '/darwin/s/xcode/make/' build/gyp/pylib/gyp/__init__.py || die
 	# don't refuse to build shared_libs because we build somewhere else
+	# make sure our v8.dylib doesn't end up being empty and give it a proper
+	# install_name (soname)
+	# http://code.google.com/p/v8/issues/detail?id=2086
 	sed -i \
 		-e '/params\.get.*mac.*darwin.*linux/s/mac/darwin/' \
 		-e "/if GetFlavor(params) == 'mac':/s/mac/darwin/" \
 		-e "/^  if flavor == 'mac':/s/mac/darwin/" \
-		build/gyp/pylib/gyp/generator/make.py || die
-	# make sure our v8.dylib doesn't end up being empty and give it a proper
-	# install_name (soname)
-	sed -i \
 		-e '/^LINK_COMMANDS_MAC =/,/^SHARED_HEADER =/s#-shared#-dynamiclib -all_load -install_name '"${EPREFIX}/usr/$(get_libdir)/libv8$(get_libname $(get_version_component_range 1-3))"'#' \
 		build/gyp/pylib/gyp/generator/make.py || die
 }
@@ -66,7 +64,8 @@ src_compile() {
 	# TODO: Add console=readline option once implemented upstream
 	# http://code.google.com/p/v8/issues/detail?id=1781
 
-	emake V=1 \
+	# force using Makefiles, instead of Xcode project file on Darwin
+	emake V=1 GYP_GENERATORS=make \
 		library=shared \
 		werror=no \
 		soname_version=${soname_version} \
