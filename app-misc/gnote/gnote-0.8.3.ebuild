@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.8.1.ebuild,v 1.1 2011/10/27 08:02:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.8.3.ebuild,v 1.1 2012/04/15 16:26:45 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="applet debug"
 
-RDEPEND=">=x11-libs/gtk+-3.0:3
+# Automagic glib-2.32 dep
+RDEPEND=">=dev-libs/glib-2.32
+	>=x11-libs/gtk+-3.0:3
 	>=dev-cpp/glibmm-2.28:2
 	>=dev-cpp/gtkmm-3.0:3.0
 	>=dev-libs/libxml2-2:2
