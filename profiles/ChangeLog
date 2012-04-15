@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6424 2012/04/15 16:39:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6425 2012/04/15 17:01:14 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  +default/linux/alpha/10.0/use.mask, +default/linux/arm/10.0/use.mask,
+  +default/linux/hppa/10.0/use.mask, +default/linux/ia64/10.0/use.mask,
+  +default/linux/powerpc/use.mask, default/linux/sparc/10.0/use.mask:
+  Use mask curl_ssl_axtls and curl_ssl_polarssl on various arches
 
   15 Apr 2012; Anthony G. Basile <blueness@gentoo.org> desc/curl_ssl.desc:
   Update descriptions of CURL_SSL USE_EXPAND flags
