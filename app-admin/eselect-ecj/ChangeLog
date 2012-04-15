@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-ecj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.19 2012/03/09 13:18:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.20 2012/04/15 17:45:57 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> eselect-ecj-0.7.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> eselect-ecj-0.7.ebuild:
   Marking eselect-ecj-0.7 ppc64 for bug 396513
