@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.4.0.ebuild,v 1.1 2012/03/27 04:44:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.4.0.ebuild,v 1.2 2012/04/15 21:22:30 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -26,7 +26,10 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext"
 # gnome-themes{,-extras} are OBSOLETE for GNOME 3
 # http://comments.gmane.org/gmane.comp.gnome.desktop/44130
+# Depend on gsettings-desktop-schemas-3.4 to make sure 3.2 users don't lose
+# their default background image
 RDEPEND="${COMMON_DEPEND}
+	>=gnome-base/gsettings-desktop-schemas-3.4
 	!<x11-themes/gnome-themes-2.32.1-r1"
 
 pkg_setup() {

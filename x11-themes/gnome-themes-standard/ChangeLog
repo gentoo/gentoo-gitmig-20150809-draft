@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.17 2012/04/01 17:31:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.18 2012/04/15 21:22:30 tetromino Exp $
+
+  15 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-themes-standard-3.4.0.ebuild:
+  Depend on gsettings-desktop-schemas-3.4 to ensure gnome-3.2 users can use the
+  new background image.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org>
   gnome-themes-standard-3.2.1.ebuild:
