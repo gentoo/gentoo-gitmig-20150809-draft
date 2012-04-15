@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.5 2012/02/10 03:29:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.6 2012/04/15 20:24:03 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -145,6 +145,9 @@ src_prepare() {
 
 	# Fix desktop file to work with latest glib
 	epatch "${FILESDIR}/${PN}-2.32.2-mime-handler.patch"
+
+	# Fix build failure with glib-2.32, bug #412111
+	epatch "${FILESDIR}/${P}-gmodule-explicit.patch"
 
 	# Apply multiple backports from master fixing important bugs
 	epatch "${WORKDIR}/${P}-patches"/*.patch
