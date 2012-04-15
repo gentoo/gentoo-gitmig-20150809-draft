@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r300.ebuild,v 1.1 2012/04/14 03:22:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r300.ebuild,v 1.2 2012/04/15 19:12:15 tetromino Exp $
 
 EAPI="4"
 
@@ -90,6 +90,9 @@ src_prepare() {
 
 	# CVE-2011-3064, https://bugzilla.redhat.com/show_bug.cgi?id=807596
 	epatch "${FILESDIR}/${P}-svgimagebuffer-clip.patch"
+
+	# webkit2 build failure with gcc-4.5, bug #412027
+	epatch "${FILESDIR}/${P}-typedef-WebKitWebView.patch"
 
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727
