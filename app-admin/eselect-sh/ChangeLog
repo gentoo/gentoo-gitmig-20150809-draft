@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-sh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.7 2012/04/14 15:14:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.8 2012/04/15 18:16:49 armin76 Exp $
+
+  15 Apr 2012; Raúl Porcel <armin76@gentoo.org> eselect-sh-0.3.ebuild:
+  Add ~alpha/~ia64/~m68k/~s390/~sh/~sparc wrt #406183
 
   14 Apr 2012; Markus Meier <maekke@gentoo.org> eselect-sh-0.3.ebuild:
   add ~arm, bug #406183
