@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.41 2012/01/28 15:05:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.42 2012/04/15 14:08:58 ago Exp $
+
+  15 Apr 2012; Agostino Sarubbo <ago@gentoo.org> phpBB-3.0.10.ebuild:
+  Stable for amd64, wrt bug #412037
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> phpBB-3.0.9.ebuild:
   x86 stable wrt bug #398045
