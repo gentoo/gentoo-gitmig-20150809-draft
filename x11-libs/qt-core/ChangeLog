@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.157 2012/04/12 17:56:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.158 2012/04/15 14:10:41 pesa Exp $
+
+*qt-core-4.8.1-r1 (15 Apr 2012)
+
+  15 Apr 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/qt-core-4.8.1-localized-time.patch, +qt-core-4.8.1-r1.ebuild,
+  -qt-core-4.8.1.ebuild:
+  Fix localization of date/time, bug 411929 by Franz Fellner. Patch has been
+  merged upstream for Qt 4.8.2 (https://codereview.qt-project.org/20869).
 
   12 Apr 2012; Davide Pesavento <pesa@gentoo.org>
   -files/qt-core-4.8.0-qurl-regression-fix.patch, -qt-core-4.6.3.ebuild,

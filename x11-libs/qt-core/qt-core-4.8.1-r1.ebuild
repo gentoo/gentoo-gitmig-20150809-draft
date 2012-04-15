@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.8.1.ebuild,v 1.1 2012/03/29 22:09:16 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.8.1-r1.ebuild,v 1.1 2012/04/15 14:10:41 pesa Exp $
 
 EAPI=4
 
@@ -26,6 +26,10 @@ RDEPEND="${DEPEND}"
 PDEPEND="
 	qt3support? ( ~x11-libs/qt-gui-${PV}[aqua=,c++0x=,debug=,glib=,qpa=,qt3support] )
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-localized-time.patch"
+)
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="
