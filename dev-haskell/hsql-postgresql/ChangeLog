@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/hsql-postgresql
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.14 2011/08/04 13:04:38 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.15 2012/04/15 11:14:47 gienah Exp $
+
+*hsql-postgresql-1.8.2 (15 Apr 2012)
+
+  15 Apr 2012; Mark Wright <gienah@gentoo.org> +hsql-postgresql-1.8.2.ebuild,
+  hsql-postgresql-1.8.1.ebuild, metadata.xml:
+  Bump hsql to 1.8.2. EAPI=4 and [profile?] on haskell libs (part of fix for bug
+  341795 dev-haskell/* USE=profile missing dependencies) for hsql-postgresql
+  1.8.1
 
   04 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org>
   -hsql-postgresql-1.7.ebuild, -hsql-postgresql-1.7.3.ebuild,
