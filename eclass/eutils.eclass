@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.388 2012/04/02 22:13:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.389 2012/04/15 20:02:43 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1281,6 +1281,21 @@ use_if_iuse() {
 # If USE flag is set, echo [true output][true suffix] (defaults to "yes"),
 # otherwise echo [false output][false suffix] (defaults to "no").
 usex() { use "$1" && echo "${2-yes}$4" || echo "${3-no}$5" ; } #382963
+
+# @FUNCTION: makeopts_jobs
+# @USAGE: [${MAKEOPTS}]
+# @DESCRIPTION:
+# Searches the arguments (defaults to ${MAKEOPTS}) and extracts the jobs number
+# specified therein.  i.e. if the user has MAKEOPTS=-j9, this will show "9".
+# We can't return the number as bash normalizes it to [0, 255].  If the flags
+# havn't specified a -j flag, then "1" is shown as that is the default `make`
+# uses.  Useful for running non-make tools in parallel too.
+makeopts_jobs() {
+	[[ $# -eq 0 ]] && set -- ${MAKEOPTS}
+	local x jobs
+	for x ; do [[ ${x} == -j* ]] && jobs=${x#-j} ; done
+	echo ${jobs:-1}
+}
 
 check_license() { die "you no longer need this as portage supports ACCEPT_LICENSE itself"; }
 
