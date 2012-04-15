@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netstat-nat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.38 2010/09/18 16:12:22 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.39 2012/04/15 04:04:58 heroxbd Exp $
+
+  15 Apr 2012; Benda XU <heroxbd@gentoo.org> netstat-nat-1.4.10.ebuild:
+  add ~arm keyword
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> netstat-nat-1.4.10.ebuild:
   sparc stable wrt #318533
