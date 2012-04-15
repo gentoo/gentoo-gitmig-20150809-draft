@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/pkg-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.6 2012/03/18 15:23:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.7 2012/04/15 08:08:53 graaff Exp $
+
+*pkg-config-1.1.3 (15 Apr 2012)
+
+  15 Apr 2012; Hans de Graaff <graaff@gentoo.org> +pkg-config-1.1.3.ebuild:
+  Version bump.
 
   18 Mar 2012; Brent Baude <ranger@gentoo.org> pkg-config-1.1.2.ebuild:
   Marking pkg-config-1.1.2 ~ppc64 for bug 371353
