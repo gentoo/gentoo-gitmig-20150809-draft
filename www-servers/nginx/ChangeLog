@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.316 2012/04/14 11:42:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.317 2012/04/15 17:01:38 maekke Exp $
+
+  15 Apr 2012; Markus Meier <maekke@gentoo.org> nginx-1.0.15.ebuild:
+  x86 stable, bug #411751
 
   14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> nginx-1.0.15.ebuild:
   Stable for amd64, wrt bug #411751
