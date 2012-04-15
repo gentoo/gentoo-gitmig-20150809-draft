@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/the_silver_searcher
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.6 2012/03/23 08:38:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/ChangeLog,v 1.7 2012/04/15 22:05:45 jdhore Exp $
+
+*the_silver_searcher-0.5 (15 Apr 2012)
+
+  15 Apr 2012; Jeff Horelick <jdhore@gentoo.org>
+  +the_silver_searcher-0.5.ebuild, -the_silver_searcher-0.2.ebuild,
+  -the_silver_searcher-0.3.ebuild:
+  Version bump and remove old.
 
 *the_silver_searcher-0.4 (23 Mar 2012)
 

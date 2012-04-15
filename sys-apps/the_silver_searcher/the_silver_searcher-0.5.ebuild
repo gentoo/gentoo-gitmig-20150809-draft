@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/the_silver_searcher-0.2.ebuild,v 1.1 2012/03/14 03:41:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/the_silver_searcher-0.5.ebuild,v 1.1 2012/04/15 22:05:45 jdhore Exp $
 
 EAPI=4
 inherit autotools
