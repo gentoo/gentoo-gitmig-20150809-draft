@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/texmfind
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texmfind/ChangeLog,v 1.16 2011/06/13 20:53:48 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texmfind/ChangeLog,v 1.17 2012/04/15 14:08:03 ago Exp $
+
+  15 Apr 2012; Agostino Sarubbo <ago@gentoo.org> texmfind-2010.1.ebuild:
+  Stable for amd64, wrt bug #383919
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> texmfind-2010.1.ebuild:
   Added ~mips, bug 342513
