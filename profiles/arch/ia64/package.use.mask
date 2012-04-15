@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.70 2012/04/12 17:05:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.71 2012/04/15 17:58:31 vapier Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
 # Requires gnutls[pkcs11], which is use.masked on ia64
@@ -77,6 +77,11 @@ mail-client/evolution connman
 net-analyzer/wireshark doc-pdf
 # Needs testing
 www-client/elinks javascript
+
+# Vlastimil Babka <caster@gentoo.org> (13 Oct 2010)
+# dev-util/systemtap not keyworded on ia64 arches. Note that this currently applies for java-overlay
+# icedtea only, but the plan is to move it to main tree.
+dev-java/icedtea systemtap
 
 # Raúl Porcel <armin76@gentoo.org> (19 Sep 2010)
 # dev-ruby/ffi fails to build
