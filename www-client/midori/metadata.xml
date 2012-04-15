@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
+    <flag name='deprecated'>Enable GTK+-2 instead of GTK+-3 because of external plugins like adobe-flash</flag>
     <flag name='unique'>Enable single instance support using <pkg>dev-libs/libunique</pkg></flag>
   </use>
 </pkgmetadata>
