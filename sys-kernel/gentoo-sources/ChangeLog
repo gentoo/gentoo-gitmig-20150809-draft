@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.961 2012/04/06 10:10:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.962 2012/04/15 20:32:05 jdhore Exp $
+
+  15 Apr 2012; Jeff Horelick <jdhore@gentoo.org> gentoo-sources-3.2.12.ebuild:
+  marked x86 per bug 409381
 
   06 Apr 2012; Markus Meier <maekke@gentoo.org> gentoo-sources-3.2.12.ebuild:
   arm stable, bug #409381
