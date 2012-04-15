@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.131 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.132 2012/04/15 20:15:39 vapier Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -197,8 +197,8 @@ perl-module_src_test() {
 	debug-print-function $FUNCNAME "$@"
 	if has 'do' ${SRC_TEST} || has 'parallel' ${SRC_TEST} ; then
 		if has "${TEST_VERBOSE:-0}" 0 && has 'parallel' ${SRC_TEST} ; then
-			export HARNESS_OPTIONS=j$(echo -j1 ${MAKEOPTS} | sed -r "s/.*(-j\s*|--jobs=)([0-9]+).*/\2/" )
-			einfo "Test::Harness Jobs=${HARNESS_OPTIONS}"
+			export HARNESS_OPTIONS=j$(makeopts_jobs)
+			einfo "Test::Harness Jobs=$(makeopts_jobs)"
 		fi
 		${perlinfo_done} || perl_set_version
 		if [[ -f Build ]] ; then

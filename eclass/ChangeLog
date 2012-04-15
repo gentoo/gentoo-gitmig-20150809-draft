@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.210 2012/04/14 20:22:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.211 2012/04/15 20:15:39 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> db.eclass perl-module.eclass
+  waf-utils.eclass:
+  Use new makeopts_jobs helper from eutils.eclass.
 
   14 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
   move 'dev-haskell/cabal' santy check out from 'pkg_*' to 'src_*' function to
