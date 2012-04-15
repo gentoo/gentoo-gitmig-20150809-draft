@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.33 2012/01/04 09:10:16 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.34 2012/04/15 18:26:04 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> jre-1.6.0.ebuild,
+  jre-1.7.0.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
   04 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jre-1.5.0.ebuild:
   Drop ia64 support #345433
