@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r200.ebuild,v 1.1 2012/04/14 03:22:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r200.ebuild,v 1.2 2012/04/15 10:19:54 tetromino Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ RDEPEND="
 	>=dev-libs/glib-2.31.2:2
 	>=x11-libs/gtk+-2.13:2[aqua=,introspection?]
 	>=dev-libs/icu-3.8.1-r1
-	>=net-libs/libsoup-2.33.6:2.4[introspection?]
+	>=net-libs/libsoup-2.37.2.1:2.4[introspection?]
 	dev-db/sqlite:3
 	>=x11-libs/pango-1.21
 	x11-libs/libXrender

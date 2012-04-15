@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.150 2012/04/14 03:22:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.151 2012/04/15 10:19:54 tetromino Exp $
+
+  15 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-1.8.0-r200.ebuild:
+  Fix libsoup dependency (bug #411961, thanks to Balint SZENTE).
 
 *webkit-gtk-1.8.0-r300 (14 Apr 2012)
 *webkit-gtk-1.8.0-r200 (14 Apr 2012)
