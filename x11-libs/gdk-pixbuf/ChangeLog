@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.50 2012/04/15 14:05:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.51 2012/04/15 23:12:09 jdhore Exp $
+
+  15 Apr 2012; Jeff Horelick <jdhore@gentoo.org> gdk-pixbuf-2.24.1-r1.ebuild:
+  marked x86 per bug 412033
 
   15 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gdk-pixbuf-2.24.1-r1.ebuild:
   Stable for amd64, wrt bug #412033
