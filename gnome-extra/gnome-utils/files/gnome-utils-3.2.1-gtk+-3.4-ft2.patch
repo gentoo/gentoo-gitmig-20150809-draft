@@ -1,0 +1,58 @@
+From b11a122a1a6d9d71fe145fa1af12eddf8458cf66 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sun, 15 Apr 2012 00:16:59 -0400
+Subject: [PATCH] font-viewer: fix building with gtk+-3.4
+
+Due to changes in gtk+-3.4's pkgconfig files, freetype2 must now be
+checked for explicitly.
+---
+ configure.ac            |    4 ++++
+ font-viewer/Makefile.am |    4 +++-
+ 2 files changed, 7 insertions(+), 1 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index b25d4ec..c8a07f6 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -104,6 +104,10 @@ PKG_CHECK_MODULES(GCONF, gconf-2.0)
+ AC_SUBST(GCONF_CFLAGS)
+ AC_SUBST(GCONF_LIBS)
+ 
++PKG_CHECK_MODULES(FREETYPE2, freetype2)
++AC_SUBST(FREETYPE2_CFLAGS)
++AC_SUBST(FREETYPE2_LIBS)
++
+ # For each cycle:
+ # 	first release: increment major += 1, minor = micro = 0;
+ # 	each release before API freeze: minor += 1;
+diff --git a/font-viewer/Makefile.am b/font-viewer/Makefile.am
+index ed8d380..7d44bc3 100644
+--- a/font-viewer/Makefile.am
++++ b/font-viewer/Makefile.am
+@@ -1,5 +1,6 @@
+ 
+ INCLUDES =					\
++	$(FREETYPE2_CFLAGS)			\
+ 	$(GIO_CFLAGS)				\
+ 	$(GTK_CFLAGS)				\
+ 	-DDIRECTORY_DIR=\"$(directorydir)\" 	\
+@@ -14,6 +15,7 @@ ftstream_SOURCES = \
+ 	ftstream-vfs.c
+ 
+ gnome_thumbnail_font_LDADD = \
++	$(FREETYPE2_LIBS) \
+ 	$(GIO_LIBS) \
+ 	$(GTK_LIBS)
+ 
+@@ -24,7 +26,7 @@ gnome_thumbnail_font_SOURCES = \
+ 	totem-resources.h
+ 
+ gnome_font_viewer_LDADD = \
+-	$(XFT_LIBS) \
++	$(FREETYPE2_LIBS) \
+ 	$(GIO_LIBS) \
+ 	$(GTK_LIBS)
+ 
+-- 
+1.7.8.5
+

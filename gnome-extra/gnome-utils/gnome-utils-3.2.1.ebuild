@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.2 2011/12/05 11:29:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.3 2012/04/15 04:45:29 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Utilities for the Gnome desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -47,7 +47,6 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable ipv6)
 		--enable-zlib
-		--disable-maintainer-flags
 		--disable-static
 		--disable-schemas-install
 		--disable-schemas-compile
@@ -56,7 +55,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
+	# Fix missing freetype2 headers/libs with gtk+-3.4, bug #411939
+	epatch "${FILESDIR}/${PN}-3.2.1-gtk+-3.4-ft2.patch"
+	eautoreconf
 
 	# Remove idiotic -D.*DISABLE_DEPRECATED cflags
 	# This method is kinda prone to breakage. Recheck carefully with next bump.
@@ -70,4 +71,6 @@ src_prepare() {
 	if ! use test ; then
 		sed -e 's/ tests//' -i logview/Makefile.{am,in} || die "sed 2 failed"
 	fi
+
+	gnome2_src_prepare
 }
