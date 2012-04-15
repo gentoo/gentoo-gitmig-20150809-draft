@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gcj-jdk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.4 2011/09/20 15:37:19 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.5 2012/04/15 17:51:54 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> gcj-jdk-4.5.3.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
 
 *gcj-jdk-4.5.2-r1 (20 Sep 2011)
 *gcj-jdk-4.5.1-r1 (20 Sep 2011)
