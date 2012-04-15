@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.7.7.ebuild,v 1.2 2012/04/04 15:32:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.7.7-r1.ebuild,v 1.1 2012/04/15 00:49:04 patrick Exp $
 
 EAPI=3
 
@@ -51,11 +51,11 @@ src_install() {
 	#emake DESTDIR="${D}" install || die
 
 	mkdir -p "${D}"/usr/include/node
-	mkdir -p "${D}"/bin
+	mkdir -p "${D}"/usr/bin
 	mkdir -p "${D}"/lib/node_modules/npm
 	cp 'src/node.h' 'src/node_buffer.h' 'src/node_object_wrap.h' 'src/node_version.h' "${D}"/usr/include/node || die "Failed to copy stuff"
 	cp 'deps/uv/include/ares.h' 'deps/uv/include/ares_version.h' "${D}"/usr/include/node || die "Failed to copy stuff"
-	cp 'out/Release/node' ${D}/bin/node || die "Failed to copy stuff"
+	cp 'out/Release/node' ${D}/usr/bin/node || die "Failed to copy stuff"
 	cp -R deps/npm/* ${D}/lib/node_modules/npm || die "Failed to copy stuff"
 
 	# now add some extra stupid just because we can

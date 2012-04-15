@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.35 2012/04/14 12:20:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.36 2012/04/15 00:49:04 patrick Exp $
+
+*nodejs-0.7.7-r1 (15 Apr 2012)
+
+  15 Apr 2012; Patrick Lauer <patrick@gentoo.org> +nodejs-0.7.7-r1.ebuild,
+  -nodejs-0.7.7.ebuild:
+  Moving node binary to /usr/bin #411947
 
 *nodejs-0.6.15 (14 Apr 2012)
 
