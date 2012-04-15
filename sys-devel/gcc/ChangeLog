@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.868 2012/03/28 05:36:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.869 2012/04/15 17:26:16 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.5.3-r2.ebuild:
+  Fix from upstream for building gcj with glibc-2.15+.
 
   28 Mar 2012; Markus Meier <maekke@gentoo.org> gcc-4.3.6-r1.ebuild:
   arm stable, bug #405845
