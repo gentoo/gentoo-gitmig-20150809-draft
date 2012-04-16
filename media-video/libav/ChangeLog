@@ -1,6 +1,13 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.64 2012/03/22 01:32:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.65 2012/04/16 08:22:32 scarabeus Exp $
+
+*libav-0.7.5 (16 Apr 2012)
+
+  16 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libav-0.7.5.ebuild,
+  -libav-0.6.5.ebuild, -libav-0.7.4.ebuild, -libav-0.8.ebuild:
+  Version bump 0.7 series to latest. Drop all security affected ebuilds,
+  effectively loosing stable on amd64 and hppa again.
 
   22 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.6.5.ebuild,
   libav-0.7.4.ebuild, libav-0.8.1.ebuild, libav-0.8.ebuild:
