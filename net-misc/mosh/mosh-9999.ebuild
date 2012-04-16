@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.1 2012/04/06 14:43:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.2 2012/04/16 13:05:51 xmw Exp $
 
 EAPI=4
 EGIT_REPO_URI="https://github.com/keithw/mosh.git"
@@ -25,7 +25,6 @@ RDEPEND="dev-libs/protobuf
 		dev-perl/IO-Tty )
 	utempter? ( sys-libs/libutempter )"
 DEPEND="${RDEPEND}
-	dev-libs/boost
 	dev-util/pkgconfig"
 
 src_prepare() {
