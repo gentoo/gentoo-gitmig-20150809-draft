@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnuchess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.27 2012/04/15 17:03:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.28 2012/04/16 19:33:03 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> gnuchess-6.0.2.ebuild:
+  Marking gnuchess-6.0.2 ppc for bug 411767
 
   15 Apr 2012; Markus Meier <maekke@gentoo.org> gnuchess-6.0.2.ebuild:
   x86 stable, bug #411767
