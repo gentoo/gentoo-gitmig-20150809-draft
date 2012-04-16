@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.27 2012/04/04 23:59:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.28 2012/04/16 20:28:42 johu Exp $
+
+  16 Apr 2012; Johannes Huber <johu@gentoo.org> perlqt-4.8.1.ebuild:
+  Virtual X is required for test phase by Chris Reffett <geekboy72@gmail.com>,
+  fixes bug #412235.
 
 *perlqt-4.8.2 (04 Apr 2012)
 
