@@ -1,9 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.6.ebuild,v 1.1 2010/08/31 00:01:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.6-r1.ebuild,v 1.1 2012/04/16 10:04:53 pacho Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Many to one page printing utility"
@@ -20,19 +19,21 @@ src_prepare() {
 		-e '/^CFLAGS/s|=.*| += $(DEFS)|g' \
 		-e 's|$(CFLAGS) -o|$(LDFLAGS) &|g' \
 		|| die "sed Makefile"
+	EPATCH_SOURCE="${FILESDIR}" epatch \
+		01_previous_changes.patch 10_bts354935_fix_fontdefs.patch \
+		20_bts416573_manpage_fixes.patch 30_bts443280_libdir_manpage.patch
 }
 
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		PREFIX=/usr \
-		MANDIR=/usr/share/man/man1 \
-		|| die "emake failed"
+		MANDIR=/usr/share/man/man1
 }
 
 src_install () {
 	emake \
 		PREFIX="${D}/usr" \
-		MANDIR="${D}/usr/share/man/man1" install || die "make install failed"
-	dodoc CHANGES Encoding.format FAQ NEWS README TODO || die "dodoc failed"
+		MANDIR="${D}/usr/share/man/man1" install
+	dodoc CHANGES Encoding.format FAQ NEWS README TODO
 }

@@ -1,6 +1,15 @@
 # ChangeLog for app-text/mpage
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/ChangeLog,v 1.26 2010/08/31 00:01:39 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/ChangeLog,v 1.27 2012/04/16 10:04:53 pacho Exp $
+
+*mpage-2.5.6-r1 (16 Apr 2012)
+
+  16 Apr 2012; Pacho Ramos <pacho@gentoo.org> +files/01_previous_changes.patch,
+  +files/10_bts354935_fix_fontdefs.patch,
+  +files/20_bts416573_manpage_fixes.patch,
+  +files/30_bts443280_libdir_manpage.patch, +mpage-2.5.6-r1.ebuild,
+  -mpage-2.5.5.ebuild, -mpage-2.5.6.ebuild:
+  Apply debian patches, drop old.
 
 *mpage-2.5.6 (31 Aug 2010)
 
