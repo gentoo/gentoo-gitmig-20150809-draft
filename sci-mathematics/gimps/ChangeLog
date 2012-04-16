@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.47 2012/04/16 12:42:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.48 2012/04/16 20:43:47 tomka Exp $
+
+*gimps-27.4 (16 Apr 2012)
+
+  16 Apr 2012; Thomas Kahle <tomka@gentoo.org> -gimps-24.14-r1.ebuild,
+  -gimps-25.11.ebuild, -gimps-26.5.ebuild, -gimps-26.6.ebuild,
+  gimps-26.6-r1.ebuild, +gimps-27.4.ebuild:
+  Ebuild Maintenance and x86 stable per bug 412179. Bump to 27.4 (Bug
+
+  412205), remove old.
 
   16 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gimps-26.6-r1.ebuild:
   Stable for amd64, wrt bug #412179

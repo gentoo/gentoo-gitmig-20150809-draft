@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-26.5.ebuild,v 1.1 2011/03/16 23:11:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-27.4.ebuild,v 1.1 2012/04/16 20:43:47 tomka Exp $
+
+EAPI=4
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -16,25 +18,24 @@ RESTRICT="binchecks"
 # Since there are no statically linked binaries for this version of mprime,
 # and no static binaries for amd64 in general, we use the dynamically linked
 # ones and try to cover the .so deps with the packages listed in RDEPEND.
-DEPEND="x86? ( dev-util/bsdiff )"
+DEPEND=""
 RDEPEND="net-misc/curl"
 
 S="${WORKDIR}"
 I="/opt/gimps"
-
 QA_EXECSTACK="opt/gimps/mprime"
 
 src_install() {
 	dodir ${I} /var/lib/gimps
 	cp mprime "${D}/${I}"
-	chmod 0555 "${D}/${I}/mprime"
-	chown root:0 "${D}/${I}"
-	chown root:0 "${D}/${I}/mprime"
+	fperms a-w "${I}/mprime"
+	fowners root:0 "${I}"
+	fowners root:0 "${I}/mprime"
 
 	dodoc license.txt readme.txt stress.txt whatsnew.txt undoc.txt
 
-	newinitd "${FILESDIR}/gimps-25.7-init.d" gimps
-	newconfd "${FILESDIR}/gimps-25.6-conf.d" gimps
+	newinitd "${FILESDIR}/${PN}-26.6-r1-init.d" gimps
+	newconfd "${FILESDIR}/${PN}-25.6-conf.d" gimps
 }
 
 pkg_postinst() {
@@ -43,15 +44,23 @@ pkg_postinst() {
 	einfo "background at boot. Have a look at /etc/conf.d/gimps and check some"
 	einfo "configuration options."
 	einfo
-	einfo "If you are a new user, you will need to configure GIMPS before"
-	einfo "starting the initscript.  To do so, run:"
+	einfo "If you don't want to use the init script to start gimps, remember to"
+	einfo "pass it an additional command line parameter specifying where the data"
+	einfo "files are to be stored, e.g.:"
 	einfo "   ${I}/mprime -w/var/lib/gimps"
-	einfo "followed by:"
-	einfo "   chown nobody:nobody /var/lib/gimps/*"
 	einfo
-	einfo "If you have an existing GIMPS account, follow the instructions at:"
-	einfo "   http://mersenne.org/freesoft/#upgradeusers"
-	einfo "and do not blindy restart gimps."
+	einfo "GIMPS version 27.4 has issues with correct detection of physical and"
+	einfo "logical CPUs on hyperthreaded Intel CPUs. If you determine that"
+	einfo "GIMPS is not using the right CPUs on your PC use the"
+	einfo "AffinityScramble2 option in your local.txt file (instructions in"
+	einfo "/usr/share/doc/gimps-27.4/undoc.txt.bz2)."
+	einfo "In a 4 core, 8 threads Core i7 \"AffinityScramble2=04152637\" works"
+	einfo "best."
+	einfo
+	einfo "GIMPS version 27.4 is a beta version and it only offers improvements"
+	einfo "for Intel CPUs with AVX instructions (Sandy Bridge and later). It"
+	einfo "does _not_ work (at all) on AMD Bulldozer CPUs."
+	einfo
 	echo
 }
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-26.6-r1.ebuild,v 1.2 2012/04/16 12:42:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-26.6-r1.ebuild,v 1.3 2012/04/16 20:43:47 tomka Exp $
+
+EAPI=4
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -10,7 +12,7 @@ SRC_URI="amd64? ( ftp://mersenne.org/gimps/mprime${PV/./}-linux64.tar.gz )
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="binchecks"
 
 # Since there are no statically linked binaries for this version of mprime,
@@ -26,9 +28,9 @@ QA_EXECSTACK="opt/gimps/mprime"
 src_install() {
 	dodir ${I} /var/lib/gimps
 	cp mprime "${D}/${I}"
-	chmod a-w "${D}/${I}/mprime"
-	chown root:0 "${D}/${I}"
-	chown root:0 "${D}/${I}/mprime"
+	fperms a-w "${I}/mprime"
+	fowners root:0 "${I}"
+	fowners root:0 "${I}/mprime"
 
 	dodoc license.txt readme.txt stress.txt whatsnew.txt undoc.txt
 
