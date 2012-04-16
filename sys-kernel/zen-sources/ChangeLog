@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/zen-sources
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.53 2011/10/17 18:46:00 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.54 2012/04/16 17:23:23 hwoarang Exp $
+
+  16 Apr 2012; Markos Chandras <hwoarang@gentoo.org>
+  -zen-sources-2.6.38_p20110404.ebuild, -zen-sources-2.6.38_p20110501.ebuild:
+  remove old
 
   17 Oct 2011; Markos Chandras <hwoarang@gentoo.org> zen-sources-9999.ebuild,
   metadata.xml:
