@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/maintainer-helper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.15 2012/03/20 03:41:47 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.16 2012/04/16 13:23:39 fuzzyray Exp $
+
+  16 Apr 2012; Paul Varner <fuzzyray@gentoo.org>
+  maintainer-helper-0.1.2.ebuild:
+  Remove qt4 eclass from ebuild. (Bug 409761)
 
   20 Mar 2012; Paul Varner <fuzzyray@gentoo.org> metadata.xml:
   Remove maintainer-needed as the maintainer and leave assigned only to the
