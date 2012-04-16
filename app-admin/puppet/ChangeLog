@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.109 2012/04/16 17:09:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.110 2012/04/16 20:42:02 jdhore Exp $
+
+  16 Apr 2012; Jeff Horelick <jdhore@gentoo.org> puppet-2.7.13.ebuild:
+  marked x86 per bug 410857
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> puppet-2.7.13.ebuild:
   Marking puppet-2.7.13 ppc for bug 410857
