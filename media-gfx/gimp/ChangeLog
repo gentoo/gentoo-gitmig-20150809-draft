@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.359 2012/04/12 04:40:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.360 2012/04/16 21:42:54 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> gimp-2.6.12.ebuild:
+  Marking gimp-2.6.12 ppc for bug 410403
 
   12 Apr 2012; Sebastian Pipping <sping@gentoo.org> gimp-2.6.11-r1.ebuild,
   gimp-2.6.11-r2.ebuild, gimp-2.6.11-r3.ebuild, gimp-2.6.11-r4.ebuild,
