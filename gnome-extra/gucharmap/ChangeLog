@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.166 2012/02/10 03:30:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.167 2012/04/16 20:58:55 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> gucharmap-3.2.1.ebuild:
+  Marking gucharmap-3.2.1 ppc for bug 408189
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> gucharmap-2.32.1.ebuild:
   Changing python deps in preparation for 2.4 removal
