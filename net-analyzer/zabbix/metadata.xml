@@ -21,5 +21,6 @@ configure different types of notifications for pre-defined events.
 	<flag name='odbc'>Enable Database Monitor and use UnixODBC Library by default</flag>
 	<flag name='iodbc'>Use iodbc rather than unixodbc for ODBC functions</flag>
 	<flag name='static'>Build statically linked binaries</flag>
+	<flag name='java'>Enable Zabbix Java JMX Management Gateway</flag>
 </use>
 </pkgmetadata>
