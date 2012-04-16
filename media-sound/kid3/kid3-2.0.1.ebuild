@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-2.0.1.ebuild,v 1.1 2012/01/08 00:19:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-2.0.1.ebuild,v 1.2 2012/04/16 08:03:59 johu Exp $
 
 EAPI=4
 KDE_LINGUAS="cs de es et fi fr it nl pl ru tr zh_TW"
@@ -29,6 +29,10 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 REQUIRED_USE="flac? ( vorbis )"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-2.0.1-mp4v2-1.9.1_p479.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(
