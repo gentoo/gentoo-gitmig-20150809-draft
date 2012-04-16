@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.389 2012/04/15 20:02:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.390 2012/04/16 14:40:16 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1288,7 +1288,7 @@ usex() { use "$1" && echo "${2-yes}$4" || echo "${3-no}$5" ; } #382963
 # Searches the arguments (defaults to ${MAKEOPTS}) and extracts the jobs number
 # specified therein.  i.e. if the user has MAKEOPTS=-j9, this will show "9".
 # We can't return the number as bash normalizes it to [0, 255].  If the flags
-# havn't specified a -j flag, then "1" is shown as that is the default `make`
+# haven't specified a -j flag, then "1" is shown as that is the default `make`
 # uses.  Useful for running non-make tools in parallel too.
 makeopts_jobs() {
 	[[ $# -eq 0 ]] && set -- ${MAKEOPTS}
