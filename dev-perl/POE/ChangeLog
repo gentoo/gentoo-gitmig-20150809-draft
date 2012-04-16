@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/POE
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.125 2012/04/07 06:15:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.126 2012/04/16 21:39:45 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> POE-1.350.0.ebuild:
+  Marking POE-1.350.0 ppc for bug 410937
 
   07 Apr 2012; Jeff Horelick <jdhore@gentoo.org> POE-1.350.0.ebuild:
   marked x86 per bug 410937
