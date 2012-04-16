@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.211 2012/04/15 20:15:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.212 2012/04/16 07:54:18 ssuominen Exp $
+
+  16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> waf-utils.eclass:
+  Unbreak waf-utils.eclass by restoring --jobs= argument wrt #412159
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> db.eclass perl-module.eclass
   waf-utils.eclass:

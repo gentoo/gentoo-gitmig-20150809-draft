@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.8 2012/04/15 20:15:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.9 2012/04/16 07:54:18 ssuominen Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -49,7 +49,7 @@ waf-utils_src_configure() {
 waf-utils_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local jobs=$(makeopts_jobs)
+	local jobs="--jobs=$(makeopts_jobs)"
 	echo "\"${WAF_BINARY}\" build ${jobs}"
 	"${WAF_BINARY}" ${jobs} || die "build failed"
 }
