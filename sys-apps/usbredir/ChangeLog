@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbredir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.9 2012/04/16 20:03:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.10 2012/04/16 20:05:39 ssuominen Exp $
+
+  16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml and leave qemu (as primary consumer of
+  usbredir) as backup.
 
 *usbredir-0.4.3 (16 Apr 2012)
 
