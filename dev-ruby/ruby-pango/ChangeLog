@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.62 2012/04/16 18:03:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.63 2012/04/16 18:04:38 graaff Exp $
+
+  16 Apr 2012; Hans de Graaff <graaff@gentoo.org> ruby-pango-1.0.3.ebuild:
+  Drop ruby19 to create a stable candidate.
 
   16 Apr 2012; Hans de Graaff <graaff@gentoo.org> -ruby-pango-0.90.8.ebuild,
   -ruby-pango-0.90.9.ebuild, -ruby-pango-1.0.0.ebuild:
