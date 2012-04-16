@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.51 2012/03/18 13:19:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.52 2012/04/16 03:37:57 jer Exp $
+
+  16 Apr 2012; Jeroen Roovers <jer@gentoo.org>
+  libvisual-plugins-0.4.0-r2.ebuild:
+  Stable for HPPA (bug #412113).
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   libvisual-plugins-0.4.0-r2.ebuild:
