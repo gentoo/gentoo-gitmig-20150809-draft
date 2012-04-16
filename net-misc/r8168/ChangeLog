@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/r8168
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.8 2012/04/05 21:12:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.9 2012/04/16 18:33:08 joker Exp $
+
+  16 Apr 2012; Christian Birchinger <joker@gentoo.org>
+  files/r8168-8.028.00-linux-3.3-compat.patch:
+  Remove whitespace glitch from patch. This would make it apply to 8.029.00 as
+  well.
 
   05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> r8168-8.028.00.ebuild:
   x86 stable wrt bug #404311
