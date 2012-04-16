@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.335 2012/04/15 16:51:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.336 2012/04/16 19:29:28 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> freetype-2.4.9-r1.ebuild:
+  Marking freetype-2.4.9-r1 ppc for bug 410983
 
   15 Apr 2012; Markus Meier <maekke@gentoo.org> freetype-2.4.9-r1.ebuild:
   arm stable, bug #410983
