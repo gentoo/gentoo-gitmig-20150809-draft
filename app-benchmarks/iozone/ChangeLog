@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.48 2012/03/25 14:56:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.49 2012/04/16 21:18:13 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> iozone-3.397.ebuild:
+  Marking iozone-3.397 ppc for bug 399919
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> iozone-3.397.ebuild:
   ia64/sparc stable wrt #399919
