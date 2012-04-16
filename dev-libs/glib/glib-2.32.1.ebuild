@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.1.ebuild,v 1.4 2012/04/14 23:23:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.1.ebuild,v 1.5 2012/04/16 03:24:01 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -114,6 +114,9 @@ src_prepare() {
 
 	# https://bugzilla.gnome.org/show_bug.cgi?id=673132
 	epatch "${FILESDIR}/${PN}-2.32.1-fix-libelf-check.patch"
+
+	# bug #411981, https://bugzilla.gnome.org/show_bug.cgi?id=674172
+	epatch "${FILESDIR}/${PN}-2.32.1-gnustep-not-cocoa.patch"
 
 	# disable pyc compiling
 	use test && python_clean_py-compile_files

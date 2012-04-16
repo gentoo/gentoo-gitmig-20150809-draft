@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.513 2012/04/14 23:23:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.514 2012/04/16 03:24:01 tetromino Exp $
+
+  16 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.32.1.ebuild,
+  +files/glib-2.32.1-gnustep-not-cocoa.patch:
+  Fix building on systems with gnustep-base installed (bug #411981, thanks to
+  Carlos Konstanski et al. for reporting).
 
   14 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.32.0.ebuild,
   glib-2.32.1.ebuild, +files/glib-2.32.1-fix-libelf-check.patch:
