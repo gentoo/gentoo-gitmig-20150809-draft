@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/pkg-config-1.1.2.ebuild,v 1.5 2012/03/18 15:23:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/pkg-config-1.1.2.ebuild,v 1.6 2012/04/16 18:53:40 graaff Exp $
 
 EAPI="2"
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby18 ree18"
 
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
