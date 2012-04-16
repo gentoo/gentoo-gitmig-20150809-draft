@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.0_rc2.ebuild,v 1.1 2012/04/16 19:12:47 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.0_rc2.ebuild,v 1.2 2012/04/16 20:52:41 mattm Exp $
 
 EAPI="2"
 
@@ -251,7 +251,7 @@ src_configure() {
 		$(use_with ldap) \
 		$(use_with snmp net-snmp) \
 		$(use_with mysql) \
-		$(use_with postgres pgsql) \
+		$(use_with postgres postgresql) \
 		$(use_with oracle) \
 		$(use_with sqlite sqlite3) \
 		$(use_with jabber) \
