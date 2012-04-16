@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/bootchart2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.4 2012/04/04 06:11:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.5 2012/04/16 07:18:38 slyfox Exp $
+
+*bootchart2-0.14.2-r2 (16 Apr 2012)
+
+  16 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +bootchart2-0.14.2-r2.ebuild:
+  Fix pybootchart shebang to work on active python3 setup. Allow pycairo[svg]
+  for USE="-svg" case.
 
   04 Apr 2012; Justin Lecher <jlec@gentoo.org> files/bootchart2.init:
   Initscripts only can use einfo not elog
