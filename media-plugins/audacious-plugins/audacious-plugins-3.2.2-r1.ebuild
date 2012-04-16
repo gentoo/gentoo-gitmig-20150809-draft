@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.2.ebuild,v 1.1 2012/04/15 22:29:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.2-r1.ebuild,v 1.1 2012/04/16 00:37:55 jdhore Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic
+inherit eutils autotools flag-o-matic
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
@@ -22,7 +22,7 @@ RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2:2
 	media-libs/libmodplug
-	>=media-sound/audacious-3.2.2
+	>=media-sound/audacious-3.2.2-r1
 	>=net-libs/neon-0.26.4
 	gtk? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3 )
@@ -66,6 +66,13 @@ mp3_warning() {
 	if ! use mp3 ; then
 		ewarn "MP3 support is optional, you may want to enable the mp3 USE-flag"
 	fi
+}
+
+src_prepare() {
+	epatch "$FILESDIR"/${P}-fix-build-gmodule.patch
+	eaclocal -I m4
+	eautoheader
+	eautoconf
 }
 
 src_configure() {
