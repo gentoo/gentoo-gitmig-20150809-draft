@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/freedroidrpg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.34 2012/04/15 00:02:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.35 2012/04/16 19:35:44 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> freedroidrpg-0.15.ebuild:
+  Marking freedroidrpg-0.15 ppc for bug 411771
 
   15 Apr 2012; Jeff Horelick <jdhore@gentoo.org> freedroidrpg-0.15.ebuild:
   marked x86 per bug 411771

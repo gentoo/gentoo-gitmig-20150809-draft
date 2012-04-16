@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.15.ebuild,v 1.3 2012/04/15 00:02:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.15.ebuild,v 1.4 2012/04/16 19:35:44 ranger Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/freedroid/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="opengl vorbis"
 
 RDEPEND="media-libs/libsdl[opengl?,video]
