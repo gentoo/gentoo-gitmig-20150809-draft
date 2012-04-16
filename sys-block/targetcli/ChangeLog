@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/targetcli
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/targetcli/ChangeLog,v 1.1 2012/04/16 21:14:16 alexxy Exp $
+
+*targetcli-9999 (16 Apr 2012)
+
+  16 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
+  +targetcli-9999.ebuild:
+  [sys-block/targetcli] Initial import
+
