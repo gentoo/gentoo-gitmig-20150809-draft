@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13675 2012/04/14 12:43:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13676 2012/04/16 12:53:52 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -372,12 +372,6 @@ dev-cpp/sptk
 # masked for removal in 30 days, ~15 Apr 2012
 # unmaintained upstream (bug #396963)
 dev-php/PEAR-DB_DataObject_FormBuilder
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (18 Mar 2012)
-# masked for removel in 30 days, ~ 15 Apr 2012
-# technical issues on gcc-4.6
-# bug 380697
-media-plugins/vdr-games
 
 # Pacho Ramos <pacho@gentoo.org> (18 Mar 2012)
 # Broken in several ways, removal in 30 days.
