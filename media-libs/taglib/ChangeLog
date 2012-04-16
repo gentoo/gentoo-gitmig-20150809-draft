@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.118 2012/04/08 14:30:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.119 2012/04/16 17:01:55 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> taglib-1.7.1.ebuild:
+  Marking taglib-1.7.1 ppc for bug 410953
 
   08 Apr 2012; Raúl Porcel <armin76@gentoo.org> taglib-1.7.1.ebuild:
   alpha/ia64/sh/sparc stable wrt #410953
