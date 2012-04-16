@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libev
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.38 2011/08/29 06:37:46 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.39 2012/04/16 23:37:01 matsuu Exp $
+
+*libev-4.11 (16 Apr 2012)
+
+  16 Apr 2012; MATSUU Takuto <matsuu@gentoo.org> -libev-3.80-r1.ebuild,
+  -libev-3.90-r2.ebuild, -libev-4.03.ebuild, +libev-4.11.ebuild,
+  +files/libev-pc.patch:
+  Version bumped. Added libev.pc, bug #411847. Removed old versions.
 
   29 Aug 2011; Jeroen Roovers <jer@gentoo.org> libev-4.04.ebuild:
   Stable for HPPA (bug #373957).

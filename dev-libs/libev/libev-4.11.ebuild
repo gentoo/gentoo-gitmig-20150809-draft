@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/libev-4.03.ebuild,v 1.1 2011/01/26 16:51:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/libev-4.11.ebuild,v 1.1 2012/04/16 23:37:01 matsuu Exp $
 
 EAPI="3"
 
-inherit autotools eutils
+inherit autotools eutils multilib
 
 MY_P="${P}"
 
@@ -26,6 +26,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/4.01-gentoo.patch"
+	# bug #411847
+	epatch "${FILESDIR}/${PN}-pc.patch"
 
 	eautoreconf
 }
@@ -37,5 +39,16 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
+	if ! use static-libs ; then
+		find "${ED}" -name '*.la' -delete || die
+	fi
 	dodoc Changes README || die
+}
+
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libev.so.3.0.0
+}
+
+pkg_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/libev.so.3.0.0
 }
