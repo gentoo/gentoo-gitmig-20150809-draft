@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ofono
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.38 2012/04/15 16:49:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.39 2012/04/16 20:43:36 maekke Exp $
+
+  16 Apr 2012; Markus Meier <maekke@gentoo.org> ofono-1.0.ebuild:
+  arm stable, bug #412017
 
   15 Apr 2012; Markus Meier <maekke@gentoo.org> ofono-1.0.ebuild:
   x86 stable, bug #412017
