@@ -5,6 +5,10 @@
 	<email>mduft@gentoo.org</email>
 	<name>Markus Duft</name>
 </maintainer>
+<maintainer>
+	<email>haubi@gentoo.org</email>
+	<name>Michael Haubenwallner</name>
+</maintainer>
 <longdescription lang="en">
 	A small library, trying to overcome the problems occuring when building
 	(and using) gentoo-prefix on an interix based system. This has no use
