@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.4.3.ebuild,v 1.1 2012/04/16 20:03:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.4.3.ebuild,v 1.2 2012/04/16 20:07:30 ssuominen Exp $
 
 EAPI=4
 
@@ -31,5 +31,5 @@ src_configure() {
 
 src_install() {
 	default
-	rm -f "${ED}"/usr/lib/*/lib*.la
+	rm -f "${ED}"/usr/lib*/lib*.la
 }
