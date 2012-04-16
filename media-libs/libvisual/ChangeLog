@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.40 2012/03/17 18:04:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.41 2012/04/16 03:36:29 jer Exp $
+
+  16 Apr 2012; Jeroen Roovers <jer@gentoo.org> libvisual-0.4.0-r2.ebuild:
+  Stable for HPPA (bug #412113).
 
   17 Mar 2012; Raúl Porcel <armin76@gentoo.org> libvisual-0.4.0-r1.ebuild,
   libvisual-0.4.0-r2.ebuild:
