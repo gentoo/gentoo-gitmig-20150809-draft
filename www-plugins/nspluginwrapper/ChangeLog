@@ -1,6 +1,15 @@
 # ChangeLog for www-plugins/nspluginwrapper
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.24 2011/08/31 08:26:44 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.25 2012/04/16 04:08:38 chutzpah Exp $
+
+*nspluginwrapper-1.4.4-r2 (16 Apr 2012)
+
+  16 Apr 2012; Patrick McLean <chutzpah@gentoo.org>
+  +nspluginwrapper-1.4.4-r2.ebuild,
+  +files/nspluginwrapper-1.4.4-dont-include-gthread.patch,
+  +files/nspluginwrapper-1.4.4-dont-unload-libraries.patch:
+  Revision bump, add patches for bugs 412053 and 381873. Also don't use gcc
+  directly (bug #380747), and add die functions.
 
   31 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
   nspluginwrapper-1.4.4-r1.ebuild:

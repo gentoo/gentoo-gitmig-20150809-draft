@@ -1,0 +1,11 @@
+diff -ur nspluginwrapper-1.4.4.orig/src/npw-player.c nspluginwrapper-1.4.4/src/npw-player.c
+--- nspluginwrapper-1.4.4.orig/src/npw-player.c	2011-06-30 20:18:57.000000000 -0700
++++ nspluginwrapper-1.4.4/src/npw-player.c	2012-04-15 21:03:05.351084354 -0700
+@@ -25,7 +25,6 @@
+ #include <unistd.h>
+ #include <glib.h>
+ #include <glib/gstdio.h>
+-#include <glib/gthread.h>
+ #include <gtk/gtk.h>
+ #include <gdk/gdkx.h>
+ #include <gdk/gdkkeysyms.h>
