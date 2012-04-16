@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.161 2012/04/08 07:40:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.162 2012/04/16 21:20:03 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> mkvtoolnix-4.9.1.ebuild:
+  Marking mkvtoolnix-4.9.1 ppc for bug 381643
 
 *mkvtoolnix-5.5.0 (08 Apr 2012)
 
