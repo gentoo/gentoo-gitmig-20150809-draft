@@ -2,6 +2,7 @@
 cache
 dtd
 glsa
+md5-cache
 news
 herds.xml
 timestamp
