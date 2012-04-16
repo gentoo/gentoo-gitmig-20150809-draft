@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.0.ebuild,v 1.1 2012/03/28 00:59:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.0.ebuild,v 1.2 2012/04/16 11:16:25 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc doctool test"
 
 RDEPEND=">=dev-libs/gobject-introspection-common-${PV}
-	>=dev-libs/glib-2.29.7:2
+	>=dev-libs/glib-2.31.22:2
 	doctool? ( dev-python/mako )
 	virtual/libffi"
 # Wants real bison, not virtual/yacc
