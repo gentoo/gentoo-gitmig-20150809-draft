@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Grep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Grep/ChangeLog,v 1.1 2012/04/16 05:14:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Grep/ChangeLog,v 1.2 2012/04/16 07:43:57 mr_bones_ Exp $
+
+  16 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> File-Grep-0.020.0.ebuild:
+  fix header
 
 *File-Grep-0.020.0 (16 Apr 2012)
 
