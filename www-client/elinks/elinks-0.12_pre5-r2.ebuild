@@ -1,22 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5.ebuild,v 1.9 2011/06/22 02:33:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.1 2012/04/16 11:02:58 pacho Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit eutils autotools flag-o-matic
 
 MY_P="${P/_/}"
 DESCRIPTION="Advanced and well-established text-mode web browser"
 HOMEPAGE="http://elinks.or.cz/"
 SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~spock/portage/distfiles/elinks-0.10.4.conf.bz2"
+	http://dev.gentoo.org/~spock/portage/distfiles/elinks-0.10.4.conf.bz2
+	http://dev.gentoo.org/~axs/distfiles/${P}-js185-patches.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bittorrent bzip2 debug finger ftp gopher gpm guile idn ipv6 \
-	  javascript lua nls nntp perl ruby samba ssl unicode X zlib"
+	  javascript lua +mouse nls nntp perl ruby samba ssl unicode X zlib"
 RESTRICT="test"
 
 DEPEND="dev-libs/boehm-gc
@@ -32,7 +32,7 @@ DEPEND="dev-libs/boehm-gc
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby dev-ruby/rubygems )
 	samba? ( net-fs/samba )
-	javascript? ( <=dev-lang/spidermonkey-1.8 )"
+	javascript? ( dev-lang/spidermonkey )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -51,8 +51,18 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-0.11.2-lua-5.1.patch
 	fi
 
-	epatch "${FILESDIR}"/elinks-0.11.5-makefile.patch
-	epatch "${FILESDIR}"/elinks-0.12_pre5-compilation-fix.patch
+	epatch "${FILESDIR}"/${PN}-0.11.5-makefile.patch
+	epatch "${FILESDIR}"/${P}-compilation-fix.patch
+
+	if use javascript && has_version ">=dev-lang/spidermonkey-1.8"; then
+		if has_version ">=dev-lang/spidermonkey-1.8.5"; then
+			epatch "${WORKDIR}"/patches/${P}-js185-1-heartbeat.patch
+			epatch "${WORKDIR}"/patches/${P}-js185-2-up.patch
+			epatch "${WORKDIR}"/patches/${P}-js185-3-histback.patch
+		else
+			epatch "${FILESDIR}"/${MY_P}-spidermonkey-callback.patch
+		fi
+	fi
 
 	sed -i -e 's/-Werror//' configure*
 	eautoreconf
@@ -71,13 +81,13 @@ src_configure() {
 	fi
 
 	if use ssl ; then
-		myconf="${myconf} --with-openssl"
+		myconf="${myconf} --with-openssl=${EPREFIX}/usr"
 	else
 		myconf="${myconf} --without-openssl --without-gnutls"
 	fi
 
 	econf \
-		--sysconfdir=/etc/elinks \
+		--sysconfdir="${EPREFIX}"/etc/elinks \
 		--enable-leds \
 		--enable-88-colors \
 		--enable-256-colors \
@@ -101,11 +111,12 @@ src_configure() {
 		$(use_enable nntp) \
 		$(use_enable finger) \
 		$(use_enable samba smb) \
-		${myconf} || die
+		$(use_enable mouse) \
+		${myconf}
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	insopts -m 644 ; insinto /etc/elinks
 	doins "${WORKDIR}"/elinks.conf
@@ -120,7 +131,7 @@ src_install() {
 
 	# Remove some conflicting files on OSX.  The files provided by OSX 10.4
 	# are more or less the same.  -- Fabian Groffen (2005-06-30)
-	rm -f "${D}"/usr/share/locale/locale.alias "${D}"/usr/lib/charset.alias
+	rm -f "${ED}"/usr/share/locale/locale.alias "${ED}"/usr/lib/charset.alias || die
 }
 
 pkg_postinst() {
