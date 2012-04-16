@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.50 2012/03/23 19:56:50 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.51 2012/04/16 21:17:20 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> muttprint-0.72d-r3.ebuild:
+  Marking muttprint-0.72d-r3 ppc for bug 394727
 
   23 Mar 2012; Chema Alonso <nimiux@gentoo.org> metadata.xml:
   Removed Dane Smith (c1pher) as maintainer (Proxy)
