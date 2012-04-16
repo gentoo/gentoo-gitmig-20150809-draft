@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.54 2012/04/06 10:41:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.55 2012/04/16 21:35:10 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> XML-Parser-2.410.0.ebuild:
+  Marking XML-Parser-2.410.0 ppc for bug 410367
 
   06 Apr 2012; Markus Meier <maekke@gentoo.org> XML-Parser-2.410.0.ebuild:
   arm stable, bug #410367
