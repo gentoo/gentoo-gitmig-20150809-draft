@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.133 2012/04/04 06:07:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.134 2012/04/16 19:22:50 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> gentoo-syntax-20120109.ebuild:
+  Marking gentoo-syntax-20120109 ppc for bug 410085
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> gentoo-syntax-20120109.ebuild:
   marked x86 per bug 410085
