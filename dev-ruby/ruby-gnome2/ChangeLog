@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnome2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.59 2012/02/06 17:33:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.60 2012/04/16 17:52:16 graaff Exp $
+
+  16 Apr 2012; Hans de Graaff <graaff@gentoo.org> -ruby-gnome2-0.90.8.ebuild,
+  -ruby-gnome2-0.90.9.ebuild, -ruby-gnome2-1.0.0.ebuild:
+  Remove old versions.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> ruby-gnome2-0.90.8.ebuild:
   Marking ruby-gnome2-0.90.8 ~ppc for bug 371353
