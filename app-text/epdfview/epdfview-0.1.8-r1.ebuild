@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.8-r1.ebuild,v 1.2 2012/01/28 14:52:58 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.8-r1.ebuild,v 1.3 2012/04/16 18:32:28 billie Exp $
 
 EAPI=4
 inherit eutils fdo-mime
@@ -30,7 +30,8 @@ src_prepare() {
 	sed -i \
 		-e 's:Icon=icon_epdfview-48:Icon=epdfview:' \
 		data/epdfview.desktop || die
-	epatch "${FILESDIR}/${P}-swap-blue-red-channels.patch"
+	epatch "${FILESDIR}/${P}-swap-blue-red-channels.patch" \
+		"${FILESDIR}/${P}-glib-2.31-build-fix.patch"
 }
 
 src_configure() {
