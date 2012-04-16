@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/rtslib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtslib/ChangeLog,v 1.1 2012/04/16 21:12:12 alexxy Exp $
+
+*rtslib-9999 (16 Apr 2012)
+
+  16 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
+  +rtslib-9999.ebuild:
+  [dev-python/rtslib] Initial import
+
