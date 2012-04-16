@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/greybird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.10 2012/03/21 06:24:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.11 2012/04/16 20:32:35 ssuominen Exp $
+
+*greybird-0.7.1 (16 Apr 2012)
+
+  16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> +greybird-0.7.1.ebuild:
+  Version bump.
 
   21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -greybird-0.4.ebuild,
   -greybird-0.5.ebuild:
