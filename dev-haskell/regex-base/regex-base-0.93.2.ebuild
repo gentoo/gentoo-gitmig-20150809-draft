@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.93.2.ebuild,v 1.4 2012/04/14 09:20:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.93.2.ebuild,v 1.5 2012/04/16 21:04:21 ranger Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.6
