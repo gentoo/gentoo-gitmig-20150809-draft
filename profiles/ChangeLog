@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6427 2012/04/16 12:53:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6428 2012/04/16 20:17:15 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> updates/2Q-2012:
+  Move sys-fs/bleachbit to sys-apps/bleachbit as more appropiate.
 
   16 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   removed pmask for media-plugins/vdr-games removal
