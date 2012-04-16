@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.106 2012/04/16 01:14:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.107 2012/04/16 11:48:55 jer Exp $
+
+  16 Apr 2012; Jeroen Roovers <jer@gentoo.org> puppet-2.7.13.ebuild:
+  Stable for HPPA (bug #410857).
 
   16 Apr 2012; MATSUU Takuto <matsuu@gentoo.org> puppet-2.7.13.ebuild:
   Removed ruby19 and ree18 from USE_RUBY, bug #410857.
