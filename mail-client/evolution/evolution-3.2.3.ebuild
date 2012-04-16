@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3.ebuild,v 1.3 2012/04/15 20:24:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3.ebuild,v 1.4 2012/04/16 18:14:52 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -140,6 +140,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.2.1-reorder-mx-clutter-gtk.patch"
 	# Fix build failure with glib-2.32
 	epatch "${FILESDIR}/${P}-gmodule-explicit.patch"
+	epatch "${FILESDIR}/${P}-g_thread_init.patch"
 	eautoreconf
 
 	gnome2_src_prepare
