@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r2.ebuild,v 1.2 2012/04/15 19:58:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r2.ebuild,v 1.3 2012/04/16 18:29:09 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -94,6 +94,7 @@ src_prepare() {
 
 	# Fix building with glib-2.32, bug #412109
 	epatch "${FILESDIR}/${P}-gmodule-explicit.patch"
+	epatch "${FILESDIR}/${P}-g_thread_init.patch"
 
 	# /usr/include/db.h is always db-1 on FreeBSD
 	# so include the right dir in CPPFLAGS

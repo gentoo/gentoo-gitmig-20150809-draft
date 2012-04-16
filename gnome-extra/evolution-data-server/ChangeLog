@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.327 2012/04/15 19:58:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.328 2012/04/16 18:29:09 tetromino Exp $
+
+  16 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  evolution-data-server-2.32.3-r2.ebuild,
+  +files/evolution-data-server-2.32.3-g_thread_init.patch:
+  Add another glib-2.32 fix.
 
   15 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   evolution-data-server-2.32.3-r2.ebuild,
