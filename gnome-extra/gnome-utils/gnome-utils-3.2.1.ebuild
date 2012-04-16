@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.4 2012/04/16 16:53:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.5 2012/04/16 17:32:38 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -56,7 +56,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Fix missing freetype2 headers/libs with gtk+-3.4, bug #411939
-	epatch "${FILESDIR}/${PN}-3.2.1-gtk+-3.4-ft2.patch"
+	epatch "${FILESDIR}/${PN}-3.2.1-glib-2.32-gtk-3.4.patch"
 	eautoreconf
 
 	# Remove idiotic -D.*DISABLE_DEPRECATED cflags
