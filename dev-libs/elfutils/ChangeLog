@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.159 2012/02/28 21:52:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.160 2012/04/16 22:53:57 vapier Exp $
+
+  16 Apr 2012; Mike Frysinger <vapier@gentoo.org> elfutils-0.153.ebuild:
+  Make sure to apppend -g to CFLAGS when running tests as the local testsuite
+  depends on it to pass #407135 by Chris Reffett.
 
   28 Feb 2012; Mike Frysinger <vapier@gentoo.org> elfutils-0.153.ebuild:
   Drop cross-compiling hacks now that upstream has updated things.
