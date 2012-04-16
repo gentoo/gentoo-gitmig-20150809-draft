@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.212 2012/04/16 07:54:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.213 2012/04/16 10:28:47 scarabeus Exp $
+
+  16 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> cmake-utils.eclass:
+  Whitespace cmake dep. Add build_rules to CMAKE_BUILD_DIR rather than to T as
+  they might vary for multiple abi builds. Create the CMAKE_BUILD_DIR right
+  away when determined.
 
   16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> waf-utils.eclass:
   Unbreak waf-utils.eclass by restoring --jobs= argument wrt #412159
