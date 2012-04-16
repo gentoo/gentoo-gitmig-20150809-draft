@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r1.ebuild,v 1.6 2011/11/02 21:51:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r2.ebuild,v 1.1 2012/04/16 10:37:21 pacho Exp $
 
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Macrovision FLEXlm license manager and utils"
@@ -60,11 +61,18 @@ src_install () {
 
 	# empty dir for licenses
 	keepdir /etc/flexlm
+
+	# log dir
+	dodir /var/log/flexlm
 }
 
 pkg_postinst() {
 	enewgroup flexlm
 	enewuser flexlm -1 /bin/bash /opt/flexlm flexlm
+
+	# See bug 383787
+	chown flexlm /var/log/flexlm || die
+
 	elog "FlexLM installed. Config is in /etc/conf.d/flexlm"
 	elog "Default location for license file is /etc/flexlm/license.dat"
 }

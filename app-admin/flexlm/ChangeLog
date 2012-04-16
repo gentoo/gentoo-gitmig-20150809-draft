@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/flexlm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.17 2011/11/02 21:51:37 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.18 2012/04/16 10:37:21 pacho Exp $
+
+*flexlm-9.5-r2 (16 Apr 2012)
+
+  16 Apr 2012; Pacho Ramos <pacho@gentoo.org> +flexlm-9.5-r2.ebuild,
+  -flexlm-9.5-r1.ebuild:
+  Fix logfile permissions, bug #383787 by Dmitry Stepankov and Ian Delaney.
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> flexlm-9.5-r1.ebuild:
   Drop superfluous -c usage.
