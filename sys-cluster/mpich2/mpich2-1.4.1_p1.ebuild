@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4.1_p1.ebuild,v 1.1 2012/03/07 01:28:34 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4.1_p1.ebuild,v 1.2 2012/04/16 14:48:24 xarthisius Exp $
 
 EAPI=4
 
@@ -104,7 +104,7 @@ src_configure() {
 
 	c="${c} --sysconfdir=${EPREFIX}/etc/${PN}"
 	econf ${c} ${romio_conf} \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--with-pm=hydra \
 		--disable-mpe \
 		--with-hwloc-prefix="${EPREFIX}/usr" \
