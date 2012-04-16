@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/sgeps
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sgeps/ChangeLog,v 1.2 2010/07/22 20:36:10 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sgeps/ChangeLog,v 1.3 2012/04/16 22:25:51 flameeyes Exp $
+
+*sgeps-0_pre15 (16 Apr 2012)
+
+  16 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> +sgeps-0_pre15.ebuild:
+  Bump to a new version and add zsh completion.
 
 *sgeps-0_pre12 (22 Jul 2010)
 
