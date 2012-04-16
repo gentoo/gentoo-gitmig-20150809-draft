@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hddled/hddled-0.2.ebuild,v 1.1 2012/04/14 11:55:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hddled/hddled-0.2.ebuild,v 1.2 2012/04/16 13:19:34 xmw Exp $
 
 EAPI=4
 
 inherit toolchain-funcs
 
-DESCRIPTION="use scroll lock led as "
+DESCRIPTION="Show hard disk activity using the scroll lock LED"
 HOMEPAGE="http://members.optusnet.com.au/foonly/whirlpool/code/"
 SRC_URI="http://xmw.de/mirror/${PN}/${P}.c"
 
