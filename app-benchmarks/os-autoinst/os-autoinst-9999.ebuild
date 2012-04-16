@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/os-autoinst/os-autoinst-9999.ebuild,v 1.1 2012/03/14 14:30:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/os-autoinst/os-autoinst-9999.ebuild,v 1.2 2012/04/16 08:17:12 scarabeus Exp $
 
 EAPI=4
 
@@ -27,10 +27,6 @@ RDEPEND="
 DEPEND=""
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}/0001-use-proper-path-to-share-for-isotovideo.patch" \
-		"${FILESDIR}/0002-Use-libexecdir-and-do-not-depend-on-runtime-deps.patch"
-
 	eautoreconf
 }
 
