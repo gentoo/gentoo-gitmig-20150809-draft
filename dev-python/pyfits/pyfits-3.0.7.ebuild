@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.0.4.ebuild,v 1.3 2012/02/23 04:47:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.0.7.ebuild,v 1.1 2012/04/16 09:20:30 xarthisius Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.* 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 2.7-pypy-*"
 
 inherit distutils eutils
 
@@ -20,12 +20,14 @@ IUSE="test"
 RDEPEND="dev-python/numpy
 	dev-python/setuptools"
 DEPEND="${RDEPEND}
+	dev-python/stsci-distutils
+	dev-python/d2to1
 	test? ( dev-python/nose )"
 
 src_prepare() {
 	sed -e 's/Exception, e/Exception as e/g' \
 		-i lib/pyfits/{hdu/base.py,_release.py,tests/test_core.py} || die
-	epatch "${FILESDIR}"/${P}-tests_python3.patch
+	epatch "${FILESDIR}"/${PN}-3.0.4-tests_python3.patch
 	distutils_src_prepare
 }
 
