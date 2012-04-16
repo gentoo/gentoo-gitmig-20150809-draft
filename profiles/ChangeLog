@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6425 2012/04/15 17:01:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6426 2012/04/16 08:38:08 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Apr 2012; Pacho Ramos <pacho@gentoo.org> targets/desktop/make.defaults:
+  Enable wxwidgets by default as discussed in
+  http://archives.gentoo.org/gentoo-dev/msg_fdc392cc98c7eea216175521d87b9955.xm
+  l
 
   15 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
   +default/linux/alpha/10.0/use.mask, +default/linux/arm/10.0/use.mask,
