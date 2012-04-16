@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.2.ebuild,v 1.2 2012/04/14 10:39:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.2.ebuild,v 1.3 2012/04/16 13:03:06 xmw Exp $
 
 EAPI="4"
 
@@ -18,14 +18,14 @@ SRC_URI="ftp://ftp.mcs.anl.gov/pub/bcfg/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-solaris"
-IUSE="doc server"
+IUSE="doc genshi server"
 
 DEPEND="dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 RDEPEND="app-portage/gentoolkit
-	dev-python/genshi
-	virtual/fam
+	genshi? ( dev-python/genshi )
 	server? (
+		virtual/fam
 		dev-python/lxml
 		dev-libs/libgamin[python] )"
 

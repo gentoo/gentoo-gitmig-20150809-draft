@@ -12,5 +12,6 @@
 </maintainer>
 <use>
   <flag name='server'>Installs scripts to be used on the server-side of this app</flag>
+  <flag name='genshi'>Include dev-python/genshi support</flag>
 </use>
 </pkgmetadata>
