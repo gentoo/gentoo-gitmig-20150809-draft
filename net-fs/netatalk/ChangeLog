@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.76 2012/04/08 21:09:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.77 2012/04/16 21:09:38 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> netatalk-2.2.1-r3.ebuild:
+  Marking netatalk-2.2.1-r3 ppc for bug 411291
 
   08 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> -files/afpd.init,
   -files/afpd.init.2, -files/atalk_service.init, -files/cnid_metad.init,
