@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.86 2012/04/16 19:56:55 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.87 2012/04/16 20:38:06 fuzzyray Exp $
+
+  16 Apr 2012; Paul Varner <fuzzyray@gentoo.org> ChangeLog:
+  Forcing signed manifest.
 
 *esearch-1.1-r1 (16 Apr 2012)
 
