@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sflowtool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.25 2012/04/05 05:36:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.26 2012/04/16 21:13:21 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> sflowtool-3.24.ebuild:
+  Marking sflowtool-3.24 ppc for bug 410011
 
   05 Apr 2012; Jeff Horelick <jdhore@gentoo.org> sflowtool-3.24.ebuild:
   marked x86 per bug 410011
