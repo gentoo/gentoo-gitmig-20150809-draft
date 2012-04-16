@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.6.ebuild,v 1.5 2012/04/11 16:05:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.6.ebuild,v 1.6 2012/04/16 21:15:28 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/${PN}/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="selinux"
 
 DEPEND="selinux? ( sec-policy/selinux-fail2ban )"
