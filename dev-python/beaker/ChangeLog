@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beaker
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.35 2011/12/26 09:06:09 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.36 2012/04/16 02:25:05 jer Exp $
+
+  16 Apr 2012; Jeroen Roovers <jer@gentoo.org> beaker-1.6.2.ebuild:
+  Marked ~hppa (bug #411761).
 
   26 Dec 2011; Patrick Lauer <patrick@gentoo.org> beaker-1.6.2.ebuild:
   Restricting py 2.4 as things won't work there
