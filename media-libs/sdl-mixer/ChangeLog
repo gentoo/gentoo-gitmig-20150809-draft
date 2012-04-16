@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.92 2012/04/14 03:09:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.93 2012/04/16 19:31:16 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> sdl-mixer-1.2.12.ebuild:
+  Marking sdl-mixer-1.2.12 ppc for bug 411531
 
   14 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> sdl-mixer-1.2.12.ebuild:
   use LDFLAGS for playtools (bug #411735)
