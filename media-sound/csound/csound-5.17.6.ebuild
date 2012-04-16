@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.17.6.ebuild,v 1.1 2012/04/11 22:27:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.17.6.ebuild,v 1.2 2012/04/16 19:16:38 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -81,6 +81,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.16.6-tests.patch
+	epatch "${FILESDIR}"/${P}-fltk.patch
 
 	sed -i -e "s:^\(csoundExecutable =\).*:\1 \"${WORKDIR}/${P}_build/csound\":" \
 		tests/test.py || die

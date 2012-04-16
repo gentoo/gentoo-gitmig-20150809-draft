@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/csound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.14 2012/04/11 22:32:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.15 2012/04/16 19:16:38 radhermit Exp $
+
+  16 Apr 2012; Tim Harder <radhermit@gentoo.org> csound-5.17.6.ebuild,
+  +files/csound-5.17.6-fltk.patch:
+  Fix build with fltk enabled (bug #412021).
 
 *csound-5.17.2-r1 (11 Apr 2012)
 
