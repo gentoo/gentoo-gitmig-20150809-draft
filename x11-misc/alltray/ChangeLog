@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.43 2012/04/04 07:05:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.44 2012/04/16 21:40:44 ranger Exp $
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> alltray-0.7.5.1.ebuild:
+  Marking alltray-0.7.5.1 ppc for bug 404885
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> alltray-0.7.5.1.ebuild:
   marked x86 per bug 404885
