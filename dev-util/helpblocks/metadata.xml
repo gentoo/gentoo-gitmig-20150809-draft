@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+  <email>wxwidgets@gentoo.org</email>
 </maintainer>
 <longdescription>
 Anthemion HelpBlocks is an HTML authoring tool specifically designed for 
