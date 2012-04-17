@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13676 2012/04/16 12:53:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13677 2012/04/17 08:30:34 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (17 Apr 2012)
+# Masked for testing and review.
+>=sys-auth/pambase-20120417
+>=sys-apps/shadow-4.1.5-r1
+>=sys-apps/hardened-shadow-0.9-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (14 Apr 2012)
 # Incompatible with latest libxfcegui4 wrt bug #411949
