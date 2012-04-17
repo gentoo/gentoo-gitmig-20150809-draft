@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-rsvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.29 2012/04/16 20:04:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.30 2012/04/17 17:22:44 graaff Exp $
+
+*ruby-rsvg-1.1.3 (17 Apr 2012)
+
+  17 Apr 2012; Hans de Graaff <graaff@gentoo.org> +ruby-rsvg-1.1.3.ebuild:
+  Version bump.
 
   16 Apr 2012; Agostino Sarubbo <ago@gentoo.org> ruby-rsvg-1.0.3.ebuild:
   Stable for amd64, wrt bug #412097
