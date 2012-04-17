@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0_rc2.ebuild,v 1.1 2012/02/03 13:45:13 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0_rc3.ebuild,v 1.1 2012/04/17 11:29:32 gurligebis Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit toolchain-funcs eutils
 DESCRIPTION="IEEE 802.11 wireless LAN Host AP daemon"
 HOMEPAGE="http://hostap.epitest.fi"
 #SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
-SRC_URI="http://dev.gentoo.org/~gurligebis/files/hostapd/hostapd-1.0_rc2.tar.gz"
+SRC_URI="http://dev.gentoo.org/~gurligebis/files/hostapd/hostapd-1.0_rc3.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
@@ -20,7 +20,7 @@ DEPEND="ssl? ( dev-libs/openssl )
 	dev-libs/libnl:1.1
 	madwifi? ( ||
 		( >net-wireless/madwifi-ng-tools-0.9.3
-		net-wireless/madwifi-ng ) )"
+		net-wireless/madwifi-old ) )"
 RDEPEND="${DEPEND}"
 
 S="${S}/hostapd"
