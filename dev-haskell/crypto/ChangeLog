@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/crypto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.2 2012/03/16 21:48:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.3 2012/04/17 19:42:55 slyfox Exp $
+
+  17 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/crypto-4.2.4-ghc-7.4.patch, crypto-4.2.4.ebuild:
+  Fixed build breakage against ghc-7.4 (bug #412289 by Robin Johnson).
 
   16 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> crypto-4.2.4.ebuild:
   Fixed case in HOMEPAGE.
