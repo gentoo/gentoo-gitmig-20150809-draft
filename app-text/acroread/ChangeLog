@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.182 2012/04/14 01:03:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.183 2012/04/17 11:28:32 ssuominen Exp $
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> acroread-9.5.1.ebuild:
+  Remove net-libs/xulrunner from alternative || ( ) dependency wrt #403415
 
   14 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -acroread-9.4.7.ebuild:

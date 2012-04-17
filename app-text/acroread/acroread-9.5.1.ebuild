@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1.ebuild,v 1.3 2012/04/13 09:09:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1.ebuild,v 1.4 2012/04/17 11:28:32 ssuominen Exp $
 
 EAPI=4
 
@@ -43,8 +43,7 @@ RDEPEND="media-libs/fontconfig
 	cups? ( net-print/cups )
 	x86? ( x11-libs/gtk+:2 net-dns/libidn
 			ldap? ( net-nds/openldap )
-			!minimal? ( || ( net-libs/xulrunner
-						www-client/firefox
+			!minimal? ( || ( www-client/firefox
 						www-client/seamonkey ) ) )
 	amd64? ( app-emulation/emul-linux-x86-gtklibs app-emulation/emul-linux-x86-baselibs )
 	linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] )
@@ -221,7 +220,7 @@ src_install() {
 
 	# We need to set a MOZILLA_COMP_PATH for seamonkey and firefox since
 	# they don't install a configuration file for libgtkembedmoz.so
-	# detection in /etc/gre.d/ like xulrunner does.
+	# detection in /etc/gre.d/ like xulrunner did.
 	if ! use minimal ; then
 		if use x86 ; then
 			for lib in /opt/seamonkey /usr/lib/seamonkey /usr/lib/mozilla-firefox ; do
