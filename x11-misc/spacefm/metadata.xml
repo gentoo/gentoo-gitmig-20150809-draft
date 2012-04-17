@@ -15,9 +15,9 @@
 		<maintainer status="active">
 			<email>ignorantguru@users.sourceforge.net</email>
 		</maintainer>
-		<changelog>http://sourceforge.net/p/spacefm/blog/</changelog>
-		<doc lang="en">http://spacefm.wikispaces.com/</doc>
-		<bugs-to>http://sourceforge.net/p/spacefm/tickets/</bugs-to>
+		<changelog>http://ignorantguru.github.com/spacefm/news.html</changelog>
+		<doc lang="en">https://github.com/IgnorantGuru/spacefm/wiki/</doc>
+		<bugs-to>https://github.com/IgnorantGuru/spacefm/issues</bugs-to>
 	</upstream>
 	<use>
 		<flag name="fam">Disable inotify and use fam or gamin instead</flag>

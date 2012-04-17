@@ -1,20 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-9999.ebuild,v 1.2 2012/04/17 13:53:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.5.ebuild,v 1.1 2012/04/17 13:53:03 ssuominen Exp $
 
 EAPI=4
 
-EGIT_REPO_URI="git://github.com/IgnorantGuru/${PN}.git"
-EGIT_BRANCH="next"
-
-inherit fdo-mime git-2
+inherit fdo-mime
 
 DESCRIPTION="A multi-panel tabbed file manager"
 HOMEPAGE="http://ignorantguru.github.com/spacefm/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="fam"
 
 RDEPEND="dev-libs/glib:2
@@ -56,7 +54,7 @@ pkg_postinst() {
 	elog "Other optional dependencies:"
 	elog "  sys-process/lsof (device processes)"
 	elog "  virtual/eject (eject media)"
-	einfo ""
+	einfo""
 }
 
 pkg_postrm() {
