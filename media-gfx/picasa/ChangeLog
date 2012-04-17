@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/picasa
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.21 2011/03/29 12:24:56 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.22 2012/04/17 13:36:02 ssuominen Exp $
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  picasa-3.0.0.57.4402.0_beta.ebuild:
+  Remove net-libs/xulrunner from alternative || ( ) dependency wrt #403415
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> picasa-2.7.3736.15.ebuild,
   picasa-3.0.0.57.4402.0_beta.ebuild:
