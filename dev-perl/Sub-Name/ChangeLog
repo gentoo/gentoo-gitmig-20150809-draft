@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Name
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.18 2012/03/31 06:50:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.19 2012/04/17 21:07:34 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> Sub-Name-0.50.0.ebuild:
+  Marking Sub-Name-0.50.0 ppc64 for bug 404665
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Sub-Name-0.04.ebuild:
   Cleanup
