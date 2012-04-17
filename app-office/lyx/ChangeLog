@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.256 2012/04/15 14:05:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.257 2012/04/17 16:14:10 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> lyx-2.0.3.ebuild:
+  Marking lyx-2.0.3 ppc for bug 411941
 
   15 Apr 2012; Agostino Sarubbo <ago@gentoo.org> lyx-2.0.3.ebuild:
   Stable for amd64, wrt bug #411941
