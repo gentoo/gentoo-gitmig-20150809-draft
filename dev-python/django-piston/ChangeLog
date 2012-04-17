@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-piston
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.3 2011/12/11 07:23:58 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.4 2012/04/17 15:00:34 mgorny Exp $
+
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org> django-piston-0.2.2.ebuild:
+  Use mirror://bitbucket.
 
   11 Dec 2011; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Add python herd.
