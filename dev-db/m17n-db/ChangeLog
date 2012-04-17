@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.53 2012/04/16 19:24:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.54 2012/04/17 21:39:35 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> m17n-db-1.6.3.ebuild:
+  Marking m17n-db-1.6.3 ppc64 for bug 404627
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> m17n-db-1.6.3.ebuild:
   Marking m17n-db-1.6.3 ppc for bug 404627
