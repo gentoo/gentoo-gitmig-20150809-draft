@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/augeas-0.8.1.ebuild,v 1.1 2011/05/11 14:41:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/augeas-0.10.0.ebuild,v 1.1 2012/04/17 15:55:48 matsuu Exp $
 
-EAPI="3"
+EAPI="4"
+inherit eutils
 
 DESCRIPTION="A library for changing configuration files"
 HOMEPAGE="http://augeas.net/"
@@ -13,8 +14,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="static-libs test"
 
-RDEPEND="sys-libs/readline"
+RDEPEND="sys-libs/readline
+	dev-libs/libxml2"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	>=app-doc/NaturalDocs-1.40
 	test? ( dev-lang/ruby )"
 
@@ -32,9 +35,9 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	default
 
-	use static-libs || find "${ED}" -name '*.la' -exec rm {} +
+	use static-libs || find "${ED}" -name '*.la' -delete
 
-	dodoc AUTHORS ChangeLog README NEWS || die
+	dodoc AUTHORS ChangeLog README NEWS
 }

@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/augeas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.28 2011/12/14 20:40:05 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.29 2012/04/17 15:55:48 matsuu Exp $
+
+*augeas-0.10.0 (17 Apr 2012)
+
+  17 Apr 2012; MATSUU Takuto <matsuu@gentoo.org> -augeas-0.5.2.ebuild,
+  -augeas-0.7.3.ebuild, -augeas-0.8.1.ebuild, +augeas-0.10.0.ebuild:
+  Version bumped. Removed old versions.
 
   14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> augeas-0.9.0.ebuild:
   Stable for AMD64, wrt bug #391565
