@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.833 2012/04/16 19:13:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.834 2012/04/17 20:47:39 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> glibc-2.14.1-r3.ebuild:
+  Marking glibc-2.14.1-r3 ppc64 for bug 411903
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> glibc-2.14.1-r3.ebuild:
   Marking glibc-2.14.1-r3 ppc for bug 411903
