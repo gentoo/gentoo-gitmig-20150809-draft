@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/gnuradio
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.1 2012/04/17 13:38:48 chithanh Exp $
+
+*gnuradio-3.5.3 (17 Apr 2012)
+
+  17 Apr 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +gnuradio-3.5.3.ebuild, +metadata.xml:
+  Initial import, bug #90667. Based on ebuild from Lukas Sandström.
+
