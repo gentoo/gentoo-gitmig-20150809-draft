@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.188 2012/04/08 16:41:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.189 2012/04/17 16:02:29 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> apache-2.2.22.ebuild:
+  Marking apache-2.2.22 ppc for bug 401761
 
   08 Apr 2012; Raúl Porcel <armin76@gentoo.org> apache-2.2.22.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #401761
