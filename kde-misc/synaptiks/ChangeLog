@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.27 2012/03/27 09:25:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.28 2012/04/17 15:08:44 mgorny Exp $
+
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org> synaptiks-0.4.0-r1.ebuild:
+  Use mirror://bitbucket.
 
   27 Mar 2012; Johannes Huber <johu@gentoo.org> synaptiks-0.8.1.ebuild:
   Set python 2 interpreter, bug #387533.
