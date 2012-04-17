@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12.ebuild,v 1.10 2012/04/16 20:37:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12.ebuild,v 1.11 2012/04/17 14:46:13 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils
@@ -18,8 +18,10 @@ REQUIRED_USE="midi? ( || ( timidity fluidsynth ) )"
 
 DEPEND=">=media-libs/libsdl-1.2.10
 	flac? ( media-libs/flac )
-	fluidsynth? ( media-sound/fluidsynth )
-	timidity? ( media-sound/timidity++ )
+	midi? (
+		fluidsynth? ( media-sound/fluidsynth )
+		timidity? ( media-sound/timidity++ )
+	)
 	mad? ( media-libs/libmad )
 	!mad? ( mp3? ( >=media-libs/smpeg-0.4.4-r1 ) )
 	modplug? ( media-libs/libmodplug )
@@ -36,6 +38,13 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
+
+	if use midi; then
+		myconf=$(use_enable timidity music-timidity-midi) \
+			$(use_enable fluidsynth music-fluidsynth-midi)
+	fi
+
 	econf \
 		--disable-dependency-tracking \
 		--disable-music-flac-shared \
@@ -44,15 +53,14 @@ src_configure() {
 		--disable-music-mp3-shared \
 		--disable-music-ogg-shared \
 		$(use_enable wav music-wave) \
-		$(use_enable timidity music-timidity-midi) \
-		$(use_enable fluidsynth music-fluidsynth-midi) \
 		$(use_enable vorbis music-ogg) \
 		$(use_enable mikmod music-mod) \
 		$(use_enable modplug music-mod-modplug) \
 		$(use_enable flac music-flac) \
 		$(use_enable static-libs static) \
 		$(use mad && echo --disable-music-mp3 || use_enable mp3 music-mp3) \
-		$(use_enable mad music-mp3-mad-gpl)
+		$(use_enable mad music-mp3-mad-gpl) \
+		${myconf}
 }
 
 src_install() {
@@ -64,5 +72,23 @@ src_install() {
 	if ! use static-libs ; then
 		find "${D}" -type f -name '*.la' -exec rm {} + \
 			|| die "la removal failed"
+	fi
+}
+
+pkg_postinst() {
+	# bug 412035
+	# https://bugs.gentoo.org/show_bug.cgi?id=412035
+	if use midi ; then
+		if use fluidsynth; then
+			ewarn "FluidSynth support requires you to set the SDL_SOUNDFONTS"
+			ewarn "environment variable to the location of a SoundFont file"
+			ewarn "unless the game or application happens to do this for you."
+
+			if use timidity; then
+				ewarn "Failing to do so will result in Timidity being used instead."
+			else
+				ewarn "Failing to do so will result in silence."
+			fi
+		fi
 	fi
 }
