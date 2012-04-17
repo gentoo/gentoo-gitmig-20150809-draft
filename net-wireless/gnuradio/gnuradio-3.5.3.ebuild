@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.5.3.ebuild,v 1.1 2012/04/17 13:38:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.5.3.ebuild,v 1.2 2012/04/17 17:57:56 chithanh Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://gnuradio.org/redmine/attachments/download/320/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="audio doc dot examples fcd grc guile qt4 sdl utils wxwidgets"
 REQUIRED_USE="utils? ( wxwidgets )
 	fcd? ( audio )"
