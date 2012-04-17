@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.3.10.ebuild,v 1.4 2012/03/27 18:42:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.3.10.ebuild,v 1.5 2012/04/17 15:13:50 mgorny Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ inherit distutils
 
 DESCRIPTION="An automatic disk mounting service using udisks"
 HOMEPAGE="http://bitbucket.org/byronclark/udiskie"
-SRC_URI="http://bitbucket.org/byronclark/${PN}/downloads/${P}.tar.gz"
+SRC_URI="mirror://bitbucket/byronclark/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
