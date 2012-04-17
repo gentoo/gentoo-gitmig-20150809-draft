@@ -1,0 +1,10 @@
+# ChangeLog for games-util/nml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.1 2012/04/17 12:30:22 scarabeus Exp $
+
+*nml-0.2.3 (17 Apr 2012)
+
+  17 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +nml-0.2.3.ebuild:
+  Initial commit for new tool used to build OpenGFX files used by OpenTTD.
+
