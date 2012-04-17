@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.136 2012/04/16 21:38:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.137 2012/04/17 19:44:05 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> pure-ftpd-1.0.35.ebuild:
+  Marking pure-ftpd-1.0.35 ppc64 for bug 410129
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> pure-ftpd-1.0.35.ebuild:
   Marking pure-ftpd-1.0.35 ppc for bug 410129
