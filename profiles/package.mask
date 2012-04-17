@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13677 2012/04/17 08:30:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13678 2012/04/17 11:06:10 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -358,11 +358,6 @@ app-arch/createrepo
 # firefox with kde-4.8. Unmask at your own risk.
 kde-misc/kgtk
 
-# Samuli Suominen <ssuominen@gentoo.org> (22 Mar 2012)
-# Fails to compile. No upstream. Blocking xulrunner removal.
-# See bugs 333895 and 403415. Removal in 30 days.
-www-client/galeon
-
 # Lars Wendler <polynomial-c@gentoo.org> (22 Mar 2012)
 # Upstream is dead. Masked for removal in 30 days.
 www-client/icecat
@@ -390,11 +385,6 @@ dev-libs/tomsfastmath
 # Upstream dead, nobody willing to maintain it and
 # buggy, bug #348500. Removal in 30 days.
 gnome-extra/hardware-monitor
-
-# Pacho Ramos <pacho@gentoo.org> (18 Mar 2012)
-# Unmaintained, nothing needs it, bug #363205
-# Removal in 30 days.
-dev-dotnet/gluezilla
 
 # Davide Pesavento <pesa@gentoo.org> (17 Mar 2012)
 # Beta release, masked for testing.
