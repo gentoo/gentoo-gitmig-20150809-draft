@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/iobuffer-1.1.2-r2.ebuild,v 1.2 2012/04/17 17:18:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/iobuffer-1.1.2-r2.ebuild,v 1.3 2012/04/17 17:20:01 graaff Exp $
 
 EAPI="4"
 # jruby: mkmf
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGES.md README.md"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
 
-inherit ruby-fakegem
+inherit multilib ruby-fakegem
 
 GITHUB_USER="tarcieri"
 
@@ -40,7 +40,7 @@ each_ruby_configure() {
 
 each_ruby_compile() {
 	emake -C ext
-	cp ext/iobuffer_ext.so lib/ || die
+	cp ext/iobuffer_ext$(get_modname) lib/ || die
 }
 
 each_ruby_test() {
