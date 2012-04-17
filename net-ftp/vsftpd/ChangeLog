@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.151 2012/04/16 21:10:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.152 2012/04/17 19:45:00 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> vsftpd-2.3.5.ebuild:
+  Marking vsftpd-2.3.5 ppc64 for bug 411707
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> vsftpd-2.3.5.ebuild:
   Marking vsftpd-2.3.5 ppc for bug 411707
