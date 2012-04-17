@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.41 2012/04/16 19:25:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.42 2012/04/17 21:40:29 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> paxctl-0.7-r1.ebuild:
+  Marking paxctl-0.7-r1 ppc64 for bug 404627
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> paxctl-0.7-r1.ebuild:
   Marking paxctl-0.7-r1 ppc for bug 410685
