@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.507 2012/04/16 17:06:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.508 2012/04/17 21:35:40 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> samba-3.5.14.ebuild:
+  Marking samba-3.5.14 ppc64 for bug 411487
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> samba-3.5.14.ebuild:
   Marking samba-3.5.14 ppc for bug 411487
