@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.65 2012/04/15 22:00:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.66 2012/04/17 16:11:04 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> opencv-2.3.1a-r1.ebuild:
+  Marking opencv-2.3.1a-r1 ppc for bug 409733
 
   15 Apr 2012; Jeremy Olexa <darkside@gentoo.org> opencv-2.3.1a-r1.ebuild:
   add ~amd64-linux based on testing in bug 351218
