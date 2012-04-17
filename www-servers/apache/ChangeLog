@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.189 2012/04/17 16:02:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.190 2012/04/17 19:33:52 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> apache-2.2.22.ebuild:
+  Marking apache-2.2.22 ppc64 for bug 401761
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> apache-2.2.22.ebuild:
   Marking apache-2.2.22 ppc for bug 401761
