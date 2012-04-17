@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.1.ebuild,v 1.5 2012/04/17 20:26:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.1.ebuild,v 1.6 2012/04/17 21:13:06 idl0r Exp $
 
 EAPI=4
-
-inherit autotools eutils flag-o-matic multilib
 
 DESCRIPTION="interactive process viewer"
 HOMEPAGE="http://htop.sourceforge.net"
