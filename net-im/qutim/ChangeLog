@@ -1,6 +1,12 @@
 # ChangeLog for net-im/qutim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.17 2012/04/15 22:41:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.18 2012/04/17 12:48:20 pesa Exp $
+
+  17 Apr 2012; Davide Pesavento <pesa@gentoo.org>
+  -files/qutim-0.3.0-fix-linking-with-system-jreen.patch, -qutim-0.3.0.ebuild,
+  qutim-0.3.1.ebuild:
+  Move dev-util/automoc to DEPEND only, thanks to Nikoli in bug 412275. Remove
+  old.
 
 *qutim-0.3.1 (15 Apr 2012)
 

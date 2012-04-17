@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.1 2012/04/15 22:41:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.2 2012/04/17 12:48:20 pesa Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ REQUIRED_USE="
 	oscar? ( ssl )
 "
 
+# Minimum Qt version required
 QT_PV="4.7.0:4"
 
 CDEPEND="
@@ -41,10 +42,7 @@ CDEPEND="
 		app-crypt/qca:2
 		net-libs/jreen
 	)
-	kde? (
-		dev-util/automoc
-		kde-base/kdelibs:4
-	)
+	kde? ( kde-base/kdelibs:4 )
 	kinetic? ( >=x11-libs/qt-declarative-${QT_PV} )
 	multimedia? ( >=x11-libs/qt-multimedia-${QT_PV} )
 	oscar? ( app-crypt/qca:2 )
@@ -67,6 +65,7 @@ CDEPEND="
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )
+	kde? ( dev-util/automoc )
 "
 RDEPEND="${CDEPEND}
 	jabber? ( app-crypt/qca-gnupg:2 )
