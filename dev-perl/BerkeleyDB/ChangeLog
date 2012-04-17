@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.85 2012/04/16 21:22:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.86 2012/04/17 21:52:17 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> BerkeleyDB-0.500.0.ebuild:
+  Marking BerkeleyDB-0.500.0 ppc64 for bug 404663
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> BerkeleyDB-0.500.0.ebuild:
   Marking BerkeleyDB-0.500.0 ppc for bug 404663
