@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.42 2012/04/16 21:27:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.43 2012/04/17 21:55:00 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> IO-Socket-INET6-2.690.0.ebuild:
+  Marking IO-Socket-INET6-2.690.0 ppc64 for bug 404673
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> IO-Socket-INET6-2.690.0.ebuild:
   Marking IO-Socket-INET6-2.690.0 ppc for bug 404673
