@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ski/ski-1.3.2.ebuild,v 1.1 2012/04/16 05:04:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ski/ski-1.3.2.ebuild,v 1.2 2012/04/17 04:01:05 vapier Exp $
 
 EAPI="4"
 
@@ -26,11 +26,16 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	dev-util/gperf"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-syscall-linux-includes.patch
+	"${FILESDIR}"/${P}-remove-hayes.patch
+	"${FILESDIR}"/${P}-no-local-ltdl.patch
+	"${FILESDIR}"/${P}-AC_C_BIGENDIAN.patch
+	"${FILESDIR}"/${P}-configure-withval.patch
+)
+
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-syscall-linux-includes.patch \
-		"${FILESDIR}"/${P}-remove-hayes.patch \
-		"${FILESDIR}"/${P}-no-local-ltdl.patch
+	epatch "${PATCHES[@]}"
 
 	rm -rf libltdl src/ltdl.[ch] macros/ltdl.m4
 
@@ -40,6 +45,6 @@ src_prepare() {
 src_configure() {
 	econf \
 		--without-included-ltdl \
-		$(use_enable gtk) \
-		$(use_enable motif x11)
+		$(use_with gtk) \
+		$(use_with motif x11)
 }
