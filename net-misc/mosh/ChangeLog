@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.2 2012/04/16 13:05:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.3 2012/04/17 03:14:36 xmw Exp $
+
+*mosh-1.1.94 (17 Apr 2012)
+
+  17 Apr 2012; Michael Weber <xmw@gentoo.org> +mosh-1.1.94.ebuild:
+  Version bump to 1.2 prerelease
 
   16 Apr 2012; Michael Weber <xmw@gentoo.org> mosh-9999.ebuild:
   Dropped boost dependency
