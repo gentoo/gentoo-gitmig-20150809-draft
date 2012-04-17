@@ -1,6 +1,9 @@
 # ChangeLog for app-office/pybliographer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.25 2012/04/05 20:42:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.26 2012/04/17 16:06:21 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> pybliographer-1.2.14.ebuild:
+  Marking pybliographer-1.2.14 ppc for bug 404615
 
   05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pybliographer-1.2.14.ebuild:
