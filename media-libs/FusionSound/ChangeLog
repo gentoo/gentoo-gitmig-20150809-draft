@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/FusionSound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/ChangeLog,v 1.17 2012/02/28 16:40:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/ChangeLog,v 1.18 2012/04/17 13:19:58 pesa Exp $
+
+  17 Apr 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/FusionSound-1.1.1-libav-0.8.1.patch, FusionSound-1.1.1-r1.ebuild:
+  Fix build with libav-0.8.1 (bug 409725).
 
   28 Feb 2012; Jeroen Roovers <jer@gentoo.org> FusionSound-1.1.1-r1.ebuild:
   Stable for HPPA (bug #405659).
