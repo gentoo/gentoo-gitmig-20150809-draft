@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/batman-adv-2011.3.1.ebuild,v 1.1 2011/11/14 10:26:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/batman-adv-2012.1.0.ebuild,v 1.1 2012/04/17 03:28:53 xmw Exp $
 
 EAPI=4
 
@@ -17,12 +17,15 @@ SRC_URI="http://downloads.open-mesh.org/batman/stable/sources/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
 DEPEND=""
 RDEPEND=""
 
 src_compile() {
+	if use debug; then
+		export BUILD_PARAMS="CONFIG_BATMAN_ADV_DEBUG=y"
+	fi
 	export KERNELPATH="${KERNEL_DIR}"
 	linux-mod_src_compile
 }

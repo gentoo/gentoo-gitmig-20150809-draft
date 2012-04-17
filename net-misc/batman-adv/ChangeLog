@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/batman-adv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/ChangeLog,v 1.5 2011/11/15 22:19:50 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/ChangeLog,v 1.6 2012/04/17 03:28:53 xmw Exp $
+
+*batman-adv-2012.1.0 (17 Apr 2012)
+
+  17 Apr 2012; Michael Weber <xmw@gentoo.org> -batman-adv-2011.1.0.ebuild,
+  -batman-adv-2011.3.1.ebuild, +batman-adv-2012.1.0.ebuild:
+  Remove old version, version bump w/ CONFIG_BATMAN_ADV_DEBUG=y support (thanks
+  Franz Schrober, bug 412143)
 
 *batman-adv-2011.4.0 (15 Nov 2011)
 
