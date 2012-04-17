@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.88 2012/04/16 19:26:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.89 2012/04/17 21:42:19 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> mlterm-3.0.9.ebuild:
+  Marking mlterm-3.0.9 ppc64 for bug 404901
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> mlterm-3.0.9.ebuild:
   Marking mlterm-3.0.9 ppc for bug 404901
