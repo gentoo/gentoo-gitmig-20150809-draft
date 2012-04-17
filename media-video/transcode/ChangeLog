@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.299 2012/02/19 14:49:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.300 2012/04/17 15:11:48 mgorny Exp $
+
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org> transcode-1.1.7.ebuild:
+  Use mirror://bitbucket.
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> transcode-1.1.7.ebuild:
   Stable on alpha, bug #395729
