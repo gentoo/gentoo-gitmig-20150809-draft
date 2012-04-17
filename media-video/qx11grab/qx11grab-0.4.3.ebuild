@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.3.ebuild,v 1.1 2012/04/15 21:41:34 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.3.ebuild,v 1.2 2012/04/17 12:57:07 pesa Exp $
 
 EAPI=4
 
@@ -26,15 +26,13 @@ RDEPEND="
 	>=x11-libs/qt-dbus-4.7.2:4
 	>=x11-libs/qt-gui-4.7.2:4[dbus]
 	>=virtual/ffmpeg-0.10.2-r1[X,encode,truetype]
-	kde? (
-		dev-util/automoc
-		kde-base/kdelibs:4
-	)
+	kde? ( kde-base/kdelibs:4 )
 	opengl? ( >=x11-libs/qt-opengl-4.7.2:4 )
 	pulseaudio? ( media-sound/pulseaudio )
 "
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	kde? ( dev-util/automoc )
 "
 PDEPEND="virtual/freedesktop-icon-theme"
 
