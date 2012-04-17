@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.3.ebuild,v 1.9 2011/09/14 19:11:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.3.ebuild,v 1.10 2012/04/17 17:13:09 pesa Exp $
 
 EAPI="3"
+
 inherit eutils multilib qt4-r2
 
 DESCRIPTION="Qt Cryptographic Architecture (QCA)"
@@ -20,26 +21,24 @@ RDEPEND="${DEPEND}
 	!<app-crypt/qca-1.0-r3:0"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.0.2-pcfilespath.patch
+	epatch "${FILESDIR}"/${PN}-2.0.2-pcfilespath.patch \
+		"${FILESDIR}"/${P}+gcc-4.7.patch
 
 	if use aqua; then
-		sed -i \
-		-e "s|QMAKE_LFLAGS_SONAME =.*|QMAKE_LFLAGS_SONAME = -Wl,-install_name,|g" \
-		src/src.pro || die "Sed failed."
+		sed -i -e "s|QMAKE_LFLAGS_SONAME =.*|QMAKE_LFLAGS_SONAME = -Wl,-install_name,|g" \
+			src/src.pro || die
 	fi
 }
 
 src_configure() {
-	_libdir=$(get_libdir)
-
 	# Ensure proper rpath
-	export EXTRA_QMAKE_RPATH="${EPREFIX}/usr/${_libdir}/qca2"
+	export EXTRA_QMAKE_RPATH="${EPREFIX}/usr/$(get_libdir)/qca2"
 
 	ABI= ./configure \
 		--prefix="${EPREFIX}"/usr \
 		--qtdir="${EPREFIX}"/usr \
 		--includedir="${EPREFIX}"/usr/include/qca2 \
-		--libdir="${EPREFIX}"/usr/${_libdir}/qca2 \
+		--libdir="${EPREFIX}"/usr/$(get_libdir)/qca2 \
 		--certstore-path="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt \
 		--no-separate-debug-info \
 		--disable-tests \
@@ -55,7 +54,7 @@ src_install() {
 	dodoc README TODO || die
 
 	cat <<-EOF > "${WORKDIR}"/44qca2
-	LDPATH="${EPREFIX}/usr/${_libdir}/qca2"
+	LDPATH="${EPREFIX}/usr/$(get_libdir)/qca2"
 	EOF
 	doenvd "${WORKDIR}"/44qca2 || die
 
@@ -69,7 +68,7 @@ src_install() {
 	fi
 
 	# add the proper rpath for packages that do CONFIG += crypto
-	echo "QMAKE_RPATHDIR += \"${EPREFIX}/usr/${_libdir}/qca2\"" >> \
+	echo "QMAKE_RPATHDIR += \"${EPREFIX}/usr/$(get_libdir)/qca2\"" >> \
 		"${D%/}${EPREFIX}/usr/share/qt4/mkspecs/features/crypto.prf" \
 		|| die "failed to add rpath to crypto.prf"
 }
