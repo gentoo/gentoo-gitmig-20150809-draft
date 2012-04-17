@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-2012.02.01.ebuild,v 1.1 2012/02/18 09:20:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-2012.02.01.ebuild,v 1.2 2012/04/17 15:16:39 mgorny Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Dynamic web browser based on WebKit and GTK+"
 HOMEPAGE="http://portix.bitbucket.org/dwb/"
-SRC_URI="https://bitbucket.org/portix/dwb/downloads/${P}.tar.gz"
+SRC_URI="mirror://bitbucket/portix/dwb/downloads/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
