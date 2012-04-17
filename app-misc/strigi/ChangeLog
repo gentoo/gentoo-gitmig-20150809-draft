@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.87 2012/03/12 10:01:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.88 2012/04/17 18:42:22 johu Exp $
+
+*strigi-0.7.7-r1 (17 Apr 2012)
+
+  17 Apr 2012; Johannes Huber <johu@gentoo.org> +files/strigi-0.7.7-gcc47.patch,
+  +strigi-0.7.7-r1.ebuild:
+  Revision bump adds upstream patch to fix build with gcc 4.7 spotted by Alphat-
+  PC <AlphatPC@gmail.com> wrt bug #412361.
 
   12 Mar 2012; Johannes Huber <johu@gentoo.org> -files/strigi-0.6.4-gcc44.patch,
   -files/strigi-0.6.5-gcc4.4-missing-headers.patch,
