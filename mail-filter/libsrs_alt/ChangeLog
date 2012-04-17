@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libsrs_alt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.28 2011/07/25 13:28:50 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.29 2012/04/17 11:56:36 naota Exp $
+
+  17 Apr 2012; Naohiro Aota <naota@gentoo.org>
+  +files/libsrs_alt-1.0-ftime.patch, libsrs_alt-1.0.ebuild:
+  Add ftime detection patch. Mark ~x86-fbsd. #409623
 
   25 Jul 2011; Eray Aslan <eras@gentoo.org> -libsrs_alt-1.0_rc1-r1.ebuild:
   remove old
