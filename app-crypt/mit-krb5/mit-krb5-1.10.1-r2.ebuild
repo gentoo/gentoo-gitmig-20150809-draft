@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.10.1-r2.ebuild,v 1.1 2012/04/11 13:52:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.10.1-r2.ebuild,v 1.2 2012/04/17 21:31:09 eras Exp $
 
 EAPI=4
 
@@ -39,6 +39,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}_uninitialized_extra.patch"
 	epatch "${FILESDIR}/${P}_uninitialized_extra-2.patch"
+	epatch "${FILESDIR}/${P}_gcc470.patch"
 }
 
 src_configure() {
