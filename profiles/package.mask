@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13678 2012/04/17 11:06:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13679 2012/04/17 17:52:06 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <hans@gentoo.org> (17 Apr 2012)
+# ruby-gnome2 modules obsoleted by upstream. These are
+# no longer maintained and mostly depend on gnome
+# components that have been obsoleted themselves.
+# bug 408251 for ruby-gtkmozembed, no specific bug
+# for the other components, nothing in the tree depends
+# on them.
+dev-ruby/ruby-gnomevfs
+dev-ruby/ruby-gtkglext
+dev-ruby/ruby-gtkhtml2
+dev-ruby/ruby-gtkmozembed
+dev-ruby/ruby-panel-applet2
 
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (17 Apr 2012)
 # Masked for testing and review.
