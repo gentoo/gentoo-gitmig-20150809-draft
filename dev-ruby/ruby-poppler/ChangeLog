@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-poppler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.34 2012/04/17 17:36:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.35 2012/04/17 18:43:56 jdhore Exp $
+
+  17 Apr 2012; Jeff Horelick <jdhore@gentoo.org> ruby-poppler-1.0.3.ebuild:
+  marked x86 per bug 412097
 
 *ruby-poppler-1.1.3 (17 Apr 2012)
 
