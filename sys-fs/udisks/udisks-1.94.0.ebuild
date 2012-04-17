@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.94.0.ebuild,v 1.1 2012/04/11 18:14:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.94.0.ebuild,v 1.2 2012/04/17 19:31:13 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -19,7 +19,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.32.0
 	>=dev-libs/libatasmart-0.18
 	|| ( >=sys-fs/udev-171-r1[gudev] <sys-fs/udev-171-r1[extras] )
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )"
+# sys-apps/acl -> src/udiskslinuxfilesystem.c -> setfacl #412377
 RDEPEND="${COMMON_DEPEND}
+	sys-apps/acl
 	virtual/eject"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
