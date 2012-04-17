@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.3.1.ebuild,v 1.2 2012/04/14 18:49:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.3.1.ebuild,v 1.3 2012/04/17 15:04:36 mgorny Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit distutils eutils multilib
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="https://bitbucket.org/${PN}/targz/downloads/${P}.tar.gz"
+	SRC_URI="mirror://bitbucket/${PN}/targz/downloads/${P}.tar.gz"
 else
 	inherit mercurial
 	EHG_REPO_URI="https://bitbucket.org/tortoisehg/thg"
