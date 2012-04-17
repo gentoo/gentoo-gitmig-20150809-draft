@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.1.2.ebuild,v 1.4 2012/02/25 01:58:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.1.9.ebuild,v 1.1 2012/04/17 14:53:25 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -35,7 +35,7 @@ PYTHON_MODNAME="spyderlib spyderplugins"
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}/${P}-disable_sphinx_dependency.patch"
+	epatch "${FILESDIR}/${PN}-2.1.2-disable_sphinx_dependency.patch"
 }
 
 src_compile() {
