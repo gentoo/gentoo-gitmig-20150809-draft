@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtester
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.43 2012/03/19 19:06:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.44 2012/04/17 22:35:42 vapier Exp $
+
+  17 Apr 2012; Mike Frysinger <vapier@gentoo.org> memtester-4.2.2.ebuild:
+  Add arm love.
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> memtester-4.2.2.ebuild:
   sparc stable wrt #400489
