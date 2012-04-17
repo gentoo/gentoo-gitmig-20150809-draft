@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-timer-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/ChangeLog,v 1.22 2012/03/21 06:13:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/ChangeLog,v 1.23 2012/04/17 07:33:31 ssuominen Exp $
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-timer-plugin-0.6.2.ebuild:
+  old
 
   21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-timer-plugin-0.6.2.ebuild:
