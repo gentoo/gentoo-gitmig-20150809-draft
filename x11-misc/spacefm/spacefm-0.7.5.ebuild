@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.5.ebuild,v 1.1 2012/04/17 13:53:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.5.ebuild,v 1.2 2012/04/17 14:04:34 ssuominen Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="fam"
+IUSE=""
 
 RDEPEND="dev-libs/glib:2
 	dev-util/desktop-file-utils
@@ -25,8 +25,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
 	x11-libs/pango
 	x11-libs/startup-notification
-	x11-misc/shared-mime-info
-	fam? ( virtual/fam )"
+	x11-misc/shared-mime-info"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
@@ -36,7 +35,7 @@ src_configure() {
 	econf \
 		--htmldir=/usr/share/doc/${PF}/html \
 		--disable-hal \
-		$(use_enable !fam inotify)
+		--enable-inotify
 }
 
 pkg_postinst() {
