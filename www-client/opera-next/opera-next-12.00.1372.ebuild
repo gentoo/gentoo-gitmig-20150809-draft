@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1359.ebuild,v 1.1 2012/04/03 20:55:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1372.ebuild,v 1.1 2012/04/17 15:42:48 jer Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="elibc_FreeBSD gtk gtk3 kde +gstreamer"
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
 
-O_D="cpu_${O_V}-${O_B}"
+O_D="smile_${O_V}-${O_B}"
 O_P="${PN}-${O_V}-${O_B}"
 O_U="http://snapshot.opera.com/unix/"
 
