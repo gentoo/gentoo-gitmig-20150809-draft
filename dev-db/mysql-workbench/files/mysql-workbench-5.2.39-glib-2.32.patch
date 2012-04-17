@@ -1,0 +1,103 @@
+Allow compilation with glib 2.32.
+
+Patch by goeland86@gmail.com in bug 412157
+
+--- library/canvas/src/mdc_canvas_view.h	2012-02-21 17:53:45.000000000 +0100
++++ library/canvas/src/mdc_canvas_view_new.h	2012-04-15 21:34:19.000000000 +0200
+@@ -28,7 +28,7 @@
+ #include "mdc_selection.h"
+ 
+ #ifndef _WIN32
+-#include <glib/gthread.h>
++#include <glib.h>
+ #endif
+ 
+ BEGIN_MDC_DECLS
+--- library/canvas/src/stdafx.h	2012-02-21 17:53:46.000000000 +0100
++++ library/canvas/src/stdafx.new.h	2012-04-15 22:18:14.000000000 +0200
+@@ -52,7 +52,7 @@
+ #include <gl/gl.h>
+ #include <gl/glu.h>
+ 
+-#include <glib/gthread.h>
++#include <glib.h>
+ 
+ #endif // _WIN32
+ 
+--- library/canvas/src/mdc_canvas_view_printing.cpp	2012-04-15 22:17:38.000000000 +0200
++++ library/canvas/src/mdc_canvas_view_printing.new.cpp	2012-04-15 22:14:49.000000000 +0200
+@@ -21,7 +21,7 @@
+ 
+ #include "mdc_canvas_view.h"
+ #include "mdc_canvas_view_printing.h"
+-#include <glib/gmessages.h>
++#include <glib.h>
+ 
+ #ifdef _WIN32
+ #include <cairo/cairo-win32.h>
+
+--- library/grt/src/grtpp_util.new.cpp	2012-04-15 22:57:55.000000000 +0200
++++ library/grt/src/grtpp_util.cpp	2012-02-21 17:53:44.000000000 +0100
+@@ -25,7 +25,7 @@
+ #include "grtpp_util.h"
+ #include "base/string_utilities.h"
+ 
+-#include <glib/gbase64.h>
++#include <glib.h>
+ #include <functional>
+ 
+ using namespace grt;
+
+--- backend/wbprivate/sqlide/wb_live_schema_tree.h	2012-02-21 17:53:39.000000000 +0100
++++ backend/wbprivate/sqlide/wb_live_schema_tree.new.h	2012-04-15 23:41:01.000000000 +0200
+@@ -24,7 +24,7 @@
+ #include "grtpp.h"
+ #include "workbench/wb_backend_public_interface.h"
+ #include "base/string_utilities.h"
+-#include <glib/gpattern.h>
++#include <glib.h>
+ 
+ namespace wb
+ {
+
+--- modules/db.mysql.sqlparser/src/mysql_sql_parser_fe.cpp	2012-02-21 17:53:37.000000000 +0100
++++ modules/db.mysql.sqlparser/src/mysql_sql_parser_fe.new.cpp	2012-04-16 00:33:55.000000000 +0200
+@@ -20,7 +20,7 @@
+ 
+ #include "stdafx.h"
+ 
+-#include <glib/gunicode.h>
++#include <glib.h>
+ #include "grt/common.h"
+ #include "grt/grt_manager.h"
+ #include "grtdb/charset_utils.h"
+@@ -651,4 +651,4 @@
+     return versioning_comment_subst_token;
+   else
+     return token;
+-}
+\ No newline at end of file
++}
+
+--- modules/db.mysql.sqlparser/src/stdafx.h	2012-02-21 17:53:46.000000000 +0100
++++ modules/db.mysql.sqlparser/src/stdafx.new.h	2012-04-16 00:35:10.000000000 +0200
+@@ -32,7 +32,7 @@
+ #include <algorithm>
+ #include <sstream>
+ #include <fstream>
+-#include <glib/gunicode.h>
++#include <glib.h>
+ #include <map>
+ #include "direct.h"
+ 
+--- plugins/db.mysql/backend/db_plugin_be.cpp	2012-02-21 17:53:41.000000000 +0100
++++ plugins/db.mysql/backend/db_plugin_be.new.cpp	2012-04-16 01:39:48.000000000 +0200
+@@ -31,7 +31,7 @@
+ #include "grts/structs.db.h"
+ #include "base/string_utilities.h"
+ 
+-#include <glib/gunicode.h>
++#include <glib.h>
+ 
+ void Db_plugin::grtm(bec::GRTManager *grtm)
+ {

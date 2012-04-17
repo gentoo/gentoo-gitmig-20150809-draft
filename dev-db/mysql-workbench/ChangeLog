@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.56 2012/04/16 18:50:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.57 2012/04/17 18:19:20 graaff Exp $
+
+  17 Apr 2012; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.39.ebuild, +files/mysql-workbench-5.2.39-glib-2.32.patch:
+  Add patch from bug 412157 since glib 2.32 compilation isn't actually fixed in
+  the released version.
 
 *mysql-workbench-5.2.39 (16 Apr 2012)
 

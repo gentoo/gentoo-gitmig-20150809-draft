@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.39.ebuild,v 1.1 2012/04/16 18:50:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.39.ebuild,v 1.2 2012/04/17 18:19:20 graaff Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -73,6 +73,8 @@ src_prepare() {
 	# 357539.
 	rm -rf ext/ctemplate || die
 	mkdir -p ext/ctemplate/ctemplate-src || die
+
+	epatch "${FILESDIR}/${P}-glib-2.32.patch"
 }
 
 src_configure() {
