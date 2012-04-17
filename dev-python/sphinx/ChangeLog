@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.107 2012/04/06 10:02:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.108 2012/04/17 16:01:47 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> sphinx-1.1.2.ebuild:
+  Marking sphinx-1.1.2 ppc for bug 410115
 
   06 Apr 2012; Markus Meier <maekke@gentoo.org> sphinx-1.1.2.ebuild:
   arm stable, bug #410115
