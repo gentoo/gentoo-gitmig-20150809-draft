@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/iobuffer-1.1.2-r2.ebuild,v 1.1 2012/04/17 15:43:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/iobuffer-1.1.2-r2.ebuild,v 1.2 2012/04/17 17:18:48 graaff Exp $
 
 EAPI="4"
 # jruby: mkmf
@@ -30,19 +30,19 @@ RUBY_S="${GITHUB_USER}-${PN}-*"
 ruby_add_bdepend "test? ( dev-ruby/bundler dev-ruby/rspec )"
 
 all_ruby_prepare() {
-	rm .rspec lib/.gitignore
+	rm .rspec lib/.gitignore || die
 }
 
 each_ruby_configure() {
-	${RUBY} -C ext extconf.rb
-	sed -i -e "s/^ldflags  = /ldflags = $\(LDFLAGS\) /" ext/Makefile
+	${RUBY} -C ext extconf.rb || die
+	sed -i -e "s/^ldflags  = /ldflags = $\(LDFLAGS\) /" ext/Makefile || die
 }
 
 each_ruby_compile() {
 	emake -C ext
-	cp ext/iobuffer_ext.so lib/
+	cp ext/iobuffer_ext.so lib/ || die
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib -S rspec spec
+	${RUBY} -Ilib -S rspec spec || die
 }
