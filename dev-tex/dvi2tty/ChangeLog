@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dvi2tty
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.31 2012/04/16 21:06:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.32 2012/04/17 21:49:32 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> dvi2tty-5.3.4.ebuild:
+  Marking dvi2tty-5.3.4 ppc64 for bug 404725
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> dvi2tty-5.3.4.ebuild:
   Marking dvi2tty-5.3.4 ppc for bug 404725
