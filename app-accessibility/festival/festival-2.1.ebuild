@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.1.ebuild,v 1.9 2011/12/29 22:12:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.1.ebuild,v 1.10 2012/04/17 13:22:28 neurogeek Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs
@@ -28,8 +28,7 @@ KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="~app-accessibility/speech-tools-2.1
-		>=sys-libs/ncurses-5.6-r2
-		>=media-libs/alsa-lib-1.0.23"
+		>=sys-libs/ncurses-5.6-r2"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/festival
