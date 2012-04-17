@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.83.ebuild,v 1.1 2011/06/01 02:44:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.85.ebuild,v 1.1 2012/04/17 16:39:50 jer Exp $
 
-EAPI="1"
+EAPI=4
 
 inherit perl-module toolchain-funcs
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/${PN}
 # Deletes the directory passed as an argument from the internal pmake
 # variable SUBDIR.
 zap_subdir() {
-	sed -i "/^SUBDIR/s/$1//" Makefile || die "sed $1 failed"
+	sed -i "/^SUBDIR/s/$1//" Makefile || die
 }
 
 pkg_setup() {
@@ -39,10 +39,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Respect LDFLAGS.
 	sed -i "/^[ \t]*\${CC}.*\${LIBS}/s/\${CC}/& \${LDFLAGS}/" sym*/Makefile \
 		|| die "sed ldflags failed"
@@ -61,36 +58,36 @@ src_compile() {
 src_install() {
 	if [[ -n ${USE_SYMON} ]]; then
 		insinto /etc
-		doins "${FILESDIR}"/symon.conf || die "doins symon.conf failed"
+		doins "${FILESDIR}"/symon.conf
 
-		newinitd "${FILESDIR}"/symon-init.d symon || die "newinitd symon failed"
+		newinitd "${FILESDIR}"/symon-init.d symon
 
-		dodoc CHANGELOG HACKERS TODO || die "dodoc failed"
+		dodoc CHANGELOG HACKERS TODO
 
-		doman symon/symon.8 || die "doman symon failed"
-		dosbin symon/symon || die "dosbin symon failed"
+		doman symon/symon.8
+		dosbin symon/symon
 	fi
 
 	if use perl; then
-		dobin client/getsymonitem.pl || die "dobin getsymonitem.pl failed"
+		dobin client/getsymonitem.pl
 
 		perlinfo
 		insinto ${VENDOR_LIB}
-		doins client/SymuxClient.pm || die "doins SymuxClient.pm failed"
+		doins client/SymuxClient.pm
 	fi
 
 	if use symux; then
 		insinto /etc
-		doins "${FILESDIR}"/symux.conf || die "doins symux.conf failed"
+		doins "${FILESDIR}"/symux.conf
 
-		newinitd "${FILESDIR}"/symux-init.d symux || die "newinitd symux failed"
+		newinitd "${FILESDIR}"/symux-init.d symux
 
-		doman symux/symux.8 || die "doman symux failed"
-		dosbin symux/symux || die "dosbin symux failed"
+		doman symux/symux.8
+		dosbin symux/symux
 
 		dodir /usr/share/symon
 		insinto /usr/share/symon
-		doins symux/c_smrrds.sh || die "doins c_smrrds.sh failed"
+		doins symux/c_smrrds.sh
 		fperms a+x /usr/share/symon/c_smrrds.sh
 
 		dodir /var/lib/symon/rrds/localhost
