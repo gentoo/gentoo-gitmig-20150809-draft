@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.72 2012/04/04 06:44:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.73 2012/04/17 15:08:03 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> imaging-1.1.7-r1.ebuild:
+  Marking imaging-1.1.7-r1 ppc for bug 410075
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> imaging-1.1.7-r1.ebuild:
   marked x86 per bug 410075
