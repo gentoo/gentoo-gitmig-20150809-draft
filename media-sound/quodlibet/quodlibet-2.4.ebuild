@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.4.ebuild,v 1.1 2012/03/20 22:31:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.4.ebuild,v 1.2 2012/04/17 09:04:03 ssuominen Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://quodlibet.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dbus gstreamer ipod"
 
 COMMON_DEPEND=">=dev-python/pygtk-2.12"

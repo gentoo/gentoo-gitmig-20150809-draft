@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quark
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.16 2011/10/20 22:34:22 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.17 2012/04/17 09:02:31 ssuominen Exp $
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> quark-3.21.ebuild:
+  Remove alpha/sparc keywording wrt #397531
 
   20 Oct 2011; Pacho Ramos <pacho@gentoo.org> quark-3.21.ebuild,
   -files/quark-3.21-nogtkdisabledeprecated.patch:
