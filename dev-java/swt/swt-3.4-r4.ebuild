@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.9 2011/03/29 09:17:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.10 2012/04/17 11:19:53 ssuominen Exp $
 
 EAPI="1"
 
@@ -32,7 +32,7 @@ SLOT="3.4"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
 KEYWORDS="amd64 ppc ppc64 x86"
 
-IUSE="cairo gnome opengl xulrunner"
+IUSE="cairo gnome opengl"
 COMMON=">=dev-libs/glib-2.6
 		>=x11-libs/gtk+-2.6.8:2
 		>=dev-libs/atk-1.10.2
@@ -42,7 +42,6 @@ COMMON=">=dev-libs/glib-2.6
 				=gnome-base/gnome-vfs-2*
 				=gnome-base/libgnomeui-2*
 				)
-		xulrunner? ( net-libs/xulrunner:1.9 )
 		opengl?	(
 			virtual/opengl
 			virtual/glu
@@ -148,28 +147,6 @@ src_compile() {
 		${make} make_gnome || die "Failed to build GNOME VFS support"
 	fi
 
-	if use xulrunner ; then
-		einfo "Building the Mozilla component against xulrunner-1.9"
-
-		export MOZILLA_INCLUDES="$(pkg-config --cflags libxul libxul-embedding)"
-		# the -R is a workaround for bug #234934
-		export MOZILLA_LIBS="-Wl,-R$(pkg-config libxul --variable=sdkdir) $(pkg-config --libs libxul libxul-embedding)"
-
-		${make} make_mozilla || die "Failed to build Mozilla support"
-
-		# upstream ships libswt-xulrunner*.so even though the build.sh does not
-		# build it anymore... missing this file leads to another instance
-		# of bug #234934 so we build it too
-		einfo "Building the xulrunner component against xulrunner-1.9"
-
-		export XULRUNNER_INCLUDES="${MOZILLA_INCLUDES}"
-		export XULRUNNER_LIBS="${MOZILLA_LIBS}"
-
-		${make} make_xulrunner || die "Failed to build xulrunner support"
-
-		${make} make_xpcominit || die "Failed to build xpcominit support"
-	fi
-
 	if use cairo ; then
 		einfo "Building CAIRO support"
 		${make} make_cairo || die "Unable to build CAIRO support"
@@ -203,18 +180,5 @@ src_install() {
 	java-pkg_sointo /usr/$(get_libdir)
 	java-pkg_doso *.so
 
-	if use xulrunner; then
-		local gecko_dir="$(pkg-config libxul --variable=sdkdir)"
-		java-pkg_register-environment-variable MOZILLA_FIVE_HOME "${gecko_dir}"
-	fi
-
 	dohtml about.html || die
-}
-
-pkg_postinst() {
-	if use xulrunner; then
-		local gecko_dir="$(pkg-config libxul --variable=sdkdir)"
-		elog "You built swt with xulrunner support. For your custom applications please set"
-		elog "MOZILLA_FIVE_HOME environment variable to ${gecko_dir}"
-	fi
 }

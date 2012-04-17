@@ -9,6 +9,5 @@
 	</longdescription>
 	<use>
 		<flag name="webkit">Embedded browser support via net-libs/webkit-gtk:2, replacing former xulrunner-based browser.</flag>
-		<flag name="xulrunner">Embedded browser support via xulrunner-1.9 (1.8 for swt-3.3). Xulrunner 2.0 is not supported, will be replaced by webkit in 3.7.</flag>
 	</use>
 </pkgmetadata>
