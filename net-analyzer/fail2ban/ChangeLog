@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.81 2012/04/16 21:15:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.82 2012/04/17 21:50:27 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> fail2ban-0.8.6.ebuild:
+  Marking fail2ban-0.8.6 ppc64 for bug 411315
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> fail2ban-0.8.6.ebuild:
   Marking fail2ban-0.8.6 ppc for bug 411315
