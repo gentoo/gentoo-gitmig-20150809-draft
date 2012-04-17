@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.158 2012/04/16 19:30:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.159 2012/04/17 21:45:02 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> intltool-0.50.2.ebuild:
+  Marking intltool-0.50.2 ppc64 for bug 411177
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> intltool-0.50.2.ebuild:
   Marking intltool-0.50.2 ppc for bug 411177
