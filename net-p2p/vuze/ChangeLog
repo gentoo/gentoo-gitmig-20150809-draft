@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.52 2012/03/10 06:00:57 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.53 2012/04/17 11:15:29 ssuominen Exp $
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> vuze-4.5.1.0.ebuild,
+  vuze-4.6.0.2.ebuild, vuze-4.7.0.0-r1.ebuild, vuze-4.7.0.2.ebuild:
+  Remove has_version check for dev-java/swt[xulrunner] wrt #409301. Correct
+  elog message in 4.7.x.x series to say "webkit" instead of "xulrunner".
 
 *vuze-4.7.0.2 (10 Mar 2012)
 

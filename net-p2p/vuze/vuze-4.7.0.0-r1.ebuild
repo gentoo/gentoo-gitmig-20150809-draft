@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.7.0.0-r1.ebuild,v 1.1 2011/12/27 17:04:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.7.0.0-r1.ebuild,v 1.2 2012/04/17 11:15:29 ssuominen Exp $
 
 EAPI=2
 
@@ -132,7 +132,7 @@ pkg_postinst() {
 
 	if ! has_version dev-java/swt:3.7[webkit]; then
 		elog
-		elog "Your dev-java/swt:3.7 was built without xulrunner support. Features such as Vuze HD Network will not work."
+		elog "Your dev-java/swt:3.7 was built without webkit support. Features such as Vuze HD Network will not work."
 		elog "Rebuild swt with USE=webkit (needs net-libs/webkit-gtk:2) to use these features."
 	fi
 
