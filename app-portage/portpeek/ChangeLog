@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.140 2012/02/15 13:42:00 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.141 2012/04/17 13:30:39 mpagano Exp $
+
+*portpeek-2.0.20 (17 Apr 2012)
+
+  17 Apr 2012; Michael Pagano <mpagano@gentoo.org> -portpeek-2.0.17.ebuild,
+  -portpeek-2.0.18.ebuild, -portpeek-2.0.19.ebuild, +portpeek-2.0.20.ebuild:
+  Fix error when multiple spaces separate use flags in package.use file. Bug
+  #411517. Thanks to Daniel Perzynski. Remove old versions.
 
   15 Feb 2012; Michael Pagano <mpagano@gentoo.org> -portpeek-1.9.74.ebuild:
   Remove old
