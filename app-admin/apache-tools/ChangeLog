@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.114 2012/04/17 16:00:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.115 2012/04/17 19:33:07 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> apache-tools-2.2.22.ebuild:
+  Marking apache-tools-2.2.22 ppc64 for bug 401761
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> apache-tools-2.2.22.ebuild:
   Marking apache-tools-2.2.22 ppc for bug 401761
