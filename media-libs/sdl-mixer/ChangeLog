@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.95 2012/04/17 14:46:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.96 2012/04/17 21:15:44 mr_bones_ Exp $
+
+  17 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> sdl-mixer-1.2.12.ebuild:
+  link the midi-related use flags more (bug #412407)
 
   17 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> sdl-mixer-1.2.12.ebuild:
   more midi-related dep cleanup from James Le Cuirot
