@@ -1,8 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.26 2012/02/21 12:50:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.27 2012/04/17 15:46:21 ranger Exp $
 
 # This file requires >=portage-2.1.1
+
+
+# ranger <ranger@gentoo.org> (17 apr 2012)
+# masking libvirt for cfengine (bug #412253)
+net-misc/cfengine libvirt
+
 
 #nixnut <nixnut@gentoo.org> (18 feb 2012)
 # qthelp until qt-assistant gets assistance (bug #398885)
