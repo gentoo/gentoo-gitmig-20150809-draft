@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/incron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.20 2012/04/16 12:43:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.21 2012/04/17 16:08:03 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> incron-0.5.10.ebuild:
+  Marking incron-0.5.10 ppc for bug 412181
 
   16 Apr 2012; Agostino Sarubbo <ago@gentoo.org> incron-0.5.10.ebuild:
   Stable for amd64, wrt bug #412181
