@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.137 2012/04/16 21:07:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.138 2012/04/17 21:48:38 ranger Exp $
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> qdbm-1.8.78-r1.ebuild:
+  Marking qdbm-1.8.78-r1 ppc64 for bug 404629
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> qdbm-1.8.78-r1.ebuild:
   Marking qdbm-1.8.78-r1 ppc for bug 404629
