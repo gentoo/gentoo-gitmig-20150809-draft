@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.36 2012/04/17 16:03:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.37 2012/04/17 16:07:52 mgorny Exp $
+
+*smart-live-rebuild-1.2.3 (17 Apr 2012)
+
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org>
+  +smart-live-rebuild-1.2.3.ebuild:
+  Version bump. This time it fixes the timeout issue definitely.
 
   17 Apr 2012; Michał Górny <mgorny@gentoo.org>
   -smart-live-rebuild-1.2.2.ebuild:
