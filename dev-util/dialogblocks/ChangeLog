@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialogblocks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.21 2012/04/06 21:47:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.22 2012/04/17 01:26:52 dirtyepic Exp $
+
+  17 Apr 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Set wxwidgets as maintainer.
 
   06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #63588
