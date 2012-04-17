@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.1.1.ebuild,v 1.4 2011/08/14 22:30:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.2.0.ebuild,v 1.1 2012/04/17 19:36:35 scarabeus Exp $
 
-EAPI=2
+EAPI=3
+
 inherit eutils games
 
 DESCRIPTION="OpenTTD is a clone of Transport Tycoon Deluxe"
@@ -11,7 +12,7 @@ SRC_URI="http://binaries.openttd.org/releases/${PV}/${P}-source.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="aplaymidi debug dedicated iconv icu lzo +openmedia +png +timidity +truetype zlib"
 
 DEPEND="
@@ -38,35 +39,36 @@ PDEPEND="
 		!aplaymidi? ( timidity? ( media-sound/timidity++ ) )
 	)
 	openmedia? ( games-misc/opengfx )
-	"
-PATCHES=( "${FILESDIR}"/${P}-cflags.patch )
+"
+
+PATCHES=( "${FILESDIR}"/${PN}-1.1.3-cflags.patch )
 
 src_configure() {
 	# there is an allegro interface available as well as sdl, but
 	# the configure for it looks broken so the sdl interface is
 	# always built instead.
-	local myopts="${myopts} --without-allegro"
+	local myopts=" --without-allegro"
 
 	# libtimidity not needed except for some embedded platform
 	# nevertheless, it will be automagically linked if it is
 	# installed. Hence, we disable it.
-	myopts="${myopts} --without-libtimidity"
+	myopts+=" --without-libtimidity"
 
-	use debug && myopts="${myopts} --enable-debug=3"
+	use debug && myopts+=" --enable-debug=3"
 
 	if use dedicated ; then
-		myopts="${myopts} --enable-dedicated"
+		myopts+=" --enable-dedicated"
 	else
-		use aplaymidi && myopts="${myopts} --with-midi='/usr/bin/aplaymidi'"
-		myopts="${myopts}
+		use aplaymidi && myopts+=" --with-midi='/usr/bin/aplaymidi'"
+		myopts+="
 			$(use_with truetype freetype)
 			$(use_with icu)
 			--with-sdl"
 	fi
 	if use png || { use !dedicated && use truetype; } || use zlib ; then
-		myopts="${myopts} --with-zlib"
+		myopts+=" --with-zlib"
 	else
-		myopts="${myopts} --without-zlib"
+		myopts+=" --without-zlib"
 	fi
 
 	# configure is a hand-written bash-script, so econf will not work.
@@ -103,10 +105,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	if use dedicated ; then
 		newinitd "${FILESDIR}"/${PN}.initd ${PN}
-		rm -rf "${D}"/usr/share/{applications,icons,pixmaps}
+		rm -rf "${ED}"/usr/share/{applications,icons,pixmaps}
 	fi
-	rm -f "${D}"/usr/share/doc/${PF}/COPYING
-	prepalldocs
+	rm -f "${ED}"/usr/share/doc/${PF}/COPYING
+
 	prepgamesdirs
 }
 
