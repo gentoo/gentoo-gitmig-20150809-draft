@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.671 2012/03/18 13:44:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.672 2012/04/17 08:54:54 ssuominen Exp $
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -xine-lib-1.1.19.ebuild,
+  -files/xine-lib-1.1.19-ffmpeg.patch, -files/xine-lib-1.1.19-xvmc.patch,
+  -xine-lib-1.1.20.ebuild, -files/xine-lib-1.1.20-stat.patch,
+  -xine-lib-1.2.0-r1.ebuild, -xine-lib-1.2.0-r2.ebuild,
+  -files/xine-lib-1.2.0-zlib-1.2.5.2.patch:
+  old
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> xine-lib-1.1.19.ebuild:
   Remove USE="esd" because media-sound/esound isn't in tree anymore.
