@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.78 2012/04/08 15:07:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.79 2012/04/18 20:34:42 alexxy Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
 # Fails to build
@@ -8,7 +8,7 @@ www-client/firefox crashreporter
 
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # mask use numa for openmpi
-sys-cluster/openmpi numa open-mx psm knem
+sys-cluster/openmpi numa open-mx psm knem openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;

@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6438 2012/04/18 20:26:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6439 2012/04/18 20:34:42 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> arch/alpha/package.use.mask,
+  arch/ia64/package.use.mask, arch/powerpc/package.use.mask,
+  arch/sparc/package.use.mask:
+  Mask new use expand on profiles with unkeyworded deps
 
   18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +desc/openmpi_fabrics.desc,
   +desc/openmpi_ofed_features.desc, +desc/openmpi_rm.desc, base/make.defaults:

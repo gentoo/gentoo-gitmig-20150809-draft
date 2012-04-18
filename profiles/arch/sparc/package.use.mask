@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.93 2012/04/12 17:05:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.94 2012/04/18 20:34:42 alexxy Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
 # Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
@@ -13,7 +13,7 @@ net-libs/glib-networking smartcard
 
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # Mask use numa for openmpi
-sys-cluster/openmpi numa psm knem open-mx
+sys-cluster/openmpi numa psm knem open-mx openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
