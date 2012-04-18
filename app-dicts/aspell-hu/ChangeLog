@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-hu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hu/ChangeLog,v 1.7 2010/03/23 20:40:06 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hu/ChangeLog,v 1.8 2012/04/18 18:30:31 scarabeus Exp $
+
+  18 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> aspell-hu-0.99.4.2.ebuild:
+  Fix typo in var name and thus depending on correct aspell version.
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-hu-0.99.4.2.ebuild:
   Marking aspell-hu-0.99.4.2 ~ppc for bug 305845
