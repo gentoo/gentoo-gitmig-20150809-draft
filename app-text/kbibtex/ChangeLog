@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.43 2012/04/18 20:43:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.44 2012/04/18 22:36:29 johu Exp $
+
+  18 Apr 2012; Johannes Huber <johu@gentoo.org> -kbibtex-0.3.ebuild:
+  Remove old.
 
   18 Apr 2012; Markus Meier <maekke@gentoo.org> kbibtex-0.4.ebuild:
   x86 stable, bug #409403
