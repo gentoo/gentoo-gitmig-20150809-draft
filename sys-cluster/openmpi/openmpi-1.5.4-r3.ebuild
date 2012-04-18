@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.4-r3.ebuild,v 1.1 2012/02/03 21:55:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.4-r3.ebuild,v 1.2 2012/04/18 20:35:24 alexxy Exp $
 
 EAPI=4
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs
@@ -24,7 +24,7 @@ REQUIRED_USE="slurm? ( !pbs )
 RDEPEND="
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 	fortran? ( virtual/fortran )
-	infiniband? ( sys-infiniband/openib )
+	infiniband? ( sys-infiniband/ofed )
 	knem? ( sys-cluster/knem )
 	numa? ( sys-process/numactl )
 	open-mx? ( sys-cluster/open-mx )
