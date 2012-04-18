@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.2 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.3 2012/04/18 16:29:47 alexxy Exp $
 
 # @ECLASS: openib.eclass
 # @AUTHOR:
@@ -13,7 +13,6 @@ EXPORT_FUNCTIONS src_unpack
 
 HOMEPAGE="http://www.openfabrics.org/"
 LICENSE="|| ( GPL-2 BSD-2 )"
-SLOT="0"
 
 # @ECLASS-VARIABLE: OFED_VER
 # @DESCRIPTION:
@@ -27,12 +26,35 @@ SLOT="0"
 # @DESCRIPTION:
 # Defines if src tarball is git snapshot
 
+SLOT="${OFED_VER}"
+
+OFED_VERSIONS=(
+	"1.5.1"
+	"1.5.2"
+	"1.5.3"
+	"1.5.3.1"
+	"1.5.3.2"
+	"1.5.4"
+	"1.5.4.1"
+	"3.2"
+	)
+
+block_other_ofed_versions() {
+	local slot
+	RDEPEND+=" !sys-infiniband/${PN}:0"
+	for slot in ${OFED_VERSIONS[@]}; do
+		if [[ ${slot} != ${SLOT} ]]; then
+			RDEPEDN+=" !sys-infiniband/${PN}:${slot}"
+		fi
+	done
+}
+
 OFED_BASE_VER=$(get_version_component_range 1-3 ${OFED_VER})
 
 SRC_URI="http://www.openfabrics.org/downloads/OFED/ofed-${OFED_BASE_VER}/OFED-${OFED_VER}.tgz"
 
 case ${PN} in
-	openib-files)
+	ofed)
 		MY_PN="ofa_kernel"
 		;;
 	*)
@@ -58,7 +80,12 @@ case ${MY_PN} in
 		;;
 esac
 
-S="${WORKDIR}/${MY_PN}-${MY_PV}"
+# if its snapshot then S may be different
+if [ -z ${OFED_SNAPSHOT} ]; then
+	S="${WORKDIR}/${MY_PN}-${MY_PV}"
+else
+	S="${WORKDIR}/${MY_PN}-${MY_PV}-${OFED_SUFFIX}"
+fi
 
 # @FUNCTION: openib_src_unpack
 # @DESCRIPTION:
