@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/gfifteen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gfifteen/ChangeLog,v 1.4 2012/04/12 19:18:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gfifteen/ChangeLog,v 1.5 2012/04/18 19:19:36 mr_bones_ Exp $
+
+*gfifteen-1.0.2 (18 Apr 2012)
+
+  18 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> +gfifteen-1.0.2.ebuild:
+  version bump; turn off pointless assembly which also works around bug #411185
 
 *gfifteen-1.0.1 (12 Apr 2012)
 
