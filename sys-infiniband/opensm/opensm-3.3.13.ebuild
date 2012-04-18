@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/opensm/opensm-3.3.9.ebuild,v 1.2 2011/07/02 20:30:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/opensm/opensm-3.3.13.ebuild,v 1.1 2012/04/18 16:45:30 alexxy Exp $
 
 EAPI="4"
 
-OFED_VER="1.5.3.1"
+OFED_VER="1.5.4.1"
 OFED_SUFFIX="1"
 
 inherit openib
@@ -14,11 +14,11 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 DEPEND="
-	>=sys-infiniband/libibmad-1.3.7
-	>=sys-infiniband/libibumad-1.3.7"
+	sys-infiniband/libibmad:${SLOT}
+	sys-infiniband/libibumad:${SLOT}"
 RDEPEND="$DEPEND
-	 sys-infiniband/openib-files
 	 net-misc/iputils"
+block_other_ofed_versions
 
 src_configure() {
 	econf \
