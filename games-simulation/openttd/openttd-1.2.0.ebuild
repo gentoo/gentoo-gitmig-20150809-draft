@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.2.0.ebuild,v 1.3 2012/04/18 20:33:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.2.0.ebuild,v 1.4 2012/04/18 21:07:13 mr_bones_ Exp $
 
 EAPI=3
-
 inherit eutils games
 
 DESCRIPTION="OpenTTD is a clone of Transport Tycoon Deluxe"
@@ -15,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aplaymidi debug dedicated iconv icu lzo +openmedia +png +timidity +truetype zlib"
 
-DEPEND="
-	!dedicated? (
+DEPEND="!dedicated? (
 		media-libs/libsdl[audio,X,video]
 		icu? ( dev-libs/icu )
 		truetype? (
@@ -38,8 +36,7 @@ PDEPEND="
 		aplaymidi? ( media-sound/alsa-utils )
 		!aplaymidi? ( timidity? ( media-sound/timidity++ ) )
 	)
-	openmedia? ( >=games-misc/opengfx-0.4.4 )
-"
+	openmedia? ( >=games-misc/opengfx-0.4.4 )"
 
 PATCHES=( "${FILESDIR}"/${PN}-1.1.3-cflags.patch )
 
@@ -89,7 +86,7 @@ src_configure() {
 		$(use_with iconv) \
 		$(use_with png) \
 		$(use_with lzo liblzo2) \
-		|| die "configure failed"
+		|| die
 }
 
 src_compile() {
@@ -102,13 +99,13 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	if use dedicated ; then
 		newinitd "${FILESDIR}"/${PN}.initd ${PN}
 		rm -rf "${ED}"/usr/share/{applications,icons,pixmaps}
 	fi
 	rm -f "${ED}"/usr/share/doc/${PF}/COPYING
-
+	prepalldocs
 	prepgamesdirs
 }
 
