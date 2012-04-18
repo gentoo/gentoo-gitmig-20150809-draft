@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13680 2012/04/18 02:10:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13681 2012/04/18 06:14:37 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,7 @@
 
 #--- END OF EXAMPLES ---
 
-# Hans de Graaff <hans@gentoo.org> (17 Apr 2012)
+# Hans de Graaff <graaff@gentoo.org> (17 Apr 2012)
 # ruby-gnome2 modules obsoleted by upstream. These are
 # no longer maintained and mostly depend on gnome
 # components that have been obsoleted themselves.
