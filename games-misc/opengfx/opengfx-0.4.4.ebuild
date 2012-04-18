@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.4.4.ebuild,v 1.1 2012/04/17 12:35:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.4.4.ebuild,v 1.2 2012/04/18 18:46:06 scarabeus Exp $
 
 EAPI=3
 inherit games
@@ -19,6 +19,7 @@ S=${WORKDIR}/${P}-source
 DEPEND="
 	>=games-util/grfcodec-5.1.1
 	>=games-util/nml-0.2.3
+	media-gfx/gimp
 "
 RDEPEND=""
 
@@ -27,6 +28,9 @@ src_prepare() {
 }
 
 src_compile() {
+	GIMP2_DIRECTORY="${T}" \
+	GEGL_PATH="${T}" \
+	GEGL_SWAP="${T}" \
 	emake bundle || die
 }
 
