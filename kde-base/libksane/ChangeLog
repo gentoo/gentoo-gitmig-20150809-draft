@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/libksane
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/ChangeLog,v 1.102 2012/04/18 20:29:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/ChangeLog,v 1.103 2012/04/18 22:25:51 johu Exp $
+
+*libksane-4.8.1-r1 (18 Apr 2012)
+
+  18 Apr 2012; Johannes Huber <johu@gentoo.org>
+  +files/libksane-4.8.1-scanner-polling.patch, +libksane-4.8.1-r1.ebuild:
+  Revision bump adds upstream patch to fix polling while scan spotted by
+  cyberbat <cyberbat83@gmail.com> wrt bug #411345.
 
   18 Apr 2012; Markus Meier <maekke@gentoo.org> libksane-4.8.1.ebuild:
   x86 stable, bug #409403

@@ -1,0 +1,28 @@
+commit 0a02ff4a4602f09bae25f3a8e9b971b32bbee2ca
+Author: Kåre Särs <kare.sars@iki.fi>
+Date:   Wed Feb 15 21:24:14 2012 +0200
+
+    Apply Gregor Horst's patch to stop polling while a scan is ongoing
+    
+    BUG: 294073
+
+diff --git a/libksane/ksane_widget_private.cpp b/libksane/ksane_widget_private.cpp
+index 055976e..9872c40 100644
+--- a/libksane/ksane_widget_private.cpp
++++ b/libksane/ksane_widget_private.cpp
+@@ -1023,11 +1023,15 @@ void KSaneWidgetPrivate::setBusy(bool busy)
+         m_warmingUp->show();
+         m_activityFrame->hide();
+         m_btnFrame->hide();
++        m_optionPollTmr.stop();
+     }
+     else {
+         m_warmingUp->hide();
+         m_activityFrame->hide();
+         m_btnFrame->show();
++        if (m_pollList.size() > 0) {
++            m_optionPollTmr.start();
++        }
+     }
+     
+     m_optsTabWidget->setDisabled(busy);
