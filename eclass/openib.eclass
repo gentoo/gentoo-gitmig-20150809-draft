@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.4 2012/04/18 16:47:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.5 2012/04/18 18:16:12 alexxy Exp $
 
 # @ECLASS: openib.eclass
 # @AUTHOR:
@@ -28,6 +28,10 @@ LICENSE="|| ( GPL-2 BSD-2 )"
 
 SLOT="${OFED_VER}"
 
+# @ECLASS-VARIABLE: OFED_VERSIONS
+# @DESCRIPTION:
+# Defines array of ofed version supported by eclass
+
 OFED_VERSIONS=(
 	"1.5.1"
 	"1.5.2"
@@ -39,6 +43,9 @@ OFED_VERSIONS=(
 	"3.2"
 	)
 
+# @FUNCTION: block_other_ofed_versions
+# @DESCRIPTION:
+# function that creates blockers list for ofed
 block_other_ofed_versions() {
 	local slot
 	RDEPEND+=" !sys-infiniband/${PN}:0"
@@ -52,8 +59,6 @@ block_other_ofed_versions() {
 OFED_BASE_VER=$(get_version_component_range 1-3 ${OFED_VER})
 
 SRC_URI="http://www.openfabrics.org/downloads/OFED/ofed-${OFED_BASE_VER}/OFED-${OFED_VER}.tgz"
-
-DOCS=( AUTHORS ChangeLog README TODO )
 
 case ${PN} in
 	ofed)
@@ -82,12 +87,12 @@ case ${MY_PN} in
 		;;
 esac
 
-# if its snapshot then S may be different
-if [ -z ${OFED_SNAPSHOT} ]; then
+if [ -z ${OFED_SRC_SNAPSHOT} ]; then
 	S="${WORKDIR}/${MY_PN}-${MY_PV}"
 else
 	S="${WORKDIR}/${MY_PN}-${MY_PV}-${OFED_SUFFIX}"
 fi
+
 
 # @FUNCTION: openib_src_unpack
 # @DESCRIPTION:
