@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.4.ebuild,v 1.2 2012/04/04 19:34:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.4.ebuild,v 1.3 2012/04/18 20:43:14 maekke Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="BibTeX editor for KDE to edit bibliographies used with LaTeX"
 HOMEPAGE="http://home.gna.org/kbibtex/"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="http://download.gna.org/${PN}/$(get_version_component_range 1-2)/${P/_/-}.tar.bz2"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 else
 	ESVN_REPO_URI="svn://svn.gna.org/svn/${PN}/trunk"
 	ESVN_PROJECT="${PN}"
