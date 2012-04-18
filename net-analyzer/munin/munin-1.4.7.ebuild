@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.6-r5.ebuild,v 1.1 2012/04/09 23:15:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.7.ebuild,v 1.1 2012/04/18 16:42:16 darkside Exp $
 
 EAPI=2
 
@@ -65,7 +65,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4.4-Makefile.patch
 
 	epatch "${FILESDIR}"/${PN}-1.4.6-apc-temp.patch
-	epatch "${FILESDIR}"/${PN}-1.4.6-munin-version-identifier.patch
+	epatch "${FILESDIR}"/${PN}-1.4.*-munin-version-identifier.patch
 	epatch "${FILESDIR}"/${PN}-1.4.6-fix-asterisk-plugins.patch
 	epatch "${FILESDIR}"/${PN}-1.4.6-if_-hardened-v2.patch
 	epatch "${FILESDIR}"/${PN}-1.4.6-apc-multi.patch
