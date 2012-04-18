@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.317 2012/04/17 21:31:09 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.318 2012/04/18 09:03:10 eras Exp $
+
+*mit-krb5-1.10.1-r3 (18 Apr 2012)
+
+  18 Apr 2012; Eray Aslan <eras@gentoo.org> +mit-krb5-1.10.1-r3.ebuild:
+  add dev-libs/libverto dependency - bug #411711
 
   17 Apr 2012; Eray Aslan <eras@gentoo.org> mit-krb5-1.10.1-r2.ebuild,
   +files/mit-krb5-1.10.1_gcc470.patch:
