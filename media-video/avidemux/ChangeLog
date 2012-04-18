@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.192 2012/03/19 22:18:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.193 2012/04/18 14:50:38 pesa Exp $
+
+  18 Apr 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/avidemux-2.5.6-ffmpeg-symbol-visibility.patch, -avidemux-2.5.5.ebuild,
+  -avidemux-2.5.6.ebuild, avidemux-2.5.6-r1.ebuild, metadata.xml:
+  Add upstream patch to fix undefined reference during linking, thanks to
+  everyone in bug 403253. Remove old versions.
 
   19 Mar 2012; Davide Pesavento <pesa@gentoo.org> avidemux-2.5.6-r1.ebuild:
   Revert to bundled spidermonkey (bug #408813).
