@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.1.19.ebuild,v 1.2 2012/04/14 09:20:53 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.1.19.ebuild,v 1.3 2012/04/18 16:02:04 darkside Exp $
 
 EAPI="4"
 
@@ -172,7 +172,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i 's/ make/ \\$(MAKE)/' "${S}"/auto/lib/perl/make
+	find auto/ -type f -print0 | xargs -0 sed -i 's:\&\& make:\&\& \\$(MAKE):' || die
+	# We have config protection, don't rename etc files
+	sed -i 's:.default::' auto/install || die
+	# remove useless files
+	sed -i -e '/koi-/d' -e '/win-/d' auto/install || die
 }
 
 src_configure() {
@@ -281,7 +285,6 @@ src_configure() {
 
 	./configure \
 		--prefix="${EPREFIX}"/usr \
-		--sbin-path="${EPREFIX}"/usr/sbin/nginx \
 		--conf-path="${EPREFIX}"/etc/${PN}/${PN}.conf \
 		--error-log-path="${EPREFIX}"/var/log/${PN}/error_log \
 		--pid-path="${EPREFIX}"/var/run/${PN}.pid \
@@ -304,21 +307,16 @@ src_compile() {
 }
 
 src_install() {
-	keepdir /var/log/${PN} /var/tmp/${PN}/{client,proxy,fastcgi,scgi,uwsgi}
-	keepdir /var/www/localhost/htdocs
-
-	dosbin objs/nginx
+	emake DESTDIR="${D}" install
+	cp "${FILESDIR}"/nginx.conf "${ED}"/etc/nginx/nginx.conf || die
 	newinitd "${FILESDIR}"/nginx.initd nginx
-
-	cp "${FILESDIR}"/nginx.conf conf/nginx.conf || die
-	rm conf/win-utf conf/koi-win conf/koi-utf
-
-	dodir /etc/${PN}
-	insinto /etc/${PN}
-	doins conf/*
-
 	doman man/nginx.8
 	dodoc CHANGES* README
+
+	# Keepdir because these are hardcoded above
+	keepdir /var/log/${PN} /var/tmp/${PN}/{client,proxy,fastcgi,scgi,uwsgi}
+	keepdir /var/www/localhost/htdocs
+	mv "${ED}"/usr/html "${ED}"/var/www/localhost/htdocs || die
 
 	# logrotate
 	insinto /etc/logrotate.d

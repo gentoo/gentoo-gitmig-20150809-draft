@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.318 2012/04/18 14:10:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.319 2012/04/18 16:02:04 darkside Exp $
+
+  18 Apr 2012; Jeremy Olexa <darkside@gentoo.org> nginx-1.1.19.ebuild:
+  Cosmetic changes to align with upstream better. Use Makefile to install. No
+  revbump needed
 
   18 Apr 2012; Jeremy Olexa <darkside@gentoo.org> -nginx-1.0.14.ebuild,
   metadata.xml:
