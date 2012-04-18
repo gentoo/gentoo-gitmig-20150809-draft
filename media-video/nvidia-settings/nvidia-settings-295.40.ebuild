@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-295.40.ebuild,v 1.1 2012/04/18 18:42:27 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-295.40.ebuild,v 1.2 2012/04/18 20:33:09 mr_bones_ Exp $
 
 EAPI=4
 
@@ -31,7 +31,6 @@ RDEPEND="x11-drivers/nvidia-drivers
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xproto"
-
 
 src_prepare() {
 	epatch "${FILESDIR}/0001-Makefile-improvements.patch"
