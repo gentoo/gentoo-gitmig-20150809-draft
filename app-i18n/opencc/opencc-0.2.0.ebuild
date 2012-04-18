@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/opencc-0.2.0.ebuild,v 1.2 2012/04/04 17:46:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/opencc-0.2.0.ebuild,v 1.3 2012/04/18 18:38:36 maekke Exp $
 
 EAPI=3
 inherit cmake-utils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://open-chinese-convert.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls static-libs"
 
 DEPEND="nls? ( sys-devel/gettext )"

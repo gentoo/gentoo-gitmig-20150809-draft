@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.43 2012/04/04 20:12:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.44 2012/04/18 18:39:20 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> fcitx-4.2.1.ebuild:
+  x86 stable, bug #409403
 
   04 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> fcitx-4.2.1.ebuild:
   Fix multilib-strict, bug 410797; add missing intltool depend. Acked by naota.
