@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.4.ebuild,v 1.1 2012/04/18 13:53:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.4.ebuild,v 1.2 2012/04/18 19:18:57 alexxy Exp $
 
 RESTRICT="primaryuri"
 
@@ -135,10 +135,9 @@ src_install() {
 	fi
 	if use torque; then
 		emake DESTDIR="${D}" -C contribs/torque || die
+		rm -f "${ED}/usr/bin/mpiexec" || die
 	fi
 	use static-libs || find "${ED}" -name '*.la' -exec rm {} +
-	# we dont need it
-	rm "${ED}/usr/bin/mpiexec" || die
 	# install sample configs
 	keepdir /etc/slurm
 	insinto /etc/slurm
