@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.25 2012/03/18 18:31:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.26 2012/04/18 20:17:12 polynomial-c Exp $
+
+  18 Apr 2012; Lars Wendler <polynomial-c@gentoo.org>
+  kbuild-0.1.9998_pre20110817.ebuild:
+  Use better separators in sed statement (bug #398031).
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug 118003.

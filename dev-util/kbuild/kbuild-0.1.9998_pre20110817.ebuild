@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20110817.ebuild,v 1.4 2011/12/07 17:29:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20110817.ebuild,v 1.5 2012/04/18 20:17:12 polynomial-c Exp $
 
 EAPI=2
 
@@ -40,7 +40,7 @@ src_prepare() {
 	cd "${S}/src/sed"
 	eautoreconf
 
-	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
+	sed -e "s@_LDFLAGS\.${ARCH}*.*=@& ${LDFLAGS}@g" \
 		-i "${S}"/Config.kmk || die #332225
 }
 
