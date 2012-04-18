@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6437 2012/04/18 16:40:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6438 2012/04/18 20:26:12 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +desc/openmpi_fabrics.desc,
+  +desc/openmpi_ofed_features.desc, +desc/openmpi_rm.desc, base/make.defaults:
+  add use expands for OPENMPI_
 
   18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> updates/2Q-2012:
   move sys-infiniband/openib to ofed
