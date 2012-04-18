@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13679 2012/04/17 17:52:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13680 2012/04/18 02:10:55 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -622,6 +622,7 @@ dev-tex/pdftex
 # Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
 # Mask 5.5/6.0 series that are alpha and and crazy experimental.
 # Mask 5.2/5.3 virtual that exists in the overlay as well (it is MariaDB only)
+>=dev-db/mariadb-5.5
 >=dev-db/mysql-5.5
 >=virtual/mysql-5.5
 =dev-db/mariadb-5.2*

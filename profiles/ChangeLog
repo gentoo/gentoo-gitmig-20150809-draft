@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6433 2012/04/17 17:52:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6434 2012/04/18 02:10:55 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Fix missing mask for MariaDB 5.5.
 
   17 Apr 2012; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask obsolete ruby-gnome2 dependencies with no reverse dependencies in the
