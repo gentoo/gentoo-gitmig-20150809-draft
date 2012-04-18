@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.5.3.ebuild,v 1.3 2012/04/18 09:05:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.5.3.ebuild,v 1.4 2012/04/18 09:30:58 chithanh Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -69,6 +69,8 @@ pkg_setup() {
 
 src_prepare() {
 	python_convert_shebangs -q -r 2 "${S}"
+	# Useless UI element would require qt3support, bug #365019
+	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
 	# TODO: DEPDIR is not created, need to investigate why
 	mkdir "${S}"/gnuradio-core/src/lib/general/.deps || die
 	mkdir "${S}"/gnuradio-core/src/lib/gengen/.deps || die
@@ -105,7 +107,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install
+	# Fails to install with parallel make sometimes, bug #412449
+	emake -j1 DESTDIR="${ED}" install
 
 	python_clean_installation_image -q
 

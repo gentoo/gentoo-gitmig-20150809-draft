@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.3 2012/04/18 09:05:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.4 2012/04/18 09:30:58 chithanh Exp $
+
+  18 Apr 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnuradio-3.5.3.ebuild:
+  Fix building in the absence of qt-qt3support, add -j1 to emake install, bug
+  #412449.
 
   18 Apr 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnuradio-3.5.3.ebuild:
