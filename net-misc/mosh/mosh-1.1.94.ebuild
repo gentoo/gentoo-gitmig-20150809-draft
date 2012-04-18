@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.1.94.ebuild,v 1.4 2012/04/18 15:41:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.1.94.ebuild,v 1.5 2012/04/18 15:43:01 xmw Exp $
 
 EAPI=4
 
@@ -32,9 +32,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	echo 'char const * PROG = "mosh-client" ;' >> src/frontend/mosh-client.cc
-	echo 'char const * PROG = "mosh-server" ;' >> src/frontend/mosh-server.cc
-	echo 'char const * PROG = "termemu" ;' >> src/examples/termemu.cc
 	eautoreconf
 }
 
