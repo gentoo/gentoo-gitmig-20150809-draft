@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.95 2012/03/29 19:01:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.96 2012/04/18 19:10:26 bicatali Exp $
+
+*netcdf-4.2 (18 Apr 2012)
+
+  18 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +netcdf-4.2.ebuild,
+  metadata.xml:
+  Version bump. C++ and FORTRAN libraries are now in packages netcdf-cxx and
+  netcdf-fortran, following upstream. All patches applied upstream
 
   29 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> netcdf-4.1.3.ebuild:
   Fixed minimum libtool dependency (bug #409219, thanks dima), fixes a sed for
