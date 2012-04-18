@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.86 2012/04/07 10:18:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.87 2012/04/18 16:52:30 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin.eclass
 # @MAINTAINER:
@@ -378,11 +378,7 @@ vdr-plugin_pkg_setup() {
 	DVB_INCLUDE_DIR="/usr/include"
 
 	TMP_LOCALE_DIR="${WORKDIR}/tmp-locale"
-	if has_version ">=media-video/vdr-1.6.0_p2-r7"; then
-		LOCDIR="/usr/share/locale"
-	else
-		LOCDIR="/usr/share/vdr/locale"
-	fi
+	LOCDIR="/usr/share/locale"
 
 	if ! has_vdr; then
 		# set to invalid values to detect abuses
@@ -436,8 +432,11 @@ vdr-plugin_src_util() {
 			vdr_patchmakefile
 			;;
 		i18n)
-			cd "${S}" || die "Could not change to plugin-source-directory!"
-			vdr_i18n
+			# i18n-to-gettext tool removed starting with version 1.7.27
+			if has_version "<media-video/vdr-1.7.27"; then
+				cd "${S}" || die "Could not change to plugin-source-directory!"
+				vdr_i18n
+			fi
 			;;
 		esac
 
