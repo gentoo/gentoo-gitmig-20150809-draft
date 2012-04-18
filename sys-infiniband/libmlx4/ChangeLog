@@ -1,6 +1,12 @@
 # ChangeLog for sys-infiniband/libmlx4
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libmlx4/ChangeLog,v 1.4 2011/08/09 06:23:20 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libmlx4/ChangeLog,v 1.5 2012/04/18 16:42:56 alexxy Exp $
+
+*libmlx4-1.0.1-r1 (18 Apr 2012)
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +libmlx4-1.0.1-r1.ebuild,
+  -libmlx4-1.0.1.ebuild:
+  [sys-infiniband/libmlx4] Version bump to OFED 1.5.4.1
 
   09 Aug 2011; Ulrich Mueller <ulm@gentoo.org> libmlx4-1.0.1.ebuild:
   Fix dependency, versioning of virtual/linux-sources will be dropped.
