@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mysql
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.29 2011/07/28 11:45:07 jmbsvicetto Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.30 2012/04/18 06:12:08 robbat2 Exp $
+
+  18 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> mysql-5.5.ebuild:
+  Missed adding mariadb to virtual.
 
 *mysql-5.3 (28 Jul 2011)
 *mysql-5.2 (28 Jul 2011)
