@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.317 2012/04/15 17:01:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.318 2012/04/18 14:10:07 darkside Exp $
+
+  18 Apr 2012; Jeremy Olexa <darkside@gentoo.org> -nginx-1.0.14.ebuild,
+  metadata.xml:
+  Remove vulnerable version. Document local ssl USE flag
 
   15 Apr 2012; Markus Meier <maekke@gentoo.org> nginx-1.0.15.ebuild:
   x86 stable, bug #411751
