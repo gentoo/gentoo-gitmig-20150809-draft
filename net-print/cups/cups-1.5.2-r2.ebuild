@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r2.ebuild,v 1.1 2012/04/18 22:07:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r2.ebuild,v 1.2 2012/04/18 22:17:38 dilfridge Exp $
 
 EAPI=4
 
@@ -133,10 +133,13 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"
 
 	# revert ipp backend to 1.4 state, as ubuntu and debian
-	epatch "${DISTDIR}/${P}-ipp-r8950.patch.bz2"
+	epatch "${DISTDIR}/${PN}-1.5.2-ipp-r8950.patch.bz2"
 
 	# avahi support from debian
-	epatch "${DISTDIR}/${P}-avahi.patch.bz2"
+	epatch "${DISTDIR}/${PN}-1.5.2-avahi.patch.bz2"
+
+	# browsing off by default
+	epatch "${FILESDIR}/${PN}-1.5.2-browsing.patch"
 
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf
@@ -278,6 +281,10 @@ pkg_postinst() {
 	echo
 	elog "For information about installing a printer and general cups setup"
 	elog "take a look at: http://www.gentoo.org/doc/en/printing-howto.xml"
+	echo
+	elog "Network browsing for printers is now switched off by default in the config file."
+	elog "To (re-)enable it, edit /etc/cupsd.conf and set \"Browsing On\", "
+	elog "afterwards re-start or reload cups."
 	echo
 }
 
