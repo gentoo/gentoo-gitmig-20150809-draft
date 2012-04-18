@@ -1,6 +1,10 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.27 2012/04/17 13:04:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.28 2012/04/18 19:51:52 ago Exp $
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  conkeror-1.0_pre20120223.ebuild:
+  Stable for amd64, wrt bug #412335
 
   17 Apr 2012; Ulrich Müller <ulm@gentoo.org> conkeror-0.9.4-r1.ebuild,
   conkeror-1.0_pre20120223.ebuild:
