@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.247 2012/03/25 16:29:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.248 2012/04/18 20:38:57 ago Exp $
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gtkhtml-4.2.3.ebuild:
+  Stable for amd64, wrt bug #410611
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> gtkhtml-4.2.2.ebuild:
   alpha/ia64/sh/sparc stable wrt #393007
