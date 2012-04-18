@@ -1,0 +1,10 @@
+# ChangeLog for sci-electronics/fritzing
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/ChangeLog,v 1.1 2012/04/18 17:26:18 idl0r Exp $
+
+*fritzing-0.7.4b (18 Apr 2012)
+
+  18 Apr 2012; Christian Ruppert <idl0r@gentoo.org> +fritzing-0.7.4b.ebuild,
+  +metadata.xml:
+  Initial commit, bug 331177.
+
