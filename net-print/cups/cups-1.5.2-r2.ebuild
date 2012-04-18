@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r2.ebuild,v 1.2 2012/04/18 22:17:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r2.ebuild,v 1.3 2012/04/18 22:28:05 dilfridge Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit autotools eutils fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2
+inherit autotools eutils fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2 systemd
 
 MY_P=${P/_}
 MY_PV=${PV/_}
@@ -198,6 +198,7 @@ src_configure() {
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
 		--disable-dnssd \
+		$(systemd_with_unitdir) \
 		${myconf}
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that
