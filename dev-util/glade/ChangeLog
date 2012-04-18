@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.154 2012/03/27 08:33:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.155 2012/04/18 20:32:44 ago Exp $
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> glade-3.8.2.ebuild:
+  Stable for amd64, wrt bug #410611
 
 *glade-3.8.2 (27 Mar 2012)
 

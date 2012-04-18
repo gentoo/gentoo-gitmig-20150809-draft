@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.9.2.ebuild,v 1.1 2012/03/31 17:20:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.9.2.ebuild,v 1.2 2012/04/18 20:34:16 ago Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://projects.gnome.org/nemiver/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="memoryview"
 
 RDEPEND=">=dev-libs/glib-2.16:2
