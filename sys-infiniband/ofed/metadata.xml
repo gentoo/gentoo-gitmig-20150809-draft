@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>cluster</herd>
+	<use>
+		<flag name='dapl'>Add support for DAPL abstraction layer</flag>
+		<flag name='diags'>Add dignostic tools for infiniband</flag>
+		<flag name='opensm'>Add OpenSM - Subnet manager for infiniband</flag>
+		<flag name='perftest'>Add perftest utils</flag>
+		<flag name='sdp'>Add SDP tools</flag>
+		<flag name="srp">Suport for userspace part for srp initiator</flag>
+    	<flag name="rds">Tools to manage rds sockets</flag>
+  </use>
+</pkgmetadata>

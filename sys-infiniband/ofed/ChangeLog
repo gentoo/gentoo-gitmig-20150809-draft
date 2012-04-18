@@ -1,0 +1,11 @@
+# ChangeLog for sys-infiniband/ofed
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ChangeLog,v 1.1 2012/04/18 16:45:04 alexxy Exp $
+
+*ofed-1.5.4.1 (18 Apr 2012)
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +files/90-ib.rules,
+  +files/openib, +files/openib.conf, +files/openib.env, +files/openib.modprobe,
+  +metadata.xml, +ofed-1.5.4.1.ebuild:
+  [sys-infiniband/ofed] Version bump to OFED 1.5.4.1
+
