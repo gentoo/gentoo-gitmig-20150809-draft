@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.4 2012/04/18 11:30:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.5 2012/04/18 13:23:34 voyageur Exp $
+
+  18 Apr 2012; Bernard Cafarelli <voyageur@gentoo.org> owncloud-3.0.2.ebuild:
+  Also depend on php[gd], for gallery
 
 *owncloud-3.0.2 (18 Apr 2012)
 
