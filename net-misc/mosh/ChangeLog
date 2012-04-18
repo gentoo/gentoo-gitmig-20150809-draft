@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.5 2012/04/17 15:23:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.6 2012/04/18 15:41:31 xmw Exp $
+
+  18 Apr 2012; Michael Weber <xmw@gentoo.org> mosh-1.1.94.ebuild:
+  reflect removed skalibs dependency
 
   17 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> mosh-1.1.94.ebuild:
   Fix SRC_URI some more
