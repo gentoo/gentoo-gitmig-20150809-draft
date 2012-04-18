@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.119 2012/04/18 19:52:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.120 2012/04/18 20:33:56 scarabeus Exp $
+
+  18 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> openttd-1.2.0.ebuild:
+  Bump the dependency on opengfx wrt bug#412557. Drop the stable amd64 keyword
+  as it broke the depgraph. (drop the arm and ppc64 from the ebuild for now,
+  handled by keywordreq).
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> openttd-1.2.0.ebuild:
   Stable for amd64, wrt bug #398161

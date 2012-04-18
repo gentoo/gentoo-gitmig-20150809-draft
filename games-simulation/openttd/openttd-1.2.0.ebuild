@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.2.0.ebuild,v 1.2 2012/04/18 19:52:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.2.0.ebuild,v 1.3 2012/04/18 20:33:56 scarabeus Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://binaries.openttd.org/releases/${PV}/${P}-source.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aplaymidi debug dedicated iconv icu lzo +openmedia +png +timidity +truetype zlib"
 
 DEPEND="
@@ -38,7 +38,7 @@ PDEPEND="
 		aplaymidi? ( media-sound/alsa-utils )
 		!aplaymidi? ( timidity? ( media-sound/timidity++ ) )
 	)
-	openmedia? ( games-misc/opengfx )
+	openmedia? ( >=games-misc/opengfx-0.4.4 )
 "
 
 PATCHES=( "${FILESDIR}"/${PN}-1.1.3-cflags.patch )
