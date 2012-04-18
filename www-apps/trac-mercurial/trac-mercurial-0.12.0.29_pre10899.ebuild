@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-mercurial/trac-mercurial-0.12.0.28_pre10784.ebuild,v 1.1 2011/09/08 06:41:48 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-mercurial/trac-mercurial-0.12.0.29_pre10899.ebuild,v 1.1 2012/04/18 01:37:37 rafaelmartins Exp $
 
 EAPI=3
 
