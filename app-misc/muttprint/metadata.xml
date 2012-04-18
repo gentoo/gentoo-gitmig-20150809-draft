@@ -5,4 +5,10 @@
 		<email>nimiux@gentoo.org</email>
 		<name>Chema Alonso</name>
 	</maintainer>
+	<longdescription lang="en">
+		Pretty printing of your mails
+	</longdescription>
+	<longdescription lang="es">
+		Impresión elegante de tus correos
+	</longdescription>
 </pkgmetadata>
