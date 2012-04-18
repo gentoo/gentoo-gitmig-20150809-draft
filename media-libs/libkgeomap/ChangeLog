@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkgeomap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.14 2012/04/08 19:46:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.15 2012/04/18 21:49:05 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> libkgeomap-2.5.0.ebuild:
+  x86 stable, bug #409403
 
 *libkgeomap-2.6.0_beta3 (08 Apr 2012)
 
