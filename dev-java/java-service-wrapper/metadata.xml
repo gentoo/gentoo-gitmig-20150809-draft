@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>java</herd>
-	<maintainer>
-		<email>ali_bush@gentoo.org</email>
-		<name>Alistair Bush</name>
-	</maintainer>
 	<longdescription lang="en">
 		The Java Service Wrapper is an application which has evolved out of a desire 
 		to solve a number of problems common to many Java applications:
