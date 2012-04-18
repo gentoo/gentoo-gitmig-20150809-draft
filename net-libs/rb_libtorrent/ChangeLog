@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.122 2012/04/17 23:47:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.123 2012/04/18 11:59:38 hwoarang Exp $
+
+  18 Apr 2012; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.15.9.ebuild:
+  Stable on amd64 wrt bug #411871
 
   17 Apr 2012; Jeff Horelick <jdhore@gentoo.org> rb_libtorrent-0.15.9.ebuild:
   marked x86 per bug 411871
