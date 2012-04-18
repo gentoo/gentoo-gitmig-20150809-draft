@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/light-themes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.7 2012/04/15 22:20:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.8 2012/04/18 21:19:51 ago Exp $
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> light-themes-0.1.8.29.ebuild:
+  Stable for amd64, wrt bug #410611
 
 *light-themes-0.1.9.1 (15 Apr 2012)
 

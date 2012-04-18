@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/zukitwo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.4 2011/12/30 08:39:38 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.5 2012/04/18 21:20:25 ago Exp $
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> zukitwo-2011.12.29.ebuild:
+  Stable for amd64, wrt bug #410611
 
 *zukitwo-2011.12.29 (30 Dec 2011)
 
