@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.53 2012/04/16 18:11:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.54 2012/04/18 20:12:43 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> gdk-pixbuf-2.24.1-r1.ebuild:
+  arm stable, bug #412033
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> gdk-pixbuf-2.24.1-r1.ebuild:
   Marking gdk-pixbuf-2.24.1-r1 ppc for bug 412033
