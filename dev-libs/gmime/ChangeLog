@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.184 2012/03/25 15:40:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.185 2012/04/18 20:16:25 ago Exp $
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gmime-2.4.32.ebuild,
+  gmime-2.6.7.ebuild:
+  Stable for amd64, wrt bug #410611
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> gmime-2.6.1.ebuild:
   alpha/ia64/sparc stable wrt #393007
