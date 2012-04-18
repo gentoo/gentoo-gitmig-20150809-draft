@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.2.1.ebuild,v 1.5 2012/02/27 04:35:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.2.1.ebuild,v 1.6 2012/04/18 16:42:53 jer Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ HOMEPAGE="http://live.gnome.org/Accessibility"
 # Note: only some of the tests are GPL-licensed, everything else is LGPL
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="test"
 
 COMMON_DEPEND="dev-python/dbus-python
