@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.6.11.ebuild,v 1.1 2011/09/25 00:29:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/Djblets-0.6.11.ebuild,v 1.2 2012/04/18 16:09:08 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,6 +18,8 @@ IUSE=""
 
 RDEPEND="dev-python/django
 	dev-python/imaging"
+
+PYTHON_MODNAME="djblets"
 
 pkg_setup() {
 	python_set_active_version 2
