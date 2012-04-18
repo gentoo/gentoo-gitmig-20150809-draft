@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.197 2012/04/05 09:47:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.198 2012/04/18 20:47:11 ago Exp $
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> libgda-4.2.12.ebuild,
+  libgda-5.0.3-r1.ebuild:
+  Stable for amd64, wrt bug #410611
 
   03 Apr 2012; Pacho Ramos <pacho@gentoo.org> libgda-5.0.3-r1.ebuild:
   DEPEND on virtual/jdk when java support is demanded (#401219 by Ralph
