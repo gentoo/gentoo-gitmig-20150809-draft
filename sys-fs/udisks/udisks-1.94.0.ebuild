@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.94.0.ebuild,v 1.2 2012/04/17 19:31:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.94.0.ebuild,v 1.3 2012/04/18 07:45:35 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -37,8 +37,9 @@ DEPEND="${COMMON_DEPEND}
 DOCS="AUTHORS HACKING NEWS README"
 
 pkg_setup() {
+	# CONFIG_TMPFS_POSIX_ACL required for setfacl /run usage wrt #412377
 	if use amd64 || use x86; then
-		CONFIG_CHECK="~USB_SUSPEND ~!IDE"
+		CONFIG_CHECK="~TMPFS_POSIX_ACL ~USB_SUSPEND ~!IDE"
 		linux-info_pkg_setup
 	fi
 }

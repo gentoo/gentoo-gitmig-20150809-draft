@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.68 2012/04/17 19:31:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.69 2012/04/18 07:45:35 ssuominen Exp $
+
+  18 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.94.0.ebuild:
+  Check for CONFIG_TMPFS_POSIX_ACL (as required by setfacl command used on
+  /run) wrt #412377
 
   17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.94.0.ebuild:
   Missing sys-apps/acl RDEPEND for setfacl command wrt #412377 by Martin Wegner
