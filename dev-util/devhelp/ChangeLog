@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.128 2011/12/31 20:50:06 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.129 2012/04/18 20:20:22 ago Exp $
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> devhelp-3.2.0.ebuild:
+  Stable for amd64, wrt bug #410611
 
   31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   devhelp-2.32.0.ebuild, devhelp-3.2.0.ebuild:
