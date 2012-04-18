@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/srptools/srptools-0.0.4-r1.ebuild,v 1.1 2012/04/18 16:46:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/srptools/srptools-0.0.4-r1.ebuild,v 1.2 2012/04/18 18:04:29 alexxy Exp $
 
 EAPI="4"
 
@@ -24,5 +24,5 @@ block_other_ofed_versions
 
 src_install() {
 	default
-	newinitd "${FILESDIR}/srpd.inid" srpd
+	newinitd "${FILESDIR}/srpd.initd" srpd
 }
