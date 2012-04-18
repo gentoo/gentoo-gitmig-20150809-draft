@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-1.5.4.1.ebuild,v 1.1 2012/04/18 16:45:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-1.5.4.1.ebuild,v 1.2 2012/04/18 18:20:56 alexxy Exp $
 
 EAPI="4"
 
@@ -85,17 +85,17 @@ src_install() {
 	echo >> ${IB_CONF_DIR}/openib.conf
 	echo "# Load MTHCA" >> ${IB_CONF_DIR}/openib.conf
 	echo "MTHCA_LOAD=yes" >> ${IB_CONF_DIR}/openib.conf
-	if use ipath; then
+	if use ofed_drivers_ipath; then
 		echo >> ${IB_CONF_DIR}/openib.conf
 		echo "# Load IPATH" >> ${IB_CONF_DIR}/openib.conf
 		echo "IPATH_LOAD=yes" >> ${IB_CONF_DIR}/openib.conf
 	fi
-	if use ehca; then
+	if use ofed_drivers_ehca; then
 		echo >> ${IB_CONF_DIR}/openib.conf
 		echo "# Load eHCA" >> ${IB_CONF_DIR}/openib.conf
 		echo "EHCA_LOAD=yes" >> ${IB_CONF_DIR}/openib.conf
 	fi
-	if use mlx4; then
+	if use ofed_drivers_mlx4; then
 		echo >> ${IB_CONF_DIR}/openib.conf
 		echo "# Load MLX4 modules" >> ${IB_CONF_DIR}/openib.conf
 		echo "MLX4_LOAD=yes" >> ${IB_CONF_DIR}/openib.conf
