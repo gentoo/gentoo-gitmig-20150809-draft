@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.454 2012/02/08 14:51:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.455 2012/04/18 22:07:34 dilfridge Exp $
+
+*cups-1.5.2-r2 (18 Apr 2012)
+
+  18 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> +cups-1.5.2-r2.ebuild:
+  Add avahi support (patch from Debian), as this will be included in 1.6
+  anyway; bug 374153
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> cups-1.5.0-r4.ebuild,
   cups-1.5.2-r1.ebuild:
