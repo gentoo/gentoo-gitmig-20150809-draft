@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.154 2012/02/16 17:32:33 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.155 2012/04/18 16:42:26 hd_brummy Exp $
+
+  18 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-1.6.0_p2-r6.ebuild,
+  -files/vdr-1.6.0-dxr3-subtitlehack.diff,
+  -files/vdr-1.6.0-extensions-gcc-4.4.diff:
+  cleanup
 
   16 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r7.ebuild:
   stable x86 amd64
