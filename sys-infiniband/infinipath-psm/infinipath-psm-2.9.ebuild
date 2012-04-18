@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infinipath-psm/infinipath-psm-2.9.ebuild,v 1.1 2012/04/18 16:39:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infinipath-psm/infinipath-psm-2.9.ebuild,v 1.2 2012/04/18 18:30:20 alexxy Exp $
 
 EAPI="4"
 
 OFED_VER="1.5.4.1"
 OFED_SUFFIX="926.1005_open"
 OFED_SNAPSHOT="1"
+OFED_SRC_SNAPSHOT="1"
 
 inherit openib
 
