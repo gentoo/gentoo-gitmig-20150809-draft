@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/dingus
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dingus/ChangeLog,v 1.1 2012/04/18 16:19:30 tampakrap Exp $
+
+*dingus-0.3.4 (18 Apr 2012)
+
+  18 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org> +dingus-0.3.4.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by idella4
+
