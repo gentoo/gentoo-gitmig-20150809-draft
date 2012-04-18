@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.10.ebuild,v 1.1 2012/04/02 11:51:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.10.ebuild,v 1.2 2012/04/18 16:01:16 jer Exp $
 
 EAPI="4"
 
@@ -57,7 +57,9 @@ src_install() {
 	rm -rf "${D}"/usr/share/doc/${PN}
 	dodoc AUTHORS NEWS doc/config doc/keys
 
-	newbashcomp doc/${PN}-completion.bash ${PN}
+	if use bash-completion; then
+		newbashcomp doc/${PN}-completion.bash ${PN}
+	fi
 }
 
 pkg_postinst() {

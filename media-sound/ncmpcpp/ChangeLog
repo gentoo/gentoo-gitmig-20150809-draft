@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ncmpcpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.63 2012/04/18 02:42:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.64 2012/04/18 16:01:16 jer Exp $
+
+  18 Apr 2012; Jeroen Roovers <jer@gentoo.org> ncmpcpp-0.5.9.ebuild,
+  ncmpcpp-0.5.10.ebuild:
+  Use USE=bash-completion by Jeff Horelick (bug #412405 comment #1).
 
   18 Apr 2012; Jeff Horelick <jdhore@gentoo.org> ncmpcpp-0.5.9.ebuild:
   marked x86 per bug 412405
