@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.10.ebuild,v 1.2 2011/10/04 17:27:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.10-r1.ebuild,v 1.1 2012/04/18 12:14:01 alexxy Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils
 
 DESCRIPTION="An authentication service for creating and validating credentials"
@@ -42,15 +42,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	diropts -o munge -g munge -m700
 	dodir /etc/munge || die
-
-	diropts -o munge -g munge -m711
-	dodir /var/lib/munge || die
-
-	diropts -o munge -g munge -m755
-	dodir /var/run/munge || die
-
-	diropts -o munge -g munge -m700
-	dodir /var/log/munge || die
 
 	[ -d "${D}"/etc/init.d ] && rm -r "${D}"/etc/init.d
 	[ -d "${D}"/etc/default ] && rm -r "${D}"/etc/default
