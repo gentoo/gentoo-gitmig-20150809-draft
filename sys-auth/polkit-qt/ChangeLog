@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.23 2012/04/04 16:40:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.24 2012/04/18 18:40:08 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> polkit-qt-0.103.0.ebuild:
+  x86 stable, bug #409403
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> polkit-qt-0.103.0.ebuild:
   Stable for amd64, wrt bug #409403
