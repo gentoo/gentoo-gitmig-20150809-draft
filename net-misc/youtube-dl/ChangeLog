@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.111 2012/04/18 17:54:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.112 2012/04/18 20:13:10 jdhore Exp $
+
+  18 Apr 2012; Jeff Horelick <jdhore@gentoo.org> youtube-dl-2012.02.27.ebuild:
+  marked x86 per bug 412413
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2012.02.27.ebuild:
   Stable for amd64, wrt bug #412413
