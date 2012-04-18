@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gchemutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.16 2011/11/01 12:24:48 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.17 2012/04/18 13:21:59 ssuominen Exp $
+
+  18 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> gchemutils-0.13.1.ebuild:
+  Remove USE="nsplugin" wrt #388887 by Michał Górny. Support for building
+  against net-misc/npapi-sdk is left commented out in the ebuild for example.
 
   01 Nov 2011; Pacho Ramos <pacho@gentoo.org> gchemutils-0.13.1.ebuild:
   Drop DEPRECATED flags, bug #388509

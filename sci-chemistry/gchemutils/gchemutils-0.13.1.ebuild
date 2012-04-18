@@ -1,23 +1,20 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.13.1.ebuild,v 1.4 2011/11/01 12:24:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.13.1.ebuild,v 1.5 2012/04/18 13:21:59 ssuominen Exp $
 
-EAPI=3
+EAPI=4
+inherit gnome2 # multilib toolchain-funcs nsplugins
 
-inherit gnome2 multilib versionator
-
-MPV=$(get_version_component_range 1-2)
-MY_PN=gnome-chemistry-utils
-MY_P=${MY_PN}-${PV}
+MY_P=gnome-chemistry-utils-${PV}
 
 DESCRIPTION="C++ classes and Gtk+-2 widgets related to chemistry"
 HOMEPAGE="http://www.nongnu.org/gchemutils/"
-SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${MPV}/${MY_P}.tar.bz2"
+SRC_URI="mirror://nongnu/${PN}/${PV%.*}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls nsplugin"
+IUSE="nls" # nsplugin
 
 CDEPEND="
 	gnome-base/libglade:2.0
@@ -25,17 +22,14 @@ CDEPEND="
 	x11-libs/gtkglext
 	sci-chemistry/chemical-mime-data
 	sci-chemistry/bodr
-	sci-chemistry/openbabel
-	nsplugin? ( || (
-		net-libs/xulrunner
-		www-client/firefox
-	) )"
+	sci-chemistry/openbabel"
 RDEPEND="${CDEPEND}
 	gnome-extra/yelp" #271998
 DEPEND="${CDEPEND}
 	app-text/gnome-doc-utils
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+# nsplugin? ( net-misc/npapi-sdk )
 
 S=${WORKDIR}/${MY_P}
 
@@ -45,22 +39,32 @@ pkg_setup() {
 		--disable-scrollkeeper
 		--disable-dependency-tracking
 		--disable-update-databases
-		$(use_enable nsplugin mozilla-plugin)
+		--disable-mozilla-plugin
 		$(use_enable nls)"
+	# $(use_enable nsplugin mozilla-plugin)
 
-	if use nsplugin; then
-		G2CONF="${G2CONF} --with-mozilla-libdir=/usr/$(get_libdir)/nsbrowser/"
-	fi
+	#if use nsplugin; then
+	#	G2CONF="${G2CONF} --with-mozilla-libdir=/usr/$(get_libdir)/${PLUGINS_DIR}"
+	#fi
 
-	DOCS="AUTHORS ChangeLog README TODO NEWS"
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Drop DEPRECATED flags, bug #388509
 	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED::g' \
 		configure configure.ac || die
+
+	gnome2_src_prepare
+}
+
+src_configure() {
+	#if use nsplugin; then
+	#	export MOZILLA_CFLAGS="$($tc-getPKG_CONFIG) --cflags npapi-sdk)"
+	#	export MOZILLA_LIBS=""
+	#fi
+
+	gnome2_src_configure
 }
 
 src_test() {
@@ -71,7 +75,7 @@ src_test() {
 
 src_install() {
 	gnome2_src_install
-	find "${D}" -name "*.la" -delete
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
