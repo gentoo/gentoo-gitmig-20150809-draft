@@ -1,6 +1,10 @@
 # ChangeLog for games-util/nml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.1 2012/04/17 12:30:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.2 2012/04/18 15:26:14 scarabeus Exp $
+
+  18 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> nml-0.2.3.ebuild:
+  Aparently does not build with py3. Fixes bug#412527. Thanks to
+  hendrik<at>consetetur.de for the patch
 
 *nml-0.2.3 (17 Apr 2012)
 
