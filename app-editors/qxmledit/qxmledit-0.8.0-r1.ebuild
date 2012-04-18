@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/qxmledit-0.8.0-r1.ebuild,v 1.2 2012/04/18 17:50:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/qxmledit-0.8.0-r1.ebuild,v 1.3 2012/04/18 21:58:58 jdhore Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tgz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND=">=x11-libs/qt-core-4.7:4
