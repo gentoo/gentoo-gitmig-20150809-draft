@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/radiusclient
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.24 2009/03/03 21:04:24 mrness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.25 2012/04/18 22:07:20 naota Exp $
+
+  18 Apr 2012; Naohiro Aota <naota@gentoo.org> radiusclient-0.3.2.ebuild:
+  Add ~x86-fbsd. #235785
 
   03 Mar 2009; Alin Năstac <mrness@gentoo.org> radiusclient-0.3.2.ebuild:
   Add net-dialup/freeradius-client blocking atom (#234098).
