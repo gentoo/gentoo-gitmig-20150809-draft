@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.238 2012/04/04 23:59:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.239 2012/04/18 19:02:50 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> ksysguard-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *ksysguard-4.8.2 (04 Apr 2012)
 

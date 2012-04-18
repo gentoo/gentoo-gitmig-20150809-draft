@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkcompactdisc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.110 2012/04/04 23:59:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.111 2012/04/18 19:07:57 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> libkcompactdisc-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *libkcompactdisc-4.8.2 (04 Apr 2012)
 

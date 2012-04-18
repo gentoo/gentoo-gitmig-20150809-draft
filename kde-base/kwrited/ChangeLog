@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.98 2012/04/04 23:59:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.99 2012/04/18 20:28:42 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kwrited-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kwrited-4.8.2 (04 Apr 2012)
 

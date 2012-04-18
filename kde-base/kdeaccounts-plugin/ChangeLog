@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccounts-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccounts-plugin/ChangeLog,v 1.106 2012/04/04 23:59:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccounts-plugin/ChangeLog,v 1.107 2012/04/18 21:10:26 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org>
+  kdeaccounts-plugin-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kdeaccounts-plugin-4.8.2 (04 Apr 2012)
 

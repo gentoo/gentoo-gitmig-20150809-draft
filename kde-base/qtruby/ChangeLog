@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.105 2012/04/04 23:59:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.106 2012/04/18 18:42:29 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> qtruby-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *qtruby-4.8.2 (04 Apr 2012)
 

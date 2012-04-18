@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.176 2012/04/04 23:59:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.177 2012/04/18 21:41:03 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> ktron-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *ktron-4.8.2 (04 Apr 2012)
 

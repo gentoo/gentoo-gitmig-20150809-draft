@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfmclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/ChangeLog,v 1.85 2012/04/04 23:59:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/ChangeLog,v 1.86 2012/04/18 18:51:55 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kfmclient-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kfmclient-4.8.2 (04 Apr 2012)
 

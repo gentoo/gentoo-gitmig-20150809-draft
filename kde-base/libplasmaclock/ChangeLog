@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libplasmaclock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.101 2012/04/04 23:59:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.102 2012/04/18 20:53:53 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> libplasmaclock-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *libplasmaclock-4.8.2 (04 Apr 2012)
 

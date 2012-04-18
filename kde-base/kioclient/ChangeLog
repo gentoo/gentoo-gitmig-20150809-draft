@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kioclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.116 2012/04/04 23:59:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.117 2012/04/18 20:06:20 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kioclient-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kioclient-4.8.2 (04 Apr 2012)
 

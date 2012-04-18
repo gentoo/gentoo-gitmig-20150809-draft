@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.219 2012/04/04 23:59:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.220 2012/04/18 19:32:14 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> drkonqi-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *drkonqi-4.8.2 (04 Apr 2012)
 

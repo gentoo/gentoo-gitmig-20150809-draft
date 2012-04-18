@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cantor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.63 2012/04/04 23:59:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.64 2012/04/18 19:30:34 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> cantor-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *cantor-4.8.2 (04 Apr 2012)
 

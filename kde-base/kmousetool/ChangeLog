@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmousetool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.199 2012/04/04 23:59:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.200 2012/04/18 21:26:05 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kmousetool-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kmousetool-4.8.2 (04 Apr 2012)
 

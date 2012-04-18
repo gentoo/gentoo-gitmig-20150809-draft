@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwallet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.111 2012/04/04 23:59:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.112 2012/04/18 19:21:27 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kwallet-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kwallet-4.8.2 (04 Apr 2012)
 

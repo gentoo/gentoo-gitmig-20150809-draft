@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpasswdserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.116 2012/04/04 23:59:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.117 2012/04/18 20:13:46 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kpasswdserver-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kpasswdserver-4.8.2 (04 Apr 2012)
 

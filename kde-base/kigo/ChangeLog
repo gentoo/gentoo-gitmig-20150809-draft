@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.62 2012/04/04 23:59:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.63 2012/04/18 21:17:53 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kigo-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kigo-4.8.2 (04 Apr 2012)
 

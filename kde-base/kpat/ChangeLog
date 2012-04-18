@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.202 2012/04/04 23:59:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.203 2012/04/18 21:32:46 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kpat-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kpat-4.8.2 (04 Apr 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaccessible
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.42 2012/04/04 23:59:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.43 2012/04/18 19:13:07 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kaccessible-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kaccessible-4.8.2 (04 Apr 2012)
 

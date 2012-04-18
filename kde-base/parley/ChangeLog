@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.114 2012/04/04 23:59:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.115 2012/04/18 21:47:36 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> parley-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *parley-4.8.2 (04 Apr 2012)
 

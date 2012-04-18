@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kshisen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.201 2012/04/04 23:59:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.202 2012/04/18 22:01:33 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kshisen-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kshisen-4.8.2 (04 Apr 2012)
 

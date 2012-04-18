@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksaneplugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksaneplugin/ChangeLog,v 1.94 2012/04/04 23:59:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksaneplugin/ChangeLog,v 1.95 2012/04/18 21:49:53 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> ksaneplugin-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *ksaneplugin-4.8.2 (04 Apr 2012)
 

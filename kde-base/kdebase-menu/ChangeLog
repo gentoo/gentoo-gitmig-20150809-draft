@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-menu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.91 2012/04/04 23:59:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.92 2012/04/18 19:49:36 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kdebase-menu-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kdebase-menu-4.8.2 (04 Apr 2012)
 

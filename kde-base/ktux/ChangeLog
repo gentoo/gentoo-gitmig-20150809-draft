@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.197 2012/04/04 23:59:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.198 2012/04/18 22:02:22 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> ktux-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *ktux-4.8.2 (04 Apr 2012)
 

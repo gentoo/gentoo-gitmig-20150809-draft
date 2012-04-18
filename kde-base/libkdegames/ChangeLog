@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.206 2012/04/04 23:59:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.207 2012/04/18 18:52:47 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> libkdegames-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *libkdegames-4.8.2 (04 Apr 2012)
 

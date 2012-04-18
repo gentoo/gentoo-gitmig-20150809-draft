@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.209 2012/04/04 23:58:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.210 2012/04/18 21:40:14 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> ktouch-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *ktouch-4.8.2 (04 Apr 2012)
 

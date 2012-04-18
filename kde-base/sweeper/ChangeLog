@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/sweeper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.107 2012/04/04 23:59:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.108 2012/04/18 20:35:45 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> sweeper-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *sweeper-4.8.2 (04 Apr 2012)
 

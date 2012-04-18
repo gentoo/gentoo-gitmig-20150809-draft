@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.123 2012/04/04 23:59:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.124 2012/04/18 21:01:21 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> gwenview-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *gwenview-4.8.2 (04 Apr 2012)
 

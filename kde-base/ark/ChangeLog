@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.223 2012/04/04 23:59:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.224 2012/04/18 20:55:33 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> ark-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *ark-4.8.2 (04 Apr 2012)
 

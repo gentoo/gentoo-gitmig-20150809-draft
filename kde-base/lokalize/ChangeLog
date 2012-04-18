@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/lokalize
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.104 2012/04/04 23:59:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.105 2012/04/18 22:03:13 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> lokalize-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *lokalize-4.8.2 (04 Apr 2012)
 

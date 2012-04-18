@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.198 2012/04/04 23:59:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.199 2012/04/18 19:18:05 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kompare-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kompare-4.8.2 (04 Apr 2012)
 

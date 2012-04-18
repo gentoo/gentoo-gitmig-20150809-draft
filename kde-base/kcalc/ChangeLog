@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.209 2012/04/04 23:59:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.210 2012/04/18 19:39:44 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kcalc-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kcalc-4.8.2 (04 Apr 2012)
 

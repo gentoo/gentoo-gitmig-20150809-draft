@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.212 2012/04/04 23:59:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.213 2012/04/18 21:12:57 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org>
+  kdemultimedia-kioslaves-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kdemultimedia-kioslaves-4.8.2 (04 Apr 2012)
 

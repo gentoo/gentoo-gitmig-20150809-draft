@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbreakout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.98 2012/04/04 23:59:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.99 2012/04/18 21:09:37 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kbreakout-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kbreakout-4.8.2 (04 Apr 2012)
 

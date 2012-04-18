@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/kfmclient-4.8.1.ebuild,v 1.3 2012/04/04 18:09:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/kfmclient-4.8.1.ebuild,v 1.4 2012/04/18 18:51:55 maekke Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KMMODULE="konqueror/client"
 inherit kde4-meta
 
 DESCRIPTION="KDE tool for opening URLs from the command line"
-KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 KMEXTRACTONLY="

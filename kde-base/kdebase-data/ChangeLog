@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.218 2012/04/04 23:59:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.219 2012/04/18 20:50:32 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kdebase-data-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kdebase-data-4.8.2 (04 Apr 2012)
 

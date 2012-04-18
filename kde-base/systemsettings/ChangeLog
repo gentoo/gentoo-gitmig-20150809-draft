@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.143 2012/04/07 21:55:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.144 2012/04/18 21:55:42 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> systemsettings-4.8.1.ebuild:
+  x86 stable, bug #409403
 
   07 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   systemsettings-4.8.2.ebuild:

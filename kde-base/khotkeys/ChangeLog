@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.214 2012/04/04 23:59:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.215 2012/04/18 20:48:00 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> khotkeys-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *khotkeys-4.8.2 (04 Apr 2012)
 

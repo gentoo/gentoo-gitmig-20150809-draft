@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-desktopthemes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-desktopthemes/ChangeLog,v 1.94 2012/04/04 23:59:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-desktopthemes/ChangeLog,v 1.95 2012/04/18 19:43:51 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org>
+  kdeartwork-desktopthemes-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kdeartwork-desktopthemes-4.8.2 (04 Apr 2012)
 
