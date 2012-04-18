@@ -1,0 +1,14 @@
+http://bugs.gentoo.org/409343
+http://bugzilla.xfce.org/show_bug.cgi?id=8266
+
+--- lib/hddtemp.c
++++ lib/hddtemp.c
+@@ -421,7 +421,7 @@ initialize_hddtemp (GPtrArray *chips, gb
+ #ifdef HAVE_NETCAT
+     read_disks_netcat (chip);
+ #else
+-    if (strcmp(p_uname->sysname, "Linux")==0 && major>=5)
++    if (strcmp(p_uname->sysname, "Linux")==0 && (generation>=3 || (generation==2 && major>=5)))
+         read_disks_linux26 (chip);
+     else
+         read_disks_fallback (chip); /* hopefully, that's a safe variant */
