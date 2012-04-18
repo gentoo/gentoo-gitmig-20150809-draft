@@ -1,0 +1,25 @@
+diff --git a/configure.in b/configure.in
+index ed16f92..8934bb5 100644
+--- a/configure.in
++++ b/configure.in
+@@ -5877,20 +5877,6 @@ if test "$with_system_clucene" = "yes"; then
+     AC_MSG_RESULT([external])
+     SYSTEM_CLUCENE=YES
+     PKG_CHECK_MODULES(CLUCENE, libclucene-core)
+-
+-    AC_LANG_PUSH([C++])
+-    save_CXXFLAGS=$CXXFLAGS
+-    save_CPPFLAGS=$CPPFLAGS
+-    CXXFLAGS="$CXXFLAGS $CLUCENE_CFLAGS"
+-    CPPFLAGS="$CPPFLAGS $CLUCENE_CFLAGS"
+-    dnl http://sourceforge.net/tracker/index.php?func=detail&aid=3392466&group_id=80013&atid=558446
+-    dnl https://bugzilla.redhat.com/show_bug.cgi?id=794795
+-    AC_CHECK_HEADER([CLucene/analysis/cjk/CJKAnalyzer.h], [],
+-                 [AC_MSG_ERROR([Your version of libclucene has contribs-lib missing.])], [])
+-    CXXFLAGS=$save_CXXFLAGS
+-    CPPFLAGS=$save_CPPFLAGS
+-    AC_LANG_POP([C++])
+-
+     CLUCENE_LIBS="$CLUCENE_LIBS -lclucene-contribs-lib"
+ else
+     AC_MSG_RESULT([internal])

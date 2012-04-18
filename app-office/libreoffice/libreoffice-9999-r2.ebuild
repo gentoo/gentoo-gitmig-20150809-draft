@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.48 2012/04/17 11:26:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.49 2012/04/18 09:03:05 scarabeus Exp $
 
 EAPI=4
 
@@ -195,11 +195,13 @@ DEPEND="${COMMON_DEPEND}
 		>=dev-java/ant-core-1.7
 		test? ( dev-java/junit:4 )
 	)
+	test? ( dev-util/cppunit )
 "
 
 PATCHES=(
-	# this can't be upstreamed :(
+	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.6-system-pyuno.patch"
+	"${FILESDIR}/${PN}-3.6-clucene-remove-wrong-check.patch"
 )
 
 REQUIRED_USE="
