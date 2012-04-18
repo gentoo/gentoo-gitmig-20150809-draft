@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/sunpinyin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/ChangeLog,v 1.8 2011/04/17 09:03:04 qiaomuf Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/ChangeLog,v 1.9 2012/04/18 01:30:59 qiaomuf Exp $
+
+  18 Apr 2012; Mu Qiao <qiaomuf@gentoo.org> sunpinyin-2.0.3-r1.ebuild,
+  +files/sunpinyin-2.0.3-gcc-4.7.patch:
+  Fix for gcc-4.7 and multilib-strict check (bug #412389)
+
+  Thanks to Alphat-PC for the help.
 
   17 Apr 2011; Mu Qiao <qiaomuf@gentoo.org> sunpinyin-2.0.3-r1.ebuild,
   metadata.xml:

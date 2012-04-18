@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.3-r1.ebuild,v 1.2 2011/04/17 09:03:04 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.3-r1.ebuild,v 1.3 2012/04/18 01:30:59 qiaomuf Exp $
 
-EAPI="1"
-inherit eutils scons-utils
+EAPI="3"
+
+inherit eutils multilib scons-utils toolchain-funcs
 
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://sunpinyin.googlecode.com"
@@ -24,15 +25,28 @@ src_unpack() {
 	unpack "${P}.tar.gz"
 	ln -s "${DISTDIR}/dict.utf8.tar.bz2" "${S}/raw/" || die "dict file not found"
 	ln -s "${DISTDIR}/lm_sc.t3g.arpa.tar.bz2" "${S}/raw/" || die "dict file not found"
-	cd "${S}" && epatch "${FILESDIR}/${P}-force-switch.patch"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-force-switch.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.7.patch"
+}
+
+src_configure() {
+	tc-export CXX
+	myesconsargs=(
+		--prefix="${EPREFIX}"/usr
+		--libdir="${EPREFIX}"/usr/$(get_libdir)
+		--libdatadir="${EPREFIX}"/usr/lib
+	)
 }
 
 src_compile() {
-	escons --prefix="/usr" || die
+	escons || die
 }
 
 src_install() {
-	escons --prefix="/usr" --install-sandbox="${D}" install || die
+	escons --install-sandbox="${ED}" install || die
 }
 
 pkg_postinst() {
