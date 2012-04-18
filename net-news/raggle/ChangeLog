@@ -1,6 +1,9 @@
 # ChangeLog for net-news/raggle
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.16 2009/10/03 08:28:09 a3li Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.17 2012/04/18 19:04:37 armin76 Exp $
+
+  18 Apr 2012; Raúl Porcel <armin76@gentoo.org> raggle-0.4.4-r1.ebuild:
+  Drop sparc keywords
 
   03 Oct 2009; Alex Legler <a3li@gentoo.org> -raggle-0.4.0.ebuild:
   Purging old version
