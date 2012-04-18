@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/dapl/dapl-2.0.34.ebuild,v 1.1 2012/04/18 16:38:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/dapl/dapl-2.0.34.ebuild,v 1.2 2012/04/18 18:37:09 alexxy Exp $
 
 EAPI="4"
 
@@ -19,8 +19,3 @@ RDEPEND="${DEPEND}
 		!sys-infiniband/openib-userspace"
 
 block_other_ofed_versions
-
-src_install() {
-	make DESTDIR="${D}" install || die "install failed"
-	dodoc README AUTHORS
-}
