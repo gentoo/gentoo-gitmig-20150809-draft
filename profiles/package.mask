@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13681 2012/04/18 06:14:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13682 2012/04/18 13:32:25 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (18 Apr 2012)
+# Fails to build according to bugs 348231 and 388509.
+# Needs a version bump but required goffice version is not
+# yet in Portage wrt bug 388887.
+# Because of above mentioned bugs nsplugin support was removed
+# wrt bug 383147.
+# Removal in 30 days
+<sci-chemistry/gchemutils-0.13.6
 
 # Hans de Graaff <graaff@gentoo.org> (17 Apr 2012)
 # ruby-gnome2 modules obsoleted by upstream. These are
