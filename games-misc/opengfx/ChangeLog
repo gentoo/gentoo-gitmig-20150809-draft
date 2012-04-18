@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/opengfx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.16 2012/04/18 18:46:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.17 2012/04/18 20:30:00 scarabeus Exp $
+
+  18 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> opengfx-0.4.4.ebuild:
+  Remove dependency on grfcodec as the nml only is used in the grf conversion.
+  Fixes bug#412559.
 
   18 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> opengfx-0.4.4.ebuild:
   Fix sandbox violation when gimp is around (missing dep). Fixes bug#412403.
