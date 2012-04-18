@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.51 2012/04/13 19:13:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.52 2012/04/18 10:22:31 pacho Exp $
+
+  18 Apr 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/mono-debugger-2.10-glib2.32.patch, mono-debugger-2.10.ebuild:
+  Fix glib-2.32 building.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> mono-debugger-2.10.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.

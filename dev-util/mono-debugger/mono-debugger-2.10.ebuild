@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.10.ebuild,v 1.4 2012/04/13 19:13:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.10.ebuild,v 1.5 2012/04/18 10:22:31 pacho Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit go-mono mono autotools flag-o-matic eutils
 
@@ -27,6 +27,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	go-mono_src_prepare
 
+	epatch "${FILESDIR}/${P}-glib2.32.patch"
+
 	# Allow compilation against system libbfd, bnc#662581
 	epatch "${FILESDIR}/${PN}-2.8-system-bfd.patch"
 	eautoreconf
@@ -43,5 +45,5 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die "Failed to build"
+	emake -j1
 }
