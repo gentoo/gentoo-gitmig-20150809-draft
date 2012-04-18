@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.4 2012/04/07 16:57:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.5 2012/04/18 19:05:07 armin76 Exp $
 
 EAPI="2"
 # ruby19 needs ruby-gettext on 19 first
@@ -14,7 +14,7 @@ SRC_URI="http://ruby-rbot.org/download/${P}.tgz"
 
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE="spell aspell timezone translator shorturl nls dict figlet
 	fortune cal host toilet hunspell"
 ILINGUAS="zh_CN zh_TW ru nl de fi fr it ja"

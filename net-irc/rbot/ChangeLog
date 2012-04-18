@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/rbot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.49 2012/04/07 16:57:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.50 2012/04/18 19:05:07 armin76 Exp $
+
+  18 Apr 2012; Raúl Porcel <armin76@gentoo.org> rbot-0.9.10-r1.ebuild,
+  rbot-0.9.15.ebuild:
+  Drop sparc keywords
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> rbot-0.9.15.ebuild:
   x86 stable, bug #399581
