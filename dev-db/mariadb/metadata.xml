@@ -2,6 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mysql</herd>
+<!-- 
+Please note that this list is shared between the following packages:
+dev-db/mysql
+dev-db/mariadb
+-->
 <use>
   <flag name='big-tables'>Make tables contain up to 1.844E+19 rows</flag>
   <flag name='cluster'>Add support for NDB clustering (deprecated)</flag>
@@ -15,6 +20,7 @@
   <flag name='oqgraph'>Add support for the Open Query GRAPH engine</flag>
   <flag name='pbxt'>Add experimental support for PBXT storage engine</flag>
   <flag name='profiling'>Add support for statement profiling (requires USE=community).</flag>
+  <flag name="systemtap">Build support for profiling and tracing using <pkg>dev-util/systemtap</pkg></flag>
   <flag name='sphinx'>Add suport for the sphinx full-text search engine</flag>
   <flag name='test'>Install upstream testsuites for end use.</flag>
 </use>

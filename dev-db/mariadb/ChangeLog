@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.16 2012/04/13 17:55:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.17 2012/04/18 02:14:09 robbat2 Exp $
+
+*mariadb-5.3.6 (18 Apr 2012)
+*mariadb-5.2.12 (18 Apr 2012)
+*mariadb-5.5.23 (18 Apr 2012)
+*mariadb-5.1.62 (18 Apr 2012)
+
+  18 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> +mariadb-5.1.62.ebuild,
+  +mariadb-5.2.12.ebuild, +mariadb-5.3.6.ebuild, +mariadb-5.5.23.ebuild,
+  metadata.xml:
+  Update MariaDB packages from overlay.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> mariadb-5.1.42.ebuild,
   mariadb-5.1.42-r1.ebuild, mariadb-5.1.50.ebuild, mariadb-5.1.55.ebuild,
