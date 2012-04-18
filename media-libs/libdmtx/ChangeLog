@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdmtx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/ChangeLog,v 1.4 2012/04/04 16:40:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/ChangeLog,v 1.5 2012/04/18 18:32:12 maekke Exp $
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> libdmtx-0.7.4.ebuild:
+  x86 stable, bug #409403
 
   04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> libdmtx-0.7.4.ebuild:
   Stable for amd64, wrt bug #409403

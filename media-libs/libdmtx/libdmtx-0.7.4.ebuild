@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/libdmtx-0.7.4.ebuild,v 1.4 2012/04/04 16:40:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdmtx/libdmtx-0.7.4.ebuild,v 1.5 2012/04/18 18:32:12 maekke Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="static-libs"
 
 DEPEND=""
