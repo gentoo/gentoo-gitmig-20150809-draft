@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/slurm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.9 2012/03/15 22:09:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.10 2012/04/18 13:53:03 alexxy Exp $
+
+*slurm-2.3.4 (18 Apr 2012)
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +files/logrotate,
+  +slurm-2.3.4.ebuild, -slurm-2.2.7-r1.ebuild, -slurm-2.2.7-r2.ebuild,
+  -slurm-2.3.3.ebuild, files/slurm.confd, files/slurmctld.initd,
+  files/slurmd.initd, files/slurmdbd.initd, metadata.xml:
+  [sys-cluster/slurm] Version bump. Fix bug #410087 Thanks to Daniel M. Weeks.
+  Also incorporate changes from bug #385871. Thanks to Nicolas Bigaouette
 
   15 Mar 2012; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.3.3.ebuild:
   Add missing dep
