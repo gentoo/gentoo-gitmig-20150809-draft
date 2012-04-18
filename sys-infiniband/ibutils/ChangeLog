@@ -1,6 +1,12 @@
 # ChangeLog for sys-infiniband/ibutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ibutils/ChangeLog,v 1.2 2011/07/02 20:30:16 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ibutils/ChangeLog,v 1.3 2012/04/18 16:38:48 alexxy Exp $
+
+*ibutils-1.5.7-r1 (18 Apr 2012)
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +ibutils-1.5.7-r1.ebuild,
+  -ibutils-1.5.7.ebuild:
+  [sys-infiniband/ibutils] Version bump to OFED 1.5.4.1
 
   02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> ibutils-1.5.7.ebuild:
   Add ~amd64-linux keywrod
