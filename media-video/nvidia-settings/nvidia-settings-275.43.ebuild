@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-275.43.ebuild,v 1.4 2012/04/18 20:33:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-275.43.ebuild,v 1.5 2012/04/18 22:21:11 idl0r Exp $
 
 EAPI=4
 
@@ -62,6 +62,9 @@ src_install() {
 	# Install icon and .desktop entry
 #	doicon doc/${PN}.png # Installed through nvidia-drivers
 	make_desktop_entry ${PN} "NVIDIA X Server Settings" ${PN} Application
+
+	# bug 412569 - Installed through nvidia-drivers
+	rm -rf "${D}"/usr/share/man
 
 	# Now install documentation
 	dodoc doc/*.txt
