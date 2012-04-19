@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.140 2012/04/04 01:38:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.141 2012/04/19 15:26:59 jer Exp $
+
+  19 Apr 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=udev for xfce-extra/xfce4-systemload-plugin (bug #412627).
 
   04 Apr 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=vlc.
