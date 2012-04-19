@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.3.975.102.ebuild,v 1.3 2012/04/12 11:40:02 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.3.975.102.ebuild,v 1.4 2012/04/19 20:59:30 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ DESCRIPTION="The Mozc engine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/mozc/"
 SRC_URI="http://mozc.googlecode.com/files/${MY_P}.tar.bz2"
 
-LICENSE="Apache-2.0 BSD Boost-1.0 ipadic unicode"
+LICENSE="Apache-2.0 BSD Boost-1.0 ipadic public-domain unicode"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 #IUSE="emacs +ibus scim skk +qt4"
