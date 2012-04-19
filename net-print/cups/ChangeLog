@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.457 2012/04/18 22:28:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.458 2012/04/19 20:22:49 dilfridge Exp $
+
+  19 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r2.ebuild,
+  +files/cups-1.5.2-linkperl.patch:
+  Link perl module properly if cups is not installed yet, bug 398277
 
   18 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r2.ebuild:
   Set systemd unit dir correctly, bug 407975
