@@ -1,6 +1,10 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.30 2012/04/19 01:35:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.31 2012/04/19 05:37:13 ulm Exp $
+
+  19 Apr 2012; Ulrich Müller <ulm@gentoo.org> -conkeror-0.9.4-r1.ebuild,
+  files/conkeror.sh:
+  Remove old. Don't look for xulrunner in wrapper script.
 
   19 Apr 2012; Jeff Horelick <jdhore@gentoo.org>
   conkeror-1.0_pre20120223.ebuild:
