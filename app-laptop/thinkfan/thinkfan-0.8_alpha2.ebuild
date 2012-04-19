@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/thinkfan-0.8_alpha2.ebuild,v 1.2 2012/04/19 11:40:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/thinkfan-0.8_alpha2.ebuild,v 1.3 2012/04/19 22:01:18 jdhore Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
