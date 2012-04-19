@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.480 2012/04/06 14:56:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.481 2012/04/19 22:11:33 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -381,7 +381,6 @@ xosd - Sends display using the X On Screen Display library
 xpm - Adds support for XPM graphics format
 xscreensaver - Adds support for XScreenSaver extension
 xsl - Check/Support flag for XSL library (version 1)
-xulrunner - Build native browser integration against xulrunner instead of firefox or seamonkey
 xv - Adds in optional support for the Xvideo extension (an X API for video playback)
 xvid - Adds support for xvid.org's open-source mpeg-4 codec
 yahoo - Enable Yahoo Messenger IM protocol support
