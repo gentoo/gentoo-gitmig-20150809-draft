@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.0.ebuild,v 1.1 2012/04/12 11:46:38 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.0.ebuild,v 1.2 2012/04/19 09:42:27 pacho Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -114,7 +114,8 @@ update_gtk3_immodules() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.0-gentoo.patch \
-		"${FILESDIR}"/${PN}-1.5.4-zhTW.patch
+		"${FILESDIR}"/${PN}-1.5.4-zhTW.patch \
+		"${FILESDIR}"/${PN}-1.8.0-glib2.32.patch
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die
