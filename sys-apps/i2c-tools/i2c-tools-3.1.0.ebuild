@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.1.0.ebuild,v 1.1 2012/04/14 10:31:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.1.0.ebuild,v 1.2 2012/04/19 02:19:49 xmw Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -20,10 +20,6 @@ IUSE="python"
 
 DEPEND="!<sys-apps/lm_sensors-3"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	use python && python_pkg_setup
-}
 
 src_compile() {
 	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}"

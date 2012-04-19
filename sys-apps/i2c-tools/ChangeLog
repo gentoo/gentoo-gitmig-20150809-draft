@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/i2c-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.14 2012/04/14 10:31:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.15 2012/04/19 02:19:49 xmw Exp $
+
+  19 Apr 2012; Michael Weber <xmw@gentoo.org> i2c-tools-3.1.0.ebuild:
+  call python_pkg_setup unconditionally (bug 412013)
 
 *i2c-tools-3.1.0 (14 Apr 2012)
 
