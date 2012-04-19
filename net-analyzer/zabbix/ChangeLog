@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.84 2012/04/16 20:52:41 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.85 2012/04/19 18:24:15 mattm Exp $
+
+*zabbix-1.8.11-r2 (19 Apr 2012)
+
+  19 Apr 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-1.8.11-r2.ebuild,
+  zabbix-2.0.0_rc2.ebuild:
+  Update zabbix dependencies, not compatible with fping >= 3.0, Tracking Bug
+  412659
 
   16 Apr 2012; Matthew Marlowe <mattm@gentoo.org> zabbix-2.0.0_rc2.ebuild:
   Zabbix 2.0 changed configure option for postgres from pgsql to postgresql.
