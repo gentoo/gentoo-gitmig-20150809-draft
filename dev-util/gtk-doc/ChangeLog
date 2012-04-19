@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.172 2012/04/18 20:33:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.173 2012/04/19 20:32:45 ranger Exp $
+
+  19 Apr 2012; Brent Baude <ranger@gentoo.org> gtk-doc-1.18-r1.ebuild:
+  Marking gtk-doc-1.18-r1 ppc64 stable for bug 410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.18-r1.ebuild:
   Stable for amd64, wrt bug #410611
