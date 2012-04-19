@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/guake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.14 2012/03/14 03:33:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.15 2012/04/19 09:11:59 pacho Exp $
+
+  19 Apr 2012; Pacho Ramos <pacho@gentoo.org> +files/guake-0.4.2-glib2.32.patch,
+  guake-0.4.2-r1.ebuild:
+  Fix glib-2.32 compilation, bug #412607 by Franz Fellner.
 
 *guake-0.4.2-r1 (14 Mar 2012)
 
