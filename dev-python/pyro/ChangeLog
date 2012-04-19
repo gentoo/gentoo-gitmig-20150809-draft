@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.57 2012/03/09 09:26:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.58 2012/04/19 09:04:18 patrick Exp $
+
+*pyro-4.13 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +pyro-4.13.ebuild:
+  Bump
 
 *pyro-4.12 (09 Mar 2012)
 
