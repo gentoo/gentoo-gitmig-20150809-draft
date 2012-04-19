@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/telepathy-qt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.4 2012/04/04 08:54:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.5 2012/04/19 09:44:46 johu Exp $
+
+*telepathy-qt-0.9.1 (19 Apr 2012)
+
+  19 Apr 2012; Johannes Huber <johu@gentoo.org>
+  +files/telepathy-qt-0.9.1-automagicness.patch, +telepathy-qt-0.9.1.ebuild,
+  metadata.xml:
+  Version bump by Michael (kensington) <gentoo@scribeofthenile.com> wrt bug
+  #409847.
 
   04 Apr 2012; Johannes Huber <johu@gentoo.org> telepathy-qt-0.9.0.ebuild:
   Raise dep.
