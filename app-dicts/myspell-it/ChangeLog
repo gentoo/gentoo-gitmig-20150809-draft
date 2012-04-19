@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-it
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-it/ChangeLog,v 1.18 2010/09/27 23:35:37 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-it/ChangeLog,v 1.19 2012/04/19 22:15:44 pesa Exp $
+
+*myspell-it-20081129 (19 Apr 2012)
+
+  19 Apr 2012; Davide Pesavento <pesa@gentoo.org> +myspell-it-20081129.ebuild:
+  Version bump, now with thesaurus too.
 
   27 Sep 2010; Mart Raudsepp <leio@gentoo.org> myspell-it-20060316.ebuild:
   Add ~mips
