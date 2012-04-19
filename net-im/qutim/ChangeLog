@@ -1,6 +1,9 @@
 # ChangeLog for net-im/qutim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.18 2012/04/17 12:48:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.19 2012/04/19 15:26:43 pesa Exp $
+
+  19 Apr 2012; Davide Pesavento <pesa@gentoo.org> qutim-0.3.1.ebuild:
+  Raise net-libs/jreen dep wrt bug 412597 by Egor Y. Egorov.
 
   17 Apr 2012; Davide Pesavento <pesa@gentoo.org>
   -files/qutim-0.3.0-fix-linking-with-system-jreen.patch, -qutim-0.3.0.ebuild,

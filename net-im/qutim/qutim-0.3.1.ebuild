@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.2 2012/04/17 12:48:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.3 2012/04/19 15:26:43 pesa Exp $
 
 EAPI=4
 
@@ -40,7 +40,7 @@ CDEPEND="
 	hunspell? ( app-text/hunspell )
 	jabber? (
 		app-crypt/qca:2
-		net-libs/jreen
+		>=net-libs/jreen-1.1.0
 	)
 	kde? ( kde-base/kdelibs:4 )
 	kinetic? ( >=x11-libs/qt-declarative-${QT_PV} )
