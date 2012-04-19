@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.341 2012/04/13 23:26:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.342 2012/04/19 09:28:47 johu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -116,11 +116,6 @@ sys-apps/portage pypy1_8
 =x11-libs/qt-test-4.8* c++0x qpa
 =x11-libs/qt-webkit-4.8* c++0x qpa
 =x11-libs/qt-xmlpatterns-4.8* c++0x qpa
-
-# Johannes Huber <johu@gentoo.org> (25 Jan 2012)
-# Required >=net-libs/telepathy-glib-0.17.2 version is not tree yet. 
-# Remove this entry if it's available.
->=net-libs/telepathy-qt-0.9.0 glib
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2012)
 # This is required only for Linux, so mask it here and unmask in
