@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.10.0.ebuild,v 1.1 2012/03/27 08:48:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.10.1.ebuild,v 1.1 2012/04/19 11:23:01 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
