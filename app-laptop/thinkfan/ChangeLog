@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/thinkfan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.1 2012/02/13 02:27:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.2 2012/04/19 11:40:58 ago Exp $
+
+  19 Apr 2012; Agostino Sarubbo <ago@gentoo.org> thinkfan-0.8_alpha2.ebuild:
+  Stable for amd64, wrt bug #412593
 
 *thinkfan-0.8_alpha2 (13 Feb 2012)
 *thinkfan-0.7.3 (13 Feb 2012)
