@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.36 2012/04/16 02:25:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.37 2012/04/19 07:07:46 patrick Exp $
+
+*beaker-1.6.3 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +beaker-1.6.3.ebuild:
+  Bump
 
   16 Apr 2012; Jeroen Roovers <jer@gentoo.org> beaker-1.6.2.ebuild:
   Marked ~hppa (bug #411761).
