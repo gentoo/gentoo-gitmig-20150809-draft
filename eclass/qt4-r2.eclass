@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.19 2012/02/13 01:31:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.20 2012/04/19 22:43:40 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -254,12 +254,15 @@ eqmake4() {
 		QMAKE_CC="$(tc-getCC)" \
 		QMAKE_CXX="$(tc-getCXX)" \
 		QMAKE_LINK="$(tc-getCXX)" \
-		QMAKE_CFLAGS_RELEASE="${CFLAGS}" \
-		QMAKE_CFLAGS_DEBUG="${CFLAGS}" \
-		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
-		QMAKE_CXXFLAGS_DEBUG="${CXXFLAGS}" \
-		QMAKE_LFLAGS_RELEASE="${LDFLAGS}" \
-		QMAKE_LFLAGS_DEBUG="${LDFLAGS}" \
+		QMAKE_CFLAGS="${CFLAGS}" \
+		QMAKE_CFLAGS_RELEASE= \
+		QMAKE_CFLAGS_DEBUG= \
+		QMAKE_CXXFLAGS="${CXXFLAGS}" \
+		QMAKE_CXXFLAGS_RELEASE= \
+		QMAKE_CXXFLAGS_DEBUG= \
+		QMAKE_LFLAGS="${LDFLAGS}" \
+		QMAKE_LFLAGS_RELEASE= \
+		QMAKE_LFLAGS_DEBUG= \
 		QMAKE_LIBDIR_QT="${EPREFIX}"/usr/$(get_libdir)/qt4 \
 		QMAKE_LIBDIR_X11="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE_LIBDIR_OPENGL="${EPREFIX}"/usr/$(get_libdir) \

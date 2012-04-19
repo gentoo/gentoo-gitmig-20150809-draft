@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.217 2012/04/19 19:49:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.218 2012/04/19 22:43:40 pesa Exp $
+
+  19 Apr 2012; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
+  Overhaul *FLAGS handling in eqmake4() to fix bug 361303. Thanks to Michael
+  (kensington) for the patch.
 
   19 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> kde4-meta.eclass:
   No ewarns even if tar misses some files on unpack, as that is so common it's
