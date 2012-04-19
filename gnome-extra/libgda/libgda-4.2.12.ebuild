@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.12.ebuild,v 1.2 2012/04/18 20:47:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.12.ebuild,v 1.3 2012/04/19 20:37:02 ranger Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ LICENSE="GPL-2 LGPL-2"
 IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres sourceview ssl"
 
 SLOT="4"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="
 	app-text/iso-codes
