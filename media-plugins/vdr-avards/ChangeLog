@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-avards
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-avards/ChangeLog,v 1.14 2011/09/15 12:18:40 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-avards/ChangeLog,v 1.15 2012/04/19 15:59:59 hd_brummy Exp $
+
+  19 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-avards-0.2.2.ebuild, vdr-avards-0.2.4.ebuild:
+  cleanup for bug 391093; eapi=4, fix for >=vdr-1.7.27 i18n handling, stable
+  amd64 x86
 
   15 Sep 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-avards-0.2.3.ebuild:
