@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6441 2012/04/19 14:49:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6442 2012/04/19 20:15:09 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> arch/alpha/package.use.mask,
+  arch/ia64/package.use.mask, arch/powerpc/package.use.mask,
+  arch/sparc/package.use.mask:
+  add openmpi_ofed_features_rdmacm to use mask for alpha ia64 powerpc sparc
 
   19 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
   Mask net-ftp/leechcraft-lcftp and net-p2p/leechcraft-eiskaltdcpp by
