@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.42 2012/04/18 20:35:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.43 2012/04/19 10:27:51 pesa Exp $
+
+  19 Apr 2012; Davide Pesavento <pesa@gentoo.org>
+  -files/wally-2.3.2-disable-plugins.patch, -wally-2.4.1.ebuild,
+  -wally-2.4.2.ebuild:
+  Remove old.
 
   18 Apr 2012; Jeff Horelick <jdhore@gentoo.org> wally-2.4.4.ebuild:
   marked x86 per bug 412521
