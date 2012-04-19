@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.238 2012/04/01 18:12:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.239 2012/04/19 08:58:13 pacho Exp $
+
+  19 Apr 2012; Pacho Ramos <pacho@gentoo.org> -atk-1.32.0.ebuild,
+  -atk-2.0.1.ebuild, atk-2.4.0.ebuild:
+  Fix glib dependency, drop old (#412583 by Tomas Psika).
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> atk-2.2.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #407643
