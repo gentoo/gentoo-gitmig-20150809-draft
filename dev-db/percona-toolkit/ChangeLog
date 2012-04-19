@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/percona-toolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.1 2012/04/19 20:01:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.2 2012/04/19 20:07:08 robbat2 Exp $
+
+  19 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop idl0r from maintainers per request.
 
 *percona-toolkit-2.1.1 (19 Apr 2012)
 

@@ -5,11 +5,6 @@
 	<maintainer>
 		<email>wschlich@gentoo.org</email>
 		<name>Wolfram Schlich</name>
-		<description>Primary maintainer</description>
-	</maintainer>
-	<maintainer>
-		<email>idl0r@gentoo.org</email>
-		<name>Christian Ruppert</name>
 		<description>Secondary maintainer</description>
 	</maintainer>
 	<longdescription>Percona Toolkit, formerly Maatkit and Aspersa, formerly MySQL Toolkit,
