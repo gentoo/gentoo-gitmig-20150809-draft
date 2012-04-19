@@ -1,6 +1,9 @@
 # ChangeLog for games-util/nml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.4 2012/04/19 11:02:40 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.5 2012/04/19 11:53:11 ago Exp $
+
+  19 Apr 2012; Agostino Sarubbo <ago@gentoo.org> nml-0.2.3.ebuild:
+  Stable for amd64, wrt bug #398161
 
   19 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> nml-0.2.3.ebuild:
   x86 stable, see bug 398161
