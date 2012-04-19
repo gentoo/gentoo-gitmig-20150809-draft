@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.192 2012/04/18 20:51:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.193 2012/04/19 20:37:42 ranger Exp $
+
+  19 Apr 2012; Brent Baude <ranger@gentoo.org> libgsf-1.14.22.ebuild:
+  Marking libgsf-1.14.22 ppc64 stable for bug 410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> libgsf-1.14.22.ebuild:
   Stable for amd64, wrt bug #410611
