@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.218 2012/04/04 23:59:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.219 2012/04/19 04:54:16 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> kde-meta-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kde-meta-4.8.2 (04 Apr 2012)
 

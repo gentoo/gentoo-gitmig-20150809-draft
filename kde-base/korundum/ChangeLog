@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.108 2012/04/13 21:50:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.109 2012/04/19 04:07:39 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> korundum-4.8.1.ebuild:
+  x86 stable, bug #409403
 
   13 Apr 2012; Johannes Huber <johu@gentoo.org> korundum-4.8.1.ebuild,
   korundum-4.8.2.ebuild:

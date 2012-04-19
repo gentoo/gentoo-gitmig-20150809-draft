@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-kresources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.212 2012/04/04 23:59:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.213 2012/04/19 04:28:26 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> kdepim-kresources-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kdepim-kresources-4.8.2 (04 Apr 2012)
 

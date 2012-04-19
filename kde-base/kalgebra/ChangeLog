@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.121 2012/04/04 23:59:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.122 2012/04/19 04:51:55 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> kalgebra-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kalgebra-4.8.2 (04 Apr 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.206 2012/04/04 23:59:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.207 2012/04/19 04:47:45 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> kdeartwork-meta-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kdeartwork-meta-4.8.2 (04 Apr 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/perlkde-4.8.1.ebuild,v 1.3 2012/04/13 07:15:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/perlkde-4.8.1.ebuild,v 1.4 2012/04/19 04:08:24 maekke Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ KDE_SCM="git"
 inherit kde4-base
 
 DESCRIPTION="KDE Perl bindings"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="akonadi attica debug kate okular semantic-desktop test"
 
 RDEPEND="

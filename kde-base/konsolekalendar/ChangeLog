@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.186 2012/04/04 23:59:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.187 2012/04/19 04:32:38 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> konsolekalendar-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *konsolekalendar-4.8.2 (04 Apr 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.208 2012/04/07 15:42:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.209 2012/04/19 04:23:40 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> kdeutils-meta-4.8.1-r1.ebuild:
+  x86 stable, bug #409403
 
 *kdeutils-meta-4.8.2-r1 (07 Apr 2012)
 *kdeutils-meta-4.8.1-r1 (07 Apr 2012)

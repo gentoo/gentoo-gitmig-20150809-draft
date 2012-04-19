@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krossjava
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.82 2012/04/04 23:59:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.83 2012/04/19 04:24:25 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> krossjava-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *krossjava-4.8.2 (04 Apr 2012)
 

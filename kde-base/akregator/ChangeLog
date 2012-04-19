@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.215 2012/04/04 23:59:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.216 2012/04/19 04:34:22 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> akregator-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *akregator-4.8.2 (04 Apr 2012)
 

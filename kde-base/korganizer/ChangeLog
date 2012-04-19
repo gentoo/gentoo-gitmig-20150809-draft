@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.221 2012/04/04 23:59:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.222 2012/04/19 04:33:28 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> korganizer-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *korganizer-4.8.2 (04 Apr 2012)
 

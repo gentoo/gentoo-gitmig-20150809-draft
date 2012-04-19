@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadiconsole
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.25 2012/04/04 23:59:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.26 2012/04/19 04:29:15 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> akonadiconsole-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *akonadiconsole-4.8.2 (04 Apr 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kactivities
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.20 2012/04/08 14:52:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.21 2012/04/19 04:41:13 maekke Exp $
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> kactivities-4.8.1.ebuild:
+  x86 stable, bug #409403
 
 *kactivities-4.8.1-r1 (08 Apr 2012)
 
