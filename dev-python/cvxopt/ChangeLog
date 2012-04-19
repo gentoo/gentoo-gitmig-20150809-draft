@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cvxopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.4 2012/02/23 09:00:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.5 2012/04/19 20:56:11 bicatali Exp $
+
+*cvxopt-1.1.5 (19 Apr 2012)
+
+  19 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +cvxopt-1.1.5.ebuild,
+  +files/cvxopt-1.1.5-setup.patch:
+  Version bump
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> cvxopt-1.1.4-r1.ebuild:
   Restricting python
