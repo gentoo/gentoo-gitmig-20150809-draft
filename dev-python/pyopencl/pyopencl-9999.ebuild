@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.13 2012/04/19 07:25:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.14 2012/04/19 07:32:38 xarthisius Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -23,6 +23,7 @@ IUSE="examples opengl"
 RDEPEND=">=dev-libs/boost-1.48[python]
 	dev-python/decorator
 	dev-python/numpy
+	dev-python/mako
 	=dev-python/pytools-9999
 	>=virtual/opencl-0-r1"
 DEPEND="${RDEPEND}"
