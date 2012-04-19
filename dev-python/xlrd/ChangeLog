@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/xlrd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.3 2012/03/03 09:52:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.4 2012/04/19 10:10:20 patrick Exp $
+
+*xlrd-0.7.7 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +xlrd-0.7.7.ebuild:
+  Bump
 
 *xlrd-0.7.3 (03 Mar 2012)
 
