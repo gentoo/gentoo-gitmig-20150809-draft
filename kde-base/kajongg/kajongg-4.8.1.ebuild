@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/kajongg-4.8.1.ebuild,v 1.3 2012/04/18 22:06:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/kajongg-4.8.1.ebuild,v 1.4 2012/04/19 20:22:04 johu Exp $
 
 EAPI=4
 
 KDE_HANDBOOK="optional"
 KMNAME="kdegames"
+PYTHON_DEPEND="2:2.6"
 inherit kde4-meta python
 
 DESCRIPTION="The classical Mah Jongg for four players"
@@ -23,6 +24,12 @@ RDEPEND="${DEPEND}
 "
 
 pkg_setup() {
+	python_set_active_version 2
 	python_pkg_setup
 	kde4-meta_pkg_setup
+}
+
+src_prepare() {
+	python_convert_shebangs -r 2 kajongg/src
+	kde4-meta_src_prepare
 }

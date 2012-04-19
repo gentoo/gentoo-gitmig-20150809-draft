@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.48 2012/04/18 22:06:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.49 2012/04/19 20:22:04 johu Exp $
+
+  19 Apr 2012; Johannes Huber <johu@gentoo.org> kajongg-4.8.1.ebuild,
+  kajongg-4.8.2.ebuild:
+  Fix build with python 3 as active version by Michael (kensington)
+  <gentoo@scribeofthenile.com>. Fixes bug #412563.
 
   18 Apr 2012; Markus Meier <maekke@gentoo.org> kajongg-4.8.1.ebuild:
   x86 stable, bug #409403
