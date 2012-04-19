@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.83 2012/04/16 20:59:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.84 2012/04/19 11:52:43 ago Exp $
+
+  19 Apr 2012; Agostino Sarubbo <ago@gentoo.org> bluefish-2.2.2.ebuild:
+  Stable for amd64, wrt bug #408189
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> bluefish-2.2.2.ebuild:
   Marking bluefish-2.2.2 ppc for bug 408189
