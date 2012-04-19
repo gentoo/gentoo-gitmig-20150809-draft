@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kcm-ufw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/ChangeLog,v 1.6 2012/04/19 14:18:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/ChangeLog,v 1.7 2012/04/19 19:24:08 thev00d00 Exp $
+
+  19 Apr 2012; Ian Whyman <thev00d00@gentoo.org> +kcm-ufw-0.4.1-r3.ebuild,
+  -kcm-ufw-0.4.2.ebuild:
+  Revert 0.4.2 bump which is incompatable with the in tree UFW
 
 *kcm-ufw-0.4.2 (19 Apr 2012)
 
