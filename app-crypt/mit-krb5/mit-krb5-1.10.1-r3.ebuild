@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.10.1-r3.ebuild,v 1.1 2012/04/18 09:03:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.10.1-r3.ebuild,v 1.2 2012/04/19 02:08:10 jer Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc +keyutils openldap +pkinit +threads test xinetd"
 
 RDEPEND="!!app-crypt/heimdal
