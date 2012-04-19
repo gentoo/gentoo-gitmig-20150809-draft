@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-0.4.99.ebuild,v 1.3 2012/04/07 17:39:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-0.4.99.ebuild,v 1.4 2012/04/19 14:45:53 maksbotan Exp $
 
 EAPI="4"
 
@@ -16,7 +16,6 @@ RDEPEND="
 		~app-editors/leechcraft-popishu-${PV}
 		~media-video/leechcraft-lmp-${PV}
 		~net-analyzer/leechcraft-networkmonitor-${PV}
-		~net-ftp/leechcraft-lcftp-${PV}
 		~net-im/leechcraft-azoth-${PV}
 		~net-misc/leechcraft-advancednotifications-${PV}
 		kde? ( ~net-misc/leechcraft-anhero-${PV} )

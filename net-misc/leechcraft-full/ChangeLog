@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.16 2012/04/15 06:28:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.17 2012/04/19 14:45:53 maksbotan Exp $
+
+  19 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-full-0.4.99.ebuild, leechcraft-full-0.5.0.ebuild,
+  leechcraft-full-0.5.60.ebuild, leechcraft-full-9999.ebuild:
+  Do not pull leechcraft-lcftp as it is broken
 
   15 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-full-9999.ebuild:
   Add new plugins to 9999, thanks to 0xd34df00d
