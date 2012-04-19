@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.14.2.ebuild,v 1.1 2012/04/19 06:32:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.14.2.ebuild,v 1.2 2012/04/19 07:10:37 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://pypi/S/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="boto doc examples ibl ssl"
+IUSE="boto doc examples ibl test ssl"
 # New found test script has failures
 RESTRICT="test"
 
