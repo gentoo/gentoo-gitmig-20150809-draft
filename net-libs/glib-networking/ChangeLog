@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.34 2012/04/18 20:58:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.35 2012/04/19 20:41:55 ranger Exp $
+
+  19 Apr 2012; Brent Baude <ranger@gentoo.org> glib-networking-2.30.2.ebuild:
+  Marking glib-networking-2.30.2 ppc64 stable for bug 410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> glib-networking-2.30.2.ebuild:
   Stable for amd64, wrt bug #410611
