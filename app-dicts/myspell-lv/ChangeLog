@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-lv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.17 2010/09/27 23:37:13 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.18 2012/04/19 07:45:27 scarabeus Exp $
+
+*myspell-lv-0.9.4 (19 Apr 2012)
+
+  19 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-lv-0.9.4.ebuild:
+  Add newest version of lv dictionary (even if the version string is lower).
 
   27 Sep 2010; Mart Raudsepp <leio@gentoo.org> myspell-lv-20060316.ebuild:
   Add ~mips
