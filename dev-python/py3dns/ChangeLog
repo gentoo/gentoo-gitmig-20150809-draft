@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py3dns
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py3dns/ChangeLog,v 1.1 2011/07/10 00:54:46 sbriesen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py3dns/ChangeLog,v 1.2 2012/04/19 08:42:33 patrick Exp $
+
+*py3dns-3.0.1 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +py3dns-3.0.1.ebuild:
+  Bump
 
 *py3dns-3.0.0 (10 Jul 2011)
 
