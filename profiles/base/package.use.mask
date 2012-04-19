@@ -1,9 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.342 2012/04/19 09:28:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.343 2012/04/19 09:40:45 johu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Johannes Huber <johu@gentoo.org> (19 Apr 2012)
+# Required dep >=net-libs/telepathy-farstream is masked by gnome herd. Feel
+# free to remove this entry, if mask is lifted.
+net-libs/telepathy-qt farstream
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
 # Masked in base and unmasked on arches where app-misc/geoclue and
