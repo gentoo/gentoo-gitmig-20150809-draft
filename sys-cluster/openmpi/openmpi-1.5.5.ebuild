@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.5.ebuild,v 1.1 2012/04/18 20:35:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.5.ebuild,v 1.2 2012/04/19 20:15:34 alexxy Exp $
 
 EAPI=4
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs versionator
@@ -61,6 +61,7 @@ RDEPEND="
 	openmpi_fabrics_sctp? ( net-misc/lksctp-tools )
 	openmpi_rm_pbs? ( sys-cluster/torque )
 	openmpi_rm_slurm? ( sys-cluster/slurm )
+	openmpi_ofed_features_rdmacm? ( sys-infiniband/librdmacm )
 	fortran? ( virtual/fortran )
 	vt? (
 		!dev-libs/libotf
@@ -130,7 +131,6 @@ src_configure() {
 		$(use_enable romio io-romio) \
 		$(use_enable heterogeneous) \
 		$(use_enable ipv6) \
-		$(use_with numa libnuma "${EPREFIX}"/usr) \
 		$(use_with openmpi_fabrics_dapl udapl "${EPREFIX}"/usr) \
 		$(use_with openmpi_fabrics_ofed openib "${EPREFIX}"/usr) \
 		$(use_with openmpi_fabrics_knem knem "${EPREFIX}"/usr) \
