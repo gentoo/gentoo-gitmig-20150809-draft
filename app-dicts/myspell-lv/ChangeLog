@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-lv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.18 2012/04/19 07:45:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.19 2012/04/19 19:40:41 scarabeus Exp $
+
+  19 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -myspell-lv-20060316.ebuild,
+  myspell-lv-0.9.4.ebuild:
+  Update latvian dictionaries to stable as requested by latvian guys. Remove
+  pseudonewer version that is actualy totaly fubared.
 
 *myspell-lv-0.9.4 (19 Apr 2012)
 
