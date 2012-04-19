@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-it
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.22 2012/03/17 23:04:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.23 2012/04/19 16:31:50 pesa Exp $
+
+  19 Apr 2012; Davide Pesavento <pesa@gentoo.org> -aspell-it-0.50.2.ebuild,
+  -aspell-it-0.53.0.ebuild:
+  Remove old.
 
   17 Mar 2012; Matt Turner <mattst88@gentoo.org> aspell-it-2.2.20050523.ebuild:
   Added ~mips. How did this get dropped?
