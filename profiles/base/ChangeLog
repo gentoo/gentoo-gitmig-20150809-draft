@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.385 2012/04/19 09:40:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.386 2012/04/19 14:18:39 pesa Exp $
+
+  19 Apr 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
+  Mask c++0x and qpa USE flags for the new qt-bearer ebuild too.
 
   19 Apr 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask net-libs/telepathy-qt[farstream] as required dep is masked.
