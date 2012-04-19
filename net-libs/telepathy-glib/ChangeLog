@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.106 2012/04/18 21:00:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.107 2012/04/19 20:43:19 ranger Exp $
+
+  19 Apr 2012; Brent Baude <ranger@gentoo.org> telepathy-glib-0.16.5.ebuild:
+  Marking telepathy-glib-0.16.5 ppc64 stable for bug 410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> telepathy-glib-0.16.5.ebuild:
   Stable for amd64, wrt bug #410611
