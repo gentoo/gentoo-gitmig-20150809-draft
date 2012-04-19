@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.86 2012/04/18 20:59:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.87 2012/04/19 20:42:24 ranger Exp $
+
+  19 Apr 2012; Brent Baude <ranger@gentoo.org> gtk-vnc-0.5.0-r1.ebuild:
+  Marking gtk-vnc-0.5.0-r1 ppc64 stable for bug 410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gtk-vnc-0.5.0-r1.ebuild:
   Stable for amd64, wrt bug #410611
