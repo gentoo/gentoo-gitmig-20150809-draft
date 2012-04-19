@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.0.1_p4.ebuild,v 1.6 2011/12/29 21:57:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.0.1_p4.ebuild,v 1.7 2012/04/19 02:35:54 vapier Exp $
 
 # NOTE: we cannot depend on autotools here starting with gcc-4.3.x
 inherit eutils
@@ -25,7 +25,6 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	[[ -d ${FILESDIR}/${PV} ]] && epatch "${FILESDIR}"/${PV}/*.patch
 	[[ ${PLEVEL} == ${PV} ]] && return 0
 	for ((i=1; i<=PLEVEL; ++i)) ; do
 		patch=patch$(printf '%02d' ${i})

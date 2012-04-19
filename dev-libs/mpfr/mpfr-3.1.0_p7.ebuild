@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.0_p7.ebuild,v 1.1 2012/03/09 19:57:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.0_p7.ebuild,v 1.2 2012/04/19 02:35:54 vapier Exp $
 
 EAPI="3"
 
@@ -25,7 +25,6 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	[[ -d ${FILESDIR}/${PV} ]] && epatch "${FILESDIR}"/${PV}/*.patch
 	[[ ${PLEVEL} == ${PV} ]] && return 0
 	for ((i=1; i<=PLEVEL; ++i)) ; do
 		patch=patch$(printf '%02d' ${i})
