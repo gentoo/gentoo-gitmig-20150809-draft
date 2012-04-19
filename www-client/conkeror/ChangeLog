@@ -1,6 +1,10 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.29 2012/04/19 00:23:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.30 2012/04/19 01:35:19 jdhore Exp $
+
+  19 Apr 2012; Jeff Horelick <jdhore@gentoo.org>
+  conkeror-1.0_pre20120223.ebuild:
+  marked x86 per bug 412335
 
   19 Apr 2012; Ulrich Müller <ulm@gentoo.org> conkeror-1.0_pre20120223.ebuild:
   Call tc-getCC, bug 412335.
