@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.128 2012/04/19 04:49:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.129 2012/04/19 21:30:59 johu Exp $
+
+  19 Apr 2012; Johannes Huber <johu@gentoo.org> kdeplasma-addons-4.8.2.ebuild:
+  Enable tests as they working again, #bug 410253.
 
   19 Apr 2012; Markus Meier <maekke@gentoo.org> kdeplasma-addons-4.8.1.ebuild:
   x86 stable, bug #409403
