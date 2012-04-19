@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>livecd</herd>
 <use>
-<flag name="xz">Enable support for XZ compression using <pkg>app-arch/xz-utils</pkg></flag>
+<flag name="xz">Enable support for XZ (&quot;LZMA2&quot;) compression using <pkg>app-arch/xz-utils</pkg></flag>
 </use>
 </pkgmetadata>

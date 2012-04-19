@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.84 2012/03/25 16:01:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.85 2012/04/19 01:59:06 jer Exp $
+
+*squashfs-tools-4.2-r1 (19 Apr 2012)
+
+  19 Apr 2012; Jeroen Roovers <jer@gentoo.org> +squashfs-tools-4.2-r1.ebuild,
+  metadata.xml:
+  Add old LZMA support back by Wicher Minnaard (bug #412575).
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> squashfs-tools-4.2.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #400937
