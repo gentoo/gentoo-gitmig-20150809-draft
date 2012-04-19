@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.98.ebuild,v 1.3 2012/04/19 01:22:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.98.ebuild,v 1.4 2012/04/19 16:17:48 vapier Exp $
 
 EAPI="4"
 
@@ -41,6 +41,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.98-build.patch
 	epatch "${FILESDIR}"/${PN}-1.98-build-cc.patch
 	epatch "${FILESDIR}"/${PN}-1.98-build-libnl-3.patch
+	epatch "${FILESDIR}"/${PN}-1.98-gcc-4.7.patch
 }
 
 src_configure() {
