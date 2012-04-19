@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.4.ebuild,v 1.1 2012/04/18 08:53:12 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.4.ebuild,v 1.2 2012/04/19 02:07:30 jer Exp $
 
 EAPI=4
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="https://fedorahosted.org/releases/l/i/libverto/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="glib +libev libevent tevent +threads static-libs"
 
 # file collisions
