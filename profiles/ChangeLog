@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6439 2012/04/18 20:34:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6440 2012/04/19 09:19:28 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Unmask new pambase, shadow and hardened-shadow after review.
 
   18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> arch/alpha/package.use.mask,
   arch/ia64/package.use.mask, arch/powerpc/package.use.mask,
