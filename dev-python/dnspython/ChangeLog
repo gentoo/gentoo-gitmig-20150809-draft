@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dnspython
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.77 2011/06/23 14:51:43 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.78 2012/04/19 07:42:22 patrick Exp $
+
+*dnspython-1.10.0 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +dnspython-1.10.0.ebuild:
+  Bump
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -dnspython-1.9.2.ebuild:
   Remove old ebuilds. Requested by Arfrever
