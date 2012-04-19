@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.31 2012/04/14 20:22:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.32 2012/04/19 17:33:19 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -30,6 +30,7 @@
 #   nocabaldep --  don't add dependency on cabal.
 #                  only used for packages that _must_ not pull the dependency
 #                  on cabal, but still use this eclass (e.g. haskell-updater).
+#   test-suite --  add support for cabal test-suites (introduced in Cabal-1.8)
 
 inherit ghc-package multilib
 
@@ -76,6 +77,7 @@ for feature in ${CABAL_FEATURES}; do
 		bin)        CABAL_HAS_BINARIES=yes;;
 		lib)        CABAL_HAS_LIBRARIES=yes;;
 		nocabaldep) CABAL_FROM_GHC=yes;;
+		test-suite) CABAL_TEST_SUITE=yes;;
 		*) CABAL_UNKNOWN="${CABAL_UNKNOWN} ${feature}";;
 	esac
 done
@@ -110,6 +112,10 @@ fi
 
 if [[ -n "${CABAL_USE_PROFILE}" ]]; then
 	IUSE="${IUSE} profile"
+fi
+
+if [[ -n "${CABAL_TEST_SUITE}" ]]; then
+	IUSE="${IUSE} test"
 fi
 
 # We always use a standalone version of Cabal, rather than the one that comes
@@ -246,6 +252,9 @@ cabal-configure() {
 	fi
 	if [[ -n "${CABAL_USE_CPPHS}" ]]; then
 		cabalconf="${cabalconf} --with-cpphs=${EPREFIX}/usr/bin/cpphs"
+	fi
+	if [[ -n "${CABAL_TEST_SUITE}" ]]; then
+		cabalconf="${cabalconf} $(use_enable test tests)"
 	fi
 
 	local option
