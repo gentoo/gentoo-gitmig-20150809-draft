@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/imdbpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.16 2012/02/22 08:09:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.17 2012/04/19 08:05:00 patrick Exp $
+
+*imdbpy-4.8.2 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +imdbpy-4.8.2.ebuild:
+  Bump
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> imdbpy-4.7-r1.ebuild,
   imdbpy-4.7.ebuild:
