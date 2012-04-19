@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.7 2011/08/23 22:14:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.8 2012/04/19 01:22:34 vapier Exp $
 
 EAPI="4"
 
@@ -40,15 +40,11 @@ src_prepare() {
 	use unicode || sed -i 's:-lncursesw:-lncurses:' Makefile
 	epatch "${FILESDIR}"/${PN}-1.98-build.patch
 	epatch "${FILESDIR}"/${PN}-1.98-build-cc.patch
-	sed -i -r \
-		-e '/FLAGS/s: (-O2|-g|-fno-omit-frame-pointer|-fstack-protector|-D_FORTIFY_SOURCE=2)\>: :g' \
-		-e '/@\$\(CC\)/s:@::' \
-		Makefile || die
+	epatch "${FILESDIR}"/${PN}-1.98-build-libnl-3.patch
 }
 
 src_configure() {
 	tc-export BUILD_CC CC CXX
-	CFLAGS+=" ${CPPFLAGS}" # blah!
 }
 
 src_install() {
