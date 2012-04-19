@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nml/nml-0.2.3.ebuild,v 1.5 2012/04/19 11:53:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/nml-0.2.3.ebuild,v 1.6 2012/04/19 21:40:41 mr_bones_ Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.5"
@@ -22,8 +22,8 @@ DEPEND=${RDEPEND}
 DOCS="docs/changelog.txt docs/readme.txt"
 
 pkg_setup() {
-	python_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_install() {
