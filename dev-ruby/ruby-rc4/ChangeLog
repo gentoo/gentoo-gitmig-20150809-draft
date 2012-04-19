@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-rc4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rc4/ChangeLog,v 1.4 2012/04/18 06:32:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rc4/ChangeLog,v 1.5 2012/04/19 15:09:42 jer Exp $
+
+  19 Apr 2012; Jeroen Roovers <jer@gentoo.org> ruby-rc4-0.1.4.ebuild,
+  ruby-rc4-0.1.5.ebuild:
+  Marked ~hppa (bug #411683).
 
 *ruby-rc4-0.1.5 (18 Apr 2012)
 
