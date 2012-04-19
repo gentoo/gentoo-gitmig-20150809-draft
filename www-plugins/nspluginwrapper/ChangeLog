@@ -1,6 +1,17 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.25 2012/04/16 04:08:38 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.26 2012/04/19 01:22:37 chutzpah Exp $
+
+*nspluginwrapper-1.4.4-r3 (19 Apr 2012)
+
+  19 Apr 2012; Patrick McLean <chutzpah@gentoo.org>
+  +nspluginwrapper-1.4.4-r3.ebuild,
+  files/nspluginwrapper-1.4.4-dont-include-gthread.patch,
+  +files/nspluginwrapper-1.4.4-link-to-libdl.patch,
+  +files/nspluginwrapper-1.4.4-link-to-libgthread.patch:
+  Pull patch from upstream to link against gthread (bug #412337). Use upstream
+  patch for removing gthread.h. Link against libdl when building the player
+  (upstream patch).
 
 *nspluginwrapper-1.4.4-r2 (16 Apr 2012)
 
