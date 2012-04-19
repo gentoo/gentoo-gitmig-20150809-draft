@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/qt-bearer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.1 2012/04/19 14:20:51 pesa Exp $
+
+*qt-bearer-4.8.1 (19 Apr 2012)
+
+  19 Apr 2012; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
+  +qt-bearer-4.8.1.ebuild:
+  Initial commit of QtNetwork bearer plugins (bug #348430).
+
