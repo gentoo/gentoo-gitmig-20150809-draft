@@ -7,4 +7,7 @@
 <longdescription>
 gtkdiskfree is a gtk2 extension to the cli tool df, does the same and more
 </longdescription>
+<use>
+  <flag name="gtk2">force x11-libs/gtk+:2</flag>
+</use>
 </pkgmetadata>
