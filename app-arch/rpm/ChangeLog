@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.137 2012/03/24 17:24:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.138 2012/04/19 10:37:02 scarabeus Exp $
+
+*rpm-4.9.1.2-r2 (19 Apr 2012)
+
+  19 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +rpm-4.9.1.2-r2.ebuild,
+  -rpm-4.9.1.2-r1.ebuild, files/rpm-4.9.1.2-libdir.patch:
+  Version bump the libexecdir patch as I forgot to update one more place that
+  uses /usr/lib hardcoded. Resolves bug#409729.
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> rpm-4.9.1.2.ebuild:
   x86 stable wrt bug #406479
