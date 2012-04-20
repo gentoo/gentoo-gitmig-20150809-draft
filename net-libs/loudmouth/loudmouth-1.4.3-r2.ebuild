@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.8 2012/03/06 22:01:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.9 2012/04/20 18:11:01 pacho Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -50,8 +50,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Use system libasyncns, bug #236844
 	epatch "${FILESDIR}/${P}-asyncns-system.patch"
 
@@ -83,5 +81,8 @@ src_prepare() {
 	# Upstream: http://loudmouth.lighthouseapp.com/projects/17276/tickets/61
 	epatch "${FILESDIR}/${P}-invalid-unicode.patch"
 
+	epatch "${FILESDIR}/${P}-glib-2.32.patch"
+
 	eautoreconf
+	gnome2_src_prepare
 }
