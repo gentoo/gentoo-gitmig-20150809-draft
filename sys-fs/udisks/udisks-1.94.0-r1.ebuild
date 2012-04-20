@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.94.0-r1.ebuild,v 1.1 2012/04/20 17:04:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.94.0-r1.ebuild,v 1.2 2012/04/20 18:26:25 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -14,6 +14,7 @@ SLOT="2"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug doc crypt +introspection"
 
+# WARNING: sys-apps/acl goes to COMMON_DEPEND in next version!
 COMMON_DEPEND=">=dev-libs/glib-2.32
 	>=sys-auth/polkit-0.104-r1
 	>=dev-libs/libatasmart-0.18
@@ -43,9 +44,11 @@ DEPEND="${COMMON_DEPEND}
 DOCS="AUTHORS HACKING NEWS README"
 
 pkg_setup() {
-	# CONFIG_TMPFS_POSIX_ACL required for setfacl /run usage wrt #412377
-	if use amd64 || use x86; then
-		CONFIG_CHECK="~TMPFS_POSIX_ACL ~USB_SUSPEND ~!IDE"
+	# Listing only major arch's here to avoid tracking kernel's defconfig
+	if use amd64 || use arm || use ppc || use ppc64 || use x86; then
+		CONFIG_CHECK="~!IDE" #319829
+		CONFIG_CHECK+=" ~TMPFS_POSIX_ACL" #412377
+		CONFIG_CHECK+=" ~USB_SUSPEND" #331065
 		linux-info_pkg_setup
 	fi
 }

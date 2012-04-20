@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.1 2012/01/23 01:30:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.2 2012/04/20 18:26:25 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info
@@ -12,36 +12,31 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="debug doc nls remote-access"
+IUSE="debug nls remote-access"
 
-COMMON_DEPEND="
-	|| ( >=sys-fs/udev-171-r1[gudev] <sys-fs/udev-171-r1[extras] )
-	>=dev-libs/glib-2.16.1
-	>=sys-apps/dbus-1.4.0
-	>=dev-libs/dbus-glib-0.92
-	>=sys-auth/polkit-0.97
-	>=sys-block/parted-1.8.8
-	>=sys-fs/lvm2-2.02.66
-	>=dev-libs/libatasmart-0.14
-	>=sys-apps/sg3_utils-1.27.20090411"
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
+	>=dev-libs/glib-2.20
+	>=dev-libs/libatasmart-0.18
+	>=sys-auth/polkit-0.104-r1
+	>=sys-apps/dbus-1.4.20
+	>=sys-apps/sg3_utils-1.27.20090411
+	>=sys-block/parted-3
+	|| ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] )
+	>=sys-fs/lvm2-2.02.66"
 RDEPEND="${COMMON_DEPEND}
 	virtual/eject
 	remote-access? ( net-dns/avahi )"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
-	>=dev-util/intltool-0.40.0
-	dev-util/pkgconfig
-	doc? (
-		dev-util/gtk-doc
-		app-text/docbook-xml-dtd:4.1.2
-		)"
-
-RESTRICT="test" # FIXME: dbus environment and sudo problems
+	dev-util/intltool
+	dev-util/pkgconfig"
 
 pkg_setup() {
-	if use amd64 || use x86; then
-		CONFIG_CHECK="~USB_SUSPEND ~!IDE"
+	# Listing only major arch's here to avoid tracking kernel's defconfig
+	if use amd64 || use arm || use ppc || use ppc64 || use x86; then
+		CONFIG_CHECK="~!IDE" #319829
+		CONFIG_CHECK+=" ~USB_SUSPEND" #331065
 		linux-info_pkg_setup
 	fi
 }
@@ -51,18 +46,23 @@ src_prepare() {
 }
 
 src_configure() {
-	# device-mapper -> lvm2 -> is always a depend, force enabled
+	# device-mapper -> lvm2 -> mandatory depend -> force enabled
 	econf \
 		--localstatedir="${EPREFIX}"/var \
 		--disable-static \
 		$(use_enable debug verbose-mode) \
 		--enable-man-pages \
-		$(use_enable doc gtk-doc) \
+		--disable-gtk-doc \
 		--enable-lvm2 \
 		--enable-dmmp \
 		$(use_enable remote-access) \
 		$(use_enable nls) \
-		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
+		--with-html-dir="${EPREFIX}"/deprecated
+}
+
+src_test() {
+	ewarn "Skipping testsuite because sys-fs/udisks:0 is deprecated"
+	ewarn "in favour of sys-fs/udisks:2."
 }
 
 src_install() {
@@ -76,4 +76,6 @@ src_install() {
 
 	keepdir /media
 	keepdir /var/lib/udisks #383091
+
+	rm -rf "${ED}"/deprecated
 }
