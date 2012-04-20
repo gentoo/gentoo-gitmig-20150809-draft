@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.38 2012/03/21 09:24:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.39 2012/04/20 02:36:07 jdhore Exp $
+
+  20 Apr 2012; Jeff Horelick <jdhore@gentoo.org>
+  -atheme-services-7.0.0_alpha11.ebuild, -atheme-services-7.0.0_alpha9.ebuild,
+  -files/atheme-services-7.0.0_alpha11-cracklib-automagic.patch,
+  -files/atheme-services-7.0.0_alpha11-unrealircd.patch,
+  -files/atheme-services-7.0.0_alpha9-pkg-config.patch:
+  Remove obsolete versions and obsolete patches.
 
   21 Mar 2012; Jeff Horelick <jdhore@gentoo.org>
   -atheme-services-6.0.9-r1.ebuild:
