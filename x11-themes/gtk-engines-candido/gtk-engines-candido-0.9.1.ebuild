@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-candido/gtk-engines-candido-0.9.1.ebuild,v 1.5 2012/04/20 11:04:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-candido/gtk-engines-candido-0.9.1.ebuild,v 1.6 2012/04/20 11:07:20 ssuominen Exp $
 
 EAPI=4
-inherit autotools
+inherit autotools eutils
 
 MY_P=candido-engine-${PV}
 
