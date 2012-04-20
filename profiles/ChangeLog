@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6443 2012/04/20 00:38:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6444 2012/04/20 00:46:24 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  targets/desktop/gnome/package.use:
+  Update default net-misc/curl USE flags with the new CURL_SSL use-expand for
+  liboauth compatibility.
 
   19 Apr 2012; Jeff Horelick <jdhore@gentoo.org> package.mask:
   Remove mask on libmowgli:2 versions as libmowgli:2 is now considered

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.8 2011/12/08 23:58:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.9 2012/04/20 00:46:25 tetromino Exp $
 
 # gtk3 input method plugins required for gnome3
 app-i18n/ibus gtk3
@@ -23,7 +23,8 @@ net-libs/ptlib wav
 
 # liboauth (required by evolution-data-server[gnome-online-accounts] and
 # gnome-documents in gnome-3.2) has +nss in IUSE, pulls in curl[-gnutls,nss]
-net-misc/curl -gnutls nss
+# In >=curl-7.25.0-r1, need CURL_SSL="-gnutls nss -openssl"
+net-misc/curl -curl_ssl_gnutls curl_ssl_nss -curl_ssl_openssl -gnutls nss
 
 # Required by app-admin/sabayon
 x11-base/xorg-server kdrive
