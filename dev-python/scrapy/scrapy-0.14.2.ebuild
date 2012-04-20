@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.14.2.ebuild,v 1.2 2012/04/19 07:10:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.14.2.ebuild,v 1.3 2012/04/20 03:48:58 floppym Exp $
 
 EAPI="4"
 
@@ -44,11 +44,6 @@ RDEPEND="dev-libs/libxml2[python]
 
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {
-	sed -e s':decs = "1000.12":decs = 1000.12:' \
-		-i scrapy/tests/test_utils_serialize.py || die
-}
-
 src_compile() {
 	distutils_src_compile
 
@@ -59,7 +54,8 @@ src_compile() {
 
 src_test() {
 	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)"  bin/runtests.sh || die
+		echo PYTHONPATH="build-${PYTHON_ABI}/lib" bin/runtests.sh
+		PYTHONPATH="build-${PYTHON_ABI}/lib" bin/runtests.sh
 	}
 	python_execute_function testing
 }
