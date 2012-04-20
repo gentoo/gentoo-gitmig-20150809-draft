@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pandas
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.1 2012/04/20 19:44:30 bicatali Exp $
+
+*pandas-0.7.3 (20 Apr 2012)
+
+  20 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +pandas-0.7.3.ebuild,
+  +metadata.xml:
+  Initial import from the science overlay + version bump. Added doc, testing
+  and extra dependencies.
+
