@@ -18,5 +18,8 @@
     <flag name='java'>
       Add support for the Java interpeter in the web server CGIs.
     </flag>
+    <flag name='systemd'>
+      Add support for systemd socket activation.
+    </flag>
   </use>
 </pkgmetadata>
