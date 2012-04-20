@@ -6,6 +6,13 @@ Changed paths:
 Bug 13197: only import glib.h
 Patch by Dominique Leuenberger.
 ------------------------------------------------------------------------
+r30602 | hub | 2012-01-30 02:00:38 -0500 (Mon, 30 Jan 2012) | 2 lines
+Changed paths:
+   M /abiword/trunk/goffice-bits/goffice/app/goffice-app.h
+
+Bug 13247 - Fix glib headers. Patch by Funda Wang
+(safe to backport)
+------------------------------------------------------------------------
 Index: src/af/util/xp/ut_go_file.h
 ===================================================================
 --- src/af/util/xp/ut_go_file.h	(revision 30478)
@@ -18,3 +25,16 @@ Index: src/af/util/xp/ut_go_file.h
  #include <time.h>
  
  G_BEGIN_DECLS
+Index: goffice-bits/goffice/app/goffice-app.h
+===================================================================
+--- goffice-bits/goffice/app/goffice-app.h	(revision 30601)
++++ goffice-bits/goffice/app/goffice-app.h	(revision 30602)
+@@ -22,7 +22,7 @@
+ #ifndef GOFFICE_APP_H
+ #define GOFFICE_APP_H
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
