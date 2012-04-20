@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/scrapy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.7 2012/04/20 03:48:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.8 2012/04/20 18:44:30 floppym Exp $
+
+*scrapy-0.14.3 (20 Apr 2012)
+
+  20 Apr 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/scrapy-0.14.3-runtests.patch, +scrapy-0.14.3.ebuild,
+  scrapy-0.14.2.ebuild:
+  Version bump. Unrestrict tests.
 
   20 Apr 2012; Mike Gilbert <floppym@gentoo.org> scrapy-0.14.2.ebuild:
   Remove pointless src_prepare function. Cleanup src_test.
