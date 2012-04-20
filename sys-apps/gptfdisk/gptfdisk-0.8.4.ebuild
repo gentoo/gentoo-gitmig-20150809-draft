@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.4.ebuild,v 1.3 2012/04/20 17:24:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.4.ebuild,v 1.4 2012/04/20 17:27:29 ssuominen Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="gdisk - GPT partition table manipulator for Linux"
 HOMEPAGE="http://www.rodsbooks.com/gdisk/"
@@ -18,8 +18,6 @@ RDEPEND="dev-libs/icu
 	dev-libs/popt
 	sys-libs/ncurses"
 DEPEND="${RDEPEND}"
-
-RESTRICT=mirror
 
 src_compile() {
 	emake CXX="$(tc-getCXX)"
