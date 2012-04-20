@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/libusb-1.ebuild,v 1.15 2011/09/27 17:29:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/libusb-1.ebuild,v 1.16 2012/04/20 08:44:03 ssuominen Exp $
 
 EAPI=2
 
@@ -14,4 +14,4 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=dev-libs/libusb-1.0.4:1"
+RDEPEND=">=dev-libs/libusb-1.0.9_rc:1"
