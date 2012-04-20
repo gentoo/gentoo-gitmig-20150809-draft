@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-linelight-plugin/xfce4-linelight-plugin-0.1.7.ebuild,v 1.1 2012/04/20 11:24:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-linelight-plugin/xfce4-linelight-plugin-0.1.7.ebuild,v 1.2 2012/04/20 12:03:14 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -9,6 +9,7 @@ inherit multilib xfconf
 DESCRIPTION="A simple locate based search plug-in for the Xfce panel"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-linelight-plugin"
 SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.orig.tar.bz2"
+#SRC_URI="http://svn.ganymede.ch/private/trunk/${PN}/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
