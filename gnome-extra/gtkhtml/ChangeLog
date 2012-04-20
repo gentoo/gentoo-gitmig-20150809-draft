@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.249 2012/04/19 20:36:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.250 2012/04/20 04:40:20 tetromino Exp $
+
+*gtkhtml-4.4.1 (20 Apr 2012)
+
+  20 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtkhtml-4.4.1.ebuild:
+  Version bump, fixes gtk+-3.4 and glib-2.32 compatibility (bug #412351, thanks
+  to Emmanuel Appiah et al.)
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> gtkhtml-4.2.3.ebuild:
   Marking gtkhtml-4.2.3 ppc64 stable for bug 410611
