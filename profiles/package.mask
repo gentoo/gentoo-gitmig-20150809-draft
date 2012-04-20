@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13686 2012/04/20 02:38:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13687 2012/04/20 02:45:09 jdhore Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -539,10 +539,6 @@ dev-util/febootstrap
 # Steve Arnold <nerdboy@gentoo.org> (12 Nov 2011)
 # Masked until gpsdrive is updated to work with the newer mapnik.
 >=sci-geosciences/mapnik-2.0.0
-
-# Nathan Phillip Brink <binki@gentoo.org> (8 Nov 2011)
-# Masking alpha release series.
->=net-irc/atheme-services-7.0.0_alpha1
 
 # Michael Weber <xmw@gentoo.org> (04 Nov 2011)
 # Masked due security issue bug 385967
