@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qx11grab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.20 2012/04/17 12:57:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.21 2012/04/20 13:41:29 chainsaw Exp $
+
+  20 Apr 2012; Tony Vroon <chainsaw@gentoo.org> qx11grab-0.4.1-r2.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Maurizio "k01" Camisaschi in bug #406497.
 
   17 Apr 2012; Davide Pesavento <pesa@gentoo.org> qx11grab-0.4.3.ebuild:
   Move dev-util/automoc to DEPEND only, thanks to Nikoli in bug 412275.
