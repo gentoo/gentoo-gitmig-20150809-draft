@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.441 2012/04/19 19:41:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.442 2012/04/20 17:55:52 vapier Exp $
+
+  20 Apr 2012; Mike Frysinger <vapier@gentoo.org> openssl-1.0.1a.ebuild:
+  Unmask now that openssh/neon fixes are in place.
 
   19 Apr 2012; Jeff Horelick <jdhore@gentoo.org> openssl-0.9.8v.ebuild,
   openssl-1.0.0i.ebuild:

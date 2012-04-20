@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1a.ebuild,v 1.1 2012/04/19 15:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1a.ebuild,v 1.2 2012/04/20 17:55:52 vapier Exp $
 
 EAPI="4"
 
@@ -14,8 +14,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 
 LICENSE="openssl"
 SLOT="0"
-# Let openssh make its way out to people w/out openssl check.
-#KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test vanilla zlib"
 
 # Have the sub-libs in RDEPEND with [static-libs] since, logically,
@@ -23,8 +22,13 @@ IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test vanilla zlib"
 LIB_DEPEND="gmp? ( dev-libs/gmp[static-libs(+)] )
 	zlib? ( sys-libs/zlib[static-libs(+)] )
 	kerberos? ( app-crypt/mit-krb5 )"
+# The blocks are temporary just to make sure people upgrade to a
+# version that lack runtime version checking.  We'll drop them in
+# the future.
 RDEPEND="static-libs? ( ${LIB_DEPEND} )
-	!static-libs? ( ${LIB_DEPEND//\[static-libs(+)]} )"
+	!static-libs? ( ${LIB_DEPEND//\[static-libs(+)]} )
+	!<net-misc/openssh-5.9_p1-r4
+	!<net-libs/neon-0.29.6-r1"
 DEPEND="${RDEPEND}
 	sys-apps/diffutils
 	>=dev-lang/perl-5
