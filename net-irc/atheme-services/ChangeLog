@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.39 2012/04/20 02:36:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.40 2012/04/20 02:41:42 jdhore Exp $
+
+*atheme-services-7.0.0 (20 Apr 2012)
+
+  20 Apr 2012; Jeff Horelick <jdhore@gentoo.org> +atheme-services-7.0.0.ebuild,
+  +files/atheme-services-7.0.0-perl-build-fix.patch,
+  atheme-services-9999.ebuild:
+  Version bump to 7.0.0 and fix a possible bug in the live ebuild.
 
   20 Apr 2012; Jeff Horelick <jdhore@gentoo.org>
   -atheme-services-7.0.0_alpha11.ebuild, -atheme-services-7.0.0_alpha9.ebuild,

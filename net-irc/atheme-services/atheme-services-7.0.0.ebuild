@@ -1,23 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-9999.ebuild,v 1.2 2012/04/20 02:41:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.0.ebuild,v 1.1 2012/04/20 02:41:42 jdhore Exp $
 
 EAPI=4
 
-inherit git-2 user eutils flag-o-matic perl-module
-
-MY_P=${P/_/-}
+inherit autotools eutils flag-o-matic perl-module
 
 DESCRIPTION="A portable and secure set of open-source and modular IRC services"
 HOMEPAGE="http://atheme.net/"
-EGIT_REPO_URI="git://git.atheme.org/atheme.git"
+SRC_URI="http://atheme.net/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="cracklib largenet ldap nls +pcre perl profile ssl"
 
-RDEPEND="=dev-libs/libmowgli-9999:2
+RDEPEND=">=dev-libs/libmowgli-2.0.0:2
 	cracklib? ( sys-libs/cracklib )
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
@@ -43,26 +41,26 @@ pkg_setup() {
 	enewuser ${PN} -1 -1 /var/lib/atheme ${PN}
 }
 
-# To stop perl-module overriding this function
-src_unpack() {
-	git-2_src_unpack
-}
-
 src_prepare() {
+	# Fix broken version detection
+	sed -i -e 's/2.0.0-alpha1/2.0.0/' configure.ac || die
+	eautoconf
+
 	# fix docdir
 	sed -i -e 's/\(^DOCDIR.*=.\)@DOCDIR@/\1@docdir@/' extra.mk.in || die
 
 	# basic logging config directive fix
 	sed -i -e '/^logfile/s;var/\(.*\.log\);'"${EPREFIX}"'/var/log/atheme/\1;g' dist/* || die
 
-	# QA against bundled libs.
-	# But comment it out in the live ebuild
-	# because it only contains a git submodule
-	# and removing it MAY break everything.
-	#rm -rf libmowgli-2 || die
+	# Fix a bug with compilation of the perl stuff.
+	epatch "$FILESDIR"/${P}-perl-build-fix.patch
+
+	# QA against bundled libs
+	rm -rf libmowgli-2 || die
 }
 
 src_configure() {
+	# perl scriping module support is also broken in 7.0.0. Yay for QA failures.
 	econf \
 		atheme_cv_c_gcc_w_error_implicit_function_declaration=no \
 		--sysconfdir="${EPREFIX}"/etc/${PN} \
@@ -76,8 +74,8 @@ src_configure() {
 		$(use_with ldap) \
 		$(use_with nls) \
 		$(use_enable profile) \
-		$(use_with perl) \
 		$(use_with pcre) \
+		$(use_with perl) \
 		$(use_enable ssl)
 }
 
@@ -104,7 +102,6 @@ src_install() {
 	fperms 750 /etc/${PN} /var/{lib,log,run}/atheme
 
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
-
 	mv "${ED}"/usr/bin/{,atheme-}dbverify || die
 
 	# contributed scripts and such:
