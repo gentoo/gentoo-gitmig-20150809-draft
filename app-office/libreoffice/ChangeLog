@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.285 2012/04/19 09:10:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.286 2012/04/20 13:32:22 chainsaw Exp $
+
+  20 Apr 2012; Tony Vroon <chainsaw@gentoo.org> libreoffice-3.5.2.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Maurizio "k01" Camisaschi in bug #411449.
 
   19 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
   Ensure new enough version of libcdr.
