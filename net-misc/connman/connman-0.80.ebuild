@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.75.ebuild,v 1.4 2011/10/08 14:18:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.80.ebuild,v 1.1 2012/04/20 10:32:50 chainsaw Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils systemd
 
@@ -12,9 +12,8 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bluetooth +caps debug doc examples +ethernet google ofono ntpd openvpn policykit threads tools vpnc +wifi wimax"
-# gps meego ospm openconnect
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+IUSE="bluetooth +caps debug doc examples +ethernet ofono openvpn policykit threads tools vpnc +wifi wimax"
 
 RDEPEND=">=dev-libs/glib-2.16
 	>=sys-apps/dbus-1.2.24
@@ -23,7 +22,6 @@ RDEPEND=">=dev-libs/glib-2.16
 	net-libs/gnutls
 	bluetooth? ( net-wireless/bluez )
 	caps? ( sys-libs/libcap-ng )
-	ntpd? ( net-misc/ntp )
 	ofono? ( net-misc/ofono )
 	policykit? ( sys-auth/polkit )
 	openvpn? ( net-misc/openvpn )
@@ -34,10 +32,6 @@ RDEPEND=">=dev-libs/glib-2.16
 DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.39
 	doc? ( dev-util/gtk-doc )"
-
-src_prepare() {
-	epatch "${FILESDIR}"/fix-for-iptables-1.4.11.patch
-}
 
 src_configure() {
 	econf \
@@ -51,9 +45,7 @@ src_configure() {
 		$(use_enable ethernet ethernet builtin) \
 		$(use_enable wifi wifi builtin) \
 		$(use_enable bluetooth bluetooth builtin) \
-		$(use_enable ntpd ntpd builtin) \
 		$(use_enable ofono ofono builtin) \
-		$(use_enable google google builtin) \
 		$(use_enable openvpn openvpn builtin) \
 		$(use_enable policykit polkit builtin) \
 		$(use_enable vpnc vpnc builtin) \
@@ -64,8 +56,6 @@ src_configure() {
 		$(use_enable tools) \
 		--disable-iospm \
 		--disable-hh2serial-gps \
-		--disable-portal \
-		--disable-meego \
 		--disable-openconnect \
 		"$(systemd_with_unitdir systemdunitdir)"
 }

@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.49 2012/04/18 17:52:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.50 2012/04/20 10:32:50 chainsaw Exp $
+
+*connman-0.80 (20 Apr 2012)
+*connman-0.79 (20 Apr 2012)
+
+  20 Apr 2012; Tony Vroon <chainsaw@gentoo.org> -connman-0.73.ebuild,
+  -connman-0.75.ebuild, +connman-0.79.ebuild,
+  +files/connman-0.79-glib-include.patch, +connman-0.80.ebuild,
+  -files/fix-for-iptables-1.4.11.patch:
+  Version bump to 0.79 and 0.80 as requested by Vadim Efimov & Alessandro
+  Capogna in bug #407563.
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> connman-0.78.ebuild:
   Stable for amd64, wrt bug #410613
