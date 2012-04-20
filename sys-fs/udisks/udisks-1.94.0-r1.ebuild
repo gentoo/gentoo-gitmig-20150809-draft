@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.94.0-r1.ebuild,v 1.2 2012/04/20 18:26:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.94.0-r1.ebuild,v 1.3 2012/04/20 18:48:07 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.32
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/acl
 	>=sys-apps/gptfdisk-0.8
-	>=sys-apps/util-linux-2.20
+	>=sys-apps/util-linux-2.20.1-r2
 	>=sys-block/parted-3
 	virtual/eject
 	crypt? ( sys-fs/cryptsetup )"
