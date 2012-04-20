@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.60 2012/04/14 08:38:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.61 2012/04/20 20:21:55 ssuominen Exp $
+
+  20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -xfconf-4.9.0.ebuild:
+  old
 
 *xfconf-4.9.1 (14 Apr 2012)
 
