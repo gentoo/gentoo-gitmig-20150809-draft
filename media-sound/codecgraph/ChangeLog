@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/codecgraph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.5 2012/04/20 10:55:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.6 2012/04/20 20:29:41 floppym Exp $
+
+  20 Apr 2012; Mike Gilbert <floppym@gentoo.org> codecgraph-20120114.ebuild:
+  Set PYTHON_DEPEND=2 and do emake DESTDIR=. Suggested by Arfrever.
 
 *codecgraph-20120114 (20 Apr 2012)
 
