@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13689 2012/04/20 08:59:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13690 2012/04/20 09:58:06 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -293,6 +293,7 @@ dev-cpp/cppcsp2
 # Installs to hard-coded python paths (#297040), buffer
 # overflow (#337478), nobody willing to maintain/fix it.
 # Removal in 30 days.
+# taking a close look at it (Michael Weber <xmw@gentoo.org>)
 dev-util/radare
 
 # Pacho Ramos <pacho@gentoo.org> (24 Mar 2012)
