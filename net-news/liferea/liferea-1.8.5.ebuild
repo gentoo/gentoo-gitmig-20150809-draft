@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8_rc1.ebuild,v 1.2 2011/11/19 17:53:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8.5.ebuild,v 1.1 2012/04/20 14:52:22 vostorga Exp $
 
 EAPI=4
 
@@ -8,8 +8,7 @@ GCONF_DEBUG=no
 
 inherit eutils gnome2 pax-utils
 
-MY_PV="1.8-RC1"
-MY_P=${PN}-${MY_PV}
+MY_P=${P/_/-}
 
 DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo feeds"
 HOMEPAGE="http://liferea.sourceforge.net/"
@@ -23,13 +22,13 @@ RDEPEND=">=x11-libs/gtk+-2.18.0:2
 	>=dev-libs/glib-2.24.0:2
 	>=x11-libs/pango-1.4.0
 	>=gnome-base/gconf-1.1.9:2
-	dev-libs/json-glib
-	dev-libs/libunique:1
 	>=dev-libs/libxml2-2.6.27:2
 	>=dev-libs/libxslt-1.1.19
-	>=dev-db/sqlite-3.6.10:3
+	>=dev-db/sqlite-3.7.0:3
 	>=net-libs/libsoup-2.28.2:2.4
+	dev-libs/libunique:1
 	>=net-libs/webkit-gtk-1.2.2:2
+	dev-libs/json-glib
 	ayatana? ( dev-libs/libindicate )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )"
 DEPEND="${RDEPEND}
