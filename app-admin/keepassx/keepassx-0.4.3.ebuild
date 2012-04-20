@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.3.ebuild,v 1.5 2011/04/10 04:54:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.3.ebuild,v 1.6 2012/04/20 23:05:21 tgurr Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit qt4-r2
 
-DESCRIPTION="Qt password manager compatible with its Win32 and Pocket PC versions."
+DESCRIPTION="Qt password manager compatible with its Win32 and Pocket PC versions"
 HOMEPAGE="http://keepassx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
@@ -21,6 +21,8 @@ DEPEND="x11-libs/qt-core:4
 	|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1.0 )"
 RDEPEND="${DEPEND}"
 
+PATCHES=( "${FILESDIR}"/${P}-gcc47.patch )
+
 src_configure() {
 	local conf_pch
 	use pch && conf_pch="PRECOMPILED=1" || conf_pch="PRECOMPILED=0"
@@ -33,10 +35,10 @@ src_configure() {
 src_compile() {
 	# workaround compile failure due to distcc, bug #214327
 	PATH=${PATH/\/usr\/lib\/distcc\/bin:}
-	emake || die "emake failed"
+	emake
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc changelog || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc changelog
 }
