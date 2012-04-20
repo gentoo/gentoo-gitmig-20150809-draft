@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_macro
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.19 2011/10/14 17:15:53 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.20 2012/04/20 08:53:40 patrick Exp $
+
+*mod_macro-1.2.1 (20 Apr 2012)
+
+  20 Apr 2012; Patrick Lauer <patrick@gentoo.org> +mod_macro-1.2.1.ebuild:
+  Bump for #411553
 
 *mod_macro-1.1.11 (14 Oct 2011)
 
