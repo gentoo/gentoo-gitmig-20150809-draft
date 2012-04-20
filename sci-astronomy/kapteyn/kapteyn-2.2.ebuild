@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/kapteyn-2.2.ebuild,v 1.1 2012/04/20 14:38:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/kapteyn-2.2.ebuild,v 1.2 2012/04/20 14:45:52 xarthisius Exp $
 
 EAPI="3"
 
@@ -21,7 +21,9 @@ IUSE=""
 
 DEPEND=">=sci-astronomy/wcslib-4.13.4
 	dev-python/numpy"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-python/pyfits
+	dev-python/matplotlib"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 DOCS="CHANGES.txt README.txt"
