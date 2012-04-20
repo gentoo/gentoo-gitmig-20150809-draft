@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.4-r1.ebuild,v 1.2 2011/03/29 06:17:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.4-r1.ebuild,v 1.3 2012/04/20 19:36:53 pacho Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils autotools
 
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 RESTRICT="test" # boost's test API has changed
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-glib-2.32.patch
 	epatch "${FILESDIR}"/${P}-external-boost.patch
 	rm -rf "${S}"/boost
 	eautoreconf
@@ -36,11 +37,11 @@ src_configure() {
 	econf \
 		$(use_enable debug) \
 		$(use_with X gui) \
-		--without-builtin-boost || die "econf failed"
+		--without-builtin-boost
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 	insinto /etc/bfilter
 	doins "${FILESDIR}"/forwarding.xml
 
