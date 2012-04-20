@@ -1,0 +1,28 @@
+From 739cec4c2bfb1a89fd512315f573ef2313040c31 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Fri, 20 Apr 2012 01:39:35 -0400
+Subject: [PATCH] gtkhtml_editor_file_chooser_dialog_run() was removed in
+ gtkhtml-4.4
+
+It is no longer needed with gtk+-3.2.
+---
+ composer/e-composer-actions.c |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+diff --git a/composer/e-composer-actions.c b/composer/e-composer-actions.c
+index 163270f..cd50f7a 100644
+--- a/composer/e-composer-actions.c
++++ b/composer/e-composer-actions.c
+@@ -218,8 +218,7 @@ action_save_as_cb (GtkAction *action,
+ 	gtk_window_set_icon_name (
+ 		GTK_WINDOW (dialog), "mail-message-new");
+ 
+-	response = gtkhtml_editor_file_chooser_dialog_run (
+-		GTKHTML_EDITOR (composer), dialog);
++	response = gtk_dialog_run (GTK_DIALOG (dialog));
+ 
+ 	if (response != GTK_RESPONSE_OK)
+ 		goto exit;
+-- 
+1.7.8.5
+

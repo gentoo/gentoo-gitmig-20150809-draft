@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.2.ebuild,v 1.2 2012/02/10 03:29:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3-r1.ebuild,v 1.1 2012/04/20 05:51:19 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -138,13 +138,14 @@ pkg_setup() {
 src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=663077, requires eautoreconf
 	epatch "${FILESDIR}/${PN}-3.2.1-reorder-mx-clutter-gtk.patch"
+	# Fix build failure with glib-2.32
+	epatch "${FILESDIR}/${P}-gmodule-explicit.patch"
+	epatch "${FILESDIR}/${P}-g_thread_init.patch"
+	# Fix crashes and linking failure with gtkhtml-4.4
+	epatch "${FILESDIR}/${P}-gtkhtml-4.4.patch"
 	eautoreconf
 
 	gnome2_src_prepare
-
-	# Fix compilation flags crazyness
-	sed -e 's/\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
-		-i configure || die "CPPFLAGS sed failed"
 }
 
 pkg_postinst() {

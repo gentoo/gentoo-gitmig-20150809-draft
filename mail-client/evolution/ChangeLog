@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.359 2012/04/19 20:38:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.360 2012/04/20 05:51:19 tetromino Exp $
+
+*evolution-3.2.3-r1 (20 Apr 2012)
+
+  20 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -evolution-3.2.2.ebuild, +evolution-3.2.3-r1.ebuild,
+  files/evolution-3.2.3-g_thread_init.patch,
+  +files/evolution-3.2.3-gtkhtml-4.4.patch:
+  Improve glib-2.32 fix (bug #412239, thanks to Dmitry K). Fix crash and build
+  failure with gtkhtml-4.4. Drop old.
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> evolution-2.32.3-r1.ebuild:
   Marking evolution-2.32.3-r1 ppc64 stable for bug 410611

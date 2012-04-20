@@ -1,19 +1,21 @@
-From 8c67e84f9bf1803108f7a004513e37c6ef22d41f Mon Sep 17 00:00:00 2001
+From ed7f672fa38aa1528e9eca5419176e0f8a9583f6 Mon Sep 17 00:00:00 2001
 From: Milan Crha <mcrha@redhat.com>
 Date: Mon, 24 Oct 2011 09:42:48 +0200
 Subject: [PATCH] Call g_thread_init() conditionally
 
+[Alexandre Rostovtsev <tetromino@gentoo.org>: backport to 3.2.3]
 ---
  capplet/anjal-settings-main.c         |    2 ++
  capplet/settings/mail-guess-servers.c |    2 ++
+ plugins/backup-restore/backup.c       |    2 ++
  shell/main.c                          |    2 ++
- 3 files changed, 6 insertions(+), 0 deletions(-)
+ 4 files changed, 8 insertions(+), 0 deletions(-)
 
 diff --git a/capplet/anjal-settings-main.c b/capplet/anjal-settings-main.c
-index 99e0b4a..91e3690 100644
+index 2bc3268..c810db3 100644
 --- a/capplet/anjal-settings-main.c
 +++ b/capplet/anjal-settings-main.c
-@@ -167,8 +167,10 @@ main (gint argc,
+@@ -168,8 +168,10 @@ main (gint argc,
  	if (!gtk_init_with_args (&argc, &argv, NULL, entries, NULL, &error))
  		g_error ("%s", error->message);
  
@@ -38,11 +40,25 @@ index 0b14494..0b15271 100644
  	g_type_init ();
  
  	provider = g_new0 (EmailProvider, 1);
+diff --git a/plugins/backup-restore/backup.c b/plugins/backup-restore/backup.c
+index 370608a..1e0ecb5 100644
+--- a/plugins/backup-restore/backup.c
++++ b/plugins/backup-restore/backup.c
+@@ -691,7 +691,9 @@ main (gint argc,
+ 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+ 	textdomain (GETTEXT_PACKAGE);
+ 
++	#if !GLIB_CHECK_VERSION(2,31,0)
+ 	g_thread_init (NULL);
++	#endif
+ 
+ 	gtk_init_with_args (
+ 		&argc, &argv, NULL, options, (gchar *) GETTEXT_PACKAGE, &error);
 diff --git a/shell/main.c b/shell/main.c
-index bb056e3..5b76a2e 100644
+index 36e67d1..f0afc5a 100644
 --- a/shell/main.c
 +++ b/shell/main.c
-@@ -492,8 +492,10 @@ main (gint argc,
+@@ -509,8 +509,10 @@ main (gint argc,
  	textdomain (GETTEXT_PACKAGE);
  
  	g_type_init ();
