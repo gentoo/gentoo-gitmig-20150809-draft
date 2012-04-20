@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.71 2012/04/20 00:34:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.72 2012/04/20 17:10:15 jdhore Exp $
+
+  20 Apr 2012; Jeff Horelick <jdhore@gentoo.org> libmowgli-2.0.0.ebuild:
+  Change the libmowgli-2.0.0 SRC_URI to atheme.org/downloads/ since cgit
+  apparently generates tarballs on-the-fly making them fail verification.
 
 *libmowgli-2.0.0 (20 Apr 2012)
 

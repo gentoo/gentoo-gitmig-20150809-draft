@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-2.0.0.ebuild,v 1.1 2012/04/20 00:34:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-2.0.0.ebuild,v 1.2 2012/04/20 17:10:15 jdhore Exp $
 
 EAPI=4
 
 DESCRIPTION="Useful set of performance and usability-oriented extensions to C"
 HOMEPAGE="http://www.atheme.org/project/mowgli"
-SRC_URI="http://git.atheme.org/libmowgli-2/snapshot/${P}.tar.gz"
+SRC_URI="http://atheme.org/downloads/${P}.tar.gz"
 IUSE="ssl"
 
 LICENSE="BSD-2"
