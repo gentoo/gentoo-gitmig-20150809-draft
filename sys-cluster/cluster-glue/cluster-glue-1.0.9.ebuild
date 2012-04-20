@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.9.ebuild,v 1.6 2012/02/24 15:22:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.9.ebuild,v 1.7 2012/04/20 20:03:48 pacho Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ PATCHES=(
 	"${FILESDIR}/1.0.5-docs.patch"
 	"${FILESDIR}/1.0.5-respect_cflags.patch"
 	"${FILESDIR}/1.0.7-fix_configure.patch"
+	"${FILESDIR}/1.0.9-glib-2.32.patch"
 )
 
 pkg_setup() {
