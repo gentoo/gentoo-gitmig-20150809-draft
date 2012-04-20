@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/codecgraph
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.4 2010/11/21 13:40:34 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.5 2012/04/20 10:55:52 chainsaw Exp $
+
+*codecgraph-20120114 (20 Apr 2012)
+
+  20 Apr 2012; Tony Vroon <chainsaw@gentoo.org>
+  +files/20120114-makefile-prefix.diff, -codecgraph-20080422.ebuild,
+  -codecgraph-20080507.ebuild, +codecgraph-20120114.ebuild:
+  Version bump, incorporating ebuild improvements by Ian "idella4" Delaney that
+  have been reviewed by Arfrever Frehtes Taifersar Arahesis in bug #313939.
 
 *codecgraph-20090522 (21 Nov 2010)
 
