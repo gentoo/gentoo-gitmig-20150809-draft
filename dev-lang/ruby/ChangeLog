@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.529 2012/03/01 22:49:37 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.530 2012/04/20 10:42:50 graaff Exp $
+
+*ruby-1.8.7_p358 (20 Apr 2012)
+
+  20 Apr 2012; Hans de Graaff <graaff@gentoo.org> +ruby-1.8.7_p358.ebuild:
+  Version bump. Also include p359 as a patch to fix marshall bugs exposed by
+  Rails 3.2.
 
   01 Mar 2012; Naohiro Aota <naota@gentoo.org> ruby-1.9.3_p125.ebuild:
   Add ~x86-fbsd, #332593
