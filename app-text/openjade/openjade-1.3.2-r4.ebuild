@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r4.ebuild,v 1.1 2012/04/15 18:39:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r4.ebuild,v 1.2 2012/04/20 04:46:31 floppym Exp $
 
 EAPI=2
 
@@ -59,6 +59,9 @@ src_configure() {
 }
 
 src_compile() {
+	# Bug 412725.
+	unset INCLUDE
+
 	emake -j1 || die "make failed"
 }
 
