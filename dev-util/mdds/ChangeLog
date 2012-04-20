@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.9 2012/04/07 15:36:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.10 2012/04/20 13:34:07 chainsaw Exp $
+
+  20 Apr 2012; Tony Vroon <chainsaw@gentoo.org> mdds-0.5.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Maurizio "k01" Camisaschi in bug #411449.
 
 *mdds-0.5.4 (07 Apr 2012)
 
