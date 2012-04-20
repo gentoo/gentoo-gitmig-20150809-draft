@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libktorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.32 2012/04/14 15:10:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.33 2012/04/20 14:35:53 chainsaw Exp $
+
+  20 Apr 2012; Tony Vroon <chainsaw@gentoo.org> libktorrent-1.2.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &
+  Elijah "Armageddon" El Lazkani in bug #400873.
 
   14 Apr 2012; Markus Meier <maekke@gentoo.org> libktorrent-1.2.0.ebuild:
   x86 stable, bug #400873
