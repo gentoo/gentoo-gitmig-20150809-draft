@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6448 2012/04/20 08:59:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6449 2012/04/20 11:27:48 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask xfce-extra/xfce4-linelight-plugin which got fixed by moving into
+  unofficial tarball from Debian with a patch for compability with libxfce4util
+  >= 4.9.0 from Ubuntu maintainer.
 
   20 Apr 2012; Patrick Lauer <patrick@gentoo.org> package.mask,
   thirdpartymirrors:
