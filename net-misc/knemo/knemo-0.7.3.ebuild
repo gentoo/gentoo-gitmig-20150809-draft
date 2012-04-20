@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.7.3.ebuild,v 1.1 2012/01/08 17:51:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.7.3.ebuild,v 1.2 2012/04/20 06:39:29 johu Exp $
 
 EAPI=4
+
 KDE_LINGUAS="ar bg br bs cs cy da de el en_GB eo es et fi fr ga gl hr hu is it
 ja ka km lt ms nb nds nl pl pt pt_BR ro ru rw sk sr sv tr uk zh_CN zh_TW"
 inherit kde4-base
@@ -25,7 +26,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-DOCS="AUTHORS ChangeLog README"
+DOCS=( AUTHORS ChangeLog README )
 
 src_configure() {
 	mycmakeargs=(
