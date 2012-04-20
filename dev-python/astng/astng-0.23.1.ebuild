@@ -1,12 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.23.1.ebuild,v 1.1 2012/04/19 06:45:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.23.1.ebuild,v 1.2 2012/04/20 00:45:12 floppym Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_TESTS_FAILURES_TOLERANT_ABIS="3.* *-jython"
-RESTRICT_PYTHON_ABIS="3.* *-pypy-* *-jython"
 
 inherit distutils
 
@@ -23,24 +21,11 @@ IUSE="test"
 RDEPEND=">=dev-python/logilab-common-0.53.0"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	test? ( >=dev-python/egenix-mx-base-3.0.0 )
-	( dev-python/unittest2 )"
+	test? ( >=dev-python/egenix-mx-base-3.0.0 )"
 
 S="${WORKDIR}/logilab-${P}"
 
-DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
-
 PYTHON_MODNAME="logilab/astng"
-
-src_prepare() {
-	distutils_src_prepare
-
-	conversion() {
-		[[ "${PYTHON_ABI}" == 2.* ]] && return
-		find -name "*.py" ! -name "setup.py" -print | xargs 2to3-${PYTHON_ABI} -nw --no-diffs
-	}
-	python_execute_function -s conversion
-}
 
 src_test() {
 	testing() {
@@ -50,19 +35,14 @@ src_test() {
 		mkdir -p "${spath}/logilab" || return 1
 		cp -r "$(python_get_sitedir)/logilab/common" "${spath}/logilab" || return 1
 
-		"$(PYTHON)" setup.py install --root="${tpath}" || die "Installation for tests failed with $(python_get_implementation) $(python_get_version)"
+		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${tpath}" || die "Installation for tests failed with $(python_get_implementation_and_version)"
 
 		# pytest uses tests placed relatively to the current directory.
 		pushd "${spath}/logilab/astng" > /dev/null || return 1
-		if [[ "${PYTHON_ABI}" == 3.* ]]; then
-			# Support for Python 3 is experimental. Some tests are known to fail.
-			PYTHONPATH="${spath}" pytest -v
-		else
-			PYTHONPATH="${spath}" pytest -v || return 1
-		fi
+		PYTHONPATH="${spath}" pytest -v || return 1
 		popd > /dev/null || return 1
 	}
-	python_execute_function -s testing
+	python_execute_function testing
 }
 
 src_install() {
