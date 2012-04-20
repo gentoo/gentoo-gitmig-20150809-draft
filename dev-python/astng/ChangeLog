@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.54 2012/04/19 06:45:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.55 2012/04/20 01:41:33 floppym Exp $
+
+  20 Apr 2012; Mike Gilbert <floppym@gentoo.org> astng-0.23.1.ebuild:
+  Rebase ebuild from 0.22.0, restoring python 3 support. Use separate source
+  directories as this makes the test suite pass in python 2. TODO: Figure out
+  why.
 
 *astng-0.23.1 (19 Apr 2012)
 
