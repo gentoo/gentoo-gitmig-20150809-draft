@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.117 2012/04/15 06:58:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.118 2012/04/20 00:58:26 tetromino Exp $
+
+  20 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-nettool-3.2.0.ebuild:
+  Spelling.
 
 *gnome-nettool-3.2.0 (15 Apr 2012)
 

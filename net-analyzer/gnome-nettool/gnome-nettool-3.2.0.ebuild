@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-3.2.0.ebuild,v 1.1 2012/04/15 06:58:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-3.2.0.ebuild,v 1.2 2012/04/20 00:58:26 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	|| (
 		net-misc/iputils
-		net-anaylyzer/tcptraceroute
+		net-analyzer/tcptraceroute
 		net-analyzer/traceroute
 		sys-freebsd/freebsd-usbin )
 	net-analyzer/nmap
