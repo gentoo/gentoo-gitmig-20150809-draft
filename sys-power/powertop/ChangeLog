@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.49 2012/04/19 16:17:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.50 2012/04/20 21:41:19 vapier Exp $
+
+  20 Apr 2012; Mike Frysinger <vapier@gentoo.org> powertop-1.98.ebuild,
+  powertop-9999.ebuild:
+  Update git URL to new home.
 
   19 Apr 2012; Mike Frysinger <vapier@gentoo.org> powertop-1.98.ebuild,
   +files/powertop-1.98-gcc-4.7.patch, powertop-9999.ebuild:
