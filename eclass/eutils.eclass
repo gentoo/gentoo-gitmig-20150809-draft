@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.390 2012/04/16 14:40:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.391 2012/04/20 19:35:37 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -230,13 +230,21 @@ EPATCH_SOURCE="${WORKDIR}/patch"
 EPATCH_SUFFIX="patch.bz2"
 # @VARIABLE: EPATCH_OPTS
 # @DESCRIPTION:
-# Default options for patch:
+# Options to pass to patch.  Meant for ebuild/package-specific tweaking
+# such as forcing the patch level (-p#) or fuzz (-F#) factor.  Note that
+# for single patch tweaking, you can also pass flags directly to epatch.
+EPATCH_OPTS=""
+# @VARIABLE: EPATCH_COMMON_OPTS
+# @DESCRIPTION:
+# Common options to pass to `patch`.  You probably should never need to
+# change these.  If you do, please discuss it with base-system first to
+# be sure.
 # @CODE
 #	-g0 - keep RCS, ClearCase, Perforce and SCCS happy #24571
 #	--no-backup-if-mismatch - do not leave .orig files behind
 #	-E - automatically remove empty files
 # @CODE
-EPATCH_OPTS="-g0 -E --no-backup-if-mismatch"
+EPATCH_COMMON_OPTS="-g0 -E --no-backup-if-mismatch"
 # @VARIABLE: EPATCH_EXCLUDE
 # @DESCRIPTION:
 # List of patches not to apply.	 Note this is only file names,
@@ -257,7 +265,7 @@ EPATCH_MULTI_MSG="Applying various patches (bugfixes/updates) ..."
 EPATCH_FORCE="no"
 
 # @FUNCTION: epatch
-# @USAGE: [patches] [dirs of patches]
+# @USAGE: [options] [patches] [dirs of patches]
 # @DESCRIPTION:
 # epatch is designed to greatly simplify the application of patches.  It can
 # process patch files directly, or directories of patches.  The patches may be
@@ -265,8 +273,12 @@ EPATCH_FORCE="no"
 # the -p option as epatch will automatically attempt -p0 to -p5 until things
 # apply successfully.
 #
-# If you do not specify any options, then epatch will default to the directory
-# specified by EPATCH_SOURCE.
+# If you do not specify any patches/dirs, then epatch will default to the
+# directory specified by EPATCH_SOURCE.
+#
+# Any options specified that start with a dash will be passed down to patch
+# for this specific invocation.  As soon as an arg w/out a dash is found, then
+# arg processing stops.
 #
 # When processing directories, epatch will apply all patches that match:
 # @CODE
@@ -293,6 +305,18 @@ epatch() {
 	}
 
 	unset P4CONFIG P4PORT P4USER # keep perforce at bay #56402
+
+	# First process options.  We localize the EPATCH_OPTS setting
+	# from above so that we can pass it on in the loop below with
+	# any additional values the user has specified.
+	local EPATCH_OPTS=( ${EPATCH_OPTS[*]} )
+	while [[ $# -gt 0 ]] ; do
+		case $1 in
+		-*) EPATCH_OPTS+=( "$1" ) ;;
+		*) break ;;
+		esac
+		shift
+	done
 
 	# Let the rest of the code process one user arg at a time --
 	# each arg may expand into multiple patches, and each arg may
@@ -336,6 +360,10 @@ epatch() {
 		echo
 		die "Cannot find \$EPATCH_SOURCE!"
 	fi
+
+	# Now that we know we're actually going to apply something, merge
+	# all of the patch options back in to a single variable for below.
+	EPATCH_OPTS="${EPATCH_COMMON_OPTS} ${EPATCH_OPTS[*]}"
 
 	local PIPE_CMD
 	case ${EPATCH_SUFFIX##*\.} in
