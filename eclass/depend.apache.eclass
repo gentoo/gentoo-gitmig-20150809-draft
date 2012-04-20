@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.46 2012/04/20 07:19:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.47 2012/04/20 07:22:47 patrick Exp $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER:
@@ -109,7 +109,7 @@ APACHE2_2_DEPEND="=www-servers/apache-2.2*"
 # @ECLASS-VARIABLE: APACHE2_4_DEPEND
 # @DESCRIPTION:
 # Dependencies for Apache 2.4.x
-APACHE2_2_DEPEND="=www-servers/apache-2.4*"
+APACHE2_4_DEPEND="=www-servers/apache-2.4*"
 
 
 # ==============================================================================
