@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.5.14.ebuild,v 1.1 2012/04/18 12:04:26 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.5.14.ebuild,v 1.2 2012/04/20 10:17:12 ali_bush Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps"
@@ -58,7 +58,8 @@ src_install() {
 	java-pkg_doso lib/libwrapper.so
 
 	dobin bin/wrapper
-	dodoc doc/{readme.txt,revisions.txt} || die
+	dodoc README*.txt || die
+	dodoc doc/revisions.txt || die
 
 	use doc && dohtml -r doc/english/
 	use doc && java-pkg_dojavadoc api
