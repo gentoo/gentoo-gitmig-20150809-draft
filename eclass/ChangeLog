@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.218 2012/04/19 22:43:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.219 2012/04/20 07:19:49 patrick Exp $
+
+  20 Apr 2012; Patrick Lauer <patrick@gentoo.org> depend.apache.eclass:
+  Extending depend.apache.eclass for apache 2.4
 
   19 Apr 2012; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
   Overhaul *FLAGS handling in eqmake4() to fix bug 361303. Thanks to Michael
