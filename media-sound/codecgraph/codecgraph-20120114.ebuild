@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/codecgraph-20120114.ebuild,v 1.2 2012/04/20 20:29:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/codecgraph-20120114.ebuild,v 1.3 2012/04/20 20:33:43 floppym Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}/${PV}-makefile-prefix.diff" )
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc codecs.txt README BUGS IDEAS
 	python_convert_shebangs -r 2 "${ED}"
 }
