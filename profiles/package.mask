@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13687 2012/04/20 02:45:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13688 2012/04/20 07:33:49 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -109,10 +109,6 @@ mail-filter/dk-milter
 # It doesn't work with recent portage version and the author has no time to fix
 # it anytime soon. bug 404973.
 app-portage/portato
-
-# Hans de Graaff <graaff@gentoo.org> (06 Apr 2012)
-# Mask parts of Rails 3.2 until the whole package is ready.
-dev-ruby/coffee-rails:3.2
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (05 Apr 2012)
 # Mask ksecrets. It was included in the kde-4.8 releases by mistake, and

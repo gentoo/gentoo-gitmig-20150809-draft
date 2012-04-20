@@ -1,11 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6446 2012/04/20 02:45:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6447 2012/04/20 07:33:49 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
-  
+
+  20 Apr 2012; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove coffee-rails mask since all dependencies are available now.
+
   20 Apr 2012; Jeff Horelick <jdhore@gentoo.org> package.mask:
   Remove mask on atheme-services as the 7.0 branch is now considered
   stable by upstream.
