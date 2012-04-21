@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.674 2012/04/18 19:54:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.675 2012/04/21 19:34:03 aballier Exp $
+
+  21 Apr 2012; Alexis Ballier <aballier@gentoo.org> xine-lib-1.2.1-r1.ebuild,
+  +files/xine-lib-1.2.1-freebsd.patch:
+  add patch to fix build on FreeBSD.
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> xine-lib-1.2.1-r1.ebuild:
   Stable for amd64, wrt bug #412309

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.1-r1.ebuild,v 1.3 2012/04/18 19:54:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.1-r1.ebuild,v 1.4 2012/04/21 19:34:03 aballier Exp $
 
 EAPI=4
 
@@ -115,7 +115,8 @@ REQUIRED_USE="vidix? ( || ( X fbcon ) )
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-ffmpeg-git.patch \
-		"${FILESDIR}"/${P}-fix_dvb_crc_checking.patch
+		"${FILESDIR}"/${P}-fix_dvb_crc_checking.patch \
+		"${FILESDIR}"/${P}-freebsd.patch
 
 	sed -i -e '/define VDR_ABS_FIFO_DIR/s|".*"|"/var/vdr/xine"|' src/vdr/input_vdr.c || die
 
