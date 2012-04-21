@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.96 2012/04/03 21:26:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.97 2012/04/21 12:07:01 maekke Exp $
+
+  21 Apr 2012; Markus Meier <maekke@gentoo.org> texlive-2011-r1.ebuild:
+  add ~arm, bug #410239
 
   03 Apr 2012; Jeroen Roovers <jer@gentoo.org> texlive-2011-r1.ebuild:
   Marked ~hppa (bug #410239).
