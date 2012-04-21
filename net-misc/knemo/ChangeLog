@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.58 2012/04/20 06:39:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.59 2012/04/21 09:11:13 ago Exp $
+
+  21 Apr 2012; Agostino Sarubbo <ago@gentoo.org> knemo-0.7.3.ebuild:
+  Stable for amd64, wrt bug #412683
 
   20 Apr 2012; Johannes Huber <johu@gentoo.org> knemo-0.7.3.ebuild:
   Use array for docs.
