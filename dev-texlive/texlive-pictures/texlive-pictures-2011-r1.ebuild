@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/texlive-pictures-2011-r1.ebuild,v 1.2 2012/04/03 21:25:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/texlive-pictures-2011-r1.ebuild,v 1.3 2012/04/21 12:04:22 maekke Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive Graphics packages and programs"
 
 LICENSE="GPL-2 Apache-2.0 as-is GPL-1 GPL-3 LPPL-1.3 public-domain "
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2011
 !<dev-texlive/texlive-latexextra-2009
