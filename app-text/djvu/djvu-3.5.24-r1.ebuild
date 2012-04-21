@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.24-r1.ebuild,v 1.1 2012/03/13 22:00:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.24-r1.ebuild,v 1.2 2012/04/21 17:27:56 ssuominen Exp $
 
 EAPI=4
 inherit eutils fdo-mime autotools flag-o-matic
@@ -80,11 +80,8 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_mime_database_update
-	if ! has_version app-text/djview4 || ! has_version app-text/djview; then
+	if ! has_version app-text/djview; then
 		elog "For djviewer or browser plugin, emerge app-text/djview."
-	fi
-	if has_version app-text/djview4; then
-		ewarn "Note, that app-text/djview4 has changed its name to app-text/djview."
 	fi
 }
 
