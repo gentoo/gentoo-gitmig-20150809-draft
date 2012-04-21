@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.3.ebuild,v 1.5 2012/02/13 21:34:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.3.ebuild,v 1.6 2012/04/21 11:24:38 ssuominen Exp $
 
 EAPI=4
-inherit xfconf
+inherit multilib xfconf
 
 DESCRIPTION="A time managing application (and panel plug-in) for the Xfce desktop environment"
-HOMEPAGE="http://www.xfce.org/projects/orage/"
+HOMEPAGE="http://www.xfce.org/projects/"
 SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -18,15 +18,16 @@ RDEPEND=">=dev-libs/libical-0.48
 	dev-libs/popt
 	>=x11-libs/gtk+-2.10:2
 	berkdb? ( >=sys-libs/db-4 )
-	dbus? ( >=dev-libs/dbus-glib-0.90 )
+	dbus? ( >=dev-libs/dbus-glib-0.98 )
 	libnotify? ( >=x11-libs/libnotify-0.7 )
 	xfce_plugins_clock? ( >=xfce-base/xfce4-panel-4.8 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	dev-util/intltool"
+	dev-util/intltool
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir)
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}/html
 		$(use_enable xfce_plugins_clock libxfce4panel)
 		$(use_enable dbus)
@@ -36,4 +37,16 @@ pkg_setup() {
 		)
 
 	DOCS=( AUTHORS ChangeLog NEWS README TODO )
+
+	# PM doesn't let directory to be replaced by a symlink, see src_install()
+	rm -rf "${EROOT}"/usr/share/${PN}/doc
+}
+
+src_install() {
+	xfconf_src_install \
+		docdir=/usr/share/doc/${PF}/html \
+		imagesdir=/usr/share/doc/${PF}/html/images
+
+	# Create compability symlink for retarded path hardcoding in src/{mainbox,parameters}.c
+	dosym /usr/share/doc/${PF}/html /usr/share/${PN}/doc/C
 }
