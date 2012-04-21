@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.216 2012/03/29 21:21:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.217 2012/04/21 12:01:40 ssuominen Exp $
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  rhythmbox-0.12.8-r1.ebuild, rhythmbox-0.13.3.ebuild:
+  Remove unused net-libs/xulrunner from dependencies because
+  librhythmbox-itms-detection-plugin.so is using internal np*.h headers within
+  rhythmbox tarball wrt #412339
 
 *rhythmbox-2.96 (29 Mar 2012)
 

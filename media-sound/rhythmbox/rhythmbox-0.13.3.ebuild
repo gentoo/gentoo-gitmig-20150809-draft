@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.7 2012/02/10 03:20:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.8 2012/04/21 12:01:40 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -75,7 +75,6 @@ RDEPEND="${COMMON_DEPEND}
 		>=media-plugins/gst-plugins-cdio-0.10 )
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	>=media-plugins/gst-plugins-taglib-0.10.6
-	nsplugin? ( net-libs/xulrunner )
 "
 # gtk-doc-am needed for eautoreconf
 #	dev-util/gtk-doc-am

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.19 2012/01/30 12:04:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.20 2012/04/21 12:01:40 ssuominen Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -69,8 +69,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=media-plugins/gst-plugins-cdparanoia-0.10:0.10
 		>=media-plugins/gst-plugins-cdio-0.10:0.10 )
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
-	>=media-plugins/gst-plugins-taglib-0.10.6:0.10
-	nsplugin? ( net-libs/xulrunner )"
+	>=media-plugins/gst-plugins-taglib-0.10.6:0.10"
 
 # gtk-doc-am needed for eautoreconf
 #	dev-util/gtk-doc-am
