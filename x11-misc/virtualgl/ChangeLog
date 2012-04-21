@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/virtualgl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.1 2012/04/21 13:14:47 pacho Exp $
+
+*virtualgl-2.3 (21 Apr 2012)
+
+  21 Apr 2012; Pacho Ramos <pacho@gentoo.org> +files/vgl.confd,
+  +files/vgl.initd, +metadata.xml, +virtualgl-2.3.ebuild:
+  Initial commit from bumblebee overlay, this fixes bug #384083. Thanks a lot to
+  mva and rei4dan for their work.
+
