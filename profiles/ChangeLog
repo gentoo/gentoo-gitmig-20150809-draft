@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6453 2012/04/21 17:24:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6454 2012/04/21 17:30:26 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/IO-Moose for removal (#356559)
 
   21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> updated/4Q-2011,
   updates/2Q-2012:
