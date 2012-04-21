@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.268 2012/04/17 08:38:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.269 2012/04/21 17:20:11 vapier Exp $
+
+*shadow-4.1.5-r2 (21 Apr 2012)
+
+  21 Apr 2012; Mike Frysinger <vapier@gentoo.org> +shadow-4.1.5-r2.ebuild,
+  +files/shadow-4.1.5-grremove.patch,
+  +files/shadow-4.1.5-selinux-groupadd.patch:
+  Fix crash when calling userdel #405409 by Yuri Mamaev. Add patch for groupadd
+  on selinux #406819 by Amadeusz Sławiński. Depend on libsemanage when
+  USE=selinux #408173 by Markus Knetschke.
 
 *shadow-4.1.5-r1 (17 Apr 2012)
 
