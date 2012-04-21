@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/manifestdestiny
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.1 2012/04/21 16:46:14 floppym Exp $
+
+*manifestdestiny-0.5.4 (21 Apr 2012)
+
+  21 Apr 2012; Mike Gilbert <floppym@gentoo.org> +manifestdestiny-0.5.4.ebuild,
+  +metadata.xml:
+  New ebuild by iksaif, needed for dev-python/mozprofile.
+
