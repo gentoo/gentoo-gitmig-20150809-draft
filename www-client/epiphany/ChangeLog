@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.281 2012/04/14 03:22:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.282 2012/04/21 09:12:48 tetromino Exp $
+
+*epiphany-3.4.1 (21 Apr 2012)
+
+  21 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +epiphany-3.4.1.ebuild:
+  Version bump.
 
 *epiphany-3.4.0.1 (14 Apr 2012)
 
