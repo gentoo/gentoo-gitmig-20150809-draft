@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.31 2012/04/09 12:08:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.32 2012/04/21 20:23:54 tetromino Exp $
+
+  21 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  vhba-20110915.ebuild, +files/vhba-20110915-3.4-kmap_atomic.patch:
+  Fix build failure with kernels 3.4-rc1 and higher with
+  CONFIG_ENABLE_WARN_DEPRECATED (bug #411459, thanks to darkbasic for
+  reporting).
 
   09 Apr 2012; Markus Meier <maekke@gentoo.org> vhba-20110915.ebuild:
   x86 stable, bug #406941
