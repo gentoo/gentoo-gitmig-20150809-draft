@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1-r1.ebuild,v 1.2 2012/03/04 09:50:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1-r1.ebuild,v 1.3 2012/04/21 09:09:00 scarabeus Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="http://grass.osgeo.org/${MY_PM}/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="6"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="X cairo cxx ffmpeg fftw gmath jpeg motif mysql nls odbc opengl png postgres python readline sqlite tiff truetype wxwidgets"
 
 TCL_DEPS="
@@ -92,6 +92,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-libpng15.patch
 	"${FILESDIR}"/${P}-nopycompile.patch
 	"${FILESDIR}"/${P}-timer_flags.patch
+	"${FILESDIR}"/${P}-libav-0.8.patch
 )
 
 pkg_setup() {
