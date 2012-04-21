@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.379 2012/04/21 06:24:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.380 2012/04/21 17:35:24 vapier Exp $
+
+  21 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  files/util-linux-2.20.1-no-printf-alloc.patch,
+  files/util-linux-2.21.1-no-printf-alloc.patch:
+  Also malloc fs_optstr #406303#17 by Anthony Basile.
 
   21 Apr 2012; Mike Frysinger <vapier@gentoo.org> util-linux-2.20.1-r1.ebuild,
   util-linux-2.20.1-r2.ebuild, +files/util-linux-2.20.1-no-printf-alloc.patch,
