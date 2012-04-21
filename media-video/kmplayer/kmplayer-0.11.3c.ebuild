@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3c.ebuild,v 1.1 2012/03/13 14:18:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3c.ebuild,v 1.2 2012/04/21 20:06:35 johu Exp $
 
 EAPI=4
 KDE_LINGUAS="bg bs ca ca@valencia cs da de el en_GB eo es et fr ga gl hr hu it
@@ -31,7 +31,7 @@ DEPEND="media-libs/phonon
 RDEPEND="${DEPEND}
 	media-video/mplayer"
 
-DOCS="AUTHORS ChangeLog README TODO"
+DOCS=( AUTHORS ChangeLog README TODO )
 
 src_prepare() {
 	sed -i \
