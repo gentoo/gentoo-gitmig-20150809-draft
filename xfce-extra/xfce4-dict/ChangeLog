@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-dict
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.51 2011/12/07 15:30:31 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.52 2012/04/21 06:01:46 ssuominen Exp $
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> xfce4-dict-0.6.0.ebuild:
+  Missing Categories Utility and TextTools in xfce4-dict.desktop (as required
+  by desktop-file-validate). Install to libdir instead of libexecdir.
 
   07 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> xfce4-dict-0.6.0.ebuild,
   +files/xfce4-dict-0.6.0-underlinking.patch:
