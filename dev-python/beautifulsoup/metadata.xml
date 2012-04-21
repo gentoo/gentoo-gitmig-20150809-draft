@@ -10,4 +10,7 @@
 		a parse tree: a toolkit for dissecting a document and extracting
 		what you need.
 	</longdescription>
+	<upstream>
+		<remote-id type="pypi">beautifulsoup4</remote-id>
+	</upstream>
 </pkgmetadata>
