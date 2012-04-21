@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6452 2012/04/21 16:53:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6453 2012/04/21 17:24:12 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,8 +8,8 @@
 
   21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> updated/4Q-2011,
   updates/2Q-2012:
-  Move app-text/djview4 (again) to app-text/djview and this time
-  remove app-text/djview wrt #410025
+  Move app-text/djview4 (again) to app-text/djview (and this time
+  remove app-text/djview4 directory) wrt #410025
 
   20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask xfce-extra/xfce4-linelight-plugin because it was patched.
