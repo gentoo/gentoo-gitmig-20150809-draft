@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.600.0.ebuild,v 1.1 2012/04/20 18:17:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.600.0.ebuild,v 1.2 2012/04/21 02:29:20 robbat2 Exp $
 
 EAPI=4
 
 MY_PN=MogileFS-Server
 MODULE_AUTHOR=DORMANDO
-MODULE_VERSION=${PV:0:4}
+MODULE_VERSION=${PV%0.0}
 inherit perl-module
 
 DESCRIPTION="Server for the MogileFS distributed file system"
@@ -25,10 +25,10 @@ RDEPEND="dev-perl/Net-Netmask
 		>=dev-perl/Danga-Socket-1.61
 		>=dev-perl/Sys-Syscall-0.22
 		>=dev-perl/Perlbal-1.790
-		dev-perl/IO-AIO
+		>=dev-perl/IO-AIO-4
 		dev-perl/libwww-perl
-		>=dev-perl/MogileFS-Client-1.14
-		>=dev-perl/MogileFS-Utils-2.20
+		>=dev-perl/MogileFS-Client-1.16
+		>=dev-perl/MogileFS-Utils-2.23
 		dev-perl/Cache-Memcached
 		mysql? ( dev-perl/DBD-mysql )
 		postgres? ( dev-perl/DBD-Pg )
