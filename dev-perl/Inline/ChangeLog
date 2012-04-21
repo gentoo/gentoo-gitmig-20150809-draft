@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.46 2012/02/21 17:48:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.47 2012/04/21 20:21:26 jdhore Exp $
+
+  21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> Inline-0.500.0.ebuild:
+  marked x86 per bug 412985
 
 *Inline-0.500.0 (21 Feb 2012)
 
