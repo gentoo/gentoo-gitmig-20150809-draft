@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.36 2012/02/16 15:11:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.37 2012/04/21 20:13:14 jdhore Exp $
+
+  21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> IPC-Run-0.910.0.ebuild:
+  marked x86 per bug 412983
 
 *IPC-Run-0.910.0 (16 Feb 2012)
 
