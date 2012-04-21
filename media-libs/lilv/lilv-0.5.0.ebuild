@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/lilv-0.5.0.ebuild,v 1.3 2012/03/01 13:44:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/lilv-0.5.0.ebuild,v 1.4 2012/04/21 22:19:08 aballier Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND=">=media-libs/lv2core-6
+RDEPEND="|| ( media-libs/lv2 >=media-libs/lv2core-6 )
 	>=dev-libs/serd-0.5
 	>=dev-libs/sord-0.5"
 DEPEND="${RDEPEND}
