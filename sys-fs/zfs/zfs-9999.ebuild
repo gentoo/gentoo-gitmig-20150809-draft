@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.18 2012/04/11 00:10:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.19 2012/04/21 17:54:52 floppym Exp $
 
 EAPI="4"
+AUTOTOOLS_AUTORECONF="1"
 
 inherit flag-o-matic git-2 linux-mod toolchain-funcs autotools-utils
 
@@ -39,7 +40,6 @@ DEPEND+="
 "
 
 AT_M4DIR="config"
-AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 pkg_setup() {

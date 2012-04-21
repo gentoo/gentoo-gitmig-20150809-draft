@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.17 2012/04/11 00:10:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.18 2012/04/21 17:54:52 floppym Exp $
+
+  21 Apr 2012; Mike Gilbert <floppym@gentoo.org> zfs-9999.ebuild:
+  Set AUTOTOOLS_AUTORECONF before inherit to generate proper dependencies.
 
   11 Apr 2012; Mike Gilbert <floppym@gentoo.org> zfs-9999.ebuild:
   Quote EPREFIX.
