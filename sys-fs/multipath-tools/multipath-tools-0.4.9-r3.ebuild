@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r3.ebuild,v 1.1 2011/11/30 04:30:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r3.ebuild,v 1.2 2012/04/21 05:29:48 vapier Exp $
 
 EAPI="2"
 
@@ -34,7 +34,9 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die
+	# LIBDM_API_FLUSH involves grepping files in /usr/include,
+	# so force the test to go the way we want #411337.
+	emake LIBDM_API_FLUSH=1 CC="$(tc-getCC)" || die
 }
 
 src_install() {
