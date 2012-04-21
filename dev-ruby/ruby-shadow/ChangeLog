@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-shadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.19 2012/04/17 17:14:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.20 2012/04/21 06:55:20 graaff Exp $
+
+*ruby-shadow-2.1.4 (21 Apr 2012)
+
+  21 Apr 2012; Hans de Graaff <graaff@gentoo.org> +ruby-shadow-2.1.4.ebuild:
+  Version bump.
 
   17 Apr 2012; Hans de Graaff <graaff@gentoo.org> ruby-shadow-2.1.3.ebuild:
   Fix USE=doc. Support prefix. Add missing die.
