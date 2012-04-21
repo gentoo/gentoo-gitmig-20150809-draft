@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.838 2012/04/21 17:26:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.839 2012/04/21 22:04:33 jdhore Exp $
+
+  21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> glibc-2.14.1-r3.ebuild:
+  marked x86 per bug 411903
 
   21 Apr 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.14.1-r3.ebuild:
   Also add fetestexcept libm hppa patch to 2.14.1 #412933 by Jeroen Roovers.
