@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r200.ebuild,v 1.2 2012/04/15 10:19:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r200.ebuild,v 1.3 2012/04/21 09:05:17 tetromino Exp $
 
 EAPI="4"
 
@@ -83,6 +83,9 @@ src_prepare() {
 
 	# CVE-2011-3064, https://bugzilla.redhat.com/show_bug.cgi?id=807596
 	epatch "${FILESDIR}/${P}-svgimagebuffer-clip.patch"
+
+	# Build failure with USE=-geoloc, bug #411955
+	epatch "${FILESDIR}/${P}-no-geoloc.patch"
 
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727

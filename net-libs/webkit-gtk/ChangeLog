@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.154 2012/04/19 20:43:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.155 2012/04/21 09:05:17 tetromino Exp $
+
+  21 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-1.8.0-r200.ebuild, webkit-gtk-1.8.0-r300.ebuild,
+  +files/webkit-gtk-1.8.0-no-geoloc.patch:
+  Fix build failure when USE=-geoloc (bug #411955, thanks to Nikolaj Sjujskij
+  and Balint SZENTE).
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> webkit-gtk-1.6.3-r200.ebuild,
   webkit-gtk-1.6.3-r300.ebuild:
