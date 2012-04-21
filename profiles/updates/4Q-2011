@@ -18,7 +18,6 @@ move x11-misc/remind app-misc/remind
 move x11-misc/bubblemon x11-plugins/bubblemon
 move app-misc/dsgui app-misc/datovka
 move dev-php5/pecl-gearman dev-php/pecl-gearman
-move app-text/djview4 app-text/djview
 move dev-php5/ezc-Archive dev-php/ezc-Archive
 move dev-php5/ezc-Authentication dev-php/ezc-Authentication
 move dev-php5/ezc-AuthenticationDatabaseTiein dev-php/ezc-AuthenticationDatabaseTiein
