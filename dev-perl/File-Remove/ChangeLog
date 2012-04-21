@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/File-Remove
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.79 2012/04/17 21:54:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.80 2012/04/21 02:20:44 robbat2 Exp $
+
+*File-Remove-1.520.0 (21 Apr 2012)
+
+  21 Apr 2012; Robin H. Johnson <robbat2@gentoo.org>
+  File-Remove-1.500.0.ebuild, File-Remove-1.510.0.ebuild,
+  +File-Remove-1.520.0.ebuild:
+  Version bump via perl-bump experimental tool.
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> File-Remove-1.510.0.ebuild:
   Marking File-Remove-1.510.0 ppc64 for bug 404669
