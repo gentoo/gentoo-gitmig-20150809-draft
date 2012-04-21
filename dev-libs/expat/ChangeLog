@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.134 2012/04/18 20:08:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.135 2012/04/21 12:16:46 maekke Exp $
+
+  21 Apr 2012; Markus Meier <maekke@gentoo.org> expat-2.1.0.ebuild:
+  arm stable, bug #412089
 
 *expat-2.1.0-r1 (18 Apr 2012)
 
