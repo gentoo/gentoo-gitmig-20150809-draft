@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-gvfs-mount
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-gvfs-mount/ChangeLog,v 1.1 2009/08/24 10:03:55 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-gvfs-mount/ChangeLog,v 1.2 2012/04/21 05:51:32 ssuominen Exp $
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-gvfs-mount-0.0.4.ebuild:
+  Remove USE="debug" which triggered -DXFCE_DISABLE_DEPRECATED resulting in
+  implicit xfce_exec and xfce_err. Install to libdir instead of libexecdir.
 
 *xfce4-gvfs-mount-0.0.4 (24 Aug 2009)
 
