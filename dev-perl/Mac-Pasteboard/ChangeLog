@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mac-Pasteboard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mac-Pasteboard/ChangeLog,v 1.6 2011/12/25 12:15:12 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mac-Pasteboard/ChangeLog,v 1.7 2012/04/21 19:10:57 tove Exp $
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org> -Mac-Pasteboard-0.2.0.ebuild:
+  Cleanup
 
   25 Dec 2011; Fabian Groffen <grobian@gentoo.org> Mac-Pasteboard-0.3.0.ebuild:
   Put back keywords, verified to work, bug #395265

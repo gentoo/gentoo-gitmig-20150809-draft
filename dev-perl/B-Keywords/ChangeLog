@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/B-Keywords
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/ChangeLog,v 1.23 2012/02/12 20:20:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Keywords/ChangeLog,v 1.24 2012/04/21 19:55:07 tove Exp $
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org> -B-Keywords-1.110.0.ebuild:
+  Cleanup
 
 *B-Keywords-1.120.0 (12 Feb 2012)
 

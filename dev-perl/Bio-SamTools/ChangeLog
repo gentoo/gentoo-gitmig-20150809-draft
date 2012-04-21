@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Bio-SamTools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/ChangeLog,v 1.6 2012/02/29 08:57:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/ChangeLog,v 1.7 2012/04/21 19:53:33 tove Exp $
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org> -Bio-SamTools-1.290.0.ebuild,
+  -Bio-SamTools-1.300.0.ebuild, -Bio-SamTools-1.310.0.ebuild:
+  Cleanup
 
 *Bio-SamTools-1.330.0 (29 Feb 2012)
 

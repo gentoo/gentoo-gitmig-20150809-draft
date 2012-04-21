@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Sender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/ChangeLog,v 1.29 2012/03/06 15:04:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/ChangeLog,v 1.30 2012/04/21 19:31:29 tove Exp $
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org> -Email-Sender-0.110.3.ebuild:
+  Cleanup
 
 *Email-Sender-0.110.5 (06 Mar 2012)
 
