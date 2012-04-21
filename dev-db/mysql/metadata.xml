@@ -5,9 +5,7 @@
 <!-- 
 Please note that this list is shared between the following packages:
 dev-db/mysql
-dev-db/mysql-community
-dev-db/mariadb (upcoming)
-dev-db/mysql-cluster (upcoming)
+dev-db/mariadb
 -->
 <use>
   <flag name='big-tables'>Make tables contain up to 1.844E+19 rows</flag>
