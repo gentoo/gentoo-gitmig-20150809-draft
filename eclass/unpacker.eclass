@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.6 2012/04/05 03:20:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.7 2012/04/21 05:45:29 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -253,8 +253,27 @@ unpack_deb() {
 
 	unpack_banner "${deb}"
 
-	ar x "${deb}"
-	unpack ./data.tar*
+	# on AIX ar doesn't work out as their ar used a different format
+	# from what GNU ar (and thus what .deb files) produce
+	if [[ -n ${EPREFIX} ]] ; then
+		{
+			read # global header
+			[[ ${REPLY} = "!<arch>" ]] || die "${deb} does not seem to be a deb archive"
+			local f timestamp uid gid mode size magic
+			while read f timestamp uid gid mode size magic ; do
+				[[ -n ${f} && -n ${size} ]] || continue # ignore empty lines
+				if [[ ${f} = "data.tar"* ]] ; then
+					head -c "${size}" > "${f}"
+				else
+					head -c "${size}" > /dev/null # trash it
+				fi
+			done
+		} < "${deb}"
+	else
+		ar x "${deb}"
+	fi
+
+	unpacker ./data.tar*
 }
 
 # @FUNCTION: _unpacker
