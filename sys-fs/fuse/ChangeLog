@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.158 2012/04/14 05:57:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.159 2012/04/21 05:55:18 radhermit Exp $
+
+*fuse-2.9.0 (21 Apr 2012)
+
+  21 Apr 2012; Tim Harder <radhermit@gentoo.org> +fuse-2.9.0.ebuild:
+  Version bump.
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> fuse-2.8.6.ebuild:
   Add ~amd64-linux keyword.
