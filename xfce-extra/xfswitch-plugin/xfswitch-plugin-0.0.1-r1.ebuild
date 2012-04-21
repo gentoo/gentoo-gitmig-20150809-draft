@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfswitch-plugin/xfswitch-plugin-0.0.1-r1.ebuild,v 1.1 2012/04/21 00:16:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfswitch-plugin/xfswitch-plugin-0.0.1-r1.ebuild,v 1.2 2012/04/21 00:56:56 ssuominen Exp $
 
 EAPI=4
 inherit multilib xfconf
@@ -35,7 +35,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if ! use gdm; then
+	if ! use gdm; then #411921
 		sed -i \
 			-e '/command/s:gdmflexiserver:/usr/libexec/lightdm/&:' \
 			panel-plugin/main.c || die
