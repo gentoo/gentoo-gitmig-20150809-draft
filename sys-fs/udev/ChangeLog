@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.679 2012/04/12 16:29:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.680 2012/04/21 06:36:32 vapier Exp $
+
+  21 Apr 2012; Mike Frysinger <vapier@gentoo.org> udev-182-r3.ebuild:
+  Restore ~arch keywords #410401.
 
   12 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> udev-171-r5.ebuild:
   Try to support sys-apps/hwids also in 171-r5 for people who have temporarily
