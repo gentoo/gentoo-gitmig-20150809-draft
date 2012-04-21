@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.4.4.ebuild,v 1.2 2012/03/01 13:45:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.4.4.ebuild,v 1.3 2012/04/21 22:21:31 aballier Exp $
 
 EAPI=4
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc gtk qt4"
 
-RDEPEND=">=media-libs/lv2core-6
-	media-libs/lv2-ui
+RDEPEND="|| ( media-libs/lv2 ( >=media-libs/lv2core-6 media-libs/lv2-ui ) )
 	gtk? ( x11-libs/gtk+:2 )
 	qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
