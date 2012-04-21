@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.78 2012/04/17 19:46:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.79 2012/04/21 12:08:59 maekke Exp $
+
+  21 Apr 2012; Markus Meier <maekke@gentoo.org> netatalk-2.2.1-r3.ebuild:
+  arm stable, bug #411291
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> netatalk-2.2.1-r3.ebuild:
   Marking netatalk-2.2.1-r3 ppc64 for bug 411291
