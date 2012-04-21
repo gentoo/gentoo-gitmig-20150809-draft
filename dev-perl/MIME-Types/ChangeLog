@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.73 2012/01/24 16:08:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.74 2012/04/21 20:08:59 jdhore Exp $
+
+  21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> MIME-Types-1.340.0.ebuild:
+  marked x86 per bug 412975
 
 *MIME-Types-1.340.0 (24 Jan 2012)
 
