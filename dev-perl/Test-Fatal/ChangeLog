@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Fatal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.19 2012/03/24 12:52:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.20 2012/04/21 20:01:46 jdhore Exp $
+
+  21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> Test-Fatal-0.10.0.ebuild:
+  marked x86 per bug 412951
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org> Test-Fatal-0.9.0.ebuild:
   Add Prefix keywords, bug #403413
