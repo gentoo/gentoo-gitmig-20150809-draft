@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.101 2012/04/14 07:45:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.102 2012/04/21 06:34:56 vapier Exp $
+
+  21 Apr 2012; Mike Frysinger <vapier@gentoo.org> lshw-02.16b-r1.ebuild:
+  Restore ~arch keywords #410401.
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> lshw-02.16b-r1.ebuild:
   Add ~amd64-linux and ~x86-linux keywords.
