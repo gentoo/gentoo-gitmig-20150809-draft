@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.6 2012/04/16 18:55:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.7 2012/04/21 06:32:52 vapier Exp $
+
+  21 Apr 2012; Mike Frysinger <vapier@gentoo.org> hwids-20120408.ebuild,
+  hwids-20120416.ebuild:
+  Add ~arch keywords #410401.
 
 *hwids-20120416 (16 Apr 2012)
 
