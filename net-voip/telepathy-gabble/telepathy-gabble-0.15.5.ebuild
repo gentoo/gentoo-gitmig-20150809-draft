@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.14.0.ebuild,v 1.1 2011/11/20 13:09:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.15.5.ebuild,v 1.1 2012/04/21 21:27:45 nirbheek Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -14,12 +14,12 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
-IUSE="debug +jingle test"
+IUSE="+jingle test"
 
 RDEPEND=">=dev-libs/glib-2.24:2
 	>=sys-apps/dbus-1.1.0
 	>=dev-libs/dbus-glib-0.82
-	>=net-libs/telepathy-glib-0.15.9
+	>=net-libs/telepathy-glib-0.17.7
 	>=net-libs/libnice-0.0.11
 	>=net-libs/gnutls-2.10.2
 
@@ -48,8 +48,9 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		$(use_enable jingle google-relay) \
-		$(use_enable debug handle-leak-debug)
+		--disable-coding-style-checks \
+		--disable-Werror \
+		$(use_enable jingle file-transfer)
 }
 
 src_test() {
