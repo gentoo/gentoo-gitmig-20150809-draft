@@ -1,0 +1,12 @@
+# ChangeLog for x11-misc/bumblebee
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.1 2012/04/21 13:26:18 pacho Exp $
+
+*bumblebee-3.0 (21 Apr 2012)
+
+  21 Apr 2012; Pacho Ramos <pacho@gentoo.org> +bumblebee-3.0.ebuild,
+  +files/bumblebee.initd, +files/bumblebee.nouveau-confd,
+  +files/bumblebee.nvidia-confd, +metadata.xml:
+  Initial commit from bumblebee overlay, this fixes bug #384083. Thanks a lot to
+  mva and rei4dan for their work.
+
