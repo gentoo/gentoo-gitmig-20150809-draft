@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.6.6.ebuild,v 1.3 2009/11/07 18:07:34 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.6.6.ebuild,v 1.4 2012/04/21 22:22:15 aballier Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE="doc jack"
 
 RDEPEND=">=dev-libs/redland-1.0.6
 	jack? ( >=media-sound/jack-audio-connection-kit-0.107.0 )
-	media-libs/lv2core"
+	|| ( media-libs/lv2 media-libs/lv2core )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig"
