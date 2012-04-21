@@ -1,6 +1,14 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.195 2012/04/21 19:05:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.196 2012/04/21 20:00:52 johu Exp $
+
+  21 Apr 2012; Johannes Huber <johu@gentoo.org> -avidemux-2.5.4-r2.ebuild,
+  -files/avidemux-2.5.4-dummy-sound-fix.patch,
+  -files/avidemux-2.5.4-openfileqt.patch,
+  -files/avidemux-2.5.4-x264-build115.patch,
+  -files/avidemux-2.5.4-x264-version-fix.patch,
+  -files/avidemux-2.5.4-x264.patch, -files/avidemux-2.5.4-xvid.patch:
+  Remove old.
 
   21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> avidemux-2.5.6-r1.ebuild:
   marked x86 per bug 412529
