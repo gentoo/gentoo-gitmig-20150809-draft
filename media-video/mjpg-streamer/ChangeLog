@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mjpg-streamer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.1 2011/11/17 20:00:39 aidecoe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.2 2012/04/21 20:20:45 aidecoe Exp $
+
+  21 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  mjpg-streamer-0_pre20110522.ebuild:
+  Proxy commit on behalf of Andrzej Pauli <andrzej.pauli@gmail.com>. Depend
+  virtual/jpeg instead of media-libs/jpeg. Fixes bug #411931.
 
 *mjpg-streamer-0_pre20110522 (17 Nov 2011)
 

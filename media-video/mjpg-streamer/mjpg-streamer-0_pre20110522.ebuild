@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/mjpg-streamer-0_pre20110522.ebuild,v 1.1 2011/11/17 20:00:39 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/mjpg-streamer-0_pre20110522.ebuild,v 1.2 2012/04/21 20:20:45 aidecoe Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ REQUIRED_USE="|| ( ${INPUT_PLUGINS} )
 	|| ( ${OUTPUT_PLUGINS} )
 	v4l? ( input_uvc )"
 
-RDEPEND="media-libs/jpeg
+RDEPEND="virtual/jpeg
 	v4l? ( input_uvc? ( media-libs/libv4l ) )"
 DEPEND="${RDEPEND}
 	input_testpicture? ( media-gfx/imagemagick )"
