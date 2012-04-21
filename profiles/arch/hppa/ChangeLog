@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.141 2012/04/19 15:26:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.142 2012/04/21 00:38:01 ssuominen Exp $
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="gdm" because USE="new-login" is masked too for
+  x11-misc/xscreensaver.
 
   19 Apr 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=udev for xfce-extra/xfce4-systemload-plugin (bug #412627).
