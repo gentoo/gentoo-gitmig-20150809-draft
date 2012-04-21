@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.835 2012/04/21 09:15:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.836 2012/04/21 15:54:06 vapier Exp $
+
+  21 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.9_p20081201-r3.ebuild, glibc-2.10.1-r1.ebuild, glibc-2.11.3.ebuild,
+  glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild, glibc-2.13-r2.ebuild,
+  glibc-2.13-r4.ebuild, glibc-2.14.ebuild, glibc-2.14.1-r2.ebuild,
+  glibc-2.14.1-r3.ebuild, glibc-2.15.ebuild, glibc-9999.ebuild,
+  files/eblits/src_compile.eblit, metadata.xml:
+  Drop USE=glibc-omitfp support since upstream has as well.
 
   21 Apr 2012; Agostino Sarubbo <ago@gentoo.org> glibc-2.14.1-r3.ebuild:
   Stable for amd64, wrt bug #411903

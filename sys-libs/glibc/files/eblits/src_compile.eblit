@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.24 2012/04/14 21:59:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.25 2012/04/21 15:54:06 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -23,8 +23,6 @@ glibc_do_configure() {
 	if has_version '<sys-libs/glibc-2.13' ; then
 		myconf="${myconf} --enable-old-ssp-compat"
 	fi
-
-	use glibc-omitfp && myconf="${myconf} --enable-omitfp"
 
 	[[ ${CTARGET//_/-} == *-softfloat-* ]] && myconf="${myconf} --without-fp"
 
