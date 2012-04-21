@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/djview-4.8.ebuild,v 1.1 2011/12/12 07:50:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/djview-4.8.ebuild,v 1.2 2012/04/21 17:09:49 ssuominen Exp $
 
-EAPI="4"
+EAPI=4
 
-inherit eutils autotools versionator toolchain-funcs multilib nsplugins fdo-mime flag-o-matic
+inherit autotools eutils gnome2-utils fdo-mime flag-o-matic versionator toolchain-funcs multilib nsplugins
 
 MY_P=${PN}-$(replace_version_separator 2 '-')
 
@@ -19,8 +19,7 @@ IUSE="debug nsplugin"
 
 RDEPEND="
 	>=app-text/djvu-3.5.22-r1
-	x11-libs/qt-gui:4
-	!!app-text/djview4"
+	x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.67
 	dev-util/pkgconfig
@@ -29,6 +28,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-qt48.patch
+
 	# Force XEmbed instead of Xt-based mainloop (disable Xt autodep)
 	sed -e 's:\(ac_xt=\)yes:\1no:' -i configure* || die
 	sed 's/AC_CXX_OPTIMIZE/OPTS=;AC_SUBST(OPTS)/' -i configure.ac || die #263688
@@ -49,7 +50,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) CXX=$(tc-getCXX)
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)"
 }
 
 src_install() {
@@ -69,10 +70,16 @@ src_install() {
 	domenu djvulibre-djview4.desktop
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/djview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.8 2012/01/16 18:42:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.9 2012/04/21 17:09:49 ssuominen Exp $
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> djview-4.7.ebuild,
+  djview-4.8.ebuild, +files/djview-4.8-qt48.patch:
+  Remove unnecessary djview4 blockers wrt updates/2Q-2012. Fix building with Qt
+  4.8 (upstream patch) wrt #401517 by Rafał Mużyło.
 
   16 Jan 2012; Tobias Klausmann <klausman@gentoo.org> djview-4.7.ebuild:
   Stable on alpha, bug #372589
