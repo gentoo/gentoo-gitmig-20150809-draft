@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-indicator-plugin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/ChangeLog,v 1.11 2011/11/26 16:30:20 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/ChangeLog,v 1.12 2012/04/21 05:21:01 ssuominen Exp $
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-indicator-plugin-0.4.0.ebuild:
+  Install to libdir instead of libexecdir.
 
   26 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-indicator-plugin-0.4.0.ebuild:

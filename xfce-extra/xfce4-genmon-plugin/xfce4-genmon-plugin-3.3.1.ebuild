@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-genmon-plugin/xfce4-genmon-plugin-3.3.1.ebuild,v 1.5 2012/02/13 21:55:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-genmon-plugin/xfce4-genmon-plugin-3.3.1.ebuild,v 1.6 2012/04/21 05:19:34 ssuominen Exp $
 
 EAPI=4
-inherit xfconf
+inherit multilib xfconf
 
 DESCRIPTION="Cyclically spawns the executable, captures its output and displays the result into the panel."
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin"
@@ -21,5 +21,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
+	XFCONF=(
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir)
+		)
+
 	DOCS=( AUTHORS ChangeLog NEWS README )
 }

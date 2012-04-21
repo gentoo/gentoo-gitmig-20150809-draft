@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-fsguard-plugin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard-plugin/ChangeLog,v 1.10 2011/04/23 17:37:47 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard-plugin/ChangeLog,v 1.11 2012/04/21 05:17:25 ssuominen Exp $
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-fsguard-plugin-1.0.0.ebuild:
+  Install to libdir instead of libexecdir.
 
   23 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-fsguard-plugin-1.0.0.ebuild:
