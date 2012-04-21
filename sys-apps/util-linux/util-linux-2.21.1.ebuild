@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.21.1.ebuild,v 1.4 2012/04/14 05:14:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.21.1.ebuild,v 1.5 2012/04/21 06:24:18 vapier Exp $
 
 EAPI="3"
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
-inherit eutils toolchain-funcs libtool flag-o-matic
+AUTOTOOLS_AUTO_DEPEND="no"
+inherit eutils toolchain-funcs libtool flag-o-matic autotools
 [[ ${PV} == "9999" ]] && inherit git-2 autotools
 
 MY_PV=${PV/_/-}
@@ -36,7 +37,8 @@ RDEPEND="!sys-process/schedutils
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
 	perl? ( dev-lang/perl )
 	selinux? ( sys-libs/libselinux )
-	slang? ( sys-libs/slang )"
+	slang? ( sys-libs/slang )
+	uclibc? ( ${AUTOTOOLS_DEPEND} )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/os-headers"
@@ -49,7 +51,10 @@ src_prepare() {
 	else
 		use loop-aes && epatch "${WORKDIR}"/util-linux-*.diff
 	fi
-	use uclibc && sed -i -e s/versionsort/alphasort/g -e s/strverscmp.h/dirent.h/g mount/lomount.c
+	if use uclibc ; then
+		epatch "${FILESDIR}"/${P}-no-printf-alloc.patch #406303
+		eautoreconf
+	fi
 	elibtoolize
 }
 

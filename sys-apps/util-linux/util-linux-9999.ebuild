@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.30 2012/04/14 05:14:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.31 2012/04/21 06:24:18 vapier Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ fi
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="+cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang static-libs uclibc unicode"
+IUSE="+cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang static-libs unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -50,7 +50,6 @@ src_prepare() {
 	else
 		use loop-aes && epatch "${WORKDIR}"/util-linux-*.diff
 	fi
-	use uclibc && sed -i -e s/versionsort/alphasort/g -e s/strverscmp.h/dirent.h/g mount/lomount.c
 	elibtoolize
 }
 
