@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.307 2012/01/28 06:27:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.308 2012/04/21 00:47:35 ssuominen Exp $
+
+*xscreensaver-5.15-r1 (21 Apr 2012)
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +xscreensaver-5.15-r1.ebuild, metadata.xml:
+  Introduce USE="gdm" which will select gdmflexiserver from gnome-base/gdm
+  instead of x11-misc/lightdm. This behavior should be matching
+  xfce-extra/xfswitch-plugin.
 
   28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -xscreensaver-5.14.ebuild, -files/xscreensaver-5.14-gentoo.patch:
