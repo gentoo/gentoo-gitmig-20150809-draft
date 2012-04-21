@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-4.0.4.ebuild,v 1.1 2012/04/21 21:24:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-4.0.4.ebuild,v 1.2 2012/04/21 22:17:45 floppym Exp $
 
 EAPI="4"
 
@@ -33,7 +33,7 @@ S="${WORKDIR}/${MY_P}"
 src_compile() {
 	distutils_src_compile
 	if use doc; then
-		PYTHONPATH="build-$(PYTHON --ABI -f)/lib" emake -C doc html
+		emake -C doc html
 	fi
 }
 
