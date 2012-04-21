@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sigar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sigar/ChangeLog,v 1.2 2012/03/05 10:30:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sigar/ChangeLog,v 1.3 2012/04/21 07:14:15 graaff Exp $
+
+*sigar-0.7.2 (21 Apr 2012)
+
+  21 Apr 2012; Hans de Graaff <graaff@gentoo.org> +sigar-0.7.2.ebuild:
+  Version bump. Run tests.
 
   05 Mar 2012; Thomas Kahle <tomka@gentoo.org> sigar-0.7.0.ebuild:
   marked ~x86 per bug 398989
