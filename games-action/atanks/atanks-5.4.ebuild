@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-5.3.ebuild,v 1.1 2012/03/21 20:12:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-5.4.ebuild,v 1.1 2012/04/21 21:22:00 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,6 @@ DEPEND="media-libs/allegro:0[X]"
 
 src_prepare() {
 	find . -type f -name ".directory" -exec rm -vf '{}' +
-	epatch "${FILESDIR}"/${P}-build.patch
 }
 
 src_compile() {
