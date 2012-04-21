@@ -1,0 +1,11 @@
+# ChangeLog for sys-power/bbswitch
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.1 2012/04/21 13:03:57 pacho Exp $
+
+*bbswitch-0.4.1 (21 Apr 2012)
+
+  21 Apr 2012; Pacho Ramos <pacho@gentoo.org> +bbswitch-0.4.1.ebuild,
+  +files/bbswitch.modprobe, +metadata.xml:
+  Initial commit from bumblebee overlay, this fixes bug #384083. Thanks a lot to
+  mva and rei4dan for their work.
+
