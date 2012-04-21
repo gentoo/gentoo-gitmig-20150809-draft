@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.193 2012/04/21 16:57:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.194 2012/04/21 17:16:49 ssuominen Exp $
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -tiff-3.9.5.ebuild,
+  -tiff-3.9.5-r1.ebuild, -tiff-4.0.0.ebuild, -tiff-4.0.0-r1.ebuild,
+  -files/tiff-4.0.0-missing_lzma_pkgconfig.patch, -tiff-4.0.1.ebuild:
+  old
 
   21 Apr 2012; Raúl Porcel <armin76@gentoo.org> tiff-3.9.5-r2.ebuild,
   tiff-4.0.1-r1.ebuild:
