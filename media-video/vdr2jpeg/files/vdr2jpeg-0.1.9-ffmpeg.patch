@@ -1,8 +1,15 @@
-Index: vdr2jpeg-0.1.9/ffm.cpp
-===================================================================
---- vdr2jpeg-0.1.9.orig/ffm.cpp
-+++ vdr2jpeg-0.1.9/ffm.cpp
-@@ -185,7 +185,7 @@ static bool do_video_out(AVFormatContext
+diff -urN vdr2jpeg-0.1.9.old/ffm.cpp vdr2jpeg-0.1.9/ffm.cpp
+--- vdr2jpeg-0.1.9.old/ffm.cpp	2012-04-21 09:53:26.727892390 +0200
++++ vdr2jpeg-0.1.9/ffm.cpp	2012-04-21 09:57:25.555890271 +0200
+@@ -21,6 +21,7 @@
+ 
+ extern "C" {
+ #include <libavutil/avutil.h>
++#include <libavutil/mathematics.h>
+ #include <libavcodec/avcodec.h>
+ #include <libavformat/avformat.h>
+ #include <libswscale/swscale.h>
+@@ -185,7 +186,7 @@
      }else
          ost->sync_opts= lrintf(get_sync_ipts(ost) / av_q2d(enc->time_base));
  
@@ -11,7 +18,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
      if (nb_frames <= 0)
          return true;
  
-@@ -221,7 +221,7 @@ static bool do_video_out(AVFormatContext
+@@ -221,7 +222,7 @@
              if(dec->coded_frame && enc->coded_frame->pts != AV_NOPTS_VALUE)
                  pkt.pts= av_rescale_q(enc->coded_frame->pts, enc->time_base, ost->st->time_base);
              if(dec->coded_frame && dec->coded_frame->key_frame)
@@ -20,16 +27,16 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
  
              av_interleaved_write_frame(s, &pkt);
              enc->coded_frame = old_frame;
-@@ -245,7 +245,7 @@ static bool do_video_out(AVFormatContext
+@@ -245,7 +246,7 @@
                  big_picture.quality = (int)ist->st->quality;
              }else
                  big_picture.quality = (int)ost->st->quality;
 -                big_picture.pict_type = 0;
-+                big_picture.pict_type = AV_PICTURE_TYPE_NONE;
++                big_picture.pict_type = (AVPictureType) 0;
  //            big_picture.pts = AV_NOPTS_VALUE;
              big_picture.pts= ost->sync_opts;
  //            big_picture.pts= av_rescale(ost->sync_opts, AV_TIME_BASE*(int64_t)enc->time_base.num, enc->time_base.den);
-@@ -268,7 +268,7 @@ static bool do_video_out(AVFormatContext
+@@ -268,7 +269,7 @@
     pkt.dts != AV_NOPTS_VALUE ? av_rescale(pkt.dts, enc->time_base.den, AV_TIME_BASE*(int64_t)enc->time_base.num) : -1);*/
  
                  if(enc->coded_frame && enc->coded_frame->key_frame)
@@ -38,7 +45,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                  av_interleaved_write_frame(s, &pkt);
                  *frame_size = ret;
              }
-@@ -316,13 +316,17 @@ static int output_packet(AVInputStream *
+@@ -316,13 +317,17 @@
          data_size = 0;
          if (ist->decoding_needed) {
              switch(ist->st->codec->codec_type) {
@@ -59,7 +66,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                      ist->st->quality= picture.quality;
                      if (ret < 0)
                          goto fail_decode;
-@@ -341,7 +345,7 @@ static int output_packet(AVInputStream *
+@@ -341,7 +346,7 @@
                  goto fail_decode;
              }
          } else {
@@ -68,7 +75,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                  if (ist->st->codec->time_base.num != 0) {
                      ist->next_pts += ((int64_t)AV_TIME_BASE *
                                        ist->st->codec->time_base.num) /
-@@ -354,16 +358,6 @@ static int output_packet(AVInputStream *
+@@ -354,16 +359,6 @@
              len = 0;
          }
  
@@ -85,7 +92,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
  #if 0
          /* mpeg PTS deordering : if it is a P or I frame, the PTS
             is the one of the next displayed one */
-@@ -398,7 +392,7 @@ static int output_packet(AVInputStream *
+@@ -398,7 +393,7 @@
  
                      if (ost->encoding_needed) {
                          switch(ost->st->codec->codec_type) {
@@ -94,7 +101,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                              if(!do_video_out(os, ost, ist, &picture, &frame_size))
                                 return -1;
                              break;
-@@ -415,9 +409,9 @@ static int output_packet(AVInputStream *
+@@ -415,9 +410,9 @@
  
                          avcodec_get_frame_defaults(&avframe);
                          ost->st->codec->coded_frame= &avframe;
@@ -106,7 +113,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                              ost->sync_opts++;
                          }
  
-@@ -438,7 +432,7 @@ static int output_packet(AVInputStream *
+@@ -438,7 +433,7 @@
                          opkt.flags= pkt->flags;
  
                          //FIXME remove the following 2 lines they shall be replaced by the bitstream filters
@@ -115,7 +122,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                              opkt.destruct= av_destruct_packet;
  
                          av_interleaved_write_frame(os, &opkt);
-@@ -459,7 +453,7 @@ static int output_packet(AVInputStream *
+@@ -459,7 +454,7 @@
                  AVCodecContext *enc= ost->st->codec;
                  os = output_files[ost->file_index];
  
@@ -124,7 +131,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                      continue;
  
                  if (ost->encoding_needed) {
-@@ -469,10 +463,10 @@ static int output_packet(AVInputStream *
+@@ -469,10 +464,10 @@
                          pkt.stream_index= ost->index;
  
                          switch(ost->st->codec->codec_type) {
@@ -137,7 +144,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                              break;
                          default:
                              ret=-1;
-@@ -547,11 +541,6 @@ static bool av_encode(AVFormatContext **
+@@ -547,11 +542,6 @@
              ist->index = k;
              ist->discard = 1; /* the stream is discarded by default
                                   (changed later) */
@@ -149,7 +156,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
          }
      }
  
-@@ -641,20 +630,20 @@ static bool av_encode(AVFormatContext **
+@@ -641,20 +631,20 @@
              else
                  codec->time_base = ist->st->time_base;
              switch(codec->codec_type) {
@@ -173,7 +180,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                  ost->video_resample = ((codec->width != icodec->width) ||
                          (codec->height != icodec->height) ||
                          (codec->pix_fmt != icodec->pix_fmt));
-@@ -686,7 +675,7 @@ static bool av_encode(AVFormatContext **
+@@ -686,7 +676,7 @@
                  return false;
              }
          }
@@ -182,7 +189,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
              int size= codec->width * codec->height;
              bit_buffer_size= FFMAX(bit_buffer_size, 4*size);
          }
-@@ -738,7 +727,7 @@ static bool av_encode(AVFormatContext **
+@@ -738,7 +728,7 @@
                          ist->file_index, ist->index);
                  return false;
              }
@@ -191,7 +198,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
              //    ist->st->codec->flags |= CODEC_FLAG_REPEAT_FIELD;
          }
      }
-@@ -786,7 +775,7 @@ static bool av_encode(AVFormatContext **
+@@ -786,7 +776,7 @@
              ost = ost_table[i];
              os = output_files[ost->file_index];
              ist = ist_table[ost->source_index];
@@ -200,7 +207,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                  opts = ost->sync_opts * av_q2d(ost->st->codec->time_base);
              else
                  opts = ost->st->pts.val * av_q2d(ost->st->time_base);
-@@ -924,22 +913,22 @@ static bool av_encode(AVFormatContext **
+@@ -924,22 +914,22 @@
  void print_error(const char *filename, int err)
  {
      switch(err) {
@@ -227,7 +234,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
          fprintf(stderr, "%s: memory allocation error occured\n", filename);
          break;
      default:
-@@ -968,9 +957,9 @@ static bool opt_input_file(const char *f
+@@ -968,9 +958,9 @@
      ap->pix_fmt = frame_pix_fmt;
      ap->channel = 0;
      ap->standard = 0;
@@ -239,7 +246,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
  
      /* open the input file with generic libav function */
      err = av_open_input_file(&ic, filename, file_iformat, 0, ap);
-@@ -999,7 +988,7 @@ static bool opt_input_file(const char *f
+@@ -999,7 +989,7 @@
          AVCodecContext *enc = ic->streams[i]->codec;
          enc->thread_count= 1;
          switch(enc->codec_type) {
@@ -248,7 +255,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
              frame_height = enc->height;
              frame_width = enc->width;
              frame_aspect_ratio = av_q2d(enc->sample_aspect_ratio) * enc->width / enc->height;
-@@ -1020,13 +1009,12 @@ static bool opt_input_file(const char *f
+@@ -1020,13 +1010,12 @@
              frame_rate      = rfps;
              frame_rate_base = rfps_base;
  
@@ -265,7 +272,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
              break;
          default:
              //av_abort();
-@@ -1058,12 +1046,12 @@ static void check_video_inputs(int *has_
+@@ -1058,12 +1047,12 @@
          for(i=0;i<ic->nb_streams;i++) {
              AVCodecContext *enc = ic->streams[i]->codec;
              switch(enc->codec_type) {
@@ -282,7 +289,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
                  break;
              default:
                  //av_abort();
-@@ -1086,14 +1074,14 @@ static bool new_video_stream(AVFormatCon
+@@ -1086,14 +1075,14 @@
          fprintf(stderr, "Could not alloc stream\n");
          return false;
      }
@@ -299,7 +306,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
  
          video_enc->codec_id = codec_id;
          codec = avcodec_find_encoder(codec_id);
-@@ -1203,7 +1191,7 @@ static bool opt_output_file(const char *
+@@ -1203,7 +1192,7 @@
      oc = avformat_alloc_context();
  
      if (!file_oformat) {
@@ -308,7 +315,7 @@ Index: vdr2jpeg-0.1.9/ffm.cpp
          if (!file_oformat) {
              fprintf(stderr, "Unable for find a suitable output format for '%s'\n",
                      filename);
-@@ -1239,7 +1227,7 @@ static bool opt_output_file(const char *
+@@ -1239,7 +1228,7 @@
      /* check filename in case of an image number is expected */
      if (oc->oformat->flags & AVFMT_NEEDNUMBER) {
          if (!av_filename_number_test(oc->filename)) {
