@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/omptagger
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/ChangeLog,v 1.9 2010/06/02 06:37:58 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/ChangeLog,v 1.10 2012/04/21 16:54:32 armin76 Exp $
+
+  21 Apr 2012; Raúl Porcel <armin76@gentoo.org> omptagger-1.0.2.ebuild,
+  omptagger-1.0.3.ebuild:
+  Drop sparc keywords
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove omp from metadata.xml (#147119)
