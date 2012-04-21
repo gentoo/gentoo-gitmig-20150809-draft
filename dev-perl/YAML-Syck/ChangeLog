@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.40 2012/04/21 09:09:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.41 2012/04/21 19:22:05 jdhore Exp $
+
+  21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> YAML-Syck-1.200.0.ebuild:
+  marked x86 per bug 412869
 
   21 Apr 2012; Agostino Sarubbo <ago@gentoo.org> YAML-Syck-1.200.0.ebuild:
   Stable for amd64, wrt bug #412869
