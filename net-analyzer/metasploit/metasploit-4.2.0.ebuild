@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.2.0.ebuild,v 1.2 2012/02/28 14:19:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.2.0.ebuild,v 1.3 2012/04/21 16:54:21 armin76 Exp $
 
 EAPI="3"
 inherit eutils
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.metasploit.org/"
 
 LICENSE="BSD"
 SLOT="4.2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gui mysql postgres"
 
 # Note we use bundled gems (see data/msfweb/vendor/rails/) as upstream voted for
