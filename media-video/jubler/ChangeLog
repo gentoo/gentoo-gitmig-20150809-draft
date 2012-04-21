@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.44 2012/02/25 14:30:55 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.45 2012/04/21 08:40:31 scarabeus Exp $
+
+  21 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> jubler-4.6.1-r3.ebuild:
+  Fix build with new ffmpeg/libav. FIxes bug#409685.
 
   25 Feb 2012; Serkan Kaba <serkan@gentoo.org> jubler-4.6.1-r3.ebuild:
   Fix bug #405749 reported by Agostino Sarubbo <ago@gentoo.org>
