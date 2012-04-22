@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.14.1.ebuild,v 1.16 2012/02/19 13:38:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.14.1.ebuild,v 1.17 2012/04/22 20:39:44 tupone Exp $
 
 EAPI=4
 
-inherit games-ggz
+inherit base autotools games-ggz
 
 DESCRIPTION="The client libraries for GGZ Gaming Zone"
 
@@ -20,7 +20,13 @@ RDEPEND="~dev-games/libggz-${PV}
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-PATCHES=( "${FILESDIR}"/${P}-destdir.patch )
+PATCHES=( "${FILESDIR}"/${P}-destdir.patch
+	"${FILESDIR}"/${P}-linguas.patch )
+
+src_prepare() {
+	base_src_prepare
+	eautoreconf
+}
 
 src_configure() {
 	games-ggz_src_configure \

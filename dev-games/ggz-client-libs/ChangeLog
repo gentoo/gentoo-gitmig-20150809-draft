@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ggz-client-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.35 2012/02/19 13:38:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.36 2012/04/22 20:39:44 tupone Exp $
+
+  22 Apr 2012; Tupone Alfredo <tupone@gentoo.org>
+  ggz-client-libs-0.0.14.1.ebuild,
+  +files/ggz-client-libs-0.0.14.1-linguas.patch:
+  Honor LINGUAS. Bug #407175 by Piotr Szymaniak
 
   19 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   ggz-client-libs-0.0.14.1.ebuild:
