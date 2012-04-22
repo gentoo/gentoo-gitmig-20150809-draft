@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/mozrunner-5.2.ebuild,v 1.1 2012/04/21 17:10:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/mozrunner-5.2.ebuild,v 1.2 2012/04/22 18:33:29 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="|| ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson )
+DEPEND="dev-python/simplejson
 	dev-python/mozinfo
 	dev-python/mozprocess
-	dev-python/mozprofile"
-DEPEND="${RDEPEND}
+	dev-python/mozprofile
 	dev-python/setuptools"
+RDEPEND="${DEPEND}"

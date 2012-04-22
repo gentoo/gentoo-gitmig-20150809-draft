@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprofile/mozprofile-0.2.ebuild,v 1.1 2012/04/21 17:02:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprofile/mozprofile-0.2.ebuild,v 1.2 2012/04/22 18:32:08 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -18,8 +18,8 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/manifestdestiny
+DEPEND="dev-python/manifestdestiny
 	dev-python/pysqlite:2
-	dev-python/simplejson"
-DEPEND="${RDEPEND}
+	dev-python/simplejson
 	dev-python/setuptools"
+RDEPEND="${DEPEND}"

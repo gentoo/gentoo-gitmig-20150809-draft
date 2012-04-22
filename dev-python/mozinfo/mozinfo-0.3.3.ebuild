@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozinfo/mozinfo-0.3.3.ebuild,v 1.1 2012/04/21 15:51:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozinfo/mozinfo-0.3.3.ebuild,v 1.2 2012/04/22 18:30:04 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND=""
-DEPEND="dev-python/setuptools"
+DEPEND="dev-python/setuptools
+	dev-python/simplejson"
+RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="mozinfo.py"
