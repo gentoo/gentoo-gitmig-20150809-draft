@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apiextractor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/ChangeLog,v 1.20 2012/04/14 12:44:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/ChangeLog,v 1.21 2012/04/22 12:15:14 maekke Exp $
+
+  22 Apr 2012; Markus Meier <maekke@gentoo.org> apiextractor-0.10.10.ebuild:
+  x86 stable, bug #401789
 
   14 Apr 2012; Agostino Sarubbo <ago@gentoo.org> apiextractor-0.10.10.ebuild:
   Stable for amd64, wrt bug #401789
