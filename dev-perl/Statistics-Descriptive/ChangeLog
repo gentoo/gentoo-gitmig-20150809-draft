@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Statistics-Descriptive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.36 2012/04/21 20:32:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.37 2012/04/22 10:20:05 ago Exp $
+
+  22 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  Statistics-Descriptive-3.40.0.ebuild:
+  Stable for amd64, wrt bug #412959
 
   21 Apr 2012; Jeff Horelick <jdhore@gentoo.org>
   Statistics-Descriptive-3.40.0.ebuild:
