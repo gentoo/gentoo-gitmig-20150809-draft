@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.7.7-r1.ebuild,v 1.1 2012/04/15 00:49:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.7.7-r1.ebuild,v 1.2 2012/04/22 15:01:32 grobian Exp $
 
 EAPI=3
 
@@ -31,9 +31,11 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-#src_prepare() {
-#	sed -i -e "/flags = \['-arch', arch\]/s/= .*$/= ''/" wscript || die
-#}
+src_prepare() {
+	# fix compilation on Darwin
+	# http://code.google.com/p/gyp/issues/detail?id=260
+	sed -i -e "/append('-arch/d" tools/gyp/pylib/gyp/xcode_emulation.py || die
+}
 
 src_configure() {
 	# this is an autotools lookalike confuserator
@@ -50,13 +52,13 @@ src_install() {
 	# WHY U NO MAEK SENSE?!
 	#emake DESTDIR="${D}" install || die
 
-	mkdir -p "${D}"/usr/include/node
-	mkdir -p "${D}"/usr/bin
-	mkdir -p "${D}"/lib/node_modules/npm
-	cp 'src/node.h' 'src/node_buffer.h' 'src/node_object_wrap.h' 'src/node_version.h' "${D}"/usr/include/node || die "Failed to copy stuff"
-	cp 'deps/uv/include/ares.h' 'deps/uv/include/ares_version.h' "${D}"/usr/include/node || die "Failed to copy stuff"
-	cp 'out/Release/node' ${D}/usr/bin/node || die "Failed to copy stuff"
-	cp -R deps/npm/* ${D}/lib/node_modules/npm || die "Failed to copy stuff"
+	mkdir -p "${ED}"/usr/include/node
+	mkdir -p "${ED}"/usr/bin
+	mkdir -p "${ED}"/lib/node_modules/npm
+	cp 'src/node.h' 'src/node_buffer.h' 'src/node_object_wrap.h' 'src/node_version.h' "${ED}"/usr/include/node || die "Failed to copy stuff"
+	cp 'deps/uv/include/ares.h' 'deps/uv/include/ares_version.h' "${ED}"/usr/include/node || die "Failed to copy stuff"
+	cp 'out/Release/node' ${ED}/usr/bin/node || die "Failed to copy stuff"
+	cp -R deps/npm/* ${ED}/lib/node_modules/npm || die "Failed to copy stuff"
 
 	# now add some extra stupid just because we can
 	# needs to be a symlink because of hardcoded paths ... no es bueno!
