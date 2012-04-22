@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pydot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.43 2012/03/31 17:22:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.44 2012/04/22 18:31:59 grobian Exp $
+
+  22 Apr 2012; Fabian Groffen <grobian@gentoo.org> pydot-1.0.28.ebuild:
+  Marked ~amd64-linux, bug #411659
 
   31 Mar 2012; Raúl Porcel <armin76@gentoo.org> pydot-1.0.25.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #400373
