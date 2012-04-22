@@ -1,6 +1,11 @@
 # ChangeLog for media-video/qx11grab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.22 2012/04/22 12:21:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.23 2012/04/22 12:29:16 pesa Exp $
+
+  22 Apr 2012; Davide Pesavento <pesa@gentoo.org>
+  -files/qx11grab-0.2.1_rc4-as-needed.patch, -qx11grab-0.2.1_rc4.ebuild,
+  -qx11grab-0.3.2.ebuild:
+  Remove old.
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> qx11grab-0.4.1-r2.ebuild:
   x86 stable, bug #406497
