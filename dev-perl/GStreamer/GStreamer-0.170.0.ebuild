@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/GStreamer-0.170.0.ebuild,v 1.1 2012/02/28 16:01:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/GStreamer-0.170.0.ebuild,v 1.2 2012/04/22 10:25:51 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl bindings for GStreamer"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="
