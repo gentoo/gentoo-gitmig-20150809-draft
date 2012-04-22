@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gawk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.138 2011/11/30 03:24:42 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.139 2012/04/22 16:32:15 vapier Exp $
+
+*gawk-4.0.1 (22 Apr 2012)
+
+  22 Apr 2012; Mike Frysinger <vapier@gentoo.org> +gawk-4.0.1.ebuild:
+  Version bump #413017 by teidakankan.
 
   30 Nov 2011; Mike Frysinger <vapier@gentoo.org> gawk-4.0.0.ebuild:
   Control readline support via USE=readline.
