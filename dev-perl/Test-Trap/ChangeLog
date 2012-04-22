@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Trap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.4 2012/03/06 16:11:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.5 2012/04/22 11:51:39 tove Exp $
+
+  22 Apr 2012; Torsten Veller <tove@gentoo.org> Test-Trap-0.2.2.ebuild:
+  dev-perl/Test-Tester is only used for tests
 
 *Test-Trap-0.2.2 (06 Mar 2012)
 
