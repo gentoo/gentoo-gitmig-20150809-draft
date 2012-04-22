@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/youtube-viewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.1 2012/04/22 03:02:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.2 2012/04/22 03:08:17 floppym Exp $
+
+*youtube-viewer-9999 (22 Apr 2012)
+
+  22 Apr 2012; Mike Gilbert <floppym@gentoo.org> +youtube-viewer-9999.ebuild:
+  Add live ebuild.
 
 *youtube-viewer-2.5.8_p20120415 (22 Apr 2012)
 
