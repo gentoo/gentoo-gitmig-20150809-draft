@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/PAR-Dist-0.480.0.ebuild,v 1.8 2012/04/05 06:37:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/PAR-Dist-0.480.0.ebuild,v 1.9 2012/04/22 18:28:28 grobian Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Create and manipulate PAR distributions"
 
 SLOT="0"
-KEYWORDS="amd64 hppa x86 ~x86-fbsd ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 hppa x86 ~x86-fbsd ~amd64-linux ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 DEPEND="
