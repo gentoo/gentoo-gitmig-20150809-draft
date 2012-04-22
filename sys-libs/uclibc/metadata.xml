@@ -20,6 +20,7 @@ systems with support for alpha, ARM, cris, i386, i960, h8300, m68k, mips/mipsel,
 SH, SPARC, and v850 processors.
 </longdescription>
 <use>
+	<flag name='rpc'>Enable sun nis/rpc support (you should use libtirpc though)</flag>
 	<flag name='ssp'>Force the use of ssp to be built into a hardened uclibc setup</flag>
 	<flag name='pregen'>Use pregenerated locales</flag>
 	<flag name='savedconfig'>Adds support for user defined configs</flag>
