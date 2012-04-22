@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.60 2012/04/22 22:22:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.61 2012/04/22 22:24:29 vapier Exp $
+
+*uclibc-9999 (22 Apr 2012)
+
+  22 Apr 2012; Mike Frysinger <vapier@gentoo.org> +uclibc-9999.ebuild:
+  Add a live git ebuild for dev #232881 by Lucio Asnaghi.
 
 *uclibc-0.9.33.1 (22 Apr 2012)
 
