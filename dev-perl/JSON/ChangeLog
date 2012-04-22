@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.43 2012/04/01 12:52:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.44 2012/04/22 18:07:06 grobian Exp $
+
+  22 Apr 2012; Fabian Groffen <grobian@gentoo.org> JSON-2.530.0.ebuild:
+  Marked ~amd64-linux, bug #411635
 
   01 Apr 2012; Fabian Groffen <grobian@gentoo.org> JSON-2.530.0.ebuild:
   Marked ~x86-macos
