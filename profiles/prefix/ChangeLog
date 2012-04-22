@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.339 2012/04/03 11:46:32 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.340 2012/04/22 18:02:38 grobian Exp $
+
+  22 Apr 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask python-2.7.3 for misbehaviour with repoman
 
   03 Apr 2012: Benda XU <heroxbd@gentoo.org> linux/arm/make.defaults,
   let arm prefix use arm instead of arm-linux as its keyword

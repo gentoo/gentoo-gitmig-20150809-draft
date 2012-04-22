@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.99 2012/03/24 12:43:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.100 2012/04/22 18:02:38 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -9,6 +9,13 @@
 # NOTE: Please add your entry at the top!
 #
 
+
+# Fabian Groffen <grobian@gentoo.org> (22 Apr 2012)
+# Produces odd behaviour with repoman, shutil'c copystat fails
+# doing os.chflags on just updated files, claiming operation not
+# supported.  A second attempt always succeeds.  The problem does not
+# occur with python 2.7.2
+=dev-lang/python-2.7.3
 
 # Jeremy Olexa <darkside@gentoo.org> (28 Oct 2011)
 # Masking selective games-*, www-apps/*, net-proxy/* packages because:
