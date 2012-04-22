@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.9999.ebuild,v 1.2 2012/04/22 16:49:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.9999.ebuild,v 1.3 2012/04/22 16:52:09 armin76 Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
@@ -63,7 +63,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-        python_convert_shebangs -r 2 .
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {
