@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.217 2012/04/19 20:46:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.218 2012/04/22 23:29:22 tetromino Exp $
+
+*gtksourceview-3.4.1 (22 Apr 2012)
+
+  22 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtksourceview-3.4.1.ebuild:
+  Version bump with some bugfixes and updated python and php highlighting.
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> gtksourceview-2.10.5-r2.ebuild,
   gtksourceview-3.2.3.ebuild:
