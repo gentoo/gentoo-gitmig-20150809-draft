@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/vitables
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/ChangeLog,v 1.7 2011/07/29 06:17:43 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/ChangeLog,v 1.8 2012/04/22 08:00:54 xarthisius Exp $
+
+  22 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> -vitables-2.0.ebuild,
+  vitables-2.1.ebuild:
+  Update SRC_URI and HOMEPAGE wrt #412689 by <rnelsonchem@gmail.com>
 
 *vitables-2.1 (29 Jul 2011)
 
