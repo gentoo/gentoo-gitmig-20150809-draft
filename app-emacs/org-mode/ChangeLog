@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.142 2012/01/06 21:19:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.143 2012/04/22 19:51:51 ulm Exp $
+
+*org-mode-7.8.09 (22 Apr 2012)
+
+  22 Apr 2012; Ulrich Müller <ulm@gentoo.org> -org-mode-7.8.02-r1.ebuild,
+  -files/org-mode-7.8.02-odt-styles.patch, -files/50org-mode-gentoo-7.8.02.el,
+  +org-mode-7.8.09.ebuild:
+  Version bump, bug 413069. Remove intermediate version.
 
   06 Jan 2012; Ulrich Mueller <ulm@gentoo.org> -org-mode-7.5.ebuild:
   Remove intermediate version.

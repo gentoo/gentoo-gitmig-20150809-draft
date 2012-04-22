@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.8.02-r1.ebuild,v 1.1 2012/01/01 19:16:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.8.09.ebuild,v 1.1 2012/04/22 19:51:51 ulm Exp $
 
 EAPI=4
 NEED_EMACS=22
@@ -17,21 +17,21 @@ KEYWORDS="~amd64 ~ppc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-macos"
 IUSE="contrib"
 
 S="${WORKDIR}/org-${PV}"
-ELISP_PATCHES="${P}-odt-styles.patch"
+ELISP_PATCHES="${PN}-7.8.03-Makefile.patch"
 # Remove autoload file to make sure that it is regenerated with
 # the right Emacs version.
 ELISP_REMOVE="lisp/org-install.el"
-SITEFILE="50${PN}-gentoo-${PV}.el"
+SITEFILE="50${PN}-gentoo-7.8.03.el"
 
 src_compile() {
-	default
+	emake datadir="${SITEETC}/${PN}"
 }
 
 src_install() {
 	emake \
 		prefix="${ED}/usr" \
 		lispdir="${ED}${SITELISP}/${PN}" \
-		etcdir="${ED}${SITEETC}/${PN}" \
+		datadir="${ED}${SITEETC}/${PN}" \
 		infodir="${ED}/usr/share/info" \
 		install
 
