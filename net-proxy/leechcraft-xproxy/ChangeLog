@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/leechcraft-xproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/leechcraft-xproxy/ChangeLog,v 1.1 2012/04/14 18:34:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/leechcraft-xproxy/ChangeLog,v 1.2 2012/04/22 13:18:48 maksbotan Exp $
+
+*leechcraft-xproxy-0.5.65 (22 Apr 2012)
+
+  22 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-xproxy-0.5.65.ebuild:
+  Bump net-proxy/leechcraft-xproxy to 0.5.65, thanks to 0xd34df00d
 
 *leechcraft-xproxy-9999 (14 Apr 2012)
 
