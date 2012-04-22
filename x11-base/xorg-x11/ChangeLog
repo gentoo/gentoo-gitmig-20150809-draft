@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.622 2012/01/01 22:08:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.623 2012/04/22 07:34:11 mgorny Exp $
+
+*xorg-x11-7.4-r2 (22 Apr 2012)
+
+  22 Apr 2012; Michał Górny <mgorny@gentoo.org> +xorg-x11-7.4-r2.ebuild:
+  Remove xsetmode from meta-deps.
 
   01 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2005:
   Split ChangeLog.
