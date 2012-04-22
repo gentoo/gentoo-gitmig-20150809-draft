@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.2.ebuild,v 1.2 2012/04/22 14:54:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.2.ebuild,v 1.3 2012/04/22 17:35:42 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4-r2 games
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P}-src
 
 src_prepare() {
-	mv ${WORKDIR}/${P}-data/data ${WORKDIR}/${P}-src/
+	mv "${WORKDIR}"/${P}-data/data "${WORKDIR}"/${P}-src/
 	sed -i \
 		-e "s:/usr/local/bin:${GAMES_BINDIR}:g" \
 		-e "s:/usr/local/games:${GAMES_DATADIR}:g" \
