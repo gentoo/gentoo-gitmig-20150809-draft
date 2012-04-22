@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.1.ebuild,v 1.1 2012/04/20 08:14:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.1.ebuild,v 1.2 2012/04/22 17:57:38 grobian Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -47,6 +47,8 @@ pkg_setup() {
 	else
 		G2CONF="${G2CONF} --disable-rsvg-view"
 	fi
+	# -Bsymbolic is not supported by the Darwin toolchain
+	[[ ${CHOST} == *-darwin* ]] && G2CONF="${G2CONF} --disable-Bsymbolic"
 
 	DOCS="AUTHORS ChangeLog README NEWS TODO"
 }
