@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tidy-ext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.8 2012/01/03 18:14:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.9 2012/04/22 07:11:50 graaff Exp $
+
+*tidy-ext-0.1.12 (22 Apr 2012)
+
+  22 Apr 2012; Hans de Graaff <graaff@gentoo.org> +tidy-ext-0.1.12.ebuild:
+  Version bump.
 
   03 Jan 2012; Jeroen Roovers <jer@gentoo.org> tidy-ext-0.1.11.ebuild:
   Marked ~hppa (bug #396663).
