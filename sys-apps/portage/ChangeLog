@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1004 2012/04/07 21:50:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1005 2012/04/22 23:52:35 zmedico Exp $
+
+*portage-2.1.10.57 (22 Apr 2012)
+
+  22 Apr 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.57.ebuild:
+  2.1.10.57 version bump. This fixes bug #411835 (use example.com in docs), bug
+  #411897 (fix TypeError in perform_all checksum function), bug #412161 (avoid
+  redundant news display), bug #412391 (emerge --depclean bails out due to
+  invalid internal caching), bug #412453 (cleanup hardlink code), bug #412845
+  (show config updates after preserve-libs messages), and bug #412865 (add
+  $T/build.log symlink to PORT_LOGDIR), Bug #409383 tracks all bugs fixed since
+  portage-2.1.10.49.
 
   07 Apr 2012; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.55.ebuild,
   -portage-2.2.0_alpha99.ebuild:
