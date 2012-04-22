@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-3.0.0.ebuild,v 1.3 2012/04/18 20:53:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-3.0.0.ebuild,v 1.4 2012/04/22 20:37:42 ssuominen Exp $
 
-EAPI="4"
-GCONF_DEBUG="no"
-
-inherit autotools eutils gnome2
+EAPI=4
+GCONF_DEBUG=no
+inherit gnome2
 
 MY_P=${PN/gnome-}-${PV}
 
@@ -19,16 +18,16 @@ KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libopenraw-0.0.9[gtk]
-	x11-libs/gdk-pixbuf:2
-	>=dev-libs/glib-2.26:2
-"
+	>=x11-libs/gdk-pixbuf-2
+	>=dev-libs/glib-2.26
+	!media-gfx/raw-thumbnailer"
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.21
+	dev-util/intltool
 	dev-util/pkgconfig
-	sys-devel/gettext
-	!media-gfx/raw-thumbnailer
-"
+	sys-devel/gettext"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
-DOCS="AUTHORS ChangeLog NEWS"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS"
+}
