@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.16.19.ebuild,v 1.1 2012/04/22 14:59:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.16.19.ebuild,v 1.2 2012/04/22 22:43:53 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="bash-completion erlang +fuse debug ocaml doc +perl nls ruby static-libs selinux systemtap introspection"
 
-# Failires - doc 
+# Failires - doc
 
 COMMON_DEPEND="
 	>=app-misc/hivex-1.3.1
