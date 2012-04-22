@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.481 2012/04/19 22:11:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.482 2012/04/22 01:01:12 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -318,6 +318,7 @@ sqlite - Adds support for sqlite - embedded sql database
 sqlite3 - Adds support for sqlite3 - embedded sql database
 sse - fast floating point optimization for PentiumIII+ class chips
 sse2 - faster floating point optimization for SSE2 capable chips
+sse3 - faster floating point optimization for SSE3 capable chips
 ssl - Adds support for Secure Socket Layer connections
 startup-notification - Enable application startup event feedback mechanism
 static - !!do not set this during bootstrap!! Causes binaries to be statically linked instead of dynamically
