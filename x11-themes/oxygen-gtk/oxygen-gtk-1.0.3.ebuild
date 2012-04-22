@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.0.3.ebuild,v 1.3 2012/04/14 12:07:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.0.3.ebuild,v 1.4 2012/04/22 08:08:43 scarabeus Exp $
 
 EAPI=4
 
@@ -9,12 +9,12 @@ MY_P=${MY_PN}-${PV}
 
 inherit cmake-utils
 
-DESCRIPTION="Official GTK+:2 port of KDE's Oxygen widget style"
+DESCRIPTION="Official GTK+:3 port of KDE's Oxygen widget style"
 HOMEPAGE="https://projects.kde.org/projects/playground/artwork/oxygen-gtk"
 SRC_URI="mirror://kde/stable/${MY_PN}/${PV}/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="3"
 IUSE="debug doc"
 
