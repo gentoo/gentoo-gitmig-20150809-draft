@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmirage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.21 2012/04/09 12:09:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.22 2012/04/22 04:03:10 tetromino Exp $
+
+  22 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libmirage-1.2.0.ebuild:
+  Drop old.
 
   09 Apr 2012; Markus Meier <maekke@gentoo.org> libmirage-1.5.0-r1.ebuild:
   x86 stable, bug #406941
