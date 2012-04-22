@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.311 2012/04/21 19:07:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.312 2012/04/22 16:42:00 maekke Exp $
+
+  22 Apr 2012; Markus Meier <maekke@gentoo.org> poppler-0.18.4-r1.ebuild:
+  arm stable, bug #412701
 
   21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> poppler-0.18.4-r1.ebuild:
   marked x86 per bug 412701
