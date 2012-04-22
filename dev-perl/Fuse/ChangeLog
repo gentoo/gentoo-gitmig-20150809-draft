@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Fuse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Fuse/ChangeLog,v 1.14 2011/09/05 18:11:35 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Fuse/ChangeLog,v 1.15 2012/04/22 10:27:12 ago Exp $
+
+  22 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Fuse-0.140.0.ebuild:
+  Stable for amd64, wrt bug #412997
 
 *Fuse-0.140.0 (05 Sep 2011)
 
