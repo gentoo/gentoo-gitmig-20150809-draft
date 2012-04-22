@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.8.ebuild,v 1.3 2012/04/22 16:52:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.8.ebuild,v 1.4 2012/04/22 21:27:14 floppym Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
@@ -8,8 +8,6 @@
 
 EAPI=3
 PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
 
 if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
@@ -60,6 +58,7 @@ pkg_setup() {
 		ewarn "until you have posted on the gentoo-catalyst mailing list and we"
 		ewarn "have asked you to do so."
 	fi
+	python_set_active_version 2
 }
 
 src_prepare() {
