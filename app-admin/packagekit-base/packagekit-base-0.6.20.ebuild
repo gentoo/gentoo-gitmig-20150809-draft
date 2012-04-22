@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.20.ebuild,v 1.5 2012/03/12 17:22:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.20.ebuild,v 1.6 2012/04/22 18:56:08 ssuominen Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ CDEPEND="connman? ( net-misc/connman )
 	>=sys-apps/dbus-1.3.0"
 DEPEND="${CDEPEND}
 	doc? ( dev-util/gtk-doc )
-	nsplugin? ( >=net-libs/xulrunner-1.9.1 )
+	nsplugin? ( >=net-misc/npapi-sdk-0.27 )
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35.0
 	dev-util/pkgconfig
@@ -69,6 +69,10 @@ RESTRICT="test" # tests are failing atm
 # UPSTREAM:
 # documentation/website with --enable-doc-install
 # failing tests
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.6.x-npapi-sdk.patch #383141
+}
 
 src_configure() {
 	local myconf=""

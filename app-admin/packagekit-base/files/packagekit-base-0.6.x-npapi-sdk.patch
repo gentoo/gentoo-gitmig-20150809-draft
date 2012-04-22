@@ -1,0 +1,87 @@
+http://bugs.gentoo.org/383141
+
+--- configure
++++ configure
+@@ -20389,7 +20389,7 @@
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\\
+-			  mozilla-plugin	\\
++			  npapi-sdk		\\
+ 			  gio-unix-2.0		\\
+ 			  nspr \\
+ 			  cairo			\\
+@@ -20397,7 +20397,7 @@
+ 			  gtk+-2.0 >= 2.14.0	\\
+ 			  dbus-glib-1\""; } >&5
+   ($PKG_CONFIG --exists --print-errors "\
+-			  mozilla-plugin	\
++			  npapi-sdk		\
+ 			  gio-unix-2.0		\
+ 			  nspr \
+ 			  cairo			\
+@@ -20408,7 +20408,7 @@
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_PK_BROWSER_PLUGIN_CFLAGS=`$PKG_CONFIG --cflags "\
+-			  mozilla-plugin	\
++			  npapi-sdk		\
+ 			  gio-unix-2.0		\
+ 			  nspr \
+ 			  cairo			\
+@@ -20426,7 +20426,7 @@
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\\
+-			  mozilla-plugin	\\
++			  npapi-sdk		\\
+ 			  gio-unix-2.0		\\
+ 			  nspr \\
+ 			  cairo			\\
+@@ -20434,7 +20434,7 @@
+ 			  gtk+-2.0 >= 2.14.0	\\
+ 			  dbus-glib-1\""; } >&5
+   ($PKG_CONFIG --exists --print-errors "\
+-			  mozilla-plugin	\
++			  npapi-sdk		\
+ 			  gio-unix-2.0		\
+ 			  nspr \
+ 			  cairo			\
+@@ -20445,7 +20445,7 @@
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_PK_BROWSER_PLUGIN_LIBS=`$PKG_CONFIG --libs "\
+-			  mozilla-plugin	\
++			  npapi-sdk		\
+ 			  gio-unix-2.0		\
+ 			  nspr \
+ 			  cairo			\
+@@ -20472,7 +20472,7 @@
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+ 	        PK_BROWSER_PLUGIN_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "\
+-			  mozilla-plugin	\
++			  npapi-sdk		\
+ 			  gio-unix-2.0		\
+ 			  nspr \
+ 			  cairo			\
+@@ -20481,7 +20481,7 @@
+ 			  dbus-glib-1" 2>&1`
+         else
+ 	        PK_BROWSER_PLUGIN_PKG_ERRORS=`$PKG_CONFIG --print-errors "\
+-			  mozilla-plugin	\
++			  npapi-sdk		\
+ 			  gio-unix-2.0		\
+ 			  nspr \
+ 			  cairo			\
+--- configure.ac
++++ configure.ac
+@@ -355,7 +355,7 @@
+ 	      enable_browser_plugin=$enableval,enable_browser_plugin=yes)
+ if test x$enable_browser_plugin = xyes; then
+ 	PKG_CHECK_MODULES(PK_BROWSER_PLUGIN,	\
+-			  mozilla-plugin	\
++			  npapi-sdk		\
+ 			  gio-unix-2.0		\
+ 			  nspr \
+ 			  cairo			\
