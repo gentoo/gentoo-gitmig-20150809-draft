@@ -1,9 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.19 2012/04/21 17:54:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.20 2012/04/22 06:07:32 floppym Exp $
 
 EAPI="4"
+
+AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
+AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 inherit flag-o-matic git-2 linux-mod toolchain-funcs autotools-utils
 
@@ -15,12 +18,12 @@ EGIT_REPO_URI="git://github.com/zfsonlinux/zfs.git"
 LICENSE="CDDL GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="custom-cflags debug dracut test test-suite static-libs"
+IUSE="custom-cflags debug dracut +rootfs test test-suite static-libs"
 
 DEPEND="
 	>=sys-kernel/spl-${PV}
 	sys-apps/util-linux[static-libs?]
-	sys-libs/zlib[static-libs?]
+	sys-libs/zlib[static-libs(+)?]
 "
 RDEPEND="${DEPEND}
 	!sys-fs/zfs-fuse
@@ -34,13 +37,14 @@ RDEPEND="${DEPEND}
 		sys-process/procps
 		virtual/modutils
 		)
+	rootfs? (
+		app-arch/cpio
+		app-misc/pax-utils
+		)
 "
 DEPEND+="
 	test? ( sys-fs/mdadm )
 "
-
-AT_M4DIR="config"
-AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 pkg_setup() {
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
@@ -49,12 +53,10 @@ pkg_setup() {
 		BLK_DEV_LOOP
 		EFI_PARTITION
 		MODULES
-		PREEMPT_NONE
 		ZLIB_DEFLATE
 		ZLIB_INFLATE"
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
-	use x86 && ewarn "32-bit kernels are unsupported by ZFSOnLinux upstream. Do not file bug reports."
 }
 
 src_prepare() {
@@ -95,4 +97,24 @@ src_install() {
 	gen_usr_ldscript -a uutil nvpair zpool zfs
 	use dracut || rm -rf "${ED}usr/share/dracut"
 	use test-suite || rm -rf "${ED}usr/libexec"
+
+	if use rootfs
+	then
+		doinitd "${FILESDIR}/zfs-shutdown"
+		exeinto /usr/share/zfs
+		doexe "${FILESDIR}/linuxrc"
+	fi
+
+}
+
+pkg_postinst() {
+
+	use x86 && ewarn "32-bit kernels are unsupported by ZFSOnLinux upstream. Do not file bug reports."
+
+	[ -e "${EROOT}/etc/runlevels/boot/zfs" ] \
+		|| ewarn 'You should add zfs to the boot runlevel.'
+
+	use rootfs && ([ -e "${EROOT}/etc/runlevels/shutdown/zfs-shutdown" ] \
+		|| ewarn 'You should add zfs-shutdown to the shutdown runlevel.')
+
 }
