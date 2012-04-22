@@ -1,6 +1,12 @@
 # ChangeLog for net-im/leechcraft-azoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.18 2012/04/07 17:14:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.19 2012/04/22 13:01:56 maksbotan Exp $
+
+*leechcraft-azoth-0.5.65 (22 Apr 2012)
+
+  22 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-azoth-0.5.65.ebuild:
+  Bump net-im/leechcraft-azoth to 0.5.65, thanks to 0xd34df00d
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> leechcraft-azoth-0.4.99.ebuild:
   x86 stable, bug #400605
