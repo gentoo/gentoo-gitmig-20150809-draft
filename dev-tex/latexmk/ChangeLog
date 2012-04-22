@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.49 2012/03/31 21:01:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.50 2012/04/22 18:31:06 grobian Exp $
+
+  22 Apr 2012; Fabian Groffen <grobian@gentoo.org> latexmk-430a.ebuild:
+  Marked ~amd64-linux, bug #411657
 
   31 Mar 2012; Tim Harder <radhermit@gentoo.org> -latexmk-423a.ebuild,
   -latexmk-425.ebuild, -latexmk-426.ebuild:
