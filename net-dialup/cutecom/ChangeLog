@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/cutecom
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.25 2009/11/29 09:25:09 mrness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.26 2012/04/22 15:39:02 johu Exp $
+
+  22 Apr 2012; Johannes Huber <johu@gentoo.org> cutecom-0.20.0-r1.ebuild,
+  cutecom-0.22.0.ebuild:
+  Non maintainer commit. Remove unused deprecated qt4 eclass inherit by Michael
+  (kensington) <gentoo@scribeofthenile.com>, wrt bug #409767.
 
 *cutecom-0.22.0 (29 Nov 2009)
 
