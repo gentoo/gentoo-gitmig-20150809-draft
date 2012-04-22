@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wpd2odt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/ChangeLog,v 1.5 2011/10/26 15:34:52 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/ChangeLog,v 1.6 2012/04/22 14:21:07 phajdan.jr Exp $
+
+  22 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> wpd2odt-0.8.1.ebuild:
+  x86 stable wrt bug #411449
 
   26 Oct 2011; Tony Vroon <chainsaw@gentoo.org> wpd2odt-0.8.1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &

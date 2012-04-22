@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libexttextcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/ChangeLog,v 1.4 2012/01/18 20:03:28 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/ChangeLog,v 1.5 2012/04/22 14:20:12 phajdan.jr Exp $
+
+  22 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libexttextcat-3.2.0.ebuild:
+  x86 stable wrt bug #411449
 
   18 Jan 2012; Fabio Erculiani <lxnay@gentoo.org> libexttextcat-3.2.0.ebuild:
   keyword for ~arm
