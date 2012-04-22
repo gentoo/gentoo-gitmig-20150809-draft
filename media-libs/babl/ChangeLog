@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.38 2012/04/13 21:30:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.39 2012/04/22 16:35:08 grobian Exp $
+
+  22 Apr 2012; Fabian Groffen <grobian@gentoo.org> babl-0.1.10.ebuild,
+  babl-0.1.8.ebuild:
+  Fix compilation on Darwin
 
 *babl-0.1.8 (13 Apr 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.10.ebuild,v 1.1 2012/04/11 23:09:39 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.10.ebuild,v 1.2 2012/04/22 16:35:08 grobian Exp $
 
 EAPI=3
 VALASLOT=0.14
@@ -23,6 +23,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	# fix compilation on OSX, can be dropped on next release:
+	# http://mail.gnome.org/archives/commits-list/2012-April/msg02589.html
+	sed -i -e 's/values\.h/limits.h/' babl/babl-palette.c || die
 	epatch "${FILESDIR}"/${PN}-0.1.6-introspection.patch
 	eautoreconf
 }
