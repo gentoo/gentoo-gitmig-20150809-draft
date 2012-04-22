@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/uglifier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/ChangeLog,v 1.6 2012/03/05 10:03:18 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/ChangeLog,v 1.7 2012/04/22 07:23:27 graaff Exp $
+
+*uglifier-1.2.4 (22 Apr 2012)
+
+  22 Apr 2012; Hans de Graaff <graaff@gentoo.org> +uglifier-1.2.4.ebuild:
+  Version bump.
 
   05 Mar 2012; Thomas Kahle <tomka@gentoo.org> uglifier-1.2.2.ebuild:
   marked ~x86 per bug 397435
