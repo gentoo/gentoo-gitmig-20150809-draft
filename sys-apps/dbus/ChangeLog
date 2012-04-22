@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.328 2012/04/18 21:25:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.329 2012/04/22 14:48:11 maekke Exp $
+
+  22 Apr 2012; Markus Meier <maekke@gentoo.org> dbus-1.4.20.ebuild:
+  arm stable, bug #412535
 
   18 Apr 2012; Jeff Horelick <jdhore@gentoo.org> dbus-1.4.20.ebuild:
   marked x86 per bug 412535
