@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/leechcraft-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.12 2012/04/14 18:40:08 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.13 2012/04/22 13:04:29 maksbotan Exp $
+
+*leechcraft-core-0.5.65 (22 Apr 2012)
+
+  22 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-core-0.5.65.ebuild:
+  Bump net-misc/leechcraft-core to 0.5.65, thanks to 0xd34df00d
 
   14 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org>
   leechcraft-core-0.5.60.ebuild, leechcraft-core-9999.ebuild:
