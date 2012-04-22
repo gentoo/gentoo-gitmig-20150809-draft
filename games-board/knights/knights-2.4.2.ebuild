@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.4.0.ebuild,v 1.1 2011/10/30 06:51:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.4.2.ebuild,v 1.1 2012/04/22 07:36:14 johu Exp $
 
 EAPI=4
 
-KDE_LINGUAS="bg bs ca ca@valencia cs da de el en_GB eo es et fi fr hu it ja lt
-ml nds nl pl pt pt_BR ro ru sk sr sr@latin sv uk zh_TW"
+KDE_LINGUAS="bs ca ca@valencia cs da de el es et fr ga it lt nb nds nl nn pl pt
+pt_BR ru sr sr@ijekavian sr@ijekavianlatin sr@latin sv uk zh_TW"
 KDE_HANDBOOK="optional"
 inherit kde4-base
 
