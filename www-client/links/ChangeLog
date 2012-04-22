@@ -1,6 +1,10 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.172 2012/04/16 17:03:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.173 2012/04/22 16:04:16 ssuominen Exp $
+
+  22 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> links-2.6.ebuild:
+  Handle USE="livecd" in a way support for fbcon, jpeg and gpm are always
+  enabled without REQUIRED_USE for compability with USE flags set by catalyst.
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> links-2.6.ebuild:
   Marking links-2.6 ppc for bug 411493

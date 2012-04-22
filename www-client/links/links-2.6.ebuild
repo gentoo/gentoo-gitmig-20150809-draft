@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.6.ebuild,v 1.8 2012/04/16 17:03:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.6.ebuild,v 1.9 2012/04/22 16:04:16 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -23,7 +23,11 @@ RDEPEND=">=sys-libs/ncurses-5.7-r7
 	fbcon? ( ${GRAPHICS_DEPEND} )
 	gpm? ( sys-libs/gpm )
 	jpeg? ( virtual/jpeg )
-	livecd? ( ${GRAPHICS_DEPEND} )
+	livecd? (
+		${GRAPHICS_DEPEND}
+		sys-libs/gpm
+		virtual/jpeg
+		)
 	lzma? ( app-arch/xz-utils )
 	ssl? ( dev-libs/openssl:0 )
 	svga? (
@@ -36,13 +40,13 @@ RDEPEND=">=sys-libs/ncurses-5.7-r7
 		x11-libs/libXext
 		)
 	zlib? ( sys-libs/zlib )"
+
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	fbcon? ( virtual/os-headers )
+	livecd? ( virtual/os-headers )"
 
-GRAPHICS_USE="jpeg gpm"
-
-REQUIRED_USE="fbcon? ( ${GRAPHICS_USE} )
-	livecd? ( ${GRAPHICS_USE} )
+REQUIRED_USE="!livecd? ( fbcon? ( gpm ) )
 	svga? ( suid )"
 
 DOCS=( AUTHORS BRAILLE_HOWTO ChangeLog KEYS NEWS README SITES )
@@ -66,18 +70,17 @@ src_prepare() {
 }
 
 src_configure() {
-	export ac_cv_lib_gpm_Gpm_Open=$(usex gpm)
-
 	local myconf
+
+	if use livecd; then
+		export ac_cv_lib_gpm_Gpm_Open=yes
+		myconf+=' --with-fb --with-libjpeg'
+	else
+		export ac_cv_lib_gpm_Gpm_Open=$(usex gpm)
+	fi
 
 	if use X || use fbcon || use directfb || use svga || use livecd; then
 		myconf+=' --enable-graphics'
-	fi
-
-	if use fbcon || use livecd; then
-		myconf+=' --with-fb'
-	else
-		myconf+=' --without-fb'
 	fi
 
 	econf \
@@ -87,6 +90,7 @@ src_configure() {
 		$(use_with lzma) \
 		$(use_with svga svgalib) \
 		$(use_with X x) \
+		$(use_with fbcon fb) \
 		$(use_with directfb) \
 		$(use_with jpeg libjpeg) \
 		$(use_with tiff libtiff) \
