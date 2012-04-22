@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.89 2012/03/01 19:53:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.90 2012/04/22 18:33:56 grobian Exp $
+
+  22 Apr 2012; Fabian Groffen <grobian@gentoo.org> expect-5.45.ebuild:
+  Marked ~m68k-mint, bug #411483
 
   01 Mar 2012; Fabian Groffen <grobian@gentoo.org>
   +files/expect-5.45-darwin-install_name.patch, expect-5.45.ebuild:
