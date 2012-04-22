@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.186 2012/04/22 09:10:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.187 2012/04/22 09:28:07 graaff Exp $
+
+  22 Apr 2012; Hans de Graaff <graaff@gentoo.org> rubygems-1.8.23.ebuild:
+  Check for userpriv feature before running tests, fixing bug 408951.
 
 *rubygems-1.8.23 (22 Apr 2012)
 
