@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-pvrinput
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.24 2011/09/17 09:39:28 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.25 2012/04/22 14:33:09 hd_brummy Exp $
+
+*vdr-pvrinput-2011.09.17 (22 Apr 2012)
+
+  22 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-pvrinput-2011.08.18.ebuild, +vdr-pvrinput-2011.09.17.ebuild:
+  git snapshot 2011/09/17; fix issues on bug #411959, thanks to M.Lischka for
+  reporting this; eapi=4; some test snipe for depricated i18n handling
 
 *vdr-pvrinput-2011.08.18 (17 Sep 2011)
 
