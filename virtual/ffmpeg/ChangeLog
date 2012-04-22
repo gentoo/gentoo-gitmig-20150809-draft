@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.30 2012/04/21 12:03:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.31 2012/04/22 12:20:47 maekke Exp $
+
+  22 Apr 2012; Markus Meier <maekke@gentoo.org> ffmpeg-0.10.2-r1.ebuild:
+  x86 stable, bug #412123
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> ffmpeg-0.10.2-r1.ebuild:
   arm stable, bug #412123
