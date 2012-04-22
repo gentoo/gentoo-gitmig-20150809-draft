@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.788 2012/03/22 01:53:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.789 2012/04/22 14:46:36 maekke Exp $
+
+  22 Apr 2012; Markus Meier <maekke@gentoo.org> vlc-2.0.1.ebuild:
+  add ~arm, bug #397891
 
   22 Mar 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
   fix switcher build, patch from upstream based on the one from Richard
