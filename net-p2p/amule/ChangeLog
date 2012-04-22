@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/amule
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.160 2012/02/16 17:17:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.161 2012/04/22 17:58:46 armin76 Exp $
+
+  22 Apr 2012; Raúl Porcel <armin76@gentoo.org> +files/2.3.1-gcc47.patch,
+  amule-2.3.1.ebuild:
+  Apply patch from upstream to fix build with gcc-4.7, bug #412371, use
+  use-deps, bug #408635
 
   16 Feb 2012; Jeroen Roovers <jer@gentoo.org> amule-2.2.6.ebuild,
   amule-2.3.1.ebuild:

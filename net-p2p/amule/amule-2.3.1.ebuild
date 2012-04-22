@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.3 2012/02/16 17:17:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.4 2012/04/22 17:58:46 armin76 Exp $
 
 EAPI="2"
 
@@ -18,14 +18,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="daemon debug geoip nls remote stats unicode upnp +X"
 
-DEPEND=">=x11-libs/wxGTK-2.8.12
-	>=dev-libs/crypto++-5
+DEPEND=">=dev-libs/crypto++-5
 	>=sys-libs/zlib-1.2.1
 	stats? ( >=media-libs/gd-2.0.26[jpeg] )
 	geoip? ( dev-libs/geoip )
 	upnp? ( >=net-libs/libupnp-1.6.6 )
 	remote? ( >=media-libs/libpng-1.2.0
-	unicode? ( >=media-libs/gd-2.0.26 ) )"
+	unicode? ( >=media-libs/gd-2.0.26 ) )
+	X? ( >=x11-libs/wxGTK-2.8.12[X] )
+	!X? ( >=x11-libs/wxGTK-2.8.12 )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -45,6 +46,8 @@ pkg_preinst() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.2.6-fallocate.diff
+	# Bug 412371
+	epatch "${FILESDIR}"/${PN}-2.3.1-gcc47.patch
 }
 
 src_configure() {
