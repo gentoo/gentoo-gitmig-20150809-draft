@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.20 2012/02/16 21:31:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.21 2012/04/22 18:30:13 grobian Exp $
+
+  22 Apr 2012; Fabian Groffen <grobian@gentoo.org> dot2texi-3.0.ebuild:
+  Marked ~amd64-linux, bug #411655
 
   16 Feb 2012; Fabian Groffen <grobian@gentoo.org> dot2texi-3.0.ebuild:
   Marked ~sparc-solaris
