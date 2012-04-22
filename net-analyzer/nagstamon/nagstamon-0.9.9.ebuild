@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.7.1.ebuild,v 1.4 2011/09/21 15:18:03 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.9.ebuild,v 1.1 2012/04/22 18:27:19 idl0r Exp $
 
-EAPI="3"
+EAPI="4"
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,20 +19,20 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="gnome"
+KEYWORDS="~amd64 ~x86"
+IUSE="gnome sound"
 
 DEPEND=""
 RDEPEND="dev-python/pygtk
 	dev-python/lxml
 	dev-python/beautifulsoup
-	gnome? ( dev-python/egg-python )"
+	gnome? ( dev-python/egg-python )
+	sound? ( media-sound/sox )"
 
-#S="${WORKDIR}/${MY_P}"
 S="${WORKDIR}/Nagstamon"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.9.5-resources.patch"
+	epatch "${FILESDIR}/${P}-resources.patch"
 
 	python_convert_shebangs 2 nagstamon.py
 
