@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/manifestdestiny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.1 2012/04/21 16:46:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.2 2012/04/22 10:31:24 xarthisius Exp $
+
+  22 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  manifestdestiny-0.5.4.ebuild:
+  Add rdepend on setuptools as they're imported in manifestparser.py. Thanks to
+  Arfrever for reporting
 
 *manifestdestiny-0.5.4 (21 Apr 2012)
 
