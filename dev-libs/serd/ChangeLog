@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/serd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serd/ChangeLog,v 1.6 2012/03/01 13:45:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serd/ChangeLog,v 1.7 2012/04/22 02:22:49 aballier Exp $
+
+*serd-0.14.0 (22 Apr 2012)
+
+  22 Apr 2012; Alexis Ballier <aballier@gentoo.org> +serd-0.14.0.ebuild:
+  version bump
 
   01 Mar 2012; Thomas Kahle <tomka@gentoo.org> serd-0.5.0.ebuild:
   marked ~x86 per bug 397887

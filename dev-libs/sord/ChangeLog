@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/sord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/ChangeLog,v 1.5 2012/03/01 13:44:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/ChangeLog,v 1.6 2012/04/22 02:27:51 aballier Exp $
+
+*sord-0.8.0 (22 Apr 2012)
+
+  22 Apr 2012; Alexis Ballier <aballier@gentoo.org> +sord-0.8.0.ebuild:
+  version bump
 
   01 Mar 2012; Thomas Kahle <tomka@gentoo.org> sord-0.5.0.ebuild:
   marked ~x86 per bug 397887
