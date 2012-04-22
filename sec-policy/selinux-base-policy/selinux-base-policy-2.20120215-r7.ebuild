@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20120215-r7.ebuild,v 1.1 2012/04/22 08:46:05 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20120215-r7.ebuild,v 1.2 2012/04/22 17:37:49 mr_bones_ Exp $
 EAPI="4"
+
+inherit eutils
 
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 DESCRIPTION="SELinux policy for core modules"
 
 IUSE=""
 BASEPOL="2.20120215-r7"
-
-inherit eutils
 
 RDEPEND=">=sec-policy/selinux-base-2.20120215-r7"
 DEPEND=""
