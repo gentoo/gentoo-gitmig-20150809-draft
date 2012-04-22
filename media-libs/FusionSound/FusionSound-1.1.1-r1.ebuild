@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.11 2012/04/17 13:19:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.12 2012/04/22 10:29:41 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="Audio sub system for multiple applications"
@@ -16,40 +16,40 @@ IUSE="alsa cddb ffmpeg mad oss timidity vorbis"
 
 RDEPEND=">=dev-libs/DirectFB-${PV}
 	alsa? ( media-libs/alsa-lib )
-	timidity? ( media-libs/libtimidity
-		media-sound/timidity++ )
+	timidity? (
+		media-libs/libtimidity
+		media-sound/timidity++
+		)
 	vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad )
 	cddb? ( media-libs/libcddb )
-	ffmpeg? ( >=virtual/ffmpeg-0.6.90 )
-	!net-zope/zodb"
+	ffmpeg? ( >=virtual/ffmpeg-0.6.90 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-apps/sed"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc43.patch \
+	epatch \
+		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-ffmpeg.patch \
 		"${FILESDIR}"/${P}-ffmpeg-0.6.90.patch \
 		"${FILESDIR}"/${P}-ffmpeg-0.10.patch \
 		"${FILESDIR}"/${P}-libavformat54.patch \
 		"${FILESDIR}"/${P}-libav-0.8.1.patch
 
-	sed -i -e 's:-O3 -ffast-math -pipe::' configure.in \
-		|| die "sed failed"
+	sed -i -e 's:-O3 -ffast-math -pipe::' configure.in || die
+
 	AT_M4DIR="m4" eautoreconf
 }
 
 src_configure() {
 	local myaudio="wave"
-
-	use alsa && myaudio="${myaudio} alsa"
-	use oss && myaudio="${myaudio} oss"
+	use alsa && myaudio+=" alsa"
+	use oss && myaudio+=" oss"
 
 	# Lite is used only for tests or examples.
 	# Tremor isn't there with latest libvorbis.
 	econf \
-		--disable-dependency-tracking \
 		--without-lite \
 		--with-drivers="${myaudio}" \
 		--without-examples \
@@ -64,7 +64,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" htmldir=/usr/share/doc/${PF}/html \
-		install || die "emake install failed"
+	emake DESTDIR="${D}" htmldir=/usr/share/doc/${PF}/html install
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
