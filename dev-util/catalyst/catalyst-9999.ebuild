@@ -1,12 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.15 2011/07/17 00:29:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.16 2012/04/22 16:49:11 armin76 Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
 # catalyst-VER          -> normal catalyst release
 
-EAPI=2
+EAPI=3
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
@@ -19,7 +22,7 @@ else
 		http://dev.gentoo.org/~jmbsvicetto/distfiles/${P}.tar.bz2"
 	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 fi
-inherit eutils multilib
+inherit eutils multilib python
 
 DESCRIPTION="release metatool used for creating releases based on Gentoo Linux"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst/"
@@ -30,8 +33,7 @@ RESTRICT=""
 IUSE="ccache"
 
 DEPEND="app-text/asciidoc"
-RDEPEND="dev-lang/python
-	app-crypt/shash
+RDEPEND="app-crypt/shash
 	virtual/cdrtools
 	ccache? ( dev-util/ccache )
 	ia64? ( sys-fs/dosfstools )
@@ -58,6 +60,10 @@ pkg_setup() {
 		ewarn "until you have posted on the gentoo-catalyst mailing list and we"
 		ewarn "have asked you to do so."
 	fi
+}
+
+src_prepare() {
+        python_convert_shebangs -r 2 .
 }
 
 src_install() {
