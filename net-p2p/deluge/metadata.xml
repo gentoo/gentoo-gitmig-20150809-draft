@@ -6,8 +6,9 @@
 <email>net-p2p@gentoo.org</email>
 </maintainer>
 <use>
+	<flag name='setproctitle'>Install dependencies needed for beautifying
+		the process name</flag>
 	<flag name='webinterface'>Install dependencies needed for the web
-		interface
-	</flag>
+		interface</flag>
 </use>
 </pkgmetadata>
