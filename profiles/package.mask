@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13695 2012/04/22 14:25:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13696 2012/04/22 21:06:19 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
+# Needs to be slotted better
+=dev-libs/yaz-4*
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (22 Apr 2012)
 # testing on bug #411959
