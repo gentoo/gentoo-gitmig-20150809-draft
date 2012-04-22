@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fracplanet/fracplanet-0.4.0.ebuild,v 1.1 2009/12/17 18:59:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fracplanet/fracplanet-0.4.0.ebuild,v 1.2 2012/04/22 15:25:20 johu Exp $
 
-EAPI=2
-inherit qt4
+EAPI=4
+inherit qt4-r2
 
 DESCRIPTION="Fractal planet and terrain generator"
 HOMEPAGE="http://sourceforge.net/projects/fracplanet/"
@@ -14,26 +14,28 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
-	dev-libs/boost"
+RDEPEND="dev-libs/boost
+	virtual/glu
+	virtual/opengl
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4
+	x11-libs/qt-opengl:4"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt"
 
 S=${WORKDIR}/${PN}
 
-src_configure() {
-	eqmake4
-}
+PATCHES=( "${FILESDIR}/${P}-gold.patch" )
 
 src_compile() {
 	xsltproc -stringparam version ${PV} -html htm_to_qml.xsl fracplanet.htm \
 		| sed 's/"/\\"/g' | sed 's/^/"/g' | sed 's/$/\\n"/g'> usage_text.h
-	emake || die
+	qt4-r2_src_compile
 }
 
 src_install() {
-	dobin ${PN} || die
+	dobin ${PN}
+	doman man/man1/${PN}.1
 	dodoc BUGS NEWS README THANKS TODO
 	dohtml *.{css,htm}
 }
