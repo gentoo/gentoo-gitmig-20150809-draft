@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/pms-test-suite-0.1.ebuild,v 1.2 2011/10/23 22:15:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/pms-test-suite-0.1.ebuild,v 1.3 2012/04/23 17:40:49 mgorny Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ inherit base distutils
 
 DESCRIPTION="A test suite for Package Manager PMS compliance"
 HOMEPAGE="http://www.gentoo.org/proj/en/qa/pms/pms-test-suite.xml"
-SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
