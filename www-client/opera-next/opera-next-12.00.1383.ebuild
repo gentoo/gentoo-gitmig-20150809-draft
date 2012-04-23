@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1362.ebuild,v 1.1 2012/04/11 14:06:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1383.ebuild,v 1.1 2012/04/23 13:44:56 jer Exp $
 
 EAPI="4"
 
@@ -11,18 +11,20 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-11 LGPL-2 LGPL-3"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="elibc_FreeBSD gtk gtk3 kde +gstreamer"
 
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
 
-O_D="4949_${O_V}-1360"
+O_D="9512_${O_V}-${O_B}"
 O_P="${PN}-${O_V}-${O_B}"
 O_U="http://snapshot.opera.com/unix/"
 
 SRC_URI="
 	amd64? ( ${O_U}${O_D}/${O_P}.x86_64.linux.tar.xz )
+	x86? ( ${O_U}${O_D}/${O_P}.i386.linux.tar.xz )
+	x86-fbsd? ( ${O_U}${O_D}/${O_P}.i386.freebsd.tar.xz )
 "
 
 OPREFIX="/usr/$(get_libdir)"
@@ -30,9 +32,11 @@ OPREFIX="/usr/$(get_libdir)"
 QA_DT_HASH="${OPREFIX}/${PN}/.*"
 QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
 
-O_LINGUAS="af az be bg bn cs da de el en-GB es-ES es-LA et fi fr fr-CA fy gd hi
-hr hu id it ja ka ko lt me mk ms nb nl nn pa pl pt pt-BR ro ru sk sr sv sw ta te
-th tl tr uk uz vi zh-CN zh-TW zu"
+O_LINGUAS="
+	af ar az be bg bn cs da de el en-GB es-ES es-LA et fa fi fr fr-CA fy gd he
+	hi hr hu id it ja ka ko lt me mk ms nb nl nn pa pl pt pt-BR ro ru sk sr sv
+	sw ta te th tl tr uk ur uz vi zh-CN zh-TW zu
+"
 
 for O_LINGUA in ${O_LINGUAS}; do
 	IUSE="${IUSE} linguas_${O_LINGUA/-/_}"

@@ -14,7 +14,7 @@ Opera Next is a stand-alone installation of the Opera desktop browser intended
 for testing the development of new features, technologies, and improvements. It
 is automatically updated to include the latest changes as they become available.
 As such, it may be unstable and include known issues, such as crashes or data
-loss situations. The 11.50 alpha is the first release for this product.
+loss situations.
 
 Opera Next is an entirely separate product to the official
 <pkg>www-client/opera</pkg> browser product, which is the stable product
