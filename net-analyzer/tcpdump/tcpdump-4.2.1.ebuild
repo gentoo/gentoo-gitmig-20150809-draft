@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.2.1.ebuild,v 1.1 2012/01/04 02:43:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.2.1.ebuild,v 1.2 2012/04/23 07:15:17 heroxbd Exp $
 
 EAPI="4"
 inherit flag-o-matic
@@ -53,11 +53,11 @@ src_configure() {
 
 	econf \
 		--with-user=tcpdump \
-		$(use_with ssl crypto) \
+		$(use_with ssl crypto "${EPREFIX}/usr") \
 		$(use_with smi) \
 		$(use_enable ipv6) \
 		$(use_enable samba smb) \
-		$(use_with chroot chroot /var/lib/tcpdump)
+		$(use_with chroot chroot "${EPREFIX}/var/lib/tcpdump")
 }
 
 src_test() {

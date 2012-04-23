@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.149 2012/01/04 02:43:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.150 2012/04/23 07:15:17 heroxbd Exp $
+
+  23 Apr 2012;  <heroxbd@gentoo.org> tcpdump-4.2.1.ebuild:
+  fixes directories in configure options for Prefix. closes bug #412005
 
 *tcpdump-4.2.1 (04 Jan 2012)
 
