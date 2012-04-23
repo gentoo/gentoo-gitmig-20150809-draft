@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.252 2012/04/22 14:53:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.253 2012/04/23 15:59:12 polynomial-c Exp $
+
+*mc-4.8.3-r1 (23 Apr 2012)
+
+  23 Apr 2012; Lars Wendler <polynomial-c@gentoo.org> -mc-4.8.3.ebuild,
+  +mc-4.8.3-r1.ebuild, +files/mc-4.8.3-fix-chown-crash.patch:
+  non-maintainer commit: Fixed crash when changing ownership wit "CTRL-x o"
+  (bug #413259). Permission granted by slyfox.
 
 *mc-4.8.3 (22 Apr 2012)
 

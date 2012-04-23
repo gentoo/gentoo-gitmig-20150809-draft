@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.3.ebuild,v 1.1 2012/04/22 14:53:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.3-r1.ebuild,v 1.1 2012/04/23 15:59:12 polynomial-c Exp $
 
 EAPI=4
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 MY_P=${P/_/-}
 
@@ -40,6 +40,9 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	cp "${FILESDIR}"/${P}-missing-do_panel_cd_stub_env.c \
 		tests/src/filemanager/do_panel_cd_stub_env.c || die
+
+	# bug #413259
+	epatch "${FILESDIR}"/${P}-fix-chown-crash.patch
 }
 
 src_configure() {
