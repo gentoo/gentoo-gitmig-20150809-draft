@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/at76c503a
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.18 2007/09/30 20:53:54 genstef Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.19 2012/04/23 17:30:28 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> at76c503a-0.14_beta1.ebuild,
+  at76c503a-0.16.ebuild:
+  Use mirror:// in SRC_URI.
 
 *at76c503a-0.16 (30 Sep 2007)
 
