@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.78 2012/04/14 07:26:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.79 2012/04/23 19:56:04 grobian Exp $
+
+  23 Apr 2012; Fabian Groffen <grobian@gentoo.org> libnet-1.1.6.ebuild:
+  Marked ~{ppc,x86,x64}-macos, bug #410067
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> libnet-1.1.6.ebuild:
   Fix for USE=-static-libs for prefix.
