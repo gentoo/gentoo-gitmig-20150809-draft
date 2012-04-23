@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13696 2012/04/22 21:06:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13697 2012/04/23 14:29:13 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -139,10 +139,6 @@ app-portage/portato
 # is not really functional yet. If you installed it together with the rest
 # of kde, now is a good time to remove it again... Nothing depends on it.
 kde-base/ksecrets
-
-# Mike Gilbert <floppym@gentoo.org> (05 Apr 2012)
-# Masked due to chromium breakage.
->=dev-libs/icu-49
 
 # Jeroen Roovers <jer@gentoo.org> (04 Apr 2012)
 # Alpha versions of dev-libs/libevent are considered unstable
