@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.99 2012/04/12 18:21:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.100 2012/04/23 07:37:46 ssuominen Exp $
+
+  23 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> dbus-glib-0.98.ebuild,
+  +files/dbus-glib-0.98-glib-2.31.patch:
+  Fix building of testsuite with dev-libs/glib >= 2.31 wrt #413195 by Patrick
+  Lauer
 
   12 Apr 2012; Jeremy Olexa <darkside@gentoo.org> dbus-glib-0.98.ebuild:
   add Gentoo Prefix support, KEYWORDS and path offsets
