@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.134 2012/03/26 23:13:11 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.135 2012/04/23 19:50:08 jlec Exp $
+
+*gajim-0.15-r1 (23 Apr 2012)
+
+  23 Apr 2012; Justin Lecher <jlec@gentoo.org> +gajim-0.15-r1.ebuild,
+  +files/gajim-0.15-plugin.patch:
+  Backport upstream commit 13748 to fix plugin dir location, #411253
 
   26 Mar 2012; Naohiro Aota <naota@gentoo.org> gajim-0.15.ebuild:
   Add ~x86-fbsd. #408687
