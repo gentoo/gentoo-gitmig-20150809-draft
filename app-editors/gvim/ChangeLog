@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.377 2012/04/23 13:01:07 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.378 2012/04/23 14:02:10 lack Exp $
+
+*gvim-7.3.502 (23 Apr 2012)
+
+  23 Apr 2012; Jim Ramsay <jim_ramsay@gentoo.org> +gvim-7.3.502.ebuild:
+  Version bump: 7.3.502 is released
 
 *gvim-7.3.498 (20 Apr 2012)
 
