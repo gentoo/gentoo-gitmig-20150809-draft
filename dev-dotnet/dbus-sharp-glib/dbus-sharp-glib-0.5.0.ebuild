@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp-glib/dbus-sharp-glib-0.5.0.ebuild,v 1.5 2011/11/10 19:19:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp-glib/dbus-sharp-glib-0.5.0.ebuild,v 1.6 2012/04/23 19:24:02 mgorny Exp $
 
 EAPI=4
 inherit mono
 
 DESCRIPTION="D-Bus for .NET: GLib integration module"
 HOMEPAGE="https://github.com/mono/dbus-sharp"
-SRC_URI="https://github.com/downloads/mono/dbus-sharp/${P}.tar.gz"
+SRC_URI="mirror://github/mono/dbus-sharp/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

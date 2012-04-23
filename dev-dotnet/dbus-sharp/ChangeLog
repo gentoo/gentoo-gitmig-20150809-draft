@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/dbus-sharp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp/ChangeLog,v 1.18 2012/04/09 14:39:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-sharp/ChangeLog,v 1.19 2012/04/23 19:23:04 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> dbus-sharp-0.7.0.ebuild,
+  dbus-sharp-0.7.0-r1.ebuild:
+  Use mirror://github.
 
   09 Apr 2012; Markus Meier <maekke@gentoo.org> dbus-sharp-0.7.0-r1.ebuild:
   x86 stable, bug #407701
