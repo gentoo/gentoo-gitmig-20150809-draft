@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.462 2012/04/23 22:16:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.463 2012/04/23 22:17:54 dilfridge Exp $
+
+  23 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.5.2-r2.ebuild:
+  Remove old
 
   23 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r3.ebuild,
   +files/cups-1.5.2-threads.patch, +files/cups-1.5.2-threads2.patch:
