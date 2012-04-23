@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0-r1.ebuild,v 1.7 2012/03/08 16:30:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0-r1.ebuild,v 1.8 2012/04/23 20:32:10 mgorny Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit gnome2-utils cmake-utils
 
 DESCRIPTION="A GTK+ RDP, VNC, XDMCP and SSH client"
 HOMEPAGE="http://remmina.sourceforge.net/"
-SRC_URI="https://github.com/downloads/FreeRDP/Remmina/Remmina-${PV}.tar.gz"
+SRC_URI="mirror://github/FreeRDP/Remmina/Remmina-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20120309.ebuild,v 1.2 2012/03/19 15:15:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20120309.ebuild,v 1.3 2012/04/23 20:32:10 mgorny Exp $
 
 EAPI="4"
 
 inherit gnome2-utils cmake-utils
 
 if [[ ${PV} != 9999 ]]; then
-	SRC_URI="https://github.com/downloads/FreeRDP/Remmina/${P}.tar.gz
+	SRC_URI="mirror://github/FreeRDP/Remmina/${P}.tar.gz
 		mirror://gentoo/${P}.tar.gz
 		http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"

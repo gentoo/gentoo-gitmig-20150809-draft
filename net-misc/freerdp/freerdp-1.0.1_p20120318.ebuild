@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0.1_p20120318.ebuild,v 1.1 2012/03/19 15:12:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0.1_p20120318.ebuild,v 1.2 2012/04/23 20:31:07 mgorny Exp $
 
 EAPI="4"
 
 inherit cmake-utils
 
 if [[ ${PV} != 9999* ]]; then
-	SRC_URI="https://github.com/downloads/FreeRDP/FreeRDP/${P}.tar.gz
+	SRC_URI="mirror://github/FreeRDP/FreeRDP/${P}.tar.gz
 		mirror://gentoo/${P}.tar.gz
 		http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
