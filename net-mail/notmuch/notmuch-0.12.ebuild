@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.12.ebuild,v 1.3 2012/03/20 13:26:23 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.12.ebuild,v 1.4 2012/04/23 20:25:30 aidecoe Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2:2.6 3:3.2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.1"
 
-inherit elisp-common distutils
+inherit elisp-common pax-utils distutils
 
 DESCRIPTION="The mail indexer"
 HOMEPAGE="http://notmuchmail.org/"
@@ -97,7 +97,9 @@ src_compile() {
 }
 
 src_test() {
+	pax-mark -m notmuch
 	LD_LIBRARY_PATH="${MY_LD_LIBRARY_PATH}" default
+	pax-mark -z -e notmuch
 }
 
 src_install() {
