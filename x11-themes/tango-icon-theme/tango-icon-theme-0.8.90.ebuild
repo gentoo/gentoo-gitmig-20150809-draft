@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.13 2011/06/15 08:32:30 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.14 2012/04/23 05:19:26 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit gnome2-utils
 
 DESCRIPTION="SVG and PNG icon theme from the Tango project"
@@ -18,12 +18,18 @@ RDEPEND=">=x11-themes/hicolor-icon-theme-0.12"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
-	>=gnome-base/librsvg-2.12.3
+	>=gnome-base/librsvg-2.34
 	|| ( media-gfx/imagemagick[png?] media-gfx/graphicsmagick[imagemagick,png?] )
 	sys-devel/gettext
 	>=x11-misc/icon-naming-utils-0.8.90"
 
 RESTRICT="binchecks strip"
+
+DOCS="AUTHORS ChangeLog README"
+
+src_prepare() {
+	sed -i -e '/svgconvert_prog/s:rsvg:&-convert:' configure || die #413183
+}
 
 src_configure() {
 	econf \
@@ -33,8 +39,7 @@ src_configure() {
 
 src_install() {
 	addwrite /root/.gnome2
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README
+	default
 }
 
 pkg_preinst() {	gnome2_icon_savelist; }
