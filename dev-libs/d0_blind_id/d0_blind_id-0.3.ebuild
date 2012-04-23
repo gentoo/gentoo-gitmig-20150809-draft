@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/d0_blind_id-0.3.ebuild,v 1.6 2011/11/27 17:40:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/d0_blind_id-0.3.ebuild,v 1.7 2012/04/23 19:27:22 mgorny Exp $
 
 EAPI=4
 inherit autotools-utils
 
 DESCRIPTION="Blind-ID library for user identification using RSA blind signatures"
 HOMEPAGE="http://git.xonotic.org/?p=xonotic/d0_blind_id.git;a=summary"
-SRC_URI="https://github.com/downloads/divVerent/d0_blind_id/${P}.tar.gz"
+SRC_URI="mirror://github/divVerent/d0_blind_id/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
