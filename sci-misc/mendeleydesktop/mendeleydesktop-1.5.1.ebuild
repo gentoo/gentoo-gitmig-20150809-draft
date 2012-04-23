@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.3.2.ebuild,v 1.1 2012/02/23 22:56:17 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.5.1.ebuild,v 1.1 2012/04/23 16:41:40 miknix Exp $
 
 EAPI="4"
 
@@ -44,7 +44,7 @@ QA_PRESTRIPPED="
 
 pkg_nofetch() {
 	elog "Please download ${MY_P} from:"
-	elog "http://www.mendeley.com"
+	elog "http://www.mendeley.com/download-mendeley-desktop/"
 	elog "and move it to ${DISTDIR}"
 }
 
