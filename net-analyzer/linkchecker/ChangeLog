@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.68 2012/04/23 09:45:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.69 2012/04/23 09:46:35 jlec Exp $
+
+  23 Apr 2012; Justin Lecher <jlec@gentoo.org> -linkchecker-5.2.ebuild,
+  -linkchecker-7.4.ebuild, -linkchecker-7.5.ebuild:
+  Cleaned old
 
 *linkchecker-7.7 (23 Apr 2012)
 
