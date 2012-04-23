@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13697 2012/04/23 14:29:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13698 2012/04/23 17:27:02 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -423,10 +423,6 @@ dev-libs/tomsfastmath
 # Upstream dead, nobody willing to maintain it and
 # buggy, bug #348500. Removal in 30 days.
 gnome-extra/hardware-monitor
-
-# Davide Pesavento <pesa@gentoo.org> (17 Mar 2012)
-# Beta release, masked for testing.
-=dev-util/qt-creator-2.5.0_beta*
 
 # Samuli Suominen <ssuominen@gentoo.org> (17 Mar 2012)
 # Fails to build with swig-2 wrt bug 367861. Removal in

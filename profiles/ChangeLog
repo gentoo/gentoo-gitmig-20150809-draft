@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6461 2012/04/23 16:48:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6462 2012/04/23 17:27:02 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Apr 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Remove obsolete dev-util/qt-creator mask.
 
   23 Apr 2012; Mike Gilbert <floppym@gentoo.org> package.mask:
   Remove mask on dev-libs/icu-49, per Arfrever's request.
