@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/razorqt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/ChangeLog,v 1.3 2012/04/04 10:37:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/ChangeLog,v 1.4 2012/04/23 20:38:49 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> razorqt-0.4.1-r1.ebuild,
+  razorqt-0.4.1-r2.ebuild:
+  Use mirror://github.
 
 *razorqt-0.4.1-r2 (04 Apr 2012)
 

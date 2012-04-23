@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/razorqt-0.4.1-r1.ebuild,v 1.1 2012/03/27 17:04:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/razorqt-0.4.1-r1.ebuild,v 1.2 2012/04/23 20:38:49 mgorny Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_BRANCH="0.4.1"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/downloads/Razor-qt/razor-qt/${P}.tar.bz2"
+	SRC_URI="mirror://github/Razor-qt/razor-qt/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
 fi
 
