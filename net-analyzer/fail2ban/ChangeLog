@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.82 2012/04/17 21:50:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.83 2012/04/23 16:12:09 darkside Exp $
+
+  23 Apr 2012; Jeremy Olexa <darkside@gentoo.org> -fail2ban-0.8.4-r3.ebuild,
+  -fail2ban-0.8.4-r4.ebuild, -files/fail2ban-0.8.4-cve2009-5023.patch,
+  -files/fail2ban-0.8.4-gentoo-init.patch, -files/fail2ban-0.8.4-hashlib.patch,
+  -files/fail2ban-0.8.4-sshd-breakin.patch,
+  files/fail2ban-0.8.6-gentoo-init.patch,
+  files/fail2ban-0.8.6-sshd-breakin.patch,
+  -files/gentoo-initd_create_run_dir.patch:
+  Remove old files, add upstream patch references
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> fail2ban-0.8.6.ebuild:
   Marking fail2ban-0.8.6 ppc64 for bug 411315
