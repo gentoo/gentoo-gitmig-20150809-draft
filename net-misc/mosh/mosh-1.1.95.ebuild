@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.1.94.ebuild,v 1.6 2012/04/19 09:10:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.1.95.ebuild,v 1.1 2012/04/23 14:35:45 xmw Exp $
 
 EAPI=4
 
@@ -26,11 +26,6 @@ RDEPEND="dev-libs/protobuf
 	utempter? ( sys-libs/libutempter )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_unpack() {
-	default
-	mv *-${PN}-* ${P} || die
-}
 
 src_prepare() {
 	einfo remove bundled skalibs
