@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libzeitgeist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/ChangeLog,v 1.8 2012/03/21 06:28:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/ChangeLog,v 1.9 2012/04/23 12:37:11 jlec Exp $
+
+*libzeitgeist-0.3.18 (23 Apr 2012)
+
+  23 Apr 2012; Justin Lecher <jlec@gentoo.org> +libzeitgeist-0.3.18.ebuild:
+  Version Bump
 
 *libzeitgeist-0.3.16 (21 Mar 2012)
 
