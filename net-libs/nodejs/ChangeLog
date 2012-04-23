@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.37 2012/04/22 15:01:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.38 2012/04/23 09:08:23 patrick Exp $
+
+*nodejs-0.7.8 (23 Apr 2012)
+
+  23 Apr 2012; Patrick Lauer <patrick@gentoo.org> +nodejs-0.7.8.ebuild:
+  Bump
 
   22 Apr 2012; Fabian Groffen <grobian@gentoo.org> nodejs-0.7.7-r1.ebuild:
   Fix compilation on Darwin, and fix for Prefix
