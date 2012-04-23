@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/beaglefs-1.0.3.ebuild,v 1.4 2010/06/29 14:42:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/beaglefs-1.0.3.ebuild,v 1.5 2012/04/23 17:26:01 mgorny Exp $
 
 inherit eutils
 
 DESCRIPTION="beaglefs implements a filesystem representing a live Beagle query."
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rml/fuse/beaglefs/"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/people/rml/fuse/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/kernel/people/rml/fuse/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
