@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyamg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.4 2012/02/23 09:58:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.5 2012/04/23 18:21:05 bicatali Exp $
+
+*pyamg-2.0.4 (23 Apr 2012)
+
+  23 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +pyamg-2.0.4.ebuild:
+  Version bump
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyamg-2.0.0.ebuild:
   Restricting python
