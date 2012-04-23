@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.187 2012/04/23 10:37:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.188 2012/04/23 17:54:46 pacho Exp $
+
+*gmime-2.2.27-r1 (23 Apr 2012)
+
+  23 Apr 2012; Pacho Ramos <pacho@gentoo.org> +gmime-2.2.27-r1.ebuild:
+  Prevent file collision, bug #413145 by Markus Meier.
 
 *gmime-2.6.9 (23 Apr 2012)
 
