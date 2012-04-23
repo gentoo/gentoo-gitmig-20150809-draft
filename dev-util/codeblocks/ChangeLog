@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/codeblocks
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.21 2011/07/12 00:03:51 dirtyepic Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.22 2012/04/23 22:19:12 aballier Exp $
+
+  23 Apr 2012; Alexis Ballier <aballier@gentoo.org> codeblocks-10.05.ebuild:
+  keyword ~x86-fbsd
 
   12 Jul 2011; Ryan Hill <dirtyepic@gentoo.org> codeblocks-9999.ebuild:
   Add dependency on libgamin (bug #366827 by Sven Eden). Explicitly call

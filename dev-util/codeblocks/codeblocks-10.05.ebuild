@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-10.05.ebuild,v 1.1 2010/07/02 22:04:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-10.05.ebuild,v 1.2 2012/04/23 22:19:12 aballier Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -11,7 +11,7 @@ DESCRIPTION="The open source, cross platform, free C++ IDE."
 HOMEPAGE="http://www.codeblocks.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 SRC_URI="mirror://berlios/codeblocks/${P}-src.tar.bz2"
 
 IUSE="contrib debug pch static-libs"
