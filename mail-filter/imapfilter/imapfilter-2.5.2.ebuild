@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-2.5.2.ebuild,v 1.1 2012/03/01 03:00:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-2.5.2.ebuild,v 1.2 2012/04/23 20:24:48 mgorny Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="An IMAP mail filtering utility"
 HOMEPAGE="http://imapfilter.hellug.gr"
-SRC_URI="https://github.com/downloads/lefcha/imapfilter/${P}.tar.gz"
+SRC_URI="mirror://github/lefcha/imapfilter/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
