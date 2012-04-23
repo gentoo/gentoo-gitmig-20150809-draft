@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.3.ebuild,v 1.1 2011/07/29 21:28:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.3.ebuild,v 1.2 2012/04/23 20:18:15 mgorny Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ MYP="${MYPN}-${PV}"
 
 DESCRIPTION="Astronomical tables support for Python"
 HOMEPAGE="http://atpy.github.com/ http://pypi.python.org/pypi/ATpy"
-SRC_URI="https://github.com/downloads/${PN}/${PN}/${MYP}.tar.gz"
+SRC_URI="mirror://github/${PN}/${PN}/${MYP}.tar.gz"
 
 RDEPEND="dev-python/numpy
 	dev-python/asciitable
