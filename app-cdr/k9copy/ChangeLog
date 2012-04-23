@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.70 2012/03/08 17:14:12 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.71 2012/04/23 15:45:33 ago Exp $
+
+  23 Apr 2012; Agostino Sarubbo <ago@gentoo.org> k9copy-2.3.8.ebuild:
+  Stable for amd64, wrt bug #412803
 
   08 Mar 2012; Sebastian Pipping <sping@gentoo.org> k9copy-2.3.8.ebuild:
   Guard optional mplayer runtime dependency behind mplayer use flag so that
