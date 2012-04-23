@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.260 2012/03/28 04:15:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.261 2012/04/23 07:07:28 heroxbd Exp $
+
+  23 Apr 2012;  <heroxbd@gentoo.org> iptables-1.4.13.ebuild:
+  add prefix support
 
 *iptables-1.4.13 (28 Mar 2012)
 
