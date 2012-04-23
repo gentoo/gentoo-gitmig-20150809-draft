@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.4 2012/03/23 16:33:05 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.5 2012/04/23 15:46:07 ago Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/twall/jna#readme"
 SRC_URI="https://github.com/twall/jna/tarball/3.4.0 -> ${P}-src.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="+awt +nio-buffers"
 REQUIRED_USE="test? ( awt nio-buffers )"
 
