@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/dee
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.1 2012/04/23 18:41:27 jlec Exp $
+
+*dee-1.0.10 (23 Apr 2012)
+
+  23 Apr 2012; Justin Lecher <jlec@gentoo.org> +dee-1.0.10.ebuild,
+  +files/dee-1.0.10-vapigen.patch, +metadata.xml:
+  Add missing metadata.xml
+
