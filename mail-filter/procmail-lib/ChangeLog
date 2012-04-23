@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/procmail-lib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail-lib/ChangeLog,v 1.6 2011/06/08 13:16:15 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail-lib/ChangeLog,v 1.7 2012/04/23 17:36:29 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> procmail-lib-20081108.ebuild:
+  Use mirror:// in SRC_URI.
 
   08 Jun 2011; Eray Aslan <eras@gentoo.org> procmail-lib-20081108.ebuild:
   Fix doc directory - bug #294280
