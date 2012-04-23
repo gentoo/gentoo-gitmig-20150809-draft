@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.0.4.ebuild,v 1.2 2012/04/23 15:00:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.0.7.ebuild,v 1.1 2012/04/23 15:00:45 titanofold Exp $
 
 EAPI=4
 
@@ -43,7 +43,9 @@ HTML_DOCS=(
 	"doc/tutorial-en.html"
 )
 
-S=${WORKDIR}/${MY_P}
+# Those turkeys didn't update the directory name!'
+#S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/pgpool-II-3.0.4"
 
 src_prepare() {
 	sed -i \

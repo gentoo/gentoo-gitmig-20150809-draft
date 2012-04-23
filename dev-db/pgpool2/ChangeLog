@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/pgpool2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.8 2011/06/19 18:50:43 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.9 2012/04/23 15:00:44 titanofold Exp $
+
+*pgpool2-3.1.3 (23 Apr 2012)
+*pgpool2-3.0.7 (23 Apr 2012)
+
+  23 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org> pgpool2-3.0.4.ebuild,
+  +pgpool2-3.0.7.ebuild, +pgpool2-3.1.3.ebuild, pgpool2-9999.ebuild:
+  Version bump. Fixes bug 410059. Fixed minor syntax.
 
 *pgpool2-3.0.4 (19 Jun 2011)
 
