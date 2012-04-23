@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.1.ebuild,v 1.4 2011/01/30 09:41:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.1.ebuild,v 1.5 2012/04/23 17:28:11 mgorny Exp $
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="Notifications for syslog entries via libnotify"
 HOMEPAGE="http://jtniehof.github.com/syslog-notify/"
-SRC_URI="http://cloud.github.com/downloads/jtniehof/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/jtniehof/${PN}/${P}.tar.bz2"
 
 KEYWORDS="amd64 x86"
 SLOT="0"
