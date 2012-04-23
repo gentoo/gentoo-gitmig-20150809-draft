@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/libee-0.3.1.ebuild,v 1.2 2011/09/18 10:49:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/libee-0.3.2-r2.ebuild,v 1.1 2012/04/23 14:05:00 maksbotan Exp $
 
 EAPI=4
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
+AUTOTOOLS_AUTORECONF=1
+
 inherit autotools-utils
 
 DESCRIPTION="An Event Expression Library inspired by CEE"
@@ -13,7 +15,7 @@ SRC_URI="http://www.libee.org/files/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="debug static-libs"
 
 DEPEND="dev-libs/libxml2
@@ -21,6 +23,8 @@ DEPEND="dev-libs/libxml2
 RDEPEND="${DEPEND}"
 
 DOCS=(INSTALL ChangeLog)
+PATCHES=("${FILESDIR}"/0.3.2-add_math_lib_configure.patch
+"${FILESDIR}"/0.3.2-add_math_lib_pc_in.patch)
 
 src_configure() {
 	local myeconfargs=(
@@ -31,5 +35,5 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1
+	autotools-utils_src_compile -j1
 }
