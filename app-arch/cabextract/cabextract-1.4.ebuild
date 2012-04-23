@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-1.4.ebuild,v 1.9 2012/02/28 19:38:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-1.4.ebuild,v 1.10 2012/04/23 22:39:28 vapier Exp $
 
 EAPI="4"
+
+inherit toolchain-funcs
 
 DESCRIPTION="Extracts files from Microsoft .cab files"
 HOMEPAGE="http://www.cabextract.org.uk/"
@@ -19,6 +21,10 @@ RDEPEND="extra-tools? ( dev-lang/perl )"
 # it properly leading to undefined references to rpl_fnmatch().  This may be
 # removed in the future if building still works by setting "yes" to "no".
 export ac_cv_func_fnmatch_works=yes
+
+src_compile() {
+	emake AR="$(tc-getAR)"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install
