@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.680 2012/04/21 06:36:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.681 2012/04/23 04:38:37 vapier Exp $
+
+  23 Apr 2012; Mike Frysinger <vapier@gentoo.org> udev-146-r1.ebuild,
+  udev-149.ebuild, udev-151-r4.ebuild, udev-164-r2.ebuild, udev-171-r5.ebuild,
+  udev-182-r2.ebuild, udev-182-r3.ebuild, udev-9999.ebuild:
+  Do not depend on glibc -- block older versions only.
 
   21 Apr 2012; Mike Frysinger <vapier@gentoo.org> udev-182-r3.ebuild:
   Restore ~arch keywords #410401.

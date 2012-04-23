@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182-r3.ebuild,v 1.3 2012/04/21 06:36:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-182-r3.ebuild,v 1.4 2012/04/23 04:38:37 vapier Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	introspection? ( dev-libs/gobject-introspection )
 	>=sys-apps/kmod-5
 	>=sys-apps/util-linux-2.20
-	>=sys-libs/glibc-2.10"
+	!<sys-libs/glibc-2.10"
 
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
