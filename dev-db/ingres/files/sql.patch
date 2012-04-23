@@ -1,8 +1,0 @@
---- src/front/frontcl/shell_unix/sql.sh	2008-10-08 12:03:32.000000000 +0200
-+++ src/front/frontcl/shell_unix/sql.sh	2008-10-08 12:05:48.000000000 +0200
-@@ -16,4 +16,4 @@
- #  PROGRAM = (PROG0PRFX)sql
- # -----------------------------------------------------------------
- 
--exec (PROG0PRFX)tm -qSQL "$@"
-+exec (PROG0PRFX)tm -qSQL "$@" -history_recall
