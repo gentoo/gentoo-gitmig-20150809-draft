@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9.1.ebuild,v 1.1 2012/02/15 01:36:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9.1.ebuild,v 1.2 2012/04/23 17:21:07 vapier Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ IUSE="+blksha1 +curl cgi doc emacs gtk iconv +pcre +perl +python ppcsha1 tk +thr
 # Common to both DEPEND and RDEPEND
 CDEPEND="
 	!blksha1? ( dev-libs/openssl )
-	sys-libs/zlib\
+	sys-libs/zlib
 	pcre? ( dev-libs/libpcre )
 	perl? ( dev-lang/perl[-build] )
 	tk? ( dev-lang/tk )
