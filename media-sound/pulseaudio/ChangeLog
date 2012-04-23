@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.267 2012/03/29 03:17:38 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.268 2012/04/23 21:09:16 aballier Exp $
+
+  23 Apr 2012; Alexis Ballier <aballier@gentoo.org> pulseaudio-1.99.2.ebuild,
+  pulseaudio-9999.ebuild:
+  bring back the alsa useflag guard for the alsa-plugins dep which was dropped
+  in
+  http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/media-sound/pulseaudi
+  o/pulseaudio-9999.ebuild?r1=1.18&r2=1.19
 
   29 Mar 2012; Arun Raghavan <ford_prefect@gentoo.org>
   pulseaudio-1.99.2.ebuild, pulseaudio-9999.ebuild:
