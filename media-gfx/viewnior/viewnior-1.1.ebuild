@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/viewnior-1.1.ebuild,v 1.3 2011/07/19 19:56:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/viewnior-1.1.ebuild,v 1.4 2012/04/23 17:36:25 mgorny Exp $
 
 EAPI="2"
 inherit fdo-mime gnome2-utils
 
 DESCRIPTION="Fast and simple image viewer"
 HOMEPAGE="http://xsisqox.github.com/Viewnior/index.html"
-SRC_URI="http://cloud.github.com/downloads/xsisqox/Viewnior/${P}.tar.gz"
+SRC_URI="mirror://github/xsisqox/Viewnior/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/viewnior
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.11 2011/11/22 20:25:59 wired Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.12 2012/04/23 17:36:25 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> viewnior-1.1.ebuild:
+  Use mirror:// in SRC_URI.
 
   22 Nov 2011; Alex Alexander <wired@gentoo.org> metadata.xml:
   added self as maintainer
