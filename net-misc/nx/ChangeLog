@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.64 2011/11/04 15:52:52 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.65 2012/04/23 09:59:28 voyageur Exp $
+
+  23 Apr 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/nx-2.1.0-deprecated-headers.patch,
+  -files/nx-2.1.0-invalid-options.patch, -files/nx-3.1.0-gcc-4.3.patch,
+  -files/nx-3.3.0-nxcomp-glibc2.10.patch, -nx-3.4.0-r3.ebuild:
+  Drop old version, clean leftover files
 
 *nx-3.5.0-r2 (04 Nov 2011)
 
