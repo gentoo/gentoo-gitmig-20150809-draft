@@ -1,6 +1,13 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.97 2012/04/21 21:27:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.98 2012/04/23 01:06:54 tetromino Exp $
+
+*telepathy-gabble-0.16.0 (23 Apr 2012)
+
+  23 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +telepathy-gabble-0.16.0.ebuild:
+  Bump to first stable 0.16 release. Telepathy-gabble's private librariess are
+  now installed in /usr/lib/telepathy/gabble-0/lib.
 
 *telepathy-gabble-0.15.5 (21 Apr 2012)
 
