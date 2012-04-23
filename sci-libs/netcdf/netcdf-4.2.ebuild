@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.2.ebuild,v 1.1 2012/04/18 19:10:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.2.ebuild,v 1.2 2012/04/23 16:11:43 bicatali Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ src_configure() {
 		$(use_enable dap)
 		$(use_enable doc doxygen)
 		$(use_enable hdf hdf4)
-		$(use_enable hdf5 netcdf4)
+		$(use_enable hdf5 netcdf-4)
 		$(use_enable tools utilities)
 	)
 	autotools-utils_src_configure

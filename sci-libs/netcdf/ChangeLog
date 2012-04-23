@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.96 2012/04/18 19:10:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.97 2012/04/23 16:11:43 bicatali Exp $
+
+  23 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> netcdf-4.2.ebuild:
+  Changed configure option for better behaviour on hdf5, bug #413031, thanks
+  pawstar
 
 *netcdf-4.2 (18 Apr 2012)
 
