@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.14 2012/02/08 21:23:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.15 2012/04/23 17:47:55 mgorny Exp $
 
 EAPI=2
 inherit eutils unpacker games
 
 DESCRIPTION="Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D"
 HOMEPAGE="http://games.activision.com/games/wolfenstein/"
-SRC_URI="ftp://ftp.idsoftware.com/idstuff/wolf/linux/wolf-linux-GOTY-maps.x86.run
+SRC_URI="mirror://idsoftware/wolf/linux/wolf-linux-GOTY-maps.x86.run
 	mirror://idsoftware/wolf/linux/wolf-linux-${PV}.x86.run"
 #	mirror://3dgamers/returnwolfenstein/wolf-linux-${PV}.x86.run
 
