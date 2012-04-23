@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.2-r2.ebuild,v 1.1 2012/04/16 07:18:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.2-r2.ebuild,v 1.2 2012/04/23 16:53:47 jlec Exp $
 
 EAPI=4
 
@@ -21,7 +21,8 @@ IUSE="svg"
 RDEPEND="
 	!app-benchmarks/bootchart
 	dev-python/pycairo[svg?]
-	dev-python/pygtk"
+	dev-python/pygtk
+	sys-apps/lsb-release"
 DEPEND="${RDEPEND}"
 
 CONFIG_CHECK="~PROC_EVENTS ~TASKSTATS ~TASK_DELAY_ACCT ~TMPFS"
