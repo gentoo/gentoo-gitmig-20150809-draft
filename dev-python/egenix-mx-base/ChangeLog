@@ -1,11 +1,12 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.69 2012/04/23 11:12:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.70 2012/04/23 11:16:47 xarthisius Exp $
 
   23 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +files/egenix-mx-base-3.2.3-distutils.patch, egenix-mx-base-3.2.3.ebuild:
   Fix distutils mess in python 2.7, revert broken sed and shorten description.
-  Fixes bug #412739 by Anton Kochkov <anton.kochkov@gmail.com>
+  Fixes bug #412739 by Anton Kochkov <anton.kochkov@gmail.com>. Thanks to 
+  Ian Delaney <johneed@hotmail.com> for help in solving.
 
   20 Apr 2012; Mike Gilbert <floppym@gentoo.org> egenix-mx-base-3.2.3.ebuild:
   Fix building with Python >=2.7.3_pre20120212:2.7. Backport other changes from
