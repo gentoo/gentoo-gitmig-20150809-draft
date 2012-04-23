@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/btparse
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparse/ChangeLog,v 1.12 2010/10/30 21:30:14 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparse/ChangeLog,v 1.13 2012/04/23 17:39:25 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> btparse-0.35.ebuild:
+  Use mirror:// in SRC_URI.
 
   30 Oct 2010; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   put it under the tex umbrella
