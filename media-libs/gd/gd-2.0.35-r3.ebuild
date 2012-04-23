@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.15 2012/03/05 06:54:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.16 2012/04/23 20:14:52 vapier Exp $
 
 EAPI="2"
 
@@ -35,6 +35,10 @@ src_prepare() {
 	use png || make_sed+=( -e '/_PROGRAMS/s:(gdparttopng|gdtopng|gd2topng|pngtogd|pngtogd2|webpng)::g' )
 	use zlib || make_sed+=( -e '/_PROGRAMS/s:(gd2topng|gd2copypal|gd2togif|giftogd2|gdparttopng|pngtogd2)::g' )
 	sed -i -r "${make_sed[@]}" Makefile.am || die
+
+	cat <<-EOF > acinclude.m4
+	m4_ifndef([AM_ICONV],[m4_define([AM_ICONV],[:])])
+	EOF
 
 	eautoreconf
 }
