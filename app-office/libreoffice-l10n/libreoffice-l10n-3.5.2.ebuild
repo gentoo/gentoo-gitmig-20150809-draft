@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.2.ebuild,v 1.4 2012/04/23 13:28:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.2.ebuild,v 1.5 2012/04/23 13:30:56 scarabeus Exp $
 
 EAPI=4
 
@@ -148,7 +148,7 @@ src_install() {
 		doins -r "${dir}"/*
 	fi
 	# remove extensions that are in the l10n for some weird reason
-	rm -rf ${ED}/usr/$(get_libdir)/${PN/-l10n/}/share/extensions/
+	rm -rf "${ED}"/usr/$(get_libdir)/${PN/-l10n/}/share/extensions/
 
 	echo "${OO_EXTENSIONS[@]}"
 	office-ext_src_install
