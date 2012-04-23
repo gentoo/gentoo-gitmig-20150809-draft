@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-tutcode/ibus-tutcode-1.0.0.ebuild,v 1.1 2011/05/28 00:56:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-tutcode/ibus-tutcode-1.0.0.ebuild,v 1.2 2012/04/23 19:17:54 mgorny Exp $
 
 EAPI=4
 
 DESCRIPTION="a Japanese TUT-Code input engine for IBus"
 HOMEPAGE="https://github.com/deton/ibus-tutcode/"
-SRC_URI="https://github.com/downloads/deton/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/deton/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
