@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bamtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/ChangeLog,v 1.1 2012/02/25 17:46:03 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/ChangeLog,v 1.2 2012/04/23 20:33:16 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> bamtools-1.0.2.ebuild:
+  Use mirror://github.
 
   25 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> +bamtools-1.0.2.ebuild,
   +metadata.xml:
