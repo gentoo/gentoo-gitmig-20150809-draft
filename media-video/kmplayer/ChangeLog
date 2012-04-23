@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.148 2012/04/22 18:49:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.149 2012/04/23 15:48:27 ago Exp $
+
+  23 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kmplayer-0.11.3c.ebuild:
+  Stable for amd64, wrt bug #412685
 
   22 Apr 2012; Johannes Huber <johu@gentoo.org> kmplayer-0.11.3c.ebuild:
   Remove not needed '+' in cmake argument statement by maekke.
