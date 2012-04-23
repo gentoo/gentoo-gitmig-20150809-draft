@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.107 2012/04/19 20:43:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.108 2012/04/23 01:06:33 tetromino Exp $
+
+*telepathy-glib-0.18.1 (23 Apr 2012)
+
+  23 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +telepathy-glib-0.18.1.ebuild:
+  Version bump to stable 0.18 series; adds high-level API for
+  TpDBusTubeChannel.
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> telepathy-glib-0.16.5.ebuild:
   Marking telepathy-glib-0.16.5 ppc64 stable for bug 410611
