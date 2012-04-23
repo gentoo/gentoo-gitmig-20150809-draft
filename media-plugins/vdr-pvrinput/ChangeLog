@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-pvrinput
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.28 2012/04/22 22:43:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.29 2012/04/23 23:09:54 hd_brummy Exp $
+
+  23 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-pvrinput-2011.09.17.ebuild:
+  uploaded 2011.09.17 sources to gentoo mirror, every dl from git results in
+  diffrent checksum
 
   22 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
   vdr-pvrinput-2011.08.18.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/vdr-pvrinput-2011.09.17.ebuild,v 1.2 2012/04/22 17:53:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/vdr-pvrinput-2011.09.17.ebuild,v 1.3 2012/04/23 23:09:54 hd_brummy Exp $
 
 EAPI="4"
 
@@ -13,8 +13,7 @@ inherit vdr-plugin eutils versionator
 
 DESCRIPTION="VDR Plugin: Use a PVR* card as input device"
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/plg-pvrinput"
-SRC_URI="http://projects.vdr-developer.org/git/vdr-plugin-pvrinput.git/snapshot/vdr-plugin-pvrinput-3ee6b964382f38715f4a4fe57bd4760044f9a58a.tar.gz
--> vdr-pvrinput-2011.09.17.tgz"
+SRC_URI="mirror://gentoo/vdr-pvrinput-2011.09.17.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
