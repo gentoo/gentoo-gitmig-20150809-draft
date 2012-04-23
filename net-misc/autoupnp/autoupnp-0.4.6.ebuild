@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autoupnp/autoupnp-0.4.6.ebuild,v 1.1 2011/09/15 10:42:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autoupnp/autoupnp-0.4.6.ebuild,v 1.2 2012/04/23 17:32:43 mgorny Exp $
 
 EAPI=4
 inherit autotools-utils
 
 DESCRIPTION="Automatic open port forwarder using UPnP"
 HOMEPAGE="https://github.com/mgorny/autoupnp/"
-SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

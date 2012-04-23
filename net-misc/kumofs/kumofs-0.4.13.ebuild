@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kumofs/kumofs-0.4.13.ebuild,v 1.1 2011/05/11 15:38:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kumofs/kumofs-0.4.13.ebuild,v 1.2 2012/04/23 17:33:22 mgorny Exp $
 
 EAPI="3"
 
 DESCRIPTION="a scalable and highly available distributed key-value store"
 HOMEPAGE="http://github.com/etolabo/kumofs"
-SRC_URI="http://cloud.github.com/downloads/etolabo/kumofs/${P}.tar.gz"
+SRC_URI="mirror://github/etolabo/kumofs/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
