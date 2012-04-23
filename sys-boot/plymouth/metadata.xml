@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
+		<email>a3li@gentoo.org</email>
 	</maintainer>
 	<use>
 		<flag name="gdm">Enables smooth transition to GDM</flag>

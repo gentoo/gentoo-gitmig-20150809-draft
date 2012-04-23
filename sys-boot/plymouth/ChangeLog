@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.23 2012/04/18 13:45:04 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.24 2012/04/23 20:05:10 pacho Exp $
+
+  23 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  a3li is the new maintainer (as discussed in #gentoo-dev).
 
   18 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
   Dropped my maintainership.
