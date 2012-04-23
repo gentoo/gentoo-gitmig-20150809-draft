@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r3.ebuild,v 1.2 2012/04/21 08:20:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r3.ebuild,v 1.3 2012/04/23 22:16:48 dilfridge Exp $
 
 EAPI=4
 
@@ -131,6 +131,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.4-php-destdir.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-perl-includes.patch"
 	epatch "${FILESDIR}/${PN}-1.5.2-linkperl.patch"
+	epatch "${FILESDIR}/${PN}-1.5.2-threads.patch"
+	epatch "${FILESDIR}/${PN}-1.5.2-threads2.patch"
 
 	# systemd support
 	epatch "${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"
