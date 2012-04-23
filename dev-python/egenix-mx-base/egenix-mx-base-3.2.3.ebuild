@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.2.3.ebuild,v 1.2 2012/04/20 00:24:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.2.3.ebuild,v 1.3 2012/04/23 11:12:49 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
-inherit distutils
+inherit distutils eutils
 
-DESCRIPTION="eGenix mx Base Distribution for Python - mxDateTime, mxTextTools, mxProxy, mxTools, mxBeeBase, mxStack, mxQueue, mxURL, mxUID"
+DESCRIPTION="eGenix utils for Python"
 HOMEPAGE="http://www.egenix.com/products/python/mxBase http://pypi.python.org/pypi/egenix-mx-base"
 SRC_URI="http://downloads.egenix.com/python/${P}.tar.gz"
 
@@ -32,8 +32,7 @@ src_prepare() {
 	# Avoid unnecessary overriding of settings. Distutils in Gentoo is patched in better way.
 	sed -e 's/if compiler.compiler_type == "unix":/if False:/' -i mxSetup.py || die "sed failed"
 
-	# http://hg.python.org/cpython/rev/6240ff5dfebe
-	sed -e "s/from distutils.ccompiler import customize_compiler/from distutils.sysconfig import customize_compiler/" -i mxSetup.py || die "sed failed"
+	epatch "${FILESDIR}"/${P}-distutils.patch
 }
 
 src_compile() {
