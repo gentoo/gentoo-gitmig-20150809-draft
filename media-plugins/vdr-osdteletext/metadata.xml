@@ -5,7 +5,7 @@
 	<maintainer>
 	  <email>vdr@gentoo.org</email>
 	  <name>Gentoo VDR Project</name>
-	  <description>Please contacts maintainer before you something change.</description>
+	  <description>Please contacts maintainer before you change something.</description>
 	</maintainer>
 	  <longdescription>
 	  VDR Plugin to show videotext on OSD
