@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.99 2012/02/21 07:26:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.100 2012/04/23 11:06:04 ssuominen Exp $
+
+*musicbrainz-4.0.1 (23 Apr 2012)
+
+  23 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +musicbrainz-4.0.1.ebuild:
+  Version bump.
 
 *musicbrainz-4.0.0 (21 Feb 2012)
 
