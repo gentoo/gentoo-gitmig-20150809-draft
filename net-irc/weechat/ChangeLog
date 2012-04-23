@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.110 2012/04/16 21:11:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.111 2012/04/23 10:48:50 scarabeus Exp $
+
+  23 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -weechat-0.3.5.ebuild:
+  Punt older.
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> weechat-0.3.7.ebuild:
   Marking weechat-0.3.7 ppc for bug 393649
