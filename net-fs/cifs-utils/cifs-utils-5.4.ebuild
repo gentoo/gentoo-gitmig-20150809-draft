@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.1.ebuild,v 1.3 2011/10/28 20:07:54 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.4.ebuild,v 1.1 2012/04/23 20:34:29 vostorga Exp $
 
 EAPI=4
 
@@ -40,6 +40,11 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	#Getting rid of -Werror
+    sed -e "s/-Werror//" -i Makefile.in || die "sed failed"	
+}
+
 src_configure() {
 	local myconf=''
 	if use "caps-ng"; then
@@ -66,7 +71,7 @@ src_install() {
 pkg_postinst() {
 	# Inform about set-user-ID bit of mount.cifs
 	ewarn "setuid use flag was dropped due to multiple security implications"
-	ewarn "such as CVE-2009-2948 and CVE-2011-3585."
+	ewarn "such as CVE-2009-2948, CVE-2011-3585 and CVE-2012-1586"
 	ewarn "You are free to set setuid flags by yourself"
 
 	# Inform about upcall usage
