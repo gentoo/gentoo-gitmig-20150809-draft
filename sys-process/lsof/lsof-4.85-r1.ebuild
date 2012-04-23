@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.85-r1.ebuild,v 1.1 2011/10/30 23:28:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.85-r1.ebuild,v 1.2 2012/04/23 16:06:18 vapier Exp $
 
 EAPI="2"
 
@@ -43,7 +43,7 @@ target() { usex kernel_FreeBSD freebsd linux ; }
 src_configure() {
 	use static && append-ldflags -static
 
-	append-cppflags $(usex rpc "$($(tc-getPKG_CONFIG) libtirpc --cflags)" -DHASNOTRPC)
+	append-cppflags $(usex rpc "$($(tc-getPKG_CONFIG) libtirpc --cflags)" "-DHASNOTRPC -DHASNORPC_H")
 	append-cppflags $(usex ipv6 -{D,U}HASIPv6)
 
 	export LSOF_CFGL="${CFLAGS} ${LDFLAGS} \
