@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0-r1.ebuild,v 1.2 2012/04/21 15:22:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0-r1.ebuild,v 1.3 2012/04/23 20:35:08 mgorny Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit multilib user
 
 DESCRIPTION="Service providing elegant and stable means of managing Optimus graphics chipsets"
 HOMEPAGE="https://github.com/Bumblebee-Project/Bumblebee"
-SRC_URI="https://github.com/downloads/Bumblebee-Project/${PN/bu/Bu}/${P/bu/Bu}.tar.gz"
+SRC_URI="mirror://github/Bumblebee-Project/${PN/bu/Bu}/${P/bu/Bu}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-3"
