@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gaupol
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.16 2011/02/13 13:27:19 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.17 2012/04/23 04:31:10 patrick Exp $
+
+*gaupol-0.19.2 (23 Apr 2012)
+
+  23 Apr 2012; Patrick Lauer <patrick@gentoo.org> +gaupol-0.19.2.ebuild:
+  Bump
 
   13 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -gaupol-0.17.ebuild:
