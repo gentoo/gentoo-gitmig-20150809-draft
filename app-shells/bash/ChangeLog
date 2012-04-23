@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.308 2012/04/03 18:22:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.309 2012/04/23 04:24:53 vapier Exp $
+
+*bash-4.2_p24-r1 (23 Apr 2012)
+
+  23 Apr 2012; Mike Frysinger <vapier@gentoo.org> +bash-4.2_p24-r1.ebuild,
+  +files/bash-4.2-extglob-multibyte.patch:
+  Add fix from upstream for multibyte string replaces in extglob mode #412867 by
+  mva.
 
   03 Apr 2012; Mike Frysinger <vapier@gentoo.org> bash-4.2_p24.ebuild,
   +files/bash-4.2-no-readline.patch:
