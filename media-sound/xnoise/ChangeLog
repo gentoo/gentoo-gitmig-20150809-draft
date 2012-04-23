@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xnoise
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.16 2012/03/23 20:41:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.17 2012/04/23 19:07:20 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> xnoise-0.1.31.ebuild:
+  Use mirror:// in SRC_URI.
 
 *xnoise-0.1.31 (23 Mar 2012)
 
