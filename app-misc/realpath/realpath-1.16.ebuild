@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/realpath-1.16.ebuild,v 1.8 2012/02/07 15:25:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/realpath-1.16.ebuild,v 1.9 2012/04/23 22:33:56 vapier Exp $
 
 EAPI="3"
 inherit eutils toolchain-funcs flag-o-matic prefix
@@ -33,7 +33,6 @@ src_unpack() {
 		cd deb
 		unpack ${PN}_${PV}_i386.deb
 		unpack ./data.tar.gz
-		gunzip -r usr/share/man || die "gunzip failed"
 	fi
 }
 
@@ -47,7 +46,7 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
-	use !elibc_glibc && append-libs -lintl
+	use nls && use !elibc_glibc && append-libs -lintl
 	[[ ${CHOST} == *-mint* ]] && append-libs "-liconv"
 	if [[ ${CHOST} == *-irix* || ${CHOST} == *-interix[35]* ]] ; then
 		append-flags -I"${EPREFIX}"/usr/$(get_libdir)/gnulib/include
@@ -55,12 +54,12 @@ src_compile() {
 		append-libs -lgnu
 	fi
 
-	emake VERSION="${PV}" SUBDIRS="src man $(use nls && echo po)" \
+	emake VERSION="${PV}" SUBDIRS="src man $(usex nls po '')" \
 		|| die "emake failed"
 }
 
 src_install() {
-	emake VERSION="${PV}" SUBDIRS="src man $(use nls && echo po)" \
+	emake VERSION="${PV}" SUBDIRS="src man $(usex nls po '')" \
 		DESTDIR="${D}" install || die "emake install failed"
 	newdoc debian/changelog ChangeLog.debian || die
 

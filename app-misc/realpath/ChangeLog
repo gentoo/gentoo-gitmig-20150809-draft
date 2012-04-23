@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.24 2012/02/07 20:33:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.25 2012/04/23 22:33:56 vapier Exp $
+
+  23 Apr 2012; Mike Frysinger <vapier@gentoo.org> realpath-1.16.ebuild:
+  Drop gunzip on man pages (portage automatically takes care of that), simplify
+  use/nls logic, and only append -lintl when USE=nls as this breaks uclibc
+  systems.
 
   07 Feb 2012; Justin Lecher <jlec@gentoo.org>
   -files/realpath-1.14-build.patch, -realpath-1.15-r1.ebuild,
