@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Address
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.59 2012/04/22 10:28:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/ChangeLog,v 1.60 2012/04/23 21:39:30 ranger Exp $
+
+  23 Apr 2012; Brent Baude <ranger@gentoo.org> Email-Address-1.895.0.ebuild:
+  Marking Email-Address-1.895.0 ppc64 for bug 413003
 
   22 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Email-Address-1.895.0.ebuild:
   Stable for amd64, wrt bug #413003
