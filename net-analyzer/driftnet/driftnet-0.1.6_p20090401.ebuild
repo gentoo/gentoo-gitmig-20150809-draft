@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6_p20090401.ebuild,v 1.6 2011/03/28 21:33:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6_p20090401.ebuild,v 1.7 2012/04/23 17:34:35 mgorny Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A program which listens to network traffic and picks out images from TCP streams it observes"
 HOMEPAGE="http://www.ex-parrot.com/~chris/driftnet/"
-SRC_URI="http://cloud.github.com/downloads/rbu/${PN}/${P}.tar.gz"
+SRC_URI="mirror://github/rbu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc -sparc ~x86"
