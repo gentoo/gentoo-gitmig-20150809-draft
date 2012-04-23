@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/scikits_learn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.10 2012/02/05 01:58:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.11 2012/04/23 19:49:14 bicatali Exp $
+
+*scikits_learn-0.10-r1 (23 Apr 2012)
+
+  23 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +files/0.10-atlas.patch,
+  -scikits_learn-0.9.ebuild, -scikits_learn-0.10.ebuild,
+  +scikits_learn-0.10-r1.ebuild:
+  Added a patch which makes sure cblas stock libraries are used instead of
+  bundled ATLAS library. Fixed doc generation with sphinx to link datasets in
+  plot generation
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> scikits_learn-0.10.ebuild,
   scikits_learn-0.9.ebuild:

@@ -1,20 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.10.ebuild,v 1.2 2012/02/05 01:58:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.10-r1.ebuild,v 1.1 2012/04/23 19:49:14 bicatali Exp $
 
 EAPI=4
-inherit flag-o-matic
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils multilib
+inherit distutils multilib flag-o-matic
 
 MYPN="${PN/scikits_/scikit-}"
 
-DESCRIPTION="A set of python modules for machine learning and data mining"
+DESCRIPTION="Python modules for machine learning and data mining"
 HOMEPAGE="http://scikit-learn.org"
 SRC_URI="mirror://sourceforge/${MYPN}/${MYPN}-${PV}.tar.gz"
 
@@ -36,6 +35,7 @@ DEPEND="${CDEPEND}
 S="${WORKDIR}/${MYPN}-${PV}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PV}-atlas.patch
 	# use stock libsvm
 	cat <<-EOF >> site.cfg
 		[libsvm]
@@ -53,10 +53,14 @@ src_compile() {
 	distutils_src_compile
 	if use doc; then
 		cd "${S}/doc"
-		export VARTEXFONTS="${T}"/fonts
-		MPLCONFIGDIR="${S}/build-$(PYTHON -f --ABI)" \
-			PYTHONPATH=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*) \
-			emake html latex
+		local d=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*)
+		ln -s "${S}"/sklearn/datasets/{data,descr,images} \
+			"${d}"/sklearn/datasets
+		VARTEXFONTS="${T}"/fonts \
+			MPLCONFIGDIR="${S}/build-$(PYTHON -f --ABI)" \
+			PYTHONPATH="${d}" \
+			emake html
+		rm -r "${d}"/sklearn/datasets/{data,desr,images}
 	fi
 }
 
@@ -68,7 +72,6 @@ src_install() {
 	}
 	python_execute_function -q remove_scikits
 	insinto /usr/share/doc/${PF}
-	use doc && doins "${DISTDIR}"/scikits.learn.pdf && \
-		doins -r build/sphinx/html
+	use doc && dohtml -r doc/_build/html
 	use examples && doins -r examples
 }
