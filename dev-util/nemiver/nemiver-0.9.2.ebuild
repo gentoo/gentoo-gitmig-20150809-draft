@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.9.2.ebuild,v 1.2 2012/04/18 20:34:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.9.2.ebuild,v 1.3 2012/04/23 09:42:20 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -45,4 +45,10 @@ pkg_setup() {
 		--enable-gsettings
 		$(use_enable memoryview)
 		--disable-static"
+}
+
+src_prepare() {
+	# Fix XML validation, bug #413143
+	epatch "${FILESDIR}/${P}-xml-validation.patch"
+	gnome2_src_prepare
 }
