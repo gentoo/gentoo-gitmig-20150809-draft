@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-9.0.ebuild,v 1.1 2012/01/16 16:37:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-9.0.ebuild,v 1.2 2012/04/23 15:58:09 aballier Exp $
 
 inherit bsdmk freebsd
 
@@ -16,6 +16,7 @@ SRC_URI="mirror://gentoo/${BIN}.tar.bz2
 		mirror://gentoo/${LIB}.tar.bz2"
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
+	>=dev-libs/libedit-20120311.3.0-r1
 	sys-libs/ncurses
 	sys-apps/ed
 	!app-misc/realpath

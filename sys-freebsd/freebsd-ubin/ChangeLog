@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.77 2012/04/02 10:22:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.78 2012/04/23 16:01:42 aballier Exp $
+
+  23 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-ubin-9.0.ebuild:
+  depend on new enough libedit
 
 *freebsd-ubin-8.2-r1 (02 Apr 2012)
 

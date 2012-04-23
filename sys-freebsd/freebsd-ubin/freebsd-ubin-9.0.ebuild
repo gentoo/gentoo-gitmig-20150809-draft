@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.0.ebuild,v 1.1 2012/01/16 16:37:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.0.ebuild,v 1.2 2012/04/23 16:01:42 aballier Exp $
 
 EAPI=2
 
@@ -28,6 +28,7 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?]
 	virtual/pam
 	sys-libs/zlib
 	>=sys-libs/ncurses-5.9
+	>=dev-libs/libedit-20120311.3.0-r1
 	!sys-process/fuser-bsd
 	!dev-util/csup"
 

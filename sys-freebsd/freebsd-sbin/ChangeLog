@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.63 2012/03/30 15:48:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.64 2012/04/23 16:02:59 aballier Exp $
+
+  23 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-sbin-9.0.ebuild:
+  depend on new enough libedit
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   -freebsd-sbin-9.0_rc1.ebuild, -freebsd-sbin-9.0_rc2.ebuild,
