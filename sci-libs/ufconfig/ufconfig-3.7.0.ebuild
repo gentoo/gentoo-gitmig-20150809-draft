@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ufconfig-3.7.0.ebuild,v 1.1 2012/01/20 06:01:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ufconfig-3.7.0.ebuild,v 1.2 2012/04/23 20:24:59 grobian Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://www.cise.ufl.edu/research/sparse/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="static-libs"
 DEPEND=""
 
@@ -21,8 +21,11 @@ S="${WORKDIR}/${MY_PN}"
 src_compile() {
 	echo  "$(tc-getCC) ${CFLAGS} -fPIC -c UFconfig.c -o UFconfig.lo"
 	$(tc-getCC) ${CFLAGS} -fPIC -c UFconfig.c -o UFconfig.lo || die
-	echo "$(tc-getCC) ${LDFLAGS} -shared -Wl,-soname,libufconfig.so.${PV} -o libufconfig.so.${PV} UFconfig.lo"
-	$(tc-getCC) ${LDFLAGS} -shared -Wl,-soname,libufconfig.so.${PV} -o libufconfig.so.${PV} UFconfig.lo || die
+	local sharedlink="-shared -Wl,-soname,libufconfig$(get_libname ${PV})"
+	[[ ${CHOST} == *-darwin* ]] && \
+		sharedlink="-dynamiclib -install_name ${EPREFIX}/usr/$(get_libdir)/libufconfig$(get_libname ${PV})"
+	echo "$(tc-getCC) ${LDFLAGS} ${sharedlink} -o libufconfig$(get_libname ${PV}) UFconfig.lo"
+	$(tc-getCC) ${LDFLAGS} ${sharedlink} -o libufconfig$(get_libname ${PV}) UFconfig.lo || die
 	if use static-libs; then
 		echo "$(tc-getCC) ${CFLAGS} -c UFconfig.c -o UFconfig.o"
 		$(tc-getCC) ${CFLAGS} -c UFconfig.c -o UFconfig.o || die
@@ -32,8 +35,8 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so libufconfig.so.${PV}
-	dosym libufconfig.so.${PV} /usr/$(get_libdir)/libufconfig.so
+	dolib.so libufconfig$(get_libname ${PV})
+	dosym libufconfig$(get_libname ${PV}) /usr/$(get_libdir)/libufconfig$(get_libname)
 	use static-libs && dolib.a libufconfig.a
 	insinto /usr/include
 	doins UFconfig.h
