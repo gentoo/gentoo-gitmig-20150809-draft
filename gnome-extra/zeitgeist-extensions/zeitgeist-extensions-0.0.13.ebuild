@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-extensions/zeitgeist-extensions-0.0.13.ebuild,v 1.1 2012/02/16 07:46:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-extensions/zeitgeist-extensions-0.0.13.ebuild,v 1.2 2012/04/23 20:12:42 jlec Exp $
 
 EAPI=4
 
@@ -39,6 +39,11 @@ RDEPEND="
 		dev-python/dbus-python
 	)"
 DEPEND=""
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_install() {
 	insinto /usr/share/zeitgeist/_zeitgeist/engine/extensions
