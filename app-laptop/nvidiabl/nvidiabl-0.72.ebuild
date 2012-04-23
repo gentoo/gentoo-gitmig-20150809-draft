@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.72.ebuild,v 1.1 2011/11/11 16:38:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.72.ebuild,v 1.2 2012/04/23 19:19:09 mgorny Exp $
 
 EAPI=4
 inherit linux-mod
@@ -8,7 +8,7 @@ inherit linux-mod
 DESCRIPTION="Linux driver for setting the backlight brightness on laptops using
 NVIDIA GPU"
 HOMEPAGE="https://github.com/guillaumezin/nvidiabl"
-SRC_URI="https://github.com/downloads/guillaumezin/${PN}/${P}-source-only.dkms.tar.gz"
+SRC_URI="mirror://github/guillaumezin/${PN}/${P}-source-only.dkms.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/nvidiabl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.7 2012/02/19 10:59:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.8 2012/04/23 19:19:09 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> nvidiabl-0.70.ebuild,
+  nvidiabl-0.72.ebuild, nvidiabl-0.73.ebuild:
+  Use mirror://github.
 
 *nvidiabl-0.73 (19 Feb 2012)
 
