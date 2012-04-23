@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.287 2012/04/22 14:17:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.288 2012/04/23 16:44:44 scarabeus Exp $
+
+  23 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Actually delete cppunit from depend as it should be now properly separated.
 
   22 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libreoffice-3.5.2.2.ebuild:
