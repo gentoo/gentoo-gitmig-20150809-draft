@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/NetAddr-IP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.43 2012/04/22 10:20:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.44 2012/04/23 21:35:03 ranger Exp $
+
+  23 Apr 2012; Brent Baude <ranger@gentoo.org> NetAddr-IP-4.59.0.ebuild:
+  Marking NetAddr-IP-4.59.0 ppc64 for bug 412969
 
   22 Apr 2012; Agostino Sarubbo <ago@gentoo.org> NetAddr-IP-4.59.0.ebuild:
   Stable for amd64, wrt bug #412969
