@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-windows
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/ChangeLog,v 1.11 2012/03/18 19:04:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/ChangeLog,v 1.12 2012/04/23 17:31:54 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> cups-windows-6.0.ebuild,
+  cups-windows-6.0-r1.ebuild:
+  Use mirror:// in SRC_URI.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> cups-windows-6.0-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #401113
