@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.4 2012/04/22 17:58:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.5 2012/04/23 15:48:56 ago Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="daemon debug geoip nls remote stats unicode upnp +X"
 
 DEPEND=">=dev-libs/crypto++-5
