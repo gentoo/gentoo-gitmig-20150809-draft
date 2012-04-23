@@ -1,6 +1,16 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.141 2012/04/17 13:30:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.142 2012/04/23 12:40:51 mpagano Exp $
+
+*portpeek-2.0.22 (23 Apr 2012)
+
+  23 Apr 2012; Michael Pagano <mpagano@gentoo.org> -portpeek-2.0.20.ebuild,
+  +portpeek-2.0.22.ebuild:
+  Fix confirmation of file fixing during check of package.use. bug #412387. Fix
+  confirmation of file fixing during check of package.use. bug #412387. Unify
+  colors for packages that are not installed. Refactor analysis of package.use
+  packages with no atom master v2.0.22. Thanks to Daniel Perzynski for
+  reporting, testing and assistance in making portpeek better and more useful.
 
 *portpeek-2.0.20 (17 Apr 2012)
 
