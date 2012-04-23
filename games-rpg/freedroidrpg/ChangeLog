@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/freedroidrpg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.35 2012/04/16 19:35:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.36 2012/04/23 23:35:32 mr_bones_ Exp $
+
+  23 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/freedroidrpg-0.14.1-libpng15.patch,
+  -files/freedroidrpg-0.14.1-syslibs.patch, -freedroidrpg-0.14.1.ebuild:
+  old
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> freedroidrpg-0.15.ebuild:
   Marking freedroidrpg-0.15 ppc for bug 411771
