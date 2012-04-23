@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-rescue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/ChangeLog,v 1.28 2012/03/30 15:47:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/ChangeLog,v 1.29 2012/04/23 17:34:53 aballier Exp $
+
+  23 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-rescue-9.0.ebuild:
+  depend on readline[static-libs]
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   -freebsd-rescue-9.0_rc1.ebuild, -freebsd-rescue-9.0_rc2.ebuild,
