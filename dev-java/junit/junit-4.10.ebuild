@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.10.ebuild,v 1.4 2012/02/11 14:20:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.10.ebuild,v 1.5 2012/04/23 19:25:53 mgorny Exp $
 
 # WARNING: JUNIT.JAR IS _NOT_ SYMLINKED TO ANT-CORE LIB FOLDER AS JUNIT3 IS
 
@@ -10,7 +10,7 @@ JAVA_PKG_IUSE="doc examples source test"
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Simple framework to write repeatable tests"
-SRC_URI="https://github.com/downloads/KentBeck/${PN}/${PN}${PV}.zip"
+SRC_URI="mirror://github/KentBeck/${PN}/${PN}${PV}.zip"
 HOMEPAGE="http://www.junit.org/"
 LICENSE="CPL-1.0"
 SLOT="4"
