@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.102 2011/03/02 19:32:14 signals Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.103 2012/04/23 17:23:28 mgorny Exp $
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org>
+  redhat-artwork-5.0.8-r4.ebuild:
+  Use mirror:// in SRC_URI.
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org>
   redhat-artwork-5.0.8-r4.ebuild:
