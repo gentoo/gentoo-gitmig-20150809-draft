@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1386.ebuild,v 1.1 2012/04/24 17:25:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1386.ebuild,v 1.2 2012/04/24 17:49:56 jer Exp $
 
 EAPI="4"
 
@@ -140,22 +140,23 @@ src_prepare() {
 	# Unzip the man pages before sedding
 	gunzip share/man/man1/* || die
 
+	local OPERA_SUFFIX= OPERA__SUFFIX= OPERAU_SUFFIX=
+	if [[ ${PN} = opera-next ]]; then
+		OPERA_SUFFIX="-next"
+		OPERA__SUFFIX=" Next"
+		OPERA_USUFFIX="-NEXT"
+	fi
+
 	# Replace PREFIX, SUFFIX and PN in various files
 	sed -i \
 		-e "s:@@{PREFIX}:/usr:g" \
-		-e "s:@@{SUFFIX}::g" \
-		-e "s:@@{_SUFFIX}::g" \
-		-e "s:@@{USUFFIX}::g" \
-		-e "s:opera:${PN}:g" \
+		-e "s:@@{SUFFIX}:${OPERA_SUFFIX}:g" \
+		-e "s:@@{_SUFFIX}:${OPERA__SUFFIX}:g" \
+		-e "s:@@{USUFFIX}:${OPERA_USUFFIX}:g" \
 		share/man/man1/* \
+		share/mime/packages/* \
 		share/applications/${PN}-*.desktop \
 		|| die
-
-	# Replace "Opera" with "Opera Next"
-	if [[ ${PN} = opera-next ]]; then
-		sed -i share/applications/${PN}-*.desktop \
-			-e "/^Name=Opera\|^ Next/s:Opera:& Next:" || die
-	fi
 
 	# Create /usr/bin/opera wrapper
 	echo '#!/bin/sh' > ${PN}

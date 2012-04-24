@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.78 2012/04/24 17:25:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.79 2012/04/24 17:49:56 jer Exp $
+
+  24 Apr 2012; Jeroen Roovers <jer@gentoo.org> -opera-next-12.00.1372.ebuild,
+  opera-next-12.00.1386.ebuild:
+  Improve *SUFFIX replacement (match the upstream install script more closely).
 
 *opera-next-12.00.1386 (24 Apr 2012)
 
