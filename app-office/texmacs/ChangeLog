@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.100 2012/03/19 08:47:38 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.101 2012/04/24 13:21:45 scarabeus Exp $
+
+  24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> texmacs-1.0.7.15.ebuild:
+  Slight whitespace.
 
 *texmacs-1.0.7.15 (19 Mar 2012)
 

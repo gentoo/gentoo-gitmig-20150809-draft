@@ -1,8 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.15.ebuild,v 1.1 2012/03/19 08:47:38 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.15.ebuild,v 1.2 2012/04/24 13:21:45 scarabeus Exp $
+
 EAPI=4
+
 inherit autotools
+
 MY_P=${P/tex/TeX}-src
 
 DESCRIPTION="Wysiwyg text processor with high-quality maths"
@@ -39,13 +42,13 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_with imlib imlib2) \
+	econf \
+		$(use_with imlib imlib2) \
 		--enable-optimize="${CXXFLAGS}" \
 		$(use_enable qt4 qt)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc TODO
+	default
 	domenu "${FILESDIR}"/TeXmacs.desktop
 }
