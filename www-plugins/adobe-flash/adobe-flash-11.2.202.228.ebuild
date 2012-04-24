@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.228.ebuild,v 1.5 2012/04/24 20:12:46 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.228.ebuild,v 1.6 2012/04/24 21:37:20 flameeyes Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -63,7 +63,7 @@ any_cpu_missing_flag() {
 }
 
 pkg_pretend() {
-	if any_cpu_missing_flag 'BAADsse2'; then
+	if any_cpu_missing_flag 'sse2'; then
 		eerror "This version of adobe-flash requires a CPU that supports the"
 		eerror "SSE2 instruction set, and at least one of your CPUs does not"
 		eerror "support this feature."
