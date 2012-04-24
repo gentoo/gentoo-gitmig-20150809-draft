@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pspp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.17 2012/03/15 18:28:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.18 2012/04/24 10:41:15 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> pspp-0.6.2.ebuild,
+  pspp-0.6.2-r1.ebuild:
+  Update to use mirror://.
 
   15 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> pspp-0.6.2-r1.ebuild:
   Added gnome-extras/yelp dependency for documentation when gtk is set

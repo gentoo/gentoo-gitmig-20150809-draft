@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.12 2012/03/25 15:55:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.13 2012/04/24 10:39:54 mgorny Exp $
 
 EAPI=4
 inherit eutils base autotools toolchain-funcs
@@ -8,7 +8,7 @@ inherit eutils base autotools toolchain-funcs
 DESCRIPTION="High-level interactive language for numerical computations"
 LICENSE="GPL-3"
 HOMEPAGE="http://www.octave.org/"
-SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 IUSE="curl doc fftw +glpk +imagemagick opengl openmp +qhull +qrupdate
