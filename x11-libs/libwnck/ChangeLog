@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.278 2012/04/19 20:47:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.279 2012/04/24 04:41:18 tetromino Exp $
+
+*libwnck-2.31.0 (24 Apr 2012)
+
+  24 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libwnck-2.31.0.ebuild:
+  Bump, adds pager layout policy API used in >=xfce4-panel-4.9.2 (bug #412823,
+  thanks to Derk W te Bokkel).
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> libwnck-3.2.1.ebuild:
   Marking libwnck-3.2.1 ppc64 stable for bug 410611
