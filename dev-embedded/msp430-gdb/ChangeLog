@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/msp430-gdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gdb/ChangeLog,v 1.3 2011/12/11 08:42:32 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gdb/ChangeLog,v 1.4 2012/04/24 09:52:10 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org>
+  msp430-gdb-7.2_p20111205.ebuild:
+  Update to use mirror://.
 
   11 Dec 2011; Tim Harder <radhermit@gentoo.org>
   msp430-gdb-7.2_p20111205.ebuild, metadata.xml:
