@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.11.1-r3.ebuild,v 1.1 2012/04/24 09:30:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.11.1-r3.ebuild,v 1.2 2012/04/24 09:51:50 aidecoe Exp $
 
 EAPI=4
 
@@ -42,6 +42,9 @@ RDEPEND="${CDEPEND}
 	zsh-completion? ( app-shells/zsh )
 	"
 
+PATCHES=(
+	"${FILESDIR}/${PV}-build-with-gmime-2.4-only.patch"
+	)
 DOCS=( AUTHORS NEWS README )
 SITEFILE="50${PN}-gentoo.el"
 MY_LD_LIBRARY_PATH="${WORKDIR}/${P}/lib"
@@ -63,8 +66,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-build-with-gmime-2.4-only.patch"
-
+	local p
+	for p in "${PATCHES[@]}"; do
+		epatch "${p}"
+	done
 	default
 	bindings python distutils_src_prepare
 }

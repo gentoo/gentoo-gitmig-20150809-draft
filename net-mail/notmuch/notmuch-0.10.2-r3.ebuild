@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.2-r3.ebuild,v 1.1 2012/04/24 09:30:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.2-r3.ebuild,v 1.2 2012/04/24 09:51:50 aidecoe Exp $
 
 EAPI=4
 
@@ -8,8 +8,7 @@ PYTHON_DEPEND="python? 2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.*"
 
-inherit elisp-common pax-utils distutils
-inherit autotools-utils
+inherit elisp-common eutils pax-utils distutils
 
 DESCRIPTION="The mail indexer"
 HOMEPAGE="http://notmuchmail.org/"
@@ -19,7 +18,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 REQUIRED_USE="test? ( crypt emacs python )"
-IUSE="bash-completion crypt debug doc emacs python test vim zsh-completion"
+IUSE="bash-completion crypt debug doc emacs nmbug python test vim
+	zsh-completion"
 
 CDEPEND="
 	>=dev-libs/glib-2.22
@@ -38,6 +38,7 @@ DEPEND="${CDEPEND}
 	"
 RDEPEND="${CDEPEND}
 	crypt? ( app-crypt/gnupg )
+	nmbug? ( dev-vcs/git virtual/perl-File-Temp virtual/perl-PodParser )
 	zsh-completion? ( app-shells/zsh )
 	"
 
@@ -50,7 +51,7 @@ PATCHES=(
 	)
 DOCS=( AUTHORS NEWS README TODO )
 SITEFILE="50${PN}-gentoo.el"
-MY_LD_LIBRARY_PATH="${WORKDIR}/${P}_build/lib"
+MY_LD_LIBRARY_PATH="${WORKDIR}/${P}/lib"
 
 bindings() {
 	if use $1; then
@@ -69,7 +70,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	autotools-utils_src_prepare
+	local p
+	for p in "${PATCHES[@]}"; do
+		epatch "${p}"
+	done
+	default
 	bindings python distutils_src_prepare
 }
 
@@ -83,11 +88,11 @@ src_configure() {
 		$(use_with emacs)
 		$(use_with zsh-completion)
 	)
-	autotools-utils_src_configure
+	econf "${myeconfargs[@]}"
 }
 
 src_compile() {
-	autotools-utils_src_compile
+	default
 	bindings python distutils_src_compile
 
 	if use doc; then
@@ -109,10 +114,14 @@ src_test() {
 }
 
 src_install() {
-	autotools-utils_src_install
+	default
 
 	if use emacs; then
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	fi
+
+	if use nmbug; then
+		dobin contrib/nmbug
 	fi
 
 	if use vim; then
