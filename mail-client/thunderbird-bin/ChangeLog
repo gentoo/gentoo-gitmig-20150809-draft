@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.68 2012/03/25 15:32:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.69 2012/04/24 20:09:17 jdhore Exp $
+
+*thunderbird-bin-12.0 (24 Apr 2012)
+
+  24 Apr 2012; Jeff Horelick <jdhore@gentoo.org> +thunderbird-bin-12.0.ebuild:
+  Version bump to Thunderbird 12.
 
   25 Mar 2012; Thomas Kahle <tomka@gentoo.org> thunderbird-bin-10.0.3.ebuild:
   marked x86 per bug 408161
