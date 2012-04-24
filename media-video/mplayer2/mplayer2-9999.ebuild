@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.27 2012/04/10 06:36:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.28 2012/04/24 15:31:13 scarabeus Exp $
 
 EAPI=4
 
@@ -248,7 +248,6 @@ src_configure() {
 	myconf+="
 		--disable-svga
 		--disable-arts
-		--disable-kai
 		--disable-tremor
 		$(use_enable network networking)
 		$(use_enable joystick)
