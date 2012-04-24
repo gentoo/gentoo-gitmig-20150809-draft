@@ -11,5 +11,6 @@
 		<flag name='bufferevents'>Use Libevent's buffered IO</flag>
 		<flag name='nat-pmp'>Enable NAT Port Mapping Protocol</flag>
 		<flag name='upnp'>Enable Universal Plug and Play</flag>
+		<flag name='web'>Enable tor2web support</flag>
 	</use>
 </pkgmetadata>

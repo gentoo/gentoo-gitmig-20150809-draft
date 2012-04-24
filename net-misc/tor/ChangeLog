@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.324 2012/03/27 15:15:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.325 2012/04/24 12:16:46 blueness Exp $
+
+*tor-0.2.3.14_alpha (24 Apr 2012)
+
+  24 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.3.14_alpha.ebuild, +files/tor-0.2.3.14_alpha-torrc.sample.patch,
+  metadata.xml:
+  Version bump alpha, add tor2web support
 
 *tor-0.2.3.13_alpha (27 Mar 2012)
 
