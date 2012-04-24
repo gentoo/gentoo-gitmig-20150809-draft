@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.86 2012/04/19 14:37:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.87 2012/04/24 05:42:42 jlec Exp $
+
+  24 Apr 2012; Justin Lecher <jlec@gentoo.org> -squashfs-tools-4.0.ebuild,
+  -squashfs-tools-4.0-r1.ebuild, -squashfs-tools-4.1.ebuild,
+  -squashfs-tools-4.1-r1.ebuild, metadata.xml:
+  Drop old versions, #395201
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> squashfs-tools-4.2.ebuild:
   Marking squashfs-tools-4.2 ppc64 for bug 400937
