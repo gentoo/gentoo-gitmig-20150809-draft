@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120422.ebuild,v 1.1 2012/04/23 14:29:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.1-r2.ebuild,v 1.1 2012/04/24 08:50:11 eras Exp $
 
 EAPI=4
 
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam versionator
 
-MY_PV="${PV/_pre/-}"
+MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
-VDA_PV="2.8.8"
-VDA_P="${PN}-vda-v10-${VDA_PV}"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
+VDA_PV="2.9.1"
+VDA_P="${PN}-vda-v11-${VDA_PV}"
 RC_VER="2.7"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
@@ -55,7 +55,7 @@ RDEPEND="${DEPEND}
 	!>=mail-mta/ssmtp-2.64-r2[mta]
 	!net-mail/fastforward"
 
-# vda patch is broken for 2.10
+# vda patch is broken in 2.9
 REQUIRED_USE="ldap-bind? ( ldap sasl )
 	!vda"
 
