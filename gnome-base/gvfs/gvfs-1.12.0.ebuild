@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.0.ebuild,v 1.4 2012/04/13 04:08:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.0.ebuild,v 1.5 2012/04/24 03:44:24 tetromino Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -33,7 +33,6 @@ RDEPEND=">=dev-libs/glib-2.31.0:2
 	sys-apps/dbus
 	dev-libs/libxml2
 	net-misc/openssh
-	!prefix? ( >=sys-fs/udev-164-r2 )
 	afp? ( >=dev-libs/libgcrypt-1.2.2 )
 	archive? ( app-arch/libarchive )
 	avahi? ( >=net-dns/avahi-0.6 )
@@ -55,7 +54,7 @@ RDEPEND=">=dev-libs/glib-2.31.0:2
 		>=app-pda/libplist-1 )
 	udev? (
 		cdda? ( >=dev-libs/libcdio-0.78.2[-minimal] )
-		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )
+		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-164-r2[extras] ) )
 	udisks? ( >=sys-fs/udisks-1.90:2 )
 	http? ( >=net-libs/libsoup-gnome-2.26.0 )
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )"
@@ -83,12 +82,12 @@ pkg_setup() {
 		$(use_enable gdu)
 		$(use_enable gphoto2)
 		$(use_enable ios afc)
+		$(use_enable udev)
 		$(use_enable udev gudev)
 		$(use_enable http)
 		$(use_enable gnome-keyring keyring)
 		$(use_enable samba)
-		$(use_enable udisks udisks2)
-		$(use_enable !prefix udev)"
+		$(use_enable udisks udisks2)"
 }
 
 src_prepare() {
@@ -101,7 +100,7 @@ src_prepare() {
 		echo mount-archive.desktop.in.in >> po/POTFILES.in
 	fi
 
-	if use prefix; then
+	if ! use udev; then
 		sed -i -e 's/gvfsd-burn/ /' daemon/Makefile.am || die
 		sed -i -e 's/burn.mount.in/ /' daemon/Makefile.am || die
 		sed -i -e 's/burn.mount/ /' daemon/Makefile.am || die
@@ -113,7 +112,7 @@ src_prepare() {
 	# For gcc-4.5 and USE=afp, https://bugzilla.gnome.org/show_bug.cgi?id=672708
 	epatch "${FILESDIR}/${PN}-1.12.0-afp-gcc-4.5.patch"
 
-	if use gphoto2 || use archive || use prefix || use ios; then
+	if use gphoto2 || use archive || ! use udev || use ios; then
 		# libgcrypt.m4 needed for eautoreconf, bug #399043
 		mv "${WORKDIR}/libgcrypt.m4" "${S}"/ || die
 
