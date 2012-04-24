@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/gdbserver-7.0.ebuild,v 1.2 2010/09/16 10:27:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/gdbserver-7.0.ebuild,v 1.3 2012/04/24 10:02:03 mgorny Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ MY_P="gdb-${PV}"
 PATCH_VER="1"
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
-SRC_URI="http://ftp.gnu.org/gnu/gdb/${MY_P}.tar.bz2
+SRC_URI="mirror://gnu/gdb/${MY_P}.tar.bz2
 	ftp://sources.redhat.com/pub/gdb/releases/${MY_P}.tar.bz2
 	${PATCH_VER:+!vanilla? ( mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.lzma )}"
 

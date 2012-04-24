@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/gdbserver-7.3.1.ebuild,v 1.1 2011/12/21 21:26:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/gdbserver-7.3.1.ebuild,v 1.2 2012/04/24 10:02:04 mgorny Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ MY_P="gdb-${PV}"
 PATCH_VER="1"
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
-SRC_URI="http://ftp.gnu.org/gnu/gdb/${MY_P}.tar.bz2
+SRC_URI="mirror://gnu/gdb/${MY_P}.tar.bz2
 	ftp://sources.redhat.com/pub/gdb/releases/${MY_P}.tar.bz2
 	${PATCH_VER:+!vanilla? ( mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.xz )}"
 
