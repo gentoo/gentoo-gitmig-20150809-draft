@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/librtas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.15 2012/04/22 12:39:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.16 2012/04/24 19:43:57 ssuominen Exp $
+
+  24 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> librtas-1.3.6.ebuild,
+  +files/librtas-1.3.6-symlink.patch:
+  Install missing SONAME symlink(s) for libofdt and librtas.
 
 *librtas-1.3.6 (22 Apr 2012)
 
