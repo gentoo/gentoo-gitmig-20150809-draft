@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bmake
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.8 2011/06/14 08:31:35 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.9 2012/04/24 12:12:06 aballier Exp $
+
+*bmake-20120325 (24 Apr 2012)
+
+  24 Apr 2012; Alexis Ballier <aballier@gentoo.org> +bmake-20120325.ebuild:
+  version bump
 
 *bmake-20110606 (14 Jun 2011)
 
