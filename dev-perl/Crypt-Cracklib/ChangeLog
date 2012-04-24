@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-Cracklib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/ChangeLog,v 1.30 2012/04/24 07:15:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/ChangeLog,v 1.31 2012/04/24 12:37:34 ago Exp $
+
+  24 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Crypt-Cracklib-1.700.0.ebuild:
+  Stable for amd64, wrt bug #413089
 
   24 Apr 2012; Jeff Horelick <jdhore@gentoo.org> Crypt-Cracklib-1.700.0.ebuild:
   marked x86 per bug 413089
