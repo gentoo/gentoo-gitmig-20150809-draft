@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-imonlcd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-imonlcd/ChangeLog,v 1.3 2011/01/29 01:11:20 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-imonlcd/ChangeLog,v 1.4 2012/04/24 10:18:06 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> vdr-imonlcd-0.0.5-r1.ebuild:
+  Update to use mirror://.
 
   29 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-imonlcd-0.0.5-r1.ebuild:

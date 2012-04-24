@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mediastreamer-amr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/ChangeLog,v 1.5 2012/01/06 15:03:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/ChangeLog,v 1.6 2012/04/24 10:10:34 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org>
+  mediastreamer-amr-0.0.1.ebuild:
+  Update to use mirror://.
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> mediastreamer-amr-0.0.1.ebuild:
   Marking mediastreamer-amr-0.0.1 ppc for bug 363311

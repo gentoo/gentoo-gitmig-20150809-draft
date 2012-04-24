@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mediastreamer-x264
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.17 2012/03/25 10:16:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.18 2012/04/24 10:13:08 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org>
+  mediastreamer-x264-1.3.3.ebuild, mediastreamer-x264-1.4.1.ebuild:
+  Update to use mirror://.
 
   25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Set herd as primary maintainer as talked with volkmar.

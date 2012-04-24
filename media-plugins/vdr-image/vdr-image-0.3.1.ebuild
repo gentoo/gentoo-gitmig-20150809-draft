@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.1.ebuild,v 1.1 2011/10/06 17:16:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.1.ebuild,v 1.2 2012/04/24 10:16:37 mgorny Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ VERSION="679" #every bump, new version
 
 DESCRIPTION="VDR plugin: display of digital images, like jpeg, tiff, png, bmp"
 HOMEPAGE="http://projects.vdr-developer.org/projects/plg-image"
-SRC_URI="http://projects.vdr-developer.org/attachments/download/${VERSION}/${P}.tar.gz"
+SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"

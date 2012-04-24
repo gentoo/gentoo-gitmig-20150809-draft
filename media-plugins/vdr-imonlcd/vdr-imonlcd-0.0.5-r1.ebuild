@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-imonlcd/vdr-imonlcd-0.0.5-r1.ebuild,v 1.2 2011/01/29 01:11:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-imonlcd/vdr-imonlcd-0.0.5-r1.ebuild,v 1.3 2012/04/24 10:18:06 mgorny Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit linux-info vdr-plugin
 
 DESCRIPTION="VDR Plugin: shows information about the current state of VDR on iMON LCD"
 HOMEPAGE="http://projects.vdr-developer.org/wiki/plg-imonlcd"
-SRC_URI="http://projects.vdr-developer.org/attachments/download/408/${P}.tgz"
+SRC_URI="mirror://vdr-developerorg/408/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
