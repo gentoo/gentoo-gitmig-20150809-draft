@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-32.0.0.ebuild,v 1.1 2012/03/16 10:23:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-32.0.2.ebuild,v 1.1 2012/04/24 11:35:52 johu Exp $
 
 EAPI=4
+LANGS="de fr ru"
+
 inherit eutils qt4-r2
 
 DESCRIPTION="Small, lightweight Qt text editor"
@@ -22,15 +24,18 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	hunspell? ( dev-util/pkgconfig )"
 
+DOCS="AUTHORS ChangeLog NEWS TODO"
+
 src_configure() {
 	local myopts
-	if use aspell ; then
+
+	if use aspell; then
 		myopts="USE_ASPELL=true"
 	else
 		myopts="USE_ASPELL=false"
 	fi
 
-	if use hunspell ; then
+	if use hunspell; then
 		myopts="${myopts} USE_HUNSPELL=true"
 	else
 		myopts="${myopts} USE_HUNSPELL=false"
@@ -40,9 +45,24 @@ src_configure() {
 }
 
 src_install() {
-	dobin bin/tea
-	dodoc AUTHORS ChangeLog NEWS NEWS-RU TODO
-	doicon icons/tea_icon_v2.png
+	qt4-r2_src_install
 
-	make_desktop_entry tea Tea tea_icon_v2 Utility
+	newicon icons/tea_icon_v2.png ${PN}.png
+	make_desktop_entry ${PN} Tea ${PN}
+
+	# translations
+	insinto /usr/share/qt4/translations
+	local lang
+	for lang in ${LANGS}; do
+		if use linguas_${lang}; then
+			doins translations/${PN}_${lang}.qm
+		fi
+	done
+
+	# docs
+	dohtml manuals/en.html
+	if use linguas_ru; then
+		dodoc NEWS-RU
+		dohtml manuals/ru.html
+	fi
 }
