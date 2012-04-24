@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsbabel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.24 2011/06/10 09:30:56 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.25 2012/04/24 05:00:29 jlec Exp $
+
+  24 Apr 2012; Justin Lecher <jlec@gentoo.org> gpsbabel-1.4.2.ebuild,
+  metadata.xml:
+  Fix SLOT for libusb, #411791
 
   10 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -gpsbabel-1.3.6.ebuild,
   gpsbabel-1.4.2.ebuild, +files/gpsbabel-disable_statistic_uploading.patch,

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.4.2.ebuild,v 1.2 2011/06/10 09:30:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.4.2.ebuild,v 1.3 2012/04/24 05:00:29 jlec Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="doc qt4"
 RDEPEND="
 	dev-libs/expat
 	sci-libs/shapelib
-	virtual/libusb
+	virtual/libusb:0
 	qt4? (
 		x11-libs/qt-gui:4
 		x11-libs/qt-webkit:4
