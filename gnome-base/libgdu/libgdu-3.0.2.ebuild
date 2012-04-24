@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgdu/libgdu-3.0.2.ebuild,v 1.1 2012/04/12 09:24:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgdu/libgdu-3.0.2.ebuild,v 1.2 2012/04/24 05:48:57 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -56,6 +56,9 @@ src_prepare() {
 	local f=data/gdu-notification-daemon.desktop.in.in.in
 	sed -i -e '/^OnlyShowIn/d' ${f} || die
 	echo 'NotShowIn=KDE;' >> ${f}
+
+	# gold underlinking detection
+	epatch "${FILESDIR}"/${P}-gold.patch
 
 	# Palimpsest and Nautilus plugin are provided by sys-apps/gnome-disk-utility
 	epatch "${FILESDIR}/${PN}-3.0.2-no-palimpsest-nautilus.patch"
