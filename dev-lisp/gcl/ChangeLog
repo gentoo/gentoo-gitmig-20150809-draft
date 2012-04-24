@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/gcl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.56 2011/12/21 10:26:25 grozin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.57 2012/04/24 10:00:54 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> gcl-2.6.7-r2.ebuild,
+  gcl-2.6.7-r3.ebuild:
+  Update to use mirror://.
 
 *gcl-2.6.8_pre20111221 (21 Dec 2011)
 
