@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.1 2012/04/24 12:49:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.2 2012/04/24 13:07:03 scarabeus Exp $
 
 # @ECLASS: aspell-dict.eclass
 # @MAINTAINER:
@@ -61,7 +61,7 @@ myspell-r2_src_unpack() {
 # @DESCRIPTION:
 # Install the dictionaries to the right places.
 myspell-r2_src_install() {
-	local x
+	local x target
 	
 	# Following the debian directory layout here.
 	# DICT: /usr/share/hunspell
@@ -74,20 +74,23 @@ myspell-r2_src_install() {
 
 	insinto /usr/share/hunspell
 	for x in "${MYSPELL_DICT[@]}"; do
-		doins "${x}" || die
-		dosym /usr/share/hunspell/"${x}" /usr/share/myspell/"${x}" || die
+		target="${x##*/}"
+		newins "${x}" "${target}" || die
+		dosym /usr/share/hunspell/"${target}" /usr/share/myspell/"${target}" || die
 	done
 
 	insinto /usr/share/mythes
 	for x in "${MYSPELL_THES[@]}"; do
-		doins "${x}" || die
-		dosym /usr/share/mythes/"${x}" /usr/share/myspell/"${x}" || die
+		target="${x##*/}"
+		newins "${x}" "${target}" || die
+		dosym /usr/share/mythes/"${target}" /usr/share/myspell/"${target}" || die
 	done
 
 	insinto /usr/share/hyphen
 	for x in "${MYSPELL_HYPH[@]}"; do
-		doins "${x}" || die
-		dosym /usr/share/hyphen/"${x}" /usr/share/myspell/"${x}" || die
+		target="${x##*/}"
+		newins "${x}" "${target}" || die
+		dosym /usr/share/hyphen/"${target}" /usr/share/myspell/"${target}" || die
 	done
 
 	# Readme and so on

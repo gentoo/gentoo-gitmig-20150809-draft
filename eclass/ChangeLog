@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.222 2012/04/24 12:49:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.223 2012/04/24 13:07:03 scarabeus Exp $
+
+  24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-r2.eclass:
+  Oops didn't commit the dir supporting version. This replaces plain doins with
+  proper newins command.
 
   24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-r2.eclass:
   Add myspell-r2.eclass which is just eclassdoced myspell.eclass with removed
