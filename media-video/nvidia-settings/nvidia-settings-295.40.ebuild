@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-295.40.ebuild,v 1.3 2012/04/18 22:21:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-295.40.ebuild,v 1.4 2012/04/24 13:45:49 aballier Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ src_compile() {
 	emake -C src/libXNVCtrl/ CC="$(tc-getCC)" RANLIB="$(tc-getRANLIB)" libXNVCtrl.a
 
 	einfo "Building nvidia-settings..."
-	emake  CC="$(tc-getCC)" LD="$(tc-getLD)" STRIP_CMD=/bin/true
+	emake  CC="$(tc-getCC)" LD="$(tc-getLD)" STRIP_CMD="$(type -P true)" NV_VERBOSE=1
 }
 
 src_install() {
