@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.228.ebuild,v 1.3 2012/04/05 21:14:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.228.ebuild,v 1.4 2012/04/24 15:29:29 lack Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -57,6 +57,25 @@ INSTALL_BASE="opt/Adobe/flash-player"
 # Ignore QA warnings in these closed-source binaries, since we can't fix them:
 QA_PREBUILT="opt/*"
 
+any_cpu_missing_flag() {
+	local value=$1
+	grep '^flags' /proc/cpuinfo | grep -qv "$value"
+}
+
+pkg_pretend() {
+	if any_cpu_missing_flag 'sse2'; then
+		eerror "This version of adobe-flash requires a CPU that supports the"
+		eerror "SSE2 instruction set, and at least one of your CPUs does not"
+		eerror "support this feature."
+		eerror ""
+		eerror "You should mask this version and use adobe-flash-10.3.* instead."
+		eerror "To do so, add the following line to your package.mask file:"
+		eerror "  =${CATEGORY}/${P}"
+		eerror ""
+		die "${P} requires CPU with SSE2"
+	fi
+}
+
 pkg_setup() {
 	if use x86; then
 		export native_install=1
@@ -84,8 +103,7 @@ pkg_setup() {
 		unset need_lahf_wrapper
 		if [[ $native_install ]]; then
 			# 64bit flash requires the 'lahf' instruction (bug #268336)
-			# Also, check if *any* of the processors are affected (bug #286159)
-			if grep '^flags' /proc/cpuinfo | grep -qv 'lahf_lm'; then
+			if any_cpu_missing_flag 'lahf_lm'; then
 				export need_lahf_wrapper=1
 			fi
 		fi
