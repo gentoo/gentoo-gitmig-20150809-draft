@@ -15,8 +15,14 @@
 		<flag name='vdpau'>Enables VDPAU support to offload video processing
 			(32-bit flash player only)</flag>
 
-		<!-- www-plugins/adobe-flash-10.3 has a KDE KCM thingy -->
+		<!-- www-plugins/adobe-flash-10.3 and later has a KDE KCM thingy -->
 		<flag name='kde'>Enables a KCM plugin for configuring flash player
-			preferences (32-bit KDE4 only)</flag>
+			preferences</flag>
+
+		<!-- www-plugins/adobe-flash-11.2 requries SSE2 instructions (Bug #410547) -->
+		<flag name='sse2check'>This flag, enabled by default, will check for sse2
+			support on your cpu and die if not found. If you are remote-building
+			this package, you can disable this flag but you have been
+			warned</flag>
 	</use>
 </pkgmetadata>
