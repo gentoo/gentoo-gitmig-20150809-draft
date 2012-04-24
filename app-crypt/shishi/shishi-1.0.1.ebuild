@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shishi/shishi-1.0.1.ebuild,v 1.2 2012/03/15 15:48:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shishi/shishi-1.0.1.ebuild,v 1.3 2012/04/24 09:40:49 mgorny Exp $
 
 EAPI=4
 inherit multilib autotools eutils
 
 DESCRIPTION="A free implementation of the Kerberos 5 network security system"
 HOMEPAGE="https://www.gnu.org/software/shishi/"
-SRC_URI="http://ftp.gnu.org/gnu/shishi/${P}.tar.gz"
+SRC_URI="mirror://gnu/shishi/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
