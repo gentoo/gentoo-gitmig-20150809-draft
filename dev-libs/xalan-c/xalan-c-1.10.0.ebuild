@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.14 2011/12/18 17:26:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.15 2012/04/24 10:02:07 mgorny Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -8,8 +8,7 @@ MY_PV=${PV//./_}
 
 DESCRIPTION="XSLT processor for transforming XML into HTML, text, or other XML types"
 HOMEPAGE="http://xml.apache.org/xalan-c/"
-SRC_URI="ftp://apache.mirrors.pair.com/xml/xalan-c/Xalan-C_${MY_PV}-src.tar.gz
-	http://apache.mirrors.hoobly.com/xml/xalan-c/Xalan-C_${MY_PV}-src.tar.gz
+SRC_URI="mirror://apache/xml/xalan-c/Xalan-C_${MY_PV}-src.tar.gz
 	http://www.tux.org/pub/net/apache/dist/xml/xalan-c/Xalan-C_${MY_PV}-src.tar.gz"
 
 LICENSE="Apache-2.0"
