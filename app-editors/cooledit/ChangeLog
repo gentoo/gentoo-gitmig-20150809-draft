@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/cooledit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.31 2012/04/24 13:31:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.32 2012/04/24 13:57:45 scarabeus Exp $
+
+  24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> cooledit-3.17.17-r1.ebuild:
+  Remove ispell from rdepend. If someone test with aspell we can add that one
+  back.
 
   24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -cooledit-3.17.17.ebuild:
   Punt overshadowed version.
