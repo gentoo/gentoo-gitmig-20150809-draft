@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.212 2012/03/31 14:13:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.213 2012/04/24 17:00:55 ago Exp $
+
+  24 Apr 2012; Agostino Sarubbo <ago@gentoo.org> sip-4.13.2-r1.ebuild:
+  Stable for amd64, wrt bug #412929
 
   31 Mar 2012; Tobias Klausmann <klausman@gentoo.org> sip-4.12.3-r2.ebuild:
   Stable on alpha, bug #354033
