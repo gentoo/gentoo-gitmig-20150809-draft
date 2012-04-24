@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.0_rc2.ebuild,v 1.3 2012/04/19 18:24:15 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.0_rc3.ebuild,v 1.1 2012/04/24 23:17:53 mattm Exp $
 
 EAPI="2"
 
