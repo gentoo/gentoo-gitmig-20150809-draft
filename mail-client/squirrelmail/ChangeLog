@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/squirrelmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.167 2011/12/30 16:06:37 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.168 2012/04/24 13:49:17 scarabeus Exp $
+
+  24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> squirrelmail-1.4.22.ebuild:
+  Depend only on aspell so ispell can slowly die.
 
   30 Dec 2011; Mark Loeser <halcy0n@gentoo.org> squirrelmail-1.4.22.ebuild:
   Revert to ~ppc/~ppc64

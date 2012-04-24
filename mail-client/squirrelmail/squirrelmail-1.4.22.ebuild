@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.22.ebuild,v 1.7 2011/12/30 16:06:37 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.22.ebuild,v 1.8 2012/04/24 13:49:17 scarabeus Exp $
 
 EAPI=2
 
@@ -46,7 +46,7 @@ DEPEND=""
 RDEPEND="dev-lang/php[session]
 	virtual/perl-DB_File
 	ldap? ( net-nds/openldap )
-	spell? ( || ( app-text/aspell app-text/ispell ) )
+	spell? ( app-text/aspell )
 	filter? ( mail-filter/amavisd-new dev-php/PEAR-Log dev-php/PEAR-DB dev-php/PEAR-Net_SMTP )
 	postgres? ( dev-php/PEAR-DB )
 	mysql? ( dev-php/PEAR-DB )"
