@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.299 2012/04/14 07:54:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.300 2012/04/24 19:52:31 vapier Exp $
+
+  24 Apr 2012; Mike Frysinger <vapier@gentoo.org> busybox-1.17.4.ebuild,
+  busybox-1.18.4.ebuild, busybox-1.18.5.ebuild, busybox-1.19.0.ebuild,
+  busybox-1.19.2-r1.ebuild, busybox-1.19.2.ebuild, busybox-1.19.3-r1.ebuild,
+  busybox-1.19.3.ebuild:
+  Fix typo from older code -- there is no $new variable to expand.
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> busybox-1.19.3-r1.ebuild:
   Add ~amd64-linux keyword.

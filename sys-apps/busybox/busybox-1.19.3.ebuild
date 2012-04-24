@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.3.ebuild,v 1.2 2011/12/20 23:47:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.3.ebuild,v 1.3 2012/04/24 19:52:31 vapier Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -70,7 +70,7 @@ S=${WORKDIR}/${MY_P}
 
 busybox_config_option() {
 	case $1 in
-		y) sed -i -e "s:.*\<CONFIG_$2\>.*set:${new}:g" .config;;
+		y) sed -i -e "s:.*\<CONFIG_$2\>.*set:CONFIG_$2=y:g" .config;;
 		n) sed -i -e "s:CONFIG_$2=y:# CONFIG_$2 is not set:g" .config;;
 		*) use $1 \
 		       && busybox_config_option y $2 \
