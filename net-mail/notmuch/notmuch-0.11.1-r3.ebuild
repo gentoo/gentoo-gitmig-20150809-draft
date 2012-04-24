@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.11.1-r3.ebuild,v 1.2 2012/04/24 09:51:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.11.1-r3.ebuild,v 1.3 2012/04/24 09:59:04 aidecoe Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="2.[45] 3.*"
 
 inherit elisp-common eutils pax-utils distutils
 
-DESCRIPTION="The mail indexer"
+DESCRIPTION="Thread-based e-mail indexer, supporting quick search and tagging"
 HOMEPAGE="http://notmuchmail.org/"
 SRC_URI="${HOMEPAGE%/}/releases/${P}.tar.gz"
 
