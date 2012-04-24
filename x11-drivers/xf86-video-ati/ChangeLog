@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.165 2012/03/29 15:40:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.166 2012/04/24 13:13:19 chithanh Exp $
+
+*xf86-video-ati-6.14.4-r1 (24 Apr 2012)
+
+  24 Apr 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-ati-6.14.4-exa-solid-accel-evergreen.patch,
+  +files/xf86-video-ati-6.14.4-exa-solid-accel-r100.patch,
+  +files/xf86-video-ati-6.14.4-exa-solid-accel-r200.patch,
+  +files/xf86-video-ati-6.14.4-exa-solid-accel-r300.patch,
+  +xf86-video-ati-6.14.4-r1.ebuild:
+  Add patches to accelerate solid pictures, to avoid bug #409593.
 
 *xf86-video-ati-6.14.4 (29 Mar 2012)
 
