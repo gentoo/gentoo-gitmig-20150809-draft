@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epspdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.4 2012/04/21 11:56:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.5 2012/04/24 19:19:22 grobian Exp $
+
+  24 Apr 2012; Fabian Groffen <grobian@gentoo.org> epspdf-0.5.3.ebuild:
+  Add Prefix keywords, bug #410239
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> epspdf-0.5.3.ebuild:
   add ~arm, bug #410239
