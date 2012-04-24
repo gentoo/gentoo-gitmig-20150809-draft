@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/eject-bsd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/eject-bsd/ChangeLog,v 1.2 2006/05/23 16:50:48 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/eject-bsd/ChangeLog,v 1.3 2012/04/24 10:42:11 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> eject-bsd-1.5.ebuild:
+  Update to use mirror://.
 
   23 May 2006; Diego Pettenò <flameeyes@gentoo.org> eject-bsd-1.5.ebuild:
   Fix quoting.
