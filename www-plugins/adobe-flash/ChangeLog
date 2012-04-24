@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.123 2012/04/05 21:14:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.124 2012/04/24 14:58:37 lack Exp $
+
+*adobe-flash-10.3.183.18 (24 Apr 2012)
+
+  24 Apr 2012; Jim Ramsay <jim_ramsay@gentoo.org>
+  -adobe-flash-10.3.183.10.ebuild, +adobe-flash-10.3.183.18.ebuild:
+  Bug #410547: Security bump of 10.3 to allow workaround for some AMD Athalon
+  XP users
 
   05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   adobe-flash-11.2.202.228.ebuild:
