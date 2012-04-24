@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.40 2012/04/23 20:25:30 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.41 2012/04/24 07:13:41 aidecoe Exp $
+
+  24 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.10.2-r2.ebuild,
+  notmuch-0.11.1-r2.ebuild:
+  Added PaX markings for test phase in stable ebuilds, too.  It's required for
+  test in which gdb break is used (on PaX kernel).
 
   23 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.12.ebuild:
   Added PaX markings for test phase.  It's required for test in which gdb break
