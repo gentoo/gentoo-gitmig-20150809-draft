@@ -6,4 +6,8 @@
  <email>vapier@gentoo.org</email>
  <description>make whatever changes you want</description>
 </maintainer>
+<use>
+ <flag name='client'>Install client modules</flag>
+ <flag name='server'>Install server modules</flag>
+</use>
 </pkgmetadata>
