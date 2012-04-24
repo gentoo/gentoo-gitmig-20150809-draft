@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.1 2012/03/19 08:04:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.2 2012/04/24 05:35:41 jlec Exp $
 
 EAPI=4
 
@@ -19,7 +19,6 @@ IUSE="ayatana plugins +zeitgeist"
 
 RDEPEND="
 	dev-lang/vala:0.14
-	dev-libs/dbus-glib
 	dev-libs/libgee:0
 	dev-libs/glib:2
 	dev-libs/json-glib
@@ -37,7 +36,8 @@ RDEPEND="
 	zeitgeist? (
 		dev-libs/libzeitgeist
 		gnome-extra/zeitgeist
-		gnome-extra/zeitgeist-extensions[fts]
+		gnome-extra/zeitgeist-extensions
+		|| ( gnome-extra/zeitgeist[fts] gnome-extra/zeitgeist-extensions[fts] )
 		)"
 DEPEND="${RDEPEND}
 	dev-util/intltool
