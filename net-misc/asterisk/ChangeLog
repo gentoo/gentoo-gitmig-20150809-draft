@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.383 2012/04/10 09:51:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.384 2012/04/24 12:08:03 chainsaw Exp $
+
+*asterisk-10.3.1 (24 Apr 2012)
+*asterisk-1.8.11.1 (24 Apr 2012)
+
+  24 Apr 2012; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.11.1.ebuild,
+  +asterisk-10.3.1.ebuild:
+  Updates on the 1.8 & 10 branches addressing a permission escalation in the
+  manager interface (AST-2012-004/CVE-2012-2414), a heap buffer overflow in the
+  SCCP channel driver (AST-2012-005/CVE-2012-2415) and a remote crash
+  vulnerability in the SIP channel driver (AST-2012-006/CVE-2012-2416).
 
   10 Apr 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.8.2.ebuild:
   Remove vulnerable ebuild for security bug #408431 by Tim Sammut.
