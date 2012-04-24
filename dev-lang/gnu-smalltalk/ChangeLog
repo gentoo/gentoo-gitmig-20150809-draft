@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnu-smalltalk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.48 2011/10/10 21:29:46 araujo Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.49 2012/04/24 09:57:37 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> gnu-smalltalk-3.2.1.ebuild,
+  gnu-smalltalk-3.2.2.ebuild, gnu-smalltalk-3.2.3.ebuild,
+  gnu-smalltalk-3.2.4.ebuild:
+  Update to use mirror://.
 
   10 Oct 2011; Luis F. Araujo <araujo@gentoo.org> gnu-smalltalk-3.2.4.ebuild:
   Use newer EAPI features. Add EAPI=3
