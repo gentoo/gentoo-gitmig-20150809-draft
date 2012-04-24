@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.97 2012/04/21 12:07:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.98 2012/04/24 19:39:33 grobian Exp $
+
+  24 Apr 2012; Fabian Groffen <grobian@gentoo.org> texlive-2011-r1.ebuild:
+  Add Prefix keywords, bug #410239
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> texlive-2011-r1.ebuild:
   add ~arm, bug #410239
