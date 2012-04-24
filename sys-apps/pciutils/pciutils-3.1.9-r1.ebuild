@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.9-r1.ebuild,v 1.8 2012/04/01 16:25:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.9-r1.ebuild,v 1.9 2012/04/24 14:43:41 vapier Exp $
 
 EAPI="4"
 
@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.7-install-lib.patch #273489
 	epatch "${FILESDIR}"/${PN}-3.1.7-fbsd.patch #262321
+	epatch "${FILESDIR}"/${PN}-3.1.9-static-pc.patch
 
 	if use static-libs ; then
 		cp -pPR "${S}" "${S}.static" || die

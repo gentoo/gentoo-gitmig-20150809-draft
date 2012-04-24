@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.199 2012/04/21 06:33:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.200 2012/04/24 14:43:41 vapier Exp $
+
+  24 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/pciutils-3.1.9-static-pc.patch, pciutils-3.1.9-r1.ebuild,
+  pciutils-3.1.9-r2.ebuild:
+  Make sure Libs.Private in the .pc file is set correctly.
 
   21 Apr 2012; Mike Frysinger <vapier@gentoo.org> pciutils-3.1.9-r2.ebuild:
   Restore ~arch keywords #410401.
