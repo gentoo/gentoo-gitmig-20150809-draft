@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.86 2012/04/14 18:34:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.87 2012/04/24 13:14:00 aballier Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	aac aacplus alsa amr ass bindist bluray +bzip2 cdio celt cpudetection debug
-	dirac doc +encode faac fontconfig frei0r gnutls gsm +hardcoded-tables
+	doc +encode faac fontconfig frei0r gnutls gsm +hardcoded-tables
 	ieee1394 jack jpeg2k libv4l modplug mp3 network openal openssl oss pic
 	pulseaudio rtmp schroedinger sdl speex static-libs test theora threads
 	truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
@@ -58,7 +58,6 @@ RDEPEND="
 	bzip2? ( app-arch/bzip2 )
 	cdio? ( dev-libs/libcdio )
 	celt? ( >=media-libs/celt-0.11.1 )
-	dirac? ( media-video/dirac )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
 		aacplus? ( media-libs/libaacplus )
@@ -96,7 +95,6 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
-	dirac? ( dev-util/pkgconfig )
 	doc? ( app-text/texi2html )
 	gnutls? ( dev-util/pkgconfig )
 	ieee1394? ( dev-util/pkgconfig )
@@ -185,7 +183,7 @@ src_configure() {
 
 	# Decoders
 	use amr && { myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb" ; version3=" --enable-version3" ; }
-	for i in bluray celt gsm dirac modplug rtmp schroedinger speex vpx; do
+	for i in bluray celt gsm modplug rtmp schroedinger speex vpx; do
 		use ${i} && myconf="${myconf} --enable-lib${i}"
 	done
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
