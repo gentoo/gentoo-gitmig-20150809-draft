@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.9 2012/01/17 08:07:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.10 2012/04/24 05:54:29 jlec Exp $
 
 EAPI=4
 
 WANT_AUTOMAKE=1.11
+
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils
 
