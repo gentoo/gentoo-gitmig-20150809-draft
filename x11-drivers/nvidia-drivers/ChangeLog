@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.336 2012/04/15 16:54:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.337 2012/04/24 14:04:07 aballier Exp $
+
+  24 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  nvidia-drivers-295.40.ebuild:
+  fixes for FreeBSD: update paths, do not try to install unavailable libs and
+  desktop entries.
 
   15 Apr 2012; Markus Meier <maekke@gentoo.org> nvidia-drivers-295.40.ebuild:
   x86 stable, bug #411617
