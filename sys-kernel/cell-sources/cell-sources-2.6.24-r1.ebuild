@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/cell-sources/cell-sources-2.6.24-r1.ebuild,v 1.1 2008/03/23 20:48:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/cell-sources/cell-sources-2.6.24-r1.ebuild,v 1.2 2012/04/24 10:46:50 mgorny Exp $
 
 ETYPE="sources"
 IUSE=""
@@ -11,11 +11,11 @@ detect_version
 detect_arch
 
 KEYWORDS="~ppc ~ppc64"
-HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/geoff/cell/ps3-linux/"
+HOMEPAGE="mirror://kernel/linux/kernel/people/geoff/cell/ps3-linux/"
 
 DESCRIPTION="Full sources including the cell/ps3 patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 CELL_PATCH="patch-ps3-linux-${PV}-stable.${PR//r}.bz2"
-CELLPATCHES_URI="http://www.kernel.org/pub/linux/kernel/people/geoff/cell/ps3-linux/${CELL_PATCH}"
+CELLPATCHES_URI="mirror://kernel/linux/kernel/people/geoff/cell/ps3-linux/${CELL_PATCH}"
 
 SRC_URI="${KERNEL_URI} ${ARCH_URI} ${CELLPATCHES_URI} ${GENPATCHES_URI}"
 

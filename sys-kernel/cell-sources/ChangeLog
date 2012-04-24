@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/cell-sources
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/cell-sources/ChangeLog,v 1.4 2008/03/23 20:48:13 lu_zero Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/cell-sources/ChangeLog,v 1.5 2012/04/24 10:46:50 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org>
+  cell-sources-2.6.24-r1.ebuild:
+  Update to use mirror://.
 
 *cell-sources-2.6.24-r1 (23 Mar 2008)
 
