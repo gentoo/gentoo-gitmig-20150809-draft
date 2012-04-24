@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.70 2012/03/25 18:05:49 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.71 2012/04/24 17:01:50 ago Exp $
+
+  24 Apr 2012; Agostino Sarubbo <ago@gentoo.org> qscintilla-2.6.1.ebuild:
+  Stable for amd64, wrt bug #412929
 
   25 Mar 2012; Davide Pesavento <pesa@gentoo.org> qscintilla-2.4.5.ebuild,
   qscintilla-2.4.6.ebuild, qscintilla-2.5.1.ebuild, qscintilla-2.6.1.ebuild,
