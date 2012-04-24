@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.90 2012/03/10 19:57:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.91 2012/04/24 17:07:42 bicatali Exp $
+
+*ipython-0.12.1 (24 Apr 2012)
+
+  24 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +ipython-0.12.1.ebuild:
+  Version bump
 
   10 Mar 2012; Ulrich Müller <ulm@gentoo.org> metadata.xml:
   Fix UTF-8 encoding of metadata.xml.
