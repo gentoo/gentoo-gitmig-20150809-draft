@@ -1,6 +1,5 @@
-diff -ruN OpenCV-2.3.0-0-vanilla/CMakeLists.txt OpenCV-2.3.0/CMakeLists.txt
---- OpenCV-2.3.0-0-vanilla/CMakeLists.txt	2011-07-04 06:21:50.000000000 +0200
-+++ OpenCV-2.3.0/CMakeLists.txt	2011-09-18 19:32:20.000000000 +0200
+--- OpenCV-2.3.0-0-vanilla/CMakeLists.txt
++++ OpenCV-2.3.0/CMakeLists.txt
 @@ -14,7 +14,7 @@
  # Add these standard paths to the search paths for FIND_LIBRARY
  # to find libraries from these locations first
@@ -215,6 +214,21 @@ diff -ruN OpenCV-2.3.0-0-vanilla/CMakeLists.txt OpenCV-2.3.0/CMakeLists.txt
  
  set(EXTRA_C_FLAGS "")
  set(EXTRA_C_FLAGS_RELEASE "")
+@@ -1073,14 +1073,6 @@
+         endif()
+     endif()
+ 
+-    if(X86 OR X86_64)
+-        if(NOT APPLE)
+-            if(${CMAKE_SIZEOF_VOID_P} EQUAL 4)
+-                set(EXTRA_C_FLAGS_RELEASE "${EXTRA_C_FLAGS_RELEASE} -mfpmath=387")
+-            endif()
+-        endif()
+-    endif()
+-
+     # Profiling?
+     if(ENABLE_PROFILING)
+         set(EXTRA_C_FLAGS_RELEASE "${EXTRA_C_FLAGS_RELEASE} -pg -g")
 @@ -1197,7 +1197,7 @@
  if(WIN32)
  set(OPENCV_DOC_INSTALL_PATH doc)
@@ -259,9 +273,8 @@ diff -ruN OpenCV-2.3.0-0-vanilla/CMakeLists.txt OpenCV-2.3.0/CMakeLists.txt
  
  if(BUILD_PACKAGE)
  
-diff -ruN OpenCV-2.3.0-0-vanilla/OpenCVModule.cmake OpenCV-2.3.0/OpenCVModule.cmake
---- OpenCV-2.3.0-0-vanilla/OpenCVModule.cmake	2011-07-04 06:21:59.000000000 +0200
-+++ OpenCV-2.3.0/OpenCVModule.cmake	2011-09-18 19:32:20.000000000 +0200
+--- OpenCV-2.3.0-0-vanilla/OpenCVModule.cmake
++++ OpenCV-2.3.0/OpenCVModule.cmake
 @@ -63,7 +63,7 @@
          DEBUG_POSTFIX "${OPENCV_DEBUG_POSTFIX}"
          ARCHIVE_OUTPUT_DIRECTORY ${LIBRARY_OUTPUT_PATH}
@@ -282,9 +295,8 @@ diff -ruN OpenCV-2.3.0-0-vanilla/OpenCVModule.cmake OpenCV-2.3.0/OpenCVModule.cm
  
      install(FILES ${lib_hdrs}
          DESTINATION include/opencv2/${name}
-diff -ruN OpenCV-2.3.0-0-vanilla/modules/gpu/CMakeLists.txt OpenCV-2.3.0/modules/gpu/CMakeLists.txt
---- OpenCV-2.3.0-0-vanilla/modules/gpu/CMakeLists.txt	2011-07-04 06:21:58.000000000 +0200
-+++ OpenCV-2.3.0/modules/gpu/CMakeLists.txt	2011-09-18 19:32:20.000000000 +0200
+--- OpenCV-2.3.0-0-vanilla/modules/gpu/CMakeLists.txt
++++ OpenCV-2.3.0/modules/gpu/CMakeLists.txt
 @@ -121,7 +121,7 @@
  	DEBUG_POSTFIX "${OPENCV_DEBUG_POSTFIX}"
      ARCHIVE_OUTPUT_DIRECTORY ${LIBRARY_OUTPUT_PATH}
@@ -305,9 +317,8 @@ diff -ruN OpenCV-2.3.0-0-vanilla/modules/gpu/CMakeLists.txt OpenCV-2.3.0/modules
  
  install(FILES ${lib_hdrs}
  	DESTINATION include/opencv2/${name}
-diff -ruN OpenCV-2.3.0-0-vanilla/modules/highgui/CMakeLists.txt OpenCV-2.3.0/modules/highgui/CMakeLists.txt
---- OpenCV-2.3.0-0-vanilla/modules/highgui/CMakeLists.txt	2011-07-04 06:21:58.000000000 +0200
-+++ OpenCV-2.3.0/modules/highgui/CMakeLists.txt	2011-09-18 19:32:20.000000000 +0200
+--- OpenCV-2.3.0-0-vanilla/modules/highgui/CMakeLists.txt
++++ OpenCV-2.3.0/modules/highgui/CMakeLists.txt
 @@ -295,7 +295,7 @@
      DEBUG_POSTFIX "${OPENCV_DEBUG_POSTFIX}"
      ARCHIVE_OUTPUT_DIRECTORY ${LIBRARY_OUTPUT_PATH}

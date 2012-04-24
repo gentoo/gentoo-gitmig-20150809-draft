@@ -1,6 +1,5 @@
-diff -ruN OpenCV-2.3.1-0-vanilla/CMakeLists.txt OpenCV-2.3.1-2-options/CMakeLists.txt
---- OpenCV-2.3.1-0-vanilla/CMakeLists.txt	2011-09-12 20:45:38.000000000 +0200
-+++ OpenCV-2.3.1-2-options/CMakeLists.txt	2011-11-13 14:11:45.000000000 +0100
+--- OpenCV-2.3.1-0-vanilla/CMakeLists.txt
++++ OpenCV-2.3.1-2-options/CMakeLists.txt
 @@ -72,13 +72,13 @@
  # Build static or dynamic libs?
  # Default: dynamic libraries
@@ -206,7 +205,20 @@ diff -ruN OpenCV-2.3.1-0-vanilla/CMakeLists.txt OpenCV-2.3.1-2-options/CMakeList
  if (WIN32 AND ${CMAKE_GENERATOR} MATCHES "(MinGW)|(MSYS)")
      set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG" CACHE STRING "")
  endif()
-@@ -1494,7 +1494,7 @@
+@@ -1222,12 +1222,6 @@ if(CMAKE_COMPILER_IS_GNUCXX)
+         endif()
+     endif()
+ 
+-    if(X86 OR X86_64)
+-        if(NOT APPLE AND CMAKE_SIZEOF_VOID_P EQUAL 4)
+-            set(EXTRA_C_FLAGS_RELEASE "${EXTRA_C_FLAGS_RELEASE} -mfpmath=387")
+-        endif()
+-    endif()
+-
+     # Profiling?
+     if(ENABLE_PROFILING)
+         set(EXTRA_C_FLAGS_RELEASE "${EXTRA_C_FLAGS_RELEASE} -pg -g")
+@@@ -1494,7 +1494,7 @@
  #-----------------------------------
  # Source package:
  #-----------------------------------

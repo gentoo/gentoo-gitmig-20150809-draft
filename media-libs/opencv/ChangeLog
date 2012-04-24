@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.68 2012/04/22 16:41:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.69 2012/04/24 22:57:47 vapier Exp $
+
+  24 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  files/opencv-2.3.0-convert_sets_to_options.patch,
+  files/opencv-2.3.1a-convert_sets_to_options.patch:
+  Drop -mfpmath=387 hardcode for x86 systems -- this breaks cross-compiling as
+  the detection is uname based instead of target, and we really do not want to
+  hardcode this anyways (let the user pick).
 
   22 Apr 2012; Agostino Sarubbo <ago@gentoo.org> opencv-2.3.1a-r1.ebuild:
   Stable for amd64, wrt bug #409733
