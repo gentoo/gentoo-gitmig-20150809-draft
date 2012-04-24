@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.5 2012/04/18 19:05:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.6 2012/04/24 13:35:41 scarabeus Exp $
 
 EAPI="2"
 # ruby19 needs ruby-gettext on 19 first
@@ -16,7 +16,7 @@ LICENSE="GPL-2 as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE="spell aspell timezone translator shorturl nls dict figlet
-	fortune cal host toilet hunspell"
+	fortune cal host toilet"
 ILINGUAS="zh_CN zh_TW ru nl de fi fr it ja"
 
 for lang in $ILINGUAS; do
@@ -26,10 +26,7 @@ done
 RDEPEND="
 	spell? (
 		aspell? ( app-text/aspell )
-		!aspell? (
-			hunspell? ( app-text/hunspell )
-			!hunspell? ( app-text/ispell )
-		)
+		!aspell? ( app-text/hunspell )
 	)
 	figlet? ( app-misc/figlet )
 	toilet? ( app-misc/toilet )
@@ -73,14 +70,12 @@ all_ruby_compile() {
 			|| rbot_conf "$2" /bin/false
 	}
 
-	local spell_program="/usr/bin/ispell"
+	local spell_program="/usr/bin/hunspell -i"
 	if use !spell; then
 		disable_rbot_plugin spell
 		spell_program="/bin/false"
 	elif use aspell; then
 		spell_program="/usr/bin/ispell-aspell"
-	elif use hunspell; then
-		spell_program="/usr/bin/hunspell -i"
 	fi
 
 	rbot_conf spell.program "${spell_program}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r10.ebuild,v 1.6 2011/09/21 08:54:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r10.ebuild,v 1.7 2012/04/24 13:35:41 scarabeus Exp $
 
 inherit ruby eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2 as-is"
 SLOT="0"
 KEYWORDS=""
 IUSE="spell aspell timezone translator shorturl nls dict figlet
-	fortune cal host toilet hunspell"
+	fortune cal host toilet"
 ILINGUAS="zh_CN zh_TW ru nl de fr it ja"
 
 for lang in $ILINGUAS; do
@@ -25,10 +25,7 @@ RDEPEND=">=dev-lang/ruby-1.8
 	timezone? ( dev-ruby/tzinfo )
 	spell? (
 		aspell? ( app-text/aspell )
-		!aspell? (
-			hunspell? ( app-text/hunspell )
-			!hunspell? ( app-text/ispell )
-		)
+		!aspell? ( app-text/hunspell )
 	)
 	translator? ( dev-ruby/mechanize )
 	shorturl? ( dev-ruby/shorturl )
@@ -87,14 +84,12 @@ src_compile() {
 			|| rbot_conf "$2" /bin/false
 	}
 
-	local spell_program="/usr/bin/ispell"
+	local spell_program="/usr/bin/hunspell -i"
 	if use !spell; then
 		disable_rbot_plugin spell
 		spell_program="/bin/false"
 	elif use aspell; then
 		spell_program="/usr/bin/ispell-aspell"
-	elif use hunspell; then
-		spell_program="/usr/bin/hunspell -i"
 	fi
 
 	rbot_conf spell.program "${spell_program}"
