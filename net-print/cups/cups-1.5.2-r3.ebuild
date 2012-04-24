@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r3.ebuild,v 1.3 2012/04/23 22:16:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r3.ebuild,v 1.4 2012/04/24 18:24:30 dilfridge Exp $
 
 EAPI=4
 
@@ -274,12 +274,6 @@ src_install() {
 
 	# create /etc/cups/client.conf, bug #196967 and #266678
 	echo "ServerName /var/run/cups/cups.sock" >> "${D}"/etc/cups/client.conf
-
-	# With USE=systemd, the unit files are installed by autotools.
-	# Without it, non-socket service files are still useful.
-	if ! use systemd; then
-		systemd_dounit data/cups.path data/cups.service
-	fi
 }
 
 pkg_preinst() {
