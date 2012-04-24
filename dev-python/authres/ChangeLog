@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/authres
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.1 2012/04/24 11:14:02 xarthisius Exp $
+
+*authres-0.3 (24 Apr 2012)
+
+  24 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> +authres-0.3.ebuild,
+  +metadata.xml:
+  Initial import, ebuild written by me. Fixes #410907 by Ian Delaney
+  <johneed@hotmail.com>
+
