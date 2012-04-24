@@ -11,10 +11,6 @@
 		<flag name='64bit'>For amd64-multilib, installs the native 64-bit
 			plugin</flag>
 		<flag name='32bit'>For amd64-multilib, installs the 32-bit plugin</flag>
-		<flag name='bindist'>With USE="-bindist", applies a binary patch to the
-			native 64-bit plugin for compatibility with glibc-2.13 (Bug
-			#354073).  Required due to the non-modification clause in Adobe's
-			license.</flag>
 
 		<flag name='vdpau'>Enables VDPAU support to offload video processing
 			(32-bit flash player only)</flag>
