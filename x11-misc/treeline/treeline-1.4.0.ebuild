@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.4.0.ebuild,v 1.4 2012/01/04 21:02:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.4.0.ebuild,v 1.5 2012/04/24 13:45:53 scarabeus Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -24,7 +24,7 @@ for lang in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${lang}? ( mirror://berlios/${PN}/${PN}-i18n-${PV}a.tar.gz )"
 done
 
-DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
+DEPEND="spell? ( app-text/aspell )
 	dev-python/PyQt4[X]"
 RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"

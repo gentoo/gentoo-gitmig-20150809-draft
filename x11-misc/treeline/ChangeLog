@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.48 2012/01/04 21:02:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.49 2012/04/24 13:45:53 scarabeus Exp $
+
+  24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/treeline-1.2.3-nocompile.patch, -treeline-1.2.3.ebuild,
+  -treeline-1.2.4.ebuild, treeline-1.4.0.ebuild:
+  Remove all overshadowed ebuilds. Pick only aspell dict as ispell is going out.
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> treeline-1.4.0.ebuild:
   Marking treeline-1.4.0 ppc for bug 391511
