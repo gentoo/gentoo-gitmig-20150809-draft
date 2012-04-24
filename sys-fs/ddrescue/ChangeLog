@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ddrescue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.33 2012/03/05 07:49:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.34 2012/04/24 07:02:59 jdhore Exp $
+
+  24 Apr 2012; Jeff Horelick <jdhore@gentoo.org> ddrescue-1.15.ebuild:
+  marked x86 per bug 413261
 
 *ddrescue-1.15 (05 Mar 2012)
 
