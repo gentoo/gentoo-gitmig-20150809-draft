@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/journey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/ChangeLog,v 1.2 2012/04/04 13:12:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/ChangeLog,v 1.3 2012/04/24 17:43:56 grobian Exp $
+
+  24 Apr 2012; Fabian Groffen <grobian@gentoo.org> journey-1.0.3.ebuild:
+  Marked ~x64-macos
 
 *journey-1.0.3 (04 Apr 2012)
 
