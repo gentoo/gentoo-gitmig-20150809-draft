@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.89 2012/04/22 16:43:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.90 2012/04/24 17:09:25 ago Exp $
+
+  24 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  xf86-video-virtualbox-4.1.12.ebuild:
+  Stable for amd64, wrt bug #412565
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org>
   xf86-video-virtualbox-4.1.12.ebuild:
