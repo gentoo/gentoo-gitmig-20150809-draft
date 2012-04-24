@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.88 2012/04/23 21:03:36 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.89 2012/04/24 18:35:30 fuzzyray Exp $
+
+  24 Apr 2012; Paul Varner <fuzzyray@gentoo.org>
+  -files/0.7.2-esync-quiet.patch, -files/0.7.2-make-prefix-aware.patch,
+  -files/0.7.2-update-shebang-lines.patch, -esearch-0.7.2-r2.ebuild,
+  -esearch-1.1.ebuild, -esearch-1.1-r1.ebuild:
+  Remove unused versions
 
 *esearch-1.1-r2 (23 Apr 2012)
 
