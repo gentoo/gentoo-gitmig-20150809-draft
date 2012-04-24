@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qt-recordmydesktop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.19 2010/11/15 20:38:20 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.20 2012/04/24 19:32:25 johu Exp $
+
+  24 Apr 2012; Johannes Huber <johu@gentoo.org> metadata.xml:
+  Add qt as co-maintainer herd.
 
 *qt-recordmydesktop-0.3.8-r1 (15 Nov 2010)
 
