@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-pvgrub
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.11 2011/11/28 18:30:55 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.12 2012/04/24 09:49:47 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> xen-pvgrub-4.1.1-r1.ebuild,
+  xen-pvgrub-4.1.2.ebuild:
+  Update to use mirror://.
 
   28 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-pvgrub-9999.ebuild:
   Move xen-pvgrub-9999 to virtualization overlay

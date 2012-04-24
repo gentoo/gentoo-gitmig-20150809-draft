@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.1-r1.ebuild,v 1.4 2011/11/01 10:19:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.1-r1.ebuild,v 1.5 2012/04/24 09:49:47 mgorny Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit flag-o-matic eutils multilib toolchain-funcs
 XEN_EXTFILES_URL="http://xenbits.xensource.com/xen-extfiles"
 OCAML_URL=http://caml.inria.fr/pub/distrib
 LIBPCI_URL=ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci
-GRUB_URL=http://alpha.gnu.org/gnu/grub
+GRUB_URL=mirror://gnu-alpha/grub
 SRC_URI="
 		http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz
 		$GRUB_URL/grub-0.97.tar.gz
