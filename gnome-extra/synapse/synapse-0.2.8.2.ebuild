@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.8.2.ebuild,v 1.5 2012/02/15 18:47:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.8.2.ebuild,v 1.6 2012/04/24 05:16:31 jlec Exp $
 
 EAPI=4
 
@@ -37,7 +37,8 @@ RDEPEND="
 	zeitgeist? (
 		dev-libs/libzeitgeist
 		gnome-extra/zeitgeist
-		gnome-extra/zeitgeist-extensions[fts]
+		gnome-extra/zeitgeist-extensions
+		|| ( gnome-extra/zeitgeist[fts] gnome-extra/zeitgeist-extensions[fts] )
 		)"
 DEPEND="${RDEPEND}
 	dev-util/intltool

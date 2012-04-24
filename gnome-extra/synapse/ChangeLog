@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/synapse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.14 2012/03/19 08:04:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.15 2012/04/24 05:16:31 jlec Exp $
+
+  24 Apr 2012; Justin Lecher <jlec@gentoo.org> synapse-0.2.8.2.ebuild:
+  Correct deps as zeitgeist itself now shipps the fts extention
 
 *synapse-0.2.10 (19 Mar 2012)
 
