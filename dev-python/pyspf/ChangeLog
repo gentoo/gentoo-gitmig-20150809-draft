@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.17 2012/04/08 19:47:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.18 2012/04/24 11:40:13 xarthisius Exp $
+
+*pyspf-2.0.7 (24 Apr 2012)
+
+  24 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> +pyspf-2.0.7.ebuild:
+  Version bump wrt #410875 by Ian Delaney <johneed@hotmail.com>
 
   08 Apr 2012; Mike Gilbert <floppym@gentoo.org> pyspf-2.0.5.ebuild,
   pyspf-2.0.6.ebuild:
