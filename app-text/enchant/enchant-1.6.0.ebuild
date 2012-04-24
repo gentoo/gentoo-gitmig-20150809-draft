@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.6.0.ebuild,v 1.13 2011/08/14 05:06:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.6.0.ebuild,v 1.14 2012/04/24 13:39:30 scarabeus Exp $
 
-EAPI="3"
-inherit libtool confutils autotools
+EAPI=4
+
+inherit libtool autotools
 
 DESCRIPTION="Spellchecker wrapping library"
 HOMEPAGE="http://www.abisource.com/enchant/"
@@ -26,18 +27,20 @@ RDEPEND="${COMMON_DEPENDS}
 DEPEND="${COMMON_DEPENDS}
 	dev-util/pkgconfig"
 
-pkg_setup() {
-	confutils_require_any aspell hunspell zemberek
-}
+REQUIRED_USE="|| ( hunspell aspell zemberek )"
+
+DOCS="AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 
 src_prepare() {
-	sed -i -e 's:noinst_PROGRAMS:check_PROGRAMS:' tests/Makefile.am \
-		|| die "unable to remove testdefault build"
+	sed -i \
+		-e 's:noinst_PROGRAMS:check_PROGRAMS:' \
+		tests/Makefile.am || die
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_enable aspell) \
+	econf \
+		$(use_enable aspell) \
 		$(use_enable hunspell myspell) \
 		$(use_with hunspell system-myspell) \
 		$(use_enable static-libs static) \
@@ -47,21 +50,10 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README TODO
+	default
 
 	if ! use static-libs; then
 		# Remove useless .la files
 		find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 	fi
-}
-
-pkg_postinst() {
-	ewarn "Starting with ${PN}-1.4.0 default spell checking engine has changed"
-	ewarn "from aspell to hunspell. In case you used aspell dictionaries to"
-	ewarn "check spelling you need either reemerge ${PN} with aspell USE flag"
-	ewarn "or you need to emerge myspell-<lang> dictionaries."
-	ewarn "aspell is faster but has less features then hunspell and most"
-	ewarn "distributions by default use hunspell only. Nevertheless in Gentoo"
-	ewarn "it's still your choice which library to use..."
 }
