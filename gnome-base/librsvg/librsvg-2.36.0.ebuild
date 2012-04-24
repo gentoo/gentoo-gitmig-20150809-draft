@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.0.ebuild,v 1.2 2012/04/12 18:42:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.0.ebuild,v 1.3 2012/04/24 04:04:11 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -73,7 +73,7 @@ pkg_postinst() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER
 
-	tmp_file=$(mktemp --suffix=gdk_pixbuf_ebuild)
+	tmp_file=$(mktemp -t tmp.XXXXXXXXXXlibrsvg_ebuild)
 	# be atomic!
 	gdk-pixbuf-query-loaders > "${tmp_file}"
 	if [ "${?}" = "0" ]; then
@@ -88,7 +88,7 @@ pkg_postrm() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER
 
-	tmp_file=$(mktemp --suffix=gdk_pixbuf_ebuild)
+	tmp_file=$(mktemp -t tmp.XXXXXXXXXXlibrsvg_ebuild)
 	# be atomic!
 	gdk-pixbuf-query-loaders > "${tmp_file}"
 	if [ "${?}" = "0" ]; then
