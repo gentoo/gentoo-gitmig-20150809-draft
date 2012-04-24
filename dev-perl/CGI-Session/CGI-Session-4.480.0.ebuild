@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/CGI-Session-4.480.0.ebuild,v 1.2 2011/07/26 18:53:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/CGI-Session-4.480.0.ebuild,v 1.3 2012/04/24 07:28:30 jdhore Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="persistent session data in CGI applications "
 
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 IUSE="test"
 
 RDEPEND="

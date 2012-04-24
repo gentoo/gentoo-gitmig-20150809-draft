@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CGI-Session
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.44 2011/07/30 09:11:40 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.45 2012/04/24 07:28:30 jdhore Exp $
+
+  24 Apr 2012; Jeff Horelick <jdhore@gentoo.org> CGI-Session-4.480.0.ebuild:
+  marked x86 per bug 413083
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> -CGI-Session-4.430.ebuild:
   Cleanup
