@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.87 2012/04/24 13:14:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.88 2012/04/24 13:17:12 aballier Exp $
 
 EAPI="4"
 
@@ -96,6 +96,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
 	doc? ( app-text/texi2html )
+	fontconfig? ( dev-util/pkgconfig )
 	gnutls? ( dev-util/pkgconfig )
 	ieee1394? ( dev-util/pkgconfig )
 	libv4l? ( dev-util/pkgconfig )
