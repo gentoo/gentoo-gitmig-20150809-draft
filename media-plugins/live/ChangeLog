@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/live
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.153 2012/04/05 12:32:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.154 2012/04/24 13:01:39 aballier Exp $
+
+*live-2012.04.21 (24 Apr 2012)
+
+  24 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  +files/live-recursive2.patch, +live-2012.04.21.ebuild:
+  version bump. Add static-libs support and examples useflag to install test
+  programs. Link programs dynamically instead of statically.
 
 *live-2012.04.04 (05 Apr 2012)
 
