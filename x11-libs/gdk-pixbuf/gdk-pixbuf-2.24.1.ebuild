@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.1.ebuild,v 1.3 2012/04/19 20:44:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.1.ebuild,v 1.4 2012/04/24 04:04:01 tetromino Exp $
 
 EAPI="4"
 
@@ -24,7 +24,6 @@ COMMON_DEPEND="
 	X? ( x11-libs/libX11 )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.9
-	>=sys-apps/coreutils-8.5
 	>=sys-devel/gettext-0.17
 	>=dev-util/gtk-doc-am-1.11
 	doc? (
@@ -74,7 +73,7 @@ pkg_postinst() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER
 
-	tmp_file=$(mktemp --suffix=gdk_pixbuf_ebuild)
+	tmp_file=$(mktemp -t tmp.XXXXXXXXXXgdk_pixbuf_ebuild)
 	# be atomic!
 	gdk-pixbuf-query-loaders > "${tmp_file}"
 	if [ "${?}" = "0" ]; then
