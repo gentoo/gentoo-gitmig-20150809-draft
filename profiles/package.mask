@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13699 2012/04/23 18:30:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13700 2012/04/24 22:19:24 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,10 +34,6 @@
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Needs to be slotted better
 =dev-libs/yaz-4*
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (22 Apr 2012)
-# testing on bug #411959
-=media-plugins/vdr-pvrinput-2011.09.17
 
 # Michał Górny <mgorny@gentoo.org> (22 Apr 2012)
 # Obsolete and unmaintained. Their functions are provided by
