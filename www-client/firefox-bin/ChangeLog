@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.98 2012/03/25 15:35:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.99 2012/04/24 20:05:24 jdhore Exp $
+
+*firefox-bin-12.0 (24 Apr 2012)
+
+  24 Apr 2012; Jeff Horelick <jdhore@gentoo.org> +firefox-bin-12.0.ebuild:
+  Version bump to Firefox 12.
 
   25 Mar 2012; Thomas Kahle <tomka@gentoo.org> firefox-bin-10.0.3.ebuild:
   marked x86 per bug 408161
