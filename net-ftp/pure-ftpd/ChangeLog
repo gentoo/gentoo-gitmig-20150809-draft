@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.137 2012/04/17 19:44:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.138 2012/04/24 00:14:32 vapier Exp $
+
+  24 Apr 2012; Mike Frysinger <vapier@gentoo.org> pure-ftpd-1.0.29-r1.ebuild,
+  pure-ftpd-1.0.32-r2.ebuild, pure-ftpd-1.0.35.ebuild, pure-ftpd-1.0.36.ebuild:
+  Disable automatic ssp flags -- this is the realm of user flags.
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> pure-ftpd-1.0.35.ebuild:
   Marking pure-ftpd-1.0.35 ppc64 for bug 410129

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.29-r1.ebuild,v 1.5 2012/03/29 11:33:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.29-r1.ebuild,v 1.6 2012/04/24 00:14:32 vapier Exp $
 
 EAPI=2
 inherit eutils confutils flag-o-matic
@@ -61,6 +61,9 @@ src_configure() {
 	use anonperm && append-cppflags -DANON_CAN_CHANGE_PERMS
 	use anonren && append-cppflags -DANON_CAN_RENAME
 	use anonres && append-cppflags -DANON_CAN_RESUME
+
+	# Do not auto-use SSP -- let the user select this.
+	export ax_cv_check_cflags___fstack_protector_all=no
 
 	econf \
 		--with-altlog \
