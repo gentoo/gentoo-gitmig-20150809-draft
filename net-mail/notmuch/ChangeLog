@@ -1,12 +1,13 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.44 2012/04/24 09:51:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.45 2012/04/24 09:55:18 aidecoe Exp $
 
   24 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.10.2-r3.ebuild,
   notmuch-0.11.1-r3.ebuild:
-  Synced ebuilds structures between notmuch-0.10.2-r3 and notmuch-0.11-r3 and in
-  result dropped autotools-utils usage in notmuch-0.10.2 and added nmbug script
-  installation.
+  Synced ebuilds structures between 0.10.2-r3 and 0.11.1-r3.  In result
+  autotools-utils usage has been dropped in 0.10.2-r3 and nmbug script
+  installation has been added.  In 0.11.1-r3 patch has been moved to PATCHES
+  variable.
 
 *notmuch-0.11.1-r3 (24 Apr 2012)
 *notmuch-0.10.2-r3 (24 Apr 2012)
