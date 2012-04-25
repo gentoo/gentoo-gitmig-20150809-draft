@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-UUlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.60 2012/04/24 12:43:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.61 2012/04/25 19:36:31 maekke Exp $
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> Convert-UUlib-1.400.0.ebuild:
+  arm stable, bug #413087
 
   24 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Convert-UUlib-1.400.0.ebuild:
   Stable for amd64, wrt bug #413087
