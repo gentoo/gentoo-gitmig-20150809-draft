@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/h5utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.15 2011/10/08 16:28:56 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.16 2012/04/25 17:01:44 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> h5utils-1.12.1-r2.ebuild,
+  metadata.xml:
+  Move to EPAI=4 and autotools-utils
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   h5utils-1.12.1-r2.ebuild:

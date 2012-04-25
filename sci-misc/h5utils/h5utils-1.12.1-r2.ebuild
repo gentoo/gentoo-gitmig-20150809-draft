@@ -1,22 +1,24 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.12.1-r2.ebuild,v 1.3 2011/10/08 16:28:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.12.1-r2.ebuild,v 1.4 2012/04/25 17:01:46 jlec Exp $
 
 EAPI=4
 
-inherit autotools eutils
+AUTOTOOLS_AUTORECONF=true
 
-DESCRIPTION="utilities for visualization and conversion of HDF5 files"
+inherit autotools-utils
+
+DESCRIPTION="Utilities for visualization and conversion of HDF5 files"
 HOMEPAGE="http://ab-initio.mit.edu/h5utils/"
 SRC_URI="http://ab-initio.mit.edu/h5utils/${P}.tar.gz"
 
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
-
 IUSE="hdf octave"
-SLOT="0"
 
-DEPEND="media-libs/libpng
+DEPEND="
+	media-libs/libpng
 	sci-libs/hdf5
 	sys-libs/zlib
 	hdf? (
@@ -25,20 +27,16 @@ DEPEND="media-libs/libpng
 	)"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-automagic.patch \
-		"${FILESDIR}"/${P}-png15.patch
-	eautoreconf
-}
+PATCHES=(
+	"${FILESDIR}"/${P}-automagic.patch
+	"${FILESDIR}"/${P}-png15.patch
+	)
 
 src_configure() {
-	econf \
-		 --without-v5d \
-		$(use_with octave) \
+	local myeconfargs=(
+		--without-v5d
+		$(use_with octave)
 		$(use_with hdf)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README NEWS AUTHORS
+		)
+	autotools-utils_src_configure
 }
