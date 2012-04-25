@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tokyocabinet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.41 2011/09/25 17:36:48 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.42 2012/04/25 16:22:24 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> tokyocabinet-1.4.47.ebuild:
+  Drop unnessecary die
 
   25 Sep 2011; Raúl Porcel <armin76@gentoo.org> tokyocabinet-1.4.47.ebuild:
   alpha stable wrt #361129

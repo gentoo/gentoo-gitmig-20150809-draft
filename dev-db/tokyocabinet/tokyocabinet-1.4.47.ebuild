@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.47.ebuild,v 1.9 2011/09/25 17:36:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.47.ebuild,v 1.10 2012/04/25 16:22:24 jlec Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ src_prepare() {
 	sed -i -e 's/-fomit-frame-pointer//' configure.in || die
 	# flag only works on x86 derivatives, remove everywhere else
 	if ! use x86 && ! use amd64; then sed -i -e 's/ -minline-all-stringops//' configure.in; fi
-	eautoreconf || die
+	eautoreconf
 }
 
 src_configure() {

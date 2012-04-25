@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.4.ebuild,v 1.1 2012/02/21 08:55:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.4.ebuild,v 1.2 2012/04/25 16:21:15 jlec Exp $
 
 EAPI=4
 
@@ -31,13 +31,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/libdbi-0.8.4-doc-build-fix.patch
 
 	# configure.in has been changed
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 	# should append CFLAGS, not replace them
 	sed -i.orig -e 's/^CFLAGS = /CFLAGS += /g' src/Makefile.in
 }
 
 src_configure() {
-	econf $(use_enable doc docs) || die "econf failed"
+	econf $(use_enable doc docs)
 }
 
 src_compile() {
