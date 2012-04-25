@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.3.ebuild,v 1.2 2011/03/29 12:14:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.3.ebuild,v 1.3 2012/04/25 16:13:00 jlec Exp $
 
 EAPI=1
 
@@ -39,7 +39,7 @@ src_compile() {
 	econf $(use_enable doc) \
 		$(use_enable gtk gnome) \
 		$(use_enable gnome gnome-applet) \
-		$(use_enable nls) || die "econf failed"
+		$(use_enable nls)
 	emake || die "emake failed"
 }
 
