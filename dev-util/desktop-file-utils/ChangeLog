@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.120 2012/04/23 21:44:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.121 2012/04/25 18:44:23 maekke Exp $
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org>
+  desktop-file-utils-0.20-r1.ebuild:
+  arm stable, bug #412833
 
   23 Apr 2012; Brent Baude <ranger@gentoo.org>
   desktop-file-utils-0.20-r1.ebuild:
