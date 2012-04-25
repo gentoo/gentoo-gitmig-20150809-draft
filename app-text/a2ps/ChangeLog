@@ -1,6 +1,10 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.103 2012/01/06 02:11:56 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.104 2012/04/25 16:19:18 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> a2ps-4.13c-r6.ebuild,
+  a2ps-4.14-r1.ebuild:
+  Drop unnessecary die
 
   06 Jan 2012; Christoph Junghans <ottxor@gentoo.org> a2ps-4.14-r2.ebuild:
   keyword ~x86-macos

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14-r1.ebuild,v 1.10 2010/11/04 12:25:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14-r1.ebuild,v 1.11 2012/04/25 16:19:18 jlec Exp $
 
 inherit eutils autotools elisp-common
 
@@ -92,7 +92,7 @@ src_compile() {
 	econf \
 		--sysconfdir=/etc/a2ps \
 		$(use_enable nls) \
-		${myconf} || die "econf failed"
+		${myconf}
 
 	# parallel make b0rked
 	emake -j1 || die "emake failed"

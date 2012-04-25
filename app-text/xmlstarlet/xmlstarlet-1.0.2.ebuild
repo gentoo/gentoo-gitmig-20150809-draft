@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.2.ebuild,v 1.1 2010/04/08 20:18:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.2.ebuild,v 1.2 2012/04/25 16:20:18 jlec Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ src_prepare() {
 	# Shipped configure script broken somehow:
 	# All HAVE_* end up undefined in config.h.
 	# Therefore we re-created it
-	eautoreconf || die 'eautoreconf failed'
+	eautoreconf
 }
 
 src_configure() {

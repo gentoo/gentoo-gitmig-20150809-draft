@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.16 2011/07/08 11:05:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.17 2012/04/25 16:19:18 jlec Exp $
 
 inherit eutils autotools elisp-common
 
@@ -71,7 +71,7 @@ src_unpack() {
 	# fix compilation error due to invalid stpcpy() prototype, bug 216588
 	epatch "${FILESDIR}/a2ps-4.14-fix-stpcpy-proto.patch"
 
-	AT_M4DIR="m4" eautoreconf || die "eautoreconf failed"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
@@ -86,7 +86,7 @@ src_compile() {
 	econf --sysconfdir=/etc/a2ps \
 		--includedir=/usr/include \
 		$(use emacs || echo EMACS=no) \
-		$(use_enable nls) || die "econf failed"
+		$(use_enable nls)
 
 	export LANG=C
 
