@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/versiontools-1.9.1.ebuild,v 1.1 2012/04/25 12:34:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/versiontools-1.9.1.ebuild,v 1.2 2012/04/25 13:06:19 xarthisius Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS="*-jython"
+DISTUTILS_SRC_TEST=setup.py
 
 inherit distutils
 
@@ -19,24 +20,22 @@ LICENSE="GPL-2"
 SLOT="0"
 
 RDEPEND=""
-DEPEND="${RDEPEND}
-	dev-python/setuptools"
+DEPEND="dev-python/setuptools
+	doc? ( dev-python/sphinx )"
 
-src_test() {
-	testing() {
-		PYTHONPATH=. "$(PYTHON)" versiontools/tests.py
-		einfo "Testing successfully completed for python"$(python_get_version)
-		einfo ""
-	}
-	python_execute_function testing
+src_compile() {
+	distutils_src_compile
+
+	if use doc; then
+		einfo "Generation of documentation"
+		PYTHONPATH="build-$(PYTHON -f --ABI)" \
+			sphinx-build doc doc_output || die "Generation of documentation failed"
+	fi
 }
 
 src_install() {
-	if use doc; then
-		docompress -x usr/share/doc/${PF}/
-		insinto usr/share/doc/${PF}/
-		doins doc/*
-	fi
-
 	distutils_src_install
+	if use doc; then
+		dohtml -r doc_output/*
+	fi
 }
