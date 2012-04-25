@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r5.ebuild,v 1.6 2011/03/12 11:51:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r5.ebuild,v 1.7 2012/04/25 19:19:37 xarthisius Exp $
 
 EAPI="3"
 
@@ -123,7 +123,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf 	--disable-static \
+	econf --disable-static \
 		--disable-dependency-tracking \
 		--disable-epiphany-extension \
 		$(use_enable debug xml-dump) \
