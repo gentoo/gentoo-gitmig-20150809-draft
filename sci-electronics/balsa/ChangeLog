@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/balsa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.15 2010/08/27 09:39:28 tomjbe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.16 2012/04/25 17:22:35 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> balsa-3.5.ebuild,
+  balsa-4.0.ebuild, metadata.xml:
+  Drop unnessecary die
 
   27 Aug 2010; Thomas Beierlein <tomjbe@gentoo.org>
   +files/4.0-ldflags.patch, balsa-4.0.ebuild:

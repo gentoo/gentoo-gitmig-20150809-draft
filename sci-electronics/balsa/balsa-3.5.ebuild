@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.5.ebuild,v 1.5 2010/06/27 04:33:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.5.ebuild,v 1.6 2012/04/25 17:22:35 jlec Exp $
 
 EAPI="1"
 
@@ -36,7 +36,7 @@ RDEPEND="${DEPEND}
 
 BALSA_TECH_AMS="balsa-tech-ams-20030506.tar.gz"
 
-if [ -f ${DISTDIR}/${BALSA_TECH_AMS} ]; then
+if [ -f "${DISTDIR}"/${BALSA_TECH_AMS} ]; then
 	TECH_AMS=1
 fi
 
@@ -45,7 +45,7 @@ src_unpack() {
 	if [ $TECH_AMS ]; then
 		unpack ${BALSA_TECH_AMS}
 	fi
-	sed -i -e "s:\(DEFAULT_INCLUDES = \)\(.*\):\1-I"${S}"/src/libs/ \2/:" "${WORKDIR}"/balsa-sim-verilog-${PV}/libs/Makefile.in
+	sed -i -e "s:\(DEFAULT_INCLUDES = \)\(.*\):\1-I${S}/src/libs/ \2/:" "${WORKDIR}"/balsa-sim-verilog-${PV}/libs/Makefile.in
 	sed -i -e 's/ $(bindir)/ $(DESTDIR)$(bindir)/' "${S}"/bin/Makefile.in
 	sed -i -e 's/ $(balsatypesdir)/ $(DESTDIR)$(balsatypesdir)/' "${S}"/share/balsa/types/Makefile.in
 	sed -i -e 's/ $(balsasimdir)/ $(DESTDIR)$(balsasimdir)/' "${S}"/share/balsa/sim/Makefile.in
@@ -54,7 +54,7 @@ src_unpack() {
 src_compile() {
 	# compile balsa
 	einfo "Compiling balsa"
-	./configure --prefix=/usr/ || die "econf failed"
+	./configure --prefix=/usr/
 	chmod +x bin/balsa-config
 	PATH=$PATH:"${S}"/bin
 	emake -j1 || die
@@ -63,18 +63,18 @@ src_compile() {
 	if [ $TECH_AMS ]; then
 		einfo "Compiling AMS035 tech"
 		cd "${WORKDIR}"/balsa-tech-ams-20030506
-		econf || die "econf failed"
+		econf
 	fi
 
 	# config Xilinx FPGA backend
 	einfo "Compiling Xilinx FPGA backend"
 	cd "${WORKDIR}"/balsa-tech-xilinx-${PV}
-	econf || die "econf failed"
+	econf
 
 	# config example tech
 	einfo "Compiling tech example"
 	cd "${WORKDIR}"/balsa-tech-example-${PV}
-	econf || die "econf failed"
+	econf
 
 	# config verilog simulator wrappers
 	einfo "Compiling verilog simulator wrappers"
@@ -87,48 +87,45 @@ src_compile() {
 
 src_install() {
 	# install balsa
-	cd "${S}"
-	einfo "Installing balsa"
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# install manual and examples
 	dodir /usr/share/doc/${P}/
-	cp -pPR "${WORKDIR}"/BalsaExamples ${D}/usr/share/doc/${P}/
-	dodoc ${DISTDIR}/BalsaManual${PV}.pdf
+	cp -pPR "${WORKDIR}"/BalsaExamples "${D}"/usr/share/doc/${P}/
+	dodoc "${DISTDIR}"/BalsaManual${PV}.pdf
 
 	if [ $TECH_AMS ]; then
 		einfo "Installing AMS035 tech"
 		cd "${WORKDIR}"/balsa-tech-ams-20030506
-		make DESTDIR=${D} install || die "make install failed"
+		make DESTDIR="${D}" install || die "make install failed"
 	fi
 
 	einfo "Installing Xilinx FPGA tech"
 	cd "${WORKDIR}"/balsa-tech-xilinx-${PV}
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	einfo "Installing example tech"
 	cd "${WORKDIR}"/balsa-tech-example-${PV}
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	einfo "Installing verilog simulator wrappers"
 	cd "${WORKDIR}"/balsa-sim-verilog-${PV}
-	DESTDIR=${D} make install || die "make verilog wrappers failed"
+	DESTDIR="${D}" make install || die "make verilog wrappers failed"
 
 	# fix paths
-	cd ${D}
+	cd "${D}"
 	einfo "Fixing paths"
 	find . -type f -exec sed -i -e "s:${D}::" {} \;
 	find . -name "sed*" -exec rm -f {} \;
 
 	# add some docs
 	cd "${S}"
-	einfo "Installing docs"
-	dodoc AUTHORS COPYING NEWS README TODO
-	mv ${D}/usr/doc/* ${D}/usr/share/doc/${P}/
-	rmdir ${D}/usr/doc
+	dodoc AUTHORS NEWS README TODO
+	mv "${D}"/usr/doc/* "${D}"/usr/share/doc/${P}/
+	rmdir "${D}"/usr/doc
 
 	# fix collisions
-	rm -f ${D}/usr/bin/libtool
+	rm -f "${D}"/usr/bin/libtool
 }
 
 pkg_postinst() {

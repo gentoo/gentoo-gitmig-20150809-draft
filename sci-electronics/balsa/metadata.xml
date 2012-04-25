@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci-electronics</herd>
-  <longdescription>
+	<herd>sci-electronics</herd>
+	<longdescription>
   Balsa is an asynchronous circuit synthesis system developed over a number of
   years at the APT group of the School Of Computer Science, The University of
   Manchester. Balsa is built around the Handshake Circuits methology and can
