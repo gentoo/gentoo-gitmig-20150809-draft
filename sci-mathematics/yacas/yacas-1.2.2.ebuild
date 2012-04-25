@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.7 2008/11/24 09:40:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.8 2012/04/25 17:08:36 jlec Exp $
 
 inherit eutils java-pkg-opt-2
 
@@ -28,8 +28,7 @@ src_compile() {
 	econf \
 		$(use_enable doc html-doc) \
 		$(use_enable server) \
-		--with-html-dir="/usr/share/doc/${PF}/html" \
-		|| die "econf failed"
+		--with-html-dir="/usr/share/doc/${PF}/html"
 	emake || die "emake failed"
 	if use java; then
 		cd JavaYacas || die
