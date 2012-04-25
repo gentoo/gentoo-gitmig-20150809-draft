@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6468 2012/04/25 19:00:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6469 2012/04/25 19:26:57 xarthisius Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +hardened/linux/powerpc/ppc64/32bit-userland/package.mask,
+  +hardened/linux/powerpc/ppc64/32bit-userland/package.use.mask:
+  Mask app-admin/puppet[rrdtool] and app-misc/beagle 
+  due to nonsolvable dependencies
 
   25 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
   hardened/linux/powerpc/ppc64/64bit-userland/use.mask:
