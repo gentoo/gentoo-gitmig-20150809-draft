@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/django-auth-ldap-1.0.19.ebuild,v 1.1 2012/04/18 16:34:36 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/django-auth-ldap-1.0.19.ebuild,v 1.2 2012/04/25 12:55:49 tampakrap Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -9,16 +9,14 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils
 
 DESCRIPTION="A flexible and capable API layer for Django utilising serialisers"
-HOMEPAGE="http://pypi.python.org/pypi/django-auth-ldap
-	http://bitbucket.org/psagers/django-auth-ldap/"
-SRC_URI="mirror://pypi/d/${PN}/${P}.tar.gz"
+HOMEPAGE="http://pypi.python.org/pypi/django-auth-ldap http://bitbucket.org/psagers/django-auth-ldap/"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 LICENSE="BSD"
 SLOT="0"
 PYTHON_MODNAME="django_auth_ldap"
-DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
 RDEPEND=""
 DEPEND="${RDEPEND} >=dev-python/django-1.0
@@ -28,10 +26,10 @@ DEPEND="${RDEPEND} >=dev-python/django-1.0
 src_test() {
 	export DJANGO_SETTINGS_MODULE="django.conf"
 	testing() {
-		$(PYTHON) django_auth_ldap/tests.py
-		einfo "tests completed for	python"$(python_get_version)
+		"$(PYTHON)" build-$(python_get_version)/lib/django_auth_ldap/tests.py
+		echo "tests completed for python"$(python_get_version)
 	}
-	python_execute_function -s testing
+	python_execute_function testing
 }
 
 src_compile() {
@@ -43,6 +41,7 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
+
 	if use doc; then
 		dohtml -r docs/_build/html/*
 	fi
