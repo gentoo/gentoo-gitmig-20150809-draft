@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.3.0.ebuild,v 1.2 2012/01/11 15:56:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.4.1.ebuild,v 1.1 2012/04/25 15:02:00 matsuu Exp $
 
 EAPI="3"
+# ruby19: dev-ruby/rack has no ruby19
+# jruby: dev-ruby/rails has no jruby
+# rbx: dev-ruby/rails has no rbx
+#USE_RUBY="ruby18 ree18"
 USE_RUBY="ruby18"
 inherit eutils depend.apache ruby-ng
 
@@ -14,23 +18,50 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 #IUSE="bazaar cvs darcs fastcgi git imagemagick mercurial mysql openid passenger postgres sqlite3 subversion"
-IUSE="fastcgi imagemagick openid passenger"
+IUSE="fastcgi imagemagick ldap openid passenger"
 
 RDEPEND="$(ruby_implementation_depend ruby18 '>=' -1.8.6)[ssl]"
 
 ruby_add_rdepend "virtual/ruby-ssl
 	virtual/rubygems
-	>=dev-ruby/coderay-1
-	>=dev-ruby/ruby-net-ldap-0.0.4
-	~dev-ruby/i18n-0.4.2
+	>=dev-ruby/coderay-1.0.6
+	dev-ruby/i18n:0.4
 	>=dev-ruby/rack-1.1:0
+	>=dev-ruby/tzinfo-0.3.31
 	dev-ruby/rake
 	>=dev-ruby/rails-2.3.14:2.3
-	dev-ruby/activerecord:2.3
 	fastcgi? ( dev-ruby/ruby-fcgi )
-	imagemagick? ( dev-ruby/rmagick )
-	openid? ( dev-ruby/ruby-openid )
-	passenger? ( www-apache/passenger )"
+	imagemagick? ( >=dev-ruby/rmagick-2 )
+	ldap? ( >=dev-ruby/ruby-net-ldap-0.3.1 )
+	openid? ( >=dev-ruby/ruby-openid-2.1.4 )
+	passenger? ( www-apache/passenger )
+	ruby_targets_ruby18? (
+		>=dev-ruby/fastercsv-1.5
+	)"
+#	ruby_targets_ruby18? (
+#		>=dev-ruby/fastercsv-1.5
+#		postgres? ( >=dev-ruby/pg-0.11 )
+#		sqlite3? ( dev-ruby/sqlite3-ruby )
+#		mysql? ( dev-ruby/mysql )
+#	)
+#	ruby_targets_ruby19? (
+#		postgres? ( >=dev-ruby/pg-0.11 )
+#		sqlite3? ( dev-ruby/sqlite3-ruby )
+#		mysql? ( dev-ruby/mysql2:0.2 )
+#	)
+#	ruby_targets_jruby? (
+#		>=dev-ruby/fastercsv-1.5
+#		mysql? ( dev-ruby/activerecord-jdbcmysql-adapter )
+#		postgres? ( dev-ruby/activerecord-jdbcpostgresql-adapter )
+#		sqlite3? ( dev-ruby/activerecord-jdbcsqlite3-adapter )
+#	)
+
+#ruby_add_bdepend ">=dev-ruby/rdoc-2.4.2
+#	test? (
+#		>=dev-ruby/shoulda-2.10.3
+#		>=dev-ruby/edavis10-object_daddy
+#		>=dev-ruby/mocha
+#	)"
 
 #RDEPEND="${RDEPEND}
 #	bazaar ( dev-vcs/bazaar )
@@ -50,17 +81,22 @@ pkg_setup() {
 
 all_ruby_prepare() {
 	rm -r log files/delete.me || die
-	rm -r vendor/gems/coderay-1.0.0 || die
-	rm -r vendor/plugins/ruby-net-ldap-0.0.4 || die
-	rm -fr vendor/rails || die
+
+	# bug #406605
+	rm .gitignore .hgignore || die
+
+	rm Gemfile config/preinitializer.rb || die
+	epatch "${FILESDIR}/${P}-bundler.patch" || die
+
 	echo "CONFIG_PROTECT=\"${EPREFIX}${REDMINE_DIR}/config\"" > "${T}/50${PN}"
 	echo "CONFIG_PROTECT_MASK=\"${EPREFIX}${REDMINE_DIR}/config/locales ${EPREFIX}${REDMINE_DIR}/config/settings.yml\"" >> "${T}/50${PN}"
-	sed -i -e "/RAILS_GEM_VERSION/s/'.*'/'$(best_version dev-ruby/rails:2.3|cut -d- -f3)'/" config/environment.rb || die
 }
 
 all_ruby_install() {
 	dodoc doc/{CHANGELOG,INSTALL,README_FOR_APP,RUNNING_TESTS,UPGRADING} || die
 	rm -fr doc || die
+	dodoc README.rdoc || die
+	rm README.rdoc || die
 
 	keepdir /var/log/${PN} || die
 	dosym /var/log/${PN}/ "${REDMINE_DIR}/log" || die
@@ -71,13 +107,19 @@ all_ruby_install() {
 	keepdir "${REDMINE_DIR}/public/plugin_assets" || die
 
 	fowners -R redmine:redmine \
-		"${REDMINE_DIR}/config/environment.rb" \
+		"${REDMINE_DIR}/config" \
 		"${REDMINE_DIR}/files" \
 		"${REDMINE_DIR}/public/plugin_assets" \
 		"${REDMINE_DIR}/tmp" \
 		/var/log/${PN} || die
 	# for SCM
 	fowners redmine:redmine "${REDMINE_DIR}" || die
+	# bug #406605
+	fperms -R go-rwx \
+		"${REDMINE_DIR}/config" \
+		"${REDMINE_DIR}/files" \
+		"${REDMINE_DIR}/tmp" \
+		/var/log/${PN} || die
 
 	if use passenger ; then
 		has_apache
@@ -108,6 +150,7 @@ pkg_postinst() {
 		elog "# cd ${EPREFIX}${REDMINE_DIR}"
 		elog "# cp config/database.yml.example config/database.yml"
 		elog "# \${EDITOR} config/database.yml"
+		elog "# chown redmine:redmine config/database.yml"
 		elog "# emerge --config \"=${CATEGORY}/${PF}\""
 		elog
 		elog "Installation notes are at official site"
@@ -150,5 +193,11 @@ pkg_config() {
 		RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake db:migrate || die
 		einfo "Insert default configuration data in database."
 		RAILS_ENV="${RAILS_ENV}" ${RUBY} -S rake redmine:load_default_data || die
+		einfo
+		einfo "If you use sqlite3. please do not forget to change the ownership of the sqlite files."
+		einfo
+		einfo "# cd \"${EPREFIX}${REDMINE_DIR}\""
+		einfo "# chown redmine:redmine db/ db/*.sqlite3"
+		einfo
 	fi
 }

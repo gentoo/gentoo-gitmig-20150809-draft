@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.3.1.ebuild,v 1.1 2012/02/26 13:58:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.3.3.ebuild,v 1.1 2012/04/25 15:02:00 matsuu Exp $
 
 EAPI="3"
 # ruby19: dev-ruby/rack has no ruby19
@@ -58,6 +58,9 @@ all_ruby_prepare() {
 	rm -r vendor/plugins/ruby-net-ldap-0.0.4 || die
 	rm -fr vendor/rails || die
 
+	# bug #406605
+	rm .gitignore .hgignore || die
+
 	# bug #399503
 	rm -r vendor/gems/rubytree-0.5.2 || die
 	epatch "${FILESDIR}/${PN}-rubytree-r8214.patch"
@@ -70,6 +73,8 @@ all_ruby_prepare() {
 all_ruby_install() {
 	dodoc doc/{CHANGELOG,INSTALL,README_FOR_APP,RUNNING_TESTS,UPGRADING} || die
 	rm -fr doc || die
+	dodoc README.rdoc || die
+	rm README.rdoc || die
 
 	keepdir /var/log/${PN} || die
 	dosym /var/log/${PN}/ "${REDMINE_DIR}/log" || die
@@ -80,13 +85,19 @@ all_ruby_install() {
 	keepdir "${REDMINE_DIR}/public/plugin_assets" || die
 
 	fowners -R redmine:redmine \
-		"${REDMINE_DIR}/config/environment.rb" \
+		"${REDMINE_DIR}/config" \
 		"${REDMINE_DIR}/files" \
 		"${REDMINE_DIR}/public/plugin_assets" \
 		"${REDMINE_DIR}/tmp" \
 		/var/log/${PN} || die
 	# for SCM
 	fowners redmine:redmine "${REDMINE_DIR}" || die
+	# bug #406605
+	fperms -R go-rwx \
+		"${REDMINE_DIR}/config" \
+		"${REDMINE_DIR}/files" \
+		"${REDMINE_DIR}/tmp" \
+		/var/log/${PN} || die
 
 	if use passenger ; then
 		has_apache

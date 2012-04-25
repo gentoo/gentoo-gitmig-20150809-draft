@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/redmine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.29 2012/03/12 16:41:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.30 2012/04/25 15:02:00 matsuu Exp $
+
+*redmine-1.4.1 (25 Apr 2012)
+*redmine-1.3.3 (25 Apr 2012)
+
+  25 Apr 2012; MATSUU Takuto <matsuu@gentoo.org> -redmine-1.3.0.ebuild,
+  -redmine-1.3.1.ebuild, +redmine-1.3.3.ebuild, +redmine-1.4.1.ebuild,
+  +files/redmine-1.4.1-bundler.patch:
+  Version bumped. Removed old versions.
 
 *redmine-1.3.2 (12 Mar 2012)
 
