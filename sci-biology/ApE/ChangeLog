@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ApE
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.7 2011/06/15 16:11:04 je_fro Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.8 2012/04/25 08:38:13 je_fro Exp $
+
+  25 Apr 2012; Jeff Gardner <je_fro@gentoo.org> ApE-2.0.7.ebuild:
+  Fix SRC_URI thanks to Horea Christian in bug #405367.
 
 *ApE-2.0.7 (15 Jun 2011)
 
