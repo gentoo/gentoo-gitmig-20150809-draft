@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.2.ebuild,v 1.2 2011/12/15 08:33:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.2.ebuild,v 1.3 2012/04/25 15:52:59 jlec Exp $
 
 EAPI=4
 
@@ -42,6 +42,8 @@ S="${WORKDIR}/RasMol-${PV}"
 
 src_prepare() {
 	cd src
+
+	epatch "${FILESDIR}"/${P}-glib.h.patch
 
 	if use amd64 || use amd64-linux; then
 		mv rasmol.h rasmol_amd64_save.h && \
