@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.52 2012/04/04 01:38:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.53 2012/04/25 15:41:40 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (25 Apr 2012)
+# sys-apps/systemd is not tested
+systemd
 
 # Jeroen Roovers <jer@gentoo.org> (4 Apr 2012)
 # media-video/vlc is not tested
