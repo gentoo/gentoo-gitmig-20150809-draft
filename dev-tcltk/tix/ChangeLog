@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.32 2011/03/11 17:47:16 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.33 2012/04/25 15:25:51 jer Exp $
+
+  25 Apr 2012; Jeroen Roovers <jer@gentoo.org> tix-8.4.3.ebuild:
+  Marked ~hppa (bug #413433).
 
   11 Mar 2011; Justin Lecher <jlec@gentoo.org> -tix-8.4.2-r1.ebuild,
   -tix-8.4.2-r2.ebuild:
