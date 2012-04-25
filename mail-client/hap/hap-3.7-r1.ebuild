@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/hap-3.7-r1.ebuild,v 1.5 2009/04/26 22:07:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/hap-3.7-r1.ebuild,v 1.6 2012/04/25 16:26:15 jlec Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ src_prepare() {
 		-e "s/^LDFLAGS=.*/LDFLAGS=${LDFLAGS}/" Makefile.in
 
 	# Rebuild the compilation framework
-	eautoreconf || die "autoconf failed"
+	eautoreconf
 }
 
 src_install() {
