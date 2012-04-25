@@ -1,6 +1,14 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.111 2012/04/25 02:43:16 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.112 2012/04/25 03:01:38 idl0r Exp $
+
+  25 Apr 2012; Christian Ruppert <idl0r@gentoo.org>
+  -nvidia-settings-185.18.36.ebuild, -nvidia-settings-190.53.ebuild,
+  -nvidia-settings-195.36.24.ebuild, -nvidia-settings-195.36.31.ebuild:
+  According to
+  ftp://download.nvidia.com/XFree86/Linux-x86/295.40/README/supportedchips.html
+  no devices has been dropped between 18x and 29x series drivers so removing
+  the old ebuilds should be safe.
 
   25 Apr 2012; Christian Ruppert <idl0r@gentoo.org>
   nvidia-settings-275.43.ebuild, nvidia-settings-290.10.ebuild,
