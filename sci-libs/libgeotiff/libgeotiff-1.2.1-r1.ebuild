@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.1-r1.ebuild,v 1.9 2009/09/23 20:08:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.1-r1.ebuild,v 1.10 2012/04/25 17:10:20 jlec Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND=">=media-libs/tiff-3.7.0
 
 src_compile() {
 	append-flags -fPIC
-	econf || die "econf failed"
+	econf
 	emake -j1 || die "emake failed"
 }
 

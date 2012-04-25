@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.10 2010/11/08 17:41:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.2.4.ebuild,v 1.11 2012/04/25 17:10:20 jlec Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 	emake -j1 || die "emake failed"
 
 	if use doc; then
