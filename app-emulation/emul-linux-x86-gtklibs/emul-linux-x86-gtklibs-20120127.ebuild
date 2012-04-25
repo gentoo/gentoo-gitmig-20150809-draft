@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20120127.ebuild,v 1.7 2012/04/25 09:38:01 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20120127.ebuild,v 1.8 2012/04/25 10:02:24 lxnay Exp $
 
 EAPI="4"
 
@@ -19,12 +19,44 @@ my_gdk_pixbuf_query_loaders() {
 	# causes segfault if set
 	unset __GL_NO_DSO_FINALIZER
 
-	tmp_file=$(mktemp --suffix=gdk_pixbuf_ebuild)
-	# be atomic!
+	local tmp_file=$(mktemp --suffix=tmp.XXXXXXXXXXgdk_pixbuf_queryloaders)
+
 	if gdk-pixbuf-query-loaders32 > "${tmp_file}"; then
 		cat "${tmp_file}" > "${ROOT}usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders.cache"
 	else
 		ewarn "Warning, gdk-pixbuf-query-loaders32 failed."
+	fi
+	rm "${tmp_file}"
+}
+
+my_pango_querymodules() {
+	PANGO_CONFDIR="/etc/pango/i686-pc-linux-gnu"
+	einfo "Generating pango modules listing..."
+
+	mkdir -p "${PANGO_CONFDIR}"
+	local pango_conf="${PANGO_CONFDIR}/pango.modules"
+	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXpango_querymodules)
+
+	if pango-querymodules32 > "${tmp_file}"; then
+		cat "${tmp_file}" > "${pango_conf}"
+	else
+		ewarn "Cannot update pango.modules, file generation failed"
+	fi
+	rm "${tmp_file}"
+}
+
+my_gtk_query_immodules() {
+	GTK2_CONFDIR="/etc/gtk-2.0/i686-pc-linux-gnu"
+	einfo "Generating gtk+ immodules/gdk-pixbuf loaders listing..."
+
+	mkdir -p "${GTK2_CONFDIR}"
+	local gtk_conf="${ROOT}${GTK2_CONFDIR}/gtk.immodules"
+	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgtk_query_immodules)
+
+	if gtk-query-immodules-2.0-32 > "${tmp_file}"; then
+		cat "${tmp_file}" > "${gtk_conf}"
+	else
+		ewarn "Cannot update gtk.immodules, file generation failed"
 	fi
 	rm "${tmp_file}"
 }
@@ -48,30 +80,12 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	PANGO_CONFDIR="/etc/pango/i686-pc-linux-gnu"
-	einfo "Generating pango modules listing..."
-
-	mkdir -p "${PANGO_CONFDIR}"
-	local pango_conf="${PANGO_CONFDIR}/pango.modules"
-	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgdk_pixbuf_ebuild)
-
-	# be atomic!
-	pango-querymodules32 > "${tmp_file}"
-	if [ "${?}" = "0" ]; then
-		cat "${tmp_file}" > "${pango_conf}" || die
-	else
-		ewarn "Cannot update pango.modules, file generation failed"
-	fi
-	rm "${tmp_file}"
-
-	GTK2_CONFDIR="/etc/gtk-2.0/i686-pc-linux-gnu"
-	einfo "Generating gtk+ immodules/gdk-pixbuf loaders listing..."
-	mkdir -p ${GTK2_CONFDIR}
-	gtk-query-immodules-2.0-32 > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
+	my_pango_querymodules
+	my_gtk_query_immodules
 	my_gdk_pixbuf_query_loaders
 
 	# gdk-pixbuf.loaders should be in their CHOST directories respectively.
-	if [[ -e ${ROOT}/etc/gtk-2.0/gdk-pixbuf.loaders ]] ; then
+	if [[ -e "${ROOT}/etc/gtk-2.0/gdk-pixbuf.loaders" ]] ; then
 		ewarn
 		ewarn "File /etc/gtk-2.0/gdk-pixbuf.loaders shouldn't be present on"
 		ewarn "multilib systems, please remove it by hand."

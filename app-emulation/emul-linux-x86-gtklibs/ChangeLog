@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.100 2012/04/25 09:38:01 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.101 2012/04/25 10:02:24 lxnay Exp $
+
+  25 Apr 2012; Fabio Erculiani <lxnay@gentoo.org>
+  emul-linux-x86-gtklibs-20110928.ebuild,
+  emul-linux-x86-gtklibs-20120127.ebuild:
+  fix gtk/pango/gdk-pixbuf query tools usage, be atomic, be POSIX
 
   25 Apr 2012; Fabio Erculiani <lxnay@gentoo.org>
   emul-linux-x86-gtklibs-20110928.ebuild,
