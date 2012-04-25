@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.27091-r2.ebuild,v 1.1 2011/12/30 09:49:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.27091-r2.ebuild,v 1.2 2012/04/25 15:20:39 jlec Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs qt4-r2
@@ -53,6 +53,9 @@ src_prepare() {
 			-e "/TARGET/s:dbusextension:LastFmDbusExtension:" \
 			"${S}"/src/dbus/dbusextension.pro
 	fi
+
+	# only glib.h can be included directly in >glib-2.32
+	epatch "${FILESDIR}"/${P}-glib.h.patch
 }
 
 src_configure() {

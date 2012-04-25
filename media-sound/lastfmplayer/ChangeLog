@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lastfmplayer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.66 2011/12/30 09:49:31 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.67 2012/04/25 15:20:39 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org>
+  lastfmplayer-1.5.4.27091-r2.ebuild,
+  +files/lastfmplayer-1.5.4.27091-glib.h.patch:
+  Add fix for >glib-2.32
 
 *lastfmplayer-1.5.4.27091-r2 (30 Dec 2011)
 
