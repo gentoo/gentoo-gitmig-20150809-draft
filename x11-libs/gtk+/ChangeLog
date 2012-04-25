@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.581 2012/04/19 20:45:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.582 2012/04/25 21:09:21 maekke Exp $
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> gtk+-3.2.4-r1.ebuild:
+  arm stable, bug #410611
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> gtk+-2.24.10-r1.ebuild,
   gtk+-3.2.4-r1.ebuild:

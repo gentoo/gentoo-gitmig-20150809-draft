@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.58 2012/04/24 04:04:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.59 2012/04/25 21:06:17 maekke Exp $
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> gdk-pixbuf-2.24.1.ebuild:
+  arm stable, bug #410611
 
   24 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gdk-pixbuf-2.24.0-r1.ebuild, gdk-pixbuf-2.24.1.ebuild,
