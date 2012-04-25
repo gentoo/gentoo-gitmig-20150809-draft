@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.23-r1.ebuild,v 1.1 2012/01/01 00:03:46 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.23-r1.ebuild,v 1.2 2012/04/25 16:03:58 jlec Exp $
 
 EAPI="2"
 
@@ -100,7 +100,7 @@ src_prepare() {
 	sed -i -e 's|\(rst2html\)|\1.py|g' doc/Makefile.am || \
 		die "sed doc/Makefile.am failed"
 
-	eautoreconf || die
+	eautoreconf
 }
 
 src_configure() {
@@ -118,8 +118,7 @@ src_configure() {
 		$(use_with ssl openssl) \
 		$(use_with webdav webdav-props) \
 		$(use_with webdav webdav-locks) \
-		$(use_with xattr attr) \
-		|| die "econf failed"
+		$(use_with xattr attr)
 }
 
 src_compile() {
