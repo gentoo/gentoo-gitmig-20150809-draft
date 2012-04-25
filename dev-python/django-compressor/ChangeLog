@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/django-compressor
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/ChangeLog,v 1.1 2012/04/25 12:37:22 tampakrap Exp $
+
+*django-compressor-1.1.2 (25 Apr 2012)
+
+  25 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  +django-compressor-1.1.2.ebuild, +metadata.xml:
+  Initial commit, ebuild by idella4
+
