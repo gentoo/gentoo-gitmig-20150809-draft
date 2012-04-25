@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r2.ebuild,v 1.6 2011/06/21 15:17:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r2.ebuild,v 1.7 2012/04/25 17:10:07 jlec Exp $
 
 EAPI="3"
 
@@ -120,7 +120,7 @@ src_configure() {
 		make.inc.example > make.inc \
 		|| die "Failed to set up make.inc"
 	cd "${S_LAPACK}"
-	econf || die "Failed to configure reference lapack lib"
+	econf
 }
 
 src_compile() {

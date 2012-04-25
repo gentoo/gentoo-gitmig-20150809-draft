@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.8 2011/06/21 15:17:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.9 2012/04/25 17:10:07 jlec Exp $
 
 inherit eutils flag-o-matic fortran-2 toolchain-funcs autotools versionator
 
@@ -120,7 +120,7 @@ src_compile() {
 	# build rest of lapack
 	S_LAPACK="${WORKDIR}"/${L_PN}-lite-${L_PV}
 	cd "${S_LAPACK}"
-	econf || die "Failed to configure reference lapack lib"
+	econf
 	emake || die "Failed to make reference lapack lib"
 
 	cd "${S_LAPACK}"/SRC
