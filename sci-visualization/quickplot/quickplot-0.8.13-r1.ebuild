@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.13-r1.ebuild,v 1.6 2012/01/29 13:38:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.13-r1.ebuild,v 1.7 2012/04/25 16:56:42 jlec Exp $
 
-EAPI="1"
+EAPI=1
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_with sndfile libsndfile) || die "econf step failed."
+	econf $(use_with sndfile libsndfile)
 	emake htmldir=/usr/share/doc/${PF}/html || die "emake step failed."
 }
 
