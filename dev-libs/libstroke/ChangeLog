@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libstroke
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.25 2010/12/01 22:09:17 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.26 2012/04/25 16:24:18 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> libstroke-0.5.1.ebuild:
+  Drop unnessecary die
 
   01 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> libstroke-0.5.1.ebuild,
   +files/libstroke-0.5.1-autotools.patch:

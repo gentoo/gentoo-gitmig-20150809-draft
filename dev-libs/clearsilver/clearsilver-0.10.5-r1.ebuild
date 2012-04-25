@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.5 2012/03/16 02:32:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.6 2012/04/25 16:24:15 jlec Exp $
 
 # Please note: apache, java, mono and ruby support disabled for now.
 # Fill a bug if you need it.
@@ -44,7 +44,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-libdir.patch
 	sed -i -e "s:GENTOO_LIBDIR:$(get_libdir):" configure.in
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 
 	# Fix for Gentoo/Freebsd
 	[[ "${ARCH}" == FreeBSD ]] && touch ${S}/features.h ${S}/cgi/features.h

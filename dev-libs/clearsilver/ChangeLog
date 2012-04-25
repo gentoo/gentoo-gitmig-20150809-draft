@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.42 2012/03/16 02:32:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.43 2012/04/25 16:24:15 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> clearsilver-0.10.5-r1.ebuild:
+  Drop unnessecary die
 
   16 Mar 2012; Mike Gilbert <floppym@gentoo.org> clearsilver-0.10.5-r1.ebuild:
   Python-related improvements by Arfrever. Bug 312179.
