@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.223 2012/04/24 13:07:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.224 2012/04/25 17:43:50 grobian Exp $
+
+  25 Apr 2012; Fabian Groffen <grobian@gentoo.org> qt4-build.eclass:
+  fix_includes: create relative symlinks for header directories, such that
+  further additions by ebuilds in src_install don't fail
 
   24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-r2.eclass:
   Oops didn't commit the dir supporting version. This replaces plain doins with
