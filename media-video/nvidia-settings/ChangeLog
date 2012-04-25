@@ -1,6 +1,17 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.112 2012/04/25 03:01:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.113 2012/04/25 04:27:06 idl0r Exp $
+
+*nvidia-settings-173.14.31 (25 Apr 2012)
+
+  25 Apr 2012; Christian Ruppert <idl0r@gentoo.org>
+  -nvidia-settings-173.14.30.ebuild, +nvidia-settings-173.14.31.ebuild,
+  nvidia-settings-260.19.29.ebuild, nvidia-settings-290.10.ebuild,
+  nvidia-settings-295.20.ebuild, nvidia-settings-295.40.ebuild,
+  +files/nvidia-settings-173.14.31-Makefile.patch,
+  -files/nvidia-settings-190.53-xf86vidmodeproto.patch,
+  -files/icon/nvidia-settings.desktop, -files/icon/nvidia-settings.png:
+  Version bump and cleanup. Should also fix bug 321399 and bug 290432
 
   25 Apr 2012; Christian Ruppert <idl0r@gentoo.org>
   -nvidia-settings-185.18.36.ebuild, -nvidia-settings-190.53.ebuild,
