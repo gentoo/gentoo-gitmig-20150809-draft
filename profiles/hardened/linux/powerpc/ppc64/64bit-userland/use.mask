@@ -3,3 +3,8 @@ audit
 
 # Mirror mask from nonhardened 64ul on app-admin/hddtemp
 hddtemp
+
+# Mirror mask from nonhardened 64ul on media-plugins/frei0r-plugins
+# Kacper Kowalik <xarthisius@gentoo.org> (10 Aug 2011)
+# Masking frei0r wrt bug #365451
+frei0r
