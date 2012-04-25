@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.101 2012/04/25 10:02:24 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.102 2012/04/25 10:35:55 lxnay Exp $
+
+  25 Apr 2012; Fabio Erculiani <lxnay@gentoo.org>
+  emul-linux-x86-gtklibs-20110928.ebuild,
+  emul-linux-x86-gtklibs-20120127.ebuild:
+  check if mktemp returned the expected path
 
   25 Apr 2012; Fabio Erculiani <lxnay@gentoo.org>
   emul-linux-x86-gtklibs-20110928.ebuild,

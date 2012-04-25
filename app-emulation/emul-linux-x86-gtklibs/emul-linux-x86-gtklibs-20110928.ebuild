@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110928.ebuild,v 1.10 2012/04/25 10:02:24 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110928.ebuild,v 1.11 2012/04/25 10:35:55 lxnay Exp $
 
 EAPI="4"
 
@@ -20,6 +20,10 @@ my_gdk_pixbuf_query_loaders() {
 	unset __GL_NO_DSO_FINALIZER
 
 	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgdk_pixbuf_query_loaders)
+	if [ -z "${tmp_file}" ]; then
+		ewarn "Cannot create temporary file"
+		return 1
+	fi
 
 	if gdk-pixbuf-query-loaders32 > "${tmp_file}"; then
 		cat "${tmp_file}" > "${ROOT}usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders.cache"
@@ -36,6 +40,10 @@ my_pango_querymodules() {
 	mkdir -p "${PANGO_CONFDIR}"
 	local pango_conf="${PANGO_CONFDIR}/pango.modules"
 	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXpango_querymodules)
+	if [ -z "${tmp_file}" ]; then
+		ewarn "Cannot create temporary file"
+		return 1
+	fi
 
 	if pango-querymodules32 > "${tmp_file}"; then
 		cat "${tmp_file}" > "${pango_conf}"
@@ -52,6 +60,10 @@ my_gtk_query_immodules() {
 	mkdir -p "${GTK2_CONFDIR}"
 	local gtk_conf="${ROOT}${GTK2_CONFDIR}/gtk.immodules"
 	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgtk_query_immodules)
+	if [ -z "${tmp_file}" ]; then
+		ewarn "Cannot create temporary file"
+		return 1
+	fi
 
 	if gtk-query-immodules-2.0-32 > "${tmp_file}"; then
 		cat "${tmp_file}" > "${gtk_conf}"
