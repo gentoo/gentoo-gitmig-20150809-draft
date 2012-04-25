@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Memoize
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.14 2012/02/02 19:38:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.15 2012/04/25 16:16:57 tove Exp $
+
+*perl-Memoize-1.30.0 (25 Apr 2012)
+
+  25 Apr 2012; Torsten Veller <tove@gentoo.org> +perl-Memoize-1.30.0.ebuild:
+  Version bump
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org> perl-Memoize-1.20.0-r1.ebuild:
   Marking perl-Memoize-1.20.0-r1 ppc for bug 394041
