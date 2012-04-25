@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.8 2012/04/25 03:02:38 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.9 2012/04/25 23:11:29 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -32,9 +32,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc test"
 
-CDEPEND=">=dev-python/docutils-0.7
+CDEPEND=">=dev-python/docutils-0.8
 	>=dev-python/flask-0.7
-	>=dev-python/flask-babel-0.6
+	>=dev-python/flask-babel-0.7
 	>=dev-python/flask-script-0.3
 	>=dev-python/frozen-flask-0.7
 	>=dev-python/jinja-2.5.2
