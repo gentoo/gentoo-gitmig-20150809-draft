@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.1.ebuild,v 1.3 2012/03/17 21:30:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.1.ebuild,v 1.4 2012/04/25 16:16:03 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -49,7 +49,7 @@ src_prepare() {
 			-i dropbox.in || die
 	# us system rst2man
 	epatch "${FILESDIR}"/${PN}-0.7.0-system-rst2man.patch
-	eautoreconf
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_install () {
