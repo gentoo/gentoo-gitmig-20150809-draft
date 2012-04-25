@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/regina-rexx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.24 2009/07/23 23:27:45 vostorga Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.25 2012/04/25 16:23:40 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> regina-rexx-3.3.ebuild,
+  regina-rexx-3.4.ebuild:
+  Drop unnessecary die
 
   23 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> regina-rexx-3.3.ebuild,
   regina-rexx-3.4.ebuild:

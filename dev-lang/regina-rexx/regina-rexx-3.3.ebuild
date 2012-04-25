@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.16 2009/07/23 23:27:45 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.3.ebuild,v 1.17 2012/04/25 16:23:40 jlec Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -23,11 +23,11 @@ S=${WORKDIR}/Regina-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	eautoreconf || die "eautoreconf problem"
+	eautoreconf
 }
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 	sed -i \
 		-e 's|-$(INSTALL) -m 755 -c ./rxstack.init.d $(STARTUPDIR)/rxstack||' \
 		-e "s|/usr/share/regina|${D}/usr/share/regina|" \
