@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/proj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.33 2012/02/06 18:51:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.34 2012/04/25 04:41:11 bicatali Exp $
+
+*proj-4.8.0 (25 Apr 2012)
+
+  25 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +proj-4.8.0.ebuild:
+  Version bump
 
   06 Feb 2012; Justin Lecher <jlec@gentoo.org> proj-4.7.0-r1.ebuild:
   Inherit eutils for epatch, #402435
