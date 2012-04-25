@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/tophat-1.4.1.ebuild,v 1.1 2012/02/04 23:41:54 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/tophat-1.4.1.ebuild,v 1.2 2012/04/25 16:39:53 jlec Exp $
 
 EAPI=4
 
@@ -28,10 +28,5 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_with bam) || die
-}
-
-src_install() {
-	einstall || die
-	dodoc AUTHORS NEWS THANKS
+		$(use_with bam)
 }

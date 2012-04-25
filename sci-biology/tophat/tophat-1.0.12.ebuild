@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/tophat-1.0.12.ebuild,v 1.4 2010/04/05 12:08:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/tophat-1.0.12.ebuild,v 1.5 2012/04/25 16:39:53 jlec Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ src_prepare() {
 	sed -i -e 's/\$(top_builddir)\/src\///g' src/Makefile.am || die
 	# remove broken arch-dependent CFLAGS setting
 	perl -i -ne 'print unless /case "\${host_cpu}-\${host_os}" in/../^esac/' configure.ac || die
-	eautoreconf || die
+	eautoreconf
 }
 
 src_install() {
