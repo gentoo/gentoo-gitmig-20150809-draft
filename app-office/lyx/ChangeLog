@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.259 2012/04/22 14:47:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.260 2012/04/25 18:04:05 grobian Exp $
+
+  25 Apr 2012; Fabian Groffen <grobian@gentoo.org> lyx-2.0.3.ebuild:
+  Marked ~x{86,64}-macos, bug #392195
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> lyx-2.0.3.ebuild:
   x86 stable, bug #411941
