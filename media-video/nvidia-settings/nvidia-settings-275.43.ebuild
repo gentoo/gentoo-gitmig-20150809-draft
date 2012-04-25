@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-275.43.ebuild,v 1.5 2012/04/18 22:21:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-275.43.ebuild,v 1.6 2012/04/25 02:43:16 idl0r Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ COMMON_DEPEND="x11-libs/libX11
 	x11-libs/libXrandr
 	dev-libs/glib:2"
 
-RDEPEND="x11-drivers/nvidia-drivers
+RDEPEND="=x11-drivers/nvidia-drivers-2*
 	${COMMON_DEPEND}"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -46,7 +46,7 @@ src_compile() {
 	emake -C src/libXNVCtrl/ CC="$(tc-getCC)" RANLIB="$(tc-getRANLIB)" libXNVCtrl.a
 
 	einfo "Building nvidia-settings..."
-	emake  CC="$(tc-getCC)" LD="$(tc-getLD)" STRIP_CMD=/bin/true
+	emake  CC="$(tc-getCC)" LD="$(tc-getLD)" STRIP_CMD="$(type -P true)" NV_VERBOSE=1
 }
 
 src_install() {
