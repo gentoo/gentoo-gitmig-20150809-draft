@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.7.4.ebuild,v 1.3 2012/03/13 04:15:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.7.4.ebuild,v 1.4 2012/04/25 17:51:13 jlec Exp $
 
 EAPI=4
 
@@ -68,7 +68,7 @@ src_prepare() {
 		s:\(#define\) \(CHOLMOD_CONFIG_H\)\n:\1 \2\n\1 NPARTITION 1\n:}' \
 		Include/cholmod_config.h
 	fi
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -78,7 +78,7 @@ src_configure() {
 		blas_libs=$(pkg-config --libs blas)
 		lapack_libs=$(pkg-config --libs lapack)
 	fi
-	myeconfargs+=(
+	local myeconfargs+=(
 		--with-blas="${blas_libs}"
 		--with-lapack="${lapack_libs}"
 		$(use_enable supernodal mod-supernodal)

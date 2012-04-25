@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.15 2010/07/09 10:16:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.16 2012/04/25 17:51:13 jlec Exp $
 
 inherit autotools eutils
 
@@ -8,7 +8,8 @@ MY_PN=CHOLMOD
 
 DESCRIPTION="Sparse Cholesky factorization and update/downdate library"
 HOMEPAGE="http://www.cise.ufl.edu/research/sparse/cholmod"
-SRC_URI="http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz
+SRC_URI="
+	http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz
 	mirror://gentoo/${P}-autotools.patch.bz2"
 
 LICENSE="LGPL-2.1 GPL-2"
@@ -16,16 +17,18 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="doc metis minimal supernodal"
 
-RDEPEND="supernodal? ( virtual/lapack )
+RDEPEND="
 	sci-libs/amd
 	sci-libs/colamd
-	metis? ( sci-libs/camd
-			 sci-libs/ccolamd
-			 || ( sci-libs/metis sci-libs/parmetis ) )"
+	metis? (
+		sci-libs/camd
+		 sci-libs/ccolamd
+		 || ( sci-libs/metis sci-libs/parmetis ) )
+	supernodal? ( virtual/lapack )"
 
 DEPEND="${RDEPEND}
-	supernodal? ( dev-util/pkgconfig )
-	metis? ( dev-util/pkgconfig )"
+	metis? ( dev-util/pkgconfig )
+	supernodal? ( dev-util/pkgconfig )"
 
 S="${WORKDIR}/${MY_PN}"
 
@@ -70,8 +73,7 @@ src_compile() {
 		$(use_enable supernodal mod-supernodal) \
 		$(use_enable !minimal mod-modify) \
 		$(use_enable !minimal mod-matrixops) \
-		$(use_enable metis mod-partition) \
-		|| die "econf failed"
+		$(use_enable metis mod-partition)
 	emake || die "emake failed"
 }
 
