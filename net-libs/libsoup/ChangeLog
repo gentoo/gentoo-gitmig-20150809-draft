@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.277 2012/04/20 06:36:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.278 2012/04/25 20:43:47 maekke Exp $
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> libsoup-2.36.1-r1.ebuild:
+  arm stable, bug #410611
 
 *libsoup-2.38.1 (20 Apr 2012)
 
