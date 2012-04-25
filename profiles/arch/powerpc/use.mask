@@ -191,3 +191,7 @@ d3d
 # Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
 # mask wayland since dev-libs/wayland isn't keyworded
 wayland
+
+# Kacper Kowalik <xarthisius@gentoo.org> (25 Apr 2012)
+# sys-apps/systemd is not tested on ppc*
+systemd
