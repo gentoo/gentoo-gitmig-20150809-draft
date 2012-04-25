@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/evilvte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.30 2012/01/04 05:36:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.31 2012/04/25 21:12:18 jer Exp $
+
+*evilvte-0.5.1 (25 Apr 2012)
+
+  25 Apr 2012; Jeroen Roovers <jer@gentoo.org> +evilvte-0.5.1.ebuild:
+  Version bump by Georgi Hristozov (bug #413565).
 
   04 Jan 2012; Mike Frysinger <vapier@gentoo.org> evilvte-0.4.9.ebuild,
   evilvte-0.5.0.ebuild:
