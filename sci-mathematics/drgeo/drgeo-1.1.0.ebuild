@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.8 2011/03/02 13:55:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.9 2012/04/25 18:47:43 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils
 
@@ -11,12 +11,13 @@ DOCV="1.5"
 DOC="${DOCN}-${DOCV}"
 
 DESCRIPTION="Interactive geometry package"
-LICENSE="GPL-2"
 HOMEPAGE="http://www.ofset.org/drgeo"
-SRC_URI="mirror://sourceforge/ofset/${P}.tar.gz
+SRC_URI="
+	mirror://sourceforge/ofset/${P}.tar.gz
 	mirror://sourceforge/ofset/${DOC}.tar.gz"
 
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="nls"
 
@@ -28,7 +29,6 @@ RDEPEND="
 		>=dev-scheme/guile-1.8[deprecated]
 		=dev-scheme/guile-1.6*
 	)"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -42,17 +42,15 @@ src_configure() {
 	# yet in portage. Fortunately HTML is already compiled for us in the
 	# tarball and so can be installed. Just create the make install target.
 	cd "${WORKDIR}"/${DOC}
-	econf || die "docs econf failed."
+	econf
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed."
-	dodoc AUTHORS ChangeLog README NEWS TODO || die
+	default
 	if use nls; then
 		cd "${WORKDIR}"/${DOC}
 	else
 		cd "${WORKDIR}"/${DOC}/c
 	fi
-	emake install DESTDIR="${D}" || die "emake docs installation failed"
-
+	emake install DESTDIR="${D}"
 }
