@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.13 2011/07/29 12:52:15 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.14 2012/04/25 19:25:24 maekke Exp $
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> Test-Inter-1.30.0.ebuild:
+  arm stable, bug #413009
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -Test-Inter-1.01.ebuild,
   -Test-Inter-1.20.0.ebuild:
