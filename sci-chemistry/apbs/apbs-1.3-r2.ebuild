@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r2.ebuild,v 1.2 2012/01/05 18:51:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r2.ebuild,v 1.3 2012/04/25 16:09:31 jlec Exp $
 
 EAPI=4
 
@@ -72,7 +72,7 @@ src_prepare() {
 	sed \
 		-e 's:noinst_PROGRAMS:bin_PROGRAMS:g' \
 		-i tools/*/Makefile.am || die
-	eautoreconf
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_configure() {
