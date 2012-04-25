@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.7 2011/10/05 18:44:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.8 2012/04/25 17:08:40 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -83,7 +83,7 @@ src_compile() {
 	econf `use_enable minisat` \
 		--enable-sa \
 		--enable-sa-cpp \
-		--enable-psl || die "econf failed"
+		--enable-psl
 	emake || die "emake failed"
 
 	VARTEXFONTS="${T}"/fonts emake docs
