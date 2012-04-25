@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.1 2011/06/19 15:55:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.2 2012/04/25 06:58:17 angelos Exp $
 
 EAPI=4
 GNOME2_LA_PUNT=yes
@@ -36,6 +36,10 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS=( AUTHORS )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-single-includes.patch
+}
 
 src_configure() {
 	econf \
