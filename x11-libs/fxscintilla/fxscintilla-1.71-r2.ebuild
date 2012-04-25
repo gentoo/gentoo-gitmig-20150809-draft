@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r2.ebuild,v 1.8 2010/06/25 16:57:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r2.ebuild,v 1.9 2012/04/25 16:43:13 jlec Exp $
 
 inherit autotools eutils multilib
 
@@ -24,7 +24,7 @@ src_unpack() {
 		"${FILESDIR}"/1.71-fox-SLOT.patch
 
 	touch NEWS AUTHORS
-	eautoreconf || die "autoreconf error"
+	eautoreconf
 }
 
 src_compile () {
