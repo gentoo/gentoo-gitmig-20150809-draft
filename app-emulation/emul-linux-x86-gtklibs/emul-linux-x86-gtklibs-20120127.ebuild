@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20120127.ebuild,v 1.4 2012/04/25 06:34:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20120127.ebuild,v 1.5 2012/04/25 09:32:54 lxnay Exp $
 
 EAPI="4"
 
@@ -53,15 +53,12 @@ pkg_postinst() {
 
 	mkdir -p "${PANGO_CONFDIR}"
 	pango_conf="${PANGO_CONFDIR}/pango.modules"
-	tmp_pango_conf="${PANGO_CONFDIR}/._tmp_ebuild_pango.modules"
 
 	tmp_file=$(mktemp -t tmp.XXXXXXXXXXgdk_pixbuf_ebuild)
 	# be atomic!
 	pango-querymodules32 > "${tmp_file}"
 	if [ "${?}" = "0" ]; then
-		cp -p "${pango_conf}" "${tmp_pango_conf}" && \
-			cat "${tmp_file}" > "${tmp_pango_conf}" && \
-			mv "${tmp_pango_conf}" "${pango_conf}"
+		cat "${tmp_file}" > "${pango_conf}"
 	fi
 	if [ "${?}" != "0" ]; then
 		ewarn "Cannot update pango.modules, file generation failed"

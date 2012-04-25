@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.97 2012/04/25 06:34:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.98 2012/04/25 09:32:54 lxnay Exp $
+
+  25 Apr 2012; Fabio Erculiani <lxnay@gentoo.org>
+  emul-linux-x86-gtklibs-20110928.ebuild,
+  emul-linux-x86-gtklibs-20120127.ebuild:
+  simplify pango-querymodules32 usage
 
   25 Apr 2012; Fabio Erculiani <lxnay@gentoo.org>
   emul-linux-x86-gtklibs-20110928.ebuild,
