@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.337 2012/04/24 14:04:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.338 2012/04/25 17:16:27 jer Exp $
+
+  25 Apr 2012; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-173.14.31.ebuild:
+  Install nvidia-settings like the 96 driver does now that the matching
+  nvidia-settings ebuild is gone.
 
   24 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   nvidia-drivers-295.40.ebuild:
