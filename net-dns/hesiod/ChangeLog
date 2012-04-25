@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/hesiod
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.36 2010/07/11 11:12:27 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.37 2012/04/25 16:26:58 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> hesiod-3.0.2-r2.ebuild:
+  Drop unnessecary die
 
 *hesiod-3.1.0 (11 Jul 2010)
 
