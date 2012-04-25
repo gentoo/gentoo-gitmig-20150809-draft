@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libexttextcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/ChangeLog,v 1.5 2012/04/22 14:20:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/ChangeLog,v 1.6 2012/04/25 20:39:29 scarabeus Exp $
+
+  25 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libexttextcat-3.2.0.ebuild:
+  PPC stable wrt bug#411449.
 
   22 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libexttextcat-3.2.0.ebuild:
