@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.17 2011/12/16 11:14:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.18 2012/04/25 16:33:13 jlec Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -49,7 +49,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-undefineddebug.patch"
 	epatch "${FILESDIR}/${P}-libtool2.2.patch"
 
-	eautoreconf || die "Reconfiguring autotools failed!"
+	eautoreconf
 }
 
 src_compile() {
@@ -60,8 +60,7 @@ src_compile() {
 		--enable-ssl \
 		$(use ipv6 && echo --enable-ipv6) \
 		$(use_with mysql) \
-		$(use_with postgres postgresql) \
-		|| die "econf failed"
+		$(use_with postgres postgresql)
 
 	emake || die "emake failed"
 }

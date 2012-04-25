@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.20 2010/06/17 21:50:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.21 2012/04/25 16:33:13 jlec Exp $
 
 inherit eutils
 
@@ -25,19 +25,15 @@ DEPEND="${RDEPEND}
 	!net-im/jabberd2"
 
 pkg_setup() {
-
 	if use ipv6; then
 		ewarn "Without full ipv6 support, jabberd will show the error:"
 		ewarn '   "mio unable to listen"'
 		ewarn "To fix this, emerge jabberd without the ipv6 USE flag."
 	fi
-
 }
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd "${S}"
 
 	# Resolves bug #147342
@@ -49,11 +45,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-xdb_sql.c-rev1211.patch"
 	epatch "${FILESDIR}/${P}-genhash.c-rev1253.patch"
 	epatch "${FILESDIR}/${P}-crypt.patch"
-
 }
 
 src_compile() {
-
 	unset LC_ALL LC_CTYPE
 
 	# Broken configure script - can't use "use_enable"
@@ -66,16 +60,13 @@ src_compile() {
 		--sysconfdir=/etc/jabber \
 		${myconf} \
 		$(use_with mysql) \
-		$(use_with postgres postgresql) \
-		|| die "econf failed"
+		$(use_with postgres postgresql)
 
 	# Broken parallel build
 	emake -j1 || die "emake failed"
-
 }
 
 src_install() {
-
 	make DESTDIR="${D}" install || die "make install failed"
 
 	newinitd "${FILESDIR}"/${P}.init jabber || die "newinitd failed"
@@ -92,11 +83,9 @@ src_install() {
 		-e 's,jabber.pid,jabberd14.pid,g' \
 		"${D}"/etc/jabber/jabberd.xml{,.dist} \
 		|| die "sed failed"
-
 }
 
 pkg_postinst() {
-
 	echo
 	elog 'The various IM transports for jabber are now separate packages,'
 	elog 'which you will need to install separately if you want them:'
@@ -112,5 +101,4 @@ pkg_postinst() {
 	ewarn '   Configure your server in /etc/jabber/jabberd.xml'
 	echo
 	ebeep
-
 }
