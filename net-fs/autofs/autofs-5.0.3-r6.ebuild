@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r6.ebuild,v 1.9 2010/07/21 22:12:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r6.ebuild,v 1.10 2012/04/25 16:29:19 jlec Exp $
 
 inherit eutils multilib autotools
 
@@ -100,7 +100,7 @@ src_unpack() {
 	# as the former is a lame header for the latter (bug #157968)
 	sed -i 's@nfs/nfs.h@linux/nfs.h@' include/rpc_subs.h
 
-	eautoreconf || die "Autoconf failed"
+	eautoreconf
 }
 
 src_compile() {
@@ -108,8 +108,7 @@ src_compile() {
 	econf \
 		$(use_with ldap openldap) \
 		$(use_with sasl) \
-		--enable-ignore-busy \
-		|| die "configure failed"
+		--enable-ignore-busy
 
 	emake DONTSTRIP=1 || die "make failed"
 }

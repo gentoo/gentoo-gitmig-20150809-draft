@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r9.ebuild,v 1.2 2009/09/23 18:35:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r9.ebuild,v 1.3 2012/04/25 16:29:19 jlec Exp $
 
 inherit eutils multilib
 
@@ -40,14 +40,14 @@ src_unpack() {
 
 	cd "${S}"/lib
 	sed -i '/^listmount.o:/s,$, mount.h,g' Makefile \
-		|| die "Failed to fix dependancies"
+		|| die "Failed to fix dependencies"
 }
 
 src_compile() {
 	local myconf
 	use ldap || myconf="--without-openldap"
 
-	econf ${myconf} || die
+	econf ${myconf}
 	sed -i -e '/^\(CFLAGS\|CXXFLAGS\|LDFLAGS\)[[:space:]]*=/d' Makefile.rules || die "Failed to remove (C|CXX|LD)FLAGS"
 	# fixes segfaults on startup on amd64
 	use amd64 && CFLAGS="${CFLAGS} -DLDAP_DEPRECATED"
