@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-9999.ebuild,v 1.4 2012/03/13 22:15:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-9999.ebuild,v 1.5 2012/04/25 07:04:22 angelos Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic linux-info multilib systemd git-2
@@ -30,7 +30,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( dev-libs/libcdio
+	cdio? ( dev-libs/libcdio[-minimal]
 		virtual/cdrtools )
 	cue? ( media-libs/libcue )
 	curl? ( net-misc/curl )

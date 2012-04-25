@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.278 2012/03/13 22:15:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.279 2012/04/25 07:04:22 angelos Exp $
+
+  25 Apr 2012; Christoph Mende <angelos@gentoo.org> mpd-0.16.2.ebuild,
+  mpd-0.16.5.ebuild, mpd-0.16.6.ebuild, mpd-0.16.7.ebuild, mpd-9999.ebuild:
+  Depend on cdio[-minimal] (bug #407759)
 
   13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> mpd-0.16.7.ebuild,
   mpd-9999.ebuild:
