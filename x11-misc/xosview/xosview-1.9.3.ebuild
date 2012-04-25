@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.9.2.ebuild,v 1.4 2012/04/25 17:59:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.9.3.ebuild,v 1.1 2012/04/25 17:59:21 jer Exp $
 
 EAPI=4
 
-inherit autotools eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="X11 operating system viewer"
 HOMEPAGE="http://www.pogo.org.uk/~mark/xosview/"
@@ -25,15 +25,12 @@ DEPEND="${COMMON_DEPS}
 
 src_prepare() {
 	sed -e 's:lib/X11/app:share/X11/app:g' \
-		-i Xrm.cc config/Makefile.top.in || die
-	sed -e 's:$(CFLAGS)::g' \
-		-e 's:@EXTRA_CXXFLAGS@::g' \
-		-i config/Makefile.config.in || die
-	epatch "${FILESDIR}"/${P}-emptyxpaths.patch
-	pushd config &> /dev/null
-	eautoreconf
-	cp configure ../ || die
-	popd &> /dev/null
+		-i xosview.1 || die
+	tc-export CXX
+}
+
+src_compile() {
+	emake OPTFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
