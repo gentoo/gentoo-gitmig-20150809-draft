@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/fityk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/ChangeLog,v 1.18 2012/04/23 17:29:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/ChangeLog,v 1.19 2012/04/25 03:15:56 bicatali Exp $
+
+*fityk-0.9.8 (25 Apr 2012)
+
+  25 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> -fityk-0.9.6.ebuild,
+  +fityk-0.9.8.ebuild:
+  Version bump. Tentative fix for random failure which might be due to python-3
+  set (bug #412805)
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> fityk-0.9.6.ebuild,
   fityk-0.9.7.ebuild:

@@ -1,13 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.6.ebuild,v 1.3 2012/04/23 17:29:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.8.ebuild,v 1.1 2012/04/25 03:15:56 bicatali Exp $
 
-EAPI="3"
+EAPI=4
 
 WX_GTK_VER="2.8"
 
+# python eclass cruft
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit python wxwidgets
 
@@ -23,7 +25,7 @@ IUSE="doc examples gnuplot lua readline python static-libs wxwidgets"
 CDEPEND=">=sci-libs/xylib-0.8
 	lua? ( dev-lang/lua )
 	readline? ( sys-libs/readline )
-	wxwidgets? ( x11-libs/wxGTK:2.8 )"
+	wxwidgets? ( x11-libs/wxGTK:2.8[X] )"
 
 DEPEND="${CDEPEND}
 	dev-libs/boost
@@ -32,15 +34,15 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	gnuplot? ( sci-visualization/gnuplot )"
 
-RESTRICT_PYTHON_ABIS="3.*"
-
 src_prepare() {
 	has_version "<dev-libs/boost-1.37" && \
 		sed -i -e 's:impl/directives.hpp:directives.ipp:g' \
-		"${S}/src/optional_suffix.h"
+		src/optional_suffix.h
 
-	sed '/^LTLIBRARIES/s:$(pyexec_LTLIBRARIES)::g' \
-		-i swig/Makefile.in
+	sed -i \
+		-e '/^LTLIBRARIES/s:$(pyexec_LTLIBRARIES)::g' \
+		-e '/install-exec-am/s:install-pyexecLTLIBRARIES::' \
+		swig/Makefile.in || die
 	if use python; then
 		echo '#!/bin/sh' > config/py-compile
 	fi
@@ -55,7 +57,6 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable wxwidgets GUI) \
 		$(use_with doc) \
-		$(use_with examples samples) \
 		$(use_with readline)
 }
 
@@ -77,20 +78,22 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
+	default
 	if use python; then
 		installation() {
 			emake \
 				DESTDIR="${D}" \
 				pyexecdir="$(python_get_sitedir)" \
 				pythondir="$(python_get_sitedir)" \
-				install
+				install install-pyexecLTLIBRARIES
 		}
 		python_execute_function -s --source-dir swig installation
 		python_clean_installation_image
 	fi
-	dodoc NEWS README TODO
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins samples/*
+	fi
 }
 
 pkg_postinst() {
