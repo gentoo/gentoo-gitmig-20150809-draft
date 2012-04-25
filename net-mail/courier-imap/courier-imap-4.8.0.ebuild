@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0.ebuild,v 1.4 2011/04/18 10:20:03 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0.ebuild,v 1.5 2012/04/25 16:33:15 jlec Exp $
 
 EAPI=2
 inherit autotools eutils multilib libtool
@@ -65,7 +65,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-4.0.6-db4-configure.in.patch
 	fi
 
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 }
 
 src_configure() {

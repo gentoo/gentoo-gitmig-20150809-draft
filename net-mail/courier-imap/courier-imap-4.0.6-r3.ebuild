@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r3.ebuild,v 1.11 2011/04/18 10:20:03 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r3.ebuild,v 1.12 2012/04/25 16:33:15 jlec Exp $
 
 inherit autotools eutils multilib
 
@@ -83,22 +83,22 @@ src_unpack() {
 	fi
 
 	ebegin "Recreating configure"
-	AT_NO_RECURSIVE="true" eautoreconf || die "eautoreconf on . failed"
+	AT_NO_RECURSIVE="true" eautoreconf
 	eend $?
 
 	cd "${S}/maildir"
 	ebegin "Recreating maildir/configure"
-	eautoreconf || die "eautoreconf on maildir failed"
+	eautoreconf
 	eend $?
 
 	cd "${S}/bdbobj"
 	ebegin "Recreating bdbobj/configure"
-	eautoreconf || die "eautoreconf on bdbobj failed"
+	eautoreconf
 	eend $?
 
 	cd "${S}/tcpd"
 	ebegin "Recreating tcpd/configure"
-	eautoreconf || die "eautoreconf on tcpd failed"
+	eautoreconf
 	eend $?
 }
 
@@ -153,7 +153,7 @@ src_compile() {
 		--with-mailgroup=mail \
 		$(use_with fam) \
 		$(use_with ipv6) \
-		${myconf} || die "econf failed"
+		${myconf}
 
 	# Change the pem file location.
 	sed -i -e "s:^\(TLS_CERTFILE=\).*:\1/etc/courier-imap/imapd.pem:" \
