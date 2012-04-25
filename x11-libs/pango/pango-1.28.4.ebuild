@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.17 2012/04/25 06:24:59 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.18 2012/04/25 06:30:19 lxnay Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -77,15 +77,13 @@ pkg_postinst() {
 			PANGO_CONFDIR="${EPREFIX}/etc/pango"
 		fi
 
-		mkdir -p ${PANGO_CONFDIR}
+		mkdir -p "${PANGO_CONFDIR}"
 		pango_conf="${PANGO_CONFDIR}/pango.modules"
 		tmp_pango_conf="${PANGO_CONFDIR}/._tmp_ebuild_pango.modules"
 
 		tmp_file=$(mktemp -t tmp.XXXXXXXXXXgdk_pixbuf_ebuild)
 		# be atomic!
-		pango-querymodules \
-			"${EROOT}"usr/$(get_libdir)/pango/1.6.0/modules/*.so \
-			> "${tmp_file}"
+		pango-querymodules > "${tmp_file}"
 		if [ "${?}" = "0" ]; then
 			cp -p "${pango_conf}" "${tmp_pango_conf}" && \
 				cat "${tmp_file}" > "${tmp_pango_conf}" && \

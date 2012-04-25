@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.341 2012/04/25 06:24:59 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.342 2012/04/25 06:30:19 lxnay Exp $
+
+  25 Apr 2012; Fabio Erculiani <lxnay@gentoo.org> pango-1.28.3-r1.ebuild,
+  pango-1.28.4.ebuild:
+  fix pango-querymodules for 1.28.x
 
   25 Apr 2012; Fabio Erculiani <lxnay@gentoo.org> pango-1.28.3-r1.ebuild,
   pango-1.28.4.ebuild, pango-1.29.4.ebuild, pango-1.30.0.ebuild:
