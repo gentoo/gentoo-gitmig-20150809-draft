@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628.ebuild,v 1.5 2010/10/19 10:23:57 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628.ebuild,v 1.6 2012/04/25 16:09:36 jlec Exp $
 
 inherit autotools
 
@@ -34,11 +34,11 @@ src_unpack() {
 		sed -i -e "/\\t${page}/ d" man${page: -1}/Makefile.am
 	done
 
-	eautoreconf || die
+	eautoreconf
 }
 
 src_compile() {
-	econf || die
+	econf
 	emake || die
 }
 
