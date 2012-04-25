@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.50.ebuild,v 1.4 2011/06/06 04:12:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.50.ebuild,v 1.5 2012/04/25 16:25:14 jlec Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -65,7 +65,7 @@ src_prepare() {
 			-e "s://#define WANT_MPU401 1:#define WANT_MPU401 1:" \
 			arch/linux/hmiplay.c || die "sed mpu401 failed"
 	fi
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 }
 
 src_configure() {
