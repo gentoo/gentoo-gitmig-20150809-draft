@@ -1,5 +1,5 @@
---- Makefile.org	2012-04-24 19:13:25.000000000 +0200
-+++ Makefile	2012-04-25 20:45:25.721953488 +0200
+--- a/Makefile
++++ b/Makefile
 @@ -8,15 +8,6 @@
  EXECUTABLE := nut
  LIBS := -lm
@@ -34,8 +34,8 @@
  
  ifeq ($(HAVE_FLTK),1)
  $(FLTK_NUT):
---- fltk/Makefile.org	2012-04-24 19:13:01.000000000 +0200
-+++ fltk/Makefile	2012-04-25 20:48:45.668679700 +0200
+--- a/fltk/Makefile
++++ b/fltk/Makefile
 @@ -5,7 +5,7 @@
  NUTDIR := \".nutdb\"
  FOODDIR := \"$(libdir)\"
