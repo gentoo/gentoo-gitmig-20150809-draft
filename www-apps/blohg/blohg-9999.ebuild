@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.7 2012/01/08 13:50:14 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.8 2012/04/25 03:02:38 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -9,21 +9,30 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-EHG_REPO_URI="http://hg.rafaelmartins.eng.br/blohg/"
-EHG_REVISION="default"
+HG_ECLASS=""
+if [[ ${PV} = *9999* ]]; then
+	HG_ECLASS="mercurial"
+	EHG_REPO_URI="https://hg.rafaelmartins.eng.br/blohg/"
+	EHG_REVISION="default"
+fi
 
-inherit mercurial distutils
+inherit distutils ${HG_ECLASS}
 
 DESCRIPTION="A Mercurial-based blogging engine."
 HOMEPAGE="http://blohg.org/ http://pypi.python.org/pypi/blohg"
-SRC_URI=""
-KEYWORDS=""
+
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+KEYWORDS="~amd64 ~x86"
+if [[ ${PV} = *9999* ]]; then
+	SRC_URI=""
+	KEYWORDS=""
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc test"
 
-DEPEND=">=dev-python/docutils-0.7
+CDEPEND=">=dev-python/docutils-0.7
 	>=dev-python/flask-0.7
 	>=dev-python/flask-babel-0.6
 	>=dev-python/flask-script-0.3
@@ -32,12 +41,12 @@ DEPEND=">=dev-python/docutils-0.7
 	>=dev-vcs/mercurial-1.6
 	dev-python/pyyaml
 	dev-python/setuptools
-	dev-python/pygments
+	dev-python/pygments"
+
+DEPEND="${CDEPEND}
 	doc? ( dev-python/sphinx )"
 
-RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${PN}"
+RDEPEND="${CDEPEND}"
 
 src_compile() {
 	distutils_src_compile
@@ -55,4 +64,12 @@ src_install() {
 		einfo 'installing documentation'
 		dohtml -r docs/_build/html/*
 	fi
+}
+
+pkg_postinst() {
+	local ver="${PV}"
+	[[ ${PV} = *9999* ]] && ver="latest"
+
+	elog "You may want to check the upgrade notes:"
+	elog "http://docs.blohg.org/en/${ver}/upgrade/"
 }
