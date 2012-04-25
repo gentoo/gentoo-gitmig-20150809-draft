@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.23 2011/06/24 10:58:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.24 2012/04/25 17:48:26 jlec Exp $
 
 inherit autotools eutils flag-o-matic fortran-2 toolchain-funcs
 
@@ -90,11 +90,11 @@ src_compile() {
 			--without-openmp"
 	fi
 	cd "${S}-single"
-	econf ${myconf} --enable-float || die "econf for float failed"
+	econf ${myconf} --enable-float
 	emake || die "emake for float failed"
 
 	cd "${S}-double"
-	econf ${myconf} || die "econf for double failed"
+	econf ${myconf}
 	emake || die "emake for double failed"
 }
 
