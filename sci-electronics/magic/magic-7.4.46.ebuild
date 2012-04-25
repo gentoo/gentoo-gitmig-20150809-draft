@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.4.46.ebuild,v 1.4 2008/01/14 19:05:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.4.46.ebuild,v 1.5 2012/04/25 17:22:29 jlec Exp $
 
 DESCRIPTION="The VLSI design CAD tool."
 HOMEPAGE="http://www.opencircuitdesign.com/magic/index.html"
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	# Short-circuit top-level configure script to retain CFLAGS
 	cd scripts
-	CPP="cpp" econf --libdir=/usr/share || die "Configuration failed"
+	CPP="cpp" econf --libdir=/usr/share
 	cd ..
 	emake -j1 || die "Compilation failed"
 }
