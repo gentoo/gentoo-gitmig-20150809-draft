@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.13.ebuild,v 1.11 2012/03/07 02:21:39 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.13.ebuild,v 1.12 2012/04/25 16:43:11 jlec Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info autotools
@@ -105,8 +105,7 @@ src_configure() {
 		--with-default-server=${PBS_SERVER_NAME} \
 		--disable-gcc-warnings \
 		${USE_CPUSETS} \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 }
 
 # WARNING

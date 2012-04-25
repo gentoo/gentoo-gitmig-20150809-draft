@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4.1_p1.ebuild,v 1.2 2012/04/16 14:48:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4.1_p1.ebuild,v 1.3 2012/04/25 16:41:01 jlec Exp $
 
 EAPI=4
 
@@ -76,7 +76,7 @@ src_prepare() {
 	# 393361, backport of r8809 upstream.
 	epatch "${FILESDIR}"/mpich2-hvector.patch
 
-	AT_M4DIR="${S}"/confdb eautoreconf || die
+	AT_M4DIR="${S}"/confdb eautoreconf
 }
 
 src_configure() {

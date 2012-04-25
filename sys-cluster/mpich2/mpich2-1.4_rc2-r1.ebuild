@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.5 2012/01/12 02:11:50 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.6 2012/04/25 16:41:01 jlec Exp $
 
 EAPI=2
 
@@ -55,7 +55,7 @@ src_prepare() {
 
 	# 369263 and 1044, 1500 upstream.
 	epatch "${FILESDIR}"/mpich2-1.4_rc2-fix-pkg-config-files.patch
-	AT_M4DIR="${S}"/confdb eautoreconf || die
+	AT_M4DIR="${S}"/confdb eautoreconf
 }
 
 src_configure() {
@@ -98,8 +98,7 @@ src_configure() {
 		--disable-fast \
 		--enable-smpcoll \
 		$(use_enable romio) \
-		$(use_enable cxx) \
-		|| die
+		$(use_enable cxx)
 }
 
 src_compile() {
