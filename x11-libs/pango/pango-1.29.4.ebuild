@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.29.4.ebuild,v 1.13 2012/04/25 09:42:36 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.29.4.ebuild,v 1.14 2012/04/25 10:11:21 lxnay Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -81,11 +81,11 @@ pkg_postinst() {
 	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgdk_pixbuf_ebuild)
 
 	# be atomic!
-	pango-querymodules \
+	if pango-querymodules \
 		"${EROOT}"usr/$(get_libdir)/pango/1.6.0/modules/*.so \
-		> "${tmp_file}"
-	if [ "${?}" = "0" ]; then
-		cat "${tmp_file}" > "${pango_conf}" || die
+			> "${tmp_file}"; then
+		cat "${tmp_file}" > "${pango_conf}" || {
+			rm "${tmp_file}"; die; }
 	else
 		ewarn "Cannot update pango.modules, file generation failed"
 	fi
