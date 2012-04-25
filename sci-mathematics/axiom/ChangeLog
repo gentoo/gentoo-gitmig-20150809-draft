@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/axiom
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.22 2008/08/30 13:17:33 markusle Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.23 2012/04/25 18:51:42 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> axiom-200805.ebuild,
+  metadata.xml:
+  Moved to EAPI=4, dropped unnecessary die
 
   30 Aug 2008; Markus Dittrich <markusle@gentoo.org> axiom-200803.ebuild,
   axiom-200805.ebuild:

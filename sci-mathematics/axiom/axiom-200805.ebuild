@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200805.ebuild,v 1.6 2008/08/30 13:17:33 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-200805.ebuild,v 1.7 2012/04/25 18:51:42 jlec Exp $
+
+EAPI=4
 
 inherit eutils multilib flag-o-matic
 
@@ -21,6 +23,7 @@ DEPEND="virtual/latex-base
 	x11-libs/libXaw
 	sys-apps/debianutils
 	sys-process/procps"
+RDEPEND=""
 
 S="${WORKDIR}"/${PN}
 
@@ -48,25 +51,20 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	cp "${FILESDIR}"/noweb-2.9-insecure-tmp-file.patch.input \
 		"${S}"/zips/noweb-2.9-insecure-tmp-file.patch \
 		|| die "Failed to fix noweb"
 	cp "${FILESDIR}"/${PN}-200711-gcl-configure.patch \
 		"${S}"/zips/gcl-2.6.7.configure.in.patch \
 		|| die "Failed to fix gcl-2.6.7 configure"
-	epatch "${FILESDIR}"/noweb-2.9-insecure-tmp-file.Makefile.patch \
-		|| die "Failed to patch noweb security issue!"
+	epatch "${FILESDIR}"/noweb-2.9-insecure-tmp-file.Makefile.patch
+
+	# lots of strict-aliasing badness
+	append-flags -fno-strict-aliasing
 }
 
 src_compile() {
-	# lots of strict-aliasing badness
-	append-flags -fno-strict-aliasing
-
-	econf || die "Failed to configure"
 	# use gcl 2.6.7
 	sed -e "s:GCLVERSION=gcl-2.6.8pre$:GCLVERSION=gcl-2.6.7:" \
 		-i Makefile.pamphlet Makefile \
@@ -77,12 +75,11 @@ src_compile() {
 		|| die "Failed to fix libXpm lib paths"
 
 	# Let the fun begin...
-	AXIOM="${S}"/mnt/linux emake -j1 || die "emake failed"
+	AXIOM="${S}"/mnt/linux emake -j1
 }
 
 src_install() {
-	emake DESTDIR="${D}"/opt/axiom COMMAND="${D}"/opt/axiom/mnt/linux/bin/axiom install \
-		|| die 'Failed to install Axiom!'
+	emake DESTDIR="${D}"/opt/axiom COMMAND="${D}"/opt/axiom/mnt/linux/bin/axiom install
 
 	mv "${D}"/opt/axiom/mnt/linux/* "${D}"/opt/axiom \
 		|| die "Failed to mv axiom into its final destination path."
