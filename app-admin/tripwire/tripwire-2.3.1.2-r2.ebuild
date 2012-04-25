@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.15 2009/10/11 23:59:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.16 2012/04/25 16:07:04 jlec Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -41,7 +41,7 @@ src_unpack() {
 	epatch "${DISTDIR}"/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
 	epatch "${FILESDIR}"/tripwire-2.3.0-50-rfc822.patch
 
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 }
 
 src_compile() {
@@ -56,7 +56,7 @@ src_compile() {
 		eend
 	einfo "Done."
 	chmod +x configure
-	econf `use_enable ssl openssl` || die
+	econf `use_enable ssl openssl`
 	emake || die
 }
 

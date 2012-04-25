@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2.ebuild,v 1.1 2010/05/17 18:41:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2.ebuild,v 1.2 2012/04/25 16:07:04 jlec Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ RDEPEND="virtual/cron
 S="${WORKDIR}"/tripwire-${TW_VER}-src
 
 src_prepare() {
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 }
 
 src_configure() {
