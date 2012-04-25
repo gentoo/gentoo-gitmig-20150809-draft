@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.5 2012/04/18 21:01:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.6 2012/04/25 21:04:08 maekke Exp $
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> accountsservice-0.6.15.ebuild:
+  arm stable, bug #410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> accountsservice-0.6.15.ebuild:
   Stable for amd64, wrt bug #410611
