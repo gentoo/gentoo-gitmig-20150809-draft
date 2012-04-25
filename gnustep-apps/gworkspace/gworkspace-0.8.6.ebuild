@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.8.6.ebuild,v 1.6 2007/11/24 22:34:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.8.6.ebuild,v 1.7 2012/04/25 16:25:58 jlec Exp $
 
 inherit autotools gnustep-2
 
@@ -29,7 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-popplerkit.patch
 
 	cd Inspector
-	eautoreconf || die "failed running autoreconf"
+	eautoreconf
 }
 
 src_compile() {
@@ -42,7 +42,7 @@ src_compile() {
 	egnustep_make
 
 	cd "${S}"/GWMetadata
-	econf || die "GWMetadata configure failed"
+	econf
 	egnustep_make || die "GWMetadata make failed"
 }
 
