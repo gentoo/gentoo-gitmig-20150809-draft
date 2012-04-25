@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jumpgate
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.8 2008/06/18 01:57:46 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.9 2012/04/25 16:37:49 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> jumpgate-0.7.ebuild:
+  Drop unnessecary die
 
   18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> jumpgate-0.7.ebuild:
   autoconf -> eautoreconf, make -> emake. bug #226603
