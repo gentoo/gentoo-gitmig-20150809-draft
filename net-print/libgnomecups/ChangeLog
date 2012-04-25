@@ -1,6 +1,9 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.77 2012/04/19 20:44:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.78 2012/04/25 21:03:00 maekke Exp $
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> libgnomecups-0.2.3-r2.ebuild:
+  arm stable, bug #410611
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> libgnomecups-0.2.3-r2.ebuild:
   Marking libgnomecups-0.2.3-r2 ppc64 stable for bug 410611
