@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/libart_lgpl-2.3.21-r1.ebuild,v 1.9 2010/10/07 22:01:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/libart_lgpl-2.3.21-r1.ebuild,v 1.10 2012/04/25 16:47:03 jlec Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -37,5 +37,5 @@ src_prepare() {
 	# Do not build tests if not required
 	epatch "${FILESDIR}"/${PN}-2.3.21-no-test-build.patch
 
-	eautoreconf
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
