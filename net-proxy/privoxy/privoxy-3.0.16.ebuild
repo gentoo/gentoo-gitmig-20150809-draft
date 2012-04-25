@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.16.ebuild,v 1.1 2010/05/08 11:00:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.16.ebuild,v 1.2 2012/04/25 16:37:57 jlec Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	# autoreconf needs to be called even if we don't modify any autotools source files
 	# See main makefile
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 }
 
 src_configure() {
