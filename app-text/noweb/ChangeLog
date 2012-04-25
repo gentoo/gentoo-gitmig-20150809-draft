@@ -1,6 +1,11 @@
 # ChangeLog for app-text/noweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.56 2012/03/25 15:41:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.57 2012/04/25 17:50:15 grobian Exp $
+
+*noweb-2.11b-r3 (25 Apr 2012)
+
+  25 Apr 2012; Fabian Groffen <grobian@gentoo.org> +noweb-2.11b-r3.ebuild:
+  Revbump for EAPI=3, fixed for Prefix, marked ~{ppc,x86,x64}-macos
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> noweb-2.11b-r2.ebuild:
   ia64/sparc stable wrt #396843
