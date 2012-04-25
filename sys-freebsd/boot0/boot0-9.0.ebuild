@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-9.0.ebuild,v 1.1 2012/01/16 16:37:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-9.0.ebuild,v 1.2 2012/04/25 16:18:35 aballier Exp $
 
 EAPI=2
 
@@ -12,7 +12,9 @@ KEYWORDS="~sparc-fbsd ~x86-fbsd"
 
 IUSE="bzip2 ieee1394 tftp zfs"
 
-SRC_URI="mirror://gentoo/${SYS}.tar.bz2"
+SRC_URI="mirror://gentoo/${SYS}.tar.bz2
+	mirror://gentoo/${LIB}.tar.bz2
+	mirror://gentoo/${CONTRIB}.tar.bz2"
 
 RDEPEND=""
 DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*
