@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.11 2012/04/26 16:06:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.12 2012/04/26 16:08:36 jlec Exp $
 
 EAPI=4
 
@@ -26,12 +26,12 @@ pkg_setup () {
 
 src_prepare() {
 	if ! use mpi; then
-		cd ${S}/src
+		cd "${S}"/src
 			sed \
 				-e 's:bin_PROGRAMS = puzzle$(EXEEXT) ppuzzle:bin_PROGRAMS = puzzle :' \
 				-e 's:DIST_SOURCES = $(ppuzzle_SOURCES) $(puzzle_SOURCES):DIST_SOURCES = $(puzzle_SOURCES):' \
 				-i Makefile || die
-		cd ${S}
+		cd "${S}"
 	fi
 }
 
