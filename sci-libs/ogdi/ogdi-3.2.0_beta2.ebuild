@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.2.0_beta2.ebuild,v 1.3 2012/04/26 15:21:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.2.0_beta2.ebuild,v 1.4 2012/04/26 16:25:40 jlec Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="static-libs"
 
 DEPEND="
 	dev-libs/expat
-	sci-libs/proj
+	<sci-libs/proj-4.8.0
 	sys-libs/zlib
 "
 RDEPEND="${DEPEND}"
