@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.370 2012/04/24 23:24:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.371 2012/04/26 23:26:30 polynomial-c Exp $
+
+  26 Apr 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.9.ebuild,
+  -files/seamonkey-2.9-revert-system-cairo-breakage.patch.bz2:
+  Moved binary patch away from portage-tree.
 
 *seamonkey-2.9 (24 Apr 2012)
 
