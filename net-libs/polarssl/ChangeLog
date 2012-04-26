@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/polarssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.24 2012/01/27 15:49:02 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.25 2012/04/26 16:11:45 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> polarssl-1.1.1.ebuild:
+  tc-export CC to be more cross-compile friendly.
 
 *polarssl-1.1.1 (27 Jan 2012)
 
