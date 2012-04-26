@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.61 2012/04/26 17:21:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.62 2012/04/26 17:24:49 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -22,7 +22,6 @@ sys-freebsd/freebsd-sbin atm
 dev-libs/glib fam
 # dev-util/gdbus-codegen
 # dev-util/gtk-doc
-# app-text/docbook-xml-dtd
 dev-libs/glib doc
 # sys-devel/gdb
 # dev-util/gdbus-codegen
@@ -67,8 +66,6 @@ sys-auth/pambase pam_krb5
 # dev-python/docutils
 app-admin/eselect doc
 
-# app-text/xmlto app-text/docbook-xml-dtd-4.4
-sys-apps/portage doc
 # dev-python/epydoc
 sys-apps/portage epydoc
 
