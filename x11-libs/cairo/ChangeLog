@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.286 2012/03/24 23:15:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.287 2012/04/26 22:26:09 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> cairo-1.10.2-r2.ebuild,
+  cairo-1.12.0.ebuild:
+  keyword ~amd64-fbsd
 
 *cairo-1.12.0 (24 Mar 2012)
 

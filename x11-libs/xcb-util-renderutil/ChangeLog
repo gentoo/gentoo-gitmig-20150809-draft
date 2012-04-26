@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xcb-util-renderutil
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-renderutil/ChangeLog,v 1.8 2011/08/20 15:49:28 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-renderutil/ChangeLog,v 1.9 2012/04/26 22:24:21 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  xcb-util-renderutil-0.3.8.ebuild:
+  keyword ~amd64-fbsd
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org>
   xcb-util-renderutil-0.3.8.ebuild:
