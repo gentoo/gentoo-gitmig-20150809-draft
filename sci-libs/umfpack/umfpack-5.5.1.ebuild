@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.5.1.ebuild,v 1.4 2011/08/04 17:36:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.5.1.ebuild,v 1.5 2012/04/26 14:22:21 jlec Exp $
 
 EAPI=4
+
 inherit autotools eutils fortran-2
 
 MY_PN=UMFPACK
@@ -15,6 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc metis static-libs"
+
 RDEPEND="
 	virtual/fortran
 	virtual/blas

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.2.0.ebuild,v 1.14 2011/06/21 14:45:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.2.0.ebuild,v 1.15 2012/04/26 14:22:21 jlec Exp $
 
 inherit autotools eutils fortran-2
 
@@ -14,6 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="doc"
+
 RDEPEND="
 	virtual/fortran
 	virtual/blas
@@ -32,8 +33,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--with-blas="$(pkg-config --libs blas)" \
-		|| die "econf failed"
+		--with-blas="$(pkg-config --libs blas)"
 	emake || die "emake failed"
 }
 
