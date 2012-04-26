@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.172 2012/02/02 15:41:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.173 2012/04/26 15:13:29 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> man-1.6g.ebuild:
+  keyword ~amd64-fbsd
 
   02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> man-1.6g.ebuild:
   ppc/ppc64 stable wrt #398461
