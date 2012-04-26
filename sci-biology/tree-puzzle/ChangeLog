@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/tree-puzzle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/ChangeLog,v 1.15 2010/01/01 21:44:45 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/ChangeLog,v 1.16 2012/04/26 16:06:44 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> tree-puzzle-5.2.ebuild:
+  Move to EAPI=4
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   tree-puzzle-5.2.ebuild:
