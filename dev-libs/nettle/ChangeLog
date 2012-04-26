@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.58 2012/03/20 02:10:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.59 2012/04/26 15:39:22 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> nettle-2.4.ebuild:
+  keyword ~amd64-fbsd
 
   20 Mar 2012; Tim Harder <radhermit@gentoo.org> -nettle-2.0.ebuild,
   -files/nettle-2.0-asneeded.patch, -nettle-2.1.ebuild, -nettle-2.2.ebuild:
