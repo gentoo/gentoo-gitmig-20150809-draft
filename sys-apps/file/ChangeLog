@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.218 2012/02/21 20:00:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.219 2012/04/26 14:49:55 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> file-5.11.ebuild:
+  keyword ~amd64-fbsd
 
 *file-5.11 (21 Feb 2012)
 
