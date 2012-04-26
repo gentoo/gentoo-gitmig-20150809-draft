@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.517 2012/04/25 19:51:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.518 2012/04/26 14:14:32 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> glib-2.32.1.ebuild:
+  keyword ~amd64-fbsd
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> glib-2.30.3.ebuild:
   arm stable, bug #410611
