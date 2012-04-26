@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.24 2012/04/16 10:38:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.25 2012/04/26 07:31:34 scarabeus Exp $
+
+  26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libvisio-0.0.15.ebuild:
+  ppc stable wrt bug#411449.
 
 *libvisio-0.0.16 (16 Apr 2012)
 
