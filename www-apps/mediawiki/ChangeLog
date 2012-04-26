@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.183 2012/03/27 15:00:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.184 2012/04/26 19:23:11 radhermit Exp $
+
+*mediawiki-1.18.3 (26 Apr 2012)
+
+  26 Apr 2012; Tim Harder <radhermit@gentoo.org> +mediawiki-1.18.3.ebuild:
+  Version bump.
 
   27 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mediawiki-1.18.2.ebuild:
   x86 stable wrt bug #409513
