@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.8 2012/04/26 12:39:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.9 2012/04/26 12:52:16 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> todo/package.use.mask:
+  mask zlib[minizip] as autotools arent keyworded yet
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> +todo/package.use.mask,
   parent:
