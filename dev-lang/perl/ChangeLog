@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.380 2012/03/03 12:29:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.381 2012/04/26 12:59:46 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> perl-5.12.4-r2.ebuild:
+  keyword ~amd64-fbsd
 
 *perl-5.12.4-r2 (03 Mar 2012)
 
