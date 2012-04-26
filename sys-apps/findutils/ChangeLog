@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.207 2012/03/27 17:50:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.208 2012/04/26 21:35:56 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> findutils-4.5.10-r1.ebuild:
+  keyword ~amd64-fbsd
 
   27 Mar 2012; Mike Frysinger <vapier@gentoo.org> findutils-4.4.2.ebuild,
   findutils-4.4.2-r1.ebuild, findutils-4.5.8.ebuild, findutils-4.5.9.ebuild,
