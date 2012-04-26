@@ -1,12 +1,13 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.199 2012/04/26 00:08:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.200 2012/04/26 00:10:14 floppym Exp $
 
 *grub-2.00_beta3-r2 (26 Apr 2012)
 
   26 Apr 2012; Mike Gilbert <floppym@gentoo.org> +grub-2.00_beta3-r2.ebuild,
   -grub-2.00_beta3-r1.ebuild, files/grub-2.00-10_linux-genkernel.patch:
   Replace 10_linux patch with the changeset from upstream.
+  Bug 413505 by Jan De Luyck.
 
   11 Apr 2012; Mike Gilbert <floppym@gentoo.org>
   files/grub-2.00-10_linux-genkernel.patch:
