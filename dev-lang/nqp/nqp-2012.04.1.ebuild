@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2012.04.1.ebuild,v 1.1 2012/04/26 09:53:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2012.04.1.ebuild,v 1.2 2012/04/26 16:02:03 patrick Exp $
 
 EAPI=3
 
 inherit eutils multilib
 
-PARROT_VERSION="3.9.0"
+PARROT_VERSION="4.3.0"
 
 DESCRIPTION="Not Quite Perl, a Perl 6 bootstrapping compiler"
 HOMEPAGE="http://rakudo.org/"

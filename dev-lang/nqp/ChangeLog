@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.8 2012/04/26 09:53:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.9 2012/04/26 16:02:03 patrick Exp $
+
+  26 Apr 2012; Patrick Lauer <patrick@gentoo.org> nqp-2012.04.1.ebuild,
+  nqp-2012.04.ebuild:
+  fix parrot deps a bit
 
 *nqp-2012.04.1 (26 Apr 2012)
 
