@@ -1,6 +1,5 @@
-=== modified file 'util/grub.d/10_linux.in'
---- util/grub.d/10_linux.in	2012-03-10 14:21:25 +0000
-+++ util/grub.d/10_linux.in	2012-04-11 19:26:45 +0000
+--- util/grub.d/10_linux.in
++++ util/grub.d/10_linux.in
 @@ -150,7 +150,8 @@
  EOF
  }
@@ -11,28 +10,27 @@
      xi?86 | xx86_64)
  	list=`for i in /boot/vmlinuz-* /vmlinuz-* /boot/kernel-* ; do
                    if grub_file_is_not_garbage "$i" ; then echo -n "$i " ; fi
-@@ -161,6 +162,15 @@
+@@ -161,6 +162,14 @@
  	     done` ;;
  esac
  
-+if test "x${GENKERNEL_ARCH-unset}" = xunset; then
-+  case "$machine" in
++case "$machine" in
 +    i?86) GENKERNEL_ARCH="x86" ;;
 +    mips|mips64) GENKERNEL_ARCH="mips" ;;
++    mipsel|mips64el) GENKERNEL_ARCH="mipsel" ;;
 +    arm*) GENKERNEL_ARCH="arm" ;;
 +    *) GENKERNEL_ARCH="$machine" ;;
-+  esac
-+fi
++esac
 +
  prepare_boot_cache=
  prepare_root_cache=
  boot_device_id=
-@@ -186,8 +196,8 @@
- 	   "initrd-${version}" "initramfs-${version}.img" \
+@@ -187,7 +196,9 @@
  	   "initrd.img-${alt_version}" "initrd-${alt_version}.img" \
  	   "initrd-${alt_version}" "initramfs-${alt_version}.img" \
--	   "initramfs-genkernel-${version}" \
+ 	   "initramfs-genkernel-${version}" \
 -	   "initramfs-genkernel-${alt_version}"; do
++	   "initramfs-genkernel-${alt_version}" \
 +	   "initramfs-genkernel-${GENKERNEL_ARCH}-${version}" \
 +	   "initramfs-genkernel-${GENKERNEL_ARCH}-${alt_version}"; do
      if test -e "${dirname}/${i}" ; then
