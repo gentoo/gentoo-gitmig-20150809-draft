@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-pam-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.32 2012/03/30 15:47:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.33 2012/04/26 13:46:44 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  freebsd-pam-modules-9.0.ebuild:
+  keyword ~amd64-fbsd
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   -freebsd-pam-modules-9.0_rc1.ebuild, -freebsd-pam-modules-9.0_rc2.ebuild,
