@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/calcoo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/ChangeLog,v 1.17 2011/03/02 13:26:37 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/ChangeLog,v 1.18 2012/04/26 16:06:34 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> calcoo-1.3.18.ebuild,
+  +files/calcoo-1.3.18-gold.patch, metadata.xml:
+  Move to EAPI=4, added fix gold linker
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> calcoo-1.3.16.ebuild,
   calcoo-1.3.18.ebuild:

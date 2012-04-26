@@ -1,13 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/calcoo-1.3.18.ebuild,v 1.6 2011/03/02 13:26:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/calcoo-1.3.18.ebuild,v 1.7 2012/04/26 16:06:35 jlec Exp $
 
-EAPI="1"
+EAPI=4
 
-inherit eutils
+AUTOTOOLS_AUTORECONF=yes
+
+inherit autotools-utils
 
 DESCRIPTION="Scientific calculator designed to provide maximum usability"
-HOMEPAGE="http://calcoo.sourceforge.net"
+HOMEPAGE="http://calcoo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -19,14 +21,15 @@ RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
-src_compile() {
-	econf --disable-gtktest
-	emake || die "emake failed."
+PATCHES=( "${FILESDIR}"/${P}-gold.patch )
+
+src_configure() {
+	local myeconfargs=( --disable-gtktest )
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog NEWS README
+	autotools-utils_src_install
 	newicon src/pixmaps/main.xpm ${PN}.xpm
 	make_desktop_entry ${PN} Calcoo ${PN} "Education;Math"
 }
