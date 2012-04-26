@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.574 2012/04/24 14:16:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.575 2012/04/26 10:22:22 olemarkus Exp $
+
+*php-5.3.11 (26 Apr 2012)
+
+  26 Apr 2012; Ole Markus With <olemarkus@gentoo.org> +php-5.3.11.ebuild:
+  Version bump of PHP 5.3.11
 
   24 Apr 2012; Matti Bickel <mabi@gentoo.org> php-5.3.11_rc2.ebuild:
   current suhosin patch misapplies in 5.3.11; use a custom patch with changed
