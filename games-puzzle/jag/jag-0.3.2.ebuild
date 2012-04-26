@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.2.ebuild,v 1.3 2012/04/22 17:35:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.2.ebuild,v 1.4 2012/04/26 19:28:42 ago Exp $
 
 EAPI=2
 inherit eutils qt4-r2 games
@@ -12,7 +12,7 @@ SRC_URI="http://jag.xlabsoft.com/files/${P}-src.zip
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="editor"
 
 RDEPEND="x11-libs/qt-core:4
