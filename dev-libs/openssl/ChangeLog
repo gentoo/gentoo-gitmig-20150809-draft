@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.447 2012/04/26 13:58:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.448 2012/04/26 14:58:17 vapier Exp $
+
+*openssl-1.0.1b (26 Apr 2012)
+
+  26 Apr 2012; Mike Frysinger <vapier@gentoo.org> +openssl-1.0.1b.ebuild:
+  Version bump.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> openssl-1.0.1a.ebuild:
   keyword ~amd64-fbsd
