@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/bsnmp
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/ChangeLog,v 1.2 2006/05/23 16:40:10 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/ChangeLog,v 1.3 2012/04/26 17:50:56 aballier Exp $
+
+*bsnmp-1.12 (26 Apr 2012)
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> +bsnmp-1.12.ebuild,
+  +files/werror.patch:
+  version bump, do not build with werror, keyword ~amd64-fbsd
 
   23 May 2006; Diego Pettenò <flameeyes@gentoo.org> bsnmp-1.11a.ebuild:
   Fix quoting.
