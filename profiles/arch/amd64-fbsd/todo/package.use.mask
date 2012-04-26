@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.65 2012/04/26 17:35:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.66 2012/04/26 17:38:30 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -88,6 +88,9 @@ sys-devel/gcc graphite
 # dev-lang/tk
 dev-lang/ruby tk
 
+# =dev-lang/python-2*[tk]
+dev-python/epydoc X
+
 # dev-lang/tk dev-tcltk/blt
 dev-lang/python tk
 # dev-python/sphinx dev-python/python-docs:SLOT
@@ -122,3 +125,7 @@ dev-libs/libnatspec doc
 # app-text/passivetex
 # dev-tex/xmltex
 app-text/xmlto latex
+
+# virtual/latex-base
+# dev-texlive/texlive-latexextra
+dev-python/epydoc latex
