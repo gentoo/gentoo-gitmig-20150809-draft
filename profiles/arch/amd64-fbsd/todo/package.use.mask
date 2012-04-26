@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.31 2012/04/26 14:58:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.32 2012/04/26 15:00:41 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -61,6 +61,11 @@ sys-auth/pambase pam_krb5
 
 # dev-python/docutils
 app-admin/eselect doc
+
+# app-text/xmlto app-text/docbook-xml-dtd-4.4
+sys-apps/portage doc
+# dev-python/epydoc
+sys-apps/portage epydoc
 
 # dev-libs/icu
 dev-libs/libxml2 icu
