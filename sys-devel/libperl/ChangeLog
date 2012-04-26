@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.163 2012/03/03 11:51:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.164 2012/04/26 13:00:28 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libperl-5.10.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
 *libperl-5.10.1-r1 (03 Mar 2012)
 
