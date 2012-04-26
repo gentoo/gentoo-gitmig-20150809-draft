@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.337 2012/04/17 21:44:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.338 2012/04/26 19:13:28 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> freetype-2.4.9-r1.ebuild:
+  keyword ~amd64-fbsd
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> freetype-2.4.9-r1.ebuild:
   Marking freetype-2.4.9-r1 ppc64 for bug 410983
