@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.6.ebuild,v 1.3 2011/06/17 10:23:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.6.ebuild,v 1.4 2012/04/26 15:21:03 jlec Exp $
 
 EAPI=4
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Open Geographical Datastore Interface, a GIS support library"
-HOMEPAGE="http://ogdi.sourceforge.net"
+HOMEPAGE="http://ogdi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ogdi/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -23,8 +23,9 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	rm -rf external
-	epatch "${FILESDIR}"/${P}-unbundle-libs.patch
-	epatch "${FILESDIR}"/${P}-fpic.patch
+	epatch \
+		"${FILESDIR}"/${P}-unbundle-libs.patch \
+		"${FILESDIR}"/${P}-fpic.patch
 	sed 's:O2:O9:g' -i configure || die
 }
 

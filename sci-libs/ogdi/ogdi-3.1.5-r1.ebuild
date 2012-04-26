@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5-r1.ebuild,v 1.13 2010/06/24 14:49:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5-r1.ebuild,v 1.14 2012/04/26 15:21:03 jlec Exp $
 
 inherit toolchain-funcs eutils
 
-DESCRIPTION="OGDI - Open Geographical Datastore Interface, a GIS support library"
-HOMEPAGE="http://ogdi.sourceforge.net"
+DESCRIPTION="Open Geographical Datastore Interface, a GIS support library"
+HOMEPAGE="http://ogdi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ogdi/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND="sci-libs/proj
 	sys-libs/zlib
 	dev-libs/expat"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,7 +31,7 @@ src_compile() {
 	export LD_LIBRARY_PATH=$TOPDIR/bin/${TARGET}
 
 	econf --with-projlib="-L/usr/$(get_libdir) -lproj" \
-		--with-zlib --with-expat || die "econf failed"
+		--with-zlib --with-expat
 
 	# bug #299239
 	emake -j1 || die "make failed"
