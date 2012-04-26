@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.82 2010/11/15 21:07:43 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.83 2012/04/26 16:08:36 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> ncbi-tools-20080302.ebuild,
+  -ncbi-tools-20090809-r2.ebuild:
+  Dropped old
 
   15 Nov 2010; Justin Lecher <jlec@gentoo.org> ncbi-tools-20080302.ebuild,
   ncbi-tools-20090809-r2.ebuild, ncbi-tools-20100808.ebuild:
