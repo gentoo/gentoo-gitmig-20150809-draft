@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.0-r1.ebuild,v 1.1 2012/04/23 20:24:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.0-r1.ebuild,v 1.2 2012/04/26 13:55:01 aballier Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit bsdmk freebsd flag-o-matic pam
 
 DESCRIPTION="FreeBSD's base system source for /usr/bin"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="ar atm audit bluetooth ipv6 kerberos netware nis ssl usb build zfs"
 LICENSE="BSD zfs? ( CDDL )"
 

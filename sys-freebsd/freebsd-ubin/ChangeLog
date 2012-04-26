@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.79 2012/04/23 20:24:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.80 2012/04/26 13:55:01 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-ubin-9.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
 *freebsd-ubin-9.0-r1 (23 Apr 2012)
 
