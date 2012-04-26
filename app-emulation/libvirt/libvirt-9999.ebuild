@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.27 2012/04/18 23:06:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.28 2012/04/26 05:04:11 flameeyes Exp $
 
 EAPI=4
 
@@ -91,7 +91,7 @@ DEPEND="${RDEPEND}
 	app-text/xhtml1"
 
 pkg_setup() {
-	python_set_active_version 2
+	use python && python_set_active_version 2
 	python_pkg_setup
 }
 
