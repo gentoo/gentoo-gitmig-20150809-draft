@@ -1,12 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/gibbs-3.1.ebuild,v 1.5 2009/12/28 23:49:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/gibbs-3.1.ebuild,v 1.6 2012/04/26 16:17:09 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit autotools
+AUTOTOOLS_AUTORECONF=yes
 
-DESCRIPTION="The Gibbs Motif Sampler identifies motifs, conserved regions, in DNA or protein sequences"
+inherit autotools-utils multilib
+
+DESCRIPTION="Identify motifs, conserved regions, in DNA or protein sequences"
 HOMEPAGE="http://bayesweb.wadsworth.org/gibbs/gibbs.html"
 SRC_URI="mirror://gentoo/gibbs-${PV}.tar.gz"
 
@@ -15,29 +17,34 @@ SLOT="0"
 IUSE="mpi"
 KEYWORDS="amd64 x86"
 
-DEPEND="mpi? ( virtual/mpi
-	sys-cluster/mpe2 )"
+DEPEND="
+	mpi? (
+		virtual/mpi
+		sys-cluster/mpe2 )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i -e 's/CFLAGS="$OPTFLAGS/CFLAGS="$CFLAGS $OPTFLAGS/' \
-		-e 's/-Werror//' configure.in || die
-	eautoreconf
+	sed \
+		-e 's/CFLAGS="$OPTFLAGS/CFLAGS="$CFLAGS $OPTFLAGS/' \
+		-e 's/-Werror//' \
+		-i configure.in || die
+	autotools-utils_src_prepare
 }
 
 src_configure() {
 	if use mpi; then export CC=mpicc; fi
-	econf $(use_enable mpi) || die
+	local myeconfargs=( $(use_enable mpi) )
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	exeinto /usr/share/${PN}
+	autotools-utils_src_install
+	exeinto /usr/$(get_libdir)/${PN}
 	doexe *.pl
 	dodoc README ChangeLog
 }
 
 pkg_postinst() {
-	einfo "Supplementary Perl scripts for Gibbs have been installed into /usr/share/${PN}."
+	einfo "Supplementary Perl scripts for Gibbs have been installed into /usr/$(get_libdir)/${PN}."
 	einfo "These scripts require installation of sci-biology/bioperl."
 }
