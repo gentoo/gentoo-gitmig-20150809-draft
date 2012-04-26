@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.81 2012/04/01 21:45:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.82 2012/04/26 16:34:58 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> unzip-6.0-r3.ebuild:
+  keyword ~amd64-fbsd
 
 *unzip-6.0-r3 (01 Apr 2012)
 
