@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.86 2012/04/26 20:43:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.87 2012/04/26 20:57:32 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask some ghostscript-gpl useflags
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask some poppler useflags
