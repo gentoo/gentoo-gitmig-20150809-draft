@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.1 2012/04/23 15:55:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.2 2012/04/26 13:17:58 aballier Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="FreeBSD's base system libraries"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
 # Crypto is needed to have an internal OpenSSL header
 # sys is needed for libalias, probably we can just extract that instead of

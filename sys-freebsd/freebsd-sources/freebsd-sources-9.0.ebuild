@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.1 2012/01/16 16:37:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.2 2012/04/26 13:17:10 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
 DESCRIPTION="FreeBSD kernel sources"
 SLOT="${PVR}"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
 IUSE="symlink"
 
