@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.88 2012/01/02 02:11:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.89 2012/04/26 13:34:59 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> ed-1.6.ebuild:
+  keyword ~amd64-fbsd
 
 *ed-1.6 (02 Jan 2012)
 
