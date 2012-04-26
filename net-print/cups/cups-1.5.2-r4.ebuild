@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r3.ebuild,v 1.5 2012/04/26 12:15:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.1 2012/04/26 21:51:03 dilfridge Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit autotools eutils fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2 systemd
+inherit autotools eutils fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2
 
 MY_P=${P/_}
 MY_PV=${PV/_}
@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="acl avahi dbus debug +filters gnutls java +jpeg kerberos ldap pam perl
-	+png python slp +ssl static-libs systemd +threads +tiff usb X xinetd"
+	+png python slp +ssl static-libs +threads +tiff usb X xinetd"
 
 LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
 for X in ${LANGS} ; do
@@ -53,7 +53,6 @@ RDEPEND="
 		)
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
-	systemd? ( sys-apps/systemd )
 	tiff? ( >=media-libs/tiff-3.5.5:0 )
 	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
@@ -136,9 +135,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.5.2-threads.patch"
 	epatch "${FILESDIR}/${PN}-1.5.2-threads2.patch"
 
-	# systemd support
-	epatch "${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"
-
 	# revert ipp backend to 1.4 state, as ubuntu and debian
 	epatch "${DISTDIR}/${PN}-1.5.2-ipp-r8950.patch.bz2"
 
@@ -205,7 +201,6 @@ src_configure() {
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
 		--disable-dnssd \
-		$(use_with systemd systemdsystemunitdir "$(systemd_get_unitdir)") \
 		${myconf}
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that

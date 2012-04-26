@@ -1,6 +1,14 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.465 2012/04/26 12:15:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.466 2012/04/26 21:51:03 dilfridge Exp $
+
+*cups-1.5.2-r20 (26 Apr 2012)
+*cups-1.5.2-r4 (26 Apr 2012)
+
+  26 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> +cups-1.5.2-r20.ebuild,
+  +cups-1.5.2-r4.ebuild, -cups-1.5.2-r3.ebuild:
+  Copy -r3 unchanged to -r20; cleanse -r3 of all things systemd and make it -r4
+  for stabilization
 
   26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.5.2-r3.ebuild:
   Prefixy.
