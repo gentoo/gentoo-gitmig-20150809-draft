@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.76 2012/03/02 20:41:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.77 2012/04/26 22:22:04 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> check-0.9.8-r1.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> check-0.9.8-r1.ebuild:
   Marking check-0.9.8-r1 ppc64 for bug 392773
