@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/wcalc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/ChangeLog,v 1.14 2010/01/01 21:47:15 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/ChangeLog,v 1.15 2012/04/26 15:51:28 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> wcalc-2.2.1.ebuild,
+  -wcalc-2.3.1.ebuild, wcalc-2.4.ebuild, metadata.xml:
+  Move to EAPI=4
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> wcalc-2.4.ebuild:
   Transfer Prefix keywords

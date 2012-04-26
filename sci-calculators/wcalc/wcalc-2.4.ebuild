@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/wcalc-2.4.ebuild,v 1.3 2010/01/01 21:47:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/wcalc-2.4.ebuild,v 1.4 2012/04/26 15:51:28 jlec Exp $
 
-inherit eutils
+EAPI=4
 
 DESCRIPTION="A flexible command-line scientific calculator"
-HOMEPAGE="http://w-calc.sourceforge.net"
+HOMEPAGE="http://w-calc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/w-calc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -13,20 +13,20 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="readline"
 
-DEPEND="readline? ( sys-libs/readline )
+DEPEND="
+	dev-libs/gmp
 	dev-libs/mpfr
-	dev-libs/gmp"
+	readline? ( sys-libs/readline )"
+RDEPEND="${DEPEND}"
 
-src_compile() {
+src_configure() {
 	econf $(use_with readline)
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README || die
+	default
 
 	# Wcalc icons
-	newicon w.png wcalc.png || die
-	newicon Wred.png wcalc-red.png || die
+	newicon w.png wcalc.png
+	newicon Wred.png wcalc-red.png
 }
