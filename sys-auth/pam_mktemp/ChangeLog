@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mktemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.26 2012/03/09 14:30:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.27 2012/04/26 17:54:38 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> pam_mktemp-1.1.1.ebuild:
+  keyword ~amd64-fbsd
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> pam_mktemp-1.1.1.ebuild:
   Marking pam_mktemp-1.1.1 ppc64 for bug 397217
