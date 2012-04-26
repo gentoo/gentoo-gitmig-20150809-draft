@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.96 2012/01/31 16:05:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.97 2012/04/26 13:12:45 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> flex-2.5.35_p10.ebuild:
+  keyword ~amd64-fbsd
 
   31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> flex-2.5.35_p10.ebuild:
   ppc64 stable wrt #384221
