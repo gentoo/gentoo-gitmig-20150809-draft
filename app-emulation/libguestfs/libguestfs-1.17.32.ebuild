@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.17.32.ebuild,v 1.1 2012/04/22 14:59:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.17.32.ebuild,v 1.2 2012/04/26 18:17:43 maksbotan Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ COMMON_DEPEND="
 	dev-libs/libpcre
 	app-arch/cpio
 	dev-lang/perl
+	dev-util/gtk-doc
 	app-cdr/cdrkit
 	>=app-emulation/qemu-kvm-1.0[qemu_user_targets_x86_64,qemu_softmmu_targets_x86_64]
 	sys-apps/fakeroot
