@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.83 2012/04/26 13:02:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.84 2012/04/26 17:49:05 jer Exp $
+
+  26 Apr 2012; Jeroen Roovers <jer@gentoo.org> help2man-1.40.8.ebuild:
+  Stable for HPPA (bug #412903).
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> help2man-1.40.9.ebuild:
   keyword ~amd64-fbsd
