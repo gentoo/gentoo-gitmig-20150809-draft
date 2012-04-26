@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.228 2012/03/02 20:05:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.229 2012/04/26 17:11:48 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libxslt-1.1.26-r3.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> libxslt-1.1.26-r3.ebuild:
   ppc64 stable wrt #402861
