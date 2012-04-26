@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.35 2012/03/18 18:40:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.36 2012/04/26 14:06:14 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libelf-0.8.13-r1.ebuild:
+  keyword ~amd64-fbsd
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> libelf-0.8.13-r1.ebuild:
   sparc/x86 stable wrt #396893
