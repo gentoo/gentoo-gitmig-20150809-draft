@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.0.ebuild,v 1.2 2012/04/23 16:04:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-9.0.ebuild,v 1.3 2012/04/26 14:33:24 aballier Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit bsdmk freebsd flag-o-matic eutils
 
 DESCRIPTION="FreeBSD /usr/sbin tools"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2
