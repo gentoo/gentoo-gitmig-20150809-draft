@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.221 2012/04/26 21:31:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.222 2012/04/26 21:34:20 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> doxygen-1.8.0.ebuild:
+  keyword ~amd64-fbsd
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> doxygen-1.8.0.ebuild:
   fix build with BSD userland
