@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.0.4-r1.ebuild,v 1.2 2010/08/29 22:21:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.1.0.ebuild,v 1.1 2012/04/26 11:10:25 scarabeus Exp $
+
+EAPI="4"
 
 inherit multilib eutils
 
@@ -21,18 +23,16 @@ RDEPEND="sys-fs/e2fsprogs
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		include/builddefs.in \
 		|| die
-	epatch "${FILESDIR}"/${PN}-3.0.4-headers.patch
-	epatch "${FILESDIR}"/${P}-no-symlink.patch
+	epatch "${FILESDIR}"/${PN}-3.0.5-prompt-overflow.patch #335115
+	epatch "${FILESDIR}"/${PN}-3.0.4-no-symlink.patch #311881
 }
 
-src_compile() {
+src_configure() {
 	unset PLATFORM #184564
 	export OPTIMIZER=${CFLAGS}
 	export DEBUG=-DNDEBUG
@@ -40,12 +40,9 @@ src_compile() {
 	econf \
 		--libdir=/$(get_libdir) \
 		--libexecdir=/usr/$(get_libdir) \
-		--sbindir=/sbin \
-		|| die
-	emake || die
+		--sbindir=/sbin
 }
 
 src_install() {
-	emake DIST_ROOT="${D}" install || die
-	prepalldocs
+	emake DIST_ROOT="${D}" install
 }
