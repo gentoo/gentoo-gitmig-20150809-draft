@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.9 2011/09/25 19:10:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.10 2012/04/26 12:02:27 aballier Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
@@ -15,7 +15,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P="${PN/-utils}-${PV/_}"
 	SRC_URI="http://tukaani.org/xz/${MY_P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 	S=${WORKDIR}/${MY_P}
 	EXTRA_DEPEND=
 fi

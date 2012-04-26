@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/xz-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.41 2011/12/29 21:18:03 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.42 2012/04/26 12:02:27 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> xz-utils-5.0.3.ebuild,
+  xz-utils-9999.ebuild:
+  keyword ~amd64-fbsd
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> xz-utils-5.0.3.ebuild:
   Stable for ppc64; bug #379379
