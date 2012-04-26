@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.39 2012/04/26 15:37:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.40 2012/04/26 15:39:22 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -14,8 +14,6 @@
 
 # net-dns/hesiod
 sys-freebsd/freebsd-lib hesiod
-# sys-freebsd/freebsd-cddl
-sys-freebsd/freebsd-lib zfs
 
 # sys-power/iasl
 sys-freebsd/freebsd-usbin acpi
