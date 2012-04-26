@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19.ebuild,v 1.12 2012/02/20 08:08:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19.ebuild,v 1.13 2012/04/26 20:40:16 aballier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="jpeg python static-libs tiff zlib"
 
 RDEPEND="tiff? ( media-libs/tiff:0 )
