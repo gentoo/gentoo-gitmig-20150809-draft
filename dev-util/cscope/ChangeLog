@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.128 2012/03/02 23:06:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.129 2012/04/26 16:47:01 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> cscope-15.7a-r1.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Tim Harder <radhermit@gentoo.org> -cscope-15.7a.ebuild:
   Remove old.
