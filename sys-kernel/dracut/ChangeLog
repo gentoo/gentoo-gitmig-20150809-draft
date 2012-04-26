@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.57 2012/04/05 20:01:05 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.58 2012/04/26 06:30:45 aidecoe Exp $
+
+  26 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-018.ebuild:
+  Removed use of WITH_SWITCH_ROOT variables.
 
 *dracut-018 (05 Apr 2012)
 

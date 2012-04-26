@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018.ebuild,v 1.1 2012/04/05 20:01:05 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018.ebuild,v 1.2 2012/04/26 06:30:45 aidecoe Exp $
 
 EAPI=4
 
@@ -150,9 +150,7 @@ src_compile() {
 }
 
 src_install() {
-	emake WITH_SWITCH_ROOT=0 \
-		prefix=/usr sysconfdir=/etc DESTDIR="${D}" \
-		install
+	emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" install
 
 	local gen2conf
 
