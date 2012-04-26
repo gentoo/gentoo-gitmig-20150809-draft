@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmockery
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.9 2011/09/16 12:58:20 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.10 2012/04/26 11:55:55 scarabeus Exp $
+
+  26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> cmockery-0.1.2.ebuild:
+  Stable ppc wrt bug#382499.
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> cmockery-0.1.2.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
