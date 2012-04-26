@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.90 2012/04/22 18:33:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.91 2012/04/26 16:18:17 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> expect-5.45.ebuild:
+  keyword ~amd64-fbsd
 
   22 Apr 2012; Fabian Groffen <grobian@gentoo.org> expect-5.45.ebuild:
   Marked ~m68k-mint, bug #411483
