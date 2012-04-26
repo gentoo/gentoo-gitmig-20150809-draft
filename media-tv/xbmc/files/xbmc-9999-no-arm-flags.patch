@@ -11,6 +11,6 @@ targets.  let the toolchain and user CFLAGS control that.
    fi
 -elif test "$use_arch" = "arm"; then
 +elif false; then
-   CFLAGS="$CFLAGS -mfloat-abi=softfp -mno-apcs-stack-check"
-   CXXFLAGS="$CXXFLAGS -mfloat-abi=softfp -mno-apcs-stack-check"
-   FFMPEG_EXTRACFLAGS="-mfloat-abi=softfp"
+   CFLAGS="$CFLAGS -mno-apcs-stack-check"
+   CXXFLAGS="$CXXFLAGS -mno-apcs-stack-check"
+   FFMPEG_EXTRACFLAGS=""
