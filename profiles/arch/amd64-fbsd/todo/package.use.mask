@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.81 2012/04/26 18:59:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.82 2012/04/26 19:00:54 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -66,9 +66,6 @@ net-dns/libidn emacs
 
 # dev-lang/mono
 net-dns/libidn mono
-
-# dev-libs/cloog-ppl dev-libs/ppl
-sys-devel/gcc graphite
 
 # dev-lang/tk
 dev-lang/ruby tk
