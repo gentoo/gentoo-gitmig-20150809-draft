@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.76 2010/10/19 06:19:48 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.77 2012/04/26 12:16:46 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> mime-types-8.ebuild:
+  keyword ~amd64-fbsd
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> mime-types-5.ebuild,
   mime-types-7.ebuild:
