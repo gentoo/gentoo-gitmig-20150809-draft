@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.4.ebuild,v 1.6 2011/12/27 21:53:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.14.ebuild,v 1.1 2012/04/26 18:20:25 polynomial-c Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P=VirtualBox-${PV}
 	SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
-	S="${WORKDIR}/${MY_P}_OSE"
+	S="${WORKDIR}/${MY_P}"
 fi
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+additions alsa doc extensions headless java pam pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
@@ -48,7 +48,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 		media-libs/libsdl[X,video]
 	)
 	vnc? ( >=net-libs/libvncserver-0.9.7 )
-	java? ( >=virtual/jre-1.5 )"
+	java? ( virtual/jre:1.6 )"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.999
 	>=dev-lang/yasm-0.6.2
@@ -66,7 +66,7 @@ DEPEND="${RDEPEND}
 		dev-texlive/texlive-fontsrecommended
 		dev-texlive/texlive-fontsextra
 	)
-	java? ( >=virtual/jdk-1.5 )
+	java? ( virtual/jdk:1.6 )
 	dev-util/pkgconfig
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	!headless? ( x11-libs/libXinerama )
@@ -116,15 +116,6 @@ REQUIRED_USE="
 "
 
 pkg_setup() {
-	if built_with_use sys-devel/gcc hardened && gcc-config -c | grep -qv -E "hardenednopie|vanilla"; then
-		eerror "The PIE feature provided by the \"hardened\" compiler is incompatible with ${PF}."
-		eerror "You must use gcc-config to select a profile without this feature.  You may"
-		eerror "choose either \"hardenednopie\", \"hardenednopiessp\" or \"vanilla\" profile;"
-		eerror "however, \"hardenednopie\" is preferred because it gives the most hardening."
-		eerror "Remember to run \"source /etc/profile\" before continuing.  See bug #339914."
-		die
-	fi
-
 	if ! use headless && ! use qt4 ; then
 		einfo "No USE=\"qt4\" selected, this build will not include"
 		einfo "any Qt frontend."
@@ -168,9 +159,6 @@ src_prepare() {
 	# Don't build vboxpci.ko module (D'oh!)
 	epatch "${FILESDIR}"/${PN}-4.1.2-vboxpci-build.patch
 
-	# Fixed compilation with yasm-1.2.0 (bug #391189)
-	epatch "${FILESDIR}"/${PN}-4.1.6-yasm120-fix.patch
-
 	# Use PAM only when pam USE flag is enbaled (bug #376531)
 	if ! use pam ; then
 		elog "Disabling PAM removes the possibility to use the VRDP features."
@@ -184,6 +172,11 @@ src_prepare() {
 		sed "s:/usr/lib/jvm/java-6-sun:$(java-config -O):" \
 			-i "${S}"/Config.kmk || die
 		java-pkg-opt-2_src_prepare
+	fi
+
+	# Fix compile error on hardened bug 339914 (disable PIE)
+	if gcc-specs-pie ; then
+		epatch "${FILESDIR}"/virtualbox_nopie.patch
 	fi
 }
 
@@ -220,7 +213,7 @@ src_compile() {
 	# strip-flags
 
 	MAKE="kmk" emake \
-		VBOX_VERSION_STRING='$(VBOX_VERSION_MAJOR).$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD)'-Gentoo_ \
+		VBOX_VERSION_STRING='$(VBOX_VERSION_MAJOR).$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD)'_Gentoo_ \
 		TOOL_GCC3_CC="$(tc-getCC)" TOOL_GCC3_CXX="$(tc-getCXX)" \
 		TOOL_GCC3_AS="$(tc-getCC)" TOOL_GCC3_AR="$(tc-getAR)" \
 		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \
@@ -306,7 +299,14 @@ src_install() {
 			newmenu "${FILESDIR}"/${PN}-ose.desktop-2 ${PN}.desktop
 		fi
 
-		newicon	"${S}"/src/VBox/Frontends/VirtualBox/images/OSE/VirtualBox_32px.png ${PN}.png
+		pushd "${S}"/src/VBox/Resources/OSE &>/dev/null || die
+		for size in 16 20 32 40 48 64 128 ; do
+			insinto /usr/share/icons/hicolor/${size}x${size}/apps
+			newins ${PN}-${size}px.png ${PN}.png
+		done
+		insinto /usr/share/pixmaps
+		newins ${PN}-48px.png ${PN}.png
+		popd &>/dev/null || die
 	else
 		doins VBoxHeadless || die
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxHeadless
@@ -314,6 +314,7 @@ src_install() {
 		pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxHeadless
 	fi
 
+	insinto /usr/$(get_libdir)/${PN}
 	# Install EFI Firmware files (bug #320757)
 	pushd "${S}"/src/VBox/Devices/EFI/FirmwareBin &>/dev/null || die
 	for fwfile in VBoxEFI{32,64}.fd ; do

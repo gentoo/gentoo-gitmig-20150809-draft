@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.107 2012/04/24 17:06:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.108 2012/04/26 18:20:25 polynomial-c Exp $
+
+*virtualbox-4.1.14 (26 Apr 2012)
+
+  26 Apr 2012; Lars Wendler <polynomial-c@gentoo.org> -virtualbox-4.1.4.ebuild,
+  -virtualbox-4.1.8.ebuild, -virtualbox-4.1.8-r1.ebuild,
+  -virtualbox-4.1.10.ebuild, +virtualbox-4.1.14.ebuild:
+  Version bump. Removed old.
 
   24 Apr 2012; Agostino Sarubbo <ago@gentoo.org> virtualbox-4.1.12.ebuild:
   Stable for amd64, wrt bug #412565

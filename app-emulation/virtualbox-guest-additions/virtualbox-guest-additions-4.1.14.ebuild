@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.8.ebuild,v 1.3 2012/04/09 12:06:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.14.ebuild,v 1.1 2012/04/26 18:22:41 polynomial-c Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X"
 
 RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
@@ -43,7 +43,7 @@ BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxguest(misc:${WORKDIR}/vboxguest:${WORKDIR}/vboxguest)
 			vboxsf(misc:${WORKDIR}/vboxsf:${WORKDIR}/vboxsf)"
 
-S="${WORKDIR}/${MY_P}_OSE"
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 		linux-mod_pkg_setup
