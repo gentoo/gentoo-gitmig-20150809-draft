@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpthread-stubs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.24 2011/08/20 15:44:16 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.25 2012/04/26 18:46:12 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  libpthread-stubs-0.3.ebuild:
+  keyword ~amd64-fbsd
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> libpthread-stubs-0.3.ebuild:
   Stable for HPPA (bug #371857).
