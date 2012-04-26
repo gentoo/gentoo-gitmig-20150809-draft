@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.1 2012/02/23 03:47:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.2 2012/04/26 04:49:55 flameeyes Exp $
 
 EAPI=4
 
@@ -53,7 +53,7 @@ src_prepare() {
 	# add '+' prefix to lines using $(MAKE_RECUR),
 	# making sure '+' comes after leading whitespace
 	sed -i -e '/$(MAKE_RECUR)/ s/\([[:blank:]]\)/\1+/' makefile.in || \
-	    die "failed to update makefile.in"
+		die "failed to update makefile.in"
 
 	# fix configure for openssl compiled with kerberos (bug #267749)
 	epatch "${FILESDIR}/lynx-2.8.7-configure-openssl.patch"
@@ -96,6 +96,11 @@ src_configure() {
 		$(use_enable unicode japanese-utf8) \
 		$(use_with bzip2 bzlib) \
 		$myargs
+}
+
+src_compile() {
+	# see bug #403905
+	emake -j1
 }
 
 src_install() {

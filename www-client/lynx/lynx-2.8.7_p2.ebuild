@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.7_p2.ebuild,v 1.1 2011/03/07 14:00:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.7_p2.ebuild,v 1.2 2012/04/26 04:49:55 flameeyes Exp $
 
 EAPI="2"
 
@@ -96,6 +96,11 @@ src_configure() {
 		$(use_enable unicode japanese-utf8) \
 		$(use_with bzip2 bzlib) \
 		${myargs}
+}
+
+src_compile() {
+	# see bug #403905
+	emake -j1 || die
 }
 
 src_install() {

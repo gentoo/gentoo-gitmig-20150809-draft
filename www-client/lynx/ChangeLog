@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.114 2012/02/23 03:51:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.115 2012/04/26 04:49:55 flameeyes Exp $
+
+  26 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> lynx-2.8.7_p2.ebuild,
+  lynx-2.8.8_pre12.ebuild:
+  Force serial building due to bug #403905, hoping for a fix.
 
   23 Feb 2012; Tim Harder <radhermit@gentoo.org>
   -files/lynx-2.8.6-CVE-2008-4690.patch, -lynx-2.8.8_pre5.ebuild,
