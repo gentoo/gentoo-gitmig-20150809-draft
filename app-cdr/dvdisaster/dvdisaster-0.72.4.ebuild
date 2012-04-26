@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.4.ebuild,v 1.1 2012/04/26 20:13:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.4.ebuild,v 1.2 2012/04/26 20:21:40 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.orig.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug"
+IUSE="debug nls"
 
 dvdi_langs="cs de it pt_BR ru sv"
 for dvdi_lang in ${dvdi_langs}; do
@@ -20,16 +20,18 @@ for dvdi_lang in ${dvdi_langs}; do
 done
 unset dvdi_lang
 
-RDEPEND=">=dev-libs/glib-2.20
+RDEPEND="app-arch/bzip2
+	>=dev-libs/glib-2.20
 	media-libs/libpng:0
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	virtual/os-headers" # os-headers -> linux.h
+	virtual/os-headers"
 
 src_configure() {
-	# --with-nls=$(usex nls) fails -> last tested 0.72.4
+	use nls && dvdi_makeopts=( -j1 )
+
 	./configure \
 		--prefix=/usr \
 		--bindir=/usr/bin \
@@ -38,8 +40,12 @@ src_configure() {
 		--docsubdir=${PF} \
 		--localedir=/usr/share/locale \
 		--buildroot="${D}" \
-		--with-nls=no \
+		--with-nls=$(usex nls) \
 		--with-memdebug=$(usex debug) || die
+}
+
+src_compile() {
+	emake "${dvdi_makeopts[@]}"
 }
 
 src_install() {
