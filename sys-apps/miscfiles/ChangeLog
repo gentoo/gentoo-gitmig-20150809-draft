@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/miscfiles
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/ChangeLog,v 1.39 2012/04/10 19:27:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/ChangeLog,v 1.40 2012/04/26 12:33:17 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> miscfiles-1.5-r1.ebuild:
+  keyword ~amd64-fbsd
 
 *miscfiles-1.5-r1 (10 Apr 2012)
 
