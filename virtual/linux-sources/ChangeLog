@@ -1,6 +1,9 @@
 # ChangeLog for virtual/linux-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.11 2012/01/07 20:32:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.12 2012/04/26 13:00:58 psomas Exp $
+
+  26 Apr 2012; <psomas@gentoo.org> linux-sources-0.ebuild:
+  mm-sources masked for removal wrt #412189. Remove them from RDEPEND
 
   07 Jan 2012; Anthony G. Basile <blueness@gentoo.org> linux-sources-0.ebuild:
   Added sys-kernel/rsbac-sources to the list of providers

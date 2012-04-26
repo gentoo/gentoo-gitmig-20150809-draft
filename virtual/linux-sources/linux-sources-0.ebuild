@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-0.ebuild,v 1.3 2012/01/07 20:32:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-0.ebuild,v 1.4 2012/04/26 13:00:58 psomas Exp $
 
 EAPI=2
 
@@ -23,7 +23,6 @@ RDEPEND="|| (
 		sys-kernel/git-sources
 		sys-kernel/hardened-sources
 		sys-kernel/mips-sources
-		sys-kernel/mm-sources
 		sys-kernel/openvz-sources
 		sys-kernel/pf-sources
 		sys-kernel/rsbac-sources
