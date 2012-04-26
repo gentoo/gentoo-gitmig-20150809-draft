@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.168 2012/04/01 15:24:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.169 2012/04/26 19:47:53 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  +files/tcl-8.5.9-gentoo-fbsd.patch, tk-8.5.11.ebuild:
+  port tcl fbsd patch to let it build sanely on FreeBSD: the patch is for
+  tcl.m4 and tk bundles it own unfixed version...
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> tk-8.5.10-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #406607
