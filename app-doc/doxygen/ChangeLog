@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.220 2012/04/13 17:39:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.221 2012/04/26 21:31:31 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> doxygen-1.8.0.ebuild:
+  fix build with BSD userland
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> doxygen-1.7.5.1.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.
