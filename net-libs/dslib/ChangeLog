@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/dslib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/dslib/ChangeLog,v 1.9 2012/03/21 21:36:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/dslib/ChangeLog,v 1.10 2012/04/26 08:47:02 scarabeus Exp $
+
+  26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -dslib-1.7-r2.ebuild,
+  dslib-2.0.2.ebuild:
+  Stabilise on amd64 and x86.
 
 *dslib-2.0.2 (21 Mar 2012)
 
