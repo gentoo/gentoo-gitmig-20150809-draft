@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.2.2.ebuild,v 1.14 2012/04/26 11:53:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.2.2.ebuild,v 1.15 2012/04/26 12:25:32 scarabeus Exp $
 
 EAPI=4
 
@@ -208,6 +208,8 @@ REQUIRED_USE="
 "
 
 S="${WORKDIR}/${PN}-core-${PV}"
+
+RESTRICT="test"
 
 pkg_pretend() {
 	local pgslot
