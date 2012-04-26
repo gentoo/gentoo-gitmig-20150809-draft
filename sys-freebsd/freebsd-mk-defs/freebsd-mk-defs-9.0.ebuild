@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-9.0.ebuild,v 1.1 2012/01/16 16:37:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-9.0.ebuild,v 1.2 2012/04/26 12:49:19 aballier Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit bsdmk freebsd
 
 DESCRIPTION="Makefiles definitions used for building and installing libraries and system files"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
 IUSE="userland_GNU"
 
