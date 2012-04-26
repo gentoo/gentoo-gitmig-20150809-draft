@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xml-dtd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.87 2012/04/26 17:25:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.88 2012/04/26 18:27:47 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  docbook-xml-dtd-4.1.2-r6.ebuild, docbook-xml-dtd-4.3-r1.ebuild:
+  keyword ~amd64-fbsd
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   docbook-xml-dtd-4.5-r1.ebuild:
