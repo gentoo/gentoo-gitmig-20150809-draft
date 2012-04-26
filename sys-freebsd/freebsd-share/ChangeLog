@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.43 2012/03/30 16:01:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.44 2012/04/26 14:40:59 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-share-9.0.ebuild:
+  keyword ~amd64-fbsd
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org> freebsd-share-9.0.ebuild,
   +files/freebsd-share-9.0-gentoowaydir.patch:

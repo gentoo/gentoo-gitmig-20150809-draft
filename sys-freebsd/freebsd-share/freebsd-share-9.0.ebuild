@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-9.0.ebuild,v 1.2 2012/03/30 16:01:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-9.0.ebuild,v 1.3 2012/04/26 14:40:59 aballier Exp $
 
 inherit bsdmk freebsd
 
 DESCRIPTION="FreeBSD shared tools/files"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
 IUSE="doc isdn"
 
