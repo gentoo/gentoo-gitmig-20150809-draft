@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.44 2012/04/26 16:13:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.45 2012/04/26 16:16:07 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -108,9 +108,6 @@ sys-devel/binutils test
 sys-devel/gcc test
 # dev-libs/cloog-ppl dev-libs/ppl
 sys-devel/gcc graphite
-
-# dev-lang/tcl
-sys-libs/db tcl test
 
 # dev-lang/tk dev-tcltk/blt
 dev-lang/python tk

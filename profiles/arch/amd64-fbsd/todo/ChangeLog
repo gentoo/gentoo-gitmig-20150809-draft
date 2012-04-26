@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.38 2012/04/26 16:13:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.39 2012/04/26 16:16:07 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  unmask useflags depending on tcl
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   unmask useflags depending on polarssl
