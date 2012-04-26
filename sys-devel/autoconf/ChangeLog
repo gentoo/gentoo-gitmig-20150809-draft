@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.168 2012/04/26 13:06:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.169 2012/04/26 17:57:01 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> autoconf-2.13.ebuild:
+  keyword ~amd64-fbsd
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> autoconf-2.69.ebuild,
   autoconf-9999.ebuild:
