@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.56 2012/04/01 06:06:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.57 2012/04/26 22:37:06 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> opensp-1.5.2-r3.ebuild:
+  keyword ~amd64-fbsd
 
   01 Apr 2012; Mike Gilbert <floppym@gentoo.org> opensp-1.5.2-r3.ebuild:
   Depend on app-text/openjade for tests. Bug 290422.
