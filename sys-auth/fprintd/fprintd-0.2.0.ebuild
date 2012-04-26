@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/fprintd-0.2.0.ebuild,v 1.2 2011/05/02 14:50:14 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/fprintd-0.2.0.ebuild,v 1.3 2012/04/26 00:01:03 jer Exp $
 
 EAPI=3
 
 inherit autotools toolchain-funcs versionator
 
-DESCRIPTION="D-Bus to offer libfprint functionality"
+DESCRIPTION="D-Bus service to offer libfprint functionality"
 HOMEPAGE="http://cgit.freedesktop.org/libfprint/fprintd/"
 MY_PV="V_$(replace_all_version_separators _)"
 SRC_URI="http://cgit.freedesktop.org/libfprint/${PN}/snapshot/${MY_PV}.tar.bz2"
