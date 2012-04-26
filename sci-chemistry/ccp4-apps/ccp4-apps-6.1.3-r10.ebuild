@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.8 2012/04/14 09:49:05 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.9 2012/04/26 15:46:31 jlec Exp $
 
 EAPI=3
 
@@ -268,7 +268,7 @@ src_configure() {
 		--disable-mosflm \
 		--disable-mrbump \
 		--tmpdir="${TMPDIR}" \
-		${GENTOO_OSNAME} || die "econf failed"
+		${GENTOO_OSNAME} || die "configure failed"
 
 	# We do this manually, since disabling the clipper libraries also
 	# disables the clipper programs
