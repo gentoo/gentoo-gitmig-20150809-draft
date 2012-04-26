@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.12 2012/04/26 13:45:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.13 2012/04/26 13:52:54 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -19,6 +19,21 @@ app-arch/libarchive nettle
 
 # app-vim/pam-syntax
 sys-auth/openpam vim-syntax
+
+# sys-auth/pam_ssh
+sys-auth/pambase pam_ssh
+
+# gnome-base/gnome-keyring
+sys-auth/pambase gnome-keyring
+
+# sys-auth/pam_passwdqc
+sys-auth/pambase passwdqc
+
+# sys-auth/pam_mktemp
+sys-auth/pambase mktemp
+
+# sys-auth/pam_krb5
+sys-auth/pambase pam_krb5
 
 # dev-lang/python
 dev-libs/libxml2 python
