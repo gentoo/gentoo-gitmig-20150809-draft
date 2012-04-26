@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.1.1.ebuild,v 1.2 2012/01/09 13:06:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.2.ebuild,v 1.1 2012/04/26 08:37:52 xarthisius Exp $
 
 EAPI=4
 
@@ -24,6 +24,7 @@ CDEPEND="dev-libs/libev
 	x11-libs/startup-notification
 	x11-libs/xcb-util"
 DEPEND="${CDEPEND}
+	app-text/xmlto
 	app-text/asciidoc
 	dev-util/pkgconfig
 	sys-devel/flex
@@ -42,10 +43,17 @@ src_prepare() {
 	sed -i common.mk \
 		-e "/DEBUG=/ s/1/0/" \
 		-e '/O2\|reorder\-blocks\|SILENT/d' || die
+
+	cat <<- EOF > "${T}"/i3wm
+		#!/bin/sh
+		exec /usr/bin/i3
+	EOF
 }
 
 src_install() {
 	default
 	dohtml -r docs/*
 	doman i3bar/doc/i3bar.1 man/*.1
+	exeinto /etc/X11/Sessions
+	doexe "${T}"/i3wm
 }
