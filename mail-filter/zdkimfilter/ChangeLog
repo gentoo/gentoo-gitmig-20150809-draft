@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/zdkimfilter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/zdkimfilter/ChangeLog,v 1.5 2011/07/20 14:30:53 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/zdkimfilter/ChangeLog,v 1.6 2012/04/26 08:03:55 eras Exp $
+
+  26 Apr 2012; Eray Aslan <eras@gentoo.org> -zdkimfilter-0.4.ebuild:
+  remove old
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
