@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.23 2012/02/10 03:09:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.24 2012/04/26 11:01:24 ago Exp $
+
+  26 Apr 2012; Agostino Sarubbo <ago@gentoo.org> ldns-1.6.12.ebuild:
+  Stable for amd64, wrt bug #411885
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> ldns-1.6.11.ebuild,
   ldns-1.6.12.ebuild:
