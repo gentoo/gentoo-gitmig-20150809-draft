@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.869 2012/04/15 17:26:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.870 2012/04/26 14:40:16 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gcc-4.5.3-r2.ebuild:
+  keyword ~amd64-fbsd
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.5.3-r2.ebuild:
   Fix from upstream for building gcj with glibc-2.15+.
