@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.576 2012/04/12 13:41:35 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.577 2012/04/26 14:57:17 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> python-2.7.3.ebuild:
+  keyword ~amd64-fbsd
 
 *python-2.7.3 (12 Apr 2012)
 
