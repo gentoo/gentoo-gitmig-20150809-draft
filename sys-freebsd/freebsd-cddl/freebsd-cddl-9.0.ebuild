@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.3 2012/03/31 03:56:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.4 2012/04/26 15:38:46 aballier Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit bsdmk freebsd toolchain-funcs multilib
 
 DESCRIPTION="FreeBSD CDDL (opensolaris/zfs) extra software"
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~x86-fbsd"
 
 IUSE="build"
 LICENSE="CDDL"
