@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.67 2012/04/26 01:39:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.68 2012/04/26 09:10:53 ago Exp $
+
+  26 Apr 2012; Agostino Sarubbo <ago@gentoo.org> libnl-3.2.7.ebuild:
+  Stable for amd64, wrt bug #413583
 
   26 Apr 2012; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.3.ebuild,
   -libnl-3.2.6.ebuild:
