@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/qalculate-bases
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.16 2011/03/02 13:28:37 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.17 2012/04/26 16:01:20 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> qalculate-bases-0.9.4-r2.ebuild:
+  Move to EAPI=4
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> qalculate-bases-0.9.4-r2.ebuild:
   Correct Slots for gtk 3 introduction to tree
