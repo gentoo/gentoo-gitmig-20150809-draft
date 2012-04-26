@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.2 2012/01/07 15:58:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.3 2012/04/26 15:28:25 jlec Exp $
 
 EAPI=3
 
@@ -207,7 +207,7 @@ src_configure() {
 		--tmpdir="${TMPDIR}" \
 		--bindir="${EPREFIX}/usr/libexec/ccp4/bin/" \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
-		${GENTOO_OSNAME} || die "econf failed"
+		${GENTOO_OSNAME} || die "configure failed"
 }
 
 src_compile() {
