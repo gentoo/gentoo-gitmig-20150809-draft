@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20111218.ebuild,v 1.1 2012/04/22 14:04:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20111218.ebuild,v 1.2 2012/04/26 13:53:41 aballier Exp $
 
 EAPI="2"
 # https://bugs.gentoo.org/show_bug.cgi?id=318121
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="debug vim-syntax"
 
 RDEPEND="!sys-libs/pam"

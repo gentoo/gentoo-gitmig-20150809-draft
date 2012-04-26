@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20101024-r2.ebuild,v 1.2 2012/01/28 08:05:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20101024-r2.ebuild,v 1.3 2012/04/26 13:53:40 aballier Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~flameeyes/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="debug cracklib passwdqc consolekit gnome-keyring selinux mktemp pam_ssh +sha512 pam_krb5 minimal"
 RESTRICT="binchecks"
 
