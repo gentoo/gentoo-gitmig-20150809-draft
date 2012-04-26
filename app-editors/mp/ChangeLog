@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.83 2012/04/25 20:19:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.84 2012/04/26 09:09:56 ago Exp $
+
+  26 Apr 2012; Agostino Sarubbo <ago@gentoo.org> mp-5.2.1.ebuild:
+  Stable for amd64, wrt bug #413567
 
   25 Apr 2012; Jeroen Roovers <jer@gentoo.org> -mp-5.1.1.ebuild,
   -files/mp-5.1.1-asneeded.patch, -files/mp-5.1.1-prll.patch, -mp-5.1.3.ebuild,
