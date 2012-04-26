@@ -1,28 +1,31 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.6.ebuild,v 1.9 2012/02/05 17:40:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.6.ebuild,v 1.10 2012/04/26 15:23:43 jlec Exp $
 
 inherit flag-o-matic
 
-# we need this to prevent itpp's specialized debug lib
-# (built with USE="debug" set) from being stripped
-RESTRICT="strip"
-
-DESCRIPTION="C++ library of mathematical, signal processing and communication classes and functions"
-LICENSE="GPL-2"
+DESCRIPTION="C++ library of mathematical, signal processing and communication"
 HOMEPAGE="http://itpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
+LICENSE="GPL-3"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="blas debug doc fftw lapack minimal"
 
-RDEPEND="!minimal? ( fftw? ( >=sci-libs/fftw-3.0.0 ) )
-		blas? ( virtual/blas
-				lapack? ( virtual/lapack ) )"
+RDEPEND="
+	!minimal? ( fftw? ( >=sci-libs/fftw-3.0.0 ) )
+	blas? (
+		virtual/blas
+		lapack? ( virtual/lapack ) )"
 DEPEND="${RDEPEND}
-		doc? ( app-doc/doxygen
-				virtual/latex-base )"
+	doc? (
+		app-doc/doxygen
+		virtual/latex-base )"
+
+# we need this to prevent itpp's specialized debug lib
+# (built with USE="debug" set) from being stripped
+RESTRICT="strip"
 
 pkg_setup() {
 	# lapack can only be used in conjunction with blas
@@ -73,8 +76,7 @@ src_compile() {
 		"${blas_conf}" \
 		"${lapack_conf}" \
 		"${fftw_conf}" \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 	emake || die "emake failed"
 }
 

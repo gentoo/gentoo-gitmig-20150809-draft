@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.109 2012/03/08 23:09:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.110 2012/04/26 15:23:43 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> itpp-4.0.6.ebuild, metadata.xml:
+  Drop unnessecary die, add LICENSE
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> itpp-4.2-r1.ebuild:
   Marking itpp-4.2-r1 ppc64 for bug 394037
