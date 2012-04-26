@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.179 2012/04/14 03:27:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.180 2012/04/26 13:12:28 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> readline-6.2_p1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> readline-6.2_p1-r1.ebuild:
   Add ~amd64-linux and ~x86-linux keywords.
