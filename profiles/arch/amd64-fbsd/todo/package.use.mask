@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.109 2012/04/26 21:42:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.110 2012/04/26 22:05:49 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -30,6 +30,7 @@ net-libs/gnutls test
 
 # dev-util/gtk-doc
 net-libs/gnutls doc
+x11-libs/cairo doc
 
 # net-libs/axTLS
 net-misc/curl curl_ssl_axtls
@@ -110,6 +111,7 @@ media-fonts/dejavu fontforge
 dev-util/cmake qt4
 app-text/poppler qt4
 app-doc/doxygen qt4
+x11-libs/cairo qt4
 
 # x11-base/xorg-server[xvfb]
 # x11-apps/xhost
@@ -145,6 +147,9 @@ app-text/ghostscript-gpl dbus
 # virtual/opengl
 # media-libs/freeglut
 media-libs/jasper opengl
+
+# virtual/opengl
+x11-libs/cairo opengl
 
 # app-text/texlive[extra]
 app-doc/doxygen latex
