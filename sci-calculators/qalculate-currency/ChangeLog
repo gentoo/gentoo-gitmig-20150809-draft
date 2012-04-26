@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-currency
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/ChangeLog,v 1.15 2011/03/02 13:30:09 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/ChangeLog,v 1.16 2012/04/26 15:59:35 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org>
+  qalculate-currency-0.9.4-r2.ebuild:
+  Move to EAPI=4
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org>
   qalculate-currency-0.9.4-r2.ebuild:
