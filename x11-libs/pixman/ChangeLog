@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.128 2012/03/14 18:06:52 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.129 2012/04/26 20:52:25 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> pixman-0.24.4.ebuild:
+  keyword ~amd64-fbsd
 
   14 Mar 2012; Matt Turner <mattst88@gentoo.org> pixman-0.24.4.ebuild:
   Drop code to disable sse2 if <gcc-4.2 or if MMX is disabled.
