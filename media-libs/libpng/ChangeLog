@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.365 2012/04/17 21:21:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.366 2012/04/26 20:14:33 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libpng-1.5.10.ebuild:
+  keyword ~amd64-fbsd
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> libpng-1.5.10.ebuild:
   Marking libpng-1.5.10 ppc64 for bug 410153
