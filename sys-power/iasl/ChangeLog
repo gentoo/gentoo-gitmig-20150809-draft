@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/iasl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.37 2011/12/25 22:45:59 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.38 2012/04/26 16:38:16 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> iasl-20111123.ebuild:
+  keyword ~amd64-fbsd
 
   25 Dec 2011; Robin H. Johnson <robbat2@gentoo.org> iasl-20080514.ebuild,
   iasl-20080701.ebuild, iasl-20090123.ebuild, iasl-20090521.ebuild,
