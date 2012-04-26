@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-9.0.ebuild,v 1.1 2012/01/16 16:37:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-9.0.ebuild,v 1.2 2012/04/26 14:20:07 aballier Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit bsdmk freebsd pam
 
 DESCRIPTION="FreeBSD libexec things"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
 SRC_URI="mirror://gentoo/${LIBEXEC}.tar.bz2
 	mirror://gentoo/${UBIN}.tar.bz2

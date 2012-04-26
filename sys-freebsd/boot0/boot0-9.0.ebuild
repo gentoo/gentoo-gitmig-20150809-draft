@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-9.0.ebuild,v 1.2 2012/04/25 16:18:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-9.0.ebuild,v 1.3 2012/04/26 14:25:41 aballier Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit bsdmk freebsd flag-o-matic
 
 DESCRIPTION="FreeBSD's bootloader"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
 IUSE="bzip2 ieee1394 tftp zfs"
 

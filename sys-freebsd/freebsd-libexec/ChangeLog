@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.47 2012/03/30 15:46:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.48 2012/04/26 14:20:07 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-libexec-9.0.ebuild:
+  keyword ~amd64-fbsd
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org>
   -freebsd-libexec-9.0_rc1.ebuild, -freebsd-libexec-9.0_rc2.ebuild,

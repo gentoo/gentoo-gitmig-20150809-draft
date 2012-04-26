@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-9.0.ebuild,v 1.2 2012/04/23 16:02:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-9.0.ebuild,v 1.3 2012/04/26 14:24:43 aballier Exp $
 
 EAPI=2
 
 inherit bsdmk freebsd
 
 DESCRIPTION="FreeBSD sbin utils"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
 
 SRC_URI="mirror://gentoo/${SBIN}.tar.bz2
