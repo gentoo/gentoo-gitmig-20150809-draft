@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.4.ebuild,v 1.5 2012/01/19 14:24:29 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.14.ebuild,v 1.1 2012/04/26 18:22:05 polynomial-c Exp $
 
 EAPI=2
 
-inherit eutils linux-mod multilib python versionator
+inherit eutils linux-mod multilib python versionator toolchain-funcs
 
 MY_P=VirtualBox-${PV}
 DESCRIPTION="VirtualBox video driver"
@@ -13,7 +13,7 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="dri"
 
 RDEPEND="x11-base/xorg-server[-minimal]
@@ -42,7 +42,7 @@ BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxvideo(misc:${WORKDIR}/vboxvideo_drm:${WORKDIR}/vboxvideo_drm)"
 
-S="${WORKDIR}/${MY_P}_OSE"
+S="${WORKDIR}/${MY_P}"
 
 QA_TEXTRELS_x86="usr/lib/VBoxOGL.so"
 
@@ -80,6 +80,11 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-3.2.8-mesa-check.patch" \
 			"${FILESDIR}/${PN}-4-makeself-check.patch" \
 			"${FILESDIR}/${PN}-4-mkisofs-check.patch"
+
+		# Patch to link with lazy on hardened #394757
+		if gcc-specs-now ; then
+			epatch "${FILESDIR}/${PN}-link-lazy.patch"
+		fi
 }
 
 src_configure() {
@@ -119,8 +124,11 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/drivers
 
+		# xorg-server-1.12.x
+		if has_version ">=x11-base/xorg-server-1.12" ; then
+				newins vboxvideo_drv_112.so vboxvideo_drv.so
 		# xorg-server-1.11.x
-		if has_version ">=x11-base/xorg-server-1.11" ; then
+		elif has_version ">=x11-base/xorg-server-1.11" ; then
 				newins vboxvideo_drv_111.so vboxvideo_drv.so
 		# xorg-server-1.10.x
 		elif has_version ">=x11-base/xorg-server-1.10" ; then
