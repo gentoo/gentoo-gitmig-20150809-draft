@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.260 2012/04/17 19:43:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.261 2012/04/26 22:19:18 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gentoolkit-0.3.0.6.ebuild:
+  keyword ~amd64-fbsd
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> gentoolkit-0.3.0.5.ebuild:
   Marking gentoolkit-0.3.0.5 ppc64 for bug 411479
