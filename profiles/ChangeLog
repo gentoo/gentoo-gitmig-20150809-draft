@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6469 2012/04/25 19:26:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6470 2012/04/26 12:56:22 psomas Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Apr 2012; <psomas@gentoo.org> package.mask:
+  Mask sys-kernel/mm-sources for removal wrt #412189
 
   25 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +hardened/linux/powerpc/ppc64/32bit-userland/package.mask,
