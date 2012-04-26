@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.445 2012/04/26 02:12:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.446 2012/04/26 03:24:24 vapier Exp $
+
+  26 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.1a-hmac-ia32cap.patch, openssl-1.0.1a.ebuild:
+  Add fix from upstream for building on non-x86 arches #413559 by Petr Pisar.
 
 *openssl-0.9.8w (24 Apr 2012)
 
