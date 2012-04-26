@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TimeDate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.38 2012/04/23 21:37:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.39 2012/04/26 01:42:31 jer Exp $
+
+  26 Apr 2012; Jeroen Roovers <jer@gentoo.org> TimeDate-1.200.0.ebuild:
+  Stable for HPPA (bug #400247).
 
   23 Apr 2012; Brent Baude <ranger@gentoo.org> TimeDate-1.200.0.ebuild:
   Marking TimeDate-1.200.0 ppc64 for bug 400247
