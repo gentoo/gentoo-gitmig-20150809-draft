@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.166 2012/02/29 02:18:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.167 2012/04/26 14:29:58 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libpcap-1.2.1.ebuild:
+  keyword ~amd64-fbsd
 
   29 Feb 2012; Jeroen Roovers <jer@gentoo.org> -libpcap-1.1.1.ebuild:
   Old.
