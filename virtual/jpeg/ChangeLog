@@ -1,6 +1,12 @@
 # ChangeLog for virtual/jpeg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.5 2011/04/27 18:03:05 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.6 2012/04/26 13:05:01 ssuominen Exp $
+
+  26 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> jpeg-0.ebuild:
+  Remove media-libs/jpeg:0 as a valid selection from everywhere (except prefix)
+  wrt #413555. This is because libjpeg-turbo is only forward compatible and
+  switching back to IJG's jpeg after system is built using libjpeg-turbo will
+  break.
 
   27 Apr 2011; Fabian Groffen <grobian@gentoo.org> jpeg-0.ebuild:
   Marked ~m68k-mint, bug #364787
