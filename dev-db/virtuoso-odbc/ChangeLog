@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/virtuoso-odbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.25 2012/01/13 19:59:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.26 2012/04/26 09:28:09 johu Exp $
+
+  26 Apr 2012; Johannes Huber <johu@gentoo.org> -virtuoso-odbc-6.1.2.ebuild:
+  Remove old.
 
   13 Jan 2012; Johannes Huber <johu@gentoo.org> virtuoso-odbc-6.1.4.ebuild:
   Revert x86, wrong version marked stable see bug #375171.
