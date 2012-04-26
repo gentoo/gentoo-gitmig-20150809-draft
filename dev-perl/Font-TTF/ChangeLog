@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-TTF
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.33 2012/03/31 07:19:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.34 2012/04/26 20:00:16 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> Font-TTF-0.480.0.ebuild:
+  keyword ~amd64-fbsd
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Font-TTF-0.45.ebuild:
   Cleanup
