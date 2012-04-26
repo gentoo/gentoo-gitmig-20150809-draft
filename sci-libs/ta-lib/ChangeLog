@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ta-lib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ChangeLog,v 1.7 2010/07/17 11:04:17 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ta-lib/ChangeLog,v 1.8 2012/04/26 15:09:46 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> ta-lib-0.4.0.ebuild,
+  files/ta-lib-0.4.0-asneeded.patch, metadata.xml:
+  Move to EAPI=4, handle static-libs, use autotools-utils.eclass
 
   17 Jul 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Fix metadata.xml. maintainer-needed is not a herd
