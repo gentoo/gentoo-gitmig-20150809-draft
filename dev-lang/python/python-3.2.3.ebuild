@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.3.ebuild,v 1.2 2012/04/26 22:25:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.3.ebuild,v 1.3 2012/04/26 22:32:58 floppym Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -178,7 +178,7 @@ src_configure() {
 src_compile() {
 	emake CPPFLAGS="" CFLAGS="" LDFLAGS="" || die "emake failed"
 
-	pax-mark m libpython${SLOT}.so.1.0 python
+	pax-mark m python
 }
 
 src_test() {
