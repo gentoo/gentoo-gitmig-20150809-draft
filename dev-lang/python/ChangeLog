@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.579 2012/04/26 16:31:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.580 2012/04/26 22:25:16 floppym Exp $
+
+  26 Apr 2012; Mike Gilbert <floppym@gentoo.org> python-2.6.8.ebuild,
+  python-2.7.3-r1.ebuild, python-3.1.5.ebuild, python-3.2.3.ebuild:
+  Re-add dependency on sys-apps/paxctl due to bug 413671.
 
 *python-3.1.5 (26 Apr 2012)
 *python-2.7.3-r1 (26 Apr 2012)
