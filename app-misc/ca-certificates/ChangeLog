@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.66 2012/01/25 05:17:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.67 2012/04/26 13:57:53 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  ca-certificates-20111025.ebuild:
+  keyword ~amd64-fbsd
 
   25 Jan 2012; Mike Frysinger <vapier@gentoo.org>
   ca-certificates-20111025.ebuild:
