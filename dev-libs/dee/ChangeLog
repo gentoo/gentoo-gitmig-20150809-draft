@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.3 2012/04/24 05:38:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.4 2012/04/26 13:53:55 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> dee-1.0.10.ebuild,
+  +files/dee-1.0.10-gcc-4.5.patch:
+  Added patch for gcc-4.5, #413345 and
+  https://bugs.launchpad.net/dee/+bug/988443
 
   24 Apr 2012; Justin Lecher <jlec@gentoo.org> Manifest:
   Fix digests
