@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.83 2012/04/26 02:08:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.84 2012/04/26 11:03:20 ago Exp $
+
+  26 Apr 2012; Agostino Sarubbo <ago@gentoo.org> DateManip-6.310.0.ebuild:
+  Stable for amd64, wrt bug #413009
 
   26 Apr 2012; Jeroen Roovers <jer@gentoo.org> DateManip-6.310.0.ebuild:
   Stable for HPPA (bug #413009).
