@@ -1,17 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.18 2011/06/21 15:40:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.19 2012/04/26 15:31:18 jlec Exp $
 
 inherit autotools eutils fortran-2 multilib toolchain-funcs
 
 MyPN="${PN/-reference/}"
 
 DESCRIPTION="C wrapper interface to the F77 reference BLAS implementation"
-LICENSE="public-domain"
 HOMEPAGE="http://www.netlib.org/blas/"
 SRC_URI="http://www.netlib.org/blas/blast-forum/${MyPN}.tgz"
 
 SLOT="0"
+LICENSE="public-domain"
 IUSE=""
 KEYWORDS="alpha amd64 hppa ppc ppc64 s390 sparc x86 ~x86-fbsd"
 
@@ -35,8 +35,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--libdir=/usr/$(get_libdir)/blas/reference \
-		--with-blas="$(pkg-config --libs blas)" \
-		|| die "econf failed"
+		--with-blas="$(pkg-config --libs blas)"
 	emake || die "emake failed"
 }
 
