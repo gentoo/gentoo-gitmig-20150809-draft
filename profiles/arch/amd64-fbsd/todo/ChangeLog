@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.40 2012/04/26 16:19:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.41 2012/04/26 16:34:09 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask dev-libs/libnatspec[doc]
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   remove useflag masks depending on dejagnu
