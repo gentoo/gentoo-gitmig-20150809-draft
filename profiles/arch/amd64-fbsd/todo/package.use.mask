@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.105 2012/04/26 21:09:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.106 2012/04/26 21:11:51 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -130,9 +130,6 @@ app-text/poppler qt4
 # x11-base/xorg-server[xvfb]
 # x11-apps/xhost
 dev-util/cmake test
-
-# app-text/ghostscript-gpl
-dev-lang/nasm doc
 
 # x11-libs/cairo
 app-text/poppler cairo
