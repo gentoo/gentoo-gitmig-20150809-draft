@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.4.ebuild,v 1.7 2012/03/30 17:06:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.8.ebuild,v 1.1 2012/04/26 11:27:32 scarabeus Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils toolchain-funcs multilib
 
@@ -13,29 +13,26 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/cmd_tars/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="libedit nls readline static static-libs"
+REQUIRED_USE="static? ( static-libs )"
 
-RDEPEND="!static? ( >=sys-apps/util-linux-2.17.2 )
-	!<sys-fs/xfsdump-3
-	readline? (
-		sys-libs/readline
-		static? ( sys-libs/ncurses )
-	)
-	!readline? ( libedit? ( dev-libs/libedit ) )"
+LIB_DEPEND=">=sys-apps/util-linux-2.17.2[static-libs(+)]
+	readline? ( sys-libs/readline[static-libs(+)] )
+	!readline? ( libedit? ( dev-libs/libedit[static-libs(+)] ) )"
+RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
+	!<sys-fs/xfsdump-3"
 DEPEND="${RDEPEND}
-	static? ( || ( sys-apps/util-linux[static-libs] <sys-apps/util-linux-2.20 ) )
+	static? (
+		${LIB_DEPEND}
+		readline? ( sys-libs/ncurses[static-libs] )
+	)
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
 	if use readline && use libedit ; then
 		ewarn "You have USE='readline libedit' but these are exclusive."
 		ewarn "Defaulting to readline; please disable this USE flag if you want libedit."
-	fi
-
-	if use static && use !static-libs ; then
-		ewarn "Can't build a static variant of the executables without static-libs."
-		ewarn "Static libs will also be built."
 	fi
 }
 
@@ -82,9 +79,9 @@ src_configure() {
 	fi
 
 	if use static || use static-libs ; then
-		myconf="${myconf} --enable-static"
+		myconf+=" --enable-static"
 	else
-		myconf="${myconf} --disable-static"
+		myconf+=" --disable-static"
 	fi
 
 	econf \
@@ -97,11 +94,10 @@ src_configure() {
 }
 
 src_install() {
-	emake DIST_ROOT="${D}" install install-dev || die
-	prepalldocs
+	emake DIST_ROOT="${ED}" install install-dev
 
 	# handle is for xfsdump, the rest for xfsprogs
 	gen_usr_ldscript -a xfs xlog
 	# removing unnecessary .la files if not needed
-	use static-libs || rm -f "${D}"/usr/lib*/*.la
+	use static-libs || find "${ED}" -name '*.la' -delete
 }
