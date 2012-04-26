@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.61 2012/04/26 17:50:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.62 2012/04/26 17:53:04 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  remove usemasks depending on p11-kit
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   remove usemasks depending on bsnmp
