@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.49 2012/04/13 05:16:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.50 2012/04/26 18:59:40 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> ppl-0.12.ebuild:
+  keyword ~amd64-fbsd
 
   13 Apr 2012; Ryan Hill <dirtyepic@gentoo.org> ppl-0.12.ebuild:
   Remove unused test var.
