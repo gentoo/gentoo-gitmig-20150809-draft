@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.8.ebuild,v 1.3 2012/04/26 22:32:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.8.ebuild,v 1.4 2012/04/26 23:29:48 floppym Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -296,7 +296,7 @@ pkg_postinst() {
 	if [[ "${python_updater_warning}" == "1" ]]; then
 		ewarn "You have just upgraded from an older version of Python."
 		ewarn "You should switch active version of Python ${PV%%.*} and run"
-		ewarn "'python-updater \${options}' to rebuild Python modules."
+		ewarn "'python-updater [options]' to rebuild Python modules."
 	fi
 }
 
