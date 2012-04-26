@@ -1,6 +1,10 @@
 # ChangeLog for games-server/crossfire-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.21 2012/04/23 19:17:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.22 2012/04/26 19:25:57 ago Exp $
+
+  26 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  crossfire-server-1.60.0.ebuild:
+  Stable for amd64, wrt bug #412669
 
   23 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
   crossfire-server-1.60.0.ebuild:
