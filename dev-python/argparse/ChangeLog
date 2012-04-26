@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.30 2012/03/01 10:29:43 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.31 2012/04/26 22:17:24 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> argparse-1.2.1.ebuild:
+  keyword ~amd64-fbsd
 
   01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> argparse-1.2.1.ebuild:
   Set COLUMNS to make tests pass (bug 397345, thanks Dustin Polke).

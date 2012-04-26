@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.40 2012/03/02 14:53:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.41 2012/04/26 22:14:30 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> testtools-0.9.14.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Agostino Sarubbo <ago@gentoo.org> testtools-0.9.11.ebuild:
   Stable for amd64, wrt bug #406561
