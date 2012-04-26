@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/pidof-bsd-20050501-r3.ebuild,v 1.5 2009/07/18 10:22:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/pidof-bsd-20050501-r3.ebuild,v 1.6 2012/04/26 14:27:02 aballier Exp $
 
 inherit base bsdmk
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-freebsd/freebsd-mk-defs"
