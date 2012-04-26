@@ -1,11 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.3.ebuild,v 1.15 2011/06/16 23:56:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.3.ebuild,v 1.16 2012/04/26 15:46:14 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_MODNAME="openbabel.py pybel.py"
 
 inherit eutils distutils
@@ -32,8 +33,6 @@ DEPEND="${RDEPEND}
 	python? ( swig? ( >=dev-lang/swig-1.3.38 ) )
 	doc? ( app-doc/doxygen )"
 
-RESTRICT_PYTHON_ABIS="3.*"
-
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.2.0-doxyfile.patch"
 	if use python; then
@@ -47,7 +46,7 @@ src_configure() {
 	if use swig; then
 		swigconf="--enable-maintainer-mode"
 	fi
-	econf ${swigconf} || die "econf failed"
+	econf ${swigconf}
 }
 
 src_compile() {
