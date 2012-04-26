@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.153 2012/02/18 20:55:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.154 2012/04/26 16:02:38 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libgcrypt-1.5.0-r2.ebuild:
+  keyword ~amd64-fbsd
 
 *libgcrypt-1.5.0-r2 (18 Feb 2012)
 
