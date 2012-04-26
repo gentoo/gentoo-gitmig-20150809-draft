@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/sextractor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/sextractor/ChangeLog,v 1.3 2011/08/04 18:32:38 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/sextractor/ChangeLog,v 1.4 2012/04/26 16:35:34 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> -sextractor-2.5.0.ebuild,
+  sextractor-2.8.6.ebuild, metadata.xml:
+  Move to EAPI=4 and autotools-util.eclass, Cleaned old
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
