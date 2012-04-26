@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.108 2012/04/26 18:20:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.109 2012/04/26 18:24:57 polynomial-c Exp $
+
+  26 Apr 2012; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.1.14.ebuild:
+  Allow compilation with java-1.7
 
 *virtualbox-4.1.14 (26 Apr 2012)
 
