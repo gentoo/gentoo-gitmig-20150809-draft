@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-ctags
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.51 2010/06/06 19:19:49 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.52 2012/04/26 16:48:40 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> eselect-ctags-1.13.ebuild:
+  keyword ~amd64-fbsd
 
   06 Jun 2010; Ulrich Mueller <ulm@gentoo.org> -eselect-ctags-1.10.ebuild,
   -eselect-ctags-1.12.ebuild:
