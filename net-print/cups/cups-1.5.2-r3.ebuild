@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r3.ebuild,v 1.4 2012/04/24 18:24:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r3.ebuild,v 1.5 2012/04/26 12:15:30 scarabeus Exp $
 
 EAPI=4
 
@@ -69,6 +69,8 @@ PDEPEND="
 	>=app-text/poppler-0.12.3-r3[utils]
 	filters? ( net-print/foomatic-filters )
 "
+
+REQUIRED_USE="gnutls? ( ssl )"
 
 # upstream includes an interactive test which is a nono for gentoo
 RESTRICT="test"
@@ -160,7 +162,7 @@ src_configure() {
 	fi
 
 	local myconf
-	if use ssl || use gnutls ; then
+	if use ssl ; then
 		myconf+="
 			$(use_enable gnutls)
 			$(use_enable !gnutls openssl)
@@ -235,7 +237,7 @@ src_install() {
 	fi
 
 	# clean out cups init scripts
-	rm -rf "${D}"/etc/{init.d/cups,rc*,pam.d/cups}
+	rm -rf "${ED}"/etc/{init.d/cups,rc*,pam.d/cups}
 
 	# install our init script
 	local neededservices
@@ -254,14 +256,14 @@ src_install() {
 		# correct path
 		sed -i \
 			-e "s:server = .*:server = /usr/libexec/cups/daemon/cups-lpd:" \
-			"${D}"/etc/xinetd.d/cups-lpd || die
+			"${ED}"/etc/xinetd.d/cups-lpd || die
 		# it is safer to disable this by default, bug #137130
-		grep -w 'disable' "${D}"/etc/xinetd.d/cups-lpd || \
-			{ sed -i -e "s:}:\tdisable = yes\n}:" "${D}"/etc/xinetd.d/cups-lpd || die ; }
+		grep -w 'disable' "${ED}"/etc/xinetd.d/cups-lpd || \
+			{ sed -i -e "s:}:\tdisable = yes\n}:" "${ED}"/etc/xinetd.d/cups-lpd || die ; }
 		# write permission for file owner (root), bug #296221
 		fperms u+w /etc/xinetd.d/cups-lpd || die "fperms failed"
 	else
-		rm -rf "${D}"/etc/xinetd.d
+		rm -rf "${ED}"/etc/xinetd.d
 	fi
 
 	keepdir /usr/libexec/cups/driver /usr/share/cups/{model,profiles} \
@@ -270,10 +272,10 @@ src_install() {
 
 	keepdir /etc/cups/{interfaces,ppd,ssl}
 
-	use X || rm -r "${D}"/usr/share/applications
+	use X || rm -r "${ED}"/usr/share/applications
 
 	# create /etc/cups/client.conf, bug #196967 and #266678
-	echo "ServerName /var/run/cups/cups.sock" >> "${D}"/etc/cups/client.conf
+	echo "ServerName /var/run/cups/cups.sock" >> "${ED}"/etc/cups/client.conf
 }
 
 pkg_preinst() {

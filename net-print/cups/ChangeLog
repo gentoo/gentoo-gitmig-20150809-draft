@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.464 2012/04/24 18:24:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.465 2012/04/26 12:15:30 scarabeus Exp $
+
+  26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.5.2-r3.ebuild:
+  Prefixy.
 
   24 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r3.ebuild:
   Do not try to install non-existing files, bug 412873
