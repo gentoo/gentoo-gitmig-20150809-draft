@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.1.2.ebuild,v 1.1 2012/04/23 10:53:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.1.2.ebuild,v 1.2 2012/04/26 07:30:23 scarabeus Exp $
 
 EAPI=4
 
-inherit base cmake-utils perl-module
+PYTHON_DEPEND="test? 2"
+inherit base cmake-utils perl-module python
 
 DESCRIPTION="Library providing rendering capabilities for complex non-Roman writing systems"
 HOMEPAGE="http://graphite.sil.org/"
@@ -36,6 +37,10 @@ PATCHES=(
 
 pkg_setup() {
 	use perl && perl-module_pkg_setup
+	if use test; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
