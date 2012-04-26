@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flacon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flacon/ChangeLog,v 1.3 2012/03/26 19:47:34 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flacon/ChangeLog,v 1.4 2012/04/26 09:11:59 ago Exp $
+
+  26 Apr 2012; Agostino Sarubbo <ago@gentoo.org> flacon-0.6.1.ebuild:
+  Stable for amd64, wrt bug #413359
 
 *flacon-0.6.1 (26 Mar 2012)
 
