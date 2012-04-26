@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.2 2012/04/26 12:52:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.3 2012/04/26 12:55:01 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -12,3 +12,9 @@ dev-libs/libffi test
 
 # autotools
 sys-libs/zlib minizip
+
+# sys-libs/db
+dev-lang/perl berkdb
+
+# sys-libs/gdbm
+dev-lang/perl gdbm
