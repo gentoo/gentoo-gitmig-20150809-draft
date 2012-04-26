@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ggz-client-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.36 2012/04/22 20:39:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.37 2012/04/26 21:55:55 mr_bones_ Exp $
+
+  26 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  ggz-client-libs-0.0.14.1.ebuild:
+  ignore broken linguas patch for now
 
   22 Apr 2012; Tupone Alfredo <tupone@gentoo.org>
   ggz-client-libs-0.0.14.1.ebuild,
