@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.134 2012/03/30 00:26:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.135 2012/04/26 21:49:22 polynomial-c Exp $
+
+*thunderbird-10.0.4 (26 Apr 2012)
+
+  26 Apr 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -thunderbird-3.1.13.ebuild, -thunderbird-8.0-r1.ebuild,
+  -thunderbird-9.0.ebuild, -thunderbird-10.0.ebuild,
+  -thunderbird-10.0.1.ebuild, -thunderbird-10.0.1-r1.ebuild,
+  +thunderbird-10.0.4.ebuild:
+  Security bump. Removed some old versions.
 
 *thunderbird-11.0.1 (30 Mar 2012)
 
