@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.105 2012/04/23 08:19:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.106 2012/04/26 06:35:27 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -189,6 +189,7 @@ src_prepare() {
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
 		\! -path 'third_party/libsrtp/*' \
+		\! -path 'third_party/libusb/*' \
 		\! -path 'third_party/libvpx/*' \
 		\! -path 'third_party/libyuv/*' \
 		\! -path 'third_party/lss/*' \
@@ -431,8 +432,9 @@ src_install() {
 	popd
 
 	insinto "${CHROMIUM_HOME}"
-	doins out/Release/chrome.pak || die
-	doins out/Release/resources.pak || die
+	for x in out/Release/*.pak; do
+		doins "${x}" || die
+	done
 
 	doins -r out/Release/locales || die
 	doins -r out/Release/resources || die
@@ -455,6 +457,7 @@ src_install() {
 	done
 	local mime_types="text/html;text/xml;application/xhtml+xml;"
 	mime_types+="x-scheme-handler/http;x-scheme-handler/https;" # bug #360797
+	mime_types+="x-scheme-handler/ftp;" # bug #412185
 	make_desktop_entry \
 		chromium-browser${CHROMIUM_SUFFIX} \
 		"Chromium${CHROMIUM_SUFFIX}" \
