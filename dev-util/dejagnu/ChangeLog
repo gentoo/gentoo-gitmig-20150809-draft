@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dejagnu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.23 2011/03/14 19:01:37 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.24 2012/04/26 16:19:04 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> dejagnu-1.5.ebuild:
+  keyword ~amd64-fbsd
 
 *dejagnu-1.5 (14 Mar 2011)
 
