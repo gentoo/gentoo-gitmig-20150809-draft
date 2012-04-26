@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgpg-error
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.83 2011/09/26 18:33:32 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.84 2012/04/26 15:57:07 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  libgpg-error-1.10-r1.ebuild:
+  keyword ~amd64-fbsd
 
   26 Sep 2011; Mike Frysinger <vapier@gentoo.org> libgpg-error-1.10-r1.ebuild:
   Fix typo: common-libs -> common-lisp.
