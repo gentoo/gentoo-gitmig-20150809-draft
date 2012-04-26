@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.31 2011/12/01 16:44:02 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.32 2012/04/26 14:39:36 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> mpc-0.9-r1.ebuild:
+  keyword ~amd64-fbsd
 
   01 Dec 2011; Jeremy Olexa <darkside@gentoo.org> mpc-0.9-r1.ebuild:
   Proper rm call for Gentoo Prefix, signed off by vapier
