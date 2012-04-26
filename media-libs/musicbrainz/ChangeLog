@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.103 2012/04/24 06:52:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.104 2012/04/26 02:19:29 jer Exp $
+
+  26 Apr 2012; Jeroen Roovers <jer@gentoo.org> musicbrainz-3.0.3.ebuild:
+  Stable for HPPA (bug #413241).
 
   24 Apr 2012; Jeff Horelick <jdhore@gentoo.org> musicbrainz-3.0.3.ebuild:
   marked x86 per bug 413241
