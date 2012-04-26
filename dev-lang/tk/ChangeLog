@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.169 2012/04/26 19:47:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.170 2012/04/26 19:49:06 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> tk-8.5.11.ebuild:
+  keyword ~amd64-fbsd
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   +files/tcl-8.5.9-gentoo-fbsd.patch, tk-8.5.11.ebuild:
