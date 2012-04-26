@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.135 2012/04/21 12:16:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.136 2012/04/26 12:16:04 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> expat-2.1.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> expat-2.1.0.ebuild:
   arm stable, bug #412089
