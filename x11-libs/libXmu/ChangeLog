@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXmu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.71 2012/03/07 21:24:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.72 2012/04/26 19:07:10 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libXmu-1.1.1.ebuild:
+  keyword ~amd64-fbsd
 
 *libXmu-1.1.1 (07 Mar 2012)
 

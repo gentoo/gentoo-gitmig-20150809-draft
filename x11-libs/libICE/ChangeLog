@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.80 2012/03/04 21:02:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.81 2012/04/26 19:01:55 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libICE-1.0.8.ebuild:
+  keyword ~amd64-fbsd
 
 *libICE-1.0.8 (04 Mar 2012)
 
