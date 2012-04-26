@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Capture-Tiny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.23 2012/04/24 07:38:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.24 2012/04/26 02:05:29 jer Exp $
+
+  26 Apr 2012; Jeroen Roovers <jer@gentoo.org> Capture-Tiny-0.170.0.ebuild:
+  Stable for HPPA (bug #413015).
 
   24 Apr 2012; Jeff Horelick <jdhore@gentoo.org> Capture-Tiny-0.170.0.ebuild:
   marked x86 per bug 413015
