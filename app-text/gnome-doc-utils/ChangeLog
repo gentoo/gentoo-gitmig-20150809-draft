@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.200 2012/04/25 19:30:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.201 2012/04/26 22:56:52 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  gnome-doc-utils-0.20.10.ebuild:
+  keyword ~amd64-fbsd
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> gnome-doc-utils-0.20.10.ebuild:
   arm stable, bug #410611
