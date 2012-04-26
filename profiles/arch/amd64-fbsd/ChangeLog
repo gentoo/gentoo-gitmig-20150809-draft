@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.10 2012/04/26 12:55:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.11 2012/04/26 13:05:54 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> todo/package.use.mask:
+  mask autoconf[emacs]
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> todo/package.use.mask:
   mask perl[berkdb,gdbm]
