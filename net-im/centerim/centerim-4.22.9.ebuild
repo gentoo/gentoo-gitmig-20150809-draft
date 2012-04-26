@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.9.ebuild,v 1.4 2011/02/26 19:41:09 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.9.ebuild,v 1.5 2012/04/26 21:53:24 swegener Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	)
 	msn? (
 		|| (
+			>=net-misc/curl-7.25.0-r1[ssl]
 			>=net-misc/curl-7.19.6[ssl]
 			>=net-misc/curl-7.19.6[gnutls]
 			>=net-misc/curl-7.19.6[nss]
@@ -36,6 +37,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	)
 	yahoo? (
 		|| (
+			>=net-misc/curl-7.25.0-r1[ssl]
 			>=net-misc/curl-7.19.6[ssl]
 			>=net-misc/curl-7.19.6[gnutls]
 			>=net-misc/curl-7.19.6[nss]
