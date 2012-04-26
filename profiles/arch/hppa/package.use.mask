@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.94 2012/04/21 00:38:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.95 2012/04/26 02:17:42 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (19 Apr 2012)
+# Untested dependency on net-misc/connman
+x11-libs/qt-bearer connman
 
 # Jeroen Roovers <jer@gentoo.org> (19 Apr 2012)
 # Requires sys-power/upower which is not much use on HPPA

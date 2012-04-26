@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.143 2012/04/25 15:41:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.144 2012/04/26 02:17:42 jer Exp $
+
+  26 Apr 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=connman for x11-libs/qt-bearer (bug #412915).
 
   25 Apr 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=systemd.
