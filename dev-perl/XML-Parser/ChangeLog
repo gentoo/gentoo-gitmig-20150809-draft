@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.56 2012/04/17 21:55:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.57 2012/04/26 14:12:39 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> XML-Parser-2.410.0.ebuild:
+  keyword ~amd64-fbsd
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> XML-Parser-2.410.0.ebuild:
   Marking XML-Parser-2.410.0 ppc64 for bug 410367
