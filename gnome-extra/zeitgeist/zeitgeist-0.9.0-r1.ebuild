@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.0.ebuild,v 1.3 2012/04/25 07:04:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.0-r1.ebuild,v 1.1 2012/04/26 13:34:37 jlec Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="http://launchpad.net/zeitgeist/${DIR_PV}/${PV}/+download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="dbus extensions +fts icu nls passiv plugins"
+IUSE="+dbus extensions +fts icu nls passiv plugins"
 
 RDEPEND="
 	dev-libs/xapian
@@ -60,7 +60,7 @@ src_configure() {
 	local myeconfargs=(
 		--docdir=/usr/share/doc/${PF}
 		$(use_with icu dee-icu)
-		$(use_with dbus session-bus-services-dir)
+		$(use_with dbus session-bus-services-dir /usr/share/dbus-1/services)
 	)
 	use nls || myeconfargs+=(--disable-nls)
 	use fts || myeconfargs+=(--disable-fts)
