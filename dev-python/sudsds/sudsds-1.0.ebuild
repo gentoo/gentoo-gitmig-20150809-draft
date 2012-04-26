@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sudsds/sudsds-1.0.ebuild,v 1.1 2012/02/28 15:01:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sudsds/sudsds-1.0.ebuild,v 1.2 2012/04/26 08:45:22 scarabeus Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://www.nic.cz/public_media/datove_schranky/releases/datovka-2.0/src
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
 DEPEND="dev-python/setuptools
