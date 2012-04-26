@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.104 2011/12/02 17:48:28 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.105 2012/04/26 14:15:16 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> pkgconfig-0.26.ebuild:
+  keyword ~amd64-fbsd
 
   02 Dec 2011; Fabian Groffen <grobian@gentoo.org> pkgconfig-0.26.ebuild:
   Pass correct include and library paths for Prefix, bug #392619
