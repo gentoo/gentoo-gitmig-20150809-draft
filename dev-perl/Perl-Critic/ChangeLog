@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Perl-Critic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.82 2012/03/24 19:53:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.83 2012/04/26 19:26:41 ago Exp $
+
+  26 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Perl-Critic-1.117.0.ebuild:
+  Stable for amd64, wrt bug #412963
 
   24 Mar 2012; Raúl Porcel <armin76@gentoo.org> Perl-Critic-1.106.ebuild,
   Perl-Critic-1.111.ebuild, Perl-Critic-1.116.0.ebuild,
