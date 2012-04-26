@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.52 2012/03/18 18:58:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.53 2012/04/26 20:47:07 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libpaper-1.1.24-r1.ebuild:
+  keyword ~amd64-fbsd
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> libpaper-1.1.24-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #401085
