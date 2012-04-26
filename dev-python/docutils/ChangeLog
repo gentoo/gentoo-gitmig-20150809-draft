@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.145 2011/12/03 18:18:05 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.146 2012/04/26 17:34:24 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> docutils-0.8.1.ebuild:
+  keyword ~amd64-fbsd
 
   03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> docutils-0.7.ebuild:
   Update LICENSE. Patch by Arfrever.

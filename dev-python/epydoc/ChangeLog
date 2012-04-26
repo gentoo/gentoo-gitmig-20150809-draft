@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epydoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.62 2012/02/22 07:45:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.63 2012/04/26 17:38:39 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> epydoc-3.0.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> epydoc-3.0.1-r1.ebuild:
   Restricting python stuff properly
