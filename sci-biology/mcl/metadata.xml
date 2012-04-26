@@ -6,9 +6,9 @@
 		<name>Andrey Kislyuk</name>
 	</maintainer>
 	<herd>sci-biology</herd>
-<use>
-	<flag name='blast'>
+	<use>
+		<flag name="blast">
 		add support for NCBI BLAST data
 	</flag>
-</use>
+	</use>
 </pkgmetadata>
