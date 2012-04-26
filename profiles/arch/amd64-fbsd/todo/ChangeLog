@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.71 2012/04/26 18:57:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/ChangeLog,v 1.72 2012/04/26 18:59:31 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask ppl[lpsol]
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask libX11[doc]
