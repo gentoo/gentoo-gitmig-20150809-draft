@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.4.ebuild,v 1.6 2010/08/18 16:02:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.4.ebuild,v 1.7 2012/04/26 17:13:54 aballier Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://software.frodo.looijaard.name/getopt/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
