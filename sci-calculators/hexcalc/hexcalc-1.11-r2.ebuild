@@ -1,14 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/hexcalc-1.11-r2.ebuild,v 1.4 2010/07/19 19:09:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/hexcalc-1.11-r2.ebuild,v 1.5 2012/04/26 16:40:51 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A simple hex calculator for X"
 HOMEPAGE="ftp://ftp.x.org/R5contrib/"
 SRC_URI="ftp://ftp.x.org/R5contrib/${PN}.tar.Z"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
@@ -22,7 +23,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch ${FILESDIR}/${PN}-* || die
+	epatch "${FILESDIR}"/${PN}-*
 }
 
 src_compile() {
@@ -31,12 +32,10 @@ src_compile() {
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		CCLINK="$(tc-getCC)" \
-		LDOPTIONS="${LDFLAGS}" \
-		|| die
+		LDOPTIONS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin hexcalc || die
-	mv hexcalc.man hexcalc.1
-	doman hexcalc.1 || die
+	dobin ${PN}
+	newman ${PN}.{man,1}
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/hexcalc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.13 2010/07/19 19:09:21 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.14 2012/04/26 16:40:50 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> -hexcalc-1.11.ebuild,
+  hexcalc-1.11-r2.ebuild, metadata.xml:
+  Move to EAPI=4, remove unnesecarry die
 
   19 Jul 2010; Joseph Jezak <josejx@gentoo.org> hexcalc-1.11-r2.ebuild:
   Marked ppc stable for bug #328439.
