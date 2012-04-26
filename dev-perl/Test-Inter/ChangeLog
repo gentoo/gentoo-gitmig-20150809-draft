@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.14 2012/04/25 19:25:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.15 2012/04/26 02:07:37 jer Exp $
+
+  26 Apr 2012; Jeroen Roovers <jer@gentoo.org> Test-Inter-1.30.0.ebuild:
+  Stable for HPPA (bug #413009).
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> Test-Inter-1.30.0.ebuild:
   arm stable, bug #413009
