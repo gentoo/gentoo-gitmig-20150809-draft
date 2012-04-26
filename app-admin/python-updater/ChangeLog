@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.76 2012/03/03 18:05:31 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.77 2012/04/26 14:54:37 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  python-updater-0.10-r2.ebuild:
+  keyword ~amd64-fbsd
 
 *python-updater-0.10-r2 (03 Mar 2012)
 
