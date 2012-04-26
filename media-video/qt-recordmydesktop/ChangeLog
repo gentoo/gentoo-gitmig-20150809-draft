@@ -1,6 +1,16 @@
 # ChangeLog for media-video/qt-recordmydesktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.20 2012/04/24 19:32:25 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.21 2012/04/26 08:26:56 johu Exp $
+
+*qt-recordmydesktop-0.3.8-r2 (26 Apr 2012)
+
+  26 Apr 2012; Johannes Huber <johu@gentoo.org>
+  +files/qt-recordmydesktop-0.3.8-desktopfile.patch,
+  +qt-recordmydesktop-0.3.8-r2.ebuild, qt-recordmydesktop-0.3.8-r1.ebuild,
+  qt-recordmydesktop-0.3.8.ebuild:
+  Revision bump. Fix .desktop file, bumps EAPI, fixes build with python 3 as
+  active version, respect linguas and correct dependencies by Michael
+  (kensington) <gentoo@scribeofthenile.com>. Fixes bug #372667, bug #367943.
 
   24 Apr 2012; Johannes Huber <johu@gentoo.org> metadata.xml:
   Add qt as co-maintainer herd.
