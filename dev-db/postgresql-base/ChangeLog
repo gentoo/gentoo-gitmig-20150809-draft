@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.176 2012/04/08 22:16:09 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.177 2012/04/27 12:12:27 titanofold Exp $
+
+  27 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgresql-base-8.2.22.ebuild, -postgresql-base-8.2.23.ebuild:
+  Removing EOL.
 
   08 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org>
   -postgresql-base-8.3.16.ebuild, -postgresql-base-8.3.17.ebuild,
