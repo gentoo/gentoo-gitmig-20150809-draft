@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.1 2012/04/27 10:35:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.2 2012/04/27 19:59:18 blueness Exp $
+
+  27 Apr 2012; Anthony G. Basile <blueness@gentoo.org> bfgminer-2.3.4.ebuild:
+  Fix dependency issue on virtual/opencl
 
 *bfgminer-2.3.4 (27 Apr 2012)
 
