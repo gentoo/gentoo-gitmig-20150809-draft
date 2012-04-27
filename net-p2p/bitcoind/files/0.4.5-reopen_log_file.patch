@@ -1,0 +1,119 @@
+diff --git a/src/init.cpp b/src/init.cpp
+index 2dccc81..630fc29 100644
+--- a/src/init.cpp
++++ b/src/init.cpp
+@@ -8,6 +8,7 @@
+ #include "net.h"
+ #include "init.h"
+ #include "strlcpy.h"
++#include "util.h"
+ #include <boost/filesystem.hpp>
+ #include <boost/filesystem/fstream.hpp>
+ #include <boost/interprocess/sync/file_lock.hpp>
+@@ -71,6 +72,10 @@ void HandleSIGTERM(int)
+     fRequestShutdown = true;
+ }
+ 
++void HandleSIGHUP(int)
++{
++    fReopenDebugLog = true;
++}
+ 
+ 
+ 
+@@ -132,7 +137,13 @@ bool AppInit2(int argc, char* argv[])
+     sa.sa_flags = 0;
+     sigaction(SIGTERM, &sa, NULL);
+     sigaction(SIGINT, &sa, NULL);
+-    sigaction(SIGHUP, &sa, NULL);
++
++    // Reopen debug.log on SIGHUP
++    struct sigaction sa_hup;
++    sa_hup.sa_handler = HandleSIGHUP;
++    sigemptyset(&sa_hup.sa_mask);
++    sa_hup.sa_flags = 0;
++    sigaction(SIGHUP, &sa_hup, NULL);
+ #endif
+ 
+     //
+diff --git a/src/util.cpp b/src/util.cpp
+index 0f496bc..736fac6 100644
+--- a/src/util.cpp
++++ b/src/util.cpp
+@@ -30,6 +30,8 @@ string strMiscWarning;
+ bool fTestNet = false;
+ bool fNoListen = false;
+ bool fLogTimestamps = false;
++FILE* fileout = NULL;
++bool fReopenDebugLog = false;
+ 
+ 
+ 
+@@ -154,6 +156,13 @@ int GetRandInt(int nMax)
+ 
+ 
+ 
++string GetDebugLogName()
++{
++    char pszFile[MAX_PATH+100];
++    GetDataDir(pszFile);
++    strlcat(pszFile, "/debug.log", sizeof(pszFile));
++    return pszFile;
++}
+ 
+ inline int OutputDebugStringF(const char* pszFormat, ...)
+ {
+@@ -169,19 +178,27 @@ inline int OutputDebugStringF(const char* pszFormat, ...)
+     else
+     {
+         // print to debug.log
+-        static FILE* fileout = NULL;
+ 
+         if (!fileout)
+         {
+-            char pszFile[MAX_PATH+100];
+-            GetDataDir(pszFile);
+-            strlcat(pszFile, "/debug.log", sizeof(pszFile));
++            const char* pszFile = GetDebugLogName().c_str();
+             fileout = fopen(pszFile, "a");
+             if (fileout) setbuf(fileout, NULL); // unbuffered
+         }
+         if (fileout)
+         {
+             static bool fStartedNewLine = true;
++#ifndef WIN32
++            flockfile(fileout);
++
++            // reopen the log file, if requested
++            if (fReopenDebugLog) {
++                fReopenDebugLog = false;
++                const char* pszFile = GetDebugLogName().c_str();
++                if (freopen(pszFile,"a",fileout) != NULL)
++                    setbuf(fileout, NULL); // unbuffered
++            }
++#endif
+ 
+             // Debug print useful for profiling
+             if (fLogTimestamps && fStartedNewLine)
+@@ -195,6 +212,9 @@ inline int OutputDebugStringF(const char* pszFormat, ...)
+             va_start(arg_ptr, pszFormat);
+             ret = vfprintf(fileout, pszFormat, arg_ptr);
+             va_end(arg_ptr);
++#ifndef WIN32
++            funlockfile(fileout);
++#endif
+         }
+     }
+ 
+diff --git a/src/util.h b/src/util.h
+index 4e4cbb9..d2c19c9 100644
+--- a/src/util.h
++++ b/src/util.h
+@@ -166,6 +166,7 @@ extern std::string strMiscWarning;
+ extern bool fTestNet;
+ extern bool fNoListen;
+ extern bool fLogTimestamps;
++extern bool fReopenDebugLog;
+ 
+ void RandAddSeed();
+ void RandAddSeedPerfmon();

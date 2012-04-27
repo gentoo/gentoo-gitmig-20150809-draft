@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.4.5_rc3.ebuild,v 1.1 2012/04/07 01:03:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.4.5.ebuild,v 1.1 2012/04/27 09:21:32 blueness Exp $
 
 EAPI="4"
 
@@ -20,12 +20,15 @@ SRC_URI="http://gitorious.org/bitcoin/${PN}-stable/archive-tarball/v${PV/_/} -> 
 LICENSE="MIT ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+bip16 +eligius ssl upnp"
+IUSE="+bip16 +eligius logrotate ssl upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0
 	dev-libs/crypto++
 	dev-libs/openssl[-bindist]
+	logrotate? (
+		app-admin/logrotate
+	)
 	upnp? (
 		net-libs/miniupnpc
 	)
@@ -52,6 +55,7 @@ src_prepare() {
 	else
 		use eligius && epatch "${WORKDIR}/0.4.5rc1-eligius_sendfee.patch"
 	fi
+	use logrotate && epatch "${FILESDIR}/${PV}-reopen_log_file.patch"
 }
 
 src_compile() {
@@ -96,4 +100,9 @@ src_install() {
 	dosym /etc/bitcoin/bitcoin.conf /var/lib/bitcoin/.bitcoin/bitcoin.conf
 
 	dodoc doc/README
+
+	if use logrotate; then
+		insinto /etc/logrotate.d
+		newins "${FILESDIR}/bitcoind.logrotate" bitcoind
+	fi
 }

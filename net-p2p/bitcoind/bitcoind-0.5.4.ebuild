@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.0.6_rc3.ebuild,v 1.1 2012/04/07 01:03:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.4.ebuild,v 1.1 2012/04/27 09:21:32 blueness Exp $
 
 EAPI="4"
 
 DB_VER="4.8"
 
-inherit db-use eutils versionator
+inherit db-use eutils versionator toolchain-funcs
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="http://gitorious.org/bitcoin/${PN}-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
 	bip16? ( http://luke.dashjr.org/programs/bitcoin/files/bip16/0.5.0.5-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch.xz )
 	eligius? (
 		!bip16? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.5.0.6rc1-eligius_sendfee.patch.xz )
@@ -20,11 +20,14 @@ SRC_URI="http://gitorious.org/bitcoin/${PN}-stable/archive-tarball/v${PV/_/} -> 
 LICENSE="MIT ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+bip16 +eligius examples ssl upnp"
+IUSE="+bip16 +eligius examples logrotate ssl upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0
 	dev-libs/openssl[-bindist]
+	logrotate? (
+		app-admin/logrotate
+	)
 	upnp? (
 		net-libs/miniupnpc
 	)
@@ -34,7 +37,7 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-S="${WORKDIR}/bitcoin-${PN}-stable"
+S="${WORKDIR}/bitcoin-bitcoind-stable"
 
 pkg_setup() {
 	local UG='bitcoin'
@@ -50,6 +53,7 @@ src_prepare() {
 	else
 		use eligius && epatch "${WORKDIR}/0.5.0.6rc1-eligius_sendfee.patch"
 	fi
+	use logrotate && epatch "${FILESDIR}/0.4.5-reopen_log_file.patch"
 }
 
 src_compile() {
@@ -78,12 +82,12 @@ src_compile() {
 	fi
 
 	cd src || die
-	emake -f makefile.unix "${OPTS[@]}" ${PN}
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}
 }
 
 src_test() {
 	cd src || die
-	emake -f makefile.unix "${OPTS[@]}" test_bitcoin
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" test_bitcoin
 	./test_bitcoin || die 'Tests failed'
 }
 
@@ -109,5 +113,10 @@ src_install() {
 	if use examples; then
 		docinto examples
 		dodoc -r contrib/{bitrpc,pyminer,wallettools}
+	fi
+
+	if use logrotate; then
+		insinto /etc/logrotate.d
+		newins "${FILESDIR}/bitcoind.logrotate" bitcoind
 	fi
 }

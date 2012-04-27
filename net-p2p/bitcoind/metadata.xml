@@ -12,6 +12,7 @@
 	<use>
 		<flag name='bip16'>Enable backported support for relaying and mining new BIP16 pay-to-script-hash transactions</flag>
 		<flag name='eligius'>Enable using lower fees accepted by Eligius</flag>
+		<flag name='logrotate'>Use app-admin/logrotate for rotating logs</flag>
 		<flag name='upnp'>Enable Universal Plug and Play</flag>
 	</use>
 </pkgmetadata>
