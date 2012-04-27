@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.4_p4.ebuild,v 1.2 2012/04/23 23:30:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.4_p4.ebuild,v 1.3 2012/04/27 15:21:09 grobian Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ SRC_URI="http://www.sudo.ws/sudo/dist/${uri_prefix}${MY_P}.tar.gz
 # 3-clause BSD license
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~sparc-solaris"
 IUSE="ldap nls pam offensive selinux skey"
 
 DEPEND="pam? ( virtual/pam )
@@ -61,7 +61,7 @@ set_rootpath() {
 	einfo "Setting secure_path ..."
 
 	# first extract the default ROOTPATH from build env
-	ROOTPATH=$(unset ROOTPATH; . /etc/profile.env; echo "${ROOTPATH}")
+	ROOTPATH=$(unset ROOTPATH; . "${EPREFIX}"/etc/profile.env; echo "${ROOTPATH}")
 	if [[ -z ${ROOTPATH} ]] ; then
 		ewarn "	Failed to find ROOTPATH, please report this"
 	fi
@@ -106,7 +106,7 @@ src_configure() {
 	econf \
 		--enable-zlib=system \
 		--with-secure-path="${ROOTPATH}" \
-		--with-editor=/usr/libexec/editor \
+		--with-editor="${EPREFIX}"/usr/libexec/editor \
 		--with-env-editor \
 		$(use_with offensive insults) \
 		$(use_with offensive all-insults) \
@@ -118,9 +118,9 @@ src_configure() {
 		$(use_with selinux) \
 		--without-opie \
 		--without-linux-audit \
-		--with-timedir=/var/db/sudo \
-		--with-plugindir=/usr/$(get_libdir)/sudo \
-		--docdir=/usr/share/doc/${PF}
+		--with-timedir="${EPREFIX}"/var/db/sudo \
+		--with-plugindir="${EPREFIX}"/usr/$(get_libdir)/sudo \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 }
 
 src_install() {
@@ -163,6 +163,17 @@ pkg_postinst() {
 			ewarn "  sudoers: ldap files"
 			ewarn
 		fi
+	fi
+	if use prefix ; then
+		ewarn
+		ewarn "To use sudo, you need to change file ownership and permissions"
+		ewarn "with root privileges, as follows:"
+		ewarn
+		ewarn "  # chown root:root ${EPREFIX}/usr/bin/sudo"
+		ewarn "  # chown root:root ${EPREFIX}/usr/lib/sudo/sudoers.so"
+		ewarn "  # chown root:root ${EPREFIX}/etc/sudoers"
+		ewarn "  # chmod 4111 ${EPREFIX}/usr/bin/sudo"
+		ewarn
 	fi
 
 	elog "To use the -A (askpass) option, you need to install a compatible"
