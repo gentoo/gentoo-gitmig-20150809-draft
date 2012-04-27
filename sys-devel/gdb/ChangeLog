@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.212 2012/04/27 01:07:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.213 2012/04/27 01:12:08 vapier Exp $
+
+  27 Apr 2012; Mike Frysinger <vapier@gentoo.org> gdb-6.6-r2.ebuild,
+  gdb-6.7.1-r3.ebuild, gdb-6.8-r1.ebuild, gdb-6.8-r2.ebuild, gdb-7.0.1.ebuild,
+  gdb-7.1.ebuild, gdb-7.2.50.20101117.4.15.ebuild, gdb-7.2.ebuild,
+  gdb-7.3.1-r1.ebuild, gdb-7.3.1.ebuild, gdb-7.3.ebuild, gdb-7.4.1.ebuild,
+  gdb-7.4.ebuild, gdb-9999.ebuild:
+  Use mirror://gnu as pointed out by repoman.
 
 *gdb-7.4.1 (27 Apr 2012)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.2.ebuild,v 1.14 2011/09/03 14:54:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.2.ebuild,v 1.15 2012/04/27 01:12:08 vapier Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ HOMEPAGE="http://sources.redhat.com/gdb/"
 if [[ -n ${RPM} ]] ; then
 	SRC_URI="http://mirrors.kernel.org/fedora/development/source/SRPMS/${RPM}"
 else
-	SRC_URI="http://ftp.gnu.org/gnu/gdb/${P}.tar.bz2
+	SRC_URI="mirror://gnu/gdb/${P}.tar.bz2
 		ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
 fi
 SRC_URI="${SRC_URI} ${PATCH_VER:+mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz}"
