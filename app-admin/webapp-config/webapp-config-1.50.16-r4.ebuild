@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r4.ebuild,v 1.1 2010/12/19 18:31:55 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r4.ebuild,v 1.2 2012/04/27 19:43:57 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -43,8 +43,6 @@ src_install() {
 	# locations. Since we only install one script here the following should
 	# be ok
 	distutils_src_install --install-scripts="/usr/sbin"
-
-	python_convert_shebangs 2 "${ED}usr/sbin/webapp-config"
 
 	insinto /etc/vhosts
 	doins config/webapp-config
