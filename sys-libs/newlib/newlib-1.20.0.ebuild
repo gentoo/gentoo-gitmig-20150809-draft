@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.20.0.ebuild,v 1.2 2012/03/23 23:09:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.20.0.ebuild,v 1.3 2012/04/27 01:09:29 vapier Exp $
 
 EAPI="4"
 
@@ -40,6 +40,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cris-install.patch
+	epatch "${FILESDIR}"/${P}-arm-targets.patch #413547
 }
 
 src_configure() {

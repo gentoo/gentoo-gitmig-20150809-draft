@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/newlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.17 2012/03/23 23:09:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.18 2012/04/27 01:09:29 vapier Exp $
+
+  27 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/newlib-1.20.0-arm-targets.patch, newlib-1.20.0.ebuild:
+  Add fix from upstream for arm* targets #413547 by Christopher Friedt.
 
   23 Mar 2012; Mike Frysinger <vapier@gentoo.org> newlib-1.20.0.ebuild,
   +files/newlib-1.20.0-cris-install.patch:
