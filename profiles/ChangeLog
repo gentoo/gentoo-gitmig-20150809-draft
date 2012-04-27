@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6474 2012/04/27 11:39:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6475 2012/04/27 12:21:50 titanofold Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org> package.mask:
+  PostgreSQL 8.2 removed from tree. Mask no longer needed.
 
   27 Apr 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Remove AdobeFlash-11_beta from license_groups as it's gone from the tree.
