@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pkginfo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/ChangeLog,v 1.1 2012/04/27 12:49:29 tampakrap Exp $
+
+*pkginfo-0.8 (27 Apr 2012)
+
+  27 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org> +metadata.xml,
+  +pkginfo-0.8.ebuild:
+  Initial commit, ebuild by idella4
+
