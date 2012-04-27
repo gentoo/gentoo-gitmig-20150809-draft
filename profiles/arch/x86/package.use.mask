@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.86 2012/04/26 10:33:23 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.87 2012/04/27 09:38:18 dagger Exp $
 
 # This file requires >=portage-2.1.1
 
 # Robert Piasek <dagger@gentoo.org> (26 Apr 2012)          
 # Packages with optional systemd support. Masked in base and unmasked on arches
 # where sys-apps/systemd is available.
-sys-auth/polkit -systemd
+>sys-auth/polkit-0.104-r1 -systemd
 
 # Masked in base and unmasked on arches where app-misc/geoclue and
 # app-accessibility/at-spi2-core are available.
