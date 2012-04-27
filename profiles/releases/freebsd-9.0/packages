@@ -1,6 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-9.0/packages,v 1.1 2011/11/02 14:23:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-9.0/packages,v 1.2 2012/04/27 23:19:03 aballier Exp $
 
 *>=sys-apps/baselayout-2.0.0
 *>=sys-apps/openrc-0.2.5
+
+# Current releases of openssh fail to build on FreeBSD 9.0
+# https://bugs.gentoo.org/show_bug.cgi?id=391011
+# Remove virtual/ssh from for now.
+-*virtual/ssh
