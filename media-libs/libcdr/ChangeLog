@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.8 2012/04/24 15:34:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.9 2012/04/27 08:05:54 scarabeus Exp $
+
+  27 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcdr-0.0.7.ebuild,
+  libcdr-9999.ebuild:
+  Update homepage.
 
   24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/libcdr-0.0.7-clang.patch, libcdr-0.0.7.ebuild:
