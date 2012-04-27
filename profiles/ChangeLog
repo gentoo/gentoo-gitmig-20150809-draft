@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6473 2012/04/27 10:33:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6474 2012/04/27 11:39:58 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Apr 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Remove AdobeFlash-11_beta from license_groups as it's gone from the tree.
 
   27 Apr 2012; Anthony G. Basile <blueness@gentoo.org> package.mask:
   Mask net-misc/bfgminer
