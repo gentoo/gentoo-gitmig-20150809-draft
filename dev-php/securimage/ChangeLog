@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/securimage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/securimage/ChangeLog,v 1.1 2012/01/26 22:00:46 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/securimage/ChangeLog,v 1.2 2012/04/27 03:25:14 binki Exp $
+
+  27 Apr 2012; Nathan Phillip Brink <binki@gentoo.org> securimage-3.0.1.ebuild:
+  Add missing runtime dependencies on PHP's gd and truetype (freetype)
+  features.
 
 *securimage-3.0.1 (26 Jan 2012)
 
