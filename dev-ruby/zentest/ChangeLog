@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/zentest
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.101 2011/12/31 18:22:53 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.102 2012/04/27 07:03:03 graaff Exp $
+
+  27 Apr 2012; Hans de Graaff <graaff@gentoo.org> -zentest-4.3.3.ebuild,
+  -zentest-4.5.0.ebuild, -zentest-4.6.0.ebuild, -zentest-4.6.1.ebuild:
+  Remove old versions.
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> zentest-4.6.2.ebuild:
   Add Prefix keywords, bug #396547
