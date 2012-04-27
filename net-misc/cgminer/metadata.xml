@@ -18,5 +18,6 @@
 		<flag name='padlock'>Enable support for mining with VIA Padlock CPUs</flag>
 		<flag name='sse2_4way'>Enable support for CPU SSE2 4way mining algorithm</flag>
 		<flag name='sse4'>Enable support for CPU SSE4 mining algorithm</flag>
+		<flag name='ztex'>Enable support for mining with Ztex FPGAs</flag>
 	</use>
 </pkgmetadata>
