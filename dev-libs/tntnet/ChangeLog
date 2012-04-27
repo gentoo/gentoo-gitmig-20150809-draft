@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tntnet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.17 2011/01/21 15:51:53 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.18 2012/04/27 22:53:37 vapier Exp $
+
+  27 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/tntnet-2.0-zlib-minizip.patch, tntnet-2.0-r1.ebuild:
+  Use minizip from new zlib.
 
   21 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org> metadata.xml:
   readded maintainer

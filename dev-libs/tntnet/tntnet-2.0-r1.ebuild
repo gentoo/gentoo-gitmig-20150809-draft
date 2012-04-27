@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-2.0-r1.ebuild,v 1.1 2011/01/21 00:01:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-2.0-r1.ebuild,v 1.2 2012/04/27 22:53:37 vapier Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="cgi doc examples gnutls server sdk ssl"
 
 RDEPEND=">=dev-libs/cxxtools-2.0
-	sys-libs/zlib
+	sys-libs/zlib[minizip]
 	ssl? (
 		gnutls? (
 			>=net-libs/gnutls-1.2.0
@@ -25,12 +25,15 @@ RDEPEND=">=dev-libs/cxxtools-2.0
 		!gnutls? ( dev-libs/openssl )
 	)"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	examples? ( app-arch/zip )"
 
 src_prepare() {
 	# Both fixed in the next release
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 	epatch "${FILESDIR}/${P}-gnutls.patch"
+	epatch "${FILESDIR}"/${P}-zlib-minizip.patch
+	rm framework/common/{ioapi,unzip}.[ch] || die
 
 	eautoreconf
 
