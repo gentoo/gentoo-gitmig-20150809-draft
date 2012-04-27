@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.79 2012/02/11 12:20:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.80 2012/04/27 19:51:52 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -159,7 +159,7 @@ EMACS=${EPREFIX}/usr/bin/emacs
 # @ECLASS-VARIABLE: EMACSFLAGS
 # @DESCRIPTION:
 # Flags for executing Emacs in batch mode.
-# These work for Emacs versions 18-23, so don't change them.
+# These work for Emacs versions 18-24, so don't change them.
 EMACSFLAGS="-batch -q --no-site-file"
 
 # @ECLASS-VARIABLE: BYTECOMPFLAGS
@@ -173,7 +173,7 @@ BYTECOMPFLAGS="-L ."
 
 elisp-emacs-version() {
 	local ret
-	# The following will work for at least versions 18-23.
+	# The following will work for at least versions 18-24.
 	echo "(princ emacs-version)" >"${T}"/emacs-version.el
 	${EMACS} ${EMACSFLAGS} -l "${T}"/emacs-version.el
 	ret=$?
@@ -195,6 +195,10 @@ elisp-need-emacs() {
 	local need_emacs=$1 have_emacs
 	have_emacs=$(elisp-emacs-version) || return
 	einfo "Emacs version: ${have_emacs}"
+	if [[ ${have_emacs} =~ XEmacs|Lucid ]]; then
+		eerror "This package needs GNU Emacs."
+		return 1
+	fi
 	if ! [[ ${have_emacs%%.*} -ge ${need_emacs%%.*} ]]; then
 		eerror "This package needs at least Emacs ${need_emacs%%.*}."
 		eerror "Use \"eselect emacs\" to select the active version."

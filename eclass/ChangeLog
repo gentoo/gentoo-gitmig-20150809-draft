@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.224 2012/04/25 17:43:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.225 2012/04/27 19:51:52 ulm Exp $
+
+  27 Apr 2012; Ulrich Müller <ulm@gentoo.org> elisp-common.eclass:
+  Sync from Emacs overlay: Require GNU Emacs in elisp-need-emacs().
 
   25 Apr 2012; Fabian Groffen <grobian@gentoo.org> qt4-build.eclass:
   fix_includes: create relative symlinks for header directories, such that
