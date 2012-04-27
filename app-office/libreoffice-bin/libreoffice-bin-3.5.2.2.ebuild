@@ -1,33 +1,33 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.2.2.ebuild,v 1.1 2012/04/26 06:59:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.2.2.ebuild,v 1.2 2012/04/27 20:25:10 dilfridge Exp $
 
 EAPI=4
 
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 
-#BASE_AMD64_URI="mirror://gentoo/amd64-bin-"
+BASE_AMD64_URI="mirror://gentoo/amd64-bin-"
 BASE_X86_URI="mirror://gentoo/x86-bin-"
 
 inherit kde4-base java-pkg-opt-2 pax-utils prefix
 
 DESCRIPTION="LibreOffice, a full office productivity suite. Binary package."
 HOMEPAGE="http://www.libreoffice.org"
-#SRC_URI_AMD64="
-#	kde? (
-#		!java? ( ${BASE_AMD64_URI}${PN/-bin}-kde-${PVR}.tar.xz )
-#		java? ( ${BASE_AMD64_URI}${PN/-bin}-kde-java-${PVR}.tar.xz )
-#	)
-#	gnome? (
-#		!java? ( ${BASE_AMD64_URI}${PN/-bin}-gnome-${PVR}.tar.xz )
-#		java? ( ${BASE_AMD64_URI}${PN/-bin}-gnome-java-${PVR}.tar.xz )
-#	)
-#	!kde? ( !gnome? (
-#		!java? ( ${BASE_AMD64_URI}${PN/-bin}-base-${PVR}.tar.xz )
-#		java? ( ${BASE_AMD64_URI}${PN/-bin}-base-java-${PVR}.tar.xz )
-#	) )
-#"
+SRC_URI_AMD64="
+	kde? (
+		!java? ( ${BASE_AMD64_URI}${PN/-bin}-kde-${PVR}.tar.xz )
+		java? ( ${BASE_AMD64_URI}${PN/-bin}-kde-java-${PVR}.tar.xz )
+	)
+	gnome? (
+		!java? ( ${BASE_AMD64_URI}${PN/-bin}-gnome-${PVR}.tar.xz )
+		java? ( ${BASE_AMD64_URI}${PN/-bin}-gnome-java-${PVR}.tar.xz )
+	)
+	!kde? ( !gnome? (
+		!java? ( ${BASE_AMD64_URI}${PN/-bin}-base-${PVR}.tar.xz )
+		java? ( ${BASE_AMD64_URI}${PN/-bin}-base-java-${PVR}.tar.xz )
+	) )
+"
 SRC_URI_X86="
 	kde? (
 		!java? ( ${BASE_X86_URI}${PN/-bin}-kde-${PVR}.tar.xz )
@@ -44,13 +44,14 @@ SRC_URI_X86="
 "
 
 SRC_URI="
+	amd64? ( ${SRC_URI_AMD64} )
 	x86? ( ${SRC_URI_X86} )
 "
 
 IUSE="+cups debug gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	>=sys-libs/glibc-2.14.1-r3
