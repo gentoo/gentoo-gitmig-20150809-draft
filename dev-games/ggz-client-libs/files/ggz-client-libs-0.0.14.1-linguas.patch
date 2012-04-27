@@ -14,3 +14,18 @@
  	done
  	@touch $(STAMP)
  
+@@ -35,12 +35,14 @@
+ 
+ install-data-local:
+ 	@for j in $(MOFILES); do \
++		if [[ -f $$j ]]; then \
+ 		k=$$(basename $$j); \
+ 		country=`echo $$k | cut -d "." -f 1`; \
+ 		dir=${DESTDIR}$(prefix)/share/locale/$$country/LC_MESSAGES; \
+ 		echo "installing $$dir/$(CATALOG).mo ($$k)"; \
+ 		install -d $$dir; \
+ 		cp $$j $$dir/$(CATALOG).mo; \
++		fi \
+ 	done
+ 
+ uninstall-local:
