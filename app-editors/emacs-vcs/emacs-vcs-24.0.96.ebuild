@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.93.ebuild,v 1.4 2012/04/02 17:29:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.96.ebuild,v 1.1 2012/04/27 22:40:21 ulm Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools elisp-common eutils flag-o-matic multilib
 
 if [[ ${PV##*.} = 9999 ]]; then
 	EBZR_PROJECT="emacs"
-	EBZR_BRANCH="trunk"
+	EBZR_BRANCH="emacs-24"
 	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
 	# "Nosmart" is much faster for initial branching.
 	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
