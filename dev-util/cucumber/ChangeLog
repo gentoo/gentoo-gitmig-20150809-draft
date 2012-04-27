@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.47 2012/01/29 10:30:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.48 2012/04/27 07:40:20 graaff Exp $
+
+  27 Apr 2012; Hans de Graaff <graaff@gentoo.org> cucumber-1.1.4.ebuild:
+  Tie gherkin dependency to a slot.
 
   29 Jan 2012; Hans de Graaff <graaff@gentoo.org> cucumber-1.1.4.ebuild:
   Add ruby19. Closes bug 293358.
