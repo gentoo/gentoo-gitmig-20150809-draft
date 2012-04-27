@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.37 2012/01/29 10:29:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.38 2012/04/27 07:41:35 graaff Exp $
+
+*gherkin-2.9.3 (27 Apr 2012)
+
+  27 Apr 2012; Hans de Graaff <graaff@gentoo.org> +gherkin-2.9.3.ebuild:
+  Version bump. Add in new slot due to API changes.
 
   29 Jan 2012; Hans de Graaff <graaff@gentoo.org> gherkin-2.7.3.ebuild:
   Add ruby19. Closes bug 293358.
