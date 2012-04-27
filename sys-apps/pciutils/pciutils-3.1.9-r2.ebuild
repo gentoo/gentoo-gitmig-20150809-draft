@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.9-r2.ebuild,v 1.6 2012/04/24 14:43:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.9-r2.ebuild,v 1.7 2012/04/27 03:11:35 vapier Exp $
 
 EAPI="4"
 
@@ -15,7 +15,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="static-libs zlib"
 
-DEPEND="zlib? ( sys-libs/zlib )"
+# Have the sub-libs in RDEPEND with [static-libs] since, logically,
+# our libssl.a depends on libz.a/etc... at runtime.
+LIB_DEPEND="zlib? ( sys-libs/zlib[static-libs(+)] )"
+DEPEND="static-libs? ( ${LIB_DEPEND} )
+	!static-libs? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 RDEPEND="${DEPEND}
 	sys-apps/hwids"
 
