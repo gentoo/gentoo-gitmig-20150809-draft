@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-3.0.ebuild,v 1.1 2012/02/23 17:48:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-3.0.ebuild,v 1.2 2012/04/27 09:43:16 blueness Exp $
 
 EAPI=4
 DESCRIPTION="API to access display driver functionality for ATI graphics cards"
@@ -15,6 +15,9 @@ IUSE='doc examples'
 DEPEND=""
 RDEPEND="${DEPEND}
 	x11-drivers/ati-drivers
+"
+DEPEND="${DEPEND}
+	app-arch/unzip
 "
 
 RESTRICT='mirror'

@@ -1,5 +1,8 @@
 
 
+  27 Apr 2012; Anthony G. Basile <blueness@gentoo.org> amd-adl-sdk-3.0.ebuild:
+  Add missing dep on app-arch/unzip
+
   02 Apr 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Update luke-jr's email address
 
