@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/python-digest
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-digest/ChangeLog,v 1.1 2012/04/27 10:50:01 tampakrap Exp $
+
+*python-digest-1.7 (27 Apr 2012)
+
+  27 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  +files/python-digest-1.7-unittest.patch, +metadata.xml,
+  +python-digest-1.7.ebuild:
+  Initial commit, ebuild by idella4
+
