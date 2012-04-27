@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/django-tastypie
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tastypie/ChangeLog,v 1.1 2012/04/27 10:58:42 tampakrap Exp $
+
+*django-tastypie-0.9.11 (27 Apr 2012)
+
+  27 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  +django-tastypie-0.9.11.ebuild, +metadata.xml:
+  Initial commit, ebuild by idella4
+
