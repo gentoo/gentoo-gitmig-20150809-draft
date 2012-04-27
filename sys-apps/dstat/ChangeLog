@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.38 2012/01/02 13:58:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.39 2012/04/27 16:04:59 jlec Exp $
+
+  27 Apr 2012; Justin Lecher <jlec@gentoo.org> dstat-0.6.9-r1.ebuild,
+  dstat-0.7.2-r1.ebuild:
+  Bump EAPI to 4 to use mod_optimize on non multi ABI installs, #413745
 
   02 Jan 2012; Justin Lecher <jlec@gentoo.org> dstat-0.6.9-r1.ebuild,
   -dstat-0.7.2.ebuild, dstat-0.7.2-r1.ebuild, metadata.xml:

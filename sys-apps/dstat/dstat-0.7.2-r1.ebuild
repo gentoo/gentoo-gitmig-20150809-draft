@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.7.2-r1.ebuild,v 1.4 2012/01/02 13:58:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.7.2-r1.ebuild,v 1.5 2012/04/27 16:04:59 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="2"
 
@@ -22,6 +22,7 @@ DEPEND=""
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_compile() {
@@ -29,14 +30,13 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "make install failed"
+	emake DESTDIR="${ED}" install
 	python_convert_shebangs 2 "${ED}usr/bin/dstat"
 
 	dodoc \
 		AUTHORS ChangeLog README TODO \
-		examples/{mstat,read}.py docs/*.txt \
-		|| die "dodoc failed"
-	dohtml docs/*.html || die "dohtml failed"
+		examples/{mstat,read}.py docs/*.txt
+	dohtml docs/*.html
 }
 
 pkg_postinst() {
