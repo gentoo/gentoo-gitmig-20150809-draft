@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.115 2012/04/26 04:49:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.116 2012/04/27 05:12:03 flameeyes Exp $
+
+  27 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> lynx-2.8.7_p1.ebuild:
+  Use -j1 for the current stable as well.
 
   26 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> lynx-2.8.7_p2.ebuild,
   lynx-2.8.8_pre12.ebuild:
