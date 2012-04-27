@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13701 2012/04/26 12:56:22 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13702 2012/04/27 10:33:29 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (26 Apr 2012
+# Needs some dependencies
+net-misc/bfgminer
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Needs to be slotted better
