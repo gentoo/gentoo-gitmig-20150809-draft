@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.141 2012/04/28 16:37:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.142 2012/04/28 16:50:42 blueness Exp $
+
+  28 Apr 2012; Anthony G. Basile <blueness@gentoo.org> valgrind-3.4.0.ebuild,
+  valgrind-3.4.1.ebuild, valgrind-3.4.1-r1.ebuild, valgrind-3.5.0.ebuild,
+  valgrind-3.5.0-r1.ebuild:
+  Remove blocking dep for dev-util/callgrind which is long gone
 
   28 Apr 2012; Anthony G. Basile <blueness@gentoo.org> -valgrind-3.3.1.ebuild,
   -valgrind-3.3.1-r1.ebuild, -files/valgrind-3.3.1-glibc-2.9.patch:

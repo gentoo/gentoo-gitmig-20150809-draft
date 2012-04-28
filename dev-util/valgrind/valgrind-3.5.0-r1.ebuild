@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.5.0-r1.ebuild,v 1.1 2010/10/28 17:39:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.5.0-r1.ebuild,v 1.2 2012/04/28 16:50:42 blueness Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
 
@@ -14,8 +14,7 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="mpi"
 
 DEPEND="mpi? ( virtual/mpi )"
-RDEPEND="${DEPEND}
-	!dev-util/callgrind"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
