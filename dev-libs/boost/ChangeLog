@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.241 2012/04/12 18:08:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.242 2012/04/28 03:26:43 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> boost-1.48.0-r1.ebuild,
+  boost-1.49.0.ebuild:
+  keyword ~amd64-fbsd
 
   12 Apr 2012; Mike Gilbert <floppym@gentoo.org> boost-1.48.0-r1.ebuild,
   boost-1.49.0.ebuild:
