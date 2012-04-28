@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/logitechmediaserver-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/ChangeLog,v 1.2 2012/04/12 14:25:32 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/ChangeLog,v 1.3 2012/04/28 23:47:34 lavajoe Exp $
+
+  28 Apr 2012; Joe Peterson <lavajoe@gentoo.org>
+  files/logitechmediaserver.init.d:
+  Create /var/run/logitechmediaserver dir on start if missing (bug 411857)
 
   12 Apr 2012; Joe Peterson <lavajoe@gentoo.org>
   logitechmediaserver-bin-7.7.2.ebuild, metadata.xml:
