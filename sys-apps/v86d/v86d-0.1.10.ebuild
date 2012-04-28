@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.10.ebuild,v 1.3 2011/02/27 15:59:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.10.ebuild,v 1.4 2012/04/28 12:49:21 lxnay Exp $
 
 EAPI=2
 
@@ -21,12 +21,15 @@ RDEPEND=""
 S="${WORKDIR}/${P//_*/}"
 
 pkg_setup() {
-	if [ -z "$(grep V86D /usr/$(get_libdir)/klibc/include/linux/connector.h)" ]; then
+	linux-info_pkg_setup
+}
+
+src_prepare() {
+	if [ -z "$(grep V86D ${ROOT}/usr/$(get_libdir)/klibc/include/linux/connector.h)" ]; then
 		eerror "You need to compile klibc against a kernel tree patched with uvesafb"
 		eerror "prior to merging this package."
 		die "Kernel not patched with uvesafb."
 	fi
-	linux-info_pkg_setup
 }
 
 src_configure() {
