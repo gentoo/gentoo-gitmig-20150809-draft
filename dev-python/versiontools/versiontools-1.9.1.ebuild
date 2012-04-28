@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/versiontools-1.9.1.ebuild,v 1.3 2012/04/25 13:29:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/versiontools-1.9.1.ebuild,v 1.4 2012/04/28 12:26:19 xarthisius Exp $
 
 EAPI=4
 PYTHON_DEPEND="*"
@@ -10,7 +10,7 @@ DISTUTILS_SRC_TEST=setup.py
 
 inherit distutils
 
-DESCRIPTION="Allows to define regrouped/postcompiled content 'on the fly' inside of django template"
+DESCRIPTION="Smart replacement for plain tuple used in __version__"
 HOMEPAGE="http://pypi.python.org/pypi/versiontools/ https://launchpad.net/versiontools"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
