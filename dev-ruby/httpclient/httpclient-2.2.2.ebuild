@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.2.2.ebuild,v 1.5 2012/04/28 17:34:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.2.2.ebuild,v 1.6 2012/04/28 17:41:51 graaff Exp $
 
 EAPI=4
 
@@ -36,6 +36,13 @@ ruby_add_bdepend "doc? ( dev-ruby/rdoc )"
 all_ruby_prepare () {
 	rm Gemfile || die
 	sed -i -e '/[bB]undler/s:^:#:' Rakefile || die
+
+	# Comment out harmless test failures with ruby 1.8, bug 411191
+	sed -i -e '228,268 s:^:#:' test/test_http-access2.rb || die
+
+	# Comment out test requiring network access that makes assumptions
+	# about the environment, bug 395155
+	sed -i -e '/test_async_error/,/^  end/ s:^:#:' test/test_httpclient.rb || die
 }
 
 each_ruby_prepare() {
@@ -51,9 +58,6 @@ each_ruby_prepare() {
 		*)
 			;;
 	esac
-
-	# Comment out harmless test failures with ruby 1.8, bug 411191
-	sed -i -e '228,268 s:^:#:' test/test_http-access2.rb || die
 }
 
 each_ruby_test() {
