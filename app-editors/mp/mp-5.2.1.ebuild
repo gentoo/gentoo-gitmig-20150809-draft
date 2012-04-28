@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.1.ebuild,v 1.3 2012/04/27 05:59:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.1.ebuild,v 1.4 2012/04/28 18:05:54 nixnut Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.triptico.com/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-interix ~ppc-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-interix ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE="gtk iconv kde ncurses nls pcre qt4"
 
 RDEPEND="
