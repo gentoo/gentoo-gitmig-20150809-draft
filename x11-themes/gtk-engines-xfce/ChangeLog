@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.141 2012/04/14 09:01:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.142 2012/04/28 13:54:39 ssuominen Exp $
+
+*gtk-engines-xfce-3.0.0-r300 (28 Apr 2012)
+*gtk-engines-xfce-3.0.0-r200 (28 Apr 2012)
+
+  28 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +gtk-engines-xfce-3.0.0-r200.ebuild, +gtk-engines-xfce-3.0.0-r300.ebuild:
+  Version bump. This version is compatible with x11-libs/gtk+ >= 3.2.
 
   14 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
   -gtk-engines-xfce-2.99.1-r200.ebuild, -gtk-engines-xfce-2.99.1-r300.ebuild,
