@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.59 2012/04/25 21:06:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.60 2012/04/28 04:00:27 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> gdk-pixbuf-2.26.1.ebuild:
+  keyword ~amd64-fbsd
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> gdk-pixbuf-2.24.1.ebuild:
   arm stable, bug #410611
