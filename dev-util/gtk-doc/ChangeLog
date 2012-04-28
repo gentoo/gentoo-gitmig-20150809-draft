@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.174 2012/04/25 20:13:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.175 2012/04/28 02:55:29 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> gtk-doc-1.18-r1.ebuild:
+  keyword ~amd64-fbsd
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> gtk-doc-1.18-r1.ebuild:
   arm stable, bug #410611
