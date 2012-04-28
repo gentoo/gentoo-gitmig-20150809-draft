@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.52 2011/10/23 19:07:15 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.53 2012/04/28 01:16:14 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> rarian-0.8.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   rarian-0.8.1-r1.ebuild:

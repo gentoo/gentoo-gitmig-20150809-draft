@@ -1,6 +1,10 @@
 # ChangeLog for app-text/scrollkeeper
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.98 2011/05/06 13:18:54 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.99 2012/04/28 01:16:57 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  scrollkeeper-9999-r1.ebuild:
+  keyword ~amd64-fbsd
 
   06 May 2011; Pacho Ramos <pacho@gentoo.org> -scrollkeeper-0.3.14-r2.ebuild,
   -files/scrollkeeper-0.3.14-gcc2_fix.patch,
