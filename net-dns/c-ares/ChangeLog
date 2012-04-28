@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.70 2012/04/26 17:21:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.71 2012/04/28 10:21:14 blueness Exp $
+
+*c-ares-1.8.0 (28 Apr 2012)
+
+  28 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +c-ares-1.8.0.ebuild:
+  Version bump
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> c-ares-1.7.5.ebuild:
   keyword ~amd64-fbsd
