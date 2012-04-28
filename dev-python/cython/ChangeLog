@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.77 2012/04/27 08:17:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.78 2012/04/28 17:41:42 floppym Exp $
+
+  28 Apr 2012; Mike Gilbert <floppym@gentoo.org> cython-0.16.ebuild:
+  No need for eutils.
 
 *cython-0.16 (27 Apr 2012)
 
