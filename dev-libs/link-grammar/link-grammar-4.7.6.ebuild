@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.7.5.ebuild,v 1.1 2012/04/19 11:10:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.7.6.ebuild,v 1.1 2012/04/28 18:27:59 pacho Exp $
 
 EAPI=4
-
 inherit java-pkg-opt-2
 
 DESCRIPTION="Link Grammar Parser is a syntactic English parser based on
