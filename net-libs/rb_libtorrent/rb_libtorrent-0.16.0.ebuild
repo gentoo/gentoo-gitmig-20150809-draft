@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.0.ebuild,v 1.1 2012/04/17 15:42:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.0.ebuild,v 1.2 2012/04/28 15:51:39 heroxbd Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.6"
@@ -50,8 +50,8 @@ src_configure() {
 	BOOST_PKG="$(best_version ">=dev-libs/boost-1.34.1")"
 	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
 	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
-	BOOST_INC="/usr/include/boost-${BOOST_VER}"
-	BOOST_LIB="/usr/$(get_libdir)/boost-${BOOST_VER}"
+	BOOST_INC="${EPREFIX}/usr/include/boost-${BOOST_VER}"
+	BOOST_LIB="${EPREFIX}/usr/$(get_libdir)/boost-${BOOST_VER}"
 
 	local LOGGING
 	use debug && LOGGING="--enable-logging=verbose"
