@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.61 2012/04/07 21:35:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.62 2012/04/28 03:23:03 floppym Exp $
 
 EAPI=4
 
@@ -60,12 +60,23 @@ RDEPEND="
 	device-mapper? ( >=sys-fs/lvm2-2.02.45 )
 	libzfs? ( sys-fs/zfs )
 	mount? ( sys-fs/fuse )
-	truetype? ( media-libs/freetype >=media-fonts/unifont-5 )"
+	truetype? (
+		media-libs/freetype
+		>=media-fonts/unifont-5
+	)
+"
 DEPEND="${RDEPEND}
 	>=dev-lang/python-2.5.2
 	sys-devel/flex
 	virtual/yacc
 	sys-apps/texinfo
+	static? (
+		truetype? (
+			app-arch/bzip2[static-libs(+)]
+			media-libs/freetype[static-libs(+)]
+			sys-libs/zlib[static-libs(+)]
+		)
+	)
 "
 RDEPEND+="
 	grub_platforms_efi-32? ( sys-boot/efibootmgr )
