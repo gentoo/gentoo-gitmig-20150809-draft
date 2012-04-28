@@ -1,5 +1,8 @@
 
 
+  28 Apr 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.4.ebuild:
+  Upstream moved the src tarball
+
 *cgminer-2.3.5 (28 Apr 2012)
 
   28 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.3.5.ebuild:
