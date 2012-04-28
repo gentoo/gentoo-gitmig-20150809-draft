@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.114 2012/04/26 22:41:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.115 2012/04/28 01:13:34 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -38,6 +38,7 @@ net-misc/curl curl_ssl_axtls
 
 # net-nds/openldap
 net-misc/curl ldap
+net-misc/dhcp ldap
 
 # sys-auth/pam_ssh
 sys-auth/pambase pam_ssh
