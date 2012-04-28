@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6480 2012/04/28 19:05:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6481 2012/04/28 20:23:25 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Apr 2012; Johannes Huber <johu@gentoo.org> updates/2Q-2012:
+  Move app-text/focuswriter to app-editors/focuswriter wrt bug #378981.
 
   28 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Masked dev-python/xsv for removal wrt #396497
