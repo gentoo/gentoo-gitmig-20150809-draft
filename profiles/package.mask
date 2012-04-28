@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13707 2012/04/28 14:52:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13708 2012/04/28 19:05:52 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kacper Kowalik <xarthisius@gentoo.org> (28 Apr 2012)
+# No longer maintained upstream, superseeded by
+# dev-python/lxml, bug 396497
+# Masked for removal in 30 days.
+dev-python/xsv
 
 # Hans de Graaff <graaff@gentoo.org> (28 Apr 2012)
 # History of broken code, new releases use a test system
