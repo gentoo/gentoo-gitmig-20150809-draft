@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-IO-Zlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Zlib/ChangeLog,v 1.26 2011/07/30 11:50:54 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Zlib/ChangeLog,v 1.27 2012/04/28 02:03:07 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-IO-Zlib-1.100.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> perl-IO-Zlib-1.100.0-r1.ebuild:
   Drop ~sparc-fbsd KEYWORD

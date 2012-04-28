@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.55 2012/04/26 13:32:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.56 2012/04/28 02:01:00 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-version-0.980.0.ebuild:
+  keyword ~amd64-fbsd
 
 *perl-version-0.980.0 (26 Apr 2012)
 

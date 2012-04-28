@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Simple
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.77 2011/08/13 08:47:14 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.78 2012/04/28 01:54:50 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-Test-Simple-0.980.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
   13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   perl-Test-Simple-0.980.0-r1.ebuild:
