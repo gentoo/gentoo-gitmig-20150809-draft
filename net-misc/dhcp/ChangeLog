@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.206 2012/03/21 00:31:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.207 2012/04/28 01:13:59 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> dhcp-4.2.3_p1.ebuild:
+  keyword ~amd64-fbsd
 
   21 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> dhcp-4.2.3_p1.ebuild:
   Only depend on net-tools with client USE flag enabled (it's used by the
