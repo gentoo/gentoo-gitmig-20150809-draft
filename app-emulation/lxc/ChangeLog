@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.32 2012/03/27 19:01:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.33 2012/04/28 00:17:01 flameeyes Exp $
+
+*lxc-0.8.0_rc1-r2 (28 Apr 2012)
+
+  28 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/lxc-0.8.0_rc1-blockmount.patch, +lxc-0.8.0_rc1-r2.ebuild,
+  -lxc-0.8.0_rc1-r1.ebuild:
+  Add a patch to fix handling of mount points for block devices; also add some
+  warnings related to grsecurity and LXC.
 
   27 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> -lxc-0.8.0_rc1.ebuild,
   lxc-0.7.5-r3.ebuild, lxc-0.8.0_rc1-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0_rc1-r1.ebuild,v 1.2 2012/03/27 19:01:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0_rc1-r2.ebuild,v 1.1 2012/04/28 00:17:01 flameeyes Exp $
 
 EAPI="4"
 
@@ -23,7 +23,8 @@ RDEPEND="sys-libs/libcap"
 
 DEPEND="${RDEPEND}
 	app-text/docbook-sgml-utils
-	>=sys-kernel/linux-headers-2.6.29"
+	>=sys-kernel/linux-headers-2.6.29
+	virtual/linux-sources"
 
 # For init script, so protect with vanilla, they are not strictly
 # needed.
@@ -48,7 +49,14 @@ CONFIG_CHECK="~CGROUPS
 	~VETH ~MACVLAN
 
 	~POSIX_MQUEUE
-	~!NETPRIO_CGROUP"
+	~!NETPRIO_CGROUP
+
+	~!GRKERNSEC_CHROOT_MOUNT
+	~!GRKERNSEC_CHROOT_DOUBLE
+	~!GRKERNSEC_CHROOT_PIVOT
+	~!GRKERNSEC_CHROOT_CHMOD
+	~!GRKERNSEC_CHROOT_CAPS
+"
 
 ERROR_DEVPTS_MULTIPLE_INSTANCES="CONFIG_DEVPTS_MULTIPLE_INSTANCES:	needed for pts inside container"
 
@@ -64,11 +72,18 @@ ERROR_POSIX_MQUEUE="CONFIG_POSIX_MQUEUE:	needed for lxc-execute command"
 
 ERROR_NETPRIO_CGROUP="CONFIG_NETPRIO_CGROUP:	as of kernel 3.3 and lxc 0.8.0_rc1 this causes LXCs to fail booting."
 
+ERROR_GRKERNSEC_CHROOT_MOUNT=":CONFIG_GRKERNSEC_CHROOT_MOUNT	some GRSEC features make LXC unusable see postinst notes"
+ERROR_GRKERNSEC_CHROOT_DOUBLE=":CONFIG_GRKERNSEC_CHROOT_DOUBLE	some GRSEC features make LXC unusable see postinst notes"
+ERROR_GRKERNSEC_CHROOT_PIVOT=":CONFIG_GRKERNSEC_CHROOT_PIVOT	some GRSEC features make LXC unusable see postinst notes"
+ERROR_GRKERNSEC_CHROOT_CHMOD=":CONFIG_GRKERNSEC_CHROOT_CHMOD	some GRSEC features make LXC unusable see postinst notes"
+ERROR_GRKERNSEC_CHROOT_CAPS=":CONFIG_GRKERNSEC_CHROOT_CAPS	some GRSEC features make LXC unusable see postinst notes"
+
 DOCS=(AUTHORS CONTRIBUTING MAINTAINERS TODO README doc/FAQ.txt)
 
 src_prepare() {
 	if ! use vanilla; then
 		epatch "${FILESDIR}/${P}-libtoolize.patch"
+		epatch "${FILESDIR}/${P}-blockmount.patch"
 
 		eautoreconf
 	fi
@@ -124,4 +139,9 @@ pkg_postinst() {
 	ewarn ""
 	ewarn "To use the Fedora, Debian and (various) Ubuntu auto-configuration scripts, you"
 	ewarn "will need sys-apps/yum or dev-util/debootstrap."
+	ewarn ""
+	ewarn "Some GrSecurity settings in relation to chroot security will cause LXC not to"
+	ewarn "work, while others will actually make it much more secure. Please refer to"
+	ewarn "Diego Elio Pettenò's weblog at http://blog.flameeyes.eu/tag/lxc for further"
+	ewarn "details."
 }
