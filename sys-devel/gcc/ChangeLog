@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.870 2012/04/26 14:40:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.871 2012/04/28 00:57:23 dirtyepic Exp $
+
+*gcc-4.6.3 (28 Apr 2012)
+
+  28 Apr 2012; Ryan Hill <dirtyepic@gentoo.org> +gcc-4.6.3.ebuild,
+  metadata.xml:
+  Version bump (bug #406571).
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gcc-4.5.3-r2.ebuild:
   keyword ~amd64-fbsd
