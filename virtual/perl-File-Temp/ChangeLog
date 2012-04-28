@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.56 2012/02/04 16:53:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.57 2012/04/28 02:14:54 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-File-Temp-0.220.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
   04 Feb 2012; Raúl Porcel <armin76@gentoo.org>
   perl-File-Temp-0.220.0-r1.ebuild:
