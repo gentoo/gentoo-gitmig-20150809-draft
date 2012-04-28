@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.52 2012/04/18 11:39:52 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.53 2012/04/28 12:34:12 nimiux Exp $
+
+*muttprint-0.73-r1 (28 Apr 2012)
+
+  28 Apr 2012; Chema Alonso <nimiux@gentoo.org> +muttprint-0.73-r1.ebuild,
+  files/muttprint-0.73-warning.patch:
+  Bump to 0.73-r1. Added dependency on dev-texlive/texlive-latexextra. Removed
+  warning on fatal error.
 
 *muttprint-0.73 (18 Apr 2012)
 
