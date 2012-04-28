@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Temp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.55 2011/05/21 06:19:22 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.56 2012/04/28 02:14:49 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> File-Temp-0.220.0.ebuild:
+  keyword ~amd64-fbsd
 
 *File-Temp-0.220.0 (21 May 2011)
 
