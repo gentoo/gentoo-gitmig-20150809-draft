@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.173 2012/04/13 23:26:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.174 2012/04/28 08:23:06 jlec Exp $
+
+  28 Apr 2012; Justin Lecher <jlec@gentoo.org> no-multilib/package.mask:
+  Remove mask on app-text/bibus, noreason for that, #408247
 
   13 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask webkit-gtk[geoloc] in base and unmask on arches where app-misc/geoclue
