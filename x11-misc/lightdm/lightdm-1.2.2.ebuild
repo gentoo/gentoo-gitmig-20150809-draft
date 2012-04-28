@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.1.3.ebuild,v 1.1 2012/02/18 11:24:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.2.ebuild,v 1.1 2012/04/28 14:53:07 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
 
 DESCRIPTION="A lightweight display manager"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/LightDM"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz
+SRC_URI="http://launchpad.net/${PN}/1.2/${PV}/+download/${P}.tar.gz
 	mirror://gentoo/introspection-20110205.m4.tar.bz2"
 
 LICENSE="GPL-3 LGPL-3"
@@ -23,11 +23,11 @@ RDEPEND="dev-libs/glib:2
 	introspection? ( dev-libs/gobject-introspection )
 	sys-apps/accountsservice"
 DEPEND="${RDEPEND}
-	dev-lang/vala:0.12
 	dev-util/intltool
 	dev-util/pkgconfig
 	gnome-base/gnome-common
-	sys-devel/gettext"
+	sys-devel/gettext
+	dev-util/gtk-doc-am"
 PDEPEND="x11-misc/lightdm-gtk-greeter"
 
 DOCS=( NEWS )
