@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha07.ebuild,v 1.2 2012/04/05 19:16:33 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha07.ebuild,v 1.3 2012/04/28 17:12:59 billie Exp $
 
 EAPI=4
 
@@ -55,6 +55,8 @@ src_prepare() {
 		rules1.top || die "sed rules1.top"
 	sed -i -e "/^\(CC\|DYNLD\|LDCC\|MKDEP\)/s|gcc|${tcCC}|" \
 		-e "/^\(CC++\|DYNLDC++\|LDCC++\|MKC++DEP\)/s|g++|${tcCXX}|" \
+		-e "/COPTOPT=/s/-O//" \
+		-e 's/$(GCCOPTOPT)//' \
 		cc-gcc.rul || die "sed cc-gcc.rul"
 	sed -i -e "s|^#CONFFLAGS +=\t-cc=\$(XCC_COM)$|CONFFLAGS +=\t-cc=${tcCC}|g" \
 		rules.cnf || die "sed rules.cnf"
