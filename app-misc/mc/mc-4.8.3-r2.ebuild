@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.3-r1.ebuild,v 1.1 2012/04/23 15:59:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.3-r2.ebuild,v 1.1 2012/04/28 19:55:27 slyfox Exp $
 
 EAPI=4
 
@@ -43,6 +43,7 @@ src_prepare() {
 
 	# bug #413259
 	epatch "${FILESDIR}"/${P}-fix-chown-crash.patch
+	epatch "${FILESDIR}"/${P}-fix-relative-symlink-creation-crash.patch #413691
 }
 
 src_configure() {
