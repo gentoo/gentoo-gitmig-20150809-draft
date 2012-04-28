@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120402.ebuild,v 1.1 2012/04/02 07:21:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120402.ebuild,v 1.2 2012/04/28 06:59:11 jlec Exp $
 
 EAPI=4
 
@@ -110,6 +110,8 @@ src_prepare() {
 
 	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
 	sed -i "s:__user::g" include/linux/aufs_type.h || die
+
+	epatch "${FILESDIR}"/parallel.patch
 
 	cd "${WORKDIR}"/${PN/3}-util
 
