@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.13.ebuild,v 1.6 2012/04/16 20:42:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.13.ebuild,v 1.7 2012/04/28 19:00:10 armin76 Exp $
 
 EAPI="4"
 # ruby19: dev-ruby/ruby-ldap has no ruby19
@@ -24,7 +24,7 @@ HOMEPAGE="http://puppetlabs.com/"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="augeas diff doc emacs ldap minimal rrdtool selinux shadow sqlite3 vim-syntax xemacs"
-KEYWORDS="amd64 hppa ppc ~sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 
 ruby_add_rdepend "
 	>=dev-ruby/facter-1.5.6
