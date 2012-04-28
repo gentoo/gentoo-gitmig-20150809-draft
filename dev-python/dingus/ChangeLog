@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dingus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dingus/ChangeLog,v 1.1 2012/04/18 16:19:30 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dingus/ChangeLog,v 1.2 2012/04/28 19:35:17 xarthisius Exp $
+
+  28 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> dingus-0.3.4.ebuild:
+  Reorder variables, don't install doc files straight to /usr wrt #413769 by
+  James Rowe <jnrowe@gmail.com>
 
 *dingus-0.3.4 (18 Apr 2012)
 
