@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/fast_xs-0.8.0.ebuild,v 1.4 2012/03/28 20:25:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/fast_xs-0.8.0.ebuild,v 1.5 2012/04/28 23:46:50 flameeyes Exp $
 
 EAPI=4
 
@@ -22,7 +22,13 @@ KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 ruby_add_bdepend "doc? ( >=dev-ruby/hoe-2.3.2 )"
-ruby_add_bdepend "test? ( >=dev-ruby/hoe-2.3.2 virtual/ruby-test-unit )"
+ruby_add_bdepend "test? (
+	>=dev-ruby/hoe-2.3.2
+	virtual/ruby-test-unit
+	dev-ruby/rack
+)"
+
+USE_RUBY="ruby18" ruby_add_bdepend "test? ( www-servers/mongrel )"
 
 RUBY_PATCHES=( "${P}+ruby-1.9.patch" )
 
@@ -36,4 +42,13 @@ each_ruby_compile() {
 	cp ext/fast_xs/fast_xs$(get_modname) lib/ || die
 	emake -Cext/fast_xs_extra CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}" || die "make extension failed"
 	cp ext/fast_xs_extra/fast_xs_extra$(get_modname) lib/ || die
+}
+
+each_ruby_test() {
+	# the Rakefile tries to run all the tests in a single process, but
+	# this breaks the monkey-patchers, we're forced to run them one by
+	# one.
+	for tu in test/test_*.rb; do
+		${RUBY} -Ilib $tu || die "test $tu failed"
+	done
 }
