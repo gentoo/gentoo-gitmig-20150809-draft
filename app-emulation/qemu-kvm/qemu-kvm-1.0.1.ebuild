@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1.ebuild,v 1.1 2012/04/23 05:14:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1.ebuild,v 1.2 2012/04/28 18:32:37 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -171,7 +171,7 @@ pkg_pretend() {
 pkg_setup() {
 	python_set_active_version 2
 
-	enewgroup kvm
+	enewgroup kvm 78
 }
 
 src_prepare() {
@@ -190,6 +190,9 @@ src_prepare() {
 	# to the qemu-devel ml - bug 337988
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
 
+	# Fix compilation of the qemu-system-ppc component
+	epatch "${FILESDIR}"/${PN}-1.0-fix-qemu-system-ppc.patch
+
 	# drop '-g' by default as it tends to eat
 	# A LOT (~2GB) of ram for each job #355861
 	sed -e 's/CFLAGS="-g $CFLAGS"/CFLAGS="$CFLAGS"/g' \
@@ -198,6 +201,8 @@ src_prepare() {
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
+
+	epatch_user
 }
 
 src_configure() {

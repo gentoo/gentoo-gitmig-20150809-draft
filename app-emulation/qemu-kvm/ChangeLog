@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.114 2012/04/23 05:14:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.115 2012/04/28 18:32:37 cardoe Exp $
+
+  28 Apr 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.0.1.ebuild:
+  Fix issue with the PPC system targets. bug #413487
+  Add epatch_user during the src_prepare phase allowing people to apply patches
+  Default enewgroup to gid 78 as part of GLEP 27.
 
 *qemu-kvm-1.0.1 (23 Apr 2012)
 
