@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Pod-Escapes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Escapes/ChangeLog,v 1.4 2011/07/30 12:22:12 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Escapes/ChangeLog,v 1.5 2012/04/28 01:44:16 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> Pod-Escapes-1.40.0.ebuild:
+  keyword ~amd64-fbsd
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> Pod-Escapes-1.40.0.ebuild:
   Drop ~sparc-fbsd KEYWORD

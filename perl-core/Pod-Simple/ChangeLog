@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Pod-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.38 2012/03/07 21:58:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.39 2012/04/28 01:49:39 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> Pod-Simple-3.200.0.ebuild:
+  keyword ~amd64-fbsd
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> Pod-Simple-3.160.0.ebuild:
   Marking Pod-Simple-3.160.0 ppc64 for bug 391499

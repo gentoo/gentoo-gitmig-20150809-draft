@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-Metadata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.19 2012/02/12 20:17:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.20 2012/04/28 02:06:41 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  Module-Metadata-1.0.9.ebuild:
+  keyword ~amd64-fbsd
 
 *Module-Metadata-1.0.9 (12 Feb 2012)
 
