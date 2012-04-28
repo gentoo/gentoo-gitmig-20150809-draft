@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.226 2012/03/15 20:10:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.227 2012/04/28 15:05:01 grobian Exp $
+
+*mutt-1.5.21-r9 (28 Apr 2012)
+
+  28 Apr 2012; Fabian Groffen <grobian@gentoo.org> +mutt-1.5.21-r9.ebuild,
+  -mutt-1.5.21-r7.ebuild:
+  Revbump for bugs #413151 and #413405, added xterm_titles patch, see
+  $ts_enabled, $ts_icon_format and $tc_status_format vars in muttrc(5)
 
   15 Mar 2012; Fabian Groffen <grobian@gentoo.org> mutt-1.5.21-r8.ebuild:
   Updated sidebar-dotpathsep patch for ignoring trailing path separators, bug
