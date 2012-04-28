@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/msp430mcu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430mcu/ChangeLog,v 1.9 2012/04/11 22:44:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430mcu/ChangeLog,v 1.10 2012/04/28 10:02:43 radhermit Exp $
+
+*msp430mcu-20120425 (28 Apr 2012)
+
+  28 Apr 2012; Tim Harder <radhermit@gentoo.org> +msp430mcu-20120425.ebuild:
+  Version bump.
 
 *msp430mcu-20120407 (11 Apr 2012)
 
