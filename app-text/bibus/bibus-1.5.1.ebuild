@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.8 2011/06/28 20:02:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.9 2012/04/28 09:14:35 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,16 +18,18 @@ IUSE="mysql"
 
 # Most of this mess is designed to give the choice of sqlite or mysql
 # but prefer sqlite. We also need to default to sqlite if neither is requested.
+# Cannot depend on virtual/ooo
 # bibus fails to start with app-office/openoffice-bin (bug #288232).
-RDEPEND="|| ( app-office/libreoffice app-office/openoffice )
+RDEPEND="
+	|| ( app-office/libreoffice app-office/openoffice )
 	=dev-python/wxpython-2.8*
 	dev-python/pysqlite
 	dev-db/sqliteodbc
+	dev-db/unixODBC
 	mysql? (
 		dev-python/mysql-python
 		dev-db/myodbc
-	)
-	dev-db/unixODBC"
+	)"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
@@ -36,9 +38,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.5.0-install.patch
-	epatch "${FILESDIR}"/${PN}-1.5.0-pysqlite.patch
-	sed -e "s:gentoo-python:python$(python_get_version):g" \
+	epatch \
+		"${FILESDIR}"/${PN}-1.5.0-install.patch \
+		"${FILESDIR}"/${PN}-1.5.0-pysqlite.patch
+	sed \
+		-e "s:gentoo-python:python$(python_get_version):g" \
 		-i Makefile Setup/Makefile Setup/bibus.cfg Setup/bibus.sh \
 		|| die "Failed to adjust python paths"
 

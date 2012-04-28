@@ -1,6 +1,13 @@
 # ChangeLog for app-text/bibus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.32 2011/07/07 07:30:09 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.33 2012/04/28 09:14:35 jlec Exp $
+
+*bibus-1.5.2 (28 Apr 2012)
+
+  28 Apr 2012; Justin Lecher <jlec@gentoo.org> bibus-1.5.1.ebuild,
+  +bibus-1.5.2.ebuild, +files/bibus-1.5.2-install.patch, metadata.xml:
+  Version Bump including detection of libreoffice, #394537 thanks Bjoern
+  Olausson; multi py ABI installation
 
   07 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
   -files/bibus-1.4.3.1-install.patch:
