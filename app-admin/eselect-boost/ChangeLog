@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.18 2012/04/02 00:51:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.19 2012/04/28 03:24:32 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> eselect-boost-0.4.ebuild:
+  keyword ~amd64-fbsd
 
 *eselect-boost-0.4 (02 Apr 2012)
 
