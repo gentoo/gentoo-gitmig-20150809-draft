@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.79 2012/04/23 19:56:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.80 2012/04/28 16:59:10 jer Exp $
+
+*libnet-1.0.2a-r4 (28 Apr 2012)
+
+  28 Apr 2012; Jeroen Roovers <jer@gentoo.org> +files/1.0.2a-endian.patch,
+  files/1.0.2a-slot.patch, +libnet-1.0.2a-r4.ebuild:
+  Apply endian patch by Christopher Friedt (bug #275885). Clean up patch.
+  Respect CFLAGS.
 
   23 Apr 2012; Fabian Groffen <grobian@gentoo.org> libnet-1.1.6.ebuild:
   Marked ~{ppc,x86,x64}-macos, bug #410067
