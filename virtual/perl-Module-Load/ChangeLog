@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Load
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.21 2011/10/23 08:11:05 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.22 2012/04/28 02:25:46 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-Module-Load-0.220.0.ebuild:
+  keyword ~amd64-fbsd
 
 *perl-Module-Load-0.220.0 (23 Oct 2011)
 

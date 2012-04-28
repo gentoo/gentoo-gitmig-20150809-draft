@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-IPC-Cmd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.31 2012/01/31 18:43:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.32 2012/04/28 02:27:39 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-IPC-Cmd-0.760.0.ebuild:
+  keyword ~amd64-fbsd
 
 *perl-IPC-Cmd-0.760.0 (31 Jan 2012)
 
