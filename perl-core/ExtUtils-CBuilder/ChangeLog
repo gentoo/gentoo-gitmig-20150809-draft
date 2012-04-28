@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-CBuilder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-CBuilder/ChangeLog,v 1.42 2012/02/25 08:09:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-CBuilder/ChangeLog,v 1.43 2012/04/28 02:28:17 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  ExtUtils-CBuilder-0.280.205.ebuild:
+  keyword ~amd64-fbsd
 
 *ExtUtils-CBuilder-0.280.205 (25 Feb 2012)
 

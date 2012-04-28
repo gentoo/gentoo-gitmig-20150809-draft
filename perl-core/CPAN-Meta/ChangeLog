@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CPAN-Meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.26 2012/04/02 17:58:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.27 2012/04/28 02:41:15 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> CPAN-Meta-2.120.921.ebuild:
+  keyword ~amd64-fbsd
 
 *CPAN-Meta-2.120.921 (02 Apr 2012)
 

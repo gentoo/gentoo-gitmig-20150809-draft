@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/CPAN-Meta-YAML
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.22 2012/03/18 09:52:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.23 2012/04/28 02:32:04 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  CPAN-Meta-YAML-0.8.0.ebuild:
+  keyword ~amd64-fbsd
 
 *CPAN-Meta-YAML-0.8.0 (18 Mar 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Load
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load/ChangeLog,v 1.16 2011/10/23 08:10:29 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load/ChangeLog,v 1.17 2012/04/28 02:25:05 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org> Module-Load-0.220.0.ebuild:
+  keyword ~amd64-fbsd
 
 *Module-Load-0.220.0 (23 Oct 2011)
 

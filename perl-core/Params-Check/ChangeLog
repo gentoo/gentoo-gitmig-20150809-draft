@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Params-Check
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Params-Check/ChangeLog,v 1.14 2012/04/25 18:00:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Params-Check/ChangeLog,v 1.15 2012/04/28 02:22:45 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  Params-Check-0.340.0.ebuild:
+  keyword ~amd64-fbsd
 
 *Params-Check-0.340.0 (25 Apr 2012)
 

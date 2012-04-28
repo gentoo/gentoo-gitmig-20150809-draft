@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-Build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.58 2012/02/25 07:55:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.59 2012/04/28 02:42:31 aballier Exp $
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  Module-Build-0.400.0.ebuild:
+  keyword ~amd64-fbsd
 
 *Module-Build-0.400.0 (25 Feb 2012)
 
