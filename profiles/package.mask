@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13706 2012/04/28 08:19:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13707 2012/04/28 14:52:11 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -64,6 +64,8 @@ x11-apps/xsetpointer
 # Samuli Suominen <ssuominen@gentoo.org> (22 Apr 2012)
 # Masked for removal in 30 days for using the obsolete xulrunner
 # package wrt #412875 and #403415
+# Information from mailinglist:
+# Possible replacements include kchmviewer and fbreader
 app-text/chmsee
 
 # Torsten Veller <tove@gentoo.org> (21 Apr 2012)
