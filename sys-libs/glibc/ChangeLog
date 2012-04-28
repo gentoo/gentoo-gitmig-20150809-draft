@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.840 2012/04/27 02:07:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.841 2012/04/28 16:22:31 jer Exp $
+
+  28 Apr 2012; Jeroen Roovers <jer@gentoo.org> glibc-2.14.1-r3.ebuild:
+  Stable for HPPA (bug #411903).
 
   27 Apr 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.15-r1.ebuild:
   Get this version cross-compiling too.
