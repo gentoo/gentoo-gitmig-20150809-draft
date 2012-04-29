@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/faraday
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.12 2012/04/08 06:12:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.13 2012/04/29 00:11:59 flameeyes Exp $
+
+*faraday-0.8.0 (29 Apr 2012)
+
+  29 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> +faraday-0.8.0.ebuild:
+  Version bump; addd sinatra to the test dependencies, remove dropped
+  dependencies, add a dependency over system_timer (for Ruby 1.8/EE only). JRuby
+  has been dropped until it supports sinatra.
 
 *faraday-0.7.6 (08 Apr 2012)
 
