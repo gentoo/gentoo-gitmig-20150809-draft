@@ -1,6 +1,9 @@
 # ChangeLog for www-client/xxxterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.6 2012/03/17 21:54:12 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.7 2012/04/29 18:02:39 ago Exp $
+
+  29 Apr 2012; Agostino Sarubbo <ago@gentoo.org> xxxterm-1.1103.ebuild:
+  Drop extra CFLAGS
 
 *xxxterm-1.1103 (17 Mar 2012)
 

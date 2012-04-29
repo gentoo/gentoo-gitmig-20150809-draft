@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.1103.ebuild,v 1.1 2012/03/17 21:54:12 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.1103.ebuild,v 1.2 2012/04/29 18:02:39 ago Exp $
 
 EAPI="4"
 
@@ -41,7 +41,8 @@ S="${WORKDIR}/${MY_P}/linux"
 
 src_prepare() {
 	sed -i \
-		's/-Wall -ggdb //' \
+		-e 's/-O2//' \
+		-e 's/-ggdb3//' \
 		Makefile || die 'sed Makefile failed.'
 	sed -i \
 		-e 's#https://www\.cyphertite\.com#http://www.gentoo.org/#' \
