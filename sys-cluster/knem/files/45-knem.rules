@@ -1,1 +1,1 @@
-KERNEL=="knem", NAME="%k", MODE="0666"
+KERNEL=="knem", MODE="0666"
