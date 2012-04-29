@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.2.1.ebuild,v 1.3 2012/04/18 21:21:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.2.1.ebuild,v 1.4 2012/04/29 14:58:39 maekke Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="|| ( GPL-2 freedist ) GPL-2" # yelp.m4 is GPL2 || freely distributable
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.6.12
