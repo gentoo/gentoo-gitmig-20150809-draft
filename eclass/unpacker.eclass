@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.7 2012/04/21 05:45:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.8 2012/04/29 00:15:10 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -292,8 +292,8 @@ _unpacker() {
 	# first figure out the decompression method
 	case ${m} in
 	*.bz2|*.tbz|*.tbz2)
-		local bzcmd=${PORTAGE_BZIP2_COMMAND:-$(type -P pbzip2 || bzip2)}
-		local bzuncmd=${PORTAGE_BUNZIP2_COMMAND:-${PORTAGE_BZIP2_COMMAND} -d}
+		local bzcmd=${PORTAGE_BZIP2_COMMAND:-$(type -P pbzip2 || type -P bzip2)}
+		local bzuncmd=${PORTAGE_BUNZIP2_COMMAND:-${bzcmd} -d}
 		: ${UNPACKER_BZ2:=${bzuncmd}}
 		comp="${UNPACKER_BZ2} -c"
 		;;
