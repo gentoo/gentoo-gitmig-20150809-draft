@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sguil-client
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/ChangeLog,v 1.8 2009/03/08 02:54:25 cla Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/ChangeLog,v 1.9 2012/04/29 17:03:12 jer Exp $
+
+  29 Apr 2012; Jeroen Roovers <jer@gentoo.org> sguil-client-0.6.1.ebuild:
+  Fix inherit. Remove empty DEPEND. Remove useless elog.
 
   08 Mar 2009; Dawid Węgliński <cla@gentoo.org> sguil-client-0.6.1.ebuild:
   Migration to EAPI 2, add get_libdir() fix, keyword ~amd64

@@ -1,10 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.6.1.ebuild,v 1.5 2009/03/08 02:54:25 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.6.1.ebuild,v 1.6 2012/04/29 17:03:12 jer Exp $
 
-EAPI="2"
-
-inherit eutils
+EAPI=4
+inherit multilib
 
 MY_PV="${PV/_p/p}"
 DESCRIPTION="GUI Console for sguil Network Security Monitoring"
@@ -15,7 +14,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ssl"
 
-DEPEND=""
 RDEPEND="
 	>=dev-lang/tcl-8.3[-threads]
 	>=dev-lang/tk-8.3
@@ -29,17 +27,15 @@ RDEPEND="
 
 S="${WORKDIR}/sguil-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e "/^set SGUILLIB /s:./lib:/usr/$(get_libdir)/sguil:" \
+src_prepare() {
+	sed -i client/sguil.conf \
+		-e "/^set SGUILLIB /s:./lib:/usr/$(get_libdir)/sguil:" \
 		-e '/^set ETHEREAL_PATH /s:/usr/sbin/ethereal:/usr/bin/wireshark:' \
 		-e '/^set SERVERHOST /s:demo.sguil.net:localhost:' \
 		-e '/^set MAILSERVER /s:mail.example.com:localhost:' \
-		-e '/^set GPG_PATH /s:/usr/local/bin/gpg:/usr/bin/gpg:' \
-		client/sguil.conf || die "sed failed"
-	sed -i -e 's:^exec wish:exec wishx': \
-		client/sguil.tk || die "sed failed"
+		-e '/^set GPG_PATH /s:/usr/local/bin/gpg:/usr/bin/gpg:' || die
+	sed -i client/sguil.tk \
+		-e 's:^exec wish:exec wishx:' || die
 }
 
 src_install() {
@@ -49,10 +45,4 @@ src_install() {
 	insinto "/usr/$(get_libdir)/sguil"
 	doins "${S}"/client/lib/*
 	dodoc doc/*
-}
-
-pkg_postinst() {
-	elog
-	elog "You can customize your configuration by modifying /etc/sguil/sguil.conf"
-	elog
 }
