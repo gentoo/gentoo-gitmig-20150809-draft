@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/open-mx-1.5.0.ebuild,v 1.2 2012/02/25 06:29:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/open-mx-1.5.2.ebuild,v 1.1 2012/04/29 12:39:54 alexxy Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools linux-mod multilib
 
 DESCRIPTION="Open-MX - Myrinet Express over Generic Ethernet Hardware"
 HOMEPAGE="http://open-mx.gforge.inria.fr/"
-SRC_URI="http://gforge.inria.fr/frs/download.php/28871/${P}.tar.gz"
+SRC_URI="http://gforge.inria.fr/frs/download.php/30245/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -44,6 +44,8 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-mtu=${OPEN_MX_MTU:-9000} \
+		--with-linux="${KERNEL_DIR}" \
+		--with-linux-release=${KV_FULL} \
 		$(use_enable static-libs static) \
 		$(use_enable debug)
 }
