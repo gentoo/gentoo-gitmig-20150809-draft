@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.1 2012/04/29 13:05:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.2 2012/04/29 15:03:09 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -235,7 +235,7 @@ gettext_missing() {
 	# plugins without converting to gettext
 
 	local GETTEXT_MISSING=$( grep xgettext Makefile )
-	if [ -z ${GETTEXT_MISSING} ]; then
+	if [[ -z ${GETTEXT_MISSING} ]]; then
 		dev_check "Plugin isn't converted to gettext handling \n"
 	fi
 }
