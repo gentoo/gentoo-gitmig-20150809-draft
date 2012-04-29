@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.0.ebuild,v 1.5 2012/04/24 03:44:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.2.ebuild,v 1.1 2012/04/29 18:36:09 pacho Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -106,13 +106,7 @@ src_prepare() {
 		sed -i -e 's/burn.mount/ /' daemon/Makefile.am || die
 	fi
 
-	# bug #410411, https://bugzilla.gnome.org/show_bug.cgi?id=672693
-	use ios && epatch "${FILESDIR}/${PN}-1.10.1-libimobiledevice-1.1.2.patch"
-
-	# For gcc-4.5 and USE=afp, https://bugzilla.gnome.org/show_bug.cgi?id=672708
-	epatch "${FILESDIR}/${PN}-1.12.0-afp-gcc-4.5.patch"
-
-	if use gphoto2 || use archive || ! use udev || use ios; then
+	if use gphoto2 || use archive || ! use udev; then
 		# libgcrypt.m4 needed for eautoreconf, bug #399043
 		mv "${WORKDIR}/libgcrypt.m4" "${S}"/ || die
 
