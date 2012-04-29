@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/easychem
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.19 2011/07/20 16:03:08 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.20 2012/04/29 10:08:39 jlec Exp $
+
+  29 Apr 2012; Justin Lecher <jlec@gentoo.org> files/0.6-gentoo.patch,
+  metadata.xml:
+  Add missing lib to link with gold
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #70723

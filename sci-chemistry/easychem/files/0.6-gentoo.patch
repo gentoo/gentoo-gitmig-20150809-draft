@@ -20,7 +20,7 @@ index 6638394..5da56b0 100644
 -	$(CC) -o easychem $(OBJECTS) $(GTK_LIBS) $(C_FLAGS)
 -	strip easychem
 +easychem: postscript graph $(OBJECTS)
-+	$(CC) $(C_FLAGS) $(LDFLAGS) -o easychem $(OBJECTS) $(GTK_LIBS)
++	$(CC) $(C_FLAGS) $(LDFLAGS) -o easychem $(OBJECTS) $(GTK_LIBS) -lm
  
  clean: FORCE
  	-cd graph; make clean
