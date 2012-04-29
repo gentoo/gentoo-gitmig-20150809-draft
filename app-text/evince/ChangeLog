@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.240 2012/04/25 19:27:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.241 2012/04/29 15:13:14 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> evince-2.32.0-r4.ebuild:
+  x86 stable, bug #410611
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> evince-2.32.0-r4.ebuild:
   arm stable, bug #410611
