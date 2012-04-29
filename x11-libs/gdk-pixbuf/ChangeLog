@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.61 2012/04/29 14:43:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.62 2012/04/29 16:15:56 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> gdk-pixbuf-2.24.1.ebuild:
+  x86 stable, bug #410611
 
   29 Apr 2012; Fabian Groffen <grobian@gentoo.org> gdk-pixbuf-2.26.1.ebuild:
   Run elibtoolize to fix gdk-pixbuf-loader not finding its own loaders on Darwin
