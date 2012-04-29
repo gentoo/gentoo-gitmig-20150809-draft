@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-actuator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-actuator/ChangeLog,v 1.9 2012/04/29 18:18:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-actuator/ChangeLog,v 1.10 2012/04/29 19:01:27 hd_brummy Exp $
+
+  29 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-actuator-1.1.1.ebuild:
+  wrong use of scr_unpack scr_prepare fixed
 
   29 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-actuator-1.1.1.ebuild:
