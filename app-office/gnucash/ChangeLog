@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.257 2012/04/18 20:11:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.258 2012/04/29 15:05:23 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> gnucash-2.4.10.ebuild:
+  x86 stable, bug #410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> gnucash-2.4.10.ebuild:
   Stable for amd64, wrt bug #410611

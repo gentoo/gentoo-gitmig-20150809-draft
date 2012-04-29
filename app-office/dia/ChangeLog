@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.137 2012/04/19 20:26:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.138 2012/04/29 15:04:27 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> dia-0.97.2.ebuild:
+  x86 stable, bug #410611
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> dia-0.97.2.ebuild:
   Marking dia-0.97.2 ppc64 stable for bug 410611
