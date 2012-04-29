@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/toilet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.19 2011/01/20 18:20:31 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.20 2012/04/29 14:44:55 xmw Exp $
+
+*toilet-0.3 (29 Apr 2012)
+
+  29 Apr 2012; Michael Weber <xmw@gentoo.org> +toilet-0.3.ebuild, metadata.xml:
+  Taking maint, version bump.
 
   20 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> toilet-0.2.ebuild:
   Mark ~ppc64
