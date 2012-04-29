@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-11.ebuild,v 1.3 2012/03/26 07:23:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-12.ebuild,v 1.1 2012/04/29 03:56:55 xmw Exp $
 
 EAPI=4
 
@@ -22,14 +22,14 @@ RDEPEND="media-libs/freetype
 	x11-libs/libX11
 	x11-misc/xsel"
 DEPEND="${RDEPEND}
-	=app-text/mupdf-0.9_p20120221
+	>=app-text/mupdf-1.0
 	dev-lang/ocaml[ocamlopt]
 	dev-ml/lablgl[glut]"
 
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-WM_CLASS.patch
+	epatch "${FILESDIR}"/${PN}-11-WM_CLASS.patch
 }
 
 src_compile() {

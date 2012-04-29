@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-7.ebuild,v 1.4 2011/11/18 03:32:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-7.ebuild,v 1.5 2012/04/29 03:56:55 xmw Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="vanilla"
 
-RDEPEND=">=app-text/mupdf-0.8.165
+RDEPEND="=app-text/mupdf-0.9
 	dev-ml/lablgl[glut]
 	dev-lang/ocaml[ocamlopt]
 	media-libs/jbig2dec
