@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.23.ebuild,v 1.1 2012/04/23 10:47:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.23.ebuild,v 1.2 2012/04/29 18:58:06 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -56,6 +56,9 @@ src_prepare() {
 	sed -e "/SUBDIRS += python/d" -i Makefile.am || die
 
 	use python && python_clean_py-compile_files
+
+	# compilation: avoid identifier "clone", fixed in next version
+	epatch "${FILESDIR}/${P}-clone-identifier.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
