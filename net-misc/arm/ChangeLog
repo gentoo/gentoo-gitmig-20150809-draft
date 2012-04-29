@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/arm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.18 2012/02/24 15:01:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.19 2012/04/29 12:14:03 blueness Exp $
+
+*arm-1.4.5.0 (29 Apr 2012)
+
+  29 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +arm-1.4.5.0.ebuild:
+  Version bump
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> arm-1.4.4.1.ebuild:
   x86 stable wrt bug #404833
