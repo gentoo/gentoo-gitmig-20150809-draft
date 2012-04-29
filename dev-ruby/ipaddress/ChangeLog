@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ipaddress
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ipaddress/ChangeLog,v 1.1 2012/04/29 15:24:28 hollow Exp $
+
+*ipaddress-0.8.0 (29 Apr 2012)
+
+  29 Apr 2012; Benedikt Böhm <hollow@gentoo.org> +ipaddress-0.8.0.ebuild,
+  +metadata.xml:
+  initial ebuild (dependency of dev-ruby/ohai-0.6.12)
+
