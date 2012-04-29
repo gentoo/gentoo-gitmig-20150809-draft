@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/targetcli/targetcli-9999.ebuild,v 1.1 2012/04/16 21:14:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/targetcli/targetcli-9999.ebuild,v 1.2 2012/04/29 12:42:28 alexxy Exp $
 
 EAPI=4
 
@@ -28,3 +28,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~TARGET_CORE"
+
+pkg_setup() {
+	linux-info_pkg_setyp
+	python_pkg_setup
+}

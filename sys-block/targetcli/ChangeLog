@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/targetcli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/targetcli/ChangeLog,v 1.1 2012/04/16 21:14:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/targetcli/ChangeLog,v 1.2 2012/04/29 12:42:28 alexxy Exp $
+
+  29 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> targetcli-9999.ebuild:
+  [sys-block/targetcli] Fix #413609
 
 *targetcli-9999 (16 Apr 2012)
 
