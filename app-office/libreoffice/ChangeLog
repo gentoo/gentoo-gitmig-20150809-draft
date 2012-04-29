@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.293 2012/04/26 13:19:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.294 2012/04/29 09:34:45 scarabeus Exp $
+
+  29 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/libreoffice-3.6-clucene-remove-wrong-check.patch,
+  libreoffice-9999-r2.ebuild:
+  Remove no longer needed clucene patching.
 
   26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
   Drop removed option.
