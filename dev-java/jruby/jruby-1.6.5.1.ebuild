@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.5.1.ebuild,v 1.1 2012/04/14 07:05:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.5.1.ebuild,v 1.2 2012/04/29 15:43:56 graaff Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source test"
@@ -127,7 +127,7 @@ src_compile() {
 	# Avoid generating the ri cache since that currently fails.
 	local flags="-Dgenerate-ri-cache.hasrun=true"
 	#local flags=""
-	use bsf && flags="-Dbsf.present=true"
+	use bsf && flags+=" -Dbsf.present=true"
 
 	export RUBYOPT=""
 	einfo $RUBYOPT
