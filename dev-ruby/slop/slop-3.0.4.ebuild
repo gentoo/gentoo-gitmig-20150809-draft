@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/slop-3.0.4.ebuild,v 1.1 2012/04/21 07:20:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/slop-3.0.4.ebuild,v 1.2 2012/04/29 16:38:18 tomka Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -17,7 +17,7 @@ RUBY_S="injekt-slop-*"
 
 LICENSE="MIT"
 SLOT="3"
-KEYWORDS="~amd64 ~ppc64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 IUSE=""
 

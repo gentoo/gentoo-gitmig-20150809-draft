@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/method_source-0.7.1.ebuild,v 1.1 2012/04/09 07:16:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/method_source-0.7.1.ebuild,v 1.2 2012/04/29 16:37:33 tomka Exp $
 
 EAPI=4
 # jruby crashes on parsing the metadata.
@@ -20,7 +20,7 @@ IUSE=""
 SLOT="0"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 ruby_add_bdepend "test? ( >=dev-ruby/bacon-1.1.0 )"
 
