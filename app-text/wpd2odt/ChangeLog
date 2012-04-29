@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wpd2odt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/ChangeLog,v 1.6 2012/04/22 14:21:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/ChangeLog,v 1.7 2012/04/29 08:20:28 scarabeus Exp $
+
+  29 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> wpd2odt-0.8.1.ebuild:
+  ppc stable wrt bug#411449. I forgot to commit the keyword previously :)
 
   22 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> wpd2odt-0.8.1.ebuild:
   x86 stable wrt bug #411449
