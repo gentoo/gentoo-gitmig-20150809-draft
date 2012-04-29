@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.84 2012/04/19 11:52:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.85 2012/04/29 16:28:24 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> bluefish-2.2.2.ebuild:
+  x86 stable, bug #408189
 
   19 Apr 2012; Agostino Sarubbo <ago@gentoo.org> bluefish-2.2.2.ebuild:
   Stable for amd64, wrt bug #408189
