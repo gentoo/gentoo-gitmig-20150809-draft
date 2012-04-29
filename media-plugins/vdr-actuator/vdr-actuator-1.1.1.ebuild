@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-actuator/vdr-actuator-1.1.1.ebuild,v 1.4 2011/01/28 17:20:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-actuator/vdr-actuator-1.1.1.ebuild,v 1.5 2012/04/29 18:18:28 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: control an linear or horizon actuator attached trough the parallel port"
 HOMEPAGE="http://ventoso.org/luca/vdr/"
@@ -19,7 +19,7 @@ DEPEND=">=media-video/vdr-1.5.8"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	vdr-plugin_src_unpack
+	vdr-plugin-2_src_unpack
 
 	fix_vdr_libsi_include "${S}/filter.c"
 }
