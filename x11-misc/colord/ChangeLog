@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.23 2012/04/25 21:26:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.24 2012/04/29 16:22:12 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> colord-0.1.18.ebuild:
+  x86 stable, bug #410611
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> colord-0.1.18.ebuild:
   arm stable, bug #410611
