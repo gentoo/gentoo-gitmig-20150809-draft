@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-ast
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/ChangeLog,v 1.20 2012/03/24 16:25:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/ChangeLog,v 1.21 2012/04/29 13:00:29 scarabeus Exp $
+
+*xf86-video-ast-0.95.0 (29 Apr 2012)
+
+  29 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xf86-video-ast-0.95.0.ebuild, -xf86-video-ast-0.91.10.ebuild,
+  -xf86-video-ast-0.93.9.ebuild, xf86-video-ast-0.93.10.ebuild:
+  Version bump 0.95.0. Stabilise 0.93.10 on amd64 and x86. Remove overshadowed
+  versions.
 
 *xf86-video-ast-0.93.10 (24 Mar 2012)
 
