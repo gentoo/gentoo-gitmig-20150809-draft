@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.131 2012/04/26 09:12:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.132 2012/04/29 15:57:56 vapier Exp $
+
+  29 Apr 2012; Mike Frysinger <vapier@gentoo.org> jpeg-8d.ebuild:
+  Mark alpha arm ia64 m68k s390 sh stable #413555.
 
   26 Apr 2012; Agostino Sarubbo <ago@gentoo.org> jpeg-8d.ebuild:
   Stable for amd64, wrt bug #413555
