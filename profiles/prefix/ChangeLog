@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.341 2012/04/26 19:14:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.342 2012/04/29 09:15:04 grobian Exp $
+
+  29 Apr 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask newer pax-utils due to at* portability horror
 
   26 Apr 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
   Also mask python-2.7.3-r1
