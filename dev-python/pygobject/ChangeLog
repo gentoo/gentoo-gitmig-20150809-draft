@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.154 2012/04/25 20:08:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.155 2012/04/29 15:30:02 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> pygobject-3.0.4.ebuild:
+  x86 stable, bug #410611
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> pygobject-3.0.4.ebuild:
   arm stable, bug #410611
