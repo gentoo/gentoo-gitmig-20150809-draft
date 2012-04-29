@@ -1,30 +1,33 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.21 2011/03/12 10:36:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.22 2012/04/29 11:53:30 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit autotools gnome2 virtualx
 
-DESCRIPTION="GtkImageView is a simple image viewer widget for GTK."
-HOMEPAGE="http://trac.bjourne.webfactional.com/wiki"
+DESCRIPTION="A simple image viewer widget for GTK"
+HOMEPAGE="http://trac.bjourne.webfactional.com/wiki/"
 SRC_URI="http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/${P}.tar.gz?format=raw -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="doc examples"
+IUSE="doc examples static-libs"
 
 # tests do not work with userpriv
 RESTRICT="userpriv"
 
-RDEPEND=">=x11-libs/gtk+-2.6:2"
-DEPEND="${DEPEND}
+RDEPEND="x11-libs/gtk+:2"
+DEPEND="${RDEPEND}
 	gnome-base/gnome-common
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
-DOCS="README"
+pkg_setup() {
+   DOCS="README"
+   G2CONF="$(use_enable static-libs static)"
+}
 
 src_prepare() {
 	gnome2_src_prepare
@@ -35,6 +38,9 @@ src_prepare() {
 	# Prevent excessive build failures due to glib/gtk changes
 	sed '/DEPRECATED_FLAGS/d' -i configure.in || die "sed 2 failed"
 
+	# Gold linker fix
+	sed -e '/libtest.la/s:$: -lm:g' -i tests/Makefile.am || die
+
 	if use doc; then
 		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/usr/bin/gtkdoc-rebase" \
 			-i gtk-doc.make || die "sed 3 failed"
@@ -43,13 +49,13 @@ src_prepare() {
 			-i gtk-doc.make || die "sed 4 failed"
 	fi
 
-	eautoreconf
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_test() {
 	# the tests are only built, but not run by default
 	local failed="0"
-	emake check || die "emake check failed"
+	Xemake check
 	cd "${S}"/tests
 	for test in test-* ; do
 		if [[ -x ${test} ]] ; then
@@ -61,8 +67,9 @@ src_test() {
 
 src_install() {
 	gnome2_src_install
+	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.la
 	if use examples ; then
 		docinto examples
-		dodoc tests/ex-*.c || die "dodoc failed"
+		dodoc tests/ex-*.c
 	fi
 }
