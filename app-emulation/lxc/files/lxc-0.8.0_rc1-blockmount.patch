@@ -1,4 +1,4 @@
-From f895fe1ad3aca8fed492df12adcd8710bca8ca32 Mon Sep 17 00:00:00 2001
+From dd411d7ae02f75aa2ffe8cd5e6271b36c113d03f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@flameeyes.eu>
 Date: Fri, 27 Apr 2012 17:01:33 -0700
 Subject: [PATCH] Workaround requirement to use the realname of the block
@@ -13,12 +13,12 @@ file.
 
 Signed-off-by: Diego Elio Pettenò <flameeyes@flameeyes.eu>
 ---
- src/lxc/conf.c |   34 +++++++++++++++++++---------------
+ src/lxc/conf.c |   38 +++++++++++++++++++++-----------------
  src/lxc/conf.h |    1 +
- 2 files changed, 20 insertions(+), 15 deletions(-)
+ 2 files changed, 22 insertions(+), 17 deletions(-)
 
 diff --git a/src/lxc/conf.c b/src/lxc/conf.c
-index e8088bb..593871a 100644
+index e8088bb..3ba6db6 100644
 --- a/src/lxc/conf.c
 +++ b/src/lxc/conf.c
 @@ -350,9 +350,9 @@ static int mount_unknow_fs(const char *rootfs, const char *target, int mntopt)
@@ -120,17 +120,34 @@ index e8088bb..593871a 100644
  		ERROR("failed to mount rootfs");
  		return -1;
  	}
-@@ -1110,7 +1112,9 @@ static int mount_entry_on_absolute_rootfs(struct mntent *mntent,
+@@ -1099,7 +1101,7 @@ static inline int mount_entry_on_systemfs(struct mntent *mntent)
+ static int mount_entry_on_absolute_rootfs(struct mntent *mntent,
+ 					  const struct lxc_rootfs *rootfs)
+ {
+-	char *aux;
++	char *aux, *rootfs_path;
+ 	char path[MAXPATHLEN];
+ 	unsigned long mntflags;
+ 	char *mntdata;
+@@ -1110,14 +1112,16 @@ static int mount_entry_on_absolute_rootfs(struct mntent *mntent,
  		return -1;
  	}
  
 -	aux = strstr(mntent->mnt_dir, rootfs->path);
-+	aux = rootfs->isblock ? rootfs->mount : rootfs->path;
++	rootfs_path = rootfs->isblock ? rootfs->mount : rootfs->path;
 +
-+	aux = strstr(mntent->mnt_dir, aux);
++	aux = strstr(mntent->mnt_dir, rootfs_path);
  	if (!aux) {
  		WARN("ignoring mount point '%s'", mntent->mnt_dir);
  		goto out;
+ 	}
+ 
+ 	snprintf(path, MAXPATHLEN, "%s/%s", rootfs->mount,
+-		 aux + strlen(rootfs->path));
++		 aux + strlen(rootfs_path));
+ 
+ 	ret = mount_entry(mntent->mnt_fsname, path, mntent->mnt_type,
+ 			  mntflags, mntdata);
 diff --git a/src/lxc/conf.h b/src/lxc/conf.h
 index 09f55cb..b70e637 100644
 --- a/src/lxc/conf.h
