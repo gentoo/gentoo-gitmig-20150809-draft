@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.3.5.ebuild,v 1.2 2012/04/29 13:18:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.3.6.ebuild,v 1.1 2012/04/29 13:18:34 blueness Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA miner in C"
 HOMEPAGE="https://bitcointalk.org/index.php?topic=28402.0"
-SRC_URI="http://ck.kolivas.org/apps/${PN}/${PN}-2.3/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/${PN}/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
