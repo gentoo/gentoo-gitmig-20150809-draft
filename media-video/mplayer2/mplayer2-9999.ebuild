@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.28 2012/04/24 15:31:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.29 2012/04/29 18:11:44 scarabeus Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
-bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts
+bluray bs2b cddb +cdio cpudetection custom-cpuopts
 debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad fbcon ftp
 gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc live
 mad md5sum +mmx mmxext mng +mp3 nas +network nut +opengl oss png pnm pulseaudio
@@ -49,8 +49,7 @@ done
 
 # bindist does not cope with win32codecs, which are nonfree
 REQUIRED_USE="bindist? ( !win32codecs )
-	cdio? ( !cdparanoia )
-	cddb? ( || ( cdio cdparanoia ) network )
+	cddb? ( cdio network )
 	dvdnav? ( dvd )
 	radio? ( || ( dvb v4l ) )
 	dxr3? ( X )
@@ -100,7 +99,6 @@ RDEPEND+="
 	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
-	cdparanoia? ( !cdio? ( media-sound/cdparanoia ) )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdca )
 	dv? ( media-libs/libdv )
@@ -276,7 +274,6 @@ src_configure() {
 	########
 	use cddb || myconf+=" --disable-cddb"
 	use cdio || myconf+=" --disable-libcdio"
-	use cdparanoia || myconf+=" --disable-cdparanoia"
 
 	################################
 	# DVD read, navigation support #
