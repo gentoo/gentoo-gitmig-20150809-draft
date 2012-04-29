@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/akonadi-google
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.10 2012/04/27 22:00:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.11 2012/04/29 09:21:41 scarabeus Exp $
+
+  29 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -akonadi-google-0.3.ebuild:
+  No issues with new verison so remove the older one.
 
 *akonadi-google-0.3.1 (27 Apr 2012)
 
