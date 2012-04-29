@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.141 2012/04/25 20:15:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.142 2012/04/29 15:43:41 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> meld-1.5.4.ebuild:
+  x86 stable, bug #410611
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> meld-1.5.4.ebuild:
   arm stable, bug #410611
