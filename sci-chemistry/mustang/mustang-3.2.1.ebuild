@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.2.1.ebuild,v 1.8 2012/01/21 16:20:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.2.1.ebuild,v 1.9 2012/04/29 10:36:13 jlec Exp $
 
 EAPI=4
 
-inherit base toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_PN="MUSTANG"
 SRC_P="${PN}_v${PV}"
 MY_P="${MY_PN}_v${PV}"
 
-DESCRIPTION="MUltiple STructural AligNment AlGorithm."
+DESCRIPTION="MUltiple STructural AligNment AlGorithm"
 HOMEPAGE="http://www.csse.monash.edu.au/~karun/Site/mustang.html"
 SRC_URI="http://www.csse.unimelb.edu.au/~arun/${PN}/${SRC_P}.tgz"
 
@@ -20,6 +20,10 @@ KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc-4.7.patch
+}
 
 src_compile() {
 	emake \
