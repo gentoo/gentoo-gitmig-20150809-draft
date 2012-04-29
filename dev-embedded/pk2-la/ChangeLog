@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/pk2-la
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2-la/ChangeLog,v 1.4 2010/03/07 02:38:48 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2-la/ChangeLog,v 1.5 2012/04/29 16:49:04 josejx Exp $
+
+*pk2-la-1.1-r1 (29 Apr 2012)
+
+  29 Apr 2012; Joseph Jezak <josejx@gentoo.org> +pk2-la-1.1-r1.ebuild:
+  Added correct libusb dep for bug #408433.
 
 *pk2-la-1.1 (07 Mar 2010)
 
