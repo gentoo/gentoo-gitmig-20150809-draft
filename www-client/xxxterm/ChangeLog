@@ -1,6 +1,10 @@
 # ChangeLog for www-client/xxxterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.7 2012/04/29 18:02:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.8 2012/04/29 19:57:50 ago Exp $
+
+  29 Apr 2012; Agostino Sarubbo <ago@gentoo.org> -xxxterm-1.518.ebuild,
+  xxxterm-1.1103.ebuild:
+  Stable for x86/amd64 , wrt bug #412483. Remove old.
 
   29 Apr 2012; Agostino Sarubbo <ago@gentoo.org> xxxterm-1.1103.ebuild:
   Drop extra CFLAGS
