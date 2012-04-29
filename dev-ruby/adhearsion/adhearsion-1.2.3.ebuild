@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/adhearsion-1.2.3.ebuild,v 1.2 2012/03/11 13:46:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/adhearsion-1.2.3.ebuild,v 1.3 2012/04/29 16:42:35 tomka Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -19,7 +19,7 @@ IUSE=""
 SLOT="0"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc64"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 SRC_URI="https://github.com/adhearsion/adhearsion/tarball/v${PV} -> ${P}.tgz"
 RUBY_S="adhearsion-adhearsion-*"
