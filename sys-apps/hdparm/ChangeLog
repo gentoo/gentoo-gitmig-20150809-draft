@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.229 2012/04/14 07:47:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.230 2012/04/29 00:30:18 vapier Exp $
+
+  29 Apr 2012; Mike Frysinger <vapier@gentoo.org> files/hdparm-init-8:
+  Also run on cdrom devices, and drop devfsd support #413705 by tokiclover.
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> hdparm-9.39.ebuild:
   Add ~amd64-linux keyword.
