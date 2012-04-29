@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.8.1-r1.ebuild,v 1.1 2012/04/01 15:42:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.8.1-r1.ebuild,v 1.2 2012/04/29 16:02:58 grobian Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit qt4-build
 
 DESCRIPTION="Demonstration module of the Qt toolkit"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x64-macos"
 IUSE="dbus declarative kde multimedia opengl openvg qt3support webkit xmlpatterns"
 
 DEPEND="
@@ -31,6 +31,7 @@ DEPEND="
 	~x11-libs/qt-test-${PV}:4[aqua=,c++0x=,debug=,qpa=]
 	webkit? ( ~x11-libs/qt-webkit-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 	xmlpatterns? ( ~x11-libs/qt-xmlpatterns-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
+	aqua? ( ~x11-libs/qt-assistant-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 "
 RDEPEND="${DEPEND}"
 

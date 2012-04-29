@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.84 2012/04/05 15:26:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.85 2012/04/29 16:02:58 grobian Exp $
+
+  29 Apr 2012; Fabian Groffen <grobian@gentoo.org> qt-demo-4.8.1-r1.ebuild:
+  Marked ~x64-macos, pull in qt-assistant dep for OSX targets which need QtHelp
 
   05 Apr 2012; Johannes Huber <johu@gentoo.org> -qt-demo-4.8.0.ebuild:
   Drop Qt-4.8.0
