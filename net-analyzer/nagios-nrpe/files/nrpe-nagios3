@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-opts="${opts} reload"
+extra_started_commands="reload"
 
 depend() {
 	need net
@@ -9,7 +9,7 @@ depend() {
 start() {
 	ebegin "Starting nrpe"
 	start-stop-daemon --start --quiet --name nrpe \
-	--startas /usr/bin/nrpe \
+	--exec /usr/bin/nrpe \
 		-c nagios:nagios \
 		-- -c /etc/nagios/nrpe.cfg \
 		--daemon
