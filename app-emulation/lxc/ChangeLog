@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.34 2012/04/29 23:32:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.35 2012/04/29 23:48:54 flameeyes Exp $
+
+  29 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/lxc.initd.2:
+  Make sure to need the network interface, not use it.
 
 *lxc-0.8.0_rc1-r3 (29 Apr 2012)
 
