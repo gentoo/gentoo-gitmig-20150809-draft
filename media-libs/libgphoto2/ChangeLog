@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.203 2012/04/19 20:41:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.204 2012/04/29 16:02:36 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> libgphoto2-2.4.12.ebuild:
+  x86 stable, bug #410611
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> libgphoto2-2.4.12.ebuild:
   Marking libgphoto2-2.4.12 ppc64 stable for bug 410611
