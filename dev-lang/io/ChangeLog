@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/io
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.8 2012/03/19 10:05:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.9 2012/04/29 16:48:48 araujo Exp $
+
+*io-2011.09.12 (29 Apr 2012)
+
+  29 Apr 2012; Luis Araujo <araujo@gentoo.org> +io-2011.09.12.ebuild,
+  +files/io-2011.09.12-gentoo-fixes.patch, metadata.xml:
+  Update version. Fix bug #243876 , bug #339458 , bug #372659 , bug #372665 ,
+  bug #409639
 
 *io-2009.01.02-r2 (19 Mar 2012)
 
