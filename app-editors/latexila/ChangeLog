@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/latexila
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.5 2012/04/18 20:09:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.6 2012/04/29 15:02:30 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> latexila-2.4.0.ebuild:
+  x86 stable, bug #410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> latexila-2.4.0.ebuild:
   Stable for amd64, wrt bug #410611
