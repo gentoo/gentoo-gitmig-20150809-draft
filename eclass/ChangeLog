@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.227 2012/04/29 15:03:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.228 2012/04/29 23:25:05 flameeyes Exp $
+
+  29 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> sgml-catalog.eclass:
+  Fix infinite look if the catalog is corrupted.
 
   29 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   typo, added missing [ ] for test

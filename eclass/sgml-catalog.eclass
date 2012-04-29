@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.19 2012/03/23 07:30:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.20 2012/04/29 23:25:05 flameeyes Exp $
 
 # @ECLASS: sgml-catalog.eclass
 # @MAINTAINER:
@@ -57,6 +57,7 @@ sgml-catalog_pkg_postinst() {
 	while (( $# )); do
 		if [[ ! -e "${EPREFIX}$2" ]]; then
 			ewarn "${EPREFIX}$2 doesn't appear to exist, although it ought to!"
+			shift 2
 			continue
 		fi
 		einfo "Now adding ${EPREFIX}$2 to ${EPREFIX}$1 and ${EPREFIX}/etc/sgml/catalog"
