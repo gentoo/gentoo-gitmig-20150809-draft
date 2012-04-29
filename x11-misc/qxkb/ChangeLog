@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/qxkb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qxkb/ChangeLog,v 1.1 2012/04/29 11:04:56 yngwin Exp $
+
+*qxkb-0.4.4 (29 Apr 2012)
+
+  29 Apr 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +qxkb-0.4.4.ebuild:
+  Initial commit
+
