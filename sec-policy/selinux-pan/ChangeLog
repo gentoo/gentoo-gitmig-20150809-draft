@@ -1,5 +1,8 @@
 
 
+  29 Apr 2012; <swift@gentoo.org> selinux-pan-2.20120215.ebuild:
+  Stabilizing revision 7
+
 *selinux-pan-2.20120215 (31 Mar 2012)
 
   31 Mar 2012; <swift@gentoo.org> +selinux-pan-2.20120215.ebuild:

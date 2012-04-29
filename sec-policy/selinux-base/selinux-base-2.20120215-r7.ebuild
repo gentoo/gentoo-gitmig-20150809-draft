@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20120215-r7.ebuild,v 1.1 2012/04/22 08:46:05 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-2.20120215-r7.ebuild,v 1.2 2012/04/29 10:11:31 swift Exp $
 
 EAPI="4"
 IUSE="+peer_perms +open_perms +ubac doc"
@@ -14,7 +14,7 @@ SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND=">=sys-apps/policycoreutils-2.1.10
 	>=sys-fs/udev-151
