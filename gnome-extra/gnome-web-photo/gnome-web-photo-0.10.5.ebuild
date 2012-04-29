@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.10.5.ebuild,v 1.2 2012/04/18 20:38:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.10.5.ebuild,v 1.3 2012/04/29 15:50:16 maekke Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://git.gnome.org/browse/gnome-web-photo/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.14:2

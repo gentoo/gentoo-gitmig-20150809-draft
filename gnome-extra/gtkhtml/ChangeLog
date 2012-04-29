@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.251 2012/04/25 20:24:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.252 2012/04/29 15:51:13 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> gtkhtml-4.2.3.ebuild:
+  x86 stable, bug #410611
 
   25 Apr 2012; Markus Meier <maekke@gentoo.org> gtkhtml-4.2.3.ebuild:
   arm stable, bug #410611
