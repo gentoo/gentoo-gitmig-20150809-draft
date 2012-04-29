@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.52 2012/04/18 20:09:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.53 2012/04/29 15:03:23 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> alexandria-0.6.8.ebuild:
+  x86 stable, bug #410611
 
   18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> alexandria-0.6.8.ebuild:
   Stable for amd64, wrt bug #410611
