@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.80 2012/04/14 07:12:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.81 2012/04/29 04:50:00 flameeyes Exp $
+
+*jruby-1.6.7 (29 Apr 2012)
+
+  29 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> +jruby-1.6.7.ebuild:
+  Version bump, now that jzlib is in tree.
 
   14 Apr 2012; Hans de Graaff <graaff@gentoo.org> -jruby-1.5.2.ebuild,
   -jruby-1.5.2-r1.ebuild, -jruby-1.5.3.ebuild:
