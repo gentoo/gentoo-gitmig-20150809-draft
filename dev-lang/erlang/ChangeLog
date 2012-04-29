@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.215 2012/03/01 10:09:32 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.216 2012/04/29 09:57:06 grobian Exp $
+
+  29 Apr 2012; Fabian Groffen <grobian@gentoo.org> erlang-15.2.ebuild:
+  Fixed compilation for x64-macos, keyworded, thanks to Jan Rieger in bug
+  #413961
 
   01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> -erlang-14.2.2-r1.ebuild,
   -erlang-14.2.3.ebuild:
