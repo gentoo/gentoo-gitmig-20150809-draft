@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12.ebuild,v 1.1 2012/04/29 16:48:48 araujo Exp $i
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12.ebuild,v 1.2 2012/04/29 20:59:33 mr_bones_ Exp $i
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE="cgi clutter dbi doc editline google gui http image jabber libffi libxml2
 DEPEND="clutter? ( media-libs/clutter )
 		dbi? ( dev-db/libdbi )
 		editline? ( dev-libs/libedit )
-		image? ( virtual/jpeg 
+		image? ( virtual/jpeg
 			media-libs/tiff
 			media-libs/libpng )
 		jabber? ( net-libs/loudmouth )
