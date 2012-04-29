@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.133 2012/04/26 02:08:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.134 2012/04/29 16:01:28 vapier Exp $
+
+  29 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/xbmc-11.0-no-arm-flags.patch, xbmc-11.0.ebuild:
+  Add dedciated arm flags patch for 11.0 #413715 by Lech Perczak.
 
   26 Apr 2012; Mike Frysinger <vapier@gentoo.org>
   files/xbmc-9999-no-arm-flags.patch:

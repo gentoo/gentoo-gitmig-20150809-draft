@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.6 2012/04/05 00:26:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.7 2012/04/29 16:01:28 vapier Exp $
 
 EAPI="4"
 
@@ -123,7 +123,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
-	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
+	epatch "${FILESDIR}"/${PN}-11.0-no-arm-flags.patch #400617
 	epatch "${FILESDIR}"/${PN}-11.0-no-exec-stack.patch
 	epatch "${FILESDIR}"/${PN}-11.0-ffmpeg-0.10.2.patch #406215
 	epatch "${FILESDIR}"/${PN}-11.0-libav.patch #406215
