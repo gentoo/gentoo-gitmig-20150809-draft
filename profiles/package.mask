@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13709 2012/04/29 07:02:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13710 2012/04/29 20:08:35 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -186,11 +186,6 @@ sys-auth/tcb
 # Unmaintained. Replaced by x11-libs/qt-gui[gtkstyle]
 # Removal in 30 days
 x11-themes/qgtkstyle
-
-# Markos Chandras <hwoarang@gentoo.org> (29 Mar 2012)
-# Does not work with twitter anymore. Dead upstream
-# Fails because of underlinking. Bug #379277
-net-im/twittare
 
 # Alex Legler <a3li@gentoo.org> (28 Mar 2012)
 # Leftover packages from a packaging attempt of Horde-4
