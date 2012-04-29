@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.50 2012/04/29 16:29:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.51 2012/04/29 18:18:45 aidecoe Exp $
+
+  29 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -notmuch-0.10.2-r2.ebuild, -notmuch-0.11.1-r2.ebuild:
+  Removed oldest revisions of versions 0.10.2 and 0.11.1.
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> notmuch-0.12.ebuild:
   x86 stable, bug #413323
