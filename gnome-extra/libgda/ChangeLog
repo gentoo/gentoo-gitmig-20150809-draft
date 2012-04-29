@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.199 2012/04/19 20:37:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.200 2012/04/29 15:36:02 maekke Exp $
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> libgda-5.0.3-r1.ebuild:
+  x86 stable, bug #410611
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> libgda-4.2.12.ebuild,
   libgda-5.0.3-r1.ebuild:
