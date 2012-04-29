@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/chef-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server/ChangeLog,v 1.5 2012/01/29 12:36:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server/ChangeLog,v 1.6 2012/04/29 13:26:30 hollow Exp $
+
+*chef-server-0.10.10_beta1 (29 Apr 2012)
+
+  29 Apr 2012; Benedikt Böhm <hollow@gentoo.org>
+  +chef-server-0.10.10_beta1.ebuild:
+  version bump to resolve dependency conflicts (see #410385)
 
 *chef-server-0.10.8 (29 Jan 2012)
 
