@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8-r3.ebuild,v 1.2 2011/04/30 22:50:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8-r3.ebuild,v 1.3 2012/04/29 12:52:46 pacho Exp $
 
 inherit eutils linux-mod
 
@@ -77,7 +77,7 @@ src_install() {
 	doins "${S}/firmware/*.bin"
 	insinto "/lib/firmware/ezusb"
 	doins "${S}/firmware/ezusb/*.hex"
-	insinto"/etc/udev/rules.d"
+	insinto "/etc/udev/rules.d"
 	doins "${S}/udev/wis-ezusb.rules"
 
 	exeinto "/usr/bin"
