@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/mixlib-shellout
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-shellout/ChangeLog,v 1.1 2012/04/29 13:13:46 hollow Exp $
+
+*mixlib-shellout-1.0.0 (29 Apr 2012)
+
+  29 Apr 2012; Benedikt Böhm <hollow@gentoo.org>
+  +mixlib-shellout-1.0.0.ebuild, +metadata.xml:
+  initial version (required dependency of chef-0.10.10)
+
