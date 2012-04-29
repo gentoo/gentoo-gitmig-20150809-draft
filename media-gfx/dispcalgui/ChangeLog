@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/dispcalgui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.10 2012/03/01 22:02:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.11 2012/04/29 16:57:19 hwoarang Exp $
+
+*dispcalgui-0.9.9.1 (29 Apr 2012)
+
+  29 Apr 2012; Markos Chandras <hwoarang@gentoo.org> +dispcalgui-0.9.9.1.ebuild:
+  Version bump. Thanks to Marios Andreopoulos <opensource@andmarios.com>. Fixes
+  bug #413539
 
   01 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   add proxy-maintainers as herd
