@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-1.5.4.1.ebuild,v 1.3 2012/04/18 19:15:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ofed-1.5.4.1.ebuild,v 1.4 2012/04/29 13:03:20 alexxy Exp $
 
 EAPI="4"
 
@@ -29,6 +29,7 @@ DEPEND="!sys-infiniband/openib
 		sys-infiniband/libibcm:${SLOT}
 		sys-infiniband/libibmad:${SLOT}
 		sys-infiniband/libibumad:${SLOT}
+		sys-infiniband/librdmacm:${SLOT}
 		compat-dapl? ( sys-infiniband/compat-dapl:${SLOT} )
 		dapl? ( sys-infiniband/dapl:${SLOT} )
 		diags? ( sys-infiniband/infiniband-diags:${SLOT} )

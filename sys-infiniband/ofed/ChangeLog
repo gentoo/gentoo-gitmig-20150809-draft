@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/ofed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ChangeLog,v 1.3 2012/04/18 19:15:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ofed/ChangeLog,v 1.4 2012/04/29 13:03:20 alexxy Exp $
+
+  29 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> ofed-1.5.4.1.ebuild:
+  [sys-infiniband/ofed] Add rdmacm to minimal set
 
   18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml,
   ofed-1.5.4.1.ebuild:
