@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gamer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gamer/ChangeLog,v 1.3 2011/04/16 07:35:35 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gamer/ChangeLog,v 1.4 2012/04/30 17:21:36 jlec Exp $
+
+  30 Apr 2012; Justin Lecher <jlec@gentoo.org> gamer-1.5.ebuild, metadata.xml:
+  Handle static libs
 
 *gamer-1.5 (16 Apr 2011)
 
