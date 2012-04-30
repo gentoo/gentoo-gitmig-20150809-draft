@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.144 2012/04/30 06:43:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.145 2012/04/30 15:22:51 anarchy Exp $
+
+  30 Apr 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.4.ebuild,
+  -firefox-11.0-r1.ebuild:
+  Mark 10.0.4 stable as per ago, remove version 11
 
 *firefox-12.0 (30 Apr 2012)
 
