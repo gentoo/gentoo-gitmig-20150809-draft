@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/linecache
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/ChangeLog,v 1.20 2011/08/26 19:24:07 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/ChangeLog,v 1.21 2012/04/30 09:06:14 graaff Exp $
+
+  30 Apr 2012; Hans de Graaff <graaff@gentoo.org> -linecache-0.43-r2.ebuild,
+  -linecache-0.45.ebuild:
+  Remove old versions.
 
   26 Aug 2011; Fabian Groffen <grobian@gentoo.org> linecache-0.46.ebuild:
   Add more Prefix keywords, bug #376053, fix installation on Darwin
