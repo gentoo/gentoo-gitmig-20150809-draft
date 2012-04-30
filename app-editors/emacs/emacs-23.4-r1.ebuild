@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r1.ebuild,v 1.7 2012/03/15 22:17:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r1.ebuild,v 1.8 2012/04/30 16:44:13 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -101,17 +101,16 @@ src_prepare() {
 }
 
 src_configure() {
-	ALLOWED_FLAGS=""
 	strip-flags
 	filter-flags -fstrict-aliasing
 	append-flags $(test-flags -fno-strict-aliasing)
 
 	if use sh; then
-		replace-flags -O[1-9] -O0		#262359
+		replace-flags "-O[1-9]" -O0		#262359
 	elif use ia64; then
-		replace-flags -O[2-9] -O1		#325373
+		replace-flags "-O[2-9]" -O1		#325373
 	else
-		replace-flags -O[3-9] -O2
+		replace-flags "-O[3-9]" -O2
 	fi
 
 	local myconf

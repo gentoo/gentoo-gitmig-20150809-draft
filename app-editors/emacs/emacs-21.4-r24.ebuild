@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r24.ebuild,v 1.1 2012/01/06 10:24:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r24.ebuild,v 1.2 2012/04/30 16:44:13 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -65,7 +65,7 @@ src_configure() {
 	unset LDFLAGS
 
 	# ever since GCC 3.2
-	replace-flags -O[3-9] -O2
+	replace-flags "-O[3-9]" -O2
 
 	# -march is known to cause signal 6 on some environment
 	filter-flags "-march=*"
