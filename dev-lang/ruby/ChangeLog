@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.531 2012/04/26 16:55:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.532 2012/04/30 11:14:18 graaff Exp $
+
+*ruby-1.9.3_p194 (30 Apr 2012)
+
+  30 Apr 2012; Hans de Graaff <graaff@gentoo.org> +ruby-1.9.3_p194.ebuild:
+  Version bump.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> ruby-1.8.7_p358.ebuild:
   keyword ~amd64-fbsd
