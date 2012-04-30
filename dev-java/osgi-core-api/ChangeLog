@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/osgi-core-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/ChangeLog,v 1.1 2012/01/24 15:05:34 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/ChangeLog,v 1.2 2012/04/30 10:47:41 ago Exp $
+
+  30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> osgi-core-api-4.3.ebuild:
+  Stable for amd64, wrt bug #396305
 
 *osgi-core-api-4.3 (24 Jan 2012)
 

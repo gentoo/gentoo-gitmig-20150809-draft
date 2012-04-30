@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bytelist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.15 2012/01/24 15:45:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.16 2012/04/30 10:45:50 ago Exp $
+
+  30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> bytelist-1.0.9.ebuild:
+  Stable for amd64, wrt bug #396305
 
 *bytelist-1.0.9 (24 Jan 2012)
 

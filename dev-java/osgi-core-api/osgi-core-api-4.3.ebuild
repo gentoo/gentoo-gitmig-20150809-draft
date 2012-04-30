@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/osgi-core-api-4.3.ebuild,v 1.1 2012/01/24 15:05:34 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/osgi-core-api-4.3.ebuild,v 1.2 2012/04/30 10:47:41 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.osgi.org/download/r4v${PV//./}/osgi.core.jar -> ${P}-all.zip
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="
