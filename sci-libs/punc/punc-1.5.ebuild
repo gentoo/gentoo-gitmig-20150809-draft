@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.5 2011/11/24 11:01:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.6 2012/04/30 17:40:09 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit autotools fortran-2 multilib
+AUTOTOOLS_AUTORECONF=yes
+
+inherit autotools-utils fortran-2 multilib
 
 DESCRIPTION="Portable Understructure for Numerical Computing"
 HOMEPAGE="http://fetk.org/codes/punc/index.html"
@@ -16,8 +18,6 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc mpi static-libs"
 
 RDEPEND="
-	virtual/fortran
-
 	dev-libs/maloc[mpi=]
 	dev-libs/libf2c
 	sci-libs/amd
@@ -26,6 +26,7 @@ RDEPEND="
 	sci-libs/superlu
 	sci-libs/umfpack
 	virtual/blas
+	virtual/fortran
 	virtual/lapack
 	mpi? ( virtual/mpi )"
 DEPEND="
@@ -36,27 +37,28 @@ DEPEND="
 
 S="${WORKDIR}/${PN}"
 
+PATCHES=(
+	"${FILESDIR}"/${PV}-linking.patch
+	"${FILESDIR}"/1.4-doc.patch )
+
 src_prepare() {
 	sed 's:punc/slu_ddefs.h:superlu/slu_ddefs.h:g' src/superlu/punc/vsuperlu.h > vsuperlu.h || die
 	sed 's:punc/umfpack.h:umfpack.h:g' src/umfpack/punc/vumfpack.h > vumfpack.h || die
 	rm -rf src/{amd,blas,lapack,arpack,superlu,umfpack}
-	epatch \
-		"${FILESDIR}"/${PV}-linking.patch \
-		"${FILESDIR}"/1.4-doc.patch
 
-	cp tools/tests/pmg/*.f src/pmg/ -f
-	cp tools/tests/pmg/*.c src/pmg/ -f
-	cp src/pmg/vpmg.h src/vf2c/punc/vpmg.h
+	cp tools/tests/pmg/*.f src/pmg/ -f || die
+	cp tools/tests/pmg/*.c src/pmg/ -f || die
+	cp src/pmg/vpmg.h src/vf2c/punc/vpmg.h || die
 
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
 	local fetk_include
 	local fetk_lib
-	local myconf
+	local myeconfargs
 
-	use doc || myconf="${myconf} --with-doxygen= --with-dot="
+	use doc || myeconfargs+=( --with-doxygen= --with-dot= )
 
 	fetk_include="${EPREFIX}"/usr/include
 	fetk_lib="${EPREFIX}"/usr/$(get_libdir)
@@ -70,20 +72,20 @@ src_configure() {
 	export FETK_CGCODE_LIBRARY="${fetk_lib}"
 	export FETK_AMD_LIBRARY="${fetk_lib}"
 
-	econf \
-		$(use_enable static-libs static) \
-		$(use_enable debug vdebug) \
-		--enable-vf2cforce \
-		--enable-shared \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--disable-triplet \
-		${myconf}
+	myeconfargs+=(
+		$(use_enable debug vdebug)
+		--enable-vf2cforce
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--disable-triplet
+		)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	insinto /usr/include/punc
-	doins v*.h || die
+	autotools-utils_src_install
 
-	dohtml doc/index.html || die "failed to install html docs"
+	insinto /usr/include/punc
+	doins v*.h
+
+	dohtml doc/index.html
 }
