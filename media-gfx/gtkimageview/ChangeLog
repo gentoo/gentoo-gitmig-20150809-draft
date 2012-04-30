@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gtkimageview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.21 2012/04/29 11:53:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.22 2012/04/30 06:48:08 jlec Exp $
+
+  30 Apr 2012; Justin Lecher <jlec@gentoo.org> gtkimageview-1.6.4.ebuild:
+  Clean fix for virtualx.eclass usage, #294295
 
   29 Apr 2012; Justin Lecher <jlec@gentoo.org> gtkimageview-1.6.4.ebuild:
   Move to EAPI=4, handle static-libs, add fix for gold.ld, call Xemake #294295;

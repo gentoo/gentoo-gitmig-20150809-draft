@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.22 2012/04/29 11:53:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.23 2012/04/30 06:48:08 jlec Exp $
 
 EAPI=4
+
+VIRTUALX_REQUIRED=test
 
 inherit autotools gnome2 virtualx
 
@@ -25,8 +27,8 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
 pkg_setup() {
-   DOCS="README"
-   G2CONF="$(use_enable static-libs static)"
+	DOCS="README"
+	G2CONF="$(use_enable static-libs static)"
 }
 
 src_prepare() {
@@ -57,9 +59,10 @@ src_test() {
 	local failed="0"
 	Xemake check
 	cd "${S}"/tests
-	for test in test-* ; do
+	for test in ./test-* ; do
 		if [[ -x ${test} ]] ; then
-			./${test} || failed=$((${failed}+1))
+			VIRTUALX_COMMAND="${test}"
+			virtualmake || failed=$((${failed}+1))
 		fi
 	done
 	[[ ${failed} -gt 0 ]] && die "${failed} tests failed"
