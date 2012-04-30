@@ -1,10 +1,10 @@
 aufs3.x-rcN base patch
 
 diff --git a/fs/namei.c b/fs/namei.c
-index e615ff3..b9b8b85 100644
+index 0062dd1..80bb0b9 100644
 --- a/fs/namei.c
 +++ b/fs/namei.c
-@@ -1904,7 +1904,7 @@ static struct dentry *__lookup_hash(struct qstr *name,
+@@ -1831,7 +1831,7 @@ int vfs_path_lookup(struct dentry *dentry, struct vfsmount *mnt,
   * needs parent already locked. Doesn't follow mounts.
   * SMP-safe.
   */
@@ -14,10 +14,10 @@ index e615ff3..b9b8b85 100644
  	return __lookup_hash(&nd->last, nd->path.dentry, nd);
  }
 diff --git a/fs/splice.c b/fs/splice.c
-index 5f883de..4f786e3 100644
+index f847684..f871233 100644
 --- a/fs/splice.c
 +++ b/fs/splice.c
-@@ -1081,8 +1081,8 @@ EXPORT_SYMBOL(generic_splice_sendpage);
+@@ -1084,8 +1084,8 @@ EXPORT_SYMBOL(generic_splice_sendpage);
  /*
   * Attempt to initiate a splice from pipe to file.
   */
@@ -28,7 +28,7 @@ index 5f883de..4f786e3 100644
  {
  	ssize_t (*splice_write)(struct pipe_inode_info *, struct file *,
  				loff_t *, size_t, unsigned int);
-@@ -1109,9 +1109,9 @@ static long do_splice_from(struct pipe_inode_info *pipe, struct file *out,
+@@ -1112,9 +1112,9 @@ static long do_splice_from(struct pipe_inode_info *pipe, struct file *out,
  /*
   * Attempt to initiate a splice from a file to a pipe.
   */

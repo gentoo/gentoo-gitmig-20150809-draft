@@ -26,10 +26,10 @@ index 9f4f5fe..bb0f3ba 100644
  /*
   * Empty aops. Can be used for the cases where the user does not
 diff --git a/fs/namei.c b/fs/namei.c
-index b9b8b85..0fa6752 100644
+index 80bb0b9..3430ad3 100644
 --- a/fs/namei.c
 +++ b/fs/namei.c
-@@ -1908,6 +1908,7 @@ struct dentry *lookup_hash(struct nameidata *nd)
+@@ -1835,6 +1835,7 @@ struct dentry *lookup_hash(struct nameidata *nd)
  {
  	return __lookup_hash(&nd->last, nd->path.dentry, nd);
  }
@@ -111,7 +111,7 @@ index f104d56..54f36db 100644
  static int fsnotify_mark_destroy(void *ignored)
  {
 diff --git a/fs/open.c b/fs/open.c
-index 77becc0..f634f02 100644
+index 5720854..ec59242 100644
 --- a/fs/open.c
 +++ b/fs/open.c
 @@ -60,6 +60,7 @@ int do_truncate(struct dentry *dentry, loff_t length, unsigned int time_attrs,
@@ -123,10 +123,10 @@ index 77becc0..f634f02 100644
  static long do_sys_truncate(const char __user *pathname, loff_t length)
  {
 diff --git a/fs/splice.c b/fs/splice.c
-index 4f786e3..84e5c7b 100644
+index f871233..70f5481 100644
 --- a/fs/splice.c
 +++ b/fs/splice.c
-@@ -1105,6 +1105,7 @@ long do_splice_from(struct pipe_inode_info *pipe, struct file *out,
+@@ -1108,6 +1108,7 @@ long do_splice_from(struct pipe_inode_info *pipe, struct file *out,
  
  	return splice_write(pipe, out, ppos, len, flags);
  }
@@ -134,7 +134,7 @@ index 4f786e3..84e5c7b 100644
  
  /*
   * Attempt to initiate a splice from a file to a pipe.
-@@ -1131,6 +1132,7 @@ long do_splice_to(struct file *in, loff_t *ppos,
+@@ -1134,6 +1135,7 @@ long do_splice_to(struct file *in, loff_t *ppos,
  
  	return splice_read(in, ppos, pipe, len, flags);
  }
@@ -143,10 +143,10 @@ index 4f786e3..84e5c7b 100644
  /**
   * splice_direct_to_actor - splices data directly between two non-pipes
 diff --git a/security/commoncap.c b/security/commoncap.c
-index 0cf4b53..6ba43f6 100644
+index 71a166a..5d63aac 100644
 --- a/security/commoncap.c
 +++ b/security/commoncap.c
-@@ -966,3 +966,4 @@ int cap_file_mmap(struct file *file, unsigned long reqprot,
+@@ -972,3 +972,4 @@ int cap_file_mmap(struct file *file, unsigned long reqprot,
  	}
  	return ret;
  }
