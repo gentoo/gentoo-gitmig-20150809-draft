@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.12 2012/03/08 12:28:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.13 2012/04/30 19:55:05 xarthisius Exp $
+
+*ekopath-4.0.12.1_pre20120430 (30 Apr 2012)
+
+  30 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +ekopath-4.0.12.1_pre20120430.ebuild, -ekopath-4.0.10_pre20110728.ebuild,
+  -ekopath-4.0.11_pre20110804-r1.ebuild, -ekopath-4.0.12.1_pre20120205.ebuild,
+  -ekopath-4.0.12_pre20111108.ebuild:
+  Version bump, drop old
 
 *ekopath-4.0.12.1_pre20120308 (08 Mar 2012)
 

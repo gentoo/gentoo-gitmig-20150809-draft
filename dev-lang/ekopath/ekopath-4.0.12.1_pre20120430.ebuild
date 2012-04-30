@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.12.1_pre20120205.ebuild,v 1.1 2012/02/09 20:03:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.12.1_pre20120430.ebuild,v 1.1 2012/04/30 19:55:05 xarthisius Exp $
 
 EAPI=4
 
@@ -43,6 +43,7 @@ pkg_pretend() {
 		ewarn "  emerge -C rpm && emerge -1 ${PN} && emerge -1 rpm"
 		die
 	fi
+	echo opt/${PN}/lib/${MY_PV}/x8664/64/libeh.so
 }
 
 src_unpack() {
