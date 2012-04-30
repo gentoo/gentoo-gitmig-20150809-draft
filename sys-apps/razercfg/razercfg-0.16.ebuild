@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.16.ebuild,v 1.1 2011/08/17 18:39:35 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.16.ebuild,v 1.2 2012/04/30 12:38:02 joker Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit cmake-utils multilib eutils
 
 DESCRIPTION="Utility for advanced configuration of Razer mice (DeathAdder, Krait, Lachesis)"
 
-HOMEPAGE="http://bu3sch.de/joomla/index.php/razer-nextgen-config-tool"
+HOMEPAGE="http://bues.ch/cms/hacking/razercfg.html"
 SRC_URI="http://bu3sch.de/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"

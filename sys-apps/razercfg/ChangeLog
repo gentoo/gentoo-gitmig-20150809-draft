@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/razercfg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.4 2012/02/20 04:29:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.5 2012/04/30 12:38:02 joker Exp $
+
+  30 Apr 2012; Christian Birchinger <joker@gentoo.org> razercfg-0.16.ebuild,
+  razercfg-0.16-r1.ebuild, razercfg-0.17.ebuild:
+  Update homepage
 
   20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Drop no-herd.
