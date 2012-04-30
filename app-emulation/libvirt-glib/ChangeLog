@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/ChangeLog,v 1.10 2012/04/02 07:22:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/ChangeLog,v 1.11 2012/04/30 20:24:54 cardoe Exp $
+
+*libvirt-glib-0.0.8 (30 Apr 2012)
+
+  30 Apr 2012; Doug Goldstein <cardoe@gentoo.org> +libvirt-glib-0.0.8.ebuild:
+  Version bump
 
 *libvirt-glib-0.0.7 (02 Apr 2012)
 
