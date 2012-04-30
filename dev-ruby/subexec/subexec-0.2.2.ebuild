@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/subexec-0.2.0.ebuild,v 1.2 2011/12/28 11:13:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/subexec-0.2.2.ebuild,v 1.1 2012/04/30 18:50:08 flameeyes Exp $
 
 EAPI=4
 
@@ -25,6 +25,8 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RUBY_S="${GITHUB_USER}-${PN}-*"
+
+RUBY_PATCHES=( "${P}-lang.patch" )
 
 ruby_add_bdepend "test? (
 	dev-ruby/shoulda
