@@ -1,0 +1,29 @@
+From bf277a00e352733bf52720fe4f9a1a91dcfb2e93 Mon Sep 17 00:00:00 2001
+From: Tomas Chvatal <tchvatal@suse.cz>
+Date: Sun, 29 Apr 2012 08:45:59 +0000
+Subject: Fix buildissue in svtools with missing include.
+
+cpp: line 33, Fatal error: Cannot open include file
+"svtools/svtools.hrc"
+
+Change-Id: Ic7bd1af8f14cc0e44328c9f149c5dc45f04e5afb
+(cherry picked from commit 3534e99d18952fc87f98cf60eb7767374a1371c4)
+
+Conflicts:
+
+	svtools/AllLangResTarget_svt.mk
+---
+diff --git a/svtools/AllLangResTarget_svt.mk b/svtools/AllLangResTarget_svt.mk
+index e5d0a5b..d65a45b 100644
+--- a/svtools/AllLangResTarget_svt.mk
++++ b/svtools/AllLangResTarget_svt.mk
+@@ -40,6 +40,7 @@ $(eval $(call gb_SrsTarget_set_include,svt/res,\
+     $$(INCLUDE) \
+     -I$(WORKDIR)/inc \
+     -I$(realpath $(SRCDIR)/svtools/source/inc) \
++    -I$(realpath $(SRCDIR)/svtools/inc) \
+ ))
+ 
+ $(eval $(call gb_SrsTarget_add_files,svt/res,\
+--
+cgit v0.9.0.2-2-gbebe
