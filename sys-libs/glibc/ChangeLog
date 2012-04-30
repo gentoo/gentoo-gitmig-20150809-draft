@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.842 2012/04/29 16:33:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.843 2012/04/30 02:25:14 vapier Exp $
+
+  30 Apr 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.14.1-r3.ebuild:
+  Mark ia64/s390 stable #411903.
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> glibc-2.14.1-r3.ebuild:
   arm stable, bug #411903
