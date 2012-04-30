@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1.ebuild,v 1.3 2012/03/06 13:42:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1.ebuild,v 1.4 2012/04/30 09:55:00 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://sources.redhat.com/pub/${PN}/releases/${MY_P}a.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND="
