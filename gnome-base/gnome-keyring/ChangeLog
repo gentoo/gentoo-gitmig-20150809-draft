@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-keyring
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.218 2011/11/18 04:41:30 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.219 2012/04/30 14:54:08 jlec Exp $
+
+  30 Apr 2012; Justin Lecher <jlec@gentoo.org> gnome-keyring-3.2.2.ebuild,
+  +files/gnome-keyring-3.2.2-gold-glib-2.32.patch:
+  Add fix for problems with glib-2.32 and gold linker, #414117
 
   18 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-keyring-3.2.1.ebuild, gnome-keyring-3.2.2.ebuild:

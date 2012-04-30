@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.2.2.ebuild,v 1.4 2011/11/18 04:41:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.2.2.ebuild,v 1.5 2012/04/30 14:54:08 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2 multilib pam versionator virtualx
+inherit autotools gnome2 multilib pam versionator virtualx
 
 DESCRIPTION="Password and keyring managing daemon"
 HOMEPAGE="http://www.gnome.org/"
@@ -62,7 +62,11 @@ src_prepare() {
 	sed -e 's/^\(SUBDIRS = \.\)\(.*\)/\1/' \
 		-i gcr/Makefile.* || die "sed failed"
 
+	# gold plus glib-2.32 underlinking fix
+	epatch "${FILESDIR}"/${P}-gold-glib-2.32.patch
+
 	gnome2_src_prepare
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_test() {

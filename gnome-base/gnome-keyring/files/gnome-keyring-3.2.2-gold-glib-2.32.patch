@@ -1,0 +1,42 @@
+ configure.ac    |    8 ++++----
+ gcr/Makefile.am |    1 +
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 70be49e..0fe24a1 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -69,8 +69,8 @@ AC_SUBST(GLIB_CFLAGS)
+ AC_SUBST(GLIB_LIBS)
+ 
+ PKG_CHECK_MODULES(GMODULE, gmodule-no-export-2.0)
+-AC_SUBST(GLIB_CFLAGS)
+-AC_SUBST(GLIB_LIBS)
++AC_SUBST(GMODULE_CFLAGS)
++AC_SUBST(GMODULE_LIBS)
+ 
+ PKG_CHECK_MODULES(GTHREAD, gthread-2.0 >= 2.8.0)
+ AC_SUBST(GTHREAD_CFLAGS)
+@@ -88,8 +88,8 @@ PKG_CHECK_MODULES(GTK, gtk+-3.0 >= 3.0)
+ AC_SUBST(GTK_CFLAGS)
+ AC_SUBST(GTK_LIBS)
+ 
+-DAEMON_CFLAGS="$DAEMON_CFLAGS $GLIB_CFLAGS $GTHREAD_CFLAGS $GOBJECT_CFLAGS $GIO_CFLAGS"
+-DAEMON_LIBS="$DAEMON_LIBS $GLIB_LIBS $GTHREAD_LIBS $GOBJECT_LIBS $GIO_LIBS"
++DAEMON_CFLAGS="$DAEMON_CFLAGS $GLIB_CFLAGS $GTHREAD_CFLAGS $GOBJECT_CFLAGS $GIO_CFLAGS $GMODULE_CFLAGS"
++DAEMON_LIBS="$DAEMON_LIBS $GLIB_LIBS $GTHREAD_LIBS $GOBJECT_LIBS $GIO_LIBS $GMODULE_LIBS"
+ 
+ GETTEXT_PACKAGE=gnome-keyring
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [The gettext domain name])
+diff --git a/gcr/Makefile.am b/gcr/Makefile.am
+index 0e40215..1f75aa3 100644
+--- a/gcr/Makefile.am
++++ b/gcr/Makefile.am
+@@ -148,6 +148,7 @@ libgcr_@GCR_MAJOR@_la_LIBADD = \
+ 	$(top_builddir)/gck/libgck-@GCK_MAJOR@.la \
+ 	$(GOBJECT_LIBS) \
+ 	$(GLIB_LIBS) \
++	$(GMODULE_LIBS) \
+ 	$(LIBGCRYPT_LIBS) \
+ 	$(GTK_LIBS) \
+ 	$(P11_KIT_LIBS)
