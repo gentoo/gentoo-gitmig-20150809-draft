@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.70 2012/04/30 08:50:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.71 2012/04/30 09:56:55 ago Exp $
+
+  30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> mercurial-2.1.1.ebuild:
+  Stable for amd64, wrt bug #414077
 
 *mercurial-2.1.2 (30 Apr 2012)
 
