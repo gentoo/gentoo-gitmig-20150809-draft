@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.0.ebuild,v 1.1 2012/02/28 14:59:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.0.ebuild,v 1.2 2012/04/30 14:37:32 pesa Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -21,7 +21,7 @@ BASE_URI="mirror://sourceforge/eric-ide/${MY_PN}/stable/${PV}"
 SRC_URI="${BASE_URI}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="kde spell"
 
 DEPEND="
