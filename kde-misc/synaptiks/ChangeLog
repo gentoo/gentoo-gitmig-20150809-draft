@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.28 2012/04/17 15:08:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.29 2012/04/30 10:49:50 ago Exp $
+
+  30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> synaptiks-0.8.0.ebuild:
+  Stable for amd64, wrt bug #401131
 
   17 Apr 2012; Michał Górny <mgorny@gentoo.org> synaptiks-0.4.0-r1.ebuild:
   Use mirror://bitbucket.
