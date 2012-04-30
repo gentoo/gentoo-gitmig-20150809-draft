@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.300 2012/04/24 19:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.301 2012/04/30 00:13:13 vapier Exp $
+
+  30 Apr 2012; Mike Frysinger <vapier@gentoo.org> -busybox-1.17.4.ebuild,
+  -busybox-1.18.4.ebuild, -busybox-1.18.5.ebuild, -busybox-1.19.0.ebuild,
+  -busybox-1.19.2-r1.ebuild, -busybox-1.19.2.ebuild, -busybox-1.19.3.ebuild,
+  -files/busybox-1.17.0-bb.patch, -files/busybox-1.18.0-bb.patch,
+  -files/busybox-1.18.1-bzip2.patch, -files/busybox-1.18.1-cpio.patch,
+  -files/busybox-1.18.1-hush.patch, -files/busybox-1.18.1-mkswap.patch,
+  -files/busybox-1.18.1-warning.patch, -files/busybox-1.18.3-buildsys.patch,
+  -files/busybox-1.18.3-modutils24.patch, -files/busybox-1.18.3-wget.patch,
+  -files/busybox-1.18.4-fuser.patch, -files/busybox-1.18.4-hush.patch,
+  -files/busybox-1.19.0-cttyhack.patch, -files/busybox-1.19.0-less.patch,
+  -files/busybox-1.19.0-sed.patch, -files/busybox-1.19.0-swap.patch,
+  -files/busybox-1.19.0-uncompress.patch, -files/busybox-1.19.2-android.patch,
+  -files/busybox-1.19.2-buildsys.patch, -files/busybox-1.19.2-chpasswd.patch,
+  -files/busybox-1.19.2-crond.patch, -files/busybox-1.19.2-inetd.patch,
+  -files/busybox-1.19.2-syslogd.patch, -files/busybox-1.19.2-tail.patch,
+  -files/busybox-1.19.2-tftp.patch:
+  Old.
 
   24 Apr 2012; Mike Frysinger <vapier@gentoo.org> busybox-1.17.4.ebuild,
   busybox-1.18.4.ebuild, busybox-1.18.5.ebuild, busybox-1.19.0.ebuild,
