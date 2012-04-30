@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.53 2012/04/28 01:16:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.54 2012/04/30 19:04:11 grobian Exp $
+
+  30 Apr 2012; Fabian Groffen <grobian@gentoo.org> rarian-0.8.1-r1.ebuild:
+  Fix for Prefix, add Prefix keywords
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org> rarian-0.8.1-r1.ebuild:
   keyword ~amd64-fbsd
