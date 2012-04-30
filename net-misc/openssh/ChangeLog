@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.440 2012/04/16 20:48:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.441 2012/04/30 22:47:40 vapier Exp $
+
+*openssh-6.0_p1 (30 Apr 2012)
+
+  30 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-6.0_p1-hpn-progressmeter.patch,
+  +files/openssh-6.0_p1-x509-glue.patch,
+  +files/openssh-6.0_p1-x509-hpn-glue.patch, +openssh-6.0_p1.ebuild:
+  Version bump with work from Robin #414071 by Michael Weber.
 
   16 Apr 2012; Markus Meier <maekke@gentoo.org> openssh-5.9_p1-r4.ebuild:
   arm stable, bug #396075
