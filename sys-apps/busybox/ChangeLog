@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.301 2012/04/30 00:13:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.302 2012/04/30 01:59:09 vapier Exp $
+
+*busybox-1.20.0 (30 Apr 2012)
+*busybox-9999 (30 Apr 2012)
+
+  30 Apr 2012; Mike Frysinger <vapier@gentoo.org> +busybox-1.20.0.ebuild,
+  +busybox-9999.ebuild, +files/busybox-1.20.0-buildsys.patch,
+  +files/busybox-1.20.0-getty.patch, +files/busybox-1.20.0-lineedit.patch,
+  +files/busybox-1.20.0-sed.patch, +files/ginit.c, metadata.xml:
+  Version bump.
 
   30 Apr 2012; Mike Frysinger <vapier@gentoo.org> -busybox-1.17.4.ebuild,
   -busybox-1.18.4.ebuild, -busybox-1.18.5.ebuild, -busybox-1.19.0.ebuild,
