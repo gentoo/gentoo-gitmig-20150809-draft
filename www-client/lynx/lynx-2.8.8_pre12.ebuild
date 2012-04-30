@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.2 2012/04/26 04:49:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.3 2012/04/30 22:19:54 flameeyes Exp $
 
 EAPI=4
 
@@ -48,16 +48,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# fix up toplevel makefile to enable parallel make (bug #262972)
-	#
-	# add '+' prefix to lines using $(MAKE_RECUR),
-	# making sure '+' comes after leading whitespace
-	sed -i -e '/$(MAKE_RECUR)/ s/\([[:blank:]]\)/\1+/' makefile.in || \
-		die "failed to update makefile.in"
-
 	# fix configure for openssl compiled with kerberos (bug #267749)
 	epatch "${FILESDIR}/lynx-2.8.7-configure-openssl.patch"
 	epatch "${FILESDIR}"/${PN}-2.8.6-mint.patch
+	epatch "${FILESDIR}"/lynx-2.8.8_pre12-parallel.patch
 }
 
 src_configure() {
@@ -98,10 +92,10 @@ src_configure() {
 		$myargs
 }
 
-src_compile() {
-	# see bug #403905
-	emake -j1
-}
+#src_compile() {
+#	# see bug #403905
+#	emake -j1
+#}
 
 src_install() {
 	emake install DESTDIR="${D}"
