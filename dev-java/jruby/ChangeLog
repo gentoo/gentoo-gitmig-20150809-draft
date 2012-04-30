@@ -1,9 +1,9 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.83 2012/04/30 10:44:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.84 2012/04/30 10:52:20 ago Exp $
 
   30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> jruby-1.6.5.1.ebuild:
-  Stable for amd64, wrt bug #396395
+  Stable for amd64, wrt bug #396305
 
   29 Apr 2012; Hans de Graaff <graaff@gentoo.org> jruby-1.6.5.1.ebuild:
   Apply fix for USE=bsf build by sera reported in bug 412379.
