@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.28 2012/04/17 14:34:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.29 2012/04/30 19:13:25 ssuominen Exp $
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
+
+# Samuli Suominen <ssuominen@gentoo.org> (30 Apr 2012)
+# This is replaced by native CONFIG_INOTIFY_USER support wrt #413403
+=dev-libs/glib-2* fam
 
 # Samuli Suominen <ssuominen@gentoo.org (20 Mar 2012)
 # This is masked in base/package.use.mask as Linux only.

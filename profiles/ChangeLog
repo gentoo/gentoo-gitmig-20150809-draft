@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6484 2012/04/30 14:42:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6485 2012/04/30 19:13:25 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  default/linux/package.use.mask:
+  Mask USE="fam" for dev-libs/glib because we prefer native CONFIG_INOTIFY_USER
+  support instead wrt #413403
 
   30 Apr 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
   x11-themes/qgtkstyle has been treecleaned.
