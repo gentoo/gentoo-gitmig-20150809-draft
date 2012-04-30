@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.78 2012/03/26 12:00:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.79 2012/04/30 08:11:02 scarabeus Exp $
+
+  30 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  foomatic-filters-4.0.15.ebuild:
+  Stable on amd64, x86 and ppc wrt bug#414067.
 
 *foomatic-filters-4.0.15 (26 Mar 2012)
 
