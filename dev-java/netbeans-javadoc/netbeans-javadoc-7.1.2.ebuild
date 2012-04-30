@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javadoc/netbeans-javadoc-7.1.2.ebuild,v 1.1 2012/04/26 21:48:38 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javadoc/netbeans-javadoc-7.1.2.ebuild,v 1.2 2012/04/30 07:15:09 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -12,7 +12,7 @@ SLOT="7.1"
 SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1.2/final/zip/netbeans-7.1.2-201204101705-src.zip"
 SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-9999-r1-build.xml.patch.bz2
-	http://hg.netbeans.org/binaries/FF23DBB427D09AAEC3998B50D740C42B6A3FCD61-ant-libs-1.8.2.zip"
+	http://hg.netbeans.org/binaries/1A78676E734C72549EE6D9F166BAFE22F7CBA8CD-ant-libs-1.8.3.zip"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -52,7 +52,7 @@ src_unpack() {
 	unpack netbeans-9999-r1-build.xml.patch.bz2
 
 	pushd "${S}" >/dev/null || die
-	ln -s "${DISTDIR}"/FF23DBB427D09AAEC3998B50D740C42B6A3FCD61-ant-libs-1.8.2.zip o.apache.tools.ant.module/external/ant-libs-1.8.2.zip || die
+	ln -s "${DISTDIR}"/1A78676E734C72549EE6D9F166BAFE22F7CBA8CD-ant-libs-1.8.3.zip o.apache.tools.ant.module/external/ant-libs-1.8.3.zip || die
 	popd >/dev/null || die
 }
 
