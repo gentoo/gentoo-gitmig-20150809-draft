@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-3.12.ebuild,v 1.3 2012/03/01 22:15:44 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-3.12.ebuild,v 1.4 2012/04/30 08:23:53 graaff Exp $
 
 EAPI=3
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -50,21 +50,24 @@ all_ruby_prepare() {
 	sed -i -e '/isolate/d' Rakefile || die
 
 	epatch "${FILESDIR}/${PN}-3.0.1-bin-require.patch"
+	epatch "${FILESDIR}/${PN}-fix-hash-ordering-tests.patch"
 
 	# Remove test that is depending on the locale, which we can't garantuee.
 	sed -i -e '/def test_encode_with/,/^  end/ s:^:#:' test/test_rdoc_options.rb || die
+
+	# Remove test depending on FEATURES=userpriv, bug 361959
+	sed -i -e '/def test_check_files/,/^  end/ s:^:#:' test/test_rdoc_options.rb || die
+
+	# Avoid the generate rule since it doesn't work on jruby, see below.
+	sed -i -e '/:generate/d' Rakefile || die
 }
 
-each_ruby_prepare() {
-	case ${RUBY} in
-		*jruby)
-			# Remove tests that will fail due to a bug in JRuby affecting
-			# Dir.mktmpdir: http://jira.codehaus.org/browse/JRUBY-4082
-			rm test/test_rdoc_options.rb || die
-			;;
-		*)
-			;;
-	esac
+each_ruby_compile() {
+	# Generate the file inline here since the Rakefile confuses jruby
+	# into a circular dependency.
+	for file in lib/rdoc/rd/block_parser lib/rdoc/rd/inline_parser ; do
+		${RUBY} -S racc -l -o ${file}.rb ${file}.ry || die
+	done
 }
 
 all_ruby_install() {

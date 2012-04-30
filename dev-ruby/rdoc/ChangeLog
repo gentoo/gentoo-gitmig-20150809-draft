@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.73 2012/03/01 22:15:44 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.74 2012/04/30 08:23:53 graaff Exp $
+
+  30 Apr 2012; Hans de Graaff <graaff@gentoo.org> rdoc-3.12.ebuild,
+  +files/rdoc-fix-hash-ordering-tests.patch:
+  Fix ruby 1.8 hash ordering test failures, bug 397657. Fix racc file
+  generation. Avoid test requiring FEATURES=userpriv, bug 361959.
 
   01 Mar 2012; Naohiro Aota <naota@gentoo.org> rdoc-3.12.ebuild:
   Add ~x86-fbsd
