@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.241 2012/04/29 15:13:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.242 2012/04/30 09:48:04 jlec Exp $
+
+  30 Apr 2012; Justin Lecher <jlec@gentoo.org> evince-3.2.1-r1.ebuild,
+  +files/evince-3.2.1-glib-gold.patch:
+  Add fix for problems with glib-2.32 and gold linker, #414065
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> evince-2.32.0-r4.ebuild:
   x86 stable, bug #410611

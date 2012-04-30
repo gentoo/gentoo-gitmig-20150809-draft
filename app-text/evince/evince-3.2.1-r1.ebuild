@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.2.1-r1.ebuild,v 1.3 2011/12/04 04:34:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.2.1-r1.ebuild,v 1.4 2012/04/30 09:48:04 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Simple document viewer for GNOME"
 HOMEPAGE="http://www.gnome.org/projects/evince/"
@@ -104,7 +104,12 @@ src_prepare() {
 	# Patch from upstream git master branch to fix libgxps-0.2 compatibility
 	epatch "${FILESDIR}/${PN}-3.2.1-libgxps-0.2.patch"
 
+	# glib-2.32 restructured dep libs in pkg-config files, #414065
+	epatch "${FILESDIR}/${P}-glib-gold.patch"
+
 	gnome2_src_prepare
+
+	AT_NOELIBTOOLIZE=yes eautoreconf
 
 	# Do not depend on gnome-icon-theme, bug #326855, #391859
 	sed -e 's/gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED//g' \
