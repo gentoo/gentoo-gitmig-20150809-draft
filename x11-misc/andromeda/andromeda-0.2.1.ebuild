@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/andromeda/andromeda-0.2.1.ebuild,v 1.1 2012/04/29 08:57:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/andromeda/andromeda-0.2.1.ebuild,v 1.2 2012/04/30 10:51:09 yngwin Exp $
 
 EAPI=4
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-core-4.7.0:4
-	>=x11-libs/qt-gui-4.7.0:4
-	>=x11-libs/qt-webkit-4.7.0:4"
+DEPEND=">=x11-libs/qt-core-4.8.0:4
+	>=x11-libs/qt-gui-4.8.0:4
+	>=x11-libs/qt-webkit-4.8.0:4"
 RDEPEND="${DEPEND}"
 DOCS="TODO.txt dist/changes-*"
 
