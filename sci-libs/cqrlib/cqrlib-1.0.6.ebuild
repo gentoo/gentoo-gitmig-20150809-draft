@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.6.ebuild,v 1.4 2011/12/21 08:34:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/cqrlib-1.0.6.ebuild,v 1.5 2012/04/30 16:55:09 jlec Exp $
 
 EAPI=4
 
@@ -48,6 +48,8 @@ src_test() {
 
 src_install() {
 	emake -j1 DESTDIR="${ED}" install
+
+	rm -f "${ED}"/usr/$(get_libdir)/*.la || die
 
 	dodoc README_CQRlib.txt
 	dohtml README_CQRlib.html
