@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.143 2012/04/26 19:53:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.144 2012/04/30 06:43:36 polynomial-c Exp $
+
+*firefox-12.0 (30 Apr 2012)
+
+  30 Apr 2012; Lars Wendler <polynomial-c@gentoo.org> +firefox-12.0.ebuild:
+  Security bump.
 
 *firefox-10.0.4 (26 Apr 2012)
 
