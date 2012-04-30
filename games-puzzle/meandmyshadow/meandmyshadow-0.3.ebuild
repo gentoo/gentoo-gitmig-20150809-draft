@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.3.ebuild,v 1.1 2012/03/27 16:36:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.3.ebuild,v 1.2 2012/04/30 09:50:20 ago Exp $
 
 EAPI=3
 inherit eutils cmake-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/meandmyshadow/${PV}/${P}-src.tar.gz"
 
 LICENSE="GPL-3 OFL-1.1 CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[audio,video]
