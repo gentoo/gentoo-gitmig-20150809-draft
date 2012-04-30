@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.23 2012/04/30 06:48:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.24 2012/04/30 09:21:51 jlec Exp $
 
 EAPI=4
 
+GNOME2_LA_PUNT="yes"
 VIRTUALX_REQUIRED=test
 
 inherit autotools gnome2 virtualx
@@ -70,7 +71,6 @@ src_test() {
 
 src_install() {
 	gnome2_src_install
-	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.la
 	if use examples ; then
 		docinto examples
 		dodoc tests/ex-*.c
