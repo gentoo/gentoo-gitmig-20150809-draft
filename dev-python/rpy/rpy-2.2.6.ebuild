@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.2.2.ebuild,v 1.3 2012/04/02 06:03:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.2.6.ebuild,v 1.1 2012/04/30 19:44:53 xarthisius Exp $
 
-EAPI="2"
+EAPI=4
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 3.* *-jython 2.7-pypy-*"
 
-inherit distutils eutils
+inherit distutils
 
 MYSLOT=2
 MY_PN=${PN}${MYSLOT}
@@ -26,9 +26,10 @@ RDEPEND=">=dev-lang/R-2.8
 	!<=dev-python/rpy-1.0.2-r2"
 DEPEND="${RDEPEND}"
 
-PYTHON_MODNAME="${MY_PN}"
+PYTHON_MODNAME=${MY_PN}
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_test() {
 	testing() {
