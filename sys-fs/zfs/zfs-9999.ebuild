@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.20 2012/04/22 06:07:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.21 2012/04/30 15:38:47 floppym Exp $
 
 EAPI="4"
 
@@ -31,6 +31,7 @@ RDEPEND="${DEPEND}
 	test-suite? (
 		sys-apps/gawk
 		sys-apps/util-linux
+		sys-devel/bc
 		sys-block/parted
 		sys-fs/lsscsi
 		sys-fs/mdadm
@@ -108,6 +109,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	linux-mod_pkg_postinst
 
 	use x86 && ewarn "32-bit kernels are unsupported by ZFSOnLinux upstream. Do not file bug reports."
 
