@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.579 2012/04/29 17:39:29 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.580 2012/04/30 12:38:51 ago Exp $
+
+  30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> php-5.3.11.ebuild:
+  Stable for amd64, wrt bug #410957
 
   29 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> php-5.3.11.ebuild:
   x86 stable, see bug 410857
