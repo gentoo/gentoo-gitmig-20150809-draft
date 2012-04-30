@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.49 2012/04/27 11:57:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.50 2012/04/30 09:23:48 jlec Exp $
+
+*gimps-27.6-r1 (30 Apr 2012)
+
+  30 Apr 2012; Justin Lecher <jlec@gentoo.org> gimps-26.6-r1.ebuild,
+  gimps-27.4.ebuild, -gimps-27.6.ebuild, +gimps-27.6-r1.ebuild:
+  Fix Upstream stupidity in changing the tarball without version change,
+  #414073
 
 *gimps-27.6 (27 Apr 2012)
 
