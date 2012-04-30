@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/codeblocks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.22 2012/04/23 22:19:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.23 2012/04/30 20:27:26 scarabeus Exp $
+
+  30 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -codeblocks-1.0_pre20071215.ebuild, -files/8.02-version.patch,
+  -files/codeblocks-8.02-gcc43.patch, -files/codeblocks-8.02-gcc44.patch,
+  -files/codeblocks-8.02-gsocket.patch, codeblocks-10.05.ebuild,
+  codeblocks-9999.ebuild:
+  Update to eapi4. Fix wrong license wrt bug#414169. Remove overshadowed old
+  version.
 
   23 Apr 2012; Alexis Ballier <aballier@gentoo.org> codeblocks-10.05.ebuild:
   keyword ~x86-fbsd
