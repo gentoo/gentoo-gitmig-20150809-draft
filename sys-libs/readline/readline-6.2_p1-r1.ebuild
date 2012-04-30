@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p1-r1.ebuild,v 1.3 2012/04/26 13:12:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p1-r1.ebuild,v 1.4 2012/04/30 01:36:43 vapier Exp $
 
 inherit eutils multilib toolchain-funcs flag-o-matic
 
@@ -64,7 +64,11 @@ src_compile() {
 	# http://lists.gnu.org/archive/html/bug-readline/2010-07/msg00013.html
 	append-cppflags -Dxrealloc=_rl_realloc -Dxmalloc=_rl_malloc -Dxfree=_rl_free
 
+	# This is for rlfe, but we need to make sure LDFLAGS doesn't change
+	# so we can re-use the config cache file between the two.
+	append-ldflags -L.
 	econf \
+		--cache-file="${S}"/config.cache \
 		--with-curses \
 		$(use_enable static-libs static)
 	emake || die
@@ -72,13 +76,12 @@ src_compile() {
 	if ! tc-is-cross-compiler ; then
 		# code is full of AC_TRY_RUN()
 		cd examples/rlfe
-		append-ldflags -L.
 		local l
 		for l in readline history ; do
 			ln -s ../../shlib/lib${l}$(get_libname)* lib${l}$(get_libname)
 			ln -sf ../../lib${l}.a lib${l}.a
 		done
-		econf
+		econf --cache-file="${S}"/config.cache
 		emake || die
 	fi
 }
