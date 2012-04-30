@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.337 2012/04/22 23:29:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.338 2012/04/30 05:52:36 jlec Exp $
+
+  30 Apr 2012; Justin Lecher <jlec@gentoo.org> gedit-2.30.4.ebuild,
+  gedit-3.2.6.ebuild, gedit-3.4.1.ebuild:
+  Corrected HOMEPAGE, #414051
 
 *gedit-3.4.1 (22 Apr 2012)
 

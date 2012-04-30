@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.11 2012/02/07 20:55:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.12 2012/04/30 05:52:36 jlec Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ PYTHON_DEPEND="python? 2:2.5"
 inherit gnome2 multilib python eutils
 
 DESCRIPTION="A text editor for the GNOME desktop"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://live.gnome.org/Gedit"
 
 LICENSE="GPL-2"
 SLOT="0"
