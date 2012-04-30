@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-11.0.1.ebuild,v 1.1 2012/03/30 00:26:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-12.0.1.ebuild,v 1.1 2012/04/30 16:57:20 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -20,7 +20,7 @@ fi
 MOZ_P="${PN}-${MOZ_PV}"
 
 # Enigmail version
-EMVER="1.4"
+EMVER="1.4.1"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -36,7 +36,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist gconf +crashreporter +crypt +ipc +lightning +minimal mozdom +webm"
 
 PATCH="thunderbird-10.0-patches-0.1"
-PATCHFF="firefox-11.0-patches-0.4"
+PATCHFF="firefox-12.0-patches-0.1"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
@@ -168,6 +168,7 @@ src_configure() {
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
+	mozconfig_annotate 'Missing fetures' --disable-system-cairo
 
 	# Use enable features
 	mozconfig_use_enable lightning calendar
