@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13710 2012/04/29 20:08:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13711 2012/04/30 14:42:58 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -181,11 +181,6 @@ media-libs/tunepimp
 # Needs too much special patching to work in Gentoo,
 # bugs: #371167, #408647. Removal in 60 days (31 May 2012).
 sys-auth/tcb
-
-# Markos Chandras <hwoarang@gentoo.org> (30 Mar 2012)
-# Unmaintained. Replaced by x11-libs/qt-gui[gtkstyle]
-# Removal in 30 days
-x11-themes/qgtkstyle
 
 # Alex Legler <a3li@gentoo.org> (28 Mar 2012)
 # Leftover packages from a packaging attempt of Horde-4
