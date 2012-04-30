@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.68 2012/04/30 15:09:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.69 2012/04/30 15:19:44 grobian Exp $
+
+  30 Apr 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/llvm-3.2-nodoctargz.patch, llvm-9999.ebuild:
+  Fix nodoctargz patch for latest source, bug #413111
 
   30 Apr 2012; Fabian Groffen <grobian@gentoo.org> llvm-9999.ebuild:
   Extract the version LLVM refers to internally so we can properly fix
