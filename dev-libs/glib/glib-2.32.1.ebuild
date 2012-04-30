@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.1.ebuild,v 1.6 2012/04/26 14:14:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.1.ebuild,v 1.7 2012/04/30 19:17:06 ssuominen Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
 # Avoid runtime dependency on python when USE=test
 
-inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python virtualx
+inherit autotools gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python virtualx linux-info
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2"
 SLOT="2"
-IUSE="debug doc fam selinux static-libs systemtap test utils xattr"
+IUSE="debug doc fam kernel_linux selinux static-libs systemtap test utils xattr"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="virtual/libiconv
@@ -52,6 +52,11 @@ pkg_setup() {
 	if use test ; then
 		python_set_active_version 2
 		python_pkg_setup
+	fi
+
+	if use kernel_linux ; then
+		CONFIG_CHECK="~INOTIFY_USER"
+		linux-info_pkg_setup
 	fi
 }
 

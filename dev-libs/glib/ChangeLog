@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.519 2012/04/29 15:23:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.520 2012/04/30 19:17:06 ssuominen Exp $
+
+  30 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> glib-2.32.1.ebuild:
+  Check for CONFIG_INOTIFY_USER wrt #413403
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> glib-2.30.3.ebuild:
   x86 stable, bug #410611
