@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.7 2012/04/13 19:01:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.8 2012/04/30 15:38:41 grobian Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -225,7 +225,7 @@ src_prepare() {
 
 	ghc_setup_cflags
 
-	if ! use ghcbootstrap; then
+	if ! use ghcbootstrap && [[ ${CHOST} != *-darwin* && ${CHOST} != *-solaris* ]]; then
 		# Modify the wrapper script from the binary tarball to use GHC_CFLAGS.
 		# See bug #313635.
 		sed -i -e "s|\"\$topdir\"|\"\$topdir\" ${GHC_CFLAGS}|" \
