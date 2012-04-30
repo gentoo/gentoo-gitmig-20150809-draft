@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.3 2011/01/28 17:21:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.4 2012/04/30 19:56:16 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: Admin OSD - This is not! the webadmin program called vdradmin."
 HOMEPAGE="http://htpc-forum.de"
@@ -21,14 +21,14 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/admin-${PV}
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	sed -i "s:/etc/vdr/plugins/admin:/usr/share/vdr/admin/bin:" gentoo/admin.conf
 	sed -i "s:/etc/conf.d/vdr.admin.cfg:/usr/lib/vdr/rcscript/plugin-admin.sh:" gentoo/{runvdr,*.sh}
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	insinto /etc/vdr/plugins/admin
 	doins gentoo/admin.conf
@@ -40,7 +40,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	ewarn
 	ewarn "This plugin is not changed to support gentoo-vdr-scripts."
