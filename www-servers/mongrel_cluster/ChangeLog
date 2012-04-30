@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/mongrel_cluster
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/ChangeLog,v 1.10 2012/04/30 06:51:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/ChangeLog,v 1.11 2012/04/30 06:53:01 graaff Exp $
+
+*mongrel_cluster-1.0.5-r2 (30 Apr 2012)
+
+  30 Apr 2012; Hans de Graaff <graaff@gentoo.org>
+  +mongrel_cluster-1.0.5-r2.ebuild:
+  Add this in a revision so that it actually gets installed for people.
 
   30 Apr 2012; Hans de Graaff <graaff@gentoo.org>
   mongrel_cluster-1.0.5-r1.ebuild, +files/mongrel_cluster:
