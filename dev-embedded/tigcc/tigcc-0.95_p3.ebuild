@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.95_p3.ebuild,v 1.7 2012/02/06 03:10:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.95_p3.ebuild,v 1.8 2012/04/30 02:53:44 vapier Exp $
 
 inherit eutils
 
@@ -27,8 +27,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
-#KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-devel/binutils-2.14.90.0.6-r1"

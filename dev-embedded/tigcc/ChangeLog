@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/tigcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.21 2012/02/06 03:10:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.22 2012/04/30 02:53:44 vapier Exp $
+
+  30 Apr 2012; Mike Frysinger <vapier@gentoo.org> -tigcc-0.95-r2.ebuild,
+  -tigcc-0.96_beta2.ebuild, tigcc-0.95_p3.ebuild, tigcc-0.96_beta7.ebuild:
+  Drop old versions and stabilize newer ones as current stable fails to build
+  #83676 #151569.
 
   06 Feb 2012; Mike Frysinger <vapier@gentoo.org> tigcc-0.95-r2.ebuild,
   tigcc-0.95_p3.ebuild, tigcc-0.96_beta2.ebuild, tigcc-0.96_beta7.ebuild:
