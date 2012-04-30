@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.12 2012/04/30 08:25:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.13 2012/04/30 09:51:00 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -304,11 +304,10 @@ python-distutils-ng_newscript() {
 # Phase function: pkg_pretend
 python-distutils-ng_pkg_pretend() {
 	if has "collision-protect" ${FEATURES}; then
-		eerror "Due to previous eclass compiling Python files outside of src_install"
-		eerror "(and not recording resulting .pyc and .pyo files as owned by any package)"
-		eerror "merging this package with \"collision-protect\" in FEATURES will result"
-		eerror "in an error, please switch to using \"protect-owned\" instead."
-		die "\"collision-protect\" in FEATURES detected"
+		ewarn "Due to previous eclass compiling Python files outside of src_install"
+		ewarn "(and not recording resulting .pyc and .pyo files as owned by any package)"
+		ewarn "merging this package with \"collision-protect\" in FEATURES may result"
+		ewarn "in an error, please switch to using \"protect-owned\" instead."
 	fi
 }
 
