@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r9.ebuild,v 1.1 2012/04/29 16:15:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r9.ebuild,v 1.2 2012/04/30 00:38:55 hd_brummy Exp $
 
 EAPI="4"
 
@@ -56,6 +56,7 @@ COMMON_DEPEND="virtual/jpeg
 
 DEPEND="${COMMON_DEPEND}
 	>=virtual/linuxtv-dvb-headers-5
+	dev-util/unifdef
 	setup? ( >=dev-libs/tinyxml-2.6.1[stl] )"
 
 RDEPEND="${COMMON_DEPEND}
@@ -114,6 +115,61 @@ extensions_all_defines() {
 		Make.config.template \
 		| sort \
 		| tr '[:upper:]' '[:lower:]'
+}
+
+extensions_all_defines_unset() {
+	# extract all possible settings for extensions-patch
+	# and convert them to -U... for unifdef
+	sed -e '/^#\?[A-Z].*= 1/!d' -e 's/^#\?/-UUSE_/' -e 's/ .*//' \
+		Make.config.template \
+		| tr '\n' ' '
+}
+
+do_unifdef() {
+	ebegin "Unifdef sources"
+	local mf="Makefile.get"
+	cat <<'EOT' > $mf
+include Makefile
+show_def:
+	@echo $(DEFINES)
+show_src_files:
+	@echo $(OBJS:%.o=%.c)
+EOT
+
+	local DEFINES=$(extensions_all_defines_unset)
+
+	local RAW_DEFINES=$(make -f "$mf" show_def)
+	local VDR_SRC_FILES=$(make -f "$mf" show_src_files)
+	local KEEP_FILES=""
+	rm "$mf"
+
+	local def
+	for def in $RAW_DEFINES; do
+		case "${def}" in
+			-DUSE*)
+				DEFINES="${DEFINES} ${def}"
+				;;
+		esac
+	done
+
+	local f
+	for f in *.c; do
+
+		# Removing the src files the Makefile does not use for compiling vdr
+		if ! has $f ${VDR_SRC_FILES} ${KEEP_FILES}; then
+			rm -f ${f} ${f%.c}.h
+			continue
+		fi
+
+		unifdef ${DEFINES} "$f" > "tmp.$f"
+		mv "tmp.$f" "$f"
+	done
+	for f in *.h; do
+		unifdef ${DEFINES} "$f" > "tmp.$f"
+		mv "tmp.$f" "$f"
+		[[ -s $f ]] || rm "$f"
+	done
+	eend 0
 }
 
 lang_linguas() {
@@ -185,7 +241,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/vdr-1.6.0-gcc-4.4.diff
 		epatch "${FILESDIR}"/vdr-1.6.0-extensions-72-gcc-4.4.diff
 		epatch "${FILESDIR}"/vdr-1.6.0-shared-tinyxml.diff
-		epatch "${FILESDIR}/${P}_linguas.diff"
+		epatch "${FILESDIR}"/vdr-1.6.0_p2_linguas.diff
 
 		# This allows us to start even if some plugin does not exist
 		# or is not loadable.
@@ -235,6 +291,8 @@ src_prepare() {
 		emake .dependencies >/dev/null
 		eend $? "make depend failed"
 
+		[[ -z "$NO_UNIFDEF" ]] && do_unifdef
+
 		use iptv && sed -i sources.conf -e 's/^#P/P/'
 	fi
 
@@ -249,7 +307,7 @@ src_prepare() {
 
 	echo -e ${CAPS} > "${CAP_FILE}"
 
-	# LINGUAS handling support
+	# LINGUAS handling
 	einfo "\n \t VDR supports now the LINGUAS values"
 
 	lang_po
