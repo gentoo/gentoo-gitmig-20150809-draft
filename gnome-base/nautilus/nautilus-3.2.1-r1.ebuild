@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.2.1-r1.ebuild,v 1.2 2012/04/02 05:55:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.2.1-r1.ebuild,v 1.3 2012/04/30 15:10:14 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2 virtualx
+inherit autotools eutils gnome2 virtualx
 
 DESCRIPTION="A file manager for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/Nautilus"
@@ -86,6 +86,10 @@ src_prepare() {
 	# Remove crazy CFLAGS
 	sed 's:-DG.*DISABLE_DEPRECATED::g' -i configure.in configure \
 		|| die "sed 1 failed"
+
+	# gold plus glib-2.32 #414121
+	epatch "${FILESDIR}/${P}-gold-glib2.32.patch"
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_test() {
