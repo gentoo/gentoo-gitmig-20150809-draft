@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.6.1.ebuild,v 1.6 2012/04/29 17:03:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.6.1.ebuild,v 1.7 2012/04/30 15:17:42 jer Exp $
 
 EAPI=4
 inherit multilib
@@ -34,8 +34,6 @@ src_prepare() {
 		-e '/^set SERVERHOST /s:demo.sguil.net:localhost:' \
 		-e '/^set MAILSERVER /s:mail.example.com:localhost:' \
 		-e '/^set GPG_PATH /s:/usr/local/bin/gpg:/usr/bin/gpg:' || die
-	sed -i client/sguil.tk \
-		-e 's:^exec wish:exec wishx:' || die
 }
 
 src_install() {
@@ -43,6 +41,6 @@ src_install() {
 	insinto /etc/sguil
 	doins client/sguil.conf
 	insinto "/usr/$(get_libdir)/sguil"
-	doins "${S}"/client/lib/*
+	doins -r "${S}"/client/lib/*
 	dodoc doc/*
 }
