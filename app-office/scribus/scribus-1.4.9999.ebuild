@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.1 2012/02/13 10:55:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.2 2012/04/30 07:45:10 jlec Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ COMMON_DEPEND="
 	media-libs/libpng:0
 	media-libs/tiff:0
 	net-print/cups
-	sys-libs/zlib
+	sys-libs/zlib[minizip]
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	virtual/jpeg
@@ -46,6 +46,7 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.4.0_rc5-docs.patch
+	"${FILESDIR}"/${PN}-1.4.0-minizip.patch
 	)
 
 pkg_setup() {
@@ -54,16 +55,22 @@ pkg_setup() {
 }
 
 src_prepare() {
+	cat > cmake/modules/FindZLIB.cmake <<- EOF
+	find_package(PkgConfig)
+	pkg_check_modules(ZLIB minizip zlib)
+	SET( ZLIB_LIBRARY \${ZLIB_LIBRARIES} )
+	SET( ZLIB_INCLUDE_DIR \${ZLIB_INCLUDE_DIRS} )
+	MARK_AS_ADVANCED( ZLIB_LIBRARY ZLIB_INCLUDE_DIR )
+	EOF
+
+	rm scribus/{ioapi,unzip}.[ch] || die
+
 	if use templates; then
 		sed '/ADD_SUBDIRECTORY(resources\/templates)/d' -i CMakeLists.txt || die
 	fi
 	if use examples; then
 		sed '/ADD_SUBDIRECTORY(samples)/d' -i scribus/plugins/scriptplugin/CMakeLists.txt || die
 	fi
-
-	sed \
-		-e '1i#define OF(x) x' \
-		-i scribus/fileunzip.cpp scribus/unzip.h scribus/ioapi.h || die
 
 	base_src_prepare
 	subversion_src_prepare
