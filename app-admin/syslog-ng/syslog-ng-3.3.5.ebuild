@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.5.ebuild,v 1.1 2012/04/23 19:50:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.5.ebuild,v 1.2 2012/04/30 15:28:00 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -45,7 +45,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-compile.patch \
 		"${FILESDIR}"/${P}-afsocket.patch \
-		"${FILESDIR}"/${P}-gprocess.patch
+		"${FILESDIR}"/${P}-gprocess.patch \
+		"${FILESDIR}"/${P}-include.patch
 	sed -i \
 		-e '/libsyslog_ng_crypto_la_LIBADD/s/$/ -lssl -lcrypto/' \
 		lib/Makefile.am || die
