@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r2.ebuild,v 1.17 2012/04/26 17:30:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r2.ebuild,v 1.18 2012/04/30 14:29:54 grobian Exp $
 
 EAPI="3"
 
@@ -15,11 +15,12 @@ DESCRIPTION="Library providing the FAM File Alteration Monitor API"
 HOMEPAGE="http://www.gnome.org/~veillard/gamin/"
 SRC_URI="${SRC_URI}
 	mirror://gentoo/gamin-0.1.9-freebsd.patch.bz2
+	http://dev.gentoo.org/~grobian/patches/libgamin-0.1.10-opensolaris.patch.bz2
 	http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug kernel_linux python static-libs"
 
 RESTRICT="test" # needs gam-server
@@ -40,8 +41,15 @@ src_prepare() {
 	# Fix QA warnings, bug #257281, upstream #466791
 	epatch "${FILESDIR}"/${PN}-0.1.10-compilewarnings.patch
 
-	# Fix compile warnings; bug #188923
-	epatch "${DISTDIR}"/gamin-0.1.9-freebsd.patch.bz2
+	if [[ ${CHOST} != *-solaris* ]] ; then
+		# Fix compile warnings; bug #188923
+		epatch "${DISTDIR}"/gamin-0.1.9-freebsd.patch.bz2
+	else
+		# (Open)Solaris necessary patches (changes configure.in), unfortunately
+		# conflicts with freebsd patch and breaks some linux installs so it must
+		# only be applied if on solaris.
+		epatch "${DISTDIR}"/${P}-opensolaris.patch.bz2
+	fi
 
 	# Fix collision problem due to intermediate library, upstream bug #530635
 	epatch "${FILESDIR}"/${PN}-0.1.10-noinst-lib.patch
@@ -91,8 +99,8 @@ src_compile() {
 
 		building() {
 			emake \
-				PYTHON_INCLUDES="$(python_get_includedir)" \
-				PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
+				PYTHON_INCLUDES="${EPREFIX}$(python_get_includedir)" \
+				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
 				PYTHON_VERSION="$(python_get_version)"
 		}
 		python_execute_function -s --source-dir python building
@@ -106,7 +114,7 @@ src_install() {
 		installation() {
 			emake \
 				DESTDIR="${D}" \
-				PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
+				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
 				PYTHON_VERSION="$(python_get_version)" \
 				install
 		}
