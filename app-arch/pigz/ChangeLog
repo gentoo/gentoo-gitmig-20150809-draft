@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.19 2012/04/30 12:39:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.20 2012/04/30 19:51:34 jdhore Exp $
+
+  30 Apr 2012; Jeff Horelick <jdhore@gentoo.org> pigz-2.2.4.ebuild:
+  marked x86 per bug 402517
 
   30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> pigz-2.2.4.ebuild:
   Stable for amd64, wrt bug #402517
