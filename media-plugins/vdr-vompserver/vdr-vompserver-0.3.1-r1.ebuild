@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.3.1-r1.ebuild,v 1.1 2012/03/31 10:18:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/vdr-vompserver-0.3.1-r1.ebuild,v 1.2 2012/05/01 12:56:48 hd_brummy Exp $
 
 EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: server part for MediaMVP device"
 HOMEPAGE="http://www.loggytronic.com/vomp.php"
@@ -21,14 +21,18 @@ RDEPEND="${DEPEND}"
 PATCHES=("${FILESDIR}/rrprocstart.patch")
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	sed -i "s:vompserver:vomp:" vompserver.c
 	sed -i "s:char b:// char b:" mediafile.c
+
+	if has_version ">=media-video/vdr-1.7.27"; then
+		epatch "${FILESDIR}/vdr-1.7.27.diff"
+	fi
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	dodoc README
 
@@ -38,7 +42,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	echo
 	elog "Have a look to the VOMP sample files in /etc/vdr/plugins."

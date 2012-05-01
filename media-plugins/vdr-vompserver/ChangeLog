@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-vompserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.16 2012/03/31 10:18:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vompserver/ChangeLog,v 1.17 2012/05/01 12:56:48 hd_brummy Exp $
+
+  01 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-vompserver-0.3.1-r1.ebuild, +files/vdr-1.7.27.diff:
+  vdr-plugin-2.eclass; compilefix >=vdr-1.7.27
 
 *vdr-vompserver-0.3.1-r1 (31 Mar 2012)
 
