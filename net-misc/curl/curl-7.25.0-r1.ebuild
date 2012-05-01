@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0-r1.ebuild,v 1.2 2012/04/26 15:20:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0-r1.ebuild,v 1.3 2012/05/01 13:43:16 blueness Exp $
 
 EAPI="4"
 
@@ -21,10 +21,12 @@ RDEPEND="ldap? ( net-nds/openldap )
 		curl_ssl_axtls? ( net-libs/axTLS app-misc/ca-certificates )
 		curl_ssl_gnutls? (
 			|| (
-				( <=net-libs/gnutls-2.10.5 dev-libs/libgcrypt[static-libs?] app-misc/ca-certificates )
-				( net-libs/gnutls[-nettle,static-libs?] dev-libs/libgcrypt[static-libs?] app-misc/ca-certificates )
-				( net-libs/gnutls[nettle,static-libs?] dev-libs/nettle app-misc/ca-certificates )
+				( >=net-libs/gnutls-3[static-libs?] dev-libs/nettle )
+				( =net-libs/gnutls-2.12*[nettle,static-libs?] dev-libs/nettle )
+				( =net-libs/gnutls-2.12*[-nettle,static-libs?] dev-libs/libgcrypt[static-libs?] )
+				( <net-libs/gnutls-2.12 dev-libs/libgcrypt[static-libs?] )
 			)
+			app-misc/ca-certificates
 		)
 		curl_ssl_openssl? ( dev-libs/openssl[static-libs?] )
 		curl_ssl_nss? ( dev-libs/nss app-misc/ca-certificates )
@@ -103,7 +105,7 @@ src_configure() {
 		fi
 		if use curl_ssl_gnutls; then
 			einfo "SSL provided by gnutls"
-			if has_version net-libs/gnutls[nettle] ; then
+			if has_version ">=net-libs/gnutls-3" || has_version "=net-libs/gnutls-2.12*[nettle]"; then
 				einfo "gnutls compiled with dev-libs/nettle"
 				myconf+=( --with-gnutls --with-nettle )
 			else

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.215 2012/04/26 15:20:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.216 2012/05/01 13:43:16 blueness Exp $
+
+  01 May 2012; Anthony G. Basile <blueness@gentoo.org> curl-7.25.0-r1.ebuild:
+  Update dependencies for >=net-libs/gnutls-3, bug #412427
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> curl-7.25.0-r1.ebuild:
   keyword ~amd64-fbsd
