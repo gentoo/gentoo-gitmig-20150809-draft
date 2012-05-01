@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.586 2012/05/01 16:07:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.587 2012/05/01 16:14:09 floppym Exp $
+
+  01 May 2012; Mike Gilbert <floppym@gentoo.org> -python-2.7.3-r2.ebuild,
+  -python-3.2.3-r1.ebuild:
+  Drop ebuilds until the patchsets get mirrored.
 
 *python-3.2.3-r1 (01 May 2012)
 *python-2.7.3-r2 (01 May 2012)
