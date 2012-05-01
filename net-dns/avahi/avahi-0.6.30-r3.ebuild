@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.3 2012/02/12 18:55:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.4 2012/05/01 00:16:34 flameeyes Exp $
 
 EAPI="3"
 
@@ -109,6 +109,7 @@ src_prepare() {
 	>py-compile
 
 	epatch "${FILESDIR}"/${P}-automake-1.11.2.patch #397477
+	epatch "${FILESDIR}"/${P}-parallel.patch #411351
 
 	eautoreconf
 }
