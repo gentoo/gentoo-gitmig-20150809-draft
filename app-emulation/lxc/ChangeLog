@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.35 2012/04/29 23:48:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.36 2012/05/01 18:09:26 flameeyes Exp $
+
+*lxc-0.8.0_rc1-r4 (01 May 2012)
+
+  01 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> +lxc-0.8.0_rc1-r4.ebuild,
+  -files/lxc-0.8.0_rc1-blockmount.patch, -files/lxc-0.8.0_rc1-libtoolize.patch,
+  -files/lxc.initd, -lxc-0.7.5-r3.ebuild, -lxc-0.8.0_rc1-r3.ebuild:
+  Remove old; move patches to backports tarball (it's in git); add a patch to
+  fix bug #423737 by Kevin Pyle (kernel sources are no longer required for
+  build).
 
   29 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/lxc.initd.2:
   Make sure to need the network interface, not use it.

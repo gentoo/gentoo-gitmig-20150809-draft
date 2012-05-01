@@ -1,16 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0_rc1-r3.ebuild,v 1.1 2012/04/29 23:32:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0_rc1-r4.ebuild,v 1.1 2012/05/01 18:09:26 flameeyes Exp $
 
 EAPI="4"
 
 MY_P="${P/_/-}"
 
-inherit eutils linux-info versionator flag-o-matic autotools
+BACKPORTS=1
+
+inherit eutils linux-info versionator flag-o-matic ${BACKPORTS:+autotools}
 
 DESCRIPTION="LinuX Containers userspace utilities"
 HOMEPAGE="http://lxc.sourceforge.net/"
-SRC_URI="http://lxc.sourceforge.net/download/lxc/${MY_P}.tar.gz"
+SRC_URI="http://lxc.sourceforge.net/download/lxc/${MY_P}.tar.gz
+	${BACKPORTS:+http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-backports-${BACKPORTS}.tar.xz}"
 S="${WORKDIR}/${MY_P}"
 
 KEYWORDS="~amd64 ~ppc64 ~x86"
@@ -23,8 +26,7 @@ RDEPEND="sys-libs/libcap"
 
 DEPEND="${RDEPEND}
 	app-text/docbook-sgml-utils
-	>=sys-kernel/linux-headers-2.6.29
-	virtual/linux-sources"
+	>=sys-kernel/linux-headers-3.2"
 
 # For init script, so protect with vanilla, they are not strictly
 # needed.
@@ -81,10 +83,8 @@ ERROR_GRKERNSEC_CHROOT_CAPS=":CONFIG_GRKERNSEC_CHROOT_CAPS	some GRSEC features m
 DOCS=(AUTHORS CONTRIBUTING MAINTAINERS TODO README doc/FAQ.txt)
 
 src_prepare() {
-	if ! use vanilla; then
-		epatch "${FILESDIR}/${P}-libtoolize.patch"
-		epatch "${FILESDIR}/${P}-blockmount.patch"
-
+	if [[ -n ${BACKPORTS} ]]; then
+		epatch "${S}"/patches/*
 		eautoreconf
 	fi
 }
@@ -98,7 +98,6 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--with-config-path=/etc/lxc	\
 		--with-rootfs-path=/usr/lib/lxc/rootfs \
-		--with-linuxdir="${KERNEL_DIR}" \
 		--enable-doc \
 		$(use_enable examples)
 }
