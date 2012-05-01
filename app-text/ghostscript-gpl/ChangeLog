@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.137 2012/04/26 21:11:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.138 2012/05/01 22:43:34 dilfridge Exp $
+
+*ghostscript-gpl-9.05-r1 (01 May 2012)
+
+  01 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +ghostscript-gpl-9.05-r1.ebuild:
+  Add symlink for poppler-data integration, bug 409361
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   ghostscript-gpl-9.05.ebuild:
