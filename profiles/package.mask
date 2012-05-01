@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13713 2012/05/01 10:09:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13714 2012/05/01 17:55:43 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -291,7 +291,7 @@ dev-php/Horde_Yaml
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Mar 2012)
 # Causes font corruption, bug #409593.
-=x11-libs/cairo-1.12.0
+=x11-libs/cairo-1.12*
 
 # Markos Chandras <hwoarang@gentoo.org> (24 Mar 2012)
 # Does not seem to work. No upstream
