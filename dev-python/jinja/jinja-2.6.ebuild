@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6.ebuild,v 1.12 2012/03/10 17:48:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.6.ebuild,v 1.13 2012/05/01 08:35:11 xarthisius Exp $
 
 EAPI=4
 
@@ -9,8 +9,8 @@ DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
-MY_PN="Jinja2"
-MY_P="${MY_PN}-${PV}"
+MY_PN=Jinja2
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="A small but fast and easy to use stand-alone template engine written in pure python."
 HOMEPAGE="http://jinja.pocoo.org/ http://pypi.python.org/pypi/Jinja2"
@@ -27,7 +27,7 @@ RDEPEND="dev-python/markupsafe
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.6 )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 DOCS="CHANGES"
 PYTHON_MODNAME="jinja2"
@@ -40,7 +40,11 @@ src_compile(){
 	if use doc; then
 		einfo "Generation of documentation"
 		pushd docs > /dev/null
-		PYTHONPATH=".." emake html
+		if [[ "$(python_get_version -f -l --major)" == "3" ]]; then
+			# https://github.com/mitsuhiko/jinja2/issues/115
+			2to3-$(PYTHON -f --ABI) -nw --no-diffs jinjaext.py || die
+		fi
+		PYTHONPATH="$(ls -d ../build-$(PYTHON -f --ABI)/lib*)" emake html
 		popd > /dev/null
 	fi
 }
