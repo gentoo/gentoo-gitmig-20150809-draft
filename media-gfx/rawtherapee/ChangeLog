@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/rawtherapee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.5 2012/05/01 14:11:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.6 2012/05/01 14:12:35 radhermit Exp $
+
+  01 May 2012; Tim Harder <radhermit@gentoo.org> -rawtherapee-4.0.4.ebuild,
+  -rawtherapee-4.0.5.ebuild:
+  Remove old.
 
 *rawtherapee-4.0.8 (01 May 2012)
 
