@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-svdrposd/vdr-svdrposd-0.1.1.ebuild,v 1.1 2011/09/16 20:31:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-svdrposd/vdr-svdrposd-0.1.1.ebuild,v 1.2 2012/05/01 17:21:07 hd_brummy Exp $
 
-inherit vdr-plugin
+EAPI="4"
+
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: export OSD via TCP to vdr-remoteosd"
 HOMEPAGE="http://vdr.schmirler.de/"
@@ -13,6 +15,5 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.4.0
-	!media-plugins/vdr-svdrpext"
+DEPEND=">=media-video/vdr-1.4.0"
 RDEPEND="${DEPEND}"
