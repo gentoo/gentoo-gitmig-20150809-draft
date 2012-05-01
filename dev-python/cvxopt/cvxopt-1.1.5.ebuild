@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5.ebuild,v 1.1 2012/04/19 20:56:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5.ebuild,v 1.2 2012/05/01 10:34:56 xarthisius Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ S="${WORKDIR}/${P}/src"
 src_prepare(){
 	epatch "${FILESDIR}"/${P}-setup.patch
 	rm -rf src/C/SuiteSparse*/
+	rm -rf ../doc/build # 413905
 
 	pkg_lib() {
 		local pylib=\'$(pkg-config --libs-only-l ${1} | sed \

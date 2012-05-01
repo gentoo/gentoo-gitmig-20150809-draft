@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cvxopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.5 2012/04/19 20:56:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.6 2012/05/01 10:34:56 xarthisius Exp $
+
+  01 May 2012; Kacper Kowalik <xarthisius@gentoo.org> cvxopt-1.1.4-r1.ebuild,
+  cvxopt-1.1.5.ebuild:
+  Remove pregenerated sphinx build directory. Fixes bug 413905 by Martin von
+  Gagern <Martin.vGagern@gmx.net>
 
 *cvxopt-1.1.5 (19 Apr 2012)
 
