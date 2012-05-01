@@ -1,6 +1,9 @@
 # ChangeLog for games-util/joystick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.15 2012/04/15 16:53:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.16 2012/05/01 21:45:06 vapier Exp $
+
+  01 May 2012; Mike Frysinger <vapier@gentoo.org> joystick-1.4.2.ebuild:
+  Add arm love for ChromiumOS.
 
   15 Apr 2012; Markus Meier <maekke@gentoo.org> joystick-1.4.2.ebuild:
   x86 stable, bug #411535
