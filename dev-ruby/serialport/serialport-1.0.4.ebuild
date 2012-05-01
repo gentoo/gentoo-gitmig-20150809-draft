@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/serialport/serialport-1.0.4.ebuild,v 1.1 2011/03/13 10:53:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/serialport/serialport-1.0.4.ebuild,v 1.2 2012/05/01 18:24:16 armin76 Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://rubyforge.org/projects/ruby-serialport/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc ~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 all_ruby_prepare() {

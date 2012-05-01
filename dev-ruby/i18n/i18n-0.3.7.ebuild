@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.3.7.ebuild,v 1.6 2010/10/25 02:48:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.3.7.ebuild,v 1.7 2012/05/01 18:24:12 armin76 Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ S="${WORKDIR}/svenfuchs-${PN}-*"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~ppc-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND=""

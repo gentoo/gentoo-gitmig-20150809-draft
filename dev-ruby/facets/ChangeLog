@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facets
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.35 2011/07/17 18:27:13 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.36 2012/05/01 18:24:13 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> facets-1.4.5.ebuild,
+  facets-2.8.4-r1.ebuild:
+  Drop ia64/sparc keywords
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> facets-2.8.4-r1.ebuild:
   Stable for ppc64; bug #344477

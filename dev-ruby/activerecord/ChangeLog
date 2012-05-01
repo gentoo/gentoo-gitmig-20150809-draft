@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.181 2012/04/20 07:30:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.182 2012/05/01 18:24:21 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> activerecord-2.3.14.ebuild,
+  activerecord-3.0.10.ebuild, activerecord-3.0.11.ebuild,
+  activerecord-3.0.12.ebuild:
+  Drop ia64/sparc keywords
 
 *activerecord-3.2.3 (20 Apr 2012)
 

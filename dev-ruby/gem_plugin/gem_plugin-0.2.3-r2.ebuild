@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/gem_plugin-0.2.3-r2.ebuild,v 1.1 2010/12/27 18:56:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gem_plugin/gem_plugin-0.2.3-r2.ebuild,v 1.2 2012/05/01 18:24:19 armin76 Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19 jruby"
@@ -20,7 +20,7 @@ HOMEPAGE="http://mongrel.rubyforge.org/"
 
 LICENSE="mongrel"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 each_fakegem_test() {

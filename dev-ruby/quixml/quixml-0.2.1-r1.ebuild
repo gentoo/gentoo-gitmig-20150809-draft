@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/quixml-0.2.1-r1.ebuild,v 1.7 2010/05/22 15:36:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/quixml-0.2.1-r1.ebuild,v 1.8 2012/05/01 18:24:09 armin76 Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://rubyforge.org/download.php/89/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa ppc sparc x86"
+KEYWORDS="hppa ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/expat"

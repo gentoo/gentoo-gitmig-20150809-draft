@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test_declarative
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.5 2011/10/26 17:56:21 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.6 2012/05/01 18:24:13 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> test_declarative-0.0.5.ebuild:
+  Drop ia64/sparc keywords
 
   26 Oct 2011; Hans de Graaff <graaff@gentoo.org>
   test_declarative-0.0.5.ebuild:

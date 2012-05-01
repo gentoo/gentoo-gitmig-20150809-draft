@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/pdf-writer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.24 2011/09/18 12:20:35 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.25 2012/05/01 18:24:22 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> pdf-writer-1.1.8-r1.ebuild,
+  pdf-writer-1.1.8-r2.ebuild:
+  Drop ia64/sparc keywords
 
 *pdf-writer-1.1.8-r2 (18 Sep 2011)
 

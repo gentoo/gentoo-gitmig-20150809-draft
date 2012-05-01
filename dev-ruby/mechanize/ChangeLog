@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mechanize
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.31 2011/12/28 08:35:42 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.32 2012/05/01 18:24:06 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> mechanize-1.0.0.ebuild,
+  mechanize-1.0.0-r1.ebuild:
+  Drop ia64/sparc keywords
 
 *mechanize-1.0.0-r1 (28 Dec 2011)
 

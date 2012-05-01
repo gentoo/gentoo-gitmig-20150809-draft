@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/cmdparse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.21 2011/01/09 17:41:38 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.22 2012/05/01 18:24:15 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> cmdparse-2.0.2-r1.ebuild,
+  cmdparse-2.0.3.ebuild:
+  Drop ia64/sparc keywords
 
   09 Jan 2011; Hans de Graaff <graaff@gentoo.org> -cmdparse-2.0.2.ebuild,
   -cmdparse-2.0.2-r2.ebuild:

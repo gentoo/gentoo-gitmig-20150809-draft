@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jabber4r
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jabber4r/ChangeLog,v 1.12 2011/08/20 15:57:41 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jabber4r/ChangeLog,v 1.13 2012/05/01 18:24:19 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> jabber4r-0.8.0-r1.ebuild:
+  Drop ia64/sparc keywords
 
   20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -jabber4r-0.8.0.ebuild:
   Remove old version.

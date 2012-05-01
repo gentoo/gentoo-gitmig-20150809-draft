@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ruby-svg-1.0.3-r2.ebuild,v 1.4 2012/02/06 19:41:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ruby-svg-1.0.3-r2.ebuild,v 1.5 2012/05/01 18:24:28 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -12,7 +12,7 @@ HOMEPAGE="http://ruby-svg.sourceforge.jp/"
 SRC_URI="http://downloads.sourceforge.jp/ruby-svg/2288/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc examples"
 
 ruby_add_bdepend "doc? ( dev-ruby/rdtool )"

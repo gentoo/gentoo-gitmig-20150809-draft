@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.78 2012/02/07 07:49:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.79 2012/05/01 18:24:10 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org>
+  ruby-gettext-2.1.0_p20100728-r1.ebuild,
+  ruby-gettext-2.1.0_p20100728-r2.ebuild,
+  ruby-gettext-2.1.0_p20100728-r3.ebuild:
+  Drop ia64/sparc keywords
 
   07 Feb 2012; Hans de Graaff <graaff@gentoo.org> -ruby-gettext-2.1.0.ebuild:
   Remove old version.

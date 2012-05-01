@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/maruku
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.15 2011/12/31 17:55:52 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.16 2012/05/01 18:24:09 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> maruku-0.6.0-r1.ebuild,
+  maruku-0.6.0-r2.ebuild:
+  Drop ia64/sparc keywords
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> maruku-0.6.0-r2.ebuild:
   Marked ~sparc64-solaris

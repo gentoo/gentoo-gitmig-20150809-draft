@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-xslt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.28 2012/02/20 07:11:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.29 2012/05/01 18:24:08 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> ruby-xslt-0.9.8.ebuild,
+  ruby-xslt-0.9.9.ebuild:
+  Drop ia64/sparc keywords
 
 *ruby-xslt-0.9.9 (20 Feb 2012)
 

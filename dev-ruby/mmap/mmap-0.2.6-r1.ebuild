@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mmap/mmap-0.2.6-r1.ebuild,v 1.4 2010/09/26 17:23:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mmap/mmap-0.2.6-r1.ebuild,v 1.5 2012/05/01 18:24:17 armin76 Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://moulon.inra.fr/pub/ruby/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ~ppc x86"
 IUSE="doc"
 
 # bug 276238

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/arel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.27 2012/04/05 06:41:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.28 2012/05/01 18:24:10 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> arel-2.0.10-r1.ebuild:
+  Drop ia64/sparc keywords
 
 *arel-3.0.2-r1 (05 Apr 2012)
 

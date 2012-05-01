@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/abstract
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.9 2011/12/31 21:03:10 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/abstract/ChangeLog,v 1.10 2012/05/01 18:24:23 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> abstract-1.0.0-r1.ebuild:
+  Drop ia64/sparc keywords
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> abstract-1.0.0-r1.ebuild:
   Add Prefix keywords, bug #396547

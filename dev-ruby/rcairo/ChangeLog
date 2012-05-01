@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.70 2012/02/06 17:26:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.71 2012/05/01 18:24:16 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> rcairo-1.10.0-r3.ebuild,
+  rcairo-1.10.2.ebuild:
+  Drop ia64/sparc keywords
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> rcairo-1.10.2-r1.ebuild:
   Marking rcairo-1.10.2-r1 ~ppc for bug 371353

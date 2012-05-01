@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/xml-simple
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.27 2011/10/17 22:13:08 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.28 2012/05/01 18:24:09 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> xml-simple-1.0.12-r1.ebuild,
+  xml-simple-1.0.16.ebuild, xml-simple-1.1.0.ebuild, xml-simple-1.1.1.ebuild:
+  Drop ia64/sparc keywords
 
   17 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xml-simple-1.0.16.ebuild:
   Stable on amd64 wrt bug #386865

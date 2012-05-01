@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/amatch-0.2.5.ebuild,v 1.5 2010/09/30 01:40:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/amatch-0.2.5.ebuild,v 1.6 2012/05/01 18:24:06 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -16,5 +16,5 @@ HOMEPAGE="http://flori.github.com/amatch/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ia64 ~ppc ppc64 x86"
+KEYWORDS="~amd64 ~hppa ~ppc ppc64 x86"
 IUSE=""

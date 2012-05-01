@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/require_relative-1.0.2.ebuild,v 1.7 2011/09/25 14:18:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/require_relative-1.0.2.ebuild,v 1.8 2012/05/01 18:24:18 armin76 Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 jruby"
@@ -17,7 +17,7 @@ HOMEPAGE="http://steveklabnik.github.com/require_relative"
 
 LICENSE="|| ( Ruby BSD WTFPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE="test"
 
 ruby_add_bdepend "test? ( dev-ruby/minitest )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/treetop-1.4.9.ebuild,v 1.5 2011/07/31 16:55:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/treetop-1.4.9.ebuild,v 1.6 2012/05/01 18:24:23 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -18,7 +18,7 @@ DESCRIPTION="Treetop is a language for describing languages."
 HOMEPAGE="http://treetop.rubyforge.org/"
 LICENSE="Ruby"
 
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-solaris"
 SLOT="0"
 IUSE=""
 

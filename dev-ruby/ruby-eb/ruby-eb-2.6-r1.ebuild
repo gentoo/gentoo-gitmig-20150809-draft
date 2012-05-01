@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ruby-eb-2.6-r1.ebuild,v 1.1 2010/07/03 08:05:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ruby-eb-2.6-r1.ebuild,v 1.2 2012/05/01 18:24:24 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -18,7 +18,7 @@ SRC_URI="http://rubyeb.sourceforge.net/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc ~x86"
+KEYWORDS="~ppc ~x86"
 
 COMMON_DEPEND="sys-libs/zlib
 	>=dev-libs/eb-4.0-r1"

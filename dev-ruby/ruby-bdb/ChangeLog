@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-bdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.39 2011/01/16 08:55:43 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.40 2012/05/01 18:24:20 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> ruby-bdb-0.6.5-r1.ebuild:
+  Drop ia64/sparc keywords
 
   16 Jan 2011; Hans de Graaff <graaff@gentoo.org> -ruby-bdb-0.6.5.ebuild:
   Remove old version.

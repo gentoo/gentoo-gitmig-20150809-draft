@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-openid
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.20 2011/01/15 13:08:47 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.21 2012/05/01 18:24:27 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> ruby-openid-2.1.8.ebuild:
+  Drop ia64/sparc keywords
 
   15 Jan 2011; Hans de Graaff <graaff@gentoo.org> -ruby-openid-2.1.7.ebuild:
   Remove old version.

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/sinatra-1.2.7.ebuild,v 1.3 2011/12/31 14:44:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/sinatra-1.2.7.ebuild,v 1.4 2012/05/01 18:24:21 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.sinatrarb.com/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_rdepend '=dev-ruby/rack-1.1* =dev-ruby/tilt-1*'

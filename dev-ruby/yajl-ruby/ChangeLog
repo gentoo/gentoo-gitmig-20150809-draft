@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/yajl-ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.18 2012/03/11 13:06:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.19 2012/05/01 18:24:19 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> yajl-ruby-0.8.2.ebuild,
+  yajl-ruby-0.8.3.ebuild, yajl-ruby-1.1.0.ebuild:
+  Drop ia64/sparc keywords
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> yajl-ruby-1.1.0.ebuild:
   Marking yajl-ruby-1.1.0 ~ppc64 for bug 396043

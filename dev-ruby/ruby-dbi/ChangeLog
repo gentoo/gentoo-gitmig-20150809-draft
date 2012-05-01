@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.52 2012/04/30 11:45:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.53 2012/05/01 18:24:24 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> ruby-dbi-0.4.3.ebuild:
+  Drop ia64/sparc keywords
 
   30 Apr 2012; Hans de Graaff <graaff@gentoo.org> -ruby-dbi-0.2.0-r1.ebuild:
   Remove old version.

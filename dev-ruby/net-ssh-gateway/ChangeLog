@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-ssh-gateway
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/ChangeLog,v 1.25 2012/03/11 13:02:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/ChangeLog,v 1.26 2012/05/01 18:24:24 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org>
+  net-ssh-gateway-1.0.1-r1.ebuild, net-ssh-gateway-1.1.0.ebuild:
+  Drop ia64/sparc keywords
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> net-ssh-gateway-1.1.0.ebuild:
   Marking net-ssh-gateway-1.1.0 ppc64 for bug 395657

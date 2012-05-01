@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/erubis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.17 2011/12/31 21:04:23 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.18 2012/05/01 18:24:24 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> erubis-2.7.0.ebuild:
+  Drop ia64/sparc keywords
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> erubis-2.7.0.ebuild:
   Add Prefix keywords, bug #396547

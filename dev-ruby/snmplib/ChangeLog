@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/snmplib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.37 2012/02/06 19:15:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.38 2012/05/01 18:24:17 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> snmplib-1.0.3.ebuild,
+  snmplib-1.0.4.ebuild, snmplib-1.1.0.ebuild:
+  Drop ia64/sparc keywords
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> snmplib-1.0.3.ebuild:
   Marking snmplib-1.0.3 ppc for bug 379019

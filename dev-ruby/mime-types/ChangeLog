@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.25 2012/03/26 11:53:32 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.26 2012/05/01 18:24:19 armin76 Exp $
+
+  01 May 2012; Raúl Porcel <armin76@gentoo.org> mime-types-1.16-r2.ebuild,
+  mime-types-1.16-r3.ebuild, mime-types-1.18.ebuild:
+  Drop ia64/sparc keywords
 
   26 Mar 2012; Alex Legler <a3li@gentoo.org> mime-types-1.18.ebuild:
   Depend on dev-ruby/rubyforge when generating docs or running tests. Closes
