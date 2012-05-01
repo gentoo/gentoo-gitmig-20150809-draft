@@ -13,6 +13,10 @@
 //config:config GINIT
 //config:	bool "ginit"
 //config:	default y
+//config:	select MKDIR
+//config:	select MDEV
+//config:	select MOUNT
+//config:	select MOUNTPOINT
 //config:	help
 //config:	  sep-/usr bootstrapper
 
@@ -60,7 +64,7 @@ int ginit_main(int argc UNUSED_PARAM, char **argv)
 		return spawn_and_wait(argv+1);
 	}
 
-#define _spawn_and_wait(argv...) \
+#define saw(argv...) \
 	({ \
 		static const char *args[] = { argv, NULL }; \
 		/* These casts are fine -- see process_args for mem setup */ \
@@ -68,53 +72,35 @@ int ginit_main(int argc UNUSED_PARAM, char **argv)
 		spawn_and_wait((void *)args); \
 	})
 
-	/* We need /proc in order to see what's already been mounted */
-	if (access("/proc/mounts", F_OK) != 0) {
-		if (_spawn_and_wait("mount", "-n", "/proc"))
-			_spawn_and_wait("mount", "-n", "-t", "proc", "proc", "/proc");
-	}
-
-	/* Look up all the existing mount points */
-	ismnted_dev = ismnted_sys = ismnted_usr = false;
-	mntlist = setmntent("/proc/mounts", "re");
-	if (mntlist) {
-		while ((mntent = getmntent(mntlist))) {
-			if (!strcmp(mntent->mnt_dir, "/dev"))
-				ismnted_dev = true;
-			else if (!strcmp(mntent->mnt_dir, "/sys"))
-				ismnted_sys = true;
-			else if (!strcmp(mntent->mnt_dir, "/usr"))
-				ismnted_usr = true;
-		}
-		endmntent(mntlist);
-	}
-
 	/* First setup basic /dev */
-	if (!ismnted_dev) {
-		if (_spawn_and_wait("mount", "-n", "/dev"))
-			if (_spawn_and_wait("mount", "-n", "-t", "devtmpfs", "devtmpfs", "/dev"))
-				_spawn_and_wait("mount", "-n", "-t", "tmpfs", "dev", "/dev");
+	if (saw("mountpoint", "-q", "/dev") != 0) {
+		/* Try /etc/fstab */
+		if (saw("mount", "-n", "/dev"))
+			/* Then devtmpfs */
+			if (saw("mount", "-n", "-t", "devtmpfs", "devtmpfs", "/dev"))
+				/* Finally normal tmpfs */
+				saw("mount", "-n", "-t", "tmpfs", "dev", "/dev");
 	} else {
 		eprintf("%s appears to be mounted; skipping its setup\n", "/dev");
 	}
 
 	/* If /dev is empty (e.g. tmpfs), run mdev to seed things */
 	if (access("/dev/console", F_OK) != 0) {
-		if (!ismnted_sys) {
-			if (_spawn_and_wait("mount", "-n", "/sys"))
-				_spawn_and_wait("mount", "-n", "-t", "sysfs", "sysfs", "/sys");
+		if (saw("mountpoint", "-q", "/sys") != 0) {
+			if (saw("mount", "-n", "/sys"))
+				saw("mount", "-n", "-t", "sysfs", "sysfs", "/sys");
 		} else {
 			eprintf("%s appears to be mounted; skipping its setup\n", "/sys");
 		}
-		_spawn_and_wait("mdev", "-s");
+		saw("mdev", "-s");
 	}
 
 	/* Then seed the stuff we care about */
-	_spawn_and_wait("mkdir", "-p", "/dev/pts", "/dev/shm");
+	saw("mkdir", "-p", "/dev/pts", "/dev/shm");
 
 	/* Then mount /usr */
-	if (!ismnted_usr) {
-		_spawn_and_wait("mount", "-n", "/usr", "-o", "ro");
+	if (saw("mountpoint", "-q", "/usr") != 0) {
+		saw("mount", "-n", "/usr", "-o", "ro");
 	} else {
 		eprintf("%s appears to be mounted; skipping its setup\n", "/usr");
 	}
