@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Lab-Measurement
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/ChangeLog,v 1.5 2012/03/01 16:17:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/ChangeLog,v 1.6 2012/05/01 22:51:35 dilfridge Exp $
+
+*Lab-Measurement-2.96 (01 May 2012)
+
+  01 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  Lab-Measurement-2.94.ebuild, +Lab-Measurement-2.96.ebuild:
+  Version bump
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
