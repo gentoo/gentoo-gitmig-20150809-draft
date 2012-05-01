@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-9999.ebuild,v 1.1 2012/05/01 18:05:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-9999.ebuild,v 1.2 2012/05/01 20:19:57 vapier Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ fi
 DESCRIPTION="pkg-config compatible replacement with no dependencies other than ANSI C89"
 HOMEPAGE="https://github.com/nenolod/pkgconf"
 
-LICENSE="GPL-2"
+LICENSE="BSD-1"
 SLOT="0"
 IUSE="pkg-config"
 
