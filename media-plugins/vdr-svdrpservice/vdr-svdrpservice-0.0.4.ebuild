@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-svdrpservice/vdr-svdrpservice-0.0.4.ebuild,v 1.3 2012/05/01 17:13:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-svdrpservice/vdr-svdrpservice-0.0.4.ebuild,v 1.4 2012/05/01 17:15:21 hd_brummy Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	insinto /usr/include/svdrpservice
 	doins svdrpservice.h
