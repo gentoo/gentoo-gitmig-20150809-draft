@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.10.0.ebuild,v 1.2 2012/03/28 08:29:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.10.0.ebuild,v 1.3 2012/05/01 16:32:12 radhermit Exp $
 
 EAPI=4
 
@@ -29,7 +29,6 @@ RDEPEND="media-libs/fidlib
 	virtual/opengl
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
-	x11-libs/qt-qt3support:4
 	x11-libs/qt-svg:4
 	x11-libs/qt-webkit:4
 	x11-libs/qt-xmlpatterns:4
