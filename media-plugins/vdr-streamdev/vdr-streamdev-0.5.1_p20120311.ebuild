@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.5.1_p20120311.ebuild,v 1.1 2012/04/21 18:02:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.5.1_p20120311.ebuild,v 1.2 2012/05/01 17:45:08 hd_brummy Exp $
 
 EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 #VERSION="497" # every bump, new version !
 
@@ -23,10 +23,10 @@ RDEPEND="${DEPEND}"
 REQUIRED_USE=" || ( client server ) "
 
 # vdr-plugin-2.eclass changes
-#PO_SUBDIR="client server"
+PO_SUBDIR="client server"
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	# make subdir libdvbmpeg respect CXXFLAGS
 	sed -i Makefile \
@@ -48,7 +48,7 @@ src_prepare() {
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	cd "${S}"
 	if use server; then
@@ -68,7 +68,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	if [[ -e "${ROOT}"/etc/vdr/plugins/streamdev/streamdevhosts.conf ]]; then
 		einfo "move config file to new config DIR ${ROOT}/etc/vdr/plugins/streamdev-server/"
