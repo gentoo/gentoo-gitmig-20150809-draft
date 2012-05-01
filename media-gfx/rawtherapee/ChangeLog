@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/rawtherapee
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.4 2011/12/07 03:49:27 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.5 2012/05/01 14:11:35 radhermit Exp $
+
+*rawtherapee-4.0.8 (01 May 2012)
+
+  01 May 2012; Tim Harder <radhermit@gentoo.org> +rawtherapee-4.0.8.ebuild,
+  +files/rawtherapee-4.0.8-nohg.patch:
+  Version bump (bug #401683).
 
 *rawtherapee-4.0.6 (07 Dec 2011)
 
