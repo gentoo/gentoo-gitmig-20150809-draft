@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2.ebuild,v 1.1 2012/04/26 07:58:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2.ebuild,v 1.2 2012/05/01 09:04:26 xmw Exp $
 
 EAPI=4
 
-inherit autotools toolchain-funcs
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Mobile shell that supports roaming and intelligent local echo"
 HOMEPAGE="http://mosh.mit.edu"
@@ -30,17 +30,16 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	einfo remove bundled skalibs
 	rm -r third || die
-	sed -e '/third/d' -i configure.ac
-	sed -e '/^SUBDIRS/s: third : :' -i Makefile.am
-
+	epatch "${FILESDIR}"/${P}-shared-skalibs.patch
 	eautoreconf
+	epatch "${FILESDIR}"/${P}-shared-skalibs-fix-configure.patch
 }
 
 src_configure() {
 	econf \
-		--with-skalibs=/ \
-		--with-skalibs-include=/usr/include/skalibs \
-		--with-skalibs-libdir=/usr/$(get_libdir)/skalibs \
+		--with-skalibs="${EPREFIX}"/ \
+		--with-skalibs-include="${EPREFIX}"/usr/include/skalibs \
+		--with-skalibs-libdir="${EPREFIX}"/usr/$(get_libdir)/skalibs \
 		$(use_enable client) \
 		$(use_enable server) \
 		$(use_enable examples) \
