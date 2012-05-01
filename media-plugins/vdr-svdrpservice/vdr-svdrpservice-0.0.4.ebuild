@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-svdrpservice/vdr-svdrpservice-0.0.4.ebuild,v 1.2 2012/01/02 17:28:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-svdrpservice/vdr-svdrpservice-0.0.4.ebuild,v 1.3 2012/05/01 17:13:51 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: offers SVDRP connections as a service to other plugins"
 HOMEPAGE="http://vdr.schmirler.de/"
@@ -17,6 +17,14 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.4.0"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	vdr-plugin-2_src_prepare
+
+	# wrong detection
+	sed -i Makefile \
+		-e "s:VDRDIR)/Makefile:VDRDIR)/Make.common:"
+}
 
 src_install() {
 	vdr-plugin_src_install
