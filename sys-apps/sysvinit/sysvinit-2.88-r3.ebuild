@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r3.ebuild,v 1.8 2012/03/05 21:00:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r3.ebuild,v 1.9 2012/05/01 01:00:34 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -54,6 +54,11 @@ src_unpack() {
 			-e 's/ttyS0/cuaa0/g' \
 			-e 's/ttyS1/cuaa1/g' \
 			inittab #121786
+	fi
+	if use x86 || use amd64 ; then
+		sed -i \
+			-e '/ttyS[01]/s:9600:115200:' \
+			inittab
 	fi
 	[[ -n ${insert} ]] && echo "# Architecture specific features"$'\n'"${insert}" >> inittab
 }
