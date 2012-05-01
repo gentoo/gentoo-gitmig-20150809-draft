@@ -1,0 +1,31 @@
+--- files/valgrind-3.7.0-non-exec-stack.patch.orig	2011-11-11 02:40:06.000000000 +0100
++++ files/valgrind-3.7.0-non-exec-stack.patch	2012-03-23 20:11:36.000000000 +0100
+@@ -40,7 +40,7 @@
+  	m_syswrap/syswrap-main.c \
+  	m_syswrap/syswrap-generic.c \
+  	m_syswrap/syswrap-linux.c \
+-@@ -361,6 +343,24 @@
++@@ -361,6 +343,29 @@
+  	m_ume/main.c \
+  	m_ume/script.c
+  
+@@ -56,11 +56,16 @@
+ +
+ +if VGCONF_OS_IS_DARWIN
+ +COREGRIND_SOURCES_COMMON += \
+-+	m_start-@VGCONF_ARCH_PRI@-darwin.S \
+-+	m_start-@VGCONF_ARCH_SEC@-darwin.S \
+-+	m_mach/mach_traps-@VGCONF_ARCH_PRI@-darwin.S \
+++	m_dispatch/dispatch-@VGCONF_ARCH_PRI@-darwin.S \
+++	m_syswrap/syscall-@VGCONF_ARCH_PRI@-darwin.S \
+++	m_mach/mach_traps-@VGCONF_ARCH_PRI@-darwin.S
+++if VGCONF_HAVE_PLATFORM_SEC
+++COREGRIND_SOURCES_COMMON += \
+++	m_dispatch/dispatch-@VGCONF_ARCH_SEC@-darwin.S \
+++	m_syswrap/syscall-@VGCONF_ARCH_SEC@-darwin.S \
+ +	m_mach/mach_traps-@VGCONF_ARCH_SEC@-darwin.S
+ +endif
+++endif
+ +
+  libcoregrind_@VGCONF_ARCH_PRI@_@VGCONF_OS@_a_SOURCES = \
+      $(COREGRIND_SOURCES_COMMON)
