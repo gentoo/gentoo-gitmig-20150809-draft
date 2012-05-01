@@ -6,7 +6,7 @@ index daa54d7..1163a8d 100644
  # External image lib to use: imagemagick, graphicsmagick, imlib2 or none
  IMAGELIB = imagemagick
  
-+WANT_I18N=1
++#
  
  # DO NOT EDIT BELOW THIS LINE UNLESS YOU KNOW WHAT YOU'RE DOING
  # -------------------------------------------------------------
@@ -48,7 +48,7 @@ index daa54d7..1163a8d 100644
  
  ### Internationalization (I18N):
 -
-+ifdef WANT_I18N
++#
  PODIR     = po
  LOCALEDIR = $(VDRDIR)/locale
  I18Npo    = $(notdir $(wildcard $(PODIR)/*.po))
@@ -56,7 +56,7 @@ index daa54d7..1163a8d 100644
  $(LOCALEDIR)/%/LC_MESSAGES/vdr-$(PLUGIN).mo: $(PODIR)/%.po
  	@mkdir -p $(dir $@)
  	msgfmt -c -o $@ $<
-+endif
++#
  
  .PHONY: i18n
  i18n: $(I18Npo:%.po=$(LOCALEDIR)/%/LC_MESSAGES/vdr-$(PLUGIN).mo)
