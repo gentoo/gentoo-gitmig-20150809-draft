@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-vodcatcher
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vodcatcher/ChangeLog,v 1.5 2012/04/24 10:20:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vodcatcher/ChangeLog,v 1.6 2012/05/01 12:30:14 hd_brummy Exp $
+
+  01 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-vodcatcher-0.1.1.ebuild, -vdr-vodcatcher-0.2.1.ebuild,
+  -files/vdr-vodcatcher-0.2.1-gcc44.patch, vdr-vodcatcher-0.2.2.ebuild:
+  cleanup; eapi=4; vdr-plugin-2.eclass
 
   24 Apr 2012; Michał Górny <mgorny@gentoo.org> vdr-vodcatcher-0.2.2.ebuild:
   Update to use mirror://.
