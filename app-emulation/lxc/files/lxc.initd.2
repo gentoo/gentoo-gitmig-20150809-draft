@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd.2,v 1.2 2012/04/29 23:48:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd.2,v 1.3 2012/05/01 21:14:15 flameeyes Exp $
 
 CONTAINER=${SVCNAME#*.}
 
@@ -54,7 +54,20 @@ depend() {
 	# and then require that to be enabled, so that the
 	# dependencies are correct.
 	netif=$(lxc_get_var lxc.network.link)
-	[ -n "${netif}" ] && need net.${netif}
+
+	# when the network type is set to phys, we can make use of a
+	# network service (for instance to set it up before we disable
+	# the net_admin capability), but we might also not set it up
+	# at all on the host and leave the net_admin capable service
+	# to take care of it.
+	nettype=$(lxc_get_var lxc.network.type)
+
+	if [ -n "${netif}" ]; then
+	    case "${nettype}" in
+		phys)	use net.${netif} ;;
+		*)	need net.${netif} ;;
+	    esac
+	fi
 }
 
 start() {
