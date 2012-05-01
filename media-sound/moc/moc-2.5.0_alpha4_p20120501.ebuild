@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20120501.ebuild,v 1.1 2012/05/01 07:05:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20120501.ebuild,v 1.2 2012/05/01 07:09:11 radhermit Exp $
 
 EAPI=4
 inherit autotools
@@ -36,6 +36,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	wavpack? ( media-sound/wavpack )"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	dev-util/pkgconfig"
 
 src_prepare() {
@@ -45,26 +46,26 @@ src_prepare() {
 src_configure() {
 	local myconf=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--without-rcc
 		$(use_enable debug)
-		$(use_with oss)
-		$(use_with alsa)
-		$(use_with jack)
-		$(use_with unicode ncursesw)
-		$(use_with libsamplerate samplerate)
 		$(use_with aac)
+		$(use_with alsa)
+		$(use_with curl)
 		$(use_with ffmpeg)
 		$(use_with flac)
-		$(use_with modplug)
+		$(use_with jack)
+		$(use_with libsamplerate samplerate)
 		$(use_with mad mp3)
-		--without-rcc
+		$(use_with modplug)
 		$(use_with musepack)
+		$(use_with oss)
 		$(use_with sid sidplay2)
 		$(use_with sndfile)
 		$(use_with speex)
 		$(use_with timidity)
+		$(use_with unicode ncursesw)
 		$(use_with vorbis)
 		$(use_with wavpack)
-		$(use_with curl)
 		)
 
 	econf "${myconf[@]}"
