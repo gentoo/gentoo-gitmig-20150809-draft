@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.138 2012/05/02 06:10:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.139 2012/05/02 20:00:08 polynomial-c Exp $
+
+  02 May 2012; Lars Wendler <polynomial-c@gentoo.org>
+  thunderbird-12.0.1.ebuild:
+  Fixed dependency on sqlite. Thanks to Florian Schmaus who reported this in
+  bug #414407.
 
   02 May 2012; Andreas Schuerch <nativemad@gentoo.org>
   thunderbird-10.0.4.ebuild:

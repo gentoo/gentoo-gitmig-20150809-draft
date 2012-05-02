@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-12.0.1.ebuild,v 1.1 2012/04/30 16:57:20 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-12.0.1.ebuild,v 1.2 2012/05/02 20:00:08 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -60,7 +60,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 		media-libs/alsa-lib )
 	virtual/libffi
 	!x11-plugins/enigmail
-	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.10[fts3,secure-delete,unlock-notify,debug=] )
 	crypt?  ( || (
 		( >=app-crypt/gnupg-2.0
 			|| (
