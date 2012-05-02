@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.159 2012/04/29 16:12:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.160 2012/05/02 06:37:10 tetromino Exp $
+
+*webkit-gtk-1.8.1-r300 (02 May 2012)
+*webkit-gtk-1.8.1-r200 (02 May 2012)
+
+  02 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +webkit-gtk-1.8.1-r200.ebuild, +webkit-gtk-1.8.1-r300.ebuild:
+  Version bump, should reduce flickering with gtk+-3.4.
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> webkit-gtk-1.6.3-r200.ebuild:
   x86 stable, bug #410611
