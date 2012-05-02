@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.1 2012/04/03 16:02:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.2 2012/05/02 13:58:33 scarabeus Exp $
+
+*cups-filters-1.0.17 (02 May 2012)
+
+  02 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.17.ebuild:
+  Version bump to latest.
 
 *cups-filters-1.0.11 (03 Apr 2012)
 
