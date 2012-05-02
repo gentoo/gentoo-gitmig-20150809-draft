@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.412 2012/04/26 16:57:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.413 2012/05/02 18:38:07 lack Exp $
+
+*vim-7.3.515 (02 May 2012)
+
+  02 May 2012; Jim Ramsay <jim_ramsay@gentoo.org> +vim-7.3.515.ebuild:
+  Version bump: 7.3.515 is released
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> vim-7.3.502.ebuild:
   keyword ~amd64-fbsd
