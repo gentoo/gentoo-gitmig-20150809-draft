@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/maloc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.23 2011/07/20 16:53:17 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.24 2012/05/02 10:38:42 jlec Exp $
+
+  02 May 2012; Justin Lecher <jlec@gentoo.org> maloc-1.5.ebuild:
+  Move to autotools-utils.eclass
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #105599
