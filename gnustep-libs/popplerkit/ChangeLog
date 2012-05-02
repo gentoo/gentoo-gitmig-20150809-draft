@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/popplerkit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.24 2010/02/10 22:02:08 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.25 2012/05/02 21:22:44 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> popplerkit-0.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   10 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -popplerkit-0.2.ebuild, -popplerkit-0.4.0-r1.ebuild:

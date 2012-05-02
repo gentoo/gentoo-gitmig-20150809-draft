@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.4.1.ebuild,v 1.6 2010/02/10 20:04:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.4.1.ebuild,v 1.7 2012/05/02 21:22:44 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND=">=app-text/poppler-0.12.3-r3[xpdf-headers]
 	>=media-libs/freetype-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.4.0-config-as-needed.patch
