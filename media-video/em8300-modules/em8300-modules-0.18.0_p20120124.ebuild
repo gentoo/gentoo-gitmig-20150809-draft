@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.18.0_p20120124.ebuild,v 1.2 2012/03/04 18:48:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.18.0_p20120124.ebuild,v 1.3 2012/05/02 17:15:52 ago Exp $
 
 EAPI=2
 inherit eutils linux-mod
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=""
