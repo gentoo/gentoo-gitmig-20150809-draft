@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.27.ebuild,v 1.6 2012/03/25 14:56:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.27.ebuild,v 1.7 2012/05/02 21:28:28 jdhore Exp $
 
 EAPI=4
 inherit multilib python
@@ -45,7 +45,7 @@ RDEPEND="${CDEPEND}
 DEPEND="${CDEPEND}
 	doc? ( virtual/texi2dvi )
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 REQUIRED_USE="gnutls? ( ssl )"
 
