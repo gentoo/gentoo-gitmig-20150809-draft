@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.5.ebuild,v 1.1 2011/12/05 13:36:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.5.ebuild,v 1.2 2012/05/02 21:26:22 jdhore Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ CDEPEND="!mail-mta/courier
 		!mail-mta/mini-qmail
 	)"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	dev-lang/perl"
 REQUIRED_USE="mysql? ( authlib )
