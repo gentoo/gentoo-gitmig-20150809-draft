@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.15.ebuild,v 1.2 2012/04/24 13:21:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.15-r1.ebuild,v 1.1 2012/05/02 16:20:53 grozin Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="dev-scheme/guile[deprecated]
 	jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) )
 	svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
 	netpbm? ( media-libs/netpbm )
-	spell? ( || ( >=app-text/ispell-3.2 >=app-text/aspell-0.5 ) )"
+	spell? ( app-text/aspell )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
@@ -37,6 +37,8 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	# respect LDFLAGS, bug #338459
 	epatch "${FILESDIR}"/${PN}-ldflags.patch
+	# fix a typo in tm-files.scm
+	epatch "${FILESDIR}"/${P}-tm-files.patch
 
 	eautoreconf
 }

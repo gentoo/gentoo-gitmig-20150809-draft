@@ -1,6 +1,14 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.101 2012/04/24 13:21:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.102 2012/05/02 16:20:53 grozin Exp $
+
+*texmacs-1.0.7.15-r1 (02 May 2012)
+
+  02 May 2012; Andrey Grozin <grozin@gentoo.org> texmacs-1.0.7.2-r1.ebuild,
+  -texmacs-1.0.7.14.ebuild, -texmacs-1.0.7.15.ebuild,
+  +texmacs-1.0.7.15-r1.ebuild, +files/texmacs-1.0.7.15-tm-files.patch:
+  Remove dependency on ispell closing #413363. Fixed an annoying typo in
+  tm-file.scm in 1.0.7.15.
 
   24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> texmacs-1.0.7.15.ebuild:
   Slight whitespace.
