@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.4-r1.ebuild,v 1.1 2012/03/21 22:45:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.6.ebuild,v 1.1 2012/05/02 05:12:05 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -9,7 +9,7 @@ PYTHON_USE_WITH="sqlite threads"
 inherit eutils gnome2-utils python
 
 if [[ ${PV/_rc*/} == ${PV} ]] ; then
-	MY_PV=${PV}-crucible-src
+	MY_PV=${PV}-escalation-src
 	FOLDER=stable/${PV}
 else
 	MY_PV=${PV/_rc/-stable-RC}-src
