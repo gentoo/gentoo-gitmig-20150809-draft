@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ws-commons-util
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ws-commons-util/ChangeLog,v 1.1 2012/01/06 10:55:01 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ws-commons-util/ChangeLog,v 1.2 2012/05/02 17:16:33 ago Exp $
+
+  02 May 2012; Agostino Sarubbo <ago@gentoo.org> ws-commons-util-1.0.1.ebuild:
+  Stable for amd64, wrt bug #414385
 
 *ws-commons-util-1.0.1 (06 Jan 2012)
 
