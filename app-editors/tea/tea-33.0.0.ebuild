@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-32.0.1.ebuild,v 1.1 2012/03/16 15:17:52 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-33.0.0.ebuild,v 1.1 2012/05/02 23:01:48 pesa Exp $
 
 EAPI=4
 LANGS="de fr ru"
@@ -16,32 +16,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86 ~x86-fbsd"
 IUSE="aspell hunspell"
 
-RDEPEND="sys-libs/zlib
+RDEPEND="
+	sys-libs/zlib
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	aspell? ( app-text/aspell )
-	hunspell? ( app-text/hunspell )"
+	hunspell? ( app-text/hunspell )
+"
 DEPEND="${RDEPEND}
-	hunspell? ( dev-util/pkgconfig )"
+	hunspell? ( virtual/pkgconfig )
+"
 
 DOCS="AUTHORS ChangeLog NEWS TODO"
 
 src_configure() {
-	local myopts
-
-	if use aspell; then
-		myopts="USE_ASPELL=true"
-	else
-		myopts="USE_ASPELL=false"
-	fi
-
-	if use hunspell; then
-		myopts="${myopts} USE_HUNSPELL=true"
-	else
-		myopts="${myopts} USE_HUNSPELL=false"
-	fi
-
-	eqmake4 src.pro PREFIX="/usr/bin" ${myopts}
+	eqmake4 src.pro \
+		PREFIX="${EPREFIX}/usr/bin" \
+		USE_ASPELL=$(use aspell && echo true || echo false) \
+		USE_HUNSPELL=$(use hunspell && echo true || echo false)
 }
 
 src_install() {
