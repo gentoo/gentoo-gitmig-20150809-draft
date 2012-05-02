@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/linuxwacom-module-0.8.8_p10.ebuild,v 1.2 2010/11/03 18:26:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/linuxwacom-module-0.8.8_p10.ebuild,v 1.3 2012/05/02 21:42:36 jdhore Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs linux-mod autotools
@@ -21,7 +21,7 @@ RDEPEND="sys-fs/udev
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	usb? ( >=sys-kernel/linux-headers-2.6 )"
 S=${WORKDIR}/${MY_PN}-${PV/_p/-}
 
