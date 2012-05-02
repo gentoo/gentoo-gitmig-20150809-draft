@@ -1,6 +1,6 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.103 2012/05/02 05:45:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.104 2012/05/02 05:48:13 tetromino Exp $
 
 *empathy-3.2.2-r1 (02 May 2012)
 
@@ -9,9 +9,9 @@
   +files/empathy-3.2.2-cancellable-not-NULL.patch,
   +files/empathy-3.2.2-delivery-failed.patch,
   +files/empathy-3.2.2-telepathy-logger-0.4.patch:
-  Fix telepathy-glib-0.4 compatibility (bug #413423, thanks to Antoine Lemoine
-  and Jack River). Fix a crash and do not silently fail to send messages. Drop
-  old.
+  Fix telepathy-logger-0.4 compatibility (bug #413423, thanks to Antoine
+  Lemoine and Jack River). Fix a crash and do not silently fail to send
+  messages. Drop old.
 
   14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   empathy-3.2.1.2.ebuild, empathy-3.2.2.ebuild:
