@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.232 2012/05/02 18:31:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.233 2012/05/02 21:05:38 eva Exp $
+
+  02 May 2012; Gilles Dartiguelongue <eva@gentoo.org> gnome2-utils.eclass,
+  gnome2.eclass:
+  Rewrite scrollkeeper support as proposed in bug #301311.
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> clutter.eclass,
   gkrellm-plugin.eclass, gnome-python-common.eclass, go-mono.eclass,

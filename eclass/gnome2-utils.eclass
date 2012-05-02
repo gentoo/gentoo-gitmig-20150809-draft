@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.26 2012/04/08 02:29:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.27 2012/05/02 21:05:38 eva Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -62,12 +62,17 @@ esac
 # @DESCRIPTION:
 # List of icons provided by the package
 
+# @ECLASS-VARIABLE: GNOME2_ECLASS_SCROLLS
+# @INTERNAL
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# List of scrolls (documentation files) provided by the package
+
 # @ECLASS-VARIABLE: GNOME2_ECLASS_GLIB_SCHEMAS
 # @INTERNAL
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # List of GSettings schemas provided by the package
-
 
 DEPEND=">=sys-apps/sed-4"
 
@@ -274,10 +279,14 @@ gnome2_omf_fix() {
 		omf_makefiles="${omf_makefiles} ${S}/omf.make"
 	fi
 
+	if [[ -f ${S}/gnome-doc-utils.make ]] ; then
+		omf_makefiles="${omf_makefiles} ${S}/gnome-doc-utils.make"
+	fi
+
 	# testing fixing of all makefiles found
 	# The sort is important to ensure .am is listed before the respective .in for
 	# maintainer mode regeneration not kicking in due to .am being newer than .in
-	for filename in $(find ./ -name "Makefile.in" -o -name "Makefile.am" |sort) ; do
+	for filename in $(find "${S}" -name "Makefile.in" -o -name "Makefile.am" |sort) ; do
 		omf_makefiles="${omf_makefiles} ${filename}"
 	done
 
@@ -287,12 +296,10 @@ gnome2_omf_fix() {
 	local fails=( )
 
 	for omf in ${omf_makefiles} ; do
-		local rv=0
-
 		sed -i -e 's:scrollkeeper-update:true:' "${omf}"
 		retval=$?
 
-		if [[ ! $rv -eq 0 ]] ; then
+		if [[ $retval -ne 0 ]] ; then
 			debug-print "updating of ${omf} failed"
 
 			# Add to the list of failures
@@ -309,16 +316,39 @@ gnome2_omf_fix() {
 	done
 }
 
+# @FUNCTION: gnome2_scrollkeeper_savelist
+# @DESCRIPTION:
+# Find the scrolls that are about to be installed and save their location
+# in the GNOME2_ECLASS_SCROLLS environment variable.
+# This function should be called from pkg_preinst.
+gnome2_scrollkeeper_savelist() {
+	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
+	pushd "${ED}" &> /dev/null
+	export GNOME2_ECLASS_SCROLLS=$(find 'usr/share/omf' -type f -name "*.omf" 2> /dev/null)
+	popd &> /dev/null
+}
+
 # @FUNCTION: gnome2_scrollkeeper_update
 # @DESCRIPTION:
 # Updates the global scrollkeeper database.
 # This function should be called from pkg_postinst and pkg_postrm.
 gnome2_scrollkeeper_update() {
 	has ${EAPI:-0} 0 1 2 && ! use prefix && EROOT="${ROOT}"
-	if [[ -x "${EROOT}${SCROLLKEEPER_UPDATE_BIN}" ]]; then
-		einfo "Updating scrollkeeper database ..."
-		"${EROOT}${SCROLLKEEPER_UPDATE_BIN}" -q -p "${EROOT}${SCROLLKEEPER_DIR}"
+	local updater="${EROOT}${SCROLLKEEPER_UPDATE_BIN}"
+
+	if [[ ! -x "${updater}" ]] ; then
+		debug-print "${updater} is not executable"
+		return
 	fi
+
+	if [[ -z "${GNOME2_ECLASS_SCROLLS}" ]]; then
+		debug-print "No scroll cache to update"
+		return
+	fi
+
+	ebegin "Updating scrollkeeper database ..."
+	"${updater}" -q -p "${EROOT}${SCROLLKEEPER_DIR}"
+	eend $?
 }
 
 # @FUNCTION: gnome2_schemas_savelist
