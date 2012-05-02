@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2.ebuild,v 1.2 2011/12/19 20:21:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.2.ebuild,v 1.3 2012/05/02 09:45:02 grobian Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/software/network/tftp/${PN}/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos"
 IUSE="ipv6 readline selinux tcpd"
 
 RDEPEND="selinux? ( sec-policy/selinux-tftpd )
@@ -39,7 +39,7 @@ src_install() {
 	dodoc README* CHANGES tftpd/sample.rules
 
 	# iputils installs this
-	rm "${D}"/usr/share/man/man8/tftpd.8 || die
+	rm "${ED}"/usr/share/man/man8/tftpd.8 || die
 
 	newconfd "${FILESDIR}"/in.tftpd.confd-0.44 in.tftpd
 	newinitd "${FILESDIR}"/in.tftpd.rc6 in.tftpd

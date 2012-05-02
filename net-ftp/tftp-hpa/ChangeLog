@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tftp-hpa
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.58 2011/12/19 20:21:21 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.59 2012/05/02 09:45:02 grobian Exp $
+
+  02 May 2012; Fabian Groffen <grobian@gentoo.org> tftp-hpa-5.2.ebuild:
+  Fixed for Prefix, marked ~ppc-macos
 
   19 Dec 2011; Tim Harder <radhermit@gentoo.org> tftp-hpa-5.1.ebuild,
   tftp-hpa-5.2.ebuild:
