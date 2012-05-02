@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.26 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.27 2012/05/02 18:31:42 jdhore Exp $
 
 # Author : foser <foser@gentoo.org>, zaheerm <zaheerm@gentoo.org>
 
@@ -58,7 +58,7 @@ if [ "${PN}" != "${MY_PN}" ]; then
 RDEPEND="=media-libs/gst-plugins-base-0.10*"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 # -good-0.10.24 uses orc optionally instead of liboil unconditionally.
 # While <0.10.24 configure always checks for liboil, it is linked to only by non-split

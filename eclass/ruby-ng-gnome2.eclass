@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.14 2011/10/21 06:31:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.15 2012/05/02 18:31:45 jdhore Exp $
 
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -28,7 +28,7 @@ if [ $(get_version_component_range "1-2") == "0.19" ]; then
 	subbinding=${subbinding/%2}
 else
 	subbinding=${subbinding/-/_}
-	DEPEND="dev-util/pkgconfig"
+	DEPEND="virtual/pkgconfig"
 	ruby_add_bdepend "dev-ruby/pkg-config"
 fi
 S=${WORKDIR}/ruby-gnome2-all-${PV}/${subbinding}

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.35 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.36 2012/05/02 18:31:42 jdhore Exp $
 
 # ROX eclass Version 3
 
@@ -72,7 +72,7 @@ if [[ ${ROX_CLIB_VER} ]]; then
 		>=rox-base/rox-clib-${ROX_CLIB_VER}"
 	DEPEND="${DEPEND}
 		>=rox-base/rox-clib-${ROX_CLIB_VER}
-		>=dev-util/pkgconfig-0.20"
+		virtual/pkgconfig"
 fi
 
 # This is the new wrapper name (for /usr/bin/)

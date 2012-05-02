@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.201 2011/11/28 18:13:42 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.202 2012/05/02 18:31:45 jdhore Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -123,7 +123,7 @@ else
 			dev-util/ctags
 			!aqua? (
 				gtk? (
-					dev-util/pkgconfig
+					virtual/pkgconfig
 				)
 			)"
 		RDEPEND="${RDEPEND}

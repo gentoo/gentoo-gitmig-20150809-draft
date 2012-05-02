@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gpe.eclass,v 1.3 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gpe.eclass,v 1.4 2012/05/02 18:31:42 jdhore Exp $
 
 # @ECLASS: gpe.eclass
 # @MAINTAINER:
@@ -48,7 +48,7 @@ GPECONF="${GPECONF} --enable-debug=no --disable-debug"
 RDEPEND=""
 DEPEND="
 	>=dev-util/intltool-0.29
-	>=dev-util/pkgconfig-0.12.0"
+	virtual/pkgconfig"
 
 # @FUNCTION: gpe_src_unpack
 # @DESCRIPTION:

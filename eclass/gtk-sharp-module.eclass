@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.34 2011/11/24 00:04:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.35 2012/05/02 18:31:42 jdhore Exp $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:
@@ -264,7 +264,7 @@ LICENSE="LGPL-2.1"
 
 add_depend	">=dev-lang/mono-2.0.1"
 add_bdepend	">=sys-apps/sed-4"
-add_bdepend	">=dev-util/pkgconfig-0.23"
+add_bdepend	"virtual/pkgconfig"
 add_bdepend	">=app-shells/bash-3.1"
 
 IUSE="debug"
