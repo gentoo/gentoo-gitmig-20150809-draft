@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-AutoLoader
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-AutoLoader/ChangeLog,v 1.15 2011/06/18 20:20:44 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-AutoLoader/ChangeLog,v 1.16 2012/05/02 14:19:19 tove Exp $
+
+*perl-AutoLoader-5.720.0 (02 May 2012)
+
+  02 May 2012; Torsten Veller <tove@gentoo.org>
+  +perl-AutoLoader-5.720.0.ebuild:
+  Version bump
 
 *perl-AutoLoader-5.710.0-r1 (18 Jun 2011)
 
