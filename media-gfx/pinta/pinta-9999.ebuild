@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pinta/pinta-9999.ebuild,v 1.1 2012/05/02 18:15:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pinta/pinta-9999.ebuild,v 1.2 2012/05/02 19:02:25 hasufell Exp $
 
 EAPI=4
 
-inherit autotools fdo-mime git-2 multilib mono
+inherit autotools fdo-mime git-2 mono
 
 DESCRIPTION="Simple Painting for Gtk"
 HOMEPAGE="http://pinta-project.com"
