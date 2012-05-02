@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-32.0.2.ebuild,v 1.1 2012/04/24 11:35:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-32.0.2.ebuild,v 1.2 2012/05/02 23:25:39 pesa Exp $
 
 EAPI=4
 LANGS="de fr ru"
@@ -22,7 +22,7 @@ RDEPEND="sys-libs/zlib
 	aspell? ( app-text/aspell )
 	hunspell? ( app-text/hunspell )"
 DEPEND="${RDEPEND}
-	hunspell? ( dev-util/pkgconfig )"
+	hunspell? ( virtual/pkgconfig )"
 
 DOCS="AUTHORS ChangeLog NEWS TODO"
 
