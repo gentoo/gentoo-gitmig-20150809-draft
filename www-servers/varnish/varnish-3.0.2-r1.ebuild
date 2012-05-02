@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.2-r1.ebuild,v 1.1 2011/12/14 22:55:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.2-r1.ebuild,v 1.2 2012/05/02 21:50:56 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND="${CDEPEND}
 	sys-devel/gcc"
 DEPEND="${CDEPEND}
 	dev-python/docutils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RESTRICT="test" #315725
 

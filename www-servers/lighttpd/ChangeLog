@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.275 2012/04/25 16:03:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.276 2012/05/02 21:49:38 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> lighttpd-1.4.23-r1.ebuild,
+  lighttpd-1.4.25-r2.ebuild, lighttpd-1.4.25-r3.ebuild,
+  lighttpd-1.4.26-r2.ebuild, lighttpd-1.4.28-r3.ebuild,
+  lighttpd-1.4.28-r4.ebuild, lighttpd-1.4.28-r5.ebuild,
+  lighttpd-1.4.29-r4.ebuild, lighttpd-1.4.30-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> lighttpd-1.4.23-r1.ebuild:
   Drop unnessecary die

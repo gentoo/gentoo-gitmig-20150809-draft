@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.23-r1.ebuild,v 1.2 2012/04/25 16:03:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.23-r1.ebuild,v 1.3 2012/05/02 21:49:38 jdhore Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ RDEPEND="
 	xattr? ( kernel_linux? ( sys-apps/attr ) )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc?  ( dev-python/docutils )
 	test? (
 		virtual/perl-Test-Harness

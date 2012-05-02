@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.30-r1.ebuild,v 1.4 2012/02/08 20:32:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.30-r1.ebuild,v 1.5 2012/05/02 21:49:38 jdhore Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ RDEPEND="
 	zlib? (	>=sys-libs/zlib-1.1 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc?  ( dev-python/docutils )
 	test? (
 		virtual/perl-Test-Harness
