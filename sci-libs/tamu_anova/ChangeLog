@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/tamu_anova
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/tamu_anova/ChangeLog,v 1.1 2011/02/19 15:16:22 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/tamu_anova/ChangeLog,v 1.2 2012/05/02 17:15:13 jlec Exp $
+
+  02 May 2012; Justin Lecher <jlec@gentoo.org> tamu_anova-0.2.1.ebuild,
+  metadata.xml:
+  Handle static libs
 
 *tamu_anova-0.2.1 (19 Feb 2011)
 

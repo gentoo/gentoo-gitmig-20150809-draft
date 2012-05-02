@@ -1,26 +1,25 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/tamu_anova/tamu_anova-0.2.1.ebuild,v 1.1 2011/02/19 15:16:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/tamu_anova/tamu_anova-0.2.1.ebuild,v 1.2 2012/05/02 17:15:13 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
-inherit autotools eutils
+AUTOTOOLS_AUTORECONF=yes
+
+inherit autotools-utils
 
 DESCRIPTION="ANOVA Extensions to the GNU Scientific Library"
-HOMEPAGE="http://www.stat.tamu.edu/~aredd/tamuanova"
+HOMEPAGE="http://www.stat.tamu.edu/~aredd/tamuanova/"
 SRC_URI="http://www.stat.tamu.edu/~aredd/tamuanova/${PN}-0.2.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND="sci-libs/gsl"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}-0.2
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
-	eautoreconf
-}
+PATCHES=( "${FILESDIR}"/${PV}-gentoo.patch )
