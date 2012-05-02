@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.5.ebuild,v 1.7 2011/03/27 12:54:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.5.ebuild,v 1.8 2012/05/02 21:44:31 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 
 # docbook-sgml-utils used to build the man page
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.30
 	app-text/docbook-sgml-utils
 	dev-util/gtk-doc-am
