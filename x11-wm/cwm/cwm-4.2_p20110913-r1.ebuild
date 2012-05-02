@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-20111229.ebuild,v 1.2 2012/01/29 01:54:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-4.2_p20110913-r1.ebuild,v 1.1 2012/05/02 13:19:24 xmw Exp $
 
-EAPI=4
+EAPI=2
 
 inherit eutils toolchain-funcs
 
@@ -25,11 +25,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
+	export LDADD="${LDFLAGS}"
 	tc-export CC
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install
-	dodoc README
+	emake DESTDIR="${D}" install || die
 	make_session_desktop ${PN} ${PN}
 }

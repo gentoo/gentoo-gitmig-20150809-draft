@@ -1,6 +1,23 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.33 2012/02/13 13:39:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.34 2012/05/02 13:19:24 xmw Exp $
+
+*cwm-9999 (02 May 2012)
+*cwm-5.1 (02 May 2012)
+*cwm-4.2_p20111229 (02 May 2012)
+*cwm-4.2_p20110913-r1 (02 May 2012)
+
+  02 May 2012; Michael Weber <xmw@gentoo.org> +cwm-4.2_p20110913-r1.ebuild,
+  +cwm-4.2_p20111229.ebuild, +files/cwm-4.2_p20110913-Makefile.patch,
+  +files/cwm-4.2_p20111229-Makefile.patch, +cwm-5.1.ebuild, +cwm-9999.ebuild,
+  -files/cwm-20110323-Makefile.patch, -cwm-20110515.ebuild,
+  -files/cwm-20110726-Makefile.patch, -cwm-20110913-r1.ebuild,
+  -cwm-20111229.ebuild, -files/cwm-20111229-Makefile.patch,
+  -cwm-99999999.ebuild:
+  Version bump, renumber to BSD release version.
+
+  02 May 2012; Michael Weber <xmw@gentoo.org> -cwm-20110515.ebuild:
+  Remove old version
 
   13 Feb 2012; Michael Weber <xmw@gentoo.org> cwm-20110913-r1.ebuild:
   sparc stable (bug 400535)
