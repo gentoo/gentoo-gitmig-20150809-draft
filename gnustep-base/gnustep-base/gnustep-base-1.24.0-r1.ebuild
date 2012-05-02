@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.24.0-r1.ebuild,v 1.3 2012/04/07 14:42:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.24.0-r1.ebuild,v 1.4 2012/05/02 21:21:12 jdhore Exp $
 
 EAPI=4
 inherit gnustep-base
@@ -28,7 +28,7 @@ RDEPEND="${GNUSTEP_CORE_DEPEND}
 	>=sys-libs/zlib-1.2
 	zeroconf? ( net-dns/avahi )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	egnustep_env

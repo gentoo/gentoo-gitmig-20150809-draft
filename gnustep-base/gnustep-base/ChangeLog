@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.111 2012/04/07 14:42:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.112 2012/05/02 21:21:12 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> gnustep-base-1.20.1.ebuild,
+  gnustep-base-1.24.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> gnustep-base-1.24.0-r1.ebuild:
   x86 stable, bug #410601

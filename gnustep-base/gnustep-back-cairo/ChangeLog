@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.34 2012/04/07 14:45:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.35 2012/05/02 21:21:12 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  gnustep-back-cairo-0.18.0.ebuild, gnustep-back-cairo-0.22.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org>
   gnustep-back-cairo-0.22.0.ebuild:

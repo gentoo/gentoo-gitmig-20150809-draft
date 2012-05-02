@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.18.0.ebuild,v 1.5 2010/08/13 17:33:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.18.0.ebuild,v 1.6 2012/05/02 21:21:12 jdhore Exp $
 
 EAPI=2
 
@@ -36,7 +36,7 @@ RDEPEND="${GNUSTEP_CORE_DEPEND}
 	!gnustep-base/gnustep-back-art
 	!gnustep-base/gnustep-back-xlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	egnustep_env
