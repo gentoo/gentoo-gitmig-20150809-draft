@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/trayer-1.0.ebuild,v 1.18 2011/03/28 14:34:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/trayer-1.0.ebuild,v 1.19 2012/05/02 09:56:44 jer Exp $
 
 EAPI="1"
 
 DESCRIPTION="Lightweight GTK+ based systray for UNIX desktop"
-HOMEPAGE="http://fvwm-crystal.org"
+HOMEPAGE="http://home.gna.org/fvwm-crystal/"
 SRC_URI="http://download.gna.org/fvwm-crystal/trayer/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"

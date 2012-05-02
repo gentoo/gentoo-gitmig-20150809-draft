@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/trayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.21 2012/05/02 07:10:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.22 2012/05/02 09:56:44 jer Exp $
+
+  02 May 2012; Jeroen Roovers <jer@gentoo.org> trayer-1.0.ebuild,
+  trayer-1.0-r1.ebuild:
+  Fix HOMEPAGE by df (bug #414305).
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> trayer-1.0-r1.ebuild:
   marked x86 per bug 414305
