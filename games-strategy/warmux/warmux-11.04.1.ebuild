@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.04.1.ebuild,v 1.3 2011/09/19 19:45:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.04.1.ebuild,v 1.4 2012/05/02 05:54:45 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -19,7 +19,7 @@ RDEPEND="media-libs/libsdl[joystick,video]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
 	media-libs/sdl-net
-	media-libs/sdl-gfx
+	>=media-libs/sdl-gfx-2.0.22
 	net-misc/curl
 	media-fonts/dejavu
 	dev-libs/libxml2
@@ -35,7 +35,8 @@ S="${WORKDIR}"/${PN}-11.04
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gentoo.patch \
-		"${FILESDIR}"/${P}-zlib.patch
+		"${FILESDIR}"/${P}-zlib.patch \
+		"${FILESDIR}"/${P}-action.patch
 	eautoreconf
 }
 
