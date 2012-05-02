@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-mobility
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.4 2012/04/04 16:14:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.5 2012/05/02 17:16:06 pesa Exp $
+
+  02 May 2012; Davide Pesavento <pesa@gentoo.org> qt-mobility-1.2.0.ebuild,
+  qt-mobility-1.2.2_p20120403.ebuild:
+  Migrate to virtual/pkgconfig.
 
 *qt-mobility-1.2.2_p20120403 (04 Apr 2012)
 

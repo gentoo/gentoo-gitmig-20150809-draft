@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.1 2012/04/04 16:14:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.2 2012/05/02 17:16:06 pesa Exp $
 
 EAPI=4
 
@@ -77,7 +77,7 @@ RDEPEND="
 	versit? ( >=x11-libs/qt-gui-4.7.0:4 )
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	multimedia? (
 		sys-kernel/linux-headers
 		x11-proto/videoproto
