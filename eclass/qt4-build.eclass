@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.126 2012/04/25 17:43:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.127 2012/05/02 17:09:17 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -48,7 +48,7 @@ if version_is_at_least 4.8; then
 	IUSE+=" c++0x qpa"
 fi
 
-DEPEND="dev-util/pkgconfig"
+DEPEND="virtual/pkgconfig"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	DEPEND+=" dev-lang/perl"
 fi
