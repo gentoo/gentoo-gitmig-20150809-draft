@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/gtk-youtube-viewer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk-youtube-viewer/ChangeLog,v 1.1 2012/05/02 00:39:31 hasufell Exp $
+
+*gtk-youtube-viewer-2.0.4_p20120422 (02 May 2012)
+
+  02 May 2012; Julian Ospald <hasufell@gentoo.org>
+  +gtk-youtube-viewer-2.0.4_p20120422.ebuild, +metadata.xml:
+  initial commit
+
