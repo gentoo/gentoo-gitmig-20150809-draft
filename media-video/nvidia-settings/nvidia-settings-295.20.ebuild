@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-295.20.ebuild,v 1.7 2012/04/25 04:27:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-295.20.ebuild,v 1.8 2012/05/02 17:20:07 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://download.nvidia.com/XFree86/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="-* amd64 ~x86 ~x86-fbsd"
 IUSE="examples"
 
 COMMON_DEPEND="x11-libs/libX11
