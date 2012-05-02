@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.10.2.ebuild,v 1.6 2011/10/21 14:07:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.10.2.ebuild,v 1.7 2012/05/02 07:17:04 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="C++ bindings for gtksourceview"
 HOMEPAGE="http://projects.gnome.org/gtksourceviewmm/"
@@ -33,6 +33,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# bug #414127, https://bugzilla.gnome.org/show_bug.cgi?id=666651
+	epatch "${FILESDIR}/${P}-glib-2.31.patch"
+
 	gnome2_src_prepare
 
 	# Remove docs from SUBDIRS so that docs are not installed, as
