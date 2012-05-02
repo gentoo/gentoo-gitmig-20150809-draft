@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.14.ebuild,v 1.6 2011/08/26 02:05:53 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.14.ebuild,v 1.7 2012/05/02 21:35:25 jdhore Exp $
 
 EAPI="2"
 inherit linux-info eutils
@@ -19,7 +19,7 @@ RDEPEND="
 	>=net-libs/libnetfilter_conntrack-0.0.101
 	!net-firewall/conntrack"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	sys-devel/bison
 	sys-devel/flex"
 
