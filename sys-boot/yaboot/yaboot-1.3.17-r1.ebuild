@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r1.ebuild,v 1.1 2012/05/02 06:09:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r1.ebuild,v 1.2 2012/05/02 06:20:54 josejx Exp $
+
+EAPI=2
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="-* ~ppc -ppc64"
 IUSE="ibm"
 
-DEPEND="sys-apps/powerpc-utils"
+DEPEND="sys-apps/powerpc-utils
+		sys-fs/e2fsprogs[static-libs]"
 RDEPEND="!ibm? ( sys-fs/hfsutils
 				 sys-fs/hfsplusutils
 				 sys-fs/mac-fdisk )"
@@ -21,7 +24,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	cp "${FILESDIR}/new-ofpath" "${S}/ybin/ofpath"
+}
 
+src_prepare() {
 	# dual boot patch
 	epatch "${FILESDIR}/yabootconfig-1.3.13.patch"
 	epatch "${FILESDIR}/chrpfix.patch"
