@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.96 2012/04/10 17:39:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.97 2012/05/02 13:48:08 tove Exp $
+
+*Moose-2.60.100 (02 May 2012)
+
+  02 May 2012; Torsten Veller <tove@gentoo.org> +Moose-2.60.100.ebuild:
+  Version bump
 
   10 Apr 2012; Torsten Veller <tove@gentoo.org> Moose-1.240.ebuild:
   Drop amd64 and x86 keywords from old Moose
