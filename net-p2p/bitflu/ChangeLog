@@ -1,5 +1,10 @@
 
 
+*bitflu-1.43 (02 May 2012)
+
+  02 May 2012; Anthony G. Basile <blueness@gentoo.org> +bitflu-1.43.ebuild:
+  Version bump
+
   10 Apr 2012; Anthony G. Basile <blueness@gentoo.org> -bitflu-1.38.ebuild,
   -bitflu-1.39.ebuild, -bitflu-1.40.ebuild:
   Remove older unstable versions
