@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/kqlives/kqlives-0.99.ebuild,v 1.5 2011/10/14 06:16:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/kqlives/kqlives-0.99.ebuild,v 1.6 2012/05/02 21:10:33 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.8:2
 	dev-lang/lua
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}
