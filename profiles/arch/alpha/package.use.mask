@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.80 2012/04/19 20:15:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.81 2012/05/02 22:07:00 pesa Exp $
+
+# Davide Pesavento <pesa@gentoo.org> (2 May 2012)
+# Requires Qt 4.8, which is not keyworded on alpha.
+x11-libs/cairo qt4
 
 # Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
 # Fails to build
