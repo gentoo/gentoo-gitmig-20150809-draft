@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ibam-0.5.2-r3.ebuild,v 1.1 2012/01/23 00:55:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ibam-0.5.2-r3.ebuild,v 1.2 2012/05/02 20:22:38 jdhore Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND="
 	)"
 DEPEND="
 	${RDEPEND}
-	gkrellm? ( dev-util/pkgconfig )"
+	gkrellm? ( virtual/pkgconfig )"
 
 src_prepare() {
 	epatch \

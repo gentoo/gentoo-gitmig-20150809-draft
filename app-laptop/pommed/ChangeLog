@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pommed
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.58 2011/11/28 23:37:30 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.59 2012/05/02 20:22:39 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> pommed-1.21-r1.ebuild,
+  pommed-1.30.ebuild, pommed-1.31.ebuild, pommed-1.39.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Nov 2011; Tony Vroon <chainsaw@gentoo.org> pommed-1.31.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &

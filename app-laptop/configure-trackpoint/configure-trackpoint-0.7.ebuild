@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/configure-trackpoint-0.7.ebuild,v 1.2 2011/06/30 07:19:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/configure-trackpoint-0.7.ebuild,v 1.3 2012/05/02 20:22:39 jdhore Exp $
 
 EAPI=2
 inherit gnome2
@@ -21,7 +21,7 @@ RDEPEND="app-laptop/tp_smapi
 	>=gnome-base/libgnomeui-2.4
 	>=sys-devel/gettext-0.11"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	if has_version kde-base/kdesu && ! has_version x11-libs/gksu; then

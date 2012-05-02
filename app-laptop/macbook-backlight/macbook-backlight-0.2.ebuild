@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/macbook-backlight/macbook-backlight-0.2.ebuild,v 1.2 2008/06/15 11:19:20 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/macbook-backlight/macbook-backlight-0.2.ebuild,v 1.3 2012/05/02 20:22:38 jdhore Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="sys-apps/pciutils"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	$COMMON_DEPEND"
 RDEPEND=$COMMON_DEPEND
 
