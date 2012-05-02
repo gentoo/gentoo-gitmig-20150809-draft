@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-9.2.0.6.ebuild,v 1.2 2010/03/28 17:37:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-9.2.0.6.ebuild,v 1.3 2012/05/02 17:18:26 ago Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}he${MY_PV}source.zip"
 
 LICENSE="MPL-1.0"
 SLOT="9"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saxon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.38 2010/03/28 17:37:39 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.39 2012/05/02 17:18:26 ago Exp $
+
+  02 May 2012; Agostino Sarubbo <ago@gentoo.org> saxon-9.2.0.6.ebuild:
+  Stable for amd64, wrt bug #414381
 
   28 Mar 2010; Vlastimil Babka <caster@gentoo.org> saxon-8.4b-r3.ebuild,
   saxon-9.2.0.6.ebuild:
