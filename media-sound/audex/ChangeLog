@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.13 2011/10/28 23:48:43 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.14 2012/05/02 17:59:13 johu Exp $
+
+  02 May 2012; Johannes Huber <johu@gentoo.org>
+  +files/audex-0.74_beta1-gcc47.patch, audex-0.74_beta1.ebuild:
+  Add upstream patch to fix build with gcc47 spotted by Michael (kensington)
+  <gentoo@scribeofthenile.com> wrt bug #414147.
 
   28 Oct 2011; Jonathan Callen <abcd@gentoo.org> audex-0.74_beta1.ebuild:
   Bump to EAPI=4

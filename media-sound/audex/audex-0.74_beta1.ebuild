@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.74_beta1.ebuild,v 1.2 2011/10/28 23:48:43 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.74_beta1.ebuild,v 1.3 2012/05/02 17:59:13 johu Exp $
 
 EAPI=4
 
@@ -26,3 +26,5 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+
+PATCHES=( "${FILESDIR}/${P}-gcc47.patch" )
