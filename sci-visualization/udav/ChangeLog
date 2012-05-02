@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/udav
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.8 2011/06/04 20:18:08 grozin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.9 2012/05/02 17:26:18 jlec Exp $
+
+*udav-0.7.1.2-r1 (02 May 2012)
+
+  02 May 2012; Justin Lecher <jlec@gentoo.org> -udav-0.6.3.ebuild,
+  -udav-0.7.1.2.ebuild, +udav-0.7.1.2-r1.ebuild,
+  +files/udav-0.7.1.2-desktopfile.patch:
+  Add variaous anhancements (qt4-r2, EAPI=4, LINUGUAS, Deps) implemented by
+  Michael (kensington), #413551; dropped old
 
 *udav-0.7.1.2 (04 Jun 2011)
 
