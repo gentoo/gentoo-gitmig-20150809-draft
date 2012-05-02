@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44.ebuild,v 1.3 2012/04/06 20:13:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44-r1.ebuild,v 1.1 2012/05/02 07:54:34 mgorny Exp $
 
 EAPI=4
 
@@ -57,6 +57,13 @@ PATCHES=(
 pkg_setup() {
 	enewgroup lock # used by var-lock.mount
 	enewgroup tty 5 # used by mount-setup for /dev/pts
+}
+
+src_prepare() {
+	# systemd-analyze is for python2.7 only nowadays.
+	sed -i -e '1s/python/&2.7/' src/systemd-analyze
+
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -124,7 +131,17 @@ pkg_preinst() {
 }
 
 optfeature() {
-	elog "	[\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1} (${2})"
+	local i desc=${1} text
+	shift
+
+	text="  [\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1}"
+	shift
+
+	for i; do
+		elog "${text}"
+		text="& [\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1}"
+	done
+	elog "${text} (${desc})"
 }
 
 pkg_postinst() {
@@ -145,9 +162,12 @@ pkg_postinst() {
 
 	elog "To get additional features, a number of optional runtime dependencies may"
 	elog "be installed:"
-	optfeature 'dev-python/dbus-python' 'for systemd-analyze'
-	optfeature 'dev-python/pycairo[svg]' 'for systemd-analyze plotting ability'
-	optfeature 'sys-apps/systemd-ui' 'for GTK+ systemadm UI and gnome-ask-password-agent'
+	optfeature 'for systemd-analyze' \
+		'dev-lang/python:2.7' 'dev-python/dbus-python'
+	optfeature 'for systemd-analyze plotting ability' \
+		'dev-python/pycairo[svg]'
+	optfeature 'for GTK+ systemadm UI and gnome-ask-password-agent' \
+		'sys-apps/systemd-ui'
 	elog
 
 	ewarn "Please note this is a work-in-progress and many packages in Gentoo"
