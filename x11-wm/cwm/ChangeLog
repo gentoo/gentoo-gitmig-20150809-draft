@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.34 2012/05/02 13:19:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.35 2012/05/02 13:22:47 xmw Exp $
+
+  02 May 2012; Michael Weber <xmw@gentoo.org> cwm-4.2_p20110913-r1.ebuild:
+  Restore stable keywords
 
 *cwm-9999 (02 May 2012)
 *cwm-5.1 (02 May 2012)
