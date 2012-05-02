@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.93 2011/10/27 06:16:27 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.94 2012/05/02 20:48:12 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> lablgtk-2.14.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   lablgtk-2.14.2.ebuild:
