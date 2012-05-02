@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-12.0.ebuild,v 1.1 2012/04/30 06:43:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-12.0.ebuild,v 1.2 2012/05/02 19:54:56 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -57,7 +57,7 @@ RDEPEND="
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	virtual/libffi
-	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.10[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	webm? ( >=media-libs/libvpx-1.0.0
 		media-libs/alsa-lib )
 	crashreporter? ( net-misc/curl )

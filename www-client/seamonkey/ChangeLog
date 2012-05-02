@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.374 2012/05/02 06:06:39 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.375 2012/05/02 19:58:25 polynomial-c Exp $
+
+  02 May 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.9.ebuild,
+  seamonkey-2.9.1.ebuild:
+  Fixed dependency on sqlite. Thanks to Florian Schmaus who reported this in
+  bug #414407.
 
   02 May 2012; Andreas Schuerch <nativemad@gentoo.org> seamonkey-2.9.ebuild:
   x86 stable, see bug 413657. Thanks Mikle Kolyada.
