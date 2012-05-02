@@ -1,0 +1,36 @@
+From 641a6b06225cd00f62001d041316e72535662306 Mon Sep 17 00:00:00 2001
+From: Guillaume Desmottes <guillaume.desmottes@collabora.co.uk>
+Date: Wed, 30 Nov 2011 12:55:29 +0100
+Subject: [PATCH] ui-utils: don't expect that cancellable is not NULL
+
+cancellable are always optional so this code should be NULL safe.
+---
+ libempathy-gtk/empathy-ui-utils.c |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/libempathy-gtk/empathy-ui-utils.c b/libempathy-gtk/empathy-ui-utils.c
+index d5f63c9..2b9f5cf 100644
+--- a/libempathy-gtk/empathy-ui-utils.c
++++ b/libempathy-gtk/empathy-ui-utils.c
+@@ -549,7 +549,8 @@ pixbuf_avatar_from_individual_closure_new (FolksIndividual    *individual,
+ 	closure->result = g_object_ref (result);
+ 	closure->width = width;
+ 	closure->height = height;
+-	closure->cancellable = g_object_ref (cancellable);
++	if (cancellable != NULL)
++		closure->cancellable = g_object_ref (cancellable);
+ 
+ 	return closure;
+ }
+@@ -558,7 +559,7 @@ static void
+ pixbuf_avatar_from_individual_closure_free (
+ 		PixbufAvatarFromIndividualClosure *closure)
+ {
+-	g_object_unref (closure->cancellable);
++	g_clear_object (&closure->cancellable);
+ 	tp_clear_object (&closure->loader);
+ 	g_object_unref (closure->individual);
+ 	g_object_unref (closure->result);
+-- 
+1.7.8.6
+

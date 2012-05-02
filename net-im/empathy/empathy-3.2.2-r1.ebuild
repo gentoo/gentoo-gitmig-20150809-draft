@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.1.2.ebuild,v 1.4 2012/02/14 04:57:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.2-r1.ebuild,v 1.1 2012/05/02 05:45:35 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.5"
 
-inherit gnome2 python
+inherit eutils gnome2 python
 
 DESCRIPTION="Telepathy client and library using GTK+"
 HOMEPAGE="http://live.gnome.org/Empathy"
@@ -41,7 +41,7 @@ RDEPEND=">=dev-libs/glib-2.28:2
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
 	media-libs/gst-plugins-bad
-	>=net-im/telepathy-logger-0.2.8
+	>=net-im/telepathy-logger-0.2.13
 	net-libs/farsight2
 	>=net-libs/telepathy-farsight-0.0.14
 	net-im/telepathy-connection-managers
@@ -106,6 +106,16 @@ pkg_setup() {
 	# Build time python tools need python2
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	# In next release
+	epatch "${FILESDIR}/${P}-delivery-failed.patch"
+	epatch "${FILESDIR}/${P}-cancellable-not-NULL.patch"
+	# Fix telepathy-logger-0.4 compatibility, bug #413423; patch from 3.4
+	epatch "${FILESDIR}/${PN}-3.2.2-telepathy-logger-0.4.patch"
+
+	gnome2_src_prepare
 }
 
 src_test() {

@@ -1,0 +1,68 @@
+From 86ba5be5fa9a044fbcce6618ac6cd6dd7bdf3482 Mon Sep 17 00:00:00 2001
+From: Danielle Madeley <danielle.madeley@collabora.co.uk>
+Date: Tue, 3 Apr 2012 10:35:09 +1000
+Subject: [PATCH] TplCallEndReason ceased to exist on March 28
+
+---
+ libempathy-gtk/empathy-log-window.c |   11 ++++++-----
+ libempathy/empathy-message.c        |    2 +-
+ 2 files changed, 7 insertions(+), 6 deletions(-)
+
+diff --git a/libempathy-gtk/empathy-log-window.c b/libempathy-gtk/empathy-log-window.c
+index 72d4d46..c11bb02 100644
+--- a/libempathy-gtk/empathy-log-window.c
++++ b/libempathy-gtk/empathy-log-window.c
+@@ -1236,11 +1236,11 @@ get_icon_for_event (TplEvent *event)
+   else if (TPL_IS_CALL_EVENT (event))
+     {
+       TplCallEvent *call = TPL_CALL_EVENT (event);
+-      TplCallEndReason reason = tpl_call_event_get_end_reason (call);
++      TpCallStateChangeReason reason = tpl_call_event_get_end_reason (call);
+       TplEntity *sender = tpl_event_get_sender (event);
+       TplEntity *receiver = tpl_event_get_receiver (event);
+ 
+-      if (reason == TPL_CALL_END_REASON_NO_ANSWER)
++      if (reason == TP_CALL_STATE_CHANGE_REASON_NO_ANSWER)
+         icon = EMPATHY_IMAGE_CALL_MISSED;
+       else if (tpl_entity_get_entity_type (sender) == TPL_ENTITY_SELF)
+         icon = EMPATHY_IMAGE_CALL_OUTGOING;
+@@ -1357,7 +1357,7 @@ log_window_append_call (TplEvent *event,
+       COL_EVENTS_EVENT, event,
+       -1);
+ 
+-  if (tpl_call_event_get_end_reason (call) != TPL_CALL_END_REASON_NO_ANSWER)
++  if (tpl_call_event_get_end_reason (call) != TP_CALL_STATE_CHANGE_REASON_NO_ANSWER)
+     {
+       gchar *body;
+       gchar *tmp;
+@@ -3243,11 +3243,12 @@ log_window_got_messages_for_date_cb (GObject *manager,
+             }
+           else
+             {
+-              TplCallEndReason reason = tpl_call_event_get_end_reason (call);
++              TpCallStateChangeReason reason =
++                tpl_call_event_get_end_reason (call);
+               TplEntity *sender = tpl_event_get_sender (event);
+               TplEntity *receiver = tpl_event_get_receiver (event);
+ 
+-              if (reason == TPL_CALL_END_REASON_NO_ANSWER)
++              if (reason == TP_CALL_STATE_CHANGE_REASON_NO_ANSWER)
+                 {
+                   if (ctx->subtype & EVENT_CALL_MISSED)
+                     append = TRUE;
+diff --git a/libempathy/empathy-message.c b/libempathy/empathy-message.c
+index 6111bcd..a4caae1 100644
+--- a/libempathy/empathy-message.c
++++ b/libempathy/empathy-message.c
+@@ -411,7 +411,7 @@ empathy_message_from_tpl_log_event (TplEvent *logevent)
+ 
+ 		timestamp = tpl_event_get_timestamp (logevent);
+ 
+-		if (tpl_call_event_get_end_reason (call) == TPL_CALL_END_REASON_NO_ANSWER)
++		if (tpl_call_event_get_end_reason (call) == TP_CALL_STATE_CHANGE_REASON_NO_ANSWER)
+ 			body = g_strdup_printf (_("Missed call from %s"),
+ 				tpl_entity_get_alias (tpl_event_get_sender (logevent)));
+ 		else if (tpl_entity_get_entity_type (tpl_event_get_sender (logevent)) == TPL_ENTITY_SELF)
+-- 
+1.7.8.6
+

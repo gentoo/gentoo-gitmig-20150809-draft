@@ -1,0 +1,31 @@
+From 457cdd199d2aa20cbebcc25ea305137ce7b0f440 Mon Sep 17 00:00:00 2001
+From: Guillaume Desmottes <guillaume.desmottes@collabora.co.uk>
+Date: Tue, 22 Nov 2011 15:42:11 +0100
+Subject: [PATCH] don't ignore TP_DELIVERY_STATUS_TEMPORARILY_FAILED delivery
+ report
+
+We should display an error message as well if not the user will assume the
+message has been sent and the spinner keeps spinning.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=664564
+---
+ libempathy/empathy-tp-chat.c |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/libempathy/empathy-tp-chat.c b/libempathy/empathy-tp-chat.c
+index 2285f3f..f65f25d 100644
+--- a/libempathy/empathy-tp-chat.c
++++ b/libempathy/empathy-tp-chat.c
+@@ -375,7 +375,8 @@ handle_delivery_report (EmpathyTpChat *self,
+ 		tp_chat_set_delivery_status (self, delivery_token,
+ 			EMPATHY_DELIVERY_STATUS_NONE);
+ 		goto out;
+-	} else if (delivery_status != TP_DELIVERY_STATUS_PERMANENTLY_FAILED) {
++	} else if (delivery_status != TP_DELIVERY_STATUS_PERMANENTLY_FAILED &&
++		   delivery_status != TP_DELIVERY_STATUS_TEMPORARILY_FAILED) {
+ 		goto out;
+ 	}
+ 
+-- 
+1.7.8.6
+
