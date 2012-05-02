@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.373 2012/04/30 16:46:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.374 2012/05/02 06:06:39 nativemad Exp $
+
+  02 May 2012; Andreas Schuerch <nativemad@gentoo.org> seamonkey-2.9.ebuild:
+  x86 stable, see bug 413657. Thanks Mikle Kolyada.
 
 *seamonkey-2.9.1 (30 Apr 2012)
 
