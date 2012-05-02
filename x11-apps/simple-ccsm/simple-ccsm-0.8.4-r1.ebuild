@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/simple-ccsm/simple-ccsm-0.8.4-r1.ebuild,v 1.3 2012/04/20 01:31:33 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/simple-ccsm/simple-ccsm-0.8.4-r1.ebuild,v 1.4 2012/05/02 21:52:59 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND="
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="
 	>=dev-python/compizconfig-python-${PV}
 	>=dev-python/pygtk-2.10:2
