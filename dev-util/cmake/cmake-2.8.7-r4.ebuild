@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.7-r4.ebuild,v 1.1 2012/03/08 04:45:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.7-r4.ebuild,v 1.2 2012/05/02 22:05:10 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ DEPEND="
 	>=app-arch/libarchive-2.8.0
 	>=net-misc/curl-7.20.0-r1[ssl]
 	>=dev-libs/expat-2.0.1
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-libs/zlib
 	ncurses? ( sys-libs/ncurses )
 	qt4? ( x11-libs/qt-gui:4 )
