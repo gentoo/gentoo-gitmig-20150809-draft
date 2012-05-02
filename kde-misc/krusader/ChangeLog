@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.102 2012/03/12 13:34:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.103 2012/05/02 20:16:36 johu Exp $
+
+*krusader-2.4.0_beta1-r1 (02 May 2012)
+
+  02 May 2012; Johannes Huber <johu@gentoo.org>
+  +files/krusader-2.4.0_beta1-gcc47.patch, +krusader-2.4.0_beta1-r1.ebuild:
+  Revision bump adds upstream patch to fix build with gcc47 spotted by Michael
+  (kensington) <gentoo@scribeofthenile.com> wrt bug #414135.
 
   12 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -krusader-2.3.0_beta1.ebuild, krusader-2.4.0_beta1.ebuild:
