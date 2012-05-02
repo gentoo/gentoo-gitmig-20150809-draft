@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.5.ebuild,v 1.3 2012/02/13 20:33:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.5.ebuild,v 1.4 2012/05/02 10:33:43 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit autotools eutils multilib
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils multilib
 
 DESCRIPTION="Socket Graphics tool for displaying polygons"
 HOMEPAGE="http://fetk.org/codes/sg/index.html"
@@ -13,7 +15,7 @@ SRC_URI="http://www.fetk.org/codes/download/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
-IUSE="doc opengl"
+IUSE="doc opengl static-libs"
 
 RDEPEND="
 	dev-libs/maloc
@@ -33,18 +35,20 @@ DEPEND="
 
 S="${WORKDIR}"/${PN}
 
+PATCHES=(
+	"${FILESDIR}"/1.4-opengl.patch
+	"${FILESDIR}"/1.4-doc.patch
+	)
+
 src_prepare() {
-	rm src/{gl,glu,glw} -rf
-	epatch \
-		"${FILESDIR}"/1.4-opengl.patch \
-		"${FILESDIR}"/1.4-doc.patch
-	eautoreconf
+	rm src/{gl,glu,glw} -rf || die
+	autotools-utils_src_prepare
 }
 
 src_configure() {
 	local sg_include
 	local sg_lib
-	local myconf
+	local myeconfargs
 
 	sg_include="${EPREFIX}"/usr/include
 	sg_lib="${EPREFIX}"/usr/$(get_libdir)
@@ -59,17 +63,13 @@ src_configure() {
 	export FETK_GL_INCLUDE="${sg_include}"/GL
 	export FETK_MOTIF_INCLUDE="${sg_include}"
 
-	use doc || myconf="${myconf} --with-doxygen= --with-dot="
+	use doc || myeconfargs+=( --with-doxygen= --with-dot= )
 
-	use opengl && myconf="${myconf} --enable-glforce --enable-gluforce --enable-glwforce"
+	use opengl && myeconfargs+=( --enable-glforce --enable-gluforce --enable-glwforce )
 
-	econf \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--disable-triplet \
-		--enable-shared \
-		${myconf}
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
+	myeconfargs+=(
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--disable-triplet
+	)
+	autotools-utils_src_configure
 }

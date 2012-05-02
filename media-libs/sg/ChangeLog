@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/ChangeLog,v 1.6 2012/02/13 20:33:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/ChangeLog,v 1.7 2012/05/02 10:33:43 jlec Exp $
+
+  02 May 2012; Justin Lecher <jlec@gentoo.org> sg-1.5.ebuild:
+  Handle static libs
 
   13 Feb 2012; Justin Lecher <jlec@gentoo.org> sg-1.4.ebuild, sg-1.5.ebuild:
   Add alternative to mase[motif] -> libGLw
