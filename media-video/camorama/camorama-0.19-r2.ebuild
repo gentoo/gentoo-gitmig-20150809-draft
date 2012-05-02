@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/camorama-0.19-r2.ebuild,v 1.4 2011/10/04 14:07:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/camorama-0.19-r2.ebuild,v 1.5 2012/05/02 20:58:39 eva Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -26,7 +26,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-schemas-install"
-	SCROLLKEEPER_UPDATE="0"
 }
 
 src_prepare() {
@@ -34,7 +33,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gconf.patch \
 		"${FILESDIR}"/${P}-fixes.patch \
 		"${FILESDIR}"/${P}-libv4l.patch \
-		"${FILESDIR}"/${P}-no-more-videodev_h.patch
+		"${FILESDIR}"/${P}-no-more-videodev_h.patch \
+		"${FILESDIR}"/${P}-glib-232.patch
 
 	gnome2_src_prepare
 }
