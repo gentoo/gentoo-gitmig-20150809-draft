@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/stow-2.2.0.ebuild,v 1.1 2012/05/02 13:35:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/stow-2.2.0.ebuild,v 1.2 2012/05/02 13:40:41 maksbotan Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ DEPEND="dev-lang/perl
 		virtual/perl-Test-Harness
 		dev-perl/Test-Output
 	)"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-lang/perl"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
