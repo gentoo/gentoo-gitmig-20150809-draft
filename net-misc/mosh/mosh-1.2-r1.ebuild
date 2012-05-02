@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2-r1.ebuild,v 1.2 2012/05/02 22:13:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2-r1.ebuild,v 1.3 2012/05/02 22:19:00 xmw Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! use skalibs ; then
-		if kernel_is -gt 2 6 27 ; then
+		if kernel_is -lt 2 6 27 ; then
 			ewarn
 			ewarn "Consider activating the skalibs USE flag, iff the build fauls"
 			ewarn
