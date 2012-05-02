@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r1.ebuild,v 1.5 2011/06/24 18:48:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r1.ebuild,v 1.6 2012/05/02 20:05:30 eva Exp $
 
 EAPI=2
 # games after gnome2 so games' functions will override gnome2's
@@ -57,7 +57,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	SCROLLKEEPER_UPDATE=0
 	gnome2_pkg_postinst
 	games_pkg_postinst
 }
