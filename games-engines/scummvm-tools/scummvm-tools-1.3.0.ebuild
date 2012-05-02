@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.3.0.ebuild,v 1.4 2011/08/21 03:38:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.3.0.ebuild,v 1.5 2012/05/02 21:02:01 jdhore Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -24,7 +24,7 @@ RDEPEND="png? ( media-libs/libpng )
 	sys-libs/zlib
 	x11-libs/wxGTK:2.8"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_/}
 
