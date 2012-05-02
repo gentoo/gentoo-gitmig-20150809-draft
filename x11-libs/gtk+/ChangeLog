@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.585 2012/04/29 16:18:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.586 2012/05/02 06:54:42 tetromino Exp $
+
+*gtk+-3.4.1-r1 (02 May 2012)
+
+  02 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtk+-3.4.1-r1.ebuild, +files/gtk+-3.4.1-extraneous-events-scrolling.patch,
+  +files/gtk+-3.4.1-toolpalette-adjustment.patch,
+  +files/gtk+-3.4.1-toolpalette-rename.patch:
+  Fix annotation button in evince (bug #412751, thanks to Geraint Yang).
+  Fix inefficient scrolling.
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> gtk+-2.24.10-r1.ebuild:
   x86 stable, bug #410611
