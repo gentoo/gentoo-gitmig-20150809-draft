@@ -1,15 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.5.ebuild,v 1.1 2012/03/25 10:37:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.3-r1.ebuild,v 1.1 2012/05/02 12:24:25 maksbotan Exp $
 
 EAPI=4
 
 WANT_AUTOMAKE="1.11"
 AUTOTOOLS_IN_SOURCE_BUILD=1
-USE_RUBY="ruby18"
-RUBY_OPTIONAL=yes
-PYTHON_DEPEND="python? 2:2.6"
+AUTOTOOLS_AUTORECONF=1
 
+PYTHON_DEPEND="python? 2:2.6"
 inherit base autotools-utils perl-app python
 
 DESCRIPTION="Library for reading and writing Windows Registry 'hive' binary files"
@@ -38,7 +37,7 @@ DEPEND="${RDEPEND}
 				dev-perl/Test-Pod-Coverage ) )
 	ruby? ( dev-ruby/rake )
 	"
-PATCHES=("${FILESDIR}"/"${PV}")
+PATCHES=("${FILESDIR}"/"${PV}"/*.patch)
 DOCS=(README)
 
 pkg_setup() {
@@ -50,8 +49,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	EPATCH_SUFFIX=patch  EPATCH_FORCE=yes base_src_prepare
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2-r1.ebuild,v 1.2 2012/03/25 10:37:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2-r2.ebuild,v 1.1 2012/05/02 12:24:25 maksbotan Exp $
 
 EAPI=4
 
@@ -38,7 +38,8 @@ DEPEND="${RDEPEND}
 	ruby? ( dev-ruby/rake )
 	"
 PATCHES=("${FILESDIR}"/autoconf_fix-${PV}.patch
-"${FILESDIR}"/python-test-fix-${PV}.patch)
+"${FILESDIR}"/python-test-fix-${PV}.patch
+"${FILESDIR}"/ruby_runpath_fix-${PV}.patch)
 DOCS=(README)
 
 pkg_setup() {
