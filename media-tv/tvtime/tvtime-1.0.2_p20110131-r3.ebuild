@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2_p20110131-r3.ebuild,v 1.4 2012/01/06 16:53:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2_p20110131-r3.ebuild,v 1.5 2012/05/02 21:32:37 jdhore Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -38,7 +38,7 @@ RDEPEND="x11-libs/libSM
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}-${TVTIME_HGREV}"
 DOCS=( ChangeLog AUTHORS NEWS README )
