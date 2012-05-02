@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.12 2012/01/09 13:33:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.13 2012/05/02 21:08:42 eva Exp $
 
 EAPI=3
 
@@ -76,15 +76,7 @@ pkg_setup() {
 		forceconf="${forceconf} --disable-kab"
 	fi
 
-	# update scrollkeeper database if doc has been enabled
-	if use doc; then
-		SCROLLKEEPER_UPDATE=1
-	else
-		SCROLLKEEPER_UPDATE=0
-	fi
-
 	# dbus-service: always enable if dbus is enabled, no reason to disable it
-	# scrollkeeper: updates scrollkeeper database
 	# schemas-install: install gconf schemas
 	G2CONF="${G2CONF}
 		--disable-dependency-tracking
@@ -96,7 +88,6 @@ pkg_setup() {
 		$(use_enable debug gtk-debug)
 		$(use_enable debug opal-debug)
 		$(use_enable doc gdu)
-		$(use_enable doc scrollkeeper)
 		$(use_enable eds)
 		$(use_enable gconf)
 		$(use_enable gconf schemas-install)
