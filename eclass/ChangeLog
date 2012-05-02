@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.233 2012/05/02 21:05:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.234 2012/05/02 21:40:42 floppym Exp $
+
+  02 May 2012; Mike Gilbert <floppym@gentoo.org> python-distutils-ng.eclass:
+  Fix bytecode generation with Python 3, bug 413771. Patch by James Rowe.
 
   02 May 2012; Gilles Dartiguelongue <eva@gentoo.org> gnome2-utils.eclass,
   gnome2.eclass:

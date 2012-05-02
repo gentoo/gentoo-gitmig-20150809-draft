@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.13 2012/04/30 09:51:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.14 2012/05/02 21:40:42 floppym Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -397,7 +397,7 @@ python-distutils-ng_src_install() {
 		use "python_targets_${impl}" ${PYTHON_COMPAT} || continue
 
 		PYTHON="$(_python-distutils-ng_get_binary_for_implementation "${impl}")"
-		for accessible_path in $(${PYTHON} -c 'import sys; print " ".join(sys.path)'); do
+		for accessible_path in $(${PYTHON} -c 'import sys; print(" ".join(sys.path))'); do
 			[[ -d "${D}/${accessible_path}" ]] || continue
 
 			_python-distutils-ng_has_compileall "${impl}" || continue
