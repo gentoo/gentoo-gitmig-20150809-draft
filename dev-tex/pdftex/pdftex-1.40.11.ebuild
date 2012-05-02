@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.11.ebuild,v 1.5 2011/07/11 19:06:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.11.ebuild,v 1.6 2012/05/02 20:59:41 jdhore Exp $
 
 EAPI=2
 inherit libtool toolchain-funcs eutils
@@ -21,7 +21,7 @@ RDEPEND=">=app-text/poppler-0.12.3-r3[xpdf-headers]
 	dev-libs/kpathsea
 	app-admin/eselect-pdftex"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P}/build
 

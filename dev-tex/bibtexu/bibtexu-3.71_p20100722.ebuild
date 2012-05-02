@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/bibtexu-3.71_p20100722.ebuild,v 1.8 2011/06/13 20:59:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/bibtexu-3.71_p20100722.ebuild,v 1.9 2012/05/02 20:59:41 jdhore Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="dev-libs/kpathsea
 		>=dev-libs/icu-4.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/texlive-${PV#*_p}-source/texk/${PN}
 

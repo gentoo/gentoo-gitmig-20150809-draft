@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pdftex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.34 2011/10/09 09:07:09 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.35 2012/05/02 20:59:41 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> pdftex-1.40.11.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -pdftex-1.40.10.ebuild,
   -files/pdftex-1.40.10-poppler.patch:

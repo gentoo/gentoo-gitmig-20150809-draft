@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1.ebuild,v 1.10 2011/10/05 18:10:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1.ebuild,v 1.11 2012/05/02 20:59:41 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="dev-libs/zziplib
 	sys-libs/zlib
 	>=dev-libs/kpathsea-6.0.1_p20110627"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}-beta-${PV}/source"
 PRELIBS="libs/obsdcompat"
