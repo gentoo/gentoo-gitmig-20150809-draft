@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.77 2012/04/25 15:17:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.78 2012/05/02 14:02:16 naota Exp $
+
+  02 May 2012; Naohiro Aota <naota@gentoo.org> profile.bashrc:
+  Match only for the word beginning
 
   25 Apr 2012; Alexis Ballier <aballier@gentoo.org> +fbsd/amd64/7.2/deprecated,
   +fbsd/amd64/8.0/deprecated, +fbsd/sparc/7.2/deprecated,
@@ -84,7 +87,7 @@
   07 Jun 2011; Naohiro Aota <naota@gentoo.org> packages:
   Add -*>=sys-apps/shadow-4.1
 
-  09 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  09 May 2011; Ch鱈-Thanh Christopher Nguy畛n <chithanh@gentoo.org>
   use.mask:
   Mask video_cards_nouveau, bug #364027.
 
@@ -113,10 +116,10 @@
   03 Apr 2011; Ulrich Mueller <ulm@gentoo.org> fbsd/packages.build:
   Remove old-style virtual/gzip, bug 358829.
 
-  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> fbsd/package.use.mask:
+  31 Mar 2011; Tom叩邸 Chv叩tal <scarabeus@gentoo.org> fbsd/package.use.mask:
   Drop obsolete pgsql masks on threads useflag
 
-  29 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> fbsd/package.mask:
+  29 Mar 2011; Tom叩邸 Chv叩tal <scarabeus@gentoo.org> fbsd/package.mask:
   Drop mask on KDE releases no longer in main tree.
 
   14 Mar 2011; Ulrich Mueller <ulm@gentoo.org> fbsd/virtuals:
@@ -331,14 +334,14 @@
   08 Aug 2008; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask dc1394 useflag for vlc, its linux only
 
-  01 Aug 2008; Diego Pettenò <flameeyes@gentoo.org> fbsd/package.use.mask:
+  01 Aug 2008; Diego Petten嘆 <flameeyes@gentoo.org> fbsd/package.use.mask:
   Mask sha512 USE flag for pambase on FreeBSD.
 
   31 Jul 2008; Javier Villavicencio <the_paya@gentoo.org>
   fbsd/package.use.mask:
   Removed passwdqc + added ssh to pambase use masks.
 
-  28 Jul 2008; Jean-Noël Rivasseau <elvanor@gentoo.org>
+  28 Jul 2008; Jean-No谷l Rivasseau <elvanor@gentoo.org>
   fbsd/6.2/x86/package.use.mask:
   masked test for icu4j, no jdk-1.6
 
@@ -346,7 +349,7 @@
   mask sctp for dev-lang/erlang, requires a library too close to the linux
   kernel
 
-  04 Jul 2008; Petteri Räty <betelgeuse@gentoo.org> use.mask:
+  04 Jul 2008; Petteri R辰ty <betelgeuse@gentoo.org> use.mask:
   use.mask java6 as there is no provider for >=virtual/jdk-1.6 on BSD.
 
   04 Jul 2008; Javier Villavicencio <the_paya@gentoo.org> fbsd/packages:
@@ -372,10 +375,10 @@
   12 Mar 2008; Peter Weller <welp@gentoo.org> use.mask:
   Add m17n-lib to use.mask; requested by ulm
 
-  05 Mar 2008; Diego Pettenò <flameeyes@gentoo.org> +fbsd/package.use:
+  05 Mar 2008; Diego Petten嘆 <flameeyes@gentoo.org> +fbsd/package.use:
   Add default USE flags for FreeBSD for pambase.
 
-  21 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> fbsd/package.use.mask:
+  21 Feb 2008; Diego Petten嘆 <flameeyes@gentoo.org> fbsd/package.use.mask:
   Mask consolekit and cracklib USE flags for pambase.
 
   29 Jan 2008; Peter Weller <welp@gentoo.org> package.mask:
@@ -384,19 +387,19 @@
   29 Jan 2008; Peter Weller <welp@gentoo.org> package.mask:
   package.mask >=app-shells/bash-3.2_p33 due to portage blockages
 
-  25 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> profile.bashrc:
+  25 Jan 2008; Diego Petten嘆 <flameeyes@gentoo.org> profile.bashrc:
   Fix typo in the error message.
 
   23 Jan 2008; Alon Bar-Lev <alonbl@gentoo.org> package.use.mask:
   Add net-misc/openvpn pkcs11
 
-  21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org> virtuals:
+  21 Nov 2007; S辿bastien Fabbro <bicatali@gentoo.org> virtuals:
   Removed virtual/lapack, now new style
 
   15 Oct 2007; Roy Marples <uberlord@gentoo.org> package.mask:
   unmask m4-1.4.10 as it now works for us
 
-  10 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> virtuals:
+  10 Oct 2007; S辿bastien Fabbro <bicatali@gentoo.org> virtuals:
   removed virtual/blas, now new style
 
   23 Sep 2007; Joe Peterson <lavajoe@gentoo.org> virtuals:
@@ -406,18 +409,18 @@
   fbsd/package.use.mask:
   No nvidia drivers work on fbsd with xorg-server 1.4 yet.
 
-  08 Aug 2007; Tiziano Müller <dev-zero@gentoo.org> fbsd/6.2/make.defaults:
+  08 Aug 2007; Tiziano M端ller <dev-zero@gentoo.org> fbsd/6.2/make.defaults:
   Removed libg++ USE-flag (bug #148416)
 
   07 Jun 2007; Joe Peterson <lavajoe@gentoo.org> virtuals:
   For FreeBSD, default to the "reference implementation" versions rather
   than using the "atlas" versions of LAPACK and BLAS.
 
-  28 May 2007; Diego Pettenò <flameeyes@gentoo.org> package.use.mask, use.mask
+  28 May 2007; Diego Petten嘆 <flameeyes@gentoo.org> package.use.mask, use.mask
   fbsd/package.use.mask: Unmask the useflags that shouldn't have been masked
   in the first place.
 
-  26 May 2007; Olivier Crête <tester@gentoo.org> package.use.mask:
+  26 May 2007; Olivier Cr棚te <tester@gentoo.org> package.use.mask:
   Mask zephyr flag for pidgin on bsd because mit-krb5 is not keyworded
 
   25 May 2007; Steve Dibb <beandog@gentoo.org> package.use.mask:
