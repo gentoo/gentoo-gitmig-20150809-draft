@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.1 2012/04/13 21:18:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.2 2012/05/02 07:33:14 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="avahi bluetooth connection-sharing dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd wext wimax"
+IUSE="avahi bluetooth connection-sharing dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd +wext wimax"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 REQUIRED_USE="

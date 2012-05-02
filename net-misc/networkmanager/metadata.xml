@@ -35,7 +35,8 @@
 		<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> instead of
 			<pkg>sys-auth/consolekit</pkg> for session tracking</flag>
 		<flag name="wext">Enable support for the deprecated Wext (Wireless
-			Extensions) API; not needed for modern kernels</flag>
+			Extensions) API; needed for some older drivers (e.g. ipw2200,
+			ndiswrapper)</flag>
 		<flag name="wimax">Enable support for WiMAX connections using
 			<pkg>net-wireless/wimax</pkg></flag>
 	</use>

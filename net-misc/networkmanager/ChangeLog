@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.131 2012/04/13 21:18:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.132 2012/05/02 07:33:14 tetromino Exp $
+
+  02 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  networkmanager-0.9.4.0-r2.ebuild, metadata.xml:
+  Enable USE=wext by default; it's still needed for a few commonly used
+  drivers, e.g. ndiswrapper and ipw2200.
 
 *networkmanager-0.9.4.0-r2 (13 Apr 2012)
 
