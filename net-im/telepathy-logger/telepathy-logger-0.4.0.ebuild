@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.4.0.ebuild,v 1.1 2012/04/23 10:14:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.4.0.ebuild,v 1.2 2012/05/02 11:14:25 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -19,7 +19,7 @@ IUSE="doc +introspection"
 RDEPEND=">=dev-libs/glib-2.25.11:2
 	>=sys-apps/dbus-1.1
 	>=dev-libs/dbus-glib-0.82
-	>=net-libs/telepathy-glib-0.15.6[introspection?]
+	>=net-libs/telepathy-glib-0.18.0[introspection?]
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-db/sqlite:3
