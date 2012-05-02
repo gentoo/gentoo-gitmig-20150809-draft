@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.62 2012/04/06 21:45:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.63 2012/05/02 20:10:09 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> obexftp-0.23-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #63588

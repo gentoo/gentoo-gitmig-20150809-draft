@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.12 2011/04/25 18:29:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.13 2012/05/02 20:10:09 jdhore Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ RDEPEND="dev-libs/openobex
 	ruby? ( dev-lang/ruby:1.8 )
 	tcl? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DISTUTILS_SETUP_FILES=("swig/python|setup.py")
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r3.ebuild,v 1.1 2008/10/27 01:58:52 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r3.ebuild,v 1.2 2012/05/02 20:10:08 jdhore Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ RDEPEND="capi? ( net-dialup/capi4k-utils )
 	lua? ( dev-lang/lua )"
 DEPEND="${RDEPEND}
 	!capi? ( sys-apps/sed )
-	lua? ( dev-util/pkgconfig )"
+	lua? ( virtual/pkgconfig )"
 
 pkg_setup() {
 	if ! use capi; then

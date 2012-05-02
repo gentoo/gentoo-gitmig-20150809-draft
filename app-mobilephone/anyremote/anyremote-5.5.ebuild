@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/anyremote-5.5.ebuild,v 1.1 2012/01/22 21:01:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/anyremote-5.5.ebuild,v 1.2 2012/05/02 20:10:09 jdhore Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ RDEPEND="bluetooth? ( net-wireless/bluez )
 	x11-libs/libXtst"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf --docdir="/usr/share/doc/${PF}/" $(use_enable bluetooth) $(use_enable dbus)

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.44.ebuild,v 1.4 2012/02/25 15:21:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.44.ebuild,v 1.5 2012/05/02 20:10:09 jdhore Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ RDEPEND="eds? ( gnome-extra/evolution-data-server )
 	server? ( !app-mobilephone/obex-data-server )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/tsemgr/tsemgr-0.08.ebuild,v 1.5 2008/06/23 23:11:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/tsemgr/tsemgr-0.08.ebuild,v 1.6 2012/05/02 20:10:08 jdhore Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="=x11-libs/gtk+-1*
 	dev-libs/openobex
 	dev-libs/libezV24"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 src_unpack() {

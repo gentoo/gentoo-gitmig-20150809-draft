@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/tsemgr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/tsemgr/ChangeLog,v 1.4 2008/06/23 23:11:23 mrness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/tsemgr/ChangeLog,v 1.5 2012/05/02 20:10:08 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> tsemgr-0.08.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Jun 2008; Alin Năstac <mrness@gentoo.org> tsemgr-0.08.ebuild:
   Add pkgconfig dependency (#216437).
