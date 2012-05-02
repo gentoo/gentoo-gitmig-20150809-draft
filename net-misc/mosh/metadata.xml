@@ -10,6 +10,7 @@
 <flag name="server">Build network server</flag>
 <flag name="examples">Include example scripts</flag>
 <flag name="utempter">Include libutempter support</flag>
+<flag name="skalibs">Provide skalibs (esp. for old kernels)</flag>
 </use>
 <longdescription>
 Mosh is a remote terminal application that supports:

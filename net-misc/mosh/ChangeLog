@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.16 2012/05/02 15:56:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.17 2012/05/02 22:13:39 xmw Exp $
+
+  02 May 2012; Michael Weber <xmw@gentoo.org> mosh-1.2-r1.ebuild, metadata.xml:
+  Probide skalibs as fallback for old kernels
 
 *mosh-1.2-r1 (02 May 2012)
 
