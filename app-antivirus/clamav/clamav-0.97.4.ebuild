@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.4.ebuild,v 1.1 2012/03/16 21:25:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.4.ebuild,v 1.2 2012/05/02 20:14:11 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ CDEPEND="bzip2? ( app-arch/bzip2 )
 	>=sys-libs/zlib-1.2.2
 	sys-devel/libtool"
 DEPEND="${CDEPEND}
-	>=dev-util/pkgconfig-0.20"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-clamav )"
 
