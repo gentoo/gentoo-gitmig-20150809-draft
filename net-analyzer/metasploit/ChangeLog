@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.61 2012/04/21 16:54:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.62 2012/05/02 04:42:58 patrick Exp $
+
+*metasploit-4.3.0 (02 May 2012)
+
+  02 May 2012; Patrick Lauer <patrick@gentoo.org> +files/msfrpcd-4.3-conf,
+  +files/msfrpcd-4.3-initd, +metasploit-4.3.0.ebuild:
+  Bump, drop ppc keyword until msgpack is keyworded
 
   21 Apr 2012; Raúl Porcel <armin76@gentoo.org> metasploit-2.7.ebuild,
   metasploit-4.0.0-r1.ebuild, metasploit-4.2.0.ebuild:
