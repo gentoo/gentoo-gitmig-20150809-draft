@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.17 2012/05/01 17:56:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.18 2012/05/02 22:11:29 pesa Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ RDEPEND="media-libs/fontconfig
 	glib? ( >=dev-libs/glib-2.28.6:2 )
 	opengl? ( virtual/opengl )
 	openvg? ( media-libs/mesa[openvg] )
-	qt4? ( >=x11-libs/qt-gui-4.4:4 )
+	qt4? ( >=x11-libs/qt-gui-4.8:4 )
 	svg? ( dev-libs/libxml2 )
 	X? (
 		>=x11-libs/libXrender-0.6
