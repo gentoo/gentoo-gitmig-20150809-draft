@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/smack
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/smack/ChangeLog,v 1.3 2007/04/28 20:53:04 nelchael Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/smack/ChangeLog,v 1.4 2012/05/02 17:18:55 ago Exp $
+
+  02 May 2012; Agostino Sarubbo <ago@gentoo.org> smack-2.2.1.ebuild:
+  Stable for amd64, wrt bug #414383
 
   28 Apr 2007; Krzysiek Pawlik <nelchael@gentoo.org> smack-2.2.1.ebuild:
   Fix for JAVA_PKG_STRICT.
