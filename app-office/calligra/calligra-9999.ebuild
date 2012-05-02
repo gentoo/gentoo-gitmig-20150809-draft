@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.17 2012/04/12 20:16:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.18 2012/05/02 21:59:18 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -94,7 +94,7 @@ RDEPEND="
 	)
 	postgres? (
 		dev-db/postgresql-base
-		=dev-libs/libpqxx-3*
+		dev-libs/libpqxx
 	)
 	semantic-desktop? ( dev-libs/soprano $(add_kdebase_dep kdelibs semantic-desktop) )
 	ssl? ( dev-libs/openssl )
