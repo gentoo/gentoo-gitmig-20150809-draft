@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/squirrelsh/squirrelsh-1.2.6.ebuild,v 1.1 2012/03/13 11:39:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/squirrelsh/squirrelsh-1.2.6.ebuild,v 1.2 2012/05/02 20:29:50 jdhore Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ IUSE="doc"
 
 RDEPEND="dev-libs/libpcre"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-rename-LDFLAGS.patch
