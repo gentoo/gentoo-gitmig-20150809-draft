@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.2.0.ebuild,v 1.5 2011/03/11 07:44:03 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.2.0.ebuild,v 1.6 2012/05/02 21:06:17 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils versionator games
@@ -30,7 +30,7 @@ RDEPEND="gtk? ( gnome-base/libglade
 		sound? ( media-libs/sdl-mixer
 			media-libs/libsdl[audio] ) )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
