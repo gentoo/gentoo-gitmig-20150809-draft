@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-9.0.ebuild,v 1.2 2012/04/23 17:34:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-9.0.ebuild,v 1.3 2012/05/02 21:41:15 jdhore Exp $
 
 EAPI=2
 
@@ -36,7 +36,7 @@ DEPEND="sys-devel/flex
 	dev-libs/openssl[static-libs]
 	sys-libs/zlib[static-libs]
 	sys-libs/readline[static-libs]
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	=sys-freebsd/freebsd-lib-${RV}*[atm?,netware?]
 	=sys-freebsd/freebsd-sources-${RV}*
 	=sys-freebsd/freebsd-mk-defs-${RV}*"

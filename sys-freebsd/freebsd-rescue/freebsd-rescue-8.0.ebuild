@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-8.0.ebuild,v 1.1 2010/03/19 11:50:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/freebsd-rescue-8.0.ebuild,v 1.2 2012/05/02 21:41:15 jdhore Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 RDEPEND=""
 DEPEND="sys-devel/flex
 	>=app-arch/libarchive-2.7.1[static-libs]
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	=sys-freebsd/freebsd-lib-${RV}*[atm?]
 	=sys-freebsd/freebsd-sources-${RV}*
 	=sys-freebsd/freebsd-mk-defs-${RV}*"
