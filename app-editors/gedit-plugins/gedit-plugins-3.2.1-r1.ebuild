@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.2.1-r1.ebuild,v 1.2 2012/01/13 17:41:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.2.1-r1.ebuild,v 1.3 2012/05/02 01:36:15 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -90,11 +90,13 @@ src_test() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_need_rebuild
-	python_mod_optimize /usr/{$(get_libdir),share}/gedit/plugins
+	if use python; then
+		python_need_rebuild
+		python_mod_optimize /usr/{$(get_libdir),share}/gedit/plugins
+	fi
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/{$(get_libdir),share}/gedit/plugins
+	use python && python_mod_cleanup /usr/{$(get_libdir),share}/gedit/plugins
 }

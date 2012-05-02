@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.23 2012/04/22 23:29:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.24 2012/05/02 01:36:15 tetromino Exp $
+
+  02 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gedit-plugins-2.32.0.ebuild, gedit-plugins-3.2.1-r1.ebuild,
+  gedit-plugins-3.4.0.ebuild:
+  Fix pkg_postinst/postrm error when USE=-python (bug #413723, thanks to Ilya
+  Gordeev).
 
 *gedit-plugins-3.4.0 (22 Apr 2012)
 
