@@ -1,6 +1,10 @@
 # ChangeLog for games-server/cyphesis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.22 2012/02/27 21:15:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.23 2012/05/02 21:13:37 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> cyphesis-0.5.25.ebuild,
+  cyphesis-0.5.26.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Feb 2012; Tupone Alfredo <tupone@gentoo.org> cyphesis-0.5.26.ebuild:
   Require newer skstream

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.26.ebuild,v 1.2 2012/02/27 21:15:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.26.ebuild,v 1.3 2012/05/02 21:13:37 jdhore Exp $
 
 EAPI=2
 PYTHON_DEPEND=2
@@ -27,7 +27,7 @@ RDEPEND=">=media-libs/skstream-0.3.8
 	dev-db/postgresql-base"
 DEPEND="${RDEPEND}
 	dev-libs/libxml2
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2
