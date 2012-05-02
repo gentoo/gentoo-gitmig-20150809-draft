@@ -1,0 +1,158 @@
+diff --git a/lib/malloc.c b/lib/malloc.c
+index 0121112..d077630 100644
+--- a/lib/malloc.c
++++ b/lib/malloc.c
+@@ -64,6 +64,17 @@ void *malloc (unsigned int size)
+     return caddr;
+ }
+ 
++/* Calloc wrapper for malloc */
++void *memset(void *s, int c, size_t n);
++void *calloc(size_t nmemb, size_t size) {
++	void *caddr;
++	caddr = malloc(nmemb * size);
++	memset(caddr, 0, nmemb * size);
++	return caddr;
++}
++
++
++
+ /* Do not fall back to the malloc above as posix_memalign is needed by
+  * external libraries not yaboot */
+ int posix_memalign(void **memptr, size_t alignment, size_t size)
+diff --git a/lib/nonstd.c b/lib/nonstd.c
+index 5aeb0cb..0a13246 100644
+--- a/lib/nonstd.c
++++ b/lib/nonstd.c
+@@ -65,3 +65,131 @@ char *getenv(const char *name)
+ {
+ 	return NULL;
+ }
++
++int open(const char *pathname, int flags) {
++	return (int) prom_open((char *)pathname);
++}
++
++int open64(const char *pathname, int flags) {
++	return (int) prom_open((char *)pathname);
++}
++
++int __open64_2 (__const char *__path, int __oflag) {
++	return (int) prom_open((char *)__path);
++}
++
++int __xstat64 (int __ver, const char *__filename, struct stat64 *__stat_buf) {
++	return 0;
++}
++
++int __fxstat64 (int __ver, int __filedesc, struct stat64 *__stat_buf) {
++	return 0;
++}
++
++int read(int fd, void *buf, size_t count) {
++	return prom_read((void *)fd, buf, count);
++}
++
++int close(int fd) {
++	prom_close((void *)fd);
++	return 0;
++}
++
++void exit(int status) {
++	prom_exit();
++}
++
++int __printf_chk(int flag, const char *format, ...) {
++	va_list ap;
++	va_start (ap, format);
++	prom_vfprintf (prom_stdout, format, ap);
++	va_end (ap);
++
++	return 0;
++}
++
++int __sprintf_chk(char * str, int flag, size_t strlen, const char * format, ...) {
++	va_list ap;
++	va_start(ap, format);
++	// No sprintf? :(
++	va_end(ap);
++	return 0;
++
++}
++
++int __fprintf_chk(FILE *stream, int flag, const char *format, ...) {
++	va_list ap;
++	va_start (ap, format);
++	prom_vfprintf (prom_stdout, format, ap);
++	va_end (ap);
++
++	return 0;
++}
++
++void *memcpy(void *dest, const void *src, size_t n);
++void *__memcpy_chk(void *dest, const void *src, size_t n, size_t destlen) {
++	return memcpy(dest, src, n);
++}
++
++
++// Dummy functions
++signed int random(void) {
++	return 0;
++}
++
++void srandom(unsigned int seed) {
++	return;
++}
++
++unsigned int sleep(unsigned int seconds) {
++	return 0;
++}
++
++int gettimeofday(void *tv, void *tz) {
++	return 0;
++}
++
++long sysconf(int name) {
++	return 0;
++}
++
++int getpagesize(void) {
++	return 0;
++}
++
++int gethostname(char *name, size_t len) {
++	return 0;
++}
++
++int getpid(void) {
++	return 0;
++}
++
++int getuid(void) {
++	return 0;
++}
++
++void qsort(void *base, size_t nmemb, size_t size, int(*compar)(const void *, const void *)) {
++	return;
++}
++
++int * __errno_location(void) {
++	return 0;
++}
++
++int lseek(int fd, int offset, int whence) {
++	return prom_lseek ((void *)fd, whence + offset);
++}
++
++int lseek64(int fd, int offset, int whence) {
++	return prom_lseek ((void *)fd, whence + offset);
++}
++
++// Stubbed ...
++size_t fwrite(const void *ptr, size_t size, size_t nmemb, void *stream) {
++	return 0;
++}
++
++
++int stderr = 0;
++int perror = 0;
