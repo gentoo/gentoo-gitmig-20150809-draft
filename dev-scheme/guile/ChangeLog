@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.95 2012/04/26 16:37:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.96 2012/05/02 21:59:03 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> guile-2.0.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> guile-1.8.8-r1.ebuild:
   keyword ~amd64-fbsd
