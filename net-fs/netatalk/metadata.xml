@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>net-fs</herd>
-  <maintainer restrict="&gt;=net-fs/netatalk-2.2.1-r1">
-    <email>flameeyes@gentoo.org</email>
-    <description>
+	<herd>net-fs</herd>
+	<maintainer restrict="&gt;=net-fs/netatalk-2.2.1-r1">
+		<email>flameeyes@gentoo.org</email>
+		<description>
       CC me on the bugs so I can take a look at them. I actually use
       this software and I know how it is supposed to work, at least
       partially.
     </description>
-  </maintainer>
-  <use>
-    <flag name='appletalk'>
+	</maintainer>
+	<use>
+		<flag name="appletalk">
       Build support for Apple's AppleTalk (DDP) protocol and its
       utilities (atalkd, timelord, papd).
     </flag>
-    <flag name='cups'>
+		<flag name="cups">
       Add support for <pkg>net-print/cups</pkg> printers in papd. This
       flag is only considered if appletalk USE flag is enabled, and is
       otherwise ignored.
     </flag>
-    <flag name='quota'>
+		<flag name="quota">
       Add support for user quota on various filesystems.
     </flag>
-    <flag name='ssl'>
+		<flag name="ssl">
       Use <pkg>dev-libs/openssl</pkg> to provide DHX User Access
       Modules. These are not used with most recent versions of OS X
       and can be kept disabled without risks.
     </flag>
-    <flag name='xfs'>Enable support for XFS Quota</flag>
-  </use>
+		<flag name="xfs">Enable support for XFS Quota</flag>
+	</use>
 </pkgmetadata>
