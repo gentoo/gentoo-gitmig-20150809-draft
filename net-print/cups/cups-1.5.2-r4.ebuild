@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.3 2012/05/01 19:31:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.4 2012/05/02 21:42:08 dilfridge Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ RDEPEND="
 			sys-apps/attr
 		)
 	)
+	avahi? ( net-dns/avahi )
 	dbus? ( sys-apps/dbus )
 	java? ( >=virtual/jre-1.6 )
 	jpeg? ( virtual/jpeg:0 )
@@ -236,6 +237,7 @@ src_install() {
 
 	# install our init script
 	local neededservices
+	use avahi && neededservices+=" avahi-daemon"
 	use dbus && neededservices+=" dbus"
 	[[ -n ${neededservices} ]] && neededservices="need${neededservices}"
 	cp "${FILESDIR}"/cupsd.init.d "${T}"/cupsd || die

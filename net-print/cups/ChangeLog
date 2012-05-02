@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.468 2012/05/01 19:31:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.469 2012/05/02 21:42:08 dilfridge Exp $
+
+  02 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r20.ebuild,
+  cups-1.5.2-r4.ebuild:
+  Add missing avahi dependencies, bug 414349.
 
   01 May 2012; Jeroen Roovers <jer@gentoo.org> cups-1.5.2-r4.ebuild:
   Stable for HPPA (bug #411887).
