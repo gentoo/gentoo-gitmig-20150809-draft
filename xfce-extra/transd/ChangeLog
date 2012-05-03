@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/transd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/ChangeLog,v 1.9 2012/01/06 11:09:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/ChangeLog,v 1.10 2012/05/03 20:24:08 ssuominen Exp $
+
+*transd-0_p20120503 (03 May 2012)
+
+  03 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +transd-0_p20120503.ebuild:
+  New snapshot because transd was ported from obsolete libxfcegui4 to use
+  libxfce4util directly in git.
 
   06 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -transd-0_p20101006.ebuild:
