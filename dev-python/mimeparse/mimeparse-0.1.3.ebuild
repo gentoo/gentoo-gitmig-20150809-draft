@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/mimeparse-0.1.3.ebuild,v 1.1 2012/04/25 19:39:10 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/mimeparse-0.1.3.ebuild,v 1.2 2012/05/03 15:21:19 floppym Exp $
 
 EAPI=4
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
