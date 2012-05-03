@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.25 2012/04/21 15:54:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.26 2012/05/03 02:07:55 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -147,6 +147,7 @@ toolchain-glibc_headers_compile() {
 		libc_cv_gcc___thread=yes \
 		libc_cv_mlong_double_128=yes \
 		libc_cv_mlong_double_128ibm=yes \
+		libc_cv_powerpc32_tls=yes \
 		libc_cv_ppc_machine=yes \
 		libc_cv_ppc_rel16=yes \
 		libc_cv_visibility_attribute=yes \
