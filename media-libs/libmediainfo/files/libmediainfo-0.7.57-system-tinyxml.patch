@@ -1,0 +1,16 @@
+--- MediaInfoLib/Project/GNU/Library/configure.ac
++++ MediaInfoLib/Project/GNU/Library/configure.ac
+@@ -524,11 +524,8 @@
+ dnl libtinyxml2
+ dnl
+ if test "$with_libtinyxml2" = "yes"; then
+-	PKG_CHECK_MODULES([TINYXML2], [tinyxml2])
+-	CXXFLAGS="$CXXFLAGS $TINYXML2_CXXFLAGS"
+-	MediaInfoLib_CXXFLAGS="$MediaInfoLib_CXXFLAGS $TINYXML2_CXXFLAGS"
+-	LIBS="$LIBS $TINYXML2_LIBS"
+-	MediaInfoLib_LIBS="$MediaInfoLib_LIBS $TINYXML2_LIBS"
++	LIBS="$LIBS -ltinyxml"
++	MediaInfoLib_LIBS="$MediaInfoLib_LIBS -ltinyxml"
+ 	AM_CONDITIONAL(COMPILE_TINYXML2, false)
+ 	using_libtinyxml2="system"
+ else
