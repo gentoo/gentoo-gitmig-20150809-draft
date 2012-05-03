@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.3-r1.ebuild,v 1.3 2012/05/01 23:14:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.3-r1.ebuild,v 1.4 2012/05/03 01:10:15 floppym Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -9,7 +9,7 @@ WANT_LIBTOOL="none"
 inherit autotools eutils flag-o-matic multilib pax-utils python toolchain-funcs
 
 MY_P="Python-${PV}"
-PATCHSET_REVISION="1"
+PATCHSET_REVISION="0"
 
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
