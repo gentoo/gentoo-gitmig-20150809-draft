@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.233 2012/04/15 15:45:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.234 2012/05/03 20:00:38 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnumeric-1.10.17.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Apr 2012; Gilles Dartiguelongue <eva@gentoo.org> -gnumeric-1.10.13.ebuild,
   -gnumeric-1.10.15.ebuild, -gnumeric-1.10.16.ebuild:

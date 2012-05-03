@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.6 2011/01/31 16:47:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.7 2012/05/03 20:00:41 jdhore Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libnotify"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	linguas_hu? ( >=sys-devel/gettext-0.16.1 )"
 
 S=${WORKDIR}/${MY_PN}-${PV}

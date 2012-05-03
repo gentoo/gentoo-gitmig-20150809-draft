@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.2.8.ebuild,v 1.6 2011/03/16 07:59:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.2.8.ebuild,v 1.7 2012/05/03 20:00:39 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	>=gnome-base/libglade-2.6:2.0
 	eds? ( >=gnome-extra/evolution-data-server-1.8 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2

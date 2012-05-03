@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0-r3.ebuild,v 1.6 2011/03/16 08:04:30 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0-r3.ebuild,v 1.7 2012/05/03 20:00:41 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -33,7 +33,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 
 DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	>=app-text/scrollkeeper-0.3.11
 	doc? ( ~app-text/docbook-xml-dtd-4.2 )"

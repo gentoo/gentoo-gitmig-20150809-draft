@@ -1,6 +1,9 @@
 # ChangeLog for app-office/osmo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.15 2011/10/27 06:05:59 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.16 2012/05/03 20:00:38 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> osmo-0.2.10.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> osmo-0.2.10.ebuild:
   Slot gtkspell dependency to 2 in preparation for gtkspell-3.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.17.ebuild,v 1.6 2012/02/10 03:52:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.17.ebuild,v 1.7 2012/05/03 20:00:38 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -44,7 +44,7 @@ RDEPEND="sys-libs/zlib
 #		>=gnome-extra/libgnomedb-3.99.6:4.0 )
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
-	>=dev-util/pkgconfig-0.18
+	virtual/pkgconfig
 	app-text/scrollkeeper"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2.ebuild,v 1.6 2012/04/29 15:04:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2.ebuild,v 1.7 2012/05/03 20:00:39 jdhore Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ RDEPEND=">=dev-libs/glib-2
 	python? ( >=dev-python/pygtk-2 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-libs/libxslt )"
 
 pkg_setup() {

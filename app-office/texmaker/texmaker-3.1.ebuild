@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.1.ebuild,v 1.8 2012/03/12 16:02:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.1.ebuild,v 1.9 2012/05/03 20:00:38 jdhore Exp $
 
 EAPI="3"
 
@@ -45,7 +45,7 @@ RDEPEND="${COMMON_DEPEND}
 	app-text/ghostscript-gpl
 	media-libs/netpbm"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}/${P}-hunspell.patch" )
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kmymoney
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.30 2012/04/18 22:00:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.31 2012/05/03 20:00:41 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> kmymoney-4.6.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 Apr 2012; Johannes Huber <johu@gentoo.org>
   -files/kmymoney-4.5.3-underlinking.patch, -kmymoney-4.5.3.ebuild,

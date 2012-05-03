@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.6.0_rc2.ebuild,v 1.8 2011/07/24 11:03:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.6.0_rc2.ebuild,v 1.9 2012/05/03 20:00:40 jdhore Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND="dev-libs/libxml2
 	ofx? ( >=dev-libs/libofx-0.7.0 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.20"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/0.6.0_rc2-properly-detect-gmodule.patch"

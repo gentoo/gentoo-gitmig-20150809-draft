@@ -1,6 +1,10 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.65 2012/04/29 15:06:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.66 2012/05/03 20:00:40 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> planner-0.14.5.ebuild,
+  planner-0.14.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> planner-0.14.6.ebuild:
   x86 stable, bug #410611

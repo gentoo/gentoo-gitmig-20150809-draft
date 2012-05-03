@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pinpoint/pinpoint-0.1.4.ebuild,v 1.1 2011/12/01 17:57:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pinpoint/pinpoint-0.1.4.ebuild,v 1.2 2012/05/03 20:00:41 jdhore Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND=">=media-libs/clutter-1.4:1.0
 	x11-libs/gdk-pixbuf:2
 	gstreamer? ( >=media-libs/clutter-gst-1.3:1.0 )
 	pdf? ( gnome-base/librsvg:2 )"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 src_configure() {

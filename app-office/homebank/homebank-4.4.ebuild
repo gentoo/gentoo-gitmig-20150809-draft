@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.4.ebuild,v 1.1 2012/03/06 16:14:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.4.ebuild,v 1.2 2012/05/03 20:00:41 jdhore Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.20
 	>=dev-libs/glib-2.17
 	ofx? ( >=dev-libs/libofx-0.7 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40.5"
 
 src_configure() {

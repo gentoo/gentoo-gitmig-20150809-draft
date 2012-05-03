@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.5.ebuild,v 1.2 2011/07/05 19:37:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.5.ebuild,v 1.3 2012/05/03 20:00:40 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.6:2
 		>=mail-client/evolution-2.1.3 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35.5
 	doc? ( >=dev-util/gtk-doc-1.0 )

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.297 2012/04/30 12:41:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.298 2012/05/03 20:00:40 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> libreoffice-3.5.2.2.ebuild,
+  libreoffice-3.5.3.2.ebuild, libreoffice-3.5.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   30 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/libreoffice-3.5.3-svtools-includes.patch, libreoffice-3.5.3.2.ebuild:

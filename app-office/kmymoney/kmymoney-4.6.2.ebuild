@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.2.ebuild,v 1.5 2012/04/18 21:51:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.2.ebuild,v 1.6 2012/05/03 20:00:41 jdhore Exp $
 
 EAPI=4
 
@@ -48,7 +48,7 @@ RDEPEND="${COMMON_DEPEND}
 	quotes? ( dev-perl/Finance-Quote )
 "
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
 "

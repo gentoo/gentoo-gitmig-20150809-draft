@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r3.ebuild,v 1.1 2011/06/11 16:22:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r3.ebuild,v 1.2 2012/05/03 20:00:39 jdhore Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2
 		>=gnome-base/libgnomeui-2 )
 	odbc? ( >=dev-db/unixODBC-2.0 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/flex-2.5.0
 	>=sys-devel/bison-1.35"
 

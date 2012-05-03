@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.7.0.ebuild,v 1.7 2012/04/05 08:09:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.7.0.ebuild,v 1.8 2012/05/03 20:00:38 jdhore Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ RDEPEND="${COMMON_DEPS}
 	app-text/ghostscript-gpl"
 
 DEPEND="${COMMON_DEPS}
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS BUGS NEWS README"
 

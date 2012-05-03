@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.10.ebuild,v 1.9 2011/12/06 12:50:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.10.ebuild,v 1.10 2012/05/03 20:00:39 jdhore Exp $
 
 EAPI=2
 
@@ -84,7 +84,7 @@ RDEPEND="${COMMONDEPEND}
 
 DEPEND="${COMMONDEPEND}
 	x11-proto/xproto
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {

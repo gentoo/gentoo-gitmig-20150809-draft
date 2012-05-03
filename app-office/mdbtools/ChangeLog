@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.57 2012/01/29 12:02:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.58 2012/05/03 20:00:39 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> mdbtools-0.6_pre2-r2.ebuild,
+  mdbtools-0.6_pre2-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Jan 2012; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Drop maintainership.

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.99 2012/04/23 12:31:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.100 2012/05/03 20:00:38 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> texmaker-3.1.ebuild,
+  texmaker-3.2.ebuild, texmaker-3.2.1.ebuild, texmaker-3.2.2.ebuild,
+  texmaker-3.3.1.ebuild, texmaker-3.3.2.ebuild, texmaker-3.3.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *texmaker-3.3.3 (23 Apr 2012)
 

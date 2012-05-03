@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libalkimia/libalkimia-4.3.2.ebuild,v 1.3 2012/04/18 20:37:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libalkimia/libalkimia-4.3.2.ebuild,v 1.4 2012/05/03 20:00:40 jdhore Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="doc"
 
 RDEPEND="dev-libs/gmp[cxx]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 PATCHES=(

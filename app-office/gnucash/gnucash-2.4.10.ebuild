@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.10.ebuild,v 1.4 2012/04/29 15:05:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.10.ebuild,v 1.5 2012/05/03 20:00:38 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -53,7 +53,7 @@ RDEPEND=">=dev-libs/glib-2.13:2
 "
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	gnome-base/gnome-common
 	sys-devel/libtool
