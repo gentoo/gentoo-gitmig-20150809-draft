@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.310 2012/04/26 13:22:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.311 2012/05/03 15:57:10 vapier Exp $
+
+*bash-4.2_p28 (03 May 2012)
+
+  03 May 2012; Mike Frysinger <vapier@gentoo.org> +bash-4.2_p28.ebuild:
+  Version bump #414449 by Lars Wendler (Polynomial-C).
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> bash-4.2_p24-r1.ebuild:
   keyword ~amd64-fbsd
