@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/nvidia-texture-tools-2.0.8.ebuild,v 1.1 2012/05/03 19:45:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/nvidia-texture-tools-2.0.8.ebuild,v 1.2 2012/05/03 19:52:52 ssuominen Exp $
 
 EAPI=4
-
 inherit cmake-utils eutils multilib toolchain-funcs
 
 DESCRIPTION="A set of cuda-enabled texture tools and compressors"
 HOMEPAGE="http://developer.nvidia.com/object/texture_tools.html"
-SRC_URI="http://${PN}.googlecode.com/files/${P}-1.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/files/${P}-1.tar.gz
+	http://dev.gentoo.org/~ssuominen/${P}-patchset-1.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -42,13 +42,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-cmake.patch \
-		"${FILESDIR}"/${P}-aliasing.patch \
-		"${FILESDIR}"/${P}-libpng15.patch \
-		"${FILESDIR}"/${P}-valgrind.patch \
-		"${FILESDIR}"/${P}-cuda.patch \
-		"${FILESDIR}"/${P}-tiff4.patch
+	EPATCH_SUFFIX=patch epatch "${WORKDIR}"/patches
 }
 
 src_configure() {
