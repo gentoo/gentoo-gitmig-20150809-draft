@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-3.0.ebuild,v 1.1 2012/02/21 19:41:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-3.0.ebuild,v 1.2 2012/05/03 04:46:47 jdhore Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ IUSE="zlib"
 RDEPEND=">=dev-libs/glib-2.0
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

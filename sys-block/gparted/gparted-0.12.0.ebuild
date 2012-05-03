@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.12.0.ebuild,v 1.4 2012/04/29 16:14:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.12.0.ebuild,v 1.5 2012/05/03 04:46:47 jdhore Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -51,7 +51,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
 	app-text/rarian
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"

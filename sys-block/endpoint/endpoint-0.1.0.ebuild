@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/endpoint/endpoint-0.1.0.ebuild,v 1.6 2008/04/19 23:06:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/endpoint/endpoint-0.1.0.ebuild,v 1.7 2012/05/03 04:46:47 jdhore Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=">=sys-libs/libraw1394-0.9
 	>=dev-libs/glib-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

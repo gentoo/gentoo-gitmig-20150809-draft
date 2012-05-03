@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.0.ebuild,v 1.8 2012/01/26 13:44:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.0.ebuild,v 1.9 2012/05/03 04:46:47 jdhore Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( >=dev-libs/check-0.9.3 )
 "
 

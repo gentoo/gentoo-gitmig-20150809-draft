@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.22.ebuild,v 1.5 2011/07/09 11:06:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.22.ebuild,v 1.6 2012/05/03 04:46:47 jdhore Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

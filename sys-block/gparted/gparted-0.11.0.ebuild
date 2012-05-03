@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.11.0.ebuild,v 1.5 2012/03/15 21:30:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.11.0.ebuild,v 1.6 2012/05/03 04:46:47 jdhore Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -46,7 +46,7 @@ RDEPEND="${common_depends}
 	xfs? ( sys-fs/xfsprogs sys-fs/xfsdump )"
 
 DEPEND="${common_depends}
-	>=dev-util/pkgconfig-0.12
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.5
 	app-text/rarian
 	app-text/gnome-doc-utils

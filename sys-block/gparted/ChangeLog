@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.115 2012/04/29 16:14:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.116 2012/05/03 04:46:47 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gparted-0.11.0.ebuild,
+  gparted-0.12.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> gparted-0.12.0.ebuild:
   x86 stable, bug #410611

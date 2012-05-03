@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.4.ebuild,v 1.1 2011/05/19 03:25:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-2.4.ebuild,v 1.2 2012/05/03 04:46:47 jdhore Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 src_prepare() {
