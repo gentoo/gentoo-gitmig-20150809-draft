@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.143 2012/04/30 09:53:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.144 2012/05/03 20:50:29 maekke Exp $
+
+  03 May 2012; Markus Meier <maekke@gentoo.org>
+  gtk-engines-xfce-3.0.0-r200.ebuild, gtk-engines-xfce-3.0.0-r300.ebuild:
+  arm stable, bug #413871
 
   30 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
   gtk-engines-xfce-3.0.0-r300.ebuild:
