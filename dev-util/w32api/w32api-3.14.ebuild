@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.14.ebuild,v 1.2 2010/09/22 22:20:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.14.ebuild,v 1.3 2012/05/03 02:33:54 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -55,5 +55,8 @@ src_install() {
 		emake install DESTDIR="${D}" || die
 		env -uRESTRICT CHOST=${CTARGET} prepallstrip
 		dodoc CONTRIBUTIONS ChangeLog README.w32api TODO
+
+		# Make sure diff cross-compilers don't collide #414075
+		mv "${ED}"/usr/share/doc/{${PF},${CTARGET}-${PF}} || die
 	fi
 }
