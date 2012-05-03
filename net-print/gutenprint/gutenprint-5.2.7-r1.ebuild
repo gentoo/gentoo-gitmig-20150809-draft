@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.7-r1.ebuild,v 1.7 2012/02/06 19:43:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.7-r1.ebuild,v 1.8 2012/05/03 07:22:30 jdhore Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="app-text/ghostscript-gpl
 	gtk? ( x11-libs/gtk+:2 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	gtk? ( dev-util/pkgconfig )
+	gtk? ( virtual/pkgconfig )
 	nls? ( sys-devel/gettext )"
 
 RESTRICT="test"

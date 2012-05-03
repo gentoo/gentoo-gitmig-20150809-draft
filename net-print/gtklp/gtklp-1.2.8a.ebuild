@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.8a.ebuild,v 1.2 2012/04/28 12:17:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.8a.ebuild,v 1.3 2012/05/03 07:22:29 jdhore Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/gtk+:2
 	nls? ( sys-devel/gettext )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -e '/DEF_BROWSER_CMD/{s:netscape:firefox:}' \

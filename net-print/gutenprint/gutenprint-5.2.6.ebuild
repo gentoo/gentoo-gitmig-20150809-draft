@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.6.ebuild,v 1.11 2011/07/09 09:37:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.6.ebuild,v 1.12 2012/05/03 07:22:30 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="cups? ( >=net-print/cups-1.1.14 )
 	dev-lang/perl
 	foomaticdb? ( net-print/foomatic-db-engine )"
 DEPEND="${RDEPEND}
-	gtk? ( dev-util/pkgconfig )"
+	gtk? ( virtual/pkgconfig )"
 
 LICENSE="GPL-2"
 SLOT="0"

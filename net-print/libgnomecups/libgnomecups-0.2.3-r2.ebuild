@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r2.ebuild,v 1.5 2012/04/29 16:13:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r2.ebuild,v 1.6 2012/05/03 07:22:29 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2:2
 	>=net-print/cups-1.3.8"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.28"
 
 pkg_setup() {

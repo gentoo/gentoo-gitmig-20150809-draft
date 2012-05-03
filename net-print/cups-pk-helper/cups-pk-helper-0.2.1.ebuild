@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.1.ebuild,v 1.2 2012/04/04 07:30:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.1.ebuild,v 1.3 2012/05/03 07:22:30 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/gdbus-codegen-2.30.0
 	>=dev-util/intltool-0.40.6
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3.ebuild,v 1.9 2009/04/14 11:52:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3.ebuild,v 1.10 2012/05/03 07:22:29 jdhore Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2
 	>=net-print/cups-1.3.8"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.28"
 
 DOCS="AUTHORS ChangeLog NEWS"

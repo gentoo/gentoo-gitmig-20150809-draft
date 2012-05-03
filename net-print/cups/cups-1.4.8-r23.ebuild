@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r23.ebuild,v 1.5 2012/01/27 21:30:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r23.ebuild,v 1.6 2012/05/03 07:22:30 jdhore Exp $
 
 EAPI=3
 
@@ -57,7 +57,7 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 PDEPEND="
