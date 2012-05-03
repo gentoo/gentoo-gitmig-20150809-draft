@@ -3,6 +3,9 @@
 
 <pkgmetadata>
 <maintainer>
-  <email>genkernel@gentoo.org</email>
+	<email>genkernel@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='cryptsetup'>Enable support for Luks disk enrcyption using <pkg>sys-fs/cryptsetup</pkg></flag>
+</use>
 </pkgmetadata>

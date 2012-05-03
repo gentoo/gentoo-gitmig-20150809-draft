@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.30.ebuild,v 1.1 2012/04/16 02:19:02 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.30.ebuild,v 1.2 2012/05/03 22:26:18 sping Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -58,12 +58,12 @@ HOMEPAGE="http://www.gentoo.org"
 LICENSE="GPL-2"
 SLOT="0"
 RESTRICT=""
-IUSE="crypt ibm selinux"
+IUSE="crypt cryptsetup ibm selinux"  # Keep 'crypt' in to keep 'use crypt' below working!
 
 DEPEND="sys-fs/e2fsprogs
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="${DEPEND}
-		crypt? ( sys-fs/cryptsetup )
+		cryptsetup? ( sys-fs/cryptsetup )
 		app-arch/cpio
 		app-misc/pax-utils
 		!<sys-apps/openrc-0.9.9"
@@ -153,6 +153,13 @@ pkg_postinst() {
 	ewarn "The LUKS support has changed from versions prior to 3.4.4.  Now,"
 	ewarn "you use crypt_root=/dev/blah instead of real_root=luks:/dev/blah."
 	echo
+	if use crypt && ! use cryptsetup ; then
+		ewarn "Local use flag 'crypt' has been renamed to 'cryptsetup' (bug #414523)."
+		ewarn "Please set flag 'cryptsetup' for this very package if you would like"
+		ewarn "to have genkernel create an initramfs with LUKS support."
+		ewarn "Sorry for the inconvenience."
+		echo
+	fi
 
 	bash-completion_pkg_postinst
 }
