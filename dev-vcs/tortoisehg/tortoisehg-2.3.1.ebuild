@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.3.1.ebuild,v 1.3 2012/04/17 15:04:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.3.1.ebuild,v 1.4 2012/05/03 02:25:52 floppym Exp $
 
 EAPI=4
 
@@ -32,6 +32,7 @@ RDEPEND="dev-python/iniparse
 	dev-python/PyQt4
 	dev-python/qscintilla-python
 	>=dev-vcs/mercurial-2.0
+	<dev-vcs/mercurial-2.2
 	nautilus? ( dev-python/nautilus-python )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.3 )"

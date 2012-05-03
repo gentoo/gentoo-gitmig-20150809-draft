@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.15 2012/04/17 15:04:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.16 2012/05/03 02:25:52 floppym Exp $
+
+  03 May 2012; Mike Gilbert <floppym@gentoo.org> -tortoisehg-2.3.ebuild,
+  tortoisehg-2.3.1.ebuild:
+  Put upper bound on mercurial dep.
 
   17 Apr 2012; Michał Górny <mgorny@gentoo.org> tortoisehg-2.3.ebuild,
   tortoisehg-2.3.1.ebuild, tortoisehg-9999.ebuild:
