@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/sguil-sensor
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.13 2008/08/16 17:35:15 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.14 2012/05/03 15:21:07 jer Exp $
+
+*sguil-sensor-0.8.0 (03 May 2012)
+
+  03 May 2012; Jeroen Roovers <jer@gentoo.org> -sguil-sensor-0.5.3-r2.ebuild,
+  -sguil-sensor-0.6.0_p1.ebuild, +sguil-sensor-0.8.0.ebuild:
+  Version bump.
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove strerror from metadata.xml (#89719)
