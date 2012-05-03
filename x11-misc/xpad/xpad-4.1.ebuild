@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.1.ebuild,v 1.1 2011/12/29 18:07:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.1.ebuild,v 1.2 2012/05/03 03:53:55 jer Exp $
 
 EAPI=4
+inherit eutils
 
 DESCRIPTION="A GTK+ 2.0 based 'post-it' note system."
 HOMEPAGE="http://mterry.name/xpad"
@@ -28,3 +29,7 @@ DEPEND="
 "
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS TODO )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glib_includes.patch
+}

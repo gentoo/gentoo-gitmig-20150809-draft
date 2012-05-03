@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xpad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.70 2011/12/29 18:07:05 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.71 2012/05/03 03:53:55 jer Exp $
+
+  03 May 2012; Jeroen Roovers <jer@gentoo.org> xpad-4.1.ebuild,
+  +files/xpad-4.1-glib_includes.patch:
+  Fix building against dev-libs/glib-2.32 by Derk W te Bokkel (bug #414389).
 
 *xpad-4.1 (29 Dec 2011)
 
