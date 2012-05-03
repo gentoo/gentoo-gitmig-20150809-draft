@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gmudix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/ChangeLog,v 1.13 2011/03/01 07:19:18 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/ChangeLog,v 1.14 2012/05/03 03:32:33 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gmudix-1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   01 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org> gmudix-1.0.ebuild:
   EAPI=2; slot gtk+ dep

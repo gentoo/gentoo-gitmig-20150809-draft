@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.6 2011/12/15 15:35:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.7 2012/05/03 03:32:33 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/gtk+:2
 	gnutls? ( net-libs/gnutls )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch \
