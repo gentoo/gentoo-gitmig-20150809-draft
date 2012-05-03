@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.5.ebuild,v 1.6 2012/03/27 18:28:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.5.ebuild,v 1.7 2012/05/03 19:41:32 jdhore Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 RDEPEND="${COMMON_DEPEND}
 	udev? ( sys-fs/udisks:0 )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 RESTRICT="test"

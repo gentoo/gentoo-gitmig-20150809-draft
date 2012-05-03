@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.49 2012/04/02 06:19:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.50 2012/05/03 19:41:31 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -92,7 +92,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
-	>=dev-util/pkgconfig-0.20
+	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	>=dev-util/gtk-doc-1.8
 	applet? ( >=dev-lang/vala-0.12:0.12 )

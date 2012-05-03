@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/workrave
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.80 2011/10/21 13:03:19 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.81 2012/05/03 19:41:34 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> workrave-1.9.3.ebuild,
+  workrave-1.9.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> workrave-1.9.4.ebuild:
   x86 stable wrt bug #385699

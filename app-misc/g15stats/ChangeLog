@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/g15stats
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/ChangeLog,v 1.7 2011/08/03 08:11:00 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/ChangeLog,v 1.8 2012/05/03 19:41:35 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> g15stats-1.0.ebuild,
+  g15stats-1.9.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *g15stats-1.9.7 (03 Aug 2011)
 

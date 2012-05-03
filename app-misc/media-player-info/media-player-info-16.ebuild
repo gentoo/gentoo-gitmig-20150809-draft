@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-16.ebuild,v 1.3 2012/02/01 01:47:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-16.ebuild,v 1.4 2012/05/03 19:41:35 jdhore Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="sys-fs/udev"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS NEWS README"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2-r1.ebuild,v 1.4 2007/08/08 20:43:02 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/lcd-stuff-0.1.2-r1.ebuild,v 1.5 2012/05/03 19:41:32 jdhore Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="app-misc/lcdproc
 	xml? ( net-libs/libnxml )
 	rss? ( net-libs/libmrss net-libs/libnxml )"
 DEPEND="${DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 IUSE="imap mpd mp3 xml rss"
 

@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.254 2012/04/28 19:55:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.255 2012/05/03 19:41:32 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> mc-4.7.0.3.ebuild,
+  mc-4.7.0.10.ebuild, mc-4.7.5.2.ebuild, mc-4.7.5.6-r1.ebuild,
+  mc-4.8.1-r1.ebuild, mc-4.8.1-r2.ebuild, mc-4.8.2-r2.ebuild,
+  mc-4.8.3-r2.ebuild, mc-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *mc-4.8.3-r2 (28 Apr 2012)
 

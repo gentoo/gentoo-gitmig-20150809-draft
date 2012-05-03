@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-sunlight/gtk-sunlight-0.2.1.ebuild,v 1.1 2010/10/27 23:25:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtk-sunlight/gtk-sunlight-0.2.1.ebuild,v 1.2 2012/05/03 19:41:34 jdhore Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2"
 DEPEND="${REPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch

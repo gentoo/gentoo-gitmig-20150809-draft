@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r3.ebuild,v 1.2 2011/07/29 03:32:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r3.ebuild,v 1.3 2012/05/03 19:41:33 jdhore Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ COMMON_DEP="
 "
 
 DEPEND="${COMMON_DEP}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 RDEPEND="${COMMON_DEP}

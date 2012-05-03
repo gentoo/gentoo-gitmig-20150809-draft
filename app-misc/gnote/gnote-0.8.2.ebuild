@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.8.2.ebuild,v 1.1 2012/01/15 01:50:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.8.2.ebuild,v 1.2 2012/05/03 19:41:32 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-3.0:3
 	>=sys-apps/util-linux-2.16
 	applet? ( >=gnome-base/gnome-panel-3 )"
 DEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.0
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2"

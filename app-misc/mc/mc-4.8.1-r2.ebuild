@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.1-r2.ebuild,v 1.2 2012/02/13 11:32:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.1-r2.ebuild,v 1.3 2012/05/03 19:41:32 jdhore Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.8:2
 		x11-libs/libSM )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	test? ( dev-libs/check )
 	"

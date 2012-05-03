@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0.10.ebuild,v 1.1 2010/11/08 23:31:36 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0.10.ebuild,v 1.2 2012/05/03 19:41:32 jdhore Exp $
 
 EAPI=3
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.8:2
 		x11-libs/libXdmcp
 		x11-libs/libSM )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}

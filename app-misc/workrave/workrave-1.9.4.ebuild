@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.4.ebuild,v 1.4 2011/10/21 13:03:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.4.ebuild,v 1.5 2012/05/03 19:41:34 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	x11-proto/inputproto
 	x11-proto/recordproto
 	dev-python/cheetah
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	doc? (
 		app-text/docbook-sgml-utils
 		app-text/xmlto )

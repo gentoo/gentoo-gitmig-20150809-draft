@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/cbrpager-0.9.20.ebuild,v 1.4 2010/10/14 19:08:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/cbrpager-0.9.20.ebuild,v 1.5 2012/05/03 19:41:34 jdhore Exp $
 
 EAPI=3
 inherit base
@@ -18,7 +18,7 @@ RDEPEND="|| ( app-arch/unrar app-arch/rar )
 	>=gnome-base/libgnomeui-2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	base_src_install

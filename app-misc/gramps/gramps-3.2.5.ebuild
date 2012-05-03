@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.2.5.ebuild,v 1.8 2011/10/23 17:10:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.2.5.ebuild,v 1.9 2012/05/03 19:41:33 jdhore Exp $
 
 EAPI=3
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
 	virtual/libiconv
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="NEWS README TODO"
 

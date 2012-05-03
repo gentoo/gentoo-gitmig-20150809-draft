@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r5.ebuild,v 1.7 2012/04/25 19:19:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r5.ebuild,v 1.8 2012/05/03 19:41:33 jdhore Exp $
 
 EAPI="3"
 
@@ -70,7 +70,7 @@ RDEPEND="!!sci-libs/beagle
 
 DEPEND="${RDEPEND}
 	doc? ( >=virtual/monodoc-1.2.4 )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	xscreensaver? ( x11-proto/scrnsaverproto )
 	>=dev-util/intltool-0.35"
 

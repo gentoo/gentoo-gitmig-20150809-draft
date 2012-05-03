@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.4.ebuild,v 1.2 2011/10/27 05:58:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.4.ebuild,v 1.3 2012/05/03 19:41:32 jdhore Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -32,7 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 # Build with dbus is currently not implemented
 #	dbus? ( >=dev-libs/dbus-glib-0.70 )"
 DEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.0
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2"

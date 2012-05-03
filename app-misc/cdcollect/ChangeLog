@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cdcollect
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/ChangeLog,v 1.9 2011/03/27 11:54:29 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/ChangeLog,v 1.10 2012/05/03 19:41:33 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> cdcollect-0.6.0.ebuild,
+  cdcollect-0.6.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   cdcollect-0.6.0.ebuild, cdcollect-0.6.0-r1.ebuild:

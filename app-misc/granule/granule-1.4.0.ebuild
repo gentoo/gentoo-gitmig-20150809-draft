@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/granule/granule-1.4.0.ebuild,v 1.5 2011/03/27 12:02:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/granule/granule-1.4.0.ebuild,v 1.6 2012/05/03 19:41:35 jdhore Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-cpp/gtkmm-2.4.1:2.4
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${P}-7"
 

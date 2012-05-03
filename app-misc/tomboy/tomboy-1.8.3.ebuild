@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.8.3.ebuild,v 1.3 2012/04/09 14:38:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.8.3.ebuild,v 1.4 2012/05/03 19:41:35 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	app-text/rarian
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/g15stats-1.9.7.ebuild,v 1.1 2011/08/03 08:11:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/g15stats-1.9.7.ebuild,v 1.2 2012/05/03 19:41:35 jdhore Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND=">=app-misc/g15daemon-1.9.0
 	gnome-base/libgtop"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sh autogen.sh

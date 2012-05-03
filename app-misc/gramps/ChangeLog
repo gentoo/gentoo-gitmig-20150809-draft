@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gramps
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.149 2011/10/23 17:14:31 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.150 2012/05/03 19:41:33 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gramps-3.2.5.ebuild,
+  gramps-3.2.6.ebuild, gramps-3.3.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gramps-3.3.1 (23 Oct 2011)
 

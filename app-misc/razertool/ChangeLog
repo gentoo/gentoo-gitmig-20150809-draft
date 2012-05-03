@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/razertool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/ChangeLog,v 1.9 2011/03/28 01:02:33 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/ChangeLog,v 1.10 2012/05/03 19:41:36 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> razertool-0.0.7-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   razertool-0.0.7-r3.ebuild:

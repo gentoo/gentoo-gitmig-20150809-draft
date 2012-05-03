@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/g15stats-1.0.ebuild,v 1.4 2009/03/01 17:27:55 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/g15stats-1.0.ebuild,v 1.5 2012/05/03 19:41:35 jdhore Exp $
 
 DESCRIPTION="CPU, memory, swap, network stats for G15 Keyboard"
 HOMEPAGE="http://g15daemon.sourceforge.net/"
@@ -18,7 +18,7 @@ RDEPEND=">=app-misc/g15daemon-1.9.0
 	gnome-base/libgtop"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	export CPPFLAGS=$CFLAGS

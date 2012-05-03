@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/slmon-0.5.13.ebuild,v 1.5 2010/09/25 11:41:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/slmon-0.5.13.ebuild,v 1.6 2012/05/03 19:41:35 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -18,7 +18,7 @@ RDEPEND="dev-libs/glib:2
 	sys-libs/slang
 	gnome-base/libgtop"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make-382.patch \

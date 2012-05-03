@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7-r3.ebuild,v 1.3 2011/03/28 01:02:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7-r3.ebuild,v 1.4 2012/05/03 19:41:36 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -20,7 +20,7 @@ RDEPEND="virtual/libusb:0
 		>=x11-libs/cairo-1.0.0
 		>=x11-libs/gtk+-2.8.0:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i razertool.rules.example \

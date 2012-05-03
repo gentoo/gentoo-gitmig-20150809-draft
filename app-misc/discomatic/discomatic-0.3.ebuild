@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/discomatic/discomatic-0.3.ebuild,v 1.11 2008/12/15 21:26:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/discomatic/discomatic-0.3.ebuild,v 1.12 2012/05/03 19:41:35 jdhore Exp $
 
 inherit gnome2 eutils
 
@@ -17,7 +17,7 @@ RDEPEND="${DEPEND}
 	virtual/cdrtools"
 DEPEND=">=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

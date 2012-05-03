@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/slmon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/ChangeLog,v 1.16 2010/09/25 11:43:41 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slmon/ChangeLog,v 1.17 2012/05/03 19:41:35 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> slmon-0.5.13.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> slmon-0.5.13.ebuild,
   +files/slmon-0.5.13-make-382.patch:

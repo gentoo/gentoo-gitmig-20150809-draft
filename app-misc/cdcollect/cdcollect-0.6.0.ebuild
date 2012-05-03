@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/cdcollect-0.6.0.ebuild,v 1.5 2011/03/27 11:54:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/cdcollect-0.6.0.ebuild,v 1.6 2012/05/03 19:41:33 jdhore Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-lang/mono-1.1.17
 	>=dev-dotnet/gnomevfs-sharp-2.8.0:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 USE_DESTDIR="1"
 

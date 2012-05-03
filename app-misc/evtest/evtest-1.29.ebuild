@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/evtest-1.29.ebuild,v 1.2 2012/03/27 15:47:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/evtest-1.29.ebuild,v 1.3 2012/05/03 19:41:35 jdhore Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ IUSE="+xml"
 # directly need it ourselves, so don't depend on libxslt.
 RDEPEND="xml? ( dev-libs/libxml2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# No pretty configure flag :/

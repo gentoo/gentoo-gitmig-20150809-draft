@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.15 2012/04/15 16:26:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.16 2012/05/03 19:41:32 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnote-0.7.4.ebuild,
+  gnote-0.8.2.ebuild, gnote-0.8.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gnote-0.8.3 (15 Apr 2012)
 
