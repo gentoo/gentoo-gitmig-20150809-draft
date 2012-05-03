@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.0_p1.ebuild,v 1.1 2012/04/30 22:47:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.0_p1.ebuild,v 1.2 2012/05/03 00:43:39 vapier Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam systemd
@@ -197,6 +197,18 @@ src_install() {
 			-e "/^#PrintLastLog /s:.*:PrintLastLog no:" \
 			"${D}"/etc/ssh/sshd_config || die "sed of configuration file failed"
 	fi
+
+	# Gentoo tweaks to default config files
+	cat <<-EOF >> "${D}"/etc/ssh/sshd_config
+
+	# Allow client to pass locale environment variables #367017
+	AcceptEnv LANG LC_*
+	EOF
+	cat <<-EOF >> "${D}"/etc/ssh/ssh_config
+
+	# Send locale environment variables #367017
+	SendEnv LANG LC_*
+	EOF
 
 	# This instruction is from the HPN webpage,
 	# Used for the server logging functionality

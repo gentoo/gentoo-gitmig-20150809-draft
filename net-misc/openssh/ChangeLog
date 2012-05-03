@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.441 2012/04/30 22:47:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.442 2012/05/03 00:43:39 vapier Exp $
+
+  03 May 2012; Mike Frysinger <vapier@gentoo.org> openssh-6.0_p1.ebuild:
+  Enable locale env var passing by default #367017 by Michael.
 
 *openssh-6.0_p1 (30 Apr 2012)
 
