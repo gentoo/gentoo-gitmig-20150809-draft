@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.100 2012/05/01 19:24:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.101 2012/05/03 16:12:52 vapier Exp $
+
+*zlib-1.2.7 (03 May 2012)
+
+  03 May 2012; Mike Frysinger <vapier@gentoo.org> +zlib-1.2.7.ebuild:
+  Version bump #414453 by Samuli Suominen.
 
   01 May 2012; Jeroen Roovers <jer@gentoo.org> zlib-1.2.5.1-r2.ebuild:
   Stable for HPPA (bug #384483).
