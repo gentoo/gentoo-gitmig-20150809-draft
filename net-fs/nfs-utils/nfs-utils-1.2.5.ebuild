@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.5.ebuild,v 1.4 2012/01/16 12:21:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.5.ebuild,v 1.5 2012/05/03 04:06:33 jdhore Exp $
 
 EAPI="4"
 
@@ -49,7 +49,7 @@ DEPEND_COMMON="tcpd? ( sys-apps/tcp-wrappers )
 RDEPEND="${DEPEND_COMMON} !net-nds/portmap"
 # util-linux dep is to prevent man-page collision
 DEPEND="${DEPEND_COMMON}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!<sys-apps/util-linux-2.12r-r7"
 
 src_prepare() {

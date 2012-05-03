@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/smbnetfs-0.5.3.ebuild,v 1.1 2010/09/02 18:37:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/smbnetfs-0.5.3.ebuild,v 1.2 2012/05/03 04:06:32 jdhore Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -19,7 +19,7 @@ RDEPEND=">=sys-fs/fuse-2.3
 	gnome? ( gnome-base/gnome-keyring )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/make"
 
 src_prepare() {

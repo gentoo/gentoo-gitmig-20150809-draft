@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.196 2012/01/16 12:21:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.197 2012/05/03 04:06:33 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> nfs-utils-1.2.4.ebuild,
+  nfs-utils-1.2.5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Jan 2012; Justin Lecher <jlec@gentoo.org> nfs-utils-1.2.5.ebuild:
   Don't use default src_install function, in order to install only valid docs,
