@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.68 2012/04/14 00:46:10 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.69 2012/05/03 20:20:30 grobian Exp $
+
+  03 May 2012; Fabian Groffen <grobian@gentoo.org> gegl-0.2.0.ebuild:
+  Fix compilation on OSX Leopard
 
   14 Apr 2012; Sebastian Pipping <sping@gentoo.org> gegl-0.1.6.ebuild,
   gegl-0.1.8.ebuild:

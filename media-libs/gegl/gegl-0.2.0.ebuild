@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0.ebuild,v 1.1 2012/04/11 23:34:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0.ebuild,v 1.2 2012/05/03 20:20:30 grobian Exp $
 
 EAPI=4
 
@@ -56,6 +56,10 @@ DOCS=( ChangeLog INSTALL README NEWS )
 src_prepare() {
 	# fix OSX loadable module filename extension
 	sed -i -e 's/\.dylib/.bundle/' configure.ac || die
+	# don't require Apple's OpenCL on versions of OSX that don't have it
+	if [[ ${CHOST} == *-darwin* && ${CHOST#*-darwin} -le 9 ]] ; then
+		sed -i -e 's/#ifdef __APPLE__/#if 0/' gegl/opencl/* || die
+	fi
 	eautoreconf
 }
 
