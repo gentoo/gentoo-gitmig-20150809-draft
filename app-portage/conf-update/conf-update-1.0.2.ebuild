@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.2.ebuild,v 1.5 2012/03/25 14:45:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.2.ebuild,v 1.6 2012/05/03 02:21:05 jdhore Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		sys-libs/ncurses
 		dev-libs/openssl
 		colordiff? ( app-misc/colordiff )"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 		${RDEPEND}"
 
 src_prepare() {

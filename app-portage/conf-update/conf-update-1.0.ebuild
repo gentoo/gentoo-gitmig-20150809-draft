@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.ebuild,v 1.8 2009/01/04 14:57:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.ebuild,v 1.9 2012/05/03 02:21:05 jdhore Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE="colordiff"
 RDEPEND=">=dev-libs/glib-2.6
 		dev-libs/openssl
 		colordiff? ( app-misc/colordiff )"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 		${RDEPEND}"
 
 src_unpack() {
