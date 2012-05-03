@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.5.3.ebuild,v 1.5 2012/04/16 21:43:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.5.3.ebuild,v 1.6 2012/05/03 05:37:16 jdhore Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ RDEPEND=">=app-admin/eselect-wxwidgets-0.7-r1
 	x11-misc/xdg-utils
 	dbus? ( sys-apps/dbus )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/libtool-1.4
 	nls? ( >=sys-devel/gettext-0.11 )
 	test? ( dev-util/cppunit )"

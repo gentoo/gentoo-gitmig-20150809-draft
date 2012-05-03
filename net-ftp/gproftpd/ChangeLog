@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gproftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.23 2012/02/09 10:45:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.24 2012/05/03 05:37:17 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gproftpd-8.3.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926

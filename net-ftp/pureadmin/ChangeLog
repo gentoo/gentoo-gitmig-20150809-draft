@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pureadmin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.20 2011/04/21 13:37:03 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.21 2012/05/03 05:37:18 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> pureadmin-0.2.2.ebuild,
+  pureadmin-0.3.ebuild, pureadmin-0.4-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Apr 2011; Thomas Kahle <tomka@gentoo.org> pureadmin-0.4-r1.ebuild:
   x86 stable per bug 360961

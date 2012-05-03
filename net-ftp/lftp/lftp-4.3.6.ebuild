@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.6.ebuild,v 1.4 2012/05/03 03:54:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.6.ebuild,v 1.5 2012/05/03 05:37:17 jdhore Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ DEPEND="
 	=sys-devel/libtool-2*
 	app-arch/xz-utils
 	dev-lang/perl
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 "
 

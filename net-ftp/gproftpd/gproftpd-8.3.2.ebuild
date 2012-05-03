@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.2.ebuild,v 1.6 2011/03/29 12:48:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.2.ebuild,v 1.7 2012/05/03 05:37:17 jdhore Exp $
 
 EAPI=1
 
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/gtk+:2
 	ssl? ( >=dev-libs/openssl-0.9.6f )
 	>=net-ftp/proftpd-1.2.9"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	local modules includes myconf
