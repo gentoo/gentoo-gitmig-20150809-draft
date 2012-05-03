@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ranger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.12 2012/03/06 05:39:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.13 2012/05/03 23:02:34 radhermit Exp $
+
+*ranger-1.5.4 (03 May 2012)
+
+  03 May 2012; Tim Harder <radhermit@gentoo.org> +ranger-1.5.4.ebuild:
+  Version bump.
 
 *ranger-1.5.3 (06 Mar 2012)
 
