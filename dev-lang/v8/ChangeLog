@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.173 2012/05/02 08:03:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.174 2012/05/03 01:24:00 floppym Exp $
+
+*v8-3.9.24.17 (03 May 2012)
+
+  03 May 2012; Mike Gilbert <floppym@gentoo.org> +v8-3.9.24.17.ebuild,
+  -v8-3.9.24.14.ebuild:
+  Version bump for beta channel release.
 
   02 May 2012; Agostino Sarubbo <ago@gentoo.org> v8-3.8.9.19.ebuild:
   Stable for X86, wrt bug #414199
