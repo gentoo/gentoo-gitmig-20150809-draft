@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3.ebuild,v 1.4 2012/01/21 08:49:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3.ebuild,v 1.5 2012/05/03 07:42:50 jdhore Exp $
 
 inherit base java-pkg-2 linux-info versionator
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/nspr-4.7
 	>=dev-libs/nss-3.12"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/zip
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-apps/sed-4
 	${RDEPEND}"
 RDEPEND=">=virtual/jre-1.4

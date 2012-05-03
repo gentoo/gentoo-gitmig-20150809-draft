@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.5 2012/04/23 15:46:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.6 2012/05/03 07:42:50 jdhore Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.6"
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.6
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		dev-java/junit:0
 		dev-java/ant-junit:0

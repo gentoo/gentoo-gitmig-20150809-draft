@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.2.5.ebuild,v 1.2 2008/05/28 19:20:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.2.5.ebuild,v 1.3 2012/05/03 07:42:50 jdhore Exp $
 
 inherit base java-pkg-2 versionator
 
@@ -26,7 +26,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 		${RDEPEND}
 		app-arch/zip
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		>=sys-apps/sed-4"
 
 S=${WORKDIR}/mozilla

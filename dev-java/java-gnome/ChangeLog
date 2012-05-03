@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.113 2012/03/04 12:03:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.114 2012/05/03 07:42:51 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> java-gnome-4.0.18-r2.ebuild,
+  java-gnome-4.0.19.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #206112

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.0.ebuild,v 1.6 2010/05/24 19:02:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.0.ebuild,v 1.7 2012/05/03 07:42:51 jdhore Exp $
 
 # Probably best to leave the CFLAGS as they are here. See...
 # http://weblogs.java.net/blog/kellyohair/archive/2006/01/compilation_of_1.html
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.5
 
 DEPEND=">=virtual/jdk-1.5
 	virtual/libffi
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-java/ant-junit4 )"
 
 JAVA_PKG_BSFIX_NAME="build-impl.xml custom-build.xml"

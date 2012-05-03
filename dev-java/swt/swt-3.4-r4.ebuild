@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.10 2012/04/17 11:19:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.11 2012/05/03 07:42:51 jdhore Exp $
 
 EAPI="1"
 
@@ -61,7 +61,7 @@ DEPEND=">=virtual/jdk-1.4
 		x11-libs/libXt
 		|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1 )
 		x11-proto/inputproto
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		${COMMON}"
 
 RDEPEND=">=virtual/jre-1.4
