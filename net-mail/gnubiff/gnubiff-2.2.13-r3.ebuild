@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r3.ebuild,v 1.2 2012/01/16 17:18:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r3.ebuild,v 1.3 2012/05/03 04:18:37 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 	fam? ( virtual/fam )
 	x11-proto/xproto"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
 

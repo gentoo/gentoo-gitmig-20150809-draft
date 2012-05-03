@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r2.ebuild,v 1.4 2011/12/04 14:28:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.13-r2.ebuild,v 1.5 2012/05/03 04:18:37 jdhore Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 	fam? ( virtual/fam )
 	x11-proto/xproto"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-nls.patch

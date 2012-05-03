@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mpop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/ChangeLog,v 1.4 2012/05/02 01:14:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/ChangeLog,v 1.5 2012/05/03 04:18:36 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> mpop-1.0.26.ebuild,
+  mpop-1.0.27.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 May 2012; Tim Harder <radhermit@gentoo.org> -mpop-1.0.25.ebuild:
   Remove old.

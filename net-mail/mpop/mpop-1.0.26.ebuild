@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/mpop-1.0.26.ebuild,v 1.1 2012/01/08 04:27:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/mpop-1.0.26.ebuild,v 1.2 2012/05/03 04:18:36 jdhore Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ RDEPEND="
 	)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 REQUIRED_USE="gnutls? ( ssl )"
 
