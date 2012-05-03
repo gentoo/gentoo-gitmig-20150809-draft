@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13718 2012/05/03 18:27:49 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13719 2012/05/03 22:53:09 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -310,7 +310,6 @@ www-client/opera-next
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Dec 2011)
 # Mask prerelease x11 packages
-=x11-drivers/xf86-input-synaptics-1.5.99*
 =x11-libs/libX11-1.4.99*
 >=x11-libs/libXi-1.5.99
 
