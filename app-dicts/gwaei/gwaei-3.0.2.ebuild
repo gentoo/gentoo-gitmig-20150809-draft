@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-3.0.2.ebuild,v 1.3 2012/03/19 16:49:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-3.0.2.ebuild,v 1.4 2012/05/03 18:18:07 jdhore Exp $
 
 EAPI="4"
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.17 )
 	app-text/rarian
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 REQUIRED_USE="unique? ( gtk )"
 
