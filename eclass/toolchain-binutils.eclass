@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.112 2012/04/26 02:14:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.113 2012/05/03 02:29:52 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -67,7 +67,7 @@ case ${BTYPE} in
 	snap) SRC_URI="ftp://gcc.gnu.org/pub/binutils/snapshots/binutils-${BVER}.tar.bz2" ;;
 	hjlu)
 		SRC_URI="mirror://kernel/linux/devel/binutils/binutils-${BVER}.tar."
-		version_is_at_least 2.21 && SRC_URI+="xz" || SRC_URI+="bz2" ;;
+		version_is_at_least 2.21.51.0.5 && SRC_URI+="xz" || SRC_URI+="bz2" ;;
 	rel) SRC_URI="mirror://gnu/binutils/binutils-${BVER}.tar.bz2" ;;
 esac
 add_src_uri() {
