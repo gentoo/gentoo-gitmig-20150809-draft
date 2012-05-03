@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/libdmapsharing-2.9.13.ebuild,v 1.1 2011/10/27 05:41:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/libdmapsharing-2.9.13.ebuild,v 1.2 2012/05/03 23:43:53 tetromino Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ RDEPEND="
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )
 "
 

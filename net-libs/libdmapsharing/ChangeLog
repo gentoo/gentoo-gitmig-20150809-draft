@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/libdmapsharing
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.4 2011/10/27 05:41:33 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.5 2012/05/03 23:43:53 tetromino Exp $
+
+*libdmapsharing-2.9.15 (03 May 2012)
+
+  03 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libdmapsharing-2.1.13.ebuild, +files/libdmapsharing-2.1.13-glib-2.31.patch,
+  -libdmapsharing-2.9.12.ebuild, libdmapsharing-2.9.13.ebuild,
+  +libdmapsharing-2.9.15.ebuild:
+  Version bump, fixes build failure with >=glib-2.31 (bug #413757, thanks to
+  Juergen Rose). Also fix >=glib-2.31 header use in slot 2.2. Switch to
+  virtual/pkgconfig. Drop old.
 
 *libdmapsharing-2.9.13 (27 Oct 2011)
 
