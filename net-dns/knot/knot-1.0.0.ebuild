@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.0.0.ebuild,v 1.1 2012/02/29 19:14:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.0.0.ebuild,v 1.2 2012/05/03 03:59:12 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="
 "
 #	sys-libs/glibc
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex
 	virtual/yacc
 "

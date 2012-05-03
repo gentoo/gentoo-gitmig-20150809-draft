@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.57-r1.ebuild,v 1.3 2012/03/07 21:59:18 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.57-r1.ebuild,v 1.4 2012/05/03 03:59:12 jdhore Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	)"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	|| ( app-arch/xz-utils app-arch/lzma )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"

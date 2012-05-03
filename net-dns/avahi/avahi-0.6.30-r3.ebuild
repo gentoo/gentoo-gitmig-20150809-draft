@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.4 2012/05/01 00:16:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.5 2012/05/03 03:59:12 jdhore Exp $
 
 EAPI="3"
 
@@ -49,7 +49,7 @@ COMMON_DEPEND=">=dev-libs/libdaemon-0.14
 	kernel_linux? ( sys-libs/libcap )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.5
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	doc? (
 		app-doc/doxygen
 		mono? ( >=virtual/monodoc-1.1.8 )
