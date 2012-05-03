@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.5.0_rc.ebuild,v 1.1 2012/04/23 17:19:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.5.0_rc.ebuild,v 1.2 2012/05/03 14:29:46 pesa Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ CDEPEND="
 	!botan-bundled? ( =dev-libs/botan-1.8* )
 "
 DEPEND="${CDEPEND}
-	!botan-bundled? ( dev-util/pkgconfig )
+	!botan-bundled? ( virtual/pkgconfig )
 "
 RDEPEND="${CDEPEND}
 	>=sys-devel/gdb-7.2[python]
