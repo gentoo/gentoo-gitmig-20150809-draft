@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r1.ebuild,v 1.5 2012/04/29 14:54:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r1.ebuild,v 1.6 2012/05/03 18:02:21 jdhore Exp $
 
 EAPI="3"
 
@@ -36,7 +36,7 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-python/epydoc )
 "
 RDEPEND="${COMMON_DEPEND}

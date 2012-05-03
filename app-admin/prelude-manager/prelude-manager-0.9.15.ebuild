@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.15.ebuild,v 1.6 2011/07/26 07:45:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.15.ebuild,v 1.7 2012/05/03 18:02:23 jdhore Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -23,7 +23,7 @@ RDEPEND="!dev-libs/libprelude-cvs
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.29 2012/04/17 15:55:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.30 2012/05/03 18:02:20 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> augeas-0.10.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *augeas-0.10.0 (17 Apr 2012)
 

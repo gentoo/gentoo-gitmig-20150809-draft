@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.2.ebuild,v 1.7 2012/03/13 11:50:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.2.ebuild,v 1.8 2012/05/03 18:02:22 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND="!<app-admin/gnome-system-tools-1.1.91
 	userland_GNU? ( virtual/shadow )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40"
 
 pkg_setup() {

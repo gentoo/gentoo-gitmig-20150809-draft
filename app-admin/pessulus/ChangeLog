@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.94 2011/10/19 17:34:49 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.95 2012/05/03 18:02:22 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> pessulus-2.30.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   pessulus-2.30.4.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.7-r1.ebuild,v 1.2 2011/10/23 12:40:56 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.7-r1.ebuild,v 1.3 2012/05/03 18:02:22 jdhore Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -24,7 +24,7 @@ DEPEND=">=sys-libs/libsepol-2.1.0
 	sys-devel/flex
 	>=dev-db/sqlite-3.2:3
 	dev-libs/libxml2:2
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	java? (
 		>=dev-lang/swig-1.3.28
 		>=virtual/jdk-1.4

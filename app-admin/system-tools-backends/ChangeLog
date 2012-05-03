@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.74 2012/03/13 11:50:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.75 2012/05/03 18:02:22 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  system-tools-backends-2.10.1.ebuild, system-tools-backends-2.10.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   13 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   system-tools-backends-2.10.1.ebuild, system-tools-backends-2.10.2.ebuild:

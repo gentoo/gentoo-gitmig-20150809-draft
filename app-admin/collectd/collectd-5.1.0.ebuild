@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0.ebuild,v 1.1 2012/04/08 20:53:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0.ebuild,v 1.2 2012/05/03 18:02:20 jdhore Exp $
 
 EAPI=4
 
@@ -95,7 +95,7 @@ COMMON_DEPEND="
 	)"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	kernel_linux? (
 		collectd_plugins_vserver?	( sys-kernel/vserver-sources )
 	)"

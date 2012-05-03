@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sagan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.6 2012/04/22 16:00:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.7 2012/05/03 18:02:23 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> sagan-0.2.0-r1.ebuild,
+  sagan-0.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *sagan-0.2.1 (22 Apr 2012)
 

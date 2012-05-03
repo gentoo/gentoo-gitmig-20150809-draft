@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.6.ebuild,v 1.6 2012/04/13 17:35:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.6.ebuild,v 1.7 2012/05/03 18:02:22 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -34,7 +34,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/asciidoc
 	app-text/xmlto
 	>=dev-util/intltool-0.35.0
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.17"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.2.4.ebuild,v 1.9 2011/07/09 17:35:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.2.4.ebuild,v 1.10 2012/05/03 18:02:22 jdhore Exp $
 
 EAPI=2
 inherit autotools fixheadtails eutils multilib
@@ -32,7 +32,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	${LIBS_DEPEND}
 	static? ( >=dev-libs/eventlog-0.2.12[static-libs] )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex"
 
 src_prepare() {

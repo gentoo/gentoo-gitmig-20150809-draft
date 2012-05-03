@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.2.5.ebuild,v 1.7 2012/03/03 14:14:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.2.5.ebuild,v 1.8 2012/05/03 18:02:22 jdhore Exp $
 
 EAPI=2
 inherit autotools fixheadtails eutils multilib
@@ -26,7 +26,7 @@ RDEPEND="
 		caps? ( sys-libs/libcap )
 		sql? ( >=dev-db/libdbi-0.8.3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex"
 
 src_prepare() {

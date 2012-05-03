@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r3.ebuild,v 1.3 2012/04/29 14:53:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r3.ebuild,v 1.4 2012/05/03 18:02:21 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.0"
 
 pkg_setup() {

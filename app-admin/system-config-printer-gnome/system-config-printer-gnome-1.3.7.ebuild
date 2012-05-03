@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.7.ebuild,v 1.9 2012/03/25 14:45:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.7.ebuild,v 1.10 2012/05/03 18:02:21 jdhore Exp $
 
 EAPI="3"
 
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	>=app-text/xmlto-0.0.22
 	dev-util/desktop-file-utils
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 "
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/augeas-0.10.0.ebuild,v 1.1 2012/04/17 15:55:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/augeas-0.10.0.ebuild,v 1.2 2012/05/03 18:02:20 jdhore Exp $
 
 EAPI="4"
 inherit eutils
@@ -17,7 +17,7 @@ IUSE="static-libs test"
 RDEPEND="sys-libs/readline
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=app-doc/NaturalDocs-1.40
 	test? ( dev-lang/ruby )"
 

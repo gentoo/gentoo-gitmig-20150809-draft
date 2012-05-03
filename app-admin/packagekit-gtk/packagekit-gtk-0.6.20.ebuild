@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/packagekit-gtk-0.6.20.ebuild,v 1.2 2012/01/28 17:11:18 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/packagekit-gtk-0.6.20.ebuild,v 1.3 2012/05/03 18:02:22 jdhore Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/dbus-glib
 	>=x11-libs/gtk+-2.91.0:3
 	x11-libs/pango
 	~app-admin/packagekit-base-${PV}"
-DEPEND="${RDEPEND} dev-util/pkgconfig"
+DEPEND="${RDEPEND} virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

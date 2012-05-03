@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.115 2012/04/29 14:53:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.116 2012/05/03 18:02:21 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  gnome-system-tools-2.32.0.ebuild, gnome-system-tools-2.32.0-r1.ebuild,
+  gnome-system-tools-2.32.0-r2.ebuild, gnome-system-tools-2.32.0-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org>
   gnome-system-tools-2.32.0-r3.ebuild:

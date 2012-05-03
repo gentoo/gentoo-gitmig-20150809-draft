@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/abrt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.10 2012/04/13 17:35:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.11 2012/05/03 18:02:22 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> abrt-2.0.6.ebuild,
+  abrt-2.0.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> abrt-2.0.6.ebuild,
   abrt-2.0.8.ebuild:

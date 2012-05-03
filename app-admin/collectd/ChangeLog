@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.35 2012/04/08 20:53:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.36 2012/05/03 18:02:21 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> collectd-5.0.2-r1.ebuild,
+  collectd-5.1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *collectd-5.1.0 (08 Apr 2012)
 
