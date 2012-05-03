@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.0.ebuild,v 1.2 2012/03/23 01:28:00 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.0.ebuild,v 1.3 2012/05/03 11:49:42 ulm Exp $
 
 EAPI=4
 
@@ -57,7 +57,7 @@ RDEPEND="
 		app-editors/xemacs
 		app-xemacs/xemacs-base )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? (
 		virtual/latex-base
 		dev-texlive/texlive-latexextra
