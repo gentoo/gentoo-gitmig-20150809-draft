@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.106 2012/03/27 18:25:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.107 2012/05/03 18:49:05 jdhore Exp $
 
 EAPI="4"
 
@@ -99,7 +99,7 @@ DEPEND="${RDEPEND}
 	)
 	xinerama? ( x11-proto/xineramaproto )
 	!hardened? ( sys-devel/prelink )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	virtual/yacc
 	sys-devel/flex"
 

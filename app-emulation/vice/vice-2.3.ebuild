@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.3.ebuild,v 1.6 2012/01/13 17:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.3.ebuild,v 1.7 2012/05/03 18:49:07 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils games toolchain-funcs
@@ -47,7 +47,7 @@ RDEPEND="
 	dga? ( x11-libs/libXxf86dga )
 	xrandr? ( x11-libs/libXrandr )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-apps/bdftopcf
 	x11-apps/mkfontdir
 	x11-proto/xproto

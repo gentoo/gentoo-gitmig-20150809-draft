@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.115 2012/04/28 18:32:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.116 2012/05/03 18:49:07 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> qemu-kvm-0.15.1-r1.ebuild,
+  qemu-kvm-1.0-r3.ebuild, qemu-kvm-1.0.1.ebuild, qemu-kvm-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Apr 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.0.1.ebuild:
   Fix issue with the PPC system targets. bug #413487

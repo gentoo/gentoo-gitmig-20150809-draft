@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-8.8.2.590212.ebuild,v 1.1 2012/03/24 12:56:26 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-8.8.2.590212.ebuild,v 1.2 2012/05/03 18:49:05 jdhore Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ RDEPEND="app-emulation/open-vm-tools-kmod
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	virtual/linux-sources
 	sys-apps/findutils
 	"

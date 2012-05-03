@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.111 2012/03/24 22:49:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.112 2012/05/03 18:49:05 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> qemu-0.11.1.ebuild,
+  qemu-0.11.1-r1.ebuild, qemu-1.0-r2.ebuild, qemu-1.0-r3.ebuild,
+  qemu-1.0.1.ebuild, qemu-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/qemu-0.11.1-cfg-pulse.patch, qemu-0.11.1-r1.ebuild, qemu-0.11.1.ebuild:

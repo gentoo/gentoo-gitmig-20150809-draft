@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1.ebuild,v 1.2 2012/04/28 18:32:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1.ebuild,v 1.3 2012/05/03 18:49:07 jdhore Exp $
 
 #BACKPORTS=1
 
@@ -95,7 +95,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-kernel/linux-headers-2.6.35
 	test? ( dev-libs/check )"
 

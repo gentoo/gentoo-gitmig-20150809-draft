@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.10.1.ebuild,v 1.3 2012/03/15 12:27:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.10.1.ebuild,v 1.4 2012/05/03 18:49:07 jdhore Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ RDEPEND=">=app-emulation/spice-protocol-0.10.1
 	client? ( gui? ( =dev-games/cegui-0.6* ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	smartcard? ( >=app-emulation/libcacard-0.1.2 )"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 # maintainer notes:

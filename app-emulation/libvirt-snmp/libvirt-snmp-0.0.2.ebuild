@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/libvirt-snmp-0.0.2.ebuild,v 1.1 2011/05/11 08:57:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/libvirt-snmp-0.0.2.ebuild,v 1.2 2012/05/03 18:49:07 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="app-emulation/libvirt
 	net-analyzer/net-snmp"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	default

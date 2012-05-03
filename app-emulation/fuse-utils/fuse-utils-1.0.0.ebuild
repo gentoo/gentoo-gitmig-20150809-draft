@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/fuse-utils-1.0.0.ebuild,v 1.2 2011/05/06 19:45:08 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/fuse-utils-1.0.0.ebuild,v 1.3 2012/05/03 18:49:07 jdhore Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ IUSE="audiofile gcrypt"
 RDEPEND="~app-emulation/libspectrum-1.0.0[gcrypt?]
 	audiofile? ( >=media-libs/audiofile-0.2.3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare () {
 	epatch "${FILESDIR}/${P}-libgcrypt.patch"

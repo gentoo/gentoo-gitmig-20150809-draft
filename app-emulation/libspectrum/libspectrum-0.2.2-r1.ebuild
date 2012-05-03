@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.2.2-r1.ebuild,v 1.6 2008/05/18 16:31:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.2.2-r1.ebuild,v 1.7 2012/05/03 18:49:07 jdhore Exp $
 
 DESCRIPTION="Spectrum emulation library"
 HOMEPAGE="http://www.srcf.ucam.org/~pak21/spectrum/libspectrum.html"
@@ -15,7 +15,7 @@ RDEPEND=">=dev-libs/glib-2
 	dev-libs/libgcrypt
 	dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf --with-glib || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.11.ebuild,v 1.2 2012/04/26 05:04:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.11.ebuild,v 1.3 2012/05/03 18:49:06 jdhore Exp $
 
 EAPI=4
 
@@ -87,7 +87,7 @@ RDEPEND="sys-libs/readline
 	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/xhtml1"
 
 pkg_setup() {

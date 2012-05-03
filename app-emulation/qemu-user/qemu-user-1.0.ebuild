@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.0.ebuild,v 1.2 2012/03/04 05:02:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.0.ebuild,v 1.3 2012/05/03 18:49:08 jdhore Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ for target in ${IUSE_USER_TARGETS}; do
 done
 
 DEPEND="app-text/texi2html
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-libs/zlib[static-libs]
 	dev-libs/glib[static-libs]"
 RDEPEND=""

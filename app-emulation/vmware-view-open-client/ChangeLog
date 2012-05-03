@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-view-open-client
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.10 2011/07/25 10:35:12 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.11 2012/05/03 18:49:08 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  vmware-view-open-client-4.5.0.297975-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Jul 2011; Christoph Mende <angelos@gentoo.org>
   vmware-view-open-client-4.5.0.297975-r1.ebuild,

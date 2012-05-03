@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1.ebuild,v 1.9 2012/03/24 22:49:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1.ebuild,v 1.10 2012/05/03 18:49:05 jdhore Exp $
 
 EAPI="2"
 
@@ -44,7 +44,7 @@ RDEPEND="
 #	fdt? ( sys-apps/dtc )
 
 DEPEND="${RDEPEND}
-		gnutls? ( dev-util/pkgconfig )
+		gnutls? ( virtual/pkgconfig )
 		app-text/texi2html"
 
 src_prepare() {

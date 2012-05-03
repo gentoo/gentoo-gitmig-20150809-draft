@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.6.3.ebuild,v 1.1 2011/01/30 19:47:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.6.3.ebuild,v 1.2 2012/05/03 18:49:06 jdhore Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libX11
 	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-libs/libXt"
 
 src_prepare() {

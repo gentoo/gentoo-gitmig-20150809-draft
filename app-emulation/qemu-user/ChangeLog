@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.42 2012/02/28 22:06:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.43 2012/05/03 18:49:08 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> qemu-user-1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Feb 2012; Luca Barbato <lu_zero@gentoo.org> files/qemu-binfmt.initd:
   Update arm mask to account for variability in byte 15 as experienced in gcc

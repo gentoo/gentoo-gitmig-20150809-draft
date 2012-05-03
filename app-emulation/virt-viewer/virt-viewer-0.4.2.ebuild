@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.4.2.ebuild,v 1.5 2012/04/23 09:41:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.4.2.ebuild,v 1.6 2012/05/03 18:49:06 jdhore Exp $
 
 EAPI=4
 inherit gnome2
@@ -24,7 +24,7 @@ RDEPEND=">=app-emulation/libvirt-0.6
 	spice? ( >=net-misc/spice-gtk-0.6[sasl?,gtk3?] )
 	vnc? ( >=net-libs/gtk-vnc-0.4.3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 REQUIRED_USE="|| ( spice vnc )"
 

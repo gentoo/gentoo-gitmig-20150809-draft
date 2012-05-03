@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.5.0.1.ebuild,v 1.2 2009/01/25 17:38:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.5.0.1.ebuild,v 1.3 2012/05/03 18:49:07 jdhore Exp $
 
 inherit eutils autotools
 
@@ -19,7 +19,7 @@ RDEPEND="zlib? ( sys-libs/zlib )
 	audiofile? ( >=media-libs/audiofile-0.2.3 )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

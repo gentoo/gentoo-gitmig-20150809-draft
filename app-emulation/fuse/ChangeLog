@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/fuse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.39 2011/10/16 18:51:29 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.40 2012/05/03 18:49:08 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> fuse-1.0.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -fuse-0.7.0.ebuild,
   -files/fuse-0.7.0-gcc4.patch, -fuse-0.10.0.2-r3.ebuild, metadata.xml:

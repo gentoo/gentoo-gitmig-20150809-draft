@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-sandbox/libvirt-sandbox-0.0.2.ebuild,v 1.1 2012/01/26 07:54:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-sandbox/libvirt-sandbox-0.0.2.ebuild,v 1.2 2012/05/03 18:49:08 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="
 	>=app-emulation/libvirt-glib-0.0.4
 	introspection? ( >=dev-libs/gobject-introspection-0.10.8 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1.10 )"
 

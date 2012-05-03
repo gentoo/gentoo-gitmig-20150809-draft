@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt-sandbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-sandbox/ChangeLog,v 1.1 2012/01/26 07:54:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-sandbox/ChangeLog,v 1.2 2012/05/03 18:49:08 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> libvirt-sandbox-0.0.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libvirt-sandbox-0.0.2 (26 Jan 2012)
 
