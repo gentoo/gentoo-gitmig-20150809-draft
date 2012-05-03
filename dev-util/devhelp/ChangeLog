@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.130 2012/04/29 15:39:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.131 2012/05/03 05:05:47 tetromino Exp $
+
+*devhelp-3.4.1 (03 May 2012)
+
+  03 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +devhelp-3.4.1.ebuild, +files/devhelp-3.4.1-gsettings-fonts.patch:
+  Version bump, now supports globs in search tab. Add patch to use gsettings
+  instead of libgnome's gconf keys for default fonts (bug #396637, thanks to
+  Rafał Mużyło).
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> devhelp-3.2.0.ebuild:
   x86 stable, bug #410611
