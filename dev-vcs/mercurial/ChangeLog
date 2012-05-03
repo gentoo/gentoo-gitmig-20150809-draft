@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.73 2012/05/02 08:38:20 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.74 2012/05/03 20:40:21 maekke Exp $
+
+  03 May 2012; Markus Meier <maekke@gentoo.org> mercurial-2.1.1.ebuild:
+  arm stable, bug #414077
 
   02 May 2012; Dirkjan Ochtman <djc@gentoo.org> -mercurial-1.7.ebuild,
   -mercurial-2.0.1.ebuild, -mercurial-2.0.2.ebuild, -mercurial-2.1.ebuild:
