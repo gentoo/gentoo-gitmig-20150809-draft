@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.1.3_p20120503.ebuild,v 1.1 2012/05/03 00:45:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.1.3_p20120503.ebuild,v 1.2 2012/05/03 04:01:04 jdhore Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 		x11-libs/qt-dbus:4
 		x11-libs/qt-gui:4 )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/libtool:2"
 RDEPEND="${COMMON_DEPEND}
 	net-firewall/iptables
