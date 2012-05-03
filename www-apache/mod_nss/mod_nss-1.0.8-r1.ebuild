@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/mod_nss-1.0.8-r1.ebuild,v 1.3 2010/12/02 14:27:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/mod_nss-1.0.8-r1.ebuild,v 1.4 2012/05/03 04:56:40 jdhore Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="+ecc"
 
 DEPEND=">=dev-libs/nss-3.11.4
 	>=dev-libs/nspr-4.6.4
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/sed"
 
 RDEPEND=">=dev-libs/nss-3.11.4
