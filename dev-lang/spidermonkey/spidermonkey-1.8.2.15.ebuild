@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.2.15.ebuild,v 1.2 2011/09/24 16:57:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.2.15.ebuild,v 1.3 2012/05/03 02:41:39 jdhore Exp $
 
 EAPI="3"
 inherit eutils toolchain-funcs multilib python
@@ -25,7 +25,7 @@ RDEPEND="threadsafe? ( >=dev-libs/nspr-4.8.6 )"
 DEPEND="${RDEPEND}
 	app-arch/zip
 	=dev-lang/python-2*[threads]
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup(){
 	python_set_active_version 2

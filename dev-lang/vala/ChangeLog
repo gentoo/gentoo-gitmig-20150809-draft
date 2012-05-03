@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.97 2012/04/29 15:01:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.98 2012/05/03 02:41:39 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> vala-0.10.4-r1.ebuild,
+  vala-0.12.1.ebuild, vala-0.14.1.ebuild, vala-0.14.2.ebuild,
+  vala-0.14.2-r1.ebuild, vala-0.16.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> vala-0.14.2-r1.ebuild:
   x86 stable, bug #410611

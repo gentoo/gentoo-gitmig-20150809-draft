@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.5.ebuild,v 1.7 2012/04/28 05:02:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.5.ebuild,v 1.8 2012/05/03 02:41:39 jdhore Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -41,7 +41,7 @@ RDEPEND="app-arch/bzip2
 			xml? ( >=dev-libs/expat-2.1 )
 		)"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		>=sys-devel/autoconf-2.61
 		!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3-r2.ebuild,v 1.3 2012/05/01 23:14:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3-r2.ebuild,v 1.4 2012/05/03 02:41:39 jdhore Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -51,7 +51,7 @@ RDEPEND="app-arch/bzip2
 		)
 		!!<sys-apps/portage-2.1.9"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		>=sys-devel/autoconf-2.65
 		!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )

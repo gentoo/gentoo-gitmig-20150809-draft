@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.7-r2.ebuild,v 1.5 2011/11/26 16:50:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.7-r2.ebuild,v 1.6 2012/05/03 02:41:39 jdhore Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -64,7 +64,7 @@ RDEPEND=">=app-admin/eselect-python-20091230
 		!!<sys-apps/portage-2.1.9"
 DEPEND="${RDEPEND}
 		$([[ "${PV}" == *_pre* ]] && echo "=${CATEGORY}/${PN}-${PV%%.*}*")
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		$([[ "${PV}" =~ ^[[:digit:]]+\.[[:digit:]]+_pre ]] && echo "doc? ( dev-python/sphinx )")
 		!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )

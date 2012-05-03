@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.4-r4.ebuild,v 1.1 2012/03/21 16:27:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.4-r4.ebuild,v 1.2 2012/05/03 02:41:39 jdhore Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -55,7 +55,7 @@ RDEPEND=">=app-admin/eselect-python-20091230
 		)"
 DEPEND="${RDEPEND}
 		$([[ "${PV}" == *_pre* ]] && echo "=${CATEGORY}/${PN}-${PV%%.*}*")
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		$([[ "${PV}" =~ ^[[:digit:]]+\.[[:digit:]]+_pre ]] && echo "doc? ( dev-python/sphinx )")
 		!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3.ebuild,v 1.2 2012/04/26 14:57:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.3.ebuild,v 1.3 2012/05/03 02:41:39 jdhore Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -55,7 +55,7 @@ RDEPEND=">=app-admin/eselect-python-20091230
 
 DEPEND=">=sys-devel/autoconf-2.65
 		${RDEPEND}
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		doc? ( dev-python/sphinx )
 		!sys-devel/gcc[libffi]"
 

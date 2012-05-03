@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.5 2012/01/30 19:36:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r1.ebuild,v 1.6 2012/05/03 02:41:39 jdhore Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/nspr-4.7.0"
 DEPEND="${RDEPEND}
 	app-arch/zip
 	=dev-lang/python-2*[threads]
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup(){
 	python_set_active_version 2
