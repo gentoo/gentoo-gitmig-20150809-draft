@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xdx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.24 2011/11/20 12:23:23 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.25 2012/05/03 03:48:57 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> xdx-2.4.ebuild,
+  xdx-2.4.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Nov 2011; Pacho Ramos <pacho@gentoo.org> xdx-2.4.2.ebuild:
   Drop DEPRECATED flags, bug #391091

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.5.ebuild,v 1.4 2011/06/02 13:15:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.5.ebuild,v 1.5 2012/05/03 03:48:57 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND="media-libs/hamlib
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Let portage handle updating mime/desktop databases,

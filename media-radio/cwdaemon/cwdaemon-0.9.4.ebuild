@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/cwdaemon-0.9.4.ebuild,v 1.3 2011/02/26 14:47:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/cwdaemon-0.9.4.ebuild,v 1.4 2012/05/03 03:48:57 jdhore Exp $
 
 DESCRIPTION="A morse daemon for the parallel or serial port"
 HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/ham/morse"
@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND=">=media-radio/unixcw-2.3"
 DEPEND="$RDEPEND
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"

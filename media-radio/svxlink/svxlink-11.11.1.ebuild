@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-11.11.1.ebuild,v 1.1 2012/01/29 06:54:02 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-11.11.1.ebuild,v 1.2 2012/05/03 03:48:56 jdhore Exp $
 
 EAPI=4
 inherit eutils multilib qt4-r2
@@ -24,7 +24,7 @@ RDEPEND="dev-lang/tcl
 	dev-libs/libsigc++:1.2
 	dev-libs/popt"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 

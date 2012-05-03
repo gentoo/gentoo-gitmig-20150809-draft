@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.21.40.ebuild,v 1.1 2012/03/10 11:05:50 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.21.40.ebuild,v 1.2 2012/05/03 03:48:56 jdhore Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND="x11-libs/fltk:1[threads,xft]
 		dev-perl/Term-ReadLine-Perl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
 

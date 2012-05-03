@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.8 2011/08/12 21:17:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.9 2012/05/03 03:48:57 jdhore Exp $
 
 EAPI=1
 inherit eutils
@@ -16,7 +16,7 @@ IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack(){

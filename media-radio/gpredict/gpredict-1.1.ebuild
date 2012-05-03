@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/gpredict-1.1.ebuild,v 1.4 2011/03/08 05:28:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/gpredict-1.1.ebuild,v 1.5 2012/05/03 03:48:56 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.16.0:2
 	>=x11-libs/goocanvas-0.9:0
 	net-misc/curl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {
