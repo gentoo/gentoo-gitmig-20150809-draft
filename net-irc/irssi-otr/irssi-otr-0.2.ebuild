@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.2.ebuild,v 1.6 2010/04/20 19:05:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.2.ebuild,v 1.7 2012/05/03 06:27:14 jdhore Exp $
 
 inherit cmake-utils eutils
 
@@ -29,7 +29,7 @@ RDEPEND="net-libs/libotr
 
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.7
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-lang/python"
 
 src_install() {

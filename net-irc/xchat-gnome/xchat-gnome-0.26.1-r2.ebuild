@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.7 2012/03/05 22:12:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.8 2012/05/03 06:27:13 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -35,7 +35,7 @@ RDEPEND=">=dev-libs/glib-2.18:2
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 "
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.7
+	virtual/pkgconfig
 	>=app-text/gnome-doc-utils-0.3.2
 	nls? ( sys-devel/gettext )"
 

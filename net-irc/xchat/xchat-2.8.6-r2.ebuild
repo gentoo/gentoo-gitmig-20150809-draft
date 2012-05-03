@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.6-r2.ebuild,v 1.5 2011/10/27 06:42:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.6-r2.ebuild,v 1.6 2012/05/03 06:27:14 jdhore Exp $
 
 EAPI=1
 inherit eutils versionator gnome2
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.6.0:2
 	!<net-irc/xchat-gnome-0.9"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.7
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

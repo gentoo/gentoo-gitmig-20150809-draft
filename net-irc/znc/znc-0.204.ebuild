@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.204.ebuild,v 1.1 2012/01/27 09:22:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.204.ebuild,v 1.2 2012/05/03 06:27:13 jdhore Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )
 "
 DEPEND="
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	perl? ( dev-lang/swig )
 	python? (
 		>=dev-lang/swig-2.0.2

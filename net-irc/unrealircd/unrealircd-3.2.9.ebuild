@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.9.ebuild,v 1.6 2012/02/05 17:51:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.9.ebuild,v 1.7 2012/05/03 06:27:13 jdhore Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	>=net-dns/c-ares-1.7"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	>=dev-util/pkgconfig-0.25"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/Unreal$(get_version_component_range 1-2)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.1.ebuild,v 1.1 2012/04/27 21:03:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.1.ebuild,v 1.2 2012/05/03 06:27:14 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/libmowgli-2.0.0:2
 	pcre? ( dev-libs/libpcre )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	# the dependency calculation puts all of the .c files together and

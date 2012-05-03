@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/telepathy-idle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.40 2012/03/25 17:06:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.41 2012/05/03 06:27:14 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> telepathy-idle-0.1.10.ebuild,
+  telepathy-idle-0.1.11.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> telepathy-idle-0.1.11.ebuild:
   alpha/ia64/sparc stable wrt #393007

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ctrlproxy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.33 2009/06/02 12:21:08 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.34 2012/05/03 06:27:15 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> ctrlproxy-3.0.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   ctrlproxy-3.0.8.ebuild, +files/ctrlproxy-3.0.8-asneeded.patch:

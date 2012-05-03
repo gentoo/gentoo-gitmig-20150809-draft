@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0.ebuild,v 1.5 2008/04/13 01:02:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0.ebuild,v 1.6 2012/05/03 06:27:13 jdhore Exp $
 
 inherit toolchain-funcs eutils
 
@@ -21,7 +21,7 @@ RDEPEND="|| (
 	sys-apps/pciutils
 	>=media-sound/audacious-1.4.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	emake -j1 CC="$(tc-getCC)" || die "Compile failed"

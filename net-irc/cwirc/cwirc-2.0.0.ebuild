@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-2.0.0.ebuild,v 1.6 2009/12/21 13:57:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-2.0.0.ebuild,v 1.7 2012/05/03 06:27:15 jdhore Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	>=net-irc/xchat-2.0.1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/cwirc-1.7.1-gentoo.patch \

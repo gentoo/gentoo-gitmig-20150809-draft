@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.9.1.ebuild,v 1.2 2012/04/09 14:51:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.9.1.ebuild,v 1.3 2012/05/03 06:27:14 jdhore Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ RDEPEND=">=dev-lang/mono-2.0
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.25
 	>=sys-devel/gettext-0.17
-	>=dev-util/pkgconfig-0.23"
+	virtual/pkgconfig"
 
 DOCS="FEATURES TODO README"
 

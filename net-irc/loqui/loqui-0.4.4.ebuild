@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.4.4.ebuild,v 1.8 2011/03/29 12:49:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/loqui-0.4.4.ebuild,v 1.9 2012/05/03 06:27:13 jdhore Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/glib-2.2.1:2
 	>=x11-libs/gtk+-2.4:2
 	>=net-libs/gnet-2.0.3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_compile() {

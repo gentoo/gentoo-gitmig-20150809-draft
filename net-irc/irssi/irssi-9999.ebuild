@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.3 2011/11/17 15:12:36 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.4 2012/05/03 06:27:14 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="sys-libs/ncurses
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-proxy/dante-1.1.18 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	>=sys-devel/autoconf-2.58
 	dev-lang/perl
 	www-client/lynx"

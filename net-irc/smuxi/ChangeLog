@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/smuxi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.17 2012/04/09 14:51:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.18 2012/05/03 06:27:15 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> smuxi-0.8.ebuild,
+  smuxi-0.8.9.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Apr 2012; Markus Meier <maekke@gentoo.org> smuxi-0.8.9.1.ebuild:
   x86 stable, bug #407701

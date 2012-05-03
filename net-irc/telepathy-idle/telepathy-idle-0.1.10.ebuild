@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.10.ebuild,v 1.7 2011/10/05 17:57:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.10.ebuild,v 1.8 2012/05/03 06:27:14 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ RDEPEND="dev-libs/dbus-glib
 	>=net-libs/telepathy-glib-0.13.10
 	sys-apps/dbus"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-python/twisted-words )"
 
 pkg_setup() {

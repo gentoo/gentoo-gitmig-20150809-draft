@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/scrollz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.39 2012/02/06 17:27:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.40 2012/05/03 06:27:13 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> scrollz-2.1.ebuild,
+  scrollz-2.2.ebuild, scrollz-2.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> scrollz-2.2.ebuild:
   Marking scrollz-2.2 ppc for bug 397155

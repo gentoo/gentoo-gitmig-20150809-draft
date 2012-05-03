@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0-r1.ebuild,v 1.5 2011/07/08 11:12:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-2.2.0-r1.ebuild,v 1.6 2012/05/03 06:27:13 jdhore Exp $
 
 inherit toolchain-funcs eutils
 
@@ -22,7 +22,7 @@ RDEPEND="|| (
 	sys-apps/pciutils
 	audacious? ( >=media-sound/audacious-1.4.0 )"
 DEPEND="${RDEPEND}
-	audacious? ( dev-util/pkgconfig )"
+	audacious? ( virtual/pkgconfig )"
 
 src_unpack() {
 	unpack ${A}

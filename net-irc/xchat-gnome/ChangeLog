@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.69 2012/03/05 22:12:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.70 2012/05/03 06:27:13 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> xchat-gnome-0.26.1-r1.ebuild,
+  xchat-gnome-0.26.1-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> xchat-gnome-0.26.1-r2.ebuild:
   Marking xchat-gnome-0.26.1-r2 ppc stable for bug 393007

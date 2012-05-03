@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/xchat-otr-0.3.ebuild,v 1.3 2011/09/20 03:30:55 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/xchat-otr-0.3.ebuild,v 1.4 2012/05/03 06:27:13 jdhore Exp $
 
 EAPI="2"
 inherit cmake-utils
@@ -26,7 +26,7 @@ RDEPEND="net-libs/libotr
 	dev-libs/libgpg-error"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-lang/python"
 
 src_install() {

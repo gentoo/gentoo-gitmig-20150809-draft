@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.2_pre5816.ebuild,v 1.4 2012/02/04 09:57:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.2_pre5816.ebuild,v 1.5 2012/05/03 06:27:12 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -35,7 +35,7 @@ RDEPEND=">=dev-libs/crypto++-5.6.0-r1
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.4
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/scrnsaverproto
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"

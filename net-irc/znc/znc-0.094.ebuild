@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.094.ebuild,v 1.5 2011/02/21 07:44:44 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.094.ebuild,v 1.6 2012/05/03 06:27:13 jdhore Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )
 "
 DEPEND="
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	${RDEPEND}
 "
 
