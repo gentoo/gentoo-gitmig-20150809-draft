@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.84 2012/03/21 16:47:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.85 2012/05/03 06:08:02 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnash-0.8.8.ebuild,
+  gnash-0.8.9.ebuild, gnash-0.8.9-r2.ebuild, gnash-0.8.10-r1.ebuild,
+  gnash-0.8.10-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Mar 2012; Thomas Kahle <tomka@gentoo.org> gnash-0.8.10-r2.ebuild:
   marked x86 per bug 408209

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/swfdec-mozilla/swfdec-mozilla-0.8.2-r1.ebuild,v 1.4 2011/03/22 19:46:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/swfdec-mozilla/swfdec-mozilla-0.8.2-r1.ebuild,v 1.5 2012/05/03 06:08:02 jdhore Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=media-libs/swfdec-0.8[gtk]"
 DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.35
-		>=dev-util/pkgconfig-0.20"
+		virtual/pkgconfig"
 
 src_prepare() {
 	# Read correct argument when parsing alignment, see bug #307097

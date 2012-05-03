@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r1.ebuild,v 1.2 2012/03/06 01:50:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r1.ebuild,v 1.3 2012/05/03 06:08:02 jdhore Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -110,7 +110,7 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	vaapi? ( x11-libs/libva[opengl?] )
 	"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	gnome? ( app-text/rarian )
 	test? ( dev-util/dejagnu )"

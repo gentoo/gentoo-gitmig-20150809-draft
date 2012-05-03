@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.6.ebuild,v 1.1 2012/04/12 20:34:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.6.ebuild,v 1.2 2012/05/03 06:08:02 jdhore Exp $
 
 EAPI=4
 inherit cmake-utils nsplugins multilib versionator
@@ -44,7 +44,7 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	dev-lang/nasm
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_rc*/}
 

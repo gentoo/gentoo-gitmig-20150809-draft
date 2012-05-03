@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r3.ebuild,v 1.1 2012/04/19 01:22:37 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r3.ebuild,v 1.2 2012/05/03 06:08:02 jdhore Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2:2
 	app-emulation/emul-linux-x86-gtklibs
 	>=sys-apps/util-linux-2.13"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 autoinstall() {
 	if [[ -x /usr/bin/${PN} ]]; then
