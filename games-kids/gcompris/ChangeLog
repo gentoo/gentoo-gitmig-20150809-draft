@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.74 2012/04/16 19:34:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.75 2012/05/03 03:26:38 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gcompris-9.6.1.ebuild,
+  gcompris-12.01.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> gcompris-12.01.ebuild:
   Marking gcompris-12.01 ppc for bug 411541

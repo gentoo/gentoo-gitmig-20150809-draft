@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.9 2012/03/29 15:11:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.10 2012/05/03 03:26:38 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="x11-libs/qt-gui:4
 	x11-libs/qt-core:4[qt3support]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	local i
