@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.9.ebuild,v 1.6 2012/03/05 15:33:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.9.ebuild,v 1.7 2012/05/03 11:43:54 wired Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -74,6 +74,9 @@ DOCS="AUTHORS BUGS PATCHES README STYLE"
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.4.2-backtrace.patch"
 	epatch "${FILESDIR}/${PN}-3.4.8-cmake-2.8.4.patch"
+
+	# bug #396417
+	epatch "${FILESDIR}/${PN}-glib-fix.patch"
 }
 
 src_configure() {

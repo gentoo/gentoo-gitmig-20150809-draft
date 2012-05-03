@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.9-r1.ebuild,v 1.6 2012/03/05 15:33:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.9-r1.ebuild,v 1.7 2012/05/03 11:43:54 wired Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -76,6 +76,9 @@ src_prepare() {
 		"${FILESDIR}/${PN}-3.4.2-backtrace.patch" \
 		"${FILESDIR}/${PN}-3.4.8-cmake-2.8.4.patch" \
 		"${FILESDIR}/3.4-0001-Update-the-code-following-release-of-xcb-util-0.3.8.patch"
+
+	# bug #396417
+	epatch "${FILESDIR}/${PN}-glib-fix.patch"
 }
 
 src_configure() {
