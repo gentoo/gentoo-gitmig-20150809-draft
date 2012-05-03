@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.9999.ebuild,v 1.4 2012/04/22 21:27:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.9999.ebuild,v 1.5 2012/05/03 03:50:25 mattst88 Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
@@ -28,7 +28,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst/"
 LICENSE="GPL-2"
 SLOT="0"
 RESTRICT=""
-IUSE="ccache"
+IUSE="ccache kernel_linux"
 
 DEPEND="app-text/asciidoc"
 RDEPEND="app-crypt/shash
