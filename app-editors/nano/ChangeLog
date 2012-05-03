@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.268 2012/05/03 18:33:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.269 2012/05/03 20:40:17 maekke Exp $
+
+  03 May 2012; Markus Meier <maekke@gentoo.org> nano-2.3.1-r1.ebuild:
+  arm stable, bug #413897
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> nano-2.3.1-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
