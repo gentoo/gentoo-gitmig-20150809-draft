@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.388 2012/05/03 09:43:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.389 2012/05/03 09:52:13 chainsaw Exp $
+
+*asterisk-1.8.12.0 (03 May 2012)
+
+  03 May 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.10.1.ebuild,
+  +asterisk-1.8.12.0.ebuild:
+  Bugfix release; double FD closure patch by Jaco Kroon finally applied
+  upstream. Also prevents chanspy from binding to zombie channels and removes
+  an unnecessary ISDN hold restrictions on non-bridged calls. Removed
+  vulnerable 1.8 branch ebuild now that a secure version is stable.
 
 *asterisk-10.4.0 (03 May 2012)
 
