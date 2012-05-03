@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.15-r1.ebuild,v 1.3 2012/05/02 04:47:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.15-r1.ebuild,v 1.4 2012/05/03 19:51:45 robbat2 Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib unpacker
 
@@ -102,7 +102,8 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	!<sys-devel/patch-2.6
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="!sys-kernel/ps3-sources
-	selinux? ( sys-libs/libselinux )"
+	selinux? ( sys-libs/libselinux )
+	!sys-libs/nss-db"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	DEPEND="${DEPEND} !crosscompile_opts_headers-only? ( ${CATEGORY}/gcc )"
