@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.582 2012/05/03 20:15:23 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.583 2012/05/03 20:27:33 maekke Exp $
+
+  03 May 2012; Markus Meier <maekke@gentoo.org> php-5.3.11.ebuild:
+  arm stable, bug #410957
 
 *php-5.3.12 (03 May 2012)
 *php-5.4.2 (03 May 2012)
