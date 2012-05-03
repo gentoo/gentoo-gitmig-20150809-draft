@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/stow-2.2.0.ebuild,v 1.2 2012/05/02 13:40:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/stow-2.2.0.ebuild,v 1.3 2012/05/03 04:13:56 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-maco
 IUSE=""
 
 DEPEND="dev-lang/perl
-	test? ( 
+	test? (
 		virtual/perl-Test-Harness
 		dev-perl/Test-Output
 	)"
