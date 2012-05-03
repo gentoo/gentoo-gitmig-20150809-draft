@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1-r1.ebuild,v 1.2 2012/05/01 06:17:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1-r1.ebuild,v 1.3 2012/05/03 19:48:41 grobian Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -52,11 +52,11 @@ arch_binaries="$arch_binaries x86? ( http://code.haskell.org/~slyfox/ghc-x86/ghc
 #arch_binaries="$arch_binaries x86-fbsd? ( http://code.haskell.org/~slyfox/ghc-x86-fbsd/ghc-bin-${PV}-x86-fbsd.tbz2 )"
 
 # prefix ports:
-arch_binaries="$arch_binaries x86-macos? ( http://www.haskell.org/ghc/dist/6.10.1/maeder/ghc-6.10.1-i386-apple-darwin.tar.bz2 )"
+arch_binaries="$arch_binaries x86-macos? ( http://www.haskell.org/ghc/dist/7.4.1/ghc-7.4.1-i386-apple-darwin.tar.bz2 )"
 arch_binaries="$arch_binaries x64-macos? ( http://www.haskell.org/ghc/dist/7.4.1/ghc-7.4.1-x86_64-apple-darwin.tar.bz2 )"
-arch_binaries="$arch_binaries ppc-macos? ( http://www.haskell.org/ghc/dist/6.10.1/maeder/ghc-6.10.1-powerpc-apple-darwin.tar.bz2 )"
-arch_binaries="$arch_binaries x86-solaris? ( http://www.haskell.org/ghc/dist/6.10.4/maeder/ghc-6.10.4-i386-unknown-solaris2.tar.bz2 )"
-arch_binaries="$arch_binaries sparc-solaris? ( http://www.haskell.org/ghc/dist/6.10.4/maeder/ghc-6.10.4-sparc-sun-solaris2.tar.bz2 )"
+arch_binaries="$arch_binaries x86-solaris? ( http://www.haskell.org/ghc/dist/7.0.3/maeder/ghc-7.0.3-i386-unknown-solaris2.tar.bz2 )"
+# need 6.12.3 to bootstrap this
+#arch_binaries="$arch_binaries sparc-solaris? ( http://www.haskell.org/ghc/dist/6.10.4/maeder/ghc-6.10.4-sparc-sun-solaris2.tar.bz2 )"
 
 # 0 - yet
 yet_binary() {
@@ -73,9 +73,7 @@ yet_binary() {
 		x86) return 0 ;;
 		x86-macos) return 0 ;;
 		x64-macos) return 0 ;;
-		ppc-macos) return 0 ;;
 		x86-solaris) return 0 ;;
-		sparc-solaris) return 0 ;;
 		*) return 1 ;;
 	esac
 }
@@ -85,7 +83,7 @@ SRC_URI="!binary? ( http://www.haskell.org/ghc/dist/${PV}/${P}-src.tar.bz2 )"
 LICENSE="BSD"
 SLOT="0"
 # ghc on ia64 needs gcc to support -mcmodel=medium (or some dark hackery) to avoid TOC overflow
-KEYWORDS="~alpha ~amd64 -ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 -ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc ghcbootstrap llvm"
 IUSE+=" binary" # don't forget about me later!
 
@@ -310,9 +308,8 @@ src_prepare() {
 				mkdir "${WORKDIR}"/ghc-bin-installer || die
 				pushd "${WORKDIR}"/ghc-bin-installer > /dev/null || die
 				use sparc-solaris && unpack ghc-6.10.4-sparc-sun-solaris2.tar.bz2
-				use x86-solaris && unpack ghc-6.10.4-i386-unknown-solaris2.tar.bz2
-				use ppc-macos && unpack ghc-6.10.1-powerpc-apple-darwin.tar.bz2
-				use x86-macos && unpack ghc-6.10.1-i386-apple-darwin.tar.bz2
+				use x86-solaris && unpack ghc-7.0.3-i386-unknown-solaris2.tar.bz2
+				use x86-macos && unpack ghc-7.4.1-i386-apple-darwin.tar.bz2
 				use x64-macos && unpack ghc-7.4.1-x86_64-apple-darwin.tar.bz2
 				popd > /dev/null
 
@@ -325,13 +322,8 @@ src_prepare() {
 				if [[ ${CHOST} == *-solaris* ]] ; then
 					export LD_LIBRARY_PATH="${EPREFIX}/$(get_libdir):${EPREFIX}/usr/$(get_libdir):${LD_LIBRARY_PATH}"
 				elif [[ ${CHOST} == *-darwin* ]] ; then
-					# http://hackage.haskell.org/trac/ghc/ticket/2942
-					cd utils/haddock/dist-install/build &> /dev/null && \
-						ln -s Haddock haddock >& /dev/null # fails on IN-sensitive
-
 					local readline_framework=GNUreadline.framework/GNUreadline
-					local gmp_framework6101=/opt/local/lib/libgmp.3.dylib
-					local gmp_framework741=/opt/local/lib/libgmp.10.dylib
+					local gmp_framework=/opt/local/lib/libgmp.10.dylib
 					local ncurses_file=/opt/local/lib/libncurses.5.dylib
 					for binary in $(scanmacho -BRE MH_EXECUTE -F '%F' .) ; do
 						install_name_tool -change \
@@ -339,11 +331,7 @@ src_prepare() {
 							"${EPREFIX}"/lib/libreadline.dylib \
 							${binary} || die
 						install_name_tool -change \
-							${gmp_framework6101} \
-							"${EPREFIX}"/usr/lib/libgmp.dylib \
-							${binary} || die
-						install_name_tool -change \
-							${gmp_framework741} \
+							${gmp_framework} \
 							"${EPREFIX}"/usr/lib/libgmp.dylib \
 							${binary} || die
 						install_name_tool -change \
@@ -376,7 +364,6 @@ src_prepare() {
 		cd "${S}" # otherwise epatch will break
 
 		epatch "${FILESDIR}"/${PN}-7.0.4-CHOST-prefix.patch
-		epatch "${FILESDIR}"/${PN}-7.0.4-darwin8.patch
 		epatch "${FILESDIR}"/${PN}-7.4-rc2-macos-prefix-respect-gcc.patch
 		epatch "${FILESDIR}"/${PN}-7.4.1-darwin-CHOST.patch
 		epatch "${FILESDIR}"/${PN}-7.2.1-freebsd-CHOST.patch
