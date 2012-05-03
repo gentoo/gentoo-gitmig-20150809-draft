@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.6.ebuild,v 1.4 2012/04/30 05:52:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.6.ebuild,v 1.5 2012/05/03 18:33:00 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -53,7 +53,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=app-text/scrollkeeper-0.3.11
 	>=app-text/gnome-doc-utils-0.9.0
 	~app-text/docbook-xml-dtd-4.1.2

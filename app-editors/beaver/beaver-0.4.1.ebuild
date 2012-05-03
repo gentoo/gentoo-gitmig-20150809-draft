@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/beaver-0.4.1.ebuild,v 1.1 2010/10/15 17:01:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/beaver/beaver-0.4.1.ebuild,v 1.2 2012/05/03 18:33:03 jdhore Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	>=x11-libs/gtk+-2.10:2"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 

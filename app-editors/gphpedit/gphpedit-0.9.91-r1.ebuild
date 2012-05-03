@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/gphpedit-0.9.91-r1.ebuild,v 1.5 2011/03/22 18:45:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/gphpedit-0.9.91-r1.ebuild,v 1.6 2012/05/03 18:33:00 jdhore Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.0:2
 
 DEPEND="${RDEPEND}
 		sys-devel/gettext
-		>=dev-util/pkgconfig-0.12.0"
+		virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog README TODO"
 

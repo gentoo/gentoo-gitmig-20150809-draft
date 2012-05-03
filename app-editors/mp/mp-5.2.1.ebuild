@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.1.ebuild,v 1.4 2012/04/28 18:05:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.1.ebuild,v 1.5 2012/05/03 18:33:02 jdhore Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ RDEPEND="
 	app-text/grutatxt"
 DEPEND="${RDEPEND}
 	app-text/grutatxt
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-lang/perl"
 
 src_prepare() {

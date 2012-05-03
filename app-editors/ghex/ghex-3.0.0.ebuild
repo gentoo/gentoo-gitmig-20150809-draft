@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.0.0.ebuild,v 1.6 2012/03/05 21:52:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.0.0.ebuild,v 1.7 2012/05/03 18:33:01 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	>=x11-libs/gtk+-3.0:3
 	>=dev-libs/atk-1"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.41.1
 	>=app-text/gnome-doc-utils-0.9.0
 	>=sys-devel/gettext-0.17"

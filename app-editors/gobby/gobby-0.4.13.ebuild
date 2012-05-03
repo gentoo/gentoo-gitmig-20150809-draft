@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.13.ebuild,v 1.1 2012/02/19 16:27:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.13.ebuild,v 1.2 2012/05/03 18:33:01 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="dev-cpp/glibmm:2
 	x11-libs/gtksourceview:2.0
 	gnome? ( gnome-base/gnome-vfs )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 # There's only one test and it needs X
 RESTRICT="test"

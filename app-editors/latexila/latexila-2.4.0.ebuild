@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.4.0.ebuild,v 1.3 2012/04/29 15:02:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.4.0.ebuild,v 1.4 2012/05/03 18:33:01 jdhore Exp $
 
 EAPI="4"
 CMAKE_MIN_VERSION="2.6.4"
@@ -38,7 +38,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/itstool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 "
 

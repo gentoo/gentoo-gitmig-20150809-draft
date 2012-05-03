@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.1-r1.ebuild,v 1.3 2012/05/01 18:32:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.1-r1.ebuild,v 1.4 2012/05/03 18:33:01 jdhore Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ RDEPEND=">=sys-libs/ncurses-5.9-r1[unicode?]
 	nls? ( sys-devel/gettext )
 	!ncurses? ( slang? ( sys-libs/slang ) )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.3.1-ncurses-pkg-config.patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.2.ebuild,v 1.6 2012/04/29 16:28:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.2.ebuild,v 1.7 2012/05/03 18:33:02 jdhore Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-libs/glib-2.16:2
 	dev-libs/libxml2:2
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-libs/pango
 	nls? (
 		sys-devel/gettext

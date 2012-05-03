@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.4.0.ebuild,v 1.2 2012/05/02 01:36:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.4.0.ebuild,v 1.3 2012/05/03 18:33:02 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -43,7 +43,7 @@ RDEPEND=">=app-editors/gedit-3.2.1[python?]
 	terminal? ( x11-libs/vte:2.90[introspection] )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

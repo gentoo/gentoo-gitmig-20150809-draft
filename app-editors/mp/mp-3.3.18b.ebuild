@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.11 2011/03/27 10:20:03 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.12 2012/05/03 18:33:02 jdhore Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ RDEPEND="!dev-util/rej
 	pcre? ( dev-libs/libpcre )
 	 dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	local myconf="--prefix=${EPREFIX}/usr --without-win32 --without-gtk1"

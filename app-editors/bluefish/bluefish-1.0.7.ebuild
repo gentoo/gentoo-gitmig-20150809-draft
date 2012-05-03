@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.0.7.ebuild,v 1.7 2011/03/29 12:10:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.0.7.ebuild,v 1.8 2012/05/03 18:33:02 jdhore Exp $
 
 EAPI=1
 inherit eutils fdo-mime
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/gtk+:2
 	spell? ( app-text/aspell )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	gnome? ( gnome-base/libgnomeui )"
 

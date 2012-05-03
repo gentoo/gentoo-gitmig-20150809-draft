@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/mp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.86 2012/04/28 18:05:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.87 2012/05/03 18:33:02 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> mp-3.3.18b.ebuild,
+  mp-5.2.1.ebuild, mp-5.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Apr 2012; <nixnut@gentoo.org> mp-5.2.1.ebuild:
   ppc stable #413567

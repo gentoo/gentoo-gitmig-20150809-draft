@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/leafpad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.31 2011/11/17 18:59:50 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/ChangeLog,v 1.32 2012/05/03 18:33:02 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> leafpad-0.8.18.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Change developer's email

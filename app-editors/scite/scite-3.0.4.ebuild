@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.0.4.ebuild,v 1.3 2012/04/30 12:39:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.0.4.ebuild,v 1.4 2012/05/03 18:33:01 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/glib
 	x11-libs/pango
 	lua? ( >=dev-lang/lua-5 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}/${PN}/gtk"
