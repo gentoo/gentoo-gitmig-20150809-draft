@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/efibootmgr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.21 2012/01/13 16:47:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.22 2012/05/03 04:50:13 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> efibootmgr-0.5.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   13 Jan 2012; Mike Frysinger <vapier@gentoo.org> efibootmgr-0.5.4.ebuild:
   Use common tc-getPKG_CONFIG helper.

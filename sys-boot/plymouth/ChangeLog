@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.24 2012/04/23 20:05:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.25 2012/05/03 04:50:13 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> plymouth-0.8.3-r5.ebuild,
+  plymouth-0.8.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   a3li is the new maintainer (as discussed in #gentoo-dev).

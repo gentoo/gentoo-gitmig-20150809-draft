@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r5.ebuild,v 1.4 2012/03/13 11:27:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r5.ebuild,v 1.5 2012/05/03 04:50:13 jdhore Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=media-libs/libpng-1.2.16
 	video_cards_radeon? ( x11-libs/libdrm[video_cards_radeon] )
 	"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	"
 RDEPEND="${COMMON_DEPEND}
 	>=sys-kernel/dracut-008-r1[dracut_modules_plymouth]
