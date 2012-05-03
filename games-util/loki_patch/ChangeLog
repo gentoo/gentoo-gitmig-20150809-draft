@@ -1,6 +1,9 @@
 # ChangeLog for games-util/loki_patch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.12 2010/01/09 18:28:21 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.13 2012/05/03 03:41:15 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> loki_patch-20091105.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   loki_patch-20091105.ebuild:

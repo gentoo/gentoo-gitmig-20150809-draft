@@ -1,6 +1,10 @@
 # ChangeLog for games-util/xboxdrv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.23 2012/04/15 16:51:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.24 2012/05/03 03:41:15 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> xboxdrv-0.8.2.ebuild,
+  xboxdrv-0.8.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Apr 2012; Markus Meier <maekke@gentoo.org> xboxdrv-0.8.4.ebuild:
   x86 stable, bug #411525

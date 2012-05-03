@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.5.ebuild,v 1.10 2011/10/31 00:55:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.5.ebuild,v 1.11 2012/05/03 03:41:15 jdhore Exp $
 
 EAPI=2
 inherit base eutils
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/gtk+:2
 	geoip? ( dev-libs/geoip )
 	bzip2? ( app-arch/bzip2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 # bug #288853

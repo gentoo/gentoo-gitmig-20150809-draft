@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/gtkevemon-9999.ebuild,v 1.1 2011/07/21 15:03:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/gtkevemon-9999.ebuild,v 1.2 2012/05/03 03:41:15 jdhore Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="
 	dev-libs/libxml2
 "
 DEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 src_prepare() {
