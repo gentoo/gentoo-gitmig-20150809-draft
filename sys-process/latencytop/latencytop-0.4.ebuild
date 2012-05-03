@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.4.ebuild,v 1.3 2008/05/12 20:09:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/latencytop-0.4.ebuild,v 1.4 2012/05/03 04:54:03 jdhore Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE="unicode"
 RDEPEND="=dev-libs/glib-2*
 	sys-libs/ncurses"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
