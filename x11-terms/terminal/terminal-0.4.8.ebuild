@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.8.ebuild,v 1.8 2011/10/12 11:34:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.8.ebuild,v 1.9 2012/05/03 07:11:35 jdhore Exp $
 
 EAPI=4
 MY_P=${P/t/T}
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	!gnustep-apps/terminal" #376257
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}

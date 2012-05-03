@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/tilda
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/ChangeLog,v 1.24 2011/03/23 06:21:38 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/ChangeLog,v 1.25 2012/05/03 07:11:34 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> tilda-0.9.5.ebuild,
+  tilda-0.9.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> tilda-0.9.5.ebuild,
   tilda-0.9.6.ebuild:

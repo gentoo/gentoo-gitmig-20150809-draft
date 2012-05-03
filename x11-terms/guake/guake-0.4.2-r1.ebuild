@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.2-r1.ebuild,v 1.2 2012/04/19 09:11:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.2-r1.ebuild,v 1.3 2012/05/03 07:11:33 jdhore Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	dev-python/dbus-python
 	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( dev-util/intltool )"
 
 pkg_setup() {

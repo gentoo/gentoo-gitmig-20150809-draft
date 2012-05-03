@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/tilda-0.9.6.ebuild,v 1.8 2011/03/23 06:21:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/tilda-0.9.6.ebuild,v 1.9 2012/05/03 07:11:35 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/vte:0
 	dev-libs/confuse
 	gnome-base/libglade"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.6-gdk_resources.patch

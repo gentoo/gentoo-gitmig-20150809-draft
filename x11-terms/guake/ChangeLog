@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/guake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.15 2012/04/19 09:11:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.16 2012/05/03 07:11:33 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> guake-0.4.2.ebuild,
+  guake-0.4.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Apr 2012; Pacho Ramos <pacho@gentoo.org> +files/guake-0.4.2-glib2.32.patch,
   guake-0.4.2-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.4.0.1.ebuild,v 1.2 2012/04/13 03:59:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.4.0.1.ebuild,v 1.3 2012/05/03 07:11:33 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.26.0:2
 DEPEND="${RDEPEND}
 	|| ( dev-util/gtk-builder-convert <=x11-libs/gtk+-2.24.10:2 )
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=app-text/gnome-doc-utils-0.3.2
 	>=app-text/scrollkeeper-0.3.11
 	sys-devel/gettext"

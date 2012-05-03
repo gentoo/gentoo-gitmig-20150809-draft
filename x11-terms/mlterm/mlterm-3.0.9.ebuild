@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.0.9.ebuild,v 1.7 2012/04/17 21:42:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.0.9.ebuild,v 1.8 2012/05/03 07:11:34 jdhore Exp $
 
 EAPI="3"
 inherit autotools eutils
@@ -30,7 +30,7 @@ RDEPEND="|| ( sys-libs/libutempter sys-apps/utempter )
 	m17n-lib? ( >=dev-libs/m17n-lib-1.2.0 )"
 #	vte? ( x11-libs/vte )
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {

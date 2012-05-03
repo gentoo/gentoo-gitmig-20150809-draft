@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-276.ebuild,v 1.10 2012/03/03 16:34:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-276.ebuild,v 1.11 2012/05/03 07:11:34 jdhore Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -30,7 +30,7 @@ COMMON_DEPEND="kernel_linux? ( sys-libs/libutempter )
 RDEPEND="${COMMON_DEPEND}
 	media-fonts/font-misc-misc"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/kbproto
 	x11-proto/xproto"
 

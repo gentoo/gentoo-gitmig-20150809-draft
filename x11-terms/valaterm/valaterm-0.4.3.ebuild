@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/valaterm-0.4.3.ebuild,v 1.1 2012/01/14 16:50:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/valaterm-0.4.3.ebuild,v 1.2 2012/05/03 07:11:35 jdhore Exp $
 
 EAPI=4
 inherit waf-utils
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2
 	x11-libs/vte:2.90"
 DEPEND="${RDEPEND}
 	>=dev-lang/vala-0.13.2:${PN_vala_version}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? (
 		dev-util/intltool
 		sys-devel/gettext

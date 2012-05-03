@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.218 2012/03/31 17:44:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.219 2012/05/03 07:11:35 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> rxvt-unicode-9.15.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   31 Mar 2012; Jeroen Roovers <jer@gentoo.org>
   -files/rxvt-unicode-9.10-force-hints.patch, -rxvt-unicode-9.12-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.3.4.ebuild,v 1.4 2012/03/15 07:29:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.3.4.ebuild,v 1.5 2012/05/03 07:11:34 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/dbus-glib
 	x11-libs/vte:2.90"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-python/lockfile
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	nls? ( app-text/po4a sys-devel/gettext )"

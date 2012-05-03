@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.4.2.ebuild,v 1.4 2011/10/28 09:19:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.4.2.ebuild,v 1.5 2012/05/03 07:11:34 jdhore Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -22,7 +22,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.10.1
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 PATCHES=( "${FILESDIR}"/${P}-cflags.patch )
