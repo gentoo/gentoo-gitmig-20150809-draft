@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.7.4.ebuild,v 1.1 2012/03/03 21:00:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.7.4.ebuild,v 1.2 2012/05/03 06:35:31 jdhore Exp $
 
 EAPI="4"
 
@@ -36,7 +36,7 @@ RDEPEND="media-libs/freetype:2
 	zip? ( sys-libs/zlib dev-libs/zziplib )"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )"
 

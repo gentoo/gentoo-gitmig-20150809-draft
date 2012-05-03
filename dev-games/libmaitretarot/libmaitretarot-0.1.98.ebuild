@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmaitretarot/libmaitretarot-0.1.98.ebuild,v 1.9 2010/11/08 19:54:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmaitretarot/libmaitretarot-0.1.98.ebuild,v 1.10 2012/05/03 06:35:31 jdhore Exp $
 
 DESCRIPTION="backend library for the maitretarot games"
 HOMEPAGE="http://www.nongnu.org/maitretarot/"
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND="=dev-libs/glib-2*
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.4.ebuild,v 1.2 2012/02/07 10:02:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.4.ebuild,v 1.3 2012/05/03 06:35:30 jdhore Exp $
 
 EAPI=2
 inherit flag-o-matic eutils autotools-utils
@@ -38,7 +38,7 @@ RDEPEND="sys-libs/zlib
 		media-libs/alsa-lib
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen dev-lang/perl )"
 
 S="${WORKDIR}"/${MY_P}

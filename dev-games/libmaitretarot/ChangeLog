@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libmaitretarot
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmaitretarot/ChangeLog,v 1.6 2010/11/08 19:54:09 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmaitretarot/ChangeLog,v 1.7 2012/05/03 06:35:31 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> libmaitretarot-0.1.98.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   08 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   libmaitretarot-0.1.98.ebuild:

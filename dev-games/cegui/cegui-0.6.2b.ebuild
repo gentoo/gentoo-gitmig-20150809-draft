@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.11 2011/07/13 13:34:58 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.12 2012/05/03 06:35:30 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -34,7 +34,7 @@ RDEPEND="dev-libs/libpcre
 	xerces-c? ( dev-libs/xerces-c )
 	xml? ( dev-libs/libxml2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

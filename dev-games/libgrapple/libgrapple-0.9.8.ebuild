@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/libgrapple-0.9.8.ebuild,v 1.2 2009/10/25 13:11:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/libgrapple-0.9.8.ebuild,v 1.3 2012/05/03 06:35:31 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -16,7 +16,7 @@ IUSE="ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch

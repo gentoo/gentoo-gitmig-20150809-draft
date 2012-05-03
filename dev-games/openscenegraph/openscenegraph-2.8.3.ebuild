@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.18 2011/10/14 09:50:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.19 2012/05/03 06:35:31 jdhore Exp $
 
 EAPI=2
 
@@ -74,7 +74,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xextproto
 	doc? ( app-doc/doxygen )
 	xrandr? ( x11-proto/randrproto )

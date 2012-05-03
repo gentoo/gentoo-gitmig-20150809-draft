@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.73 2012/03/03 21:00:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.74 2012/05/03 06:35:31 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> ogre-1.6.5.ebuild,
+  ogre-1.7.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *ogre-1.7.4 (03 Mar 2012)
 

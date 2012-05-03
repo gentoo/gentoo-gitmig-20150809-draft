@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.10 2011/09/04 21:49:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.11 2012/05/03 06:35:31 jdhore Exp $
 
 EAPI=2
 inherit multilib eutils autotools flag-o-matic
@@ -30,7 +30,7 @@ RDEPEND="dev-libs/zziplib
 DEPEND="${RDEPEND}
 	!dev-games/ogre
 	x11-proto/xf86vidmodeproto
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}
 

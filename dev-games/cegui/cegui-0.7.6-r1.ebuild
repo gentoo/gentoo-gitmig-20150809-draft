@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.6-r1.ebuild,v 1.1 2012/03/03 21:25:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.6-r1.ebuild,v 1.2 2012/05/03 06:35:30 jdhore Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ RDEPEND="bidi? ( dev-libs/fribidi )
 	xml? ( dev-libs/libxml2 )
 	zip? ( sys-libs/zlib[minizip] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/mercator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.21 2012/02/27 21:12:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.22 2012/05/03 06:35:31 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> mercator-0.2.9.ebuild,
+  mercator-0.3.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Feb 2012; Tupone Alfredo <tupone@gentoo.org> mercator-0.3.0.ebuild,
   +files/mercator-0.3.0-gentoo.patch:
