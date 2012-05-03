@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.9-r1.ebuild,v 1.3 2012/02/17 17:13:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.9-r1.ebuild,v 1.4 2012/05/03 07:51:48 jdhore Exp $
 
 EAPI=4
 inherit eutils fdo-mime toolchain-funcs
@@ -17,7 +17,7 @@ IUSE="nls"
 RDEPEND=">=dev-libs/iniparser-3.0.0
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {

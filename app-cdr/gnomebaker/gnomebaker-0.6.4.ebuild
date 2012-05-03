@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4.ebuild,v 1.8 2011/03/27 09:59:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4.ebuild,v 1.9 2012/05/03 07:51:48 jdhore Exp $
 
 EAPI=3
 GCONF_DEBUG=no
@@ -35,7 +35,7 @@ RDEPEND=">=x11-libs/gtk+-2.8:2
 DEPEND="${RDEPEND}
 	app-text/rarian
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.6_p0.ebuild,v 1.1 2010/03/19 12:37:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.6_p0.ebuild,v 1.2 2012/05/03 07:51:49 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	mpeg? ( media-libs/libmpeg2 )
 	media-video/mplayer"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext
 		dev-util/intltool )
 	sys-apps/sed"

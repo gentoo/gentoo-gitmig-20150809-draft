@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5-r1.ebuild,v 1.8 2011/03/27 10:02:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5-r1.ebuild,v 1.9 2012/05/03 07:51:50 jdhore Exp $
 
 EAPI="1"
 
@@ -32,7 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2.4:2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 S=${WORKDIR}/${P/_p/-}

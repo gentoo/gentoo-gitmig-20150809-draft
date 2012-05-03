@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.8 2011/04/11 06:11:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.9 2012/05/03 07:51:49 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -31,7 +31,7 @@ RDEPEND="virtual/cdrtools
 		media-libs/libao )
 	!app-cdr/cue2toc"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	pccts? ( >=dev-util/pccts-1.33.24-r1 )"
 
 S=${WORKDIR}/${P/_}

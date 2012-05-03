@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha16-r1.ebuild,v 1.4 2011/08/07 12:44:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha16-r1.ebuild,v 1.5 2012/05/03 07:51:50 jdhore Exp $
 
 EAPI=2
 inherit gnome2-utils eutils
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2:2
 	app-cdr/cdrtools"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_/}
 

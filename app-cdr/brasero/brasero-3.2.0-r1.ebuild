@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-3.2.0-r1.ebuild,v 1.1 2011/11/04 08:20:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-3.2.0-r1.ebuild,v 1.2 2012/05/03 07:51:48 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -49,7 +49,7 @@ RDEPEND="${COMMON_DEPEND}
 	packagekit? ( app-admin/packagekit-base )"
 DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool
 	gnome-base/gnome-common:3

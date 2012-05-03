@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xcdroast
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.71 2011/08/07 12:44:19 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.72 2012/05/03 07:51:50 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> xcdroast-0.98_alpha16.ebuild,
+  xcdroast-0.98_alpha16-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xcdroast-0.98_alpha16.ebuild, xcdroast-0.98_alpha16-r1.ebuild:

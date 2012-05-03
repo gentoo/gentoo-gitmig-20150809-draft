@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.4.0.ebuild,v 1.2 2012/01/18 12:08:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.4.0.ebuild,v 1.3 2012/05/03 07:51:49 jdhore Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ RDEPEND=">=app-cdr/cdemud-1.4.0
 	libnotify? ( dev-python/notify-python )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.21
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog README"

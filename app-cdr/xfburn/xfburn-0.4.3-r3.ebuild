@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r3.ebuild,v 1.6 2012/04/03 11:21:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r3.ebuild,v 1.7 2012/05/03 07:51:49 jdhore Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.22
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10.20:0.10 )
 	udev? ( || ( >=sys-fs/udev-171-r1[gudev] <sys-fs/udev-171-r1[extras] ) )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 

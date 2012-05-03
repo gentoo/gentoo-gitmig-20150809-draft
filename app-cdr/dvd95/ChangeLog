@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvd95
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.9 2010/03/19 12:37:23 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.10 2012/05/03 07:51:49 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> dvd95-1.5_p3.ebuild,
+  dvd95-1.6_p0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *dvd95-1.6_p0 (19 Mar 2010)
 

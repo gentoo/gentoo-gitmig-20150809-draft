@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.8 2012/01/28 11:59:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.9 2012/05/03 07:51:48 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -45,7 +45,7 @@ RDEPEND="${COMMON_DEPEND}
 	!libburn? ( virtual/cdrtools )"
 DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool
 	gnome-base/gnome-common:3

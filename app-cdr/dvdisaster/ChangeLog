@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvdisaster
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.24 2012/04/26 20:21:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.25 2012/05/03 07:51:49 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> dvdisaster-0.72.2.ebuild,
+  dvdisaster-0.72.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *dvdisaster-0.72.4 (26 Apr 2012)
 

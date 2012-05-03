@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.50 2012/02/09 10:20:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.51 2012/05/03 07:51:50 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> graveman-0.3.12_p5-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
