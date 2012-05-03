@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.86 2012/03/31 17:54:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.87 2012/05/03 19:46:26 titanofold Exp $
+
+  03 May 2012; Aaron W. Swenson <titanofold@gentoo.org> -libpqxx-2.6.9.ebuild,
+  -files/libpqxx-2.6.9-gcc43.patch, -files/libpqxx-2.6.9-gcc44.patch,
+  -libpqxx-3.1-r3.ebuild, -files/libpqxx-3.1-gcc46.patch, -libpqxx-4.0.ebuild:
+  Clean out old versions that do not build with newer versions of GCC. Fixes
+  bug 414131.
 
   31 Mar 2012; Raúl Porcel <armin76@gentoo.org> libpqxx-4.0-r1.ebuild:
   ia64/sparc/x86 stable wrt #396483
