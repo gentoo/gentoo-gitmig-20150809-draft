@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.10 2011/03/29 12:02:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.11 2012/05/03 02:46:49 jdhore Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ RDEPEND=">=dev-scheme/guile-1.6.4
 	>=x11-libs/pango-1.14
 	dev-scheme/guile-lib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 #needs guile with networking
 RESTRICT=test

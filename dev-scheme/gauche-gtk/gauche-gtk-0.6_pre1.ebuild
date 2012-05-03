@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/gauche-gtk-0.6_pre1.ebuild,v 1.1 2011/11/27 08:05:49 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/gauche-gtk-0.6_pre1.ebuild,v 1.2 2012/05/03 02:46:49 jdhore Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ IUSE="examples glgd nls opengl"
 RESTRICT="test"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="x11-libs/gtk+:2
 	dev-scheme/gauche
 	opengl? (

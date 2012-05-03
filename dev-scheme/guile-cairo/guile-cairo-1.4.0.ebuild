@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/guile-cairo-1.4.0.ebuild,v 1.9 2010/06/27 13:44:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/guile-cairo-1.4.0.ebuild,v 1.10 2012/05/03 02:46:49 jdhore Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE="test"
 RDEPEND=">=dev-scheme/guile-1.8
 	>=x11-libs/cairo-1.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-scheme/guile-lib )"
 
 src_configure() {
