@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.4-r1.ebuild,v 1.3 2012/04/20 19:36:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.4-r1.ebuild,v 1.4 2012/05/03 04:35:53 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="sys-libs/zlib
 	dev-libs/boost"
 DEPEND="${RDEPEND}
 	dev-util/scons
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RESTRICT="test" # boost's test API has changed
 

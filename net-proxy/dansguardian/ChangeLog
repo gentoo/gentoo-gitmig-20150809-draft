@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dansguardian
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.51 2011/11/11 20:37:34 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.52 2012/05/03 04:35:53 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> dansguardian-2.10.0.3.ebuild,
+  dansguardian-2.10.1.1.ebuild, dansguardian-2.10.1.1-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *dansguardian-2.10.1.1-r1 (11 Nov 2011)
 

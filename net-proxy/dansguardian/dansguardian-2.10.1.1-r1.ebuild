@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.1.1-r1.ebuild,v 1.1 2011/11/11 17:24:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.1.1-r1.ebuild,v 1.2 2012/05/03 04:35:53 jdhore Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND="sys-libs/zlib
 	pcre? ( dev-libs/libpcre )
 	clamav? ( >=app-antivirus/clamav-0.93 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	if has_version "<${CATEGORY}/${PN}-2.9" ; then

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.0.3.ebuild,v 1.6 2009/07/05 00:04:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.0.3.ebuild,v 1.7 2012/05/03 04:35:53 jdhore Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND="sys-libs/zlib
 	pcre? ( dev-libs/libpcre )
 	clamav? ( >=app-antivirus/clamav-0.93 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	if has_version "<${CATEGORY}/${PN}-2.9" ; then
