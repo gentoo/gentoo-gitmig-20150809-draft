@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.8 2009/12/08 19:03:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.9 2012/05/03 19:52:55 robbat2 Exp $
 
 inherit eutils versionator multilib autotools
 
@@ -25,7 +25,8 @@ IUSE="nls"
 RDEPEND=">=sys-libs/db-4
 		 sys-apps/gawk
 		 sys-devel/make
-		 >=sys-libs/glibc-2.3"
+		 >=sys-libs/glibc-2.3
+		 !>=sys-libs/glibc-2.15"
 # We really do need gettext to compile always :-(
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
