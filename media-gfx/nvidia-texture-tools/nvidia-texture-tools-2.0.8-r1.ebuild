@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/nvidia-texture-tools-2.0.8.ebuild,v 1.3 2012/05/03 20:18:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-texture-tools/nvidia-texture-tools-2.0.8-r1.ebuild,v 1.1 2012/05/03 20:51:48 hasufell Exp $
 
 EAPI=4
 inherit cmake-utils eutils multilib toolchain-funcs
@@ -51,6 +51,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DLIBDIR=$(get_libdir)
+		-DNVTT_SHARED=TRUE
 		$(cmake-utils_use cg CG)
 		$(cmake-utils_use cuda CUDA)
 		$(cmake-utils_use glew GLEW)
