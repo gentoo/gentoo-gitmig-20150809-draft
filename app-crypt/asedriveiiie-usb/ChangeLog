@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/asedriveiiie-usb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/ChangeLog,v 1.8 2010/12/26 17:41:03 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/ChangeLog,v 1.9 2012/05/03 18:16:40 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> asedriveiiie-usb-3.5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -asedriveiiie-usb-3.4.ebuild:

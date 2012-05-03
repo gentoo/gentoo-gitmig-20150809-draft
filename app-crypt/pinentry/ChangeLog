@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.117 2012/02/18 18:58:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.118 2012/05/03 18:16:39 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> pinentry-0.8.0.ebuild,
+  pinentry-0.8.0-r1.ebuild, pinentry-0.8.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 Feb 2012; Fabian Groffen <grobian@gentoo.org> pinentry-0.8.1.ebuild:
   Remove existing file in Prefix

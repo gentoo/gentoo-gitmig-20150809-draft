@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/coolkey-1.1.0-r2.ebuild,v 1.1 2010/09/25 03:55:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/coolkey-1.1.0-r2.ebuild,v 1.2 2012/05/03 18:16:38 jdhore Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ IUSE="debug"
 RDEPEND="sys-apps/pcsc-lite
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 EPATCH_OPTS="-F3 -l"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/eid-mw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.1 2012/04/07 22:58:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.2 2012/05/03 18:16:39 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> eid-mw-4.0.2_p1188.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *eid-mw-4.0.2_p1188 (07 Apr 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/seahorse-sharing-3.4.0.ebuild,v 1.1 2012/04/21 07:59:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/seahorse-sharing-3.4.0.ebuild,v 1.2 2012/05/03 18:16:39 jdhore Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ RDEPEND="${COMMON_DEPEND}
 # ${PN} was part of seahorse before 3.2
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.35
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

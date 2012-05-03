@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.11.ebuild,v 1.1 2011/12/20 19:30:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.11.ebuild,v 1.2 2012/05/03 18:16:38 jdhore Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.acs.com.hk"
 RDEPEND=">=sys-apps/pcsc-lite-1.6.4
 	dev-libs/libusb-compat"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

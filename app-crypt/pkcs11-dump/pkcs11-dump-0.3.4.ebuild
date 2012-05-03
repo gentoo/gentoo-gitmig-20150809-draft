@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcs11-dump/pkcs11-dump-0.3.4.ebuild,v 1.1 2011/04/14 08:50:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcs11-dump/pkcs11-dump-0.3.4.ebuild,v 1.2 2012/05/03 18:16:39 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/openssl-0.9.7:0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

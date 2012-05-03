@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.10.ebuild,v 1.6 2011/10/20 22:42:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.10.ebuild,v 1.7 2012/05/03 18:16:38 jdhore Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/libgringotts-1.2
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Drop DEPRECATION flags, bug #387831

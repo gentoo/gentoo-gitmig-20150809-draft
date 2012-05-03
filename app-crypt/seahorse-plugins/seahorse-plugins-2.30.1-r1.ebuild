@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.30.1-r1.ebuild,v 1.8 2011/02/06 12:58:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.30.1-r1.ebuild,v 1.9 2012/05/03 18:16:37 jdhore Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=app-text/gnome-doc-utils-0.3.2
 	>=app-text/scrollkeeper-0.3
-	>=dev-util/pkgconfig-0.20
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35"
 
 pkg_setup() {

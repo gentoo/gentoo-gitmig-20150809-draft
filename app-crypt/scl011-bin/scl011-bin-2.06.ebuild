@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scl011-bin/scl011-bin-2.06.ebuild,v 1.1 2011/04/15 17:39:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scl011-bin/scl011-bin-2.06.ebuild,v 1.2 2012/05/03 18:16:38 jdhore Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="sys-apps/pcsc-lite"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}"
 

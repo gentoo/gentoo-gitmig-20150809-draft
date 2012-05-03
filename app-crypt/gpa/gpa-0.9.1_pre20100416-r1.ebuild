@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.1_pre20100416-r1.ebuild,v 1.2 2011/03/27 10:03:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.1_pre20100416-r1.ebuild,v 1.3 2012/05/03 18:16:38 jdhore Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.10.0:2
 	>=app-crypt/gnupg-2
 	>=app-crypt/gpgme-1.2.0"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.7
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/eid-mw-4.0.2_p1188.ebuild,v 1.1 2012/04/07 22:58:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/eid-mw-4.0.2_p1188.ebuild,v 1.2 2012/05/03 18:16:39 jdhore Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ RDEPEND="gtk? ( x11-libs/gtk+:2 )
 
 DEPEND="${RDEPEND}
 	app-arch/zip
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 if [[ ${PV} == "9999" ]]; then
 	src_prepare() {

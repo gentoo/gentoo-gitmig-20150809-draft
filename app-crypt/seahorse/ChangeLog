@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.152 2011/11/17 06:11:08 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.153 2012/05/03 18:16:39 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> seahorse-2.32.0.ebuild,
+  seahorse-3.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *seahorse-3.2.2 (17 Nov 2011)
 

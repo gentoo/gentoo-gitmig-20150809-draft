@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-3.3.0.ebuild,v 1.2 2009/06/25 18:17:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-3.3.0.ebuild,v 1.3 2012/05/03 18:16:38 jdhore Exp $
 
 EAPI="1"
 inherit eutils
@@ -18,7 +18,7 @@ CDEPEND="dev-libs/openssl
 		 net-libs/netwib
 		 qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="app-arch/unzip
-		>=dev-util/pkgconfig-0.22
+		virtual/pkgconfig
 		${CDEPEND}"
 RDEPEND="app-crypt/ophcrack-tables
 		 ${CDEPEND}"

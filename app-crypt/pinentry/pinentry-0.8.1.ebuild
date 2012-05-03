@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.1.ebuild,v 1.4 2012/02/18 18:58:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.1.ebuild,v 1.5 2012/05/03 18:16:39 jdhore Exp $
 
 EAPI=3
 
@@ -26,8 +26,8 @@ RDEPEND="app-admin/eselect-pinentry
 	caps? ( sys-libs/libcap )"
 DEPEND="${RDEPEND}
 	!static? (
-		gtk? ( dev-util/pkgconfig )
-		qt4? ( dev-util/pkgconfig )
+		gtk? ( virtual/pkgconfig )
+		qt4? ( virtual/pkgconfig )
 	)"
 
 pkg_setup() {

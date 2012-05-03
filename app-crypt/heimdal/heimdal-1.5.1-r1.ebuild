@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1-r1.ebuild,v 1.8 2012/01/17 17:23:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1-r1.ebuild,v 1.9 2012/05/03 18:16:39 jdhore Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"
@@ -36,7 +36,7 @@ RDEPEND="ssl? ( dev-libs/openssl )
 
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/autoconf-2.62
 	test? ( X? ( ${VIRTUALX_DEPEND} ) )"
 
