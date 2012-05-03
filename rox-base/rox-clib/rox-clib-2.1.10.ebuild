@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.9 2011/03/29 10:32:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.10 2012/05/03 04:40:44 jdhore Exp $
 
 EAPI=1
 inherit multilib
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/gtk+:2
 	dev-libs/libxml2:2"
 
 DEPEND="$RDEPEND
-	>=dev-util/pkgconfig-0.20
+	virtual/pkgconfig
 	rox-base/zeroinstall-injector"
 
 S=${WORKDIR}/ROX-CLib

@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-clib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.34 2011/03/29 10:32:58 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.35 2012/05/03 04:40:44 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> rox-clib-2.1.10.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> rox-clib-2.1.10.ebuild:
   Fixed slot deps

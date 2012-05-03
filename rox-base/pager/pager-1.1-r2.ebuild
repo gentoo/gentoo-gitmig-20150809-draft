@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/pager-1.1-r2.ebuild,v 1.6 2011/03/21 22:34:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/pager-1.1-r2.ebuild,v 1.7 2012/05/03 04:40:44 jdhore Exp $
 
 EAPI="1"
 
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND=">=x11-libs/libwnck-2.4.0:1"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.20"
+	virtual/pkgconfig"
 
 APPNAME=Pager
 APPNAME_COLLISION=True

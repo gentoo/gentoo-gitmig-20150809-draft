@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.10.ebuild,v 1.6 2011/03/29 10:29:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.10.ebuild,v 1.7 2012/05/03 04:40:44 jdhore Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -30,7 +30,7 @@ PDEPEND="rox-base/mime-editor
 		video? ( rox-extra/videothumbnail )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.20"
+	virtual/pkgconfig"
 
 APPNAME="ROX-Filer"
 APPDIR="/usr/$(get_libdir)/rox"
