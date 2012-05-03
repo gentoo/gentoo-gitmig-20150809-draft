@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ideviceinstaller/ideviceinstaller-1.0.0.ebuild,v 1.1 2011/03/29 08:11:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ideviceinstaller/ideviceinstaller-1.0.0.ebuild,v 1.2 2012/05/03 20:20:59 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -18,7 +18,7 @@ RDEPEND=">=app-pda/libimobiledevice-1.0.0
 	>=app-pda/libplist-0.15
 	>=dev-libs/libzip-0.8"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libgen_h.patch

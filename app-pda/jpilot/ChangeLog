@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.47 2011/06/15 20:42:05 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.48 2012/05/03 20:20:57 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> jpilot-1.8.0.ebuild,
+  jpilot-1.8.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *jpilot-1.8.1 (15 Jun 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/fusepod
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/fusepod/ChangeLog,v 1.1 2011/03/30 15:42:33 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/fusepod/ChangeLog,v 1.2 2012/05/03 20:20:58 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> fusepod-0.5.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *fusepod-0.5.2 (30 Mar 2011)
 

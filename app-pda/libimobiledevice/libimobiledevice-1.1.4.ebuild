@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4.ebuild,v 1.1 2012/04/12 14:41:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4.ebuild,v 1.2 2012/05/03 20:20:59 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.7"
@@ -24,7 +24,7 @@ RDEPEND=">=app-pda/libplist-1.8-r1[python?]
 		)
 	!gnutls? ( dev-libs/openssl:0 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	python? ( >=dev-python/cython-0.13 )"
 
 DOCS="AUTHORS NEWS README"

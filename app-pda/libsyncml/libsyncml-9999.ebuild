@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.6 2009/11/15 21:14:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/libsyncml-9999.ebuild,v 1.7 2012/05/03 20:20:59 jdhore Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.12
 		net-wireless/bluez
 		>=dev-libs/openobex-1.1[bluetooth] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	test? ( >=dev-libs/check-0.9.7 )"
 

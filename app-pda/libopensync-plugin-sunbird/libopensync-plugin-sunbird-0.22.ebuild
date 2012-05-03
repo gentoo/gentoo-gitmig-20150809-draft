@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-sunbird/libopensync-plugin-sunbird-0.22.ebuild,v 1.5 2011/03/19 07:17:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-sunbird/libopensync-plugin-sunbird-0.22.ebuild,v 1.6 2012/05/03 20:21:00 jdhore Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ RDEPEND="~app-pda/libopensync-${PV}
 	dev-libs/libxml2
 	net-libs/neon"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e 's: -Werror::g' src/Makefile.in

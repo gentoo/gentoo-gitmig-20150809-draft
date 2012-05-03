@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/jpilot-syncmal-0.81.ebuild,v 1.2 2011/03/24 07:22:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/jpilot-syncmal-0.81.ebuild,v 1.3 2012/05/03 20:21:00 jdhore Exp $
 
 EAPI=2
 inherit multilib
@@ -19,7 +19,7 @@ RDEPEND=">=app-pda/jpilot-0.99.9
 	>=x11-libs/gtk+-2.8.19:2
 	>=dev-libs/libmal-0.44"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

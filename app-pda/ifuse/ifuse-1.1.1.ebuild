@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ifuse-1.1.1.ebuild,v 1.1 2011/03/29 02:45:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ifuse-1.1.1.ebuild,v 1.2 2012/05/03 20:21:00 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -18,7 +18,7 @@ RDEPEND=">=app-pda/libimobiledevice-1.0.0
 	>=dev-libs/glib-2.14.1
 	>=sys-fs/fuse-2.7.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.0-asneeded.patch

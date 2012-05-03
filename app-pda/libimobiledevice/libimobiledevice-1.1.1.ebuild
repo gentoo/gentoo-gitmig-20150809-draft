@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.1.ebuild,v 1.6 2012/04/03 04:35:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.1.ebuild,v 1.7 2012/05/03 20:20:59 jdhore Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -26,7 +26,7 @@ RDEPEND=">=app-pda/libplist-1.4
 	sys-fs/fuse
 	virtual/libusb:1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	python? ( >=dev-lang/swig-2.0.0 )"
 
 pkg_setup() {

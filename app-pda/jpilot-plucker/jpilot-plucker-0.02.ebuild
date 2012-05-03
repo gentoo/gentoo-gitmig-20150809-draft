@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/jpilot-plucker-0.02.ebuild,v 1.4 2011/03/24 07:23:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/jpilot-plucker-0.02.ebuild,v 1.5 2012/05/03 20:21:00 jdhore Exp $
 
 EAPI=2
 inherit multilib
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.18.9:2
 	>=app-pda/pilot-link-0.12.3
 	>=app-pda/jpilot-0.99.7-r1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

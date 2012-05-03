@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.11 2011/03/29 06:13:02 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.12 2012/05/03 20:20:56 jdhore Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/libusb:0
 			  >=dev-libs/libtar-1.2.11-r2 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc?	( >=app-doc/doxygen-1.5.6 )"
 
 src_prepare() {

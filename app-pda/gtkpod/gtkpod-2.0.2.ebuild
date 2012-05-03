@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.0.2.ebuild,v 1.3 2011/09/16 13:34:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.0.2.ebuild,v 1.4 2012/05/03 20:20:57 jdhore Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -34,7 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 	gstreamer? ( media-plugins/gst-plugins-meta:0.10 )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-kernel/linux-headers
 	sys-devel/flex
 	sys-devel/gettext"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.17.1.ebuild,v 1.1 2011/04/13 07:10:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.17.1.ebuild,v 1.2 2012/05/03 20:20:56 jdhore Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ RDEPEND="
 	opensync? ( ~app-pda/libopensync-0.22 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	doc?	( >=app-doc/doxygen-1.5.6 )
 	nls?	( >=sys-devel/gettext-0.17 )"
 

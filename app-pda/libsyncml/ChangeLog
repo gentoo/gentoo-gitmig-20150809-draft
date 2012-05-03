@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libsyncml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.19 2010/01/15 00:38:27 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.20 2012/05/03 20:20:59 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> libsyncml-0.5.4.ebuild,
+  libsyncml-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org>
   libsyncml-0.5.4.ebuild:

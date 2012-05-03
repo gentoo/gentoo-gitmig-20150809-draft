@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-mail/jpilot-mail-0.1.7.ebuild,v 1.1 2011/03/30 22:49:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-mail/jpilot-mail-0.1.7.ebuild,v 1.2 2012/05/03 20:20:57 jdhore Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	>=app-pda/jpilot-0.99.7-r1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
