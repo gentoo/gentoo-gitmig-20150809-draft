@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.13 2012/03/21 21:53:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.14 2012/05/03 03:03:43 vapier Exp $
+
+  03 May 2012; Mike Frysinger <vapier@gentoo.org> udev-init-scripts-10.ebuild,
+  udev-init-scripts-9999.ebuild:
+  eat spurious leading space
 
   21 Mar 2012; William Hubbs <williamh@gentoo.org>
   udev-init-scripts-9999.ebuild:
