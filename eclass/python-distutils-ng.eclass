@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.14 2012/05/02 21:40:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.15 2012/05/03 00:31:58 floppym Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -134,7 +134,7 @@ _python-distutils-ng_run_for_impl() {
 	local impl="${1}"
 	local command="${2}"
 
-	S="${WORKDIR}/impl_${impl}/${_PACKAGE_SPECIFIC_S}"
+	local S="${WORKDIR}/impl_${impl}/${_PACKAGE_SPECIFIC_S}"
 	PYTHON="$(_python-distutils-ng_get_binary_for_implementation "${impl}")"
 	EPYTHON="${impl/_/.}"
 
@@ -384,7 +384,6 @@ python-distutils-ng_src_install() {
 			_python-distutils-ng_default_distutils_install
 	fi
 
-	S="${WORKDIR}/${_PACKAGE_SPECIFIC_S}"
 	if type python_install_all &> /dev/null; then
 		einfo "Running python_install_all in ${S} for all"
 		pushd "${S}" &> /dev/null
