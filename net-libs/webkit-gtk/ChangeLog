@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.160 2012/05/02 06:37:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.161 2012/05/03 06:59:47 tetromino Exp $
+
+*webkit-gtk-1.8.1-r301 (03 May 2012)
+*webkit-gtk-1.8.1-r201 (03 May 2012)
+
+  03 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +webkit-gtk-1.8.1-r201.ebuild, +webkit-gtk-1.8.1-r301.ebuild,
+  +files/webkit-gtk-1.8.1-CodeGeneratorGObject-properties.patch,
+  +files/webkit-gtk-1.8.1-tests-xvfb.patch:
+  Fix build failure with USE=-gstreamer (bug #412221, thanks to Paweł Rumian).
 
 *webkit-gtk-1.8.1-r300 (02 May 2012)
 *webkit-gtk-1.8.1-r200 (02 May 2012)
