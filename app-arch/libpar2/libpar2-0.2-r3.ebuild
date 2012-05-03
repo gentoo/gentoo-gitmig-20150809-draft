@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/libpar2-0.2-r3.ebuild,v 1.5 2012/02/27 17:36:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/libpar2-0.2-r3.ebuild,v 1.6 2012/05/03 01:58:53 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="static-libs"
 
 RDEPEND="dev-libs/libsigc++:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}"/${P}-bugfixes.patch )
 

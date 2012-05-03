@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.2.2.ebuild,v 1.1 2012/02/12 15:51:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.2.2.ebuild,v 1.2 2012/05/03 01:58:53 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -31,7 +31,7 @@ RDEPEND=">=dev-libs/glib-2.29.14:2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.40.0
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/gnome-doc-utils"
 # eautoreconf needs:
 #	gnome-base/gnome-common

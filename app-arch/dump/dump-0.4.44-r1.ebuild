@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.44-r1.ebuild,v 1.6 2012/01/31 19:45:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.44-r1.ebuild,v 1.7 2012/05/03 01:58:54 jdhore Exp $
 
 EAPI="4"
 inherit eutils autotools
@@ -24,7 +24,7 @@ RDEPEND=">=sys-fs/e2fsprogs-1.27
 		sys-libs/ncurses
 		static? ( sys-libs/ncurses[static-libs] ) )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	virtual/os-headers"
 
 src_prepare() {

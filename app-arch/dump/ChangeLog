@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.70 2012/01/31 19:46:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.71 2012/05/03 01:58:54 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> dump-0.4.44-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/dump-0.4b43-pkg_config4blkid.patch,

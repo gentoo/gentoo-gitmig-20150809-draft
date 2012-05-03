@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/xarchiver-0.5.2-r3.ebuild,v 1.5 2012/02/13 21:31:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/xarchiver-0.5.2-r3.ebuild,v 1.6 2012/05/03 01:58:53 jdhore Exp $
 
 EAPI=4
 inherit xfconf
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/gtk+-2.10:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	PATCHES=(
