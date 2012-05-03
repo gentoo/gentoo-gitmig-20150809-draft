@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.68 2012/03/24 16:30:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.69 2012/05/03 22:13:27 polynomial-c Exp $
+
+  03 May 2012; Lars Wendler <polynomial-c@gentoo.org> xorg-drivers-1.9.ebuild:
+  non-maintainer commit: Removed virtualbox input driver as it's not longer in
+  the tree.
 
   24 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-drivers-1.12.ebuild:
