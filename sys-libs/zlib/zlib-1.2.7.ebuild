@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.7.ebuild,v 1.1 2012/05/03 16:12:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.7.ebuild,v 1.2 2012/05/03 19:08:41 vapier Exp $
 
 AUTOTOOLS_AUTO_DEPEND="no"
 inherit autotools toolchain-funcs
@@ -76,9 +76,9 @@ src_install() {
 	*)
 		emake install DESTDIR="${D}" LDCONFIG=: || die
 		gen_usr_ldscript -a z
-		sed_macros "${D}"/usr/include/*.h
 		;;
 	esac
+	sed_macros "${D}"/usr/include/*.h
 
 	dodoc FAQ README ChangeLog doc/*.txt
 
