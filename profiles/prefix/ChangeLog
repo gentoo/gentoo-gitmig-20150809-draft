@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.343 2012/04/30 13:32:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.344 2012/05/03 20:07:49 grobian Exp $
+
+  03 May 2012; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.4/package.mask, darwin/macos/10.5/package.mask:
+  Mask >ghc-7 on Tiger and Leopard
 
   30 Apr 2012; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.7/x86/package.mask, darwin/macos/arch/x64/package.mask:
