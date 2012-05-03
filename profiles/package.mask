@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13717 2012/05/03 09:04:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13718 2012/05/03 18:27:49 a3li Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -197,93 +197,6 @@ kde-base/ksecrets
 # Needs too much special patching to work in Gentoo,
 # bugs: #371167, #408647. Removal in 60 days (31 May 2012).
 sys-auth/tcb
-
-# Alex Legler <a3li@gentoo.org> (28 Mar 2012)
-# Leftover packages from a packaging attempt of Horde-4
-# These can be readded when someone picks the package up
-# Removal in 30 days
-dev-php/Horde_ActiveSync
-dev-php/Horde_Alarm
-dev-php/Horde_Argv
-dev-php/Horde_Auth
-dev-php/Horde_Autoloader
-dev-php/Horde_Browser
-dev-php/Horde_Cache
-dev-php/Horde_Cli
-dev-php/Horde_Compress
-dev-php/Horde_Constraint
-dev-php/Horde_Controller
-dev-php/Horde_Core
-dev-php/Horde_Crypt
-dev-php/Horde_Data
-dev-php/Horde_DataTree
-dev-php/Horde_Date
-dev-php/Horde_Date_Parser
-dev-php/Horde_Db
-dev-php/Horde_Exception
-dev-php/Horde_Feed
-dev-php/Horde_Form
-dev-php/Horde_Group
-dev-php/Horde_History
-dev-php/Horde_Http
-dev-php/Horde_Icalendar
-dev-php/Horde_Image
-dev-php/Horde_Imap_Client
-dev-php/Horde_Imsp
-dev-php/Horde_Injector
-dev-php/Horde_Itip
-dev-php/Horde_Kolab_Format
-dev-php/Horde_Kolab_Server
-dev-php/Horde_Kolab_Session
-dev-php/Horde_Kolab_Storage
-dev-php/Horde_Ldap
-dev-php/Horde_Lock
-dev-php/Horde_Log
-dev-php/Horde_LoginTasks
-dev-php/Horde_Mail
-dev-php/Horde_Memcache
-dev-php/Horde_Mime
-dev-php/Horde_Mime_Viewer
-dev-php/Horde_Nls
-dev-php/Horde_Notification
-dev-php/Horde_Oauth
-dev-php/Horde_Pdf
-dev-php/Horde_Perms
-dev-php/Horde_Prefs
-dev-php/Horde_Rdo
-dev-php/Horde_Role
-dev-php/Horde_Routes
-dev-php/Horde_Rpc
-dev-php/Horde_Scribe
-dev-php/Horde_Secret
-dev-php/Horde_Serialize
-dev-php/Horde_Service_Facebook
-dev-php/Horde_Service_Twitter
-dev-php/Horde_SessionHandler
-dev-php/Horde_Share
-dev-php/Horde_SpellChecker
-dev-php/Horde_Sql
-dev-php/Horde_Stream_Filter
-dev-php/Horde_Stream_Wrapper
-dev-php/Horde_Support
-dev-php/Horde_SyncMl
-dev-php/Horde_Template
-dev-php/Horde_Test
-dev-php/Horde_Text_Diff
-dev-php/Horde_Text_Filter
-dev-php/Horde_Text_Filter_Csstidy
-dev-php/Horde_Text_Flowed
-dev-php/Horde_Thrift
-dev-php/Horde_Token
-dev-php/Horde_Translation
-dev-php/Horde_Tree
-dev-php/Horde_Url
-dev-php/Horde_Util
-dev-php/Horde_Vfs
-dev-php/Horde_View
-dev-php/Horde_Xml_Element
-dev-php/Horde_Xml_Wbxml
-dev-php/Horde_Yaml
 
 # Mike Gilbert <floppym@gentoo.org> (25 Mar 2012)
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (25 Mar 2012)
@@ -640,13 +553,6 @@ app-pda/multisync-gui
 # Part of GNOME 2.32 release set by breaks my machine as hell
 # Needs more testing before unleashing
 >=gnome-base/libbonobo-2.32
-
-# Alex Legler <a3li@gentoo.org> (28 Nov 2010)
-# Not maintained, multiple security issues.
-# Use the split horde ebuilds instead.
-# Removal end of April 2012
-www-apps/horde-webmail
-www-apps/horde-groupware
 
 # Markos Chandras <hwoarang@gentoo.org> (01 Nov 2010)
 # Masking alpha releases

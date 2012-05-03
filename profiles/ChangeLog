@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6491 2012/05/03 09:04:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6492 2012/05/03 18:27:49 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 May 2012; Alex Legler <a3li@gentoo.org> package.mask:
+  Removing horde package masks, packages are gone
 
   03 May 2012; Johannes Huber <johu@gentoo.org> package.mask:
   Mask dev channel release of media-sound/mp3diags.
