@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.26.1.ebuild,v 1.1 2011/05/07 06:41:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.26.1.ebuild,v 1.2 2012/05/03 02:35:37 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/glib:2
 	gtk? ( >=x11-libs/gtk+extra-2 )
 	sys-libs/readline"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex
 	|| ( dev-util/yacc sys-devel/bison )"
 

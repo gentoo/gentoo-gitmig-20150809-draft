@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/xgpasm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/xgpasm/ChangeLog,v 1.8 2008/05/18 16:48:21 drac Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/xgpasm/ChangeLog,v 1.9 2012/05/03 02:35:37 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> xgpasm-1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 May 2008; Samuli Suominen <drac@gentoo.org> xgpasm-1.0.ebuild:
   Move pkgconfig to DEPEND and change dep. >=gtk+-1.2 to =gtk+-1.2* which it

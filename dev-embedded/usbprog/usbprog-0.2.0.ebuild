@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/usbprog/usbprog-0.2.0.ebuild,v 1.2 2012/02/28 21:48:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/usbprog/usbprog-0.2.0.ebuild,v 1.3 2012/05/03 02:35:37 jdhore Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND="X? ( >=x11-libs/wxGTK-2.6.0 )
 	virtual/libusb:0
 	sys-libs/readline"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \
