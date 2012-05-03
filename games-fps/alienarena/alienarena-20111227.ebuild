@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20111227.ebuild,v 1.3 2012/02/16 17:45:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20111227.ebuild,v 1.4 2012/05/03 03:23:09 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -30,7 +30,7 @@ UIDEPEND="dga? ( x11-proto/xf86dgaproto )
 RDEPEND="!dedicated? ( ${UIRDEPEND} )"
 DEPEND="${RDEPEND}
 	!dedicated? ( ${UIDEPEND} )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_PN/_/.}
 

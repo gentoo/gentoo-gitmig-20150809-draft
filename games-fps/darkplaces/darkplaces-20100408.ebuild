@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20100408.ebuild,v 1.5 2012/03/26 13:48:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20100408.ebuild,v 1.6 2012/05/03 03:23:09 jdhore Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -58,7 +58,7 @@ DEPEND="lights? ( || (
 	!opengl? ( !sdl? ( !dedicated? (
 		${UIRDEPEND}
 		${UIDEPEND} ) ) )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-arch/unzip"
 
 S=${WORKDIR}/${PN}

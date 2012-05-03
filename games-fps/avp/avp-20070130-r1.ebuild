@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130-r1.ebuild,v 1.4 2009/06/13 16:25:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130-r1.ebuild,v 1.5 2012/05/03 03:23:09 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -19,7 +19,7 @@ RDEPEND="virtual/opengl
 	media-libs/libsdl
 	amd64? ( app-emulation/emul-linux-x86-sdl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}
 

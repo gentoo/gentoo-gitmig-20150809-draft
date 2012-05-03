@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.5-r1.ebuild,v 1.6 2011/02/26 15:27:28 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.5-r1.ebuild,v 1.7 2012/05/03 03:23:10 jdhore Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs versionator games
@@ -31,7 +31,7 @@ RDEPEND="net-misc/curl
 UIDEPEND="x11-proto/xineramaproto
 	x11-proto/xf86dgaproto
 	x11-proto/xf86vidmodeproto
-	openal? ( dev-util/pkgconfig )"
+	openal? ( virtual/pkgconfig )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	x11-misc/makedepend
