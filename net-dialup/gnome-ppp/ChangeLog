@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gnome-ppp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.29 2011/03/29 11:57:10 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.30 2012/05/03 03:54:06 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-ppp-0.3.23-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> gnome-ppp-0.3.23-r1.ebuild:
   Fixed slot deps

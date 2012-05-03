@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.23-r1.ebuild,v 1.6 2011/03/29 11:57:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.23-r1.ebuild,v 1.7 2012/05/03 03:54:06 jdhore Exp $
 
 EAPI=1
 inherit gnome2 eutils
@@ -20,7 +20,7 @@ RDEPEND=">=net-dialup/wvdial-1.54
 	gnome-base/libglade:2.0
 	x11-libs/gtk+:2"
 DEPEND="sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	${RDEPEND}"
 

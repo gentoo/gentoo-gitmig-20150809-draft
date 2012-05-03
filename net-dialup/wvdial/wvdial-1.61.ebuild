@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.61.ebuild,v 1.2 2010/05/28 05:58:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.61.ebuild,v 1.3 2012/05/03 03:54:07 jdhore Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 COMMON_DEPEND=">=net-libs/wvstreams-4.4"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	net-dialup/ppp"
 

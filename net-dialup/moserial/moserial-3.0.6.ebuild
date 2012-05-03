@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-3.0.6.ebuild,v 1.3 2012/04/29 16:05:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-3.0.6.ebuild,v 1.4 2012/05/03 03:54:06 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog NEWS README"

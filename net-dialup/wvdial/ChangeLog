@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/wvdial
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.57 2010/05/28 05:58:16 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.58 2012/05/03 03:54:07 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> wvdial-1.61.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 May 2010; Peter Volkov <pva@gentoo.org> wvdial-1.61.ebuild,
   +files/wvdial-1.61-parallel-make.patch:
