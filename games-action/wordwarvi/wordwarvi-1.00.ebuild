@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-1.00.ebuild,v 1.3 2011/07/19 19:57:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-1.00.ebuild,v 1.4 2012/05/03 03:02:33 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/gtk+:2
 	portaudio? ( media-libs/libvorbis
 		>=media-libs/portaudio-19_pre1 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-sound.patch

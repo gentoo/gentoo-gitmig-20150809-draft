@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.1.1.ebuild,v 1.3 2011/08/21 03:31:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.1.1.ebuild,v 1.4 2012/05/03 03:02:33 jdhore Exp $
 
 EAPI=2
 inherit autotools base eutils flag-o-matic games
@@ -23,7 +23,7 @@ RDEPEND="media-libs/libsdl[audio,joystick,video]
 	<dev-libs/boost-1.46
 	media-fonts/dejavu"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog ChangeLog.hg IDEAS NEWS QUOTES README TODO )
 

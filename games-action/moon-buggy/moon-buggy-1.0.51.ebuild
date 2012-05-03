@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-1.0.51.ebuild,v 1.5 2009/11/04 17:15:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/moon-buggy-1.0.51.ebuild,v 1.6 2012/05/03 03:02:33 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

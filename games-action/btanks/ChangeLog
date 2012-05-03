@@ -1,6 +1,9 @@
 # ChangeLog for games-action/btanks
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.24 2011/04/20 07:32:12 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.25 2012/05/03 03:02:34 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> btanks-0.9.8083.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Apr 2011; Tupone Alfredo <tupone@gentoo.org> btanks-0.9.8083.ebuild,
   +files/btanks-0.9.8083-gcc46.patch:

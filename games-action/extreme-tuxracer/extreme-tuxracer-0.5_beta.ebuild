@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.5_beta.ebuild,v 1.4 2010/06/29 06:29:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.5_beta.ebuild,v 1.5 2012/05/03 03:02:34 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -26,7 +26,7 @@ RDEPEND="virtual/opengl
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_}
 
