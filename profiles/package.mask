@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13716 2012/05/02 21:04:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13717 2012/05/03 09:04:17 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Johannes Huber <johu@gentoo.org> (3 May 2012)
+# Unstable dev channel release. Fixes build with gcc47
+# (bug #413941).
+>=media-sound/mp3diags-1.1
 
 # Davide Pesavento <pesa@gentoo.org> (2 May 2012)
 # It has been broken for more than 2 years (bug 380589),
