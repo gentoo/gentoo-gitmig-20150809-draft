@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.43 2012/04/18 19:33:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.44 2012/05/03 20:07:46 johu Exp $
+
+*filelight-4.8.3 (03 May 2012)
+
+  03 May 2012; Johannes Huber <johu@gentoo.org> +filelight-4.8.3.ebuild:
+  Version bump KDE SC 4.8.3
 
   18 Apr 2012; Markus Meier <maekke@gentoo.org> filelight-4.8.1.ebuild:
   x86 stable, bug #409403

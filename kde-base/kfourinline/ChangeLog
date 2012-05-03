@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kfourinline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.110 2012/04/18 21:14:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.111 2012/05/03 20:07:41 johu Exp $
+
+*kfourinline-4.8.3 (03 May 2012)
+
+  03 May 2012; Johannes Huber <johu@gentoo.org> +kfourinline-4.8.3.ebuild:
+  Version bump KDE SC 4.8.3
 
   18 Apr 2012; Markus Meier <maekke@gentoo.org> kfourinline-4.8.1.ebuild:
   x86 stable, bug #409403
