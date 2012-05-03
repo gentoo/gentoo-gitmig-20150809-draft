@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ibus-table-1.3.9.20110827.ebuild,v 1.1 2011/09/17 07:57:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ibus-table-1.3.9.20110827.ebuild,v 1.2 2012/05/03 19:24:29 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -20,7 +20,7 @@ RDEPEND=">=app-i18n/ibus-1.2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.16.1 )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wijesekera/scim-wijesekera-0.3.3.ebuild,v 1.2 2008/10/04 19:07:02 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wijesekera/scim-wijesekera-0.3.3.ebuild,v 1.3 2012/05/03 19:24:30 jdhore Exp $
 
 inherit autotools
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=app-i18n/scim-0.99.8"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

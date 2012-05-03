@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/bidiv-1.5-r1.ebuild,v 1.1 2009/04/13 23:05:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/bidiv-1.5-r1.ebuild,v 1.2 2012/05/03 19:24:28 jdhore Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="dev-libs/fribidi"
 DEPEND="${DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}"
 

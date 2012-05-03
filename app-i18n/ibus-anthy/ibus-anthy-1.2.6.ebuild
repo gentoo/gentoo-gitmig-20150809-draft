@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.6.ebuild,v 1.3 2012/02/16 17:38:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.6.ebuild,v 1.4 2012/05/03 19:24:29 jdhore Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.5"
@@ -21,7 +21,7 @@ RDEPEND=">=app-i18n/ibus-1.2.0.20100111
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-lang/swig
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
 pkg_setup() {

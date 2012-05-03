@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.1-r1.ebuild,v 1.2 2012/03/07 16:09:17 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.1-r1.ebuild,v 1.3 2012/05/03 19:24:27 jdhore Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -64,7 +64,7 @@ RDEPEND="X? (
 #	)
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.15
 	kde? ( dev-util/cmake )
 	X? (

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r2.ebuild,v 1.1 2011/05/25 16:57:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r2.ebuild,v 1.2 2012/05/03 19:24:30 jdhore Exp $
 
 EAPI="3"
 inherit autotools eutils flag-o-matic multilib
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 		>=app-text/docbook-xsl-stylesheets-1.73.1 )
 	dev-lang/perl
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.33
 	sys-devel/libtool"
 

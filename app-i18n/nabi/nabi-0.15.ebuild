@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.15.ebuild,v 1.9 2011/09/30 00:49:36 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.15.ebuild,v 1.10 2012/05/03 19:24:27 jdhore Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ppc x86"
 
 RDEPEND=">=x11-libs/gtk+-2.2:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.15-asneeded.patch

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.99.8.ebuild,v 1.1 2011/01/30 00:12:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.99.8.ebuild,v 1.2 2012/05/03 19:24:27 jdhore Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.4:2
 	>=app-i18n/libhangul-0.0.12
 	virtual/libintl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_configure() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/scim-wnn-1.0.0-r1.ebuild,v 1.1 2009/12/08 11:31:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/scim-wnn-1.0.0-r1.ebuild,v 1.2 2012/05/03 19:24:27 jdhore Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND=">=app-i18n/scim-1.4
 	dev-libs/wnn7sdk
 	freewnn? ( app-i18n/freewnn )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-apps/sed-4"
 
 src_prepare() {

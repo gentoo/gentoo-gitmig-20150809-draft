@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.4.2.ebuild,v 1.1 2012/04/23 10:25:47 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.4.2.ebuild,v 1.2 2012/05/03 19:24:27 jdhore Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	app-text/iso-codes
 	dev-libs/libunique:1
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_configure() {

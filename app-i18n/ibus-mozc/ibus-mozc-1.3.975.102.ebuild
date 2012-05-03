@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.3.975.102.ebuild,v 1.4 2012/04/19 20:59:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.3.975.102.ebuild,v 1.5 2012/05/03 19:24:28 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -31,7 +31,7 @@ RDEPEND="dev-libs/glib:2
 #	chewing? ( dev-libs/libchewing )
 DEPEND="${RDEPEND}
 	dev-cpp/gtest
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-m17n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.40 2012/03/08 21:15:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.41 2012/05/03 19:24:30 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-m17n-0.2.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> scim-m17n-0.2.3.ebuild:
   Marking scim-m17n-0.2.3 ppc64 for bug 391557

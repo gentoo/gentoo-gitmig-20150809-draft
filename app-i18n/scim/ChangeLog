@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.147 2011/11/17 09:06:46 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.148 2012/05/03 19:24:30 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-1.4.9-r1.ebuild,
+  scim-1.4.9-r2.ebuild, scim-1.4.11.ebuild, scim-1.4.11-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *scim-1.4.11-r1 (17 Nov 2011)
 

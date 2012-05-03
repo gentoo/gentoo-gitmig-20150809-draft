@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-1.4.0.ebuild,v 1.1 2012/03/10 05:23:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-1.4.0.ebuild,v 1.2 2012/05/03 19:24:27 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.5"
@@ -21,7 +21,7 @@ RDEPEND=">=app-i18n/ibus-1.3
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
 	app-i18n/skk-jisyo"

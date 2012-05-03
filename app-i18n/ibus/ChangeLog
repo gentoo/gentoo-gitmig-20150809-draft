@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.108 2012/03/28 22:10:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.109 2012/05/03 19:24:31 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> ibus-1.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Mar 2012; Mike Frysinger <vapier@gentoo.org> ibus-1.4.1.ebuild:
   Utilize REQUIRED_USE rather than confutils, and fix USE=-python build

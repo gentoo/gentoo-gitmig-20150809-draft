@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-2.1.0.ebuild,v 1.1 2012/01/11 15:23:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-2.1.0.ebuild,v 1.2 2012/05/03 19:24:27 jdhore Exp $
 
 EAPI="3"
 inherit multilib
@@ -18,7 +18,7 @@ RDEPEND=">=app-i18n/libhangul-0.0.12
 	>=x11-libs/gtk+-2.2:2
 	virtual/libintl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 get_gtk_confdir() {

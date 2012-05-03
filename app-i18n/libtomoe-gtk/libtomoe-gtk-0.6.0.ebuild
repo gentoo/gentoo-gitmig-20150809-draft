@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0.ebuild,v 1.6 2011/10/23 22:00:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0.ebuild,v 1.7 2012/05/03 19:24:32 jdhore Exp $
 
 EAPI="1"
 
@@ -19,7 +19,7 @@ RDEPEND=">=app-i18n/tomoe-0.6.0
 	dev-python/pygobject:2
 	>=gnome-extra/gucharmap-1.4.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
 S="${WORKDIR}/${MY_P}"

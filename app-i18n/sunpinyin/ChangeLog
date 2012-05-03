@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/sunpinyin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/ChangeLog,v 1.9 2012/04/18 01:30:59 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/ChangeLog,v 1.10 2012/05/03 19:24:34 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> sunpinyin-2.0.3-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 Apr 2012; Mu Qiao <qiaomuf@gentoo.org> sunpinyin-2.0.3-r1.ebuild,
   +files/sunpinyin-2.0.3-gcc-4.7.patch:

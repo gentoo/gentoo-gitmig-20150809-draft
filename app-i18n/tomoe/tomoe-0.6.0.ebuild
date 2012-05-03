@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0.ebuild,v 1.4 2010/06/22 18:30:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0.ebuild,v 1.5 2012/05/03 19:24:32 jdhore Exp $
 
 DESCRIPTION="Japanese handwriting recognition engine"
 HOMEPAGE="http://tomoe.sourceforge.jp/"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.4
 # unihan? ( app-dicts/unihan )
 
 DEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
 RESTRICT="test"

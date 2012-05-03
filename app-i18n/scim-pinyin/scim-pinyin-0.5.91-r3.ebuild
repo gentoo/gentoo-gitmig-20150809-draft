@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/scim-pinyin-0.5.91-r3.ebuild,v 1.10 2011/02/13 19:17:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/scim-pinyin-0.5.91-r3.ebuild,v 1.11 2012/05/03 19:24:31 jdhore Exp $
 
 inherit autotools eutils
 
@@ -17,7 +17,7 @@ RDEPEND="x11-libs/libXt
 	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

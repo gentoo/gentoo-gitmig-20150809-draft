@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/im-freewnn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/ChangeLog,v 1.16 2012/02/28 22:25:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/ChangeLog,v 1.17 2012/05/03 19:24:31 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> im-freewnn-0.0.2.ebuild,
+  im-freewnn-0.0.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> im-freewnn-0.0.2-r1.ebuild:
   Marking im-freewnn-0.0.2-r1 ppc for bug 392875

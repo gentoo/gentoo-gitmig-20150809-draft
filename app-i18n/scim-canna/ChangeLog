@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-canna
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.16 2009/05/20 16:36:58 nixnut Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.17 2012/05/03 19:24:29 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-canna-1.0.0.ebuild,
+  scim-canna-1.0.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 May 2009; nixnut <nixnut@gentoo.org> scim-canna-1.0.1.ebuild:
   ppc stable #266779

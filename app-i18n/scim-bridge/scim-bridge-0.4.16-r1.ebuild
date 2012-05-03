@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.16-r1.ebuild,v 1.5 2011/03/27 11:34:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.16-r1.ebuild,v 1.6 2012/05/03 19:24:26 jdhore Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ RDEPEND=">=app-i18n/scim-1.4.6
 		>=x11-libs/pango-1.1
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	doc? ( app-doc/doxygen )"
 

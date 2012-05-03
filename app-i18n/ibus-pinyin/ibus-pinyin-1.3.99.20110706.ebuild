@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20110706.ebuild,v 1.3 2012/03/11 08:57:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20110706.ebuild,v 1.4 2012/05/03 19:24:26 jdhore Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND=">=app-i18n/ibus-1.4
 	nls? ( virtual/libintl )
 	opencc? ( app-i18n/opencc )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2-r1.ebuild,v 1.8 2012/02/28 22:25:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2-r1.ebuild,v 1.9 2012/05/03 19:24:31 jdhore Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/glib
 	>=x11-libs/gtk+-2.4:2
 	>=app-i18n/freewnn-1.1.1_alpha21-r1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems

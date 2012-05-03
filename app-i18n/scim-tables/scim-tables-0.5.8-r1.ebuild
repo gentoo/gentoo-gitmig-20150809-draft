@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.8-r1.ebuild,v 1.10 2011/02/13 19:17:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.8-r1.ebuild,v 1.11 2012/05/03 19:24:33 jdhore Exp $
 
 inherit autotools base eutils
 
@@ -20,7 +20,7 @@ done
 RDEPEND=">=app-i18n/scim-1.4.7-r2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 PATCHES=( "${FILESDIR}/${P}+gcc-4.3.patch" )

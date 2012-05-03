@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-1.3.3.ebuild,v 1.3 2011/09/11 17:07:02 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-1.3.3.ebuild,v 1.4 2012/05/03 19:24:28 jdhore Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ RDEPEND=">=app-i18n/ibus-1.3.99.20110817
 	dev-libs/m17n-lib
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.16.1"
 RDEPEND="${RDEPEND}
 	dev-db/m17n-db

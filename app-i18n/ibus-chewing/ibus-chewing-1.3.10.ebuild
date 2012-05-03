@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-1.3.10.ebuild,v 1.2 2012/03/10 17:28:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-1.3.10.ebuild,v 1.3 2012/05/03 19:24:29 jdhore Exp $
 
 EAPI=3
 inherit cmake-utils
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/libXtst
 	dev-util/gob:2"
 DEPEND="${RDEPEND}
 	dev-util/cmake-fedora
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

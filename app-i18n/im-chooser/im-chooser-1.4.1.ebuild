@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-chooser/im-chooser-1.4.1.ebuild,v 1.1 2011/01/14 16:44:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-chooser/im-chooser-1.4.1.ebuild,v 1.2 2012/05/03 19:24:26 jdhore Exp $
 
 EAPI=3
 inherit gnome2
@@ -31,6 +31,6 @@ RDEPEND=">=app-i18n/imsettings-1
 #		)
 #	)
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.2.0.20091216.ebuild,v 1.1 2009/12/16 14:14:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.2.0.20091216.ebuild,v 1.2 2012/05/03 19:24:31 jdhore Exp $
 
 EAPI="1"
 inherit cmake-utils multilib
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	app-doc/doxygen
 	>=dev-libs/icu-4
 	dev-util/cmake
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.3-r1.ebuild,v 1.3 2012/04/18 01:30:59 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.3-r1.ebuild,v 1.4 2012/05/03 19:24:34 jdhore Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="dev-db/sqlite:3"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 src_unpack() {
 	unpack "${P}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.2.6.ebuild,v 1.2 2011/11/28 13:53:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.2.6.ebuild,v 1.3 2012/05/03 19:24:25 jdhore Exp $
 
 EAPI=3
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/check-0.9.4
 	qt4? ( x11-libs/qt-core:4 )
 	xfconf? ( xfce-base/xfconf )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
 MY_XINPUTSH="90-xinput"

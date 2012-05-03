@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-canna
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.8 2011/03/27 10:45:19 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.9 2012/05/03 19:24:25 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> im-canna-0.3.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   im-canna-0.3.2.2.ebuild:

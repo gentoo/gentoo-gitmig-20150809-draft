@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-input-pad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/ChangeLog,v 1.8 2011/08/18 02:49:58 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/ChangeLog,v 1.9 2012/05/03 19:24:26 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-input-pad-0.1.1.ebuild,
+  scim-input-pad-0.1.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *scim-input-pad-0.1.3 (18 Aug 2011)
 

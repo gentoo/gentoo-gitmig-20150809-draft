@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/scim-input-pad-0.1.3.ebuild,v 1.1 2011/08/18 02:49:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/scim-input-pad-0.1.3.ebuild,v 1.2 2012/05/03 19:24:26 jdhore Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND=">=app-i18n/scim-1.2.0
 	>=x11-libs/gtk+-2.6.0:2"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	eautoreconf

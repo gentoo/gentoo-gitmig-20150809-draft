@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/libskk-0.0.11.ebuild,v 1.1 2012/03/18 08:17:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/libskk-0.0.11.ebuild,v 1.2 2012/05/03 19:24:32 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-lang/vala:${MY_VALA_VERSION}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? (
 		dev-util/intltool
 		sys-devel/gettext

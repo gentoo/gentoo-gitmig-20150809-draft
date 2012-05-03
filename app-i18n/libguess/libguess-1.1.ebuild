@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/libguess-1.1.ebuild,v 1.6 2012/03/18 17:38:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/libguess-1.1.ebuild,v 1.7 2012/05/03 19:24:30 jdhore Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND="
 	>=dev-libs/libmowgli-0.7.0:0"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf $(use_enable examples) \

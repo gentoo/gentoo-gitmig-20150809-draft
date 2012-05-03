@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.2.ebuild,v 1.1 2012/04/23 10:21:28 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.2.ebuild,v 1.2 2012/05/03 19:24:26 jdhore Exp $
 
 EAPI="3"
 
@@ -43,7 +43,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto"
 
 update_gtk_immodules() {
