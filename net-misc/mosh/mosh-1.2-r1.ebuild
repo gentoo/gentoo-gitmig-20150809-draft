@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2-r1.ebuild,v 1.3 2012/05/02 22:19:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2-r1.ebuild,v 1.4 2012/05/03 04:14:26 mr_bones_ Exp $
 
 EAPI=4
 
@@ -53,7 +53,7 @@ src_prepare() {
 src_configure() {
 	local my_args=""
 	if use skalibs ; then
-		my_args=" --with-skalibs="${EPREFIX} 
+		my_args=" --with-skalibs="${EPREFIX}
 		my_args+=" --with-skalibs-include="${EPREFIX}/usr/include/skalibs
 		my_args+=" --with-skalibs-libdir="${EPREFIX}/usr/$(get_libdir)/skalibs
 	fi
