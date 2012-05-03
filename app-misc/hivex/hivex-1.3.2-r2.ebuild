@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2-r2.ebuild,v 1.1 2012/05/02 12:24:25 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2-r2.ebuild,v 1.2 2012/05/03 17:00:12 maksbotan Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://libguestfs.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="ocaml readline perl python test static-libs ruby"
 
 RDEPEND="virtual/libiconv
