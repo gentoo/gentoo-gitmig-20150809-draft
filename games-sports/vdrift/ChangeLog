@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/vdrift
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.17 2012/02/04 13:14:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.18 2012/05/03 03:35:40 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> vdrift-20111022.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> vdrift-20111022.ebuild:
   Stable for amd64, wrt bug #401821
