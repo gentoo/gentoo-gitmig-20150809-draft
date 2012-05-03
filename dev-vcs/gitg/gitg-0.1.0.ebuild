@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.1.0.ebuild,v 1.2 2011/03/21 23:15:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.1.0.ebuild,v 1.3 2012/05/03 02:57:15 jdhore Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
-	>=dev-util/pkgconfig-0.15
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40"
 
 pkg_setup() {

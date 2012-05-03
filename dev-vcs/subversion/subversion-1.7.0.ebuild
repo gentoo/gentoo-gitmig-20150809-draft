@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.0.ebuild,v 1.2 2012/03/15 04:17:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.0.ebuild,v 1.3 2012/05/03 02:57:15 jdhore Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -45,11 +45,11 @@ DEPEND="${CDEPEND}
 	!!<sys-apps/sandbox-1.6
 	ctypes-python? ( dev-python/ctypesgen )
 	doc? ( app-doc/doxygen )
-	gnome-keyring? ( dev-util/pkgconfig )
+	gnome-keyring? ( virtual/pkgconfig )
 	java? ( >=virtual/jdk-1.5 )
-	kde? ( dev-util/pkgconfig )
+	kde? ( virtual/pkgconfig )
 	nls? ( sys-devel/gettext )
-	webdav-neon? ( dev-util/pkgconfig )"
+	webdav-neon? ( virtual/pkgconfig )"
 
 PATCHES=(
 		"${FILESDIR}/${PN}-1.5.4-interix.patch"

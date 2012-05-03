@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/veracity-1.1.0.10565.ebuild,v 1.1 2011/10/07 01:12:05 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/veracity-1.1.0.10565.ebuild,v 1.2 2012/05/03 02:57:16 jdhore Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ RDEPEND="
 	dev-db/sqlite:3
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.25
+	virtual/pkgconfig
 	test? ( app-arch/unzip )"
 
 src_prepare() {

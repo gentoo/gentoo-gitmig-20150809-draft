@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/giggle-0.5.ebuild,v 1.5 2011/03/21 23:16:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/giggle-0.5.ebuild,v 1.6 2012/05/03 02:57:15 jdhore Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-vcs/git-1.5
 		 >=x11-libs/vte-0.17:0"
 DEPEND="${RDEPEND}
 		  sys-devel/gettext
-		>=dev-util/pkgconfig-0.15
+		virtual/pkgconfig
 		>=dev-util/intltool-0.35
 		>=sys-devel/autoconf-2.64
 		>=sys-devel/libtool-2"

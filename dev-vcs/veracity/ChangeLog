@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/veracity
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/ChangeLog,v 1.4 2011/10/07 01:12:05 binki Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/ChangeLog,v 1.5 2012/05/03 02:57:16 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> veracity-1.0.0.10517.ebuild,
+  veracity-1.1.0.10565.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *veracity-1.1.0.10565 (07 Oct 2011)
 

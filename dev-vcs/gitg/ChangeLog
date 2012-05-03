@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.16 2012/04/14 20:11:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.17 2012/05/03 02:57:15 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gitg-0.0.6.ebuild,
+  gitg-0.1.0.ebuild, gitg-0.1.2.ebuild, gitg-0.2.2.ebuild, gitg-0.2.4.ebuild,
+  gitg-0.2.5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> gitg-0.2.5.ebuild:
   Add ~amd64-linux keyword.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.4.4-r1.ebuild,v 1.16 2012/03/04 14:17:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.4.4-r1.ebuild,v 1.17 2012/05/03 02:57:16 jdhore Exp $
 
 EAPI="3"
 CABAL_FEATURES="bin lib profile haddock hscolour"
@@ -38,7 +38,7 @@ COMMONDEPS=">=dev-lang/ghc-6.8
 
 DEPEND="${COMMONDEPS}
 		>=dev-haskell/cabal-1.6
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		doc?  ( virtual/latex-base
 				dev-tex/latex2html )
 		test? ( dev-haskell/test-framework[profile?]
