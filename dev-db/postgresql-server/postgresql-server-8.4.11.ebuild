@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.11.ebuild,v 1.9 2012/04/08 14:52:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.11.ebuild,v 1.10 2012/05/03 02:33:21 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -47,7 +47,7 @@ RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pam?,pg_legacytimestamp=,nls=]
 
 DEPEND="${RDEPEND}
 		sys-devel/flex
-		xml? ( dev-util/pkgconfig )"
+		xml? ( virtual/pkgconfig )"
 
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 

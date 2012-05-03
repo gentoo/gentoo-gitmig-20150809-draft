@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.8.0-r1.ebuild,v 1.2 2011/07/08 11:06:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.8.0-r1.ebuild,v 1.3 2012/05/03 02:33:17 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/libevent-1.4
 	>=dev-lang/lua-5.1"
 DEPEND="${RDEPEND}
 	>=virtual/mysql-5.0
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RESTRICT="test"
 
 src_configure() {

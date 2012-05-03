@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.35.ebuild,v 1.5 2012/03/07 20:04:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.35.ebuild,v 1.6 2012/05/03 02:33:10 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -47,7 +47,7 @@ RDEPEND="${CDEPEND}
 	app-admin/sudo
 	sys-apps/net-tools"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}"/"${MY_P}"
 

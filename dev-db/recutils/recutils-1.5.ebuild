@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/recutils/recutils-1.5.ebuild,v 1.1 2012/01/15 02:16:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/recutils/recutils-1.5.ebuild,v 1.2 2012/05/03 02:33:10 jdhore Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ RDEPEND="sys-libs/readline
 	)
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 SITEFILE="50${PN}-gentoo.el"

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/pg_top-3.6.2.ebuild,v 1.5 2010/06/17 18:41:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/pg_top-3.6.2.ebuild,v 1.6 2012/05/03 02:33:10 jdhore Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ IUSE="debug"
 
 COMMON_DEPEND="dev-db/postgresql-base"
 DEPEND="$COMMON_DEPEND
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="$COMMON_DEPEND"
 
 src_unpack() {

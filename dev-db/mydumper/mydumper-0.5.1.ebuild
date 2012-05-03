@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/mydumper-0.5.1.ebuild,v 1.1 2011/11/05 12:25:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/mydumper-0.5.1.ebuild,v 1.2 2012/05/03 02:33:21 jdhore Exp $
 
 EAPI=2
 inherit cmake-utils versionator
@@ -17,7 +17,7 @@ RDEPEND="dev-libs/libpcre
 	virtual/mysql
 	dev-libs/glib:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-python/sphinx )"
 
 DOCS=( README )
