@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.14-r1.ebuild,v 1.5 2012/03/14 09:17:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.14-r1.ebuild,v 1.6 2012/05/03 06:01:03 jdhore Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -81,7 +81,7 @@ RDEPEND="java? ( virtual/jre )
 
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*[threads]
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.4 )"
 
 S="${WORKDIR}/comm-1.9.1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.6.ebuild,v 1.9 2012/04/22 16:04:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.6.ebuild,v 1.10 2012/05/03 06:01:04 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -42,7 +42,7 @@ RDEPEND=">=sys-libs/ncurses-5.7-r7
 	zlib? ( sys-libs/zlib )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	fbcon? ( virtual/os-headers )
 	livecd? ( virtual/os-headers )"
 

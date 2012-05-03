@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre11.ebuild,v 1.1 2012/02/20 23:12:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre11.ebuild,v 1.2 2012/05/03 06:01:04 jdhore Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ RDEPEND="sys-libs/ncurses[unicode?]
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	>=dev-util/pkgconfig-0.23"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}$(replace_all_version_separators - $(get_version_component_range 1-3))"
 

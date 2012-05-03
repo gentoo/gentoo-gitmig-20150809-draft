@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.621 2012/05/03 02:02:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.622 2012/05/03 06:01:04 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> chromium-18.0.1025.151.ebuild,
+  chromium-18.0.1025.162.ebuild, chromium-18.0.1025.168.ebuild,
+  chromium-19.0.1084.36.ebuild, chromium-19.0.1084.41.ebuild,
+  chromium-20.0.1105.0.ebuild, chromium-20.0.1115.1.ebuild,
+  chromium-9999-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *chromium-19.0.1084.41 (03 May 2012)
 

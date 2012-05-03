@@ -1,6 +1,10 @@
 # ChangeLog for www-client/jd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.25 2011/03/28 18:31:50 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.26 2012/05/03 06:01:03 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> jd-2.6.5_p100425.ebuild,
+  jd-2.7.5_p101228.ebuild, jd-2.8.0_p110203.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> jd-2.6.5_p100425.ebuild,
   jd-2.7.5_p101228.ebuild, jd-2.8.0_p110203.ebuild:

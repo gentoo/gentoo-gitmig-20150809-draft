@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.24 2011/12/26 21:58:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.25 2012/05/03 06:01:03 jdhore Exp $
 
 EAPI="4"
 
@@ -44,7 +44,7 @@ COMMON_DEPEND="
 "
 
 DEPEND="
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	${COMMON_DEPEND}
 "
 

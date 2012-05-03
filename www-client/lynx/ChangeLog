@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.119 2012/05/02 07:46:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.120 2012/05/03 06:01:04 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> lynx-2.8.7_p1.ebuild,
+  lynx-2.8.7_p2.ebuild, lynx-2.8.8_pre11.ebuild, lynx-2.8.8_pre12.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> lynx-2.8.8_pre12.ebuild:
   marked x86 per bug 414267

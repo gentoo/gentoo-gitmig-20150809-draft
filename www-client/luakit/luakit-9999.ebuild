@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.18 2011/09/21 07:47:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.19 2012/05/03 06:01:02 jdhore Exp $
 
 EAPI=3
 
@@ -38,7 +38,7 @@ COMMON_DEPEND="
 "
 
 DEPEND="
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/help2man
 	${COMMON_DEPEND}
 "

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.32.0-r1.ebuild,v 1.5 2011/10/30 17:36:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.32.0-r1.ebuild,v 1.6 2012/05/03 06:01:04 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -29,7 +29,7 @@ RDEPEND=">=www-client/epiphany-2.30.0
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.20
+	virtual/pkgconfig
 	>=app-text/gnome-doc-utils-0.3.2"
 # eautoreconf dependencies:
 #	  gnome-base/gnome-common

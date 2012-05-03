@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.2.2.ebuild,v 1.1 2012/04/09 11:24:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.2.2.ebuild,v 1.2 2012/05/03 06:01:03 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -48,7 +48,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
 	>=dev-util/gdbus-codegen-2.30.0
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/paxctl
 	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1 )"

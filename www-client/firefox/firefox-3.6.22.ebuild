@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.22.ebuild,v 1.3 2011/12/11 14:33:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.22.ebuild,v 1.4 2012/05/03 06:01:04 jdhore Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -66,7 +66,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	java? ( >=virtual/jdk-1.4 )
 	=dev-lang/python-2*[threads]
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.4 )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.ebuild,v 1.5 2012/05/02 19:58:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.ebuild,v 1.6 2012/05/03 06:01:03 jdhore Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -74,7 +74,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 		media-libs/alsa-lib )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	webm? ( amd64? ( ${ASM_DEPEND} )
 		x86? ( ${ASM_DEPEND} ) )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.4.ebuild,v 1.3 2012/05/02 06:08:07 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.4.ebuild,v 1.4 2012/05/03 06:01:04 jdhore Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -64,7 +64,7 @@ RDEPEND="
 	selinux? ( sec-policy/selinux-mozilla )"
 # We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	pgo? (
 		=dev-lang/python-2*[sqlite]
 		>=sys-devel/gcc-4.5 )
