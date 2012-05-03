@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p8034.ebuild,v 1.1 2012/03/16 10:30:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p8034.ebuild,v 1.2 2012/05/03 09:03:24 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -65,6 +65,14 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}"
+
+pkg_setup() {
+	# Unset variables known to break the build. This is a black-list
+	# rather than white-list because it's not obvious how to come up
+	# with a comprehensive white-list.
+	# For more info see bug #413995.
+	unset -v LANGUAGES || die
+}
 
 src_prepare() {
 	mkdir SRC || die
