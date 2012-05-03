@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.586 2012/05/02 06:54:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.587 2012/05/03 02:15:39 tetromino Exp $
+
+*gtk+-3.4.2 (03 May 2012)
+
+  03 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -gtk+-3.4.0.ebuild,
+  +gtk+-3.4.2.ebuild:
+  Version bump, fixes assorted bugs and cups-1.6 compatibility. Drop old.
 
 *gtk+-3.4.1-r1 (02 May 2012)
 

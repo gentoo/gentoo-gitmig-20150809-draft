@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.0.ebuild,v 1.1 2012/03/27 04:44:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.2.ebuild,v 1.1 2012/05/03 02:15:39 tetromino Exp $
 
 EAPI="4"
 
@@ -45,17 +45,17 @@ COMMON_DEPEND="X? (
 		x11-libs/cairo[opengl]
 		x11-libs/libxkbcommon
 	)
-	>=dev-libs/glib-2.31.20
-	>=x11-libs/pango-1.29.0[introspection?]
-	>=dev-libs/atk-2.1.5[introspection?]
+	>=dev-libs/glib-2.32
+	>=x11-libs/pango-1.30[introspection?]
+	>=dev-libs/atk-2.2[introspection?]
 	>=x11-libs/cairo-1.10.0[aqua?,glib,svg,X?]
-	>=x11-libs/gdk-pixbuf-2.25.2:2[introspection?,X?]
+	>=x11-libs/gdk-pixbuf-2.26:2[introspection?,X?]
 	>=x11-libs/gtk+-2.24:2
 	media-libs/fontconfig
 	x11-misc/shared-mime-info
 	colord? ( >=x11-misc/colord-0.1.9 )
 	cups? ( >=net-print/cups-1.2 )
-	introspection? ( >=dev-libs/gobject-introspection-0.10.1 )"
+	introspection? ( >=dev-libs/gobject-introspection-1.32 )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.9
 	X? (
