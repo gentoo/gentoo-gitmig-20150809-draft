@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.10 2012/02/25 15:01:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.11 2012/05/03 14:40:04 jer Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs savedconfig
+inherit eutils savedconfig toolchain-funcs
 
 DESCRIPTION="a dynamic window manager for X11"
 HOMEPAGE="http://dwm.suckless.org/"
@@ -34,6 +34,7 @@ src_prepare() {
 		config.mk || die "sed failed"
 
 	restore_config config.h
+	epatch_user
 }
 
 src_compile() {
