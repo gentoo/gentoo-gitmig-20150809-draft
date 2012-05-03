@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.7 2012/01/26 01:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.8 2012/05/03 04:24:37 jdhore Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ RDEPEND="net-libs/libtirpc
 	selinux? ( sec-policy/selinux-rpcbind )
 	tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.5 2012/03/20 10:42:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.6 2012/05/03 04:24:36 jdhore Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -26,7 +26,7 @@ RDEPEND=">=dev-lang/mono-1.1.13
 	avahi? ( net-dns/avahi[mono] )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Fix tests, bug #295889

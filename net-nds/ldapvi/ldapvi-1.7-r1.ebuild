@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ldapvi-1.7-r1.ebuild,v 1.2 2011/06/14 00:05:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ldapvi-1.7-r1.ebuild,v 1.3 2012/05/03 04:24:37 jdhore Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND="sys-libs/ncurses
 	sys-libs/readline
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}+glibc-2.10.patch"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.9.6.ebuild,v 1.1 2011/08/14 09:24:15 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.9.6.ebuild,v 1.2 2012/05/03 04:24:37 jdhore Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ ALL_DEPEND="!>=sys-libs/db-5.0
 		sec-policy/selinux-base-policy )"
 
 DEPEND="${ALL_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/libtool
 	doc? ( app-doc/doxygen )
 	selinux? ( sys-devel/m4 >=sys-apps/checkpolicy-1.30.12 )

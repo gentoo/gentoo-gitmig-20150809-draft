@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ldapvi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.24 2011/06/14 00:05:15 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.25 2012/05/03 04:24:37 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> ldapvi-1.7.ebuild,
+  ldapvi-1.7-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Jun 2011; Michael Weber <xmw@gentoo.org> ldapvi-1.7-r1.ebuild:
   fix src_install, thanks to Nickolaj Stjujsckij (bug 371409)
