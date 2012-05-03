@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.4.ebuild,v 1.5 2011/09/14 10:35:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.4.ebuild,v 1.6 2012/05/03 04:28:53 jdhore Exp $
 
 EAPI="2"
 inherit toolchain-funcs
@@ -20,7 +20,7 @@ RDEPEND=">=dev-db/sqlite-3.5:3
 	dev-libs/libxml2"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	test? (
 		dev-libs/boost

@@ -1,6 +1,10 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.58 2012/04/09 14:52:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.59 2012/05/03 04:28:53 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> blam-1.8.6.ebuild,
+  blam-1.8.9.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Apr 2012; Markus Meier <maekke@gentoo.org> blam-1.8.9.ebuild:
   x86 stable, bug #407701

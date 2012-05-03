@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.6.6b.ebuild,v 1.1 2011/08/08 15:52:54 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.6.6b.ebuild,v 1.2 2012/05/03 04:28:53 jdhore Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -32,7 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2.16.0:2
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	networkmanager? ( net-misc/networkmanager dev-libs/dbus-glib )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 S=${WORKDIR}/${MY_P}

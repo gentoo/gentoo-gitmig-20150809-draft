@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.5.ebuild,v 1.1 2012/01/09 08:45:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.5.ebuild,v 1.2 2012/05/03 04:28:53 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-db/sqlite-3.5:3
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	test? (
 		dev-libs/boost

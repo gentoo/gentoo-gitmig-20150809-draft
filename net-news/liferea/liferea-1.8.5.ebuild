@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8.5.ebuild,v 1.1 2012/04/20 14:52:22 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8.5.ebuild,v 1.2 2012/05/03 04:28:53 jdhore Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ RDEPEND=">=x11-libs/gtk+-2.18.0:2
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog README"
 

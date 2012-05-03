@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.221 2012/04/20 14:52:22 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.222 2012/05/03 04:28:53 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> liferea-1.6.5.ebuild,
+  liferea-1.6.6b.ebuild, liferea-1.8.0.ebuild, liferea-1.8.4.ebuild,
+  liferea-1.8.5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *liferea-1.8.5 (20 Apr 2012)
 

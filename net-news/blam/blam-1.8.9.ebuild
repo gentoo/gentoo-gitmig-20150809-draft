@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.9.ebuild,v 1.2 2012/04/09 14:52:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.9.ebuild,v 1.3 2012/05/03 04:28:53 jdhore Exp $
 
 EAPI="4"
 inherit mono eutils
@@ -24,7 +24,7 @@ RDEPEND=">=dev-lang/mono-2
 	>=gnome-base/gconf-2.4"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=dev-util/intltool-0.25"
 
 # Disable parallel builds
