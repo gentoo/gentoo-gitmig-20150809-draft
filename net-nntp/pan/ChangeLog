@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.97 2012/04/08 02:24:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.98 2012/05/03 04:32:51 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> pan-0.133-r1.ebuild,
+  pan-0.134.ebuild, pan-0.135.ebuild, pan-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   08 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> pan-0.135.ebuild,
   +files/pan-0.135-glib-2.31.patch:

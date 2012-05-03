@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.7.0.ebuild,v 1.6 2011/08/30 21:32:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.7.0.ebuild,v 1.7 2012/05/03 04:32:50 jdhore Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ RDEPEND="dev-libs/libxml2
 		dev-libs/libsigc++:2
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}"/${P/_pre*/-testing}
 
