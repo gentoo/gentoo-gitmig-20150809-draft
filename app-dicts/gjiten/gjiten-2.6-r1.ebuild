@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r1.ebuild,v 1.4 2009/10/15 14:00:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.6-r1.ebuild,v 1.5 2012/05/03 02:18:34 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils gnome2
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	app-text/xmlto
 	app-text/docbook-xml-dtd:4.1.2
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
 

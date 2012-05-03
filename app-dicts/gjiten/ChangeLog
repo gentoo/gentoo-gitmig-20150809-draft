@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/gjiten
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.21 2009/10/15 14:00:13 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.22 2012/05/03 02:18:36 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gjiten-2.3.ebuild,
+  gjiten-2.6-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> gjiten-2.6-r1.ebuild:
   Missing app-text/docbook-xml-dtd:4.1.2 DEPEND wrt #289188.

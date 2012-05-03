@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/gwaei
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.25 2012/03/19 16:49:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.26 2012/05/03 02:18:34 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gwaei-1.0.ebuild,
+  gwaei-1.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Mar 2012; Naohiro Aota <naota@gentoo.org> gwaei-3.0.2.ebuild:
   Add missing dependency: dev-util/intltool and app-text/rarian. #399343

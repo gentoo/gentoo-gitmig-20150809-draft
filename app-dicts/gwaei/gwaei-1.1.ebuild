@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.1.ebuild,v 1.2 2011/03/27 10:10:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.1.ebuild,v 1.3 2012/05/03 02:18:34 jdhore Exp $
 
 EAPI="1"
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	gnome? ( app-text/scrollkeeper )
 	nls? ( >=sys-devel/gettext-0.17 )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 #RDEPEND="${RDEPEND}
 #	media-fonts/kanjistrokeorders"
 

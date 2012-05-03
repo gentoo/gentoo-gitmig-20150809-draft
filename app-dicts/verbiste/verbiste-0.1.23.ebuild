@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.23.ebuild,v 1.5 2011/03/27 10:11:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.23.ebuild,v 1.6 2012/05/03 02:18:34 jdhore Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/libxml2-2.4.0:2
 		>=gnome-base/libgnomeui-2.0 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \
