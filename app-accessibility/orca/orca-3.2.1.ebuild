@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.2.1.ebuild,v 1.3 2012/01/13 17:21:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.2.1.ebuild,v 1.4 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	>=app-text/gnome-doc-utils-0.17.3
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"

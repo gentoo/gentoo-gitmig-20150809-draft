@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.1.ebuild,v 1.9 2012/01/13 17:21:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.32.1.ebuild,v 1.10 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -40,7 +40,7 @@ RDEPEND=">=dev-libs/glib-2.10:2
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"

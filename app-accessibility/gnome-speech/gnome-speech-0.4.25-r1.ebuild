@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25-r1.ebuild,v 1.8 2012/04/07 21:30:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25-r1.ebuild,v 1.9 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -24,7 +24,7 @@ RDEPEND="$COMMON_DEPEND
 	festival? ( app-accessibility/festival )"
 
 DEPEND="$COMMON_DEPEND
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"

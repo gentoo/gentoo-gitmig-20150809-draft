@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.2.1-r1.ebuild,v 1.1 2011/11/05 04:51:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.2.1-r1.ebuild,v 1.2 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<gnome-extra/at-spi-1.32.0-r1
 "
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 "
 

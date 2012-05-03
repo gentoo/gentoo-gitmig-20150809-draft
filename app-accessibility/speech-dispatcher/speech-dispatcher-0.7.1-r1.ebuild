@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.7.1-r1.ebuild,v 1.8 2011/04/26 16:10:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.7.1-r1.ebuild,v 1.9 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -27,7 +27,7 @@ RDEPEND="dev-libs/dotconf
 	nas? ( media-libs/nas )
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	use python && python_pkg_setup

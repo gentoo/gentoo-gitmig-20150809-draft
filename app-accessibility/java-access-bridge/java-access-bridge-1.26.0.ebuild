@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.26.0.ebuild,v 1.7 2011/08/19 11:32:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.26.0.ebuild,v 1.8 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI="2"
 inherit java-pkg-2 gnome2 autotools
@@ -22,7 +22,7 @@ RDEPEND="$COMMON_DEPEND
 
 DEPEND="$COMMON_DEPEND
 	>=virtual/jdk-1.4
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

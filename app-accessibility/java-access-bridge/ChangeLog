@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/java-access-bridge
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.50 2011/08/19 11:32:00 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.51 2012/05/03 01:48:59 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  java-access-bridge-1.6.0.ebuild, java-access-bridge-1.6.0-r2.ebuild,
+  java-access-bridge-1.24.2.ebuild, java-access-bridge-1.26.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   java-access-bridge-1.6.0.ebuild, java-access-bridge-1.6.0-r2.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.11.ebuild,v 1.12 2011/08/19 11:23:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.11.ebuild,v 1.13 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 		>=gnome-base/libgnome-2
 		>=gnome-base/libgnomeui-2 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xproto
 	gnome? (

@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.152 2011/08/19 11:26:37 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.153 2012/05/03 01:48:59 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gok-2.30.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -gok-2.30.0.ebuild,
   gok-2.30.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/pidgin-festival-2.4.ebuild,v 1.2 2011/03/02 19:50:48 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/pidgin-festival-2.4.ebuild,v 1.3 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND="app-accessibility/festival
 	net-im/pidgin[gtk]
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

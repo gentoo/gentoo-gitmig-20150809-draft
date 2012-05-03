@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.16.3.ebuild,v 1.7 2011/08/19 11:26:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.16.3.ebuild,v 1.8 2012/05/03 01:48:59 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -44,7 +44,7 @@ RDEPEND="${RDEPEND}
 	x11-libs/libXcomposite"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 
 	x11-proto/xextproto
