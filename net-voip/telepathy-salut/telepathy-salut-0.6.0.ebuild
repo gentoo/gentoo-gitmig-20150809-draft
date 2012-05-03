@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.6.0.ebuild,v 1.6 2012/03/25 17:31:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.6.0.ebuild,v 1.7 2012/05/03 07:27:48 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 		net-libs/libgsasl
 		dev-python/twisted-words )
 	dev-libs/libxslt
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 # FIXME: needs xmppstream python module
 #               >=net-dns/avahi-0.6.22[python]
 

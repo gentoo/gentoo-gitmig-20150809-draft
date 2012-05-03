@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.13 2012/05/02 21:08:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.14 2012/05/03 07:27:47 jdhore Exp $
 
 EAPI=3
 
@@ -44,7 +44,7 @@ RDEPEND=">=dev-libs/glib-2.14.0:2
 	xv? ( x11-libs/libXv )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.20
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( app-text/scrollkeeper
 		app-text/gnome-doc-utils )

@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.34 2012/05/02 21:08:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.35 2012/05/03 07:27:47 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> ekiga-2.0.12.ebuild,
+  ekiga-3.2.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 May 2012; Gilles Dartiguelongue <eva@gentoo.org> ekiga-3.2.7.ebuild:
   Adapt ebuild to new gnome2 eclass scrollkeeper support, see bug#301311.

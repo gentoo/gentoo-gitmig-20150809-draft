@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.6.0.ebuild,v 1.1 2012/04/23 10:09:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.6.0.ebuild,v 1.2 2012/05/03 07:27:47 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -26,7 +26,7 @@ RDEPEND=">=net-im/pidgin-2.7
 	>=dev-libs/dbus-glib-0.73"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 #	test? ( dev-python/twisted-words )"
 
 pkg_setup() {
