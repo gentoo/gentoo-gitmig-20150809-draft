@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.470 2012/05/03 07:22:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.471 2012/05/03 20:45:48 maekke Exp $
+
+  03 May 2012; Markus Meier <maekke@gentoo.org> cups-1.5.2-r4.ebuild:
+  arm stable, bug #411887
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> cups-1.4.8-r1.ebuild,
   cups-1.4.8-r23.ebuild, cups-1.5.2-r4.ebuild, cups-1.5.2-r20.ebuild:
