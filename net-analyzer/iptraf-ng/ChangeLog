@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.28 2012/04/01 16:39:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.29 2012/05/04 15:52:46 scarabeus Exp $
+
+*iptraf-ng-1.1.2 (04 May 2012)
+
+  04 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +iptraf-ng-1.1.2.ebuild,
+  -iptraf-ng-1.0.2.ebuild, -iptraf-ng-1.1.0.ebuild,
+  -iptraf-ng-1.1.1.20120321.ebuild:
+  Version bump to actual release. Drop overshadowed stuff.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> iptraf-ng-1.1.1.ebuild:
   alpha/ia64/s390/sh/sparc/x86 stable wrt #408203
