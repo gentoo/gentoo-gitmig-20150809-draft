@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.71 2012/05/04 18:02:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.72 2012/05/04 21:15:35 floppym Exp $
+
+  04 May 2012; Mike Gilbert <floppym@gentoo.org> egenix-mx-base-3.2.4.ebuild:
+  Fix test logic.
 
 *egenix-mx-base-3.2.4 (04 May 2012)
 

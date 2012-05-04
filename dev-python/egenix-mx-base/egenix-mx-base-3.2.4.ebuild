@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.2.4.ebuild,v 1.1 2012/05/04 18:02:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.2.4.ebuild,v 1.2 2012/05/04 21:15:35 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -37,10 +37,12 @@ src_compile() {
 
 src_test() {
 	testing() {
+		local tst status=0
 		for tst in $(find "build-${PYTHON_ABI}/" -name test.py)
 		do
-			PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)"	"$(PYTHON)" ${tst}
+			PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)"	"$(PYTHON)" "${tst}" || status=1
 		done
+		return ${status}
 	}
 	python_execute_function testing
 }
