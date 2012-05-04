@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.0.ebuild,v 1.10 2012/04/07 11:25:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.0.ebuild,v 1.11 2012/05/04 08:42:24 jdhore Exp $
 
 EAPI="4"
 
@@ -34,7 +34,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.20:2
 
 DEPEND="${COMMONDEPEND}
 	xface? ( >=media-libs/compface-1.4 )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types

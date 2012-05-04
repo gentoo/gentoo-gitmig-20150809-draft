@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r4.ebuild,v 1.8 2011/03/06 07:37:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r4.ebuild,v 1.9 2012/05/04 08:42:23 jdhore Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.0"
 
 # this now uses JB (the Jean-Yves Lefort's Build System) as a build system

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3.ebuild,v 1.4 2012/04/16 18:14:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3.ebuild,v 1.5 2012/05/04 08:42:21 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -68,7 +68,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28:2
 		>=dev-libs/nspr-4.6.1
 		>=dev-libs/nss-3.11 )"
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/pkgconfig-0.16
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40.0
 	>=sys-devel/gettext-0.17
 	sys-devel/bison

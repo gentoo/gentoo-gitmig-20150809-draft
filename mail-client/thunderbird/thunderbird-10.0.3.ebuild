@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.3.ebuild,v 1.4 2012/03/25 15:31:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.3.ebuild,v 1.5 2012/05/04 08:42:22 jdhore Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -72,7 +72,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	) )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	webm? ( x86? ( ${ASM_DEPEND} )
 		amd64? ( ${ASM_DEPEND} ) )"
 

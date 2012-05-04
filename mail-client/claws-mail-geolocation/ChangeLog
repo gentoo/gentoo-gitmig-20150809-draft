@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-geolocation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/ChangeLog,v 1.19 2012/04/11 21:16:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/ChangeLog,v 1.20 2012/05/04 08:42:24 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  claws-mail-geolocation-0.0.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   11 Apr 2012; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-geolocation-0.0.6.ebuild:

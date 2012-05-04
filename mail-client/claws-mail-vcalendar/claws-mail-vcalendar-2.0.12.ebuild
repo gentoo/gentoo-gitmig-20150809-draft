@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-2.0.12.ebuild,v 1.6 2012/04/07 11:39:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/claws-mail-vcalendar-2.0.12.ebuild,v 1.7 2012/05/04 08:42:24 jdhore Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND=">=mail-client/claws-mail-3.8.0
 		>=net-misc/curl-7.9.7"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

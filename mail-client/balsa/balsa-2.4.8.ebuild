@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.8.ebuild,v 1.10 2011/10/27 06:28:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.8.ebuild,v 1.11 2012/05/04 08:42:23 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -52,7 +52,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	xface? ( >=media-libs/compface-1.5.1 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	>=app-text/scrollkeeper-0.1.4
 	app-text/gnome-doc-utils"

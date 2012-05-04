@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/claws-mail-perl-0.9.19.ebuild,v 1.4 2012/04/07 11:34:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-perl/claws-mail-perl-0.9.19.ebuild,v 1.5 2012/05/04 08:42:22 jdhore Exp $
 
 MY_P="${PN#claws-mail-}_plugin-${PV}"
 
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND=">=mail-client/claws-mail-3.8.0
 		dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

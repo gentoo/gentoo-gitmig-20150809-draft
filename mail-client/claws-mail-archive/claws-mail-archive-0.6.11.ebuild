@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/claws-mail-archive-0.6.11.ebuild,v 1.3 2012/04/07 11:27:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/claws-mail-archive-0.6.11.ebuild,v 1.4 2012/05/04 08:42:23 jdhore Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND=">=mail-client/claws-mail-3.8.0
 	app-arch/libarchive
 	>=net-misc/curl-7.9.7"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

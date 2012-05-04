@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.139 2012/05/02 20:00:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.140 2012/05/04 08:42:22 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> thunderbird-10.0.3.ebuild,
+  thunderbird-10.0.4.ebuild, thunderbird-12.0.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 May 2012; Lars Wendler <polynomial-c@gentoo.org>
   thunderbird-12.0.1.ebuild:
