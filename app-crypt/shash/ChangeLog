@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/shash
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.24 2011/02/06 05:29:49 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.25 2012/05/04 11:10:25 aballier Exp $
+
+  04 May 2012; Alexis Ballier <aballier@gentoo.org> shash-0.2.6-r1.ebuild:
+  keyword ~amd64-fbsd
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> shash-0.2.6-r1.ebuild:
   Drop to ~mips
