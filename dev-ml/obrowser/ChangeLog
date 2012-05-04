@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/obrowser
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.6 2011/06/26 20:08:09 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/ChangeLog,v 1.7 2012/05/04 12:29:20 aballier Exp $
+
+  04 May 2012; Alexis Ballier <aballier@gentoo.org> obrowser-1.1.1.ebuild:
+  depend on lwt, by Sergey Kishchenko in bug #413885
 
   26 Jun 2011; Alexis Ballier <aballier@gentoo.org> obrowser-1.1.1.ebuild:
   inhibit the ocaml version check so that it builds with 3.12.1rc1

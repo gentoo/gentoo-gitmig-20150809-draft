@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/obrowser-1.1.1.ebuild,v 1.2 2011/06/26 20:08:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/obrowser-1.1.1.ebuild,v 1.3 2012/05/04 12:29:20 aballier Exp $
 
 EAPI=3
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/ocaml-3.12.0"
+RDEPEND=">=dev-lang/ocaml-3.12.0
+	dev-ml/lwt"
 DEPEND="${RDEPEND}
 	app-arch/sharutils"
 
