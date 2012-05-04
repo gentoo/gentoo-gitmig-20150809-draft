@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/pam_p11-0.1.5-r1.ebuild,v 1.7 2011/03/24 18:10:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/pam_p11-0.1.5-r1.ebuild,v 1.8 2012/05/04 18:57:21 jdhore Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/pam
 		dev-libs/libp11
 		dev-libs/openssl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	# hide all the otherwise-exported symbols that may clash with

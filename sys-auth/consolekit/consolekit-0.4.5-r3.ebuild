@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5-r3.ebuild,v 1.2 2012/03/20 22:58:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5-r3.ebuild,v 1.3 2012/05/04 18:57:21 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils linux-info pam systemd
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	policykit? ( >=sys-auth/polkit-0.101-r1 )
 	!<sys-fs/udev-182"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-libs/libxslt
 	doc? ( app-text/xmlto )
 	test? ( app-text/docbook-xml-dtd:4.1.2 )"

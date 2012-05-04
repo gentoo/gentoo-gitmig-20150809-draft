@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.6.ebuild,v 1.2 2011/05/06 09:29:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.6.ebuild,v 1.3 2012/05/04 18:57:21 jdhore Exp $
 
 EAPI="3"
 
@@ -28,7 +28,7 @@ RDEPEND="sys-libs/pam
 	)
 	pcsc-lite? ( sys-apps/pcsc-lite )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Fix the example files to be somewhat decent, and usable as

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.104-r1.ebuild,v 1.8 2012/03/25 17:58:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.104-r1.ebuild,v 1.9 2012/05/04 18:57:21 jdhore Exp $
 
 EAPI=4
 inherit pam
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.13 )"
 PDEPEND="!systemd? ( >=sys-auth/consolekit-0.4.5[policykit] )
 	pam? ( sys-auth/pambase[consolekit] )

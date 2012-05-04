@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.5 2012/03/27 18:40:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.6 2012/05/04 18:57:21 jdhore Exp $
 
 EAPI=4
 inherit eutils pam toolchain-funcs
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 	sys-apps/pmount
 	sys-fs/udisks:0"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# FIXME: push upstream: http://bugs.gentoo.org/show_bug.cgi?id=358935#c6

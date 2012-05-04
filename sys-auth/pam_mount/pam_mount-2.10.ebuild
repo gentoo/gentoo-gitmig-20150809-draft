@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.10.ebuild,v 1.4 2011/05/22 16:16:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.10.ebuild,v 1.5 2012/05/04 18:57:21 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=sys-libs/pam-0.99
 	ssl? ( >=dev-libs/openssl-0.9.8 )
 	selinux? ( sys-libs/libselinux )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-arch/xz-utils"
 RDEPEND="${COMMON_DEPEND}"
 
