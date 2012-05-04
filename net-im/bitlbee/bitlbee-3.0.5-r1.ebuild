@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.5-r1.ebuild,v 1.3 2012/03/27 15:02:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.5-r1.ebuild,v 1.4 2012/05/04 06:22:12 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="skype? 2:2.5"
@@ -28,7 +28,7 @@ COMMON_DEPEND="purple? ( net-im/pidgin )
 	)"
 	# ldap? ( net-nds/openldap )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	skype? ( app-text/asciidoc )
 	test? ( dev-libs/check )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.6.ebuild,v 1.1 2008/11/27 10:29:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.6.ebuild,v 1.2 2012/05/04 06:22:11 jdhore Exp $
 
 inherit eutils multilib
 
@@ -19,7 +19,7 @@ COMMONDEPEND="perl? (	dev-lang/perl )
 	!<=net-im/silc-toolkit-0.9.12-r1"
 
 DEPEND="${COMMONDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RDEPEND="${COMMONDEPEND}
 	perl? (

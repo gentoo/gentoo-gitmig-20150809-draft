@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r3.ebuild,v 1.7 2012/04/19 09:45:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r3.ebuild,v 1.8 2012/05/04 06:22:14 jdhore Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<net-im/psi-0.13_rc1
 "
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 src_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.6-r1.ebuild,v 1.12 2012/03/18 13:22:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.6-r1.ebuild,v 1.13 2012/05/04 06:22:12 jdhore Exp $
 
 EAPI="1"
 
@@ -28,7 +28,7 @@ RDEPEND="net-libs/libgadu
 	gnutls? ( net-libs/gnutls )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/automake-1.7
 	>=sys-devel/libtool-1.4"
 

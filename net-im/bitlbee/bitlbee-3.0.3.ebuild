@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.3.ebuild,v 1.6 2011/10/11 11:38:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.3.ebuild,v 1.7 2012/05/04 06:22:12 jdhore Exp $
 
 EAPI="4"
 inherit eutils multilib
@@ -25,7 +25,7 @@ COMMON_DEPEND="purple? ( net-im/pidgin )
 	)"
 	# ldap? ( net-nds/openldap )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-libs/check )"
 
 RDEPEND="${COMMON_DEPEND}

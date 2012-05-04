@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.10.ebuild,v 1.1 2009/11/05 07:47:04 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.10.ebuild,v 1.2 2012/05/04 06:22:11 jdhore Exp $
 
 inherit flag-o-matic
 
@@ -28,7 +28,7 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.7-r1 )
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	use crypt && append-flags -D_FILE_OFFSET_BITS=64 # bug #277888

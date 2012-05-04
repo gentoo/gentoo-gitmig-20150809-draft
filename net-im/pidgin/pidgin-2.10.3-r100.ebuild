@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.3-r100.ebuild,v 1.1 2012/03/31 21:01:56 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.3-r100.ebuild,v 1.2 2012/05/04 06:22:11 jdhore Exp $
 
 EAPI=4
 
@@ -68,7 +68,7 @@ NLS_DEPEND=">=dev-util/intltool-0.41.1 sys-devel/gettext"
 DEPEND="$RDEPEND
 	dev-lang/perl
 	dev-perl/XML-Parser
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	gtk? ( x11-proto/scrnsaverproto
 		${NLS_DEPEND} )
 	dbus? ( <dev-lang/python-3 )

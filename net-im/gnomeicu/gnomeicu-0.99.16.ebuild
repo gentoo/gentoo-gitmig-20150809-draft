@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.16.ebuild,v 1.7 2012/03/25 16:54:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.16.ebuild,v 1.8 2012/05/04 06:22:13 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -29,7 +29,7 @@ RDEPEND="x11-libs/gtk+:2
 
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.5
-	>=dev-util/pkgconfig-0.12
+	virtual/pkgconfig
 	>=dev-util/intltool-0.22
 	sys-devel/gettext
 	x11-proto/scrnsaverproto"

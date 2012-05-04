@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.10.ebuild,v 1.8 2010/04/30 14:35:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.10.ebuild,v 1.9 2012/05/04 06:22:12 jdhore Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug ipv6"
 
 RDEPEND=""
-DEPEND="dev-util/pkgconfig"
+DEPEND="virtual/pkgconfig"
 
 src_prepare() {
 	# They have incorrect DESTDIR usage

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.2-r1.ebuild,v 1.1 2012/05/02 05:45:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.2-r1.ebuild,v 1.2 2012/05/04 06:22:12 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -74,7 +74,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.17.3
 	>=dev-util/intltool-0.35.0
-	>=dev-util/pkgconfig-0.16
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.17
 	test? (
 		sys-apps/grep

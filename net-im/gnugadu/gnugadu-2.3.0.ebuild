@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.14 2012/03/18 13:21:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.15 2012/05/04 06:22:12 jdhore Exp $
 
 EAPI="1"
 
@@ -30,7 +30,7 @@ RDEPEND="net-libs/libgadu
 	x11-libs/libXScrnSaver"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/scrnsaverproto"
 
 src_unpack() {

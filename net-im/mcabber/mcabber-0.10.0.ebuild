@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.0.ebuild,v 1.1 2010/05/06 11:31:20 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.0.ebuild,v 1.2 2012/05/04 06:22:11 jdhore Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ RDEPEND="ssl? ( net-libs/loudmouth[ssl] )
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	use crypt && append-flags -D_FILE_OFFSET_BITS=64 # bug #277888

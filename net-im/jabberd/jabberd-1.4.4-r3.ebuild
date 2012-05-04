@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.21 2012/04/25 16:33:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.22 2012/05/04 06:22:13 jdhore Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=net-im/jabber-base-0.01
 	postgres? ( dev-db/postgresql-server )
 	ssl? ( >=dev-libs/openssl-0.9.6i )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!net-im/jabberd2"
 
 pkg_setup() {

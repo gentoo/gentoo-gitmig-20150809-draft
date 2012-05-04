@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.1.ebuild,v 1.1 2010/12/26 22:04:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.1.ebuild,v 1.2 2012/05/04 06:22:11 jdhore Exp $
 
 EAPI=3
 
@@ -32,7 +32,7 @@ RDEPEND="crypt? ( >=app-crypt/gpgme-1.0.0 )
 	sys-libs/ncurses
 	>=net-libs/loudmouth-1.4.3-r1[ssl?]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	if use aspell && use spell; then

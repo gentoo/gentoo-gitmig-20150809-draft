@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnomeicu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.58 2012/03/25 16:54:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/ChangeLog,v 1.59 2012/05/04 06:22:13 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gnomeicu-0.99.12.ebuild,
+  gnomeicu-0.99.16.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> gnomeicu-0.99.16.ebuild:
   alpha/sparc stable wrt #393007

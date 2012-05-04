@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.14 2011/12/17 02:14:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.15 2012/05/04 06:22:12 jdhore Exp $
 
 EAPI="4"
 
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 		sys-devel/qconf
 	)
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 PDEPEND="
 	crypt? ( app-crypt/qca-gnupg:2 )

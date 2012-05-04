@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.8.ebuild,v 1.8 2010/04/30 14:42:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.8.ebuild,v 1.9 2012/05/04 06:22:11 jdhore Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ COMMONDEPEND="perl? ( dev-lang/perl )
 	!<=net-im/silc-toolkit-0.9.12-r1"
 
 DEPEND="${COMMONDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=net-im/silc-toolkit-1.1.10"
 
 RDEPEND="${COMMONDEPEND}
