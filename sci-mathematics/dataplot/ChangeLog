@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/dataplot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.14 2011/11/25 20:52:51 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.15 2012/05/04 07:46:51 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> dataplot-20090821.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Nov 2011; Sébastien Fabbro <bicatali@gentoo.org>
   -dataplot-20080225.ebuild, -files/dpsrc-dp1patches-20080225.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.7.ebuild,v 1.2 2012/04/13 19:39:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.7.ebuild,v 1.3 2012/05/04 07:46:51 jdhore Exp $
 
 EAPI=4
 USE_EINSTALL=true
@@ -43,7 +43,7 @@ RDEPEND="dev-libs/libxml2:2
 	emacs? ( virtual/emacs )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 SITEFILE=50${PN}-gentoo.el
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.35.ebuild,v 1.8 2009/05/17 13:15:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.35.ebuild,v 1.9 2012/05/04 07:46:50 jdhore Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND="odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )
 	mysql? ( virtual/mysql )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	local myconf="--disable-dl"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r1.ebuild,v 1.14 2012/04/24 10:39:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r1.ebuild,v 1.15 2012/05/04 07:46:51 jdhore Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common autotools
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo
 	dev-texlive/texlive-genericrecommended
 	dev-util/gperf
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2.0_parallel_make.patch \

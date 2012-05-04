@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.0.ebuild,v 1.1 2012/04/18 23:46:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.0.ebuild,v 1.2 2012/05/04 07:46:50 jdhore Exp $
 
 EAPI=4
 CMAKE_BUILD_TYPE=Release
@@ -32,7 +32,7 @@ RDEPEND="dev-libs/boost
 	mpfi? ( sci-libs/mpfi )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

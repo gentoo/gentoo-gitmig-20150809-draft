@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2.ebuild,v 1.7 2012/04/24 10:41:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2.ebuild,v 1.8 2012/05/04 07:46:50 jdhore Exp $
 
 EAPI=2
 inherit eutils elisp-common autotools
@@ -26,7 +26,7 @@ RDEPEND="
 	plotutils? ( media-libs/plotutils )
 	postgres? ( dev-db/postgresql-server )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( virtual/latex-base )"
 
 SITEFILE=50${PN}-gentoo.el

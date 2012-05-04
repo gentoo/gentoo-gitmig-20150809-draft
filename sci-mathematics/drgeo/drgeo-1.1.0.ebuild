@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.9 2012/04/25 18:47:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.10 2012/05/04 07:46:51 jdhore Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ RDEPEND="
 		=dev-scheme/guile-1.6*
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc45.patch

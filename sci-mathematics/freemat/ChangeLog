@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.27 2012/04/12 23:38:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.28 2012/05/04 07:46:50 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> freemat-4.0.ebuild,
+  freemat-4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> freemat-4.1.ebuild,
   +files/freemat-4.1-python3.patch, metadata.xml:
