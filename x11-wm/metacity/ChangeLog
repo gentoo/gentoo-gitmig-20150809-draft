@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metacity
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.271 2011/07/24 13:37:23 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.272 2012/05/04 08:58:57 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> metacity-2.30.3.ebuild,
+  metacity-2.34.0.ebuild, metacity-2.34.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *metacity-2.34.1 (24 Jul 2011)
 

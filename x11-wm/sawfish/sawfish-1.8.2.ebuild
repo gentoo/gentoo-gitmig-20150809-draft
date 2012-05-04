@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.8.2.ebuild,v 1.6 2012/02/24 23:26:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.8.2.ebuild,v 1.7 2012/05/04 08:58:58 jdhore Exp $
 
 EAPI="4"
 
@@ -34,7 +34,7 @@ RDEPEND=">=dev-libs/librep-0.92.0
 	nls? ( sys-devel/gettext )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0"
+	virtual/pkgconfig"
 
 if (( snapshot )); then
 	S="${WORKDIR}/${PN}"

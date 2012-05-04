@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.11 2011/03/29 13:07:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.12 2012/05/04 08:58:58 jdhore Exp $
 
 EAPI=1
 inherit eutils toolchain-funcs
@@ -22,7 +22,7 @@ RDEPEND="
 	x11-libs/libXft
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto
 	x11-proto/xextproto"
 

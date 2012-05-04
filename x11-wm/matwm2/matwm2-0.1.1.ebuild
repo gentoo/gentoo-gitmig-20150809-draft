@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/matwm2-0.1.1.ebuild,v 1.2 2012/02/07 21:52:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/matwm2-0.1.1.ebuild,v 1.3 2012/05/04 08:58:56 jdhore Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -23,7 +23,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xextproto
 	xinerama? ( x11-proto/xineramaproto )
 "

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.34.1.ebuild,v 1.1 2011/07/24 13:37:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.34.1.ebuild,v 1.2 2012/05/04 08:58:57 jdhore Exp $
 
 EAPI="4"
 # debug only changes CFLAGS
@@ -41,7 +41,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.8
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	test? ( app-text/docbook-xml-dtd:4.5 )
 	xinerama? ( x11-proto/xineramaproto )

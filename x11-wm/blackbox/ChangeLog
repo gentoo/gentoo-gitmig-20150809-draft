@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blackbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.68 2011/04/16 18:20:44 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.69 2012/05/04 08:58:57 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> blackbox-0.70.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> blackbox-0.70.1.ebuild:
   Don't PROVIDE virtual/blackbox, bug 358825.

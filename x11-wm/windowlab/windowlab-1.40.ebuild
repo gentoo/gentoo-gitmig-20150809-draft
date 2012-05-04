@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/windowlab-1.40.ebuild,v 1.1 2010/05/30 15:40:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/windowlab-1.40.ebuild,v 1.2 2012/05/04 08:58:57 jdhore Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND="truetype? ( x11-libs/libXft )
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	if use truetype ; then

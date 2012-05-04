@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.59 2012/03/13 16:56:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.60 2012/05/04 08:58:55 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> pekwm-0.1.14.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   13 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org>
   -files/pekwm-0.1.12-configure.patch, -pekwm-0.1.12.ebuild:

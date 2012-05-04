@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.6.2.ebuild,v 1.4 2011/10/23 21:42:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.6.2.ebuild,v 1.5 2012/05/04 08:58:55 jdhore Exp $
 
 EAPI=2
 
@@ -61,7 +61,7 @@ RDEPEND="${COMMON_DEPEND}
 	!x86-fbsd? ( netpbm? ( media-libs/netpbm ) )"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-libs/libxslt )
 	x11-proto/xextproto
 	x11-proto/xproto"

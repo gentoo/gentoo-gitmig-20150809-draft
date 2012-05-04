@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.1.ebuild,v 1.12 2011/03/29 13:09:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.1.ebuild,v 1.13 2012/05/04 08:58:58 jdhore Exp $
 
 EAPI=1
 inherit autotools eutils
@@ -17,7 +17,7 @@ IUSE="nls"
 RDEPEND="x11-libs/gtk+:2
 	dev-libs/glib:2"
 DEPEND="$RDEPEND
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

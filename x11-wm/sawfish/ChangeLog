@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.109 2012/03/27 09:01:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.110 2012/05/04 08:58:58 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> sawfish-1.8.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Mar 2012; Pacho Ramos <pacho@gentoo.org> -sawfish-1.3.3.ebuild,
   -sawfish-1.6.3.ebuild, metadata.xml:

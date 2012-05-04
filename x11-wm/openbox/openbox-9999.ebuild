@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.13 2011/10/18 21:52:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.14 2012/05/04 08:58:57 jdhore Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
@@ -29,7 +29,7 @@ RDEPEND="dev-libs/glib:2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	app-text/docbook2X
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
 	x11-proto/xineramaproto"

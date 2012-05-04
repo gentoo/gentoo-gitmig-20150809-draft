@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-0.0.6.ebuild,v 1.5 2011/04/28 21:32:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-0.0.6.ebuild,v 1.6 2012/05/04 08:58:55 jdhore Exp $
 
 EAPI=3
 
@@ -29,7 +29,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-apps/xmodmap"
 DEPEND="${COMMON_DEPEND}
 	dev-python/pyrex
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

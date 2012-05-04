@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.6.ebuild,v 1.2 2012/03/18 14:02:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.6.ebuild,v 1.3 2012/05/04 08:58:56 jdhore Exp $
 
 EAPI="2"
 if [[ ${PV} == *9999 ]] ; then
@@ -44,7 +44,7 @@ RDEPEND="pulseaudio? ( media-sound/pulseaudio )
 	nls? ( virtual/libintl )
 	virtual/libiconv"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
 	xinerama? ( x11-proto/xineramaproto )

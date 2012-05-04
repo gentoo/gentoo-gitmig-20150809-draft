@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/matwm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/ChangeLog,v 1.4 2012/02/07 21:52:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/ChangeLog,v 1.5 2012/05/04 08:58:56 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> matwm2-0.1.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> matwm2-0.1.1.ebuild:
   Add pkgconfig dependency.

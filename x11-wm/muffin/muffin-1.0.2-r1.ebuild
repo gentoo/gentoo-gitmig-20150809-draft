@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.2-r1.ebuild,v 1.1 2012/04/13 16:04:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.2-r1.ebuild,v 1.2 2012/05/04 08:58:56 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -47,7 +47,7 @@ COMMON_DEPEND=">=x11-libs/pango-1.2[X,introspection?]
 DEPEND="${COMMON_DEPEND}
 	>=app-text/gnome-doc-utils-0.8
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	test? ( app-text/docbook-xml-dtd:4.5 )
 	xinerama? ( x11-proto/xineramaproto )
