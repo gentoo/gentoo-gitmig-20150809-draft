@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/lxmenu-data-0.1.2.ebuild,v 1.4 2011/10/09 16:43:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/lxmenu-data-0.1.2.ebuild,v 1.5 2012/05/04 05:50:40 jdhore Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="sys-devel/gettext
 	>=dev-util/intltool-0.40.0
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r4.ebuild,v 1.1 2012/02/18 11:41:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r4.ebuild,v 1.2 2012/05/04 05:50:38 jdhore Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="sys-auth/consolekit
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Upstream bug, tarball contains pre-made lxdm.conf

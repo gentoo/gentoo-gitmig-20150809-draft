@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/menu-cache-0.3.2.ebuild,v 1.7 2011/03/07 20:33:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/menu-cache-0.3.2.ebuild,v 1.8 2012/05/04 05:50:39 jdhore Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"

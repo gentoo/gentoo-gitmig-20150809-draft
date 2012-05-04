@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/lxmenu-data-0.1.1.ebuild,v 1.9 2011/03/07 20:31:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/lxmenu-data-0.1.1.ebuild,v 1.10 2012/05/04 05:50:40 jdhore Exp $
 
 DESCRIPTION="Provides files needed for LXDE application menus"
 HOMEPAGE="http://lxde.sourceforge.net/"
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="sys-devel/gettext
 	>=dev-util/intltool-0.40.0
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"

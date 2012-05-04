@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.3.0-r1.ebuild,v 1.2 2011/01/25 09:44:16 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.3.0-r1.ebuild,v 1.3 2012/05/04 05:50:38 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ COMMON_DEPEND="sys-libs/pam
 	nls? ( sys-devel/gettext )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	gnome-base/librsvg"
 

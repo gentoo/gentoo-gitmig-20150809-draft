@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r2.ebuild,v 1.1 2011/09/27 12:38:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r2.ebuild,v 1.2 2012/05/04 05:50:38 jdhore Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="sys-libs/pam
 	nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf	--enable-password \

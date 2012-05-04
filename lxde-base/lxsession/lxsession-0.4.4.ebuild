@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.4.ebuild,v 1.7 2011/03/07 20:32:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.4.ebuild,v 1.8 2012/05/04 05:50:41 jdhore Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ RDEPEND="dev-libs/glib:2
 	sys-apps/dbus
 	>=lxde-base/lxde-common-0.5.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_install() {

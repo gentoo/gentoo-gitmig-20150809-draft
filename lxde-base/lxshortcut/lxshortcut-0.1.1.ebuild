@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxshortcut/lxshortcut-0.1.1.ebuild,v 1.9 2011/03/07 20:32:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxshortcut/lxshortcut-0.1.1.ebuild,v 1.10 2012/05/04 05:50:39 jdhore Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

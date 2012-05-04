@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxinput/lxinput-0.3.1.ebuild,v 1.5 2011/10/09 16:42:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxinput/lxinput-0.3.1.ebuild,v 1.6 2012/05/04 05:50:39 jdhore Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40.0"
 
 src_install() {

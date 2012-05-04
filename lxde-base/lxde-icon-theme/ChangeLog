@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-icon-theme
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.7 2011/03/07 20:32:45 klausman Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.8 2012/05/04 05:50:41 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> lxde-icon-theme-0.0.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Mar 2011; Tobias Klausmann <klausman@gentoo.org>
   lxde-icon-theme-0.0.1.ebuild:

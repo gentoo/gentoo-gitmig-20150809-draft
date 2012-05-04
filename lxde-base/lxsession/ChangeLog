@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxsession
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.36 2011/10/09 16:46:50 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.37 2012/05/04 05:50:41 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> lxsession-0.4.4.ebuild,
+  lxsession-0.4.5.ebuild, lxsession-0.4.6.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> lxsession-0.4.6.1.ebuild:
   arm stable, bug #385189

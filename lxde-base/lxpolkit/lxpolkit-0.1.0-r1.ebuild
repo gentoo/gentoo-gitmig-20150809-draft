@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/lxpolkit-0.1.0-r1.ebuild,v 1.4 2012/01/28 14:47:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/lxpolkit-0.1.0-r1.ebuild,v 1.5 2012/05/04 05:50:41 jdhore Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ RDEPEND=">=sys-auth/polkit-0.102
 	!gnome-extra/polkit-gnome"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {

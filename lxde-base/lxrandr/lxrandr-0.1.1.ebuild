@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/lxrandr-0.1.1.ebuild,v 1.11 2011/03/07 20:33:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/lxrandr-0.1.1.ebuild,v 1.12 2012/05/04 05:50:41 jdhore Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/gtk+:2
 	x11-apps/xrandr"
 DEPEND="${RDEPEND}
 	x11-proto/randrproto
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.40.0"
 
