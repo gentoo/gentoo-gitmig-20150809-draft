@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-9.0.ebuild,v 1.2 2012/04/26 14:26:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-9.0.ebuild,v 1.3 2012/05/04 11:36:46 aballier Exp $
 
-inherit bsdmk freebsd flag-o-matic
+inherit bsdmk freebsd flag-o-matic multilib
 
 DESCRIPTION="Contributed sources for FreeBSD."
 SLOT="0"
@@ -46,7 +46,7 @@ src_install() {
 	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= "
 
 	cd "${S}/lib/libodialog"
-	mkinstall || die "libodialog install failed"
+	mkinstall LIBDIR="/usr/$(get_libdir)" || die "libodialog install failed"
 
 	cd "${S}/usr.bin/sort"
 	mkinstall BINDIR="/bin/" || die "sort install failed"
