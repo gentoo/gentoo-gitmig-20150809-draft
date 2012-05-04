@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.65 2012/04/26 14:24:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.66 2012/05/04 12:54:29 aballier Exp $
+
+  04 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-sbin-9.0.ebuild:
+  install geom class libs into /lib64/geom on amd64
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-sbin-9.0.ebuild:
   keyword ~amd64-fbsd

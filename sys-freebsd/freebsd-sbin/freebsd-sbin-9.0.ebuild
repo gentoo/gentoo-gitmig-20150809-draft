@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-9.0.ebuild,v 1.3 2012/04/26 14:24:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-9.0.ebuild,v 1.4 2012/05/04 12:54:29 aballier Exp $
 
 EAPI=2
 
-inherit bsdmk freebsd
+inherit bsdmk freebsd multilib
 
 DESCRIPTION="FreeBSD sbin utils"
 KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
@@ -57,6 +57,7 @@ src_prepare() {
 }
 
 src_install() {
+	mymakeopts="${mymakeopts} GEOM_CLASS_DIR=/$(get_libdir)/geom "
 	freebsd_src_install
 	keepdir /var/log
 	# Needed by ldconfig:
