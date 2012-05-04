@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.12 2012/04/02 16:22:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.13 2012/05/04 15:52:46 xarthisius Exp $
+
+*rdflib-3.2.1 (04 May 2012)
+
+  04 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +rdflib-3.2.1.ebuild:
+  Version bump, fixes #401657 by Justin Lecher <jlec@gentoo.org>. Thanks to Ian
+  Delaney <johneed@hotmail.com> for help
 
   02 Apr 2012; Justin Lecher <jlec@gentoo.org> rdflib-3.1.0.ebuild,
   +files/rdflib-3.1.0-test.patch:
