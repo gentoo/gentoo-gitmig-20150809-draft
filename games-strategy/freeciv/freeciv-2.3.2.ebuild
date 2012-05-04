@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.3.2.ebuild,v 1.1 2012/04/02 18:10:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.3.2.ebuild,v 1.2 2012/05/04 04:51:08 jdhore Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games-ggz games
@@ -35,7 +35,7 @@ RDEPEND="readline? ( sys-libs/readline )
 		media-libs/libpng
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!dedicated? (
 		nls? ( sys-devel/gettext )
 		x11-proto/xextproto

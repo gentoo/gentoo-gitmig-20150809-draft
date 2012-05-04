@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.4.0.0.ebuild,v 1.6 2012/03/22 08:12:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.4.0.0.ebuild,v 1.7 2012/05/04 04:51:08 jdhore Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -36,7 +36,7 @@ RDEPEND="app-arch/bzip2
 	dev-libs/libsigc++:1.2"
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-arch/zip"
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.01.ebuild,v 1.3 2011/03/18 12:46:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.01.ebuild,v 1.4 2012/05/04 04:51:08 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -27,7 +27,7 @@ RDEPEND="media-libs/libsdl[joystick,video]
 	nls? ( virtual/libintl )
 	unicode? ( dev-libs/fribidi )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.0.ebuild,v 1.3 2011/07/29 19:42:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.0.ebuild,v 1.4 2012/05/04 04:51:08 jdhore Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -26,7 +26,7 @@ RDEPEND="media-libs/libsdl[X,audio,video]
 	mixer? ( media-libs/sdl-mixer )
 	openal? ( media-libs/openal )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${P}.tar.bz2

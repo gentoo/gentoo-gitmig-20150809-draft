@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.3.9.ebuild,v 1.4 2012/01/04 17:55:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.3.9.ebuild,v 1.5 2012/05/04 04:51:08 jdhore Exp $
 
 EAPI=2
 inherit autotools versionator games
@@ -36,7 +36,7 @@ RDEPEND="dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	app-arch/zip
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 RDEPEND="${RDEPEND}
 	media-fonts/dejavu"
