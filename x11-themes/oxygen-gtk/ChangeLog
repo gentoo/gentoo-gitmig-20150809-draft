@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/oxygen-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.33 2012/04/22 08:08:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.34 2012/05/04 14:05:30 johu Exp $
+
+  04 May 2012; Johannes Huber <johu@gentoo.org> oxygen-gtk-1.0.3.ebuild,
+  oxygen-gtk-1.2.3.ebuild:
+  Migrate to virtual/pkgconfig.
 
   22 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/oxygen-gtk-1.2.2-fix-filezilla-crash.patch, -oxygen-gtk-1.0.1.ebuild,
