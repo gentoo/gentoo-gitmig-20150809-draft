@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.9.7.ebuild,v 1.3 2012/04/15 22:47:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.9.7.ebuild,v 1.4 2012/05/04 06:33:33 jdhore Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -25,7 +25,7 @@ CDEPEND="net-libs/rb_libtorrent
 	dbus? ( >=x11-libs/qt-dbus-${QT_MIN}:4 )
 	dev-libs/boost"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	geoip? ( dev-libs/geoip )"
 

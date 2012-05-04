@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtorrentviewer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.13 2011/07/25 10:38:00 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.14 2012/05/04 06:33:34 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtorrentviewer-0.2b.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Jul 2011; Christoph Mende <angelos@gentoo.org> gtorrentviewer-0.2b.ebuild,
   +files/gtorrentviewer-0.2b-curl-headers.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.4.9.ebuild,v 1.7 2010/01/16 19:04:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.4.9.ebuild,v 1.8 2012/05/04 06:33:35 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="gnome kde"
 RDEPEND="x11-libs/qt-gui:4[qt3support]
 	>=net-p2p/dclib-0.3.23"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

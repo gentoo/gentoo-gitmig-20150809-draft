@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3-r1.ebuild,v 1.4 2011/03/28 14:30:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3-r1.ebuild,v 1.5 2012/05/04 06:33:34 jdhore Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/libglade-2.4:2.0
 DEPEND="${RDEPEND}
 	media-libs/fontconfig
 	>=dev-util/scons-0.96
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# prevent scons installation of *txt files to wrong directory

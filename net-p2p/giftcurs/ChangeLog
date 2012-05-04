@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftcurs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.40 2010/05/05 21:08:13 sochotnicky Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.41 2012/05/04 06:33:34 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> giftcurs-0.6.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   05 May 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   giftcurs-0.6.2.ebuild:

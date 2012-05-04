@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/leechcraft-eiskaltdcpp-9999.ebuild,v 1.3 2011/12/16 18:48:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/leechcraft-eiskaltdcpp-9999.ebuild,v 1.4 2012/05/04 06:33:34 jdhore Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ RDEPEND="~net-misc/leechcraft-core-${PV}
 		virtual/leechcraft-task-show
 		!!net-p2p/eiskaltdcpp"
 DEPEND="~net-misc/leechcraft-core-${PV}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 src_configure() {
 	local mycmakeargs=(

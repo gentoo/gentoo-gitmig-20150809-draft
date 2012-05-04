@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.98.2-r1.ebuild,v 1.2 2012/02/19 07:11:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.98.2-r1.ebuild,v 1.3 2012/05/04 06:33:34 jdhore Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="
 	ssl? ( >=net-libs/gnutls-2.2.5 )
 	nls? ( >=sys-devel/gettext-0.11.5 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	strip-linguas -i po

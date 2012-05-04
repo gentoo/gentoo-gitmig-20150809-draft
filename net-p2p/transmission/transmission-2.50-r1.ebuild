@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.9 2012/03/21 06:18:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.50-r1.ebuild,v 1.10 2012/05/04 06:33:34 jdhore Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
@@ -44,7 +44,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	virtual/os-headers
 	xfs? ( sys-fs/xfsprogs )"

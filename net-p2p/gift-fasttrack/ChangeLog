@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gift-fasttrack
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/ChangeLog,v 1.40 2008/05/02 16:18:58 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/ChangeLog,v 1.41 2012/05/04 06:33:35 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  gift-fasttrack-0.8.9-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 May 2008; Raúl Porcel <armin76@gentoo.org>
   gift-fasttrack-0.8.9-r1.ebuild:

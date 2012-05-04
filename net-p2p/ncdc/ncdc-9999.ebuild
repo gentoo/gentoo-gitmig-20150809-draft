@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-9999.ebuild,v 1.4 2012/02/28 13:06:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ncdc-9999.ebuild,v 1.5 2012/05/04 06:33:33 jdhore Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND="app-arch/bzip2
 	sys-libs/gdbm
 	sys-libs/ncurses:5"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/makeheaders"
 
 src_prepare() {

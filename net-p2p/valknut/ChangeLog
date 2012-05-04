@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/valknut
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.78 2010/01/16 19:04:25 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.79 2012/05/04 06:33:35 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> valknut-0.4.9.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Jan 2010; Raúl Porcel <armin76@gentoo.org> valknut-0.3.18.ebuild,
   valknut-0.4.9.ebuild:

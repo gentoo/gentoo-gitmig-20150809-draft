@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.15 2011/03/28 14:30:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.16 2012/05/04 06:33:34 jdhore Exp $
 
 EAPI="1"
 
@@ -25,7 +25,7 @@ RDEPEND=">=gnome-base/libglade-2.4:2.0
 DEPEND="${RDEPEND}
 	media-libs/fontconfig
 	>=dev-util/scons-0.96
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-libs/boost-1.35.0-r2"
 
 src_compile() {

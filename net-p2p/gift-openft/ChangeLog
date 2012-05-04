@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-openft
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.40 2007/07/12 14:37:37 betelgeuse Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.41 2012/05/04 06:33:35 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gift-openft-0.2.1.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   gift-openft-0.2.1.6.ebuild:

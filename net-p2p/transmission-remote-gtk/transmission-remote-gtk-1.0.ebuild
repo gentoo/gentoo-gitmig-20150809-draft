@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/transmission-remote-gtk-1.0.ebuild,v 1.6 2012/04/04 18:00:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/transmission-remote-gtk-1.0.ebuild,v 1.7 2012/05/04 06:33:35 jdhore Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.22:2
 	geoip? ( dev-libs/geoip )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS README )
 

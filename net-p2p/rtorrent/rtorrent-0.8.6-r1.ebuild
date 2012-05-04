@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.6-r1.ebuild,v 1.7 2010/08/18 04:39:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.6-r1.ebuild,v 1.8 2012/05/04 06:33:35 jdhore Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=net-libs/libtorrent-0.12.${PV##*.}
 RDEPEND="${COMMON_DEPEND}
 	daemon? ( app-misc/screen )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-canvas-fix.patch

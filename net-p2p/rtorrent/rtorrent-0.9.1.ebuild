@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.1.ebuild,v 1.2 2012/04/10 21:53:47 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.1.ebuild,v 1.3 2012/05/04 06:33:35 jdhore Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND="${COMMON_DEPEND}
 	daemon? ( app-misc/screen )"
 DEPEND="${COMMON_DEPEND}
 	test? ( dev-util/cppunit )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# bug #358271

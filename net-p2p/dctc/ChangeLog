@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dctc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.36 2010/07/14 11:16:34 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.37 2012/05/04 06:33:35 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> dctc-0.85.9.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> dctc-0.85.9.ebuild,
   +files/dctc-0.85.9-skip_db_ver_check.patch:
