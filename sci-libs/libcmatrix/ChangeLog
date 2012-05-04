@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libcmatrix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.5 2011/08/31 14:28:27 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.6 2012/05/04 09:03:48 jlec Exp $
+
+  04 May 2012; Justin Lecher <jlec@gentoo.org> libcmatrix-3.9.0.ebuild:
+  Prefer atlas over blas-atlas
 
   31 Aug 2011; Justin Lecher <jlec@gentoo.org> +files/3.9.0-atlas.patch,
   +libcmatrix-3.9.0.ebuild, metadata.xml:
