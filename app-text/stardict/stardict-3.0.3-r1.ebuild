@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.3-r1.ebuild,v 1.5 2012/03/17 18:06:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.3-r1.ebuild,v 1.6 2012/05/04 03:33:16 jdhore Exp $
 
 # NOTE: Even though the *.dict.dz are the same as dictd/freedict's files,
 #       their indexes seem to be in a different format. So we'll keep them
@@ -51,7 +51,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
 	dev-libs/libxslt
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 RESTRICT="test"

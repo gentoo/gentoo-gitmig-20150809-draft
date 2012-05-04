@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.7.ebuild,v 1.1 2010/03/12 10:16:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.7.ebuild,v 1.2 2012/05/04 03:33:14 jdhore Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2
 	wmf? ( >=media-libs/libwmf-0.2.2 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Workaround incorrect soname bump as fedora does

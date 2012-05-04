@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.20.9.ebuild,v 1.1 2012/03/22 05:13:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.20.9.ebuild,v 1.2 2012/05/04 03:33:11 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/gawk-3
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	app-text/docbook-xml-dtd:4.4
 	app-text/scrollkeeper-dtd"
 # dev-libs/glib needed for eautofoo, bug #255114.

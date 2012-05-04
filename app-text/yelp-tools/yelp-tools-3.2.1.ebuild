@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.2.1.ebuild,v 1.4 2012/04/29 14:58:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.2.1.ebuild,v 1.5 2012/05/04 03:33:12 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,6 +21,6 @@ RDEPEND=">=dev-libs/libxml2-2.6.12
 	gnome-extra/yelp-xsl
 	sys-apps/gawk"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS NEWS README"

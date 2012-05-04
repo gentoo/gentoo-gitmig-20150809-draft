@@ -1,6 +1,9 @@
 # ChangeLog for app-text/notecase
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/ChangeLog,v 1.28 2011/07/26 18:32:54 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/ChangeLog,v 1.29 2012/05/04 03:33:17 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> notecase-1.9.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Jul 2011; Raúl Porcel <armin76@gentoo.org> metadata.xml:
   Fix metadata

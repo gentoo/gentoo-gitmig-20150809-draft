@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mythes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/ChangeLog,v 1.13 2012/04/25 20:42:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/ChangeLog,v 1.14 2012/05/04 03:33:18 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> mythes-1.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -mythes-1.2.1.ebuild,
   mythes-1.2.2.ebuild:

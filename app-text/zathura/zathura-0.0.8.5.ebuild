@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.0.8.5.ebuild,v 1.3 2012/03/08 08:55:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.0.8.5.ebuild,v 1.4 2012/05/04 03:33:16 jdhore Exp $
 
 EAPI=4
 inherit savedconfig toolchain-funcs eutils
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/cairo-1.8.8
 	>=x11-libs/gtk+-2.18.6:2
 	>=app-text/poppler-0.12.3[cairo]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( README )
 

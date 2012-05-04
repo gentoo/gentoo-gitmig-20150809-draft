@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.8-r1.ebuild,v 1.3 2012/04/16 18:32:28 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.8-r1.ebuild,v 1.4 2012/05/04 03:33:15 jdhore Exp $
 
 EAPI=4
 inherit eutils fdo-mime
@@ -19,7 +19,7 @@ RDEPEND=">=app-text/poppler-0.12.3-r3[cairo]
 	>=x11-libs/gtk+-2.6:2
 	cups? ( >=net-print/cups-1.1 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	test? ( dev-util/cppunit )
 	userland_GNU? ( >=sys-apps/findutils-4.4 )"

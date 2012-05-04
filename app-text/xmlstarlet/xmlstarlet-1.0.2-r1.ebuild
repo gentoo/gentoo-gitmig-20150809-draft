@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.2-r1.ebuild,v 1.1 2010/04/16 16:39:24 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.2-r1.ebuild,v 1.2 2012/05/04 03:33:13 jdhore Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.12
 	>=dev-libs/libxslt-1.1.9"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	local xsltlibs=$(pkg-config --libs libxslt libexslt)

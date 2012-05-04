@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.9.8.ebuild,v 1.4 2011/07/01 15:43:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.9.8.ebuild,v 1.5 2012/05/04 03:33:17 jdhore Exp $
 
 EAPI="1"
 
@@ -17,7 +17,7 @@ IUSE="gnome nls"
 
 RDEPEND=">=x11-libs/gtk+-2.6:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 # test doesn't work
 RESTRICT="test"

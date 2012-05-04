@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libxmlpatch/libxmlpatch-0.3.1.ebuild,v 1.2 2011/10/31 12:51:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libxmlpatch/libxmlpatch-0.3.1.ebuild,v 1.3 2012/05/04 03:33:13 jdhore Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="dev-libs/glib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

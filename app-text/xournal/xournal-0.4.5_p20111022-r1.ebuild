@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.5_p20111022-r1.ebuild,v 1.5 2012/01/04 17:52:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.5_p20111022-r1.ebuild,v 1.6 2012/05/04 03:33:15 jdhore Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ RDEPEND="${COMMONDEPEND}
 	pdf? ( app-text/poppler[utils] app-text/ghostscript-gpl )
 "
 DEPEND="${COMMONDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 PATCHES=(

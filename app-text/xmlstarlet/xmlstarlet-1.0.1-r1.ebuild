@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.1-r1.ebuild,v 1.6 2010/01/02 11:46:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.1-r1.ebuild,v 1.7 2012/05/04 03:33:13 jdhore Exp $
 
 DESCRIPTION="A set of tools to transform, query, validate, and edit XML documents"
 HOMEPAGE="http://xmlstar.sourceforge.net/"
@@ -15,7 +15,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.12
 	>=dev-libs/libxslt-1.1.9"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	local xsltlibs=$(pkg-config --libs libxslt libexslt)

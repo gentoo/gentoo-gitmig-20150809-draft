@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/zathura-djvu-0.1.1.ebuild,v 1.1 2012/03/30 05:39:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/zathura-djvu-0.1.1.ebuild,v 1.2 2012/05/04 03:33:13 jdhore Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -20,7 +20,7 @@ RDEPEND=">=app-text/djvu-3.5.24-r1
 	>=dev-libs/glib-2
 	x11-libs/cairo"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	myzathuraconf=(

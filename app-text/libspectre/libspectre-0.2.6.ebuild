@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.6.ebuild,v 1.13 2012/03/11 15:29:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.6.ebuild,v 1.14 2012/05/04 03:33:12 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -16,7 +16,7 @@ IUSE="debug doc static-libs"
 
 RDEPEND=">=app-text/ghostscript-gpl-8.62"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 # does not actually test anything, see bug 362557

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9.ebuild,v 1.7 2012/04/07 22:10:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9.ebuild,v 1.8 2012/05/04 03:33:12 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="media-libs/freetype:2
 	X? ( x11-libs/libX11
 		x11-libs/libXext )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.8.165-buildsystem.patch

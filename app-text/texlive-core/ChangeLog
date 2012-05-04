@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.173 2012/03/30 17:56:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.174 2012/05/04 03:33:13 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> texlive-core-2010-r4.ebuild,
+  texlive-core-2011-r5.ebuild, texlive-core-2011-r6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   30 Mar 2012; Markus Meier <maekke@gentoo.org> texlive-core-2011-r6.ebuild:
   arm stable, bug #408993

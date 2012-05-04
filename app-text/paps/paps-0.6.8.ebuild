@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/paps/paps-0.6.8.ebuild,v 1.1 2011/01/11 18:31:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/paps/paps-0.6.8.ebuild,v 1.2 2012/05/04 03:33:11 jdhore Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="x11-libs/pango"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	append-ldflags $(no-as-needed)

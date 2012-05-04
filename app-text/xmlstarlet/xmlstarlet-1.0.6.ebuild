@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.6.ebuild,v 1.4 2011/12/02 22:20:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.6.ebuild,v 1.5 2012/05/04 03:33:13 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.23
 
 DEPEND="${RDEPEND}
 	sys-apps/sed
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-setmode.patch

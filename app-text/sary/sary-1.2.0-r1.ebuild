@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.2.0-r1.ebuild,v 1.8 2012/03/19 19:14:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.2.0-r1.ebuild,v 1.9 2012/05/04 03:33:17 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ RESTRICT="test"
 
 RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf $(use_enable static-libs static)

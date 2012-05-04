@@ -1,6 +1,9 @@
 # ChangeLog for app-text/paps
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/paps/ChangeLog,v 1.1 2011/01/11 18:31:13 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/paps/ChangeLog,v 1.2 2012/05/04 03:33:11 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> paps-0.6.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *paps-0.6.8 (11 Jan 2011)
 

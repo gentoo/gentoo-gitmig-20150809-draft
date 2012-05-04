@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.120 2012/04/24 13:39:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.121 2012/05/04 03:33:13 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> enchant-1.6.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> enchant-1.6.0.ebuild:
   After 4 years the ewarn can go. Update eapi to 4 and use required_use.

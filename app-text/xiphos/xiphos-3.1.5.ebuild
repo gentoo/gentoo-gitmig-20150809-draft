@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.1.5.ebuild,v 1.5 2012/03/16 20:09:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.1.5.ebuild,v 1.6 2012/05/04 03:33:12 jdhore Exp $
 
 # TODO: waf-utils.eclass ?
 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	app-text/rarian
 	dev-libs/libxslt
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
 	sys-devel/gettext"
 

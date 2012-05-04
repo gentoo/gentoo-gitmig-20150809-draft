@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.3-r1.ebuild,v 1.11 2008/02/19 15:09:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.3-r1.ebuild,v 1.12 2012/05/04 03:33:14 jdhore Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2
 	wmf? ( >=media-libs/libwmf-0.2.2 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 src_compile() {
 

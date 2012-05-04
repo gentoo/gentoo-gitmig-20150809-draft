@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gtkspell
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.90 2011/10/27 07:02:37 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.91 2012/05/04 03:33:17 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkspell-2.0.16.ebuild,
+  gtkspell-3.0.0_pre20110814-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gtkspell-3.0.0_pre20110814-r1 (27 Oct 2011)
 

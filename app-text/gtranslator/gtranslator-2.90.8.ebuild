@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.90.8.ebuild,v 1.1 2012/02/24 23:57:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.90.8.ebuild,v 1.2 2012/05/04 03:33:11 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -43,7 +43,7 @@ DEPEND="${COMMON_DEPEND}
 	>=app-text/scrollkeeper-0.1.4
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2
 	doc? ( >=dev-util/gtk-doc-1 )"

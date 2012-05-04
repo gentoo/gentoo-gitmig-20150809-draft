@@ -1,6 +1,9 @@
 # ChangeLog for app-text/goldendict
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.6 2012/02/14 15:39:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.7 2012/05/04 03:33:14 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> goldendict-1.0.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Feb 2012; Davide Pesavento <pesa@gentoo.org>
   -files/goldendict-0.9.0-gcc4.4.patch, -goldendict-0.9.0_p20100410.ebuild,

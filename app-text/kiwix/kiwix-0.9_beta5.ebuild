@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/kiwix-0.9_beta5.ebuild,v 1.1 2012/02/25 15:13:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/kiwix-0.9_beta5.ebuild,v 1.2 2012/05/04 03:33:15 jdhore Exp $
 
 EAPI=3
 
@@ -29,7 +29,7 @@ RDEPEND="app-arch/xz-utils
 	>=net-misc/aria2-1.10
 	!!<app-text/kiwix-0.9_beta"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
 

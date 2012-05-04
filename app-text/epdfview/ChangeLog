@@ -1,6 +1,10 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.55 2012/04/16 18:32:28 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.56 2012/05/04 03:33:15 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> epdfview-0.1.8.ebuild,
+  epdfview-0.1.8-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Apr 2012; Daniel Pielmeier <billie@gentoo.org> epdfview-0.1.8-r1.ebuild,
   +files/epdfview-0.1.8-glib-2.31-build-fix.patch:

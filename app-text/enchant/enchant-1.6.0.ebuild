@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.6.0.ebuild,v 1.14 2012/04/24 13:39:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.6.0.ebuild,v 1.15 2012/05/04 03:33:13 jdhore Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPENDS}
 
 # libtool is needed for the install-sh to work
 DEPEND="${COMMON_DEPENDS}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 REQUIRED_USE="|| ( hunspell aspell zemberek )"
 

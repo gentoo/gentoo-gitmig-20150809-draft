@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xmlstarlet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.32 2012/04/25 16:20:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.33 2012/05/04 03:33:13 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> xmlstarlet-1.0.1-r1.ebuild,
+  xmlstarlet-1.0.2.ebuild, xmlstarlet-1.0.2-r1.ebuild, xmlstarlet-1.0.4.ebuild,
+  xmlstarlet-1.0.5.ebuild, xmlstarlet-1.0.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> xmlstarlet-1.0.2.ebuild:
   Drop unnessecary die

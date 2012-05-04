@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.12.ebuild,v 1.1 2012/01/23 07:25:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.12.ebuild,v 1.2 2012/05/04 03:33:15 jdhore Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -21,7 +21,7 @@ RDEPEND=">=app-text/djvu-3.5.21
 	graphicsmagick? ( media-gfx/graphicsmagick )"
 DEPEND="${RDEPEND}
 	dev-cpp/pstreams
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_configure() {

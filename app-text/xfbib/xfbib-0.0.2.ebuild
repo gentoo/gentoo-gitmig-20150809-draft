@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xfbib/xfbib-0.0.2.ebuild,v 1.1 2008/09/24 16:27:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xfbib/xfbib-0.0.2.ebuild,v 1.2 2012/05/04 03:33:17 jdhore Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	>=xfce-base/libxfcegui4-4.4
 	>=xfce-base/libxfce4util-4.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 

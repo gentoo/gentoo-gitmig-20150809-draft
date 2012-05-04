@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.2.2.ebuild,v 1.4 2011/03/27 12:20:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.2.2.ebuild,v 1.5 2012/05/04 03:33:17 jdhore Exp $
 
 EAPI="1"
 
@@ -19,7 +19,7 @@ RDEPEND=">=gnome-base/gconf-2.0:2
 	net-misc/curl"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-0.93
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.22
 	>=sys-devel/gettext-0.10"
 

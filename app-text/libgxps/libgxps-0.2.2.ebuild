@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/libgxps-0.2.2.ebuild,v 1.1 2012/03/24 10:17:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/libgxps-0.2.2.ebuild,v 1.2 2012/05/04 03:33:14 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -28,7 +28,7 @@ RDEPEND=">=app-arch/libarchive-2.8
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? (
 		app-text/docbook-xml-dtd:4.1.2
 		>=dev-util/gtk-doc-1.14 )"

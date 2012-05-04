@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.18.4-r1.ebuild,v 1.7 2012/04/26 20:43:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.18.4-r1.ebuild,v 1.8 2012/05/04 03:33:12 jdhore Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ COMMON_DEPEND="
 	tiff? ( media-libs/tiff:0 )
 "
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 RDEPEND="${COMMON_DEPEND}
 	!dev-libs/poppler

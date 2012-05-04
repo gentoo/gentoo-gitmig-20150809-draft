@@ -1,6 +1,10 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.24 2012/03/18 09:22:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.25 2012/05/04 03:33:16 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> stardict-3.0.3-r1.ebuild,
+  stardict-3.0.3-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   -stardict-3.0.1-r2.ebuild, -stardict-3.0.1-r3.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.05.ebuild,v 1.4 2012/04/26 21:11:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.05.ebuild,v 1.5 2012/05/04 03:33:15 jdhore Exp $
 
 EAPI=3
 
@@ -41,7 +41,7 @@ COMMON_DEPEND="
 	X? ( x11-libs/libXt x11-libs/libXext )"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/poppler-data-0.4.4

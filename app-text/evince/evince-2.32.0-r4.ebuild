@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.7 2012/04/29 15:13:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.8 2012/05/04 03:33:15 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
 	~app-text/docbook-xml-dtd-4.1.2
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
 	>=dev-util/gtk-doc-am-1.13"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/libgxps-0.1.0.ebuild,v 1.1 2011/11/03 05:10:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/libgxps-0.1.0.ebuild,v 1.2 2012/05/04 03:33:14 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -23,7 +23,7 @@ RDEPEND=">=app-arch/libarchive-2.8
 	jpeg? ( virtual/jpeg )
 	tiff? ( media-libs/tiff[zlib] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? (
 		app-text/docbook-xml-dtd:4.1.2
 		>=dev-util/gtk-doc-1.14 )"

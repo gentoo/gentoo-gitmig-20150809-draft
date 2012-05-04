@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xfbib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xfbib/ChangeLog,v 1.1 2008/09/24 16:27:20 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xfbib/ChangeLog,v 1.2 2012/05/04 03:33:17 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> xfbib-0.0.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *xfbib-0.0.2 (24 Sep 2008)
 

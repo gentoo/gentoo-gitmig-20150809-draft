@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9-r1.ebuild,v 1.10 2011/05/02 23:33:56 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9-r1.ebuild,v 1.11 2012/05/04 03:33:14 jdhore Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2
 		 dev-texlive/texlive-latex )
 	wmf? ( >=media-libs/libwmf-0.2.2 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 src_prepare() {
 	if ! use tools; then

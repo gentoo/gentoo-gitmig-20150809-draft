@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.32 2012/04/22 18:05:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.33 2012/05/04 03:33:15 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> dvisvgm-1.0.8.ebuild,
+  dvisvgm-1.0.9.ebuild, dvisvgm-1.0.9-r1.ebuild, dvisvgm-1.0.10.ebuild,
+  dvisvgm-1.0.11.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   22 Apr 2012; Fabian Groffen <grobian@gentoo.org> dvisvgm-1.0.11.ebuild:
   Marked ~amd64-linux, bug #411633
