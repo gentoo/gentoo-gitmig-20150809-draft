@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ruby-gtkglext-0.19.4.ebuild,v 1.7 2012/05/01 18:24:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkglext/ruby-gtkglext-0.19.4.ebuild,v 1.8 2012/05/04 18:47:56 jdhore Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -17,7 +17,7 @@ RDEPEND="${RDEPEND}
 DEPEND="${DEPEND}
 	>=x11-libs/gtkglext-1.0.3
 	x11-libs/gtk+:2
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 ruby_add_rdepend "dev-ruby/ruby-opengl
 	dev-ruby/ruby-glib2

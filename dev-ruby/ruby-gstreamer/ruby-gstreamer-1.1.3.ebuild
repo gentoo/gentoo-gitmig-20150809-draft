@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ruby-gstreamer-1.1.3.ebuild,v 1.1 2012/04/17 05:54:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ruby-gstreamer-1.1.3.ebuild,v 1.2 2012/05/04 18:47:54 jdhore Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19 ree18"
@@ -17,4 +17,4 @@ RDEPEND="${RDEPEND}
 DEPEND="${DEPEND}
 	=media-libs/gstreamer-0.10*
 	=media-libs/gst-plugins-base-0.10*
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

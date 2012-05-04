@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-1.2.0-r2.ebuild,v 1.9 2012/03/19 18:54:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-1.2.0-r2.ebuild,v 1.10 2012/05/04 18:47:54 jdhore Exp $
 
 EAPI="2"
 # jruby: mkmf issue
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND=">=app-text/sary-1.2.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RUBY_PATCHES=(
 	"${P}-gentoo.patch"

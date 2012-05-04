@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.0-r3.ebuild,v 1.2 2012/05/01 18:24:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.0-r3.ebuild,v 1.3 2012/05/04 18:47:55 jdhore Exp $
 
 EAPI=2
 
@@ -35,7 +35,7 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/cairo-1.2.0[svg]"
 DEPEND="${DEPEND}
 	>=x11-libs/cairo-1.2.0[svg]
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 ruby_add_bdepend "
 	dev-ruby/ruby-glib2

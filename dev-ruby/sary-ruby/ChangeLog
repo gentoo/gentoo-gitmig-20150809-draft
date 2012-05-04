@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sary-ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.50 2012/03/19 19:54:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/ChangeLog,v 1.51 2012/05/04 18:47:54 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> sary-ruby-1.2.0-r2.ebuild,
+  sary-ruby-1.2.0-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Mar 2012; Hans de Graaff <graaff@gentoo.org> -sary-ruby-1.2.0-r1.ebuild:
   Remove old version.

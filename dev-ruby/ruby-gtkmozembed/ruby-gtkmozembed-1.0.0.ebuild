@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ruby-gtkmozembed-1.0.0.ebuild,v 1.2 2012/02/06 19:12:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ruby-gtkmozembed-1.0.0.ebuild,v 1.3 2012/05/04 18:47:54 jdhore Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -15,7 +15,7 @@ RDEPEND="${RDEPEND}
 	net-libs/xulrunner"
 DEPEND="${DEPEND}
 	net-libs/xulrunner
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RUBY_PATCHES=( "${PN}-0.90.8-xulrunner-1.9.2.patch" )
 
