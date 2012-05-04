@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.18.ebuild,v 1.3 2011/06/19 15:32:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.18.ebuild,v 1.4 2012/05/04 18:35:51 jdhore Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/libxml2-2.7.4
 	)
 	openssl? ( >=dev-libs/openssl-0.9.7 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}1-${PV}"
 

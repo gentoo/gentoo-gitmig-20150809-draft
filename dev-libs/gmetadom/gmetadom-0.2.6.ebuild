@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.2.6.ebuild,v 1.8 2008/06/23 15:26:16 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.2.6.ebuild,v 1.9 2012/05/04 18:35:48 jdhore Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/glib
 	>=dev-libs/gdome2-0.8.0
 	>=dev-libs/libxslt-1.0.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	ocaml? (
 		>=dev-lang/ocaml-3.05
 		>=dev-ml/findlib-0.8

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/opensc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.118 2011/12/05 16:13:09 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.119 2012/05/04 18:35:51 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> opensc-0.11.13.ebuild,
+  opensc-0.11.13-r2.ebuild, opensc-0.12.0-r2.ebuild, opensc-0.12.1.ebuild,
+  opensc-0.12.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   05 Dec 2011; Mike Frysinger <vapier@gentoo.org> opensc-0.12.2.ebuild:
   Drop local usex now that it is in eutils.eclass.

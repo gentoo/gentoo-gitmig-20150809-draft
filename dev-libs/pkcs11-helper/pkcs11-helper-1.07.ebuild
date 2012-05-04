@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.07.ebuild,v 1.7 2009/06/09 02:23:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.07.ebuild,v 1.8 2012/05/04 18:35:49 jdhore Exp $
 
 DESCRIPTION="PKCS#11 helper library"
 HOMEPAGE="http://www.opensc-project.org/pkcs11-helper"
@@ -16,7 +16,7 @@ RDEPEND=">=dev-libs/openssl-0.9.7
 	gnutls? ( >=net-libs/gnutls-1.4.4 )
 	nss? ( dev-libs/nss )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=app-doc/doxygen-1.4.7 )"
 
 src_compile() {

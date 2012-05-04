@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.50 2012/03/02 21:14:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.51 2012/05/04 18:35:52 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> fribidi-0.19.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> fribidi-0.19.2-r1.ebuild:
   Marking fribidi-0.19.2-r1 ppc64 for bug 385239

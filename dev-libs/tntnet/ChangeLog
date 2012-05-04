@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tntnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.18 2012/04/27 22:53:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.19 2012/05/04 18:35:48 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> tntnet-1.6.3.ebuild,
+  tntnet-2.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Apr 2012; Mike Frysinger <vapier@gentoo.org>
   +files/tntnet-2.0-zlib-minizip.patch, tntnet-2.0-r1.ebuild:

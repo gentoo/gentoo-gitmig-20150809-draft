@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/libindicator-0.4.1-r300.ebuild,v 1.1 2011/11/26 16:25:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/libindicator-0.4.1-r300.ebuild,v 1.2 2012/05/04 18:35:46 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2.22
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!<${CATEGORY}/${PN}-0.4.1-r201"
 
 src_prepare() {

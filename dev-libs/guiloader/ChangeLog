@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/guiloader
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/ChangeLog,v 1.24 2011/07/26 21:15:22 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/ChangeLog,v 1.25 2012/05/04 18:35:45 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> guiloader-2.15.0.ebuild,
+  guiloader-2.17.1.ebuild, guiloader-2.19.0.ebuild, guiloader-2.21.0.ebuild,
+  guiloader-2.99.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Jul 2011; Markus Meier <maekke@gentoo.org> guiloader-2.21.0.ebuild:
   amd64/x86 stable, bug #375611

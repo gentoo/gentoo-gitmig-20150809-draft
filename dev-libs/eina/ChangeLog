@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/eina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.6 2012/02/08 19:53:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.7 2012/05/04 18:35:50 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> eina-1.0.1.ebuild,
+  eina-1.1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *eina-1.1.0 (08 Feb 2012)
 

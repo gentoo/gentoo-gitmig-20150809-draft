@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.196 2012/04/29 15:25:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.197 2012/05/04 18:35:46 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gmime-2.2.27.ebuild,
+  gmime-2.2.27-r1.ebuild, gmime-2.4.28.ebuild, gmime-2.4.32.ebuild,
+  gmime-2.6.1.ebuild, gmime-2.6.7.ebuild, gmime-2.6.9.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> gmime-2.4.32.ebuild:
   x86 stable, bug #410611

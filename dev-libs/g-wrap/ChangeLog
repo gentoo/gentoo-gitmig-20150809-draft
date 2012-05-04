@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/g-wrap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.76 2009/10/29 14:25:54 hkbst Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.77 2012/05/04 18:35:56 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> g-wrap-1.9.11.ebuild,
+  g-wrap-1.9.13.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Oct 2009; Marijn Schouten <hkBst@gentoo.org> -g-wrap-1.9.6-r3.ebuild,
   -g-wrap-1.9.8.ebuild, -g-wrap-1.9.9.ebuild:

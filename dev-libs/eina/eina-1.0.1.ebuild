@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.0.1.ebuild,v 1.1 2011/05/29 16:02:24 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.0.1.ebuild,v 1.2 2012/05/04 18:35:50 jdhore Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="altivec debug default-mempool mempool-buddy +mempool-chained
 
 RDEPEND="debug? ( dev-util/valgrind )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		dev-libs/check
 		dev-libs/glib

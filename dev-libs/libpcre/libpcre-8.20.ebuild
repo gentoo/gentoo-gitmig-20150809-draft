@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.20.ebuild,v 1.2 2011/12/12 23:24:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.20.ebuild,v 1.3 2012/05/04 18:35:45 jdhore Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
 	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	userland_GNU? ( >=sys-apps/findutils-4.4.0 )"
 
 S=${WORKDIR}/${MY_P}

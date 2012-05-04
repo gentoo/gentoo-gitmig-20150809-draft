@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r201.ebuild,v 1.5 2012/01/25 14:59:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r201.ebuild,v 1.6 2012/05/04 18:35:54 jdhore Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ RDEPEND="dev-libs/dbus-glib
 DEPEND="${RDEPEND}
 	dev-lang/vala:${PN_vala_version}[vapigen]
 	dev-util/gtk-doc-am
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2

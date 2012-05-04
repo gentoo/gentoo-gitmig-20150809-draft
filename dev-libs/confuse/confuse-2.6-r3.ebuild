@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.6-r3.ebuild,v 1.7 2012/01/07 01:01:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.6-r3.ebuild,v 1.8 2012/05/04 18:35:53 jdhore Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="nls"
 
 DEPEND="sys-devel/flex
 	sys-devel/libtool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 RDEPEND="nls? ( virtual/libintl )"
 

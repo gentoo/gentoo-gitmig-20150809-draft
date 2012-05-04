@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.7.2.ebuild,v 1.9 2012/03/18 18:12:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.7.2.ebuild,v 1.10 2012/05/04 18:35:50 jdhore Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE="gnome"
 
 RDEPEND=">=dev-libs/libmowgli-0.6.1:0
 	gnome? ( >=gnome-base/gconf-2.6.0 )"
-DEPEND=">=dev-util/pkgconfig-0.9.0
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 DOCS="AUTHORS README TODO"
 

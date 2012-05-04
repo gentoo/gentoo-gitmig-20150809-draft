@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/confuse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.49 2012/01/07 01:01:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.50 2012/05/04 18:35:53 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> confuse-2.6-r3.ebuild,
+  confuse-2.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Jan 2012; Ulrich Mueller <ulm@gentoo.org> confuse-2.6-r3.ebuild,
   confuse-2.7.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/libpipeline-1.1.0.ebuild,v 1.1 2010/12/26 18:44:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/libpipeline-1.1.0.ebuild,v 1.2 2012/05/04 18:35:46 jdhore Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="static-libs test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-libs/check )"
 
 src_configure() {

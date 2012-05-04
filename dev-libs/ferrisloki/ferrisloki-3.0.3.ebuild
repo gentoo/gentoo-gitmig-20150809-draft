@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ferrisloki-3.0.3.ebuild,v 1.3 2010/08/21 17:41:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ferrisloki-3.0.3.ebuild,v 1.4 2012/05/04 18:35:52 jdhore Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="stlport"
 RDEPEND="stlport? ( >=dev-libs/STLport-5 )
 	dev-libs/libsigc++:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# derice this damn configure script

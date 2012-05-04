@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.13-r1.ebuild,v 1.9 2007/09/25 21:03:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/xplc-0.3.13-r1.ebuild,v 1.10 2012/05/04 18:35:48 jdhore Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
-DEPEND="dev-util/pkgconfig"
+DEPEND="virtual/pkgconfig"
 RDEPEND=""
 
 src_unpack() {

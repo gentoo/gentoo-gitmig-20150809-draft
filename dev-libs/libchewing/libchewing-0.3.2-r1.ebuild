@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.3.2-r1.ebuild,v 1.2 2011/01/19 15:41:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.3.2-r1.ebuild,v 1.3 2012/05/04 18:35:47 jdhore Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE="debug test static-libs"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		sys-libs/ncurses[unicode]
 		>=dev-libs/check-0.9.4

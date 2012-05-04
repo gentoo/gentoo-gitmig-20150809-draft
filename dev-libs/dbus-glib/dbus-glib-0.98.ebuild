@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.98.ebuild,v 1.9 2012/04/23 07:37:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.98.ebuild,v 1.10 2012/05/04 18:35:51 jdhore Exp $
 
 EAPI=4
 inherit bash-completion-r1 eutils
@@ -18,7 +18,7 @@ RDEPEND=">=sys-apps/dbus-1.4.16
 	>=dev-libs/glib-2.26
 	>=dev-libs/expat-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
 # out of sources build directory

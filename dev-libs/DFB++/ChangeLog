@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DFB++
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.13 2009/04/12 03:47:17 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.14 2012/05/04 18:35:55 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> DFB++-1.2.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> -DFB++-0.9.23.ebuild,
   -DFB++-0.9.25.ebuild, -DFB++-1.0.0.ebuild:

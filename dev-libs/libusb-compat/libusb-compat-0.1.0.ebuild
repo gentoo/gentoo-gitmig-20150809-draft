@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.0.ebuild,v 1.3 2009/05/15 10:11:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.0.ebuild,v 1.4 2012/05/04 18:35:50 jdhore Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ IUSE="debug"
 RDEPEND="dev-libs/libusb:1
 		!dev-libs/libusb:0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

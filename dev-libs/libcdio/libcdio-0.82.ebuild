@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.82.ebuild,v 1.7 2011/07/09 08:53:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.82.ebuild,v 1.8 2012/05/04 18:35:49 jdhore Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.80-automagic-cddb.patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.5.0-r1.ebuild,v 1.4 2012/04/09 12:09:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.5.0-r1.ebuild,v 1.5 2012/05/04 18:35:43 jdhore Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.28:2
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 # eautoreconf needs dev-util/gtk-doc-am
 
 src_prepare() {

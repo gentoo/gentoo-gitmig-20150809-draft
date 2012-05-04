@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmirage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.22 2012/04/22 04:03:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.23 2012/05/04 18:35:43 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libmirage-1.4.0.ebuild,
+  libmirage-1.5.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   22 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -libmirage-1.2.0.ebuild:

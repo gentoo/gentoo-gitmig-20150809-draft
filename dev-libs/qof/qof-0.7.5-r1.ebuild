@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5-r1.ebuild,v 1.7 2011/01/13 19:43:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5-r1.ebuild,v 1.8 2012/05/04 18:35:45 jdhore Exp $
 
 EAPI=1
 
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/libxml2
 	dev-libs/glib:2
 	sqlite? ( dev-db/sqlite:0 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!dev-libs/qof:2
 	doc? ( app-doc/doxygen )"
 

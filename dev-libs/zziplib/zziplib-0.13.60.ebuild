@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60.ebuild,v 1.7 2011/02/13 17:32:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60.ebuild,v 1.8 2012/05/04 18:35:55 jdhore Exp $
 
 EAPI="2"
 inherit libtool eutils flag-o-matic
@@ -18,7 +18,7 @@ RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.6 )"
 DEPEND="${RDEPEND}
 	>=dev-lang/python-2.4
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( app-arch/zip )"
 
 src_prepare() {

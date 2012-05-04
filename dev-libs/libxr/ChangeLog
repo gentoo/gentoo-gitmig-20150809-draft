@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/ChangeLog,v 1.6 2010/01/04 22:26:12 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/ChangeLog,v 1.7 2012/05/04 18:35:46 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libxr-1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libxr-1.0 (04 Jan 2010)
 

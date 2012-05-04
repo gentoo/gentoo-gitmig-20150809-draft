@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.130 2012/03/25 14:47:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.131 2012/05/04 18:35:49 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libcdio-0.82.ebuild,
+  libcdio-0.83.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> libcdio-0.83.ebuild:
   alpha/ia64/sh/sparc stable wrt #404649

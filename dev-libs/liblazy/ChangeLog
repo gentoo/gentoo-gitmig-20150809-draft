@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblazy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblazy/ChangeLog,v 1.6 2010/05/22 11:47:16 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblazy/ChangeLog,v 1.7 2012/05/04 18:35:44 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> liblazy-0.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove genstef from metadata.xml (#66339)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/librra
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librra/ChangeLog,v 1.1 2011/02/25 21:37:22 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librra/ChangeLog,v 1.2 2012/05/04 18:35:56 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> librra-0.14.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *librra-0.14 (25 Feb 2011)
 

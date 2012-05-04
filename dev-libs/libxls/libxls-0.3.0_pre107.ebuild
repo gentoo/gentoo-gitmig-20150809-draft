@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxls/libxls-0.3.0_pre107.ebuild,v 1.1 2010/06/30 07:31:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxls/libxls-0.3.0_pre107.ebuild,v 1.2 2012/05/04 18:35:43 jdhore Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="virtual/libintl
 	!<app-text/catdoc-0.94.2-r2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	eautoreconf

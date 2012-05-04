@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.7.ebuild,v 1.9 2012/01/07 01:01:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.7.ebuild,v 1.10 2012/05/04 18:35:53 jdhore Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ IUSE="nls static-libs"
 
 DEPEND="sys-devel/flex
 	sys-devel/libtool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 RDEPEND="nls? ( virtual/libintl )"
 

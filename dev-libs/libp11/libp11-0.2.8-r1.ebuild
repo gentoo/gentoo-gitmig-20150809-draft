@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8-r1.ebuild,v 1.2 2012/01/17 22:20:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8-r1.ebuild,v 1.3 2012/05/04 18:35:48 jdhore Exp $
 
 EAPI="4"
 inherit eutils autotools
@@ -22,7 +22,7 @@ IUSE="doc"
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 if [[ "${PV}" = "9999" ]]; then

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.6.5.ebuild,v 1.1 2011/11/13 09:52:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.6.5.ebuild,v 1.2 2012/05/04 18:35:44 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -39,7 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/gobject-introspection-0.9.12
 	>=dev-util/intltool-0.35.0
-	>=dev-util/pkgconfig-0.21
+	virtual/pkgconfig
 	sys-devel/gettext
 
 	socialweb? ( >=net-libs/libsocialweb-0.25.15[vala] )

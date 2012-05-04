@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.2.1.ebuild,v 1.9 2011/09/15 21:24:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.2.1.ebuild,v 1.10 2012/05/04 18:35:44 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.24:2
 	dev-libs/libxml2
 "
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.21
+	virtual/pkgconfig
 	dev-lang/vala:0.10[vapigen]
 	>=dev-libs/gobject-introspection-0.9.12
 "

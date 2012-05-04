@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/389-adminutil/389-adminutil-1.1.13.ebuild,v 1.1 2011/01/11 22:27:43 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/389-adminutil/389-adminutil-1.1.13.ebuild,v 1.2 2012/05/04 18:35:54 jdhore Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=dev-libs/nss-3.11.4
 	>=dev-libs/mozldap-6.0.2
 	>=dev-libs/cyrus-sasl-2.1.19
 	>=dev-libs/icu-3.4"
-DEPEND="dev-util/pkgconfig ${COMMON_DEPEND}"
+DEPEND="virtual/pkgconfig ${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}"
 
 src_prepare() {

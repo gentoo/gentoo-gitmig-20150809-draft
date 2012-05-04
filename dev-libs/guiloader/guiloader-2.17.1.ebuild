@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.17.1.ebuild,v 1.1 2010/06/01 09:48:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.17.1.ebuild,v 1.2 2012/05/04 18:35:45 jdhore Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.18:2
 	>=dev-libs/glib-2.22:2"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.17 )"
 
 for x in ${LANGS}; do

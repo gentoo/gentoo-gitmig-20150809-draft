@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libappindicator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.7 2012/01/25 14:59:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.8 2012/05/04 18:35:54 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  libappindicator-0.4.1-r201.ebuild, libappindicator-0.4.1-r300.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   libappindicator-0.4.1-r201.ebuild:

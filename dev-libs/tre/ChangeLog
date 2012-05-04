@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.57 2011/06/13 12:35:46 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.58 2012/05/04 18:35:55 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> tre-0.8.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   13 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/0.8.0-pkgcfg.patch,
   tre-0.8.0.ebuild:

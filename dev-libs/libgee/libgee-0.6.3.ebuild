@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.6.3.ebuild,v 1.7 2012/03/25 15:48:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.6.3.ebuild,v 1.8 2012/05/04 18:35:49 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE="+introspection"
 RDEPEND=">=dev-libs/glib-2.12:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog* MAINTAINERS NEWS README"

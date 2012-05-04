@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.15.0.ebuild,v 1.5 2011/03/29 12:15:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.15.0.ebuild,v 1.6 2012/05/04 18:35:45 jdhore Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.14.0:2
 	>=dev-libs/glib-2.18.0:2"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.17 )"
 
 src_install() {

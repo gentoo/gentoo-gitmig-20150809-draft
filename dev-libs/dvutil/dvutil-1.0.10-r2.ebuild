@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-1.0.10-r2.ebuild,v 1.1 2012/03/21 10:04:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-1.0.10-r2.ebuild,v 1.2 2012/05/04 18:35:45 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -17,7 +17,7 @@ IUSE="doc ssl static-libs"
 
 RDEPEND="ssl? ( dev-libs/openssl:0 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/xml-security-c-1.6.1.ebuild,v 1.1 2011/08/04 13:53:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/xml-security-c-1.6.1.ebuild,v 1.2 2012/05/04 18:35:52 jdhore Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/xerces-c-3.1
 	nss? ( dev-libs/nss )
 	xalan? ( dev-libs/xalan-c )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-nss-compilation-fix.patch"

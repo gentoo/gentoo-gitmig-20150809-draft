@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.32.0-r1.ebuild,v 1.10 2011/10/23 17:09:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.32.0-r1.ebuild,v 1.11 2012/05/04 18:35:50 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/glib:2
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )
 	nls? ( sys-devel/gettext )"
 

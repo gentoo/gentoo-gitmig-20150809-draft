@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.15.ebuild,v 1.7 2012/03/30 19:24:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.15.ebuild,v 1.8 2012/05/04 18:35:46 jdhore Exp $
 
 EAPI=4
 inherit libtool
@@ -28,7 +28,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	iodbc? ( dev-db/libiodbc )
 	odbc? ( dev-db/unixODBC )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	elibtoolize # NOTE: this is for fbsd .so version

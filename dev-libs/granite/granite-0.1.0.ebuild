@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/granite-0.1.0.ebuild,v 1.1 2012/04/15 14:48:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/granite/granite-0.1.0.ebuild,v 1.2 2012/05/04 18:35:49 jdhore Exp $
 
 EAPI=4
 inherit cmake-utils multilib
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
 	dev-lang/vala:${MY_vala_version}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( AUTHORS )

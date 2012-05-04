@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.0-r2.ebuild,v 1.2 2011/07/03 17:13:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.0-r2.ebuild,v 1.3 2012/05/04 18:35:51 jdhore Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ RDEPEND="sys-devel/libtool
 	openct? ( >=dev-libs/openct-0.5.0 )
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r2.ebuild,v 1.1 2010/09/05 14:53:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r2.ebuild,v 1.2 2012/05/04 18:35:53 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ COMMON_DEPEND=">=dev-libs/nss-3.11.4
 	>=dev-libs/svrcore-4.0.0
 	sasl? ( dev-libs/cyrus-sasl )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}"
 
 S="${WORKDIR}"/"${P}"/"mozilla/directory/c-sdk"

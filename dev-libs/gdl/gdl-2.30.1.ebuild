@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.30.1.ebuild,v 1.9 2011/03/22 18:50:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.30.1.ebuild,v 1.10 2012/05/04 18:35:45 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2:2
 DEPEND="${RDEPEND}
 	!<dev-python/gdl-python-2.19.1-r1
 	!<=dev-python/gnome-python-extras-2.19.1-r2
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.3.2.ebuild,v 1.4 2010/04/16 18:21:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.3.2.ebuild,v 1.5 2012/05/04 18:35:47 jdhore Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ IUSE="debug test"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( >=dev-libs/check-0.9.4 )"
 
 src_compile() {

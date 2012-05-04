@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/libgringotts-1.2.1.ebuild,v 1.11 2008/04/27 03:57:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/libgringotts-1.2.1.ebuild,v 1.12 2012/05/04 18:35:54 jdhore Exp $
 
 DESCRIPTION="Needed by Gringotts"
 HOMEPAGE="http://packages.debian.org/sid/libgringotts2"
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/libmcrypt-2.4.21
 	sys-apps/coreutils
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" libgringottsdocdir="/usr/share/doc/${PF}" \

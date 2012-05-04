@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.2.0.ebuild,v 1.2 2012/03/10 08:07:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.2.0.ebuild,v 1.3 2012/05/04 18:35:44 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/libburn-1.2.0
 	zlib? ( sys-libs/zlib )
 	cdio? ( >=dev-libs/libcdio-0.83 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

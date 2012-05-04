@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.28.ebuild,v 1.6 2012/03/05 21:11:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.28.ebuild,v 1.7 2012/05/04 18:35:51 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/raptor-2.0.6:2
 		mhash? ( app-crypt/mhash )
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex
 	test? ( dev-perl/XML-DOM )"
 

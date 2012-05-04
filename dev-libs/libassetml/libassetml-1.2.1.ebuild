@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassetml/libassetml-1.2.1.ebuild,v 1.6 2012/02/16 18:03:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassetml/libassetml-1.2.1.ebuild,v 1.7 2012/05/04 18:35:52 jdhore Exp $
 
 DESCRIPTION="use xml files as resource databases"
 HOMEPAGE="http://ofset.sourceforge.net/"
@@ -17,7 +17,7 @@ RDEPEND="=dev-libs/glib-2*
 	sys-apps/texinfo
 	app-text/texi2html"
 
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 src_install() {

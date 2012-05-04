@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-2.32.0.ebuild,v 1.5 2011/03/22 18:40:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-2.32.0.ebuild,v 1.6 2012/05/04 18:35:57 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.14
 	>=dev-libs/dbus-glib-0.70
 	>=app-admin/system-tools-backends-2.10.1"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60-r1.ebuild,v 1.11 2011/05/01 12:07:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60-r1.ebuild,v 1.12 2012/05/04 18:35:56 jdhore Exp $
 
 EAPI="2"
 # PYTHON_BDEPEND="2"
@@ -20,7 +20,7 @@ RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.6 )"
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( app-arch/zip )"
 
 pkg_setup() {

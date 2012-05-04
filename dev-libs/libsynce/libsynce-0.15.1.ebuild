@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsynce/libsynce-0.15.1.ebuild,v 1.2 2011/02/25 14:58:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsynce/libsynce-0.15.1.ebuild,v 1.3 2012/05/04 18:35:55 jdhore Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="dbus static-libs"
 
 RDEPEND="dbus? ( >=dev-libs/dbus-glib-0.88 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

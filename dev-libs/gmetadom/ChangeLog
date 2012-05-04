@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmetadom
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.37 2008/06/30 22:38:21 matsuu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/ChangeLog,v 1.38 2012/05/04 18:35:48 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gmetadom-0.2.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   30 Jun 2008; MATSUU Takuto <matsuu@gentoo.org>
   -files/gmetadom-0.2.3-gcc41.patch, -files/gmetadom-0.2.3-gentoo.patch,

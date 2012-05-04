@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.12.6.ebuild,v 1.8 2011/10/30 15:03:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.12.6.ebuild,v 1.9 2012/05/04 18:35:54 jdhore Exp $
 
 EAPI=4
 GCONF_DEBUG=yes
@@ -18,7 +18,7 @@ IUSE="doc +introspection"
 
 RDEPEND=">=dev-libs/glib-2.16:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.13 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
 

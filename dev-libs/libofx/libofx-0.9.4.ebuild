@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.4.ebuild,v 1.6 2012/02/03 17:02:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.4.ebuild,v 1.7 2012/05/04 18:35:45 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ RDEPEND=">=app-text/opensp-1.5
 	dev-cpp/libxmlpp:2.6
 	>=net-misc/curl-7.9.7"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( app-crypt/gnupg )"
 
 src_prepare() {

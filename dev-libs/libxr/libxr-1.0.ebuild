@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/libxr-1.0.ebuild,v 1.1 2010/01/04 22:26:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/libxr-1.0.ebuild,v 1.2 2012/05/04 18:35:46 jdhore Exp $
 
 DESCRIPTION="Cross-platform XML-RPC client/server library written in C"
 HOMEPAGE="http://oss.zonio.net/libxr.htm"
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/glib-2.12
 		 dev-libs/openssl"
 #		 json? ( >=dev-libs/json-c-0.3 )"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		dev-util/re2c"
 
 src_compile() {

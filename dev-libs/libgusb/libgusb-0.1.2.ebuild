@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.2.ebuild,v 1.5 2012/01/14 16:32:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.2.ebuild,v 1.6 2012/05/04 18:35:50 jdhore Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.28:2
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-libs/libxslt
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 # eautoreconf requires dev-util/gtk-doc-am
 
 # Tests try to access usb devices in /dev

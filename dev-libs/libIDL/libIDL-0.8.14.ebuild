@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.14.ebuild,v 1.9 2011/08/14 07:25:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.14.ebuild,v 1.10 2012/05/04 18:35:48 jdhore Exp $
 
 GNOME2_LA_PUNT="yes"
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.4"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/yacc
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README"
 G2CONF="--disable-static"

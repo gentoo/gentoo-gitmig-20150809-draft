@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-3.0.50.ebuild,v 1.9 2010/11/06 22:59:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-3.0.50.ebuild,v 1.10 2012/05/04 18:35:44 jdhore Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/libxml2
 	tcpd? ( sys-apps/tcp-wrappers )
 	ziffy? ( net-libs/libpcap )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-lang/tcl
 	>=sys-devel/libtool-2"
 

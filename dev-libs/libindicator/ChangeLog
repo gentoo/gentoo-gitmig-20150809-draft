@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libindicator
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.11 2011/11/26 16:27:17 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.12 2012/05/04 18:35:46 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  libindicator-0.4.1-r201.ebuild, libindicator-0.4.1-r300.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   -libindicator-0.4.1-r200.ebuild:

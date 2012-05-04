@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liboobs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.22 2011/10/05 16:56:15 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.23 2012/05/04 18:35:57 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> liboobs-2.32.0.ebuild,
+  liboobs-3.0.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> liboobs-3.0.0.ebuild:
   ppc stable wrt #369909

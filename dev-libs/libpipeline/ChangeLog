@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.9 2012/03/23 07:45:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.10 2012/05/04 18:35:46 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libpipeline-1.1.0.ebuild,
+  libpipeline-1.2.0.ebuild, libpipeline-1.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libpipeline-1.2.1 (23 Mar 2012)
 

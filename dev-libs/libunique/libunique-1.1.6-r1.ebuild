@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.1.6-r1.ebuild,v 1.7 2011/10/30 15:11:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.1.6-r1.ebuild,v 1.8 2012/05/04 18:35:54 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	dbus? ( >=dev-libs/dbus-glib-0.70 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.17
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.11 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )"
 # For eautoreconf

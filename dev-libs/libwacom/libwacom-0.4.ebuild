@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.4.ebuild,v 1.1 2012/04/06 05:31:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.4.ebuild,v 1.2 2012/05/04 18:35:48 jdhore Exp $
 
 EAPI=4
 inherit gnome.org
@@ -16,7 +16,7 @@ IUSE="doc static-libs"
 RDEPEND="dev-libs/glib:2
 	sys-fs/udev[gudev]"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {

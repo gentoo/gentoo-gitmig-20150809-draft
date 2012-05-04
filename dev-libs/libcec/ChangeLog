@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.3 2012/04/19 18:49:14 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.4 2012/05/04 18:35:50 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libcec-1.5.2.ebuild,
+  libcec-1.6.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libcec-1.6.1 (19 Apr 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/uriparser-0.7.6.ebuild,v 1.1 2012/01/20 01:31:30 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/uriparser-0.7.6.ebuild,v 1.2 2012/05/04 18:35:46 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86
 IUSE="doc qt4 test unicode"
 
 RDEPEND=""
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	doc? ( >=app-doc/doxygen-1.5.8
 		qt4? ( x11-libs/qt-assistant ) )
 	test? ( >=dev-util/cpptest-1.1.1 )"

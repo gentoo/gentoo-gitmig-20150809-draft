@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.09.ebuild,v 1.8 2012/03/19 19:18:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.09.ebuild,v 1.9 2012/05/04 18:35:49 jdhore Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/openssl-0.9.7
 	gnutls? ( >=net-libs/gnutls-1.4.4 )
 	nss? ( dev-libs/nss )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=app-doc/doxygen-1.4.7 )"
 
 src_configure() {

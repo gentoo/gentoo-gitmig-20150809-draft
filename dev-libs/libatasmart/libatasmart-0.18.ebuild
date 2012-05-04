@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/libatasmart-0.18.ebuild,v 1.8 2012/01/10 22:19:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/libatasmart-0.18.ebuild,v 1.9 2012/05/04 18:35:56 jdhore Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE="static-libs"
 
 RDEPEND=">=sys-fs/udev-143"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

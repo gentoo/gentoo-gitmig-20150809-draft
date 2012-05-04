@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.9.ebuild,v 1.3 2012/03/15 18:09:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.9.ebuild,v 1.4 2012/05/04 18:35:46 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto
 	>=dev-util/intltool-0.3.50
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.17"
 
 # Tests require python-meh, which is highly redhat-specific.

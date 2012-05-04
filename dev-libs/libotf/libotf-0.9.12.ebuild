@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.12.ebuild,v 1.1 2010/11/04 09:44:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/libotf-0.9.12.ebuild,v 1.2 2012/05/04 18:35:44 jdhore Exp $
 
 inherit autotools
 
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/freetype-2.1
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

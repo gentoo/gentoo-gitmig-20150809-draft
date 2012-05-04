@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/sord-0.5.0.ebuild,v 1.2 2012/03/01 13:44:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/sord-0.5.0.ebuild,v 1.3 2012/05/04 18:35:54 jdhore Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ IUSE="doc static-libs test"
 RDEPEND=">=dev-libs/serd-0.5.0"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}/ldconfig.patch" )
 

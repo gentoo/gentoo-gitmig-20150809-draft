@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/qof
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.35 2011/03/12 19:40:05 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.36 2012/05/04 18:35:45 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> qof-0.7.5-r1.ebuild,
+  qof-0.8.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> qof-0.8.1.ebuild:
   sparc stable wrt #353436
