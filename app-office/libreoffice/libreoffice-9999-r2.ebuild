@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.60 2012/05/04 20:56:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.61 2012/05/04 23:06:58 mr_bones_ Exp $
 
 EAPI=4
 
@@ -77,7 +77,7 @@ jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba +webdav
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript"
 # Unneeded extension (just can be separate package:
 # google-docs ; barcode ; diagram ; hunart ; numbertext ; oooblogger ; typo ;
-# validator ; watch-window ; 
+# validator ; watch-window ;
 # Extensions that need extra work:
 # report-builder: missing java packages
 # ct2n: not checked
