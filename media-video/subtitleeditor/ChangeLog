@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subtitleeditor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.18 2012/05/04 00:19:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.19 2012/05/04 00:50:42 tetromino Exp $
+
+  04 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  subtitleeditor-0.37.1.ebuild, subtitleeditor-0.40.0.ebuild:
+  Update to virtual/pkgconfig.
 
   04 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   subtitleeditor-0.40.0.ebuild, +files/subtitleeditor-0.40.0-glib-2.31.patch:
