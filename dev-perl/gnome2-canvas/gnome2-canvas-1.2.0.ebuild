@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/gnome2-canvas-1.2.0.ebuild,v 1.2 2011/09/03 21:04:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/gnome2-canvas-1.2.0.ebuild,v 1.3 2012/05/04 04:10:56 jdhore Exp $
 
 EAPI=4
 
@@ -23,4 +23,4 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	>=dev-perl/extutils-pkgconfig-1.03
 	>=dev-perl/extutils-depends-0.202
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

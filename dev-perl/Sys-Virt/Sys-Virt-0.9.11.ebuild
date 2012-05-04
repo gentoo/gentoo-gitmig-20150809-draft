@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/Sys-Virt-0.9.11.ebuild,v 1.1 2012/04/19 17:26:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/Sys-Virt-0.9.11.ebuild,v 1.2 2012/05/04 04:10:56 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="test"
 
 RDEPEND=">=app-emulation/libvirt-${PV}"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage

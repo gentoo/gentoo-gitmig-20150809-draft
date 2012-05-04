@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/gnome2-gconf-1.44.0.ebuild,v 1.1 2011/08/27 19:32:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/gnome2-gconf-1.44.0.ebuild,v 1.2 2012/05/04 04:10:57 jdhore Exp $
 
 EAPI=4
 
@@ -22,5 +22,5 @@ RDEPEND="gnome-base/gconf:2
 DEPEND="${RDEPEND}
 	>=dev-perl/extutils-pkgconfig-1.03
 	>=dev-perl/extutils-depends-0.202
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 SRC_TEST=do

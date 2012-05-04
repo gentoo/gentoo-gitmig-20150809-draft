@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.131 2012/04/26 08:02:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.132 2012/05/04 04:10:55 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> glib-perl-1.223.ebuild,
+  glib-perl-1.224.0.ebuild, glib-perl-1.240.0.ebuild, glib-perl-1.241.0.ebuild,
+  glib-perl-1.242.0.ebuild, glib-perl-1.250.0.ebuild, glib-perl-1.251.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Apr 2012; Jeff Horelick <jdhore@gentoo.org> glib-perl-1.242.0.ebuild:
   marked x86 per bug 412995

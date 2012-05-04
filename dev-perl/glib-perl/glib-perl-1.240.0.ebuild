@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.240.0.ebuild,v 1.1 2011/10/20 19:23:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.240.0.ebuild,v 1.2 2012/05/04 04:10:55 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-perl/extutils-pkgconfig-1.0
 	>=dev-perl/extutils-depends-0.300"
 

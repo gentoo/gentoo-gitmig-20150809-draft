@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.30.0.ebuild,v 1.2 2011/10/27 06:18:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.30.0.ebuild,v 1.3 2012/05/04 04:10:55 jdhore Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	dev-perl/extutils-depends
 	dev-perl/extutils-pkgconfig
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${DISTDIR}"/gtk2-spell-1.03-caa0ef46.patch.gz )
 

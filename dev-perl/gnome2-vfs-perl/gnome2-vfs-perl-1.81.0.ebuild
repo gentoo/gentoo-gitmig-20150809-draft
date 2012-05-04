@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.81.0.ebuild,v 1.6 2012/03/31 14:00:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.81.0.ebuild,v 1.7 2012/05/04 04:10:57 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/gnome-vfs-2
 DEPEND="${RDEPEND}
 	>=dev-perl/extutils-depends-0.2
 	>=dev-perl/extutils-pkgconfig-1.03
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 SRC_TEST=do
 

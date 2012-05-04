@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.860.0.ebuild,v 1.2 2011/09/03 21:04:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.860.0.ebuild,v 1.3 2012/05/04 04:10:57 jdhore Exp $
 
 EAPI=4
 
@@ -19,6 +19,6 @@ RDEPEND=">=dev-libs/gdome2-0.7.2
 	dev-perl/XML-SAX
 	>=dev-libs/glib-2.2.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}"/0.86-includes.patch )

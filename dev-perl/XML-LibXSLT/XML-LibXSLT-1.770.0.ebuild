@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.770.0.ebuild,v 1.2 2012/03/18 19:45:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.770.0.ebuild,v 1.3 2012/05/04 04:10:56 jdhore Exp $
 
 EAPI=4
 
@@ -17,6 +17,6 @@ IUSE=""
 RDEPEND=">=dev-libs/libxslt-1.1.8
 	>=dev-perl/XML-LibXML-1.70"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 SRC_TEST="do"
