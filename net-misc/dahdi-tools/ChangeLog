@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dahdi-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.17 2012/04/22 12:22:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.18 2012/05/04 16:19:59 chainsaw Exp $
+
+  04 May 2012; Tony Vroon <chainsaw@gentoo.org> dahdi-tools-2.5.0.ebuild:
+  EAPI=4 port and general build improvements by Agostino "ago" Sarubbo in bug
+  #404221.
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> dahdi-tools-2.5.0.ebuild:
   x86 stable, bug #404221
