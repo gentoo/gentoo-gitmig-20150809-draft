@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.3 2012/05/04 17:32:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.4 2012/05/04 17:34:56 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -56,14 +56,6 @@ src_unpack() {
 	# vop_whiteout to tmpfs, so it can be used as an overlay
 	# unionfs filesystem over the cd9660 readonly filesystem.
 	epatch "${FILESDIR}/${PN}-7.0-tmpfs_whiteout_stub.patch"
-
-	# See http://sourceware.org/bugzilla/show_bug.cgi?id=5391
-	# ld doesn't provide symbols constructed as the __start_set_(s) ones
-	# are on FreeBSD modules.
-	# This patch adds code to generate a list of these and adds them
-	# as undefined references to ld's commandline to get them.
-	# Without this kernel modules will not load.
-	#epatch "${FILESDIR}/${PN}-7.1-binutils_link.patch"
 }
 
 src_compile() {
