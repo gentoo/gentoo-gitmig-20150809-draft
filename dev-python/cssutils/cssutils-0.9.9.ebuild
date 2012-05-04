@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.9.ebuild,v 1.2 2012/03/04 17:20:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.9.ebuild,v 1.3 2012/05/04 19:41:13 scarabeus Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="examples test"
 
 RDEPEND="dev-python/setuptools"
