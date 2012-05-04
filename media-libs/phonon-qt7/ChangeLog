@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phonon-qt7
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-qt7/ChangeLog,v 1.2 2011/04/25 14:45:44 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-qt7/ChangeLog,v 1.3 2012/05/04 13:43:44 johu Exp $
+
+  04 May 2012; Johannes Huber <johu@gentoo.org> phonon-qt7-0_pre20110424.ebuild:
+  Migrate to virtual/pkgconfig.
 
   25 Apr 2011; Fabian Groffen <grobian@gentoo.org>
   phonon-qt7-0_pre20110424.ebuild,

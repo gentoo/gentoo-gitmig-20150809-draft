@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.5.0.ebuild,v 1.1 2012/02/16 23:38:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.5.0.ebuild,v 1.2 2012/05/04 13:47:03 johu Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	>=dev-util/automoc-0.9.87
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 S=${WORKDIR}/${MY_P}
