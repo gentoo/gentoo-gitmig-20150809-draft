@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.42 2012/05/03 13:03:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.43 2012/05/04 07:51:38 ssuominen Exp $
+
+  04 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libmediainfo-0.7.57.ebuild:
+  Run edos2unix for libmediainfo.pc pkg-config file wrt #414545
 
 *libmediainfo-0.7.57 (03 May 2012)
 
