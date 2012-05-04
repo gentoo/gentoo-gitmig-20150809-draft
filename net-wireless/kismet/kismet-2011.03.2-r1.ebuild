@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r1.ebuild,v 1.1 2012/02/21 04:22:30 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r1.ebuild,v 1.2 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ RDEPEND="net-wireless/wireless-tools
 	plugin-spectools? ( net-wireless/spectools )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e "s:^\(logtemplate\)=\(.*\):\1=/tmp/\2:" \

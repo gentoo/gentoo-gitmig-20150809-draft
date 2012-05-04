@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.16 2012/03/10 17:15:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.17 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	!ssl? ( !gnutls? ( dev-libs/libtommath ) )
 	selinux? ( sec-policy/selinux-networkmanager )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${P}/${PN}"
 

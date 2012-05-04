@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/madwimax-0.1.1.ebuild,v 1.4 2012/02/04 16:42:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/madwimax-0.1.1.ebuild,v 1.5 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="doc"
 
 RDEPEND="virtual/libusb:1"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		doc? (
 			app-text/asciidoc
 			app-text/docbook2X

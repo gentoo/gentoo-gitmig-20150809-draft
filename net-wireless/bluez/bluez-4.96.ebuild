@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96.ebuild,v 1.7 2012/01/26 11:39:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96.ebuild,v 1.8 2012/05/04 06:41:53 jdhore Exp $
 
 EAPI="4"
 
@@ -38,7 +38,7 @@ CDEPEND="
 	usb? ( dev-libs/libusb:1 )
 "
 DEPEND="${CDEPEND}
-	>=dev-util/pkgconfig-0.20
+	virtual/pkgconfig
 	sys-devel/flex
 "
 RDEPEND="${CDEPEND}

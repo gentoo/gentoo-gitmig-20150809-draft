@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/irda-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.38 2010/10/17 13:57:56 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.39 2012/05/04 06:41:55 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> irda-utils-0.9.18-r3.ebuild,
+  irda-utils-0.9.18-r4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   17 Oct 2010; <chainsaw@gentoo.org> files/irda-utils-0.9.18-ldflags.patch:
   Patch rediffed as per feedback by Samuli Suominen.

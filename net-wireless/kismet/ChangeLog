@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.111 2012/02/21 04:22:30 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.112 2012/05/04 06:41:54 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> kismet-2010.01.1.ebuild,
+  kismet-2010.01.1-r1.ebuild, kismet-2011.03.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *kismet-2011.03.2-r1 (21 Feb 2012)
 

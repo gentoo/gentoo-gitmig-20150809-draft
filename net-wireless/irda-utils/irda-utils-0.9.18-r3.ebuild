@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r3.ebuild,v 1.7 2010/06/29 16:08:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r3.ebuild,v 1.8 2012/05/04 06:41:55 jdhore Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND="=dev-libs/glib-2*
 	sys-apps/grep
 	sys-fs/udev"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!app-laptop/smcinit"
 
 src_unpack() {

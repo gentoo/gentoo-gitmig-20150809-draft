@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/bluez-hcidump-2.2.ebuild,v 1.5 2012/02/25 15:19:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/bluez-hcidump-2.2.ebuild,v 1.6 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI=4
 
@@ -15,6 +15,6 @@ IUSE=""
 
 RDEPEND=">=net-wireless/bluez-4.98"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog README )

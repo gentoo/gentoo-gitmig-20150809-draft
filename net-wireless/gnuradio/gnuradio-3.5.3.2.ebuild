@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.5.3.2.ebuild,v 1.1 2012/05/01 23:40:34 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.5.3.2.ebuild,v 1.2 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -54,7 +54,7 @@ RDEPEND="dev-libs/boost
 DEPEND="${RDEPEND}
 	!!<${CATEGORY}/${P}
 	dev-lang/swig
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? (
 		>=app-doc/doxygen-1.5.7.1[dot?]
 		app-text/xmlto

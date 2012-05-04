@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.4.ebuild,v 1.1 2012/04/17 17:17:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.4.ebuild,v 1.2 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="dev-libs/libnl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	tc-export CC LD

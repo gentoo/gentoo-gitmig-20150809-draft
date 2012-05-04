@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.17.ebuild,v 1.7 2011/10/27 16:06:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.17.ebuild,v 1.8 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI="1"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="dev-libs/libnl:1.1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 CC=$(tc-getCC)
 LD=$(tc-getLD)

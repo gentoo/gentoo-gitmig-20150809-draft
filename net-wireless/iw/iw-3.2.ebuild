@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.2.ebuild,v 1.4 2011/11/14 13:14:45 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.2.ebuild,v 1.5 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="dev-libs/libnl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}_libnl-3x-compile.diff"

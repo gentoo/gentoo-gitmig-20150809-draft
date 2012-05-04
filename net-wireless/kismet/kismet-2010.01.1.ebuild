@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2010.01.1.ebuild,v 1.2 2011/10/27 16:10:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2010.01.1.ebuild,v 1.3 2012/05/04 06:41:54 jdhore Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ RDEPEND="client? ( sys-libs/ncurses )
 #	btscan? ( net-wireless/bluez )
 #	ptw? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

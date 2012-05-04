@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0-r1.ebuild,v 1.4 2012/03/05 22:17:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0-r1.ebuild,v 1.5 2012/05/04 06:41:55 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -37,7 +37,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/scrollkeeper
 	dev-libs/libxml2
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	x11-libs/libX11
 	x11-libs/libXi

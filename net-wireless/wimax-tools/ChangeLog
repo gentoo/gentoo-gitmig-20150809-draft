@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wimax-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax-tools/ChangeLog,v 1.12 2012/02/04 16:45:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax-tools/ChangeLog,v 1.13 2012/05/04 06:41:55 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> wimax-tools-1.4.5-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   04 Feb 2012; Alexey Shvetsov <alexxy@gentoo.org> -wimax-tools-1.4.5.ebuild,
   wimax-tools-1.4.5-r1.ebuild:
