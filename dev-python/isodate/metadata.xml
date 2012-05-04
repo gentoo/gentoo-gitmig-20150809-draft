@@ -15,4 +15,7 @@
 		fractional seconds are limited to microseconds. That means if the parser
 		finds for instance nanoseconds it will round it to microseconds.
 	</longdescription>
+	<upstream>
+		<remote-id type="pypi">isodate</remote-id>
+	</upstream>
 </pkgmetadata>
