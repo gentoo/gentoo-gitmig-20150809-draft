@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.268 2012/04/14 18:58:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.269 2012/05/04 19:09:16 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> lvm2-2.02.67.ebuild,
+  lvm2-2.02.67-r1.ebuild, lvm2-2.02.67-r2.ebuild, lvm2-2.02.70.ebuild,
+  lvm2-2.02.70-r1.ebuild, lvm2-2.02.72.ebuild, lvm2-2.02.73.ebuild,
+  lvm2-2.02.73-r1.ebuild, lvm2-2.02.74.ebuild, lvm2-2.02.83.ebuild,
+  lvm2-2.02.84.ebuild, lvm2-2.02.85.ebuild, lvm2-2.02.88.ebuild,
+  lvm2-2.02.92.ebuild, lvm2-2.02.93.ebuild, lvm2-2.02.93-r1.ebuild,
+  lvm2-2.02.95.ebuild, lvm2-2.02.95-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> lvm2-2.02.95-r1.ebuild:
   Add ~amd64-linux keyword.

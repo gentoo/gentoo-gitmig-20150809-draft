@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r2.ebuild,v 1.1 2010/08/17 19:47:55 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r2.ebuild,v 1.2 2012/05/04 19:09:17 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="|| ( >=sys-fs/lvm2-2.02.45
 	selinux? ( sys-libs/libselinux
 		   sys-libs/libsepol )"
 DEPEND="${RDEPEND}
-	static? ( dev-util/pkgconfig )"
+	static? ( virtual/pkgconfig )"
 
 S=${WORKDIR}/${PN}/${MY_PV}
 

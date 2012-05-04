@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/s3fs-1.61.ebuild,v 1.3 2012/02/16 18:13:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/s3fs-1.61.ebuild,v 1.4 2012/05/04 19:09:17 jdhore Exp $
 
 EAPI=4
 
@@ -22,6 +22,6 @@ CDEPEND=">=dev-libs/libxml2-2.6:2
 RDEPEND="${CDEPEND}
 	app-misc/mime-types"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RESTRICT="test"

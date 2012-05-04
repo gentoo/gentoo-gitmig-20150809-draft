@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.12 2012/04/23 04:38:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r5.ebuild,v 1.13 2012/05/04 19:09:16 jdhore Exp $
 
 EAPI=4
 
@@ -56,7 +56,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
 	extras? ( dev-util/gperf )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	virtual/os-headers
 	!<sys-kernel/linux-headers-2.6.34
 	test? ( app-text/tree )"

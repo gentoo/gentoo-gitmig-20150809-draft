@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.7.2.ebuild,v 1.3 2010/09/17 10:22:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.7.2.ebuild,v 1.4 2012/05/04 19:09:17 jdhore Exp $
 
 EAPI=2
 inherit multilib versionator
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/boost-1.34
 	>=sys-fs/fuse-2.7.0"
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	xattr? ( sys-apps/attr )
 	sys-devel/gettext"
 

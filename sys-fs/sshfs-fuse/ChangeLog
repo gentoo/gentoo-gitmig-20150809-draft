@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.65 2012/04/21 23:42:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.66 2012/05/04 19:09:18 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> sshfs-fuse-2.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Apr 2012; Tim Harder <radhermit@gentoo.org> -sshfs-fuse-2.3.ebuild:
   Remove old.

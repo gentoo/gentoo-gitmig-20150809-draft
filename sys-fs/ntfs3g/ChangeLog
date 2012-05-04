@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.133 2012/04/16 17:51:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.134 2012/05/04 19:09:18 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> ntfs3g-2012.1.15-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
   ntfs3g-2012.1.15-r1.ebuild:

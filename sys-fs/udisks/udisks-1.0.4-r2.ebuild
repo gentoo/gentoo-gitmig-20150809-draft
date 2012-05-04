@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.3 2012/04/20 18:48:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.4 2012/05/04 19:09:17 jdhore Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info
@@ -31,7 +31,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	# Listing only major arch's here to avoid tracking kernel's defconfig

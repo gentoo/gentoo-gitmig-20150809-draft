@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuseiso
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.3 2010/05/24 19:01:59 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.4 2012/05/04 19:09:18 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> fuseiso-20070708.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   24 May 2010; Pacho Ramos <pacho@gentoo.org> fuseiso-20070708.ebuild:
   stable amd64, bug 318327

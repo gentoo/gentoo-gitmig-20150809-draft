@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.12.ebuild,v 1.9 2010/10/09 17:11:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.12.ebuild,v 1.10 2012/05/04 19:09:17 jdhore Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -18,7 +18,7 @@ RDEPEND="~sys-libs/${PN}-libs-${PV}
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/texinfo"
 
 pkg_setup() {

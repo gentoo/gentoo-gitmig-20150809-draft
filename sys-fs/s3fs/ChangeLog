@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/s3fs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.16 2012/02/17 01:03:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.17 2012/05/04 19:09:17 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> s3fs-1.61.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   17 Feb 2012; Tim Harder <radhermit@gentoo.org> -s3fs-0_p177.ebuild:
   Remove old.

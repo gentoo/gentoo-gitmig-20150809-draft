@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.1.ebuild,v 1.4 2012/04/13 19:44:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.1.ebuild,v 1.5 2012/05/04 19:09:17 jdhore Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ RDEPEND="~sys-libs/${PN}-libs-${PV}
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/texinfo"
 
 S=${WORKDIR}/${P%_pre*}

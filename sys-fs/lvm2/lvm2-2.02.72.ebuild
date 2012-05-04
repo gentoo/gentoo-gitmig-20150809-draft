@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.72.ebuild,v 1.5 2010/09/06 20:41:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.72.ebuild,v 1.6 2012/05/04 19:09:16 jdhore Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND_COMMON}
 	>=sys-apps/util-linux-2.16"
 
 DEPEND="${DEPEND_COMMON}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
 

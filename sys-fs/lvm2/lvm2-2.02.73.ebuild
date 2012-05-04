@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.73.ebuild,v 1.6 2010/08/28 22:38:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.73.ebuild,v 1.7 2012/05/04 19:09:16 jdhore Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -32,7 +32,7 @@ RDEPEND="${RDEPEND}
 		!<sys-fs/cryptsetup-1.1.2"
 
 DEPEND="${DEPEND_COMMON}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
 

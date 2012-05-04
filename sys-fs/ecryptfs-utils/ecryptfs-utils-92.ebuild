@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-92.ebuild,v 1.2 2012/02/26 05:13:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-92.ebuild,v 1.3 2012/05/04 19:09:16 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -31,7 +31,7 @@ RDEPEND=">=sys-apps/keyutils-1.0
 	)
 	tpm? ( app-crypt/trousers )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.41.0
 	python? ( dev-lang/swig )"

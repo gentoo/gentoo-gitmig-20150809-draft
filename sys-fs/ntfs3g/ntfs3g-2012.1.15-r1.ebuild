@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r1.ebuild,v 1.11 2012/04/16 17:51:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r1.ebuild,v 1.12 2012/05/04 19:09:18 jdhore Exp $
 
 EAPI=4
 inherit linux-info
@@ -25,7 +25,7 @@ RDEPEND="!<sys-apps/util-linux-2.19
 		)
 	external-fuse? ( >=sys-fs/fuse-2.8.0 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/attr"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.104 2011/10/18 17:16:11 reavertm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.105 2012/05/04 19:09:18 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> evms-2.5.5-r13.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *evms-2.5.5-r13 (18 Oct 2011)
 

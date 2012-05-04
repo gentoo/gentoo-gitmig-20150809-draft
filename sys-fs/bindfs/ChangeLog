@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/bindfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/ChangeLog,v 1.2 2012/03/28 07:59:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/ChangeLog,v 1.3 2012/05/04 19:09:17 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> bindfs-1.9.ebuild,
+  bindfs-1.10.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *bindfs-1.10.1 (28 Mar 2012)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2-utils/gfs2-utils-3.1.2.ebuild,v 1.1 2011/09/14 10:54:10 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2-utils/gfs2-utils-3.1.2.ebuild,v 1.2 2012/05/04 19:09:18 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="sys-cluster/corosync
 	sys-cluster/libdlm
 	sys-libs/ncurses"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}"
 
