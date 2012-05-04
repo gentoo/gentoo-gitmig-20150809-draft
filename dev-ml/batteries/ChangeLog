@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/batteries
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/batteries/ChangeLog,v 1.1 2012/03/28 12:37:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/batteries/ChangeLog,v 1.2 2012/05/04 12:26:47 aballier Exp $
+
+*batteries-1.4.2 (04 May 2012)
+
+  04 May 2012; Alexis Ballier <aballier@gentoo.org> +batteries-1.4.2.ebuild:
+  version bump
 
 *batteries-1.4.1 (28 Mar 2012)
 
