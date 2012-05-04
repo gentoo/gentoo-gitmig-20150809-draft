@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.9 2011/09/21 08:38:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.10 2012/05/04 07:24:15 jdhore Exp $
 
 EAPI="2"
 
@@ -28,8 +28,8 @@ IUSE="gtk xml"
 RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	xml? ( dev-libs/libxml2 )"
 DEPEND="${RDEPEND}
-	gtk? ( dev-util/pkgconfig )
-	xml? ( dev-util/pkgconfig )"
+	gtk? ( virtual/pkgconfig )
+	xml? ( virtual/pkgconfig )"
 
 usex() { use $1 && echo ${2:-yes} || echo ${3:-no} ; }
 

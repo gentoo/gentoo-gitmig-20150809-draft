@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.13 2011/03/30 11:12:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r10.ebuild,v 1.14 2012/05/04 07:24:15 jdhore Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -21,8 +21,8 @@ IUSE="gnome gtk hardened selinux ipv6"
 
 DEPEND=">=sys-devel/gcc-config-1.3.1
 	userland_GNU? ( sys-apps/shadow )
-	gnome? ( dev-util/pkgconfig )
-	gtk? ( dev-util/pkgconfig )"
+	gnome? ( virtual/pkgconfig )
+	gtk? ( virtual/pkgconfig )"
 RDEPEND="
 	gnome? (
 		x11-libs/gtk+:2

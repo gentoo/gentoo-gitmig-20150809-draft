@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.3.ebuild,v 1.5 2011/04/08 01:32:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.3.ebuild,v 1.6 2012/05/04 07:24:15 jdhore Exp $
 
 EAPI="2"
 
@@ -28,8 +28,8 @@ IUSE="gtk xml test"
 RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	xml? ( dev-libs/libxml2 )"
 DEPEND="${RDEPEND}
-	gtk? ( dev-util/pkgconfig )
-	xml? ( dev-util/pkgconfig )"
+	gtk? ( virtual/pkgconfig )
+	xml? ( virtual/pkgconfig )"
 
 src_prepare() {
 	# http://git.overlays.gentoo.org/gitweb/?p=proj/sparse.git;a=summary

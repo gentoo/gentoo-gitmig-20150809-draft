@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/sparse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.44 2011/09/21 08:38:30 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.45 2012/05/04 07:24:15 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> sparse-0.4.3.ebuild,
+  sparse-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> sparse-9999.ebuild:
   Migrate to git-2.
