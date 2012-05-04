@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.34 2012/04/10 06:18:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.35 2012/05/04 10:21:11 eras Exp $
+
+*opendkim-2.5.2-r1 (04 May 2012)
+
+  04 May 2012; Eray Aslan <eras@gentoo.org> +opendkim-2.5.2-r1.ebuild:
+  do not cache ldap query results
 
 *opendkim-2.5.2 (10 Apr 2012)
 
