@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.96 2012/04/07 12:04:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.97 2012/05/04 07:33:11 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gwenhywfar-4.0.2.ebuild,
+  gwenhywfar-4.0.7.ebuild, gwenhywfar-4.2.1.ebuild, gwenhywfar-4.3.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> gwenhywfar-4.2.1.ebuild:
   x86 stable, bug #397851

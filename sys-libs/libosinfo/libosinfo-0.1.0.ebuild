@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.1.0.ebuild,v 1.1 2012/03/10 04:30:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.1.0.ebuild,v 1.2 2012/05/04 07:33:11 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND="
 	>=dev-libs/libxml2-2.6.0:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.0 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.10 )
 	test? ( dev-libs/check )
 	vala? ( dev-lang/vala:0.14 )"

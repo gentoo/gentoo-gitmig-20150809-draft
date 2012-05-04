@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.14 2012/04/21 12:10:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.15 2012/05/04 07:33:12 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> tevent-0.9.14-r1.ebuild,
+  tevent-0.9.15.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> tevent-0.9.15.ebuild:
   add ~arm, bug #412489

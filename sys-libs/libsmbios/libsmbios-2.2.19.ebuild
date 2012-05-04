@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.19.ebuild,v 1.5 2011/08/21 06:21:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.19.ebuild,v 1.6 2012/05/04 07:33:11 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/libxml2
 	nls? ( virtual/libintl )
 	python? ( >=dev-lang/python-2.3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	graphviz? ( media-gfx/graphviz )
 	nls? ( sys-devel/gettext )

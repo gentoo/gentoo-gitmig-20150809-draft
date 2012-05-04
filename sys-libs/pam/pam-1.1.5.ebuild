@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.5.ebuild,v 1.7 2011/11/25 17:34:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.5.ebuild,v 1.8 2012/05/04 07:33:11 jdhore Exp $
 
 EAPI="4"
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2
 	sys-devel/flex
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 PDEPEND="sys-auth/pambase
 	vim-syntax? ( app-vim/pam-syntax )"
 RDEPEND="${RDEPEND}

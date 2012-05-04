@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.15.ebuild,v 1.2 2012/04/21 12:10:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.15.ebuild,v 1.3 2012/05/04 07:33:12 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/python-2.4.2
 	>=sys-libs/talloc-2.0.6[python]"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
 PATCHES=( "${FILESDIR}"/add-py-file.patch )

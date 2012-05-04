@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.20 2012/02/25 16:35:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.21 2012/05/04 07:33:11 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> ldb-1.1.3.ebuild,
+  ldb-1.1.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> ldb-1.1.3.ebuild:
   Stable for amd64, wrt bug #405617

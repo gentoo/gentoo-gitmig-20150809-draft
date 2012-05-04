@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.11.ebuild,v 1.9 2010/01/27 04:51:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.11.ebuild,v 1.10 2012/05/04 07:33:12 jdhore Exp $
 
 DESCRIPTION="Library interface to IPMI"
 HOMEPAGE="http://sourceforge.net/projects/openipmi/"
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/glib
 	tcl? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
 	>=dev-lang/swig-1.3.21
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 # Gui is broken!
 #		python? ( tcl? ( tk? ( dev-lang/tk dev-tcltk/tix ) ) )"
 

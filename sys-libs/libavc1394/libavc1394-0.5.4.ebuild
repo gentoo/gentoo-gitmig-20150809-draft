@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/libavc1394-0.5.4.ebuild,v 1.1 2012/03/07 07:32:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/libavc1394-0.5.4.ebuild,v 1.2 2012/05/04 07:33:12 jdhore Exp $
 
 EAPI="4"
 
@@ -17,4 +17,4 @@ IUSE="static-libs"
 
 RDEPEND=">=sys-libs/libraw1394-0.8"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

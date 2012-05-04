@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnih/libnih-1.0.3.ebuild,v 1.2 2011/10/19 17:52:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnih/libnih-1.0.3.ebuild,v 1.3 2012/05/04 07:33:11 jdhore Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="+dbus nls static-libs test +threads"
 RDEPEND="dbus? ( dev-libs/expat >=sys-apps/dbus-1.2.16 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-util/valgrind )"
 
 src_prepare() {
