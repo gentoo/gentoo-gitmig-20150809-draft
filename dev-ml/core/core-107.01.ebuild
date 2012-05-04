@@ -1,8 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/core-107.01.ebuild,v 1.2 2012/03/27 21:33:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/core-107.01.ebuild,v 1.3 2012/05/04 12:43:07 aballier Exp $
 
 EAPI="3"
+
+OASIS_BUILD_DOCS=1
+
 inherit oasis
 
 MY_P=${P/_/\~}
