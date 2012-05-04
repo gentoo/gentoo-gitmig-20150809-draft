@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.158 2012/04/15 14:10:41 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.159 2012/05/04 17:18:35 pesa Exp $
+
+*qt-core-4.8.1-r2 (04 May 2012)
+
+  04 May 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/moc-workaround-for-boost-1.48.patch, +qt-core-4.8.1-r2.ebuild:
+  Apply Fedora's workaround to fix bug 401551 (moc fails to parse BOOST_JOIN
+  macro of dev-libs/boost-1.48).
 
 *qt-core-4.8.1-r1 (15 Apr 2012)
 
