@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-9999.ebuild,v 1.3 2012/05/02 22:11:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-9999.ebuild,v 1.4 2012/05/04 13:10:28 ssuominen Exp $
 
 EAPI="4"
 
@@ -26,6 +26,7 @@ RDEPEND="${DEPEND}
 	pkg-config? (
 		!dev-util/pkgconfig
 		!dev-util/pkg-config-lite
+		!dev-util/pkgconfig-openbsd[pkg-config]
 	)"
 
 src_prepare() {
