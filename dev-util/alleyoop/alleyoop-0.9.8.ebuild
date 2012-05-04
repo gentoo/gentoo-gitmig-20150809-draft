@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.8.ebuild,v 1.1 2011/12/31 18:07:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.8.ebuild,v 1.2 2012/05/04 17:51:43 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -23,6 +23,6 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	sys-devel/binutils
 	>=dev-util/valgrind-2.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"

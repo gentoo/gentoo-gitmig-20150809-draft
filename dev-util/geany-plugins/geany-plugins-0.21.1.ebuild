@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.21.1.ebuild,v 1.3 2012/02/24 14:11:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.21.1.ebuild,v 1.4 2012/05/04 17:51:45 jdhore Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ RDEPEND=">=dev-util/geany-$(get_version_component_range 1-2)
 		)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	# GeanyGenDoc requires ctpl which isn't yet in portage

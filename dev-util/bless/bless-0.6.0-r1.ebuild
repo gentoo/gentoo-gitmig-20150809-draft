@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.6.0-r1.ebuild,v 1.4 2010/06/04 22:23:29 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.6.0-r1.ebuild,v 1.5 2012/05/04 17:51:45 jdhore Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-lang/mono-1.1.14
 DEPEND="${RDEPEND}
 		  app-text/scrollkeeper
 		>=sys-devel/gettext-0.15
-		>=dev-util/pkgconfig-0.19"
+		virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

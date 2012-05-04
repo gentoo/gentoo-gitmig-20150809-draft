@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.2.2.ebuild,v 1.3 2012/04/29 15:40:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.2.2.ebuild,v 1.4 2012/05/04 17:51:44 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -57,7 +57,7 @@ DEPEND="${COMMON_DEPEND}
 	!!dev-libs/gnome-build
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.40.1
-	>=dev-util/pkgconfig-0.22
+	virtual/pkgconfig
 	>=app-text/scrollkeeper-0.3.14-r2
 	>=app-text/gnome-doc-utils-0.18
 	dev-util/gtk-doc-am

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/exmap-0.10.ebuild,v 1.2 2010/12/29 01:19:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/exmap-0.10.ebuild,v 1.3 2012/05/04 17:51:43 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/libpcre
 		x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	dev-libs/boost
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 MODULE_NAMES="exmap(misc:${S}/kernel)"
 BUILD_TARGETS="clean kernel_modules"

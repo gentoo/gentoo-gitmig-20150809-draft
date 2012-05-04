@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.1.ebuild,v 1.7 2012/03/25 16:14:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.1.ebuild,v 1.8 2012/05/04 17:51:44 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.8:2
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	sys-devel/gettext
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.9

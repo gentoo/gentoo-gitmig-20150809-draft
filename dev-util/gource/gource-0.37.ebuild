@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.37.ebuild,v 1.1 2011/10/21 09:26:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.37.ebuild,v 1.2 2012/05/04 17:51:44 jdhore Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ RDEPEND="
 	"
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	media-libs/freetype:2
 	"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/crow-designer-2.21.0.ebuild,v 1.3 2011/07/26 21:16:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/crow-designer-2.21.0.ebuild,v 1.4 2012/05/04 17:51:44 jdhore Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/guiloader-2.21
 	>=dev-libs/dbus-glib-0.86"
 DEPEND="${RDEPEND}
 	dev-libs/boost
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.18 )"
 
 S=${WORKDIR}/crow-${PV}

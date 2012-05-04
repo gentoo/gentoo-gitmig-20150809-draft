@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.18.ebuild,v 1.7 2011/03/22 19:06:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.18.ebuild,v 1.8 2012/05/04 17:51:43 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"

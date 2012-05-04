@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.2-r1.ebuild,v 1.8 2011/03/16 10:23:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.2-r1.ebuild,v 1.9 2012/05/04 17:51:44 jdhore Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/libxml2-2.4.1:2
 					accessibility? ( gnome-extra/libgail-gnome )
 				)"
 DEPEND="${RDEPEND}
-		>=dev-util/pkgconfig-0.9
+		virtual/pkgconfig
 		sys-devel/gettext
 		>=app-text/scrollkeeper-0.1.4
 		>=dev-util/intltool-0.28"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/gnome-devel-docs-2.32.0.ebuild,v 1.6 2011/11/06 02:39:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/gnome-devel-docs-2.32.0.ebuild,v 1.7 2012/05/04 17:51:45 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=""
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	app-text/gnome-doc-utils
 	~app-text/docbook-xml-dtd-4.2"
 

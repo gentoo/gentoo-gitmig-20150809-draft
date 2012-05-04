@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-1.0.1.ebuild,v 1.6 2012/02/01 17:35:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-1.0.1.ebuild,v 1.7 2012/05/04 17:51:44 jdhore Exp $
 
 DESCRIPTION="Delta compression suite for using/generating binary patches"
 HOMEPAGE="http://diffball.googlecode.com/"
@@ -15,7 +15,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	>=app-arch/bzip2-1.0.2
 	app-arch/xz-utils"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 # Invalid RESTRICT for source package. Investigate.
 RESTRICT="strip"

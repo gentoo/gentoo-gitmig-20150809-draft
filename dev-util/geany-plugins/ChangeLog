@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/geany-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.13 2012/02/24 14:11:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.14 2012/05/04 17:51:45 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> geany-plugins-0.20-r1.ebuild,
+  geany-plugins-0.21.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   geany-plugins-0.21.1.ebuild:

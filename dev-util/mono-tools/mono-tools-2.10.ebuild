@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.10.ebuild,v 1.6 2012/03/10 20:55:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.10.ebuild,v 1.7 2012/05/04 17:51:44 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND="=virtual/monodoc-${GO_MONO_REL_PV}*
 	"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}/${PN}-2.8-html-renderer-fixes.patch"
 		"${FILESDIR}/${PN}-2.10-autoconf.patch" )

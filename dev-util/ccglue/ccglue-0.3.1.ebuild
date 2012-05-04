@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccglue/ccglue-0.3.1.ebuild,v 1.2 2011/08/31 21:22:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccglue/ccglue-0.3.1.ebuild,v 1.3 2012/05/04 17:51:44 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/release-${PV}
 

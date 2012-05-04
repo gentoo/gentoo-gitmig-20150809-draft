@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.131 2012/05/03 05:05:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.132 2012/05/04 17:51:45 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> devhelp-2.32.0.ebuild,
+  devhelp-3.2.0.ebuild, devhelp-3.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *devhelp-3.4.1 (03 May 2012)
 

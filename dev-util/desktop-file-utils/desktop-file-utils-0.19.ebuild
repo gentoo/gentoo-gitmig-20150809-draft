@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.19.ebuild,v 1.5 2012/03/18 15:31:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.19.ebuild,v 1.6 2012/05/04 17:51:44 jdhore Exp $
 
 EAPI=4
 inherit elisp-common
@@ -17,7 +17,7 @@ IUSE="emacs"
 RDEPEND=">=dev-libs/glib-2.12
 	emacs? ( virtual/emacs )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 SITEFILE=50${PN}-gentoo.el
 

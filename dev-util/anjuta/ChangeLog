@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.140 2012/04/29 15:40:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.141 2012/05/04 17:51:44 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> anjuta-2.32.1.1.ebuild,
+  anjuta-3.2.1.ebuild, anjuta-3.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> anjuta-3.2.2.ebuild:
   x86 stable, bug #410611

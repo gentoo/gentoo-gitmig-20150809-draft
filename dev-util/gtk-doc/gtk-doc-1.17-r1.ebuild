@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.17-r1.ebuild,v 1.1 2011/09/10 17:03:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.17-r1.ebuild,v 1.2 2012/05/04 17:51:45 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -34,7 +34,7 @@ RDEPEND=">=dev-libs/glib-2.6:2
 
 DEPEND="${RDEPEND}
 	~dev-util/gtk-doc-am-${PV}
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=app-text/scrollkeeper-0.3.14
 	>=app-text/gnome-doc-utils-0.3.2
 	test? ( app-text/scrollkeeper-dtd )"
