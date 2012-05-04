@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.2.0.ebuild,v 1.1 2011/06/06 11:34:21 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.2.0.ebuild,v 1.2 2012/05/04 04:01:50 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND=">=dev-lang/lua-5.1[deprecated]
 	dev-libs/expat"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e "s#^LUA_LIBDIR=.*#LUA_LIBDIR=$(pkg-config --variable INSTALL_CMOD lua)#" "${S}/config"

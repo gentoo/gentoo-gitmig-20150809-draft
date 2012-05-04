@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r1.ebuild,v 1.2 2012/03/01 12:16:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r1.ebuild,v 1.3 2012/05/04 04:01:52 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/lua-5.1
 		postgres? ( dev-db/postgresql-base )
 		sqlite? ( >=dev-db/sqlite-3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}"
 

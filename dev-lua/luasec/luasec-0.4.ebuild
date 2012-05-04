@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.ebuild,v 1.2 2010/11/05 21:33:44 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.ebuild,v 1.3 2012/05/04 04:01:51 jdhore Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/lua-5.1[deprecated]
 		dev-lua/luasocket
 		dev-libs/openssl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e "s#^LUAPATH=.*#LUAPATH=$(pkg-config --variable INSTALL_LMOD lua)#" "${S}/Makefile"

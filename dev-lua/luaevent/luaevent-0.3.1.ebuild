@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaevent/luaevent-0.3.1.ebuild,v 1.6 2011/08/24 19:27:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaevent/luaevent-0.3.1.ebuild,v 1.7 2012/05/04 04:01:52 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND=">=dev-lang/lua-5.1
 	>=dev-libs/libevent-1.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i "s:^CFLAGS =:CFLAGS +=:" "${S}/Makefile" \

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lua-zlib/lua-zlib-0.2.ebuild,v 1.1 2011/05/02 16:42:39 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lua-zlib/lua-zlib-0.2.ebuild,v 1.2 2012/05/04 04:01:51 jdhore Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="dev-lang/lua
 		sys-libs/zlib"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

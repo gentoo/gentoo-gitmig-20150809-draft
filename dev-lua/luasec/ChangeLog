@@ -1,6 +1,10 @@
 # ChangeLog for dev-lua/luasec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.3 2012/02/16 12:51:32 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.4 2012/05/04 04:01:51 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> luasec-0.4.ebuild,
+  luasec-0.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *luasec-0.4.1 (16 Feb 2012)
 

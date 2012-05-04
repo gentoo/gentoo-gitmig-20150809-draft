@@ -1,6 +1,10 @@
 # ChangeLog for dev-lua/luaexpat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/ChangeLog,v 1.5 2012/03/01 12:51:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/ChangeLog,v 1.6 2012/05/04 04:01:48 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> luaexpat-1.2.0.ebuild,
+  luaexpat-1.2.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *luaexpat-1.2.0-r1 (01 Mar 2012)
 
