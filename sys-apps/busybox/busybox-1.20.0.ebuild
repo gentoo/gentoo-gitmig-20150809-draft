@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.20.0.ebuild,v 1.1 2012/04/30 01:59:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.20.0.ebuild,v 1.2 2012/05/04 01:31:58 vapier Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -52,12 +52,12 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P=${PN}-${PV/_/-}
 	SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.bz2"
-	#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ipv6 make-symlinks mdev -pam selinux sep-usr static"
+IUSE="ipv6 make-symlinks math mdev -pam selinux sep-usr static"
 RESTRICT="test"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
@@ -154,6 +154,7 @@ src_configure() {
 		&& busybox_config_option n PAM \
 		|| busybox_config_option pam PAM
 	busybox_config_option static STATIC
+	busybox_config_option math FEATURE_AWK_LIBM
 
 	# all the debug options are compiler related, so punt them
 	busybox_config_option n DEBUG

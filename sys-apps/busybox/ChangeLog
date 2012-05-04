@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.304 2012/05/03 01:50:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.305 2012/05/04 01:31:58 vapier Exp $
+
+  04 May 2012; Mike Frysinger <vapier@gentoo.org> busybox-1.20.0.ebuild,
+  busybox-9999.ebuild, metadata.xml:
+  Add USE=math to control libm usage in awk.
 
   03 May 2012; Mike Frysinger <vapier@gentoo.org>
   +files/busybox-1.20.0-udhcpc6-ipv6.patch:
