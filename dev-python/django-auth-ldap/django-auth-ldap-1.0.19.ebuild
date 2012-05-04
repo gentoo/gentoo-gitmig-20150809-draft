@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/django-auth-ldap-1.0.19.ebuild,v 1.2 2012/04/25 12:55:49 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/django-auth-ldap-1.0.19.ebuild,v 1.3 2012/05/04 08:07:57 iksaif Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils
 
-DESCRIPTION="A flexible and capable API layer for Django utilising serialisers"
+DESCRIPTION="Django LDAP authentication backend"
 HOMEPAGE="http://pypi.python.org/pypi/django-auth-ldap http://bitbucket.org/psagers/django-auth-ldap/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
