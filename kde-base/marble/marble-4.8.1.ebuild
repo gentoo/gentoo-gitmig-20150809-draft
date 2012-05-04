@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.8.1.ebuild,v 1.5 2012/04/18 19:12:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.8.1.ebuild,v 1.6 2012/05/04 20:47:25 johu Exp $
 
 EAPI=4
 
@@ -42,8 +42,6 @@ pkg_setup() {
 src_prepare() {
 	kde4-base_src_prepare
 	python_convert_shebangs -r $(python_get_version) .
-
-	find "${S}/marble/src/bindings/python/sip" -name "*.sip" | xargs -- sed -i 's/#include <marble\//#include </'
 }
 
 src_configure() {
