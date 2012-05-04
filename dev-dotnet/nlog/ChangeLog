@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/nlog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nlog/ChangeLog,v 1.3 2009/07/21 19:13:20 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nlog/ChangeLog,v 1.4 2012/05/04 03:56:56 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> nlog-1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Jul 2009; Christian Faulhammer <fauli@gentoo.org> nlog-1.0.ebuild:
   stable x86, bug 273254

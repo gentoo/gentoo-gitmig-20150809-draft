@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.21.1-r1.ebuild,v 1.4 2010/10/24 14:22:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.21.1-r1.ebuild,v 1.5 2012/05/04 03:56:55 jdhore Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND=">=gnome-extra/evolution-data-server-2.24
 DEPEND="${RDEPEND}
 	userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 	>=dev-dotnet/gtk-sharp-gapi-2.12
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.21.1-version-check.patch"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-beans/gtk-sharp-beans-2.14.0.ebuild,v 1.4 2011/03/27 14:36:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-beans/gtk-sharp-beans-2.14.0.ebuild,v 1.5 2012/05/04 03:56:55 jdhore Exp $
 
 EAPI=2
 inherit autotools mono
@@ -19,7 +19,7 @@ RDEPEND="dev-dotnet/gio-sharp
 	>=dev-dotnet/gtk-sharp-2.12
 	>=dev-dotnet/gtk-sharp-gapi-2.12"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

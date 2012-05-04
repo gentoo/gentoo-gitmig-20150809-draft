@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monotorrent/monotorrent-0.80.ebuild,v 1.3 2011/05/11 19:26:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monotorrent/monotorrent-0.80.ebuild,v 1.4 2012/05/04 03:56:55 jdhore Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RDEPEND=">=dev-lang/mono-2.0.1"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.23"
+	virtual/pkgconfig"
 
 # The hack we do to get the dll installed in the GAC makes the unit-tests
 # defunct.

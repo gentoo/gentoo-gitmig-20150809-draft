@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/smartirc4net/smartirc4net-0.4.5.1.ebuild,v 1.3 2009/10/21 15:59:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/smartirc4net/smartirc4net-0.4.5.1.ebuild,v 1.4 2012/05/04 03:56:55 jdhore Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ LICENSE="|| ( LGPL-2.1 LGPL-3 )"
 
 RDEPEND=">=dev-lang/mono-2.0"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.23"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install

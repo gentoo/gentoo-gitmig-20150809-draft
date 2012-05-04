@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/gnome-keyring-sharp-1.0.2.ebuild,v 1.5 2011/03/21 20:28:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/gnome-keyring-sharp-1.0.2.ebuild,v 1.6 2012/05/04 03:56:55 jdhore Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/mono-2.0
 	dev-dotnet/glib-sharp
 	doc? ( virtual/monodoc )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Disable building samples.

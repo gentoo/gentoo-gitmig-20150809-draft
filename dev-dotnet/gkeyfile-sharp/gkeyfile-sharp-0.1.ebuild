@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gkeyfile-sharp/gkeyfile-sharp-0.1.ebuild,v 1.3 2011/03/27 14:36:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gkeyfile-sharp/gkeyfile-sharp-0.1.ebuild,v 1.4 2012/05/04 03:56:58 jdhore Exp $
 
 EAPI=2
 inherit autotools mono
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND=">=dev-dotnet/glib-sharp-2.12.9
 	>=dev-dotnet/gtk-sharp-gapi-1.9"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

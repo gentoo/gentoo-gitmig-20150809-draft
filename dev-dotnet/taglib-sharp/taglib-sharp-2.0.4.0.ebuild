@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.4.0.ebuild,v 1.6 2012/01/22 11:18:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.4.0.ebuild,v 1.7 2012/05/04 03:56:55 jdhore Exp $
 
 EAPI=4
 inherit mono
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="dev-lang/mono"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

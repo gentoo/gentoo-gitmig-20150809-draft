@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndesk-dbus/ndesk-dbus-0.6.1a.ebuild,v 1.1 2011/03/12 11:48:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndesk-dbus/ndesk-dbus-0.6.1a.ebuild,v 1.2 2012/05/04 03:56:57 jdhore Exp $
 
 inherit mono
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=">=dev-lang/mono-1.2.4
 	>=sys-apps/dbus-1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."

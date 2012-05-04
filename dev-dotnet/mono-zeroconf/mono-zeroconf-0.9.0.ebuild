@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.9.0.ebuild,v 1.5 2012/02/23 09:32:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.9.0.ebuild,v 1.6 2012/05/04 03:56:57 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="doc"
 RDEPEND=">=dev-lang/mono-2.0
 	>=net-dns/avahi-0.6[mono]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf $(use_enable doc docs) --enable-avahi

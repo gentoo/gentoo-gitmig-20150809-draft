@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.55 2012/01/21 13:23:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.56 2012/05/04 03:56:55 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  evolution-sharp-0.21.1-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Jan 2012; Pacho Ramos <pacho@gentoo.org> -evolution-sharp-0.21.1.ebuild:
   Drop old.

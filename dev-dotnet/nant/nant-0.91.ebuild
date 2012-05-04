@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.91.ebuild,v 1.2 2012/04/09 14:42:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.91.ebuild,v 1.3 2012/05/04 03:56:56 jdhore Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 # This build is not parallel build friendly
 MAKEOPTS="${MAKEOPTS} -j1"

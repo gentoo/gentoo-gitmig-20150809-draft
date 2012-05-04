@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.6.2.ebuild,v 1.4 2011/11/10 19:17:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.6.2.ebuild,v 1.5 2012/05/04 03:56:57 jdhore Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ IUSE="+gtk"
 RDEPEND=">=dev-lang/mono-2
 	gtk? (  >=dev-dotnet/gtk-sharp-2.0 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf $(use_enable gtk gui)
