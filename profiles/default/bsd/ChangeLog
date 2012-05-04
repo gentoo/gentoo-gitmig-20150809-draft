@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.81 2012/05/04 15:30:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.82 2012/05/04 16:15:36 aballier Exp $
+
+  04 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/packages:
+  add freebsd-mk-defs to the system set as its needed by bsdmake
 
   04 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
   pambase[ssh] was renamed to pambase[pam_ssh] some time ago...
