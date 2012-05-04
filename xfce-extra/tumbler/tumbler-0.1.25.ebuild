@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.25.ebuild,v 1.1 2012/04/29 10:30:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.25.ebuild,v 1.2 2012/05/04 07:42:51 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -33,7 +33,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=xfce-base/thunar-1.4"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(

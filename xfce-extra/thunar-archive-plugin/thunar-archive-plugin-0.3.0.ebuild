@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/thunar-archive-plugin-0.3.0.ebuild,v 1.7 2011/05/19 21:44:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/thunar-archive-plugin-0.3.0.ebuild,v 1.8 2012/05/04 07:38:33 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
 
-DESCRIPTION="Thunar's archive plug-in"
+DESCRIPTION="Archive plug-in for the Thunar filemanager"
 HOMEPAGE="http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin"
-SRC_URI="mirror://xfce/src/thunar-plugins/${PN}/0.3/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/thunar-plugins/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -19,8 +19,8 @@ RDEPEND=">=xfce-base/libxfce4util-4.8
 	>=xfce-base/thunar-1.2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=( $(xfconf_use_debug) )

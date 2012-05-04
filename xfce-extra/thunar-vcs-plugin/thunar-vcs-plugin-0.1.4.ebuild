@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.4.ebuild,v 1.4 2012/03/21 06:26:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/thunar-vcs-plugin-0.1.4.ebuild,v 1.5 2012/05/04 07:41:30 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -15,17 +15,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +git +subversion"
 
-RDEPEND=">=dev-libs/glib-2.18:2
+RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2.14:2
 	>=xfce-base/exo-0.6
 	>=xfce-base/libxfce4util-4.8
 	>=xfce-base/thunar-1.2
 	git? ( dev-vcs/git )
-	subversion? ( >=dev-libs/apr-0.9.7
-		>=dev-vcs/subversion-1.5 )"
+	subversion? (
+		>=dev-libs/apr-0.9.7
+		>=dev-vcs/subversion-1.5
+		)"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(

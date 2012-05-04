@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/eatmonkey-0.1.4.ebuild,v 1.7 2011/05/19 21:37:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/eatmonkey-0.1.4.ebuild,v 1.8 2012/05/04 07:36:43 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
 
 DESCRIPTION="A download manager that works exclusively with aria2"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/eatmonkey"
-SRC_URI="mirror://xfce/src/apps/${PN}/0.1/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -24,9 +24,9 @@ RDEPEND="${COMMON_DEPEND}
 	dev-ruby/ruby-glib2
 	dev-ruby/ruby-gtk2"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
 	dev-util/intltool
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${P}-syntax.patch )
@@ -34,9 +34,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i \
-		-e 's:/usr/local:/usr:' \
-		src/eat{monkey,manager.rb} || die
-
+	sed -i -e 's:/usr/local:/usr:' src/eat{monkey,manager.rb} || die
 	xfconf_src_prepare
 }
