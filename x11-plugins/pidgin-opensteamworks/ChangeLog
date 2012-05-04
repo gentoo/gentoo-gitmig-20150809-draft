@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/pidgin-opensteamworks
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.1 2012/05/04 15:53:52 hasufell Exp $
+
+*pidgin-opensteamworks-1.0_p30 (04 May 2012)
+
+  04 May 2012; Julian Ospald <hasufell@gentoo.org>
+  +pidgin-opensteamworks-1.0_p30.ebuild,
+  +files/pidgin-opensteamworks-1.0_p30-Makefile, +metadata.xml:
+  initial import by Manuel Rueger (mrueg) wrt #414171
+
