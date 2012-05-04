@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.63 2012/04/30 23:26:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.64 2012/05/04 20:50:24 scarabeus Exp $
+
+  04 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.5.2.2.ebuild:
+  Use curl version we actually built against
 
   30 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-bin-3.5.2.2.ebuild:
