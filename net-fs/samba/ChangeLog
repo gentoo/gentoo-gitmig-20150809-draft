@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.513 2012/05/03 04:06:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.514 2012/05/04 15:06:49 jer Exp $
+
+  04 May 2012; Jeroen Roovers <jer@gentoo.org> samba-3.5.15.ebuild:
+  Stable for HPPA (bug #414319).
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> samba-4.0.0_alpha17.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
