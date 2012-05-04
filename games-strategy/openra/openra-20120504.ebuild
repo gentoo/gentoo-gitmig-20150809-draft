@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20120504.ebuild,v 1.1 2012/05/04 00:20:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20120504.ebuild,v 1.2 2012/05/04 17:31:14 hasufell Exp $
 
 EAPI=3
 
@@ -40,7 +40,7 @@ src_install() {
 		bindir="${GAMES_BINDIR}" \
 		libdir="$(games_get_libdir)/${PN}" \
 		DESTDIR="${D}" \
-		install
+		install || die
 
 	# icons
 	insinto /usr/share/icons/
