@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8.ebuild,v 1.10 2012/04/22 01:04:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8.ebuild,v 1.11 2012/05/04 04:04:06 hasufell Exp $
 
 EAPI=2
 inherit eutils
@@ -41,7 +41,7 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		--enable-ILU \
-		--enable-ILUT \
+		$(use_enable X ILUT) \
 		$(use_enable gif) \
 		$(use_enable jpeg) \
 		$(use_enable lcms) \
@@ -62,7 +62,8 @@ src_configure() {
 		$(use_enable sse2) \
 		$(use_enable sse3) \
 		--disable-directx8 \
-		--disable-directx9
+		--disable-directx9 \
+		--without-nvtt
 }
 
 src_install() {
