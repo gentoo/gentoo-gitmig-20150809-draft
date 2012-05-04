@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.289 2012/05/02 22:11:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.290 2012/05/04 17:54:21 scarabeus Exp $
+
+  04 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> cairo-1.10.2-r2.ebuild:
+  Stable on amd64 x86 and ppc wrt bug#414309.
 
   02 May 2012; Davide Pesavento <pesa@gentoo.org> cairo-1.10.2-r1.ebuild,
   cairo-1.10.2-r2.ebuild, cairo-1.12.0.ebuild, cairo-1.12.2.ebuild,
