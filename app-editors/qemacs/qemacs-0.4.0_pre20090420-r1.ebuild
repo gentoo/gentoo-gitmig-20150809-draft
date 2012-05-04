@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.4.0_pre20090420-r1.ebuild,v 1.3 2012/05/04 11:03:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.4.0_pre20090420-r1.ebuild,v 1.4 2012/05/04 11:08:20 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs
@@ -75,9 +75,6 @@ src_install() {
 	# Install headers so users can build their own plugins.
 	insinto /usr/include/qe
 	doins {cfb,config,cutils,display,fbfrender,libfbf,qe,qeconfig,qestyles,qfribidi}.h
-
-	pushd libqhtml >/dev/null
 	insinto /usr/include/qe/libqhtml
-	doins css.h cssid.h htmlent.h
-	popd >/dev/null
+	doins libqhtml/{css,cssid,htmlent}.h
 }
