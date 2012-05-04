@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.789 2012/04/22 14:46:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.790 2012/05/04 15:04:25 aballier Exp $
+
+  04 May 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  bump dvbpsi dep, bug #414495 by karpi
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> vlc-2.0.1.ebuild:
   add ~arm, bug #397891
