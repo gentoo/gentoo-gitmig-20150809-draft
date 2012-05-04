@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libindicate
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.28 2011/11/28 22:39:35 zmedico Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.29 2012/05/04 13:12:52 johu Exp $
+
+  04 May 2012; Johannes Huber <johu@gentoo.org> libindicate-0.6.1-r201.ebuild,
+  libindicate-0.6.1-r300.ebuild:
+  Migrate to virtual/pkgconfig.
 
   28 Nov 2011; Zac Medico <zmedico@gentoo.org> libindicate-0.6.1-r201.ebuild,
   libindicate-0.6.1-r300.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.6.1-r201.ebuild,v 1.3 2011/11/28 22:39:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.6.1-r201.ebuild,v 1.4 2012/05/04 13:12:52 johu Exp $
 
 EAPI=4
 
@@ -33,8 +33,8 @@ DEPEND="${RDEPEND}
 	gnome-base/gnome-common
 	app-text/gnome-doc-utils
 	dev-util/gtk-doc-am
-	dev-util/pkgconfig
-	dev-lang/vala:${PV_vala_version}[vapigen]"
+	dev-lang/vala:${PV_vala_version}[vapigen]
+	virtual/pkgconfig"
 
 RESTRICT="test" # for -no-mono.patch
 
