@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.235 2012/05/03 00:31:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.236 2012/05/04 08:31:43 nelchael Exp $
+
+  04 May 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  python-distutils-ng.eclass:
+  Let distutils compile python modules, see bug #413957.
 
   03 May 2012; Mike Gilbert <floppym@gentoo.org> python-distutils-ng.eclass:
   Declare local S in _python-distutils-ng_run_for_impl.

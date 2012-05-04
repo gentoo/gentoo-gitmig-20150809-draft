@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.15 2012/05/03 00:31:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.16 2012/05/04 08:31:43 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -171,37 +171,17 @@ _python-distutils-ng_default_distutils_compile() {
 # @DESCRIPTION:
 # Default src_install for distutils-based packages.
 _python-distutils-ng_default_distutils_install() {
-	"${PYTHON}" setup.py install --no-compile --root="${D}/" || die
-}
+	local compile_flags="--compile -O2"
 
-# @FUNCTION: _python-distutils-ng_has_compileall
-# @USAGE: implementation
-# @RETURN: 0 if given implementation has compileall module
-# @DESCRIPTION:
-# This function is used to decide whenever to compile Python modules for given
-# implementation.
-_python-distutils-ng_has_compileall() {
 	case "${1}" in
-		python?_?|jython?_?)
-			return 0 ;;
-		*)
-			return 1 ;;
+		jython*)
+			# Jython does not support optimizations
+			compile_flags="--compile" ;;
 	esac
-}
 
-# @FUNCTION: _python-distutils-ng_has_compileall_opt
-# @USAGE: implementation
-# @RETURN: 0 if given implementation has compileall module and supports # optimizations
-# @DESCRIPTION:
-# This function is used to decide whenever to compile and optimize Python
-# modules for given implementation.
-_python-distutils-ng_has_compileall_opt() {
-	case "${1}" in
-		python?_?)
-			return 0 ;;
-		*)
-			return 1 ;;
-	esac
+	unset PYTHONDONTWRITEBYTECODE
+	[[ -n "${PYTHON_DISABLE_COMPILATION}" ]] && compile_flags="--no-compile"
+	"${PYTHON}" setup.py install ${compile_flags} --root="${D%/}/" || die
 }
 
 # @FUNCTION: python-distutils-ng_redoscript
@@ -390,26 +370,4 @@ python-distutils-ng_src_install() {
 		python_install_all
 		popd &> /dev/null
 	fi
-
-	for impl in ${PYTHON_COMPAT}; do
-		[[ "${PYTHON_DISABLE_COMPILATION}" = "yes" ]] && continue
-		use "python_targets_${impl}" ${PYTHON_COMPAT} || continue
-
-		PYTHON="$(_python-distutils-ng_get_binary_for_implementation "${impl}")"
-		for accessible_path in $(${PYTHON} -c 'import sys; print(" ".join(sys.path))'); do
-			[[ -d "${D}/${accessible_path}" ]] || continue
-
-			_python-distutils-ng_has_compileall "${impl}" || continue
-			ebegin "Compiling ${accessible_path} for ${impl}"
-			${PYTHON} \
-				-m compileall -q -f "${D}/${accessible_path}" || die
-			eend $?
-
-			_python-distutils-ng_has_compileall_opt "${impl}" || continue
-			ebegin "Optimizing ${accessible_path} for ${impl}"
-			PYTHONOPTIMIZE=1 ${PYTHON} \
-				-m compileall -q -f "${D}/${accessible_path}" || die
-			eend $?
-		done;
-	done
 }
