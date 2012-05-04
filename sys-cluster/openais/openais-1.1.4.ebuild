@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-1.1.4.ebuild,v 1.6 2011/08/04 13:37:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-1.1.4.ebuild,v 1.7 2012/05/04 07:20:30 jdhore Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="sys-cluster/corosync"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( "${S}/AUTHORS" "${S}/README.amf" )
 

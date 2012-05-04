@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.3.0.ebuild,v 1.4 2011/02/21 08:35:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.3.0.ebuild,v 1.5 2012/05/04 07:20:30 jdhore Exp $
 
 EAPI=3
 
@@ -22,7 +22,7 @@ RDEPEND="!sys-cluster/heartbeat
 		sys-infiniband/librdmacm
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( sys-apps/groff )"
 
 PATCHES=(

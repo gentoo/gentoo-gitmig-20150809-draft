@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.5.ebuild,v 1.1 2012/02/07 16:27:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.5.ebuild,v 1.2 2012/05/04 07:20:30 jdhore Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="emacs? ( virtual/emacs )
 		fuse? ( >=sys-fs/fuse-2.7.0 )
 		infiniband? ( sys-infiniband/libibverbs )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/bison
 	sys-devel/flex"
 

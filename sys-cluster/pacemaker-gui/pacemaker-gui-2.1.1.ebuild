@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker-gui/pacemaker-gui-2.1.1.ebuild,v 1.1 2012/03/08 10:35:39 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker-gui/pacemaker-gui-2.1.1.ebuild,v 1.2 2012/05/04 07:20:30 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -38,7 +38,7 @@ RDEPEND="${CDEPEND}
 	sys-devel/libtool"
 DEPEND="${CDEPEND}
 	gtk? ( dev-lang/swig )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? (
 		dev-util/intltool
 		sys-devel/gettext

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.44.ebuild,v 1.1 2012/03/23 19:54:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.44.ebuild,v 1.2 2012/05/04 07:20:30 jdhore Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ CDEPEND="
 	tcmalloc? ( dev-util/google-perftools )
 	"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	sys-fs/btrfs-progs"
 

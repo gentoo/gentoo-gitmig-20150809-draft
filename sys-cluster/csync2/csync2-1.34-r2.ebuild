@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34-r2.ebuild,v 1.3 2010/11/08 08:03:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34-r2.ebuild,v 1.4 2012/05/04 07:20:30 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND=">=net-libs/librsync-0.9.5
 	ssl? ( >=net-libs/gnutls-2.7.3 )
 	xinetd? ( sys-apps/xinetd )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 SLOT="0"
 
