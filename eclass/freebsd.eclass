@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.18 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.19 2012/05/04 13:31:31 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -97,11 +97,7 @@ freebsd_src_unpack() {
 
 freebsd_src_compile() {
 	use profile && filter-flags "-fomit-frame-pointer"
-	use profile || \
-		case "${RV}" in
-			5.*) mymakeopts="${mymakeopts} NOPROFILE= " ;;
-			6.*|7.*) mymakeopts="${mymakeopts} NO_PROFILE= " ;;
-		esac
+	use profile || mymakeopts="${mymakeopts} NO_PROFILE= "
 
 	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS="
 
@@ -115,11 +111,7 @@ freebsd_src_compile() {
 }
 
 freebsd_src_install() {
-	use profile || \
-		case "${RV}" in
-			5.*) mymakeopts="${mymakeopts} NOPROFILE= " ;;
-			6.*|7.*) mymakeopts="${mymakeopts} NO_PROFILE= " ;;
-		esac
+	use profile || mymakeopts="${mymakeopts} NO_PROFILE= "
 
 	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS="
 
