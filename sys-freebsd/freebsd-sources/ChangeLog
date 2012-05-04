@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.68 2012/05/04 17:38:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.69 2012/05/04 18:12:40 aballier Exp $
+
+  04 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-sources-9.0.ebuild,
+  +files/freebsd-sources-9.0-disable-optimizations.patch:
+  use debian GNU/kFreeBSD patch instead of a sed that lets the modules be built
+  with -O2 for fixing panics on amd64 with gcc 4.4 and later
 
   04 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-sources-9.0.ebuild:
   build with -O1 on amd64-fbsd otherwise the kernel does not boot with gcc 4.4

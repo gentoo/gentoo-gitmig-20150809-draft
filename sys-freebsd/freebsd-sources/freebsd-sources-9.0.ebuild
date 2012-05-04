@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.5 2012/05/04 17:38:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.6 2012/05/04 18:12:40 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -33,6 +33,9 @@ src_unpack() {
 		-e 's:^VERSION=.*:VERSION="${TYPE} ${BRANCH} ${REVISION}":' \
 		"${S}/conf/newvers.sh"
 
+	# workaround a kernel panic for amd64-fbsd, bug #408019
+	use amd64-fbsd && epatch "${FILESDIR}/${PN}-9.0-disable-optimizations.patch"
+
 	# __FreeBSD_cc_version comes from FreeBSD's gcc.
 	# on 9.0-RELEASE it's 900001.
 	sed -e "s:-D_KERNEL:-D_KERNEL -D__FreeBSD_cc_version=900001:g" \
@@ -56,11 +59,6 @@ src_unpack() {
 	# vop_whiteout to tmpfs, so it can be used as an overlay
 	# unionfs filesystem over the cd9660 readonly filesystem.
 	epatch "${FILESDIR}/${PN}-7.0-tmpfs_whiteout_stub.patch"
-
-	# workaround a kernel panic for amd64-fbsd, bug #408019
-	if use amd64-fbsd ; then
-		sed -e "s:-O2:-O1:g" -i "${S}/conf/kern.pre.mk" || die
-	fi
 }
 
 src_compile() {
