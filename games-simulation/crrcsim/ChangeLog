@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/crrcsim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/ChangeLog,v 1.4 2012/04/23 17:36:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/ChangeLog,v 1.5 2012/05/04 23:13:04 xmw Exp $
+
+*crrcsim-0.9.12 (04 May 2012)
+
+  04 May 2012; Michael Weber <xmw@gentoo.org> +crrcsim-0.9.12.ebuild:
+  Version bump
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> crrcsim-0.9.11.ebuild:
   Use mirror:// in SRC_URI.
