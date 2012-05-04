@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/tiemu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.7 2011/04/13 06:21:23 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.8 2012/05/04 06:52:08 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> tiemu-3.03.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   13 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> tiemu-3.03.ebuild,
   +files/tiemu-3.03-r2820.patch:

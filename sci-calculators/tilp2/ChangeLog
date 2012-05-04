@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/tilp2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.7 2012/02/19 13:57:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.8 2012/05/04 06:52:08 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> tilp2-1.14.ebuild,
+  tilp2-1.16.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *tilp2-1.16 (19 Feb 2012)
 

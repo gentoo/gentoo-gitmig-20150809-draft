@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/tilp2-1.16.ebuild,v 1.1 2012/02/19 13:57:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/tilp2-1.16.ebuild,v 1.2 2012/05/04 06:52:08 jdhore Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/glib:2
 	nls? ( virtual/libintl )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	xinerama? ( x11-proto/xineramaproto )"
 

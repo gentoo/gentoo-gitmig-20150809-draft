@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-units/qalculate-units-0.9.4-r2.ebuild,v 1.5 2012/04/26 15:59:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-units/qalculate-units-0.9.4-r2.ebuild,v 1.6 2012/05/04 06:52:08 jdhore Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="
 	x11-libs/gtk+:2
 	nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cln-config.patch

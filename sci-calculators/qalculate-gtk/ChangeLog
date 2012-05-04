@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/qalculate-gtk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.36 2011/03/02 21:25:34 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.37 2012/05/04 06:52:08 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> qalculate-gtk-0.9.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> qalculate-gtk-0.9.7.ebuild:
   Correct Slots for gtk 3 introduction to tree

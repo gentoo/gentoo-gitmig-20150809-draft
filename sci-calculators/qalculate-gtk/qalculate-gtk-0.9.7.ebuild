@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.7.ebuild,v 1.7 2011/03/02 21:25:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.7.ebuild,v 1.8 2012/05/04 06:52:08 jdhore Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	app-text/rarian
 	sys-devel/gettext
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"

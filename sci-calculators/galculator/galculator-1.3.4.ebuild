@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/galculator-1.3.4.ebuild,v 1.8 2011/03/02 21:23:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/galculator-1.3.4.ebuild,v 1.9 2012/05/04 06:52:08 jdhore Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade:2.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Fix tests

@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-currency
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/ChangeLog,v 1.16 2012/04/26 15:59:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/ChangeLog,v 1.17 2012/05/04 06:52:08 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  qalculate-currency-0.9.4-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Apr 2012; Justin Lecher <jlec@gentoo.org>
   qalculate-currency-0.9.4-r2.ebuild:

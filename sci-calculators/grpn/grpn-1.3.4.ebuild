@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/grpn/grpn-1.3.4.ebuild,v 1.1 2012/01/03 21:18:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/grpn/grpn-1.3.4.ebuild,v 1.2 2012/05/04 06:52:08 jdhore Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e 's:= -g -O2 -I/usr/X11/include:+=:' Makefile || die
