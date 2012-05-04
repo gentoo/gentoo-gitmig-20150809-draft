@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.6 2012/03/31 22:47:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.7 2012/05/04 20:20:08 sping Exp $
+
+*autopep8-0.5.2_p1 (04 May 2012)
+
+  04 May 2012; Sebastian Pipping <sping@gentoo.org> +autopep8-0.5.2_p1.ebuild,
+  +files/autopep8-0.5.2-issue-10.patch, metadata.xml:
+  Add upstream patch for issue 10 (runtime exception), add myself as backup
+  maintainer
 
   31 Mar 2012; Mike Gilbert <floppym@gentoo.org> autopep8-0.5.2.ebuild,
   autopep8-0.5.ebuild, autopep8-9999.ebuild:
