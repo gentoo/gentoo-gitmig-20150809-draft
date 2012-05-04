@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.7 2011/07/09 21:20:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.8 2012/05/04 14:55:59 aballier Exp $
 
 # Last building sandbox breaks gfind, bug #374425
 FEATURES="-sandbox"
@@ -43,3 +43,6 @@ USE="${USE} oss"
 # Enable iconv by default for mplayer upon Luca's request
 USE="${USE} iconv"
 
+# Let virtual/mta pick ssmtp[mta] for stage1 builds.
+# https://bugs.gentoo.org/show_bug.cgi?id=408587
+BOOTSTRAP_USE="${BOOTSTRAP_USE} mta"
