@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/oww/oww-0.83.2.ebuild,v 1.1 2010/06/24 20:58:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/oww/oww-0.83.2.ebuild,v 1.2 2012/05/04 07:50:52 jdhore Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ RDEPEND="
 	net-misc/curl
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

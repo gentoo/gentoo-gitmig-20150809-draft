@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/fitsverify/fitsverify-20100129.ebuild,v 1.1 2010/01/31 21:48:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/fitsverify/fitsverify-20100129.ebuild,v 1.2 2012/05/04 07:50:53 jdhore Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=sci-libs/cfitsio-3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}"
 

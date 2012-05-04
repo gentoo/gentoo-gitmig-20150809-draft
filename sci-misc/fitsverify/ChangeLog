@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/fitsverify
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/fitsverify/ChangeLog,v 1.2 2011/03/08 05:38:44 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/fitsverify/ChangeLog,v 1.3 2012/05/04 07:50:52 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> fitsverify-20100129.ebuild,
+  fitsverify-20110304.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *fitsverify-20110304 (08 Mar 2011)
 
