@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.236 2012/05/04 08:31:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.237 2012/05/04 15:39:29 chithanh Exp $
+
+  04 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-2.eclass:
+  Raise util-macros dependency.
 
   04 May 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   python-distutils-ng.eclass:

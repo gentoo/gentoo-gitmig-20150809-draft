@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.53 2012/05/02 18:31:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.54 2012/05/04 15:39:29 chithanh Exp $
 
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -110,7 +110,7 @@ EAUTORECONF_DEPEND+="
 	>=sys-devel/libtool-2.2.6a
 	sys-devel/m4"
 if [[ ${PN} != util-macros ]] ; then
-	EAUTORECONF_DEPEND+=" >=x11-misc/util-macros-1.15.0"
+	EAUTORECONF_DEPEND+=" >=x11-misc/util-macros-1.17"
 	# Required even by xorg-server
 	[[ ${PN} == "font-util" ]] || EAUTORECONF_DEPEND+=" >=media-fonts/font-util-1.2.0"
 fi
