@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/gelemental-1.2.0.ebuild,v 1.5 2011/03/02 17:49:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/gelemental-1.2.0.ebuild,v 1.6 2012/05/04 07:02:34 jdhore Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	dev-cpp/gtkmm:2.4
 	dev-cpp/glibmm:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool
 	doc? ( app-doc/doxygen )"

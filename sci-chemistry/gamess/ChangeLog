@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gamess
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.56 2011/10/13 12:00:38 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.57 2012/05/04 07:02:32 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gamess-20110811.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gamess-20110811.1 (13 Oct 2011)
 

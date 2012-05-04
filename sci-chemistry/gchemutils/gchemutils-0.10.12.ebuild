@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.10.12.ebuild,v 1.4 2011/04/24 17:20:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.10.12.ebuild,v 1.5 2012/05/04 07:02:34 jdhore Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -27,7 +27,7 @@ RDEPEND="gnome-base/libglade:2.0
 	sci-chemistry/bodr
 	sci-chemistry/chemical-mime-data"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/rarian
 	dev-util/intltool"
 

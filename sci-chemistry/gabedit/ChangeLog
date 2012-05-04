@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gabedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.14 2012/03/13 16:33:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.15 2012/05/04 07:02:33 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gabedit-2.3.6.ebuild,
+  gabedit-2.4.0.ebuild, gabedit-2.4.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gabedit-2.4.2 (13 Mar 2012)
 

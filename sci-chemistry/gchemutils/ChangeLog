@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gchemutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.17 2012/04/18 13:21:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.18 2012/05/04 07:02:34 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gchemutils-0.10.12.ebuild,
+  gchemutils-0.13.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> gchemutils-0.13.1.ebuild:
   Remove USE="nsplugin" wrt #388887 by Michał Górny. Support for building

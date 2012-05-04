@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gelemental
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.7 2012/01/23 09:34:29 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.8 2012/05/04 07:02:34 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gelemental-1.2.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gelemental-1.2.0.ebuild:
   Correct Slots for gtk 3 introduction to tree

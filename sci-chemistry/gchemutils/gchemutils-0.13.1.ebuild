@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.13.1.ebuild,v 1.5 2012/04/18 13:21:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.13.1.ebuild,v 1.6 2012/05/04 07:02:34 jdhore Exp $
 
 EAPI=4
 inherit gnome2 # multilib toolchain-funcs nsplugins
@@ -27,7 +27,7 @@ RDEPEND="${CDEPEND}
 	gnome-extra/yelp" #271998
 DEPEND="${CDEPEND}
 	app-text/gnome-doc-utils
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 # nsplugin? ( net-misc/npapi-sdk )
 

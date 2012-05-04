@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/chemical-mime-data-0.1.94-r1.ebuild,v 1.1 2010/05/16 03:22:30 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemical-mime-data/chemical-mime-data-0.1.94-r1.ebuild,v 1.2 2012/05/04 07:02:34 jdhore Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 		x11-misc/shared-mime-info
 		dev-util/intltool
 		dev-util/desktop-file-utils

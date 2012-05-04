@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20110811.1.ebuild,v 1.1 2011/10/13 12:00:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20110811.1.ebuild,v 1.2 2012/05/04 07:02:32 jdhore Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ CDEPEND="
 	mpi? ( virtual/mpi )
 	virtual/blas"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	net-misc/openssh"
 

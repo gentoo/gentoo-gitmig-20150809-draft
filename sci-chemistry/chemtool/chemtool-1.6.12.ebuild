@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.7 2012/01/26 18:38:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.8 2012/05/04 07:02:32 jdhore Exp $
 
 EAPI=1
 
@@ -23,7 +23,7 @@ RDEPEND="
 	x11-libs/pango
 	x86? ( media-libs/libemf )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	local config_opts

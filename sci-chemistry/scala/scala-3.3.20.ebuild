@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.20.ebuild,v 1.1 2011/12/27 17:12:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.20.ebuild,v 1.2 2012/05/04 07:02:34 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="
 	virtual/lapack"
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	cp "${FILESDIR}"/{configure.ac,Makefile.am} "${S}"

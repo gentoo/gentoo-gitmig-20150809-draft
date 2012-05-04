@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.99.2-r2.ebuild,v 1.6 2011/05/28 13:58:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.99.2-r2.ebuild,v 1.7 2012/05/04 07:02:33 jdhore Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ RDEPEND="
 	x11-libs/gtkglext
 	openbabel? ( sci-chemistry/openbabel )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.15"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-docs.patch

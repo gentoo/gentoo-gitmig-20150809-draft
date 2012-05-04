@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.18 2012/02/23 17:01:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.19 2012/05/04 07:02:33 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> votca-csg-1.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> votca-csg-1.2.2.ebuild:
   Fix dependency on app-doc/doxygen wrt converting useflags 'nodot' to 'dot'.

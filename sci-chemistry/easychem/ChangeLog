@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/easychem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.20 2012/04/29 10:08:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.21 2012/05/04 07:02:33 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> easychem-0.6.ebuild,
+  easychem-0.6-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Justin Lecher <jlec@gentoo.org> files/0.6-gentoo.patch,
   metadata.xml:

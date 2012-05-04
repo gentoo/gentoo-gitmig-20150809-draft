@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/burrow-owl-1.4-r1.ebuild,v 1.1 2010/08/24 17:54:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/burrow-owl-1.4-r1.ebuild,v 1.2 2012/05/04 07:02:34 jdhore Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="dev-scheme/guile[networking,regex]
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/indent
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-include.patch

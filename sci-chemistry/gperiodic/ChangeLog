@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gperiodic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.19 2012/01/26 19:17:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.20 2012/05/04 07:02:33 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gperiodic-2.0.10.ebuild,
+  gperiodic-2.0.10-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Jan 2012; Justin Lecher <jlec@gentoo.org> gperiodic-2.0.10-r2.ebuild,
   +files/gperiodic-2.0.10-nls.patch, metadata.xml:

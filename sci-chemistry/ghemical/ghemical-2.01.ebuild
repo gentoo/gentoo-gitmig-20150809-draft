@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.01.ebuild,v 1.7 2011/03/02 13:16:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.01.ebuild,v 1.8 2012/05/04 07:02:33 jdhore Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ RDEPEND="media-libs/freeglut
 	threads? ( dev-libs/glib:2 )
 	x11-libs/libXmu"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.15"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	# Only works with xorg-x11 GL implementation

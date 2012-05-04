@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/gtk-gamess-2.00.ebuild,v 1.8 2011/03/02 13:21:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/gtk-gamess-2.00.ebuild,v 1.9 2012/05/04 07:02:32 jdhore Exp $
 
 EAPI="1"
 
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-libs/libxml2:2
 	sci-chemistry/gamess"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 

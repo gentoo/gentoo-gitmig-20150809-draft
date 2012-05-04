@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6.ebuild,v 1.14 2011/03/02 13:12:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6.ebuild,v 1.15 2012/05/04 07:02:33 jdhore Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	app-text/ghostscript-gpl
 	media-gfx/pstoedit"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/wxmacmolplt-7.4.2.ebuild,v 1.1 2010/12/06 16:45:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/wxmacmolplt-7.4.2.ebuild,v 1.2 2012/05/04 07:02:33 jdhore Exp $
 
 EAPI="3"
 WX_GTK_VER=2.8
@@ -22,7 +22,7 @@ RDEPEND="
 	x11-libs/wxGTK:2.8[X,opengl]
 	flash? ( media-libs/ming )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-glew.patch
