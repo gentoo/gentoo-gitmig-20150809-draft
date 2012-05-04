@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkg-config-lite/pkg-config-lite-0.26.1.ebuild,v 1.1 2012/04/30 03:39:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkg-config-lite/pkg-config-lite-0.26.1.ebuild,v 1.2 2012/05/04 13:13:44 ssuominen Exp $
 
 EAPI="4"
 
@@ -18,7 +18,9 @@ IUSE=""
 
 DEPEND="dev-libs/popt"
 RDEPEND="${DEPEND}
-	!dev-util/pkgconfig"
+	!dev-util/pkgconf[pkg-config]
+	!dev-util/pkgconfig
+	!dev-util/pkgconfig-openbsd[pkg-config]"
 
 S=${WORKDIR}/${MY_P}
 
