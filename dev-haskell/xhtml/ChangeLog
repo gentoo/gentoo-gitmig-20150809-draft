@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.22 2012/01/23 12:14:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.23 2012/05/04 13:03:34 slyfox Exp $
+
+*xhtml-3000.2.0.5 (04 May 2012)
+
+  04 May 2012; Sergei Trofimovich <slyfox@gentoo.org> +xhtml-3000.2.0.5.ebuild:
+  Version bump (by Hans Lub in bug #414229).
 
 *xhtml-3000.2.0.4 (23 Jan 2012)
 
