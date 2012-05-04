@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.200 2012/05/04 18:07:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.201 2012/05/04 18:16:32 zmedico Exp $
+
+*calibre-0.8.50 (04 May 2012)
+
+  04 May 2012; Zac Medico <zmedico@gentoo.org> +calibre-0.8.50.ebuild:
+  0.8.50 version bump.
 
   04 May 2012; Zac Medico <zmedico@gentoo.org> calibre-0.8.49.ebuild:
   Require cssutils >=0.9.9 as reported in bug #413253, comment #2.
