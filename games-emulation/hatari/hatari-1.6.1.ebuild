@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.6.1.ebuild,v 1.3 2012/04/15 16:54:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.6.1.ebuild,v 1.4 2012/05/04 04:38:40 jdhore Exp $
 
 EAPI=2
 inherit toolchain-funcs cmake-utils games
@@ -19,7 +19,7 @@ RDEPEND="media-libs/libsdl[X,audio,video]
 	media-libs/libpng
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${RDEPEND}
 	games-emulation/emutos"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.10 2010/11/15 09:49:52 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.11 2012/05/04 04:38:40 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
@@ -36,7 +36,7 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	x11-proto/xproto
-	gtk? ( dev-util/pkgconfig
+	gtk? ( virtual/pkgconfig
 		xv? ( x11-proto/videoproto ) )
 	nls? ( dev-util/intltool )"
 

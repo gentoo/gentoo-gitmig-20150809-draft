@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.13 2009/10/25 15:19:15 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/ChangeLog,v 1.14 2012/05/04 04:38:39 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> xe-2.16.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org> xe-2.16.2.ebuild:
   amd64/x86 stable, bug #288823

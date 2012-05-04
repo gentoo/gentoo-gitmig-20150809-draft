@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-2.4.1.ebuild,v 1.3 2010/05/23 21:24:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-2.4.1.ebuild,v 1.4 2012/05/04 04:38:38 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ RDEPEND="media-libs/libsdl[video]
 	media-sound/pulseaudio
 	media-libs/alsa-lib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/psemu-cdriso
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/ChangeLog,v 1.8 2007/02/21 23:30:16 peper Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-cdriso/ChangeLog,v 1.9 2012/05/04 04:38:39 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> psemu-cdriso-1.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

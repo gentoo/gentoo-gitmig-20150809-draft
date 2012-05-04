@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.6 2012/02/02 16:05:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.7 2012/05/04 04:38:40 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
@@ -28,7 +28,7 @@ RDEPEND="x11-libs/libX11
 		pulseaudio? ( media-sound/pulseaudio ) )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
-	gtk? ( dev-util/pkgconfig
+	gtk? ( virtual/pkgconfig
 		xv? ( x11-proto/videoproto ) )
 	nls? ( dev-util/intltool )"
 

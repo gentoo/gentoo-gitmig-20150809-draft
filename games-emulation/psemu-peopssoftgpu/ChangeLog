@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/psemu-peopssoftgpu
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.13 2008/12/23 23:41:39 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.14 2012/05/04 04:38:38 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  psemu-peopssoftgpu-1.17.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   psemu-peopssoftgpu-1.17.ebuild:

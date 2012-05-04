@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.3-r1.ebuild,v 1.2 2012/02/18 08:16:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.3-r1.ebuild,v 1.3 2012/05/04 04:38:39 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -24,7 +24,7 @@ RDEPEND="virtual/opengl
 	jack? ( media-sound/jack-audio-connection-kit )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}

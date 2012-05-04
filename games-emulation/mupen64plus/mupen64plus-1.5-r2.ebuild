@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.6 2011/12/26 02:28:24 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.7 2012/05/04 04:38:38 jdhore Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ RDEPEND="virtual/opengl
 
 DEPEND="${RDEPEND}
 	dev-lang/yasm
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

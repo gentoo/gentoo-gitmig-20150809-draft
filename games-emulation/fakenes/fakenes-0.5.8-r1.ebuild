@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.5.8-r1.ebuild,v 1.6 2011/10/14 06:17:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.5.8-r1.ebuild,v 1.7 2012/05/04 04:38:40 jdhore Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/allegro-4.4.1.1:0[opengl?]
 	)
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

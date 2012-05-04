@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1090.ebuild,v 1.1 2012/02/18 03:44:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1090.ebuild,v 1.2 2012/05/04 04:38:38 jdhore Exp $
 
 EAPI=3
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	x86? ( || ( dev-lang/nasm dev-lang/yasm ) )
 	nls? ( sys-devel/gettext )
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	confutils_require_any sdl gtk
