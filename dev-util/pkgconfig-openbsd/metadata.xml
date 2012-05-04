@@ -5,4 +5,7 @@
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
+  <use>
+    <flag name='pkg-config'>Install as a replacement for <pkg>dev-util/pkgconfig</pkg></flag>
+  </use>
 </pkgmetadata>
