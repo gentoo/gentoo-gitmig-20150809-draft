@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.88.2.ebuild,v 1.1 2012/03/02 20:39:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.88.3.ebuild,v 1.1 2012/05/04 23:47:09 hwoarang Exp $
 
 EAPI="2"
 
