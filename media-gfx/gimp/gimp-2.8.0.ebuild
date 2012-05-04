@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0.ebuild,v 1.1 2012/05/03 20:22:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0.ebuild,v 1.2 2012/05/04 21:42:32 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -55,6 +55,7 @@ RDEPEND=">=dev-libs/glib-2.30.2:2
 	gs? ( app-text/ghostscript-gpl )
 	udev? ( sys-fs/udev[gudev] )"
 DEPEND="${RDEPEND}
+	sys-apps/findutils
 	>=dev-util/pkgconfig-0.22
 	>=dev-util/intltool-0.40.1
 	>=sys-devel/gettext-0.17
@@ -106,6 +107,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.7.4-no-deprecation.patch  # bug 395695, comment 9 and 16
+	epatch "${FILESDIR}"/${PN}-2.8.0-bzip2.patch  # bug 414525
 	eautoreconf  # If you remove this: remove dev-util/gtk-doc-am from DEPEND, too
 
 	echo '#!/bin/sh' > py-compile
@@ -123,6 +125,8 @@ src_install() {
 	# Workaround for bug #321111 to give GIMP the least
 	# precedence on PDF documents by default
 	mv "${D}"/usr/share/applications/{,zzz-}gimp.desktop || die
+
+	find "${D}" -name '*.la' -delete || die
 }
 
 pkg_postinst() {
