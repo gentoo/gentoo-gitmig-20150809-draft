@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.8.3.ebuild,v 1.1 2012/05/03 20:08:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.8.3.ebuild,v 1.2 2012/05/04 14:31:32 johu Exp $
 
 EAPI=4
 
@@ -40,6 +40,11 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 "
+
+src_prepare() {
+	use semantic-desktop || epatch "${FILESDIR}/${PN}-4.6.2-optional-akonadi.patch"
+	kde4-base_src_prepare
+}
 
 src_configure() {
 	mycmakeargs=(

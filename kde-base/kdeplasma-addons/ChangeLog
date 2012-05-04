@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.130 2012/05/03 20:08:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.131 2012/05/04 14:31:32 johu Exp $
+
+  04 May 2012; Johannes Huber <johu@gentoo.org> kdeplasma-addons-4.8.3.ebuild:
+  Re-add old patch to build without semantic-desktop wrt bug #414573.
 
 *kdeplasma-addons-4.8.3 (03 May 2012)
 
