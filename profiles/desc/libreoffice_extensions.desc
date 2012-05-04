@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/libreoffice_estensions.desc,v 1.1 2012/05/04 20:39:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/libreoffice_extensions.desc,v 1.1 2012/05/04 20:46:58 scarabeus Exp $
 
 # This file contains descriptions of LIBREOFFICE_EXTENSIONS USE_EXPAND flags.
 
