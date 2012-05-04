@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20120504.ebuild,v 1.1 2012/05/04 13:07:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20120504.ebuild,v 1.2 2012/05/04 16:16:16 ssuominen Exp $
 
 # cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config/pkg-config
 # cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config/pkg-config.1
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/pkg-config/ http://w
 SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz
 	pkg-config? ( http://pkgconfig.freedesktop.org/releases/pkg-config-${PKG_M4_VERSION}.tar.gz )"
 
-LICENSE="ISC pkg-config? ( GPL-2 )"
+LICENSE="ISC"
 SLOT="0"
 KEYWORDS=""
 IUSE="pkg-config"
