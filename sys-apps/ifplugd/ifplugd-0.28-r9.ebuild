@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.7 2011/12/28 14:47:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ifplugd-0.28-r9.ebuild,v 1.8 2012/05/04 09:17:30 jdhore Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~arm amd64 hppa ppc x86"
 IUSE="doc"
 
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	doc? ( www-client/lynx )
 	>=dev-libs/libdaemon-0.5"
 RDEPEND=">=dev-libs/libdaemon-0.5

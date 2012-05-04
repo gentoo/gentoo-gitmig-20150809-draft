@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-1.0.6.ebuild,v 1.1 2010/12/26 18:35:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-1.0.6.ebuild,v 1.2 2012/05/04 09:17:30 jdhore Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND=">=sys-apps/pcsc-lite-1.2.9_beta7
 	=virtual/libusb-0*"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	emake CC="$(tc-getCC)" || die "emake failed"

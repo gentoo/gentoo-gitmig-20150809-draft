@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.138 2012/04/21 06:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.139 2012/05/04 09:17:26 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> usbutils-004.ebuild,
+  usbutils-005.ebuild, usbutils-005-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Apr 2012; Mike Frysinger <vapier@gentoo.org> usbutils-005-r1.ebuild:
   Restore ~arch keywords #410401.

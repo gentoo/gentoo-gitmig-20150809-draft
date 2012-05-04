@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.56.ebuild,v 1.6 2011/11/11 09:21:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.56.ebuild,v 1.7 2012/05/04 09:17:28 jdhore Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="caps"
 RDEPEND="dev-libs/glib:2
 	caps? ( sys-libs/libcap-ng )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch

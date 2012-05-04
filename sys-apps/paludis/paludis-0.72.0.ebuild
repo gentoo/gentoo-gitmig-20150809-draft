@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.72.0.ebuild,v 1.1 2012/02/17 10:54:22 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.72.0.ebuild,v 1.2 2012/05/04 09:17:28 jdhore Exp $
 
 inherit bash-completion eutils
 
@@ -36,7 +36,7 @@ DEPEND="${COMMON_DEPEND}
 		python-bindings? ( dev-python/epydoc dev-python/pygments )
 		ruby-bindings? ( dev-ruby/syntax dev-ruby/allison )
 	)
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-cpp/gtest"
 
 RDEPEND="${COMMON_DEPEND}

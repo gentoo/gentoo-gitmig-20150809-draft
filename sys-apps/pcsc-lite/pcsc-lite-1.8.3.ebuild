@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.3.ebuild,v 1.1 2012/03/30 17:33:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.3.ebuild,v 1.2 2012/05/04 09:17:30 jdhore Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ REQUIRED_USE="^^ ( udev libusb )"
 CDEPEND="libusb? ( virtual/libusb:1 )
 	udev? ( sys-fs/udev )"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	!<app-crypt/ccid-1.4.1-r1"
 

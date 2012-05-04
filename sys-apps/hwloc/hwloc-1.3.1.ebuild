@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.3.1.ebuild,v 1.2 2012/01/13 17:18:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.3.1.ebuild,v 1.3 2012/05/04 09:17:27 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="sys-libs/ncurses
 	pci? ( sys-apps/pciutils )
 	xml? ( dev-libs/libxml2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	numa? ( sys-process/numactl )"
 
 DOCS=( AUTHORS NEWS README VERSION )

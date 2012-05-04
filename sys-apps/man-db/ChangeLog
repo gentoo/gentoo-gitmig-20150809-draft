@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.27 2012/03/23 08:23:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.28 2012/05/04 09:17:29 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> man-db-2.6.0.2.ebuild,
+  man-db-2.6.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Mar 2012; Tim Harder <radhermit@gentoo.org> -man-db-2.5.9.ebuild:
   Remove old.

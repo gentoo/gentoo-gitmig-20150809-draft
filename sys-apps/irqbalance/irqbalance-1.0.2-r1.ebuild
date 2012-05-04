@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.2-r1.ebuild,v 1.2 2012/01/07 22:04:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-1.0.2-r1.ebuild,v 1.3 2012/05/04 09:17:28 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/glib:2
 	caps? ( sys-libs/libcap-ng )
 	numa? ( sys-process/numactl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.14.ebuild,v 1.1 2011/09/15 14:57:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.14.ebuild,v 1.2 2012/05/04 09:17:27 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/glib:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.40"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.36 2012/04/29 23:47:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.37 2012/05/04 09:17:27 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> kmod-7.ebuild, kmod-8.ebuild,
+  kmod-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Mike Frysinger <vapier@gentoo.org> kmod-8.ebuild:
   Add m68k/s390 keywords #397769.

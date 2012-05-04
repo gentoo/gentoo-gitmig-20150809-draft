@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.20.ebuild,v 1.6 2012/04/28 04:04:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.20.ebuild,v 1.7 2012/05/04 09:17:29 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils multilib flag-o-matic python systemd virtualx
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/expat-2
 		x11-libs/libXt
 		)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? (
 		app-doc/doxygen
 		app-text/docbook-xml-dtd:4.1.2

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gpet/gpet-0.3.ebuild,v 1.1 2011/09/05 14:19:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gpet/gpet-0.3.ebuild,v 1.2 2012/05/04 09:17:27 jdhore Exp $
 
 EAPI=4
 
@@ -20,4 +20,4 @@ RDEPEND="gnome-base/gconf
 	x11-libs/pango"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

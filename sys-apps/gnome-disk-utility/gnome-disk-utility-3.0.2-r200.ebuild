@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.0.2-r200.ebuild,v 1.10 2012/04/12 09:24:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.0.2-r200.ebuild,v 1.11 2012/05/04 09:17:26 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -39,7 +39,7 @@ DEPEND="${CDEPEND}
 	app-text/rarian
 	app-text/gnome-doc-utils
 
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	>=dev-util/gtk-doc-am-1.13
 

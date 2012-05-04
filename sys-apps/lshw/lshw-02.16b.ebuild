@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.16b.ebuild,v 1.1 2012/01/11 23:01:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.16b.ebuild,v 1.2 2012/05/04 09:17:30 jdhore Exp $
 
 EAPI=4
 inherit flag-o-matic eutils toolchain-funcs
@@ -22,8 +22,8 @@ IUSE="gtk sqlite static"
 RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	sqlite? ( dev-db/sqlite:3 )"
 DEPEND="${RDEPEND}
-	gtk? ( dev-util/pkgconfig )
-	sqlite? ( dev-util/pkgconfig )"
+	gtk? ( virtual/pkgconfig )
+	sqlite? ( virtual/pkgconfig )"
 
 S=${WORKDIR}/${MY_P}
 

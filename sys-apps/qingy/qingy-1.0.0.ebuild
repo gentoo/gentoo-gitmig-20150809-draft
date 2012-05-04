@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-1.0.0.ebuild,v 1.4 2011/01/11 12:25:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-1.0.0.ebuild,v 1.5 2012/05/04 09:17:27 jdhore Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ RDEPEND=">=sys-libs/ncurses-5.4-r6
 					x11-proto/scrnsaverproto )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
+	virtual/pkgconfig
 	>=sys-apps/sed-4.1.4-r1"
 RDEPEND="${RDEPEND}
 	pam? ( sys-auth/pambase )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.3.3.ebuild,v 1.3 2012/02/16 18:28:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.3.3.ebuild,v 1.4 2012/05/04 09:17:28 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="static-libs"
 #RDEPEND="virtual/libusb:1"
 RDEPEND=">=dev-libs/libusb-1.0.9_rc"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="ChangeLog README* TODO *.txt"
 
