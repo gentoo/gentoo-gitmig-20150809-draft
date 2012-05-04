@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.58 2012/05/03 20:00:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.59 2012/05/04 20:47:32 scarabeus Exp $
 
 EAPI=4
 
@@ -71,8 +71,22 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding +cups dbus eds gnome +graphite gstreamer +gtk gtk3
-jemalloc kde mysql nlpsolver +nsplugin odk opengl pdfimport postgres svg test
-+vba +webdav +xmlsec"
+jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba +webdav
++xmlsec"
+
+LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript"
+# Unneeded extension (just can be separate package:
+# google-docs ; barcode ; diagram ; hunart ; numbertext ; oooblogger ; typo ;
+# validator ; watch-window ; 
+# Extensions that need extra work:
+e report-builder: missing java packages
+# ct2n: not checked
+# wiki-publisher: missing java packages
+for lo_xt in ${LO_EXTS}; do
+	IUSE+=" libreoffice_extensions_${lo_xt}"
+done
+unset lo_xt
+
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -133,13 +147,13 @@ COMMON_DEPEND="
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10
 	)
-	java? (
+	jemalloc? ( dev-libs/jemalloc )
+	libreoffice_extensions_pdfimport? ( >=app-text/poppler-0.16[xpdf-headers,cxx] )
+	libreoffice_extensions_scripting-beanshell? (
 		>=dev-java/bsh-2.0_beta4
 	)
-	jemalloc? ( dev-libs/jemalloc )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	opengl? ( virtual/opengl )
-	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers,cxx] )
 	postgres? ( >=dev-db/postgresql-base-8.4.0 )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
@@ -208,7 +222,9 @@ REQUIRED_USE="
 	nsplugin? ( gtk )
 	gnome? ( gtk )
 	eds? ( gnome )
-	nlpsolver? ( java )
+	libreoffice_extensions_nlpsolver? ( java )
+	libreoffice_extensions_scripting-beanshell? ( java )
+	libreoffice_extensions_scripting-javascript? ( java )
 "
 
 S="${WORKDIR}/${PN}-core-${PV}"
@@ -320,6 +336,8 @@ src_prepare() {
 src_configure() {
 	local java_opts
 	local internal_libs
+	local lo_ext
+	local ext_opts
 	local jbs=$(sed -ne 's/.*\(-j[[:space:]]*\|--jobs=\)\([[:digit:]]\+\).*/\2/;T;p' <<< "${MAKEOPTS}")
 
 	# recheck that there is some value in jobs
@@ -334,6 +352,11 @@ src_configure() {
 		--without-system-sane
 		--without-system-vigra
 	"
+
+	# libreoffice extensions handling
+	for lo_xt in ${LO_EXTS}; do
+		ext_opts+=" $(use_enable libreoffice_extensions_${lo_xt} ext-${lo_xt})"
+	done
 
 	if use java; then
 		# hsqldb: system one is too new
@@ -443,14 +466,11 @@ src_configure() {
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
 		$(use_enable gtk3) \
-		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
-		$(use_enable nlpsolver ext-nlpsolver) \
 		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
-		$(use_enable pdfimport ext-pdfimport) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable svg librsvg system) \
 		$(use_enable test linkoo) \
@@ -461,7 +481,8 @@ src_configure() {
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \
 		${internal_libs} \
-		${java_opts}
+		${java_opts} \
+		${ext_opts}
 }
 
 src_compile() {
