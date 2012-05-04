@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.7 2009/12/31 01:08:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mindless/mindless-1.6.ebuild,v 1.8 2012/05/04 04:45:28 jdhore Exp $
 
 EAPI=2
 inherit games
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-fonts/font-schumacher-misc"
 DEPEND="${RDEPEND}
 	gnome-base/librsvg
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack "${P}.tar.gz"

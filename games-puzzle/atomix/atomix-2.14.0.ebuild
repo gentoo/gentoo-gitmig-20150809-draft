@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-2.14.0.ebuild,v 1.6 2011/01/24 22:23:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/atomix-2.14.0.ebuild,v 1.7 2012/05/04 04:45:28 jdhore Exp $
 
 EAPI=2
 inherit gnome2
@@ -26,7 +26,7 @@ RDEPEND=">=x11-libs/pango-1.0.3
 	dev-perl/XML-Parser"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.17"
 
 DOCS="AUTHORS ChangeLog NEWS README"

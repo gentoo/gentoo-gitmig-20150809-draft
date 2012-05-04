@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r1.ebuild,v 1.6 2012/05/02 20:05:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r1.ebuild,v 1.7 2012/05/04 04:45:28 jdhore Exp $
 
 EAPI=2
 # games after gnome2 so games' functions will override gnome2's
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/libxml2
 	>=gnome-base/libgnomeui-2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
