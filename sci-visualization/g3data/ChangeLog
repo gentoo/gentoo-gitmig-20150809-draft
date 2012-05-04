@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/g3data
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.10 2011/07/20 16:05:34 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.11 2012/05/04 08:06:59 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> g3data-1.5.1.ebuild,
+  g3data-1.5.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #70723

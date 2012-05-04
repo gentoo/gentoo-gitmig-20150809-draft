@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r1.ebuild,v 1.3 2012/03/02 11:11:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r1.ebuild,v 1.4 2012/05/04 08:07:00 jdhore Exp $
 
 EAPI=3
 
@@ -46,7 +46,7 @@ CDEPEND="
 	latex? ( dev-tex/qtexengine )
 	mono? ( dev-dotnet/libgdiplus )"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	python? ( >=dev-python/sip-4.9 )
 	doc? (
 		>=app-text/docbook-sgml-utils-0.6.14-r1

@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gfsview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.9 2012/01/23 04:33:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.10 2012/05/04 08:07:00 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gfsview-20091219.ebuild,
+  gfsview-20100407.ebuild, gfsview-20111003.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gfsview-20111003 (23 Jan 2012)
 

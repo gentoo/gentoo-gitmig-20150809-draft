@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/quickplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.16 2012/04/25 16:56:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.17 2012/05/04 08:07:00 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> quickplot-0.8.13-r1.ebuild,
+  quickplot-0.10.2.ebuild, quickplot-0.10.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> quickplot-0.8.13-r1.ebuild,
   -quickplot-0.8.15.ebuild:

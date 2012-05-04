@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/g3data-1.5.3.ebuild,v 1.5 2011/03/02 13:34:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/g3data-1.5.3.ebuild,v 1.6 2012/05/04 08:07:00 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -16,7 +16,7 @@ IUSE="doc examples"
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( ~app-text/docbook-sgml-utils-0.6.14 )"
 
 src_prepare() {

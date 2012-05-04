@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.91 2012/03/27 15:51:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.92 2012/05/04 08:07:00 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> qtiplot-0.9.8.2.ebuild,
+  qtiplot-0.9.8.9.ebuild, qtiplot-0.9.8.9-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Mar 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Dropped unused USE from metadata.xml

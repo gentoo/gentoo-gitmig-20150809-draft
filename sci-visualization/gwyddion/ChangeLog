@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.35 2012/04/25 04:33:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.36 2012/05/04 08:07:00 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gwyddion-2.25.ebuild,
+  gwyddion-2.27.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gwyddion-2.27 (25 Apr 2012)
 

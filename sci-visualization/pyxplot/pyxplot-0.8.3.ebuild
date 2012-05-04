@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.8.3.ebuild,v 1.3 2012/02/05 02:00:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.8.3.ebuild,v 1.4 2012/05/04 08:07:00 jdhore Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -25,7 +25,7 @@ RDEPEND="virtual/latex-base
 	app-text/gv
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2

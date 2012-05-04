@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-20111003.ebuild,v 1.2 2012/01/26 22:01:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-20111003.ebuild,v 1.3 2012/05/04 08:07:00 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND=">=sci-libs/gerris-${PV}
 	x11-libs/startup-notification"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}"/${P/-20/-snapshot-}
 

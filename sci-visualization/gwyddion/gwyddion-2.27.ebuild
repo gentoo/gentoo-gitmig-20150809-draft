@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.27.ebuild,v 1.1 2012/04/25 04:33:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.27.ebuild,v 1.2 2012/05/04 08:07:00 jdhore Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ RDEPEND="media-libs/libpng
 	xml? ( dev-libs/libxml2:2 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
 pkg_setup() {
