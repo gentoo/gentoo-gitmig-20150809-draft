@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gsmc/gsmc-1.1-r1.ebuild,v 1.2 2011/03/02 19:38:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gsmc/gsmc-1.1-r1.ebuild,v 1.3 2012/05/04 07:10:20 jdhore Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ CDEPEND="
 	dev-libs/glib:2
 	x11-libs/gtk+:2"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}"
 
 src_prepare() {

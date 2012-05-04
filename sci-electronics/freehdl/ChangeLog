@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/freehdl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.17 2009/07/10 17:09:17 calchan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.18 2012/05/04 07:10:20 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> freehdl-0.0.6.ebuild,
+  freehdl-0.0.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *freehdl-0.0.7 (10 Jul 2009)
 

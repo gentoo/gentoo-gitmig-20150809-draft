@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/linsmith-0.99.12.ebuild,v 1.2 2011/03/02 20:19:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/linsmith-0.99.12.ebuild,v 1.3 2012/05/04 07:10:20 jdhore Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ RDEPEND="
 	gnome-base/libgnomeprint:2.2
 	gnome-base/libgnomeui"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# This patch is to prevent make install copying

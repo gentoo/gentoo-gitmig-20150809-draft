@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/freehdl-0.0.7.ebuild,v 1.1 2009/07/10 17:09:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/freehdl-0.0.7.ebuild,v 1.2 2012/05/04 07:10:20 jdhore Exp $
 
 DESCRIPTION="A free VHDL simulator."
 SRC_URI="http://freehdl.seul.org/~enaroska/${P}.tar.gz"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 
 CDEPEND="dev-lang/perl"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	>=dev-scheme/guile-1.3.1"
 

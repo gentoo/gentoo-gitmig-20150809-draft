@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1-r1.ebuild,v 1.6 2011/07/15 23:43:29 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1-r1.ebuild,v 1.7 2012/05/04 07:10:19 jdhore Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ CDEPEND="
 	x11-libs/gtksourceview:2.0"
 DEPEND="${CDEPEND}
 	>=dev-util/scons-0.96.1
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	sci-electronics/electronics-menu"
 

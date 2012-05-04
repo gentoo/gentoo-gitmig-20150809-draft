@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.2.ebuild,v 1.8 2012/03/07 20:53:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.2.ebuild,v 1.9 2012/05/04 07:10:20 jdhore Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils versionator
@@ -28,7 +28,7 @@ DEPEND="${CDEPEND}
 	sys-apps/groff
 	dev-util/desktop-file-utils
 	x11-misc/shared-mime-info
-	>=dev-util/pkgconfig-0.15.0
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16 )"
 
 RDEPEND="${CDEPEND}

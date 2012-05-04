@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/linsmith
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.6 2011/09/23 14:53:47 tomjbe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.7 2012/05/04 07:10:20 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> linsmith-0.99.12.ebuild,
+  linsmith-0.99.21.ebuild, linsmith-0.99.22.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *linsmith-0.99.22 (23 Sep 2011)
 
