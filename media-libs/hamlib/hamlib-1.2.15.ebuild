@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.15.ebuild,v 1.1 2012/02/06 13:12:06 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.15.ebuild,v 1.2 2012/05/04 12:13:53 tomjbe Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -24,7 +24,7 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )"
 
 DEPEND=" ${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-lang/swig
 	>=sys-devel/libtool-2.2
 	doc? ( app-doc/doxygen )"

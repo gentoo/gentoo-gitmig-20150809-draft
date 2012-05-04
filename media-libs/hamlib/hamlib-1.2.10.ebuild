@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.10.ebuild,v 1.7 2011/08/12 21:15:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.10.ebuild,v 1.8 2012/05/04 12:13:53 tomjbe Exp $
 
 PYTHON_DEPEND="2"
 inherit autotools eutils multilib python
@@ -24,7 +24,7 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )"
 
 DEPEND=" ${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-lang/swig
 	>=sys-devel/libtool-2.2
 	doc? ( app-doc/doxygen )"
