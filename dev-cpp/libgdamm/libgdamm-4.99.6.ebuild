@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/libgdamm-4.99.6.ebuild,v 1.1 2011/11/21 12:00:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/libgdamm-4.99.6.ebuild,v 1.2 2012/05/04 03:44:59 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -19,7 +19,7 @@ IUSE="berkdb doc"
 RDEPEND=">=dev-cpp/glibmm-2.27.93:2
 	>=gnome-extra/libgda-5.0.2:5[berkdb=]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 pkg_setup() {

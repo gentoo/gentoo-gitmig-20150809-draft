@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/gtkglextmm-1.2.0-r1.ebuild,v 1.6 2010/12/17 09:15:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/gtkglextmm-1.2.0-r1.ebuild,v 1.7 2012/05/04 03:44:58 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtkglext-1
 	virtual/opengl"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog* NEWS README TODO"
 

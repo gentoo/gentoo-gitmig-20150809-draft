@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/cairomm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.60 2011/10/30 14:49:51 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.61 2012/05/04 03:44:56 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> cairomm-1.9.8.ebuild,
+  cairomm-1.10.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> cairomm-1.10.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #385699

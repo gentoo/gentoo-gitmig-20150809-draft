@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/pangomm-2.28.2.ebuild,v 1.8 2011/10/04 14:18:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/pangomm-2.28.2.ebuild,v 1.9 2012/05/04 03:44:56 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ COMMON_DEPEND=">=x11-libs/pango-1.23.0
 	dev-libs/libsigc++:2
 "
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? (
 		media-gfx/graphviz
 		dev-libs/libxslt

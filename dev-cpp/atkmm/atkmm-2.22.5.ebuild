@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.5.ebuild,v 1.9 2011/10/16 17:26:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.5.ebuild,v 1.10 2012/05/04 03:44:58 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND=">=dev-cpp/glibmm-2.24[doc?]
 	dev-libs/libsigc++:2
 	!<dev-cpp/gtkmm-2.22.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	DOCS="AUTHORS ChangeLog NEWS README"

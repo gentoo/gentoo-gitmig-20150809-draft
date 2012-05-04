@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/libsexymm-0.1.9.ebuild,v 1.8 2011/04/10 16:46:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/libsexymm-0.1.9.ebuild,v 1.9 2012/05/04 03:44:58 jdhore Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-cpp/glibmm-2.4:2
 		 >=dev-cpp/gtkmm-2.4:2.4
 		 >=x11-libs/libsexy-0.1.9"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-static"

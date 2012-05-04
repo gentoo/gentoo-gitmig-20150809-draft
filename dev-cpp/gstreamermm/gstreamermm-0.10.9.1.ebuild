@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.9.1.ebuild,v 1.4 2011/11/20 17:14:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.9.1.ebuild,v 1.5 2012/05/04 03:44:56 jdhore Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/libsigc++-2:2
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		media-libs/gst-plugins-good:0.10
 		media-plugins/gst-plugins-vorbis:0.10

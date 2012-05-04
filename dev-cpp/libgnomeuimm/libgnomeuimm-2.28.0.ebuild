@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.28.0.ebuild,v 1.7 2011/01/04 18:19:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.28.0.ebuild,v 1.8 2012/05/04 03:44:58 jdhore Exp $
 
 inherit gnome2 eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=gnome-base/libgnomeui-2.7.1
 	>=dev-cpp/libglademm-2.4
 	>=dev-cpp/gnome-vfsmm-2.16"
 
-DEPEND=">=dev-util/pkgconfig-0.12.0
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS INSTALL TODO"

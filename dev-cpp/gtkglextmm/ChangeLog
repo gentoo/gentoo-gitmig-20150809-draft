@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkglextmm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.21 2010/12/17 09:15:22 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.22 2012/05/04 03:44:58 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkglextmm-1.2.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   17 Dec 2010; Pacho Ramos <pacho@gentoo.org> gtkglextmm-1.2.0-r1.ebuild:
   Remove -D.*DISABLE_DEPRECATED cflags, bug #342905 (by Thomas Kister and Diego

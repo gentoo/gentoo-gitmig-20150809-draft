@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.30.1.ebuild,v 1.8 2012/03/25 15:37:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.30.1.ebuild,v 1.9 2012/05/04 03:44:57 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE="doc debug examples test"
 RDEPEND=">=dev-libs/libsigc++-2.2.10:2
 	>=dev-libs/glib-2.30.0:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 # dev-cpp/mm-common needed for eautoreconf
 

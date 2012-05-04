@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.34.2.ebuild,v 1.6 2011/10/30 14:54:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.34.2.ebuild,v 1.7 2012/05/04 03:44:56 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ IUSE="doc"
 RDEPEND=">=dev-libs/libxml2-2.6.1
 	>=dev-cpp/glibmm-2.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable doc documentation)"

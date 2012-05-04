@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpanelappletmm/libpanelappletmm-2.26.0-r1.ebuild,v 1.3 2011/07/16 17:52:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpanelappletmm/libpanelappletmm-2.26.0-r1.ebuild,v 1.4 2012/05/04 03:44:57 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-cpp/gconfmm-2.4
 	<gnome-base/gnome-panel-2.91.6"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	gnome2_src_prepare

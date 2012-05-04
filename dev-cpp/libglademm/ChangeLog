@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libglademm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.87 2011/05/11 09:01:13 eva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.88 2012/05/04 03:44:58 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libglademm-2.6.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   11 May 2011; Gilles Dartiguelongue <eva@gentoo.org> -libglademm-2.6.4.ebuild,
   -libglademm-2.6.6.ebuild:

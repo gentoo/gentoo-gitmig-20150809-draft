@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.10.2.ebuild,v 1.7 2012/05/02 07:17:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.10.2.ebuild,v 1.8 2012/05/04 03:44:57 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-cpp/gtkmm-2.12:2.4
 	!>=dev-cpp/libgtksourceviewmm-1"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 pkg_setup() {

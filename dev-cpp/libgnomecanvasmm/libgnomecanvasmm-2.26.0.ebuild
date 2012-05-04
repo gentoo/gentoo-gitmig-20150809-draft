@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.26.0.ebuild,v 1.10 2011/04/10 16:49:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.26.0.ebuild,v 1.11 2012/05/04 03:44:58 jdhore Exp $
 
 EAPI="1"
 
@@ -17,7 +17,7 @@ IUSE="doc examples"
 RDEPEND=">=gnome-base/libgnomecanvas-2.6
 	>=dev-cpp/gtkmm-2.4:2.4"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO INSTALL"

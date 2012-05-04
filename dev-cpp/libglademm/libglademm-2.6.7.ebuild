@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.7.ebuild,v 1.10 2011/03/29 06:10:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.7.ebuild,v 1.11 2012/05/04 03:44:58 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/libglade-2.6.1:2.0
 	>=dev-cpp/glibmm-2.4:2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

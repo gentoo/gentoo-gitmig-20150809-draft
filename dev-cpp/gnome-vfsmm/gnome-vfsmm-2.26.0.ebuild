@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.26.0.ebuild,v 1.7 2011/01/04 18:16:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.26.0.ebuild,v 1.8 2012/05/04 03:44:56 jdhore Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ IUSE="doc examples"
 # glibmm dep is because build fails with older versions...
 RDEPEND=">=gnome-base/gnome-vfs-2.8.1
 	>=dev-cpp/glibmm-2.12"
-DEPEND=">=dev-util/pkgconfig-0.12.0
+DEPEND="virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	${RDEPEND}"
 

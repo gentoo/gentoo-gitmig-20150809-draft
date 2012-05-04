@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libpanelappletmm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpanelappletmm/ChangeLog,v 1.9 2011/07/16 17:52:46 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpanelappletmm/ChangeLog,v 1.10 2012/05/04 03:44:57 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  libpanelappletmm-2.26.0.ebuild, libpanelappletmm-2.26.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Jul 2011; Markus Meier <maekke@gentoo.org>
   libpanelappletmm-2.26.0-r1.ebuild:
