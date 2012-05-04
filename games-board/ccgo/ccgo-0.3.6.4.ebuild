@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ccgo-0.3.6.4.ebuild,v 1.4 2011/03/29 07:52:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ccgo-0.3.6.4.ebuild,v 1.5 2012/05/04 04:30:11 jdhore Exp $
 
 EAPI=2
 inherit autotools games
@@ -18,7 +18,7 @@ RDEPEND=">=dev-cpp/gtkmm-2.4:2.4
 	>=dev-cpp/gconfmm-2.6
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {

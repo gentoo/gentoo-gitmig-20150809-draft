@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/aisleriot-3.2.3.1.ebuild,v 1.1 2012/04/12 21:52:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/aisleriot-3.2.3.1.ebuild,v 1.2 2012/05/04 04:30:09 jdhore Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -35,7 +35,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<gnome-extra/gnome-games-3"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.4
-	>=dev-util/pkgconfig-0.15
+	virtual/pkgconfig
 	sys-apps/lsb-release
 	>=sys-devel/gettext-0.12
 	gnome? (

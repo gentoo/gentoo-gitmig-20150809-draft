@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/gnome-mastermind-0.3.1.ebuild,v 1.5 2011/10/19 16:49:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mastermind/gnome-mastermind-0.3.1.ebuild,v 1.6 2012/05/04 04:30:11 jdhore Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -23,7 +23,7 @@ RDEPEND="gnome-base/gconf
 	x11-libs/cairo
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext
 	app-text/scrollkeeper"

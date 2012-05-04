@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1-r1.ebuild,v 1.9 2011/09/17 16:37:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1-r1.ebuild,v 1.10 2012/05/04 04:30:11 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -24,7 +24,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-libs/libpng"
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch \

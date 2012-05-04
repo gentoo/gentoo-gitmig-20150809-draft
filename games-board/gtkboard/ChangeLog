@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gtkboard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.12 2010/05/24 12:08:50 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.13 2012/05/04 04:30:10 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkboard-0.11_pre0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   24 May 2010; Tupone Alfredo <tupone@gentoo.org> gtkboard-0.11_pre0.ebuild,
   +files/gtkboard-0.11_pre0-gcc45.patch:

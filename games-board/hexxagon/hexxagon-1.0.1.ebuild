@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.1.ebuild,v 1.6 2011/06/02 00:22:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.1.ebuild,v 1.7 2012/05/04 04:30:09 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ RDEPEND=">=dev-cpp/glibmm-2.4:2
 	>=dev-cpp/gtkmm-2.4:2.4
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

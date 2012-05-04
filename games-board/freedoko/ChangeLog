@@ -1,6 +1,10 @@
 # ChangeLog for games-board/freedoko
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.17 2012/01/10 20:28:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.18 2012/05/04 04:30:10 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> freedoko-0.7.8.ebuild,
+  freedoko-0.7.10.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   10 Jan 2012; Brent Baude <ranger@gentoo.org> freedoko-0.7.10.ebuild:
   Marking freedoko-0.7.10 ppc for bug 389267

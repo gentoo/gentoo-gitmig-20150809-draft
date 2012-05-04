@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-gtk-client
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.23 2011/12/15 12:13:25 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.24 2012/05/04 04:30:10 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  ggz-gtk-client-0.0.14.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Dec 2011; Tupone Alfredo <tupone@gentoo.org>
   ggz-gtk-client-0.0.14.1.ebuild,

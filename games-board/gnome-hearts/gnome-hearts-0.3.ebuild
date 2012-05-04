@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.ebuild,v 1.5 2010/05/22 16:07:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.ebuild,v 1.6 2012/05/04 04:30:11 jdhore Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	app-text/rarian
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

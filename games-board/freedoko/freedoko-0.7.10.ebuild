@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.10.ebuild,v 1.4 2012/01/10 20:28:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.10.ebuild,v 1.5 2012/05/04 04:30:10 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -31,7 +31,7 @@ RDEPEND="net? ( net-libs/gnet )
 	>=dev-cpp/gtkmm-2.4:2.4"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/FreeDoko_${PV}
 
