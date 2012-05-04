@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/fetchyahoo-2.14.0.ebuild,v 1.1 2010/11/17 22:41:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/fetchyahoo-2.14.7.ebuild,v 1.1 2012/05/04 12:26:22 eras Exp $
 
-EAPI=3
+EAPI=4
 
 DESCRIPTION="Download mail from a Yahoo! webmail account to a local mail spool, an mbox file, or to procmail."
 HOMEPAGE="http://fetchyahoo.twizzler.org/"
@@ -27,15 +27,15 @@ RDEPEND="dev-lang/perl
 	dev-perl/TermReadKey"
 
 src_install() {
-	dobin fetchyahoo || die
-	doman fetchyahoo.1 || die
+	dobin fetchyahoo
+	doman fetchyahoo.1
 	insinto /etc
-	doins fetchyahoorc || die
-	dodoc ChangeLog Credits INSTALL TODO fetchyahoorc || die
-	dohtml index.html || die
+	doins fetchyahoorc
+	dodoc ChangeLog Credits INSTALL TODO fetchyahoorc
+	dohtml index.html
 }
 
 pkg_postinst() {
-	elog "Edit /etc/fetchyahoorc or ~/.fetchyahoorc to configure fetchyahoo"
-	elog "The executable name has changed from fetchyahoo.pl to fetchyahoo"
+	elog "Edit /etc/fetchyahoorc or ~/.fetchyahoorc to configure fetchyahoo."
+	elog "The executable name has changed from fetchyahoo.pl to fetchyahoo."
 }

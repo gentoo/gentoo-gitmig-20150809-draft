@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.57 2012/04/03 12:22:44 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.58 2012/05/04 12:26:22 eras Exp $
+
+*fetchyahoo-2.14.7 (04 May 2012)
+
+  04 May 2012; Eray Aslan <eras@gentoo.org> -fetchyahoo-2.14.0.ebuild,
+  -fetchyahoo-2.14.1.ebuild, -fetchyahoo-2.14.2.ebuild,
+  +fetchyahoo-2.14.7.ebuild:
+  version bump and remove old
 
 *fetchyahoo-2.14.6 (03 Apr 2012)
 
