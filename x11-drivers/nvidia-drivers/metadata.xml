@@ -7,6 +7,7 @@
 </maintainer>
 <maintainer>
   <email>jer@gentoo.org</email>
+  <description>Maintains legacy release support</description>
 </maintainer>
 <maintainer>
   <email>spock@gentoo.org</email>
@@ -17,4 +18,7 @@
   <description>Blame me on all OpenCL issues</description>
 </maintainer>
 <longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
+<use>
+	<flag name='tools'>Installs additional tools such as nvidia-settings</flag>
+</use>
 </pkgmetadata>
