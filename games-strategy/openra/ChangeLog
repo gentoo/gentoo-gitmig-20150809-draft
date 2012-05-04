@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/openra
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.1 2012/05/04 00:20:14 hasufell Exp $
+
+*openra-20120504 (04 May 2012)
+
+  04 May 2012; Julian Ospald <hasufell@gentoo.org> +openra-20120504.ebuild,
+  +metadata.xml:
+  initial commit wrt #372029 with help from diamond
+
