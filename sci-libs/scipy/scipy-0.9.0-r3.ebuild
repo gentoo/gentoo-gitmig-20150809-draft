@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r3.ebuild,v 1.1 2011/12/13 14:16:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r3.ebuild,v 1.2 2012/05/04 08:22:49 jdhore Exp $
 
 EAPI="3"
 
@@ -35,7 +35,7 @@ CDEPEND="
 	umfpack? ( sci-libs/umfpack )"
 
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-arch/unzip )
 	umfpack? ( dev-lang/swig )"
 

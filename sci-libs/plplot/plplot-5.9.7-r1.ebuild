@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.7 2011/07/28 23:28:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.8 2012/05/04 08:22:51 jdhore Exp $
 
 EAPI="3"
 
@@ -51,7 +51,7 @@ RDEPEND="
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] x11-libs/agg[truetype?] )
 	X? ( x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.5 dev-lang/swig )
 	ocaml? ( dev-ml/findlib )
 	python? ( dev-lang/swig )

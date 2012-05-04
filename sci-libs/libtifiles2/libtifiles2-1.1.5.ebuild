@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.5.ebuild,v 1.1 2012/02/19 13:44:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.5.ebuild,v 1.2 2012/05/04 08:22:50 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/glib:2
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 DOCS=( AUTHORS LOGO NEWS README ChangeLog docs/api.txt )

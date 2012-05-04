@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.29 2012/04/25 17:51:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.30 2012/05/04 08:22:50 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> cholmod-1.6.0-r1.ebuild,
+  cholmod-1.7.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> cholmod-1.6.0-r1.ebuild,
   cholmod-1.7.4.ebuild:

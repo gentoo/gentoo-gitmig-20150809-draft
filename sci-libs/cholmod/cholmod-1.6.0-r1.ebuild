@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.16 2012/04/25 17:51:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.17 2012/05/04 08:22:50 jdhore Exp $
 
 inherit autotools eutils
 
@@ -27,8 +27,8 @@ RDEPEND="
 	supernodal? ( virtual/lapack )"
 
 DEPEND="${RDEPEND}
-	metis? ( dev-util/pkgconfig )
-	supernodal? ( dev-util/pkgconfig )"
+	metis? ( virtual/pkgconfig )
+	supernodal? ( virtual/pkgconfig )"
 
 S="${WORKDIR}/${MY_PN}"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9.ebuild,v 1.1 2011/11/20 16:41:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9.ebuild,v 1.2 2012/05/04 08:22:51 jdhore Exp $
 
 EAPI="3"
 
@@ -51,7 +51,7 @@ RDEPEND="fortran? ( virtual/fortran )
 	X? ( x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.5 dev-lang/swig )
 	ocaml? ( dev-ml/findlib )
 	python? ( dev-lang/swig )

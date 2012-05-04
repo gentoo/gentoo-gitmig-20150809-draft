@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/libticalcs2-1.1.5.ebuild,v 1.1 2011/03/15 21:21:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/libticalcs2-1.1.5.ebuild,v 1.2 2012/05/04 08:22:51 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/glib:2
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_configure() {

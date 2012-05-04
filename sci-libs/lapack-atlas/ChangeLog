@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/lapack-atlas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.85 2011/06/21 15:17:25 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.86 2012/05/04 08:22:51 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> lapack-atlas-3.8.0.ebuild,
+  lapack-atlas-3.8.2.ebuild, lapack-atlas-3.9.3.ebuild,
+  lapack-atlas-3.9.21.ebuild, lapack-atlas-3.9.21-r1.ebuild,
+  lapack-atlas-3.9.23.ebuild, lapack-atlas-3.9.23-r2.ebuild,
+  lapack-atlas-3.9.23-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> lapack-atlas-3.8.0.ebuild,
   lapack-atlas-3.8.2.ebuild, lapack-atlas-3.9.3.ebuild,

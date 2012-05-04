@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r3.ebuild,v 1.2 2012/01/05 18:58:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r3.ebuild,v 1.3 2012/05/04 08:22:53 jdhore Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-libs/glib:2
 	!<=sci-chemistry/ccp4-apps-6.1.3-r2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( media-libs/netpbm )"
 
 # tests are failing

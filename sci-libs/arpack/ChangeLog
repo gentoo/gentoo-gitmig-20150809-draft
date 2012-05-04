@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.37 2012/03/25 15:52:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.38 2012/05/04 08:22:53 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> arpack-3.0.2.ebuild,
+  arpack-96-r2.ebuild, arpack-96-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> arpack-3.0.2.ebuild,
   arpack-96-r2.ebuild, arpack-96-r3.ebuild:

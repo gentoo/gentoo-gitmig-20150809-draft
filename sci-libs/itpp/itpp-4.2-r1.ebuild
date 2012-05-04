@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.10 2012/03/08 23:09:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.11 2012/05/04 08:22:52 jdhore Exp $
 
 EAPI=4
 
@@ -19,9 +19,9 @@ RDEPEND="
 	blas? ( virtual/blas lapack? ( virtual/lapack ) )
 	!minimal? ( fftw? ( >=sci-libs/fftw-3 ) )"
 DEPEND="${RDEPEND}
-	blas? ( dev-util/pkgconfig )
+	blas? ( virtual/pkgconfig )
 	doc? ( app-doc/doxygen virtual/latex-base )
-	lapack? ( dev-util/pkgconfig )"
+	lapack? ( virtual/pkgconfig )"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.0.7-fastica-fix-endless-loop.patch

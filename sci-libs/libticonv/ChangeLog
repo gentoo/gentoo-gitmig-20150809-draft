@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libticonv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticonv/ChangeLog,v 1.5 2012/02/19 13:32:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticonv/ChangeLog,v 1.6 2012/05/04 08:22:50 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libticonv-1.1.1.ebuild,
+  libticonv-1.1.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libticonv-1.1.3 (19 Feb 2012)
 

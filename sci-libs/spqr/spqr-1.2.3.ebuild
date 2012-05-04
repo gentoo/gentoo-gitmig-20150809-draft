@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.2.3.ebuild,v 1.1 2012/01/20 05:53:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.2.3.ebuild,v 1.2 2012/05/04 08:22:54 jdhore Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -19,7 +19,7 @@ RDEPEND="sci-libs/cholmod[supernodal]
 	tbb? ( dev-cpp/tbb )
 	metis? ( >=sci-libs/cholmod-1.7.0-r1[metis] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( README.txt Doc/ChangeLog )
 PATCHES=( "${FILESDIR}"/${P}-autotools.patch )

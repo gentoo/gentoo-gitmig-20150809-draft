@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/starparse
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/ChangeLog,v 1.5 2010/06/27 12:35:24 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/ChangeLog,v 1.6 2012/05/04 08:22:52 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> starparse-1.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> -starparse-1.0.ebuild:
   Remove old.

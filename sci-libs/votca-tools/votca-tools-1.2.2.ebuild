@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.2.ebuild,v 1.4 2012/02/23 17:03:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.2.ebuild,v 1.5 2012/05/04 08:22:49 jdhore Exp $
 
 EAPI="3"
 
@@ -35,7 +35,7 @@ RDEPEND="fftw? ( sci-libs/fftw:3.0 )
 DEPEND="${RDEPEND}
 	doc? ( || ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] ) )
 	>=app-text/txt2tags-2.5
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	use gsl || ewarn "Disabling gsl will lead to reduced functionality"

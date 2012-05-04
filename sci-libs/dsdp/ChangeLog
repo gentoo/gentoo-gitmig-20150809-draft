@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/dsdp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/ChangeLog,v 1.6 2012/04/04 07:09:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/ChangeLog,v 1.7 2012/05/04 08:22:53 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> dsdp-5.8-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *dsdp-5.8-r2 (04 Apr 2012)
 

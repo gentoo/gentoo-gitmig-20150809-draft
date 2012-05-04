@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libticalcs2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/ChangeLog,v 1.6 2012/02/19 13:49:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/ChangeLog,v 1.7 2012/05/04 08:22:51 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libticalcs2-1.1.5.ebuild,
+  libticalcs2-1.1.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libticalcs2-1.1.7 (19 Feb 2012)
 

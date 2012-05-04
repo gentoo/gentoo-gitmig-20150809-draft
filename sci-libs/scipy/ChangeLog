@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.76 2012/03/06 22:05:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.77 2012/05/04 08:22:49 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> scipy-0.9.0-r1.ebuild,
+  scipy-0.9.0-r3.ebuild, scipy-0.10.0.ebuild, scipy-0.10.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *scipy-0.10.1 (06 Mar 2012)
 

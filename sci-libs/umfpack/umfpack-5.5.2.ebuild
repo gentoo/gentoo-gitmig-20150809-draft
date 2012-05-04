@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.5.2.ebuild,v 1.2 2012/04/26 14:22:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.5.2.ebuild,v 1.3 2012/05/04 08:22:51 jdhore Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/fortran
 	sci-libs/amd
 	metis? ( sci-libs/cholmod[metis] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}"/5.5.1-autotools.patch )
 DOCS=( README.txt Doc/ChangeLog )

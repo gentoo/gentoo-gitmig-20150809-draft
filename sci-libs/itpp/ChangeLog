@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.110 2012/04/26 15:23:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.111 2012/05/04 08:22:52 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> itpp-4.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Apr 2012; Justin Lecher <jlec@gentoo.org> itpp-4.0.6.ebuild, metadata.xml:
   Drop unnessecary die, add LICENSE

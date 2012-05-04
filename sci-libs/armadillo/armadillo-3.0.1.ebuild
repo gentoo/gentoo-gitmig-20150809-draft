@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/armadillo-3.0.1.ebuild,v 1.1 2012/04/13 01:07:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/armadillo-3.0.1.ebuild,v 1.2 2012/05/04 08:22:52 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/boost-1.34
 	lapack? ( virtual/lapack )"
 
 DEPEND="${DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# avoid the automagic cmake macros

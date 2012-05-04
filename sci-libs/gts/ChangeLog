@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.25 2012/01/23 04:21:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.26 2012/05/04 08:22:53 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gts-20100321-r3.ebuild,
+  gts-20111025-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> gts-20111025-r1.ebuild,
   files/gts-20111025-autotools.patch:

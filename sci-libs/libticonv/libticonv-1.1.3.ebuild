@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticonv/libticonv-1.1.3.ebuild,v 1.1 2012/02/19 13:32:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticonv/libticonv-1.1.3.ebuild,v 1.2 2012/05/04 08:22:50 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="doc iconv static-libs"
 
 RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS LOGO NEWS README ChangeLog docs/api.txt )
 

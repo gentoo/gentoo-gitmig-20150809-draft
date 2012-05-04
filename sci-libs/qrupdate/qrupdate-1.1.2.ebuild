@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.2.ebuild,v 1.1 2012/04/26 15:18:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.2.ebuild,v 1.2 2012/05/04 08:22:49 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ RDEPEND="
 	virtual/fortran
 	virtual/lapack"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.1-Makefiles.patch

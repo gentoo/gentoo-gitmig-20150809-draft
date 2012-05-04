@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.00.ebuild,v 1.5 2008/06/09 09:15:45 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.00.ebuild,v 1.6 2012/05/04 08:22:49 jdhore Exp $
 
 inherit autotools eutils
 
@@ -16,7 +16,7 @@ RDEPEND="mopac7? ( sci-chemistry/mopac7 )
 			virtual/blas
 			virtual/lapack )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.15"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.7.ebuild,v 1.11 2011/09/29 19:45:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.7.ebuild,v 1.12 2012/05/04 08:22:53 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ COMMON_DEPEND=">=sci-libs/cln-1.2
 	sys-libs/zlib
 	readline? ( sys-libs/readline )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 RDEPEND="${COMMON_DEPEND}

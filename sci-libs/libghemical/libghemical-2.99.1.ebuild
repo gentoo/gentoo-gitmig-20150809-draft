@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.99.1.ebuild,v 1.4 2011/05/28 13:55:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.99.1.ebuild,v 1.5 2012/05/04 08:22:49 jdhore Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ RDEPEND="
 		virtual/blas
 		virtual/lapack )"
 DEPEND="${RDEPEND}
-		>=dev-util/pkgconfig-0.15"
+		virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gl.patch
