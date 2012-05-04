@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0-r3.ebuild,v 1.7 2012/04/13 18:50:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/libreadline-java-0.8.0-r3.ebuild,v 1.8 2012/05/04 18:49:51 sera Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
@@ -34,8 +34,8 @@ java_prepare() {
 		sed -i -e '/JAVANATINC/s:linux:freebsd:' Makefile || die "sed JAVANATINC failed"
 	fi
 
-	#Respect LDFLAGS bug #336302
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	#Respect CC CFLAGS LDFLAGS #336302 #296741
+	epatch "${FILESDIR}"/${P}-respect-flags.patch
 }
 
 src_compile() {
