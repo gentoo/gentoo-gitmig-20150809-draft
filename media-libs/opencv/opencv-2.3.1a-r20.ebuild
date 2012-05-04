@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a-r20.ebuild,v 1.1 2012/04/21 22:19:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a-r20.ebuild,v 1.2 2012/05/04 13:26:36 johu Exp $
 
 EAPI=3
 
@@ -51,7 +51,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 # REQUIRED_USE="opengl? ( qt )"
