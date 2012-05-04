@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4-r1.ebuild,v 1.3 2012/05/01 10:34:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4-r1.ebuild,v 1.4 2012/05/04 15:12:12 patrick Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="virtual/blas
 	glpk? ( sci-mathematics/glpk )
 	gsl? ( sci-libs/gsl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-python/sphinx )"
 
 S="${WORKDIR}/${P}/src"

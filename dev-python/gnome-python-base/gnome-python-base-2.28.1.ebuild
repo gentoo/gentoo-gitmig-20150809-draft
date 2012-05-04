@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.28.1.ebuild,v 1.10 2012/04/13 19:11:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.28.1.ebuild,v 1.11 2012/05/04 15:12:13 patrick Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 	>=dev-python/pygobject-2.17:2
 	!<dev-python/gnome-python-2.22.1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 

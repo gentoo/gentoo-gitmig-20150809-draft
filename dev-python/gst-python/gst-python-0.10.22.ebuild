@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22.ebuild,v 1.3 2012/02/23 09:41:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22.ebuild,v 1.4 2012/05/04 15:12:13 patrick Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/libxml2
 	>=media-libs/gstreamer-0.10.32
 	>=media-libs/gst-plugins-base-0.10.32"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		media-plugins/gst-plugins-ogg
 		media-plugins/gst-plugins-vorbis

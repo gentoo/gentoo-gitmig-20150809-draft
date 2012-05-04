@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.275 2012/03/25 16:12:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.276 2012/05/04 15:12:13 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> pygtk-2.24.0-r1.ebuild,
+  pygtk-2.24.0-r2.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> pygtk-2.24.0-r2.ebuild:
   alpha/ia64/sh/sparc stable wrt #393007

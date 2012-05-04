@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.8.ebuild,v 1.7 2012/02/24 08:14:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.8.ebuild,v 1.8 2012/05/04 15:12:15 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -24,7 +24,7 @@ RDEPEND="dev-python/pygobject:2
 	dev-libs/libxslt
 	>=net-libs/webkit-gtk-1.1.15:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	python_src_configure --disable-static

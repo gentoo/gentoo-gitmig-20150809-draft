@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.72-r2.ebuild,v 1.1 2012/03/16 16:29:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.72-r2.ebuild,v 1.2 2012/05/04 15:12:14 patrick Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-cpp/gtkglextmm-1.2
 	dev-python/polygon:2
 	dev-python/ttfquery"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

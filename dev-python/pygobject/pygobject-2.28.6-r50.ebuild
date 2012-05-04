@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r50.ebuild,v 1.8 2012/02/25 01:55:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r50.ebuild,v 1.9 2012/05/04 15:12:14 patrick Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -36,7 +36,7 @@ DEPEND="${COMMON_DEPEND}
 	test? (
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc )
-	>=dev-util/pkgconfig-0.12"
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	!<dev-python/pygtk-2.13"
 # Use slot 3 for introspection support per upstream recommendation

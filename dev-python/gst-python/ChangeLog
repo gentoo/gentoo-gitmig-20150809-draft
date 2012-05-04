@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.105 2012/02/23 09:41:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.106 2012/05/04 15:12:13 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> gst-python-0.10.20.ebuild,
+  gst-python-0.10.21.ebuild, gst-python-0.10.22.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> gst-python-0.10.20.ebuild,
   gst-python-0.10.21.ebuild, gst-python-0.10.22.ebuild:

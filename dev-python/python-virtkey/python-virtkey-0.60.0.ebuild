@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-virtkey/python-virtkey-0.60.0.ebuild,v 1.3 2012/02/24 06:53:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-virtkey/python-virtkey-0.60.0.ebuild,v 1.4 2012/05/04 15:12:16 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,4 +24,4 @@ RDEPEND="
 	x11-libs/libXtst
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyliblzma
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyliblzma/ChangeLog,v 1.3 2012/02/23 02:23:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyliblzma/ChangeLog,v 1.4 2012/05/04 15:12:17 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> pyliblzma-0.5.3.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyliblzma-0.5.3.ebuild:
   Restricting python

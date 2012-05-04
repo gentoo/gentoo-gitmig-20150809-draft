@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.178 2012/04/24 17:01:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.179 2012/05/04 15:12:12 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> PyQt4-4.9.1.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Apr 2012; Agostino Sarubbo <ago@gentoo.org> PyQt4-4.9.1.ebuild:
   Stable for amd64, wrt bug #412929

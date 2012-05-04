@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.21.ebuild,v 1.9 2012/02/23 09:41:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.21.ebuild,v 1.10 2012/05/04 15:12:13 patrick Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -23,7 +23,7 @@ RDEPEND="|| ( >=dev-python/pygobject-2.11.2:2 >=dev-python/pygtk-2.6.3 )
 	>=media-libs/gst-plugins-base-0.10.32
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		media-plugins/gst-plugins-ogg
 		media-plugins/gst-plugins-vorbis

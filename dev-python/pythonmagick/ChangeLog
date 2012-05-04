@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.37 2012/02/25 01:57:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.38 2012/05/04 15:12:12 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> pythonmagick-0.9.7-r1.ebuild,
+  pythonmagick-0.9.7.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pythonmagick-0.9.7-r1.ebuild,
   pythonmagick-0.9.7.ebuild:

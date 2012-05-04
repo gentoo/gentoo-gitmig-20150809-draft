@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyliblzma/pyliblzma-0.5.3.ebuild,v 1.3 2012/02/23 02:23:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyliblzma/pyliblzma-0.5.3.ebuild,v 1.4 2012/05/04 15:12:17 patrick Exp $
 
 EAPI="4"
 
@@ -23,6 +23,6 @@ IUSE=""
 RDEPEND="app-arch/xz-utils"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="THANKS"

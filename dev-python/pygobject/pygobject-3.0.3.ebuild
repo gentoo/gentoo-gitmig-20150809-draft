@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.3.ebuild,v 1.6 2012/02/25 01:55:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.3.ebuild,v 1.7 2012/05/04 15:12:14 patrick Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -28,8 +28,9 @@ DEPEND="${COMMON_DEPEND}
 	test? (
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
-		>=dev-libs/gobject-introspection-1.29.17 )
-	>=dev-util/pkgconfig-0.12"
+		>=dev-libs/gobject-introspection-1.29.1
+		)
+	virtual/pkgconfig"
 # docs disabled for now per upstream default since they are very out of date
 #	doc? (
 #		app-text/docbook-xml-dtd:4.1.2

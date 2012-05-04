@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.7 2012/04/24 17:01:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.1.ebuild,v 1.8 2012/05/04 15:12:12 patrick Exp $
 
 EAPI=4
 
@@ -70,7 +70,7 @@ RDEPEND="
 	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QT_VER}:4 )
 "
 DEPEND="${RDEPEND}
-	dbus? ( dev-util/pkgconfig )
+	dbus? ( virtual/pkgconfig )
 "
 
 S=${WORKDIR}/${MY_P}

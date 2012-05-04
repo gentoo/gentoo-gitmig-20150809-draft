@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/pygtksourceview-2.10.1.ebuild,v 1.12 2012/02/22 11:30:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/pygtksourceview-2.10.1.ebuild,v 1.13 2012/05/04 15:12:12 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 		dev-libs/libxslt
 		~app-text/docbook-xml-dtd-4.1.2
 		>=app-text/docbook-xsl-stylesheets-1.70.1 )
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"

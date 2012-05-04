@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyatspi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.8 2012/04/21 12:21:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.9 2012/05/04 15:12:15 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> pyatspi-2.2.1.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> pyatspi-2.2.1.ebuild:
   add ~arm, bug #411761

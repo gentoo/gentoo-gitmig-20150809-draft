@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pywebkitgtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.26 2012/02/24 08:14:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.27 2012/05/04 15:12:15 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> pywebkitgtk-1.1.8.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> pywebkitgtk-1.1.8.ebuild:
   Restricting pypy and jython

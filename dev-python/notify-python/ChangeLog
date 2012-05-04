@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/notify-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.36 2012/02/27 06:54:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.37 2012/05/04 15:12:16 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> notify-python-0.1.1-r2.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Feb 2012; Patrick Lauer <patrick@gentoo.org> notify-python-0.1.1-r2.ebuild:
   Restricting pypy

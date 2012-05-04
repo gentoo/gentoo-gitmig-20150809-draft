@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.165 2012/03/25 14:46:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.166 2012/05/04 15:12:12 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> wxpython-2.8.11.0.ebuild,
+  wxpython-2.8.12.0.ebuild, wxpython-2.8.12.1.ebuild, wxpython-2.9.1.1.ebuild,
+  wxpython-2.9.3.1.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> wxpython-2.8.12.1.ebuild:
   alpha/ia64/sh/sparc stable wrt #403235

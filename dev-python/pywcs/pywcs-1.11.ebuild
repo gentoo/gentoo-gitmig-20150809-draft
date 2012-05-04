@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/pywcs-1.11.ebuild,v 1.2 2012/02/23 05:09:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/pywcs-1.11.ebuild,v 1.3 2012/05/04 15:12:15 patrick Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ IUSE=""
 
 CDEPEND=">=sci-astronomy/wcslib-${WCS_V}"
 DEPEND="${CDEPEND}
-	  dev-util/pkgconfig"
+	  virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	  dev-python/pyfits"
 

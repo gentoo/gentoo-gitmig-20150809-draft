@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.91 2012/03/12 19:09:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.92 2012/05/04 15:12:14 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> dbus-python-0.84.0.ebuild,
+  dbus-python-1.0.0.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> dbus-python-1.0.0.ebuild:
   arm stable, bug #403843

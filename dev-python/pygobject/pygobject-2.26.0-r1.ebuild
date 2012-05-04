@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.20 2012/02/25 01:55:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.21 2012/05/04 15:12:14 patrick Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	test? (
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc )
-	>=dev-util/pkgconfig-0.12"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog* NEWS README"

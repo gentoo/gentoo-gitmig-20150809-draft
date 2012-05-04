@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygoocanvas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.22 2012/02/24 08:12:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.23 2012/05/04 15:12:15 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> pygoocanvas-0.14.1.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> pygoocanvas-0.14.1.ebuild:
   Restricting pypy

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.1.ebuild,v 1.3 2012/02/20 15:36:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.1.ebuild,v 1.4 2012/05/04 15:12:15 patrick Exp $
 
 EAPI=3
 
@@ -31,7 +31,7 @@ RDEPEND="
 	lapack? ( virtual/cblas virtual/lapack virtual/fortran )"
 DEPEND="${RDEPEND}
 	doc? ( app-arch/unzip )
-	lapack? ( dev-util/pkgconfig )
+	lapack? ( virtual/pkgconfig )
 	test? ( >=dev-python/nose-0.10 )"
 
 PYTHON_CFLAGS=("* + -fno-strict-aliasing")

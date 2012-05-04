@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r1.ebuild,v 1.1 2011/05/08 21:28:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r1.ebuild,v 1.2 2012/05/04 15:12:14 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6 3:3.1"
@@ -26,7 +26,7 @@ IUSE="doc examples +svg test"
 
 RDEPEND=">=x11-libs/cairo-1.10.0[svg?]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-python/pytest )"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")

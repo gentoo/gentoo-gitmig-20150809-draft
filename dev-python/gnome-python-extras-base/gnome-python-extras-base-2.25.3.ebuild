@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3.ebuild,v 1.9 2011/03/11 19:21:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3.ebuild,v 1.10 2012/05/04 15:12:12 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.4:2
 	>=dev-python/pygtk-2.10.3:2
 	!<=dev-python/gnome-python-extras-2.19.1-r2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 

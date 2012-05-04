@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13-r2.ebuild,v 1.4 2012/04/22 12:18:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13-r2.ebuild,v 1.5 2012/05/04 15:12:16 patrick Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ RDEPEND="
 	>=x11-libs/qt-gui-4.7.0:4
 "
 DEPEND="${RDEPEND}
-	test? ( dev-util/pkgconfig )
+	test? ( virtual/pkgconfig )
 "
 
 src_prepare() {
