@@ -1,6 +1,14 @@
 # ChangeLog for games-engines/gargoyle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.14 2012/04/13 19:17:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.15 2012/05/04 15:01:10 s4t4n Exp $
+
+*gargoyle-2010.1 (04 May 2012)
+
+  04 May 2012; Michele Noberasco <s4t4n@gentoo.org> gargoyle-2010.1.ebuild:
+  Renamed old 20100930 ebuild to 2010.1 for naming consistency. See bug #398535.
+
+  gargoyle-20100930.ebuild:
+  Removed ebuild with incorrect version number. See bug #398535.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> gargoyle-20100930.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.

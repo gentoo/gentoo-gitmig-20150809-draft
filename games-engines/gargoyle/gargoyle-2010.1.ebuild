@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20100930.ebuild,v 1.5 2012/04/13 19:17:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-2010.1.ebuild,v 1.1 2012/05/04 15:01:10 s4t4n Exp $
 
 EAPI=2
 
@@ -18,14 +18,11 @@ EAPI=2
 # Since we don't compile or install any of the bundled fonts, their licenses
 # don't apply. (Fonts are installed through dependencies instead.)
 
-MY_PV="2010.1"
-MY_P="${PN}-${MY_PV}"
-
 inherit eutils games
 
 DESCRIPTION="An interactive fiction (IF) player supporting all major formats"
 HOMEPAGE="http://ccxvii.net/gargoyle/"
-SRC_URI="http://garglk.googlecode.com/files/${MY_P}-sources.zip"
+SRC_URI="http://garglk.googlecode.com/files/${P}-sources.zip"
 
 LICENSE="BSD GPL-2 MIT Hugo Glulxe"
 SLOT="0"
