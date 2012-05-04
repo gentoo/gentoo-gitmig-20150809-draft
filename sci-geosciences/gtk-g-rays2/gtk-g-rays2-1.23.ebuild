@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/gtk-g-rays2-1.23.ebuild,v 1.1 2011/06/07 08:50:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/gtk-g-rays2-1.23.ebuild,v 1.2 2012/05/04 07:14:06 jdhore Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ RDEPEND="
 	x11-libs/gtk+:2
 	x11-libs/cairo"
 DEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( dev-libs/libxslt )"
 
