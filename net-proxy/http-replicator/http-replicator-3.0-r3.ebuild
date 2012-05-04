@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r1.ebuild,v 1.8 2009/01/20 22:44:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r3.ebuild,v 1.1 2012/05/04 01:35:08 ottxor Exp $
 
-inherit eutils
+EAPI=4
+PYTHON_DEPEND="2:2.7:2.7" # not 2.6 bug #33907, not 3.0 bug #411083
+inherit eutils python
 
 MY_P="${PN}_${PV}"
 
@@ -13,10 +15,11 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.3"
+DEPEND=""
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	epatch "${FILESDIR}/http-replicator-3.0-sighup.patch"
@@ -28,15 +31,14 @@ src_install(){
 	exeinto /usr/bin
 	doexe http-replicator
 	newexe "${FILESDIR}/http-replicator-3.0-callrepcacheman-0.1" repcacheman
-	if has_version '>=sys-apps/portage-2.2_rc6'; then
-		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.44-r1" repcacheman.py
-	else
-		newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.44" repcacheman.py
-	fi
+	newexe "${FILESDIR}/http-replicator-3.0-repcacheman-0.44-r2" repcacheman.py
 
 	# init.d scripts
 	newinitd "${FILESDIR}/http-replicator-3.0.init" http-replicator
 	newconfd "${FILESDIR}/http-replicator-3.0.conf" http-replicator
+
+	# not 2.6 bug #33907, not 3.0 bug #411083
+	python_convert_shebangs -r 2.7 "${ED}"
 
 	# Docs
 	dodoc README debian/changelog
