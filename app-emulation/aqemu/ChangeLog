@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/aqemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.13 2012/05/02 17:19:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.14 2012/05/04 17:57:16 scarabeus Exp $
+
+  04 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -aqemu-0.8.1.ebuild,
+  -aqemu-0.8.2-r1.ebuild, aqemu-0.8.2-r2.ebuild:
+  Stable on x86 wrt bug#414353. Remove older.
 
   02 May 2012; Agostino Sarubbo <ago@gentoo.org> aqemu-0.8.2-r2.ebuild:
   Stable for amd64, wrt bug #414353
