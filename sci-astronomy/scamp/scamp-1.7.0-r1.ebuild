@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/scamp-1.7.0-r1.ebuild,v 1.1 2012/01/03 02:43:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/scamp-1.7.0-r1.ebuild,v 1.2 2012/05/04 06:46:11 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -20,7 +20,7 @@ RDEPEND=">=sci-astronomy/cdsclient-3.4
 	sci-libs/fftw:3.0
 	plplot? ( sci-libs/plplot )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# gentoo uses cblas instead of ptcblas (linked to threaded with eselect)

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.3.0.ebuild,v 1.1 2011/11/26 05:51:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.3.0.ebuild,v 1.2 2012/05/04 06:46:12 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="sci-libs/cfitsio
 	hdf5? ( sci-libs/hdf5 )
 	fftw? ( >=sci-libs/fftw-3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 PATCHES=( "${FILESDIR}"/${PV}-{headers,implicits,libdir}.patch )

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.4-r1.ebuild,v 1.1 2010/01/29 18:27:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.4-r1.ebuild,v 1.2 2012/05/04 06:46:12 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -18,7 +18,7 @@ RDEPEND="sys-libs/zlib
 	sci-astronomy/wcstools
 	sci-visualization/gnuplot"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefiles.patch
