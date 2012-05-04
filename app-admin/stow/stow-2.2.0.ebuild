@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/stow-2.2.0.ebuild,v 1.3 2012/05/03 04:13:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/stow/stow-2.2.0.ebuild,v 1.4 2012/05/04 02:41:16 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/stow/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE=""
+IUSE="test"
 
 DEPEND="dev-lang/perl
 	test? (
