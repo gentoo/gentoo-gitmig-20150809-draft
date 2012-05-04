@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.2.ebuild,v 1.1 2011/11/07 23:28:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.2.ebuild,v 1.2 2012/05/04 07:37:00 jdhore Exp $
 
 EAPI=2
 inherit autotools bash-completion eutils fixheadtails multilib
@@ -27,7 +27,7 @@ RDEPEND="cgi? ( >=media-libs/gd-2[png] )
 	>=sys-fs/udev-114"
 DEPEND="$RDEPEND
 	>=sys-apps/sed-4
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

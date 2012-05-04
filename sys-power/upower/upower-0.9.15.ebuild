@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.15.ebuild,v 1.1 2011/12/05 17:14:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.15.ebuild,v 1.2 2012/05/04 07:37:00 jdhore Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
 	>=dev-util/intltool-0.40.0
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc
 		app-text/docbook-xml-dtd:4.1.2 )"
 
