@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13719 2012/05/03 22:53:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13720 2012/05/04 22:12:14 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -392,10 +392,6 @@ sys-apps/elfix
 # media-video/vdr-xvdr-9999, masked git live ebuild
 =media-plugins/vdr-xvdr-9999
 =media-plugins/xbmc-addon-vdr-9999
-
-# Sebastian Pipping <sping@gentoo.org> (31 Aug 2011)
-# Upcoming bump, afraid of ~arch for now (bug #283152)
->=media-gfx/gimp-2.7
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (28 Aug 2011)
 # Breaks lots of rdeps.
