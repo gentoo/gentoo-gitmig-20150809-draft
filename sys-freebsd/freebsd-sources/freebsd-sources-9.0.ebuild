@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.4 2012/05/04 17:34:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.5 2012/05/04 17:38:26 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -56,6 +56,11 @@ src_unpack() {
 	# vop_whiteout to tmpfs, so it can be used as an overlay
 	# unionfs filesystem over the cd9660 readonly filesystem.
 	epatch "${FILESDIR}/${PN}-7.0-tmpfs_whiteout_stub.patch"
+
+	# workaround a kernel panic for amd64-fbsd, bug #408019
+	if use amd64-fbsd ; then
+		sed -e "s:-O2:-O1:g" -i "${S}/conf/kern.pre.mk" || die
+	fi
 }
 
 src_compile() {
