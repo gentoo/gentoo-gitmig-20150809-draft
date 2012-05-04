@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.1_beta1.ebuild,v 1.5 2012/04/14 15:20:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.1_beta1.ebuild,v 1.6 2012/05/04 04:22:27 jdhore Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ RDEPEND=">=dev-lang/perl-5.12
 	virtual/perl-Getopt-Long
 	virtual/perl-IO"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-perl/locale-maketext-lexicon
 	virtual/perl-ExtUtils-CBuilder
 	virtual/perl-ExtUtils-ParseXS

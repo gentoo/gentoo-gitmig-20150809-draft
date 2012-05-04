@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.14-r1.ebuild,v 1.9 2012/03/16 16:21:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.14-r1.ebuild,v 1.10 2012/05/04 04:22:29 jdhore Exp $
 
 EAPI=2
 inherit eutils games
@@ -19,7 +19,7 @@ RDEPEND="media-libs/freeglut
 		media-libs/sdl-mixer )
 	gtk? ( >=x11-libs/gtk+-2.6:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch \

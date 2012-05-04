@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/batrachians/batrachians-0.1.5.ebuild,v 1.3 2011/05/31 13:38:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/batrachians/batrachians-0.1.5.ebuild,v 1.4 2012/05/04 04:22:28 jdhore Exp $
 
 EAPI=2
 inherit autotools games
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-games/flatzebra-0.1.5"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

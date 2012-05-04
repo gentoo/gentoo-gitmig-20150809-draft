@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/afternoonstalker-1.1.4.ebuild,v 1.4 2010/08/13 12:40:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/afternoonstalker-1.1.4.ebuild,v 1.5 2012/05/04 04:22:28 jdhore Exp $
 
 EAPI=2
 inherit autotools games
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-games/flatzebra-0.1.5"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

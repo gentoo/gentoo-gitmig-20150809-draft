@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xbill
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/ChangeLog,v 1.21 2011/02/28 23:55:42 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/ChangeLog,v 1.22 2012/05/04 04:22:28 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> xbill-2.1-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Feb 2011; Michael Sterrett <mr_bones_@gentoo.org> xbill-2.1-r2.ebuild:
   EAPI=2; slot gtk+ dep

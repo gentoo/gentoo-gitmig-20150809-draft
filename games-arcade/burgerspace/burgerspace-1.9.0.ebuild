@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.7 2010/11/08 04:25:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.8 2012/05/04 04:22:28 jdhore Exp $
 
 EAPI=2
 inherit autotools games
@@ -17,7 +17,7 @@ RESTRICT="test"  # doesn't really test anything
 
 RDEPEND=">=dev-games/flatzebra-0.1.5"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

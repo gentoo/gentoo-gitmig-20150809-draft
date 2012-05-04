@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/crack-attack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.27 2012/03/16 16:21:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.28 2012/05/04 04:22:29 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> crack-attack-1.1.14-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org>
   crack-attack-1.1.14-r1.ebuild:

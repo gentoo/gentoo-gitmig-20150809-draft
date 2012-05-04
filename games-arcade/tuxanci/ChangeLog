@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tuxanci
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/ChangeLog,v 1.14 2011/11/11 11:18:47 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/ChangeLog,v 1.15 2012/05/04 04:22:27 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> tuxanci-20110429.ebuild,
+  tuxanci-99999999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   11 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop me from maint.
