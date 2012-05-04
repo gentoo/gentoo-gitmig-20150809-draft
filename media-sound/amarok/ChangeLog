@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.422 2012/04/17 16:10:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.423 2012/05/04 13:54:38 johu Exp $
+
+  04 May 2012; Johannes Huber <johu@gentoo.org> -amarok-2.4.0.ebuild,
+  -amarok-2.4.3.ebuild, -amarok-2.5.0-r1.ebuild, -amarok-2.5.0.ebuild,
+  amarok-2.4.3-r1.ebuild, amarok-2.5.0-r2.ebuild:
+  Remove old. Migrate to virtual/pkgconfig.
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> amarok-2.4.3-r1.ebuild:
   Marking amarok-2.4.3-r1 ppc for bug 389997
