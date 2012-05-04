@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/camfr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.22 2012/01/30 01:45:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.23 2012/05/04 07:55:34 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> camfr-20070717-r2.ebuild,
+  camfr-20070717-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *camfr-20070717-r3 (30 Jan 2012)
 

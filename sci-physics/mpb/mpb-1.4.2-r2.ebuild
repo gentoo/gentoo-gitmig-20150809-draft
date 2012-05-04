@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2-r2.ebuild,v 1.3 2009/11/25 22:12:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2-r2.ebuild,v 1.4 2012/05/04 07:55:34 jdhore Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic
@@ -24,7 +24,7 @@ RDEPEND="virtual/lapack
 	mpi? ( virtual/mpi )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-autotools.patch

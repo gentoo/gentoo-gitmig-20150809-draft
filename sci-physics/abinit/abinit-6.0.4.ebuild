@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/abinit-6.0.4.ebuild,v 1.4 2011/06/21 14:43:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/abinit-6.0.4.ebuild,v 1.5 2012/05/04 07:55:34 jdhore Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	virtual/blas
 	virtual/lapack"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	fortran-2_pkg_setup

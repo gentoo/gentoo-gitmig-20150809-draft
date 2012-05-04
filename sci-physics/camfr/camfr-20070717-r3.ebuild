@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.1 2012/01/30 01:45:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.2 2012/05/04 07:55:34 jdhore Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="virtual/fortran
 	sci-libs/scipy
 	virtual/lapack"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/scons"
 
 RESTRICT_PYTHON_ABIS="3.*"

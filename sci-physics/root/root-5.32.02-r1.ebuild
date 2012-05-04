@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.02-r1.ebuild,v 1.2 2012/04/03 18:03:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.02-r1.ebuild,v 1.3 2012/05/04 07:55:34 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -83,7 +83,7 @@ CDEPEND="
 	xrootd? ( net-libs/xrootd )"
 
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RDEPEND="
 	virtual/fortran

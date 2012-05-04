@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.14 2012/02/16 23:52:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.15 2012/05/04 07:55:34 jdhore Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ RDEPEND="
 	truetype? ( media-libs/ftgl )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S2="${WORKDIR}/objects"
 

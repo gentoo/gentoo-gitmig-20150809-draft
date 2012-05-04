@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00g.ebuild,v 1.1 2012/03/13 17:02:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00g.ebuild,v 1.2 2012/05/04 07:55:34 jdhore Exp $
 
 EAPI=3
 
@@ -73,7 +73,7 @@ CDEPEND="
 	xml? ( dev-libs/libxml2:2 )"
 
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RDEPEND="
 	virtual/fortran
