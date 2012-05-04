@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9-r1.ebuild,v 1.4 2011/09/12 07:49:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9-r1.ebuild,v 1.5 2012/05/04 06:08:10 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	prelude? ( dev-libs/libprelude )
 	!net-analyzer/nessus-client"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}"/${PN}
 

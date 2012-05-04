@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.28.2.ebuild,v 1.9 2011/03/28 22:25:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/gnome-netstatus-2.28.2.ebuild,v 1.10 2012/05/04 06:08:10 jdhore Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils"
 

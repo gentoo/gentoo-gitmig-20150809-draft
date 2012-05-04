@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagircbot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagircbot/ChangeLog,v 1.9 2012/02/09 10:41:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagircbot/ChangeLog,v 1.10 2012/05/04 06:08:10 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> nagircbot-0.0.33.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926

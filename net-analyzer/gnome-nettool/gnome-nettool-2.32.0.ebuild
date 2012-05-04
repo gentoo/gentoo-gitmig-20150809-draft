@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.32.0.ebuild,v 1.7 2011/03/27 12:33:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.32.0.ebuild,v 1.8 2012/05/04 06:08:10 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -32,7 +32,7 @@ RDEPEND="${COMMON_DEPEND}
 
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	app-text/gnome-doc-utils"
 
 pkg_setup() {

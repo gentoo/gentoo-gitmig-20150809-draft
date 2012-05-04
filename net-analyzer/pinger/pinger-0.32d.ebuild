@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32d.ebuild,v 1.4 2011/12/17 01:50:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32d.ebuild,v 1.5 2012/05/04 06:08:11 jdhore Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ IUSE="gtk nls"
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.4:2 )
 	sys-libs/ncurses"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	append-flags -D_GNU_SOURCE

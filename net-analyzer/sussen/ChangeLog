@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sussen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.59 2010/12/20 17:57:46 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.60 2012/05/04 06:08:08 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> sussen-0.35.ebuild,
+  sussen-0.90.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Dec 2010; Peter Volkov <pva@gentoo.org> sussen-0.35.ebuild,
   sussen-0.90.ebuild:

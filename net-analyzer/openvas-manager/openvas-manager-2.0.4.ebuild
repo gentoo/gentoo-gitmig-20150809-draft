@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/openvas-manager-2.0.4.ebuild,v 1.1 2011/10/09 17:22:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/openvas-manager-2.0.4.ebuild,v 1.2 2012/05/04 06:08:10 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND=">=net-analyzer/openvas-libraries-4
 	>=dev-db/sqlite-3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/cmake"
 
 src_configure() {

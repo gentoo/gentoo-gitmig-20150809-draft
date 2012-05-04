@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.82.ebuild,v 1.9 2012/04/05 05:55:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.82.ebuild,v 1.10 2012/05/04 06:08:09 jdhore Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	sys-libs/ncurses
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
-	gtk? ( dev-util/pkgconfig )"
+	gtk? ( virtual/pkgconfig )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/0.80-impl-dec.patch

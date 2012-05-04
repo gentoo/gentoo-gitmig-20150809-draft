@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.4.ebuild,v 1.1 2011/12/06 09:09:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.4.ebuild,v 1.2 2012/05/04 06:08:11 jdhore Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND=">=net-libs/libnet-1.1.2.1-r1
 	pcre? ( dev-libs/libpcre )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex
 	virtual/yacc"
 

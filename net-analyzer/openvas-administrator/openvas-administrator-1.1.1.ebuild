@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-administrator/openvas-administrator-1.1.1.ebuild,v 1.1 2011/10/09 17:21:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-administrator/openvas-administrator-1.1.1.ebuild,v 1.2 2012/05/04 06:08:09 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=net-analyzer/openvas-libraries-4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/cmake"
 
 # Workaround for upstream bug, it doesn't like out-of-tree builds.

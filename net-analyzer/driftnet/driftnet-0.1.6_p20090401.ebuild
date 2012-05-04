@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6_p20090401.ebuild,v 1.7 2012/04/23 17:34:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6_p20090401.ebuild,v 1.8 2012/05/04 06:08:09 jdhore Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs
@@ -21,7 +21,7 @@ CDEPEND="net-libs/libpcap
 		media-libs/libpng )"
 
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	mp3? ( media-sound/mpg123 )"
 

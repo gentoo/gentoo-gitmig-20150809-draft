@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.3.ebuild,v 1.6 2011/11/28 07:07:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.3.ebuild,v 1.7 2012/05/04 06:08:09 jdhore Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="static-libs"
 
 DEPEND="
 	dev-lang/perl
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/texinfo
 "
 RDEPEND="

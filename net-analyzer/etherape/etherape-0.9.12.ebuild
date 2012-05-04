@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.12.ebuild,v 1.5 2011/09/27 19:31:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.12.ebuild,v 1.6 2012/05/04 06:08:09 jdhore Exp $
 
 EAPI="2"
 inherit eutils gnome2
@@ -21,6 +21,6 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=sys-devel/gettext-0.11.5
 	app-text/gnome-doc-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog FAQ NEWS README* TODO"

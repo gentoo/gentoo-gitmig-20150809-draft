@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.16.ebuild,v 1.5 2011/03/31 04:14:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.16.ebuild,v 1.6 2012/05/04 06:08:10 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ RDEPEND="|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=gnome-base/libgtop-2.14.2"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/intltool-0.35.0"
 

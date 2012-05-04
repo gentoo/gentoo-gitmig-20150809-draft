@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/etherape
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.65 2011/09/27 19:41:18 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.66 2012/05/04 06:08:09 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> etherape-0.9.12.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   27 Sep 2011; Tim Harder <radhermit@gentoo.org> -etherape-0.9.7-r1.ebuild,
   -etherape-0.9.9.ebuild:

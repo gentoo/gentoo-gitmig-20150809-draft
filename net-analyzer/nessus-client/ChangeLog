@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-client
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.14 2011/03/28 21:19:11 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.15 2012/05/04 06:08:10 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> nessus-client-1.0.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Mar 2011; Tim Harder <radhermit@gentoo.org> -nessus-client-1.0.2.ebuild,
   nessus-client-1.0.2-r1.ebuild:
