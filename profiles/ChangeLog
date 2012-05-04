@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6493 2012/05/03 22:53:08 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6494 2012/05/04 20:39:25 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +desc/libreoffice_estensions.desc:
+  Add libreoffice_extensions desc file.
 
   03 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
