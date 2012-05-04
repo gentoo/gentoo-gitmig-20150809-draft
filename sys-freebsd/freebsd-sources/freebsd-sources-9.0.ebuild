@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.2 2012/04/26 13:17:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0.ebuild,v 1.3 2012/05/04 17:32:53 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -34,8 +34,8 @@ src_unpack() {
 		"${S}/conf/newvers.sh"
 
 	# __FreeBSD_cc_version comes from FreeBSD's gcc.
-	# on 8.2-RELEASE it's 800001.
-	sed -e "s:-D_KERNEL:-D_KERNEL -D__FreeBSD_cc_version=800001:g" \
+	# on 9.0-RELEASE it's 900001.
+	sed -e "s:-D_KERNEL:-D_KERNEL -D__FreeBSD_cc_version=900001:g" \
 		-i "${S}/conf/kern.pre.mk" \
 		-i "${S}/conf/kmod.mk" || die "Couldn't set __FreeBSD_cc_version"
 
