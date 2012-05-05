@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.14.ebuild,v 1.5 2011/11/03 08:19:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.14.ebuild,v 1.6 2012/05/05 08:29:23 jdhore Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="nls static-libs"
 RDEPEND="dev-libs/libsigc++:2
 	>=net-libs/gnutls-1.2.10"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.20
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
