@@ -1,0 +1,60 @@
+diff -ur a/gnuradio-core/CMakeLists.txt b/gnuradio-core/CMakeLists.txt
+--- a/gnuradio-core/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
++++ b/gnuradio-core/CMakeLists.txt	2012-05-05 20:05:52.000000000 +0200
+@@ -109,7 +109,7 @@
+ 
+ install(
+     FILES gnuradio-core.conf
+-    DESTINATION ${GR_PKG_CONF_DIR}
++    DESTINATION ${GR_PREFSDIR}
+     COMPONENT "core_runtime"
+ )
+ 
+diff -ur a/gnuradio-core/src/lib/general/CMakeLists.txt b/gnuradio-core/src/lib/general/CMakeLists.txt
+--- a/gnuradio-core/src/lib/general/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
++++ b/gnuradio-core/src/lib/general/CMakeLists.txt	2012-05-05 21:14:44.000000000 +0200
+@@ -48,8 +48,9 @@
+ 
+ message(STATUS "Loading version ${VERSION} into gr_constants...")
+ 
+-file(TO_NATIVE_PATH "${CMAKE_INSTALL_PREFIX}/${GR_CONF_DIR}"     SYSCONFDIR)
+-file(TO_NATIVE_PATH "${CMAKE_INSTALL_PREFIX}/${GR_PKG_CONF_DIR}" GR_PREFSDIR)
++set(SYSCONFDIR "${CMAKE_INSTALL_PREFIX}/${GR_CONF_DIR}" CACHE PATH "System configuration directory")
++file(TO_NATIVE_PATH "${SYSCONFDIR}"     SYSCONFDIR)
++file(TO_NATIVE_PATH "${SYSCONFDIR}/${CMAKE_PROJECT_NAME}/conf.d" GR_PREFSDIR)
+ 
+ #double escape for windows backslash path separators
+ string(REPLACE "\\" "\\\\" prefix ${prefix})
+diff -ur a/gr-audio/lib/CMakeLists.txt b/gr-audio/lib/CMakeLists.txt
+--- a/gr-audio/lib/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
++++ b/gr-audio/lib/CMakeLists.txt	2012-05-05 20:06:08.000000000 +0200
+@@ -150,4 +150,4 @@
+ target_link_libraries(gnuradio-audio ${gr_audio_libs})
+ GR_LIBRARY_FOO(gnuradio-audio RUNTIME_COMPONENT "audio_runtime" DEVEL_COMPONENT "audio_devel")
+ 
+-install(FILES ${gr_audio_confs} DESTINATION ${GR_PKG_CONF_DIR} COMPONENT "audio_runtime")
++install(FILES ${gr_audio_confs} DESTINATION ${GR_PREFSDIR} COMPONENT "audio_runtime")
+diff -ur a/grc/CMakeLists.txt b/grc/CMakeLists.txt
+--- a/grc/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
++++ b/grc/CMakeLists.txt	2012-05-05 20:05:16.000000000 +0200
+@@ -75,7 +75,7 @@
+ 
+ install(
+     FILES ${CMAKE_CURRENT_BINARY_DIR}/grc.conf
+-    DESTINATION ${GR_PKG_CONF_DIR}
++    DESTINATION ${GR_PREFSDIR}
+     COMPONENT "grc"
+ )
+ 
+diff -ur a/gr-wxgui/CMakeLists.txt b/gr-wxgui/CMakeLists.txt
+--- a/gr-wxgui/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
++++ b/gr-wxgui/CMakeLists.txt	2012-05-05 20:06:17.000000000 +0200
+@@ -76,7 +76,7 @@
+ ########################################################################
+ install(
+     FILES ${CMAKE_CURRENT_SOURCE_DIR}/gr-wxgui.conf
+-    DESTINATION ${GR_PKG_CONF_DIR}
++    DESTINATION ${GR_PREFSDIR}
+     COMPONENT "wxgui"
+ )
+ 

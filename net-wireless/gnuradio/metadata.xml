@@ -11,6 +11,7 @@
 		<flag name='fcd'>enable Funcube Dongle source block</flag>
 		<flag name='grc'>enable GNU Radio Companion graphical tool to design signal processing flow graphs</flag>
 		<flag name='utils'>install scripts to enable viewing and analysis of files produced by flow graphs</flag>
+		<flag name='wavelet'>enable wavelet signal processing blocks</flag>
 	</use>
 </pkgmetadata>
 

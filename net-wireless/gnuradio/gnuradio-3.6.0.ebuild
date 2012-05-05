@@ -1,32 +1,29 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.5.3.ebuild,v 1.5 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.0.ebuild,v 1.1 2012/05/05 19:19:35 chithanh Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
 
-inherit eutils fdo-mime python
+inherit base cmake-utils fdo-mime python
 
 DESCRIPTION="Toolkit that provides signal processing blocks to implement software radios"
 HOMEPAGE="http://gnuradio.org/"
-SRC_URI="http://gnuradio.org/redmine/attachments/download/320/${P}.tar.gz"
+SRC_URI="http://gnuradio.org/redmine/attachments/download/326/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE="audio doc dot examples fcd grc guile qt4 sdl utils wxwidgets"
-REQUIRED_USE="utils? ( wxwidgets )
-	fcd? ( audio )"
+KEYWORDS="~amd64 ~x86"
+IUSE="audio doc examples fcd grc qt4 sdl utils wavelet wxwidgets"
+REQUIRED_USE="fcd? ( audio )"
 
 # bug #348206
 # comedi? ( >=sci-electronics/comedilib-0.7 )
 # uhd? ( dev-libs/uhd )
-RDEPEND="dev-libs/boost
-	dev-python/numpy
+RDEPEND=">=dev-lang/orc-0.4.12
+	dev-libs/boost
 	dev-util/cppunit
 	sci-libs/fftw:3.0
-	sci-libs/gsl
-	virtual/cblas
 	fcd? ( virtual/libusb:1 )
 	audio? (
 		media-libs/alsa-lib
@@ -36,15 +33,18 @@ RDEPEND="dev-libs/boost
 	grc? (
 		dev-python/cheetah
 		dev-python/lxml
+		dev-python/numpy
 		dev-python/pygtk:2
 	)
-	guile? ( >=dev-scheme/guile-1.8.4 )
 	qt4? (
 		dev-python/PyQt4[X,opengl]
 		dev-python/pyqwt:5
 		x11-libs/qt-gui
 	)
 	sdl? ( media-libs/libsdl )
+	wavelet? (
+		sci-libs/gsl
+	)
 	wxwidgets? (
 		dev-python/wxpython:2.8
 		dev-python/numpy
@@ -54,13 +54,16 @@ DEPEND="${RDEPEND}
 	dev-lang/swig
 	virtual/pkgconfig
 	doc? (
-		>=app-doc/doxygen-1.5.7.1[dot?]
-		app-text/xmlto
+		>=app-doc/doxygen-1.5.7.1
 	)
 	grc? (
 		x11-misc/xdg-utils
 	)
 "
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.6.0-cmake-sysconfdir.patch
+)
 
 pkg_setup() {
 	python_set_active_version 2
@@ -71,70 +74,52 @@ src_prepare() {
 	python_convert_shebangs -q -r 2 "${S}"
 	# Useless UI element would require qt3support, bug #365019
 	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
-	# TODO: DEPDIR is not created, need to investigate why
-	mkdir "${S}"/gnuradio-core/src/lib/general/.deps || die
-	mkdir "${S}"/gnuradio-core/src/lib/gengen/.deps || die
-	mkdir "${S}"/gr-trellis/src/lib/.deps || die
+	base_src_prepare
 }
 
 src_configure() {
-	# --with-lv_arch=32 fails to build on amd64
-	# TODO: more elegant solution is required before keywording on other arches
 	# TODO: docs are installed to /usr/share/doc/${PN} not /usr/share/doc/${PF}
-	econf \
-		--enable-all-components \
-		--enable-gnuradio-core \
-		--enable-gruel \
-		--enable-python \
-		--disable-gr-comedi \
-		--disable-gr-shd \
-		--disable-gr-uhd \
-		--with-lv_arch="generic 64 3dnow abm popcount mmx sse sse2 sse3 ssse3 sse4_a sse4_1 sse4_2 avx" \
-		$(use_enable audio gr-audio) \
-		$(use_enable doc doxygen) \
-		$(use_enable doc docs) \
-		$(use_enable dot) \
-		$(use_enable examples gnuradio-examples) \
-		$(use_enable fcd gr-fcd) \
-		$(use_enable grc) \
-		$(use_enable guile) \
-		$(use_enable utils gr-utils) \
-		$(use_enable wxwidgets gr-wxgui) \
-		$(use_enable sdl gr-video-sdl) \
-		$(use sdl || echo "--disable-sdltest") \
-		$(use_enable qt4 gr-qtgui) \
-		$(use_with qt4 qwt-incdir "${EPREFIX}"/usr/include/qwt5)
+	# SYSCONFDIR/GR_PREFSDIR default to install below CMAKE_INSTALL_PREFIX
+	mycmakeargs=(
+		$(cmake-utils_use_enable audio GR_AUDIO)
+		$(cmake-utils_use_enable doc DOXYGEN) \
+		$(cmake-utils_use_enable fcd GR_FCD) \
+		$(cmake-utils_use_enable grc GRC) \
+		$(cmake-utils_use_enable utils GR_UTILS) \
+		$(cmake-utils_use_enable wavelet GR_WAVELET) \
+		$(cmake-utils_use_enable wxwidgets GR_WXGUI) \
+		$(cmake-utils_use_enable qt4 GR_QTGUI) \
+		$(cmake-utils_use_enable sdl GR_VIDEO_SDL) \
+		-DENABLE_GR_CORE=ON
+		-DQWT_INCLUDE_DIRS="${EPREFIX}"/usr/include/qwt5
+		-DSYSCONFDIR="${EPREFIX}"/etc
+	)
+	cmake-utils_src_configure
 }
 
 src_install() {
-	# Fails to install with parallel make sometimes, bug #412449
-	emake -j1 DESTDIR="${ED}" install
+	cmake-utils_src_install
 
 	python_clean_installation_image -q
 
 	# Install examples to /usr/share/doc/$PF
 	if use examples ; then
 		dodir /usr/share/doc/${PF}/
-		mv "${ED}"/usr/share/gnuradio/examples "${ED}"/usr/share/doc/${PF}/ || die "failed installing examples"
+		mv "${ED}"/usr/share/${PN}/examples "${ED}"/usr/share/doc/${PF}/ || die
 	else
-	# It seems that the examples are installed whether configured or not
-		rm -rf "${ED}"/usr/share/gnuradio/examples || die
-	fi
-
-	# Remove useless files in the doc dir
-	if use doc; then
-		rm -f "${ED}"/usr/share/doc/${P}/html/*.md5 || die
+	# It seems that the examples are always installed
+		rm -rf "${ED}"/usr/share/${PN}/examples || die
 	fi
 
 	# We install the mimetypes to the correct locations from the ebuild
-	rm -rf "${ED}"/usr/share/gnuradio/grc/freedesktop || die
-	rm -f "${ED}"/usr/bin/grc_setup_freedesktop || die
+	rm -rf "${ED}"/usr/share/${PN}/grc/freedesktop || die
+	rm -f "${ED}"/usr/libexec/${PN}/grc_setup_freedesktop || die
 
 	# Install icons, menu items and mime-types for GRC
 	if use grc ; then
 		local fd_path="${S}/grc/freedesktop"
 		insinto /usr/share/mime/packages
-		doins "${fd_path}/gnuradio-grc.xml"
+		doins "${fd_path}/${PN}-grc.xml"
 
 		domenu "${fd_path}/"*.desktop
 		doicon "${fd_path}/"*.png
@@ -151,10 +136,10 @@ pkg_postinst()
 		fdo-mime_mime_database_update
 		for size in ${GRC_ICON_SIZES} ; do
 			xdg-icon-resource install --noupdate --context mimetypes --size ${size} \
-				"${ROOT}/usr/share/pixmaps/grc-icon-${size}.png" application-gnuradio-grc \
+				"${EROOT}/usr/share/pixmaps/grc-icon-${size}.png" application-gnuradio-grc \
 				|| die "icon resource installation failed"
 			xdg-icon-resource install --noupdate --context apps --size ${size} \
-				"${ROOT}/usr/share/pixmaps/grc-icon-${size}.png" gnuradio-grc \
+				"${EROOT}/usr/share/pixmaps/grc-icon-${size}.png" gnuradio-grc \
 				|| die "icon resource installation failed"
 		done
 		xdg-icon-resource forceupdate
