@@ -1,0 +1,13 @@
+# ChangeLog for x11-themes/zukitwo-shell
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo-shell/ChangeLog,v 1.1 2012/05/05 01:33:02 tetromino Exp $
+
+*zukitwo-shell-2012.05.03 (05 May 2012)
+*zukitwo-shell-2011.12.29 (05 May 2012)
+
+  05 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +zukitwo-shell-2011.12.29.ebuild, +zukitwo-shell-2012.05.03.ebuild,
+  +metadata.xml:
+  New package, split out from x11-themes/zukitwo to allow simultaneous support
+  for zukitwo for gtk+-3.4 and gnome-shell-3.2.
+
