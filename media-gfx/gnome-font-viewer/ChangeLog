@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/gnome-font-viewer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/ChangeLog,v 1.1 2012/05/05 07:56:21 tetromino Exp $
+
+*gnome-font-viewer-3.4.0 (05 May 2012)
+
+  05 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-font-viewer-3.4.0.ebuild, +metadata.xml:
+  New separate gnome font viewer package, formerly part of
+  gnome-extra/gnome-utils.
+
