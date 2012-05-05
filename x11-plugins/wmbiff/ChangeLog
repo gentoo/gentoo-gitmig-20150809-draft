@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbiff
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.29 2010/06/20 12:48:56 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.30 2012/05/05 05:12:01 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmbiff-0.4.27.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> wmbiff-0.4.27.ebuild,
   +files/wmbiff-0.4.27-gnutls.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.4-r2.ebuild,v 1.1 2012/02/27 14:58:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.4-r2.ebuild,v 1.2 2012/05/05 05:12:02 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/gtk+:2
 	session? ( x11-libs/libSM
 		x11-libs/libICE )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.3-stringh.patch

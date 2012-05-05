@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.1.ebuild,v 1.6 2011/03/28 15:04:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.1.ebuild,v 1.7 2012/05/05 05:12:02 jdhore Exp $
 
 EAPI="1"
 
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXpm
 	x11-libs/libICE"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-libs/libXt"
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmsg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.21 2011/12/18 19:45:38 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.22 2012/05/05 05:11:59 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmmsg-1.0.1.ebuild,
+  wmmsg-1.0.1-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wmmsg-1.0.1-r1.ebuild:
   x86 stable wrt bug #393733

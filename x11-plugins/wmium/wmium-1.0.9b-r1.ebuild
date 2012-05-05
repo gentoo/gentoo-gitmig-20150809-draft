@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.8 2011/03/29 13:06:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9b-r1.ebuild,v 1.9 2012/05/05 05:12:00 jdhore Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/openssl
 	>=x11-libs/libXext-1
 	>=x11-libs/libXpm-3.5.4.2"
 DEPEND="${RDEPEND}
-	gtk? ( dev-util/pkgconfig )
+	gtk? ( virtual/pkgconfig )
 	>=x11-proto/xextproto-7.0.2"
 
 src_prepare() {

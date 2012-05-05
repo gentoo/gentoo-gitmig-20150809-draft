@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.27.ebuild,v 1.8 2010/06/20 12:48:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.27.ebuild,v 1.9 2012/05/05 05:12:01 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libX11
 	crypt? ( >=net-libs/gnutls-1.2.3
 		>=dev-libs/libgcrypt-1.2.1 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto
 	x11-proto/xextproto"
 

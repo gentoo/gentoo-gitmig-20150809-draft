@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.16 2012/04/25 16:44:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.17 2012/05/05 05:12:03 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  compiz-plugins-main-0.8.6-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org>
   compiz-plugins-main-0.8.6-r1.ebuild:

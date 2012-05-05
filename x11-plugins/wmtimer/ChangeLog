@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmtimer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.27 2011/12/07 07:54:52 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.28 2012/05/05 05:11:59 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmtimer-2.92.ebuild,
+  wmtimer-2.92-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wmtimer-2.92-r1.ebuild:
   x86 stable wrt bug #391539

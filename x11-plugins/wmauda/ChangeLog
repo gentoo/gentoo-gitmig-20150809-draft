@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmauda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.17 2012/02/13 22:37:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.18 2012/05/05 05:12:00 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmauda-0.7.ebuild,
+  wmauda-0.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *wmauda-0.8 (13 Feb 2012)
 

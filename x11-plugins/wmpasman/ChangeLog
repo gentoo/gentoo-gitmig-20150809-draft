@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpasman
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/ChangeLog,v 1.12 2011/03/28 15:10:53 nirbheek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/ChangeLog,v 1.13 2012/05/05 05:12:03 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmpasman-0.8.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   wmpasman-0.8.4.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.16.ebuild,v 1.10 2011/03/02 21:05:47 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.16.ebuild,v 1.11 2012/05/05 05:12:02 jdhore Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="net-im/pidgin[gtk]
 	x11-libs/gtk+:2"
 
 DEPEND="${DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

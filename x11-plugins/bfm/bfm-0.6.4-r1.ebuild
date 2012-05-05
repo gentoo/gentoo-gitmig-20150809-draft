@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4-r1.ebuild,v 1.9 2011/03/28 14:35:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/bfm-0.6.4-r1.ebuild,v 1.10 2012/05/05 05:12:01 jdhore Exp $
 
 EAPI="1"
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/libX11
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	gkrellm? ( >=app-admin/gkrellm-2 )"
 
 src_unpack() {

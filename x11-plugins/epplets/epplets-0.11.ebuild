@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.11.ebuild,v 1.4 2012/03/18 15:59:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.11.ebuild,v 1.5 2012/05/05 05:12:03 jdhore Exp $
 
 DESCRIPTION="Base files for Enlightenment epplets and some epplets"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -17,7 +17,7 @@ RDEPEND="x11-libs/libX11
 	media-libs/imlib2
 	>=x11-wm/enlightenment-0.16.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto
 	x11-proto/xextproto"
 

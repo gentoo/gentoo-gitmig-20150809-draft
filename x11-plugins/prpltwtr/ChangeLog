@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/prpltwtr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/prpltwtr/ChangeLog,v 1.1 2012/02/19 08:00:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/prpltwtr/ChangeLog,v 1.2 2012/05/05 05:11:59 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> prpltwtr-0.11.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *prpltwtr-0.11.0 (19 Feb 2012)
 

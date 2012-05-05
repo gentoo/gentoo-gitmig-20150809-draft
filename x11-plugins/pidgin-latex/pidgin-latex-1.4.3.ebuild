@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.4.3.ebuild,v 1.2 2011/05/03 07:25:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/pidgin-latex-1.4.3.ebuild,v 1.3 2012/05/05 05:12:00 jdhore Exp $
 
 EAPI="2"
 inherit multilib toolchain-funcs
@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	x11-libs/gtk+:2"
 DEPEND="${COMMON_DEPEND}
 	sys-devel/libtool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
 	app-text/dvipng"

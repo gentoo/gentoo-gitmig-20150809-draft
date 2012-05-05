@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-bot-sentry/pidgin-bot-sentry-1.3.0.ebuild,v 1.2 2011/03/29 13:05:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-bot-sentry/pidgin-bot-sentry-1.3.0.ebuild,v 1.3 2012/05/05 05:12:02 jdhore Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ RDEPEND="net-im/pidgin[gtk]
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

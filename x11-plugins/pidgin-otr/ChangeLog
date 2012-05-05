@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-otr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.21 2009/12/21 15:40:49 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.22 2012/05/05 05:12:03 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> pidgin-otr-3.2.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Dec 2009; Raúl Porcel <armin76@gentoo.org> pidgin-otr-3.2.0.ebuild:
   sparc stable wrt #281643

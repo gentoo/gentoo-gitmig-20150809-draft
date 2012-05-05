@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/pidgin-extprefs-0.7-r1.ebuild,v 1.7 2011/01/08 16:10:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-extprefs/pidgin-extprefs-0.7-r1.ebuild,v 1.8 2012/05/05 05:11:58 jdhore Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="net-im/pidgin[gtk]"
 DEPEND="
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	${RDEPEND}"
 
 src_install() {

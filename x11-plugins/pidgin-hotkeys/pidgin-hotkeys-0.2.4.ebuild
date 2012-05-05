@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/pidgin-hotkeys-0.2.4.ebuild,v 1.6 2011/03/02 21:09:08 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/pidgin-hotkeys-0.2.4.ebuild,v 1.7 2012/05/05 05:12:02 jdhore Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND="net-im/pidgin[gtk]
 	x11-libs/gtk+:2"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/epplets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.21 2012/03/18 15:59:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.22 2012/05/05 05:12:03 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> epplets-0.10.ebuild,
+  epplets-0.11.ebuild, epplets-0.12.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> epplets-0.10.ebuild,
   epplets-0.11.ebuild, epplets-0.12.ebuild:

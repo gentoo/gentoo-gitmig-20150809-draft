@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.4.1.ebuild,v 1.10 2011/03/28 15:10:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpasman/wmpasman-0.8.4.1.ebuild,v 1.11 2012/05/05 05:12:03 jdhore Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.1:2
 	>=app-crypt/mcrypt-2.6.4"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	>=dev-util/pkgconfig-0.20
+	virtual/pkgconfig
 	>=x11-libs/libXpm-3.5.5"
 
 src_unpack() {

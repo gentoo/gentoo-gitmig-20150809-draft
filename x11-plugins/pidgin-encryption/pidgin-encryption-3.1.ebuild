@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/pidgin-encryption-3.1.ebuild,v 1.10 2012/04/19 09:43:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/pidgin-encryption-3.1.ebuild,v 1.11 2012/05/05 05:11:58 jdhore Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="net-im/pidgin[gtk]
 	>=dev-libs/nss-3.11"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-glib2.32.patch"

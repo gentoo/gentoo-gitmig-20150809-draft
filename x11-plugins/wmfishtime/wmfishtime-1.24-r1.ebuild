@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.24-r1.ebuild,v 1.7 2011/03/28 14:41:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.24-r1.ebuild,v 1.8 2012/05/05 05:12:00 jdhore Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

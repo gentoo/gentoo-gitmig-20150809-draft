@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.6-r1.ebuild,v 1.5 2012/04/25 16:44:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.6-r1.ebuild,v 1.6 2012/05/05 05:12:03 jdhore Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.15
 	gconf? ( gnome-base/gconf:2 )
 "
