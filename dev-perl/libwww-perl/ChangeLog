@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.160 2012/02/19 11:38:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.161 2012/05/05 23:55:36 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> libwww-perl-6.40.0.ebuild:
+  keyword ~amd64-fbsd
 
 *libwww-perl-6.40.0 (19 Feb 2012)
 

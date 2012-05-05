@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTP-Negotiate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/ChangeLog,v 1.17 2012/03/01 16:17:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/ChangeLog,v 1.18 2012/05/05 23:49:40 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org>
+  HTTP-Negotiate-6.0.1.ebuild:
+  keyword ~amd64-fbsd
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
