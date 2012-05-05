@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.83 2012/05/03 20:23:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.84 2012/05/05 21:58:04 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> libnet-1.1.6.ebuild:
+  Marking libnet-1.1.6 ppc for bug 413877
 
   03 May 2012; Markus Meier <maekke@gentoo.org> libnet-1.1.6.ebuild:
   arm stable, bug #413877
