@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/gpicview-0.2.2.ebuild,v 1.1 2011/07/26 08:05:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/gpicview-0.2.2.ebuild,v 1.2 2012/05/05 07:00:20 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ RDEPEND="virtual/jpeg
 	>=x11-libs/gtk+-2.6:2"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.289 2012/04/13 08:21:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.290 2012/05/05 07:00:23 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> eog-2.32.1.ebuild,
+  eog-3.2.2.ebuild, eog-3.4.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *eog-3.4.0 (13 Apr 2012)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.70 2012/03/19 09:08:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.71 2012/05/05 07:00:18 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> pstoedit-3.50.ebuild,
+  pstoedit-3.50-r1.ebuild, pstoedit-3.60.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Mar 2012; Naohiro Aota <naota@gentoo.org> +files/pstoedit-3.60-libdl.patch,
   pstoedit-3.60.ebuild:

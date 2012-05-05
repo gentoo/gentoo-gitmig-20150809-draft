@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.18.ebuild,v 1.10 2011/10/23 16:35:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.18.ebuild,v 1.11 2012/05/05 07:00:25 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils
@@ -28,7 +28,7 @@ RDEPEND="dev-libs/glib:2
 		>=media-gfx/gtkimageview-1.5
 		>=media-gfx/gimp-2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.17-cfitsio-automagic.patch

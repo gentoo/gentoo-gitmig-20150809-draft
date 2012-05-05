@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.18.ebuild,v 1.3 2012/04/29 15:56:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.18.ebuild,v 1.4 2012/05/05 07:00:23 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -27,7 +27,7 @@ RDEPEND="x11-libs/gtk+:2
 		>=gnome-base/libgnomeui-2 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	nls? ( >=sys-devel/gettext-0.14.1 )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/byzanz/byzanz-0.2.2.ebuild,v 1.4 2011/01/20 14:37:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/byzanz/byzanz-0.2.2.ebuild,v 1.5 2012/05/05 07:00:22 jdhore Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/libXdamage-1.0
 	>=media-libs/gst-plugins-base-0.10.24
 	>=x11-libs/cairo-1.8.10"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	>=x11-proto/damageproto-1.0"
 

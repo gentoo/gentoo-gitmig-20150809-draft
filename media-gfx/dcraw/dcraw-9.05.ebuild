@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.05.ebuild,v 1.8 2011/04/25 22:09:10 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.05.ebuild,v 1.9 2012/05/05 07:00:19 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ COMMON_DEPEND="jpeg? ( virtual/jpeg )
 	gimp? ( media-gfx/gimp )"
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )
-	gimp? ( dev-util/pkgconfig )"
+	gimp? ( virtual/pkgconfig )"
 RDEPEND="${COMMON_DEPEND}
 	media-libs/netpbm"
 

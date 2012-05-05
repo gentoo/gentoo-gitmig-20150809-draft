@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4.ebuild,v 1.8 2012/03/01 23:34:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4.ebuild,v 1.9 2012/05/05 07:00:25 jdhore Exp $
 
 EAPI="2"
 
@@ -50,7 +50,7 @@ RDEPEND="gpm? ( sys-libs/gpm )
 	!sys-apps/lcdsplash"
 DEPEND="${RDEPEND}
 	>=dev-libs/klibc-1.5
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${P/_/-}"
 SG="${WORKDIR}/${GENTOOSPLASH}"

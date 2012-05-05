@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/DFBPoint
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/ChangeLog,v 1.16 2009/09/25 15:55:36 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/ChangeLog,v 1.17 2012/05/05 07:00:26 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> DFBPoint-0.7.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Sep 2009; Jeroen Roovers <jer@gentoo.org> DFBPoint-0.7.2.ebuild:
   Fix HOMEPAGE.

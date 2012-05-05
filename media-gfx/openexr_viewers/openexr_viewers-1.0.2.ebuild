@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/openexr_viewers-1.0.2.ebuild,v 1.8 2011/03/20 20:14:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/openexr_viewers-1.0.2.ebuild,v 1.9 2012/05/05 07:00:23 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/ilmbase-1.0.2
 		video_cards_nvidia? ( media-gfx/nvidia-cg-toolkit ) )
 	!<media-libs/openexr-1.5.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-nvidia-automagic.patch \

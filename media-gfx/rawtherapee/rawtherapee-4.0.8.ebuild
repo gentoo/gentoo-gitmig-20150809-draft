@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/rawtherapee-4.0.8.ebuild,v 1.1 2012/05/01 14:11:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/rawtherapee-4.0.8.ebuild,v 1.2 2012/05/05 07:00:21 jdhore Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	virtual/jpeg"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}"/${P}-nohg.patch )
 

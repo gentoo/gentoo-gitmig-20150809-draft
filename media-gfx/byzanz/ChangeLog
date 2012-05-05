@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/byzanz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/byzanz/ChangeLog,v 1.9 2012/02/16 18:46:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/byzanz/ChangeLog,v 1.10 2012/05/05 07:00:22 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> byzanz-0.2.2.ebuild,
+  byzanz-0.2.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> byzanz-0.2.3.ebuild:
   x86 stable wrt bug #397063

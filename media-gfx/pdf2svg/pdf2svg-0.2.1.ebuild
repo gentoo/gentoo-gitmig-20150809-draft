@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/pdf2svg-0.2.1.ebuild,v 1.5 2010/08/12 08:20:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/pdf2svg-0.2.1.ebuild,v 1.6 2012/05/05 07:00:25 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -18,7 +18,7 @@ RDEPEND=">=app-text/poppler-0.12.3-r3[cairo]
 	>=x11-libs/cairo-1.2.6[svg]
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

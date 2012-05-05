@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.12_pre2.ebuild,v 1.4 2011/12/01 04:43:54 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.12_pre2.ebuild,v 1.5 2012/05/05 07:00:20 jdhore Exp $
 
 EAPI="2"
 
@@ -34,7 +34,7 @@ COMMONDEPEND="x11-libs/libXau
 	osc? ( media-libs/liblo )
 	dev-lang/spidermonkey"
 DEPEND="${COMMONDEPEND}
-	>=dev-util/pkgconfig-0.22
+	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.4 )
 	nsplugin? ( =net-misc/npapi-sdk-0.27 )"
 RDEPEND="${COMMONDEPEND}

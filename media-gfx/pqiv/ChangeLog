@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pqiv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.27 2010/06/22 08:34:56 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.28 2012/05/05 07:00:25 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> pqiv-0.10.1.ebuild,
+  pqiv-0.11.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *pqiv-0.11 (22 Jun 2010)
 

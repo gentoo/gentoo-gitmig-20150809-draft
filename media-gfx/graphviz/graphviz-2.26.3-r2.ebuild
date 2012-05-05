@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r2.ebuild,v 1.10 2011/03/28 20:44:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r2.ebuild,v 1.11 2012/05/05 07:00:24 jdhore Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -43,7 +43,7 @@ RDEPEND="
 	ruby?	( dev-lang/ruby )
 	tcl?	( >=dev-lang/tcl-8.3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex
 	java?	( dev-lang/swig )
 	nls?	( >=sys-devel/gettext-0.14.5 )

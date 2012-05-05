@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.475 2012/04/16 17:11:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.476 2012/05/05 07:00:21 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> imagemagick-6.7.4.8.ebuild,
+  imagemagick-6.7.4.10.ebuild, imagemagick-6.7.5.0.ebuild,
+  imagemagick-6.7.5.3.ebuild, imagemagick-6.7.5.3-r1.ebuild,
+  imagemagick-6.7.6.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> imagemagick-6.7.6.4.ebuild:
   Marking imagemagick-6.7.6.4 ppc for bug 410867

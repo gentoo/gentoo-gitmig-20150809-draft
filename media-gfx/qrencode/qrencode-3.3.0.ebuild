@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/qrencode-3.3.0.ebuild,v 1.1 2012/04/01 20:00:03 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/qrencode-3.3.0.ebuild,v 1.2 2012/05/05 07:00:20 jdhore Exp $
 
 EAPI=4
 
@@ -19,6 +19,6 @@ IUSE=""
 
 RDEPEND="media-libs/libpng"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}/${PN}-3.2.0-pngregenfix.patch" )

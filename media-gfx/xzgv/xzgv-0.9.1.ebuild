@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.9.1.ebuild,v 1.4 2011/04/11 06:14:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.9.1.ebuild,v 1.5 2012/05/05 07:00:27 jdhore Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	sys-apps/texinfo
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P/.1}-asneeded-and-cflags.patch

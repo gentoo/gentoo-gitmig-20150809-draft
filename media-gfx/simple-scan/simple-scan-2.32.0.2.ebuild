@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-2.32.0.2.ebuild,v 1.4 2011/10/21 14:27:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-2.32.0.2.ebuild,v 1.5 2012/05/05 07:00:21 jdhore Exp $
 
 EAPI=3
 
@@ -33,7 +33,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
 	gnome-base/gnome-common
 	>=dev-util/intltool-0.35.0
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

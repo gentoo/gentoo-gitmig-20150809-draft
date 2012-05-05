@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/autotrace
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.53 2011/10/23 16:42:27 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.54 2012/05/05 07:00:26 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> autotrace-0.31.1-r6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   -autotrace-0.31.1-r5.ebuild:

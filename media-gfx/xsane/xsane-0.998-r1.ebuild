@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998-r1.ebuild,v 1.1 2012/01/15 23:00:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998-r1.ebuild,v 1.2 2012/05/05 07:00:20 jdhore Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ RDEPEND="media-gfx/sane-backends
 PDEPEND="ocr? ( app-text/gocr )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	export OLDXSANE

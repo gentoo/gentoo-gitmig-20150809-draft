@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/raw-thumbnailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.38 2012/04/22 20:39:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/raw-thumbnailer/ChangeLog,v 1.39 2012/05/05 07:00:24 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> raw-thumbnailer-0.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   22 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
   raw-thumbnailer-0.2.1.ebuild:

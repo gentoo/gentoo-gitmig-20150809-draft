@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.2.1.ebuild,v 1.3 2012/01/14 17:23:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.2.1.ebuild,v 1.4 2012/05/05 07:00:21 jdhore Exp $
 
 EAPI="4"
 
@@ -35,7 +35,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-lang/vala:0.14
 	gnome-base/gnome-common
 	>=dev-util/intltool-0.35.0
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"

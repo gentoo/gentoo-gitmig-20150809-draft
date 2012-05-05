@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.200 2012/03/01 23:34:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.201 2012/05/05 07:00:25 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> splashutils-1.5.4.3-r3.ebuild,
+  splashutils-1.5.4.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> splashutils-1.5.4.4.ebuild:
   Marking splashutils-1.5.4.4 ppc for bug 387633

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-0.99.1.ebuild,v 1.7 2011/03/23 08:32:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-0.99.1.ebuild,v 1.8 2012/05/05 07:00:24 jdhore Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -23,7 +23,7 @@ RDEPEND="media-libs/libopenraw[gtk]
 	gnome-base/gnome-vfs:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	!media-gfx/raw-thumbnailer"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.60.ebuild,v 1.2 2012/03/19 09:08:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.60.ebuild,v 1.3 2012/05/05 07:00:18 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/libpng-1.4.3
 	imagemagick? ( >=media-gfx/imagemagick-6.6.1.2[cxx] )
 	plotutils? ( media-libs/plotutils )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

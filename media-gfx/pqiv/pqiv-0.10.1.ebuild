@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.10.1.ebuild,v 1.4 2010/01/05 07:38:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.10.1.ebuild,v 1.5 2012/05/05 07:00:25 jdhore Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.8:2
 	!media-gfx/qiv"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	./configure --prefix=/usr --destdir="${D}" || die

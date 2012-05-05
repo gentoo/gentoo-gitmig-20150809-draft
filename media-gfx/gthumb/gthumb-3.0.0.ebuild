@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.0.0.ebuild,v 1.1 2012/04/28 18:53:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.0.0.ebuild,v 1.2 2012/05/05 07:00:18 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -43,7 +43,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gsettings-desktop-schemas-0.1.4"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
 	app-text/gnome-doc-utils

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.14.ebuild,v 1.1 2011/08/24 18:26:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.14.ebuild,v 1.2 2012/05/05 07:00:19 jdhore Exp $
 
 EAPI=3
 
@@ -26,7 +26,7 @@ RDEPEND="x11-libs/gtk+:2
 	>=dev-python/pygtk-2
 	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	distutils_src_install

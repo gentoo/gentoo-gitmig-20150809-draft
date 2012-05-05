@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.0.0-r1.ebuild,v 1.4 2012/02/10 03:22:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.0.0-r1.ebuild,v 1.5 2012/05/05 07:00:23 jdhore Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="dev-python/pygtk
 	dev-libs/protobuf[python]"
 DEPEND="${RDEPEND}
 	dev-lang/swig
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup(){
 	python_set_active_version 2

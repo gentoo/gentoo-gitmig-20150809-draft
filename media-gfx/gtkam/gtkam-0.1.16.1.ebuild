@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.16.1.ebuild,v 1.8 2009/07/09 22:12:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.16.1.ebuild,v 1.9 2012/05/05 07:00:23 jdhore Exp $
 
 inherit autotools eutils gnome2
 
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.0
 		>=gnome-base/libgnomeui-2 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	nls? ( >=sys-devel/gettext-0.14.1 )"
 

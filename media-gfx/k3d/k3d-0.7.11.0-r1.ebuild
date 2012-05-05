@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.8 2011/03/29 06:20:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.9 2012/05/05 07:00:24 jdhore Exp $
 
 EAPI="2"
 
@@ -44,7 +44,7 @@ RDEPEND="
 	tiff? ( media-libs/tiff )
 	truetype? ( >=media-libs/freetype-2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${MY_P}"

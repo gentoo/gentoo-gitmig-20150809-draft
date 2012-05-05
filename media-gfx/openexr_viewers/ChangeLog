@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/openexr_viewers
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/ChangeLog,v 1.27 2011/03/20 20:14:06 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/ChangeLog,v 1.28 2012/05/05 07:00:23 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> openexr_viewers-1.0.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> openexr_viewers-1.0.2.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gpicview
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.17 2011/07/26 08:05:52 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.18 2012/05/05 07:00:20 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gpicview-0.2.1.ebuild,
+  gpicview-0.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gpicview-0.2.2 (26 Jul 2011)
 

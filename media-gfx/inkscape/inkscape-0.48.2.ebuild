@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.2.ebuild,v 1.11 2011/11/14 11:33:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.2.ebuild,v 1.12 2012/05/05 07:00:26 jdhore Exp $
 
 EAPI=4
 inherit eutils flag-o-matic autotools gnome2
@@ -63,7 +63,7 @@ RDEPEND="
 DEPEND="${COMMON_DEPEND}
 	dev-libs/boost
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-libs/libX11
 	>=dev-util/intltool-0.29"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.2.4.ebuild,v 1.3 2012/03/15 20:39:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.2.4.ebuild,v 1.4 2012/05/05 07:00:23 jdhore Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	!<media-gfx/pqiv-0.11
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/gnome-scan-0.7.2.ebuild,v 1.5 2012/03/12 00:13:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/gnome-scan-0.7.2.ebuild,v 1.6 2012/05/05 07:00:24 jdhore Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	gnome-base/gnome-common
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.7 )"
 # eautoreconf requires gnome-base/gnome-common
 

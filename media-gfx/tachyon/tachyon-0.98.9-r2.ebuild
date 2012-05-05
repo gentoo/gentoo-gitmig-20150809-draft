@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r2.ebuild,v 1.2 2012/03/24 16:12:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r2.ebuild,v 1.3 2012/05/05 07:00:19 jdhore Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ CDEPEND="jpeg? ( virtual/jpeg )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}"
 
 REQUIRED_USE="^^ ( opengl mpi )"

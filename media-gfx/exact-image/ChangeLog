@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exact-image
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/ChangeLog,v 1.7 2011/09/17 16:06:43 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/ChangeLog,v 1.8 2012/05/05 07:00:23 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> exact-image-0.8.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   17 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> exact-image-0.8.1.ebuild,
   +files/exact-image-0.8.1-libpng15.patch:

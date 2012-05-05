@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r2.ebuild,v 1.7 2012/01/18 19:18:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r2.ebuild,v 1.8 2012/05/05 07:00:24 jdhore Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -19,7 +19,7 @@ RDEPEND="media-libs/libpng
 	exif? ( media-gfx/exiv2 )
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${P/_/}

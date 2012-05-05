@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.3.4.ebuild,v 1.4 2012/02/10 12:19:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.3.4.ebuild,v 1.5 2012/05/05 07:00:18 jdhore Exp $
 
 EAPI=4
 inherit xfconf
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.90
 	>=xfce-base/xfconf-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.9.6.ebuild,v 1.9 2011/03/12 10:11:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.9.6.ebuild,v 1.10 2012/05/05 07:00:25 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 		>x11-libs/gtkglext-1.0.6
 		nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		>=sys-devel/bison-1.875"
 
 src_prepare() {

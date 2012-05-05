@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnome-scan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.10 2012/03/12 00:13:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.11 2012/05/05 07:00:24 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-scan-0.7.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-scan-0.7.2.ebuild:

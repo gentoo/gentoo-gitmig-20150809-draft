@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.14.3.ebuild,v 1.4 2012/04/29 15:55:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.14.3.ebuild,v 1.5 2012/05/05 07:00:18 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -44,7 +44,7 @@ RDEPEND=">=dev-libs/glib-2.28.0:2
 	raw? ( >=media-libs/libopenraw-0.0.8 )
 	!raw? ( media-gfx/dcraw )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
 	app-text/gnome-doc-utils

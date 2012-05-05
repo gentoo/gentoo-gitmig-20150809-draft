@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.7.3.ebuild,v 1.4 2012/04/12 04:40:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.7.3.ebuild,v 1.5 2012/05/05 07:00:18 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -52,7 +52,7 @@ RDEPEND=">=dev-libs/glib-2.28.1:2
 	x11-libs/libXcursor
 	udev? ( sys-fs/udev[gudev] )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.22
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40.1
 	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1 )"

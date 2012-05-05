@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50.ebuild,v 1.9 2010/07/06 10:08:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50.ebuild,v 1.10 2012/05/05 07:00:18 jdhore Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="media-libs/libpng
 	plotutils? ( media-libs/plotutils )"
 #	swf? ( >=media-libs/ming-0.3 )" bug 238803
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e 's:-pedantic ::' -e 's:CXXFLAGS="-g"::' "${S}"/configure.ac

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/rotoscope-0.2.ebuild,v 1.5 2011/03/12 22:00:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/rotoscope-0.2.ebuild,v 1.6 2012/05/05 07:00:26 jdhore Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/libglade-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."

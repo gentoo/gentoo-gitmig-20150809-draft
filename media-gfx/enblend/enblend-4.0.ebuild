@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.11 2012/01/28 04:45:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.12 2012/05/05 07:00:26 jdhore Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ RDEPEND="
 	openexr? ( >=media-libs/openexr-1.0 )"
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.31.0
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? (
 		media-gfx/transfig
 		sci-visualization/gnuplot[gd]
