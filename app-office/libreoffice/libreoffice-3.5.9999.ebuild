@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.40 2012/05/03 20:00:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.41 2012/05/05 14:31:15 scarabeus Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
 
 # Split modules following git/tarballs
 # Core MUST be first!
-MODULES="core binfilter"
+MODULES="core binfilter help"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
@@ -156,8 +156,8 @@ PDEPEND="
 "
 
 # FIXME: cppunit should be moved to test conditional
-#        after everything upstream is under gbuild
-#        as dmake execute tests right away
+#	 after everything upstream is under gbuild
+#	 as dmake execute tests right away
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.46
 	>=dev-libs/libxml2-2.7.8
@@ -323,10 +323,10 @@ src_configure() {
 	[[ -z ${jbs} ]] && jbs="1"
 
 	# sane: just sane.h header that is used for scan in writer, not
-	#       linked or anything else, worthless to depend on
+	#	linked or anything else, worthless to depend on
 	# vigra: just uses templates from there
-	#        it is serious pain in the ass for packaging
-	#        should be replaced by boost::gil if someone interested
+	#	 it is serious pain in the ass for packaging
+	#	 should be replaced by boost::gil if someone interested
 	internal_libs+="
 		--without-system-sane
 		--without-system-vigra
@@ -468,7 +468,23 @@ src_configure() {
 }
 
 src_compile() {
-	# this is not a proper make script and the jobs are passed during configure
+	# hack for offlinehelp, this needs fixing upstream at some point
+	# it is broken because we send --without-help
+	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
+	(
+		 source "${S}/Env.host.sh" 2&> /dev/null
+
+		 local path="${SOLARVER}/${INPATH}/res/img"
+		 mkdir -p "${path}" || die
+
+		 echo "perl \"${S}/helpcontent2/helpers/create_ilst.pl\" -dir=default_images/res/helpimg > \"${path}/helpimg.ilst\""
+		 perl "${S}/helpcontent2/helpers/create_ilst.pl" \
+			  -dir=default_images/res/helpimg \
+			  > "${path}/helpimg.ilst"
+		 [[ -s "${path}/helpimg.ilst" ]] || ewarn "The help images list is empty, something is fishy, report a bug."
+	)
+
+	# not a proper make script
 	make build || die
 }
 
@@ -498,7 +514,7 @@ src_install() {
 	# It is broken because we send --without-help
 	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
 	insinto /usr/$(get_libdir)/libreoffice/help
-	doins xmlhelp/util/main_transform.xsl
+	doins xmlhelp/util/*.xsl
 }
 
 pkg_preinst() {
