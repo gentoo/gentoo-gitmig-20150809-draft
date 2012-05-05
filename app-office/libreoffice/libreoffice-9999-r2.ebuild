@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.64 2012/05/05 14:31:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.65 2012/05/05 15:16:51 scarabeus Exp $
 
 EAPI=4
 
@@ -75,13 +75,12 @@ IUSE="binfilter +branding +cups dbus eds gnome +graphite gstreamer +gtk gtk3
 jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba +webdav
 +xmlsec"
 
-LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript"
+LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unneeded extension (just can be separate package:
 # google-docs ; barcode ; diagram ; hunart ; numbertext ; oooblogger ; typo ;
 # validator ; watch-window ; ct2n (requres two patches from lo tree -> repack)
 # Extensions that need extra work:
 # report-builder: missing java packages
-# wiki-publisher: missing java packages
 for lo_xt in ${LO_EXTS}; do
 	IUSE+=" libreoffice_extensions_${lo_xt}"
 done
@@ -150,6 +149,13 @@ COMMON_DEPEND="
 	jemalloc? ( dev-libs/jemalloc )
 	libreoffice_extensions_pdfimport? ( >=app-text/poppler-0.16[xpdf-headers,cxx] )
 	libreoffice_extensions_scripting-beanshell? ( >=dev-java/bsh-2.0_beta4 )
+	libreoffice_extensions_wiki-publisher? (
+		dev-java/commons-codec:0
+		dev-java/commons-httpclient:3
+		dev-java/commons-lang:2.1
+		dev-java/commons-logging:0
+		dev-java/tomcat-servlet-api:3.0
+	)
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	opengl? ( virtual/opengl )
 	postgres? ( >=dev-db/postgresql-base-8.4.0 )
@@ -223,6 +229,7 @@ REQUIRED_USE="
 	libreoffice_extensions_nlpsolver? ( java )
 	libreoffice_extensions_scripting-beanshell? ( java )
 	libreoffice_extensions_scripting-javascript? ( java )
+	libreoffice_extensions_wiki-publisher? ( java )
 "
 
 S="${WORKDIR}/${PN}-core-${PV}"
@@ -370,6 +377,15 @@ src_configure() {
 
 		use libreoffice_extensions_scripting-beanshell && \
 			java_opts+=" --with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar)"
+
+		if use libreoffice_extensions_wiki-publisher; then
+			java_opts+="
+				--with-commons-codec-jar=$(java-pkg_getjar commons-codec commons-codec.jar)
+				--with-commons-httpclient-jar=$(java-pkg_getjar commons-httpclient-3 commons-httpclient.jar)
+				--with-commons-lang-jar=$(java-pkg_getjar commons-lang-2.1 commons-lang.jar)
+				--with-servlet-api-jar=$(java-pkg_getjar tomcat-servlet-api-3.0 servlet-api.jar)
+			"
+		fi
 
 		if use test; then
 			java_opts+=" --with-junit=$(java-pkg_getjar junit-4 junit.jar)"
