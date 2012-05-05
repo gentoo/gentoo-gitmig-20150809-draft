@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.8 2012/05/04 15:59:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.9 2012/05/05 17:59:18 jdhore Exp $
+
+*pkgconf-0.5.2 (05 May 2012)
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> +pkgconf-0.5.2.ebuild,
+  -pkgconf-0.5.1.ebuild:
+  Version bump. Fixes an argv splitting bug that can affect some packages (like
+  audacious).
 
   04 May 2012; Alexis Ballier <aballier@gentoo.org> pkgconf-0.5.1.ebuild,
   pkgconf-9999.ebuild:
