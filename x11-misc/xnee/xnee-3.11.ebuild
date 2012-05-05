@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.11.ebuild,v 1.1 2011/12/23 02:46:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.11.ebuild,v 1.2 2012/05/05 04:53:50 jdhore Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	x11-proto/inputproto
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	gnome? ( || ( media-gfx/imagemagick[jpeg,png]
 		media-gfx/graphicsmagick[imagemagick,jpeg,png] ) )"

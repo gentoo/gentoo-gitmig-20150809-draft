@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.7.4.ebuild,v 1.1 2011/11/20 13:11:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.7.4.ebuild,v 1.2 2012/05/05 04:53:51 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/libwnck:1
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog README )
 

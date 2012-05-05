@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spnavcfg/spnavcfg-0.2.1.ebuild,v 1.1 2012/02/06 20:17:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spnavcfg/spnavcfg-0.2.1.ebuild,v 1.2 2012/05/05 04:53:42 jdhore Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 COMMON_DEPEND="x11-libs/gtk+:2"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	app-misc/spacenavd[X]"
 

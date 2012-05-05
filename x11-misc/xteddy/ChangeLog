@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xteddy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.8 2012/03/09 10:56:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.9 2012/05/05 04:53:52 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> xteddy-2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xteddy-2.2.ebuild:
   x86 stable wrt bug #404899

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wmctrl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.16 2011/12/11 09:02:45 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.17 2012/05/05 04:53:43 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmctrl-1.07.ebuild,
+  wmctrl-1.07-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wmctrl-1.07-r1.ebuild:
   x86 stable wrt bug #392811

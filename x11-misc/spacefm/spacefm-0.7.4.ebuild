@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.4.ebuild,v 1.4 2012/04/17 14:32:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.4.ebuild,v 1.5 2012/05/05 04:53:44 jdhore Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -27,7 +27,7 @@ RDEPEND="dev-libs/glib:2
 	!kernel_linux? ( virtual/fam )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_configure() {

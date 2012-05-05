@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20051202.ebuild,v 1.3 2011/03/02 18:02:18 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/sisctrl-0.0.20051202.ebuild,v 1.4 2012/05/05 04:53:42 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/glib:2
 	 x11-libs/libXv
 	 x11-libs/libXxf86vm
 	 x11-proto/xf86vidmodeproto"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 src_prepare() {

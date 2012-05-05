@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.6.2.ebuild,v 1.8 2011/03/02 17:09:35 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.6.2.ebuild,v 1.9 2012/05/05 04:53:42 jdhore Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

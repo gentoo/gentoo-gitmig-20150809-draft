@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/growl-for-linux/growl-for-linux-0.1.ebuild,v 1.2 2012/04/23 20:36:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/growl-for-linux/growl-for-linux-0.1.ebuild,v 1.3 2012/05/05 04:53:48 jdhore Exp $
 
 EAPI=3
 inherit multilib
@@ -22,7 +22,7 @@ RDEPEND="dev-db/sqlite:3
 	net-misc/curl
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf --disable-static

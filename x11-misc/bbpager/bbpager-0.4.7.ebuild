@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/bbpager-0.4.7.ebuild,v 1.5 2011/01/14 15:07:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/bbpager-0.4.7.ebuild,v 1.6 2012/05/05 04:53:54 jdhore Exp $
 
 inherit base autotools
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="x11-wm/blackbox"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=(
 		"${FILESDIR}/${P}-gcc43.patch"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.71 2012/05/03 03:53:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.72 2012/05/05 04:53:51 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> xpad-4.0.ebuild,
+  xpad-4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   03 May 2012; Jeroen Roovers <jer@gentoo.org> xpad-4.1.ebuild,
   +files/xpad-4.1-glib_includes.patch:

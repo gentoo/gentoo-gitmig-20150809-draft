@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.1.ebuild,v 1.2 2012/05/03 03:53:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.1.ebuild,v 1.3 2012/05/05 04:53:51 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -24,7 +24,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	>=dev-util/intltool-0.31
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 "
 

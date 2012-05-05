@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.1.9.ebuild,v 1.2 2012/03/28 22:57:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.1.9.ebuild,v 1.3 2012/05/05 04:53:53 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/glib:2
 	sys-apps/accountsservice"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	gnome-base/gnome-common
 	sys-devel/gettext
 	dev-util/gtk-doc-am"

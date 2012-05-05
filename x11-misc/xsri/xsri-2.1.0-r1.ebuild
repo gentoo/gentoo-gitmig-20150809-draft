@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/xsri-2.1.0-r1.ebuild,v 1.10 2011/05/17 10:19:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/xsri-2.1.0-r1.ebuild,v 1.11 2012/05/05 04:53:50 jdhore Exp $
 
 EAPI=2
 inherit autotools rpm
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e '/-DG.*_DISABLE_DEPRECATED/d' Makefile.am || die

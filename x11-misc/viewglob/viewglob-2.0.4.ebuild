@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.8 2011/12/27 21:08:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.9 2012/05/05 04:53:54 jdhore Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ RDEPEND="
 	x11-libs/gtk+:2
 	|| ( app-shells/bash app-shells/zsh )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die

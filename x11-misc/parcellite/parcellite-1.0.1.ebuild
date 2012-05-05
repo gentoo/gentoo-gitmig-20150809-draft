@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.0.1.ebuild,v 1.1 2011/03/13 20:52:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.0.1.ebuild,v 1.2 2012/05/05 04:53:44 jdhore Exp $
 
 EAPI=2
 inherit fdo-mime autotools
@@ -17,7 +17,7 @@ IUSE="nls"
 RDEPEND=">=x11-libs/gtk+-2.10:2
 	>=dev-libs/glib-2.14:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext
 		dev-util/intltool )"
 

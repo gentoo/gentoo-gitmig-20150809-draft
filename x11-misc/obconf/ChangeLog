@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.96 2012/03/10 16:28:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.97 2012/05/05 04:53:41 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> obconf-2.0.3.ebuild,
+  obconf-2.0.3-r1.ebuild, obconf-2.0.3_p20110314.ebuild,
+  obconf-2.0.3_p20110314-r1.ebuild, obconf-2.0.3_p20111019.ebuild,
+  obconf-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org>
   obconf-2.0.3_p20110314-r1.ebuild:

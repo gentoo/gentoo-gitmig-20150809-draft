@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.14 2011/12/04 09:58:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.15 2012/05/05 04:53:46 jdhore Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/freedesktop-icon-theme"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {

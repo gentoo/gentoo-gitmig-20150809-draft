@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.39.ebuild,v 1.1 2012/05/03 15:30:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.39.ebuild,v 1.2 2012/05/05 04:53:43 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic pam
@@ -36,7 +36,7 @@ RDEPEND="
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xineramaproto"
 
 MAKEOPTS="${MAKEOPTS} -j1"

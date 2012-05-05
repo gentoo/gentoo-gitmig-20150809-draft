@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/gromit-20041213-r1.ebuild,v 1.5 2012/01/09 22:05:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/gromit-20041213-r1.ebuild,v 1.6 2012/05/05 04:53:40 jdhore Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i Makefile \

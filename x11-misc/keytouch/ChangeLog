@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/keytouch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.22 2011/11/17 19:04:18 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.23 2012/05/05 04:53:46 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> keytouch-2.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Change developer's email

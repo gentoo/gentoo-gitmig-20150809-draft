@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-6.1.ebuild,v 1.7 2010/12/05 18:10:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-6.1.ebuild,v 1.8 2012/05/05 04:53:39 jdhore Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die

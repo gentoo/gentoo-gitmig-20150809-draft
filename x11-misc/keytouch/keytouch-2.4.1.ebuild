@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.1.ebuild,v 1.6 2011/10/28 01:05:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.1.ebuild,v 1.7 2012/05/05 04:53:46 jdhore Exp $
 
 EAPI=2
 inherit eutils linux-info
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/gtk+:2
 	gnome-base/gnome-menus:0
 	media-libs/alsa-lib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/inputproto
 	x11-proto/xextproto
 	x11-proto/xproto"

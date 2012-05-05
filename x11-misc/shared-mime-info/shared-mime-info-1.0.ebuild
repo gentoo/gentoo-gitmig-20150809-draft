@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-1.0.ebuild,v 1.6 2012/04/26 14:13:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-1.0.ebuild,v 1.7 2012/05/05 04:53:49 jdhore Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( ChangeLog HACKING NEWS README )

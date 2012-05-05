@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/xteddy-2.2.ebuild,v 1.2 2012/03/09 10:56:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/xteddy-2.2.ebuild,v 1.3 2012/05/05 04:53:52 jdhore Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND="media-libs/imlib2
 	x11-libs/libX11
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS README ChangeLog NEWS xteddy.README )
 

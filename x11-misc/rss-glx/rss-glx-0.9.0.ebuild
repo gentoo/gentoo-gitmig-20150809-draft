@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.0.ebuild,v 1.5 2009/10/10 15:45:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.0.ebuild,v 1.6 2012/05/05 04:53:51 jdhore Exp $
 
 EAPI=2
 inherit autotools multilib
@@ -26,7 +26,7 @@ RDEPEND="x11-libs/libX11
 	openal? ( >=media-libs/freealut-1.1.0-r1 )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/sed"
 
 S=${WORKDIR}/${MY_P}

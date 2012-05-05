@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.4.1.ebuild,v 1.5 2011/05/19 22:23:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.4.1.ebuild,v 1.6 2012/05/05 04:53:53 jdhore Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	>=dev-libs/glib-2.16:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS=( AUTHORS ChangeLog NEWS README TODO )

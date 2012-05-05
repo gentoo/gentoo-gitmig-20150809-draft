@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.3-r1.ebuild,v 1.7 2012/02/05 17:53:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.3-r1.ebuild,v 1.8 2012/05/05 04:53:41 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -18,7 +18,7 @@ RDEPEND="dev-libs/glib
 	x11-libs/gtk+:2
 	x11-libs/gdk-pixbuf"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {

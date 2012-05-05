@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-3.2.9.ebuild,v 1.6 2012/04/09 21:35:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-3.2.9.ebuild,v 1.7 2012/05/05 04:53:50 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.10
 	x11-libs/c++-gtk-utils:3
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 DOCS="AUTHORS BUGS ChangeLog README"

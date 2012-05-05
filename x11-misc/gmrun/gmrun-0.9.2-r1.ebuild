@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/gmrun-0.9.2-r1.ebuild,v 1.7 2012/03/18 15:46:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gmrun/gmrun-0.9.2-r1.ebuild,v 1.8 2012/05/05 04:53:53 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -17,7 +17,7 @@ IUSE="elibc_glibc"
 RDEPEND="x11-libs/gtk+:2
 	dev-libs/popt"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/sed
 	elibc_glibc? ( >=sys-libs/glibc-2.10 )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/oroborus-desklaunch/oroborus-desklaunch-1.1.8.ebuild,v 1.1 2011/11/06 10:50:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/oroborus-desklaunch/oroborus-desklaunch-1.1.8.ebuild,v 1.2 2012/05/05 04:53:49 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	!x11-wm/oroborus-extras"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 DOCS=( README debian/changelog debian/example_rc )

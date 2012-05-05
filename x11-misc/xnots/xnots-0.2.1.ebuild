@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/xnots-0.2.1.ebuild,v 1.4 2010/05/18 17:28:58 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/xnots-0.2.1.ebuild,v 1.5 2012/05/05 04:53:46 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/pango[X]"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/renderproto
 	x11-proto/randrproto"

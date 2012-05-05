@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/grsync-1.2.1.ebuild,v 1.1 2012/02/09 22:05:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/grsync-1.2.1.ebuild,v 1.2 2012/05/05 04:53:41 jdhore Exp $
 
 EAPI=4
 inherit gnome2
@@ -17,7 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.16:2
 	net-misc/rsync"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 DOCS="AUTHORS NEWS README"

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtk2fontsel/gtk2fontsel-0.1.ebuild,v 1.1 2010/07/21 19:20:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtk2fontsel/gtk2fontsel-0.1.ebuild,v 1.2 2012/05/05 04:53:52 jdhore Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die

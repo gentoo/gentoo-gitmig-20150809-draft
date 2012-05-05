@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.6-r1.ebuild,v 1.5 2012/03/18 15:51:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.6-r1.ebuild,v 1.6 2012/05/05 04:53:48 jdhore Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	x11-libs/libXpm
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch

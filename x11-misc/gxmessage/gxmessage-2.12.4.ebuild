@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.12.4.ebuild,v 1.1 2010/02/10 11:22:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.12.4.ebuild,v 1.2 2012/05/05 04:53:42 jdhore Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( >=dev-util/intltool-0.40
 		sys-devel/gettext )"
 

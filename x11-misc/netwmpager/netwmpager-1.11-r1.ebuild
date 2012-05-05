@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-1.11-r1.ebuild,v 1.6 2011/12/13 22:48:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-1.11-r1.ebuild,v 1.7 2012/05/05 04:53:42 jdhore Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXdmcp
 	x11-libs/libXau"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto"
 
 src_unpack() {

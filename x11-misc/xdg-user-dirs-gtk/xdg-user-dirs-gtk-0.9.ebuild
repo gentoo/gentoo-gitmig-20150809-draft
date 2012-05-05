@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.9.ebuild,v 1.2 2012/04/23 19:45:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.9.ebuild,v 1.3 2012/05/05 04:53:47 jdhore Exp $
 
 EAPI=4
 inherit gnome.org
@@ -17,7 +17,7 @@ RDEPEND=">=x11-misc/xdg-user-dirs-0.13
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

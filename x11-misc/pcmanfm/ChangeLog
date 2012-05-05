@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.76 2012/04/14 19:25:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.77 2012/05/05 04:53:46 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> pcmanfm-0.9.7-r2.ebuild,
+  pcmanfm-0.9.9_pre20110422.ebuild, pcmanfm-0.9.9_pre20110614.ebuild,
+  pcmanfm-0.9.9.ebuild, pcmanfm-0.9.10.ebuild, pcmanfm-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> pcmanfm-0.9.10.ebuild:
   Add ~amd64-linux keyword.

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4b-r3.ebuild,v 1.4 2011/12/18 20:20:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4b-r3.ebuild,v 1.5 2012/05/05 04:53:53 jdhore Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	x11-libs/libwnck:1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-stdlib.patch \

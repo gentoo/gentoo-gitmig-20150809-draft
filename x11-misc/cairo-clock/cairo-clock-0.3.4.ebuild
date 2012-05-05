@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/cairo-clock-0.3.4.ebuild,v 1.1 2011/11/12 15:19:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/cairo-clock-0.3.4.ebuild,v 1.2 2012/05/05 04:53:53 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.8
 	>=x11-libs/pango-1.10"
 DEPEND="${DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( AUTHORS NEWS README TODO )

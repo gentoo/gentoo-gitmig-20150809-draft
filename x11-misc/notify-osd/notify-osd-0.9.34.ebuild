@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/notify-osd-0.9.34.ebuild,v 1.2 2012/04/10 08:51:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/notify-osd-0.9.34.ebuild,v 1.3 2012/05/05 04:53:41 jdhore Exp $
 
 EAPI=4
 inherit autotools gnome2-utils multilib savedconfig
@@ -26,7 +26,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 RDEPEND="${COMMON_DEPEND}
 	!minimal? ( x11-themes/notify-osd-icons )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	gnome-base/gnome-common
 	x11-proto/xproto"
 

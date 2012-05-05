@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0_pre20120330.ebuild,v 1.1 2012/03/30 15:55:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0_pre20120330.ebuild,v 1.2 2012/05/05 04:53:45 jdhore Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-apps/xprop
 	x11-apps/xwininfo"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto"
 
 pkg_setup() {

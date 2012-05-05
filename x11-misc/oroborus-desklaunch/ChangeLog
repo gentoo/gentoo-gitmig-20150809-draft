@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/oroborus-desklaunch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/oroborus-desklaunch/ChangeLog,v 1.2 2011/11/06 10:50:34 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/oroborus-desklaunch/ChangeLog,v 1.3 2012/05/05 04:53:49 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  oroborus-desklaunch-1.1.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *oroborus-desklaunch-1.1.8 (06 Nov 2011)
 

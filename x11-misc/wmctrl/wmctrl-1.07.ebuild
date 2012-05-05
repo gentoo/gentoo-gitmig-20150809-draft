@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/wmctrl-1.07.ebuild,v 1.7 2006/10/28 22:24:01 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/wmctrl-1.07.ebuild,v 1.8 2012/05/05 04:53:43 jdhore Exp $
 
 DESCRIPTION="command line tool to interact with an EWMH/NetWM compatible X Window Manager"
 HOMEPAGE="http://sweb.cz/tripie/utils/wmctrl/"
@@ -16,7 +16,7 @@ RDEPEND=">=dev-libs/glib-2
 	x11-libs/libXt
 	x11-libs/libXmu"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto"
 
 src_install () {

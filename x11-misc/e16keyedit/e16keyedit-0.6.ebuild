@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.6.ebuild,v 1.5 2010/10/25 17:53:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/e16keyedit-0.6.ebuild,v 1.6 2012/05/05 04:53:48 jdhore Exp $
 
 DESCRIPTION="Key binding editor for enlightenment 16"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND="=x11-libs/gtk+-2*"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf --enable-gtk2 || die

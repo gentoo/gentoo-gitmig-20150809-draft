@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wininfo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/ChangeLog,v 1.13 2011/03/02 19:06:36 signals Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/ChangeLog,v 1.14 2012/05/05 04:53:45 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wininfo-0.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org> wininfo-0.7.ebuild:
   Slotted gtk+ depend and EAPI=2 bump to support it.

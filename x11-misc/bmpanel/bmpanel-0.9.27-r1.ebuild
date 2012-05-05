@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/bmpanel-0.9.27-r1.ebuild,v 1.3 2010/10/06 20:17:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/bmpanel-0.9.27-r1.ebuild,v 1.4 2012/05/05 04:53:46 jdhore Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ RDEPEND=">=media-libs/imlib2-1.4.0
 	libev? ( dev-libs/libev )
 	libevent? ( dev-libs/libevent )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}/Makefile.patch"

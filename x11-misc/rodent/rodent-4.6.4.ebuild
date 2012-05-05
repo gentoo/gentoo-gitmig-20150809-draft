@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/rodent-4.6.4.ebuild,v 1.2 2011/05/31 14:30:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/rodent-4.6.4.ebuild,v 1.3 2012/05/05 04:53:43 jdhore Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( ChangeLog README TODO )
 

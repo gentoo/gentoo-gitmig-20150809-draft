@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.15.ebuild,v 1.8 2012/01/18 21:07:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.15.ebuild,v 1.9 2012/05/05 04:53:45 jdhore Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.17
 	doc? (
 		app-text/docbook-xml-dtd:4.1.2

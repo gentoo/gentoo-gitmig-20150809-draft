@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.1.ebuild,v 1.6 2010/10/14 18:38:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.1.ebuild,v 1.7 2012/05/05 04:53:51 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -27,7 +27,7 @@ RDEPEND="x11-libs/libX11
 	quesoglc? ( media-libs/quesoglc )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/sed"
 
 S=${WORKDIR}/${MY_P}

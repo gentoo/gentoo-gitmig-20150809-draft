@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.12.4.ebuild,v 1.9 2012/02/05 02:02:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.12.4.ebuild,v 1.10 2012/05/05 04:53:41 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -26,7 +26,7 @@ RDEPEND="${common_depends}
 DEPEND="${common_depends}
 	sys-devel/gettext
 	>=dev-util/intltool-0.40.0
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

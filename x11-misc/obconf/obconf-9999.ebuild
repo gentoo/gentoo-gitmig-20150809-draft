@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-9999.ebuild,v 1.12 2012/03/02 21:01:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-9999.ebuild,v 1.13 2012/05/05 04:53:41 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="gnome-base/libglade:2.0
 	=x11-wm/openbox-9999"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	eautopoint

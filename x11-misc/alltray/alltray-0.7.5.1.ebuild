@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.7.5.1.ebuild,v 1.5 2012/04/16 21:40:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.7.5.1.ebuild,v 1.6 2012/05/05 04:53:51 jdhore Exp $
 
 EAPI=4
 inherit autotools
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libwnck:1"
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.14
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

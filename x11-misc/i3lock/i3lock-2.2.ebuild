@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/i3lock-2.2.ebuild,v 1.4 2012/03/24 17:37:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/i3lock-2.2.ebuild,v 1.5 2012/05/05 04:53:40 jdhore Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/pam
 	x11-libs/xcb-util-image
 	cairo? ( x11-libs/cairo[xcb] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 DOCS=( README )
 
 pkg_setup() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4-r1.ebuild,v 1.4 2011/03/28 18:44:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4-r1.ebuild,v 1.5 2012/05/05 04:53:45 jdhore Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -19,7 +19,7 @@ RDEPEND="dev-cpp/gtkmm:2.4
 	x11-libs/gtk+:2
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	xinerama? ( x11-proto/xineramaproto )"
 
 src_prepare () {

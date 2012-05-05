@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.3.1.ebuild,v 1.7 2010/07/08 08:26:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.3.1.ebuild,v 1.8 2012/05/05 04:53:52 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -16,7 +16,7 @@ IUSE="doc examples nls"
 
 RDEPEND=">=x11-libs/gtk+-2.2:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${P/x/X}

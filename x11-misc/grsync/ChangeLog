@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/grsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.29 2012/02/16 19:33:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.30 2012/05/05 04:53:41 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> grsync-0.9.2.ebuild,
+  grsync-1.1.1.ebuild, grsync-1.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> grsync-1.1.1.ebuild:
   x86 stable wrt bug #397269

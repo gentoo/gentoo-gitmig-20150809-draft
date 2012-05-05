@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.0.ebuild,v 1.6 2010/07/18 11:08:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.0.ebuild,v 1.7 2012/05/05 04:53:51 jdhore Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.12:2"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {

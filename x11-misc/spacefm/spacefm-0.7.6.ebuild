@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.6.ebuild,v 1.1 2012/04/21 21:35:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.6.ebuild,v 1.2 2012/05/05 04:53:44 jdhore Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="dev-libs/glib:2
 	x11-misc/shared-mime-info"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_configure() {

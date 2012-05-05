@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3.ebuild,v 1.11 2011/03/29 13:05:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3.ebuild,v 1.12 2012/05/05 04:53:41 jdhore Exp $
 
 EAPI=1
 inherit fdo-mime
@@ -20,7 +20,7 @@ RDEPEND="gnome-base/libglade:2.0
 	>=x11-wm/openbox-3.4.2
 	nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf \

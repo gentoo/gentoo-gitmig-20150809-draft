@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.70.ebuild,v 1.7 2011/04/09 07:44:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.70.ebuild,v 1.8 2012/05/05 04:53:47 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	>=sys-apps/lm_sensors-3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gtk220.patch

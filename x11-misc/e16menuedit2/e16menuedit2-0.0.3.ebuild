@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/e16menuedit2-0.0.3.ebuild,v 1.9 2010/01/17 21:07:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/e16menuedit2-0.0.3.ebuild,v 1.10 2012/05/05 04:53:52 jdhore Exp $
 
 inherit gnome2 eutils
 
@@ -17,7 +17,7 @@ RDEPEND=">=x11-wm/enlightenment-0.16
 	>=gnome-base/libglade-2.4
 	=x11-libs/gtk+-2*"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	gnome2_src_unpack

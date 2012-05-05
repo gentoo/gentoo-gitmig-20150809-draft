@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/electricsheep
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.51 2011/12/15 12:16:01 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.52 2012/05/05 04:53:45 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  electricsheep-2.7_beta11.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Dec 2011; Alexis Ballier <aballier@gentoo.org>
   electricsheep-2.7_beta11.ebuild, +files/electricsheep-ffmpeg.patch:

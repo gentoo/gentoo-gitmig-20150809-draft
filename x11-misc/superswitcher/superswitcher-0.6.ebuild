@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.6 2011/03/21 22:37:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.7 2012/05/05 04:53:46 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/dbus-glib
 	x11-libs/libXinerama
 	x11-libs/libXrender"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	gnome-base/gnome-common"
 
 src_prepare() {

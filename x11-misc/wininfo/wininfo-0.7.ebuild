@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/wininfo-0.7.ebuild,v 1.14 2011/03/02 19:06:36 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/wininfo-0.7.ebuild,v 1.15 2012/05/05 04:53:45 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXres
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-desktop-entry.patch

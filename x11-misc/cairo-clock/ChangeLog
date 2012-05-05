@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/cairo-clock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.11 2011/11/12 15:19:14 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.12 2012/05/05 04:53:53 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> cairo-clock-0.3.3.ebuild,
+  cairo-clock-0.3.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *cairo-clock-0.3.4 (12 Nov 2011)
 

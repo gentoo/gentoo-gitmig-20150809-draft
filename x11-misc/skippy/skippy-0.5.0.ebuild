@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.14 2010/02/06 20:52:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.15 2012/05/05 04:53:46 jdhore Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -23,7 +23,7 @@ RDEPEND="media-libs/imlib2[X]
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xineramaproto
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-pointer-size.patch \

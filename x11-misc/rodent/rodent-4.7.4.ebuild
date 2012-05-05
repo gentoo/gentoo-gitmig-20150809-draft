@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/rodent-4.7.4.ebuild,v 1.1 2012/02/20 11:42:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/rodent-4.7.4.ebuild,v 1.2 2012/05/05 04:53:43 jdhore Exp $
 
 EAPI=4
 inherit xfconf
@@ -27,7 +27,7 @@ RDEPEND="${COMMON_DEPEND}
 	gnome-base/gvfs"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS=( ChangeLog README TODO )

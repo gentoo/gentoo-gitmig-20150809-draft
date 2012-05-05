@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ftmenu-0.4.0.ebuild,v 1.2 2011/03/29 13:01:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ftmenu-0.4.0.ebuild,v 1.3 2012/05/05 04:53:47 jdhore Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE=""
 COMMON_DEPEND=">=x11-libs/gtk+-2.6:2
 	>=dev-libs/glib-2.6:2"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	x11-wm/fluxbox"
 

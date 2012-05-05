@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fme/fme-1.1.2.ebuild,v 1.3 2011/03/29 06:13:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fme/fme-1.1.2.ebuild,v 1.4 2012/05/05 04:53:49 jdhore Exp $
 
 EAPI=2
 inherit eutils
@@ -20,7 +20,7 @@ RDEPEND="sys-devel/bc
 	>=dev-cpp/glibmm-2.14.0:2
 	>=dev-cpp/libglademm-2.4:2.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc45.patch
