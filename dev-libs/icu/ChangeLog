@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.180 2012/04/07 01:32:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.181 2012/05/05 17:06:27 hwoarang Exp $
+
+  05 May 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  remove neurogeek add proxy-maintainers
 
 *icu-49.1.1 (07 Apr 2012)
 
