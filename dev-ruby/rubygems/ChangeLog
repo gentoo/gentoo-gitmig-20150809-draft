@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.187 2012/04/22 09:28:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.188 2012/05/05 06:35:15 graaff Exp $
+
+  05 May 2012; Hans de Graaff <graaff@gentoo.org> rubygems-1.8.15.ebuild:
+  Backport FEATURES=userpriv guard and drop ruby19 to create stable candidate
+  for bug 348901.
 
   22 Apr 2012; Hans de Graaff <graaff@gentoo.org> rubygems-1.8.23.ebuild:
   Check for userpriv feature before running tests, fixing bug 408951.
