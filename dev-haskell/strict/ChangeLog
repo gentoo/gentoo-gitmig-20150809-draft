@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/strict
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/strict/ChangeLog,v 1.1 2012/05/05 13:14:02 gienah Exp $
+
+*strict-0.3.2 (05 May 2012)
+
+  05 May 2012; Mark Wright <gienah@gentoo.org> +strict-0.3.2.ebuild,
+  +metadata.xml:
+  Add strict for darcs 2.8.0 tests
+
