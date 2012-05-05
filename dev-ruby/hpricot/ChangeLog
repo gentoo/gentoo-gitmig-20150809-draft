@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.36 2012/02/25 13:12:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.37 2012/05/05 08:20:24 graaff Exp $
+
+  05 May 2012; Hans de Graaff <graaff@gentoo.org> -hpricot-0.8.4-r1.ebuild,
+  -hpricot-0.8.5.ebuild:
+  Remove old versions.
 
 *hpricot-0.8.6-r1 (25 Feb 2012)
 
