@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1115.1.ebuild,v 1.2 2012/05/03 06:01:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1123.4.ebuild,v 1.1 2012/05/05 19:06:26 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -107,6 +107,8 @@ src_prepare() {
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
 		chrome/common/zip*.cc || die
+
+	epatch "${FILESDIR}/${PN}-svnversion-r0.patch"
 
 	epatch_user
 
@@ -335,20 +337,10 @@ src_install() {
 
 	doexe out/Release/chromedriver || die
 
-	# Install Native Client files on platforms that support it.
+	doexe out/Release/nacl_helper{,_bootstrap} || die
 	insinto "${CHROMIUM_HOME}"
-	case "$(tc-arch)" in
-		amd64)
-			doexe out/Release/nacl_helper{,_bootstrap} || die
-			doins out/Release/nacl_irt_x86_64.nexe || die
-			doins out/Release/libppGoogleNaClPluginChrome.so || die
-		;;
-		x86)
-			doexe out/Release/nacl_helper{,_bootstrap} || die
-			doins out/Release/nacl_irt_x86_32.nexe || die
-			doins out/Release/libppGoogleNaClPluginChrome.so || die
-		;;
-	esac
+	doins out/Release/nacl_irt_* || die
+	doins out/Release/libppGoogleNaClPluginChrome.so || die
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then
@@ -376,9 +368,7 @@ src_install() {
 	popd
 
 	insinto "${CHROMIUM_HOME}"
-	for x in out/Release/*.pak; do
-		doins "${x}" || die
-	done
+	doins out/Release/*.pak || die
 
 	doins -r out/Release/locales || die
 	doins -r out/Release/resources || die
@@ -386,11 +376,6 @@ src_install() {
 	newman out/Release/chrome.1 chromium${CHROMIUM_SUFFIX}.1 || die
 	newman out/Release/chrome.1 chromium-browser${CHROMIUM_SUFFIX}.1 || die
 
-	# Chromium looks for these in its folder
-	# See media_posix.cc and base_paths_linux.cc
-	# dosym /usr/$(get_libdir)/libavcodec.so.52 "${CHROMIUM_HOME}" || die
-	# dosym /usr/$(get_libdir)/libavformat.so.52 "${CHROMIUM_HOME}" || die
-	# dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
 	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icons and desktop entry.
