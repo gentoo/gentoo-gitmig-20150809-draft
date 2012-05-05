@@ -1,6 +1,9 @@
 # ChangeLog for media-video/hwdecode-demos
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/hwdecode-demos/ChangeLog,v 1.5 2011/04/20 14:35:46 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/hwdecode-demos/ChangeLog,v 1.6 2012/05/05 08:58:59 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> hwdecode-demos-0.9.5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Apr 2011; Alexis Ballier <aballier@gentoo.org>
   hwdecode-demos-0.9.5.ebuild, +files/ffmpeg.patch:

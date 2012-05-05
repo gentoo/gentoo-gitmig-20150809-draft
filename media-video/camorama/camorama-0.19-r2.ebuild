@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/camorama-0.19-r2.ebuild,v 1.5 2012/05/02 20:58:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/camorama-0.19-r2.ebuild,v 1.6 2012/05/05 08:58:53 jdhore Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/gconf-2
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

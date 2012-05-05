@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907.ebuild,v 1.4 2012/04/18 19:54:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907.ebuild,v 1.5 2012/05/05 08:58:52 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -33,7 +33,7 @@ COMMON_DEPEND=">=media-libs/xine-lib-1.1.20
 RDEPEND="${COMMON_DEPEND}
 	gnome-screensaver? ( gnome-extra/gnome-screensaver )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {

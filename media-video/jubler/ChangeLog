@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.45 2012/04/21 08:40:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.46 2012/05/05 08:58:57 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> jubler-4.6.1-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> jubler-4.6.1-r3.ebuild:
   Fix build with new ffmpeg/libav. FIxes bug#409685.

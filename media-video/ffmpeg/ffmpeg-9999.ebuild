@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.88 2012/04/24 13:17:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.89 2012/05/05 08:58:57 jdhore Exp $
 
 EAPI="4"
 
@@ -96,15 +96,15 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
 	doc? ( app-text/texi2html )
-	fontconfig? ( dev-util/pkgconfig )
-	gnutls? ( dev-util/pkgconfig )
-	ieee1394? ( dev-util/pkgconfig )
-	libv4l? ( dev-util/pkgconfig )
+	fontconfig? ( virtual/pkgconfig )
+	gnutls? ( virtual/pkgconfig )
+	ieee1394? ( virtual/pkgconfig )
+	libv4l? ( virtual/pkgconfig )
 	mmx? ( dev-lang/yasm )
-	rtmp? ( dev-util/pkgconfig )
-	schroedinger? ( dev-util/pkgconfig )
+	rtmp? ( virtual/pkgconfig )
+	schroedinger? ( virtual/pkgconfig )
 	test? ( net-misc/wget )
-	truetype? ( dev-util/pkgconfig )
+	truetype? ( virtual/pkgconfig )
 	v4l? ( sys-kernel/linux-headers )
 "
 # faac is license-incompatible with ffmpeg

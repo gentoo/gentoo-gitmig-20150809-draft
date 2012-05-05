@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.5.ebuild,v 1.4 2012/02/21 07:28:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.5.ebuild,v 1.5 2012/05/05 08:58:55 jdhore Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -32,7 +32,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26
 RDEPEND="${COMMON_DEPEND}
 	|| ( >=media-video/mplayer-1.0_rc4_p20100101[ass] media-video/mplayer2[ass] )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS="ChangeLog README DOCS/*.txt DOCS/tech/*.txt"

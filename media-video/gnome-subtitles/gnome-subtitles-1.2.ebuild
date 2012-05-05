@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-1.2.ebuild,v 1.2 2012/04/09 14:50:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-1.2.ebuild,v 1.3 2012/05/05 08:58:58 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-lang/mono-1.1
 	media-libs/gst-plugins-base:0.10"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/gnome-doc-utils"
 
 DOCS="AUTHORS ChangeLog NEWS README"

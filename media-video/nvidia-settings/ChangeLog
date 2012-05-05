@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.114 2012/05/02 17:20:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.115 2012/05/05 08:58:51 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  nvidia-settings-173.14.31.ebuild, nvidia-settings-260.19.29.ebuild,
+  nvidia-settings-275.43.ebuild, nvidia-settings-290.10.ebuild,
+  nvidia-settings-295.20.ebuild, nvidia-settings-295.40.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 May 2012; Agostino Sarubbo <ago@gentoo.org> nvidia-settings-295.20.ebuild:
   Stable for amd64, wrt bug #413439

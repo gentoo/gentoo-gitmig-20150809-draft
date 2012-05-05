@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.55 2012/02/19 10:10:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.56 2012/05/05 08:58:50 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> cheese-2.32.0.ebuild,
+  cheese-3.2.1.ebuild, cheese-3.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> cheese-3.2.2.ebuild:
   Keyworded on alpha, bug #379649

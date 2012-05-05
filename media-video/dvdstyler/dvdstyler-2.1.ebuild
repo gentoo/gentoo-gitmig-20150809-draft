@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.1.ebuild,v 1.3 2011/12/23 11:01:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.1.ebuild,v 1.4 2012/05/05 08:58:59 jdhore Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	app-arch/zip
 	app-text/xmlto
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}

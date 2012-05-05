@@ -1,6 +1,10 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.28 2012/03/25 08:20:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.29 2012/05/05 08:58:54 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> guvcview-1.4.2.ebuild,
+  guvcview-1.5.0.ebuild, guvcview-1.5.1.ebuild, guvcview-1.5.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Tim Harder <radhermit@gentoo.org> -guvcview-1.4.4.ebuild,
   -guvcview-1.5.2.ebuild, -files/guvcview-1.5.2-pulse.patch:

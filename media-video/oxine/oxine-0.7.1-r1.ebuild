@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.7.1-r1.ebuild,v 1.2 2010/11/06 11:48:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.7.1-r1.ebuild,v 1.3 2012/05/05 08:58:50 jdhore Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools
@@ -31,7 +31,7 @@ COMMON_DEPEND="media-libs/xine-lib
 RDEPEND="${COMMON_DEPEND}
 	virtual/eject"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 

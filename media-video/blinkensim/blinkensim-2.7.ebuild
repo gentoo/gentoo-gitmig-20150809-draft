@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/blinkensim-2.7.ebuild,v 1.8 2009/02/18 18:52:07 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/blinkensim-2.7.ebuild,v 1.9 2012/05/05 08:58:57 jdhore Exp $
 
 DESCRIPTION="Graphical Blinkenlights simulator with networking support"
 
@@ -15,7 +15,7 @@ IUSE="aalib gtk directfb"
 # if the config script finds any of the optional library it will try to
 # compile against it
 DEPEND=">=media-libs/blib-1.1.4
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2 )
 	gtk? ( >=x11-libs/gtk+-2.4.4 )
 	directfb? ( >=dev-libs/DirectFB-0.9.20-r1 )"

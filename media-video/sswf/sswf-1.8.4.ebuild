@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/sswf-1.8.4.ebuild,v 1.2 2011/02/26 19:32:16 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/sswf-1.8.4.ebuild,v 1.3 2012/05/05 08:58:59 jdhore Exp $
 
 DESCRIPTION="A C++ Library and a script language tool to create Flash (SWF) movies up to version 8."
 HOMEPAGE="http://sswf.sourceforge.net"
@@ -15,7 +15,7 @@ IUSE="debug doc examples"
 RDEPEND="virtual/jpeg
 	media-libs/freetype"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf --disable-dependency-tracking --disable-docs \

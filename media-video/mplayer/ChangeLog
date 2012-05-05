@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.848 2012/04/08 15:38:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.849 2012/05/05 08:58:52 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  mplayer-1.0_rc4_p20110322-r1.ebuild, mplayer-1.0_rc4_p20120213.ebuild,
+  mplayer-1.0_rc4_p20120405.ebuild, mplayer-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   08 Apr 2012; Raúl Porcel <armin76@gentoo.org>
   mplayer-1.0_rc4_p20120213.ebuild, mplayer-1.0_rc4_p20120405.ebuild:

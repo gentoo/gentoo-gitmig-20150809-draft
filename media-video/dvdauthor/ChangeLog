@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdauthor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.42 2011/10/23 16:17:20 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.43 2012/05/05 08:58:51 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> dvdauthor-0.6.18.ebuild,
+  dvdauthor-0.7.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -dvdauthor-0.6.11.ebuild:
   old

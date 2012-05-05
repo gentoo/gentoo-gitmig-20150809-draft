@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20111218.ebuild,v 1.1 2011/12/19 17:17:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20111218.ebuild,v 1.2 2012/05/05 08:58:56 jdhore Exp $
 
 EAPI=4
 
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	x86? ( || ( ${ASM_DEP} dev-lang/nasm )
 		!<dev-lang/yasm-0.6.2 )
 	x86-fbsd? ( ${ASM_DEP} )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 if [ "${PV#9999}" = "${PV}" ] ; then
 	S=${WORKDIR}/${MY_P}

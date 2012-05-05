@@ -1,6 +1,9 @@
 # ChangeLog for media-video/shrip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/shrip/ChangeLog,v 1.7 2010/04/26 19:20:11 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/shrip/ChangeLog,v 1.8 2012/05/05 08:58:58 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> shrip-0.6.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *shrip-0.6.0 (26 Apr 2010)
 

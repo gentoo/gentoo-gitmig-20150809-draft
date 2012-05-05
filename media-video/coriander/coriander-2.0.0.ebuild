@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0.ebuild,v 1.2 2012/02/14 22:29:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/coriander-2.0.0.ebuild,v 1.3 2012/05/05 08:58:55 jdhore Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ RDEPEND=">=media-libs/libdc1394-2.0.0
 	gnome-base/libgnome
 	gnome-base/orbit"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

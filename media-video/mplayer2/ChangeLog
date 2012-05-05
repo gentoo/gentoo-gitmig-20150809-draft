@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.45 2012/04/29 18:11:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.46 2012/05/05 08:58:53 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> mplayer2-2.0_p20111126.ebuild,
+  mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   So long cdparanoia, you served well. Thanks to Nikoli for the headsup. Fixes

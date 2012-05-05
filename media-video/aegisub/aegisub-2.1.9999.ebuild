@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-2.1.9999.ebuild,v 1.1 2012/02/12 12:31:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-2.1.9999.ebuild,v 1.2 2012/05/05 08:58:56 jdhore Exp $
 
 EAPI="4"
 
@@ -37,7 +37,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	media-gfx/imagemagick
 "
 

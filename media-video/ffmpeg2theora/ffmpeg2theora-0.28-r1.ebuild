@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.28-r1.ebuild,v 1.4 2012/03/08 11:35:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.28-r1.ebuild,v 1.5 2012/05/05 08:58:53 jdhore Exp $
 
 EAPI=4
 inherit eutils scons-utils
@@ -20,7 +20,7 @@ RDEPEND=">=virtual/ffmpeg-0.6.90
 	>=media-libs/libtheora-1.1[encode]
 	kate? ( >=media-libs/libkate-0.3.7 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	myesconsargs=(

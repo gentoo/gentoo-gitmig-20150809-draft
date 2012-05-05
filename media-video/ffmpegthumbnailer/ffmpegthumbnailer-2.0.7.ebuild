@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-2.0.7.ebuild,v 1.7 2012/01/26 13:19:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-2.0.7.ebuild,v 1.8 2012/05/05 08:58:54 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ COMMON_DEPEND="virtual/ffmpeg
 RDEPEND="${COMMON_DEPEND}
 	gtk? ( >=dev-libs/glib-2.14 )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog README )
 

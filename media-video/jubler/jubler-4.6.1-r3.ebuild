@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.7 2012/04/21 08:40:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.8 2012/05/05 08:58:57 jdhore Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps ant-contrib"
@@ -28,7 +28,7 @@ DEPEND=">=virtual/jdk-1.5
 	virtual/ffmpeg
 	app-text/xmlto
 	>=dev-java/jupidator-0.6.0
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_PN}-${PV}

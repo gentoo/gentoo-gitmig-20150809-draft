@@ -1,6 +1,9 @@
 # ChangeLog for media-video/coriander
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.21 2012/02/14 22:29:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.22 2012/05/05 08:58:55 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> coriander-2.0.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Feb 2012; Ulrich Müller <ulm@gentoo.org> coriander-2.0.0.ebuild:
   QA: Fix ebuild header, bug 403707.

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r5.ebuild,v 1.2 2011/02/28 18:12:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r5.ebuild,v 1.3 2012/05/05 08:58:54 jdhore Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -71,7 +71,7 @@ DEPEND="${RDEPEND}
 	app-arch/ncompress
 	x11-proto/xextproto
 	x11-proto/xproto
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.9.ebuild,v 1.1 2012/03/06 05:53:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.9.ebuild,v 1.2 2012/05/05 08:58:58 jdhore Exp $
 
 EAPI=4
 
@@ -19,4 +19,4 @@ RDEPEND=">=media-libs/libquvi-0.4.0
 	>=dev-libs/libpcre-8.02[cxx]"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.ebuild,v 1.8 2011/04/25 21:30:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.ebuild,v 1.9 2012/05/05 08:58:54 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.8
 	>=dev-python/gconf-python-2"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2

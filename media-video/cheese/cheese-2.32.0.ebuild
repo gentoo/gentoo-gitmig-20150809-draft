@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.13 2011/09/10 17:25:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.14 2012/05/05 08:58:50 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -42,7 +42,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=media-plugins/gst-plugins-xvideo-0.10:0.10 )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
 	x11-proto/xf86vidmodeproto

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.51.ebuild,v 1.3 2012/04/07 11:42:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.51.ebuild,v 1.4 2012/05/05 08:58:53 jdhore Exp $
 
 EAPI="4"
 WX_GTK_VER="2.8"
@@ -21,7 +21,7 @@ RDEPEND="sys-libs/zlib
 	~media-libs/lib${P}[curl=,mms=]
 	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 

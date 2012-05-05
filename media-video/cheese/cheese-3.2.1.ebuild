@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.2.1.ebuild,v 1.1 2011/11/04 21:52:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.2.1.ebuild,v 1.2 2012/05/05 08:58:50 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -55,7 +55,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-lang/vala-0.11.6:0.12
 	>=app-text/gnome-doc-utils-0.20
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xf86vidmodeproto
 	app-text/docbook-xml-dtd:4.3
 	doc? ( >=dev-util/gtk-doc-1.14 )"

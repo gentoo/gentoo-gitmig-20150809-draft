@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7.ebuild,v 1.9 2012/04/17 15:11:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7.ebuild,v 1.10 2012/05/05 08:58:57 jdhore Exp $
 
 EAPI=4
 inherit eutils libtool multilib
@@ -44,7 +44,7 @@ RDEPEND="
 
 DEPEND="
 	${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	v4l? ( >=sys-kernel/linux-headers-2.6.11 )
 	"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.0-r2.ebuild,v 1.1 2012/04/08 11:33:36 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.0-r2.ebuild,v 1.2 2012/05/05 08:58:54 jdhore Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	mmx? ( dev-lang/nasm )
 	>=sys-apps/sed-4
 	sys-apps/gawk
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${P/_rc*}"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/luvcview/luvcview-0.2.6.ebuild,v 1.1 2011/03/28 03:25:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/luvcview/luvcview-0.2.6.ebuild,v 1.2 2012/05/05 08:58:51 jdhore Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND="media-libs/libsdl
 	media-libs/libv4l"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	EPATCH_OPTS="-p1" epatch "${WORKDIR}"/${PN}_${PV}-${PATCH_LEVEL}.diff

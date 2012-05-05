@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.4.2.ebuild,v 1.4 2011/04/21 19:18:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.4.2.ebuild,v 1.5 2012/05/05 08:58:54 jdhore Exp $
 
 EAPI=2
 MY_P=${PN}-src-${PV}
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.14:2
 	media-libs/libv4l
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}

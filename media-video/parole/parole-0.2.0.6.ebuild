@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.6.ebuild,v 1.6 2011/10/16 05:26:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.6.ebuild,v 1.7 2012/05/05 08:58:53 jdhore Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -28,7 +28,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-plugins/gst-plugins-meta:0.10"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto"
 
 pkg_setup() {

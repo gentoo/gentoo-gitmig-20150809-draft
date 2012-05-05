@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r1.ebuild,v 1.5 2012/04/21 19:05:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r1.ebuild,v 1.6 2012/05/05 08:58:55 jdhore Exp $
 
 EAPI=4
 
@@ -59,7 +59,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-lang/yasm
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 "
 

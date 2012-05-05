@@ -1,6 +1,9 @@
 # ChangeLog for media-video/blinkensim
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.9 2008/05/29 06:52:41 phreak Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.10 2012/05/05 08:58:57 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> blinkensim-2.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Lars Weiler (Pylon) from metadata.xml (as per #215644). Assigning

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lives
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.35 2011/10/06 17:31:35 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.36 2012/05/05 08:58:57 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> lives-1.4.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   06 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> lives-1.4.6.ebuild:
   Don't try to detect installed copies of libweed and sendOSC wrt #295293 by

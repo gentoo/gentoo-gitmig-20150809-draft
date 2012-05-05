@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camorama
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.25 2012/05/02 20:58:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.26 2012/05/05 08:58:53 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> camorama-0.19-r1.ebuild,
+  camorama-0.19-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 May 2012; Gilles Dartiguelongue <eva@gentoo.org> camorama-0.19-r1.ebuild,
   camorama-0.19-r2.ebuild, +files/camorama-0.19-glib-232.patch:

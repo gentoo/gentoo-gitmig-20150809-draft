@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkenthemes/blinkenthemes-0.10.ebuild,v 1.6 2009/02/18 18:53:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkenthemes/blinkenthemes-0.10.ebuild,v 1.7 2012/05/05 08:58:55 jdhore Exp $
 
 DESCRIPTION="Themes for blinkensim"
 HOMEPAGE="http://www.blinkenlights.net/project/developer-tools"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/blib
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND=""
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.17.4.ebuild,v 1.6 2011/03/23 08:28:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.17.4.ebuild,v 1.7 2012/05/05 08:58:55 jdhore Exp $
 
 EAPI=1
 inherit flag-o-matic autotools
@@ -15,7 +15,7 @@ COMMON_DEPEND="gtk? ( x11-libs/gtk+:2 )"
 RDEPEND="${COMMON_DEPEND}
 	~media-video/em8300-modules-${PV}"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 SLOT="0"
 LICENSE="GPL-2"

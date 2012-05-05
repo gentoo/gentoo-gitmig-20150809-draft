@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.23-r1.ebuild,v 1.1 2009/01/08 11:02:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.23-r1.ebuild,v 1.2 2012/05/05 08:58:52 jdhore Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/libcdio-0.71[-minimal]
 	!minimal? ( dev-libs/popt )
 	xml? ( >=dev-libs/libxml2-2.5.11 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RESTRICT="test"
 

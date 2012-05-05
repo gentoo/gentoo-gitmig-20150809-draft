@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20110322-r1.ebuild,v 1.10 2012/03/18 13:47:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20110322-r1.ebuild,v 1.11 2012/05/05 08:58:52 jdhore Exp $
 
 EAPI=4
 
@@ -159,7 +159,7 @@ X_DEPS="
 "
 ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	X? (
 		${X_DEPS}
 		dga? ( x11-proto/xf86dgaproto )

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/vmaid-2.2.0.ebuild,v 1.2 2011/03/29 12:45:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/vmaid-2.2.0.ebuild,v 1.3 2012/05/05 08:58:59 jdhore Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/gtk+:2
 	win32codecs? ( media-libs/win32codecs )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/scrollkeeper"
 
 src_compile() {

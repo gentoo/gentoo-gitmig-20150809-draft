@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1.ebuild,v 1.2 2012/04/09 19:14:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1.ebuild,v 1.3 2012/05/05 08:58:58 jdhore Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="0.96.1"
@@ -36,7 +36,7 @@ RDEPEND="${COMMONDEPEND}
 	gnome?	( gnome-base/gvfs )
 "
 DEPEND="${COMMONDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 PATCHES=(

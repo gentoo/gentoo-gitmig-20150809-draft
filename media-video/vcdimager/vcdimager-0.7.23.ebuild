@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.23.ebuild,v 1.16 2006/10/20 21:52:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.23.ebuild,v 1.17 2012/05/05 08:58:52 jdhore Exp $
 
 inherit eutils libtool
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/libcdio-0.71
 	!minimal? ( dev-libs/popt )
 	xml? ( >=dev-libs/libxml2-2.5.11 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	local myconf

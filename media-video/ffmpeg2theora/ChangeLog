@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.52 2012/03/08 11:35:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.53 2012/05/05 08:58:53 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> ffmpeg2theora-0.28.ebuild,
+  ffmpeg2theora-0.28-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ffmpeg2theora-0.28-r1.ebuild:

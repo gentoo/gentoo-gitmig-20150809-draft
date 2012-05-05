@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7.5.ebuild,v 1.1 2012/04/16 08:22:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7.5.ebuild,v 1.2 2012/05/05 08:58:53 jdhore Exp $
 
 EAPI=4
 
@@ -70,11 +70,11 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
-	dirac? ( dev-util/pkgconfig )
+	dirac? ( virtual/pkgconfig )
 	doc? ( app-text/texi2html )
 	mmx? ( dev-lang/yasm )
-	rtmp? ( dev-util/pkgconfig )
-	schroedinger? ( dev-util/pkgconfig )
+	rtmp? ( virtual/pkgconfig )
+	schroedinger? ( virtual/pkgconfig )
 	test? ( net-misc/wget )
 	v4l? ( sys-kernel/linux-headers )
 "

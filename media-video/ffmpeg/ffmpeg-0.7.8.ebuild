@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.7.8.ebuild,v 1.7 2011/12/18 22:11:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.7.8.ebuild,v 1.8 2012/05/05 08:58:57 jdhore Exp $
 
 EAPI="2"
 
@@ -78,14 +78,14 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
-	dirac? ( dev-util/pkgconfig )
+	dirac? ( virtual/pkgconfig )
 	doc? ( app-text/texi2html )
-	ieee1394? ( dev-util/pkgconfig )
+	ieee1394? ( virtual/pkgconfig )
 	mmx? ( dev-lang/yasm )
-	rtmp? ( dev-util/pkgconfig )
-	schroedinger? ( dev-util/pkgconfig )
+	rtmp? ( virtual/pkgconfig )
+	schroedinger? ( virtual/pkgconfig )
 	test? ( net-misc/wget )
-	truetype? ( dev-util/pkgconfig )
+	truetype? ( virtual/pkgconfig )
 	v4l? ( sys-kernel/linux-headers )
 "
 
