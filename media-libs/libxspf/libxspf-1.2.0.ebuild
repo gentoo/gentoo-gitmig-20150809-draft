@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/libxspf-1.2.0.ebuild,v 1.7 2009/06/01 15:32:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/libxspf-1.2.0.ebuild,v 1.8 2012/05/05 08:02:33 jdhore Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -17,7 +17,7 @@ IUSE="doc test"
 RDEPEND=">=dev-libs/uriparser-0.7.5
 	>=dev-libs/expat-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( >=dev-util/cpptest-1.1 )
 	doc? ( >=app-doc/doxygen-1.5.8
 		>=x11-libs/qt-assistant-4

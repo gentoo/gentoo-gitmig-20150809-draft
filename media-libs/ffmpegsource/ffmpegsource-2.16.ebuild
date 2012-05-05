@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ffmpegsource-2.16.ebuild,v 1.1 2011/09/03 18:14:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ffmpegsource-2.16.ebuild,v 1.2 2012/05/05 08:02:33 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="
 	virtual/ffmpeg
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 S="${WORKDIR}/${MY_P}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/blib-1.1.7-r1.ebuild,v 1.5 2011/11/20 12:46:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/blib-1.1.7-r1.ebuild,v 1.6 2012/05/05 08:02:44 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2
 	directfb? ( >=dev-libs/DirectFB-0.9.20-r1 )
 	gtk? ( >=x11-libs/gtk+-2.4.4:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Drop DEPRECATED flags, bug #391105

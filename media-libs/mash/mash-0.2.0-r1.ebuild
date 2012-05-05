@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mash/mash-0.2.0-r1.ebuild,v 1.3 2012/01/14 17:27:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mash/mash-0.2.0-r1.ebuild,v 1.4 2012/05/05 08:02:38 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 
 	introspection? ( >=dev-libs/gobject-introspection-0.6.1 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.14 )"
 
 pkg_setup() {

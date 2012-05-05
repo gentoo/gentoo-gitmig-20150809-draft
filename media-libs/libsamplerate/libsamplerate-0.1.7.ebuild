@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.7.ebuild,v 1.10 2010/01/31 16:05:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.7.ebuild,v 1.11 2012/05/05 08:02:31 jdhore Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ IUSE="sndfile"
 
 RDEPEND="sndfile? ( >=media-libs/libsndfile-1.0.2 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.14"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

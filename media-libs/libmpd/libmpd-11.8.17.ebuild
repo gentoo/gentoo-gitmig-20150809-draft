@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-11.8.17.ebuild,v 1.5 2012/03/07 18:57:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-11.8.17.ebuild,v 1.6 2012/05/05 08:02:30 jdhore Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE="doc static-libs"
 
 RDEPEND=">=dev-libs/glib-2.16:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_configure() {

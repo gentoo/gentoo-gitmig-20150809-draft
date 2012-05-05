@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.1.3-r1.ebuild,v 1.8 2011/10/23 17:31:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.1.3-r1.ebuild,v 1.9 2012/05/05 08:02:42 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -18,7 +18,7 @@ RDEPEND=">=sys-libs/libraw1394-1.2.0
 	virtual/libusb:1
 	X? ( x11-libs/libSM x11-libs/libXv )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {

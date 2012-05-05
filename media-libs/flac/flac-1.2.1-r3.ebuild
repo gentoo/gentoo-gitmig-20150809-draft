@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r3.ebuild,v 1.12 2010/09/16 11:24:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r3.ebuild,v 1.13 2012/05/05 08:02:39 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -19,7 +19,7 @@ RDEPEND="ogg? ( >=media-libs/libogg-1.1.3 )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	!elibc_uclibc? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch \

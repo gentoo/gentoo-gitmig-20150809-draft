@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.1.4.ebuild,v 1.1 2011/12/02 13:23:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.1.4.ebuild,v 1.2 2012/05/05 08:02:42 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ RDEPEND=">=sys-libs/libraw1394-1.2.0
 	virtual/libusb:1
 	X? ( x11-libs/libSM x11-libs/libXv )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_configure() {

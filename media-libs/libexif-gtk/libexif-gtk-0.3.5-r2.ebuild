@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.5-r2.ebuild,v 1.8 2011/10/26 15:39:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/libexif-gtk-0.3.5-r2.ebuild,v 1.9 2012/05/05 08:02:28 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -17,7 +17,7 @@ IUSE="nls static-libs"
 RDEPEND="x11-libs/gtk+:2
 	>=media-libs/libexif-0.6.12"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( ChangeLog )
 

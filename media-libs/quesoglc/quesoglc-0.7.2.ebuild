@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/quesoglc-0.7.2.ebuild,v 1.4 2010/01/10 17:46:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/quesoglc-0.7.2.ebuild,v 1.5 2012/05/05 08:02:43 jdhore Exp $
 
 EAPI=2
 DESCRIPTION="A free implementation of the OpenGL Character Renderer (GLC)"
@@ -18,7 +18,7 @@ RDEPEND="virtual/opengl
 	media-libs/freetype:2
 	dev-libs/fribidi"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {

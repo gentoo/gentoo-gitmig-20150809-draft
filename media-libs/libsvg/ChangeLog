@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.40 2011/02/06 12:11:27 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.41 2012/05/05 08:02:34 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libsvg-0.1.4-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libsvg-0.1.4-r1.ebuild:
   Drop to ~mips

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/stk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.10 2012/01/16 15:20:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.11 2012/05/05 08:02:27 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> stk-4.4.2.ebuild,
+  stk-4.4.3.ebuild, stk-4.4.3-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *stk-4.4.3-r1 (16 Jan 2012)
 

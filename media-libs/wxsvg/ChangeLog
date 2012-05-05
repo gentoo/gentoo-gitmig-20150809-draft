@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/wxsvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.32 2012/03/08 12:15:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.33 2012/05/05 08:02:27 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wxsvg-1.0.8.ebuild,
+  wxsvg-1.1.5.ebuild, wxsvg-1.1.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> wxsvg-1.1.5.ebuild:
   x86 stable wrt bug #405719

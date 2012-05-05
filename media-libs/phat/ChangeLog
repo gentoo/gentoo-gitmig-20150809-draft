@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.17 2008/05/02 16:02:30 drac Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.18 2012/05/05 08:02:38 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> phat-0.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 May 2008; Samuli Suominen <drac@gentoo.org> phat-0.4.1.ebuild:
   Use berlios mirrors://

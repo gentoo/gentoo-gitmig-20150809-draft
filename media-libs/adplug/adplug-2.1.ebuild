@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-2.1.ebuild,v 1.6 2012/02/05 15:03:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-2.1.ebuild,v 1.7 2012/05/05 08:02:27 jdhore Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="debug"
 
 RDEPEND=">=dev-cpp/libbinio-1.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

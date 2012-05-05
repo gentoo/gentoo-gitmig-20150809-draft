@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/lastfmlib-0.4.0.ebuild,v 1.4 2011/02/26 17:02:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/lastfmlib-0.4.0.ebuild,v 1.5 2012/05/05 08:02:26 jdhore Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="debug syslog"
 
 RDEPEND="net-misc/curl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

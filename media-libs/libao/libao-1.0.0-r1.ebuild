@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.0.0-r1.ebuild,v 1.9 2011/08/20 23:48:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.0.0-r1.ebuild,v 1.10 2012/05/05 08:02:41 jdhore Exp $
 
 EAPI=3
 inherit eutils libtool
@@ -18,7 +18,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	nas? ( media-libs/nas )
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-pulseaudio.patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.11.ebuild,v 1.3 2012/03/16 00:01:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.11.ebuild,v 1.4 2012/05/05 08:02:26 jdhore Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -16,7 +16,7 @@ IUSE="static-libs"
 
 RDEPEND=">=dev-lang/orc-0.4.16"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/gtk-doc-am"
 
 src_prepare() {

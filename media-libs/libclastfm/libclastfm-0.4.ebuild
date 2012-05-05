@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclastfm/libclastfm-0.4.ebuild,v 1.3 2012/02/10 12:14:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclastfm/libclastfm-0.4.ebuild,v 1.4 2012/05/05 08:02:33 jdhore Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE="static-libs"
 
 RDEPEND="net-misc/curl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS README )
 

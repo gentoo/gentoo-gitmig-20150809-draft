@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.28-r5.ebuild,v 1.7 2011/10/30 17:18:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.28-r5.ebuild,v 1.8 2012/05/05 08:02:40 jdhore Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ RDEPEND="${COMMON_DEPEND}
 	gnome? ( gnome-base/gsettings-desktop-schemas )
 	sound? ( x11-themes/sound-theme-freedesktop )" # Required for index.theme wrt #323379
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/pkgconfig-0.17"
+	virtual/pkgconfig"
 
 REQUIRED_USE="udev? ( alsa )"
 

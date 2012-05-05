@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.4.1.ebuild,v 1.1 2012/03/26 00:53:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.4.1.ebuild,v 1.2 2012/05/05 08:02:34 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND=">=net-misc/curl-7.18.2
 	>=dev-lang/lua-5.1[deprecated]"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
 

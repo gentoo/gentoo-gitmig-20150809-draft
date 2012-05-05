@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.5.ebuild,v 1.12 2010/03/11 22:59:10 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.5.ebuild,v 1.13 2012/05/05 08:02:36 jdhore Exp $
 
 inherit libtool eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="dev-libs/expat"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/lib${P}
 

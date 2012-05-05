@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/gmtk-1.0.6.ebuild,v 1.1 2012/04/14 15:08:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/gmtk-1.0.6.ebuild,v 1.2 2012/05/05 08:02:27 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="${COMMON_DEPEND}
 	dconf? ( gnome-base/dconf )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( ChangeLog )

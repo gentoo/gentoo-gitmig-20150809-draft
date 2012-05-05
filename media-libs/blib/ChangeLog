@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/blib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/ChangeLog,v 1.8 2011/11/20 12:46:19 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/ChangeLog,v 1.9 2012/05/05 08:02:44 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> blib-1.1.7-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Nov 2011; Pacho Ramos <pacho@gentoo.org> blib-1.1.7-r1.ebuild:
   Drop DEPRECATED flags, bug #391105

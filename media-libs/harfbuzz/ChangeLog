@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/harfbuzz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.8 2011/10/19 08:06:02 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.9 2012/05/05 08:02:40 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  harfbuzz-0.7.0_pre20110904.ebuild, harfbuzz-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   files/harfbuzz-automagicness.patch:

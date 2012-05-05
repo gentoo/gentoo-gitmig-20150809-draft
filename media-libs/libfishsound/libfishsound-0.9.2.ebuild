@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-0.9.2.ebuild,v 1.3 2010/03/08 06:35:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-0.9.2.ebuild,v 1.4 2012/05/05 08:02:35 jdhore Exp $
 
 DESCRIPTION="Simple programming interface for decoding and encoding audio data using vorbis or speex"
 HOMEPAGE="http://www.xiph.org/fishsound/"
@@ -15,7 +15,7 @@ RDEPEND="media-libs/libvorbis media-libs/libogg
 	speex? ( media-libs/speex )"
 #	flac? ( media-libs/flac )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen virtual/latex-base )"
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/liblqr-0.4.1.ebuild,v 1.15 2011/12/04 00:49:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/liblqr-0.4.1.ebuild,v 1.16 2012/05/05 08:02:36 jdhore Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ IUSE="doc"
 
 RDEPEND="dev-libs/glib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=$WORKDIR/${PN}-1-${PV}
 

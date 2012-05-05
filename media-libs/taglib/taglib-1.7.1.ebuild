@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.7.1.ebuild,v 1.8 2012/04/17 21:24:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.7.1.ebuild,v 1.9 2012/05/05 08:02:42 jdhore Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -16,7 +16,7 @@ IUSE="+asf debug examples +mp4 test"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-util/cppunit )
 "
 

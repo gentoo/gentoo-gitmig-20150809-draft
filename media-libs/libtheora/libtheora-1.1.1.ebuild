@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1.ebuild,v 1.8 2010/09/25 14:52:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1.ebuild,v 1.9 2012/05/05 08:02:44 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -21,7 +21,7 @@ RDEPEND="media-libs/libogg
 		>=media-libs/libsdl-0.11.0 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 VARTEXFONTS=${T}/fonts
 S=${WORKDIR}/${P/_}

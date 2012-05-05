@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/libprojectm-qt-1.2.0.ebuild,v 1.4 2009/09/16 15:44:09 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/libprojectm-qt-1.2.0.ebuild,v 1.5 2012/05/05 08:02:34 jdhore Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND=">=media-libs/libprojectm-1.1
 	x11-libs/qt-gui
 	x11-libs/qt-opengl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

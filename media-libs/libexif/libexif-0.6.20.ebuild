@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.20.ebuild,v 1.11 2012/03/02 20:51:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.20.ebuild,v 1.12 2012/05/05 08:02:29 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="doc nls static-libs"
 
 RDEPEND="nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	nls? ( sys-devel/gettext )"
 

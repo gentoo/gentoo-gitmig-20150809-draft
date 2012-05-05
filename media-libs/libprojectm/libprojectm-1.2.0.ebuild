@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-1.2.0.ebuild,v 1.10 2009/11/26 17:41:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-1.2.0.ebuild,v 1.11 2012/05/05 08:02:39 jdhore Exp $
 
 EAPI=2
 inherit cmake-utils eutils
@@ -22,7 +22,7 @@ RDEPEND="media-libs/ftgl
 	media-libs/glew
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/cmake"
 
 S=${WORKDIR}/${MY_P}

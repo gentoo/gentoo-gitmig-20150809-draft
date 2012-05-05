@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtheora
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.105 2010/09/25 14:52:08 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.106 2012/05/05 08:02:44 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libtheora-1.1.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   libtheora-1.1.1.ebuild:

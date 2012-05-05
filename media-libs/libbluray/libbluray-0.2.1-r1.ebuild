@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1-r1.ebuild,v 1.7 2012/02/29 11:21:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.2.1-r1.ebuild,v 1.8 2012/05/05 08:02:42 jdhore Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ DEPEND="
 		>=virtual/jdk-1.6
 		dev-java/ant-core
 	)
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 REQUIRED_USE="utils? ( static-libs )"
 

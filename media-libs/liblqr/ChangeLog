@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblqr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.15 2011/12/04 00:49:32 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.16 2012/05/05 08:02:36 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> liblqr-0.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> liblqr-0.4.1.ebuild:
   add missing pkgconfig build time dependency. Bug #391983 thanks to David Owen

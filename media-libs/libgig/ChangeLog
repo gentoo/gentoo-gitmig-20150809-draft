@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgig
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/ChangeLog,v 1.11 2009/09/14 21:35:58 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/ChangeLog,v 1.12 2012/05/05 08:02:42 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libgig-3.2.1.ebuild,
+  libgig-3.3.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Sep 2009; Markus Meier <maekke@gentoo.org> libgig-3.3.0.ebuild:
   amd64/x86 stable, bug #284409

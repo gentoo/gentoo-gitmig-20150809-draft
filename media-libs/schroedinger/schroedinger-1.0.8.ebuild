@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.8.ebuild,v 1.15 2011/03/30 15:36:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.8.ebuild,v 1.16 2012/05/05 08:02:26 jdhore Exp $
 
 EAPI=3
 inherit libtool
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/liboil-0.3.16"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	elibtoolize

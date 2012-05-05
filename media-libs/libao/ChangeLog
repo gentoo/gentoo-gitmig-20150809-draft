@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libao
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.104 2011/08/20 23:48:38 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.105 2012/05/05 08:02:41 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libao-1.0.0-r1.ebuild,
+  libao-1.1.0.ebuild, libao-1.1.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libao-1.1.0-r1 (20 Aug 2011)
 

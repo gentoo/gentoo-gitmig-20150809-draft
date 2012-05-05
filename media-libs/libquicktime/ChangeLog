@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.181 2012/03/30 13:08:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.182 2012/05/05 08:02:34 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libquicktime-1.2.3-r1.ebuild,
+  libquicktime-1.2.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   -libquicktime-1.2.2.ebuild, -files/libquicktime-1.2.2-ffmpeg07.patch,

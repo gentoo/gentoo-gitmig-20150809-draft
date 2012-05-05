@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/gmtk-1.0.5.ebuild,v 1.3 2012/01/28 03:11:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/gmtk-1.0.5.ebuild,v 1.4 2012/05/05 08:02:27 jdhore Exp $
 
 EAPI=4
 inherit flag-o-matic toolchain-funcs
@@ -23,7 +23,7 @@ RDEPEND="${COMMON_DEPEND}
 	dconf? ( gnome-base/dconf )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( ChangeLog )

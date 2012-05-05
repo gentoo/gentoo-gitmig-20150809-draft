@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flickcurl/flickcurl-1.22.ebuild,v 1.1 2012/02/19 11:44:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flickcurl/flickcurl-1.22.ebuild,v 1.2 2012/05/05 08:02:39 jdhore Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND=">=net-misc/curl-7.10.0
 	>=dev-libs/libxml2-2.6.8:2
 	raptor? ( media-libs/raptor:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	if ! use doc ; then

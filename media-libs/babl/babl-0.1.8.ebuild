@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.8.ebuild,v 1.1 2012/04/13 21:30:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.8.ebuild,v 1.2 2012/05/05 08:02:35 jdhore Exp $
 
 EAPI=3
 VALASLOT=0.14
@@ -20,7 +20,7 @@ RDEPEND="introspection? ( >=dev-libs/gobject-introspection-0.10 )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
 	vala? ( dev-lang/vala:${VALASLOT}[vapigen] )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.1.6-introspection.patch

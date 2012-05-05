@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.8.4.ebuild,v 1.12 2011/03/23 08:35:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.8.4.ebuild,v 1.13 2012/05/05 08:02:44 jdhore Exp $
 
 EAPI=1
 
@@ -34,7 +34,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	pulseaudio? ( media-sound/pulseaudio )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.6 )"
 
 RESTRICT="test"

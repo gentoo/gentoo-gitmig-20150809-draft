@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libafterimage
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.42 2011/12/23 07:53:11 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.43 2012/05/05 08:02:44 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libafterimage-1.20.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
   libafterimage-1.20.ebuild:

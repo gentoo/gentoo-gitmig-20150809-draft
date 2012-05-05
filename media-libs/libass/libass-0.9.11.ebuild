@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/libass-0.9.11.ebuild,v 1.11 2011/05/22 23:39:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/libass-0.9.11.ebuild,v 1.12 2012/05/05 08:02:29 jdhore Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ RDEPEND="fontconfig? ( >=media-libs/fontconfig-2.4.2 )
 	enca? ( app-i18n/enca )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

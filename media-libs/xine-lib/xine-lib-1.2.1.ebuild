@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.1.ebuild,v 1.6 2012/02/29 11:25:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.1.ebuild,v 1.7 2012/05/05 08:02:37 jdhore Exp $
 
 EAPI=4
 
@@ -94,7 +94,7 @@ RDEPEND="dev-libs/libxdg-basedir
 	xvmc? ( x11-libs/libXvMC )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/libtool-2.2.6b
 	bluray? ( !media-libs/libbluray-xine )
 	nls? ( sys-devel/gettext )

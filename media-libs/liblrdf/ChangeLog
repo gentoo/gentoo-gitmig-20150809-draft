@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.57 2012/01/28 04:17:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.58 2012/05/05 08:02:36 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> liblrdf-0.5.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -liblrdf-0.4.0-r20.ebuild, -files/liblrdf-0.4.0-dontbuild-tests.patch,

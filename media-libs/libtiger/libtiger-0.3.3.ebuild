@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/libtiger-0.3.3.ebuild,v 1.14 2009/11/13 00:36:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/libtiger-0.3.3.ebuild,v 1.15 2012/05/05 08:02:28 jdhore Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/pango
 	>=media-libs/libkate-0.2.0
 	x11-libs/cairo"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {

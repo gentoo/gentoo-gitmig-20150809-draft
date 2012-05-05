@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.23 2011/07/22 17:23:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.24 2012/05/05 08:02:44 jdhore Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/expat
 	net-misc/curl
 	>=sci-libs/fftw-3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-gcc-4.patch

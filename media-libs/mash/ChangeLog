@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mash/ChangeLog,v 1.3 2012/01/14 17:27:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mash/ChangeLog,v 1.4 2012/05/05 08:02:38 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> mash-0.2.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> mash-0.2.0-r1.ebuild:
   x86 stable, bug #393007

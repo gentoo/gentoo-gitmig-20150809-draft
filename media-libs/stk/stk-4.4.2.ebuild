@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/stk-4.4.2.ebuild,v 1.1 2011/01/02 14:23:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/stk-4.4.2.ebuild,v 1.2 2012/05/05 08:02:27 jdhore Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -17,7 +17,7 @@ IUSE="alsa debug doc jack oss"
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-lang/perl"
 
 src_prepare() {

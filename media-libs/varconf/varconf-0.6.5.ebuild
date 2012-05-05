@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/varconf-0.6.5.ebuild,v 1.5 2009/01/18 15:23:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/varconf-0.6.5.ebuild,v 1.6 2012/05/05 08:02:40 jdhore Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/libsigc++-2.0"
 DEPEND="$RDEPEND
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

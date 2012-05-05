@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.3.ebuild,v 1.12 2012/03/04 09:40:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.3.ebuild,v 1.13 2012/05/05 08:02:26 jdhore Exp $
 
 EAPI=3
 
@@ -99,7 +99,7 @@ done
 
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/bison
 	sys-devel/flex
 	x11-misc/makedepend

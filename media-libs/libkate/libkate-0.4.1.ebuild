@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.4.1.ebuild,v 1.1 2011/09/08 18:00:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.4.1.ebuild,v 1.2 2012/05/05 08:02:38 jdhore Exp $
 
 DESCRIPTION="Codec for karaoke and text encapsulation for Ogg"
 HOMEPAGE="http://code.google.com/p/libkate/"
@@ -15,7 +15,7 @@ COMMON_DEPEND="media-libs/libogg
 	media-libs/libpng"
 DEPEND="${COMMON_DEPEND}
 	wxwidgets? ( dev-lang/python )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex
 	sys-devel/bison
 	doc? ( app-doc/doxygen )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/libart_lgpl-2.3.20.ebuild,v 1.10 2010/07/20 05:20:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/libart_lgpl-2.3.20.ebuild,v 1.11 2012/05/05 08:02:38 jdhore Exp $
 
 inherit gnome2 eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="dev-util/pkgconfig"
+DEPEND="virtual/pkgconfig"
 RDEPEND=""
 
 DOCS="AUTHORS ChangeLog NEWS README"

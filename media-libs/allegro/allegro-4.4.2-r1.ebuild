@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2-r1.ebuild,v 1.2 2012/04/30 09:51:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2-r1.ebuild,v 1.3 2012/05/05 08:02:40 jdhore Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -35,7 +35,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		)
 	)"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	X? (
 		x11-proto/xextproto
 		x11-proto/xf86dgaproto

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.8.ebuild,v 1.1 2011/08/22 07:27:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/libsamplerate-0.1.8.ebuild,v 1.2 2012/05/05 08:02:31 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="sndfile static-libs"
 
 RDEPEND="sndfile? ( >=media-libs/libsndfile-1.0.2 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.14"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.1.3-dontbuild-tests-examples.patch \

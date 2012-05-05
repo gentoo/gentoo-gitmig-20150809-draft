@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.2.1.ebuild,v 1.2 2010/12/21 15:14:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.2.1.ebuild,v 1.3 2012/05/05 08:02:25 jdhore Exp $
 
 EAPI=2
 inherit versionator eutils multilib toolchain-funcs
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND=">=media-gfx/exiv2-0.19
 	dev-libs/glib:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/lib${P}
 

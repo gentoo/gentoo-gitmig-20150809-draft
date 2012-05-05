@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.20.ebuild,v 1.4 2011/10/21 14:28:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.20.ebuild,v 1.5 2012/05/05 08:02:29 jdhore Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 	${DEPEND}
 	sys-apps/sed
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/gtk-doc-am-1.13
 	doc? (
 		>=dev-util/gtk-doc-1.13

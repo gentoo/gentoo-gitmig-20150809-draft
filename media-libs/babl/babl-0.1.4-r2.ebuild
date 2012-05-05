@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.4-r2.ebuild,v 1.2 2012/01/01 14:24:24 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.4-r2.ebuild,v 1.3 2012/05/05 08:02:35 jdhore Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ IUSE="altivec +introspection sse mmx"
 
 RDEPEND="introspection? ( >=dev-libs/gobject-introspection-0.6.8 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-introspection.patch

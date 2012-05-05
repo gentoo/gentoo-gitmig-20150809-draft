@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-1.1.0.ebuild,v 1.1 2010/09/21 08:27:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-1.1.0.ebuild,v 1.2 2012/05/05 08:02:30 jdhore Exp $
 
 EAPI=2
 inherit autotools
@@ -23,7 +23,7 @@ RDEPEND="media-libs/alsa-lib
 	qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
 	sys-apps/sed
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

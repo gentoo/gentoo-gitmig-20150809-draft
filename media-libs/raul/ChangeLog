@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/raul
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.13 2011/12/21 08:26:03 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.14 2012/05/05 08:02:25 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> raul-0.5.1.ebuild,
+  raul-0.6.0.ebuild, raul-0.7.0.ebuild, raul-0.8.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> raul-0.8.0.ebuild:
   x86 stable wrt bug #393869

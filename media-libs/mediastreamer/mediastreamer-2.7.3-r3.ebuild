@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.12 2012/01/06 15:06:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.13 2012/05/05 08:02:25 jdhore Exp $
 
 EAPI="4"
 
@@ -41,7 +41,7 @@ RDEPEND=">=net-libs/ortp-0.16.2[ipv6?]
 		X? ( x11-libs/libX11
 			x11-libs/libXv ) )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/videoproto"
 
 PDEPEND="amr? ( !bindist? ( media-plugins/mediastreamer-amr ) )

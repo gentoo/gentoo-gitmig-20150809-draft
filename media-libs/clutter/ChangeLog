@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.54 2012/05/02 03:25:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.55 2012/05/05 08:02:29 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> clutter-1.2.14.ebuild,
+  clutter-1.6.16.ebuild, clutter-1.6.20.ebuild, clutter-1.8.2-r1.ebuild,
+  clutter-1.8.4.ebuild, clutter-1.10.2.ebuild, clutter-1.10.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *clutter-1.10.4 (02 May 2012)
 

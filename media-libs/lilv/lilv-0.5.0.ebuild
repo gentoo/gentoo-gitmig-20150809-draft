@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/lilv-0.5.0.ebuild,v 1.4 2012/04/21 22:19:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/lilv-0.5.0.ebuild,v 1.5 2012/05/05 08:02:30 jdhore Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="|| ( media-libs/lv2 >=media-libs/lv2core-6 )
 	>=dev-libs/sord-0.5"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}/ldconfig.patch" )
 DOCS=( "AUTHORS" "README" "ChangeLog" )

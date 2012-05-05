@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.5.ebuild,v 1.5 2012/02/24 14:56:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.5.ebuild,v 1.6 2012/05/05 08:02:37 jdhore Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF=yes
@@ -25,7 +25,7 @@ IUSE="demosaic examples jpeg2k +lcms openmp static-libs"
 RDEPEND="jpeg2k? ( media-libs/jasper )
 	lcms? ( media-libs/lcms:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

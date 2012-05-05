@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.3.0.ebuild,v 1.1 2012/02/19 14:20:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/libshout-2.3.0.ebuild,v 1.2 2012/05/05 08:02:31 jdhore Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ RDEPEND="media-libs/libogg
 	theora? ( media-libs/libtheora )
 	speex? ( media-libs/speex )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf $(use_enable theora)\

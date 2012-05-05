@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-9999.ebuild,v 1.1 2011/07/17 16:02:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-9999.ebuild,v 1.2 2012/05/05 08:02:30 jdhore Exp $
 
 EAPI=4
 inherit autotools git-2
@@ -17,7 +17,7 @@ IUSE="doc static-libs"
 
 RDEPEND=">=dev-libs/glib-2.16:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_configure() {

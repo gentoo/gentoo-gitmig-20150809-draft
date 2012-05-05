@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.32-r1.ebuild,v 1.10 2011/09/06 19:02:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.32-r1.ebuild,v 1.11 2012/05/05 08:02:28 jdhore Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.22:2
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 	# dev-util/gtk-doc-am # Only if eautoreconf'ing
 

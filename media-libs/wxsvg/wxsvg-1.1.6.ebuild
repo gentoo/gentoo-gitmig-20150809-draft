@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.1.6.ebuild,v 1.1 2012/02/20 08:27:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.1.6.ebuild,v 1.2 2012/05/05 08:02:27 jdhore Exp $
 
 EAPI=4
 WX_GTK_VER=2.8
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/expat-2.0.1-r3
 	x11-libs/wxGTK:2.8[X]
 	virtual/ffmpeg"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog TODO )
 

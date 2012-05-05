@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.5.1.ebuild,v 1.4 2009/08/02 21:06:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.5.1.ebuild,v 1.5 2012/05/05 08:02:25 jdhore Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-cpp/glibmm-2.4
 	dev-libs/boost
 	jack? ( >=media-sound/jack-audio-connection-kit-0.107 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {

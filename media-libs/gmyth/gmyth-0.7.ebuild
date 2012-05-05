@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/gmyth-0.7.ebuild,v 1.10 2011/07/25 18:02:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/gmyth-0.7.ebuild,v 1.11 2012/05/05 08:02:44 jdhore Exp $
 
 inherit libtool autotools eutils
 
@@ -16,7 +16,7 @@ RDEPEND="net-misc/curl
 		 dev-libs/libxml2
 		 virtual/mysql"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}"
 

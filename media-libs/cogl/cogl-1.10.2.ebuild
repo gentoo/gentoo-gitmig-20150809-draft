@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.2.ebuild,v 1.1 2012/04/20 07:10:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.2.ebuild,v 1.2 2012/05/05 08:02:41 jdhore Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
@@ -34,7 +34,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 RDEPEND="${COMMON_DEPEND}
 	!<media-libs/clutter-1.7"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( app-text/docbook-xml-dtd:4.1.2
 		>=dev-util/gtk-doc-1.13 )

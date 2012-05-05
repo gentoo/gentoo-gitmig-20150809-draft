@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/lv2-1.0.0.ebuild,v 1.1 2012/04/21 22:17:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/lv2-1.0.0.ebuild,v 1.2 2012/05/05 08:02:43 jdhore Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 	!media-libs/lv2core
 	!media-libs/lv2-ui"
 DEPEND="${DEPEND}
-	plugins? ( dev-util/pkgconfig )
+	plugins? ( virtual/pkgconfig )
 	doc? ( app-doc/doxygen dev-python/rdflib )"
 DOCS=( "README" "NEWS" )
 

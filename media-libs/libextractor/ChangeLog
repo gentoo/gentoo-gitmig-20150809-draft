@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libextractor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.66 2012/04/30 09:54:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.67 2012/05/05 08:02:42 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libextractor-0.6.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> libextractor-0.6.3.ebuild:
   Stable for amd64, wrt bug #413827

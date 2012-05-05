@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/libmnote-0.5.6.ebuild,v 1.11 2008/05/03 06:44:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/libmnote-0.5.6.ebuild,v 1.12 2012/05/05 08:02:29 jdhore Exp $
 
 DESCRIPTION="libmnote is a library for parsing, editing, and saving MakerNote-EXIF-tags."
 HOMEPAGE="http://libexif.sf.net"
@@ -13,7 +13,7 @@ IUSE="nls"
 
 RDEPEND=">=media-libs/libexif-0.5.9"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	local myconf

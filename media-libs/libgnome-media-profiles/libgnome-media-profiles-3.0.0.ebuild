@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgnome-media-profiles/libgnome-media-profiles-3.0.0.ebuild,v 1.2 2011/11/03 17:58:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgnome-media-profiles/libgnome-media-profiles-3.0.0.ebuild,v 1.3 2012/05/05 08:02:31 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -48,7 +48,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.35.0
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

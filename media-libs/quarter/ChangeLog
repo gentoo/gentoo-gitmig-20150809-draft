@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quarter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.4 2010/09/06 01:11:38 reavertm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.5 2012/05/05 08:02:37 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> quarter-1.0.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   06 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org>
   quarter-1.0.0-r1.ebuild:

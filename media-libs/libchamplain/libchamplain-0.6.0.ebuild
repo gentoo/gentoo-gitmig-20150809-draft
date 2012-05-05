@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.13 2012/02/14 18:30:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.14 2012/05/05 08:02:28 jdhore Exp $
 
 EAPI="3"
 
@@ -34,7 +34,7 @@ RDEPEND="
 		dev-python/pyclutter
 		dev-python/pyclutter-gtk )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )"
 

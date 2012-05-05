@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1-r1.ebuild,v 1.1 2011/08/10 19:45:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1-r1.ebuild,v 1.2 2012/05/05 08:02:36 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -18,7 +18,7 @@ IUSE="ogg sse static-libs"
 
 RDEPEND="ogg? ( media-libs/libogg )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

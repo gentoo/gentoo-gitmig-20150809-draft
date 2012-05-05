@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.8.8.2.ebuild,v 1.8 2011/04/16 15:50:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.8.8.2.ebuild,v 1.9 2012/05/05 08:02:32 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-
 IUSE="static-libs"
 
 RDEPEND=""
-DEPEND="dev-util/pkgconfig"
+DEPEND="virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

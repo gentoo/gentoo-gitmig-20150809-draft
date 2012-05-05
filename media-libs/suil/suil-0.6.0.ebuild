@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.6.0.ebuild,v 1.2 2012/04/22 00:32:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.6.0.ebuild,v 1.3 2012/05/05 08:02:27 jdhore Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="media-libs/lv2
 	qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}/ldconfig.patch" )
 DOCS=( "AUTHORS" "NEWS" "README" )

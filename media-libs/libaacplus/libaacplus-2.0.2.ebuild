@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2.ebuild,v 1.9 2012/04/12 10:21:36 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacplus/libaacplus-2.0.2.ebuild,v 1.10 2012/05/05 08:02:36 jdhore Exp $
 
 EAPI=4
 inherit autotools
@@ -29,7 +29,7 @@ RDEPEND="!media-sound/aacplusenc
 	fftw? ( sci-libs/fftw:3.0 )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${P}.tar.gz

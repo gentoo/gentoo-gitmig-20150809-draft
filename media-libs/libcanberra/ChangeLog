@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.79 2012/01/13 17:09:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.80 2012/05/05 08:02:40 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libcanberra-0.28-r5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   13 Jan 2012; Pacho Ramos <pacho@gentoo.org>
   -files/libcanberra-0.28-revert-gsettings.patch, -libcanberra-0.26.ebuild,

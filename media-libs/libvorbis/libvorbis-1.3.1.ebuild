@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.3.1.ebuild,v 1.10 2010/09/24 14:54:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.3.1.ebuild,v 1.11 2012/05/05 08:02:35 jdhore Exp $
 
 EAPI=2
 inherit autotools
@@ -16,7 +16,7 @@ IUSE="static-libs"
 
 RDEPEND="media-libs/libogg"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

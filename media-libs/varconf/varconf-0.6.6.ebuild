@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/varconf-0.6.6.ebuild,v 1.4 2012/02/28 20:29:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/varconf-0.6.6.ebuild,v 1.5 2012/05/05 08:02:40 jdhore Exp $
 
 DESCRIPTION="A configuration system designed for the STAGE server."
 SRC_URI="mirror://sourceforge/worldforge/${P}.tar.bz2"
@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/libsigc++-2.0"
 DEPEND="$RDEPEND
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"

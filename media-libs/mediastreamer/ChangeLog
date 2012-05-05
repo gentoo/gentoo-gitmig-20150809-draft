@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.52 2012/03/25 10:14:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.53 2012/05/05 08:02:25 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> mediastreamer-2.3.0-r1.ebuild,
+  mediastreamer-2.7.3-r3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Set volkmar as second maintainer as talked with him.

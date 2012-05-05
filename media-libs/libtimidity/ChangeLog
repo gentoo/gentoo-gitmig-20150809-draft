@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtimidity
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.18 2012/02/28 16:38:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.19 2012/05/05 08:02:40 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libtimidity-0.1.0.ebuild,
+  libtimidity-0.1.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Feb 2012; Jeroen Roovers <jer@gentoo.org> libtimidity-0.1.0-r1.ebuild:
   Stable for HPPA (bug #405659).

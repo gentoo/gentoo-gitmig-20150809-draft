@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclastfm/libclastfm-0.4_p20120315.ebuild,v 1.1 2012/03/15 03:35:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclastfm/libclastfm-0.4_p20120315.ebuild,v 1.2 2012/05/05 08:02:33 jdhore Exp $
 
 EAPI=4
 inherit autotools
@@ -16,7 +16,7 @@ IUSE="static-libs"
 
 RDEPEND="net-misc/curl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS README"
 

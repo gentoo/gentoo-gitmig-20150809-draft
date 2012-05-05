@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.4.ebuild,v 1.11 2011/07/21 04:01:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.4.ebuild,v 1.12 2012/05/05 08:02:30 jdhore Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="=media-libs/freetype-2*
 	X? ( x11-libs/libXext x11-proto/xextproto )
 	mp3? ( media-libs/libid3tag )"
 DEPEND="${RDEPEND}
-	png? ( dev-util/pkgconfig )"
+	png? ( virtual/pkgconfig )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng-1.5.patch #354989

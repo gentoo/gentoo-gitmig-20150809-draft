@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.10 2012/04/14 00:46:10 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.8.ebuild,v 1.11 2012/05/05 08:02:38 jdhore Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ RDEPEND=">=media-libs/babl-0.1.6[introspection?] <media-libs/babl-0.1.8[introspe
 			>=dev-python/pygobject-2.26:2 )
 	lensfun? ( >=media-libs/lensfun-0.2.5 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/libtool-2.2
 	vala? ( dev-lang/vala:${VALASLOT}[vapigen] )"
 

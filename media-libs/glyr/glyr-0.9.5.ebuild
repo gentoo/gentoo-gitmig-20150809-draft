@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glyr/glyr-0.9.5.ebuild,v 1.1 2012/03/15 03:25:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glyr/glyr-0.9.5.ebuild,v 1.2 2012/05/05 08:02:39 jdhore Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -18,7 +18,7 @@ RDEPEND="dev-db/sqlite:3
 	>=dev-libs/glib-2.10
 	net-misc/curl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS CHANGELOG README* TODO"
 

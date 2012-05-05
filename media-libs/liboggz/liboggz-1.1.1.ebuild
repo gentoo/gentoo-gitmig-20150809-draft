@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/liboggz-1.1.1.ebuild,v 1.7 2010/10/15 13:43:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/liboggz-1.1.1.ebuild,v 1.8 2012/05/05 08:02:37 jdhore Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -16,7 +16,7 @@ IUSE="doc static-libs test"
 
 RDEPEND=">=media-libs/libogg-1.2.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	test? ( app-text/docbook-sgml-utils )"
 

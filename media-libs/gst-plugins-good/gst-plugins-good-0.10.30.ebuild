@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.30.ebuild,v 1.7 2011/10/15 18:13:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.30.ebuild,v 1.8 2012/05/05 08:02:27 jdhore Exp $
 
 EAPI=1
 
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.33
 	app-arch/bzip2"
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!<media-libs/gst-plugins-bad-0.10.22" # audioparsers and qtmux moves
 
 # Always enable optional bz2 support for matroska

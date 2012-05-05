@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.8.3.ebuild,v 1.6 2011/10/17 16:15:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.8.3.ebuild,v 1.7 2012/05/05 08:02:28 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ RDEPEND="
 		media-libs/memphis:0.2[introspection?]
 		>=media-libs/clutter-gtk-0.10:0.10 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )"
 

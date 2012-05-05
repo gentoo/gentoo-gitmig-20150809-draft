@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.88 2012/03/16 17:25:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.89 2012/05/05 08:02:35 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> mlt-0.5.10.ebuild,
+  mlt-0.7.6-r1.ebuild, mlt-0.7.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Mar 2012; Thomas Kahle <tomka@gentoo.org> mlt-0.7.6-r1.ebuild:
   marked x86 per bug 405753

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.4.0-r1.ebuild,v 1.7 2012/03/17 18:04:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.4.0-r1.ebuild,v 1.8 2012/05/05 08:02:29 jdhore Exp $
 
 DESCRIPTION="Libvisual is an abstraction library that comes between applications and audio visualisation plugins."
 HOMEPAGE="http://libvisual.sourceforge.net"
@@ -14,7 +14,7 @@ IUSE="debug nls threads"
 RDEPEND="threads? ( >=dev-libs/glib-2 )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf --enable-static --enable-shared \

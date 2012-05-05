@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.7.0.ebuild,v 1.8 2011/01/06 17:28:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.7.0.ebuild,v 1.9 2012/05/05 08:02:36 jdhore Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -17,7 +17,7 @@ IUSE="examples static-libs"
 RDEPEND="sys-libs/zlib
 	>=media-libs/ilmbase-1.0.2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i \

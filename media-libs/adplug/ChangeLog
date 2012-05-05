@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/adplug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.35 2012/03/07 20:34:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.36 2012/05/05 08:02:27 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> adplug-2.1.ebuild,
+  adplug-2.2.ebuild, adplug-2.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> adplug-2.2.1.ebuild:
   Marking adplug-2.2.1 ppc for bug 391657

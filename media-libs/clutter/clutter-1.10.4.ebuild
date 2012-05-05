@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.10.4.ebuild,v 1.1 2012/05/02 03:25:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.10.4.ebuild,v 1.2 2012/05/05 08:02:29 jdhore Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
@@ -42,7 +42,7 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )"
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.15
-	>=dev-util/pkgconfig-0.16
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.17
 	doc? (
 		>=dev-util/gtk-doc-1.15

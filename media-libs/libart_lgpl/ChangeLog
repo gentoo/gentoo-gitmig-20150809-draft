@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.74 2012/04/25 16:47:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.75 2012/05/05 08:02:38 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libart_lgpl-2.3.20.ebuild,
+  libart_lgpl-2.3.21-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> libart_lgpl-2.3.21-r1.ebuild:
   Don't runtime libtoolize two times

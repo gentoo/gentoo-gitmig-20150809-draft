@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.7.0.ebuild,v 1.1 2010/10/09 13:24:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.7.0.ebuild,v 1.2 2012/05/05 08:02:25 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="debug doc test"
 RDEPEND="dev-libs/boost
 	>=dev-libs/glib-2.14.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 RAUL_TESTS="atomic_test atom_test list_test midi_ringbuffer_test path_test quantize_test queue_test ringbuffer_test smf_test table_test thread_test time_test"

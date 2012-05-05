@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/libbs2b-3.0.0.ebuild,v 1.6 2009/06/04 20:05:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/libbs2b-3.0.0.ebuild,v 1.7 2012/05/05 08:02:25 jdhore Exp $
 
 inherit base
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="media-libs/libsndfile"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=("${FILESDIR}/${P}-freebsd.patch")
 

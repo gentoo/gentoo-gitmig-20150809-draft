@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.3.7.ebuild,v 1.15 2010/09/24 15:55:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.3.7.ebuild,v 1.16 2012/05/05 08:02:38 jdhore Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ COMMON_DEPEND="media-libs/libogg
 	media-libs/libpng"
 DEPEND="${COMMON_DEPEND}
 	wxwidgets? ( dev-lang/python )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex
 	sys-devel/bison
 	doc? ( app-doc/doxygen )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.7.ebuild,v 1.7 2012/04/06 19:33:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.7.ebuild,v 1.8 2012/05/05 08:02:33 jdhore Exp $
 
 # FIXME: It should be possible to use net-nntp/inn for libinn.h and -linn!
 
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/libxml2
 	unicode? ( dev-libs/icu )
 	!media-libs/raptor:0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/flex"
 
 S=${WORKDIR}/${MY_P}

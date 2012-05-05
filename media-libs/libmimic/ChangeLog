@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmimic
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.19 2011/03/25 13:17:24 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.20 2012/05/05 08:02:43 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libmimic-1.0.4-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libmimic-1.0.4-r1.ebuild:
   ppc64 stable wrt #357765,#355719

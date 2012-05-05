@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5.ebuild,v 1.1 2012/02/21 06:54:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5.ebuild,v 1.2 2012/05/05 08:02:30 jdhore Exp $
 
 EAPI=4
 inherit enlightenment toolchain-funcs
@@ -24,7 +24,7 @@ RDEPEND="=media-libs/freetype-2*
 		)
 	mp3? ( media-libs/libid3tag )"
 DEPEND="${RDEPEND}
-	png? ( dev-util/pkgconfig )
+	png? ( virtual/pkgconfig )
 	X? (
 		x11-proto/xextproto
 		x11-proto/xproto

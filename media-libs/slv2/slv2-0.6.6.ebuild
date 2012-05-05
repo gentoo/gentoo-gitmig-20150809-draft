@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.6.6.ebuild,v 1.4 2012/04/21 22:22:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.6.6.ebuild,v 1.5 2012/05/05 08:02:26 jdhore Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/redland-1.0.6
 	|| ( media-libs/lv2 media-libs/lv2core )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/ldconfig.patch"

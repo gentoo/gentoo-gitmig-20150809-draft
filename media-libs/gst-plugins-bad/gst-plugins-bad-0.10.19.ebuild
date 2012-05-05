@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-0.10.19.ebuild,v 1.9 2011/04/13 10:58:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-0.10.19.ebuild,v 1.10 2012/05/05 08:02:27 jdhore Exp $
 
 inherit gst-plugins-bad gnome2 eutils flag-o-matic libtool
 
@@ -20,7 +20,7 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.29
 	!<media-plugins/gst-plugins-farsight-0.12.11"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 # Avoid --enable-bad passing by the eclass blindly
 GST_PLUGINS_BUILD=""
