@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1-r1.ebuild,v 1.1 2011/08/14 14:52:41 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1-r1.ebuild,v 1.2 2012/05/05 05:38:10 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.18:2
 	>=x11-libs/startup-notification-0.5"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=app-text/gnome-doc-utils-0.3.2
 	~app-text/docbook-xml-dtd-4.1.2
 	x11-proto/xproto

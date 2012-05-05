@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r3.ebuild,v 1.10 2012/02/10 02:43:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r3.ebuild,v 1.11 2012/05/05 05:38:11 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -46,7 +46,7 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	>=app-text/gnome-doc-utils-0.3.2
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 	~app-text/docbook-xml-dtd-4.1.2
 	doc? ( >=dev-util/gtk-doc-1 )

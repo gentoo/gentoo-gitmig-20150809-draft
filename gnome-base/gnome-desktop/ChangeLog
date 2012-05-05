@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-desktop
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.300 2011/10/28 22:51:36 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.301 2012/05/05 05:38:10 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-desktop-2.30.2.ebuild,
+  gnome-desktop-2.32.1.ebuild, gnome-desktop-2.32.1-r1.ebuild,
+  gnome-desktop-3.0.2-r1.ebuild, gnome-desktop-3.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gnome-desktop-3.2.1 (28 Oct 2011)
 

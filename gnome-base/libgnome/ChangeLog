@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.217 2012/04/29 15:47:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.218 2012/05/05 05:38:11 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libgnome-2.32.1.ebuild,
+  libgnome-2.32.1-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> libgnome-2.32.1-r1.ebuild:
   x86 stable, bug #410611

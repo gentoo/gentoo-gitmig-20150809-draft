@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11-r1.ebuild,v 1.7 2011/10/30 15:56:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11-r1.ebuild,v 1.8 2012/05/05 05:38:07 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -62,7 +62,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	x11-proto/inputproto
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=app-text/scrollkeeper-0.1.4
 	>=app-text/gnome-doc-utils-0.3.2"
 

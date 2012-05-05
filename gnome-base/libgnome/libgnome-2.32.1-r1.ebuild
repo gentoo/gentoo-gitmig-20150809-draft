@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.32.1-r1.ebuild,v 1.5 2012/04/29 15:47:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.32.1-r1.ebuild,v 1.6 2012/05/05 05:38:11 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -30,7 +30,7 @@ RDEPEND=">=gnome-base/gconf-2
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.17
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 PDEPEND="gnome-base/gvfs"

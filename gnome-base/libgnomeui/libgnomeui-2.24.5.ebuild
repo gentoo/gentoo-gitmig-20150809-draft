@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.5.ebuild,v 1.9 2011/03/22 19:18:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.5.ebuild,v 1.10 2012/05/05 05:38:12 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/libxml2-2.4.20:2
 	>=dev-libs/popt-1.5"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 	doc? ( >=dev-util/gtk-doc-1 )"
 

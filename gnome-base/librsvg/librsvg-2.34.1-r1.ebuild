@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.1-r1.ebuild,v 1.10 2012/04/24 04:04:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.1-r1.ebuild,v 1.11 2012/05/05 05:38:09 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -28,7 +28,7 @@ RDEPEND=">=media-libs/fontconfig-1.0.1
 	gtk? ( >=x11-libs/gtk+-2.16:2 )
 	gtk3? ( >=x11-libs/gtk+-2.90.0:3 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.13 )
 	>=dev-util/gtk-doc-am-1.13"
 # >=dev-util/gtk-doc-am-1.13 needed by eautoreconf

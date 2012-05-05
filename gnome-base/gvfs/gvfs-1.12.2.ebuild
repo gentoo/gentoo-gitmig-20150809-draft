@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.2.ebuild,v 1.1 2012/04/29 18:36:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.2.ebuild,v 1.2 2012/05/05 05:38:09 jdhore Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -60,7 +60,7 @@ RDEPEND=">=dev-libs/glib-2.31.0:2
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1 )"
 

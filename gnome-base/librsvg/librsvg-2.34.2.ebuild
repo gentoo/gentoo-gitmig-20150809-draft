@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.15 2012/04/24 04:04:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.16 2012/05/05 05:38:09 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -30,7 +30,7 @@ RDEPEND=">=media-libs/fontconfig-1.0.1
 	gtk3? ( >=x11-libs/gtk+-2.90.0:3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.8 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.13 )
 
 	>=dev-util/gtk-doc-am-1.13"

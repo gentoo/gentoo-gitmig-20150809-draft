@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.176 2012/04/29 18:36:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.177 2012/05/05 05:38:09 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gvfs-1.10.1.ebuild,
+  gvfs-1.12.1.ebuild, gvfs-1.12.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gvfs-1.12.2 (29 Apr 2012)
 

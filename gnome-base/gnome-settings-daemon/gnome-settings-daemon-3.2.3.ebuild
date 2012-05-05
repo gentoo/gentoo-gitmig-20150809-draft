@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.3.ebuild,v 1.1 2012/04/06 04:02:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.3.ebuild,v 1.2 2012/05/05 05:38:09 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -72,7 +72,7 @@ DEPEND="${COMMON_DEPEND}
 	cups? ( sys-apps/sed )
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	x11-proto/inputproto
 	x11-proto/kbproto
 	x11-proto/xf86miscproto

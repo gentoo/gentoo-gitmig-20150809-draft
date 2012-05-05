@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19.ebuild,v 1.6 2011/03/22 19:21:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19.ebuild,v 1.7 2012/05/05 05:38:08 jdhore Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.8
 	>=dev-libs/libIDL-0.8.2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.18
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README* TODO"

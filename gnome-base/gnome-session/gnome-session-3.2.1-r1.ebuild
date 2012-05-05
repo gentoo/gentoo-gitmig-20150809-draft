@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.2.1-r1.ebuild,v 1.1 2012/01/25 03:53:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.2.1-r1.ebuild,v 1.2 2012/05/05 05:38:12 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -52,7 +52,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5
 	>=sys-devel/gettext-0.10.40
-	>=dev-util/pkgconfig-0.17
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40.6
 	!<gnome-base/gdm-2.20.4
 	doc? (

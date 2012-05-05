@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.18.6.ebuild,v 1.8 2011/10/02 20:47:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.18.6.ebuild,v 1.9 2012/05/05 05:38:11 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 	>=x11-themes/gnome-icon-theme-1.1.92"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {

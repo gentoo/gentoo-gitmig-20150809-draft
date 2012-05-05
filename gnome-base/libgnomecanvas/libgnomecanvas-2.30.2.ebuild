@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.30.2.ebuild,v 1.6 2011/03/16 10:48:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.30.2.ebuild,v 1.7 2012/05/05 05:38:11 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.18
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {

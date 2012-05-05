@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.19 2012/02/10 03:43:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.20 2012/05/05 05:38:07 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -57,7 +57,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.1.4
 	>=app-text/gnome-doc-utils-0.3.2
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	dev-libs/libxslt
 	~app-text/docbook-xml-dtd-4.3
