@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.3.ebuild,v 1.2 2012/02/18 15:06:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.3.ebuild,v 1.3 2012/05/05 15:08:57 sera Exp $
 
 EAPI="4"
 
@@ -94,10 +94,6 @@ DEPEND="
 	jce? ( app-arch/unzip )"
 
 S="${WORKDIR}/jdk${S_PV}"
-
-QA_TEXTRELS_x86="
-	opt/${P}/jre/lib/i386/client/libjvm.so
-	opt/${P}/jre/lib/i386/server/libjvm.so"
 
 pkg_nofetch() {
 	if use x86; then
@@ -243,3 +239,113 @@ src_install() {
 	java-vm_revdep-mask
 	java-vm_sandbox-predict /dev/random /proc/self/coredump_filter
 }
+
+QA_TEXTRELS_x86="
+	opt/${P}/jre/lib/i386/client/libjvm.so
+	opt/${P}/jre/lib/i386/server/libjvm.so"
+QA_FLAGS_IGNORED="
+	/opt/${P}/bin/appletviewer
+	/opt/${P}/bin/apt
+	/opt/${P}/bin/extcheck
+	/opt/${P}/bin/idlj
+	/opt/${P}/bin/jar
+	/opt/${P}/bin/jarsigner
+	/opt/${P}/bin/java
+	/opt/${P}/bin/javac
+	/opt/${P}/bin/javadoc
+	/opt/${P}/bin/javah
+	/opt/${P}/bin/javap
+	/opt/${P}/bin/javaws
+	/opt/${P}/bin/jconsole
+	/opt/${P}/bin/jdb
+	/opt/${P}/bin/jhat
+	/opt/${P}/bin/jinfo
+	/opt/${P}/bin/jmap
+	/opt/${P}/bin/jps
+	/opt/${P}/bin/jrunscript
+	/opt/${P}/bin/jsadebugd
+	/opt/${P}/bin/jstack
+	/opt/${P}/bin/jstat
+	/opt/${P}/bin/jstatd
+	/opt/${P}/bin/keytool
+	/opt/${P}/bin/native2ascii
+	/opt/${P}/bin/orbd
+	/opt/${P}/bin/pack200
+	/opt/${P}/bin/policytool
+	/opt/${P}/bin/rmic
+	/opt/${P}/bin/rmid
+	/opt/${P}/bin/rmiregistry
+	/opt/${P}/bin/schemagen
+	/opt/${P}/bin/serialver
+	/opt/${P}/bin/servertool
+	/opt/${P}/bin/tnameserv
+	/opt/${P}/bin/unpack200
+	/opt/${P}/bin/wsgen
+	/opt/${P}/bin/wsimport
+	/opt/${P}/bin/xjc
+	/opt/${P}/jre/bin/java
+	/opt/${P}/jre/bin/java_vm
+	/opt/${P}/jre/bin/javaws
+	/opt/${P}/jre/bin/keytool
+	/opt/${P}/jre/bin/orbd
+	/opt/${P}/jre/bin/pack200
+	/opt/${P}/jre/bin/policytool
+	/opt/${P}/jre/bin/rmid
+	/opt/${P}/jre/bin/rmiregistry
+	/opt/${P}/jre/bin/servertool
+	/opt/${P}/jre/bin/tnameserv
+	/opt/${P}/jre/bin/unpack200
+	/opt/${P}/jre/lib/jexec
+	/opt/${P}/lib/jexec
+	/opt/${P}/lib/visualvm/profiler/lib/deployed/jdk15/linux-amd64/libprofilerinterface.so
+	/opt/${P}/lib/visualvm/profiler/lib/deployed/jdk16/linux-amd64/libprofilerinterface.so"
+for java_system_arch in amd64 i386; do
+	QA_FLAGS_IGNORED+="
+		/opt/${P}/jre/lib/${java_system_arch}/headless/libmawt.so
+		/opt/${P}/jre/lib/${java_system_arch}/jli/libjli.so
+		/opt/${P}/jre/lib/${java_system_arch}/libattach.so
+		/opt/${P}/jre/lib/${java_system_arch}/libawt.so
+		/opt/${P}/jre/lib/${java_system_arch}/libcmm.so
+		/opt/${P}/jre/lib/${java_system_arch}/libdcpr.so
+		/opt/${P}/jre/lib/${java_system_arch}/libdeploy.so
+		/opt/${P}/jre/lib/${java_system_arch}/libdt_socket.so
+		/opt/${P}/jre/lib/${java_system_arch}/libfontmanager.so
+		/opt/${P}/jre/lib/${java_system_arch}/libhprof.so
+		/opt/${P}/jre/lib/${java_system_arch}/libinstrument.so
+		/opt/${P}/jre/lib/${java_system_arch}/libioser12.so
+		/opt/${P}/jre/lib/${java_system_arch}/libj2gss.so
+		/opt/${P}/jre/lib/${java_system_arch}/libj2pcsc.so
+		/opt/${P}/jre/lib/${java_system_arch}/libj2pkcs11.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjaas_unix.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjava_crw_demo.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjava.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjawt.so
+		/opt/${P}/jre/lib/${java_system_arch}/libJdbcOdbc.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjdwp.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjpeg.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjsdt.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjsig.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjsoundalsa.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjsound.so
+		/opt/${P}/jre/lib/${java_system_arch}/libkcms.so
+		/opt/${P}/jre/lib/${java_system_arch}/libmanagement.so
+		/opt/${P}/jre/lib/${java_system_arch}/libmlib_image.so
+		/opt/${P}/jre/lib/${java_system_arch}/libnative_chmod_g.so
+		/opt/${P}/jre/lib/${java_system_arch}/libnative_chmod.so
+		/opt/${P}/jre/lib/${java_system_arch}/libnet.so
+		/opt/${P}/jre/lib/${java_system_arch}/libnio.so
+		/opt/${P}/jre/lib/${java_system_arch}/libnpt.so
+		/opt/${P}/jre/lib/${java_system_arch}/librmi.so
+		/opt/${P}/jre/lib/${java_system_arch}/libsaproc.so
+		/opt/${P}/jre/lib/${java_system_arch}/libsctp.so
+		/opt/${P}/jre/lib/${java_system_arch}/libsplashscreen.so
+		/opt/${P}/jre/lib/${java_system_arch}/libsunec.so
+		/opt/${P}/jre/lib/${java_system_arch}/libt2k.so
+		/opt/${P}/jre/lib/${java_system_arch}/libunpack.so
+		/opt/${P}/jre/lib/${java_system_arch}/libverify.so
+		/opt/${P}/jre/lib/${java_system_arch}/libzip.so
+		/opt/${P}/jre/lib/${java_system_arch}/motif21/libmawt.so
+		/opt/${P}/jre/lib/${java_system_arch}/native_threads/libhpi.so
+		/opt/${P}/jre/lib/${java_system_arch}/server/libjvm.so
+		/opt/${P}/jre/lib/${java_system_arch}/xawt/libmawt.so"
+done
