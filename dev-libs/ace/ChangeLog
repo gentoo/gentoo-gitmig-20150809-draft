@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.64 2012/04/22 12:10:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.65 2012/05/05 21:59:50 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> ace-5.7.2.ebuild:
+  Marking ace-5.7.2 ppc for bug 273186
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> ace-5.7.2.ebuild:
   x86 stable, bug #273186
