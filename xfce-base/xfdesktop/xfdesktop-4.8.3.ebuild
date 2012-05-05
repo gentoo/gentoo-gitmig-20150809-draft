@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.8.3.ebuild,v 1.9 2012/04/22 18:23:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.8.3.ebuild,v 1.10 2012/05/05 07:01:20 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -29,7 +29,7 @@ RDEPEND="x11-libs/libX11
 		>=dev-libs/dbus-glib-0.90 )" #388407
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.76 2012/04/29 09:57:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.77 2012/05/05 06:56:56 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> exo-0.6.2.ebuild,
+  exo-0.6.2-r1.ebuild, exo-0.7.3.ebuild, exo-0.8.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *exo-0.8.0 (29 Apr 2012)
 

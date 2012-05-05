@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.9.5.ebuild,v 1.1 2012/04/14 09:05:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.9.5.ebuild,v 1.2 2012/05/05 07:01:21 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	xklavier? ( >=x11-libs/libxklavier-5 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	>=x11-proto/inputproto-1.4
 	x11-proto/xproto"

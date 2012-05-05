@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.10.0.ebuild,v 1.1 2012/04/29 09:38:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.10.0.ebuild,v 1.2 2012/05/05 06:55:44 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	perl? ( dev-perl/glib-perl )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	perl? (
 		dev-perl/extutils-depends

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.2.3.ebuild,v 1.9 2012/03/23 21:22:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.2.3.ebuild,v 1.10 2012/05/05 06:56:15 mgorny Exp $
 
 EAPI=4
 inherit virtualx xfconf
@@ -38,7 +38,7 @@ RDEPEND="${COMMON_DEPEND}
 	xfce_plugins_trash? ( ${GVFS_DEPEND} )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 REQUIRED_USE="xfce_plugins_trash? ( dbus )"
 

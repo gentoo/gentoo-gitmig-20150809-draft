@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.10.0.ebuild,v 1.1 2012/04/29 09:48:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.10.0.ebuild,v 1.2 2012/05/05 06:56:30 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -24,7 +24,7 @@ RDEPEND="gnome-base/libglade
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(

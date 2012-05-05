@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.2.ebuild,v 1.10 2012/03/23 21:13:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.2.ebuild,v 1.11 2012/05/05 06:56:56 mgorny Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-lang/perl-5.6
 	python? ( >=dev-python/pygtk-2.4 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {
