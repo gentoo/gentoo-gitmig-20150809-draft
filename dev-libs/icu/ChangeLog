@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.181 2012/05/05 17:06:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.182 2012/05/05 19:38:27 hwoarang Exp $
+
+  05 May 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  remove description from metadata
 
   05 May 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   remove neurogeek add proxy-maintainers
