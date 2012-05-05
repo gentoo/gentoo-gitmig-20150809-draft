@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pystopwatch/pystopwatch-2011.04.04.1.ebuild,v 1.1 2012/02/07 22:28:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pystopwatch/pystopwatch-2012.02.17.84795.ebuild,v 1.1 2012/05/05 12:23:16 xmw Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit python
 
 DESCRIPTION="clock and two countdown functions that can minimize to the tray"
 HOMEPAGE="http://xyne.archlinux.ca/projects/pystopwatch"
-SRC_URI="http://xyne.archlinux.ca/src/${P}.tar.gz"
+SRC_URI="http://xyne.archlinux.ca/projects/${PN}/archives/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,8 +19,6 @@ IUSE=""
 
 RDEPEND="dev-python/pygtk:2"
 DEPEND=""
-
-S=${WORKDIR}/${PN}
 
 src_prepare() {
 	unpack ./man/${PN}.1.gz
