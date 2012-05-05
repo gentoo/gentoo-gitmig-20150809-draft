@@ -1,6 +1,13 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.2 2012/04/29 09:21:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.3 2012/05/05 14:19:10 yngwin Exp $
+
+*qpdfview-0.2.2 (05 May 2012)
+
+  05 May 2012; Ben de Groot <yngwin@gentoo.org> +qpdfview-0.2.2.ebuild,
+  -qpdfview-0.2.2_beta2.ebuild, -qpdfview-0.2_beta1.ebuild:
+  Version bump. Remove beta versions. Update SRC_URI as notified by Adam
+  Reichold (upstream).
 
 *qpdfview-0.2.2_beta2 (29 Apr 2012)
 
