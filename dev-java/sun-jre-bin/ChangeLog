@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.209 2012/05/05 15:34:51 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.210 2012/05/05 21:53:37 sera Exp $
+
+*sun-jre-bin-1.6.0.32 (05 May 2012)
+
+  05 May 2012; Ralph Sennhauser <sera@gentoo.org> +sun-jre-bin-1.6.0.32.ebuild:
+  Version bump. #414775
 
   05 May 2012; Ralph Sennhauser <sera@gentoo.org> -sun-jre-bin-1.6.0.29.ebuild:
   Remove vulnarable. #404071
