@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.7 2012/05/04 20:20:08 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.8 2012/05/05 17:47:08 xarthisius Exp $
+
+*autopep8-0.5.2-r1 (05 May 2012)
+
+  05 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.5.2-r1.ebuild,
+  -autopep8-0.5.2_p1.ebuild, metadata.xml:
+  Remove unnecessary _p1 version and do a simple revbump instead. Add python
+  herd to metadata
 
 *autopep8-0.5.2_p1 (04 May 2012)
 
