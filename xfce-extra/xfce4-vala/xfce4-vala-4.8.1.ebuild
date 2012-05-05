@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/xfce4-vala-4.8.1.ebuild,v 1.1 2011/11/25 03:30:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/xfce4-vala-4.8.1.ebuild,v 1.2 2012/05/05 07:42:41 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -21,7 +21,7 @@ RDEPEND="dev-lang/vala:0.12
 	>=xfce-base/xfce4-panel-4.8
 	>=xfce-base/xfconf-4.8"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	export VALAC="$(type -P valac-0.12)"
