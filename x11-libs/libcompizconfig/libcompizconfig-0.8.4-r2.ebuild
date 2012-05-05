@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/libcompizconfig-0.8.4-r2.ebuild,v 1.2 2011/03/21 19:52:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/libcompizconfig-0.8.4-r2.ebuild,v 1.3 2012/05/05 03:52:25 jdhore Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.41
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 "
 
 RESTRICT="test"

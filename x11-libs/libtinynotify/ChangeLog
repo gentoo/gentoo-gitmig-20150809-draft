@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libtinynotify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/ChangeLog,v 1.6 2012/01/09 20:45:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/ChangeLog,v 1.7 2012/05/05 03:52:27 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libtinynotify-0.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libtinynotify-0.2.1 (09 Jan 2012)
 

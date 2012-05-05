@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0-r1.ebuild,v 1.4 2012/04/29 16:19:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0-r1.ebuild,v 1.5 2012/05/05 03:52:29 jdhore Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.2.1:2
 	t1lib?	( >=media-libs/t1lib-5:5 )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="ANNOUNCEMENT AUTHORS BUGS ChangeLog CONTRIBUTORS HISTORY NEWS README TODO"

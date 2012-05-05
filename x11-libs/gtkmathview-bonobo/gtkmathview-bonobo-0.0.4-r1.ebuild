@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview-bonobo/gtkmathview-bonobo-0.0.4-r1.ebuild,v 1.1 2008/11/24 10:16:40 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview-bonobo/gtkmathview-bonobo-0.0.4-r1.ebuild,v 1.2 2012/05/05 03:52:28 jdhore Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtkmathview-0.6.2[gtk]
 	>=gnome-base/libgnomeui-2"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

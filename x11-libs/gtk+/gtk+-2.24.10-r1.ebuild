@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10-r1.ebuild,v 1.7 2012/04/29 16:18:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10-r1.ebuild,v 1.8 2012/05/05 03:52:23 jdhore Exp $
 
 EAPI="4"
 
@@ -44,7 +44,7 @@ COMMON_DEPEND="!aqua? (
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
 	!<gnome-base/gail-1000"
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	!aqua? (
 		x11-proto/xextproto
 		x11-proto/xproto

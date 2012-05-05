@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-1.0.0.ebuild,v 1.3 2012/04/03 20:28:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-1.0.0.ebuild,v 1.4 2012/05/05 03:52:27 jdhore Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	>=dev-libs/glib-2.10:2
 	>=x11-libs/cairo-1.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
 pkg_setup() {

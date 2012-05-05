@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.17.ebuild,v 1.8 2012/04/14 19:23:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.17.ebuild,v 1.9 2012/05/05 03:52:24 jdhore Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {

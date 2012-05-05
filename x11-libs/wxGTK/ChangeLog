@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.288 2012/03/25 14:44:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.289 2012/05/05 03:52:23 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wxGTK-2.8.11.0.ebuild,
+  wxGTK-2.8.12.0.ebuild, wxGTK-2.8.12.1.ebuild, wxGTK-2.9.1.1.ebuild,
+  wxGTK-2.9.3.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> wxGTK-2.8.12.1.ebuild:
   alpha/ia64/sh/sparc stable wrt #403235

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.62 2012/04/14 19:23:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.63 2012/05/05 03:52:24 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libfm-0.1.12.ebuild,
+  libfm-0.1.15_pre20110422.ebuild, libfm-0.1.15_pre20110614.ebuild,
+  libfm-0.1.16.ebuild, libfm-0.1.17.ebuild, libfm-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> libfm-0.1.17.ebuild:
   Add ~amd64-linux keyword.

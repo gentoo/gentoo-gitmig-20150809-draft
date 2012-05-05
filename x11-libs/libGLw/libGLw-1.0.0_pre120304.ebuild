@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libGLw/libGLw-1.0.0_pre120304.ebuild,v 1.2 2012/03/04 19:50:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libGLw/libGLw-1.0.0_pre120304.ebuild,v 1.3 2012/05/05 03:52:24 jdhore Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="
 	x11-libs/openmotif
 	virtual/opengl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	local myeconfargs=(

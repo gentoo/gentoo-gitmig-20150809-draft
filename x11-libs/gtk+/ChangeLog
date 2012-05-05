@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.587 2012/05/03 02:15:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.588 2012/05/05 03:52:23 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk+-2.24.5-r1.ebuild,
+  gtk+-2.24.8-r1.ebuild, gtk+-2.24.9-r1.ebuild, gtk+-2.24.10-r1.ebuild,
+  gtk+-3.0.12-r1.ebuild, gtk+-3.2.3.ebuild, gtk+-3.2.4.ebuild,
+  gtk+-3.2.4-r1.ebuild, gtk+-3.4.1.ebuild, gtk+-3.4.1-r1.ebuild,
+  gtk+-3.4.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gtk+-3.4.2 (03 May 2012)
 

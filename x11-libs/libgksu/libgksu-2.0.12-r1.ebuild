@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.14 2012/01/05 01:46:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.15 2012/05/05 03:52:30 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ DEPEND="${BOTH}
 	doc? ( >=dev-util/gtk-doc-1.2-r1 )
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.35.5
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
 RDEPEND="${BOTH}
 	app-admin/sudo"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.5 2011/02/26 18:06:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.6 2012/05/05 03:52:29 jdhore Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="
 	truetype? ( media-libs/freetype:2 )
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 # taken from debian

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/agg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.22 2011/02/26 18:06:35 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.23 2012/05/05 03:52:29 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> agg-2.5.ebuild,
+  agg-2.5-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> agg-2.5-r2.ebuild:
   Marked ~ppc64 wrt #342535. Thanks to Stephen Lewis

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.10.ebuild,v 1.12 2011/04/18 14:41:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.10.ebuild,v 1.13 2012/05/05 03:52:24 jdhore Exp $
 
 EAPI=2
 
@@ -44,7 +44,7 @@ RDEPEND="media-libs/fontconfig
 #	>=gnome-base/librsvg-2.15.0
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=sys-devel/libtool-2
 	doc? (	>=dev-util/gtk-doc-1.6
 		~app-text/docbook-xml-dtd-4.2 )

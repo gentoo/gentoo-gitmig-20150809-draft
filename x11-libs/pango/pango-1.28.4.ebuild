@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.20 2012/04/25 10:11:21 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.21 2012/05/05 03:52:23 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.24:2
 		x11-libs/libX11
 		x11-libs/libXft )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/gtk-doc-am-1.13
 	doc? (
 		>=dev-util/gtk-doc-1.13

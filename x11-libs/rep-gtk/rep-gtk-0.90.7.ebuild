@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.90.7.ebuild,v 1.7 2011/10/30 17:44:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.90.7.ebuild,v 1.8 2012/05/05 03:52:26 jdhore Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/librep-0.90.5
 	>=x11-libs/gtk+-2.24.0:2
 	>=x11-libs/gdk-pixbuf-2.23:2"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Fix undefined symbol problems like bug #367623

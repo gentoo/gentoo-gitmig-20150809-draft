@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.13 2011/03/06 13:13:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.14 2012/05/05 03:52:29 jdhore Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.2.1:2
 	mathml? ( media-fonts/texcm-ttf )
 	t1lib?	( >=media-libs/t1lib-5:5 )"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+		virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \

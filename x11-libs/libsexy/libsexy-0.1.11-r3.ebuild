@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.11-r3.ebuild,v 1.2 2011/10/16 20:06:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.11-r3.ebuild,v 1.3 2012/05/05 03:52:30 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.6:2
 	>=app-text/iso-codes-0.49"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 

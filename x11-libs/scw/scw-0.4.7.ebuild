@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/scw-0.4.7.ebuild,v 1.4 2011/03/28 17:12:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/scw-0.4.7.ebuild,v 1.5 2012/05/05 03:52:24 jdhore Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf $(use_enable doc gtk-doc)

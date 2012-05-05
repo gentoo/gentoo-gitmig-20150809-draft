@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-3.0.1.ebuild,v 1.7 2012/03/05 22:18:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-3.0.1.ebuild,v 1.8 2012/05/05 03:52:24 jdhore Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.12.0:2
 	dev-libs/glib:2
 	introspection? ( >=dev-libs/gobject-introspection-0.6.14 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Fix configure,

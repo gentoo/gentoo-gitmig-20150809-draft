@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.4.1-r1.ebuild,v 1.2 2012/04/01 16:51:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.4.1-r1.ebuild,v 1.3 2012/05/05 03:52:28 jdhore Exp $
 
 EAPI=4
 inherit multilib
@@ -25,7 +25,7 @@ RDEPEND="x11-libs/libX11
 	!=x11-drivers/nvidia-drivers-190.36
 	!=x11-drivers/nvidia-drivers-190.40"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=x11-proto/dri2proto-2.2
 	doc? (
 		app-doc/doxygen

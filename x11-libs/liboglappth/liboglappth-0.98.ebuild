@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/liboglappth/liboglappth-0.98.ebuild,v 1.8 2011/05/28 13:56:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/liboglappth/liboglappth-0.98.ebuild,v 1.9 2012/05/05 03:52:30 jdhore Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND="virtual/opengl
 	media-libs/freeglut"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

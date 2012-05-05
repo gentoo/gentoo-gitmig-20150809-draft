@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.23 2010/07/10 13:39:24 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.24 2012/05/05 03:52:24 jdhore Exp $
 
 inherit eutils autotools
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 	x11-proto/xextproto
 	x11-proto/xproto
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

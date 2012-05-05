@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/c++-gtk-utils/c++-gtk-utils-2.0.4.ebuild,v 1.3 2012/04/09 12:14:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/c++-gtk-utils/c++-gtk-utils-2.0.4.ebuild,v 1.4 2012/05/05 03:52:30 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="nls static-libs"
 RDEPEND=">=dev-libs/glib-2.26
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 DOCS="ChangeLog"

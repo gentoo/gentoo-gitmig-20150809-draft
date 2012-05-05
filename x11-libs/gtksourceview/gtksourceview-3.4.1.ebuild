@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.4.1.ebuild,v 1.2 2012/05/02 01:25:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.4.1.ebuild,v 1.3 2012/05/05 03:52:26 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-3.3.8:3[introspection?]
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.11 )"
 
 pkg_setup() {

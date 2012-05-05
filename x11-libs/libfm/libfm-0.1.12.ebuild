@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.12.ebuild,v 1.9 2011/03/07 20:33:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.12.ebuild,v 1.10 2012/05/05 03:52:24 jdhore Exp $
 
 EAPI="2"
 inherit eutils
@@ -21,7 +21,7 @@ RDEPEND="${COMMON_DEPEND}
 	udev? ( >=gnome-base/gvfs-1.6.4-r2[gdu,udev] )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_configure() {

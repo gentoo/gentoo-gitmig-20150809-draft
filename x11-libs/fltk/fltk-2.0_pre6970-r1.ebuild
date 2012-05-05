@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6970-r1.ebuild,v 1.10 2012/02/04 20:44:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6970-r1.ebuild,v 1.11 2012/05/05 03:52:30 jdhore Exp $
 
 EAPI=2
 inherit multilib autotools flag-o-matic
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-libs/libXi
 	xinerama? ( x11-proto/xineramaproto )
-	cairo? ( dev-util/pkgconfig )
+	cairo? ( virtual/pkgconfig )
 	doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}/${MY_P}"

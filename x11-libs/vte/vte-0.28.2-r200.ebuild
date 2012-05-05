@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r200.ebuild,v 1.8 2012/02/10 02:47:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r200.ebuild,v 1.9 2012/05/05 03:52:26 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	python? ( >=dev-python/pygtk-2.4:2 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1.13 )"
 

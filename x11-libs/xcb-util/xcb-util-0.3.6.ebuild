@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/xcb-util-0.3.6.ebuild,v 1.10 2010/01/15 21:57:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/xcb-util-0.3.6.ebuild,v 1.11 2012/05/05 03:52:23 jdhore Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -17,7 +17,7 @@ IUSE="test"
 RDEPEND=">=x11-libs/libxcb-1.4"
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.1
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=x11-proto/xproto-7.0.8
 	>=x11-proto/xcb-proto-1.5
 	test? ( >=dev-libs/check-0.9.4 )"

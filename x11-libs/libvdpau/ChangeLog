@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.21 2012/04/01 16:51:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.22 2012/05/05 03:52:28 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libvdpau-0.4.1-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   01 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libvdpau-0.4.1.ebuild,
   libvdpau-0.4.1-r1.ebuild:

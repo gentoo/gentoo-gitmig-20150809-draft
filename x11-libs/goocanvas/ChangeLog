@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.32 2012/04/17 21:51:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.33 2012/05/05 03:52:27 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> goocanvas-0.14.ebuild,
+  goocanvas-1.0.0.ebuild, goocanvas-2.0.0.ebuild, goocanvas-2.0.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> goocanvas-2.0.1.ebuild:
   Marking goocanvas-2.0.1 ppc64 for bug 404875

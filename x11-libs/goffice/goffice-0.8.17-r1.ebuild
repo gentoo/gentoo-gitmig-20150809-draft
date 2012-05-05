@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.17-r1.ebuild,v 1.1 2012/04/20 19:21:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.17-r1.ebuild,v 1.2 2012/05/05 03:52:25 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	gnome? ( >=gnome-base/gconf-2:2 )
 "
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.18
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1.11 )
 

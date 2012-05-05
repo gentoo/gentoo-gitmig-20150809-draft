@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r2.ebuild,v 1.5 2012/04/29 15:17:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r2.ebuild,v 1.6 2012/05/05 03:52:26 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.11 )"
 
 pkg_setup() {

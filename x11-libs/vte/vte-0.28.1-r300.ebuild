@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.1-r300.ebuild,v 1.3 2011/08/02 05:34:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.1-r300.ebuild,v 1.4 2012/05/05 03:52:26 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.0 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1.13 )"
 

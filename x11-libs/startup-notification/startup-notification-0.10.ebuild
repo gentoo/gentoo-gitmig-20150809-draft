@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.10.ebuild,v 1.13 2011/04/26 15:08:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.10.ebuild,v 1.14 2012/05/05 03:52:26 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/libX11
 	<x11-libs/xcb-util-0.3.8
 	>=x11-libs/xcb-util-0.3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto
 	x11-libs/libXt"
 

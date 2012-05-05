@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libview
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.19 2011/10/16 20:24:56 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.20 2012/05/05 03:52:28 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libview-0.6.6-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -libview-0.6.6-r1.ebuild:
   old

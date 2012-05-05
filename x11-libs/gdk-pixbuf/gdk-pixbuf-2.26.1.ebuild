@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.1.ebuild,v 1.4 2012/04/29 14:43:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.1.ebuild,v 1.5 2012/05/05 03:52:28 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	tiff? ( >=media-libs/tiff-3.9.2:0 )
 	X? ( x11-libs/libX11 )"
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.17
 	>=dev-util/gtk-doc-am-1.11
 	doc? (

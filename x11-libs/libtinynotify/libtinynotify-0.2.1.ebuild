@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/libtinynotify-0.2.1.ebuild,v 1.1 2012/01/09 20:45:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/libtinynotify-0.2.1.ebuild,v 1.2 2012/05/05 03:52:27 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="debug doc static-libs"
 
 RDEPEND="sys-apps/dbus"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 
 DOCS=( README )

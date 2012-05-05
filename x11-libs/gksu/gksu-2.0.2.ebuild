@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2.ebuild,v 1.13 2012/04/07 23:55:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.2.ebuild,v 1.14 2012/05/05 03:52:28 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/libgksu-2.0.8
 		x11-terms/gnome-terminal )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
 pkg_setup() {

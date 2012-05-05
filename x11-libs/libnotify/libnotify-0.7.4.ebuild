@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.4.ebuild,v 1.5 2011/11/18 22:16:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.4.ebuild,v 1.6 2012/05/05 03:52:28 jdhore Exp $
 
 EAPI=4
 inherit autotools gnome.org
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	x11-libs/gdk-pixbuf:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.14 )
 	test? ( x11-libs/gtk+:3 )"

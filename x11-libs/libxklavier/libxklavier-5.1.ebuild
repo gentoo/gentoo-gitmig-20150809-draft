@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.1.ebuild,v 1.8 2012/01/14 19:50:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.1.ebuild,v 1.9 2012/05/05 03:52:30 jdhore Exp $
 
 EAPI="3"
 inherit gnome.org eutils libtool multilib
@@ -22,7 +22,7 @@ RDEPEND="x11-misc/xkeyboard-config
 	dev-libs/libxml2
 	app-text/iso-codes"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 

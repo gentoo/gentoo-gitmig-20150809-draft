@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXCalibrate
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/ChangeLog,v 1.20 2011/11/05 17:04:03 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/ChangeLog,v 1.21 2012/05/05 03:52:30 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  libXCalibrate-0.1_pre20081207-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   05 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   libXCalibrate-0.1_pre20081207-r1.ebuild:
