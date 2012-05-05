@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pps-tools/pps-tools-0.0.20110710.ebuild,v 1.2 2012/05/05 11:50:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pps-tools/pps-tools-0.0.20110710.ebuild,v 1.3 2012/05/05 13:50:22 hwoarang Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/${PV_COMMIT} -> ${PN}-gi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
