@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.33 2012/04/23 20:32:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.34 2012/05/05 03:20:42 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> remmina-0.7.5.ebuild,
+  remmina-0.9.3.ebuild, remmina-1.0.0-r1.ebuild,
+  remmina-1.0.0_p20120309.ebuild, remmina-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> remmina-1.0.0-r1.ebuild,
   remmina-1.0.0_p20120309.ebuild, remmina-9999.ebuild:

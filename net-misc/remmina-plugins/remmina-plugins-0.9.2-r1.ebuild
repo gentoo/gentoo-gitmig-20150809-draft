@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-0.9.2-r1.ebuild,v 1.4 2012/02/15 00:55:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-0.9.2-r1.ebuild,v 1.5 2012/05/05 03:20:41 jdhore Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -24,7 +24,7 @@ RDEPEND=">=net-misc/remmina-0.8.0
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	telepathy? ( >=net-libs/telepathy-glib-0.9.0 ) "
 

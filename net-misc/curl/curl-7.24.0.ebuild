@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.24.0.ebuild,v 1.9 2012/03/31 18:31:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.24.0.ebuild,v 1.10 2012/05/05 03:20:41 jdhore Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ RDEPEND="ldap? ( net-nds/openldap )
 
 DEPEND="${RDEPEND}
 	sys-apps/ed
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		sys-apps/diffutils
 		dev-lang/perl

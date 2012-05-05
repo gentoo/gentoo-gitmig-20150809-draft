@@ -1,5 +1,9 @@
 
 
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> cgminer-2.3.4.ebuild,
+  cgminer-2.3.5.ebuild, cgminer-2.3.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
 *cgminer-2.3.6 (29 Apr 2012)
 
   29 Apr 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.5.ebuild,

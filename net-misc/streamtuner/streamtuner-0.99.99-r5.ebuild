@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r5.ebuild,v 1.4 2011/03/29 12:53:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r5.ebuild,v 1.5 2012/05/05 03:20:45 jdhore Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2.4:2
 	python? ( dev-python/pygtk:2 )
 	x11-misc/xdg-utils"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	# live365 causes parse errors at connect time.

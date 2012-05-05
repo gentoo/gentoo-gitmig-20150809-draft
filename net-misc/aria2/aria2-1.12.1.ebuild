@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.12.1.ebuild,v 1.1 2011/08/03 14:46:00 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.12.1.ebuild,v 1.2 2012/05/05 03:20:39 jdhore Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ CDEPEND="sys-libs/zlib
 		expat? ( dev-libs/expat ) )"
 DEPEND="${CDEPEND}
 	app-text/asciidoc
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	test? ( >=dev-util/cppunit-1.12.0 )"
 RDEPEND="${CDEPEND}

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quickshare/quickshare-1.0.ebuild,v 1.1 2011/09/17 23:25:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quickshare/quickshare-1.0.ebuild,v 1.2 2012/05/05 03:20:43 jdhore Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="net-libs/libmicrohttpd
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P}-src
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/streamtuner
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.40 2011/03/29 12:53:35 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.41 2012/05/05 03:20:45 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> streamtuner-0.99.99-r5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org>
   streamtuner-0.99.99-r5.ebuild:

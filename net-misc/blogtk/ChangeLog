@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/blogtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.24 2012/02/05 01:51:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.25 2012/05/05 03:20:40 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> blogtk-2.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> blogtk-2.0.ebuild:
   Inherit multilib.

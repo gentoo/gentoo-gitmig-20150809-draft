@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2-r1.ebuild,v 1.4 2012/05/03 04:14:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2-r1.ebuild,v 1.5 2012/05/05 03:20:43 jdhore Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/protobuf
 	skalibs? ( dev-libs/skalibs )
 	utempter? ( sys-libs/libutempter )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	if ! use skalibs ; then

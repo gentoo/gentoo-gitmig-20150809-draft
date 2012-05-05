@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.ebuild,v 1.4 2012/02/01 17:08:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.62.ebuild,v 1.5 2012/05/05 03:20:42 jdhore Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-lang/perl
-	dev-util/pkgconfig
+	virtual/pkgconfig
 "
 
 src_prepare() {

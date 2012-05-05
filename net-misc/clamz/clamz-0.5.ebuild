@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clamz/clamz-0.5.ebuild,v 1.1 2011/12/09 14:33:12 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clamz/clamz-0.5.ebuild,v 1.2 2012/05/05 03:20:44 jdhore Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -18,7 +18,7 @@ RDEPEND="dev-libs/expat
 	net-misc/curl
 	dev-libs/libgcrypt"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	UPDATE_MIME_DATABASE=true \

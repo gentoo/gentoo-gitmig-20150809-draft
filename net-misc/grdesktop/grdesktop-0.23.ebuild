@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.23.ebuild,v 1.12 2011/03/27 12:36:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.23.ebuild,v 1.13 2012/05/05 03:20:42 jdhore Exp $
 
 EAPI="1"
 
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/gtk+:2
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 G2CONF="${G2CONF} --with-keymap-path=/usr/share/rdesktop/keymaps/"
 

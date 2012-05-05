@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.153 2012/04/26 15:15:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.154 2012/05/05 03:20:45 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wget-1.13.4-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> wget-1.13.4-r1.ebuild:
   keyword ~amd64-fbsd

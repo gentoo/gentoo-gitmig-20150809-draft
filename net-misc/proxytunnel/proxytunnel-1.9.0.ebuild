@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/proxytunnel-1.9.0.ebuild,v 1.1 2008/05/21 20:35:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxytunnel/proxytunnel-1.9.0.ebuild,v 1.2 2012/05/05 03:20:43 jdhore Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE="static"
 
 RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	use static && append-ldflags -static

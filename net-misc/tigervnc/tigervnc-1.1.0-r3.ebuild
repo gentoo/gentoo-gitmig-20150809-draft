@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r3.ebuild,v 1.3 2012/02/22 22:08:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r3.ebuild,v 1.4 2012/05/05 03:20:43 jdhore Exp $
 
 EAPI="1"
 
@@ -55,7 +55,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xextproto-7.0.3
 	>=x11-proto/xproto-7.0.13
 	server?	(
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		media-fonts/font-util
 		x11-misc/util-macros
 		x11-proto/bigreqsproto

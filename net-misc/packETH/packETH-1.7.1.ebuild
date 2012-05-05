@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/packETH-1.7.1.ebuild,v 1.4 2012/01/21 16:34:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/packETH-1.7.1.ebuild,v 1.5 2012/05/05 03:20:45 jdhore Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	x11-libs/gdk-pixbuf
 "
 DEPEND="
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	${RDEPEND}
 "
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/gupnp-tools-0.8.ebuild,v 1.1 2009/10/19 08:45:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/gupnp-tools-0.8.ebuild,v 1.2 2012/05/05 03:20:44 jdhore Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=net-libs/gupnp-0.13
 	>=net-libs/gupnp-av-0.5"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_configure() {

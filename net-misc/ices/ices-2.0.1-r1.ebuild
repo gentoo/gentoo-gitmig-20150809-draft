@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.1-r1.ebuild,v 1.5 2008/04/25 13:57:22 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.1-r1.ebuild,v 1.6 2012/05/05 03:20:41 jdhore Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND="dev-libs/libxml2
 	>=media-libs/libshout-2
 	>=media-libs/libvorbis-1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	enewgroup ices

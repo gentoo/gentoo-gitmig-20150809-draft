@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.4.ebuild,v 1.6 2011/06/09 02:02:42 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.4.ebuild,v 1.7 2012/05/05 03:20:43 jdhore Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.18
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

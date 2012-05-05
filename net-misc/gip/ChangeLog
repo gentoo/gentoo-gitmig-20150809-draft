@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gip
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.21 2011/04/12 17:27:51 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.22 2012/05/05 03:20:45 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gip-1.6.1.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gip-1.6.1.1.ebuild:

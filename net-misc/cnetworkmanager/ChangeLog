@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cnetworkmanager
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.6 2011/10/24 06:21:24 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.7 2012/05/05 03:20:43 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> cnetworkmanager-0.21.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   cnetworkmanager-0.21.1.ebuild:

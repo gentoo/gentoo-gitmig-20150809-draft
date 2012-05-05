@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/sobby-0.4.7.ebuild,v 1.4 2012/02/03 22:35:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/sobby-0.4.7.ebuild,v 1.5 2012/05/05 03:20:41 jdhore Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-cpp/glibmm-2.6
 	>=net-libs/net6-1.3.12
 	>=net-libs/obby-0.4.6[avahi=]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	enewgroup sobby

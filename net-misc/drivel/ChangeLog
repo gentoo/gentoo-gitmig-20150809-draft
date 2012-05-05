@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.53 2012/01/29 11:50:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.54 2012/05/05 03:20:39 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> drivel-3.0.0.ebuild,
+  drivel-3.0.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Jan 2012; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Drop maintainership.

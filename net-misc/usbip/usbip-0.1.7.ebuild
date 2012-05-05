@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/usbip/usbip-0.1.7.ebuild,v 1.1 2010/03/07 23:40:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/usbip/usbip-0.1.7.ebuild,v 1.2 2012/05/05 03:20:43 jdhore Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ RDEPEND="sys-fs/sysfsutils
 	sys-apps/tcp-wrappers
 	dev-libs/glib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/automake-1.9
 	sys-devel/libtool"
 

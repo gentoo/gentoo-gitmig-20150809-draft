@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-3.2.1.ebuild,v 1.2 2011/12/14 04:51:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-3.2.1.ebuild,v 1.3 2012/05/05 03:20:42 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -45,7 +45,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
-	>=dev-util/pkgconfig-0.16
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 	|| (
 		gnome-base/libgnome-keyring

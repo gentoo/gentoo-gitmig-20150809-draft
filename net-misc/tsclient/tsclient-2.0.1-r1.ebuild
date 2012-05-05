@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1-r1.ebuild,v 1.3 2012/01/14 17:50:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1-r1.ebuild,v 1.4 2012/05/05 03:20:44 jdhore Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	gnome-base/gconf
 	>=dev-util/intltool-0.27
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 RDEPEND="${RDEPEND}
 	>=net-misc/rdesktop-1.3.0"

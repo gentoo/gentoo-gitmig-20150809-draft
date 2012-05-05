@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r1.ebuild,v 1.1 2012/04/05 03:09:09 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r1.ebuild,v 1.2 2012/05/05 03:20:42 jdhore Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -55,7 +55,7 @@ RDEPEND="${COMMON_DEPEND}
 	!systemd? ( sys-auth/consolekit )"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	>=sys-kernel/linux-headers-2.6.29

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.4-r1.ebuild,v 1.5 2012/04/26 15:15:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.4-r1.ebuild,v 1.6 2012/05/05 03:20:45 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ LIB_DEPEND="idn? ( net-dns/libidn[static-libs(+)] )
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	static? ( ${LIB_DEPEND} )
 	nls? ( sys-devel/gettext )"
 

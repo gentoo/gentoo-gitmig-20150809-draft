@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/shigofumi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/ChangeLog,v 1.5 2011/11/11 11:30:01 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/ChangeLog,v 1.6 2012/05/05 03:20:42 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> shigofumi-0.1.ebuild,
+  shigofumi-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   11 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop me from maint.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.3.ebuild,v 1.7 2012/01/09 22:25:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.3.ebuild,v 1.8 2012/05/05 03:20:39 jdhore Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.16.6:2
 	dbus? ( >=dev-libs/dbus-glib-0.78 )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12.0
+	virtual/pkgconfig
 	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/intltool-0.21
 	>=app-text/scrollkeeper-0.3.5"

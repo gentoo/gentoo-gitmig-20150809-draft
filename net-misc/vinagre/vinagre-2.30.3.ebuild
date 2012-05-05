@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.3.ebuild,v 1.9 2011/03/23 07:37:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.3.ebuild,v 1.10 2012/05/05 03:20:44 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -36,7 +36,7 @@ RDEPEND=">=dev-libs/glib-2.17:2
 DEPEND="${RDEPEND}
 	gnome-base/gnome-common
 	>=dev-lang/perl-5
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils

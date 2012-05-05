@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ices
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.26 2008/04/25 13:57:22 drac Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.27 2012/05/05 03:20:41 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> ices-2.0.1-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Apr 2008; Samuli Suominen <drac@gentoo.org> -ices-2.0.0.ebuild,
   ices-2.0.1-r1.ebuild:

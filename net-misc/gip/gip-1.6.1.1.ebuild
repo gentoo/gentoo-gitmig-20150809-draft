@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.12 2011/04/12 17:27:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.13 2012/05/05 03:20:45 jdhore Exp $
 
 EAPI=3
 inherit eutils versionator
@@ -20,7 +20,7 @@ RDEPEND="dev-cpp/gtkmm:2.4
 	dev-libs/libsigc++:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

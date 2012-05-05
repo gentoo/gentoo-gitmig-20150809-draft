@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.3.4.ebuild,v 1.2 2012/04/27 19:59:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.3.4.ebuild,v 1.3 2012/05/05 03:20:40 jdhore Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 DEPEND="${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/sed
 	adl? (
 		x11-libs/amd-adl-sdk
