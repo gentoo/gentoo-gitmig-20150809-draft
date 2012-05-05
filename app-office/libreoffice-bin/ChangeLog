@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.64 2012/05/04 20:50:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.65 2012/05/05 17:39:27 scarabeus Exp $
+
+  05 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.5.2.2.ebuild:
+  Use correct blockers.
 
   04 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-bin-3.5.2.2.ebuild:
