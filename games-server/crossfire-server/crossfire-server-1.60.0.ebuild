@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.60.0.ebuild,v 1.3 2012/04/26 19:25:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.60.0.ebuild,v 1.4 2012/05/05 07:53:17 vapier Exp $
 
-EAPI=2
-inherit eutils autotools games
+EAPI="2"
+
+inherit eutils games
 
 MY_P="${P/-server/}"
 DESCRIPTION="server for the crossfire clients"
@@ -20,7 +21,9 @@ RESTRICT="test"
 DEPEND="net-misc/curl
 	X? (
 		x11-libs/libXaw
-		media-libs/libpng )"
+		media-libs/libpng
+	)"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
