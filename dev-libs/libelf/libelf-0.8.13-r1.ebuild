@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.13-r1.ebuild,v 1.8 2012/04/26 14:06:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.13-r1.ebuild,v 1.9 2012/05/05 18:22:24 grobian Exp $
 
-EAPI=2
+EAPI="3"
+
 inherit eutils multilib autotools
 
 DESCRIPTION="A ELF object file access library"
@@ -11,7 +12,7 @@ SRC_URI="http://www.mr511.de/software/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug nls elibc_FreeBSD"
 
 RDEPEND="!dev-libs/elfutils"
@@ -37,13 +38,14 @@ src_configure() {
 
 src_install() {
 	emake \
-		prefix="${D}usr" \
-		libdir="${D}usr/$(get_libdir)" \
+		prefix="${ED}usr" \
+		libdir="${ED}usr/$(get_libdir)" \
 		install \
-		install-compat || die
+		install-compat \
+		-j1 || die
 
 	dodoc ChangeLog README || die
 
 	# Stop libelf from stamping on the system nlist.h
-	use elibc_FreeBSD && rm "${D}"/usr/include/nlist.h
+	use elibc_FreeBSD && rm "${ED}"/usr/include/nlist.h
 }

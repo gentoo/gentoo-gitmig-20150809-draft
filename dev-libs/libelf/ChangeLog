@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.36 2012/04/26 14:06:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.37 2012/05/05 18:22:24 grobian Exp $
+
+  05 May 2012; Fabian Groffen <grobian@gentoo.org>
+  files/libelf-0.8.13-build.patch, libelf-0.8.13-r1.ebuild:
+  Fixed for Prefix, keyworded for *-solaris
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libelf-0.8.13-r1.ebuild:
   keyword ~amd64-fbsd
