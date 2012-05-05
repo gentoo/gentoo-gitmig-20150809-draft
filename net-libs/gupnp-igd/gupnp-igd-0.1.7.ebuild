@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.1.7.ebuild,v 1.13 2012/01/07 03:39:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.1.7.ebuild,v 1.14 2012/05/05 02:54:30 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -23,7 +23,7 @@ RDEPEND=">=net-libs/gupnp-0.13.2
 	>=dev-libs/glib-2.16:2
 	python? ( >=dev-python/pygobject-2.16:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	dev-util/gtk-doc-am"
 

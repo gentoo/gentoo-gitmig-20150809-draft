@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.34.3.ebuild,v 1.7 2012/01/30 20:03:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.34.3.ebuild,v 1.8 2012/05/05 02:54:27 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.27.5:2
 	net-libs/glib-networking[ssl?]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/gtk-doc-am-1.10
 	doc? ( >=dev-util/gtk-doc-1.10 )"
 #	test? (	www-servers/apache[ssl,apache2_modules_auth_digest,apache2_modules_alias,apache2_modules_auth_basic,

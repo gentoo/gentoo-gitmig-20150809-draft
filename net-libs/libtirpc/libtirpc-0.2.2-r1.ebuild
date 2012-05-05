@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.2-r1.ebuild,v 1.8 2012/03/02 21:16:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.2-r1.ebuild,v 1.9 2012/05/05 02:54:24 jdhore Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ IUSE="kerberos static-libs"
 RDEPEND="kerberos? ( net-libs/libgssglue )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

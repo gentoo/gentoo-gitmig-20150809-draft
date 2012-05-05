@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.444 2012/01/28 05:21:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.445 2012/05/05 02:54:23 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> xulrunner-1.9.2.17.ebuild,
+  xulrunner-1.9.2.20.ebuild, xulrunner-1.9.2.21.ebuild,
+  xulrunner-1.9.2.22.ebuild, xulrunner-2.0.1-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
   xulrunner-1.9.2.17.ebuild, xulrunner-1.9.2.20.ebuild,

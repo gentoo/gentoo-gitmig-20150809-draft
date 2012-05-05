@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.20.ebuild,v 1.3 2012/04/29 16:08:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.20.ebuild,v 1.4 2012/05/05 02:54:28 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -34,7 +34,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.15
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? (
 		dev-libs/libxslt

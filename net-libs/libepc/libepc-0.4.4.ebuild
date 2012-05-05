@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libepc/libepc-0.4.4.ebuild,v 1.1 2012/02/04 12:49:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libepc/libepc-0.4.4.ebuild,v 1.2 2012/05/05 02:54:29 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND=">=net-dns/avahi-0.6[dbus,gtk3]
 	>=x11-libs/gtk+-3.0:3
 	>=net-libs/libsoup-2.3:2.4"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.14
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.0
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 

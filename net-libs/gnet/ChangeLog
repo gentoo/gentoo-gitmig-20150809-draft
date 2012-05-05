@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.78 2012/03/10 18:55:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.79 2012/05/05 02:54:30 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnet-2.0.8-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   10 Mar 2012; Jeroen Roovers <jer@gentoo.org> gnet-2.0.8-r1.ebuild:
   Run gnome2_src_prepare() in the proper place to fix underlinking (bug

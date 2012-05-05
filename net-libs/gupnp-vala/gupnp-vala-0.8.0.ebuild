@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/gupnp-vala-0.8.0.ebuild,v 1.2 2011/08/14 10:28:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/gupnp-vala-0.8.0.ebuild,v 1.3 2012/05/05 02:54:27 jdhore Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/vala-0.11.3:0.12[vapigen]
 	>=net-libs/gupnp-av-0.7
 	>=media-libs/gupnp-dlna-0.5.1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

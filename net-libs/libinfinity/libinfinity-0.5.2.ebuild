@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.5.2.ebuild,v 1.1 2012/03/25 16:44:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.5.2.ebuild,v 1.2 2012/05/05 02:54:31 jdhore Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/glib:2
 	avahi? ( net-dns/avahi )
 	gtk? ( x11-libs/gtk+:3 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.23
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( dev-util/gtk-doc )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.358 2012/04/26 16:03:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.359 2012/05/05 02:54:25 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnutls-2.12.18.ebuild,
+  gnutls-3.0.18.ebuild, gnutls-3.0.19.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gnutls-2.12.18.ebuild:
   keyword ~amd64-fbsd

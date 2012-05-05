@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/rest-0.7.11.ebuild,v 1.1 2011/11/01 11:36:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/rest-0.7.11.ebuild,v 1.2 2012/05/05 02:54:25 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.22:2
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.13 )
 	test? ( sys-apps/dbus )"
 

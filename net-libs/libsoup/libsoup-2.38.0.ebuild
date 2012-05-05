@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.38.0.ebuild,v 1.1 2012/04/13 23:04:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.38.0.ebuild,v 1.2 2012/05/05 02:54:27 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.31.7:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	samba? ( net-fs/samba )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/gtk-doc-am-1.10
 	doc? ( >=dev-util/gtk-doc-1.10 )"
 #	test? (	www-servers/apache[ssl,apache2_modules_auth_digest,apache2_modules_alias,apache2_modules_auth_basic,

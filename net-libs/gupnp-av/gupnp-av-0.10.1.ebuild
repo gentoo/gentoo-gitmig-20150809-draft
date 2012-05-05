@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.10.1.ebuild,v 1.1 2011/09/08 22:12:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.10.1.ebuild,v 1.2 2012/05/05 02:54:26 jdhore Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=net-libs/gupnp-0.17[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

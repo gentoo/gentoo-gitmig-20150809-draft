@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-5.0.21.ebuild,v 1.1 2012/01/06 10:05:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-5.0.21.ebuild,v 1.2 2012/05/05 02:54:26 jdhore Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND=">=app-misc/ktoblzcheck-1.37
 	ofx? ( >=dev-libs/libofx-0.9.4 )
 	chipcard? ( >=sys-libs/libchipcard-5.0.2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( app-doc/doxygen )"
 

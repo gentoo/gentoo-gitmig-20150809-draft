@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.3.0.ebuild,v 1.4 2010/08/11 17:04:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/libgrss-0.3.0.ebuild,v 1.5 2012/05/05 02:54:30 jdhore Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.22.2:2
 	>=dev-libs/libxml2-2.7.4:2
 	>=net-libs/libsoup-2.28.1:2.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool
 	doc? ( dev-util/gtk-doc )

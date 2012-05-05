@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.32.1.ebuild,v 1.1 2012/04/20 06:17:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.32.1.ebuild,v 1.2 2012/05/05 02:54:25 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.31.6:2
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	sys-devel/gettext
 	test? ( sys-apps/dbus[X] )"
 # eautoreconf needs >=sys-devel/autoconf-2.65:2.5

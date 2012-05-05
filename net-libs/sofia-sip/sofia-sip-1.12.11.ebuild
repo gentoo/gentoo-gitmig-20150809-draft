@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/sofia-sip-1.12.11.ebuild,v 1.6 2011/10/23 15:47:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/sofia-sip-1.12.11.ebuild,v 1.7 2012/05/05 02:54:27 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="ssl static-libs"
 RDEPEND="dev-libs/glib:2
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 # tests are broken, see bugs 304607 and 330261
 RESTRICT="test"

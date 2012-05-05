@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.4.ebuild,v 1.7 2012/03/25 17:09:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.4.ebuild,v 1.8 2012/05/05 02:54:31 jdhore Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -32,7 +32,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.10:2
 RDEPEND="${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
 	vala? (

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libinfinity
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.13 2012/03/25 16:44:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.14 2012/05/05 02:54:31 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libinfinity-0.5.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libinfinity-0.5.2 (25 Mar 2012)
 

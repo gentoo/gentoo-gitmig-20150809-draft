@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.14.10.ebuild,v 1.6 2011/10/30 17:25:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.14.10.ebuild,v 1.7 2012/05/05 02:54:30 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.25.16:2
 		>=dev-libs/gobject-introspection-0.9.6 )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	>=dev-util/pkgconfig-0.21"
+	virtual/pkgconfig"
 
 src_prepare() {
 	python_convert_shebangs -r 2 examples tests tools

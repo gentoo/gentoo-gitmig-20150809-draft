@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.18.0.ebuild,v 1.2 2011/09/15 21:16:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.18.0.ebuild,v 1.3 2012/05/05 02:54:30 jdhore Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ RDEPEND=">=net-libs/gssdp-0.11.2[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )
 	networkmanager? ( >=dev-libs/glib-2.26 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog NEWS README"

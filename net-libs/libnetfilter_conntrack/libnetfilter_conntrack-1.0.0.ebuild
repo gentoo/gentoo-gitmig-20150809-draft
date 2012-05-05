@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-1.0.0.ebuild,v 1.2 2012/01/05 06:40:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-1.0.0.ebuild,v 1.3 2012/05/05 02:54:26 jdhore Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="static-libs"
 
 RDEPEND=">=net-libs/libnfnetlink-1.0.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( README )
 

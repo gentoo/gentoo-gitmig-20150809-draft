@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/libnetfilter_log-0.0.15.ebuild,v 1.6 2012/01/05 07:01:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/libnetfilter_log-0.0.15.ebuild,v 1.7 2012/05/05 02:54:31 jdhore Exp $
 
 inherit linux-info
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=net-libs/libnfnetlink-0.0.39"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 CONFIG_CHECK="~NETFILTER_NETLINK_LOG"
 

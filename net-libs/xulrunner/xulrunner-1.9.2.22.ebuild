@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.22.ebuild,v 1.4 2012/01/28 05:21:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.22.ebuild,v 1.5 2012/05/05 02:54:23 jdhore Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -43,7 +43,7 @@ RDEPEND="
 DEPEND="java? ( >=virtual/jdk-1.4 )
 	${RDEPEND}
 	=dev-lang/python-2*[threads]
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 # virtual/jre should not be in DEPEND. bug 325981
 RDEPEND="java? ( >=virtual/jre-1.4 ) ${RDEPEND}"

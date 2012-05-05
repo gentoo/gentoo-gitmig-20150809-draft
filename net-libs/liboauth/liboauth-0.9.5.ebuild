@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.5.ebuild,v 1.1 2011/11/20 14:00:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.5.ebuild,v 1.2 2012/05/05 02:54:24 jdhore Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ DEPEND="${CDEPEND}
 		media-gfx/graphviz
 		media-fonts/freefont-ttf
 	)
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	local myconf=

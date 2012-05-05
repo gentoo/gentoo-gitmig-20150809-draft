@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgrss
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.4 2010/08/11 17:04:27 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.5 2012/05/05 02:54:30 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libgrss-0.3.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> libgrss-0.3.0.ebuild:
   Marked ~ppc for bug #296794.

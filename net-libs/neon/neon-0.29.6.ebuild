@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6.ebuild,v 1.10 2012/03/02 21:17:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6.ebuild,v 1.11 2012/05/05 02:54:31 jdhore Exp $
 
 EAPI="3"
 
@@ -37,7 +37,7 @@ RDEPEND="expat? ( dev-libs/expat )
 	nls? ( virtual/libintl )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	local lingua linguas

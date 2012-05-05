@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.7.2.ebuild,v 1.8 2012/01/16 14:26:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.7.2.ebuild,v 1.9 2012/05/05 02:54:27 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.12:2
 	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_configure() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/libopkele-2.0.3.ebuild,v 1.2 2009/09/28 06:21:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/libopkele-2.0.3.ebuild,v 1.3 2012/05/05 02:54:25 jdhore Exp $
 
 DESCRIPTION="A C++ implementation of an OpenID decentralized identity system"
 HOMEPAGE="http://kin.klever.net/libopkele/"
@@ -16,7 +16,7 @@ RDEPEND="app-text/htmltidy
 	dev-libs/openssl
 	net-misc/curl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."

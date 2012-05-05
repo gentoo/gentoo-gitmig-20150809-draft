@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.10 2012/01/28 05:21:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.11 2012/05/05 02:54:23 jdhore Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -45,7 +45,7 @@ RDEPEND="
 	!www-plugins/weave"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	webm? ( amd64? ( ${ASM_DEPEND} )
 		x86? ( ${ASM_DEPEND} ) )"
 

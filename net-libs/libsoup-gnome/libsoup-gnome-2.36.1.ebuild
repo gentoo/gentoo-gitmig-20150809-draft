@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.36.1.ebuild,v 1.8 2012/03/25 17:21:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.36.1.ebuild,v 1.9 2012/05/05 02:54:29 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -25,7 +25,7 @@ RDEPEND="~net-libs/libsoup-${PV}
 	dev-db/sqlite:3
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/gtk-doc-am-1.10
 	doc? ( >=dev-util/gtk-doc-1.10 )"
 

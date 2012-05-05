@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.18.ebuild,v 1.12 2012/04/26 16:03:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.18.ebuild,v 1.13 2012/05/05 02:54:25 jdhore Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ RDEPEND=">=dev-libs/libtasn1-0.3.4
 	zlib? ( >=sys-libs/zlib-1.2.3.1 )
 	!bindist? ( lzo? ( >=dev-libs/lzo-2 ) )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/libtool
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )

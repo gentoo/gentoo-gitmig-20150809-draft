@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.7.ebuild,v 1.9 2012/02/01 02:00:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.7.ebuild,v 1.10 2012/05/05 02:54:29 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -30,7 +30,7 @@ RDEPEND="gnome? ( >=dev-libs/glib-2.26:2 )
 #	webkit? ( net-libs/webkit-gtk:2 )
 # Since 0.4.7, webkit gtk3 support is also available
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"

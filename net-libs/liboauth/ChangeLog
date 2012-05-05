@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liboauth
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.11 2011/12/13 17:28:51 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.12 2012/05/05 02:54:24 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> liboauth-0.9.5.ebuild,
+  liboauth-0.9.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *liboauth-0.9.6 (13 Dec 2011)
 

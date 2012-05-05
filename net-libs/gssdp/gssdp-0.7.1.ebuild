@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.7.1.ebuild,v 1.5 2011/12/21 22:59:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.7.1.ebuild,v 1.6 2012/05/05 02:54:27 jdhore Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/glib-2.18:2
 	net-libs/libsoup:2.4
 	>=x11-libs/gtk+-2.12:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_configure() {

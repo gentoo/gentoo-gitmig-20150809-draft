@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r1.ebuild,v 1.7 2010/10/05 18:18:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r1.ebuild,v 1.8 2012/05/05 02:54:29 jdhore Exp $
 
 EAPI=2
 inherit autotools toolchain-funcs versionator
@@ -28,7 +28,7 @@ RDEPEND="sys-libs/readline
 	pam? ( sys-libs/pam )
 	virtual/c++-tr1-functional"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 pkg_setup() {

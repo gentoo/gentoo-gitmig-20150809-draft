@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.11 2012/03/10 18:55:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.12 2012/05/05 02:54:30 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="yes"
@@ -18,7 +18,7 @@ IUSE="doc test"
 # FIXME: automagic use of valgrind
 RDEPEND=">=dev-libs/glib-2.6:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.2 )
 	>=dev-libs/check-0.9.7"
 # FIXME: check should only be needed with USE 'test', bug #349301

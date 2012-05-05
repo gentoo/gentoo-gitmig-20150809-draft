@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.26.ebuild,v 1.6 2011/10/05 16:36:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.26.ebuild,v 1.7 2012/05/05 02:54:28 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -36,7 +36,7 @@ RDEPEND="${COMMONDEPEND}
 DEPEND="${COMMONDEPEND}
 	test? ( media-plugins/gst-plugins-vorbis
 		media-plugins/gst-plugins-speex )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2

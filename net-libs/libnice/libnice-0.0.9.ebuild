@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.0.9.ebuild,v 1.9 2010/02/12 18:39:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.0.9.ebuild,v 1.10 2012/05/05 02:54:24 jdhore Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.10
 		media-libs/gst-plugins-base:0.10 )
 	upnp? ( >=net-libs/gupnp-igd-0.1.3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf $(use_with gstreamer)

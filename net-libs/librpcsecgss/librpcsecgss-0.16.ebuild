@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/librpcsecgss-0.16.ebuild,v 1.10 2011/02/06 12:23:33 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/librpcsecgss-0.16.ebuild,v 1.11 2012/05/05 02:54:24 jdhore Exp $
 
 DESCRIPTION="implementation of rpcsec_gss (RFC 2203) for secure rpc communication"
 HOMEPAGE="http://www.citi.umich.edu/projects/nfsv4/linux/"
@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND="net-libs/libgssglue"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake install DESTDIR="${D}" || die

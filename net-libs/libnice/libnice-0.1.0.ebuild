@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.1.0.ebuild,v 1.6 2011/10/05 16:35:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.1.0.ebuild,v 1.7 2012/05/05 02:54:24 jdhore Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.10
 		media-libs/gst-plugins-base:0.10 )
 	upnp? ( >=net-libs/gupnp-igd-0.1.3 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.0.13-darwin.patch

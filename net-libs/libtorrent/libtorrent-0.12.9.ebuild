@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.9.ebuild,v 1.8 2012/03/10 16:30:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.9.ebuild,v 1.9 2012/05/05 02:54:28 jdhore Exp $
 
 EAPI=4
 inherit autotools-utils libtool
@@ -17,7 +17,7 @@ IUSE="debug ipv6 ssl test"
 RDEPEND=">=dev-libs/libsigc++-2.2.2:2
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( dev-util/cppunit )"
 
 # http://libtorrent.rakshasa.no/ticket/2617

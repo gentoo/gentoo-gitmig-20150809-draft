@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdexter/libdexter-0.1.4.ebuild,v 1.4 2010/07/18 06:13:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdexter/libdexter-0.1.4.ebuild,v 1.5 2012/05/05 02:54:25 jdhore Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="doc"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.15
+	virtual/pkgconfig
 	>=dev-libs/glib-2.10
 	doc? (
 		>=dev-util/gtk-doc-1.6

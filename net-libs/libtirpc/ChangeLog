@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.27 2012/03/02 21:16:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.28 2012/05/05 02:54:24 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libtirpc-0.2.1-r1.ebuild,
+  libtirpc-0.2.2.ebuild, libtirpc-0.2.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> libtirpc-0.2.2-r1.ebuild:
   Marking libtirpc-0.2.2-r1 ppc64 for bug 394979

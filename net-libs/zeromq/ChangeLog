@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.23 2012/04/07 08:19:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.24 2012/05/05 02:54:24 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> zeromq-2.1.7.ebuild,
+  zeromq-2.1.9.ebuild, zeromq-2.1.10.ebuild, zeromq-2.1.11.ebuild,
+  zeromq-2.2.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *zeromq-2.2.0 (07 Apr 2012)
 

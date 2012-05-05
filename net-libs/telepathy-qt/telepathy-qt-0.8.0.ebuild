@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.8.0.ebuild,v 1.2 2012/01/25 08:49:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.8.0.ebuild,v 1.3 2012/05/05 02:54:26 jdhore Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? ( x11-libs/qt-test:4 )
 "
 

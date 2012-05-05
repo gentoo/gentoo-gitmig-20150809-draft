@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.10 2012/03/18 13:15:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.11 2012/05/05 02:54:28 jdhore Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ CDEPEND="
 RDEPEND="${CDEPEND}
 	ffmpeg? ( virtual/ffmpeg )"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/bison
 	sys-devel/flex
 	video? ( v4l? ( sys-kernel/linux-headers ) )"

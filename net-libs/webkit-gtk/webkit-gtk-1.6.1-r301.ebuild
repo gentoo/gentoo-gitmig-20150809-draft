@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r301.ebuild,v 1.10 2012/03/25 16:14:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.6.1-r301.ebuild,v 1.11 2012/05/05 02:54:26 jdhore Exp $
 
 EAPI="4"
 
@@ -56,7 +56,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/yacc
 	dev-util/gperf
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.10 )
 	test? ( x11-themes/hicolor-icon-theme )

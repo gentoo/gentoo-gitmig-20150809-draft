@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.76 2012/03/25 10:18:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.77 2012/05/05 02:54:24 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> opal-3.6.8.ebuild,
+  opal-3.6.8-r1.ebuild, opal-3.6.8-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Set herd as primary maintainer as talked with volkmar.

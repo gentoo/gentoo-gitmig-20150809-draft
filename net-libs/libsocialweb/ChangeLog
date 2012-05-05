@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsocialweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.7 2012/04/29 16:08:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.8 2012/05/05 02:54:28 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libsocialweb-0.25.19.ebuild,
+  libsocialweb-0.25.20.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> libsocialweb-0.25.20.ebuild:
   x86 stable, bug #410611

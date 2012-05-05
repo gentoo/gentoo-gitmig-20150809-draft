@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/libnetfilter_queue-1.0.1.ebuild,v 1.1 2012/01/05 07:08:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/libnetfilter_queue-1.0.1.ebuild,v 1.2 2012/05/05 02:54:27 jdhore Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="static-libs"
 
 RDEPEND=">=net-libs/libnfnetlink-0.0.41"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 CONFIG_CHECK="~NETFILTER_NETLINK_QUEUE"
 

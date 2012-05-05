@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/libopkele-0.3.2.ebuild,v 1.3 2008/05/19 11:06:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/libopkele-0.3.2.ebuild,v 1.4 2012/05/05 02:54:25 jdhore Exp $
 
 inherit autotools eutils
 
@@ -17,7 +17,7 @@ RDEPEND="dev-libs/libpcre
 	dev-libs/openssl
 	net-misc/curl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

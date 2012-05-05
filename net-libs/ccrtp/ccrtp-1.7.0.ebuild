@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.7.0.ebuild,v 1.2 2009/04/15 21:28:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.7.0.ebuild,v 1.3 2012/05/05 02:54:23 jdhore Exp $
 
 inherit multilib
 
@@ -16,7 +16,7 @@ SLOT="0"
 RDEPEND=">=dev-cpp/commoncpp2-1.3.0
 	dev-libs/libgcrypt"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_install() {

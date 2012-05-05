@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.28.7.ebuild,v 1.14 2012/04/08 05:55:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.28.7.ebuild,v 1.15 2012/05/05 02:54:25 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.27.90:2
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

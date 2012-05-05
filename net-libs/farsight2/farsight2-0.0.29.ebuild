@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.29.ebuild,v 1.7 2012/03/25 17:26:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.29.ebuild,v 1.8 2012/05/05 02:54:28 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -36,7 +36,7 @@ RDEPEND="${COMMONDEPEND}
 	msn? ( >=media-plugins/gst-plugins-mimic-0.10.17 )"
 
 DEPEND="${COMMONDEPEND}
-	        dev-util/pkgconfig"
+	        virtual/pkgconfig"
 #	test? ( media-plugins/gst-plugins-vorbis
 #		media-plugins/gst-plugins-speex )
 

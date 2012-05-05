@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r300.ebuild,v 1.3 2012/04/21 09:05:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r300.ebuild,v 1.4 2012/05/05 02:54:26 jdhore Exp $
 
 EAPI="4"
 
@@ -61,7 +61,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.33
 	sys-devel/gettext
 	dev-util/gperf
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.10 )
 	introspection? ( jit? ( sys-apps/paxctl ) )

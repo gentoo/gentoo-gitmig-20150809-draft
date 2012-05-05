@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-9999.ebuild,v 1.9 2011/05/03 11:25:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-9999.ebuild,v 1.10 2012/05/05 02:54:26 jdhore Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ COMMON_DEPEND="
 	curl? ( net-misc/curl[ssl] )
 "
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 "
 RDEPEND="${COMMON_DEPEND}

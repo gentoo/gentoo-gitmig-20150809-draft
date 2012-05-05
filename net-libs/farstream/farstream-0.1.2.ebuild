@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2.ebuild,v 1.1 2012/03/26 05:24:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2.ebuild,v 1.2 2012/05/05 02:54:27 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -38,7 +38,7 @@ RDEPEND="${COMMONDEPEND}
 # This package is just a rename from farsight2
 
 DEPEND="${COMMONDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	test? (
 		media-libs/gst-plugins-good:0.10
 		media-plugins/gst-plugins-vorbis:0.10 )"

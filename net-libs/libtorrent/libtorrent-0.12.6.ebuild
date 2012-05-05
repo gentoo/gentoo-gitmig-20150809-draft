@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.6.ebuild,v 1.8 2010/12/08 02:50:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.6.ebuild,v 1.9 2012/05/05 02:54:28 jdhore Exp $
 
 EAPI=2
 inherit eutils libtool toolchain-funcs
@@ -17,7 +17,7 @@ IUSE="debug ipv6 ssl"
 RDEPEND=">=dev-libs/libsigc++-2.2.2:2
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r7.ebuild,v 1.18 2011/02/06 12:24:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r7.ebuild,v 1.19 2012/05/05 02:54:28 jdhore Exp $
 
 inherit eutils multilib autotools
 
@@ -21,7 +21,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	mysql? ( virtual/mysql )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-lang/perl"
 
 S=${WORKDIR}/${MY_P}

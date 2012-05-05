@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.31 2012/03/25 10:20:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.32 2012/05/05 02:54:28 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> ptlib-2.6.7-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Set herd as primary maintainer as talked with volkmar.

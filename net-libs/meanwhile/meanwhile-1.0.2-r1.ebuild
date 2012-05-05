@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-1.0.2-r1.ebuild,v 1.1 2012/03/24 11:38:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-1.0.2-r1.ebuild,v 1.2 2012/05/05 02:54:29 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2:2"
 
 DEPEND="${RDEPEND}
 	dev-libs/gmp
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 src_prepare(){
