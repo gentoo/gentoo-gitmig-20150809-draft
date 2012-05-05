@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.23 2012/05/05 04:53:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.24 2012/05/05 21:41:16 hasufell Exp $
+
+  05 May 2012; Julian Ospald <hasufell@gentoo.org> ChangeLog:
+  set myself as maintainer
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> spacefm-0.7.4.ebuild,
   spacefm-0.7.5.ebuild, spacefm-0.7.6.ebuild, spacefm-9999.ebuild:
