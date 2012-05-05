@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.319 2012/02/18 15:07:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.320 2012/05/05 10:26:20 sera Exp $
+
+  05 May 2012; Ralph Sennhauser <sera@gentoo.org> sun-jdk-1.6.0.31.ebuild:
+  Add workaround for large memory on x86. #405239
+  Add QA_FLAGS_IGNORED. #405639
 
   18 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sun-jdk-1.6.0.31.ebuild:
   x86 stable wrt bug #404071
