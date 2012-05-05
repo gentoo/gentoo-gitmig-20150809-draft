@@ -1,17 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.8.2.ebuild,v 1.1 2012/05/05 13:12:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.8.2.ebuild,v 1.2 2012/05/05 15:33:57 alexxy Exp $
 
 EAPI=4
 PYTHON_DEPEND="gtk? 2"
 inherit autotools python
 
-# seems like they stopped providing snapshots
-GIT_HASH="db4aef69fa6e9705e17c0b35b9dabc4a41a1d40a"
-
 DESCRIPTION="Support programs for the Oracle Cluster Filesystem 2"
 HOMEPAGE="http://oss.oracle.com/projects/ocfs2-tools/"
-SRC_URI="http://oss.oracle.com/git/?p=ocfs2-tools.git;a=snapshot;h=${GIT_HASH} -> ${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~alexxy/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -48,8 +45,6 @@ PATCHES=(
 		"${FILESDIR}/${PN}-1.6.4-asneeded.patch"
 		"${FILESDIR}/${PN}-recent-kernels.patch"
 		)
-
-S="${WORKDIR}/${PN}.git"
 
 pkg_setup() {
 	python_set_active_version 2
