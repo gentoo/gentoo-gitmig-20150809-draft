@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.6.ebuild,v 1.5 2012/03/22 11:03:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.6.ebuild,v 1.6 2012/05/05 02:18:52 jdhore Exp $
 
 EAPI="4"
 
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	x11-misc/shared-mime-info
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 

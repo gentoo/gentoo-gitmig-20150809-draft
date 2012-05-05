@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.8.5.1.ebuild,v 1.3 2012/04/09 14:45:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.8.5.1.ebuild,v 1.4 2012/05/05 02:18:52 jdhore Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils mono versionator
@@ -39,7 +39,7 @@ RDEPEND=">=dev-lang/mono-2.6.1
 	!<dev-util/monodevelop-vala-$(get_version_component_range 1-2)"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	x11-misc/shared-mime-info"
 

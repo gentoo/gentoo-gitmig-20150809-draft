@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-python/monodevelop-python-2.8.5.1.ebuild,v 1.1 2012/01/22 11:57:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-python/monodevelop-python-2.8.5.1.ebuild,v 1.2 2012/05/05 02:18:58 jdhore Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-lang/mono-2.8
 DEPEND="${RDEPEND}
 	x11-misc/shared-mime-info
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 

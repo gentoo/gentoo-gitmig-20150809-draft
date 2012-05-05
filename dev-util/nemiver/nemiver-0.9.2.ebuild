@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.9.2.ebuild,v 1.4 2012/04/29 15:44:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.9.2.ebuild,v 1.5 2012/05/05 02:18:58 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 # FIXME: dynamiclayout needs unreleased stable gdlmm:3
 # dynamiclayout? ( >=dev-cpp/gdlmm-3.0:3 )
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.40
 	>=app-text/scrollkeeper-0.3.11

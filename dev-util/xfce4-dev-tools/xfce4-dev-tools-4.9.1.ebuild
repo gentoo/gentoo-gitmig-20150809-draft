@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/xfce4-dev-tools-4.9.1.ebuild,v 1.3 2012/03/23 21:11:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/xfce4-dev-tools-4.9.1.ebuild,v 1.4 2012/05/05 02:18:51 jdhore Exp $
 
 EAPI=4
 inherit xfconf
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.18:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS=( AUTHORS ChangeLog HACKING NEWS README )

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-java/monodevelop-java-2.8.5.1.ebuild,v 1.2 2012/04/09 14:47:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-java/monodevelop-java-2.8.5.1.ebuild,v 1.3 2012/05/05 02:18:51 jdhore Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-lang/mono-2.4
 	|| ( dev-dotnet/ikvm-bin dev-dotnet/ikvm )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 

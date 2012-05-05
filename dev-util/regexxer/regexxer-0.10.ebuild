@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.10.ebuild,v 1.2 2011/12/22 13:50:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.10.ebuild,v 1.3 2012/05/05 02:18:52 jdhore Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -20,7 +20,7 @@ RDEPEND=">=dev-cpp/glibmm-2.28
 	dev-cpp/gtksourceviewmm:3.0"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

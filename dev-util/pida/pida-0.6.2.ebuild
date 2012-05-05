@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.6.2.ebuild,v 1.5 2012/01/23 18:11:53 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.6.2.ebuild,v 1.6 2012/05/05 02:18:51 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -28,7 +28,7 @@ RDEPEND="|| ( dev-lang/python:2.7 dev-python/argparse )
 	>=x11-libs/vte-0.11.11-r2:0[python]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	distutils_src_prepare
