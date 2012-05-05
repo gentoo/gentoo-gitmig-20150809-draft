@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.3.0.ebuild,v 1.1 2012/03/30 21:00:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.3.0.ebuild,v 1.2 2012/05/05 05:12:31 vapier Exp $
 
 EAPI="4"
 
@@ -21,12 +21,14 @@ HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/networking/iprou
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="atm berkdb minimal"
+IUSE="atm berkdb +iptables ipv6 minimal"
 
 RDEPEND="!net-misc/arpd
+	iptables? ( >=net-firewall/iptables-1.4.5 )
 	!minimal? ( berkdb? ( sys-libs/db ) )
 	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}
+	iptables? ( virtual/pkgconfig )
 	sys-devel/bison
 	sys-devel/flex
 	>=sys-kernel/linux-headers-2.6.27
@@ -34,6 +36,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.0-mtu.patch #291907
+	use ipv6 || epatch "${FILESDIR}"/${PN}-3.1.0-no-ipv6.patch #326849
 
 	sed -i \
 		-e '/^CC =/d' \
@@ -59,13 +62,16 @@ src_configure() {
 	pushd "${T}" >/dev/null
 	echo 'main(){return setns();};' > test.c
 	${CC} ${CFLAGS} ${LDFLAGS} test.c >&/dev/null && setns=y || setns=n
+	echo 'main(){};' > test.c
+	${CC} ${CFLAGS} ${LDFLAGS} test.c -lresolv >&/dev/null || sed -i '/^LDLIBS/s:-lresolv::' "${S}"/Makefile
 	popd >/dev/null
 
 	cat <<-EOF > Config
 	TC_CONFIG_ATM := $(usex atm y n)
+	TC_CONFIG_XT  := $(usex iptables y n)
 	IP_CONFIG_SETNS := ${setns}
 	# Use correct iptables dir, #144265 #293709
-	IPT_LIB_DIR := $(${PKG_CONFIG} xtables --variable=xtlibdir)
+	IPT_LIB_DIR := $(use iptables && ${PKG_CONFIG} xtables --variable=xtlibdir)
 	EOF
 }
 
