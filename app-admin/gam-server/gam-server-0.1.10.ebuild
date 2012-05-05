@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/gam-server-0.1.10.ebuild,v 1.12 2012/04/26 17:33:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/gam-server-0.1.10.ebuild,v 1.13 2012/05/05 14:20:43 ssuominen Exp $
 
 EAPI="3"
 GNOME_ORG_MODULE="gamin"
@@ -58,7 +58,7 @@ src_configure() {
 	# fixes bug 225403
 	#append-flags "-D_GNU_SOURCE"
 
-	if ! has_version dev-util/pkgconfig; then
+	if ! has_version virtual/pkgconfig; then
 		export DAEMON_CFLAGS="-I/usr/include/glib-2.0 -I/usr/$(get_libdir)/glib-2.0/include"
 		export DAEMON_LIBS="-lglib-2.0"
 	fi
