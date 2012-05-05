@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.197 2012/04/29 18:58:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.198 2012/05/05 02:16:32 tetromino Exp $
+
+  05 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgsf-1.14.21.ebuild, libgsf-1.14.22.ebuild, libgsf-1.14.23.ebuild:
+  Restrict pypy python ABI (bug #414587, thanks to Marien Zwart). Update to
+  virtual/pkgconfig.
 
   29 Apr 2012; Pacho Ramos <pacho@gentoo.org>
   +files/libgsf-1.14.23-clone-identifier.patch, libgsf-1.14.23.ebuild:

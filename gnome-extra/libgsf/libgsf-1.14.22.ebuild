@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.22.ebuild,v 1.5 2012/04/29 15:52:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.22.ebuild,v 1.6 2012/05/05 02:16:32 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython *-pypy-*"
 
 inherit autotools eutils gnome2 python multilib
 
@@ -29,9 +29,9 @@ RDEPEND=">=dev-libs/glib-2.16:2
 		>=dev-python/pygtk-2.10:2 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
 	>=dev-util/intltool-0.35.0
 	dev-util/gtk-doc-am
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {
