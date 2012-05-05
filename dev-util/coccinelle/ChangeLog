@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.17 2012/05/05 14:30:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.18 2012/05/05 14:35:08 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org>
+  -files/coccinelle-1.0.0_rc7-pcre.patch,
+  -files/coccinelle-1.0.0_rc7-pcre-linking.patch:
+  remove stray patches too
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org>
   -coccinelle-1.0.0_rc7.ebuild, -coccinelle-1.0.0_rc10.ebuild:
