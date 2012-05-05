@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/uthash
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uthash/ChangeLog,v 1.2 2011/11/26 16:32:08 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uthash/ChangeLog,v 1.3 2012/05/05 08:33:03 hwoarang Exp $
+
+*uthash-1.9.6 (05 May 2012)
+
+  05 May 2012; Markos Chandras <hwoarang@gentoo.org> +uthash-1.9.6.ebuild:
+  version bump. Bug #414539
 
 *uthash-1.9.5 (26 Nov 2011)
 
