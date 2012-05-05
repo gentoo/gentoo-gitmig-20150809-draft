@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/primitive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/primitive/ChangeLog,v 1.1 2012/01/12 16:52:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/primitive/ChangeLog,v 1.2 2012/05/05 13:03:28 gienah Exp $
+
+  05 May 2012; Mark Wright <gienah@gentoo.org> primitive-0.4.1.ebuild:
+  Add keywords for darcs 2.8.0. [profile?] for haskell libs (part of fix for bug
+  341795).
 
 *primitive-0.4.1 (12 Jan 2012)
 

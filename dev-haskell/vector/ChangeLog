@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/vector
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.1 2012/01/12 16:55:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.2 2012/05/05 12:59:06 gienah Exp $
+
+  05 May 2012; Mark Wright <gienah@gentoo.org> vector-0.9.1.ebuild:
+  Add keywords for darcs 2.8.0. [profile?] for haskell libs (part of fix for bug
+  341795).
 
 *vector-0.9.1 (12 Jan 2012)
 
