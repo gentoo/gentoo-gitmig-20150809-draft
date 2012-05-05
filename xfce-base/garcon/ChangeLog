@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.44 2012/04/29 09:43:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.45 2012/05/05 06:46:40 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> garcon-0.1.9.ebuild,
+  garcon-0.1.12.ebuild, garcon-0.2.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *garcon-0.2.0 (29 Apr 2012)
 
