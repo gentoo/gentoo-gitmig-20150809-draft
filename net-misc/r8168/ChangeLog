@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/r8168
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.9 2012/04/16 18:33:08 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.10 2012/05/05 19:10:34 joker Exp $
+
+*r8168-8.029.00 (05 May 2012)
+
+  05 May 2012; Christian Birchinger <joker@gentoo.org> +r8168-8.029.00.ebuild,
+  +files/r8168-8.029.00-linux-3.3-compat.patch:
+  Version bump with a new kernel 3.3 support patch from Richard Yao
+  <ryao@cs.stonybrook.edu>
 
   16 Apr 2012; Christian Birchinger <joker@gentoo.org>
   files/r8168-8.028.00-linux-3.3-compat.patch:
