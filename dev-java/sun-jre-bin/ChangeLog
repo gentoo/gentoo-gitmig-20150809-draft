@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.208 2012/05/05 15:30:56 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.209 2012/05/05 15:34:51 sera Exp $
+
+  05 May 2012; Ralph Sennhauser <sera@gentoo.org> -sun-jre-bin-1.6.0.29.ebuild:
+  Remove vulnarable. #404071
 
   05 May 2012; Ralph Sennhauser <sera@gentoo.org> sun-jre-bin-1.6.0.31.ebuild:
   Add QA_FLAGS_IGNORED. #405639
