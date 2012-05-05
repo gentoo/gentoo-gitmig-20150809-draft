@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/baobab
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.1 2012/05/05 08:22:24 tetromino Exp $
+
+*baobab-3.4.1 (05 May 2012)
+
+  05 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +baobab-3.4.1.ebuild, +metadata.xml:
+  New separate gnome disk usage viewer package, formerly part of
+  gnome-extra/gnome-utils.
+
