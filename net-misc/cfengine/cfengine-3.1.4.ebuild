@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.4.ebuild,v 1.6 2011/08/30 17:11:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.4.ebuild,v 1.7 2012/05/05 21:36:03 ranger Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="http://cfengine.com/source_code/download?file=${MY_P}.tar.gz -> ${MY_P}
 
 LICENSE="GPL-3"
 SLOT="3"
-KEYWORDS="amd64 arm ~ppc ~s390 sparc x86"
+KEYWORDS="amd64 arm ppc ~s390 sparc x86"
 
 # libvirt disabled for now because it blocks stabilization etc.
 IUSE="examples gd graphviz html ldap mysql postgres qdbm selinux tests tokyocabinet vim-syntax"

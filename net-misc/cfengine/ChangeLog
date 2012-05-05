@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.143 2012/04/17 15:55:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.144 2012/05/05 21:36:03 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> cfengine-3.1.4.ebuild:
+  Marking cfengine-3.1.4 ppc for bug 352280
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> cfengine-3.3.0.ebuild:
   Marking cfengine-3.3.0 ~ppc for bug 412253
