@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.136 2012/05/03 18:33:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.137 2012/05/05 21:55:50 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> scite-3.0.4.ebuild:
+  Marking scite-3.0.4 ppc for bug 412657
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> scite-3.0.1.ebuild,
   scite-3.0.2.ebuild, scite-3.0.3.ebuild, scite-3.0.4.ebuild,
