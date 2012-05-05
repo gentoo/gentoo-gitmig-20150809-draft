@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-search-tool/gnome-search-tool-3.4.0.ebuild,v 1.1 2012/05/05 07:46:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-search-tool/gnome-search-tool-3.4.0.ebuild,v 1.2 2012/05/05 07:51:46 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ GNOME2_LA_PUNT="yes"
 inherit gnome2
 
 DESCRIPTION="Search tool for GNOME 3"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://live.gnome.org/GnomeUtils"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
