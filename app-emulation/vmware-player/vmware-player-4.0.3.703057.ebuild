@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-4.0.2.591240.ebuild,v 1.1 2012/03/10 14:19:47 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-4.0.3.703057.ebuild,v 1.1 2012/05/05 14:50:49 vadimk Exp $
 
 EAPI="4"
 
-inherit eutils versionator fdo-mime gnome2-utils vmware-bundle
+inherit eutils versionator fdo-mime gnome2-utils pax-utils vmware-bundle
 
 MY_PN="VMware-Player"
 MY_PV="$(replace_version_separator 3 - $PV)"
 MY_P="${MY_PN}-${MY_PV}"
+PV_MINOR=$(get_version_component_range 3)
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/player/"
@@ -76,7 +77,7 @@ RDEPEND="dev-cpp/cairomm
 	x11-libs/pango
 	x11-libs/startup-notification
 	!app-emulation/vmware-workstation"
-PDEPEND="~app-emulation/vmware-modules-264.2
+PDEPEND="~app-emulation/vmware-modules-264.${PV_MINOR}
 	vmware-tools? ( app-emulation/vmware-tools )"
 
 S=${WORKDIR}
@@ -172,6 +173,8 @@ src_install() {
 	fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/bin/{appLoader,fusermount,launcher.sh,mkisofs,vmware-remotemks}
 	fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/lib/{wrapper-gtk24.sh,libgksu2.so.0/gksu-run-helper}
 	fperms 4711 "${VM_INSTALL_DIR}"/lib/vmware/bin/vmware-vmx{,-debug,-stats}
+
+	pax-mark -m "${D}${VM_INSTALL_DIR}"/lib/vmware/bin/vmware-vmx
 
 	# create the environment
 	local envd="${T}/90vmware"
