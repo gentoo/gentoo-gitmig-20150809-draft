@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pywebdav
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.16 2011/02/18 10:22:30 cedk Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.17 2012/05/05 11:02:52 cedk Exp $
+
+*pywebdav-0.9.8 (05 May 2012)
+
+  05 May 2012; Cédric Krier <cedk@gentoo.org> +pywebdav-0.9.8.ebuild:
+  Version bump
 
 *pywebdav-0.9.4.1 (18 Feb 2011)
 
