@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.123 2012/05/05 21:50:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.124 2012/05/05 21:52:10 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> allegro-5.0.5.ebuild:
+  Marking allegro-5.0.5 ppc for bug 414055
 
   05 May 2012; Brent Baude <ranger@gentoo.org> allegro-4.4.2-r1.ebuild:
   Marking allegro-4.4.2-r1 ppc for bug 414053
