@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-6.6.7.ebuild,v 1.1 2012/02/26 05:36:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-6.6.7.ebuild,v 1.2 2012/05/05 08:05:41 mgorny Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="examples pango"
 
 RDEPEND="pango? ( x11-libs/pango media-libs/freetype:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

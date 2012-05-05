@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cmus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.54 2012/01/20 12:30:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.55 2012/05/05 08:16:16 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> cmus-2.4.2.ebuild,
+  cmus-2.4.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   20 Jan 2012; Agostino Sarubbo <ago@gentoo.org> cmus-2.4.2.ebuild,
   cmus-2.4.3.ebuild:

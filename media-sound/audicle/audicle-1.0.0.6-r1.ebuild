@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/audicle-1.0.0.6-r1.ebuild,v 1.3 2011/03/29 12:38:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/audicle-1.0.0.6-r1.ebuild,v 1.4 2012/05/05 08:11:27 mgorny Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs flag-o-matic
@@ -27,7 +27,7 @@ RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-font.patch"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.5.7.1.ebuild,v 1.4 2011/03/13 12:51:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.5.7.1.ebuild,v 1.5 2012/05/05 08:20:42 mgorny Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND=">=media-libs/libmpd-0.17
 	lyrics? ( net-libs/libnxml net-misc/curl )
 	taglib? ( >=media-libs/taglib-1.5 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 src_configure() {

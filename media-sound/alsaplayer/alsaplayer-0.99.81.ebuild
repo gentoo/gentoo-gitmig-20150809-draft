@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.7 2012/01/21 16:22:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.8 2012/05/05 08:05:44 mgorny Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -30,7 +30,7 @@ RDEPEND="media-libs/libsndfile
 	vorbis? ( media-libs/libvorbis )
 	xosd? ( x11-libs/xosd )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	nls? ( sys-devel/gettext )
 	oss? ( virtual/os-headers )"

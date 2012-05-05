@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.6 2012/03/18 13:23:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.7 2012/05/05 08:20:42 mgorny Exp $
 
 EAPI=4
 inherit flag-o-matic toolchain-funcs
@@ -25,7 +25,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-libs/libsndfile
 	sci-libs/fftw:2.1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS NEWS NOTES README TODO )
 

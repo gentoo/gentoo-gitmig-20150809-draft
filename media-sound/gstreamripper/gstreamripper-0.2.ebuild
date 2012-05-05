@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.14 2011/03/28 15:24:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.15 2012/05/05 08:27:39 mgorny Exp $
 
 EAPI=4
 inherit eutils
@@ -20,7 +20,7 @@ COMMON_DEPEND="x11-libs/gtk+:2"
 RDEPEND="${COMMON_DEPEND}
 	media-sound/streamripper"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

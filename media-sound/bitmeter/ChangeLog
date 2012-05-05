@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bitmeter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bitmeter/ChangeLog,v 1.8 2011/03/29 05:47:58 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bitmeter/ChangeLog,v 1.9 2012/05/05 08:10:23 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> bitmeter-1.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Mar 2011; Tim Harder <radhermit@gentoo.org> bitmeter-1.2.ebuild:
   Update to EAPI 2 and use slot dep for gtk+.

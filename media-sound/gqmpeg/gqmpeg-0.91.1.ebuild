@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.91.1.ebuild,v 1.12 2011/09/14 08:52:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.91.1.ebuild,v 1.13 2012/05/05 08:27:57 mgorny Exp $
 
 EAPI=4
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-sound/mpg123
 	>=media-libs/libpng-1.4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {

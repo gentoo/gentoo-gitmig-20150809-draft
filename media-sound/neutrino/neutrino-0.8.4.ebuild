@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/neutrino-0.8.4.ebuild,v 1.1 2008/02/15 17:39:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/neutrino-0.8.4.ebuild,v 1.2 2012/05/05 08:44:00 mgorny Exp $
 
 inherit gnome2
 
@@ -22,7 +22,7 @@ RDEPEND=">=gnome-base/libgnome-2
 	>=media-libs/libnjb-2.2
 	>=media-libs/id3lib-3.8.3-r6"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 DOCS="AUTHORS ChangeLog README TODO"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-9999.ebuild,v 1.5 2012/04/25 07:04:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-9999.ebuild,v 1.6 2012/05/05 08:39:48 mgorny Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic linux-info multilib systemd git-2
@@ -62,7 +62,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	zeroconf? ( net-dns/avahi[dbus] )
 	zip? ( dev-libs/zziplib )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	use network || ewarn "Icecast and Shoutcast streaming needs networking."

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.31.ebuild,v 1.2 2012/04/23 19:07:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.31.ebuild,v 1.3 2012/05/05 08:55:51 mgorny Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -28,7 +28,7 @@ RDEPEND="dev-db/sqlite:3
 	lyrics? ( net-libs/libsoup:2.4 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( AUTHORS README )

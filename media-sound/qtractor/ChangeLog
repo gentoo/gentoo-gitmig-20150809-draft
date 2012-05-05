@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qtractor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.43 2012/04/22 00:28:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.44 2012/05/05 08:47:48 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> qtractor-0.5.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   22 Apr 2012; Alexis Ballier <aballier@gentoo.org> qtractor-0.5.4.ebuild:
   depend on qt 4.7 to simplify deps and drop -DQT_STYLE_GTK which is not needed

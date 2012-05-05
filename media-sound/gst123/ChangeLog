@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gst123
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gst123/ChangeLog,v 1.4 2012/04/22 21:25:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gst123/ChangeLog,v 1.5 2012/05/05 08:27:50 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> gst123-0.3.0.ebuild,
+  gst123-0.3.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   22 Apr 2012; Tim Harder <radhermit@gentoo.org> -gst123-0.2.2.ebuild:
   Remove old.

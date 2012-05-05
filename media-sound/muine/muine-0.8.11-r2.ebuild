@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.11-r2.ebuild,v 1.7 2011/03/27 11:53:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.11-r2.ebuild,v 1.8 2012/05/05 08:43:18 mgorny Exp $
 
 EAPI=2
 
@@ -41,7 +41,7 @@ RDEPEND="
 	)
 	"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/scrollkeeper
 	gnome-base/gnome-common
 	>=dev-util/intltool-0.29

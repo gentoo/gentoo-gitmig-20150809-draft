@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gqradio
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.16 2011/03/12 09:45:33 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.17 2012/05/05 08:27:48 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> gqradio-1.9.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Mar 2011; Tim Harder <radhermit@gentoo.org> gqradio-1.9.2.ebuild:
   Update to EAPI 2 and use slot dep for gtk+.

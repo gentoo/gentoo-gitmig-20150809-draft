@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.5 2011/05/13 09:10:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.6 2012/05/05 08:15:50 mgorny Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="media-libs/alsa-lib
 	x11-misc/shared-mime-info
 	dbus? ( x11-libs/qt-dbus:4 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? (
 		app-doc/doxygen
 		app-text/docbook-xsl-stylesheets

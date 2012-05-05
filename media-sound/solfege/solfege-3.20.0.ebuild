@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.20.0.ebuild,v 1.4 2011/09/29 08:15:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.20.0.ebuild,v 1.5 2012/05/05 08:51:00 mgorny Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-python/pygtk-2.12
 DEPEND="dev-lang/swig
 	sys-devel/gettext
 	sys-apps/texinfo
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-libs/libxslt
 	app-text/txt2man
 	>=app-text/docbook-xsl-stylesheets-1.60"

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audtty
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.26 2012/02/24 14:52:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.27 2012/05/05 08:11:22 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> audtty-0.1.9a-r1.ebuild,
+  audtty-0.1.12.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> audtty-0.1.12.ebuild:
   x86 stable wrt bug #404799

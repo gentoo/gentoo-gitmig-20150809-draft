@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.5.0.ebuild,v 1.3 2011/03/29 02:33:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.5.0.ebuild,v 1.4 2012/05/05 08:45:11 mgorny Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ RDEPEND=">=media-libs/raul-0.7.0
 	alsa? ( media-libs/alsa-lib )
 	lash? ( dev-libs/dbus-glib )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	tc-export CC CXX CPP AR RANLIB

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.6 2012/03/23 20:41:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.7 2012/05/05 08:55:51 mgorny Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils git-2
@@ -29,7 +29,7 @@ RDEPEND="dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.16
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	gnome-base/gnome-common:3
 	>=sys-devel/autoconf-2.67:2.5
 	sys-devel/gettext"

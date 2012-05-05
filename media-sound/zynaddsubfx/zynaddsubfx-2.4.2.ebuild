@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.2.ebuild,v 1.1 2012/03/07 10:06:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.2.ebuild,v 1.2 2012/05/05 08:55:58 mgorny Exp $
 
 EAPI=4
 inherit eutils cmake-utils
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/mini-xml-2.2.1
 	lash? ( media-sound/lash )"
 #	portaudio? ( media-libs/portaudio )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 # Upstream uses the following preferences: alsa > jack > portaudio
 # At least one of them must be enabled
 # We do not support portaudio, so if alsa is disabled force jack.

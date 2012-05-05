@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.6 2011/03/29 12:43:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.7 2012/05/05 08:52:46 mgorny Exp $
 
 EAPI=1
 inherit eutils
@@ -26,7 +26,7 @@ RDEPEND=">=media-sound/jack-audio-connection-kit-0.109.2
 	gnome-base/libgnomecanvas
 	lash? ( media-sound/lash )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}"/${MY_P}
 

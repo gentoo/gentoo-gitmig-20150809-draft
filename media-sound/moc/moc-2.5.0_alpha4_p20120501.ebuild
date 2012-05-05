@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20120501.ebuild,v 1.3 2012/05/01 09:45:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20120501.ebuild,v 1.4 2012/05/05 08:39:33 mgorny Exp $
 
 EAPI=4
 inherit autotools
@@ -37,7 +37,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	wavpack? ( media-sound/wavpack )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	eautoreconf

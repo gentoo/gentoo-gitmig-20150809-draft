@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-2.0.0.ebuild,v 1.3 2012/04/21 12:31:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-2.0.0.ebuild,v 1.4 2012/05/05 08:11:07 mgorny Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ COMMON_DEPEND="x11-libs/wxGTK:2.8[X]
 RDEPEND="${COMMON_DEPEND}
 	mp3? ( >=media-sound/lame-3.70 )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 REQUIRED_USE="soundtouch? ( midi )"
 

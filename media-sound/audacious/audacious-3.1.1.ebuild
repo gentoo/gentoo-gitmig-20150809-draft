@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.1.1.ebuild,v 1.4 2012/02/03 01:35:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.1.1.ebuild,v 1.5 2012/05/05 08:11:04 mgorny Exp $
 
 EAPI=4
 inherit eutils
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.60
 	session? ( x11-libs/libSM )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9.0
+	virtual/pkgconfig
 	chardet? ( >=app-i18n/libguess-1.1 )
 	nls? ( dev-util/intltool )"
 

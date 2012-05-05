@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.22.ebuild,v 1.3 2011/07/23 11:30:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.22.ebuild,v 1.4 2012/05/05 08:38:38 mgorny Exp $
 
 EAPI=4
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	curl? ( net-misc/curl )
 	!curl? ( net-libs/libsoup:2.4 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	local myclient=soup

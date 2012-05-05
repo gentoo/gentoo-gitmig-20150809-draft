@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.17.ebuild,v 1.1 2011/06/09 09:50:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.17.ebuild,v 1.2 2012/05/05 08:50:58 mgorny Exp $
 
 EAPI=4
 inherit autotools eutils wxwidgets toolchain-funcs
@@ -25,7 +25,7 @@ RDEPEND="media-sound/jack-audio-connection-kit
 	media-libs/rubberband
 	sci-libs/fftw:3.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_p*}
 

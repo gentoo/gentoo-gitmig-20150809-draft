@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/gtkguitune-0.8.ebuild,v 1.2 2009/12/15 16:40:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/gtkguitune-0.8.ebuild,v 1.3 2012/05/05 08:26:50 mgorny Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
@@ -18,7 +18,7 @@ RDEPEND="dev-cpp/glibmm:2
 	dev-cpp/gtkmm:2.4
 	dev-libs/libsigc++:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}
 

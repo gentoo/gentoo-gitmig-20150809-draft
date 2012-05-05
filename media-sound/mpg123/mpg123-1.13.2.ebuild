@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.13.2.ebuild,v 1.7 2011/07/17 09:45:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.13.2.ebuild,v 1.8 2012/05/05 08:41:50 mgorny Exp $
 
 EAPI=3
 inherit toolchain-funcs libtool
@@ -23,7 +23,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	sdl? ( media-libs/libsdl )
 	sys-devel/libtool"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	elibtoolize # for Darwin bundles

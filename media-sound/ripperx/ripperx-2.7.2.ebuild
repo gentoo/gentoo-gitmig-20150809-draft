@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.2.ebuild,v 1.9 2012/03/18 15:01:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.2.ebuild,v 1.10 2012/05/05 08:49:23 mgorny Exp $
 
 EAPI=2
 inherit eutils
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-sound/cdparanoia
 	media-libs/id3lib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}

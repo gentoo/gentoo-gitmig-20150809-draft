@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.49.1.ebuild,v 1.2 2009/06/17 23:24:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.49.1.ebuild,v 1.3 2012/05/05 08:53:52 mgorny Exp $
 
 EAPI=1
 
@@ -33,7 +33,7 @@ RDEPEND="
 	lame? ( media-sound/lame )"
 #	opengl? ( x11-libs/qt-opengl )
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

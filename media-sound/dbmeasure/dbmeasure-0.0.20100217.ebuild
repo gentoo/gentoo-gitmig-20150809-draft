@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dbmeasure/dbmeasure-0.0.20100217.ebuild,v 1.1 2010/02/27 01:11:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dbmeasure/dbmeasure-0.0.20100217.ebuild,v 1.2 2012/05/05 08:15:57 mgorny Exp $
 
 EAPI=3
 GIT_COMMITID="ed8105083ab72f9afac9d18b7563fbc3d6c1c925"
@@ -20,7 +20,7 @@ IUSE=""
 
 RDEPEND="media-libs/alsa-lib"
 DEPEND="media-sound/alsa-headers
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		${RDEPEND}"
 
 S="${WORKDIR}/${PN}"

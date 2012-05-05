@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aumix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.74 2010/08/16 04:06:00 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.75 2012/05/05 08:10:37 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> aumix-2.9.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Aug 2010; Jeroen Roovers <jer@gentoo.org> aumix-2.9.1.ebuild:
   Stable for PPC (bug #327853).

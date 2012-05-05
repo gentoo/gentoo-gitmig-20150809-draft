@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtkguitune
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.20 2009/12/15 16:40:11 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtkguitune/ChangeLog,v 1.21 2012/05/05 08:26:50 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> gtkguitune-0.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> gtkguitune-0.8.ebuild:
   Remove geocities from HOMEPAGE and SRC_URI wrt #297028.

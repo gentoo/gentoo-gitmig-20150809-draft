@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.19.ebuild,v 1.3 2012/01/28 14:42:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.19.ebuild,v 1.4 2012/05/05 08:44:51 mgorny Exp $
 
 EAPI=4
 inherit multilib
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	sys-libs/ncurses
 	lirc? ( app-misc/lirc )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS NEWS README doc/config.sample doc/keys.sample )
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/meterbridge-0.9.2.ebuild,v 1.16 2012/02/05 17:41:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/meterbridge/meterbridge-0.9.2.ebuild,v 1.17 2012/05/05 08:34:10 mgorny Exp $
 
 inherit eutils autotools
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ppc x86"
 RDEPEND="media-sound/jack-audio-connection-kit
 	media-libs/sdl-image"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

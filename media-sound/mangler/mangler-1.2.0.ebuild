@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/mangler-1.2.0.ebuild,v 1.3 2010/07/30 09:28:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/mangler-1.2.0.ebuild,v 1.4 2012/05/05 08:33:47 mgorny Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND="dev-cpp/gtkmm:2.4
 	pulseaudio? ( media-sound/pulseaudio )
 	speex? ( media-libs/speex )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_/}
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/moodbar-0.1.2.ebuild,v 1.8 2009/05/09 11:20:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/moodbar-0.1.2.ebuild,v 1.9 2012/05/05 08:38:38 mgorny Exp $
 
 EAPI=2
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND="media-libs/gst-plugins-base:0.10
 	media-plugins/gst-plugins-meta:0.10
 	sci-libs/fftw:3.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gthread_init.patch

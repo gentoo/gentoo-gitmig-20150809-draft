@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.13 2012/03/16 02:37:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.14 2012/05/05 08:35:21 mgorny Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	python? ( dev-lang/python )
 	|| ( sys-libs/readline dev-libs/libedit )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	python? ( >=dev-lang/swig-1.3.31 )"
 
 src_prepare() {

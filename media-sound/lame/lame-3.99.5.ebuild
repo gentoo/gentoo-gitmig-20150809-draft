@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.5.ebuild,v 1.1 2012/03/01 12:14:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.5.ebuild,v 1.2 2012/05/05 08:39:26 mgorny Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -17,7 +17,7 @@ IUSE="debug mmx mp3rtp sndfile static-libs"
 RDEPEND=">=sys-libs/ncurses-5.7-r7
 	sndfile? ( >=media-libs/libsndfile-1.0.2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	mmx? ( dev-lang/nasm )"
 
 src_prepare() {

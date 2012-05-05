@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.7.0.ebuild,v 1.1 2012/02/15 00:09:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.7.0.ebuild,v 1.2 2012/05/05 08:16:07 mgorny Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ COMMON_DEPEND="=dev-python/gst-python-0.10*
 RDEPEND="${COMMON_DEPEND}
 	=media-plugins/gst-plugins-meta-0.10*"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( dev-util/intltool )"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-keyboard/jack-keyboard-2.5.ebuild,v 1.2 2008/07/24 19:00:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-keyboard/jack-keyboard-2.5.ebuild,v 1.3 2012/05/05 08:31:16 mgorny Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-sound/jack-audio-connection-kit-0.103
 	lash? ( media-sound/lash )
 	X? ( x11-libs/libX11 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-apps/sed"
 
 src_compile(){

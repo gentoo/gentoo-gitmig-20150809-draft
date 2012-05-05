@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-1.1.ebuild,v 1.1 2011/11/13 07:31:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-1.1.ebuild,v 1.2 2012/05/05 08:43:57 mgorny Exp $
 
 EAPI=4
 inherit cmake-utils eutils font
@@ -31,7 +31,7 @@ RDEPEND="media-libs/alsa-lib
 DEPEND="${RDEPEND}
 	dev-texlive/texlive-context
 	app-doc/doxygen
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}/mscore"
 VARTEXFONTS="${T}/fonts"

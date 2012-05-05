@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1.ebuild,v 1.9 2011/10/29 09:45:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1.ebuild,v 1.10 2012/05/05 08:51:03 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -26,7 +26,7 @@ RDEPEND=">=dev-python/pygtk-2.12
 	taglib? ( >=dev-python/tagpy-0.93 )
 	trayicon? ( dev-python/egg-python )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="CHANGELOG README TODO TRANSLATORS"
 

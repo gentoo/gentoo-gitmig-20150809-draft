@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/pms-0.42.ebuild,v 1.2 2010/09/16 07:10:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/pms-0.42.ebuild,v 1.3 2012/05/05 08:45:46 mgorny Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND="
 	regex? ( >=dev-libs/boost-1.36 )
 "
 DEPEND="
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	${RDEPEND}
 "
 

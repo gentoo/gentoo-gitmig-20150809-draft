@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.0.1.ebuild,v 1.2 2012/02/05 01:47:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.0.1.ebuild,v 1.3 2012/05/05 08:50:46 mgorny Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ RDEPEND="dev-python/gconf-python
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

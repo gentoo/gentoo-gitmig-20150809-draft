@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.3.1.ebuild,v 1.4 2012/04/23 19:04:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.3.1.ebuild,v 1.5 2012/05/05 08:49:46 mgorny Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ RDEPEND="dev-libs/glib:2
 	dev-libs/confuse
 	net-misc/curl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog NEWS README scmpc.conf.example )
 

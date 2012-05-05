@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trommler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.26 2010/08/22 20:11:30 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.27 2012/05/05 08:54:36 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> trommler-3.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   22 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> trommler-3.8.ebuild:
   Respect LDFLAGS wrt #333741.

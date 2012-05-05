@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.1-r1.ebuild,v 1.11 2012/03/20 23:49:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.1-r1.ebuild,v 1.12 2012/05/05 08:49:55 mgorny Exp $
 
 EAPI=4
 
@@ -62,7 +62,7 @@ DEPEND="${RDEPEND}
 		>=x11-libs/libXtst-1.0.99.2
 	)
 	dev-libs/libatomic_ops
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	system-wide? ( || ( dev-util/unifdef sys-freebsd/freebsd-ubin ) )
 	dev-util/intltool"
 

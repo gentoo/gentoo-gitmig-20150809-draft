@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/horgand
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.26 2011/05/07 17:46:18 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.27 2012/05/05 08:31:00 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> horgand-1.14.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   07 May 2011; Christoph Mende <angelos@gentoo.org> horgand-1.14.ebuild,
   +files/horgand-1.14-overflow.patch:

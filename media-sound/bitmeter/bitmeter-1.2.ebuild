@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bitmeter/bitmeter-1.2.ebuild,v 1.7 2011/03/29 05:47:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bitmeter/bitmeter-1.2.ebuild,v 1.8 2012/05/05 08:10:23 mgorny Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE="doc"
 RDEPEND="media-sound/jack-audio-connection-kit
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	!media-sound/bitscope"
 
 src_install() {

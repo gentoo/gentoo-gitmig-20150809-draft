@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sndfile-tools/sndfile-tools-1.03.ebuild,v 1.1 2009/12/14 12:53:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sndfile-tools/sndfile-tools-1.03.ebuild,v 1.2 2012/05/05 08:49:30 mgorny Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.19
 	>=x11-libs/cairo-1.4.0
 	sci-libs/fftw:3.0
 	media-sound/jack-audio-connection-kit"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 src_configure() {

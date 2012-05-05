@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/twolame-0.3.13.ebuild,v 1.2 2011/11/30 14:10:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/twolame-0.3.13.ebuild,v 1.3 2012/05/05 08:54:56 mgorny Exp $
 
 EAPI=3
 inherit libtool
@@ -16,7 +16,7 @@ IUSE="static-libs"
 
 RDEPEND=">=media-libs/libsndfile-1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e '/CFLAGS/s:-O3::' configure || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.13.7.ebuild,v 1.2 2012/03/25 23:44:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.13.7.ebuild,v 1.3 2012/05/05 08:41:50 mgorny Exp $
 
 EAPI=4
 inherit toolchain-funcs libtool
@@ -22,7 +22,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	sdl? ( media-libs/libsdl )
 	sys-devel/libtool"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog NEWS NEWS.libmpg123 README )
 

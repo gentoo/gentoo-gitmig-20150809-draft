@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.2.ebuild,v 1.9 2012/02/23 09:55:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.2.ebuild,v 1.10 2012/05/05 08:43:14 mgorny Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -19,7 +19,7 @@ RDEPEND="media-libs/libid3tag
 	net-dns/avahi[dbus]
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	cp "${FILESDIR}"/${PN}.init.2 initd

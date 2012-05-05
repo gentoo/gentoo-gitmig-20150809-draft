@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/christine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/ChangeLog,v 1.9 2012/02/15 00:10:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/ChangeLog,v 1.10 2012/05/05 08:16:07 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> christine-0.7.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -christine-0.4.0.ebuild,
   -files/christine-0.4.0-no_static_linking.patch:

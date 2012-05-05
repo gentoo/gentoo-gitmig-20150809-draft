@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aseqview
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.20 2011/03/12 08:56:47 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.21 2012/05/05 08:05:30 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> aseqview-0.2.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   12 Mar 2011; Tim Harder <radhermit@gentoo.org> aseqview-0.2.8.ebuild:
   Update to EAPI 2 and add slot dep for gtk+.

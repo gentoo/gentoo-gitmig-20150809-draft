@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.2.8.ebuild,v 1.6 2011/03/12 08:56:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.2.8.ebuild,v 1.7 2012/05/05 08:05:30 mgorny Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND=">=media-libs/alsa-lib-0.9.0
 	x11-libs/gtk+:2
 	net-libs/libpcap"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf --disable-alsatest --disable-gtktest --enable-gtk2

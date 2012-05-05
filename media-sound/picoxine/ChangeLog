@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/picoxine
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picoxine/ChangeLog,v 1.8 2006/11/21 12:57:33 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picoxine/ChangeLog,v 1.9 2012/05/05 08:45:55 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> picoxine-0.0.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Give this back to sound herd.

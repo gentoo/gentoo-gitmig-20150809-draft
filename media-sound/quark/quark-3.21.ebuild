@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.16 2012/04/17 09:02:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.17 2012/05/05 08:49:20 mgorny Exp $
 
 EAPI=4
 GCONF_DEBUG=yes
@@ -20,7 +20,7 @@ RDEPEND="media-libs/xine-lib
 	>=gnome-base/gconf-2
 	gnome-base/gnome-vfs"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS README"
 

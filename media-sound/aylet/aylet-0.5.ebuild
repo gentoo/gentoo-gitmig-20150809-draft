@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.8 2011/03/28 23:08:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.9 2012/05/05 08:10:27 mgorny Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -17,7 +17,7 @@ IUSE="gtk"
 RDEPEND="sys-libs/ncurses
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gtk.patch

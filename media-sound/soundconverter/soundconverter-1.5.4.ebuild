@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.5.4.ebuild,v 1.6 2012/01/11 19:29:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.5.4.ebuild,v 1.7 2012/05/05 08:50:46 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -43,7 +43,7 @@ RDEPEND=">=dev-python/pygtk-2.12
 	aac? ( =media-plugins/gst-plugins-faac-0.10* )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool"
 

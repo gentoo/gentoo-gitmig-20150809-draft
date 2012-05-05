@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/herrie
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.37 2011/11/24 12:25:30 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.38 2012/05/05 08:31:04 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> herrie-2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #158470

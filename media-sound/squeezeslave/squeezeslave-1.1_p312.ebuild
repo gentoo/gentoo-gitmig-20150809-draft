@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/squeezeslave-1.1_p312.ebuild,v 1.1 2012/01/15 06:48:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/squeezeslave-1.1_p312.ebuild,v 1.2 2012/05/05 08:52:05 mgorny Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ RDEPEND="media-libs/libmad
 	display? ( app-misc/lirc )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	for i in display aac wma zones ; do

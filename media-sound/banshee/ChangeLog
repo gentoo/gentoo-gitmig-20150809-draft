@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.151 2012/04/28 18:03:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.152 2012/05/05 08:10:24 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> banshee-2.2.0-r1.ebuild,
+  banshee-2.2.1.ebuild, banshee-2.4.0-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Apr 2012; Pacho Ramos <pacho@gentoo.org> banshee-2.4.0-r1.ebuild:
   Fix dependency on mono-addins, bug #413533 by Florian Berger.

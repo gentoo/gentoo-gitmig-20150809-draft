@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/drumstick
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.11 2011/05/13 09:10:35 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.12 2012/05/05 08:15:50 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> drumstick-0.5.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   13 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/0.5.0-doc_automagicness.patch, -drumstick-0.4.1.ebuild,

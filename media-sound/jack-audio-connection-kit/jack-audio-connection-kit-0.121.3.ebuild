@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.121.3.ebuild,v 1.11 2012/03/13 14:43:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.121.3.ebuild,v 1.12 2012/05/05 08:31:44 mgorny Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.0
 	media-libs/libsamplerate
 	!media-sound/jack-cvs"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 RDEPEND="${RDEPEND}
 	pam? ( sys-auth/realtime-base )"

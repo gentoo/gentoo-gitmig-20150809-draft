@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/paprefs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.26 2012/01/28 14:42:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.27 2012/05/05 08:45:42 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> paprefs-0.9.9.ebuild,
+  paprefs-0.9.9-r1.ebuild, paprefs-0.9.10.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> paprefs-0.9.10.ebuild:
   x86 stable wrt bug #400405

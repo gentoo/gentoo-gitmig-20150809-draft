@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.4.2.ebuild,v 1.5 2011/03/28 18:37:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.4.2.ebuild,v 1.6 2012/05/05 08:45:11 mgorny Exp $
 
 EAPI=1
 
@@ -24,7 +24,7 @@ RDEPEND=">=media-libs/raul-0.5.1
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( dev-libs/dbus-glib )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf $(use_enable debug) \

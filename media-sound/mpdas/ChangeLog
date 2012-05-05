@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpdas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/ChangeLog,v 1.12 2011/04/30 15:30:13 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/ChangeLog,v 1.13 2012/05/05 08:39:20 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> mpdas-0.3.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   30 Apr 2011; Christoph Mende <angelos@gentoo.org>
   -files/mpdas-0.2.5-ldflags.patch:

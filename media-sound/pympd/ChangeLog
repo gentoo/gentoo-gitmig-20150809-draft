@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pympd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.27 2011/03/23 23:10:04 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.28 2012/05/05 08:48:22 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> pympd-0.08.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Mar 2011; Christoph Mende <angelos@gentoo.org> pympd-0.08.1.ebuild:
   Respect LDFLAGS (bug #333745)

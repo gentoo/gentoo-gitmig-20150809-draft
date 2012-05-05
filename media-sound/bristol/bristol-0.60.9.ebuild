@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.60.9.ebuild,v 1.5 2011/11/28 02:14:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.60.9.ebuild,v 1.6 2012/05/05 08:16:22 mgorny Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND=">=media-sound/jack-audio-connection-kit-0.109.2
 # osc? ( >=media-libs/liblo-0.22 )
 DEPEND="${RDEPEND}
 	x11-proto/xproto
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog HOWTO NEWS README )
 

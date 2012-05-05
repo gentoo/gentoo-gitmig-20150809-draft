@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.17 2011/03/12 09:36:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.18 2012/05/05 08:28:06 mgorny Exp $
 
 EAPI=2
 inherit eutils fdo-mime
@@ -18,7 +18,7 @@ RDEPEND="media-libs/alsa-lib
 	 x11-libs/gtk+:2
 	 >=gnome-base/libgnomeui-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gtk24.patch \

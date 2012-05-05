@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.3-r1.ebuild,v 1.5 2012/03/02 20:12:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.3-r1.ebuild,v 1.6 2012/05/05 08:53:30 mgorny Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND=">=media-libs/libsndfile-1.0
 	mp3? ( media-libs/libmad )
 	ladspa? ( media-libs/ladspa-sdk )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=(AUTHORS ChangeLog NEWS README TODO)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.95.ebuild,v 1.4 2012/02/14 04:31:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.95.ebuild,v 1.5 2012/05/05 08:50:41 mgorny Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -94,7 +94,7 @@ RDEPEND="${COMMON_DEPEND}
 # gtk-doc-am needed for eautoreconf
 #	dev-util/gtk-doc-am
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.9.1

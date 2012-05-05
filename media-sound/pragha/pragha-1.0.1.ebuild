@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.0.1.ebuild,v 1.1 2012/03/15 03:43:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.0.1.ebuild,v 1.2 2012/05/05 08:47:02 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -32,7 +32,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-plugins/gst-plugins-meta:0.10"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

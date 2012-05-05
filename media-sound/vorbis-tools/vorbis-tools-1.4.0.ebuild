@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.4.0.ebuild,v 1.12 2010/09/24 15:58:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.4.0.ebuild,v 1.13 2012/05/05 08:55:25 mgorny Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/libvorbis-1.3.0
 	speex? ( media-libs/speex )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

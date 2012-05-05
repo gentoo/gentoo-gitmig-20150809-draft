@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mumble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.35 2012/02/18 14:31:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.36 2012/05/05 08:43:02 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> mumble-1.2.3-r1.ebuild,
+  mumble-1.2.3-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   18 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mumble-1.2.3-r2.ebuild:
   x86 stable wrt bug #403939

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.7-r1.ebuild,v 1.3 2010/08/09 14:11:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.7-r1.ebuild,v 1.4 2012/05/05 08:45:04 mgorny Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="doc? ( gnome-extra/yelp app-text/xmlto )
 	media-libs/alsa-lib"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf $(use_with doc) \

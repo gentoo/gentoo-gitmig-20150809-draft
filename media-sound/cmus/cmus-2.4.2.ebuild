@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.4.2.ebuild,v 1.4 2012/01/20 12:30:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.4.2.ebuild,v 1.5 2012/05/05 08:16:16 mgorny Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -32,7 +32,7 @@ CDEPEND="sys-libs/ncurses[unicode?]
 	wavpack? ( media-sound/wavpack )
 	wma? ( virtual/ffmpeg )"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	zsh-completion? ( app-shells/zsh )
 	pidgin? ( net-im/pidgin

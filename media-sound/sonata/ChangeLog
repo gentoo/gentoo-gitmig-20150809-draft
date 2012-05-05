@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.56 2011/10/29 09:45:35 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.57 2012/05/05 08:51:03 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> sonata-1.6.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Oct 2011; Christoph Mende <angelos@gentoo.org> sonata-1.6.2.1.ebuild:
   Use codingteam.net mirror instead of berlios

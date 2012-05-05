@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/timemachine-0.3.1.ebuild,v 1.6 2011/04/30 18:12:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timemachine/timemachine-0.3.1.ebuild,v 1.7 2012/05/05 08:54:14 mgorny Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ RDEPEND=">=media-sound/jack-audio-connection-kit-0.80
 	>=media-libs/libsndfile-1.0.5
 	lash? ( >=media-sound/lash-0.5 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

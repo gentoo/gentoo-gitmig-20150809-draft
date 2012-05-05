@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.7-r1.ebuild,v 1.5 2012/01/20 20:02:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.7-r1.ebuild,v 1.6 2012/05/05 08:45:44 mgorny Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ IUSE="audiofile mad nls userland_BSD"
 RDEPEND="mad? ( media-libs/libmad )
 	audiofile? ( >=media-libs/audiofile-0.3.1 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( dev-util/intltool )"
 
 src_prepare() {

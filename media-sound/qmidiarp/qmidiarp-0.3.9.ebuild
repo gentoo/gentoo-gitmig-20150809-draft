@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/qmidiarp-0.3.9.ebuild,v 1.2 2011/05/13 14:44:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/qmidiarp-0.3.9.ebuild,v 1.3 2012/05/05 08:47:45 mgorny Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -18,7 +18,7 @@ RDEPEND="media-libs/alsa-lib
 	media-sound/jack-audio-connection-kit
 	x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

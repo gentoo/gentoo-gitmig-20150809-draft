@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/specimen
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.20 2011/03/29 12:43:13 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.21 2012/05/05 08:52:46 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> specimen-0.5.2_rc3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> specimen-0.5.2_rc3.ebuild:
   Fix gtk+ slot deps

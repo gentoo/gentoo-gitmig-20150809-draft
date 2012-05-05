@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/paprefs-0.9.10.ebuild,v 1.3 2012/01/28 14:42:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/paprefs-0.9.10.ebuild,v 1.4 2012/05/05 08:45:42 mgorny Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="dev-cpp/gtkmm:2.4
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext
 		dev-util/intltool )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \

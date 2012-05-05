@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.9.1.ebuild,v 1.7 2010/08/16 04:06:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.9.1.ebuild,v 1.8 2012/05/05 08:10:37 mgorny Exp $
 
 EAPI=2
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND="sys-libs/ncurses
 	gtk? ( x11-libs/gtk+:2 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_configure() {

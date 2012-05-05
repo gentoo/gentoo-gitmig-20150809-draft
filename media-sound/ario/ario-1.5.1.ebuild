@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.3 2012/04/26 09:11:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.4 2012/05/05 08:05:30 mgorny Exp $
 
 EAPI=4
 GNOME2_LA_PUNT=yes
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	zeroconf? ( net-dns/avahi )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( AUTHORS )

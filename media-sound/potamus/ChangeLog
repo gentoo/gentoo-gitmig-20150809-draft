@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/potamus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.10 2012/04/21 09:01:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.11 2012/05/05 08:47:10 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> potamus-0.12.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   21 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -potamus-0.11.ebuild,
   potamus-0.12.ebuild:

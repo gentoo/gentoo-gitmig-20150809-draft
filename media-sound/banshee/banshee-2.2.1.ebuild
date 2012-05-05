@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.2.1.ebuild,v 1.3 2012/04/09 14:49:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.2.1.ebuild,v 1.4 2012/05/05 08:10:24 mgorny Exp $
 
 EAPI="4"
 
@@ -78,7 +78,7 @@ RDEPEND=">=dev-lang/mono-2.4.3
 
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6-r4.ebuild,v 1.1 2010/07/29 23:16:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6-r4.ebuild,v 1.2 2012/05/05 08:15:49 mgorny Exp $
 
 EAPI=2
 inherit eutils fdo-mime
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	speex? ( media-libs/speex
 		media-libs/libvorbis )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {

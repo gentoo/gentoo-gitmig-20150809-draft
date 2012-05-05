@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pasystray/pasystray-0.1.2.ebuild,v 1.2 2012/03/30 15:11:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pasystray/pasystray-0.1.2.ebuild,v 1.3 2012/05/05 08:45:03 mgorny Exp $
 
 EAPI=4
 inherit eutils gnome2-utils
@@ -18,7 +18,7 @@ RDEPEND=">=media-sound/pulseaudio-1.0[glib,avahi]
 	>=net-dns/avahi-0.6
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS README TODO"
 

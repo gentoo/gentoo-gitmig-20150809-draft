@@ -1,36 +1,8 @@
 # ChangeLog for media-sound/squeezeslave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/ChangeLog,v 1.6 2012/01/15 06:50:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/ChangeLog,v 1.7 2012/05/05 08:52:05 mgorny Exp $
 
-  15 Jan 2012; Tim Harder <radhermit@gentoo.org> -squeezeslave-1.1_p286.ebuild,
-  -files/squeezeslave-1.1_p262-ffmpeg.patch:
-  Remove old.
-
-*squeezeslave-1.1_p312 (15 Jan 2012)
-
-  15 Jan 2012; Tim Harder <radhermit@gentoo.org> +squeezeslave-1.1_p312.ebuild:
-  Version bump.
-
-  04 Dec 2011; Tim Harder <radhermit@gentoo.org> -squeezeslave-1.1_p262.ebuild:
-  Remove old.
-
-*squeezeslave-1.1_p309 (04 Dec 2011)
-
-  04 Dec 2011; Tim Harder <radhermit@gentoo.org> +squeezeslave-1.1_p309.ebuild,
-  +files/squeezeslave-1.1_p309-ffmpeg.patch, files/squeezeslave.initd:
-  Version bump to new snapshot. Simplify init script using baselayout-2
-  enhancements.
-
-*squeezeslave-1.1_p286 (19 Oct 2011)
-
-  19 Oct 2011; Tim Harder <radhermit@gentoo.org> +squeezeslave-1.1_p286.ebuild,
-  metadata.xml:
-  Version bump to new snapshot with zones support.
-
-*squeezeslave-1.1_p262 (09 Aug 2011)
-
-  09 Aug 2011; Tim Harder <radhermit@gentoo.org> +squeezeslave-1.1_p262.ebuild,
-  +files/squeezeslave-1.1_p262-ffmpeg.patch, +files/squeezeslave.confd,
-  +files/squeezeslave.initd, +metadata.xml:
-  Initial import (bug #337587).
+  05 May 2012; Michał Górny <mgorny@gentoo.org> squeezeslave-1.1_p309.ebuild,
+  squeezeslave-1.1_p312.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 

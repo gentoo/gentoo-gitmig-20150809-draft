@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.11.ebuild,v 1.1 2012/02/15 09:42:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.11.ebuild,v 1.2 2012/05/05 08:54:53 mgorny Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/libxml2
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog CONTRIBUTORS NEWS README* TODO"
 

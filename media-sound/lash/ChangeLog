@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.34 2012/03/16 02:37:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.35 2012/05/05 08:35:21 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> lash-0.5.4-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   16 Mar 2012; Mike Gilbert <floppym@gentoo.org>
   +files/lash-0.5.4-swig_version_comparison.patch, lash-0.5.4-r1.ebuild:

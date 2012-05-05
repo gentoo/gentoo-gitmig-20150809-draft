@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.14.ebuild,v 1.7 2011/05/07 17:46:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.14.ebuild,v 1.8 2012/05/05 08:31:00 mgorny Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/fltk:1
 	media-sound/alsa-utils
 	media-sound/jack-audio-connection-kit"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-overflow.patch

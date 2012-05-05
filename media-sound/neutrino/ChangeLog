@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/neutrino
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/ChangeLog,v 1.4 2008/02/15 17:39:44 drac Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/ChangeLog,v 1.5 2012/05/05 08:44:00 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> neutrino-0.8.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *neutrino-0.8.4 (15 Feb 2008)
 

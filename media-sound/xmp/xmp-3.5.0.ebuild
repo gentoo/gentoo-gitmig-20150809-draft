@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-3.5.0.ebuild,v 1.2 2012/01/28 12:04:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-3.5.0.ebuild,v 1.3 2012/05/05 08:55:47 mgorny Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	nas? ( media-libs/nas )
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	oss? ( virtual/os-headers )"
 
 src_configure() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/traverso
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.27 2010/08/15 11:22:34 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.28 2012/05/05 08:53:52 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> traverso-0.49.1.ebuild,
+  traverso-0.49.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *traverso-0.49.2 (15 Aug 2010)
 

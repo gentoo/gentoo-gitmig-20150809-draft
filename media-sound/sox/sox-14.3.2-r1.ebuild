@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.2-r1.ebuild,v 1.11 2012/02/08 20:39:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.2-r1.ebuild,v 1.12 2012/05/05 08:54:02 mgorny Exp $
 
 EAPI=4
 inherit eutils flag-o-matic
@@ -32,7 +32,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	pulseaudio? ( media-sound/pulseaudio )
 	wavpack? ( media-sound/wavpack )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
 

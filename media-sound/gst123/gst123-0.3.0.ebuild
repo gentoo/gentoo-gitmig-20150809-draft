@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gst123/gst123-0.3.0.ebuild,v 1.1 2012/03/23 00:10:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gst123/gst123-0.3.0.ebuild,v 1.2 2012/05/05 08:27:50 mgorny Exp $
 
 EAPI=4
 
@@ -22,4 +22,4 @@ CDEPEND="dev-libs/glib
 RDEPEND="${CDEPEND}
 	media-plugins/gst-plugins-meta:0.10"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

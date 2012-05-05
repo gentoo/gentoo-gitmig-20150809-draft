@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/potamus-0.12.ebuild,v 1.2 2012/04/21 09:01:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/potamus-0.12.ebuild,v 1.3 2012/05/05 08:47:10 mgorny Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND="x11-libs/gtk+:2
 	media-libs/flac
 	media-sound/jack-audio-connection-kit"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	gnome2_src_prepare

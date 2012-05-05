@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/yoshimi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/ChangeLog,v 1.8 2012/02/15 04:48:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/ChangeLog,v 1.9 2012/05/05 08:55:49 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> yoshimi-0.060.10.ebuild,
+  yoshimi-0.060.12.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *yoshimi-0.060.12 (15 Feb 2012)
 

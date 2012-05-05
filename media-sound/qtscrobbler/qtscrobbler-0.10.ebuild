@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/qtscrobbler-0.10.ebuild,v 1.4 2010/11/04 10:48:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/qtscrobbler-0.10.ebuild,v 1.5 2012/05/05 08:47:47 mgorny Exp $
 
 EAPI=2
 inherit eutils qt4-r2 toolchain-funcs
@@ -21,7 +21,7 @@ RDEPEND="media-libs/libmtp
 	net-misc/curl
 	x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

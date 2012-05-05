@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-11.11.11.ebuild,v 1.3 2012/04/05 21:08:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-11.11.11.ebuild,v 1.4 2012/05/05 08:49:29 mgorny Exp $
 
 EAPI=4
 inherit autotools fdo-mime gnome2-utils multilib
@@ -26,7 +26,7 @@ RDEPEND="x11-libs/qt-gui:4
 	media-libs/libsamplerate[sndfile]
 	lirc? ( app-misc/lirc )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-misc/makedepend"
 
 src_prepare() {

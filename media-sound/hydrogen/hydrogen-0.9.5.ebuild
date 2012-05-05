@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.5.ebuild,v 1.5 2011/08/07 03:13:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.5.ebuild,v 1.6 2012/05/05 08:31:20 mgorny Exp $
 
 EAPI=4
 inherit eutils multilib flag-o-matic toolchain-funcs
@@ -24,7 +24,7 @@ RDEPEND="x11-libs/qt-gui:4 x11-libs/qt-core:4
 	lash? ( media-sound/lash )
 	portaudio? ( >=media-libs/portaudio-19_pre )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/scons"
 
 src_prepare() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.3.ebuild,v 1.5 2011/08/10 17:07:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.3.ebuild,v 1.6 2012/05/05 08:05:35 mgorny Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND="dev-cpp/gtkmm:2.4
 		media-sound/alsa-utils )
 	jack? ( media-sound/jack-audio-connection-kit )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
