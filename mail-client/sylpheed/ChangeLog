@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.302 2012/05/04 08:42:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.303 2012/05/05 11:15:18 hattya Exp $
+
+*sylpheed-3.1.4 (05 May 2012)
+
+  05 May 2012; Akinori Hattori <hattya@gentoo.org> +sylpheed-3.1.4.ebuild:
+  new upstream release. fixes bug #413611.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> sylpheed-2.6.0.ebuild,
   sylpheed-3.1.2.ebuild, sylpheed-3.1.3.ebuild:
