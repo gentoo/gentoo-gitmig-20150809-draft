@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.32.0-r2.ebuild,v 1.8 2012/04/16 16:53:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.32.0-r2.ebuild,v 1.9 2012/05/05 02:22:38 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.10 )
 	dev-util/gtk-doc-am
 	gnome-base/gnome-common"

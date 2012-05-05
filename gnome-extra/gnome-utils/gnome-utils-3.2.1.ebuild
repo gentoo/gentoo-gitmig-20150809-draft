@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.5 2012/04/16 17:32:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.6 2012/05/05 02:22:41 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -30,8 +30,11 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xextproto
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.9
-	doc? ( >=dev-util/gtk-doc-1.10 )"
+	virtual/pkgconfig
+	doc? ( >=dev-util/gtk-doc-1.10 )
+	dev-util/gtk-doc-am
+	gnome-base/gnome-common"
+# eautoreconf needs dev-util/gtk-doc-am, gnome-base/gnome-common
 
 # file collisions with g-c-c
 # nautilus is used via dbus
