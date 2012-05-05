@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.178 2012/05/03 18:02:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.179 2012/05/05 15:20:09 billie Exp $
+
+*conky-1.9.0 (05 May 2012)
+
+  05 May 2012; Daniel Pielmeier <billie@gentoo.org> +conky-1.9.0.ebuild:
+  Version bump.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> conky-1.8.1-r6.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
