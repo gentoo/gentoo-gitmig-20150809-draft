@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/nautilus-open-terminal-0.18.ebuild,v 1.6 2011/01/03 21:53:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/nautilus-open-terminal-0.18.ebuild,v 1.7 2012/05/05 06:25:16 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND="
 	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README TODO"

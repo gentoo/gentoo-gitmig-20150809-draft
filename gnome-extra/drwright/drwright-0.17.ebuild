@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.15 2011/03/23 07:59:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.16 2012/05/05 06:25:23 jdhore Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2.0.4:2
 
 DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto
-	>=dev-util/pkgconfig-0.12.0"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 

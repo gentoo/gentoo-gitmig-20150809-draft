@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.6 2012/03/15 15:46:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.7 2012/05/05 06:25:18 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -35,7 +35,7 @@ RDEPEND="
 	!gnome-extra/music-applet
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 "
 

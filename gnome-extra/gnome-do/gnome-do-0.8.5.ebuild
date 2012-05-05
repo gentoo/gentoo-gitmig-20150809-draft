@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.5.ebuild,v 1.2 2012/01/06 16:03:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.5.ebuild,v 1.3 2012/05/05 06:25:23 jdhore Exp $
 
 # TODO: GNOME Do defaults to a debug build; to disable, --enable-release must
 # be passed. However, when doing this the build fails; figure out why.
@@ -38,7 +38,7 @@ RDEPEND=">=dev-lang/mono-2.0
 	!<gnome-extra/gnome-do-plugins-0.8"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 

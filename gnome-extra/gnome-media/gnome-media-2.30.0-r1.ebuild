@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.30.0-r1.ebuild,v 1.12 2011/03/21 22:12:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.30.0-r1.ebuild,v 1.13 2012/05/05 06:25:24 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.18.2:2
 	>=media-plugins/gst-plugins-gconf-0.10.1:0.10"
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=app-text/scrollkeeper-0.3.11
 	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/intltool-0.35.0"

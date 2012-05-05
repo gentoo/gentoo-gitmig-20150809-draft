@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/office-runner/office-runner-0.0_pre20110916.ebuild,v 1.1 2011/10/23 23:41:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/office-runner/office-runner-0.0_pre20110916.ebuild,v 1.2 2012/05/05 06:25:19 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.102.ebuild,v 1.8 2012/04/25 20:29:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.102.ebuild,v 1.9 2012/05/05 06:25:18 jdhore Exp $
 
 # This ebuild is only for installing obsolete libpolkit-gtk-1 wrt #387663
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.28
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	!<gnome-extra/polkit-gnome-0.102"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.4.1.ebuild,v 1.1 2012/04/15 05:31:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.4.1.ebuild,v 1.2 2012/05/05 06:25:24 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -37,7 +37,7 @@ RDEPEND="
 	systemd? ( >=sys-apps/systemd-31 )
 "
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	sys-devel/gettext
 	doc? (

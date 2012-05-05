@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.0.ebuild,v 1.2 2012/04/25 16:16:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.0.ebuild,v 1.3 2012/05/05 06:25:16 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,7 +24,7 @@ RDEPEND="gnome-base/nautilus
 	x11-libs/libXinerama"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-python/docutils"
 
 DOCS="AUTHORS ChangeLog NEWS README"

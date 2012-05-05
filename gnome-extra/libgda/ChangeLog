@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.202 2012/04/29 18:50:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.203 2012/05/05 06:25:23 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libgda-4.2.11.ebuild,
+  libgda-4.2.12.ebuild, libgda-4.2.13.ebuild, libgda-5.0.3-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *libgda-4.2.13 (29 Apr 2012)
 

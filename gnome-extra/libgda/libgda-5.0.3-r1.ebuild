@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.5 2012/04/29 15:36:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.6 2012/05/05 06:25:23 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -44,7 +44,7 @@ RDEPEND="
 	>=dev-db/sqlite-3.6.22:3"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.18
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.5
 	>=app-text/gnome-doc-utils-0.9
 	doc? ( >=dev-util/gtk-doc-1 )

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.2.2.ebuild,v 1.2 2011/11/06 21:33:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.2.2.ebuild,v 1.3 2012/05/05 06:25:18 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/folks-0.6.1.1
 	x11-libs/libnotify
 	x11-libs/pango"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17"
 # Regenerating C from vala sources requires:

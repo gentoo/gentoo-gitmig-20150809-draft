@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r5.ebuild,v 1.6 2011/10/05 17:46:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r5.ebuild,v 1.7 2012/05/05 06:25:20 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -33,7 +33,7 @@ RDEPEND=">=gnome-base/gconf-2:2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	gnome-base/gnome-common"
 # If eautoreconf:
 #	gnome-base/gnome-common

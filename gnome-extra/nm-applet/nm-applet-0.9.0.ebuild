@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.0.ebuild,v 1.2 2012/03/05 15:13:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.0.ebuild,v 1.3 2012/05/05 06:25:17 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -33,7 +33,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	virtual/freedesktop-icon-theme"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.32.0.ebuild,v 1.5 2011/03/22 19:32:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.32.0.ebuild,v 1.6 2012/05/05 06:25:21 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -29,7 +29,7 @@ RDEPEND=">=x11-libs/gtk+-2.18:2
 	upnp? ( >=net-libs/gupnp-0.13.0 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 # Needed for eautoreconf

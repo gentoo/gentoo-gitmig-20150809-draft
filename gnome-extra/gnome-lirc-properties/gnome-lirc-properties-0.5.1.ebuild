@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.5.1.ebuild,v 1.4 2012/02/10 03:32:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-lirc-properties/gnome-lirc-properties-0.5.1.ebuild,v 1.5 2012/05/05 06:25:23 jdhore Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ RDEPEND=">=app-misc/lirc-0.8.4
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.35.0
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 # uses AC_PATH_PROG([lircd]), which is in /usr/sbin which is only in the path

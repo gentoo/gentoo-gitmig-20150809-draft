@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-chooser/gnome-color-chooser-0.2.5.ebuild,v 1.1 2011/02/23 00:51:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-chooser/gnome-color-chooser-0.2.5.ebuild,v 1.2 2012/05/05 06:25:19 jdhore Exp $
 
 EAPI=1
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-cpp/libglademm-2.6.0:2.4
 	>=dev-libs/libxml2-2.6.0"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	# Don't pass --enable/disable-assert since it has broken

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.6.ebuild,v 1.5 2012/01/29 16:45:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.6.ebuild,v 1.6 2012/05/05 06:25:17 jdhore Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ RDEPEND="
 	x11-themes/gnome-icon-theme"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_preinst() {
 	gnome2_icon_savelist

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/gnome-do-plugins-0.8.3.ebuild,v 1.1 2011/02/09 18:55:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/gnome-do-plugins-0.8.3.ebuild,v 1.2 2012/05/05 06:25:18 jdhore Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND=">=gnome-extra/gnome-do-${PV}
 		dev-dotnet/wnck-sharp
 		banshee? ( >=media-sound/banshee-1.4.2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# The build system doesn't properly disable this plugin, so remove

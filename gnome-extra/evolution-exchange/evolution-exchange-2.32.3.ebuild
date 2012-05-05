@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.32.3.ebuild,v 1.5 2011/10/30 16:20:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.32.3.ebuild,v 1.6 2012/05/05 06:25:21 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -30,7 +30,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 
 pkg_setup() {

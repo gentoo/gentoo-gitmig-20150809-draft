@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.11.1.ebuild,v 1.14 2011/03/23 08:16:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.11.1.ebuild,v 1.15 2012/05/05 06:25:21 jdhore Exp $
 
 EAPI="1"
 
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.13.0:2
 	>=dev-libs/libxml2-2.4.16:2
 	test? ( >=gnome-base/gnome-vfs-2:2 )"
 DEPEND="${RDEPEND}
-	 >=dev-util/pkgconfig-0.12.0"
+	 virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO docs/IDEAS"
 

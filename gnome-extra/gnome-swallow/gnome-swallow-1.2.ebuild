@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/gnome-swallow-1.2.ebuild,v 1.10 2011/03/23 08:11:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/gnome-swallow-1.2.ebuild,v 1.11 2012/05/05 06:25:24 jdhore Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=x11-libs/gtk+-2.2.1:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"

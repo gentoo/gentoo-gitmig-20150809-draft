@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.9 2012/04/01 17:44:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.10 2012/05/05 06:25:24 jdhore Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ RDEPEND=">=gnome-base/gconf-2.6.1:2
 	x11-libs/libXxf86misc
 	x11-libs/libXxf86vm"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 	doc? (
 		app-text/xmlto

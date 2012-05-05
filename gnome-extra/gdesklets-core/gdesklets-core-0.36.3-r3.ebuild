@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r3.ebuild,v 1.11 2012/02/10 03:36:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r3.ebuild,v 1.12 2012/05/05 06:25:21 jdhore Exp $
 
 EAPI=3
 # desklets don't run with USE=debug
@@ -39,7 +39,7 @@ RDEPEND=">=dev-libs/glib-2.4
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"

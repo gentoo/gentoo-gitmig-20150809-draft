@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.9 2012/03/27 18:32:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.10 2012/05/05 06:25:22 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -37,7 +37,7 @@ RDEPEND="
 	) )"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.12
+	virtual/pkgconfig
 	>=app-text/scrollkeeper-0.3.14
 	>=app-text/gnome-doc-utils-0.3.2
 	dev-util/intltool"

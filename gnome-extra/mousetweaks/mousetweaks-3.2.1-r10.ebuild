@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-3.2.1-r10.ebuild,v 1.1 2011/12/02 22:41:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-3.2.1-r10.ebuild,v 1.2 2012/05/05 06:25:17 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,7 +29,7 @@ RDEPEND="
 #		<gnome-base/gnome-panel-2.90 )
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.17"
+	virtual/pkgconfig"
 # eautoreconf needs:
 #	gnome-base/gnome-common
 

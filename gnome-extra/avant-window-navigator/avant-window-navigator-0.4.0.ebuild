@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.3 2012/01/15 14:04:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.4 2012/05/05 06:25:24 jdhore Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.80
 	gconf? ( >=gnome-base/gconf-2 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	x11-proto/xproto
 	!<gnome-extra/avant-window-navigator-extras-${PV}

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.153 2012/02/10 03:38:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.154 2012/05/05 06:25:17 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> deskbar-applet-2.32.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> deskbar-applet-2.32.0.ebuild:
   Changing python deps in preparation for 2.4 removal

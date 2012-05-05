@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/gpointing-device-settings-1.5.1-r2.ebuild,v 1.6 2012/03/03 16:04:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/gpointing-device-settings-1.5.1-r2.ebuild,v 1.7 2012/05/05 06:25:18 jdhore Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	!<=x11-base/xorg-server-1.6.0
 	!gnome-extra/gsynaptics"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.5"
 
 DOCS="MAINTAINERS NEWS TODO"

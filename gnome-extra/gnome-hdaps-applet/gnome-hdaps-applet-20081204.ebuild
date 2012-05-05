@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-hdaps-applet/gnome-hdaps-applet-20081204.ebuild,v 1.3 2011/09/22 19:21:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-hdaps-applet/gnome-hdaps-applet-20081204.ebuild,v 1.4 2012/05/05 06:25:16 jdhore Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE=""
 COMMON_DEPEND="|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	x11-libs/gtk+:2"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	app-laptop/hdapsd"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-0.2.1.ebuild,v 1.2 2012/02/14 05:00:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-0.2.1.ebuild,v 1.3 2012/05/05 06:25:22 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -37,7 +37,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
-	>=dev-util/pkgconfig-0.22
+	virtual/pkgconfig
 	>=sys-devel/gettext-0.17"
 
 pkg_setup() {

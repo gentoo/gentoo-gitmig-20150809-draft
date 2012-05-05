@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.1.ebuild,v 1.7 2011/07/12 11:26:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.1.ebuild,v 1.8 2012/05/05 06:25:16 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.8:2
 	>=dev-cpp/gnome-vfsmm-2.6"
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"

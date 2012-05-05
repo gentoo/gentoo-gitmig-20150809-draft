@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.4.ebuild,v 1.1 2012/03/15 06:05:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.4.ebuild,v 1.2 2012/05/05 06:25:20 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -106,7 +106,7 @@ RDEPEND="${COMMON_DEPEND}
 		sys-libs/timezone-data )"
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gettext-0.17
-	>=dev-util/pkgconfig-0.22
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40
 	gnome-base/gnome-common
 	!!=dev-lang/spidermonkey-1.8.2*"

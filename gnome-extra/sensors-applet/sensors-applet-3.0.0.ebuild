@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-3.0.0.ebuild,v 1.4 2012/03/27 18:32:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-3.0.0.ebuild,v 1.5 2012/05/05 06:25:22 jdhore Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -32,7 +32,7 @@ DEPEND="${CDEPEND}
 	app-text/gnome-doc-utils
 	app-text/rarian
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	G2CONF="--disable-static

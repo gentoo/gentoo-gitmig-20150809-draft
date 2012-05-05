@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.105.ebuild,v 1.7 2012/03/25 17:49:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.105.ebuild,v 1.8 2012/05/05 06:25:18 jdhore Exp $
 
 EAPI=4
 inherit gnome.org
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.30
 	!lxde-base/lxpolkit"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( AUTHORS HACKING NEWS README TODO )

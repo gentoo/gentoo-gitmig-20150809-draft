@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.2 2012/04/24 05:35:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.3 2012/05/05 06:25:17 jdhore Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ RDEPEND="
 		)"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.2.8.2-underlinking.patch

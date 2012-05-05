@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.32.0.ebuild,v 1.11 2012/02/10 03:38:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.32.0.ebuild,v 1.12 2012/05/05 06:25:17 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-text/docbook-xml-dtd:4.2"
 
 pkg_setup() {

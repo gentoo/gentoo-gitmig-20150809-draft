@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.12 2012/03/17 06:16:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.13 2012/05/05 06:25:20 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -51,7 +51,7 @@ RDEPEND="
 	!games-board/glchess"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.15
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40.4
 	>=sys-devel/gettext-0.10.40
 	>=sys-devel/libtool-2

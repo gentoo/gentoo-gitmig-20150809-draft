@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-2.32.0.ebuild,v 1.7 2011/03/22 19:27:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-2.32.0.ebuild,v 1.8 2012/05/05 06:25:23 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ IUSE="test"
 RDEPEND=""
 DEPEND="app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.5.6
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	test? (
 		~app-text/docbook-xml-dtd-4.1.2
 		~app-text/docbook-xml-dtd-4.3 )"

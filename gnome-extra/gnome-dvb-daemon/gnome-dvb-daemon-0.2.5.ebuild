@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.5.ebuild,v 1.2 2011/12/29 17:44:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.5.ebuild,v 1.3 2012/05/05 06:25:17 jdhore Exp $
 
 EAPI="3"
 
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.28.5
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
 	>=dev-util/intltool-0.40.0
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.18.1 )
 	>=sys-devel/libtool-2.2.6"
 

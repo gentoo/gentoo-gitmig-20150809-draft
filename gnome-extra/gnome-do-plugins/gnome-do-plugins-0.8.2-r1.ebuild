@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/gnome-do-plugins-0.8.2-r1.ebuild,v 1.2 2010/11/29 19:50:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/gnome-do-plugins-0.8.2-r1.ebuild,v 1.3 2012/05/05 06:25:18 jdhore Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RDEPEND=">=gnome-extra/gnome-do-${PV}
 		banshee? ( >=media-sound/banshee-1.4.2 )
 		evo? ( dev-dotnet/evolution-sharp )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Filed upstream as https://bugs.launchpad.net/do/+bug/392422

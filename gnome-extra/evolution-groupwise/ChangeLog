@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-groupwise
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-groupwise/ChangeLog,v 1.2 2012/01/20 23:28:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-groupwise/ChangeLog,v 1.3 2012/05/05 06:25:19 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  evolution-groupwise-3.2.1.ebuild, evolution-groupwise-3.2.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *evolution-groupwise-3.2.3 (20 Jan 2012)
 

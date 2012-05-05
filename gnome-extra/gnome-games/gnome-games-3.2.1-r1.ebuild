@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1-r1.ebuild,v 1.3 2012/02/10 03:33:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1-r1.ebuild,v 1.4 2012/05/05 06:25:20 jdhore Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -63,7 +63,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<gnome-extra/gnome-games-extra-data-3.0.0"
 DEPEND="${COMMON_DEPEND}
 	glchess? ( >=dev-lang/vala-0.13.0:0.14 )
-	>=dev-util/pkgconfig-0.15
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40.4
 	>=sys-devel/gettext-0.10.40
 	>=gnome-base/gnome-common-2.12.0

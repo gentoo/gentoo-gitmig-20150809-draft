@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.30.2-r1.ebuild,v 1.15 2012/01/04 23:30:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.30.2-r1.ebuild,v 1.16 2012/05/05 06:25:20 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -60,7 +60,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=media-libs/clutter-gtk-0.10.2:0.10[introspection] )"
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/autoconf-2.53
-	>=dev-util/pkgconfig-0.15
+	virtual/pkgconfig
 	>=dev-util/intltool-0.40.4
 	>=sys-devel/gettext-0.10.40
 	>=gnome-base/gnome-common-2.12.0

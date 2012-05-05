@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.2.1.ebuild,v 1.3 2012/01/15 14:06:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.2.1.ebuild,v 1.4 2012/05/05 06:25:16 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 

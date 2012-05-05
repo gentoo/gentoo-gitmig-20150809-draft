@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.2.2.ebuild,v 1.2 2011/12/12 19:56:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.2.2.ebuild,v 1.3 2012/05/05 06:25:16 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -34,7 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-libs/pango[introspection]"
 DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.22
+	virtual/pkgconfig
 	>=dev-util/intltool-0.26
 	gnome-base/gnome-common"
 

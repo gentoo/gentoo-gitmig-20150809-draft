@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r1.ebuild,v 1.8 2011/12/07 07:33:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r1.ebuild,v 1.9 2012/05/05 06:25:24 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -42,7 +42,7 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 "
 DEPEND="${RDEPEND}
 	dev-util/gperf
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35.5
 	sys-devel/bison
 	>=gnome-base/gnome-common-2

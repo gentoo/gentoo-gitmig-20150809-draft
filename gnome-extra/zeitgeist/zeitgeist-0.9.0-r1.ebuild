@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.0-r1.ebuild,v 1.1 2012/04/26 13:34:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.0-r1.ebuild,v 1.2 2012/05/05 06:25:21 jdhore Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ RDEPEND="
 	plugins? ( gnome-extra/zeitgeist-datasources )
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-gobject.patch

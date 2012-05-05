@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/libgail-gnome-1.20.4.ebuild,v 1.7 2011/10/16 17:59:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/libgail-gnome-1.20.4.ebuild,v 1.8 2012/05/05 06:25:19 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -24,6 +24,6 @@ RDEPEND=">=dev-libs/atk-1.7.2
 	>=gnome-base/gconf-2:2
 	>=gnome-extra/at-spi-0.10:1"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"

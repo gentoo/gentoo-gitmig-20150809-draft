@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/wp_tray-0.5.5.ebuild,v 1.8 2011/08/04 10:42:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/wp_tray-0.5.5.ebuild,v 1.9 2012/05/05 06:25:20 jdhore Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -23,7 +23,7 @@ RDEPEND="|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	dev-cpp/libxmlpp
 	x11-libs/libnotify"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-libs/boost"
 
 pkg_setup() {

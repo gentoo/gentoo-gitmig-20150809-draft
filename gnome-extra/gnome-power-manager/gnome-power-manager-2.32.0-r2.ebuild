@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0-r2.ebuild,v 1.6 2012/01/02 00:51:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0-r2.ebuild,v 1.7 2012/05/05 06:25:24 jdhore Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -48,7 +48,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	app-text/scrollkeeper
 	app-text/docbook-xml-dtd:4.3
-	>=dev-util/pkgconfig-0.9
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2
 	doc? (
