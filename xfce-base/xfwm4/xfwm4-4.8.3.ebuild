@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.8.3.ebuild,v 1.8 2012/04/22 18:25:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.8.3.ebuild,v 1.9 2012/05/05 09:15:01 jdhore Exp $
 
 EAPI=4
 inherit xfconf
@@ -35,8 +35,8 @@ RDEPEND=">=dev-libs/glib-2.10:2
 		)"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(
