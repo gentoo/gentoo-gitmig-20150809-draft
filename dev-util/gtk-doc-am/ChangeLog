@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.77 2012/04/26 14:09:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.78 2012/05/05 09:51:53 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk-doc-am-1.17.ebuild,
+  gtk-doc-am-1.18.ebuild:
+  THE FINAL dev-util/pkgconfig -> virtual/pkgconfig
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gtk-doc-am-1.18.ebuild:
   keyword ~amd64-fbsd
