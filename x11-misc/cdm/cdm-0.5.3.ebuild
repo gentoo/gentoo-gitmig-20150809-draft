@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cdm/cdm-0.5.3.ebuild,v 1.1 2012/05/05 10:15:47 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cdm/cdm-0.5.3.ebuild,v 1.2 2012/05/05 11:45:41 gienah Exp $
 
 EAPI="4"
 
-inherit base eutils
+inherit base pam eutils
 
 DESCRIPTION="The Console Display Manager"
 HOMEPAGE="https://wiki.archlinux.org/index.php/CDM"
@@ -13,19 +13,34 @@ SRC_URI="http://dev.gentoo.org/~gienah/snapshots/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="pam consolekit"
+REQUIRED_USE="consolekit? ( pam )"
 
 DEPEND="app-shells/bash"
 
 RDEPEND="${DEPEND}
 	dev-util/dialog
 	x11-apps/xdpyinfo
-	x11-apps/xinit"
+	x11-apps/xinit
+	consolekit? ( sys-auth/consolekit
+		sys-apps/dbus )
+	pam? ( virtual/pam )"
 
 PATCHES=("${FILESDIR}/${PN}-0.5.3-invalid-MIT-cookie.patch")
 
-src_install()
-{
+src_prepare() {
+	base_src_prepare
+	if ! use consolekit; then
+		sed -e 's@consolekit=yes@consolekit=no@' \
+			-i "${S}/src/cdmrc" || die "Could not turn off consolekit in cdmrc"
+	fi
+}
+
+src_install() {
+	if use pam ; then
+		pamd_mimic system-local-login cdm auth account session
+	fi
+
 	insinto /usr/bin/
 	insopts -m0755
 	dobin src/${PN}
@@ -49,8 +64,7 @@ src_install()
 	dodoc CHANGELOG
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	einfo "In order to use CDM you must first edit your /etc/cdmrc"
 	einfo "At least these should be edited before you start using CDM:"
 	einfo "wmbinlist=(awesome openbox-session startkde startxfce4 gnome-session)"
