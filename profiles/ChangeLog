@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6501 2012/05/05 15:09:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6502 2012/05/05 15:31:33 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 May 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Mask =x11-libs/qt-sql-4.8.1-r1 with oracle db support.
 
   05 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   desc/libreoffice_extensions.desc:
