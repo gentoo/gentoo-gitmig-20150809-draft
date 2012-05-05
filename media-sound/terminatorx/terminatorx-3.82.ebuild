@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.18 2011/03/29 08:02:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.19 2012/05/05 09:02:12 mgorny Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	app-text/scrollkeeper
 	media-libs/liblrdf"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xproto
 	x11-proto/inputproto
 	x11-proto/xf86dgaproto"

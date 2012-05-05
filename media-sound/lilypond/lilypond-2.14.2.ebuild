@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.14.2.ebuild,v 1.3 2012/03/13 18:45:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.14.2.ebuild,v 1.4 2012/05/05 09:02:08 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	app-text/t1utils
 	dev-lang/perl
 	dev-texlive/texlive-metapost
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	media-gfx/fontforge
 	>=sys-apps/texinfo-4.11
 	>=sys-devel/bison-2.0

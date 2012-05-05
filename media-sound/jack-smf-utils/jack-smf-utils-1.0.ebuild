@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-smf-utils/jack-smf-utils-1.0.ebuild,v 1.3 2008/07/24 18:59:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-smf-utils/jack-smf-utils-1.0.ebuild,v 1.4 2012/05/05 09:02:02 mgorny Exp $
 
 DESCRIPTION="Utilities for MIDI streams and files using Jack MIDI"
 HOMEPAGE="http://pin.if.uz.zgora.pl/~trasz/jack-smf-utils/"
@@ -16,7 +16,7 @@ RDEPEND="readline? ( sys-libs/readline )
 	>=media-sound/jack-audio-connection-kit-0.102
 	lash? ( media-sound/lash )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf $(use_with readline) \

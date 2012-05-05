@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/modplugtools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugtools/ChangeLog,v 1.5 2011/04/19 18:57:14 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugtools/ChangeLog,v 1.6 2012/05/05 09:02:04 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> modplugtools-0.5.1.ebuild,
+  modplugtools-0.5.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *modplugtools-0.5.3 (19 Apr 2011)
 

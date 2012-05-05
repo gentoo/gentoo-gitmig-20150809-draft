@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/spek-0.7.ebuild,v 1.1 2011/04/25 19:06:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/spek-0.7.ebuild,v 1.2 2012/05/05 09:01:45 mgorny Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/glib
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.10
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 src_install() {

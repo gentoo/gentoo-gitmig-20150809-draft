@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5-r1.ebuild,v 1.1 2011/09/14 11:17:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5-r1.ebuild,v 1.2 2012/05/05 09:02:05 mgorny Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6"
@@ -31,7 +31,7 @@ RDEPEND="dev-python/dbus-python
 DEPEND="${RDEPEND}
 	app-text/docbook2X
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext
 	!media-radio/ax25-apps"
 

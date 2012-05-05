@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-11.8.16.ebuild,v 1.6 2012/03/07 19:54:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-11.8.16.ebuild,v 1.7 2012/05/05 09:02:18 mgorny Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -26,7 +26,7 @@ RDEPEND="dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.12
 	>=dev-util/gob-2.0.17
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
 

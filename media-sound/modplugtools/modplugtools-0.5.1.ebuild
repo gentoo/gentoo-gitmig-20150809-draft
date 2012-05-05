@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugtools/modplugtools-0.5.1.ebuild,v 1.3 2010/08/22 12:53:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugtools/modplugtools-0.5.1.ebuild,v 1.4 2012/05/05 09:02:06 mgorny Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND=">=media-libs/libao-0.8.0
 	>=media-libs/libmodplug-0.8.8.1
 	!media-sound/modplugplay"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die

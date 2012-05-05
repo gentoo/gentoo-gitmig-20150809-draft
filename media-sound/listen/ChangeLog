@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/listen
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.31 2011/09/14 11:17:52 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.32 2012/05/05 09:02:05 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> listen-0.6.5-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *listen-0.6.5-r1 (14 Sep 2011)
 
