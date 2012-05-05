@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Variable-Magic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.43 2012/04/04 08:22:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.44 2012/05/05 22:03:22 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> Variable-Magic-0.470.0.ebuild:
+  Marking Variable-Magic-0.470.0 ppc for bug 404695
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> Variable-Magic-0.470.0.ebuild:
   marked x86 per bug 404695
