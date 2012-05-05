@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/yaboot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.40 2012/05/02 06:20:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.41 2012/05/05 12:38:15 josejx Exp $
+
+  05 May 2012; Joseph Jezak <josejx@gentoo.org> files/yaboot-stubfuncs.patch:
+  Update the stub functions to work with e2fsprogs-1.42.0.
 
   02 May 2012; Joseph Jezak <josejx@gentoo.org> yaboot-1.3.17-r1.ebuild:
   Change to EAPI-2, move the patching to src_prepare, add e2fsprogs static-libs

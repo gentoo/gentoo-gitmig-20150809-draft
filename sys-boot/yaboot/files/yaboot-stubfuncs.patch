@@ -1,8 +1,8 @@
 diff --git a/lib/malloc.c b/lib/malloc.c
-index 0121112..d077630 100644
+index 0121112..e6b29c4 100644
 --- a/lib/malloc.c
 +++ b/lib/malloc.c
-@@ -64,6 +64,17 @@ void *malloc (unsigned int size)
+@@ -64,6 +64,15 @@ void *malloc (unsigned int size)
      return caddr;
  }
  
@@ -15,20 +15,19 @@ index 0121112..d077630 100644
 +	return caddr;
 +}
 +
-+
-+
  /* Do not fall back to the malloc above as posix_memalign is needed by
   * external libraries not yaboot */
  int posix_memalign(void **memptr, size_t alignment, size_t size)
 diff --git a/lib/nonstd.c b/lib/nonstd.c
-index 5aeb0cb..0a13246 100644
+index 5aeb0cb..b536180 100644
 --- a/lib/nonstd.c
 +++ b/lib/nonstd.c
-@@ -65,3 +65,131 @@ char *getenv(const char *name)
+@@ -65,3 +65,147 @@ char *getenv(const char *name)
  {
  	return NULL;
  }
 +
++// I tried to use prom functions for these...
 +int open(const char *pathname, int flags) {
 +	return (int) prom_open((char *)pathname);
 +}
@@ -39,14 +38,6 @@ index 5aeb0cb..0a13246 100644
 +
 +int __open64_2 (__const char *__path, int __oflag) {
 +	return (int) prom_open((char *)__path);
-+}
-+
-+int __xstat64 (int __ver, const char *__filename, struct stat64 *__stat_buf) {
-+	return 0;
-+}
-+
-+int __fxstat64 (int __ver, int __filedesc, struct stat64 *__stat_buf) {
-+	return 0;
 +}
 +
 +int read(int fd, void *buf, size_t count) {
@@ -60,6 +51,7 @@ index 5aeb0cb..0a13246 100644
 +
 +void exit(int status) {
 +	prom_exit();
++	return;
 +}
 +
 +int __printf_chk(int flag, const char *format, ...) {
@@ -94,13 +86,36 @@ index 5aeb0cb..0a13246 100644
 +	return memcpy(dest, src, n);
 +}
 +
++// But these are all dummy functions
++int __xstat64 (int __ver, const char *__filename, void *__stat_buf) {
++	return 0;
++}
 +
-+// Dummy functions
++int stat64(const char *path, void *stat_buf) {
++	return 0;
++}
++
++int fstat64(int fildes, void *stat_buf) {
++	return 0;
++}
++
++int __fxstat64 (int __ver, int __filedesc, void *__stat_buf) {
++	return 0;
++}
++
 +signed int random(void) {
 +	return 0;
 +}
 +
 +void srandom(unsigned int seed) {
++	return;
++}
++
++int rand(void) {
++	return 0;
++}
++
++void srand(unsigned int seed) {
 +	return;
 +}
 +
@@ -148,7 +163,6 @@ index 5aeb0cb..0a13246 100644
 +	return prom_lseek ((void *)fd, whence + offset);
 +}
 +
-+// Stubbed ...
 +size_t fwrite(const void *ptr, size_t size, size_t nmemb, void *stream) {
 +	return 0;
 +}
