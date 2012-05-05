@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.24 2012/05/05 11:30:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.25 2012/05/05 11:33:43 hwoarang Exp $
+
+  05 May 2012; Markos Chandras <hwoarang@gentoo.org> trayer-1.0-r1.ebuild:
+  Stable on amd64 wrt bug #414305
 
   05 May 2012; Markos Chandras <hwoarang@gentoo.org> trayer-1.0-r1.ebuild:
   Stable on amd64 wrt bug #414305
