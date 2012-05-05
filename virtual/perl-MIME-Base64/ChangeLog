@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-MIME-Base64
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/ChangeLog,v 1.47 2011/12/10 15:39:42 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/ChangeLog,v 1.48 2012/05/05 23:22:21 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-MIME-Base64-3.130.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
   10 Dec 2011; Fabian Groffen <grobian@gentoo.org>
   perl-MIME-Base64-3.130.0-r1.ebuild:
