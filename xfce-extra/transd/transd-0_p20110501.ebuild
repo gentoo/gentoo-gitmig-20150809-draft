@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20110501.ebuild,v 1.4 2011/10/16 05:24:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20110501.ebuild,v 1.5 2012/05/05 07:06:31 mgorny Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libX11
 	>=xfce-base/libxfcegui4-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS=( AUTHORS README TODO )

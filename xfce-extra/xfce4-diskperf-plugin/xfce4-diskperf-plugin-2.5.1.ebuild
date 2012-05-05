@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/xfce4-diskperf-plugin-2.5.1.ebuild,v 1.1 2012/04/14 07:30:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/xfce4-diskperf-plugin-2.5.1.ebuild,v 1.2 2012/05/05 07:10:41 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -18,7 +18,7 @@ RDEPEND=">=xfce-base/libxfce4ui-4.8
 	>=xfce-base/xfce4-panel-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

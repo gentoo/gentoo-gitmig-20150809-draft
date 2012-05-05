@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-quicklauncher-plugin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/ChangeLog,v 1.10 2010/08/29 18:06:30 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/ChangeLog,v 1.11 2012/05/05 07:20:03 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org>
+  xfce4-quicklauncher-plugin-1.9.4-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   xfce4-quicklauncher-plugin-1.9.4-r1.ebuild:

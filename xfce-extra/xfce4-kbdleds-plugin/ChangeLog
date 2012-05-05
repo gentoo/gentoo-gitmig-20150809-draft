@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-kbdleds-plugin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-kbdleds-plugin/ChangeLog,v 1.1 2011/10/22 14:58:43 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-kbdleds-plugin/ChangeLog,v 1.2 2012/05/05 07:13:42 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org>
+  xfce4-kbdleds-plugin-0.0.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *xfce4-kbdleds-plugin-0.0.6 (22 Oct 2011)
 

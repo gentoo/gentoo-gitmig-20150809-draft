@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.8.0.ebuild,v 1.12 2012/03/22 06:52:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.8.0.ebuild,v 1.13 2012/05/05 07:17:27 mgorny Exp $
 
 EAPI=4
 inherit multilib xfconf
@@ -28,7 +28,7 @@ RDEPEND="${COMMON_DEPEND}
 	!alsa? ( !oss? ( =media-plugins/gst-plugins-meta-0.10* ) )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(

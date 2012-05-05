@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/xfce4-timer-plugin-0.6.3.ebuild,v 1.5 2012/02/13 22:05:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/xfce4-timer-plugin-0.6.3.ebuild,v 1.6 2012/05/05 07:25:41 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -18,7 +18,7 @@ RDEPEND=">=xfce-base/xfce4-panel-4.8
 	>=xfce-base/libxfcegui4-4.8
 	>=xfce-base/libxfce4util-4.8"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 pkg_setup() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.8.ebuild,v 1.1 2012/04/07 01:38:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.8.ebuild,v 1.2 2012/05/05 07:13:48 mgorny Exp $
 
 EAPI=4
 inherit linux-info xfconf
@@ -22,7 +22,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=app-laptop/hdapsd-20081213
 	>=app-laptop/tp_smapi-0.39"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 

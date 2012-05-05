@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/xfce4-mpc-plugin-0.3.6.ebuild,v 1.5 2011/05/19 20:26:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/xfce4-mpc-plugin-0.3.6.ebuild,v 1.6 2012/05/05 07:17:18 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -19,7 +19,7 @@ RDEPEND=">=xfce-base/exo-0.6
 	>=xfce-base/xfce4-panel-4.8
 	libmpd? ( media-libs/libmpd )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool"
 
 pkg_setup() {

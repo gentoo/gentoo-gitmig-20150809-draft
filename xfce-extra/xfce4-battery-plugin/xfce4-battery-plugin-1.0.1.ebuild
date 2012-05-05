@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/xfce4-battery-plugin-1.0.1.ebuild,v 1.1 2012/04/17 18:16:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/xfce4-battery-plugin-1.0.1.ebuild,v 1.2 2012/05/05 07:11:16 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.24
 	>=xfce-base/xfce4-panel-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(

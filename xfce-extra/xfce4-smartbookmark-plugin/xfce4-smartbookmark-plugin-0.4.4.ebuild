@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/xfce4-smartbookmark-plugin-0.4.4.ebuild,v 1.6 2012/04/02 11:57:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/xfce4-smartbookmark-plugin-0.4.4.ebuild,v 1.7 2012/05/05 07:26:09 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -22,7 +22,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=xfce-base/xfce-utils-4.8"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

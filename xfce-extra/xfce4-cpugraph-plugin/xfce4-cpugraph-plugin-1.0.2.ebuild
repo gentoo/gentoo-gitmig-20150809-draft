@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph-plugin/xfce4-cpugraph-plugin-1.0.2.ebuild,v 1.1 2012/04/30 20:11:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph-plugin/xfce4-cpugraph-plugin-1.0.2.ebuild,v 1.2 2012/05/05 07:11:12 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	>=xfce-base/xfce4-panel-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

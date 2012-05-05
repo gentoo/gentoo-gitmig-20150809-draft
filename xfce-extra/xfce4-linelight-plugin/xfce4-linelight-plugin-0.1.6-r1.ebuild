@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-linelight-plugin/xfce4-linelight-plugin-0.1.6-r1.ebuild,v 1.6 2012/04/20 11:26:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-linelight-plugin/xfce4-linelight-plugin-0.1.6-r1.ebuild,v 1.7 2012/05/05 07:15:58 mgorny Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=xfce-base/xfce4-panel-4.8
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/mlocate"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

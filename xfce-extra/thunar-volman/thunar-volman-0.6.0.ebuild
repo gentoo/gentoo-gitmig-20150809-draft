@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.6.0.ebuild,v 1.8 2011/06/07 09:10:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.6.0.ebuild,v 1.9 2012/05/05 07:06:33 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -25,7 +25,7 @@ COMMON_DEPEND=">=xfce-base/exo-0.6
 RDEPEND="${COMMON_DEPEND}
 	>=xfce-base/thunar-1.2[udev]"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 

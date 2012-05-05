@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/xfce4-screenshooter-1.8.0.ebuild,v 1.10 2012/04/09 18:34:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/xfce4-screenshooter-1.8.0.ebuild,v 1.11 2012/05/05 07:26:15 mgorny Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=xfce-base/libxfce4ui-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${P}-underlinking.patch )

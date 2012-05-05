@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-soundmenu-plugin/xfce4-soundmenu-plugin-0.4.1.ebuild,v 1.1 2012/03/15 03:49:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-soundmenu-plugin/xfce4-soundmenu-plugin-0.4.1.ebuild,v 1.2 2012/05/05 07:26:00 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	lastfm? ( >=media-libs/libclastfm-0.4_p2012 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

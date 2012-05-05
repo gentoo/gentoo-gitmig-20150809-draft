@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-systemload-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/ChangeLog,v 1.19 2012/04/19 15:27:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/ChangeLog,v 1.20 2012/05/05 07:25:49 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org>
+  xfce4-systemload-plugin-1.0.0.ebuild, xfce4-systemload-plugin-1.1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Apr 2012; Jeroen Roovers <jer@gentoo.org>
   xfce4-systemload-plugin-1.1.0.ebuild:
