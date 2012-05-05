@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.25 2012/03/24 12:02:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.26 2012/05/05 11:10:37 xmw Exp $
+
+  05 May 2012; Michael Weber <xmw@gentoo.org> sqliteodbc-0.93.ebuild:
+  Add ~arm keyword, requested by Anton Romanov (bug 409433)
 
 *sqliteodbc-0.93 (24 Mar 2012)
 
