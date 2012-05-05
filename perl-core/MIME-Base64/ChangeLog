@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/MIME-Base64
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.35 2012/04/22 06:20:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/ChangeLog,v 1.36 2012/05/05 23:19:04 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> MIME-Base64-3.130.0.ebuild:
+  keyword ~amd64-fbsd
 
   22 Apr 2012; Torsten Veller <tove@gentoo.org> MIME-Base64-3.130.0.ebuild:
   Add ~m68k to keep repoman quiet (#317869)

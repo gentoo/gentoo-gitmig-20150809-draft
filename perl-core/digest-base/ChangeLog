@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/digest-base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.49 2011/10/20 19:38:53 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.50 2012/05/05 23:23:29 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> digest-base-1.170.0.ebuild:
+  keyword ~amd64-fbsd
 
 *digest-base-1.170.0 (20 Oct 2011)
 

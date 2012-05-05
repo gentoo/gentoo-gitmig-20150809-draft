@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-MD5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.47 2012/03/07 22:03:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.48 2012/05/05 23:25:25 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> Digest-MD5-2.510.0.ebuild:
+  keyword ~amd64-fbsd
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> Digest-MD5-2.510.0.ebuild:
   Marking Digest-MD5-2.510.0 ppc64 for bug 392845

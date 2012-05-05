@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.61 2012/03/18 18:32:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.62 2012/05/05 23:29:27 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> Time-Local-1.200.0.ebuild:
+  keyword ~amd64-fbsd
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> Time-Local-1.200.0.ebuild:
   ia64/m68k/s390/sh/sparc/x86 stable wrt #397199
