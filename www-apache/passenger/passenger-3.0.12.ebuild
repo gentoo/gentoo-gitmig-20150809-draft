@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-3.0.12.ebuild,v 1.2 2012/04/27 10:50:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-3.0.12.ebuild,v 1.3 2012/05/05 06:25:29 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
@@ -31,7 +31,7 @@ DEPEND="${DEPEND} ${CDEPEND}
 APACHE2_MOD_CONF="30_mod_${PN}-2.0.1 30_mod_${PN}"
 APACHE2_MOD_DEFINE="PASSENGER"
 
-REQUIRED_USE+="ruby_targets_ruby18? ( !ruby_targets_ruby19 )
+REQUIRED_USE+=" ruby_targets_ruby18? ( !ruby_targets_ruby19 )
 	ruby_targets_ruby19? ( !ruby_targets_ruby18 )"
 
 need_apache2_2
