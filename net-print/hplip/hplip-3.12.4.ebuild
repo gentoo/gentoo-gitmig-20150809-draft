@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.3 2012/05/03 07:22:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.4 2012/05/05 15:48:13 billie Exp $
 
 EAPI=4
 
@@ -108,10 +108,6 @@ src_prepare() {
 	# Browser detection through xdg-open
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/482674
 	epatch "${FILESDIR}"/${PN}-3.9.10-browser.patch
-
-	# Use cups-config when checking for cupsddk
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483136
-	epatch "${FILESDIR}"/${P}-cupsddk.patch
 
 	# Htmldocs are not installed under docdir/html so enable htmldir configure
 	# switch
@@ -256,6 +252,8 @@ pkg_postinst() {
 	elog "For more information on setting up your printer please take"
 	elog "a look at the hplip section of the gentoo printing guide:"
 	elog "http://www.gentoo.org/doc/en/printing-howto.xml"
+	elog
+	elog "Any user who want to print must be in the lp group."
 }
 
 pkg_postrm() {

@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.222 2012/05/03 07:22:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.223 2012/05/05 15:48:13 billie Exp $
+
+  05 May 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.4.ebuild:
+  Drop cupsddk patch. It should not matter anymore as cupsddk has been dropped
+  from the tree. This should also fix part of bug #414195 where hp-check fails.
+  Add an elog message about users who must be in the lp group to print. This
+  fixes bug #414215.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> hplip-3.11.10.ebuild,
   hplip-3.12.2-r2.ebuild, hplip-3.12.4.ebuild:
