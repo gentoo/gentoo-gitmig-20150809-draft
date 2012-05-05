@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.2-r2.ebuild,v 1.3 2012/05/03 07:22:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.2-r2.ebuild,v 1.4 2012/05/05 15:50:38 billie Exp $
 
 EAPI=4
 
@@ -259,6 +259,8 @@ pkg_postinst() {
 	elog "For more information on setting up your printer please take"
 	elog "a look at the hplip section of the gentoo printing guide:"
 	elog "http://www.gentoo.org/doc/en/printing-howto.xml"
+	elog
+	elog "Any user who want to print must be in the lp group."
 }
 
 pkg_postrm() {

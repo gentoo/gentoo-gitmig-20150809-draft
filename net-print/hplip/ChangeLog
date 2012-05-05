@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.223 2012/05/05 15:48:13 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.224 2012/05/05 15:50:38 billie Exp $
+
+  05 May 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.11.10.ebuild,
+  hplip-3.12.2-r2.ebuild:
+  Also add lp group message to old ebuilds.
 
   05 May 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.4.ebuild:
   Drop cupsddk patch. It should not matter anymore as cupsddk has been dropped
