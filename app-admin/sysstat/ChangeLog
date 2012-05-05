@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.221 2012/04/07 15:46:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.222 2012/05/05 21:53:06 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> sysstat-10.0.4.ebuild:
+  Marking sysstat-10.0.4 ppc for bug 414483
 
   07 Apr 2012; Jeroen Roovers <jer@gentoo.org> sysstat-10.0.4.ebuild:
   Clean up src_configure().
