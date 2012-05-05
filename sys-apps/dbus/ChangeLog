@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.334 2012/05/05 18:45:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.335 2012/05/05 21:51:18 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> dbus-1.4.20.ebuild:
+  Marking dbus-1.4.20 ppc for bug 412535
 
   05 May 2012; Raúl Porcel <armin76@gentoo.org> dbus-1.4.18.ebuild:
   Revert
