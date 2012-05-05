@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.55 2012/04/20 01:41:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.56 2012/05/05 15:13:45 floppym Exp $
+
+*astng-0.23.1-r1 (05 May 2012)
+
+  05 May 2012; Mike Gilbert <floppym@gentoo.org> +astng-0.23.1-r1.ebuild,
+  +files/astng-0.23.1-file-open.patch:
+  Change file() to open() for bug 413625 by Alexander Brüning. Patch from
+  upstream.
 
   20 Apr 2012; Mike Gilbert <floppym@gentoo.org> astng-0.23.1.ebuild:
   Rebase ebuild from 0.22.0, restoring python 3 support. Use separate source
