@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.171 2012/05/03 20:31:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.172 2012/05/05 21:45:02 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> debootstrap-1.0.39.ebuild:
+  Marking debootstrap-1.0.39 ppc for bug 413889
 
   03 May 2012; Markus Meier <maekke@gentoo.org> debootstrap-1.0.39.ebuild:
   arm stable, bug #413889
