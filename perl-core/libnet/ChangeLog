@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/libnet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/ChangeLog,v 1.34 2011/07/30 12:29:14 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/ChangeLog,v 1.35 2012/05/05 23:47:13 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> libnet-1.220.0.ebuild:
+  keyword ~amd64-fbsd
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> libnet-1.220.0.ebuild:
   Drop ~sparc-fbsd KEYWORD
