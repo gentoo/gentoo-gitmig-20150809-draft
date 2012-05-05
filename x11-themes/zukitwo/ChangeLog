@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/zukitwo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.6 2012/04/29 16:24:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.7 2012/05/05 01:33:17 tetromino Exp $
+
+*zukitwo-2012.05.03 (05 May 2012)
+*zukitwo-2011.12.29-r1 (05 May 2012)
+
+  05 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -zukitwo-2011.12.05.ebuild, zukitwo-2011.12.29.ebuild,
+  +zukitwo-2011.12.29-r1.ebuild, +zukitwo-2012.05.03.ebuild, metadata.xml:
+  Version bump with support for gtk+-3.4 and gnome-3.4; split the gnome-shell
+  theme out into a separate package, zukitwo-shell, to allow simultaneous
+  support for gtk+-3.4 and gnome-shell-3.2. Drop old.
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> zukitwo-2011.12.29.ebuild:
   x86 stable, bug #410611
