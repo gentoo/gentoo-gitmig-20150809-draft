@@ -1,6 +1,9 @@
 # ChangeLog for net-news/snownews
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.35 2012/04/22 12:04:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.36 2012/05/05 21:33:37 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> snownews-1.5.12-r1.ebuild:
+  Marking snownews-1.5.12-r1 ppc for bug 307699
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> snownews-1.5.12-r1.ebuild:
   x86 stable, bug #307699
