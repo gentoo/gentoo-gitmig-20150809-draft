@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlmod/ChangeLog,v 1.1 2012/03/28 12:24:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlmod/ChangeLog,v 1.2 2012/05/05 14:08:35 aballier Exp $
+
+*ocamlmod-0.0.3 (05 May 2012)
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> +ocamlmod-0.0.3.ebuild:
+  version bump
 
 *ocamlmod-0.0.1 (28 Mar 2012)
 
