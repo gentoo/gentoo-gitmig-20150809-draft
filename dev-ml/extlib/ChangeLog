@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/extlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.15 2012/03/08 11:46:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/ChangeLog,v 1.16 2012/05/05 14:20:12 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> -extlib-1.5.1.ebuild:
+  remove old
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> extlib-1.5.2.ebuild:
   x86 stable wrt bug #400023
