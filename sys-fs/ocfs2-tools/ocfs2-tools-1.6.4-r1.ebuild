@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.6.4-r1.ebuild,v 1.1 2012/02/21 14:29:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.6.4-r1.ebuild,v 1.2 2012/05/05 12:59:47 alexxy Exp $
 
 EAPI=4
 PYTHON_DEPEND="gtk? 2"
@@ -41,6 +41,11 @@ DOCS=(
 
 MAKEOPTS+=" -j1"
 
+PATCHES=(
+		"${FILESDIR}/${P}-asneeded.patch"
+		"${FILESDIR}/${PN}-recent-kernels.patch"
+		)
+
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
@@ -51,7 +56,7 @@ src_prepare() {
 	sed -e 's:"/dlm/":"/sys/kernel/dlm":g' \
 		-i libo2dlm/o2dlm_test.c \
 		-i libocfs2/dlm.c || die "sed failed"
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch ${PATCHES[@]}
 	rm -f aclocal.m4
 	AT_M4DIR=. eautoreconf
 }

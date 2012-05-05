@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.6.4.ebuild,v 1.2 2012/02/21 14:29:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.6.4.ebuild,v 1.3 2012/05/05 12:59:47 alexxy Exp $
 
 EAPI=3
 PYTHON_DEPEND="gtk? 2"
@@ -39,6 +39,11 @@ DOCS=(
 )
 
 MAKEOPTS+=" -j1"
+
+PATCHES=(
+		"${FILESDIR}/${P}-asneeded.patch"
+		"${FILESDIR}/${PN}-recent-kernels.patch"
+		)
 
 pkg_setup() {
 	python_set_active_version 2
