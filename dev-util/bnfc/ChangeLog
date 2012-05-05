@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bnfc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.15 2011/03/01 20:02:18 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.16 2012/05/05 17:43:19 slyfox Exp $
+
+  05 May 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/bnfc-2.4.2.0-mangle-errors.patch, bnfc-2.4.2.0.ebuild:
+  Fix build failure against ghc-7.4
 
   01 Mar 2011; Sergei Trofimovich <slyfox@gentoo.org> -bnfc-2.1.2.ebuild,
   -bnfc-2.2.ebuild, -files/bnfc-2.2-ghc66-utf8.patch, -bnfc-2.4_beta.ebuild:
