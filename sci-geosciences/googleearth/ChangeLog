@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.30 2012/03/10 07:50:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.31 2012/05/05 11:03:09 xmw Exp $
+
+*googleearth-6.2.2.6613 (05 May 2012)
+
+  05 May 2012; Michael Weber <xmw@gentoo.org> -googleearth-6.2.1.6014.ebuild,
+  -googleearth-6.2.1.6014-r1.ebuild, +googleearth-6.2.2.6613.ebuild:
+  Version bump to resolve fetch failure (bug 413857, thanks Tina). Non-maint
+  commit.
 
   09 Mar 2012; Vlastimil Babka <caster@gentoo.org>
   googleearth-6.2.1.6014-r1.ebuild:
