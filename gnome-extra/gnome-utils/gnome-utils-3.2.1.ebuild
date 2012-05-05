@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.6 2012/05/05 02:22:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.7 2012/05/05 08:23:09 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -9,7 +9,7 @@ GNOME2_LA_PUNT="yes"
 inherit autotools eutils gnome2
 
 DESCRIPTION="Utilities for the Gnome desktop"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://live.gnome.org/GnomeUtils"
 
 LICENSE="GPL-2"
 SLOT="0"
