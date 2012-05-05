@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/dynamips-0.2.8_rc3.ebuild,v 1.1 2011/05/17 09:22:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/dynamips-0.2.8_rc3.ebuild,v 1.2 2012/05/05 02:58:28 pva Exp $
 
 EAPI=3
 inherit base
@@ -9,7 +9,7 @@ MY_P="${P/_rc/-RC}-community"
 MY_PV="${PV/_rc/-RC}-community"
 
 DESCRIPTION="Cisco 7200/3600 Simulator"
-HOMEPAGE="http://www.gns3.net/content/dynamips-028-rc3-community-version-released"
+HOMEPAGE="http://www.gns3.net/dynamips/"
 SRC_URI="mirror://sourceforge/project/gns-3/Dynamips/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
