@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/css_parser/css_parser-1.2.6.ebuild,v 1.1 2012/02/20 21:09:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/css_parser/css_parser-1.2.6.ebuild,v 1.2 2012/05/05 05:44:15 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -25,6 +25,7 @@ SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/${PV} -> ${
 
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="doc test"
 
 ruby_add_rdepend "dev-ruby/addressable
 	virtual/ruby-ssl"
