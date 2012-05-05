@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/afflib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.33 2012/05/05 11:38:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.34 2012/05/05 21:49:03 ranger Exp $
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> afflib-3.6.16.ebuild:
+  Marking afflib-3.6.16 ppc for bug 404607
 
   05 May 2012; Markus Meier <maekke@gentoo.org> afflib-3.6.16.ebuild:
   x86 stable, bug #404607
