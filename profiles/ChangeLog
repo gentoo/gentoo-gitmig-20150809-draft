@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6497 2012/05/04 22:12:14 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6498 2012/05/05 01:24:53 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Update gnome-3.4 mask in preparation for moving packages from overlay to
+  gx86.
 
   04 May 2012; Sebastian Pipping <sping@gentoo.org> package.mask:
   Unmask Gimp 2.8 (and earlier)

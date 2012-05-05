@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13720 2012/05/04 22:12:14 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13721 2012/05/05 01:24:53 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -206,8 +206,71 @@ sys-auth/tcb
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Mar 2012)
 # This is now the GNOME 3.4 mask
-# Other stuff:
+# Masked for testing, clutter-1.10, and bugs in some packages:
+=app-accessibility/accerciser-3.4*
+=app-accessibility/at-spi2-atk-2.4*
+=app-accessibility/at-spi2-core-2.4*
+=app-accessibility/orca-3.4*
+=app-admin/gnome-system-log-3.4*
+=app-crypt/gcr-3.4*
+=app-crypt/seahorse-3.4*
+=app-dicts/gnome-dictionary-3.4*
+=app-misc/tracker-0.14*
+>=dev-libs/folks-0.6.8
+=dev-libs/libgdata-0.12*
+=dev-libs/totem-pl-parser-3*
+=dev-util/gnome-devel-docs-3.4*
+=gnome-base/gdm-3.4*
+=gnome-base/gnome-control-center-3.4*
+=gnome-base/gnome-core-apps-3.4*
+=gnome-base/gnome-core-libs-3.4*
+=gnome-base/gnome-desktop-3.4*
+=gnome-base/gnome-extra-apps-3.4*
+=gnome-base/gnome-fallback-3.4*
+=gnome-base/gnome-3.4*
+=gnome-base/gnome-keyring-3.4*
+=gnome-base/gnome-light-3.4*
+=gnome-base/gnome-menus-3.4*
+=gnome-base/gnome-panel-3.4*
+=gnome-base/gnome-power-manager-3.4*
+=gnome-base/gnome-session-3.4*
+=gnome-base/gnome-settings-daemon-3.4*
+=gnome-base/gnome-shell-3.4*
+=gnome-base/libgnome-keyring-3.4*
+=gnome-base/libgnomekbd-3.4*
+=gnome-base/nautilus-3.4*
+=gnome-extra/evolution-data-server-3.4*
+=gnome-extra/evolution-ews-3.4*
+=gnome-extra/evolution-exchange-3.4*
+=gnome-extra/evolution-groupwise-3.4*
+=gnome-extra/gnome-color-manager-3.4*
+=gnome-extra/gnome-contacts-3.4*
+=gnome-extra/gnome-documents-0.4*
+=gnome-extra/gnome-games-3.4*
+=gnome-extra/gnome-search-tool-3.4*
+=gnome-extra/gnome-shell-extensions-3.4*
+>=gnome-extra/gnome-tweak-tool-3.3
+=gnome-extra/gnome-user-docs-3.4*
+=gnome-extra/gnome-utils-3.4*
+=gnome-extra/mousetweaks-3.4*
+=gnome-extra/nautilus-tracker-tags-0.14*
+=gnome-extra/seahorse-nautilus-3.4*
+=gnome-extra/sushi-0.4*
+=mail-client/evolution-3.4*
+=media-gfx/gnome-font-viewer-3.4*
+=media-gfx/gnome-screenshot-3.4*
+=media-video/cheese-3.4*
+=media-video/totem-3.4*
+=net-im/empathy-3.4*
+=net-libs/gnome-online-accounts-3.4*
 >=net-libs/telepathy-farstream-0.2
+=net-wireless/gnome-bluetooth-3.4*
+=sys-apps/baobab-3.4*
+=x11-libs/libcryptui-3.4*
+=x11-libs/libwnck-3.4*
+>=x11-wm/metacity-2.34.2
+=x11-wm/mutter-3.4*
+>=x11-themes/zukitwo-shell-2012.04.24
 # New clutter API breaks almost everything
 =media-libs/cogl-1.10*
 =media-libs/clutter-1.10*
