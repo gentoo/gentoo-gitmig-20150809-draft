@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.8.1.ebuild,v 1.3 2012/05/05 15:36:11 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.8.1-r1.ebuild,v 1.1 2012/05/05 15:36:11 pesa Exp $
 
 EAPI=4
 
@@ -9,10 +9,10 @@ inherit multilib qt4-build
 DESCRIPTION="The SQL module for the Qt toolkit"
 SLOT="4"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
-IUSE="firebird freetds mysql odbc postgres qt3support +sqlite"
+IUSE="firebird freetds mysql oci8 odbc postgres qt3support +sqlite"
 
 REQUIRED_USE="
-	|| ( firebird freetds mysql odbc postgres sqlite )
+	|| ( firebird freetds mysql oci8 odbc postgres sqlite )
 "
 
 DEPEND="
@@ -20,6 +20,7 @@ DEPEND="
 	firebird? ( dev-db/firebird )
 	freetds? ( dev-db/freetds )
 	mysql? ( virtual/mysql )
+	oci8? ( dev-db/oracle-instantclient-basic )
 	odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) )
 	postgres? ( dev-db/postgresql-base )
 	sqlite? ( dev-db/sqlite:3 )
@@ -48,11 +49,11 @@ src_configure() {
 		$(qt_use firebird sql-ibase  plugin)
 		$(qt_use freetds  sql-tds    plugin)
 		$(qt_use mysql    sql-mysql  plugin) $(use mysql && echo "-I${EPREFIX}/usr/include/mysql -L${EPREFIX}/usr/$(get_libdir)/mysql")
+		$(qt_use oci8     sql-oci    plugin) $(use oci8 && echo "-I${ORACLE_HOME}/include -L${ORACLE_HOME}/$(get_libdir)")
 		$(qt_use odbc     sql-odbc   plugin) $(use odbc && echo "-I${EPREFIX}/usr/include/iodbc")
 		$(qt_use postgres sql-psql   plugin) $(use postgres && echo "-I${EPREFIX}/usr/include/postgresql/pgsql")
 		$(qt_use sqlite   sql-sqlite plugin) $(use sqlite && echo -system-sqlite)
 		-no-sql-db2
-		-no-sql-oci
 		-no-sql-sqlite2
 		-no-sql-symsql
 		$(qt_use qt3support)
