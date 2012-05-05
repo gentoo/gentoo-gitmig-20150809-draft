@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.51 2012/03/18 18:33:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.52 2012/05/05 23:30:02 aballier Exp $
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-Time-Local-1.200.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org>
   perl-Time-Local-1.200.0-r1.ebuild:
