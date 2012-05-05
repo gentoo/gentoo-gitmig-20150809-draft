@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.17 2012/05/05 18:00:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.18 2012/05/05 18:03:33 floppym Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -193,7 +193,7 @@ _python-distutils-ng_default_distutils_install() {
 python-distutils-ng_redoscript() {
 	local sbn="$(basename "${1}")"
 	mkdir -p "${T}/_${sbn}/" || die "failed to create directory"
-	mv "${D}/${1}" "${T}/_${sbn}/${sbn}" || die "failed to move file"
+	mv "${D}${1}" "${T}/_${sbn}/${sbn}" || die "failed to move file"
 	python-distutils-ng_doscript "${T}/_${sbn}/${sbn}" "${2}"
 }
 
