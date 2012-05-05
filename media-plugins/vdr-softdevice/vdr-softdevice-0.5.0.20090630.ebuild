@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20090630.ebuild,v 1.4 2011/04/06 17:29:09 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20090630.ebuild,v 1.5 2012/05/05 08:27:15 jdhore Exp $
 
 EAPI="2"
 
@@ -54,7 +54,7 @@ DEPEND="${RDEPEND}
 				xinerama? ( x11-proto/xineramaproto )
 			)
 	fbcon? ( sys-kernel/linux-headers )
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 # Make sure the assembler USE flags are unmasked on amd64
 # Remove this once default-linux/amd64/2006.1 is deprecated
 DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"

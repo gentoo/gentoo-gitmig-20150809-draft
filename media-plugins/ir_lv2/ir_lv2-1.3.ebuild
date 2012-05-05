@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/ir_lv2/ir_lv2-1.3.ebuild,v 1.1 2011/04/26 18:56:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/ir_lv2/ir_lv2-1.3.ebuild,v 1.2 2012/05/05 08:27:18 jdhore Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ RDEPEND="media-libs/zita-convolver
 	media-libs/libsndfile
 	media-libs/libsamplerate"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN/_/.}
 

@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.241 2012/04/16 00:37:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.242 2012/05/05 08:27:19 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  audacious-plugins-2.4.4-r1.ebuild, audacious-plugins-2.5.4.ebuild,
+  audacious-plugins-3.0.3.ebuild, audacious-plugins-3.1.ebuild,
+  audacious-plugins-3.1.1.ebuild, audacious-plugins-3.2.ebuild,
+  audacious-plugins-3.2.1.ebuild, audacious-plugins-3.2.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *audacious-plugins-3.2.2-r1 (16 Apr 2012)
 

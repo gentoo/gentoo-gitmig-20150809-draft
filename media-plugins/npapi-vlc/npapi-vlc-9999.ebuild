@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/npapi-vlc-9999.ebuild,v 1.6 2012/03/15 18:35:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/npapi-vlc-9999.ebuild,v 1.7 2012/05/05 08:27:16 jdhore Exp $
 
 EAPI=3
 
@@ -36,7 +36,7 @@ RDEPEND=">=media-video/vlc-1.1
 	!<media-video/vlc-1.2[nsplugin]"
 DEPEND="${RDEPEND}
 	${DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=net-misc/npapi-sdk-0.27"
 
 src_prepare() {

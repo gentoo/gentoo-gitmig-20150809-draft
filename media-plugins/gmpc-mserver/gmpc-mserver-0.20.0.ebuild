@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mserver/gmpc-mserver-0.20.0.ebuild,v 1.2 2011/03/19 16:46:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mserver/gmpc-mserver-0.20.0.ebuild,v 1.3 2012/05/05 08:27:19 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-sound/gmpc-${PV}
 	media-libs/taglib
 	net-libs/libmicrohttpd"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	default

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/gmpc-awn-0.20.0.ebuild,v 1.2 2011/03/19 16:06:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/gmpc-awn-0.20.0.ebuild,v 1.3 2012/05/05 08:27:17 jdhore Exp $
 
 EAPI=4
 inherit autotools
@@ -16,7 +16,7 @@ IUSE="nls"
 
 RDEPEND=">=media-sound/gmpc-${PV}"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
 

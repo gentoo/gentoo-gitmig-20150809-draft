@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/audacious-dumb-0.65.ebuild,v 1.2 2011/08/20 15:11:37 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/audacious-dumb-0.65.ebuild,v 1.3 2012/05/05 08:27:16 jdhore Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="<media-sound/audacious-3.0
 	>=media-libs/dumb-0.9.3"
 
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
 src_compile() {

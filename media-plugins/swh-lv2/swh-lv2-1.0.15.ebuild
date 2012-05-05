@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-lv2/swh-lv2-1.0.15.ebuild,v 1.3 2009/10/05 21:28:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-lv2/swh-lv2-1.0.15.ebuild,v 1.4 2012/05/05 08:27:19 jdhore Exp $
 
 EAPI=2
 inherit toolchain-funcs multilib
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="=sci-libs/fftw-3*"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -e 's:-O3 -fomit-frame-pointer -fstrength-reduce -funroll-loops::g' \

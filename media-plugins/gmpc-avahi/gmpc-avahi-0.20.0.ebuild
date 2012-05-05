@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/gmpc-avahi-0.20.0.ebuild,v 1.5 2011/03/19 16:04:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/gmpc-avahi-0.20.0.ebuild,v 1.6 2012/05/05 08:27:17 jdhore Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ RDEPEND=">=media-sound/gmpc-${PV}
 	dev-libs/libxml2
 	net-dns/avahi[dbus]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-alarm/gmpc-alarm-0.20.0.ebuild,v 1.5 2011/03/19 15:58:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-alarm/gmpc-alarm-0.20.0.ebuild,v 1.6 2012/05/05 08:27:16 jdhore Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ IUSE="nls"
 
 RDEPEND=">=media-sound/gmpc-${PV}"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
 

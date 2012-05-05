@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xsynth-dssi/xsynth-dssi-0.9.4.ebuild,v 1.1 2010/10/01 00:25:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xsynth-dssi/xsynth-dssi-0.9.4.ebuild,v 1.2 2012/05/05 08:27:19 jdhore Exp $
 
 DESCRIPTION="A software synthesizer plugin for the DSSI Soft Synth Interface"
 HOMEPAGE="http://dssi.sourceforge.net/download.html#Xsynth-DSSI"
@@ -17,7 +17,7 @@ RDEPEND="=x11-libs/gtk+-2*
 	>=media-libs/liblo-0.12"
 DEPEND="${RDEPEND}
 	media-libs/ladspa-sdk
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"

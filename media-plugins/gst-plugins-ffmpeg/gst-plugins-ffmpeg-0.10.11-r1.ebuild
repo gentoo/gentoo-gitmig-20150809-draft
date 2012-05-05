@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.11-r1.ebuild,v 1.8 2011/07/25 18:07:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.11-r1.ebuild,v 1.9 2012/05/05 08:27:15 jdhore Exp $
 
 EAPI=1
 
@@ -29,7 +29,7 @@ RDEPEND=">=media-libs/gstreamer-0.10.25
 	>=media-libs/gst-plugins-base-0.10.25
 	orc? ( >=dev-lang/orc-0.4.5 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	append-flags -fno-strict-aliasing

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.18.ebuild,v 1.1 2012/03/16 03:34:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.18.ebuild,v 1.2 2012/05/05 08:27:19 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -31,7 +31,7 @@ RDEPEND="
 	vimeo? ( net-libs/libsoup:2.4
 		dev-libs/libgcrypt )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9"
+	virtual/pkgconfig"
 
 # `make check` doesn't do anything, and ${S}/test/test fails without all plugins
 RESTRICT="test"

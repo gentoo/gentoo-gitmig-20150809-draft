@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5.4.ebuild,v 1.5 2012/03/18 15:17:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5.4.ebuild,v 1.6 2012/05/05 08:27:19 jdhore Exp $
 
 EAPI=4
 
@@ -55,7 +55,7 @@ RDEPEND="app-arch/unzip
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
-	>=dev-util/pkgconfig-0.9.0"
+	virtual/pkgconfig"
 
 mp3_warning() {
 	if ! use mp3 ; then

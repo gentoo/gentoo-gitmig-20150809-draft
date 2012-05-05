@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.150 2012/04/23 07:36:43 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.151 2012/05/05 08:27:19 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> alsa-plugins-1.0.24.ebuild,
+  alsa-plugins-1.0.25.ebuild, alsa-plugins-1.0.25-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Apr 2012; Benda Xu <heroxbd@gentoo.org> alsa-plugins-1.0.25-r1.ebuild:
   keyword amd64-linux. bug #412819

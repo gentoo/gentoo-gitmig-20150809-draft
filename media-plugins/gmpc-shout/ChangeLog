@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-shout
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-shout/ChangeLog,v 1.7 2011/03/19 16:48:17 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-shout/ChangeLog,v 1.8 2012/05/05 08:27:15 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gmpc-shout-0.20.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 Mar 2011; Christoph Mende <angelos@gentoo.org> gmpc-shout-0.20.0.ebuild:
   Remove .la file

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15.ebuild,v 1.7 2010/06/19 00:57:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.15.ebuild,v 1.8 2012/05/05 08:27:15 jdhore Exp $
 
 inherit eutils autotools
 
@@ -18,7 +18,7 @@ RDEPEND="media-libs/ladspa-sdk
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-vcs/cvs
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

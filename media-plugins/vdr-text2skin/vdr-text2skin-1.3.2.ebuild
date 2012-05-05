@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.3.2.ebuild,v 1.4 2012/05/01 15:54:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.3.2.ebuild,v 1.5 2012/05/05 08:27:16 jdhore Exp $
 
 EAPI="4"
 
@@ -24,8 +24,8 @@ RDEPEND=">=media-video/vdr-1.6.0
 	imagemagick? ( || ( media-gfx/imagemagick[cxx] media-gfx/graphicsmagick[cxx] ) )
 	imlib? ( media-libs/imlib2 >=media-video/vdr-1.6.0[-graphtft] )"
 DEPEND="${RDEPEND}
-	imagemagick? ( dev-util/pkgconfig )
-	imlib? ( dev-util/pkgconfig )
+	imagemagick? ( virtual/pkgconfig )
+	imlib? ( virtual/pkgconfig )
 	sys-devel/gettext"
 
 src_prepare() {

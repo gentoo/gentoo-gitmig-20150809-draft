@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/npapi-vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.6 2012/03/15 18:35:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.7 2012/05/05 08:27:16 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> npapi-vlc-2.0.0.ebuild,
+  npapi-vlc-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> npapi-vlc-2.0.0.ebuild,
   npapi-vlc-9999.ebuild:

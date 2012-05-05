@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.ebuild,v 1.2 2012/02/02 09:12:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.ebuild,v 1.3 2012/05/05 08:27:19 jdhore Exp $
 
 EAPI=4
 
@@ -56,7 +56,7 @@ RDEPEND="app-arch/unzip
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
-	>=dev-util/pkgconfig-0.9.0"
+	virtual/pkgconfig"
 
 REQUIRED_USE="^^ ( gtk gtk3 )"
 

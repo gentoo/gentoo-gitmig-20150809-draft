@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.12 2012/04/13 19:31:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.13 2012/05/05 08:27:15 jdhore Exp $
 
 EAPI=3
 GENTOO_VDR_CONDITIONAL=yes
@@ -43,7 +43,7 @@ COMMON_DEPEND="
 	)"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-kernel/linux-headers
 	nls? ( sys-devel/gettext )
 	xine? (

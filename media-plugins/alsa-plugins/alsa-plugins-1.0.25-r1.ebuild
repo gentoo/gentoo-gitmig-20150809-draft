@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.25-r1.ebuild,v 1.9 2012/04/23 07:36:43 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.25-r1.ebuild,v 1.10 2012/05/05 08:27:19 jdhore Exp $
 
 EAPI=3
 
@@ -29,7 +29,7 @@ RDEPEND=">=media-libs/alsa-lib-${PV}
 		media-libs/alsa-lib )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.19-missing-avutil.patch"

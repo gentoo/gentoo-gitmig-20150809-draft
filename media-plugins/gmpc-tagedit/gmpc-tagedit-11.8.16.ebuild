@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-tagedit/gmpc-tagedit-11.8.16.ebuild,v 1.3 2011/10/09 16:57:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-tagedit/gmpc-tagedit-11.8.16.ebuild,v 1.4 2012/05/05 08:27:16 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ RDEPEND=">=media-sound/gmpc-${PV}
 	media-libs/taglib
 	dev-libs/libxml2:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/gob
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"

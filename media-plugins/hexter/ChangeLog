@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/hexter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/hexter/ChangeLog,v 1.4 2009/12/22 10:08:11 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/hexter/ChangeLog,v 1.5 2012/05/05 08:27:18 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> hexter-0.6.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   22 Dec 2009; Markus Meier <maekke@gentoo.org> hexter-0.6.2.ebuild:
   amd64 stable, bug #286927

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.3.ebuild,v 1.4 2011/12/26 14:33:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.3.ebuild,v 1.5 2012/05/05 08:27:18 jdhore Exp $
 
 EAPI=4
 inherit cmake-utils multilib
@@ -17,7 +17,7 @@ IUSE="doc +facedetect +scale0tilt"
 RDEPEND="facedetect? ( >=media-libs/opencv-2.3.0 )
 	scale0tilt? ( >=media-libs/gavl-1.2.0 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${P/-plugins}

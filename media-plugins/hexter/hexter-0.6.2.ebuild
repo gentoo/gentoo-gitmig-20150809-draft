@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/hexter/hexter-0.6.2.ebuild,v 1.4 2009/12/22 10:08:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/hexter/hexter-0.6.2.ebuild,v 1.5 2012/05/05 08:27:18 jdhore Exp $
 
 DESCRIPTION="Yamaha DX7 modeling DSSI plugin"
 HOMEPAGE="http://dssi.sourceforge.net/hexter.html"
@@ -17,7 +17,7 @@ RDEPEND="gtk? ( =x11-libs/gtk+-2* sys-libs/readline sys-libs/ncurses )
 	>=media-libs/liblo-0.12"
 DEPEND="${RDEPEND}
 	media-libs/ladspa-sdk
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	econf $(use gtk || echo "--with-textui")

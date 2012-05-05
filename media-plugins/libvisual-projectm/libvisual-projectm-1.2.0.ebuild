@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/libvisual-projectm-1.2.0.ebuild,v 1.2 2009/04/29 19:49:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/libvisual-projectm-1.2.0.ebuild,v 1.3 2012/05/05 08:27:14 jdhore Exp $
 
 inherit cmake-utils
 
@@ -19,7 +19,7 @@ RDEPEND="media-libs/libsdl
 	=media-libs/libvisual-0.4*
 	>=media-libs/libprojectm-1.1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/cmake"
 
 S=${WORKDIR}/${MY_P}
