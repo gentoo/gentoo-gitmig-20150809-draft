@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pps-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pps-tools/ChangeLog,v 1.1 2011/07/11 04:29:38 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pps-tools/ChangeLog,v 1.2 2012/05/05 11:50:33 maekke Exp $
+
+  05 May 2012; Markus Meier <maekke@gentoo.org> pps-tools-0.0.20110710.ebuild:
+  x86 stable, bug #407767
 
 *pps-tools-0.0.20110710 (11 Jul 2011)
 

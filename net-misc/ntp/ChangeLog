@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.178 2012/04/28 17:56:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.179 2012/05/05 11:51:33 maekke Exp $
+
+  05 May 2012; Markus Meier <maekke@gentoo.org> ntp-4.2.6_p5-r1.ebuild:
+  x86 stable, bug #407767
 
   28 Apr 2012; <nixnut@gentoo.org> ntp-4.2.6_p5-r1.ebuild:
   ppc stable #407767
