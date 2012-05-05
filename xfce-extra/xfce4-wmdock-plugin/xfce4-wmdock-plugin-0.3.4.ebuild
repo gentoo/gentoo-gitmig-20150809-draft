@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.3.4.ebuild,v 1.5 2012/04/09 18:44:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.3.4.ebuild,v 1.6 2012/05/05 07:47:43 mgorny Exp $
 
 EAPI=4
 inherit multilib xfconf
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/gtk+:2
 	>=x11-libs/libwnck-2.8.1:1"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {

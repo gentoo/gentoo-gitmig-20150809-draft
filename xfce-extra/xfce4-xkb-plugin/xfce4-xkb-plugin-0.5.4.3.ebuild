@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.4.3.ebuild,v 1.4 2012/04/09 19:36:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.4.3.ebuild,v 1.5 2012/05/05 07:47:43 mgorny Exp $
 
 EAPI=4
 inherit multilib xfconf
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/gtk+:2
 	>=xfce-base/xfce4-panel-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=gnome-base/librsvg-2.18
 	x11-proto/kbproto"
 

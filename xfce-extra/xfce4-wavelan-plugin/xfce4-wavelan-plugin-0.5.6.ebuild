@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan-plugin/xfce4-wavelan-plugin-0.5.6.ebuild,v 1.7 2011/05/19 20:09:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan-plugin/xfce4-wavelan-plugin-0.5.6.ebuild,v 1.8 2012/05/05 07:47:44 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -20,7 +20,7 @@ RDEPEND=">=xfce-base/xfce4-panel-4.8
 	>=x11-libs/gtk+-2.6:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS=( AUTHORS ChangeLog NEWS README THANKS )

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-volumed
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volumed/ChangeLog,v 1.17 2011/05/19 20:00:43 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volumed/ChangeLog,v 1.18 2012/05/05 07:47:59 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> xfce4-volumed-0.1.13.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   19 May 2011; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-volumed-0.1.13.ebuild:

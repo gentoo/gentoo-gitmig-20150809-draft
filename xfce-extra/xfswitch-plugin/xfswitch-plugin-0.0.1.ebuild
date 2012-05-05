@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfswitch-plugin/xfswitch-plugin-0.0.1.ebuild,v 1.9 2011/09/29 14:29:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfswitch-plugin/xfswitch-plugin-0.0.1.ebuild,v 1.10 2012/05/05 07:47:43 mgorny Exp $
 
 EAPI=4
 inherit xfconf
@@ -22,7 +22,7 @@ RDEPEND="${COMMON_DEPEND}
 	gnome-base/gdm"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS=( AUTHORS ChangeLog NEWS README )
