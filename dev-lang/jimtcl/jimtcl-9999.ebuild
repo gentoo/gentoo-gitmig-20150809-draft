@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-9999.ebuild,v 1.4 2011/12/30 09:54:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-9999.ebuild,v 1.5 2012/05/05 16:51:29 hwoarang Exp $
 
 EAPI="2"
 
@@ -26,7 +26,11 @@ src_compile() {
 
 src_install() {
 	dobin jimsh || die "dobin failed"
-	dolib.so libjim.so || die "dolib failed"
+	use static-libs && {
+		dolib.a libjim.a || die "dolib failed"
+	} || {
+		dolib.so libjim.so || die "dolib failed"
+	}
 	insinto /usr/include
 	doins jim.h jimautoconf.h jim-subcmd.h jim-nvp.h jim-signal.h
 	doins jim-win32compat.h jim-eventloop.h jim-config.h

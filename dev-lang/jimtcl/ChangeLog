@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/jimtcl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.4 2011/12/30 09:54:46 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.5 2012/05/05 16:51:29 hwoarang Exp $
+
+  05 May 2012; Markos Chandras <hwoarang@gentoo.org>
+  jimtcl-0.70_pre20110317.ebuild, jimtcl-9999.ebuild:
+  Fix build with static-libs thanks to Peter Stuge <peter@stuge.se>. Bug #411413
 
   30 Dec 2011; Markos Chandras <hwoarang@gentoo.org> jimtcl-9999.ebuild:
   Drop --with-jim-ext configuration option. Bug #394649. Thanks to Alexander
