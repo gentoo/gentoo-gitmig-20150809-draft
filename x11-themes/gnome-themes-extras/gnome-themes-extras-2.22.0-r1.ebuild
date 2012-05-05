@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-2.22.0-r1.ebuild,v 1.8 2012/01/04 21:43:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-2.22.0-r1.ebuild,v 1.9 2012/05/05 04:10:07 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 	>=x11-misc/icon-naming-utils-0.8.1
 	gnome-base/librsvg"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=dev-util/intltool-0.23"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS"

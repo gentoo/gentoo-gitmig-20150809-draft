@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/gnome-icon-theme-symbolic-3.4.0.ebuild,v 1.1 2012/04/02 03:41:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/gnome-icon-theme-symbolic-3.4.0.ebuild,v 1.2 2012/05/05 04:10:05 jdhore Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="${COMMON_DEPEND}
 # keyboard-brightness icon file collision with old gnome-power-manager
 DEPEND="${COMMON_DEPEND}
 	>=x11-misc/icon-naming-utils-0.8.7
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
 # This ebuild does not install any binaries
 RESTRICT="binchecks strip"

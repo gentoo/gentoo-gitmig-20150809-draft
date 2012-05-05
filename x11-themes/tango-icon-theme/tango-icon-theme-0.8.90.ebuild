@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.14 2012/04/23 05:19:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.15 2012/05/05 04:10:07 jdhore Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -17,7 +17,7 @@ IUSE="png"
 RDEPEND=">=x11-themes/hicolor-icon-theme-0.12"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=gnome-base/librsvg-2.34
 	|| ( media-gfx/imagemagick[png?] media-gfx/graphicsmagick[imagemagick,png?] )
 	sys-devel/gettext

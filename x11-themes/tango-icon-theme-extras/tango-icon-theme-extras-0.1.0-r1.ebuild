@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.15 2012/04/23 05:45:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.16 2012/05/05 04:10:03 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils
@@ -16,7 +16,7 @@ IUSE="png"
 
 RDEPEND=">=x11-themes/tango-icon-theme-0.8.90"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=gnome-base/librsvg-2.34
 	|| ( media-gfx/imagemagick[png?] media-gfx/graphicsmagick[imagemagick,png?] )
 	>=x11-misc/icon-naming-utils-0.8.90"

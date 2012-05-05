@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.32.1.ebuild,v 1.7 2011/03/22 19:53:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.32.1.ebuild,v 1.8 2012/05/05 04:10:05 jdhore Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2:2
 	>=x11-themes/gtk-engines-2.15.3:2"
 DEPEND="${RDEPEND}
 	>=x11-misc/icon-naming-utils-0.8.7
-	>=dev-util/pkgconfig-0.19
+	virtual/pkgconfig
 	>=dev-util/intltool-0.35
 	sys-devel/gettext"
 # For problems related with dev-perl/XML-LibXML please see bug 266136

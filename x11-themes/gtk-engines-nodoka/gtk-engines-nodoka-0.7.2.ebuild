@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nodoka/gtk-engines-nodoka-0.7.2.ebuild,v 1.2 2011/03/29 13:07:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nodoka/gtk-engines-nodoka-0.7.2.ebuild,v 1.3 2012/05/05 04:10:06 jdhore Exp $
 
 EAPI=1
 MY_P="gtk-nodoka-engine-${PV}"
@@ -16,7 +16,7 @@ IUSE="animation-rtl"
 
 RDEPEND=">=x11-libs/gtk+-2.8.0:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 

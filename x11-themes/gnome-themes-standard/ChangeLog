@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.19 2012/04/17 20:14:57 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.20 2012/05/05 04:10:05 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild, gnome-themes-standard-3.2.1.ebuild,
+  gnome-themes-standard-3.4.0.ebuild, gnome-themes-standard-3.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gnome-themes-standard-3.4.1 (17 Apr 2012)
 

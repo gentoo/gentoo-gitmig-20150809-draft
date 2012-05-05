@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.184 2012/04/02 04:33:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.185 2012/05/05 04:10:04 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk-engines-2.20.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   02 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -files/gtk-engines-2.18.3-fix-system-lua-check.patch,

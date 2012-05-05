@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.10 2012/03/17 18:00:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.11 2012/05/05 04:10:04 jdhore Exp $
 
 EAPI=2
 inherit autotools gnome2-utils
@@ -19,7 +19,7 @@ RDEPEND=">=x11-themes/gnome-icon-theme-2.24"
 DEPEND=">=gnome-base/librsvg-2.12.3
 	|| ( media-gfx/imagemagick[png?] media-gfx/graphicsmagick[imagemagick,png?] )
 	>=x11-misc/icon-naming-utils-0.8.2
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 

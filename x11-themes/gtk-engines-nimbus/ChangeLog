@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-nimbus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/ChangeLog,v 1.27 2011/11/12 22:50:09 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/ChangeLog,v 1.28 2012/05/05 04:10:07 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  gtk-engines-nimbus-0.1.4.ebuild, gtk-engines-nimbus-0.1.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
 *gtk-engines-nimbus-0.1.7 (12 Nov 2011)
 

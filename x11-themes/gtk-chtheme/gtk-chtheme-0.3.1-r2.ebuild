@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/gtk-chtheme-0.3.1-r2.ebuild,v 1.8 2011/03/22 19:54:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/gtk-chtheme-0.3.1-r2.ebuild,v 1.9 2012/05/05 04:10:03 jdhore Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	# QA: stop Makefile from stripping the binaries

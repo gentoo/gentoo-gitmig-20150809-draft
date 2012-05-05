@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.103 2012/04/23 17:23:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.104 2012/05/05 04:10:06 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  redhat-artwork-5.0.8-r4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org>
   redhat-artwork-5.0.8-r4.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/echo-icon-theme/echo-icon-theme-0.3.89.0_pre20081031.ebuild,v 1.2 2011/01/22 15:13:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/echo-icon-theme/echo-icon-theme-0.3.89.0_pre20081031.ebuild,v 1.3 2012/05/05 04:10:06 jdhore Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=x11-misc/icon-naming-utils-0.8.90"
 
 RESTRICT="binchecks strip"
