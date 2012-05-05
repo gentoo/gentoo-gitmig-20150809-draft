@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.10.9.ebuild,v 1.1 2012/05/04 11:52:34 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.10.9.ebuild,v 1.2 2012/05/05 16:23:59 jlec Exp $
 
 EAPI=2
 
@@ -31,7 +31,9 @@ DEPEND="${RDEPEND}"
 
 RESTRICT="test"
 
-PATCHES=( "${FILESDIR}/${PN}-2.10.1-libpng15.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-gold.patch"
+	"${FILESDIR}/${PN}-2.10.1-libpng15.patch" )
 
 src_prepare() {
 	go-mono_src_prepare
