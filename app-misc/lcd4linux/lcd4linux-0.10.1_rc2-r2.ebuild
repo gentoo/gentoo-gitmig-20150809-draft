@@ -1,9 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r2.ebuild,v 1.8 2010/03/05 23:26:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r2.ebuild,v 1.9 2012/05/06 16:24:52 pacho Exp $
 
+EAPI=4
+PYTHON_DEPEND="python? 2"
 WANT_AUTOMAKE="1.9"
-inherit eutils multilib autotools
+inherit eutils multilib autotools python
 
 MY_P=${P/_rc/-RC}
 
@@ -36,7 +38,6 @@ done
 
 DEPEND="
 	mysql?  ( virtual/mysql )
-	python? ( dev-lang/python )
 	iconv?  ( virtual/libiconv )
 	mpd?    ( media-libs/libmpd )
 
@@ -59,26 +60,26 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	echo
 	elog "If you wish to compile only specific plugins, please use"
 	elog "the LCD4LINUX_PLUGINS environment variable. Plugins must be comma separated and can be either of:"
 	elog "apm cpuinfo diskstats dvb exec file i2c_sensors imon isdn kvv loadavg meminfo netdev pop3 ppp proc_stat seti statfs uname uptime wireless"
-	echo
+
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-warnings.patch"
 	epatch "${FILESDIR}/${P}-mpd.patch"
 	epatch "${FILESDIR}/${P}-nordtsc.patch"
 	epatch "${FILESDIR}/${P}-autoconf-2.65.patch"
-
+	epatch "${FILESDIR}/${P}-missing-header.patch"
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# This array contains the driver names required by configure --with-drivers=
 	# The positions must be the same as the corresponding use_expand flags
 	local DEVICE_DRIVERS=(BeckmannEgle BWCT CrystalFontz Curses Cwlinux
@@ -153,12 +154,10 @@ src_compile() {
 		|| die "econf failed"
 
 	sed -i.orig -e 's/-L -lX11/ -lX11 /g' Makefile || die "sed fixup failed"
-
-	emake || die "make failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 
 	dodoc README ChangeLog
 
@@ -171,11 +170,9 @@ src_install() {
 
 pkg_postinst() {
 	if use lcd_devices_lcdlinux; then
-		echo
 		ewarn "To actually use the lcd-linux devices, you will need to install the lcd-linux kernel module."
 		ewarn "You can either do that yourself, see http://lcd-linux.sf.net or "
 		ewarn "checkout http://overlays.gentoo.org/dev/jokey/browser/trunk and emerge app-misc/lcd-linux"
-		echo
 	fi
 	ewarn "If you are upgrading, please note that the default config file was moved to /etc/lcd4linux.conf"
 }
