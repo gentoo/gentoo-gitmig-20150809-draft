@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-platform
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/ChangeLog,v 1.12 2012/04/26 21:50:38 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/ChangeLog,v 1.13 2012/05/06 12:11:10 ago Exp $
+
+  06 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  netbeans-platform-7.1.1.ebuild:
+  Stable for amd64, wrt bug #414387
 
 *netbeans-platform-7.1.2 (26 Apr 2012)
 
