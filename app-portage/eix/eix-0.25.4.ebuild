@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.25.0.ebuild,v 1.1 2012/03/08 14:14:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.25.4.ebuild,v 1.1 2012/05/06 20:28:51 darkside Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="debug +dep doc nls optimization security strong-optimization sqlite tools zsh-completion"
 
 RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
@@ -21,6 +21,13 @@ RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() {
+	if has_version "<${CATEGORY}/${PN}-0.25.3"; then
+	    local eixcache="${EROOT}"/var/cache/${PN}
+	    [[ -f ${eixcache} ]] && rm -f "${eixcache}"
+	fi
+}
 
 src_configure() {
 	econf $(use_with sqlite) $(use_with doc extra-doc) \
@@ -40,4 +47,15 @@ src_configure() {
 src_install() {
 	default
 	dobashcomp bash/eix
+	keepdir "/var/cache/${PN}"
+	fowners portage:portage "/var/cache/${PN}"
+	fperms 775 "/var/cache/${PN}"
+}
+
+pkg_postinst() {
+	# fowners in src_install doesn't work for owner/group portage:
+	# merging changes this owner/group back to root.
+	use prefix || chown portage:portage "${EROOT}var/cache/${PN}"
+	local obs="${EROOT}var/cache/eix.previous"
+	! test -f "${obs}" || ewarn "Found obsolete ${obs}, please remove it"
 }
