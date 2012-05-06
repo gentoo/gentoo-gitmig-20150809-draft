@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-UUlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.62 2012/04/26 02:10:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.63 2012/05/06 20:28:28 ranger Exp $
+
+  06 May 2012; Brent Baude <ranger@gentoo.org> Convert-UUlib-1.400.0.ebuild:
+  Marking Convert-UUlib-1.400.0 ppc for bug 413087
 
   26 Apr 2012; Jeroen Roovers <jer@gentoo.org> Convert-UUlib-1.400.0.ebuild:
   Stable for HPPA (bug #413087).
