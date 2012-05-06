@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langarmenian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.46 2012/03/04 15:51:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarmenian/ChangeLog,v 1.47 2012/05/06 17:37:07 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org>
+  texlive-langarmenian-2011.ebuild:
+  ia64/s390/sh/sparc stable wrt #395735
 
   04 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   texlive-langarmenian-2011.ebuild:
