@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.239 2012/05/05 18:03:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.240 2012/05/06 03:20:45 floppym Exp $
+
+  06 May 2012; Mike Gilbert <floppym@gentoo.org> python-distutils-ng.eclass:
+  Silence eclass-to-manpage warnings.
 
   05 May 2012; Mike Gilbert <floppym@gentoo.org> python-distutils-ng.eclass:
   Eliminate another duplicate slash.
