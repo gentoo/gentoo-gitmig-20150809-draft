@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.106 2012/05/05 08:02:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.107 2012/05/06 20:37:45 ranger Exp $
+
+  06 May 2012; Brent Baude <ranger@gentoo.org> musicbrainz-3.0.3.ebuild:
+  Marking musicbrainz-3.0.3 ppc for bug 413241
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> musicbrainz-2.1.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
