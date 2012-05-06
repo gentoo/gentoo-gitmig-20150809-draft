@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnome-screenshot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/ChangeLog,v 1.1 2012/05/05 08:07:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/ChangeLog,v 1.2 2012/05/06 20:25:20 tetromino Exp $
+
+  06 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-screenshot-3.4.1.ebuild:
+  Add postinst message explaining that screenshots are now saved in ~/Pictures
 
 *gnome-screenshot-3.4.1 (05 May 2012)
 
