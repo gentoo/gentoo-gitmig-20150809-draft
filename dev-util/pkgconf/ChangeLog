@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.10 2012/05/05 22:18:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.11 2012/05/06 07:18:11 jdhore Exp $
+
+*pkgconf-0.6 (06 May 2012)
+
+  06 May 2012; Jeff Horelick <jdhore@gentoo.org> +pkgconf-0.6.ebuild,
+  -pkgconf-0.5.3.ebuild:
+  Version bump to 0.6. Adds --uninstalled support and a number of esoteric
+  bugfixes.
 
 *pkgconf-0.5.3 (05 May 2012)
 
