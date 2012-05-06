@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/openmotif-manual
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/openmotif-manual/ChangeLog,v 1.8 2010/06/07 12:17:19 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/openmotif-manual/ChangeLog,v 1.9 2012/05/06 00:58:10 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org>
+  openmotif-manual-2.3.0.ebuild:
+  keyword ~amd64-fbsd
 
   07 Jun 2010; Christoph Mende <angelos@gentoo.org>
   openmotif-manual-2.3.0.ebuild:
