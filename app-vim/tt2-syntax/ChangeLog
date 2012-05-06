@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/tt2-syntax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.7 2010/12/03 01:56:52 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.8 2012/05/06 20:19:22 ranger Exp $
+
+  06 May 2012; Brent Baude <ranger@gentoo.org> tt2-syntax-1.13.ebuild:
+  Marking tt2-syntax-1.13 ppc for bug 412953
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> tt2-syntax-1.13.ebuild:
   add ~arm (bug 302981)
