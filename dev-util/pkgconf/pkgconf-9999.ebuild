@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-9999.ebuild,v 1.5 2012/05/04 15:59:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-9999.ebuild,v 1.6 2012/05/06 07:29:34 jdhore Exp $
 
 EAPI="4"
 
@@ -31,6 +31,10 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	[[ -e configure ]] || AT_M4DIR="m4" eautoreconf
+}
+
+src_compile() {
+	emake V=1
 }
 
 src_install() {
