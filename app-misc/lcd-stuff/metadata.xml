@@ -3,9 +3,12 @@
 <pkgmetadata>
 <herd>lcd</herd>
 <maintainer>
-  <email>bernhard.walle@gmx.de</email>
-  <name>Bernhard Walle</name>
-  <description>Upstream maintainer wants to be CC'ed directly on bugs.</description>
+<email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<maintainer>
+<email>bernhard.walle@gmx.de</email>
+<name>Bernhard Walle</name>
+<description>Upstream maintainer wants to be CC'ed directly on bugs.</description>
 </maintainer>
 <longdescription lang="en">
   lcd-stuff is a client for app-misc/lcdproc written in C. It features
