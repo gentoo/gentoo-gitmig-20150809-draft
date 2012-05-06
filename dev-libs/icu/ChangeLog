@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.184 2012/05/06 19:24:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.185 2012/05/06 19:34:14 floppym Exp $
+
+  06 May 2012; Mike Gilbert <floppym@gentoo.org> -icu-4.6.ebuild:
+  Remove one more old version.
 
   06 May 2012; Mike Gilbert <floppym@gentoo.org> -icu-4.8.1-r2.ebuild,
   -icu-4.8.1-r3.ebuild, -icu-49.1.1.ebuild, -icu-49.1.ebuild:
