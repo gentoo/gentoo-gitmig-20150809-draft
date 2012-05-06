@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.66 2012/05/05 16:12:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.67 2012/05/06 10:55:04 scarabeus Exp $
 
 EAPI=4
 
@@ -62,8 +62,6 @@ ADDONS_SRC+=" ${ADDONS_URI}/ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz"
 ADDONS_SRC+=" xmlsec? ( ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz )" # modifies source code
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/ada24d37d8d638b3d8a9985e80bc2978-source-9.0.0.7-bj.zip )"
-ADDONS_SRC+=" libreoffice_extensions_scripting-javascript? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )"
-ADDONS_SRC+=" libreoffice_extensions_scripting-javascript? ( ${ADDONS_URI}/35c94d2df8893241173de1d16b6034c0-swingExSrc.zip )"
 ADDONS_SRC+=" libreoffice_extensions_wiki-publisher? ( ${ADDONS_URI}/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip )" # no release for 8 years, should we package it?
 ADDONS_SRC+=" odk? ( http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll )" # not packageable
 SRC_URI+=" ${ADDONS_SRC}"
@@ -150,6 +148,7 @@ COMMON_DEPEND="
 	jemalloc? ( dev-libs/jemalloc )
 	libreoffice_extensions_pdfimport? ( >=app-text/poppler-0.16[xpdf-headers,cxx] )
 	libreoffice_extensions_scripting-beanshell? ( >=dev-java/bsh-2.0_beta4 )
+	libreoffice_extensions_scripting-javascript? ( dev-java/rhino:1.6 )
 	libreoffice_extensions_wiki-publisher? (
 		dev-java/commons-codec:0
 		dev-java/commons-httpclient:3
@@ -378,6 +377,9 @@ src_configure() {
 
 		use libreoffice_extensions_scripting-beanshell && \
 			java_opts+=" --with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar)"
+
+		use libreoffice_extensions_scripting-javascript && \
+			java_opts+=" --with-rhino-jar=$(java-pkg_getjar rhino-1.6 js.jar)"
 
 		if use libreoffice_extensions_wiki-publisher; then
 			java_opts+="
