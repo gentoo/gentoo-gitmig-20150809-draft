@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.55 2012/05/06 21:14:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.56 2012/05/06 22:16:14 ulm Exp $
+
+  06 May 2012; Ulrich Müller <ulm@gentoo.org>
+  qemacs-0.4.0_pre20090420-r1.ebuild:
+  Fix compatibility with >=texi2html-5, bug 414927. Update libpng dependency.
+  Other minor fixups.
 
   06 May 2012; Ulrich Müller <ulm@gentoo.org>
   qemacs-0.4.0_pre20090420-r1.ebuild:
