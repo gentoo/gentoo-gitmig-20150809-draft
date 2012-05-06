@@ -1,21 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-9999.ebuild,v 1.9 2012/05/06 10:35:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.137.ebuild,v 1.1 2012/05/06 10:35:14 tetromino Exp $
 
 EAPI="4"
 
-inherit autotools git-2
-
 DESCRIPTION="A newsreader for GNOME"
 HOMEPAGE="http://pan.rebelbase.com/"
-
-EGIT_REPO_URI="git://git.gnome.org/${PN}2
-	http://git.gnome.org/browse/${PN}2"
-SRC_URI=
+SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gnome-keyring libnotify spell ssl"
 
 RDEPEND=">=dev-libs/glib-2.26:2
@@ -34,16 +29,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 
-# The normal version tree ebuild we are based on (for patching)
-Pnorm="${PN}-0.137"
-
-DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-
-src_prepare() {
-	# bootstrap build system
-	intltoolize --force --automake || die "intltoolize failed"
-	eautoreconf
-}
+DOCS="AUTHORS ChangeLog NEWS README"
 
 src_configure() {
 	econf \

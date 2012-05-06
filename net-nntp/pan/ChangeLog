@@ -1,6 +1,14 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.98 2012/05/03 04:32:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.99 2012/05/06 10:35:14 tetromino Exp $
+
+*pan-0.137 (06 May 2012)
+
+  06 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +pan-0.137.ebuild,
+  pan-9999.ebuild:
+  Version bump (bug #413059, thanks to Emmanuel Andry and Jeroen Roovers); adds
+  support for attachment uploading, SSL connections, gnome-keyring for secure
+  password storage. Update to EAPI4. Update live ebuild.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> pan-0.133-r1.ebuild,
   pan-0.134.ebuild, pan-0.135.ebuild, pan-9999.ebuild:
