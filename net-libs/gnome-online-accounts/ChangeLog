@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnome-online-accounts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.1 2011/10/29 05:57:03 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.2 2012/05/06 09:15:10 tetromino Exp $
+
+*gnome-online-accounts-3.4.1-r1 (06 May 2012)
+
+  06 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-online-accounts-3.4.1-r1.ebuild:
+  Version bump; Facebook and Windows Live authentication is now enabled since
+  it no longer requires distributing secret application keys.
 
 *gnome-online-accounts-3.2.1 (29 Oct 2011)
 
