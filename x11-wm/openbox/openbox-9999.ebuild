@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.15 2012/05/05 08:34:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.16 2012/05/06 09:01:55 hwoarang Exp $
 
 EAPI="2"
 inherit multilib autotools eutils git-2
@@ -12,11 +12,11 @@ EGIT_REPO_URI="git://git.openbox.org/dana/openbox"
 LICENSE="GPL-2"
 SLOT="3"
 KEYWORDS=""
-IUSE="debug imlib nls session startup-notification static-libs"
+IUSE="debug imlib nls python session startup-notification static-libs"
 
 RDEPEND="dev-libs/glib:2
 	>=dev-libs/libxml2-2.0
-	dev-python/pyxdg
+	python? ( dev-python/pyxdg )
 	>=media-libs/fontconfig-2
 	x11-libs/libXft
 	x11-libs/libXrandr
@@ -60,4 +60,5 @@ src_install() {
 	fperms a+x /etc/X11/Sessions/${PN}
 	emake DESTDIR="${D}" install || die "emake install failed"
 	! use static-libs && rm "${D}"/usr/$(get_libdir)/lib{obt,obrender}.la
+	! use python && rm "${D}"/usr/libexec/openbox-xdg-autostart
 }
