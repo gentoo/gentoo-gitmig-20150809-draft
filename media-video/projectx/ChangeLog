@@ -1,6 +1,10 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.56 2012/03/08 23:03:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.57 2012/05/06 11:50:25 billie Exp $
+
+  06 May 2012; Daniel Pielmeier <billie@gentoo.org>
+  -projectx-0.90.4.00_p33-r1.ebuild:
+  Remove old.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> projectx-0.91.0.02.ebuild:
   Marking projectx-0.91.0.02 ppc64 for bug 400417
