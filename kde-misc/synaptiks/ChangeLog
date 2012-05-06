@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.30 2012/05/05 11:37:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.31 2012/05/06 17:55:01 johu Exp $
+
+  06 May 2012; Johannes Huber <johu@gentoo.org>
+  -files/synaptiks-0.4.0-kcmdesktop.patch, -synaptiks-0.4.0-r1.ebuild:
+  Remove old.
 
   05 May 2012; Markus Meier <maekke@gentoo.org> synaptiks-0.8.0.ebuild:
   x86 stable, bug #401131
