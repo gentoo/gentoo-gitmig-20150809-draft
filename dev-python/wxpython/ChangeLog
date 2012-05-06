@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.166 2012/05/04 15:12:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.167 2012/05/06 17:14:35 jlec Exp $
+
+  06 May 2012; Justin Lecher <jlec@gentoo.org> wxpython-2.8.11.0.ebuild,
+  wxpython-2.8.12.0.ebuild, wxpython-2.8.12.1.ebuild:
+  Add workaround to respect CXXFLAGS
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> wxpython-2.8.11.0.ebuild,
   wxpython-2.8.12.0.ebuild, wxpython-2.8.12.1.ebuild, wxpython-2.9.1.1.ebuild,
