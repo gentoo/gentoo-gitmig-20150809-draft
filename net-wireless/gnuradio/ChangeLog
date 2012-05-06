@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.7 2012/05/05 19:19:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.8 2012/05/06 12:46:09 chithanh Exp $
+
+  06 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnuradio-3.6.0.ebuild:
+  Add missing cmake define, bug #414861.
 
 *gnuradio-3.6.0 (05 May 2012)
 
