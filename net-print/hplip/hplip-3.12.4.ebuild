@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.4 2012/05/05 15:48:13 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.5 2012/05/06 11:00:22 billie Exp $
 
 EAPI=4
 
@@ -12,7 +12,8 @@ inherit fdo-mime linux-info python autotools
 
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
-SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
+		http://dev.gentoo.org/~billie/distfiles/${P}-patches-1.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -101,39 +102,9 @@ src_prepare() {
 		$(find ./ -type f -exec grep -l '/etc/udev/rules.d' '{}' '+') \
 		|| die
 
-	# Do not install desktop files if there is no gui
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/452113
-	epatch "${FILESDIR}"/${P}-desktop.patch
-
-	# Browser detection through xdg-open
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/482674
-	epatch "${FILESDIR}"/${PN}-3.9.10-browser.patch
-
-	# Htmldocs are not installed under docdir/html so enable htmldir configure
-	# switch
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483217
-	epatch "${FILESDIR}"/${P}-htmldir.patch
-
-	# Let 56-hpmud_support.rules call hp-mkuri to make it work with newer udev
-	# Upstream bug: None
-	epatch "${FILESDIR}"/${PN}-3.11.12-udev-rules.patch
-
-	# CVE-2010-4267 SNMP Response Processing Buffer Overflow Vulnerability
-	# http://secunia.com/advisories/42956/
-	# https://bugzilla.redhat.com/show_bug.cgi?id=662740
-	epatch "${FILESDIR}"/${PN}-3.10.9-cve-2010-4267.patch
-
-	# Fix black stripes on pcl5c printouts
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/561264
-	epatch "${FILESDIR}"/${PN}-3.11.12-black-stripes-pcl5c.patch
-
-	# Fix parallel port cpu usage
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/750796
-	epatch "${FILESDIR}"/${P}-fast-pp.patch
-
-	# Fix minmal/hpijs_only/hpcups_only install
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/932918
-	epatch "${FILESDIR}"/${PN}-3.12.2-minimal.patch
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}"
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
