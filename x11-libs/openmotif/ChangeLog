@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.277 2012/03/26 19:07:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.278 2012/05/06 00:58:45 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org> openmotif-2.3.3-r1.ebuild:
+  keyword ~amd64-fbsd
 
   26 Mar 2012; Ulrich Müller <ulm@gentoo.org> -openmotif-2.3.3.ebuild,
   openmotif-2.3.3-r1.ebuild:

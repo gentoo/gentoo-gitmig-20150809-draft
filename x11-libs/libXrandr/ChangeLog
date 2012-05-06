@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXrandr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.86 2011/10/03 18:06:25 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrandr/ChangeLog,v 1.87 2012/05/06 01:03:42 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org> libXrandr-1.3.2.ebuild:
+  keyword ~amd64-fbsd
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> libXrandr-1.3.2.ebuild:
   Marked ppc ppc64 stable for bug #380421.

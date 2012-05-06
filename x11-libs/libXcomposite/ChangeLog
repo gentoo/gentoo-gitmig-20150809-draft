@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXcomposite
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.89 2011/08/20 15:52:45 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.90 2012/05/06 01:11:26 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org>
+  libXcomposite-0.4.3-r1.ebuild:
+  keyword ~amd64-fbsd
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> libXcomposite-0.4.3-r1.ebuild:
   Stable for HPPA (bug #371857).
