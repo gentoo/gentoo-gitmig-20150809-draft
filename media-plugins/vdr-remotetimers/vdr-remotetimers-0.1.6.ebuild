@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remotetimers/vdr-remotetimers-0.1.6.ebuild,v 1.1 2011/10/06 17:03:08 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remotetimers/vdr-remotetimers-0.1.6.ebuild,v 1.2 2012/05/06 19:21:49 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: edit timers on remote vdr instances"
 HOMEPAGE="http://vdr.schmirler.de/"
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 PATCHES=("${FILESDIR}/${PN}-0.1.1-Makefile.diff")
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	sed -i svdrp.h \
 		-e 's-../svdrpservice/svdrpservice.h-svdrpservice/svdrpservice.h-'

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remoteosd/vdr-remoteosd-0.1.1.ebuild,v 1.2 2012/02/07 14:06:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remoteosd/vdr-remoteosd-0.1.1.ebuild,v 1.3 2012/05/06 19:24:12 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR: remoteosd PlugIn"
 HOMEPAGE="http://vdr.schmirler.de/"
@@ -23,5 +23,5 @@ src_prepare() {
 	sed -i menu.h \
 		-e 's-"../svdrpservice/svdrpservice.h"-<svdrpservice/svdrpservice.h>-'
 
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 }
