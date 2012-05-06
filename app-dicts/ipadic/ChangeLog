@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ipadic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.22 2012/04/09 12:14:57 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.23 2012/05/06 19:03:46 halcy0n Exp $
+
+  06 May 2012; Mark Loeser <halcy0n@gentoo.org> ipadic-2.7.0.ebuild:
+  Drop to ~ppc64; bug #390769
 
   09 Apr 2012; Naohiro Aota <naota@gentoo.org> ipadic-2.7.0-r2.ebuild:
   Update SRC_URI and HOMEPAGE. Bug #411297
