@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/di-4.18.ebuild,v 1.6 2010/05/18 13:13:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/di-4.18.ebuild,v 1.7 2012/05/06 16:25:13 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gentoo.com/di/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="app-shells/bash"
