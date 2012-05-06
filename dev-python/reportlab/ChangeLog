@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.80 2012/05/06 17:39:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.81 2012/05/06 17:41:09 floppym Exp $
 
 *reportlab-2.5-r1 (06 May 2012)
 
@@ -8,7 +8,7 @@
   +files/reportlab-2.5-pypy-implicit-PyArg_NoArgs.patch,
   +reportlab-2.5-r1.ebuild:
   Fix implicit declaration of PyArg_NoArgs when building against PyPy. Patch
-  ported from sed statement in Progress overlay by Ian Delaney.
+  ported by Ian Delaney from sed statement in Progress overlay.
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> reportlab-2.5.ebuild:
   Restricting jython
