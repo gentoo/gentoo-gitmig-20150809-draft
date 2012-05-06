@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13723 2012/05/05 15:31:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13724 2012/05/06 09:13:18 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (06 May 2012)
+# Stopped working long time ago. Removal in 30 days
+# Use emesene:2 as an alternative
+net-im/emesene:0
 
 # Davide Pesavento <pesa@gentoo.org> (05 May 2012)
 # Introduces Oracle database support (oci8), needs more testing.
