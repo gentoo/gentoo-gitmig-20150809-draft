@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.130 2012/05/06 16:35:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.131 2012/05/06 17:57:18 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add systemd to use.mask, needs testing
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> package.use.force:
   Remove nptlonly outdated package.use.force

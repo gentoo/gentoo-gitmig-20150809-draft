@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.46 2012/04/08 15:06:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.47 2012/05/06 17:58:34 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add systemd to use.mask, needs testing
 
   08 Apr 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Unmask pyxattr

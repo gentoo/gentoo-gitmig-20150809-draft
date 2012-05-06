@@ -48,6 +48,7 @@ lensfun
 kde
 quvi
 upnp
+systemd
 
 # Stuff we don't want
 antlr
