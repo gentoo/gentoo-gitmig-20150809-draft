@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libxspf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/ChangeLog,v 1.8 2012/05/05 08:02:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/ChangeLog,v 1.9 2012/05/06 22:49:59 pesa Exp $
+
+  06 May 2012; Davide Pesavento <pesa@gentoo.org> libxspf-1.2.0.ebuild:
+  Migrate to EAPI=4 and qt4-r2 eclass.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libxspf-1.2.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
