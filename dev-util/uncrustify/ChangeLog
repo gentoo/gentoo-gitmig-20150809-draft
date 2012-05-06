@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/uncrustify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.16 2012/03/14 14:23:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.17 2012/05/06 11:25:48 grobian Exp $
+
+  06 May 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/uncrustify-0.59-unistdh.patch, uncrustify-0.59.ebuild:
+  Add patch to fix compilation with GCC 4.7, bug #413859
 
 *uncrustify-0.59 (14 Mar 2012)
 
