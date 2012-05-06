@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.34.ebuild,v 1.4 2012/05/05 21:32:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.34.ebuild,v 1.5 2012/05/06 14:05:52 ago Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SRC_URI="${BASE_URI}/ArgoUML-${PV}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc"
 
 DEPEND="app-arch/unzip"
