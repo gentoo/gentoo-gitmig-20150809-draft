@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6.2.ebuild,v 1.1 2012/03/29 22:52:34 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6.2.ebuild,v 1.2 2012/05/06 00:10:09 aballier Exp $
 
 EAPI=4
 inherit xorg-2
 
 DESCRIPTION="X.Org Xaw3d library"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="unicode"
 
 RDEPEND="x11-libs/libX11
