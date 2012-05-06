@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.86 2012/03/12 19:40:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.87 2012/05/06 16:47:13 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> freeglut-2.8.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #405063
 
   12 Mar 2012; Markus Meier <maekke@gentoo.org> freeglut-2.8.0.ebuild:
   arm stable, bug #405063
