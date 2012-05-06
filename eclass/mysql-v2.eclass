@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.15 2012/04/18 02:08:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.16 2012/05/06 10:42:36 heroxbd Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -15,7 +15,7 @@
 # This eclass uses the mysql-autotools and mysql-cmake eclasses for the
 # specific bits related to the build system.
 # It provides the src_unpack, src_prepare, src_configure, src_compile,
-# scr_install, pkg_preinst, pkg_postinst, pkg_config and pkg_postrm
+# src_install, pkg_preinst, pkg_postinst, pkg_config and pkg_postrm
 # phase hooks.
 
 # @ECLASS-VARIABLE: BUILD
