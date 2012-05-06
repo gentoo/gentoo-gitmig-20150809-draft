@@ -1,8 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ciabot-svn/ciabot-svn-1.15.ebuild,v 1.5 2010/12/18 17:00:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ciabot-svn/ciabot-svn-1.15.ebuild,v 1.6 2012/05/06 15:50:39 pacho Exp $
 
-inherit eutils
+EAPI="4"
+PYTHON_DEPEND="2"
+
+inherit eutils python
 
 DESCRIPTION="CIA-bot script for Subversion repositories"
 HOMEPAGE="http://cia.navi.cx/doc/clients"
@@ -13,20 +16,25 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
-DEPEND="dev-lang/python"
+DEPEND=""
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_install() {
+	python_convert_shebangs -r 2 .
 	dodir /etc/${PN}
 	insinto /etc/${PN}
 	doins "${FILESDIR}"/config.py
-
-	newbin ${P}.py ${PN} || die
+	newbin ${P}.py ${PN}
 }
 
 pkg_postinst() {
-	echo
 	elog "This ciabot-svn script should be called from your repository's post-commit"
 	elog "hook with the repository and revision as arguments. For example,"
 	elog "you could copy this script into your repository's \"hooks\" directory"
@@ -42,6 +50,4 @@ pkg_postinst() {
 	elog "hook:"
 	elog ""
 	elog "  /usr/bin/ciabot-svn \"\$REPOS\" \"\$REV\" \"ProjectName\" &"
-	echo
-	epause
 }
