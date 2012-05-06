@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.589 2012/05/06 14:55:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.590 2012/05/06 16:51:27 chithanh Exp $
+
+  06 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gtk+-3.4.2.ebuild:
+  Fix compilation on non-solaris
 
   06 May 2012; Fabian Groffen <grobian@gentoo.org> gtk+-3.4.2.ebuild:
   Fix compilation on Solaris

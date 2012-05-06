@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.2.ebuild,v 1.3 2012/05/06 14:55:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.2.ebuild,v 1.4 2012/05/06 16:51:27 chithanh Exp $
 
 EAPI="4"
 
@@ -104,8 +104,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.3.20-wayland-xkbcommon-headers.patch"
 
 	# Work around https://bugzilla.gnome.org/show_bug.cgi?id=663991
-	[[ ${CHOST} == *-solaris* ]] && \
+	if [[ ${CHOST} == *-solaris* ]]; then
 		sed -i -e '/_XOPEN_SOURCE/s/500/600/' gtk/gtksearchenginesimple.c || die
+	fi
 
 	# Non-working test in gentoo's env
 	sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \
