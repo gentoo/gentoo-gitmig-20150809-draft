@@ -1,6 +1,10 @@
 # ChangeLog for app-text/chasen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.46 2012/04/16 12:49:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.47 2012/05/06 19:05:27 halcy0n Exp $
+
+  06 May 2012; Mark Loeser <halcy0n@gentoo.org> chasen-2.4.0.ebuild,
+  chasen-2.4.4.ebuild:
+  Drop to ~ppc64; bug #390769
 
   16 Apr 2012; Agostino Sarubbo <ago@gentoo.org> chasen-2.4.4-r2.ebuild:
   Stable for amd64, wrt bug #390769
