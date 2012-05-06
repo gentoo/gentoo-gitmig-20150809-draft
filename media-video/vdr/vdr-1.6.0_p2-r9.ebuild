@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r9.ebuild,v 1.2 2012/04/30 00:38:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r9.ebuild,v 1.3 2012/05/06 11:07:10 hd_brummy Exp $
 
 EAPI="4"
 
@@ -242,6 +242,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/vdr-1.6.0-extensions-72-gcc-4.4.diff
 		epatch "${FILESDIR}"/vdr-1.6.0-shared-tinyxml.diff
 		epatch "${FILESDIR}"/vdr-1.6.0_p2_linguas.diff
+		epatch "${FILESDIR}/vdr-1.6.0_p2_fontconfig_fontsort.patch"
 
 		# This allows us to start even if some plugin does not exist
 		# or is not loadable.
