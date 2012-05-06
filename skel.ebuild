@@ -107,7 +107,7 @@ RDEPEND="${DEPEND}"
 # unpacked) inside ${WORKDIR}.  The default value for S is ${WORKDIR}/${P}
 # If you don't need to change it, leave the S= line out of the ebuild
 # to keep it tidy.
-#S="${WORKDIR}/${P}"
+#S=${WORKDIR}/${P}
 
 
 # The following src_configure function is implemented as default by portage, so
