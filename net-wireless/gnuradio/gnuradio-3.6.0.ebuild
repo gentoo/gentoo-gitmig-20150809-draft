@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.0.ebuild,v 1.2 2012/05/06 12:46:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.0.ebuild,v 1.3 2012/05/06 13:38:45 chithanh Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -61,6 +61,7 @@ DEPEND="${RDEPEND}
 	)
 "
 
+# Add support for custom SYSCONFDIR, upstream bug #492
 PATCHES=(
 	"${FILESDIR}"/${PN}-3.6.0-cmake-sysconfdir.patch
 )
@@ -93,7 +94,6 @@ src_configure() {
 		-DENABLE_GR_CORE=ON
 		-DQWT_INCLUDE_DIRS="${EPREFIX}"/usr/include/qwt5
 		-DSYSCONFDIR="${EPREFIX}"/etc
-		-DGR_PREFSDIR="${EPREFIX}"/etc/${PN}/conf.d
 	)
 	cmake-utils_src_configure
 }

@@ -1,3 +1,24 @@
+diff -ur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
++++ b/CMakeLists.txt	2012-05-06 15:22:01.000000000 +0200
+@@ -107,6 +107,8 @@
+ set(GR_LIBEXEC_DIR      libexec)
+ set(GR_PKG_LIBEXEC_DIR  ${GR_LIBEXEC_DIR}/${CMAKE_PROJECT_NAME})
+ set(GRC_BLOCKS_DIR      ${GR_PKG_DATA_DIR}/grc/blocks)
++set(SYSCONFDIR          "${CMAKE_INSTALL_PREFIX}/${GR_CONF_DIR}" CACHE PATH "System configuration directory")
++set(GR_PREFSDIR         ${SYSCONFDIR}/${CMAKE_PROJECT_NAME}/conf.d)
+ 
+ ########################################################################
+ # Variables replaced when configuring the package config files
+@@ -115,6 +117,8 @@
+ file(TO_NATIVE_PATH "\${prefix}"                        exec_prefix)
+ file(TO_NATIVE_PATH "\${exec_prefix}/${GR_LIBRARY_DIR}" libdir)
+ file(TO_NATIVE_PATH "\${prefix}/${GR_INCLUDE_DIR}"      includedir)
++file(TO_NATIVE_PATH "${SYSCONFDIR}"                     SYSCONFDIR)
++file(TO_NATIVE_PATH "${GR_PREFSDIR}"                    GR_PREFSDIR)
+ 
+ ########################################################################
+ # Create uninstall target
 diff -ur a/gnuradio-core/CMakeLists.txt b/gnuradio-core/CMakeLists.txt
 --- a/gnuradio-core/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
 +++ b/gnuradio-core/CMakeLists.txt	2012-05-05 20:05:52.000000000 +0200
@@ -12,19 +33,17 @@ diff -ur a/gnuradio-core/CMakeLists.txt b/gnuradio-core/CMakeLists.txt
  
 diff -ur a/gnuradio-core/src/lib/general/CMakeLists.txt b/gnuradio-core/src/lib/general/CMakeLists.txt
 --- a/gnuradio-core/src/lib/general/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
-+++ b/gnuradio-core/src/lib/general/CMakeLists.txt	2012-05-05 21:14:44.000000000 +0200
-@@ -48,8 +48,9 @@
++++ b/gnuradio-core/src/lib/general/CMakeLists.txt	2012-05-06 15:01:12.000000000 +0200
+@@ -48,9 +48,6 @@
  
  message(STATUS "Loading version ${VERSION} into gr_constants...")
  
 -file(TO_NATIVE_PATH "${CMAKE_INSTALL_PREFIX}/${GR_CONF_DIR}"     SYSCONFDIR)
 -file(TO_NATIVE_PATH "${CMAKE_INSTALL_PREFIX}/${GR_PKG_CONF_DIR}" GR_PREFSDIR)
-+set(SYSCONFDIR "${CMAKE_INSTALL_PREFIX}/${GR_CONF_DIR}" CACHE PATH "System configuration directory")
-+file(TO_NATIVE_PATH "${SYSCONFDIR}"     SYSCONFDIR)
-+file(TO_NATIVE_PATH "${SYSCONFDIR}/${CMAKE_PROJECT_NAME}/conf.d" GR_PREFSDIR)
- 
+-
  #double escape for windows backslash path separators
  string(REPLACE "\\" "\\\\" prefix ${prefix})
+ string(REPLACE "\\" "\\\\" SYSCONFDIR ${SYSCONFDIR})
 diff -ur a/gr-audio/lib/CMakeLists.txt b/gr-audio/lib/CMakeLists.txt
 --- a/gr-audio/lib/CMakeLists.txt	2012-04-21 21:00:33.000000000 +0200
 +++ b/gr-audio/lib/CMakeLists.txt	2012-05-05 20:06:08.000000000 +0200
