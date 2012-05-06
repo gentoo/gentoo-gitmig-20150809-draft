@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.48.0-r1.ebuild,v 1.6 2012/04/28 03:26:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r1.ebuild,v 1.1 2012/05/06 16:22:14 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -26,7 +26,7 @@ RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	!!<=dev-libs/boost-1.35.0-r2
 	>=app-admin/eselect-boost-0.4"
 DEPEND="${RDEPEND}
-	>=dev-util/boost-build-1.48.0-r1:${SLOT}"
+	dev-util/boost-build:${SLOT}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -117,15 +117,14 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-BOOST_FOREACH.patch"
-	epatch "${FILESDIR}/${P}-mpi_python3.patch"
-	epatch "${FILESDIR}/${P}-respect_python-buildid.patch"
-	epatch "${FILESDIR}/${P}-support_dots_in_python-buildid.patch"
-	epatch "${FILESDIR}/${P}-no_strict_aliasing_python2.patch"
-	epatch "${FILESDIR}/${P}-disable_libboost_python3.patch"
-	epatch "${FILESDIR}/${P}-python_linking.patch"
-	epatch "${FILESDIR}/${P}-disable_icu_rpath.patch"
-	epatch "${FILESDIR}/remove-toolset-${PV}.patch"
+	epatch "${FILESDIR}/${PN}-1.48.0-mpi_python3.patch"
+	epatch "${FILESDIR}/${PN}-1.48.0-respect_python-buildid.patch"
+	epatch "${FILESDIR}/${PN}-1.48.0-support_dots_in_python-buildid.patch"
+	epatch "${FILESDIR}/${PN}-1.48.0-no_strict_aliasing_python2.patch"
+	epatch "${FILESDIR}/${PN}-1.48.0-disable_libboost_python3.patch"
+	epatch "${FILESDIR}/${PN}-1.48.0-python_linking.patch"
+	epatch "${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch"
+	epatch "${FILESDIR}/remove-toolset-1.48.0.patch"
 }
 
 src_configure() {
@@ -143,7 +142,7 @@ src_configure() {
 	fi
 
 	use icu && OPTIONS+=" -sICU_PATH=/usr"
-	use icu || OPTIONS+=" --disable-icu"
+	use icu || OPTIONS+=" --disable-icu boost.locale.icu=off"
 	use mpi || OPTIONS+=" --without-mpi"
 	use python || OPTIONS+=" --without-python"
 
