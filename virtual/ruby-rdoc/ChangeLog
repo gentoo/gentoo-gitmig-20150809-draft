@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-rdoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.7 2012/02/05 22:09:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.8 2012/05/06 14:07:03 ago Exp $
+
+  06 May 2012; Agostino Sarubbo <ago@gentoo.org> ruby-rdoc-2.ebuild:
+  Stable for amd64, wrt bug #348901
 
   05 Feb 2012; Markus Meier <maekke@gentoo.org> ruby-rdoc-1.ebuild:
   add ~arm, bug #332593
