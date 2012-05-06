@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.2.1.ebuild,v 1.3 2012/05/06 07:26:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.4.1.ebuild,v 1.1 2012/05/06 07:26:57 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -33,14 +33,13 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 RDEPEND="${COMMON_DEPEND}
 	!<gnome-base/gnome-applets-2.22.0"
-# eautoreconf requires >=dev-util/gtk-doc-am-1.9
+# eautoreconf requires >=dev-util/gtk-doc-am-1.11
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS"
 	# Do not add --disable-all-translations-in-one-xml : it will enable them
 	G2CONF="${G2CONF}
 		--enable-locations-compression
-		--disable-maintainer-mode
 		--disable-static
 		$(use_enable introspection)"
 }
