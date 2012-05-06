@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.31 2012/04/02 18:55:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.32 2012/05/06 12:15:30 ago Exp $
+
+  06 May 2012; Agostino Sarubbo <ago@gentoo.org> spawn-fcgi-1.6.3-r1.ebuild:
+  Stable for amd64, wrt bug #414083
 
 *spawn-fcgi-1.6.3-r1 (02 Apr 2012)
 
