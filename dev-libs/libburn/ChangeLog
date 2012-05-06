@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.114 2012/05/05 09:09:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.115 2012/05/06 12:06:55 billie Exp $
+
+  06 May 2012; Daniel Pielmeier <billie@gentoo.org> -libburn-1.2.0.ebuild:
+  Remove old.
 
   05 May 2012; Markus Meier <maekke@gentoo.org> libburn-1.2.2.ebuild:
   arm stable, bug #414159
