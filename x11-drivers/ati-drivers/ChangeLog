@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.281 2012/05/06 08:40:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.282 2012/05/06 08:58:27 scarabeus Exp $
+
+  06 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop unused use-local desc.
 
   06 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/ati-drivers-2.6.39.patch,
