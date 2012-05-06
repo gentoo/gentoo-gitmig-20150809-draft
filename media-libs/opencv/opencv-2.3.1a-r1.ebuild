@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a-r1.ebuild,v 1.6 2012/05/04 13:26:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a-r1.ebuild,v 1.7 2012/05/06 20:05:25 dilfridge Exp $
 
 EAPI=3
 
@@ -62,6 +62,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-nocaps.patch"
 	"${FILESDIR}/${P}-libav-0.7.patch"
 	"${FILESDIR}/${P}-True-False.patch"
+	"${FILESDIR}/${P}-gcc47.patch"
 )
 
 CMAKE_BUILD_TYPE="Release"
