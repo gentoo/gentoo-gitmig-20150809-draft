@@ -1,9 +1,9 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.54 2012/05/06 21:05:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.55 2012/05/06 21:14:27 ulm Exp $
 
   06 May 2012; Ulrich Müller <ulm@gentoo.org>
-  -qemacs-0.4.0_pre20090420-r1.ebuild:
+  qemacs-0.4.0_pre20090420-r1.ebuild:
   Revert.
 
   06 May 2012; Samuli Suominen <ssuominen@gentoo.org>
