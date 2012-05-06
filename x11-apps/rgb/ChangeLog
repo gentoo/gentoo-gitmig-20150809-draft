@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/rgb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.55 2011/02/14 15:48:17 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.56 2012/05/06 18:37:51 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org> rgb-1.0.4.ebuild:
+  keyword ~amd64-fbsd
 
   14 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -rgb-1.0.3.ebuild:
   old
