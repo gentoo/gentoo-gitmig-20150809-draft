@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.8 2012/01/07 19:40:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.9 2012/05/06 18:50:24 dilfridge Exp $
+
+  06 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  freecad-0.12.5284-r2.ebuild, +files/freecad-0.12.5284-boost148.patch:
+  Add upstream patch to fix build with boost-1.48, bug 406261
 
   07 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -freecad-0.11.3729.ebuild, -files/freecad-0.11.3729-asneeded.patch:
