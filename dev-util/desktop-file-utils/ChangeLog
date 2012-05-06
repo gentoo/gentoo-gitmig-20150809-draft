@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.124 2012/05/05 21:48:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.125 2012/05/06 00:34:23 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org>
+  desktop-file-utils-0.20-r1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Brent Baude <ranger@gentoo.org>
   desktop-file-utils-0.20-r1.ebuild:
