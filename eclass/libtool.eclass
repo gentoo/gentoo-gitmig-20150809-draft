@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.98 2011/12/21 21:21:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.99 2012/05/06 10:41:48 grobian Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -182,6 +182,7 @@ elibtoolize() {
 	case ${CHOST} in
 		*-aix*)     elt_patches+=" hardcode aixrtl aix-noundef" ;; #213277
 		*-darwin*)  elt_patches+=" darwin-ltconf darwin-ltmain darwin-conf" ;;
+		*-solaris*) elt_patches+=" sol2-conf" ;;
 		*-freebsd*) elt_patches+=" fbsd-conf fbsd-ltconf" ;;
 		*-hpux*)    elt_patches+=" hpux-conf deplibs hc-flag-ld hardcode hardcode-relink relink-prog no-lc" ;;
 		*-irix*)    elt_patches+=" irix-ltmain" ;;
