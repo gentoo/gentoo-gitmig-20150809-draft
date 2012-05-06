@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.182 2012/05/05 19:38:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.183 2012/05/06 16:26:56 hwoarang Exp $
+
+*icu-49.1.1-r1 (06 May 2012)
+
+  06 May 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/icu-49.1.1-regex.patch, +icu-49.1.1-r1.ebuild:
+  Fix support for regular expressions with look-behind assertions and case
+  insensitive matching. Ebuild by Arfrever.
 
   05 May 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   remove description from metadata
