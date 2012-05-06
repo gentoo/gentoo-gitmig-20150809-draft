@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.220 2012/05/05 05:38:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.221 2012/05/06 10:04:50 tetromino Exp $
+
+  06 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-keyring-3.2.1.ebuild, gnome-keyring-3.2.2.ebuild:
+  Restore alpha, arm, ia64, ppc, ppc64, sparc keywords since p11-kit is now
+  keyworded on these arches. Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-keyring-2.32.1.ebuild,
   gnome-keyring-2.32.1-r1.ebuild, gnome-keyring-3.2.1.ebuild,
