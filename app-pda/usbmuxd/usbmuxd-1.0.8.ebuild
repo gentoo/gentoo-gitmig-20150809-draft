@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/usbmuxd-1.0.8.ebuild,v 1.4 2012/05/05 17:32:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/usbmuxd-1.0.8.ebuild,v 1.5 2012/05/06 21:44:18 ssuominen Exp $
 
 EAPI=4
 inherit cmake-utils user
@@ -25,12 +25,3 @@ pkg_setup() {
 }
 
 DOCS="AUTHORS README README.devel"
-
-src_configure() {
-	# Modules/FindUSB.cmake is broken wrt #414601
-	local mycmakeargs=(
-		-DUSB_INCLUDE_DIR=/usr/include/libusb-1.0
-		)
-
-	cmake-utils_src_configure
-}
