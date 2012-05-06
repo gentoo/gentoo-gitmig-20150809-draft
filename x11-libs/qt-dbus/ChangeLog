@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.105 2012/04/05 15:24:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.106 2012/05/06 15:18:34 pesa Exp $
+
+  06 May 2012; Davide Pesavento <pesa@gentoo.org> qt-dbus-4.8.1.ebuild:
+  Minor ebuild cleanup.
 
   05 Apr 2012; Johannes Huber <johu@gentoo.org> -qt-dbus-4.8.0.ebuild:
   Drop Qt-4.8.0
