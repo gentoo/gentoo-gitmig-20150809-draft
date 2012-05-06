@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.22 2012/03/17 17:56:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.23 2012/05/06 16:29:37 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> pax-3.4.12.16.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #404599
 
   17 Mar 2012; Raúl Porcel <armin76@gentoo.org> pax-3.3.4.ebuild:
   sparc stable wrt #381977
