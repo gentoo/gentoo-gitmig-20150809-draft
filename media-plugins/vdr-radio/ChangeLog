@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-radio
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/ChangeLog,v 1.22 2009/08/20 19:22:12 zzam Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/ChangeLog,v 1.23 2012/05/06 19:57:20 hd_brummy Exp $
+
+*vdr-radio-0.9.0 (06 May 2012)
+
+  06 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-radio-0.1.4.ebuild,
+  -vdr-radio-0.2.0.ebuild, -files/vdr-radio-0.2.0-vdr-1.5.1.diff,
+  -vdr-radio-0.2.1.ebuild, -vdr-radio-0.2.2.ebuild, -vdr-radio-0.2.3.ebuild,
+  -vdr-radio-0.2.5.ebuild, -files/vdr-radio-0.2.5-glibc-2.10.patch,
+  +vdr-radio-0.9.0.ebuild:
+  bump; eapi=4; vdr-plugin-2.eclass
 
 *vdr-radio-0.2.5 (20 Aug 2009)
 

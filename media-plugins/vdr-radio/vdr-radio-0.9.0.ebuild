@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/vdr-radio-0.2.1.ebuild,v 1.3 2007/10/19 12:09:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/vdr-radio-0.9.0.ebuild,v 1.1 2012/05/06 19:57:20 hd_brummy Exp $
 
-inherit vdr-plugin eutils
+EAPI="4"
+
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: show background image for radio and decode RDS Text"
 HOMEPAGE="http://www.vdr-portal.de/board/thread.php?threadid=58795"
@@ -13,18 +15,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.3.43"
+RDEPEND=">=media-video/vdr-1.6.0"
+DEPEND="${RDEPEND}"
 
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon.sh-0.2.0"
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
+
+	cd "${S}"/config
 
 	insinto /usr/share/vdr/radio
-	doins "${S}"/mpegstill/rtext*
+	doins mpegstill/rtext*
 	dosym rtextOben-kleo2-live.mpg /usr/share/vdr/radio/radio.mpg
 	dosym rtextOben-kleo2-replay.mpg /usr/share/vdr/radio/replay.mpg
 
+	exeinto /usr/share/vdr/radio
+	doexe scripts/radioinfo*
+
+	diropts -m 755 -o vdr -g vdr
 	keepdir "/var/cache/vdr-radio"
-	chown -R vdr:vdr "${D}"/var/cache/vdr-radio
 }
