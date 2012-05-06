@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.52 2012/04/16 18:07:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.53 2012/05/06 07:39:34 tetromino Exp $
+
+*libgdata-0.12.0 (06 May 2012)
+
+  06 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libgdata-0.8.1.ebuild, -libgdata-0.8.1-r1.ebuild, -libgdata-0.10.1.ebuild,
+  +libgdata-0.12.0.ebuild:
+  Version bump, passwords are now kept in non-pageable memory and redacted from
+  logs unless LIBGDATA_DEBUG=4. Drop old/insecure versions.
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> libgdata-0.8.1-r2.ebuild:
   Marking libgdata-0.8.1-r2 ppc for bug 408245
