@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13724 2012/05/06 09:13:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13725 2012/05/06 16:52:29 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (06 May 2012)
+# Mask out broken release of cmake wrt bug #414659 and
+# bug #414601. Waiting for maintainers to apply the
+# upstream patch.
+=dev-util/cmake-2.8.8-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (06 May 2012)
 # Stopped working long time ago. Removal in 30 days
