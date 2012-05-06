@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.111 2012/03/31 18:30:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.112 2012/05/06 13:02:50 grobian Exp $
+
+  06 May 2012; Fabian Groffen <grobian@gentoo.org> unixODBC-2.3.1.ebuild:
+  Marked ~x{86,64}-solaris
 
   31 Mar 2012; Raúl Porcel <armin76@gentoo.org> unixODBC-2.3.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #405059
