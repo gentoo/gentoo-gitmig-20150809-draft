@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.193 2012/05/02 22:05:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.194 2012/05/06 18:52:29 dilfridge Exp $
+
+  06 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> cmake-2.8.8-r1.ebuild:
+  Remove keywords until bug 414659 is fixed
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> cmake-2.8.6-r4.ebuild,
   cmake-2.8.7-r4.ebuild, cmake-2.8.7-r5.ebuild, cmake-2.8.8-r1.ebuild:
