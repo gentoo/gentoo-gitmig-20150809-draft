@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.222 2012/05/05 21:53:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.223 2012/05/06 12:17:30 ago Exp $
+
+  06 May 2012; Agostino Sarubbo <ago@gentoo.org> sysstat-10.0.4.ebuild:
+  Stable for amd64, wrt bug #414483
 
   05 May 2012; Brent Baude <ranger@gentoo.org> sysstat-10.0.4.ebuild:
   Marking sysstat-10.0.4 ppc for bug 414483
