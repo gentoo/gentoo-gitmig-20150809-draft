@@ -1,4 +1,4 @@
-PyPy does not provide the PyArg_NoArgs function, substitute it with a macro.
+PyPy does not provide the PyArg_NoArgs macro.
 --- a/src/rl_addons/rl_accel/sgmlop.c
 +++ b/src/rl_addons/rl_accel/sgmlop.c
 @@ -52,6 +52,9 @@
