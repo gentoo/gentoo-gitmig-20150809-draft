@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.3 2012/05/04 18:35:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.4 2012/05/06 12:24:22 grobian Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -50,6 +50,9 @@ src_prepare() {
 	gnome2_src_prepare
 
 	python_clean_py-compile_files
+
+	# avoid GNU-isms
+	sed -i -e 's/\(if test .* \)==/\1=/' configure || die
 
 	gi_skip_tests=
 	if ! has_version "x11-libs/cairo[glib]"; then
