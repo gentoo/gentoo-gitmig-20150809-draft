@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.10.ebuild,v 1.2 2012/04/26 19:09:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.10.ebuild,v 1.3 2012/05/06 08:02:39 grobian Exp $
 
 EAPI=4
-inherit xorg-2 flag-o-matic
+inherit xorg-2
 
 DESCRIPTION="X.Org Xpm library"
 
@@ -18,10 +18,10 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-src_compile() {
+src_configure() {
 	# the gettext configure check and code in sxpm are incorrect; they assume
 	# gettext being in libintl, whereas Solaris has gettext by default
 	# resulting in libintl not being added to LIBS
-	[[ ${CHOST} == *-solaris* ]] && append-libs -lintl
-	xorg-2_src_compile
+	[[ ${CHOST} == *-solaris* ]] && export ac_cv_search_gettext=-lintl
+	xorg-2_src_configure
 }
