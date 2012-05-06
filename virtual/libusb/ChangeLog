@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.20 2012/04/20 08:44:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.21 2012/05/06 00:40:32 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org> libusb-0.ebuild:
+  keyword ~amd64-fbsd
 
   20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> libusb-1.ebuild:
   Raise requirement of libusb to >= 1.0.9_rc for compability with usbredir.
