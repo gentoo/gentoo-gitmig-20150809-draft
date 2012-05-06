@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.32 2012/03/04 15:38:50 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.33 2012/05/06 16:50:55 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> mh-20111011.ebuild:
+  ia64/s390/sh/sparc stable wrt #395735
 
   04 Mar 2012; Tobias Klausmann <klausman@gentoo.org> mh-20111011.ebuild:
   Stable on alpha, bug #395735

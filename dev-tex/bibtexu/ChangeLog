@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/bibtexu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.25 2012/05/02 20:59:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.26 2012/05/06 16:49:20 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> bibtexu-3.71_p20110705.ebuild:
+  ia64/s390/sh/sparc stable wrt #395735
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> bibtexu-3.71_p20100722.ebuild,
   bibtexu-3.71_p20110627.ebuild, bibtexu-3.71_p20110705.ebuild:
