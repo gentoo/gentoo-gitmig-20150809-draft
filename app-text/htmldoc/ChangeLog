@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmldoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.73 2012/04/16 19:23:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.74 2012/05/06 11:40:05 xarthisius Exp $
+
+  06 May 2012; Kacper Kowalik <xarthisius@gentoo.org> -htmldoc-1.8.27-r2.ebuild,
+  htmldoc-1.8.27-r3.ebuild:
+  ppc64 stable wrt #219373, drop old
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> htmldoc-1.8.27-r3.ebuild:
   Marking htmldoc-1.8.27-r3 ppc for bug 219373

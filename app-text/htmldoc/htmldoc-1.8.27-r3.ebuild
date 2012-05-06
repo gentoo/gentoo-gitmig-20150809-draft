@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r3.ebuild,v 1.7 2012/04/16 19:23:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r3.ebuild,v 1.8 2012/05/06 11:40:05 xarthisius Exp $
 
 EAPI="4"
 inherit eutils
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.easysw.com/htmldoc/"
 IUSE="fltk ssl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
 
 DEPEND=">=media-libs/libpng-1.4
 	virtual/jpeg
