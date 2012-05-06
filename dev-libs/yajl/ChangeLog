@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.21 2012/05/05 11:38:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.22 2012/05/06 09:21:23 graaff Exp $
+
+*yajl-2.0.4 (06 May 2012)
+
+  06 May 2012; Hans de Graaff <graaff@gentoo.org> +yajl-2.0.4.ebuild:
+  Version bump. Closes bug 414759, thanks to Johan Bergström for reporting.
 
   05 May 2012; Markus Meier <maekke@gentoo.org> yajl-2.0.3.ebuild:
   x86 stable, bug #402287
