@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.167 2012/04/26 12:27:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.168 2012/05/06 18:16:34 vapier Exp $
+
+*gmp-5.0.5 (06 May 2012)
+
+  06 May 2012; Mike Frysinger <vapier@gentoo.org> +gmp-5.0.5.ebuild:
+  Version bump.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gmp-5.0.4.ebuild:
   keyword ~amd64-fbsd
