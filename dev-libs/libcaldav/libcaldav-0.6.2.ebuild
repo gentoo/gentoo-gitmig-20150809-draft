@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcaldav/libcaldav-0.6.2.ebuild,v 1.2 2011/07/18 09:38:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcaldav/libcaldav-0.6.2.ebuild,v 1.3 2012/05/06 17:00:17 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 inherit base
 
@@ -17,7 +17,7 @@ IUSE="doc"
 
 RDEPEND="
 	dev-libs/glib
-	net-misc/curl[ssl,gnutls]
+	net-misc/curl[ssl,gnutls(+),curl_ssl_gnutls(+)]
 "
 DEPEND="${RDEPEND}
 	doc? ( 	app-doc/doxygen
@@ -25,5 +25,5 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
-	econf $(use_enable doc) || die
+	econf $(use_enable doc)
 }
