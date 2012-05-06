@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-DesktopEntry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.31 2012/03/18 02:15:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.32 2012/05/06 00:35:49 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org>
+  File-DesktopEntry-0.40.0.ebuild:
+  keyword ~amd64-fbsd
 
   18 Mar 2012; Matt Turner <mattst88@gentoo.org>
   File-DesktopEntry-0.40.0.ebuild:
