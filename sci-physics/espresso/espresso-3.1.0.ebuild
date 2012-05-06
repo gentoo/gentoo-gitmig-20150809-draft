@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.1.0.ebuild,v 1.4 2012/05/06 21:02:35 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.1.0.ebuild,v 1.5 2012/05/06 23:08:00 ottxor Exp $
 
 EAPI=4
 
@@ -46,6 +46,11 @@ src_prepare() {
 	autotools-utils_src_prepare
 	eautoreconf
 	restore_config myconfig.h
+	rm -f src/myconfig-final.h
+	if [[ ${CHOST} == *-darwin* ]]; then
+		#tclline uses stty, which has different exit code on Darwin
+		sed -i '/source.*tclline/s/^/#/' "scripts/init.tcl" || die
+	fi
 }
 
 src_configure() {
