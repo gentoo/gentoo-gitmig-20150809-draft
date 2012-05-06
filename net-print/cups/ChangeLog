@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.471 2012/05/03 20:45:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.472 2012/05/06 18:08:17 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> cups-1.5.2-r4.ebuild,
+  cups-1.5.2-r20.ebuild:
+  Add ~alpha/~ia64/~m68k/~s390/~sh/~sparc wrt #401067
 
   03 May 2012; Markus Meier <maekke@gentoo.org> cups-1.5.2-r4.ebuild:
   arm stable, bug #411887
