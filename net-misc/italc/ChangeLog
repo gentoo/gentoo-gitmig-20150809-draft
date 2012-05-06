@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.25 2012/03/18 18:42:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.26 2012/05/06 23:03:14 pesa Exp $
+
+  06 May 2012; Davide Pesavento <pesa@gentoo.org> italc-1.0.9.ebuild:
+  Migrate to qt4-r2.eclass and fix Qt dependencies.
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118003.

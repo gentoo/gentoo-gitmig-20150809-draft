@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.9 2011/02/28 18:02:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.10 2012/05/06 23:03:14 pesa Exp $
 
 EAPI=2
 
-inherit autotools qt4 eutils autotools
+inherit eutils qt4-r2 autotools
 
 DESCRIPTION="Intelligent Teaching And Learning with Computers (iTALC) supports working with computers in school"
 HOMEPAGE="http://italc.sourceforge.net/"
@@ -21,11 +21,12 @@ RDEPEND="dev-libs/lzo
 	virtual/jpeg
 	sys-libs/zlib
 	dev-libs/openssl
-	x11-libs/qt-core
-	x11-libs/qt-xmlpatterns
+	x11-libs/qt-core:4
+	x11-libs/qt-xmlpatterns:4
 	system-libvncserver? ( net-libs/libvncserver )
 	xinerama? ( x11-libs/libXinerama )
-	X? ( x11-libs/libICE
+	X? (
+		x11-libs/libICE
 		x11-libs/libSM
 		x11-libs/libX11
 		x11-libs/libXdamage
@@ -34,7 +35,8 @@ RDEPEND="dev-libs/lzo
 		x11-libs/libXrandr
 		x11-libs/libXtst
 		x11-apps/xinput
-		x11-libs/qt-gui:4 )"
+		x11-libs/qt-gui:4
+	)"
 DEPEND="${RDEPEND}
 	X? ( x11-proto/inputproto )"
 
