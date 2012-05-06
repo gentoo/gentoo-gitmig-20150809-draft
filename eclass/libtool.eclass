@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.99 2012/05/06 10:41:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.100 2012/05/06 11:42:07 grobian Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -333,7 +333,7 @@ elibtoolize() {
 						fi
 					done
 					;;
-				mint-conf|gold-conf)
+				mint-conf|gold-conf|sol2-conf)
 					ret=1
 					local subret=1
 					if [[ -e ${d}/configure ]]; then
