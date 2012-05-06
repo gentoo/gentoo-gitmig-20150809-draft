@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.71 2012/05/06 17:12:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.72 2012/05/06 20:23:15 ssuominen Exp $
+
+  06 May 2012; Samuli Suominen <ssuominen@gentoo.org> PAR-Dist-0.480.0.ebuild:
+  Keyword ~ppc/~ppc64 wrt #408399
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> PAR-Dist-0.480.0.ebuild:
   Add ~alpha/~arm/~ia64/~s390/~sh/~sparc wrt #408399
