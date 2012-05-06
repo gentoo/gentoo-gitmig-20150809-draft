@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.189 2012/05/05 21:34:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.190 2012/05/06 14:06:36 ago Exp $
+
+  06 May 2012; Agostino Sarubbo <ago@gentoo.org> rubygems-1.8.15.ebuild:
+  Stable for amd64, wrt bug #348901
 
   05 May 2012; Brent Baude <ranger@gentoo.org> rubygems-1.8.15.ebuild:
   Marking rubygems-1.8.15 ppc for bug 348901
