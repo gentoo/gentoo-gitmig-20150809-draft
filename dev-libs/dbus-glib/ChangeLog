@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.101 2012/05/04 18:35:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.102 2012/05/06 00:29:49 aballier Exp $
+
+  06 May 2012; Alexis Ballier <aballier@gentoo.org> dbus-glib-0.98.ebuild:
+  keyword ~amd64-fbsd
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> dbus-glib-0.98.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
