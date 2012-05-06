@@ -1,6 +1,12 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.84 2012/03/11 01:38:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.85 2012/05/06 15:16:07 polynomial-c Exp $
+
+*dos2unix-6.0 (06 May 2012)
+
+  06 May 2012; Lars Wendler <polynomial-c@gentoo.org> -dos2unix-5.3.2.ebuild,
+  -files/dos2unix-5.3.2-fix_debug_build.patch, +dos2unix-6.0.ebuild:
+  non-maintainer commit: Version bump. Removed old.
 
 *dos2unix-5.3.3 (11 Mar 2012)
 

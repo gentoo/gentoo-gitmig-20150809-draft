@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.3.2.ebuild,v 1.1 2012/01/31 06:17:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-6.0.ebuild,v 1.1 2012/05/06 15:16:07 polynomial-c Exp $
 
 EAPI=4
 
@@ -26,17 +26,21 @@ DEPEND="
 	dev-lang/perl"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-5.3.2-fix_debug_build.patch
-
 	sed \
 		-e '/^LDFLAGS/s|=|+=|' \
 		-e '/^CC/s|=|?=|' \
 		-e '/CFLAGS_OS \+=/d' \
 		-e '/LDFLAGS_EXTRA \+=/d' \
 		-e "/^CFLAGS/s|-O2|${CFLAGS}|" \
-		-i "${S}"/Makefile || die
+		-i Makefile || die
+
+	if use debug ; then
+		sed -e "/^DEBUG/s:0:1:" \
+			-e "/EXTRA_CFLAGS +=/s:-g::" \
+			-i Makefile || die
+	fi
+
 	tc-export CC
-	use debug && sed "/DEBUG/s:0:1:g" -i Makefile
 }
 
 lintl() {
