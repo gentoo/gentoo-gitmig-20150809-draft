@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.86 2012/04/26 11:10:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.87 2012/05/06 16:27:34 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> xfsdump-3.0.6.ebuild:
+  alpha/ia64 stable wrt #404865
 
 *xfsdump-3.1.0 (26 Apr 2012)
 
