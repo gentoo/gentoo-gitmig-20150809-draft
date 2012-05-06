@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/prefork
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.43 2012/03/26 22:59:46 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.44 2012/05/06 17:18:32 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> prefork-1.40.0.ebuild:
+  Add ~arm/~s390/~sh
 
   26 Mar 2012; Naohiro Aota <naota@gentoo.org> prefork-1.40.0.ebuild:
   Add ~x86-fbsd. #408399
