@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/qt-recordmydesktop-0.3.8-r2.ebuild,v 1.1 2012/04/26 08:26:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/qt-recordmydesktop-0.3.8-r2.ebuild,v 1.2 2012/05/06 20:22:42 hwoarang Exp $
 
 EAPI=4
 
@@ -34,6 +34,7 @@ DOCS=( AUTHORS ChangeLog NEWS README )
 PATCHES=(
 	"${FILESDIR}/${P}-check-for-jack.patch"
 	"${FILESDIR}/${P}-desktopfile.patch"
+	"${FILESDIR}/${P}-pyqt4.patch"
 )
 
 pkg_setup() {
@@ -43,6 +44,7 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
+	eautoreconf
 
 	# these deps are required by PyQt4, not this package
 	sed -e '/^PKG_CHECK_MODULES/d' -i configure.ac || die "sed failed"

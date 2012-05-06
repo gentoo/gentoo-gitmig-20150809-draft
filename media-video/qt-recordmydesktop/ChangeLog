@@ -1,6 +1,11 @@
 # ChangeLog for media-video/qt-recordmydesktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.22 2012/04/26 22:48:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.23 2012/05/06 20:22:42 hwoarang Exp $
+
+  06 May 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/qt-recordmydesktop-0.3.8-pyqt4.patch,
+  qt-recordmydesktop-0.3.8-r2.ebuild:
+  Add a workaround for PyQt4 detection. Fixes bug #414467
 
   26 Apr 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Remove redundant maintainer entry in metadata.
