@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-threads
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.6 2011/12/28 16:33:12 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.7 2012/05/06 15:08:29 xarthisius Exp $
+
+  06 May 2012; Kacper Kowalik <xarthisius@gentoo.org> ruby-threads-0.ebuild:
+  ppc64 stable wrt #369573
 
   28 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-threads-1.ebuild:
   Add keywords similar to the underlying implementation, most notable ruby 1.9.
