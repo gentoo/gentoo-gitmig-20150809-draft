@@ -1,18 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-0_pre20120330.ebuild,v 1.3 2012/05/06 00:08:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.1 2012/05/06 00:08:17 hasufell Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit toolchain-funcs git-2
 
 DESCRIPTION="A compositor for X, and a fork of xcompmgr-dana"
 HOMEPAGE="http://github.com/chjj/compton"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI=""
+
+EGIT_REPO_URI="git://github.com/chjj/compton.git"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 COMMON_DEPEND="x11-libs/libX11

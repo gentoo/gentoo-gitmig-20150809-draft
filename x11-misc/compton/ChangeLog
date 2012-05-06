@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/compton
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.3 2012/05/05 04:53:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.4 2012/05/06 00:08:17 hasufell Exp $
+
+*compton-9999 (06 May 2012)
+
+  06 May 2012; Julian Ospald <hasufell@gentoo.org>
+  -compton-0_pre20120316.ebuild, compton-0_pre20120330.ebuild,
+  +compton-9999.ebuild:
+  add live-ebuild, reorganize global scope, remove old
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> compton-0_pre20120316.ebuild,
   compton-0_pre20120330.ebuild:
