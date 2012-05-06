@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20.1-r2.ebuild,v 1.2 2012/04/21 06:24:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20.1-r2.ebuild,v 1.3 2012/05/06 23:47:42 vapier Exp $
 
 EAPI="3"
 
@@ -37,11 +37,11 @@ RDEPEND="!sys-process/schedutils
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
 	perl? ( dev-lang/perl )
 	selinux? ( sys-libs/libselinux )
-	slang? ( sys-libs/slang )
-	uclibc? ( ${AUTOTOOLS_DEPEND} )"
+	slang? ( sys-libs/slang )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	virtual/os-headers"
+	virtual/os-headers
+	uclibc? ( ${AUTOTOOLS_DEPEND} )"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
