@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.22 2011/12/31 18:45:33 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.23 2012/05/06 14:30:04 xarthisius Exp $
+
+  06 May 2012; Kacper Kowalik <xarthisius@gentoo.org> rexical-1.0.5.ebuild:
+  ppc64 stable wrt #369573
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> rexical-1.0.5-r1.ebuild:
   Add Prefix keywords, bug #396547
