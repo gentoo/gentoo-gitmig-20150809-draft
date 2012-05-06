@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-remote
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/ChangeLog,v 1.24 2011/01/17 21:50:00 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/ChangeLog,v 1.25 2012/05/06 19:31:39 hd_brummy Exp $
+
+  06 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-remote-0.4.0-r2.ebuild:
+  eapi=4; vdr-plugin-2.eclass
 
   17 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-remote-0.3.8.ebuild, -files/vdr-remote-0.3.8-uint64.diff,
