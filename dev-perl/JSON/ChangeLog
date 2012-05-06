@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/JSON
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.44 2012/04/22 18:07:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.45 2012/05/06 17:58:54 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> JSON-2.27.ebuild,
+  JSON-2.530.0.ebuild:
+  Add ~arm/~s390/~sh
 
   22 Apr 2012; Fabian Groffen <grobian@gentoo.org> JSON-2.530.0.ebuild:
   Marked ~amd64-linux, bug #411635
