@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12.ebuild,v 1.2 2012/04/29 20:59:33 mr_bones_ Exp $i
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12-r1.ebuild,v 1.1 2012/05/06 19:03:01 araujo Exp $i
 
 EAPI=4
 
@@ -43,7 +43,7 @@ RDEPEND=""
 REQUIRED_USE="vorbis? ( ogg )"
 
 src_prepare() {
-	epatch ${FILESDIR}/${P}-gentoo-fixes.patch
+	epatch "${FILESDIR}/${P}-gentoo-fixes.patch"
 }
 
 src_configure() {
@@ -82,6 +82,11 @@ src_configure() {
 		-DCMAKE_SKIP_RPATH=ON
 	)
 	cmake-utils_src_configure
+}
+
+src_compile() {
+	# Fix bug #414421
+	cmake-utils_src_compile -j1
 }
 
 src_install() {
