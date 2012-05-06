@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.5 2012/05/06 11:00:22 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.6 2012/05/06 11:42:45 billie Exp $
 
 EAPI=4
 
@@ -94,17 +94,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-
 	use !minimal && python_convert_shebangs -q -r 2 .
+
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}"
 
 	# Fix for Gentoo bug #345725
 	sed -i -e "s|/etc/udev/rules.d|/lib/udev/rules.d|" \
 		$(find ./ -type f -exec grep -l '/etc/udev/rules.d' '{}' '+') \
 		|| die
-
-	EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" \
-	epatch "${WORKDIR}"
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \

@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.225 2012/05/06 11:00:22 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.226 2012/05/06 11:42:45 billie Exp $
+
+  06 May 2012; Daniel Pielmeier <billie@gentoo.org>
+  -files/hplip-3.11.12-black-stripes-pcl5c.patch,
+  -files/hplip-3.11.12-fast-pp.patch, -files/hplip-3.11.12-udev-rules.patch,
+  hplip-3.12.2-r2.ebuild, -files/hplip-3.12.2-minimal.patch,
+  -files/hplip-3.12.2-sane.patch, hplip-3.12.4.ebuild:
+  Use patch tarball.
 
   06 May 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.4.ebuild,
   -files/hplip-3.12.4-cupsddk.patch, -files/hplip-3.12.4-desktop.patch,
