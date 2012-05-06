@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1.ebuild,v 1.3 2012/05/05 08:58:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1.ebuild,v 1.4 2012/05/06 17:33:43 dilfridge Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="0.96.1"
@@ -42,6 +42,7 @@ DEPEND="${COMMONDEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.1-cflags.patch"
 	"${FILESDIR}/${PN}-1.2.0-cdrtools.patch"
+	"${FILESDIR}/${PN}-1.2.1-glib.patch"
 )
 
 src_configure() {
