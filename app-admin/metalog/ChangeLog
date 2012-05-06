@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.101 2012/02/28 20:44:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.102 2012/05/06 16:27:27 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> metalog-2.ebuild:
+  ia64/s390/sh/sparc stable wrt #390033
 
   28 Feb 2012; Brent Baude <ranger@gentoo.org> metalog-2.ebuild:
   Marking metalog-2 ppc for bug 390033
