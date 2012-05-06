@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/espresso
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.8 2012/04/08 11:11:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.9 2012/05/06 21:02:35 ottxor Exp $
+
+  06 May 2012; Christoph Junghans <ottxor@gentoo.org> espresso-3.1.0.ebuild:
+  fix deps + add prefix keywords
 
   08 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> espresso-3.1.0.ebuild:
   [sci-physics/espresso] Add ~amd64 keyword
