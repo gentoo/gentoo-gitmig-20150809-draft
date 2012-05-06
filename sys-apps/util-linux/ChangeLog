@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.380 2012/04/21 17:35:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.381 2012/05/06 23:35:20 vapier Exp $
+
+  06 May 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.21.1-cal-nl.patch, util-linux-2.21.1.ebuild:
+  Fix from upstream for building on non-glibc hosts #414849 by James Le Cuirot.
 
   21 Apr 2012; Mike Frysinger <vapier@gentoo.org>
   files/util-linux-2.20.1-no-printf-alloc.patch,
