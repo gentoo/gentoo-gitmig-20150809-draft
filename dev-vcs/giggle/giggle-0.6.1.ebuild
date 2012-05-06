@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/giggle-0.6.1.ebuild,v 1.5 2012/05/03 02:57:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/giggle-0.6.1.ebuild,v 1.6 2012/05/06 13:59:19 ikelos Exp $
 
 EAPI="3"
 
-inherit gnome2
+inherit gnome2 autotools eutils
 
 DESCRIPTION="GTK+ Frontend for GIT"
 HOMEPAGE="http://live.gnome.org/giggle"
@@ -32,3 +32,8 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 G2CONF="$(use_enable eds evolution-data-server)"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gmodule-explicit.patch"
+	eautoreconf
+}

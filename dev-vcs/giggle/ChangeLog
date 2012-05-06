@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.13 2012/05/03 02:57:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.14 2012/05/06 13:59:19 ikelos Exp $
+
+  06 May 2012; Mike Auty <ikelos@gentoo.org> giggle-0.6.1.ebuild,
+  +files/giggle-0.6.1-gmodule-explicit.patch:
+  Fix bug 414835, no version bump since it's a compilation bug.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> giggle-0.5.ebuild,
   giggle-0.6.1.ebuild:
