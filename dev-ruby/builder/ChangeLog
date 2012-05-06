@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.66 2012/01/25 15:52:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.67 2012/05/06 18:08:05 graaff Exp $
+
+  06 May 2012; Hans de Graaff <graaff@gentoo.org> builder-3.0.0-r1.ebuild:
+  Add explicit dependency on the rdoc gem since the rake task requires it, bug
+  400709.
 
   25 Jan 2012; Diego E. Pettenò <flameeyes@gentoo.org> builder-3.0.0-r1.ebuild:
   Add missing dependency over ctags (bug #400709).
