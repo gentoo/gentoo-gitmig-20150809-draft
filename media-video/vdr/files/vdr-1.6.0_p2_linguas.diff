@@ -18,7 +18,7 @@ diff -Naur vdr-1.7.27.orig/Makefile vdr-1.7.27/Makefile
  install-i18n:
  	@mkdir -p $(DESTDIR)$(LOCDIR)
 -	@(cd $(LOCALEDIR); cp -r --parents * $(DESTDIR)$(LOCDIR))
-+	@(cd $(LOCALEDIR); for linguas in $(LINGUAS); do cp -r --parents $$linguas* $(DESTDIR)$(LOCDIR); done)
++	@(cd $(LOCALEDIR); for linguas in $(LINGUAS); do [ "$$linguas" = "en" ] && continue; cp -r --parents $$linguas* $(DESTDIR)$(LOCDIR); done)
  
  # The 'include' directory (for plugins):
  
