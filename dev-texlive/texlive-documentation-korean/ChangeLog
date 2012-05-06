@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-korean
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-korean/ChangeLog,v 1.46 2012/03/04 15:44:12 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-korean/ChangeLog,v 1.47 2012/05/06 17:11:31 armin76 Exp $
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org>
+  texlive-documentation-korean-2011.ebuild:
+  ia64/s390/sh/sparc stable wrt #395735
 
   04 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   texlive-documentation-korean-2011.ebuild:
