@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6504 2012/05/06 16:38:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6505 2012/05/06 16:48:04 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  hardened/linux/make.defaults, hardened/linux/x86/make.defaults:
+  Remove last of USE="nptlonly" and USE="sysfs" wrt #405875
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> releases/make.defaults:
   Remove nptlonly sysfs from make.defaults, bug #405875
