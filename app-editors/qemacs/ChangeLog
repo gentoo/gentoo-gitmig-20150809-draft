@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.52 2012/05/04 10:59:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.53 2012/05/06 20:46:45 ssuominen Exp $
+
+  06 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  qemacs-0.4.0_pre20090420.ebuild:
+  Revert keywording to ~ppc wrt #414945 pending on user request
 
   04 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   qemacs-0.4.0_pre20090420-r1.ebuild:
