@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gmso2/gmso2-0.1-r1.ebuild,v 1.1 2012/05/04 15:29:25 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gmso2/gmso2-0.1-r1.ebuild,v 1.2 2012/05/06 12:16:00 ago Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://mso.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 COMMON_DEP="
