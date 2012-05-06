@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.102 2012/04/26 02:03:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.103 2012/05/06 20:25:48 ranger Exp $
+
+  06 May 2012; Brent Baude <ranger@gentoo.org> DBD-SQLite-1.350.0.ebuild:
+  Marking DBD-SQLite-1.350.0 ppc for bug 413007
 
   26 Apr 2012; Jeroen Roovers <jer@gentoo.org> DBD-SQLite-1.350.0.ebuild:
   Stable for HPPA (bug #413007).
