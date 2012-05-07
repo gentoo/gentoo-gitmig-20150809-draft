@@ -1,6 +1,16 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.38 2012/05/04 05:50:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.39 2012/05/07 10:14:24 hwoarang Exp $
+
+*lxpanel-0.5.8-r3 (07 May 2012)
+
+  07 May 2012; Markos Chandras <hwoarang@gentoo.org> +lxpanel-0.5.8-r3.ebuild,
+  +files/lxpanel-0.5.8-dynamic-width.patch,
+  files/lxpanel-0.5.8-thermal-plugin.patch:
+  Add patch for fixing dynamic width and autohide results thanks to Jack Chen
+  <speed.up08311990@gmail.com>. Fixes bug #408541. Backport thermal plugin
+  patch from upstream git repository. Fixes bug #400855. Thanks to Maxim
+  Kammerer <mk@dee.su>
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> lxpanel-0.5.6.ebuild,
   lxpanel-0.5.7-r1.ebuild, lxpanel-0.5.8.ebuild, lxpanel-0.5.8-r1.ebuild,
