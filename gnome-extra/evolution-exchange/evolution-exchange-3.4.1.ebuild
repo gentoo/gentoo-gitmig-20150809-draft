@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-3.2.1.ebuild,v 1.2 2012/05/05 06:25:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-3.4.1.ebuild,v 1.1 2012/05/07 05:58:29 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -22,6 +22,7 @@ RDEPEND="
 	>=dev-libs/glib-2.28:2
 	>=x11-libs/gtk+-3.0:3
 	>=gnome-base/gconf-2:2
+	>=dev-libs/libical-0.43
 	dev-libs/libxml2:2
 	net-libs/libsoup:2.4
 	>=net-nds/openldap-2.1.30-r2
@@ -40,13 +41,4 @@ pkg_setup() {
 		$(use_enable debug e2k-debug)
 		$(use_with static static-ldap)"
 	DOCS="AUTHORS ChangeLog NEWS README"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# FIXME: Fix compilation flags crazyness
-	# Touch configure.ac if eautoreconf
-	sed 's/^\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
-		-i configure || die "sed 1 failed"
 }
