@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/Unicode-EastAsianWidth-1.30.ebuild,v 1.7 2012/05/06 20:18:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/Unicode-EastAsianWidth-1.30.ebuild,v 1.8 2012/05/07 08:27:07 ssuominen Exp $
 
 EAPI=4
 
@@ -16,8 +16,6 @@ IUSE=""
 
 RDEPEND="virtual/perl-File-Spec"
 DEPEND="${RDEPEND}
-	dev-perl/Module-Install
-	virtual/perl-ExtUtils-MakeMaker
-	virtual/perl-Module-Build"
+	virtual/perl-ExtUtils-MakeMaker"
 
 SRC_TEST="do"
