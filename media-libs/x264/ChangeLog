@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.71 2012/04/15 18:14:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.72 2012/05/07 08:44:18 scarabeus Exp $
+
+  07 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/x264-altivec.patch,
+  -files/x264-onlylib-20100605.patch, -x264-0.0.20100605.ebuild,
+  -x264-0.0.20101029.ebuild, -x264-0.0.20110223.ebuild,
+  -x264-0.0.20110825-r1.ebuild, -x264-0.0.20111017.ebuild,
+  -x264-0.0.20111218.ebuild:
+  Lower the number of available versions a bit.
 
   15 Apr 2012; Raúl Porcel <armin76@gentoo.org> x264-0.0.20111220.ebuild:
   alpha/sparc stable wrt #411396
