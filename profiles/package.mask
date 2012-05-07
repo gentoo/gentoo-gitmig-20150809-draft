@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13725 2012/05/06 16:52:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13726 2012/05/07 01:06:08 naota Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Naohiro Aota <naota@gentoo.org> (07 May 2012)
+# Dead upstream.
+# Removal in 30 days - bug 412503, 412505, 412511
+app-dicts/canna-canda-med
+app-dicts/canna-shion
+app-dicts/canna-zipcode
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 May 2012)
 # Mask out broken release of cmake wrt bug #414659 and
@@ -369,15 +376,7 @@ x11-wm/scrotwm
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jan 2012)
 # Mask compiz for last-rites unless someone steps up
 # to maintain it. Removal in 30 days.
-x11-libs/compiz-bcop
-x11-libs/compizconfig-backend-gconf
-x11-libs/compizconfig-backend-kconfig4
-x11-plugins/compiz-plugins-extra
-x11-plugins/compiz-plugins-main
-x11-plugins/compiz-plugins-unsupported
-x11-themes/emerald-themes
 x11-wm/compiz-fusion
-x11-wm/emerald
 
 # Michał Górny <mgorny@gentoo.org> (21 Jan 2012)
 # Blocks sysvinit yet doesn't provide all tools provided by it.
