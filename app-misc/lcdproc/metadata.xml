@@ -12,8 +12,8 @@
   system load, memory usage, uptime, and a lot more.
 </longdescription>
 <use>
-  <flag name='irman'>Enable support for IRMan
-    (<pkg>media-libs/libirman</pkg>)</flag>
+  <flag name='hid'>Enable HID support using libhid</flag>
+  <flag name='irman'>Enable support for IRMan (<pkg>media-libs/libirman</pkg>)</flag>
   <flag name='nfs'>Adds support for NFS file system</flag>
   <flag name='seamless-hbars'>Try to avoid gaps in horizontal bars</flag>
   <flag name='ftdi'>Enable support for FTDI connections in some selected LCD_DEVICES (currently hd44780)</flag>

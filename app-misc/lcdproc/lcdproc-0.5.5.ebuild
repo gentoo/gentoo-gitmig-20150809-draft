@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.3.ebuild,v 1.2 2009/11/02 09:33:58 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.5.ebuild,v 1.1 2012/05/07 09:51:33 pacho Exp $
 
-EAPI=2
+EAPI=4
 inherit multilib versionator
 
 MY_PV=$(replace_version_separator 3 '-')
@@ -17,16 +17,16 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="doc debug nfs samba seamless-hbars usb lirc irman joystick ftdi"
+IUSE="doc debug hid nfs samba seamless-hbars usb lirc irman joystick ftdi"
 
 # The following array holds the USE_EXPANDed keywords
 IUSE_LCD_DEVICES=(ncurses bayrad cfontz cfontz633 cfontzpacket
 	cwlinux eyeboxone g15 graphlcd glk
 	hd44780 icpa106 imon imonlcd iowarrior
 	lb216 lcdm001 lcterm
-	md8800 ms6931 mtcs16209x mtxorb noritakevfd
+	md8800 mdm166a ms6931 mtcs16209x mtxorb noritakevfd
 	pyramid sed1330 sed1520 serialvfd sli
-	stv5730 svga t6963 text tyan
+	stv5730 SureElec svga t6963 text tyan
 	ula200 xosd ea65 picolcd serialpos
 	i2500vfd irtrans lis shuttlevfd )
 
@@ -38,11 +38,14 @@ while [ "${index}" -lt "${NUM_DEVICES}" ] ; do
 	let "index = ${index} + 1"
 done
 
+REQUIRED_USE="lcd_devices_mdm166a? ( hid )"
+
 RDEPEND="
 	usb?      ( virtual/libusb:0 )
 	ftdi?     ( dev-embedded/libftdi )
 	lirc?     ( app-misc/lirc )
 	irman?    ( media-libs/libirman )
+	hid?	  ( >=dev-libs/libhid-0.2.16 )
 
 	lcd_devices_graphlcd?  ( app-misc/graphlcd-base  app-misc/glcdprocdriver )
 	lcd_devices_g15?       ( dev-libs/libg15  dev-libs/libg15render )
@@ -71,7 +74,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i "37s:server/drivers:/usr/$(get_libdir)/lcdproc:" LCDd.conf
+	sed -i "37s:server/drivers:/usr/$(get_libdir)/lcdproc:" LCDd.conf || die
 	einfo "Patching LCDd.conf to use DriverPath=/usr/$(get_libdir)/lcdproc/"
 }
 
@@ -82,9 +85,9 @@ src_configure() {
 		CwLnx EyeboxOne g15 glcdlib glk
 		hd44780 icp_a106 imon imonlcd IOWarrior
 		lb216 lcdm001 lcterm
-		MD8800 ms6931 mtc_s16209x MtxOrb NoritakeVFD
+		MD8800 mdm166a ms6931 mtc_s16209x MtxOrb NoritakeVFD
 		pyramid sed1330 sed1520 serialVFD sli
-		stv5730 svga t6963 text tyan
+		stv5730 SureElec svga t6963 text tyan
 		ula200 xosd ea65 picolcd serialPOS
 		i2500vfd irtrans lis shuttleVFD )
 
@@ -111,7 +114,7 @@ src_configure() {
 		# Patch the config to contain a driver that is actually installed instead of the default
 		elog "Compiling the following drivers for LCDd: ${COMMA_DRIVERS}"
 		elog "Setting Driver=${FIRST_DRIVER} in LCDd.conf"
-		sed -i "44s:curses:${FIRST_DRIVER}:" LCDd.conf
+		sed -i "53s:curses:${FIRST_DRIVER}:" LCDd.conf || die
 	fi
 
 	local EXTRA_CONF
@@ -128,14 +131,13 @@ src_configure() {
 		EXTRA_CONF="${EXTRA_CONF} $(use_enable ftdi libftdi)"
 	fi
 
-	econf \
+	econf --enable-extra-charmaps \
 		$(use_enable debug) \
 		$(use_enable nfs stat-nfs) \
 		$(use_enable samba stat-smbfs ) \
 		$(use_enable seamless-hbars) \
 		${EXTRA_CONF} \
-		"--enable-drivers=${COMMA_DRIVERS}"  \
-		|| die "configure failed"
+		"--enable-drivers=${COMMA_DRIVERS}"
 }
 
 src_compile() {
@@ -168,13 +170,13 @@ append-driver() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 
 	# move example clients installed to /usr/bin
 	rm -f "${D}"/usr/bin/{tail,lcdmetar,iosock,fortune,x11amp}.pl
 	insinto /usr/share/lcdproc/clients
 	doins clients/examples/*.pl
-	doins clients/metar/
+	doins clients/metar/*.pl
 
 	newinitd "${FILESDIR}/0.5.1-LCDd.initd" LCDd
 	newinitd "${FILESDIR}/0.5.2-r2-lcdproc.initd" lcdproc
