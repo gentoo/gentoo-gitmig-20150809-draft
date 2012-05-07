@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.96 2012/05/02 22:08:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.97 2012/05/07 09:49:42 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (07 May 2012)
+# libhid is not keyworded
+app-misc/lcdproc hid
 
 # Davide Pesavento <pesa@gentoo.org> (2 May 2012)
 # Requires Qt 4.8, which is not keyworded on sparc.
