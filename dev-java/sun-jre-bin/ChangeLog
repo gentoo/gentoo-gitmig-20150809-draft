@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.210 2012/05/05 21:53:37 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.211 2012/05/07 11:58:18 sera Exp $
+
+  07 May 2012; Ralph Sennhauser <sera@gentoo.org> sun-jre-bin-1.6.0.31.ebuild,
+  sun-jre-bin-1.6.0.32.ebuild:
+  Add workaround for large memory on x86. #405239
 
 *sun-jre-bin-1.6.0.32 (05 May 2012)
 
