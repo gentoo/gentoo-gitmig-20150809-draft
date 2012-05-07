@@ -1,6 +1,17 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.333 2012/05/05 06:25:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.334 2012/05/07 05:58:06 tetromino Exp $
+
+*evolution-data-server-3.4.1 (07 May 2012)
+*evolution-data-server-3.2.3-r2 (07 May 2012)
+
+  07 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -evolution-data-server-3.2.3.ebuild, +evolution-data-server-3.2.3-r2.ebuild,
+  +files/evolution-data-server-3.2.3-google-calendar.patch,
+  +evolution-data-server-3.4.1.ebuild:
+  Version bump for gnome-3.4 with numerous bugfixes. Backport patch fixing
+  adding events to Google calendar to 3.2.3-r2 (bug #412829, thanks to Bernd
+  Feige). Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   evolution-data-server-2.32.3-r1.ebuild,
