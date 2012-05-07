@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/g-ctan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.21 2011/10/05 20:19:21 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.22 2012/05/07 12:54:43 aballier Exp $
+
+  07 May 2012; Alexis Ballier <aballier@gentoo.org> -g-ctan-2010.1.ebuild,
+  -g-ctan-2010.2.ebuild:
+  remove texlive-2010 depending version, 2011 is stable and 2010 is oing away
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> -g-ctan-2008.2.ebuild,
   -g-ctan-2009.2-r1.ebuild:
