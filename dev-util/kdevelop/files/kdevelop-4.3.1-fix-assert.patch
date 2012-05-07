@@ -1,0 +1,28 @@
+From: Michael Jansen <kde@michael-jansen.biz>
+Date: Sun, 08 Apr 2012 15:46:01 +0000
+Subject: addLineBatch(): Fix a crash if linesInBatch == 0
+X-Git-Url: http://quickgit.kde.org/?p=kdevelop.git&amp;a=commitdiff&amp;h=8a0b638c58dcfe261ce789963be2413300a65fc6
+---
+addLineBatch(): Fix a crash if linesInBatch == 0
+
+[...]
+#6  0x00007fa986970708 in QAbstractItemModel::beginInsertRows (this=0x3699fb0, parent=..., first=11, last=10) at /home/mjansen/ws/src/qt/qt/src/corelib/kernel/qabstractitemmodel.cpp:2413
+#7  0x00007fa959b46571 in MakeOutputModel::addLineBatch (this=0x3699fb0) at /home/mjansen/ws/src/kdevelop/kdevelop/projectbuilders/makebuilder/makeoutputmodel.cpp:217
+[...]
+---
+
+
+--- a/projectbuilders/makebuilder/makeoutputmodel.cpp
++++ b/projectbuilders/makebuilder/makeoutputmodel.cpp
+@@ -214,6 +214,10 @@ void MakeOutputModel::addLineBatch()
+     const int maxLines = 50;
+     const int linesInBatch = qMin(lineBuffer.count(), maxLines);
+ 
++    // If there is nothing to insert we are done.
++    if ( linesInBatch == 0 )
++            return;
++
+     beginInsertRows( QModelIndex(), rowCount(), rowCount() + linesInBatch -  1);
+ 
+     for(int i = 0; i < linesInBatch; ++i) {
+

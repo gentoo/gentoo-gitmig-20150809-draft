@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.230 2012/04/22 12:08:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.231 2012/05/07 11:41:27 johu Exp $
+
+*kdevelop-4.3.1-r1 (07 May 2012)
+
+  07 May 2012; Johannes Huber <johu@gentoo.org>
+  +files/kdevelop-4.3.1-fix-assert.patch, +kdevelop-4.3.1-r1.ebuild:
+  Revision bump adds upstream patch to fix crash when building project if qt is
+  built with USE=debug spotted by Matěj Laitl <matej@laitl.cz> wrt bug #414721.
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> kdevelop-4.2.3.ebuild:
   x86 stable, bug #368739
