@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Spreadsheet-ParseExcel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.50 2011/09/11 02:03:47 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.51 2012/05/07 09:21:29 ago Exp $
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  Spreadsheet-ParseExcel-0.590.0.ebuild:
+  Stable for amd64, wrt bug #412961
 
 *Spreadsheet-ParseExcel-0.590.0 (11 Sep 2011)
 

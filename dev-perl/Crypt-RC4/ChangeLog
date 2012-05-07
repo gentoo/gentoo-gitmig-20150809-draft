@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-RC4
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RC4/ChangeLog,v 1.1 2011/09/11 02:01:10 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RC4/ChangeLog,v 1.2 2012/05/07 09:21:46 ago Exp $
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org> Crypt-RC4-2.020.0.ebuild:
+  Stable for amd64, wrt bug #412961
 
 *Crypt-RC4-2.020.0 (11 Sep 2011)
 
