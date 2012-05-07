@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk-youtube-viewer/gtk-youtube-viewer-2.0.4_p20120422.ebuild,v 1.1 2012/05/02 00:39:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk-youtube-viewer/gtk-youtube-viewer-2.0.4_p20120422.ebuild,v 1.2 2012/05/07 21:44:04 hasufell Exp $
 
 EAPI=4
 
@@ -17,7 +17,8 @@ RDEPEND="dev-lang/perl
 	dev-perl/gtk2-perl
 	dev-perl/libwww-perl
 	dev-perl/XML-Fast
-	media-video/mplayer[X,mp3,faad,x264]
+	|| ( media-video/mplayer[X,network]
+		media-video/mplayer2[X,network] )
 	virtual/freedesktop-icon-theme
 	virtual/perl-Scalar-List-Utils
 	x11-libs/gdk-pixbuf:2[X,jpeg]"

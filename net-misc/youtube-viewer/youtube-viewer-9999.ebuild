@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.2 2012/05/01 23:55:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.3 2012/05/07 21:42:08 hasufell Exp $
 
 EAPI=4
 
@@ -19,7 +19,8 @@ IUSE=""
 RDEPEND="dev-lang/perl
 	dev-perl/libwww-perl
 	dev-perl/XML-Fast
-	media-video/mplayer[X,mp3,faad,x264]
+	|| ( media-video/mplayer[X,network]
+		media-video/mplayer2[X,network] )
 	virtual/perl-Scalar-List-Utils"
 
 src_install() {
