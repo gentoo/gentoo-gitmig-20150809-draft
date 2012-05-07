@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.2-r1.ebuild,v 1.2 2012/05/05 08:27:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.2-r1.ebuild,v 1.3 2012/05/07 17:58:12 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="aac adplug alsa bs2b cdda cue ffmpeg flac fluidsynth gnome +gtk gtk3 ipv6 jack
-lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sid sndfile vorbis wavpack"
+lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
@@ -48,6 +48,7 @@ RDEPEND="app-arch/unzip
 	mtp? ( media-libs/libmtp )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
+	sdl? ( media-libs/libsdl[audio] )
 	sid? ( >=media-libs/libsidplay-2.1.1-r2 )
 	sndfile? ( >=media-libs/libsndfile-1.0.17-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.2.0
@@ -70,6 +71,7 @@ mp3_warning() {
 
 src_prepare() {
 	epatch "$FILESDIR"/${P}-fix-build-gmodule.patch
+	epatch "$FILESDIR"/${P}-fix-build-sdl.patch
 	eaclocal -I m4
 	eautoheader
 	eautoconf
@@ -107,6 +109,7 @@ src_configure() {
 		$(use_enable oss) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable scrobbler) \
+		$(use_enable sdl sdlout) \
 		$(use_enable sid) \
 		$(use_enable sndfile) \
 		$(use_enable vorbis) \
