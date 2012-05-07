@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.241 2012/05/06 10:41:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.242 2012/05/07 21:28:01 pesa Exp $
+
+  07 May 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Stop stripping upstream CFLAGS from g++.conf for Qt 4.8 and later (see bug
+  352778 comment #6).
 
   06 May 2012; Fabian Groffen <grobian@gentoo.org>
   +ELT-patches/sol2-conf/2.4.2, libtool.eclass:
