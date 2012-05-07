@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.30 2012/05/04 03:33:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.31 2012/05/07 09:44:24 ago Exp $
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org> zathura-0.1.2.ebuild:
+  Stable for amd64, wrt bug #414985
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> zathura-0.0.8.5.ebuild,
   zathura-0.1.1.ebuild, zathura-0.1.2.ebuild:
