@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ws-commons-util/ws-commons-util-1.0.1.ebuild,v 1.2 2012/05/02 17:16:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ws-commons-util/ws-commons-util-1.0.1.ebuild,v 1.3 2012/05/07 06:18:37 phajdan.jr Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="source test"
@@ -11,7 +11,7 @@ HOMEPAGE="http://ws.apache.org/commons/util/"
 SRC_URI="mirror://apache/ws/commons/util/sources/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
