@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.28 2012/05/05 08:53:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.29 2012/05/07 11:33:18 yngwin Exp $
+
+*traverso-0.49.2-r1 (07 May 2012)
+
+  07 May 2012; Ben de Groot <yngwin@gentoo.org>
+  +files/traverso-0.49.2-desktop.patch, +files/traverso-0.49.2-gold.patch,
+  +traverso-0.49.2-r1.ebuild, -traverso-0.49.1.ebuild, -traverso-0.49.2.ebuild:
+  Drop unnecessary qt4.eclass usage, fixes bug 410107. Add gold linking patch
+  and .desktop file patch (from kensington in the same bug). Remove old.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> traverso-0.49.1.ebuild,
   traverso-0.49.2.ebuild:
