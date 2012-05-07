@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ticpp-0_p20100924.ebuild,v 1.2 2011/07/01 07:54:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ticpp-0_p20100924.ebuild,v 1.3 2012/05/07 15:04:57 ago Exp $
 
 DESCRIPTION="A completely new interface to TinyXML that uses MANY of the C++ strengths"
 HOMEPAGE="http://code.google.com/p/ticpp/"
 SRC_URI="http://sulmonalug.it/files/mrfree/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="debug doc"
 
