@@ -1,6 +1,12 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.32 2012/02/22 13:54:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.33 2012/05/07 19:28:53 tupone Exp $
+
+*scid-4.3 (07 May 2012)
+
+  07 May 2012; Tupone Alfredo <tupone@gentoo.org> +scid-4.3.ebuild,
+  +files/scid-4.3-gentoo.patch, +files/scid-4.3-parallelmake.patch:
+  Version bump to 4.3 Bug #410303 by nihil39
 
   22 Feb 2012; Tupone Alfredo <tupone@gentoo.org> scid-4.2.2.ebuild,
   +files/scid-4.2.2-parallelmake.patch:
