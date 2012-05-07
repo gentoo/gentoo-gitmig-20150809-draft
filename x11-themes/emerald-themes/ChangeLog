@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/emerald-themes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/emerald-themes/ChangeLog,v 1.14 2010/05/29 10:17:37 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/emerald-themes/ChangeLog,v 1.15 2012/05/07 01:52:25 naota Exp $
+
+  07 May 2012; Naohiro Aota <naota@gentoo.org> metadata.xml:
+  Assign Pinkbyte as maintainer.
 
   29 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Maintained by desktop-effects
