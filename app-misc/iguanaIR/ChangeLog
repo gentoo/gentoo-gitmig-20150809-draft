@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/iguanaIR
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/iguanaIR/ChangeLog,v 1.7 2012/01/05 23:30:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/iguanaIR/ChangeLog,v 1.8 2012/05/07 14:38:02 ssuominen Exp $
+
+  07 May 2012; Samuli Suominen <ssuominen@gentoo.org> iguanaIR-0.93.ebuild:
+  Missing virtual/libusb:0 dependency wrt #336511 by Clement Siuchung Cheung.
+  Missing dev-libs/popt RDEPEND. Missing =dev-lang/python-2* DEPEND. Install to
+  /lib/udev/rules.d instead of /etc/udev/rules.d.
 
   05 Jan 2012; Michael Weber <xmw@gentoo.org> iguanaIR-0.93.ebuild:
   ppc stable (bug 343659)
