@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.10 2012/05/04 03:33:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.11 2012/05/07 09:26:07 ago Exp $
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org> djview-4.8.ebuild:
+  Stable for amd64, wrt bug #414369
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> djview-4.7.ebuild,
   djview-4.8.ebuild:
