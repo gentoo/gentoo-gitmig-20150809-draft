@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.7 2012/05/07 18:04:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.4.ebuild,v 1.1 2012/05/07 18:04:45 floppym Exp $
 
 EAPI=4
 
@@ -31,7 +31,8 @@ RDEPEND="dev-python/iniparse
 	dev-python/pygments
 	dev-python/PyQt4
 	dev-python/qscintilla-python
-	dev-vcs/mercurial
+	>=dev-vcs/mercurial-2.1
+	<dev-vcs/mercurial-2.3
 	nautilus? ( dev-python/nautilus-python )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.3 )"
@@ -39,6 +40,22 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# make the install respect multilib.
 	sed -i -e "s:lib/nautilus:$(get_libdir)/nautilus:" setup.py || die
+
+	if [[ ${LINGUAS+set} ]]; then
+		pushd i18n/tortoisehg > /dev/null || die
+		local x y keep
+		for x in *.po; do
+			keep=
+			for y in ${LINGUAS}; do
+				if [[ ${y} == ${x%.po}* ]]; then
+					keep=1
+					break
+				fi
+			done
+			[[ ${keep} ]] || rm "${x}" || die
+		done
+		popd > /dev/null || die
+	fi
 
 	distutils_src_prepare
 }
