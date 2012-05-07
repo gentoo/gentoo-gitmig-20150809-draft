@@ -3,18 +3,22 @@
 <pkgmetadata>
 <herd>freedesktop</herd>
 <use>
-  <flag name='applet'>Build tracker monitor applet</flag>
+  <flag name="applet">Build tracker monitor applet</flag>
+  <flag name="cue">Enable cue sheet parsing</flag>
+  <flag name="cdimage">Enable extraction of metadata from CD/DVD image
+  	files</flag>
   <!-- 'firefox-bookmarks' instead of 'firefox' to prevent most users from
 	   enabling this by accident; it has some stability problems and
 	   performance implications -->
-  <flag name='firefox-bookmarks'>Install bookmark data miner plugin for
+  <flag name="firefox-bookmarks">Install bookmark data miner plugin for
     <pkg>www-client/firefox</pkg> and <pkg>www-client/firefox-bin</pkg></flag>
-  <flag name='flickr'>Build flickr data miner</flag>
-  <flag name='gsf'>Enable <pkg>gnome-extra/libgsf</pkg> based data extractor and
+  <flag name="flickr">Build flickr data miner</flag>
+  <flag name="gsf">Enable <pkg>gnome-extra/libgsf</pkg> based data extractor and
   for ODT.</flag>
   <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
     for introspection</flag>
   <flag name="iptc">Enable extraction of IPTC data from pictures</flag>
+  <flag name="iso">Enable extraction of metadata from ISO disk images</flag>
   <flag name="laptop">Make tracker power management aware</flag>
   <flag name="nautilus">Enable tracker to integrate with
     <pkg>gnome-base/nautilus</pkg> by providing entries in its context menu

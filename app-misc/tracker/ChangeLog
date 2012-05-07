@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.125 2012/05/03 19:41:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.126 2012/05/07 07:42:32 tetromino Exp $
+
+*tracker-0.14.1 (07 May 2012)
+
+  07 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -tracker-0.12.9.ebuild, +tracker-0.14.1.ebuild, tracker-9999.ebuild,
+  metadata.xml:
+  Version bump for gnome-3.4, adds support for extracting metadata from CD
+  images, lots of bugfixes and performance improvements. Update live ebuild.
+  Drop old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> tracker-0.10.27.ebuild,
   tracker-0.10.35.ebuild, tracker-0.12.9.ebuild, tracker-0.12.10.ebuild,
