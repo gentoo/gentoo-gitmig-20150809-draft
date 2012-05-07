@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1.0.ebuild,v 1.2 2012/02/18 18:17:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1.6.ebuild,v 1.1 2012/05/07 12:42:57 eras Exp $
 
 EAPI=4
-
-inherit eutils versionator ssl-cert
+inherit eutils versionator ssl-cert systemd
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
@@ -94,13 +93,13 @@ src_configure() {
 		$( use_enable static-libs static ) \
 		--with-storages="${storages}" \
 		--disable-rpath \
-		--without-systemdsystemunitdir \
+		$(systemd_with_unitdir) \
 		${conf}
 
 	if use sieve || use managesieve ; then
 		# The sieve plugin needs this file to be build to determine the plugin
 		# directory and the list of libraries to link to.
-		emake dovecot-config || die "emake dovecot-config failed"
+		emake dovecot-config
 		cd "../dovecot-${major_minor}-pigeonhole-${sieve_version}" || die "cd failed"
 		econf \
 			$( use_enable static-libs static ) \
@@ -259,18 +258,6 @@ src_install () {
 	use static-libs || find "${ED}"/usr/lib* -name '*.la' -delete
 }
 
-pkg_preinst() {
-	if has_version "<${CATEGORY}/${PN}-2" ; then
-		elog "There are a lot of changes in configuration files in dovecot-2.0."
-		elog "Please read http://wiki.dovecot.org/Upgrading and"
-		elog "check the conf files in ${ROOT}etc/dovecot."
-		elog "You can also run doveconf -n before running etc-update or"
-		elog "dispatch-conf to get an idea about what needs to be changed."
-		ewarn "\nDo NOT {re}start dovecot without checking your conf files"
-		ewarn "and making the necessary changes.\n"
-	fi
-}
-
 pkg_postinst() {
 	if use ssl; then
 	# Let's not make a new certificate if we already have one
@@ -281,5 +268,7 @@ pkg_postinst() {
 			install_cert /etc/ssl/dovecot/server
 		fi
 	fi
-	elog "Please read http://wiki2.dovecot.org/Upgrading/2.1 for upgrade notes."
+
+	elog "Upgrade notes can be found at:"
+	elog "\thttp://wiki2.dovecot.org/Upgrading"
 }
