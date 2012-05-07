@@ -1,6 +1,12 @@
 # ChangeLog for www-plugins/mozplugger
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozplugger/ChangeLog,v 1.11 2011/10/03 23:30:34 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozplugger/ChangeLog,v 1.12 2012/05/07 16:30:08 ssuominen Exp $
+
+  07 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -mozplugger-1.13.2.ebuild, -mozplugger-1.14.0-r1.ebuild,
+  -mozplugger-1.14.2.ebuild,
+  -files/mozplugger-1.14.2-fix-nsplugin-install.patch:
+  old
 
 *mozplugger-1.14.3 (03 Oct 2011)
 
