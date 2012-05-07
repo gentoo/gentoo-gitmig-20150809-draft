@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.75 2012/05/06 20:41:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.76 2012/05/07 16:37:16 djc Exp $
+
+*mercurial-2.2.1 (07 May 2012)
+
+  07 May 2012; Dirkjan Ochtman <djc@gentoo.org> +mercurial-2.2.1.ebuild,
+  -mercurial-2.2.ebuild:
+  Version bump to 2.2.1.
 
   06 May 2012; Brent Baude <ranger@gentoo.org> mercurial-2.1.1.ebuild:
   Marking mercurial-2.1.1 ppc for bug 414077
