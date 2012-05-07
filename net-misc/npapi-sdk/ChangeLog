@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/npapi-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.13 2012/03/17 18:03:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.14 2012/05/07 17:07:10 axs Exp $
+
+  07 May 2012; Ian Stakenvicius <axs@gentoo.org> npapi-sdk-0.27.ebuild,
+  npapi-sdk-0.27.1.ebuild, npapi-sdk-9999.ebuild:
+  Added ~ia64 keyword as per bug 415041
 
   17 Mar 2012; Raúl Porcel <armin76@gentoo.org> npapi-sdk-0.27.ebuild:
   arm/sparc stable wrt #399403
