@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/iguanaIR
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/iguanaIR/ChangeLog,v 1.8 2012/05/07 14:38:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/iguanaIR/ChangeLog,v 1.9 2012/05/07 15:14:39 ssuominen Exp $
+
+*iguanaIR-1.0.1 (07 May 2012)
+
+  07 May 2012; Samuli Suominen <ssuominen@gentoo.org> +iguanaIR-1.0.1.ebuild:
+  Version bump wrt #308921 by Derek Adams and Clement Siuchung Cheung. This
+  version will respect LDFLAGS wrt #337354 and missing -lpthread wrt #367643 by
+  Diego Elio Pettenò. Workaround broken SWIG version check and missing
+  dependency wrt #398877 by "digital.or".
 
   07 May 2012; Samuli Suominen <ssuominen@gentoo.org> iguanaIR-0.93.ebuild:
   Missing virtual/libusb:0 dependency wrt #336511 by Clement Siuchung Cheung.
