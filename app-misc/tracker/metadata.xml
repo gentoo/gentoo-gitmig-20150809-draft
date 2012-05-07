@@ -5,8 +5,6 @@
 <use>
   <flag name="applet">Build tracker monitor applet</flag>
   <flag name="cue">Enable cue sheet parsing</flag>
-  <flag name="cdimage">Enable extraction of metadata from CD/DVD image
-  	files</flag>
   <!-- 'firefox-bookmarks' instead of 'firefox' to prevent most users from
 	   enabling this by accident; it has some stability problems and
 	   performance implications -->

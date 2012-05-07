@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.12.9.ebuild,v 1.5 2012/05/03 19:41:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.1.ebuild,v 1.1 2012/05/07 07:42:32 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -16,7 +16,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # USE="doc" is managed by eclass.
-IUSE="applet doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp" # qt4 strigi
+IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop mp3 nautilus networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp" # qt4 strigi
+REQUIRED_USE="cue? ( gstreamer )"
 
 # Test suite highly disfunctional, loops forever
 # putting aside for now
@@ -42,9 +43,10 @@ RDEPEND="
 		>=gnome-base/gnome-panel-2.91.6
 		>=x11-libs/gdk-pixbuf-2.12:2
 		>=x11-libs/gtk+-3.0:3 )
+	cue? ( media-libs/libcue )
 	eds? (
-		>=mail-client/evolution-2.91.90
-		>=gnome-extra/evolution-data-server-2.91.90 )
+		>=mail-client/evolution-3.3.5
+		>=gnome-extra/evolution-data-server-3.3.5 )
 	elibc_glibc? ( >=sys-libs/glibc-2.12 )
 	exif? ( >=media-libs/libexif-0.6 )
 	firefox-bookmarks? ( || (
@@ -64,6 +66,7 @@ RDEPEND="
 		>=dev-libs/libgee-0.3:0
 		>=x11-libs/gtk+-3.0.0:3 )
 	iptc? ( media-libs/libiptcdata )
+	iso? ( >=sys-libs/libosinfo-0.0.2 )
 	jpeg? ( virtual/jpeg:0 )
 	laptop? ( >=sys-power/upower-0.9 )
 	mp3? (
@@ -90,9 +93,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	applet? ( >=dev-lang/vala-0.12:0.12 )
+	applet? ( >=dev-lang/vala-0.13.4:0.14 )
 	gtk? (
-		>=dev-lang/vala-0.12:0.12
+		>=dev-lang/vala-0.13.4:0.14
 		>=dev-libs/libgee-0.3 )
 	doc? (
 		app-office/dia
@@ -102,8 +105,8 @@ DEPEND="${RDEPEND}
 		>=dev-libs/dbus-glib-0.82-r1
 		>=sys-apps/dbus-1.3.1[X] )
 "
-#	strigi? ( >=dev-lang/vala-0.12:0.12 )
-PDEPEND="nautilus? ( >=gnome-extra/nautilus-tracker-tags-0.12.7 )"
+#	strigi? ( >=dev-lang/vala-0.13.4:0.14 )
+PDEPEND="nautilus? ( >=gnome-extra/nautilus-tracker-tags-0.14 )"
 
 function inotify_enabled() {
 	if linux_config_exists; then
@@ -138,7 +141,7 @@ pkg_setup() {
 
 	# if use applet || use gtk || use strigi; then
 	if use applet || use gtk; then
-		G2CONF="${G2CONF} VALAC=$(type -P valac-0.12)"
+		G2CONF="${G2CONF} VALAC=$(type -P valac-0.14)"
 	fi
 
 	# if use mp3 && (use gtk || use qt4); then
@@ -155,7 +158,6 @@ pkg_setup() {
 	# nautilus extension is in a separate package, nautilus-tracker-tags
 	G2CONF="${G2CONF}
 		--disable-hal
-		--disable-libcue
 		--enable-tracker-fts
 		--with-enca
 		--with-unicode-support=libicu
@@ -165,6 +167,7 @@ pkg_setup() {
 		--disable-qt
 		--disable-nautilus-extension
 		$(use_enable applet tracker-search-bar)
+		$(use_enable cue libcue)
 		$(use_enable eds miner-evolution)
 		$(use_enable exif libexif)
 		$(use_enable firefox-bookmarks miner-firefox)
@@ -178,6 +181,7 @@ pkg_setup() {
 		$(use_enable gtk tracker-preferences)
 		$(use_enable gtk tracker-needle)
 		$(use_enable iptc libiptcdata)
+		$(use_enable iso libosinfo)
 		$(use_enable jpeg libjpeg)
 		$(use_enable laptop upower)
 		$(use_enable mp3 taglib)
@@ -203,9 +207,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix build failures with USE=strigi
-	epatch "${FILESDIR}/${PN}-0.12.3-strigi.patch"
-
 	# Fix functional tests scripts
 	find "${S}" -name "*.pyc" -delete
 	python_convert_shebangs -r 2 tests utils examples

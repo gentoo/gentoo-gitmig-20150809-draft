@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.50 2012/05/03 19:41:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.51 2012/05/07 07:42:32 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.6"
@@ -19,7 +19,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 # USE="doc" is managed by eclass.
-IUSE="applet doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +jpeg laptop mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp" # nautilus qt4 strigi
+IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp" # nautilus qt4 strigi
+REQUIRED_USE="cue? ( gstreamer )"
 
 # Test suite highly disfunctional, loops forever
 # putting aside for now
@@ -45,9 +46,10 @@ RDEPEND="
 		>=gnome-base/gnome-panel-2.91.6
 		>=x11-libs/gdk-pixbuf-2.12:2
 		>=x11-libs/gtk+-3:3 )
+	cue? ( media-libs/libcue )
 	eds? (
-		>=mail-client/evolution-2.91.90
-		>=gnome-extra/evolution-data-server-2.91.90 )
+		>=mail-client/evolution-3.3.5
+		>=gnome-extra/evolution-data-server-3.3.5 )
 	elibc_glibc? ( >=sys-libs/glibc-2.12 )
 	exif? ( >=media-libs/libexif-0.6 )
 	firefox-bookmarks? ( || (
@@ -67,6 +69,7 @@ RDEPEND="
 		>=dev-libs/libgee-0.3:0
 		>=x11-libs/gtk+-3:3 )
 	iptc? ( media-libs/libiptcdata )
+	iso? ( >=sys-libs/libosinfo-0.0.2 )
 	jpeg? ( virtual/jpeg:0 )
 	laptop? ( >=sys-power/upower-0.9 )
 	mp3? (
@@ -95,10 +98,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-util/gtk-doc-am
 	>=dev-util/gtk-doc-1.8
-	applet? ( >=dev-lang/vala-0.12:0.12 )
+	applet? ( >=dev-lang/vala-0.13.4:0.14 )
 	gtk? (
 		app-office/dia
-		>=dev-lang/vala-0.12:0.12
+		>=dev-lang/vala-0.13.4:0.14
 		>=dev-libs/libgee-0.3 )
 	doc? (
 		media-gfx/graphviz )
@@ -142,7 +145,7 @@ pkg_setup() {
 
 	# if use applet || use gtk || use strigi; then
 	if use applet || use gtk; then
-		G2CONF="${G2CONF} VALAC=$(type -P valac-0.12)"
+		G2CONF="${G2CONF} VALAC=$(type -P valac-0.14)"
 	fi
 
 	# if use mp3 && (use gtk || use qt4); then
@@ -159,7 +162,6 @@ pkg_setup() {
 	# nautilus extension is in a separate package, nautilus-tracker-tags
 	G2CONF="${G2CONF}
 		--disable-hal
-		--disable-libcue
 		--enable-tracker-fts
 		--with-enca
 		--with-unicode-support=libicu
@@ -169,6 +171,7 @@ pkg_setup() {
 		--disable-qt
 		--disable-nautilus-extension
 		$(use_enable applet tracker-search-bar)
+		$(use_enable cue libcue)
 		$(use_enable eds miner-evolution)
 		$(use_enable exif libexif)
 		$(use_enable firefox-bookmarks miner-firefox)
@@ -182,6 +185,7 @@ pkg_setup() {
 		$(use_enable gtk tracker-preferences)
 		$(use_enable gtk tracker-needle)
 		$(use_enable iptc libiptcdata)
+		$(use_enable iso libosinfo)
 		$(use_enable jpeg libjpeg)
 		$(use_enable laptop upower)
 		$(use_enable mp3 taglib)
@@ -228,7 +232,7 @@ src_prepare() {
 
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check XDG_DATA_HOME="${T}" XDG_CONFIG_HOME="${T}" || die "tests failed"
+	Xemake check XDG_DATA_HOME="${T}" XDG_CONFIG_HOME="${T}"
 }
 
 src_install() {
@@ -237,12 +241,12 @@ src_install() {
 	# Manually symlink extensions for {firefox,thunderbird}-bin
 	if use firefox-bookmarks; then
 		dosym /usr/share/xul-ext/trackerfox \
-			/usr/$(get_libdir)/firefox-bin/extensions/trackerfox@bustany.org || die
+			/usr/$(get_libdir)/firefox-bin/extensions/trackerfox@bustany.org
 	fi
 
 	if use thunderbird; then
 		dosym /usr/share/xul-ext/trackerbird \
-			/usr/$(get_libdir)/thunderbird-bin/extensions/trackerbird@bustany.org || die
+			/usr/$(get_libdir)/thunderbird-bin/extensions/trackerbird@bustany.org
 	fi
 }
 
