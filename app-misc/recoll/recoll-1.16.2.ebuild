@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.16.2.ebuild,v 1.1 2012/02/09 18:59:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.16.2.ebuild,v 1.2 2012/05/07 00:13:14 hwoarang Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.lesbonscomptes.com/recoll/"
 SRC_URI="http://www.lesbonscomptes.com/recoll/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 INDEX_HELPERS="audio chm djvu dvi exif ps ics info lyx msdoc msppt msxls pdf rtf tex wordperfect xml"
 IUSE="+spell +inotify +qt4 +session camelcase xattr fam ${INDEX_HELPERS}"
