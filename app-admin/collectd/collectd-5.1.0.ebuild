@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0.ebuild,v 1.2 2012/05/03 18:02:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0.ebuild,v 1.3 2012/05/07 00:41:36 dilfridge Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ COMMON_DEPEND="
 	collectd_plugins_libvirt?		( app-emulation/libvirt dev-libs/libxml2 )
 	collectd_plugins_memcachec?		( dev-libs/libmemcached )
 	collectd_plugins_mysql?			( >=virtual/mysql-5.0 )
-	collectd_plugins_netlink?		( >=sys-apps/iproute2-2.6.34 )
+	collectd_plugins_netlink?		( >=sys-apps/iproute2-2.6.34 <sys-apps/iproute2-3.3.0 )
 	collectd_plugins_nginx?			( net-misc/curl )
 	collectd_plugins_notify_desktop?	( x11-libs/libnotify )
 	collectd_plugins_notify_email?		( >=net-libs/libesmtp-1.0.4 dev-libs/openssl )

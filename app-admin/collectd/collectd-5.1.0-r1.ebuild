@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.2-r1.ebuild,v 1.3 2012/05/03 18:02:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0-r1.ebuild,v 1.1 2012/05/07 00:41:36 dilfridge Exp $
 
 EAPI=4
 
@@ -25,15 +25,15 @@ COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors tape zfs_arc modbus amqp genericjm
 
 # Plugins that have been (compile) tested and can be enabled via COLLECTD_PLUGINS
 COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswitch
-	cpu cpufreq curl curl_json curl_xml dbi df disk dns email entropy exec filecount fscache gmond
-	hddtemp interface ipmi iptables irq java libvirt load madwifi mbmon memcachec
-	memcached memory multimeter mysql netlink network nfs nginx ntpd nut olsrd
+	cpu cpufreq curl curl_json curl_xml dbi df disk dns email entropy ethstat exec filecount fscache gmond
+	hddtemp interface ipmi iptables irq java libvirt load madwifi mbmon md memcachec
+	memcached memory multimeter mysql netlink network nfs nginx ntpd numa nut olsrd
 	onewire openvpn perl ping postgresql powerdns processes protocols python
 	rrdcached sensors serial snmp swap table tail tcpconns teamspeak2 ted thermal
 	tokyotyrant uptime users varnish vmem vserver wireless csv exec logfile network
 	notify_desktop notify_email oracle perl python routeros rrdcached rrdtool syslog unixsock
-	write_http match_empty_counter match_hashed match_regex match_timediff match_value
-	target_notification target_replace target_scale target_set uuid"
+	write_graphite write_http write_mongodb match_empty_counter match_hashed match_regex match_timediff
+	match_value target_notification target_replace target_scale target_set uuid"
 
 COLLECTD_DISABLED_PLUGINS="${COLLECTD_IMPOSSIBLE_PLUGINS} ${COLLECTD_UNTESTED_PLUGINS}"
 
@@ -65,7 +65,7 @@ COMMON_DEPEND="
 	collectd_plugins_libvirt?		( app-emulation/libvirt dev-libs/libxml2 )
 	collectd_plugins_memcachec?		( dev-libs/libmemcached )
 	collectd_plugins_mysql?			( >=virtual/mysql-5.0 )
-	collectd_plugins_netlink?		( >=sys-apps/iproute2-2.6.34 )
+	collectd_plugins_netlink?		( >=sys-apps/iproute2-3.3.0 )
 	collectd_plugins_nginx?			( net-misc/curl )
 	collectd_plugins_notify_desktop?	( x11-libs/libnotify )
 	collectd_plugins_notify_email?		( >=net-libs/libesmtp-1.0.4 dev-libs/openssl )
@@ -104,12 +104,10 @@ RDEPEND="${COMMON_DEPEND}
 	collectd_plugins_syslog?		( virtual/logger )"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-4.10.1"-{libperl,libiptc,noowniptc}.patch
+	"${FILESDIR}/${PN}-4.10.1"-libperl.patch
 	"${FILESDIR}/${PN}-4.10.2"-{libocci,nohal}.patch
 	"${FILESDIR}/${PN}-4.10.3"-{lt,werror}.patch
-	"${FILESDIR}/${PN}-5.0.1"-varnish.patch
-	"${FILESDIR}/${PN}-5.0.2"-irq.patch
-	"${FILESDIR}/${PN}-5.0.2"-message.patch
+	"${FILESDIR}/${PN}-5.1.0"-netlink.patch
 	)
 
 # @FUNCTION: collectd_plugin_kernel_linux
@@ -211,8 +209,8 @@ src_configure() {
 	# Now come the lists of os-dependent plugins. Any plugin that is not listed anywhere here
 	# should work independent of the operating system.
 
-	local linux_plugins="battery cpu cpufreq disk entropy interface iptables ipvs irq load
-		memory netlink nfs processes serial swap tcpconns thermal users vmem vserver
+	local linux_plugins="battery cpu cpufreq disk entropy ethstat interface iptables ipvs irq load
+		memory md netlink nfs numa processes serial swap tcpconns thermal users vmem vserver
 		wireless"
 
 	local libstatgrab_plugins="cpu disk interface load memory swap users"
