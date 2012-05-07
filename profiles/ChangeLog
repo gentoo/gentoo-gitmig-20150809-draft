@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6512 2012/05/07 10:14:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6513 2012/05/07 11:11:57 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask rar2fs because upstream released 1.15.1 with compability for
+  app-arch/unrar >= 4.2.
 
   07 May 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask new lxpanel for testing
