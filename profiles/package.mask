@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13734 2012/05/07 17:37:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13735 2012/05/07 20:01:57 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -91,10 +91,6 @@ media-sound/qsampler
 #
 # API/ABI subtly broken; see bug #414317
 =dev-libs/libnl-3.2.8
-
-# Ulrich Müller <ulm@gentoo.org> (30 Apr 2012)
-# Breaks app-emacs/ecb, bug 414109.
-=app-emacs/cedet-1.1
 
 # Hans de Graaff <graaff@gentoo.org> (29 Apr 2012)
 # Mask new cucumber components until the whole set it ready.
