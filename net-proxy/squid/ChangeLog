@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.339 2012/03/09 15:40:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.340 2012/05/07 16:20:12 hwoarang Exp $
+
+  07 May 2012; Markos Chandras <hwoarang@gentoo.org> squid-3.1.19.ebuild:
+  Stable on amd64 wrt bug #413721
 
 *squid-3.1.19 (09 Mar 2012)
 
