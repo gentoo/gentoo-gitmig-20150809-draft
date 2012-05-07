@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.159 2012/05/04 17:51:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.160 2012/05/07 03:11:26 tetromino Exp $
+
+*glade-3.12.1 (07 May 2012)
+
+  07 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +glade-3.12.1.ebuild, +files/glade-3.12.1-doc-version.patch:
+  Version bump, adds inline margin/alignment editing and support for some
+  additional widgets. Improve documentation slotting.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> glade-2.12.2-r1.ebuild,
   glade-3.8.1.ebuild, glade-3.8.2.ebuild, glade-3.10.2.ebuild:
