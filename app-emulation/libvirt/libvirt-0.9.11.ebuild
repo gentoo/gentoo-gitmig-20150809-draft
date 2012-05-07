@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.11.ebuild,v 1.3 2012/05/03 18:49:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.11.ebuild,v 1.4 2012/05/07 07:53:24 patrick Exp $
 
 EAPI=4
 
@@ -50,6 +50,7 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
+	dev-libs/libgcrypt
 	>=dev-libs/libxml2-2.7.6
 	>=dev-libs/libnl-1.1:1.1
 	>=net-libs/gnutls-1.0.25
