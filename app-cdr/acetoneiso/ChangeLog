@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/acetoneiso
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/ChangeLog,v 1.8 2011/03/26 16:43:51 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/ChangeLog,v 1.9 2012/05/07 22:41:40 kensington Exp $
+
+*acetoneiso-2.3 (07 May 2012)
+
+  07 May 2012; Michael Palimaka <kensington@gentoo.org> +acetoneiso-2.3.ebuild:
+  Version bump for bug #357147. Thanks to anTaRes <t.rozbitskiy@gmail.com>.
 
   26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   acetoneiso-2.2.1.ebuild, acetoneiso-2.2.2.ebuild:
