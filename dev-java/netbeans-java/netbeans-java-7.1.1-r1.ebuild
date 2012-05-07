@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.1.1-r1.ebuild,v 1.2 2012/05/06 12:09:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.1.1-r1.ebuild,v 1.3 2012/05/07 06:31:34 phajdan.jr Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -33,7 +33,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/2D0D28E05BD6B6452DAAFE2B5CCB69A84EA63E5D-spring-2.5.6.SEC01.jar
 	http://hg.netbeans.org/binaries/7622CB23DAEDD9DE0ACBD16C820D3A02F94572AF-spring-framework-3.0.6.RELEASE.zip"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 
