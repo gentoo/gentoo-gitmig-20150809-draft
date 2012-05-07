@@ -1,10 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.626 2012/05/07 17:59:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.627 2012/05/07 18:01:32 floppym Exp $
 
   07 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-18.0.1025.168.ebuild:
-  Fix 18.x dependencies, noticed by floppym.
+  Fix 18.x dependencies, noticed by floppym and Arfrever.
 
   07 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-18.0.1025.168.ebuild, chromium-19.0.1084.36.ebuild,
