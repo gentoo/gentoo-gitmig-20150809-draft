@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6511 2012/05/07 09:49:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6512 2012/05/07 10:14:24 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 May 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask new lxpanel for testing
 
   07 May 2012; Pacho Ramos <pacho@gentoo.org> arch/powerpc/package.use.mask,
   arch/sparc/package.use.mask:
