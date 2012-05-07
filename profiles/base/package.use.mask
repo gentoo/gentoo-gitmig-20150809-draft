@@ -1,9 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.346 2012/05/02 09:31:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.347 2012/05/07 16:00:46 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Samuli Suominen <ssuominen@gentoo.org> (07 May 2012)
+# This entry can be removed by anyone after =media-video/vlc-1.1*
+# has left the tree. Mask out deprecated xulrunner support.
+# Bug 407567.
+=media-video/vlc-1.1* nsplugin
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (02 May 2012)
 # Causes crashes and build failures, not needed by any package, bug #412177
