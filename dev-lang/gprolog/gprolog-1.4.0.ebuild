@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.0.ebuild,v 1.8 2012/02/01 17:44:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.0.ebuild,v 1.9 2012/05/07 09:13:10 keri Exp $
 
 EAPI=2
 
@@ -31,6 +31,11 @@ src_configure() {
 
 	append-flags -fno-strict-aliasing
 	use debug && append-flags -DDEBUG
+
+	if gcc-specs-pie ; then
+		# gplc generates its own native ASM; disable PIE
+		append-ldflags -nopie
+	fi
 
 	cd "${S}"/src
 	econf \
