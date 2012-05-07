@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.243 2012/05/07 13:37:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.244 2012/05/07 16:35:59 hwoarang Exp $
+
+  07 May 2012; Markos Chandras <hwoarang@gentoo.org> nss-3.13.4.ebuild:
+  Stable on amd64 wrt bug #414963
 
 *nss-3.13.4 (07 May 2012)
 
