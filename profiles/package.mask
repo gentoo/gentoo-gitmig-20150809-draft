@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13733 2012/05/07 13:28:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13734 2012/05/07 17:37:00 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (07 May 2012)
+# Upstream discontinued security support for 3.6 series.
+# Blocking net-libs/xulrunner removal wrt bug #403415.
+# If you still need these, now is the time to copy them
+# to your local overlay.
+# Masked for removal in 30 days.
+=www-client/firefox-3.6*
 
 # Markos Chandras <hwoarang@gentoo.org> (07 May 2012)
 # Mask ebuild for testing
