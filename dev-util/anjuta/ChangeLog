@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.141 2012/05/04 17:51:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.142 2012/05/07 04:49:52 tetromino Exp $
+
+*anjuta-3.4.1 (07 May 2012)
+
+  07 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -anjuta-3.2.1.ebuild, +anjuta-3.4.1.ebuild:
+  Version bump with assorted UI improvements, better autotools support, and
+  vala-0.16 support. Drop old.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> anjuta-2.32.1.1.ebuild,
   anjuta-3.2.1.ebuild, anjuta-3.2.2.ebuild:

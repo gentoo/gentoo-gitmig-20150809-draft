@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.2.1.ebuild,v 1.2 2012/05/04 17:51:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.4.1.ebuild,v 1.1 2012/05/07 04:49:52 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -11,7 +11,6 @@ inherit gnome2 flag-o-matic multilib python
 
 DESCRIPTION="A versatile IDE for GNOME"
 HOMEPAGE="http://www.anjuta.org"
-SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,7 +40,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.2:2
 	x11-libs/libXrender
 
 	devhelp? ( >=dev-util/devhelp-3.0.0 )
-	glade? ( >=dev-util/glade-3.9.2:3.10 )
+	glade? ( >=dev-util/glade-3.11:3.10 )
 	graphviz? ( >=media-gfx/graphviz-2.6 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	subversion? (
@@ -49,28 +48,28 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.2:2
 		>=net-libs/neon-0.28.2
 		>=dev-libs/apr-1
 		>=dev-libs/apr-util-1 )
-	vala? ( >=dev-lang/vala-0.13.3:0.14 )"
+	vala? ( dev-lang/vala:0.16 )"
 RDEPEND="${COMMON_DEPEND}
 	packagekit? ( app-admin/packagekit-base )"
 DEPEND="${COMMON_DEPEND}
-	>=dev-lang/perl-5
-	!!dev-libs/gnome-build
-	>=sys-devel/gettext-0.17
-	>=dev-util/intltool-0.40.1
-	virtual/pkgconfig
-	>=app-text/scrollkeeper-0.3.14-r2
 	>=app-text/gnome-doc-utils-0.18
-	dev-util/gtk-doc-am
-	gnome-base/gnome-common
+	>=app-text/scrollkeeper-0.3.14-r2
+	>=dev-lang/perl-5
+	>=dev-util/intltool-0.40.1
 	sys-devel/bison
 	sys-devel/flex
+	>=sys-devel/gettext-0.17
+	virtual/pkgconfig
+	!!dev-libs/gnome-build
 	doc? ( >=dev-util/gtk-doc-1.4 )
 	test? (
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/docbook-xml-dtd:4.5 )"
+# eautoreconf requires: gtk-doc-am, gnome-common, gobject-introspection-common
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog FUTURE MAINTAINERS NEWS README ROADMAP THANKS TODO"
+	# COPYING is used in Anjuta's help/about entry
+	DOCS="AUTHORS ChangeLog COPYING FUTURE MAINTAINERS NEWS README ROADMAP THANKS TODO"
 
 	G2CONF="${G2CONF}
 		--disable-static
@@ -86,7 +85,7 @@ pkg_setup() {
 		$(use_enable vala)"
 
 	if use vala; then
-		G2CONF="${G2CONF} VALAC=$(type -P valac-0.14)"
+		G2CONF="${G2CONF} VALAC=$(type -P valac-0.16)"
 	fi
 
 	# Conflicts with -pg in a plugin, bug #266777
@@ -96,19 +95,22 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-#src_prepare() {
-	# Needed to preserve introspection configure option, see bgo#633730
-	# eautoreconf needs introspection.m4
-	#
-	# Looks to not be needed for this version, but, if introspection configure
-	# option is lost again, revisit this.
-#	cp "${WORKDIR}"/introspection.m4 . || die
+src_prepare() {
 #	intltoolize --force --copy --automake || die "intltoolize failed"
 #	AT_M4DIR="." eautoreconf
-#	gnome2_src_prepare
-#}
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=675584
+	# avoid autoreconf
+	sed -e 's:valac:$(VALAC):' \
+		-i plugins/language-support-vala/Makefile.{am,in} || die "sed failed"
+
+	gnome2_src_prepare
+}
 
 src_install() {
+	# COPYING is used in Anjuta's help/about entry
+	docompress -x "/usr/share/doc/${PF}/COPYING"
+
 	# Anjuta uses a custom rule to install DOCS, get rid of it
 	gnome2_src_install
 	rm -rf "${ED}"/usr/share/doc/${PN} || die "rm failed"
