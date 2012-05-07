@@ -2,14 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-<description>Proxy maintainer. CC him on bugs</description>
+	<email>laurento.frittella@gmail.com</email>
+	<name>Laurento Frittella (mrfree)</name>
+	<description>Maintainer. Assign bugs to him</description>
 </maintainer>
 <maintainer>
-<email>laurento.frittella@gmail.com</email>
-<name>Laurento Frittella (mrfree)</name>
-<description>Maintainer. Assign bugs to him</description>
+	<email>ago@gentoo.org</email>
+	<name>Agostino Sarubbo</name>
+	<description>Co-maintainer. CC him on bugs</description>
 </maintainer>
 <longdescription lang="en">
 </longdescription>
