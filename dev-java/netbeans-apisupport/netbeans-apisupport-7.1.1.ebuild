@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-apisupport/netbeans-apisupport-7.1.1.ebuild,v 1.2 2012/05/06 12:04:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-apisupport/netbeans-apisupport-7.1.1.ebuild,v 1.3 2012/05/07 06:21:54 phajdan.jr Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -13,7 +13,7 @@ SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1.1/final/zip/netbeans-7
 SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-9999-r1-build.xml.patch.bz2"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 
