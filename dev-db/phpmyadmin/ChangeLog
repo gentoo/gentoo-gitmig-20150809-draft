@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.466 2012/04/09 23:50:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.467 2012/05/07 14:36:20 a3li Exp $
+
+*phpmyadmin-3.5.1 (07 May 2012)
+
+  07 May 2012; Alex Legler <a3li@gentoo.org> -phpmyadmin-3.4.6.ebuild,
+  +phpmyadmin-3.5.1.ebuild:
+  Version bump for bug 414859, removing old version.
 
 *phpmyadmin-3.5.0 (09 Apr 2012)
 

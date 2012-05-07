@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.4.6.ebuild,v 1.6 2011/11/05 19:26:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.5.1.ebuild,v 1.1 2012/05/07 14:36:20 a3li Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ HOMEPAGE="http://www.phpmyadmin.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="+setup"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="setup"
 
 RDEPEND="
 	dev-lang/php[crypt,ctype,filter,json,session,unicode]
@@ -41,12 +41,13 @@ pkg_setup() {
 src_install() {
 	webapp_src_preinst
 
-	dodoc CREDITS Documentation.txt INSTALL README RELEASE-DATE-${MY_PV} TODO ChangeLog || die
-	rm -f LICENSE CREDITS INSTALL README* RELEASE-DATE-${MY_PV} TODO
+	dodoc Documentation.txt README RELEASE-DATE-${MY_PV} ChangeLog || die
+	rm -f LICENSE README* RELEASE-DATE-${MY_PV}
 
 	if ! use setup; then
 		rm -rf setup || die "Cannot remove setup utility"
-		elog "The phpmyadmin setup utility has been removed."
+		elog "The phpMyAdmin setup utility has been removed."
+		elog "It is a regular target of various exploits. If you need it, set USE=setup."
 	else
 		elog "You should consider disabling the setup USE flag"
 		elog "to exclude the setup utility if you don't use it."
