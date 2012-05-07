@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.23 2012/03/08 16:56:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.24 2012/05/07 09:14:26 ago Exp $
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org> qwtplot3d-0.2.7-r2.ebuild:
+  Stable for amd64, wrt bug #411873
 
 *qwtplot3d-0.2.7-r2 (08 Mar 2012)
 
