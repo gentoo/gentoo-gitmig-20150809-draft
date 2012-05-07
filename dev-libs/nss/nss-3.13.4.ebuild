@@ -1,21 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.1-r2.ebuild,v 1.4 2012/05/04 18:35:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.4.ebuild,v 1.1 2012/05/07 13:37:08 polynomial-c Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
 
-NSPR_VER="4.8.9"
+NSPR_VER="4.9"
 RTM_NAME="NSS_${PV//./_}_RTM"
-RTM_NAMECKBI="NSS_${PV//./_}_WITH_CKBI_1_88_RTM"
+
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAMECKBI}/src/${P}.with.ckbi.1.88.tar.gz
-	http://dev.gentoo.org/~anarchy/patches/nss-3.13.1-add_cacert_ca_certs.patch"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz
+	http://dev.gentoo.org/~anarchy/patches/nss-3.13.3-add_spi+cacerts_ca_certs.patch"
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="utils"
 
 DEPEND="virtual/pkgconfig"
@@ -23,12 +23,15 @@ RDEPEND=">=dev-libs/nspr-${NSPR_VER}
 	>=dev-db/sqlite-3.5
 	sys-libs/zlib"
 
+src_setup() {
+	export LC_ALL="C"
+}
+
 src_prepare() {
 	# Custom changes for gentoo
-	epatch "${FILESDIR}/${PN}-3.12.5-gentoo-fixups.diff"
+	epatch "${FILESDIR}/${PN}-3.13-gentoo-fixup.patch"
 	epatch "${FILESDIR}/${PN}-3.12.6-gentoo-fixup-warnings.patch"
-	epatch "${FILESDIR}/nss-3.13.1-pkcs11n-header-fix.patch"
-	epatch "${DISTDIR}/nss-3.13.1-add_cacert_ca_certs.patch"
+	epatch "${DISTDIR}/nss-3.13.3-add_spi+cacerts_ca_certs.patch"
 
 	cd "${S}"/mozilla/security/coreconf || die
 	# hack nspr paths
@@ -194,12 +197,6 @@ src_install () {
 }
 
 pkg_postinst() {
-	elog "We have reverted back to using upstreams soname."
-	elog "Please run revdep-rebuild --library libnss3.so.12 , this"
-	elog "will correct most issues. If you find a binary that does"
-	elog "not run please re-emerge package to ensure it properly"
-	elog " links after upgrade."
-	elog
 	# We must re-sign the libraries AFTER they are stripped.
 	generate_chk "${EROOT}"/usr/bin/shlibsign "${EROOT}"/usr/$(get_libdir)
 }
