@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.54 2012/03/06 14:33:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.55 2012/05/07 10:39:04 yngwin Exp $
+
+  07 May 2012; Ben de Groot <yngwin@gentoo.org> -qsynth-0.3.2.ebuild,
+  -qsynth-0.3.4.ebuild, -qsynth-0.3.5.ebuild, qsynth-0.3.6.ebuild:
+  Bump to EAPI=4. Migrate to qt4-r2.eclass. Respect LINGUAS. Patch by kensington
+  in bug 409997. Remove old.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> qsynth-0.3.6.ebuild:
   Marking qsynth-0.3.6 ppc for bug 393715

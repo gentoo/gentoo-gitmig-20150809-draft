@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.6.ebuild,v 1.5 2012/03/06 14:33:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.6.ebuild,v 1.6 2012/05/07 10:39:04 yngwin Exp $
 
-EAPI=2
+EAPI=4
+LANGS="cs de es ru"
 
-inherit qt4 eutils flag-o-matic
+inherit qt4-r2 eutils flag-o-matic
 
 DESCRIPTION="A Qt application to control FluidSynth"
 HOMEPAGE="http://qsynth.sourceforge.net/"
@@ -22,6 +23,24 @@ DEPEND=">=x11-libs/qt-core-4.2:4
 	!pulseaudio? ( !jack? ( !alsa? ( >=media-sound/fluidsynth-1.0.7a[oss] ) ) )"
 RDEPEND="${DEPEND}"
 
+DOCS="AUTHORS ChangeLog README TODO TRANSLATORS"
+
+src_prepare() {
+	local lang use_langs
+	for lang in ${LANGS} ; do
+		if use linguas_${lang} ; then
+			use_langs="${use_langs} src/translations/${PN}_${lang}.qm"
+		fi
+	done
+
+	sed -e "s|\$(translations_targets)|${use_langs}|" -i Makefile.in \
+		|| die "sed translations failed"
+
+	sed -e 's/@make/@\$(MAKE)/' -i Makefile.in || die "sed Makefile failed"
+
+	qt4-r2_src_prepare
+}
+
 src_configure() {
 	# Stupidly, qsynth's configure does *not* use pkg-config to
 	# discover the presence of Qt4, but uses fixed paths; as they
@@ -32,19 +51,17 @@ src_configure() {
 	append-ldflags -L/usr/$(get_libdir)/qt4
 
 	econf \
-		$(use_enable debug) \
-		|| die "econf failed"
+		$(use_enable debug)
 	eqmake4 "${PN}.pro" -o "${PN}.mak"
 }
 
 src_compile() {
-	lupdate  "${PN}.pro" || die
-	emake || die
+	lupdate "${PN}.pro" || die "lupdate failed"
+	qt4-r2_src_compile
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog README TODO
+	qt4-r2_src_install
 
 	# The desktop file is invalid, and we also change the command
 	# depending on useflags
