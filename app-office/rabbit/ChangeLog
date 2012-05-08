@@ -1,6 +1,11 @@
 # ChangeLog for app-office/rabbit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.15 2011/12/26 14:37:35 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.16 2012/05/08 17:13:01 graaff Exp $
+
+*rabbit-1.0.6 (08 May 2012)
+
+  08 May 2012; Hans de Graaff <graaff@gentoo.org> +rabbit-1.0.6.ebuild:
+  Version bump. Drop x86 due to new dependency on kramdown, bug 415151.
 
   26 Dec 2011; Hans de Graaff <graaff@gentoo.org> -rabbit-0.6.4-r1.ebuild:
   Remove old version.
