@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libtecla
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.17 2010/10/14 13:44:53 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.18 2012/05/08 19:38:09 jlec Exp $
+
+*libtecla-1.6.1-r2 (08 May 2012)
+
+  08 May 2012; Justin Lecher <jlec@gentoo.org> +libtecla-1.6.1-r2.ebuild,
+  +files/libtecla-1.6.1-LDFLAGS2.patch,
+  +files/libtecla-1.6.1-parallel_build2.patch,
+  +files/libtecla-1.6.1-prll-install.patch, metadata.xml:
+  Move to EAPI=4, respect LDFLAGS, #334641; fix parallel install, #377987
 
 *libtecla-1.6.1-r1 (14 Oct 2010)
 
