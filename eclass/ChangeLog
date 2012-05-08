@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.242 2012/05/07 21:28:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.243 2012/05/08 21:27:10 dilfridge Exp $
+
+  08 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> cmake-utils.eclass:
+  Update cmake-utils.eclass from kde overlay: make builds verbose by default,
+  fix usage of PREFIX (bug 358059)
 
   07 May 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Stop stripping upstream CFLAGS from g++.conf for Qt 4.8 and later (see bug
