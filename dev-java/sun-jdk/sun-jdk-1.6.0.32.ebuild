@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.32.ebuild,v 1.1 2012/05/05 21:29:30 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.32.ebuild,v 1.2 2012/05/08 18:38:54 grobian Exp $
 
 EAPI="4"
 
@@ -49,7 +49,7 @@ SRC_URI="
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 IUSE="X alsa derby doc examples jce kernel_SunOS nsplugin +source"
 
@@ -128,7 +128,8 @@ pkg_nofetch() {
 }
 
 _sol_src_unpack() {
-	for i in ${A}; do
+	for i in ${AT}; do
+		[[ ${i} == "and" ]] && continue
 		rm -f "${S}"/jre/{LICENSE,README} "${S}"/LICENSE
 		# don't die on unzip, it always "fails"
 		unzip "${DISTDIR}"/${i}
@@ -137,14 +138,22 @@ _sol_src_unpack() {
 		"${S}"/bin/unpack200 ${f} ${f%.pack}.jar
 		rm ${f}
 	done
+	if use examples ; then
+		for i in ${DEMOS}; do
+			[[ ${i} == "and" ]] && continue
+			use examples && unpack ${i}
+		done
+		mv "${WORKDIR}"/SUNWj6dmo/reloc/jdk/instances/jdk1.6.0/{demo,sample} \
+			"${S}"/ || die
+	fi
 }
 
 src_unpack() {
+	_set_at
+	_set_demos
 	if use kernel_SunOS; then
 		_sol_src_unpack
 	else
-		_set_at
-		_set_demos
 		sh "${DISTDIR}"/${AT} -noregister || die "Failed to unpack"
 		use examples && unpack ${DEMOS}
 	fi
