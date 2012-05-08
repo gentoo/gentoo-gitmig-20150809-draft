@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.206 2012/05/05 06:25:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.207 2012/05/08 01:05:04 hasufell Exp $
+
+  08 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  webkit is now global wrt #285743
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> zenity-2.32.1.ebuild,
   zenity-3.2.0.ebuild:

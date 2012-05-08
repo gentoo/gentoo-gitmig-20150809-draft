@@ -5,7 +5,5 @@
 	<use>
 		<flag name="compat">Installs gdialog for compatibility with older shell
 			scripts which uses <pkg>dev-lang/perl</pkg></flag>
-		<flag name="webkit">Enable HTML rendering using
-			<pkg>net-libs/webkit-gtk</pkg></flag>
 	</use>
 </pkgmetadata>
