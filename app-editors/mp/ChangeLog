@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.87 2012/05/03 18:33:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.88 2012/05/08 15:52:45 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org> mp-5.2.1.ebuild:
+  Marking mp-5.2.1 ppc64 for bug 413567
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> mp-3.3.18b.ebuild,
   mp-5.2.1.ebuild, mp-5.2.2.ebuild:
