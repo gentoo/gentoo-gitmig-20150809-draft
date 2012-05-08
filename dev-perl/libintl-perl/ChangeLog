@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.38 2012/04/01 18:31:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.39 2012/05/08 16:26:24 xarthisius Exp $
+
+  08 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  libintl-perl-1.200.0.ebuild:
+  ppc/ppc64 stable wrt #414947
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> libintl-perl-1.200.0.ebuild:
   Add ~alpha/~arm/~s390/~sh wrt #408399
