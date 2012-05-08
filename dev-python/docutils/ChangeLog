@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.149 2012/05/08 12:11:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.150 2012/05/08 12:12:33 xarthisius Exp $
+
+  08 May 2012; Kacper Kowalik <xarthisius@gentoo.org> -docutils-0.7.ebuild:
+  Drop old
 
   08 May 2012; Kacper Kowalik <xarthisius@gentoo.org> docutils-0.8.1.ebuild:
   ppc/ppc64 stable wrt #386065
