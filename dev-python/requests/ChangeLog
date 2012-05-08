@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.8 2012/04/26 21:12:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.9 2012/05/08 09:29:32 djc Exp $
+
+*requests-0.12.1 (08 May 2012)
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> +requests-0.12.1.ebuild:
+  Version bump to 0.12.1, with testing (bug 380137).
 
   26 Apr 2012; Mike Frysinger <vapier@gentoo.org> requests-0.10.6.ebuild,
   requests-0.11.1.ebuild:
@@ -11,6 +16,16 @@
   31 Mar 2012; Mike Gilbert <floppym@gentoo.org> +requests-0.11.1.ebuild,
   -requests-0.10.0.ebuild, -requests-0.9.3.ebuild:
   Version bump. Remove old.
+
+*requests-0.10.8 (29 Mar 2012)
+
+  29 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> -requests-0.9.3.ebuild,
+  -requests-0.10.0.ebuild, +requests-0.10.8.ebuild:
+  Remove old versions, bump to 0.10.8.
+
+  29 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> -requests-0.9.3.ebuild,
+  -requests-0.10.0.ebuild:
+  Remove old versions.
 
   27 Feb 2012; Mike Gilbert <floppym@gentoo.org> requests-0.10.6.ebuild:
   Depend on >=dev-python/certifi-0.0.7.
