@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.8.4.ebuild,v 1.1 2012/05/08 08:52:42 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.8.5.ebuild,v 1.1 2012/05/08 09:33:54 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
