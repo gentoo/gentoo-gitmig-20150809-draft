@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.1 2012/04/20 19:44:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.2 2012/05/08 19:09:07 bicatali Exp $
+
+  08 May 2012; Sébastien Fabbro <bicatali@gentoo.org> pandas-0.7.3.ebuild:
+  Remove scikits_statsmodels as dependency to get rid of circular dependency.
+  Allow python-3
 
 *pandas-0.7.3 (20 Apr 2012)
 

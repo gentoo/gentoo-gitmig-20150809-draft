@@ -1,14 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.7.3.ebuild,v 1.1 2012/04/20 19:44:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.7.3.ebuild,v 1.2 2012/05/08 19:09:07 bicatali Exp $
 
 EAPI=4
 
 # python cruft
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
-# python 3 might be working but does not pass nose tests
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+RESTRICT_PYTHON_ABIS="2.4"
 
 inherit distutils
 
@@ -34,7 +33,6 @@ RDEPEND="${CDEPEND}
 	dev-python/matplotlib
 	dev-python/pytables
 	dev-python/pytz
-	sci-libs/scikits_statsmodels
 	sci-libs/scipy
 	excel? (
 		dev-python/openpyxl
