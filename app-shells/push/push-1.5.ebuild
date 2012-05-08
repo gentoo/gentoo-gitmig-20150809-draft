@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/push/push-1.5.ebuild,v 1.2 2012/05/08 18:33:02 darkside Exp $
 
 EAPI="4"
 inherit vcs-snapshot

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/push
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.1 2012/05/08 18:31:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.2 2012/05/08 18:33:02 darkside Exp $
+
+  08 May 2012; Jeremy Olexa <darkside@gentoo.org> push-1.5.ebuild:
+  fix header
 
 *push-1.5 (08 May 2012)
 
