@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.92 2012/03/26 07:21:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.93 2012/05/08 12:20:43 sera Exp $
+
+*itext-2.1.5-r1 (08 May 2012)
+
+  08 May 2012; Ralph Sennhauser <sera@gentoo.org> +itext-2.1.5-r1.ebuild:
+  Major overhaul. Allow building with jdk7. #396589
 
 *itext-5.2.0 (26 Mar 2012)
 
