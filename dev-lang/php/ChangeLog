@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.583 2012/05/03 20:27:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.584 2012/05/08 17:22:11 olemarkus Exp $
+
+*php-5.4.3 (08 May 2012)
+*php-5.3.13 (08 May 2012)
+
+  08 May 2012; Ole Markus With <olemarkus@gentoo.org> +php-5.3.13.ebuild,
+  +php-5.4.3.ebuild:
+  Version bump. Hopefully fixing the CGI SAPI vulnerability … Bug #414553
 
   03 May 2012; Markus Meier <maekke@gentoo.org> php-5.3.11.ebuild:
   arm stable, bug #410957
