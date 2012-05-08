@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.115 2012/05/02 18:31:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.116 2012/05/08 22:00:49 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -292,6 +292,7 @@ unset cppuintdepend
 kdecommondepend="
 	dev-lang/perl
 	>=x11-libs/qt-core-${QT_MINIMAL}:4[qt3support,ssl]
+	>=x11-libs/qt-dbus-${QT_MINIMAL}:4
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4[accessibility,dbus]
 	>=x11-libs/qt-qt3support-${QT_MINIMAL}:4[accessibility]
 	>=x11-libs/qt-script-${QT_MINIMAL}:4
@@ -774,6 +775,9 @@ kde4-base_src_configure() {
 	cmakeargs+=(-DSYSCONF_INSTALL_DIR="${EPREFIX}"/etc)
 
 	if [[ $(declare -p mycmakeargs 2>&-) != "declare -a mycmakeargs="* ]]; then
+		if [[ ${mycmakeargs} ]]; then
+			eqawarn "mycmakeargs should always be declared as an array, not a string"
+		fi
 		mycmakeargs=(${mycmakeargs})
 	fi
 

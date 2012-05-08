@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.58 2011/12/18 00:00:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.59 2012/05/08 22:00:49 dilfridge Exp $
 
 inherit versionator
 
@@ -183,11 +183,6 @@ enable_selected_linguas() {
 enable_selected_doc_linguas() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	# if there is no linguas defined we enable everything
-	if ! $(env | grep -q "^LINGUAS="); then
-		return 0
-	fi
-
 	# @ECLASS-VARIABLE: KDE_DOC_DIRS
 	# @DESCRIPTION:
 	# Variable specifying whitespace separated patterns for documentation locations.
@@ -208,6 +203,11 @@ enable_selected_doc_linguas() {
 				-e "/ADD_SUBDIRECTORY[[:space:]]*([[:space:]]*${handbookdir}[[:space:]]*)/s/^/#DONOTCOMPILE /" \
 				-i CMakeLists.txt || die 'failed to comment out all handbooks'
 		else
+			# if there is no linguas defined we enable everything (i.e. comment out nothing)
+			if ! $(env | grep -q "^LINGUAS="); then
+				return 0
+			fi
+
 			# Disable subdirectories recursively
 			comment_all_add_subdirectory "${handbookdir}"
 			# Add requested translations
