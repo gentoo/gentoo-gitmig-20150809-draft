@@ -1,21 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.ebuild,v 1.2 2012/05/08 21:48:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.ebuild,v 1.3 2012/05/08 23:29:42 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_TESTS_FAILURES_TOLERANT_ABIS="*-jython"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="Docutils - Python Documentation Utilities"
 HOMEPAGE="http://docutils.sourceforge.net/ http://pypi.python.org/pypi/docutils"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 SRC_URI+=" glep? ( mirror://gentoo/glep-0.4-r1.tbz2 )"
 
-LICENSE="BSD-2 GPL-3 PSF-2 public-domain"
+LICENSE="BSD-2 GPL-3 public-domain"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="glep"
 
 RDEPEND="dev-python/pygments"
@@ -23,11 +23,11 @@ DEPEND="dev-python/setuptools
 		${RDEPEND}"
 
 DOCS="*.txt"
-PYTHON_MODNAME="docutils roman.py"
 
 GLEP_SRC="${WORKDIR}/glep-0.4-r1"
 
 src_prepare() {
+	distutils_src_prepare
 	sed -e "s/from distutils.core/from setuptools/" -i setup.py || die "sed setup.py failed"
 }
 
@@ -35,9 +35,6 @@ src_compile() {
 	distutils_src_compile
 
 	# Generate html docs from reStructured text sources.
-
-	# Make roman.py available for process of building of documentation.
-	ln -s extras/roman.py
 
 	# Place html4css1.css in base directory to ensure that the generated reference to it is correct.
 	cp docutils/writers/html4css1/html4css1.css .
@@ -50,7 +47,7 @@ src_compile() {
 	popd > /dev/null
 
 	# Clean up after building of documentation.
-	rm roman.py html4css1.css
+	rm html4css1.css
 }
 
 src_test() {
@@ -97,16 +94,16 @@ src_install() {
 
 	# Install Gentoo GLEP tools.
 	if use glep; then
-		dobin "${GLEP_SRC}/glep.py" || die "dobin failed"
+		dobin "${GLEP_SRC}/glep.py"
 
 		installation_of_glep_tools() {
 			insinto $(python_get_sitedir)/docutils/readers
-			newins "${GLEP_SRC}/glepread.py" glep.py || die "newins reader failed"
+			newins "${GLEP_SRC}/glepread.py" glep.py
 			insinto $(python_get_sitedir)/docutils/transforms
-			newins "${GLEP_SRC}/glepstrans.py" gleps.py || die "newins transform failed"
+			newins "${GLEP_SRC}/glepstrans.py" gleps.py
 			insinto $(python_get_sitedir)/docutils/writers
-			doins -r "${GLEP_SRC}/glep_html" || die "doins writer failed"
+			doins -r "${GLEP_SRC}/glep_html"
 		}
-		python_execute_function --action-message 'Installation of GLEP tools with $(python_get_implementation_and_version)...' installation_of_glep_tools
+		python_execute_function --action-message 'Installation of GLEP tools with $(python_get_implementation_and_version)' installation_of_glep_tools
 	fi
 }
