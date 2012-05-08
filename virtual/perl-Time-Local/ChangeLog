@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.52 2012/05/05 23:30:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.53 2012/05/08 13:51:33 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org>
+  perl-Time-Local-1.200.0-r1.ebuild:
+  Marking perl-Time-Local-1.200.0-r1 ppc64 for bug 413887
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org>
   perl-Time-Local-1.200.0-r1.ebuild:
