@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.48 2012/03/01 15:56:07 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.49 2012/05/08 08:49:20 djc Exp $
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> -dulwich-0.8.2.ebuild:
+  Remove old version.
 
 *dulwich-0.8.3 (01 Mar 2012)
 
