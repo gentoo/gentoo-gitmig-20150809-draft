@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/trayer-1.0-r1.ebuild,v 1.9 2012/05/05 21:44:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/trayer-1.0-r1.ebuild,v 1.10 2012/05/08 15:41:21 ranger Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -10,7 +10,7 @@ HOMEPAGE="http://home.gna.org/fvwm-crystal/"
 SRC_URI="http://download.gna.org/fvwm-crystal/trayer/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 RDEPEND="
 	dev-libs/glib:2

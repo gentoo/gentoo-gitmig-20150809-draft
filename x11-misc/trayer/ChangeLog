@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.26 2012/05/05 21:44:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.27 2012/05/08 15:41:21 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org> trayer-1.0-r1.ebuild:
+  Marking trayer-1.0-r1 ppc64 for bug 414305
 
   05 May 2012; Brent Baude <ranger@gentoo.org> trayer-1.0-r1.ebuild:
   Marking trayer-1.0-r1 ppc for bug 414305
