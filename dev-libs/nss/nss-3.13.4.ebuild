@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.4.ebuild,v 1.3 2012/05/08 10:47:18 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.13.4.ebuild,v 1.4 2012/05/08 13:13:34 polynomial-c Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -11,7 +11,8 @@ RTM_NAME="NSS_${PV//./_}_RTM"
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz
-	http://dev.gentoo.org/~anarchy/patches/nss-3.13.3-add_spi+cacerts_ca_certs.patch"
+	http://dev.gentoo.org/~anarchy/patches/nss-3.13.3-add_spi+cacerts_ca_certs.patch
+	http://dev.gentoo.org/~anarchy/patches/${PN}-3.13.3_pem.support"
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
@@ -32,6 +33,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.13-gentoo-fixup.patch"
 	epatch "${FILESDIR}/${PN}-3.12.6-gentoo-fixup-warnings.patch"
 	epatch "${DISTDIR}/nss-3.13.3-add_spi+cacerts_ca_certs.patch"
+	epatch "${DISTDIR}/${PN}-3.13.3_pem.support"
 
 	cd "${S}"/mozilla/security/coreconf || die
 	# hack nspr paths
