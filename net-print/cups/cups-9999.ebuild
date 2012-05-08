@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.1 2012/05/08 22:24:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.2 2012/05/08 23:00:40 dilfridge Exp $
 
 EAPI=4
 
@@ -10,14 +10,14 @@ MY_P=${P/_}
 MY_PV=${PV/_}
 
 if [[ "${PV}" != "9999" ]]; then
-	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2 systemd
+	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python versionator java-pkg-opt-2 systemd
 	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2
 		http://dev.gentoo.org/~dilfridge/distfiles/${P}-ipp-r8950.patch.bz2
 		http://dev.gentoo.org/~dilfridge/distfiles/${P}-avahi.patch.bz2
 	"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
 else
-	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2 systemd subversion
+	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python versionator java-pkg-opt-2 systemd subversion
 	ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
 	KEYWORDS=""
 fi
@@ -27,8 +27,8 @@ HOMEPAGE="http://www.cups.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="acl avahi dbus debug +filters gnutls java +jpeg kerberos ldap pam perl
-	+png python slp +ssl static-libs systemd +threads +tiff usb X xinetd"
+IUSE="acl avahi dbus debug +filters gnutls java kerberos ldap pam
+	python slp +ssl static-libs systemd +threads usb X xinetd"
 
 LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
 for X in ${LANGS} ; do
@@ -46,12 +46,9 @@ RDEPEND="
 	avahi? ( net-dns/avahi )
 	dbus? ( sys-apps/dbus )
 	java? ( >=virtual/jre-1.6 )
-	jpeg? ( virtual/jpeg:0 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap[ssl?,gnutls?] )
 	pam? ( virtual/pam )
-	perl? ( dev-lang/perl )
-	png? ( >=media-libs/libpng-1.4.3:0 )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	ssl? (
 		gnutls? (
@@ -61,7 +58,6 @@ RDEPEND="
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
 	systemd? ( sys-apps/systemd )
-	tiff? ( >=media-libs/tiff-3.5.5:0 )
 	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
@@ -85,17 +81,10 @@ RESTRICT="test"
 S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.4.4-dont-compress-manpages.patch"
-	"${FILESDIR}/${PN}-1.4.4-fix-install-perms.patch"
+	"${FILESDIR}/${PN}-1.6.0-dont-compress-manpages.patch"
+	"${FILESDIR}/${PN}-1.6.0-fix-install-perms.patch"
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
-	"${FILESDIR}/${PN}-1.4.4-php-destdir.patch"
-	"${FILESDIR}/${PN}-1.4.4-perl-includes.patch"
-	"${FILESDIR}/${PN}-1.5.2-linkperl.patch"
-	"${FILESDIR}/${PN}-1.5.2-threads.patch"
-	"${FILESDIR}/${PN}-1.5.2-threads2.patch"
 	"${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"		# systemd support
-	"${DISTDIR}/${PN}-1.5.2-ipp-r8950.patch.bz2"		# revert ipp backend to 1.4 state
-	"${DISTDIR}/${PN}-1.5.2-avahi.patch.bz2"		# avahi support from debian
 	"${FILESDIR}/${PN}-1.5.2-browsing.patch"		# browsing off by default
 )
 
@@ -189,18 +178,15 @@ src_configure() {
 		$(use_enable dbus) \
 		$(use_enable debug) \
 		$(use_enable debug debug-guards) \
-		$(use_enable jpeg) \
 		$(use_enable kerberos gssapi) \
 		$(use_enable ldap) \
 		$(use_enable pam) \
-		$(use_enable png) \
 		$(use_enable slp) \
 		$(use_enable static-libs static) \
 		$(use_enable threads) \
-		$(use_enable tiff) \
 		$(use_enable usb libusb) \
 		$(use_with java) \
-		$(use_with perl) \
+		--without-perl \
 		--without-php \
 		$(use_with python) \
 		$(use_with xinetd xinetd /etc/xinetd.d) \
@@ -216,26 +202,9 @@ src_configure() {
 	sed -i -e 's:cups_serverbin=.*:cups_serverbin=/usr/libexec/cups:' cups-config || die
 }
 
-src_compile() {
-	emake
-
-	if use perl ; then
-		cd "${S}"/scripting/perl
-		perl-module_src_prep
-		perl-module_src_compile
-	fi
-}
-
 src_install() {
 	emake BUILDROOT="${D}" install
 	dodoc {CHANGES,CREDITS,README}.txt
-
-	if use perl ; then
-		pushd scripting/perl > /dev/null
-		perl-module_src_install
-		fixlocalpod
-		popd > /dev/null
-	fi
 
 	# clean out cups init scripts
 	rm -rf "${ED}"/etc/{init.d/cups,rc*,pam.d/cups}

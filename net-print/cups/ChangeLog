@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.474 2012/05/08 22:24:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.475 2012/05/08 23:00:40 dilfridge Exp $
+
+  08 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/cups-1.6.0-dont-compress-manpages.patch,
+  +files/cups-1.6.0-fix-install-perms.patch, cups-9999.ebuild:
+  Configures but does not build yet
 
 *cups-9999 (08 May 2012)
 
