@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.3 2011/11/01 10:14:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.4 2012/05/08 16:04:46 xarthisius Exp $
 
 EAPI="3"
 
@@ -203,6 +203,9 @@ src_prepare() {
 	if gcc-specs-pie ; then
 		epatch "${FILESDIR}/ipxe-nopie.patch" || die "Could not apply ipxe-nopie patch"
 	fi
+
+	sed -e '/texi2html/ s/-number/&-sections/' \
+		-i tools/ioemu-qemu-xen/Makefile || die #409333
 }
 
 src_compile() {

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.110 2012/01/12 13:40:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.111 2012/05/08 16:04:46 xarthisius Exp $
+
+  08 May 2012; Kacper Kowalik <xarthisius@gentoo.org> xen-tools-3.4.2-r3.ebuild,
+  xen-tools-3.4.2-r5.ebuild, xen-tools-4.1.1-r5.ebuild,
+  xen-tools-4.1.1-r6.ebuild, xen-tools-4.1.2-r2.ebuild:
+  Fix building with app-text/texi2html-5, commited on behalf of Ian Delaney.
+  Fixes bug 409333. Thanks to Joerg Neikes <xenoist@midlandgate.de> for the
+  report and patch
 
   12 Jan 2012; Alexey Shvetsov <alexxy@gentoo.org> xen-tools-4.1.2-r2.ebuild,
   files/xendomains.initd-r2:

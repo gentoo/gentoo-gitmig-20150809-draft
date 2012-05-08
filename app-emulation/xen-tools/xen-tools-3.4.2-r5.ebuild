@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.2-r5.ebuild,v 1.4 2011/10/25 18:40:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.2-r5.ebuild,v 1.5 2012/05/08 16:04:46 xarthisius Exp $
 
 EAPI="3"
 
@@ -133,6 +133,9 @@ src_prepare() {
 	if ! use pygrub; then
 		sed -i -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' "${S}"/tools/Makefile
 	fi
+
+	sed -e '/texi2html/ s/-number/&-sections/' \
+		-i tools/ioemu-qemu-xen/Makefile || die #409333
 }
 
 src_compile() {

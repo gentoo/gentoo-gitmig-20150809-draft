@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.5 2011/10/13 19:30:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.6 2012/05/08 16:04:46 xarthisius Exp $
 
 EAPI="3"
 
@@ -192,6 +192,9 @@ src_prepare() {
 		-e 's:^\tfi:#\tfi:' -i \
 		-e 's:^\tmv _$T $T:#\tmv _$T $T:' \
 		-i tools/firmware/etherboot/Makefile || die
+
+	sed -e '/texi2html/ s/-number/&-sections/' \
+		-i tools/ioemu-qemu-xen/Makefile || die #409333
 }
 
 src_compile() {

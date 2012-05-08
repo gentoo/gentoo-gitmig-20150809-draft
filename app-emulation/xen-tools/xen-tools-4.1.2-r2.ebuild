@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.2-r2.ebuild,v 1.3 2012/01/12 13:40:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.2-r2.ebuild,v 1.4 2012/05/08 16:04:46 xarthisius Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -195,6 +195,9 @@ src_prepare() {
 
 	# Fix create.py for pyxml Bug 367735
 	epatch "${FILESDIR}/xen-tools-4.1.2-pyxml.patch"
+
+	sed -e '/texi2html/ s/-number/&-sections/' \
+		-i tools/ioemu-qemu-xen/Makefile || die #409333
 }
 
 src_compile() {
