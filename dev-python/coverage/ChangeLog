@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.60 2012/04/09 17:56:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.61 2012/05/08 10:39:15 djc Exp $
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> -coverage-3.4.ebuild,
+  -coverage-3.5.ebuild:
+  Remove old versions.
 
   09 Apr 2012; Mike Gilbert <floppym@gentoo.org> coverage-3.5.1.ebuild:
   Add ~mips and ~ppc-macos; arch teams were taking too long.
