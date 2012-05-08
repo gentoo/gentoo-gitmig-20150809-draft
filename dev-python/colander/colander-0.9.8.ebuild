@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/colander-0.9.8.ebuild,v 1.1 2012/05/08 11:42:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/colander-0.9.8.ebuild,v 1.2 2012/05/08 18:18:00 xarthisius Exp $
 
 EAPI=4
 
@@ -51,6 +51,6 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml -A inv -r docs/_build/html/
+		dohtml -r docs/_build/html/
 	fi
 }
