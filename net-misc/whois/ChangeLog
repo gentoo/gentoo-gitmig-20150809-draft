@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.175 2012/05/05 21:39:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.176 2012/05/08 15:36:31 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org> whois-5.0.15.ebuild:
+  Marking whois-5.0.15 ppc64 for bug 414239
 
   05 May 2012; Brent Baude <ranger@gentoo.org> whois-5.0.15.ebuild:
   Marking whois-5.0.15 ppc for bug 414239
