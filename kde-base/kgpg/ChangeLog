@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.211 2012/05/03 20:07:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.212 2012/05/08 15:43:57 johu Exp $
+
+  08 May 2012; Johannes Huber <johu@gentoo.org> -kgpg-4.8.2.ebuild:
+  Remove KDE SC 4.8.2
 
 *kgpg-4.8.3 (03 May 2012)
 

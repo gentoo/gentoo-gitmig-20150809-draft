@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.224 2012/05/03 20:07:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.225 2012/05/08 15:43:40 johu Exp $
+
+  08 May 2012; Johannes Huber <johu@gentoo.org> -kget-4.8.2.ebuild:
+  Remove KDE SC 4.8.2
 
 *kget-4.8.3 (03 May 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.134 2012/05/03 20:07:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.135 2012/05/08 15:43:56 johu Exp $
+
+  08 May 2012; Johannes Huber <johu@gentoo.org> -okular-4.8.2.ebuild:
+  Remove KDE SC 4.8.2
 
 *okular-4.8.3 (03 May 2012)
 
