@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.7.8.ebuild,v 1.1 2012/04/23 09:08:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.7.8.ebuild,v 1.2 2012/05/08 02:30:01 patrick Exp $
 
 EAPI=3
 
@@ -39,7 +39,7 @@ src_prepare() {
 
 src_configure() {
 	# this is an autotools lookalike confuserator
-	./configure --shared-v8 --prefix="${EPREFIX}"/usr --shared-v8-includes=${EPREFIX}/usr/include --openssl-use-sys --shared-zlib || die
+	./configure --shared-v8 --prefix="${EPREFIX}"/usr --shared-v8-includes="${EPREFIX}"/usr/include --openssl-use-sys --shared-zlib || die
 }
 
 src_compile() {
@@ -57,8 +57,8 @@ src_install() {
 	mkdir -p "${ED}"/lib/node_modules/npm
 	cp 'src/node.h' 'src/node_buffer.h' 'src/node_object_wrap.h' 'src/node_version.h' "${ED}"/usr/include/node || die "Failed to copy stuff"
 	cp 'deps/uv/include/ares.h' 'deps/uv/include/ares_version.h' "${ED}"/usr/include/node || die "Failed to copy stuff"
-	cp 'out/Release/node' ${ED}/usr/bin/node || die "Failed to copy stuff"
-	cp -R deps/npm/* ${ED}/lib/node_modules/npm || die "Failed to copy stuff"
+	cp 'out/Release/node' "${ED}"/usr/bin/node || die "Failed to copy stuff"
+	cp -R deps/npm/* "${ED}"/lib/node_modules/npm || die "Failed to copy stuff"
 
 	# now add some extra stupid just because we can
 	# needs to be a symlink because of hardcoded paths ... no es bueno!
