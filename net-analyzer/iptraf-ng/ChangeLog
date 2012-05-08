@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.29 2012/05/04 15:52:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.30 2012/05/08 17:38:57 jer Exp $
+
+  08 May 2012; Jeroen Roovers <jer@gentoo.org> iptraf-ng-1.1.2.ebuild:
+  Make HTML documentation installation optional. Do not install the entire
+  directory, but the HTML documentation only, and install into html/, not
+  html/Documentation.
 
 *iptraf-ng-1.1.2 (04 May 2012)
 
