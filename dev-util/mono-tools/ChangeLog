@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.87 2012/05/04 17:51:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.88 2012/05/08 00:57:21 hasufell Exp $
+
+  08 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  webkit is now global wrt #285743
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> mono-tools-2.10.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
