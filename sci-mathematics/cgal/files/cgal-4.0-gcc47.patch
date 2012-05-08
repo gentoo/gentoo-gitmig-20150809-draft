@@ -1,0 +1,11 @@
+--- ./include/CGAL/Mesh_2/Do_not_refine_edges.h.ori	2012-04-25 23:14:26.132198961 +0200
++++ ./include/CGAL/Mesh_2/Do_not_refine_edges.h	2012-04-25 23:14:46.304953789 +0200
+@@ -80,7 +80,7 @@
+       const Face_handle& fh = eit->first;
+       const int& i = eit->second;
+ 
+-      if(fh->is_constrained(i) && !is_locally_conform(this->tr, fh, i, p))
++      if(fh->is_constrained(i) && !this->is_locally_conform(this->tr, fh, i, p))
+       {
+         return CONFLICT_AND_ELEMENT_SHOULD_BE_DROPPED;
+       }

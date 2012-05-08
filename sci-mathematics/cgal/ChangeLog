@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/cgal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.14 2012/05/04 07:46:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.15 2012/05/08 18:27:58 bicatali Exp $
+
+  08 May 2012; Sébastien Fabbro <bicatali@gentoo.org> cgal-4.0.ebuild,
+  +files/cgal-4.0-gcc47.patch:
+  Fix for gcc-4.7, thanks Jimmy Jazz (bug #414029)
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> cgal-3.7.ebuild,
   cgal-3.9.ebuild, cgal-4.0.ebuild:

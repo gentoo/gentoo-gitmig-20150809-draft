@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.0.ebuild,v 1.2 2012/05/04 07:46:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.0.ebuild,v 1.3 2012/05/08 18:27:58 bicatali Exp $
 
 EAPI=4
 CMAKE_BUILD_TYPE=Release
@@ -39,6 +39,7 @@ S="${WORKDIR}/${MY_P}"
 DOCS="AUTHORS CHANGES* README"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 	base_src_prepare
 	sed -i \
 		-e '/install(FILES AUTHORS/d' \
