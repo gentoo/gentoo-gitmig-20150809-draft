@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6520 2012/05/07 22:55:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6521 2012/05/08 12:19:33 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 May 2012; Alexis Ballier <aballier@gentoo.org> profiles.desc:
+  mark default/bsd/fbsd/amd64/9.0 profile as stable to disallow broken deps
 
   07 May 2012; Julian Ospald <hasufell@gentoo.org> use.desc:
   webkit is now global wrt #285743
