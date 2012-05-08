@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.72 2012/04/20 17:10:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.73 2012/05/08 20:48:09 jdhore Exp $
+
+  08 May 2012; Jeff Horelick <jdhore@gentoo.org> -libmowgli-0.6.1.ebuild,
+  -libmowgli-0.7.0.ebuild, -libmowgli-0.9.50.ebuild, -libmowgli-0.9.95.ebuild:
+  Remove old.
 
   20 Apr 2012; Jeff Horelick <jdhore@gentoo.org> libmowgli-2.0.0.ebuild:
   Change the libmowgli-2.0.0 SRC_URI to atheme.org/downloads/ since cgit
