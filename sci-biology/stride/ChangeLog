@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/stride
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.12 2011/07/20 16:54:08 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.13 2012/05/08 03:58:13 ottxor Exp $
+
+  08 May 2012; Christoph Junghans <ottxor@gentoo.org>
+  stride-20011129-r1.ebuild:
+  added ~x86-macos keyword
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #105599
