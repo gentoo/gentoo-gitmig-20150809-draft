@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/redis-py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.17 2012/02/24 14:53:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.18 2012/05/08 08:59:41 djc Exp $
+
+*redis-py-2.4.12 (08 May 2012)
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.4.12.ebuild:
+  Version bump to 2.4.12.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-py-2.4.10.ebuild:
   x86 stable wrt bug #404107
