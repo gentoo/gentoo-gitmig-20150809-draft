@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1.ebuild,v 1.4 2012/05/08 09:31:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1.ebuild,v 1.5 2012/05/08 13:08:49 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -27,7 +27,7 @@ fi
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCHFF="firefox-12.0-patches-0.1"
+PATCHFF="firefox-12.0-patches-0.2"
 PATCH="${PN}-2.7-patches-03"
 EMVER="1.4.1"
 
