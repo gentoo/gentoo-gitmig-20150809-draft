@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.50 2012/03/10 07:38:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.51 2012/05/08 23:51:13 aballier Exp $
+
+  08 May 2012; Alexis Ballier <aballier@gentoo.org>
+  gtk-syntax-20110214-r1.ebuild:
+  keyword ~amd64-fbsd
 
   10 Mar 2012; Tim Harder <radhermit@gentoo.org> gtk-syntax-20110214-r1.ebuild:
   Stable for arm (bug #391473).
