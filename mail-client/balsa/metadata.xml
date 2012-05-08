@@ -7,6 +7,5 @@
 		<flag name='gtkspell'>Use gtkspell for dictionary support</flag>
 		<flag name='rubrica'>Adds support for <pkg>app-office/rubrica</pkg>
 			addressbook</flag>
-		<flag name="webkit">Enable webkit based html renderer</flag>
 	</use>
 </pkgmetadata>
