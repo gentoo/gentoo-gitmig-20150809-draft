@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cfortran
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.25 2010/12/19 18:01:45 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.26 2012/05/08 03:52:42 ottxor Exp $
+
+  08 May 2012; Christoph Junghans <ottxor@gentoo.org> cfortran-4.4-r2.ebuild:
+  added ~x86-macos keyword
 
   19 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> cfortran-4.4-r2.ebuild:
   Updating Debian patchset (only changes docs)
