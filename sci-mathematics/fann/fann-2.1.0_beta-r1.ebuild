@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta-r1.ebuild,v 1.2 2012/02/25 03:24:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta-r1.ebuild,v 1.3 2012/05/08 18:18:55 bicatali Exp $
 
 EAPI=2
 
@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S="${WORKDIR}/${P/_beta/}"
+
+pkg_setup() {
+	use python && python_pkg_setup
+}
 
 src_prepare() {
 	epatch \
@@ -87,9 +91,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize py${PN}
+	use python && python_mod_optimize py${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup py${PN}
+	use python && python_mod_cleanup py${PN}
 }
