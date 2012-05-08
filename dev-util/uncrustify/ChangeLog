@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/uncrustify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.17 2012/05/06 11:25:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.18 2012/05/08 08:17:05 grobian Exp $
+
+  08 May 2012; Fabian Groffen <grobian@gentoo.org> uncrustify-0.59.ebuild:
+  Marked ~x64-solaris
 
   06 May 2012; Fabian Groffen <grobian@gentoo.org>
   +files/uncrustify-0.59-unistdh.patch, uncrustify-0.59.ebuild:
