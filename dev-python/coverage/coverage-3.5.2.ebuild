@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-3.5.2.ebuild,v 1.1 2012/05/08 10:43:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/coverage-3.5.2.ebuild,v 1.2 2012/05/08 23:37:07 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,5 +20,3 @@ DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
-
-PYTHON_MODNAME="coverage"
