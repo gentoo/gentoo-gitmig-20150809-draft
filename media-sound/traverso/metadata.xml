@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>proaudio</herd>
-  <maintainer>
-    <email>aballier@gentoo.org</email>
-    <name>Alexis Ballier</name>
-  </maintainer>
   <longdescription lang="en">
 		Traverso is a multitrack audio recording and editing program for GNU/Linux with
 		special emphasis to create an easy to use program with a clean and
