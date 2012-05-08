@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/indent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.56 2012/05/07 09:45:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.57 2012/05/08 15:51:00 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org> indent-2.2.11-r1.ebuild:
+  Marking indent-2.2.11-r1 ppc64 for bug 414947
 
   07 May 2012; Agostino Sarubbo <ago@gentoo.org> indent-2.2.11-r1.ebuild:
   Stable for amd64, wrt bug #414947
