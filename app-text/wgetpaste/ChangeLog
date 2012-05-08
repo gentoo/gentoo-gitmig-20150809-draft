@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.119 2012/05/03 10:53:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.120 2012/05/08 14:35:04 darkside Exp $
+
+  08 May 2012; Jeremy Olexa <darkside@gentoo.org> wgetpaste-2.19.ebuild:
+  stabilize for all since paste.pocoo.org doesn't accept pastes anymore, bug
+  415061
 
 *wgetpaste-2.19 (03 May 2012)
 
