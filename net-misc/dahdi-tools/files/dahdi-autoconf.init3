@@ -1,9 +1,10 @@
 #!/sbin/runscript
-# Copyright 2010-2011 Ultimate Linux Solutions CC
+# Copyright 1999-2012 Ultimate Linux Solutions CC
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
 	before dahdi
+	after wanrouter
 }
 
 dahdi_load_modules() {
@@ -85,16 +86,28 @@ dahdi_gen_bri_nt_config() {
 	[ "${DAHDI_BRI_NT_ECHOCAN-yes}" = yes ] && echo "echocanceller=${DAHDI_ECHOCAN-mg2},${basechan}-$(( basechan + 1 ))"
 }
 
-dahdi_gen_e1_te_config() {
+dahdi_gen_e1_cpe_config() {
 	span=$1
 	port=$2
 	basechan=$3
 
-	echo "span=${span},$(( port + 1 )),0,${DAHDI_E1_FRAMING-CCS},${DAHDI_E1_CODING-HDB3,CRC4}"
+	echo "span=${span},${port},0,${DAHDI_E1_FRAMING-CCS},${DAHDI_E1_CODING-HDB3,CRC4}"
 	bchans="${basechan}-$(( basechan + 14 )),$(( basechan + 16 ))-$(( basechan + 30 ))"
 	echo "bchan=${bchans}"
 	echo "dchan=$(( basechan + 15 ))"
-	[ "${DAHDI_E1_TE_ECHOCAN-yes}" = yes ] && echo "echocanceller=${DAHDI_ECHOCAN-mg2},${bchans}"
+	[ "${DAHDI_E1_CPE_ECHOCAN-yes}" = yes ] && echo "echocanceller=${DAHDI_ECHOCAN-mg2},${bchans}"
+}
+
+dahdi_gen_e1_net_config() {
+	span=$1
+	port=$2
+	basechan=$3
+
+	echo "span=${span},0,0,${DAHDI_E1_FRAMING-CCS},${DAHDI_E1_CODING-HDB3,CRC4}"
+	bchans="${basechan}-$(( basechan + 14 )),$(( basechan + 16 ))-$(( basechan + 30 ))"
+	echo "bchan=${bchans}"
+	echo "dchan=$(( basechan + 15 ))"
+	[ "${DAHDI_E1_NET_ECHOCAN-yes}" = yes ] && echo "echocanceller=${DAHDI_ECHOCAN-mg2},${bchans}"
 }
 
 dahdi_conf_span() {
@@ -103,6 +116,7 @@ dahdi_conf_span() {
 	local desc=$3
 	local port=$4
 	local basechan=$5
+	local vname=""
 
 	# Analog we need to deal with on a port-by-port basis.
 	[ "${type}" = "analog" ] && return 0
@@ -116,8 +130,15 @@ dahdi_conf_span() {
 			dahdi_gen_bri_nt_config "${span}" "${port}" "${basechan}"
 		;;
 		digital-E1)
-			# For the moment assume TE.
-			dahdi_gen_e1_te_config "${span}" "${port}" "${basechan}"
+			# Use CPE by default.  Unfortunately there is no easy
+			# way to detect CPE vs NET as far as I know and specifying
+			# in a config that you want NET mode seems the sanest way.
+			vname="PRI_SPAN_${span}_NET"
+			if [[ "${!vname}" = [Yy][Ee][Ss] ]]; then
+				dahdi_gen_e1_net_config "${span}" "${port}" "${basechan}"
+			else
+				dahdi_gen_e1_cpe_config "${span}" "${port}" "${basechan}"
+			fi
 		;;
 		*)
 			echo "# Don't know how to configure this (type=${type})."

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dahdi-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.20 2012/05/06 14:37:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.21 2012/05/08 14:17:01 chainsaw Exp $
+
+*dahdi-tools-2.6.1 (08 May 2012)
+
+  08 May 2012; Tony Vroon <chainsaw@gentoo.org> +dahdi-tools-2.6.1.ebuild,
+  +files/dahdi-autoconf.init3, -files/dahdi-autoconf.conf,
+  -files/dahdi-autoconf.init:
+  Updated autoconf by Jaco Kroon closes bug #390091. Version bump to upstream
+  release 2.6.1 as requested by Oliver Jaksch in bug #404521.
 
   06 May 2012; Agostino Sarubbo <ago@gentoo.org> -dahdi-tools-2.4.1.ebuild:
   Remove old
