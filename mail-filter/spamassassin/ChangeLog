@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.209 2012/05/06 20:26:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.210 2012/05/08 16:04:27 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org> spamassassin-3.3.2-r1.ebuild:
+  Marking spamassassin-3.3.2-r1 ppc64 for bug 395539
 
   06 May 2012; Brent Baude <ranger@gentoo.org> spamassassin-3.3.2-r1.ebuild:
   Marking spamassassin-3.3.2-r1 ppc for bug 395539
