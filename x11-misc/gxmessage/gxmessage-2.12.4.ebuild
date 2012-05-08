@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.12.4.ebuild,v 1.3 2012/05/08 08:47:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/gxmessage-2.12.4.ebuild,v 1.4 2012/05/08 08:51:06 ssuominen Exp $
 
 EAPI=4
+inherit gnome2-utils
 
 DESCRIPTION="A GTK+ based xmessage clone"
 HOMEPAGE="http://homepages.ihug.co.nz/~trmusson/programs.html#gxmessage"
@@ -27,3 +28,7 @@ src_install() {
 	docinto examples
 	dodoc examples/*
 }
+
+pkg_preinst() {	gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update; }
+pkg_postrm() { gnome2_icon_cache_update; }
