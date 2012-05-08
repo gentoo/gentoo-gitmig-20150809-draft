@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.144 2012/04/28 10:52:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.145 2012/05/08 18:30:17 hwoarang Exp $
+
+  08 May 2012; Markos Chandras <hwoarang@gentoo.org> qt-webkit-4.8.1.ebuild:
+  Stable on amd64 wrt bug #414241
 
   28 Apr 2012; Davide Pesavento <pesa@gentoo.org>
   +files/qt-webkit-4.8.1-no-use-ld-gold.patch, qt-webkit-4.8.1.ebuild:

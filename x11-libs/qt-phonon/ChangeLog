@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.109 2012/04/29 11:55:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.110 2012/05/08 18:27:28 hwoarang Exp $
+
+  08 May 2012; Markos Chandras <hwoarang@gentoo.org> qt-phonon-4.8.1.ebuild:
+  Stable on amd64 wrt bug #414241
 
   29 Apr 2012; Fabian Groffen <grobian@gentoo.org> qt-phonon-4.8.1.ebuild:
   Marked ~x64-macos

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.1.ebuild,v 1.4 2012/04/28 10:52:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.1.ebuild,v 1.5 2012/05/08 18:30:17 hwoarang Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit qt4-build flag-o-matic
 
 DESCRIPTION="The WebKit module for the Qt toolkit"
 SLOT="4"
-KEYWORDS="~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="+gstreamer +icu +jit"
 
 REQUIRED_USE="gstreamer? ( icu )" #407315

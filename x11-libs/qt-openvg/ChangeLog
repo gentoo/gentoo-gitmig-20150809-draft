@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-openvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.5 2012/04/19 16:14:49 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.6 2012/05/08 18:27:01 hwoarang Exp $
+
+  08 May 2012; Markos Chandras <hwoarang@gentoo.org> qt-openvg-4.8.1.ebuild:
+  Stable on amd64 wrt bug #414241
 
   19 Apr 2012; Davide Pesavento <pesa@gentoo.org> qt-openvg-4.8.1.ebuild:
   Drop ~hppa and ~mips: they've been added by mistake without proper testing by
