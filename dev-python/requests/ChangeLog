@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.9 2012/05/08 09:29:32 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.10 2012/05/08 23:06:57 floppym Exp $
+
+  08 May 2012; Mike Gilbert <floppym@gentoo.org> requests-0.12.1.ebuild:
+  Depend on dev-python/oauthlib for bug 415173 by candrews. Drop arm keyword due
+  to deps.
 
 *requests-0.12.1 (08 May 2012)
 
