@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/pacman-4.0.1.ebuild,v 1.1 2012/01/28 18:53:03 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/pacman-4.0.1.ebuild,v 1.2 2012/05/08 18:47:47 jdhore Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.archlinux.org/other/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="curl debug doc gpg test"
 
 COMMON_DEPEND="app-arch/libarchive
