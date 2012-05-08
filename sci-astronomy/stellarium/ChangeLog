@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.84 2012/05/06 12:15:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.85 2012/05/08 15:53:39 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org> stellarium-0.11.2.ebuild:
+  Marking stellarium-0.11.2 ppc64 for bug 412663
 
   06 May 2012; Agostino Sarubbo <ago@gentoo.org> stellarium-0.11.2.ebuild:
   Stable for amd64, wrt bug #412663
