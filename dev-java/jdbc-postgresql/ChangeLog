@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jdbc-postgresql
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.45 2011/09/29 12:13:07 fordfrog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.46 2012/05/08 13:10:04 sera Exp $
+
+*jdbc-postgresql-9.1_p902 (08 May 2012)
+
+  08 May 2012; Ralph Sennhauser <sera@gentoo.org>
+  +jdbc-postgresql-9.1_p902.ebuild:
+  Version bump. Allow building with jdk7. #396589
+  Thanks to Andreas Sturmlechner <andreas.sturmlechner@gmail.com> for the
+  ebuild. #414925
 
 *jdbc-postgresql-9.1_p901 (29 Sep 2011)
 
