@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.0.ebuild,v 1.2 2012/05/05 06:56:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.10.0.ebuild,v 1.3 2012/05/08 16:30:43 darkside Exp $
 
 EAPI=4
 inherit xfconf
@@ -44,6 +44,7 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--with-xsession-prefix="${EPREFIX}"/usr
 		$(use_enable gnome-keyring libgnome-keyring)
 		$(xfconf_use_debug)
 		)
