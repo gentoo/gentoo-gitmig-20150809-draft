@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/riece
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.79 2012/03/19 18:36:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.80 2012/05/08 15:43:03 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org> riece-8.0.0.ebuild:
+  Marking riece-8.0.0 ppc64 for bug 415067
 
 *riece-8.0.0 (19 Mar 2012)
 
