@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.ebuild,v 1.1 2012/05/08 08:20:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.ebuild,v 1.2 2012/05/08 21:48:07 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -28,7 +28,6 @@ PYTHON_MODNAME="docutils roman.py"
 GLEP_SRC="${WORKDIR}/glep-0.4-r1"
 
 src_prepare() {
-	# Fix installation of extra modules.
 	sed -e "s/from distutils.core/from setuptools/" -i setup.py || die "sed setup.py failed"
 }
 
