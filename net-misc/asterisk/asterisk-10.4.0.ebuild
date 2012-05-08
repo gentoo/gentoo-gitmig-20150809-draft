@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.4.0.ebuild,v 1.1 2012/05/03 09:43:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.4.0.ebuild,v 1.2 2012/05/08 14:39:34 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex srtp static syslog usb vorbis"
+REQUIRED_USE="gtalk ( jabber )"
 
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.389 2012/05/03 09:52:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.390 2012/05/08 14:39:34 chainsaw Exp $
+
+  08 May 2012; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.12.0.ebuild,
+  asterisk-10.4.0.ebuild:
+  Patch by Jaco Kroon to express USE-flag dependencies in REQUIRED_USE
+  statement. Closes bug #415141 by Matthew "prometheanfire" Thode.
 
 *asterisk-1.8.12.0 (03 May 2012)
 
