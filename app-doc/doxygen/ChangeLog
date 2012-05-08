@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.222 2012/04/26 21:34:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.223 2012/05/08 10:27:47 xarthisius Exp $
+
+  08 May 2012; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.4.7.ebuild,
+  doxygen-1.5.4.ebuild, doxygen-1.5.8-r1.ebuild, doxygen-1.6.3.ebuild,
+  doxygen-1.7.2.ebuild, doxygen-1.7.3.ebuild, doxygen-1.7.5.1.ebuild,
+  doxygen-1.7.6.1.ebuild, doxygen-1.8.0.ebuild:
+  Use http instead of ftp in SRC_URI to avoid possible firewall issues. Fixes
+  #411189 by Kevin Pyle
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> doxygen-1.8.0.ebuild:
   keyword ~amd64-fbsd
