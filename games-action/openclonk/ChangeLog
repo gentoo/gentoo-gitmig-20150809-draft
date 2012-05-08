@@ -1,0 +1,10 @@
+# ChangeLog for games-action/openclonk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.1 2012/05/08 22:49:47 hasufell Exp $
+
+*openclonk-5.2.2 (08 May 2012)
+
+  08 May 2012; Julian Ospald <hasufell@gentoo.org> +openclonk-5.2.2.ebuild,
+  +files/openclonk-wrapper-script.sh, +metadata.xml:
+  initial import wrt #348149
+
