@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lockrun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/ChangeLog,v 1.9 2012/05/08 15:58:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/ChangeLog,v 1.10 2012/05/08 19:16:13 jer Exp $
+
+  08 May 2012; Jeroen Roovers <jer@gentoo.org> lockrun-20120508.ebuild:
+  Make cp die() too by Marcin Mirosław (bug #415147 comment #2).
 
 *lockrun-20120508 (08 May 2012)
 
