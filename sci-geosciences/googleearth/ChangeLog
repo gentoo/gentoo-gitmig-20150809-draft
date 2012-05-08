@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.31 2012/05/05 11:03:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.32 2012/05/08 08:50:24 zmedico Exp $
+
+  08 May 2012; Zac Medico <zmedico@gentoo.org> googleearth-6.2.2.6613.ebuild:
+  Use patchelf --set-rpath $ORIGIN so that library dependencies can be properly
+  tracked for preserve-libs as discussed in bug #265372. We can backport this to
+  older ebuilds after it gets some testing.
 
 *googleearth-6.2.2.6613 (05 May 2012)
 

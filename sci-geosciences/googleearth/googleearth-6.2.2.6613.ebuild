@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-6.2.2.6613.ebuild,v 1.1 2012/05/05 11:03:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-6.2.2.6613.ebuild,v 1.2 2012/05/08 08:50:24 zmedico Exp $
 
 EAPI="4"
 
@@ -105,6 +105,15 @@ src_prepare() {
 	# we have no ld-lsb.so.3 symlink
 	# thanks to Nathan Phillip Brink <ohnobinki@ohnopublishing.net> for suggesting patchelf
 	patchelf --set-interpreter /lib/ld-linux.so.2 ${PN}-bin || die "patchelf failed"
+
+	# Set RPATH for preserve-libs handling (bug #265372).
+	local x
+	for x in * ; do
+		# Use \x7fELF header to separate ELF executables and libraries
+		[[ -f ${x} && $(od -t x1 -N 4 "${x}") == *"7f 45 4c 46"* ]] || continue
+		patchelf --set-rpath '$ORIGIN' "${x}" || \
+			die "patchelf failed on ${x}"
+	done
 }
 
 src_install() {
