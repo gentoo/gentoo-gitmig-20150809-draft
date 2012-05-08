@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.182 2012/05/05 21:43:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.183 2012/05/08 15:44:51 ranger Exp $
+
+  08 May 2012; Brent Baude <ranger@gentoo.org> dpkg-1.16.2.ebuild:
+  Marking dpkg-1.16.2 ppc64 for bug 413887
 
   05 May 2012; Brent Baude <ranger@gentoo.org> dpkg-1.16.2.ebuild:
   Marking dpkg-1.16.2 ppc for bug 413887
