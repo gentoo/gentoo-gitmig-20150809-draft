@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/makeheaders/makeheaders-0_p4.ebuild,v 1.1 2011/10/03 16:37:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/makeheaders/makeheaders-0_p4.ebuild,v 1.2 2012/05/08 15:49:02 ago Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.hwaci.com/sw/mkhdr/makeheaders.c -> ${P}.c
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=""
