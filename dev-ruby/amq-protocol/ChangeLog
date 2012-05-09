@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/amq-protocol
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-protocol/ChangeLog,v 1.1 2012/05/09 17:53:43 graaff Exp $
+
+*amq-protocol-0.9.0 (09 May 2012)
+
+  09 May 2012; Hans de Graaff <graaff@gentoo.org> +amq-protocol-0.9.0.ebuild,
+  +metadata.xml:
+  Initial import. New dependency of forthcoming amqp versions.
+
