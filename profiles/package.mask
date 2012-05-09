@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13735 2012/05/07 20:01:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13736 2012/05/09 15:00:09 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -569,11 +569,6 @@ sci-chemistry/webmo
 # Breaks net-voip/sflphone, non maintainer update, but is needed by
 # media-video/ffmpeg
 >=media-libs/celt-0.10
-
-# Jeroen Roovers <jer@gentoo.org> (19 Apr 2011)
-# development branch of argus/-clients
-=net-analyzer/argus-3.0.5*
-=net-analyzer/argus-clients-3.0.5*
 
 # Patrick Lauer <patrick@gentoo.org> (12 Apr 2011)
 # lacks most features and sanity, waiting for upstream to improve it

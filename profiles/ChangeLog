@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6523 2012/05/09 07:27:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6524 2012/05/09 15:00:09 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 May 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Remove mask for net-analyzer/argus{,clients} development branch.
 
   09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> updates/2Q-2012:
   Move the languagetool to new category.
