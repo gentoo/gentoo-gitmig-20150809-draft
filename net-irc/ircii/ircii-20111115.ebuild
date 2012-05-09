@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20111115.ebuild,v 1.5 2012/04/05 05:31:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20111115.ebuild,v 1.6 2012/05/09 13:23:29 grobian Exp $
 
 EAPI=4
 
@@ -24,7 +24,6 @@ RDEPEND="${DEPEND}
 
 src_configure() {
 	tc-export CC
-	use elibc_glibc || append-libs -liconv
 	econf $(use_enable ipv6)
 }
 
