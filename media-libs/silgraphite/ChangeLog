@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/silgraphite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.26 2012/05/05 08:02:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.27 2012/05/09 13:17:05 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> silgraphite-2.3.1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> silgraphite-2.3.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

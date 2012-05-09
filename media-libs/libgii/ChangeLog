@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgii
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.41 2008/06/12 14:53:17 drac Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.42 2012/05/09 13:22:38 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> libgii-1.0.2.ebuild:
+  keyword ~amd64-fbsd
 
   12 Jun 2008; Samuli Suominen <drac@gentoo.org>
   +files/libgii-1.0.2-libtool_1.5_compat.patch, libgii-1.0.2.ebuild:
