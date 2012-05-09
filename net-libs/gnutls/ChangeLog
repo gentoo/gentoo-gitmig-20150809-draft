@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.360 2012/05/07 12:25:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.361 2012/05/09 05:28:42 mattst88 Exp $
+
+  09 May 2012; Matt Turner <mattst88@gentoo.org> gnutls-2.12.19.ebuild:
+  Added ~mips, bug 402959.
 
 *gnutls-2.12.19 (07 May 2012)
 
