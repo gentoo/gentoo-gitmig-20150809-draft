@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.2 2011/11/12 12:03:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.3 2012/05/09 16:12:16 scarabeus Exp $
 
 # @ECLASS: office-ext.eclass
 # @AUTHOR:
@@ -12,7 +12,7 @@
 # Eclass for easing maitenance of libreoffice/openoffice extensions.
 
 case "${EAPI:-0}" in
-	4) OEXT_EXPORTED_FUNCTIONS="src_install pkg_postinst pkg_prerm" ;;
+	4) OEXT_EXPORTED_FUNCTIONS="src_unpack src_install pkg_postinst pkg_prerm" ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
@@ -31,6 +31,25 @@ fi
 
 DEPEND="virtual/ooo"
 RDEPEND="virtual/ooo"
+
+# Most projects actually do not provide any workdir and we do not unpack the
+# .oxt file at all.
+S="${WORKDIR}"
+
+# @FUNCTION: office-ext_src_unpack
+# @DESCRIPTION:
+# Flush the cache after removal of an extension.
+office-ext_src_unpack() {
+	debug-print-function ${FUNCNAME} "$@"
+	local i
+
+	default
+
+	for i in ${OO_EXTENSIONS[@]}; do
+		debug-print "${FUNCNAME}: cp -v \"${DISTDIR}/${i}\" \"${S}\""
+		cp -v "${DISTDIR}/${i}" "${S}" || die
+	done
+}
 
 # @FUNCTION: office-ext_flush_unopkg_cache
 # @DESCRIPTION:
