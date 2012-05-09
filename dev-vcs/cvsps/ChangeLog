@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvsps
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.4 2011/04/20 12:44:43 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.5 2012/05/09 15:24:13 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> cvsps-2.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   20 Apr 2011; Justin Lecher <jlec@gentoo.org> cvsps-2.1.ebuild,
   cvsps-2.1-r1.ebuild:
