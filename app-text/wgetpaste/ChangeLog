@@ -1,6 +1,13 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.121 2012/05/08 14:50:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.122 2012/05/09 12:36:04 maksbotan Exp $
+
+*wgetpaste-2.20 (09 May 2012)
+
+  09 May 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/wgetpaste-config-default-lodgeit, +files/wgetpaste-config-lugons,
+  +wgetpaste-2.20.ebuild, metadata.xml:
+  Bump to 2.20, bug #415163. Support one more lodgeit-like service.
 
   08 May 2012; Agostino Sarubbo <ago@gentoo.org> -wgetpaste-2.17.ebuild,
   -wgetpaste-2.18.ebuild:
