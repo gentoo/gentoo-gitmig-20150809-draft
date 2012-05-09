@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.74 2012/04/23 22:39:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.75 2012/05/09 16:50:03 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> cabextract-1.4.ebuild:
+  keyword ~amd64-fbsd
 
   23 Apr 2012; Mike Frysinger <vapier@gentoo.org> cabextract-1.4.ebuild:
   Make sure to use correct ar tool.
