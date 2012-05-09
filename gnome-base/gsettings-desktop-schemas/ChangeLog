@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gsettings-desktop-schemas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/ChangeLog,v 1.27 2012/04/12 02:42:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/ChangeLog,v 1.28 2012/05/09 15:09:16 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  gsettings-desktop-schemas-3.4.0.ebuild:
+  keyword ~amd64-fbsd
 
 *gsettings-desktop-schemas-3.4.0 (12 Apr 2012)
 
