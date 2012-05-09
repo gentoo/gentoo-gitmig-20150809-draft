@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.150 2012/05/09 14:19:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.151 2012/05/09 14:21:14 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -56,9 +56,6 @@ net-libs/libpcap libnl
 
 # net-libs/libtirpc
 sys-apps/xinetd rpc
-
-# app-text/passivetex
-app-text/xmlto latex
 
 # app-text/docbook-sgml-utils[jadetex]
 media-libs/fontconfig doc
