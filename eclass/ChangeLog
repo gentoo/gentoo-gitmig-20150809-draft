@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.246 2012/05/09 16:12:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.247 2012/05/09 20:19:10 mattst88 Exp $
+
+  09 May 2012; Matt Turner <mattst88@gentoo.org> xorg-2.eclass:
+  Fix xorg-2's git:// EGIT_REPO_URI.
 
   09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> office-ext.eclass:
   Add the src_unpack phase for office-ext eclass.
