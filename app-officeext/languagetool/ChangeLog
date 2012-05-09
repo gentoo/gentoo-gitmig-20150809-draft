@@ -1,0 +1,15 @@
+# ChangeLog for app-office/languagetool
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/ChangeLog,v 1.1 2012/05/09 07:23:52 scarabeus Exp $
+
+  08 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> languagetool-1.7.ebuild:
+  Add einfo about slowing down the lo as whole. Thanks to Eugeny Shkrigunov for
+  the hint.
+
+*languagetool-1.7 (07 Apr 2012)
+
+  07 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +languagetool-1.7.ebuild,
+  +metadata.xml:
+  Initial commit for this lo extension. Fixes bug#41106065. Ebuild taken from
+  java overlay. Thanks to Samuel Bauer for the report.
+
