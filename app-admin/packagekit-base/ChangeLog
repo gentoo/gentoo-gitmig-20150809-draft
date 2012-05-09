@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/packagekit-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.18 2012/05/03 18:02:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.19 2012/05/09 15:21:35 mattst88 Exp $
+
+  09 May 2012; Matt Turner <mattst88@gentoo.org> packagekit-base-0.6.20.ebuild:
+  Added ~mips, bug 387959.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> packagekit-base-0.6.20.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
