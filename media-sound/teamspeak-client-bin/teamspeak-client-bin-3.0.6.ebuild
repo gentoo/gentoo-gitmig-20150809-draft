@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.0_beta36.ebuild,v 1.4 2012/04/14 11:14:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.6.ebuild,v 1.1 2012/05/09 11:49:45 polynomial-c Exp $
 
 EAPI=1
 
@@ -16,8 +16,8 @@ RESTRICT="strip"
 PROPERTIES="interactive"
 
 SRC_URI="
-	amd64? ( http://ftp.4players.de/pub/hosted/ts3/releases/beta-${PV/3.0.0_beta/}/TeamSpeak3-Client-linux_amd64-${PV/_/-}.run )
-	x86? ( http://ftp.4players.de/pub/hosted/ts3/releases/beta-${PV/3.0.0_beta/}/TeamSpeak3-Client-linux_x86-${PV/_/-}.run )
+	amd64? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/TeamSpeak3-Client-linux_amd64-${PV/_/-}.run )
+	x86? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/TeamSpeak3-Client-linux_x86-${PV/_/-}.run )
 "
 
 DEPEND=""
