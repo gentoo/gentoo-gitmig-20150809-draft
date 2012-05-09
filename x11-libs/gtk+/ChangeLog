@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.591 2012/05/08 23:53:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.592 2012/05/09 00:57:57 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> gtk+-3.4.2.ebuild:
+  keyword ~amd64-fbsd
 
   08 May 2012; Alexis Ballier <aballier@gentoo.org> gtk+-2.24.10-r1.ebuild:
   keyword ~amd64-fbsd
