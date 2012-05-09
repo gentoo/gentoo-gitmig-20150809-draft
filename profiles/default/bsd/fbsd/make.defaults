@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.11 2012/05/09 12:38:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.12 2012/05/09 17:41:14 aballier Exp $
 
 # Last building sandbox breaks gfind, bug #374425
 FEATURES="-sandbox"
@@ -11,7 +11,7 @@ ELIBC="FreeBSD"
 
 MAKE="gmake"
 
-USE="berkdb crypt iconv ipv6 ncurses nls oss pam readline ssl tcpd zlib"
+USE="berkdb crypt iconv ipv6 ncurses nls oss pam pcre readline ssl tcpd zlib"
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Support direct rendering by default

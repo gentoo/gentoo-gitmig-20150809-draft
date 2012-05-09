@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.87 2012/05/09 12:38:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.88 2012/05/09 17:41:14 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/make.defaults:
+  bring back pcre in default useflags
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/make.defaults:
   factorize and cleanup a bit
