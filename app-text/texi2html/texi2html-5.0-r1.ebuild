@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-5.0-r1.ebuild,v 1.6 2012/05/06 20:52:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-5.0-r1.ebuild,v 1.7 2012/05/09 18:28:13 aballier Exp $
 
 EAPI=4
 
@@ -24,6 +24,12 @@ DEPEND="${RDEPEND}"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 RESTRICT="test" #411523
+
+src_prepare() {
+	# On FreeBSD this script is used instead of GNU install but it comes without
+	# executable pemissions... Fix it!
+	chmod +x install-sh || die
+}
 
 src_configure() {
 	local myconf
