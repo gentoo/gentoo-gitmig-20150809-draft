@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CGI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.101 2012/04/12 17:37:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.102 2012/05/09 15:23:55 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> CGI-3.590.0.ebuild:
+  keyword ~amd64-fbsd
 
   12 Apr 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Fix cpan distribution in metadata.xml
