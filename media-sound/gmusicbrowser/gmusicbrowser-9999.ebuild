@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-9999.ebuild,v 1.1 2012/05/02 01:09:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-9999.ebuild,v 1.2 2012/05/09 00:01:12 hasufell Exp $
 
 # note: dev-perl/Gtk2-MozEmbed left out in purpose because gtkmozembed and xulrunner are obsolete
 
@@ -43,10 +43,10 @@ RDEPEND="dev-lang/perl
 DEPEND="sys-devel/gettext"
 
 LANGS="cs de es fr hu it ko nl pl pt pt_BR ru sv zh_CN"
-unset l
 for l in ${LANGS}; do
 	IUSE="$IUSE linguas_${l}"
 done
+unset l
 
 src_prepare() {
 	sed -i -e '/menudir/d' Makefile || die
