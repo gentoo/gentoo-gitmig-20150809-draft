@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.6.ebuild,v 1.6 2012/05/07 10:39:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.6.ebuild,v 1.7 2012/05/09 04:20:27 yngwin Exp $
 
 EAPI=4
 LANGS="cs de es ru"
@@ -10,8 +10,8 @@ inherit qt4-r2 eutils flag-o-matic
 DESCRIPTION="A Qt application to control FluidSynth"
 HOMEPAGE="http://qsynth.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qsynth/${P}.tar.gz"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug jack alsa pulseaudio"
 KEYWORDS="amd64 ppc x86"
@@ -26,15 +26,7 @@ RDEPEND="${DEPEND}"
 DOCS="AUTHORS ChangeLog README TODO TRANSLATORS"
 
 src_prepare() {
-	local lang use_langs
-	for lang in ${LANGS} ; do
-		if use linguas_${lang} ; then
-			use_langs="${use_langs} src/translations/${PN}_${lang}.qm"
-		fi
-	done
-
-	sed -e "s|\$(translations_targets)|${use_langs}|" -i Makefile.in \
-		|| die "sed translations failed"
+	sed -e '/@install/,/share\/locale$/d' -i Makefile.in || die "sed translations failed"
 
 	sed -e 's/@make/@\$(MAKE)/' -i Makefile.in || die "sed Makefile failed"
 
@@ -62,6 +54,14 @@ src_compile() {
 
 src_install () {
 	qt4-r2_src_install
+
+	insinto /usr/share/locale
+	local lang
+	for lang in ${LANGS} ; do
+		if use linguas_${lang} ; then
+			doins "src/translations/${PN}_${lang}.qm"
+		fi
+	done
 
 	# The desktop file is invalid, and we also change the command
 	# depending on useflags
