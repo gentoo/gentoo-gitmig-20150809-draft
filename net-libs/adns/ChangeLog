@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/adns
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.37 2010/06/15 16:46:12 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.38 2012/05/09 16:46:12 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> adns-1.4-r1.ebuild:
+  keyword ~amd64-fbsd
 
   15 Jun 2010; Markos Chandras <hwoarang@gentoo.org> adns-1.4-r1.ebuild:
   Fix testsuite wrt bug #295072
