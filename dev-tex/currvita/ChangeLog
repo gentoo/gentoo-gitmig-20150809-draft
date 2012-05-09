@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/currvita
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.29 2011/10/16 17:19:53 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.30 2012/05/09 17:13:57 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> currvita-0.9i-r1.ebuild:
+  keyword ~amd64-fbsd
 
   16 Oct 2011; Fabian Groffen <grobian@gentoo.org> currvita-0.9i-r1.ebuild:
   Marked ~x86-macos

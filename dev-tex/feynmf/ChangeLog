@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/feynmf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.41 2011/11/26 18:55:15 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.42 2012/05/09 17:07:05 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> feynmf-1.08-r3.ebuild:
+  keyword ~amd64-fbsd
 
   26 Nov 2011; Ulrich Mueller <ulm@gentoo.org> feynmf-1.08-r3.ebuild:
   Add dev-lang/perl as build dependency, bug 391933.
