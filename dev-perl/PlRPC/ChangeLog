@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PlRPC
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.52 2011/09/28 09:33:47 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.53 2012/05/09 15:29:27 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> PlRPC-0.202.0.ebuild:
+  keyword ~amd64-fbsd
 
   28 Sep 2011; Fabian Groffen <grobian@gentoo.org> PlRPC-0.202.0.ebuild:
   Marked ~sparc-solaris and ~sparc64-solaris

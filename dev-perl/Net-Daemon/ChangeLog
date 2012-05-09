@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.76 2012/03/31 07:04:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.77 2012/05/09 15:26:03 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> Net-Daemon-0.480.0.ebuild:
+  keyword ~amd64-fbsd
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Net-Daemon-0.43.ebuild:
   Cleanup
