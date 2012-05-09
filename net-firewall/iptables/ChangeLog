@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.265 2012/05/08 15:37:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.266 2012/05/09 07:20:24 jdhore Exp $
+
+  09 May 2012; Jeff Horelick <jdhore@gentoo.org> iptables-1.4.13.ebuild:
+  marked x86 per bug 414329
 
   08 May 2012; Brent Baude <ranger@gentoo.org> iptables-1.4.13.ebuild:
   Marking iptables-1.4.13 ppc64 for bug 414329
