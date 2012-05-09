@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/authres-0.3.ebuild,v 1.2 2012/04/24 11:32:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/authres-0.3.ebuild,v 1.3 2012/05/09 03:18:11 floppym Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-PYTHON_MODNAME=${PN}.py
 DOCS="CHANGES README"
 
 src_test() {
