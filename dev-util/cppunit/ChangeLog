@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.63 2012/04/26 22:19:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.64 2012/05/09 19:22:50 mattst88 Exp $
+
+  09 May 2012; Matt Turner <mattst88@gentoo.org> cppunit-1.12.1-r1.ebuild:
+  Added ~mips.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> cppunit-1.12.1-r1.ebuild:
   keyword ~amd64-fbsd
