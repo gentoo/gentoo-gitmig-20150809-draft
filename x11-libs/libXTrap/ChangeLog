@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXTrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXTrap/ChangeLog,v 1.26 2012/04/14 18:02:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXTrap/ChangeLog,v 1.27 2012/05/09 16:16:26 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> libXTrap-1.0.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
 *libXTrap-1.0.0-r1 (14 Apr 2012)
 
