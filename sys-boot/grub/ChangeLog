@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.201 2012/04/28 03:23:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.202 2012/05/09 23:00:07 floppym Exp $
+
+*grub-2.00_beta5 (09 May 2012)
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> +grub-2.00_beta5.ebuild,
+  grub-9999.ebuild:
+  Version bump. Should resolve bug 412497. Repleace dependencies on os-prober
+  and libisoburn with elog messages.
 
   28 Apr 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00_beta3-r2.ebuild,
   grub-9999.ebuild:
