@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.4.ebuild,v 1.2 2012/04/18 19:18:57 alexxy Exp $
-
-RESTRICT="primaryuri"
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.4.ebuild,v 1.3 2012/05/09 07:37:21 zmedico Exp $
 
 EAPI=4
+RESTRICT="primaryuri"
+
 inherit eutils versionator pam perl-module
 
 MY_PV=$(replace_version_separator 3 '-') # stable releases
