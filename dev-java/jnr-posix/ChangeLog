@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jnr-posix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.5 2012/04/30 10:47:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.6 2012/05/09 17:09:07 phajdan.jr Exp $
+
+  09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> jnr-posix-1.1.8.ebuild:
+  x86 stable wrt bug #396305
 
   30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> jnr-posix-1.1.8.ebuild:
   Stable for amd64, wrt bug #396305

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jnr-x86asm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-x86asm/ChangeLog,v 1.5 2012/04/30 10:46:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-x86asm/ChangeLog,v 1.6 2012/05/09 17:08:29 phajdan.jr Exp $
+
+  09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> jnr-x86asm-1.0.1.ebuild:
+  x86 stable wrt bug #396305
 
   30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> jnr-x86asm-1.0.1.ebuild:
   Stable for amd64, wrt bug #396305

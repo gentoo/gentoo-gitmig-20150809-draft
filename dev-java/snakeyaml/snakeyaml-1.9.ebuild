@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snakeyaml/snakeyaml-1.9.ebuild,v 1.2 2012/04/30 10:48:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snakeyaml/snakeyaml-1.9.ebuild,v 1.3 2012/05/09 17:10:33 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://snakeyaml.googlecode.com/files/SnakeYAML-all-${PV}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.5"

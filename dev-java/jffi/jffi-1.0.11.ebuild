@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.11.ebuild,v 1.3 2012/05/03 07:42:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.11.ebuild,v 1.4 2012/05/09 17:10:15 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jnr/jffi/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-3 )"
 SLOT="1.0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 COMMON_DEP="
