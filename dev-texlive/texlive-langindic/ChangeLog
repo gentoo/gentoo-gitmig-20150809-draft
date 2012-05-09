@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langindic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langindic/ChangeLog,v 1.50 2012/05/09 14:24:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langindic/ChangeLog,v 1.51 2012/05/09 15:11:33 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  texlive-langindic-2011.ebuild:
+  keyword ~amd64-fbsd
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   -texlive-langindic-2010.ebuild:

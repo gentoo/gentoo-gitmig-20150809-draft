@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langlatvian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.28 2012/05/09 14:25:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.29 2012/05/09 15:13:14 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  texlive-langlatvian-2011.ebuild:
+  keyword ~amd64-fbsd
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   -texlive-langlatvian-2010.ebuild:

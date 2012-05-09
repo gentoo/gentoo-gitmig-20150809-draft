@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langturkmen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langturkmen/ChangeLog,v 1.22 2012/05/09 14:31:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langturkmen/ChangeLog,v 1.23 2012/05/09 15:18:58 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  texlive-langturkmen-2011.ebuild:
+  keyword ~amd64-fbsd
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   -texlive-langturkmen-2010.ebuild:

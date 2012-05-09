@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langczechslovak
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/ChangeLog,v 1.48 2012/05/09 14:18:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/ChangeLog,v 1.49 2012/05/09 15:06:03 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  texlive-langczechslovak-2011.ebuild:
+  keyword ~amd64-fbsd
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   -texlive-langczechslovak-2010.ebuild:
