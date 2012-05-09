@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/texmaths-0.34.ebuild,v 1.1 2012/05/08 21:36:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/texmaths-0.34.ebuild,v 1.2 2012/05/09 16:12:51 scarabeus Exp $
 
 EAPI=4
 
@@ -26,9 +26,3 @@ RDEPEND="
 	app-text/dvisvgm
 	virtual/tex-base
 "
-
-S=${WORKDIR}
-
-src_unpack() {
-	cp -v "${DISTDIR}/${MY_P}.oxt" "${S}"
-}

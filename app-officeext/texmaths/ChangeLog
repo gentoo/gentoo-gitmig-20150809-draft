@@ -1,6 +1,9 @@
 # ChangeLog for app-officeext/texmaths
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.1 2012/05/08 21:36:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.2 2012/05/09 16:12:51 scarabeus Exp $
+
+  09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> texmaths-0.34.ebuild:
+  Use unpack from office-ext eclass now.
 
 *texmaths-0.34 (08 May 2012)
 
