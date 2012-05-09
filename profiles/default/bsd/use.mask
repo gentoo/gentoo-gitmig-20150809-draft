@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.13 2012/03/08 10:29:06 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.14 2012/05/09 00:40:24 aballier Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -40,6 +40,7 @@ dvb
 
 # Hardened doesn't work on Gentoo/*BSD for now
 hardened
+pax_kernel
 
 # termcap-compat doesn't work on BSD
 termcap-compat

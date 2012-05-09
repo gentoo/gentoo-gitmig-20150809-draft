@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.83 2012/05/05 13:16:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.84 2012/05/09 00:40:24 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> use.mask:
+  mask pax_kernel as this is hardened linux kernel
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/packages.build:
   add freebsd-mk-defs to stage1 for the same reason
