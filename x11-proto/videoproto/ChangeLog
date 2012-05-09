@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/videoproto
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/videoproto/ChangeLog,v 1.46 2011/08/29 18:41:13 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/videoproto/ChangeLog,v 1.47 2012/05/09 01:04:16 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> videoproto-2.3.1.ebuild:
+  keyword ~amd64-fbsd
 
   29 Aug 2011; Fabian Groffen <grobian@gentoo.org> videoproto-2.3.1.ebuild:
   Marked ~x64-macos
