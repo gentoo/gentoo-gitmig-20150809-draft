@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-omega
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-omega/ChangeLog,v 1.49 2012/05/06 18:09:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-omega/ChangeLog,v 1.50 2012/05/09 17:20:09 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> texlive-omega-2011.ebuild:
+  keyword ~amd64-fbsd
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> texlive-omega-2011.ebuild:
   ia64/s390/sh/sparc stable wrt #395735

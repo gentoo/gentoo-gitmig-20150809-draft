@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-dutch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-dutch/ChangeLog,v 1.47 2012/05/06 17:05:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-dutch/ChangeLog,v 1.48 2012/05/09 17:04:36 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  texlive-documentation-dutch-2011.ebuild:
+  keyword ~amd64-fbsd
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org>
   texlive-documentation-dutch-2011.ebuild:
