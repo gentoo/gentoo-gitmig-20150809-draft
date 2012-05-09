@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/takeoff/takeoff-1.0.ebuild,v 1.1 2012/05/09 18:45:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/takeoff/takeoff-1.0.ebuild,v 1.2 2012/05/09 19:17:02 scarabeus Exp $
 
 EAPI=4
 
+KDE_MINIMAL="4.8"
 KDE_LINGUAS="ca de es el gl it pl ru tr"
 KDE_LINGUAS_DIR="translations"
 inherit kde4-base
