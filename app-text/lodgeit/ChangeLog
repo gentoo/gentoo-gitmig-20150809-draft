@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lodgeit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.4 2012/05/09 12:40:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.5 2012/05/09 14:28:23 ago Exp $
+
+  09 May 2012; Agostino Sarubbo <ago@gentoo.org> lodgeit-0.3_p20120507.ebuild:
+  Stable for amd64, wrt bug #415231
 
 *lodgeit-0.3_p20120507 (09 May 2012)
 

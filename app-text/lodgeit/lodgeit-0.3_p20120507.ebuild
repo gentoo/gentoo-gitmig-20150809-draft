@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3_p20120507.ebuild,v 1.1 2012/05/09 12:40:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3_p20120507.ebuild,v 1.2 2012/05/09 14:28:23 ago Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ SRC_URI="https://bitbucket.org/skrattaren/lodgeit-script-gentoo/raw/${MY_REV}/sc
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="vim"
 
 RESTRICT="test"
