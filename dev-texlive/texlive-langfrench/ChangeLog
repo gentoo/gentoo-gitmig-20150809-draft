@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langfrench
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfrench/ChangeLog,v 1.48 2012/05/06 17:45:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfrench/ChangeLog,v 1.49 2012/05/09 14:21:34 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  -texlive-langfrench-2010.ebuild:
+  remove old
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org>
   texlive-langfrench-2011.ebuild:
