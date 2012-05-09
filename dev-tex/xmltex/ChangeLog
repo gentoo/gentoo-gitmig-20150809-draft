@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/xmltex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.36 2012/03/19 05:43:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.37 2012/05/09 14:19:20 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> xmltex-1.9-r2.ebuild:
+  keyword ~amd64-fbsd
 
   19 Mar 2012; Mart Raudsepp <leio@gentoo.org> xmltex-1.9-r2.ebuild:
   Add ~mips keyword, needed by app-text/texlive[xml]
