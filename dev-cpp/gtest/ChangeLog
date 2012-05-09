@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.4 2012/04/20 18:18:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.5 2012/05/09 17:20:04 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> gtest-1.6.0.ebuild:
+  keyword ~amd64-fbsd
 
   20 Apr 2012; Mike Frysinger <vapier@gentoo.org> gtest-1.4.0.ebuild,
   +files/gtest-1.4.0-gcc-4.7.patch:
