@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.25 2012/04/26 17:52:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.26 2012/05/09 05:14:27 mattst88 Exp $
+
+  09 May 2012; Matt Turner <mattst88@gentoo.org> p11-kit-0.12.ebuild:
+  Added ~mips, bug 383453.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> p11-kit-0.12.ebuild:
   keyword ~amd64-fbsd
