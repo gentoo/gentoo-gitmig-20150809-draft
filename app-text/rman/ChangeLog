@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rman
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.36 2011/02/06 07:37:15 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.37 2012/05/09 16:12:19 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> rman-3.2.ebuild:
+  keyword ~amd64-fbsd
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> rman-3.2.ebuild:
   Drop to ~mips
