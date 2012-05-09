@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/pyspf-2.0.5.ebuild,v 1.5 2012/04/08 19:47:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/pyspf-2.0.5.ebuild,v 1.6 2012/05/09 03:20:55 floppym Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.5 3.*"
 
 inherit distutils
 
