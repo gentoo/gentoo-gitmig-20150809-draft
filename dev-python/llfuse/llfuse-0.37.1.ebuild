@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llfuse/llfuse-0.37.1.ebuild,v 1.3 2012/05/04 15:12:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llfuse/llfuse-0.37.1.ebuild,v 1.4 2012/05/09 03:24:16 floppym Exp $
 
 EAPI="4"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 *-jython 2.7-pypy-*"
 
