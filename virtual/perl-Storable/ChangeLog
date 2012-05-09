@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Storable
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/ChangeLog,v 1.40 2011/08/07 13:59:43 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/ChangeLog,v 1.41 2012/05/09 15:27:03 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-Storable-2.300.0.ebuild:
+  keyword ~amd64-fbsd
 
 *perl-Storable-2.300.0 (07 Aug 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Sys-Syslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.52 2012/03/07 22:06:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.53 2012/05/09 15:28:41 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-Sys-Syslog-0.290.0.ebuild:
+  keyword ~amd64-fbsd
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> perl-Sys-Syslog-0.290.0.ebuild:
   Marking perl-Sys-Syslog-0.290.0 ppc64 for bug 393937

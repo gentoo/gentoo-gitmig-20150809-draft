@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.97 2012/01/28 08:51:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.98 2012/05/09 15:25:03 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> perl-CGI-3.590.0.ebuild:
+  keyword ~amd64-fbsd
 
 *perl-CGI-3.590.0 (28 Jan 2012)
 
