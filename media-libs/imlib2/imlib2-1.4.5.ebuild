@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5.ebuild,v 1.2 2012/05/05 08:02:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5.ebuild,v 1.3 2012/05/09 16:20:44 aballier Exp $
 
 EAPI=4
 inherit enlightenment toolchain-funcs
@@ -8,7 +8,7 @@ inherit enlightenment toolchain-funcs
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="X bzip2 gif jpeg mmx mp3 png static-libs tiff zlib"
 
 RDEPEND="=media-libs/freetype-2*

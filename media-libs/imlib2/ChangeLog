@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.108 2012/05/05 08:02:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.109 2012/05/09 16:20:44 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> imlib2-1.4.5.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> imlib2-1.4.4.ebuild,
   imlib2-1.4.5.ebuild:
