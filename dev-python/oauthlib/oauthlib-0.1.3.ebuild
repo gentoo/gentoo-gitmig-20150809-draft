@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.1.3.ebuild,v 1.1 2012/05/08 22:54:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.1.3.ebuild,v 1.2 2012/05/09 02:08:21 floppym Exp $
 
 EAPI="4"
 
@@ -29,4 +29,12 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	touch tests/__init__.py
 	distutils_src_prepare
+}
+
+src_install() {
+	distutils_src_install
+	cleanup() {
+		rm -rv "${ED}$(python_get_sitedir -b)/tests"
+	}
+	python_execute_function -q cleanup
 }
