@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.196 2012/05/09 19:07:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.197 2012/05/09 22:32:32 jdhore Exp $
+
+  09 May 2012; Jeff Horelick <jdhore@gentoo.org> cmake-2.8.7-r5.ebuild:
+  marked x86 per bug 413807
 
   09 May 2012; Agostino Sarubbo <ago@gentoo.org> cmake-2.8.7-r5.ebuild:
   Stable for amd64, wrt bug #413807
