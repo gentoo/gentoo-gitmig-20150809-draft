@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.67 2012/05/06 10:55:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.68 2012/05/09 15:43:15 scarabeus Exp $
 
 EAPI=4
 
@@ -129,6 +129,7 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
+	cups? ( net-print/cups )
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
 	gnome? (
@@ -172,7 +173,6 @@ RDEPEND="${COMMON_DEPEND}
 	media-fonts/libertine-ttf
 	media-fonts/liberation-fonts
 	media-fonts/urw-fonts
-	cups? ( net-print/cups )
 	java? ( >=virtual/jre-1.6 )
 "
 
@@ -195,7 +195,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	media-libs/sampleicc
 	net-misc/npapi-sdk
-	net-print/cups
 	>=sys-apps/findutils-4.4.2
 	sys-devel/bison
 	sys-apps/coreutils
@@ -478,6 +477,7 @@ src_configure() {
 		--with-helppack-integration \
 		--without-sun-templates \
 		$(use_enable binfilter) \
+		$(use_enable cups) \
 		$(use_enable dbus) \
 		$(use_enable eds evolution2) \
 		$(use_enable gnome gconf) \
