@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.63 2011/07/17 22:48:34 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.64 2012/05/09 00:23:21 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> giflib-4.1.6-r2.ebuild:
+  keyword ~amd64-fbsd
 
 *giflib-4.1.6-r2 (17 Jul 2011)
 
