@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.106 2012/05/01 13:18:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.107 2012/05/09 13:09:00 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> audiofile-0.3.4.ebuild:
+  keyword ~amd64-fbsd
 
 *audiofile-0.3.4 (01 May 2012)
 
