@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.33 2012/05/08 15:58:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.34 2012/05/09 01:07:18 zmedico Exp $
+
+  09 May 2012; Zac Medico <zmedico@gentoo.org> googleearth-6.2.2.6613.ebuild:
+  Use QA_PREBUILT="*" instead of RESTRICT=binchecks in order to avoid a QA
+  Notice with latest portage.
 
   08 May 2012; Zac Medico <zmedico@gentoo.org> googleearth-6.2.2.6613.ebuild:
   Also set RPATH for libraries in plugins/imageformats/ subdirectory.
