@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.34 2012/03/02 11:10:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.35 2012/05/09 18:00:30 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> libemf-1.0.4.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Justin Lecher <jlec@gentoo.org> libemf-1.0.4.ebuild:
   Handle static-libs individually, therefore move to auto-tools.eclass and
