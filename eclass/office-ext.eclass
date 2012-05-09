@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.3 2012/05/09 16:12:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.4 2012/05/09 20:33:16 scarabeus Exp $
 
 # @ECLASS: office-ext.eclass
 # @AUTHOR:
@@ -46,8 +46,12 @@ office-ext_src_unpack() {
 	default
 
 	for i in ${OO_EXTENSIONS[@]}; do
-		debug-print "${FUNCNAME}: cp -v \"${DISTDIR}/${i}\" \"${S}\""
-		cp -v "${DISTDIR}/${i}" "${S}" || die
+		# Copy only if the oxt is present, sometimes they are in tarballs
+		# so we want to fail only when we do need to do the cp.
+		if [[ -f "${DISTDIR}/${i}" ]] ; then
+			debug-print "${FUNCNAME}: cp -v \"${DISTDIR}/${i}\" \"${S}\""
+			cp -v "${DISTDIR}/${i}" "${S}" || die
+		fi
 	done
 }
 
