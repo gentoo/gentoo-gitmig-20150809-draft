@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.98 2012/05/09 18:04:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.99 2012/05/09 18:53:32 ago Exp $
+
+  09 May 2012; Agostino Sarubbo <ago@gentoo.org> pybugz-0.10.1.ebuild:
+  Stable for amd64, wrt bug #415277
 
   09 May 2012; Agostino Sarubbo <ago@gentoo.org> -pybugz-0.10.ebuild:
   Remove old
