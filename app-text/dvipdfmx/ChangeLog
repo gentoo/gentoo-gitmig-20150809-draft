@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.69 2012/03/30 12:58:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.70 2012/05/09 13:41:59 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> dvipdfmx-20110311.ebuild:
+  keyword ~amd64-fbsd
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org> dvipdfmx-20110311.ebuild:
   rdepend on tex-base and build depend only on kpathsea to avoid circular deps,
