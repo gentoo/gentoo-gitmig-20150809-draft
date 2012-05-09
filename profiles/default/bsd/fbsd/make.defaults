@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.8 2012/05/04 14:55:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.9 2012/05/09 12:29:37 aballier Exp $
 
 # Last building sandbox breaks gfind, bug #374425
 FEATURES="-sandbox"
@@ -11,7 +11,7 @@ ELIBC="FreeBSD"
 
 MAKE="gmake"
 
-USE="berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
+USE="berkdb crypt ipv6 ncurses nls pam readline ssl tcpd zlib"
 
 # 2010/10/21 - Ole Markus With <olemarkus@gentoo.org>
 # These USE flags were originally inserted here because of PHP
