@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.140 2012/05/06 12:21:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.141 2012/05/09 19:48:38 tgurr Exp $
+
+*ghostscript-gpl-9.05-r2 (09 May 2012)
+
+  09 May 2012; Timo Gurr <tgurr@gentoo.org> -ghostscript-gpl-9.04-r5.ebuild,
+  -ghostscript-gpl-9.05.ebuild, +ghostscript-gpl-9.05-r2.ebuild:
+  Fix segfaults, bug #410575 thanks to Marcus Spading. Add Fedora icc patch.
+  Remove old.
 
   06 May 2012; Agostino Sarubbo <ago@gentoo.org>
   ghostscript-gpl-9.05-r1.ebuild:
