@@ -1,6 +1,9 @@
 # ChangeLog for virtual/tex-base
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/ChangeLog,v 1.9 2011/10/05 18:37:30 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/ChangeLog,v 1.10 2012/05/09 13:42:21 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> tex-base-0.ebuild:
+  keyword ~amd64-fbsd
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> tex-base-0.ebuild:
   remove ptex dep as it is going away
