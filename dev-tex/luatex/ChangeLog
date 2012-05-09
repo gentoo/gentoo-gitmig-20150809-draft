@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.98 2012/05/02 20:59:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.99 2012/05/09 13:27:50 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> luatex-0.70.1.ebuild:
+  keyword ~amd64-fbsd
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> luatex-0.70.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
