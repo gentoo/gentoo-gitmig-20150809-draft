@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.67 2012/04/04 03:37:03 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.68 2012/05/09 14:33:39 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  docbook-sgml-utils-0.6.14-r1.ebuild:
+  keyword ~amd64-fbsd
 
   04 Apr 2012; Mike Gilbert <floppym@gentoo.org>
   -docbook-sgml-utils-0.6.14.ebuild:
