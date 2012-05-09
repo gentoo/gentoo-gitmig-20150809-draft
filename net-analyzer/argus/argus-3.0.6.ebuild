@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.6.ebuild,v 1.2 2012/05/09 15:26:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.6.ebuild,v 1.3 2012/05/09 15:32:35 jer Exp $
 
 EAPI="4"
 
@@ -15,13 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug sasl tcpd"
 
-RDEPEND="net-libs/libpcap
+RDEPEND="
+	net-libs/libpcap
+	sys-libs/zlib
 	sasl? ( dev-libs/cyrus-sasl )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+"
 
-DEPEND="${RDEPEND}
+DEPEND="
+	${RDEPEND}
 	>=sys-devel/bison-1.28
-	>=sys-devel/flex-2.4.6"
+	>=sys-devel/flex-2.4.6
+"
 
 src_prepare() {
 	sed -e 's:/etc/argus.conf:/etc/argus/argus.conf:' \
