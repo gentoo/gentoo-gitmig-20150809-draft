@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.1-r2.ebuild,v 1.1 2012/05/09 18:49:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.1-r2.ebuild,v 1.2 2012/05/09 18:53:58 ssuominen Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="aac clutter curl flac gstreamer mp3 vorbis webkit"
 
-# libmp4v2.so.1 from SLOT="1! is dlopened but gtkpod has switched to
+# libmp4v2.so.1 from SLOT=1 is dlopened but gtkpod has switched to
 # AtomicParsley in git for the upcoming 2.1.2 release
 COMMON_DEPEND="dev-libs/gdl:3
 	>=dev-libs/glib-2.28.5
