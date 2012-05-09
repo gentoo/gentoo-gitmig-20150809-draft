@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.57 2012/05/04 07:46:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.58 2012/05/09 16:31:43 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> glpk-4.47.ebuild:
+  keyword ~amd64-fbsd
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> glpk-4.35.ebuild,
   glpk-4.44.ebuild, glpk-4.45.ebuild, glpk-4.47.ebuild:
