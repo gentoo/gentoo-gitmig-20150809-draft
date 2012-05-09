@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.158 2012/05/09 16:10:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.159 2012/05/09 16:25:08 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -34,6 +34,7 @@ sys-devel/gettext java
 
 # dev-lang/mono
 net-dns/libidn mono
+media-libs/libcaca mono
 
 # =dev-lang/python-2*[tk]
 dev-python/epydoc X
@@ -80,6 +81,11 @@ media-gfx/graphviz lasi
 # net-print/cups
 app-text/ghostscript-gpl cups
 x11-libs/gtk+ cups
+
+# virtual/opengl
+# media-libs/freeglut
+# media-libs/ftgl
+media-libs/libcaca opengl
 
 # virtual/opengl
 # media-libs/freeglut
