@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/trapproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/trapproto/ChangeLog,v 1.31 2012/02/23 18:26:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/trapproto/ChangeLog,v 1.32 2012/05/09 16:15:27 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> trapproto-3.4.3.ebuild:
+  keyword ~amd64-fbsd
 
   23 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> trapproto-3.4.3.ebuild:
   No new version since 2k5. Migrate by hand to xorg-2 eclass.
