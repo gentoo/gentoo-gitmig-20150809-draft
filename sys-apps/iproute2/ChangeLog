@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.191 2012/05/09 07:43:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.192 2012/05/09 14:08:49 ago Exp $
+
+  09 May 2012; Agostino Sarubbo <ago@gentoo.org> iproute2-3.3.0.ebuild:
+  Stable for amd64, wrt bug #414669
 
   09 May 2012; Jeff Horelick <jdhore@gentoo.org> iproute2-3.3.0.ebuild:
   marked x86 per bug 414669
