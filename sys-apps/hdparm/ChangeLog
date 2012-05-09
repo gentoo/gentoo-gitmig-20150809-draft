@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.230 2012/04/29 00:30:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.231 2012/05/09 18:52:59 ago Exp $
+
+  09 May 2012; Agostino Sarubbo <ago@gentoo.org> hdparm-9.39.ebuild:
+  Stable for amd64, wrt bug #369569
 
   29 Apr 2012; Mike Frysinger <vapier@gentoo.org> files/hdparm-init-8:
   Also run on cdrom devices, and drop devfsd support #413705 by tokiclover.
