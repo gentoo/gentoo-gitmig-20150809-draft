@@ -7,3 +7,4 @@ move sys-infiniband/openib sys-infiniband/ofed
 move app-text/djview4 app-text/djview
 move app-text/focuswriter app-editors/focuswriter
 move app-mobilephone/jacksms-desktop app-mobilephone/freesmee
+move app-office/languagetool app-officeext/languagetool
