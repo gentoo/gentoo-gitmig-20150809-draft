@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/xcache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/ChangeLog,v 1.6 2012/05/02 10:09:27 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/ChangeLog,v 1.7 2012/05/09 07:36:24 zmedico Exp $
+
+  09 May 2012; Zac Medico <zmedico@gentoo.org> xcache-2.0.0.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
 *xcache-2.0.0 (02 May 2012)
 

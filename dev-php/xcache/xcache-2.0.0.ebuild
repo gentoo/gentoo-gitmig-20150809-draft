@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/xcache-2.0.0.ebuild,v 1.1 2012/05/02 10:09:26 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/xcache-2.0.0.ebuild,v 1.2 2012/05/09 07:36:24 zmedico Exp $
 
+EAPI="4"
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="yes"
 PHPSAPILIST="apache2 cgi fpm"
 
 USE_PHP="php5-3 php5-4"
-EAPI="4"
 inherit php-ext-source-r2 confutils
 
 DESCRIPTION="A fast and stable PHP opcode cacher"
