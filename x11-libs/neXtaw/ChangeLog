@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/neXtaw
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/neXtaw/ChangeLog,v 1.36 2010/01/15 21:56:24 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/neXtaw/ChangeLog,v 1.37 2012/05/09 15:06:34 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> neXtaw-0.15.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   neXtaw-0.15.1-r1.ebuild:
