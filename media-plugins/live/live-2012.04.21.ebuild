@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2012.04.21.ebuild,v 1.1 2012/04/24 13:01:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2012.04.21.ebuild,v 1.2 2012/05/09 18:42:26 grobian Exp $
 
 EAPI=3
 inherit flag-o-matic eutils toolchain-funcs multilib
@@ -38,12 +38,12 @@ src_prepare() {
 	case ${CHOST} in
 		*-solaris*)
 			use static-libs && { sed -i \
-				-e '/^COMPILE_OPTS /s/$/ -DSOLARIS/' \
+				-e '/^COMPILE_OPTS /s/$/ -DSOLARIS -DXLOCALE_NOT_USED/' \
 				-e '/^LIBS_FOR_CONSOLE_APPLICATION /s/$/ -lsocket -lnsl/' \
 				live-static/config.gentoo \
 				|| die ; }
 			sed -i \
-				-e '/^COMPILE_OPTS /s/$/ -DSOLARIS/' \
+				-e '/^COMPILE_OPTS /s/$/ -DSOLARIS -DXLOCALE_NOT_USED/' \
 				-e '/^LIBS_FOR_CONSOLE_APPLICATION /s/$/ -lsocket -lnsl/' \
 				live-shared/config.gentoo-so-r1 \
 				|| die
