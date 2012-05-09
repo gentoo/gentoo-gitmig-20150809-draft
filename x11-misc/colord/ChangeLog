@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.25 2012/05/05 04:53:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.26 2012/05/09 15:10:00 mattst88 Exp $
+
+  09 May 2012; Matt Turner <mattst88@gentoo.org> colord-0.1.18.ebuild:
+  Added ~mips, bug 387959.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> colord-0.1.15.ebuild,
   colord-0.1.16.ebuild, colord-0.1.17.ebuild, colord-0.1.18.ebuild:
