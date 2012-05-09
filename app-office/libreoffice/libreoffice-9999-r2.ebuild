@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.69 2012/05/09 18:06:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.70 2012/05/09 20:12:12 scarabeus Exp $
 
 EAPI=4
 
@@ -570,8 +570,8 @@ pkg_postinst() {
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin
 
-	use cups || \
-		ewarn 'You will need net-print/cups to be able to print and export to PDF with libreoffice.'
+	use java || \
+		ewarn 'If you plan to use lbase aplication you should enable java or you will get various crashes.'
 }
 
 pkg_postrm() {

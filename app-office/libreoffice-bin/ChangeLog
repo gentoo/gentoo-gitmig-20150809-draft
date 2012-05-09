@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.66 2012/05/06 14:05:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.67 2012/05/09 20:14:56 scarabeus Exp $
+
+  09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.5.2.2.ebuild:
+  Add elog information about -java, base will not be working
 
   06 May 2012; Agostino Sarubbo <ago@gentoo.org>
   libreoffice-bin-3.5.2.2.ebuild:
