@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.244 2012/05/08 22:00:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.245 2012/05/09 08:23:14 pacho Exp $
+
+  09 May 2012; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Don't call gtk-doc configure option when not available
 
   08 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> kde4-base.eclass,
   kde4-functions.eclass, kde4-meta.eclass, kde4-meta-pkg.eclass:
