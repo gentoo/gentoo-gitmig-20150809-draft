@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/geopy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/ChangeLog,v 1.1 2012/05/09 09:26:35 iksaif Exp $
+
+*geopy-0.94.2 (09 May 2012)
+
+  09 May 2012;  <iksaif@gentoo.org> +geopy-0.94.2.ebuild, +metadata.xml:
+  New ebuild for geopy.
+
