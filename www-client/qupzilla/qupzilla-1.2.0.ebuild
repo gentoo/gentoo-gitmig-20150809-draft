@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.2.0.ebuild,v 1.2 2012/05/09 10:22:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.2.0.ebuild,v 1.3 2012/05/09 10:59:21 yngwin Exp $
 
 EAPI=4
 
-inherit qt4-r2 vcs-snapshot
+inherit multilib qt4-r2 vcs-snapshot
 
 DESCRIPTION="Qt WebKit web browser"
 HOMEPAGE="http://www.qupzilla.com/"
@@ -29,6 +29,7 @@ DOCS="AUTHORS FAQ TODO"
 
 src_configure() {
 	export QUPZILLA_PREFIX="${EPREFIX}/usr/"
+	export USE_LIBPATH="${QUPZILLA_PREFIX}$(get_libdir)"
 
 	if use kde; then
 		KDE=true eqmake4

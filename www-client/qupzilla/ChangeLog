@@ -1,6 +1,9 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.4 2012/05/09 10:22:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.5 2012/05/09 10:59:21 yngwin Exp $
+
+  09 May 2012; Ben de Groot <yngwin@gentoo.org> qupzilla-1.2.0.ebuild:
+  Make comply with multilib-strict
 
   09 May 2012; Agostino Sarubbo <ago@gentoo.org> -qupzilla-1.1.8.ebuild,
   qupzilla-1.2.0.ebuild:
