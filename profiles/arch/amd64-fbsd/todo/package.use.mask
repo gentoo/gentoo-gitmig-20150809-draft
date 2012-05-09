@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.155 2012/05/09 15:47:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.156 2012/05/09 15:51:44 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -31,9 +31,6 @@ sys-auth/pambase gnome-keyring
 
 # sys-auth/pam_krb5
 sys-auth/pambase pam_krb5
-
-# dev-vcs/git
-sys-devel/gettext git
 
 # virtual/jre virtual/jdk
 sys-devel/gettext java
