@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.2.2.ebuild,v 1.7 2012/05/09 20:14:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.2.2.ebuild,v 1.8 2012/05/09 20:35:17 scarabeus Exp $
 
 EAPI=4
 
@@ -176,7 +176,7 @@ pkg_postinst() {
 
 	use cups || \
 		ewarn 'You will need net-print/cups to be able to print and export to PDF with libreoffice.'
-	
+
 	use java || \
 		ewarn 'If you plan to use lbase aplication you should enable java or you will get various crashes.'
 }
