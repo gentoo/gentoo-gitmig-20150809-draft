@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/authres
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.5 2012/05/09 03:42:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.6 2012/05/09 03:44:24 floppym Exp $
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> -authres-0.3.ebuild:
+  Just remove the old version instead.
 
   09 May 2012; Mike Gilbert <floppym@gentoo.org> authres-0.3.ebuild:
   Restore PYTHON_MODNAME for old version.
