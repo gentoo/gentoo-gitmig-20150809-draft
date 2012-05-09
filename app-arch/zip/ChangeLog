@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.92 2011/12/18 15:16:06 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.93 2012/05/09 13:06:57 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> zip-3.0-r1.ebuild:
+  keyword ~amd64-fbsd
 
   18 Dec 2011; Naohiro Aota <naota@gentoo.org> zip-3.0-r1.ebuild:
   Add ~x86-fbsd wrt 349393
