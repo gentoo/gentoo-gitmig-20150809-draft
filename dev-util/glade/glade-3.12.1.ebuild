@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.12.1.ebuild,v 1.2 2012/05/09 18:56:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.12.1.ebuild,v 1.3 2012/05/09 23:15:35 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -33,8 +33,14 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.41.0
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
+
+	dev-libs/gobject-introspection-common
+	gnome-base/gnome-common
 	doc? ( >=dev-util/gtk-doc-1.13 )
 "
+# eautoreconf requires:
+#	dev-libs/gobject-introspection-common
+#	gnome-base/gnome-common
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"

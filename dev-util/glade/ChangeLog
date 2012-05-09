@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.161 2012/05/09 18:56:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.162 2012/05/09 23:15:35 tetromino Exp $
+
+  09 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glade-3.12.1.ebuild:
+  Add missing build-time deps (bug #415287, thanks to Matt Turner).
 
   09 May 2012; Matt Turner <mattst88@gentoo.org> glade-3.12.1.ebuild:
   Added ~mips.
