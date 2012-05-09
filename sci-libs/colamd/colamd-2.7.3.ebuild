@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.3.ebuild,v 1.8 2012/05/08 17:17:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.3.ebuild,v 1.9 2012/05/09 23:09:15 bicatali Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEPEND="sci-libs/ufconfig"
 RDEPEND="${DEPEND}"
 
 DOCS=( README.txt Doc/ChangeLog )
-PATCHES=( "${FILESDIR}"/${PN}-2.7.1-autotools.patch )
+PATCHES=( "${FILESDIR}"/${PN}-2.7.4-autotools.patch )
 
 # Needs manual inspection of the result, useless.
 RESTRICT="test"
