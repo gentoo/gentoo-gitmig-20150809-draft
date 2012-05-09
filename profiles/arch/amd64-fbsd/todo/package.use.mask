@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.157 2012/05/09 16:08:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.158 2012/05/09 16:10:43 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -25,9 +25,6 @@ net-misc/curl curl_ssl_axtls
 net-misc/curl ldap
 net-misc/dhcp ldap
 gnome-base/gconf ldap
-
-# gnome-base/gnome-keyring
-sys-auth/pambase gnome-keyring
 
 # sys-auth/pam_krb5
 sys-auth/pambase pam_krb5
@@ -70,6 +67,9 @@ dev-util/cmake test
 sys-apps/dbus test
 x11-libs/gtk+ test
 gnome-base/gnome-keyring test
+
+# gnome-base/gnome-keyring test
+gnome-base/libgnome-keyring test
 
 # dev-python/pygtk:2
 dev-python/twisted gtk
