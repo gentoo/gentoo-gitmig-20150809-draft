@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.17 2012/04/18 02:14:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.18 2012/05/09 06:50:24 zmedico Exp $
+
+  09 May 2012; Zac Medico <zmedico@gentoo.org> mariadb-5.1.62.ebuild,
+  mariadb-5.2.12.ebuild, mariadb-5.3.6.ebuild, mariadb-5.5.23.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
 
 *mariadb-5.3.6 (18 Apr 2012)
 *mariadb-5.2.12 (18 Apr 2012)
