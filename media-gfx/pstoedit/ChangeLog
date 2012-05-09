@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.71 2012/05/05 07:00:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.72 2012/05/09 18:10:26 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> pstoedit-3.60.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> pstoedit-3.50.ebuild,
   pstoedit-3.50-r1.ebuild, pstoedit-3.60.ebuild:
