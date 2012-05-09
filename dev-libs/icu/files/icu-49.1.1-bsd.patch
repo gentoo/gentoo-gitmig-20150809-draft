@@ -1,0 +1,14 @@
+FreeBSD does not have timezone. ICU is able to compute it if U_TIMEZONE is not
+set.
+
+--- icu/source/common/putilimp.h.old	2012-05-06 10:04:23.000000000 -0400
++++ icu/source/common/putilimp.h	2012-05-06 10:05:50.000000000 -0400
+@@ -118,6 +118,8 @@
+ #   define U_TIMEZONE _timezone
+ #elif U_PLATFORM == U_PF_OS400
+    /* not defined */
++#elif U_PLATFORM == U_PF_BSD
++   /* not defined */
+ #else
+ #   define U_TIMEZONE timezone
+ #endif
