@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.55 2012/02/20 16:05:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.56 2012/05/09 16:29:20 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> libiodbc-3.52.7-r1.ebuild:
+  keyword ~amd64-fbsd
 
   20 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> libiodbc-3.52.7-r1.ebuild:
   Respect the system set MAKEOPTS too, as per ssumien's sugesstion.
