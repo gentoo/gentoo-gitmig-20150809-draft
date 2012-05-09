@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.94 2012/02/10 16:52:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.95 2012/05/09 01:37:53 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> eselect-emacs-1.13.ebuild:
+  keyword ~amd64-fbsd
 
   10 Feb 2012; Fabian Groffen <grobian@gentoo.org> eselect-emacs-1.13.ebuild:
   Marked ~x64-macos
