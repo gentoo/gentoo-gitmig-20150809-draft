@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dvi2tty
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.32 2012/04/17 21:49:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.33 2012/05/09 16:38:44 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> dvi2tty-5.3.4.ebuild:
+  keyword ~amd64-fbsd
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> dvi2tty-5.3.4.ebuild:
   Marking dvi2tty-5.3.4 ppc64 for bug 404725
