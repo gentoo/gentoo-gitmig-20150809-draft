@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xorg-cf-files
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.45 2011/03/15 23:04:55 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.46 2012/05/09 16:16:50 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> xorg-cf-files-1.0.4.ebuild:
+  keyword ~amd64-fbsd
 
   15 Mar 2011; Jonathan Callen <abcd@gentoo.org>
   +files/xorg-cf-files-1.0.2-solaris-prefix.patch, xorg-cf-files-1.0.4.ebuild:
