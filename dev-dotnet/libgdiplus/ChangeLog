@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.136 2012/05/05 16:23:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.137 2012/05/09 00:35:50 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> libgdiplus-2.10.9.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Justin Lecher <jlec@gentoo.org> libgdiplus-2.10.9.ebuild,
   +files/libgdiplus-2.10.9-gold.patch:
