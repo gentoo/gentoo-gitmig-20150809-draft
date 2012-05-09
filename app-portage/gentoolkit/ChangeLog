@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.261 2012/04/26 22:19:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.262 2012/05/09 20:43:41 fuzzyray Exp $
+
+*gentoolkit-0.3.0.6-r1 (09 May 2012)
+
+  09 May 2012; Paul Varner <fuzzyray@gentoo.org> +gentoolkit-0.3.0.6-r1.ebuild,
+  +files/0.3.0.6-eread-413577.patch, +files/0.3.0.6-eshowkw-414627.patch:
+  Revision bump to add patches to add sorting to eread and fix a python3
+  issue with eshowkw.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gentoolkit-0.3.0.6.ebuild:
   keyword ~amd64-fbsd
