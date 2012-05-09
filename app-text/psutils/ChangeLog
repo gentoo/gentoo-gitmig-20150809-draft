@@ -1,6 +1,9 @@
 # ChangeLog for app-text/psutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.25 2011/02/06 06:01:23 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.26 2012/05/09 16:30:11 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> psutils-1.17-r1.ebuild:
+  keyword ~amd64-fbsd
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> psutils-1.17.ebuild:
   Drop to ~mips
