@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipsk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.27 2012/05/09 12:46:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.28 2012/05/09 12:47:10 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  dvipsk-5.991_p20110705-r1.ebuild:
+  keyword ~amd64-fbsd
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   -dvipsk-5.99_p20100722.ebuild, -dvipsk-5.991_p20110705.ebuild:

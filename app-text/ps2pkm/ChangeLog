@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ps2pkm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.25 2012/05/09 12:47:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.26 2012/05/09 12:49:11 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  ps2pkm-1.5_p20110705.ebuild:
+  keyword ~amd64-fbsd
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   -ps2pkm-1.5_p20100722.ebuild:
