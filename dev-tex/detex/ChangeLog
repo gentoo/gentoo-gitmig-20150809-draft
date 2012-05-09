@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.33 2011/06/30 15:34:15 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.34 2012/05/09 16:32:03 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> detex-2.8-r1.ebuild:
+  keyword ~amd64-fbsd
 
   30 Jun 2011; Alexis Ballier <aballier@gentoo.org> -detex-2.7.ebuild,
   -files/detex-flexbrackets.patch:
