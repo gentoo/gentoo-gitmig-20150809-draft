@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.34 2012/02/14 21:02:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.35 2012/05/09 11:17:30 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (09 May 2012)
+# Installing libelf will hurt your system.  In particular libkvm needs
+# the system libelf to function properly.
+dev-libs/libelf
 
 # Fabian Groffen <grobian@gentoo.org> (25 Aug 2011)
 # Fails to compile, and not worth fixing, bug #379723

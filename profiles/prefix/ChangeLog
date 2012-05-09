@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.346 2012/05/05 13:35:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.347 2012/05/09 11:17:30 grobian Exp $
+
+  09 May 2012; Fabian Groffen <grobian@gentoo.org> sunos/solaris/package.mask:
+  Mask dev-libs/libelf on Solaris, as it breaks the system
 
   05 May 2012; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   gimp-2.7 was unmasked
