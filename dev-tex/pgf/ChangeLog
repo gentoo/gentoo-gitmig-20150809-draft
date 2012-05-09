@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.64 2011/09/21 15:46:34 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.65 2012/05/09 16:27:02 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> pgf-2.10.ebuild:
+  keyword ~amd64-fbsd
 
   21 Sep 2011; Alexis Ballier <aballier@gentoo.org> -pgf-2.00.ebuild:
   remove old
