@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.86 2012/05/07 09:32:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.87 2012/05/09 06:55:11 jdhore Exp $
+
+  09 May 2012; Jeff Horelick <jdhore@gentoo.org> dos2unix-5.3.3.ebuild:
+  marked x86 per bug 414883
 
   07 May 2012; Agostino Sarubbo <ago@gentoo.org> dos2unix-5.3.3.ebuild:
   Stable for amd64, wrt bug #414883
