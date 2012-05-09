@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-basic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.64 2012/05/06 18:16:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.65 2012/05/09 13:44:35 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  texlive-basic-2011-r1.ebuild:
+  keyword ~amd64-fbsd
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> texlive-basic-2011-r1.ebuild:
   ia64/s390/sh/sparc stable wrt #395735
