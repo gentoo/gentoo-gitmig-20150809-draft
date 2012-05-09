@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.142 2012/05/09 01:47:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.143 2012/05/09 02:09:50 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -84,9 +84,6 @@ dev-util/cppunit doc
 
 # sci-mathematics/glpk
 dev-libs/ppl lpsol
-
-# media-gfx/fontforge
-media-fonts/dejavu fontforge
 
 # x11-libs/qt-gui
 dev-util/cmake qt4
