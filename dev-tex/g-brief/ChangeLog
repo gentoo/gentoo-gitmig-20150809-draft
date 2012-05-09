@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/g-brief
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.31 2011/10/16 17:21:25 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.32 2012/05/09 17:15:47 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> g-brief-4.0.2.ebuild:
+  keyword ~amd64-fbsd
 
   16 Oct 2011; Fabian Groffen <grobian@gentoo.org> g-brief-4.0.2.ebuild:
   Marked ~x86-macos
