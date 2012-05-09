@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.50 2012/04/22 18:31:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.51 2012/05/09 17:24:53 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> latexmk-430a.ebuild:
+  keyword ~amd64-fbsd
 
   22 Apr 2012; Fabian Groffen <grobian@gentoo.org> latexmk-430a.ebuild:
   Marked ~amd64-linux, bug #411657
