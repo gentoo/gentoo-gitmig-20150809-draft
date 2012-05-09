@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/adhearsion
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.28 2012/04/29 16:42:35 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.29 2012/05/09 06:27:57 graaff Exp $
+
+*adhearsion-1.2.5 (09 May 2012)
+
+  09 May 2012; Hans de Graaff <graaff@gentoo.org> +adhearsion-1.2.5.ebuild:
+  Version bump.
 
   29 Apr 2012; Thomas Kahle <tomka@gentoo.org> adhearsion-1.2.3.ebuild:
   marked ~x86 per bug 391073
