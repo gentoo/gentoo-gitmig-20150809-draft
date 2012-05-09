@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.85 2012/05/09 12:29:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.86 2012/05/09 12:36:12 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/make.defaults:
+  remove some more default enabled use flags (cli, pcre, session)
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/make.defaults:
   remove perl and python from make.default USE, as on linux
