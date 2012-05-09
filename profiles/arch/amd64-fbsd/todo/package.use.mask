@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.139 2012/05/09 01:36:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.140 2012/05/09 01:45:07 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -49,14 +49,6 @@ sys-devel/gettext java
 
 # app-emacs/po-mode
 sys-devel/gettext emacs
-
-# virtual/emacs
-dev-scheme/guile emacs
-dev-util/cscope emacs
-net-dns/libidn emacs
-dev-util/cmake emacs
-dev-util/gtk-doc emacs
-dev-util/desktop-file-utils emacs
 
 # dev-lang/mono
 net-dns/libidn mono
