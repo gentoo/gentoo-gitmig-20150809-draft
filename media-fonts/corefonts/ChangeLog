@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/corefonts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.36 2011/06/20 09:45:03 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.37 2012/05/09 16:50:42 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> corefonts-1-r6.ebuild:
+  keyword ~amd64-fbsd
 
 *corefonts-1-r6 (20 Jun 2011)
 
