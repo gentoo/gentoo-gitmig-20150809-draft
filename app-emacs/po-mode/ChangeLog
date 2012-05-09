@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/po-mode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.25 2011/07/15 14:28:20 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.26 2012/05/09 01:46:29 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> po-mode-0.18.1.1.ebuild:
+  keyword ~amd64-fbsd
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> po-mode-0.18.1.1.ebuild:
   ppc64 stable wrt #361635
