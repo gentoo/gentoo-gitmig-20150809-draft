@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.58 2012/04/26 06:30:45 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.59 2012/05/09 10:04:54 aidecoe Exp $
+
+  09 May 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-017-r1.ebuild,
+  -dracut-017-r2.ebuild, -dracut-017-r3.ebuild,
+  -files/dracut-017-convertfs-fix-check-for-usr-bin.patch,
+  -files/dracut-017-crypt-simplify-rd.luks.uuid-testing.patch,
+  -files/dracut-017-fstab-sys-no-check-for-dev.patch,
+  -files/dracut-017-fstab-sys-remove-bashism.patch,
+  -files/dracut-017-inst_symlink-parent-dir.patch,
+  -files/dracut-017-multipath-udev-rules.patch,
+  -files/dracut-017-tmpdir-option.patch,
+  -files/dracut-017-usrmount-fstab-comments.patch,
+  -files/dracut-017-usrmount-newroot-etc-check.patch:
+  Removed 017, because 018 fixes bugs which are not going to be backported to
+  017.
 
   26 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-018.ebuild:
   Removed use of WITH_SWITCH_ROOT variables.
