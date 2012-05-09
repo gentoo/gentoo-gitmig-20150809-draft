@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.63 2012/02/13 20:22:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.64 2012/05/09 15:09:56 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  hicolor-icon-theme-0.12.ebuild:
+  keyword ~amd64-fbsd
 
   13 Feb 2012; Fabian Groffen <grobian@gentoo.org>
   hicolor-icon-theme-0.12.ebuild:
