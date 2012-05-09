@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.2.0.ebuild,v 1.1 2012/04/12 10:41:57 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.2.0.ebuild,v 1.2 2012/05/09 10:22:34 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/nowrep/QupZilla/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug kde"
 
 DEPEND="
