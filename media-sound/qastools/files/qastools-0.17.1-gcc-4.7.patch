@@ -1,0 +1,20 @@
+--- shared/src/unix_signal_handler.cpp
++++ shared/src/unix_signal_handler.cpp
+@@ -10,6 +10,7 @@
+ 
+ #include <sys/socket.h>
+ #include <signal.h>
++#include <unistd.h>
+ #include <QSocketNotifier>
+ #include <iostream>
+ 
+--- shared/src/single_application.cpp
++++ shared/src/single_application.cpp
+@@ -17,6 +17,7 @@
+ 
+ #include <stdlib.h>
+ #include <pwd.h>
++#include <unistd.h>
+ #include "unix_signal_handler.hpp"
+ 
+ 
