@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-modesetting
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-modesetting/ChangeLog,v 1.6 2012/05/09 04:29:33 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-modesetting/ChangeLog,v 1.7 2012/05/09 04:30:40 mattst88 Exp $
+
+  09 May 2012; Matt Turner <mattst88@gentoo.org>
+  xf86-video-modesetting-0.2.0.ebuild:
+  Added ~mips, bug 405683.
 
   09 May 2012; Matt Turner <mattst88@gentoo.org>
   xf86-video-modesetting-0.2.0.ebuild:
