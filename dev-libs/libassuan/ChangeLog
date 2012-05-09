@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassuan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.83 2011/12/26 22:03:46 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.84 2012/05/09 15:19:16 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> libassuan-2.0.3.ebuild:
+  keyword ~amd64-fbsd
 
 *libassuan-2.0.3 (26 Dec 2011)
 

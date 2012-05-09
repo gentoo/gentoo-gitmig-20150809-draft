@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.131 2012/02/17 23:04:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.132 2012/05/09 15:18:25 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> libksba-1.2.0.ebuild:
+  keyword ~amd64-fbsd
 
   17 Feb 2012; Tim Harder <radhermit@gentoo.org> -libksba-1.0.7.ebuild,
   -libksba-1.1.0.ebuild:
