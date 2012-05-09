@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.846 2012/05/03 19:51:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.847 2012/05/09 04:30:12 vapier Exp $
+
+  09 May 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.14.1-r3.ebuild,
+  glibc-2.15-r1.ebuild:
+  Fix from upstream for building ia64/hardened #414625 by Dennis Schridde.
 
   03 May 2012; Robin H. Johnson <robbat2@gentoo.org> glibc-2.15-r1.ebuild,
   glibc-9999.ebuild:
