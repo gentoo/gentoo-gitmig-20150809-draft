@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6525 2012/05/09 16:40:58 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6526 2012/05/09 18:03:28 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 May 2012; Markos Chandras <hwoarang@gentoo.org> thirdpartymirrors:
+  Fix sourceforge mirrors after recent updates
 
   09 May 2012; Sebastian Pipping <sping@gentoo.org> package.mask:
   Mask >=dev-python/autopep8-0.6
