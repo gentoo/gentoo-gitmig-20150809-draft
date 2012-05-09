@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/ChangeLog,v 1.4 2012/03/29 22:50:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/ChangeLog,v 1.5 2012/05/09 18:05:11 hwoarang Exp $
+
+  09 May 2012; Markos Chandras <hwoarang@gentoo.org> qt-meta-4.8.ebuild:
+  Stable on amd64 wrt bug #
 
   29 Mar 2012; Davide Pesavento <pesa@gentoo.org> qt-meta-4.8.ebuild:
   EAPI=4; add :4 slot to dependencies and sort them.
