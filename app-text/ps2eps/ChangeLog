@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ps2eps
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2eps/ChangeLog,v 1.21 2011/06/14 03:05:22 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2eps/ChangeLog,v 1.22 2012/05/09 17:04:04 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> ps2eps-1.68.ebuild:
+  keyword ~amd64-fbsd
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> ps2eps-1.68.ebuild:
   Added ~mips, bug 342513

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.35 2011/09/08 19:32:18 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.36 2012/05/09 17:06:09 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> dvipdfm-0.13.2d-r1.ebuild:
+  keyword ~amd64-fbsd
 
   08 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   dvipdfm-0.13.2d-r1.ebuild:
