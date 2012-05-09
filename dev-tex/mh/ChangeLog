@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/mh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.33 2012/05/06 16:50:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.34 2012/05/09 17:22:17 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> -mh-20080903.ebuild,
+  -mh-20101024.ebuild:
+  remove old
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> mh-20111011.ebuild:
   ia64/s390/sh/sparc stable wrt #395735
