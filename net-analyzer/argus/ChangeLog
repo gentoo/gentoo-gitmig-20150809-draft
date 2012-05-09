@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/argus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.43 2012/05/09 14:58:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.44 2012/05/09 15:26:14 jer Exp $
+
+  09 May 2012; Jeroen Roovers <jer@gentoo.org> argus-3.0.6.ebuild:
+  Readd support for dev-libs/cyrus-sasl.
 
   09 May 2012; Jeroen Roovers <jer@gentoo.org> -argus-3.0.5.11.ebuild:
   Old.
