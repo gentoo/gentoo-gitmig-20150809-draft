@@ -1,0 +1,10 @@
+# ChangeLog for app-officeext/dmaths
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/dmaths/ChangeLog,v 1.1 2012/05/09 20:33:54 scarabeus Exp $
+
+*dmaths-3.3 (09 May 2012)
+
+  09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +dmaths-3.3.ebuild,
+  +metadata.xml:
+  Initial commit. Fixes bug#251598.
+
