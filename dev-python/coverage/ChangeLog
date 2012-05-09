@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.63 2012/05/08 23:37:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.64 2012/05/09 00:05:35 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> coverage-3.5.2.ebuild:
+  keyword ~amd64-fbsd
 
   08 May 2012; Mike Gilbert <floppym@gentoo.org> coverage-3.5.1.ebuild,
   coverage-3.5.2.ebuild:

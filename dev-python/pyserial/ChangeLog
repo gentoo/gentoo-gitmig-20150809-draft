@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.67 2011/12/28 00:03:57 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.68 2012/05/08 23:59:28 aballier Exp $
+
+  08 May 2012; Alexis Ballier <aballier@gentoo.org> pyserial-2.6.ebuild:
+  keyword ~amd64-fbsd
 
   27 Dec 2011; Jesus Rivero <neurogeek@gentoo.org> pyserial-2.6.ebuild:
   Don't inherit unused eclass. Patch by Arfrever.
