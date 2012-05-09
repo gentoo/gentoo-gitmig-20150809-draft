@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/filewatcher
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.11 2010/03/05 07:24:15 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.12 2012/05/09 20:00:47 ago Exp $
+
+  09 May 2012; Agostino Sarubbo <ago@gentoo.org> -filewatcher-2.4.0.ebuild,
+  -filewatcher-2.4.3.ebuild:
+  Remove old
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> filewatcher-2.4.0.ebuild,
   filewatcher-2.4.3.ebuild, filewatcher-2.4.6.ebuild:
