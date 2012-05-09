@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.11 2012/05/05 05:38:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.12 2012/05/09 01:35:12 aballier Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://projects.gnome.org/ORBit2/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc test"
 
 RDEPEND=">=dev-libs/glib-2.8:2

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.5.ebuild,v 1.2 2012/05/05 05:38:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.5.ebuild,v 1.3 2012/05/09 01:36:04 aballier Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://projects.gnome.org/gconf/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc +introspection ldap orbit policykit"
 
 RDEPEND=">=dev-libs/glib-2.31:2
