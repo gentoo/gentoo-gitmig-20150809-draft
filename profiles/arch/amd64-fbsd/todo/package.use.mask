@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.133 2012/05/09 00:18:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.134 2012/05/09 00:20:10 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -64,10 +64,6 @@ dev-python/epydoc X
 
 # dev-tcltk/blt
 dev-lang/python tk
-# dev-python/sphinx
-dev-lang/python doc
-dev-python/nose doc
-dev-python/jinja doc
 
 # app-emacs/autoconf-mode
 sys-devel/autoconf emacs
