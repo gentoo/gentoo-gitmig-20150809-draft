@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ptexenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.27 2012/05/09 12:50:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.28 2012/05/09 12:52:27 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org>
+  ptexenc-1.2.0_p20110705.ebuild:
+  keyword ~amd64-fbsd
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   -ptexenc-1.1.0_p20100722.ebuild:
