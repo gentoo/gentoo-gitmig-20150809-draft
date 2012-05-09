@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.6.1.ebuild,v 1.1 2012/05/09 14:40:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.6.1.ebuild,v 1.2 2012/05/09 15:50:34 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -12,27 +12,27 @@ SRC_URI="http://qosient.com/argus/dev/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug geoip mysql tcpd"
+IUSE="debug ft geoip mysql sasl tcpd"
 
-#sasl? ( >=dev-libs/cyrus-sasl-1.5.24 )
 MY_CDEPEND="
-	net-libs/libpcap
 	net-analyzer/rrdtool[perl]
+	net-libs/libpcap
+	sys-libs/ncurses
+	sys-libs/readline
+	ft? ( net-analyzer/flow-tools )
 	geoip? ( dev-libs/geoip )
 	mysql? ( virtual/mysql )
-	sys-libs/ncurses
+	sasl? ( dev-libs/cyrus-sasl )
 "
 
-#	>=net-analyzer/argus-2.0.6[sasl?]"
 RDEPEND="
 	${MY_CDEPEND}
-	>=net-analyzer/argus-3.0.2
 "
 
 DEPEND="
 	${MY_CDEPEND}
-	>=sys-devel/bison-1.28
-	>=sys-devel/flex-2.4.6
+	sys-devel/bison
+	sys-devel/flex
 "
 
 src_prepare() {
@@ -42,9 +42,10 @@ src_prepare() {
 
 src_configure() {
 	use debug && touch .debug
-	#	$(use_with sasl) \
 	econf \
+		$(use_with ft libft) \
 		$(use_with geoip GeoIP /usr/) \
+		$(use_with sasl) \
 		$(use_with tcpd wrappers) \
 		$(use_with mysql)
 }
