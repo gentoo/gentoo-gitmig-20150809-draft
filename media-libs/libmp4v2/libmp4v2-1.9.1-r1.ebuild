@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.1-r1.ebuild,v 1.1 2012/05/09 18:46:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.1-r1.ebuild,v 1.2 2012/05/09 19:03:07 ssuominen Exp $
 
 # this ebuild is only for the libmp4v2.so.1 SONAME for ABI compat
 
@@ -18,8 +18,9 @@ IUSE=""
 
 RESTRICT="test"
 
-DEPEND="sys-apps/sed"
-RDEPEND=""
+RDEPEND="!<=${CATEGORY}/${PN}-1.9.1:0"
+DEPEND="${RDEPEND}
+	sys-apps/sed"
 
 S=${WORKDIR}/${P/lib}
 
