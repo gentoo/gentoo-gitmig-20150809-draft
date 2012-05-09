@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.33 2012/05/05 23:16:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.34 2012/05/09 13:04:01 grobian Exp $
+
+  09 May 2012; Fabian Groffen <grobian@gentoo.org> Digest-SHA-5.710.0.ebuild:
+  Marked ~x64-solaris
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> Digest-SHA-5.710.0.ebuild:
   keyword ~amd64-fbsd
