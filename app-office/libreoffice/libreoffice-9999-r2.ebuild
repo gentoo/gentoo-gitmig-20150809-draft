@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.68 2012/05/09 15:43:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.69 2012/05/09 18:06:46 scarabeus Exp $
 
 EAPI=4
 
@@ -75,9 +75,11 @@ jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba +webdav
 +xmlsec"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
-# Unneeded extension (just can be separate package:
-# google-docs ; barcode ; diagram ; hunart ; numbertext ; oooblogger ; typo ;
-# validator ; watch-window ; ct2n (requres two patches from lo tree -> repack)
+# Unpackaged separate extensions:
+# diagram: lo has 0.9.5 upstream is weirdly patched 0.9.4 -> wtf?
+# hunart: only on ooo extensions -> fubared download path somewhere on sf
+# numbertext, typo, validator, watch-window: ^^
+# oooblogger: no homepage or anything
 # Extensions that need extra work:
 # report-builder: missing java packages
 for lo_xt in ${LO_EXTS}; do
