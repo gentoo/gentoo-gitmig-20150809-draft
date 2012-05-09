@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.46 2012/03/18 14:07:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.47 2012/05/09 19:08:52 mattst88 Exp $
 
 # Zac Medico <zmedico@gentoo.org> (21 Feb 2012)
 # Bug #402215: Mask USE=xattr for sys-apps/portage, pending ~mips keyword for
@@ -61,11 +61,6 @@ games-strategy/freeciv auth ggz
 # Extra functionality that has external unkeyworded dependencies
 # and is not tested yet
 net-fs/samba ads cluster debug
-
-# Mart Raudsepp <leio@gentoo.org> (03 Oct 2010)
-# dev-util/glade not tested and keyworded yet
-x11-libs/gtksourceview glade
-x11-libs/vte glade
 
 # Matt Turner <mattst88@gentoo.org> (06 Dec 2010)
 # dev-db/tokyocabinet not keyworded
