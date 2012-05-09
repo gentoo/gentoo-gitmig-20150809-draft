@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.10 2012/05/09 12:36:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.11 2012/05/09 12:38:12 aballier Exp $
 
 # Last building sandbox breaks gfind, bug #374425
 FEATURES="-sandbox"
@@ -11,11 +11,7 @@ ELIBC="FreeBSD"
 
 MAKE="gmake"
 
-USE="berkdb crypt ipv6 ncurses nls pam readline ssl tcpd zlib"
-
-# Javier Villavicencio <the_paya@gentoo.org> (22 Jan 2009)
-# Enabled again for testing.
-# USE="${USE} -ipv6"
+USE="berkdb crypt iconv ipv6 ncurses nls oss pam readline ssl tcpd zlib"
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Support direct rendering by default
@@ -28,14 +24,6 @@ USE="${USE} xorg"
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
 VIDEO_CARDS="dummy fbdev vmware"
-
-# 2006/10/22 - Diego Pettenò <flameeyes@gentoo.org>
-# FreeBSD only uses Open Sound System, so enable it even if Linux defaults for it to off.
-USE="${USE} oss"
-
-# 2006/10/30 - Diego Pettenò <flameeyes@gentoo.org>
-# Enable iconv by default for mplayer upon Luca's request
-USE="${USE} iconv"
 
 # Let virtual/mta pick ssmtp[mta] for stage1 builds.
 # https://bugs.gentoo.org/show_bug.cgi?id=408587
