@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.50 2012/04/20 10:32:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.51 2012/05/10 08:43:18 chainsaw Exp $
+
+*connman-1.0 (10 May 2012)
+
+  10 May 2012; Tony Vroon <chainsaw@gentoo.org> +connman-1.0.ebuild:
+  First stable branch with APIs set in stone.
 
 *connman-0.80 (20 Apr 2012)
 *connman-0.79 (20 Apr 2012)
