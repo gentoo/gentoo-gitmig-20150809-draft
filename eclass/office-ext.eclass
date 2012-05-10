@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.4 2012/05/09 20:33:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.5 2012/05/10 09:33:59 scarabeus Exp $
 
 # @ECLASS: office-ext.eclass
 # @AUTHOR:
@@ -97,7 +97,8 @@ office-ext_add_extension() {
 
 	debug-print "${FUNCNAME}: ${UNOPKG_BINARY} add --shared \"${ext}\""
 	ebegin "Adding office extension: \"${ext}\""
-	${UNOPKG_BINARY} add --shared "${ext}" \
+	${UNOPKG_BINARY} add --suppress-license \
+		--shared "${ext}" \
 		"-env:UserInstallation=file:///${tmpdir}" \
 		"-env:JFW_PLUGIN_DO_NOT_CHECK_ACCESSIBILITY=1"
 	eend $?
@@ -114,7 +115,8 @@ office-ext_remove_extension() {
 
 	debug-print "${FUNCNAME}: ${UNOPKG_BINARY} remove --shared \"${ext}\""
 	ebegin "Removing office extension: \"${ext}\""
-	${UNOPKG_BINARY} remove --shared "${ext}" \
+	${UNOPKG_BINARY} remove --suppress-license \
+		--shared "${ext}" \
 		"-env:UserInstallation=file:///${tmpdir}" \
 		"-env:JFW_PLUGIN_DO_NOT_CHECK_ACCESSIBILITY=1"
 	eend $?
