@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.6.0.07.02.ebuild,v 1.5 2012/05/10 15:45:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.6.0.07.02.ebuild,v 1.6 2012/05/10 15:53:30 aballier Exp $
 
 EAPI="3"
 
@@ -43,6 +43,10 @@ JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
 S="${WORKDIR}/diablo-jdk$(get_version_component_range 1-4 ${MY_PV})"
 
 pkg_nofetch() {
+	case ${CHOST} in
+		x86_64*) javafile=${javafile64};;
+		*) javafile=${javafile32}
+	esac
 	einfo "Please download ${javafile} from:"
 	einfo "${HOMEPAGE}"
 	einfo "and move it to ${DISTDIR}"
