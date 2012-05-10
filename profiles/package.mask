@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13737 2012/05/09 16:40:58 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13738 2012/05/10 09:13:05 ali_bush Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alistair Bush <ali_bush@gentoo.org> (10 May 2012)
+# Mask alpha version of mono for testing
+=dev-lang/mono-2.11.1
 
 # Sebastian Pipping <sping@gentoo.org> (09 May 2012)
 # 0.6 introduced severe bug (0.5.2 unaffected)
