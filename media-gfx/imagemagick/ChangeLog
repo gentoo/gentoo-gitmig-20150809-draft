@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.479 2012/05/10 14:07:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.480 2012/05/10 14:15:39 ssuominen Exp $
+
+  10 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -imagemagick-6.7.1.0.ebuild, -imagemagick-6.7.4.8.ebuild,
+  -imagemagick-6.7.4.10.ebuild, -imagemagick-6.7.5.0.ebuild,
+  -imagemagick-6.7.5.3.ebuild, -imagemagick-6.7.5.3-r1.ebuild:
+  old
 
 *imagemagick-6.7.6.9 (10 May 2012)
 
