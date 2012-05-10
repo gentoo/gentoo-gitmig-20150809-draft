@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.71 2012/03/09 00:01:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.72 2012/05/10 15:41:22 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> libXtst-1.2.1.ebuild:
+  keyword ~amd64-fbsd
 
 *libXtst-1.2.1 (09 Mar 2012)
 
