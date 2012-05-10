@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.175 2012/05/10 17:59:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.176 2012/05/10 18:16:29 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -138,6 +138,8 @@ media-libs/mesa gbm
 # does not build
 x11-libs/libdrm libkms
 media-libs/mesa video_cards_vmware
+media-libs/mesa video_cards_r600
+media-libs/mesa video_cards_radeon
 
 # x11-drivers/xf86-input-acecad
 x11-base/xorg-drivers input_devices_acecad
