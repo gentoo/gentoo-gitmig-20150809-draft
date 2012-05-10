@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.32.0.ebuild,v 1.6 2012/05/03 18:33:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.32.0.ebuild,v 1.7 2012/05/10 00:55:47 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.14:2
 	>=app-editors/gedit-2.29.3[python]
 	>=dev-python/pygtk-2.14:2
 	python? ( >=dev-python/pygtksourceview-2.2:2 )
-	charmap? ( >=gnome-extra/gucharmap-2.23.0 )
+	charmap? ( >=gnome-extra/gucharmap-2.23.0:0 )
 	synctex? ( >=dev-python/dbus-python-0.82 )
 	terminal? (
 		dev-python/gconf-python
