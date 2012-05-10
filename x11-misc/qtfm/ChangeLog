@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qtfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.5 2012/05/10 04:54:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.6 2012/05/10 07:51:26 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> qtfm-5.3.ebuild:
+  Stable for X86, wrt bug #415323
 
 *qtfm-5.4 (10 May 2012)
 
