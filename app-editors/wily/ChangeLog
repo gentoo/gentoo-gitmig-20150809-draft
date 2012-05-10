@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/wily
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.17 2012/03/18 15:41:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/ChangeLog,v 1.18 2012/05/10 14:54:49 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -wily-1.0.ebuild:
+  Remove old
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> wily-1.0.ebuild,
   wily-1.0-r1.ebuild:

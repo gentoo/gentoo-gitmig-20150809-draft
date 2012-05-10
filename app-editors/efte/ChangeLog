@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/efte
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/ChangeLog,v 1.10 2010/06/02 06:34:17 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/ChangeLog,v 1.11 2012/05/10 14:53:07 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -efte-1.0.ebuild:
+  Remove old
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove omp from metadata.xml (#147119)
