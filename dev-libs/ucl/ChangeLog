@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.39 2012/03/18 18:42:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.40 2012/05/10 16:00:34 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -ucl-1.01-r1.ebuild,
+  -ucl-1.02.ebuild, -ucl-1.03.ebuild:
+  Remove old
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> ucl-1.03-r1.ebuild:
   ia64/sparc stable wrt #396909

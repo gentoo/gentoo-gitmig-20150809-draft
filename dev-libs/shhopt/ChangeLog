@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/shhopt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.14 2009/07/29 22:45:23 vostorga Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.15 2012/05/10 15:59:37 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -shhopt-1.1.7.ebuild:
+  Remove old
 
   29 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> shhopt-1.1.7.ebuild,
   shhopt-1.1.7-r2.ebuild:

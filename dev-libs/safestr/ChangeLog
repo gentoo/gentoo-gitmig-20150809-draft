@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/safestr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.10 2010/01/15 19:47:24 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.11 2012/05/10 15:59:00 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -safestr-1.0.2.ebuild:
+  Remove old
 
   15 Jan 2010; Ulrich Mueller <ulm@gentoo.org> safestr-1.0.2.ebuild,
   safestr-1.0.3.ebuild:
