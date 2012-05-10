@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/eblook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/ChangeLog,v 1.15 2012/04/25 16:08:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/eblook/ChangeLog,v 1.16 2012/05/10 14:50:43 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -eblook-1.5.1.ebuild,
+  -eblook-1.6.ebuild:
+  Remove old
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> eblook-1.5.1.ebuild,
   eblook-1.6.ebuild, eblook-1.6.1.ebuild:
