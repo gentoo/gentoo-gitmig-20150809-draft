@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/crrcsim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/ChangeLog,v 1.5 2012/05/04 23:13:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/ChangeLog,v 1.6 2012/05/10 21:34:16 xmw Exp $
+
+  10 May 2012; Michael Weber <xmw@gentoo.org> crrcsim-0.9.12.ebuild:
+  WANT_AUTOMAKE=1.10, doesn't work with >=1.11.2 (bug 415213, thanks Marian
+  Kyral)
 
 *crrcsim-0.9.12 (04 May 2012)
 

@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/crrcsim-0.9.12.ebuild,v 1.1 2012/05/04 23:13:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/crrcsim-0.9.12.ebuild,v 1.2 2012/05/10 21:34:16 xmw Exp $
 
 EAPI=3
 
+WANT_AUTOMAKE="1.10"
 inherit autotools eutils games
 
 DESCRIPTION="model-airplane flight simulation program"
@@ -26,7 +27,6 @@ src_prepare() {
 	if built_with_use --missing false sci-mathematics/cgal gmp ; then
 		epatch "${FILESDIR}"/${PN}-cgal_gmp.patch
 	fi
-
 	eautoreconf
 }
 
