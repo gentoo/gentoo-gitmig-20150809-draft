@@ -1,0 +1,37 @@
+--- slim-1.3.3/CMakeLists.txt	2012-02-21 18:59:52.000000000 -0500
++++ slim-1.3.3/CMakeLists.txt	2012-05-10 11:22:51.000000000 -0400
+@@ -18,7 +18,7 @@
+ # Version
+ set(SLIM_VERSION_MAJOR "1")
+ set(SLIM_VERSION_MINOR "3")
+-set(SLIM_VERSION_PATCH "2")
++set(SLIM_VERSION_PATCH "3") # apparently upstream didn't bump this
+ set(SLIM_VERSION "${SLIM_VERSION_MAJOR}.${SLIM_VERSION_MINOR}.${SLIM_VERSION_PATCH}")
+ 
+ set(CMAKE_INSTALL_PREFIX "/usr/local" CACHE PATH "Installation Directory")
+@@ -73,7 +73,6 @@
+ 
+ find_package(X11 REQUIRED)
+ find_package(Freetype REQUIRED)
+-find_package(GLUT REQUIRED)
+ find_package(JPEG REQUIRED)
+ find_package(PNG REQUIRED)
+ find_package(ZLIB REQUIRED)
+@@ -143,7 +142,7 @@
+ 	${X11_Xft_INCLUDE_PATH}
+ 	${X11_Xrender_INCLUDE_PATH}
+ 	${FREETYPE_INCLUDE_DIR_freetype2}
+-	${GLUT_Xmu_INCLUDE_PATH}
++	${X11_Xmu_INCLUDE_PATH}
+ 	${ZLIB_INCLUDE_DIR}
+ 	${JPEG_INCLUDE_DIR}
+ 	${PNG_INCLUDE_DIR}
+@@ -158,7 +157,7 @@
+ 	${X11_Xft_LIB}
+ 	${X11_Xrender_LIB}
+ 	${FREETYPE_LIBRARY}
+-	${GLUT_Xmu_LIBRARY}
++	${X11_Xmu_LIB}
+ 	${JPEG_LIBRARIES}
+ 	${PNG_LIBRARIES}
+ 	)

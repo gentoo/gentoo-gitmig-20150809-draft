@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.3.ebuild,v 1.3 2012/05/05 04:53:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.3.ebuild,v 1.4 2012/05/10 15:35:08 axs Exp $
 
 EAPI=4
 
+CMAKE_MIN_VERSION="2.8.8"
 inherit cmake-utils pam eutils
 
 DESCRIPTION="Simple Login Manager"
@@ -34,6 +35,8 @@ PDEPEND="branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
 src_prepare() {
 	# Our Gentoo-specific config changes
 	epatch "${FILESDIR}"/${P}-config.diff
+	# Bug 414891
+	epatch "${FILESDIR}"/${P}-xmu-cmakelists.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
