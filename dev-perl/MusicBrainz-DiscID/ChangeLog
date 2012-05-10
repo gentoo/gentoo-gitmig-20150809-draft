@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/MusicBrainz-DiscID
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MusicBrainz-DiscID/ChangeLog,v 1.1 2012/05/10 06:31:19 ssuominen Exp $
+
+*MusicBrainz-DiscID-0.03 (10 May 2012)
+
+  10 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +MusicBrainz-DiscID-0.03.ebuild:
+  Initial commit as a prerequisite for bug 415319.
+
