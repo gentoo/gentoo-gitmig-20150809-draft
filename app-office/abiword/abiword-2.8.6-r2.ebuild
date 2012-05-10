@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r2.ebuild,v 1.8 2012/05/03 20:00:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r2.ebuild,v 1.9 2012/05/10 09:36:31 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -35,9 +35,7 @@ RDEPEND="
 	virtual/jpeg
 	>=x11-libs/cairo-1.8[X]
 	>=x11-libs/gtk+-2.14:2[cups?]
-	gnome? (
-		>=gnome-extra/gucharmap-2
-		>=x11-libs/goffice-0.8:0.8 )
+	gnome? ( >=x11-libs/goffice-0.8:0.8 )
 	plugins? (
 		collab? (
 			>=dev-libs/boost-1.33.1

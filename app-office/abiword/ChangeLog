@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.259 2012/05/03 20:00:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.260 2012/05/10 09:36:31 tetromino Exp $
+
+  10 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  abiword-2.8.6-r2.ebuild:
+  Remove gucharmap dependency, it has not been needed since at least
+  abiword-2.8.3
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> abiword-2.8.6-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
