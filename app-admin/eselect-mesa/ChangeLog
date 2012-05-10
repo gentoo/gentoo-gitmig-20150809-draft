@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-mesa
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mesa/ChangeLog,v 1.28 2011/08/17 16:40:51 chithanh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mesa/ChangeLog,v 1.29 2012/05/10 17:54:25 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> eselect-mesa-0.0.10.ebuild:
+  keyword ~amd64-fbsd
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   eselect-mesa-0.0.10.ebuild:
