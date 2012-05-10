@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tablix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.13 2012/02/16 17:44:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.14 2012/05/10 15:17:32 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -tablix-0.3.5.ebuild:
+  Remove old
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tablix-0.3.5-r1.ebuild:
   x86 stable wrt bug #396825

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tprint
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tprint/ChangeLog,v 1.7 2010/09/28 19:41:29 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tprint/ChangeLog,v 1.8 2012/05/10 15:17:58 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -tprint-1.1.0.ebuild:
+  Remove old
 
 *tprint-1.1.0-r1 (28 Sep 2010)
 

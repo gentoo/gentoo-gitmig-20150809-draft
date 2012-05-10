@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mouseremote
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/ChangeLog,v 1.16 2011/12/07 07:45:22 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/ChangeLog,v 1.17 2012/05/10 15:15:10 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -mouseremote-0.90.ebuild:
+  Remove old
 
   07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   mouseremote-0.90-r1.ebuild:

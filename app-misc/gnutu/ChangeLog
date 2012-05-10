@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gnutu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnutu/ChangeLog,v 1.6 2009/01/08 18:38:44 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnutu/ChangeLog,v 1.7 2012/05/10 15:12:10 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -gnutu-2.0.ebuild:
+  Remove old
 
 *gnutu-2.5 (08 Jan 2009)
 

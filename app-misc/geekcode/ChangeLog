@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geekcode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.33 2012/03/18 18:52:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.34 2012/05/10 15:11:37 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -geekcode-1.7.3.ebuild:
+  Remove old
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> geekcode-1.7.3.ebuild,
   geekcode-1.7.3-r1.ebuild:

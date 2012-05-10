@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.41 2012/05/05 21:53:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.42 2012/05/10 15:16:36 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -nut-17.4-r1.ebuild,
+  -nut-17.4.ebuild:
+  Remove old
 
   05 May 2012; Brent Baude <ranger@gentoo.org> nut-17.5.ebuild:
   Marking nut-17.5 ppc for bug 413557

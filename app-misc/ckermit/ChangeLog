@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ckermit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.34 2012/01/03 12:31:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.35 2012/05/10 15:09:37 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -ckermit-8.0.211-r2.ebuild,
+  -ckermit-8.0.211-r3.ebuild:
+  Remove old
 
   03 Jan 2012; Jeroen Roovers <jer@gentoo.org> ckermit-8.0.211-r4.ebuild:
   Marked ~hppa for Dakon.

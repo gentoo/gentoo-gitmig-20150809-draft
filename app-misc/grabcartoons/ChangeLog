@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/grabcartoons
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.5 2008/04/21 16:50:50 phreak Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.6 2012/05/10 15:12:33 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -grabcartoons-1.11.ebuild:
+  Remove old
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata

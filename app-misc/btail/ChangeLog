@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/btail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/ChangeLog,v 1.5 2011/06/24 05:49:36 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/ChangeLog,v 1.6 2012/05/10 15:07:35 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -btail-0.2.ebuild:
+  Remove old
 
 *btail-0.3 (24 Jun 2011)
 

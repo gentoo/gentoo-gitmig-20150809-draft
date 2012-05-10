@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bottlerocket
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/ChangeLog,v 1.13 2011/11/28 11:48:02 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/ChangeLog,v 1.14 2012/05/10 15:06:55 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -bottlerocket-0.04c.ebuild:
+  Remove old
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   bottlerocket-0.04c-r1.ebuild:

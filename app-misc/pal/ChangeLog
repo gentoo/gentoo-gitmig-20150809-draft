@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.31 2012/05/03 19:41:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.32 2012/05/10 15:17:00 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -pal-0.3.4-r1.ebuild:
+  Remove old
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> pal-0.3.4-r1.ebuild,
   pal-0.4.3.ebuild:
