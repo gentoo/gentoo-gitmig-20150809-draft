@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pqiv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.28 2012/05/05 07:00:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.29 2012/05/10 07:44:14 ssuominen Exp $
+
+  10 May 2012; Samuli Suominen <ssuominen@gentoo.org> pqiv-0.11.ebuild,
+  +files/pqiv-0.11-glib-2.31.patch:
+  Fix building with dev-libs/glib >= 2.31 wrt #415325 by Paul Hartman
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> pqiv-0.10.1.ebuild,
   pqiv-0.11.ebuild:

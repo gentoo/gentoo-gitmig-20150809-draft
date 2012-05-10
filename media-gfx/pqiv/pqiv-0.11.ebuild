@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.11.ebuild,v 1.2 2012/05/05 07:00:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.11.ebuild,v 1.3 2012/05/10 07:44:14 ssuominen Exp $
 
-EAPI=2
-inherit toolchain-funcs
+EAPI=4
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Modern rewrite of Quick Image Viewer"
 HOMEPAGE="http://www.pberndt.com/Programme/Linux/pqiv"
@@ -14,9 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.8:2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glib-2.31.patch
+}
 
 src_configure() {
 	./configure --prefix=/usr --destdir="${D}" || die
@@ -24,10 +28,10 @@ src_configure() {
 
 src_compile() {
 	tc-export CC
-	emake || die
+	emake
 }
 
 src_install() {
-	emake install || die
+	emake install
 	dodoc README
 }
