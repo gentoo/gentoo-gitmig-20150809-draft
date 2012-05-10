@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.0.ebuild,v 1.1 2012/05/10 08:43:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.0-r1.ebuild,v 1.1 2012/05/10 23:20:28 chainsaw Exp $
 
 EAPI="4"
-
-inherit systemd
 
 DESCRIPTION="Provides a daemon for managing internet connections"
 HOMEPAGE="http://connman.net"
@@ -53,8 +51,7 @@ src_configure() {
 		$(use_enable tools) \
 		--disable-iospm \
 		--disable-hh2serial-gps \
-		--disable-openconnect \
-		"$(systemd_with_unitdir systemdunitdir)"
+		--disable-openconnect
 }
 
 src_install() {

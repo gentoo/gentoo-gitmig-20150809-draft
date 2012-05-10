@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.51 2012/05/10 08:43:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.52 2012/05/10 23:20:28 chainsaw Exp $
+
+*connman-1.0-r1 (10 May 2012)
+
+  10 May 2012; Tony Vroon <chainsaw@gentoo.org> -connman-1.0.ebuild,
+  +connman-1.0-r1.ebuild:
+  Can not allow an experimental dependency to interfere with security stabling.
+  As per arch testing by Elijah "Armageddon" El Lazkani in bug #415415.
 
 *connman-1.0 (10 May 2012)
 
