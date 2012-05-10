@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.7.0-r4.ebuild,v 1.1 2012/05/01 13:03:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.7.0-r4.ebuild,v 1.2 2012/05/10 09:21:33 grobian Exp $
 
 EAPI="4"
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -35,7 +35,7 @@ src_prepare() {
 
 	# Don't build in empty assembly files for other platforms or we'll get a QA
 	# warning about executable stacks.
-	epatch "${FILESDIR}"/${PN}-3.7.0-non-exec-stack.patch
+	epatch "${FILESDIR}"/${PN}-3.7.0-non-exec-stack-v2.patch
 
 	# Fix the regex to get gcc's version
 	epatch "${FILESDIR}"/${PN}-3.7.0-fix-gcc-regex.patch
@@ -84,7 +84,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS FAQ.txt NEWS README*
 
 	pax-mark m "${ED}"/usr/$(get_libdir)/valgrind/*-*-linux

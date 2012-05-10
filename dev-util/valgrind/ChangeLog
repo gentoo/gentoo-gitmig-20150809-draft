@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.143 2012/05/01 13:03:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.144 2012/05/10 09:21:33 grobian Exp $
+
+  10 May 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/valgrind-3.7.0-non-exec-stack-v2.patch,
+  -files/valgrind-3.7.0-non-exec-darwin.patch, valgrind-3.6.1.ebuild,
+  valgrind-3.7.0-r4.ebuild:
+  Fix OSX support change by actually applying non-exec-darwin.patch, unbreak for
+  Prefix, bug #359993
 
 *valgrind-3.7.0-r4 (01 May 2012)
 

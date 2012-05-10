@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.6.1.ebuild,v 1.4 2011/05/22 23:56:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.6.1.ebuild,v 1.5 2012/05/10 09:21:33 grobian Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -26,6 +26,10 @@ src_prepare() {
 	sed -i -e 's:^AM_CFLAGS_BASE = :AM_CFLAGS_BASE = -fno-stack-protector :' \
 		Makefile.all.am || die
 
+	# Don't force multiarch stuff on OSX
+	sed -i -e 's:-arch \(i386\|x86_64\)::g' \
+		Makefile.all.am || die
+
 	# Correct hard coded doc location
 	sed -i -e "s:doc/valgrind:doc/${PF}:" \
 		docs/Makefile.am || die
@@ -35,7 +39,8 @@ src_prepare() {
 
 	# Don't build in empty assembly files for other platforms or we'll get a QA
 	# warning about executable stacks.
-	epatch "${FILESDIR}"/${PN}-3.6.0-non-exec-stack.patch
+	# (patch breaks building on Darwin)
+	[[ ${CHOST} == *-darwin* ]] || epatch "${FILESDIR}"/${PN}-3.6.0-non-exec-stack.patch
 
 	# Fix up some suppressions that were not general enough for glibc versions
 	# with more than just a major and minor number.
@@ -66,6 +71,8 @@ src_configure() {
 	if use amd64 || use ppc64; then
 		! has_multilib_profile && myconf="${myconf} --enable-only64bit"
 	fi
+	use x86-macos && myconf="${myconf} --enable-only32bit"
+	use x64-macos && myconf="${myconf} --enable-only64bit"
 
 	# Don't use mpicc unless the user asked for it (bug #258832)
 	if ! use mpi; then
@@ -83,7 +90,15 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS FAQ.txt NEWS README*
 
-	pax-mark m "${D}"/usr/$(get_libdir)/valgrind/*-*-linux
+	pax-mark m "${ED}"/usr/$(get_libdir)/valgrind/*-*-linux
+
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# fix install_names on mis-named shared modules
+		local l
+		for l in "${ED}"/usr/lib/valgrind/*.so ; do
+			install_name_tool -id "${EPREFIX}"/usr/lib/valgrind/${l##*/} "${l}"
+		done
+	fi
 }
 
 pkg_postinst() {
