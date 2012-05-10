@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/opencc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.4 2012/04/18 18:38:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.5 2012/05/10 10:56:28 scarabeus Exp $
+
+  10 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -opencc-0.1.2.ebuild,
+  opencc-0.2.0.ebuild:
+  Use eapi4 and define mycmakeargs as local.
 
   18 Apr 2012; Markus Meier <maekke@gentoo.org> opencc-0.2.0.ebuild:
   x86 stable, bug #409403
