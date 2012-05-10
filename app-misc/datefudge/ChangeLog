@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/datefudge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.23 2012/03/31 18:37:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.24 2012/05/10 16:24:16 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> datefudge-1.17.ebuild:
+  apply the bsd patch before sedding the makefile otherwise it does not apply
+  on amd64-fbsd and keyword ~amd64-fbsd
 
   31 Mar 2012; Raúl Porcel <armin76@gentoo.org> datefudge-1.17.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #405123
