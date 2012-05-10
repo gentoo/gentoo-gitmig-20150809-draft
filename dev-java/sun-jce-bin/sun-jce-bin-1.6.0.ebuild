@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.6.0.ebuild,v 1.5 2011/09/08 12:02:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.6.0.ebuild,v 1.6 2012/05/10 15:59:52 aballier Exp $
 
 jcefile="jce_policy-6.zip"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.oracle.com/technetwork/java/javase/overview/index-jsp-13624
 SRC_URI="${jcefile}"
 SLOT="1.6"
 LICENSE="Oracle-BCLA-JavaSE"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~amd64-fbsd ~x86-fbsd"
 RESTRICT="fetch"
 IUSE=""
 

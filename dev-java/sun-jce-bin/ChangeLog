@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jce-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/ChangeLog,v 1.10 2011/09/08 12:02:23 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/ChangeLog,v 1.11 2012/05/10 15:59:52 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> sun-jce-bin-1.6.0.ebuild:
+  keyword ~amd64-fbsd
 
   08 Sep 2011; Vlastimil Babka <caster@gentoo.org> -sun-jce-bin-1.5.0.ebuild,
   sun-jce-bin-1.6.0.ebuild:
