@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.26 2012/05/09 05:14:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.27 2012/05/10 04:47:33 radhermit Exp $
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> p11-kit-0.12.ebuild:
+  Stabilize latest version for ppc.
 
   09 May 2012; Matt Turner <mattst88@gentoo.org> p11-kit-0.12.ebuild:
   Added ~mips, bug 383453.
