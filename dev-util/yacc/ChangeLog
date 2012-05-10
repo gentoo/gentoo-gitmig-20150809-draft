@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/yacc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.27 2011/02/06 22:07:49 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.28 2012/05/10 16:13:00 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -yacc-1.9.1-r3.ebuild:
+  Remove old
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> yacc-1.9.1-r3.ebuild:
   Drop to ~mips

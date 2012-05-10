@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/redet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/redet/ChangeLog,v 1.9 2010/09/01 23:39:00 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/redet/ChangeLog,v 1.10 2012/05/10 16:09:10 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -redet-8.9.ebuild:
+  Remove old
 
 *redet-8.26 (01 Sep 2010)
 

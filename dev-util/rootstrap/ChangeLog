@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rootstrap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.18 2011/11/26 01:44:59 floppym Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.19 2012/05/10 16:09:51 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -rootstrap-0.3.24_p5.ebuild:
+  Remove old
 
 *rootstrap-0.3.24_p5-r1 (26 Nov 2011)
 

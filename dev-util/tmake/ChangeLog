@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/tmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.29 2012/02/16 18:39:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.30 2012/05/10 16:12:27 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -tmake-1.13.ebuild,
+  -tmake-1.8-r1.ebuild:
+  Remove old
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tmake-2.12.ebuild:
   x86 stable wrt bug #397029
