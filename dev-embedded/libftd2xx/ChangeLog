@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/libftd2xx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.6 2012/05/10 15:42:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.7 2012/05/10 15:42:58 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -libftd2xx-0.4.16.ebuild:
+  Remove old
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -libftd2xx-0.4.13-r1.ebuild:
   Remove old
