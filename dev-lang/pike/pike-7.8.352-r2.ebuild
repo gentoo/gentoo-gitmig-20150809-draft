@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r1.ebuild,v 1.5 2011/03/23 18:03:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r2.ebuild,v 1.1 2012/05/10 00:20:10 araujo Exp $
 
 EAPI="2"
 
-inherit multilib
+inherit eutils  multilib
 
 DESCRIPTION="Pike programming language and runtime"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 debug doc fftw gdbm glut gnome gtk hardened java jpeg kerberos mysql odbc opengl pcre scanner sdl sqlite svg test tiff truetype zlib"
 
-DEPEND="<=dev-libs/nettle-2.0
+DEPEND=">=dev-libs/nettle-2.1
 	dev-libs/gmp
 	media-libs/giflib
 	bzip2? ( app-arch/bzip2 )
@@ -43,6 +43,10 @@ RDEPEND=""
 
 S=${WORKDIR}/Pike-v${PV}
 
+src_prepare(){
+	epatch "${FILESDIR}/nettle-2.1.patch"
+}
+
 src_compile() {
 	local myconf=""
 	# ffmpeg is broken atm #110136
@@ -51,7 +55,8 @@ src_compile() {
 	# otherwise let configure work it out for itself
 	use hardened && myconf="${myconf} --without-machine-code"
 
-	emake \
+	# Add '-j1' since parallel builds is a bit broken.
+	emake -j1 \
 		CONFIGUREARGS=" \
 			--prefix=/usr \
 			--libdir=/usr/$(get_libdir) \
@@ -91,7 +96,7 @@ src_compile() {
 			" || die "compilation failed"
 
 	if use doc; then
-		PATH="${S}/bin:${PATH}" emake doc || die "doc failed"
+		PATH="${S}/bin:${PATH}" emake -j1 doc || die "doc failed"
 	fi
 }
 
@@ -103,11 +108,11 @@ src_install() {
 	sed -i s/rm\(mod\+\"\.o\"\)\;/break\;/ "${S}"/bin/install.pike || die "Failed to modify install.pike (1)"
 	sed -i 's/\(Array.map *( *files_to_delete *- *files_to_not_delete,*rm*);\)/; \/\/ \1/' "${S}"/bin/install.pike || die "Failed to modify install.pike (2)"
 	if use doc ; then
-		emake INSTALLARGS="--traditional" buildroot="${D}" install || die "emake failed"
+		emake -j1 INSTALLARGS="--traditional" buildroot="${D}" install || die "emake failed"
 		einfo "Installing 60MB of docs, this could take some time ..."
 		dohtml -r "${S}"/refdoc/traditional_manual "${S}"/refdoc/modref
 	else
-		emake INSTALLARGS="--traditional" buildroot="${D}" install_nodoc || die "emake failed"
+		emake -j1 INSTALLARGS="--traditional" buildroot="${D}" install_nodoc || die "emake failed"
 	fi
 	# Installation is a bit broken.. remove the doc sources.
 	rm -rf "${D}/usr/doc"
