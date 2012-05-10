@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.117 2012/05/07 09:49:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.118 2012/05/10 19:29:59 ranger Exp $
+
+
+# Brent Baude <ranger@gentoo.org> (06 Mar 2012)
+# masking kde on gajim
+net-im/gajim kde
 
 # Pacho Ramos <pacho@gentoo.org> (07 May 2012)
 # libhid is not keyworded
