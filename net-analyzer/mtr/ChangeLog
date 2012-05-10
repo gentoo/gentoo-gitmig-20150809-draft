@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.126 2012/05/06 17:44:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.127 2012/05/10 21:48:15 radhermit Exp $
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> -mtr-0.81.ebuild:
+  Remove old.
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> mtr-0.82.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #409605
