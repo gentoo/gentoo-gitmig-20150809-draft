@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ssh/ChangeLog,v 1.1 2012/03/01 14:56:22 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssh/ChangeLog,v 1.2 2012/05/10 17:11:39 neurogeek Exp $
+
+*ssh-1.7.14 (10 May 2012)
+
+  10 May 2012; Jesus Rivero <neurogeek@gentoo.org> +ssh-1.7.14.ebuild:
+  Version bump
 
 *ssh-1.7.13 (01 Mar 2012)
 
