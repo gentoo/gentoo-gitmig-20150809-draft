@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.3 2012/04/26 13:32:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.4 2012/05/10 17:52:04 aballier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd
@@ -21,11 +21,11 @@
 # nvidia drivers works on x86
 -xvmc
 -nvidia
--video_cards_nvidia
+#-video_cards_nvidia
 
 # Unmask vmware drivers
--video_cards_vmware
--input_devices_vmmouse
+#-video_cards_vmware
+#-input_devices_vmmouse
 
 # Diablo Latte and Caffe (JRE and JDK) works here
 #-java
