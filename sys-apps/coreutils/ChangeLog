@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.337 2012/03/28 04:26:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.338 2012/05/10 22:09:26 vapier Exp $
+
+*coreutils-8.17 (10 May 2012)
+
+  10 May 2012; Mike Frysinger <vapier@gentoo.org> +coreutils-8.17.ebuild:
+  Version bump.
 
   28 Mar 2012; Mike Frysinger <vapier@gentoo.org> coreutils-8.16.ebuild:
   Force mknod test to avoid dying when running as root #409919 by Paweł
