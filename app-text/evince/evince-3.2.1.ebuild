@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.2.1.ebuild,v 1.5 2012/05/04 03:33:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.2.1.ebuild,v 1.6 2012/05/10 01:32:11 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/projects/evince/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="dbus debug djvu doc dvi gnome-keyring +introspection nautilus t1lib tiff xps"
+IUSE="dbus debug djvu doc dvi gnome-keyring +introspection nautilus +ps t1lib tiff xps"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
 # Since 2.26.2, can handle poppler without cairo support. Make it optional ?
@@ -22,7 +22,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebs
 # gdk-pixbuf used all over the place
 # libX11 used for totem-screensaver
 RDEPEND="
-	>=app-text/libspectre-0.2.0
 	dev-libs/atk
 	>=dev-libs/glib-2.25.11:2
 	>=dev-libs/libxml2-2.5:2
@@ -46,6 +45,7 @@ RDEPEND="
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.22.0 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6 )
 	nautilus? ( >=gnome-base/nautilus-2.91.4[introspection?] )
+	ps? ( >=app-text/libspectre-0.2.0 )
 	tiff? ( >=media-libs/tiff-3.6:0 )
 	xps? ( >=app-text/libgxps-0.0.1 )
 "
@@ -85,6 +85,7 @@ pkg_setup() {
 		$(use_with gnome-keyring keyring)
 		$(use_enable introspection)
 		$(use_enable nautilus)
+		$(use_enable ps)
 		$(use_enable t1lib)
 		$(use_enable tiff)
 		$(use_enable xps)"
