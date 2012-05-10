@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.27 2012/05/05 11:12:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.28 2012/05/10 15:42:14 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -sqliteodbc-0.93.ebuild:
+  Remove old
 
 *sqliteodbc-0.94 (05 May 2012)
 
