@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.176 2012/05/10 18:16:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.177 2012/05/10 18:25:12 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -77,19 +77,13 @@ media-gfx/graphviz lasi
 app-text/ghostscript-gpl cups
 x11-libs/gtk+ cups
 
-# virtual/opengl
 # media-libs/freeglut
 # media-libs/ftgl
 media-libs/libcaca opengl
 
-# virtual/opengl
 # media-libs/freeglut
 media-libs/jasper opengl
 
-# virtual/opengl
-x11-libs/cairo opengl
-
-# virtual/opengl
 # virtual/glu
 media-libs/libsdl opengl
 
