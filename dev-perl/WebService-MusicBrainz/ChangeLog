@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/WebService-MusicBrainz
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WebService-MusicBrainz/ChangeLog,v 1.1 2012/05/10 06:52:16 ssuominen Exp $
+
+*WebService-MusicBrainz-0.93 (10 May 2012)
+
+  10 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +WebService-MusicBrainz-0.93.ebuild:
+  Initial commit as a prerequisite for bug 415319.
+
