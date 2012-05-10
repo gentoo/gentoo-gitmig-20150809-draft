@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.134 2012/05/04 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.135 2012/05/10 22:53:35 hasufell Exp $
+
+  10 May 2012; Julian Ospald <hasufell@gentoo.org> awesome-3.4.11.ebuild,
+  +files/awesome-3.4.11-convert-path.patch:
+  fix buildtime bug #408025
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> awesome-3.4.8.ebuild,
   awesome-3.4.9.ebuild, awesome-3.4.9-r1.ebuild, awesome-3.4.10.ebuild,
