@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13738 2012/05/10 09:13:05 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13739 2012/05/10 22:10:47 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -578,10 +578,6 @@ sci-chemistry/webmo
 # Breaks net-voip/sflphone, non maintainer update, but is needed by
 # media-video/ffmpeg
 >=media-libs/celt-0.10
-
-# Patrick Lauer <patrick@gentoo.org> (12 Apr 2011)
-# lacks most features and sanity, waiting for upstream to improve it
->=sys-power/powertop-1.90
 
 # Marijn Schouten <hkBst@gentoo.org> (07 April 2011)
 # Masked for number of issues, but can be used to

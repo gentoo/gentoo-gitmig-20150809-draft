@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6527 2012/05/10 09:13:05 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6528 2012/05/10 22:10:47 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 May 2012; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Drop powertop mask as 2.0 has been released.
 
   10 May 2012; Alistair Bush <ali_bush@gentoo.org> package.mask:
   Mask mono-2.11.1 as alpha version.
