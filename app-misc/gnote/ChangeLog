@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.16 2012/05/03 19:41:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.17 2012/05/10 03:15:15 tetromino Exp $
+
+*gnote-0.8.2-r10 (10 May 2012)
+
+  10 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnote-0.8.2-r10.ebuild:
+  Zero-change revbump to mask applet USE flag on gnote-0.8.2 to allow
+  stabilization (bug #414983).
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnote-0.7.4.ebuild,
   gnote-0.8.2.ebuild, gnote-0.8.3.ebuild:
