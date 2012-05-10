@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.94 2012/02/23 18:46:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.95 2012/05/10 17:57:10 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> glproto-1.4.15.ebuild:
+  keyword ~amd64-fbsd
 
   23 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> -glproto-1.4.12.ebuild:
   Remove oldest overshadowed.
