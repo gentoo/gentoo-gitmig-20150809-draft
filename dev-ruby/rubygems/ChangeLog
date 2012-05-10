@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.190 2012/05/06 14:06:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.191 2012/05/10 08:09:58 graaff Exp $
+
+*rubygems-1.8.24 (10 May 2012)
+
+  10 May 2012; Hans de Graaff <graaff@gentoo.org> -rubygems-1.8.23.ebuild,
+  +rubygems-1.8.24.ebuild:
+  Version bump with fixes for the recent security fixes. Remove broken version.
 
   06 May 2012; Agostino Sarubbo <ago@gentoo.org> rubygems-1.8.15.ebuild:
   Stable for amd64, wrt bug #348901
