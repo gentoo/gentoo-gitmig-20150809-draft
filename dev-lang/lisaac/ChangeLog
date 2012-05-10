@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lisaac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.7 2012/02/12 11:54:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.8 2012/05/10 15:44:53 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -lisaac-0.13.1.ebuild:
+  Remove old
 
 *lisaac-0.13.1-r1 (12 Feb 2012)
 

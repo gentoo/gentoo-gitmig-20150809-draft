@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/bashforth
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bashforth/ChangeLog,v 1.4 2007/03/19 11:47:10 kloeri Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bashforth/ChangeLog,v 1.5 2012/05/10 15:43:19 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -bashforth-0.54a.ebuild:
+  Remove old
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove mkennedy from metadata.xml due to retirement.
