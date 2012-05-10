@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.10 2011/12/15 17:07:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.11 2012/05/10 16:56:19 aballier Exp $
 
 EAPI="3"
 
@@ -51,6 +51,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-linking.patch
 	epatch "${FILESDIR}"/${P}-darwin.patch
+	epatch "${FILESDIR}"/${P}-gbsd.patch
 }
 
 src_configure() {
