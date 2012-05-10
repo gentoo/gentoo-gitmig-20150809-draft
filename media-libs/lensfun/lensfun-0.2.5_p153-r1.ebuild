@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5_p153.ebuild,v 1.1 2012/04/14 16:16:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5_p153-r1.ebuild,v 1.1 2012/05/10 19:01:31 dilfridge Exp $
 
 EAPI=4
 inherit python multilib cmake-utils
@@ -19,7 +19,10 @@ RDEPEND=">=dev-libs/glib-2
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-PATCHES=( "${FILESDIR}/${P}-build.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-build.patch"
+	"${FILESDIR}/${P}-pc.patch"
+)
 
 pkg_setup() {
 	python_set_active_version 2
