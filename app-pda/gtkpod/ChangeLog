@@ -1,6 +1,6 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.100 2012/05/09 18:50:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.101 2012/05/10 05:20:00 ssuominen Exp $
 
   09 May 2012; Samuli Suominen <ssuominen@gentoo.org> -gtkpod-2.1.1-r1.ebuild,
   -files/gtkpod-2.1.1-libmp4v2_so_2.patch:
@@ -8,8 +8,10 @@
 
 *gtkpod-2.1.1-r2 (09 May 2012)
 
-  09 May 2012; Samuli Suominen <ssuominen@gentoo.org> +gtkpod-2.1.1-r2.ebuild:
-  Use ABI SLOT="1" of media-libs/libmp4v2 for libmp4v2.so.1 which is dlopened.
+  09 May 2012; Samuli Suominen <ssuominen@gentoo.org> gtkpod-2.0.2.ebuild,
+  +gtkpod-2.1.1-r2.ebuild:
+  Use ABI SLOT="1" of media-libs/libmp4v2 for libmp4v2.so.1 which is used
+  through dlopen(). Upstream has switched to AtomicParsley for >= 2.1.2.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkpod-2.0.2.ebuild,
   gtkpod-2.1.1-r1.ebuild:
