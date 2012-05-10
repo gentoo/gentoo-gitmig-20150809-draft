@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.9 2012/04/16 07:54:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.10 2012/05/10 03:58:18 tetromino Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -21,6 +21,13 @@ case ${EAPI:-0} in
 	4|3) EXPORT_FUNCTIONS src_configure src_compile src_install ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
+
+# Python with threads is required to run waf. We do not know which python slot
+# is being used as the system interpreter, so we are forced to block all
+# slots that have USE=-threads.
+DEPEND="${DEPEND}
+	dev-lang/python
+	!dev-lang/python[-threads]"
 
 # @FUNCTION: waf-utils_src_configure
 # @DESCRIPTION:
