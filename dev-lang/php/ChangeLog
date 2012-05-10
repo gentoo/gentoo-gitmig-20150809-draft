@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.587 2012/05/10 02:56:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.588 2012/05/10 03:26:04 jer Exp $
+
+  10 May 2012; Jeroen Roovers <jer@gentoo.org> php-5.3.13.ebuild:
+  Stable for HPPA (bug #414553).
 
   09 May 2012; Jeff Horelick <jdhore@gentoo.org> php-5.3.13.ebuild:
   marked x86 per security bug 414553
