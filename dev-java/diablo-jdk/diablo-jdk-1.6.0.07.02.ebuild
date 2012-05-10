@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.6.0.07.02.ebuild,v 1.4 2011/12/15 21:30:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.6.0.07.02.ebuild,v 1.5 2012/05/10 15:45:37 aballier Exp $
 
 EAPI="3"
 
@@ -147,10 +147,4 @@ pkg_postinst() {
 	echo
 	ewarn "Some parts of Sun's JRE require ${xwarn} net-print/cups or net-print/lprng to be installed."
 	ewarn "Be careful which Java libraries you attempt to use."
-
-	echo
-	elog "Be careful: ${P}'s Java compiler uses"
-	elog "'-source 1.5' as default. Some keywords such as 'enum'"
-	elog "are not valid identifiers any more in that mode,"
-	elog "which can cause incompatibility with certain sources."
 }
