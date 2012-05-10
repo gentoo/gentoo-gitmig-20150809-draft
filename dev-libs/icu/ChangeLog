@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.190 2012/05/10 19:24:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.191 2012/05/10 21:09:29 floppym Exp $
+
+  10 May 2012; Mike Gilbert <floppym@gentoo.org> files/icu-49.1.1-bsd.patch,
+  files/icu-49.1.1-regex.patch:
+  icu-49.1.1-bsd.patch: Use patch from upstream. icu-49.1.1-regex.patch: Update
+  URLs. Patch by Arfrever.
 
   10 May 2012; Brent Baude <ranger@gentoo.org> icu-49.1.1-r1.ebuild:
   Marking icu-49.1.1-r1 ppc64 for bug 394201

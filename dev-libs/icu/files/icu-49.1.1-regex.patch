@@ -1,5 +1,5 @@
-http://ssl.icu-project.org/trac/ticket/9283
-http://ssl.icu-project.org/trac/changeset/31782
+https://ssl.icu-project.org/trac/ticket/9283
+https://ssl.icu-project.org/trac/changeset/31782
 
 --- i18n/regexcmp.cpp
 +++ i18n/regexcmp.cpp
