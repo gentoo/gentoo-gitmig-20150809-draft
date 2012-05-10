@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.20 2012/05/05 05:38:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.21 2012/05/10 09:45:02 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 		gnome-base/gnome-settings-daemon
 		gnome-base/libgnome
 
-		>=gnome-extra/gucharmap-2.23
+		>=gnome-extra/gucharmap-2.23:0
 		>=gnome-base/libgtop-2.11.92:2
 
 		>=dev-python/pygobject-2.6:2
