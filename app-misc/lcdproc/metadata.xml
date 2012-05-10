@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>lcd</herd>
+<maintainer>
+<email>maintainer-needed@gentoo.org</email>
+</maintainer>
 <longdescription lang="en">
   LCDproc is a piece of software that displays real-time system information
   from your Linux/*BSD box on a LCD. The server supports several serial
