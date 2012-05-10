@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.93 2012/03/24 19:15:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.94 2012/05/10 17:55:08 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org>
+  eselect-opengl-1.2.5-r1.ebuild:
+  keyword ~amd64-fbsd
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
   eselect-opengl-1.2.5-r1.ebuild:
