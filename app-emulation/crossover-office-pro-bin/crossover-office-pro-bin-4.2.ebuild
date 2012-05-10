@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/crossover-office-pro-bin-4.2.ebuild,v 1.11 2012/02/05 05:27:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/crossover-office-pro-bin-4.2.ebuild,v 1.12 2012/05/10 02:12:32 tetromino Exp $
 
 inherit unpacker
 
@@ -34,6 +34,10 @@ pkg_nofetch() {
 pkg_setup() {
 	! built_with_use dev-lang/perl ithreads \
 		&& die "you need to have perl built with USE=ithreads"
+}
+
+src_unpack() {
+	unpack_makeself # needed due to .sh extension; #415013
 }
 
 src_install() {

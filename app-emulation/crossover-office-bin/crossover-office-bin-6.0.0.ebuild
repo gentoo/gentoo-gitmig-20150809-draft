@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-6.0.0.ebuild,v 1.5 2012/02/05 05:27:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-6.0.0.ebuild,v 1.6 2012/05/10 02:13:15 tetromino Exp $
 
 inherit unpacker
 
@@ -29,6 +29,10 @@ S=${WORKDIR}
 pkg_nofetch() {
 	einfo "Please visit ${HOMEPAGE}"
 	einfo "and place ${A} in ${DISTDIR}"
+}
+
+src_unpack() {
+	unpack_makeself # needed due to .sh extension; #415013
 }
 
 src_install() {
