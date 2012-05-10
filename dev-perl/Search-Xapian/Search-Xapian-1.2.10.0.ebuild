@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/Search-Xapian-1.2.10.ebuild,v 1.1 2012/05/10 09:27:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/Search-Xapian-1.2.10.0.ebuild,v 1.1 2012/05/10 14:17:32 blueness Exp $
 
 EAPI="3"
 
 MODULE_AUTHOR=OLLY
-MODULE_VERSION=1.2.9.0
 inherit perl-module toolchain-funcs
 
 DESCRIPTION="Perl XS frontend to the Xapian C++ search library."
