@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.51 2012/05/09 17:24:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.52 2012/05/10 07:52:11 radhermit Exp $
+
+*latexmk-431 (10 May 2012)
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> +latexmk-431.ebuild:
+  Version bump.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> latexmk-430a.ebuild:
   keyword ~amd64-fbsd

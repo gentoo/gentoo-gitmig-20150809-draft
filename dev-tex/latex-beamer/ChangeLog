@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.89 2012/05/10 07:06:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.90 2012/05/10 07:49:13 radhermit Exp $
+
+*latex-beamer-3.17 (10 May 2012)
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> +latex-beamer-3.17.ebuild:
+  Version bump.
 
   10 May 2012; Tim Harder <radhermit@gentoo.org> -latex-beamer-3.12.ebuild,
   -latex-beamer-3.13.ebuild, -latex-beamer-3.14.ebuild,
