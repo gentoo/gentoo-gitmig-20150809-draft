@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MusicBrainz-DiscID/MusicBrainz-DiscID-0.03.ebuild,v 1.2 2012/05/10 06:32:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MusicBrainz-DiscID/MusicBrainz-DiscID-0.03.ebuild,v 1.3 2012/05/10 06:45:12 ssuominen Exp $
 
 EAPI=4
 
@@ -18,7 +18,10 @@ RDEPEND=">=media-libs/libdiscid-0.2.2"
 DEPEND="${RDEPEND}
 	virtual/perl-Module-Build
 	virtual/pkgconfig
-	test? ( dev-perl/Test-Pod )"
+	test? (
+		dev-perl/Test-Pod
+		virtual/perl-Test-Simple
+		)"
 
 SRC_TEST="do"
 
