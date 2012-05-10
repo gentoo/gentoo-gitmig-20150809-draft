@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.88 2012/05/09 16:33:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.89 2012/05/10 07:06:16 radhermit Exp $
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> -latex-beamer-3.12.ebuild,
+  -latex-beamer-3.13.ebuild, -latex-beamer-3.14.ebuild,
+  -latex-beamer-3.15.ebuild:
+  Remove old.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> latex-beamer-3.16.ebuild:
   keyword ~amd64-fbsd
