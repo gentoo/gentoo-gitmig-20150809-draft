@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.189 2012/05/09 14:12:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.190 2012/05/10 19:24:06 ranger Exp $
+
+  10 May 2012; Brent Baude <ranger@gentoo.org> icu-49.1.1-r1.ebuild:
+  Marking icu-49.1.1-r1 ppc64 for bug 394201
 
   09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> icu-49.1.1-r1.ebuild:
   x86 stable wrt security bug #394201
