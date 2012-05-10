@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.69 2012/03/09 00:02:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.70 2012/05/10 17:13:49 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> libXv-1.0.7.ebuild:
+  keyword ~amd64-fbsd
 
 *libXv-1.0.7 (09 Mar 2012)
 

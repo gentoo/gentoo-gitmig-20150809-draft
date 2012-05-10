@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXvMC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.59 2012/03/09 00:02:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.60 2012/05/10 17:15:13 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> libXvMC-1.0.7.ebuild:
+  keyword ~amd64-fbsd
 
 *libXvMC-1.0.7 (09 Mar 2012)
 
