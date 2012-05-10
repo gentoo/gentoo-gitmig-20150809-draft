@@ -1,0 +1,38 @@
+From d6ae5a468eba1b3b2aaf40ffa5ede6fce4ea7c3a Mon Sep 17 00:00:00 2001
+From: phantomjinx <p.g.richardson@phantomjinx.co.uk>
+Date: Mon, 23 Apr 2012 20:38:15 +0100
+Subject: [PATCH] Fix for double free segfault
+
+* Occurs when adding a directory
+
+* Directory names inserted into hash table, added as both key and value then
+  being freed as key and then freed as value. Second free causing the
+  segfault
+
+Fixes 3477268 (sf.net)
+Fixes FS#92
+---
+ libgtkpod/file.c |    7 +++++--
+ 1 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/libgtkpod/file.c b/libgtkpod/file.c
+index 323df96..9ffe885 100644
+--- a/libgtkpod/file.c
++++ b/libgtkpod/file.c
+@@ -422,8 +422,11 @@ static void recurse_directories_internal(gchar *name, GSList **trknames, gboolea
+ 
+                     if (g_hash_table_lookup(*directories_seen, nextfull))
+                         continue;
+-                    else
+-                        g_hash_table_insert(*directories_seen, nextfull, nextfull);
++                    else {
++                        // Avoid double freeing when directories_seen is destroyed
++                        // by duplicating the nextfull string
++                        g_hash_table_insert(*directories_seen, g_strdup(nextfull), g_strdup(nextfull));
++                    }
+ 
+                     if (descend || !g_file_test(nextfull, G_FILE_TEST_IS_DIR)) {
+                         recurse_directories_internal(nextfull, trknames, descend, directories_seen);
+-- 
+1.7.4.1
+
