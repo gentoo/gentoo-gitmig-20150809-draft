@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.3.2.ebuild,v 1.6 2012/05/09 20:12:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.3.2.ebuild,v 1.7 2012/05/10 09:25:34 scarabeus Exp $
 
 EAPI=4
 
@@ -472,7 +472,7 @@ src_compile() {
 	# it is broken because we send --without-help
 	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
 	(
-		 source "${S}/Env.host.sh" 2&> /dev/null
+		 source "${S}/Env.Host.sh" 2&> /dev/null
 
 		 local path="${SOLARVER}/${INPATH}/res/img"
 		 mkdir -p "${path}" || die
