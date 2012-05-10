@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>pda</herd>
-  <maintainer>
-    <email>tester@gentoo.org</email>
-    <name>Olivier Crête</name>
-  </maintainer>
   <use>
     <flag name='clutter'>Enable clutter support for displaying coverart</flag>
     <flag name='webkit'>Enable webkit support for finding coverart</flag>
