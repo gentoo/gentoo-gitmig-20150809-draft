@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/markdown-2.1.1.ebuild,v 1.2 2012/05/09 04:12:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/markdown-2.1.1.ebuild,v 1.3 2012/05/10 21:44:41 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -39,7 +39,7 @@ src_test() {
 		cp -r run-tests.py tests build-${PYTHON_ABI}/ || return
 		cd build-${PYTHON_ABI}
 		if [[ $(python_get_version -l --major) == 3 ]]; then
-			2to3 -n -w --no-diffs tests || return
+			2to3-${PYTHON_ABI} -n -w --no-diffs tests || return
 		fi
 		PYTHONPATH=lib "$(PYTHON)" run-tests.py
 	}
