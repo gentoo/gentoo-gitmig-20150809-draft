@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/files/teamspeak3-server.rc,v 1.4 2010/09/11 16:01:50 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/files/teamspeak3-server.rc,v 1.5 2012/05/10 20:14:34 trapni Exp $
 
 depend() {
 	need net
@@ -19,7 +19,7 @@ start() {
 
 	start-stop-daemon --start --quiet --background \
 		--pidfile "/var/run/teamspeak3-server/server.pid" --make-pidfile \
-		--chuid "teamspeak3" --chdir "/opt/teamspeak3-server" \
+		--user "teamspeak3" --chdir "/opt/teamspeak3-server" \
 		--exec "/usr/sbin/ts3server" -- \
 		inifile="/etc/teamspeak3-server/server.conf"
 
