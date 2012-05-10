@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/recordproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.48 2012/03/23 15:25:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.49 2012/05/10 15:40:33 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> recordproto-1.14.2.ebuild:
+  keyword ~amd64-fbsd
 
 *recordproto-1.14.2 (23 Mar 2012)
 
