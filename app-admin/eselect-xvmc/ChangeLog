@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xvmc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.18 2011/08/29 21:02:02 cardoe Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.19 2012/05/10 17:14:36 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org> eselect-xvmc-0.3.ebuild:
+  keyword ~amd64-fbsd
 
 *eselect-xvmc-0.3 (29 Aug 2011)
 
