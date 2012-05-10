@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.18 2012/03/21 06:17:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.19 2012/05/10 06:26:07 phajdan.jr Exp $
+
+  10 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> miniupnpc-1.6-r1.ebuild:
+  Restrict hanging tests, bug #409349.
 
   21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> miniupnpc-1.6-r1.ebuild:
   ppc/ppc64/x86 stable wrt #406035
