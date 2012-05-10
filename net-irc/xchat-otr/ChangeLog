@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-otr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/ChangeLog,v 1.4 2012/05/09 14:25:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/ChangeLog,v 1.5 2012/05/10 11:09:24 polynomial-c Exp $
+
+  10 May 2012; Lars Wendler <polynomial-c@gentoo.org> xchat-otr-0.3.ebuild:
+  Fixed repoman warning.
 
   09 May 2012; Agostino Sarubbo <ago@gentoo.org> xchat-otr-0.3.ebuild:
   Stable for amd64, wrt bug #414079

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/xchat-otr-0.3.ebuild,v 1.5 2012/05/09 14:25:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/xchat-otr-0.3.ebuild,v 1.6 2012/05/10 11:09:24 polynomial-c Exp $
 
 EAPI="2"
 inherit cmake-utils
@@ -32,5 +32,4 @@ DEPEND="${RDEPEND}
 src_install() {
 	cmake-utils_src_install
 	rm "${D}"/usr/share/doc/${PF}/LICENSE
-	prepalldocs
 }
