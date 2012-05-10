@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.50 2011/11/12 12:18:03 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.51 2012/05/10 15:20:33 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -fish-1.23.1-r1.ebuild:
+  Remove old
 
 *fish-1.23.1-r2 (12 Nov 2011)
 
