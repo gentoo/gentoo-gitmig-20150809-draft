@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
 
 EAPI=4
 
@@ -20,6 +19,8 @@ DEPEND="dev-util/ticpp
 	x11-libs/qt-gui:4
 	x11-libs/qt-webkit:4"
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}"/${PN}-qt-4.8.1.patch )
 
 src_install() {
 	newbin Freesmee ${PN}

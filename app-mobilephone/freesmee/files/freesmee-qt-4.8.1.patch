@@ -1,0 +1,12 @@
+--- libjacksms/DataTypesApi.cpp.old	2012-05-10 19:09:21.114626223 +0200
++++ libjacksms/DataTypesApi.cpp	2012-05-10 19:10:37.047647425 +0200
+@@ -25,6 +25,9 @@
+ #include <QString>
+ #include <QRegExp>
+ 
++#undef major
++#undef minor
++
+ namespace libJackSMS {
+ 
+     namespace dataTypesApi {
