@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.37 2012/04/10 22:38:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.38 2012/05/10 07:17:38 radhermit Exp $
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> -libzen-0.4.25.ebuild:
+  Remove old.
 
 *libzen-0.4.26 (10 Apr 2012)
 
