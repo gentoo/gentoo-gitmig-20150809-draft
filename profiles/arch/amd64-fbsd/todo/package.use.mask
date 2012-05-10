@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.172 2012/05/10 17:28:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.173 2012/05/10 17:51:04 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -131,3 +131,111 @@ sci-mathematics/glpk mysql
 
 # does not build
 x11-libs/libdrm libkms
+
+# x11-drivers/xf86-input-acecad
+x11-base/xorg-drivers input_devices_acecad
+
+# x11-drivers/xf86-input-elographics
+x11-base/xorg-drivers input_devices_elographics
+
+# x11-drivers/xf86-input-fpit
+x11-base/xorg-drivers input_devices_fpit
+
+# x11-drivers/xf86-input-hyperpen
+x11-base/xorg-drivers input_devices_hyperpen
+
+# x11-drivers/xf86-input-joystick
+x11-base/xorg-drivers input_devices_joystick
+
+# x11-drivers/xf86-input-keyboard
+x11-base/xorg-drivers input_devices_keyboard
+
+# x11-drivers/xf86-input-mouse
+x11-base/xorg-drivers input_devices_mouse
+
+# x11-drivers/xf86-input-mutouch
+x11-base/xorg-drivers input_devices_mutouch
+
+# x11-drivers/xf86-input-penmount
+x11-base/xorg-drivers input_devices_penmount
+
+# x11-drivers/xf86-input-vmmouse
+x11-base/xorg-drivers input_devices_vmmouse
+
+# x11-drivers/xf86-input-void
+x11-base/xorg-drivers input_devices_void
+
+# x11-drivers/xf86-video-ark
+x11-base/xorg-drivers video_cards_ark
+
+# x11-drivers/xf86-video-ast
+x11-base/xorg-drivers video_cards_ast
+
+# x11-drivers/xf86-video-cirrus
+x11-base/xorg-drivers video_cards_cirrus
+
+# x11-drivers/xf86-video-dummy
+x11-base/xorg-drivers video_cards_dummy
+
+# x11-drivers/xf86-video-fbdev
+x11-base/xorg-drivers video_cards_fbdev
+
+# x11-drivers/xf86-video-glint
+x11-base/xorg-drivers video_cards_glint
+
+# x11-drivers/xf86-video-i128
+x11-base/xorg-drivers video_cards_i128
+
+# x11-drivers/xf86-video-i740
+x11-base/xorg-drivers video_cards_i740
+
+# x11-drivers/xf86-video-intel
+x11-base/xorg-drivers video_cards_intel
+
+# x11-drivers/xf86-video-mach64
+x11-base/xorg-drivers video_cards_mach64
+
+# x11-drivers/xf86-video-mga
+x11-base/xorg-drivers video_cards_mga
+
+# x11-drivers/xf86-video-neomagic
+x11-base/xorg-drivers video_cards_neomagic
+
+# x11-drivers/xf86-video-nv
+x11-base/xorg-drivers video_cards_nv
+
+# x11-drivers/nvidia-drivers
+x11-base/xorg-drivers video_cards_nvidia
+
+# x11-drivers/xf86-video-r128
+x11-base/xorg-drivers video_cards_r128
+
+# x11-drivers/xf86-video-ati
+x11-base/xorg-drivers video_cards_radeon
+
+# x11-drivers/xf86-video-s3
+x11-base/xorg-drivers video_cards_s3
+
+# x11-drivers/xf86-video-savage
+x11-base/xorg-drivers video_cards_savage
+
+# x11-drivers/xf86-video-siliconmotion
+x11-base/xorg-drivers video_cards_siliconmotion
+
+# x11-drivers/xf86-video-sis
+x11-base/xorg-drivers video_cards_sis
+
+# x11-drivers/xf86-video-tdfx
+x11-base/xorg-drivers video_cards_tdfx
+
+# x11-drivers/xf86-video-tga
+x11-base/xorg-drivers video_cards_tga
+
+# x11-drivers/xf86-video-trident
+x11-base/xorg-drivers video_cards_trident
+
+# x11-drivers/xf86-video-vesa
+x11-base/xorg-drivers video_cards_vesa
+
+# x11-drivers/xf86-video-vmware
+x11-base/xorg-drivers video_cards_vmware
