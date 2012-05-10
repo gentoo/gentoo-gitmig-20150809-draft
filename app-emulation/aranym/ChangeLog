@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/aranym
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.18 2010/10/15 00:07:28 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.19 2012/05/10 14:55:36 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -aranym-0.9.9.ebuild:
+  Remove old
 
   15 Oct 2010; Michael Weber <xmw@gentoo.org>
   -files/aranym-0.9.0_beta2-fix.patch:
