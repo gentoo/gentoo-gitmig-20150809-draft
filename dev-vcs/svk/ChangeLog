@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/svk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/ChangeLog,v 1.6 2012/04/12 17:49:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/ChangeLog,v 1.7 2012/05/10 16:14:26 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -svk-1.08.ebuild:
+  Remove old
 
   12 Apr 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Fix cpan distribution in metadata.xml

@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/guilt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/guilt/ChangeLog,v 1.3 2010/09/20 04:57:50 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/guilt/ChangeLog,v 1.4 2012/05/10 16:13:47 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -guilt-0.32.1.ebuild,
+  -guilt-0.32.2.ebuild:
+  Remove old
 
 *guilt-0.34 (20 Sep 2010)
 
