@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.6.0.07.02.ebuild,v 1.6 2012/05/10 15:53:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.6.0.07.02.ebuild,v 1.7 2012/05/10 18:34:12 aballier Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SRC_URI="x86-fbsd? ( ${javafile32} ) amd64-fbsd? ( ${javafile64} )"
 
 LICENSE="sun-bcla-java-vm"
 SLOT="1.6"
-KEYWORDS="-* ~x86-fbsd ~x64-freebsd ~x86-freebsd"
+KEYWORDS="-* ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd"
 RESTRICT="fetch"
 IUSE="X examples nsplugin jce"
 

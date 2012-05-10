@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.267 2012/05/10 16:50:07 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.268 2012/05/10 18:33:56 aballier Exp $
+
+  10 May 2012; Alexis Ballier <aballier@gentoo.org>
+  java-config-2.1.11-r3.ebuild:
+  keyword ~amd64-fbsd
 
   10 May 2012; Ralph Sennhauser <sera@gentoo.org> java-config-2.1.11-r3.ebuild:
   Backport missing jdk-defaults.conf for arm #305773 and amd64-fbsd #415397
