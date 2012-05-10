@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/trash-cli
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.1 2012/05/10 14:51:19 hasufell Exp $
+
+*trash-cli-0.12.4 (10 May 2012)
+
+  10 May 2012; Julian Ospald <hasufell@gentoo.org> +trash-cli-0.12.4.ebuild,
+  +metadata.xml:
+  initial import wrt #238831
+
