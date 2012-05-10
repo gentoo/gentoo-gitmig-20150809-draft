@@ -1,9 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.145 2012/05/10 09:28:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.146 2012/05/10 09:29:12 grobian Exp $
 
   10 May 2012; Fabian Groffen <grobian@gentoo.org> valgrind-3.6.1.ebuild:
-  Undo inintended changes to 3.6.1
+  Undo unintended changes to 3.6.1
 
   10 May 2012; Fabian Groffen <grobian@gentoo.org>
   +files/valgrind-3.7.0-non-exec-stack-v2.patch,
