@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texi2html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.62 2012/05/09 18:43:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.63 2012/05/10 12:44:32 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> texi2html-5.0-r1.ebuild:
+  Stable for amd64, wrt bug #414927
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> texi2html-5.0-r1.ebuild:
   keyword ~amd64-fbsd
