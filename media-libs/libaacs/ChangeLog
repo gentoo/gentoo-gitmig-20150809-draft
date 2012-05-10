@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.6 2012/03/26 01:00:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.7 2012/05/10 04:05:19 radhermit Exp $
+
+*libaacs-0.4.0 (10 May 2012)
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> +libaacs-0.4.0.ebuild:
+  Version bump.
 
 *libaacs-0.3.1 (26 Mar 2012)
 
