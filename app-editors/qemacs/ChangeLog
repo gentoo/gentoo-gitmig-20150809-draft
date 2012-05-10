@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.56 2012/05/06 22:16:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.57 2012/05/10 12:48:04 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  qemacs-0.4.0_pre20090420-r1.ebuild:
+  Stable for amd64, wrt bug #414945
 
   06 May 2012; Ulrich Müller <ulm@gentoo.org>
   qemacs-0.4.0_pre20090420-r1.ebuild:
