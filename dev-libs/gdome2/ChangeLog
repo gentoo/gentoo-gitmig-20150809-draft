@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.40 2012/05/04 18:35:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.41 2012/05/10 15:49:36 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -gdome2-0.8.1-r2.ebuild:
+  Remove old
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gdome2-0.8.1-r2.ebuild,
   gdome2-0.8.1-r3.ebuild:

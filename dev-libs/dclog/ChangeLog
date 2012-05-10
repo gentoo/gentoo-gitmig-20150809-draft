@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dclog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dclog/ChangeLog,v 1.8 2010/09/20 20:23:28 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dclog/ChangeLog,v 1.9 2012/05/10 15:49:01 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -dclog-1.1.1.ebuild:
+  Remove old
 
 *dclog-1.1.1-r1 (20 Sep 2010)
 

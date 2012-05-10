@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhtmlparse
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.9 2007/03/19 00:58:49 kloeri Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.10 2012/05/10 15:53:04 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -libhtmlparse-0.1.12.ebuild:
+  Remove old
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.

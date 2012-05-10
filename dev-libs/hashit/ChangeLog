@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/hashit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.15 2011/12/18 19:55:48 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.16 2012/05/10 15:50:58 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -hashit-0.9.3.ebuild,
+  -hashit-0.9.4.ebuild, -hashit-0.9.6.ebuild:
+  Remove old
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> hashit-0.9.7.ebuild:
   x86 stable wrt bug #393829

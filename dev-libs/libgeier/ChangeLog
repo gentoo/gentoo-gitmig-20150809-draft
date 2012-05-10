@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgeier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.21 2012/01/12 20:09:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.22 2012/05/10 15:52:24 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -libgeier-0.12.ebuild:
+  Remove old
 
 *libgeier-0.13 (12 Jan 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsqlora8
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/ChangeLog,v 1.9 2011/05/11 23:27:04 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/ChangeLog,v 1.10 2012/05/10 15:54:02 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -libsqlora8-2.2.11.ebuild:
+  Remove old
 
 *libsqlora8-2.3.3 (11 May 2011)
 

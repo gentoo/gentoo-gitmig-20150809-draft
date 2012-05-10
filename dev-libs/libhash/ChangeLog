@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.13 2012/05/06 16:20:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.14 2012/05/10 15:52:45 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -libhash-1.0.3.ebuild:
+  Remove old
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> libhash-1.0.3.ebuild,
   libhash-1.0.3-r1.ebuild:
