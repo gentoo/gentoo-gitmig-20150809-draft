@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.173 2012/04/09 22:21:40 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.174 2012/05/10 20:55:35 ulm Exp $
+
+  10 May 2012; Ulrich Müller <ulm@gentoo.org> sbcl-1.0.55-r1.ebuild:
+  Remove mirror restriction, remnant from the ebuild in the lisp overlay.
 
   09 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> +sbcl-1.0.55-r1.ebuild:
   Version bump

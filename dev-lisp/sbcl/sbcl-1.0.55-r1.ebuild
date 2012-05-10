@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.55-r1.ebuild,v 1.1 2012/04/09 22:21:40 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.55-r1.ebuild,v 1.2 2012/05/10 20:55:35 ulm Exp $
 
 EAPI=3
 inherit multilib eutils flag-o-matic pax-utils
@@ -24,7 +24,6 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	alpha? ( mirror://sourceforge/sbcl/${PN}-${BV_ALPHA}-alpha-linux-binary.tar.bz2 )
 	mips? ( !cobalt? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.bz2 ) )
 	mips? ( cobalt? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPSEL}-mipsel-linux-binary.tar.bz2 ) )"
-RESTRICT="mirror"
 
 LICENSE="MIT"
 SLOT="0"
