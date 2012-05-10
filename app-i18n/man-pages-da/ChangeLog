@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-da
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-da/ChangeLog,v 1.5 2011/08/20 18:16:52 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-da/ChangeLog,v 1.6 2012/05/10 14:59:43 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -man-pages-da-0.1.1.ebuild:
+  Remove old
 
 *man-pages-da-0.1.2 (20 Aug 2011)
 
