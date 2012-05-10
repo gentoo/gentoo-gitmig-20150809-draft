@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/upx-ucl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.23 2012/03/14 04:43:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.24 2012/05/10 14:48:26 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -upx-ucl-3.07.ebuild:
+  Remove old
 
 *upx-ucl-3.08 (14 Mar 2012)
 

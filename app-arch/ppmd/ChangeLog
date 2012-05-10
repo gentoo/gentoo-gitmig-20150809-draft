@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ppmd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.38 2010/09/20 09:49:11 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.39 2012/05/10 14:43:28 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -ppmd-9.1_p10.ebuild:
+  Remove old
 
 *ppmd-9.1_p16 (20 Sep 2010)
 
