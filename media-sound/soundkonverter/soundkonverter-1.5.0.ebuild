@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-1.3.3.ebuild,v 1.1 2012/03/01 12:32:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-1.5.0.ebuild,v 1.1 2012/05/10 17:15:27 kensington Exp $
 
 EAPI=4
-KDE_LINGUAS="cs de es_AR et fr hu pt"
+KDE_LINGUAS="cs de es et fr hu pt ru"
 inherit kde4-base
 
 DESCRIPTION="Frontend to various audio converters"
