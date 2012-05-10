@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.4.0.ebuild,v 1.1 2012/05/08 19:08:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.4.0.ebuild,v 1.2 2012/05/10 20:18:00 bicatali Exp $
 
 EAPI=4
 
@@ -26,10 +26,11 @@ RDEPEND="dev-python/pandas
 	sci-libs/scikits
 	sci-libs/scipy
 	examples? ( dev-python/matplotlib )"
-DEPEND="dev-python/pandas
+DEPEND=">=dev-python/cython-0.15.1
+	dev-python/pandas
 	sci-libs/scipy
 	dev-python/setuptools
-	doc? ( dev-python/sphinx )
+	doc? ( dev-python/sphinx >=dev-python/ipython-0.12 )
 	test? ( dev-python/nose )"
 
 S="${WORKDIR}/${MYP}"
