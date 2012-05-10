@@ -1,6 +1,10 @@
 # ChangeLog for app-text/lout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.30 2012/01/05 12:58:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.31 2012/05/10 15:25:13 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -lout-3.31.ebuild,
+  -lout-3.38.ebuild:
+  Remove old
 
   05 Jan 2012; Michael Weber <xmw@gentoo.org> lout-3.38-r1.ebuild:
   Remove unneeded/non-matching fperm (thanks to Agostino Sarubbo, bug 391891)

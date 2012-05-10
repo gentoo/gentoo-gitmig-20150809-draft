@@ -1,6 +1,9 @@
 # ChangeLog for app-text/yudit
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.25 2012/03/14 03:42:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.26 2012/05/10 15:29:23 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -yudit-2.9.0.ebuild:
+  Remove old
 
 *yudit-2.9.2 (14 Mar 2012)
 
