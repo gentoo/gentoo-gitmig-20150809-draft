@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.533 2012/04/14 17:00:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.534 2012/05/10 05:03:22 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -962,22 +962,32 @@ gcc-compiler-configure() {
 
 	local with_abi_map=()
 	case $(tc-arch) in
-		arm)	#264534
-			local arm_arch="${CTARGET%%-*}"
-			# Only do this if arm_arch is armv*
-			if [[ ${arm_arch} == armv* ]] ; then
-				# Convert armv7{a,r,m} to armv7-{a,r,m}
-				[[ ${arm_arch} == armv7? ]] && arm_arch=${arm_arch/7/7-}
-				# Remove endian ('l' / 'eb')
-				[[ ${arm_arch} == *l  ]] && arm_arch=${arm_arch%l}
-				[[ ${arm_arch} == *eb ]] && arm_arch=${arm_arch%eb}
+		arm)	#264534 #414395
+			local a arm_arch=${CTARGET%%-*}
+			# Remove trailing endian variations first: eb el be bl b l
+			for a in e{b,l} {b,l}e b l ; do
+				if [[ ${arm_arch} == *${a} ]] ; then
+					arm_arch=${arm_arch%${a}}
+					break
+				fi
+			done
+			# Convert armv7{a,r,m} to armv7-{a,r,m}
+			[[ ${arm_arch} == armv7? ]] && arm_arch=${arm_arch/7/7-}
+			# See if this is a valid --with-arch flag
+			if (srcdir=${S}/gcc target=${CTARGET} with_arch=${arm_arch};
+			    . "${srcdir}"/config.gcc) &>/dev/null
+			then
 				confgcc+=" --with-arch=${arm_arch}"
 			fi
 
 			# Enable hardvfp
-			if [[ ${CTARGET##*-} == *eabi ]] && [[ $(tc-is-hardfloat) == yes ]] && \
-			    tc_version_is_at_least "4.5" ; then
-			        confgcc+=" --with-float=hard"
+			if [[ ${CTARGET##*-} == *eabi* ]] && \
+			   [[ $(tc-is-hardfloat) == yes ]] && \
+			   tc_version_is_at_least "4.5"
+			then
+				confgcc+=" --with-float=hard"
+				# Follow the new arm hardfp distro standard by default
+				confgcc+=" --with-fpu=vfpv3-d16"
 			fi
 			;;
 		# Add --with-abi flags to set default ABI
