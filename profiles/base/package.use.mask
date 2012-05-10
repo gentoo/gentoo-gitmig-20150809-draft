@@ -1,9 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.347 2012/05/07 16:00:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.348 2012/05/10 03:20:00 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (10 May 2012)
+# This entry can be removed by anyone after gnome-panel-3.* is stabilized
+# Mask to allow stabilization (bug #414983)
+=app-misc/gnote-0.8.2 applet
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 May 2012)
 # This entry can be removed by anyone after =media-video/vlc-1.1*
