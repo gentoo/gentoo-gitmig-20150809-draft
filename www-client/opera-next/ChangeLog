@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.80 2012/04/25 15:31:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.81 2012/05/10 14:29:47 jer Exp $
+
+*opera-next-12.00.1406 (10 May 2012)
+
+  10 May 2012; Jeroen Roovers <jer@gentoo.org> -opera-next-12.00.1380.ebuild,
+  -opera-next-12.00.1383.ebuild, -opera-next-12.00.1385.ebuild,
+  -opera-next-12.00.1386.ebuild, +opera-next-12.00.1406.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/05/10/mac-sandboxing
 
 *opera-next-12.00.1387 (25 Apr 2012)
 
