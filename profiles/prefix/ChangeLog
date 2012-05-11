@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.347 2012/05/09 11:17:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.348 2012/05/11 06:55:16 grobian Exp $
+
+  11 May 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Unmask python-2.7.3, shutil problem with chflags() has been fixed
 
   09 May 2012; Fabian Groffen <grobian@gentoo.org> sunos/solaris/package.mask:
   Mask dev-libs/libelf on Solaris, as it breaks the system

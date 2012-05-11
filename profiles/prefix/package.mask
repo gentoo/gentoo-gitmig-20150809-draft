@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.105 2012/05/05 13:22:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.106 2012/05/11 06:55:16 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -19,14 +19,6 @@
 # AT_FDCWD, openat, faccessat, etc. issues on probably all but Linux
 # platforms, masking for now.
 >=app-misc/pax-utils-0.3
-
-# Fabian Groffen <grobian@gentoo.org> (22 Apr 2012)
-# Produces odd behaviour with repoman, shutil'c copystat fails
-# doing os.chflags on just updated files, claiming operation not
-# supported.  A second attempt always succeeds.  The problem does not
-# occur with python 2.7.2.  http://bugs.python.org/issue14662
-=dev-lang/python-2.7.3
-=dev-lang/python-2.7.3-r1
 
 # Jeremy Olexa <darkside@gentoo.org> (28 Oct 2011)
 # Masking selective games-*, www-apps/*, net-proxy/* packages because:
