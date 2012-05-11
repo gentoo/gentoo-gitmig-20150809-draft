@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.1-r2.ebuild,v 1.4 2012/05/05 08:02:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.1-r2.ebuild,v 1.5 2012/05/11 00:45:56 chithanh Exp $
 
 EAPI=4
 
@@ -98,6 +98,7 @@ RDEPEND="${EXTERNAL_DEPEND}
 	wayland? ( dev-libs/wayland )
 	xvmc? ( >=x11-libs/libXvMC-1.0.6 )
 	${LIBDRM_DEPSTRING}[video_cards_nouveau?,video_cards_vmware?]
+	video_cards_nouveau? ( <x11-libs/libdrm-2.4.34 )
 "
 for card in ${INTEL_CARDS}; do
 	RDEPEND="${RDEPEND}
