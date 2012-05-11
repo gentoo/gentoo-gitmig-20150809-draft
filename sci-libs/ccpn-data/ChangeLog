@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/ccpn-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ChangeLog,v 1.8 2012/04/10 01:40:06 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ChangeLog,v 1.9 2012/05/11 09:36:26 jlec Exp $
+
+*ccpn-data-2.2.2_p120511 (11 May 2012)
+
+  11 May 2012; Justin Lecher <jlec@gentoo.org> +ccpn-data-2.2.2_p120511.ebuild:
+  Added upstream fix to datamodel
 
   10 Apr 2012; Jeff Gardner <je_fro@gentoo.org> ccpn-data-2.2.2.ebuild:
   Fixed SRC_URI - must have recently changed, thanks to David Kredbq #411067
