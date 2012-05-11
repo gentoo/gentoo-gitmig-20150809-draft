@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/luit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/luit/ChangeLog,v 1.74 2012/03/23 15:29:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/luit/ChangeLog,v 1.75 2012/05/11 03:09:18 aballier Exp $
+
+  11 May 2012; Alexis Ballier <aballier@gentoo.org> luit-1.1.1.ebuild:
+  keyword ~amd64-fbsd
 
 *luit-1.1.1 (23 Mar 2012)
 
