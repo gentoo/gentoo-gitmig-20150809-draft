@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.16 2012/05/10 17:52:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.17 2012/05/11 02:53:22 aballier Exp $
+
+  11 May 2012; Alexis Ballier <aballier@gentoo.org> use.mask:
+  remove java usemask now that we have diablo
 
   10 May 2012; Alexis Ballier <aballier@gentoo.org> use.mask:
   comment out xorg-drivers unmask until they are keyworded
