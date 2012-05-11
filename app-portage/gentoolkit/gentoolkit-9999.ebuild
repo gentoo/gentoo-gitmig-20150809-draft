@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.20 2012/01/31 17:19:21 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.21 2012/05/11 17:38:12 mgorny Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -38,8 +38,8 @@ RDEPEND="${DEPEND}
 	sys-apps/gawk
 	sys-apps/grep
 	!minimal? (
+		app-admin/eclean-kernel
 		app-portage/diffmask
-		app-portage/eclean-kernel
 		app-portage/flaggie
 		app-portage/install-mask
 		app-portage/smart-live-rebuild

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.262 2012/05/09 20:43:41 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.263 2012/05/11 17:38:12 mgorny Exp $
+
+  11 May 2012; Michał Górny <mgorny@gentoo.org> gentoolkit-9999.ebuild:
+  eclean-kernel has been moved to app-admin/.
 
 *gentoolkit-0.3.0.6-r1 (09 May 2012)
 
