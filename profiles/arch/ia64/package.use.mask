@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.74 2012/05/11 00:47:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.75 2012/05/11 01:57:29 mr_bones_ Exp $
 
 # Mike Frysinger <vapier@gentoo.org> (10 May 2012)
 # We only want java available for unstable ebuilds, but we can't do that
@@ -28,7 +28,7 @@ net-misc/mDNSResponder java
 net-print/cups java
 sys-libs/db java
 www-client/firefox java
-www-client/seamonkey
+www-client/seamonkey java
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
 # Requires gnutls[pkcs11], which is use.masked on ia64
