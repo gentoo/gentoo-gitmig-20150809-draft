@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.8 2012/03/10 14:20:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r2.ebuild,v 1.1 2012/05/11 07:42:54 jlec Exp $
 
 EAPI=4
 
@@ -132,7 +132,7 @@ src_install() {
 
 		insinto "${INPATH}"/pdb2pka && doins pdb2pka/*.{py,so,DAT,h}
 
-		dosym ../../apbs/_apbslib.so "${INPATH}"/pdb2pka/_apbslib.so
+		dosym ../../apbs/_apbs.so "${INPATH}"/pdb2pka/_apbslib.so
 		dosym ../../apbs/apbslib.py "${INPATH}"/pdb2pka/apbslib.py
 		dosym ../../apbs/apbslib.pyc "${INPATH}"/pdb2pka/apbslib.pyc
 		dosym ../../apbs/apbslib.pyo "${INPATH}"/pdb2pka/apbslib.pyo
