@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/dmxproto
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dmxproto/ChangeLog,v 1.51 2011/03/07 21:01:56 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dmxproto/ChangeLog,v 1.52 2012/05/11 02:59:23 aballier Exp $
+
+  11 May 2012; Alexis Ballier <aballier@gentoo.org> dmxproto-2.3.1.ebuild:
+  keyword ~amd64-fbsd
 
   07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -dmxproto-2.3.ebuild:
   old
