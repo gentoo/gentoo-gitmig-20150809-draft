@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.873 2012/05/10 03:23:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.874 2012/05/11 08:49:24 vapier Exp $
+
+  11 May 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.5.3-r2.ebuild,
+  gcc-4.6.3.ebuild:
+  Push out FreeBSD PIE fix #415185 by Alexis Ballier.
 
   10 May 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.5.3-r2.ebuild,
   gcc-4.6.3.ebuild:
