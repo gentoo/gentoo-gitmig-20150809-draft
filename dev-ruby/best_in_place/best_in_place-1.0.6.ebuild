@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-1.0.6.ebuild,v 1.1 2012/01/24 10:38:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-1.0.6.ebuild,v 1.2 2012/05/11 19:30:06 flameeyes Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
 
@@ -28,7 +28,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend "
-	dev-ruby/rails:3.1
+	|| ( dev-ruby/rails:3.2 dev-ruby/rails:3.1 )
 	dev-ruby/jquery-rails
 "
 
@@ -49,10 +49,10 @@ all_ruby_prepare() {
 		-e '/rspec-rails/s:,.*::' \
 		${RUBY_FAKEGEM_GEMSPEC} || die
 
-	# let test_app work with Rails 3.1 (since we lack 3.2 for now).
+	# let test_app work with Rails 3.1
 	sed -i \
 		-e '/gem .rails/s:3.2:~> 3.1:' \
-		-e '/gem .\(coffee\|sass\)/s:3\.2\..:3.1.0:' \
+		-e '/gem .\(coffee\|sass\)/s:3\.2\..:3.1:' \
 		test_app/Gemfile || die
 }
 

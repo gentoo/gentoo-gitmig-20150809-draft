@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/best_in_place
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.4 2012/01/24 10:38:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.5 2012/05/11 19:30:06 flameeyes Exp $
+
+  11 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  best_in_place-1.0.6.ebuild:
+  Add support for Rails 3.2, Ruby 1.9.
 
 *best_in_place-1.0.6 (24 Jan 2012)
 
