@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6530 2012/05/11 08:30:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6531 2012/05/11 09:24:54 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 May 2012; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Clean old entries.
 
   11 May 2012; Justin Lecher <jlec@gentoo.org> updates/2Q-2012:
   move dev-vcs/cola dev-vcs/git-cola

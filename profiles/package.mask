@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13741 2012/05/11 09:17:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13742 2012/05/11 09:24:54 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -208,28 +208,11 @@ media-sound/squeezeboxserver
 # Mask v8 versions used for www-client/chromium dev channel releases.
 >=dev-lang/v8-3.10
 
-# Eray Aslan <eras@gentoo.org> (10 Apr 2012)
-# Dead upstream. Use mail-filter/opendkim instead.
-# Removal in 30 days - bug 411429
-mail-filter/dkim-milter
-
-# Eray Aslan <eras@gentoo.org> (10 Apr 2012)
-# Dead standard.  Dead upstream.
-# Use mail-filter/opendkim instead.
-# Removal in 30 days - bug 411427
-mail-filter/dk-milter
-
 # Ulrich Mueller <ulm@gentoo.org> (09 Apr 2012)
 # Christian Faulhammer <fauli@gentoo.org>
 # Emacs live ebuilds. Use at your own risk.
 ~app-editors/emacs-vcs-24.0.9999
 ~app-editors/emacs-vcs-24.1.9999
-
-# Christian Ruppert <idl0r@gentoo.org> (09 Apr 2012)
-# Masked for removal in 30 days.
-# It doesn't work with recent portage version and the author has no time to fix
-# it anytime soon. bug 404973.
-app-portage/portato
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (05 Apr 2012)
 # Mask ksecrets. It was included in the kde-4.8 releases by mistake, and
