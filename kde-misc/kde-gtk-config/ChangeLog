@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kcm-gtk-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.1 2012/05/11 22:03:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.2 2012/05/11 22:45:42 johu Exp $
+
+*kde-gtk-config-2.0 (11 May 2012)
+
+  11 May 2012; Johannes Huber <johu@gentoo.org> +kde-gtk-config-2.0.ebuild:
+  Version bump.
 
   12 Mar 2012; Johannes Huber <johu@gentoo.org> -kcm-gtk-config-1.5.ebuild,
   -kcm-gtk-config-1.6.ebuild:
