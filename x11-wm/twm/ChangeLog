@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/twm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.72 2011/10/03 18:10:21 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.73 2012/05/11 03:04:10 aballier Exp $
+
+  11 May 2012; Alexis Ballier <aballier@gentoo.org> twm-1.0.7.ebuild:
+  keyword ~amd64-fbsd
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> twm-1.0.7.ebuild:
   Marked ppc ppc64 stable for bug #380421.
