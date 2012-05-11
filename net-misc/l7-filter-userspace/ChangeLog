@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/l7-filter-userspace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.13 2012/03/03 15:31:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.14 2012/05/11 09:11:55 xarthisius Exp $
+
+*l7-filter-userspace-0.12_beta1 (11 May 2012)
+
+  11 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/l7-filter-userspace-0.11-datatype.patch,
+  +l7-filter-userspace-0.12_beta1.ebuild, metadata.xml:
+  Version bump, fixes #411109. Add Andrew Savchenko <bircoph@gmail.com> as a
+  maintainer and myself as a proxy
 
   03 Mar 2012; Pacho Ramos <pacho@gentoo.org>
   +files/l7-filter-userspace-0.11-arm-ppc-getopt-help-fix.patch,
