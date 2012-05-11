@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.28 2011/10/23 13:14:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.29 2012/05/11 09:07:25 sera Exp $
 
 EAPI=2
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="alsa headless pulseaudio python +qt4 sdk"
 
+# The VBoxSDL frontend needs media-libs/libsdl[X] (bug #177335)
 RDEPEND="!app-emulation/virtualbox-bin
 	!app-emulation/virtualbox-additions
 	!app-emulation/virtualbox-modules
@@ -34,7 +35,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 		)
 		x11-libs/libXcursor
 		x11-libs/libXinerama
-		media-libs/libsdl
+		media-libs/libsdl[X]
 		x11-libs/libXt
 		media-libs/mesa )
 	sys-apps/usermode-utilities
@@ -48,25 +49,12 @@ DEPEND="${RDEPEND}
 	media-libs/libpng
 	>=media-libs/alsa-lib-1.0.13
 	pulseaudio? ( media-sound/pulseaudio )
-	python? ( >=dev-lang/python-2.3 )"
+	python? ( >=dev-lang/python-2.3[threads] )"
 
 BUILD_TARGETS="all"
 MODULE_NAMES="vboxdrv(misc:${S}/out/linux.${ARCH}/release/bin/src:${S}/out/linux.${ARCH}/release/bin/src)"
 
 pkg_setup() {
-	# The VBoxSDL frontend needs media-libs/libsdl compiled
-	# with USE flag X enabled (bug #177335)
-	if ! built_with_use media-libs/libsdl X; then
-		eerror "media-libs/libsdl was compiled without the \"X\" USE flag enabled."
-		eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
-		die "media-libs/libsdl should be compiled with the \"X\" USE flag."
-	fi
-	if use python && ! built_with_use dev-lang/python threads ; then
-		eerror "dev-lang/python was compiled without the \"threads\" USE flag enabled."
-		eerror "Please re-emerge dev-lang/python with USE=\"threads\"."
-		die "dev-lang/python should be compiled with the \"threads\" USE flag."
-	fi
-
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 

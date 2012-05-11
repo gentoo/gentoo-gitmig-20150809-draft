@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.110 2012/05/03 18:49:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.111 2012/05/11 09:07:25 sera Exp $
+
+  11 May 2012; Ralph Sennhauser <sera@gentoo.org> virtualbox-9999.ebuild:
+  Convert built_with_use to use deps. #261562
+  Ack by polinomial-c and patrick.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> virtualbox-4.1.12.ebuild,
   virtualbox-4.1.14.ebuild:
