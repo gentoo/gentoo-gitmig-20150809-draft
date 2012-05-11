@@ -9,3 +9,4 @@ move app-text/focuswriter app-editors/focuswriter
 move app-mobilephone/jacksms-desktop app-mobilephone/freesmee
 move app-office/languagetool app-officeext/languagetool
 move dev-vcs/cola dev-vcs/git-cola
+move app-portage/eclean-kernel app-admin/eclean-kernel
