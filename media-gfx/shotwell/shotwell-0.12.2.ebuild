@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.12.2.ebuild,v 1.1 2012/05/07 07:58:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.12.2.ebuild,v 1.2 2012/05/11 21:37:05 hwoarang Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -37,7 +37,8 @@ RDEPEND="
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
 	x11-libs/gtk+:3"
 DEPEND="${RDEPEND}
-	dev-lang/vala:0.16"
+	dev-lang/vala:0.16
+	sys-devel/m4"
 
 DOCS=( AUTHORS MAINTAINERS NEWS README THANKS )
 
