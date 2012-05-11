@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.8.1.ebuild,v 1.5 2012/04/18 21:55:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.8.1.ebuild,v 1.6 2012/05/11 22:07:02 johu Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ RDEPEND="${COMMONDEPEND}
 	sys-libs/timezone-data
 	x11-apps/setxkbmap
 	x11-misc/xkeyboard-config
-	gtk? ( kde-misc/kcm-gtk-config )
+	gtk? ( kde-misc/kde-gtk-config )
 "
 
 RESTRICT="test"
