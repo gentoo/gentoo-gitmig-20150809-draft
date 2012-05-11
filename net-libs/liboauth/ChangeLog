@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liboauth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.12 2012/05/05 02:54:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.13 2012/05/11 04:19:30 flameeyes Exp $
+
+  11 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> -liboauth-0.9.5.ebuild,
+  liboauth-0.9.6.ebuild:
+  Update to use the new curl USE flags.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> liboauth-0.9.5.ebuild,
   liboauth-0.9.6.ebuild:
