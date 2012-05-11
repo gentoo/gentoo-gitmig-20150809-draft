@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13742 2012/05/11 09:24:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13743 2012/05/11 09:43:21 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,25 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (11 May 2012)
+# No GPL releases for a long time, bundles external classes (#162788)
+# Use app-benchmarks/bootchart2 instead. Removal in a month.
+app-benchmarks/bootchart
+
+# Pacho Ramos <pacho@gentoo.org> (11 May 2012)
+# Fails to build, bug #280920 and is unmaintained for a long time.
+# Removal in a month.
+dev-embedded/parapin-driver
+
+# Pacho Ramos <pacho@gentoo.org> (11 May 2012)
+# Unmaintained since 2005, see bug #281502 for reference. Removal
+# in a month.
+dev-perl/adocman
+
+# Pacho Ramos <pacho@gentoo.org> (11 May 2012)
+# Old and only for kernel-2.4, bug #287125. Removal in a month.
+media-tv/linuxtv-dvb
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 May 2012)
 # Nouveau API break, mask until situation becomes palatable for users
