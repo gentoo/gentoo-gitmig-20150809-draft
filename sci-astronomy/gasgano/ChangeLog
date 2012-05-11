@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/gasgano
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/gasgano/ChangeLog,v 1.3 2011/08/04 18:31:01 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/gasgano/ChangeLog,v 1.4 2012/05/11 22:08:54 bicatali Exp $
+
+  11 May 2012; Sébastien Fabbro <bicatali@gentoo.org> -gasgano-2.3.0.ebuild:
+  Removed old
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
