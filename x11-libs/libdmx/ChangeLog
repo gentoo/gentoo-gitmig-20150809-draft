@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdmx/ChangeLog,v 1.45 2012/03/09 00:03:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdmx/ChangeLog,v 1.46 2012/05/11 03:00:35 aballier Exp $
+
+  11 May 2012; Alexis Ballier <aballier@gentoo.org> libdmx-1.1.2.ebuild:
+  keyword ~amd64-fbsd
 
 *libdmx-1.1.2 (09 Mar 2012)
 
