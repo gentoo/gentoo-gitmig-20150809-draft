@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.453 2012/05/10 22:33:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.454 2012/05/11 07:37:17 jdhore Exp $
+
+  11 May 2012; Jeff Horelick <jdhore@gentoo.org> openssl-0.9.8x.ebuild,
+  openssl-1.0.0j.ebuild:
+  marked x86 per bug 415435
 
 *openssl-1.0.1c (10 May 2012)
 *openssl-1.0.0j (10 May 2012)
