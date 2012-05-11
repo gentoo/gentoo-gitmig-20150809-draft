@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.1-r1.ebuild,v 1.2 2012/03/20 19:04:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.1-r1.ebuild,v 1.3 2012/05/11 08:06:55 vapier Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit linux-info libtool
 
@@ -18,27 +18,19 @@ IUSE="nls selinux static"
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND="!<sys-apps/baselayout-2
-	!static? (
-		>=dev-libs/libgcrypt-1.1.42
-		dev-libs/libgpg-error
-		>=dev-libs/popt-1.7
-		>=sys-apps/util-linux-2.17.2
-		>=sys-fs/lvm2-2.02.64
-	)
-	>=sys-fs/udev-124
-	>=sys-libs/e2fsprogs-libs-1.41
-	selinux? ( sys-libs/libselinux )
-	!sys-fs/cryptsetup-luks"
+LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
+	>=dev-libs/popt-1.7[static-libs(+)]
+	>=sys-apps/util-linux-2.17.2[static-libs(+)]
+	>=dev-libs/libgcrypt-1.1.42[static-libs(+)]
+	>=sys-fs/lvm2-2.02.64[static-libs(+)]
+	>=sys-fs/udev-124[static-libs(+)]
+	>=sys-libs/e2fsprogs-libs-1.41[static-libs(+)]"
+RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
+	!<sys-apps/baselayout-2
+	!sys-fs/cryptsetup-luks
+	selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
-	static? (
-		>=dev-libs/libgpg-error-1.10[static-libs]
-		>=dev-libs/popt-1.16-r1[static-libs]
-		|| ( >=sys-apps/util-linux-2.20[static-libs] <sys-apps/util-linux-2.20 )
-		dev-libs/libgcrypt[static-libs]
-		|| ( >=sys-fs/lvm2-2.02.88[static-libs] <sys-fs/lvm2-2.02.88 )
-		|| ( >=sys-fs/udev-182[static-libs] <=sys-fs/udev-171-r5 )
-	)"
+	static? ( ${LIB_DEPEND} )"
 
 pkg_setup() {
 	local CONFIG_CHECK="~DM_CRYPT ~CRYPTO ~CRYPTO_CBC"
@@ -71,12 +63,12 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	use static && { mv "${D}"/sbin/cryptsetup{.static,} || die ; }
 	dodoc TODO ChangeLog README NEWS
 
-	newconfd "${FILESDIR}"/1.0.6-dmcrypt.confd dmcrypt || die
-	newinitd "${FILESDIR}"/dmcrypt.rc dmcrypt || die
+	newconfd "${FILESDIR}"/1.0.6-dmcrypt.confd dmcrypt
+	newinitd "${FILESDIR}"/dmcrypt.rc dmcrypt
 }
 
 pkg_postinst() {
