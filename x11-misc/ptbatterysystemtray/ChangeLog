@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/ptbatterysystemtray
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ptbatterysystemtray/ChangeLog,v 1.1 2012/05/11 09:09:00 yngwin Exp $
+
+*ptbatterysystemtray-1.0.0_rc2 (11 May 2012)
+
+  11 May 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +ptbatterysystemtray-1.0.0_rc2.ebuild:
+  Initial commit. Ebuild based on live ebuild in qt overlay.
+
