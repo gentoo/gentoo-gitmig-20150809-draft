@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dmcrypt.rc,v 1.2 2011/11/20 23:32:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dmcrypt.rc,v 1.3 2012/05/11 08:18:10 vapier Exp $
 
 depend() {
 	before checkfs fsck
@@ -147,7 +147,7 @@ dm_crypt_execute_dmcrypt() {
 		: ${gpg_options:='-q -d'}
 		# gpg available ?
 		if type -p gpg >/dev/null ; then
-			for (( i = 0 ; i < 3 ; i += 1 )) ; do
+			for i in 0 1 2 ; do
 				# paranoid, don't store key in a variable, pipe it so it stays very little in ram unprotected.
 				# save stdin stdout stderr "values"
 				gpg ${gpg_options} ${key} 2>/dev/null | cryptsetup ${options} ${arg1} ${arg2} ${arg3}
