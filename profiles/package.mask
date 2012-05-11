@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13739 2012/05/10 22:10:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13740 2012/05/11 00:18:46 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 Mar 2012)
+# Nouveau API break, mask until situation becomes palatable for users
+>=x11-drivers/xf86-video-nouveau-0.0.16_pre20120508
+>=x11-libs/libdrm-2.4.34
 
 # Alistair Bush <ali_bush@gentoo.org> (10 May 2012)
 # Mask alpha version of mono for testing
