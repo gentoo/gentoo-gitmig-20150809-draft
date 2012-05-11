@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.89 2012/05/05 11:36:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.90 2012/05/11 14:57:44 pva Exp $
+
+*zabbix-1.8.12-r1 (11 May 2012)
+
+  11 May 2012; Peter Volkov <pva@gentoo.org>
+  +files/1.6.6/init.d/zabbix-agentd-r1, +zabbix-1.8.12-r1.ebuild:
+  Fix problem with agentd service startup in openvz/vserver environment:
+  processes inside containers are visible from host, and this precludes start
+  of agentd as start-stop-daemon conciders agentd running.
 
   05 May 2012; Markos Chandras <hwoarang@gentoo.org> zabbix-1.8.11-r2.ebuild:
   Stable on amd64 wrt bug #414551
