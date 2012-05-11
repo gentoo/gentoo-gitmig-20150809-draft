@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.48.ebuild,v 1.1 2012/04/20 16:55:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.48.ebuild,v 1.2 2012/05/11 23:09:42 rich0 Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -14,7 +14,7 @@ SRC_URI="http://sourceforge.net/projects/calibre/files/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 SLOT="0"
 
