@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-misc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.54 2011/02/14 13:26:18 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.55 2012/05/11 03:11:02 aballier Exp $
+
+  11 May 2012; Alexis Ballier <aballier@gentoo.org>
+  font-misc-misc-1.1.2.ebuild:
+  keyword ~amd64-fbsd
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   font-misc-misc-1.1.2.ebuild:
