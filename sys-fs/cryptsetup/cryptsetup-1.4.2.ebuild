@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.2.ebuild,v 1.1 2012/05/11 08:33:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.2.ebuild,v 1.2 2012/05/11 09:29:47 vapier Exp $
 
 EAPI="4"
 
@@ -25,8 +25,11 @@ LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
 	>=sys-fs/lvm2-2.02.64[static-libs(+)]
 	>=sys-fs/udev-124[static-libs(+)]
 	>=sys-libs/e2fsprogs-libs-1.41[static-libs(+)]"
+# We have to always depend on ${LIB_DEPEND} rather than put behind
+# static? () because we provide a shared library which links against
+# these other packages. #414665
 RDEPEND="static-libs? ( ${LIB_DEPEND} )
-	!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
+	${LIB_DEPEND//\[static-libs(+)]}
 	!<sys-apps/baselayout-2
 	!sys-fs/cryptsetup-luks
 	selinux? ( sys-libs/libselinux )"
