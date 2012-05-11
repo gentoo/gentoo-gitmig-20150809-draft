@@ -1,6 +1,19 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.44 2012/03/22 21:27:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.45 2012/05/11 00:35:39 chithanh Exp $
+
+*xf86-video-nouveau-0.0.16_pre20120508 (11 May 2012)
+
+  11 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-nouveau-0.0.16_pre20120508.ebuild,
+  -xf86-video-nouveau-0.0.16_pre20101130.ebuild,
+  -xf86-video-nouveau-0.0.16_pre20110323.ebuild,
+  -xf86-video-nouveau-0.0.16_pre20110711.ebuild,
+  -xf86-video-nouveau-0.0.16_pre20110801.ebuild,
+  xf86-video-nouveau-0.0.16_pre20111109.ebuild,
+  xf86-video-nouveau-0.0.16_pre20120305.ebuild,
+  xf86-video-nouveau-0.0.16_pre20120322.ebuild:
+  New snapshot, clean up old. Adjust dependencies for nouveau API change.
 
 *xf86-video-nouveau-0.0.16_pre20120322 (22 Mar 2012)
 

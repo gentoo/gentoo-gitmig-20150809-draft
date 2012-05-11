@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.16_pre20120322.ebuild,v 1.1 2012/03/22 21:27:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.16_pre20120322.ebuild,v 1.2 2012/05/11 00:35:39 chithanh Exp $
 
 EAPI=4
 XORG_EAUTORECONF="yes"
@@ -14,7 +14,8 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/libdrm-2.4.24[video_cards_nouveau]"
+RDEPEND=">=x11-libs/libdrm-2.4.24[video_cards_nouveau]
+	<x11-libs/libdrm-2.4.34[video_cards_nouveau]"
 DEPEND="${RDEPEND}
 	x11-proto/glproto
 	x11-proto/xf86driproto
