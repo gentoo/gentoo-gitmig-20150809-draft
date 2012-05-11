@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.56 2012/05/05 02:54:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.57 2012/05/11 07:30:40 ago Exp $
+
+  11 May 2012; Agostino Sarubbo <ago@gentoo.org> meanwhile-1.0.2-r1.ebuild:
+  Stable for amd64, wrt bug #415421
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> meanwhile-1.0.2.ebuild,
   meanwhile-1.0.2-r1.ebuild:
