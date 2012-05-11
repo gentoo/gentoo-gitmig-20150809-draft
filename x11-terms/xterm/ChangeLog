@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.352 2012/05/03 07:11:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.353 2012/05/11 23:58:29 aballier Exp $
+
+  11 May 2012; Alexis Ballier <aballier@gentoo.org> xterm-278.ebuild:
+  utempter is provided by libulog starting from FreeBSD 9.0, which provides a
+  utempter compatible interface. Keyword ~amd64-fbsd.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> xterm-271.ebuild,
   xterm-275.ebuild, xterm-276.ebuild, xterm-277.ebuild, xterm-278.ebuild:
