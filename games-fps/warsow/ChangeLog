@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.30 2012/05/03 03:23:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.31 2012/05/11 16:46:51 hasufell Exp $
+
+*warsow-0.62 (11 May 2012)
+
+  11 May 2012; Julian Ospald <hasufell@gentoo.org> +warsow-0.62.ebuild,
+  +files/warsow-0.62-build.patch:
+  version bump wrt #349349
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> warsow-0.5-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
