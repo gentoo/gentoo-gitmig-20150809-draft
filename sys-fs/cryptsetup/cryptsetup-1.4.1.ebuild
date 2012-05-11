@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.1.ebuild,v 1.8 2012/04/01 18:45:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.1.ebuild,v 1.9 2012/05/11 08:31:51 vapier Exp $
 
 EAPI="2"
 
@@ -76,7 +76,7 @@ src_install() {
 	dodoc TODO ChangeLog README NEWS
 
 	newconfd "${FILESDIR}"/1.0.6-dmcrypt.confd dmcrypt || die
-	newinitd "${FILESDIR}"/dmcrypt.rc dmcrypt || die
+	newinitd "${FILESDIR}"/1.4.1-dmcrypt.rc dmcrypt || die
 }
 
 pkg_postinst() {

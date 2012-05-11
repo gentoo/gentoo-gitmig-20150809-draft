@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.132 2012/05/11 08:18:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.133 2012/05/11 08:31:51 vapier Exp $
+
+  11 May 2012; Mike Frysinger <vapier@gentoo.org> +files/1.4.1-dmcrypt.rc,
+  cryptsetup-1.4.1.ebuild, cryptsetup-1.4.1-r1.ebuild:
+  Rename stable dmcrypt init.d so updates can land for newer versions.
 
   11 May 2012; Mike Frysinger <vapier@gentoo.org> files/dmcrypt.rc:
   Use POSIX compliant for loop #408117 by Maxim Kammerer.
