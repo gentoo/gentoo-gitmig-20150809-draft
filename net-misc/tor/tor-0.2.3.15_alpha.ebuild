@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.15_alpha.ebuild,v 1.1 2012/05/01 12:11:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.15_alpha.ebuild,v 1.2 2012/05/11 13:56:37 blueness Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
 DESCRIPTION="Anonymizing overlay network for TCP"
 HOMEPAGE="http://www.torproject.org/"
-SRC_URI="http://www.torproject.org/dist/${MY_PF}.tar.gz"
+SRC_URI="https://archive.torproject.org/tor-package-archive/${MY_PF}.tar.gz"
 S="${WORKDIR}/${MY_PF}"
 
 LICENSE="BSD"

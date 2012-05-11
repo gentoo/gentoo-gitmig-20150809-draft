@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.32.ebuild,v 1.4 2012/03/08 16:14:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.32.ebuild,v 1.5 2012/05/11 13:56:37 blueness Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Anonymizing overlay network for TCP"
 HOMEPAGE="http://www.torproject.org/"
-SRC_URI="http://www.torproject.org/dist/${PN}-${PV}.tar.gz"
+SRC_URI="https://archive.torproject.org/tor-package-archive/${PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
