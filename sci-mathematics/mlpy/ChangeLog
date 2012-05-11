@@ -1,0 +1,11 @@
+# ChangeLog for sci-mathematics/mlpy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mlpy/ChangeLog,v 1.1 2012/05/11 16:11:40 dberkholz Exp $
+
+*mlpy-3.5.0 (11 May 2012)
+
+  11 May 2012; Donnie Berkholz <dberkholz@gentoo.org>; +mlpy-3.5.0.ebuild,
+  +metadata.xml:
+  New package: Machine Learning PYthon (mlpy) is a high-performance Python
+  library for predictive modeling.
+
