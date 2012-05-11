@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.54 2012/05/11 07:16:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.55 2012/05/11 07:17:45 ago Exp $
+
+  11 May 2012; Agostino Sarubbo <ago@gentoo.org> -connman-0.78.ebuild,
+  -connman-0.79.ebuild, -connman-0.80.ebuild:
+  Remove old
 
   11 May 2012; Agostino Sarubbo <ago@gentoo.org> connman-1.0-r1.ebuild:
   Stable for amd64, wrt bug #415415
