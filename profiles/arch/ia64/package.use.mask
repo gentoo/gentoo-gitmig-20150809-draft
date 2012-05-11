@@ -1,6 +1,34 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.73 2012/04/19 20:15:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.74 2012/05/11 00:47:38 vapier Exp $
+
+# Mike Frysinger <vapier@gentoo.org> (10 May 2012)
+# We only want java available for unstable ebuilds, but we can't do that
+# currently, so we have to mask it from packages that go stable :(.  #412223
+app-accessibility/brltty java
+app-pda/pilot-link java
+app-text/hyperestraier java
+dev-db/qdbm java
+dev-lang/R java
+dev-libs/beecrypt java
+dev-libs/cyrus-sasl java
+dev-libs/link-grammar java
+dev-ruby/fakeweb java
+dev-ruby/net-scp java
+dev-ruby/net-ssh java
+dev-ruby/test-spec java
+dev-ruby/tmail java
+dev-tex/tex4ht java
+dev-vcs/subversion java
+gnome-extra/libgda java
+media-libs/libcaca java
+net-dns/libidn java
+net-libs/xulrunner java
+net-misc/mDNSResponder java
+net-print/cups java
+sys-libs/db java
+www-client/firefox java
+www-client/seamonkey
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
 # Requires gnutls[pkcs11], which is use.masked on ia64
