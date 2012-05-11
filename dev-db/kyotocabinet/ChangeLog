@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/kyotocabinet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.16 2012/03/21 01:24:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.17 2012/05/11 14:36:20 patrick Exp $
+
+*kyotocabinet-1.2.75 (11 May 2012)
+
+  11 May 2012; Patrick Lauer <patrick@gentoo.org> +kyotocabinet-1.2.75.ebuild,
+  -kyotocabinet-1.2.72.ebuild, -kyotocabinet-1.2.73.ebuild:
+  Bump for #415181
 
 *kyotocabinet-1.2.74 (21 Mar 2012)
 

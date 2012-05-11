@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/kyotocabinet-1.2.72.ebuild,v 1.1 2011/12/19 03:09:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/kyotocabinet-1.2.75.ebuild,v 1.1 2012/05/11 14:36:20 patrick Exp $
 
 EAPI="2"
 
