@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mongoid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/ChangeLog,v 1.10 2012/04/28 22:12:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongoid/ChangeLog,v 1.11 2012/05/11 04:14:28 flameeyes Exp $
+
+  11 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> mongoid-2.4.9.ebuild:
+  Add support for ruby 1.9 (works fine).
 
 *mongoid-2.4.9 (28 Apr 2012)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/mongo-1.6.2.ebuild,v 1.1 2012/04/05 19:40:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/mongo-1.6.2.ebuild,v 1.2 2012/05/11 04:13:02 flameeyes Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="test:unit"
 

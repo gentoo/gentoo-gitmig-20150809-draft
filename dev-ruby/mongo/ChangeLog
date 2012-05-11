@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mongo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/ChangeLog,v 1.4 2012/04/05 19:40:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mongo/ChangeLog,v 1.5 2012/05/11 04:13:02 flameeyes Exp $
+
+  11 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> mongo-1.6.2.ebuild:
+  Add support for ruby 1.9 (works fine).
 
 *mongo-1.6.2 (05 Apr 2012)
 

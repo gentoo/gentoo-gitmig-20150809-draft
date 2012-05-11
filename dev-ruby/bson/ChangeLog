@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bson
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/ChangeLog,v 1.4 2012/04/05 19:40:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/ChangeLog,v 1.5 2012/05/11 04:11:17 flameeyes Exp $
+
+  11 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> bson-1.6.2.ebuild:
+  Add support for ruby 1.9 (works fine).
 
 *bson-1.6.2 (05 Apr 2012)
 
