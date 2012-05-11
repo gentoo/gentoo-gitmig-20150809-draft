@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.130 2012/05/11 08:06:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.131 2012/05/11 08:13:59 vapier Exp $
+
+  11 May 2012; Mike Frysinger <vapier@gentoo.org> cryptsetup-1.4.1-r1.ebuild:
+  Add write access to /dev/mapper and /dev/loop for tests #408047 by Toralf
+  Förster.
 
   11 May 2012; Mike Frysinger <vapier@gentoo.org> cryptsetup-1.4.1-r1.ebuild:
   Unify static lib dependencies and update to EAPI=4.

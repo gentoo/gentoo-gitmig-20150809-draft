@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.1-r1.ebuild,v 1.3 2012/05/11 08:06:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.4.1-r1.ebuild,v 1.4 2012/05/11 08:13:59 vapier Exp $
 
 EAPI="4"
 
@@ -59,6 +59,10 @@ src_test() {
 		ewarn "No /dev/mapper/control found -- skipping tests"
 		return 0
 	fi
+	local p
+	for p in /dev/mapper /dev/loop* ; do
+		addwrite ${p}
+	done
 	default
 }
 
