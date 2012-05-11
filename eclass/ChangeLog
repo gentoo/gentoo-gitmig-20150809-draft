@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.250 2012/05/10 09:33:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.251 2012/05/11 10:46:32 scarabeus Exp $
+
+  11 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> nsplugins.eclass:
+  Actually check if the plugin file exist before creating symlink. Avoids
+  broken symlinks.
 
   10 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> office-ext.eclass:
   Ignore licenses, user accept them by portage.

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.28 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.29 2012/05/11 10:46:32 scarabeus Exp $
 #
 # @ECLASS: nsplugins.eclass
 # @MAINTAINER:
@@ -50,6 +50,11 @@ pkg_mv_plugins() {
 # This function installs a plugin with dosym to PLUGINS_DIR.
 # First argument should be the plugin file.
 inst_plugin() {
+	if [[ -z "${1}" ]]; then
+		eerror "The plugin file \"${1}\" does not exist."
+		die "No such file or directory."
+	fi
+
 	dodir /usr/$(get_libdir)/${PLUGINS_DIR}
 	dosym ${1} /usr/$(get_libdir)/${PLUGINS_DIR}/$(basename ${1})
 }
