@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/epm-1.33.ebuild,v 1.5 2010/10/19 11:21:56 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/epm-1.33.ebuild,v 1.6 2012/05/11 21:33:33 fuzzyray Exp $
 
 DESCRIPTION="rpm workalike for Gentoo Linux"
 HOMEPAGE="http://www.gentoo.org/~agriffis/epm/"
@@ -12,6 +12,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86 ~sparc-fbsd ~
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	pod2man epm > epm.1 || die "pod2man failed"
