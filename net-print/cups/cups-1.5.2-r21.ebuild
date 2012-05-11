@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r20.ebuild,v 1.5 2012/05/08 22:24:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r21.ebuild,v 1.1 2012/05/11 08:49:11 dilfridge Exp $
 
 EAPI=4
 
@@ -14,6 +14,7 @@ if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2
 		http://dev.gentoo.org/~dilfridge/distfiles/${P}-ipp-r8950.patch.bz2
 		http://dev.gentoo.org/~dilfridge/distfiles/${P}-avahi.patch.bz2
+		http://dev.gentoo.org/~dilfridge/distfiles/${P}-locales.patch.xz
 	"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
 else
@@ -94,9 +95,10 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.5.2-threads.patch"
 	"${FILESDIR}/${PN}-1.5.2-threads2.patch"
 	"${FILESDIR}/${PN}-1.5.0-systemd-socket.patch"		# systemd support
-	"${DISTDIR}/${PN}-1.5.2-ipp-r8950.patch.bz2"		# revert ipp backend to 1.4 state
-	"${DISTDIR}/${PN}-1.5.2-avahi.patch.bz2"		# avahi support from debian
+	"${WORKDIR}/${PN}-1.5.2-ipp-r8950.patch"		# revert ipp backend to 1.4 state
+	"${WORKDIR}/${PN}-1.5.2-avahi.patch"			# avahi support from debian
 	"${FILESDIR}/${PN}-1.5.2-browsing.patch"		# browsing off by default
+	"${WORKDIR}/${PN}-1.5.2-locales.patch"			# patch locales back into existence
 )
 
 pkg_setup() {
