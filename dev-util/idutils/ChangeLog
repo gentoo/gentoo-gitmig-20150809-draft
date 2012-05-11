@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/idutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/ChangeLog,v 1.3 2012/02/21 08:57:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/ChangeLog,v 1.4 2012/05/11 09:10:44 ssuominen Exp $
+
+*idutils-4.6 (11 May 2012)
+
+  11 May 2012; Samuli Suominen <ssuominen@gentoo.org> +idutils-4.6.ebuild:
+  Version bump.
 
 *idutils-4.5 (21 Feb 2012)
 
