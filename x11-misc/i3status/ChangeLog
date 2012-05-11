@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/i3status
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.7 2012/05/03 16:16:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.8 2012/05/11 21:20:53 xarthisius Exp $
+
+*i3status-2.5.1 (11 May 2012)
+
+  11 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +i3status-2.5.1.ebuild:
+  Version bump
 
 *i3status-2.5 (03 May 2012)
 
