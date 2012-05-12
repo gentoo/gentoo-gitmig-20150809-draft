@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.129 2012/05/12 14:06:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.130 2012/05/12 15:39:17 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> qt-sql-4.8.1.ebuild:
+  keyword ~amd64-fbsd
 
   12 May 2012; Markus Meier <maekke@gentoo.org> qt-sql-4.8.1.ebuild:
   arm stable, bug #414241

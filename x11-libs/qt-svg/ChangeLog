@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-svg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.105 2012/05/12 14:25:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.106 2012/05/12 15:43:26 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> qt-svg-4.8.1.ebuild:
+  keyword ~amd64-fbsd
 
   12 May 2012; Markus Meier <maekke@gentoo.org> qt-svg-4.8.1.ebuild:
   arm stable, bug #414241
