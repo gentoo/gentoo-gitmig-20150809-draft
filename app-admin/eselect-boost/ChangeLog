@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.21 2012/05/06 12:16:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.22 2012/05/12 13:01:23 maekke Exp $
+
+  12 May 2012; Markus Meier <maekke@gentoo.org> eselect-boost-0.4.ebuild:
+  arm stable, bug #413813
 
   06 May 2012; Agostino Sarubbo <ago@gentoo.org> eselect-boost-0.4.ebuild:
   Stable for amd64, wrt bug #413813
