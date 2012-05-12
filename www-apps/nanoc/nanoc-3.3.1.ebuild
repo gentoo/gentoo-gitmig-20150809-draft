@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/nanoc-3.3.1.ebuild,v 1.2 2012/02/28 15:28:29 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/nanoc-3.3.1.ebuild,v 1.3 2012/05/12 07:00:27 a3li Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -29,6 +29,10 @@ ruby_add_rdepend "!minimal? (
 ruby_add_bdepend "test? (
 	dev-ruby/mocha
 	dev-ruby/minitest
+)
+doc? (
+	dev-ruby/kramdown
+	dev-ruby/yard
 )"
 
 all_ruby_prepare() {
