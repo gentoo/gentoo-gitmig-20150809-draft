@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.147 2012/04/27 12:10:24 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.148 2012/05/12 18:17:20 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org>
+  postgresql-docs-9.1.3.ebuild:
+  keyword ~amd64-fbsd
 
   27 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org>
   -postgresql-docs-8.2.22.ebuild, -postgresql-docs-8.2.23.ebuild:
