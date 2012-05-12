@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openslp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.50 2012/02/09 08:19:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.51 2012/05/12 01:41:43 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> openslp-1.2.1-r2.ebuild:
+  keyword ~amd64-fbsd
 
   09 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> files/slpd-init:
   The init script fails on a machine with multiple non-lo interfaces as route
