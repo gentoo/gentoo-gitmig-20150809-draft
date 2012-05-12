@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.2 2012/05/12 14:58:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.3 2012/05/12 15:07:31 aballier Exp $
 
 EAPI=4
 inherit multilib
@@ -60,6 +60,7 @@ src_configure() {
 		--enable-pic \
 		--enable-vp8 \
 		--enable-shared \
+		--disable-optimizations \
 		$(use_enable altivec) \
 		$(use_enable debug debug-libs) \
 		$(use_enable debug) \
