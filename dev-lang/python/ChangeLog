@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.591 2012/05/12 11:00:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.592 2012/05/12 11:03:47 klausman Exp $
+
+  12 May 2012; Tobias Klausmann <klausman@gentoo.org> python-2.6.8.ebuild:
+  Stable on alpha, bug #396329
 
   12 May 2012; Tobias Klausmann <klausman@gentoo.org> python-2.7.3-r1.ebuild:
   Stable on alpha, bug #396329
