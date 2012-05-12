@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13746 2012/05/12 15:25:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13747 2012/05/12 23:36:25 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Julian Ospald <hasufell@gentoo.org> (13 May 2012)
+# Torbrowser as it is in portage is neither supported by mozilla
+# nor by tor upstream. Do not remove without other reasons.
+www-client/torbrowser
 
 # Pacho Ramos <pacho@gentoo.org> (11 May 2012)
 # No GPL releases for a long time, bundles external classes (#162788)
