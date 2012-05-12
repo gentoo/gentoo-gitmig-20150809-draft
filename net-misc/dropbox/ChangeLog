@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.18 2012/03/08 08:49:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.19 2012/05/12 08:53:38 pacho Exp $
+
+  12 May 2012; Pacho Ramos <pacho@gentoo.org> dropbox-1.2.51-r2.ebuild:
+  Use bundled rsync by default (as previous versions) because dropbox completely
+  breaks when using system one (#404451).
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   dropbox-1.2.48-r1.ebuild:
