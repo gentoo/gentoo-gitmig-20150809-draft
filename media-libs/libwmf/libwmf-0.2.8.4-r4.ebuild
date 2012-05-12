@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r4.ebuild,v 1.12 2012/05/09 17:33:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r4.ebuild,v 1.13 2012/05/12 06:59:58 pacho Exp $
 
 EAPI=4
 
@@ -69,7 +69,7 @@ src_configure() {
 	# and included in libwmf. Since nothing in-tree seems to use media-libs/libwmf[gd],
 	# we're explicitly disabling gd use w.r.t. bug 268161
 	if use expat; then
-		myconf+=" --disable-libxml2"
+		myconf+=" --without-libxml2"
 	else
 		myconf+=$(use_with xml libxml2)
 	fi
@@ -89,5 +89,5 @@ src_configure() {
 
 src_install() {
 	MAKEOPTS+=" -j1" default
-	find "${ED}" -name '*.la' -exec rm -f '{}' +
+	find "${D}" -name '*.la' -exec rm -f '{}' + || die
 }
