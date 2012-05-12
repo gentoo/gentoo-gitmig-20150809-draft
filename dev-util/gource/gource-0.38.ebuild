@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38.ebuild,v 1.2 2012/05/04 17:51:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38.ebuild,v 1.3 2012/05/12 19:25:31 flameeyes Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=media-libs/libsdl-1.2.10[opengl,X]
+	>=media-libs/libsdl-1.2.10[video,opengl,X]
 	>=media-libs/sdl-image-1.2[jpeg,png]
 	dev-libs/libpcre:3
 	>=media-libs/libpng-1.2
