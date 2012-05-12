@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-cblas
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.22 2010/01/01 19:18:56 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.23 2012/05/12 20:09:36 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> eselect-cblas-0.1.ebuild:
+  keyword ~amd64-fbsd
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   eselect-cblas-0.1.ebuild:
