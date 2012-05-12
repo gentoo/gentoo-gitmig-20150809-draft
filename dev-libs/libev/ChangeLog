@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.39 2012/04/16 23:37:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.40 2012/05/12 19:17:33 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> libev-4.11.ebuild:
+  keyword ~amd64-fbsd
 
 *libev-4.11 (16 Apr 2012)
 
