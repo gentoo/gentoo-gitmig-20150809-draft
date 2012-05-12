@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.39 2012/05/08 18:24:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.40 2012/05/12 17:48:47 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org>
+  qt-declarative-4.8.1.ebuild:
+  keyword ~amd64-fbsd
 
   08 May 2012; Markos Chandras <hwoarang@gentoo.org>
   qt-declarative-4.8.1.ebuild:
