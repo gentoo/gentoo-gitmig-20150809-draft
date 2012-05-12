@@ -8,3 +8,9 @@
 
 # Options to pass to ganeti-rapi
 # GANETI_RAPI_OPTS=""
+
+# Options to pass to ganeti-noded
+# GANETI_NODED_OPTS=""
+
+# Options to pass to ganeti-confd
+# GANETI_CONFD_OPTS=""

@@ -1,10 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti-2.1.initd,v 1.4 2011/08/09 06:57:04 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti-2.1.initd,v 1.5 2012/05/12 08:10:23 ramereth Exp $
 
 depend() {
-    need localmount
+    need localmount logger
     after bootmisc
 }
 
@@ -50,24 +50,56 @@ maybe_do() {
     fi
 }
 
+get_master_node() {
+    MASTER_NODE="$(gnt-cluster getmaster)"
+    NODE_HOSTNAME="$(hostname -f)"
+    if [ "$MASTER_NODE" == "$NODE_HOSTNAME" ] ; then
+        MASTER=1
+    else
+        MASTER=0
+    fi
+}
+
 start_all() {
     check_config
+    get_master_node
     for i in $($DAEMON_UTIL list-start-daemons); do \
+        GANETI_START_OPTS="${GANETI_OPTS}"
         case "${i}" in
             ganeti-masterd)
-                GANETI_OPTS="${GANETI_OPTS} ${GANETI_MASTERD_OPTS}"
+                GANETI_OPTS="${GANETI_START_OPTS} ${GANETI_MASTERD_OPTS}"
                 ;;
             ganeti-rapid)
-                GANETI_OPTS="${GANETI_OPTS} ${GANETI_RAPI_OPTS}"
+                GANETI_OPTS="${GANETI_START_OPTS} ${GANETI_RAPI_OPTS}"
+                ;;
+            ganeti-noded)
+                GANETI_OPTS="${GANETI_START_OPTS} ${GANETI_NODED_OPTS}"
+                ;;
+            ganeti-confd)
+                GANETI_OPTS="${GANETI_START_OPTS} ${GANETI_CONFD_OPTS}"
                 ;;
         esac
-        maybe_do "${1}" start_action ${i} ${GANETI_OPTS}
+        # Don't start if not master
+        if [ $MASTER = 0 -a $i = "ganeti-masterd" ] ; then
+            continue
+        elif [ $MASTER = 0 -a $i = "ganeti-rapi" ] ; then
+            continue
+        else 
+            maybe_do "${1}" start_action ${i} ${GANETI_OPTS}
+        fi
     done
 }
 
 stop_all() {
+    get_master_node
     for i in $($DAEMON_UTIL list-stop-daemons) ; do \
-        maybe_do "${1}" stop_action ${i}
+        if [ $MASTER = 0 -a $i = "ganeti-masterd" ] ; then
+            continue
+        elif [ $MASTER = 0 -a $i = "ganeti-rapi" ] ; then
+            continue
+        else 
+            maybe_do "${1}" stop_action ${i} ${GANETI_OPTS}
+        fi
     done
 }
 
