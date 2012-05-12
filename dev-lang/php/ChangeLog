@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.591 2012/05/12 13:05:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.592 2012/05/12 16:34:22 armin76 Exp $
+
+  12 May 2012; Raúl Porcel <armin76@gentoo.org> php-5.3.13.ebuild:
+  ia64/s390/sh/sparc stable wrt #414553
 
   12 May 2012; Markus Meier <maekke@gentoo.org> php-5.3.13.ebuild:
   arm stable, bug #414553
