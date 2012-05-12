@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.38 2012/05/04 08:22:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.39 2012/05/12 20:11:18 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org>
+  cblas-reference-20030223-r5.ebuild:
+  keyword ~amd64-fbsd
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   cblas-reference-20030223-r4.ebuild, cblas-reference-20030223-r5.ebuild:
