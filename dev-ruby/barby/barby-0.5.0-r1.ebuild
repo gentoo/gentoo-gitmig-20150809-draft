@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/barby/barby-0.5.0-r1.ebuild,v 1.1 2012/01/16 05:30:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/barby/barby-0.5.0-r1.ebuild,v 1.2 2012/05/12 01:55:38 flameeyes Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ree18 jruby"
+USE_RUBY="ruby18 ree18 jruby ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="test"
 
@@ -35,7 +35,7 @@ USE_RUBY="ruby18 ree18" \
 		pdf-writer? ( dev-ruby/pdf-writer )"
 
 # ruby19 as well, if it worked
-USE_RUBY="ruby18 ree18" \
+USE_RUBY="ruby18 ruby19 ree18" \
 	ruby_add_rdepend "
 		rmagick? ( dev-ruby/rmagick )
 		cairo? ( dev-ruby/rcairo )"
@@ -47,6 +47,9 @@ ruby_add_rdepend "qrcode? ( dev-ruby/rqrcode )
 	png? ( dev-ruby/chunky_png )"
 
 ruby_add_bdepend "test? ( dev-ruby/minitest )"
+
+# testing requires imagemagick capable of png output
+DEPEND+=" test? ( media-gfx/imagemagick[png] )"
 
 # prawn breaks tests for some reasons, needs to be investigated; code
 # still works though.
