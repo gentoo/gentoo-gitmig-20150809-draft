@@ -1,37 +1,37 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.8.1-r1.ebuild,v 1.3 2012/05/08 18:25:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.8.1-r1.ebuild,v 1.4 2012/05/12 09:42:46 pesa Exp $
 
 EAPI=4
 
 inherit qt4-build
 
-DESCRIPTION="Demonstration module of the Qt toolkit"
+DESCRIPTION="Demonstration module and examples for the Qt toolkit"
 SLOT="4"
 KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x64-macos"
 IUSE="dbus declarative kde multimedia opengl openvg qt3support webkit xmlpatterns"
 
 DEPEND="
 	~x11-libs/qt-core-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?]
+	~x11-libs/qt-gui-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?]
+	~x11-libs/qt-script-${PV}:4[aqua=,c++0x=,debug=,qpa=]
+	~x11-libs/qt-sql-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?]
+	~x11-libs/qt-svg-${PV}:4[aqua=,c++0x=,debug=,qpa=]
+	~x11-libs/qt-test-${PV}:4[aqua=,c++0x=,debug=,qpa=]
+	aqua? ( ~x11-libs/qt-assistant-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 	dbus? ( ~x11-libs/qt-dbus-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 	declarative? ( ~x11-libs/qt-declarative-${PV}:4[aqua=,c++0x=,debug=,qpa=,webkit?] )
-	~x11-libs/qt-gui-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?]
-	multimedia? ( ~x11-libs/qt-multimedia-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
-	opengl? ( ~x11-libs/qt-opengl-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?] )
-	openvg? ( ~x11-libs/qt-openvg-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?] )
 	kde? ( media-libs/phonon[aqua=] )
 	!kde? ( || (
 		~x11-libs/qt-phonon-${PV}:4[aqua=,c++0x=,debug=,qpa=]
 		media-libs/phonon[aqua=]
 	) )
+	multimedia? ( ~x11-libs/qt-multimedia-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
+	opengl? ( ~x11-libs/qt-opengl-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?] )
+	openvg? ( ~x11-libs/qt-openvg-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?] )
 	qt3support? ( ~x11-libs/qt-qt3support-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
-	~x11-libs/qt-script-${PV}:4[aqua=,c++0x=,debug=,qpa=]
-	~x11-libs/qt-sql-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?]
-	~x11-libs/qt-svg-${PV}:4[aqua=,c++0x=,debug=,qpa=]
-	~x11-libs/qt-test-${PV}:4[aqua=,c++0x=,debug=,qpa=]
 	webkit? ( ~x11-libs/qt-webkit-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 	xmlpatterns? ( ~x11-libs/qt-xmlpatterns-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
-	aqua? ( ~x11-libs/qt-assistant-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 "
 RDEPEND="${DEPEND}"
 
@@ -65,6 +65,7 @@ src_prepare() {
 		'webkit:browser'
 		'xmlpatterns'
 	)
+
 	# Disable unwanted examples/demos
 	for flag in "${flags_subdirs_map[@]}"; do
 		if ! use ${flag%:*}; then
