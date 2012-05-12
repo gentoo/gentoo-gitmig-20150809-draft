@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.22 2012/03/02 16:39:04 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.23 2012/05/12 16:47:06 aballier Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs
+inherit multilib
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -44,16 +44,23 @@ src_configure() {
 	#then feeds it with yasm flags without checking...) bug 345161
 	unset AS
 
+	# build verbose by default
+	MAKEOPTS="${MAKEOPTS} verbose=yes"
+
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
 
-	tc-export CC
+	# Build with correct toolchain. The build system shall honour them with only
+	# this variable.
+	export CROSS="${CHOST}-"
+
 	./configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--enable-pic \
 		--enable-vp8 \
 		--enable-shared \
+		--extra-cflags="${CFLAGS}" \
 		$(use_enable altivec) \
 		$(use_enable debug debug-libs) \
 		$(use_enable debug) \

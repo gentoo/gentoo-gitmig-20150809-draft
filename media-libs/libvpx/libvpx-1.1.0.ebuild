@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.6 2012/05/12 16:34:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.7 2012/05/12 16:47:06 aballier Exp $
 
 EAPI=4
 inherit multilib
@@ -50,9 +50,6 @@ src_configure() {
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
 
-	# http://bugs.gentoo.org/379659 http://gerrit.chromium.org/gerrit/#change,18142
-	export LC_ALL=C
-
 	# Build with correct toolchain. The build system shall honour them with only
 	# this variable.
 	export CROSS="${CHOST}-"
@@ -77,7 +74,6 @@ src_configure() {
 		$(use_enable ssse3) \
 		$(use_enable static-libs static ) \
 		$(use_enable threads multithread) \
-		${myconf} \
 		|| die
 }
 
