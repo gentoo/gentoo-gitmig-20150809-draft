@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.11-r2.ebuild,v 1.5 2012/01/04 18:20:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.11-r2.ebuild,v 1.6 2012/05/12 11:03:23 xarthisius Exp $
 
 EAPI="3"
 
@@ -37,7 +37,7 @@ src_configure() {
 }
 
 src_install () {
-	emake DESTDIR="${ED}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	find "${D}" -name '*.la' -delete
 	dodoc AUTHORS NEWS README* TODO doc/interface* || die
 }
