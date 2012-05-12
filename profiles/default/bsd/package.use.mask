@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.21 2012/04/21 19:37:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.22 2012/05/12 20:28:04 aballier Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)
@@ -25,7 +25,6 @@ net-proxy/squid -ipf-transparent -pf-transparent
 sys-apps/baselayout pam
 sys-apps/coreutils acl
 sys-apps/help2man nls
-sys-auth/consolekit pam
 
 # NetworkManager is Linux-only, Zephyr requires kerberos
 net-im/pidgin networkmanager zephyr
