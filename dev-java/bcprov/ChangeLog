@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcprov
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.42 2011/08/28 17:04:10 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.43 2012/05/12 03:13:16 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> bcprov-1.45.ebuild:
+  keyword ~amd64-fbsd
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> bcprov-1.45.ebuild:
   Marked ~x64-macos
