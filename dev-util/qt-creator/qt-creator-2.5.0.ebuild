@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.5.0.ebuild,v 1.1 2012/05/11 21:26:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.5.0.ebuild,v 1.2 2012/05/12 10:26:20 pesa Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ QT_PV="4.7.4:4"
 
 CDEPEND="
 	>=x11-libs/qt-assistant-${QT_PV}[doc?]
-	>=x11-libs/qt-core-${QT_PV}[private-headers(+)]
+	>=x11-libs/qt-core-${QT_PV}[private-headers(+),ssl]
 	>=x11-libs/qt-declarative-${QT_PV}[private-headers(+)]
 	>=x11-libs/qt-gui-${QT_PV}[private-headers(+)]
 	>=x11-libs/qt-script-${QT_PV}[private-headers(+)]
