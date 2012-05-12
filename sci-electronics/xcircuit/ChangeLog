@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/xcircuit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.49 2010/07/18 13:36:50 nixnut Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.50 2012/05/12 06:19:44 tomjbe Exp $
+
+*xcircuit-3.7.39 (12 May 2012)
+
+  12 May 2012; Thomas Beierlein <tomjbe@gentoo.org> +xcircuit-3.7.39.ebuild:
+  Version bump
 
   18 Jul 2010; <nixnut@gentoo.org> xcircuit-3.6.165.ebuild:
   ppc stable #324117
