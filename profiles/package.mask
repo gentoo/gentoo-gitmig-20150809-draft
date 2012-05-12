@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13744 2012/05/12 09:27:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13745 2012/05/12 10:09:30 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -71,10 +71,6 @@ media-tv/linuxtv-dvb
 # to your local overlay.
 # Masked for removal in 30 days.
 =www-client/firefox-3.6*
-
-# Markos Chandras <hwoarang@gentoo.org> (07 May 2012)
-# Mask ebuild for testing
-=lxde-base/lxpanel-0.5.8-r3
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 May 2012)
 # Dead upstream. Removal in 30 days. Bugs 339811,
