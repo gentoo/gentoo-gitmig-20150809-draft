@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.8.1.ebuild,v 1.1 2012/04/07 08:10:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.8.1.ebuild,v 1.2 2012/05/12 19:46:46 hollow Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -40,7 +40,7 @@ src_compile() {
 
 src_install() {
 	# erlang module
-	local targetdir="/usr/$(get_libdir)/erlang/lib/rabbitmq_server-${PV}"
+	local targetdir="/usr/$(get_libdir)/rabbitmq"
 
 	einfo "Setting correct RABBITMQ_HOME in scripts"
 	sed -e "s:^RABBITMQ_HOME=.*:RABBITMQ_HOME=\"${targetdir}\":g" \
