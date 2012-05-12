@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Config-IniFiles
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.59 2012/05/06 18:01:42 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.60 2012/05/12 12:51:05 klausman Exp $
+
+  12 May 2012; Tobias Klausmann <klausman@gentoo.org>
+  Config-IniFiles-2.710.0.ebuild:
+  Stable on alpha, bug #414485
 
   06 May 2012; Andreas Schuerch <nativemad@gentoo.org>
   Config-IniFiles-2.710.0.ebuild:
