@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/scorched3d
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.82 2011/09/12 12:44:05 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.83 2012/05/12 14:41:22 slyfox Exp $
+
+*scorched3d-43.3d (12 May 2012)
+
+  12 May 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/scorched3d-43.3d-fixups.patch, +scorched3d-43.3d.ebuild,
+  scorched3d-43.2a.ebuild:
+  Version bump. Bug #410845 by slepnoga and Matthias P. Braendli.
 
   12 Sep 2011; Tupone Alfredo <tupone@gentoo.org>
   +files/scorched3d-43.2a-png15.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.2a.ebuild,v 1.7 2012/05/12 14:41:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.3d.ebuild,v 1.1 2012/05/12 14:41:22 slyfox Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/Scorched3D-${PV}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dedicated mysql"
 
 RDEPEND="media-libs/libsdl[video]
@@ -38,7 +38,11 @@ DEPEND="$RDEPEND"
 S=${WORKDIR}/scorched
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-*.patch
+	epatch "${FILESDIR}"/${P}-fixups.patch
+	epatch "${FILESDIR}"/${PN}-43.2a-gcc43.patch
+	epatch "${FILESDIR}"/${PN}-43.2a-odbc.patch
+	epatch "${FILESDIR}"/${PN}-43.2a-png15.patch
+	epatch "${FILESDIR}"/${PN}-43.2a-win32.patch
 	eautoreconf
 }
 
