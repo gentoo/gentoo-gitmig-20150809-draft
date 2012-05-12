@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r21.ebuild,v 1.1 2012/05/11 08:49:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r21.ebuild,v 1.2 2012/05/12 01:47:12 aballier Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ if [[ "${PV}" != "9999" ]]; then
 		http://dev.gentoo.org/~dilfridge/distfiles/${P}-avahi.patch.bz2
 		http://dev.gentoo.org/~dilfridge/distfiles/${P}-locales.patch.xz
 	"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86 ~amd64-fbsd"
 else
 	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2 systemd subversion
 	ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
