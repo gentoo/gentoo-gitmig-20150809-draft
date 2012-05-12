@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.4 2012/05/12 15:51:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.5 2012/05/12 15:59:59 aballier Exp $
 
 EAPI=4
 inherit multilib
@@ -53,7 +53,10 @@ src_configure() {
 	# http://bugs.gentoo.org/379659 http://gerrit.chromium.org/gerrit/#change,18142
 	export LC_ALL=C
 
-	tc-export CC
+	tc-export CC AR NM
+	# it links with CC and calls it LD...
+	export LD="${CC}"
+
 	./configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
