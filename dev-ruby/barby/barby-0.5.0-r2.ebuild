@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/barby/barby-0.5.0-r1.ebuild,v 1.2 2012/05/12 01:55:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/barby/barby-0.5.0-r2.ebuild,v 1.1 2012/05/12 04:29:15 flameeyes Exp $
 
 EAPI=4
 
@@ -34,22 +34,27 @@ USE_RUBY="ruby18 ree18" \
 		datamatrix? ( dev-ruby/semacode )
 		pdf-writer? ( dev-ruby/pdf-writer )"
 
-# ruby19 as well, if it worked
 USE_RUBY="ruby18 ruby19 ree18" \
 	ruby_add_rdepend "
 		rmagick? ( dev-ruby/rmagick )
 		cairo? ( dev-ruby/rcairo )"
 
-USE_RUBY="ruby18 ree18 jruby" \
-	ruby_add_rdepend "prawn? ( dev-ruby/prawn )"
-
 ruby_add_rdepend "qrcode? ( dev-ruby/rqrcode )
-	png? ( dev-ruby/chunky_png )"
+	png? ( dev-ruby/chunky_png )
+	prawn? ( dev-ruby/prawn )"
 
 ruby_add_bdepend "test? ( dev-ruby/minitest )"
 
 # testing requires imagemagick capable of png output
 DEPEND+=" test? ( media-gfx/imagemagick[png] )"
+
+# make sure that the various options require a compatible Ruby implementation
+REQUIRE_USE+="
+	datamatrix? ( || ( ruby_targets_ruby18 ruby_targets_ree18 )
+	pdf-writer? ( || ( ruby_targets_ruby18 ruby_targets_ree18 )
+	rmagick?    ( || ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 ) )
+	cairo?      ( || ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ree18 ) )
+"
 
 # prawn breaks tests for some reasons, needs to be investigated; code
 # still works though.
@@ -122,14 +127,11 @@ each_ruby_prepare() {
 				lib/barby/barcode/data_matrix.rb \
 				test/data_matrix_test.rb \
 				lib/barby/outputter/pdfwriter_outputter.rb \
-				test/outputter/pdfwriter_outputter_test.rb \
-				lib/barby/outputter/prawn_outputter.rb \
-				test/outputter/prawn_outputter_test.rb
+				test/outputter/pdfwriter_outputter_test.rb
 
 			sed -i \
 				-e '/semacode/d' \
 				-e '/pdf-writer/d' \
-				-e '/prawn/d' \
 				${RUBY_FAKEGEM_GEMSPEC}
 			;;
 		*/jruby)
