@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0.ebuild,v 1.1 2012/05/10 20:02:41 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0-r1.ebuild,v 1.1 2012/05/12 19:05:39 gurligebis Exp $
 
 EAPI="2"
 
@@ -98,6 +98,7 @@ src_configure() {
 	echo "CONFIG_IEEE80211N=y" >> ${CONFIG}
 	echo "CONFIG_PEERKEY=y" >> ${CONFIG}
 	echo "CONFIG_RSN_PREAUTH=y" >> ${CONFIG}
+	echo "CONFIG_INTERWORKING=y" >> ${CONFIG}
 
 	if use ipv6; then
 		# IPv6 support
