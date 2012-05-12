@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.309 2012/05/05 08:02:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.310 2012/05/12 16:24:39 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> gstreamer-0.10.35.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gstreamer-0.10.32-r1.ebuild,
   gstreamer-0.10.35.ebuild:
