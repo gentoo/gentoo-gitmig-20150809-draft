@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.30 2012/05/12 16:41:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.31 2012/05/12 16:43:42 radhermit Exp $
+
+  12 May 2012; Tim Harder <radhermit@gentoo.org> -sakura-3.0.0.ebuild,
+  -files/sakura-3.0.0-cflags.patch, -sakura-3.0.2.ebuild:
+  Remove old.
 
 *sakura-3.0.4 (12 May 2012)
 
