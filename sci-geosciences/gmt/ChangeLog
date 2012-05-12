@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gmt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.24 2011/06/10 07:52:05 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.25 2012/05/12 12:14:45 xarthisius Exp $
+
+  12 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gmt-4.5.6.ebuild:
+  Fix double prefix install
 
   10 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> gmt-4.5.6.ebuild:
   Fix dodoc call. Fixes bug #370805.
