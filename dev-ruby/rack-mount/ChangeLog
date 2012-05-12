@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-mount
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.22 2012/05/01 18:24:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.23 2012/05/12 18:02:26 flameeyes Exp $
+
+  12 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> rack-mount-0.6.14.ebuild:
+  Add Ruby 1.9 to the supported list.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> rack-mount-0.6.14.ebuild:
   Drop ia64/sparc keywords
