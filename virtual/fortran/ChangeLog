@@ -1,6 +1,9 @@
 # ChangeLog for virtual/fortran
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.7 2011/10/17 20:26:04 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.8 2012/05/12 19:35:58 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> fortran-0.ebuild:
+  keyword ~amd64-fbsd
 
   17 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> fortran-0.ebuild:
   List dev-lang/ifc as a last compiler in order to prevent people randomly
