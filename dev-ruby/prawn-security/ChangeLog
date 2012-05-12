@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/prawn-security
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-security/ChangeLog,v 1.7 2011/09/21 06:32:23 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-security/ChangeLog,v 1.8 2012/05/12 04:15:50 flameeyes Exp $
+
+  12 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  prawn-security-0.8.4-r1.ebuild:
+  Add support for Ruby 1.9.
 
   21 Sep 2011; Hans de Graaff <graaff@gentoo.org> -prawn-security-0.8.4.ebuild:
   Remove old version.
