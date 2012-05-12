@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.9.ebuild,v 1.2 2012/05/12 15:12:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.9.ebuild,v 1.3 2012/05/12 17:53:22 hwoarang Exp $
 
 EAPI="4"
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.5.8-dynamic-width.patch
 	epatch "${FILESDIR}"/${P}-sandbox.patch
+	#bug #415595
+	epatch "${FILESDIR}"/${P}-libwnck-check.patch
 	eautoreconf
 }
 

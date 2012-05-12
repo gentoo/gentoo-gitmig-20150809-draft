@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.41 2012/05/12 15:12:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.42 2012/05/12 17:53:22 hwoarang Exp $
+
+  12 May 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/lxpanel-0.5.9-libwnck-check.patch, lxpanel-0.5.9.ebuild:
+  Fix libwnck check thanks to Rafał Mużyło <galtgendo@o2.pl>. Bug #415595
 
   12 May 2012; Markos Chandras <hwoarang@gentoo.org> lxpanel-0.5.9.ebuild:
   disable wnckpager plugin. bug #415519
