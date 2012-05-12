@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.53 2012/05/12 15:07:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.54 2012/05/12 15:51:24 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> libvpx-1.1.0.ebuild:
+  use extra-cflags to overshadow optimizations if needed and do not force
+  disabling optimizations
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> libvpx-1.1.0.ebuild:
   disable hardcoded cflags by disabling (compiler) optimizations, user cflags
