@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.21 2012/05/12 20:28:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.22 2012/05/12 20:31:44 aballier Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -61,14 +61,13 @@ dev-lang/swig clisp
 dev-lang/swig chicken
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2008)
-# ConsoleKit's PAM module only works on Linux right now.
 # pam_cracklib is only provided by Linux-PAM which is not usable on
 # Gentoo/FreeBSD.
 # Javier Villavicencio <the_paya@gentoo.org> (31 Jul 2008)
 # pam_ssh deps on Linux-PAM.
 # Diego Pettenò <flameeyes@gentoo.org> (1 Aug 2008)
 # sha512 is only supported by Linux-PAM's pam_unix for now
-sys-auth/pambase consolekit cracklib pam_ssh sha512
+sys-auth/pambase cracklib pam_ssh sha512
 
 # Alexis Ballier <aballier@gentoo.org> (7 Apr 2008)
 # bug #216855
