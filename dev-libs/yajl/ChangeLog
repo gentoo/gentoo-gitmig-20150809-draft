@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.24 2012/05/08 16:59:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.25 2012/05/12 12:50:32 maekke Exp $
+
+  12 May 2012; Markus Meier <maekke@gentoo.org> yajl-2.0.3.ebuild:
+  arm stable, bug #402287
 
   08 May 2012; Jeroen Roovers <jer@gentoo.org> yajl-2.0.3.ebuild:
   Stable for HPPA (bug #402287).
