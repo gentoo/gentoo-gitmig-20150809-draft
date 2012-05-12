@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.107 2012/05/08 18:24:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.108 2012/05/12 14:20:00 maekke Exp $
+
+  12 May 2012; Markus Meier <maekke@gentoo.org> qt-dbus-4.8.1.ebuild:
+  arm stable, bug #414241
 
   08 May 2012; Markos Chandras <hwoarang@gentoo.org> qt-dbus-4.8.1.ebuild:
   Stable on amd64 wrt bug #414241

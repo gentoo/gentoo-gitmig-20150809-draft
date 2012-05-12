@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.177 2012/05/08 18:25:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.178 2012/05/12 14:12:51 maekke Exp $
+
+  12 May 2012; Markus Meier <maekke@gentoo.org> qt-gui-4.8.1-r1.ebuild:
+  arm stable, bug #414241
 
   08 May 2012; Markos Chandras <hwoarang@gentoo.org> qt-gui-4.8.1-r1.ebuild:
   Stable on amd64 wrt bug #414241
