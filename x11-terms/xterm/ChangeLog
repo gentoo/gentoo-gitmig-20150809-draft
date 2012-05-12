@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.353 2012/05/11 23:58:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.354 2012/05/12 18:07:26 ssuominen Exp $
+
+*xterm-279 (12 May 2012)
+
+  12 May 2012; Samuli Suominen <ssuominen@gentoo.org> +xterm-279.ebuild:
+  Version bump.
 
   11 May 2012; Alexis Ballier <aballier@gentoo.org> xterm-278.ebuild:
   utempter is provided by libulog starting from FreeBSD 9.0, which provides a
