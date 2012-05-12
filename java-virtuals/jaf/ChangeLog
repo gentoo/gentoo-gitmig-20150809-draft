@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/jaf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaf/ChangeLog,v 1.18 2012/01/01 20:39:55 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaf/ChangeLog,v 1.19 2012/05/12 03:40:43 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> jaf-1.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jaf-1.1-r1.ebuild:
   Drop ia64 support #345433

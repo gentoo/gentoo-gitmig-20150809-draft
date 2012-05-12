@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/javamail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/javamail/ChangeLog,v 1.17 2012/01/13 10:36:19 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/javamail/ChangeLog,v 1.18 2012/05/12 03:41:53 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> javamail-1.0-r2.ebuild:
+  keyword ~amd64-fbsd
 
 *javamail-1.0-r2 (12 Jan 2012)
 
