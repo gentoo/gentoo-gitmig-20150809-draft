@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Script
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.30 2012/03/06 19:04:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.31 2012/05/12 03:07:41 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> Test-Script-1.70.0.ebuild:
+  keyword ~amd64-fbsd
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> Test-Script-1.70.0.ebuild:
   Marking Test-Script-1.70.0 ppc for bug 400117

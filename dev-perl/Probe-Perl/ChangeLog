@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Probe-Perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.16 2012/03/06 19:03:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.17 2012/05/12 03:06:51 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> Probe-Perl-0.10.0.ebuild:
+  keyword ~amd64-fbsd
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> Probe-Perl-0.10.0.ebuild:
   Marking Probe-Perl-0.10.0 ppc for bug 400117
