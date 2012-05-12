@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.187 2012/05/12 01:05:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.188 2012/05/12 01:12:21 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -20,6 +20,7 @@ net-misc/curl ldap
 net-misc/dhcp ldap
 gnome-base/gconf ldap
 app-crypt/gnupg ldap
+dev-libs/apr-util ldap
 
 # sys-auth/pam_krb5
 sys-auth/pambase pam_krb5
@@ -108,6 +109,13 @@ dev-vcs/git gtk
 
 # virtual/mysql
 sci-mathematics/glpk mysql
+dev-libs/apr-util mysql
+
+# dev-db/postgresql-base
+dev-libs/apr-util postgres
+
+# dev-db/freetds
+dev-libs/apr-util freetds
 
 # app-emulation/wine
 media-libs/mesa d3d
