@@ -1,11 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.192 2012/05/12 01:48:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.193 2012/05/12 04:07:37 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
 # We will pick them up and keyword as time permits and prefer having a sane
 # deptree with missing features than a broken one.
+# Do *NOT* add a ChangeLog entry when modifying this file: it is intended as
+# temporary and cvs log is more than enough for getting its history.
 # 
 # Syntax is: # mising dep(s)
 #            mask
