@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.111 2012/04/26 13:17:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.112 2012/05/12 00:01:28 aballier Exp $
+
+  11 May 2012; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-9.0.ebuild,
+  -files/freebsd-lib-9.0-mancol.patch:
+  remove old
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r1.ebuild:
   keyword ~amd64-fbsd
