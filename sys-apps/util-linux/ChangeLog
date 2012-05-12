@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.382 2012/05/06 23:47:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.383 2012/05/12 15:56:38 armin76 Exp $
+
+  12 May 2012; Raúl Porcel <armin76@gentoo.org> util-linux-2.20.1-r1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #404179
 
   06 May 2012; Mike Frysinger <vapier@gentoo.org> util-linux-2.20.1-r1.ebuild,
   util-linux-2.20.1-r2.ebuild, util-linux-2.21.1.ebuild:
