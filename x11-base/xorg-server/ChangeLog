@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.647 2012/05/01 22:08:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.648 2012/05/12 00:20:25 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> xorg-server-1.12.1.ebuild:
+  keyword ~amd64-fbsd
 
 *xorg-server-1.12.1 (01 May 2012)
 
