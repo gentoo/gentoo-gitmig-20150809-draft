@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.89 2012/05/05 08:58:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.90 2012/05/12 00:24:23 aballier Exp $
 
 EAPI="4"
 
@@ -65,7 +65,6 @@ RDEPEND="
 		faac? ( media-libs/faac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
-		vorbis? ( media-libs/libvorbis media-libs/libogg )
 		x264? ( >=media-libs/x264-0.0.20111017 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
@@ -87,6 +86,7 @@ RDEPEND="
 	truetype? ( media-libs/freetype:2 )
 	vaapi? ( >=x11-libs/libva-0.32 )
 	vdpau? ( x11-libs/libvdpau )
+	vorbis? ( media-libs/libvorbis media-libs/libogg )
 	vpx? ( >=media-libs/libvpx-0.9.6 )
 	X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes )
 	zlib? ( sys-libs/zlib )
@@ -145,7 +145,7 @@ src_configure() {
 		use mp3 && myconf="${myconf} --enable-libmp3lame"
 		use aac && { myconf="${myconf} --enable-libvo-aacenc" ; version3=" --enable-version3" ; }
 		use amr && { myconf="${myconf} --enable-libvo-amrwbenc" ; version3=" --enable-version3" ; }
-		for i in theora vorbis x264 xvid; do
+		for i in theora x264 xvid; do
 			use ${i} && myconf="${myconf} --enable-lib${i}"
 		done
 		use aacplus && myconf="${myconf} --enable-libaacplus --enable-nonfree"
@@ -184,7 +184,7 @@ src_configure() {
 
 	# Decoders
 	use amr && { myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb" ; version3=" --enable-version3" ; }
-	for i in bluray celt gsm modplug rtmp schroedinger speex vpx; do
+	for i in bluray celt gsm modplug rtmp schroedinger speex vorbis vpx; do
 		use ${i} && myconf="${myconf} --enable-lib${i}"
 	done
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"

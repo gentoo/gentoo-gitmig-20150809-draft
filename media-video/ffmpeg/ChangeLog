@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.549 2012/05/08 22:49:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.550 2012/05/12 00:24:23 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  libvorbis encoder is back, reflect the change into the ebuild
 
 *ffmpeg-0.10.3 (08 May 2012)
 
