@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.849 2012/05/10 05:24:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.850 2012/05/12 16:11:21 armin76 Exp $
+
+  12 May 2012; Raúl Porcel <armin76@gentoo.org> glibc-2.14.1-r3.ebuild:
+  alpha/sparc stable wrt #411903
 
   10 May 2012; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit:
