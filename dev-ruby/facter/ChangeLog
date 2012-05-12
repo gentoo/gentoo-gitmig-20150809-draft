@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.50 2012/05/12 08:13:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.51 2012/05/12 08:14:19 graaff Exp $
+
+  12 May 2012; Hans de Graaff <graaff@gentoo.org> +facter-1.6.3.ebuild:
+  Add back 1.6.3 since that is the latest version keyworded for hppa.
 
   12 May 2012; Hans de Graaff <graaff@gentoo.org> -facter-1.6.1.ebuild,
   -facter-1.6.2.ebuild, -facter-1.6.3.ebuild:
