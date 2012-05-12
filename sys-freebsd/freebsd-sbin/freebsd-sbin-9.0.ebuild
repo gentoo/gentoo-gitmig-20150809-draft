@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-9.0.ebuild,v 1.4 2012/05/04 12:54:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-9.0.ebuild,v 1.5 2012/05/12 14:25:02 aballier Exp $
 
 EAPI=2
 
@@ -44,7 +44,7 @@ pkg_setup() {
 	use ssl || mymakeopts="${mymakeopts} WITHOUT_OPENSSL="
 }
 
-REMOVE_SUBDIRS="dhclient pfctl pflogd rcorder"
+REMOVE_SUBDIRS="dhclient pfctl pflogd rcorder resolvconf"
 
 PATCHES=( "${FILESDIR}/${PN}-setXid.patch"
 	"${FILESDIR}/${PN}-7.1-zlib.patch"
