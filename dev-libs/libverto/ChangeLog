@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libverto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.3 2012/04/21 12:11:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.4 2012/05/12 19:34:09 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> libverto-0.2.4.ebuild:
+  keyword ~amd64-fbsd
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> libverto-0.2.4.ebuild:
   add ~arm, bug #412489
