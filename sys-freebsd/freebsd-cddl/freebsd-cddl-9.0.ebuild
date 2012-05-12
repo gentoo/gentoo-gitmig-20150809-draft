@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.4 2012/04/26 15:38:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.5 2012/05/12 07:57:13 naota Exp $
 
 EAPI=4
 
@@ -66,5 +66,5 @@ src_install() {
 	gen_usr_ldscript libnvpair.so libumem.so libuutil.so libzfs.so libzpool.so
 	# Install zfs volinit script.
 
-	newinitd "${FILESDIR}"/zvol.initd zvol
+	newinitd "${FILESDIR}"/zvol.initd-9.0 zvol
 }
