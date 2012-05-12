@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.455 2012/05/12 11:40:20 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.456 2012/05/12 16:03:46 jer Exp $
+
+  12 May 2012; Jeroen Roovers <jer@gentoo.org> openssl-1.0.0j.ebuild:
+  Stable for HPPA (bug #415435).
 
   12 May 2012; Tobias Klausmann <klausman@gentoo.org> openssl-1.0.0j.ebuild:
   Stable on alpha, bug #415435
