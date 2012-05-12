@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.108 2012/05/04 15:12:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.109 2012/05/12 20:19:08 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> pycairo-1.10.0-r2.ebuild:
+  keyword ~amd64-fbsd
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> pycairo-1.10.0-r1.ebuild,
   pycairo-1.10.0-r2.ebuild, pycairo-1.10.0.ebuild, pycairo-1.8.10.ebuild:
