@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.86 2012/05/12 03:32:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.87 2012/05/12 03:39:52 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> lucene-2.1.0-r2.ebuild:
+  keyword ~amd64-fbsd
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> lucene-3.0.3.ebuild:
   keyword ~amd64-fbsd

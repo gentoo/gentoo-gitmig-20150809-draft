@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-javamail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.27 2012/01/01 19:36:12 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail/ChangeLog,v 1.28 2012/05/12 03:41:06 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> sun-javamail-1.4.3.ebuild:
+  keyword ~amd64-fbsd
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> sun-javamail-1.4.1.ebuild,
   sun-javamail-1.4.2.ebuild, sun-javamail-1.4.3.ebuild:

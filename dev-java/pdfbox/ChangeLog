@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.20 2011/11/02 15:14:48 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.21 2012/05/12 03:43:05 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> pdfbox-0.7.3-r2.ebuild:
+  keyword ~amd64-fbsd
 
   02 Nov 2011; Alexis Ballier <aballier@gentoo.org> pdfbox-0.7.3-r2.ebuild:
   keyword ~x86-fbsd
