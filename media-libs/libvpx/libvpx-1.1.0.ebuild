@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.1 2012/05/12 14:43:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.2 2012/05/12 14:58:57 aballier Exp $
 
 EAPI=4
 inherit multilib
@@ -43,6 +43,9 @@ src_configure() {
 	#let the build system decide which AS to use (it honours $AS but
 	#then feeds it with yasm flags without checking...) bug 345161
 	unset AS
+
+	# build verbose by default
+	MAKEOPTS="${MAKEOPTS} verbose=yes"
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
