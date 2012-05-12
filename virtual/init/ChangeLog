@@ -1,6 +1,9 @@
 # ChangeLog for virtual/init
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.14 2012/04/26 14:30:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/init/ChangeLog,v 1.15 2012/05/12 03:35:11 heroxbd Exp $
+
+  12 May 2012; Benda Xu <heroxbd@gentoo.org> init-0.ebuild:
+  keyword ~amd64-linux and ~x86-linux
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> init-0.ebuild:
   keyword ~amd64-fbsd
