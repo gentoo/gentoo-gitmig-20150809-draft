@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-1.6.2.ebuild,v 1.2 2012/05/11 04:11:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-1.6.2.ebuild,v 1.3 2012/05/12 06:03:34 flameeyes Exp $
 
 EAPI=4
 # jruby → support needs to be written properly
@@ -25,7 +25,7 @@ SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/${PV} -> ${
 LICENSE="APSL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="test"
+IUSE="test doc"
 
 ruby_add_bdepend \
 	"test? (
@@ -68,7 +68,9 @@ each_ruby_compile() {
 all_ruby_compile() {
 	# Trying to get the Rakefile to build the sources is more trouble
 	# than it's worth, do it manually instead.
-	rdoc --op html --inline-source lib/**/*.rb || die "rdoc failed"
+	if use doc; then
+		rdoc --op html --inline-source lib/**/*.rb || die "rdoc failed"
+	fi
 }
 
 each_ruby_test() {
