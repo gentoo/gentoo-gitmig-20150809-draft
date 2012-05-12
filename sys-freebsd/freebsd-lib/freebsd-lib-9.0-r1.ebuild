@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.2 2012/04/26 13:17:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.3 2012/05/12 00:05:32 aballier Exp $
 
 EAPI=2
 
@@ -33,6 +33,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		usb? ( !dev-libs/libusb )
 		zfs? ( =sys-freebsd/freebsd-cddl-${RV}* )
 		>=dev-libs/expat-2.0.1
+		!sys-libs/libutempter
 		!sys-freebsd/freebsd-headers"
 	DEPEND="${RDEPEND}
 		>=sys-devel/flex-2.5.31-r2
