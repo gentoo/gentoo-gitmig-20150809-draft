@@ -14,10 +14,3 @@ http://bugs.gentoo.org/415551
      }
      QTimeLine *timer = new QTimeLine (Settings::animationTime()+dist*10,this);//Settings::animationTime(), this );//better use heap?
      signalMapper->setMapping(timer,currentPosition+pos*1000);
-@@ -465,4 +465,4 @@
-         text.append("-");
-     }
-     qDebug() << text;
--}
-\ No newline at end of file
-+}
