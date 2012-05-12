@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ecj-gcj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ChangeLog,v 1.3 2012/05/06 17:41:31 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ChangeLog,v 1.4 2012/05/12 12:12:13 sera Exp $
+
+  12 May 2012; Ralph Sennhauser <sera@gentoo.org> +files/ecj-gcj-3.6:
+  Add missing ecj-gcj-3.6. Thanks to genstorm
 
 *ecj-gcj-3.6 (06 May 2012)
 
