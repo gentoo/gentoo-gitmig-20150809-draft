@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.191 2012/05/10 21:09:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.192 2012/05/12 16:18:20 klausman Exp $
+
+  12 May 2012; Tobias Klausmann <klausman@gentoo.org> icu-49.1.1-r1.ebuild:
+  Stable on alpha, bug #394201
 
   10 May 2012; Mike Gilbert <floppym@gentoo.org> files/icu-49.1.1-bsd.patch,
   files/icu-49.1.1-regex.patch:
