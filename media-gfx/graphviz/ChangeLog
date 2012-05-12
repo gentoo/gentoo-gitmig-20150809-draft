@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.243 2012/05/05 07:00:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.244 2012/05/12 04:08:05 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> graphviz-2.26.3-r4.ebuild:
+  add workaround to build on FreeBSD and keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> graphviz-2.26.3-r2.ebuild,
   graphviz-2.26.3-r3.ebuild, graphviz-2.26.3-r4.ebuild:
