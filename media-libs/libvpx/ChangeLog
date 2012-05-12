@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.55 2012/05/12 15:59:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.56 2012/05/12 16:34:05 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> libvpx-1.1.0.ebuild:
+  Use the CROSS variable for setting the toolchain prefix instead of forcing to
+  link with gcc (sometimes it would be wrong).
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> libvpx-1.1.0.ebuild:
   respect chost-prefixed toolchain, not only CC
