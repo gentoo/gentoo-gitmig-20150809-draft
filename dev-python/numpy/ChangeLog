@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.157 2012/05/04 15:12:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.158 2012/05/12 20:12:37 aballier Exp $
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> numpy-1.6.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> numpy-1.5.1.ebuild,
   numpy-1.6.0.ebuild, numpy-1.6.1-r1.ebuild, numpy-1.6.1.ebuild:
