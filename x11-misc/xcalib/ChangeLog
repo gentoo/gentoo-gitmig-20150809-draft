@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xcalib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/ChangeLog,v 1.13 2008/06/03 19:19:53 coldwind Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/ChangeLog,v 1.14 2012/05/12 18:46:38 kensington Exp $
+
+  12 May 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml,
+  xcalib-0.8.ebuild:
+  Update HOMEPAGE and SRC_URI, fixing bug #415609 by df
+  <demmamussabebonk@gmail.com>. Add upstream metadata.
 
   03 Jun 2008; Santiago M. Mola <coldwind@gentoo.org>
   -files/0.6-Makefile-ldflags.diff, -xcalib-0.6-r1.ebuild:

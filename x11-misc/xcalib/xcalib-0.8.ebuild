@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/xcalib-0.8.ebuild,v 1.4 2008/04/14 11:36:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/xcalib-0.8.ebuild,v 1.5 2012/05/12 18:46:38 kensington Exp $
 
 inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="xcalib is a tiny monitor calibration loader for X.org"
-HOMEPAGE="http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/"
-SRC_URI="http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/xcalib-source-${PV}.tar.gz"
+HOMEPAGE="http://xcalib.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
