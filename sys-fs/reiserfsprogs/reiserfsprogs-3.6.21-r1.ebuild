@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.21-r1.ebuild,v 1.10 2012/05/12 09:23:09 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.21-r1.ebuild,v 1.11 2012/05/12 10:24:20 xarthisius Exp $
 
 EAPI="4"
 
@@ -21,12 +21,11 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --prefix="${EPREFIX}"
+	econf --prefix="${EROOT}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	dosym reiserfsck /sbin/fsck.reiserfs
 	dosym mkreiserfs /sbin/mkfs.reiserfs
-	dodoc ChangeLog INSTALL README
 }
