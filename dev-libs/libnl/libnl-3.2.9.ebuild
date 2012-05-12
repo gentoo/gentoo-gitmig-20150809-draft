@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.8.ebuild,v 1.3 2012/05/01 18:29:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.9.ebuild,v 1.1 2012/05/12 15:24:40 jer Exp $
 
 EAPI=4
 inherit autotools eutils multilib
@@ -20,12 +20,7 @@ DEPEND="
 "
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-1.1-vlan-header.patch
-	if use doc; then
-		epatch "${FILESDIR}"/${PN}-3.2.8-doc.patch
-		eautomake
-	fi
+	epatch "${FILESDIR}"/${PN}-1.1-vlan-header.patch
 }
 
 src_configure() {
