@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.23 2012/05/12 16:47:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.24 2012/05/12 18:06:50 aballier Exp $
 
 EAPI=4
-inherit multilib
+inherit multilib toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -50,9 +50,10 @@ src_configure() {
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
 
-	# Build with correct toolchain. The build system shall honour them with only
-	# this variable.
-	export CROSS="${CHOST}-"
+	# Build with correct toolchain.
+	tc-export CC AR NM
+	# Link with gcc by default, the build system should override this if needed.
+	export LD="${CC}"
 
 	./configure \
 		--prefix="${EPREFIX}"/usr \
