@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.21-r1.ebuild,v 1.11 2012/05/12 10:24:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.21-r1.ebuild,v 1.12 2012/05/12 10:33:48 xarthisius Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --prefix="${EROOT}"
+	econf --prefix="${EPREFIX}/"
 }
 
 src_install() {
