@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.5 2012/05/12 07:57:13 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.6 2012/05/12 14:59:29 aballier Exp $
 
 EAPI=4
 
@@ -48,23 +48,10 @@ src_unpack() {
 src_install() {
 	# Install libraries proper place
 	local mylibdir=$(get_libdir)
-	for d in libavl libctf libdtrace; do
-		cd "${S}"/lib/$d
-		mkinstall SHLIBDIR="/usr/${mylibdir}" LIBDIR="/usr/${mylibdir}" || die
-	done
-	for d in libnvpair libumem libuutil libzfs libzpool;do
-		cd "${S}"/lib/$d
-		mkinstall SHLIBDIR="/${mylibdir}" LIBDIR="/${mylibdir}" || die
-	done
-	for d in lib/drti sbin usr.bin usr.sbin; do
-		cd "${S}"/$d
-		mkinstall || die
-	done
-	mv "${ED}"/${mylibdir}/lib{nvpair,umem,uutil,zfs}{,_p}.a \
-		"${ED}"/${mylibdir}/libzpool.a \
-		"${ED}"/usr/${mylibdir} || die
-	gen_usr_ldscript libnvpair.so libumem.so libuutil.so libzfs.so libzpool.so
-	# Install zfs volinit script.
+	mkinstall SHLIBDIR="/usr/${mylibdir}" LIBDIR="/usr/${mylibdir}" || die
 
+	gen_usr_ldscript -a nvpair umem uutil zfs zpool
+
+	# Install zfs volinit script.
 	newinitd "${FILESDIR}"/zvol.initd-9.0 zvol
 }
