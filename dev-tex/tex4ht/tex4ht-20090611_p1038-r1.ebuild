@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20090611_p1038-r1.ebuild,v 1.8 2010/07/18 12:25:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20090611_p1038-r1.ebuild,v 1.9 2012/05/12 03:29:58 aballier Exp $
 
 inherit latex-package toolchain-funcs java-pkg-opt-2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.cse.ohio-state.edu/~gurari/TeX4ht/
 SRC_URI="http://www.cse.ohio-state.edu/~gurari/TeX4ht/fix/${MY_P}.tar.gz"
 
 LICENSE="LPPL-1.2"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 SLOT="0"
 
 DEPEND=">=sys-apps/sed-4
