@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Config-IniFiles
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.60 2012/05/12 12:51:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.61 2012/05/12 16:33:33 armin76 Exp $
+
+  12 May 2012; Raúl Porcel <armin76@gentoo.org> Config-IniFiles-2.57.ebuild,
+  Config-IniFiles-2.680.0.ebuild, Config-IniFiles-2.690.0.ebuild,
+  Config-IniFiles-2.700.0.ebuild, Config-IniFiles-2.710.0.ebuild,
+  Config-IniFiles-2.720.0.ebuild:
+  Drop ia64/sparc keywords
 
   12 May 2012; Tobias Klausmann <klausman@gentoo.org>
   Config-IniFiles-2.710.0.ebuild:
