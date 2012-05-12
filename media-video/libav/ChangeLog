@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.73 2012/05/12 15:43:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.74 2012/05/12 16:40:46 armin76 Exp $
+
+  12 May 2012; Raúl Porcel <armin76@gentoo.org> libav-0.8.2.ebuild:
+  ia64/sparc stable wrt #408555
 
   12 May 2012; Tobias Klausmann <klausman@gentoo.org> libav-0.8.2.ebuild:
   Stable on alpha, bug 408555
