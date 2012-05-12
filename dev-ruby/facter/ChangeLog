@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.49 2012/03/11 13:47:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.50 2012/05/12 08:13:42 graaff Exp $
+
+  12 May 2012; Hans de Graaff <graaff@gentoo.org> -facter-1.6.1.ebuild,
+  -facter-1.6.2.ebuild, -facter-1.6.3.ebuild:
+  Remove old versions.
 
   11 Mar 2012; Brent Baude <ranger@gentoo.org> facter-1.6.4.ebuild:
   Marking facter-1.6.4 ~ppc64 for bug 394785
