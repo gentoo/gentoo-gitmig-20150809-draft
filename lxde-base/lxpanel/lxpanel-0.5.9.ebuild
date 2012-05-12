@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.9.ebuild,v 1.1 2012/05/12 10:08:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.9.ebuild,v 1.2 2012/05/12 15:12:21 hwoarang Exp $
 
 EAPI="4"
 
@@ -35,7 +35,8 @@ src_prepare() {
 
 src_configure() {
 	local plugins="netstatus,volume,cpu deskno,batt, \
-		kbled,xkb,thermal,cpufreq,monitors,wnckpager"
+		kbled,xkb,thermal,cpufreq,monitors"
+	# wnckpager disabled per bug #415519
 	use wifi && plugins+=",netstat"
 	use alsa && plugins+=",volumealsa"
 	[[ ${CHOST} == *-interix* ]] && plugins=deskno,kbled,xkb
