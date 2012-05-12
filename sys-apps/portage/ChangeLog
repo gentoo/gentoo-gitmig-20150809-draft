@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1011 2012/05/09 23:10:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1012 2012/05/12 00:08:27 zmedico Exp $
+
+*portage-2.1.10.59 (12 May 2012)
+
+  12 May 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.59.ebuild,
+  -portage-2.1.10.57.ebuild:
+  2.1.10.59 version bump. This fixes Sabayon bug #3305 (signal module raises
+  ValueError since Entropy uses threads), and also include enhanced robustness
+  in handling of metadata for unsupported EAPIs. Bug #409383 tracks all bugs
+  fixed since portage-2.1.10.49.
 
 *portage-2.2.0_alpha103 (09 May 2012)
 
