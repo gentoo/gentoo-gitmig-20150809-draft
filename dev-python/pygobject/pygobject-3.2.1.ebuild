@@ -1,16 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.3.ebuild,v 1.7 2012/05/04 15:12:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.2.1.ebuild,v 1.1 2012/05/12 13:03:54 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.6 3:3.1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 *-jython *-pypy-*"
 
-# XXX: Is the alternatives stuff needed anymore?
-inherit alternatives autotools gnome2 python virtualx
+inherit autotools gnome2 python virtualx
 
 DESCRIPTION="GLib's GObject library bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
@@ -20,16 +19,15 @@ SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cairo examples test +threads" # doc
 
-COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
-	>=dev-libs/gobject-introspection-1.29
+COMMON_DEPEND=">=dev-libs/glib-2.31.0:2
+	>=dev-libs/gobject-introspection-1.31.20
 	virtual/libffi
 	cairo? ( >=dev-python/pycairo-1.10.0 )"
 DEPEND="${COMMON_DEPEND}
 	test? (
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
-		>=dev-libs/gobject-introspection-1.29.1
-		)
+		>=dev-libs/gobject-introspection-1.29.17 )
 	virtual/pkgconfig"
 # docs disabled for now per upstream default since they are very out of date
 #	doc? (
@@ -62,23 +60,10 @@ src_prepare() {
 	# Do not build tests if unneeded, bug #226345
 	epatch "${FILESDIR}/${PN}-2.90.1-make_check.patch"
 
-	# Support installation for multiple Python versions, upstream bug #648292
-	epatch "${FILESDIR}/${PN}-3.0.0-support_multiple_python_versions.patch"
-
 	# Disable tests that fail
 	#epatch "${FILESDIR}/${PN}-2.28.3-disable-failing-tests.patch"
 
-	# FIXME: disable tests that require >=gobject-introspection-1.31
-	epatch "${FILESDIR}/${P}-disable-new-gi-tests.patch"
-
-	# Upstream patch to fix GObject.property min/max values; in next release
-	epatch "${FILESDIR}/${P}-gobject-property-min-max.patch"
-
-	# https://bugzilla.gnome.org/show_bug.cgi?id=666852
-	epatch "${FILESDIR}/${PN}-3.0.3-tests-python3.patch"
-
-	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
+	python_clean_py-compile_files
 
 	eautoreconf
 	gnome2_src_prepare
@@ -87,7 +72,10 @@ src_prepare() {
 }
 
 src_configure() {
-	python_execute_function -s gnome2_src_configure
+	configuration() {
+		PYTHON="$(PYTHON)" gnome2_src_configure
+	}
+	python_execute_function -s configuration
 }
 
 src_compile() {
