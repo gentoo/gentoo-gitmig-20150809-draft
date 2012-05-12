@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/qt-meta-4.8.ebuild,v 1.4 2012/05/09 18:39:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/qt-meta-4.8.ebuild,v 1.5 2012/05/12 09:53:07 pesa Exp $
 
 EAPI=4
 
 DESCRIPTION="The Qt toolkit is a comprehensive C++ application development framework"
-HOMEPAGE="http://qt.nokia.com/ http://qt-project.org/"
+HOMEPAGE="http://qt-project.org/ http://qt.nokia.com/"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 SLOT="4"
@@ -35,8 +35,8 @@ RDEPEND="
 
 pkg_postinst() {
 	echo
-	elog "Please note that this meta package is only provided for convenience."
-	elog "No packages should depend directly on this meta package, but on the"
-	elog "specific split Qt packages needed."
+	einfo "Please note that this meta package is only provided for convenience."
+	einfo "No packages should depend directly on this meta package, but on the"
+	einfo "specific split Qt packages needed."
 	echo
 }
