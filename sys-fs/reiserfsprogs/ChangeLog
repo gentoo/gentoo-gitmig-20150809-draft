@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.66 2012/05/08 01:53:34 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.67 2012/05/12 08:58:11 heroxbd Exp $
+
+  12 May 2012; Benda Xu <heroxbd@gentoo.org> reiserfsprogs-3.6.21-r1.ebuild:
+  use EAPI=4 for prefix support
 
   08 May 2012; Benda Xu <heroxbd@gentoo.org> reiserfsprogs-3.6.21-r1.ebuild:
   trivial modification for Prefix support
