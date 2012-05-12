@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.1.ebuild,v 1.2 2012/05/05 03:52:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.3.ebuild,v 1.1 2012/05/12 13:00:57 pacho Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ REQUIRED_USE="
 	|| ( aqua wayland X )
 	xinerama? ( X )"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 # FIXME: introspection data is built against system installation of gtk+:3
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
@@ -97,11 +97,16 @@ src_prepare() {
 	replace-flags -O3 -O2
 	strip-flags
 
-	# https://bugzilla.gnome.org/show_bug.cgi?id=65410
+	# https://bugzilla.gnome.org/show_bug.cgi?id=654108
 	epatch "${FILESDIR}/${PN}-3.3.18-fallback-theme.patch"
 
 	# Apparently needed for new libxkbcommon headers; bug #408131
 	epatch "${FILESDIR}/${PN}-3.3.20-wayland-xkbcommon-headers.patch"
+
+	# Work around https://bugzilla.gnome.org/show_bug.cgi?id=663991
+	if [[ ${CHOST} == *-solaris* ]]; then
+		sed -i -e '/_XOPEN_SOURCE/s/500/600/' gtk/gtksearchenginesimple.c || die
+	fi
 
 	# Non-working test in gentoo's env
 	sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \
@@ -168,7 +173,9 @@ src_test() {
 		ewarn "required version of gnome-themes-standard."
 		return 0
 	fi
+
 	unset DBUS_SESSION_BUS_ADDRESS
+
 	# Exporting HOME fixes tests using XDG directories spec since all defaults
 	# are based on $HOME. It is also backward compatible with functions not
 	# yet ported to this spec.
@@ -184,7 +191,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
 	# Remove unneeded *.la files
-	find "${D}" -name '*.la' -exec rm -f {} +
+	find "${D}" -name '*.la' -exec rm -f {} + || die
 
 	# add -framework Carbon to the .pc files
 	use aqua && for i in gtk+-3.0.pc gtk+-quartz-3.0.pc gtk+-unix-print-3.0.pc; do
