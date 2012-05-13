@@ -1,6 +1,22 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.104 2012/04/29 10:11:30 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.105 2012/05/13 11:50:11 swift Exp $
+
+  13 May 2012; <swift@gentoo.org> -selinux-base-policy-2.20110726-r5.ebuild,
+  -selinux-base-policy-2.20110726-r6.ebuild,
+  -selinux-base-policy-2.20110726-r7.ebuild,
+  -selinux-base-policy-2.20110726-r8.ebuild,
+  -selinux-base-policy-2.20110726-r11.ebuild,
+  -selinux-base-policy-2.20110726-r13.ebuild, metadata.xml:
+  Drop unused local USE flag definitions
+
+  13 May 2012; <swift@gentoo.org> -selinux-base-policy-2.20110726-r5.ebuild,
+  -selinux-base-policy-2.20110726-r6.ebuild,
+  -selinux-base-policy-2.20110726-r7.ebuild,
+  -selinux-base-policy-2.20110726-r8.ebuild,
+  -selinux-base-policy-2.20110726-r11.ebuild,
+  -selinux-base-policy-2.20110726-r13.ebuild:
+  Removing deprecated ebuilds (cleanup)
 
   29 Apr 2012; <swift@gentoo.org> selinux-base-policy-2.20120215-r7.ebuild:
   Stabilize rev7
