@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3.ebuild,v 1.4 2012/03/20 14:41:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3.ebuild,v 1.5 2012/05/13 11:01:34 swift Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -25,7 +25,7 @@ DEPEND="!sparc? ( >=sys-kernel/linux-headers-2.6 )
 #	radius? ( net-dialup/gnuradius )
 
 RDEPEND="${DEPEND}
-	selinux? ( sec-policy/selinux-ipsec-tools )"
+	selinux? ( sec-policy/selinux-ipsec )"
 
 # {{{ kernel_check()
 kernel_check() {

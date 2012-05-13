@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r3.ebuild,v 1.3 2012/03/10 12:40:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r3.ebuild,v 1.4 2012/05/13 11:01:34 swift Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	readline? ( sys-libs/readline )
 	selinux? (
 		sys-libs/libselinux
-		sec-policy/selinux-ipsec-tools
+		sec-policy/selinux-ipsec
 	)"
 
 DEPEND="${RDEPEND}

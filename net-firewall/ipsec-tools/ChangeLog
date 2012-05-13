@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.93 2012/03/20 14:41:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.94 2012/05/13 11:01:34 swift Exp $
+
+  13 May 2012; <swift@gentoo.org> ipsec-tools-0.7.3.ebuild,
+  ipsec-tools-0.7.3-r1.ebuild, ipsec-tools-0.8.0-r3.ebuild:
+  SELinux policy module for ipsec related tools is provided by selinux-ipsec
 
   20 Mar 2012; Jeroen Roovers <jer@gentoo.org> ipsec-tools-0.7.3.ebuild,
   ipsec-tools-0.7.3-r1.ebuild:
