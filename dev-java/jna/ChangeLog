@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.17 2012/05/07 06:26:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.18 2012/05/13 09:41:50 sera Exp $
+
+*jna-3.4.0-r1 (13 May 2012)
+
+  13 May 2012; Ralph Sennhauser <sera@gentoo.org> +jna-3.4.0-r1.ebuild,
+  +files/jna-3.4.0-makefile-flags.patch:
+  Respect CC. #413277
+  Register optional dependency emul-linux-x86-jna for use with 32bit JVMs.
+  #313209
+  Cleanup.
 
   07 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> jna-3.4.0.ebuild:
   x86 stable wrt bug #413157
