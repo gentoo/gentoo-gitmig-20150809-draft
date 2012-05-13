@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-0.ebuild,v 1.4 2012/04/26 13:00:58 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-0.ebuild,v 1.5 2012/05/13 17:27:29 pacho Exp $
 
 EAPI=2
 
@@ -27,11 +27,9 @@ RDEPEND="|| (
 		sys-kernel/pf-sources
 		sys-kernel/rsbac-sources
 		sys-kernel/rt-sources
-		sys-kernel/sparc-sources
 		sys-kernel/tuxonice-sources
 		sys-kernel/usermode-sources
 		sys-kernel/vserver-sources
 		sys-kernel/xbox-sources
-		sys-kernel/xen-sources
 		sys-kernel/zen-sources
 	)"
