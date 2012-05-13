@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.75 2012/05/11 01:57:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.76 2012/05/13 14:40:51 tetromino Exp $
 
 # Mike Frysinger <vapier@gentoo.org> (10 May 2012)
 # We only want java available for unstable ebuilds, but we can't do that
@@ -54,7 +54,7 @@ app-text/evince xps
 >=dev-libs/folks-0.6 eds socialweb tracker
 >=gnome-base/gnome-menus-3.2 test
 >=gnome-base/gnome-panel-3 eds
->=gnome-base/nautilus-3 previewer tracker
+>=gnome-base/nautilus-3 previewer sendto tracker
 
 # Raúl Porcel <armin76@gentoo.org> (05 Nov 2011)
 # jit not supported on ia64

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.113 2012/05/06 17:54:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.114 2012/05/13 14:40:51 tetromino Exp $
+
+  13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Add nautilus[sendto] to gnome3 mask.
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
   Add systemd to use.mask, needs testing

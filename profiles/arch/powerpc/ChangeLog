@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.165 2012/05/03 20:59:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.166 2012/05/13 14:40:51 tetromino Exp $
+
+  13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Add nautilus[sendto] to gnome3 mask.
 
   03 May 2012; Julian Ospald <hasufell@gentoo.org> use.mask:
   mask nvtt

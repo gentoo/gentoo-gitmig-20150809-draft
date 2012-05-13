@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.153 2012/05/07 19:42:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.154 2012/05/13 14:40:51 tetromino Exp $
+
+  13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Add nautilus[sendto] to gnome3 mask.
 
   07 May 2012; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Mask USE="mozilla" because of missing keywording in www-client/firefox wrt
