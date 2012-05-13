@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r3.ebuild,v 1.12 2012/04/25 16:33:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6-r3.ebuild,v 1.13 2012/05/13 11:31:08 swift Exp $
 
 inherit autotools eutils multilib
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/openssl-0.9.6
 		berkdb? ( sys-libs/db )
 		fam? ( virtual/fam )
 		gdbm? ( >=sys-libs/gdbm-1.8.0 )
-		selinux? ( sec-policy/selinux-courier-imap )"
+		selinux? ( sec-policy/selinux-courier )"
 DEPEND="${RDEPEND}
 		dev-lang/perl
 		!mail-mta/courier

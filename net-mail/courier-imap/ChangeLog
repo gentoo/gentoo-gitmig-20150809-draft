@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.190 2012/04/25 16:33:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.191 2012/05/13 11:31:08 swift Exp $
+
+  13 May 2012; <swift@gentoo.org> courier-imap-4.0.6-r3.ebuild,
+  courier-imap-4.5.0.ebuild, courier-imap-4.6.0.ebuild,
+  courier-imap-4.8.0.ebuild:
+  SELinux policy module for courier-imap is provided by selinux-courier
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> courier-imap-4.0.6-r3.ebuild,
   courier-imap-4.5.0.ebuild, courier-imap-4.6.0.ebuild,
