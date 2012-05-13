@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.12.ebuild,v 1.4 2012/05/10 17:53:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.12.ebuild,v 1.5 2012/05/13 21:14:04 chithanh Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ IUSE_INPUT_DEVICES="
 	input_devices_wacom
 "
 IUSE_VIDEO_CARDS="
+	video_cards_apm
 	video_cards_ark
 	video_cards_ast
 	video_cards_cirrus
@@ -53,6 +54,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_r128
 	video_cards_radeon
 	video_cards_s3
+	video_cards_s3virge
 	video_cards_savage
 	video_cards_siliconmotion
 	video_cards_sis
@@ -96,6 +98,7 @@ PDEPEND="
 	input_devices_synaptics?   ( x11-drivers/xf86-input-synaptics )
 	input_devices_wacom?       ( x11-drivers/xf86-input-wacom )
 
+	video_cards_apm?           ( x11-drivers/xf86-video-apm )
 	video_cards_ark?           ( x11-drivers/xf86-video-ark )
 	video_cards_ast?           ( x11-drivers/xf86-video-ast )
 	video_cards_cirrus?        ( x11-drivers/xf86-video-cirrus )
@@ -119,6 +122,7 @@ PDEPEND="
 	video_cards_r128?          ( x11-drivers/xf86-video-r128 )
 	video_cards_radeon?        ( x11-drivers/xf86-video-ati )
 	video_cards_s3?            ( x11-drivers/xf86-video-s3 )
+	video_cards_s3virge?       ( x11-drivers/xf86-video-s3virge )
 	video_cards_savage?        ( x11-drivers/xf86-video-savage )
 	video_cards_siliconmotion? ( x11-drivers/xf86-video-siliconmotion )
 	video_cards_sis?           ( x11-drivers/xf86-video-sis )
@@ -139,13 +143,11 @@ PDEPEND="
 	video_cards_voodoo?        ( x11-drivers/xf86-video-voodoo )
 
 	!x11-drivers/xf86-input-citron
-	!<=x11-drivers/xf86-video-apm-1.2.3
 	!<=x11-drivers/xf86-video-chips-1.2.4
 	!x11-drivers/xf86-video-cyrix
 	!x11-drivers/xf86-video-impact
 	!x11-drivers/xf86-video-nsc
 	!<=x11-drivers/xf86-video-rendition-4.2.4
-	!<=x11-drivers/xf86-video-s3virge-1.10.4
 	!<=x11-drivers/xf86-video-sisusb-0.9.4
 	!x11-drivers/xf86-video-sunbw2
 	!<=x11-drivers/xf86-video-tseng-1.2.4
