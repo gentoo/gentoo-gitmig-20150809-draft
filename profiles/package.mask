@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13748 2012/05/13 10:33:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13749 2012/05/13 10:35:21 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -97,10 +97,6 @@ app-dicts/canna-zipcode
 # Stopped working long time ago. Removal in 30 days
 # Use emesene:2 as an alternative
 net-im/emesene:0
-
-# Davide Pesavento <pesa@gentoo.org> (05 May 2012)
-# Introduces Oracle database support (oci8), needs more testing.
-=x11-libs/qt-sql-4.8.1-r1
 
 # Johannes Huber <johu@gentoo.org> (03 May 2012)
 # Unstable dev channel release. Fixes build with gcc47
