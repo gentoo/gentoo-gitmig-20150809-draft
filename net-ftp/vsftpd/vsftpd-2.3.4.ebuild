@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.3.4.ebuild,v 1.8 2012/04/12 10:12:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.3.4.ebuild,v 1.9 2012/05/13 10:57:37 swift Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ DEPEND="caps? ( >=sys-libs/libcap-2 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )"
 RDEPEND="${DEPEND}
 	net-ftp/ftpbase
-	selinux? ( sec-policy/selinux-ftpd )
+	selinux? ( sec-policy/selinux-ftp )
 	xinetd? ( sys-apps/xinetd )"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-3.0.0.ebuild,v 1.1 2012/04/12 10:50:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-3.0.0.ebuild,v 1.2 2012/05/13 10:57:37 swift Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ DEPEND="caps? ( >=sys-libs/libcap-2 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )"
 RDEPEND="${DEPEND}
 	net-ftp/ftpbase
-	selinux? ( sec-policy/selinux-ftpd )
+	selinux? ( sec-policy/selinux-ftp )
 	xinetd? ( sys-apps/xinetd )"
 
 src_prepare() {
