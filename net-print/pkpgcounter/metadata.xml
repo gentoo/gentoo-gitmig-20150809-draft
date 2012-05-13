@@ -9,7 +9,4 @@
 		pkpgcounter is a python generic PDL (Page Description Language) parser
 		which main feature is to count the number of pages in printable files.
 	</longdescription>
-	<use>
-		<flag name='psyco'>psyco python accelerator</flag>
-	</use>
 </pkgmetadata>
