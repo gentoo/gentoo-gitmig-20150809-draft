@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.3.1.ebuild,v 1.8 2012/05/05 04:53:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/xdialog-2.3.1.ebuild,v 1.9 2012/05/13 15:53:32 hasufell Exp $
 
 EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="drop-in replacement for cdialog using GTK"
-HOMEPAGE="http://xdialog.dyns.net/"
-SRC_URI="http://thgodef.nerim.net/xdialog/Xdialog-${PV}.tar.bz2"
+HOMEPAGE="http://xdialog.free.fr/"
+SRC_URI="http://${PN}.free.fr/Xdialog-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdialog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.30 2012/05/05 04:53:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.31 2012/05/13 15:53:32 hasufell Exp $
+
+  13 May 2012; Julian Ospald <hasufell@gentoo.org> xdialog-2.3.1.ebuild:
+  fix homepage and src_uri wrt #415637
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> xdialog-2.3.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
