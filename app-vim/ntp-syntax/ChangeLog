@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ntp-syntax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ntp-syntax/ChangeLog,v 1.14 2010/10/07 03:27:19 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ntp-syntax/ChangeLog,v 1.15 2012/05/13 17:36:29 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org> ntp-syntax-20031001.ebuild:
+  keyword ~amd64-fbsd
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org> ntp-syntax-20031001.ebuild:
   Drop to ~mips
