@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlstarlet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.33 2012/05/04 03:33:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.34 2012/05/13 22:30:06 jer Exp $
+
+  13 May 2012; Jeroen Roovers <jer@gentoo.org> xmlstarlet-1.3.1.ebuild:
+  Marked ~hppa (bug #415707).
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> xmlstarlet-1.0.1-r1.ebuild,
   xmlstarlet-1.0.2.ebuild, xmlstarlet-1.0.2-r1.ebuild, xmlstarlet-1.0.4.ebuild,
