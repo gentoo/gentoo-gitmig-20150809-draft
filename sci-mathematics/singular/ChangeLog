@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.49 2012/03/24 21:28:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.50 2012/05/13 06:42:27 tomka Exp $
+
+*singular-3.1.4-r1 (13 May 2012)
+
+  13 May 2012; Thomas Kahle <tomka@gentoo.org> +singular-3.1.4-r1.ebuild:
+  Fix bug 414709. Thanks Jean-Francis Roy for the solution.
 
 *singular-3.1.4 (24 Mar 2012)
 
