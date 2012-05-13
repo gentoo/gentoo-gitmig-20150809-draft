@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.182 2012/05/12 12:46:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.183 2012/05/13 19:37:55 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org> ntp-4.2.6_p5-r1.ebuild:
+  keyword ~amd64-fbsd
 
   12 May 2012; Markus Meier <maekke@gentoo.org> ntp-4.2.6_p5-r1.ebuild:
   arm stable, bug #407767
