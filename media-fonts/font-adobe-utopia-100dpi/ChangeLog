@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-adobe-utopia-100dpi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-100dpi/ChangeLog,v 1.44 2011/02/14 12:50:54 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-100dpi/ChangeLog,v 1.45 2012/05/13 16:30:11 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org>
+  font-adobe-utopia-100dpi-1.0.4.ebuild:
+  keyword ~amd64-fbsd
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   font-adobe-utopia-100dpi-1.0.4.ebuild:
