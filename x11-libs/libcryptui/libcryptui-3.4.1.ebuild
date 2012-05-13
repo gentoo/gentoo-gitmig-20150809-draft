@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.2.0.ebuild,v 1.3 2012/05/05 03:52:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.4.1.ebuild,v 1.1 2012/05/13 18:18:04 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -22,6 +22,8 @@ COMMON_DEPEND="
 	>=x11-libs/gtk+-2.90.0:3[introspection?]
 	>=dev-libs/dbus-glib-0.72
 	>=gnome-base/gnome-keyring-2.91.2
+	x11-libs/libICE
+	x11-libs/libSM
 
 	>=app-crypt/gpgme-1
 	|| (
@@ -34,8 +36,8 @@ COMMON_DEPEND="
 DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	>=app-text/scrollkeeper-0.3
-	virtual/pkgconfig
 	>=dev-util/intltool-0.35
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
 "
 # Before 3.1.4, libcryptui was part of seahorse
@@ -46,7 +48,6 @@ RDEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
-		--disable-scrollkeeper
 		--disable-update-mime-database
 		$(use_enable debug)
 		$(use_enable introspection)
