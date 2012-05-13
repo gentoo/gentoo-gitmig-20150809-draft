@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/virtuoso-odbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.26 2012/04/26 09:28:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.27 2012/05/13 18:09:28 creffett Exp $
+
+  13 May 2012; <creffett@gentoo.org> metadata.xml:
+  Added myself as co-maintainer to metadata.xml
 
   26 Apr 2012; Johannes Huber <johu@gentoo.org> -virtuoso-odbc-6.1.2.ebuild:
   Remove old.
