@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.160 2012/04/26 14:13:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.161 2012/05/13 09:47:05 grobian Exp $
+
+  13 May 2012; Fabian Groffen <grobian@gentoo.org> intltool-0.50.2.ebuild:
+  Marked ~x64-freebsd
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> intltool-0.50.2.ebuild:
   keyword ~amd64-fbsd
