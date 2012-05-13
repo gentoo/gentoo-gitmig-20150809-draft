@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2.ebuild,v 1.4 2012/05/04 18:35:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2.ebuild,v 1.5 2012/05/13 22:13:29 flameeyes Exp $
 
 EAPI="4"
 
@@ -32,6 +32,7 @@ REQUIRED_USE="
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.12.1-crossbuild.patch
+	epatch "${FILESDIR}"/${P}-parallelinstall.patch
 	eautoreconf
 }
 

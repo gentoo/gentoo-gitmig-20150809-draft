@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.119 2012/05/04 18:35:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.120 2012/05/13 22:13:29 flameeyes Exp $
+
+  13 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/opensc-0.12.2-parallelinstall.patch,
+  -files/opensc-0.12.0-crossbuild.patch, -opensc-0.11.13.ebuild,
+  -opensc-0.12.0-r2.ebuild, -opensc-0.12.1.ebuild, opensc-0.12.2.ebuild:
+  Fix bug #412299, thanks to Michelangelo Scopelliti for reporting. Also remove
+  old versions.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> opensc-0.11.13.ebuild,
   opensc-0.11.13-r2.ebuild, opensc-0.12.0-r2.ebuild, opensc-0.12.1.ebuild,
