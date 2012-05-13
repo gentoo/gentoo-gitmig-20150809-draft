@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.40 2012/05/13 16:50:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.41 2012/05/13 18:49:47 grobian Exp $
+
+  13 May 2012; Fabian Groffen <grobian@gentoo.org> mupdf-1.0.ebuild:
+  Marked ~*-macos, bug #415761
 
   13 May 2012; Fabian Groffen <grobian@gentoo.org> mupdf-1.0.ebuild,
   mupdf-9999.ebuild:
