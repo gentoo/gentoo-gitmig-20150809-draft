@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.44 2012/05/13 21:27:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.45 2012/05/13 21:36:04 dilfridge Exp $
 
 EAPI=4
 
@@ -305,7 +305,7 @@ src_prepare() {
 
 	# please no debug in binfilter, it blows up things insanely
 	if use binfilter && ! use binfilterdebug ; then
-		for name in $(find "${S}/binfilter" -name makefile.mk) ; do 
+		for name in $(find "${S}/binfilter" -name makefile.mk) ; do
 			sed -i -e '1i\CFLAGS+= -g0' $name || die
 		done
 	fi
