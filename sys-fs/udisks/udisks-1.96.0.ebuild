@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.96.0.ebuild,v 1.2 2012/05/04 19:09:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.96.0.ebuild,v 1.3 2012/05/13 09:49:18 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -34,6 +34,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	>=dev-util/gdbus-codegen-2.32
 	dev-util/intltool
+	>=sys-kernel/linux-headers-3.1
 	virtual/pkgconfig
 	doc? (
 		dev-util/gtk-doc
