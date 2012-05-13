@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libsieve
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.19 2012/02/16 18:44:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.20 2012/05/13 12:40:25 ago Exp $
+
+  13 May 2012; Agostino Sarubbo <ago@gentoo.org> -libsieve-2.2.5.ebuild:
+  Remove old
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libsieve-2.2.7.ebuild:
   x86 stable wrt bug #397051
