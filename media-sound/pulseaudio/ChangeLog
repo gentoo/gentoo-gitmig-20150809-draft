@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.270 2012/05/11 15:16:04 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.271 2012/05/13 14:24:32 ford_prefect Exp $
+
+  13 May 2012; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-2.0.ebuild:
+  Drop parallel make install. Thought the failures had gone away, but they have
+  only become more rare.
 
 *pulseaudio-2.0 (11 May 2012)
 

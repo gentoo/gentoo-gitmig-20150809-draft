@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.0.ebuild,v 1.1 2012/05/11 15:16:04 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.0.ebuild,v 1.2 2012/05/13 14:24:32 ford_prefect Exp $
 
 EAPI=4
 
@@ -147,7 +147,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake -j1 DESTDIR="${D}" install
 
 	# Drop the script entirely if X is disabled
 	use X || rm "${ED}"/usr/bin/start-pulseaudio-x11
