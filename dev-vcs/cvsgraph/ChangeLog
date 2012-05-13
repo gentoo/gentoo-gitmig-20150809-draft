@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvsgraph
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsgraph/ChangeLog,v 1.2 2011/02/25 20:57:39 signals Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsgraph/ChangeLog,v 1.3 2012/05/13 21:19:17 ramereth Exp $
+
+  13 May 2012; Lance Albertson <ramereth@gentoo.org> cvsgraph-1.7.0.ebuild:
+  Stablize 1.7.0
 
   25 Feb 2011; Kevin McCarthy <signals@gentoo.org> cvsgraph-1.6.1.ebuild,
   cvsgraph-1.7.0.ebuild:
