@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.71 2012/05/10 18:08:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.72 2012/05/13 21:27:01 dilfridge Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEV_URI="
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
-BRANDING="${PN}-branding-gentoo-0.4.tar.xz"
+BRANDING="${PN}-branding-gentoo-0.5.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
@@ -32,7 +32,7 @@ unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
-SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
+SRC_URI="branding? ( http://dev.gentoo.org/~dilfridge/distfiles/${BRANDING} )"
 [[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"
 
 # Split modules following git/tarballs
@@ -70,7 +70,7 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding +cups dbus eds gnome +graphite gstreamer +gtk gtk3
+IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite gstreamer +gtk gtk3
 jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba +webdav
 +xmlsec"
 
@@ -326,6 +326,14 @@ src_prepare() {
 	fi
 
 	base_src_prepare
+
+	# please no debug in binfilter, it blows up things insanely
+	if use binfilter && ! use binfilterdebug ; then
+		for name in $(find "${S}/binfilter" -name makefile.mk) ; do 
+			sed -i -e '1i\CFLAGS+= -g0' $name || die
+		done
+	fi
+
 	AT_M4DIR="m4"
 	eautoreconf
 	# hack in the autogen.sh
