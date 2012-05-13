@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/log_buddy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log_buddy/ChangeLog,v 1.1 2011/12/24 03:03:07 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log_buddy/ChangeLog,v 1.2 2012/05/13 06:14:00 graaff Exp $
+
+*log_buddy-0.7.0 (13 May 2012)
+
+  13 May 2012; Hans de Graaff <graaff@gentoo.org> +log_buddy-0.7.0.ebuild:
+  Version bump.
 
 *log_buddy-0.6.0 (24 Dec 2011)
 
