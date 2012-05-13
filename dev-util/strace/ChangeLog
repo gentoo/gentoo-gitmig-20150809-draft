@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.175 2012/05/02 21:59:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.176 2012/05/13 19:47:13 vapier Exp $
+
+  13 May 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-4.7-glibc-2.15.patch, strace-4.7.ebuild:
+  Fix building with glibc-2.15 and old kernel headers #414637 by toogle.
 
 *strace-4.7 (02 May 2012)
 
