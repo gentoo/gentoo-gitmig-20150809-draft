@@ -1,6 +1,9 @@
 # ChangeLog for www-client/xxxterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.9 2012/05/13 17:42:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.10 2012/05/13 18:56:08 ago Exp $
+
+  13 May 2012; Agostino Sarubbo <ago@gentoo.org> xxxterm-9999.ebuild:
+  Port the last changes to 9999
 
 *xxxterm-1.1103-r1 (13 May 2012)
 
