@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.206 2012/05/13 20:47:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.207 2012/05/13 20:49:16 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -101,10 +101,6 @@ x11-libs/qt-gui nas
 
 # dev-python/pygtksourceview:2
 dev-vcs/git gtk
-
-# net-dns/avahi
-net-print/cups avahi
-net-misc/ntp zeroconf
 
 # net-misc/openntpd
 net-misc/ntp openntpd
