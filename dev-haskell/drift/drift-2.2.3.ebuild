@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/drift-2.2.3.ebuild,v 1.6 2012/03/17 21:50:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/drift-2.2.3.ebuild,v 1.7 2012/05/13 09:37:20 slyfox Exp $
 
-inherit ghc-package
+EAPI=4
+
+inherit base ghc-package
 
 MY_PN="DrIFT"
 MY_P="${MY_PN}-${PV}"
@@ -22,12 +24,13 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	econf --with-hc="$(ghc-getghc)" || die "configure failed"
-	# Makefile has no parallelism
-	emake -j1 || die "emake failed"
+PATCHES=("${FILESDIR}"/${PN}-2.2.3-ghc-7.4.patch)
+
+src_configure() {
+	econf --with-hc="$(ghc-getghc)" --with-hcflags="${HCFLAGS} -package haskell98 -hide-package base"
 }
 
-src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+src_compile() {
+	# Makefile has no parallelism
+	emake -j1
 }
