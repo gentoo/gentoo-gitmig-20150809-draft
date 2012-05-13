@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.131 2012/05/08 18:23:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.132 2012/05/13 09:12:09 maekke Exp $
+
+  13 May 2012; Markus Meier <maekke@gentoo.org> qt-assistant-4.8.1-r1.ebuild:
+  arm stable, bug #414241
 
   08 May 2012; Markos Chandras <hwoarang@gentoo.org>
   qt-assistant-4.8.1-r1.ebuild:
