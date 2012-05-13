@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.4.5.ebuild,v 1.2 2012/05/13 05:54:58 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.4.5-r1.ebuild,v 1.1 2012/05/13 05:54:58 ramereth Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils confutils bash-completion-r1
 
@@ -15,7 +15,7 @@ SRC_URI="http://ganeti.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="kvm xen drbd +filestorage syslog ipv6"
 
 S="${WORKDIR}/${MY_P}"
@@ -56,6 +56,9 @@ src_configure () {
 		myconf="--with-file-storage-dir=/var/lib/ganeti-storage/file"
 	else
 		myconf="--with-file-storage-dir=no"
+	fi
+	if use kvm && [ -f /usr/bin/qemu-kvm ] ; then
+		myconf="--with-kvm-path=/usr/bin/qemu-kvm"
 	fi
 	econf --localstatedir=/var \
 		--docdir=/usr/share/doc/${P} \
