@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/ChangeLog,v 1.8 2012/05/12 09:53:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-meta/ChangeLog,v 1.9 2012/05/13 14:14:31 pesa Exp $
+
+  13 May 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Sync metadata with the other Qt modules.
 
   12 May 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml,
   qt-meta-4.8.ebuild:
