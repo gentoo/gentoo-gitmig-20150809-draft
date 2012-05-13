@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.7.ebuild,v 1.3 2012/04/05 21:19:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.7.ebuild,v 1.4 2012/05/13 17:13:55 pacho Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 DEPEND="dev-libs/expat
 	>=dev-libs/glib-2
 	net-dns/libidn
-	|| ( net-im/jabberd net-im/jabberd2 )
+	net-im/jabberd2
 	mysql? ( virtual/mysql )"
 RDEPEND="${DEPEND}"
 IUSE="mysql"
