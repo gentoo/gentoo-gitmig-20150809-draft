@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-tcp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.76 2011/08/26 19:47:50 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.77 2012/05/13 11:18:54 swift Exp $
+
+  13 May 2012; <swift@gentoo.org> ucspi-tcp-0.88-r17.ebuild:
+  SELinux policy for ucspi-tcp is provided by selinux-ucspi
 
   26 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -ucspi-tcp-0.88-r14.ebuild, -ucspi-tcp-0.88-r15.ebuild,
