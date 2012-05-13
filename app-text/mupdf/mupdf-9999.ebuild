@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.19 2012/05/13 16:04:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.20 2012/05/13 16:50:58 grobian Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ src_prepare() {
 src_compile() {
 	use X || my_nox11="NOX11=yes MUPDF= "
 
-	emake CC="$(tc-getCC)" \
+	emake CC="$(tc-getCC)" OS=Linux \
 		build=debug verbose=true ${my_nox11} -j1
 }
 
