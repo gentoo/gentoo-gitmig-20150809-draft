@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.25 2012/05/13 20:24:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.26 2012/05/13 20:32:08 chithanh Exp $
+
+  13 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  dmake-4.12.ebuild:
+  Restrict tests, bug #404989.
 
   13 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> metadata.xml:
   Assign maintainership to me.
