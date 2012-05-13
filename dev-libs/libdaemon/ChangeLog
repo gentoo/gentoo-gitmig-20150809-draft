@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdaemon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.72 2011/12/28 14:54:54 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.73 2012/05/13 19:47:31 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org> libdaemon-0.14-r1.ebuild:
+  keyword ~amd64-fbsd
 
   28 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libdaemon-0.12.ebuild,
   -libdaemon-0.13-r1.ebuild, -files/libdaemon-0.13-bsd.patch,
