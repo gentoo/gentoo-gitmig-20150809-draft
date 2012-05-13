@@ -1,6 +1,14 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.56 2012/05/05 08:58:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.57 2012/05/13 23:39:43 tetromino Exp $
+
+*cheese-3.4.1 (13 May 2012)
+
+  13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cheese-3.2.1.ebuild, +cheese-3.4.1.ebuild, metadata.xml:
+  Version bump for gnome-3.4, now with nautilus-sendto support. Forced to drop
+  alpha keyword due to gst-plugins-vp8 and nautilus-sendto; bug will be filed
+  later. Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> cheese-2.32.0.ebuild,
   cheese-3.2.1.ebuild, cheese-3.2.2.ebuild:
