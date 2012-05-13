@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.348 2012/05/11 06:55:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.349 2012/05/13 19:14:51 grobian Exp $
+
+  13 May 2012; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/arch/ppc/package.mask, sunos/solaris/arch/sparc/package.mask:
+  Mask dev-lang/v8 on Sparc and PowerPC platforms
 
   11 May 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
   Unmask python-2.7.3, shutil problem with chflags() has been fixed
