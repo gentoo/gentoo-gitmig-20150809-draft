@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r2.ebuild,v 1.5 2011/12/21 08:29:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r2.ebuild,v 1.6 2012/05/13 11:13:32 swift Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE="selinux tcpd readline pcre"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
-	selinux? ( sec-policy/selinux-tftpd )
+	selinux? ( sec-policy/selinux-tftp )
 	readline? ( sys-libs/readline )
 	pcre? ( dev-libs/libpcre )"
 RDEPEND="${DEPEND}
