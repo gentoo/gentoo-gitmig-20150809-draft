@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.68 2012/05/13 20:30:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.69 2012/05/13 22:45:17 jdhore Exp $
+
+  13 May 2012; Jeff Horelick <jdhore@gentoo.org> privoxy-3.0.19.ebuild:
+  marked x86 per bug 415763
 
   13 May 2012; Markos Chandras <hwoarang@gentoo.org> privoxy-3.0.19.ebuild:
   Stable on amd64 wrt bug #415763
