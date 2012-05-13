@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.68 2011/12/18 06:31:00 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.69 2012/05/13 11:41:18 ago Exp $
+
+  13 May 2012; Agostino Sarubbo <ago@gentoo.org> w3m-0.5.3-r1.ebuild:
+  Stable for amd64, wrt bug #415281
 
   18 Dec 2011; Naohiro Aota <naota@gentoo.org> w3m-0.5.3-r1.ebuild,
   +files/w3m-0.5.3-glibc214.patch:
