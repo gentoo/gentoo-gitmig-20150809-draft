@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.210 2012/04/26 12:30:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.211 2012/05/13 20:14:06 vapier Exp $
+
+*gcc-config-1.7.1 (13 May 2012)
+
+  13 May 2012; Mike Frysinger <vapier@gentoo.org> +gcc-config-1.7.1.ebuild:
+  Fix installation of cc/f77 helpers #412319 by Yuta SATOH.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gcc-config-1.7.ebuild:
   keyword ~amd64-fbsd
