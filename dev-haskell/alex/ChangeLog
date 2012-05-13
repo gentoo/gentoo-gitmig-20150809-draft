@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.53 2012/04/25 16:22:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.54 2012/05/13 07:54:30 slyfox Exp $
+
+*alex-3.0.2 (13 May 2012)
+
+  13 May 2012; Sergei Trofimovich <slyfox@gentoo.org> +alex-3.0.2.ebuild,
+  alex-2.3.5.ebuild, metadata.xml:
+  Version bump.
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> alex-2.3.5.ebuild:
   Drop unnessecary die
