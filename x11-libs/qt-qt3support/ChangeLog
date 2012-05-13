@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-qt3support
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.112 2012/05/12 15:39:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.113 2012/05/13 13:49:35 pesa Exp $
+
+  13 May 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Fix kde USE flag description (media-libs/phonon vs. media-sound/phonon).
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> qt-qt3support-4.8.1.ebuild:
   keyword ~amd64-fbsd
