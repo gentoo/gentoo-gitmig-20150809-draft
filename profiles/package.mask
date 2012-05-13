@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13751 2012/05/13 20:25:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13752 2012/05/13 20:45:54 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -65,10 +65,6 @@ net-im/jabberd
 # No longer works due Telecom Italia modifications in their
 # website (#363115). Removal in a month.
 app-mobilephone/galicesms
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Fails to build against gcc-4.6 (#363535). Removal in a month.
-sys-boot/cromwell
 
 # Pacho Ramos <pacho@gentoo.org> (13 May 2012)
 # net-misc/batman-adv replaces them (#381659). Removal in a
