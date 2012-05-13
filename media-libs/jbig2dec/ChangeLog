@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbig2dec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.22 2012/04/26 20:48:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.23 2012/05/13 11:55:06 maekke Exp $
+
+  13 May 2012; Markus Meier <maekke@gentoo.org> jbig2dec-0.11-r1.ebuild:
+  arm stable, bug #414463
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> jbig2dec-0.11-r1.ebuild:
   keyword ~amd64-fbsd
