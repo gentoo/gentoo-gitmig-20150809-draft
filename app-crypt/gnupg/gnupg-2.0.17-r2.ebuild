@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17-r2.ebuild,v 1.2 2012/02/11 19:16:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17-r2.ebuild,v 1.3 2012/05/13 11:34:57 swift Exp $
 
 EAPI="4"
 
@@ -47,7 +47,7 @@ RDEPEND="!static? ( ${COMMON_DEPEND_LIBS} )
 	virtual/mta
 	!app-crypt/gpg-agent
 	!<=app-crypt/gnupg-2.0.1
-	selinux? ( sec-policy/selinux-gnupg )
+	selinux? ( sec-policy/selinux-gpg )
 	nls? ( virtual/libintl )"
 
 REQUIRED_USE="smartcard? ( !static )"

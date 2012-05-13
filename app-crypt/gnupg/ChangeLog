@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.427 2012/05/09 16:47:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.428 2012/05/13 11:34:57 swift Exp $
+
+  13 May 2012; <swift@gentoo.org> gnupg-1.4.11.ebuild, gnupg-1.4.12.ebuild,
+  gnupg-2.0.17.ebuild, gnupg-2.0.17-r2.ebuild, gnupg-2.0.17-r3.ebuild,
+  gnupg-2.0.18.ebuild, gnupg-2.0.19.ebuild:
+  SELinux policy module for GnuPG is provided by selinux-gpg
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> gnupg-2.0.19.ebuild:
   keyword ~amd64-fbsd

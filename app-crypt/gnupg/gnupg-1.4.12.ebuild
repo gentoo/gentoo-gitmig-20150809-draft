@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.12.ebuild,v 1.1 2012/01/31 02:44:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.12.ebuild,v 1.2 2012/05/13 11:34:57 swift Exp $
 
 EAPI="3"
 
@@ -34,7 +34,7 @@ COMMON_DEPEND="
 	usb? ( =virtual/libusb-0* )"
 
 RDEPEND="!static? ( ${COMMON_DEPEND} )
-	selinux? ( sec-policy/selinux-gnupg )
+	selinux? ( sec-policy/selinux-gpg )
 	nls? ( virtual/libintl )"
 
 DEPEND="${COMMON_DEPEND}
