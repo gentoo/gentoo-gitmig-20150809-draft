@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6540 2012/05/13 10:35:21 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6541 2012/05/13 15:26:07 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2012; Julian Ospald <hasufell@gentoo.org> thirdpartymirrors:
+  fix sourceforge mirror syntax again
 
   13 May 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
   Unmask x11-libs/qt-sql-4.8.1-r1, thanks to Victor <v.simankin@gmail.com> for
