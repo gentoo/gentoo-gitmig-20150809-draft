@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20110525a.ebuild,v 1.3 2011/08/19 16:29:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20120125a.ebuild,v 1.1 2012/05/13 08:16:04 ramereth Exp $
 
 EAPI="4"
 
@@ -15,12 +15,12 @@ HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
 SRC_URI="http://www.splitbrain.org/_media/projects/${PN}/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="gd"
 
 DEPEND=""
 RDEPEND="
-	|| ( <dev-lang/php-5.3[xml,spl] >=dev-lang/php-5.3[xml] )
+	>=dev-lang/php-5.3[xml]
 	gd? ( || ( dev-lang/php[gd]
 		media-gfx/imagemagick )
 	)"
@@ -39,7 +39,7 @@ src_install() {
 	webapp_src_preinst
 
 	dodoc README
-	rm -f README COPYING VERSION
+	rm -f README COPYING
 
 	docinto scripts
 	dodoc bin/*

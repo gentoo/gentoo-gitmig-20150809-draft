@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.57 2012/03/09 04:56:24 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.58 2012/05/13 08:16:04 ramereth Exp $
+
+*dokuwiki-20120125a (13 May 2012)
+
+  13 May 2012; Lance Albertson <ramereth@gentoo.org>
+  -dokuwiki-20101107a.ebuild, -dokuwiki-20110525.ebuild,
+  -dokuwiki-20110525a.ebuild, dokuwiki-20120125.ebuild,
+  +dokuwiki-20120125a.ebuild:
+  Version bump, Cleanup. Resolves #410771, #403247, #386155
+
+  Also make sure to install the VERSION file so that dokuwiki knows about its
+  own version.
 
 *dokuwiki-20120125 (09 Mar 2012)
 
