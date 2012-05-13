@@ -6,7 +6,7 @@
 		<email>haskell@gentoo.org</email>
 	</maintainer>
 	<longdescription>
-		This package provides access to ALSA infrastructure from haskell,
+		This package provides access to ALSA infrastructure,
 		that is needed by both alsa-seq and alsa-pcm.
 	</longdescription>
 </pkgmetadata>

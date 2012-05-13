@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/alsa-core
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alsa-core/ChangeLog,v 1.1 2011/09/18 17:59:02 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alsa-core/ChangeLog,v 1.2 2012/05/13 08:07:35 slyfox Exp $
+
+*alsa-core-0.5.0.1 (13 May 2012)
+
+  13 May 2012; Sergei Trofimovich <slyfox@gentoo.org> +alsa-core-0.5.0.1.ebuild,
+  metadata.xml:
+  Version bump.
 
 *alsa-core-0.5 (18 Sep 2011)
 
