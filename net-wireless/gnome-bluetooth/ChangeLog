@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.108 2012/05/04 06:41:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.109 2012/05/13 23:38:51 tetromino Exp $
+
+*gnome-bluetooth-3.4.0 (13 May 2012)
+
+  13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-bluetooth-3.2.1.ebuild, +gnome-bluetooth-3.4.0.ebuild:
+  Version bump, improves PIN handling; .la files no longer needed with
+  gnome-shell-3.4. Drop old.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-bluetooth-2.32.0.ebuild,
   gnome-bluetooth-2.32.0-r1.ebuild, gnome-bluetooth-3.2.1.ebuild,
