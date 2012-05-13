@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.3.ebuild,v 1.6 2012/05/03 19:41:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.4-r1.ebuild,v 1.1 2012/05/13 12:00:17 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
 PYTHON_DEPEND="2:2.5"
 
@@ -14,8 +14,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="dbus doc distribution gnome gstreamer nls pulseaudio test xml"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="dbus doc distribution gnome gstreamer nls pulseaudio test"
 
 RDEPEND=">=dev-libs/glib-2.10:2
 	>=gnome-base/gconf-2
@@ -35,7 +35,6 @@ RDEPEND=">=dev-libs/glib-2.10:2
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )
-	xml? ( dev-libs/gdome2 )
 	x11-libs/libSM
 	x11-libs/libX11
 	x11-libs/libXtst
@@ -60,6 +59,9 @@ pkg_setup() {
 		--disable-kde
 		--enable-gconf
 		--disable-x11-monitoring-fallback
+		--disable-gnome3
+		--disable-experimental
+		--disable-xml
 		$(use_enable dbus)
 		$(use_enable doc manual)
 		$(use_enable distribution)
@@ -67,8 +69,8 @@ pkg_setup() {
 		$(use_enable gstreamer)
 		$(use_enable nls)
 		$(use_enable pulseaudio pulse)
-		$(use_enable test tests)
-		$(use_enable xml)"
+		$(use_enable test tests)"
 
 	python_set_active_version 2
+	python_pkg_setup
 }

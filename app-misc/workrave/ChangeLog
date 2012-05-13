@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.81 2012/05/03 19:41:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.82 2012/05/13 12:00:17 pacho Exp $
+
+*workrave-1.9.4-r1 (13 May 2012)
+
+  13 May 2012; Pacho Ramos <pacho@gentoo.org> +workrave-1.9.4-r1.ebuild,
+  -workrave-1.9.3.ebuild:
+  Drop optional xml support (as Fedora did long time ago) to stop depending on
+  old gdome2. Drop old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> workrave-1.9.3.ebuild,
   workrave-1.9.4.ebuild:
