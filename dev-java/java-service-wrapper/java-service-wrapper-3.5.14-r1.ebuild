@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.5.14-r1.ebuild,v 1.1 2012/05/03 19:05:39 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.5.14-r1.ebuild,v 1.2 2012/05/13 08:47:23 sera Exp $
 
 EAPI="4"
 
@@ -62,7 +62,6 @@ src_install() {
 	dodoc README*.txt || die
 	dodoc doc/revisions.txt || die
 
-	use doc && dohtml -r doc/english/
 	use doc && java-pkg_dojavadoc api
 	use source && java-pkg_dosrc src/java/*
 }
