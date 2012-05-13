@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.3.ebuild,v 1.2 2012/05/03 19:24:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.3.ebuild,v 1.3 2012/05/13 23:26:34 naota Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -92,16 +92,35 @@ RDEPEND="${RDEPEND}
 
 SITEFILE=50${PN}-gentoo.el
 
-update_gtk_immodules() {
-	local GTK2_CONFDIR="/etc/gtk-2.0"
-	# bug #366889
-	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
-		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
-	fi
-	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
+gnome2_query_immodules_gtk2() {
+	local GTK2_CONFDIR="/etc/gtk-2.0/$(get_abi_CHOST)"
 
+	local query_exec="${EPREFIX}/usr/bin/gtk-query-immodules-2.0"
+	local gtk_conf="${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
+	local gtk_conf_dir=$(dirname "${gtk_conf}")
+
+	einfo "Generating Gtk2 immodules/gdk-pixbuf loaders listing:"
+	einfo "-> ${gtk_conf}"
+
+	mkdir -p "${gtk_conf_dir}"
+	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgtk_query_immodules)
+	if [ -z "${tmp_file}" ]; then
+		ewarn "gtk_query_immodules: cannot create temporary file"
+		return 1
+	fi
+
+	if ${query_exec} > "${tmp_file}"; then
+		cat "${tmp_file}" > "${gtk_conf}" || \
+			ewarn "Failed to write to ${gtk_conf}"
+	else
+		ewarn "Cannot update gtk.immodules, file generation failed"
+	fi
+	rm "${tmp_file}"
+}
+
+update_gtk_immodules() {
 	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
+		gnome2_query_immodules_gtk2
 	fi
 }
 
@@ -115,6 +134,10 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.0-gentoo.patch \
 		"${FILESDIR}"/${PN}-1.5.4-zhTW.patch
+	
+	if has_version ">=dev-libs/glib-2.32"; then
+		epatch "${FILESDIR}"/${P}-glib-2.32.patch
+	fi
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die
