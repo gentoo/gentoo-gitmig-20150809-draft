@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.146 2012/05/12 17:47:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.147 2012/05/13 08:03:13 maekke Exp $
+
+  13 May 2012; Markus Meier <maekke@gentoo.org> qt-webkit-4.8.1.ebuild:
+  arm stable, bug #414241
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> qt-webkit-4.8.1.ebuild:
   keyword ~amd64-fbsd

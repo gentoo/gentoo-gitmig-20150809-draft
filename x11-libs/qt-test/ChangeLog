@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.103 2012/05/12 18:09:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.104 2012/05/13 08:10:29 maekke Exp $
+
+  13 May 2012; Markus Meier <maekke@gentoo.org> qt-test-4.8.1.ebuild:
+  arm stable, bug #414241
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> qt-test-4.8.1.ebuild:
   keyword ~amd64-fbsd
