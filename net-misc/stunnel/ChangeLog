@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/stunnel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.128 2011/10/29 18:55:27 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.129 2012/05/13 21:08:13 ramereth Exp $
+
+*stunnel-4.44-r1 (13 May 2012)
+
+  13 May 2012; Lance Albertson <ramereth@gentoo.org> +stunnel-4.44-r1.ebuild,
+  +files/stunnel.initd-start-stop-daemon:
+  Simplify init script to use start-stop-daemon; fixes #379673
+
+  Without using start-stop-daemon the init script has no idea if stunnel has
+  crashed. Thanks to Marcel Pennewiß <gentoo@pennewiss.de> for submitting the
+  init script.
 
   29 Oct 2011; Raúl Porcel <armin76@gentoo.org> stunnel-4.44.ebuild:
   alpha/ia64/s390/sparc stable wrt #379859
