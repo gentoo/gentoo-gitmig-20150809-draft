@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.3.ebuild,v 1.4 2011/03/01 20:02:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.3.ebuild,v 1.5 2012/05/13 11:05:55 swift Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -37,7 +37,7 @@ RDEPEND="${COMMON}
 		X? ( dev-perl/perl-tk )
 		!minimal? ( dev-perl/TermReadKey )
 	)
-	selinux? ( sec-policy/selinux-snmpd )"
+	selinux? ( sec-policy/selinux-snmp )"
 
 # Dependency on autoconf due to bug #225893
 DEPEND="${COMMON}
