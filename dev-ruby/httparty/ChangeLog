@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/httparty
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.20 2010/10/09 09:25:17 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.21 2012/05/13 05:33:38 graaff Exp $
+
+*httparty-0.8.3 (13 May 2012)
+
+  13 May 2012; Hans de Graaff <graaff@gentoo.org> +httparty-0.8.3.ebuild:
+  Version bump. Drop ppc due to new multi_xml dependency, bug 415691.
 
   09 Oct 2010; Hans de Graaff <graaff@gentoo.org> httparty-0.6.1.ebuild:
   Add missing dependency on mongrel. Thanks to Nathan Phillip Brink for
