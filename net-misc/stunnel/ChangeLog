@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.129 2012/05/13 21:08:13 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.130 2012/05/13 21:13:57 ramereth Exp $
+
+  13 May 2012; Lance Albertson <ramereth@gentoo.org>
+  -files/stunnel-4.21-libwrap.patch, -stunnel-4.25.ebuild,
+  -files/stunnel-4.31-x-forwarded-for.patch, -stunnel-4.33.ebuild,
+  -files/stunnel-4.34-listen-queue.diff, -stunnel-4.35.ebuild,
+  -files/stunnel-4.35-libwrap.patch, -files/stunnel-4.35-xforwarded-for.diff,
+  -stunnel-4.36.ebuild, -files/stunnel-4.36-listen-queue.diff,
+  -files/stunnel-4.36-xforwarded-for.diff:
+  Ebuild cleanup; fixes #373713
 
 *stunnel-4.44-r1 (13 May 2012)
 
