@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.42 2012/05/05 03:52:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.43 2012/05/13 12:24:20 pacho Exp $
+
+*gtkmathview-0.8.0-r2 (13 May 2012)
+
+  13 May 2012; Pacho Ramos <pacho@gentoo.org> +gtkmathview-0.8.0-r2.ebuild:
+  Drop gmetadom support because it's dead, other distributions are not providing
+  it fore years and I have confirmed none of gtkmathview consumers need this old
+  stuff.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkmathview-0.8.0.ebuild,
   gtkmathview-0.8.0-r1.ebuild:
