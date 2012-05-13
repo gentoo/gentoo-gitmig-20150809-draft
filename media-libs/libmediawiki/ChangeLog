@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmediawiki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediawiki/ChangeLog,v 1.13 2012/04/08 19:45:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediawiki/ChangeLog,v 1.14 2012/05/13 15:29:32 dilfridge Exp $
+
+*libmediawiki-2.6.0_rc (13 May 2012)
+
+  13 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libmediawiki-2.6.0_rc.ebuild:
+  Version bump
 
 *libmediawiki-2.6.0_beta3 (08 Apr 2012)
 
