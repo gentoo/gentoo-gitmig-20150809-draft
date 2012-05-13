@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.42 2012/02/01 21:01:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.43 2012/05/13 20:47:32 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org> soappy-0.12.5.ebuild:
+  keyword ~amd64-fbsd
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> soappy-0.12.5.ebuild:
   Marking soappy-0.12.5 ~ppc for bug 381749

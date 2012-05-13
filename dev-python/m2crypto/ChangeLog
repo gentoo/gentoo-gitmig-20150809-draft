@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.71 2012/02/20 08:14:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.72 2012/05/13 20:46:48 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org> m2crypto-0.21.1.ebuild:
+  keyword ~amd64-fbsd
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> m2crypto-0.21.1.ebuild:
   Restricting pypy #404045
