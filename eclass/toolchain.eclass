@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.535 2012/05/13 20:20:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.536 2012/05/13 20:24:28 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1802,7 +1802,7 @@ do_gcc_PIE_patches() {
 should_we_gcc_config() {
 	# we always want to run gcc-config if we're bootstrapping, otherwise
 	# we might get stuck with the c-only stage1 compiler
-	use bootstrap && return 0
+	use_if_iuse bootstrap && return 0
 	use build && return 0
 
 	# if the current config is invalid, we definitely want a new one
