@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.103 2012/05/05 05:38:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.104 2012/05/13 23:35:19 tetromino Exp $
+
+*gnome-settings-daemon-3.4.1 (13 May 2012)
+
+  13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-settings-daemon-3.2.2-r1.ebuild,
+  +files/gnome-settings-daemon-3.4.0-optional-color-wacom.patch,
+  +gnome-settings-daemon-3.4.1.ebuild:
+  Version bump with lots of bugfixes and much improved wacom support. Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gnome-settings-daemon-2.32.1-r2.ebuild,
