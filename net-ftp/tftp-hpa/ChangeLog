@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.59 2012/05/02 09:45:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.60 2012/05/13 11:15:32 swift Exp $
+
+  13 May 2012; <swift@gentoo.org> tftp-hpa-0.49-r1.ebuild, tftp-hpa-5.0.ebuild,
+  tftp-hpa-5.1.ebuild, tftp-hpa-5.2.ebuild:
+  SELinux policy module for TFTP is provided by selinux-tftp
 
   02 May 2012; Fabian Groffen <grobian@gentoo.org> tftp-hpa-5.2.ebuild:
   Fixed for Prefix, marked ~ppc-macos
