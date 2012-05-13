@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.94 2011/11/28 18:24:57 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.95 2012/05/13 17:25:20 pacho Exp $
+
+  13 May 2012; Pacho Ramos <pacho@gentoo.org> -xen-3.4.2-r4.ebuild,
+  metadata.xml:
+  Drop old.
 
   28 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-9999.ebuild:
   Move xen-9999 to virtualization overlay

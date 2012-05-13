@@ -7,7 +7,6 @@
 		<name>Ian Delaney aka idella4 proxy maintainer</name>
 	</maintainer>
 	<use>
-		<flag name='acm'>Enable the ACM/sHype XSM module from IBM</flag>
 		<flag name='flask'>Enable the Flask XSM module from NSA</flag>
 		<flag name='pae'>Enable support for PAE kernels (usually x86-32 with >4GB memory)</flag>
 		<flag name='xsm'>Enable the Xen Security Modules (XSM)</flag>
