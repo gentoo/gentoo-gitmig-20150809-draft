@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-2.4.ebuild,v 1.11 2012/04/26 14:58:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-2.4.ebuild,v 1.12 2012/05/13 19:59:57 rafaelmartins Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+PYTHON_DEPEND="2"
 
 inherit distutils
 
