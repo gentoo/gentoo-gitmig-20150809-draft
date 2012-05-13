@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.3d.ebuild,v 1.1 2012/05/12 14:41:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.3d.ebuild,v 1.2 2012/05/13 19:32:09 mr_bones_ Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -8,14 +8,14 @@ inherit autotools eutils wxwidgets games
 
 DESCRIPTION="Multi-player tank battle in 3D (OpenGL)"
 HOMEPAGE="http://www.scorched3d.co.uk/"
-SRC_URI="mirror://sourceforge/${PN}/Scorched3D-${PV}-src.tar.gz"
+SRC_URI="mirror://sourceforge/scorched3d/Scorched3D-${PV}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dedicated mysql"
 
-RDEPEND="media-libs/libsdl[video]
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-net
 	media-libs/libpng
 	virtual/jpeg:0
@@ -33,16 +33,15 @@ RDEPEND="media-libs/libsdl[video]
 	)
 	mysql? ( virtual/mysql )"
 
-DEPEND="$RDEPEND"
-
 S=${WORKDIR}/scorched
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-fixups.patch
-	epatch "${FILESDIR}"/${PN}-43.2a-gcc43.patch
-	epatch "${FILESDIR}"/${PN}-43.2a-odbc.patch
-	epatch "${FILESDIR}"/${PN}-43.2a-png15.patch
-	epatch "${FILESDIR}"/${PN}-43.2a-win32.patch
+	epatch \
+		"${FILESDIR}"/${P}-fixups.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-odbc.patch \
+		"${FILESDIR}"/${P}-png15.patch \
+		"${FILESDIR}"/${P}-win32.patch
 	eautoreconf
 }
 

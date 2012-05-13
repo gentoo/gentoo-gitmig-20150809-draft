@@ -1,6 +1,5 @@
-diff -ru scorched.orig/configure-al.m4 scorched/configure-al.m4
---- scorched.orig/configure-al.m4	2008-03-03 16:17:18.000000000 -0500
-+++ scorched/configure-al.m4	2009-02-15 20:43:35.000000000 -0500
+--- scorched.orig/configure-al.m4
++++ scorched/configure-al.m4
 @@ -7,25 +7,9 @@
  	[  --disable-openaltest    Do not try to compile and run a test OpenAL program],
  		    , enable_openaltest=yes)
@@ -30,9 +29,8 @@ diff -ru scorched.orig/configure-al.m4 scorched/configure-al.m4
  
  AC_MSG_CHECKING(for Freealut support)
  AC_PATH_PROG(FREEALUT_CONFIG, freealut-config, no)
-diff -ru scorched.orig/configure.ac scorched/configure.ac
---- scorched.orig/configure.ac	2008-03-03 16:17:18.000000000 -0500
-+++ scorched/configure.ac	2009-02-15 20:40:30.000000000 -0500
+--- scorched.orig/configure.ac
++++ scorched/configure.ac
 @@ -13,22 +13,6 @@
  AC_PROG_INSTALL
  AC_PROG_RANLIB
