@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.72 2012/05/10 06:03:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.73 2012/05/13 21:25:57 mgorny Exp $
+
+  13 May 2012; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Generate manpages from .rst files.
 
   10 May 2012; Patrick Lauer <patrick@gentoo.org> llvm-9999.ebuild:
   Upstream changed doc handling, removing obsolete patch from -9999 ebuild

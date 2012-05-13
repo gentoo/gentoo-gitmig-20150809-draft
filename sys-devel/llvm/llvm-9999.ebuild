@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.27 2012/05/10 06:03:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.28 2012/05/13 21:25:57 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -17,6 +17,7 @@ KEYWORDS=""
 IUSE="debug gold +libffi multitarget ocaml test udis86 vim-syntax"
 
 DEPEND="dev-lang/perl
+	dev-python/docutils
 	>=sys-devel/make-3.79
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
@@ -139,6 +140,16 @@ src_configure() {
 
 src_compile() {
 	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1
+
+	# generate the manpages
+	cd docs/CommandGuide || die
+	local infiles=( *.rst )
+
+	cat > Makefile <<EOF || die
+%.1: %.rst
+	rst2man.py \$< > \$@
+EOF
+	emake ${infiles[@]/.rst/.1}
 }
 
 src_install() {
@@ -174,4 +185,6 @@ src_install() {
 			eend $?
 		done
 	fi
+
+	doman docs/CommandGuide/*.1
 }
