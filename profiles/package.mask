@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13750 2012/05/13 17:46:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13751 2012/05/13 20:25:37 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -84,11 +84,6 @@ www-plugins/libflashsupport
 # Broken, nobody wants to maintain it as it's hard to keep
 # in a proper state (#410639). Removal in a month.
 sci-physics/abinit
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Failing tests (#404989), nothing needs it. Removal in a
-# month.
-dev-util/dmake
 
 # Pacho Ramos <pacho@gentoo.org> (13 May 2012)
 # No needed since kernel-2.6.38 (#406577). Removal in a month.
