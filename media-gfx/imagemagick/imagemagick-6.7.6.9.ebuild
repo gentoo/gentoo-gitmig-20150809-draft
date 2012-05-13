@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.6.9.ebuild,v 1.1 2012/05/10 14:07:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.6.9.ebuild,v 1.2 2012/05/13 17:19:17 grobian Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs versionator
+inherit multilib toolchain-funcs versionator libtool
 
 MY_P=ImageMagick-$(replace_version_separator 3 '-')
 
@@ -68,6 +68,10 @@ REQUIRED_USE="corefonts? ( truetype )
 
 S=${WORKDIR}/${MY_P}
 
+src_prepare() {
+	elibtoolize  # for Darwin bundles
+}
+
 src_configure() {
 	local depth=16
 	use q8 && depth=8
@@ -119,7 +123,7 @@ src_configure() {
 		$(use_with svg rsvg) \
 		$(use_with tiff) \
 		$(use_with webp) \
-		$(use_with corefonts windows-font-dir /usr/share/fonts/corefonts) \
+		$(use_with corefonts windows-font-dir "${EPREFIX}"/usr/share/fonts/corefonts) \
 		$(use_with wmf) \
 		$(use_with xml) \
 		--${openmp}-openmp
@@ -136,7 +140,7 @@ src_test() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		DOCUMENTATION_PATH="/usr/share/doc/${PF}" \
+		DOCUMENTATION_PATH="${EPREFIX}/usr/share/doc/${PF}" \
 		install
 
 	dodoc {AUTHORS,NEWS,README}.txt ChangeLog
