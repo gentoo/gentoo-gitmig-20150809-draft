@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.3 2012/05/12 00:05:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.4 2012/05/13 16:34:31 aballier Exp $
 
 EAPI=2
 
@@ -282,12 +282,6 @@ src_install() {
 	einfo "Installing for ${CTARGET} in ${CHOST}.."
 	install_includes ${INCLUDEDIR}
 
-	# Install math.h when crosscompiling, at this point
-	if [ "${CHOST}" != "${CTARGET}" ]; then
-		insinto "/usr/${CTARGET}/usr/include"
-		doins "${S}/msun/src/math.h"
-	fi
-
 	use crosscompile_opts_headers-only && return 0
 	local mylibdir=$(get_libdir)
 
@@ -439,13 +433,14 @@ install_includes()
 		INCLUDEDIR="${INCLUDEDIR}" BINOWN="${BINOWN}" \
 		BINGRP="${BINGRP}" || die "install_includes() failed"
 	einfo "includes installed ok."
-	EXTRA_INCLUDES="gnu/lib/libssp lib/librtld_db gnu/lib/libregex"
+	EXTRA_INCLUDES="gnu/lib/libssp lib/librtld_db lib/libutil lib/msun gnu/lib/libregex"
 	for i in $EXTRA_INCLUDES; do
 		einfo "Installing $i includes into ${INCLUDEDIR} as ${BINOWN}:${BINGRP}..."
 		cd "${WORKDIR}/$i" || die
 		$(freebsd_get_bmake) installincludes DESTDIR="${DESTDIR}" \
-			MACHINE=${MACHINE} INCLUDEDIR="${INCLUDEDIR}" BINOWN="${BINOWN}" \
-			BINGRP="${BINGRP}" || die "problem installing ssp includes."
+			MACHINE=${MACHINE} MACHINE_ARCH=${MACHINE} \
+			INCLUDEDIR="${INCLUDEDIR}" BINOWN="${BINOWN}" \
+			BINGRP="${BINGRP}" || die "problem installing $i includes."
 		einfo "$i includes installed ok."
 	done
 }

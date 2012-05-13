@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.113 2012/05/12 00:05:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.114 2012/05/13 16:34:31 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r1.ebuild:
+  preinstall some more headers fixing build of a cross-compiler
 
   11 May 2012; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-9.0.ebuild,
   -files/freebsd-lib-9.0-mancol.patch:
