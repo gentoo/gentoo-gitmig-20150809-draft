@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.18 2012/05/04 03:33:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.19 2012/05/13 16:04:09 xmw Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.8.165-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-1.0-buildsystem.patch
 
 	if ! use vanilla ; then
 		epatch "${FILESDIR}"/${PN}-9999-zoom-1.patch

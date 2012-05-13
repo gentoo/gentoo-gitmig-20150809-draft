@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.38 2012/05/04 03:33:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.39 2012/05/13 16:04:09 xmw Exp $
+
+  13 May 2012; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
+  Use newer buildsystem patch.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> mupdf-0.9.ebuild,
   mupdf-1.0.ebuild, mupdf-9999.ebuild:
