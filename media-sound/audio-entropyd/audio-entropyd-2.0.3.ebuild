@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-2.0.3.ebuild,v 1.1 2011/04/18 15:08:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-2.0.3.ebuild,v 1.2 2012/05/13 10:45:27 swift Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="selinux"
 
-RDEPEND="selinux? ( sec-policy/selinux-audio-entropyd )
+RDEPEND="selinux? ( sec-policy/selinux-entropyd )
 	media-sound/alsa-utils"
 
 src_prepare() {
