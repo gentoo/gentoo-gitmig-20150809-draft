@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.42 2012/05/03 06:27:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.43 2012/05/13 06:27:44 jdhore Exp $
+
+  13 May 2012; Jeff Horelick <jdhore@gentoo.org> atheme-services-9999.ebuild:
+  Make the -9999 ebuild clone the submodules too to fix the build since
+  modules/contrib/ was made a submodule.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> atheme-services-6.0.10.ebuild,
   atheme-services-7.0.0.ebuild, atheme-services-7.0.1.ebuild,
