@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.179 2012/05/04 15:12:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.180 2012/05/13 14:08:01 pesa Exp $
+
+  13 May 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Fix kde USE flag description (media-libs/phonon vs. media-sound/phonon).
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> PyQt4-4.9.1.ebuild:
   Migrating dev-util/pkgconfig -> virtual/pkgconfig
