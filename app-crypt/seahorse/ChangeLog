@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.154 2012/05/03 20:36:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.155 2012/05/13 18:18:52 tetromino Exp $
+
+*seahorse-3.4.1 (13 May 2012)
+
+  13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -seahorse-3.2.1.ebuild, +seahorse-3.4.1.ebuild,
+  +files/seahorse-3.4.1-g_clear_object.patch:
+  Version bump with significant UI changes. Drop old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> seahorse-3.2.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
