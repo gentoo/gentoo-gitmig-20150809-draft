@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.2.0.1.ebuild,v 1.4 2012/05/05 05:38:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.4.0.ebuild,v 1.1 2012/05/13 18:43:24 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -39,7 +39,7 @@ DEPEND="${COMMON_DEPEND}
 	test? ( dev-libs/gjs )"
 
 pkg_setup() {
-	python_pkg_setup
+	use python && python_pkg_setup
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 	# Do NOT compile with --disable-debug/--enable-debug=no
@@ -64,34 +64,53 @@ src_prepare() {
 	# Don't show KDE standalone settings desktop files in GNOME others menu
 	epatch "${FILESDIR}/${PN}-3.0.0-ignore_kde_standalone.patch"
 
-	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
-
-	python_copy_sources
+	if use python; then
+		python_clean_py-compile_files
+		python_copy_sources
+	else
+		sed -e 's/\(SUBDIRS.*\) simple-editor/\1/' \
+			-i Makefile.* || die "sed failed"
+	fi
 }
 
 src_configure() {
-	python_execute_function -s gnome2_src_configure
+	if use python; then
+		python_execute_function -s gnome2_src_configure
+	else
+		gnome2_src_configure
+	fi
 }
 
 src_compile() {
-	python_execute_function -s gnome2_src_compile
+	if use python; then
+		python_execute_function -s gnome2_src_compile
+	else
+		gnome2_src_compile
+	fi
 }
 
 src_test() {
-	python_execute_function -s -d
+	if use python; then
+		python_execute_function -s -d
+	else
+		default
+	fi
 }
 
 src_install() {
-	python_execute_function -s gnome2_src_install
-	python_clean_installation_image
+	if use python; then
+		python_execute_function -s gnome2_src_install
+		python_clean_installation_image
+	else
+		gnome2_src_install
+	fi
 
 	# Prefix menu, bug #256614
 	mv "${ED}"/etc/xdg/menus/applications.menu \
 		"${ED}"/etc/xdg/menus/gnome-applications.menu || die "menu move failed"
 
 	exeinto /etc/X11/xinit/xinitrc.d/
-	doexe "${FILESDIR}/10-xdg-menu-gnome"
+	newexe "${FILESDIR}/10-xdg-menu-gnome-r1" 10-xdg-menu-gnome
 }
 
 pkg_postinst() {
