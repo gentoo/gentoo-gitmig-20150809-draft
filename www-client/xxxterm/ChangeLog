@@ -1,6 +1,11 @@
 # ChangeLog for www-client/xxxterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.8 2012/04/29 19:57:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.9 2012/05/13 17:42:39 ago Exp $
+
+*xxxterm-1.1103-r1 (13 May 2012)
+
+  13 May 2012; Agostino Sarubbo <ago@gentoo.org> +xxxterm-1.1103-r1.ebuild:
+  Add examples IUSE and some improvements in depend/rdepend
 
   29 Apr 2012; Agostino Sarubbo <ago@gentoo.org> -xxxterm-1.518.ebuild,
   xxxterm-1.1103.ebuild:
