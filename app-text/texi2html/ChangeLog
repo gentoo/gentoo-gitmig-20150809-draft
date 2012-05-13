@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texi2html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.63 2012/05/10 12:44:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.64 2012/05/13 12:11:13 maekke Exp $
+
+  13 May 2012; Markus Meier <maekke@gentoo.org> texi2html-5.0-r1.ebuild:
+  arm stable, bug #414927
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> texi2html-5.0-r1.ebuild:
   Stable for amd64, wrt bug #414927
