@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Unidecode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.16 2012/05/09 17:05:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.17 2012/05/13 11:38:11 maekke Exp $
+
+  13 May 2012; Markus Meier <maekke@gentoo.org> Text-Unidecode-0.40.0.ebuild:
+  arm stable, bug #414929
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   Text-Unidecode-0.40.0.ebuild:
