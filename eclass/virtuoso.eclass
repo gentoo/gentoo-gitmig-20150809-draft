@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.12 2011/11/24 00:57:00 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.13 2012/05/13 18:53:58 creffett Exp $
 
 # @ECLASS: virtuoso.eclass
 # @MAINTAINER:
 # Maciej Mrozowski <reavertm@gentoo.org>
+# Chris Reffett <creffett@gentoo.org>
 #
 # @BLURB: Provides splitting functionality for Virtuoso
 # @DESCRIPTION:
