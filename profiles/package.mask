@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13749 2012/05/13 10:35:21 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13750 2012/05/13 17:46:07 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,132 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Upstream dead, needs to be ported to mp4v2-1.9.1 or gpac utils.
+# Removal in a month.
+media-video/undvd
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Overflow (#337410), no new version for a long time and nothing
+# needs it. Removal in a month.
+media-sound/ssrc
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# For kernel-2.2, doesn't respect LDFLAGS (#337685). Removal in a
+# month.
+net-firewall/ipchains
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Doesn't respect LDFLAGS (#337906), only supports really old
+# flash. Removal in a month.
+media-libs/libflash
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Dead for a long time, opened bugs, doesn't work (#356241). Use
+# net-fs/smbnetfs instead. Removal in a month.
+net-fs/fusesmb
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Fails to build (#361317), replaced by jabberd2 for a long time.
+# Removal in a month.
+net-im/jabberd
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# No longer works due Telecom Italia modifications in their
+# website (#363115). Removal in a month.
+app-mobilephone/galicesms
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Fails to build against gcc-4.6 (#363535). Removal in a month.
+sys-boot/cromwell
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# net-misc/batman-adv replaces them (#381659). Removal in a
+# month.
+net-misc/batmand
+net-misc/batman-vis
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# No needed for a long time (#395545). Removal in a month.
+www-plugins/libflashsupport
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Broken, nobody wants to maintain it as it's hard to keep
+# in a proper state (#410639). Removal in a month.
+sci-physics/abinit
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Failing tests (#404989), nothing needs it. Removal in a
+# month.
+dev-util/dmake
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# No needed since kernel-2.6.38 (#406577). Removal in a month.
+sys-kernel/xen-sources
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# No release since 2006, broken with cups-1.5 (#408315),
+# nobody willing to maintain it. A lot of image viewers in the
+# tree to replace it. Removal in a month.
+media-gfx/flphoto
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Still needs old qof slot that relies on sqlite2 (#408831).
+# Removal in a month.
+dev-libs/qof:0
+app-office/gnotime
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Still using glib-1, there are some replacements in the tree
+# and nothing RDEPENDs on it (#409537). Removal in a month.
+app-crypt/quintuple-agent
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Still using glib-1, only needed for really old devices and
+# only supporting up to 64 MB due a bug (#409539). Removal
+# in a month.
+app-misc/rio500
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Nothing looks to need this old slot (#409833). Removal in a
+# month.
+dev-util/glade:2
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Needs old tcl/tk, doesn't respect CC, LDFLAGS, CFLAGS (#410511).
+# Removal in a month.
+dev-ada/tash
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Doesn't connect at all, security issues as reported in debian
+# (#411205). Removal in a month.
+net-im/amsn
+x11-themes/amsn-skins
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Doesn't work (#412139), use games-misc/xpenguins instead.
+# Removal in a month.
+x11-misc/xsimpsons
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Only for kernel-2.4 (#412193). Removal in a month.
+sys-kernel/sparc-sources
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Upstream reports circumvention; developer has ceased 
+# maintenance (#415255). Removal in a month.
+app-shells/rssh
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Replaced by x11-misc/gbdfed (#415651). Removal in a month.
+x11-misc/xmbdfed
+
+# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
+# Dead for a long time and nothing needs them (#415669, #415675).
+# Removal in a month.
+x11-misc/fme
+x11-misc/fxred
 
 # Julian Ospald <hasufell@gentoo.org> (13 May 2012)
 # Torbrowser as it is in portage is neither supported by mozilla
