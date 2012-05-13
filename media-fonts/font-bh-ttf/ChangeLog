@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-ttf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.52 2011/02/14 15:53:58 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.53 2012/05/13 17:26:45 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org> font-bh-ttf-1.0.3.ebuild:
+  keyword ~amd64-fbsd
 
   14 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -font-bh-ttf-1.0.1.ebuild:
