@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.2.2.ebuild,v 1.1 2012/02/12 17:19:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.2.4.ebuild,v 1.1 2012/05/13 23:36:49 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -46,6 +46,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35
+	virtual/pkgconfig
 "
 
 # FIXME: run test-suite with files on live file-system
@@ -61,4 +62,19 @@ pkg_setup() {
 		$(use_enable clutter)
 		$(use_enable packagekit)
 		$(use_enable raw exiv)"
+}
+
+src_prepare() {
+	# argyllcms executables are prefixed with "argyll-" in Gentoo; bug #407319,
+	# https://bugzilla.gnome.org/show_bug.cgi?id=672028
+	epatch "${FILESDIR}/${PN}-3.2.2-argyll-prefix.patch"
+
+	gnome2_src_prepare
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+
+	elog "If you want to do display or scanner calibration, you will need to"
+	elog "install media-gfx/argyllcms"
 }
