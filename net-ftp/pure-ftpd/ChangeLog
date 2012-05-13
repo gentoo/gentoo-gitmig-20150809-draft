@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.138 2012/04/24 00:14:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.139 2012/05/13 10:52:22 swift Exp $
+
+  13 May 2012; <swift@gentoo.org> pure-ftpd-1.0.29-r1.ebuild,
+  pure-ftpd-1.0.32-r2.ebuild, pure-ftpd-1.0.35.ebuild, pure-ftpd-1.0.36.ebuild:
+  SELinux policy for FTP daemons is provided by selinux-ftp
 
   24 Apr 2012; Mike Frysinger <vapier@gentoo.org> pure-ftpd-1.0.29-r1.ebuild,
   pure-ftpd-1.0.32-r2.ebuild, pure-ftpd-1.0.35.ebuild, pure-ftpd-1.0.36.ebuild:

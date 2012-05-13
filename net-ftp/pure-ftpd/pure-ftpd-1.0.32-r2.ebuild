@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.32-r2.ebuild,v 1.9 2012/04/24 00:14:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.32-r2.ebuild,v 1.10 2012/05/13 10:52:22 swift Exp $
 
 EAPI=2
 inherit eutils confutils flag-o-matic
@@ -29,7 +29,7 @@ DEPEND="caps? ( sys-libs/libcap )
 
 RDEPEND="${DEPEND}
 	net-ftp/ftpbase
-	selinux? ( sec-policy/selinux-ftpd )"
+	selinux? ( sec-policy/selinux-ftp )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.28-pam.patch

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3g.ebuild,v 1.6 2011/12/22 22:46:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3g.ebuild,v 1.7 2012/05/13 10:49:47 swift Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -43,7 +43,7 @@ DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 	xinetd? ( virtual/inetd )"
 RDEPEND="${DEPEND}
 	net-ftp/ftpbase
-	selinux? ( sec-policy/selinux-ftpd )"
+	selinux? ( sec-policy/selinux-ftp )"
 
 S="${WORKDIR}/${P/_/}"
 
