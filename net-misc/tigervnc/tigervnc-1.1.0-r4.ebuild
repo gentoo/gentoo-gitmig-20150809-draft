@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r3.ebuild,v 1.4 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r4.ebuild,v 1.1 2012/05/13 19:28:52 armin76 Exp $
 
 EAPI="1"
 
@@ -15,7 +15,8 @@ HOMEPAGE="http://www.tigervnc.org"
 #	http://dev.gentoo.org/~armin76/dist/${P}.tar.bz2
 SRC_URI="mirror://sourceforge/tigervnc/${P}.tar.gz
 	mirror://gentoo/${PN}.png
-	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	)"
+	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	
+		mirror://gentoo/tigervnc-1.1.0_xorg-1.11.patch.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -121,7 +122,7 @@ src_unpack() {
 
 	if use server ; then
 		epatch xserver110.patch
-		epatch "${FILESDIR}"/xserver111.patch
+		epatch "${WORKDIR}"/${P}_xorg-1.11.patch
 		cd xserver
 		epatch "${FILESDIR}"/1.1.0-export_missing_symbol.patch
 		epatch "${FILESDIR}"/1.1.0-gethomedir.patch
