@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gbase
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbase/ChangeLog,v 1.4 2012/05/05 04:53:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbase/ChangeLog,v 1.5 2012/05/13 16:47:25 hwoarang Exp $
+
+  13 May 2012; Markos Chandras <hwoarang@gentoo.org> gbase-0.5.ebuild:
+  Update SRC_URI. Bug #415677 thanks to df <demmamussabebonk@gmail.com>
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gbase-0.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
