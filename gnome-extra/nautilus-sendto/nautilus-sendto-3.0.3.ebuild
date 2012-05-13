@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-3.0.1.ebuild,v 1.2 2012/05/05 06:25:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-3.0.3.ebuild,v 1.1 2012/05/13 00:24:42 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,16 +13,16 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="cdr doc gajim +mail pidgin upnp"
 
-COMMON_DEPEND=">=x11-libs/gtk+-2.90.3:3
+COMMON_DEPEND=">=x11-libs/gtk+-2.90.3:3[X(+)]
 	>=dev-libs/glib-2.25.9:2
 	cdr? ( >=app-cdr/brasero-2.26.0[nautilus] )
 	gajim? (
 		net-im/gajim
 		>=dev-libs/dbus-glib-0.60 )
-	mail? ( >=gnome-extra/evolution-data-server-1.5.3 )
+	mail? ( >=gnome-extra/evolution-data-server-3 )
 	pidgin? (
 		>=net-im/pidgin-2.0.0
 		>=dev-libs/dbus-glib-0.60 )
@@ -31,9 +31,9 @@ RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/nautilus-2.91.1[sendto]"
 DEPEND="${COMMON_DEPEND}
 	>=gnome-base/nautilus-2.91.1
+	>=dev-util/intltool-0.35
 	sys-devel/gettext
 	virtual/pkgconfig
-	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 # Needed for eautoreconf
 #	>=gnome-base/gnome-common-0.12
@@ -54,6 +54,12 @@ pkg_setup() {
 	_use_plugin pidgin
 	_use_plugin gajim
 	_use_plugin upnp
+}
+
+src_prepare() {
+	# Regenerate marshaler code for <glib-2.31 compatibility
+	rm -v src/plugins/evolution/econtactentry-marshal.{c,h} || die
+	gnome2_src_prepare
 }
 
 src_install() {
