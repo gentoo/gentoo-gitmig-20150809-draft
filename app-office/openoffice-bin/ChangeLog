@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.253 2012/05/09 17:39:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.254 2012/05/13 11:12:38 ago Exp $
+
+  13 May 2012; Agostino Sarubbo <ago@gentoo.org> openoffice-bin-3.4.0.ebuild:
+  Stable for amd64, wrt bug #386081
 
   09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   openoffice-bin-3.4.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.4.0.ebuild,v 1.2 2012/05/09 17:39:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.4.0.ebuild,v 1.3 2012/05/13 11:12:38 ago Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ done
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="!app-office/libreoffice
 	!app-office/openoffice
