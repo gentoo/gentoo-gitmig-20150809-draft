@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13747 2012/05/12 23:36:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13748 2012/05/13 10:33:04 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -92,12 +92,6 @@ sys-fs/beaglefs
 app-dicts/canna-canda-med
 app-dicts/canna-shion
 app-dicts/canna-zipcode
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 May 2012)
-# Mask out broken release of cmake wrt bug #414659 and
-# bug #414601. Waiting for maintainers to apply the
-# upstream patch.
-=dev-util/cmake-2.8.8-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (06 May 2012)
 # Stopped working long time ago. Removal in 30 days
