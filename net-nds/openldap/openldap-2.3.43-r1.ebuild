@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.43-r1.ebuild,v 1.10 2012/02/02 08:42:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.43-r1.ebuild,v 1.11 2012/05/13 11:38:39 swift Exp $
 
 EAPI="2"
 
@@ -55,7 +55,7 @@ RDEPEND="sys-libs/ncurses
 			app-crypt/heimdal
 		)
 	)
-	selinux? ( sec-policy/selinux-openldap )"
+	selinux? ( sec-policy/selinux-ldap )"
 DEPEND="${RDEPEND}"
 
 # for tracking versions

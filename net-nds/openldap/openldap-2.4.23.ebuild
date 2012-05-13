@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.23.ebuild,v 1.13 2012/02/21 00:19:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.23.ebuild,v 1.14 2012/05/13 11:38:39 swift Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=1.9
@@ -43,7 +43,7 @@ RDEPEND="sys-libs/ncurses
 		kerberos? ( virtual/krb5 )
 		cxx? ( dev-libs/cyrus-sasl )
 	)
-	selinux? ( sec-policy/selinux-openldap )"
+	selinux? ( sec-policy/selinux-ldap )"
 DEPEND="${RDEPEND}"
 
 # for tracking versions

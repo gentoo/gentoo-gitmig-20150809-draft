@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.28-r1.ebuild,v 1.12 2012/03/02 21:35:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.28-r1.ebuild,v 1.13 2012/05/13 11:38:39 swift Exp $
 
 EAPI="3"
 
@@ -48,7 +48,7 @@ RDEPEND="sys-libs/ncurses
 		kerberos? ( virtual/krb5 )
 		cxx? ( dev-libs/cyrus-sasl )
 	)
-	selinux? ( sec-policy/selinux-openldap )"
+	selinux? ( sec-policy/selinux-ldap )"
 DEPEND="${RDEPEND}
 	sys-apps/groff"
 
