@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xcursorgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.57 2012/03/23 15:32:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.58 2012/05/13 16:25:40 aballier Exp $
+
+  13 May 2012; Alexis Ballier <aballier@gentoo.org> xcursorgen-1.0.5.ebuild:
+  keyword ~amd64-fbsd
 
 *xcursorgen-1.0.5 (23 Mar 2012)
 
