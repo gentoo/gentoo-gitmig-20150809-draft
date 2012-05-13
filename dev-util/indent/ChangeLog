@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/indent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.59 2012/05/09 19:22:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.60 2012/05/13 12:03:29 maekke Exp $
+
+  13 May 2012; Markus Meier <maekke@gentoo.org> indent-2.2.11-r1.ebuild:
+  arm stable, bug #414947
 
   09 May 2012; Jeff Horelick <jdhore@gentoo.org> indent-2.2.11-r1.ebuild:
   marked x86 per bug 414947
