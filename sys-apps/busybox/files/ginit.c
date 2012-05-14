@@ -92,6 +92,14 @@ int ginit_main(int argc UNUSED_PARAM, char **argv)
 		} else {
 			eprintf("%s appears to be mounted; skipping its setup\n", "/sys");
 		}
+
+		/* Mount /proc as mdev will fork+exec /proc/self/exe */
+		if (saw("mountpoint", "-q", "/proc") != 0) {
+			/* Try /etc/fstab */
+			if (saw("mount", "-n", "/proc"))
+				saw("mount", "-n", "-t", "proc", "proc", "/proc");
+		}
+
 		saw("mdev", "-s");
 	}
 
