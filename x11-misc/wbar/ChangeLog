@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.15 2012/05/05 04:53:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.16 2012/05/14 13:27:01 hasufell Exp $
+
+*wbar-2.3.0 (14 May 2012)
+
+  14 May 2012; Julian Ospald <hasufell@gentoo.org> +wbar-2.3.0.ebuild,
+  metadata.xml:
+  adopt package, bump version (rm autotools and eutils, keep Werror flag, fix
+  SRC_URI)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wbar-2.2.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
