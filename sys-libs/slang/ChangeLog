@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.131 2012/05/04 14:36:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.132 2012/05/14 07:26:40 grobian Exp $
+
+  14 May 2012; Fabian Groffen <grobian@gentoo.org> slang-2.2.4.ebuild:
+  Fix linking on Solaris
 
   04 May 2012; Alexis Ballier <aballier@gentoo.org> slang-2.2.4.ebuild:
   keyword ~amd64-fbsd
