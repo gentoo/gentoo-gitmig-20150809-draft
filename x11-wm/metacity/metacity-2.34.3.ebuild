@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.34.0.ebuild,v 1.2 2012/05/04 08:58:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.34.3.ebuild,v 1.1 2012/05/14 00:03:35 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 # debug only changes CFLAGS
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit eutils gnome2
 
@@ -17,10 +18,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-in
 IUSE="test xinerama"
 
 # XXX: libgtop is automagic, hard-enabled instead
-RDEPEND=">=x11-libs/gtk+-2.20:2
+RDEPEND=">=x11-libs/gtk+-2.24:2
 	>=x11-libs/pango-1.2[X]
-	>=gnome-base/gconf-2:2
-	>=dev-libs/glib-2.6:2
+	>=dev-libs/glib-2.25.10:2
+	>=gnome-base/gsettings-desktop-schemas-3.3
 	>=x11-libs/startup-notification-0.7
 	>=x11-libs/libXcomposite-0.2
 	x11-libs/libXfixes
@@ -40,8 +41,8 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.8
 	sys-devel/gettext
-	virtual/pkgconfig
 	>=dev-util/intltool-0.35
+	virtual/pkgconfig
 	test? ( app-text/docbook-xml-dtd:4.5 )
 	xinerama? ( x11-proto/xineramaproto )
 	x11-proto/xextproto
@@ -53,31 +54,20 @@ pkg_setup() {
 		--disable-static
 		--enable-canberra
 		--enable-compositor
-		--enable-gconf
 		--enable-render
 		--enable-shape
 		--enable-sm
 		--enable-startup-notification
 		--enable-xsync
-		--with-gtk=2.0
 		$(use_enable xinerama)"
 }
 
 src_prepare() {
 	gnome2_src_prepare
 
-	# Use sys/wait.h header instead of wait.h as described in posix specs,
-	# bug 292009
-	epatch "${FILESDIR}/${PN}-2.28.0-sys-wait-header.patch"
-
 	# WIFEXITED and friends are defined in sys/wait.h
 	# Fixes a build failure on BSD.
 	# https://bugs.gentoo.org/show_bug.cgi?id=309443
 	# https://bugzilla.gnome.org/show_bug.cgi?id=605460
 	epatch "${FILESDIR}/${PN}-2.28.1-wif_macros.patch"
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}" -name "*.la" -delete || die
 }
