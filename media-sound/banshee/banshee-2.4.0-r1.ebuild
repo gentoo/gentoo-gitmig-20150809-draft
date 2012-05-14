@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.4.0-r1.ebuild,v 1.5 2012/05/05 08:10:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.4.0-r1.ebuild,v 1.6 2012/05/14 15:42:45 pacho Exp $
 
 EAPI="4"
 
@@ -67,6 +67,7 @@ RDEPEND=">=dev-lang/mono-2.4.3
 		>=dev-dotnet/google-gdata-sharp-1.4
 	)
 	udev? (
+		app-misc/media-player-info
 		dev-dotnet/gudev-sharp
 		dev-dotnet/gkeyfile-sharp
 		dev-dotnet/gtk-sharp-beans
