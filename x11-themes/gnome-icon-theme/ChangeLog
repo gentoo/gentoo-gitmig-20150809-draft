@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.213 2012/05/05 04:10:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.214 2012/05/14 04:47:46 tetromino Exp $
+
+*gnome-icon-theme-3.4.0 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-icon-theme-2.91.7.ebuild, -gnome-icon-theme-3.0.0.ebuild,
+  gnome-icon-theme-3.2.1.2.ebuild, +gnome-icon-theme-3.4.0.ebuild:
+  Version bump, adds trophy and uninterruptible power supply icons. Correct
+  license. Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gnome-icon-theme-2.30.3.ebuild, gnome-icon-theme-2.91.7.ebuild,
