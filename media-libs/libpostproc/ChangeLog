@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libpostproc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.1 2012/05/14 19:12:12 lu_zero Exp $
+
+*libpostproc-9999 (14 May 2012)
+*libpostproc-0.8.0.20120217 (14 May 2012)
+
+  14 May 2012; Luca Barbato <lu_zero@gentoo.org>
+  +libpostproc-0.8.0.20120217.ebuild, +libpostproc-9999.ebuild, +metadata.xml:
+  Initial commit
+
