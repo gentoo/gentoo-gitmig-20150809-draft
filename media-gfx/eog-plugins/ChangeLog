@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/eog-plugins
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.1 2012/05/14 04:21:49 tetromino Exp $
+
+*eog-plugins-3.4.0 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +eog-plugins-3.4.0.ebuild, +metadata.xml:
+  New package with official eog plugins (bug #389413, thanks to Christian
+  Strahl for reporting).
+
