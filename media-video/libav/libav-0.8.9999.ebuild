@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.11 2012/05/14 08:26:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.12 2012/05/14 08:34:51 scarabeus Exp $
 
 EAPI=4
 
@@ -122,8 +122,6 @@ REQUIRED_USE="bindist? ( !aacplus !faac !openssl )
 	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl )
 	test? ( encode zlib )
 "
-
-RESTRICT="test"
 
 src_prepare() {
 	# if we have snapshot then we need to hardcode the version
