@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gnome-video-effects
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.6 2012/03/25 16:54:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.7 2012/05/14 06:48:42 tetromino Exp $
+
+*gnome-video-effects-0.4.0 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-video-effects-0.4.0.ebuild:
+  Version bump, adds horizontal flip.
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
   gnome-video-effects-0.3.0.ebuild:
