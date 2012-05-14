@@ -11,7 +11,7 @@
     <flag name='jit'>
       Enable Just-In-Time compilation of regexp bytecode to machine
       code, through the SLJIT compiler. This feature might conflict
-      wtih security mitigation strategies such as NX/PaX as enabled by
+      with security mitigation strategies such as NX/PaX as enabled by
       Gentoo Hardened.
     </flag>
 
