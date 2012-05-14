@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.617 2012/05/13 15:45:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.618 2012/05/14 19:30:40 halcy0n Exp $
+
+  13 May 2012; Mark Loeser <halcy0n@gentoo.org> mysql-5.1.62-r1.ebuild:
+  Stable for ppc/ppc64; bug #412889
 
   13 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mysql-5.1.62-r1.ebuild:
   x86 stable wrt security bug #412889
