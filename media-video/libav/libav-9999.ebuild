@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.39 2012/05/13 19:48:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.40 2012/05/14 06:32:07 scarabeus Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ IUSE=" aac aacplus alsa ass amr bindist bluray  +bzip2 cdio celt cpudetection
 CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 neon ssse3 vis"
 
 for i in ${CPU_FEATURES}; do
-	IUSE="${IUSE} ${i%:*}"
+	IUSE+=" ${i%:*}"
 done
 
 RDEPEND="
@@ -244,8 +244,7 @@ src_configure() {
 	# If they contain an unknown CPU it will not hurt since ffmpeg's configure
 	# will just ignore it.
 	for i in $(get-flag march) $(get-flag mcpu) $(get-flag mtune) ; do
-		[ "${i}" = "native" ] && i="host" # bug #273421
-		[[ ${i} = *-sse3 ]] && i="${i%-sse3}" # bug 283968
+		[[ "${i}" == "native" ]] && i="host" # bug #273421
 		myconf+=" --cpu=${i}"
 		break
 	done
@@ -339,5 +338,5 @@ pkg_postinst() {
 
 src_test() {
 	LD_LIBRARY_PATH="${S}/libavcore:${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
-		emake -j1 fate
+		emake V=1 -j1 fate
 }

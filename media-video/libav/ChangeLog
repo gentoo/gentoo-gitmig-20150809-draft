@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.76 2012/05/13 19:48:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.77 2012/05/14 06:32:07 scarabeus Exp $
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  Remove redundant check for sse3 handled by configure.
 
   13 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild,
   metadata.xml:
