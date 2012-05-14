@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320.ebuild,v 1.1 2012/05/14 12:53:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320.ebuild,v 1.2 2012/05/14 12:57:00 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils linux-info pam systemd
@@ -65,7 +65,6 @@ src_prepare() {
 src_configure() {
 	local myconf
 	[[ ${PV} = *p20* ]] && myconf='--enable-maintainer-mode'
-
 
 	econf \
 		XMLTO_FLAGS="--skip-validation" \
