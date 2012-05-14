@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta4.ebuild,v 1.1 2010/08/02 02:37:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.2.1.ebuild,v 1.1 2012/05/14 19:02:53 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -14,7 +14,7 @@ SRC_URI="http://www.dest-unreach.org/socat/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~ppc-macos ~x64-macos"
 IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="
@@ -24,8 +24,13 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.7.2.0-cross-compile.patch
+	eautoreconf
+}
+
 src_configure() {
-	filter-flags -Wall -Wno-error*
+	filter-flags -Wno-error*
 	econf \
 		$(use_enable ssl openssl) \
 		$(use_enable readline) \
@@ -34,11 +39,11 @@ src_configure() {
 }
 
 src_test() {
-	TMPDIR="${T}" emake test || die 'self test failed'
+	TMPDIR="${T}" emake test
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake install DESTDIR="${D}"
 
 	dodoc BUGREPORTS CHANGES DEVELOPMENT \
 		FAQ FILES PORTING README SECURITY VERSION
