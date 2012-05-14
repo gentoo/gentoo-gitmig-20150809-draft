@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.4.0.ebuild,v 1.2 2012/05/05 06:56:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.4.0.ebuild,v 1.3 2012/05/14 14:56:44 ssuominen Exp $
 
 EAPI=4
 inherit virtualx xfconf
@@ -34,7 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=dev-util/desktop-file-utils-0.20-r1
 	x11-misc/shared-mime-info
 	dbus? ( ${GVFS_DEPEND} )
-	udev? ( ${GVFS_DEPEND}[gdu,udev] )
+	udev? ( || ( ${GVFS_DEPEND}[udisks,udev] ${GVFS_DEPEND}[gdu,udev] ) )
 	xfce_plugins_trash? ( ${GVFS_DEPEND} )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
