@@ -1,0 +1,61 @@
+--- wbarconf/install.sh
++++ wbarconf/install.sh
+@@ -1,5 +1,6 @@
+ #!/bin/sh
+ startdir=$1
++version=0.7.2
+ 
+ if [ $(echo $1|wc -w) -eq 0 ];then
+ 	echo "Usage: install.sh /path/to"
+@@ -14,17 +15,20 @@
+ mkdir -p $startdir/bin/ || return 1
+ install -m0755 wbarconf $startdir/bin/ || return 1
+ 
+-mkdir -p $startdir/share/wbarconf/
+-install -m0644 README $startdir/share/wbarconf/ || return 1
+-install -m0644 COPYING $startdir/share/wbarconf/ || return 1
++mkdir -p $startdir/share/doc/wbarconf-$version/wbarbacks/
++install -m0644 README $startdir/share/doc/wbarconf-$version/ || return 1
++install -m0644 wbarbacks/README $startdir/share/doc/wbarconf-$version/wbarbacks/ || return 1
+ 
+ mkdir -p $startdir/share/locale/ || return 1
+-cp -av locale/* $startdir/share/locale/ || return 1
++cp -dpRv locale/* $startdir/share/locale/ || return 1
+ chmod 0755 -R  $startdir/share/ || return 1
+ find $startdir/share/locale/ -name wbarconf.po -print | xargs rm -f
++
++mkdir -p $startdir/share/wbarconf/
+ install -m0644 messages.pot $startdir/share/wbarconf/ || return 1
+ 
+-cp -av wbarbacks $startdir/share/wbarconf/ || return 1
++mkdir -p $startdir/share/wbarconf/wbarbacks/
++cp -dpRv wbarbacks/*.png $startdir/share/wbarconf/wbarbacks/ || return 1
+ chmod 0655 -R  $startdir/share/wbarconf/ || return 1
+ 
+ mkdir -p $startdir/share/pixmaps/
+--- wbarconf/wbarconf.desktop
++++ wbarconf/wbarconf.desktop
+@@ -2,10 +2,10 @@
+ Name=WbarConf
+ Exec=wbarconf 
+ Type=Application
+-Icon=wbarconf.png
++Icon=wbarconf
+ Terminal=false
+ StartupNotify=true
+-Categories=GTK;Utility; 
++Categories=GTK;Utility;
+ Comment=Configuration tool for wbar
+ Comment[de]=Konfigurationswerkzeug für Wbar
+ Comment[fi]=Asetustyökalu wbar:lle
+--- wbarconf/wbarconf
++++ wbarconf/wbarconf
+@@ -51,7 +51,7 @@
+     print("Gettext error, defaulting to english!")
+     #    return message
+ 
+-wbarversion="0.7.2.1"
++wbarversion="0.7.2.2"
+ 
+ ITEM_ID = 0
+ ITEM_ICON = 1
