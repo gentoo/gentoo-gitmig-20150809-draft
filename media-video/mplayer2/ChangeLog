@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.46 2012/05/05 08:58:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.47 2012/05/14 10:32:23 scarabeus Exp $
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:
+  Disable live plugin as libav can get same functionality and actually works.
+  Fixes bug#414213. Thanks to Nikoli for the patch.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> mplayer2-2.0_p20111126.ebuild,
   mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:

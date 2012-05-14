@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.30 2012/05/05 08:58:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.31 2012/05/14 10:32:23 scarabeus Exp $
 
 EAPI=4
 
@@ -32,14 +32,13 @@ if [[ ${PV} == *9999* ]]; then
 else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 fi
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
-bluray bs2b cddb +cdio cpudetection custom-cpuopts
-debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad fbcon ftp
-gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc live
-mad md5sum +mmx mmxext mng +mp3 nas +network nut +opengl oss png pnm pulseaudio
-pvr +quicktime radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga
-+theora +truetype +unicode v4l vdpau +vorbis win32codecs +X xanim xinerama
-+xscreensaver +xv xvid"
+IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
+	bs2b cddb +cdio cpudetection custom-cpuopts debug directfb doc +dts +dv dvb
+	+dvd +dvdnav dxr3 +enca +faad fbcon ftp gif ggi +iconv ipv6 jack joystick
+	jpeg kernel_linux ladspa libcaca lirc mad md5sum +mmx mmxext mng +mp3 nas
+	+network nut +opengl oss png pnm pulseaudio pvr +quicktime radio +rar +real
+	+rtc samba +shm sdl +speex sse sse2 ssse3 tga +theora +truetype +unicode
+	v4l vdpau +vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid"
 IUSE+=" symlink"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
@@ -116,7 +115,6 @@ RDEPEND+="
 	ladspa? ( media-libs/ladspa-sdk )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
-	live? ( media-plugins/live )
 	mad? ( media-libs/libmad )
 	mng? ( media-libs/libmng )
 	mp3? ( media-sound/mpg123 )
@@ -351,7 +349,6 @@ src_configure() {
 	myconf+=" --disable-musepack" # deprecated, libavcodec Musepack decoder is preferred
 	use dts || myconf+=" --disable-libdca"
 	use mp3 || myconf+=" --disable-mpg123"
-	use live && myconf+=" --enable-live"
 	uses="a52 bs2b dv vorbis"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-lib${i}"
@@ -360,6 +357,7 @@ src_configure() {
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
+	myconf+=" --disable-live" # >=live-2012 are broken
 
 	#################
 	# Binary codecs #
