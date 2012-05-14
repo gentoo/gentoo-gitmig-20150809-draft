@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.348 2012/05/10 03:20:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.349 2012/05/14 04:20:37 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (14 May 2012)
+# This is the GNOME 3.4 package.use mask
+=media-gfx/eog-plugins-3.4* map
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (10 May 2012)
 # This entry can be removed by anyone after gnome-panel-3.* is stabilized

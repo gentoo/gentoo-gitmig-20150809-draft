@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.390 2012/05/10 03:20:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.391 2012/05/14 04:20:36 tetromino Exp $
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Start gnome-3.4 package.use.mask
 
   10 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask =app-misc/gnote-0.8.2[applet] to allow stabilization (bug #414983).
