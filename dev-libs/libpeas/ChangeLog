@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.4 2012/04/22 23:28:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.5 2012/05/14 19:07:46 tetromino Exp $
+
+*libpeas-1.4.0-r1 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libpeas-1.4.0.ebuild, +libpeas-1.4.0-r1.ebuild,
+  +files/libpeas-1.4.0-pkgconfig.patch:
+  Fix broken pkgconfig file that prevented eog etc. from being built (bug
+  #415961, thanks to pingouin21).
 
 *libpeas-1.4.0 (22 Apr 2012)
 

@@ -1,0 +1,25 @@
+From 2d6ea307cf45af6b92b1cd708d0ee288aca0b3fe Mon Sep 17 00:00:00 2001
+From: Olav Vitters <olav@vitters.nl>
+Date: Wed, 28 Mar 2012 15:28:40 +0200
+Subject: [PATCH] fix forgotten @ in pkgconfig file
+
+---
+ data/libpeas-1.0.pc.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/data/libpeas-1.0.pc.in b/data/libpeas-1.0.pc.in
+index 9523067..704d686 100644
+--- a/data/libpeas-1.0.pc.in
++++ b/data/libpeas-1.0.pc.in
+@@ -5,7 +5,7 @@ includedir=@includedir@
+ 
+ Name: libpeas
+ Description: libpeas, a GObject plugins library
+-Requires: glib-2.0 >= @GLIB_REQUIRED@, gobject-2.0 >= @GLIB_REQUIRED@, gmodule-2.0 >= @GLIB_REQUIRED@, gio-2.0 >= @GIO_REQUIRED gobject-introspection-1.0 >= @INTROSPECTION_REQUIRED@
++Requires: glib-2.0 >= @GLIB_REQUIRED@, gobject-2.0 >= @GLIB_REQUIRED@, gmodule-2.0 >= @GLIB_REQUIRED@, gio-2.0 >= @GIO_REQUIRED@ gobject-introspection-1.0 >= @INTROSPECTION_REQUIRED@
+ Version: @VERSION@
+ Cflags: -I${includedir}/libpeas-1.0
+ Libs: -L${libdir} -lpeas-1.0
+-- 
+1.7.8.6
+
