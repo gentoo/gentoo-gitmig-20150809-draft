@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.42 2012/05/14 08:29:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.43 2012/05/14 09:16:01 scarabeus Exp $
 
 EAPI=4
 
@@ -160,10 +160,6 @@ src_configure() {
 	use custom-cflags && myconf+=" --disable-optimizations"
 	use cpudetection && myconf+=" --enable-runtime-cpudetect"
 
-	#for i in h264_vdpau mpeg1_vdpau mpeg_vdpau vc1_vdpau wmv3_vdpau; do
-	#	use video_cards_nvidia || myconf="${myconf} --disable-decoder=${i}"
-	#	use vdpau || myconf="${myconf} --disable-decoder=${i}"
-	#done
 	use vdpau || myconf+=" --disable-vdpau"
 
 	use vaapi && myconf+=" --enable-vaapi"
