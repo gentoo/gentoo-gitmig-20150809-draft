@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.62 2012/05/14 09:07:05 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.63 2012/05/14 15:48:04 ago Exp $
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> simplejson-2.5.0.ebuild:
+  Stable for amd64, wrt bug #415881
 
   14 May 2012; Dirkjan Ochtman <djc@gentoo.org> -simplejson-2.3.2.ebuild,
   -simplejson-2.3.3.ebuild, -simplejson-2.4.0.ebuild:
