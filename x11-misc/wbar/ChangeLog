@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.18 2012/05/14 16:51:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.19 2012/05/14 17:50:56 hasufell Exp $
+
+  14 May 2012; Julian Ospald <hasufell@gentoo.org> wbar-2.3.0.ebuild:
+  force virtual/init
 
   14 May 2012; Julian Ospald <hasufell@gentoo.org> wbar-2.3.0.ebuild:
   missed sys-process/procps virtual/init
