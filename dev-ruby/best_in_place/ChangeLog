@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/best_in_place
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.5 2012/05/11 19:30:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.6 2012/05/14 18:14:00 flameeyes Exp $
+
+*best_in_place-1.1.0 (14 May 2012)
+
+  14 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +best_in_place-1.1.0.ebuild, +files/best_in_place-1.1.0-kramdown.patch:
+  Version bump; replace RDiscount with kramdown and remove extra dependencies on
+  test_app (both sent upstream). Require rails 3.2 for testing.
 
   11 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   best_in_place-1.0.6.ebuild:
