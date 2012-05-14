@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13753 2012/05/14 00:14:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13754 2012/05/14 04:41:23 tester Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -117,12 +117,6 @@ dev-util/glade:2
 # Needs old tcl/tk, doesn't respect CC, LDFLAGS, CFLAGS (#410511).
 # Removal in a month.
 dev-ada/tash
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Doesn't connect at all, security issues as reported in debian
-# (#411205). Removal in a month.
-net-im/amsn
-x11-themes/amsn-skins
 
 # Pacho Ramos <pacho@gentoo.org> (13 May 2012)
 # Doesn't work (#412139), use games-misc/xpenguins instead.
