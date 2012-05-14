@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dibbler
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.11 2011/12/04 10:23:32 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.12 2012/05/14 18:39:14 pacho Exp $
+
+  14 May 2012; Pacho Ramos <pacho@gentoo.org> -dibbler-0.4.1.ebuild,
+  -dibbler-0.6.1.ebuild, metadata.xml:
+  Drop maintainer as he will not take care of this stuff in the near future as
+  talked with him via mail. Drop old.
 
 *dibbler-0.8.0 (04 Dec 2011)
 
