@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/shntool
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/ChangeLog,v 1.26 2011/12/27 21:28:04 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shntool/ChangeLog,v 1.27 2012/05/14 10:31:31 radhermit Exp $
+
+  14 May 2012; Tim Harder <radhermit@gentoo.org> shntool-3.0.10-r1.ebuild:
+  Update DESCRIPTION, HOMEPAGE, and SRC_URI. Bump to EAPI 4.
 
   27 Dec 2011; Tim Harder <radhermit@gentoo.org> -shntool-3.0.8.ebuild,
   -shntool-3.0.10.ebuild:
