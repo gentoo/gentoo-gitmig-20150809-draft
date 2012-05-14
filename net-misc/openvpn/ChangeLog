@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.226 2012/04/14 05:48:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.227 2012/05/14 08:23:50 djc Exp $
+
+  14 May 2012; Dirkjan Ochtman <djc@gentoo.org> openvpn-9999.ebuild:
+  Update live ebuild to deal with new build system (thanks Alon Bar-Lev, bug
+  409577).
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> openvpn-2.2.2.ebuild:
   Add ~amd64-linux keyword.
