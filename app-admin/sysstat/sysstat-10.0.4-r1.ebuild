@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.4.ebuild,v 1.6 2012/05/09 07:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.4-r1.ebuild,v 1.1 2012/05/14 20:01:19 jer Exp $
 
 EAPI="4"
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.225 2012/05/09 07:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.226 2012/05/14 20:01:19 jer Exp $
+
+*sysstat-10.0.4-r1 (14 May 2012)
+
+  14 May 2012; Jeroen Roovers <jer@gentoo.org> -sysstat-10.0.4.ebuild,
+  +sysstat-10.0.4-r1.ebuild, files/sysstat.init.d:
+  Run sa1 instead of running sadc directly (bug #415381). Bump to get the
+  (trivial) fix in for everybody.
 
   09 May 2012; Jeff Horelick <jdhore@gentoo.org> sysstat-10.0.4.ebuild:
   marked x86 per bug 414483
