@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.282 2012/05/05 03:52:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.283 2012/05/14 00:01:25 tetromino Exp $
+
+*libwnck-3.4.0 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libwnck-3.0.2.ebuild, +libwnck-3.4.0.ebuild:
+  Version bump for gnome-3.4. Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libwnck-2.30.7.ebuild,
   libwnck-2.31.0.ebuild, libwnck-3.0.2.ebuild, libwnck-3.2.1.ebuild:
