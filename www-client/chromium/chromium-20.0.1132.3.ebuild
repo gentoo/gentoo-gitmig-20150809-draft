@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1123.4.ebuild,v 1.2 2012/05/07 15:06:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1132.3.ebuild,v 1.1 2012/05/14 12:31:19 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -129,7 +129,6 @@ src_prepare() {
 		\! -path 'third_party/json_minify/*' \
 		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
-		\! -path 'third_party/leveldb/*' \
 		\! -path 'third_party/leveldatabase/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
@@ -338,7 +337,7 @@ src_install() {
 
 	doexe out/Release/nacl_helper{,_bootstrap} || die
 	insinto "${CHROMIUM_HOME}"
-	doins out/Release/nacl_irt_* || die
+	doins out/Release/nacl_irt_*.nexe || die
 	doins out/Release/libppGoogleNaClPluginChrome.so || die
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
