@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.4.1.ebuild,v 1.1 2012/05/13 23:59:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.4.1.ebuild,v 1.2 2012/05/14 13:15:30 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -117,4 +117,10 @@ src_prepare() {
 	eautoreconf
 
 	gnome2_src_prepare
+
+	# panels/datetime/Makefile.am gets touched as a result of something in our
+	# src_prepare(). We need to touch timedated{c,h} to prevent them from being
+	# regenerated (bug #415901)
+	[[ -f panels/datetime/timedated.h ]] && touch panels/datetime/timedated.h
+	[[ -f panels/datetime/timedated.c ]] && touch panels/datetime/timedated.c
 }
