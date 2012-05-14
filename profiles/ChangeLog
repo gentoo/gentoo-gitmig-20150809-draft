@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6544 2012/05/13 20:45:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6545 2012/05/14 00:14:05 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Add pyatspi to gnome-3.4 mask.
 
   13 May 2012; Mike Frysinger <vapier@gentoo.org> package.mask:
   Drop cromwell mask as it builds now with newer gcc.
