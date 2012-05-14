@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.43 2012/05/14 09:16:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.44 2012/05/14 18:29:13 scarabeus Exp $
 
 EAPI=4
 
@@ -29,9 +29,9 @@ SLOT="0"
 ~x64-solaris ~x86-solaris"
 IUSE="aac aacplus alsa ass amr bindist bluray +bzip2 cdio celt cpudetection
 	custom-cflags debug doc +encode faac fontconfig frei0r +gpl gsm
-	+hardcoded-tables ieee1394 jack jpeg2k libv4l modplug mp3 network openal
-	openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl static-libs test
-	theora threads truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib"
+	+hardcoded-tables ieee1394 jack jpeg2k libv4l modplug mp3 network openssl oss
+	pic pulseaudio rtmp schroedinger sdl speex ssl static-libs test theora threads
+	truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
@@ -79,7 +79,6 @@ RDEPEND="
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
 	libv4l? ( media-libs/libv4l )
 	modplug? ( media-libs/libmodplug )
-	openal? ( >=media-libs/openal-1.1 )
 	pulseaudio? ( media-sound/pulseaudio )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	ssl? (
@@ -182,7 +181,6 @@ src_configure() {
 	# libavdevice options
 	use cdio && myconf+=" --enable-libcdio"
 	use ieee1394 && myconf+=" --enable-libdc1394"
-	use openal && myconf+=" --enable-openal"
 	use pulseaudio && myconf+=" --enable-libpulse"
 
 	# Indevs

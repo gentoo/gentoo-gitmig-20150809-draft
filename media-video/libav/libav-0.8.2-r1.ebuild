@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.2-r1.ebuild,v 1.4 2012/05/14 09:14:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.2-r1.ebuild,v 1.5 2012/05/14 18:29:13 scarabeus Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ SLOT="0"
 IUSE=" aac aacplus alsa ass amr bindist +bzip2 cdio celt cpudetection
 	custom-cflags dirac debug doc +encode faac frei0r +gpl gsm
 	+hardcoded-tables ieee1394 jack jpeg2k libv4l modplug mp3 network
-	openal openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl
+	openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads truetype v4l vaapi vdpau vorbis
 	vpx X x264 xvid +zlib"
 
@@ -75,7 +75,6 @@ RDEPEND="
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
 	libv4l? ( media-libs/libv4l )
 	modplug? ( media-libs/libmodplug )
-	openal? ( >=media-libs/openal-1.1 )
 	pulseaudio? ( media-sound/pulseaudio )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	ssl? (
@@ -182,7 +181,6 @@ src_configure() {
 	# libavdevice options
 	use cdio && myconf+=" --enable-libcdio"
 	use ieee1394 && myconf+=" --enable-libdc1394"
-	use openal && myconf+=" --enable-openal"
 	use pulseaudio && myconf+=" --enable-libpulse"
 
 	# Indevs
