@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.19 2012/05/06 03:20:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.20 2012/05/14 19:23:09 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -65,6 +65,8 @@ case "${EAPI}" in
 	*)
 		die "Unsupported EAPI=${EAPI} (unknown) for python-distutils-ng.eclass" ;;
 esac
+
+DEPEND="${DEPEND} !<sys-apps/portage-2.1.10.58"
 
 # @FUNCTION: _python-distutils-ng_get_binary_for_implementation
 # @USAGE: implementation
