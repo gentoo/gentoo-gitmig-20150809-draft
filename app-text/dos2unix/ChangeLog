@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.88 2012/05/12 14:13:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.89 2012/05/14 23:00:52 jer Exp $
+
+  14 May 2012; Jeroen Roovers <jer@gentoo.org> dos2unix-5.3.3.ebuild:
+  Stable for HPPA (bug #414883).
 
   12 May 2012; Markus Meier <maekke@gentoo.org> dos2unix-5.3.3.ebuild:
   arm stable, bug #414883
