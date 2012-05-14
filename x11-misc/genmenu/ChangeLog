@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/genmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.27 2012/02/25 12:41:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/ChangeLog,v 1.28 2012/05/14 15:31:05 pacho Exp $
+
+*genmenu-1.1.0 (14 May 2012)
+
+  14 May 2012; Pacho Ramos <pacho@gentoo.org> +genmenu-1.1.0.ebuild,
+  -files/genmenu-1.0.7-e16.patch, -genmenu-1.0.9.ebuild:
+  Version bump, drop old (#415683 by df).
 
 *genmenu-1.0.9 (25 Feb 2012)
 

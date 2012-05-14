@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/genmenu-1.0.9.ebuild,v 1.1 2012/02/25 12:41:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/genmenu/genmenu-1.1.0.ebuild,v 1.1 2012/05/14 15:31:04 pacho Exp $
 
 EAPI=4
 
