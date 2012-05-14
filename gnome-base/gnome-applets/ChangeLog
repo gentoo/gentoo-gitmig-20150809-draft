@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.351 2012/05/10 09:45:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.352 2012/05/14 06:06:28 tetromino Exp $
+
+*gnome-applets-3.4.1 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-applets-3.4.1.ebuild:
+  Version bump for gnome-3.4; the gkb-new applet has been removed.
 
   10 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-applets-2.32.1.1.ebuild:
