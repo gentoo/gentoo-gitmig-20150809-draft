@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.77 2012/05/09 17:35:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.78 2012/05/14 16:01:46 ago Exp $
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> pyparsing-1.5.6.ebuild:
+  Stable for amd64, wrt bug #415859
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> pyparsing-1.5.6.ebuild:
   keyword ~amd64-fbsd
