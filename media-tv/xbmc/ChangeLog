@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.134 2012/04/29 16:01:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.135 2012/05/14 12:08:19 scarabeus Exp $
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> xbmc-9999.ebuild:
+  Add dep over tinyxml. Fixes bug#415681.
 
   29 Apr 2012; Mike Frysinger <vapier@gentoo.org>
   +files/xbmc-11.0-no-arm-flags.patch, xbmc-11.0.ebuild:
