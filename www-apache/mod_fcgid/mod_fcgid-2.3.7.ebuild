@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.3.7.ebuild,v 1.1 2012/05/13 08:36:27 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/mod_fcgid-2.3.7.ebuild,v 1.2 2012/05/14 18:31:01 ago Exp $
 
 inherit apache-module eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/httpd/mod_fcgid/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 APACHE2_MOD_CONF="2.2/20_${PN}"
