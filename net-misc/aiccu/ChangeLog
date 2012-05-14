@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/aiccu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.27 2011/06/24 18:58:46 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.28 2012/05/14 18:38:03 pacho Exp $
+
+  14 May 2012; Pacho Ramos <pacho@gentoo.org> -aiccu-2007.01.15.ebuild,
+  metadata.xml:
+  Drop maintainer as he will not take care of this stuff in the near future as
+  talked with him via mail.
 
   24 Jun 2011; Brent Baude <ranger@gentoo.org> aiccu-2007.01.15-r1.ebuild:
   Marking aiccu-2007.01.15-r1 ppc for bug 357265
