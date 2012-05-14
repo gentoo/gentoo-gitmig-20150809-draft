@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.140 2012/05/10 19:30:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.141 2012/05/14 10:54:57 jlec Exp $
+
+*gajim-0.15-r2 (14 May 2012)
+
+  14 May 2012; Justin Lecher <jlec@gentoo.org> +gajim-0.15-r2.ebuild,
+  +files/gajim-0.15-SA48695-2.patch:
+  Update SA48695 patch with changesets f6f78f3802c07736cb63b3e696778dabe8263cbb
+  and f046e4aaf7d49b2934622db66da1667ddddb1703; #415891
 
   10 May 2012; Brent Baude <ranger@gentoo.org> gajim-0.15-r1.ebuild:
   Marking gajim-0.15-r1 ppc64 for bug 412215
