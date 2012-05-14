@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.2.2-r1.ebuild,v 1.1 2012/05/13 16:12:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.2.2-r1.ebuild,v 1.2 2012/05/14 21:37:38 dilfridge Exp $
 
 EAPI=4
 
@@ -44,17 +44,18 @@ SRC_URI_X86="
 "
 
 SRC_URI="
+	amd64? ( ${SRC_URI_AMD64} )
 	x86? ( ${SRC_URI_X86} )
 "
 
 IUSE="+cups debug gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	>=sys-libs/glibc-2.14.1-r3
-	>=dev-libs/icu-49.1.1-r1
+	=dev-libs/icu-49*
 "
 COMMON_DEPEND="
 	${BIN_COMMON_DEPEND}
