@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.19 2012/05/08 10:54:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.20 2012/05/14 15:50:36 ago Exp $
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> tornado-2.2.ebuild:
+  Stable for amd64, wrt bug #415903
 
 *tornado-2.2.1 (08 May 2012)
 
