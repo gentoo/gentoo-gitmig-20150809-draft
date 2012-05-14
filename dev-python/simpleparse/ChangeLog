@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simpleparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.27 2012/02/20 15:06:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.28 2012/05/14 16:01:17 ago Exp $
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> simpleparse-2.1.1.ebuild:
+  Stable for amd64, wrt bug #415857
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> simpleparse-2.1.1.ebuild,
   simpleparse-2.1.1_alpha2.ebuild:
