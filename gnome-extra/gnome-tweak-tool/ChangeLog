@@ -1,6 +1,17 @@
 # ChangeLog for gnome-extra/gnome-tweak-tool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/ChangeLog,v 1.6 2012/05/05 06:25:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/ChangeLog,v 1.7 2012/05/14 00:07:40 tetromino Exp $
+
+*gnome-tweak-tool-3.3.4-r1 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-tweak-tool-3.2.2.ebuild, -gnome-tweak-tool-3.2.2-r1.ebuild,
+  +gnome-tweak-tool-3.3.4-r1.ebuild,
+  +files/gnome-tweak-tool-3.3.4-missing-schemas.patch,
+  +files/gnome-tweak-tool-3.3.4-shell-theme-schema.patch,
+  +files/gnome-tweak-tool-3.3.4-static-workspaces.patch,
+  +files/gnome-tweak-tool-3.3.4-text-scaling-factor-button.patch:
+  Version bump for gnome-3.4 support. Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-tweak-tool-3.2.2.ebuild,
   gnome-tweak-tool-3.2.2-r1.ebuild, gnome-tweak-tool-3.2.2-r2.ebuild:

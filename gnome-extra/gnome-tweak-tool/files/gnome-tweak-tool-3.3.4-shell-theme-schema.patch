@@ -1,0 +1,77 @@
+From 6fbecd5f847fceff3942dc6b1370fb5514e7c293 Mon Sep 17 00:00:00 2001
+From: Giovanni Campagna <gcampagna@src.gnome.org>
+Date: Sun, 29 Apr 2012 23:58:20 +0200
+Subject: [PATCH] Shell Theme: load settings schema from user directory
+
+Recent versions of the user-theme extension install the GSettings
+schema in the extension directory, to comply with extensions.gnome.org
+rules.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=675106
+---
+ gtweak/gsettings.py          |   20 ++++++++++++++++----
+ gtweak/tweaks/tweak_shell.py |    8 +++++++-
+ 2 files changed, 23 insertions(+), 5 deletions(-)
+
+diff --git a/gtweak/gsettings.py b/gtweak/gsettings.py
+index e334637..2739d6a 100644
+--- a/gtweak/gsettings.py
++++ b/gtweak/gsettings.py
+@@ -86,12 +86,24 @@ class GSettingsFakeSetting:
+         return noop
+ 
+ class GSettingsSetting(Gio.Settings):
+-    def __init__(self, schema_name, **options):
+-        if schema_name not in _GSETTINGS_SCHEMAS:
++    def __init__(self, schema_name, schema_dir=None, **options):
++        if schema_dir is None and schema_name not in _GSETTINGS_SCHEMAS:
+             raise GSettingsMissingError(schema_name)
+-        Gio.Settings.__init__(self, schema_name)
++        if schema_dir is None:
++            Gio.Settings.__init__(self, schema_name)
++        else:
++            GioSSS = Gio.SettingsSchemaSource
++            schema_source = GioSSS.new_from_directory(schema_dir,
++                                                      GioSSS.get_default(),
++                                                      False)
++            schema_obj = schema_source.lookup(schema_name, True)
++            if not schema_obj:
++                raise GSettingsMissingError(schema_name)
++
++            Gio.Settings.__init__(self, None, settings_schema=schema_obj)
++
+         if schema_name not in _SCHEMA_CACHE:
+-            _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, **options)
++            _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, schema_dir=schema_dir, **options)
+             logging.debug("Caching gsettings: %s" % _SCHEMA_CACHE[schema_name])
+ 
+         self._schema = _SCHEMA_CACHE[schema_name]
+diff --git a/gtweak/tweaks/tweak_shell.py b/gtweak/tweaks/tweak_shell.py
+index 1d5a91d..5bb664f 100644
+--- a/gtweak/tweaks/tweak_shell.py
++++ b/gtweak/tweaks/tweak_shell.py
+@@ -46,6 +46,8 @@ class ShellThemeTweak(Tweak):
+     THEME_EXT_NAME = "user-theme@gnome-shell-extensions.gcampax.github.com"
+     THEME_GSETTINGS_SCHEMA = "org.gnome.shell.extensions.user-theme"
+     THEME_GSETTINGS_NAME = "name"
++    THEME_GSETTINGS_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions",
++                                       THEME_EXT_NAME, "schemas")
+     THEME_DIR = os.path.join(GLib.get_home_dir(), ".themes")
+ 
+     def __init__(self, **options):
+@@ -63,7 +65,11 @@ class ShellThemeTweak(Tweak):
+             if ShellThemeTweak.THEME_EXT_NAME in extensions and extensions[ShellThemeTweak.THEME_EXT_NAME]["state"] == 1:
+                 #check the correct gsettings key is present
+                 try:
+-                    self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
++                    if os.path.exists(ShellThemeTweak.THEME_GSETTINGS_DIR):
++                        self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA,
++                                                          schema_dir=ShellThemeTweak.THEME_GSETTINGS_DIR)
++                    else:
++                        self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
+                     name = self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME)
+ 
+                     ext = extensions[ShellThemeTweak.THEME_EXT_NAME]
+-- 
+1.7.8.6
+

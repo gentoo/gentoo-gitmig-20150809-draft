@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.2.2-r1.ebuild,v 1.2 2012/05/05 06:25:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/gnome-tweak-tool-3.3.4-r1.ebuild,v 1.1 2012/05/14 00:07:40 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -18,7 +18,7 @@ IUSE=""
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
-	>=gnome-base/gsettings-desktop-schemas-3
+	>=gnome-base/gsettings-desktop-schemas-3.3.2
 	>=dev-python/pygobject-2.90.0:3
 	gnome-base/gconf:2"
 # g-s-d, gnome-shell etc. needed at runtime for the gsettings schemas
@@ -32,8 +32,8 @@ RDEPEND="${COMMON_DEPEND}
 	x11-wm/metacity"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.0
-	virtual/pkgconfig
-	>=sys-devel/gettext-0.17"
+	>=sys-devel/gettext-0.17
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS NEWS README"
@@ -46,12 +46,13 @@ src_prepare() {
 	# Add contents of Gentoo's cursor theme directory to cursor theme list
 	epatch "${FILESDIR}/${PN}-3.0.4-gentoo-cursor-themes.patch"
 
-	# Patch from upstream git master; user theme extension ID changed in 3.2.2
-	epatch "${FILESDIR}/${PN}-3.2.2-user-theme-ext-id.patch"
+	# Useful upstream patches
+	epatch "${FILESDIR}/${P}-text-scaling-factor-button.patch"
+	epatch "${FILESDIR}/${P}-missing-schemas.patch"
+	epatch "${FILESDIR}/${P}-static-workspaces.patch"
+	epatch "${FILESDIR}/${P}-shell-theme-schema.patch"
 
-	# disable pyc compiling
-	mv py-compile py-compile.orig
-	ln -s $(type -P true) py-compile
+	python_clean_py-compile_files
 
 	gnome2_src_prepare
 }

@@ -1,0 +1,61 @@
+From 89c320bbb9ec6cf1542c75e5c35c79e6604301b6 Mon Sep 17 00:00:00 2001
+From: Robin Stocker <robin@nibor.org>
+Date: Tue, 17 Jan 2012 13:24:04 +0100
+Subject: [PATCH] Change widget for text-scaling-factor to SpinButton
+
+https://bugzilla.gnome.org/show_bug.cgi?id=650660
+
+Conflicts:
+
+	gtweak/tweaks/tweak_font.py
+---
+ gtweak/tweaks/tweak_font.py |    4 ++--
+ gtweak/widgets.py           |   15 +++++++++++++++
+ 2 files changed, 17 insertions(+), 2 deletions(-)
+
+diff --git a/gtweak/tweaks/tweak_font.py b/gtweak/tweaks/tweak_font.py
+index 7f4b92a..1ace035 100644
+--- a/gtweak/tweaks/tweak_font.py
++++ b/gtweak/tweaks/tweak_font.py
+@@ -18,10 +18,10 @@
+ from gi.repository import Gtk
+ 
+ from gtweak.tweakmodel import Tweak, TWEAK_GROUP_FONTS
+-from gtweak.widgets import GSettingsRangeTweak, GSettingsFontButtonTweak, GSettingsComboTweak
++from gtweak.widgets import GSettingsSpinButtonTweak, GSettingsFontButtonTweak, GSettingsComboTweak
+ 
+ TWEAKS = (
+-    GSettingsRangeTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, group_name=TWEAK_GROUP_FONTS),
++    GSettingsSpinButtonTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, digits=1, group_name=TWEAK_GROUP_FONTS),
+     GSettingsFontButtonTweak("org.gnome.desktop.interface", "font-name", group_name=TWEAK_GROUP_FONTS),
+     GSettingsFontButtonTweak("org.gnome.desktop.interface", "document-font-name", group_name=TWEAK_GROUP_FONTS),
+     GSettingsFontButtonTweak("org.gnome.desktop.interface", "monospace-font-name", group_name=TWEAK_GROUP_FONTS),
+diff --git a/gtweak/widgets.py b/gtweak/widgets.py
+index 9aa0cd2..4a7646f 100644
+--- a/gtweak/widgets.py
++++ b/gtweak/widgets.py
+@@ -134,6 +134,21 @@ class GSettingsRangeTweak(_GSettingsTweak):
+         self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+         self.widget_for_size_group = w
+ 
++class GSettingsSpinButtonTweak(_GSettingsTweak):
++    def __init__(self, schema_name, key_name, **options):
++        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
++
++        #returned variant is range:(min, max)
++        _min, _max = self.settings.get_range(key_name)[1]
++
++        adjustment = Gtk.Adjustment(0, _min, _max, options.get('adjustment_step', 1))
++        w = Gtk.SpinButton()
++        w.set_adjustment(adjustment)
++        w.set_digits(options.get('digits', 0))
++        self.settings.bind(key_name, adjustment, "value", Gio.SettingsBindFlags.DEFAULT)
++        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
++        self.widget_for_size_group = w
++
+ class GSettingsComboEnumTweak(_GSettingsTweak):
+     def __init__(self, schema_name, key_name, **options):
+         _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+-- 
+1.7.8.6
+
