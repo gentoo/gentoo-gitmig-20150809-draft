@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.40 2012/05/14 06:32:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.41 2012/05/14 08:26:05 scarabeus Exp $
 
 EAPI=4
 
@@ -27,19 +27,22 @@ SLOT="0"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
-IUSE=" aac aacplus alsa ass amr bindist bluray  +bzip2 cdio celt cpudetection
+IUSE="aac aacplus alsa ass amr bindist bluray +bzip2 cdio celt cpudetection
 	custom-cflags debug doc +encode faac fontconfig frei0r +gpl gsm
-	+hardcoded-tables ieee1394 jack jpeg2k libv4l modplug mp3 network
-	openal openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl
-	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis
-	vpx X x264 xvid +zlib"
+	+hardcoded-tables ieee1394 jack jpeg2k libv4l modplug mp3 network openal
+	openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl static-libs test
+	theora threads truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
 CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 neon ssse3 vis"
-
-for i in ${CPU_FEATURES}; do
+for i in ${CPU_FEATURES} ; do
 	IUSE+=" ${i%:*}"
+done
+
+FFTOOLS="aviocat cws2fws graph2dot ismindex pktdumper qt-faststart trasher"
+for i in ${FFTOOLS} ; do
+	IUSE+=" +fftools_${i}"
 done
 
 RDEPEND="
@@ -131,8 +134,6 @@ src_prepare() {
 	fi
 }
 
-TOOLS="aviocat graph2dot ismindex qt-faststart"
-
 src_configure() {
 	local myconf="${EXTRA_LIBAV_CONF}"
 	local uses i
@@ -142,8 +143,6 @@ src_configure() {
 		$(use_enable gpl version3)
 		--enable-avfilter
 	"
-
-	use zlib && TOOLS+=" cws2fws"
 
 	# enabled by default
 	uses="debug doc network zlib"
@@ -303,26 +302,23 @@ src_compile() {
 
 	emake
 
-	if use tools; then
-		for i in ${TOOLS}; do
-			emake tools/${i}
-		done
-	fi
+	for i in ${FFTOOLS} ; do
+		use fftools_${i} && emake tools/${i}
+	done
 }
 
 src_install() {
 	local i
+
 	emake DESTDIR="${D}" install install-man
 
 	dodoc Changelog README INSTALL
 	dodoc doc/*.txt
 	use doc && dodoc doc/*.html
 
-	if use tools; then
-		for i in ${TOOLS}; do
-			dobin tools/${i}
-		done
-	fi
+	for i in ${FFTOOLS} ; do
+		use fftools_${i} && dobin tools/${i}
+	done
 
 	for i in $(usex sdl avplay "") $(usex network avserver "") avprobe; do
 		dosym  ${i} /usr/bin/${i/av/ff}

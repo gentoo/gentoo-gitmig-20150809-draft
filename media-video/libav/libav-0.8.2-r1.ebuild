@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.2-r1.ebuild,v 1.1 2012/05/14 06:49:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.2-r1.ebuild,v 1.2 2012/05/14 08:26:05 scarabeus Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ IUSE=" aac aacplus alsa ass amr bindist +bzip2 cdio celt cpudetection
 	custom-cflags dirac debug doc +encode faac frei0r +gpl gsm
 	+hardcoded-tables ieee1394 jack jpeg2k libv4l modplug mp3 network
 	openal openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl
-	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis
+	static-libs test theora threads truetype v4l vaapi vdpau vorbis
 	vpx X x264 xvid +zlib"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -132,8 +132,6 @@ src_prepare() {
 	fi
 }
 
-TOOLS="aviocat graph2dot ismindex qt-faststart"
-
 src_configure() {
 	local myconf="${EXTRA_LIBAV_CONF}"
 	local uses i
@@ -143,8 +141,6 @@ src_configure() {
 		$(use_enable gpl version3)
 		--enable-avfilter
 	"
-
-	use zlib && TOOLS+=" cws2fws"
 
 	# enabled by default
 	uses="debug doc network zlib"
@@ -302,11 +298,9 @@ src_compile() {
 
 	emake
 
-	if use tools; then
-		for i in ${TOOLS}; do
-			emake tools/${i}
+	for i in ${FFTOOLS} ; do
+		use fftools_${i} && emake tools/${i}
 		done
-	fi
 }
 
 src_install() {
@@ -317,11 +311,9 @@ src_install() {
 	dodoc doc/*.txt
 	use doc && dodoc doc/*.html
 
-	if use tools; then
-		for i in ${TOOLS}; do
-			dobin tools/${i}
+	for i in ${FFTOOLS} ; do
+		use fftools_${i} && dobin tools/${i}
 		done
-	fi
 
 	for i in $(usex sdl avplay "") $(usex network avserver "") avprobe; do
 		dosym  ${i} /usr/bin/${i/av/ff}
