@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.12 2012/05/14 08:34:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.13 2012/05/14 09:14:27 scarabeus Exp $
 
 EAPI=4
 
@@ -193,7 +193,7 @@ src_configure() {
 		use ${i} || myconf+=" --disable-indev=${i}"
 	done
 	use X && myconf+=" --enable-x11grab"
-	use libv4l && myconf="${myconf} --enable-libv4l2"
+	use libv4l && myconf=" --enable-libv4l2"
 	# Outdevs
 	for i in alsa oss ; do
 		use ${i} || myconf+=" --disable-outdev=${i}"
