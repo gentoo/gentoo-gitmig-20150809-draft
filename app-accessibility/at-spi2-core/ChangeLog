@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/at-spi2-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.6 2012/04/21 12:18:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.7 2012/05/14 00:08:46 tetromino Exp $
+
+*at-spi2-core-2.4.1 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/at-spi2-core-2.0.2-abort-if-already-running.patch,
+  -at-spi2-core-2.2.1-r1.ebuild, +at-spi2-core-2.4.1.ebuild:
+  Version bump for gnome-3.4. Drop old.
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> at-spi2-core-2.2.3.ebuild:
   add ~arm, bug #411761
