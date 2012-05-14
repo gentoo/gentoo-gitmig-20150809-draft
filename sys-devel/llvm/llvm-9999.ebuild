@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.28 2012/05/13 21:25:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.29 2012/05/14 17:09:58 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -139,8 +139,6 @@ src_configure() {
 }
 
 src_compile() {
-	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1
-
 	# generate the manpages
 	cd docs/CommandGuide || die
 	local infiles=( *.rst )
@@ -150,6 +148,8 @@ src_compile() {
 	rst2man.py \$< > \$@
 EOF
 	emake ${infiles[@]/.rst/.1}
+
+	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1
 }
 
 src_install() {
