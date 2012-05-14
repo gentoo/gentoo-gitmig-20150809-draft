@@ -1,12 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p09.ebuild,v 1.1 2008/10/15 17:26:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p12.ebuild,v 1.1 2012/05/14 15:27:12 pacho Exp $
+
+EAPI=4
 
 inherit eutils toolchain-funcs
 
 MY_P=${P/_}
 
-DESCRIPTION="a fractal generator"
+DESCRIPTION="A fractal generator"
 HOMEPAGE="http://www.fractint.org"
 SRC_URI="http://www.fractint.org/ftp/current/linux/${MY_P}.tar.gz"
 
@@ -21,15 +23,19 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
+src_prepare() {
+	epatch "${FILESDIR}/xfractint-20.04p09-ldflags.patch"
+}
+
 src_compile() {
 	# Untested, any x86 archteam dev. is allowed to uncomment this.
 	local myasm="foo"
 #	use x86 && myasm="/usr/bin/nasm"
-	emake CC="$(tc-getCC)" AS="${myasm}" OPT="${CFLAGS}" || die "emake failed."
+	emake CC="$(tc-getCC)" AS="${myasm}" OPT="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}/usr" STRIP="true" install || die "emake install failed."
+	emake DESTDIR="${D}/usr" STRIP="true" install
 	newenvd "${FILESDIR}"/xfractint.envd 60xfractint
 }
 
