@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.228 2012/05/14 08:25:04 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.229 2012/05/14 15:58:57 ago Exp $
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> openvpn-2.2.2.ebuild:
+  Stable for amd64, wrt bug #415847
 
   14 May 2012; Dirkjan Ochtman <djc@gentoo.org> -openvpn-2.2.0-r1.ebuild:
   Remove old version.
