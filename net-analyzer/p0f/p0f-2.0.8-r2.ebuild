@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8-r2.ebuild,v 1.2 2011/08/05 05:56:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8-r2.ebuild,v 1.3 2012/05/14 11:36:57 scarabeus Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://lcamtuf.coredump.cx/p0f/${P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="static"
 
 DEPEND="net-libs/libpcap"
