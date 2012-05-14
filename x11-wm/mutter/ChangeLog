@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.8 2012/05/04 08:58:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.9 2012/05/14 00:02:26 tetromino Exp $
+
+*mutter-3.4.1-r1 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -mutter-3.2.1-r1.ebuild, +mutter-3.4.1-r1.ebuild,
+  +files/mutter-3.4.1-meta_window_move_frame-crash.patch:
+  Version bump for gnome-3.4. Settings moved from gconf to gsettings. Drop old.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> mutter-3.2.1-r1.ebuild,
   mutter-3.2.2.ebuild, mutter-3.2.2-r1.ebuild:
