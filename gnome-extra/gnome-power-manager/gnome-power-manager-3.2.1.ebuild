@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-3.2.1.ebuild,v 1.2 2012/05/05 06:25:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-3.2.1.ebuild,v 1.3 2012/05/14 01:57:33 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -23,9 +23,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.25.9
 	>=x11-libs/cairo-1.0.0
 	>=sys-power/upower-0.9.1"
 RDEPEND="${COMMON_DEPEND}
-	>=sys-auth/consolekit-0.4[policykit]
-	sys-auth/polkit
-	gnome-extra/polkit-gnome"
+	x11-themes/gnome-icon-theme-symbolic"
 DEPEND="${COMMON_DEPEND}
 	x11-proto/randrproto
 
