@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-3.2.0.ebuild,v 1.2 2012/05/05 05:38:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-3.4.0.2.ebuild,v 1.1 2012/05/14 06:05:55 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ IUSE="+introspection test"
 
 RDEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.91.7:3[introspection?]
-	>=x11-libs/libxklavier-5.1
+	>=x11-libs/libxklavier-5.2[introspection?]
 
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
 DEPEND="${RDEPEND}
