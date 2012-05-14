@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.165 2012/05/05 08:58:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.166 2012/05/14 19:45:01 lu_zero Exp $
 
 EAPI="4"
 
@@ -111,7 +111,7 @@ RDEPEND="
 		ogg? ( media-libs/libogg )
 		opengl? ( virtual/opengl >=x11-libs/libX11-1.3.99.901 )
 		png? ( media-libs/libpng sys-libs/zlib )
-		postproc? ( virtual/ffmpeg )
+		postproc? ( || ( media-libs/libpostproc media-video/ffmpeg ) )
 		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
@@ -161,7 +161,9 @@ REQUIRED_USE="
 	dvb? ( dvbpsi )
 	dxva2? ( avcodec )
 	egl? ( X )
-	ffmpeg? ( avcodec avformat postproc swscale )
+	avcodec? ( ffmpeg )
+	avformat? ( ffmpeg )
+	swscale? ( ffmpeg )
 	fontconfig? ( truetype )
 	gnutls? ( gcrypt )
 	libtar? ( skins )
