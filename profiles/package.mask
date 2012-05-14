@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13754 2012/05/14 04:41:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13755 2012/05/14 21:31:12 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -141,11 +141,6 @@ x11-misc/xmbdfed
 # Removal in a month.
 x11-misc/fme
 x11-misc/fxred
-
-# Julian Ospald <hasufell@gentoo.org> (13 May 2012)
-# Torbrowser as it is in portage is neither supported by mozilla
-# nor by tor upstream. Do not remove without other reasons.
-www-client/torbrowser
 
 # Pacho Ramos <pacho@gentoo.org> (11 May 2012)
 # No GPL releases for a long time, bundles external classes (#162788)
