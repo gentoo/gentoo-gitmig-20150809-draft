@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/postr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/ChangeLog,v 1.1 2012/05/14 04:19:43 tetromino Exp $
+
+*postr-0.12.4 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +postr-0.12.4.ebuild, +metadata.xml:
+  Add yet another flickr image uploader; needed for eog-plugins.
+
