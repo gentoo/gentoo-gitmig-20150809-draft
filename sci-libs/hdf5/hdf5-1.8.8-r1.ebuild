@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8.ebuild,v 1.4 2011/12/05 16:56:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8-r1.ebuild,v 1.1 2012/05/14 15:23:24 xarthisius Exp $
 
 EAPI=4
 
@@ -57,6 +57,10 @@ src_prepare() {
 	sed \
 		-e '/docdir/d' \
 		-i config/commence.am || die
+	if ! use examples; then
+		sed -e '/^install:/ s/install-examples//' \
+			-i Makefile.am || die #409091
+	fi
 	eautoreconf
 	# enable shared libs by default for h5cc config utility
 	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in	|| die
@@ -87,8 +91,4 @@ src_configure() {
 src_install() {
 	default
 	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
-
-	if use examples; then
-		emake DESTDIR="${D}" install-examples
-	fi
 }
