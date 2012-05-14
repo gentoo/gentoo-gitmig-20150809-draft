@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/libPropList-0.10.1-r4.ebuild,v 1.2 2012/05/14 16:52:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/libPropList-0.10.1-r4.ebuild,v 1.3 2012/05/14 16:56:15 ssuominen Exp $
 
 EAPI=4
-
 inherit autotools eutils
 
 DESCRIPTION="libPropList"
@@ -24,4 +23,9 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable static-libs static)
+}
+
+src_install() {
+	default
+	rm -f "${ED}"/usr/lib*/libPropList.la
 }

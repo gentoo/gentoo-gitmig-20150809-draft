@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libPropList
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/ChangeLog,v 1.15 2012/05/14 16:52:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libPropList/ChangeLog,v 1.16 2012/05/14 16:56:15 ssuominen Exp $
+
+  14 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libPropList-0.10.1-r4.ebuild:
+  Remove useless libPropList.la libtool archive (since libPropList is only
+  linking against libc)
 
   14 May 2012; Michael Palimaka <kensington@gentoo.org>
   libPropList-0.10.1-r4.ebuild:
