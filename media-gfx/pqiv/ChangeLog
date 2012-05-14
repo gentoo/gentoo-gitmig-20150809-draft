@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pqiv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.31 2012/05/13 22:02:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.32 2012/05/14 10:52:53 ssuominen Exp $
+
+  14 May 2012; Samuli Suominen <ssuominen@gentoo.org> -pqiv-0.10.1.ebuild:
+  old
 
   13 May 2012; Jeff Horelick <jdhore@gentoo.org> pqiv-0.11.ebuild:
   marked x86 per bug 415335
