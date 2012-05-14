@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.27 2012/05/14 23:23:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.28 2012/05/14 23:32:39 blueness Exp $
+
+  14 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.4-r1.ebuild, -bitcoind-0.4.5.ebuild,
+  -bitcoind-0.5.0.4-r1.ebuild, -bitcoind-0.5.0.5-r1.ebuild,
+  -bitcoind-0.5.0.6.ebuild, -bitcoind-0.5.1.ebuild, -bitcoind-0.5.3-r2.ebuild,
+  -bitcoind-0.5.4.ebuild, -bitcoind-0.6.0.ebuild:
+  Remove vulnerable versions, CVE-2012-2459, bug #415973
 
 *bitcoind-0.6.2 (14 May 2012)
 *bitcoind-0.6.0.8_rc1 (14 May 2012)
