@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-qt3support
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.113 2012/05/13 13:49:35 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.114 2012/05/14 12:48:33 johu Exp $
+
+  14 May 2012; Johannes Huber <johu@gentoo.org> -qt-qt3support-4.7.2.ebuild:
+  Drop Qt-4.7.2
 
   13 May 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Fix kde USE flag description (media-libs/phonon vs. media-sound/phonon).

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.87 2012/05/12 09:42:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.88 2012/05/14 12:35:58 johu Exp $
+
+  14 May 2012; Johannes Huber <johu@gentoo.org> -qt-demo-4.7.2.ebuild:
+  Drop Qt-4.7.2
 
   12 May 2012; Davide Pesavento <pesa@gentoo.org> qt-demo-4.8.1-r1.ebuild:
   Sort deps.
