@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.27 2012/05/13 23:59:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.28 2012/05/14 18:31:26 ago Exp $
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> dmake-4.12.ebuild:
+  Stable for amd64, wrt bug #404733
 
 *dmake-4.12.2 (13 May 2012)
 
