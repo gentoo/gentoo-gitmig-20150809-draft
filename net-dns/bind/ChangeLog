@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.380 2012/04/07 17:37:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.381 2012/05/14 23:22:50 naota Exp $
+
+  14 May 2012; Naohiro Aota <naota@gentoo.org> bind-9.7.5.ebuild,
+  bind-9.8.1_p1.ebuild, bind-9.8.2.ebuild, bind-9.9.0.ebuild:
+  Add alternative dependency >=freebsd-ubin-9.0_rc providing fuser. #415785
 
 *bind-9.8.2 (07 Apr 2012)
 *bind-9.7.5 (07 Apr 2012)
