@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mac-fdisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.24 2012/02/16 19:21:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.25 2012/05/15 19:52:34 halcy0n Exp $
+
+  15 May 2012; Mark Loeser <halcy0n@gentoo.org> mac-fdisk-0.1-r7.ebuild:
+  Stable for ppc/ppc64; bug #397231
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mac-fdisk-0.1-r7.ebuild:
   x86 stable wrt bug #397231
