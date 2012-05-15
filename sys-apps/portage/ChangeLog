@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1013 2012/05/12 00:09:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1014 2012/05/15 00:11:46 zmedico Exp $
+
+*portage-2.1.10.60 (15 May 2012)
+
+  15 May 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.60.ebuild,
+  -portage-2.1.10.58.ebuild:
+  2.1.10.60 version bump. This fixes bug #406867 (display merge list on stdout,
+  despite autounmask) and bug #415579 (regression in 2.1.10.59 and
+  2.2.0_alpha104 for ftp binhost). Bug #409383 tracks all bugs fixed since
+  portage-2.1.10.49.
 
 *portage-2.2.0_alpha104 (12 May 2012)
 
