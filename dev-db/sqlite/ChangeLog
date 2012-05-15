@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.408 2012/04/26 17:06:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.409 2012/05/15 01:04:11 floppym Exp $
+
+*sqlite-3.7.12 (15 May 2012)
+
+  15 May 2012; Mike Gilbert <floppym@gentoo.org> +sqlite-3.7.12.ebuild,
+  -files/sqlite-3.7.7.1-interix-amalgamation.patch, -sqlite-3.7.7.1-r1.ebuild,
+  -sqlite-3.7.7.1.ebuild, -sqlite-3.7.8.ebuild, -sqlite-3.7.9.ebuild:
+  Version bump. Ebuild by Arfrever.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> sqlite-3.7.11.ebuild:
   keyword ~amd64-fbsd

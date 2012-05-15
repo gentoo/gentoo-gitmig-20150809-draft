@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.8.ebuild,v 1.1 2011/09/20 23:29:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.12.ebuild,v 1.1 2012/05/15 01:04:11 floppym Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ SRC_URI="doc? ( http://sqlite.org/${PN}-doc-${DOC_PV}.zip )
 
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug doc +extensions +fts3 icu +readline secure-delete soundex tcl test +threadsafe unlock-notify"
 
 RDEPEND="icu? ( dev-libs/icu )
@@ -137,7 +137,7 @@ src_compile() {
 }
 
 src_test() {
-	if [[ "${EUID}" -eq "0" ]]; then
+	if [[ "${EUID}" -eq 0 ]]; then
 		ewarn "Skipping tests due to root permissions"
 		return
 	fi
@@ -147,7 +147,7 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}" install
-	find "${ED}" -name "*.la" -print0 | xargs -0 rm -f
+	find "${ED}" -name "*.la" -exec rm -f {} +
 
 	doman sqlite3.1
 
