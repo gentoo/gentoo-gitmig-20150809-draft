@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.10 2012/02/25 04:26:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.11 2012/05/15 06:45:08 dev-zero Exp $
+
+*uwsgi-1.2.3 (15 May 2012)
+
+  15 May 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.1.2-threaded-php.patch, +files/1.2.3-pyerl.patch,
+  +uwsgi-1.2.3.ebuild, +files/42_mod_uwsgi-r1.conf, +files/uwsgi.confd-r1,
+  +files/uwsgi.initd-r1, metadata.xml:
+  Version bump (bug #415127), in collaboration with Ultrabug: no magic deps
+  anymore, added support for perl, ruby, lua, erlang, php and general cgi.
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> uwsgi-0.9.7.2.ebuild,
   uwsgi-0.9.8.ebuild, uwsgi-1.0.2.1.ebuild:
