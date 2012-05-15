@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/sisctrl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.17 2012/05/05 04:53:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.18 2012/05/15 16:10:36 ssuominen Exp $
+
+  15 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  sisctrl-0.0.20051202.ebuild:
+  Update HOMEPAGE wrt #416097 by "df"
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> sisctrl-0.0.20051202.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
