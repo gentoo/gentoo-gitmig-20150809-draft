@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CPAN-Meta-YAML
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.23 2012/04/28 02:32:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.24 2012/05/15 19:17:38 halcy0n Exp $
+
+  15 May 2012; Mark Loeser <halcy0n@gentoo.org> CPAN-Meta-YAML-0.4.0.ebuild:
+  Stable for ppc64; bug #393397
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   CPAN-Meta-YAML-0.8.0.ebuild:

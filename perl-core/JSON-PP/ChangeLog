@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/JSON-PP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.20 2012/04/28 02:32:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.21 2012/05/15 19:15:01 halcy0n Exp $
+
+  15 May 2012; Mark Loeser <halcy0n@gentoo.org> JSON-PP-2.272.0.ebuild:
+  Stable for ppc64; bug #393397
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org> JSON-PP-2.272.0.ebuild:
   keyword ~amd64-fbsd
