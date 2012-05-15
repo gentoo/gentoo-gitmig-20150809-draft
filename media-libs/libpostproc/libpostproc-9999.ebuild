@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.1 2012/05/14 19:12:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.2 2012/05/15 08:41:37 scarabeus Exp $
 
 EAPI="4"
 
@@ -37,7 +37,7 @@ for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-DEPEND=">=media-video/libav-0.8"
+DEPEND=">=media-video/libav-0.8.2-r2"
 RDEPEND="${DEPEND}"
 
 src_configure() {
@@ -83,12 +83,4 @@ src_configure() {
 		--extra-cflags="${CFLAGS}" \
 		$(use_enable static-libs static) \
 		${myconf} || die
-}
-
-src_compile() {
-	emake
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
 }

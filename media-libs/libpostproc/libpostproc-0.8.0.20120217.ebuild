@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-0.8.0.20120217.ebuild,v 1.1 2012/05/14 19:12:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-0.8.0.20120217.ebuild,v 1.2 2012/05/15 08:41:37 scarabeus Exp $
 
 EAPI="4"
 
@@ -32,12 +32,11 @@ IUSE="pic static-libs"
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
 CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec mmx vis"
-
 for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-DEPEND=">=media-video/libav-0.8"
+DEPEND=">=media-video/libav-0.8.2-r2"
 RDEPEND="${DEPEND}"
 
 src_configure() {
@@ -83,12 +82,4 @@ src_configure() {
 		--extra-cflags="${CFLAGS}" \
 		$(use_enable static-libs static) \
 		${myconf} || die
-}
-
-src_compile() {
-	emake
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
 }
