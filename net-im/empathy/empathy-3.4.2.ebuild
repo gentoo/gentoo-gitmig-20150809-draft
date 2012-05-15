@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.2.ebuild,v 1.4 2012/05/04 06:22:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.ebuild,v 1.1 2012/05/15 05:58:13 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -9,79 +9,86 @@ PYTHON_DEPEND="2:2.5"
 
 inherit gnome2 python
 
-DESCRIPTION="Telepathy client and library using GTK+"
+DESCRIPTION="Telepathy instant messaging and video/audio call client for GNOME"
 HOMEPAGE="http://live.gnome.org/Empathy"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="debug eds +geocode +geoloc gnome gnome-online-accounts legacy-call +map +networkmanager sendto spell test +v4l"
 KEYWORDS="~amd64 ~x86 ~x86-linux"
-IUSE="call debug eds +map +geoloc gnome-online-accounts +networkmanager sendto spell test +v4l"
 
-# FIXME: gst-plugins-bad is required for the valve plugin. This should move to good
-# eventually at which point the dep can be dropped
 # libgee extensively used in libempathy
 # gdk-pixbuf and pango extensively used in libempathy-gtk
-RDEPEND=">=dev-libs/glib-2.28:2
+# clutter-1.10 dep is missing in configure, newer API is used
+# folks-0.6.8 is needed to load the contacts list, configure is wrong again
+COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	x11-libs/gdk-pixbuf:2
-	>=x11-libs/gtk+-3.0.2:3
+	>=x11-libs/gtk+-3.3.6:3
 	x11-libs/pango
 	>=dev-libs/dbus-glib-0.51
-	>=dev-libs/folks-0.6.2
+	>=dev-libs/folks-0.6.8
 	dev-libs/libgee:0
 	>=gnome-base/gnome-keyring-2.91.4-r300
 	>=media-libs/libcanberra-0.25[gtk3]
-	media-sound/pulseaudio[glib]
 	>=net-libs/gnutls-2.8.5
-	>=net-libs/telepathy-glib-0.16.0
 	>=net-libs/webkit-gtk-1.3.13:3
 	>=x11-libs/libnotify-0.7
+
+	>=media-libs/clutter-1.10.0:1.0
+	>=media-libs/clutter-gtk-0.90.3:1.0
+	>=media-libs/clutter-gst-1.5.2:1.0
+
+	>=net-libs/telepathy-glib-0.18
+	>=net-im/telepathy-logger-0.2.13
+	>=net-libs/telepathy-farstream-0.2.1
 
 	dev-libs/libxml2:2
 	gnome-base/gsettings-desktop-schemas
 	media-libs/gstreamer:0.10
-	media-libs/gst-plugins-base:0.10
-	media-libs/gst-plugins-bad
-	>=net-im/telepathy-logger-0.2.8
-	net-libs/farsight2
-	>=net-libs/telepathy-farsight-0.0.14
-	net-im/telepathy-connection-managers
-	x11-libs/libX11
-	x11-themes/gnome-icon-theme-symbolic
+	media-sound/pulseaudio[glib]
+	net-libs/libsoup:2.4
+	x11-libs/libX11	
 
-	call? (
-		>=media-libs/clutter-1.7.14:1.0
-		>=media-libs/clutter-gtk-0.90.3:1.0
-		media-libs/clutter-gst:1.0
-		net-libs/telepathy-farstream )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
-	geoloc? ( >=app-misc/geoclue-0.11 )
-	gnome-online-accounts? ( net-libs/gnome-online-accounts )
+	geocode? ( sci-geosciences/geocode-glib )
+	geoloc? ( >=app-misc/geoclue-0.12 )
+	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.3.0 )
 	map? (
 		>=media-libs/clutter-1.7.14:1.0
 		>=media-libs/clutter-gtk-0.90.3:1.0
-		media-libs/libchamplain:0.12[gtk] )
+		>=media-libs/libchamplain-0.12.1:0.12[gtk] )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	sendto? ( >=gnome-extra/nautilus-sendto-2.90.0 )
 	spell? (
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35 )
 	v4l? (
-		|| ( sys-fs/udev[gudev] sys-fs/udev[extras] )
 		media-plugins/gst-plugins-v4l2:0.10
-		>=media-video/cheese-2.91.91.1 )
+		>=media-video/cheese-2.91.91.1
+		sys-fs/udev[gudev] )
 "
-DEPEND="${RDEPEND}
-	app-text/scrollkeeper
-	>=app-text/gnome-doc-utils-0.17.3
-	>=dev-util/intltool-0.35.0
+# FIXME: gst-plugins-bad is required for the valve plugin. This should move to good
+# eventually at which point the dep can be dropped
+RDEPEND="${COMMON_DEPEND}
+	media-libs/gst-plugins-base:0.10
+	media-libs/gst-plugins-bad
+	net-im/telepathy-connection-managers
+	x11-themes/gnome-icon-theme-symbolic
+	gnome? ( gnome-extra/gnome-contacts )
+	!legacy-call? ( !<net-voip/telepathy-gabble-0.16 )
+"
+DEPEND="${COMMON_DEPEND}
+	dev-libs/libxml2:2
+	dev-util/itstool
+
+	>=dev-util/intltool-0.40.0
 	virtual/pkgconfig
-	>=sys-devel/gettext-0.17
 	test? (
 		sys-apps/grep
 		>=dev-libs/check-0.9.4 )
 	dev-libs/libxslt
 "
-PDEPEND=">=net-im/telepathy-mission-control-5.7.6"
+PDEPEND=">=net-im/telepathy-mission-control-5.12"
 
 pkg_setup() {
 	DOCS="CONTRIBUTORS AUTHORS ChangeLog NEWS README"
@@ -91,9 +98,10 @@ pkg_setup() {
 		--disable-static
 		--disable-meego
 		--disable-Werror
-		$(use_enable call)
+		$(use_enable legacy-call empathy-av)
 		$(use_enable debug)
 		$(use_with eds)
+		$(use_enable geocode)
 		$(use_enable geoloc location)
 		$(use_enable gnome-online-accounts goa)
 		$(use_enable map)
