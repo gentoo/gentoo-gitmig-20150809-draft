@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/screen-message-0.19.ebuild,v 1.1 2011/11/09 16:45:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/screen-message-0.19.ebuild,v 1.2 2012/05/15 18:30:06 sping Exp $
 
 EAPI="2"
 
 DESCRIPTION="Display a multi-line message large, fullscreen, black on white"
-HOMEPAGE="http://www.joachim-breitner.de/blog/archives/249-screen-message-uploaded-to-Debian.html"
+HOMEPAGE="http://www.joachim-breitner.de/projects#screen-message"
 SRC_URI="mirror://debian/pool/main/s/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
