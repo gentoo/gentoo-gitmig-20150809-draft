@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optcomplete/optcomplete-1.2.ebuild,v 1.8 2012/02/01 21:58:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optcomplete/optcomplete-1.2.ebuild,v 1.9 2012/05/15 16:24:51 darkside Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://furius.ca/downloads/${PN}/releases/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-linux"
 IUSE="examples"
 
 DEPEND=""
