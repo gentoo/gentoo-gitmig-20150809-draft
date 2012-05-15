@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.9 2012/05/04 08:58:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.10 2012/05/15 06:08:38 xmw Exp $
+
+*xpra-0.2.0 (15 May 2012)
+
+  15 May 2012; Michael Weber <xmw@gentoo.org> +xpra-0.2.0.ebuild:
+  Version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> xpra-0.1.0.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
