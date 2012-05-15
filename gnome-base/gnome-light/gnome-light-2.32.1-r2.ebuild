@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1-r2.ebuild,v 1.6 2012/04/29 15:45:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1-r2.ebuild,v 1.7 2012/05/15 15:38:12 ssuominen Exp $
 
 EAPI="4"
 
@@ -69,7 +69,7 @@ RDEPEND="!<x11-libs/gtk+-3.2.4-r1:3
 	>=gnome-extra/yelp-2.30.2"
 DEPEND=""
 PDEPEND=">=gnome-base/gvfs-1.6.6
-	automount? ( >=gnome-base/gvfs-1.6.6[gdu] )"
+	automount? ( || ( >=gnome-base/gvfs-1.6.6[gdu] >=gnome-base/gvfs-1.6.6[udisks] ) )"
 
 pkg_postinst () {
 # FIXME: Rephrase to teach about using different WMs instead, as metacity is the default anyway
