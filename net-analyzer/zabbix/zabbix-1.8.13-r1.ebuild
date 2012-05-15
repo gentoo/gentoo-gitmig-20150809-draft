@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.12-r1.ebuild,v 1.1 2012/05/11 14:57:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.13-r1.ebuild,v 1.1 2012/05/15 23:09:58 mattm Exp $
 
 EAPI="2"
 
@@ -291,7 +291,7 @@ src_install() {
 			"${FILESDIR}/1.6.6"/zabbix_agent.conf \
 			"${FILESDIR}/1.6.6"/zabbix_agentd.conf
 		doinitd \
-			"${FILESDIR}/1.6.6"/init.d/zabbix-agentd-r1
+			"${FILESDIR}/1.6.6"/init.d/zabbix-agentd
 		dosbin \
 			src/zabbix_agent/zabbix_agent \
 			src/zabbix_agent/zabbix_agentd
