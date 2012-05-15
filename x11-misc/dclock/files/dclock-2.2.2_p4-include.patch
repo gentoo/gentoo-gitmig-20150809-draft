@@ -1,5 +1,5 @@
---- dclock.c.orig	2008-07-08 05:35:18.000000000 +0200
-+++ dclock.c	2010-09-17 00:40:05.000000000 +0200
+--- dclock.c
++++ dclock.c
 @@ -7,6 +7,7 @@
   * manager: *Dclock.seconds: on
   */
