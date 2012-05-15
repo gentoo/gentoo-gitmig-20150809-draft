@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.3.ebuild,v 1.4 2012/05/14 18:30:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.3.ebuild,v 1.5 2012/05/15 04:32:26 mr_bones_ Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -134,7 +134,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.0-gentoo.patch \
 		"${FILESDIR}"/${PN}-1.5.4-zhTW.patch
-	
+
 	if has_version ">=dev-libs/glib-2.32"; then
 		epatch "${FILESDIR}"/${P}-glib-2.32.patch
 	fi
