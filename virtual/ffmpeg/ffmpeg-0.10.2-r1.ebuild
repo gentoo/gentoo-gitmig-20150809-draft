@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ffmpeg-0.10.2-r1.ebuild,v 1.5 2012/04/22 12:20:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ffmpeg-0.10.2-r1.ebuild,v 1.6 2012/05/15 14:42:08 aballier Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="X +encode jpeg2k mp3 sdl theora threads truetype vaapi vdpau x264"
 
 RDEPEND="
