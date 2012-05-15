@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/hpacucli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/hpacucli/ChangeLog,v 1.4 2012/05/13 17:16:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/hpacucli/ChangeLog,v 1.5 2012/05/15 05:57:27 ramereth Exp $
+
+  15 May 2012; Lance Albertson <ramereth@gentoo.org> hpacucli-9.0.24.0.ebuild:
+  Version RDEPEND and add util-linux dep with correct version
 
 *hpacucli-9.0.24.0 (13 May 2012)
 

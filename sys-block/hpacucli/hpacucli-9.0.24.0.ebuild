@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/hpacucli/hpacucli-9.0.24.0.ebuild,v 1.1 2012/05/13 17:16:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/hpacucli/hpacucli-9.0.24.0.ebuild,v 1.2 2012/05/15 05:57:27 ramereth Exp $
 
 EAPI="4"
 
@@ -20,8 +20,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="hardened"
 
 DEPEND=""
-RDEPEND=">=sys-apps/coreutils-2.20.1
+RDEPEND="sys-apps/coreutils
 	sys-process/procps
+	>=sys-apps/util-linux-2.20.1
 	x86? ( sys-libs/lib-compat )
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
