@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.4.0.ebuild,v 1.4 2012/05/03 18:33:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.4.0.ebuild,v 1.5 2012/05/15 19:41:58 pacho Exp $
 
 EAPI="4"
 CMAKE_MIN_VERSION="2.6.4"
@@ -18,7 +18,7 @@ KEYWORDS="amd64 x86"
 IUSE="gnome +latexmk rubber vala"
 
 COMMON_DEPEND="
-	app-text/gtkspell
+	app-text/gtkspell:2
 	>=dev-libs/glib-2.30:2
 	dev-libs/libgee:0
 	dev-libs/libunique:1

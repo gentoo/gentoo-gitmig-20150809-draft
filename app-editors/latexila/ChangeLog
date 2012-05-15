@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/latexila
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.7 2012/05/03 18:33:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.8 2012/05/15 19:41:58 pacho Exp $
+
+  15 May 2012; Pacho Ramos <pacho@gentoo.org> -latexila-2.2.3.ebuild,
+  latexila-2.4.0.ebuild:
+  It depends on app-text/gtkspell:2, bug #415709 by Marek Bartosiewicz.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> latexila-2.2.3.ebuild,
   latexila-2.4.0.ebuild:
