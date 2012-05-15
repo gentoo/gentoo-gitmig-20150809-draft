@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.5.ebuild,v 1.1 2012/05/15 19:26:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.5.ebuild,v 1.2 2012/05/15 19:30:52 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -49,7 +49,8 @@ src_prepare() {
 
 	# Use flags from xfce4-dev-tools instead of defining them again in
 	# configure.in wrt #386979
-	# Remove AC_PROG_LIBTOOL because LT_INIT([disable-static]) is also present
+	# Remove AC_PROG_LIBTOOL because LT_INIT([disable-static]) is also present:
+	# http://bugzilla.xfce.org/show_bug.cgi?id=8888
 	sed -i \
 		-e '/PLATFORM_CFLAGS/s:-Werror::' \
 		-e '/AC_PROG_LIBTOOL/d' \
