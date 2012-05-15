@@ -7,6 +7,7 @@
 		<flag name="lighttpd">Adds Lighttpd support</flag>
 		<flag name="plugins">Adds support for nagios plugins</flag>
 		<flag name="web">Adds generic web interface support</flag>
+		<flag name="eventhandler">Adds support for running custom scripts whenever a host or service state change occurs</flag>
 	</use>
 	<maintainer>
 		<email>prometheanfire@gentoo.org</email>

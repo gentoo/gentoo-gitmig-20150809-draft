@@ -1,19 +1,11 @@
 #!/sbin/runscript
 
-opts="${opts} reload checkconfig"
+extra_commands="${extra_commands} reload checkconfig"
 
 depend() {
 	need net
 	use dns logger firewall
-	after mysql postgresql
-}
-
-reload()
-{
-	checkconfig || return 1
-	ebegin "Reloading configuration"
-	killall -HUP icinga &>/dev/null
-	eend $?
+	after mysql postgresql ido2db
 }
 
 checkconfig() {
@@ -24,20 +16,28 @@ checkconfig() {
 	eend $? "Configuration Error. Please fix your configfile"
 }
 
-start() {
+reload()
+{
 	checkconfig || return 1
+	ebegin "Reloading configuration"
+	kill -HUP `cat /var/run/icinga/icinga.lock` &>/dev/null
+	eend $?
+}
+
+start() {
 	ebegin "Starting icinga"
-	touch /var/icinga/icinga.log /var/icinga/status.sav
-	chown icinga:icinga /var/icinga/icinga.log /var/icinga/status.sav
-	rm -f /var/icinga/rw/icinga.cmd
-	start-stop-daemon --quiet --start --startas /usr/sbin/icinga -e HOME="/var/icinga/home" --pidfile /var/icinga/icinga.lock -- -d /etc/icinga/icinga.cfg
+	checkpath -d -o icinga:icinga /tmp/icinga /var/run/icinga /var/log/icinga /var/lib/icinga
+	checkpath -f -o icinga:icinga /var/log/icinga/icinga.log
+	rm -f /var/lib/icinga/rw/icinga.cmd
+	start-stop-daemon --start --exec /usr/sbin/icinga -e HOME="/var/lib/icinga/home" --pidfile /var/run/icinga/icinga.lock -- -d /etc/icinga/icinga.cfg
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping icinga"
-	start-stop-daemon --quiet --stop --pidfile /var/icinga/icinga.lock
-	rm -f /var/icinga/status.log /var/icinga/icinga.tmp /var/icinga/icinga.lock /var/icinga/rw/icinga.cmd
+	start-stop-daemon --stop --pidfile /var/run/icinga/icinga.lock
+	rm -f /var/lib/icinga/status.log /var/run/icinga/icinga.lock /var/lib/icinga/rw/icinga.cmd
+	rm -r /tmp/icinga
 	eend $?
 }
 

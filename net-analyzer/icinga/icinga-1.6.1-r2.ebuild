@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.6.1-r2.ebuild,v 1.3 2012/03/09 10:00:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.6.1-r2.ebuild,v 1.4 2012/05/15 22:09:09 prometheanfire Exp $
 
 EAPI=2
 
@@ -112,7 +112,7 @@ src_install() {
 		 emake DESTDIR="${D}" install-idoutils || die
 	fi
 
-	newinitd "${FILESDIR}"/icinga-init.d-2 icinga || die
+	newinitd "${FILESDIR}"/icinga-init.d icinga || die
 	newconfd "${FILESDIR}"/icinga-conf.d icinga || die
 	if use idoutils ; then
 		newinitd "${FILESDIR}"/ido2db-init.d ido2db || die

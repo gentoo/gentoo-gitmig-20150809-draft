@@ -1,19 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.6.1-r1.ebuild,v 1.3 2011/12/29 15:59:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.7.0.ebuild,v 1.1 2012/05/15 22:09:09 prometheanfire Exp $
 
 EAPI=2
 
-inherit depend.apache eutils multilib toolchain-funcs
+inherit depend.apache eutils multilib toolchain-funcs versionator
 
 DESCRIPTION="Nagios Fork - Check daemon, CGIs, docs, IDOutils"
 HOMEPAGE="http://www.icinga.org/"
+#MY_PV=$(delete_version_separator 3)
+#SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
+#S=${WORKDIR}/${PN}-${MY_PV}
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+apache2 debug +idoutils lighttpd +mysql perl plugins postgres ssl +vim-syntax +web"
+IUSE="+apache2 debug eventhandler +idoutils lighttpd +mysql perl +plugins postgres ssl +vim-syntax +web"
 DEPEND="idoutils? ( dev-db/libdbi-drivers[mysql?,postgres?] )
 	perl? ( dev-lang/perl )
 	virtual/mailx
@@ -32,11 +35,11 @@ pkg_setup() {
 	depend.apache_pkg_setup
 	enewgroup icinga
 	enewgroup nagios
-	enewuser icinga -1 -1 /var/spool/icinga "icinga,nagios"
+	enewuser icinga -1 -1 /var/lib/icinga "icinga,nagios"
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/fix-prestripped-binaries.patch"
+	epatch "${FILESDIR}/fix-prestripped-binaries-1.7.0.patch"
 }
 
 src_configure() {
@@ -55,18 +58,31 @@ src_configure() {
 	--disable-statuswrl
 	--with-cgiurl=/icinga/cgi-bin
 	--with-log-dir=/var/log/icinga
+	--libdir=/usr/$(get_libdir)
 	--bindir=/usr/sbin
 	--sbindir=/usr/$(get_libdir)/icinga/cgi-bin
 	--datarootdir=/usr/share/icinga/htdocs
 	--localstatedir=/var/lib/icinga
 	--sysconfdir=/etc/icinga
 	--with-lockfile=/var/run/icinga/icinga.lock
-	--with-temp-dir=/tmp/icinga"
+	--with-temp-dir=/tmp/icinga
+	--with-temp-file=/tmp/icinga/icinga.tmp"
+
+	if use idoutils ; then
+		myconf+=" --with-ido2db-lockfile=/var/run/icinga/ido2db.lock
+		--with-icinga-chkfile=/var/lib/icinga/icinga.chk
+		--with-ido-sockfile=/var/lib/icinga/ido.sock
+		--with-idomod-tmpfile=/tmp/icinga/idomod.tmp"
+	fi
+
+	if use eventhandler ; then
+		myconfig+=" --with-eventhandler-dir=/etc/icinga/eventhandlers"
+	fi
 
 	if use plugins ; then
-		myconf+=" --libexecdir=/usr/$(get_libdir)/nagios/plugins"
+		myconf+=" --with-plugin-dir=/usr/$(get_libdir)/nagios/plugins"
 	else
-		myconf+=" --libexecdir=/usr/$(get_libdir)/icinga/plugins"
+		myconf+=" --with-plugin-dir=/usr/$(get_libdir)/nagios/plugins"
 	fi
 
 	if use !apache2 && use !lighttpd ; then
@@ -106,13 +122,15 @@ src_install() {
 
 	emake DESTDIR="${D}" install{,-config,-commandmode} || die
 
-	sed -i -e 's/var\/lib\/icinga\/icinga.tmp/tmp\/icinga\/icinga.tmp/g' "${D}"/etc/icinga/icinga.cfg || die
-
 	if use idoutils ; then
 		 emake DESTDIR="${D}" install-idoutils || die
 	fi
 
-	newinitd "${FILESDIR}"/icinga-init.d-2 icinga || die
+	if use eventhandler ; then
+		emake DESTDIR="${D}" install-eventhandlers || die
+	fi
+
+	newinitd "${FILESDIR}"/icinga-init.d icinga || die
 	newconfd "${FILESDIR}"/icinga-conf.d icinga || die
 	if use idoutils ; then
 		newinitd "${FILESDIR}"/ido2db-init.d ido2db || die
@@ -133,6 +151,11 @@ src_install() {
 			ewarn "out-of-the-box. Since you are not using one of them, you"
 			ewarn "have to configure your webserver accordingly yourself."
 		fi
+	fi
+
+	if use eventhandler ; then
+		dodir /etc/icinga/eventhandlers || die
+		fowners icinga:icinga /etc/icinga/eventhandlers || die
 	fi
 
 	fowners -R root:root /usr/$(get_libdir)/icinga || die

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.14 2012/03/09 10:00:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.15 2012/05/15 22:09:09 prometheanfire Exp $
+
+*icinga-1.7.0 (15 May 2012)
+
+  15 May 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +files/fix-prestripped-binaries-1.7.0.patch, +icinga-1.7.0.ebuild,
+  -files/icinga-init.d, -icinga-1.6.1-r1.ebuild, files/icinga-init.d,
+  icinga-1.6.1-r2.ebuild, metadata.xml:
+  adding 1.7.0 and removing 1.6.1-r1
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> icinga-1.6.1-r2.ebuild:
   x86 stable wrt bug #403949
