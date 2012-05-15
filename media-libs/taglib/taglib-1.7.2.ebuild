@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.7.2.ebuild,v 1.1 2012/05/09 08:44:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.7.2.ebuild,v 1.2 2012/05/15 18:27:20 kensington Exp $
 
 EAPI=4
+CMAKE_IN_SOURCE_BUILD=1
 inherit cmake-utils
 
 DESCRIPTION="A library for reading and editing audio meta data"
@@ -29,11 +30,17 @@ DOCS="AUTHORS NEWS"
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_build examples)
+		$(cmake-utils_use_build test TESTS)
 		$(cmake-utils_use_with asf)
 		$(cmake-utils_use_with mp4)
 	)
 
 	cmake-utils_src_configure
+}
+
+src_test() {
+	# ctest does not work
+	default
 }
 
 pkg_postinst() {
