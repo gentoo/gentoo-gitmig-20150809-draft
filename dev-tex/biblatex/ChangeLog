@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/biblatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.3 2012/05/15 17:45:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.4 2012/05/15 18:48:36 johu Exp $
+
+*biblatex-1.7 (15 May 2012)
+
+  15 May 2012; Johannes Huber <johu@gentoo.org> +biblatex-1.7.ebuild:
+  Version bump by Michael Schindhelm <mschindhelm@gmx.de> and me wrt bug
+  #403601.
 
   15 May 2012; Johannes Huber <johu@gentoo.org> biblatex-1.6.ebuild:
   Add ~x86 keyword.
