@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.43 2012/05/13 06:27:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.44 2012/05/15 08:31:15 jdhore Exp $
+
+*atheme-services-6.0.11 (15 May 2012)
+*atheme-services-7.0.2 (15 May 2012)
+
+  15 May 2012; Jeff Horelick <jdhore@gentoo.org> +atheme-services-6.0.11.ebuild,
+  +atheme-services-7.0.2.ebuild, -atheme-services-7.0.0.ebuild:
+  Version bumps on the 6.0 (LTS) and 7.0 branches.
 
   13 May 2012; Jeff Horelick <jdhore@gentoo.org> atheme-services-9999.ebuild:
   Make the -9999 ebuild clone the submodules too to fix the build since
