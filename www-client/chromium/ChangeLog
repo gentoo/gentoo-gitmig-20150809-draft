@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.630 2012/05/14 12:31:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.631 2012/05/15 06:44:40 phajdan.jr Exp $
+
+  15 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-unistd-r0.patch, chromium-19.0.1084.46.ebuild,
+  chromium-20.0.1132.3.ebuild:
+  Backport upstream patch to fix bug #415601 by Baptiste Wicht.
 
 *chromium-20.0.1132.3 (14 May 2012)
 
