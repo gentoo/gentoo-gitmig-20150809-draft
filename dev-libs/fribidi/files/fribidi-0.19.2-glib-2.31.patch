@@ -1,0 +1,74 @@
+http://bugs.gentoo.org/318569
+http://bugs.gentoo.org/415721
+
+--- charset/fribidi-char-sets.c
++++ charset/fribidi-char-sets.c
+@@ -114,7 +114,7 @@
+ };
+ 
+ #if FRIBIDI_USE_GLIB+0
+-# include <glib/gstrfuncs.h>
++# include <glib.h>
+ # define fribidi_strcasecmp g_ascii_strcasecmp
+ #else /* !FRIBIDI_USE_GLIB */
+ static char
+--- lib/common.h
++++ lib/common.h
+@@ -57,7 +57,7 @@
+ #  define SIZEOF_VOID_P GLIB_SIZEOF_VOID_P
+ # endif	/* !SIZEOF_VOID_P */
+ # ifndef __FRIBIDI_DOC
+-#  include <glib/gmem.h>
++#  include <glib.h>
+ # endif	/* !__FRIBIDI_DOC */
+ # ifndef fribidi_malloc
+ #  define fribidi_malloc g_try_malloc
+@@ -65,12 +65,12 @@
+ # endif	/* !fribidi_malloc */
+ # ifndef fribidi_assert
+ #  ifndef __FRIBIDI_DOC
+-#   include <glib/gmessages.h>
++#   include <glib.h>
+ #  endif /* !__FRIBIDI_DOC */
+ #  define fribidi_assert g_assert
+ # endif	/* !fribidi_assert */
+ # ifndef __FRIBIDI_DOC
+-#  include <glib/gmacros.h>
++#  include <glib.h>
+ # endif	/* !__FRIBIDI_DOC */
+ # ifndef FRIBIDI_BEGIN_STMT
+ #  define FRIBIDI_BEGIN_STMT G_STMT_START {
+--- lib/fribidi-common.h
++++ lib/fribidi-common.h
+@@ -62,7 +62,7 @@
+ 
+ #if FRIBIDI_USE_GLIB+0
+ # ifndef __FRIBIDI_DOC
+-#  include <glib/gmacros.h>
++#  include <glib.h>
+ # endif	/* !__FRIBIDI_DOC */
+ # define FRIBIDI_BEGIN_DECLS		G_BEGIN_DECLS
+ # define FRIBIDI_END_DECLS		G_END_DECLS
+--- lib/fribidi-types.h
++++ lib/fribidi-types.h
+@@ -40,8 +40,7 @@
+ 
+ #if FRIBIDI_USE_GLIB+0
+ # ifndef __FRIBIDI_DOC
+-#  include <glib/gtypes.h>
+-#  include <glib/gunicode.h>
++#  include <glib.h>
+ # endif	/* !__FRIBIDI_DOC */
+ # define FRIBIDI_INT8_LOCAL		gint8
+ # define FRIBIDI_INT16_LOCAL		gint16
+--- lib/mem.h
++++ lib/mem.h
+@@ -42,7 +42,7 @@
+ #if FRIBIDI_USE_GLIB+0
+ 
+ #ifndef __FRIBIDI_DOC
+-# include <glib/gmem.h>
++# include <glib.h>
+ #endif /* !__FRIBIDI_DOC */
+ 
+ #define FriBidiMemChunk GMemChunk
