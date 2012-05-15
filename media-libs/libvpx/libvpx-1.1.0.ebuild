@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.8 2012/05/12 18:06:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.9 2012/05/15 12:21:22 aballier Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs
+inherit multilib toolchain-funcs base
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -38,6 +38,8 @@ DEPEND="amd64? ( dev-lang/yasm )
 REQUIRED_USE="
 	sse2? ( mmx )
 	"
+
+PATCHES=( "${FILESDIR}/${P}-chost.patch" )
 
 src_configure() {
 	#let the build system decide which AS to use (it honours $AS but
