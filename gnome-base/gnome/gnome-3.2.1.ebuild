@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.2.1.ebuild,v 1.1 2011/11/07 07:50:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.2.1.ebuild,v 1.2 2012/05/15 15:32:23 ssuominen Exp $
 
 EAPI="4"
 
@@ -44,7 +44,7 @@ RDEPEND="
 		>=gnome-base/gnome-applets-${PV}
 		>=gnome-base/gnome-fallback-${PV} )"
 DEPEND=""
-PDEPEND=">=gnome-base/gvfs-1.10.1[gdu]"
+PDEPEND="|| ( >=gnome-base/gvfs-1.10.1[udisks] >=gnome-base/gvfs-1.10.1[gdu] )"
 # Broken from assumptions of gnome-vfs headers being included in nautilus headers,
 # which isn't the case with nautilus-2.22, bug #216019
 #	>=app-admin/gnome-system-tools-2.32.0

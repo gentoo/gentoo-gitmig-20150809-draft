@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1-r2.ebuild,v 1.5 2012/04/29 15:46:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1-r2.ebuild,v 1.6 2012/05/15 15:32:23 ssuominen Exp $
 
 EAPI="4"
 
@@ -159,7 +159,7 @@ RDEPEND="!<x11-libs/gtk+-3.2.4-r1:3
 		>=app-misc/tomboy-1.4.2 )
 	policykit? ( gnome-extra/polkit-gnome )"
 DEPEND=""
-PDEPEND=">=gnome-base/gvfs-1.6.6[gdu]"
+PDEPEND="|| ( >=gnome-base/gvfs-1.6.6[gdu] >=gnome-base/gvfs-1.6.6[udisks] )"
 # Broken from assumptions of gnome-vfs headers being included in nautilus headers,
 # which isn't the case with nautilus-2.22, bug #216019
 #	>=app-admin/gnome-system-tools-2.32.0
