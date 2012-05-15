@@ -9,4 +9,7 @@
 	<longdescription lang="en">
 		Administrative tool for RSBAC system
 	</longdescription>
+	<use>
+		<flag name="rklogd">Enabled deprecated RSBAC kernel logger</flag>
+	</use>
 </pkgmetadata>
