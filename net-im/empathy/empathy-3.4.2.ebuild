@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.ebuild,v 1.1 2012/05/15 05:58:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.ebuild,v 1.2 2012/05/15 23:30:10 mr_bones_ Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -47,7 +47,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	media-libs/gstreamer:0.10
 	media-sound/pulseaudio[glib]
 	net-libs/libsoup:2.4
-	x11-libs/libX11	
+	x11-libs/libX11
 
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	geocode? ( sci-geosciences/geocode-glib )
