@@ -1,0 +1,11 @@
+# ChangeLog for sci-geosciences/geocode-glib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/ChangeLog,v 1.1 2012/05/15 05:57:42 tetromino Exp $
+
+*geocode-glib-0.99.0 (15 May 2012)
+
+  15 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +geocode-glib-0.99.0.ebuild, +metadata.xml:
+  Add glib interface to Yahoo! place finder geocoding service; needed for
+  empathy-3.4.
+
