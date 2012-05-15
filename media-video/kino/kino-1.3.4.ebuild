@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.6 2011/11/15 10:35:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.7 2012/05/15 03:47:52 lu_zero Exp $
 
 EAPI="4"
 
@@ -85,6 +85,7 @@ src/page_bttv.cc' po/POTFILES.in || die "sed failed"
 		src/filehandler.h || die "sed failed"
 	epatch "${FILESDIR}/${P}-v4l1.patch"
 	epatch "${FILESDIR}/${P}-libav-0.7.patch"
+	epatch "${FILESDIR}/${P}-libav-0.8.patch"
 }
 
 src_configure() {
