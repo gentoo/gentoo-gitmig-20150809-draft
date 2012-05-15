@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/root-tail-1.2-r3.ebuild,v 1.7 2012/03/18 18:15:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/root-tail-1.2-r3.ebuild,v 1.8 2012/05/15 15:36:23 hasufell Exp $
 
 EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Terminal to display (multiple) log files on the root window"
-HOMEPAGE="http://www.goof.com/pcg/marc/root-tail.html"
-SRC_URI="http://www.goof.com/pcg/marc/data/${P}.tar.gz"
+HOMEPAGE="http://oldhome.schmorp.de/marc/root-tail.html"
+SRC_URI="http://oldhome.schmorp.de/marc/data/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
