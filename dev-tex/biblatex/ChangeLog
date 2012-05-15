@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/biblatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.2 2012/02/20 20:44:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.3 2012/05/15 17:45:32 johu Exp $
+
+  15 May 2012; Johannes Huber <johu@gentoo.org> biblatex-1.6.ebuild:
+  Add ~x86 keyword.
 
   20 Feb 2012; Alexis Ballier <aballier@gentoo.org> biblatex-1.6.ebuild:
   add missing dep on dev-texlive/texlive-bibtexextra, bug #404585 by Dennis
