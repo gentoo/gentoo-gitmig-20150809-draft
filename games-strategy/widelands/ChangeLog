@@ -1,6 +1,15 @@
 # ChangeLog for games-strategy/widelands
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.40 2011/10/15 15:24:49 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.41 2012/05/15 11:15:48 scarabeus Exp $
+
+*widelands-0.17 (15 May 2012)
+
+  15 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +widelands-0.17.ebuild,
+  -files/widelands-0.15-build.patch, -files/widelands-0.15-gcc45.patch,
+  -files/widelands-0.15-gcc46.patch, -files/widelands-0.15-locale.patch,
+  -widelands-0.15.ebuild:
+  Version bump to latest release. Fixes bug#413387. Remove old overshadowed
+  verison.
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> widelands-0.16.ebuild:
   ppc stable wrt #385925
