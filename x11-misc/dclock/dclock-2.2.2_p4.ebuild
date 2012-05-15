@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.2.2_p4.ebuild,v 1.3 2012/05/15 15:24:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.2.2_p4.ebuild,v 1.4 2012/05/15 15:26:39 ssuominen Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Digital clock for the X window system."
 HOMEPAGE="http://packages.qa.debian.org/d/dclock.html"
