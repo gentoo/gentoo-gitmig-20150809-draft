@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.41 2012/04/15 15:04:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.42 2012/05/15 15:16:48 ssuominen Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ fi
 
 inherit eutils fdo-mime gnome2-utils python waf-utils ${_live_inherits}
 
-PV_vala_version=0.14
+PV_vala_version=0.16
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
