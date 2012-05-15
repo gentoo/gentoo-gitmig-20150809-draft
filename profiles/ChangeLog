@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6548 2012/05/14 21:31:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6549 2012/05/15 06:50:15 naota Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 May 2012; Naohiro Aota <naota@gentoo.org> package.mask:
+  Mask app-dicts/sumika for removal.
 
   14 May 2012; Julian Ospald <hasufell@gentoo.org> package.mask:
   remove mask from www-client/torbrowser (we'll handle that by keywords)
