@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.78 2012/03/02 21:15:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.79 2012/05/15 13:01:08 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> enca-1.13-r2.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> enca-1.13-r2.ebuild:
   Marking enca-1.13-r2 ppc64 for bug 398991
