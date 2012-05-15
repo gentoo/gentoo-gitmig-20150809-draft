@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.98 2012/05/05 08:02:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.99 2012/05/15 13:10:33 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> speex-1.2_rc1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> speex-1.2_rc1.ebuild,
   speex-1.2_rc1-r1.ebuild:

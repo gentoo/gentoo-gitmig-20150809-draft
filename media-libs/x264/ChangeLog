@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.72 2012/05/07 08:44:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.73 2012/05/15 13:12:19 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> x264-0.0.20120327.ebuild,
+  x264-9999.ebuild:
+  keyword ~amd64-fbsd
 
   07 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/x264-altivec.patch,
   -files/x264-onlylib-20100605.patch, -x264-0.0.20100605.ebuild,

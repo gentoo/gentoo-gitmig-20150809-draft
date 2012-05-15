@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.74 2012/05/05 08:02:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.75 2012/05/15 13:12:50 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> libmodplug-0.8.8.4.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libmodplug-0.8.8.2.ebuild,
   libmodplug-0.8.8.4.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vo-aacenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.22 2012/04/14 18:26:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.23 2012/05/15 13:08:05 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> vo-aacenc-0.1.2.ebuild,
+  vo-aacenc-9999.ebuild:
+  keyword ~amd64-fbsd
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> vo-aacenc-0.1.2.ebuild,
   vo-aacenc-9999.ebuild:

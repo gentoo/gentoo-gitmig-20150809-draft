@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.106 2012/05/05 08:02:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.107 2012/05/15 13:09:16 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> libtheora-1.1.1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libtheora-1.1.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
