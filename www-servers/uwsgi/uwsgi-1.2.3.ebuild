@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3.ebuild,v 1.1 2012/05/15 06:45:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3.ebuild,v 1.2 2012/05/15 07:40:54 ultrabug Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.4:2.7 3:3.1:3.2"
@@ -134,7 +134,7 @@ plugins =
 bin_name = uwsgi
 append_version =
 plugin_dir = /usr/$(get_libdir)/uwsgi
-plugin_build_dir = ${T}/plugins
+plugin_build_dir = "${T}"/plugins
 embedded_plugins =  ping, cache, rpc, fastrouter, http, ugreen, signal, logsocket, router_uwsgi, router_redirect, router_basicauth, zergpool, redislog ${plugins}
 as_shared_library = false
 
@@ -143,7 +143,7 @@ event = auto
 timer = auto
 filemonitor = auto
 
-embed_files = 
+embed_files =
 
 embed_config =
 [python]
