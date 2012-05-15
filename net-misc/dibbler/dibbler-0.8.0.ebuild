@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.0.ebuild,v 1.1 2011/12/04 10:23:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.0.ebuild,v 1.2 2012/05/15 20:18:10 hwoarang Exp $
 
 EAPI="4"
 
@@ -15,7 +15,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~mips ~x86"
 IUSE="doc"
-DEPEND=""
+DEPEND="doc? (
+	dev-texlive/texlive-latex
+	dev-tex/floatflt )"
 RDEPEND=""
 
 DIBBLER_DOCDIR=${S}/doc
@@ -33,6 +35,10 @@ src_prepare() {
 
 src_compile() {
 	emake -j1
+	# devel documentation is broken and users should consult the online
+	# version
+	# http://klub.com.pl/dhcpv6/doxygen/
+	use doc && emake -j1 -C doc/ user
 }
 
 src_install() {
@@ -47,8 +53,7 @@ src_install() {
 	doins *.conf
 	dodir /var/lib/dibbler
 
-	use doc && dodoc ${DIBBLER_DOCDIR}/dibbler-user.pdf \
-			${DIBBLER_DOCDIR}/dibbler-devel.pdf
+	use doc && dodoc ${DIBBLER_DOCDIR}/dibbler-user.pdf
 
 	insinto /etc/init.d
 	doins "${FILESDIR}/dibbler-server" "${FILESDIR}/dibbler-client" \
