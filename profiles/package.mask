@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13756 2012/05/15 06:50:16 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13757 2012/05/15 08:56:26 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -433,11 +433,6 @@ sys-auth/tcb
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Mar 2012)
 # Causes font corruption, bug #409593.
 =x11-libs/cairo-1.12*
-
-# Markos Chandras <hwoarang@gentoo.org> (24 Mar 2012)
-# Does not seem to work. No upstream
-# Bug #396067, removal in 60 days
-app-arch/createrepo
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (22 Mar 2012)
 # Even its author admits that it's an ugly hack. Crashes e.g.
