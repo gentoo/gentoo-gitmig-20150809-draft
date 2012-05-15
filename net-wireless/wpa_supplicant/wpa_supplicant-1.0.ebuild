@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r2.ebuild,v 1.7 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0.ebuild,v 1.1 2012/05/15 09:25:39 gurligebis Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit eutils toolchain-funcs qt4-r2
+inherit eutils toolchain-funcs qt4-r2 systemd multilib
 
 DESCRIPTION="IEEE 802.1X/WPA supplicant for secure wireless transfers"
 HOMEPAGE="http://hostap.epitest.fi/wpa_supplicant/"
@@ -12,26 +12,28 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
-IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wimax wps kernel_linux kernel_FreeBSD"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline selinux ssl wimax wps kernel_linux kernel_FreeBSD"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
 		eap-sim? ( sys-apps/pcsc-lite )
-		madwifi? ( ||
-			( >net-wireless/madwifi-ng-tools-0.9.3
-			net-wireless/madwifi-old )
-		)
-		dev-libs/libnl
+		madwifi? ( >net-wireless/madwifi-ng-tools-0.9.3 )
+		dev-libs/libnl:1.1
 	)
 	!kernel_linux? ( net-libs/libpcap )
-	qt4? ( x11-libs/qt-gui:4
-		x11-libs/qt-svg:4 )
-	readline? ( sys-libs/ncurses sys-libs/readline )
-	wimax? ( !net-wireless/libeap )
+	qt4? (
+		x11-libs/qt-gui:4
+		x11-libs/qt-svg:4
+	)
+	readline? (
+		sys-libs/ncurses
+		sys-libs/readline
+	)
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
-	!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
+	!ssl? ( !gnutls? ( dev-libs/libtommath ) )
+	selinux? ( sec-policy/selinux-networkmanager )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -66,15 +68,29 @@ src_prepare() {
 		-e "s:/usr/lib/pkcs11:/usr/$(get_libdir):" \
 		wpa_supplicant.conf || die
 
-	epatch "${FILESDIR}/${P}-dbus_path_fix.patch"
+	if use dbus; then
+		epatch "${FILESDIR}/${P}-dbus-path-fix.patch"
+	fi
+
+	# systemd entries to D-Bus service files (bug #372877)
+	echo 'SystemdService=wpa_supplicant.service' \
+		| tee -a dbus/*.service >/dev/null || die
 
 	if use wimax; then
 		cd "${WORKDIR}/${P}"
 		epatch "${FILESDIR}/${P}-generate-libeap-peer.patch"
+
+		# multilib-strict fix (bug #373685)
+		sed -e "s/\/usr\/lib/\/usr\/$(get_libdir)/" -i src/eap_peer/Makefile
 	fi
 
 	# bug (320097)
-	epatch "${FILESDIR}/do-not-call-dbus-functions-with-NULL-path.patch"
+	epatch "${FILESDIR}/${P}-do-not-call-dbus-functions-with-NULL-path.patch"
+
+	# TODO - NEED TESTING TO SEE IF STILL NEEDED, NOT COMPATIBLE WITH 1.0 OUT OF THE BOX,
+	# SO WOULD BE NICE TO JUST DROP IT, IF IT IS NOT NEEDED.
+	# bug (374089)
+	#epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
 }
 
 src_configure() {
@@ -178,38 +194,48 @@ src_configure() {
 	# Enable mitigation against certain attacks against TKIP
 	echo "CONFIG_DELAYED_MIC_ERROR_REPORT=y" >> .config
 
+	# If we are using libnl 2.0 and above, enable support for it
+	# Bug 382159
+	# Removed for now, since the 3.2 version is broken, and we don't
+	# support it.
+	#if has_version ">=dev-libs/libnl-2.0"; then
+	#	echo "CONFIG_LIBNL20=y" >> .config
+	#fi
+
 	if use qt4 ; then
-		cd "${S}"/wpa_gui-qt4
+		pushd "${S}"/wpa_gui-qt4 > /dev/null
 		eqmake4 wpa_gui.pro
+		popd > /dev/null
 	fi
 }
 
 src_compile() {
 	einfo "Building wpa_supplicant"
-	emake || die "emake failed"
+	emake
 
 	if use wimax; then
-		emake -C ../src/eap_peer clean || die "emake failed"
-		emake -C ../src/eap_peer || die "emake failed"
+		emake -C ../src/eap_peer clean
+		emake -C ../src/eap_peer
 	fi
 
 	if use qt4 ; then
-		cd "${S}"/wpa_gui-qt4
+		pushd "${S}"/wpa_gui-qt4 > /dev/null
 		einfo "Building wpa_gui"
-		emake || die "wpa_gui compilation failed"
+		emake
+		popd > /dev/null
 	fi
 }
 
 src_install() {
-	dosbin wpa_supplicant || die
-	dobin wpa_cli wpa_passphrase || die
+	dosbin wpa_supplicant
+	dobin wpa_cli wpa_passphrase
 
 	# baselayout-1 compat
 	if has_version "<sys-apps/baselayout-2.0.0"; then
 		dodir /sbin
-		dosym /usr/sbin/wpa_supplicant /sbin/wpa_supplicant || die
+		dosym /usr/sbin/wpa_supplicant /sbin/wpa_supplicant
 		dodir /bin
-		dosym /usr/bin/wpa_cli /bin/wpa_cli || die
+		dosym /usr/bin/wpa_cli /bin/wpa_cli
 	fi
 
 	if has_version ">=sys-apps/openrc-0.5.0"; then
@@ -221,29 +247,32 @@ src_install() {
 	newexe "${FILESDIR}/wpa_cli.sh" wpa_cli.sh
 
 	dodoc ChangeLog {eap_testing,todo}.txt README{,-WPS} \
-		wpa_supplicant.conf || die "dodoc failed"
+		wpa_supplicant.conf
 
-	doman doc/docbook/*.{5,8} || die "doman failed"
+	doman doc/docbook/*.{5,8}
 
 	if use qt4 ; then
 		into /usr
-		dobin wpa_gui-qt4/wpa_gui || die
-		doicon wpa_gui-qt4/icons/wpa_gui.svg || die "Icon not found"
+		dobin wpa_gui-qt4/wpa_gui
+		doicon wpa_gui-qt4/icons/wpa_gui.svg
 		make_desktop_entry wpa_gui "WPA Supplicant Administration GUI" "wpa_gui" "Qt;Network;"
 	fi
 
-	if use wimax; then
-		emake DESTDIR="${D}" -C ../src/eap_peer install || die
-	fi
+	use wimax && emake DESTDIR="${D}" -C ../src/eap_peer install
 
 	if use dbus ; then
-		cd "${S}"/dbus
+		pushd "${S}"/dbus > /dev/null
 		insinto /etc/dbus-1/system.d
-		newins dbus-wpa_supplicant.conf wpa_supplicant.conf || die
+		newins dbus-wpa_supplicant.conf wpa_supplicant.conf
 		insinto /usr/share/dbus-1/system-services
-		doins fi.epitest.hostap.WPASupplicant.service fi.w1.wpa_supplicant1.service || die
+		doins fi.epitest.hostap.WPASupplicant.service fi.w1.wpa_supplicant1.service
 		keepdir /var/run/wpa_supplicant
+		popd > /dev/null
 	fi
+
+	# systemd stuff
+	systemd_dounit "${FILESDIR}"/wpa_supplicant.service
+	systemd_newunit "${FILESDIR}"/wpa_supplicant_at.service 'wpa_supplicant@.service'
 }
 
 pkg_postinst() {
@@ -266,4 +295,17 @@ pkg_postinst() {
 		einfo "madwifi-old, madwifi-ng or madwifi-ng-tools."
 		einfo "You should re-emerge ${PN} after upgrading these packages."
 	fi
+
+	# Mea culpa, feel free to remove that after some time --mgorny.
+	local fn
+	for fn in wpa_supplicant{,@wlan0}.service; do
+		if [[ -e "${ROOT}"/etc/systemd/system/network.target.wants/${fn} ]]
+		then
+			ebegin "Moving ${fn} to multi-user.target"
+			mv "${ROOT}"/etc/systemd/system/network.target.wants/${fn} \
+				"${ROOT}"/etc/systemd/system/multi-user.target.wants/
+			eend ${?} \
+				"Please try to re-enable ${fn}"
+		fi
+	done
 }

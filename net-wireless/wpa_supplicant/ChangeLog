@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.179 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.180 2012/05/15 09:25:39 gurligebis Exp $
+
+*wpa_supplicant-1.0 (15 May 2012)
+
+  15 May 2012; <gurligebis@gentoo.org> -wpa_supplicant-0.7.3-r2.ebuild,
+  +wpa_supplicant-1.0.ebuild, +files/wpa_supplicant-1.0-dbus-path-fix.patch,
+  +files/wpa_supplicant-1.0-do-not-call-dbus-functions-with-NULL-path.patch,
+  +files/wpa_supplicant-1.0-generate-libeap-peer.patch:
+  Bumping to 1.0, fixing bug #415503
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   wpa_supplicant-0.7.3-r2.ebuild, wpa_supplicant-0.7.3-r5.ebuild:
