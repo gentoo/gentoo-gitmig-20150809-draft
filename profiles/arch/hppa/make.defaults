@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/make.defaults,v 1.5 2012/05/15 17:27:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/make.defaults,v 1.6 2012/05/15 18:39:26 jer Exp $
 
 ARCH="hppa"
 ACCEPT_KEYWORDS="hppa"
@@ -16,8 +16,3 @@ USE="cups foomaticdb fortran gdbm gpm imlib libwww spell xml2 firefox xulrunner"
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
 VIDEO_CARDS="fbdev"
-
-# 2012/05/15 - Mike Gilbert <floppym@gentoo.org>
-# Default PYTHON_TARGETS should include python-3 for arches where it is stable.
-# See bug 415575.
-PYTHON_TARGETS="python3_2"
