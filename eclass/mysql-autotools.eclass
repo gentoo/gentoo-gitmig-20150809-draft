@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.6 2012/04/18 02:08:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.7 2012/05/15 22:51:56 robbat2 Exp $
 
 # @ECLASS: mysql-autotools.eclass
 # @MAINTAINER:
@@ -397,7 +397,7 @@ mysql-autotools_src_prepare() {
 		popd >/dev/null
 	fi
 
-	if pbxt_available && [[ "${PBXT_NEWSTYLE}" != "1" ]] && use pbxt ; then
+	if pbxt_available && [[ "${PBXT_NEWSTYLE}" == "1" ]] && use pbxt ; then
 		einfo "Adding storage engine: PBXT"
 		pushd "${S}"/storage >/dev/null
 		i='pbxt'
