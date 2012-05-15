@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.103 2012/05/06 18:41:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.104 2012/05/15 19:03:40 jer Exp $
+
+  15 May 2012; Jeroen Roovers <jer@gentoo.org> libisofs-1.2.2.ebuild:
+  Stable for HPPA (bug #414159).
 
   06 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libisofs-1.2.2.ebuild:
   x86 stable wrt bug #414159
