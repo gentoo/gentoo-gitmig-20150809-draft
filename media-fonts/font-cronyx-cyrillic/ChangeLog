@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-cronyx-cyrillic
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cronyx-cyrillic/ChangeLog,v 1.40 2011/02/14 13:09:51 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cronyx-cyrillic/ChangeLog,v 1.41 2012/05/15 14:07:27 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org>
+  font-cronyx-cyrillic-1.0.3.ebuild:
+  keyword ~amd64-fbsd
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   font-cronyx-cyrillic-1.0.3.ebuild:

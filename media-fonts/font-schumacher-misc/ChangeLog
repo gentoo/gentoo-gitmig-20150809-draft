@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-schumacher-misc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.42 2011/04/01 18:54:24 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.43 2012/05/15 14:11:40 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org>
+  font-schumacher-misc-1.1.2.ebuild:
+  keyword ~amd64-fbsd
 
   01 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -font-schumacher-misc-1.1.0.ebuild:

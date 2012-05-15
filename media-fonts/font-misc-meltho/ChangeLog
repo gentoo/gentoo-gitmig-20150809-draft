@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-meltho
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-meltho/ChangeLog,v 1.40 2012/04/13 19:26:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-meltho/ChangeLog,v 1.41 2012/05/15 14:05:02 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org>
+  font-misc-meltho-1.0.3.ebuild:
+  keyword ~amd64-fbsd
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> font-misc-meltho-1.0.3.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.
