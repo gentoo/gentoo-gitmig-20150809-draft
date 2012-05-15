@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.77 2012/05/15 13:07:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.78 2012/05/15 15:32:37 johu Exp $
+
+  15 May 2012; Johannes Huber <johu@gentoo.org> kdenlive-0.9.ebuild:
+  Raise required dep on media-libs/mlt.
 
 *kdenlive-0.9 (15 May 2012)
 
