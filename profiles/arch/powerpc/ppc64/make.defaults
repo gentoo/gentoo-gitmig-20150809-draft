@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/make.defaults,v 1.7 2011/03/18 22:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/make.defaults,v 1.8 2012/05/15 17:32:56 floppym Exp $
 
 # All extra USE/etc should be specified in sub-profiles.
 # DO NOT POLLUTE USE ON THIS PROFILE.
@@ -31,3 +31,8 @@ CHOST_ppc="powerpc-unknown-linux-gnu"
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
 VIDEO_CARDS="fbdev mach64 mga nv r128 radeon vesa"
+
+# 2012/05/15 - Mike Gilbert <floppym@gentoo.org>
+# Default PYTHON_TARGETS should include python-3 for arches where it is stable.
+# See bug 415575.
+PYTHON_TARGETS="python3_2"

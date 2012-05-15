@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.166 2012/05/13 14:40:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.167 2012/05/15 17:32:56 floppym Exp $
+
+  15 May 2012; Mike Gilbert <floppym@gentoo.org> ppc32/make.defaults,
+  ppc64/make.defaults:
+  Default PYTHON_TARGETS should include python-3 for arches where it is stable.
+  See bug 415575.
 
   13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Add nautilus[sendto] to gnome3 mask.

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.101 2012/04/13 23:26:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.102 2012/05/15 17:35:13 floppym Exp $
+
+  15 May 2012; Mike Gilbert <floppym@gentoo.org> make.defaults:
+  Default PYTHON_TARGETS should include python-3 for arches where it is stable.
+  See bug 415575.
 
   13 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask webkit-gtk[geoloc] in base and unmask on arches where app-misc/geoclue
