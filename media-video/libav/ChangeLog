@@ -1,6 +1,12 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.85 2012/05/15 06:10:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.86 2012/05/15 08:12:11 scarabeus Exp $
+
+  15 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  Sort IUSE to not contain dupes. Expand tools with all the available binaries.
+  Restrict test on live due to fate req rather than providing ewarn. Sort deps
+  alphabetically. Drop dirac that is no longer in configure. Drop sse test that
+  is handled by configure. Quote configure params.
 
 *libav-0.8.2-r2 (15 May 2012)
 
