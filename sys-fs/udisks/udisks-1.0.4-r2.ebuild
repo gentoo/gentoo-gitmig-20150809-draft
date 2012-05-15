@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.4 2012/05/04 19:09:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.5 2012/05/15 12:57:42 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info
@@ -23,6 +23,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 	>=sys-block/parted-3
 	|| ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] )
 	>=sys-fs/lvm2-2.02.66"
+# util-linux -> mount, umount, swapon, swapoff (see also #403073)
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/util-linux-2.20.1-r2
 	virtual/eject

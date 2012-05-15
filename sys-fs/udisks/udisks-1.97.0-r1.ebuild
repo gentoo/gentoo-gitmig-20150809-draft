@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0-r1.ebuild,v 1.1 2012/05/15 12:45:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0-r1.ebuild,v 1.2 2012/05/15 12:57:42 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -22,7 +22,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.32
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )
 	systemd? ( >=sys-apps/systemd-44 )"
 # gptfdisk -> src/udiskslinuxpartition.c -> sgdisk (see also #412801#c1)
-# util-linux -> mount, umount, swapon, swapoff
+# util-linux -> mount, umount, swapon, swapoff (see also #403073)
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/util-linux-2.20.1-r2
 	>=sys-block/parted-3
