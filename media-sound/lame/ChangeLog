@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.149 2012/05/05 08:39:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.150 2012/05/15 13:45:24 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> lame-3.99.5.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> lame-3.99.3.ebuild,
   lame-3.99.5.ebuild:
