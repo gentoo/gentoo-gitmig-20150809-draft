@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.536 2012/05/13 20:24:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.537 2012/05/15 18:51:21 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -591,23 +591,19 @@ toolchain_pkg_postinst() {
 	fi
 
 	if ! is_crosscompile ; then
-		# hack to prevent collisions between SLOT
-		[[ ! -d ${ROOT}/$(get_libdir)/rcscripts/awk ]] \
-			&& mkdir -p "${ROOT}"/$(get_libdir)/rcscripts/awk
-		[[ ! -d ${ROOT}/sbin ]] \
-			&& mkdir -p "${ROOT}"/sbin
-		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/$(get_libdir)/rcscripts/awk/ || die "installing fixlafiles.awk"
-		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/sbin/ || die "installing fix_libtool_files.sh"
+		# hack to prevent collisions between SLOTs
 
-		[[ ! -d ${ROOT}/usr/bin ]] \
-			&& mkdir -p "${ROOT}"/usr/bin
+		# Clean up old paths
+		rm -f "${ROOT}"/*/rcscripts/awk/fixlafiles.awk "${ROOT}"/sbin/fix_libtool_files.sh
+		rmdir "${ROOT}"/*/rcscripts{/awk,} 2>/dev/null
+
+		mkdir -p "${ROOT}"/usr/{share/gcc-data,sbin,bin}
+		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/usr/share/gcc-data/ || die
+		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/usr/sbin/ || die
+
 		# Since these aren't critical files and portage sucks with
 		# handling of binpkgs, don't require these to be found
-		for x in "${ROOT}/${DATAPATH}"/c{89,99} ; do
-			if [[ -e ${x} ]]; then
-				cp ${x} "${ROOT}"/usr/bin/ || die "installing c89/c99"
-			fi
-		done
+		cp "${ROOT}/${DATAPATH}"/c{89,99} "${ROOT}"/usr/bin/ 2>/dev/null
 	fi
 }
 
