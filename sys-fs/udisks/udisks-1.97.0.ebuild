@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0.ebuild,v 1.2 2012/05/13 09:49:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0.ebuild,v 1.3 2012/05/15 11:20:32 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -85,6 +85,9 @@ src_install() {
 
 	find "${ED}" -type f -name '*.la' -exec rm -f {} +
 
-	keepdir /media
 	keepdir /var/lib/udisks2 #383091
+}
+
+pkg_postinst() {
+	[[ -d ${EROOT}/run ]] || mkdir -p "${EROOT}"/run #415987
 }
