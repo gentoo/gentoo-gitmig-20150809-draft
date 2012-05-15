@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/fprintd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/ChangeLog,v 1.6 2012/04/26 00:13:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/ChangeLog,v 1.7 2012/05/15 07:15:40 xmw Exp $
+
+*fprintd-0.4.1 (15 May 2012)
+
+  15 May 2012; Michael Weber <xmw@gentoo.org> -fprintd-0.2.0.ebuild,
+  fprintd-0.2.0-r1.ebuild, +fprintd-0.4.1.ebuild:
+  Version bump (bug 365075 by Rambaldi), add DEPEND gtk-doc-am (bug 413563 by
+  Albert W. Hopkins), remove old version
 
   26 Apr 2012; Jeroen Roovers <jer@gentoo.org> fprintd-0.2.0-r1.ebuild,
   fprintd-0.2.0.ebuild:
