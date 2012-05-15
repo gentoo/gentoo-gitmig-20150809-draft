@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.80 2012/05/05 08:02:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.81 2012/05/15 23:37:01 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> libcanberra-0.28-r5.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libcanberra-0.28-r5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
