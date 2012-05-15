@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.5.12.ebuild,v 1.1 2012/05/11 12:17:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.5.12.ebuild,v 1.2 2012/05/15 21:17:47 ssuominen Exp $
 
 EAPI=4
-inherit autotools eutils linux-info multilib flag-o-matic python systemd virtualx
+inherit autotools linux-info flag-o-matic python systemd virtualx
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
 LICENSE="|| ( AFL-2.1 GPL-2 )"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc selinux static-libs systemd test X"
 
 RDEPEND=">=dev-libs/expat-2
@@ -45,7 +45,6 @@ pkg_setup() {
 	enewgroup messagebus
 	enewuser messagebus -1 -1 -1 messagebus
 
-	# FIXME: Test suite fails with Python 3.2 (last checked: 1.4.20)
 	if use test; then
 		python_set_active_version 2
 		python_pkg_setup
@@ -155,9 +154,9 @@ src_install() {
 
 	# needs to exist for dbus sessions to launch
 	keepdir /usr/share/dbus-1/services
-	keepdir /etc/dbus-1/system.d
-	keepdir /etc/dbus-1/session.d
-	keepdir /var/lib/dbus # See pkg_postinst() for symlink creation
+	keepdir /etc/dbus-1/{session,system}.d
+	# machine-id symlink from pkg_postinst()
+	keepdir /var/lib/dbus
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README doc/TODO
 
