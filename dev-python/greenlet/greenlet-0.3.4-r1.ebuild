@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.3.4-r1.ebuild,v 1.1 2012/05/15 13:45:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.3.4-r1.ebuild,v 1.2 2012/05/15 21:50:43 xarthisius Exp $
 
 EAPI=4
 
@@ -23,6 +23,8 @@ DEPEND="app-arch/unzip
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 RDEPEND=""
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 src_compile() {
 	distutils_src_compile
