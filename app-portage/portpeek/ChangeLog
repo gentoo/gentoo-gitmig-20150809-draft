@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.143 2012/05/11 11:44:06 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.144 2012/05/15 19:35:01 mpagano Exp $
+
+*portpeek-2.0.24 (15 May 2012)
+
+  15 May 2012; Michael Pagano <mpagano@gentoo.org> +portpeek-2.0.24.ebuild:
+  Fix for tilde handling error
 
 *portpeek-2.0.23 (11 May 2012)
 
