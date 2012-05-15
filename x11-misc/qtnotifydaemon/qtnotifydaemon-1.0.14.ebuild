@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtnotifydaemon/qtnotifydaemon-1.0.14.ebuild,v 1.2 2012/01/30 12:31:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtnotifydaemon/qtnotifydaemon-1.0.14.ebuild,v 1.3 2012/05/15 17:31:17 ssuominen Exp $
 
 EAPI=4
 inherit qt4-r2
 
 DESCRIPTION="A flexible and configurable notification daemon"
-HOMEPAGE="http://drull.org.ru/qtnotifydaemon/ http://sourceforge.net/projects/qtnotifydaemon/"
+HOMEPAGE="http://sourceforge.net/projects/qtnotifydaemon/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-3"
