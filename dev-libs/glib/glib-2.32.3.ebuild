@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.1.ebuild,v 1.9 2012/05/05 16:35:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.3.ebuild,v 1.1 2012/05/15 06:22:46 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -72,22 +72,18 @@ src_prepare() {
 		fi
 	fi
 
-	# Don't fail gio tests when ran without userpriv, upstream bug 552912
-	# This is only a temporary workaround, remove as soon as possible
-#	epatch "${FILESDIR}/${PN}-2.18.1-workaround-gio-test-failure-without-userpriv.patch"
-
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
-
-	# Do not try to remove files on live filesystem, upstream bug #619274
-	sed 's:^\(.*"/desktop-app-info/delete".*\):/*\1*/:' \
-		-i "${S}"/gio/tests/desktop-app-info.c || die "sed failed"
 
 	# need to build tests if USE=doc for bug #387385
 	if ! use test && ! use doc; then
 		# don't waste time building tests
 		sed 's/^\(.*\SUBDIRS .*\=.*\)tests\(.*\)$/\1\2/' -i $(find . -name Makefile.am -o -name Makefile.in) || die
 	else
+		# Do not try to remove files on live filesystem, upstream bug #619274
+		sed 's:^\(.*"/desktop-app-info/delete".*\):/*\1*/:' \
+			-i "${S}"/gio/tests/desktop-app-info.c || die "sed failed"
+
 		# Disable tests requiring dev-util/desktop-file-utils when not installed, bug #286629
 		if ! has_version dev-util/desktop-file-utils ; then
 			ewarn "Some tests will be skipped due dev-util/desktop-file-utils not being present on your system,"
@@ -116,12 +112,6 @@ src_prepare() {
 
 	# gdbus-codegen is a separate package
 	epatch "${FILESDIR}/${PN}-2.31.x-external-gdbus-codegen.patch"
-
-	# https://bugzilla.gnome.org/show_bug.cgi?id=673132
-	epatch "${FILESDIR}/${PN}-2.32.1-fix-libelf-check.patch"
-
-	# bug #411981, https://bugzilla.gnome.org/show_bug.cgi?id=674172
-	epatch "${FILESDIR}/${PN}-2.32.1-gnustep-not-cocoa.patch"
 
 	# disable pyc compiling
 	use test && python_clean_py-compile_files
