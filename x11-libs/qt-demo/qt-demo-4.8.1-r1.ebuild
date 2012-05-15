@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.8.1-r1.ebuild,v 1.4 2012/05/12 09:42:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.8.1-r1.ebuild,v 1.5 2012/05/15 15:13:16 pesa Exp $
 
 EAPI=4
 
@@ -12,13 +12,13 @@ KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x64-macos"
 IUSE="dbus declarative kde multimedia opengl openvg qt3support webkit xmlpatterns"
 
 DEPEND="
+	~x11-libs/qt-assistant-${PV}:4[aqua=,c++0x=,debug=,qpa=]
 	~x11-libs/qt-core-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?]
 	~x11-libs/qt-gui-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?]
 	~x11-libs/qt-script-${PV}:4[aqua=,c++0x=,debug=,qpa=]
 	~x11-libs/qt-sql-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?]
 	~x11-libs/qt-svg-${PV}:4[aqua=,c++0x=,debug=,qpa=]
 	~x11-libs/qt-test-${PV}:4[aqua=,c++0x=,debug=,qpa=]
-	aqua? ( ~x11-libs/qt-assistant-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 	dbus? ( ~x11-libs/qt-dbus-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 	declarative? ( ~x11-libs/qt-declarative-${PV}:4[aqua=,c++0x=,debug=,qpa=,webkit?] )
 	kde? ( media-libs/phonon[aqua=] )
