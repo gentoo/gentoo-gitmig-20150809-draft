@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.214 2012/05/14 04:47:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.215 2012/05/15 23:38:12 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org>
+  gnome-icon-theme-3.4.0.ebuild:
+  keyword ~amd64-fbsd
 
 *gnome-icon-theme-3.4.0 (14 May 2012)
 
