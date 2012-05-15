@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin-debug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.7 2012/05/13 19:21:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.8 2012/05/15 07:47:25 dilfridge Exp $
+
+  15 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-debug-3.5.2.2-r1.ebuild:
+  Fresh amd64 binpackages for icu-49
 
 *libreoffice-bin-debug-3.5.2.2-r1 (13 May 2012)
 
