@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.49 2012/05/14 16:02:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.50 2012/05/15 15:59:11 xarthisius Exp $
+
+*webob-1.2_rc1 (15 May 2012)
+
+  15 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +webob-1.2_rc1.ebuild:
+  Version bump, brings Python3 support, required by >=dev-python/pyquery-1.2.1
 
   14 May 2012; Agostino Sarubbo <ago@gentoo.org> webob-1.1.ebuild:
   Stable for amd64, wrt bug #415865
