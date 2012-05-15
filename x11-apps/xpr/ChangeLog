@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xpr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.36 2012/04/04 12:53:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xpr/ChangeLog,v 1.37 2012/05/15 14:18:20 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> xpr-1.0.4.ebuild:
+  keyword ~amd64-fbsd
 
 *xpr-1.0.4 (04 Apr 2012)
 

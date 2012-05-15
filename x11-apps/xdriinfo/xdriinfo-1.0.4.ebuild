@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/xdriinfo-1.0.4.ebuild,v 1.8 2011/02/14 23:40:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/xdriinfo-1.0.4.ebuild,v 1.9 2012/05/15 14:20:21 aballier Exp $
 
 EAPI=3
 inherit xorg-2
 
 DESCRIPTION="query configuration information of DRI drivers"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libX11

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xev/ChangeLog,v 1.55 2012/03/18 03:57:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xev/ChangeLog,v 1.56 2012/05/15 14:20:16 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> xev-1.2.0.ebuild:
+  keyword ~amd64-fbsd
 
   18 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xev-1.2.0.ebuild:

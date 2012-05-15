@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvinfo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.52 2011/04/18 11:26:33 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.53 2012/05/15 14:13:16 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> xvinfo-1.1.1.ebuild:
+  keyword ~amd64-fbsd
 
   18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -xvinfo-1.1.0.ebuild:
   old
