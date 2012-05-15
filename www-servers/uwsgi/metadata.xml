@@ -8,6 +8,9 @@
 	<maintainer>
 		<email>sterkrig@home.se</email>
 	</maintainer>
+	<maintainer>
+		<email>ultrabug@gentoo.org</email>
+	</maintainer>
 	<use>
 		<flag name='carbon'>Enable support for sending statistics to a carbon server (see http://projects.unbit.it/uwsgi/wiki/Carbon).</flag>
 		<flag name='erlang'>Let the uWSGI server as as an Erlang C-Node and exchange messages and rpc with Erlang nodes. Together with the USE=python this enables erlang support in python (see the mappings table in http://projects.unbit.it/uwsgi/wiki/ErlangIntegration).</flag>
@@ -16,7 +19,7 @@
 		<flag name='nagios'>Add nagios-friendly logging output (see http://projects.unbit.it/uwsgi/wiki/Nagios).</flag>
 		<flag name='rrdtool'>Enable support for writing requests data in RRD files.</flag>
 		<flag name='rsyslog'>Support direct logging to a <pkg>app-admin/rsyslog</pkg> socket (without going through the syslog interface).</flag>
-		<flag name='spooler'>Build a plugin which gives a spooler (see http://projects.unbit.it/uwsgi/wiki/Spooler).</flag>
+		<flag name='spooler'>Build a plugin which gives a network spooler (see http://projects.unbit.it/uwsgi/wiki/Spooler).</flag>
 		<flag name='yaml'>Support yaml as a configuration file format.</flag>
 		<flag name='zeromq'>Enable logging and deployment via ZeroMQ.</flag>
 	</use>
