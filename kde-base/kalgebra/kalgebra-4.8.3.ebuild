@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.8.3.ebuild,v 1.1 2012/05/03 20:07:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.8.3.ebuild,v 1.2 2012/05/15 19:38:37 kensington Exp $
 
 EAPI=4
 
@@ -20,16 +20,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-KMEXTRACTONLY="
-	libkdeedu/kdeeduui/
-"
-KMEXTRA="
-	libkdeedu/qtmmlwidget/
-"
-
-RESTRICT="test"
-# bug 382561
-
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with readline)
@@ -38,13 +28,4 @@ src_configure() {
 	)
 
 	kde4-base_src_configure
-}
-
-src_test() {
-	# disable broken test
-	sed -i -e '/mathmlpresentationtest/ s/^/#DO_NOT_RUN_TEST /' \
-		"${S}"/analitza/tests/CMakeLists.txt || \
-		die "sed to disable mathmlpresentationtest failed."
-
-	kde4-base_src_test
 }
