@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.4.1.ebuild,v 1.1 2012/05/13 23:35:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.4.1.ebuild,v 1.2 2012/05/15 04:32:54 mr_bones_ Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -47,7 +47,7 @@ COMMON_DEPEND="
 		sys-fs/udev[gudev]
 		>=app-admin/packagekit-base-0.6.12 )
 	smartcard? (
-		sys-fs/udev[gudev] 
+		sys-fs/udev[gudev]
 		>=dev-libs/nss-3.11.2 )
 	systemd? ( >=sys-apps/systemd-31 )
 	udev? ( sys-fs/udev[gudev] )
