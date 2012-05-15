@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.168 2012/05/15 13:36:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.169 2012/05/15 13:40:37 aballier Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ fi
 IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+avformat bidi bluray cdda cddb dbus dc1394 debug dirac direct2d
 	directfb directx dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
-	fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
+	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
 	libproxy libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
@@ -55,7 +55,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger
 	sdl sdl-image shine shout sid skins speex sqlite sse svg +swscale switcher
 	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vorbis waveout
-	win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
+	win32codecs wingdi wma-fixed +X x264 +xcb xml xv zvbi"
 
 RDEPEND="
 		>=sys-libs/zlib-1.2.5.1-r2[minizip]
@@ -142,13 +142,11 @@ RDEPEND="
 		x264? ( >=media-libs/x264-0.0.20090923 )
 		xcb? ( >=x11-libs/libxcb-1.6 >=x11-libs/xcb-util-0.3.4 )
 		xml? ( dev-libs/libxml2 )
-		xosd? ( x11-libs/xosd )
 		zvbi? ( >=media-libs/zvbi-0.2.25 )
 		"
 
 DEPEND="${RDEPEND}
 	alsa? ( >=media-sound/alsa-headers-1.0.23 )
-	fbosd? ( sys-kernel/linux-headers )
 	kde? ( >=kde-base/kdelibs-4 )
 	xcb? ( x11-proto/xproto )
 	app-arch/xz-utils
@@ -176,7 +174,6 @@ REQUIRED_USE="
 	switcher? ( avcodec )
 	vaapi? ( avcodec X )
 	vlm? ( encode )
-	xosd? ( X )
 	xv? ( xcb )
 "
 
@@ -232,7 +229,6 @@ src_configure() {
 		$(use_enable dxva2) \
 		$(use_enable egl) \
 		$(use_enable encode sout) \
-		$(use_enable fbosd) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
 		$(use_enable fontconfig) \
@@ -320,7 +316,6 @@ src_configure() {
 		$(use_enable x264) \
 		$(use_enable xcb) \
 		$(use_enable xml libxml2) \
-		$(use_enable xosd) \
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-optimizations \
