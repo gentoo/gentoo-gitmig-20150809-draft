@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.114 2012/05/13 14:40:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.115 2012/05/15 11:28:28 ssuominen Exp $
+
+  15 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="udisks" for gnome-base/gvfs wrt #412801
 
   13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Add nautilus[sendto] to gnome3 mask.

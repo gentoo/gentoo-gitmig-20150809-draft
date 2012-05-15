@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.98 2012/05/13 14:40:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.99 2012/05/15 11:30:26 ssuominen Exp $
+
+# Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
+# UDisks2 untested wrt http://bugs.gentoo.org/412801
+gnome-base/gvfs udisks
 
 # Pacho Ramos <pacho@gentoo.org> (07 May 2012)
 # libhid is not keyworded

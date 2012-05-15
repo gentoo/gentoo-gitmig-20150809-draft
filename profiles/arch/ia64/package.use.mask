@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.76 2012/05/13 14:40:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.77 2012/05/15 11:29:37 ssuominen Exp $
+
+# Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
+# UDisks2 untested wrt http://bugs.gentoo.org/412801
+gnome-base/gvfs udisks
 
 # Mike Frysinger <vapier@gentoo.org> (10 May 2012)
 # We only want java available for unstable ebuilds, but we can't do that
