@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8.ebuild,v 1.9 2011/11/27 22:33:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8.ebuild,v 1.10 2012/05/15 16:22:00 darkside Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="
 # GPL-2 for md5.c - part of libGeoIPUpdate, MaxMind for GeoLite Country db
 LICENSE="LGPL-2.1 GPL-2 MaxMind2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="ipv6 perl-geoipupdate static-libs"
 
 RDEPEND="
@@ -48,7 +48,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO conf/GeoIP.conf.default
 	rm "${ED}/etc/GeoIP.conf.default"
 	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/lib*.la
+		rm -f "${ED}"/usr/lib*/lib*.la
 	fi
 
 	if use ipv6; then
