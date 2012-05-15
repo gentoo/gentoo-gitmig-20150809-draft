@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-4.2.0.ebuild,v 1.7 2012/04/12 23:40:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-4.2.0.ebuild,v 1.8 2012/05/15 16:58:56 ssuominen Exp $
 
 EAPI=4
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Library for DVD navigation tools"
 HOMEPAGE="http://dvdnav.mplayerhq.hu/"
@@ -15,7 +15,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~amd6
 IUSE=""
 
 RDEPEND=">=media-libs/libdvdread-${PV}"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig" # To get pkg.m4 for eautoreconf #414391
 
 DOCS=( AUTHORS ChangeLog DEVELOPMENT-POLICY.txt doc/dvd_structures NEWS README TODO )
 
