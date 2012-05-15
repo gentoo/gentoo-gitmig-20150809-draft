@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.18 2012/03/15 08:00:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.19 2012/05/15 12:10:31 ssuominen Exp $
+
+# Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
+# Replaced by USE="udisks" in make.defaults. Remove this line after
+# >=gnome-base/gvfs-1.12 has stabilized.
+<gnome-base/gvfs-1.12 gdu
 
 # Jeremy Olexa <darkside@gentoo.org> (07 Oct 2011)
 # Required by mesa, ultimately by xorg-server (every desktop) bug 385843
