@@ -21,6 +21,5 @@
 	<flag name="vkontakte">Enable vkontakte protocol support</flag>
 	<flag name="webkit">Enable Adium-like WebView plugin</flag>
 	<flag name="xscreensaver">Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events</flag>
-	<flag name="yandexnarod">Enable yandex.narod plugin</flag>
 </use>
 </pkgmetadata>
