@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13757 2012/05/15 08:56:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13758 2012/05/15 09:13:39 ali_bush Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -174,6 +174,9 @@ media-tv/linuxtv-dvb
 # Alistair Bush <ali_bush@gentoo.org> (10 May 2012)
 # Mask alpha version of mono for testing
 =dev-lang/mono-2.11.1
+=dev-lang/mono-tools-2.11
+=virtual/monodoc-2.11
+
 
 # Sebastian Pipping <sping@gentoo.org> (09 May 2012)
 # 0.6 introduced severe bug (0.5.2 unaffected)
