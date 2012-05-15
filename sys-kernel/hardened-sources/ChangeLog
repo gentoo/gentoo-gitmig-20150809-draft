@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.584 2012/05/14 22:22:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.585 2012/05/15 13:49:14 blueness Exp $
+
+  15 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r100.ebuild, -hardened-sources-2.6.32-r101.ebuild,
+  -hardened-sources-2.6.32-r102.ebuild, -hardened-sources-2.6.32-r103.ebuild,
+  -hardened-sources-3.2.15.ebuild, -hardened-sources-3.2.16.ebuild,
+  -hardened-sources-3.2.16-r1.ebuild, -hardened-sources-3.2.16-r2.ebuild,
+  -hardened-sources-3.3.2.ebuild, -hardened-sources-3.3.3.ebuild,
+  -hardened-sources-3.3.4.ebuild, -hardened-sources-3.3.5.ebuild:
+  Remove versions with buggy Kconfig KERNEXEC and UDEREF dependencies
 
 *hardened-sources-3.3.6 (14 May 2012)
 
