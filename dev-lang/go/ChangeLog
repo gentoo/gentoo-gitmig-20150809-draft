@@ -1,0 +1,15 @@
+# ChangeLog for dev-lang/go
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.1 2012/05/15 18:11:26 williamh Exp $
+
+*go-9999 (15 May 2012)
+*go-1.0.1 (15 May 2012)
+
+  15 May 2012; William Hubbs <williamh@gentoo.org> +go-1.0.1.ebuild,
+  +files/go-1.0.1-hardened.patch, +go-9999.ebuild, +metadata.xml:
+  Initial commit for bug #342505.
+  I would like to thank johnny@9souldier.org for the initial report and
+  ebuild. Also, I would like to thank powerman-asdf@yandex.ru for the
+  original hardened patch and everyone else who worked with me on the bug
+  so we could get this into the tree.
+
