@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.19 2012/05/10 06:26:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.20 2012/05/15 12:28:34 naota Exp $
+
+  15 May 2012; Naohiro Aota <naota@gentoo.org> miniupnpc-1.6-r1.ebuild:
+  Keyword ~x86-fbsd. Depend on lsb-release, only on Linux.
 
   10 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> miniupnpc-1.6-r1.ebuild:
   Restrict hanging tests, bug #409349.
