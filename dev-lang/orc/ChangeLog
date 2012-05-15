@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.23 2012/02/15 09:58:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.24 2012/05/15 13:42:59 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> orc-0.4.16.ebuild:
+  keyword ~amd64-fbsd
 
 *orc-0.4.16 (15 Feb 2012)
 
