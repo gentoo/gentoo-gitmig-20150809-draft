@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinymount/tinymount-0.2.4.ebuild,v 1.1 2012/05/15 10:44:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinymount/tinymount-0.2.4.ebuild,v 1.2 2012/05/15 11:37:37 ssuominen Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ LANGS="ru"
 
 if [[ ${PV} == *9999* ]]; then
 	_live_inherits="git-2"
-	EGIT_REPO_URI="https://github.com/limansky/${PN}.git"
+	EGIT_REPO_URI="git://github.com/limansky/${PN}.git"
 else
 	SRC_URI="mirror://github/limansky/${PN}/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
