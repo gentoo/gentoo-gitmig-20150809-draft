@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.167 2012/05/15 13:30:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.168 2012/05/15 13:36:44 aballier Exp $
 
 EAPI="4"
 
@@ -242,7 +242,7 @@ src_configure() {
 		$(use_enable gnutls) \
 		$(use_enable growl) \
 		$(use_enable httpd) \
-		$(use_enable ieee1394 dv) \
+		$(use_enable ieee1394 dv1394) \
 		$(use_enable ios-vout) \
 		$(use_enable jack) \
 		$(use_enable kate) \

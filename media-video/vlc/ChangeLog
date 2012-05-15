@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.794 2012/05/15 13:32:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.795 2012/05/15 13:36:44 aballier Exp $
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  dv has been renamed to dv1394
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> -vlc-2.0.0.ebuild:
   remove old
