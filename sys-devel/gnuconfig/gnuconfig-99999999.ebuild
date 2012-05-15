@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-99999999.ebuild,v 1.9 2012/04/26 12:15:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-99999999.ebuild,v 1.10 2012/05/15 03:03:33 vapier Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ S=${WORKDIR}
 maint_pkg_create() {
 	cd "${S}"
 
-	local ver=$(head -n 1 ChangeLog | awk '{print $1}' | sed -e 's:-::g')
+	local ver=$(gawk '{ gsub(/-/, "", $1); print $1; exit }' ChangeLog)
 	[[ ${#ver} != 8 ]] && die "invalid version '${ver}'"
 
 	cp "${FILESDIR}"/${PV}/*.patch . || die

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20100924.ebuild,v 1.3 2011/02/06 11:35:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20100924.ebuild,v 1.4 2012/05/15 03:03:33 vapier Exp $
 
 inherit eutils
 if [[ ${PV} == "99999999" ]] ; then
@@ -23,7 +23,7 @@ S=${WORKDIR}
 maint_pkg_create() {
 	cd "${S}"
 
-	local ver=$(head -n 1 ChangeLog | awk '{print $1}' | sed -e 's:-::g')
+	local ver=$(gawk '{ gsub(/-/, "", $1); print $1; exit }' ChangeLog)
 	[[ ${#ver} != 8 ]] && die "invalid version '${ver}'"
 
 	cp "${FILESDIR}"/${PV}/*.patch . || die
