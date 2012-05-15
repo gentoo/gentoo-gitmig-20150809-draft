@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.1.ebuild,v 1.2 2012/05/15 20:03:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.1.ebuild,v 1.3 2012/05/15 23:31:52 williamh Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ inherit $vcs bash-completion-r1 elisp-common eutils
 if [[ ${PV} != 9999 ]]; then
 	SRC_URI="http://go.googlecode.com/files/go${PV}.src.tar.gz"
 	# Upstream only supports go on amd64, arm and x86 architectures.
-	KEYWORDS="-* ~x86"
+	KEYWORDS="-* ~amd64 ~x86"
 fi
 
 DESCRIPTION="A concurrent garbage collected and typesafe programming language"
@@ -42,15 +42,6 @@ STRIP_MASK="/usr/lib/go/pkg/linux*/*.a"
 
 [[ ${PV} == 9999 ]] || S="${WORKDIR}"/go
 
-export_settings()
-{
-	export HOST_EXTRA_CFLAGS="${CFLAGS}"
-	export HOST_EXTRA_LDFLAGS="${LDFLAGS}"
-	export GOROOT_FINAL=/usr/lib/go
-	export GOROOT="$(pwd)"
-	export GOBIN="${GOROOT}/bin"
-}
-
 src_prepare()
 {
 	if [[ ${PV} != 9999 ]]; then
@@ -60,7 +51,12 @@ src_prepare()
 
 src_compile()
 {
-	export_settings
+	export HOST_EXTRA_CFLAGS="${CFLAGS}"
+	export HOST_EXTRA_LDFLAGS="${LDFLAGS}"
+	export GOROOT_FINAL=/usr/lib/go
+	export GOROOT="$(pwd)"
+	export GOBIN="${GOROOT}/bin"
+
 	if [[ ${PV} != 9999 ]]; then
 		use pax_kernel && opts="--pax-kernel"
 	fi
@@ -75,9 +71,8 @@ src_compile()
 
 src_test()
 {
-	export_settings
 	cd src
-	./run.bash --no-rebuild --banner || die "tests failed"
+	PATH="$GOBIN:${PATH}" ./run.bash --no-rebuild --banner || die "tests failed"
 }
 
 src_install()
