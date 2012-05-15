@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.19 2012/05/03 03:50:25 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.20 2012/05/15 16:54:08 armin76 Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
@@ -62,7 +62,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	python_convert_shebangs -r 2 .
+	python_convert_shebangs 2 catalyst modules/catalyst_lock.py
 }
 
 src_install() {
