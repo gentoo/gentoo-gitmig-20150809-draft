@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.12.1.ebuild,v 1.9 2011/11/06 13:41:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.12.1.ebuild,v 1.10 2012/05/15 02:57:30 heroxbd Exp $
 
 EAPI="1"
 
@@ -57,8 +57,6 @@ src_compile() {
 
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
-	# Fails to build on arm if >O0 is used
-	use arm && replace-flags "-O?" -O0
 
 	use tk || myconf="${myconf} -no-tk"
 	use ncurses || myconf="${myconf} -no-curses"
