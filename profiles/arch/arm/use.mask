@@ -31,7 +31,6 @@ networkmanager
 # Raúl Porcel <armin76@gentoo.org>
 # Fails to build/work
 openexr
-ocamlopt
 
 # Samuli Suominen <drac@gentoo.org>
 # media-libs/amrnb and media-libs/amrwb not tested.
