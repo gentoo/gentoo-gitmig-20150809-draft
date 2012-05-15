@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-9999.ebuild,v 1.6 2012/05/15 17:02:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/libdvdnav-9999.ebuild,v 1.7 2012/05/15 17:03:16 ssuominen Exp $
 
 EAPI=4
 WANT_AUTOCONF=2.5
 
-inherit autotools subversion
+inherit autotools eutils subversion
 
 DESCRIPTION="Library for DVD navigation tools"
 HOMEPAGE="http://dvdnav.mplayerhq.hu/"
