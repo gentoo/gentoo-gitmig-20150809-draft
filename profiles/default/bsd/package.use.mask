@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.22 2012/05/12 20:28:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.23 2012/05/15 12:27:18 aballier Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)
@@ -77,3 +77,6 @@ kde-base/solid bluetooth wicd
 
 # Needs DirectFB which is linux only
 media-libs/xine-lib fusion
+
+# needs udev
+kde-base/kdelibs udisks upower
