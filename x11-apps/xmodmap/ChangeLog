@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xmodmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmodmap/ChangeLog,v 1.68 2012/05/15 14:21:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmodmap/ChangeLog,v 1.69 2012/05/15 21:40:27 ssuominen Exp $
+
+  15 May 2012; Samuli Suominen <ssuominen@gentoo.org> xmodmap-1.0.7.ebuild,
+  +files/xmodmap-1.0.7-_GNU_SOURCE.patch:
+  Fix building with -Werror=implicit-function-declaration wrt #415953 by Kacper
+  Kowalik
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> xmodmap-1.0.7.ebuild:
   keyword ~amd64-fbsd
