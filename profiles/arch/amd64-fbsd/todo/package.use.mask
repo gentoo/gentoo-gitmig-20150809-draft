@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.211 2012/05/15 14:41:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.212 2012/05/15 23:27:17 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -117,9 +117,6 @@ media-video/ffmpeg frei0r
 media-libs/libsdl nas
 x11-libs/qt-gui nas
 
-# dev-python/pygtksourceview:2
-dev-vcs/git gtk
-
 # net-misc/openntpd
 net-misc/ntp openntpd
 
@@ -131,6 +128,9 @@ x11-libs/qt-sql mysql
 # dev-db/freetds
 dev-libs/apr-util freetds
 x11-libs/qt-sql freetds
+
+# >=dev-util/glade-3.2:3
+x11-libs/gtksourceview glade
 
 # app-emulation/wine
 media-libs/mesa d3d
