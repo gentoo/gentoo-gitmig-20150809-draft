@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xcb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.18 2012/02/19 14:13:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.19 2012/05/15 15:32:37 hasufell Exp $
+
+  15 May 2012; Julian Ospald <hasufell@gentoo.org> xcb-2.4.ebuild,
+  xcb-2.4-r1.ebuild:
+  fix HOMEPAGE and SRC_URI wrt #415629
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> xcb-2.4-r1.ebuild:
   Stable on alpha, bug #393921

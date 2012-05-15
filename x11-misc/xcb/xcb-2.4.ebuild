@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4.ebuild,v 1.13 2010/10/10 21:06:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4.ebuild,v 1.14 2012/05/15 15:32:37 hasufell Exp $
 
 EAPI=2
 inherit toolchain-funcs
 
 DESCRIPTION="Marc Lehmann's improved X Cut Buffers"
-HOMEPAGE="http://www.goof.com/pcg/marc/xcb.html"
-SRC_URI="http://www.goof.com/pcg/marc/data/${P}.tar.gz"
+HOMEPAGE="http://oldhome.schmorp.de/marc/xcb.html"
+SRC_URI="http://oldhome.schmorp.de/marc/data/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
