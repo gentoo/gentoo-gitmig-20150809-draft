@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.1.ebuild,v 1.1 2012/05/15 18:11:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.1.ebuild,v 1.2 2012/05/15 20:03:48 williamh Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ src_compile()
 		use pax_kernel && opts="--pax-kernel"
 	fi
 	cd src
-	./make.bash $opts
+	./make.bash $opts || die "build failed"
 	cd ..
 
 	if use emacs; then
@@ -77,7 +77,7 @@ src_test()
 {
 	export_settings
 	cd src
-	./run.bash --no-rebuild --banner
+	./run.bash --no-rebuild --banner || die "tests failed"
 }
 
 src_install()
