@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.96 2012/05/15 20:17:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.97 2012/05/15 20:38:35 hwoarang Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
-# Markos Chandras <hwoarang@gentoo.org
+# Markos Chandras <hwoarang@gentoo.org> (15 May 2012)
 # Depends on dev-tex/floatflt which is not keyworded for hppa
 >=net-misc/dibbler-0.8.0 doc
 
