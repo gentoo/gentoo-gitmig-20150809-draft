@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.267 2012/05/12 13:14:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.268 2012/05/15 18:58:12 jer Exp $
+
+  15 May 2012; Jeroen Roovers <jer@gentoo.org> iptables-1.4.13.ebuild:
+  Stable for HPPA (bug #414329).
 
   12 May 2012; Markus Meier <maekke@gentoo.org> iptables-1.4.13.ebuild:
   arm stable, bug #414329
