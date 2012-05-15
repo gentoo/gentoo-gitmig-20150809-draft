@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.105 2012/05/04 19:09:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.106 2012/05/15 23:42:48 reavertm Exp $
+
+  15 May 2012; Maciej Mrozowski <reavertm@gentoo.org> evms-2.5.5-r13.ebuild:
+  Fix structure name collision with glibc-2.14, bug 415603.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> evms-2.5.5-r13.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
