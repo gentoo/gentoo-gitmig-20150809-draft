@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.57 2012/05/05 19:04:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.58 2012/05/15 06:27:07 graaff Exp $
+
+*mocha-0.11.4 (15 May 2012)
+
+  15 May 2012; Hans de Graaff <graaff@gentoo.org> +mocha-0.11.4.ebuild:
+  Version bump.
 
   05 May 2012; Raúl Porcel <armin76@gentoo.org> mocha-0.10.0.ebuild,
   mocha-0.10.3.ebuild, mocha-0.10.5.ebuild:
