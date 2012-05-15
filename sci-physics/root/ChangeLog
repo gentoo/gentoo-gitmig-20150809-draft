@@ -1,6 +1,16 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.99 2012/05/04 07:55:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.100 2012/05/15 17:43:07 bicatali Exp $
+
+  15 May 2012; Sébastien Fabbro <bicatali@gentoo.org> +root-5.32.03.ebuild:
+  Import to the main tree, openmp checks on gcc
+
+*root-5.32.03 (15 May 2012)
+
+  15 May 2012; Andrew Savchenko <bircoph@gmail.com>
+  +root-5.32.03.ebuild:
+  Bump ebuild, use live ebuild as a template.
+  Remove extra KEYWORDS from live ebuild.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> root-5.26.00e-r1.ebuild,
   root-5.26.00g.ebuild, root-5.28.00h-r1.ebuild, root-5.32.02-r1.ebuild:
