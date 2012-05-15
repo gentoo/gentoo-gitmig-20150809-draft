@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.46 2012/05/15 08:12:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.47 2012/05/15 08:31:57 scarabeus Exp $
 
 EAPI=4
 
@@ -98,6 +98,7 @@ DEPEND="${RDEPEND}
 	rtmp? ( virtual/pkgconfig )
 	schroedinger? ( virtual/pkgconfig )
 	ssl? ( virtual/pkgconfig )
+	test? ( sys-devel/bc )
 	truetype? ( virtual/pkgconfig )
 	v4l? ( sys-kernel/linux-headers )
 "
