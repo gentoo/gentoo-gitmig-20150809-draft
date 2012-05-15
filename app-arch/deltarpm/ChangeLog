@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/deltarpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.7 2012/05/07 10:04:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.8 2012/05/15 08:41:59 pacho Exp $
+
+*deltarpm-3.6_pre20110223 (15 May 2012)
+
+  15 May 2012; Pacho Ramos <pacho@gentoo.org> +deltarpm-3.6_pre20110223.ebuild,
+  +files/3.6_pre20110223-build.patch, -deltarpm-3.5.ebuild:
+  Version bump (using Fedora snapshot) and remove old. Thanks a lot to Alon Bar-
+  Lev for his help (#396067).
 
   07 May 2012; Pacho Ramos <pacho@gentoo.org> -deltarpm-3.3.ebuild,
   -deltarpm-3.4.ebuild:
