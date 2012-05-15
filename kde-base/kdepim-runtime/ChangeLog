@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.75 2012/05/14 08:25:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.76 2012/05/15 20:28:57 johu Exp $
+
+*kdepim-runtime-4.8.3-r2 (15 May 2012)
+
+  15 May 2012; Johannes Huber <johu@gentoo.org>
+  +files/kdepim-runtime-4.8.3-fix-dav.patch, +kdepim-runtime-4.8.3-r2.ebuild,
+  -files/kdepim-runtime-4.8.3-revert-dav.patch, -kdepim-runtime-4.8.3-r1.ebuild:
+  Revision bump adds upstream patch to fix dav sync wrt bug #415401. Remove old
+  revision which reverted upstream changes introduced in 4.8.3 as workaround.
 
 *kdepim-runtime-4.8.3-r1 (14 May 2012)
 
