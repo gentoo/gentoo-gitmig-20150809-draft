@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r1.ebuild,v 1.2 2012/05/02 06:20:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r1.ebuild,v 1.3 2012/05/15 15:17:48 josejx Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
 HOMEPAGE="http://yaboot.ozlabs.org"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* ~ppc -ppc64"
+KEYWORDS="-* ppc -ppc64"
 IUSE="ibm"
 
 DEPEND="sys-apps/powerpc-utils
