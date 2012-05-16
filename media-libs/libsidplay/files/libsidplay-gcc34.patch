@@ -1,6 +1,5 @@
-diff -Naur libsidplay/src/smart.h xmms-fc-0.5.3/src/smart.h
---- libsidplay.vanilla/src/smart.h	1998-11-30 13:10:00.000000000 -0600
-+++ libsidplay/src/smart.h	2004-07-03 01:49:33.991970368 -0500
+--- src/smart.h
++++ src/smart.h
 @@ -207,16 +207,16 @@
      {
          if ( bufferLen >= 1 )

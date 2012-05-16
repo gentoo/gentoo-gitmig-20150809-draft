@@ -1,6 +1,5 @@
-diff -ur sidplay-libs-2.1.1-orig/libsidplay/include/sidplay/SmartPtr.h sidplay-libs-2.1.1/libsidplay/include/sidplay/SmartPtr.h
---- sidplay-libs-2.1.1-orig/libsidplay/include/sidplay/SmartPtr.h	2004-06-14 23:08:04.000000000 +0300
-+++ sidplay-libs-2.1.1/libsidplay/include/sidplay/SmartPtr.h	2005-12-19 11:12:04.000000000 +0300
+--- libsidplay/include/sidplay/SmartPtr.h
++++ libsidplay/include/sidplay/SmartPtr.h
 @@ -211,16 +211,16 @@
  	{
  		if ( bufferLen >= 1 )
@@ -25,9 +24,8 @@ diff -ur sidplay-libs-2.1.1-orig/libsidplay/include/sidplay/SmartPtr.h sidplay-l
  		}
  	}
  };
-diff -ur sidplay-libs-2.1.1-orig/libsidutils/include/sidplay/utils/SidUsage.h sidplay-libs-2.1.1/libsidutils/include/sidplay/utils/SidUsage.h
---- sidplay-libs-2.1.1-orig/libsidutils/include/sidplay/utils/SidUsage.h	2004-06-14 23:08:08.000000000 +0300
-+++ sidplay-libs-2.1.1/libsidutils/include/sidplay/utils/SidUsage.h	2005-12-19 11:12:25.000000000 +0300
+--- libsidutils/include/sidplay/utils/SidUsage.h
++++ libsidutils/include/sidplay/utils/SidUsage.h
 @@ -33,7 +33,7 @@
      uint_least16_t length;  // usage scan length
  

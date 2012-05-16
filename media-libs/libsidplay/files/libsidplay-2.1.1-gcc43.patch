@@ -1,7 +1,5 @@
---- sidplay-libs-2.1.1/builders/resid-builder/src/resid.cpp.old	2008-07-25 17:00:41.000000000 \
-+0000
-+++ sidplay-libs-2.1.1/builders/resid-builder/src/resid.cpp	2008-07-25 16:59:44.000000000 \
-+0000
+--- builders/resid-builder/src/resid.cpp
++++ builders/resid-builder/src/resid.cpp
 @@ -16,6 +16,8 @@
   *                                                                         *
   ***************************************************************************/
@@ -11,10 +9,8 @@
  #include "config.h"
  
  #ifdef HAVE_EXCEPTIONS
---- sidplay-libs-2.1.1/builders/resid-builder/src/resid-builder.cpp.old	2008-07-25 \
-17:02:00.000000000 +0000
-+++ sidplay-libs-2.1.1/builders/resid-builder/src/resid-builder.cpp	2008-07-25 17:01:47.000000000 \
-+0000
+--- builders/resid-builder/src/resid-builder.cpp
++++ builders/resid-builder/src/resid-builder.cpp
 @@ -37,6 +37,7 @@
   ***************************************************************************/
  
@@ -23,10 +19,8 @@
  
  #include "config.h"
  #ifdef HAVE_EXCEPTIONS
---- sidplay-libs-2.1.1/builders/hardsid-builder/src/hardsid-builder.cpp.old	2008-07-25 \
-17:08:50.000000000 +0000
-+++ sidplay-libs-2.1.1/builders/hardsid-builder/src/hardsid-builder.cpp	2008-07-25 \
-17:08:17.000000000 +0000
+--- builders/hardsid-builder/src/hardsid-builder.cpp
++++ builders/hardsid-builder/src/hardsid-builder.cpp
 @@ -47,6 +47,7 @@
   ***************************************************************************/
  
@@ -35,10 +29,8 @@
  #include "config.h"
  
  #ifdef HAVE_EXCEPTIONS
---- sidplay-libs-2.1.1/libsidplay/src/sidtune/SidTune.cpp.old	2008-07-25 16:55:02.000000000 \
-+0000
-+++ sidplay-libs-2.1.1/libsidplay/src/sidtune/SidTune.cpp	2008-07-25 16:53:58.000000000 \
-+0000
+--- libsidplay/src/sidtune/SidTune.cpp
++++ libsidplay/src/sidtune/SidTune.cpp
 @@ -283,7 +283,7 @@
      uint_least32_t fileLen = 0;
  
