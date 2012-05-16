@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.33 2012/04/25 15:25:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.34 2012/05/16 07:48:00 naota Exp $
+
+  16 May 2012; Naohiro Aota <naota@gentoo.org> tix-8.4.3.ebuild:
+  Add ~x86-fbsd. #413433
 
   25 Apr 2012; Jeroen Roovers <jer@gentoo.org> tix-8.4.3.ebuild:
   Marked ~hppa (bug #413433).
