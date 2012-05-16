@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.19 2012/05/12 08:53:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.20 2012/05/16 12:46:14 naota Exp $
+
+*dropbox-1.4.3 (16 May 2012)
+
+  16 May 2012; Naohiro Aota <naota@gentoo.org> +dropbox-1.4.3.ebuild,
+  +files/dropbox.conf, +files/dropbox.initd:
+  Add init script. #376703; Depend on librsync only when USE=-librsync-bundled
+  #406089; Version bumped. #415545
 
   12 May 2012; Pacho Ramos <pacho@gentoo.org> dropbox-1.2.51-r2.ebuild:
   Use bundled rsync by default (as previous versions) because dropbox completely
