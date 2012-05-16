@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.6.1.ebuild,v 1.1 2011/10/24 11:25:48 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.6.1.ebuild,v 1.2 2012/05/16 10:44:42 xarthisius Exp $
 
 EAPI=4
 
@@ -44,6 +44,8 @@ pkg_setup() {
 src_prepare() {
 	base_src_prepare
 	sed -i -e "/ggdb3/d" configure.ac || die
+	sed -e "s:<glib/ghash.h>:<glib.h>:" \
+		-i lib/ais/plugin.c || die
 	eautoreconf
 }
 
