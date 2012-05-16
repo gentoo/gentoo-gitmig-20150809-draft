@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.35 2012/05/14 16:04:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.36 2012/05/16 14:32:12 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> zope-interface-3.8.0.ebuild:
+  Stable for HPPA (bug #415871).
 
   14 May 2012; Agostino Sarubbo <ago@gentoo.org> zope-interface-3.8.0.ebuild:
   Stable for amd64, wrt bug #415871
