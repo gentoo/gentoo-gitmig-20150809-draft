@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13761 2012/05/15 21:57:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13762 2012/05/16 01:23:21 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -268,11 +268,6 @@ sys-kernel/mm-sources
 x11-apps/xsetmode
 x11-apps/xsetpointer
 <=x11-base/xorg-x11-7.4-r1
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Apr 2012)
-# One of the last packages still using the obsolete pyxml package
-# Masked for removal in 30 days wrt bug 367739
-<app-pda/libopensync-plugin-google-calendar-0.39
 
 # Samuli Suominen <ssuominen@gentoo.org> (22 Apr 2012)
 # Masked for removal in 30 days for using the obsolete xulrunner
@@ -1011,7 +1006,6 @@ sys-fs/redirfs
 =app-pda/libopensync-plugin-evolution2-9999
 =app-pda/libopensync-plugin-file-9999
 =app-pda/libopensync-plugin-gnokii-9999
-=app-pda/libopensync-plugin-google-calendar-9999
 =app-pda/libopensync-plugin-gpe-9999
 =app-pda/libopensync-plugin-irmc-9999
 =app-pda/libopensync-plugin-palm-9999
