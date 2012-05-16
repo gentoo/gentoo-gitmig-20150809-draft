@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/uf-view
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/ChangeLog,v 1.16 2012/05/05 04:53:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/ChangeLog,v 1.17 2012/05/16 09:59:21 hasufell Exp $
+
+  16 May 2012; Julian Ospald <hasufell@gentoo.org> uf-view-2.4.ebuild:
+  fix HOMEPAGE and SRC_URI wrt #415963
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> uf-view-2.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
