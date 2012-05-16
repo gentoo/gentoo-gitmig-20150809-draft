@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.23 2012/05/15 18:44:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.24 2012/05/16 17:51:54 floppym Exp $
+
+  16 May 2012; Mike Gilbert <floppym@gentoo.org> fabric-1.4.2-r1.ebuild:
+  Unrestrict tests with correct fudge dependency. Restrict pypy due to
+  depdendency on dev-python/ssh.
 
 *fabric-1.4.2-r1 (15 May 2012)
 
