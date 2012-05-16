@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/faenza-icon-theme
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/ChangeLog,v 1.15 2011/12/27 07:58:10 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/ChangeLog,v 1.16 2012/05/16 18:22:06 hwoarang Exp $
+
+  16 May 2012; Markos Chandras <hwoarang@gentoo.org>
+  faenza-icon-theme-1.1.ebuild, faenza-icon-theme-1.2-r1.ebuild:
+  Update HOMEPAGE per bug #416275
 
 *faenza-icon-theme-1.2-r1 (27 Dec 2011)
 
