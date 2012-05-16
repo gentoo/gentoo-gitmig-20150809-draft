@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Object-Realize-Later
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Object-Realize-Later/ChangeLog,v 1.1 2012/05/16 19:03:20 tove Exp $
+
+*Object-Realize-Later-0.180.0 (16 May 2012)
+
+  16 May 2012; Torsten Veller <tove@gentoo.org>
+  +Object-Realize-Later-0.180.0.ebuild, +metadata.xml:
+  Initial commit for Mail-Box (#389831)
+
