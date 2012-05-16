@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.24 2012/05/04 19:09:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.25 2012/05/16 03:21:30 ssuominen Exp $
 
 EAPI="1"
 
@@ -156,6 +156,9 @@ src_unpack() {
 		# see Bug #269359
 		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
 	fi
+
+	# Bug 413055
+	epatch "${FILESDIR}"/udev-164-remove-v4l1.patch
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-151-r4.ebuild,v 1.22 2012/05/04 19:09:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-151-r4.ebuild,v 1.23 2012/05/16 03:21:30 ssuominen Exp $
 
 EAPI="1"
 
@@ -156,6 +156,9 @@ src_unpack() {
 
 	# Bug 301667
 	epatch "${FILESDIR}"/udev-150-fix-missing-firmware-timeout.diff
+
+	# Bug 413055
+	epatch "${FILESDIR}"/udev-164-remove-v4l1.patch
 
 	if ! use devfs-compat; then
 		# see Bug #269359
