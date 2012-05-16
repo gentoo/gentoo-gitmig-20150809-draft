@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.220 2012/05/16 00:28:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.221 2012/05/16 00:42:25 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -162,15 +162,6 @@ x11-libs/libdrm libkms
 media-libs/mesa video_cards_vmware
 media-libs/mesa video_cards_r600
 media-libs/mesa video_cards_radeon
-
-# x11-drivers/xf86-input-penmount
-x11-base/xorg-drivers input_devices_penmount
-
-# x11-drivers/xf86-input-vmmouse
-x11-base/xorg-drivers input_devices_vmmouse
-
-# x11-drivers/xf86-input-void
-x11-base/xorg-drivers input_devices_void
 
 # x11-drivers/xf86-video-apm
 x11-base/xorg-drivers video_cards_apm
