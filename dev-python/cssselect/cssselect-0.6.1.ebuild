@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/cssselect-0.6.1.ebuild,v 1.2 2012/05/16 16:36:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/cssselect-0.6.1.ebuild,v 1.3 2012/05/16 16:39:08 jer Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools
