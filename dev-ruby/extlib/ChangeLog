@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/extlib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extlib/ChangeLog,v 1.3 2010/06/21 05:21:46 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extlib/ChangeLog,v 1.4 2012/05/16 16:06:24 graaff Exp $
+
+  16 May 2012; Hans de Graaff <graaff@gentoo.org> extlib-0.9.15.ebuild:
+  Fix USE=doc not to require jeweler, bug 416273. Add ruby19, ree19, jruby.
 
   21 Jun 2010; Hans de Graaff <graaff@gentoo.org> -extlib-0.9.14.ebuild:
   Remove old version.

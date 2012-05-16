@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extlib/extlib-0.9.15.ebuild,v 1.1 2010/06/03 05:38:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extlib/extlib-0.9.15.ebuild,v 1.2 2012/05/16 16:06:24 graaff Exp $
 
 EAPI="2"
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
-RUBY_FAKEGEM_TASK_DOC="yard"
+RUBY_FAKEGEM_TASK_DOC="-f tasks/yard.rake yard"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 RUBY_FAKEGEM_TASK_TEST="-f tasks/spec.rake spec"
