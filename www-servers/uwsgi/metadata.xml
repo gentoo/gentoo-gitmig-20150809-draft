@@ -3,12 +3,6 @@
 <pkgmetadata>
 	<herd>python</herd>
 	<maintainer>
-		<email>maksbotan@gentoo.org</email>
-	</maintainer>
-	<maintainer>
-		<email>sterkrig@home.se</email>
-	</maintainer>
-	<maintainer>
 		<email>ultrabug@gentoo.org</email>
 	</maintainer>
 	<use>

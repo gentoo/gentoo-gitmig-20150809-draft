@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.14 2012/05/15 11:32:55 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.15 2012/05/16 17:51:24 maksbotan Exp $
+
+  16 May 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Remove inactive maintainers from metadata
 
   15 May 2012; Ultrabug <ultrabug@gentoo.org> uwsgi-1.2.3.ebuild:
   remove quote in the cat section for cleaner result
