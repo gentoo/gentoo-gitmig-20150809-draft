@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.59 2011/12/29 18:11:03 tetromino Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.60 2012/05/16 23:01:51 dilfridge Exp $
+
+  16 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Adopted by printing as cups may become painful without it in the near future
+  (1.6)
 
   29 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   mDNSResponder-212.1.ebuild, mDNSResponder-212.1-r1.ebuild:
