@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.22 2012/05/05 03:52:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.23 2012/05/16 15:22:35 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org> libvdpau-0.4.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libvdpau-0.4.1-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
