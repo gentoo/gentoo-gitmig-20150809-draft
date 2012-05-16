@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>voip</herd>
   <use>
-    <flag name="noaudio">Disable audio codecs</flag>
-    <flag name="novideo">Disable video codecs</flag>
+    <flag name="audio">Enable audio codecs</flag>
+    <flag name="video">Enable video codecs</flag>
   </use>
 </pkgmetadata>

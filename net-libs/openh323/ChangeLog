@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/openh323
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.86 2011/09/09 15:57:16 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.87 2012/05/16 12:45:13 scarabeus Exp $
 
   09 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop gnome from metadata as we are not really taking care of this package.

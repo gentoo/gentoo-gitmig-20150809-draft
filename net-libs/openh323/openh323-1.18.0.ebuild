@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.10 2010/10/28 14:35:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.11 2012/05/16 12:45:13 scarabeus Exp $
+
+EAPI=4
 
 inherit eutils flag-o-matic multilib
 
@@ -10,15 +12,16 @@ DESCRIPTION="Open Source implementation of the ITU H.323 teleconferencing protoc
 HOMEPAGE="http://www.openh323.org/"
 SRC_URI="http://www.voxgratia.org/releases/${PN}-v${PV//./_}-src-tar.gz"
 
-IUSE="debug ssl novideo noaudio"
+IUSE="debug ssl +video +audio"
 SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
 
 DEPEND=">=sys-apps/sed-4
 	=dev-libs/pwlib-1.10*
-	>=media-video/ffmpeg-0.4.7
+	virtual/ffmpeg
 	ssl? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}_v${PV//./_}"
 
@@ -28,57 +31,65 @@ pkg_setup() {
 
 src_unpack() {
 	tar -xzf "${DISTDIR}"/${A} -C "${WORKDIR}" || die
+}
 
-	cd "${S}"
+src_prepare() {
 	# Makefile does not work correctly, fix
 	epatch "${FILESDIR}"/${PN}-1.18.0-install.diff
 	# Do not include compiler.h, bug #168791
 	epatch "${FILESDIR}"/${P}-compilerh.patch
 }
 
-src_compile() {
+src_configure() {
 	# remove -fstack-protector, may cause problems (bug #75259)
 	filter-flags -fstack-protector
 
 	#export OPENH323DIR=${S}
 
 	econf \
-		$(use_enable !novideo video) \
-		$(use_enable !noaudio audio) \
-		--disable-transnexusosp \
-		|| die "econf failed"
-	emake ${makeopts} opt || die "emake failed"
+		$(use_enable video) \
+		$(use_enable audio) \
+		--disable-transnexusosp
+}
+
+src_compile() {
+	emake ${makeopts} opt
 }
 
 src_install() {
-	emake ${makeopts} PREFIX=/usr DESTDIR="${D}" install || die
+	emake ${makeopts} PREFIX=/usr DESTDIR="${D}" install
 
 	###
 	# Compatibility "hacks"
 	#
 
 	# debug / no debug use different suffixes - some packages build with only one
-	for i in "${D}"/usr/lib/libh323_linux_x86_*; do
-		use debug && ln -s "${D}"/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_r/_n} \
-			|| ln -s "${D}"/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_n/_r}
+	for i in "${ED}"/usr/lib/libh323_linux_x86_*; do
+		use debug && ln -s "${ED}"/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_r/_n} \
+			|| ln -s "${ED}"/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_n/_r}
 	done
 
 	# set notrace corerctly
-	use debug || dosed "s:^\(NOTRACE.*\):\1 1:" /usr/share/openh323/openh323u.mak
+	if ! use debug ; then
+		sed \
+			-i \
+			-e "s:^\(NOTRACE.*\):\1 1:" \
+			"${ED}"/usr/share/openh323/openh323u.mak || die
+	fi
 
 	# mod to keep gnugk happy
 	insinto /usr/share/openh323/src
-	echo -e "opt:\n\t:" > ${T}/Makefile
+	echo -e "opt:\n\t:" > "${T}"/Makefile
 	doins "${T}"/Makefile
 
 	# these should point to the right directories,
 	# openh323.org apps and others need this
-	dosed "s:^OH323_LIBDIR = \$(OPENH323DIR).*:OH323_LIBDIR = /usr/${libdir}:" \
-		/usr/share/openh323/openh323u.mak
-	dosed "s:^OH323_INCDIR = \$(OPENH323DIR).*:OH323_INCDIR = /usr/include/openh323:" \
-		/usr/share/openh323/openh323u.mak
+	sed -i -e "s:^OH323_LIBDIR = \$(OPENH323DIR).*:OH323_LIBDIR = /usr/${libdir}:" \
+		"${ED}"/usr/share/openh323/openh323u.mak || die
+	sed -i -e "s:^OH323_INCDIR = \$(OPENH323DIR).*:OH323_INCDIR = /usr/include/openh323:" \
+		"${ED}"/usr/share/openh323/openh323u.mak || die
 
 	# this is hardcoded now?
-	dosed "s:^\(OPENH323DIR[ \t]\+=\) ${S}:\1 /usr/share/openh323:" \
-		/usr/share/openh323/openh323u.mak
+	sed -i -e "s:^\(OPENH323DIR[ \t]\+=\) "${S}":\1 /usr/share/openh323:" \
+		"${ED}"/usr/share/openh323/openh323u.mak || die
 }
