@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.7 2012/03/15 03:54:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.6.1.ebuild,v 1.8 2012/05/16 12:02:51 scarabeus Exp $
 
 EAPI="3"
 
@@ -40,9 +40,9 @@ RDEPEND="dev-cpp/glibmm
 	virtual/jpeg
 	media-libs/libpng
 	media-libs/libsdl
+	virtual/ffmpeg
 	virtual/opengl
 	virtual/glu
-	media-video/ffmpeg
 	sys-libs/zlib
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
@@ -55,6 +55,7 @@ S=${WORKDIR}/${MY_P}-Source
 
 PATCHES=(
 	"${FILESDIR}"/${P}-ffmpeg.patch
+	"${FILESDIR}"/${P}-libav.patch
 	"${FILESDIR}"/${P}-libpng.patch
 	"${FILESDIR}"/${P}-gentoo.patch
 	"${FILESDIR}"/${P}-linguas.patch

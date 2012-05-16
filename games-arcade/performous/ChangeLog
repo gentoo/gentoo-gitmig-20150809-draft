@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/performous
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.7 2012/03/15 03:54:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.8 2012/05/16 12:02:51 scarabeus Exp $
+
+  16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/performous-0.6.1-libav.patch, performous-0.6.1.ebuild:
+  Build with libav and thus depend on virtual/ffmpeg.
 
   15 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> performous-0.6.1.ebuild:
   games-arcade/ultrastar-ng is gone
