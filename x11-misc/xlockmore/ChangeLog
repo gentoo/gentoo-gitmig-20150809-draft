@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.112 2012/05/08 15:42:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.113 2012/05/16 15:27:58 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> xlockmore-5.38.ebuild:
+  Stable for HPPA (bug #414489).
 
   08 May 2012; Brent Baude <ranger@gentoo.org> xlockmore-5.38.ebuild:
   Marking xlockmore-5.38 ppc64 for bug 414489
