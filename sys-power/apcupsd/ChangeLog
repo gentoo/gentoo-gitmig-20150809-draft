@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/apcupsd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.77 2011/10/21 22:06:43 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.78 2012/05/16 02:06:45 flameeyes Exp $
+
+  16 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> -apcupsd-3.14.10.ebuild,
+  -files/apcupsd.init.2:
+  Remove old version.
 
 *apcupsd-3.14.10-r1 (21 Oct 2011)
 
