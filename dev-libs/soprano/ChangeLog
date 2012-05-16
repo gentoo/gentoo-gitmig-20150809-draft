@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.90 2012/03/25 18:57:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.91 2012/05/16 13:04:51 kensington Exp $
+
+*soprano-2.7.6 (16 May 2012)
+
+  16 May 2012; Michael Palimaka <kensington@gentoo.org> +soprano-2.7.6.ebuild:
+  Version bump. Install documentation correctly, based on patch by Ian Delaney
+  <johneed@hotmail.com>. Fixes bug #406849.
 
   25 Mar 2012; Johannes Huber <johu@gentoo.org>
   -files/soprano-2.7.3-largefile-support.patch, -soprano-2.7.0.ebuild,
