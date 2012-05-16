@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.3.3.ebuild,v 1.3 2012/05/04 07:20:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.3.5.ebuild,v 1.1 2012/05/16 09:39:24 ultrabug Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp:${PN}.org@${PN}.org/downloads/${P}/${P}.tar.gz"
 LICENSE="BSD-2 public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
-IUSE="doc infiniband ssl"
+IUSE="doc infiniband ssl static-libs"
 
 RDEPEND="!sys-cluster/heartbeat
 	ssl? ( dev-libs/nss )
@@ -55,4 +55,5 @@ src_install() {
 	newins "${FILESDIR}"/${PN}.logrotate ${PN}
 
 	keepdir /var/lib/corosync
+	use static-libs || rm -rf "${D}"/usr/$(get_libdir)/*.a || die
 }
