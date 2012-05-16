@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.178 2012/05/15 16:47:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.179 2012/05/16 17:41:47 phajdan.jr Exp $
+
+*v8-3.10.8.5 (16 May 2012)
+
+  16 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> -v8-3.10.6.ebuild,
+  +v8-3.10.8.5.ebuild:
+  Version bump for dev channel release. Remove old.
 
   15 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> v8-3.9.24.21.ebuild:
   x86 stable wrt security bug #416119
