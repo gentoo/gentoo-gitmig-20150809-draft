@@ -10,7 +10,4 @@
 		<email>maksbotan@gentoo.org</email>
 		<name>Maxim Koltsov</name>
 	</maintainer>
-	<use>
-		<flag name="postproc">Enables image post-processing via libpostproc (part of FFmpeg).</flag>
-	</use>
 </pkgmetadata>
