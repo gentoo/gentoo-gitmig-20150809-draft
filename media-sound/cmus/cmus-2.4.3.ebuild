@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.4.3.ebuild,v 1.3 2012/05/05 08:16:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.4.3.ebuild,v 1.4 2012/05/16 08:30:50 scarabeus Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/cmus/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE="aac alsa ao debug examples flac mad mikmod modplug mp4 musepack oss
 pidgin pulseaudio unicode vorbis wavpack wma zsh-completion"
 
@@ -30,7 +30,7 @@ CDEPEND="sys-libs/ncurses[unicode?]
 	pulseaudio? ( media-sound/pulseaudio )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	wavpack? ( media-sound/wavpack )
-	wma? ( virtual/ffmpeg )"
+	wma? ( >=virtual/ffmpeg-0.10.2-r1 )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
