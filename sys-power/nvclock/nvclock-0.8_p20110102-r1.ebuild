@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.6 2011/04/25 04:26:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.7 2012/05/16 19:44:01 jer Exp $
 
 EAPI="2"
 
@@ -22,7 +22,9 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-make.patch
+	epatch \
+		"${FILESDIR}"/${P}-make.patch \
+		"${FILESDIR}"/${P}-usleep.patch
 	eautoreconf
 }
 
