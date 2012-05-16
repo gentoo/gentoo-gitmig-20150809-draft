@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.181 2012/05/16 01:55:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.182 2012/05/16 02:01:14 floppym Exp $
+
+  16 May 2012; Mike Gilbert <floppym@gentoo.org> PyQt4-4.8.1.ebuild,
+  PyQt4-4.8.4.ebuild, PyQt4-4.9.1.ebuild:
+  Revert previous change.
 
   16 May 2012; Mike Gilbert <floppym@gentoo.org> PyQt4-4.8.1.ebuild,
   PyQt4-4.8.4.ebuild, PyQt4-4.9.1.ebuild:
