@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/nilfs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.16 2012/03/27 00:28:43 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.17 2012/05/16 15:26:17 naota Exp $
+
+*nilfs-utils-2.1.0-r1 (16 May 2012)
+
+  16 May 2012; Naohiro Aota <naota@gentoo.org> +nilfs-utils-2.1.0-r1.ebuild:
+  Move /usr/lib/* to /lib #398079
 
   27 Mar 2012; Naohiro Aota <naota@gentoo.org> nilfs-utils-2.1.0.ebuild:
   Don't strictly depend on POSIX_MQUEUE. Just check and warn for it. #396159
