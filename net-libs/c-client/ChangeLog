@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.83 2012/05/08 15:55:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.84 2012/05/16 15:34:54 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> c-client-2007f-r1.ebuild:
+  Stable for HPPA (bug #413601).
 
   08 May 2012; Brent Baude <ranger@gentoo.org> c-client-2007f-r1.ebuild:
   Marking c-client-2007f-r1 ppc64 for bug 413601
