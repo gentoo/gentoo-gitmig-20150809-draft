@@ -1,14 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-27.7.ebuild,v 1.1 2012/05/04 16:02:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-27.7-r1.ebuild,v 1.1 2012/05/16 17:54:11 tomka Exp $
 
 EAPI=4
 
 DESCRIPTION="The Great Internet Mersenne Prime Search"
 HOMEPAGE="http://mersenne.org/"
 SRC_URI="
-	amd64? ( ftp://mersenne.org/gimps/mprime${PV/./}-linux64.tar.gz )
-	x86? ( ftp://mersenne.org/gimps/mprime${PV/./}.tar.gz )"
+	amd64? ( ftp://mersenne.org/gimps/p95v${PV/./}.linux64.tar.gz )
+	x86? ( ftp://mersenne.org/gimps/p95v${PV/./}.linux32.tar.gz )"
+# Permanently changed from the old version?
+# SRC_URI="
+# 	amd64? ( ftp://mersenne.org/gimps/mprime${PV/./}-linux64.tar.gz )
+# 	x86? ( ftp://mersenne.org/gimps/mprime${PV/./}.tar.gz )"
 
 SLOT="0"
 LICENSE="as-is"
