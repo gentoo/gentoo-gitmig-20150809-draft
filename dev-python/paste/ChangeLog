@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paste
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.16 2011/05/24 21:02:58 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.17 2012/05/16 21:35:37 marienz Exp $
+
+  16 May 2012; Marien Zwart <marienz@gentoo.org>
+  +files/paste-1.7.5.1-fix-tests-for-pypy.patch, paste-1.7.5.1.ebuild:
+  Fix tests on pypy, remove test that accesses the network (bug #339252).
 
   24 May 2011; Markus Meier <maekke@gentoo.org> paste-1.7.5.1.ebuild:
   x86 stable, bug #365537

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1.ebuild,v 1.4 2011/05/24 21:02:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1.ebuild,v 1.5 2012/05/16 21:35:37 marienz Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="Paste"
 MY_P="${MY_PN}-${PV}"
@@ -40,6 +40,11 @@ src_prepare() {
 		-e "s/test_deep/_&/" \
 		-e "s/test_static_parser/_&/" \
 		-i tests/test_urlparser.py || die "sed failed"
+
+	# Remove a test that runs against the paste website.
+	rm tests/test_proxy.py
+
+	epatch "${FILESDIR}/${P}-fix-tests-for-pypy.patch"
 }
 
 src_compile() {
