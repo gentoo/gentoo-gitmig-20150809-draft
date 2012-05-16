@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0-r1.ebuild,v 1.2 2012/05/15 12:57:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0-r1.ebuild,v 1.3 2012/05/16 06:16:56 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -90,4 +90,10 @@ src_install() {
 
 pkg_postinst() {
 	mkdir -p "${EROOT}"/run #415987
+
+	# See pkg_postinst() of >=sys-apps/baselayout-2.1-r1. Keep in sync?
+	if ! grep -qs "^tmpfs.*/run " "${EROOT}"/proc/mounts ; then
+		echo
+		ewarn "You should reboot the system now to get /run mounted with tmpfs!"
+	fi
 }
