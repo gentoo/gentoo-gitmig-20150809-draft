@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/files/msfrpcd-4.3-initd,v 1.1 2012/05/02 04:42:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/files/msfrpcd-4.3-initd,v 1.2 2012/05/16 02:48:18 jer Exp $
 
-VERSION=4.2
+VERSION=4.3
 PIDFILE=/var/run/msfrpcd${VERSION}.pid
 
 start() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.62 2012/05/02 04:42:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.63 2012/05/16 02:48:19 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> files/msfrpcd-4.3-initd:
+  Fix version in init.d script by Aaron Burnett (bug #416013).
 
 *metasploit-4.3.0 (02 May 2012)
 
