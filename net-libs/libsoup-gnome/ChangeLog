@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.72 2012/05/05 02:54:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.73 2012/05/16 00:14:20 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  libsoup-gnome-2.38.1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libsoup-gnome-2.34.3.ebuild,
   libsoup-gnome-2.36.1.ebuild, libsoup-gnome-2.38.0.ebuild,
