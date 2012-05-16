@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.302 2012/05/16 18:56:22 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.303 2012/05/16 19:05:31 sping Exp $
+
+  16 May 2012; Sebastian Pipping <sping@gentoo.org> genkernel-3.4.16.ebuild,
+  genkernel-3.4.16.1.ebuild, genkernel-3.4.17.ebuild:
+  Fix warnings about git-2 eclass from old stable ebuilds
 
   16 May 2012; Sebastian Pipping <sping@gentoo.org> genkernel-3.4.16.ebuild,
   genkernel-3.4.16.1.ebuild, genkernel-3.4.17.ebuild, genkernel-3.4.18.ebuild,
