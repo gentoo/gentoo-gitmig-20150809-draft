@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-tga
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tga/ChangeLog,v 1.34 2010/01/23 20:33:53 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tga/ChangeLog,v 1.35 2012/05/16 02:24:37 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-tga-1.2.1.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86-video-tga-1.2.0.ebuild:
