@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.124 2012/05/15 18:27:20 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.125 2012/05/16 16:35:18 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> taglib-1.7.2.ebuild:
+  Stable for HPPA (bug #416143).
 
   15 May 2012; Michael Palimaka <kensington@gentoo.org> taglib-1.7.2.ebuild:
   Actually run tests when enabled. Fixes bug #415299 by Matt Turner
