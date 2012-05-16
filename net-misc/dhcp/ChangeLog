@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.208 2012/05/16 05:08:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.209 2012/05/16 15:57:20 vapier Exp $
+
+  16 May 2012; Mike Frysinger <vapier@gentoo.org> files/dhcrelay.init3,
+  files/dhcrelay6.conf:
+  Drop use of IFACE for dhcrelay6 #415957#5 by Spooky Ghost.
 
 *dhcp-4.2.3_p2 (16 May 2012)
 
