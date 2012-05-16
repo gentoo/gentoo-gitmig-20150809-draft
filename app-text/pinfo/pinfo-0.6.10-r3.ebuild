@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r3.ebuild,v 1.2 2012/05/09 19:21:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r3.ebuild,v 1.3 2012/05/16 14:18:16 jer Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="https://alioth.debian.org/frs/download.php/3351/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls readline"
 
 RDEPEND="
