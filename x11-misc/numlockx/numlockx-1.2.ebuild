@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.2.ebuild,v 1.7 2012/05/15 22:17:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/numlockx-1.2.ebuild,v 1.8 2012/05/16 00:17:42 ssuominen Exp $
 
 EAPI=4
 inherit autotools
@@ -9,7 +9,7 @@ DESCRIPTION="Turns on numlock in X"
 HOMEPAGE="http://home.kde.org/~seli/numlockx/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-LICENSE="EDB"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
