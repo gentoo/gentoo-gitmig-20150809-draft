@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-bearer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.3 2012/05/08 18:31:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.4 2012/05/16 03:34:17 naota Exp $
+
+  16 May 2012; Naohiro Aota <naota@gentoo.org> qt-bearer-4.8.1.ebuild:
+  Add ~x86-fbsd. #412915
 
   08 May 2012; Markos Chandras <hwoarang@gentoo.org> qt-bearer-4.8.1.ebuild:
   Stable on amd64 wrt bug #414241
