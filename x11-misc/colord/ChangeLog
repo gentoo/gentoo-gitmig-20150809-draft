@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.26 2012/05/09 15:10:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.27 2012/05/16 15:02:41 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> colord-0.1.18.ebuild:
+  Stable for HPPA (bug #410611).
 
   09 May 2012; Matt Turner <mattst88@gentoo.org> colord-0.1.18.ebuild:
   Added ~mips, bug 387959.
