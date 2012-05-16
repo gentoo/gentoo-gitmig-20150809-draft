@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.34 2012/05/03 22:26:18 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.35 2012/05/16 18:56:22 sping Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -38,12 +38,12 @@ if [[ ${PV} == 9999* ]]
 then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git
 		http://git.overlays.gentoo.org/gitroot/proj/${PN}.git"
-	inherit git-2 bash-completion eutils
+	inherit git-2 bash-completion-r1 eutils
 	S="${WORKDIR}/${PN}"
 	SRC_URI="${COMMON_URI}"
 	KEYWORDS=""
 else
-	inherit bash-completion eutils
+	inherit bash-completion-r1 eutils
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
 		${MY_HOME}/sources/genkernel/${P}.tar.bz2
 		${COMMON_URI}"
@@ -132,7 +132,7 @@ src_install() {
 		"${DISTDIR}"/open-iscsi-${VERSION_ISCSI}.tar.gz \
 		"${D}"/var/cache/genkernel/src || die "Copying distfiles..."
 
-	dobashcompletion "${FILESDIR}"/genkernel.bash
+	newbashcomp "${FILESDIR}"/genkernel.bash "${PN}"
 	insinto /etc
 	doins "${FILESDIR}"/initramfs.mounts
 }
@@ -160,6 +160,4 @@ pkg_postinst() {
 		ewarn "Sorry for the inconvenience."
 		echo
 	fi
-
-	bash-completion_pkg_postinst
 }
