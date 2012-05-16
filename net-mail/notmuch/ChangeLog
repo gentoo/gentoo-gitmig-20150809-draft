@@ -1,6 +1,34 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.52 2012/05/03 04:18:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.53 2012/05/16 21:40:18 aidecoe Exp $
+
+*notmuch-0.13 (16 May 2012)
+
+  16 May 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +notmuch-0.13.ebuild,
+  metadata.xml:
+  Version bump.
+
+  NEWS
+  ~~~~
+  (Extracted headlines from NEWS file. See it for details.)
+
+  Command-Line Interface
+  - JSON reply format
+  - Tag exclusion (as an option in the config file)
+  - Raw show format changes
+  - Listing configuration items (new "config list" command)
+
+  Emacs Interface
+  - Changes to tagging interface (breaks compatibility with old tagging
+  functions)
+  - Reply improvement using the JSON format
+
+  New add-on tool: notmuch-mutt
+
+  Library changes
+
+  The API changes break binary and source compatibility, so libnotmuch has been
+  bumped to version 3.0.0.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> notmuch-0.10.2-r3.ebuild,
   notmuch-0.11.1-r3.ebuild, notmuch-0.12.ebuild:
