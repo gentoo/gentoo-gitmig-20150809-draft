@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13764 2012/05/16 09:35:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13765 2012/05/16 09:42:04 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,7 +40,6 @@
 #
 # Removal in 30 days.
 dev-python/4suite
-=dev-python/amara-1*
 dev-python/testoob
 
 # Markos Chandras <hwoarang@gentoo.org> (15 May 2012)
