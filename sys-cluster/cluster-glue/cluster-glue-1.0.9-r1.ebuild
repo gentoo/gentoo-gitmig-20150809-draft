@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.9.ebuild,v 1.7 2012/04/20 20:03:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.9-r1.ebuild,v 1.1 2012/05/16 10:37:44 xarthisius Exp $
 
 EAPI=4
 
