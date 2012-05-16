@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.107 2012/05/09 13:09:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.108 2012/05/16 15:07:40 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> audiofile-0.3.3.ebuild:
+  Stable for HPPA (bug #410611).
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> audiofile-0.3.4.ebuild:
   keyword ~amd64-fbsd
