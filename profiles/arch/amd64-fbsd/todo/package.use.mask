@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.229 2012/05/16 09:41:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.230 2012/05/16 12:36:08 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -26,6 +26,7 @@ dev-libs/apr-util ldap
 net-print/cups ldap
 www-servers/apache ldap
 dev-db/postgresql-base ldap
+net-fs/samba ldap
 
 # dev-lang/php:5.3
 dev-libs/ossp-uuid php
