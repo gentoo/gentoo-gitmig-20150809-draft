@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.1 2012/05/16 08:49:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.2 2012/05/16 12:28:49 aballier Exp $
 
 EAPI=4
 inherit eutils flag-o-matic elisp-common toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xdvi/${P}.tar.gz"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="motif neXt Xaw Xaw3d emacs"
+IUSE="motif neXt +Xaw Xaw3d emacs"
 REQUIRED_USE="^^ ( motif neXt Xaw Xaw3d )"
 
 RDEPEND=">=media-libs/t1lib-5.0.2
