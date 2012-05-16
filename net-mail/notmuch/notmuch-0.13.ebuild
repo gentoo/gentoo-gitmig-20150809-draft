@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.13.ebuild,v 1.1 2012/05/16 21:40:18 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.13.ebuild,v 1.2 2012/05/16 22:26:16 aidecoe Exp $
 
 EAPI=4
 
@@ -54,14 +54,6 @@ bindings() {
 	if use $1; then
 		pushd bindings/$1 || die
 		shift
-		$@
-		popd || die
-	fi
-}
-
-nm_mutt() {
-	if use mutt; then
-		pushd contrib/notmuch-mutt || die
 		$@
 		popd || die
 	fi
