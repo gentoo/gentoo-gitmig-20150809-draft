@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/opensonic-0.1.4.ebuild,v 1.1 2012/05/16 18:42:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/opensonic-0.1.4.ebuild,v 1.2 2012/05/16 18:50:11 hasufell Exp $
 
 EAPI=3
 
@@ -11,13 +11,13 @@ MY_P=${MY_PN}-src-${PV}
 
 DESCRIPTION="A free open-source game based on the Sonic the Hedgehog universe"
 HOMEPAGE="http://opensnc.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="mirror" # unsure about legality of graphics
+RESTRICT="fetch" # unsure about legality of graphics
 
 DEPEND="media-libs/allegro:0[X,jpeg,png,vorbis]
 	media-libs/libogg
@@ -27,6 +27,13 @@ DEPEND="media-libs/allegro:0[X,jpeg,png,vorbis]
 	virtual/jpeg"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_nofetch() {
+	einfo "Please download ${SRC_URI} from:"
+	einfo "http://sourceforge.net/projects/opensnc/files/Open%20Sonic/0.1.4/"
+	einfo "and move it to ${DISTDIR}"
+	echo
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cmake.patch
