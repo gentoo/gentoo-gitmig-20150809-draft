@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.59.ebuild,v 1.1 2012/05/12 00:08:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.61.ebuild,v 1.1 2012/05/16 23:38:07 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -268,6 +268,12 @@ pkg_preinst() {
 
 	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12" \
 		&& REPO_LAYOUT_CONF_WARN=true || REPO_LAYOUT_CONF_WARN=false
+
+	if has_version '<sys-apps/portage-2.1.10.61' ; then
+		ewarn "FEATURES=config-protect-if-modified is now enabled by default."
+		ewarn "This causes the CONFIG_PROTECT behavior to be skipped for"
+		ewarn "files that have not been modified since they were installed."
+	fi
 }
 
 pkg_postinst() {
