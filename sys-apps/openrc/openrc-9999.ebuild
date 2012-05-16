@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.100 2012/04/26 14:32:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.101 2012/05/16 20:57:59 williamh Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/init
 	elibc_glibc? ( >=sys-libs/glibc-2.5 )
 	ncurses? ( sys-libs/ncurses )
 	pam? ( sys-auth/pambase )
-	>=sys-apps/baselayout-2.0.0
+	>=sys-apps/baselayout-2.1-r1
 	kernel_linux? (
 		sys-process/psmisc
 	)
@@ -106,7 +106,10 @@ src_install() {
 	gen_usr_ldscript libeinfo.so
 	gen_usr_ldscript librc.so
 
-	keepdir /$(get_libdir)/rc/{init.d,tmp}
+	if ! use kernel_linux; then
+		keepdir /$(get_libdir)/rc/init.d
+	fi
+	keepdir /$(get_libdir)/rc/tmp
 
 	# Backup our default runlevels
 	dodir /usr/share/"${PN}"
@@ -413,6 +416,13 @@ pkg_postinst() {
 		mv "${ROOT}"etc/conf.d/local.start "${ROOT}"etc/local.d/baselayout1.start
 		mv "${ROOT}"etc/conf.d/local.stop "${ROOT}"etc/local.d/baselayout1.stop
 		chmod +x "${ROOT}"etc/local.d/*{start,stop}
+	fi
+
+	if use kernel_linux && [[ "${ROOT}" = "/" ]]; then
+		if ! /$(get_libdir)/rc/sh/migrate-to-run.sh; then
+			ewarn "The dependency data could not be migrated to /run/openrc."
+			ewarn "This means you need to reboot your system."
+		fi
 	fi
 
 	# update the dependency tree after touching all files #224171
