@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.519 2012/04/26 14:30:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.520 2012/05/16 05:55:35 ssuominen Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-2.1-r1 (16 May 2012)
+
+  16 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +baselayout-2.1-r1.ebuild:
+  Create /run in pkg_postinst() and warn user if it's not mounted with tmpfs
+  wrt #361349
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> baselayout-2.1.ebuild:
   keyword ~amd64-fbsd
