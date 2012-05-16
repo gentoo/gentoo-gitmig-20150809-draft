@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.98 2012/05/16 02:35:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.99 2012/05/16 13:41:46 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (19 Apr 2012)
+# Masked until dev-lang/python:3 goes stable again
+sys-apps/portage python3
 
 # Jeroen Roovers <jer@gentoo.org> (19 Apr 2012)
 # Untested dependency on net-misc/connman
