@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.2 2012/05/08 23:00:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.3 2012/05/16 22:50:21 dilfridge Exp $
 
 EAPI=4
 
@@ -11,10 +11,7 @@ MY_PV=${PV/_}
 
 if [[ "${PV}" != "9999" ]]; then
 	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python versionator java-pkg-opt-2 systemd
-	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2
-		http://dev.gentoo.org/~dilfridge/distfiles/${P}-ipp-r8950.patch.bz2
-		http://dev.gentoo.org/~dilfridge/distfiles/${P}-avahi.patch.bz2
-	"
+	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
 else
 	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python versionator java-pkg-opt-2 systemd subversion
@@ -27,8 +24,8 @@ HOMEPAGE="http://www.cups.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="acl avahi dbus debug +filters gnutls java kerberos ldap pam
-	python slp +ssl static-libs systemd +threads usb X xinetd"
+IUSE="acl avahi dbus debug +filters gnutls java kerberos pam
+	python +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
 LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
 for X in ${LANGS} ; do
@@ -47,9 +44,7 @@ RDEPEND="
 	dbus? ( sys-apps/dbus )
 	java? ( >=virtual/jre-1.6 )
 	kerberos? ( virtual/krb5 )
-	ldap? ( net-nds/openldap[ssl?,gnutls?] )
 	pam? ( virtual/pam )
-	slp? ( >=net-libs/openslp-1.0.4 )
 	ssl? (
 		gnutls? (
 			dev-libs/libgcrypt
@@ -61,6 +56,7 @@ RDEPEND="
 	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
+	zeroconf? ( net-misc/mDNSResponder )
 "
 
 DEPEND="${RDEPEND}
@@ -179,19 +175,17 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable debug debug-guards) \
 		$(use_enable kerberos gssapi) \
-		$(use_enable ldap) \
 		$(use_enable pam) \
-		$(use_enable slp) \
 		$(use_enable static-libs static) \
 		$(use_enable threads) \
 		$(use_enable usb libusb) \
+		$(use_enable zeroconf dnssd) \
 		$(use_with java) \
 		--without-perl \
 		--without-php \
 		$(use_with python) \
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
-		--disable-dnssd \
 		$(use_with systemd systemdsystemunitdir "$(systemd_get_unitdir)") \
 		${myconf}
 
