@@ -1,6 +1,10 @@
 # ChangeLog for media-video/videotrans
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/ChangeLog,v 1.9 2011/11/25 15:59:19 sbriesen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/ChangeLog,v 1.10 2012/05/16 09:40:38 scarabeus Exp $
+
+  16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/videotrans-1.6.0-forced-as-needed.patch, -videotrans-1.6.0.ebuild:
+  Remove old.
 
 *videotrans-1.6.1 (25 Nov 2011)
 
