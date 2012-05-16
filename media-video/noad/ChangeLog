@@ -1,6 +1,21 @@
 # ChangeLog for media-video/noad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.50 2011/12/28 21:38:26 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.51 2012/05/16 09:33:49 scarabeus Exp $
+
+  16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0.6.0-r7/confd_vdraddon.noad, -noad-0.6.0-r9.ebuild,
+  -files/0.6.0-r7/noad-reccmd, -files/patches-0.6.0/as-needed.diff,
+  -files/0.6.0-r7/reccmds.noad.conf, -files/patches-0.6.0/cflags.diff,
+  -files/0.7.1/confd_vdraddon.noad,
+  -files/patches-0.6.0/delete-while-scanning.diff,
+  -files/patches-0.6.0/directoryfix.diff, -files/patches-0.6.0/fix-osd.patch,
+  -files/patches-0.6.0/framesize.diff, -files/patches-0.6.0/hangcheck.diff,
+  -files/patches-0.6.0/lavc.patch,
+  -files/patches-0.6.0/new-ffmpeg-extern-c.diff, -files/patches-0.6.0/series,
+  -noad-0.7.2-r2.ebuild, noad-0.7.3.ebuild, -files/0.6.0-r7/record-50-noad.sh,
+  -files/0.7.1/noad-reccmd, -files/0.7.1/reccmds.noad.conf,
+  -files/0.7.1/record-50-noad.sh:
+  Stabilise latest on amd64 and x86. Drop older.
 
 *noad-0.7.3 (28 Dec 2011)
 
