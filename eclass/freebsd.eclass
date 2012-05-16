@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.19 2012/05/04 13:31:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.20 2012/05/16 15:44:43 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -99,7 +99,7 @@ freebsd_src_compile() {
 	use profile && filter-flags "-fomit-frame-pointer"
 	use profile || mymakeopts="${mymakeopts} NO_PROFILE= "
 
-	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS="
+	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= NO_FSCHG="
 
 	# Many things breaks when using ricer flags here
 	[[ -z "${NOFLAGSTRIP}" ]] && strip-flags
@@ -113,7 +113,7 @@ freebsd_src_compile() {
 freebsd_src_install() {
 	use profile || mymakeopts="${mymakeopts} NO_PROFILE= "
 
-	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS="
+	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= NO_FSCHG="
 
 	[[ -z "${BMAKE}" ]] && BMAKE="$(freebsd_get_bmake)"
 
