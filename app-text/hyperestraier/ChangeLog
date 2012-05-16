@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hyperestraier
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.57 2010/05/02 11:09:15 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.58 2012/05/16 09:07:45 naota Exp $
+
+  16 May 2012; Naohiro Aota <naota@gentoo.org> hyperestraier-1.4.10-r1.ebuild,
+  hyperestraier-1.4.13.ebuild:
+  Update HOMEPAGE and SRC_URI. #412513
 
   02 May 2010; Alexis Ballier <aballier@gentoo.org>
   hyperestraier-1.4.13.ebuild:

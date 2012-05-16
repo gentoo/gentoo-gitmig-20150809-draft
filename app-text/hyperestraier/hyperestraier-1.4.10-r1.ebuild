@@ -1,14 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.10-r1.ebuild,v 1.5 2007/11/17 20:53:28 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.10-r1.ebuild,v 1.6 2012/05/16 09:07:45 naota Exp $
 
 inherit java-pkg-opt-2
 
 IUSE="debug java mecab ruby"
 
 DESCRIPTION="a full-text search system for communities"
-HOMEPAGE="http://hyperestraier.sf.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+HOMEPAGE="http://fallabs.com/hyperestraier/"
+SRC_URI="http://fallabs.com/hyperestraier/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="amd64 ppc sparc x86"
