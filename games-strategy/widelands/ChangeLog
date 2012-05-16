@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.41 2012/05/15 11:15:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.42 2012/05/16 14:50:47 hasufell Exp $
+
+  16 May 2012; Julian Ospald <hasufell@gentoo.org> widelands-0.16.ebuild,
+  +files/widelands-0.16-cxxflags.patch, widelands-0.17.ebuild,
+  +files/widelands-0.17-cxxflags.patch:
+  respect CXXFLAGS wrt #416261
 
 *widelands-0.17 (15 May 2012)
 
