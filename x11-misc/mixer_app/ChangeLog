@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/mixer_app
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.19 2007/07/22 03:59:10 dberkholz Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/ChangeLog,v 1.20 2012/05/16 03:36:12 ssuominen Exp $
+
+  16 May 2012; Samuli Suominen <ssuominen@gentoo.org> mixer_app-1.8.0.ebuild,
+  +files/mixer_app-1.8.0-build.patch:
+  Respect CXX, CXXFLAGS and LDFLAGS wrt -build.patch. Mark stable for amd64
+  (following others). Fix HOMEPAGE wrt #416187 by "df".
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   mixer_app-1.8.0.ebuild:
