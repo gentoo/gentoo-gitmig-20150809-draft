@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.5 2012/05/11 02:53:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.6 2012/05/16 02:03:45 aballier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd
@@ -25,7 +25,7 @@
 
 # Unmask vmware drivers
 #-video_cards_vmware
-#-input_devices_vmmouse
+-input_devices_vmmouse
 
 # Diablo Latte and Caffe (JRE and JDK) works here
 -java
