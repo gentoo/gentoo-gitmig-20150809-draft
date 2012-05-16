@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.6 2012/05/16 02:03:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.7 2012/05/16 15:24:11 aballier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd
@@ -21,7 +21,7 @@
 # nvidia drivers works on x86
 -xvmc
 -nvidia
-#-video_cards_nvidia
+-video_cards_nvidia
 
 # Unmask vmware drivers
 #-video_cards_vmware
