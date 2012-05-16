@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.390 2012/05/08 14:39:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.391 2012/05/16 11:52:19 chithanh Exp $
+
+  16 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  asterisk-1.8.12.0.ebuild, asterisk-10.4.0.ebuild:
+  Apply correction to REQUIRED_USE, bug #416245.
 
   08 May 2012; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.12.0.ebuild,
   asterisk-10.4.0.ebuild:
