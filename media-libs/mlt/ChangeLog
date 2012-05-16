@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.89 2012/05/05 08:02:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.90 2012/05/16 08:21:59 scarabeus Exp $
+
+  16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/mlt-0.5.4-asneeded.patch, -files/mlt-0.7.6-ffmpeg.patch,
+  -mlt-0.5.10.ebuild, -mlt-0.7.6-r1.ebuild, mlt-0.7.8.ebuild:
+  Stabilise latest on amd64 and x86. Drop older overshadowed versions.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> mlt-0.5.10.ebuild,
   mlt-0.7.6-r1.ebuild, mlt-0.7.8.ebuild:
