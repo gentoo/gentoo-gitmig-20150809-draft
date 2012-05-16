@@ -1,0 +1,33 @@
+--- a/tools/Makefile.am
++++ b/tools/Makefile.am
+@@ -49,7 +49,7 @@
+ 
+ EXTRA_DIST		= $(bin_SCRIPTS) corosync-xmlproc.sh corosync-notifyd.sysconfig.example
+ 
+-COMMON_OPTS		= -L../lib -L../common_lib -Wl,-rpath,../common_lib
++COMMON_OPTS		= -L../lib -L../common_lib
+ 
+ corosync_cmapctl_LDFLAGS= $(COMMON_OPTS)
+ corosync_cmapctl_LDADD	= -lcorosync_common -lcmap $(LIBQB_LIBS)
+@@ -57,10 +57,10 @@
+ corosync_fplay_LDADD	= $(LIBQB_LIBS)
+ 
+ corosync_cfgtool_LDFLAGS= $(COMMON_OPTS)
+-corosync_cfgtool_LDADD	= -lcfg $(LIBQB_LIBS)
++corosync_cfgtool_LDADD	= -lcfg -lcorosync_common $(LIBQB_LIBS)
+ 
+ corosync_cpgtool_LDFLAGS= $(COMMON_OPTS)
+-corosync_cpgtool_LDADD	= -lcfg -lcpg $(LIBQB_LIBS)
++corosync_cpgtool_LDADD	= -lcfg -lcpg -lcorosync_common $(LIBQB_LIBS)
+ 
+ corosync_quorumtool_LDFLAGS = $(COMMON_OPTS)
+ corosync_quorumtool_LDADD   = -lcmap -lcfg -lquorum -lcorosync_common \
+@@ -68,7 +68,7 @@
+ 
+ corosync_notifyd_CPPFLAGS = $(DBUS_CFLAGS)
+ corosync_notifyd_LDFLAGS  = $(COMMON_OPTS)
+-corosync_notifyd_LDADD    = -lcfg -lcmap \
++corosync_notifyd_LDADD    = -lcfg -lcmap -lcorosync_common \
+ 			    $(LIBQB_LIBS) $(DBUS_LIBS) $(SNMPLIBS) \
+ 			    -lquorum
+ 
