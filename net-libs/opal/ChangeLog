@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.77 2012/05/05 02:54:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.78 2012/05/16 12:25:56 scarabeus Exp $
+
+  16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -opal-3.6.8-r1.ebuild,
+  -opal-3.6.8.ebuild, opal-3.6.8-r2.ebuild:
+  Reduce versions using media-video/ffmpeg. Stable the version with
+  virutal/ffmpeg on x86.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> opal-3.6.8.ebuild,
   opal-3.6.8-r1.ebuild, opal-3.6.8-r2.ebuild:
