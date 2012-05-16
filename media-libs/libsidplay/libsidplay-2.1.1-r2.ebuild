@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1-r2.ebuild,v 1.8 2012/05/16 02:16:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1-r2.ebuild,v 1.9 2012/05/16 02:30:15 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool
@@ -48,5 +48,6 @@ src_install() {
 
 	doenvd "${FILESDIR}"/65resid
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	# Libs: -line of libsidutils.pc and libsidplay2.pc reference .la files!
+	# find "${ED}" -name '*.la' -exec rm -f {} +
 }
