@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-dummy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.71 2012/01/01 14:28:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.72 2012/05/16 00:46:47 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-dummy-0.3.5.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
 *xf86-video-dummy-0.3.5 (01 Jan 2012)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-s3virge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3virge/ChangeLog,v 1.40 2012/05/13 20:11:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3virge/ChangeLog,v 1.41 2012/05/16 00:57:32 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-s3virge-1.10.5.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
 *xf86-video-s3virge-1.10.5 (13 May 2012)
 

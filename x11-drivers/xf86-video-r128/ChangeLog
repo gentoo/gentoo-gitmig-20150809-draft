@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-r128
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.21 2012/03/24 16:28:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.22 2012/05/16 00:55:41 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-r128-6.8.2.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
 *xf86-video-r128-6.8.2 (24 Mar 2012)
 

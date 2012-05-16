@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-cirrus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-cirrus/ChangeLog,v 1.40 2012/03/24 16:26:17 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-cirrus/ChangeLog,v 1.41 2012/05/16 00:46:39 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-cirrus-1.4.0.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
 *xf86-video-cirrus-1.4.0 (24 Mar 2012)
 

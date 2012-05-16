@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.168 2012/05/03 20:43:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.169 2012/05/16 00:56:22 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-ati-6.14.4-r1.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
   03 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xf86-video-ati-6.14.4-r1.ebuild:

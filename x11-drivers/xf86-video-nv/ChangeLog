@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-nv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.110 2011/02/14 23:56:23 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.111 2012/05/16 00:54:03 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-nv-2.1.18.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xf86-video-nv-2.1.18.ebuild:

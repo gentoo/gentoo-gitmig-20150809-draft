@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-vmmouse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/ChangeLog,v 1.50 2012/03/09 00:05:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/ChangeLog,v 1.51 2012/05/16 00:41:44 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-input-vmmouse-12.8.0.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
 *xf86-input-vmmouse-12.8.0 (09 Mar 2012)
 

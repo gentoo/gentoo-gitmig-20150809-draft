@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.84 2012/05/01 18:31:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.85 2012/05/16 00:50:57 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-intel-2.19.0.ebuild:
+  keyword ~amd64-fbsd (compile tested only)
 
 *xf86-video-intel-2.19.0 (01 May 2012)
 
