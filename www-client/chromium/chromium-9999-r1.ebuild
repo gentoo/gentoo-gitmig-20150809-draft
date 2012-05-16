@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.111 2012/05/14 12:31:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.112 2012/05/16 15:13:01 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -204,7 +204,6 @@ src_prepare() {
 		\! -path 'third_party/smhasher/*' \
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
-		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/v8-i18n/*' \
@@ -239,6 +238,10 @@ src_configure() {
 	# Never tell the build system to "enable" SSE2, it has a few unexpected
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
+
+	# Disable tcmalloc, it causes problems with e.g. NVIDIA
+	# drivers, bug #413637.
+	myconf+=" -Dlinux_use_tcmalloc=0"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg

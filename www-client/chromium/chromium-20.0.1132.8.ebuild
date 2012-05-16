@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1130.1.ebuild,v 1.1 2012/05/09 13:58:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1132.8.ebuild,v 1.1 2012/05/16 15:13:01 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -109,6 +109,12 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-svnversion-r0.patch"
 
+	# Backport upstream fix for Gentoo bug #415601.
+	epatch "${FILESDIR}/${PN}-unistd-r0.patch"
+
+	# Fix build without tcmalloc. To be upstreamed.
+	epatch "${FILESDIR}/${PN}-tcmalloc-r0.patch"
+
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
@@ -129,7 +135,6 @@ src_prepare() {
 		\! -path 'third_party/json_minify/*' \
 		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
-		\! -path 'third_party/leveldb/*' \
 		\! -path 'third_party/leveldatabase/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
@@ -151,7 +156,6 @@ src_prepare() {
 		\! -path 'third_party/smhasher/*' \
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
-		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/v8-i18n/*' \
@@ -186,6 +190,10 @@ src_configure() {
 	# Never tell the build system to "enable" SSE2, it has a few unexpected
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
+
+	# Disable tcmalloc, it causes problems with e.g. NVIDIA
+	# drivers, bug #413637.
+	myconf+=" -Dlinux_use_tcmalloc=0"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
