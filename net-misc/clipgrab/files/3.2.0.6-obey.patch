@@ -1,7 +1,7 @@
-diff -urN clipgrab-3.1.0.1.old//clipgrab.cpp clipgrab-3.1.0.1//clipgrab.cpp
---- clipgrab-3.1.0.1.old//clipgrab.cpp	2011-04-01 22:19:23.000000000 +0200
-+++ clipgrab-3.1.0.1//clipgrab.cpp	2011-04-01 22:20:32.000000000 +0200
-@@ -70,67 +70,6 @@
+diff -urN clipgrab-3.2.0.6.old//clipgrab.cpp clipgrab-3.2.0.6/clipgrab.cpp
+--- clipgrab-3.2.0.6.old//clipgrab.cpp	2012-05-16 13:11:40.592973547 +0200
++++ clipgrab-3.2.0.6/clipgrab.cpp	2012-05-16 13:13:37.808970927 +0200
+@@ -116,68 +116,7 @@
          }
      }
  
@@ -30,7 +30,8 @@ diff -urN clipgrab-3.1.0.1.old//clipgrab.cpp clipgrab-3.1.0.1//clipgrab.cpp
 -    obeyatorManager->get(obeyatorRequest);;
 -    connect(obeyatorManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(obey(QNetworkReply*)));
 -
--    connect(QApplication::clipboard(), SIGNAL(dataChanged()), this, SLOT(clipboardChanged()));
+     connect(QApplication::clipboard(), SIGNAL(dataChanged()), this, SLOT(clipboardChanged()));
+-
 -}
 -
 -void ClipGrab::obey(QNetworkReply* reply)
@@ -69,10 +70,10 @@ diff -urN clipgrab-3.1.0.1.old//clipgrab.cpp clipgrab-3.1.0.1//clipgrab.cpp
  }
  
  void ClipGrab::determinePortal(QString url)
-diff -urN clipgrab-3.1.0.1.old//clipgrab.h clipgrab-3.1.0.1//clipgrab.h
---- clipgrab-3.1.0.1.old//clipgrab.h	2011-04-01 22:19:23.000000000 +0200
-+++ clipgrab-3.1.0.1//clipgrab.h	2011-04-01 22:19:41.000000000 +0200
-@@ -82,7 +82,6 @@
+diff -urN clipgrab-3.2.0.6.old//clipgrab.h clipgrab-3.2.0.6/clipgrab.h
+--- clipgrab-3.2.0.6.old//clipgrab.h	2012-05-16 13:11:40.593973547 +0200
++++ clipgrab-3.2.0.6/clipgrab.h	2012-05-16 13:11:55.053973226 +0200
+@@ -92,7 +92,6 @@
          void errorHandler(QString);
          void errorHandler(QString, video*);
          void addDownload(video* clip);
