@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1-r2.ebuild,v 1.7 2009/08/31 17:40:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1-r2.ebuild,v 1.8 2012/05/16 02:16:03 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils libtool
 
 MY_P=sidplay-libs-${PV}
@@ -14,40 +14,39 @@ SRC_URI="mirror://sourceforge/sidplay2/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE=""
-
-RDEPEND=""
-DEPEND=""
+IUSE="static-libs"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/libsidplay2-gcc41.patch \
+	epatch \
+		"${FILESDIR}"/${PN}2-gcc41.patch \
 		"${FILESDIR}"/${P}-fbsd.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
+
 	elibtoolize
 }
 
 src_configure() {
 	econf \
 		--enable-shared \
+		$(use_enable static-libs static) \
 		--with-pic
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
-	cd "${S}"/libsidplay
 	docinto libsidplay
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc libsidplay/{AUTHORS,ChangeLog,README,TODO}
 
-	cd "${S}"/libsidutils
 	docinto libsidutils
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc libsidutils/{AUTHORS,ChangeLog,README,TODO}
 
-	cd "${S}"/resid
 	docinto resid
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+	dodoc resid/{AUTHORS,ChangeLog,NEWS,README,THANKS,TODO}
 
 	doenvd "${FILESDIR}"/65resid
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
