@@ -1,6 +1,13 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.83 2012/05/09 15:07:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.84 2012/05/16 08:49:22 naota Exp $
+
+*xdvik-22.85-r1 (16 May 2012)
+
+  16 May 2012; Naohiro Aota <naota@gentoo.org> +xdvik-22.85-r1.ebuild,
+  metadata.xml:
+  Add new USE flag Xaw. Set REQUIRED_USE to select one of possible toolkit.
+  #372473
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> xdvik-22.85.ebuild:
   keyword ~amd64-fbsd
