@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.53 2012/05/15 13:35:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.54 2012/05/16 16:01:54 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> fribidi-0.19.2-r2.ebuild:
+  Stable for HPPA (bug #416079).
 
 *fribidi-0.19.2-r2 (15 May 2012)
 
