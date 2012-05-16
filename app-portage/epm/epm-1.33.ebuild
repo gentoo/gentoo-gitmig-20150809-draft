@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/epm-1.33.ebuild,v 1.6 2012/05/11 21:33:33 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/epm-1.33.ebuild,v 1.7 2012/05/16 15:46:54 fuzzyray Exp $
 
 DESCRIPTION="rpm workalike for Gentoo Linux"
-HOMEPAGE="http://www.gentoo.org/~agriffis/epm/"
-SRC_URI="http://www.gentoo.org/~agriffis/epm/${P}.tar.gz"
+HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
+SRC_URI="http://www.gentoo.org/~fuzzyray/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
