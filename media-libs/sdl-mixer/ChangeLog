@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.98 2012/04/18 17:11:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.99 2012/05/16 03:39:40 mr_bones_ Exp $
+
+  16 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-mixer-1.2.12-r1.ebuild:
+  set RDEPEND (bug #416197)
 
 *sdl-mixer-1.2.12-r1 (18 Apr 2012)
 

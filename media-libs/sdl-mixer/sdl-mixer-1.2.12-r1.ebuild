@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12-r1.ebuild,v 1.1 2012/04/18 17:11:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.12-r1.ebuild,v 1.2 2012/05/16 03:39:40 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils
@@ -41,6 +41,7 @@ DEPEND=">=media-libs/libsdl-1.2.10
 		mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	)
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 media-libs/libogg )"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
