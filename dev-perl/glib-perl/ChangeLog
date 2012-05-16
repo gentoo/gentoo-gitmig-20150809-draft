@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.133 2012/05/05 19:40:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.134 2012/05/16 13:36:34 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org> glib-perl-1.251.0.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Brent Baude <ranger@gentoo.org> glib-perl-1.251.0.ebuild:
   Marking glib-perl-1.251.0 ppc for bug 412989
