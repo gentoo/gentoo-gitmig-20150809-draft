@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.225 2012/05/16 00:54:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.226 2012/05/16 00:57:20 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -165,18 +165,6 @@ media-libs/mesa video_cards_radeon
 
 # x11-drivers/nvidia-drivers
 x11-base/xorg-drivers video_cards_nvidia
-
-# x11-drivers/xf86-video-r128
-x11-base/xorg-drivers video_cards_r128
-
-# x11-drivers/xf86-video-ati
-x11-base/xorg-drivers video_cards_radeon
-
-# x11-drivers/xf86-video-s3
-x11-base/xorg-drivers video_cards_s3
-
-# x11-drivers/xf86-video-s3virge
-x11-base/xorg-drivers video_cards_s3virge
 
 # x11-drivers/xf86-video-savage
 x11-base/xorg-drivers video_cards_savage
