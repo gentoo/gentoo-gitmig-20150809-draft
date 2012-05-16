@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4.ebuild,v 1.2 2012/05/03 20:20:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4.ebuild,v 1.3 2012/05/16 00:48:36 ssuominen Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.7"
-inherit python
+inherit eutils python
 
 DESCRIPTION="Support library to communicate with Apple iPhone/iPod Touch devices"
 HOMEPAGE="http://www.libimobiledevice.org/"
@@ -25,7 +25,7 @@ RDEPEND=">=app-pda/libplist-1.8-r1[python?]
 	!gnutls? ( dev-libs/openssl:0 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	python? ( >=dev-python/cython-0.13 )"
+	python? ( >=dev-python/cython-0.14.1 )"
 
 DOCS="AUTHORS NEWS README"
 
@@ -37,6 +37,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-openssl.patch
+
 	>py-compile
 }
 
@@ -44,6 +46,13 @@ src_configure() {
 	local myconf='--disable-static'
 	use python || myconf+=' --without-cython'
 	use gnutls && myconf+=' --disable-openssl'
+
+	if has_version '~dev-python/cython-0.16'; then
+		myconf+=' --without-cython'
+		ewarn "Disabling Cython support because 0.16 is not supported yet."
+		ewarn "See, http://bugs.gentoo.org/414063"
+	fi
+
 	econf ${myconf}
 }
 

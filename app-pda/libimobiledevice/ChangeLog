@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/libimobiledevice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.28 2012/05/03 20:20:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.29 2012/05/16 00:48:36 ssuominen Exp $
+
+  16 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libimobiledevice-1.1.4.ebuild, +files/libimobiledevice-1.1.4-openssl.patch:
+  Upstream patch for "fix openssl initialization and handle error to avoid
+  crash". Since Cython 0.16 is not supported yet, avoid bailing out when it's
+  installed wrt #414063.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> libimobiledevice-1.1.1.ebuild,
   libimobiledevice-1.1.4.ebuild:
