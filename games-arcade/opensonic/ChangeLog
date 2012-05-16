@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/opensonic
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/ChangeLog,v 1.1 2012/05/16 18:42:50 hasufell Exp $
+
+*opensonic-0.1.4 (16 May 2012)
+
+  16 May 2012; Julian Ospald <hasufell@gentoo.org> +opensonic-0.1.4.ebuild,
+  +files/opensonic-0.1.4-cmake.patch, +metadata.xml:
+  initial commit wrt #413907
+
