@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.207 2012/04/28 01:13:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.208 2012/05/16 05:08:40 vapier Exp $
+
+*dhcp-4.2.3_p2 (16 May 2012)
+
+  16 May 2012; Mike Frysinger <vapier@gentoo.org> +dhcp-4.2.3_p2.ebuild,
+  +files/dhcrelay.init3, +files/dhcrelay6.conf:
+  Version bump, and add dhcrelay6 init.d support #415957 by Spooky Ghost.
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org> dhcp-4.2.3_p1.ebuild:
   keyword ~amd64-fbsd
