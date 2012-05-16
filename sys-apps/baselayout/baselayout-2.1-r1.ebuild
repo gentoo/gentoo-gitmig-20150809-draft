@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1-r1.ebuild,v 1.1 2012/05/16 05:55:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1-r1.ebuild,v 1.2 2012/05/16 06:00:44 ssuominen Exp $
 
 inherit eutils multilib
 
@@ -226,7 +226,7 @@ pkg_postinst() {
 	if use kernel_linux; then
 		mkdir -p "${ROOT}"/run
 
-		if ! `grep -qs "^tmpfs.*/run " "${ROOT}"/proc/mounts`; then
+		if ! grep -qs "^tmpfs.*/run " "${ROOT}"/proc/mounts ; then
 			echo
 			ewarn "You should reboot the system now to get /run mounted with tmpfs."
 		fi
