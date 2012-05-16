@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/mixer_app-1.8.0.ebuild,v 1.13 2012/05/16 03:36:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mixer_app/mixer_app-1.8.0.ebuild,v 1.14 2012/05/16 03:48:37 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -20,6 +20,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
+	virtual/os-headers
 	x11-proto/xextproto"
 
 S=${WORKDIR}/${MY_P}
