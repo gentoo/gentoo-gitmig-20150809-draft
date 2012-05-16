@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nauty/nauty-2.4.2.ebuild,v 1.3 2010/12/18 12:10:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nauty/nauty-2.4.2.ebuild,v 1.4 2012/05/16 12:47:23 tomka Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://cs.anu.edu.au/~bdm/${PN}/${PN}${MY_PV}.tar.gz"
 LICENSE="nauty"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE=""
+IUSE="doc"
 
 S="${WORKDIR}/${PN}${MY_PV}"
 
@@ -34,4 +34,8 @@ src_install () {
 		gentourng labelg listg multig newedgeg NRswitchg pickg \
 		planarg shortg showg || die "install failed"
 	dodoc README formats.txt
+	if use doc; then
+		einfo "The pdf manual is to be found in /usr/share/doc/${PF}."
+		dodoc nug.pdf
+	fi
 }
