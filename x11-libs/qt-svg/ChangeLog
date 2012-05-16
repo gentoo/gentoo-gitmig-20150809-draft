@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-svg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.107 2012/05/14 12:56:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.108 2012/05/16 15:53:50 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> qt-svg-4.8.1.ebuild:
+  Stable for HPPA (bug #414241).
 
   14 May 2012; Johannes Huber <johu@gentoo.org> -qt-svg-4.7.2.ebuild:
   Drop Qt-4.7.2

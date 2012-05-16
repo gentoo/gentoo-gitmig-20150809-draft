@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.105 2012/05/14 12:59:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.106 2012/05/16 15:54:42 jer Exp $
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> qt-test-4.8.1.ebuild:
+  Stable for HPPA (bug #414241).
 
   14 May 2012; Johannes Huber <johu@gentoo.org> -qt-test-4.7.2.ebuild:
   Drop Qt-4.7.2
