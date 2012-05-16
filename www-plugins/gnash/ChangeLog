@@ -1,6 +1,28 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.85 2012/05/03 06:08:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.86 2012/05/16 11:35:05 scarabeus Exp $
+
+  16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/gnash-0.8.3-boost-dynamic-link.patch, -files/gnash-0.8.5-klash.patch,
+  -files/gnash-0.8.7-amf-include.patch, -files/gnash-0.8.7-moc-qt4.patch,
+  -files/gnash-0.8.8-documentation-paths.patch,
+  -files/gnash-0.8.8-external-dejagnu.patch, -files/gnash-0.8.8-klash.patch,
+  -files/gnash-0.8.8-secure-tempfile-creation.patch,
+  -files/gnash-0.8.9-cve-2011-4328.patch,
+  -files/gnash-0.8.9-cygnal-sshclient.patch,
+  -files/gnash-0.8.9-documentation-paths.patch,
+  -files/gnash-0.8.9-ffmpeg-detection.patch,
+  -files/gnash-0.8.9-find-openvg.patch,
+  -files/gnash-0.8.9-libavcodec-version.patch,
+  -files/gnash-0.8.9-look-harder-for-version_h.patch,
+  -files/gnash-0.8.9-no-deprecated-avcodec-audio-resample.patch,
+  -files/gnash-0.8.9-no-deprecated-avcodec-decode-audio.patch,
+  -files/gnash-0.8.9-no-deprecated-avcodec-decode-video.patch,
+  -files/gnash-0.8.9-no-deprecated-avcodec-parser.patch,
+  -files/gnash-0.8.9-no-deprecated-avformat-metadata.patch,
+  -gnash-0.8.10-r1.ebuild, -gnash-0.8.8.ebuild, -gnash-0.8.9-r2.ebuild,
+  -gnash-0.8.9.ebuild, gnash-0.8.10-r2.ebuild:
+  Stable on ppc wrt bug#408209. Remove old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnash-0.8.8.ebuild,
   gnash-0.8.9.ebuild, gnash-0.8.9-r2.ebuild, gnash-0.8.10-r1.ebuild,
