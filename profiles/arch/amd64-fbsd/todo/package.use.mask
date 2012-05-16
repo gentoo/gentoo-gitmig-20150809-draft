@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.215 2012/05/16 00:11:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.216 2012/05/16 00:13:22 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -107,6 +107,7 @@ media-libs/libcanberra pulseaudio
 
 # >=net-fs/samba-3
 gnome-base/gnome-vfs samba
+net-libs/libsoup samba
 
 # >=x11-libs/libva-0.32
 media-video/ffmpeg vaapi
