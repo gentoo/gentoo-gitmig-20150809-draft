@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-cddl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.22 2012/05/12 14:59:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.23 2012/05/16 16:18:19 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-cddl-9.0.ebuild:
+  put libavl in / too as it is required by libzpool.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-cddl-9.0.ebuild:
   fix installation, bug #414879 and simplify ebuild
