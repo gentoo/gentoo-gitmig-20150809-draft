@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.32 2012/05/15 14:42:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.33 2012/05/16 13:04:45 scarabeus Exp $
+
+  16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -ffmpeg-0.6-r1.ebuild,
+  -ffmpeg-0.6.90.ebuild, -ffmpeg-0.9.ebuild, ffmpeg-0.10.2-r1.ebuild:
+  As ffmpeg is stable drop all old virtuals and match keywords.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.2-r1.ebuild:
   keyword ~amd64-fbsd
