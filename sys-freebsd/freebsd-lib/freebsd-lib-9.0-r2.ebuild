@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.12 2012/05/17 19:04:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.13 2012/05/17 19:21:37 aballier Exp $
 
 EAPI=2
 
@@ -241,7 +241,7 @@ src_compile() {
 	if [ "${CTARGET}" != "${CHOST}" ]; then
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX RANLIB
-		mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= NLS="
+		mymakeopts="${mymakeopts} NLS="
 
 		bootstrap_csu
 
@@ -249,17 +249,10 @@ src_compile() {
 
 		bootstrap_libssp_nonshared
 
-		export RAW_LDFLAGS=$(raw-ldflags)
-		cd "${S}/libc"
-		$(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
-		cd "${S}/msun"
 		append-ldflags "-L${WORKDIR}/lib/libc"
 		export RAW_LDFLAGS=$(raw-ldflags)
-		LDADD="-lssp_nonshared" $(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
-		for i in gnu/lib/libssp lib/libthr lib/libutil ; do
-			cd "${WORKDIR}/${i}" || die "missing ${i}."
-			$(freebsd_get_bmake) ${mymakeopts} || die "make ${i} failed"
-		done
+
+		SUBDIRS="lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
 	else
 		# Forces to use the local copy of headers as they might be outdated in
 		# the system
@@ -267,15 +260,16 @@ src_compile() {
 
 		bootstrap_libssp_nonshared
 
-		einfo "Compiling libc."
-		cd "${S}"
 		export RAW_LDFLAGS=$(raw-ldflags)
-		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile
-		cd "${WORKDIR}/gnu/lib/libssp/" || die "missing libssp."
-		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile
-		cd "${WORKDIR}/gnu/lib/libregex" || die
-		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile
+
+		SUBDIRS="lib gnu/lib/libssp gnu/lib/libregex"
 	fi
+
+	# Everything is now setup, build it!
+	for i in ${SUBDIRS} ; do
+		cd "${WORKDIR}/${i}/" || die "missing ${i}."
+		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile || die "make ${i} failed"
+	done
 }
 
 src_install() {
