@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.554 2012/05/17 13:58:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.555 2012/05/17 20:39:11 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.10.3-r1.ebuild,
+  ffmpeg-9999.ebuild:
+  revert previous commit that came as a surprise, standalone postproc is not
+  worth it yet, at least not without a release and a stable candidate
 
 *ffmpeg-0.10.3-r1 (17 May 2012)
 
