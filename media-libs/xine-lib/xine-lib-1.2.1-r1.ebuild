@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.1-r1.ebuild,v 1.6 2012/05/05 08:02:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.1-r1.ebuild,v 1.7 2012/05/17 20:31:31 ssuominen Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999* ]]; then
 	EHG_REPO_URI="http://hg.debian.org/hg/xine-lib/xine-lib-1.2"
 	_live_inherits="autotools mercurial"
 else
-	KEYWORDS="amd64 hppa ~ppc ~ppc64 x86 ~x86-fbsd"
+	KEYWORDS="amd64 hppa ppc ppc64 x86 ~x86-fbsd"
 	SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 fi
 
