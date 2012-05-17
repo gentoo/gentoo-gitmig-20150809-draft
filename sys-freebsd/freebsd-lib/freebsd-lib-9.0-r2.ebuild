@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.5 2012/05/17 14:33:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.6 2012/05/17 16:25:29 aballier Exp $
 
 EAPI=2
 
@@ -249,10 +249,10 @@ src_compile() {
 		append-ldflags "-L${WORKDIR}/lib/libc"
 		export RAW_LDFLAGS=$(raw-ldflags)
 		LDADD="-lssp_nonshared" $(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
-		cd "${WORKDIR}/gnu/lib/libssp/" || die "missing libssp."
-		$(freebsd_get_bmake) ${mymakeopts} || die "make libssp failed"
-		cd "${WORKDIR}/lib/libthr/" || die "missing libthr"
-		$(freebsd_get_bmake) ${mymakeopts} || die "make libthr failed"
+		for i in gnu/lib/libssp lib/libthr lib/libutil ; do
+			cd "${WORKDIR}/${i}" || die "missing ${i}."
+			$(freebsd_get_bmake) ${mymakeopts} || die "make ${i} failed"
+		done
 	else
 		# Forces to use the local copy of headers as they might be outdated in
 		# the system
@@ -287,43 +287,27 @@ src_install() {
 
 	if [ "${CTARGET}" != "${CHOST}" ]; then
 		local csudir
-		if [ -d "${S}/csu/$(tc-arch-kernel ${CTARGET})-elf" ]; then
-			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})-elf"
+		if [ -d "${WORKDIR}/lib/csu/$(tc-arch-kernel ${CTARGET})-elf" ]; then
+			csudir="lib/csu/$(tc-arch-kernel ${CTARGET})-elf"
 		else
-			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})"
+			csudir="lib/csu/$(tc-arch-kernel ${CTARGET})"
 		fi
-		cd "${csudir}"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install \
-			FILESDIR="/usr/${CTARGET}/usr/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install csu failed"
 
-		cd "${S}/libc"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install libc failed"
-
-		cd "${S}/msun"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			INCLUDEDIR="/usr/${CTARGET}/usr/include" \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install msun failed"
-
-		cd "${WORKDIR}/gnu/lib/libssp/"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			INCLUDEDIR="/usr/${CTARGET}/usr/include" \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install ssp failed"
-
-		cd "${WORKDIR}/lib/libthr/"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			INCLUDEDIR="/usr/${CTARGET}/usr/include" \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install libthr failed"
+		for i in "${csudir}" lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil ; do
+			cd "${WORKDIR}/${i}/" || die "missing ${i}."
+			$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
+				INCLUDEDIR="/usr/${CTARGET}/usr/include" \
+				FILESDIR="/usr/${CTARGET}/usr/lib" \
+				SHLIBDIR="/usr/${CTARGET}/usr/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install ${i} failed"
+		done
 
 		dosym "usr/include" "/usr/${CTARGET}/sys-include"
 	else
 		# Set SHLIBDIR and LIBDIR for multilib
-		cd "${WORKDIR}/gnu/lib/libssp"
-		SHLIBDIR="/usr/${mylibdir}" LIBDIR="/usr/${mylibdir}" mkinstall || die "Install ssp failed."
-		cd "${S}"
-		SHLIBDIR="/usr/${mylibdir}" LIBDIR="/usr/${mylibdir}" mkinstall || die "Install failed"
-		cd "${WORKDIR}/gnu/lib/libregex"
-		SHLIBDIR="/usr/${mylibdir}" LIBDIR="/usr/${mylibdir}" mkinstall || die "Install libregex failed"
+		for i in gnu/lib/libssp lib gnu/lib/libregex ; do
+			cd "${WORKDIR}/${i}/" || die "Missing ${i}."
+			SHLIBDIR="/usr/${mylibdir}" LIBDIR="/usr/${mylibdir}" mkinstall || die "Install ${i} failed."
+		done
 	fi
 
 	# Don't install the rest of the configuration files if crosscompiling
