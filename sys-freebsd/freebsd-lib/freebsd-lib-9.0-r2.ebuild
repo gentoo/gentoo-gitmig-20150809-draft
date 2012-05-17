@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.11 2012/05/17 18:46:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.12 2012/05/17 19:04:25 aballier Exp $
 
 EAPI=2
 
@@ -214,6 +214,13 @@ bootstrap_csu() {
 	append-ldflags "-B ${WORKDIR}/${csudir}"
 }
 
+# Compile libssp_nonshared.a and add it's path to LDFLAGS.
+bootstrap_libssp_nonshared() {
+	cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
+	NOFLAGSTRIP=yes freebsd_src_compile
+	append-ldflags "-L${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
+}
+
 src_compile() {
 	# Does not work with GNU sed
 	# Force BSD's sed on BSD.
@@ -240,10 +247,7 @@ src_compile() {
 
 		append-flags "-isystem /usr/${CTARGET}/usr/include"
 
-		# First compile libssp_nonshared.a and add it's path to LDFLAGS.
-		cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
-		$(freebsd_get_bmake) ${mymakeopts} || die "make libssp failed"
-		append-ldflags "-L${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
+		bootstrap_libssp_nonshared
 
 		export RAW_LDFLAGS=$(raw-ldflags)
 		cd "${S}/libc"
@@ -261,16 +265,13 @@ src_compile() {
 		# the system
 		append-flags "-isystem '${WORKDIR}/include_proper'"
 
-		# First compile libssp_nonshared.a and add it's path to LDFLAGS.
-		einfo "Compiling libssp in \"${WORKDIR}/gnu/lib/libssp/\"."
-		cd "${WORKDIR}/gnu/lib/libssp/" || die "missing libssp."
-		NOFLAGSTRIP=yes freebsd_src_compile
-		# Hack libssp_nonshared.a into libc & others since we don't have
-		# the linker script in place yet.
-		append-ldflags "-L${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
+		bootstrap_libssp_nonshared
+
 		einfo "Compiling libc."
 		cd "${S}"
 		export RAW_LDFLAGS=$(raw-ldflags)
+		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile
+		cd "${WORKDIR}/gnu/lib/libssp/" || die "missing libssp."
 		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile
 		cd "${WORKDIR}/gnu/lib/libregex" || die
 		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile
