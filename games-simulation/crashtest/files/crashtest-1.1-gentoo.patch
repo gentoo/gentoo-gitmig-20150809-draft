@@ -25,7 +25,7 @@ diff -ru crashtest-1.1.orig/src-crashtest/Makefile crashtest-1.1/src-crashtest/M
 -  -L/usr/X11R6/lib
 -
  OBJS=staticworldobject.o crashtest.o dynamicobject.o cartobject.o
-+CXXFLAGS+=-I `fltk-config --includedir`
++CXXFLAGS+=-I `fltk-config --includedir` `ode-config --cflags`
  
 -LIBS= $(ODEPREFIX)/lib/libode.a -lplibssgaux -lplibssg -lplibsg -lplibpu -lplibfnt -lplibul -lGLU -lGL `fltk-config --use-gl --use-images --ldflags`
 -
