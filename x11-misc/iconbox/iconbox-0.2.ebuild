@@ -1,32 +1,28 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbox/iconbox-0.2.ebuild,v 1.7 2011/03/02 17:22:22 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbox/iconbox-0.2.ebuild,v 1.8 2012/05/17 14:23:19 ssuominen Exp $
 
-EAPI=2
-MY_P="${P/-/_}"
+EAPI=4
+
+MY_P=${P/-/_}
 
 DESCRIPTION="App for placing icons in a menu which auto-hides"
-HOMEPAGE="http://elrodeo.de/velopment/iconbox/"
-SRC_URI="http://elrodeo.de/velopment/${PN}/files/${MY_P}.tar.gz"
+HOMEPAGE="http://packages.gentoo.org/"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="x11-libs/gtk+:2
+RDEPEND="x11-libs/gtk+:2
 	dev-perl/gtk2-perl"
+DEPEND="${RDEPEND}"
 
-src_compile() {
-	true # no compilation is necessary
-}
+src_compile() { :; }
 
 src_install() {
-# make install is borked due to a crappy makefile... it is simpler to go around
-# it than to fix it... i have notified upstream
-
-	exeinto /usr/bin/
-	doexe iconbox iconboxconf || die
-	dodoc README Changelog Copyright
-	doman *.1 || die
+	dobin iconbox{,conf}
+	dodoc Changelog README
+	doman *.1
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/iconbox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbox/ChangeLog,v 1.7 2011/03/02 17:22:22 signals Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbox/ChangeLog,v 1.8 2012/05/17 14:23:19 ssuominen Exp $
+
+  17 May 2012; Samuli Suominen <ssuominen@gentoo.org> iconbox-0.2.ebuild:
+  Set HOMEPAGE to http://packages.gentoo.org/ because upstream is dead wrt
+  #416285
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org> iconbox-0.2.ebuild:
   Slotted gtk+ depends and EAPI=2 bump to support it.
