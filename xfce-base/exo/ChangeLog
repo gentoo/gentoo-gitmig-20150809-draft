@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.78 2012/05/16 14:42:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.79 2012/05/17 14:32:52 jer Exp $
+
+  17 May 2012; Jeroen Roovers <jer@gentoo.org> exo-0.8.0.ebuild:
+  Stable for HPPA (bug #416233).
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> exo-0.8.0.ebuild:
   keyword ~amd64-fbsd

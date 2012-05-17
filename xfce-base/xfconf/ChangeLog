@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.66 2012/05/16 13:46:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.67 2012/05/17 14:27:08 jer Exp $
+
+  17 May 2012; Jeroen Roovers <jer@gentoo.org> xfconf-4.10.0.ebuild:
+  Stable for HPPA (bug #416233).
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> xfconf-4.10.0.ebuild:
   keyword ~amd64-fbsd
