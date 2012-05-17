@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3.ebuild,v 1.3 2012/05/15 11:32:55 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3.ebuild,v 1.4 2012/05/17 23:00:30 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.4:2.7 3:3.1:3.2"
@@ -48,7 +48,7 @@ CDEPEND="caps? ( sys-libs/libcap )
 	yaml? ( dev-libs/libyaml )
 	zeromq? ( net-libs/zeromq sys-apps/util-linux )"
 DEPEND="${CDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	rrdtool? ( net-analyzer/rrdtool )"
 
