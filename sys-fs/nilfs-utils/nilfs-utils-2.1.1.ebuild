@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.1.ebuild,v 1.1 2012/05/16 15:35:13 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.1.ebuild,v 1.2 2012/05/17 20:43:48 mr_bones_ Exp $
 
 EAPI=3
 
@@ -20,7 +20,6 @@ DEPEND="${DEPEND}
 	sys-kernel/linux-headers"
 
 CONFIG_CHECK="~POSIX_MQUEUE"
-
 
 src_configure() {
 	econf $(use_enable static-libs static) \
