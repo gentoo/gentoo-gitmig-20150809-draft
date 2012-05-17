@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.2.ebuild,v 1.7 2012/05/12 16:40:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.2.ebuild,v 1.8 2012/05/17 21:17:15 ssuominen Exp $
 
 EAPI=4
 
@@ -40,6 +40,7 @@ for i in ${CPU_FEATURES}; do
 done
 
 RDEPEND="
+	!media-libs/libpostproc
 	!media-video/ffmpeg
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
