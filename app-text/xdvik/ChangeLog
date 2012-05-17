@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.85 2012/05/16 12:28:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.86 2012/05/17 14:34:38 ulm Exp $
+
+  17 May 2012; Ulrich Müller <ulm@gentoo.org> -xdvik-22.85.ebuild,
+  xdvik-22.85-r1.ebuild, metadata.xml:
+  Remove REQUIRED_USE and Xaw USE flag again, bug 416381.
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> xdvik-22.85-r1.ebuild:
   enable Xaw by default, like before; required_use are nice but we need a
