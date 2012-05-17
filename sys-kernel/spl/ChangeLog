@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.14 2012/04/21 17:53:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.15 2012/05/17 18:41:28 ryao Exp $
+
+  17 May 2012;  <richard@gentoo.org> metadata.xml:
+  Changed maintainer from floppym to ryao to reflect change in ryao's dev status
 
   21 Apr 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
   Set AUTOTOOLS_AUTORECONF before inherit to generate proper dependencies.
