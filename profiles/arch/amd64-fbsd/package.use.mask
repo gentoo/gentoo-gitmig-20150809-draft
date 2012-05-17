@@ -1,9 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.5 2012/05/16 15:14:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.6 2012/05/17 14:00:43 aballier Exp $
 
 # nvidia-driver uses acpid
 x11-drivers/nvidia-drivers acpi
 
 # Needs emul libs and the package isnt multilib at all for FreeBSD x86_64
 x11-drivers/nvidia-drivers multilib
+
+# Orc optimisations in gst-plugins-{base,a52dec,ffmpeg,good,bad} work fine on amd64
+>=media-libs/gst-plugins-base-0.10.30 -orc
+>=media-plugins/gst-plugins-a52dec-0.10.16 -orc
+>=media-plugins/gst-plugins-ffmpeg-0.10.11 -orc
+>=media-libs/gst-plugins-good-0.10.28 -orc
+>=media-libs/gst-plugins-bad-0.10.21 -orc
+>=media-sound/pulseaudio-1.0 -orc
