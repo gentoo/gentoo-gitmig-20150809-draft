@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.103 2012/05/08 15:43:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.104 2012/05/17 18:00:59 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> kwalletd-4.8.3.ebuild:
+  keyword ~amd64-fbsd
 
   08 May 2012; Johannes Huber <johu@gentoo.org> -kwalletd-4.8.2.ebuild:
   Remove KDE SC 4.8.2
