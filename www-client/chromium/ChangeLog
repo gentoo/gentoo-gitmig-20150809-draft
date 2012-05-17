@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.634 2012/05/17 06:17:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.635 2012/05/17 06:19:56 phajdan.jr Exp $
+
+  17 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-tcmalloc-r1.patch, chromium-19.0.1084.46-r1.ebuild:
+  Add missing patch and stabilize 19.x with fixed bug #413637 on x86.
 
 *chromium-19.0.1084.46-r1 (17 May 2012)
 
