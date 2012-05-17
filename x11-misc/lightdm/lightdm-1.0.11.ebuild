@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.11.ebuild,v 1.3 2012/05/11 21:35:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.11.ebuild,v 1.4 2012/05/17 23:02:44 jdhore Exp $
 
 EAPI=4
 inherit autotools eutils pam virtualx
@@ -31,7 +31,7 @@ RDEPEND="dev-libs/glib:2
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.12
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	gnome-base/gnome-common
 	sys-devel/gettext"
 
