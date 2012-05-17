@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.17 2011/09/04 17:00:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.18 2012/05/17 19:15:19 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,12 +9,12 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils multilib
 
-DOC_P="${PN}-docs-html-2.3.7"
+DOC_P="${PN}-docs-html-${PV}"
 
 DESCRIPTION="Various LDAP-related Python modules"
 HOMEPAGE="http://python-ldap.sourceforge.net/ http://pypi.python.org/pypi/python-ldap"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
-	doc? ( http://www.python-ldap.org/doc/${DOC_P}.tar.gz )"
+	doc? ( http://dev.gentoo.org/~xarthisius/distfiles/${DOC_P}.tar.gz )"
 
 LICENSE="PSF-2"
 SLOT="0"
