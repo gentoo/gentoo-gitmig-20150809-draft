@@ -1,7 +1,7 @@
 http://todo.xmoto.tuxfamily.org/index.php?do=details&task_id=778
 
---- src/helpers/utf8.h.orig	2011-10-12 00:18:14.000000000 +0400
-+++ src/helpers/utf8.h	2012-01-13 11:58:33.000000000 +0400
+--- src/helpers/utf8.h.orig
++++ src/helpers/utf8.h
 @@ -18,8 +18,8 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  =============================================================================*/

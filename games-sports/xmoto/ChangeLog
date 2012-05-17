@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.62 2012/04/22 14:42:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.63 2012/05/17 06:20:02 mr_bones_ Exp $
+
+  17 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/0.5.7-libpng.patch, -xmoto-0.5.4.ebuild, -xmoto-0.5.7.ebuild,
+  files/xmoto-0.5.9-libpng.patch, files/xmoto-0.5.9-utf8.patch:
+  old
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> xmoto-0.5.9.ebuild:
   x86 stable, bug #411779
