@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.1 2012/05/16 16:12:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.2 2012/05/17 12:46:57 aballier Exp $
 
 EAPI=2
 
@@ -354,7 +354,7 @@ src_install() {
 
 	# Generate ldscripts for core libraries that will go in /
 	gen_usr_ldscript -a alias cam geom ipsec jail kiconv \
-		kvm md procstat sbuf thr ufs util
+		kvm m md procstat sbuf thr ufs util
 
 	# Generate libc.so ldscript for inclusion of libssp_nonshared.a when linking
 	# this is done to avoid having to touch gcc spec file as it is currently
