@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.5.5.ebuild,v 1.6 2012/01/16 19:46:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.5.5.ebuild,v 1.7 2012/05/17 18:06:23 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils cdrom games
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="media-libs/libpng"
+DEPEND="media-libs/libpng
+	media-video/ffmpeg2theora"
 RDEPEND="=games-engines/stratagus-${PV}*"
 
 src_prepare() {
