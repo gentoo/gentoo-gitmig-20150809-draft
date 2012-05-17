@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.444 2012/05/08 15:39:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.445 2012/05/17 04:29:44 vapier Exp $
+
+  17 May 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-6.0_p1-test.patch, openssh-6.0_p1.ebuild:
+  Add fix for POSIX test compat #391011.
 
   08 May 2012; Brent Baude <ranger@gentoo.org> openssh-5.9_p1-r4.ebuild:
   Marking openssh-5.9_p1-r4 ppc64 for bug 396075
