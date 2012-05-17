@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qjson
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.21 2012/02/07 17:38:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.22 2012/05/17 13:14:52 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> qjson-0.7.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   07 Feb 2012; Johannes Huber <johu@gentoo.org> -files/qjson-quint64.patch,
   -qjson-0.6.3-r1.ebuild, -qjson-0.6.3.ebuild:
