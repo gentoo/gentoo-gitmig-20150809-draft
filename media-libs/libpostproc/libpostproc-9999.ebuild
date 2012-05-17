@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.2 2012/05/15 08:41:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.3 2012/05/17 13:46:44 scarabeus Exp $
 
 EAPI="4"
 
@@ -38,7 +38,10 @@ for i in ${CPU_FEATURES}; do
 done
 
 DEPEND=">=media-video/libav-0.8.2-r2"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!<media-video/libav-0.8.2-r2
+	!media-video/ffmpeg
+"
 
 src_configure() {
 	local myconf="${EXTRA_LIBPOSTPROC_CONF}"

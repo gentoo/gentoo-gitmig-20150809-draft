@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpostproc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.2 2012/05/15 08:41:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.3 2012/05/17 13:46:44 scarabeus Exp $
+
+  17 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libpostproc-0.8.0.20120217.ebuild, libpostproc-9999.ebuild:
+  Avoid file colisions.
 
   15 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   libpostproc-0.8.0.20120217.ebuild, libpostproc-9999.ebuild:
