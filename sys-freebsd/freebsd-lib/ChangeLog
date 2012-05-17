@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.116 2012/05/17 12:46:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.117 2012/05/17 12:48:52 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild:
+  openssl takes care of predicting /dev/crypto these days, no need to have it
+  twice.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild:
   oops libm should be in / too

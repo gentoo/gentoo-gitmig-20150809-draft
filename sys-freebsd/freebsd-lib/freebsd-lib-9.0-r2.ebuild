@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.2 2012/05/17 12:46:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.3 2012/05/17 12:48:52 aballier Exp $
 
 EAPI=2
 
@@ -379,14 +379,6 @@ src_install() {
 ${output_format}
 GROUP ( /${mylibdir}/libc.so.7 /usr/${mylibdir}/libssp_nonshared.a )
 END_LDSCRIPT
-
-	dodir /etc/sandbox.d
-	cat - > "${D}"/etc/sandbox.d/00freebsd <<EOF
-# /dev/crypto is used mostly by OpenSSL on *BSD platforms
-# leave it available as packages might use OpenSSL commands
-# during compile or install phase.
-SANDBOX_PREDICT="/dev/crypto"
-EOF
 
 	# Install a libusb.pc for better compat with Linux's libusb
 	if use usb ; then
