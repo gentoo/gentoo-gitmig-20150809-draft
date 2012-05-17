@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.61 2012/05/17 20:38:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.62 2012/05/17 21:41:01 dilfridge Exp $
+
+  17 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -mDNSResponder-212.1-r1.ebuild:
+  Drop old
 
 *mDNSResponder-320.10.80 (17 May 2012)
 
