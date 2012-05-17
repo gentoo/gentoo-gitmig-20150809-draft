@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.301 2012/05/05 08:58:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.302 2012/05/17 08:42:48 scarabeus Exp $
+
+  17 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -transcode-1.1.5-r2.ebuild,
+  transcode-1.1.7.ebuild:
+  Stable on sparc as the 1.1.5 is not buildable at all. So worst case is that
+  state wont change for them. Bug#395729.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> transcode-1.1.5-r2.ebuild,
   transcode-1.1.7.ebuild:
