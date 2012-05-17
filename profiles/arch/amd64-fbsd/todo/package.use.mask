@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.238 2012/05/17 16:52:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.239 2012/05/17 17:57:01 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -189,3 +189,14 @@ app-misc/strigi clucene
 
 # >=media-libs/phonon-vlc-0.3.2
 media-libs/phonon vlc
+
+# >=sys-auth/polkit-qt-0.103.0
+# >=kde-misc/polkit-kde-kcmodules-0.98_pre20101127
+# >=sys-auth/polkit-kde-agent-0.99
+kde-base/kdelibs policykit
+
+# >=kde-base/nepomuk-4.8.3:4[aqua=]
+kde-base/kdelibs semantic-desktop
+
+# app-text/enchant
+kde-base/kdelibs spell
