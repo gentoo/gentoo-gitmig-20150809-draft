@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.6 2012/05/17 16:25:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.7 2012/05/17 16:58:27 aballier Exp $
 
 EAPI=2
 
@@ -196,6 +196,14 @@ src_prepare() {
 	fi
 }
 
+get_csudir() {
+	if [ -d "${WORKDIR}/lib/csu/$1-elf" ]; then
+		echo "lib/csu/$1-elf"
+	else
+		echo "lib/csu/$1"
+	fi
+}
+
 src_compile() {
 	# Does not work with GNU sed
 	# Force BSD's sed on BSD.
@@ -221,21 +229,16 @@ src_compile() {
 		local machine
 		machine=$(tc-arch-kernel ${CTARGET})
 
-		local csudir
-		if [ -d "${S}/csu/${machine}-elf" ]; then
-			csudir="${S}/csu/${machine}-elf"
-		else
-			csudir="${S}/csu/${machine}"
-		fi
+		local csudir="$(get_csudir ${machine})"
 		export RAW_LDFLAGS=$(raw-ldflags)
-		cd "${csudir}"
+		cd "${WORKDIR}/${csudir}" || die "Missing ${csudir}."
 		$(freebsd_get_bmake) ${mymakeopts} || die "make csu failed"
 
 		append-flags "-isystem /usr/${CTARGET}/usr/include"
 		append-flags "-isystem ${WORKDIR}/lib/libutil"
 		append-flags "-isystem ${WORKDIR}/lib/msun/${machine/i386/i387}"
-		append-flags "-B ${csudir}"
-		append-ldflags "-B ${csudir}"
+		append-flags "-B ${WORKDIR}/${csudir}"
+		append-ldflags "-B ${WORKDIR}/${csudir}"
 
 		# First compile libssp_nonshared.a and add it's path to LDFLAGS.
 		cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
@@ -286,14 +289,7 @@ src_install() {
 	local mylibdir=$(get_libdir)
 
 	if [ "${CTARGET}" != "${CHOST}" ]; then
-		local csudir
-		if [ -d "${WORKDIR}/lib/csu/$(tc-arch-kernel ${CTARGET})-elf" ]; then
-			csudir="lib/csu/$(tc-arch-kernel ${CTARGET})-elf"
-		else
-			csudir="lib/csu/$(tc-arch-kernel ${CTARGET})"
-		fi
-
-		for i in "${csudir}" lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil ; do
+		for i in "$(get_csudir $(tc-arch-kernel ${CTARGET}))" lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil ; do
 			cd "${WORKDIR}/${i}/" || die "missing ${i}."
 			$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
 				INCLUDEDIR="/usr/${CTARGET}/usr/include" \
