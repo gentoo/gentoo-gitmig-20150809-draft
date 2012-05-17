@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.5.ebuild,v 1.4 2012/05/17 18:46:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.5-r1.ebuild,v 1.1 2012/05/17 19:07:29 vapier Exp $
 
 EAPI="4"
 
@@ -50,6 +50,7 @@ REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
 MAKEOPTS+=" SAMPLES="
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-securedir.patch #416371
 	elibtoolize
 }
 

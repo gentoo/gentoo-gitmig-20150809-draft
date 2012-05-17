@@ -1,0 +1,26 @@
+the new includedir parsing forgets to check for the positive case
+
+https://bugs.gentoo.org/416371
+
+--- a/plugins/sudoers/toke.c
++++ b/plugins/sudoers/toke.c
+@@ -843,6 +843,8 @@
+ 			(unsigned int) sudoers_gid);
+ 		}
+ 		debug_return_bool(false);
++	    case SUDO_PATH_SECURE:
++		break;
+ 	    default:
+ 		/* NOTREACHED */
+ 		debug_return_bool(false);
+--- a/plugins/sudoers/toke.l
++++ b/plugins/sudoers/toke.l
+@@ -843,6 +843,8 @@
+ 			(unsigned int) sudoers_gid);
+ 		}
+ 		debug_return_bool(false);
++	    case SUDO_PATH_SECURE:
++		break;
+ 	    default:
+ 		/* NOTREACHED */
+ 		debug_return_bool(false);
