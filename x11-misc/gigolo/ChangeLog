@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gigolo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.12 2012/05/05 04:53:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.13 2012/05/17 18:01:53 ssuominen Exp $
+
+  17 May 2012; Samuli Suominen <ssuominen@gentoo.org> gigolo-0.4.1.ebuild:
+  Remove unnecessary index.html reference from HOMEPAGE wrt #416413
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gigolo-0.4.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
