@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/myspell-hu-20080315.ebuild,v 1.7 2010/09/27 23:34:33 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/myspell-hu-20080315.ebuild,v 1.8 2012/05/17 18:18:13 aballier Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "hu,HU,hu_HU,Hungarian UTF-8 (Hungary),hu_HU.zip"
@@ -23,4 +23,4 @@ HOMEPAGE="http://magyarispell.sourceforge.net/
 		http://wiki.services.openoffice.org/wiki/Dictionaries"
 IUSE=""
 
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc ~x86 ~amd64-fbsd ~x86-fbsd"

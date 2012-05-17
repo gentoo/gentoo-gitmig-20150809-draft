@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-cs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.24 2012/04/24 12:48:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.25 2012/05/17 18:08:49 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-cs-20070926.ebuild,
+  myspell-cs-20110224.ebuild:
+  keyword ~amd64-fbsd
 
 *myspell-cs-20110224 (24 Apr 2012)
 

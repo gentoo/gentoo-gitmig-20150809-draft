@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-nb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.24 2012/03/02 22:50:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.25 2012/05/17 18:24:11 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-nb-20060316.ebuild,
+  myspell-nb-20060530.ebuild, myspell-nb-20080310.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   myspell-nb-20080310.ebuild:

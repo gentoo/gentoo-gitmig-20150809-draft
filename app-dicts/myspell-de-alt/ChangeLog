@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-de-alt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.12 2009/06/26 10:57:03 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.13 2012/05/17 18:11:10 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  keyword ~amd64-fbsd
 
   26 Jun 2009; Alexis Ballier <aballier@gentoo.org>
   myspell-de-alt-20060124.ebuild:

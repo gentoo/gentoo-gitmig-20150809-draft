@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-it/myspell-it-20081129.ebuild,v 1.1 2012/04/19 22:15:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-it/myspell-it-20081129.ebuild,v 1.2 2012/05/17 18:19:58 aballier Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "it,IT,it_IT,Italian (Italy),it_IT.zip"
@@ -26,7 +26,7 @@ HOMEPAGE="http://sourceforge.net/projects/linguistico/"
 MY_PV=01_07__2008_11_29
 SRC_URI="mirror://sourceforge/linguistico/it_IT-OOo2-pack_${MY_PV}.zip"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=
 
 src_unpack() {

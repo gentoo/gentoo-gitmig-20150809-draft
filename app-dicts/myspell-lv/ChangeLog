@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-lv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.19 2012/04/19 19:40:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.20 2012/05/17 18:21:47 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-lv-0.9.4.ebuild:
+  keyword ~amd64-fbsd
 
   19 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -myspell-lv-20060316.ebuild,
   myspell-lv-0.9.4.ebuild:

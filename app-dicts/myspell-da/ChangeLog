@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-da
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-da/ChangeLog,v 1.22 2011/12/04 14:41:31 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-da/ChangeLog,v 1.23 2012/05/17 18:10:01 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-da-20060316.ebuild,
+  myspell-da-20100311.ebuild:
+  keyword ~amd64-fbsd
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> myspell-da-20100311.ebuild:
   Stable on amd64 wrt bug #391515

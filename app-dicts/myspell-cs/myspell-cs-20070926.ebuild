@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/myspell-cs-20070926.ebuild,v 1.3 2011/07/25 12:59:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/myspell-cs-20070926.ebuild,v 1.4 2012/05/17 18:08:49 aballier Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "cs,CZ,cs_CZ,Czech (Czech Republic),cs_CZ.zip"
@@ -20,5 +20,5 @@ DESCRIPTION="Czech dictionaries for myspell/hunspell"
 LICENSE="GPL-2 MIT"
 HOMEPAGE="http://lingucomponent.openoffice.org/"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
