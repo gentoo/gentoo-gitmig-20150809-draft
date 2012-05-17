@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.53 2012/05/05 08:02:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.54 2012/05/17 15:34:01 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> libmms-0.6.2.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libmms-0.6.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
