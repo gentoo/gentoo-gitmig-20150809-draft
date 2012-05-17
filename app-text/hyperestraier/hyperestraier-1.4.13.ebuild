@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.13.ebuild,v 1.11 2012/05/16 09:07:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.13.ebuild,v 1.12 2012/05/17 16:37:57 aballier Exp $
 
 inherit java-pkg-opt-2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fallabs.com/hyperestraier/"
 SRC_URI="http://fallabs.com/hyperestraier/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha ~amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
 SLOT="0"
 
 RDEPEND=">=dev-db/qdbm-1.8.75

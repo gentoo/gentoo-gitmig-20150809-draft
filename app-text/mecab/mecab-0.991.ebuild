@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.991.ebuild,v 1.1 2012/01/21 02:57:45 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.991.ebuild,v 1.2 2012/05/17 16:37:28 aballier Exp $
 
 EAPI="4"
 inherit autotools eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://mecab.sourceforge.net/"
 SRC_URI="http://mecab.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="|| ( BSD LGPL-2.1 GPL-2 )"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 SLOT="0"
 IUSE="static-libs unicode"
 
