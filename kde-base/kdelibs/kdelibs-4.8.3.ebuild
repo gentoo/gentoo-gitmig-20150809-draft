@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.3.ebuild,v 1.1 2012/05/03 20:07:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.3.ebuild,v 1.2 2012/05/17 17:59:25 aballier Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ EGIT_BRANCH="KDE/4.8"
 DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
 
-KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
 IUSE="3dnow acl alsa altivec +bzip2 debug doc fam +handbook jpeg2k kerberos lzma
 mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev +udisks
@@ -65,7 +65,7 @@ COMMONDEPEND="
 		x11-libs/libXrender
 		x11-libs/libXScrnSaver
 		x11-libs/libXtst
-		!kernel_SunOS? ( sys-libs/libutempter )
+		!kernel_SunOS? ( || ( sys-libs/libutempter >=sys-freebsd/freebsd-lib-9.0 ) )
 	)
 	bzip2? ( app-arch/bzip2 )
 	fam? ( virtual/fam )
