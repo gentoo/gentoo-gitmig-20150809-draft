@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.3 2012/05/17 12:48:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.4 2012/05/17 13:59:16 aballier Exp $
 
 EAPI=2
 
@@ -333,11 +333,6 @@ src_install() {
 		export CHOST=${CTARGET}
 		return 0
 	fi
-
-	# Symlink libbsdxml to libexpat as we use expat in favor of the renaming done
-	# on FreeBSD.
-	dosym libexpat.so /usr/${mylibdir}/libbsdxml.so
-	dosym libexpat.a /usr/${mylibdir}/libbsdxml.a
 
 	# install libstand files
 	dodir /usr/include/libstand
