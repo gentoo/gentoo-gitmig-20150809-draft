@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.212 2012/05/08 15:43:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.213 2012/05/17 18:07:22 kensington Exp $
+
+  17 May 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/kmix-4.8.3-oss4.patch, kmix-4.8.3.ebuild:
+  Fix build with OSS4. Patch by Franz Fellner <alpine.art.de@googlemail.com>.
+  Fixes bug #415573.
 
   08 May 2012; Johannes Huber <johu@gentoo.org> -kmix-4.8.2.ebuild:
   Remove KDE SC 4.8.2
