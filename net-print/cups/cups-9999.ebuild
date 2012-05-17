@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.3 2012/05/16 22:50:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.4 2012/05/17 21:01:12 dilfridge Exp $
 
 EAPI=4
 
@@ -56,7 +56,9 @@ RDEPEND="
 	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
-	zeroconf? ( net-misc/mDNSResponder )
+	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat]
+			>=net-misc/mDNSResponder-320.10.80 )
+)
 "
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.478 2012/05/16 22:50:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.479 2012/05/17 21:01:12 dilfridge Exp $
+
+  17 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-9999.ebuild:
+  net-dns/avahi[mdnsresponder-compat] works for zeroconf too
 
   16 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-9999.ebuild:
   slp and ldap code is gone in trunk, but we have bonjour now
