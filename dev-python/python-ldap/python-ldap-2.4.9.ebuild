@@ -1,32 +1,31 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.8.ebuild,v 1.1 2012/03/09 09:25:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.9.ebuild,v 1.1 2012/05/17 18:57:16 xarthisius Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
+EAPI=4
+
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils multilib
 
-DOC_P="${PN}-docs-html-${PV}"
-
 DESCRIPTION="Various LDAP-related Python modules"
 HOMEPAGE="http://python-ldap.sourceforge.net/ http://pypi.python.org/pypi/python-ldap"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-#	doc? ( http://www.python-ldap.org/doc/${DOC_P}.tar.gz )" #gone
 
 LICENSE="PSF-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
-IUSE="examples sasl ssl"
+IUSE="doc examples sasl ssl"
 
 # If you need support for openldap-2.3.x, please use python-ldap-2.3.9.
 # python team: Please do not remove python-ldap-2.3.9 from the tree.
 RDEPEND=">=net-nds/openldap-2.4
+	dev-python/pyasn1
 	sasl? ( dev-libs/cyrus-sasl )"
-DEPEND="${DEPEND}
-	dev-python/setuptools"
+DEPEND="${RDEPEND}
+	dev-python/setuptools
+	doc? ( dev-python/sphinx )"
 
 DOCS="CHANGES README"
 PYTHON_MODNAME="dsml.py ldapurl.py ldif.py ldap"
@@ -45,6 +44,8 @@ src_prepare() {
 	if use sasl; then
 		use ssl && mylibs="ldap_r"
 		mylibs="${mylibs} sasl2"
+	else
+		sed -e 's/HAVE_SASL//g' -i setup.cfg || die
 	fi
 	use ssl && mylibs="${mylibs} ssl crypto"
 
@@ -54,11 +55,25 @@ src_prepare() {
 		-i setup.cfg || die "error setting up libs in setup.cfg"
 }
 
+src_compile() {
+	distutils_src_compile
+	if use doc; then
+		pushd Doc &> /dev/null
+		PYTHONPATH="$(ls -d ../build-$(PYTHON -f --ABI)/lib*)" \
+			sphinx-build -b html -d	_build/doctrees . _build/html
+		popd Doc &> /dev/null
+	fi
+}
+
 src_install() {
 	distutils_src_install
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r Demo || die "doins failed"
+		doins -r Demo
+	fi
+
+	if use doc; then
+		dohtml -r Doc/_build/html/
 	fi
 }
