@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.3.1.ebuild,v 1.1 2012/05/17 21:00:03 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.3.1.ebuild,v 1.2 2012/05/17 21:31:57 aidecoe Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="${HOMEPAGE}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 DEPEND=""
 RDEPEND="
@@ -37,6 +37,24 @@ src_prepare() {
 	for md in *.md; do
 		mv "${md}" "${md%.md}"
 	done
+}
+
+src_compile() {
+	distutils_src_compile
+
+	if use doc; then
+		pushd docs || die
+		emake html
+		popd || die
+	fi
+}
+
+src_install() {
+	distutils_src_install
+
+	if use doc; then
+		dohtml -r docs/build/html/*
+	fi
 }
 
 pkg_postinst() {
