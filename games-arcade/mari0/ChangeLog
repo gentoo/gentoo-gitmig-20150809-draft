@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/mari0
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.1 2012/05/17 15:22:25 hasufell Exp $
+
+*mari0-1.6 (17 May 2012)
+
+  17 May 2012; Julian Ospald <hasufell@gentoo.org> +files/mari0.svg,
+  +mari0-1.6.ebuild, +metadata.xml:
+  initial commit wrt #407105
+
