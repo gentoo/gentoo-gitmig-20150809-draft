@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.310 2012/05/16 16:32:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.311 2012/05/17 08:57:47 jdhore Exp $
+
+  17 May 2012; Jeff Horelick <jdhore@gentoo.org> sudo-1.8.5.ebuild:
+  marked x86 per bug 416281
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> sudo-1.8.5.ebuild:
   Stable for HPPA (bug #416281).
