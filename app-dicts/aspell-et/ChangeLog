@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-et
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.15 2010/10/07 23:38:32 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-et/ChangeLog,v 1.16 2012/05/17 19:55:38 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-et-0.1.21.1.ebuild:
+  keyword ~amd64-fbsd
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org> aspell-et-0.1.21.1.ebuild:
   Drop to ~mips

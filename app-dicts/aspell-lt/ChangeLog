@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-lt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-lt/ChangeLog,v 1.16 2010/06/05 15:42:41 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-lt/ChangeLog,v 1.17 2012/05/17 20:03:31 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-lt-1.0.1.ebuild:
+  keyword ~amd64-fbsd
 
   05 Jun 2010; Raúl Porcel <armin76@gentoo.org> aspell-lt-1.0.1.ebuild:
   alpha/arm/ia64/s390/sh stable wrt #310015

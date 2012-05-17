@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-uk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-uk/ChangeLog,v 1.21 2012/03/17 23:09:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-uk/ChangeLog,v 1.22 2012/05/17 20:10:45 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-uk-0.50.3.ebuild,
+  aspell-uk-0.51.0.ebuild, aspell-uk-1.1.0.ebuild, aspell-uk-1.4.0.0.ebuild:
+  keyword ~amd64-fbsd
 
   17 Mar 2012; Matt Turner <mattst88@gentoo.org> aspell-uk-1.1.0.ebuild,
   aspell-uk-1.4.0.0.ebuild:

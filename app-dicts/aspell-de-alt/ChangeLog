@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-de-alt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de-alt/ChangeLog,v 1.25 2010/01/02 15:35:56 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de-alt/ChangeLog,v 1.26 2012/05/17 19:52:39 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org>
+  aspell-de-alt-2.1.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   02 Jan 2010; Ulrich Mueller <ulm@gentoo.org> -aspell-de-alt-2.1.1.ebuild:
   Remove old.

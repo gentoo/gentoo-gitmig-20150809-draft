@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-is
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-is/ChangeLog,v 1.8 2010/10/08 00:04:42 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-is/ChangeLog,v 1.9 2012/05/17 20:01:45 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-is-0.50.4.ebuild,
+  aspell-is-0.51.1.0.ebuild:
+  keyword ~amd64-fbsd
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> aspell-is-0.50.4.ebuild,
   aspell-is-0.51.1.0.ebuild:

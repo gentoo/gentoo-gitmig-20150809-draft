@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-bg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.11 2010/06/05 15:34:37 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.12 2012/05/17 19:48:27 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-bg-0.50.0.ebuild,
+  aspell-bg-4.1.0.ebuild:
+  keyword ~amd64-fbsd
 
   05 Jun 2010; Raúl Porcel <armin76@gentoo.org> aspell-bg-4.1.0.ebuild:
   alpha/arm/ia64/s390/sh stable wrt #310015

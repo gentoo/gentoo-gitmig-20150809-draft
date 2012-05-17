@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-it
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.24 2012/04/19 16:56:24 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-it/ChangeLog,v 1.25 2012/05/17 20:02:21 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org>
+  aspell-it-2.2.20050523.ebuild, aspell-it-2.4.20070901.ebuild:
+  keyword ~amd64-fbsd
 
 *aspell-it-2.4.20070901 (19 Apr 2012)
 

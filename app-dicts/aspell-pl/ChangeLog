@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pl/ChangeLog,v 1.19 2012/04/18 16:48:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pl/ChangeLog,v 1.20 2012/05/17 20:05:17 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org>
+  aspell-pl-6.0.20061121.0.ebuild, aspell-pl-6.0.20120418.0.ebuild:
+  keyword ~amd64-fbsd
 
   18 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
   aspell-pl-6.0.20120418.0.ebuild:

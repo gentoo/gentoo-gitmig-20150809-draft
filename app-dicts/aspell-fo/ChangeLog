@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-fo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fo/ChangeLog,v 1.10 2010/02/19 09:11:26 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fo/ChangeLog,v 1.11 2012/05/17 19:56:49 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-fo-0.51.0.ebuild:
+  keyword ~amd64-fbsd
 
   19 Feb 2010; Peter Volkov <pva@gentoo.org> -aspell-fo-0.50.2.ebuild,
   aspell-fo-0.51.0.ebuild:
