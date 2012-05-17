@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.239 2012/05/17 17:57:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.240 2012/05/17 18:01:15 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -60,9 +60,6 @@ sys-apps/xinetd rpc
 
 # media-gfx/ufraw
 media-gfx/imagemagick raw
-
-# >=kde-base/kdelibs-4
-dev-vcs/subversion kde
 
 # >=media-libs/portaudio-19_pre
 media-libs/openal portaudio
