@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.123 2012/03/12 14:17:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.124 2012/05/17 04:39:29 vapier Exp $
+
+  17 May 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/psmisc-22.16-fuser-pic.patch, psmisc-22.16.ebuild:
+  Fix TEXTRELs when building fuser as a PIE #394443 by Attila Tóth.
 
 *psmisc-22.16 (12 Mar 2012)
 
