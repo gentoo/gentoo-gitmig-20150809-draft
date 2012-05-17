@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/gst-plugins-vp8-0.10.22.ebuild,v 1.3 2011/10/21 14:50:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/gst-plugins-vp8-0.10.22.ebuild,v 1.4 2012/05/17 15:05:23 aballier Exp $
 
 inherit gst-plugins-bad
 
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-fbsd"
 IUSE=""
 
 RDEPEND="media-libs/libvpx
