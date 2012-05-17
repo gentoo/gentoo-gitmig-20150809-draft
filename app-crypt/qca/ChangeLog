@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.93 2012/04/17 17:13:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.94 2012/05/17 13:10:11 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> qca-2.0.3.ebuild:
+  keyword ~amd64-fbsd
 
   17 Apr 2012; Davide Pesavento <pesa@gentoo.org>
   +files/qca-2.0.3+gcc-4.7.patch, qca-2.0.3.ebuild:
