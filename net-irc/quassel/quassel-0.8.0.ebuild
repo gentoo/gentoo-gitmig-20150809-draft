@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.8.0.ebuild,v 1.2 2012/03/31 11:20:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.8.0.ebuild,v 1.3 2012/05/17 07:14:15 scarabeus Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://quassel-irc.org/"
 [[ "${PV}" == "9999" ]] || SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~sparc-solaris"
+KEYWORDS="amd64 x86 ~amd64-linux ~sparc-solaris"
 SLOT="0"
 IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl syslog webkit X"
 
@@ -120,12 +120,12 @@ src_install() {
 		fowners "${QUASSEL_USER}":"${QUASSEL_USER}" "${QUASSEL_DIR}"
 
 		# init scripts
-		newinitd "${FILESDIR}"/quasselcore.init quasselcore || die "newinitd failed"
-		newconfd "${FILESDIR}"/quasselcore.conf quasselcore || die "newconfd failed"
+		newinitd "${FILESDIR}"/quasselcore.init quasselcore
+		newconfd "${FILESDIR}"/quasselcore.conf quasselcore
 
 		# logrotate
 		insinto /etc/logrotate.d
-		newins "${FILESDIR}/quassel.logrotate" quassel || die "newins failed"
+		newins "${FILESDIR}/quassel.logrotate" quassel
 	fi
 }
 
