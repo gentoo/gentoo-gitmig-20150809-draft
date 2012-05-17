@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-19.0.1084.41.ebuild,v 1.3 2012/05/07 15:06:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-19.0.1084.46-r1.ebuild,v 1.1 2012/05/17 06:17:54 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -105,6 +105,12 @@ src_prepare() {
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
 		chrome/common/zip*.cc || die
+
+	# Backport upstream fix for Gentoo bug #415601.
+	epatch "${FILESDIR}/${PN}-unistd-r0.patch"
+
+	# Fix build without tcmalloc. To be upstreamed.
+	epatch "${FILESDIR}/${PN}-tcmalloc-r1.patch"
 
 	epatch_user
 
