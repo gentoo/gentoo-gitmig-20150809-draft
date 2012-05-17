@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-9999.ebuild,v 1.4 2012/05/13 06:27:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-9999.ebuild,v 1.5 2012/05/17 00:48:10 jdhore Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_P=${P/_/-}
 
 DESCRIPTION="A portable and secure set of open-source and modular IRC services"
 HOMEPAGE="http://atheme.net/"
-EGIT_REPO_URI="git://git.atheme.org/atheme.git"
+EGIT_REPO_URI="git://github.com/atheme/atheme.git"
 EGIT_HAS_SUBMODULES="true"
 
 LICENSE="BSD"
