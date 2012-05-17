@@ -1,6 +1,12 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.33 2012/05/16 13:04:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.34 2012/05/17 13:57:22 scarabeus Exp $
+
+*ffmpeg-0.10.3 (17 May 2012)
+
+  17 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +ffmpeg-0.10.3.ebuild:
+  Add new virtual that pulls in the postproc library. In packages depend
+  directly on the lib, when all deps are sorted this will be removed from here.
 
   16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -ffmpeg-0.6-r1.ebuild,
   -ffmpeg-0.6.90.ebuild, -ffmpeg-0.9.ebuild, ffmpeg-0.10.2-r1.ebuild:
