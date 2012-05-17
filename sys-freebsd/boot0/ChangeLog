@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/boot0
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.34 2012/04/26 14:25:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.35 2012/05/17 14:36:08 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> boot0-9.0.ebuild:
+  drop now useless appends flags: we unpack the lib tarball.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> boot0-9.0.ebuild:
   keyword ~amd64-fbsd
