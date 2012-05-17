@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/canna
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.70 2011/10/05 19:28:09 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.71 2012/05/17 05:30:44 naota Exp $
+
+  17 May 2012; Naohiro Aota <naota@gentoo.org> canna-3.7_p3-r2.ebuild:
+  Add missing dependencies. Respect LDFLAGS. Set VARTEXFONTS=${T}/fonts #223077
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> canna-3.7_p2.ebuild,
   canna-3.7_p3.ebuild, canna-3.7_p3-r1.ebuild, canna-3.7_p3-r2.ebuild:
