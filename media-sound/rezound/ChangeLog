@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.60 2012/05/05 08:49:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.61 2012/05/17 12:02:13 ssuominen Exp $
+
+  17 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  rezound-0.12.3_beta-r2.ebuild:
+  Restrict x11-libs/fox to SLOT="1.6"
 
   05 May 2012; Michał Górny <mgorny@gentoo.org>
   rezound-0.12.3_beta-r2.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r2.ebuild,v 1.5 2012/05/05 08:49:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r2.ebuild,v 1.6 2012/05/17 12:02:13 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 MY_P=${P/_/}
 PATCHLEVEL=5
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 ~ppc -sparc x86"
 IUSE="16bittmp alsa flac jack nls oss portaudio soundtouch vorbis"
 
 RDEPEND="=sci-libs/fftw-2*
-	>=x11-libs/fox-1.6.19
+	>=x11-libs/fox-1.6.19:1.6
 	>=media-libs/audiofile-0.2.3
 	>=media-libs/ladspa-sdk-1.12
 	>=media-libs/ladspa-cmt-1.15
@@ -68,12 +68,11 @@ src_configure() {
 		$(use_enable soundtouch) \
 		${sampletype} \
 		--enable-ladspa \
-		--enable-largefile \
-		|| die "configure failed"
+		--enable-largefile
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	make DESTDIR="${D}" install
 
 	# remove wrong doc directory
 	rm -rf "${D}/usr/doc"
