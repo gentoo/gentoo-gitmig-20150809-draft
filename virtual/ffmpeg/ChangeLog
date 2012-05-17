@@ -1,12 +1,10 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.36 2012/05/17 20:56:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.37 2012/05/17 21:09:24 ssuominen Exp $
 
   17 May 2012; Samuli Suominen <ssuominen@gentoo.org> ffmpeg-0.10.2-r1.ebuild:
-  Change >=media-video/libav-0.8.2 to <=media-video/libav-0.8.2 for ensuring
-  stable users will have postproc as required by media-libs/xine-lib wrt
-  #416407. Alternative is to force media-video/ffmpeg in media-libs/xine-lib
-  again.
+  || ( ) block for allowing media/video/ffmpeg, media-libs/libpostproc and
+  <=media-video/libav-0.8.2 as providers for getting postproc wrt #416407
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.3.ebuild:
   ffmpeg provides libpostproc
