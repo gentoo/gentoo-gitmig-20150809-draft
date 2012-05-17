@@ -1,9 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.37 2012/05/17 21:09:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.38 2012/05/17 21:12:44 ssuominen Exp $
 
   17 May 2012; Samuli Suominen <ssuominen@gentoo.org> ffmpeg-0.10.2-r1.ebuild:
-  || ( ) block for allowing media/video/ffmpeg, media-libs/libpostproc and
+  || ( ) block for allowing media-video/ffmpeg, media-libs/libpostproc and
   <=media-video/libav-0.8.2 as providers for getting postproc wrt #416407
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.3.ebuild:
