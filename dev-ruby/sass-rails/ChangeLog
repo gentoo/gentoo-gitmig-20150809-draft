@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sass-rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.4 2012/04/20 07:32:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.5 2012/05/17 10:58:30 tomka Exp $
+
+  17 May 2012; Thomas Kahle <tomka@gentoo.org> sass-rails-3.1.5.ebuild,
+  sass-rails-3.2.5.ebuild:
+  marked ~x86 per bug 396547
 
 *sass-rails-3.2.5 (20 Apr 2012)
 

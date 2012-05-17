@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.218 2012/05/01 18:24:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.219 2012/05/17 10:49:26 tomka Exp $
+
+  17 May 2012; Thomas Kahle <tomka@gentoo.org> rails-3.1.4.ebuild,
+  rails-3.2.3.ebuild:
+  marked ~x86 per bug 396547
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> rails-2.3.14.ebuild,
   rails-3.0.10.ebuild, rails-3.0.11.ebuild, rails-3.0.12.ebuild:

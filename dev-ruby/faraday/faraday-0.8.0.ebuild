@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.8.0.ebuild,v 1.1 2012/04/29 00:11:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.8.0.ebuild,v 1.2 2012/05/17 10:48:42 tomka Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://github.com/technoweenie/faraday"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/multipart-post-1.1.3"

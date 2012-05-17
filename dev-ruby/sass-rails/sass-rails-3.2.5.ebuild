@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/sass-rails-3.2.5.ebuild,v 1.1 2012/04/20 07:32:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/sass-rails-3.2.5.ebuild,v 1.2 2012/05/17 10:58:30 tomka Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/rails/sass-rails"
 
 LICENSE="MIT"
 SLOT="3.2"
-KEYWORDS="~amd64 ~x64-macos"
+KEYWORDS="~amd64 ~x86 ~x64-macos"
 
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/gettext_i18n_rails-0.4.6.ebuild,v 1.1 2012/04/08 06:59:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/gettext_i18n_rails-0.4.6.ebuild,v 1.2 2012/05/17 10:48:14 tomka Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ HOMEPAGE="https://github.com/grosser/gettext_i18n_rails"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/rspec:2 dev-ruby/activerecord )"

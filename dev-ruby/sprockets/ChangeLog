@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.6 2012/05/01 18:24:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.7 2012/05/17 10:55:50 tomka Exp $
+
+  17 May 2012; Thomas Kahle <tomka@gentoo.org> sprockets-2.0.3-r1.ebuild,
+  sprockets-2.1.2.ebuild:
+  marked ~x86 per bug 396547
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> sprockets-2.0.3-r1.ebuild,
   sprockets-2.1.2.ebuild:

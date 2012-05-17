@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fast_gettext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/ChangeLog,v 1.12 2012/05/12 08:58:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/ChangeLog,v 1.13 2012/05/17 10:54:53 tomka Exp $
+
+  17 May 2012; Thomas Kahle <tomka@gentoo.org> fast_gettext-0.6.7.ebuild:
+  marked ~x86 per bug 396547
 
 *fast_gettext-0.6.7 (12 May 2012)
 

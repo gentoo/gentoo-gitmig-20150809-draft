@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/faraday
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.13 2012/04/29 00:11:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.14 2012/05/17 10:48:42 tomka Exp $
+
+  17 May 2012; Thomas Kahle <tomka@gentoo.org> faraday-0.8.0.ebuild:
+  marked ~x86 per bug 396547
 
 *faraday-0.8.0 (29 Apr 2012)
 
