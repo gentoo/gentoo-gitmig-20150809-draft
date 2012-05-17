@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.8 2012/05/17 17:59:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.9 2012/05/17 18:13:00 aballier Exp $
 
 EAPI=2
 
@@ -235,8 +235,6 @@ src_compile() {
 		$(freebsd_get_bmake) ${mymakeopts} || die "make csu failed"
 
 		append-flags "-isystem /usr/${CTARGET}/usr/include"
-		append-flags "-isystem ${WORKDIR}/lib/libutil"
-		append-flags "-isystem ${WORKDIR}/lib/msun/${machine/i386/i387}"
 		append-flags "-B ${WORKDIR}/${csudir}"
 		append-ldflags "-B ${WORKDIR}/${csudir}"
 
