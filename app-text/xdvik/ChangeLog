@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.86 2012/05/17 14:34:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.87 2012/05/17 23:12:48 ssuominen Exp $
+
+  17 May 2012; Samuli Suominen <ssuominen@gentoo.org> xdvik-22.85-r1.ebuild:
+  Use /usr/share/X11/app-defaults instead of /etc/X11/app-defaults as XDvi
+  install path.
 
   17 May 2012; Ulrich Müller <ulm@gentoo.org> -xdvik-22.85.ebuild,
   xdvik-22.85-r1.ebuild, metadata.xml:

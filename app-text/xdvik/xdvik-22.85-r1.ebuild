@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.3 2012/05/17 14:34:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.4 2012/05/17 23:12:48 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic elisp-common toolchain-funcs
@@ -75,9 +75,9 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	dodir /etc/texmf/xdvi /etc/X11/app-defaults
-	mv "${ED}${TEXMF_PATH}/xdvi/XDvi" "${ED}etc/X11/app-defaults" || die "failed to move config file"
-	dosym {/etc/X11/app-defaults,"${TEXMF_PATH}/xdvi"}/XDvi
+	dodir /etc/texmf/xdvi /usr/share/X11/app-defaults
+	mv "${ED}${TEXMF_PATH}/xdvi/XDvi" "${ED}usr/share/X11/app-defaults" || die "failed to move config file"
+	dosym {/usr/share/X11/app-defaults,"${TEXMF_PATH}/xdvi"}/XDvi
 	for i in $(find "${ED}${TEXMF_PATH}/xdvi" -maxdepth 1 -type f) ; do
 		mv ${i} "${ED}etc/texmf/xdvi" || die "failed to move $i"
 		dosym {/etc/texmf,"${TEXMF_PATH}"}/xdvi/$(basename ${i})
