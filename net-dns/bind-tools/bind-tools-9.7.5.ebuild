@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.7.5.ebuild,v 1.1 2012/04/07 18:16:21 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.7.5.ebuild,v 1.2 2012/05/17 15:59:19 idl0r Exp $
 
 EAPI="4"
 
@@ -18,7 +18,8 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc gssapi idn ipv6 pkcs11 ssl urandom xml"
+IUSE="doc gssapi idn ipv6 ssl urandom xml"
+# no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
 DEPEND="ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2 )
@@ -58,7 +59,6 @@ src_configure() {
 		$(use_with ssl openssl) \
 		$(use_with xml libxml2) \
 		$(use_with gssapi) \
-		$(use_with pkcs11) \
 		${myconf}
 
 	# bug #151839
