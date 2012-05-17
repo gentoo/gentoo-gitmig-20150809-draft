@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-9999.ebuild,v 1.3 2012/05/17 00:50:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/libmowgli-9999.ebuild,v 1.4 2012/05/17 23:18:16 jdhore Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Useful set of performance and usability-oriented extensions to C"
 HOMEPAGE="http://www.atheme.org/project/mowgli"
-EGIT_REPO_URI="git://github.com/atheme/libmowgli-3.git"
+EGIT_REPO_URI="git://github.com/atheme/libmowgli-2.git"
 IUSE="ssl"
 
 LICENSE="BSD-2"
