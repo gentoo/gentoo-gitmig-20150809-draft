@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.9 2012/05/17 18:13:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.10 2012/05/17 18:31:44 aballier Exp $
 
 EAPI=2
 
@@ -204,6 +204,16 @@ get_csudir() {
 	fi
 }
 
+bootstrap_csu() {
+	local csudir="$(get_csudir $(tc-arch-kernel ${CTARGET}))"
+	export RAW_LDFLAGS=$(raw-ldflags)
+	cd "${WORKDIR}/${csudir}" || die "Missing ${csudir}."
+	freebsd_src_compile
+
+	append-flags "-B ${WORKDIR}/${csudir}"
+	append-ldflags "-B ${WORKDIR}/${csudir}"
+}
+
 src_compile() {
 	# Does not work with GNU sed
 	# Force BSD's sed on BSD.
@@ -226,17 +236,9 @@ src_compile() {
 		CHOST=${CTARGET} tc-export CC LD CXX RANLIB
 		mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= NLS="
 
-		local machine
-		machine=$(tc-arch-kernel ${CTARGET})
-
-		local csudir="$(get_csudir ${machine})"
-		export RAW_LDFLAGS=$(raw-ldflags)
-		cd "${WORKDIR}/${csudir}" || die "Missing ${csudir}."
-		$(freebsd_get_bmake) ${mymakeopts} || die "make csu failed"
+		bootstrap_csu
 
 		append-flags "-isystem /usr/${CTARGET}/usr/include"
-		append-flags "-B ${WORKDIR}/${csudir}"
-		append-ldflags "-B ${WORKDIR}/${csudir}"
 
 		# First compile libssp_nonshared.a and add it's path to LDFLAGS.
 		cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."

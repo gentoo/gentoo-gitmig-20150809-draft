@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.123 2012/05/17 18:13:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.124 2012/05/17 18:31:44 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild:
+  split out the csu bootstrapping code in its own function
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild:
   Remove -isystem append-flags that are now useless since we pre-install the
