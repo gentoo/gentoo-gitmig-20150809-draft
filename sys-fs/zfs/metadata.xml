@@ -4,11 +4,6 @@
 	<maintainer>
 		<email>ryao@cs.stonybrook.edu</email>
 		<name>Richard Yao</name>
-		<description>Proxy maintainer</description>
-	</maintainer>
-	<maintainer>
-		<email>floppym@gentoo.org</email>
-		<name>Mike Gilbert</name>
 	</maintainer>
 	<use>
 		<flag name="dracut">Install dracut module</flag>
