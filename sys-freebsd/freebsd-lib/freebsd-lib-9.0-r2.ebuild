@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.7 2012/05/17 16:58:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.8 2012/05/17 17:59:53 aballier Exp $
 
 EAPI=2
 
@@ -289,22 +289,24 @@ src_install() {
 	local mylibdir=$(get_libdir)
 
 	if [ "${CTARGET}" != "${CHOST}" ]; then
-		for i in "$(get_csudir $(tc-arch-kernel ${CTARGET}))" lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil ; do
-			cd "${WORKDIR}/${i}/" || die "missing ${i}."
-			$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-				INCLUDEDIR="/usr/${CTARGET}/usr/include" \
-				FILESDIR="/usr/${CTARGET}/usr/lib" \
-				SHLIBDIR="/usr/${CTARGET}/usr/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install ${i} failed"
-		done
+		BMAKE="$(freebsd_get_bmake)"
+		mymakeopts="${mymakeopts} NO_MAN= \
+			INCLUDEDIR=/usr/${CTARGET}/usr/include \
+			SHLIBDIR=/usr/${CTARGET}/usr/lib \
+			LIBDIR=/usr/${CTARGET}/usr/lib"
+		SUBDIRS="$(get_csudir $(tc-arch-kernel ${CTARGET})) lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
 
 		dosym "usr/include" "/usr/${CTARGET}/sys-include"
 	else
 		# Set SHLIBDIR and LIBDIR for multilib
-		for i in gnu/lib/libssp lib gnu/lib/libregex ; do
-			cd "${WORKDIR}/${i}/" || die "Missing ${i}."
-			SHLIBDIR="/usr/${mylibdir}" LIBDIR="/usr/${mylibdir}" mkinstall || die "Install ${i} failed."
-		done
+		mymakeopts="${mymakeopts} SHLIBDIR=/usr/${mylibdir} LIBDIR=/usr/${mylibdir}"
+		SUBDIRS="gnu/lib/libssp lib gnu/lib/libregex"
 	fi
+
+	for i in ${SUBDIRS} ; do
+		cd "${WORKDIR}/${i}/" || die "missing ${i}."
+		mkinstall || die "Install ${i} failed"
+	done
 
 	# Don't install the rest of the configuration files if crosscompiling
 	if [ "${CTARGET}" != "${CHOST}" ] ; then
