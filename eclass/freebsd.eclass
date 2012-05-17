@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.20 2012/05/16 15:44:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.21 2012/05/17 13:58:08 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -81,6 +81,9 @@ freebsd_rename_libraries() {
 	# ncurses provides libncursesw not libcursesw
 	find "${S}" -name Makefile -print0 | xargs -0 \
 		sed -i -e 's:-lcursesw:-lncursesw:g'
+	# we use expat instead of bsdxml
+	find "${S}" -name Makefile -print0 | xargs -0 \
+		sed -i -e 's:-lbsdxml:-lexpat:g'
 
 	eend $?
 }
