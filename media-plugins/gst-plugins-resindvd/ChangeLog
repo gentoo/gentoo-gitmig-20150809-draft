@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-resindvd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.35 2011/10/15 18:35:22 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.36 2012/05/17 14:39:17 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-resindvd-0.10.22.ebuild:
+  keyword ~amd64-fbsd
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-resindvd-0.10.22.ebuild:
