@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.13 2012/05/17 19:21:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.14 2012/05/17 20:03:01 aballier Exp $
 
 EAPI=2
 
@@ -272,6 +272,41 @@ src_compile() {
 	done
 }
 
+gen_libc_ldscript() {
+	# Parameters:
+	#   $1 = target libdir
+	#   $2 = source libc dir
+	#   $3 = source libssp_nonshared dir
+
+	# Clear the symlink.
+	rm -f "${D}/$2/libc.so" || die
+
+	# Move the library if needed
+	if [ "$1" != "$2" ] ; then
+		mv "${D}/$2/libc.so.7" "${D}/$1/" || die
+	fi
+
+	# Generate libc.so ldscript for inclusion of libssp_nonshared.a when linking
+	# this is done to avoid having to touch gcc spec file as it is currently
+	# done on FreeBSD upstream, mostly because their binutils aren't able to
+	# cope with linker scripts yet.
+	# Taken from toolchain-funcs.eclass:
+	local output_format
+	output_format=$($(tc-getCC) ${CFLAGS} ${LDFLAGS} -Wl,--verbose 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
+	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
+
+	cat > "${D}/$2/libc.so" <<-END_LDSCRIPT
+/* GNU ld script
+   SSP (-fstack-protector) requires __stack_chk_fail_local to be local.
+   GCC invokes this symbol in a non-PIC way, which results in TEXTRELs if
+   this symbol was provided by a shared libc. So we link in
+   libssp_nonshared.a from here.
+ */
+${output_format}
+GROUP ( /$1/libc.so.7 /$3/libssp_nonshared.a )
+END_LDSCRIPT
+}
+
 src_install() {
 	[ "${CTARGET}" = "${CHOST}" ] \
 		&& INCLUDEDIR="/usr/include" \
@@ -306,7 +341,9 @@ src_install() {
 	if [ "${CTARGET}" != "${CHOST}" ] ; then
 		# This is to get it stripped with the correct tools, otherwise it gets
 		# stripped with the host strip.
+		# And also get the correct OUTPUT_FORMAT in the libc ldscript.
 		export CHOST=${CTARGET}
+		gen_libc_ldscript "usr/${CTARGET}/usr/lib" "usr/${CTARGET}/usr/lib" "usr/${CTARGET}/usr/lib"
 		return 0
 	fi
 
@@ -322,29 +359,7 @@ src_install() {
 	gen_usr_ldscript -a alias cam geom ipsec jail kiconv \
 		kvm m md procstat sbuf thr ufs util
 
-	# Generate libc.so ldscript for inclusion of libssp_nonshared.a when linking
-	# this is done to avoid having to touch gcc spec file as it is currently
-	# done on FreeBSD upstream, mostly because their binutils aren't able to
-	# cope with linker scripts yet.
-	# Taken from toolchain-funcs.eclass:
-	local output_format
-	output_format=$($(tc-getCC) ${CFLAGS} ${LDFLAGS} -Wl,--verbose 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
-	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
-	# Clear the symlink.
-	rm -f "${D}/usr/${mylibdir}/libc.so"
-	# Move the library
-	mv "${D}"/usr/${mylibdir}/libc.so.* "${D}/${mylibdir}/" || die
-
-	cat > "${D}/usr/${mylibdir}/libc.so" <<-END_LDSCRIPT
-/* GNU ld script
-   SSP (-fstack-protector) requires __stack_chk_fail_local to be local.
-   GCC invokes this symbol in a non-PIC way, which results in TEXTRELs if
-   this symbol was provided by a shared libc. So we link in
-   libssp_nonshared.a from here.
- */
-${output_format}
-GROUP ( /${mylibdir}/libc.so.7 /usr/${mylibdir}/libssp_nonshared.a )
-END_LDSCRIPT
+	gen_libc_ldscript "${mylibdir}" "usr/${mylibdir}" "usr/${mylibdir}"
 
 	# Install a libusb.pc for better compat with Linux's libusb
 	if use usb ; then
