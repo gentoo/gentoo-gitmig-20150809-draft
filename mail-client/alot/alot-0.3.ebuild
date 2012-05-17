@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.3.ebuild,v 1.2 2012/03/25 08:33:46 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.3.ebuild,v 1.3 2012/05/17 21:40:44 aidecoe Exp $
 
 EAPI=4
 
@@ -8,19 +8,16 @@ PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[456] 3.*"
 
-inherit distutils vcs-snapshot versionator
-
-MY_PV=$(replace_version_separator 2 '')
-MY_P="${PN}-${MY_PV}"
+inherit distutils vcs-snapshot
 
 DESCRIPTION="Experimental terminal UI for net-mail/notmuch written in Python"
 HOMEPAGE="https://github.com/pazz/alot"
-SRC_URI="${HOMEPAGE}/tarball/${MY_PV} -> ${MY_P}.tar.gz"
+SRC_URI="${HOMEPAGE}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 DEPEND=""
 RDEPEND="
@@ -39,6 +36,24 @@ src_prepare() {
 	for md in *.md; do
 		mv "${md}" "${md%.md}"
 	done
+}
+
+src_compile() {
+	distutils_src_compile
+
+	if use doc; then
+		pushd docs || die
+		emake html
+		popd || die
+	fi
+}
+
+src_install() {
+	distutils_src_install
+
+	if use doc; then
+		dohtml -r docs/build/html/*
+	fi
 }
 
 pkg_postinst() {
