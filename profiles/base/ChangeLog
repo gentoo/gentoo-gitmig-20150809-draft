@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.392 2012/05/15 14:24:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.393 2012/05/18 00:20:44 vapier Exp $
+
+  18 May 2012; Mike Frysinger <vapier@gentoo.org> packages:
+  Force recent patch version so devs do not need to worry about inconsistent
+  treatment of DOS line endings and differences in behavior with patch-2.5.
 
   15 May 2012; Mike Gilbert <floppym@gentoo.org> make.defaults:
   Set default value for PYTHON_TARGETS, bug 415575.
