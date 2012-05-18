@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GStreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.15 2012/05/04 04:10:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.16 2012/05/18 06:36:31 jdhore Exp $
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> GStreamer-0.170.0.ebuild:
+  marked x86 per bug 412991
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> GStreamer-0.09.ebuild,
   GStreamer-0.160.0.ebuild, GStreamer-0.170.0.ebuild:
