@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.22 2012/04/30 10:28:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.23 2012/05/18 05:06:45 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> bluedevil-1.2.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
 *bluedevil-1.2.3 (30 Apr 2012)
 
