@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksnapshot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.207 2012/05/18 06:58:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.208 2012/05/18 20:36:09 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> ksnapshot-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> ksnapshot-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-mobipocket
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.10 2012/05/18 05:57:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-mobipocket/ChangeLog,v 1.11 2012/05/18 19:36:55 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  kdegraphics-mobipocket-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org>
   kdegraphics-mobipocket-4.8.3.ebuild:

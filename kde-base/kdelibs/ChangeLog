@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.845 2012/05/18 05:58:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.846 2012/05/18 19:38:16 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kdelibs-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> kdelibs-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

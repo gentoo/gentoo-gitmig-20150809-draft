@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kabcclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.92 2012/05/18 05:24:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.93 2012/05/18 19:08:24 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kabcclient-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> kabcclient-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

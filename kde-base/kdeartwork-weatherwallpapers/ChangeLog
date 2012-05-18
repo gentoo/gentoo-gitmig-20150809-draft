@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-weatherwallpapers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-weatherwallpapers/ChangeLog,v 1.88 2012/05/18 05:48:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-weatherwallpapers/ChangeLog,v 1.89 2012/05/18 19:29:10 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  kdeartwork-weatherwallpapers-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org>
   kdeartwork-weatherwallpapers-4.8.3.ebuild:

@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/kdesdk-meta-4.8.3.ebuild,v 1.2 2012/05/18 06:07:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/kdesdk-meta-4.8.3.ebuild,v 1.3 2012/05/18 19:46:26 ago Exp $
 
 EAPI=4
 inherit kde4-meta-pkg
 
 DESCRIPTION="KDE SDK - merge this to pull in all kdesdk-derived packages"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="cvs"
 
 RDEPEND="

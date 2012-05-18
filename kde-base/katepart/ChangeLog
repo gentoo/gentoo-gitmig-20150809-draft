@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katepart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.28 2012/05/18 05:31:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.29 2012/05/18 19:14:36 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> katepart-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> katepart-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

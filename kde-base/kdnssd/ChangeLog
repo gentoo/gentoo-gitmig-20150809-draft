@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.217 2012/05/18 06:13:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.218 2012/05/18 19:52:04 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kdnssd-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> kdnssd-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.136 2012/05/18 05:19:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.137 2012/05/18 19:03:50 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> dolphin-4.8.3-r1.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> dolphin-4.8.3-r1.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

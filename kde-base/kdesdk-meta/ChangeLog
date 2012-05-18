@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.199 2012/05/18 06:07:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.200 2012/05/18 19:46:26 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kdesdk-meta-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> kdesdk-meta-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

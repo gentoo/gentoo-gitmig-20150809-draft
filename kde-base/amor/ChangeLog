@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.210 2012/05/18 05:13:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.211 2012/05/18 18:58:37 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> amor-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> amor-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

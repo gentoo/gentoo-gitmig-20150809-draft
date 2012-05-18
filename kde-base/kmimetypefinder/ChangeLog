@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmimetypefinder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmimetypefinder/ChangeLog,v 1.120 2012/05/18 06:34:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmimetypefinder/ChangeLog,v 1.121 2012/05/18 20:13:00 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kmimetypefinder-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> kmimetypefinder-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

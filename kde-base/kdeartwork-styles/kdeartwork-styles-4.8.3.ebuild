@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/kdeartwork-styles-4.8.3.ebuild,v 1.2 2012/05/18 05:47:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/kdeartwork-styles-4.8.3.ebuild,v 1.3 2012/05/18 19:28:17 ago Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KMNAME="kdeartwork"
 inherit kde4-meta
 
 DESCRIPTION="Extra KWin styles and window decorations"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 add_blocker kwin '<4.5.67'

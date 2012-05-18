@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.193 2012/05/18 05:36:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.194 2012/05/18 19:19:15 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kcharselect-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> kcharselect-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.

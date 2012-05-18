@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-strigi-analyzer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-strigi-analyzer/ChangeLog,v 1.103 2012/05/18 06:05:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-strigi-analyzer/ChangeLog,v 1.104 2012/05/18 19:44:20 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  kdepim-strigi-analyzer-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org>
   kdepim-strigi-analyzer-4.8.3.ebuild:

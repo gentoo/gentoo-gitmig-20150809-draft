@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.134 2012/05/18 05:40:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.135 2012/05/18 19:22:45 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kde-l10n-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
 
   18 May 2012; Joseph Jezak <josejx@gentoo.org> kde-l10n-4.8.3.ebuild:
   Marked ~ppc ~ppc64 for bug #402989.
