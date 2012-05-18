@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.117 2012/04/21 17:10:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.118 2012/05/18 02:32:29 ryao Exp $
+
+  18 May 2012;  <richard@gentoo.org> htop-1.0.1.ebuild:
+  keyword ~amd64-fbsd
 
   21 Apr 2012; Raúl Porcel <armin76@gentoo.org> htop-1.0.1.ebuild:
   alpha/arm/sh/sparc stable wrt #412297
