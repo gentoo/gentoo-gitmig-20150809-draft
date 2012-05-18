@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/cb2bib-1.4.7.ebuild,v 1.4 2012/05/18 23:27:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/cb2bib-1.4.8.ebuild,v 1.1 2012/05/18 23:27:10 pesa Exp $
 
 EAPI=4
 
-inherit cmake-utils qt4-r2
+inherit cmake-utils
 
 DESCRIPTION="Tool for extracting unformatted bibliographic references"
 HOMEPAGE="http://www.molspaces.com/cb2bib/"
@@ -12,7 +12,7 @@ SRC_URI="http://www.molspaces.com/dl/progs/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug +lzo +poll"
 
 DEPEND="
@@ -36,18 +36,8 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-src_compile() {
-	cmake-utils_src_compile
-}
-
-src_install() {
-	cmake-utils_src_install
-
-	rm "${D}"/usr/share/${PN}/COPYRIGHT || die "rm COPYRIGHT failed"
-	rm "${D}"/usr/share/${PN}/LICENSE || die "rm LICENSE failed"
-}
-
 pkg_postinst() {
+	einfo
 	elog "For best functionality, emerge the following packages:"
 	elog "    app-text/poppler[utils] - for data import from PDF files"
 	elog "    app-text/dvipdfm        - for data import from DVI files"
@@ -57,4 +47,5 @@ pkg_postinst() {
 	elog "                              text strings"
 	elog "    virtual/latex-base      - to check for BibTeX file correctness and to get"
 	elog "                              nice printing through the shell script bib2pdf"
+	einfo
 }
