@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.4.ebuild,v 1.1 2012/05/14 06:03:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.4-r1.ebuild,v 1.1 2012/05/18 04:04:24 patrick Exp $
 
 EAPI="2"
 
@@ -11,19 +11,20 @@ SRC_URI="http://mmonit.com/monit/dist/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="ssl"
+IUSE="pam ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
-	sys-devel/bison"
+	sys-devel/bison
+	pam? ( virtual/pam )"
 
 src_prepare() {
 	sed -i -e '/^INSTALL_PROG/s/-s//' Makefile.in || die "sed failed in Makefile.in"
 }
 
 src_configure() {
-	econf $(use_with ssl) || die "econf failed"
+	econf $(use_with ssl) $(use_with pam) || die "econf failed"
 }
 
 src_compile() {
