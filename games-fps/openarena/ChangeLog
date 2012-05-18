@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/openarena
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.22 2011/09/25 21:32:21 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.23 2012/05/18 04:56:13 mr_bones_ Exp $
+
+*openarena-0.8.8 (18 May 2012)
+
+  18 May 2012; Michael Sterrett <mr_bones_@gentoo.org> +openarena-0.8.8.ebuild,
+  +files/openarena-0.8.8-makefile.patch,
+  +files/openarena-0.8.8-unbundling.patch:
+  version bump (bug #306617) with patches from hasufell
 
   25 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> openarena-0.8.5.ebuild:
   sed patch to build against newer zlib (bug #384395)
