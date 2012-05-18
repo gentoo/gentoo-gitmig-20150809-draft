@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.5.ebuild,v 1.1 2012/05/14 23:23:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.5.ebuild,v 1.2 2012/05/18 07:50:12 ago Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v${PV/_/} 
 
 LICENSE="MIT ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="+bip16 +eligius examples logrotate ssl upnp"
 
 RDEPEND="
