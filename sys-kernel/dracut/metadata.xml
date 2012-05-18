@@ -5,10 +5,6 @@
 		<email>aidecoe@gentoo.org</email>
 		<name>Amadeusz Żołnowski</name>
 	</maintainer>
-	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
 	<use>
 		<flag name="debug">Module installing additional tools like strace, file
 			editor, ssh and more</flag>
