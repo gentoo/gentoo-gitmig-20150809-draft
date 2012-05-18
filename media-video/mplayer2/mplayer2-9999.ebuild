@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.31 2012/05/14 10:32:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.32 2012/05/18 05:08:06 scarabeus Exp $
 
 EAPI=4
 
@@ -239,11 +239,9 @@ src_configure() {
 	#Optional features#
 	###################
 	# disable svga since we don't want it
-	# disable arts since we don't have kde3
 	# disable tremor, it needs libvorbisidec and is for FPU-less systems only
 	myconf+="
 		--disable-svga
-		--disable-arts
 		--disable-tremor
 		$(use_enable network networking)
 		$(use_enable joystick)
