@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.17 2012/05/18 23:46:19 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.18 2012/05/18 23:59:56 jdhore Exp $
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> pkgconf-0.8.ebuild:
+  Add ~x86-fbsd keyword.
 
   18 May 2012;  <richard@gentoo.org> pkgconf-0.8.ebuild:
   keyword ~amd64-fbsd
