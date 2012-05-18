@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.125 2012/05/15 19:38:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.126 2012/05/18 05:27:37 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kalgebra-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
   15 May 2012; Michael Palimaka <kensington@gentoo.org> kalgebra-4.8.3.ebuild:
   Unrestrict tests since they are no longer included, wrt bug #382561. Cleanup

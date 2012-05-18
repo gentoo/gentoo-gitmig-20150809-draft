@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-4.8.3.ebuild,v 1.1 2012/05/03 20:08:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-4.8.3.ebuild,v 1.2 2012/05/18 05:28:07 josejx Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ OPENGL_REQUIRED="always"
 inherit kde4-base flag-o-matic
 
 DESCRIPTION="KDE: periodic table of the elements."
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="editor debug +plasma solver"
 
 RDEPEND="

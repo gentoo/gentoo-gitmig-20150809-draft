@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/parley-4.8.3.ebuild,v 1.1 2012/05/03 20:07:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/parley-4.8.3.ebuild,v 1.2 2012/05/18 07:28:16 josejx Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KDE_SCM="git"
 inherit kde4-base
 
 DESCRIPTION="KDE Educational: vocabulary trainer"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug +plasma"
 
 DEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.291 2012/05/08 15:43:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.292 2012/05/18 06:13:05 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kdm-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
   08 May 2012; Johannes Huber <johu@gentoo.org> -kdm-4.8.2.ebuild,
   -kdm-4.8.2-r1.ebuild:

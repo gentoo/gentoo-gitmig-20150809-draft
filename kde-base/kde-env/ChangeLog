@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.142 2012/05/17 13:17:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.143 2012/05/18 05:39:57 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kde-env-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> kde-env-4.8.3.ebuild:
   keyword ~amd64-fbsd

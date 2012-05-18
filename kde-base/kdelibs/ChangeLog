@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.844 2012/05/17 17:59:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.845 2012/05/18 05:58:31 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kdelibs-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> kdelibs-4.8.3.ebuild:
   freebsd-lib-9.0 started provided a libutempter compatible interface. the good

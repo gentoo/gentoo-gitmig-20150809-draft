@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kremotecontrol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kremotecontrol/ChangeLog,v 1.48 2012/05/08 15:43:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kremotecontrol/ChangeLog,v 1.49 2012/05/18 06:51:14 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kremotecontrol-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
   08 May 2012; Johannes Huber <johu@gentoo.org> -kremotecontrol-4.8.2.ebuild:
   Remove KDE SC 4.8.2

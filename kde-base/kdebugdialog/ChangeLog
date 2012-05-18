@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebugdialog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.192 2012/05/08 15:43:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.193 2012/05/18 05:54:50 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kdebugdialog-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
   08 May 2012; Johannes Huber <johu@gentoo.org> -kdebugdialog-4.8.2.ebuild:
   Remove KDE SC 4.8.2

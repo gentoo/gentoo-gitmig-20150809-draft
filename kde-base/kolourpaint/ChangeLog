@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolourpaint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.208 2012/05/08 15:43:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.209 2012/05/18 06:42:00 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kolourpaint-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
   08 May 2012; Johannes Huber <johu@gentoo.org> -kolourpaint-4.8.2.ebuild:
   Remove KDE SC 4.8.2

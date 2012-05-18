@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.211 2012/05/08 15:43:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.212 2012/05/18 05:59:35 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org>
+  kdemultimedia-meta-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
 
   08 May 2012; Johannes Huber <johu@gentoo.org>
   -kdemultimedia-meta-4.8.2.ebuild:
