@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.15 2012/05/16 16:39:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.16 2012/05/18 05:37:40 jdhore Exp $
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> pyquery-1.1.1.ebuild:
+  marked x86 per bug 415783
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> pyquery-1.2.1.ebuild:
   Marked ~hppa (bug #416099).
