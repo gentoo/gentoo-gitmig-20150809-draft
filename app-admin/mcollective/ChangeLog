@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/mcollective
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.6 2012/03/09 05:20:10 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.7 2012/05/18 07:03:00 ramereth Exp $
+
+*mcollective-2.0.0 (18 May 2012)
+
+  18 May 2012; Lance Albertson <ramereth@gentoo.org> +mcollective-2.0.0.ebuild:
+  Version bump
 
   09 Mar 2012; Lance Albertson <ramereth@gentoo.org> mcollective-1.0.1.ebuild,
   mcollective-1.1.4.ebuild, mcollective-1.2.1.ebuild:
