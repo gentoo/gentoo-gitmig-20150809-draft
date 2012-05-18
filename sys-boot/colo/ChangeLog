@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/colo
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.21 2009/02/25 00:32:25 kumba Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.22 2012/05/18 14:17:11 mattst88 Exp $
+
+  18 May 2012; Matt Turner <mattst88@gentoo.org> colo-1.22.ebuild:
+  Drop pkg_setup that checks if we're using the cobalt profile. The cobalt
+  profiles are dead.
 
   25 Feb 2009; Joshua Kinard <kumba@gentoo.org> colo-1.22.ebuild:
   Make sys-boot/colo cross-compiler safe, dodge gcc-4.3.x stricter checks,

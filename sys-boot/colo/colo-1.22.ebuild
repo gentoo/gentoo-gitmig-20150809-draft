@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.22.ebuild,v 1.4 2009/02/25 00:32:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.22.ebuild,v 1.5 2012/05/18 14:17:11 mattst88 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,19 +12,8 @@ SLOT="0"
 KEYWORDS="-* ~mips"
 IUSE=""
 DEPEND=""
+RDEPEND=""
 RESTRICT="strip"
-
-pkg_setup() {
-	# See if we're on a cobalt system (must use the cobalt-mips profile)
-	if [ "${PROFILE_ARCH}" != "cobalt" ]; then
-		echo -e ""
-		eerror "This package is only intended for the Cobalt Microserver MIPS-based"
-		eerror "systems.  It will not function on any other MIPS-based system or any"
-		eerror "other architecture"
-		echo -e ""
-		die
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -62,7 +51,6 @@ src_compile() {
 
 src_install() {
 	# bins
-	cd "${S}"
 	dodir /usr/lib/colo
 	cp binaries/colo-chain.elf "${D}"/usr/lib/colo
 	cp binaries/colo-rom-image.bin "${D}"/usr/lib/colo
