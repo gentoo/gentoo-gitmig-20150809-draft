@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.144 2012/05/18 20:51:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.145 2012/05/18 20:52:59 dilfridge Exp $
+
+  18 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -ghostscript-gpl-9.04-r6.ebuild:
+  Remove old
 
   18 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   ghostscript-gpl-9.05-r2.ebuild:
