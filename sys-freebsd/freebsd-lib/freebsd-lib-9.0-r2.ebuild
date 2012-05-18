@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.14 2012/05/17 20:03:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.15 2012/05/18 01:31:08 aballier Exp $
 
 EAPI=2
 
@@ -217,7 +217,7 @@ bootstrap_csu() {
 # Compile libssp_nonshared.a and add it's path to LDFLAGS.
 bootstrap_libssp_nonshared() {
 	cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
-	NOFLAGSTRIP=yes freebsd_src_compile
+	freebsd_src_compile
 	append-ldflags "-L${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
 }
 
@@ -237,7 +237,10 @@ src_compile() {
 	# Bug #270098
 	append-flags $(test-flags -fno-strict-aliasing)
 
+	# strip flags and do not do it later, we only add safe, and in fact
+	# needed flags after all
 	strip-flags
+	export NOFLAGSTRIP=yes
 	if [ "${CTARGET}" != "${CHOST}" ]; then
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX RANLIB
@@ -268,7 +271,7 @@ src_compile() {
 	# Everything is now setup, build it!
 	for i in ${SUBDIRS} ; do
 		cd "${WORKDIR}/${i}/" || die "missing ${i}."
-		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile || die "make ${i} failed"
+		LDADD="-lssp_nonshared" freebsd_src_compile || die "make ${i} failed"
 	done
 }
 
