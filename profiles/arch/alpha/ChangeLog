@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.115 2012/05/15 11:28:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.116 2012/05/18 22:30:41 sping Exp $
+
+  18 May 2012; Sebastian Pipping <sping@gentoo.org> package.use.mask:
+  Mask >=media-gfx/gimp-2.7[udev]
 
   15 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE="udisks" for gnome-base/gvfs wrt #412801
