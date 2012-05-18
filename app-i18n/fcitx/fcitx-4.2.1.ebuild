@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.1.ebuild,v 1.6 2012/05/03 19:24:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.1.ebuild,v 1.7 2012/05/18 14:21:32 josejx Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="cairo dbus debug gtk gtk3 opencc pango qt table"
 
 RDEPEND="x11-libs/libX11

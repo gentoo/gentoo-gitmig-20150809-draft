@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/opencc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.5 2012/05/10 10:56:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.6 2012/05/18 14:20:03 josejx Exp $
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> opencc-0.2.0.ebuild:
+  Marked ~ppc/~ppc64.
 
   10 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -opencc-0.1.2.ebuild,
   opencc-0.2.0.ebuild:
