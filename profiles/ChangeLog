@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6564 2012/05/18 16:08:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6565 2012/05/18 16:09:58 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 May 2012; Alexis Ballier <aballier@gentoo.org>
+  +default/bsd/fbsd/amd64/8.2/deprecated:
+  deprecate default/bsd/fbsd/amd64/8.2 profile: we never had install media for
+  this anyway
 
   18 May 2012; Alexis Ballier <aballier@gentoo.org> profiles.desc:
   remove old and deprecated fbsd profiles from profiles.desc
