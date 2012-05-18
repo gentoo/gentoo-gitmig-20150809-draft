@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.113 2012/05/16 14:30:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.114 2012/05/18 07:31:42 jdhore Exp $
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> py-1.4.7.ebuild:
+  marked x86 per bug 415885
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> py-1.4.7.ebuild:
   Stable for HPPA (bug #415885).
