@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.17 2012/05/17 14:01:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.18 2012/05/18 00:24:37 ssuominen Exp $
 
 EAPI=4
 
@@ -91,6 +91,8 @@ DEPEND="${RDEPEND}
 	test? ( net-misc/wget )
 	v4l? ( sys-kernel/linux-headers )
 "
+
+PDEPEND="media-libs/libpostproc"
 
 # faac can't be binary distributed
 # openssl support marked as nonfree
