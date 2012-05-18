@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/beanstalkd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.26 2012/02/14 21:31:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.27 2012/05/18 03:56:40 patrick Exp $
+
+*beanstalkd-1.6 (18 May 2012)
+
+  18 May 2012; Patrick Lauer <patrick@gentoo.org> +beanstalkd-1.6.ebuild:
+  Bump for #416329
 
   14 Feb 2012; Ulrich Müller <ulm@gentoo.org> beanstalkd-1.5.ebuild:
   QA: Fix ebuild header, bug 398773.
