@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.32 2012/05/18 05:08:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.33 2012/05/18 19:38:42 lu_zero Exp $
 
 EAPI=4
 
@@ -210,7 +210,7 @@ src_prepare() {
 		${bash_scripts} || die
 
 	if [[ -n ${NAMESUF} ]]; then
-		sed -e "/elif linux ; then/a\  _exesuf=\"${NAMESUF}\"" \
+		sed -e "/^EXESUF/s,= \$_exesuf$,= ${NAMESUF}\$_exesuf," \
 			-i configure || die
 		sed -e "\, -m 644 DOCS/man/en/mplayer,i\	mv DOCS/man/en/mplayer.1 DOCS/man/en/${PN}.1" \
 			-e "\, -m 644 DOCS/man/\$(lang)/mplayer,i\	mv DOCS/man/\$(lang)/mplayer.1 DOCS/man/\$(lang)/${PN}.1" \
@@ -420,7 +420,6 @@ src_configure() {
 	# Audio Output #
 	################
 	myconf+=" --disable-rsound" # media-sound/rsound is in pro-audio overlay only
-	myconf+=" --disable-esd"
 	uses="alsa jack ladspa nas"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"

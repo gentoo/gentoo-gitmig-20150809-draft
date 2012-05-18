@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.48 2012/05/18 05:08:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.49 2012/05/18 19:38:42 lu_zero Exp $
+
+  18 May 2012; Luca Barbato <lu_zero@gentoo.org> mplayer2-9999.ebuild:
+  Update live ebuild, thanks to Nikoli for the input
 
   18 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   Arts switch is gone.
