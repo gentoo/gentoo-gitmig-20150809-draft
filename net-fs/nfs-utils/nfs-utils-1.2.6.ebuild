@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.2 2012/05/17 23:41:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.6.ebuild,v 1.3 2012/05/18 05:14:42 vapier Exp $
 
 EAPI="4"
 
@@ -91,8 +91,8 @@ src_install() {
 	if use nfsidmap ; then
 		# Install a config file for idmappers in newer kernels. #415625
 		insinto /etc/request-key.d
-		echo 'create id_resolver * * /usr/sbin/nfsidmap %k %d 600' > 50_id_resolver.conf
-		doins 50_id_resolver.conf
+		echo 'create id_resolver * * /usr/sbin/nfsidmap -t 600 %k %d' > id_resolver.conf
+		doins id_resolver.conf
 	fi
 
 	insinto /etc
