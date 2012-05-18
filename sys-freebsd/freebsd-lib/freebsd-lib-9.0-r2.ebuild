@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.16 2012/05/18 01:35:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.17 2012/05/18 01:48:00 aballier Exp $
 
 EAPI=2
 
@@ -173,10 +173,6 @@ src_prepare() {
 		sed -i.bak -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
 	fi
 
-	# Preinstall includes so we don't use the system's ones.
-	mkdir "${WORKDIR}/include_proper" || die "Couldn't create ${WORKDIR}/include_proper"
-	install_includes "/include_proper"
-
 	# Let arch-specific includes to be found
 	local machine
 	machine=$(tc-arch-kernel ${CTARGET})
@@ -254,9 +250,9 @@ src_compile() {
 
 		SUBDIRS="lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
 	else
-		# Forces to use the local copy of headers as they might be outdated in
-		# the system
-		append-flags "-isystem '${WORKDIR}/include_proper'"
+		# Forces to use the local copy of headers with USE=build as they might
+		# be outdated in the system. Assume they are fine otherwise.
+		use build && append-flags "-isystem '${WORKDIR}/include_proper'"
 
 		bootstrap_libssp_nonshared
 
