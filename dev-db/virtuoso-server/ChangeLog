@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.32 2012/05/13 18:39:59 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.33 2012/05/18 16:42:08 aballier Exp $
+
+  18 May 2012; Alexis Ballier <aballier@gentoo.org>
+  virtuoso-server-6.1.4-r1.ebuild:
+  keyword ~amd64-fbsd
 
 *virtuoso-server-6.1.4-r1 (13 May 2012)
 
