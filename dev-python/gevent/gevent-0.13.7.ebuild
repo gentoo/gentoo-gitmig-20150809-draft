@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/gevent-0.13.7.ebuild,v 1.1 2012/05/18 10:59:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/gevent-0.13.7.ebuild,v 1.2 2012/05/18 11:37:25 xarthisius Exp $
 
 EAPI=4
 
@@ -13,10 +13,10 @@ DESCRIPTION="A Python networking library that uses greenlet to provide synchrono
 HOMEPAGE="http://pypi.python.org/pypi/gevent/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
-IUSE="doc examples"
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc examples"
 
 RDEPEND="dev-libs/libevent
 	dev-python/greenlet"
