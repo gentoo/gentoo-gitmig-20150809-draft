@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.314 2012/05/18 00:39:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.315 2012/05/18 08:02:07 grobian Exp $
+
+  18 May 2012; Fabian Groffen <grobian@gentoo.org> sudo-1.8.5_p1.ebuild:
+  Add two more paths to chown in the Prefix instructions
 
 *sudo-1.8.5_p1 (18 May 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.5_p1.ebuild,v 1.1 2012/05/18 00:39:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.5_p1.ebuild,v 1.2 2012/05/18 08:02:07 grobian Exp $
 
 EAPI="4"
 
@@ -171,6 +171,8 @@ pkg_postinst() {
 		ewarn "  # chown root:root ${EPREFIX}/usr/bin/sudo"
 		ewarn "  # chown root:root ${EPREFIX}/usr/lib/sudo/sudoers.so"
 		ewarn "  # chown root:root ${EPREFIX}/etc/sudoers"
+		ewarn "  # chown root:root ${EPREFIX}/etc/sudoers.d"
+		ewarn "  # chown root:root ${EPREFIX}/var/db/sudo"
 		ewarn "  # chmod 4111 ${EPREFIX}/usr/bin/sudo"
 		ewarn
 	fi
