@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ushare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.5 2012/05/05 08:58:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.6 2012/05/18 08:04:02 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> ushare-1.1a-r1.ebuild:
+  Stable for amd64, wrt bug #415723
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> ushare-1.1a-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
