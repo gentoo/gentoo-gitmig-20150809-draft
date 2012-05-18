@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libircclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.3 2012/04/15 16:24:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.4 2012/05/18 06:53:12 jdhore Exp $
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> libircclient-1.6.ebuild:
+  marked x86 per bug 416183
 
   15 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> libircclient-1.6.ebuild,
   +files/libircclient-1.6-include.patch:
