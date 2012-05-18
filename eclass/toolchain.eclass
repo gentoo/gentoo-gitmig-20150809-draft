@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.537 2012/05/15 18:51:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.538 2012/05/18 04:59:55 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -960,13 +960,16 @@ gcc-compiler-configure() {
 			fi
 
 			# Enable hardvfp
-			if [[ ${CTARGET##*-} == *eabi* ]] && \
-			   [[ $(tc-is-hardfloat) == yes ]] && \
+			if [[ $(tc-is-softfloat) == no ]] && \
+			   [[ ${CTARGET} == armv[67]* ]] && \
 			   tc_version_is_at_least "4.5"
 			then
-				confgcc+=" --with-float=hard"
 				# Follow the new arm hardfp distro standard by default
-				confgcc+=" --with-fpu=vfpv3-d16"
+				confgcc+=" --with-float=hard"
+				case ${CTARGET} in
+				armv6*) confgcc+=" --with-fpu=vfp" ;;
+				armv7*) confgcc+=" --with-fpu=vfpv3-d16" ;;
+				esac
 			fi
 			;;
 		# Add --with-abi flags to set default ABI
