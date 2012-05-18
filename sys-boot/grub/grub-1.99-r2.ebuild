@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.10 2012/02/29 08:45:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.11 2012/05/18 15:01:23 josejx Exp $
 
 EAPI=4
 
@@ -54,7 +54,9 @@ RDEPEND="
 		sdl? ( media-libs/libsdl )
 	)
 	device-mapper? ( >=sys-fs/lvm2-2.02.45 )
-	truetype? ( media-libs/freetype >=media-fonts/unifont-5 )"
+	truetype? ( media-libs/freetype >=media-fonts/unifont-5 )
+	ppc? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
+	ppc64? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )"
 DEPEND="${RDEPEND}
 	>=dev-lang/python-2.5.2
 	sys-devel/flex
