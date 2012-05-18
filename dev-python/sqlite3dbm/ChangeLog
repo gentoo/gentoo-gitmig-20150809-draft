@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/sqlite3dbm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlite3dbm/ChangeLog,v 1.1 2012/05/18 13:46:11 xarthisius Exp $
+
+*sqlite3dbm-0.1.4 (18 May 2012)
+
+  18 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +metadata.xml,
+  +sqlite3dbm-0.1.4.ebuild:
+  Initial import, fixes #415537. Ebuild written by Ian Delaney
+  <johneed@hotmail.com>
+
