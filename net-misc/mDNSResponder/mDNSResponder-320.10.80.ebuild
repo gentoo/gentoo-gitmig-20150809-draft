@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-320.10.80.ebuild,v 1.1 2012/05/17 20:38:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-320.10.80.ebuild,v 1.2 2012/05/18 20:06:31 dilfridge Exp $
 
 EAPI=4
 
@@ -98,11 +98,14 @@ src_install() {
 	dobin "${S}"/mDNSPosix/build/${objdir}/mDNSClientPosix
 
 	dolib "${S}"/mDNSPosix/build/${objdir}/libdns_sd.so
-	dolib "${S}"/mDNSPosix/build/${objdir}/libjdns_sd.so
 	dolib "${S}"/mDNSPosix/build/${objdir}/libnss_mdns-0.2.so
 	dosym libdns_sd.so /usr/$(get_libdir)/libdns_sd.so.1
-	dosym libjdns_sd.so /usr/$(get_libdir)/libjdns_sd.so.1
 	dosym libnss_mdns-0.2.so /usr/$(get_libdir)/libnss_mdns.so.2
+
+	if use java ; then
+		dolib "${S}"/mDNSPosix/build/${objdir}/libjdns_sd.so
+		dosym libjdns_sd.so /usr/$(get_libdir)/libjdns_sd.so.1
+	fi
 
 	newinitd "${FILESDIR}"/mdnsd.init.d mdnsd
 	newinitd "${FILESDIR}"/mDNSResponderPosix.init.d mDNSResponderPosix

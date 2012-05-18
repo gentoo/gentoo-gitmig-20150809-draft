@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.62 2012/05/17 21:41:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.63 2012/05/18 20:06:31 dilfridge Exp $
+
+  18 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  mDNSResponder-320.10.80.ebuild:
+  Fix build with USE=-java, bug 416461; thanks to Polynomial-C
 
   17 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -mDNSResponder-212.1-r1.ebuild:
