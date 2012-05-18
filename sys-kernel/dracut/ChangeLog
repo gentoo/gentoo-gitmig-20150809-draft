@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.61 2012/05/18 06:45:48 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.62 2012/05/18 08:12:04 aidecoe Exp $
+
+  18 May 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-018-r1.ebuild:
+  Added 'bootchart' module.
 
   18 May 2012; Lance Albertson <ramereth@gentoo.org> metadata.xml:
   remove myself as a maintainer

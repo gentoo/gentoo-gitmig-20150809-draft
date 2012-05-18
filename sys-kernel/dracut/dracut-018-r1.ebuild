@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018-r1.ebuild,v 1.1 2012/05/16 09:49:32 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018-r1.ebuild,v 1.2 2012/05/18 08:12:04 aidecoe Exp $
 
 EAPI=4
 
@@ -28,6 +28,7 @@ REQUIRED_USE="dracut_modules_crypt-gpg? ( dracut_modules_crypt )
 	"
 COMMON_MODULES="
 	dracut_modules_biosdevname
+	dracut_modules_bootchart
 	dracut_modules_btrfs
 	dracut_modules_caps
 	dracut_modules_crypt-gpg
@@ -73,6 +74,7 @@ RDEPEND="
 	net? ( net-misc/curl >=net-misc/dhcp-4.2.1-r1 sys-apps/iproute2 )
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )
 	dracut_modules_biosdevname? ( sys-apps/biosdevname )
+	dracut_modules_bootchart? ( app-benchmarks/bootchart2 )
 	dracut_modules_btrfs? ( sys-fs/btrfs-progs )
 	dracut_modules_caps? ( sys-libs/libcap )
 	dracut_modules_crypt? ( sys-fs/cryptsetup )
@@ -205,7 +207,7 @@ src_install() {
 	rm_module 01fips 02fips-aesni
 
 	# Remove extra modules which go to future dracut-extras
-	rm_module 00bootchart 05busybox 97masterkey 98ecryptfs 98integrity
+	rm_module 05busybox 97masterkey 98ecryptfs 98integrity
 }
 
 pkg_postinst() {
