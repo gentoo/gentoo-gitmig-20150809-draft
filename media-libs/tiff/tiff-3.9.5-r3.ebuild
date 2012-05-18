@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.5-r3.ebuild,v 1.1 2012/05/14 20:18:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.5-r3.ebuild,v 1.2 2012/05/18 08:08:11 ago Exp $
 
 # this ebuild is only for the libtiff.so.3 (+ 4) and libtiffxx.so.3 (+ 4) SONAME for ABI compat
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cxx jbig jpeg zlib"
 
 RDEPEND="jpeg? ( virtual/jpeg )

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.196 2012/05/14 20:18:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.197 2012/05/18 08:08:11 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> tiff-3.9.5-r3.ebuild:
+  Stable for amd64, wrt bug #416055
 
 *tiff-3.9.5-r3 (14 May 2012)
 
