@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/l7-filter-userspace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.14 2012/05/11 09:11:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.15 2012/05/18 15:55:35 xarthisius Exp $
+
+  18 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  l7-filter-userspace-0.12_beta1.ebuild:
+  (proxy commit) update dependencies wrt #416477 by <bjozac@gmail.com>
 
 *l7-filter-userspace-0.12_beta1 (11 May 2012)
 

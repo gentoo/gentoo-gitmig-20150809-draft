@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/l7-filter-userspace-0.12_beta1.ebuild,v 1.1 2012/05/11 09:11:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/l7-filter-userspace-0.12_beta1.ebuild,v 1.2 2012/05/18 15:55:35 xarthisius Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ IUSE=""
 SLOT="0"
 
 DEPEND=">=net-libs/libnetfilter_conntrack-0.0.100
-	net-libs/libnetfilter_queue"
+	>=net-libs/libnetfilter_queue-1.0.0
+	net-libs/libnfnetlink"
 RDEPEND="${DEPEND}
 	net-misc/l7-protocols"
 
