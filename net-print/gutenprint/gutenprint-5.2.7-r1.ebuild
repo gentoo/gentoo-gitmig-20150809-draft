@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.7-r1.ebuild,v 1.9 2012/05/08 16:00:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.7-r1.ebuild,v 1.10 2012/05/18 20:56:08 dilfridge Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="cups foomaticdb gimp gtk nls readline ppds static-libs"
 
 RDEPEND="app-text/ghostscript-gpl
 	dev-lang/perl
-	sys-libs/readline
+	readline? ( sys-libs/readline )
 	cups? ( >=net-print/cups-1.1.14 )
 	foomaticdb? ( net-print/foomatic-db-engine )
 	gimp? ( >=media-gfx/gimp-2.2 x11-libs/gtk+:2 )
