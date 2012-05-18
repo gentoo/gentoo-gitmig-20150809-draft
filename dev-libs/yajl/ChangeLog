@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.25 2012/05/12 12:50:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.26 2012/05/18 08:47:52 aballier Exp $
+
+  18 May 2012; Alexis Ballier <aballier@gentoo.org> yajl-2.0.4.ebuild:
+  keyword ~amd64-fbsd
 
   12 May 2012; Markus Meier <maekke@gentoo.org> yajl-2.0.3.ebuild:
   arm stable, bug #402287
