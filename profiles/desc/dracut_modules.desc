@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dracut_modules.desc,v 1.6 2012/02/16 10:04:10 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dracut_modules.desc,v 1.7 2012/05/18 07:20:56 aidecoe Exp $
 
 # This file contains descriptions of DRACUT_MODULES USE_EXPAND flags.
 
+bootchart - Measure performance of the boot process for later visualisation
 biosdevname - Name devices with names returned by BIOS
 btrfs - Scan for Btrfs on block devices
 caps - Load kernel modules and drop this privilege for real init
