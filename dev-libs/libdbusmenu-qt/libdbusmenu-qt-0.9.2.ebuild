@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.2.ebuild,v 1.1 2012/05/17 23:10:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.2.ebuild,v 1.2 2012/05/18 20:16:57 creffett Exp $
 
 EAPI=4
 
 QT_DEPEND="4.6.3"
-EGIT_REPO_URI="git://gitorious.org/dbusmenu/dbusmenu-qt.git"
+EBZR_REPO_URI="lp:libdbusmenu-qt"
 
-[[ ${PV} == 9999* ]] && GIT_ECLASS="git-2"
-inherit cmake-utils virtualx ${GIT_ECLASS}
+[[ ${PV} == 9999* ]] && BZR_ECLASS="bzr"
+inherit cmake-utils virtualx ${BZR_ECLASS}
 
 DESCRIPTION="A library providing Qt implementation of DBusMenu specification"
 HOMEPAGE="https://launchpad.net/libdbusmenu-qt/"
