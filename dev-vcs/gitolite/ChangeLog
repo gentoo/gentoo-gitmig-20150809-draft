@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/gitolite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.14 2012/02/15 22:16:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.15 2012/05/18 23:04:01 idl0r Exp $
+
+*gitolite-2.3.1 (18 May 2012)
+
+  18 May 2012; Christian Ruppert <idl0r@gentoo.org> gitolite-2.3.ebuild,
+  +gitolite-2.3.1.ebuild:
+  Version bump, bug 413335
 
 *gitolite-2.3 (15 Feb 2012)
 
