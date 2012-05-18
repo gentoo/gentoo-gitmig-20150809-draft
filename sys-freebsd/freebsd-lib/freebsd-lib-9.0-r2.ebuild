@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.18 2012/05/18 02:03:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.19 2012/05/18 16:17:08 aballier Exp $
 
 EAPI=2
 
@@ -218,6 +218,13 @@ bootstrap_libssp_nonshared() {
 	export LDADD="-lssp_nonshared"
 }
 
+# What to build for a non-native build: cross-compiler, non-native abi in
+# multilib. We also need the csu but this has to be handled separately.
+NON_NATIVE_SUBDIRS="lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
+
+# Subdirs for a native build:
+NATIVE_SUBDIRS="lib gnu/lib/libssp gnu/lib/libregex"
+
 src_compile() {
 	# Does not work with GNU sed
 	# Force BSD's sed on BSD.
@@ -249,7 +256,7 @@ src_compile() {
 
 		bootstrap_libssp_nonshared
 
-		SUBDIRS="lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
+		SUBDIRS="${NON_NATIVE_SUBDIRS}"
 	else
 		# Forces to use the local copy of headers with USE=build as they might
 		# be outdated in the system. Assume they are fine otherwise.
@@ -257,7 +264,7 @@ src_compile() {
 
 		use build && bootstrap_libssp_nonshared
 
-		SUBDIRS="lib gnu/lib/libssp gnu/lib/libregex"
+		SUBDIRS="${NATIVE_SUBDIRS}"
 	fi
 
 	export RAW_LDFLAGS=$(raw-ldflags)
@@ -320,13 +327,13 @@ src_install() {
 			INCLUDEDIR=/usr/${CTARGET}/usr/include \
 			SHLIBDIR=/usr/${CTARGET}/usr/lib \
 			LIBDIR=/usr/${CTARGET}/usr/lib"
-		SUBDIRS="$(get_csudir $(tc-arch-kernel ${CTARGET})) lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
+		SUBDIRS="$(get_csudir $(tc-arch-kernel ${CTARGET})) ${NON_NATIVE_SUBDIRS}"
 
 		dosym "usr/include" "/usr/${CTARGET}/sys-include"
 	else
 		# Set SHLIBDIR and LIBDIR for multilib
 		mymakeopts="${mymakeopts} SHLIBDIR=/usr/${mylibdir} LIBDIR=/usr/${mylibdir}"
-		SUBDIRS="gnu/lib/libssp lib gnu/lib/libregex"
+		SUBDIRS="${NATIVE_SUBDIRS}"
 	fi
 
 	for i in ${SUBDIRS} ; do
