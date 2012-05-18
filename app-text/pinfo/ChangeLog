@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.61 2012/05/16 14:18:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.62 2012/05/18 07:25:19 jdhore Exp $
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> pinfo-0.6.10-r3.ebuild:
+  marked x86 per bug 415291
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> pinfo-0.6.10-r3.ebuild:
   Stable for HPPA (bug #415291).
