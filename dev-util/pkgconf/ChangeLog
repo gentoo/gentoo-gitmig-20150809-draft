@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.14 2012/05/12 08:10:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.15 2012/05/18 22:10:07 ryao Exp $
+
+  18 May 2012;  <richard@gentoo.org> pkgconf-0.8.ebuild:
+  Drop ~amd64-fbsd keyword. A regression broke pkgconf on amd64-fbsd before 0.8
+  was tagged. -9999 works though.
 
 *pkgconf-0.8 (12 May 2012)
 
