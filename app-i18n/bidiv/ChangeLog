@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/bidiv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/ChangeLog,v 1.14 2012/05/03 19:24:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/ChangeLog,v 1.15 2012/05/18 08:07:04 ago Exp $
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> bidiv-1.5-r1.ebuild:
+  Stable for amd64, wrt bug #416075
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> bidiv-1.5-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
