@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyasn1-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.9 2012/03/02 10:06:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.10 2012/05/18 14:30:19 floppym Exp $
+
+*pyasn1-modules-0.0.3 (18 May 2012)
+
+  18 May 2012; Mike Gilbert <floppym@gentoo.org> +pyasn1-modules-0.0.3.ebuild:
+  Version bump for bug 416177. Thanks to Ian Delaney for helping with the test
+  function.
 
 *pyasn1-modules-0.0.2 (02 Mar 2012)
 
