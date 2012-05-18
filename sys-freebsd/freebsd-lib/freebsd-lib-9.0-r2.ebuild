@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.20 2012/05/18 16:37:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.21 2012/05/18 17:38:01 aballier Exp $
 
 EAPI=2
 
@@ -225,6 +225,18 @@ NON_NATIVE_SUBDIRS="lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
 # Subdirs for a native build:
 NATIVE_SUBDIRS="lib gnu/lib/libssp gnu/lib/libregex"
 
+# Do we need to bootstrap the csu and libssp_nonshared?
+need_bootstrap() {
+	[ "${CTARGET}" != "${CHOST}" ] || use build
+}
+
+# Bootstrap the core libraries and setup the flags so that the other parts can
+# build against it.
+do_bootstrap() {
+	bootstrap_csu
+	bootstrap_libssp_nonshared
+}
+
 src_compile() {
 	# Does not work with GNU sed
 	# Force BSD's sed on BSD.
@@ -251,22 +263,15 @@ src_compile() {
 		mymakeopts="${mymakeopts} NLS="
 		append-flags "-isystem /usr/${CTARGET}/usr/include"
 		append-ldflags "-L${WORKDIR}/lib/libc"
-
-		bootstrap_csu
-
-		bootstrap_libssp_nonshared
-
 		SUBDIRS="${NON_NATIVE_SUBDIRS}"
 	else
 		# Forces to use the local copy of headers with USE=build as they might
 		# be outdated in the system. Assume they are fine otherwise.
 		use build && append-flags "-isystem '${WORKDIR}/include_proper'"
-
-		use build && bootstrap_csu
-		use build && bootstrap_libssp_nonshared
-
 		SUBDIRS="${NATIVE_SUBDIRS}"
 	fi
+
+	need_bootstrap && do_bootstrap
 
 	export RAW_LDFLAGS=$(raw-ldflags)
 
