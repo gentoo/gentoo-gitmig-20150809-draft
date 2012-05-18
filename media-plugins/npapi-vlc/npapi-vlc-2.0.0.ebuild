@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/npapi-vlc-2.0.0.ebuild,v 1.3 2012/05/05 08:27:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/npapi-vlc-2.0.0.ebuild,v 1.4 2012/05/18 07:52:16 ago Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 	SRC_URI="http://download.videolan.org/pub/videolan/vlc/${PV}/${P}.tar.xz"
 	DEPEND="app-arch/xz-utils"
 else
