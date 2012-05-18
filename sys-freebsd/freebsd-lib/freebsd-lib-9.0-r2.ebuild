@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.17 2012/05/18 01:48:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.18 2012/05/18 02:03:29 aballier Exp $
 
 EAPI=2
 
@@ -215,6 +215,7 @@ bootstrap_libssp_nonshared() {
 	cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
 	freebsd_src_compile
 	append-ldflags "-L${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
+	export LDADD="-lssp_nonshared"
 }
 
 src_compile() {
@@ -254,7 +255,7 @@ src_compile() {
 		# be outdated in the system. Assume they are fine otherwise.
 		use build && append-flags "-isystem '${WORKDIR}/include_proper'"
 
-		bootstrap_libssp_nonshared
+		use build && bootstrap_libssp_nonshared
 
 		SUBDIRS="lib gnu/lib/libssp gnu/lib/libregex"
 	fi
@@ -264,7 +265,7 @@ src_compile() {
 	# Everything is now setup, build it!
 	for i in ${SUBDIRS} ; do
 		cd "${WORKDIR}/${i}/" || die "missing ${i}."
-		LDADD="-lssp_nonshared" freebsd_src_compile || die "make ${i} failed"
+		freebsd_src_compile || die "make ${i} failed"
 	done
 }
 
