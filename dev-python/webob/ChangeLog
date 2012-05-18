@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.50 2012/05/15 15:59:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.51 2012/05/18 06:07:32 jdhore Exp $
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> webob-1.1.ebuild:
+  marked x86 per bug 415865
 
 *webob-1.2_rc1 (15 May 2012)
 
