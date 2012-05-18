@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.44 2012/05/05 19:45:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.45 2012/05/18 23:50:17 ryao Exp $
+
+  18 May 2012;  <richard@gentoo.org> YAML-Syck-1.200.0.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Brent Baude <ranger@gentoo.org> YAML-Syck-1.200.0.ebuild:
   Marking YAML-Syck-1.200.0 ppc for bug 413009
