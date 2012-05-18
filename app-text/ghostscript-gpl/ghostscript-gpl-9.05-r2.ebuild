@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.05-r2.ebuild,v 1.1 2012/05/09 19:48:38 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.05-r2.ebuild,v 1.2 2012/05/18 20:51:44 dilfridge Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ SRC_URI="
 LICENSE="GPL-3 CPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="bindist cups dbus djvu gtk idn jpeg2k static-libs X"
+IUSE="bindist cups dbus djvu gtk idn jpeg2k linguas_de static-libs X"
 
 COMMON_DEPEND="
 	app-text/libpaper
@@ -220,4 +220,6 @@ src_install() {
 	dosym /usr/share/poppler/cMaps /usr/share/ghostscript/${PVM}/Resource/CMap
 
 	use static-libs || find "${D}" -name '*.la' -delete
+
+	use linguas_de || rm -r "${D}"/usr/share/man/de
 }
