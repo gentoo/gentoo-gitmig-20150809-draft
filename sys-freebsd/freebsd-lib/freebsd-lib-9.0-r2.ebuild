@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.15 2012/05/18 01:31:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.16 2012/05/18 01:35:07 aballier Exp $
 
 EAPI=2
 
@@ -245,15 +245,12 @@ src_compile() {
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX RANLIB
 		mymakeopts="${mymakeopts} NLS="
+		append-flags "-isystem /usr/${CTARGET}/usr/include"
+		append-ldflags "-L${WORKDIR}/lib/libc"
 
 		bootstrap_csu
 
-		append-flags "-isystem /usr/${CTARGET}/usr/include"
-
 		bootstrap_libssp_nonshared
-
-		append-ldflags "-L${WORKDIR}/lib/libc"
-		export RAW_LDFLAGS=$(raw-ldflags)
 
 		SUBDIRS="lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
 	else
@@ -263,10 +260,10 @@ src_compile() {
 
 		bootstrap_libssp_nonshared
 
-		export RAW_LDFLAGS=$(raw-ldflags)
-
 		SUBDIRS="lib gnu/lib/libssp gnu/lib/libregex"
 	fi
+
+	export RAW_LDFLAGS=$(raw-ldflags)
 
 	# Everything is now setup, build it!
 	for i in ${SUBDIRS} ; do
