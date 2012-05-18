@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.8.10.ebuild,v 1.2 2012/05/14 16:03:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.8.10.ebuild,v 1.3 2012/05/18 06:13:49 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI="http://samba.org/~jelmer/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 LGPL-3 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~x86"
+KEYWORDS="~alpha amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-vcs/subversion-1.4"
