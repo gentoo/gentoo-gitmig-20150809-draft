@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.122 2012/04/26 13:40:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.123 2012/05/18 18:18:53 ryao Exp $
+
+  18 May 2012;  <richard@gentoo.org> libarchive-3.0.3.ebuild:
+  keyword ~amd64-fbsd
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libarchive-3.0.4.ebuild:
   keyword ~amd64-fbsd
