@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.0_rc4.ebuild,v 1.1 2012/05/13 21:42:17 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.0_rc5.ebuild,v 1.1 2012/05/18 05:31:08 mattm Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 KEYWORDS=""
-IUSE="agent java curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server ssh snmp +sqlite iodbc odbc static"
+IUSE="agent java curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server ssh snmp sqlite iodbc odbc static"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
@@ -174,6 +174,8 @@ pkg_postinst() {
 	elog "Zabbix will be officially supporting database upgrades from"
 	elog "2.0.0rc3 to the final 2.0.0 release when it is available."
 	elog
+	elog "Upgrading from rc3/rc4 to rc5 also requires db update."
+	elog
 	elog "At some point, there should be some support for upgrading from 1.8.x"
 	elog "to a 2.0.x release."
 	elog
@@ -327,7 +329,7 @@ src_install() {
 			"${FILESDIR}/1.6.6"/zabbix_agent.conf \
 			"${FILESDIR}/1.6.6"/zabbix_agentd.conf
 		doinitd \
-			"${FILESDIR}/1.6.6"/init.d/zabbix-agentd
+			"${FILESDIR}/2.0"/init.d/zabbix-agentd
 		dosbin \
 			src/zabbix_agent/zabbix_agent \
 			src/zabbix_agent/zabbix_agentd
