@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlite3dbm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlite3dbm/ChangeLog,v 1.1 2012/05/18 13:46:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlite3dbm/ChangeLog,v 1.2 2012/05/19 11:21:32 xarthisius Exp $
+
+  19 May 2012; Kacper Kowalik <xarthisius@gentoo.org> sqlite3dbm-0.1.4.ebuild:
+  Add ~x86 keyword
 
 *sqlite3dbm-0.1.4 (18 May 2012)
 
