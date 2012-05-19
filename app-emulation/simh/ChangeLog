@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/simh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.15 2012/05/10 14:56:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.16 2012/05/19 09:52:52 xmw Exp $
+
+*simh-3.9.0 (19 May 2012)
+
+  19 May 2012; Michael Weber <xmw@gentoo.org> +simh-3.9.0.ebuild,
+  +files/simh-3.9.0-fix-mkdir-race.patch,
+  +files/simh-3.9.0-respect-FLAGS.patch, metadata.xml:
+  Version bump and proxy-maint (bug 416173, thanks Alex Buell), EAPI-4, respect
+  LDFLAGS, ebuild cleanups.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -simh-3.5.2.ebuild,
   -simh-3.7.0.ebuild:
