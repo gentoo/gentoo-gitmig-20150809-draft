@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.25 2012/04/25 16:09:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.26 2012/05/19 10:35:42 nelchael Exp $
+
+*man-pages-pl-0.2 (19 May 2012)
+
+  19 May 2012; Krzysztof Pawlik <nelchael@gentoo.org> +man-pages-pl-0.2.ebuild,
+  -man-pages-pl-20070628.ebuild:
+  Version bump, project has new home page and new maintainers. Remove old
+  version.
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> man-pages-pl-20070628.ebuild,
   man-pages-pl-20070628-r1.ebuild:
