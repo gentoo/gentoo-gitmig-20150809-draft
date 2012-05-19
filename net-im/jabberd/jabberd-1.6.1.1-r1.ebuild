@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.21 2012/05/19 14:43:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.22 2012/05/19 14:50:11 ssuominen Exp $
 
 EAPI=4
 WANT_AUTOMAKE=1.9
 inherit autotools eutils
 
 DESCRIPTION="Open-source Jabber server"
-HOMEPAGE="http://www.jabber.org"
+HOMEPAGE="http://www.jabber.org/ http://jabberd.org/"
 SRC_URI="http://download.jabberd.org/jabberd14/jabberd14-${PV}.tar.gz"
 
 LICENSE="GPL-2"

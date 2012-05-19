@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabberd-1.6.1.1.init,v 1.1 2008/06/18 12:24:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabberd-1.6.1.1.init,v 1.2 2012/05/19 14:50:10 ssuominen Exp $
 
 depend() {
 
@@ -14,7 +14,7 @@ start() {
 
 	ebegin "Starting Jabber Server"
 	start-stop-daemon --start \
-		-c jabber:jabber \
+		--user jabber:jabber \
 		-x /usr/bin/jabberd -- -B -c /etc/jabber/jabberd.xml
 	eend $?
 
