@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/vimpc-0.03.ebuild,v 1.2 2012/05/05 08:53:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/vimpc-0.05.ebuild,v 1.1 2012/05/19 12:06:04 angelos Exp $
 
 EAPI=4
 
 DESCRIPTION="An ncurses based mpd client with vi like key bindings."
 HOMEPAGE="http://vimpc.sourceforge.net/"
-SRC_URI="mirror://sourceforge/project/${PN}/Release%200.03/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/project/${PN}/Release%20${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
