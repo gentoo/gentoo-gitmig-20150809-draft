@@ -1,6 +1,10 @@
 # ChangeLog for games-util/catcodec
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/catcodec/ChangeLog,v 1.9 2011/07/23 16:50:09 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/catcodec/ChangeLog,v 1.10 2012/05/19 20:27:17 mr_bones_ Exp $
+
+  19 May 2012; Michael Sterrett <mr_bones_@gentoo.org> catcodec-1.0.3.ebuild,
+  +files/catcodec-1.0.3-gcc47.patch:
+  build with gcc47 with patch from Nicolas Schlumberger via bug #413861
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> catcodec-1.0.3.ebuild:
   ppc/ppc64 stable wrt #375389

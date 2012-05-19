@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/catcodec/catcodec-1.0.3.ebuild,v 1.4 2011/07/23 16:50:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/catcodec/catcodec-1.0.3.ebuild,v 1.5 2012/05/19 20:27:17 mr_bones_ Exp $
 
 EAPI=2
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Decodes and encodes sample catalogues for OpenTTD"
 HOMEPAGE="http://www.openttd.org/en/download-catcodec"
@@ -16,6 +16,7 @@ IUSE=""
 
 src_prepare() {
 	tc-export CXX
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_compile() {
