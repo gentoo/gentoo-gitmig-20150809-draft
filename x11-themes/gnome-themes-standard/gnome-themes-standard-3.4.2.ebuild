@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.4.0.ebuild,v 1.3 2012/05/05 04:10:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.4.2.ebuild,v 1.1 2012/05/19 09:36:05 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,9 +21,9 @@ COMMON_DEPEND="gnome-base/librsvg:2
 	>=x11-libs/gtk+-3.3.14:3
 	>=x11-themes/gtk-engines-2.15.3:2"
 DEPEND="${COMMON_DEPEND}
-	virtual/pkgconfig
 	>=dev-util/intltool-0.40
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 # gnome-themes{,-extras} are OBSOLETE for GNOME 3
 # http://comments.gmane.org/gmane.comp.gnome.desktop/44130
 # Depend on gsettings-desktop-schemas-3.4 to make sure 3.2 users don't lose
