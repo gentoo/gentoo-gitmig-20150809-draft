@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.64 2011/11/22 18:42:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.65 2012/05/19 13:40:52 pesa Exp $
 
+# @DEAD
 # @DEPRECATED
 # This eclass has been superseded by qt4-r2
 # Please modify your ebuilds to use that instead
@@ -12,7 +13,7 @@
 # Markos Chandras <hwoarang@gentoo.org>
 # Caleb Tennis <caleb@gentoo.org>
 # Przemyslaw Maciag <troll@gentoo.org>
-# Davide Pesavento <davidepesa@gmail.com>
+# Davide Pesavento <pesa@gentoo.org>
 # @BLURB: Eclass for Qt4 packages
 # @DESCRIPTION:
 # This eclass contains various functions that may be useful
