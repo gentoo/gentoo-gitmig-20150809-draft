@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.20.ebuild,v 1.8 2012/05/09 15:21:35 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.22.ebuild,v 1.1 2012/05/19 11:21:34 lxnay Exp $
 
 EAPI="3"
 
 # 0.6.x doesn't work with Python 3.x
 PYTHON_DEPEND="2"
 
-inherit eutils multilib python nsplugins bash-completion
+inherit eutils multilib python nsplugins bash-completion-r1
 
 MY_PN="PackageKit"
 MY_P=${MY_PN}-${PV}
@@ -71,7 +71,7 @@ RESTRICT="test" # tests are failing atm
 # failing tests
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.6.x-npapi-sdk.patch #383141
+	epatch "${FILESDIR}"/${PN}-0.6.22-npapi-sdk.patch #383141
 }
 
 src_configure() {
@@ -147,7 +147,7 @@ src_install() {
 	# Remove precompiled python modules, we handle byte compiling
 	rm -f "${D}/$(python_get_sitedir)"/${PN}*.py[co]
 
-	dobashcompletion "${S}/contrib/pk-completion.bash" ${PN}
+	newbashcomp "${S}/contrib/pk-completion.bash" ${PN}
 	# Remove bashcomp file installed by build-system
 	rm -f "${D}/bash_completion.d/pk-completion.bash"
 

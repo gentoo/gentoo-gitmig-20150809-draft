@@ -1,87 +1,74 @@
-http://bugs.gentoo.org/383141
-
---- configure
-+++ configure
-@@ -20389,7 +20389,7 @@
+--- PackageKit-0.6.22.orig/configure
++++ PackageKit-0.6.22/configure
+@@ -20504,7 +20504,7 @@ if test -n "$PK_BROWSER_PLUGIN_CFLAGS";
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
      { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\\
--			  mozilla-plugin	\\
+-			  mozilla-plugin >= 8.0	\\
 +			  npapi-sdk		\\
  			  gio-unix-2.0		\\
- 			  nspr \\
+ 			  nspr >= 4.8		\\
  			  cairo			\\
-@@ -20397,7 +20397,7 @@
+@@ -20512,7 +20512,7 @@ if test -n "$PK_BROWSER_PLUGIN_CFLAGS";
  			  gtk+-2.0 >= 2.14.0	\\
  			  dbus-glib-1\""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
--			  mozilla-plugin	\
+-			  mozilla-plugin >= 8.0	\
 +			  npapi-sdk		\
  			  gio-unix-2.0		\
- 			  nspr \
+ 			  nspr >= 4.8		\
  			  cairo			\
-@@ -20408,7 +20408,7 @@
+@@ -20523,7 +20523,7 @@ if test -n "$PK_BROWSER_PLUGIN_CFLAGS";
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_PK_BROWSER_PLUGIN_CFLAGS=`$PKG_CONFIG --cflags "\
--			  mozilla-plugin	\
+-			  mozilla-plugin >= 8.0	\
 +			  npapi-sdk		\
  			  gio-unix-2.0		\
- 			  nspr \
+ 			  nspr >= 4.8		\
  			  cairo			\
-@@ -20426,7 +20426,7 @@
+@@ -20541,7 +20541,7 @@ if test -n "$PK_BROWSER_PLUGIN_LIBS"; th
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
      { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\\
--			  mozilla-plugin	\\
+-			  mozilla-plugin >= 8.0	\\
 +			  npapi-sdk		\\
  			  gio-unix-2.0		\\
- 			  nspr \\
+ 			  nspr >= 4.8		\\
  			  cairo			\\
-@@ -20434,7 +20434,7 @@
+@@ -20549,7 +20549,7 @@ if test -n "$PK_BROWSER_PLUGIN_LIBS"; th
  			  gtk+-2.0 >= 2.14.0	\\
  			  dbus-glib-1\""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
--			  mozilla-plugin	\
-+			  npapi-sdk		\
+-			  mozilla-plugin >= 8.0	\
++			  npapi-sdk	\
  			  gio-unix-2.0		\
- 			  nspr \
+ 			  nspr >= 4.8		\
  			  cairo			\
-@@ -20445,7 +20445,7 @@
+@@ -20560,7 +20560,7 @@ if test -n "$PK_BROWSER_PLUGIN_LIBS"; th
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
    pkg_cv_PK_BROWSER_PLUGIN_LIBS=`$PKG_CONFIG --libs "\
--			  mozilla-plugin	\
+-			  mozilla-plugin >= 8.0	\
 +			  npapi-sdk		\
  			  gio-unix-2.0		\
- 			  nspr \
+ 			  nspr >= 4.8		\
  			  cairo			\
-@@ -20472,7 +20472,7 @@
+@@ -20587,7 +20587,7 @@ else
  fi
          if test $_pkg_short_errors_supported = yes; then
  	        PK_BROWSER_PLUGIN_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "\
--			  mozilla-plugin	\
+-			  mozilla-plugin >= 8.0	\
 +			  npapi-sdk		\
  			  gio-unix-2.0		\
- 			  nspr \
+ 			  nspr >= 4.8		\
  			  cairo			\
-@@ -20481,7 +20481,7 @@
+@@ -20596,7 +20596,7 @@ fi
  			  dbus-glib-1" 2>&1`
          else
  	        PK_BROWSER_PLUGIN_PKG_ERRORS=`$PKG_CONFIG --print-errors "\
--			  mozilla-plugin	\
+-			  mozilla-plugin >= 8.0	\
 +			  npapi-sdk		\
  			  gio-unix-2.0		\
- 			  nspr \
- 			  cairo			\
---- configure.ac
-+++ configure.ac
-@@ -355,7 +355,7 @@
- 	      enable_browser_plugin=$enableval,enable_browser_plugin=yes)
- if test x$enable_browser_plugin = xyes; then
- 	PKG_CHECK_MODULES(PK_BROWSER_PLUGIN,	\
--			  mozilla-plugin	\
-+			  npapi-sdk		\
- 			  gio-unix-2.0		\
- 			  nspr \
+ 			  nspr >= 4.8		\
  			  cairo			\
