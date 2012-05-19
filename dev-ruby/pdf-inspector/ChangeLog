@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/pdf-inspector
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.5 2012/05/19 06:05:24 graaff Exp $
+
+*pdf-inspector-1.0.1 (15 Apr 2012)
+
+  15 Apr 2012; Hans de Graaff <graaff@gentoo.org> +pdf-inspector-1.0.1.ebuild,
+  +metadata.xml:
+  New test dependency for dev-ruby/prawn.
+
