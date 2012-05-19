@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13771 2012/05/19 12:30:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13772 2012/05/19 14:28:44 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -102,11 +102,6 @@ media-libs/libflash
 # Dead for a long time, opened bugs, doesn't work (#356241). Use
 # net-fs/smbnetfs instead. Removal in a month.
 net-fs/fusesmb
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Fails to build (#361317), replaced by jabberd2 for a long time.
-# Removal in a month.
-net-im/jabberd
 
 # Pacho Ramos <pacho@gentoo.org> (13 May 2012)
 # No longer works due Telecom Italia modifications in their
