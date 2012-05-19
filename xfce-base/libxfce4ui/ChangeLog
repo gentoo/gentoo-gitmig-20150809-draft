@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfce4ui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.44 2012/05/17 14:27:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.45 2012/05/19 12:25:02 blueness Exp $
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  libxfce4ui-4.10.0.ebuild:
+  Keyword mips
 
   17 May 2012; Jeroen Roovers <jer@gentoo.org> libxfce4ui-4.10.0.ebuild:
   Stable for HPPA (bug #416233).
