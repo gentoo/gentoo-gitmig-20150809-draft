@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/pkgconfig-0.ebuild,v 1.3 2012/05/04 13:05:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/pkgconfig-0.ebuild,v 1.4 2012/05/19 07:45:01 tetromino Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-
 IUSE=""
 
 DEPEND="|| (
-		dev-util/pkgconfig
+		>=dev-util/pkgconfig-0.26
 		dev-util/pkg-config-lite
 		dev-util/pkgconf[pkg-config]
 		dev-util/pkgconfig-openbsd[pkg-config]
