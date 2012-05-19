@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/django-debug-toolbar-0.9.4.ebuild,v 1.1 2012/04/25 16:26:12 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/django-debug-toolbar-0.9.4.ebuild,v 1.2 2012/05/19 13:57:41 tampakrap Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -19,10 +19,9 @@ LICENSE="MIT"
 SLOT="0"
 PYTHON_MODNAME="debug_toolbar"
 
-RDEPEND=""
+RDEPEND="dev-python/django"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	dev-python/django
 	test? (	dev-python/dingus )"
 
 src_prepare() {
@@ -32,11 +31,9 @@ src_prepare() {
 src_test() {
 	export DJANGO_SETTINGS_MODULE="django.conf"
 	testing() {
-		PYTHONPATH=. "$(PYTHON)" tests/tests.py
-		if [[ $? ]]; then
-			einfo "Tests for python"$(python_get_version)" completed ok"
-			einfo ""
-		fi
+		PYTHONPATH=. "$(PYTHON)" -m tests.tests
+		einfo "Tests for python$(python_get_version) completed"
+		einfo ""
 	}
 	python_execute_function testing
 }

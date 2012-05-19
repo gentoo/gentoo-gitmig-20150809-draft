@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-debug-toolbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/ChangeLog,v 1.1 2012/04/25 16:26:12 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/ChangeLog,v 1.2 2012/05/19 13:57:41 tampakrap Exp $
+
+  19 May 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  django-debug-toolbar-0.9.4.ebuild:
+  test phase reduced/simplified, by idella4
 
 *django-debug-toolbar-0.9.4 (25 Apr 2012)
 
