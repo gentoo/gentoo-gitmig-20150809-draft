@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.97.ebuild,v 1.1 2012/02/14 12:11:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.97.ebuild,v 1.2 2012/05/19 15:14:18 ago Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.lri.fr/~filliatr/bibtex2html/"
 SLOT="0"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="test"
 
 # With use doc we need a latex compiler to generate manual.pdf
