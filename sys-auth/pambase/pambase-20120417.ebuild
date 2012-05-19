@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20120417.ebuild,v 1.3 2012/05/06 08:30:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20120417.ebuild,v 1.4 2012/05/19 21:34:59 flameeyes Exp $
 
 EAPI=4
 
@@ -77,6 +77,8 @@ src_compile() {
 		IMPLEMENTATION=${implementation} \
 		LINUX_PAM_VERSION=${linux_pam_version}
 }
+
+src_test() { :; }
 
 src_install() {
 	emake GIT=true DESTDIR="${ED}" install
