@@ -1,5 +1,4 @@
-$(top_builddir)/jabberd/gcrypt_init.c is using function gcry_control() so we need to link against -lgcrypt
-
+http://bugs.gentoo.org/345255
 http://bugs.gentoo.org/412871
 
 --- jabberd/Makefile.am
@@ -11,3 +10,14 @@ http://bugs.gentoo.org/412871
 -libjabberd_la_LIBADD = -lexpat $(top_builddir)/jabberd/lib/libjabberdlib.la
 +libjabberd_la_LIBADD = -lexpat -lgcrypt $(top_builddir)/jabberd/lib/libjabberdlib.la
  libjabberd_la_LDFLAGS = @LDFLAGS@ @VERSION_INFO@ -export-dynamic -version-info 2:0:0
+--- jsm/Makefile.am
++++ jsm/Makefile.am
+@@ -6,7 +6,7 @@
+ noinst_HEADERS = jsm.h
+ 
+ libjabberdsm_la_SOURCES = authreg.cc deliver.cc jsm.cc modules.cc offline.cc server.cc sessions.cc serialization.cc users.cc util.cc
+-libjabberdsm_la_LIBADD = $(top_builddir)/jsm/modules/libjabberdsmmods.la $(top_builddir)/jabberd/libjabberd.la
++libjabberdsm_la_LIBADD = $(top_builddir)/jsm/modules/libjabberdsmmods.la $(top_builddir)/jabberd/libjabberd.la -lcrypt
+ libjabberdsm_la_LDFLAGS = @LDFLAGS@ @VERSION_INFO@ -module -version-info 2:0:0
+ 
+ INCLUDES = -I../jabberd -I../jabberd/lib

@@ -1,31 +1,34 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.20 2012/05/19 14:14:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.21 2012/05/19 14:43:37 ssuominen Exp $
 
-WANT_AUTOMAKE="1.9"
+EAPI=4
+WANT_AUTOMAKE=1.9
 inherit autotools eutils
 
 DESCRIPTION="Open-source Jabber server"
 HOMEPAGE="http://www.jabber.org"
 SRC_URI="http://download.jabberd.org/jabberd14/jabberd14-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86 ~x86-fbsd"
 IUSE="ipv6 mysql postgres"
 
-RDEPEND=">=net-im/jabber-base-0.01
+RDEPEND="dev-libs/expat
 	dev-libs/libgcrypt
+	dev-libs/popt
 	>=dev-libs/pth-1.4.0
-	dev-libs/expat
 	net-dns/libidn
-	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-server )
+	>=net-im/jabber-base-0.01
 	net-libs/gnutls
-	dev-libs/popt"
+	mysql? ( virtual/mysql )
+	postgres? ( dev-db/postgresql-server )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	!net-im/jabberd2"
+	!net-im/jabberd2
+	virtual/pkgconfig"
+
+DOCS="mysql.sql pgsql_createdb.sql README* UPGRADE"
 
 S=${WORKDIR}/jabberd14-${PV}
 
@@ -37,24 +40,20 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
-
-	#Shamelessly stolen from Freebsd
-	epatch "${FILESDIR}"/${P}-gnutls2.2.patch
-	## Gentoo bug #200616
-	epatch "${FILESDIR}"/${P}-sandbox.patch
-	epatch "${FILESDIR}"/${P}-parallel-make.patch
-	epatch "${FILESDIR}"/${P}-undefineddebug.patch
-	epatch "${FILESDIR}"/${P}-libtool2.2.patch
-	epatch "${FILESDIR}"/${P}-underlinking.patch
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-glibc-2.10.patch \
+		"${FILESDIR}"/${P}-gnutls2.2.patch \
+		"${FILESDIR}"/${P}-sandbox.patch \
+		"${FILESDIR}"/${P}-parallel-make.patch \
+		"${FILESDIR}"/${P}-undefineddebug.patch \
+		"${FILESDIR}"/${P}-libtool2.2.patch \
+		"${FILESDIR}"/${P}-underlinking.patch
 
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	unset LC_ALL LC_CTYPE
 
 	econf \
@@ -63,33 +62,27 @@ src_compile() {
 		$(use ipv6 && echo --enable-ipv6) \
 		$(use_with mysql) \
 		$(use_with postgres postgresql)
-
-	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	default
 
-	newinitd "${FILESDIR}"/${P}.init jabber || die "newinitd failed"
+	newinitd "${FILESDIR}"/${P}.init jabber
 
 	# net-im/jabber-base provides needed directories
-	rm -rf "${D}/var"
-	mv "${D}/etc/jabber/jabber.xml" "${D}/etc/jabber/jabberd.xml"
-	mv "${D}/etc/jabber/jabber.xml.dist" "${D}/etc/jabber/jabberd.xml.dist"
+	rm -rf "${ED}"/var
+	mv "${ED}"/etc/jabber/jabber.xml "${ED}"/etc/jabber/jabberd.xml
+	mv "${ED}"/etc/jabber/jabber.xml.dist "${ED}"/etc/jabber/jabberd.xml.dist
 
 	sed -i \
 		-e 's,/var/lib/spool/jabberd,/var/spool/jabber,g' \
 		-e 's,/var/lib/log/jabberd,/var/log/jabber,g' \
 		-e 's,/var/lib/run/jabberd,/var/run/jabber,g' \
 		-e 's,jabber.pid,jabberd14.pid,g' \
-		"${D}"/etc/jabber/jabberd.xml{,.dist} \
-		|| die "sed failed"
-
-	dodoc README* mysql.sql pgsql_createdb.sql UPGRADE || die "dodoc failed"
+		"${ED}"/etc/jabber/jabberd.xml{,.dist} || die
 }
 
 pkg_postinst() {
-
 	echo
 	elog 'The various IM transports for jabber are now separate packages,'
 	elog 'which you will need to install separately if you want them:'
@@ -111,6 +104,4 @@ pkg_postinst() {
 	ewarn 'If you wish to continue to use the filespool backend, read'
 	ewarn 'README.filespool.'
 	echo
-	ebeep
-
 }
