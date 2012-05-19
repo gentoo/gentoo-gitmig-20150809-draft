@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0-r1.ebuild,v 1.4 2012/05/17 14:40:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0-r1.ebuild,v 1.5 2012/05/19 12:44:42 blueness Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -11,7 +11,7 @@ SRC_URI="http://udisks.freedesktop.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 IUSE="debug doc crypt +gptfdisk +introspection systemd"
 
 COMMON_DEPEND=">=dev-libs/glib-2.32
