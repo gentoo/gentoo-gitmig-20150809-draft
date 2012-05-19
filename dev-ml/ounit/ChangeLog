@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.26 2012/03/27 21:06:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.27 2012/05/19 15:13:30 ago Exp $
+
+  19 May 2012; Agostino Sarubbo <ago@gentoo.org> ounit-1.1.1.ebuild:
+  Stable for amd64, wrt bug #416531
 
   27 Mar 2012; Alexis Ballier <aballier@gentoo.org> ounit-1.1.1.ebuild:
   convert to oasis.eclass

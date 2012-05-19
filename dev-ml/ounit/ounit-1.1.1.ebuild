@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.1.1.ebuild,v 1.2 2012/03/27 21:06:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.1.1.ebuild,v 1.3 2012/05/19 15:13:30 ago Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://ounit.forge.ocamlcore.org/"
 SRC_URI="http://forge.ocamlcore.org/frs/download.php/762/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 DEPEND=""
 RDEPEND="${DEPEND}"
 IUSE=""
