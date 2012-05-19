@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AnyEvent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.103 2012/05/13 11:38:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.104 2012/05/19 15:28:36 ago Exp $
+
+  19 May 2012; Agostino Sarubbo <ago@gentoo.org> AnyEvent-6.100.0.ebuild:
+  Stable for AMD64, wrt bug #416109
 
 *AnyEvent-7.10.0 (13 May 2012)
 
