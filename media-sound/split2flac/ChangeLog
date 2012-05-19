@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/split2flac
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/ChangeLog,v 1.9 2011/11/28 18:17:42 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/ChangeLog,v 1.10 2012/05/19 09:09:57 ssuominen Exp $
+
+  19 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -split2flac-0.1_pre20111103.ebuild, -split2flac-0.1_pre20111110-r1.ebuild:
+  old
 
 *split2flac-0.1_pre20111110-r2 (28 Nov 2011)
 
