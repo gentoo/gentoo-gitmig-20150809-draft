@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6567 2012/05/19 10:26:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6568 2012/05/19 10:57:05 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite app-arch/hardlink++
 
   19 May 2012; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Mask dev-python/gevent-1.0_beta2 for testing
