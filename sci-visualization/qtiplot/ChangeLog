@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.94 2012/05/19 08:03:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.95 2012/05/19 08:48:26 jlec Exp $
+
+  19 May 2012; Justin Lecher <jlec@gentoo.org> -qtiplot-0.9.8.2.ebuild,
+  -qtiplot-0.9.8.9.ebuild, metadata.xml:
+  Dropped old
 
   19 May 2012; Agostino Sarubbo <ago@gentoo.org> qtiplot-0.9.8.9-r1.ebuild:
   Stable for x86, wrt bug #414355
