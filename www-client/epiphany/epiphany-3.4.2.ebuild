@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.4.0.1.ebuild,v 1.2 2012/05/03 06:01:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.4.2.ebuild,v 1.1 2012/05/19 21:31:31 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -47,9 +47,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.40
-	virtual/pkgconfig
-	sys-apps/paxctl
 	sys-devel/gettext
+	virtual/pkgconfig
+	jit? ( sys-apps/paxctl )
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {
@@ -75,6 +75,12 @@ src_prepare() {
 		eautoreconf
 	fi
 	gnome2_src_prepare
+}
+
+src_compile() {
+	# needed to avoid "Command line `dbus-launch ...' exited with non-zero exit status 1"
+	unset DISPLAY
+	gnome2_src_compile
 }
 
 src_test() {
