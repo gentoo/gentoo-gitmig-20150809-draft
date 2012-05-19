@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatasmart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.30 2012/05/04 18:35:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.31 2012/05/19 12:19:40 blueness Exp $
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org> libatasmart-0.18.ebuild:
+  Keyword mips
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libatasmart-0.18.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
