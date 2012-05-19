@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bridge-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.57 2011/06/15 03:01:34 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.58 2012/05/19 15:05:35 blueness Exp $
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org> bridge-utils-1.5.ebuild:
+  keyword mips, bug #405835
 
 *bridge-utils-1.5 (15 Jun 2011)
 
