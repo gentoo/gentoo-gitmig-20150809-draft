@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.483 2012/05/07 22:55:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.484 2012/05/19 02:13:18 tetromino Exp $
 
 # Keep them sorted
 
@@ -159,6 +159,7 @@ java6 - Use Java 1.6 to build package with || ( reduced deps, 1.6 features, sour
 javascript - Enables javascript support
 jbig - enables jbig-kit support for tiff, Hylafax, ImageMagick, etc
 jingle - Enables voice calls for jabber
+jit - Enable just-in-time compilation for improved performance. May prevent use of some PaX memory protection features in Gentoo Hardened.
 joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
 jpeg2k - Support for JPEG 2000, a wavelet-based image compression format

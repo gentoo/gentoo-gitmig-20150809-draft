@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6565 2012/05/18 16:09:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6566 2012/05/19 02:13:18 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> use.desc:
+  Add global jit USE flag per gentoo-dev discussion
+  (archives.gentoo.org/gentoo-dev/msg_a84a8e21139404a1d18839f887e258ee.xml)
 
   18 May 2012; Alexis Ballier <aballier@gentoo.org>
   +default/bsd/fbsd/amd64/8.2/deprecated:
