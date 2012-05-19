@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20111110-r2.ebuild,v 1.1 2011/11/28 18:17:42 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20111110-r2.ebuild,v 1.2 2012/05/19 09:11:44 ssuominen Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ RDEPEND="
 	enca? ( app-i18n/enca )
 	flake? ( media-sound/flake )
 	mp3? ( media-sound/lame || ( media-libs/mutagen media-libs/id3lib ) )
-	mp4? ( media-libs/faac media-libs/libmp4v2[utils] )
+	mp4? ( media-libs/faac media-libs/libmp4v2:0[utils] )
 	ogg? ( media-sound/vorbis-tools )
 	wavpack? ( media-sound/wavpack )
 	replaygain? (
