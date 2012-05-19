@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.8.ebuild,v 1.4 2012/03/04 05:04:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.8.ebuild,v 1.5 2012/05/19 22:11:00 floppym Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ DESCRIPTION="A Python MSN messenger protocol library and client"
 HOMEPAGE="http://auriga.wearlab.de/~alb/msnlib/"
 SRC_URI="http://auriga.wearlab.de/~alb/msnlib/files/${PV}/${P}.tar.bz2"
 
-LICENSE="OSL-1.1"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="tk"
