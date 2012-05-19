@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.2.1.ebuild,v 1.2 2012/05/03 01:58:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.4.2.ebuild,v 1.1 2012/05/19 23:23:02 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,14 +25,14 @@ RDEPEND=">=dev-libs/glib-2.29.14:2
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-3.0.2:3
 	x11-libs/pango
-	nautilus? ( >=gnome-base/nautilus-3.0.0 )
+	nautilus? ( >=gnome-base/nautilus-3 )
 	packagekit? ( app-admin/packagekit-base )
 "
 DEPEND="${RDEPEND}
-	sys-devel/gettext
+	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.40.0
-	virtual/pkgconfig
-	app-text/gnome-doc-utils"
+	sys-devel/gettext
+	virtual/pkgconfig"
 # eautoreconf needs:
 #	gnome-base/gnome-common
 
