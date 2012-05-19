@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/gsettings-desktop-schemas-3.4.0.ebuild,v 1.2 2012/05/09 15:09:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/gsettings-desktop-schemas-3.4.2.ebuild,v 1.1 2012/05/19 09:27:47 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -19,7 +19,8 @@ RDEPEND=">=dev-libs/glib-2.31:2
 	introspection? ( >=dev-libs/gobject-introspection-1.31.0 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/intltool-0.40"
+	>=dev-util/intltool-0.40
+	virtual/pkgconfig"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
