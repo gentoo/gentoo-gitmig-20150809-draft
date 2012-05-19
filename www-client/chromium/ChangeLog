@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.638 2012/05/19 14:54:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.639 2012/05/19 14:56:27 phajdan.jr Exp $
+
+  19 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-19.0.1084.46-r1.ebuild, chromium-19.0.1084.46-r2.ebuild:
+  Roll stable keywords. Remove old.
 
 *chromium-19.0.1084.46-r2 (19 May 2012)
 
