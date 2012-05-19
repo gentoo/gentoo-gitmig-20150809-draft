@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/pm-quirks
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-quirks/ChangeLog,v 1.13 2010/12/12 16:47:31 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-quirks/ChangeLog,v 1.14 2012/05/19 12:42:11 blueness Exp $
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  pm-quirks-20100619.ebuild:
+  Keyword mips
 
   12 Dec 2010; Raúl Porcel <armin76@gentoo.org> pm-quirks-20100619.ebuild:
   sparc stable
