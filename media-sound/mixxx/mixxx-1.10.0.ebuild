@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.10.0.ebuild,v 1.4 2012/05/05 09:02:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.10.0.ebuild,v 1.5 2012/05/19 09:08:05 ssuominen Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ RDEPEND="media-libs/fidlib
 	x11-libs/qt-xmlpatterns:4
 	aac? (
 		media-libs/faad2
-		media-libs/libmp4v2
+		media-libs/libmp4v2:0
 	)
 	mp3? ( media-libs/libmad )
 	pulseaudio? ( media-sound/pulseaudio )

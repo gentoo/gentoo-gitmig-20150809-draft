@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.4.ebuild,v 1.5 2010/07/21 13:03:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.4.ebuild,v 1.6 2012/05/19 09:07:30 ssuominen Exp $
 
 EAPI=3
 inherit kde4-base
@@ -18,7 +18,7 @@ RDEPEND="
 	flac? ( media-libs/flac[cxx]
 		media-libs/libvorbis )
 	mp3? ( media-libs/id3lib )
-	mp4? ( media-libs/libmp4v2 )
+	mp4? ( media-libs/libmp4v2:0 )
 	taglib? ( media-libs/taglib )
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}"

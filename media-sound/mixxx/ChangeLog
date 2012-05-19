@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.58 2012/05/05 09:02:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.59 2012/05/19 09:08:05 ssuominen Exp $
+
+  19 May 2012; Samuli Suominen <ssuominen@gentoo.org> mixxx-1.10.0.ebuild:
+  Ensure libmp4v2 headers are present by forcing correct SLOT
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> mixxx-1.10.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
