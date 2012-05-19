@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.1-r201.ebuild,v 1.2 2012/05/05 02:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.1-r201.ebuild,v 1.3 2012/05/19 07:48:23 tetromino Exp $
 
 EAPI="4"
 
@@ -18,8 +18,8 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 # geoclue
 IUSE="aqua coverage debug +geoloc +gstreamer +introspection +jit spell +webgl"
-# bug 372493
-REQUIRED_USE="introspection? ( gstreamer )"
+# bugs 372493, 416331
+REQUIRED_USE="introspection? ( geoloc gstreamer )"
 
 # use sqlite, svg by default
 # dependency on >=x11-libs/gtk+-2.13:2 for gail
@@ -86,6 +86,9 @@ src_prepare() {
 
 	# USE=-gstreamer build failure, bug #412221, https://bugs.webkit.org/show_bug.cgi?id=84526
 	epatch "${FILESDIR}/${PN}-1.8.1-CodeGeneratorGObject-properties.patch"
+
+	# bug #416057; in 1.9.x
+	epatch "${FILESDIR}/${PN}-1.8.1-gst-required-version.patch"
 
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727

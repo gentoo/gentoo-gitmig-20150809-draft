@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.162 2012/05/05 02:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.163 2012/05/19 07:48:23 tetromino Exp $
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-1.8.1-r201.ebuild, webkit-gtk-1.8.1-r301.ebuild,
+  +files/webkit-gtk-1.8.1-gst-required-version.patch, metadata.xml:
+  Fix gstreamer detection with some pkgconfig implementations (bug #416057,
+  thanks to pingouin21). Require USE=geoloc if introspection is enabled (bug
+  #416331, thanks to lxg). jit is now a global flag.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> webkit-gtk-1.6.1-r201.ebuild,
   webkit-gtk-1.6.1-r301.ebuild, webkit-gtk-1.6.3-r200.ebuild,
