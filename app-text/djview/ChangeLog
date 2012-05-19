@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.12 2012/05/16 15:59:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.13 2012/05/19 08:02:07 ago Exp $
+
+  19 May 2012; Agostino Sarubbo <ago@gentoo.org> djview-4.8.ebuild:
+  Stable for x86, wrt bug #414369
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> djview-4.8.ebuild:
   Stable for HPPA (bug #414369).
