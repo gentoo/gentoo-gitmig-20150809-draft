@@ -10,6 +10,8 @@ Totem is movie player for the GNOME desktop. It features a playlist, fullscreen 
 	<use>
 		<flag name="bluetooth">Enable support for user-presence detection via the
 		user's bluetooth handset using <pkg>net-wireless/bluez</pkg></flag>
+		<flag name="flash">Install browser plugin for playing embedded Adobe Flash
+		videos. Warning: breaks non-video Flash objects on many websites.</flag>
 		<flag name="grilo">Use <pkg>media-libs/grilo</pkg> to browse media content
 		from various sources</flag>
 		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>

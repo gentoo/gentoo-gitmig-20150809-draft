@@ -1,6 +1,14 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.337 2012/05/05 08:58:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.338 2012/05/19 23:59:30 tetromino Exp $
+
+*totem-3.4.2 (19 May 2012)
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +totem-3.4.2.ebuild,
+  metadata.xml:
+  Version bump for gnome-3.4. Adds support for rtmp, removes separate youtube
+  plugin (now handled by USE=grilo), adds an optional browser plugin for
+  playing flash videos (warning: can break non-video flash objects).
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> totem-2.32.0-r2.ebuild,
   totem-3.2.2.ebuild:
