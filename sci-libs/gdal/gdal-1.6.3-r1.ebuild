@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.22 2012/04/26 15:28:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.23 2012/05/19 19:27:55 ssuominen Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ IUSE="curl debug doc ecwj2k fits geos gif gml hdf hdf5 jpeg jpeg2k mysql netcdf 
 
 RDEPEND="
 	dev-libs/expat
-	media-libs/tiff
+	media-libs/tiff:0
 	sci-libs/libgeotiff
 	sys-libs/zlib
 	curl? ( net-misc/curl )
@@ -84,6 +84,9 @@ src_prepare() {
 	[[ ${CHOST} == *-darwin* ]] \
 		&& epatch "${FILESDIR}"/${PN}-1.5.0-install_name.patch \
 		|| epatch "${FILESDIR}"/${PN}-1.5.0-soname.patch
+
+	has_version '>=sys-libs/zlib-1.2.5.1-r1' && \
+		sed -i -e '1i#define OF(x) x' port/cpl_minizip_ioapi.h || die
 }
 
 src_configure() {
