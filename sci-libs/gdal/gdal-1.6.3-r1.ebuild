@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.23 2012/05/19 19:27:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.24 2012/05/19 20:01:03 ssuominen Exp $
 
 EAPI=3
 
@@ -86,7 +86,7 @@ src_prepare() {
 		|| epatch "${FILESDIR}"/${PN}-1.5.0-soname.patch
 
 	has_version '>=sys-libs/zlib-1.2.5.1-r1' && \
-		sed -i -e '1i#define OF(x) x' port/cpl_minizip_ioapi.h || die
+		sed -i -e '1i#define OF(x) x' port/cpl_minizip_ioapi.h
 }
 
 src_configure() {
