@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.50 2012/05/19 06:37:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.51 2012/05/19 18:27:33 lu_zero Exp $
+
+  19 May 2012; Luca Barbato <lu_zero@gentoo.org> mplayer2-9999.ebuild,
+  metadata.xml:
+  Make libpostproc optional. Again thanks to Nikoli.
 
   19 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   Add portaudio support. Thanks to Nikoli for noticing.
