@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.4.2.ebuild,v 1.1 2012/05/19 21:31:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.4.2.ebuild,v 1.2 2012/05/19 21:58:10 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -87,6 +87,7 @@ src_test() {
 	# FIXME: this should be handled at eclass level
 	"${EROOT}${GLIB_COMPILE_SCHEMAS}" --allow-any-name "${S}/data" || die
 
+	use jit && pax-mark m $(list-paxables tests/test*) #415801
 	GSETTINGS_SCHEMA_DIR="${S}/data" Xemake check
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.285 2012/05/19 21:31:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.286 2012/05/19 21:58:10 tetromino Exp $
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  epiphany-3.4.2.ebuild:
+  Fix test failure on hardened (bug #415801, thanks to Markus Oehme).
 
 *epiphany-3.4.2 (19 May 2012)
 
