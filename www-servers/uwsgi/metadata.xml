@@ -15,6 +15,6 @@
 		<flag name='rsyslog'>Support direct logging to a <pkg>app-admin/rsyslog</pkg> socket (without going through the syslog interface).</flag>
 		<flag name='spooler'>Build a plugin which gives a network spooler (see http://projects.unbit.it/uwsgi/wiki/Spooler).</flag>
 		<flag name='yaml'>Support yaml as a configuration file format.</flag>
-		<flag name='zeromq'>Enable logging and deployment via ZeroMQ.</flag>
+		<flag name='zeromq'>Enable logging and deployment via ZeroMQ. Together with json-support this turns uwsgi into a Mongrel2 handler (see http://projects.unbit.it/uwsgi/wiki/Mongrel2).</flag>
 	</use>
 </pkgmetadata>
