@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyosd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.20 2012/02/22 06:01:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.21 2012/05/19 20:20:27 floppym Exp $
+
+  19 May 2012; Mike Gilbert <floppym@gentoo.org> pyosd-0.2.14.ebuild:
+  Update HOMEPAGE and SRC_URI. #402045 by Florian Berger.
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyosd-0.2.14.ebuild:
   Restricting jython
