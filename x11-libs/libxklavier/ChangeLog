@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.165 2012/05/16 14:34:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.166 2012/05/19 12:52:21 blueness Exp $
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  libxklavier-5.2.1.ebuild:
+  Keyword mips
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> libxklavier-5.2.1.ebuild:
   keyword ~amd64-fbsd
