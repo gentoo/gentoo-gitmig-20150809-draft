@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AnyEvent-HTTP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent-HTTP/ChangeLog,v 1.3 2012/04/23 18:56:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent-HTTP/ChangeLog,v 1.4 2012/05/19 15:29:12 ago Exp $
+
+  19 May 2012; Agostino Sarubbo <ago@gentoo.org> AnyEvent-HTTP-2.130.0.ebuild:
+  Stable for amd64, wrt bug #416111
 
 *AnyEvent-HTTP-2.140.0 (23 Apr 2012)
 
