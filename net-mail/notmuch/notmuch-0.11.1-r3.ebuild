@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.11.1-r3.ebuild,v 1.6 2012/05/03 04:18:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.11.1-r3.ebuild,v 1.7 2012/05/19 07:50:41 aidecoe Exp $
 
 EAPI=4
 
@@ -25,7 +25,6 @@ CDEPEND="
 	>=dev-libs/glib-2.22
 	dev-libs/gmime:2.4
 	dev-libs/xapian
-	doc? ( python? ( dev-python/sphinx ) )
 	sys-libs/talloc
 	debug? ( dev-util/valgrind )
 	emacs? ( >=virtual/emacs-23 )
@@ -34,6 +33,7 @@ CDEPEND="
 	"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
+	doc? ( python? ( dev-python/sphinx ) )
 	test? ( app-misc/dtach sys-devel/gdb )
 	"
 RDEPEND="${CDEPEND}
