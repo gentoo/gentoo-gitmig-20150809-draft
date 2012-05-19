@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-user-dirs-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.18 2012/05/18 08:14:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.19 2012/05/19 12:37:19 blueness Exp $
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  xdg-user-dirs-gtk-0.9.ebuild:
+  Keyword mips
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> xdg-user-dirs-gtk-0.9.ebuild:
   marked x86 per bug 416397
