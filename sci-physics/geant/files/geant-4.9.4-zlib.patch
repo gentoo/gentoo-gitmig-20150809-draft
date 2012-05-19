@@ -1,3 +1,4 @@
+force use of system zlib instead of bundled G4zlib
 --- source/visualization/HepRep/sources.cmake.orig	2011-12-02 15:07:49.000000000 +0000
 +++ source/visualization/HepRep/sources.cmake	2011-12-18 06:21:22.000000000 +0000
 @@ -91,7 +91,7 @@
