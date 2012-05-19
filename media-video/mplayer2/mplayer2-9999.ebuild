@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.33 2012/05/18 19:38:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.34 2012/05/19 06:37:34 scarabeus Exp $
 
 EAPI=4
 
@@ -36,9 +36,10 @@ IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
 	bs2b cddb +cdio cpudetection custom-cpuopts debug directfb doc +dts +dv dvb
 	+dvd +dvdnav dxr3 +enca +faad fbcon ftp gif ggi +iconv ipv6 jack joystick
 	jpeg kernel_linux ladspa libcaca lirc mad md5sum +mmx mmxext mng +mp3 nas
-	+network nut +opengl oss png pnm pulseaudio pvr +quicktime radio +rar +real
-	+rtc samba +shm sdl +speex sse sse2 ssse3 tga +theora +truetype +unicode
-	v4l vdpau +vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid"
+	+network nut +opengl oss png pnm portaudio pulseaudio pvr +quicktime radio
+	+rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga +theora +truetype
+	+unicode v4l vdpau +vorbis win32codecs +X xanim xinerama +xscreensaver +xv
+	xvid"
 IUSE+=" symlink"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
@@ -122,6 +123,7 @@ RDEPEND+="
 	nut? ( >=media-libs/libnut-661 )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
+	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
 	pulseaudio? ( media-sound/pulseaudio )
 	rar? (
 		|| (
@@ -420,7 +422,7 @@ src_configure() {
 	# Audio Output #
 	################
 	myconf+=" --disable-rsound" # media-sound/rsound is in pro-audio overlay only
-	uses="alsa jack ladspa nas"
+	uses="alsa jack ladspa nas portaudio"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
