@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.283 2012/05/03 06:01:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.284 2012/05/19 10:15:36 tetromino Exp $
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  jit is now a global flag.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> epiphany-2.30.6-r1.ebuild,
   epiphany-3.2.1.ebuild, epiphany-3.2.1-r1.ebuild, epiphany-3.2.2.ebuild,
