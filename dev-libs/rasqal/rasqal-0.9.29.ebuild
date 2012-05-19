@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.29.ebuild,v 1.1 2012/05/19 15:19:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.29.ebuild,v 1.2 2012/05/19 20:36:35 ssuominen Exp $
 
 EAPI=4
+inherit libtool
 
 DESCRIPTION="library that handles Resource Description Framework (RDF)"
 HOMEPAGE="http://librdf.org/rasqal/"
@@ -29,6 +30,11 @@ DEPEND="${RDEPEND}
 	test? ( dev-perl/XML-DOM )"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
+
+src_prepare() {
+	sed -i -e '/random_approach/s:==:=:' configure || die #416659
+	elibtoolize # g/fbsd .so versioning
+}
 
 src_configure() {
 	# FIXME: From 0.9.27 to .28 --with-random-approach= was introduced, do we
