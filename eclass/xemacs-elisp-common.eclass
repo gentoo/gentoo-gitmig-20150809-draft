@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xemacs-elisp-common.eclass,v 1.5 2011/12/27 17:55:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xemacs-elisp-common.eclass,v 1.6 2012/05/19 16:26:10 ulm Exp $
 #
 # Copyright 2007-2011 Hans de Graaff <graaff@gentoo.org>
 #
@@ -9,7 +9,7 @@
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2004-2005 Mamoru Komachi <usata@gentoo.org>
 # Copyright 2003 Jeremy Maitin-Shepard <jbms@attbi.com>
-# Copyright 2007 Ulrich Mueller <ulm@gentoo.org>
+# Copyright 2007 Ulrich Müller <ulm@gentoo.org>
 #
 # @ECLASS: xemacs-elisp-common.eclass
 # @MAINTAINER:
@@ -109,15 +109,15 @@
 # "50${PN}-gentoo.el".  If your subdirectory is not named ${PN}, give
 # the differing name as second argument.
 
-# @ECLASS-VARIABLE: SITELISP
+# @ECLASS-VARIABLE: XEMACS_SITELISP
 # @DESCRIPTION:
 # Directory where packages install indivivual XEmacs Lisp files.
-SITELISP=/usr/share/xemacs/site-lisp
+XEMACS_SITELISP=/usr/share/xemacs/site-lisp
 
-# @ECLASS-VARIABLE: SITEPACKAGE
+# @ECLASS-VARIABLE: XEMACS_SITEPACKAGE
 # @DESCRIPTION:
 # Directory where packages install XEmacs Lisp packages.
-SITEPACKAGE=/usr/share/xemacs/site-packages
+XEMACS_SITEPACKAGE=/usr/share/xemacs/site-packages
 
 # @ECLASS-VARIABLE: XEMACS
 # @DESCRIPTION:
@@ -160,8 +160,8 @@ xemacs-elisp-install () {
 	local subdir="$1"
 	shift
 	(  # use sub-shell to avoid possible environment polution
-		dodir "${SITEPACKAGE}"/lisp/"${subdir}"
-		insinto "${SITEPACKAGE}"/lisp/"${subdir}"
+		dodir "${XEMACS_SITEPACKAGE}"/lisp/"${subdir}"
+		insinto "${XEMACS_SITEPACKAGE}"/lisp/"${subdir}"
 		doins "$@"
 	) || die "Installing lisp files failed"
 }
@@ -208,10 +208,10 @@ xemacs-elisp-comp() {
 # @FUNCTION: xemacs-elisp-site-file-install
 # @USAGE: <site-init file> [subdirectory]
 # @DESCRIPTION:
-# Install XEmacs site-init file in SITELISP directory.  Automatically
-# inserts a standard comment header with the name of the package (unless
-# it is already present).  Tokens @SITELISP@ is replaced by the path to
-# the package's subdirectory in SITELISP.
+# Install XEmacs site-init file in XEMACS_SITELISP directory.
+# Automatically inserts a standard comment header with the name of the
+# package (unless it is already present).  Token @SITELISP@ is replaced
+# by the path to the package's subdirectory in XEMACS_SITELISP.
 
 xemacs-elisp-site-file-install() {
 	local sf="${1##*/}" my_pn="${2:-${PN}}" ret
@@ -223,9 +223,9 @@ xemacs-elisp-site-file-install() {
 	ebegin "Installing site initialisation file for XEmacs"
 	[[ $1 = "${sf}" ]] || cp "$1" "${sf}"
 	sed -i -e "1{:x;/^\$/{n;bx;};/^;.*${PN}/I!s:^:${header}\n\n:;1s:^:\n:;}" \
-		-e "s:@SITELISP@:${EPREFIX}${SITELISP}/${my_pn}:g" "${sf}"
+		-e "s:@SITELISP@:${EPREFIX}${XEMACS_SITELISP}/${my_pn}:g" "${sf}"
 	( # subshell to avoid pollution of calling environment
-		insinto "${SITELISP}/site-gentoo.d"
+		insinto "${XEMACS_SITELISP}/site-gentoo.d"
 		doins "${sf}"
 	)
 	ret=$?
@@ -240,7 +240,7 @@ xemacs-elisp-site-file-install() {
 # directory.
 
 xemacs-elisp-site-regen() {
-	local sitelisp=${ROOT}${EPREFIX}${SITELISP}
+	local sitelisp=${ROOT}${EPREFIX}${XEMACS_SITELISP}
 	local sf i line null="" page=$'\f'
 	local -a sflist
 
