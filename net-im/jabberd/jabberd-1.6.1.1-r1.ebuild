@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.19 2012/05/04 06:22:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.20 2012/05/19 14:14:48 ssuominen Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -15,6 +15,7 @@ KEYWORDS="alpha amd64 hppa ppc sparc x86 ~x86-fbsd"
 IUSE="ipv6 mysql postgres"
 
 RDEPEND=">=net-im/jabber-base-0.01
+	dev-libs/libgcrypt
 	>=dev-libs/pth-1.4.0
 	dev-libs/expat
 	net-dns/libidn
@@ -42,12 +43,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 
 	#Shamelessly stolen from Freebsd
-	epatch "${FILESDIR}/${P}-gnutls2.2.patch"
+	epatch "${FILESDIR}"/${P}-gnutls2.2.patch
 	## Gentoo bug #200616
-	epatch "${FILESDIR}/${P}-sandbox.patch"
-	epatch "${FILESDIR}/${P}-parallel-make.patch"
-	epatch "${FILESDIR}/${P}-undefineddebug.patch"
-	epatch "${FILESDIR}/${P}-libtool2.2.patch"
+	epatch "${FILESDIR}"/${P}-sandbox.patch
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
+	epatch "${FILESDIR}"/${P}-undefineddebug.patch
+	epatch "${FILESDIR}"/${P}-libtool2.2.patch
+	epatch "${FILESDIR}"/${P}-underlinking.patch
 
 	eautoreconf
 }
