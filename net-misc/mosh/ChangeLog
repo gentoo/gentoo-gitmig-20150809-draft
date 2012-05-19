@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.18 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.19 2012/05/19 08:00:55 xmw Exp $
+
+  19 May 2012; Michael Weber <xmw@gentoo.org> mosh-9999.ebuild:
+  skalibs bundle gone from repo
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> mosh-1.2.ebuild,
   mosh-1.2-r1.ebuild, mosh-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.5 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.6 2012/05/19 08:00:55 xmw Exp $
 
 EAPI=4
 EGIT_REPO_URI="https://github.com/keithw/mosh.git"
@@ -28,11 +28,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	einfo remove bundled skalibs
-	rm -r third || die
-	sed -e '/third/d' -i configure.ac
-	sed -e '/^SUBDIRS/s: third : :' -i Makefile.am
-
 	eautoreconf
 }
 
