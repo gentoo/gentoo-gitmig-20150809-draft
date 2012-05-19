@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.12.ebuild,v 1.1 2012/05/19 07:35:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.12.ebuild,v 1.2 2012/05/19 07:37:21 ssuominen Exp $
 
 EAPI=4
 inherit linux-info toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="mirror://github/phillipberndt/${PN}/${P}.tbz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="kernel_linux"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.12:2"
