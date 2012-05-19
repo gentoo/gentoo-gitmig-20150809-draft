@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.14 2012/04/19 09:54:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.15 2012/05/19 11:24:34 xarthisius Exp $
+
+*mwlib-0.13.7 (19 May 2012)
+
+  19 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +mwlib-0.13.7.ebuild:
+  Version bump, fixes #416479 by Ian Delaney <johneed@hotmail.com>. Thanks to
+  Arfrever for fixing test_odfwriter.py
 
 *mwlib-0.13.6 (19 Apr 2012)
 
