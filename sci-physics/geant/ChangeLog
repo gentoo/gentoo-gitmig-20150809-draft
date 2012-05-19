@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.58 2012/05/18 11:09:15 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.59 2012/05/19 10:29:55 heroxbd Exp $
+
+  19 May 2012; Benda Xu <heroxbd@gentoo.org> geant-4.9.5-r1.ebuild:
+  delete the wrong sed phrase.
 
   18 May 2012; Benda Xu <heroxbd@gentoo.org>
   +files/geant-4.9.5-scripts-only-dataenv.patch, geant-4.9.5-r1.ebuild:

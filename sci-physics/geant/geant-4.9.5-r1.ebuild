@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5-r1.ebuild,v 1.3 2012/05/18 11:09:15 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5-r1.ebuild,v 1.4 2012/05/19 10:29:55 heroxbd Exp $
 
 EAPI=4
 
@@ -37,10 +37,6 @@ S="${WORKDIR}/${MYP}"
 
 PATCHES=( "${FILESDIR}"/${PN}-4.9.4-zlib.patch \
 	"${FILESDIR}"/${PN}-4.9.5-scripts-only-dataenv.patch )
-
-src_prepare() {
-	sed "s,-lG4clhep,$(clhep-config --libs)," config/binmake.gmk || die "sed failed"
-}
 
 src_configure() {
 	mycmakeargs=(
