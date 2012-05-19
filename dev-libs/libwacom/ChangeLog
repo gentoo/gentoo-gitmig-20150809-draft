@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libwacom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.2 2012/05/04 18:35:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.3 2012/05/19 08:43:58 tetromino Exp $
+
+*libwacom-0.5 (19 May 2012)
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libwacom-0.5.ebuild, +files/libwacom-0.5-eraser.patch,
+  +files/libwacom-0.5-eraser-bamboo.patch:
+  Version bump for bug #416363, thanks to Christoph Brill (egore). Now properly
+  installs udev rules.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libwacom-0.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
