@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r2.ebuild,v 1.1 2012/04/11 04:54:08 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r2.ebuild,v 1.2 2012/05/19 09:13:42 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils linux-info
@@ -24,7 +24,7 @@ DEPEND="
 	lastfm? ( >=media-libs/lastfmlib-0.4 )
 	exif? ( media-libs/libexif )
 	libextractor? ( media-libs/libextractor )
-	mp4? ( >=media-libs/libmp4v2-1.9.1_p479 )
+	mp4? ( >=media-libs/libmp4v2-1.9.1_p479:0 )
 	ffmpeg? ( virtual/ffmpeg )
 	thumbnail? ( media-video/ffmpegthumbnailer[jpeg] )
 	net-misc/curl
