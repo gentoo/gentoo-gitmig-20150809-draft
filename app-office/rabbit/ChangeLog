@@ -1,6 +1,10 @@
 # ChangeLog for app-office/rabbit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.16 2012/05/08 17:13:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.17 2012/05/19 06:59:09 graaff Exp $
+
+  19 May 2012; Hans de Graaff <graaff@gentoo.org> rabbit-1.0.6.ebuild:
+  Reverse order since the USE=emacs code cd's into a directory.. Fixes problem
+  reported in bug 415151.
 
 *rabbit-1.0.6 (08 May 2012)
 

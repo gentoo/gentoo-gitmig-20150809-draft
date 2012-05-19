@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/rabbit-1.0.6.ebuild,v 1.1 2012/05/08 17:13:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/rabbit-1.0.6.ebuild,v 1.2 2012/05/19 06:59:09 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -57,14 +57,14 @@ each_ruby_install() {
 all_ruby_install() {
 	dodoc -r doc
 
+	insinto /usr/share/doc/${PF}
+	doins -r sample
+
 	if use emacs; then
 		cd "${S}/misc/emacs"
 		elisp-install rabbit-mode rabbit-mode.el{,c}
 		elisp-site-file-install "${FILESDIR}/50rabbit-mode-gentoo.el"
 	fi
-
-	insinto /usr/share/doc/${PF}
-	doins -r sample
 }
 
 pkg_postinst() {
