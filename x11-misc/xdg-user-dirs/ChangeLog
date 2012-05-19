@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-user-dirs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.27 2012/04/23 19:44:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.28 2012/05/19 12:09:43 blueness Exp $
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  xdg-user-dirs-0.14.ebuild:
+  Keyword mips
 
   23 Apr 2012; Alexis Ballier <aballier@gentoo.org> xdg-user-dirs-0.14.ebuild:
   keyword ~x86-fbsd
