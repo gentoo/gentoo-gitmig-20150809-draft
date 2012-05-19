@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13770 2012/05/19 10:57:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13771 2012/05/19 12:30:31 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,7 @@
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 May 2012)
 # Dead project wrt http://bugs.gentoo.org/416613
-# Use app-arch/hardlink instead
+# Use app-arch/hardlink or app-arch/hardlink-fedora instead
 # Removal in 30 days
 app-arch/hardlink++
 
