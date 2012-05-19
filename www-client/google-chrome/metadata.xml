@@ -6,6 +6,10 @@
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
 	</maintainer>
+	<maintainer>
+		<email>xmw@gentoo.org</email>
+		<name>Michael Weber</name>
+	</maintainer>
 	<longdescription>
 		Google Chrome is a browser that combines a minimal design with
 		sophisticated technology to make the web faster, safer, and easier.

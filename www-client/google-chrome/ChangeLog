@@ -1,6 +1,9 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.128 2012/05/18 00:41:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.129 2012/05/19 15:24:38 xmw Exp $
+
+  19 May 2012; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Add myself as maintainer (bug 415659).
 
 *google-chrome-20.0.1132.11_alpha137611 (18 May 2012)
 
