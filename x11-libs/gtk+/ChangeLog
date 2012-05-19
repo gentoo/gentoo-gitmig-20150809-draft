@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.594 2012/05/16 15:02:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.595 2012/05/19 19:58:13 tetromino Exp $
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/gtk+-3.4.1-extraneous-events-scrolling.patch,
+  -files/gtk+-3.4.1-toolpalette-adjustment.patch,
+  -files/gtk+-3.4.1-toolpalette-rename.patch, gtk+-3.4.3.ebuild,
+  +files/gtk+-3.4.3-gtkprintbackendcups-debug.patch:
+  Fix buid with USE="cups debug" (bug #416625, thanks to Jakub Daniel). Remove
+  unused patches.
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> gtk+-2.24.10-r1.ebuild,
   gtk+-3.2.4-r1.ebuild:

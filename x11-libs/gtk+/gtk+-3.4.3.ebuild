@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.3.ebuild,v 1.1 2012/05/12 13:00:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.3.ebuild,v 1.2 2012/05/19 19:58:13 tetromino Exp $
 
 EAPI="4"
 
@@ -102,6 +102,9 @@ src_prepare() {
 
 	# Apparently needed for new libxkbcommon headers; bug #408131
 	epatch "${FILESDIR}/${PN}-3.3.20-wayland-xkbcommon-headers.patch"
+
+	# Fix build with USE="cups debug", from 3.5.1; bug #416625
+	epatch "${FILESDIR}/${PN}-3.4.3-gtkprintbackendcups-debug.patch"
 
 	# Work around https://bugzilla.gnome.org/show_bug.cgi?id=663991
 	if [[ ${CHOST} == *-solaris* ]]; then
