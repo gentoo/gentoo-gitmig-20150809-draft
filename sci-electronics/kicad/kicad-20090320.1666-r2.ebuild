@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666-r2.ebuild,v 1.5 2010/12/23 08:46:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666-r2.ebuild,v 1.6 2012/05/19 19:02:11 ssuominen Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="doc debug examples minimal python"
 
 CDEPEND="x11-libs/wxGTK:2.8[X,opengl]
