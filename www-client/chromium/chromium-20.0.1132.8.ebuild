@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1132.8.ebuild,v 1.1 2012/05/16 15:13:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1132.8.ebuild,v 1.2 2012/05/19 18:56:18 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -120,7 +120,6 @@ src_prepare() {
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
-		\! -path 'third_party/adobe/*' \
 		\! -path 'third_party/angle/*' \
 		\! -path 'third_party/cacheinvalidation/*' \
 		\! -path 'third_party/cld/*' \
@@ -132,7 +131,6 @@ src_prepare() {
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jsoncpp/*' \
-		\! -path 'third_party/json_minify/*' \
 		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/leveldatabase/*' \
@@ -194,6 +192,10 @@ src_configure() {
 	# Disable tcmalloc, it causes problems with e.g. NVIDIA
 	# drivers, bug #413637.
 	myconf+=" -Dlinux_use_tcmalloc=0"
+
+	# Make it possible to remove third_party/adobe.
+	echo > "${T}/flapper_version.h" || die
+	myconf+=" -Dflapper_version_h_file=${T}/flapper_version.h"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
