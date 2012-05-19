@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.6 2012/05/19 08:00:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.7 2012/05/19 08:03:13 xmw Exp $
 
 EAPI=4
 EGIT_REPO_URI="https://github.com/keithw/mosh.git"
@@ -18,7 +18,6 @@ REQUIRED_USE="|| ( client server )
 	examples? ( client )"
 
 RDEPEND="dev-libs/protobuf
-    dev-libs/skalibs
 	sys-libs/ncurses:5
 	virtual/ssh
 	client? ( dev-lang/perl
