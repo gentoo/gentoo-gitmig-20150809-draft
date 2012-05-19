@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.4 2012/01/04 17:30:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.5 2012/05/19 15:58:11 ulm Exp $
 
 EAPI=4
 
@@ -123,7 +123,9 @@ src_install() {
 
 pkg_preinst() {
 	# move Info dir file to correct name
-	mv "${D}"/usr/share/info/emacs-${SLOT}/dir{.orig,} || die
+	if [[ -d "${D}"/usr/share/info ]]; then
+		mv "${D}"/usr/share/info/emacs-${SLOT}/dir{.orig,} || die
+	fi
 
 	# remove symlink and directory installed by -r6 and earlier
 	if [[ -L "${ROOT}"/usr/share/info/emacs-${SLOT} ]]; then

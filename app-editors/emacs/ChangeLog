@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.486 2012/05/09 01:44:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.487 2012/05/19 15:58:11 ulm Exp $
+
+  19 May 2012; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r8.ebuild,
+  emacs-21.4-r24.ebuild, emacs-22.3-r9.ebuild, emacs-23.4-r1.ebuild:
+  Don't try to rebuild the Info dir file if /usr/share/info doesn't exist.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> emacs-23.4-r1.ebuild:
   keyword ~amd64-fbsd

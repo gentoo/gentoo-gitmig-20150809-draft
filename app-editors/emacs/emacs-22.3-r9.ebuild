@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r9.ebuild,v 1.3 2012/05/03 07:25:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r9.ebuild,v 1.4 2012/05/19 15:58:11 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -214,7 +214,7 @@ pkg_preinst() {
 	local infodir=/usr/share/info/${EMACS_SUFFIX} f
 	if [ -f "${D}"${infodir}/dir.orig ]; then
 		mv "${D}"${infodir}/dir{.orig,} || die "moving info dir failed"
-	else
+	elif [[ -d "${D}"${infodir} ]]; then
 		# this should not happen in EAPI 4
 		ewarn "Regenerating Info directory index in ${infodir} ..."
 		rm -f "${D}"${infodir}/dir{,.*}
