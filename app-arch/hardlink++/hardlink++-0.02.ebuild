@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink++/hardlink++-0.02.ebuild,v 1.5 2012/05/19 10:42:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink++/hardlink++-0.02.ebuild,v 1.6 2012/05/19 12:33:12 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -23,10 +23,16 @@ src_prepare() {
 }
 
 src_compile() {
-	$(tc-getCXX) ${LDFLAGS} ${CXXFLAGS} hardlink.cpp -o ${PN}
+	$(tc-getCXX) ${LDFLAGS} ${CXXFLAGS} hardlink.cpp -o ${PN} || die
 }
 
 src_install() {
 	dobin ${PN}
 	dodoc README
+}
+
+pkg_postinst() {
+	echo
+	ewarn "This codepath is dead. Migrate to app-arch/hardlink or"
+	ewarn "app-arch/hardlink-fedora instead."
 }
