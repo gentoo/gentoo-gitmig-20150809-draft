@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.15 2012/05/04 15:12:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.16 2012/05/19 17:03:34 floppym Exp $
+
+*subunit-0.0.8 (19 May 2012)
+
+  19 May 2012; Mike Gilbert <floppym@gentoo.org> +subunit-0.0.8.ebuild:
+  Version bump for bug 415233. Enable python 3. Thanks to Ian Delaney for the
+  heads-up on missing files.
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> subunit-0.0.6.ebuild,
   subunit-0.0.7.ebuild:
