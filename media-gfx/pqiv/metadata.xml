@@ -2,9 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>graphics</herd>
+  <upstream>
   <maintainer>
     <email>phillip.berndt@googlemail.com</email>
     <name>Phillip Berndt</name>
-    <description>Upstream - please CC him on valid bugs</description>
   </maintainer>
+  </upstream>
 </pkgmetadata>
