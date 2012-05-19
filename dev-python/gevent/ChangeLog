@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.2 2012/05/18 11:37:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.3 2012/05/19 10:27:54 xarthisius Exp $
+
+*gevent-1.0_beta2 (19 May 2012)
+
+  19 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +gevent-1.0_beta2.ebuild:
+  Version bump with beta release (masked)
 
   18 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gevent-0.13.7.ebuild:
   Fix vars order
