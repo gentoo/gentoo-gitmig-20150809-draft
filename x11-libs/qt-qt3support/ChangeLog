@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-qt3support
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.115 2012/05/16 15:51:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.116 2012/05/20 13:16:45 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> qt-qt3support-4.8.1.ebuild:
+  Stable for x86, wrt bug #414241
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> qt-qt3support-4.8.1.ebuild:
   Stable for HPPA (bug #414241).

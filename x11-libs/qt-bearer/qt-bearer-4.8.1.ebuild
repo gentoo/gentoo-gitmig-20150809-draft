@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/qt-bearer-4.8.1.ebuild,v 1.5 2012/05/16 15:56:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/qt-bearer-4.8.1.ebuild,v 1.6 2012/05/20 13:20:43 ago Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit qt4-build
 
 DESCRIPTION="The network bearer plugins for the Qt toolkit"
 SLOT="4"
-KEYWORDS="amd64 hppa ~x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa x86 ~x86-fbsd"
 IUSE="connman networkmanager"
 
 DEPEND="

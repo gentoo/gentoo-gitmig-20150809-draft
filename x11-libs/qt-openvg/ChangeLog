@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-openvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.6 2012/05/08 18:27:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.7 2012/05/20 13:15:32 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> qt-openvg-4.8.1.ebuild:
+  Stable for x86, wrt bug #414241
 
   08 May 2012; Markos Chandras <hwoarang@gentoo.org> qt-openvg-4.8.1.ebuild:
   Stable on amd64 wrt bug #414241
