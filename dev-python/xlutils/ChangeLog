@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/xlutils
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlutils/ChangeLog,v 1.1 2012/05/20 14:53:23 tampakrap Exp $
+
+*xlutils-1.5.2 (20 May 2012)
+
+  20 May 2012; Theo Chatzimichos <tampakrap@gentoo.org> +metadata.xml,
+  +xlutils-1.5.2.ebuild:
+  Initial commit, ebuild by idella4
+
