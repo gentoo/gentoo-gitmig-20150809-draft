@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mscompress
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/ChangeLog,v 1.23 2011/12/26 12:19:35 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/ChangeLog,v 1.24 2012/05/20 09:03:33 halcy0n Exp $
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> mscompress-0.3.ebuild:
+  Revert to ~ppc; bug #394071
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> mscompress-0.3-r1.ebuild:
   x86 stable, bug #394071
