@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/lib-compat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.33 2011/03/25 09:45:35 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.34 2012/05/20 12:22:03 ferringb Exp $
+
+  20 May 2012; Brian Harring <ferringb@gentoo.org> lib-compat-1.4.ebuild,
+  lib-compat-1.4.1.ebuild:
+  Remove unnecessary (and PMS violating) preplib calls.
 
   25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> lib-compat-1.4.ebuild,
   lib-compat-1.4.1.ebuild, lib-compat-1.4.2.ebuild:
