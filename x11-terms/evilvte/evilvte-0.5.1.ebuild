@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/evilvte-0.5.1.ebuild,v 1.2 2012/05/03 07:11:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/evilvte-0.5.1.ebuild,v 1.3 2012/05/20 09:02:35 ssuominen Exp $
 
 EAPI=4
 MY_P=${P/_/\~}
@@ -12,14 +12,12 @@ SRC_URI="http://www.calno.com/${PN}/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="
-	dev-libs/glib:2
+RDEPEND=">=dev-libs/glib-2
 	x11-libs/gtk+:3
-	x11-libs/vte:2.90
-"
+	x11-libs/vte:2.90"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -33,7 +31,6 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC
-	# not autotools based
 	./configure --prefix=/usr --with-gtk=3.0 || die
 }
 
