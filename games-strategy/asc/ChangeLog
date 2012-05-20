@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/asc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.38 2012/05/04 04:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.39 2012/05/20 06:43:02 mr_bones_ Exp $
+
+*asc-2.5.0.0 (20 May 2012)
+
+  20 May 2012; Michael Sterrett <mr_bones_@gentoo.org> +asc-2.5.0.0.ebuild:
+  version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> asc-2.4.0.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
