@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.132 2012/05/20 10:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.133 2012/05/20 10:39:45 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -49,9 +49,10 @@ _automake_atom="sys-devel/automake"
 _autoconf_atom="sys-devel/autoconf"
 if [[ -n ${WANT_AUTOMAKE} ]]; then
 	case ${WANT_AUTOMAKE} in
-		none)   _automake_atom="" ;; # some packages don't require automake at all
-		# if you change the "latest" version here, change also autotools_run_tool
-		# this MUST reflect the latest stable major version for each arch!
+		# Even if the package doesn't use automake, we still need to depend
+		# on it because we run aclocal to process m4 macros.  This matches
+		# the autoreconf tool, so this requirement is correct.  #401605
+		none) ;;
 		latest)
 			# Use SLOT deps if we can.  For EAPI=0, we get pretty close.
 			if [[ ${EAPI:-0} != 0 ]] ; then
