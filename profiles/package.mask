@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13775 2012/05/20 16:58:45 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13776 2012/05/20 20:36:13 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (20 May 2012)
+# Still using vulnerable net-libs/xulrunner wrt bug 412341
+# Build problems wrt bug 390325
+# Version 0.9_beta5 will be removed in approx. 30 days
+~app-text/kiwix-0.9_beta5
 
 # Benda Xu <heroxbd@gentoo.org> (20 May 2012)
 # geant-4.9.5_p01 has a major class declaration change that renders
@@ -314,13 +320,6 @@ sys-kernel/mm-sources
 x11-apps/xsetmode
 x11-apps/xsetpointer
 <=x11-base/xorg-x11-7.4-r1
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Apr 2012)
-# Masked for removal in 30 days for using the obsolete xulrunner
-# package wrt #412875 and #403415
-# Information from mailinglist:
-# Possible replacements include kchmviewer and fbreader
-app-text/chmsee
 
 # Torsten Veller <tove@gentoo.org> (21 Apr 2012)
 # Mask for removal: Doesn't install anything (#356559)

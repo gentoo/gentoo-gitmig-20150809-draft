@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6575 2012/05/20 16:58:45 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6576 2012/05/20 20:36:13 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove entry for app-text/chmsee since it was removed from tree. Lastrite
+  app-text/kiwix (by version) wrt #412341 for using vulnerable copy of
+  net-libs/xulrunner wrt #403415.
 
   20 May 2012; Benda Xu <heroxbd@gentoo.org> package.mask:
   mask =sci-physics/geant{-python}-4.9.5_p01 for class header breakage
