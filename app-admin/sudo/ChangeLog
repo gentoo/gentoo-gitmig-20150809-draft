@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.316 2012/05/19 14:02:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.317 2012/05/20 06:58:12 halcy0n Exp $
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> sudo-1.8.5_p1.ebuild:
+  Stable for ppc/ppc64; bug #416281
 
   19 May 2012; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.5_p1.ebuild:
   Stable for amd64, wrt bug #416281
