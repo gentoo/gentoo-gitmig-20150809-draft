@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/hardlink-0.2.0.ebuild,v 1.2 2012/05/19 10:50:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink/hardlink-0.2.0.ebuild,v 1.3 2012/05/20 17:40:06 ssuominen Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -18,10 +18,20 @@ RDEPEND="dev-libs/libpcre"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-DOCS="README"
+DOCS="README ${T}/README.rsync"
 
 src_prepare() {
 	sed -i -e '/^CF/s:?=:+=:' -e '/^CF/s:-O2 -g::' Makefile || die
+
+	cat <<-EOF > "${T}"/README.rsync
+	http://hardlinkpy.googlecode.com/svn/trunk/hardlink.py has regex '^\..*\.\?{6,6}$'
+	for excluding rsync temporary files by default.
+
+	To accomplish same with this version, you can use following syntax:
+	# hardlink -x '^\..*\.\?{6,6}$'
+
+	This was discussed at http://bugs.gentoo.org/416613
+	EOF
 }
 
 src_compile() {
