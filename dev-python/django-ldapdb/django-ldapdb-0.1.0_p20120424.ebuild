@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/django-ldapdb-0.1.0_p20120424.ebuild,v 1.2 2012/04/25 18:47:09 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/django-ldapdb-0.1.0_p20120424.ebuild,v 1.3 2012/05/20 11:54:44 tampakrap Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-pypy-* *-jython"
 inherit distutils
 
 DESCRIPTION="an LDAP database backend for Django"
@@ -19,29 +19,21 @@ SLOT="0"
 PYTHON_MODNAME="ldapdb"
 S="${WORKDIR}/${PN}"
 
-REDEPEND=""
-DEPEND="${REDEPEND}
+RDEPEND="dev-python/django"
+DEPEND="${RDEPEND}
 	dev-python/setuptools
-	dev-python/django
 	test? ( dev-python/python-ldap )"
 
 src_test() {
-	export DJANGO_SETTINGS_MODULE="django.conf"
-	testing() {
-		PYTHONPATH=. "$(PYTHON)" examples/tests.py
-		if [[ $? ]];  then
-			einfo "All examples tests completed successfully with python"$(python_get_version)
-			einfo ""
-		fi
+	# Exclude examples from test phase
+	mv examples/tests.py examples/tests
 
-		PYTHONPATH="build-$(python_get_version)/lib/" \
-		 "$(PYTHON)" ${PYTHON_MODNAME}/tests.py
-		if [[ $? ]];  then
-			einfo "All tests under ldapdb completed successfully with python"$(python_get_version)
-			einfo ""
-		fi
+	testing() {
+		"$(PYTHON)" manage.py test
 	}
+
 	python_execute_function testing
+	mv examples/tests examples/tests.py
 }
 
 src_install() {
