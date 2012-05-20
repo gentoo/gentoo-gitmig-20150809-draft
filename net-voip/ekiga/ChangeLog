@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.35 2012/05/03 07:27:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.36 2012/05/20 12:27:23 halcy0n Exp $
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> ekiga-3.2.7.ebuild:
+  Stable for ppc; bug #398847
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> ekiga-2.0.12.ebuild,
   ekiga-3.2.7.ebuild:
