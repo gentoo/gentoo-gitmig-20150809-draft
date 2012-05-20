@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-3.2.1.ebuild,v 1.3 2012/05/05 03:20:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-3.4.2.ebuild,v 1.1 2012/05/20 03:59:50 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -45,8 +45,8 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
-	virtual/pkgconfig
 	>=dev-util/intltool-0.40
+	virtual/pkgconfig
 	|| (
 		gnome-base/libgnome-keyring
 		<gnome-base/gnome-keyring-2.29.4 )"
@@ -71,4 +71,10 @@ pkg_setup() {
 		$(use_with telepathy)
 		$(use_with zlib)"
 	DOCS="AUTHORS ChangeLog* NEWS README"
+}
+
+src_prepare() {
+	# <glib-2.31 compatibility
+	rm -v server/vino-marshal.{c,h} || die
+	gnome2_src_prepare
 }
