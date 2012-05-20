@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.4.0-r1.ebuild,v 1.1 2012/01/06 07:35:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.4.0-r1.ebuild,v 1.2 2012/05/20 18:28:15 graaff Exp $
 
 EAPI=2
 
 # jruby → Marshal/DeMarshal to clone directories fail; tests fail in
 # release 0.2.1
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="test spec"
 
@@ -35,5 +35,16 @@ all_ruby_prepare() {
 	epatch "${FILESDIR}/${P}-ruby193-advise.patch"
 	epatch "${FILESDIR}/${P}-ruby193-pathname.patch"
 	epatch "${FILESDIR}/${P}-ruby193-ruby-pathname.patch"
+}
 
+each_ruby_prepare() {
+	case ${RUBY} in
+		*jruby)
+			# Ignore failing tests: upstream is aware and doing the same
+			# on Travis.
+			rm test/fakefs_test.rb || die
+			;;
+		*)
+			;;
+	esac
 }

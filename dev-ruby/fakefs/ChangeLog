@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.22 2012/01/06 07:35:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.23 2012/05/20 18:28:15 graaff Exp $
+
+  20 May 2012; Hans de Graaff <graaff@gentoo.org> fakefs-0.4.0-r1.ebuild:
+  Add jruby but ignore some tests similar to upstream. Needed for newer rspec:2
+  versions.
 
 *fakefs-0.4.0-r1 (06 Jan 2012)
 
