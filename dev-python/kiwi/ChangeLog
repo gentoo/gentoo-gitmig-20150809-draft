@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.15 2012/02/24 08:02:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.16 2012/05/20 00:09:47 floppym Exp $
+
+*kiwi-1.9.34 (20 May 2012)
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> +kiwi-1.9.34.ebuild:
+  Version bump for #390109. Thanks to Ian Delaney for pointing out the test
+  suite. Drop ppc and ppc64 keywords due to new deps.
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> kiwi-1.9.26.ebuild:
   Restricting pypy
