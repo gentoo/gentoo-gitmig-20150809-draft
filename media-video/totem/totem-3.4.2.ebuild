@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.4.2.ebuild,v 1.1 2012/05/19 23:59:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.4.2.ebuild,v 1.2 2012/05/20 22:22:55 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -115,7 +115,6 @@ pkg_setup() {
 		$(use_enable nautilus)
 		$(use_enable nsplugin browser-plugins)
 		$(use_enable python)
-		$(use_enable python introspection)
 		$(use_enable vala)
 		VALAC=$(type -P valac-0.14)
 		BROWSER_PLUGIN_DIR=/usr/$(get_libdir)/nsbrowser/plugins"
