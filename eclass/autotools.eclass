@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.131 2012/05/20 10:26:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.132 2012/05/20 10:32:05 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -162,6 +162,9 @@ eautoreconf() {
 	einfo "Running eautoreconf in '${PWD}' ..."
 	[[ -n ${auxdir}${macdir} ]] && mkdir -p ${auxdir} ${macdir}
 	eaclocal
+	if grep -q '^AM_GNU_GETTEXT_VERSION' configure.?? ; then
+		eautopoint --force
+	fi
 	[[ ${CHOST} == *-darwin* ]] && g=g
 	if ${LIBTOOLIZE:-${g}libtoolize} -n --install >& /dev/null ; then
 		_elibtoolize --copy --force --install
