@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.160 2012/05/06 18:45:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.161 2012/05/20 07:25:43 hd_brummy Exp $
+
+*vdr-1.6.0_p2-r10 (20 May 2012)
+
+  20 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-1.6.0_p2-r10.ebuild, +files/vdr-1.6.0_p2_linguas-v2.diff:
+  linguas install fails on unsupported values, reported by Michael B. on IRC
+  #gentoo-vdr
 
   06 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   files/vdr-1.6.0_p2_linguas.diff:
