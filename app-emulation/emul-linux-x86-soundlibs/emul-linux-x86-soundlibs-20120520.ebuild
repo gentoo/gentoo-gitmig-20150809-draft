@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20110928.ebuild,v 1.4 2011/10/16 12:09:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20120520.ebuild,v 1.1 2012/05/20 13:14:10 pacho Exp $
 
 EAPI="4"
 
 inherit emul-linux-x86
 
-LICENSE="as-is BSD FDL-1.2 GPL-2 LGPL-2 LGPL-2.1 gsm public-domain"
-KEYWORDS="-* amd64"
+LICENSE="BSD FDL-1.2 GPL-2 LGPL-2.1 LGPL-2 as-is gsm public-domain"
+KEYWORDS="-* ~amd64"
 IUSE="alsa pulseaudio"
 
 RDEPEND="pulseaudio? ( media-sound/pulseaudio )

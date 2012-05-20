@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/emul-linux-x86-motif-20110928.ebuild,v 1.4 2011/10/16 12:11:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/emul-linux-x86-motif-20120520.ebuild,v 1.1 2012/05/20 13:10:33 pacho Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit emul-linux-x86
 
 LICENSE="MIT MOTIF"
 
-KEYWORDS="-* amd64"
+KEYWORDS="-* ~amd64"
 
 DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-xlibs-${PV}
