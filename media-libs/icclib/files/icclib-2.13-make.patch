@@ -1,0 +1,55 @@
+diff -ruN icclib.orig/Makefile icclib/Makefile
+--- icclib.orig/Makefile	2008-03-12 08:18:20.000000000 +0100
++++ icclib/Makefile	2012-05-20 21:05:03.000000000 +0200
+@@ -3,13 +3,13 @@
+ # by uncommenting the appropriate line:
+ 
+ # Microsoft C++, WinNT setup
+-include Makefile.WNT
++#include Makefile.WNT
+ 
+ # IBM C++, WinNT setup
+ #include Makefile.IBMNT
+ 
+ # Generic UNIX setup
+-#include Makefile.UNIX
++include Makefile.UNIX
+ 
+ # Apple OSX
+ #include Makefile.OSX
+diff -ruN icclib.orig/Makefile.UNIX icclib/Makefile.UNIX
+--- icclib.orig/Makefile.UNIX	2008-03-12 08:18:20.000000000 +0100
++++ icclib/Makefile.UNIX	2012-05-20 21:27:44.000000000 +0200
+@@ -1,7 +1,7 @@
+ # Generic UNIX setup
+ 
+ SLASH     = /
+-SUFLIB    = .a
++SUFLIB    = .so
+ SUFOBJ    = .o
+ SUFEXE    = 
+ CMDSEP    = ;
+@@ -18,17 +18,17 @@
+ STDHDRSDEF = /usr/include
+ 
+ MAKEU     = make
+-LIBU      = ar -r
+-LIBOF     = -o
++LIBOF     = 
+ RANLIB    = echo
+ AS        = as
+-CCFLAGSDEF   = -DUNIX -c
+-CC        = cc $(CCFLAGS) $(INCFLAG)$(STDHDRS)
++CCFLAGSDEF   = -DUNIX -fPIC -c
++CC        = cc $(CCFLAGSDEF) $(CFLAGS) $(INCFLAG)$(STDHDRS)
+ CCOF      = -o 
+-LINKFLAGSDEF = -lm
++LINKFLAGSDEF = -shared
+ LINKLIBS  = 
+-LINK      = cc $(LINKFLAGS) $(LINKLIBS)
++LINK      = cc $(LINKFLAGSDEF) $(LDFLAGS) $(LINKLIBS)
+ LINKOF    = -o 
++LIBU      = cc $(LINKFLAGSDEF) $(LDFLAGS) -Wl,-soname,libicc.so.$(ICCLIB_SOVERSION) $(LINKLIBS) -o
+ 
+ .SUFFIXES:
+ .SUFFIXES: .c $(SUFLIB) $(SUFOBJ) $(SUFEXE)
