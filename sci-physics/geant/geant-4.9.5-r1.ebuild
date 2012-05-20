@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5_p01.ebuild,v 1.2 2012/05/20 16:27:19 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5-r1.ebuild,v 1.6 2012/05/20 16:27:19 heroxbd Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MYP}"
 
 PATCHES=( "${FILESDIR}"/${PN}-4.9.4-zlib.patch \
-	"${FILESDIR}"/${P}-scripts-only-dataenv.patch )
+	"${FILESDIR}"/${PN}-4.9.5-scripts-only-dataenv.patch )
 
 src_configure() {
 	mycmakeargs=(
