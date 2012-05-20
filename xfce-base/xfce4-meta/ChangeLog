@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.35 2012/05/19 13:01:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.36 2012/05/20 11:59:27 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> xfce4-meta-4.10.ebuild:
+  Stable for amd64, wrt bug #416223
 
   19 May 2012; Anthony G. Basile <blueness@gentoo.org> xfce4-meta-4.10.ebuild:
   Keyword mips

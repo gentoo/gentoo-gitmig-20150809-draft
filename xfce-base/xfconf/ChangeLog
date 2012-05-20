@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.68 2012/05/19 12:34:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.69 2012/05/20 12:01:51 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> xfconf-4.10.0.ebuild:
+  Stable for amd64, wrt bug #416223
 
   19 May 2012; Anthony G. Basile <blueness@gentoo.org> xfconf-4.10.0.ebuild:
   Keyword mips

@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.177 2012/05/19 12:31:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.178 2012/05/20 11:57:17 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> libxfce4util-4.10.0.ebuild:
+  Stable for amd64, wrt bug #416223
 
   19 May 2012; Anthony G. Basile <blueness@gentoo.org>
   libxfce4util-4.10.0.ebuild:

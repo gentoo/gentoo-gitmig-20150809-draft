@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.48 2012/05/19 13:00:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.49 2012/05/20 11:56:19 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> garcon-0.2.0.ebuild:
+  Stable for amd64, wrt bug #416223
 
   19 May 2012; Anthony G. Basile <blueness@gentoo.org> garcon-0.2.0.ebuild:
   Keyword mips
