@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r2.ebuild,v 1.10 2012/05/09 16:36:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r2.ebuild,v 1.11 2012/05/20 12:45:25 vapier Exp $
 
 inherit autotools eutils libtool multilib
 
@@ -55,11 +55,7 @@ src_unpack() {
 	rm aclocal.m4 # Force recreation
 	# Copying this code from autotools.eclass but avoid autoheader call...
 	eaclocal
-	if ${LIBTOOLIZE:-libtoolize} -n --install >& /dev/null ; then
-		_elibtoolize --copy --force --install
-	else
-		_elibtoolize --copy --force
-	fi
+	_elibtoolize --install --copy --force
 	eautoconf
 	elibtoolize
 
