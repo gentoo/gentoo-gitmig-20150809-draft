@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.62 2012/04/15 18:22:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.63 2012/05/20 08:07:55 halcy0n Exp $
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> xom-1.2.6-r1.ebuild:
+  Stable for ppc/ppc64; bug #381981
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> xom-1.2.6-r1.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
