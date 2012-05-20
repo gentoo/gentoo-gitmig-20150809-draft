@@ -1,9 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-4.04.ebuild,v 1.1 2012/04/10 15:49:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-4.04.ebuild,v 1.2 2012/05/20 11:05:41 vapier Exp $
 
 EAPI=3
-inherit autotools autotools-utils
+
+AUTOTOOLS_AUTORECONF=1
+inherit autotools-utils
 
 MY_P=${PN}${PV/./}
 DESCRIPTION="A unified compressor for PAQ algorithms"
@@ -25,7 +27,6 @@ S=${WORKDIR}
 src_prepare() {
 	EPATCH_OPTS+=-p1 epatch "${FILESDIR}"/${PN}-${PV%.*}-autotools.patch
 	autotools-utils_src_prepare
-	eautoreconf
 }
 
 src_configure() {

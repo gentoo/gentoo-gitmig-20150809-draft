@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/zpaq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.7 2012/04/10 15:49:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.8 2012/05/20 11:05:41 vapier Exp $
+
+  20 May 2012; Mike Frysinger <vapier@gentoo.org> zpaq-2.05.ebuild,
+  zpaq-3.01.ebuild, zpaq-4.04.ebuild:
+  Fix autotools-utils usage.
 
 *zpaq-4.04 (10 Apr 2012)
 
