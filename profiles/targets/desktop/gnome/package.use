@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.9 2012/04/20 00:46:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.10 2012/05/20 05:10:08 tetromino Exp $
 
 # gtk3 input method plugins required for gnome3
 app-i18n/ibus gtk3
@@ -20,6 +20,9 @@ net-libs/libsocialweb vala
 # The following are required by ekiga-3
 net-libs/opal sip
 net-libs/ptlib wav
+
+# For net-misc/vinagre-3.4 and gnome-boxes
+net-misc/spice-gtk gtk3
 
 # liboauth (required by evolution-data-server[gnome-online-accounts] and
 # gnome-documents in gnome-3.2) has +nss in IUSE, pulls in curl[-gnutls,nss]
