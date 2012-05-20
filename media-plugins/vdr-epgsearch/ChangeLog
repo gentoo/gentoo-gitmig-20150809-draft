@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-epgsearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.54 2012/03/03 21:15:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.55 2012/05/20 17:18:01 idl0r Exp $
+
+*vdr-epgsearch-1.0.0-r1 (20 May 2012)
+
+  20 May 2012; Christian Ruppert <idl0r@gentoo.org>
+  +vdr-epgsearch-1.0.0-r1.ebuild:
+  Use the new vdr-plugin eclass. Fix broken symlinks/docs. Thanks to madmartin
+  #gentoo-vdr.
 
   03 Mar 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-epgsearch-1.0.0.ebuild, +files/vdr-epgsearch-1.0.0_vdr-1.7.25.diff:
