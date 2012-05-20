@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.48 2012/02/24 14:40:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.49 2012/05/20 07:25:54 halcy0n Exp $
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> urwid-1.0.1.ebuild:
+  Stable for ppc/ppc64; bug #404719
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> urwid-1.0.1.ebuild:
   x86 stable wrt bug #404719
