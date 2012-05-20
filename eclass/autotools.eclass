@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.135 2012/05/20 12:38:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.136 2012/05/20 12:55:06 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -416,16 +416,22 @@ autotools_check_macro() {
 	return 0
 }
 
-# Internal function to look for a macro and extract its value
+# @FUNCTION: autotools_check_macro_val
+# @USAGE: <macro> [macros]
+# @INTERNAL
+# @DESCRIPTION:
+# Look for a macro and extract its value.
 autotools_check_macro_val() {
-	local macro=$1 scan_out
+	local macro scan_out
 
-	autotools_check_macro "${macro}" | \
-		gawk -v macro="${macro}" \
-			'($0 !~ /^[[:space:]]*(#|dnl)/) {
-				if (match($0, macro ":(.*)$", res))
-					print res[1]
-			}' | uniq
+	for macro ; do
+		autotools_check_macro "${macro}" | \
+			gawk -v macro="${macro}" \
+				'($0 !~ /^[[:space:]]*(#|dnl)/) {
+					if (match($0, macro ":(.*)$", res))
+						print res[1]
+				}' | uniq
+	done
 
 	return 0
 }
