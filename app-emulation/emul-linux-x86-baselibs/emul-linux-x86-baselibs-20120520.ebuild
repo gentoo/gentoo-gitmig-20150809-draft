@@ -1,21 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20110928.ebuild,v 1.4 2011/10/16 12:09:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20120520.ebuild,v 1.1 2012/05/20 12:57:13 pacho Exp $
 
 EAPI="4"
 
 inherit emul-linux-x86
 
-LICENSE="|| ( Artistic GPL-2 ) || ( BSD GPL-2 ) BZIP2 CRACKLIB DB
-		GPL-2 || ( GPL-2 AFL-2.1 ) LGPL-2 LGPL-2.1 GPL-3 LGPL-3
-		MIT MPL-1.1 OPENLDAP OpenSoftware openssl OracleDB ZLIB
-		tcp_wrappers_license as-is UoI-NCSA wxWinLL-3.1"
-KEYWORDS="-* amd64"
+LICENSE="Artistic GPL-1 GPL-2 GPL-3 BSD BSD-2 BZIP2 AFL-2.1 LGPL-2.1 BSD-4 MIT public-domain
+LGPL-3 LGPL-2 GPL-2-with-exceptions MPL-1.1 OPENLDAP OracleDB UoI-NCSA ZLIB as-is openssl tcp_wrappers_license"
+
+KEYWORDS="-* ~amd64"
 
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2" # bug 168507
 
 QA_DT_HASH="usr/lib32/.*"
+
+PYTHON_UPDATER_IGNORE="1"
 
 src_prepare() {
 	export ALLOWED="(${S}/lib32/security/pam_filter/upperLOWER|${S}/etc/env.d|${S}/lib32/security/pam_ldap.so)"
