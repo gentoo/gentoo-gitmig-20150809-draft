@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.4.1.ebuild,v 1.1 2012/05/06 08:19:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.4.1.ebuild,v 1.2 2012/05/20 21:39:27 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -56,6 +56,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.0.3-man-compatibility.patch"
 
 	eautoreconf
+	intltoolize --automake --copy --force || die "intltoolize failed"
 
 	gnome2_src_prepare
 }
