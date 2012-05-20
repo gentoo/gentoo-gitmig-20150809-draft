@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.2.6-r1.ebuild,v 1.3 2012/05/20 08:07:55 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.2.6-r1.ebuild,v 1.4 2012/05/20 18:38:02 ago Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ SRC_URI="http://cafeconleche.org/XOM/${P}.tar.gz
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ia64 ppc ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 COMMON_DEPEND="dev-java/xerces:2
