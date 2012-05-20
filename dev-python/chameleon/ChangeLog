@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/chameleon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.12 2012/05/20 14:44:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.13 2012/05/20 15:20:13 floppym Exp $
+
+*chameleon-2.8.3-r1 (20 May 2012)
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> +chameleon-2.8.3-r1.ebuild,
+  -chameleon-2.8.2.ebuild, -chameleon-2.8.3.ebuild:
+  Package works with all supported versions of python.
 
 *chameleon-2.8.3 (20 May 2012)
 

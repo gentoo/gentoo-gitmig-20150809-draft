@@ -1,12 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/chameleon-2.8.2.ebuild,v 1.1 2012/04/11 07:11:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/chameleon-2.8.3-r1.ebuild,v 1.1 2012/05/20 15:20:13 floppym Exp $
 
 EAPI=3
 
 SUPPORT_PYTHON_ABIS=1
-PYTHON_DEPEND="2:2.7 3"
-RESTRICT_PYTHON_ABIS="2.[456]"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
