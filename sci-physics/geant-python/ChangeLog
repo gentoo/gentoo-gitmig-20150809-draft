@@ -1,0 +1,12 @@
+# ChangeLog for sci-physics/geant-python
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/ChangeLog,v 1.1 2012/05/20 03:11:24 heroxbd Exp $
+
+*geant-python-4.9.5_p01 (20 May 2012)
+
+  20 May 2012; Benda Xu <heroxbd@gentoo.org>
+  +files/geant-python-4.9.5-build.patch,
+  +files/geant-python-4.9.5-visverbose.patch, +geant-python-4.9.5_p01.ebuild,
+  +metadata.xml:
+  initial commit
+
