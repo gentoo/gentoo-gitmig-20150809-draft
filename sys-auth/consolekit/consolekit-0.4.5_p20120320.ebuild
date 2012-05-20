@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320.ebuild,v 1.6 2012/05/20 11:53:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320.ebuild,v 1.7 2012/05/20 13:42:37 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils linux-info pam systemd
@@ -38,7 +38,10 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	virtual/pkgconfig
 	doc? ( app-text/xmlto )
-	test? ( app-text/docbook-xml-dtd:4.1.2 )"
+	test? (
+		app-text/docbook-xml-dtd:4.1.2
+		app-text/xmlto
+		)"
 
 S=${WORKDIR}/${MY_P}
 
@@ -71,6 +74,7 @@ src_configure() {
 		--localstatedir="${EPREFIX}"/var \
 		$(use_enable pam pam-module) \
 		$(use_enable doc docbook-docs) \
+		$(use_enable test docbook-docs) \
 		$(use_enable debug) \
 		$(use_enable policykit polkit) \
 		$(use_enable acl udev-acl) \
