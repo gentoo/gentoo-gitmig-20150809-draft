@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13774 2012/05/20 15:28:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13775 2012/05/20 16:58:45 heroxbd Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Benda Xu <heroxbd@gentoo.org> (20 May 2012)
+# geant-4.9.5_p01 has a major class declaration change that renders
+# geant-python (g4py upstream) unable to compile
+# upstream bug http://bugzilla-geant4.kek.jp/show_bug.cgi?id=1317
+=sci-physics/geant-4.9.5_p01
+=sci-physics/geant-python-4.9.5_p01
 
 # Christian Ruppert <idl0r@gentoo.org> (20 May 2012)
 # Temp. mask gitolite-3* as it likely breaks gitolite-2* setups
