@@ -1,6 +1,6 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.62 2012/05/20 16:46:58 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.63 2012/05/20 17:10:11 heroxbd Exp $
 
   20 May 2012; Benda Xu <heroxbd@gentoo.org> geant-4.9.5-r1.ebuild,
   geant-4.9.5_p01.ebuild:
@@ -11,7 +11,7 @@
   +files/geant-4.9.5_p01-scripts-only-dataenv.patch,
   files/geant-4.9.5-scripts-only-dataenv.patch:
   add back geant-4.9.5-r1.ebuild because geant-python cannot function correctly
-  with 4.9.5_p01, upstream bug http://bugzilla-geant4.kek.jp/show
+  with 4.9.5_p01, upstream http://bugzilla-geant4.kek.jp/show_bug.cgi?id=1317
 
 *geant-4.9.5_p01 (19 May 2012)
  
