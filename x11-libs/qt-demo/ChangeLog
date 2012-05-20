@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.89 2012/05/15 15:13:16 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.90 2012/05/20 13:06:29 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> qt-demo-4.8.1-r1.ebuild:
+  Stable for x86, wrt bug #414241
 
   15 May 2012; Davide Pesavento <pesa@gentoo.org> qt-demo-4.8.1-r1.ebuild:
   x11-libs/qt-assistant is a hard dependency, because the qtdemo binary links
