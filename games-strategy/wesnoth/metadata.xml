@@ -4,6 +4,5 @@
   <herd>games</herd>
   <use>
     <flag name="server">Enable compilation of server</flag>
-    <flag name="tinygui">enable GUI reductions for resolutions down to 320x240 (PDAs)</flag>
   </use>
 </pkgmetadata>
