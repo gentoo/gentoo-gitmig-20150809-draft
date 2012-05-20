@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/rzip-2.1-r1.ebuild,v 1.7 2010/04/08 18:13:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/rzip-2.1-r1.ebuild,v 1.8 2012/05/20 08:52:57 halcy0n Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://rzip.samba.org/ftp/rzip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 ~sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 ~sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="app-arch/bzip2"
