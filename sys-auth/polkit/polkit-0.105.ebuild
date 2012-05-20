@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.105.ebuild,v 1.1 2012/05/14 11:43:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.105.ebuild,v 1.2 2012/05/20 13:15:43 ssuominen Exp $
 
 EAPI=4
 inherit pam
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="debug doc examples gtk +introspection kde nls pam systemd"
 
 RDEPEND=">=dev-libs/glib-2.30
-	dev-libs/expat
+	>=dev-libs/expat-2
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 	pam? ( virtual/pam )
 	systemd? ( sys-apps/systemd )"
@@ -23,13 +23,15 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
-	dev-util/intltool
+	>=dev-util/intltool-0.40
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.13 )"
-PDEPEND="!systemd? ( >=sys-auth/consolekit-0.4.5[policykit] )
-	pam? ( sys-auth/pambase[consolekit] )
-	gtk? ( || ( >=gnome-extra/polkit-gnome-${PV} lxde-base/lxpolkit ) )
-	kde? ( sys-auth/polkit-kde-agent )"
+PDEPEND="gtk? ( || ( >=gnome-extra/polkit-gnome-${PV} lxde-base/lxpolkit ) )
+	kde? ( sys-auth/polkit-kde-agent )
+	!systemd? (
+		>=sys-auth/consolekit-0.4.5_p20120320[policykit]
+		pam? ( >=sys-auth/pambase-20101024-r2[consolekit] )
+		)"
 
 DOCS=( docs/TODO HACKING NEWS README )
 
@@ -68,42 +70,11 @@ src_install() {
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
 
-	# We disable example compilation above, and handle it here
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins src/examples/{*.c,*.policy*}
 	fi
 
-	# Need to keep a few directories around...
 	diropts -m0700 -o root -g root
 	keepdir /var/lib/polkit-1
-	#keepdir /var/run/polkit-1 #387903
-}
-
-pkg_postinst() {
-	# Make sure that the user has consolekit sessions working so that the
-	# 'allow_active' directive in polkit action policies works
-	if has_version 'gnome-base/gdm' && ! has_version 'gnome-base/gdm[consolekit]'; then
-		# If user has GDM installed, but USE=-consolekit, warn them
-		ewarn "You have GDM installed, but it does not have USE=consolekit"
-		ewarn "If you login using GDM, polkit authorizations will not work"
-		ewarn "unless you enable USE=consolekit"
-		einfo
-	fi
-	if has_version 'kde-base/kdm' && ! has_version 'kde-base/kdm[consolekit]'; then
-		# If user has KDM installed, but USE=-consolekit, warn them
-		ewarn "You have KDM installed, but it does not have USE=consolekit"
-		ewarn "If you login using KDM, polkit authorizations will not work"
-		ewarn "unless you enable USE=consolekit"
-		einfo
-	fi
-	if ! has_version 'gnome-base/gdm[consolekit]' && \
-		! has_version 'kde-base/kdm[consolekit]'; then
-		# Inform user about the alternative method
-		ewarn "If you don't use GDM or KDM for logging in,"
-		ewarn "you must start your desktop environment (DE) as follows:"
-		ewarn "	ck-launch-session \$STARTGUI"
-		ewarn "Where \$STARTGUI is a DE-starting command such as 'gnome-session'."
-		ewarn "You should add this to your ~/.xinitrc if you use startx."
-	fi
 }
