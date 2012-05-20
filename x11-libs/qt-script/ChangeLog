@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.115 2012/05/20 13:17:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.116 2012/05/20 13:32:55 pesa Exp $
+
+  20 May 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Remove "jit" USE flag description from metadata, bug 416611.
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> qt-script-4.8.1.ebuild:
   Stable for x86, wrt bug #414241
