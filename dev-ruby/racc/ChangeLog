@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.67 2012/02/05 20:48:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.68 2012/05/20 06:29:53 graaff Exp $
+
+*racc-1.4.8 (20 May 2012)
+
+  20 May 2012; Hans de Graaff <graaff@gentoo.org> +racc-1.4.8.ebuild:
+  Version bump.
 
   05 Feb 2012; Markus Meier <maekke@gentoo.org> racc-1.4.7.ebuild:
   add ~arm, bug #332593
