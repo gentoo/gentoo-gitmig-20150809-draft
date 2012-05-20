@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Notify/Gtk2-Notify-0.05.ebuild,v 1.2 2012/05/20 09:41:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Notify/Gtk2-Notify-0.05.ebuild,v 1.3 2012/05/20 14:08:04 ssuominen Exp $
 
 EAPI=4
 
 MODULE_AUTHOR=FLORA
 
-inherit perl-module
+inherit perl-module virtualx
 
 DESCRIPTION="A perl interface to the notification library"
 
@@ -26,3 +26,7 @@ DEPEND="${RDEPEND}
 SRC_TEST="do"
 
 PATCHES=( "${FILESDIR}"/${P}-libnotify.patch )
+
+src_test() {
+	VIRTUALX_COMMAND="perl-module_src_test" virtualmake #416729
+}
