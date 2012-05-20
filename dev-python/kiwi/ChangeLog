@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.16 2012/05/20 00:09:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.17 2012/05/20 00:37:11 floppym Exp $
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Add remote-id.
 
 *kiwi-1.9.34 (20 May 2012)
 
