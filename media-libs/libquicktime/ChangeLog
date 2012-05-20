@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.183 2012/05/17 15:20:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.184 2012/05/20 09:42:06 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> libquicktime-1.2.4.ebuild:
+  Stable for amd64, wrt bug #416221
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> libquicktime-1.2.4.ebuild:
   keyword ~amd64-fbsd
