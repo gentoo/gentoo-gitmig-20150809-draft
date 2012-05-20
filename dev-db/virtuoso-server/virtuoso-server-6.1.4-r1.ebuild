@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.4-r1.ebuild,v 1.3 2012/05/19 19:32:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.4-r1.ebuild,v 1.4 2012/05/20 14:54:06 ago Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit virtuoso
 
 DESCRIPTION="Server binaries for Virtuoso, high-performance object-relational SQL database"
 
-KEYWORDS="~amd64 ~arm ppc ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="kerberos ldap readline"
 
 # Bug 305077
