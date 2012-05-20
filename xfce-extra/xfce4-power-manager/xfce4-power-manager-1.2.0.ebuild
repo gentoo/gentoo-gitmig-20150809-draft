@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0.ebuild,v 1.2 2012/05/05 07:19:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0.ebuild,v 1.3 2012/05/20 12:09:47 ago Exp $
 
 EAPI=4
 inherit flag-o-matic linux-info xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug kernel_linux networkmanager policykit +xfce_plugins_brightness"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.98

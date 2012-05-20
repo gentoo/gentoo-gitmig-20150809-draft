@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-battery-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/ChangeLog,v 1.16 2012/05/14 10:27:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/ChangeLog,v 1.17 2012/05/20 12:04:53 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  xfce4-battery-plugin-1.0.4.ebuild:
+  Stable for amd64, wrt bug #416223
 
   14 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-battery-plugin-1.0.1.ebuild, -xfce4-battery-plugin-1.0.2.ebuild:

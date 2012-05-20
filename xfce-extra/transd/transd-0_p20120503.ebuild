@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20120503.ebuild,v 1.2 2012/05/04 07:42:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20120503.ebuild,v 1.3 2012/05/20 12:03:59 ago Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11

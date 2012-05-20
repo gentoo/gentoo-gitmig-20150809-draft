@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/xfce4-mpc-plugin-0.4.3.ebuild,v 1.1 2012/05/14 10:30:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/xfce4-mpc-plugin-0.4.3.ebuild,v 1.2 2012/05/20 12:08:40 ago Exp $
 
 EAPI=4
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/panel-plugins/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug libmpd"
 
 RDEPEND=">=xfce-base/exo-0.6

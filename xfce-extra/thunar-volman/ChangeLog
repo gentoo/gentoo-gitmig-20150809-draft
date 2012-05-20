@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.72 2012/05/05 07:06:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.73 2012/05/20 12:03:38 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> thunar-volman-0.8.0.ebuild:
+  Stable for amd64, wrt bug #416223
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> thunar-volman-0.6.0.ebuild,
   thunar-volman-0.6.1.ebuild, thunar-volman-0.7.1.ebuild:

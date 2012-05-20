@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-hdaps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/ChangeLog,v 1.9 2012/05/05 07:13:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/ChangeLog,v 1.10 2012/05/20 12:07:29 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> xfce4-hdaps-0.0.8.ebuild:
+  Stable for amd64, wrt bug #416223
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> xfce4-hdaps-0.0.7.ebuild,
   xfce4-hdaps-0.0.8.ebuild:
