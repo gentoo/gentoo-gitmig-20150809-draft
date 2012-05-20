@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.35 2012/05/20 14:54:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.36 2012/05/20 17:52:41 johu Exp $
+
+  20 May 2012; Johannes Huber <johu@gentoo.org> virtuoso-server-6.1.4-r1.ebuild:
+  Add missing DEPEND on virtual/pkgconfig by Nikoli <nikoli@lavabit.com> wrt bug
+  #416761.
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org>
   virtuoso-server-6.1.4-r1.ebuild:

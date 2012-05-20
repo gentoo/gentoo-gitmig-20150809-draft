@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.4-r1.ebuild,v 1.4 2012/05/20 14:54:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.4-r1.ebuild,v 1.5 2012/05/20 17:52:41 johu Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-apps/gawk
 	>=sys-devel/bison-2.3
 	>=sys-devel/flex-2.5.33
+	virtual/pkgconfig
 "
 RDEPEND="${COMMON_DEPEND}
 	~dev-db/virtuoso-odbc-${PV}:${SLOT}
