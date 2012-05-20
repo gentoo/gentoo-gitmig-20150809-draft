@@ -1,9 +1,12 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.217 2012/05/20 12:02:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.218 2012/05/20 19:57:29 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> xfdesktop-4.10.0.ebuild:
+  ppc/ppc64 stable wrt #416233
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> xfdesktop-4.10.0.ebuild:
-  Stable for amd64, wrt bug #416223
+  Stable for amd64, wrt bug #416233
 
   19 May 2012; Anthony G. Basile <blueness@gentoo.org> xfdesktop-4.10.0.ebuild:
   Keyword mips
