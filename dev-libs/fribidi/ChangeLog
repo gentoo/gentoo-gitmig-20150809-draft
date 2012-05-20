@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.58 2012/05/20 06:07:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.59 2012/05/20 09:55:44 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> fribidi-0.19.2-r2.ebuild:
+  Temporarily RESTRICT="test" wrt #397347
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org> -fribidi-0.10.7.ebuild,
   -fribidi-0.19.2-r1.ebuild, -files/fribidi-0.19.2-glib.patch:
