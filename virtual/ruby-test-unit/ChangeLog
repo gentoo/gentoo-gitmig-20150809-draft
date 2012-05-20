@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.27 2012/05/06 18:06:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.28 2012/05/20 20:59:19 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> ruby-test-unit-0-r4.ebuild:
+  Stable for amd64, wrt bug #411507
 
   06 May 2012; Hans de Graaff <graaff@gentoo.org> ruby-test-unit-0-r4.ebuild:
   Add arm keyword given that underlying implementation is also keyworded.

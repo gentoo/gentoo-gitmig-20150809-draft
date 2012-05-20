@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-minitest
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.26 2011/12/30 19:27:22 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.27 2012/05/20 20:58:01 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> ruby-minitest-0-r2.ebuild:
+  Stable for amd64, wrt bug #411507
 
 *ruby-minitest-0-r2 (30 Dec 2011)
 
