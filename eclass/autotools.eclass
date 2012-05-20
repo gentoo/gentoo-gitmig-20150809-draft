@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.134 2012/05/20 12:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.135 2012/05/20 12:38:33 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -166,12 +166,7 @@ eautoreconf() {
 	if grep -q '^AM_GNU_GETTEXT_VERSION' configure.?? ; then
 		eautopoint --force
 	fi
-	[[ ${CHOST} == *-darwin* ]] && g=g
-	if ${LIBTOOLIZE:-${g}libtoolize} -n --install >& /dev/null ; then
-		_elibtoolize --copy --force --install
-	else
-		_elibtoolize --copy --force
-	fi
+	_elibtoolize --install --copy --force
 	eautoconf
 	eautoheader
 	[[ ${AT_NOEAUTOMAKE} != "yes" ]] && FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
@@ -227,19 +222,24 @@ eaclocal() {
 
 # @FUNCTION: _elibtoolize
 # @DESCRIPTION:
-# Runs libtoolize.  Note the '_' prefix .. to not collide with elibtoolize() from
-# libtool.eclass.
+# Runs libtoolize.  If --install is the first arg, automatically drop it if
+# the active libtool version doesn't support it.
+#
+# Note the '_' prefix .. to not collide with elibtoolize() from libtool.eclass.
 _elibtoolize() {
-	local opts g=
-
 	# Check if we should run libtoolize (AM_PROG_LIBTOOL is an older macro,
 	# check for both it and the current AC_PROG_LIBTOOL)
 	[[ -n $(autotools_check_macro AC_PROG_LIBTOOL AM_PROG_LIBTOOL LT_INIT) ]] || return 0
 
-	[[ -f GNUmakefile.am || -f Makefile.am ]] && opts="--automake"
+	local LIBTOOLIZE=${LIBTOOLIZE:-libtoolize}
+	type -P glibtoolize && LIBTOOLIZE=glibtoolize
 
-	[[ ${CHOST} == *-darwin* ]] && g=g
-	autotools_run_tool ${LIBTOOLIZE:-${g}libtoolize} "$@" ${opts}
+	[[ -f GNUmakefile.am || -f Makefile.am ]] && set -- "$@" --automake
+	if [[ $1 == "--install" ]] ; then
+		${LIBTOOLIZE} -n --install >& /dev/null || shift
+	fi
+
+	autotools_run_tool ${LIBTOOLIZE} "$@" ${opts}
 
 	# Need to rerun aclocal
 	eaclocal
