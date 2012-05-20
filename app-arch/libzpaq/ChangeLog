@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/libzpaq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/ChangeLog,v 1.5 2012/04/11 18:28:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/ChangeLog,v 1.6 2012/05/20 10:55:32 vapier Exp $
+
+  20 May 2012; Mike Frysinger <vapier@gentoo.org> libzpaq-2.02a-r1.ebuild,
+  libzpaq-3.00.ebuild, libzpaq-5.01.ebuild:
+  Backport autotools eclass fixes to older versions.
 
   11 Apr 2012; Michał Górny <mgorny@gentoo.org> libzpaq-5.01.ebuild,
   metadata.xml:
