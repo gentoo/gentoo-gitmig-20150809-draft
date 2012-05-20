@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.78 2012/05/05 03:20:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.79 2012/05/20 05:12:32 tetromino Exp $
+
+*vinagre-3.4.2 (20 May 2012)
+
+  20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -vinagre-3.2.1.ebuild, -files/vinagre-3.2.1-authenticate-button.patch,
+  -files/vinagre-3.2.1-hold-slave-pty-open.patch,
+  -files/vinagre-3.2.1-implicit-function-declarations.patch,
+  +vinagre-3.4.2.ebuild, metadata.xml:
+  Bump for gnome-3.4 and enable optional spice support (untested). Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> vinagre-2.30.3.ebuild,
   vinagre-3.2.1.ebuild, vinagre-3.2.2.ebuild:
