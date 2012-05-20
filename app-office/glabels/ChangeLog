@@ -1,6 +1,10 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.63 2012/05/03 20:00:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.64 2012/05/20 09:00:09 halcy0n Exp $
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> glabels-2.2.8.ebuild,
+  glabels-3.0.0.ebuild:
+  Revert to ~ppc; bug #393713
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> glabels-2.2.8.ebuild,
   glabels-3.0.0.ebuild:
