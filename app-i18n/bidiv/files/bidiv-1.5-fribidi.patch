@@ -1,6 +1,5 @@
-diff -Naur bidiv.orig/Makefile bidiv/Makefile
---- bidiv.orig/Makefile	2006-01-08 03:45:11.000000000 +0900
-+++ bidiv/Makefile	2009-04-13 17:55:23.000000000 +0900
+--- Makefile
++++ Makefile
 @@ -4,8 +4,8 @@
  CC_OPT_FLAGS=-O2 -Wall
  
@@ -12,9 +11,8 @@ diff -Naur bidiv.orig/Makefile bidiv/Makefile
  
  all: bidiv
  
-diff -Naur bidiv.orig/bidiv.c bidiv/bidiv.c
---- bidiv.orig/bidiv.c	2006-01-08 04:05:54.000000000 +0900
-+++ bidiv/bidiv.c	2009-04-13 17:55:23.000000000 +0900
+--- bidiv.c
++++ bidiv.c
 @@ -172,7 +172,7 @@
  		}
  #ifndef TRY_UTF8
