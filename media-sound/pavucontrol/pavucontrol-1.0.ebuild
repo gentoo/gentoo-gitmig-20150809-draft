@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-1.0.ebuild,v 1.6 2012/05/05 08:46:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-1.0.ebuild,v 1.7 2012/05/20 20:48:51 ssuominen Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND=">=dev-cpp/gtkmm-3.0:3.0

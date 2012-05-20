@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pavucontrol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.37 2012/05/05 08:46:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.38 2012/05/20 20:48:51 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> pavucontrol-1.0.ebuild:
+  Keyword ~ppc64
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> pavucontrol-0.9.10.ebuild,
   pavucontrol-1.0.ebuild:
