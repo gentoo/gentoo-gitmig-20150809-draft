@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsrtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.15 2012/03/25 10:17:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.16 2012/05/20 12:12:28 halcy0n Exp $
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> libsrtp-1.4.4-r1.ebuild:
+  Stable for ppc64; bug #397617
 
   25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Set herd as primary maintainer as talked with volkmar.
