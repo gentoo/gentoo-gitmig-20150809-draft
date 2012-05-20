@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.6.3.ebuild,v 1.1 2012/05/20 09:23:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.6.3.ebuild,v 1.2 2012/05/20 09:25:56 ssuominen Exp $
 
 EAPI=4
-PYTHON_DEPEND="2:2.7"
 inherit gnome2-utils python toolchain-funcs
 
 DESCRIPTION="A terminal emulator designed to integrate with the ROX environment"
@@ -22,6 +21,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	x11-libs/libSM
 	x11-libs/vte:2.90"
 DEPEND="${RDEPEND}
+	dev-lang/python:2.7
 	dev-libs/libxslt
 	virtual/pkgconfig
 	dev-python/lockfile

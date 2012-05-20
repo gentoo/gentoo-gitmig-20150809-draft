@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.65 2012/05/20 09:23:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.66 2012/05/20 09:25:56 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> roxterm-2.6.3.ebuild:
+  Remove PYTHON_DEPEND because we don't want dev-lang/python:2.7 in RDEPEND.
+  It's only required as a DEPEND for the "maitch" build system.
 
 *roxterm-2.6.3 (20 May 2012)
 
