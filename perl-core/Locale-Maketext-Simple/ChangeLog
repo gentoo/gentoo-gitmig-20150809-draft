@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Locale-Maketext-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext-Simple/ChangeLog,v 1.9 2012/04/28 02:21:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext-Simple/ChangeLog,v 1.10 2012/05/20 12:19:04 tove Exp $
+
+  20 May 2012; Torsten Veller <tove@gentoo.org>
+  Locale-Maketext-Simple-0.210.0.ebuild:
+  Drop non-core test dependency: dev-perl/locale-maketext-lexicon
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   Locale-Maketext-Simple-0.210.0.ebuild:
