@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hyperestraier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.59 2012/05/17 16:37:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.60 2012/05/20 09:36:21 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> hyperestraier-1.4.13.ebuild:
+  Stable for amd64, wrt bug #416423
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   hyperestraier-1.4.13.ebuild:
