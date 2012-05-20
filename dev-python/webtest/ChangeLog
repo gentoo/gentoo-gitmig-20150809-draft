@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.33 2012/04/16 02:24:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.34 2012/05/20 01:19:38 floppym Exp $
+
+*webtest-1.3.4 (20 May 2012)
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/webtest-1.3.4-index_fixt.patch, +webtest-1.3.4.ebuild:
+  Version bump for #414475. Enable python 3. Thanks to Ian Delaney for digging
+  into the test suite.
 
   16 Apr 2012; Jeroen Roovers <jer@gentoo.org> webtest-1.3.ebuild:
   Marked ~hppa (bug #411761).
