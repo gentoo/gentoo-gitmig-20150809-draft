@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.137 2012/05/20 12:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.138 2012/05/20 13:01:22 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -283,11 +283,7 @@ eautomake() {
 	done
 
 	if [[ -z ${makefile_name} ]] ; then
-		# Really we should just use autotools_check_macro ...
-		local am_init_automake=$(sed -n '/AM_INIT_AUTOMAKE/{s:#.*::;s:\<dnl\>.*::;p}' configure.??)
-		if [[ ${am_init_automake} != *"AM_INIT_AUTOMAKE"* ]] ; then
-			return 0
-		fi
+		[[ -n $(autotools_check_macro AM_INIT_AUTOMAKE) ]] || return 0
 
 	elif [[ -z ${FROM_EAUTORECONF} && -f ${makefile_name%.am}.in ]]; then
 		local used_automake
