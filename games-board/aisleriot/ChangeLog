@@ -1,6 +1,15 @@
 # ChangeLog for games-board/aisleriot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/ChangeLog,v 1.4 2012/05/04 04:30:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/ChangeLog,v 1.5 2012/05/20 07:37:15 tetromino Exp $
+
+*aisleriot-3.4.1 (20 May 2012)
+*aisleriot-3.2.3.2 (20 May 2012)
+
+  20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -aisleriot-3.2.1.ebuild, -aisleriot-3.2.2.ebuild, +aisleriot-3.2.3.2.ebuild,
+  +aisleriot-3.4.1.ebuild:
+  Version bump both for gnome-3.2 (tranlation update) and 3.4 (various bug
+  fixes, requires guile-2.0.5 from the lisp overlay). Drop old.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> aisleriot-3.2.1.ebuild,
   aisleriot-3.2.2.ebuild, aisleriot-3.2.3.1.ebuild:
