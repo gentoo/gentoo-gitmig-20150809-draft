@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320.ebuild,v 1.4 2012/05/20 11:40:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320.ebuild,v 1.5 2012/05/20 11:47:39 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils linux-info pam systemd
@@ -19,7 +19,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~mips ppc ppc64 ~sh ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="acl debug doc kernel_linux pam policykit test"
 
 RDEPEND=">=dev-libs/dbus-glib-0.98
@@ -29,8 +29,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.98
 	acl? (
 		sys-apps/acl
 		sys-apps/coreutils[acl]
-		>=sys-fs/udev-171-r5
-		!<sys-fs/udev-182[acl]
+		>=sys-fs/udev-171-r6
+		!<sys-fs/udev-171-r6[acl]
 		)
 	pam? ( virtual/pam )
 	policykit? ( >=sys-auth/polkit-0.104-r1 )"
