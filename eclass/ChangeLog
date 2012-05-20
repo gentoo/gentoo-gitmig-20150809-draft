@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.255 2012/05/20 17:12:34 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.256 2012/05/20 17:33:41 hd_brummy Exp $
+
+  20 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  some debug infos for wrong use of vdr-plugin-2.eclass
 
   20 May 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Try to avoid sandbox violation when running qhelpgenerator, bug 415517.

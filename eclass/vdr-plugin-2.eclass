@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.2 2012/04/29 15:03:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.3 2012/05/20 17:33:41 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -445,10 +445,10 @@ vdr-plugin-2_src_util() {
 vdr-plugin-2_src_unpack() {
 	if [[ -z ${VDR_INCLUDE_DIR} ]]; then
 		eerror "Wrong use of vdr-plugin-2.eclass."
-		eerror "An ebuild for a vdr-plugin will not work without calling vdr-plugin-2_pkg_setup."
+		eerror "An ebuild for a vdr-plugin will not work without calling vdr-plugin-2_src_unpack."
 		echo
 		eerror "Please report this at bugs.gentoo.org."
-		die "vdr-plugin-2_pkg_setup not called!"
+		die "vdr-plugin-2_src_unpack not called!"
 	fi
 
 	if [ -z "$1" ]; then
@@ -459,6 +459,14 @@ vdr-plugin-2_src_unpack() {
 }
 
 vdr-plugin-2_src_prepare() {
+	if [[ -z ${VDR_INCLUDE_DIR} ]]; then
+		eerror "Wrong use of vdr-plugin-2.eclass."
+		eerror "An ebuild for a vdr-plugin will not work without calling vdr-plugin-2_src_prepare."
+		echo
+		eerror "Please report this at bugs.gentoo.org."
+		die "vdr-plugin-2_src_prepare not called!"
+	fi
+
 	base_src_prepare
 	vdr-plugin-2_src_util prepare
 }
@@ -475,10 +483,10 @@ vdr-plugin-2_src_compile() {
 			if [[ ! -f ${WORKDIR}/.vdr-plugin_makefile_patched ]]; then
 				eerror "Wrong use of vdr-plugin-2.eclass."
 				eerror "An ebuild for a vdr-plugin will not work without"
-				eerror "calling vdr-plugin-2_src_unpack to patch the Makefile."
+				eerror "calling vdr-plugin-2_src_compile to patch the Makefile."
 				echo
 				eerror "Please report this at bugs.gentoo.org."
-				die "vdr-plugin-2_src_unpack not called!"
+				die "vdr-plugin-2_src_compile not called!"
 			fi
 			cd "${S}"
 
@@ -498,6 +506,14 @@ vdr-plugin-2_src_compile() {
 }
 
 vdr-plugin-2_src_install() {
+	if [[ -z ${VDR_INCLUDE_DIR} ]]; then
+		eerror "Wrong use of vdr-plugin-2.eclass."
+		eerror "An ebuild for a vdr-plugin will not work without calling vdr-plugin-2_src_install."
+		echo
+		eerror "Please report this at bugs.gentoo.org."
+		die "vdr-plugin-2_src_install not called!"
+	fi
+
 	[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin-2_install_source_tree
 	cd "${WORKDIR}"
 
