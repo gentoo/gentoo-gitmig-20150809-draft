@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.207 2012/05/08 01:05:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.208 2012/05/20 01:10:07 tetromino Exp $
+
+*zenity-3.4.0 (20 May 2012)
+
+  20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +zenity-3.4.0.ebuild, +files/zenity-3.4.0-list-check.patch,
+  +files/zenity-3.4.0-list-default-column.patch,
+  +files/zenity-3.4.0-list-segfault.patch:
+  Version bump for gnome-3.4, adds support for lists in --forms.
 
   08 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   webkit is now global wrt #285743
