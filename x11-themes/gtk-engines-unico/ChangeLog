@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-unico
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/ChangeLog,v 1.5 2012/05/05 04:10:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/ChangeLog,v 1.6 2012/05/20 19:39:15 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gtk-engines-unico-1.0.2.ebuild:
+  Keyword ~ppc/~ppc64
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gtk-engines-unico-1.0.1.ebuild, gtk-engines-unico-1.0.2.ebuild:
