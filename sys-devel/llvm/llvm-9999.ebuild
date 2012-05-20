@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.30 2012/05/20 08:08:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.31 2012/05/20 08:41:53 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -185,6 +185,6 @@ src_install() {
 			eend $?
 		done
 	fi
-
-	doman docs/CommandGuide/*.1
+#
+#	doman docs/CommandGuide/*.1
 }
