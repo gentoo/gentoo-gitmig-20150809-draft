@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GStreamer-Interfaces
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer-Interfaces/ChangeLog,v 1.9 2012/05/18 06:39:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer-Interfaces/ChangeLog,v 1.10 2012/05/20 09:39:34 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  GStreamer-Interfaces-0.60.0.ebuild:
+  Stable for amd64, wrt bug #416115
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org>
   GStreamer-Interfaces-0.60.0.ebuild:

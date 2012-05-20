@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer-Interfaces/GStreamer-Interfaces-0.60.0.ebuild,v 1.3 2012/05/18 06:39:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer-Interfaces/GStreamer-Interfaces-0.60.0.ebuild,v 1.4 2012/05/20 09:39:34 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl interface to the GStreamer Interfaces library"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND="=media-libs/gst-plugins-base-0.10*
