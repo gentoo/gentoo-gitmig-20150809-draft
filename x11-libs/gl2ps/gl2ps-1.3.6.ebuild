@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.6.ebuild,v 1.6 2012/03/03 15:57:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.6.ebuild,v 1.7 2012/05/20 17:03:21 mgorny Exp $
 
 EAPI=4
 inherit cmake-utils multilib
@@ -16,6 +16,7 @@ IUSE="doc png zlib"
 
 DEPEND="
 	media-libs/freeglut
+	x11-libs/libXmu
 	png? ( media-libs/libpng )
 	doc? (
 		dev-tex/tth
