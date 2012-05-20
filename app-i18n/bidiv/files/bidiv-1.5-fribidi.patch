@@ -1,16 +1,3 @@
---- Makefile
-+++ Makefile
-@@ -4,8 +4,8 @@
- CC_OPT_FLAGS=-O2 -Wall
- 
- 
--CFLAGS= $(CC_OPT_FLAGS) $(DEFS) `fribidi-config --cflags`
--LDFLAGS=`fribidi-config --libs`
-+CFLAGS= $(CC_OPT_FLAGS) $(DEFS) `pkg-config fribidi --cflags`
-+LDFLAGS=`pkg-config fribidi --libs`
- 
- all: bidiv
- 
 --- bidiv.c
 +++ bidiv.c
 @@ -172,7 +172,7 @@
@@ -35,3 +22,25 @@
  						     out);
  		/* if rtl_line (i.e., base_dir is RL), and we didn't fill the
  		   entire width, we need to pad with spaces. Maybe in the
+--- Makefile
++++ Makefile
+@@ -1,16 +1,14 @@
+ PREFIX=/usr/local
+ BIN_DIR=$(PREFIX)/bin
+ MAN_PATH=$(PREFIX)/man
+-CC_OPT_FLAGS=-O2 -Wall
+ 
+-
+-CFLAGS= $(CC_OPT_FLAGS) $(DEFS) `fribidi-config --cflags`
+-LDFLAGS=`fribidi-config --libs`
++CFLAGS+=`pkg-config fribidi --cflags` -Wall
++LIBS=`pkg-config fribidi --libs`
+ 
+ all: bidiv
+ 
+ bidiv: bidiv.o
+-	$(CC) -o bidiv bidiv.o $(LDFLAGS)
++	$(CC) $(LDFLAGS) -o bidiv bidiv.o $(LIBS)
+ 
+ clean:
+ 	rm -f bidiv.o *~
