@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.3-r2.ebuild,v 1.3 2012/05/04 03:33:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.3-r2.ebuild,v 1.4 2012/05/20 21:32:05 ago Exp $
 
 # NOTE: Even though the *.dict.dz are the same as dictd/freedict's files,
 #       their indexes seem to be in a different format. So we'll keep them
@@ -23,7 +23,7 @@ SRC_URI="http://${PN}-3.googlecode.com/files/${P}.tar.bz2
 
 LICENSE="CPL-1.0 GPL-3 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="espeak gnome gucharmap qqwry pronounce spell tools"
 
 COMMON_DEPEND=">=dev-libs/glib-2.16

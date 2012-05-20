@@ -1,6 +1,9 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.25 2012/05/04 03:33:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.26 2012/05/20 21:32:05 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> stardict-3.0.3-r2.ebuild:
+  Stable for amd64, wrt bug #416747
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> stardict-3.0.3-r1.ebuild,
   stardict-3.0.3-r2.ebuild:
