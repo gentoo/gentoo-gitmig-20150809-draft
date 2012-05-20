@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/testfixtures
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/ChangeLog,v 1.1 2012/05/20 13:56:48 tampakrap Exp $
+
+*testfixtures-2.3.4 (20 May 2012)
+
+  20 May 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  +files/testfixtures-2.3.4-adjust_tests.patch, +metadata.xml,
+  +testfixtures-2.3.4.ebuild:
+  Initial commit, ebuild by idella4
+
