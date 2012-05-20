@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.44 2012/05/20 15:33:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.45 2012/05/20 18:33:43 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> cegui-0.7.6-r1.ebuild:
+  Reverted to ~amd64 due to problem with poco
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> cegui-0.7.6-r1.ebuild:
   Stable for amd64, wrt bug #412675
