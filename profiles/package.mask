@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13773 2012/05/20 07:36:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13774 2012/05/20 15:28:51 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Ruppert <idl0r@gentoo.org> (20 May 2012)
+# Temp. mask gitolite-3* as it likely breaks gitolite-2* setups
+# Also, it has been re-written (almost?) completely.
+=dev-vcs/gitolite-3*
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (20 May 2012)
 # Requires dev-scheme/guile-2.0.5 which is in lisp overlay and masked;
