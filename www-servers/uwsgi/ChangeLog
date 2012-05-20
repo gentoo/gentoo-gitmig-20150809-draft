@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.17 2012/05/19 06:59:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.18 2012/05/20 16:21:51 floppym Exp $
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> uwsgi-1.2.3.ebuild:
+  Simplify PYTHON_DEPEND.
 
   19 May 2012; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   Extended description for the zeromq USE flag.

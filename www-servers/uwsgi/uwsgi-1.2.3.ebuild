@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3.ebuild,v 1.4 2012/05/17 23:00:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3.ebuild,v 1.5 2012/05/20 16:21:51 floppym Exp $
 
 EAPI="4"
-PYTHON_DEPEND="python? 2:2.4:2.7 3:3.1:3.2"
+PYTHON_DEPEND="python? *"
 PYTHON_MODNAME="uwsgidecorators"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
