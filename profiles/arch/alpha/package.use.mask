@@ -1,6 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.84 2012/05/18 22:30:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.85 2012/05/20 11:52:19 ssuominen Exp $
+
+# Samuli Suominen <ssuominen@gentoo.org> (20 May 2012)
+# This is masked because of this entry:
+# arch/alpha/package.mask:>=sys-fs/udev-167
+# Soon as that mask entry is gone, this can be removed too.
+sys-auth/consolekit acl
 
 # Sebastian Pipping <sping@gentoo.org> (18 May 2012)
 # No udev on alpha yet (bug #416567)

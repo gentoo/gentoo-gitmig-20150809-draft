@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.116 2012/05/18 22:30:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.117 2012/05/20 11:52:19 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="acl" for sys-auth/consolekit because >=sys-fs/udev-167 is masked in
+  this same directory at package.mask file.
 
   18 May 2012; Sebastian Pipping <sping@gentoo.org> package.use.mask:
   Mask >=media-gfx/gimp-2.7[udev]
