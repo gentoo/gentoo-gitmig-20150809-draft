@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+        <herd>python</herd>
+        <maintainer>
+                <email>della5@iinet.com.au</email>
+                <name>Ian Delaney aka idella4 proxy maintainer</name>
+        </maintainer>
+        <maintainer><email>tampakrap@gentoo.org</email></maintainer>
+</pkgmetadata>
