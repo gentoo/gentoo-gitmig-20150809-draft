@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.131 2012/04/29 16:50:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.132 2012/05/20 17:06:18 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> -kadu-0.11.2.ebuild:
+  Remove old
 
 *kadu-0.11.3 (29 Apr 2012)
 
