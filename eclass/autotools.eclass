@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.136 2012/05/20 12:55:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.137 2012/05/20 12:58:23 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -148,7 +148,7 @@ eautoreconf() {
 
 	if [[ -z ${AT_NO_RECURSIVE} ]]; then
 		# Take care of subdirs
-		for x in $(autotools_get_subdirs); do
+		for x in $(autotools_check_macro_val AC_CONFIG_SUBDIRS) ; do
 			if [[ -d ${x} ]] ; then
 				pushd "${x}" >/dev/null
 				AT_NOELIBTOOLIZE="yes" eautoreconf
@@ -157,11 +157,11 @@ eautoreconf() {
 		done
 	fi
 
-	local auxdir=$(autotools_get_auxdir)
-	local macdir=$(autotools_get_macrodir)
-
 	einfo "Running eautoreconf in '${PWD}' ..."
-	[[ -n ${auxdir}${macdir} ]] && mkdir -p ${auxdir} ${macdir}
+
+	local m4dirs=$(autotools_check_macro_val AC_CONFIG_{AUX,MACRO}_DIR)
+	[[ -n ${m4dirs} ]] && mkdir -p ${m4dirs}
+
 	eaclocal
 	if grep -q '^AM_GNU_GETTEXT_VERSION' configure.?? ; then
 		eautopoint --force
@@ -339,7 +339,10 @@ config_rpath_update() {
 	done
 }
 
-# Internal function to run an autotools' tool
+# @FUNCTION: autotools_env_setup
+# @INTERNAL
+# @DESCRIPTION:
+# Process the WANT_AUTO{CONF,MAKE} flags.
 autotools_env_setup() {
 	# We do the "latest" → version switch here because it solves
 	# possible order problems, see bug #270010 as an example.
@@ -355,6 +358,13 @@ autotools_env_setup() {
 	fi
 	[[ ${WANT_AUTOCONF} == "latest" ]] && export WANT_AUTOCONF=2.5
 }
+
+# @FUNCTION: autotools_run_tool
+# @USAGE: [--at-no-fail] [--at-m4flags] <autotool> [tool-specific flags]
+# @INTERNAL
+# @DESCRIPTION:
+# Run the specified autotool helper, but do logging and error checking
+# around it in the process.
 autotools_run_tool() {
 	# Process our own internal flags first
 	local autofail=true m4flags=false
@@ -407,13 +417,34 @@ autotools_run_tool() {
 }
 
 # Internal function to check for support
+
+# Keep a list of all the macros we might use so that we only
+# have to run the trace code once.  Order doesn't matter.
+ALL_AUTOTOOLS_MACROS=(
+	AC_PROG_LIBTOOL AM_PROG_LIBTOOL LT_INIT
+	AC_CONFIG_HEADERS
+	AC_CONFIG_SUBDIRS
+	AC_CONFIG_AUX_DIR AC_CONFIG_MACRO_DIR
+	AM_INIT_AUTOMAKE
+)
 autotools_check_macro() {
 	[[ -f configure.ac || -f configure.in ]] || return 0
-	local macro
+
+	# We can run in multiple dirs, so we have to cache the trace
+	# data in $PWD rather than an env var.
+	local trace_file=".__autoconf_trace_data"
+	if [[ ! -e ${trace_file} ]] || [[ aclocal.m4 -nt ${trace_file} ]] ; then
+		WANT_AUTOCONF="2.5" autoconf \
+			$(autotools_m4dir_include) \
+			${ALL_AUTOTOOLS_MACROS[@]/#/--trace=} > ${trace_file} 2>/dev/null
+	fi
+
+	local macro args=()
 	for macro ; do
-		WANT_AUTOCONF="2.5" autoconf $(autotools_m4dir_include) --trace="${macro}" 2>/dev/null
+		has ${macro} ${ALL_AUTOTOOLS_MACROS[@]} || die "internal error: add ${macro} to ALL_AUTOTOOLS_MACROS"
+		args+=( -e ":${macro}:" )
 	done
-	return 0
+	grep "${args[@]}" ${trace_file}
 }
 
 # @FUNCTION: autotools_check_macro_val
@@ -435,11 +466,6 @@ autotools_check_macro_val() {
 
 	return 0
 }
-
-# Internal function to get additional subdirs to configure
-autotools_get_subdirs() { autotools_check_macro_val AC_CONFIG_SUBDIRS ; }
-autotools_get_auxdir() { autotools_check_macro_val AC_CONFIG_AUX_DIR ; }
-autotools_get_macrodir() { autotools_check_macro_val AC_CONFIG_MACRO_DIR ; }
 
 _autotools_m4dir_include() {
 	local x include_opts
