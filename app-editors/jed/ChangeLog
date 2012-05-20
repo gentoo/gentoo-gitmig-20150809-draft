@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jed
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.61 2011/03/20 16:37:13 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.62 2012/05/20 15:44:55 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> jed-0.99.19.ebuild:
+  Missing build dependencies x11-libs/libXt (for X11/Intrinsic.h) and
+  x11-proto/xproto (X11/keysym.h). Thanks to fouDuBassan (Freenode, IRC) for
+  reporting.
 
   20 Mar 2011; Raúl Porcel <armin76@gentoo.org> jed-0.99.19.ebuild:
   Add ~alpha
