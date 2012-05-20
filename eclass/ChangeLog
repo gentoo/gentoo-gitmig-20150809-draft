@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.254 2012/05/19 16:26:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.255 2012/05/20 17:12:34 pesa Exp $
+
+  20 May 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Try to avoid sandbox violation when running qhelpgenerator, bug 415517.
 
   19 May 2012; Ulrich Müller <ulm@gentoo.org> xemacs-elisp-common.eclass:
   Fix name space collision with elisp-common.eclass, bug 406053.
