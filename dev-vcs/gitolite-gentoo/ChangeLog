@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.27 2012/05/19 15:15:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.28 2012/05/20 20:11:14 idl0r Exp $
+
+*gitolite-gentoo-2.3.1 (20 May 2012)
+
+  20 May 2012; Christian Ruppert <idl0r@gentoo.org>
+  -gitolite-gentoo-1.5.9.1-r1.ebuild, -gitolite-gentoo-2.0.3-r1.ebuild,
+  +gitolite-gentoo-2.3.1.ebuild, -files/gitolite-gentoo-1.5.9.1-umask.patch,
+  -files/0001-fix-a-rather-large-typo-thinko-in-1006eba.patch:
+  Version bump to 2.3.1. Remove some old versions.
 
   19 May 2012; Agostino Sarubbo <ago@gentoo.org> gitolite-gentoo-2.3.ebuild:
   Stable for amd64, wrt bug #416569
