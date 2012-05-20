@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.133 2012/05/20 10:39:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.134 2012/05/20 12:31:32 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@
 if [[ ${___ECLASS_ONCE_AUTOTOOLS} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_AUTOTOOLS="recur -_+^+_- spank"
 
-inherit eutils libtool
+inherit libtool
 
 # @ECLASS-VARIABLE: WANT_AUTOCONF
 # @DESCRIPTION:
