@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5_p01.ebuild,v 1.2 2012/05/20 16:27:19 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5_p01.ebuild,v 1.3 2012/05/20 16:46:58 heroxbd Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://geant4.cern.ch/support/source/${MYP}.tar.gz"
 
 LICENSE="geant4"
 SLOT="4"
-KEYWORDS="~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+data dawn examples gdml geant3 granular motif opengl openinventor
 	raytracerx qt4 static-libs test vrml zlib"
 
