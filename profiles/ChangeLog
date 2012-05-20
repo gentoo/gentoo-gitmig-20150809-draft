@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6572 2012/05/20 07:36:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6573 2012/05/20 09:31:55 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  targets/desktop/gnome/package.use:
+  Enable app-accessibility/speech-dispatcher[python] for orca-3.
 
   20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Mask aisleriot-3.4, needs guile-2.0.5 (bug #416683).
