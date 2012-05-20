@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.192 2012/05/20 20:51:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.193 2012/05/20 21:06:32 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> transmission-2.51.ebuild,
+  +files/transmission-2.51-fbsd.patch:
+  Fix building for ~x86-fbsd wrt #400929 by Naohiro Aota
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   -transmission-2.50-r1.ebuild, -transmission-2.50-r2.ebuild,
