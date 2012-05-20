@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.16.ebuild,v 1.4 2012/05/19 12:14:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.16.ebuild,v 1.5 2012/05/20 09:42:47 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://upower.freedesktop.org/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc +introspection ios kernel_FreeBSD kernel_linux" # test
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
