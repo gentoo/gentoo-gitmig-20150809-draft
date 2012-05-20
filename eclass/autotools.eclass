@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.130 2012/03/22 19:16:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.131 2012/05/20 10:26:05 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -143,7 +143,7 @@ unset _automake_atom _autoconf_atom
 # Should do a full autoreconf - normally what most people will be interested in.
 # Also should handle additional directories specified by AC_CONFIG_SUBDIRS.
 eautoreconf() {
-	local x auxdir g
+	local x g
 
 	if [[ -z ${AT_NO_RECURSIVE} ]]; then
 		# Take care of subdirs
@@ -156,10 +156,11 @@ eautoreconf() {
 		done
 	fi
 
-	auxdir=$(autotools_get_auxdir)
+	local auxdir=$(autotools_get_auxdir)
+	local macdir=$(autotools_get_macrodir)
 
 	einfo "Running eautoreconf in '${PWD}' ..."
-	[[ -n ${auxdir} ]] && mkdir -p ${auxdir}
+	[[ -n ${auxdir}${macdir} ]] && mkdir -p ${auxdir} ${macdir}
 	eaclocal
 	[[ ${CHOST} == *-darwin* ]] && g=g
 	if ${LIBTOOLIZE:-${g}libtoolize} -n --install >& /dev/null ; then
@@ -428,6 +429,7 @@ autotools_check_macro_val() {
 # Internal function to get additional subdirs to configure
 autotools_get_subdirs() { autotools_check_macro_val AC_CONFIG_SUBDIRS ; }
 autotools_get_auxdir() { autotools_check_macro_val AC_CONFIG_AUX_DIR ; }
+autotools_get_macrodir() { autotools_check_macro_val AC_CONFIG_MACRO_DIR ; }
 
 _autotools_m4dir_include() {
 	local x include_opts
