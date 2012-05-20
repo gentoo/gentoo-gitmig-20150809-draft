@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.2.2.ebuild,v 1.4 2012/05/03 01:48:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.2.2.ebuild,v 1.5 2012/05/20 09:32:52 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ COMMON_DEPEND=">=app-accessibility/at-spi2-core-2.1.5:2
 	>=dev-python/pygobject-3.0.2:3
 	>=x11-libs/gtk+-3.1.13:3[introspection]"
 RDEPEND="${COMMON_DEPEND}
-	app-accessibility/speech-dispatcher
+	app-accessibility/speech-dispatcher[python]
 	dev-libs/atk[introspection]
 	>=dev-python/dbus-python-0.83
 	dev-python/pyatspi

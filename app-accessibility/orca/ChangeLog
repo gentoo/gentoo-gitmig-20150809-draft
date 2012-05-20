@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.108 2012/05/03 01:48:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.109 2012/05/20 09:32:52 tetromino Exp $
+
+*orca-3.4.2 (20 May 2012)
+
+  20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -orca-3.2.1.ebuild,
+  orca-3.2.2.ebuild, +orca-3.4.2.ebuild:
+  Version bump for gnome-3.4 with lots of bug fixes. Depend on
+  speech-dispatcher with python support. Drop old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> orca-2.32.1.ebuild,
   orca-3.2.1.ebuild, orca-3.2.2.ebuild:
