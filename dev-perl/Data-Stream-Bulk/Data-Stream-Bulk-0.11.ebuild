@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stream-Bulk/Data-Stream-Bulk-0.100.0.ebuild,v 1.2 2012/05/20 04:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stream-Bulk/Data-Stream-Bulk-0.11.ebuild,v 1.1 2012/05/20 04:27:45 robbat2 Exp $
 
 EAPI=4
 
