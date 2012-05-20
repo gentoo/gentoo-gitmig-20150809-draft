@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.116 2012/05/19 06:30:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.117 2012/05/20 21:00:14 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> rake-0.8.7-r6.ebuild:
+  Stable for amd64, wrt bug #411507
 
   19 May 2012; Hans de Graaff <graaff@gentoo.org> rake-0.8.7-r6.ebuild:
   Drop rbx for now so that we can stable this version.

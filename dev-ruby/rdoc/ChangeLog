@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.75 2012/05/20 16:04:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.76 2012/05/20 21:03:34 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> rdoc-3.12.ebuild:
+  Stable for amd64, wrt bug #411507
 
   20 May 2012; Hans de Graaff <graaff@gentoo.org> -rdoc-2.5.11.ebuild,
   -rdoc-3.5.3.ebuild, -rdoc-3.6.ebuild, -rdoc-3.11.ebuild:

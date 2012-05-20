@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.86 2011/07/15 17:27:50 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.87 2012/05/20 21:02:27 ago Exp $
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> rubyforge-2.0.4-r2.ebuild:
+  Stable for amd64, wrt bug #411507
 
   15 Jul 2011; Matt Turner <mattst88@gentoo.org> rubyforge-2.0.4-r2.ebuild:
   Added ~mips, bug 332593
