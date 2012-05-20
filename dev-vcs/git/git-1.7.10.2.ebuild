@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.31 2012/05/20 04:25:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.10.2.ebuild,v 1.1 2012/05/20 04:25:24 robbat2 Exp $
 
 EAPI=4
 
@@ -33,6 +33,7 @@ if [[ ${PV} != *9999 ]]; then
 			${SRC_URI_GOOG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 			)"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="" # Pending git-svn fixes
 else
 	SRC_URI=""
 	KEYWORDS=""
@@ -46,10 +47,10 @@ IUSE="+blksha1 +curl cgi doc emacs gtk iconv +pcre +perl +python ppcsha1 tk +thr
 CDEPEND="
 	!blksha1? ( dev-libs/openssl )
 	sys-libs/zlib
-	pcre?   ( dev-libs/libpcre )
-	perl?   ( dev-lang/perl[-build] )
-	tk?     ( dev-lang/tk )
-	curl?   (
+	pcre? ( dev-libs/libpcre )
+	perl? ( dev-lang/perl[-build] )
+	tk? ( dev-lang/tk )
+	curl? (
 		net-misc/curl
 		webdav? ( dev-libs/expat )
 	)
@@ -234,7 +235,7 @@ src_prepare() {
 	#epatch "${FILESDIR}"/git-1.7.3.4-fix-perl-test-prereq.patch
 
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-1.7.11-optional-cvs.patch
+	epatch "${FILESDIR}"/git-1.7.10.2-optional-cvs.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
@@ -278,7 +279,7 @@ src_prepare() {
 	#
 	# This patch is my work to date on fixing git-svn, but it causes more
 	# breakage than it fixes (it's manually-edited now to do nothing).
-	epatch "${FILESDIR}"/git-1.7.8-git-svn-1.7-canonical-path.patch
+	#epatch "${FILESDIR}"/git-1.7.8-git-svn-1.7-canonical-path.patch
 	cd "${S}"/t
 	sed -i \
 		-e 's/trash directory/trash_directory/g' \
@@ -381,6 +382,8 @@ src_install() {
 		dodoc "${S}"/contrib/gitview/gitview.txt
 	fi
 
+	dobin contrib/fast-import/git-p4
+	#dodoc contrib/fast-import/git-p4.txt # Moved upstream
 	newbin contrib/fast-import/import-tars.perl import-tars
 	newbin contrib/git-resurrect.sh git-resurrect
 
@@ -461,6 +464,11 @@ src_test() {
 		t1004-read-tree-m-u-wf.sh \
 		t3700-add.sh \
 		t7300-clean.sh"
+	# t9100 t9118 t9120 all fail with SVN 1.7, despite the workaround for spaces
+	# in the test directory.
+	local test_svn="t9100-git-svn-basic.sh \
+					t9118-git-svn-funky-branch-names.sh \
+					t9120-git-svn-clone-with-percent-escapes.sh"
 
 	# Unzip is used only for the testcase code, not by any normal parts of Git.
 	if ! has_version app-arch/unzip ; then
@@ -495,6 +503,9 @@ src_test() {
 		einfo "Disabling tests that need Perl"
 		disabled="${disabled} ${tests_perl}"
 	fi
+
+	einfo "Disabling tests that fail with SVN 1.7"
+	disabled="${disabled} ${test_svn}"
 
 	# Reset all previously disabled tests
 	cd "${S}/t"

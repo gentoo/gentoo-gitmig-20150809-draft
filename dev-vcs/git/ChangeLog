@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.130 2012/05/09 15:51:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.131 2012/05/20 04:25:24 robbat2 Exp $
+
+*git-1.7.10.2 (20 May 2012)
+
+  20 May 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/git-1.7.10.2-optional-cvs.patch, +files/git-1.7.11-optional-cvs.patch,
+  +git-1.7.10.2.ebuild, git-9999.ebuild:
+  Version bump, update optional CVS patch to apply on latest git HEAD and
+  1.7.10.2 release. Port libpcre changes to live ebuild.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> git-1.7.8.6.ebuild:
   keyword ~amd64-fbsd
