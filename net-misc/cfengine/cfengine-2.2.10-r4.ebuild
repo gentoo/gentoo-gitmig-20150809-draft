@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r4.ebuild,v 1.1 2011/11/01 18:47:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r4.ebuild,v 1.2 2012/05/20 09:58:10 ago Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://cfengine.com/source_code/download?file=${P}.tar.gz -> ${P}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 IUSE="vim-syntax"
 
 DEPEND=">=sys-libs/db-4
