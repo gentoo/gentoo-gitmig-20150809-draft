@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/ChangeLog,v 1.1 2012/05/18 13:37:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/ChangeLog,v 1.2 2012/05/20 13:16:37 klausman Exp $
+
+  20 May 2012; Tobias Klausmann <klausman@gentoo.org> testify-0.2.6.ebuild:
+  Fix package summary
 
 *testify-0.2.6 (18 May 2012)
 

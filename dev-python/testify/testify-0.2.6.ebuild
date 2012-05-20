@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.2.6.ebuild,v 1.1 2012/05/18 13:37:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.2.6.ebuild,v 1.2 2012/05/20 13:16:37 klausman Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="2.5 3.* 2.7-pypy-*"
 
 inherit eutils distutils vcs-snapshot
 
-DESCRIPTION="An sqlite-backed dictionary"
+DESCRIPTION="A more pythonic replacement for the unittest module and nose"
 HOMEPAGE="https://github.com/Yelp/testify http://pypi.python.org/pypi/testify/"
 SRC_URI="https://github.com/Yelp/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
