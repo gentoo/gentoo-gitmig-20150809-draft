@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ilbc-rfc3951
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ChangeLog,v 1.15 2011/11/27 22:21:38 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ChangeLog,v 1.16 2012/05/20 12:13:24 halcy0n Exp $
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> ilbc-rfc3951-0-r1.ebuild:
+  Stable for ppc64; bug #397617
 
   27 Nov 2011; Ulrich Mueller <ulm@gentoo.org> ilbc-rfc3951-0-r1.ebuild:
   Change LICENSE to BSD and remove RESTRICT=bindist, bug 390797.
