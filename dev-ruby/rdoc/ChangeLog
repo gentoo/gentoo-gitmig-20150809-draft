@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.74 2012/04/30 08:23:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.75 2012/05/20 16:04:52 graaff Exp $
+
+  20 May 2012; Hans de Graaff <graaff@gentoo.org> -rdoc-2.5.11.ebuild,
+  -rdoc-3.5.3.ebuild, -rdoc-3.6.ebuild, -rdoc-3.11.ebuild:
+  Remove old versions.
 
   30 Apr 2012; Hans de Graaff <graaff@gentoo.org> rdoc-3.12.ebuild,
   +files/rdoc-fix-hash-ordering-tests.patch:
