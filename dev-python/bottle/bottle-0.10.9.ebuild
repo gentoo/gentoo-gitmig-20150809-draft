@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/bottle-0.10.9.ebuild,v 1.1 2012/05/19 10:53:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/bottle-0.10.9.ebuild,v 1.2 2012/05/20 16:50:29 xarthisius Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS="*-jython"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="A fast and simple micro-framework for small web-applications"
 HOMEPAGE="http://pypi.python.org/pypi/bottle http://bottlepy.org/"
@@ -20,8 +20,8 @@ IUSE=""
 
 PYTHON_MODNAME=bottle.py
 
-RDEPEND="dev-python/simplejson"
-DEPEND="${RDEPEND} dev-python/setuptools"
+DEPEND="dev-python/simplejson"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	distutils_src_prepare
