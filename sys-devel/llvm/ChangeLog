@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.74 2012/05/14 17:09:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.75 2012/05/20 08:08:54 mgorny Exp $
+
+  20 May 2012; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Disable manpage generation code until either rst2man or docs are fixed.
 
   14 May 2012; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Generate manpages before compiling llvm -- save time if it is going to fail.
