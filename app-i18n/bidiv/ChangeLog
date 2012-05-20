@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/bidiv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/ChangeLog,v 1.16 2012/05/20 04:39:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/bidiv/ChangeLog,v 1.17 2012/05/20 04:41:46 ssuominen Exp $
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> bidiv-1.5-r1.ebuild:
+  x86 stable wrt #416075
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org> bidiv-1.4.ebuild:
   Revert to ~alpha/~ppc wrt #416075. No reverse dependencies and forcing
