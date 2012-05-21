@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-1.0.114_p1.ebuild,v 1.9 2012/03/23 10:55:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-1.0.114_p1.ebuild,v 1.10 2012/05/21 23:37:30 vapier Exp $
 
 EAPI="2"
 
-inherit autotools rpm
+inherit autotools rpm eutils
 
 DESCRIPTION="Cluster implementation of the TDB database used by Samba and other projects to store temporary data."
 HOMEPAGE="http://ctdb.samba.org/"
