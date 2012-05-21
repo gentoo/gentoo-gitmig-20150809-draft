@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtgain/qtgain-0.9.5.ebuild,v 1.1 2012/02/03 12:22:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtgain/qtgain-0.9.5.ebuild,v 1.2 2012/05/21 20:06:26 ssuominen Exp $
 
 EAPI=4
 
 MY_PN="QtGain"
-inherit qt4-r2
+inherit eutils qt4-r2
 
 DESCRIPTION="A simple frontend to mp3gain, vorbisgain and metaflac"
 HOMEPAGE="http://www.qt-apps.org/content/show.php/QtGain?content=56842"
