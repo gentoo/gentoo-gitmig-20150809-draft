@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ssm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.7 2011/08/15 19:55:27 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.8 2012/05/21 19:14:47 ranger Exp $
+
+  21 May 2012; Brent Baude <ranger@gentoo.org> ssm-1.1.ebuild:
+  Marking ssm-1.1 ppc for bug 413815
 
   15 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> ssm-1.1.ebuild:
   Marked ~ppc for sci-chemistry/pointless
