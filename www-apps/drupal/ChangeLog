@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.82 2012/05/21 05:46:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.83 2012/05/21 11:22:01 alexxy Exp $
+
+  21 May 2012; Alexey Shvetsov <alexxy@gentoo.org> drupal-7.12.ebuild,
+  drupal-7.14.ebuild:
+  [www-apps/drupal] D7 also need dev-php/pecl-apc and dev-php/pecl-
+  uploadprogress for normal operation
 
 *drupal-6.26 (21 May 2012)
 *drupal-7.14 (21 May 2012)

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.14.ebuild,v 1.1 2012/05/21 05:46:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.14.ebuild,v 1.2 2012/05/21 11:22:01 alexxy Exp $
 
 EAPI=4
 
@@ -18,6 +18,8 @@ IUSE="+mysql postgres sqlite"
 
 RDEPEND="virtual/httpd-php
 	dev-lang/php[gd,pdo,postgres?,xml]
+	dev-php/pecl-apc
+	dev-php/pecl-uploadprogress
 	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
 	sqlite? ( dev-lang/php[sqlite3] )"
 
