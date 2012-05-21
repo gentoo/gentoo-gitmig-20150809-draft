@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r1.ebuild,v 1.7 2012/05/04 04:45:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r1.ebuild,v 1.8 2012/05/21 20:39:44 mr_bones_ Exp $
 
 EAPI=2
 # games after gnome2 so games' functions will override gnome2's
-inherit autotools gnome2 games
+inherit autotools eutils gnome2 games
 
 DESCRIPTION="Tetrinet Clone for GNOME 2"
 HOMEPAGE="http://gtetrinet.sourceforge.net/"
