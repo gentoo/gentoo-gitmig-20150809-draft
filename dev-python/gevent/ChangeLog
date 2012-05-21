@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.5 2012/05/20 17:24:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.6 2012/05/21 08:07:56 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gevent-0.13.7.ebuild,
+  gevent-1.0_beta2.ebuild:
+  Add missing PYTHON_DEPEND, thanks to Arfrever for reporting
 
   20 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gevent-0.13.7.ebuild:
   Add (commented out) tests' dependencies for the daredevil that would want to
