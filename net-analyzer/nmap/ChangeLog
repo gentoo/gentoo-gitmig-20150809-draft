@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.249 2011/06/12 22:14:04 spock Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.250 2012/05/21 19:30:00 robbat2 Exp $
+
+*nmap-6.00 (21 May 2012)
+
+  21 May 2012; Robin H. Johnson <robbat2@gentoo.org> +nmap-6.00.ebuild:
+  Version bump to the new shiny.
 
   12 Jun 2011; Michał Januszewski <spock@gentoo.org> nmap-5.51.ebuild,
   +files/nmap-5.51-su-to-zenmap-fix.patch:
