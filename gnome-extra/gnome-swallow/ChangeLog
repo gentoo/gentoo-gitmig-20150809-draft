@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-swallow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.17 2012/05/05 06:25:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/ChangeLog,v 1.18 2012/05/21 19:03:24 tetromino Exp $
+
+  21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-swallow-1.2.ebuild:
+  Need eutils for epatch.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-swallow-1.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
