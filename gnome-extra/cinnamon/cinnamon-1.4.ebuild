@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.4.ebuild,v 1.2 2012/05/05 06:25:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.4.ebuild,v 1.3 2012/05/21 05:35:34 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -162,6 +162,7 @@ src_prepare() {
 	fi
 
 	eautoreconf
+	intltoolize --automake --copy --force || die #416789
 	gnome2_src_prepare
 
 	# Drop G_DISABLE_DEPRECATED for sanity on glib upgrades; bug #384765
