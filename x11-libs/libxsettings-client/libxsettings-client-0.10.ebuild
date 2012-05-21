@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.14 2009/05/05 08:00:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.15 2012/05/21 19:33:41 xarthisius Exp $
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="provides inter toolkit configuration settings"
 HOMEPAGE="http://www.freedesktop.org/standards/xsettings-spec/"
