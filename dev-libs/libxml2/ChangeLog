@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.341 2012/05/21 17:27:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.342 2012/05/21 19:10:21 jdhore Exp $
+
+  21 May 2012; Jeff Horelick <jdhore@gentoo.org> libxml2-2.8.0_rc1.ebuild:
+  marked x86 per bug 416209
 
   21 May 2012; Brent Baude <ranger@gentoo.org> libxml2-2.8.0_rc1.ebuild:
   Marking libxml2-2.8.0_rc1 ppc for bug 416209
