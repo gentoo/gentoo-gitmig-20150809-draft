@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.17.ebuild,v 1.5 2012/05/21 19:31:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-1.7.17.ebuild,v 1.6 2012/05/21 23:23:36 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit autotools eutils multilib toolchain-funcs python
+inherit autotools eutils multilib toolchain-funcs python eutils
 
 DESCRIPTION="Userspace utilities for storing and processing auditing records"
 HOMEPAGE="http://people.redhat.com/sgrubb/audit/"
