@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.102 2012/05/02 16:20:53 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.103 2012/05/21 18:38:03 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  texmacs-1.0.7.15-r1.ebuild, texmacs-1.0.7.2-r1.ebuild:
+  Add missing inheritance of eutils.eclass
 
 *texmacs-1.0.7.15-r1 (02 May 2012)
 
