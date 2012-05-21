@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.34.ebuild,v 1.1 2012/05/21 22:47:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.34.ebuild,v 1.2 2012/05/21 22:52:59 cardoe Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${PV}/${X86_NV_PACKA
 LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE="acpi custom-cflags multilib kernel_linux tools"
+IUSE="acpi multilib kernel_linux tools"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
@@ -274,12 +274,11 @@ src_prepare() {
 			-e 's:-Wsign-compare::g' \
 			"${NV_SRC}"/Makefile.kbuild
 
-		# If you set this then it's your own fault when stuff breaks :)
-		use custom-cflags && sed -i "s:-O:${CFLAGS}:" "${NV_SRC}"/Makefile.*
-
 		# If greater than 2.6.5 use M= instead of SUBDIR=
 		convert_to_m "${NV_SRC}"/Makefile.kbuild
 	fi
+
+	epatch_user
 }
 
 src_compile() {
