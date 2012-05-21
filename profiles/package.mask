@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13778 2012/05/21 06:46:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13779 2012/05/21 13:47:34 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -91,10 +91,6 @@ dev-python/testoob
 # Markos Chandras <hwoarang@gentoo.org> (15 May 2012)
 # Masked for testing
 =net-misc/dibbler-0.8.2
-
-# Mike Pagano <mpagano@gentoo.org> (15 May 2012)
-# Mask for testing
->=app-portage/portpeek-2.0.24
 
 # Naohiro Aota <naota@gentoo.org> (07 May 2012)
 # Dead upstream.
