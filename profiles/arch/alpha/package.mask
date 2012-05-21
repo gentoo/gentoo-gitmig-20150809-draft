@@ -1,7 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.25 2011/10/31 13:37:50 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.26 2012/05/21 11:21:07 alexxy Exp $
 
 # Tobias Klausman <klausman@gentoo.org> (31 Oct 2011)
 # Breaks since accept4() is not implemented on alpha
 >=sys-fs/udev-167
+
+# Alexey Shvetsov <alexxy@gentoo.org> (21 May 2012)
+# Need deps pecl-apc and pecl-uploadprogress bug #416897
+>=www-apps/drupal-7.14

@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.50 2012/02/21 12:03:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.51 2012/05/21 11:21:07 alexxy Exp $
+
+# Alexey Shvetsov <alexxy@gentoo.org> (21 May 2012)
+# Need deps pecl-apc and pecl-uploadprogress bug #416897
+>=www-apps/drupal-7.14
 
 # Johannes Huber <johu@gentoo.org> (21 Feb 2012)
 # Mask failing package on powerpc
