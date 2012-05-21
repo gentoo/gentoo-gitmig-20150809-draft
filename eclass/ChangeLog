@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.258 2012/05/21 17:30:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.259 2012/05/21 17:33:09 nelchael Exp $
+
+  21 May 2012; Krzysztof Pawlik <nelchael@gentoo.org>
+  python-distutils-ng.eclass:
+  Document PYTHON_DISABLE_SCRIPT_REDOS.
 
   21 May 2012; Krzysztof Pawlik <nelchael@gentoo.org>
   python-distutils-ng.eclass:

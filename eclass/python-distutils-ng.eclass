@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.21 2012/05/21 17:30:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.22 2012/05/21 17:33:09 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -52,6 +52,12 @@ fi
 # @DESCRIPTION:
 # Set the value to "yes" to skip compilation and/or optimization of Python
 # modules.
+
+# @ECLASS-VARIABLE: PYTHON_DISABLE_SCRIPT_REDOS
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Set to any value to disable automatic reinstallation of scripts in bin
+# directories. See python-distutils-ng_src_install function.
 
 EXPORT_FUNCTIONS pkg_pretend src_prepare src_configure src_compile src_test src_install
 
