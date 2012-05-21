@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.1.ebuild,v 1.8 2012/05/21 19:58:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.1.ebuild,v 1.9 2012/05/21 20:14:08 pesa Exp $
 
-EAPI=2
+EAPI=4
 
 inherit qt4-r2
 
@@ -18,7 +18,7 @@ IUSE="debug doc static-libs test"
 COMMON_DEPEND="app-crypt/qca:2[debug?]"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
-	test? ( x11-libs/qt-test )
+	test? ( x11-libs/qt-test:4 )
 "
 RDEPEND="${COMMON_DEPEND}
 	app-crypt/qca-ossl:2[debug?]
@@ -41,8 +41,8 @@ src_prepare() {
 	fi
 
 	sed -i -e '/^ *docs \\$/d' \
-		   -e '/^ *build_all \\$/d' \
-		   -e 's/^\#\(!macx\)/\1/' \
+		-e '/^ *build_all \\$/d' \
+		-e 's/^\#\(!macx\)/\1/' \
 		src/src.pro || die "sed failed"
 
 	sed -i -e "s/\(.*\)lib$/\1$(get_libdir)/" src/pcfile.sh || die "sed failed"
@@ -51,7 +51,7 @@ src_prepare() {
 src_compile() {
 	default
 	if use static-libs; then
-		emake -C src static || die "emake failed"
+		emake -C src static
 	fi
 }
 
@@ -59,11 +59,11 @@ src_install() {
 	qt4-r2_src_install
 
 	if use static-libs; then
-		dolib.a "${S}/lib/lib${PN}.a" || die "dolib failed"
+		dolib.a "${S}"/lib/lib${PN}.a
 	fi
 
 	if use doc; then
-		doxygen "${S}/Doxyfile" || die "Failed to generate documentation"
-		dohtml "${S}"/doc/html/* || die "Failed to install documentation"
+		doxygen "${S}"/Doxyfile || die "failed to generate documentation"
+		dohtml "${S}"/doc/html/*
 	fi
 }
