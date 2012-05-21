@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.2.0.ebuild,v 1.1 2012/05/15 06:08:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.2.0.ebuild,v 1.2 2012/05/21 02:26:31 xmw Exp $
 
 EAPI=3
 
@@ -23,7 +23,6 @@ COMMON_DEPEND="dev-python/pygtk:2
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	server? ( x11-libs/libXtst )
-	server? ( x11-base/xorg-server[-minimal] )
 	!x11-wm/parti"
 
 RDEPEND="${COMMON_DEPEND}
@@ -33,11 +32,11 @@ RDEPEND="${COMMON_DEPEND}
 	libnotify? ( dev-python/dbus-python )
 	jpeg? ( dev-python/imaging )
 	png? ( dev-python/imaging )
-	ssh? ( net-misc/openssh )
-	server? ( x11-base/xorg-server[xvfb] )"
+	ssh? ( virtual/ssh )
+	server? ( x11-base/xorg-server[xvfb,-minimal] )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
-	server? ( dev-python/cython )"
+	dev-python/cython"
 
 src_prepare() {
 	if ! use server; then
