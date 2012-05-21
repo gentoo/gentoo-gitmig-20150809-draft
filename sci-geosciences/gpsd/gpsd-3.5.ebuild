@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.2 2012/05/21 22:37:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.5.ebuild,v 1.1 2012/05/21 22:37:12 vapier Exp $
 
 EAPI="4"
 
