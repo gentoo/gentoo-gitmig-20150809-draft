@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/nxcl-0.9-r2.ebuild,v 1.1 2010/02/19 17:27:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/nxcl-0.9-r2.ebuild,v 1.2 2012/05/21 19:14:40 xarthisius Exp $
 
 EAPI=2
 
-inherit autotools
+inherit autotools eutils
 
 MY_P="freenx-client-${PV}"
 DESCRIPTION="A library for building NX clients"

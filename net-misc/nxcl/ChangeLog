@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxcl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.10 2010/02/19 17:27:15 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.11 2012/05/21 19:14:40 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> nxcl-0.9-r1.ebuild,
+  nxcl-0.9-r2.ebuild:
+  Add missing inheritance of eutils.eclass
 
 *nxcl-0.9-r2 (19 Feb 2010)
 

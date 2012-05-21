@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netstat-nat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.39 2012/04/15 04:04:58 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.40 2012/05/21 19:14:33 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> netstat-nat-1.4.9.ebuild:
+  Add missing inheritance of eutils.eclass
 
   15 Apr 2012; Benda XU <heroxbd@gentoo.org> netstat-nat-1.4.10.ebuild:
   add ~arm keyword

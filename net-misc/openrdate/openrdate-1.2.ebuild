@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openrdate/openrdate-1.2.ebuild,v 1.6 2010/10/16 14:03:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openrdate/openrdate-1.2.ebuild,v 1.7 2012/05/21 19:15:30 xarthisius Exp $
 
 WANT_AUTOMAKE=1.9
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="use TCP or UDP to retrieve the current time of another machine"
 HOMEPAGE="http://sourceforge.net/projects/openrdate/"
