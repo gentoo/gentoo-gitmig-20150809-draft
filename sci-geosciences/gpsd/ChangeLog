@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.83 2012/02/09 22:14:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.84 2012/05/21 22:36:22 vapier Exp $
+
+  21 May 2012; Mike Frysinger <vapier@gentoo.org> gpsd-3.4.ebuild,
+  +files/gpsd-3.4-no-man-gen.patch:
+  Do not regen man pages since the tarball includes them.
 
 *gpsd-9999 (09 Feb 2012)
 

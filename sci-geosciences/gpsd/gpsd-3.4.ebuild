@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.4.ebuild,v 1.2 2012/02/09 22:14:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.4.ebuild,v 1.3 2012/05/21 22:36:22 vapier Exp $
 
 EAPI="4"
 
@@ -66,6 +66,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.4-strptime.patch
 	epatch "${FILESDIR}"/${PN}-3.4-chrpath.patch
 	epatch "${FILESDIR}"/${PN}-3.4-always-install-man-pages.patch
+	epatch "${FILESDIR}"/${PN}-3.4-no-man-gen.patch
 
 	# Avoid useless -L paths to the install dir
 	sed -i \
