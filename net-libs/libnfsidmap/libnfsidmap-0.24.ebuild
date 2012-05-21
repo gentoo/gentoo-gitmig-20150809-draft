@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/libnfsidmap-0.24.ebuild,v 1.6 2012/02/04 19:00:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/libnfsidmap-0.24.ebuild,v 1.7 2012/05/21 19:13:27 xarthisius Exp $
 
 EAPI="2"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="NFSv4 ID <-> name mapping library"
 HOMEPAGE="http://www.citi.umich.edu/projects/nfsv4/linux/"
