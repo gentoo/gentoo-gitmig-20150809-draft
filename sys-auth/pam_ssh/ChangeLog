@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ssh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.44 2010/10/31 17:54:05 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.45 2012/05/21 19:27:32 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> pam_ssh-1.97-r1.ebuild:
+  Add missing inheritance of eutils.eclass
 
 *pam_ssh-1.97-r3 (31 Oct 2010)
 

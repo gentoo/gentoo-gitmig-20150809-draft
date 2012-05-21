@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.8 2011/07/05 15:42:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.9 2012/05/21 19:25:13 xarthisius Exp $
 
 EAPI="2"
 # https://bugs.gentoo.org/show_bug.cgi?id=318121
 WANT_AUTOMAKE=1.9
-inherit multilib autotools
+inherit multilib autotools eutils
 
 DESCRIPTION="Open source PAM library."
 HOMEPAGE="http://www.openpam.org/"
