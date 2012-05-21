@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.5.ebuild,v 1.3 2011/02/13 22:07:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.5.ebuild,v 1.4 2012/05/21 19:56:29 ssuominen Exp $
 
-inherit games
+inherit eutils games
 
 EP=${PV:0:1}
 REV=${PV:2:1}
