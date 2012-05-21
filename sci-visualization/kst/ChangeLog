@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/kst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.4 2012/05/01 14:14:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.5 2012/05/21 19:55:15 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> kst-2.0.0.ebuild:
+  inherit eutils for make_desktop_entry
 
 *kst-2.0.4 (01 May 2012)
 
