@@ -1,6 +1,9 @@
 # ChangeLog for media-video/aegisub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.4 2012/05/20 21:31:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.5 2012/05/21 22:39:37 jdhore Exp $
+
+  21 May 2012; Jeff Horelick <jdhore@gentoo.org> aegisub-2.1.9.ebuild:
+  marked x86 per bug 416777
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> aegisub-2.1.9.ebuild:
   Stable for amd64, wrt bug #416777
