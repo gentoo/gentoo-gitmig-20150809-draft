@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsbabel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.26 2012/05/03 10:28:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.27 2012/05/21 19:49:56 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> gpsbabel-1.4.2.ebuild,
+  gpsbabel-1.4.3.ebuild:
+  inherit eutils for make_desktop_entry
 
 *gpsbabel-1.4.3 (03 May 2012)
 
