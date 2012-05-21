@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/postr-0.12.4.ebuild,v 1.1 2012/05/14 04:19:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/postr-0.12.4.ebuild,v 1.2 2012/05/21 18:07:56 nelchael Exp $
 
 EAPI="4"
 
@@ -31,8 +31,4 @@ python_prepare_all() {
 	# FIXME: nautilus extension is nautilus-2-only; is it worth enabling for
 	# legacy users?
 	sed -e '/nautilus\/extensions/ d' -i setup.py || die
-}
-
-python_install_all() {
-	python-distutils-ng_redoscript "/usr/bin/postr"
 }
