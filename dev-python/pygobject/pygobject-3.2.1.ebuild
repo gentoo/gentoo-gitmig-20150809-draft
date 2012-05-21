@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.2.1.ebuild,v 1.2 2012/05/13 19:50:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.2.1.ebuild,v 1.3 2012/05/21 18:49:10 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.6 3:3.1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 *-jython *-pypy-*"
 
-inherit autotools gnome2 python virtualx
+inherit autotools eutils gnome2 python virtualx
 
 DESCRIPTION="GLib's GObject library bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"

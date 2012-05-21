@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.4.ebuild,v 1.9 2012/05/16 15:00:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.4.ebuild,v 1.10 2012/05/21 18:49:10 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ PYTHON_DEPEND="2:2.6 3:3.1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 *-jython 2.7-pypy-*"
 
 # XXX: Is the alternatives stuff needed anymore?
-inherit alternatives autotools gnome2 python virtualx
+inherit alternatives autotools eutils gnome2 python virtualx
 
 DESCRIPTION="GLib's GObject library bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
