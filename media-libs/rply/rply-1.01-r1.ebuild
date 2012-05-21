@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rply/rply-1.01-r1.ebuild,v 1.2 2012/02/17 20:55:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rply/rply-1.01-r1.ebuild,v 1.3 2012/05/21 19:06:42 tetromino Exp $
 
 EAPI="4"
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="A library to read and write PLY files"
 HOMEPAGE="http://w3.impa.br/~diego/software/rply/"
