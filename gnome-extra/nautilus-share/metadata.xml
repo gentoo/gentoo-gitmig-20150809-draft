@@ -5,4 +5,5 @@
 	<email>maksbotan@gentoo.org</email>
 	<name>Maxim Koltsov</name>
 </maintainer>
+<herd>gnome</herd>
 </pkgmetadata>
