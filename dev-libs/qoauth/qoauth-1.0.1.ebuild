@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.1.ebuild,v 1.7 2012/02/18 17:33:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.1.ebuild,v 1.8 2012/05/21 19:58:32 pesa Exp $
 
-EAPI="2"
+EAPI=2
 
 inherit qt4-r2
 
@@ -18,16 +18,23 @@ IUSE="debug doc static-libs test"
 COMMON_DEPEND="app-crypt/qca:2[debug?]"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
-	test? ( x11-libs/qt-test )"
+	test? ( x11-libs/qt-test )
+"
 RDEPEND="${COMMON_DEPEND}
-	app-crypt/qca-ossl:2[debug?]"
+	app-crypt/qca-ossl:2[debug?]
+"
 
-S="${WORKDIR}/${P}-src"
+S=${WORKDIR}/${P}-src
+
+DOCS="README CHANGELOG"
+PATCHES=(
+	# disable functional tests that require network connection
+	# and rely on 3rd party external server (bug #341267)
+	"${FILESDIR}/${P}-disable-ft.patch"
+)
 
 src_prepare() {
-	# disable functional tests that require network connection and rely
-	# on 3rd party external server (bug #341267)
-	epatch "${FILESDIR}/${P}-disable-ft.patch"
+	qt4-r2_src_prepare
 
 	if ! use test; then
 		sed -i -e '/SUBDIRS/s/tests//' ${PN}.pro || die "sed failed"
@@ -49,8 +56,7 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc README CHANGELOG || die "dodoc failed"
+	qt4-r2_src_install
 
 	if use static-libs; then
 		dolib.a "${S}/lib/lib${PN}.a" || die "dolib failed"
