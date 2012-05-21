@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0-r1.ebuild,v 1.2 2012/05/21 19:59:13 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0-r1.ebuild,v 1.3 2012/05/21 20:52:19 idl0r Exp $
 
 EAPI="4"
 
@@ -77,7 +77,7 @@ src_install() {
 	doman man/en/*.gz
 
 	if use linguas_de; then
-		doman man/de/*.gz
+		doman -i18n=de man/de/*.gz
 	fi
 }
 
