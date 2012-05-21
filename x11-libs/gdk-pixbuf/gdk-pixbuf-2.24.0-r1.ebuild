@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.0-r1.ebuild,v 1.13 2012/05/05 03:52:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.0-r1.ebuild,v 1.14 2012/05/21 19:08:06 tetromino Exp $
 
 EAPI="4"
 
-inherit gnome.org multilib libtool autotools
+inherit eutils gnome.org multilib libtool autotools
 
 DESCRIPTION="Image loading library for GTK+"
 HOMEPAGE="http://www.gtk.org/"

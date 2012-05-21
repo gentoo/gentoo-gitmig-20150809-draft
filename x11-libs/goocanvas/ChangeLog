@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.33 2012/05/05 03:52:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.34 2012/05/21 19:09:45 tetromino Exp $
+
+  21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  goocanvas-2.0.1.ebuild:
+  Need eutils for epatch.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> goocanvas-0.14.ebuild,
   goocanvas-1.0.0.ebuild, goocanvas-2.0.0.ebuild, goocanvas-2.0.1.ebuild:

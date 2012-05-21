@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-2.0.1.ebuild,v 1.8 2012/05/05 03:52:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-2.0.1.ebuild,v 1.9 2012/05/21 19:09:45 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ PYTHON_DEPEND="python? 2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
-inherit gnome2 python
+inherit eutils gnome2 python
 
 DESCRIPTION="Canvas widget for GTK+ using the cairo 2D library for drawing"
 HOMEPAGE="http://live.gnome.org/GooCanvas"
