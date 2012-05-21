@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13776 2012/05/20 20:36:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13777 2012/05/21 05:25:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -343,13 +343,11 @@ net-p2p/leechcraft-eiskaltdcpp
 # ruby-gnome2 modules obsoleted by upstream. These are
 # no longer maintained and mostly depend on gnome
 # components that have been obsoleted themselves.
-# bug 408251 for ruby-gtkmozembed, no specific bug
-# for the other components, nothing in the tree depends
+# no specific bug for these, nothing in the tree depends
 # on them.
 dev-ruby/ruby-gnomevfs
 dev-ruby/ruby-gtkglext
 dev-ruby/ruby-gtkhtml2
-dev-ruby/ruby-gtkmozembed
 dev-ruby/ruby-panel-applet2
 
 # Patrick Lauer <patrick@gentoo.org> (13 Apr 2012)

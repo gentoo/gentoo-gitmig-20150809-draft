@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6576 2012/05/20 20:36:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6577 2012/05/21 05:25:38 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove entry for dev-ruby/ruby-gtkmozembed because it was removed from
+  portage.
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove entry for app-text/chmsee since it was removed from tree. Lastrite

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.351 2012/05/20 23:50:16 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.352 2012/05/21 05:25:39 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -13,12 +13,6 @@
 # This entry can be removed by anyone after gnome-panel-3.* is stabilized
 # Mask to allow stabilization (bug #414983)
 =app-misc/gnote-0.8.2 applet
-
-# Samuli Suominen <ssuominen@gentoo.org> (07 May 2012)
-# This entry can be removed by anyone after =media-video/vlc-1.1*
-# has left the tree. Mask out deprecated xulrunner support.
-# Bug 407567.
-=media-video/vlc-1.1* nsplugin
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (02 May 2012)
 # Causes crashes and build failures, not needed by any package, bug #412177
