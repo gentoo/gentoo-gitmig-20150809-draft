@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ffmpegsource
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.11 2012/05/20 21:30:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.12 2012/05/21 22:40:12 jdhore Exp $
+
+  21 May 2012; Jeff Horelick <jdhore@gentoo.org> ffmpegsource-2.17.ebuild:
+  marked x86 per bug 416777
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> ffmpegsource-2.17.ebuild:
   Stable for amd64, wrt bug #416777
