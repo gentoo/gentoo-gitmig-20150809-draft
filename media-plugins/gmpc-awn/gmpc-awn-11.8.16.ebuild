@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/gmpc-awn-11.8.16.ebuild,v 1.4 2012/05/05 08:27:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/gmpc-awn-11.8.16.ebuild,v 1.5 2012/05/21 19:08:03 xarthisius Exp $
 
 EAPI=4
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="This plugin integrates GMPC with the Avant Window Navigator"
 HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_AWN"
