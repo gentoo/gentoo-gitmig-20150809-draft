@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7.7-r1.ebuild,v 1.1 2012/01/24 15:16:20 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7.8-r2.ebuild,v 1.1 2012/05/21 02:07:41 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -31,7 +31,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-${PV}-NameError-fix.patch"
+	epatch "${FILESDIR}/${PN}-${PV}"-fix-resolver-assert.patch
+	epatch "${FILESDIR}/${PN}-${PV}"-ebuild-envs-assert.patch
 }
 
 src_compile() {
