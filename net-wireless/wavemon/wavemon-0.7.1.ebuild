@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.7.1.ebuild,v 1.7 2011/04/05 15:12:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.7.1.ebuild,v 1.8 2012/05/21 19:21:03 xarthisius Exp $
 
 EAPI="3"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Ncurses based monitor for IEEE 802.11 wireless LAN cards"
 HOMEPAGE="http://eden-feed.erg.abdn.ac.uk/wavemon/"
