@@ -1,0 +1,210 @@
+From 379ebc1d774865fa92f2a8d80cc4da65cbe19998 Mon Sep 17 00:00:00 2001
+From: Daniel Veillard <veillard@redhat.com>
+Date: Fri, 18 May 2012 15:41:31 +0800
+Subject: [PATCH] Cleanup on randomization
+
+tsan reported that rand() is not thread safe, so create
+a thread safe wrapper, use rand_r() if available.
+Consolidate the function, initialization and cleanup in
+dict.c and make sure it is initialized in xmlInitParser()
+---
+ dict.c                |   41 ++++++++++++++++++++++++++++++++++++++---
+ hash.c                |   10 +---------
+ include/libxml/dict.h |   15 ++++++++++-----
+ libxml.h              |    7 +++++++
+ parser.c              |    1 +
+ 5 files changed, 57 insertions(+), 17 deletions(-)
+
+diff --git a/dict.c b/dict.c
+index ae4966b..3579f64 100644
+--- a/dict.c
++++ b/dict.c
+@@ -135,6 +135,15 @@ static xmlRMutexPtr xmlDictMutex = NULL;
+  */
+ static int xmlDictInitialized = 0;
+ 
++#ifdef DICT_RANDOMIZATION
++#ifdef HAVE_RAND_R
++/*
++ * Internal data for random function, protected by xmlDictMutex
++ */
++unsigned int rand_seed = 0;
++#endif
++#endif
++
+ /**
+  * xmlInitializeDict:
+  *
+@@ -142,24 +151,50 @@ static int xmlDictInitialized = 0;
+  * this function is not thread safe, initialization should
+  * preferably be done once at startup
+  */
+-static int xmlInitializeDict(void) {
++int xmlInitializeDict(void) {
+     if (xmlDictInitialized)
+         return(1);
+ 
+     if ((xmlDictMutex = xmlNewRMutex()) == NULL)
+         return(0);
++    xmlRMutexLock(xmlDictMutex);
+ 
+ #ifdef DICT_RANDOMIZATION
++#ifdef HAVE_RAND_R
++    rand_seed = time(NULL);
++    rand_r(& rand_seed);
++#else
+     srand(time(NULL));
+ #endif
++#endif
+     xmlDictInitialized = 1;
++    xmlRMutexUnlock(xmlDictMutex);
+     return(1);
+ }
+ 
++#ifdef DICT_RANDOMIZATION
++int __xmlRandom(void) {
++    int ret;
++
++    if (xmlDictInitialized == 0)
++        xmlInitializeDict();
++
++    xmlRMutexLock(xmlDictMutex);
++#ifdef HAVE_RAND_R
++    ret = rand_r(& rand_seed);
++#else
++    ret = rand();
++#endif
++    xmlRMutexUnlock(xmlDictMutex);
++    return(ret);
++}
++#endif
++
+ /**
+  * xmlDictCleanup:
+  *
+- * Free the dictionary mutex.
++ * Free the dictionary mutex. Do not call unless sure the library
++ * is not in use anymore !
+  */
+ void
+ xmlDictCleanup(void) {
+@@ -488,7 +523,7 @@ xmlDictCreate(void) {
+         if (dict->dict) {
+ 	    memset(dict->dict, 0, MIN_DICT_SIZE * sizeof(xmlDictEntry));
+ #ifdef DICT_RANDOMIZATION
+-            dict->seed = rand();
++            dict->seed = __xmlRandom();
+ #else
+             dict->seed = 0;
+ #endif
+diff --git a/hash.c b/hash.c
+index fe1424f..15e1efe 100644
+--- a/hash.c
++++ b/hash.c
+@@ -47,10 +47,6 @@
+ 
+ /* #define DEBUG_GROW */
+ 
+-#ifdef HASH_RANDOMIZATION
+-static int hash_initialized = 0;
+-#endif
+-
+ /*
+  * A single entry in the hash table
+  */
+@@ -186,11 +182,7 @@ xmlHashCreate(int size) {
+         if (table->table) {
+   	    memset(table->table, 0, size * sizeof(xmlHashEntry));
+ #ifdef HASH_RANDOMIZATION
+-            if (!hash_initialized) {
+-                srand(time(NULL));
+-                hash_initialized = 1;
+-            }
+-            table->random_seed = rand();
++            table->random_seed = __xmlRandom();
+ #endif
+   	    return(table);
+         }
+diff --git a/include/libxml/dict.h b/include/libxml/dict.h
+index abb8339..5994868 100644
+--- a/include/libxml/dict.h
++++ b/include/libxml/dict.h
+@@ -25,6 +25,11 @@ typedef struct _xmlDict xmlDict;
+ typedef xmlDict *xmlDictPtr;
+ 
+ /*
++ * Initializer
++ */
++XMLPUBFUN int XMLCALL  xmlInitializeDict(void);
++
++/*
+  * Constructor and destructor.
+  */
+ XMLPUBFUN xmlDictPtr XMLCALL
+@@ -33,28 +38,28 @@ XMLPUBFUN xmlDictPtr XMLCALL
+ 			xmlDictCreateSub(xmlDictPtr sub);
+ XMLPUBFUN int XMLCALL
+ 			xmlDictReference(xmlDictPtr dict);
+-XMLPUBFUN void XMLCALL			
++XMLPUBFUN void XMLCALL
+ 			xmlDictFree	(xmlDictPtr dict);
+ 
+ /*
+  * Lookup of entry in the dictionnary.
+  */
+-XMLPUBFUN const xmlChar * XMLCALL		
++XMLPUBFUN const xmlChar * XMLCALL
+ 			xmlDictLookup	(xmlDictPtr dict,
+ 		                         const xmlChar *name,
+ 		                         int len);
+-XMLPUBFUN const xmlChar * XMLCALL		
++XMLPUBFUN const xmlChar * XMLCALL
+ 			xmlDictExists	(xmlDictPtr dict,
+ 		                         const xmlChar *name,
+ 		                         int len);
+-XMLPUBFUN const xmlChar * XMLCALL		
++XMLPUBFUN const xmlChar * XMLCALL
+ 			xmlDictQLookup	(xmlDictPtr dict,
+ 		                         const xmlChar *prefix,
+ 		                         const xmlChar *name);
+ XMLPUBFUN int XMLCALL
+ 			xmlDictOwns	(xmlDictPtr dict,
+ 					 const xmlChar *str);
+-XMLPUBFUN int XMLCALL			
++XMLPUBFUN int XMLCALL
+ 			xmlDictSize	(xmlDictPtr dict);
+ 
+ /*
+diff --git a/libxml.h b/libxml.h
+index dfc6c64..fa3aea4 100644
+--- a/libxml.h
++++ b/libxml.h
+@@ -79,6 +79,13 @@ void __xmlGlobalInitMutexLock(void);
+ void __xmlGlobalInitMutexUnlock(void);
+ void __xmlGlobalInitMutexDestroy(void);
+ 
++#if defined(HAVE_RAND) && defined(HAVE_SRAND) && defined(HAVE_TIME)
++/*
++ * internal thread safe random function
++ */
++int __xmlRandom(void);
++#endif
++
+ #ifdef IN_LIBXML
+ #ifdef __GNUC__
+ #ifdef PIC
+diff --git a/parser.c b/parser.c
+index 1b80a8c..2c38fae 100644
+--- a/parser.c
++++ b/parser.c
+@@ -14178,6 +14178,7 @@ xmlInitParser(void) {
+ 	    (xmlGenericError == NULL))
+ 	    initGenericErrorDefaultFunc(NULL);
+ 	xmlInitMemory();
++        xmlInitializeDict();
+ 	xmlInitCharEncodingHandlers();
+ 	xmlDefaultSAXHandlerInit();
+ 	xmlRegisterDefaultInputCallbacks();
+-- 
+1.7.8.6
+
