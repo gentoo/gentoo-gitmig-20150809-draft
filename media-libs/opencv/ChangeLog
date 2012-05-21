@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.72 2012/05/21 09:36:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.73 2012/05/21 20:42:14 johu Exp $
+
+  21 May 2012; Johannes Huber <johu@gentoo.org>
+  -files/opencv-2.3.0-convert_sets_to_options.patch,
+  -files/opencv-2.3.0-ffmpeg.patch, -files/opencv-2.3.0-libpng15.patch,
+  -files/opencv-2.3.0-symlink.patch, -opencv-2.3.0.ebuild:
+  Remove old.
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> opencv-2.3.1a-r1.ebuild:
   x86 stable wrt bug #409733
