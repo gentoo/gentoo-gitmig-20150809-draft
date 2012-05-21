@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.9.ebuild,v 1.1 2010/09/08 17:51:03 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.9.ebuild,v 1.2 2012/05/21 18:48:45 xarthisius Exp $
 
 EAPI=3
-inherit autotools
+
+inherit autotools eutils
 
 DESCRIPTION="The Oil Runtime Compiler"
 HOMEPAGE="http://code.entropywave.com/projects/orc/"
