@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.798 2012/05/18 02:22:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.799 2012/05/21 05:21:20 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> vlc-1.1.13.ebuild:
+  Remove USE="nsplugin" in favour of media-plugins/npapi-vlc (and because
+  net-libs/xulrunner is vulnerable) wrt #407567 and #415479.
 
   18 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   vlc-2.0.1.ebuild, vlc-9999.ebuild:
