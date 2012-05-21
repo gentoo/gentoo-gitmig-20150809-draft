@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha89.ebuild,v 1.1 2012/02/23 06:08:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha89.ebuild,v 1.2 2012/05/21 20:27:46 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -342,16 +342,9 @@ src_install() {
 	done
 
 	dodir /usr/sbin
-	local my_syms="archive-conf
-		dispatch-conf
-		emaint
-		emerge-webrsync
-		env-update
-		etc-update
-		fixpackages
-		regenworld"
 	local x
-	for x in ${my_syms}; do
+	for x in archive-conf dispatch-conf emaint emerge-webrsync env-update \
+		etc-update fixpackages regenworld ; do
 		dosym ../${libdir}/portage/bin/${x} /usr/sbin/${x}
 	done
 	dosym env-update /usr/sbin/update-env

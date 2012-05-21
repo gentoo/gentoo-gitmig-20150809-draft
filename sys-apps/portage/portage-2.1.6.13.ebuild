@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.26 2011/11/12 16:16:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.27 2012/05/21 20:27:46 zmedico Exp $
 
 # EAPI 1 since python-2.5 is also EAPI 1.
 EAPI=1
@@ -216,17 +216,9 @@ src_install() {
 	done
 
 	dodir /usr/sbin
-	local my_syms="archive-conf
-		dispatch-conf
-		emaint
-		emerge-webrsync
-		env-update
-		etc-update
-		fixpackages
-		quickpkg
-		regenworld"
 	local x
-	for x in ${my_syms}; do
+	for x in archive-conf dispatch-conf emaint emerge-webrsync env-update \
+		etc-update fixpackages quickpkg regenworld ; do
 		dosym ../${libdir}/portage/bin/${x} /usr/sbin/${x}
 	done
 	dosym env-update /usr/sbin/update-env
