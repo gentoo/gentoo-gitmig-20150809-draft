@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.5 2012/05/21 22:18:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.6 2012/05/21 22:25:01 dilfridge Exp $
 
 EAPI=4
 
@@ -201,6 +201,10 @@ src_configure() {
 src_install() {
 	emake BUILDROOT="${D}" install
 	dodoc {CHANGES,CREDITS,README}.txt
+
+	# move the default config file to docs
+	dodoc "${ED}"/etc/cups/cupsd.conf.default
+	rm -f "${ED}"/etc/cups/cupsd.conf.default
 
 	# clean out cups init scripts
 	rm -rf "${ED}"/etc/{init.d/cups,rc*,pam.d/cups}
