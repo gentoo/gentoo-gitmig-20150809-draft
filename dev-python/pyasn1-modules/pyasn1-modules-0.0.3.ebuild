@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/pyasn1-modules-0.0.3.ebuild,v 1.1 2012/05/18 14:30:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/pyasn1-modules-0.0.3.ebuild,v 1.2 2012/05/21 01:48:29 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,7 +27,7 @@ PYTHON_MODNAME="pyasn1_modules"
 src_test() {
 	echoit() { echo "$@"; "$@"; }
 	testing() {
-		local exit_status=0
+		local exit_status=0 test
 		for test in test/*.sh; do
 			PATH="${S}/tools:${PATH}" PYTHONPATH="build-${PYTHON_ABI}/lib" \
 				echoit sh "${test}" || exit_status=1
