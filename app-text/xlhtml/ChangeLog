@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xlhtml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.18 2010/02/20 18:32:13 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.19 2012/05/21 18:43:50 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> xlhtml-0.5.1_p6.ebuild:
+  Add missing inheritance of eutils.eclass
 
   20 Feb 2010; Jonathan Callen <abcd@gentoo.org> xlhtml-0.5.1_p6.ebuild:
   Transfer prefix keywords, bump EAPI
