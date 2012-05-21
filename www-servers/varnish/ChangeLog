@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.46 2012/05/02 21:50:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.47 2012/05/21 19:31:30 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> varnish-2.0.4-r1.ebuild:
+  Add missing inheritance of eutils.eclass
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> varnish-3.0.2-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

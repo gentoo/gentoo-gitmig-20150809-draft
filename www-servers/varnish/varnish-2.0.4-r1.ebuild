@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.4-r1.ebuild,v 1.5 2010/08/09 10:39:26 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.4-r1.ebuild,v 1.6 2012/05/21 19:31:30 xarthisius Exp $
 
 EAPI="2"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Varnish is a state-of-the-art, high-performance HTTP accelerator."
 HOMEPAGE="http://varnish.projects.linpro.no/"
