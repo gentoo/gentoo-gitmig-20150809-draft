@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.24.2.ebuild,v 1.3 2012/05/03 01:48:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.24.2.ebuild,v 1.4 2012/05/21 23:17:23 vapier Exp $
 
 EAPI="2"
-inherit java-pkg-2 gnome2 autotools
+inherit java-pkg-2 gnome2 eutils autotools
 
 DESCRIPTION="Gnome Java Accessibility Bridge"
 HOMEPAGE="http://developer.gnome.org/projects/gap/"
