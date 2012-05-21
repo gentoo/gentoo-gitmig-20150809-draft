@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FCGI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.23 2012/05/06 20:22:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.24 2012/05/21 10:06:18 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> FCGI-0.740.0.ebuild:
+  x86 stable wrt bug #412999
 
   06 May 2012; Brent Baude <ranger@gentoo.org> FCGI-0.740.0.ebuild:
   Marking FCGI-0.740.0 ppc for bug 412999
