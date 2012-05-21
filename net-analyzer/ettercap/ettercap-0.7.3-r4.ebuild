@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r4.ebuild,v 1.9 2011/03/28 21:25:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r4.ebuild,v 1.10 2012/05/21 23:24:30 vapier Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
@@ -9,7 +9,7 @@
 
 EAPI=2
 
-inherit autotools flag-o-matic libtool
+inherit eutils autotools flag-o-matic libtool
 
 MY_P="${PN}-NG-${PV}"
 DESCRIPTION="A suite for man in the middle attacks and network mapping"
