@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1.ebuild,v 1.3 2012/05/20 09:35:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.1.ebuild,v 1.4 2012/05/21 14:30:12 johu Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/s/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc +upower"
 
 RDEPEND="|| ( >=dev-lang/python-2.7 dev-python/argparse )
