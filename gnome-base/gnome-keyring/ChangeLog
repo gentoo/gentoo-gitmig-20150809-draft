@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.223 2012/05/13 18:15:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.224 2012/05/21 18:53:30 tetromino Exp $
+
+  21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-keyring-2.32.1-r1.ebuild, gnome-keyring-3.2.2.ebuild:
+  Need eutils for epatch.
 
 *gnome-keyring-3.4.1 (13 May 2012)
 

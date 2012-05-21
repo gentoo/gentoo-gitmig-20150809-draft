@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.192 2012/05/05 05:38:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.193 2012/05/21 18:59:25 tetromino Exp $
+
+  21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgnomeprint-2.18.8.ebuild:
+  Need eutils for epatch.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libgnomeprint-2.18.8.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
