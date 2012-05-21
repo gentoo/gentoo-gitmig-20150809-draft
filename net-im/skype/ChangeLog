@@ -1,6 +1,11 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.125 2012/05/21 21:00:14 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.126 2012/05/21 21:05:25 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  skype-2.2.0.35-r99.ebuild:
+  Revert last commit because skype binary has NEEDED entry for libtiff.so.4
+  which is provided only by emul-linux-x86-baselibs >= 20120520.
 
   21 May 2012; Maciej Mrozowski <reavertm@gentoo.org> skype-2.2.0.35-r99.ebuild:
   Lower emul-libs version requirements.
