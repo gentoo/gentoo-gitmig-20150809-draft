@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pipewalker/pipewalker-0.9.4.ebuild,v 1.2 2012/05/07 09:26:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pipewalker/pipewalker-0.9.4.ebuild,v 1.3 2012/05/21 12:26:59 phajdan.jr Exp $
 
 EAPI=2
 inherit flag-o-matic games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pipewalker/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[opengl,video]
