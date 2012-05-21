@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CPAN-Mini-Inject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/ChangeLog,v 1.22 2012/03/19 19:27:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/ChangeLog,v 1.23 2012/05/21 10:08:07 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  CPAN-Mini-Inject-0.310.0.ebuild:
+  x86 stable wrt bug #413011
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> CPAN-Mini-Inject-0.18.ebuild,
   CPAN-Mini-Inject-0.300.0.ebuild, CPAN-Mini-Inject-0.310.0.ebuild:
