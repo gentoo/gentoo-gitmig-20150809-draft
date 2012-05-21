@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6.ebuild,v 1.4 2010/09/13 10:32:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6.ebuild,v 1.5 2012/05/21 19:55:45 ssuominen Exp $
 
 EAPI="2"
 
-inherit qt4-r2
+inherit eutils qt4-r2
 
 MY_PN="DNetStats"
 MY_P="${MY_PN}-v${PV}-release"
