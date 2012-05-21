@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/xyscan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.14 2012/05/21 10:05:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.15 2012/05/21 10:16:11 johu Exp $
+
+  21 May 2012; Johannes Huber <johu@gentoo.org> -xyscan-3.2.1.ebuild,
+  -xyscan-3.2.2.ebuild, -xyscan-3.3.0.ebuild:
+  Remove old wrt bug #311481.
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xyscan-3.3.1.ebuild:
   x86 stable wrt bug #414011
