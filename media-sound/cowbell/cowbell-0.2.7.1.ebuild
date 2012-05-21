@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.10 2012/05/05 08:16:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.11 2012/05/21 23:29:39 vapier Exp $
 
 EAPI=2
 
 GCONF_DEBUG=no
 
-inherit autotools gnome2 mono
+inherit autotools gnome2 mono eutils
 
 DESCRIPTION="Elegantly tag and rename mp3/ogg/flac files"
 HOMEPAGE="http://more-cowbell.org"
