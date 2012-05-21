@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7i.ebuild,v 1.4 2012/04/05 21:09:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7i.ebuild,v 1.5 2012/05/21 19:10:55 xarthisius Exp $
 
 EAPI="4"
-inherit autotools
+inherit autotools eutils
 
 UPSTREAM_PATCHES=""
 
