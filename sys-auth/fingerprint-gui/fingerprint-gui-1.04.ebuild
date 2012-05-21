@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.1 2012/05/21 01:56:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.2 2012/05/21 14:32:58 mr_bones_ Exp $
 
 EAPI=4
 
@@ -51,7 +51,7 @@ src_install() {
 		#fperms 0775 /var/upek_data
 	fi
 
-	dodoc CHANGELOG README 
+	dodoc CHANGELOG README
 	dohtml doc/*
 }
 
