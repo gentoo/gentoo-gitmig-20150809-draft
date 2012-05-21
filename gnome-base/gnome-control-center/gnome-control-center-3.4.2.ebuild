@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.4.2.ebuild,v 1.1 2012/05/19 22:12:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.4.2.ebuild,v 1.2 2012/05/21 14:32:03 mr_bones_ Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -61,7 +61,7 @@ COMMON_DEPEND="
 		>=gnome-extra/nm-applet-0.9.1.90
 		>=net-misc/networkmanager-0.8.997 )
 	socialweb? ( net-libs/libsocialweb )
-	systemd? ( >=sys-apps/systemd-31 ) 
+	systemd? ( >=sys-apps/systemd-31 )
 	wacom? ( >=dev-libs/libwacom-0.3
 		x11-libs/libXi )"
 # <gnome-color-manager-3.1.2 has file collisions with g-c-c-3.1.x
