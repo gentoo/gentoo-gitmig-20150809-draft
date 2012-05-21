@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.68 2012/05/06 12:24:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.69 2012/05/21 18:44:21 tetromino Exp $
+
+  21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gobject-introspection-1.30.0-r1.ebuild,
+  gobject-introspection-1.30.0-r2.ebuild:
+  Need eutils for epatch.
 
   06 May 2012; Fabian Groffen <grobian@gentoo.org>
   gobject-introspection-1.32.1.ebuild:

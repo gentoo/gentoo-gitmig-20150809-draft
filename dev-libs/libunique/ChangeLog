@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.58 2012/05/04 18:35:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.59 2012/05/21 18:46:59 tetromino Exp $
+
+  21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libunique-1.1.6-r1.ebuild:
+  Need eutils for epatch.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libunique-1.1.6.ebuild,
   libunique-1.1.6-r1.ebuild, libunique-3.0.2.ebuild:

@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.1.6-r1.ebuild,v 1.8 2012/05/04 18:35:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.1.6-r1.ebuild,v 1.9 2012/05/21 18:46:59 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="bz2"
 
-inherit gnome2 virtualx
+inherit eutils gnome2 virtualx
 
 DESCRIPTION="a library for writing single instance application"
 HOMEPAGE="http://live.gnome.org/LibUnique"
