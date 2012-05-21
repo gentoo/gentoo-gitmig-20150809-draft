@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.537_pre02.ebuild,v 1.1 2012/05/21 14:34:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.537_pre02.ebuild,v 1.2 2012/05/21 14:36:58 ssuominen Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ MODULE_VERSION=${PV/pre}
 inherit perl-module
 
 DESCRIPTION="Simple DirectMedia Layer (SDL) bindings for perl"
-HOMEPAGE="http://sdl.perl.org/"
+HOMEPAGE="http://sdl.perl.org/ http://search.cpan.org/dist/SDL/ http://github.com/PerlGameDev/SDL"
 
 LICENSE="GPL-2 OFL-1.1"
 SLOT="0"
