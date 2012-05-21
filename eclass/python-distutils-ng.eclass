@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.22 2012/05/21 17:33:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.23 2012/05/21 18:10:33 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -200,6 +200,8 @@ _python-distutils-ng_default_distutils_install() {
 # Reinstall script installed already by setup.py. This works by first moving the
 # script to ${T} directory and later running python-distutils-ng_doscript on it.
 # script_file_path has to be a full path relative to ${D}.
+# Warning: this function can be run automatically by the eclass in src_install,
+# see python-distutils-ng_src_install and PYTHON_DISABLE_SCRIPT_REDOS variable.
 python-distutils-ng_redoscript() {
 	local sbn="$(basename "${1}")"
 	mkdir -p "${T}/_${sbn}/" || die "failed to create directory"
