@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.87 2012/05/20 14:52:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.88 2012/05/21 12:26:10 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  stellarium-0.11.2.ebuild:
+  x86 stable wrt bug #412663
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> stellarium-0.11.2-r1.ebuild:
   Stable for amd64, wrt bug #412663
