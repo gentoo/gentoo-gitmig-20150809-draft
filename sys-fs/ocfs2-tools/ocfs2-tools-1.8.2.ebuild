@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.8.2.ebuild,v 1.2 2012/05/05 15:33:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.8.2.ebuild,v 1.3 2012/05/21 19:28:56 xarthisius Exp $
 
 EAPI=4
 PYTHON_DEPEND="gtk? 2"
-inherit autotools python
+inherit autotools eutils python
 
 DESCRIPTION="Support programs for the Oracle Cluster Filesystem 2"
 HOMEPAGE="http://oss.oracle.com/projects/ocfs2-tools/"

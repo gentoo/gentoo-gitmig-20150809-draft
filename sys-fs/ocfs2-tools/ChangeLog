@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ocfs2-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ChangeLog,v 1.10 2012/05/05 15:33:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ChangeLog,v 1.11 2012/05/21 19:28:56 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> ocfs2-tools-1.8.2.ebuild:
+  Add missing inheritance of eutils.eclass
 
   05 May 2012; Alexey Shvetsov <alexxy@gentoo.org> ocfs2-tools-1.8.2.ebuild:
   [sys-fs/ocfs2-tools] Ohh git genearted snapshots may have different
