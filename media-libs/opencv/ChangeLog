@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.71 2012/05/06 20:05:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.72 2012/05/21 09:36:44 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> opencv-2.3.1a-r1.ebuild:
+  x86 stable wrt bug #409733
 
   06 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> -opencv-2.3.1a.ebuild,
   opencv-2.3.1a-r1.ebuild, opencv-2.3.1a-r20.ebuild,
