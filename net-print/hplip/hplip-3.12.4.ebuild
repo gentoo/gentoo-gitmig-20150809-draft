@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.7 2012/05/08 15:40:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.8 2012/05/21 17:27:50 billie Exp $
 
 EAPI=4
 
@@ -22,8 +22,6 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86"
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
 IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds -acl X"
-
-REQUIRED_USE="|| ( hpijs hpcups )"
 
 COMMON_DEPEND="
 	virtual/jpeg
@@ -83,6 +81,12 @@ pkg_setup() {
 	! use qt4 && ewarn "You need USE=qt4 for the hplip GUI."
 
 	use scanner && ! use X && ewarn "You need USE=X for the scanner GUI."
+
+	if ! use hpcups && ! use hpijs ; then
+		ewarn "Installing neither hpcups (USE=-hpcups) nor hpijs (USE=-hpijs) driver,"
+		ewarn "which is probably not what you want."
+		ewarn "You will almost certainly not be able to print."
+	fi
 
 	if use minimal ; then
 		ewarn "Installing driver portions only, make sure you know what you are doing."

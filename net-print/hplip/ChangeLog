@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.227 2012/05/08 15:40:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.228 2012/05/21 17:27:50 billie Exp $
+
+  21 May 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.2-r2.ebuild,
+  hplip-3.12.4.ebuild:
+  Remove REQUIRED_USE to fix big #416693. Thanks to T6n9naYMKJ@ymail.com.
 
   08 May 2012; Brent Baude <ranger@gentoo.org> hplip-3.12.4.ebuild:
   Marking hplip-3.12.4 ppc64 for bug 414161
