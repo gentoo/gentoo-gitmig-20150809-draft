@@ -10,21 +10,6 @@ match portage behaviour.
  pkgcore/ebuild/eapi-bash/exit-handling.lib |    2 +-
  2 files changed, 5 insertions(+), 1 deletions(-)
 
-diff --git a/NEWS b/NEWS
-index 268b79a..dace98a 100644
---- a/NEWS
-+++ b/NEWS
-@@ -5,6 +5,10 @@ See ChangeLog for full commit logs; this is summarized/major changes.
- 
- pkgcore trunk:
- 
-+* Gentoo's unpacker eclass is sensitive to the return code of
-+  assert; this is outside of pms rules, but we've matched portage
-+  behaviour to keep things working
-+
- * Fixed pinspect portageq envvar support.
- 
- * Added `pconfig world` for world file manipulation.
 diff --git a/pkgcore/ebuild/eapi-bash/exit-handling.lib b/pkgcore/ebuild/eapi-bash/exit-handling.lib
 index bf2fcdb..c02b2db 100644
 --- a/pkgcore/ebuild/eapi-bash/exit-handling.lib

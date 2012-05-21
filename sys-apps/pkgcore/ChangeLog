@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.153 2012/05/21 02:07:40 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.154 2012/05/21 02:09:19 ferringb Exp $
+
+  21 May 2012; Brian Harring <ferringb@gentoo.org>
+  files/pkgcore-0.7.7.8-ebuild-envs-assert.patch:
+  Tweak the last commit; drop NEWS from the patch since it won't apply cleanly.
 
 *pkgcore-0.7.7.8-r2 (21 May 2012)
 
