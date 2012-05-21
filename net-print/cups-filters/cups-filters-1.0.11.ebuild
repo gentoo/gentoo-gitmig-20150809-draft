@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.11.ebuild,v 1.1 2012/04/03 16:02:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.11.ebuild,v 1.2 2012/05/21 19:18:13 xarthisius Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Cups PDF filters"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"

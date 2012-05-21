@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.8.0-r1.ebuild,v 1.4 2010/08/01 20:23:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.8.0-r1.ebuild,v 1.5 2012/05/21 19:19:29 xarthisius Exp $
 
 EAPI="2"
 
-inherit autotools
+inherit autotools eutils
 
 MY_P="${P/_/}"
 DESCRIPTION="A library to get the ink level of your printer"
