@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.343 2012/05/16 15:22:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.344 2012/05/21 22:04:23 cardoe Exp $
+
+*nvidia-drivers-295.53 (21 May 2012)
+
+  21 May 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-290.10.ebuild,
+  nvidia-drivers-290.10-r2.ebuild, nvidia-drivers-295.20-r1.ebuild,
+  nvidia-drivers-295.40.ebuild, nvidia-drivers-295.49.ebuild,
+  +nvidia-drivers-295.53.ebuild:
+  Version bump to support Linux 3.4.x and fix missing depend on GTK+ when
+  installing nvidia-settings. bug #415795 and bug #414645
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org>
   nvidia-drivers-295.49.ebuild:
