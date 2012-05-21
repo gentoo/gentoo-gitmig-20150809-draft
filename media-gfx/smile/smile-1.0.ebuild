@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/smile-1.0.ebuild,v 1.5 2010/06/28 19:08:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/smile-1.0.ebuild,v 1.6 2012/05/21 20:08:32 ssuominen Exp $
 
 EAPI="2"
 LANGS="de en it pl pt ru"
 
-inherit qt4-r2
+inherit eutils qt4-r2
 
 DESCRIPTION="Slideshow Maker In Linux Environement"
 HOMEPAGE="http://smile.tuxfamily.org/"
