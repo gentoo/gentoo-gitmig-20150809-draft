@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-psb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-psb/ChangeLog,v 1.5 2011/03/31 18:55:17 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-psb/ChangeLog,v 1.6 2012/05/21 23:22:50 vapier Exp $
+
+  21 May 2012; Mike Frysinger <vapier@gentoo.org>
+  xf86-video-psb-0.31.0_p11.ebuild, xf86-video-psb-0.31.0_p14.ebuild,
+  xf86-video-psb-0.32.0_p1.ebuild:
+  Inherit eutils for epatch.
 
   31 Mar 2011; Jeroen Roovers <jer@gentoo.org> xf86-video-psb-0.32.0_p1.ebuild:
   emake should die() (bug #361301).
