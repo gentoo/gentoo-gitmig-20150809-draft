@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/ksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.53 2012/04/01 17:41:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.54 2012/05/21 15:08:31 darkside Exp $
+
+  21 May 2012; Jeremy Olexa <darkside@gentoo.org> ksh-93.20120229.ebuild,
+  +files/ksh-prefix.patch:
+  Import Gentoo Prefix modifications. offset patch, KEYWORDS, and build
+  argument. Signed off my maintainer
 
   01 Apr 2012; Mike Gilbert <floppym@gentoo.org> -ksh-93.20071105.ebuild:
   Drop old version.
