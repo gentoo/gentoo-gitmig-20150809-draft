@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r2.ebuild,v 1.4 2012/05/05 07:00:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r2.ebuild,v 1.5 2012/05/21 19:05:12 xarthisius Exp $
 
 EAPI=4
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A lightweight GTK image viewer forked from GQview"
 HOMEPAGE="http://geeqie.sourceforge.net/"
