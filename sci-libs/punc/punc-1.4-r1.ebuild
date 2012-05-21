@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4-r1.ebuild,v 1.5 2011/06/21 14:46:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4-r1.ebuild,v 1.6 2012/05/21 19:22:54 xarthisius Exp $
 
 EAPI="3"
 
-inherit autotools fortran-2 multilib
+inherit autotools eutils fortran-2 multilib
 
 DESCRIPTION="Portable Understructure for Numerical Computing"
 HOMEPAGE="http://fetk.org/codes/punc/index.html"
