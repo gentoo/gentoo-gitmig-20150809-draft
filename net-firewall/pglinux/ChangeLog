@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/pglinux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.3 2012/05/19 21:14:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.4 2012/05/21 15:10:29 hasufell Exp $
+
+  21 May 2012; Julian Ospald <hasufell@gentoo.org>
+  pglinux-2.1.3_p20120519.ebuild:
+  improve elog
 
 *pglinux-2.1.3_p20120519 (19 May 2012)
 

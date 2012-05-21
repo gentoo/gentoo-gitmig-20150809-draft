@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.1.3_p20120519.ebuild,v 1.1 2012/05/19 21:14:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.1.3_p20120519.ebuild,v 1.2 2012/05/21 15:10:29 hasufell Exp $
 
 EAPI=4
 
@@ -64,6 +64,14 @@ src_configure() {
 
 pkg_postinst() {
 	elog "optional dependencies:"
-	elog "  p7zip (needed for blocklists packed as .7z)"
-	elog "  unzip (needed for blocklists packed as .zip)"
+	elog "  app-arch/p7zip (needed for blocklists packed as .7z)"
+	elog "  app-arch/unzip (needed for blocklists packed as .zip)"
+	elog "  virtual/mta (needed to send informational (blocklist updates) and"
+	elog "    warning mails (if pglcmd.wd detects a problem.))"
+	if use qt4 ; then
+		elog "You need one of the following graphical su/sudo:"
+		elog "  x11-misc/ktsuss"
+		elog "  x11-libs/gksu"
+		elog "  kde-base/kdesu"
+	fi
 }
