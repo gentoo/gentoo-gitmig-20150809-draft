@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.34.ebuild,v 1.2 2012/05/21 22:52:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.34.ebuild,v 1.3 2012/05/21 23:03:14 cardoe Exp $
 
 EAPI="2"
 
@@ -24,15 +24,6 @@ RESTRICT="strip"
 EMULTILIB_PKG="true"
 
 COMMON="<x11-base/xorg-server-1.12.99
-	tools? (
-		dev-libs/atk
-		dev-libs/glib
-		x11-libs/gdk-pixbuf
-		x11-libs/gtk+:2
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/pango
-	)
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-opengl )
 	>=app-admin/eselect-opengl-1.0.9"

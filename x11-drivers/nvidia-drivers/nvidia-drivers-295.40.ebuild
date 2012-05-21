@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.40.ebuild,v 1.5 2012/05/21 22:04:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.40.ebuild,v 1.6 2012/05/21 23:03:14 cardoe Exp $
 
 EAPI="2"
 
@@ -33,7 +33,15 @@ DEPEND="${COMMON}
 RDEPEND="${COMMON}
 	x11-libs/libXvMC
 	acpi? ( sys-power/acpid )
-	gtk? ( x11-libs/gtk+ )"
+	gtk? (
+		dev-libs/atk
+		dev-libs/glib
+		x11-libs/gdk-pixbuf
+		x11-libs/gtk+:2
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/pango
+	)"
 PDEPEND=">=x11-libs/libvdpau-0.3-r1
 	gtk? ( media-video/nvidia-settings )"
 
