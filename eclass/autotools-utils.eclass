@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.48 2012/02/04 09:26:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.49 2012/05/21 17:34:53 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -341,7 +341,7 @@ autotools-utils_autoreconf() {
 	FROM_EAUTORECONF=sure eautomake
 
 	local x
-	for x in $(autotools_get_subdirs); do
+	for x in $(autotools_check_macro_val AC_CONFIG_SUBDIRS); do
 		if [[ -d ${x} ]] ; then
 			pushd "${x}" >/dev/null
 			autotools-utils_autoreconf
