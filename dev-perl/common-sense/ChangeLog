@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/common-sense
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/ChangeLog,v 1.22 2012/05/19 15:26:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/ChangeLog,v 1.23 2012/05/21 09:42:29 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  common-sense-3.500.0.ebuild:
+  x86 stable wrt bug #416289
 
   19 May 2012; Agostino Sarubbo <ago@gentoo.org> common-sense-3.500.0.ebuild:
   Stable for amd64, wrt bug #416289
