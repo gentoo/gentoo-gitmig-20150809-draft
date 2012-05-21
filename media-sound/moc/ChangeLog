@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.99 2012/05/05 08:39:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.100 2012/05/21 04:40:03 ssuominen Exp $
+
+*moc-2.5.0_alpha4_p20120501-r1 (21 May 2012)
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +moc-2.5.0_alpha4_p20120501-r1.ebuild,
+  +files/moc-libresid-builder.so_not_la.patch:
+  Search for libresid-builder.so instead of libresid-builder.la during
+  ./configure wrt #416619 by Stefan Borschtel
 
   05 May 2012; Michał Górny <mgorny@gentoo.org>
   moc-2.5.0_alpha4_p20111211.ebuild, moc-2.5.0_alpha4_p20120501.ebuild:
