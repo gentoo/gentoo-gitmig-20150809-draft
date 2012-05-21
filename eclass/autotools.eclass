@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.138 2012/05/20 13:01:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.139 2012/05/21 17:40:44 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -162,11 +162,34 @@ eautoreconf() {
 	local m4dirs=$(autotools_check_macro_val AC_CONFIG_{AUX,MACRO}_DIR)
 	[[ -n ${m4dirs} ]] && mkdir -p ${m4dirs}
 
+	# Run all the tools before aclocal so we can gather the .m4 files.
+	local i tools=(
+		# <tool> <was run> <command>
+		gettext false "eautopoint --force"
+		libtool false "_elibtoolize --install --copy --force"
+	)
+	for (( i = 0; i < ${#tools[@]}; i += 3 )) ; do
+		if _at_uses_${tools[i]} ; then
+			tools[i+1]=true
+			${tools[i+2]}
+		fi
+	done
+
+	# Generate aclocal.m4 with our up-to-date m4 files.
+	local rerun_aclocal=false
 	eaclocal
-	if grep -q '^AM_GNU_GETTEXT_VERSION' configure.?? ; then
-		eautopoint --force
-	fi
-	_elibtoolize --install --copy --force
+
+	# Check to see if we had macros expanded by other macros or in other
+	# m4 files that we couldn't detect early.  This is uncommon, but some
+	# packages do this, so we have to handle it correctly.
+	for (( i = 0; i < ${#tools[@]}; i += 3 )) ; do
+		if ! ${tools[i+1]} && _at_uses_${tools[i]} ; then
+			${tools[i+2]}
+			rerun_aclocal=true
+		fi
+	done
+	${rerun_aclocal} && eaclocal
+
 	eautoconf
 	eautoheader
 	[[ ${AT_NOEAUTOMAKE} != "yes" ]] && FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
@@ -179,6 +202,28 @@ eautoreconf() {
 
 	return 0
 }
+
+# @FUNCTION: _at_uses_pkg
+# @USAGE: <macros>
+# @INTERNAL
+# See if the specified macros are enabled.
+_at_uses_pkg() {
+	if [[ -e aclocal.m4 ]] ; then
+		# If aclocal.m4 exists, trust the trace data.
+		[[ -n $(autotools_check_macro "${@}") ]]
+	else
+		# If aclocal.m4 hasn't been generated yet, cheat, but be conservative.
+		local macro args=()
+		for macro ; do
+			args+=( -e "^[[:space:]]*${macro}\>" )
+		done
+		egrep -q "${args[@]}" configure.??
+	fi
+}
+_at_uses_gettext()    { _at_uses_pkg AM_GNU_GETTEXT_VERSION; }
+_at_uses_autoheader() { _at_uses_pkg AC_CONFIG_HEADERS; }
+_at_uses_automake()   { _at_uses_pkg AM_INIT_AUTOMAKE; }
+_at_uses_libtool()    { _at_uses_pkg A{C,M}_PROG_LIBTOOL LT_INIT; }
 
 # @FUNCTION: eaclocal_amflags
 # @DESCRIPTION:
@@ -227,10 +272,6 @@ eaclocal() {
 #
 # Note the '_' prefix .. to not collide with elibtoolize() from libtool.eclass.
 _elibtoolize() {
-	# Check if we should run libtoolize (AM_PROG_LIBTOOL is an older macro,
-	# check for both it and the current AC_PROG_LIBTOOL)
-	[[ -n $(autotools_check_macro AC_PROG_LIBTOOL AM_PROG_LIBTOOL LT_INIT) ]] || return 0
-
 	local LIBTOOLIZE=${LIBTOOLIZE:-libtoolize}
 	type -P glibtoolize && LIBTOOLIZE=glibtoolize
 
@@ -240,17 +281,13 @@ _elibtoolize() {
 	fi
 
 	autotools_run_tool ${LIBTOOLIZE} "$@" ${opts}
-
-	# Need to rerun aclocal
-	eaclocal
 }
 
 # @FUNCTION: eautoheader
 # @DESCRIPTION:
 # Runs autoheader.
 eautoheader() {
-	# Check if we should run autoheader
-	[[ -n $(autotools_check_macro "AC_CONFIG_HEADERS") ]] || return 0
+	_at_uses_autoheader || return 0
 	autotools_run_tool --at-no-fail --at-m4flags autoheader "$@"
 }
 
@@ -283,7 +320,7 @@ eautomake() {
 	done
 
 	if [[ -z ${makefile_name} ]] ; then
-		[[ -n $(autotools_check_macro AM_INIT_AUTOMAKE) ]] || return 0
+		_at_uses_automake || return 0
 
 	elif [[ -z ${FROM_EAUTORECONF} && -f ${makefile_name%.am}.in ]]; then
 		local used_automake
@@ -422,6 +459,7 @@ ALL_AUTOTOOLS_MACROS=(
 	AC_CONFIG_SUBDIRS
 	AC_CONFIG_AUX_DIR AC_CONFIG_MACRO_DIR
 	AM_INIT_AUTOMAKE
+	AM_GNU_GETTEXT_VERSION
 )
 autotools_check_macro() {
 	[[ -f configure.ac || -f configure.in ]] || return 0
