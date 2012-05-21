@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r200.ebuild,v 1.1 2012/05/21 17:02:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r200.ebuild,v 1.2 2012/05/21 17:05:41 ssuominen Exp $
+
+# git clone git://git.gnome.org/yelp
+# cd yelp
+# git checkout webkit
+# git merge origin/gnome-2-30
 
 EAPI=4
 GCONF_DEBUG=yes
