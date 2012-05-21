@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.10.0.ebuild,v 1.5 2012/05/19 09:08:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.10.0.ebuild,v 1.6 2012/05/21 21:59:58 radhermit Exp $
 
 EAPI=4
 
@@ -78,6 +78,7 @@ src_install() {
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINKFLAGS="${LDFLAGS}" \
 	LIBPATH="/usr/$(get_libdir)" escons install \
 		prefix=/usr \
+		qtdir=/usr/$(get_libdir)/qt4 \
 		install_root="${D}"/usr
 
 	dodoc README Mixxx-Manual.pdf
