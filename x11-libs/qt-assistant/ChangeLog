@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.134 2012/05/20 13:04:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.135 2012/05/21 19:54:06 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  qt-assistant-4.6.3.ebuild, qt-assistant-4.7.4.ebuild,
+  qt-assistant-4.8.1-r1.ebuild:
+  inherit eutils for make_desktop_entry
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> qt-assistant-4.8.1-r1.ebuild:
   Stable for x86, wrt bug #414241

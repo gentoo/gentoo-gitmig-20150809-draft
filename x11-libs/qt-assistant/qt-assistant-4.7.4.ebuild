@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.4.ebuild,v 1.6 2012/04/12 23:47:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.7.4.ebuild,v 1.7 2012/05/21 19:54:06 ssuominen Exp $
 
 EAPI="3"
-inherit qt4-build
+inherit eutils qt4-build
 
 DESCRIPTION="The assistant help module for the Qt toolkit"
 SRC_URI+="

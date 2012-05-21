@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.4-r1.ebuild,v 1.10 2012/04/03 21:46:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.4-r1.ebuild,v 1.11 2012/05/21 19:53:24 ssuominen Exp $
 
 EAPI="3"
-inherit confutils qt4-build
+inherit eutils confutils qt4-build
 
 DESCRIPTION="The GUI module for the Qt toolkit"
 SLOT="4"
