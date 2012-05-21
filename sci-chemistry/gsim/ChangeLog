@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gsim
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/ChangeLog,v 1.4 2011/08/31 14:28:51 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/ChangeLog,v 1.5 2012/05/21 15:08:27 jlec Exp $
+
+  21 May 2012; Justin Lecher <jlec@gentoo.org> gsim-0.19.1.ebuild,
+  gsim-0.20.1.ebuild:
+  Add missing dep, move to EAPI=4
 
 *gsim-0.20.1 (31 Aug 2011)
 
