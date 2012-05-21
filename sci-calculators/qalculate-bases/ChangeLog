@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-bases
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.18 2012/05/04 06:52:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/ChangeLog,v 1.19 2012/05/21 23:20:35 vapier Exp $
+
+  21 May 2012; Mike Frysinger <vapier@gentoo.org>
+  qalculate-bases-0.9.4-r2.ebuild:
+  Inherit eutils for epatch.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   qalculate-bases-0.9.4-r2.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/qalculate-bases-0.9.4-r2.ebuild,v 1.6 2012/05/04 06:52:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/qalculate-bases-0.9.4-r2.ebuild,v 1.7 2012/05/21 23:20:35 vapier Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A GTK+ base conversion tool"
 HOMEPAGE="http://qalculate.sourceforge.net/"
