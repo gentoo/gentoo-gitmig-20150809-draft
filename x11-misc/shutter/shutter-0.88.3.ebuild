@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.88.3.ebuild,v 1.1 2012/05/04 23:47:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.88.3.ebuild,v 1.2 2012/05/21 19:02:38 hwoarang Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/gnome2-gconf
 	drawing? ( dev-perl/Goo-Canvas  )
 	webphoto? ( gnome-extra/gnome-web-photo )
-	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
+	|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
 	dev-perl/libxml-perl
 	dev-perl/gnome2-wnck
 	dev-perl/gnome2-canvas
@@ -29,6 +29,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/File-DesktopEntry
 	dev-perl/File-HomeDir
 	dev-perl/File-Which
+	dev-perl/JSON
 	dev-perl/File-Copy-Recursive
 	dev-perl/File-MimeInfo
 	dev-perl/Locale-gettext
@@ -66,4 +67,6 @@ src_install() {
 	doins -r share/icons/hicolor/* || die "doins failed"
 	find "${D}"/usr/share/shutter/resources/system/plugins/ -type f ! -name '*.*' -exec chmod 755 {} \; \
 		|| die "failed to make plugins executables"
+	find "${D}"/usr/share/shutter/resources/system/upload_plugins/upload -type f \
+		-name "*.pm" -exec chmod 755 {} \; || die "failed to make upload plugins executables"
 }
