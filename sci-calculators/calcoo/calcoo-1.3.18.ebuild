@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/calcoo-1.3.18.ebuild,v 1.8 2012/05/04 06:52:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/calcoo-1.3.18.ebuild,v 1.9 2012/05/21 20:00:22 ssuominen Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=yes
 
-inherit autotools-utils
+inherit eutils autotools-utils
 
 DESCRIPTION="Scientific calculator designed to provide maximum usability"
 HOMEPAGE="http://calcoo.sourceforge.net/"
