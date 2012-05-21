@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.96 2012/04/05 13:38:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.97 2012/05/21 19:24:08 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> maxima-5.18.1.ebuild,
+  maxima-5.23.2.ebuild, maxima-5.24.0-r1.ebuild, maxima-5.25.1.ebuild,
+  maxima-5.26.0.ebuild, maxima-5.27.0.ebuild:
+  Add missing inheritance of eutils.eclass
 
 *maxima-5.27.0 (05 Apr 2012)
 
