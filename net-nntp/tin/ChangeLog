@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/tin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.33 2012/05/15 16:16:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.34 2012/05/21 10:03:55 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tin-2.0.0.ebuild:
+  x86 stable wrt bug #416105
 
 *tin-2.0.1 (15 May 2012)
 
