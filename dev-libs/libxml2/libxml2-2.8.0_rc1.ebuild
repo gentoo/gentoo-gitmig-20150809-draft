@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0_rc1.ebuild,v 1.1 2012/05/21 02:24:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0_rc1.ebuild,v 1.2 2012/05/21 13:48:33 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -108,7 +108,6 @@ src_configure() {
 		$(use_with readline history)
 		$(use_enable ipv6)
 		$(use_enable static-libs static) )
-	use python && myconf=( "${myconf[@]}" "PYTHON=$(PYTHON -2 -a)" )
 
 	# filter seemingly problematic CFLAGS (#26320)
 	filter-flags -fprefetch-loop-arrays -funroll-loops
