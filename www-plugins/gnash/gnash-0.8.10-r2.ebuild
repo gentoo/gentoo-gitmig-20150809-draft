@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r2.ebuild,v 1.6 2012/05/16 11:35:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10-r2.ebuild,v 1.7 2012/05/21 06:08:19 ssuominen Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -106,12 +106,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	gnome? ( app-text/rarian )
-	nsplugin? (
-		|| (
-			net-misc/npapi-sdk
-			>=net-libs/xulrunner-1.9.2:1.9
-		)
-	)
+	nsplugin? ( net-misc/npapi-sdk )
 	test? ( dev-util/dejagnu )"
 # Tests hang with sandbox, bug #321017
 RESTRICT="test"
