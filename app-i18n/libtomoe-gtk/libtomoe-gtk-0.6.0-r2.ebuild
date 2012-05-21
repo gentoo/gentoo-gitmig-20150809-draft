@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0-r2.ebuild,v 1.3 2012/05/03 19:24:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0-r2.ebuild,v 1.4 2012/05/21 18:36:58 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
 
-inherit autotools python
+inherit autotools eutils python
 
 MY_P="tomoe-gtk-${PV}"
 DESCRIPTION="Tomoe GTK+ interface widget library"
