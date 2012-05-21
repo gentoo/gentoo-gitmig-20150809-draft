@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.7.ebuild,v 1.8 2012/05/04 06:52:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.7.ebuild,v 1.9 2012/05/21 06:41:53 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 GCONF_DEBUG=no
 inherit eutils gnome2
 
@@ -15,14 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 ~hppa ppc sparc x86"
 IUSE="gnome"
 
-RDEPEND="
-	>=sci-libs/libqalculate-0.9.7
+RDEPEND=">=sci-libs/libqalculate-0.9.7
 	>=sci-libs/cln-1.2
 	x11-libs/gtk+:2
 	gnome-base/libglade:2.0
-	gnome? (
-		>=gnome-base/libgnome-2
-		gnome-extra/yelp )"
+	gnome? ( >=gnome-base/libgnome-2 )"
 DEPEND="${RDEPEND}
 	app-text/rarian
 	sys-devel/gettext
@@ -31,12 +28,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	G2CONF="--disable-dependency-tracking
-		$(use_with gnome libgnome)"
+	G2CONF="$(use_with gnome libgnome)"
 }
 
 src_prepare() {
-	# Required by make check
+	# Required by src_test() and `make check`
 	echo data/periodictable.glade > po/POTFILES.skip
 	epatch "${FILESDIR}"/${P}-entry.patch
 	gnome2_src_prepare
