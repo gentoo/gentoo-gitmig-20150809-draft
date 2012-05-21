@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.100 2012/05/18 08:43:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.101 2012/05/21 17:26:23 ranger Exp $
+
+  21 May 2012; Brent Baude <ranger@gentoo.org> socat-1.7.2.1.ebuild:
+  Marking socat-1.7.2.1 ppc for bug 415977
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> socat-1.7.2.1.ebuild:
   marked x86 per bug 415977
