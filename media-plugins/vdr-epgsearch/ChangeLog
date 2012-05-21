@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-epgsearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.55 2012/05/20 17:18:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/ChangeLog,v 1.56 2012/05/21 19:59:13 idl0r Exp $
+
+  21 May 2012; Christian Ruppert <idl0r@gentoo.org>
+  vdr-epgsearch-1.0.0-r1.ebuild:
+  Remove broken sysmlinks. Install german manpages (conditional)
 
 *vdr-epgsearch-1.0.0-r1 (20 May 2012)
 

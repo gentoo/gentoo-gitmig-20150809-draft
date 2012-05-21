@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0-r1.ebuild,v 1.1 2012/05/20 17:18:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0-r1.ebuild,v 1.2 2012/05/21 19:59:13 idl0r Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ esac
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pcre tre"
+IUSE="pcre tre linguas_de"
 
 DEPEND=">=media-video/vdr-1.3.45
 	pcre? ( dev-libs/libpcre )
@@ -57,6 +57,9 @@ src_prepare() {
 
 	# install conf-file disabled
 	sed -e '/^Menu/s:^:#:' -i conf/epgsearchmenu.conf
+
+	# Get a rid of the broken symlinks
+	rm -f README{,.DE} MANUAL
 }
 
 src_install() {
@@ -72,6 +75,10 @@ src_install() {
 	dodoc conf/*.templ
 
 	doman man/en/*.gz
+
+	if use linguas_de; then
+		doman man/de/*.gz
+	fi
 }
 
 pkg_preinst() {
