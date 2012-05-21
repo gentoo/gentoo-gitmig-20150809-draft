@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.12.3.ebuild,v 1.1 2012/04/13 13:03:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.12.3.ebuild,v 1.2 2012/05/21 21:10:21 jdhore Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI="http://github.com/emesene/emesene/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 LGPL-3 )"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="jabber"
 
 RDEPEND="dev-python/pygtk:2
