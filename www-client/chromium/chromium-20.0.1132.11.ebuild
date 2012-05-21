@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1132.3.ebuild,v 1.2 2012/05/15 06:44:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1132.11.ebuild,v 1.1 2012/05/21 14:09:22 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -112,12 +112,14 @@ src_prepare() {
 	# Backport upstream fix for Gentoo bug #415601.
 	epatch "${FILESDIR}/${PN}-unistd-r0.patch"
 
+	# Fix build without tcmalloc. To be upstreamed.
+	epatch "${FILESDIR}/${PN}-tcmalloc-r0.patch"
+
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
-		\! -path 'third_party/adobe/*' \
 		\! -path 'third_party/angle/*' \
 		\! -path 'third_party/cacheinvalidation/*' \
 		\! -path 'third_party/cld/*' \
@@ -129,7 +131,6 @@ src_prepare() {
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jsoncpp/*' \
-		\! -path 'third_party/json_minify/*' \
 		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/leveldatabase/*' \
@@ -138,6 +139,7 @@ src_prepare() {
 		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libusb/*' \
 		\! -path 'third_party/libvpx/*' \
+		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libyuv/*' \
 		\! -path 'third_party/lss/*' \
 		\! -path 'third_party/mesa/*' \
@@ -153,7 +155,6 @@ src_prepare() {
 		\! -path 'third_party/smhasher/*' \
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
-		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/v8-i18n/*' \
@@ -188,6 +189,14 @@ src_configure() {
 	# Never tell the build system to "enable" SSE2, it has a few unexpected
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
+
+	# Disable tcmalloc, it causes problems with e.g. NVIDIA
+	# drivers, bug #413637.
+	myconf+=" -Dlinux_use_tcmalloc=0"
+
+	# Make it possible to remove third_party/adobe.
+	echo > "${T}/flapper_version.h" || die
+	myconf+=" -Dflapper_version_h_file=${T}/flapper_version.h"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
@@ -388,6 +397,7 @@ src_install() {
 	local mime_types="text/html;text/xml;application/xhtml+xml;"
 	mime_types+="x-scheme-handler/http;x-scheme-handler/https;" # bug #360797
 	mime_types+="x-scheme-handler/ftp;" # bug #412185
+	mime_types+="x-scheme-handler/mailto;x-scheme-handler/webcal;" # bug #416393
 	make_desktop_entry \
 		chromium-browser${CHROMIUM_SUFFIX} \
 		"Chromium${CHROMIUM_SUFFIX}" \
