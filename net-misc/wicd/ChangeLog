@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.121 2012/05/17 10:23:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.122 2012/05/21 07:23:52 tomka Exp $
+
+*wicd-1.7.2.4-r1 (21 May 2012)
+
+  21 May 2012; Thomas Kahle <tomka@gentoo.org>
+  +files/wicd-1.7.2.4-fix-dbus-error.patch, +wicd-1.7.2.4-r1.ebuild:
+  -r1 bump to fix bug 416579
 
 *wicd-1.7.2.4 (17 May 2012)
 
