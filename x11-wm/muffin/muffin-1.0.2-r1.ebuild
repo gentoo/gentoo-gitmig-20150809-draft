@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.2-r1.ebuild,v 1.2 2012/05/04 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.2-r1.ebuild,v 1.3 2012/05/21 19:12:07 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Compositing window manager forked from Mutter for use with Cinnamon"
 HOMEPAGE="http://cinnamon.linuxmint.com/"

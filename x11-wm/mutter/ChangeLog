@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.9 2012/05/14 00:02:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.10 2012/05/21 19:13:18 tetromino Exp $
+
+  21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> mutter-3.2.2.ebuild,
+  mutter-3.2.2-r1.ebuild, mutter-3.4.1-r1.ebuild:
+  Need eutils for epatch.
 
 *mutter-3.4.1-r1 (14 May 2012)
 
