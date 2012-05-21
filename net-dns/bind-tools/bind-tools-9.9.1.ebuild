@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.0.ebuild,v 1.3 2012/05/17 15:59:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.1.ebuild,v 1.1 2012/05/21 23:45:13 idl0r Exp $
 
 EAPI="4"
 
