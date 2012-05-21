@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/librouteros
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librouteros/ChangeLog,v 1.3 2012/05/14 15:57:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librouteros/ChangeLog,v 1.4 2012/05/21 10:06:46 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  librouteros-1.1.2.ebuild:
+  x86 stable wrt bug #415563
 
   14 May 2012; Agostino Sarubbo <ago@gentoo.org> librouteros-1.1.2.ebuild:
   Stable for amd64, wrt bug #415563
