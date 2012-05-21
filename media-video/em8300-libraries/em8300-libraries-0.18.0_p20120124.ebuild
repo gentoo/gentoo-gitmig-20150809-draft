@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.18.0_p20120124.ebuild,v 1.3 2012/05/05 08:58:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/em8300-libraries-0.18.0_p20120124.ebuild,v 1.4 2012/05/21 09:49:46 phajdan.jr Exp $
 
 EAPI=2
 inherit autotools
@@ -14,7 +14,7 @@ SRC_URI="http://vdr.websitec.de/download/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="gtk modules"
 
 COMMON_DEPEND="gtk? ( x11-libs/gtk+:2 )"
