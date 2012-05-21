@@ -1,6 +1,14 @@
 # ChangeLog for games-engines/love
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.5 2012/04/20 22:56:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.6 2012/05/21 21:30:55 chithanh Exp $
+
+*love-0.7.2-r1 (21 May 2012)
+
+  21 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +love-0.7.2-r1.ebuild, -love-0.7.2.ebuild, love-0.8.0.ebuild,
+  love-9999.ebuild:
+  Allow slotting as suggested by Tobias Leupold in bug #416703. Implementation
+  by hasufell.
 
 *love-0.8.0 (20 Apr 2012)
 

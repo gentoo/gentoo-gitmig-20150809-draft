@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-9999.ebuild,v 1.4 2012/04/20 22:56:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-9999.ebuild,v 1.5 2012/05/21 21:30:55 chithanh Exp $
 
 EAPI=3
 
-inherit games
+inherit base games
 
 if [[ ${PV} == 9999* ]]; then
 	inherit autotools mercurial
@@ -44,5 +44,13 @@ src_prepare() {
 		sh platform/unix/gen-makefile || die
 		mkdir platform/unix/m4 || die
 		eautoreconf
+	fi
+}
+
+src_install() {
+	base_src_install
+	if [[ "${SLOT}" != "0" ]]; then
+		mv "${ED}${GAMES_BINDIR}"/${PN} \
+			"${ED}${GAMES_BINDIR}"/${PN}-${SLOT} || die
 	fi
 }
