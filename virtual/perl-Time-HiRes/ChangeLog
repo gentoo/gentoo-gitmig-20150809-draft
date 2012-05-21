@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Time-HiRes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.75 2012/03/07 22:01:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.76 2012/05/21 11:50:36 tove Exp $
+
+*perl-Time-HiRes-1.972.500-r1 (21 May 2012)
+
+  21 May 2012; Torsten Veller <tove@gentoo.org>
+  -perl-Time-HiRes-1.972.500.ebuild, +perl-Time-HiRes-1.972.500-r1.ebuild:
+  Add perl-5.16 as provider
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org>
   perl-Time-HiRes-1.972.200.ebuild:

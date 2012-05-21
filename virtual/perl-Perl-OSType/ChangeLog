@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Perl-OSType
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Perl-OSType/ChangeLog,v 1.18 2012/05/15 19:09:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Perl-OSType/ChangeLog,v 1.19 2012/05/21 11:50:37 tove Exp $
+
+*perl-Perl-OSType-1.2.0-r1 (21 May 2012)
+
+  21 May 2012; Torsten Veller <tove@gentoo.org> -perl-Perl-OSType-1.2.0.ebuild,
+  +perl-Perl-OSType-1.2.0-r1.ebuild:
+  Add perl-5.16 as provider
 
   15 May 2012; Mark Loeser <halcy0n@gentoo.org> perl-Perl-OSType-1.2.0.ebuild:
   Stable for ppc64; bug #393397
