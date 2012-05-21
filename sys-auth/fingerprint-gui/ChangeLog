@@ -1,0 +1,11 @@
+# ChangeLog for sys-auth/fingerprint-gui
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/ChangeLog,v 1.1 2012/05/21 01:56:30 xmw Exp $
+
+*fingerprint-gui-1.04 (21 May 2012)
+
+  21 May 2012; Michael Weber <xmw@gentoo.org> +fingerprint-gui-1.04.ebuild,
+  +metadata.xml:
+  Initial import (bug 341105, big thanks to Jan Buecken, Jason Lamb, Oliver
+  Deppert)
+
