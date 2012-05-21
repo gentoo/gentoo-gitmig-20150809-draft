@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.2.1.ebuild,v 1.4 2012/05/05 05:38:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.2.1.ebuild,v 1.5 2012/05/21 05:38:48 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -134,6 +134,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.2.1-optional-networkmanager.patch"
 
 	eautoreconf
+	intltoolize --automake --copy --force || die #416789
 	gnome2_src_prepare
 
 	# Drop G_DISABLE_DEPRECATED for sanity on glib upgrades; bug #384765
