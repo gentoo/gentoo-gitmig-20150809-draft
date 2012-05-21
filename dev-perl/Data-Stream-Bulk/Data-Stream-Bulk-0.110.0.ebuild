@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stream-Bulk/Data-Stream-Bulk-0.11.ebuild,v 1.1 2012/05/20 04:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stream-Bulk/Data-Stream-Bulk-0.110.0.ebuild,v 1.1 2012/05/21 03:17:42 tove Exp $
 
 EAPI=4
 
@@ -20,7 +20,6 @@ RDEPEND="dev-perl/Moose
 	dev-perl/namespace-clean"
 DEPEND=">=virtual/perl-ExtUtils-MakeMaker-6.31
 	test? ( ${RDEPEND}
-		dev-perl/Test-use-ok
 		dev-perl/Test-Requires
 	)
 "
