@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.185 2012/05/21 11:53:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.186 2012/05/21 12:27:44 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libquicktime-1.2.4.ebuild:
+  x86 stable wrt bug #416221
 
   21 May 2012; Jeroen Roovers <jer@gentoo.org> libquicktime-1.2.4.ebuild:
   Stable for HPPA (bug #416221).
