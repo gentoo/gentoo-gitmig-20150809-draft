@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.25 2012/03/23 10:55:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.26 2012/05/21 18:45:07 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> ctdb-1.0.88.ebuild:
+  Add missing inheritance of eutils.eclass
 
 *ctdb-1.13 (23 Mar 2012)
 
