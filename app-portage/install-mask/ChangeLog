@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/install-mask
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.5 2012/02/10 00:00:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.6 2012/05/21 17:20:01 mgorny Exp $
+
+  21 May 2012; Michał Górny <mgorny@gentoo.org> files/location-db.xml:
+  Update systemd mask location.
 
   09 Feb 2012; Matt Turner <mattst88@gentoo.org> install-mask-0.0.2.ebuild:
   Added ~mips, bug 393181.
