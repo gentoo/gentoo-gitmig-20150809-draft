@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/icclib/icclib-2.13.ebuild,v 1.1 2012/05/20 19:48:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/icclib/icclib-2.13.ebuild,v 1.2 2012/05/21 14:32:30 mr_bones_ Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ src_install() {
 	mv -v libicc.so libicc.so.${ICCLIB_SOVERSION}
 	dolib.so libicc.so.${ICCLIB_SOVERSION}
 	dosym libicc.so.${ICCLIB_SOVERSION} /usr/$(get_libdir)/libicc.so
-	dobin iccdump	
+	dobin iccdump
 	dodoc Readme.txt todo.txt log.txt
 
 	insinto /usr/include
