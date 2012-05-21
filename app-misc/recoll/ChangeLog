@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/recoll
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.5 2012/05/07 00:13:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.6 2012/05/21 09:32:25 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> recoll-1.16.2.ebuild:
+  x86 stable wrt bug #414823
 
   07 May 2012; Markos Chandras <hwoarang@gentoo.org> recoll-1.16.2.ebuild:
   Stable on amd64 wrt bug #414823
