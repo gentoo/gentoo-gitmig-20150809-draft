@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-2.2.1.ebuild,v 1.2 2012/05/18 08:08:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-2.2.1.ebuild,v 1.3 2012/05/21 12:24:16 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://github.com/downloads/facebook/tornado/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/pycurl
