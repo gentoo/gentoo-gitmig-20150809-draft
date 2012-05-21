@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/geant-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/ChangeLog,v 1.2 2012/05/20 17:06:17 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/ChangeLog,v 1.3 2012/05/21 04:49:12 heroxbd Exp $
+
+  21 May 2012; Benda Xu <heroxbd@gentoo.org>
+  +files/geant-python-4.9.5-vis-fix.patch, files/geant-python-4.9.5-build.patch,
+  files/geant-python-4.9.5-visverbose.patch, geant-python-4.9.5.ebuild,
+  geant-python-4.9.5_p01.ebuild, metadata.xml:
+  fix VisManager c++ signature mismatch, upstream http://bugzilla-
+  geant4.kek.jp/show_bug.cgi?id=1318
 
   20 May 2012; Benda Xu <heroxbd@gentoo.org> +geant-python-4.9.5.ebuild
   geant-python-4.9.5_p01.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/geant-python-4.9.5.ebuild,v 1.1 2012/05/20 16:48:17 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/geant-python-4.9.5.ebuild,v 1.2 2012/05/21 04:49:12 heroxbd Exp $
 
 EAPI=4
 
@@ -27,8 +27,8 @@ src_prepare() {
 	# DISTDIR and python path patch
 	epatch "${FILESDIR}"/${PN}-4.9.5-build.patch
 
-	# set to the highest verbose for visManager
-	epatch "${FILESDIR}"/${PN}-4.9.5-visverbose.patch
+	# fix the visManager wrapper
+	epatch "${FILESDIR}"/${PN}-4.9.5-vis-fix.patch
 
 	# let Geant4 module installed into python sitedir instead of default
 	sed -i "/G4PY_LIBDIR  :=/cG4PY_LIBDIR  := $\(DESTDIR\)$(python_get_sitedir)/Geant4" \
