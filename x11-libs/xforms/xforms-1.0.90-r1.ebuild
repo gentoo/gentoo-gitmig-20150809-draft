@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90-r1.ebuild,v 1.16 2011/02/26 22:40:48 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90-r1.ebuild,v 1.17 2012/05/21 18:12:18 xarthisius Exp $
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A graphical user interface toolkit for X"
 HOMEPAGE="http://www.nongnu.org/xforms/"
