@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.49 2012/05/18 08:06:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.50 2012/05/21 09:30:02 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fcgi-2.4.1_pre0910052249.ebuild:
+  x86 stable wrt bug #415433
 
   18 May 2012; Agostino Sarubbo <ago@gentoo.org>
   fcgi-2.4.1_pre0910052249.ebuild:
