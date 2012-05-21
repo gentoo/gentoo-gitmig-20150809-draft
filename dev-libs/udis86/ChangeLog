@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/udis86
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.11 2010/11/11 17:30:39 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.12 2012/05/21 18:50:49 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> udis86-1.7.ebuild:
+  Add missing inheritance of eutils.eclass
 
   11 Nov 2010; Markos Chandras <hwoarang@gentoo.org> udis86-1.7.ebuild:
   Stable on amd64 wrt bug #336371
