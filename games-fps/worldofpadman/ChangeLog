@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/worldofpadman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/ChangeLog,v 1.11 2012/05/21 10:14:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/ChangeLog,v 1.12 2012/05/21 20:08:47 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> worldofpadman-1.6.ebuild:
+  inherit eutils for make_desktop_entry
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   worldofpadman-1.6.ebuild:

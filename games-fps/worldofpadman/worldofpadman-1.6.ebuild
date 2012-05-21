@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.6.ebuild,v 1.3 2012/05/21 10:14:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.6.ebuild,v 1.4 2012/05/21 20:08:47 ssuominen Exp $
 
 EAPI=3
 
-inherit base games
+inherit eutils base games
 
 DESCRIPTION="A cartoon style multiplayer first-person shooter"
 HOMEPAGE="http://worldofpadman.com/"
