@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-2.5.8_p20120415.ebuild,v 1.3 2012/05/07 21:42:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-2.5.9.ebuild,v 1.1 2012/05/21 23:22:12 hasufell Exp $
 
 EAPI=4
 
 DESCRIPTION="A command line utility for viewing youtube-videos in Mplayer"
 HOMEPAGE="http://trizen.googlecode.com"
-SRC_URI="mirror://github/hasufell/tinkerbox/${P}.xz
-	http://dev.gentoo.org/~floppym/distfiles/${P}.xz"
+SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -18,8 +17,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/libwww-perl
 	dev-perl/XML-Fast
 	|| ( media-video/mplayer[X,network]
-		media-video/mplayer2[X,network] )
-	virtual/perl-Scalar-List-Utils"
+		media-video/mplayer2[X,network] )"
 
 S=${WORKDIR}
 
