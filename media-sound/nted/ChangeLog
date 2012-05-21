@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/nted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.26 2012/05/21 06:16:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.27 2012/05/21 06:33:24 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> nted-1.10.18.ebuild:
+  Remove || ( ) from LICENSE field because they are all required. Missing glib,
+  freetype, gdk-pixbuf, libX11, pango and gettext dependencies. Punt
+  unnecessary doman from src_install() and whole function as a result. Missing
+  debug in IUSE. Trick ./configure to believe gnome-extra/yelp is installed so
+  we can avoid pulling in vulnerable copy of net-libs/xulrunner wrt #416843.
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org> -nted-1.10.7-r1.ebuild:
   old
