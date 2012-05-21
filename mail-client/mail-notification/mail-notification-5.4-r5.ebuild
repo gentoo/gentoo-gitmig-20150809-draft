@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r5.ebuild,v 1.3 2012/05/04 08:42:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r5.ebuild,v 1.4 2012/05/21 23:35:20 vapier Exp $
 
 EAPI="3"
 
-inherit gnome2 multilib flag-o-matic toolchain-funcs
+inherit gnome2 multilib flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="A GNOME trayicon which checks for email, with support for many online and offline mailbox formats."
 HOMEPAGE="http://www.nongnu.org/mailnotify/"
@@ -13,7 +13,6 @@ SRC_URI="http://savannah.nongnu.org/download/mailnotify/${P}.tar.bz2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-linux"
 SLOT="0"
 LICENSE="GPL-3"
-
 IUSE="evo gmail imap ipv6 maildir mbox mh mozilla pop sasl ssl sylpheed"
 
 # gmime is actually optional, but it's used by so much of the package
@@ -46,8 +45,7 @@ DEPEND="${RDEPEND}
 # instead of autotools, this is a little helper function that basically does
 # the same thing as use_enable
 use_var() {
-	echo -n "${2:-$1}="
-	use "${1}" && echo "yes" || echo "no"
+	echo "${2:-$1}=$(usex $1)"
 }
 
 src_prepare() {
@@ -79,6 +77,7 @@ src_prepare() {
 }
 
 src_configure() {
+	set -- \
 	./jb configure destdir="${D}" prefix="${EPREFIX}/usr" libdir="${EPREFIX}/usr/$(get_libdir)" \
 		sysconfdir="${EPREFIX}/etc" localstatedir="${EPREFIX}/var" cc="$(tc-getCC)" \
 		cflags="${CFLAGS}" cppflags="${CXXFLAGS}" ldflags="${LDFLAGS}" \
@@ -94,7 +93,9 @@ src_configure() {
 		$(use_var pop pop3) \
 		$(use_var sasl) \
 		$(use_var ssl) \
-		$(use_var sylpheed) || die
+		$(use_var sylpheed)
+	echo "$@"
+	"$@" || die
 }
 
 src_compile() {
