@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemon_controller/daemon_controller-0.2.6.ebuild,v 1.5 2012/05/07 09:00:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemon_controller/daemon_controller-0.2.6.ebuild,v 1.6 2012/05/21 10:02:23 phajdan.jr Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -17,7 +17,7 @@ HOMEPAGE="http://github.com/FooBarWidget/daemon_controller"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 ruby_add_bdepend "test? ( dev-ruby/rspec:0 ) "
