@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.147 2012/05/16 02:35:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.148 2012/05/21 18:59:34 jer Exp $
+
+  21 May 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=test for app-text/asciidoc (bug #416961). Fix some earlier entry
+  dates.
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Remove USE=doc mask for net-misc/dibbler.
