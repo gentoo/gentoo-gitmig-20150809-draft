@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/plcedit-2.2.1.ebuild,v 1.3 2012/04/07 05:52:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/plcedit-2.2.1.ebuild,v 1.4 2012/05/21 20:02:12 ssuominen Exp $
 
 EAPI="2"
 
-inherit versionator qt4-r2
+inherit eutils versionator qt4-r2
 MY_PN="PLCEdit"
 
 DESCRIPTION="Qt4 notepad for PLC programming"
