@@ -19,6 +19,8 @@
 		<flag name="huge">Choose big cache size (excludes small or big)</flag>
 		<flag name="dtls">Enable datagram TLS</flag>
 		<flag name="httpd">Enable features for yaSSL web server</flag>
+		<flag name="ocsp">Enable Online Certificate Status Protocol</flag>
+		<flag name="crl">Enable Certificate Revocation List</flag>
 		<flag name="sessioncerts">Store session certificates</flag>
 		<flag name="sniffer">Allow collection/decryption of SSL traffic</flag>
 		<flag name="sniffer">Allow collection/decryption of SSL traffic</flag>
