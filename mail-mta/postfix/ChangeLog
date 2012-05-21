@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.358 2012/05/08 15:54:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.359 2012/05/21 09:07:22 eras Exp $
+
+  21 May 2012; Eray Aslan <eras@gentoo.org> postfix-2.8.7.ebuild,
+  postfix-2.8.8.ebuild, postfix-2.8.9.ebuild, postfix-2.8.10.ebuild,
+  postfix-2.9.0.ebuild, postfix-2.9.0-r1.ebuild, postfix-2.9.1.ebuild,
+  postfix-2.9.1-r1.ebuild, postfix-2.9.1-r2.ebuild, postfix-2.9.2.ebuild,
+  postfix-2.10_pre20120426.ebuild:
+  Fix broken symlink - bug #416849
 
   08 May 2012; Brent Baude <ranger@gentoo.org> postfix-2.8.9.ebuild:
   Marking postfix-2.8.9 ppc64 for bug 413503

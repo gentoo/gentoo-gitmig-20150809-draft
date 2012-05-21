@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.2.ebuild,v 1.1 2012/04/25 13:49:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.2.ebuild,v 1.2 2012/05/21 09:07:22 eras Exp $
 
 EAPI=4
 
@@ -242,7 +242,7 @@ src_install () {
 	mv "${S}"/examples "${D}"/usr/share/doc/${PF}/
 	mv "${D}"/etc/postfix/{*.default,makedefs.out} "${D}"/usr/share/doc/${PF}/
 
-	dodoc *README COMPATIBILITY HISTORY INSTALL PORTING RELEASE_NOTES*
+	dodoc *README COMPATIBILITY HISTORY PORTING RELEASE_NOTES*
 
 	pamd_mimic_system smtp auth account
 
