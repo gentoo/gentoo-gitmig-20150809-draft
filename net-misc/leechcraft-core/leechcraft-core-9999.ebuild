@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-9999.ebuild,v 1.4 2012/04/14 18:40:08 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-9999.ebuild,v 1.5 2012/05/21 20:06:04 ssuominen Exp $
 
 EAPI="4"
 
 EGIT_REPO_URI="git://github.com/0xd34df00d/leechcraft.git"
 EGIT_PROJECT="leechcraft-${PV}"
 
-inherit confutils leechcraft
+inherit eutils confutils leechcraft
 
 DESCRIPTION="Core of LeechCraft, the modular network client"
 

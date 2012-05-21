@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/x2goclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.8 2012/03/15 12:10:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.9 2012/05/21 20:03:23 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  x2goclient-3.0.1.18.ebuild:
+  inherit eutils for make_desktop_entry
 
   15 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org>
   x2goclient-3.0.1.18.ebuild, +files/x2goclient-3.0.1.18-cups1.5.patch:

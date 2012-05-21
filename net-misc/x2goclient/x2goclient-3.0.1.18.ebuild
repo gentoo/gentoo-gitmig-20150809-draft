@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.0.1.18.ebuild,v 1.2 2012/03/15 12:10:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.0.1.18.ebuild,v 1.3 2012/05/21 20:03:23 ssuominen Exp $
 
 EAPI=4
-inherit qt4-r2
+inherit eutils qt4-r2
 
 DESCRIPTION="The X2Go Qt client"
 HOMEPAGE="http://www.x2go.org"
