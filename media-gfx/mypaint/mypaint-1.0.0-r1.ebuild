@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.0.0-r1.ebuild,v 1.5 2012/05/05 07:00:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-1.0.0-r1.ebuild,v 1.6 2012/05/21 19:36:18 hwoarang Exp $
 
 EAPI=4
 
@@ -16,6 +16,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+LANGS="cs de en_CA es fr hu id it ja ko nb nn_NO pl pt_BR ru sl sv uk zh_CN zh_TW"
+for x in ${LANGS}; do
+	IUSE+="linguas_${x} "
+done
 
 RDEPEND="dev-python/pygtk
 	dev-python/numpy
@@ -47,6 +52,11 @@ src_compile() {
 src_install () {
 	escons prefix="${D}/usr" install || die "scons install failed"
 	newicon pixmaps/${PN}_logo.png ${PN}.png
+	for x in ${LANGS}; do
+		if ! has ${x} ${LINGUAS}; then
+			find "${D}"/usr/share/locale/${x} -name "mypaint.mo" -exec rm {} \;
+		fi
+	done
 }
 
 pkg_preinst() {
