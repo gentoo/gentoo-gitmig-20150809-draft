@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.2-r7.ebuild,v 1.3 2012/04/15 18:25:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.2-r7.ebuild,v 1.4 2012/05/21 06:07:16 ssuominen Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="4"
@@ -21,9 +21,7 @@ RDEPEND="dev-java/icedtea:${SLOT}"
 # Need system junit 4.8+. Bug #389795
 DEPEND="${RDEPEND}
 	javascript? ( dev-java/rhino:1.6 )
-	nsplugin? (
-		|| ( net-misc/npapi-sdk
-			>=net-libs/xulrunner-1.9.1 ) )
+	nsplugin? ( net-misc/npapi-sdk )
 	test? (	>=dev-java/junit-4.8:4 )"
 
 pkg_setup() {
