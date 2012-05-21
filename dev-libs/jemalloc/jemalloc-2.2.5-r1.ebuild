@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.5-r1.ebuild,v 1.1 2012/02/26 04:05:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.5-r1.ebuild,v 1.2 2012/05/21 18:59:31 xarthisius Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Jemalloc is a general-purpose scalable concurrent allocator"
 HOMEPAGE="http://www.canonware.com/jemalloc/"

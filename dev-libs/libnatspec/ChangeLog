@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnatspec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/ChangeLog,v 1.12 2012/04/26 16:34:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/ChangeLog,v 1.13 2012/05/21 18:58:26 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> libnatspec-0.2.6.ebuild:
+  Add missing inheritance of eutils.eclass
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libnatspec-0.2.6.ebuild:
   keyword ~amd64-fbsd

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.13 2012/04/26 11:49:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.14 2012/05/21 18:59:31 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> jemalloc-2.2.5-r1.ebuild,
+  jemalloc-2.2.5.ebuild:
+  Add missing inheritance of eutils.eclass
 
   26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> jemalloc-2.2.5.ebuild:
   Stable on ppc wrt bug#411449.
