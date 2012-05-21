@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.4 2012/05/13 16:34:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.5 2012/05/21 23:20:06 vapier Exp $
 
 EAPI=2
 
-inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs
+inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs eutils
 
 DESCRIPTION="FreeBSD's base system libraries"
 SLOT="0"
