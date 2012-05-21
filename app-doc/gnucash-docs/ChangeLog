@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/gnucash-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.16 2012/03/25 14:50:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/ChangeLog,v 1.17 2012/05/21 07:14:48 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gnucash-docs-2.2.0.ebuild, gnucash-docs-2.4.1.ebuild:
+  Synchronize ebuild for 2.2.0 with 2.4.1; convert forced gnome-extra/yelp
+  runtime dependency to message in pkg_postinst(). This will avoid pulling in
+  vulnerable copy of net-libs/xulrunner wrt #416843.
 
   05 Mar 2012; Brent Baude <ranger@gentoo.org> gnucash-docs-2.4.1.ebuild:
   Marking gnucash-docs-2.4.1 ppc stable for bug 393007

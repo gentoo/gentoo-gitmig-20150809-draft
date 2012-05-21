@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/gnucash-docs-2.4.1.ebuild,v 1.8 2012/03/25 14:50:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/gnucash-docs-2.4.1.ebuild,v 1.9 2012/05/21 07:14:48 ssuominen Exp $
 
-EAPI="4"
+EAPI=4
 GCONF_DEBUG=no
 
 inherit gnome2
@@ -17,20 +17,18 @@ KEYWORDS="amd64 ppc ~ppc64 x86"
 
 IUSE=""
 
-RDEPEND="gnome-extra/yelp
-	!<=app-office/gnucash-2.2.1"
+RDEPEND="!<=app-office/gnucash-2.2.1"
 
 DEPEND="${RDEPEND}
-	>=dev-libs/libxml2-2.5.10:2
+	>=dev-libs/libxml2-2.5.10
 	dev-libs/libxslt
-	>=app-text/scrollkeeper-0.3.4
 	app-text/docbook-xsl-stylesheets
-	app-text/docbook-xml-dtd:4.1.2"
+	app-text/docbook-xml-dtd:4.1.2
+	app-text/rarian"
 
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	if ! has_version "dev-java/fop"; then
-		elog "You need dev-java/fop to generate pdf files."
-	fi
+	has_version dev-java/fop || elog "You need dev-java/fop to generate pdf files."
+	has_version gnome-extra/yelp || elog "You need gnome-extra/yelp to view the docs."
 }
