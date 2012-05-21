@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.9.ebuild,v 1.3 2012/02/19 17:04:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.9.ebuild,v 1.4 2012/05/21 19:24:17 xarthisius Exp $
 
 EAPI=4
-inherit elisp-common bash-completion-r1 autotools
+inherit elisp-common bash-completion-r1 autotools eutils
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"

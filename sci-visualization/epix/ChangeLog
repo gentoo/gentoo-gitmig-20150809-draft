@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.41 2012/04/25 15:26:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.42 2012/05/21 19:24:17 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> epix-1.2.10.ebuild,
+  epix-1.2.6.ebuild, epix-1.2.9.ebuild:
+  Add missing inheritance of eutils.eclass
 
 *epix-1.2.10 (25 Apr 2012)
 
