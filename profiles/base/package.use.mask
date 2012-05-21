@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.352 2012/05/21 05:25:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.353 2012/05/21 12:51:35 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -82,10 +82,6 @@ net-im/bitlbee skype
 # Samuli Suominen <ssuominen@gentoo.org> (20 Mar 2012)
 # This is for udev-acl. Unmasked in default/linux/package.use.mask.
 sys-auth/consolekit acl
-
-# Samuli Suominen <ssuominen@gentoo.org> (12 Mar 2012)
-# Waiting for media-sound/lilypond to stabilize.
-app-text/asciidoc test
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (25 Feb 2012)
 # directfb build issues, bug #405817.
