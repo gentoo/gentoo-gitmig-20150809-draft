@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.282 2012/05/06 08:58:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.283 2012/05/21 12:21:50 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ati-drivers-12.4.ebuild:
+  x86 stable wrt bug #414609
 
   06 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused use-local desc.
