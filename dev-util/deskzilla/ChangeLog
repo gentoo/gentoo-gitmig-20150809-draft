@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/deskzilla
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.14 2009/10/18 18:06:25 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.15 2012/05/21 20:04:51 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> deskzilla-1.6.1.ebuild,
+  deskzilla-1.7.1.ebuild:
+  inherit eutils for make_desktop_entry
 
 *deskzilla-1.7.1 (18 Oct 2009)
 
