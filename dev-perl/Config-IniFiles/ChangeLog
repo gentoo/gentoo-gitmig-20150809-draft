@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Config-IniFiles
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.62 2012/05/14 17:35:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.63 2012/05/21 17:29:23 ranger Exp $
+
+  21 May 2012; Brent Baude <ranger@gentoo.org> Config-IniFiles-2.710.0.ebuild:
+  Marking Config-IniFiles-2.710.0 ppc for bug 414485
 
 *Config-IniFiles-2.730.0 (14 May 2012)
 
