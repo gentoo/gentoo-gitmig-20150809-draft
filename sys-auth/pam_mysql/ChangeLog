@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.21 2012/03/03 23:16:32 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.22 2012/05/21 23:25:46 vapier Exp $
+
+  21 May 2012; Mike Frysinger <vapier@gentoo.org> pam_mysql-0.7_rc1-r3.ebuild,
+  pam_mysql-0.7_rc1-r4.ebuild:
+  Inherit eutils for epatch.
 
   03 Mar 2012; Tobias Klausmann <klausman@gentoo.org>
   pam_mysql-0.7_rc1-r4.ebuild:
