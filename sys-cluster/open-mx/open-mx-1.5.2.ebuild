@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/open-mx-1.5.2.ebuild,v 1.1 2012/04/29 12:39:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/open-mx/open-mx-1.5.2.ebuild,v 1.2 2012/05/21 19:28:55 xarthisius Exp $
 
 EAPI=4
 
-inherit autotools linux-mod multilib
+inherit autotools eutils linux-mod multilib
 
 DESCRIPTION="Open-MX - Myrinet Express over Generic Ethernet Hardware"
 HOMEPAGE="http://open-mx.gforge.inria.fr/"

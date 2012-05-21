@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpi-dotnet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.8 2011/05/02 14:51:21 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.9 2012/05/21 19:27:50 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> mpi-dotnet-1.0.0.ebuild:
+  Add missing inheritance of eutils.eclass
 
   02 May 2011; Mark Loeser <halcy0n@gentoo.org> mpi-dotnet-1.0.0.ebuild:
   ROOT is already prepended when using insinto
