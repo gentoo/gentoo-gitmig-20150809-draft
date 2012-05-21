@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.12.3.ebuild,v 1.1 2012/05/21 18:54:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.12.3.ebuild,v 1.2 2012/05/21 20:38:54 hwoarang Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -15,6 +15,13 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+LANGS="ar ast bg bn ca cs da de el en_GB es et eu fi fr gl he hi hr hu ia id it ja kk
+ko lt lv mk nb nl pa pl pt pt_BR ro ru sk sl sr sv ta te ta_IN te_IN th tr uk vi zh_CN zh_TW"
+
+for x in ${LANGS}; do
+	IUSE+="linguas_${x} "
+done
 
 RDEPEND="
 	>=dev-db/sqlite-3.5.9:3
@@ -59,4 +66,13 @@ src_prepare() {
 
 src_compile() {
 	emake VALAC="$(type -p valac-0.16)"
+}
+
+src_install() {
+	gnome2_src_install
+	for x in ${LANGS}; do
+		if ! has ${x} ${LINGUAS}; then
+			find "${D}"/usr/share/locale/${x} -type f -exec rm {} \;
+		fi
+	done
 }
