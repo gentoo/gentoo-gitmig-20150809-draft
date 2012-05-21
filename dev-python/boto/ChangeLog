@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.45 2012/05/21 18:11:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.46 2012/05/21 18:22:40 vapier Exp $
+
+*boto-2.4.1 (21 May 2012)
+
+  21 May 2012; Mike Frysinger <vapier@gentoo.org> +boto-2.4.1.ebuild:
+  Version bump #416811 by Johan Bergström.
 
   21 May 2012; Jeff Horelick <jdhore@gentoo.org> boto-2.3.0.ebuild:
   marked x86 per bug 416861
