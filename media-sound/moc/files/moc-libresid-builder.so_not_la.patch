@@ -1,6 +1,7 @@
 There is absolutely no point in using libtool files of libresid-builder, or even expect them to be present.
 
 http://bugs.gentoo.org/416619
+http://moc.daper.net/node/832
 
 --- decoder_plugins/sidplay2/sidplay2.m4
 +++ decoder_plugins/sidplay2/sidplay2.m4
