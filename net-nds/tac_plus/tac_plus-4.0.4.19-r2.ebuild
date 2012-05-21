@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.19-r2.ebuild,v 1.1 2011/06/16 16:00:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.19-r2.ebuild,v 1.2 2012/05/21 19:19:28 xarthisius Exp $
 
 EAPI=4
 
-inherit libtool autotools
+inherit libtool autotools eutils
 
 MY_P="tacacs+-F${PV}"
 S="${WORKDIR}/${MY_P}"
