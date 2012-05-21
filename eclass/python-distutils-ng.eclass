@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.20 2012/05/14 19:23:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.21 2012/05/21 17:30:35 nelchael Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -373,5 +373,11 @@ python-distutils-ng_src_install() {
 		pushd "${S}" &> /dev/null
 		python_install_all
 		popd &> /dev/null
+	fi
+
+	if [[ -z "${PYTHON_DISABLE_SCRIPT_REDOS}" ]]; then
+		for script_file in $(find "${D}"{,usr/}{,s}bin/ -type f -executable 2> /dev/null); do
+			python-distutils-ng_redoscript "/${script_file#${D}}"
+		done
 	fi
 }
