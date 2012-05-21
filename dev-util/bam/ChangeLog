@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/ChangeLog,v 1.6 2012/05/05 11:41:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/ChangeLog,v 1.7 2012/05/21 12:23:12 phajdan.jr Exp $
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bam-0.4.0.ebuild:
+  x86 stable wrt bug #412577
 
   05 May 2012; Markos Chandras <hwoarang@gentoo.org> bam-0.4.0.ebuild:
   Stable on amd64 wrt bug #412577
