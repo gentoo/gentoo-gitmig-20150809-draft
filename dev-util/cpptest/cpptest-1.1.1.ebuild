@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/cpptest-1.1.1.ebuild,v 1.5 2012/01/15 15:24:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/cpptest-1.1.1.ebuild,v 1.6 2012/05/21 19:03:45 xarthisius Exp $
 
 EAPI=2
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Simple but powerful unit testing framework for C++"
 HOMEPAGE="http://cpptest.sourceforge.net/"
