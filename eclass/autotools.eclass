@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.140 2012/05/21 17:53:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.141 2012/05/21 18:13:10 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -225,7 +225,7 @@ _at_uses_pkg() {
 _at_uses_autoheader() { _at_uses_pkg AC_CONFIG_HEADERS; }
 _at_uses_automake()   { _at_uses_pkg AM_INIT_AUTOMAKE; }
 _at_uses_gettext()    { _at_uses_pkg AM_GNU_GETTEXT_VERSION; }
-_at_uses_intltool()   { _at_uses_pkg IT_PROG_INTLTOOL; }
+_at_uses_intltool()   { _at_uses_pkg {AC,IT}_PROG_INTLTOOL; }
 _at_uses_libtool()    { _at_uses_pkg A{C,M}_PROG_LIBTOOL LT_INIT; }
 
 # @FUNCTION: eaclocal_amflags
@@ -463,7 +463,7 @@ ALL_AUTOTOOLS_MACROS=(
 	AC_CONFIG_AUX_DIR AC_CONFIG_MACRO_DIR
 	AM_INIT_AUTOMAKE
 	AM_GNU_GETTEXT_VERSION
-	IT_PROG_INTLTOOL
+	{AC,IT}_PROG_INTLTOOL
 )
 autotools_check_macro() {
 	[[ -f configure.ac || -f configure.in ]] || return 0
