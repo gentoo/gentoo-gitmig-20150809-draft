@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/frostwire
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.10 2010/08/31 20:10:19 sochotnicky Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.11 2012/05/21 19:35:57 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  frostwire-4.13.5-r1.ebuild, frostwire-4.20.9.ebuild:
+  inherit eutils for make_desktop_entry
 
   31 Aug 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   frostwire-4.20.9.ebuild:

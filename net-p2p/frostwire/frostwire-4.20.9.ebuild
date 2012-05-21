@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.20.9.ebuild,v 1.2 2010/08/31 20:10:19 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/frostwire-4.20.9.ebuild,v 1.3 2012/05/21 19:35:57 ssuominen Exp $
 
 EAPI=2
 
-inherit java-pkg-2
+inherit eutils java-pkg-2
 
 DESCRIPTION="Frostwire Java Gnutella client"
 HOMEPAGE="http://www.frostwire.com"
