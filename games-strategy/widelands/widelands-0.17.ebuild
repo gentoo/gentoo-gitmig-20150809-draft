@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.2 2012/05/16 14:50:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.3 2012/05/21 19:23:02 mr_bones_ Exp $
 
 EAPI=3
-inherit versionator cmake-utils games
+inherit eutils versionator cmake-utils games
 
 MY_PV=build$(get_version_component_range 2)
 MY_P=${PN}-${MY_PV}-src
