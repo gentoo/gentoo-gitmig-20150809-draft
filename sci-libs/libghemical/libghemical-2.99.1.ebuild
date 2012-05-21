@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.99.1.ebuild,v 1.5 2012/05/04 08:22:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.99.1.ebuild,v 1.6 2012/05/21 23:25:19 vapier Exp $
 
 EAPI="3"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Chemical quantum mechanics and molecular mechanics"
 HOMEPAGE="http://bioinformatics.org/ghemical/"
