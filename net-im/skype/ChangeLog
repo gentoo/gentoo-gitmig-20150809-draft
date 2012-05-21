@@ -1,6 +1,10 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.123 2012/05/21 12:08:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.124 2012/05/21 12:09:09 ssuominen Exp $
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> -skype-2.2.0.25.ebuild,
+  -skype-2.2.0.35-r1.ebuild:
+  old
 
 *skype-2.2.0.35-r99 (21 May 2012)
 
