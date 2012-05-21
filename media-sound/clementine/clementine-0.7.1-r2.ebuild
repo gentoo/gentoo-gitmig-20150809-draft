@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.1-r2.ebuild,v 1.7 2012/05/05 08:16:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.1-r2.ebuild,v 1.8 2012/05/21 09:33:40 ssuominen Exp $
 
 EAPI=4
 
@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="ayatana +dbus ios ipod lastfm mtp projectm +udev wiimote"
 IUSE+="${LANGS// / linguas_}"
+
+RESTRICT="test" #415477
 
 REQUIRED_USE="
 	ios? ( ipod )
