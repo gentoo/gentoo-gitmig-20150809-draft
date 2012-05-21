@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20090305.ebuild,v 1.5 2011/11/10 19:20:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20090305.ebuild,v 1.6 2012/05/21 18:46:24 xarthisius Exp $
 
 EAPI=4
-inherit autotools mono
+inherit autotools eutils mono
 
 MY_P=${PN}-${PV#*_pre}
 

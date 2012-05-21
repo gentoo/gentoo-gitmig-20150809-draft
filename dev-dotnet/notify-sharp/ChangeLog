@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/notify-sharp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.17 2012/01/22 11:13:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.18 2012/05/21 18:46:24 xarthisius Exp $
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  notify-sharp-0.4.0_pre20090305.ebuild:
+  Add missing inheritance of eutils.eclass
 
   22 Jan 2012; Pacho Ramos <pacho@gentoo.org>
   -notify-sharp-0.4.0_pre20080912-r1.ebuild:
