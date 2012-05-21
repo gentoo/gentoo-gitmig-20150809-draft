@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.3 2012/02/15 17:46:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.4 2012/05/21 06:19:22 jlec Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ SRC_URI="http://launchpad.net/zeitgeist-datasources/${DIR_PV}/${DIR_PV2}/+downlo
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-3"
-PLUGINS_IUSE="bzr chromium eog geany gedit vim emacs tomboy telepathy xchat rhythmbox firefox totem"
+#PLUGINS_IUSE="bzr chromium eog geany gedit vim emacs tomboy telepathy xchat rhythmbox firefox totem"
+PLUGINS_IUSE="bzr chromium eog geany gedit vim emacs tomboy telepathy xchat rhythmbox totem"
 IUSE="${PLUGINS_IUSE} static-libs"
 
 RDEPEND="
@@ -42,10 +43,10 @@ RDEPEND="
 		dev-python/pygobject )
 	xchat? ( net-irc/xchat-gnome )
 	rhythmbox? ( media-sound/rhythmbox[zeitgeist] )
-	firefox? (
-		|| ( >=www-client/firefox-4.0 >=www-client/firefox-bin-4.0 )
-		net-libs/xulrunner )
 	totem? ( media-video/totem[zeitgeist] )"
+#	firefox? (
+#		|| ( >=www-client/firefox-4.0 >=www-client/firefox-bin-4.0 )
+#		net-libs/xulrunner )
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.14"
 PDEPEND="gnome-extra/zeitgeist"
