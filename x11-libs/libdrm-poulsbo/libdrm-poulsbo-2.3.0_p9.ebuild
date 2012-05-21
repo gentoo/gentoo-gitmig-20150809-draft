@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm-poulsbo/libdrm-poulsbo-2.3.0_p9.ebuild,v 1.2 2009/09/28 19:39:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm-poulsbo/libdrm-poulsbo-2.3.0_p9.ebuild,v 1.3 2012/05/21 23:22:20 vapier Exp $
 
 EAPI="2"
 
 WANT_AUTOMAKE="1.9"
 
-inherit rpm autotools
+inherit rpm autotools eutils
 
 DESCRIPTION="libdrm for the intel gma500 (poulsbo)"
 HOMEPAGE="http://www.happyassassin.net/2009/05/13/native-poulsbo-gma-500-graphics-driver-for-fedora-10/"
