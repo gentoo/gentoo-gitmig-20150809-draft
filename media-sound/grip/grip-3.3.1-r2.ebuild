@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r2.ebuild,v 1.12 2012/05/05 08:27:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r2.ebuild,v 1.13 2012/05/21 06:14:25 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs libtool
@@ -22,8 +22,8 @@ RDEPEND=">=x11-libs/gtk+-2.2:2
 	>=gnome-base/libgnomeui-2.2.0
 	>=gnome-base/orbit-2
 	net-misc/curl
-	gnome-extra/yelp
 	vorbis? ( media-sound/vorbis-tools )"
+# gnome-extra/yelp, see bug 416843
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
