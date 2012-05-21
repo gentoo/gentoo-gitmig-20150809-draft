@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.2.4.ebuild,v 1.2 2012/04/30 09:55:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.2.4.ebuild,v 1.3 2012/05/21 10:05:04 phajdan.jr Exp $
 
 EAPI=4
 LANGS="cs de es fr zh"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/opengl
