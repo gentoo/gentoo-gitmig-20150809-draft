@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.14 2012/05/22 16:36:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.15 2012/05/22 18:05:34 flameeyes Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ IUSE="a52 aac aalib +alsa altivec bluray +css directfb dts dvb dxr3 fbcon flac f
 RDEPEND="dev-libs/libxdg-basedir
 	media-libs/libdvdnav
 	sys-libs/zlib
-	|| ( media-video/ffmpeg media-libs/libpostproc )
+	|| ( media-libs/libpostproc <media-video/libav-0.8.2-r1 media-video/ffmpeg )
 	virtual/ffmpeg
 	virtual/libiconv
 	virtual/libintl
