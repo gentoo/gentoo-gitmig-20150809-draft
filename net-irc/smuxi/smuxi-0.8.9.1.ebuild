@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.9.1.ebuild,v 1.3 2012/05/03 06:27:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.9.1.ebuild,v 1.4 2012/05/22 12:22:08 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.smuxi.org/main/"
 SRC_URI="http://www.smuxi.org/jaws/data/files/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="dbus debug gnome libnotify"
 LICENSE="|| ( GPL-2 GPL-3 )"
 
