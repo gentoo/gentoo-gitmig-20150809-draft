@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.10.2-r1.ebuild,v 1.2 2012/04/09 14:43:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.10.2-r1.ebuild,v 1.3 2012/05/22 12:17:37 ago Exp $
 
 EAPI="4"
 inherit go-mono mono
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mono-project.com/ASP.NET"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
 
