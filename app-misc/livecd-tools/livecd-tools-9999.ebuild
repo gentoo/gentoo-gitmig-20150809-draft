@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.9 2011/10/25 03:05:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.10 2012/05/22 22:31:54 williamh Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 RDEPEND="dev-util/dialog
+	net-dialup/mingetty
 	>=sys-apps/baselayout-2
 	>=sys-apps/openrc-0.8.2-r1
 	sys-apps/pciutils
