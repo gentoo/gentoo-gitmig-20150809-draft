@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-1.2.ebuild,v 1.3 2012/05/05 08:58:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-1.2.ebuild,v 1.4 2012/05/22 12:21:29 ago Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/gnome-subtitles/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND=">=dev-lang/mono-1.1
 	>=dev-dotnet/glade-sharp-2.12
