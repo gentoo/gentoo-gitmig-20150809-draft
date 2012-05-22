@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.11.ebuild,v 1.4 2012/05/05 03:20:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.11.ebuild,v 1.5 2012/05/22 16:12:45 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -43,7 +43,7 @@ RDEPEND="pulseaudio? ( !gstreamer? ( media-sound/pulseaudio ) )
 		policykit? (
 			sys-apps/acl
 			>=sys-auth/polkit-0.101 )
-		>=dev-libs/libusb-1.0.9_rc1
+		virtual/libusb:1
 		>=sys-apps/usbredir-0.4.2
 		sys-fs/udev[gudev] )"
 DEPEND="${RDEPEND}

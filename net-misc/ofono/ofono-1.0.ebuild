@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.0.ebuild,v 1.5 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.0.ebuild,v 1.6 2012/05/22 16:11:36 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND=">=sys-apps/dbus-1.2.24
 	caps? ( sys-libs/libcap-ng )
 	udev? ( >=sys-fs/udev-143 )
 	examples? ( dev-python/dbus-python )
-	tools? ( dev-libs/libusb:1 )"
+	tools? ( virtual/libusb:1 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.3.4.ebuild,v 1.3 2012/05/05 03:20:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.3.4.ebuild,v 1.4 2012/05/22 16:10:09 ssuominen Exp $
 
 EAPI="4"
 
@@ -34,7 +34,7 @@ DEPEND="
 		sys-fs/udev
 	)
 	ztex? (
-		dev-libs/libusb:1
+		virtual/libusb:1
 	)
 "
 RDEPEND="${DEPEND}"
