@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.94 2012/05/22 20:29:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.95 2012/05/22 20:33:37 ulm Exp $
+
+  22 May 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.1.9999.ebuild:
+  Directory src/m is gone.
 
   22 May 2012; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-24.0.94.ebuild,
   -emacs-vcs-24.0.95.ebuild, emacs-vcs-24.0.97.ebuild,

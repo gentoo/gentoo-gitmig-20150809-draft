@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999.ebuild,v 1.5 2012/05/22 20:29:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999.ebuild,v 1.6 2012/05/22 20:33:37 ulm Exp $
 
 EAPI=4
 
@@ -273,8 +273,8 @@ src_install () {
 		# This is not meant to install all the source -- just the
 		# C source you might find via find-function
 		doins src/*.{c,h,m}
-		doins -r src/{m,s}
-		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/{m,s}/README
+		doins -r src/s
+		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/s/README
 		c=""
 	fi
 
