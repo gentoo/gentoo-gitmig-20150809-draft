@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.57.ebuild,v 1.1 2012/02/19 11:10:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.57.ebuild,v 1.2 2012/05/22 15:54:54 angelos Exp $
 
 EAPI=4
 inherit base linux-mod toolchain-funcs
@@ -23,8 +23,8 @@ BUILD_TARGETS="all"
 MODULESD_NDISWRAPPER_ALIASES=("wlan0 ndiswrapper")
 
 pkg_pretend() {
-	CONFIG_CHECK="WEXT_PRIV"
-	use usb && CONFIG_CHECK="${CONFIG_CHECK} USB"
+	CONFIG_CHECK="~WEXT_PRIV"
+	use usb && CONFIG_CHECK="${CONFIG_CHECK} ~USB"
 	ERROR_USB="You need to enable USB support in your kernel to use usb support in ndiswrapper."
 	ERROR_WEXT_PRIV="Your kernel does not support WEXT_PRIV. To enable it you need to enable a wireless driver that enables it, for example PRISM54 or IPW2200"
 	linux-mod_pkg_setup
