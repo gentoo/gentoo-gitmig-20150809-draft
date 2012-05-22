@@ -1,9 +1,7 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.27 2012/05/21 20:27:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7_p1.ebuild,v 1.1 2012/05/22 00:14:44 zmedico Exp $
 
-# EAPI 1 since python-2.5 is also EAPI 1.
-EAPI=1
 inherit eutils multilib python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
@@ -11,18 +9,16 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +less selinux linguas_pl"
+IUSE="build doc epydoc less selinux linguas_pl"
 
-python_dep="|| ( dev-lang/python:2.5 <dev-lang/python-2.6.6:2.6 )"
+python_dep=">=dev-lang/python-2.4 <dev-lang/python-3"
 
 DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 )"
 # the debugedit blocker is for bug #289967
-# the python-2.6.6 blocker is for bug #330937
 RDEPEND="${python_dep}
-	!>=dev-lang/python-2.6.6:2.6 !dev-lang/python:2.7
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
 		>=app-admin/eselect-1.2 )
@@ -60,11 +56,10 @@ SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 		$(prefix_src_archives ${PN}-man-pl-${PV_PL}.tar.bz2) )"
 
-PATCHVER=$PV
-if [ -n "${PATCHVER}" ]; then
+for PATCHVER in 2.1.6.7 ${PV} ; do
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	$(prefix_src_archives ${PN}-${PATCHVER}.patch.bz2)"
-fi
+done
 
 S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
@@ -78,10 +73,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	if [ -n "${PATCHVER}" ]; then
-		cd "${S}"
+	for PATCHVER in 2.1.6.7 ${PV} ; do
 		epatch "${WORKDIR}/${PN}-${PATCHVER}.patch"
-	fi
+	done
 	einfo "Setting portage.VERSION to ${PVR} ..."
 	sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
@@ -109,10 +103,13 @@ src_compile() {
 		my_modules="$(find "${S}/pym" -name "*.py" \
 			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \
 			 -e 's:/:.:g' | sort)" || die "error listing modules"
+		# workaround for bug 282760
+		> "$S/pym/pysqlite2.py"
 		PYTHONPATH="${S}/pym:${PYTHONPATH}" epydoc -o "${WORKDIR}"/api \
 			-qqqqq --no-frames --show-imports $epydoc_opts \
 			--name "${PN}" --url "${HOMEPAGE}" \
 			${my_modules} || die "epydoc failed"
+		rm "$S/pym/pysqlite2.py"
 	fi
 }
 
@@ -155,32 +152,14 @@ src_install() {
 
 	# BSD and OSX need a sed wrapper so that find/xargs work properly
 	if use userland_GNU; then
-		rm "${S}"/bin/ebuild-helpers/sed || die "Failed to remove sed wrapper"
+		rm "${S}"/bin/sed || die "Failed to remove sed wrapper"
 	fi
 
-	cd "${S}"/bin || die "cd failed"
-	doexe $(find . -maxdepth 1 -type f) || die "doexe failed"
+	cd "${S}"/bin
+	doexe *
+	dosym newins ${portage_base}/bin/donewins
 
 	local symlinks
-	dodir ${portage_base}/bin/ebuild-helpers || die "dodir failed"
-	exeinto ${portage_base}/bin/ebuild-helpers || die "exeinto failed"
-	cd "${S}"/bin/ebuild-helpers || die "cd failed"
-	doexe $(find . -type f ! -type l) || die "doexe failed"
-	symlinks=$(find . -type l)
-	if [ -n "$symlinks" ] ; then
-		cp -P $symlinks "${D}${portage_base}/bin/ebuild-helpers/" || \
-			die "cp failed"
-	fi
-
-	# These symlinks will be included in the next tarball.
-	# Until then, create them manually.
-	dosym ../portageq ${portage_base}/bin/ebuild-helpers/portageq || \
-		die "dosym failed"
-	local x
-	for x in eerror einfo ewarn eqawarn ; do
-		dosym elog ${portage_base}/bin/ebuild-helpers/$x || die "dosym failed"
-	done
-
 	for mydir in $(find "${S}"/pym -type d | sed -e "s:^${S}/::") ; do
 		dodir ${portage_base}/${mydir}
 		insinto ${portage_base}/${mydir}
@@ -211,7 +190,7 @@ src_install() {
 	use epydoc && dohtml -r "${WORKDIR}"/api
 
 	dodir /usr/bin
-	for x in ebuild egencache emerge portageq repoman xpak; do
+	for x in ebuild emerge portageq repoman xpak; do
 		dosym ../${libdir}/portage/bin/${x} /usr/bin/${x}
 	done
 
@@ -236,9 +215,6 @@ pkg_preinst() {
 	DOWNGRADE_FROM_2_2=$?
 	has_version "<${CATEGORY}/${PN}-2.1.6_pre"
 	UPGRADE_FROM_2_1=$?
-
-	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12"
-	REPO_LAYOUT_CONF_WARN=$?
 }
 
 pkg_postinst() {
@@ -247,21 +223,12 @@ pkg_postinst() {
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
 	local warning_shown=0
-	if [ $REPO_LAYOUT_CONF_WARN = 0 ] ; then
-		ewarn
-		echo "If you want overlay eclasses to override eclasses from" \
-			"other repos then see the portage(5) man page" \
-			"for information about the new layout.conf and repos.conf" \
-			"configuration files." \
-			| fmt -w 75 | while read -r ; do ewarn "$REPLY" ; done
-		warning_shown=1
-	fi
 	if [ $DOWNGRADE_FROM_2_2 = 0 ] ; then
 		ewarn
 		echo "Since you have downgraded from portage-2.2, do not forget to" \
 		"use revdep-rebuild when appropriate, since the @preserved-rebuild" \
 		"package set is only supported with portage-2.2." | fmt -w 70 | \
-		while read -r ; do ewarn "$REPLY" ; done
+		while read ; do ewarn "$REPLY" ; done
 		warning_shown=1
 	fi
 	if [ $UPGRADE_FROM_2_1 = 0 ] ; then
@@ -270,25 +237,20 @@ pkg_postinst() {
 		"\`emerge world\` and \`emerge system\` commands. These commands" \
 		"will reinstall all packages from the given set unless an option" \
 		"such as --noreplace, --update, or --newuse is specified." \
-		| fmt -w 70 | while read -r ; do ewarn "$REPLY" ; done
+		| fmt -w 70 | while read ; do ewarn "$REPLY" ; done
 		ewarn
 		echo "File collision protection is now enabled by default via" \
 		"make.globals with FEATURES=protect-owned. If you want to" \
 		"disable collision protection completely (not recommended), then" \
 		"you need to ensure that neither protect-owned nor collision-protect" \
-		"are enabled." | fmt -w 70 | while read -r ; do ewarn "$REPLY" ; done
-		if [ -n "$(egrep '^(FETCH|RESUME)COMMAND=' "$ROOT"etc/make.conf | \
-			grep -v '${FILE}')" ] ; then
-			ewarn
-			echo "If you have overridden FETCHCOMMAND or RESUMECOMMAND" \
-			"variables, for compatibility with EAPI 2, you must ensure" \
-			"that these variables are written such that the downloaded" \
-			"file will be placed at \\\"\\\${DISTDIR}/\\\${FILE}\\\"." \
-			"See the examples in /usr/share/portage/config/make.conf.example" \
-			"and refer to make.conf(5) for more information about" \
-			"FETCHCOMMAND and RESUMECOMMAND." | \
-			fmt -w 70 | while read -r ; do ewarn "$REPLY" ; done
-		fi
+		"are enabled." | fmt -w 70 | while read ; do ewarn "$REPLY" ; done
+		ewarn
+		echo "If you have overridden FETCHCOMMAND or RESUMECOMMAND variables," \
+		"for compatibility with EAPI 2, you must ensure that these variables" \
+		"are written such that the downloaded file will be placed at" \
+		"\"\${DISTDIR}/\${FILE}\". Refer to make.conf(5) for" \
+		"information about FETCHCOMMAND and RESUMECOMMAND." | \
+		fmt -w 70 | while read ; do ewarn "$REPLY" ; done
 		warning_shown=1
 	fi
 	if [ $warning_shown = 1 ] ; then

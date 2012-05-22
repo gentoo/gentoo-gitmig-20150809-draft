@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1021 2012/05/21 20:27:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1022 2012/05/22 00:14:44 zmedico Exp $
+
+*portage-2.1.6.7_p1 (22 May 2012)
+
+  22 May 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.7_p1.ebuild,
+  -portage-2.1.6.13.ebuild, -portage-2.1.6.7.ebuild:
+  2.1.6.7_p1 *stable* version bump, in order to provide a smoother upgrade path
+  for older systems. This only fixes incompatibilites with newer python (bug
+  #330937) and bash (bug #297933). Also, remove old stable versions that have
+  broken upgrade paths.
 
   21 May 2012; Zac Medico <zmedico@gentoo.org> portage-2.1.10.49.ebuild,
   portage-2.1.6.13.ebuild, portage-2.1.6.7.ebuild, portage-2.2.0_alpha89.ebuild:
