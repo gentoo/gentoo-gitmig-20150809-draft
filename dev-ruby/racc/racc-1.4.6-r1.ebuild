@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6-r1.ebuild,v 1.3 2012/05/20 21:00:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6-r1.ebuild,v 1.4 2012/05/22 15:45:20 graaff Exp $
 
 EAPI=2
 
@@ -29,6 +29,7 @@ all_ruby_prepare() {
 	sed -i -e '/tasks\/email/s:^:#:' Rakefile || die "rakefile fix failed"
 	sed -i -e '/prerequisites/s:^:#:' tasks/test.rb || die "test task fix failed"
 	sed -i -e 's|/tmp/out|${TMPDIR:-/tmp}/out|' test/helper.rb || die "tests fix failed"
+	sed -i -e '/git ls-files/d' tasks/gem.rb || die
 
 	epatch "${FILESDIR}"/${P}-test-unit.patch
 }
