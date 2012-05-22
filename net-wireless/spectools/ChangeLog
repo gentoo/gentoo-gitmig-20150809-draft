@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/spectools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.2 2012/02/19 22:27:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.3 2012/05/22 16:38:30 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  spectools-2011.08.1.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
 
 *spectools-2006.03.1 (19 Feb 2012)
 *spectools-2006.09.1 (19 Feb 2012)

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2011.08.1.ebuild,v 1.1 2012/02/17 03:30:54 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2011.08.1.ebuild,v 1.2 2012/05/22 16:38:30 ssuominen Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ SLOT="0"
 IUSE="debug ncurses gtk"
 
 DEPEND="${RDEPEND}"
-RDEPEND="dev-libs/libusb
+RDEPEND="virtual/libusb
 	ncurses? ( sys-libs/ncurses )
 	gtk? ( =x11-libs/gtk+-2* )"
 
