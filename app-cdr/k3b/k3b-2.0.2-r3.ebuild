@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r2.ebuild,v 1.1 2012/05/19 17:38:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r3.ebuild,v 1.1 2012/05/22 21:28:00 kensington Exp $
 
 EAPI=4
 
@@ -66,6 +66,11 @@ PATCHES=(
 	"${FILESDIR}/${P}-libavformat54.patch"
 )
 
+REQUIRED_USE="
+	lame? ( encode )
+	sox? ( encode )
+"
+
 src_configure() {
 	mycmakeargs=(
 		-DK3B_BUILD_API_DOCS=OFF
@@ -90,6 +95,12 @@ src_configure() {
 			$(cmake-utils_use lame K3B_BUILD_LAME_ENCODER_PLUGIN)
 			$(cmake-utils_use sox K3B_BUILD_SOX_ENCODER_PLUGIN)
 			$(cmake-utils_use vorbis K3B_BUILD_OGGVORBIS_ENCODER_PLUGIN)
+		)
+	else
+		mycmakeargs+=(
+			-DK3B_BUILD_LAME_ENCODER_PLUGIN=OFF
+			-DK3B_BUILD_SOX_ENCODER_PLUGIN=OFF
+			-DK3B_BUILD_OGGVORBIS_ENCODER_PLUGIN=OFF
 		)
 	fi
 

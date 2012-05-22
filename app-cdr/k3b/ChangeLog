@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.270 2012/05/19 17:38:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.271 2012/05/22 21:28:00 kensington Exp $
+
+*k3b-2.0.2-r3 (22 May 2012)
+
+  22 May 2012; Michael Palimaka <kensington@gentoo.org> +k3b-2.0.2-r3.ebuild,
+  -k3b-2.0.2-r2.ebuild:
+  Properly avoid automagic dependencies, fixing bug #416675 by Petteri Räty
+  <betelgeuse@gentoo.org>. Add REQUIRED_USE to prevent use flag combinations
+  that do nothing. Remove old.
 
 *k3b-2.0.2-r2 (19 May 2012)
 
