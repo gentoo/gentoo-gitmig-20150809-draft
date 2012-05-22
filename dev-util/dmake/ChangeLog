@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.29 2012/05/18 06:17:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.30 2012/05/22 20:57:34 ranger Exp $
+
+  22 May 2012; Brent Baude <ranger@gentoo.org> dmake-4.12.ebuild:
+  Marking dmake-4.12 ppc for bug 404733
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> dmake-4.12.ebuild:
   marked x86 per bug 404733
