@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.4.1.ebuild,v 1.2 2012/05/21 05:38:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.4.1.ebuild,v 1.3 2012/05/22 03:21:17 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -136,7 +136,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.4.0-libgnome-shell-js.so-link"-{1,2}.patch
 
 	eautoreconf
-	intltoolize --automake --copy --force || die #416789
 	gnome2_src_prepare
 
 	# Drop G_DISABLE_DEPRECATED for sanity on glib upgrades; bug #384765
