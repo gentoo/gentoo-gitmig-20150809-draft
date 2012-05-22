@@ -46,7 +46,7 @@ diff -ur share/mk.old/bsd.incs.mk share/mk/bsd.incs.mk
  installincludes: _${group}INS_${header:T}
  _${group}INS_${header:T}: ${header}
 +	${INSTALL} -d -o ${${group}OWN_${.ALLSRC:T}} \
-+		 -g ${${group}GRP_${.ALLSRC:T}} -m ${${group}MODE_${.ALLSRC:T}} \
++		 -g ${${group}GRP_${.ALLSRC:T}} \
 +		 ${DESTDIR}${${group}DIR_${.ALLSRC:T}}
 	${INSTALL} -C -o ${${group}OWN_${.ALLSRC:T}} \
  	    -g ${${group}GRP_${.ALLSRC:T}} -m ${${group}MODE_${.ALLSRC:T}} \
