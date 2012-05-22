@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quickshare/quickshare-1.0.ebuild,v 1.2 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quickshare/quickshare-1.0.ebuild,v 1.3 2012/05/22 22:57:06 jdhore Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://houbysoft.com/download/${P}-src.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="net-libs/libmicrohttpd
