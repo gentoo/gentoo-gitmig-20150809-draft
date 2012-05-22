@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.3.1.ebuild,v 1.1 2012/04/24 12:08:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.3.1.ebuild,v 1.2 2012/05/22 16:36:51 ssuominen Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -55,7 +55,7 @@ RDEPEND="dev-db/sqlite:3
 	span? ( media-libs/spandsp )
 	speex? ( media-libs/speex )
 	srtp? ( net-libs/libsrtp )
-	usb? ( dev-libs/libusb
+	usb? ( virtual/libusb
 		media-libs/alsa-lib )
 	vorbis? ( media-libs/libvorbis )"
 
