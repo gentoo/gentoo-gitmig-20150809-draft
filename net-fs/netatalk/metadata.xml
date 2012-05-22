@@ -10,6 +10,9 @@
       partially.
     </description>
 	</maintainer>
+	<maintainer restrict="&gt;=net-fs/netatalk-2.2.1-r1">
+		<email>jlec@gentoo.org</email>
+	</maintainer>
 	<use>
 		<flag name="appletalk">
       Build support for Apple's AppleTalk (DDP) protocol and its
