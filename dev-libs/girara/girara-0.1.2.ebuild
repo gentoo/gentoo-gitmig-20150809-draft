@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/girara-0.1.2.ebuild,v 1.3 2012/05/07 09:43:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/girara-0.1.2.ebuild,v 1.4 2012/05/22 07:16:15 jdhore Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://pwmt.org/projects/${PN}/download/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.18.6:2"
