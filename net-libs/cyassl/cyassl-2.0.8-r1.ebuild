@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.0.8.ebuild,v 1.1 2012/04/11 01:58:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.0.8-r1.ebuild,v 1.1 2012/05/22 00:03:59 blueness Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Lightweight SSL/TLS library targeted at embedded and RTOS environments"
 HOMEPAGE="http://www.yassl.com/yaSSL/Home.html"
-SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~x86"
 #Add CRYPTO_OPTS=ecc when fixed
 CACHE_SIZE="small big +huge"
 CRYPTO_OPTS="aes-ni +hc128 +psk +ripemd sha512"
-IUSE="-dtls ipv6 +httpd +sessioncerts +sniffer +testcert threads +zlib cyassl-hardening ${CACHE_SIZE} ${CRYPTO_OPTS}"
+CERT_OPTS="+sessioncerts +testcert"
+IUSE="-dtls ipv6 +httpd +sniffer static-libs threads +zlib cyassl-hardening ${CACHE_SIZE} ${CRYPTO_OPTS} ${CERT_OPTS}"
 
 #You can only pick one cach size
 #sha512 is broken on x86
@@ -81,6 +82,7 @@ src_configure() {
 		$(use_enable sessioncerts)          \
 		$(use_enable sniffer)               \
 		$(use_enable testcert)              \
+		$(use_enable static-libs static)	\
 		$(use_enable cyassl-hardening gcc-hardening)    \
 		$(use_enable cyassl-hardening linker-hardening) \
 		$(use_with zlib libz)               \
