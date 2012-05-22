@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/dnssec-root
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.4 2011/07/20 14:40:07 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.5 2012/05/22 11:55:24 xmw Exp $
+
+*dnssec-root-20110630 (22 May 2012)
+
+  22 May 2012; Michael Weber <xmw@gentoo.org> +dnssec-root-20110630.ebuild,
+  +files/dnssec_at_iana.org_1024D_0F6C91D2-20120522.asc, metadata.xml:
+  Version bump to fix expired key files (bug 380751), taking maint.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
