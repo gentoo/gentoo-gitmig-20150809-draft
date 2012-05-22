@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.53 2012/05/22 16:31:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.54 2012/05/22 16:44:06 flameeyes Exp $
+
+  22 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:
+  Allow using older libav as well, for postproc.
 
   22 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   mplayer2-2.0_p20120309.ebuild:
