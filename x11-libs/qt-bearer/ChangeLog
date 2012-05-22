@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-bearer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.6 2012/05/20 13:20:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.7 2012/05/22 15:18:58 pesa Exp $
+
+*qt-bearer-4.8.2 (22 May 2012)
+
+  22 May 2012; Davide Pesavento <pesa@gentoo.org> +qt-bearer-4.8.2.ebuild:
+  Version bump.
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> qt-bearer-4.8.1.ebuild:
   Stable for x86, wrt bug #414241

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.151 2012/05/20 13:35:18 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.152 2012/05/22 15:27:44 pesa Exp $
+
+*qt-webkit-4.8.2 (22 May 2012)
+
+  22 May 2012; Davide Pesavento <pesa@gentoo.org> +qt-webkit-4.8.2.ebuild:
+  Version bump.
 
   20 May 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Remove "jit" USE flag description from metadata, bug 416611.
