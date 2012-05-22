@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbredir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.12 2012/05/04 09:17:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.13 2012/05/22 16:15:45 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> usbredir-0.3.3.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> usbredir-0.3.3.ebuild,
   usbredir-0.4.3.ebuild:
