@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.154 2012/05/05 03:20:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.155 2012/05/22 18:47:05 jdhore Exp $
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> wget-1.13.4-r1.ebuild:
+  marked x86 per bug 406657
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wget-1.13.4-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
