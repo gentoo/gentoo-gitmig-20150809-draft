@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.192 2012/05/03 18:16:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.193 2012/05/22 19:37:07 eras Exp $
+
+  22 May 2012; Eray Aslan <eras@gentoo.org> heimdal-1.5.1-r1.ebuild,
+  heimdal-1.5.2.ebuild:
+  Fix broken symlink - bug #417081
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> heimdal-1.5.1-r1.ebuild,
   heimdal-1.5.2.ebuild:

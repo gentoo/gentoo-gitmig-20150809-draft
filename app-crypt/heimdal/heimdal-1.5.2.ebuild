@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.2.ebuild,v 1.2 2012/05/03 18:16:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.2.ebuild,v 1.3 2012/05/22 19:37:07 eras Exp $
 
 EAPI=4
 # PYTHON_BDEPEND="2"
@@ -86,11 +86,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake -j1
 }
 
 src_install() {
-	INSTALL_CATPAGES="no" emake DESTDIR="${D}" install || die "emake install failed"
+	INSTALL_CATPAGES="no" emake DESTDIR="${D}" install
 
 	dodoc ChangeLog README NEWS TODO
 
@@ -132,6 +132,10 @@ src_install() {
 
 	# default database dir
 	keepdir /var/heimdal
+
+	# Ugly hack for broken symlink - bug #417081
+	rm "${D}"/usr/share/man/man5/qop.5 || die
+	dosym mech.5 /usr/share/man/man5/qop.5
 }
 
 pkg_preinst() {
