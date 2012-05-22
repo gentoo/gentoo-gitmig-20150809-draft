@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.22 2012/05/22 16:00:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.23 2012/05/22 18:37:54 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> libusb-0.ebuild:
+  Change order of || ( ) to list dev-libs/libusb-compat first wrt #417135
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> libusb-1.ebuild:
   Include dev-libs/libusbx:1 as secondary alternative.
