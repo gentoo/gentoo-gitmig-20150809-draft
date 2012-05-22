@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.35 2012/05/18 08:47:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.36 2012/05/22 20:58:28 ranger Exp $
+
+  22 May 2012; Brent Baude <ranger@gentoo.org> gxmessage-2.12.4.ebuild:
+  Marking gxmessage-2.12.4 ppc for bug 391233
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> gxmessage-2.12.4.ebuild:
   marked x86 per bug 391233
