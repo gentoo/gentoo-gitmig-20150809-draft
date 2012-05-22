@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6584 2012/05/22 11:31:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6585 2012/05/22 12:38:52 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 May 2012; Anthony G. Basile <blueness@gentoo.org> updates/2Q-2012:
+  Rename dev-python/Whoosh to dev-python/whoosh
 
   22 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Mask chromium-21 and corresponding v8-3.11.
