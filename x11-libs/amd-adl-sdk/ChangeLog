@@ -1,5 +1,10 @@
 
 
+*amd-adl-sdk-4.0 (22 May 2012)
+
+  22 May 2012; Anthony G. Basile <blueness@gentoo.org> +amd-adl-sdk-4.0.ebuild:
+  Version bump
+
   27 Apr 2012; Anthony G. Basile <blueness@gentoo.org> amd-adl-sdk-3.0.ebuild:
   Add missing dep on app-arch/unzip
 
