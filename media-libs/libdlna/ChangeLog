@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdlna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.6 2012/05/18 08:04:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.7 2012/05/22 12:00:48 johu Exp $
+
+  22 May 2012; Johannes Huber <johu@gentoo.org> libdlna-0.2.4.ebuild:
+  Stable for x86, wrt bug #415723
 
   18 May 2012; Agostino Sarubbo <ago@gentoo.org> libdlna-0.2.4.ebuild:
   Stable for amd64, wrt bug #415723

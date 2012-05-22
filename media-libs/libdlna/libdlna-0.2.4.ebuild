@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.4.ebuild,v 1.2 2012/05/18 08:04:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.4.ebuild,v 1.3 2012/05/22 12:00:48 johu Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://libdlna.geexbox.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=virtual/ffmpeg-0.6.90"
