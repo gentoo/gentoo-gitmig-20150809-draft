@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/serienbrief
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.9 2010/06/11 11:35:09 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.10 2012/05/22 17:24:28 johu Exp $
+
+*serienbrief-0.2.3 (22 May 2012)
+
+  22 May 2012; Johannes Huber <johu@gentoo.org> +serienbrief-0.2.3.ebuild,
+  -serienbrief-0.2-r2.ebuild, -serienbrief-0.2.1.ebuild:
+  Version bump, remove old wrt bug #417121.
 
 *serienbrief-0.2.2 (11 Jun 2010)
 
