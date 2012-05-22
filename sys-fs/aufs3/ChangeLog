@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.13 2012/05/05 11:41:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.14 2012/05/22 06:56:26 jlec Exp $
+
+  22 May 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120430.ebuild:
+  dodoc doesn't follow symlinks, so install the file directly
 
   05 May 2012; Markus Meier <maekke@gentoo.org> aufs3-3_p20120109.ebuild:
   x86 stable, bug #407991

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120430.ebuild,v 1.1 2012/04/30 06:03:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120430.ebuild,v 1.2 2012/05/22 06:56:26 jlec Exp $
 
 EAPI=4
 
@@ -135,7 +135,7 @@ src_install() {
 
 	use doc && doins -r Documentation
 
-	dodoc README
+	dodoc Documentation/filesystems/aufs/README
 
 	cd "${WORKDIR}"/${PN/3}-util
 	emake DESTDIR="${D}" KDIR=${KV_DIR} install
