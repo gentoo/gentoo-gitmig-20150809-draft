@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.250 2012/05/04 19:09:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.251 2012/05/22 19:45:50 vapier Exp $
+
+*e2fsprogs-1.42.3 (22 May 2012)
+
+  22 May 2012; Mike Frysinger <vapier@gentoo.org> +e2fsprogs-1.42.3.ebuild,
+  +files/e2fsprogs-1.42.3-quota-time.patch,
+  +files/e2fsprogs-1.42.3-quotactl.patch:
+  Version bump #416771 by Samuli Suominen.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> e2fsprogs-1.41.7-r1.ebuild,
   e2fsprogs-1.41.12.ebuild, e2fsprogs-1.41.12-r1.ebuild,
