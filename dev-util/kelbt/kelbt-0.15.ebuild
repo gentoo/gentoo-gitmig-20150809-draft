@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kelbt/kelbt-0.14.ebuild,v 1.1 2009/10/04 11:38:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kelbt/kelbt-0.15.ebuild,v 1.1 2012/05/22 23:46:46 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils
 
