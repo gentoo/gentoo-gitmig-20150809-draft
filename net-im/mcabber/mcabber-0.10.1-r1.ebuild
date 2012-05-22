@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.1-r1.ebuild,v 1.2 2012/05/04 06:22:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.1-r1.ebuild,v 1.3 2012/05/22 14:03:49 darkside Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://mcabber.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 IUSE="aspell crypt idn modules otr spell ssl vim-syntax"
 
@@ -55,7 +55,7 @@ src_install() {
 
 	# clean unneeded language documentation
 	for i in ${LANGS}; do
-		! use linguas_${i} && rm -rf "${D}"/usr/share/${PN}/help/${i}
+		! use linguas_${i} && rm -rf "${ED}"/usr/share/${PN}/help/${i}
 	done
 
 	dodoc AUTHORS ChangeLog NEWS README TODO mcabberrc.example
@@ -93,7 +93,7 @@ pkg_postinst() {
 	elog "following commands:"
 	elog
 	elog "  mkdir -p ~/.mcabber"
-	elog "  bzcat ${ROOT}usr/share/doc/${PF}/mcabberrc.example.bz2 >~/.mcabber/mcabberrc"
+	elog "  bzcat ${EROOT}usr/share/doc/${PF}/mcabberrc.example.bz2 >~/.mcabber/mcabberrc"
 	elog
 	elog "Then edit ~/.mcabber/mcabberrc with your favorite editor."
 	elog
@@ -103,6 +103,6 @@ pkg_postinst() {
 	elog "From version 0.9.0 on, MCabber supports PGP encryption of messages."
 	elog "See README_PGP.txt for details."
 	echo
-	einfo "Check out ${ROOT}usr/share/${PN} for contributed themes and event scripts."
+	einfo "Check out ${EROOT}usr/share/${PN} for contributed themes and event scripts."
 	echo
 }
