@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.3.ebuild,v 1.8 2012/05/06 18:57:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.3.ebuild,v 1.9 2012/05/22 13:57:32 darkside Exp $
 
 EAPI=4
 
@@ -13,10 +13,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="dbus debug doc eds gadu gnutls +gstreamer +gtk idn meanwhile"
 IUSE+=" networkmanager nls perl silc tcl tk spell sasl ncurses"
 IUSE+=" groupwise prediction python +xscreensaver zephyr zeroconf" # mono"
+IUSE+=" aqua"
 
 # dbus requires python to generate C code for dbus bindings (thus DEPEND only).
 # finch uses libgnt that links with libpython - {R,}DEPEND. But still there is
@@ -31,7 +32,7 @@ RDEPEND="
 		dbus? ( <dev-lang/python-3 )
 		python? ( <dev-lang/python-3 ) )
 	gtk? (
-		>=x11-libs/gtk+-2.10:2
+		>=x11-libs/gtk+-2.10:2[aqua=]
 		x11-libs/libSM
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		spell? ( >=app-text/gtkspell-2.0.2:2 )
@@ -157,8 +158,8 @@ src_configure() {
 	if use gnutls; then
 		einfo "Disabling NSS, using GnuTLS"
 		myconf+=" --enable-nss=no --enable-gnutls=yes"
-		myconf+=" --with-gnutls-includes=/usr/include/gnutls"
-		myconf+=" --with-gnutls-libs=/usr/$(get_libdir)"
+		myconf+=" --with-gnutls-includes=${EPREFIX}/usr/include/gnutls"
+		myconf+=" --with-gnutls-libs=${EPREFIX}/usr/$(get_libdir)"
 	else
 		einfo "Disabling GnuTLS, using NSS"
 		myconf+=" --enable-gnutls=no --enable-nss=yes"
@@ -195,10 +196,10 @@ src_configure() {
 		$(use_enable networkmanager nm) \
 		$(use_enable zeroconf avahi) \
 		$(use_enable idn) \
-		--with-system-ssl-certs="/etc/ssl/certs/" \
+		--with-system-ssl-certs="${EPREFIX}/etc/ssl/certs/" \
 		--with-dynamic-prpls="${DYNAMIC_PRPLS}" \
 		--disable-mono \
-		--x-includes=/usr/include/X11 \
+		--x-includes="${EPREFIX}"/usr/include/X11 \
 		${myconf}
 		#$(use_enable mono) \
 }
@@ -210,7 +211,7 @@ src_install() {
 		# implementations that are not complient with new hicolor theme yet, #323355
 		local pixmapdir
 		for d in 16 22 32 48; do
-			pixmapdir=${D}/usr/share/pixmaps/pidgin/tray/hicolor/${d}x${d}/actions
+			pixmapdir=${ED}/usr/share/pixmaps/pidgin/tray/hicolor/${d}x${d}/actions
 			mkdir "${pixmapdir}" || die
 			pushd "${pixmapdir}" >/dev/null || die
 			for f in ../status/*; do
