@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.47 2012/05/05 07:00:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.48 2012/05/22 16:17:51 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> iscan-2.26.2.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> iscan-2.26.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
