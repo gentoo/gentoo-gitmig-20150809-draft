@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20120322.ebuild,v 1.4 2012/05/16 14:43:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20120322.ebuild,v 1.5 2012/05/22 21:00:23 ranger Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ppc ~s390 ~sh ~sparc x86"
 IUSE="nls linguas_de linguas_es linguas_fr test"
 
 RDEPEND="app-arch/dpkg
