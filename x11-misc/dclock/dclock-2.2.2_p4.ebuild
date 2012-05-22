@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.2.2_p4.ebuild,v 1.6 2012/05/20 09:34:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.2.2_p4.ebuild,v 1.7 2012/05/22 20:59:25 ranger Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV/_p*/}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
