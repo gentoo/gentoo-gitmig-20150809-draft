@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.4.ebuild,v 1.7 2012/04/03 03:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/avrdude-5.4.ebuild,v 1.8 2012/05/22 16:21:16 ssuominen Exp $
+
+EAPI=1
 
 DESCRIPTION="AVR Downloader/UploaDEr"
 HOMEPAGE="http://savannah.nongnu.org/projects/avrdude"
@@ -13,7 +15,7 @@ IUSE="doc"
 
 RDEPEND="sys-libs/readline
 		sys-libs/ncurses
-		<dev-libs/libusb-1"
+		virtual/libusb:0"
 DEPEND="doc? ( app-text/texi2html
 			   virtual/latex-base
 			   sys-apps/texinfo )
