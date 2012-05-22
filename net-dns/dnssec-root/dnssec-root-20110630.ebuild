@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/dnssec-root-20110630.ebuild,v 1.1 2012/05/22 11:55:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/dnssec-root-20110630.ebuild,v 1.2 2012/05/22 16:17:37 mr_bones_ Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RESTRICT="mirror"
 
 RDEPEND=""
 DEPEND="dev-libs/libxslt
-		test? ( app-crypt/gnupg 
+		test? ( app-crypt/gnupg
 			dev-libs/openssl )"
 
 S="${WORKDIR}"
@@ -32,7 +32,7 @@ S="${WORKDIR}"
 # xsl and checking as per:
 # http://permalink.gmane.org/gmane.network.dns.unbound.user/1039
 
-src_unpack() { 
+src_unpack() {
 	return
 }
 
@@ -57,6 +57,6 @@ src_test() {
 src_install() {
 	insinto /etc/dnssec
 	newins root-anchors-20100715.txt root-anchors.txt
-	newins "${DISTDIR}"/root-anchors-20100715.xml root-anchors.xml 
+	newins "${DISTDIR}"/root-anchors-20100715.xml root-anchors.xml
 	newins "${DISTDIR}"/Kjqmt7v-20100715.csr Kjqmt7v.csr
 }
