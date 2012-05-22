@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/ftdi_eeprom
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.5 2011/08/20 19:40:21 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.6 2012/05/22 16:39:20 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> ftdi_eeprom-0.2.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
 
 *ftdi_eeprom-0.3-r1 (20 Aug 2011)
 
