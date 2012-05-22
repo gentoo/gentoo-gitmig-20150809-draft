@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96.ebuild,v 1.8 2012/05/04 06:41:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96.ebuild,v 1.9 2012/05/22 16:16:32 ssuominen Exp $
 
 EAPI="4"
 
@@ -35,7 +35,7 @@ CDEPEND="
 		>=media-libs/gstreamer-0.10:0.10
 		>=media-libs/gst-plugins-base-0.10:0.10
 	)
-	usb? ( dev-libs/libusb:1 )
+	usb? ( virtual/libusb:1 )
 "
 DEPEND="${CDEPEND}
 	virtual/pkgconfig

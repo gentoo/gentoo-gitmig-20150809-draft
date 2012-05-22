@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r1.ebuild,v 1.2 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r1.ebuild,v 1.3 2012/05/22 16:19:41 ssuominen Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ RDEPEND="net-wireless/wireless-tools
 			>=net-wireless/bluez-4.98-r2
 			=net-wireless/bluez-4.96
 			) )
-	plugin-dot15d4? ( <dev-libs/libusb-1 )
+	plugin-dot15d4? ( virtual/libusb:0 )
 	plugin-spectools? ( net-wireless/spectools )"
 
 DEPEND="${RDEPEND}
