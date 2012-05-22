@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.2.ebuild,v 1.6 2012/05/04 18:35:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.2.ebuild,v 1.7 2012/05/22 16:07:16 ssuominen Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ IUSE="static-libs"
 # udev is effectively a required dependency: configuring with --disable-gudev
 # causes build failures
 RDEPEND=">=dev-libs/glib-2.28:2
-	dev-libs/libusb:1
+	virtual/libusb:1
 	|| ( sys-fs/udev[gudev] sys-fs/udev[extras] )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils

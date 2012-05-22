@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.4.ebuild,v 1.1 2012/05/07 14:27:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.4.ebuild,v 1.2 2012/05/22 16:08:50 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-linux"
 IUSE="debug static-libs"
 
-RDEPEND="dev-libs/libusb:1
+RDEPEND="virtual/libusb:1
 	!dev-libs/libusb:0"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
