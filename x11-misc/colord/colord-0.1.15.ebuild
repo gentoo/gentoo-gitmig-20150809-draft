@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.15.ebuild,v 1.9 2012/05/05 04:53:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.15.ebuild,v 1.10 2012/05/22 16:13:52 ssuominen Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.28.0:2
 	>=media-libs/lcms-2.2:2
 	elibc_FreeBSD? ( >=sys-freebsd/freebsd-lib-8.0[usb] )
-	!elibc_FreeBSD? ( >=dev-libs/libusb-1.0.8:1 )
+	!elibc_FreeBSD? ( virtual/libusb:1 )
 	gusb? ( >=dev-libs/libgusb-0.1.1 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 	scanner? ( media-gfx/sane-backends )
