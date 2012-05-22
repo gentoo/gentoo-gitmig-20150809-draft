@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.153 2012/05/14 15:42:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.154 2012/05/22 12:21:07 ago Exp $
+
+  22 May 2012; Agostino Sarubbo <ago@gentoo.org> banshee-2.2.1.ebuild:
+  Stable for amd64, wrt bug #407701
 
   14 May 2012; Pacho Ramos <pacho@gentoo.org> banshee-2.4.0-r1.ebuild:
   app-misc/media-player-info is needed as reported in bug #414513 by Bjoern
