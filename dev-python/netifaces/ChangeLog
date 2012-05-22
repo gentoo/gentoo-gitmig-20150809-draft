@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/netifaces
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.9 2012/05/22 11:25:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.10 2012/05/22 12:17:13 xmw Exp $
+
+  22 May 2012; Michael Weber <xmw@gentoo.org> -netifaces-0.6.ebuild:
+  Remove old version
 
   22 May 2012; Agostino Sarubbo <ago@gentoo.org> netifaces-0.8.ebuild:
   Stable for amd64, wrt bug #417053
