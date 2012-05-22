@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.159 2012/05/20 14:53:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.160 2012/05/22 00:04:58 jdhore Exp $
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> scribus-1.4.0-r2.ebuild:
+  marked x86 per bug 413713
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> scribus-1.4.0-r2.ebuild:
   Stable for amd64, wrt bug #413713
