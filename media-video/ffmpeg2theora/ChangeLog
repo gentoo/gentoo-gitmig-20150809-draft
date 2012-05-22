@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.53 2012/05/05 08:58:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.54 2012/05/22 16:35:04 flameeyes Exp $
+
+  22 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  ffmpeg2theora-0.28-r1.ebuild, ffmpeg2theora-0.28.ebuild:
+  Add an explicit dependency over libpostproc.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> ffmpeg2theora-0.28.ebuild,
   ffmpeg2theora-0.28-r1.ebuild:
