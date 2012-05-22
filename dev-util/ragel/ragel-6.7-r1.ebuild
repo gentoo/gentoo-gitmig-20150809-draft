@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.7.ebuild,v 1.2 2011/12/24 11:25:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.7-r1.ebuild,v 1.1 2012/05/22 23:41:01 flameeyes Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Compiles finite state machines from regular languages into executable code."
 HOMEPAGE="http://www.complang.org/ragel/"
@@ -22,6 +22,13 @@ RDEPEND=""
 RESTRICT=test
 
 DOCS=( ChangeLog CREDITS README TODO )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}+gcc-4.7.patch
+	sed -i -e '/CXXFLAGS/d' configure.ac
+
+	eautoreconf
+}
 
 src_configure() {
 	econf --docdir="${EPREFIX}"/usr/share/doc/${PF}
