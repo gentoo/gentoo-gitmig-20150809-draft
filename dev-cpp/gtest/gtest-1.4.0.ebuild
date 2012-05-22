@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.4.0.ebuild,v 1.2 2012/04/20 18:18:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.4.0.ebuild,v 1.3 2012/05/22 23:43:06 vapier Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://googletest.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 arm x86"
 IUSE="examples static-libs"
 
 DEPEND="dev-lang/python"
