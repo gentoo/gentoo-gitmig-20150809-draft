@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.21 2012/03/31 08:58:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.22 2012/05/22 16:40:17 ssuominen Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ RESTRICT="strip" # includes non-native binaries
 
 # libftd2xx is the default because it is reported to work better.
 DEPEND="dev-lang/jimtcl
-	usb? ( dev-libs/libusb )
+	usb? ( virtual/libusb )
 	presto? ( dev-embedded/libftd2xx )
 	ftd2xx? ( dev-embedded/libftd2xx )
 	ftdi? ( dev-embedded/libftdi )"
