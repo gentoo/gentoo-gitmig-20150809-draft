@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libclastfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclastfm/ChangeLog,v 1.6 2012/05/20 11:54:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclastfm/ChangeLog,v 1.7 2012/05/22 05:30:18 jdhore Exp $
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  libclastfm-0.4_p20120315.ebuild:
+  marked x86 per bug 416233
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org>
   libclastfm-0.4_p20120315.ebuild:
