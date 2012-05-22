@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-linelight-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-linelight-plugin/ChangeLog,v 1.15 2012/05/22 05:16:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-linelight-plugin/ChangeLog,v 1.16 2012/05/22 06:43:50 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-linelight-plugin-0.1.6-r1.ebuild,
+  -files/xfce4-linelight-plugin-0.1.6-libxfce4panel_h.patch,
+  -files/xfce4-linelight-plugin-0.1.6-port-to-gio.patch:
+  old
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org>
   xfce4-linelight-plugin-0.1.7.ebuild:

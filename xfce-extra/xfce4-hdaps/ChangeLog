@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-hdaps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/ChangeLog,v 1.12 2012/05/22 05:02:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/ChangeLog,v 1.13 2012/05/22 06:42:50 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-hdaps-0.0.7.ebuild:
+  old
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> xfce4-hdaps-0.0.8.ebuild:
   marked x86 per bug 416233

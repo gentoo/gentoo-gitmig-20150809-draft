@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wavelan-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan-plugin/ChangeLog,v 1.22 2012/05/22 05:12:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan-plugin/ChangeLog,v 1.23 2012/05/22 06:47:29 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-wavelan-plugin-0.5.6.ebuild:
+  old
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org>
   xfce4-wavelan-plugin-0.5.10.ebuild:
