@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xmlrpc-epi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.7 2009/10/27 10:49:17 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.8 2012/05/22 11:21:13 polynomial-c Exp $
+
+*xmlrpc-epi-0.54.2 (22 May 2012)
+
+  22 May 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +xmlrpc-epi-0.54.2.ebuild:
+  Non-maintainer commit: Version bump. Thanks to Scott Duffey for reporting
+  this in bug #407047.
 
   27 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   xmlrpc-epi-0.54-r1.ebuild:
