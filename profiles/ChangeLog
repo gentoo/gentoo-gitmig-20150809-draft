@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6582 2012/05/22 08:58:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6583 2012/05/22 09:28:34 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove dev-python/testoob mask because it doesn't depend on dev-python/4suite
+  anymore. It was always optional but forced mistakenly by the ebuild.
 
   22 May 2012; Michael Weber <xmw@gentoo.org> package.mask:
   mask x11-wm/parti
