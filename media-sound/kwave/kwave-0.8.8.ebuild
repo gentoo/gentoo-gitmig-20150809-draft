@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.8.ebuild,v 1.1 2012/05/22 15:22:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.8.ebuild,v 1.2 2012/05/22 15:26:32 kensington Exp $
 
 EAPI=4
 
@@ -15,7 +15,6 @@ SRC_URI="mirror://sourceforge/kwave/${P}-1.tar.bz2"
 LICENSE="BSD FDL-1.2 GPL-2 LGPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-#IUSE="alsa debug flac +handbook mad oss pulseaudio vorbis"
 IUSE="alsa debug flac libsamplerate mad oss pulseaudio vorbis"
 
 RDEPEND="
