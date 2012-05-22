@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-lookup/dnssec-lookup-1.12.ebuild,v 1.1 2012/05/22 22:40:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-lookup/dnssec-lookup-1.12.ebuild,v 1.2 2012/05/22 22:43:45 xmw Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="net-dns/dnssec-tools
 	x11-libs/qt-gui"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
