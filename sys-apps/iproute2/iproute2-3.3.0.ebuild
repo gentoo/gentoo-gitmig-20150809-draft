@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.3.0.ebuild,v 1.8 2012/05/15 18:59:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.3.0.ebuild,v 1.9 2012/05/22 21:15:07 xmw Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic multilib
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git"
@@ -84,9 +84,12 @@ src_install() {
 
 	emake \
 		DESTDIR="${D}" \
-		SBINDIR=/sbin \
-		DOCDIR=/usr/share/doc/${PF} \
-		MANDIR=/usr/share/man \
+		LIBDIR="${EPREFIX}"/$(get_libdir) \
+		SBINDIR="${EPREFIX}"/sbin \
+		CONFDIR="${EPREFIX}"/etc/iproute2 \
+		DOCDIR="${EPREFIX}"/usr/share/doc/${PF} \
+		MANDIR="${EPREFIX}"/usr/share/man \
+		ARPDDIR="${EPREFIX}"/var/lib/arpd \
 		install
 
 	dolib.a lib/libnetlink.a
