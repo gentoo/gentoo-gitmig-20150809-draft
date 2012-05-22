@@ -1,6 +1,13 @@
 # ChangeLog for app-forensics/openscap
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.15 2011/12/28 14:01:19 swift Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.16 2012/05/22 20:51:55 hwoarang Exp $
+
+*openscap-0.8.2 (22 May 2012)
+
+  22 May 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/test_probes_interface.patch, +files/test_probes_process.patch,
+  +openscap-0.8.2.ebuild, -openscap-0.7.3.ebuild, -openscap-0.7.4.ebuild:
+  Version bump. Remove old thanks to LABBE Corentin <corentin.labbe@geomatys.fr>
 
   28 Dec 2011; <swift@gentoo.org> openscap-0.8.0.ebuild, metadata.xml:
   Fix build failure with RPM probes (bug #396263) by Corentin Labbe
