@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.220 2012/05/18 18:25:08 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.221 2012/05/22 21:06:12 ranger Exp $
+
+  22 May 2012; Brent Baude <ranger@gentoo.org> libevent-2.0.18.ebuild:
+  Marking libevent-2.0.18 ppc for bug 415581
 
   18 May 2012;  <richard@gentoo.org> libevent-2.1.1.ebuild:
   keyword ~amd64-fbsd
