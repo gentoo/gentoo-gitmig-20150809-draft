@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/yasat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/ChangeLog,v 1.7 2012/03/01 22:13:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/ChangeLog,v 1.8 2012/05/22 20:59:30 hwoarang Exp $
+
+*yasat-526 (22 May 2012)
+
+  22 May 2012; Markos Chandras <hwoarang@gentoo.org> +yasat-526.ebuild,
+  -yasat-400.ebuild, -yasat-421.ebuild:
+  Version bump. Remove old thanks to LABBE Corentin <corentin.labbe@geomatys.fr>
 
   01 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   add proxy-maintainers as herd
