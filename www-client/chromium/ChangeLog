@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.641 2012/05/21 14:09:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.642 2012/05/22 19:49:43 phajdan.jr Exp $
+
+*chromium-21.0.1145.0 (22 May 2012)
+
+  22 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-zlib-r0.patch, +chromium-21.0.1145.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Use system libusb (bug #413251 by
+  Julien Sanchez). Temporarily disable NaCl (bug #417019 by Julien Sanchez).
 
 *chromium-20.0.1132.11 (21 May 2012)
 
