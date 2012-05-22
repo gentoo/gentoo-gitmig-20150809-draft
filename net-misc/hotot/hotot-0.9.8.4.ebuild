@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.7.51.ebuild,v 1.1 2012/03/26 09:14:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.4.ebuild,v 1.1 2012/05/22 08:08:40 xmw Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit cmake-utils python
 
 DESCRIPTION="lightweight & open source microblogging client"
 HOMEPAGE="http://hotot.org"
-SRC_URI="https://github.com/shellex/Hotot/tarball/4c74e8b2 -> ${P}.tar.gz"
+SRC_URI="https://github.com/shellex/Hotot/tarball/560e6b286c -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -25,8 +25,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-S=${WORKDIR}/shellex-Hotot-4c74e8b
-
 pkg_setup() {
 	if ! use gtk ; then
 		if ! use qt4 ; then
@@ -37,6 +35,11 @@ pkg_setup() {
 		fi
 	fi
 	python_pkg_setup
+}
+
+src_unpack() {
+	default
+	mv shellex-Hotot-* ${P} || die
 }
 
 src_configure() {
