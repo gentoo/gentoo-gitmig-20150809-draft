@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testfixtures
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/ChangeLog,v 1.1 2012/05/20 13:56:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/ChangeLog,v 1.2 2012/05/22 16:04:18 tampakrap Exp $
+
+  22 May 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  testfixtures-2.3.4.ebuild:
+  Restrict tests, since they require dev-python/manuel which is not in tree yet
 
 *testfixtures-2.3.4 (20 May 2012)
 

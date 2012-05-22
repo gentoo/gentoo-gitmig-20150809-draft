@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/testfixtures-2.3.4.ebuild,v 1.1 2012/05/20 13:56:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/testfixtures-2.3.4.ebuild,v 1.2 2012/05/22 16:04:18 tampakrap Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -21,7 +21,10 @@ IUSE="doc test"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )"
-#	test? ( net-zope/zope-component )"
+#	test? ( dev-python/manuel )"
+
+# Work in progress, requires dev-python/manuel
+RESTRICT="test"
 
 src_prepare() {
 	sed -e s':../bin/sphinx-build:/usr/bin/sphinx-build:' \
