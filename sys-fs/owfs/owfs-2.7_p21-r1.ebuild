@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r1.ebuild,v 1.1 2012/05/20 16:31:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r1.ebuild,v 1.2 2012/05/22 16:31:29 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -19,7 +19,7 @@ RDEPEND="fuse? ( sys-fs/fuse )
 	perl? ( dev-lang/perl )
 	php? ( dev-lang/php )
 	tcl? ( dev-lang/tcl )
-	usb? ( dev-libs/libusb )
+	usb? ( virtual/libusb )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
 DEPEND="${RDEPEND}
 	perl? ( dev-lang/swig )

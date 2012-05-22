@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.18 2012/05/20 16:31:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.19 2012/05/22 16:31:29 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> owfs-2.7_p21.ebuild,
+  owfs-2.7_p21-r1.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
 
 *owfs-2.7_p21-r1 (20 May 2012)
 
