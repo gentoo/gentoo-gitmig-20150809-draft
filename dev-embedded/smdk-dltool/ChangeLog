@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/smdk-dltool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/ChangeLog,v 1.5 2012/02/09 17:15:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/smdk-dltool/ChangeLog,v 1.6 2012/05/22 02:23:48 vapier Exp $
+
+*smdk-dltool-0.20-r3 (22 May 2012)
+
+  22 May 2012; Mike Frysinger <vapier@gentoo.org> +smdk-dltool-0.20-r3.ebuild,
+  -smdk-dltool-0.20-r2.ebuild, files/smdk-dltool-0.20-libusb-1.0.patch:
+  Patch by Simon Glass to exit with non-zero value when things fail.
 
 *smdk-dltool-0.20-r2 (09 Feb 2012)
 
