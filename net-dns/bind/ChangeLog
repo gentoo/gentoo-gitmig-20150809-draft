@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.384 2012/05/22 00:02:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.385 2012/05/22 12:49:39 idl0r Exp $
+
+*bind-9.8.3 (22 May 2012)
+*bind-9.7.6 (22 May 2012)
+
+  22 May 2012; Christian Ruppert <idl0r@gentoo.org> -bind-9.7.5.ebuild,
+  +bind-9.7.6.ebuild, -bind-9.8.2.ebuild, +bind-9.8.3.ebuild:
+  Version bump
 
   22 May 2012; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Remove bind herd.. It's "empty" for years anyway, bug 417001.

@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.210 2012/05/22 00:03:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.211 2012/05/22 12:47:06 idl0r Exp $
+
+*bind-tools-9.8.3 (22 May 2012)
+*bind-tools-9.7.6 (22 May 2012)
+
+  22 May 2012; Christian Ruppert <idl0r@gentoo.org> -bind-tools-9.7.5.ebuild,
+  +bind-tools-9.7.6.ebuild, -bind-tools-9.8.2.ebuild, +bind-tools-9.8.3.ebuild:
+  Version bump
 
   22 May 2012; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Remove bind herd.. It's "empty" for years anyway, bug 417001.
