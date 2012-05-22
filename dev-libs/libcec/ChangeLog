@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.6 2012/05/14 15:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.7 2012/05/22 22:53:41 jdhore Exp $
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> libcec-1.6.2.ebuild:
+  marked x86 per bug 415907
 
   14 May 2012; Agostino Sarubbo <ago@gentoo.org> libcec-1.6.2.ebuild:
   Stable for amd64, wrt bug #415907
