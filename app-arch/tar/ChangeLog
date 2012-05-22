@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.173 2012/05/22 22:14:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.174 2012/05/22 22:17:10 vapier Exp $
+
+  22 May 2012; Mike Frysinger <vapier@gentoo.org> tar-1.23-r2.ebuild,
+  tar-1.23-r4.ebuild, tar-1.25-r1.ebuild, tar-1.25.ebuild, tar-1.26-r1.ebuild,
+  tar-1.26.ebuild:
+  Use just mirror://gnu to shut up repoman.
 
   22 May 2012; Mike Frysinger <vapier@gentoo.org> tar-1.26-r1.ebuild,
   +files/tar-1.26-no-gets.patch:
