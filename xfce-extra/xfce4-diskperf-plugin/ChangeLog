@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-diskperf-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/ChangeLog,v 1.21 2012/05/20 20:00:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/ChangeLog,v 1.22 2012/05/22 05:22:40 jdhore Exp $
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  xfce4-diskperf-plugin-2.5.3.ebuild:
+  marked x86 per bug 416233
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-diskperf-plugin-2.5.3.ebuild:
