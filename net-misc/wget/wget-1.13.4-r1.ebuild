@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.4-r1.ebuild,v 1.8 2012/05/22 19:02:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.4-r1.ebuild,v 1.9 2012/05/22 22:52:52 vapier Exp $
 
 EAPI="4"
 
@@ -33,6 +33,7 @@ DOCS=( AUTHORS MAILING-LIST NEWS README doc/sample.wgetrc )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-openssl-pkg-config.patch
+	epatch "${FILESDIR}"/${P}-no-gets.patch
 	eautoreconf
 }
 
