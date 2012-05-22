@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13781 2012/05/22 08:16:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13782 2012/05/22 08:58:43 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,8 +32,8 @@
 #--- END OF EXAMPLES ---
 
 # Michael Weber <xmw@gentoo.org> (22 May 2012)
-# Masked for removal in 30 days. 
-# Replaced by x11-wm/xpra.
+# Masked for removal in 30 days.
+# Replaced by x11-wm/xpra. 
 x11-wm/parti
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 May 2012)
