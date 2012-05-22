@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmtp/gmtp-1.3.1.ebuild,v 1.1 2012/04/13 16:46:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmtp/gmtp-1.3.1.ebuild,v 1.2 2012/05/22 16:30:44 ssuominen Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ DEPEND="x11-libs/gtk+
 gnome-base/gconf
 media-libs/libmtp
 media-libs/libid3tag
-dev-libs/libusb
+virtual/libusb
 media-libs/flac
 media-libs/libvorbis"
 
