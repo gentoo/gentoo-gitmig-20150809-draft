@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.148 2012/05/20 09:59:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.149 2012/05/22 06:57:07 jdhore Exp $
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> cfengine-2.2.10-r4.ebuild,
+  cfengine-3.2.4.ebuild:
+  marked x86 per bug 416433
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> cfengine-3.2.4.ebuild:
   Stable for amd64, wrt bug #416433
