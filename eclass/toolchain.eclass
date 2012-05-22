@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.538 2012/05/18 04:59:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.539 2012/05/22 05:08:29 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -842,12 +842,7 @@ gcc-multilib-configure() {
 	if [[ -n ${list} ]] ; then
 		case ${CTARGET} in
 		x86_64*)
-			# drop the 4.6.2 stuff once 4.7 goes stable
-			if tc_version_is_at_least 4.7 ||
-			   ( tc_version_is_at_least 4.6.2 && has x32 $(get_all_abis) )
-			then
-				confgcc+=" --with-multilib-list=${list:1}"
-			fi
+			tc_version_is_at_least 4.7 && confgcc+=" --with-multilib-list=${list:1}"
 			;;
 		esac
 	fi
@@ -979,7 +974,7 @@ gcc-compiler-configure() {
 		amd64)
 			# drop the older/ABI checks once this get's merged into some
 			# version of gcc upstream
-			if [[ ${PV} == "4.6.2" ]] && has x32 $(get_all_abis) ; then
+			if tc_version_is_at_least 4.7 && has x32 $(get_all_abis) ; then
 				confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
 			fi
 			;;
@@ -1925,10 +1920,7 @@ setup_multilib_osdirnames() {
 
 	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
 		einfo "updating multilib directories to be: ${libdirs}"
-		# drop the 4.6.2 stuff once 4.7 goes stable
-		if tc_version_is_at_least 4.7 ||
-		   ( tc_version_is_at_least 4.6.2 && has x32 $(get_all_abis) )
-		then
+		if tc_version_is_at_least 4.7 ; then
 			set -- -e '/^MULTILIB_OSDIRNAMES.*lib32/s:[$][(]if.*):../lib32:'
 		else
 			set -- -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:"
