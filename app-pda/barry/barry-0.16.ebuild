@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.12 2012/05/03 20:20:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.13 2012/05/22 16:39:13 ssuominen Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="boost doc gui"
 
-RDEPEND="dev-libs/libusb:0
+RDEPEND="virtual/libusb:0
 	dev-libs/openssl
 	sys-libs/zlib
 	boost?	( >=dev-libs/boost-1.33 )

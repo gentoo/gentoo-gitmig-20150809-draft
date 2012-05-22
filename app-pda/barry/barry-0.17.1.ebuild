@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.17.1.ebuild,v 1.2 2012/05/03 20:20:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.17.1.ebuild,v 1.3 2012/05/22 16:39:13 ssuominen Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="boost doc gui opensync nls static-libs"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-libs/libusb:0
+	virtual/libusb:0
 	dev-libs/openssl
 	sys-libs/zlib
 	>=dev-cpp/libxmlpp-2.6
