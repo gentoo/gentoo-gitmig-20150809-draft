@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.72 2012/05/11 15:43:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.73 2012/05/22 08:50:27 blueness Exp $
+
+  22 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  xf86-input-synaptics-1.6.1.ebuild:
+  Keyword mips
 
 *xf86-input-synaptics-1.6.1 (11 May 2012)
 
