@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.4.1.ebuild,v 1.8 2012/05/17 18:07:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.4.1.ebuild,v 1.9 2012/05/22 10:55:41 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
-EINTLTOOLIZE=yes
 inherit xfconf
 
 DESCRIPTION="a frontend to easily manage connections to remote filesystems using GIO/GVfs"
