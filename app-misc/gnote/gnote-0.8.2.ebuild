@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.8.2.ebuild,v 1.3 2012/05/20 20:52:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.8.2.ebuild,v 1.4 2012/05/22 08:08:02 jdhore Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/Gnote"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="applet debug"
 
 COMMON_DEPEND=">=x11-libs/gtk+-3.0:3

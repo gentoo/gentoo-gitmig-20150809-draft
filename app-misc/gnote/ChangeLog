@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.18 2012/05/20 20:52:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.19 2012/05/22 08:08:02 jdhore Exp $
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> gnote-0.7.4.ebuild,
+  gnote-0.8.2.ebuild:
+  marked x86 per bug 414983
 
   20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnote-0.8.2.ebuild,
   gnote-0.8.2-r10.ebuild, gnote-0.8.3.ebuild:
