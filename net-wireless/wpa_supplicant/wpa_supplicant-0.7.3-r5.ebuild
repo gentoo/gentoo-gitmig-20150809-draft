@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.17 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.18 2012/05/22 07:17:10 gurligebis Exp $
 
 EAPI=4
 
@@ -88,6 +88,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-dbus-api-changes.patch"
 	# bug (374089)
 	epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
+	# bug (409285)
+	epatch "${FILESDIR}/wpa_supplicant-gcc470.patch"
 }
 
 src_configure() {

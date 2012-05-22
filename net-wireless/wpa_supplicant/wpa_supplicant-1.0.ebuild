@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0.ebuild,v 1.1 2012/05/15 09:25:39 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0.ebuild,v 1.2 2012/05/22 07:17:10 gurligebis Exp $
 
 EAPI=4
 
@@ -86,6 +86,9 @@ src_prepare() {
 
 	# bug (320097)
 	epatch "${FILESDIR}/${P}-do-not-call-dbus-functions-with-NULL-path.patch"
+
+	# bug (409285)
+	epatch "${FILESDIR}/wpa_supplicant-gcc470.patch"
 
 	# TODO - NEED TESTING TO SEE IF STILL NEEDED, NOT COMPATIBLE WITH 1.0 OUT OF THE BOX,
 	# SO WOULD BE NICE TO JUST DROP IT, IF IT IS NOT NEEDED.
