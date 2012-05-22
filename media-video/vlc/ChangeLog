@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.799 2012/05/21 05:21:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.800 2012/05/22 14:04:03 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  Change order of USE="postproc" to || ( media-video/ffmpeg
+  media-libs/libpostproc )
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org> vlc-1.1.13.ebuild:
   Remove USE="nsplugin" in favour of media-plugins/npapi-vlc (and because
