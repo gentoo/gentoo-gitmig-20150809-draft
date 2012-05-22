@@ -1,28 +1,30 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.78.ebuild,v 1.2 2011/11/28 22:25:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.80.ebuild,v 1.1 2012/05/22 17:28:09 bicatali Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils cmake-utils
 
+# version release, check http://code.google.com/p/bullet/downloads/list
+MYP=${P}-rev2531
+
 DESCRIPTION="Continuous Collision Detection and Physics Library"
 HOMEPAGE="http://www.bulletphysics.com/"
-SRC_URI="http://bullet.googlecode.com/files/${P}-r2387.tgz"
+SRC_URI="http://bullet.googlecode.com/files/${MYP}.tgz"
 
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="doc double-precision examples extras"
 
-RDEPEND="
-	media-libs/freeglut
-	virtual/opengl"
+RDEPEND="virtual/opengl
+	media-libs/freeglut"
 DEPEND="${RDEPEND}"
 
-PATCHES=(
-	"${FILESDIR}/${P}"-soversion.patch
-	)
+PATCHES=( "${FILESDIR}"/${PN}-2.78-soversion.patch )
+
+S="${WORKDIR}/${MYP}"
 
 src_configure() {
 	mycmakeargs=(
@@ -40,13 +42,9 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	dodoc README ChangeLog AUTHORS
-	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins *.pdf || die
-	fi
+	use doc && dodoc *.pdf
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins -r Extras Demos || die
+		doins -r Extras Demos
 	fi
 }
