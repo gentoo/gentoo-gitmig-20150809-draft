@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-1.0.ebuild,v 1.3 2012/05/04 07:36:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-1.0.ebuild,v 1.4 2012/05/22 13:26:18 xmw Exp $
 
-EAPI=2
+EAPI=4
 
 inherit autotools eutils
 
@@ -34,6 +34,8 @@ S="${WORKDIR}/${P/-/-utils-}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-errno.patch
+	epatch "${FILESDIR}"/${P}-bzip2.patch
+	eautoreconf
 }
 
 src_configure() {
@@ -42,12 +44,12 @@ src_configure() {
 		--enable-compress \
 		$(use_enable crypt encrypt) \
 		$(use_enable fbsplash) \
-		$(use_enable threads) \
-		|| die
+		$(use_enable threads)
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	dodir etc
+	emake DESTDIR="${D}" install
 }
 
 pkg_postinst() {

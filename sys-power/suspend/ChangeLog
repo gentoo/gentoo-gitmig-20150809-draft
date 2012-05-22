@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/suspend
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.22 2012/05/04 07:36:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.23 2012/05/22 13:26:18 xmw Exp $
+
+  22 May 2012; Michael Weber <xmw@gentoo.org> suspend-1.0.ebuild,
+  +files/suspend-1.0-bzip2.patch:
+  Fix freetype[bzip2] link problem (bug 416955, thanks tokiclover)
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> suspend-0.8-r1.ebuild,
   suspend-1.0.ebuild:
