@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.57 2012/05/20 21:32:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.58 2012/05/22 00:03:40 jdhore Exp $
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> kicad-20120119_p3256.ebuild:
+  marked x86 per bug 413829
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> kicad-20120119_p3256.ebuild:
   Stable for amd64, wrt bug #413829
