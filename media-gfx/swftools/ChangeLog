@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/swftools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.40 2012/04/15 10:49:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.41 2012/05/22 11:12:59 pacho Exp $
+
+  22 May 2012; Pacho Ramos <pacho@gentoo.org>
+  files/swftools-0.9.2_general.patch, swftools-0.9.2.ebuild:
+  Fix compilation due some pdf parts still not skipped, bug #416071 by Rodrigo
+  Severo and fix by László Szalma.
 
 *swftools-0.9.2 (15 Apr 2012)
 

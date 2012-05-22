@@ -21,8 +21,8 @@ diff -urB swftools-0.9.2.old/swfs/Makefile.in swftools-0.9.2.jo/swfs/Makefile.in
 -	$(LN_S) $(pkgdatadir)/swfs/simple_viewer.swf $(pkgdatadir)/swfs/default_viewer.swf
 -	rm -f $(pkgdatadir)/swfs/default_loader.swf -o -L $(pkgdatadir)/swfs/default_loader.swf
 -	$(LN_S) $(pkgdatadir)/swfs/tessel_loader.swf $(pkgdatadir)/swfs/default_loader.swf
-+	$(LN_S) -r $(pkgdatadir)/swfs/simple_viewer.swf $(pkgdatadir)/swfs/default_viewer.swf
-+	$(LN_S) -r $(pkgdatadir)/swfs/tessel_loader.swf $(pkgdatadir)/swfs/default_loader.swf
++	cd $(pkgdatadir)/swfs; ${LN_S} simple_viewer.swf default_viewer.swf
++	cd $(pkgdatadir)/swfs; ${LN_S} tessel_loader.swf default_loader.swf
  		
  uninstall:
  	$(UNINSTALL_DATA) $(pkgdatadir)/swfs/simple_viewer.swf

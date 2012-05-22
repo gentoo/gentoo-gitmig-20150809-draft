@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.9.2.ebuild,v 1.1 2012/04/15 10:49:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.9.2.ebuild,v 1.2 2012/05/22 11:12:59 pacho Exp $
 
 EAPI=4
 inherit eutils
@@ -15,11 +15,9 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/t1lib-1.3.1
-	app-text/poppler
 	media-libs/freetype
 	virtual/jpeg"
 DEPEND="${RDEPEND}
-	>=sys-apps/coreutils-8.16
 	!<media-libs/ming-0.4.0_rc2"
 
 src_prepare() {
@@ -34,8 +32,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake INCLUDES="-I/usr/include/poppler" \
-		FLAGS="${CFLAGS}"
+	emake FLAGS="${CFLAGS}"
 }
 
 src_install() {
