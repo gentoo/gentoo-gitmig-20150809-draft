@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.112 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.113 2012/05/22 00:57:53 steev Exp $
+
+*kismet-2011.03.2-r2 (22 May 2012)
+
+  22 May 2012; Steev Klimaszewski <steev@gentoo.org>
+  +kismet-2011.03.2-r2.ebuild:
+  Revision bump, remove ncurses useflag in favor of client, to simplify ebuild.
+  Also no longer require linux-info eclass since the stable linux headers are
+  no longer impossible to build against.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> kismet-2010.01.1.ebuild,
   kismet-2010.01.1-r1.ebuild, kismet-2011.03.2-r1.ebuild:
