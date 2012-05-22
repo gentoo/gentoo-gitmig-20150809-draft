@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.15.ebuild,v 1.5 2011/01/07 16:00:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.15.ebuild,v 1.6 2012/05/22 09:26:30 ssuominen Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,8 +17,7 @@ KEYWORDS="~amd64 ia64 ppc ~sparc x86"
 IUSE="pdf threads"
 
 DEPEND=""
-RDEPEND="dev-python/4suite
-	pdf? ( dev-python/reportlab )
+RDEPEND="pdf? ( dev-python/reportlab )
 	threads? ( dev-python/twisted )"
 RESTRICT_PYTHON_ABIS="3.*"
 
