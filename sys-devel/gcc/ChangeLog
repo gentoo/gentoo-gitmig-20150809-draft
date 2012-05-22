@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.877 2012/05/22 04:46:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.878 2012/05/22 05:07:54 dirtyepic Exp $
+
+  22 May 2012; Ryan Hill <dirtyepic@gentoo.org> gcc-4.6.0.ebuild,
+  gcc-4.6.1-r1.ebuild, gcc-4.6.2.ebuild, gcc-4.6.3.ebuild:
+  Keyword for all but amd64.
 
 *gcc-4.7.0 (22 May 2012)
 
