@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.20 2011/10/04 19:28:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.21 2012/05/22 16:29:31 ssuominen Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.sane-project.org/"
 RDEPEND="virtual/jpeg
 	amd64? ( sys-libs/libieee1284 )
 	x86? ( sys-libs/libieee1284 )
-	usb? ( dev-libs/libusb:0 )
+	usb? ( virtual/libusb:0 )
 	gphoto2? ( media-libs/libgphoto2 )
 	v4l? ( sys-kernel/linux-headers )"
 
