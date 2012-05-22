@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.7.0.ebuild,v 1.2 2012/05/05 08:58:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.7.0.ebuild,v 1.3 2012/05/22 10:04:23 ssuominen Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Tools for generating DVD files to be played on standalone DVD players"
 HOMEPAGE="http://dvdauthor.sourceforge.net/"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="graphicsmagick"
 
-RDEPEND="dev-libs/fribidi
+RDEPEND=">=dev-libs/fribidi-0.19.2
 	dev-libs/libxml2
 	>=media-libs/freetype-2
 	media-libs/libdvdread
@@ -33,4 +33,9 @@ src_prepare() {
 		sed -i -e 's:ExportImagePixels:dIsAbLeAuToMaGiC&:' configure
 
 	epatch "${FILESDIR}"/${P}-libpng15.patch
+}
+
+src_configure() {
+	append-cppflags "$($(tc-getPKG_CONFIG) --cflags fribidi)" #417041
+	econf
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdauthor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.43 2012/05/05 08:58:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.44 2012/05/22 10:04:23 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> dvdauthor-0.7.0.ebuild:
+  Use CFLAGS from fribidi.pc to ensure check in configure.ac for FriBidiParType
+  (FRIBIDI2) is working wrt #417041 by "Nikoli"
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> dvdauthor-0.6.18.ebuild,
   dvdauthor-0.7.0.ebuild:
