@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26-r1.ebuild,v 1.2 2012/03/04 15:35:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26-r1.ebuild,v 1.3 2012/05/22 22:14:55 vapier Exp $
 
 EAPI="3"
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-xattr.patch #382067
+	epatch "${FILESDIR}"/${P}-no-gets.patch
 	eautoreconf
 
 	if ! use userland_GNU ; then

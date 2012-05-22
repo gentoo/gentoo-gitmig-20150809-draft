@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.172 2012/03/19 19:02:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.173 2012/05/22 22:14:55 vapier Exp $
+
+  22 May 2012; Mike Frysinger <vapier@gentoo.org> tar-1.26-r1.ebuild,
+  +files/tar-1.26-no-gets.patch:
+  Fix building with glibc-2.16+.
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> tar-1.26.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #358749
