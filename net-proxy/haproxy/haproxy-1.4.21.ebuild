@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.4.21.ebuild,v 1.1 2012/05/22 13:50:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.4.21.ebuild,v 1.2 2012/05/22 18:19:39 johu Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://haproxy.1wt.eu/download/$(get_version_component_range 1-2)/src/$
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="examples pcre vim-syntax"
 
 DEPEND="pcre? ( dev-libs/libpcre )"
