@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.29.0.ebuild,v 1.2 2011/08/13 07:15:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.29.0.ebuild,v 1.3 2012/05/22 16:06:13 ssuominen Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ IUSE="curl debug bluetooth irda mysql postgres dbi nls python usb"
 
 RDEPEND="bluetooth? ( net-wireless/bluez )
 	curl? ( net-misc/curl )
-	usb? ( dev-libs/libusb:1 )
+	usb? ( virtual/libusb:1 )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-server )
 	dbi? ( >=dev-db/libdbi-0.8.3 )

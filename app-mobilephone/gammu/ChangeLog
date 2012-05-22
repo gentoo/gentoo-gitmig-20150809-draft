@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gammu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.91 2011/08/13 07:15:53 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.92 2012/05/22 16:06:13 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> gammu-1.28.0.ebuild,
+  gammu-1.29.0.ebuild, gammu-1.30.0.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
 
   13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> gammu-1.25.0-r1.ebuild,
   gammu-1.28.0.ebuild, gammu-1.29.0.ebuild, gammu-1.30.0.ebuild:
