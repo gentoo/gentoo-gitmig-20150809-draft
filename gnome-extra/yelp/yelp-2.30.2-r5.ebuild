@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r5.ebuild,v 1.7 2012/05/05 06:25:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r5.ebuild,v 1.8 2012/05/22 03:18:43 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -76,7 +76,6 @@ src_prepare() {
 	# Ensure schema is regenerated properly to prevent warnings
 	rm -f data/yelp.schemas || die
 
-	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 
 	# strip stupid options in configure, see bug #196621
