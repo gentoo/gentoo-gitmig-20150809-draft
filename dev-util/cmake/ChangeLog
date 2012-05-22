@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.200 2012/05/16 15:41:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.201 2012/05/22 21:07:26 ranger Exp $
+
+  22 May 2012; Brent Baude <ranger@gentoo.org> cmake-2.8.7-r5.ebuild:
+  Marking cmake-2.8.7-r5 ppc for bug 413807
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> cmake-2.8.7-r5.ebuild:
   Stable for HPPA (bug #413807).
