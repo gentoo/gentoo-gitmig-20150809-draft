@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.428 2012/05/13 11:34:57 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.429 2012/05/22 16:41:57 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> gnupg-2.0.17-r2.ebuild,
+  gnupg-2.0.17-r3.ebuild, gnupg-2.0.18.ebuild, gnupg-2.0.19.ebuild:
+  Remove dev-libs/ from elog message for libusb.
 
   13 May 2012; <swift@gentoo.org> gnupg-1.4.11.ebuild, gnupg-1.4.12.ebuild,
   gnupg-2.0.17.ebuild, gnupg-2.0.17-r2.ebuild, gnupg-2.0.17-r3.ebuild,
