@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.442 2012/05/09 04:31:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.443 2012/05/22 19:58:59 vapier Exp $
+
+  22 May 2012; Mike Frysinger <vapier@gentoo.org> binutils-2.22-r1.ebuild,
+  binutils-2.22.52.0.1.ebuild, binutils-2.22.52.0.2.ebuild,
+  binutils-2.22.52.0.3.ebuild:
+  Drop patch-2.6 requirement now that the profile pulls it in.
 
 *binutils-2.22.52.0.3 (09 May 2012)
 
