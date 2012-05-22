@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.152 2012/05/22 15:27:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.153 2012/05/22 19:47:43 kensington Exp $
+
+  22 May 2012; Michael Palimaka <kensington@gentoo.org> qt-webkit-4.8.2.ebuild:
+  Fix build with GCC 4.7, wrt bug #417147 by Joe Kappus <joecool1029@gmail.com>.
 
 *qt-webkit-4.8.2 (22 May 2012)
 
