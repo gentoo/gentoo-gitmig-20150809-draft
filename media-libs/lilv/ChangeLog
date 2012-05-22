@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lilv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/ChangeLog,v 1.7 2012/05/05 08:02:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/ChangeLog,v 1.8 2012/05/22 16:09:15 johu Exp $
+
+  22 May 2012; Johannes Huber <johu@gentoo.org> lilv-0.14.2.ebuild:
+  Add ~x86 wrt bug #413037
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> lilv-0.5.0.ebuild,
   lilv-0.14.2.ebuild:
