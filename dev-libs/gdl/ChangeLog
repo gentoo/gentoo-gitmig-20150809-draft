@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.71 2012/05/16 14:58:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.72 2012/05/22 06:31:48 tetromino Exp $
+
+*gdl-3.4.2 (22 May 2012)
+
+  22 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -gdl-3.0.2.ebuild,
+  +gdl-3.4.2.ebuild:
+  Version bump for gnome-3.4. Drop old.
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> gdl-3.2.0.ebuild:
   Stable for HPPA (bug #410611).
