@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.86 2012/05/08 15:57:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.87 2012/05/22 09:49:35 johu Exp $
+
+  22 May 2012; Johannes Huber <johu@gentoo.org> DateManip-6.310.0.ebuild:
+  Stable for x86, wrt bug #413009
 
   08 May 2012; Brent Baude <ranger@gentoo.org> DateManip-6.310.0.ebuild:
   Marking DateManip-6.310.0 ppc64 for bug 413009
