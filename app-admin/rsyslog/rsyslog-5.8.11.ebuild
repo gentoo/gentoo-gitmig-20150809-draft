@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.7.ebuild,v 1.2 2012/05/03 18:02:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.11.ebuild,v 1.1 2012/05/22 12:28:49 ultrabug Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rsyslog.com/"
 SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
 	zeromq?	( https://github.com/aggregateknowledge/rsyslog-zeromq/tarball/44b551abc29dd5b541884bd51b45b413855a93d8 -> ${PN}-zeromq.tar.gz )"
 
-LICENSE="GPL-3 LGPL-3"
+LICENSE="GPL-3 LGPL-3 Apache-2.0"
 KEYWORDS="~amd64 ~arm ~hppa ~sparc ~x86"
 SLOT="0"
 IUSE="dbi debug doc extras kerberos mysql oracle postgres relp snmp ssl static-libs zeromq zlib"
@@ -24,7 +24,7 @@ RDEPEND="dbi? ( dev-db/libdbi )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	relp? ( >=dev-libs/librelp-0.1.3 )
 	snmp? ( net-analyzer/net-snmp )
-	ssl? ( net-libs/gnutls )
+	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
 	zeromq? ( net-libs/zeromq )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
@@ -178,12 +178,12 @@ pkg_config() {
 			--outfile "${CERTDIR}/${PN}_ca.privkey.pem" &>/dev/null
 		chmod 400 "${CERTDIR}/${PN}_ca.privkey.pem"
 
-		cat > "${T}/${PF}.$$" <<_EOF
+		cat > "${T}/${PF}.$$" <<- _EOF
 		cn = Portage automated CA
 		ca
 		cert_signing_key
 		expiration_days = 3650
-_EOF
+		_EOF
 
 		certtool --generate-self-signed \
 			--load-privkey "${CERTDIR}/${PN}_ca.privkey.pem" \
@@ -201,12 +201,12 @@ _EOF
 			--outfile "${CERTDIR}/${PN}_${CN}.key.pem" &>/dev/null
 		chmod 400 "${CERTDIR}/${PN}_${CN}.key.pem"
 
-		cat > "${T}/${PF}.$$" <<_EOF
+		cat > "${T}/${PF}.$$" <<- _EOF
 		cn = ${CN}
 		tls_www_server
 		dns_name = ${CN}
 		expiration_days = 3650
-_EOF
+		_EOF
 
 		certtool --generate-certificate \
 			--outfile "${CERTDIR}/${PN}_${CN}.cert.pem" \
@@ -230,12 +230,12 @@ _EOF
 		--outfile "${CERTDIR}/${PN}_${CN}.key.pem" &>/dev/null
 	chmod 400 "${CERTDIR}/${PN}_${CN}.key.pem"
 
-	cat > "${T}/${PF}.$$" <<_EOF
+	cat > "${T}/${PF}.$$" <<- _EOF
 	cn = ${CN}
 	tls_www_client
 	dns_name = ${CN}
 	expiration_days = 3650
-_EOF
+	_EOF
 
 	certtool --generate-certificate \
 		--outfile "${CERTDIR}/${PN}_${CN}.cert.pem" \

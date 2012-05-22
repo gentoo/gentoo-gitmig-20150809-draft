@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.7 2012/05/03 18:02:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.8 2012/05/22 12:28:49 ultrabug Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="dbi debug doc extras gnutls kerberos mysql oracle postgres relp snmp stati
 
 RDEPEND="dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
-	gnutls? ( net-libs/gnutls )
+	gnutls? ( net-libs/gnutls dev-libs/libgcrypt )
 	kerberos? ( virtual/krb5 )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )

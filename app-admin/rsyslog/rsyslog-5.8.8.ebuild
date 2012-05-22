@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.8.ebuild,v 1.2 2012/05/10 17:26:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.8.ebuild,v 1.3 2012/05/22 12:28:49 ultrabug Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="dbi? ( dev-db/libdbi )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	relp? ( >=dev-libs/librelp-0.1.3 )
 	snmp? ( net-analyzer/net-snmp )
-	ssl? ( net-libs/gnutls )
+	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
 	zeromq? ( net-libs/zeromq )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
