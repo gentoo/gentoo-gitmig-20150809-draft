@@ -1,15 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/xfce4-quicklauncher-plugin-1.9.4-r1.ebuild,v 1.11 2012/05/05 07:20:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/xfce4-quicklauncher-plugin-1.9.4-r1.ebuild,v 1.12 2012/05/22 10:52:14 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
-EINTLTOOLIZE=yes
 inherit xfconf
 
 DESCRIPTION="A quicklauncher plug-in for the Xfce panel"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-quicklauncher-plugin"
-SRC_URI="mirror://xfce/src/panel-plugins/${PN}/1.9/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/panel-plugins/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,12 +18,16 @@ IUSE="debug"
 RDEPEND=">=xfce-base/xfce4-panel-4.8
 	>=xfce-base/libxfcegui4-4.8"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	dev-util/intltool"
+	dev-util/intltool
+	virtual/pkgconfig"
 
 pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${P}-X-XFCE-Module-Path.patch )
-	XFCONF=( $(use_enable debug) )
+
+	XFCONF=(
+		$(use_enable debug)
+		)
+
 	DOCS=( AUTHORS ChangeLog TODO )
 }
 
@@ -32,5 +35,6 @@ src_prepare() {
 	sed -i \
 		-e "/^AC_INIT/s/quicklauncher_version()/quicklauncher_version/" \
 		configure.ac || die
+
 	xfconf_src_prepare
 }
