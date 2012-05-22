@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6580 2012/05/21 13:47:34 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6581 2012/05/22 05:09:29 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 May 2012; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Unmask GCC 4.6.
 
   21 May 2012; Michael Pagano <mpagano@gentoo.org> package.mask:
   Remove portpeek mask
