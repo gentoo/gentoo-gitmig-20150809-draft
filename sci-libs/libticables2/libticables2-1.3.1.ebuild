@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.1.ebuild,v 1.2 2012/05/04 08:22:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.1.ebuild,v 1.3 2012/05/22 16:32:37 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc nls static-libs usb"
 
 RDEPEND="dev-libs/glib:2
-	usb? ( dev-libs/libusb )
+	usb? ( virtual/libusb )
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
