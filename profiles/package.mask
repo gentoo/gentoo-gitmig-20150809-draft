@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13784 2012/05/22 11:31:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13785 2012/05/22 19:55:12 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -363,16 +363,6 @@ dev-ruby/ruby-panel-applet2
 #   - Upstream retired the old package/name
 # Removal in 30 days - see bug 377825
 media-sound/squeezeboxserver
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (10 Apr 2012)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-20
->=www-client/google-chrome-20
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (10 Apr 2012)
-# Mask v8 versions used for www-client/chromium dev channel releases.
->=dev-lang/v8-3.10
 
 # Ulrich Mueller <ulm@gentoo.org> (09 Apr 2012)
 # Christian Faulhammer <fauli@gentoo.org>
