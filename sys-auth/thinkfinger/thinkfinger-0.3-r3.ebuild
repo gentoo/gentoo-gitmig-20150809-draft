@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r3.ebuild,v 1.4 2012/05/04 18:57:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r3.ebuild,v 1.5 2012/05/22 16:20:16 ssuominen Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug pam static-libs"
 
-RDEPEND=">=dev-libs/libusb-0.1.12:0
+RDEPEND="virtual/libusb:0
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool

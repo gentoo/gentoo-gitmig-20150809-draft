@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.9 2012/05/04 18:57:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.10 2012/05/22 16:18:35 ssuominen Exp $
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> libfprint-0.4.0.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libfprint-0.4.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

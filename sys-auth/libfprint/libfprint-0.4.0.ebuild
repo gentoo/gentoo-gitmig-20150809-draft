@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.4.0.ebuild,v 1.5 2012/05/04 18:57:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.4.0.ebuild,v 1.6 2012/05/22 16:18:35 ssuominen Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug static-libs"
 
-RDEPEND="dev-libs/libusb:1
+RDEPEND="virtual/libusb:1
 	dev-libs/nss
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] x11-libs/gdk-pixbuf )"
 DEPEND="${RDEPEND}
