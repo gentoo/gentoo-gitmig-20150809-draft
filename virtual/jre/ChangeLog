@@ -1,6 +1,11 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.35 2012/05/10 18:34:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.36 2012/05/23 18:40:38 sera Exp $
+
+*jre-1.5.0-r1 (23 May 2012)
+
+  23 May 2012; Ralph Sennhauser <sera@gentoo.org> +jre-1.5.0-r1.ebuild:
+  Add jamvm to jre provider. #416819
 
   10 May 2012; Alexis Ballier <aballier@gentoo.org> jre-1.6.0.ebuild:
   keyword ~amd64-fbsd
