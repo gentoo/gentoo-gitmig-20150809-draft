@@ -32,5 +32,8 @@ a database of telephone calls or e-mail messages
 	<flag name='lasi'>
 		Enables PostScript output via <pkg>media-libs/lasi</pkg> library
 	</flag>
+	<flag name='devil'>Enables support for DevIL</flag>
+	<flag name='gs'>Builds graphviz against ghostscript</flag>
+	<flag name='gts'>Enables support for gts</flag>
 </use>
 </pkgmetadata>

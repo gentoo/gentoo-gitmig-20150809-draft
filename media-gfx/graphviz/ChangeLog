@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.244 2012/05/12 04:08:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.245 2012/05/23 19:20:08 axs Exp $
+
+*graphviz-2.28.0 (23 May 2012)
+
+  23 May 2012; Ian Stakenvicius <axs@gentoo.org> +graphviz-2.28.0.ebuild,
+  +files/graphviz-2.28.0-Xaw-configure.patch,
+  +files/graphviz-2.28.0-automake-1.11.2.patch, metadata.xml:
+  initial commit of 2.28 with empty keywords while testing ensues
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> graphviz-2.26.3-r4.ebuild:
   add workaround to build on FreeBSD and keyword ~amd64-fbsd
