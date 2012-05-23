@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.37 2012/05/18 07:50:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.38 2012/05/23 13:20:50 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> zope-interface-3.8.0.ebuild:
+  Marking zope-interface-3.8.0 ppc64 for bug 415871
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> zope-interface-3.8.0.ebuild:
   marked x86 per bug 415871
