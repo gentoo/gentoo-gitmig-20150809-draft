@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.69 2012/05/13 22:45:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.70 2012/05/23 22:56:23 vapier Exp $
+
+  23 May 2012; Mike Frysinger <vapier@gentoo.org> privoxy-3.0.12.ebuild,
+  privoxy-3.0.13_beta.ebuild, privoxy-3.0.14_beta.ebuild,
+  privoxy-3.0.15_beta.ebuild, privoxy-3.0.16.ebuild, privoxy-3.0.17.ebuild,
+  privoxy-3.0.19.ebuild:
+  Inherit user for enewuser/etc...
 
   13 May 2012; Jeff Horelick <jdhore@gentoo.org> privoxy-3.0.19.ebuild:
   marked x86 per bug 415763

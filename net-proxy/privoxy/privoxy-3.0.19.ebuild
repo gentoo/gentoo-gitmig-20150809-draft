@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.19.ebuild,v 1.3 2012/05/13 22:45:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.19.ebuild,v 1.4 2012/05/23 22:56:23 vapier Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs autotools
+inherit eutils toolchain-funcs autotools user
 
 [ "${PV##*_}" = "beta" ] &&
 	PRIVOXY_STATUS="beta" ||
