@@ -1,6 +1,9 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.27 2012/05/22 20:56:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.28 2012/05/23 12:56:10 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> stardict-3.0.3-r2.ebuild:
+  Marking stardict-3.0.3-r2 ppc64 for bug 416747
 
   22 May 2012; Brent Baude <ranger@gentoo.org> stardict-3.0.3-r2.ebuild:
   Marking stardict-3.0.3-r2 ppc for bug 416747
