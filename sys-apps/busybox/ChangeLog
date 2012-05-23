@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.306 2012/05/14 04:16:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.307 2012/05/23 23:04:42 vapier Exp $
+
+  23 May 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Drop now unused nfs local USE flag.
 
   14 May 2012; Mike Frysinger <vapier@gentoo.org> busybox-1.20.0.ebuild,
   files/ginit.c:
