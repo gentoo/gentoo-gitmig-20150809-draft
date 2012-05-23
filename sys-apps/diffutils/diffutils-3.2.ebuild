@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-3.2.ebuild,v 1.4 2012/05/22 22:22:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-3.2.ebuild,v 1.5 2012/05/23 23:05:12 vapier Exp $
 
 EAPI=4
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Tools to make diffs and compare files"
 HOMEPAGE="http://www.gnu.org/software/diffutils/"
