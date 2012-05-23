@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/ngspice
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ChangeLog,v 1.1 2011/07/15 22:45:58 calchan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ChangeLog,v 1.2 2012/05/23 18:43:02 calchan Exp $
+
+*ngspice-24 (23 May 2012)
+
+  23 May 2012; Denis Dupeyron <calchan@gentoo.org> +ngspice-24.ebuild:
+  Version Bump.
 
 *ngspice-23 (15 Jul 2011)
 
