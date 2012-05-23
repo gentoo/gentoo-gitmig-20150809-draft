@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.262 2012/05/16 13:00:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.263 2012/05/23 10:39:14 ago Exp $
+
+  23 May 2012; Agostino Sarubbo <ago@gentoo.org> audacious-3.2.2-r1.ebuild:
+  Stable for amd64, wrt bug #417143
 
   16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -audacious-3.0.3-r1.ebuild:
   Drop audacious version that has plugins which do not build on current stable.
