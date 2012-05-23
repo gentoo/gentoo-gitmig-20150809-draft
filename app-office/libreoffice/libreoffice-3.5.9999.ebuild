@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.45 2012/05/13 21:36:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.46 2012/05/23 08:45:10 scarabeus Exp $
 
 EAPI=4
 
@@ -227,7 +227,7 @@ pkg_pretend() {
 	if use postgres; then
 		 pgslot=$(postgresql-config show)
 		 if [[ ${pgslot//.} < 90 ]] ; then
-		 	eerror "PostgreSQL slot must be set to 9.0 or higher."
+			eerror "PostgreSQL slot must be set to 9.0 or higher."
 			eerror "    postgresql-config set 9.0"
 			die "PostgreSQL slot is not set to 9.0 or higher."
 		 fi
