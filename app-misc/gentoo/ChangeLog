@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.110 2012/05/23 05:29:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.111 2012/05/23 10:38:30 ago Exp $
+
+  23 May 2012; Agostino Sarubbo <ago@gentoo.org> gentoo-0.19.13.ebuild:
+  Stable for amd64, wrt bug #417189
 
   23 May 2012; Jeff Horelick <jdhore@gentoo.org> gentoo-0.19.13.ebuild:
   marked x86 per bug 417189
