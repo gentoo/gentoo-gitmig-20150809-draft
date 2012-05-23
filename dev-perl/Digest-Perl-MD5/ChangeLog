@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-Perl-MD5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.3 2012/05/07 09:22:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.4 2012/05/23 13:27:23 johu Exp $
+
+  23 May 2012; Johannes Huber <johu@gentoo.org> Digest-Perl-MD5-1.800.0.ebuild:
+  Stable for x86, wrt bug #412961
 
   07 May 2012; Agostino Sarubbo <ago@gentoo.org>
   Digest-Perl-MD5-1.800.0.ebuild:
