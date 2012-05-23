@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.78 2012/05/21 12:19:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.79 2012/05/23 13:32:15 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> mercurial-2.1.1.ebuild:
+  Marking mercurial-2.1.1 ppc64 for bug 414077
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mercurial-2.1.1.ebuild:
   x86 stable wrt bug #414077
