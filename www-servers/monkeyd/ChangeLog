@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.32 2012/03/24 11:44:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.33 2012/05/23 15:42:00 blueness Exp $
+
+*monkeyd-0.33.0-r1 (23 May 2012)
+
+  23 May 2012; Anthony G. Basile <blueness@gentoo.org> -monkeyd-0.33.0.ebuild,
+  +monkeyd-0.33.0-r1.ebuild, +files/monkeyd-fix-manpage-path.patch:
+  Install man pages in the correct section
+  See: http://bugs.monkey-project.com/ticket/156
 
   24 Mar 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Adopt package

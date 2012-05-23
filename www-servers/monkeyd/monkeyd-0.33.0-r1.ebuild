@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.33.0.ebuild,v 1.2 2012/03/18 18:00:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.33.0-r1.ebuild,v 1.1 2012/05/23 15:42:00 blueness Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs depend.php multilib
+inherit eutils toolchain-funcs depend.php multilib
 
 WEBROOT=/var/www/localhost
 
@@ -27,6 +27,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-fix-manpage-path.patch"
+
 	# Don't install the banana script, it is broken as is anyway and the
 	# functionality is provided by the ${FILESDIR}/monkeyd.init.d script.
 	sed -i '/install -m 755 bin\/banana/d' configure || die "sed banana"

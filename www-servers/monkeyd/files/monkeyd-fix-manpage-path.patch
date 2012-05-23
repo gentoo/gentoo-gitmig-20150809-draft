@@ -1,0 +1,42 @@
+From 4817136af00893fd46a2993d79c7aeb9fafaa119 Mon Sep 17 00:00:00 2001
+From: Anthony G. Basile <blueness@gentoo.org>
+Date: Wed, 23 May 2012 10:53:10 -0400
+Subject: [PATCH] configure: fix #156, install man pages to the correct sections
+
+The current configure script installs the man pages banana.1, monkey.1
+and monkey-api.3 at the top level man dir, /usr/share/man, and not in
+the appropriate categories by FHS standards.  This fixes the issue.
+
+Signed-off-by: Anthony G. Basile <blueness@gentoo.org>
+---
+ configure |    7 +++++--
+ 1 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/configure b/configure
+index ab02d30..d4e8956 100755
+--- a/configure
++++ b/configure
+@@ -347,7 +347,8 @@ distclean:
+ install:
+ 	\$(MAKE) -C src all
+ 	install -d \$(BINDIR)
+-	install -d \$(MANDIR)
++	install -d \$(MANDIR)/man1
++	install -d \$(MANDIR)/man3
+ 	install -d \$(SYSCONFDIR)
+ 	install -d \${SYSCONFDIR}/sites
+ 	install -d \${SYSCONFDIR}/plugins
+@@ -362,7 +363,9 @@ install:
+ $plgconf
+ 	install -m 644 ./conf/sites/* \${SYSCONFDIR}/sites
+ $plglist
+-	install -m 644 ./man/* \$(MANDIR)
++	install -m 644 ./man/banana.1 \$(MANDIR)/man1
++	install -m 644 ./man/monkey.1 \$(MANDIR)/man1
++	install -m 644 ./man/monkey-api.3 \$(MANDIR)/man3
+ 	install -m 644 ./htdocs/*.* \$(DATADIR)
+ 	install -m 644 ./htdocs/imgs/*.* \${DATADIR}/imgs
+ 	$STRIP \$(BINDIR)/monkey
+-- 
+1.7.3.4
+
