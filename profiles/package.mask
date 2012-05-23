@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13787 2012/05/23 13:52:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13788 2012/05/23 19:02:10 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (23 May 2012)
+# Mask beta release for testing
+=net-p2p/qbittorrent-3.0.0_beta*
 
 # Aaron W. Swenson <titanofold@gentoo.org> (23 May 2012)
 # PostgreSQL 9.2 is not yet ready for production and may damage your
