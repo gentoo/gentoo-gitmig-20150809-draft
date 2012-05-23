@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.649 2012/05/22 23:20:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.650 2012/05/23 15:19:47 chithanh Exp $
+
+*xorg-server-1.11.4-r1 (23 May 2012)
+
+  23 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xorg-server-1.11-log-format-fix.patch, +xorg-server-1.11.4-r1.ebuild:
+  Add patch for security bug #412609, taken from
+  https://bugs.launchpad.net/bugs/996250
 
 *xorg-server-1.12.1.902 (22 May 2012)
 
