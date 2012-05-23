@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/polygon-2.0.4.ebuild,v 1.2 2012/04/23 20:20:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/polygon-2.0.4.ebuild,v 1.3 2012/05/23 20:39:30 ago Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="mirror://github/jraedler/Polygon2/Polygon-${PV}.zip"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=""
