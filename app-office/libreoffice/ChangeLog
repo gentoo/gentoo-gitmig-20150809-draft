@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.315 2012/05/13 21:36:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.316 2012/05/23 00:22:24 dilfridge Exp $
+
+*libreoffice-3.5.4.2 (23 May 2012)
+
+  23 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-3.5.4.2.ebuild:
+  Version bump
 
   13 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-3.5.9999.ebuild, libreoffice-9999-r2.ebuild:
