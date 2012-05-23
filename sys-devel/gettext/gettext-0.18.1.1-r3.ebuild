@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.1.1-r3.ebuild,v 1.3 2012/04/26 13:32:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.1.1-r3.ebuild,v 1.4 2012/05/23 02:12:54 vapier Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ src_prepare() {
 	epunt_cxx
 	elibtoolize
 	epatch "${FILESDIR}"/${P}-uclibc-sched_param-def.patch
+	epatch "${FILESDIR}"/${P}-no-gets.patch
 }
 
 src_configure() {
