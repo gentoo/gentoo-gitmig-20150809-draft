@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.115 2012/05/22 19:49:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.116 2012/05/23 18:09:11 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -160,8 +160,7 @@ src_prepare() {
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	sed -i '1i#define OF(x) x' \
-		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
-		chrome/common/zip*.cc || die
+		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
 
 	epatch_user
 
