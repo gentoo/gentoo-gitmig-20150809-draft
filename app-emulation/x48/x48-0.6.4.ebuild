@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.6.4.ebuild,v 1.4 2012/05/21 12:28:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.6.4.ebuild,v 1.5 2012/05/23 13:10:39 ranger Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/x48.berlios/${P}.tar.bz2"
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE="readline"
 
 RDEPEND="x11-libs/libX11

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/x48
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.25 2012/05/21 12:28:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.26 2012/05/23 13:10:39 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> x48-0.6.4.ebuild:
+  Marking x48-0.6.4 ppc64 for bug 415223
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> x48-0.6.4.ebuild:
   x86 stable wrt bug #415223
