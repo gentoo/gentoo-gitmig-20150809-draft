@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.234 2012/05/03 20:00:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.235 2012/05/23 12:11:14 scarabeus Exp $
+
+  23 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop unused local desc.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnumeric-1.10.17.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

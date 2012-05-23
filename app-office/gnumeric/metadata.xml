@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>gnome-office</herd>
 <use>
-	<flag name='gnome'>Allow Gnumeric to use GNOME specific extensions.</flag>
 	<flag name='python'>Enable python plugin loader.</flag>
 	<flag name='perl'>Enable perl plugin loader.</flag>
 </use>
