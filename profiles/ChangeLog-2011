@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog-2011,v 1.1 2012/01/02 19:23:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog-2011,v 1.2 2012/05/23 23:13:36 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -1411,6 +1411,10 @@
   17 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Mask RCs for 3.4.3 libreoffice release
 
+  16 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  +default/linux/x86/2008.0/no-nptl/deprecated:
+  Deprecate the no-nptl profile
+
   16 Aug 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask >=net-libs/libecap-0.2.0 (bug #379343).
 
@@ -1440,6 +1444,10 @@
 
   15 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Remove modemmanager from mask, it works with the 0.8 series too
+
+  14 Aug 2008; Raúl Porcel <armin76@gentoo.org>
+  -default/linux/x86/2008.0/no-nptl/deprecated, -default/linux/x86/2008.0/no-nptl/parent:
+  Remove no-nptl
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org>
   default/linux/arm/10.0/armv4/desktop/gnome/parent,
@@ -1538,6 +1546,11 @@
 
   10 Aug 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   dhcpv6 is gone
+
+  09 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> -gcc2/deprecated,
+  -default/linux/x86/gcc2/parent, -default/linux/x86/vserver/deprecated,
+  -default/linux/x86/vserver/parent:
+  Remove gcc2 and vserver wrt #361133
 
   09 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> updates/3Q-2011:
   Move kde-misc/steamcompanion to correct SLOT 4

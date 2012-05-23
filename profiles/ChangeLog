@@ -1,10 +1,35 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6589 2012/05/23 19:02:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6590 2012/05/23 23:13:36 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -default/linux/amd64/2008.0/deprecated,
+  -default/linux/amd64/2008.0/desktop/deprecated,
+  -default/linux/amd64/2008.0/desktop/parent,
+  -default/linux/amd64/2008.0/developer/deprecated,
+  -default/linux/amd64/2008.0/developer/parent,
+  -default/linux/amd64/2008.0/no-multilib/deprecated,
+  -default/linux/amd64/2008.0/no-multilib/parent,
+  -default/linux/amd64/2008.0/parent,
+  -default/linux/amd64/2008.0/server/deprecated,
+  -default/linux/amd64/2008.0/server/parent,
+  -default/linux/amd64/2008.0/server/profile.bashrc,
+  -default/linux/x86/2008.0/deprecated,
+  -default/linux/x86/2008.0/desktop/deprecated,
+  -default/linux/x86/2008.0/desktop/parent,
+  -default/linux/x86/2008.0/developer/deprecated,
+  -default/linux/x86/2008.0/developer/parent, -default/linux/x86/2008.0/parent,
+  -default/linux/x86/2008.0/server/deprecated,
+  -default/linux/x86/2008.0/server/parent,
+  -default/linux/x86/2008.0/server/profile.bashrc,
+  -releases/2008.0/make.defaults, -releases/2008.0/package.mask,
+  -releases/2008.0/parent:
+  Remove 2008.0 also for amd64 and x86. People have had more than enough time
+  to migrate.
 
   23 May 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask qbittorrent-3.0.0_beta releases for testing
