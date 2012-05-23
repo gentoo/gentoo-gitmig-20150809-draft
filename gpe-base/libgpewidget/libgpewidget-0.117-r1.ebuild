@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/libgpewidget-0.117-r1.ebuild,v 1.8 2012/03/03 20:14:56 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/libgpewidget-0.117-r1.ebuild,v 1.9 2012/05/23 13:11:44 xarthisius Exp $
 
 EAPI=2
 GPE_TARBALL_SUFFIX="bz2"
-inherit gpe autotools
+
+inherit gpe autotools eutils
 
 DESCRIPTION="A collection of widgets and other common code shared by many GPE applications."
 
