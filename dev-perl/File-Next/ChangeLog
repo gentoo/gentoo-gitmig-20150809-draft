@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-Next
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Next/ChangeLog,v 1.13 2011/09/04 11:22:49 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Next/ChangeLog,v 1.14 2012/05/23 18:32:35 tove Exp $
+
+*File-Next-1.80.0 (23 May 2012)
+
+  23 May 2012; Torsten Veller <tove@gentoo.org> +File-Next-1.80.0.ebuild:
+  Version bump
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -File-Next-1.06.ebuild:
   Cleanup
