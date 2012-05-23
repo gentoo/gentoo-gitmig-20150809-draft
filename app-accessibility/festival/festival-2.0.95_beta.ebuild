@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.0.95_beta.ebuild,v 1.3 2011/03/04 20:12:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.0.95_beta.ebuild,v 1.4 2012/05/23 23:01:52 vapier Exp $
 
 EAPI="2"
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 MY_PV=${PV/_beta/-beta}
 MY_P=${PN}-${MY_PV}
