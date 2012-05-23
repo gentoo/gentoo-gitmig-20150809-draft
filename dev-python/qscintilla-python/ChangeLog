@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.84 2012/04/24 17:02:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.85 2012/05/23 04:47:35 jdhore Exp $
+
+  23 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  qscintilla-python-2.6.1.ebuild:
+  marked x86 per bug 412929
 
   24 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
   qscintilla-python-2.6.1.ebuild:
