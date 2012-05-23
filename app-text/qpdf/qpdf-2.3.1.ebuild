@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/qpdf-2.3.1.ebuild,v 1.2 2012/02/19 10:11:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/qpdf-2.3.1.ebuild,v 1.3 2012/05/23 01:14:06 radhermit Exp $
 
 EAPI="4"
 
@@ -32,6 +32,7 @@ src_prepare() {
 	sed -i -e "/docdir/d" make/libtool.mk || die
 
 	epatch "${FILESDIR}"/${P}-libpcre-8.30.patch
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.4 2012/02/19 10:11:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.5 2012/05/23 01:14:06 radhermit Exp $
+
+  23 May 2012; Tim Harder <radhermit@gentoo.org> qpdf-2.3.1.ebuild,
+  +files/qpdf-2.3.1-gcc47.patch:
+  Fix build with gcc-4.7 (bug #413935).
 
   19 Feb 2012; Tim Harder <radhermit@gentoo.org> qpdf-2.3.1.ebuild,
   +files/qpdf-2.3.1-libpcre-8.30.patch:
