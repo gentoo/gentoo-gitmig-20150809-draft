@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.127 2012/05/21 09:59:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.128 2012/05/23 13:23:36 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> lxml-2.3.4.ebuild:
+  Marking lxml-2.3.4 ppc64 for bug 415873
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lxml-2.3.4.ebuild:
   x86 stable wrt bug #415873
