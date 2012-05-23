@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgit2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.9 2012/04/23 07:26:03 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.10 2012/05/23 00:34:10 radhermit Exp $
+
+*libgit2-0.17.0 (23 May 2012)
+
+  23 May 2012; Tim Harder <radhermit@gentoo.org> +libgit2-0.17.0.ebuild:
+  Version bump.
 
   23 Apr 2012; Benda Xu <heroxbd@gentoo.org> libgit2-0.16.0.ebuild:
   add keyword ppc-macos with prefix support. closes bug #413115
