@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13786 2012/05/23 04:10:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13787 2012/05/23 13:52:50 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org> (23 May 2012)
+# PostgreSQL 9.2 is not yet ready for production and may damage your
+# data. Use at your own risk.
+>=dev-db/postgresql-docs-9.2.0_beta1
+>=dev-db/postgresql-base-9.2.0_beta1
+>=dev-db/postgresql-server-9.2.0_beta1
 
 # Patrick Lauer <patrick@gentoo.org> (23 May 2012)
 # unfetchable, new versions are completely confused
