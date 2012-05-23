@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/di
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.38 2012/05/06 16:25:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.39 2012/05/23 00:31:01 jdhore Exp $
+
+  23 May 2012; Jeff Horelick <jdhore@gentoo.org> di-4.31.ebuild:
+  marked x86 per bug 404855
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> di-4.18.ebuild,
   di-4.31.ebuild:
