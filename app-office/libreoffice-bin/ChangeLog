@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.73 2012/05/19 06:53:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.74 2012/05/23 12:09:49 scarabeus Exp $
+
+  23 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Repoman cleanup.
 
   19 May 2012; Agostino Sarubbo <ago@gentoo.org>
   libreoffice-bin-3.5.2.2-r1.ebuild:
