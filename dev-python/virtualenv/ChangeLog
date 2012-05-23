@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.74 2012/05/18 05:41:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.75 2012/05/23 13:18:04 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> virtualenv-1.7.1.2-r1.ebuild:
+  Marking virtualenv-1.7.1.2-r1 ppc64 for bug 415875
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> virtualenv-1.7.1.2-r1.ebuild:
   marked x86 per bug 415875
