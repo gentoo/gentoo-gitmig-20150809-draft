@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ct2n/ct2n-1.4.0.ebuild,v 1.1 2012/05/09 18:11:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ct2n/ct2n-1.4.0.ebuild,v 1.2 2012/05/23 08:54:32 scarabeus Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://extensions.libreoffice.org/extension-center/${PN}-convert-text-t
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/ooo"
