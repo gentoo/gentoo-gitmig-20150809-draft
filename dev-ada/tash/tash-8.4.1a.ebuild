@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/tash-8.4.1a.ebuild,v 1.7 2009/04/22 14:16:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/tash-8.4.1a.ebuild,v 1.8 2012/05/23 08:17:28 jlec Exp $
 
-inherit gnat
+inherit gnat toolchain-funcs
 
-DESCRIPTION="Tash provides tcl Ada bindings"
+DESCRIPTION="tcl Ada bindings"
 HOMEPAGE="http://tcladashell.sourceforge.net/index.htm"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
@@ -16,16 +16,16 @@ IUSE=""
 DEPEND="virtual/ada
 	=dev-lang/tcl-8.4*
 	=dev-lang/tk-8.4*"
-
 RDEPEND=${DEPEND}
 
 lib_compile() {
-	gcc -c -O2 -o obj/tclmacro.o  src/tclmacro.c && \
-	gcc -c -O2 -o obj/tkmacro.o  src/tkmacro.c && \
+	CC=${tc-getCC}
+	${CC} -c ${CFLAGS} -o obj/tclmacro.o  src/tclmacro.c && \
+	${CC} -c ${CFLAGS} -o obj/tkmacro.o  src/tkmacro.c && \
 	gnatmake -Pbuild_stat || die "building static lib failed"
 
-	gcc -c -O2 -fPIC -o obj_dyn/tclmacro.o  src/tclmacro.c && \
-	gcc -c -O2 -fPIC -o obj_dyn/tkmacro.o  src/tkmacro.c && \
+	${CC} -c ${CFLAGS} -fPIC -o obj_dyn/tclmacro.o  src/tclmacro.c && \
+	${CC} -c ${CFLAGS} -fPIC -o obj_dyn/tkmacro.o  src/tkmacro.c && \
 	gnatmake -Pbuild_dyn || die "building static lib failed"
 }
 
