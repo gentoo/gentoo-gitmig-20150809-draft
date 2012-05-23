@@ -1,6 +1,10 @@
 # ChangeLog for net-im/leechcraft-azoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.19 2012/04/22 13:01:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.20 2012/05/23 19:02:17 maksbotan Exp $
+
+  23 May 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-azoth-9999.ebuild:
+  Add app-text/hunspell DEPEND to leechcraft-azoth-9999
 
 *leechcraft-azoth-0.5.65 (22 Apr 2012)
 
