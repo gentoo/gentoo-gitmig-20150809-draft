@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.174 2012/05/23 06:03:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.175 2012/05/23 07:36:03 johu Exp $
+
+  23 May 2012; Johannes Huber <johu@gentoo.org> -eric-4.4.14.ebuild,
+  -eric-5.1.2.ebuild, -files/eric-5.0.2-remove_coverage.patch,
+  -files/remove_coverage.patch:
+  Remove old.
 
   23 May 2012; Jeff Horelick <jdhore@gentoo.org> eric-4.5.0.ebuild,
   eric-5.2.0.ebuild:
