@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.2.2.ebuild,v 1.3 2012/05/03 19:24:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.2.2.ebuild,v 1.4 2012/05/23 13:12:48 xarthisius Exp $
 
 EAPI=3
+
+inherit eutils
 
 DESCRIPTION="Delivery framework for general Input Method configuration"
 HOMEPAGE="http://tagoh.github.com/imsettings/"
