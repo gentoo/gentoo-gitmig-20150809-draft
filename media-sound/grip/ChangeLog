@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/grip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.95 2012/05/21 09:33:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.96 2012/05/23 13:25:32 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> grip-3.3.1-r3.ebuild:
+  Marking grip-3.3.1-r3 ppc64 for bug 414825
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> grip-3.3.1-r3.ebuild:
   x86 stable wrt bug #414825
