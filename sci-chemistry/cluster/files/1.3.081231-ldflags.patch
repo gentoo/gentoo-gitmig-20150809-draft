@@ -1,8 +1,11 @@
+ Makefile |   12 ++++++------
+ 1 files changed, 6 insertions(+), 6 deletions(-)
+
 diff --git a/Makefile b/Makefile
-index 7892054..938a8c8 100644
+index 7892054..929564b 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -3,7 +3,7 @@ PROG_FLGS   = -D BOOLPREDEFINED
+@@ -3,27 +3,27 @@ PROG_FLGS   = -D BOOLPREDEFINED
  
  SRCS = cluster.cpp DisjointSets.cpp utility.cpp
  
@@ -11,16 +14,19 @@ index 7892054..938a8c8 100644
  
  LFLAGS = 
  
-@@ -12,7 +12,7 @@ OBJLIST = cluster.o DisjointSets.o utility.o
- CXX		= g++
+ OBJLIST = cluster.o DisjointSets.o utility.o
+ 
+-CXX		= g++
++CXX		?= g++
  
  .cpp.o:
 -	$(CXX) -c $*.cpp $(CFLAGS)
 +	$(CXX) $(CXXFLAGS) -c $*.cpp
  
- OPT             = -O3
+-OPT             = -O3
++OPT             = 
  DEBUG           = $(CXXDEBUGFLAGS)
-@@ -20,10 +20,10 @@ DEBUG           = $(CXXDEBUGFLAGS)
+ 
  all:    cluster
  
  cluster:    $(OBJLIST)
