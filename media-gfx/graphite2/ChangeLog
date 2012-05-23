@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.28 2012/04/26 07:30:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.29 2012/05/23 08:49:11 scarabeus Exp $
+
+  23 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -graphite2-1.1.1.ebuild,
+  graphite2-1.1.2.ebuild:
+  Stable on amd64, x86 and ppc. Remove overshadowed.
 
   26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> graphite2-1.1.2.ebuild:
   Fix test phase for python3.
