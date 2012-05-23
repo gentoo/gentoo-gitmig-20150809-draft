@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxinput
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxinput/ChangeLog,v 1.19 2012/05/04 05:50:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxinput/ChangeLog,v 1.20 2012/05/23 20:04:48 hwoarang Exp $
+
+*lxinput-0.3.2 (23 May 2012)
+
+  23 May 2012; Markos Chandras <hwoarang@gentoo.org> +lxinput-0.3.2.ebuild:
+  Version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> lxinput-0.1.1.ebuild,
   lxinput-0.3.0.ebuild, lxinput-0.3.1.ebuild:
