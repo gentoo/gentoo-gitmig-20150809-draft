@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.263 2012/05/22 14:29:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.264 2012/05/23 03:24:44 flameeyes Exp $
+
+  23 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> apache-2.eclass:
+  Avoid using 'make' for installing; use 'mkdir -p' for creating the
+  directories to solve parallel install issues (Apache's script is not safe,
+  but we expect a working mkdir -p). Tested on a 32-way system.
 
   22 May 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Call eaclocal unconditionally; _elibtoolize no longer does that.
