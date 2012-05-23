@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-1.0.0.ebuild,v 1.5 2012/05/05 08:02:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/libfishsound-1.0.0.ebuild,v 1.6 2012/05/23 13:58:15 johu Exp $
 
 EAPI=2
 inherit eutils
@@ -20,6 +20,9 @@ RDEPEND="media-libs/libvorbis
 	speex? ( media-libs/speex )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+# bug #395153
+RESTRICT="test"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-pc.patch
