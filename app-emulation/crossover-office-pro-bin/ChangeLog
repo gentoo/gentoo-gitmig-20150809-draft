@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/crossover-office-pro-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/ChangeLog,v 1.23 2012/05/10 02:12:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/ChangeLog,v 1.24 2012/05/23 13:21:05 xarthisius Exp $
+
+  23 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  crossover-office-pro-bin-4.2.ebuild:
+  Add missing eutils.eclass for built_with_use
 
   10 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   crossover-office-pro-bin-4.2.ebuild, crossover-office-pro-bin-5.0.0.ebuild,
