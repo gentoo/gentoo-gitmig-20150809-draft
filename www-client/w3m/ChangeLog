@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.72 2012/05/21 09:25:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.73 2012/05/23 12:57:09 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> w3m-0.5.3-r1.ebuild:
+  Marking w3m-0.5.3-r1 ppc64 for bug 415281
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> w3m-0.5.3-r1.ebuild:
   x86 stable wrt bug #415281
