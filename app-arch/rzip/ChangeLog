@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.39 2012/05/20 08:52:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rzip/ChangeLog,v 1.40 2012/05/23 14:41:02 jer Exp $
+
+  23 May 2012; Jeroen Roovers <jer@gentoo.org> rzip-2.1-r2.ebuild:
+  Stable for HPPA (bug #392835).
 
   20 May 2012; Mark Loeser <halcy0n@gentoo.org> rzip-2.1-r1.ebuild:
   Revert to ~ppc/~ppc64; bug #392835
