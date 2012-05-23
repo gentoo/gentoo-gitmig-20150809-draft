@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/wcalc-2.4.ebuild,v 1.4 2012/04/26 15:51:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/wcalc-2.4.ebuild,v 1.5 2012/05/23 13:10:22 xarthisius Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="A flexible command-line scientific calculator"
 HOMEPAGE="http://w-calc.sourceforge.net/"
