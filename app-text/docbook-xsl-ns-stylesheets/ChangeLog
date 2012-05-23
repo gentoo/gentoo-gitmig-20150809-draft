@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook-xsl-ns-stylesheets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/ChangeLog,v 1.28 2012/02/02 16:15:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/ChangeLog,v 1.29 2012/05/23 04:16:21 flameeyes Exp $
+
+*docbook-xsl-ns-stylesheets-1.77.0 (23 May 2012)
+
+  23 May 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +docbook-xsl-ns-stylesheets-1.77.0.ebuild, metadata.xml:
+  Version bump; add a ruby USE flag to install dbtoepub script (or remove it).
 
   02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
   docbook-xsl-ns-stylesheets-1.76.1.ebuild:
