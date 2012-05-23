@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/msms-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/ChangeLog,v 1.6 2012/02/03 11:52:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/ChangeLog,v 1.7 2012/05/23 07:56:19 jlec Exp $
+
+  23 May 2012; Justin Lecher <jlec@gentoo.org> msms-bin-2.6.1-r1.ebuild:
+  Move to EAPI=4, use QA_PREBUILT instead of QA_DT_HASH
 
   03 Feb 2012; Justin Lecher <jlec@gentoo.org> msms-bin-2.6.1-r1.ebuild,
   metadata.xml:
