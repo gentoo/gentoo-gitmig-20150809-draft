@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.80 2012/05/22 21:39:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.81 2012/05/23 10:37:56 ago Exp $
+
+  23 May 2012; Agostino Sarubbo <ago@gentoo.org> rar-4.1.1.ebuild:
+  Stable for amd64, wrt bug #417149
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> rar-4.1.1.ebuild:
   marked x86 per bug 417149
