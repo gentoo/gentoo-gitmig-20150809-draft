@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fatrace/fatrace-0.4.ebuild,v 1.2 2012/05/23 20:18:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fatrace/fatrace-0.4.ebuild,v 1.3 2012/05/23 20:20:37 xmw Exp $
 
 EAPI=4
 PYTHON_DEPEND="powertop? *"
@@ -19,7 +19,12 @@ IUSE="powertop"
 RDEPEND="powertop? ( =sys-power/powertop-1.13 )"
 DEPEND=""
 
-CONFIG_CHECK="FANOTIFY"
+CONFIG_CHECK="~FANOTIFY"
+
+pkg_setup() {
+	linux-info_pkg_setup
+	python_pkg_setup
+}
 
 src_prepare() {
 	if use powertop ; then
