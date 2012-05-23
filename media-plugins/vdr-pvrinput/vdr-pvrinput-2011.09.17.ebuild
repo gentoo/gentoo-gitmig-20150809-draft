@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/vdr-pvrinput-2011.09.17.ebuild,v 1.4 2012/05/06 20:17:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/vdr-pvrinput-2011.09.17.ebuild,v 1.5 2012/05/23 15:04:33 hd_brummy Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/vdr-plugin-pvrinput-3ee6b964382f38715f4a4fe57bd4760044f9a58a"
 
 src_prepare() {
-	vdr-plugin_src-2_prepare
+	vdr-plugin-2_src_prepare
 
 	fix_vdr_libsi_include reader.c
 
