@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speechd-el
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.16 2011/06/06 20:01:12 cbrannon Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.17 2012/05/23 23:02:17 vapier Exp $
+
+  23 May 2012; Mike Frysinger <vapier@gentoo.org> speechd-el-2.4.ebuild:
+  Inherit eutils eclass for epatch.
 
   06 Jun 2011; Christopher Brannon <cbrannon@gentoo.org>
   +speechd-el-2.4.ebuild, +files/speechd-el-2.4-emacs23.patch, metadata.xml:

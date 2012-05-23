@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinx3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.7 2012/02/26 02:57:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.8 2012/05/23 23:02:36 vapier Exp $
+
+  23 May 2012; Mike Frysinger <vapier@gentoo.org> sphinx3-0.8.ebuild:
+  Inherit eutils eclass for epatch.
 
   26 Feb 2012; Patrick Lauer <patrick@gentoo.org> sphinx3-0.8.ebuild:
   Restricting jython

@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/sphinx3-0.8.ebuild,v 1.3 2012/02/26 02:57:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/sphinx3-0.8.ebuild,v 1.4 2012/05/23 23:02:36 vapier Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit autotools-utils prefix python
+inherit autotools-utils prefix python eutils
 
 DESCRIPTION="CMU Speech Recognition engine"
 HOMEPAGE="http://cmusphinx.sourceforge.net/"
