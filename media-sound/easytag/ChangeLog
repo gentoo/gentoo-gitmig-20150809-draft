@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.158 2012/05/22 11:20:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.159 2012/05/23 06:40:42 jdhore Exp $
+
+  23 May 2012; Jeff Horelick <jdhore@gentoo.org> easytag-2.1.7-r2.ebuild:
+  marked x86 per bug 376391
 
   22 May 2012; Agostino Sarubbo <ago@gentoo.org> easytag-2.1.7-r2.ebuild:
   Stable for amd64, wrt bug #376391
