@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.52 2012/05/19 23:23:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.53 2012/05/23 13:11:37 ranger Exp $
+
+  23 May 2012; Brent Baude <ranger@gentoo.org> vigra-1.7.1-r1.ebuild:
+  Marking vigra-1.7.1-r1 ppc64 for bug 401509
 
 *vigra-1.8.0 (19 May 2012)
 
