@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-1.3.1.ebuild,v 1.5 2012/05/21 09:46:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-1.3.1.ebuild,v 1.6 2012/05/23 13:19:57 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -16,7 +16,7 @@ HOMEPAGE="http://ncurses-ruby.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ppc64 x86"
 IUSE="examples"
 
 DEPEND=">=sys-libs/ncurses-5.3"
