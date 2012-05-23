@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfishsound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/ChangeLog,v 1.13 2012/05/23 13:58:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfishsound/ChangeLog,v 1.14 2012/05/23 16:21:03 johu Exp $
+
+  23 May 2012; Johannes Huber <johu@gentoo.org> libfishsound-1.0.0.ebuild:
+  Stable for x86, wrt bug #393779
 
   23 May 2012; Johannes Huber <johu@gentoo.org> libfishsound-1.0.0.ebuild:
   Restrict tests for now, acked by yngwin bug #395153.
