@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.3 2012/03/23 19:53:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.4 2012/05/23 18:16:30 floppym Exp $
 
 # @ECLASS: chromium.eclass
 # @MAINTAINER:
@@ -126,15 +126,18 @@ chromium_pkg_postinst() {
 	gnome2_icon_cache_update
 
 	# For more info see bug #292201, bug #352263, bug #361859.
-	elog
-	elog "Depending on your desktop environment, you may need"
-	elog "to install additional packages to get icons on the Downloads page."
-	elog
-	elog "For KDE, the required package is kde-base/oxygen-icons."
-	elog
-	elog "For other desktop environments, try one of the following:"
-	elog " - x11-themes/gnome-icon-theme"
-	elog " - x11-themes/tango-icon-theme"
+	if ! has_version x11-themes/gnome-icon-theme &&
+		! has_version x11-themes/oxygen-icons ; then
+		elog
+		elog "Depending on your desktop environment, you may need"
+		elog "to install additional packages to get icons on the Downloads page."
+		elog
+		elog "For KDE, the required package is kde-base/oxygen-icons."
+		elog
+		elog "For other desktop environments, try one of the following:"
+		elog " - x11-themes/gnome-icon-theme"
+		elog " - x11-themes/tango-icon-theme"
+	fi
 
 	# For more info see bug #359153.
 	elog
