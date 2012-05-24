@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.112 2012/05/24 13:17:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.113 2012/05/24 13:31:57 jer Exp $
+
+  24 May 2012; Jeroen Roovers <jer@gentoo.org> gentoo-0.19.13.ebuild:
+  Stable for HPPA (bug #417189).
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org> gentoo-0.19.13.ebuild:
   ppc/ppc64 stable wrt #417189
