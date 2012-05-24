@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.106 2012/05/22 00:02:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.107 2012/05/24 19:26:10 mattst88 Exp $
+
+  24 May 2012; Matt Turner <mattst88@gentoo.org> zlib-1.2.5.1-r2.ebuild:
+  Stable on alpha, bug 384483.
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> zlib-1.2.5.1-r2.ebuild:
   marked x86 per bug 384483
