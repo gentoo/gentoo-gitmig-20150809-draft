@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1.ebuild,v 1.5 2012/05/08 13:08:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1-r1.ebuild,v 1.1 2012/05/24 08:02:27 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -27,7 +27,7 @@ fi
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCHFF="firefox-12.0-patches-0.2"
+PATCHFF="firefox-12.0-patches-0.3"
 PATCH="${PN}-2.7-patches-03"
 EMVER="1.4.1"
 
@@ -37,7 +37,7 @@ HOMEPAGE="http://www.seamonkey-project.org"
 if [[ ${PV} == *_pre* ]] ; then
 	# pre-releases. No need for arch teams to change KEYWORDS here.
 
-	KEYWORDS=""
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
 else
 	# This is where arch teams should change the KEYWORDS.
 
@@ -46,7 +46,7 @@ fi
 
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa +chatzilla +crypt +ipc +roaming system-sqlite +webm"
+IUSE="+alsa +chatzilla +crypt +ipc +jit +roaming system-sqlite +webm"
 
 SRC_URI+="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
@@ -176,7 +176,9 @@ src_configure() {
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable system-sqlite
-	mozconfig_use_enable methodjit
+	# Both methodjit and tracejit conflict with PaX
+	mozconfig_use_enable jit methodjit
+	mozconfig_use_enable jit tracejit
 
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/seamonk" \
@@ -223,7 +225,11 @@ src_install() {
 		"${S}/${obj_dir}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
 		|| die
 
-	pax-mark m "${S}"/dist/bin/xpcshell
+	# Without methodjit and tracejit there's no conflict with PaX
+	if use jit ; then
+		# Pax mark xpcshell for hardened support, only used for startupcache creation.
+		pax-mark m "${S}"/dist/bin/xpcshell
+	fi
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 	cp -f "${FILESDIR}"/icon/${PN}.desktop "${T}" || die
@@ -258,8 +264,15 @@ src_install() {
 		|| die
 	domenu "${T}"/${PN}.desktop || die
 
-	# Required in order to use plugins and even run seamonkey on hardened.
-	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin,plugin-container}
+	# Without methodjit and tracejit there's no conflict with PaX
+	if use jit ; then
+		# Required in order to use plugins and even run firefox on hardened.
+		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin}
+	fi
+
+	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
+	# continue to work as expected.
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
 
 	# Handle plugins dir through nsplugins.eclass
 	share_plugins_dir
