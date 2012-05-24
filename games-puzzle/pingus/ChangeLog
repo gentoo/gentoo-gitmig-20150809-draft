@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.38 2012/03/06 20:42:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.39 2012/05/24 18:04:10 mr_bones_ Exp $
+
+  24 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/pingus-0.7.3-libpng15.patch, -files/pingus-0.7.3-paths.patch,
+  -pingus-0.7.3.ebuild, -pingus-0.7.5.ebuild:
+  old
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> pingus-0.7.6.ebuild:
   Marking pingus-0.7.6 ppc for bug 402603
