@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.1.16.ebuild,v 1.1 2012/05/23 09:48:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.1.16.ebuild,v 1.2 2012/05/24 07:29:42 jlec Exp $
 
 EAPI=2
 
@@ -21,6 +21,8 @@ IUSE=""
 RESTRICT="mirror strip"
 
 RDEPEND="~app-emulation/virtualbox-${PV}"
+
+QA_PREBUILT="/usr/$(get_libdir)/virtualbox/ExtensionPacks/${MY_PN}/.*"
 
 src_install() {
 	insinto /usr/$(get_libdir)/virtualbox/ExtensionPacks/${MY_PN}
