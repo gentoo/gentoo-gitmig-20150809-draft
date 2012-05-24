@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.380 2012/05/24 08:04:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.381 2012/05/24 22:48:24 floppym Exp $
+
+  24 May 2012; Mike Gilbert <floppym@gentoo.org> seamonkey-2.9.1-r1.ebuild,
+  seamonkey-2.9.ebuild:
+  Convert DOS line-endings in shell scripts. Bug 391889.
 
   24 May 2012; Lars Wendler <polynomial-c@gentoo.org>
   seamonkey-2.9.1-r1.ebuild:

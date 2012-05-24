@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1-r1.ebuild,v 1.2 2012/05/24 08:04:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1-r1.ebuild,v 1.3 2012/05/24 22:48:24 floppym Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -116,6 +116,13 @@ src_prepare() {
 	popd &>/dev/null || die
 
 	epatch "${DISTDIR}"/${PN}-2.9-revert-system-cairo-breakage.patch.bz2
+
+	# Shell scripts sometimes contain DOS line endings; bug 391889
+	grep -rlZ --include="*.sh" $'\r$' . |
+	while read -r -d $'\0' file ; do
+		einfo edos2unix "${file}"
+		edos2unix "${file}" || die
+	done
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
