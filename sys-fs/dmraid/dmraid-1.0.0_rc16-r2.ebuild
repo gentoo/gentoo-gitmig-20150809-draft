@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r2.ebuild,v 1.2 2012/05/04 19:09:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r2.ebuild,v 1.3 2012/05/24 02:51:41 vapier Exp $
 
 EAPI="2"
 
-inherit linux-info flag-o-matic
+inherit linux-info flag-o-matic eutils
 
 MY_PV=${PV/_/.}
 

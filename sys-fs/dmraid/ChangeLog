@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/dmraid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.26 2012/05/04 19:09:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.27 2012/05/24 02:51:41 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> dmraid-1.0.0_rc14.ebuild,
+  dmraid-1.0.0_rc15.ebuild, dmraid-1.0.0_rc16-r2.ebuild,
+  dmraid-1.0.0_rc16-r3.ebuild:
+  Inherit eutils for epatch.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> dmraid-1.0.0_rc16-r2.ebuild,
   dmraid-1.0.0_rc16-r3.ebuild:

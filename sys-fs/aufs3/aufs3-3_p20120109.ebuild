@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120109.ebuild,v 1.3 2012/05/05 11:41:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120109.ebuild,v 1.4 2012/05/24 02:55:43 vapier Exp $
 
 EAPI=4
 
-inherit linux-mod multilib toolchain-funcs
+inherit linux-mod multilib toolchain-funcs eutils
 
 AUFS_VERSION="${PV%%_p*}"
 PATCH_MAX_VER="2"

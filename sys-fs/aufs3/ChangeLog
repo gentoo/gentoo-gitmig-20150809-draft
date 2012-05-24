@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.16 2012/05/23 06:37:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.17 2012/05/24 02:55:43 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> aufs3-3_p20120109.ebuild,
+  aufs3-3_p20120430.ebuild, aufs3-3_p20120523.ebuild:
+  Inherit eutils for epatch.
 
   23 May 2012; Justin Lecher <jlec@gentoo.org> +files/aufs3-base-4.patch,
   +files/aufs3-standalone-4.patch:
