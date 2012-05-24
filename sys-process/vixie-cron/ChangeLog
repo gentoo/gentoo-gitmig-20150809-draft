@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.64 2012/04/26 14:24:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.65 2012/05/24 05:46:25 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> vixie-cron-4.1-r10.ebuild,
+  vixie-cron-4.1-r12.ebuild:
+  Add missing eclass inherits, and quote path vars.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> vixie-cron-4.1-r12.ebuild:
   keyword ~amd64-fbsd

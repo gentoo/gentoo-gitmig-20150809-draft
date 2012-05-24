@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.15 2010/10/17 04:13:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r10.ebuild,v 1.16 2012/05/24 05:46:25 vapier Exp $
 
-inherit cron toolchain-funcs pam
+inherit cron toolchain-funcs pam eutils flag-o-matic user
 
 # no useful homepage, bug #65898
 HOMEPAGE="ftp://ftp.isc.org/isc/cron/"
@@ -35,15 +35,15 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${WORKDIR}/${P}-gentoo-${GENTOO_PATCH_REV}.patch
-	epatch ${FILESDIR}/crontab.5.diff
-	epatch ${FILESDIR}/${P}-commandline.patch
-	epatch ${FILESDIR}/${P}-basename.diff
-	epatch ${FILESDIR}/${P}-setuid_check.patch
-	epatch ${FILESDIR}/${P}-hardlink.patch
+	epatch "${WORKDIR}"/${P}-gentoo-${GENTOO_PATCH_REV}.patch
+	epatch "${FILESDIR}"/crontab.5.diff
+	epatch "${FILESDIR}"/${P}-commandline.patch
+	epatch "${FILESDIR}"/${P}-basename.diff
+	epatch "${FILESDIR}"/${P}-setuid_check.patch
+	epatch "${FILESDIR}"/${P}-hardlink.patch
 
-	use pam && epatch ${FILESDIR}/${P}-pam.patch
-	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
+	use pam && epatch "${FILESDIR}"/${P}-pam.patch
+	use selinux && epatch "${FILESDIR}"/${SELINUX_PATCH}
 }
 
 src_compile() {
@@ -63,16 +63,16 @@ src_install() {
 
 	# /etc stuff
 	insinto /etc
-	newins  ${FILESDIR}/crontab-3.0.1-r4 crontab
-	newins ${FILESDIR}/${P}-cron.deny cron.deny
+	newins  "${FILESDIR}"/crontab-3.0.1-r4 crontab
+	newins "${FILESDIR}"/${P}-cron.deny cron.deny
 
 	keepdir /etc/cron.d
-	newpamd ${FILESDIR}/pamd.compatible cron
-	newinitd ${FILESDIR}/vixie-cron.rc6 vixie-cron
+	newpamd "${FILESDIR}"/pamd.compatible cron
+	newinitd "${FILESDIR}"/vixie-cron.rc6 vixie-cron
 
 	# doc stuff
 	doman crontab.1 crontab.5 cron.8
-	dodoc ${FILESDIR}/crontab
+	dodoc "${FILESDIR}"/crontab
 	dodoc CHANGES CONVERSION FEATURES MAIL README THANKS
 }
 
