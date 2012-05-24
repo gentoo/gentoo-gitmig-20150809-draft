@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.45 2012/05/22 21:00:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.46 2012/05/24 05:28:37 jer Exp $
+
+*debhelper-9.20120523 (24 May 2012)
+
+  24 May 2012; Jeroen Roovers <jer@gentoo.org> +debhelper-9.20120523.ebuild:
+  Version bump.
 
   22 May 2012; Brent Baude <ranger@gentoo.org> debhelper-9.20120322.ebuild:
   Marking debhelper-9.20120322 ppc for bug 415269
