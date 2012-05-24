@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/nvram-wakeup-1.0.ebuild,v 1.3 2010/12/22 01:38:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/nvram-wakeup-1.0.ebuild,v 1.4 2012/05/24 05:48:22 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 MY_P=${P%_p*}
 [[ ${PV} == *_p* ]] && REV=${P#*_p} || unset REV
