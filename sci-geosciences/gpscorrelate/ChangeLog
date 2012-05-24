@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpscorrelate
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.11 2011/06/09 20:55:12 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.12 2012/05/24 16:28:55 scarabeus Exp $
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> gpscorrelate-1.6.1.ebuild:
+  Add missing dependency over pkgconfig.
 
   09 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   files/gpscorrelate-1.6.1-makefile.patch:

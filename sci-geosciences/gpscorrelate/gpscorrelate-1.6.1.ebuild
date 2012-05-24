@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/gpscorrelate-1.6.1.ebuild,v 1.2 2011/06/08 12:22:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/gpscorrelate-1.6.1.ebuild,v 1.3 2012/05/24 16:28:55 scarabeus Exp $
 
 EAPI=4
 
@@ -20,7 +20,9 @@ RDEPEND="dev-libs/libxml2:2
 	gtk? ( x11-libs/gtk+:2 )
 "
 DEPEND="${RDEPEND}
-	dev-libs/libxslt"
+	dev-libs/libxslt
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.6.1-makefile.patch"
