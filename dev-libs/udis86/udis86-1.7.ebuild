@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/udis86-1.7.ebuild,v 1.13 2012/05/21 18:50:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/udis86-1.7.ebuild,v 1.14 2012/05/24 03:19:12 aballier Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="pic test"
 
 DEPEND="test? (
