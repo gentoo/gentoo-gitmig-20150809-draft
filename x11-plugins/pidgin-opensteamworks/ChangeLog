@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/pidgin-opensteamworks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.2 2012/05/04 16:02:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.3 2012/05/24 01:37:15 hasufell Exp $
+
+*pidgin-opensteamworks-1.0_p32 (24 May 2012)
+
+  24 May 2012; Julian Ospald <hasufell@gentoo.org>
+  -pidgin-opensteamworks-1.0_p30.ebuild, +pidgin-opensteamworks-1.0_p32.ebuild,
+  -files/pidgin-opensteamworks-1.0_p30-Makefile,
+  +files/pidgin-opensteamworks-1.0_p32-Makefile:
+  version bump with Manuel Rueger
 
   04 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   add net-im herd to metadata.xml
