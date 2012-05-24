@@ -1,0 +1,42 @@
+From e265c5b46cfa259b03ca08672023b8ef0d0e2ea9 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Thu, 24 May 2012 00:54:20 -0400
+Subject: [PATCH] MainWindow: treeview.get_selection() in cursor-changed
+ callbacks can return None
+
+https://bugzilla.gnome.org/show_bug.cgi?id=676702
+---
+ Alacarte/MainWindow.py |   10 ++++++++--
+ 1 files changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/Alacarte/MainWindow.py b/Alacarte/MainWindow.py
+index be460e1..fd18064 100644
+--- a/Alacarte/MainWindow.py
++++ b/Alacarte/MainWindow.py
+@@ -366,7 +366,10 @@ class MainWindow(object):
+             GObject.timeout_add(100, self.waitForEditProcess, process, file_path)
+ 
+     def on_menu_tree_cursor_changed(self, treeview):
+-        menus, iter = treeview.get_selection().get_selected()
++        selection = treeview.get_selection()
++        if selection is None:
++            return
++        menus, iter = selection.get_selected()
+         if iter is None:
+             return
+         menu_path = menus.get_path(iter)
+@@ -424,7 +427,10 @@ class MainWindow(object):
+         self.item_store[path][0] = not self.item_store[path][0]
+ 
+     def on_item_tree_cursor_changed(self, treeview):
+-        items, iter = treeview.get_selection().get_selected()
++        selection = treeview.get_selection()
++        if selection is None:
++            return
++        items, iter = selection.get_selected()
+         if iter is None:
+             return
+         item = items[iter][3]
+-- 
+1.7.8.6
+

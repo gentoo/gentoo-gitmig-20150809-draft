@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.113 2012/05/05 04:53:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.114 2012/05/24 05:01:18 tetromino Exp $
+
+*alacarte-0.13.3 (24 May 2012)
+
+  24 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +alacarte-0.13.3.ebuild,
+  +files/alacarte-0.13.3-cursor-changed-selection-none.patch,
+  +files/alacarte-0.13.3-icon-crash.patch,
+  +files/alacarte-0.13.3-no-pygtk-checks.patch:
+  Version bump, first fully gnome3-compatible release.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> alacarte-0.12.4.ebuild,
   alacarte-0.13.2.ebuild, alacarte-0.13.2-r50.ebuild:
