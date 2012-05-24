@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.97 2012/03/03 08:27:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.98 2012/05/24 04:16:37 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> mlocate-0.24.ebuild,
+  mlocate-0.25.ebuild:
+  Inherit user for enewuser/etc...
 
 *mlocate-0.25 (03 Mar 2012)
 

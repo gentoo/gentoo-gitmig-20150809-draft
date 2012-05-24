@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r10.ebuild,v 1.2 2011/03/31 16:21:27 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r10.ebuild,v 1.3 2012/05/24 04:14:39 vapier Exp $
 
 EAPI=3
 
-inherit eutils toolchain-funcs multilib prefix flag-o-matic autotools
+inherit eutils toolchain-funcs multilib prefix flag-o-matic autotools user
 
 # Needed gnulib modules:
 #   getopt strndup strsep

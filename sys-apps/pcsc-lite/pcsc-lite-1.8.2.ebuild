@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.2.ebuild,v 1.7 2012/05/06 17:53:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.2.ebuild,v 1.8 2012/05/24 04:12:01 vapier Exp $
 
 EAPI="4"
 
-inherit multilib eutils
+inherit multilib eutils user
 
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"

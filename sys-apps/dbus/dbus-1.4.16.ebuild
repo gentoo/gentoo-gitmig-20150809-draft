@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16.ebuild,v 1.10 2012/05/04 09:17:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16.ebuild,v 1.11 2012/05/24 04:21:00 vapier Exp $
 
 EAPI=2
-inherit autotools eutils multilib flag-o-matic python systemd virtualx
+inherit autotools eutils multilib flag-o-matic python systemd virtualx user
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"

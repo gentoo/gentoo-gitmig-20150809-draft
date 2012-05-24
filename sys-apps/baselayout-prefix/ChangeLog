@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/baselayout-prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.16 2012/05/24 04:13:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.17 2012/05/24 04:14:39 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org>
+  baselayout-prefix-1.12.14.ebuild, baselayout-prefix-1.12.5-r10.ebuild,
+  baselayout-prefix-1.12.5-r11.ebuild, baselayout-prefix-1.12.5-r9.ebuild:
+  Inherit user for enewuser/etc...
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org>
   baselayout-prefix-1.12.5-r11.ebuild, baselayout-prefix-1.12.14.ebuild:
