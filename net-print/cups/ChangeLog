@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.483 2012/05/22 21:27:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.484 2012/05/24 21:37:03 johu Exp $
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> cups-1.5.2-r4.ebuild:
+  Stable for x86, wrt bug #411887
 
   22 May 2012; Brent Baude <ranger@gentoo.org> cups-1.5.2-r4.ebuild:
   marking straight to ppc64 for bug 411887
