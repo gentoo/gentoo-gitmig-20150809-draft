@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.263 2012/05/23 10:39:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.264 2012/05/24 02:16:35 jdhore Exp $
+
+  24 May 2012; Jeff Horelick <jdhore@gentoo.org> audacious-3.2.2-r1.ebuild:
+  marked x86 per bug 417143
 
   23 May 2012; Agostino Sarubbo <ago@gentoo.org> audacious-3.2.2-r1.ebuild:
   Stable for amd64, wrt bug #417143
