@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-messenger-plugin/xfce4-messenger-plugin-0.1.0.ebuild,v 1.4 2012/05/05 07:16:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-messenger-plugin/xfce4-messenger-plugin-0.1.0.ebuild,v 1.5 2012/05/24 05:02:30 vapier Exp $
 
 EAPI=4
 EAUTORECONF=yes
-inherit multilib xfconf
+inherit multilib xfconf eutils
 
 DESCRIPTION="A plugin that listens DBus messages and displays received messages"
 HOMEPAGE="http://packages.qa.debian.org/x/xfce4-messenger-plugin.html"
