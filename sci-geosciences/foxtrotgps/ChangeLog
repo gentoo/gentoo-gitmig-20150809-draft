@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/foxtrotgps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/ChangeLog,v 1.6 2012/05/24 12:32:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/ChangeLog,v 1.7 2012/05/24 19:48:33 scarabeus Exp $
+
+*foxtrotgps-1.1.0 (24 May 2012)
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +foxtrotgps-1.1.0.ebuild,
+  -files/foxtrotgps-curl-7.21.7.patch, -foxtrotgps-1.0.1.ebuild:
+  Version bump, drop older.
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> foxtrotgps-1.0.1.ebuild:
   Depend on libglade. Fixes bug#405669.

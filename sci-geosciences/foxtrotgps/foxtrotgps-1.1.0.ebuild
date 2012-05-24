@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/foxtrotgps-1.0.1.ebuild,v 1.3 2012/05/24 12:32:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/foxtrotgps-1.1.0.ebuild,v 1.1 2012/05/24 19:48:33 scarabeus Exp $
 
 EAPI=4
 
-inherit base
+inherit base gnome2
 
 DESCRIPTION="Foxtrotgps is an easy to use, fast and lightweight mapping application. (fork of tangogps)"
 HOMEPAGE="http://www.foxtrotgps.org/"
-SRC_URI="http://www.foxtrotgps.org/releases/${P}.tar.gz"
+SRC_URI="http://www.foxtrotgps.org/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +28,3 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 "
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-curl-7.21.7.patch
-)
