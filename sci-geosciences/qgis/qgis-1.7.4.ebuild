@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.3.ebuild,v 1.2 2012/02/05 01:56:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.4.ebuild,v 1.1 2012/05/24 12:43:45 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="python? 2"
@@ -30,10 +30,13 @@ RDEPEND="
 	x11-libs/qt-sql:4
 	x11-libs/qt-webkit:4
 	x11-libs/qwt:5[svg]
-	x11-libs/qwtpolar
+	<x11-libs/qwtpolar-1
 	grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] )
 	postgres? ( >=dev-db/postgresql-base-8.4 )
-	python? ( dev-python/PyQt4[X,sql,svg] )
+	python? (
+		<dev-python/PyQt4-4.9[X,sql,svg]
+		<dev-python/sip-4.13
+	)
 	spatialite? (
 		dev-db/sqlite:3
 		dev-db/spatialite
@@ -45,12 +48,18 @@ DEPEND="${RDEPEND}
 
 DOCS=( BUGS CHANGELOG CODING.pdf README )
 
+PATCHES=(
+	"${FILESDIR}/${P}-gcc4.7.patch"
+)
+
 # Does not find the test binaries at all
 RESTRICT="test"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	if use python ; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_configure() {
@@ -79,12 +88,12 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	newicon images/icons/qgis-icon.png qgis.png || die
+	newicon images/icons/qgis-icon.png qgis.png
 	make_desktop_entry qgis "Quantum GIS" qgis
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins -r "${WORKDIR}"/qgis_sample_data/* || die "Unable to install examples"
+		doins -r "${WORKDIR}"/qgis_sample_data/*
 	fi
 }
 

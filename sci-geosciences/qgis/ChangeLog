@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.24 2012/02/05 01:56:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.25 2012/05/24 12:43:45 scarabeus Exp $
+
+*qgis-1.7.4 (24 May 2012)
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/qgis-1.7.4-gcc4.7.patch, +qgis-1.7.4.ebuild,
+  -files/qgis-1.4.0-gcc45.patch, -qgis-1.4.0.ebuild, -qgis-1.7.3.ebuild:
+  Version bump to latest version. Try to restrain python sip versions to
+  actually work. Add patch to build with gcc-4.7. Fixes bug#405997. Remove
+  older.
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> qgis-1.4.0.ebuild,
   qgis-1.7.0.ebuild, qgis-1.7.3.ebuild:
