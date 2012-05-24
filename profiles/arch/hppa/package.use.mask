@@ -1,8 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.100 2012/05/21 18:59:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.101 2012/05/24 04:42:08 ford_prefect Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Arun Raghavan <ford_prefect@gentoo.org> (24 May 2012)
+# media-sound/pulseaudio needs PyQt4[dbus] for making the equalizer module
+# usable. Mask until this is available.
+media-sound/pulseaudio equalizer
 
 # Jeroen Roovers <jer@gentoo.org> (21 May 2012)
 # media-sound/lilypond has problems running mpost (bug #416961)

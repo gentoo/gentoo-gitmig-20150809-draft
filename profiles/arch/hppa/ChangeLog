@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.149 2012/05/23 14:52:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.150 2012/05/24 04:42:08 ford_prefect Exp $
+
+  24 May 2012; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
+  Mask media-sound/pulseaudio[equalizer] till PyQt4 is available on hppa.
 
   23 May 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=gptfdisk (bug #412801).
