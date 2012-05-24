@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.220 2012/05/22 15:29:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.221 2012/05/24 16:24:17 williamh Exp $
+
+*openrc-0.10.1 (24 May 2012)
+
+  24 May 2012; William Hubbs <williamh@gentoo.org> +openrc-0.10.1.ebuild:
+  version bump to fix regression in bug #417227
 
 *openrc-0.10 (22 May 2012)
 
