@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.2.0-r5.ebuild,v 1.2 2012/05/05 03:20:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.2.0-r5.ebuild,v 1.3 2012/05/24 03:04:31 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -109,6 +109,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-ifnet-password-truncated.patch"
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
 	epatch "${FILESDIR}/${P}-pre-sleep.patch"
+	# Fix building against linux-headers-3.4, #417055
+	epatch "${FILESDIR}/${PN}-0.9.4.0-ip_ppp.h.patch"
 
 	eautoreconf
 	default

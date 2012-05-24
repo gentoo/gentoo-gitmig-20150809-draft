@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.8 2012/05/05 03:20:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.9 2012/05/24 03:04:31 tetromino Exp $
 
 EAPI="3"
 GNOME_ORG_MODULE="NetworkManager"
@@ -78,6 +78,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-shared-connection.patch"
 	epatch "${FILESDIR}/${P}-fix-tests.patch"
 	epatch "${FILESDIR}/${P}-ifnet-smarter-write.patch"
+	# Fix building against linux-headers-3.4, #417055
+	epatch "${FILESDIR}/${PN}-0.9.4.0-ip_ppp.h.patch"
 	eautoreconf
 }
 

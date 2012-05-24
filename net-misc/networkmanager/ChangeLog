@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.133 2012/05/05 03:20:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.134 2012/05/24 03:04:31 tetromino Exp $
+
+  24 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  networkmanager-0.8.4.0-r2.ebuild, networkmanager-0.9.0.ebuild,
+  networkmanager-0.9.2.0-r5.ebuild, networkmanager-0.9.4.0-r2.ebuild,
+  +files/networkmanager-0.9.4.0-ip_ppp.h.patch:
+  Fix building against linux-headers-3.4 (bug #417055, thanks to Marek
+  Bartosiewicz, Adrian Frith, Xake et al.).
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> networkmanager-0.8-r1.ebuild,
   networkmanager-0.8.4.0-r2.ebuild, networkmanager-0.9.0.ebuild,

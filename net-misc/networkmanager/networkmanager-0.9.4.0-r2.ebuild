@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.3 2012/05/05 03:20:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.4 2012/05/24 03:04:31 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -107,6 +107,8 @@ src_prepare() {
 	# Fix uninitialized variables in libnm-glib
 	epatch "${FILESDIR}/${P}-libnm-glib-ensure_inited.patch"
 	epatch "${FILESDIR}/${P}-libnm-glib-init-gerror.patch"
+	# Fix building against linux-headers-3.4, #417055
+	epatch "${FILESDIR}/${P}-ip_ppp.h.patch"
 
 	eautoreconf
 	default
