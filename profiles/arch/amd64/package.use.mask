@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.127 2012/04/27 09:38:17 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.128 2012/05/24 04:29:31 ford_prefect Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,7 +47,9 @@ app-arch/libzpaq -jit
 # Arun Raghavan <ford_prefect@gentoo.org> (29 Mar 2012)
 # webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
 # added.
-media-sound/pulseaudio -webrtc-aec
+# Arun Raghavan <ford_prefect@gentoo.org> (24 May 2012)
+# Mask xen USE flag by default, unmask on x86/amd64 where it is supported.
+media-sound/pulseaudio -webrtc-aec -xen
 
 # Bernard Cafarelli <voyageur@gentoo.org> (27 Feb 2012)
 # Masked in base profile, supported on this arch
