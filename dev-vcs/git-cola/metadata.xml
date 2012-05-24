@@ -9,4 +9,7 @@
 		<email>jlec@gentoo.org</email>
 		<name>Justin Lecher</name>
 	</maintainer>
+	<use>
+		<flag name='ssh'>Make sure at least one dependency required for asking the user for a password is installed.</flag>
+	</use>
 </pkgmetadata>
