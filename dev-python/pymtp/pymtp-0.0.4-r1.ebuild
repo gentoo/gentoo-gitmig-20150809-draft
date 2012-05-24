@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymtp/pymtp-0.0.4-r1.ebuild,v 1.1 2012/05/24 03:16:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymtp/pymtp-0.0.4-r1.ebuild,v 1.2 2012/05/24 03:18:45 ssuominen Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ inherit distutils eutils
 PATCH_LEVEL=4
 
 DESCRIPTION="LibMTP bindings for Python"
-HOMEPAGE="http://libmtp.sourceforge.net/ http://pypi.python.org/pypi/PyMTP"
+HOMEPAGE="http://packages.debian.org/libmtp http://libmtp.sourceforge.net/ http://pypi.python.org/pypi/PyMTP"
 DEB_URI="mirror://debian/pool/main/${PN:0:1}/${PN}"
 SRC_URI="${DEB_URI}/${PN}_${PV}.orig.tar.gz
 	${DEB_URI}/${PN}_${PV}-${PATCH_LEVEL}.debian.tar.gz"
