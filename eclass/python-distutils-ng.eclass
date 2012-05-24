@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.23 2012/05/21 18:10:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.24 2012/05/24 18:18:11 floppym Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -59,7 +59,7 @@ fi
 # Set to any value to disable automatic reinstallation of scripts in bin
 # directories. See python-distutils-ng_src_install function.
 
-EXPORT_FUNCTIONS pkg_pretend src_prepare src_configure src_compile src_test src_install
+EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
 
 case "${EAPI}" in
 	0|1|2|3)
@@ -290,16 +290,6 @@ python-distutils-ng_newscript() {
 		done
 
 		dosym "${destination_file}-${default_impl}" "${destination_directory}/${destination_file}"
-	fi
-}
-
-# Phase function: pkg_pretend
-python-distutils-ng_pkg_pretend() {
-	if has "collision-protect" ${FEATURES}; then
-		ewarn "Due to previous eclass compiling Python files outside of src_install"
-		ewarn "(and not recording resulting .pyc and .pyo files as owned by any package)"
-		ewarn "merging this package with \"collision-protect\" in FEATURES may result"
-		ewarn "in an error, please switch to using \"protect-owned\" instead."
 	fi
 }
 
