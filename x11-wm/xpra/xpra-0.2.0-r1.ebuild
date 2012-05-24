@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.2.0-r1.ebuild,v 1.1 2012/05/23 22:57:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.2.0-r1.ebuild,v 1.2 2012/05/24 15:09:06 mr_bones_ Exp $
 
 EAPI=3
 
@@ -22,8 +22,8 @@ COMMON_DEPEND="dev-python/pygtk:2
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
-	ffmpeg? ( 
-		virtual/ffmpeg 
+	ffmpeg? (
+		virtual/ffmpeg
 		x264? ( media-libs/x264 )
 	)
 	server? ( x11-libs/libXtst )
