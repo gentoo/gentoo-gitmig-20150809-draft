@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.245 2012/05/10 01:32:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.246 2012/05/24 13:33:19 ssuominen Exp $
+
+  24 May 2012; Samuli Suominen <ssuominen@gentoo.org> evince-2.32.0-r4.ebuild:
+  ppc stable wrt #410611
 
   10 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   evince-2.32.0-r3.ebuild, evince-2.32.0-r4.ebuild, evince-3.2.1.ebuild,
