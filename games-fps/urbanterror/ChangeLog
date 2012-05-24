@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/urbanterror
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.1 2012/05/24 23:37:46 hasufell Exp $
+
+*urbanterror-4.1.1 (24 May 2012)
+
+  24 May 2012; Julian Ospald <hasufell@gentoo.org> +urbanterror-4.1.1.ebuild,
+  +files/urbanterror-4.1.1-build.patch, +files/urbanterror-4.1.1-minizip.patch,
+  +metadata.xml:
+  initial import wrt #203296 thanks to Mr_Bones_
+
