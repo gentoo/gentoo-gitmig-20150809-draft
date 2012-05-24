@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.81.ebuild,v 1.14 2011/02/06 11:37:17 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.81.ebuild,v 1.15 2012/05/24 02:38:35 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Standard tool to compile source trees"
 HOMEPAGE="http://www.gnu.org/software/make/make.html"
