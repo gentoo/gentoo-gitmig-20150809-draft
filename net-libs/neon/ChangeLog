@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.33 2012/05/21 23:24:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.34 2012/05/24 04:35:09 jdhore Exp $
+
+  24 May 2012; Jeff Horelick <jdhore@gentoo.org> neon-0.29.6-r1.ebuild:
+  marked x86 per bug 417325
 
   21 May 2012; Mike Frysinger <vapier@gentoo.org> neon-0.29.6-r1.ebuild:
   Inherit eutils for epatch.
