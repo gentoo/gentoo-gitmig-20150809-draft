@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.0.ebuild,v 1.3 2010/02/26 07:56:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.3.0.ebuild,v 1.1 2012/05/24 20:25:19 dev-zero Exp $
 
-EAPI="2"
-inherit eutils
+EAPI="4"
+
+inherit autotools base
 
 MY_P="XQilla-${PV}"
 
@@ -13,32 +14,37 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc faxpp htmltidy"
+IUSE="debug doc examples faxpp htmltidy static-libs"
 
 # XQilla bundles two libraries:
 # - mapm, heavily patched
 # - yajl, moderately patched
 # There's currently no way to unbundle those
 
-RDEPEND="=dev-libs/xerces-c-3.0*
+RDEPEND=">=dev-libs/xerces-c-3.1.1
 	faxpp? ( dev-libs/faxpp )
 	htmltidy? ( app-text/htmltidy )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/${MY_P}
+PATCHES=(
+	"${FILESDIR}/2.2.4-respect-ldflags-no-rpath.patch"
+)
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
-	sed -i -e 's|^LDFLAGS =|LDFLAGS +=|' Makefile.in || die "sed failed"
+	base_src_prepare
+	eautoreconf
 }
 
 src_configure() {
 	econf \
 		--with-xerces=/usr \
 		$(use_enable debug) \
-		$(use_with htmltidy tidy) \
-		$(use_with faxpp faxpp /usr)
+		$(use_with htmltidy tidy /usr) \
+		$(use_with faxpp faxpp /usr) \
+		$(use_enable static-libs static)
 }
 
 src_compile() {
@@ -51,12 +57,16 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake docs failed"
+	default
 
-	dodoc ChangeLog TODO
+	use static-libs || rm -rf "${D}"/usr/lib*/*.la
 
 	if use doc; then
 		cd docs
 		dohtml -r dev-api dom3-api simple-api
+	fi
+	if use examples ; then
+		insinto /usr/share/doc/${PF}/examples
+		doins -r "${S}"/src/samples/*
 	fi
 }

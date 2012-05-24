@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xqilla
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/ChangeLog,v 1.12 2011/09/24 12:36:27 chainsaw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/ChangeLog,v 1.13 2012/05/24 20:25:19 dev-zero Exp $
+
+*xqilla-2.3.0 (24 May 2012)
+
+  24 May 2012; Tiziano Müller <dev-zero@gentoo.org> +xqilla-2.3.0.ebuild,
+  -files/2.2.3-xerces-c-3.1.0.patch, -files/xqilla-2.2.0-gcc44.patch,
+  -xqilla-2.2.0.ebuild, -xqilla-2.2.3.ebuild:
+  Version bump, fix tidy-support, add static-libs USE flag, drop old.
 
   24 Sep 2011; Tony Vroon <chainsaw@gentoo.org> xqilla-2.2.4.ebuild,
   +files/xqilla-2.2.4-gcc46.patch:
