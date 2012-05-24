@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.97-r3.ebuild,v 1.1 2010/10/31 17:54:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.97-r3.ebuild,v 1.2 2012/05/24 05:06:05 vapier Exp $
 
 EAPI=2
 
-inherit pam autotools flag-o-matic
+inherit pam autotools eutils flag-o-matic
 
 DESCRIPTION="Uses ssh-agent to provide single sign-on"
 HOMEPAGE="http://pam-ssh.sourceforge.net/"

@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.2.3-r1.ebuild,v 1.6 2009/04/05 16:19:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.2.3-r1.ebuild,v 1.7 2012/05/24 05:05:31 vapier Exp $
 
 EAPI=2
 
-inherit flag-o-matic pam toolchain-funcs
+inherit flag-o-matic pam toolchain-funcs eutils
 
 DESCRIPTION="Provides auto blacklisting of hosts and users responsible for repeated failed authentication attempts"
 HOMEPAGE="http://www.hexten.net/pam_abl/"
