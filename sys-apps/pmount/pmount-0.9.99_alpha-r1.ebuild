@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.99_alpha-r1.ebuild,v 1.7 2012/02/12 14:41:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.99_alpha-r1.ebuild,v 1.8 2012/05/24 02:36:19 vapier Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Policy based mounter that gives the ability to mount removable devices as a user"
 HOMEPAGE="http://pmount.alioth.debian.org/"

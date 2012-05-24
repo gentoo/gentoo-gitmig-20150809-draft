@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.17 2011/04/05 11:46:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.18 2012/05/24 02:35:09 vapier Exp $
 
-inherit rpm eutils
+inherit rpm eutils user
 
 MY_P=${P%.*}-${PV##*.}
 S=${WORKDIR}/${P%.*}
