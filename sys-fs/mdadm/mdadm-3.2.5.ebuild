@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.4.ebuild,v 1.1 2012/05/11 00:35:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.5.ebuild,v 1.1 2012/05/24 04:27:24 vapier Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic toolchain-funcs
