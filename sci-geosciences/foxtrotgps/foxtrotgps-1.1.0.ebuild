@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/foxtrotgps-1.1.0.ebuild,v 1.1 2012/05/24 19:48:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/foxtrotgps-1.1.0.ebuild,v 1.2 2012/05/24 19:49:32 scarabeus Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.foxtrotgps.org/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
