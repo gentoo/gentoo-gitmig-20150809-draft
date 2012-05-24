@@ -1,8 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/galago-daemon/galago-daemon-0.5.1.ebuild,v 1.16 2012/05/04 09:17:27 jdhore Exp $
-
-inherit eutils autotools
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/galago-daemon/galago-daemon-0.5.1.ebuild,v 1.17 2012/05/24 04:24:11 vapier Exp $
 
 DESCRIPTION="Galago presence daemon"
 HOMEPAGE="http://www.galago-project.org/"
