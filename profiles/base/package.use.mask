@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.355 2012/05/24 04:27:33 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.356 2012/05/24 10:30:08 dev-zero Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Tiziano Müller <dev-zero@gentoo.org> (24 May 2012)
+# Requires gevent-1 which is still p.masked
+www-servers/uwsgi gevent
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (14 May 2012)
 # This is the GNOME 3.4 package.use mask
