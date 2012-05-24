@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libnih
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnih/ChangeLog,v 1.3 2012/05/04 07:33:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnih/ChangeLog,v 1.4 2012/05/24 05:13:29 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> libnih-1.0.3.ebuild:
+  Inherit toolchain-funcs for gen_usr_ldscript.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libnih-1.0.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
