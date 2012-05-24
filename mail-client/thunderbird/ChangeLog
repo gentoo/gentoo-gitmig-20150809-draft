@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.142 2012/05/24 01:48:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.143 2012/05/24 12:46:20 anarchy Exp $
+
+  24 May 2012; Jory A. Pratt <anarchy@gentoo.org> thunderbird-12.0.1-r1.ebuild:
+  Fix bug #417329, thanks floppym@gentoo.org
 
 *thunderbird-12.0.1-r1 (24 May 2012)
 

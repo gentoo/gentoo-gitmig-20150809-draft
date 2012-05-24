@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-12.0.1-r1.ebuild,v 1.1 2012/05/24 01:48:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-12.0.1-r1.ebuild,v 1.2 2012/05/24 12:46:20 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -288,7 +288,7 @@ src_install() {
 	fi
 
 	if use jit ; then
-		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{thunderbird-bin}
+		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/thunderbird-bin
 	fi
 
 	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
