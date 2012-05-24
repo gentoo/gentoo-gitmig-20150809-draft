@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.80 2012/05/05 07:00:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.81 2012/05/24 13:58:49 ssuominen Exp $
+
+  24 May 2012; Samuli Suominen <ssuominen@gentoo.org> gtkam-0.1.18.ebuild:
+  ppc stable wrt #410611
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkam-0.1.16.1.ebuild,
   gtkam-0.1.17.ebuild, gtkam-0.1.18.ebuild:
