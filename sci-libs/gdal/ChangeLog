@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.123 2012/05/24 19:11:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.124 2012/05/24 19:20:51 scarabeus Exp $
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.8.1-r1.ebuild:
+  Stable on amd64, x86 and ppc. Wrt bug#413835.
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/gdal-png-1.5.patch,
   -gdal-1.8.1.ebuild, gdal-1.8.1-r1.ebuild:
