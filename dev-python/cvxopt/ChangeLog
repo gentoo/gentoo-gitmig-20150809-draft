@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cvxopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.8 2012/05/04 15:12:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/ChangeLog,v 1.9 2012/05/24 15:33:22 bicatali Exp $
+
+  24 May 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  files/cvxopt-1.1.5-setup.patch:
+  fixed cholmod blas linking, thanks Steve Trogdon, bug #415827
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> cvxopt-1.1.4-r1.ebuild,
   cvxopt-1.1.5.ebuild:

@@ -150,7 +150,7 @@
 -        glob('C/SuiteSparse/CHOLMOD/Cholesky/c*.c') +
 -        ['C/SuiteSparse/CHOLMOD/Check/cholmod_check.c'] +
 -        glob('C/SuiteSparse/CHOLMOD/Supernodal/c*.c') )
-+     libraries = ['cholmod','blas'],
++     libraries = ['cholmod'] + BLAS_LIBS,
 +     define_macros = MACROS + [('NPARTITION', '1')],
 +     sources = [ 'C/cholmod.c' ])
 +
