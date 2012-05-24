@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.3.ebuild,v 1.1 2012/05/24 02:27:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.3.ebuild,v 1.2 2012/05/24 02:38:13 ssuominen Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ fi
 inherit autotools user ${_live_inherits}
 
 DESCRIPTION="An implementation of Microsoft's Media Transfer Protocol (MTP)."
-HOMEPAGE="http://libmtp.sourceforge.net"
+HOMEPAGE="http://libmtp.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
