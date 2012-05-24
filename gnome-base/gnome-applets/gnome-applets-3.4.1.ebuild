@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.4.1.ebuild,v 1.1 2012/05/14 06:06:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.4.1.ebuild,v 1.2 2012/05/24 08:44:12 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -53,13 +53,13 @@ RDEPEND=">=x11-libs/gtk+-3.0.0:3
 	networkmanager? ( >=net-misc/networkmanager-0.7.0 )
 	policykit? ( >=sys-auth/polkit-0.92 )"
 DEPEND="${RDEPEND}
-	>=app-text/scrollkeeper-0.1.4
+	app-text/docbook-xml-dtd:4.1.2
+	app-text/docbook-xml-dtd:4.3
 	>=app-text/gnome-doc-utils-0.3.2
-	virtual/pkgconfig
+	>=app-text/scrollkeeper-0.1.4
 	>=dev-util/intltool-0.35
 	dev-libs/libxslt
-	app-text/docbook-xml-dtd:4.1.2
-	app-text/docbook-xml-dtd:4.3"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
@@ -83,8 +83,7 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
+	python_clean_py-compile_files
 
 	# Invest applet tests need gconf/proxy/...
 	# Note: for now, invest tests are commented out by upstream
