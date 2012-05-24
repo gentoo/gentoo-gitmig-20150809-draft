@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiadd/scsiadd-1.95.ebuild,v 1.1 2007/05/16 21:57:51 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsiadd/scsiadd-1.95.ebuild,v 1.2 2012/05/24 05:11:54 vapier Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit user toolchain-funcs flag-o-matic
 
 DESCRIPTION="Add and remove SCSI devices from your Linux system during runtime"
 HOMEPAGE="http://llg.cubic.org/tools/"
