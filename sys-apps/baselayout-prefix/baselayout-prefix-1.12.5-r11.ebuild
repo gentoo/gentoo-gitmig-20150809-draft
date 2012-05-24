@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r11.ebuild,v 1.1 2011/03/31 18:49:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r11.ebuild,v 1.2 2012/05/24 04:13:57 vapier Exp $
 
 EAPI=3
 
-inherit eutils toolchain-funcs multilib prefix flag-o-matic autotools
+inherit eutils toolchain-funcs multilib prefix flag-o-matic
 
 # baselayout-prefix-1.12.5.1694.tar.bz2
 PVER=1701

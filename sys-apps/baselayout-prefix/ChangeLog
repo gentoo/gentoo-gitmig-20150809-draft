@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.15 2012/02/19 19:32:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.16 2012/05/24 04:13:57 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org>
+  baselayout-prefix-1.12.5-r11.ebuild, baselayout-prefix-1.12.14.ebuild:
+  Drop unused autotools inherit.
 
   19 Feb 2012; Fabian Groffen <grobian@gentoo.org>
   baselayout-prefix-1.12.14.ebuild:
