@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.247 2012/05/24 06:17:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.248 2012/05/24 10:17:34 ssuominen Exp $
+
+  24 May 2012; Samuli Suominen <ssuominen@gentoo.org> graphviz-2.28.0.ebuild:
+  Pull in correct SLOT of media-libs/libpng for headers.
 
   24 May 2012; Jeff Horelick <jdhore@gentoo.org> graphviz-2.26.3-r4.ebuild:
   marked x86 per bug 417327

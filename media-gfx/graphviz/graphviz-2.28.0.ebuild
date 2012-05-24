@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.1 2012/05/23 19:20:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.2 2012/05/24 10:17:34 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -21,12 +21,12 @@ IUSE="cairo devil doc examples gs gtk gts java lasi nls perl python qt4 ruby svg
 RESTRICT="test"
 
 RDEPEND="
-	>=dev-libs/expat-2.0.0
+	>=dev-libs/expat-2
 	>=dev-libs/glib-2.11.1
 	>=media-libs/fontconfig-2.3.95
 	>=media-libs/freetype-2.1.10
 	>=media-libs/gd-2.0.34[fontconfig,jpeg,png,truetype]
-	>=media-libs/libpng-1.4
+	>=media-libs/libpng-1.2:0
 	virtual/jpeg
 	virtual/libiconv
 	cairo?	(
@@ -45,8 +45,8 @@ RDEPEND="
 	gts?	( sci-libs/gts )
 	lasi?	( media-libs/lasi )
 	qt4?	(
-		x11-libs/qt-core
-		x11-libs/qt-gui
+		x11-libs/qt-core:4
+		x11-libs/qt-gui:4
 		>=x11-libs/pango-1.12
 		>=x11-libs/cairo-1.1.10
 	)
@@ -219,13 +219,11 @@ src_install() {
 		htmlinfodir="${EPREFIX}"/usr/share/doc/${PF}/html/info \
 		pdfdir="${EPREFIX}"/usr/share/doc/${PF}/pdf \
 		pkgconfigdir="${EPREFIX}"/usr/$(get_libdir)/pkgconfig \
-		install || die "emake install failed"
+		install || die
 
-	use examples || rm -rf "${D}/usr/share/graphviz/demo"
+	use examples || rm -rf "${ED}"/usr/share/graphviz/demo
 
-	if ! use static-libs; then
-		find "${ED}"/usr/$(get_libdir)/ -name '*.la' -delete || die
-	fi
+	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
 
 	dodoc AUTHORS ChangeLog NEWS README
 }
