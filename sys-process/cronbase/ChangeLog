@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.39 2012/04/26 12:27:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.40 2012/05/24 05:52:37 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> cronbase-0.3.2-r1.ebuild,
+  cronbase-0.3.2.ebuild, cronbase-0.3.3.ebuild:
+  Inherit user for enewgroup/etc... rather than eutils.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> cronbase-0.3.3.ebuild:
   keyword ~amd64-fbsd

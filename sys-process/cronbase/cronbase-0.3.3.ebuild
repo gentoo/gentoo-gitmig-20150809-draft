@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.3.ebuild,v 1.8 2012/04/26 12:27:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.3.3.ebuild,v 1.9 2012/05/24 05:52:37 vapier Exp $
 
-inherit eutils
+inherit user
 
 DESCRIPTION="base for all cron ebuilds"
 HOMEPAGE="http://www.gentoo.org/"
