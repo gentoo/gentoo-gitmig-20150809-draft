@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.138 2012/05/24 08:06:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.139 2012/05/24 11:37:53 johu Exp $
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> -dolphin-4.8.1.ebuild:
+  Remove KDE SC 4.8.1
 
   24 May 2012; Agostino Sarubbo <ago@gentoo.org> dolphin-4.8.3-r1.ebuild:
   Stable for x86, wrt bug #414605

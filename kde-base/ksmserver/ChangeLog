@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.213 2012/05/24 09:39:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.214 2012/05/24 11:38:00 johu Exp $
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> -ksmserver-4.8.1.ebuild:
+  Remove KDE SC 4.8.1
 
   24 May 2012; Agostino Sarubbo <ago@gentoo.org> ksmserver-4.8.3.ebuild:
   Stable for x86, wrt bug #414605
