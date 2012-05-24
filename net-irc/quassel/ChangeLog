@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.138 2012/03/31 11:20:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.139 2012/05/24 13:59:18 scarabeus Exp $
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -quassel-0.7.3.ebuild:
+  Remove older version. Why the heck stabling on amd64 and x86 was not
+  changeloged last time (repoman bug?)...
 
   31 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> quassel-0.8.0.ebuild,
   quassel-9999.ebuild:
