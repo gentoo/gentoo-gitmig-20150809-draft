@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-12.0.1-r1.ebuild,v 1.2 2012/05/24 12:46:20 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-12.0.1-r1.ebuild,v 1.3 2012/05/24 22:06:14 floppym Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -134,6 +134,13 @@ src_prepare() {
 		-i "${S}"/mozilla/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc \
 		-i "${S}"/mozilla/config/system-headers \
 		-i "${S}"/mozilla/js/src/config/system-headers || die "Sed failed"
+
+	# Shell scripts sometimes contain DOS line endings; bug 391889
+	grep -rlZ --include="*.sh" $'\r$' . |
+	while read -r -d $'\0' file ; do
+		einfo edos2unix "${file}"
+		edos2unix "${file}"
+	done
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user

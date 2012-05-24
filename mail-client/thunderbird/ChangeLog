@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.143 2012/05/24 12:46:20 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.144 2012/05/24 22:06:14 floppym Exp $
+
+  24 May 2012; Mike Gilbert <floppym@gentoo.org> thunderbird-10.0.4.ebuild,
+  thunderbird-12.0.1-r1.ebuild:
+  Convert DOS line-endings in shell scripts. Bug 391889.
 
   24 May 2012; Jory A. Pratt <anarchy@gentoo.org> thunderbird-12.0.1-r1.ebuild:
   Fix bug #417329, thanks floppym@gentoo.org
