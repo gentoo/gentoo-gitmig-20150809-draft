@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.1.29.ebuild,v 1.1 2012/02/10 19:31:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.1.29.ebuild,v 1.2 2012/05/24 05:34:44 vapier Exp $
 
 EAPI=2
-inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
+inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
 
 #Number of official patches
 #PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
