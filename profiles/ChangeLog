@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6593 2012/05/24 11:43:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6594 2012/05/24 21:45:06 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 May 2012; Alexis Ballier <aballier@gentoo.org> updates/2Q-2012:
+  move dev-texlive/texlive-latex3 to dev-texlive/texlive-latexrecommended as
+  that where it is in texlive 2011
 
   24 May 2012; Johannes Huber <johu@gentoo.org> package.mask:
   Remove obsolete mask for kde-base/ksecrets, was removed with KDE SC 4.8.1.

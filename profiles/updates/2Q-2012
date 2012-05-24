@@ -13,3 +13,4 @@ move app-portage/eclean-kernel app-admin/eclean-kernel
 move kde-misc/kcm-gtk-config kde-misc/kde-gtk-config
 move x11-misc/see x11-misc/seetxt
 move dev-python/Whoosh dev-python/whoosh
+move dev-texlive/texlive-latex3 dev-texlive/texlive-latexrecommended
