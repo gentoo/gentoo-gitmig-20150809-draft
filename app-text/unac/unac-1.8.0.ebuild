@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unac/unac-1.8.0.ebuild,v 1.1 2012/02/15 16:57:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unac/unac-1.8.0.ebuild,v 1.2 2012/05/24 13:12:35 johu Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/u/unac/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="static-libs test"
 
 RDEPEND="virtual/libiconv"
