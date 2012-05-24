@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r3.ebuild,v 1.5 2012/04/13 14:14:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0-r4.ebuild,v 1.1 2012/05/24 13:00:09 ryao Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tar.gz
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="debug multitarget +static-analyzer +system-cxx-headers test"
+IUSE="debug kernel_FreeBSD multitarget +static-analyzer system-cxx-headers test"
 
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
@@ -72,6 +72,12 @@ src_prepare() {
 
 	# AMD K10 CPUs + SSE4a suppport, bug #398357
 	epatch "${FILESDIR}"/${P}-recognize-amd-k10-enable-sse4a.patch
+
+	# Automatically select active system GCC's libraries, bug #406163
+	epatch "${FILESDIR}"/${P}-linux-runtime-gcc-detection.patch
+
+	# Fix search paths on FreeBSD, bug #409269
+	epatch "${FILESDIR}"/${P}-freebsd-runtime-gcc-detection.patch
 
 	# User patches
 	epatch_user
@@ -184,6 +190,9 @@ src_install() {
 			eend $?
 		done
 	fi
+
+	# Remove unnecessary headers on FreeBSD, bug #417171
+	use kernel_FreeBSD && rm "${ED}/usr/lib/clang/3.1/include/"{arm_neon,std,float,iso,limits,tgmath,varargs}*.h
 }
 
 pkg_postinst() {
