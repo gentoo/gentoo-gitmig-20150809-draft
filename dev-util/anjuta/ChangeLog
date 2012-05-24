@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.143 2012/05/22 06:32:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.144 2012/05/24 13:44:19 ssuominen Exp $
+
+  24 May 2012; Samuli Suominen <ssuominen@gentoo.org> anjuta-3.2.2.ebuild:
+  ppc stable wrt #410611
 
 *anjuta-3.4.3 (22 May 2012)
 
