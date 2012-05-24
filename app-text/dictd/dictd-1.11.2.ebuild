@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.11.2.ebuild,v 1.7 2010/05/21 15:42:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.11.2.ebuild,v 1.8 2012/05/24 04:43:00 vapier Exp $
 
 EAPI="3"
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"

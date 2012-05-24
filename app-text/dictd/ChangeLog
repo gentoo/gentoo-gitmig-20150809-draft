@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dictd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.90 2012/04/10 11:15:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.91 2012/05/24 04:43:00 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> dictd-1.11.1-r1.ebuild,
+  dictd-1.11.2.ebuild, dictd-1.12.0.ebuild:
+  Inherit user for enewuser/etc...
 
   10 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> dictd-1.12.0.ebuild:
   Depend on virtual/yacc fixing bug#398663.
