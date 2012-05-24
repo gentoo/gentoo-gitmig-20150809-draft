@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.141 2012/05/08 09:26:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.142 2012/05/24 01:48:03 anarchy Exp $
+
+*thunderbird-12.0.1-r1 (24 May 2012)
+
+  24 May 2012; Jory A. Pratt <anarchy@gentoo.org> -thunderbird-12.0.1.ebuild,
+  +thunderbird-12.0.1-r1.ebuild:
+  Add jit useflag fix patchset from firefox
 
   08 May 2012; Lars Wendler <polynomial-c@gentoo.org>
   thunderbird-12.0.1.ebuild:
