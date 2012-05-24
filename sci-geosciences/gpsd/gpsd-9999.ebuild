@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.2 2012/05/21 22:37:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.3 2012/05/24 16:19:41 scarabeus Exp $
 
 EAPI="4"
 
@@ -43,7 +43,7 @@ RDEPEND="X? ( dev-python/pygtk:2 )
 		sys-apps/dbus
 		dev-libs/dbus-glib
 	)
-	ntp? ( net-misc/ntp )
+	ntp? ( || ( net-misc/ntp net-misc/chrony ) )
 	qt4? ( x11-libs/qt-gui )"
 DEPEND="${RDEPEND}
 	test? ( sys-devel/bc )"
