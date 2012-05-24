@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.6.ebuild,v 1.4 2012/03/06 20:42:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.6.ebuild,v 1.5 2012/05/24 18:06:07 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils scons-utils toolchain-funcs games
+inherit eutils flag-o-matic scons-utils toolchain-funcs games
 
 DESCRIPTION="free Lemmings clone"
 HOMEPAGE="http://pingus.seul.org/"
@@ -22,6 +22,7 @@ DEPEND="media-libs/libsdl[joystick,opengl?,video]
 	dev-libs/boost"
 
 src_compile() {
+	strip-flags
 	escons \
 		CXX="$(tc-getCXX)" \
 		CCFLAGS="${CXXFLAGS}" \
