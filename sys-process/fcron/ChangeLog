@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/fcron
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.91 2011/09/08 14:24:03 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.92 2012/05/24 05:51:09 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> fcron-3.0.5-r2.ebuild,
+  fcron-3.0.6-r1.ebuild, fcron-3.0.6-r2.ebuild:
+  Inherit flag-o-matic for append-flags, and user for enewuser/etc...
 
   08 Sep 2011; Ulrich Mueller <ulm@gentoo.org> fcron-3.0.5-r2.ebuild,
   fcron-3.0.6-r1.ebuild:

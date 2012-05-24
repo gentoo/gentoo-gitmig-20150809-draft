@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.5-r2.ebuild,v 1.9 2011/09/08 14:24:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.5-r2.ebuild,v 1.10 2012/05/24 05:51:09 vapier Exp $
 
-inherit cron pam eutils
+inherit cron pam eutils flag-o-matic user
 
 MY_P=${P/_/-}
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
