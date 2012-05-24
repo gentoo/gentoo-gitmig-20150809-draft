@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/dd-rescue-1.25.ebuild,v 1.1 2012/02/04 18:08:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/dd-rescue-1.25.ebuild,v 1.2 2012/05/24 03:07:11 vapier Exp $
 
 EAPI=4
 
-inherit base toolchain-funcs
+inherit base toolchain-funcs flag-o-matic
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}-${PV}
@@ -21,7 +21,7 @@ IUSE="static kernel_linux elibc_glibc"
 S=${WORKDIR}/${MY_PN}
 
 src_compile() {
-	use static && append-flags -static
+	use static && append-ldflags -static
 
 	# Passing LDFLAGS together with CFLAGS is not often a good idea, but
 	# in this case it makes it possible to avoid patching; after all it
