@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-1.0_rc77.ebuild,v 1.1 2011/11/23 21:50:07 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-1.0_rc77.ebuild,v 1.2 2012/05/24 03:14:15 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite"
-inherit eutils python
+inherit eutils python user
 
 DESCRIPTION="Entropy Package Manager foundation library"
 HOMEPAGE="http://www.sabayon.org"
