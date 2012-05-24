@@ -1,0 +1,12 @@
+# ChangeLog for sys-libs/libcxx
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.1 2012/05/24 03:01:42 aballier Exp $
+
+*libcxx-9999 (24 May 2012)
+*libcxx-0.0_p20120523 (24 May 2012)
+
+  24 May 2012; Alexis Ballier <aballier@gentoo.org>
+  +libcxx-0.0_p20120523.ebuild, +libcxx-9999.ebuild, +files/multilib.patch,
+  +files/prepare_snapshot.sh, +metadata.xml:
+  initial import, ebuild by me
+
