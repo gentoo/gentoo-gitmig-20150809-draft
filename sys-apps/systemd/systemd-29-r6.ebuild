@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r6.ebuild,v 1.2 2012/04/04 04:09:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r6.ebuild,v 1.3 2012/05/24 02:36:59 vapier Exp $
 
 EAPI=4
 
-inherit autotools-utils bash-completion-r1 linux-info pam systemd
+inherit autotools-utils bash-completion-r1 linux-info pam systemd user
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
