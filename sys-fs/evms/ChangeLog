@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.106 2012/05/15 23:42:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.107 2012/05/24 04:17:33 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> evms-2.5.5-r13.ebuild:
+  Inherit eutils for epatch.
 
   15 May 2012; Maciej Mrozowski <reavertm@gentoo.org> evms-2.5.5-r13.ebuild:
   Fix structure name collision with glibc-2.14, bug 415603.

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r13.ebuild,v 1.3 2012/05/15 23:42:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r13.ebuild,v 1.4 2012/05/24 04:17:33 vapier Exp $
 
 EAPI=4
 
-inherit autotools-utils flag-o-matic toolchain-funcs linux-info
+inherit autotools-utils flag-o-matic toolchain-funcs linux-info eutils
 
 PATCHVER="${PV}-4"
 
