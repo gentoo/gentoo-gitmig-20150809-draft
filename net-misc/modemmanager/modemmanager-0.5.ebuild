@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.ebuild,v 1.3 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.ebuild,v 1.4 2012/05/24 02:52:57 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="ModemManager"
@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_prepare() {
+	# fix building against glib-2.31 headers
+	epatch "${FILESDIR}/${PN}-0.5-glib-2.31.patch"
+}
 
 src_configure() {
 	# ppp-2.4.5 changes the plugin directory
