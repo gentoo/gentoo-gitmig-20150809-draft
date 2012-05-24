@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.25 2012/05/24 12:43:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.26 2012/05/24 12:53:24 scarabeus Exp $
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/qgis-no-python-pyc.patch, qgis-1.7.4.ebuild:
+  Add python pyc patch for bug#381481. Patch by Chris Mayo.
 
 *qgis-1.7.4 (24 May 2012)
 

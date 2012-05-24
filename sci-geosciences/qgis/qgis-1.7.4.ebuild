@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.4.ebuild,v 1.1 2012/05/24 12:43:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.4.ebuild,v 1.2 2012/05/24 12:53:24 scarabeus Exp $
 
 EAPI=4
 
@@ -50,6 +50,7 @@ DOCS=( BUGS CHANGELOG CODING.pdf README )
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc4.7.patch"
+	"${FILESDIR}/${PN}-no-python-pyc.patch"
 )
 
 # Does not find the test binaries at all
@@ -103,4 +104,9 @@ pkg_postinst() {
 		elog "you should install:"
 		elog "   dev-db/postgis"
 	fi
+	use python && python_mod_optimize qgis /usr/share/qgis/python/plugins
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup qgis /usr/share/qgis/python/plugins
 }
