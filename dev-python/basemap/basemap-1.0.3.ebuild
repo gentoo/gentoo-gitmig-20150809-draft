@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.3.ebuild,v 1.1 2012/05/24 13:03:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.3.ebuild,v 1.2 2012/05/24 15:07:14 mr_bones_ Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -42,7 +42,7 @@ src_prepare() {
 	distutils_src_prepare
 }
 
-# This one works. examples appear to be need be installed to run. 
+# This one works. examples appear to be need be installed to run.
 src_test() {
 	testing() {
 		pushd "$(find build-${PYTHON_ABI}/ -namelib.linux-*)/mpl_toolkits/basemap/"
