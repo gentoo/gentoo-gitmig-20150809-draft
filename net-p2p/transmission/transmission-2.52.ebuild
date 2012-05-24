@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.7 2012/05/24 01:55:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.52.ebuild,v 1.1 2012/05/24 01:55:29 ssuominen Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
