@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.5.ebuild,v 1.12 2011/04/05 11:46:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/libutempter-1.1.5.ebuild,v 1.13 2012/05/24 05:35:33 vapier Exp $
 
-inherit eutils flag-o-matic versionator toolchain-funcs
+inherit user multilib flag-o-matic
 
 DESCRIPTION="Library that allows non-privileged apps to write utmp (login) info, which need root access"
 HOMEPAGE="http://altlinux.org/index.php?module=sisyphus&package=libutempter"
