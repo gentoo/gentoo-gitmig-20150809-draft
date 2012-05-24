@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.76 2011/12/23 21:29:51 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.77 2012/05/24 02:39:28 jdhore Exp $
+
+  24 May 2012; Jeff Horelick <jdhore@gentoo.org> gentoo-syntax-1.19.ebuild:
+  marked x86 per bug 417305
 
 *gentoo-syntax-1.19 (23 Dec 2011)
 
