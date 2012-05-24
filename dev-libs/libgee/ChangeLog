@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.47 2012/05/04 18:35:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.48 2012/05/24 13:40:45 ssuominen Exp $
+
+  24 May 2012; Samuli Suominen <ssuominen@gentoo.org> libgee-0.6.4.ebuild:
+  ppc stable wrt #410611
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libgee-0.6.2.1.ebuild,
   libgee-0.6.3.ebuild, libgee-0.6.4.ebuild, libgee-0.7.1.ebuild,
