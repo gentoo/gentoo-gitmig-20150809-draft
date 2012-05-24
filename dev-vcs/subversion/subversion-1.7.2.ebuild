@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.2.ebuild,v 1.4 2012/05/03 02:57:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.2.ebuild,v 1.5 2012/05/24 05:42:40 vapier Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 WANT_AUTOMAKE="none"
 MY_P="${P/_/-}"
 
-inherit autotools base bash-completion-r1 db-use depend.apache elisp-common flag-o-matic java-pkg-opt-2 libtool multilib perl-module python
+inherit autotools base bash-completion-r1 db-use depend.apache elisp-common flag-o-matic java-pkg-opt-2 libtool multilib perl-module python user
 
 DESCRIPTION="Advanced version control system"
 HOMEPAGE="http://subversion.apache.org/"
