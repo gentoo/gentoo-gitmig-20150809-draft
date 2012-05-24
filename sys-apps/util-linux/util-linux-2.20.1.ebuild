@@ -1,12 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20.1.ebuild,v 1.2 2011/12/30 19:30:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20.1.ebuild,v 1.3 2012/05/24 02:52:39 vapier Exp $
 
 EAPI="3"
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
 inherit eutils toolchain-funcs libtool flag-o-matic
-[[ ${PV} == "9999" ]] && inherit git autotools
+if [[ ${PV} == "9999" ]] ; then
+	inherit git-2 autotools
+	#KEYWORDS=""
+else
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
+fi
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -16,11 +21,9 @@ DESCRIPTION="Various useful Linux utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
-	#KEYWORDS=""
 else
 	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.bz2
 		loop-aes? ( http://loop-aes.sourceforge.net/updates/util-linux-2.20-20110905.diff.bz2 )"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
 fi
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
