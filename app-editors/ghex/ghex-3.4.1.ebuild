@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.4.1.ebuild,v 1.1 2012/05/19 22:22:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-3.4.1.ebuild,v 1.2 2012/05/24 08:53:35 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -18,8 +18,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/atk-1
 	>=dev-libs/glib-2.31.10:2
-	>=x11-libs/gtk+-3.3.8:3
-	>=dev-libs/atk-1"
+	>=x11-libs/gtk+-3.3.8:3"
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.9.0
 	>=dev-util/intltool-0.41.1

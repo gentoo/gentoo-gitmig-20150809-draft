@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.70 2012/05/19 22:22:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.71 2012/05/24 08:53:35 tetromino Exp $
+
+  24 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> ghex-3.4.1.ebuild:
+  Duplicate dependency.
 
 *ghex-3.4.1 (19 May 2012)
 
