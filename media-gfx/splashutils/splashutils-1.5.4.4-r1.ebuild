@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r1.ebuild,v 1.1 2012/05/22 13:16:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r1.ebuild,v 1.2 2012/05/24 15:07:44 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -82,7 +82,7 @@ src_prepare() {
 
 	cd "${S}"
 	ln -sf "${S}/src" "${WORKDIR}/core"
-    
+
 	epatch "${FILESDIR}/${P}-bzip2.patch"
 
 	if ! tc-is-cross-compiler && \
