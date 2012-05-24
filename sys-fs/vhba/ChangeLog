@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.32 2012/04/21 20:23:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.33 2012/05/24 04:20:30 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> vhba-1.2.1.ebuild,
+  vhba-20101015-r1.ebuild, vhba-20110915.ebuild:
+  Inherit user for enewuser/etc...
 
   21 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   vhba-20110915.ebuild, +files/vhba-20110915-3.4-kmap_atomic.patch:
