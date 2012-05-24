@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/bt747-1.68.25.ebuild,v 1.2 2009/09/19 08:32:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/bt747-2.0.3.ebuild,v 1.1 2012/05/24 19:55:59 scarabeus Exp $
 EAPI=2
 
 WANT_ANT_TASKS="ant-nodeps"
@@ -12,16 +12,17 @@ MY_P=${MY_PN}_${PV}
 
 DESCRIPTION="MTK GPS Datalogger Device Control"
 HOMEPAGE="http://bt747.free.fr/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}_full.zip"
+SRC_URI="mirror://sourceforge/${PN}/BT747_${PV}_full.zip"
 
 LICENSE="GPL-3"
 SLOT="1"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEP="dev-java/rxtx:2
+COMMON_DEP=">=dev-java/rxtx-2.2_pre2
 	dev-java/swing-layout:1
-	dev-java/jcalendar:1.2"
+	dev-java/jcalendar:1.2
+	dev-java/jcharts"
 
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
@@ -32,7 +33,7 @@ DEPEND=">=virtual/jdk-1.5
 EANT_BUILD_TARGET="dist.j2se"
 EANT_EXTRA_ARGS="-Dskip.proguard=yes
 	-Drxtxcomm.jar=lib/RXTXcomm.jar
-	-Dswinglayout.jar=lib/swing-layout.jar
+	-Dswing-layout.jar=lib/swing-layout.jar
 	-Djcalendar.jar=lib/jcalendar.jar"
 
 S="${WORKDIR}"
@@ -40,7 +41,7 @@ S="${WORKDIR}"
 java_prepare() {
 	rm -rf dist
 	cd lib
-	rm -rf r* W* c* swing-* w* jc*
+	rm -rf r* W* c* swing-* w* jca*
 	java-pkg_jar-from rxtx-2
 	java-pkg_jar-from swing-layout-1
 	java-pkg_jar-from jcalendar-1.2
