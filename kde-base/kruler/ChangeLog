@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kruler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.203 2012/05/18 20:31:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.204 2012/05/24 09:36:08 ago Exp $
+
+  24 May 2012; Agostino Sarubbo <ago@gentoo.org> kruler-4.8.3.ebuild:
+  Stable for x86, wrt bug #414605
 
   18 May 2012; Agostino Sarubbo <ago@gentoo.org> kruler-4.8.3.ebuild:
   Stable for amd64, wrt bug #414605
