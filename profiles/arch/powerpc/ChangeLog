@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.167 2012/05/15 17:32:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.168 2012/05/24 10:45:01 johu Exp $
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Mask kde-base/solid-4.8[bluetooth] for ppc*
 
   15 May 2012; Mike Gilbert <floppym@gentoo.org> ppc32/make.defaults,
   ppc64/make.defaults:

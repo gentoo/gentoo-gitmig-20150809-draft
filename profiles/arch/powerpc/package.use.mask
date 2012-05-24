@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.119 2012/05/13 14:40:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.120 2012/05/24 10:45:01 johu Exp $
 
 
 # Brent Baude <ranger@gentoo.org> (06 Mar 2012)
@@ -103,6 +103,7 @@ mail-client/claws-mail pda
 =kde-base/kdelibs-4.7* policykit
 =kde-base/solid-4.6* bluetooth
 =kde-base/solid-4.7* bluetooth
+=kde-base/solid-4.8* bluetooth
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)
