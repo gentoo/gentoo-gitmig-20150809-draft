@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/foxtrotgps-1.0.1.ebuild,v 1.2 2011/07/24 11:28:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/foxtrotgps-1.0.1.ebuild,v 1.3 2012/05/24 12:32:49 scarabeus Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND="
 	dev-libs/libxml2:2
 	gnome-base/gconf:2
+	gnome-base/libglade
 	media-libs/libexif
 	net-misc/curl
 	>=sci-geosciences/gpsd-2.90
