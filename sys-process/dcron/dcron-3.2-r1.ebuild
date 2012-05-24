@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-3.2-r1.ebuild,v 1.2 2010/10/17 03:51:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-3.2-r1.ebuild,v 1.3 2012/05/24 05:48:48 vapier Exp $
 
-inherit cron toolchain-funcs
+inherit cron toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="A cute little cron from Matt Dillon"
 HOMEPAGE="http://apollo.backplane.com/FreeSrc/"

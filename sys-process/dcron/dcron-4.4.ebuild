@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-4.4.ebuild,v 1.1 2010/10/26 07:07:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-4.4.ebuild,v 1.2 2012/05/24 05:48:48 vapier Exp $
 
 EAPI="2"
 
-inherit cron toolchain-funcs
+inherit cron toolchain-funcs eutils
 
 DESCRIPTION="A cute little cron from Matt Dillon"
 HOMEPAGE="http://www.jimpryor.net/linux/dcron.html http://apollo.backplane.com/FreeSrc/"
