@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.6-r1.ebuild,v 1.1 2010/09/18 10:24:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.6-r1.ebuild,v 1.2 2012/05/24 02:41:18 vapier Exp $
 
 EAPI=3
 
-inherit base autotools
+inherit base autotools user
 
 MY_P="icecc-${PV}"
 

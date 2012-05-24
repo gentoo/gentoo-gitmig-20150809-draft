@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.41 2012/01/13 18:46:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.42 2012/05/24 02:41:18 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> icecream-0.9.6-r1.ebuild,
+  icecream-0.9.7.ebuild:
+  Inherit user for enewuser/etc...
 
   13 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +files/0.9.7-automake-1.11.2.patch, icecream-0.9.7.ebuild:
