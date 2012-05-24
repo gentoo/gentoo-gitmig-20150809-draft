@@ -8,7 +8,6 @@ Due to the following change, {pkglib,pkginclude}_DATA is invalid:
     http://git.savannah.gnu.org/cgit/automake.git/commit/?id=9ca632642b006ac6b0fc4ce0ae5b34023faa8cbf
 
 ---
-diff --git a/plugin/ming/Makefile.am b/plugin/ming/Makefile.am
 --- a/plugin/ming/Makefile.am
 +++ b/plugin/ming/Makefile.am
 @@ -17,7 +17,8 @@ lib_LTLIBRARIES = libgvplugin_ming.la
@@ -21,3 +20,14 @@ diff --git a/plugin/ming/Makefile.am b/plugin/ming/Makefile.am
  endif
  
  libgvplugin_ming_C_la_SOURCES = \
+--- a/tclpkg/gv/Makefile.am
++++ b/tclpkg/gv/Makefile.am
+@@ -257,7 +257,7 @@ $(TCL_data): gv_tcl.cpp
+ gv_tcl.cpp: gv.i
+ 	$(SWIG) -c++ -tcl -namespace -o gv_tcl.cpp $(srcdir)/gv.i
+ 
+-pkginclude_DATA = gv.i gv.cpp
++pkginclude_HEADERS = gv.i gv.cpp
+ pkglib_LTLIBRARIES = 
+ man_MANS =
+ DEVTSTS =
