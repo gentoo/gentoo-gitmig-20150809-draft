@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/zpaq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.8 2012/05/20 11:05:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.9 2012/05/24 04:35:17 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> zpaq-2.05.ebuild,
+  zpaq-3.01.ebuild, zpaq-4.04.ebuild:
+  Inherit eutils for epatch.
 
   20 May 2012; Mike Frysinger <vapier@gentoo.org> zpaq-2.05.ebuild,
   zpaq-3.01.ebuild, zpaq-4.04.ebuild:

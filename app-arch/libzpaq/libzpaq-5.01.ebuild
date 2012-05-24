@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/libzpaq-5.01.ebuild,v 1.2 2012/04/11 18:28:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/libzpaq-5.01.ebuild,v 1.3 2012/05/24 04:33:22 vapier Exp $
 
 EAPI=3
 
 AUTOTOOLS_AUTORECONF=1
-inherit autotools-utils flag-o-matic
+inherit autotools-utils flag-o-matic eutils
 
 MY_P=${PN}${PV/./}
 DESCRIPTION="Library to compress files or objects in the ZPAQ format"
