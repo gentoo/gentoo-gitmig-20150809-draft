@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.19 2012/05/22 09:11:22 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.20 2012/05/24 05:56:47 rafaelmartins Exp $
+
+*uwsgi-1.2.3-r2 (24 May 2012)
+
+  24 May 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -uwsgi-1.2.3.ebuild, -uwsgi-1.2.3-r1.ebuild, +uwsgi-1.2.3-r2.ebuild,
+  files/uwsgi.initd-r1:
+  Allow the usage of globs for --emperor on the initscript.
 
 *uwsgi-1.2.3-r1 (22 May 2012)
 

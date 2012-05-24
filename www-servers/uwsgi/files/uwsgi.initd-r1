@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/files/uwsgi.initd-r1,v 1.2 2012/05/22 09:11:22 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/files/uwsgi.initd-r1,v 1.3 2012/05/24 05:56:47 rafaelmartins Exp $
 
 PROGNAME=${SVCNAME#*.}
 
@@ -17,7 +17,7 @@ depend() {
 
 start_emperor() {
 	local OPTIONS
-	OPTIONS="--emperor ${UWSGI_EMPEROR_PATH} --daemonize"
+	OPTIONS="--daemonize"
 
 	if [ -n "${UWSGI_LOG_FILE}" ]; then
 		OPTIONS="${OPTIONS} ${UWSGI_LOG_FILE}"
@@ -35,7 +35,8 @@ start_emperor() {
 	ebegin "Starting uWSGI emperor"
 	cd "${UWSGI_DIR}" && \
 	start-stop-daemon --start --user "${UWSGI_USER}" --exec "${UWSGI_EXEC}" \
-		-- ${OPTIONS} --pidfile "${PIDFILE}"
+		-- --emperor "${UWSGI_EMPEROR_PATH}" ${OPTIONS} \
+		--pidfile "${PIDFILE}"
 	return $?
 }
 
