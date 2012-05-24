@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r5.ebuild,v 1.1 2012/05/24 04:13:41 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r5.ebuild,v 1.2 2012/05/24 04:25:27 darkside Exp $
 
-EAPI="3"
+EAPI=4
 
 WANT_AUTOCONF="2.5"
 
@@ -119,47 +119,34 @@ src_configure() {
 }
 
 src_install() {
-	dobin screen || die "dobin failed"
-	keepdir /var/run/screen || die "keepdir failed"
+	dobin screen
 
 	if use multiuser || use prefix
 	then
-		fperms 4755 /usr/bin/screen || die "fperms failed"
+		fperms 4755 /usr/bin/screen
 	else
-		fowners root:utmp /{usr/bin,var/run}/screen \
-			|| die "fowners failed, use multiuser USE-flag instead"
-		fperms 2755 /usr/bin/screen || die "fperms failed"
+		fowners root:utmp /usr/bin/screen
+		fperms 2755 /usr/bin/screen
 	fi
 
 	insinto /usr/share/screen
-	doins terminfo/{screencap,screeninfo.src} || die "doins failed"
+	doins terminfo/{screencap,screeninfo.src}
 	insinto /usr/share/screen/utf8encodings
-	doins utf8encodings/?? || die "doins failed"
+	doins utf8encodings/??
 	insinto /etc
-	doins "${FILESDIR}"/screenrc || die "doins failed"
+	doins "${FILESDIR}"/screenrc
 
-	pamd_mimic_system screen auth || die "pamd_mimic_system failed"
+	pamd_mimic_system screen auth
 
 	dodoc \
 		README ChangeLog INSTALL TODO NEWS* patchlevel.h \
-		doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps} \
-		|| die "dodoc failed"
+		doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps}
 
-	doman doc/screen.1 || die "doman failed"
-	doinfo doc/screen.info* || die "doinfo failed"
+	doman doc/screen.1
+	doinfo doc/screen.info*
 }
 
 pkg_postinst() {
-	if use prefix; then
-		chmod 0777 "${EROOT}"/var/run/screen
-	elif use multiuser; then
-		chown root:0 "${EROOT}"/var/run/screen
-		chmod 0755 "${EROOT}"/var/run/screen
-	else
-		chown root:utmp "${EROOT}"/var/run/screen
-		chmod 0775 "${EROOT}"/var/run/screen
-	fi
-
 	elog "Some dangerous key bindings have been removed or changed to more safe values."
 	elog "We enable some xterm hacks in our default screenrc, which might break some"
 	elog "applications. Please check /etc/screenrc for information on these changes."

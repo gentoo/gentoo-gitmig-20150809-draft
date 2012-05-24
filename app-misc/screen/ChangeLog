@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.164 2012/05/24 04:13:41 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.165 2012/05/24 04:25:27 darkside Exp $
+
+  24 May 2012; Jeremy Olexa <darkside@gentoo.org> screen-4.0.3-r5.ebuild:
+  Further fixes, don't create /var/run/screen, bump to EAPI4, cleanup
 
 *screen-4.0.3-r5 (24 May 2012)
 
