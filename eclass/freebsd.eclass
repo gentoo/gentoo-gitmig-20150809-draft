@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.21 2012/05/17 13:58:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.22 2012/05/24 11:18:46 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -109,6 +109,12 @@ freebsd_src_compile() {
 
 	# Make sure to use FreeBSD definitions while crosscompiling
 	[[ -z "${BMAKE}" ]] && BMAKE="$(freebsd_get_bmake)"
+
+	# Create objdir if MAKEOBJDIRPREFIX is defined, so that we can make out of
+	# tree buils easily.
+	if [[ -n "${MAKEOBJDIRPREFIX}" ]] ; then
+		mkmake obj || die
+	fi
 
 	bsdmk_src_compile
 }
