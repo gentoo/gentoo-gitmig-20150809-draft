@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-12.0.ebuild,v 1.3 2012/05/03 06:01:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-12.0-r1.ebuild,v 1.1 2012/05/24 01:51:28 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -27,7 +27,7 @@ fi
 # Changeset for alpha snapshot
 CHANGESET="e56ecd8b3a68"
 # Patch version
-PATCH="${PN}-12.0-patches-0.1"
+PATCH="${PN}-12.0-patches-0.3"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -40,7 +40,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="bindist +crashreporter +ipc +minimal pgo selinux system-sqlite +webm"
+IUSE="bindist +crashreporter +ipc +jit +minimal pgo selinux system-sqlite +webm"
 
 # More URIs appended below...
 SRC_URI="${SRC_URI}
@@ -201,13 +201,16 @@ src_configure() {
 	mozconfig_annotate '' --enable-safe-browsing
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
-	mozconfig_annotate 'Missing fetures' --disable-system-cairo
+	mozconfig_annotate 'Missing features' --disable-system-cairo
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable system-sqlite
+	# Both methodjit and tracejit conflict with PaX
+	mozconfig_use_enable jit methodjit
+	mozconfig_use_enable jit tracejit
 
 	# Allow for a proper pgo build
 	if use pgo; then
@@ -269,8 +272,11 @@ src_install() {
 	obj_dir="${obj_dir%/*}"
 	cd "${S}/${obj_dir}"
 
-	# Pax mark xpcshell for hardened support, only used for startupcache creation.
-	pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
+	# Without methodjit and tracejit there's no conflict with PaX
+	if use jit; then
+		# Pax mark xpcshell for hardened support, only used for startupcache creation.
+		pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
+	fi
 
 	# Add our default prefs for firefox + xulrunner
 	cp "${FILESDIR}"/gentoo-default-prefs.js-1 \
@@ -316,8 +322,15 @@ src_install() {
 		echo "StartupNotify=true" >> "${ED}/usr/share/applications/${PN}.desktop"
 	fi
 
-	# Required in order to use plugins and even run firefox on hardened.
-	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
+	# Without methodjit and tracejit there's no conflict with PaX
+	if use jit; then
+		# Required in order to use plugins and even run firefox on hardened.
+		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin}
+	fi
+
+	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
+	# continue to work as expected.
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
 
 	# Plugins dir
 	share_plugins_dir
