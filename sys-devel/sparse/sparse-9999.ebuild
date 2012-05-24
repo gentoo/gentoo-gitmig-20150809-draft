@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.10 2012/05/04 07:24:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.11 2012/05/24 02:37:51 vapier Exp $
 
 EAPI="2"
 
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/devel/sparse/sparse.git"
 	inherit git-2
@@ -30,8 +30,6 @@ RDEPEND="gtk? ( x11-libs/gtk+:2 )
 DEPEND="${RDEPEND}
 	gtk? ( virtual/pkgconfig )
 	xml? ( virtual/pkgconfig )"
-
-usex() { use $1 && echo ${2:-yes} || echo ${3:-no} ; }
 
 src_prepare() {
 	sed -i \

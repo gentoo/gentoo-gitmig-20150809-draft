@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.45 2012/05/04 07:24:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.46 2012/05/24 02:37:51 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> sparse-9999.ebuild:
+  Move to usex from eutils.eclass.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> sparse-0.4.3.ebuild,
   sparse-9999.ebuild:
