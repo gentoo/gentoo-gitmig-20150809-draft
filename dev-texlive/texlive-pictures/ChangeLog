@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-pictures
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.66 2012/05/22 10:18:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.67 2012/05/24 21:50:54 aballier Exp $
+
+  24 May 2012; Alexis Ballier <aballier@gentoo.org>
+  -texlive-pictures-2010-r1.ebuild:
+  remove old
 
   22 May 2012; Johannes Huber <johu@gentoo.org> texlive-pictures-2011-r1.ebuild:
   Add ~x86 wrt bug #410239.
