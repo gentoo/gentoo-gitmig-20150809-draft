@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r9.ebuild,v 1.4 2012/05/19 15:58:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r9.ebuild,v 1.5 2012/05/24 21:12:49 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -149,8 +149,6 @@ src_compile() {
 }
 
 src_install () {
-	local i m
-
 	emake install DESTDIR="${D}"
 
 	rm "${D}"/usr/bin/emacs-${FULL_VERSION}-${EMACS_SUFFIX} \
@@ -159,6 +157,7 @@ src_install () {
 		|| die "moving Emacs executable failed"
 
 	# move man pages to the correct place
+	local m
 	for m in "${D}"/usr/share/man/man1/* ; do
 		mv "${m}" "${m%.1}-${EMACS_SUFFIX}.1" || die "mv man failed"
 	done
