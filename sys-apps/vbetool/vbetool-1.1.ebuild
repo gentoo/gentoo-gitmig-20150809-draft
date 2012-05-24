@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-1.1.ebuild,v 1.3 2010/07/13 13:17:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-1.1.ebuild,v 1.4 2012/05/24 02:00:08 vapier Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils autotools
 
@@ -16,20 +16,15 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib
-		sys-apps/pciutils
-		>=dev-libs/libx86-1.1-r1"
+	sys-apps/pciutils
+	>=dev-libs/libx86-1.1-r1"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0-build.patch
-
 	eautoreconf
 }
 
 src_configure() {
 	econf --with-x86emu
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die "install failed"
 }
