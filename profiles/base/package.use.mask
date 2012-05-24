@@ -1,13 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.354 2012/05/24 03:46:56 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.355 2012/05/24 04:27:33 ford_prefect Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
-#
-# Arun Raghavan <ford_prefect@gentoo.org> (24 May 2012)
-# Mask xen USE flag by default, unmask on x86/amd64 where it is supported.
->=media-sound/pulseaudio-2.0-r1 xen
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (14 May 2012)
 # This is the GNOME 3.4 package.use mask
@@ -68,7 +64,9 @@ app-arch/libzpaq jit
 # Arun Raghavan <ford_prefect@gentoo.org> (28 Mar 2012)
 # webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
 # added.
-media-sound/pulseaudio webrtc-aec
+# Arun Raghavan <ford_prefect@gentoo.org> (24 May 2012)
+# Mask xen USE flag by default, unmask on x86/amd64 where it is supported.
+media-sound/pulseaudio webrtc-aec xen
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Mar 2012)
 # Requires libxkbcommon from the x11 overlay
