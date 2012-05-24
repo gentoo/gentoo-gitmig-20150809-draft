@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-6.4.0.ebuild,v 1.2 2012/05/05 06:25:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-6.4.2.1.ebuild,v 1.1 2012/05/24 09:22:18 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -24,10 +24,10 @@ DEPEND="${COMMON_DEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig
 	sys-devel/bison
 	sys-devel/flex
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
