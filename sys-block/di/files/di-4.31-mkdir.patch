@@ -1,5 +1,5 @@
---- di-4.31/Makefile.orig
-+++ di-4.31/Makefile
+--- Makefile
++++ Makefile
 @@ -134,8 +134,8 @@
  
  .PHONY: install-prog
