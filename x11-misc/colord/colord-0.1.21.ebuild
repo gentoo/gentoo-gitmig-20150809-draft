@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.17.ebuild,v 1.2 2012/05/05 04:53:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.21.ebuild,v 1.1 2012/05/24 05:54:07 tetromino Exp $
 
 EAPI="4"
 
-inherit autotools eutils systemd base
+inherit autotools bash-completion-r1 eutils systemd base
 
 DESCRIPTION="System service to accurately color manage input and output devices"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
@@ -12,14 +12,17 @@ SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="doc examples +gusb +introspection scanner +udev vala"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="doc examples gtk +gusb +introspection scanner +udev vala"
 
 COMMON_DEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.28.0:2
 	>=media-libs/lcms-2.2:2
 	>=sys-auth/polkit-0.103
+	gtk? (
+		x11-libs/gdk-pixbuf:2[introspection?]
+		x11-libs/gtk+:3[introspection?] )
 	gusb? ( >=dev-libs/libgusb-0.1.1 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 	scanner? ( media-gfx/sane-backends )
@@ -53,9 +56,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.1.11-fix-automagic-vala.patch"
 	epatch "${FILESDIR}/${PN}-0.1.15-fix-automagic-libgusb.patch"
 
-	# Upstream patch to fix glib-2.30 compat
-	epatch "${FILESDIR}/${P}-glib-2.30.patch"
-
 	eautoreconf
 }
 
@@ -69,6 +69,7 @@ src_configure() {
 		--with-daemon-user=colord \
 		--localstatedir="${EPREFIX}"/var \
 		$(use_enable doc gtk-doc) \
+		$(use_enable gtk) \
 		$(use_enable gusb) \
 		$(use_enable gusb reverse) \
 		$(use_enable introspection) \
@@ -84,12 +85,13 @@ src_configure() {
 src_install() {
 	base_src_install
 
-	# Ensure config and profile directories exist and are writable
-	local d
-	for d in /var/lib/{color,colord}; do
-		keepdir "${d}"
-		fowners colord:colord "${d}"
-	done
+	newbashcomp client/colormgr-completion.bash colormgr
+	rm -vr "${ED}etc/bash_completion.d"
+
+	# Ensure config and profile directories exist and /var/lib/colord/*
+	# is writable by colord user
+	keepdir /var/lib/color{,d}/icc
+	fowners colord:colord /var/lib/colord{,/icc}
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
@@ -97,35 +99,4 @@ src_install() {
 	fi
 
 	find "${D}" -name "*.la" -delete || die
-}
-
-pkg_postinst() {
-	# <=colord-0.1.11 ran as root and used /var/lib/lib/colord to store
-	# configuration files and /var/lib/lib/color for custom color profiles.
-	local old_dir="${EROOT}var/lib/lib/colord"
-	local new_dir="${EROOT}var/lib/colord"
-
-	if [[ -e "${old_dir}/mapping.db" || -e "${old_dir}/storage.db" ]] && \
-	   ! [[ -e "${new_dir}/mapping.db" || -e "${new_dir}/storage.db" ]]; then
-		elog "Old colord configuration files are present in ${old_dir}. If you"
-		elog "are upgrading from colord-0.1.11 or older and had previously"
-		elog "customized your color management settings, you will need to copy"
-		elog "these files to ${new_dir} and then change the file ownership"
-		elog "to colord:colord :"
-		elog
-		elog " # cp ${old_dir}/*.db ${new_dir}"
-		elog " # chown colord:colord ${new_dir}/*.db"
-		elog
-	fi
-	old_dir="${EROOT}var/lib/lib/color"
-	new_dir="${EROOT}var/lib/color"
-	if [[ -e "${old_dir}/icc" && ! -e "${new_dir}/icc" ]]; then
-		elog "Old custom color profiles are present in ${old_dir}. If you are"
-		elog "upgrading from colord-0.1.11 or older, you will need to copy them"
-		elog "to ${new_dir} and then change the ownership to colord:colord :"
-		elog
-		elog " # cp -r ${old_dir}/icc ${new_dir}"
-		elog " # chown -R colord:colord ${new_dir}/icc"
-		elog
-	fi
 }
