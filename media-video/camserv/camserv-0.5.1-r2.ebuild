@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.16 2012/05/24 03:41:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.17 2012/05/24 03:44:58 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -14,8 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="virtual/jpeg
-	media-libs/imlib2"
+# libtool's libltdl is used for loading plugins
+RDEPEND="media-libs/imlib2
+	>=sys-devel/libtool-2.2.6b
+	virtual/jpeg"
 DEPEND="${RDEPEND}
 	media-libs/libv4l" # libv4l1-videodev.h wrt #396635
 
@@ -37,7 +39,14 @@ src_prepare() {
 	AT_M4DIR=macros eautoreconf
 }
 
+src_configure() {
+	econf --disable-static
+}
+
 src_install() {
 	default
+
 	newinitd "${FILESDIR}"/camserv.init camserv
+
+	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
 }
