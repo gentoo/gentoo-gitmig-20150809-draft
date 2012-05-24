@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.58 2012/03/02 20:47:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.59 2012/05/24 10:47:17 aballier Exp $
+
+  24 May 2012; Alexis Ballier <aballier@gentoo.org> ocaml-mode-3.12.1.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> ocaml-mode-3.12.1.ebuild:
   Marking ocaml-mode-3.12.1 ppc64 for bug 396019
