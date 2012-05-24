@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.353 2012/05/21 12:51:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.354 2012/05/24 03:46:56 ford_prefect Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+#
+# Arun Raghavan <ford_prefect@gentoo.org> (24 May 2012)
+# Mask xen USE flag by default, unmask on x86/amd64 where it is supported.
+>=media-sound/pulseaudio-2.0-r1 xen
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (14 May 2012)
 # This is the GNOME 3.4 package.use mask
