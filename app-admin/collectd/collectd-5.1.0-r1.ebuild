@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0-r1.ebuild,v 1.1 2012/05/07 00:41:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0-r1.ebuild,v 1.2 2012/05/24 04:23:02 vapier Exp $
 
 EAPI=4
 
-inherit eutils base linux-info perl-app autotools
+inherit eutils base linux-info perl-app autotools user
 
 DESCRIPTION="A small daemon which collects system performance statistics - with a near-infinite number of plugins"
 HOMEPAGE="http://collectd.org"
