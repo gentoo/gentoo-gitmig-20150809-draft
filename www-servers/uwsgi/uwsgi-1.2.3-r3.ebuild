@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3-r3.ebuild,v 1.1 2012/05/24 10:31:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3-r3.ebuild,v 1.2 2012/05/24 21:26:52 dev-zero Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -196,7 +196,10 @@ src_compile() {
 	if use python ; then
 		for a in ${PYTHON_ABIS} ; do
 			python${a} uwsgiconfig.py --plugin plugins/python gentoo python${a/.} || die "building plugin for python-${a} failed"
-			use gevent && python${a} uwsgiconfig.py --plugin plugins/gevent gentoo gevent${a/.} || die "building plugin for gevent-support in python-${a} failed"
+
+			if use gevent ; then
+				python${a} uwsgiconfig.py --plugin plugins/gevent gentoo gevent${a/.} || die "building plugin for gevent-support in python-${a} failed"
+			fi
 			if use erlang ; then
 				python${a} uwsgiconfig.py --plugin plugins/pyerl gentoo pyerl${a/.} || die "building plugin for erlang-support in python failed"
 			fi

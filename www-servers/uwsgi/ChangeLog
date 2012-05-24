@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.21 2012/05/24 10:31:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.22 2012/05/24 21:26:52 dev-zero Exp $
+
+  24 May 2012; Tiziano Müller <dev-zero@gentoo.org> uwsgi-1.2.3-r3.ebuild:
+  Fix building with USE=-gevent.
 
 *uwsgi-1.2.3-r3 (24 May 2012)
 
