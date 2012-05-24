@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/qlandkartegt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.15 2011/07/14 20:47:13 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.16 2012/05/24 12:07:03 scarabeus Exp $
+
+*qlandkartegt-1.4.2 (24 May 2012)
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +qlandkartegt-1.4.2.ebuild,
+  -qlandkartegt-1.2.2.ebuild, metadata.xml:
+  Version bump to latest version. Thanks to Nikoli for the ebuild. Fixes bug
+  #392977 and bug#404465.
 
 *qlandkartegt-1.2.2 (14 Jul 2011)
 
