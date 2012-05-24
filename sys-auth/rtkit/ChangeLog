@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/rtkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.25 2012/03/31 17:19:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.26 2012/05/24 05:07:03 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> rtkit-0.10.ebuild,
+  rtkit-0.6.ebuild, rtkit-0.7.ebuild, rtkit-0.9-r1.ebuild:
+  Inherit user for enewuser/etc...
 
   31 Mar 2012; Raúl Porcel <armin76@gentoo.org> rtkit-0.10.ebuild:
   alpha/ia64/sh/sparc stable wrt #400495

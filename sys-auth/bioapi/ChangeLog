@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/bioapi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.14 2010/11/26 05:19:37 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.15 2012/05/24 05:03:44 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> bioapi-1.2.3-r2.ebuild:
+  Inherit user for enewuser/etc...
 
   26 Nov 2010; Mike Frysinger <vapier@gentoo.org> bioapi-1.2.3-r2.ebuild,
   +files/bioapi-1.2.3-build.patch:

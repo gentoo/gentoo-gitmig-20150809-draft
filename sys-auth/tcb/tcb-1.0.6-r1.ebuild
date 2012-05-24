@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/tcb-1.0.6-r1.ebuild,v 1.1 2012/02/13 05:17:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/tcb-1.0.6-r1.ebuild,v 1.2 2012/05/24 05:09:54 vapier Exp $
 
 EAPI="2"
 
-inherit eutils user multilib
+inherit eutils user multilib user
 
 DESCRIPTION="Libraries and tools implementing the tcb password shadowing scheme"
 HOMEPAGE="http://www.openwall.com/tcb/"
