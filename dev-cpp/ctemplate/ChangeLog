@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/ctemplate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.22 2012/04/20 17:55:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.23 2012/05/24 19:27:18 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/ctemplate-1.0-gcc-4.7.patch, ctemplate-1.0.ebuild:
+  Use `default` in src_install, and add patch for building with gcc-4.7.
 
 *ctemplate-2.2 (20 Apr 2012)
 
