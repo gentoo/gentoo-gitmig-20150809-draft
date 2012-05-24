@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.596 2012/05/20 19:33:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.597 2012/05/24 14:12:10 ssuominen Exp $
+
+  24 May 2012; Samuli Suominen <ssuominen@gentoo.org> gtk+-2.24.10-r1.ebuild,
+  gtk+-3.2.4-r1.ebuild:
+  ppc stable wrt #410611
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org> gtk+-3.2.3.ebuild:
   ppc stable wrt #407643
