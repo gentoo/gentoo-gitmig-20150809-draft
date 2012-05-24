@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.24 2012/05/23 21:46:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.25 2012/05/24 11:02:31 aballier Exp $
 
 EAPI=2
 
@@ -239,7 +239,7 @@ is_native_abi() {
 
 # Do we need to bootstrap the csu and libssp_nonshared?
 need_bootstrap() {
-	is_crosscompile || use build || !is_native_abi
+	is_crosscompile || use build || ! is_native_abi
 }
 
 # Get the subdirs we are building.
@@ -402,6 +402,7 @@ END_LDSCRIPT
 }
 
 do_install() {
+	export MAKEOBJDIRPREFIX="${WORKDIR}/${CHOST}"
 	for i in $(get_subdirs) ; do
 		einfo "Installing in ${i}..."
 		cd "${WORKDIR}/${i}/" || die "missing ${i}."
