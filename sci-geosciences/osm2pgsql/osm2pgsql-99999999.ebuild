@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-99999999.ebuild,v 1.6 2011/11/27 13:54:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-99999999.ebuild,v 1.7 2012/05/24 16:26:09 scarabeus Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-DOCS=( README.txt 900913.sql )
+DOCS=( README 900913.sql )
 
 src_prepare() {
 	esvn_clean
