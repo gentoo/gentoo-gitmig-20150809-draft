@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.25 2012/05/22 16:28:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.26 2012/05/24 10:54:41 ago Exp $
+
+  24 May 2012; Agostino Sarubbo <ago@gentoo.org> bluedevil-1.2.3.ebuild:
+  Stable for x86, wrt bug #414605
 
   22 May 2012; Kacper Kowalik <xarthisius@gentoo.org> bluedevil-1.2.3.ebuild:
   Drop ~ppc* until dependencies are also keyworded
