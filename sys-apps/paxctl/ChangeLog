@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paxctl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.44 2012/05/24 09:46:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/ChangeLog,v 1.45 2012/05/24 10:57:33 jlec Exp $
+
+  24 May 2012; Justin Lecher <jlec@gentoo.org> paxctl-0.4.ebuild,
+  paxctl-0.5.ebuild, paxctl-0.7-r1.ebuild, paxctl-0.7-r2.ebuild:
+  Keyword for ~-linux, drop . from DESCRIPTION
 
 *paxctl-0.7-r2 (24 May 2012)
 
