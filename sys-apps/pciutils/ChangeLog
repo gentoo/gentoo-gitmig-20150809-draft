@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.202 2012/05/16 14:45:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.203 2012/05/24 00:02:37 ssuominen Exp $
+
+  23 May 2012; Samuli Suominen <ssuominen@gentoo.org> pciutils-3.1.4.ebuild,
+  pciutils-3.1.7.ebuild, pciutils-3.1.7-r1.ebuild, pciutils-3.1.8.ebuild,
+  pciutils-3.1.9.ebuild, pciutils-3.1.9-r1.ebuild, pciutils-3.1.9-r2.ebuild:
+  Update HOMEPAGE wrt #417277 by Arvydas Sidorenko
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> pciutils-3.1.9-r2.ebuild:
   keyword ~amd64-fbsd

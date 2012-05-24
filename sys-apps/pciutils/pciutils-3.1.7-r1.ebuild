@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.7-r1.ebuild,v 1.1 2011/03/27 15:41:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.7-r1.ebuild,v 1.2 2012/05/24 00:02:37 ssuominen Exp $
 
 EAPI="2"
 
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Various utilities dealing with the PCI bus"
-HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html"
+HOMEPAGE="http://mj.ucw.cz/sw/pciutils/ http://git.kernel.org/?p=utils/pciutils/pciutils.git"
 SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
 
 LICENSE="GPL-2"
