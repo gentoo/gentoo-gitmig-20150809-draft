@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.5.ebuild,v 1.5 2009/11/21 18:20:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.5.ebuild,v 1.6 2012/05/24 01:44:43 vapier Exp $
 
 EAPI=2
-inherit autotools eutils games
+inherit autotools games
 
 DESCRIPTION="Test your typing speed, and get your fingers CPS"
-HOMEPAGE="http://tobias.eyedacor.org/typespeed/"
-SRC_URI="http://tobias.eyedacor.org/typespeed/${P}.tar.gz"
+HOMEPAGE="http://typespeed.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,11 +24,12 @@ src_prepare() {
 		-e 's/testsuite//' \
 		-e 's/doc//' \
 		Makefile.am \
-		|| die "sed failed"
+		|| die
 	sed -i \
 		-e '/^CC =/d' \
 		src/Makefile.am \
-		|| die "sed failed"
+		|| die
+	rm -rf m4 #417265
 	eautoreconf
 }
 
@@ -42,7 +43,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ChangeLog NEWS TODO doc/README
 	prepgamesdirs
 }
