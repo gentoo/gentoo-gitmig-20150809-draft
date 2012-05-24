@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1-r1.ebuild,v 1.1 2012/05/24 08:02:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1-r1.ebuild,v 1.2 2012/05/24 08:04:26 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -37,7 +37,7 @@ HOMEPAGE="http://www.seamonkey-project.org"
 if [[ ${PV} == *_pre* ]] ; then
 	# pre-releases. No need for arch teams to change KEYWORDS here.
 
-	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
+	KEYWORDS=""
 else
 	# This is where arch teams should change the KEYWORDS.
 
