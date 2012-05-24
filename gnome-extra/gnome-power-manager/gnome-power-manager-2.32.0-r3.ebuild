@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0-r3.ebuild,v 1.5 2012/05/05 06:25:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0-r3.ebuild,v 1.6 2012/05/24 13:54:21 ssuominen Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${PN}-2.32.0-keyboard-bac
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="+applet doc policykit test"
 
 # FIXME: Interactive testsuite (upstream ? I'm so...pessimistic)
