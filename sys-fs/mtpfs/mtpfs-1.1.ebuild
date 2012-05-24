@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/mtpfs-1.1.ebuild,v 1.3 2012/02/29 16:03:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/mtpfs-1.1.ebuild,v 1.4 2012/05/24 02:47:39 ssuominen Exp $
 
 EAPI=4
 
@@ -13,14 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug mad"
 
-DEPEND="dev-libs/glib:2
+RDEPEND="dev-libs/glib:2
 	>=media-libs/libmtp-1.1.2
 	sys-fs/fuse
 	mad? (
 		media-libs/libid3tag
 		media-libs/libmad
 	)"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 DOCS=(AUTHORS NEWS README)
 
