@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/qtscrobbler-0.10.ebuild,v 1.5 2012/05/05 08:47:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/qtscrobbler-0.10.ebuild,v 1.6 2012/05/24 03:02:06 ssuominen Exp $
 
-EAPI=2
-inherit eutils qt4-r2 toolchain-funcs
+EAPI=4
+inherit eutils gnome2-utils qt4-r2 toolchain-funcs
 
 MY_PN=qtscrob
 MY_P=${MY_PN}-${PV}
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="cli +qt4"
 
-RDEPEND="media-libs/libmtp
+RDEPEND=">=media-libs/libmtp-1.1.0
 	net-misc/curl
 	x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}
@@ -26,7 +26,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch \
+		"${FILESDIR}"/${P}-Makefile.patch \
+		"${FILESDIR}"/${P}-free.patch
 }
 
 src_configure() {
@@ -40,26 +42,31 @@ src_configure() {
 src_compile() {
 	if use cli; then
 		tc-export CXX
-		emake -C src/cli || die
+		emake -C src/cli
 	fi
 
 	if use qt4; then
-		emake -C src/qt || die
+		emake -C src/qt
 	fi
 }
 
 src_install() {
 	if use cli; then
-		newbin src/cli/scrobble-cli qtscrobbler-cli || die
+		newbin src/cli/scrobble-cli qtscrobbler-cli
 	fi
 
 	if use qt4; then
 		pushd src/qt >/dev/null
 		newbin qtscrob qtscrobbler
-		newicon resources/icons/128.png qtscrobbler.png
+		insinto /usr/share/icons/hicolor/128x128/apps
+		newins resources/icons/128.png qtscrobbler.png
 		make_desktop_entry qtscrobbler QtScrobbler
 		popd >/dev/null
 	fi
 
 	dodoc AUTHORS CHANGELOG README
 }
+
+pkg_preinst() {	gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update; }
+pkg_postrm() { gnome2_icon_cache_update; }
