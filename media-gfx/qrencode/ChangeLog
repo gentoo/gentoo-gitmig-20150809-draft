@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qrencode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.22 2012/05/07 07:48:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.23 2012/05/24 21:06:43 jdhore Exp $
+
+  24 May 2012; Jeff Horelick <jdhore@gentoo.org> qrencode-3.3.0.ebuild:
+  marked x86 per bug 415959
 
 *qrencode-3.3.1 (07 May 2012)
 
