@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.32 2012/05/24 12:22:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.33 2012/05/24 20:37:47 scarabeus Exp $
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> mapnik-2.0.0.ebuild:
+  Depend on virtual/jpeg wrt bug#413677.
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> mapnik-2.0.0.ebuild:
   Build gdal/ogr with gdal useflag. Fixes bug#397423.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.5 2012/05/24 12:22:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.6 2012/05/24 20:37:47 scarabeus Exp $
 
 EAPI=3
 
@@ -18,7 +18,6 @@ IUSE="bidi cairo debug doc gdal geos nobfonts postgres python sqlite"
 
 RDEPEND="net-misc/curl
 	media-libs/libpng
-	media-libs/jpeg
 	media-libs/tiff
 	sys-libs/zlib
 	media-libs/freetype
@@ -26,6 +25,7 @@ RDEPEND="net-misc/curl
 	sci-libs/proj
 	dev-libs/libxml2
 	dev-libs/icu
+	virtual/jpeg
 	x11-libs/agg[truetype]
 	>=dev-libs/boost-1.48[python?]
 	postgres? ( >=dev-db/postgresql-base-8.3 )
