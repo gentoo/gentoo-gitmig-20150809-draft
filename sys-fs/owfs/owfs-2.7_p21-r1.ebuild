@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r1.ebuild,v 1.2 2012/05/22 16:31:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r1.ebuild,v 1.3 2012/05/24 04:11:24 vapier Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 
-inherit depend.php distutils eutils perl-module autotools
+inherit depend.php distutils eutils perl-module autotools user
 
 MY_P=${P/_/}
 
