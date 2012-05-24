@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/uam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.22 2012/05/24 02:35:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.23 2012/05/24 06:06:55 mgorny Exp $
+
+  24 May 2012; Michał Górny <mgorny@gentoo.org> uam-0.2.1.ebuild,
+  uam-0.3.ebuild:
+  Drop eutils inherit (no longer used).
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> uam-0.2.1.ebuild,
   uam-0.3.ebuild:
