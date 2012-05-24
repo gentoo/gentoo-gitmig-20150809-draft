@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iniparse/iniparse-0.4.ebuild,v 1.3 2012/05/06 12:14:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iniparse/iniparse-0.4.ebuild,v 1.4 2012/05/24 12:53:50 johu Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT PSF-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

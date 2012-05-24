@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/translate-toolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/ChangeLog,v 1.6 2012/05/06 12:13:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/ChangeLog,v 1.7 2012/05/24 12:53:04 johu Exp $
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> translate-toolkit-1.9.0.ebuild:
+  Stable for x86, wrt bug #410859
 
   06 May 2012; Agostino Sarubbo <ago@gentoo.org>
   translate-toolkit-1.9.0.ebuild:
