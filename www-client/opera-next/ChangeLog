@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.86 2012/05/24 01:15:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.87 2012/05/24 16:28:37 jer Exp $
+
+*opera-next-12.00.1429 (24 May 2012)
+
+  24 May 2012; Jeroen Roovers <jer@gentoo.org> -opera-next-12.00.1413.ebuild,
+  -opera-next-12.00.1417.ebuild, +opera-next-12.00.1429.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/05/24/improvements-to-performance-m
+  ail-html5-dragndrop-and-more
 
 *opera-next-12.00.1424 (24 May 2012)
 
