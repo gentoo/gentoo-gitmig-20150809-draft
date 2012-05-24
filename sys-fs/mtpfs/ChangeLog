@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtpfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/ChangeLog,v 1.9 2012/05/24 02:47:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtpfs/ChangeLog,v 1.10 2012/05/24 02:48:45 ssuominen Exp $
+
+  24 May 2012; Samuli Suominen <ssuominen@gentoo.org> -mtpfs-0.9.ebuild,
+  -files/mtpfs-0.9-overflow.patch:
+  old
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org> mtpfs-1.1.ebuild:
   Missing virtual/pkgconfig dependency wrt #415253
