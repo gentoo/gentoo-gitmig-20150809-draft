@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.54 2012/05/21 15:08:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.55 2012/05/24 04:25:46 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> ksh-93.20120229.ebuild:
+  Inherit eutils for epatch.
 
   21 May 2012; Jeremy Olexa <darkside@gentoo.org> ksh-93.20120229.ebuild,
   +files/ksh-prefix.patch:

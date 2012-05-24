@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20120229.ebuild,v 1.2 2012/05/21 15:08:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20120229.ebuild,v 1.3 2012/05/24 04:25:46 vapier Exp $
 
 EAPI=4
 
-inherit toolchain-funcs versionator prefix
+inherit toolchain-funcs versionator prefix eutils
 
 DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)"
 HOMEPAGE="http://www.kornshell.com/"
