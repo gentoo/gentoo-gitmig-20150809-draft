@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.122 2012/05/19 19:27:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.123 2012/05/24 19:11:33 scarabeus Exp $
+
+  24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/gdal-png-1.5.patch,
+  -gdal-1.8.1.ebuild, gdal-1.8.1-r1.ebuild:
+  Apply patch when building with ruby enabled. Fixes bug#402443. Patch by Dennis
+  Schridde. Remove older stuff.
 
   19 May 2012; Samuli Suominen <ssuominen@gentoo.org> gdal-1.6.3-r1.ebuild:
   Fix building with sys-libs/zlib >= 1.2.5.1-r1 (OF) wrt #413835, Comment #1

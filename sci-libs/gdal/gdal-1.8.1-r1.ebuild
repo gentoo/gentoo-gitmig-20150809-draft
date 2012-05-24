@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.1-r1.ebuild,v 1.2 2012/04/26 15:28:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.1-r1.ebuild,v 1.3 2012/05/24 19:11:33 scarabeus Exp $
 
 EAPI=3
 
@@ -92,6 +92,9 @@ src_prepare() {
 
 	# Update for zlib header changes (see bug #383569)
 	epatch "${FILESDIR}"/${P}-zlib_header_fix.patch
+
+	# Fix ldflags when building with ruby
+	sed -e '/^LDFLAGS/s/-Xcompiler//' -i swig/ruby/RubyMakefile.mk || die
 
 	# autoheader fail
 	eaclocal
