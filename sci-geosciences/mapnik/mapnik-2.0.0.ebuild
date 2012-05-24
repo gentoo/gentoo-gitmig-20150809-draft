@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.4 2012/01/30 21:59:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.5 2012/05/24 12:22:37 scarabeus Exp $
 
 EAPI=3
 
@@ -59,6 +59,7 @@ src_prepare() {
 
 src_configure() {
 	local PLUGINS=shape,raster,osm
+	use gdal && PLUGINS+=,gdal,ogr
 	use geos && PLUGINS+=,geos
 	use postgres && PLUGINS+=,postgis
 	use sqlite && PLUGINS+=,sqlite
