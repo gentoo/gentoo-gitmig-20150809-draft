@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.141 2012/05/21 18:13:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.142 2012/05/24 01:13:32 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -210,11 +210,11 @@ eautoreconf() {
 # @INTERNAL
 # See if the specified macros are enabled.
 _at_uses_pkg() {
-	if [[ -e aclocal.m4 ]] ; then
-		# If aclocal.m4 exists, trust the trace data.
-		[[ -n $(autotools_check_macro "${@}") ]]
+	if [[ -n $(autotools_check_macro "$@") ]] ; then
+		return 0
 	else
-		# If aclocal.m4 hasn't been generated yet, cheat, but be conservative.
+		# If the trace didn't find it (perhaps because aclocal.m4 hasn't
+		# been generated yet), cheat, but be conservative.
 		local macro args=()
 		for macro ; do
 			args+=( -e "^[[:space:]]*${macro}\>" )
