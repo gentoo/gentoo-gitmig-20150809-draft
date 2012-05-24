@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/openpam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.21 2012/05/21 19:25:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.22 2012/05/24 05:04:52 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> openpam-20071221.ebuild,
+  openpam-20111218.ebuild:
+  Inherit libtool for elibtoolize.
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> openpam-20071221.ebuild,
   openpam-20111218.ebuild:
