@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r1.ebuild,v 1.7 2012/05/25 04:13:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.1 2012/05/25 15:53:40 aballier Exp $
 
 EAPI=2
 
@@ -56,7 +56,7 @@ fi
 
 IUSE="atm bluetooth ssl hesiod ipv6 kerberos usb netware
 	build bootstrap crosscompile_opts_headers-only zfs
-	userland_GNU userland_BSD"
+	userland_GNU userland_BSD multilib"
 
 pkg_setup() {
 	[ -c /dev/zero ] || \
@@ -90,7 +90,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-6.1-csu.patch"
 	"${FILESDIR}/${PN}-8.0-rpcsec_gss.patch"
 	"${FILESDIR}/${PN}-9.0-liblink.patch"
-	"${FILESDIR}/${PN}-bsdxml2expat.patch" )
+	"${FILESDIR}/${PN}-bsdxml2expat.patch"
+	"${FILESDIR}/${PN}-9.0-trylock-adaptive.patch" )
 
 # Here we disable and remove source which we don't need or want
 # In order:
@@ -114,9 +115,13 @@ REMOVE_SUBDIRS="ncurses \
 	libcom_err libtelnet
 	libelf libedit"
 
+# Are we building a cross-compiler?
+is_crosscompile() {
+	[ "${CATEGORY#*cross-}" != "${CATEGORY}" ]
+}
+
 src_prepare() {
 	sed -i.bak -e 's:-o/dev/stdout:-t:' "${S}/libc/net/Makefile.inc"
-	sed -i.bak -e 's:histedit.h::' "${WORKDIR}/include/Makefile"
 
 	# Upstream Display Managers default to using VT7
 	# We should make FreeBSD allow this by default
@@ -137,6 +142,7 @@ src_prepare() {
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}/${PN}-includes.patch"
 	epatch "${FILESDIR}/${PN}-8.0-gcc45.patch"
+	epatch "${FILESDIR}/${PN}-9.0-opieincludes.patch"
 
 	# Don't install the hesiod man page or header
 	rm "${WORKDIR}"/include/hesiod.h || die
@@ -150,18 +156,23 @@ src_prepare() {
 		libsmb; do sed -i.bak -e 's:LDADD=:LDADD+=:g' "${dir}/Makefile" || \
 		die "Problem fixing \"${dir}/Makefile"
 	done
+	# Call LD with LDFLAGS, rename them to RAW_LDFLAGS
+	sed -e 's/LDFLAGS/RAW_LDFLAGS/g' \
+		-i "${S}/csu/i386-elf/Makefile" \
+		-i "${S}/csu/ia64/Makefile" || die
 	if use build; then
 		cd "${WORKDIR}"
 		# This patch has to be applied on ${WORKDIR}/sys, so we do it here since it
 		# shouldn't be a symlink to /usr/src/sys (which should be already patched)
 		epatch "${FILESDIR}"/${PN}-7.1-types.h-fix.patch
+		epatch "${FILESDIR}"/freebsd-sources-9.0-sysctluint.patch
 		# Preinstall includes so we don't use the system's ones.
 		mkdir "${WORKDIR}/include_proper" || die "Couldn't create ${WORKDIR}/include_proper"
 		install_includes "/include_proper"
 		return 0
 	fi
 
-	if [ "${CTARGET}" = "${CHOST}" ]; then
+	if ! is_crosscompile ; then
 		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys" || die "Couldn't make sys symlink!"
 	else
 		sed -i.bak -e "s:/usr/include:/usr/${CTARGET}/usr/include:g" \
@@ -173,10 +184,6 @@ src_prepare() {
 		sed -i.bak -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
 	fi
 
-	# Preinstall includes so we don't use the system's ones.
-	mkdir "${WORKDIR}/include_proper" || die "Couldn't create ${WORKDIR}/include_proper"
-	install_includes "/include_proper"
-
 	# Let arch-specific includes to be found
 	local machine
 	machine=$(tc-arch-kernel ${CTARGET})
@@ -185,15 +192,114 @@ src_prepare() {
 
 	cd "${S}"
 	use bootstrap && dummy_mk libstand
-	# Call LD with LDFLAGS, rename them to RAW_LDFLAGS
-	sed -e 's/LDFLAGS/RAW_LDFLAGS/g' \
-		-i "${S}/csu/i386-elf/Makefile" \
-		-i "${S}/csu/ia64/Makefile" || die
 	# Try to fix sed calls for GNU sed. Do it only with GNU userland and force
 	# BSD's sed on BSD.
 	if use userland_GNU; then
 		find . -name Makefile -exec sed -ibak 's/sed -i /sed -i/' {} \;
 	fi
+}
+
+get_csudir() {
+	if [ -d "${WORKDIR}/lib/csu/$1-elf" ]; then
+		echo "lib/csu/$1-elf"
+	else
+		echo "lib/csu/$1"
+	fi
+}
+
+bootstrap_csu() {
+	local csudir="$(get_csudir $(tc-arch-kernel ${CTARGET}))"
+	export RAW_LDFLAGS=$(raw-ldflags)
+	cd "${WORKDIR}/${csudir}" || die "Missing ${csudir}."
+	freebsd_src_compile
+
+	append-flags "-B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
+	append-ldflags "-B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
+}
+
+# Compile libssp_nonshared.a and add it's path to LDFLAGS.
+bootstrap_libssp_nonshared() {
+	cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
+	freebsd_src_compile
+	append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
+	export LDADD="-lssp_nonshared"
+}
+
+# What to build for a non-native build: cross-compiler, non-native abi in
+# multilib. We also need the csu but this has to be handled separately.
+NON_NATIVE_SUBDIRS="lib/libc lib/msun gnu/lib/libssp/libssp_nonshared lib/libthr lib/libutil"
+
+# Subdirs for a native build:
+NATIVE_SUBDIRS="lib gnu/lib/libssp/libssp_nonshared gnu/lib/libregex"
+
+# Is my $ABI native ?
+is_native_abi() {
+	is_crosscompile && return 0
+	use multilib || return 1
+	[ "${ABI}" = "${DEFAULT_ABI}" ]
+}
+
+# Do we need to bootstrap the csu and libssp_nonshared?
+need_bootstrap() {
+	is_crosscompile || use build || ! is_native_abi
+}
+
+# Get the subdirs we are building.
+get_subdirs() {
+	local ret=""
+	if is_native_abi ; then
+		# If we are building for the native ABI, build everything
+		ret="${NATIVE_SUBDIRS}"
+	elif is_crosscompile ; then
+		# With a cross-compiler we only build the very core parts.
+		ret="${NON_NATIVE_SUBDIRS}"
+		if [ "${EBUILD_PHASE}" = "install" ]; then
+			# Add the csu dir first when installing. We treat it separately for
+			# compiling.
+			ret="$(get_csudir $(tc-arch-kernel ${CTARGET})) ${ret}"
+		fi
+	elif use build ; then
+		# For the non-native ABIs we only build the csu parts and very core
+		# libraries for now.
+		ret="lib/libcompiler_rt gnu/lib/libssp/libssp_nonshared"
+		if [ "${EBUILD_PHASE}" = "install" ]; then
+			ret="$(get_csudir $(tc-arch-kernel ${CHOST})) ${ret}"
+		fi
+	else
+		# Only build the csu parts and core libraries for now.
+		ret="lib/libcompiler_rt gnu/lib/libssp/libssp_nonshared"
+		if [ "${EBUILD_PHASE}" = "install" ]; then
+			ret="$(get_csudir $(tc-arch-kernel ${CHOST})) ${ret}"
+		fi
+		# Finally, with a non-native ABI without USE=build, we build everything
+		# too.
+		#ret="${NATIVE_SUBDIRS}"
+	fi
+	echo "${ret}"
+}
+
+# Bootstrap the core libraries and setup the flags so that the other parts can
+# build against it.
+do_bootstrap() {
+	einfo "Bootstrapping on ${CHOST} for ${CTARGET}"
+	bootstrap_csu
+	bootstrap_libssp_nonshared
+}
+
+# Compile it. Assume we have the toolchain setup correctly.
+do_compile() {
+	export MAKEOBJDIRPREFIX="${WORKDIR}/${CHOST}"
+	mkdir "${MAKEOBJDIRPREFIX}" || die "Could not create ${MAKEOBJDIRPREFIX}."
+	need_bootstrap && do_bootstrap
+
+	export RAW_LDFLAGS=$(raw-ldflags)
+
+	# Everything is now setup, build it!
+	for i in $(get_subdirs) ; do
+		einfo "Building in ${i}... with CC=${CC} and CFLAGS=${CFLAGS}"
+		cd "${WORKDIR}/${i}/" || die "missing ${i}."
+		freebsd_src_compile || die "make ${i} failed"
+	done
 }
 
 src_compile() {
@@ -215,66 +321,101 @@ src_compile() {
 	# Bug #324445
 	append-flags $(test-flags -fno-strict-overflow)
 
+	# strip flags and do not do it later, we only add safe, and in fact
+	# needed flags after all
 	strip-flags
-	if [ "${CTARGET}" != "${CHOST}" ]; then
+	export NOFLAGSTRIP=yes
+	if is_crosscompile ; then
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX RANLIB
-		mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= NLS="
-
-		local machine
-		machine=$(tc-arch-kernel ${CTARGET})
-
-		local csudir
-		if [ -d "${S}/csu/${machine}-elf" ]; then
-			csudir="${S}/csu/${machine}-elf"
-		else
-			csudir="${S}/csu/${machine}"
-		fi
-		export RAW_LDFLAGS=$(raw-ldflags)
-		cd "${csudir}"
-		$(freebsd_get_bmake) ${mymakeopts} || die "make csu failed"
-
-		append-flags "-isystem /usr/${CTARGET}/usr/include"
-		append-flags "-isystem ${WORKDIR}/lib/libutil"
-		append-flags "-isystem ${WORKDIR}/lib/msun/${machine/i386/i387}"
-		append-flags "-B ${csudir}"
-		append-ldflags "-B ${csudir}"
-
-		# First compile libssp_nonshared.a and add it's path to LDFLAGS.
-		cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
-		$(freebsd_get_bmake) ${mymakeopts} || die "make libssp failed"
-		append-ldflags "-L${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
-
-		export RAW_LDFLAGS=$(raw-ldflags)
-		cd "${S}/libc"
-		$(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
-		cd "${S}/msun"
-		append-ldflags "-L${WORKDIR}/lib/libc"
-		export RAW_LDFLAGS=$(raw-ldflags)
-		LDADD="-lssp_nonshared" $(freebsd_get_bmake) ${mymakeopts} || die "make libc failed"
-		cd "${WORKDIR}/gnu/lib/libssp/" || die "missing libssp."
-		$(freebsd_get_bmake) ${mymakeopts} || die "make libssp failed"
-		cd "${WORKDIR}/lib/libthr/" || die "missing libthr"
-		$(freebsd_get_bmake) ${mymakeopts} || die "make libthr failed"
-	else
-		# Forces to use the local copy of headers as they might be outdated in
-		# the system
-		append-flags "-isystem '${WORKDIR}/include_proper'"
-
-		# First compile libssp_nonshared.a and add it's path to LDFLAGS.
-		einfo "Compiling libssp in \"${WORKDIR}/gnu/lib/libssp/\"."
-		cd "${WORKDIR}/gnu/lib/libssp/" || die "missing libssp."
-		NOFLAGSTRIP=yes freebsd_src_compile
-		# Hack libssp_nonshared.a into libc & others since we don't have
-		# the linker script in place yet.
-		append-ldflags "-L${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
-		einfo "Compiling libc."
-		cd "${S}"
-		export RAW_LDFLAGS=$(raw-ldflags)
-		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile
-		cd "${WORKDIR}/gnu/lib/libregex" || die
-		NOFLAGSTRIP=yes LDADD="-lssp_nonshared" freebsd_src_compile
+		mymakeopts="${mymakeopts} NLS="
+		append-flags "-I/usr/${CTARGET}/usr/include"
+		append-ldflags "-L${WORKDIR}/${CHOST}/${WORKDIR}/lib/libc"
 	fi
+
+	if is_crosscompile ; then
+		do_compile
+	elif ! use multilib ; then
+		# Forces to use the local copy of headers with USE=build as they might
+		# be outdated in the system. Assume they are fine otherwise.
+		use build && append-flags "-I${WORKDIR}/include_proper"
+		do_compile
+	else
+		for ABI in $(get_all_abis) ; do
+			# First, save the variables: CFLAGS, CXXFLAGS, LDFLAGS and mymakeopts.
+			for i in CFLAGS CXXFLAGS LDFLAGS mymakeopts ; do
+				export ${i}_SAVE="${!i}"
+			done
+
+			multilib_toolchain_setup ${ABI}
+
+			local target="$(tc-arch-kernel ${CHOST})"
+			mymakeopts="${mymakeopts} TARGET=${target} MACHINE=${target} MACHINE_ARCH=${target}"
+			if ! is_native_abi ; then
+				mymakeopts="${mymakeopts} COMPAT_32BIT="
+				einfo "Pre-installing includes in include_proper_${ABI}"
+				mkdir "${WORKDIR}/include_proper_${ABI}" || die
+				CTARGET="${CHOST}" install_includes "/include_proper_${ABI}"
+				CC="${CC} -I${WORKDIR}/include_proper_${ABI}"
+			else
+				use build && append-flags "-I${WORKDIR}/include_proper" ;
+			fi
+
+			einfo "Building for ABI ${ABI} and TARGET=$(tc-arch-kernel ${CHOST})"
+
+			CTARGET="${CHOST}" do_compile
+
+			# Restore the variables now.
+			for i in CFLAGS CXXFLAGS LDFLAGS mymakeopts ; do
+				ii="${i}_SAVE"
+				export ${i}="${!ii}"
+			done
+		done
+	fi
+}
+
+gen_libc_ldscript() {
+	# Parameters:
+	#   $1 = target libdir
+	#   $2 = source libc dir
+	#   $3 = source libssp_nonshared dir
+
+	# Clear the symlink.
+	rm -f "${D}/$2/libc.so" || die
+
+	# Move the library if needed
+	if [ "$1" != "$2" ] ; then
+		mv "${D}/$2/libc.so.7" "${D}/$1/" || die
+	fi
+
+	# Generate libc.so ldscript for inclusion of libssp_nonshared.a when linking
+	# this is done to avoid having to touch gcc spec file as it is currently
+	# done on FreeBSD upstream, mostly because their binutils aren't able to
+	# cope with linker scripts yet.
+	# Taken from toolchain-funcs.eclass:
+	local output_format
+	output_format=$($(tc-getCC) ${CFLAGS} ${LDFLAGS} -Wl,--verbose 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
+	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
+
+	cat > "${D}/$2/libc.so" <<-END_LDSCRIPT
+/* GNU ld script
+   SSP (-fstack-protector) requires __stack_chk_fail_local to be local.
+   GCC invokes this symbol in a non-PIC way, which results in TEXTRELs if
+   this symbol was provided by a shared libc. So we link in
+   libssp_nonshared.a from here.
+ */
+${output_format}
+GROUP ( /$1/libc.so.7 /$3/libssp_nonshared.a )
+END_LDSCRIPT
+}
+
+do_install() {
+	export MAKEOBJDIRPREFIX="${WORKDIR}/${CHOST}"
+	for i in $(get_subdirs) ; do
+		einfo "Installing in ${i}..."
+		cd "${WORKDIR}/${i}/" || die "missing ${i}."
+		freebsd_src_install || die "Install ${i} failed"
+	done
 }
 
 src_install() {
@@ -288,64 +429,39 @@ src_install() {
 	use crosscompile_opts_headers-only && return 0
 	local mylibdir=$(get_libdir)
 
-	if [ "${CTARGET}" != "${CHOST}" ]; then
-		local csudir
-		if [ -d "${S}/csu/$(tc-arch-kernel ${CTARGET})-elf" ]; then
-			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})-elf"
-		else
-			csudir="${S}/csu/$(tc-arch-kernel ${CTARGET})"
-		fi
-		cd "${csudir}"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install \
-			FILESDIR="/usr/${CTARGET}/usr/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install csu failed"
-
-		cd "${S}/libc"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install libc failed"
-
-		cd "${S}/msun"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			INCLUDEDIR="/usr/${CTARGET}/usr/include" \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install msun failed"
-
-		cd "${WORKDIR}/gnu/lib/libssp/"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			INCLUDEDIR="/usr/${CTARGET}/usr/include" \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install ssp failed"
-
-		cd "${WORKDIR}/lib/libthr/"
-		$(freebsd_get_bmake) ${mymakeopts} DESTDIR="${D}" install NO_MAN= \
-			INCLUDEDIR="/usr/${CTARGET}/usr/include" \
-			SHLIBDIR="/usr/${CTARGET}/lib" LIBDIR="/usr/${CTARGET}/usr/lib" || die "Install libthr failed"
+	if is_crosscompile ; then
+		mymakeopts="${mymakeopts} NO_MAN= \
+			INCLUDEDIR=/usr/${CTARGET}/usr/include \
+			SHLIBDIR=/usr/${CTARGET}/usr/lib \
+			LIBDIR=/usr/${CTARGET}/usr/lib"
 
 		dosym "usr/include" "/usr/${CTARGET}/sys-include"
+		do_install
 	else
-		# Set SHLIBDIR and LIBDIR for multilib
-		cd "${WORKDIR}/gnu/lib/libssp"
-		SHLIBDIR="/${mylibdir}" LIBDIR="/usr/${mylibdir}" mkinstall || die "Install ssp failed."
-		cd "${S}"
-		SHLIBDIR="/${mylibdir}" LIBDIR="/usr/${mylibdir}" mkinstall || die "Install failed"
-		cd "${WORKDIR}/gnu/lib/libregex"
-		SHLIBDIR="/${mylibdir}" LIBDIR="/usr/${mylibdir}" mkinstall || die "Install libregex failed"
+		if ! use multilib ; then
+			# Set SHLIBDIR and LIBDIR for multilib
+			mymakeopts="${mymakeopts} SHLIBDIR=/usr/${mylibdir} LIBDIR=/usr/${mylibdir}"
+			do_install
+		else
+			for ABI in $(get_all_abis) ; do
+				mymakeopts_SAVE="${mymakeopts}"
+				multilib_toolchain_setup ${ABI}
+				mymakeopts="${mymakeopts} SHLIBDIR=/usr/$(get_libdir) LIBDIR=/usr/$(get_libdir)"
+				do_install
+				mymakeopts="${mymakeopts_SAVE}"
+			done
+		fi
 	fi
 
 	# Don't install the rest of the configuration files if crosscompiling
-	if [ "${CTARGET}" != "${CHOST}" ] ; then
+	if is_crosscompile ; then
 		# This is to get it stripped with the correct tools, otherwise it gets
 		# stripped with the host strip.
+		# And also get the correct OUTPUT_FORMAT in the libc ldscript.
 		export CHOST=${CTARGET}
+		gen_libc_ldscript "usr/${CTARGET}/usr/lib" "usr/${CTARGET}/usr/lib" "usr/${CTARGET}/usr/lib"
 		return 0
 	fi
-
-	# Symlink libbsdxml to libexpat as we use expat in favor of the renaming done
-	# on FreeBSD.
-	dosym libexpat.so /usr/${mylibdir}/libbsdxml.so
-	dosym libexpat.a /usr/${mylibdir}/libbsdxml.a
-
-	# install libstand files
-	dodir /usr/include/libstand
-	insinto /usr/include/libstand
-	doins "${S}"/libstand/*.h
 
 	cd "${WORKDIR}/etc/"
 	insinto /etc
@@ -355,44 +471,11 @@ src_install() {
 	local MACHINE="$(tc-arch-kernel)"
 	doins "etc.${MACHINE}"/*
 
-	# Generate ldscripts, otherwise bad thigs are supposed to happen
-	gen_usr_ldscript libalias_cuseeme.so libalias_dummy.so libalias_ftp.so \
-		libalias_irc.so libalias_nbt.so libalias_pptp.so libalias_skinny.so \
-		libalias_smedia.so libssp.so
-	# These show on QA warnings too, however they're pretty much bsd only,
-	# aka, no autotools for them.
-	#	libbsdxml.so libcam.so libcrypt.so libdevstat.so libgeom.so \
-	#	libipsec.so libipx.so libkiconv.so libkvm.so libmd.so libsbuf.so libufs.so \
-	#	libutil.so
+	# Generate ldscripts for core libraries that will go in /
+	gen_usr_ldscript -a alias cam geom ipsec jail kiconv \
+		kvm m md procstat sbuf thr ufs util
 
-	# Generate libc.so ldscript for inclusion of libssp_nonshared.a when linking
-	# this is done to avoid having to touch gcc spec file as it is currently
-	# done on FreeBSD upstream, mostly because their binutils aren't able to
-	# cope with linker scripts yet.
-	# Taken from toolchain-funcs.eclass:
-	local output_format
-	output_format=$($(tc-getCC) ${CFLAGS} ${LDFLAGS} -Wl,--verbose 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
-	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
-	# Clear the symlink.
-	rm -f "${D}/usr/${mylibdir}/libc.so"
-	cat > "${D}/usr/${mylibdir}/libc.so" <<-END_LDSCRIPT
-/* GNU ld script
-   SSP (-fstack-protector) requires __stack_chk_fail_local to be local.
-   GCC invokes this symbol in a non-PIC way, which results in TEXTRELs if
-   this symbol was provided by a shared libc. So we link in
-   libssp_nonshared.a from here.
- */
-${output_format}
-GROUP ( /${mylibdir}/libc.so.7 /usr/${mylibdir}/libssp_nonshared.a )
-END_LDSCRIPT
-
-	dodir /etc/sandbox.d
-	cat - > "${D}"/etc/sandbox.d/00freebsd <<EOF
-# /dev/crypto is used mostly by OpenSSL on *BSD platforms
-# leave it available as packages might use OpenSSL commands
-# during compile or install phase.
-SANDBOX_PREDICT="/dev/crypto"
-EOF
+	gen_libc_ldscript "${mylibdir}" "usr/${mylibdir}" "usr/${mylibdir}"
 
 	# Install a libusb.pc for better compat with Linux's libusb
 	if use usb ; then
@@ -419,11 +502,6 @@ install_includes()
 		BINGRP="${GROUPS}"
 	fi
 
-	# This is for ssp/ssp.h.
-	einfo "Building ssp.h"
-	cd "${WORKDIR}/gnu/lib/libssp/" || die "missing libssp"
-	$(freebsd_get_bmake) ssp.h || die "problem building ssp.h"
-
 	# Must exist before we use it.
 	[[ -d "${DESTDIR}${INCLUDEDIR}" ]] || die "dodir or mkdir ${INCLUDEDIR} before using install_includes."
 	cd "${WORKDIR}/include"
@@ -432,11 +510,12 @@ install_includes()
 
 	einfo "Installing includes into ${INCLUDEDIR} as ${BINOWN}:${BINGRP}..."
 	$(freebsd_get_bmake) installincludes \
-		MACHINE=${MACHINE} DESTDIR="${DESTDIR}" \
+		MACHINE=${MACHINE} MACHINE_ARCH=${MACHINE} \
+		DESTDIR="${DESTDIR}" \
 		INCLUDEDIR="${INCLUDEDIR}" BINOWN="${BINOWN}" \
 		BINGRP="${BINGRP}" || die "install_includes() failed"
 	einfo "includes installed ok."
-	EXTRA_INCLUDES="gnu/lib/libssp lib/librtld_db lib/libutil lib/msun gnu/lib/libregex"
+	EXTRA_INCLUDES="lib/librtld_db lib/libutil lib/msun gnu/lib/libregex"
 	for i in $EXTRA_INCLUDES; do
 		einfo "Installing $i includes into ${INCLUDEDIR} as ${BINOWN}:${BINGRP}..."
 		cd "${WORKDIR}/$i" || die
