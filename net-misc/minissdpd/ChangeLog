@@ -1,5 +1,11 @@
 
 
+*minissdpd-1.2 (25 May 2012)
+
+  25 May 2012; Anthony G. Basile <blueness@gentoo.org> +minissdpd-1.2.ebuild,
+  +files/minissdpd-1.2-respect-CC.patch:
+  Version bump
+
   10 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
   -minissdpd-1.1.20111007.ebuild, -minissdpd-1.1.20111007-r1.ebuild,
   minissdpd-1.1.20120121.ebuild,
