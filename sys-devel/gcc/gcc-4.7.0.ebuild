@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.7.0.ebuild,v 1.1 2012/05/22 04:46:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.7.0.ebuild,v 1.2 2012/05/25 17:27:30 vapier Exp $
 
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 UCLIBC_VER="1.0"
 
 # Hardened gcc 4 stuff
@@ -42,9 +42,9 @@ src_unpack() {
 	fi
 
 	# drop the x32 stuff once 4.7 goes stable
-	case ${CHOST} in
-	x86_64*) has x32 $(get_all_abis) || EPATCH_EXCLUDE+=" 80_all_gcc-4.6-x32.patch" ;;
-	esac
+	if [[ ${CTARGET} != x86_64* ]] || ! has x32 $(get_all_abis) ; then
+		EPATCH_EXCLUDE+=" 90_all_gcc-4.7-x32.patch"
+	fi
 
 	toolchain_src_unpack
 
