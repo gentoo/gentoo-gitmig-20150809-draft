@@ -8,13 +8,6 @@
       bzip2-compressed files, through <pkg>sys-libs/zlib</pkg>.
     </flag>
 
-    <flag name='jit'>
-      Enable Just-In-Time compilation of regexp bytecode to machine
-      code, through the SLJIT compiler. This feature might conflict
-      with security mitigation strategies such as NX/PaX as enabled by
-      Gentoo Hardened.
-    </flag>
-
     <flag name='pcre16'>
       Build 16 bit PCRE library.
     </flag>
