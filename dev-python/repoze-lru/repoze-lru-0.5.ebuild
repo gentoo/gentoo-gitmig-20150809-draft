@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/repoze-lru/repoze-lru-0.5.ebuild,v 1.2 2012/05/21 16:45:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/repoze-lru/repoze-lru-0.5.ebuild,v 1.3 2012/05/25 22:08:16 floppym Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS=1
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
@@ -22,10 +23,3 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
-
-src_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" setup.py test
-	}
-	python_execute_function testing
-}
