@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.31 2012/05/25 13:56:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.32 2012/05/25 14:11:31 aballier Exp $
 
 EAPI=2
 
@@ -122,7 +122,6 @@ is_crosscompile() {
 
 src_prepare() {
 	sed -i.bak -e 's:-o/dev/stdout:-t:' "${S}/libc/net/Makefile.inc"
-	sed -i.bak -e 's:histedit.h::' "${WORKDIR}/include/Makefile"
 
 	# Upstream Display Managers default to using VT7
 	# We should make FreeBSD allow this by default
