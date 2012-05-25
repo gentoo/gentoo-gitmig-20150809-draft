@@ -1,5 +1,11 @@
 
 
+  25 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  -minissdpd-1.1.20120121.ebuild,
+  -files/minissdpd-1.1.20120121-remove-initd.patch,
+  -files/minissdpd-1.1.20120121-respect-CFLAGS.patch:
+  Remove older unstable version
+
 *minissdpd-1.2 (25 May 2012)
 
   25 May 2012; Anthony G. Basile <blueness@gentoo.org> +minissdpd-1.2.ebuild,
