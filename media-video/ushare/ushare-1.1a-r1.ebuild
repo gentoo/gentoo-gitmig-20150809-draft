@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ushare-1.1a-r1.ebuild,v 1.4 2012/05/22 12:00:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ushare-1.1a-r1.ebuild,v 1.5 2012/05/25 16:55:36 hwoarang Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="dlna nls"
 
-RDEPEND="net-libs/libupnp
+RDEPEND="<net-libs/libupnp-1.6.14
 	dlna? ( >=media-libs/libdlna-0.2.4 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

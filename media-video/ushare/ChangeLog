@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ushare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.7 2012/05/22 12:00:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.8 2012/05/25 16:55:36 hwoarang Exp $
+
+  25 May 2012; Markos Chandras <hwoarang@gentoo.org> ushare-1.1a-r1.ebuild:
+  Lower libupnp dependency
 
   22 May 2012; Johannes Huber <johu@gentoo.org> ushare-1.1a-r1.ebuild:
   Stable for x86, wrt bug #415723
