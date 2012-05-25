@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/luise-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luise-bin/ChangeLog,v 1.7 2012/05/22 16:38:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luise-bin/ChangeLog,v 1.8 2012/05/25 08:17:23 ssuominen Exp $
+
+  25 May 2012; Samuli Suominen <ssuominen@gentoo.org> luise-bin-0.1.1.ebuild:
+  Restrict virtual/libusb to SLOT="0" because this precompiled package is
+  linked against libusb-0.1.so.4.
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> luise-bin-0.1.1.ebuild:
   Use virtual/libusb instead of dev-libs/libusb.

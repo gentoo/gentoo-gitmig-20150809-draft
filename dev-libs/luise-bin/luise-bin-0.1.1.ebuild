@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luise-bin/luise-bin-0.1.1.ebuild,v 1.4 2012/05/22 16:38:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luise-bin/luise-bin-0.1.1.ebuild,v 1.5 2012/05/25 08:17:23 ssuominen Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="doc examples"
 
-DEPEND="virtual/libusb"
+DEPEND="=virtual/libusb-0*"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}_${PV}"
