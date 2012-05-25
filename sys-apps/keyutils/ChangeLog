@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.27 2012/02/21 08:14:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.28 2012/05/25 04:33:05 vapier Exp $
+
+  25 May 2012; Mike Frysinger <vapier@gentoo.org> keyutils-1.5.5.ebuild:
+  Make the tests work reliably #405293 by Patrick Lauer.
 
 *keyutils-1.5.5 (21 Feb 2012)
 
