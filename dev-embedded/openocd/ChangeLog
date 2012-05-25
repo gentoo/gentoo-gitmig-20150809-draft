@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.28 2012/05/22 16:40:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.29 2012/05/25 08:14:30 ssuominen Exp $
+
+  25 May 2012; Samuli Suominen <ssuominen@gentoo.org> openocd-0.3.1-r1.ebuild,
+  openocd-0.4.0.ebuild, openocd-0.5.0.ebuild, openocd-9999.ebuild:
+  Restrict virtual/libusb to SLOT="0" because libusb-1 is not supported yet.
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> openocd-0.3.1-r1.ebuild,
   openocd-0.4.0.ebuild, openocd-0.5.0.ebuild, openocd-9999.ebuild:

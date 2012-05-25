@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.3.1-r1.ebuild,v 1.3 2012/05/22 16:28:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.3.1-r1.ebuild,v 1.4 2012/05/25 08:14:30 ssuominen Exp $
 
 EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
 inherit eutils
@@ -22,7 +22,7 @@ IUSE="ftd2xx ftdi parport presto usb"
 RESTRICT="strip" # includes non-native binaries
 
 # libftd2xx is the default because it is reported to work better.
-DEPEND="usb? ( virtual/libusb )
+DEPEND="usb? ( =virtual/libusb-0* )
 	presto? ( dev-embedded/libftd2xx )
 	ftd2xx? ( dev-embedded/libftd2xx )
 	ftdi? ( dev-embedded/libftdi )"
