@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.34 2012/05/25 15:14:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.35 2012/05/25 15:51:04 aballier Exp $
 
 EAPI=2
 
@@ -165,6 +165,7 @@ src_prepare() {
 		# This patch has to be applied on ${WORKDIR}/sys, so we do it here since it
 		# shouldn't be a symlink to /usr/src/sys (which should be already patched)
 		epatch "${FILESDIR}"/${PN}-7.1-types.h-fix.patch
+		epatch "${FILESDIR}"/freebsd-sources-9.0-sysctluint.patch
 		# Preinstall includes so we don't use the system's ones.
 		mkdir "${WORKDIR}/include_proper" || die "Couldn't create ${WORKDIR}/include_proper"
 		install_includes "/include_proper"
