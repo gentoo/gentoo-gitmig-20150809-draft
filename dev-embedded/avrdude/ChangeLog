@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.52 2012/05/25 07:44:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.53 2012/05/25 11:30:56 ago Exp $
+
+  25 May 2012; Agostino Sarubbo <ago@gentoo.org> avrdude-5.11.1.ebuild:
+  Stable for amd64, wrt bug #414341
 
   25 May 2012; Tim Harder <radhermit@gentoo.org> -avrdude-5.8.ebuild,
   -avrdude-5.8-r1.ebuild, -files/avrdude-5.8-dragon-segfault.patch,
