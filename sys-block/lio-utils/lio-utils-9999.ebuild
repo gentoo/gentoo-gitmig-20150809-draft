@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/lio-utils/lio-utils-9999.ebuild,v 1.1 2012/04/16 21:09:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/lio-utils/lio-utils-9999.ebuild,v 1.2 2012/05/25 16:42:53 alexxy Exp $
 
 EAPI=4
 
@@ -24,6 +24,11 @@ DEPEND="snmp? ( net-analyzer/net-snmp )"
 RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~TARGET_CORE"
+
+pkg_setup() {
+	linux-info_pkg_setup
+	python_pkg_setup
+}
 
 src_prepare(){
 	local module
