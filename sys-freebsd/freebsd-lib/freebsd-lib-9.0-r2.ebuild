@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.30 2012/05/25 12:37:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.31 2012/05/25 13:56:25 aballier Exp $
 
 EAPI=2
 
@@ -143,6 +143,7 @@ src_prepare() {
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}/${PN}-includes.patch"
 	epatch "${FILESDIR}/${PN}-8.0-gcc45.patch"
+	epatch "${FILESDIR}/${PN}-9.0-opieincludes.patch"
 
 	# Don't install the hesiod man page or header
 	rm "${WORKDIR}"/include/hesiod.h || die
