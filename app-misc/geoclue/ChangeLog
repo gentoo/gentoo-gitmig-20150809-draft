@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/geoclue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.8 2012/04/21 12:19:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.9 2012/05/25 17:29:17 aballier Exp $
+
+  25 May 2012; Alexis Ballier <aballier@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild:
+  keyword ~amd64-fbsd
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org>
   geoclue-0.12.0_p20110307.ebuild:
