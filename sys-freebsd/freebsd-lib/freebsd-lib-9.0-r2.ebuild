@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.32 2012/05/25 14:11:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.33 2012/05/25 14:58:59 aballier Exp $
 
 EAPI=2
 
@@ -226,10 +226,10 @@ bootstrap_libssp_nonshared() {
 
 # What to build for a non-native build: cross-compiler, non-native abi in
 # multilib. We also need the csu but this has to be handled separately.
-NON_NATIVE_SUBDIRS="lib/libc lib/msun gnu/lib/libssp lib/libthr lib/libutil"
+NON_NATIVE_SUBDIRS="lib/libc lib/msun gnu/lib/libssp/libssp_nonshared lib/libthr lib/libutil"
 
 # Subdirs for a native build:
-NATIVE_SUBDIRS="lib gnu/lib/libssp gnu/lib/libregex"
+NATIVE_SUBDIRS="lib gnu/lib/libssp/libssp_nonshared gnu/lib/libregex"
 
 # Is my $ABI native ?
 is_native_abi() {
@@ -501,11 +501,6 @@ install_includes()
 		BINGRP="${GROUPS}"
 	fi
 
-	# This is for ssp/ssp.h.
-	einfo "Building ssp.h"
-	cd "${WORKDIR}/gnu/lib/libssp/" || die "missing libssp"
-	$(freebsd_get_bmake) ssp.h || die "problem building ssp.h"
-
 	# Must exist before we use it.
 	[[ -d "${DESTDIR}${INCLUDEDIR}" ]] || die "dodir or mkdir ${INCLUDEDIR} before using install_includes."
 	cd "${WORKDIR}/include"
@@ -519,7 +514,7 @@ install_includes()
 		INCLUDEDIR="${INCLUDEDIR}" BINOWN="${BINOWN}" \
 		BINGRP="${BINGRP}" || die "install_includes() failed"
 	einfo "includes installed ok."
-	EXTRA_INCLUDES="gnu/lib/libssp lib/librtld_db lib/libutil lib/msun gnu/lib/libregex"
+	EXTRA_INCLUDES="lib/librtld_db lib/libutil lib/msun gnu/lib/libregex"
 	for i in $EXTRA_INCLUDES; do
 		einfo "Installing $i includes into ${INCLUDEDIR} as ${BINOWN}:${BINGRP}..."
 		cd "${WORKDIR}/$i" || die

@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.146 2012/05/25 14:11:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.147 2012/05/25 14:58:59 aballier Exp $
+
+  25 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild:
+  Do not build libssp, we really only need libssp_nonshared.
 
   25 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild:
   drop noop sed
