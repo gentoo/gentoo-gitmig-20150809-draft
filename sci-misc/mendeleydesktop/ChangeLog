@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/mendeleydesktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.3 2012/04/23 16:41:41 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.4 2012/05/25 23:38:30 miknix Exp $
+
+*mendeleydesktop-1.5.2 (26 May 2012)
+
+  26 May 2012; Angelo Arrifano <miknix@gentoo.org>
+  -mendeleydesktop-1.5.1.ebuild, +mendeleydesktop-1.5.2.ebuild:
+  Version bump
 
 *mendeleydesktop-1.5.1 (23 Apr 2012)
 
