@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.34 2012/05/16 07:48:00 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.35 2012/05/25 20:36:48 aballier Exp $
+
+  25 May 2012; Alexis Ballier <aballier@gentoo.org> tix-8.4.3.ebuild:
+  keyword ~amd64-fbsd
 
   16 May 2012; Naohiro Aota <naota@gentoo.org> tix-8.4.3.ebuild:
   Add ~x86-fbsd. #413433
