@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ammeter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.4 2012/04/01 18:01:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.5 2012/05/25 08:03:58 graaff Exp $
+
+*ammeter-0.2.5 (25 May 2012)
+
+  25 May 2012; Hans de Graaff <graaff@gentoo.org> +ammeter-0.2.5.ebuild:
+  Version bump.
 
 *ammeter-0.2.3 (01 Apr 2012)
 
