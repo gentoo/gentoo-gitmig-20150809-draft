@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/serdisplib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.14 2012/05/22 16:37:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.15 2012/05/25 08:28:21 ssuominen Exp $
+
+  25 May 2012; Samuli Suominen <ssuominen@gentoo.org> serdisplib-1.97.5.ebuild,
+  serdisplib-1.97.6.ebuild, serdisplib-1.97.9.ebuild:
+  Restrict to SLOT="0" of virtual/libusb because the package has no support for
+  libusb-1.
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> serdisplib-1.97.5.ebuild,
   serdisplib-1.97.6.ebuild, serdisplib-1.97.9.ebuild:
