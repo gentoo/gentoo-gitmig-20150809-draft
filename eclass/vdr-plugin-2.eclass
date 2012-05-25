@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.4 2012/05/20 20:34:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.5 2012/05/25 19:56:13 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -556,8 +556,11 @@ vdr-plugin-2_src_install() {
 	if [[ -d ${TMP_LOCALE_DIR} ]]; then
 		einfo "Installing locales"
 		cd "${TMP_LOCALE_DIR}"
-		insinto "${LOCDIR}"
-		doins -r *
+		local linguas
+		for linguas in ${LINGUAS[*]}; do
+			insinto "${LOCDIR}"
+			cp -r --parents ${linguas}* ${D}/${LOCDIR}
+		done
 	fi
 
 	cd "${S}"

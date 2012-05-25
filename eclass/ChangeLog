@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.267 2012/05/25 12:06:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.268 2012/05/25 19:56:13 hd_brummy Exp $
+
+  25 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  fixed install for locales if only LINGUAS=en
 
   25 May 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Re-enable rpath on prefix wrt bug 417169.
