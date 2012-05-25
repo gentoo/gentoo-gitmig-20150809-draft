@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ftdi_eeprom-0.2.ebuild,v 1.2 2012/05/22 16:39:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ftdi_eeprom-0.2.ebuild,v 1.3 2012/05/25 08:03:24 ssuominen Exp $
 
 DESCRIPTION="Utility to program external EEPROM for FTDI USB chips"
 HOMEPAGE="http://www.intra2net.com/opensource/ftdi/"
@@ -12,7 +12,6 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="dev-libs/confuse
-	virtual/libusb
 	dev-embedded/libftdi"
 
 src_install() {
