@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/proj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.35 2012/04/25 16:47:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.36 2012/05/25 07:29:28 scarabeus Exp $
+
+  25 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/proj-4.7.0-robinson.patch, -proj-4.7.0-r1.ebuild, proj-4.8.0.ebuild:
+  Fix +java build. Resolves bug#413481. Patch by Martin von Gagern. Remove
+  overshadowed.
 
   25 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> proj-4.8.0.ebuild:
   Fixed java automagic dependency
