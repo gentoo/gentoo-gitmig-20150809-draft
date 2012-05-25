@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.4.2.ebuild,v 1.1 2012/05/20 10:42:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.4.2.ebuild,v 1.2 2012/05/25 08:27:40 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -33,7 +33,7 @@ RDEPEND="
 
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )"
 # goa-daemon can launch gnome-control-center
-PDEPEND="gnome? ( >=gnome-base/gnome-control-center-3.2 )"
+PDEPEND="gnome? ( >=gnome-base/gnome-control-center-3.2[gnome-online-accounts(+)] )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-util/gdbus-codegen-2.30.0
