@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.16 2012/05/22 15:53:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.17 2012/05/25 09:49:56 graaff Exp $
+
+  25 May 2012; Hans de Graaff <graaff@gentoo.org> -childprocess-0.2.3.ebuild,
+  -childprocess-0.2.5.ebuild, -childprocess-0.3.0.ebuild,
+  -childprocess-0.3.1.ebuild:
+  Remove old versions.
 
   22 May 2012; Hans de Graaff <graaff@gentoo.org> childprocess-0.3.2.ebuild:
   Also require rspec for USE=doc since the Rakefile requires it
