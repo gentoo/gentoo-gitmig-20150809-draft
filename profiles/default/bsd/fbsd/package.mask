@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.13 2011/03/29 20:07:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.14 2012/05/25 22:35:52 naota Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 May 2005)
 # SGI's FAM is dead upstream, and requires mayor changes.
@@ -20,3 +20,7 @@ dev-util/strace
 # Don't use them, use the one in base system
 dev-util/yacc
 dev-util/byacc
+
+# Naohiro Aota <naota@gentoo.org> (26 May 2012)
+# Mask till #390449 is solved
+>x11-libs/cairo-1.10

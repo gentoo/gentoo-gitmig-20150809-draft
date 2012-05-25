@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.94 2012/05/17 16:16:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.95 2012/05/25 22:35:52 naota Exp $
+
+  25 May 2012; Naohiro Aota <naota@gentoo.org> fbsd/package.mask:
+  Mask >x11-libs/cairo-1.10 till bug #390449 is solved
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> use.mask:
   mask inotify as its linux only
