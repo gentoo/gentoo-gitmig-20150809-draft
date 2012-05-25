@@ -1,9 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ftdi_eeprom-0.3-r1.ebuild,v 1.1 2011/08/20 19:40:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ftdi_eeprom-0.3-r1.ebuild,v 1.2 2012/05/25 08:10:16 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Utility to program external EEPROM for FTDI USB chips"
@@ -15,14 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-embedded/libftdi
+RDEPEND="dev-embedded/libftdi
 	dev-libs/confuse"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-newer-chips.patch #376117
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog README src/example.conf
 }
