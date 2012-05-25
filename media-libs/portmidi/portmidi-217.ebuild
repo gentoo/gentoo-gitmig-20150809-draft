@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portmidi/portmidi-217.ebuild,v 1.1 2012/02/27 04:14:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portmidi/portmidi-217.ebuild,v 1.2 2012/05/25 13:55:12 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.6"
@@ -26,8 +26,13 @@ DEPEND="${CDEPEND}
 	app-arch/unzip
 	java? ( >=virtual/jdk-1.6 )
 	python? ( >=dev-python/cython-0.12.1 )
-	doc? ( app-doc/doxygen
-		virtual/latex-base )"
+	doc? (
+		app-doc/doxygen
+		dev-texlive/texlive-fontsrecommended
+		dev-texlive/texlive-latexextra
+		dev-tex/xcolor
+		virtual/latex-base
+	)"
 
 S=${WORKDIR}/${PN}
 
