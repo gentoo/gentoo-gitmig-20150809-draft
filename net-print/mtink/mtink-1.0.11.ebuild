@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.11.ebuild,v 1.10 2012/05/22 16:34:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.11.ebuild,v 1.11 2012/05/25 10:44:18 ssuominen Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ DEPEND="X? ( x11-libs/libX11
 		x11-libs/libXt
 		>=x11-libs/openmotif-2.3:0 )
 	cups? ( net-print/cups )
-	virtual/libusb"
+	virtual/libusb:0"
 RDEPEND="${DEPEND}"
 
 src_compile() {
