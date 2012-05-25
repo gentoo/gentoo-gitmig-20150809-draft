@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgeotiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.38 2012/05/25 11:13:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/ChangeLog,v 1.39 2012/05/25 11:31:27 ago Exp $
+
+  25 May 2012; Agostino Sarubbo <ago@gentoo.org> libgeotiff-1.4.0.ebuild:
+  Stable for amd64, wrt bug #417415
 
   25 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libgeotiff-1.4.0.ebuild:
   Fix passing of O3 to cflags. Thanks to ago.
