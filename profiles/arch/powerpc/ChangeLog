@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.168 2012/05/24 10:45:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.169 2012/05/25 17:42:51 tetromino Exp $
+
+  25 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Mask webkit-gtk[geoloc,webkit2], requires app-misc/geoclue and
+  app-accessibility/at-spi2-core to be keyworded (bug #411761).
 
   24 May 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask kde-base/solid-4.8[bluetooth] for ppc*
