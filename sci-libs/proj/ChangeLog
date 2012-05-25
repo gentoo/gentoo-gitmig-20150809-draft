@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/proj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.36 2012/05/25 07:29:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.37 2012/05/25 07:38:16 scarabeus Exp $
+
+  25 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> proj-4.8.0.ebuild:
+  Stabilise on amd64, x86 and ppc wrt bug#417453.
 
   25 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/proj-4.7.0-robinson.patch, -proj-4.7.0-r1.ebuild, proj-4.8.0.ebuild:
