@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5.4.ebuild,v 1.6 2012/05/05 08:27:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5.4.ebuild,v 1.7 2012/05/25 06:55:17 jdhore Exp $
 
 EAPI=4
 
@@ -61,6 +61,10 @@ mp3_warning() {
 	if ! use mp3 ; then
 		ewarn "MP3 support is optional, you may want to enable the mp3 USE-flag"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.x-fix-skins-build-glib-2.32.patch
 }
 
 src_configure() {
