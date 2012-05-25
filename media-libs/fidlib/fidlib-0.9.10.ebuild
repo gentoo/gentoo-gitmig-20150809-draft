@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fidlib/fidlib-0.9.10.ebuild,v 1.3 2012/03/21 16:47:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fidlib/fidlib-0.9.10.ebuild,v 1.4 2012/05/25 14:03:38 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://uazu.net/fidlib/${P}.tgz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 doecho() {
