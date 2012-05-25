@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.645 2012/05/24 02:10:20 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.646 2012/05/25 02:47:25 floppym Exp $
+
+*chromium-20.0.1132.17 (25 May 2012)
+
+  25 May 2012; Mike Gilbert <floppym@gentoo.org> +chromium-20.0.1132.17.ebuild,
+  -chromium-20.0.1132.8.ebuild:
+  Version bump for beta channel release.
 
   24 May 2012; Richard Freeman <rich0@gentoo.org> chromium-19.0.1084.52.ebuild:
   amd64 stable - 417321
