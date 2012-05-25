@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-antlr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.36 2012/02/18 22:09:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.37 2012/05/25 01:14:54 jdhore Exp $
+
+  25 May 2012; Jeff Horelick <jdhore@gentoo.org> ant-antlr-1.8.2.ebuild:
+  marked x86 per bug 417403
 
 *ant-antlr-1.8.2 (18 Feb 2012)
 

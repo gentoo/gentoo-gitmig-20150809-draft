@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.131 2012/02/18 22:14:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.132 2012/05/25 01:10:02 jdhore Exp $
+
+  25 May 2012; Jeff Horelick <jdhore@gentoo.org> ant-1.8.2.ebuild:
+  marked x86 per bug 417403
 
 *ant-1.8.2 (18 Feb 2012)
 

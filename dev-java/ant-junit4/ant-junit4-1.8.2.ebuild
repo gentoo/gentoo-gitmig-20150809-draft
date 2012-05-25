@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit4/ant-junit4-1.8.2.ebuild,v 1.1 2012/02/18 22:24:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit4/ant-junit4-1.8.2.ebuild,v 1.2 2012/05/25 01:09:10 jdhore Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ ANT_TASK_DEPNAME="junit-4"
 
 inherit ant-tasks
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-java/junit:4

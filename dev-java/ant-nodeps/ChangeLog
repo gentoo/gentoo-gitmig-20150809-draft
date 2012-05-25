@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-nodeps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.31 2012/05/12 03:11:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.32 2012/05/25 01:24:36 jdhore Exp $
+
+  25 May 2012; Jeff Horelick <jdhore@gentoo.org> ant-nodeps-1.8.2.ebuild:
+  marked x86 per bug 417403
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> ant-nodeps-1.8.2.ebuild:
   keyword ~amd64-fbsd

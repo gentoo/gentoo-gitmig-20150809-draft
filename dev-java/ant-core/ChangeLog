@@ -1,10 +1,13 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.113 2012/05/12 03:11:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.114 2012/05/25 01:18:09 jdhore Exp $
 
 # Ant-core blocks lower/older versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2 packages
 # Please unemerge ant-tasks when updating ant-core.
+
+  25 May 2012; Jeff Horelick <jdhore@gentoo.org> ant-core-1.8.2.ebuild:
+  marked x86 per bug 417403
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> ant-core-1.8.2.ebuild:
   keyword ~amd64-fbsd

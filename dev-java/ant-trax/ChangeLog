@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-trax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ChangeLog,v 1.28 2012/04/15 18:23:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ChangeLog,v 1.29 2012/05/25 01:10:54 jdhore Exp $
+
+  25 May 2012; Jeff Horelick <jdhore@gentoo.org> ant-trax-1.8.2.ebuild:
+  marked x86 per bug 417403
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> ant-trax-1.8.2.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.

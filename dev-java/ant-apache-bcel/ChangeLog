@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-apache-bcel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bcel/ChangeLog,v 1.26 2012/02/18 22:09:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bcel/ChangeLog,v 1.27 2012/05/25 01:17:16 jdhore Exp $
+
+  25 May 2012; Jeff Horelick <jdhore@gentoo.org> ant-apache-bcel-1.8.2.ebuild:
+  marked x86 per bug 417403
 
 *ant-apache-bcel-1.8.2 (18 Feb 2012)
 

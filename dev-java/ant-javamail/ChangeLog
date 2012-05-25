@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-javamail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-javamail/ChangeLog,v 1.28 2012/02/18 22:12:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-javamail/ChangeLog,v 1.29 2012/05/25 01:15:41 jdhore Exp $
+
+  25 May 2012; Jeff Horelick <jdhore@gentoo.org> ant-javamail-1.8.2.ebuild:
+  marked x86 per bug 417403
 
 *ant-javamail-1.8.2 (18 Feb 2012)
 
