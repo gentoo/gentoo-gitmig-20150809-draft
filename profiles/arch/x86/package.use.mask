@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.88 2012/05/24 04:28:54 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.89 2012/05/25 17:47:45 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -8,10 +8,6 @@
 # Packages with optional systemd support. Masked in base and unmasked on arches
 # where sys-apps/systemd is available.
 >sys-auth/polkit-0.104-r1 -systemd
-
-# Masked in base and unmasked on arches where app-misc/geoclue and
-# app-accessibility/at-spi2-core are available.
-net-libs/webkit-gtk -geoloc -webkit2
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches

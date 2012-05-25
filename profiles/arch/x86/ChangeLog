@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.103 2012/05/24 04:28:54 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.104 2012/05/25 17:47:45 tetromino Exp $
+
+  25 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Remove webkit-gtk's USE mask, the flags are now masked in specific arches.
 
   24 May 2012; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
   For PulseAudio, mask xen USE flag by default, unmask on x86/amd64 where it is

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.398 2012/05/24 04:27:33 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.399 2012/05/25 17:44:31 tetromino Exp $
+
+  25 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Remove webkit-gtk's USE mask, the flags are now masked in specific arches.
 
   24 May 2012; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
   Consolidate media-sound/pulseaudio entries.
