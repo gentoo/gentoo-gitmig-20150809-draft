@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.29 2012/05/25 12:27:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.30 2012/05/25 12:37:04 aballier Exp $
 
 EAPI=2
 
@@ -212,15 +212,15 @@ bootstrap_csu() {
 	cd "${WORKDIR}/${csudir}" || die "Missing ${csudir}."
 	freebsd_src_compile
 
-	append-flags "-B ${WORKDIR}/${csudir}"
-	append-ldflags "-B ${WORKDIR}/${csudir}"
+	append-flags "-B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
+	append-ldflags "-B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
 }
 
 # Compile libssp_nonshared.a and add it's path to LDFLAGS.
 bootstrap_libssp_nonshared() {
 	cd "${WORKDIR}/gnu/lib/libssp/libssp_nonshared/" || die "missing libssp."
 	freebsd_src_compile
-	append-ldflags "-L${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
+	append-ldflags "-L${MAKEOBJDIRPREFIX}/${WORKDIR}/gnu/lib/libssp/libssp_nonshared/"
 	export LDADD="-lssp_nonshared"
 }
 
@@ -329,7 +329,7 @@ src_compile() {
 		CHOST=${CTARGET} tc-export CC LD CXX RANLIB
 		mymakeopts="${mymakeopts} NLS="
 		append-flags "-I/usr/${CTARGET}/usr/include"
-		append-ldflags "-L${WORKDIR}/lib/libc"
+		append-ldflags "-L${WORKDIR}/${CHOST}/${WORKDIR}/lib/libc"
 	fi
 
 	if is_crosscompile ; then
