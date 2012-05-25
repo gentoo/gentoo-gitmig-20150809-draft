@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.399 2012/05/25 17:44:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.400 2012/05/25 21:03:03 dilfridge Exp $
+
+  25 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  Mask ipp useflag on opencv, because icc cannot be installed (no distfile)
 
   25 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Remove webkit-gtk's USE mask, the flags are now masked in specific arches.

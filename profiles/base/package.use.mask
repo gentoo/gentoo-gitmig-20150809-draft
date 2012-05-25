@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.357 2012/05/25 17:44:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.358 2012/05/25 21:03:03 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (25 Mai 2012)
+# Requires icc which does not emerge (distfile unavailable)
+media-libs/opencv ipp
 
 # Tiziano Müller <dev-zero@gentoo.org> (24 May 2012)
 # Requires gevent-1 which is still p.masked
