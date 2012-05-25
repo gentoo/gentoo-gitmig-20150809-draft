@@ -1,12 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.7 2011/06/21 14:44:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.8 2012/05/25 07:51:35 scarabeus Exp $
+
+EAPI=4
 
 inherit eutils fortran-2 toolchain-funcs multilib
 
 DESCRIPTION="PMEL fork of XGKS, an X11-based version of the ANSI Graphical Kernel System."
 HOMEPAGE="http://www.gentoogeek.org/viewvc/Linux/xgks-pmel/"
 SRC_URI="http://www.gentoogeek.org/files/${P}.tar.gz"
+
 LICENSE="UCAR-Unidata"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
@@ -20,63 +23,61 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-apps/groff"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/aclocal.patch
 }
 
-src_compile() {
+src_configure() {
 	sed -i -e "s:lib64:$(get_libdir):g" port/master.mk.in \
-		fontdb/Makefile.in || die "sed 1 failed"
+		fontdb/Makefile.in || die
 
 	CFLAGS=${CFLAGS} LD_X11='-L/usr/$(get_libdir) -lX11' \
 		FC=$(tc-getFC) CC=$(tc-getCC) OS=linux \
 		./configure --prefix=/usr --exec_prefix=/usr/bin \
-		|| die "configure failed"
+		|| die
+}
 
+src_compile() {
 	sed -i -e "s:port/all port/install:port/all:g" Makefile \
-		|| die "sed 2 failed"
+		|| die
 
 	# Fails parallel build, bug #295724
-	emake -j1 || die "make failed"
+	emake -j1
 
 	cd src/fortran
-	emake -j1 || die "make fortran failed"
+	emake -j1
 }
 
 src_install() {
 	cd "${S}"/progs
 
-	for tool in {defcolors,font,mi,pline,pmark}
-	do
-		newbin ${tool} xgks-${tool} || die
+	for tool in {defcolors,font,mi,pline,pmark}; do
+		newbin ${tool} xgks-${tool}
 	done
 
 	cd "${S}"
-	dolib.a src/lib/libxgks.a || die
+	dolib.a src/lib/libxgks.a
 
-	dodoc COPYRIGHT HISTORY INSTALL README || die
-	doman doc/{xgks.3,xgks_synop.3} || die
+	dodoc COPYRIGHT HISTORY INSTALL README
+	doman doc/{xgks.3,xgks_synop.3}
 	if use doc; then
-		newdoc doc/binding/cbinding.me cbinding || die
-		newdoc doc/userdoc/userdoc.me userdoc || die
+		newdoc doc/binding/cbinding.me cbinding
+		newdoc doc/userdoc/userdoc.me userdoc
 		insinto /usr/share/doc/${P}/examples
-		doins progs/{hanoi.c,star.c} || die
+		doins progs/{hanoi.c,star.c}
 	fi
 
 	insinto /usr/include/xgks
-	doins src/lib/gks*.h || die
-	doins src/lib/gksm/gksm*.h || die
-	doins src/fortran/f*.h || die
-	doins src/lib/w*.h || die
-	doins src/lib/{input.h,metafile.h,polylines.h,polymarkers.h,text.h} \
-		|| die
+	doins src/lib/gks*.h
+	doins src/lib/gksm/gksm*.h
+	doins src/fortran/f*.h
+	doins src/lib/w*.h
+	doins src/lib/{input.h,metafile.h,polylines.h,polymarkers.h,text.h}
 
 	insinto /usr/include
-	doins src/lib/xgks.h || die
-	doins port/udposix.h || die
+	doins src/lib/xgks.h
+	doins port/udposix.h
 
 	insinto /usr/share/xgksfonts
-	doins fontdb/{[1-9],*.gksfont} || die
+	doins fontdb/{[1-9],*.gksfont}
 }

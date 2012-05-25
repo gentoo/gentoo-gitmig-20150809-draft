@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/xgks-pmel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.7 2011/06/21 14:44:33 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.8 2012/05/25 07:51:35 scarabeus Exp $
+
+  25 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> xgks-pmel-2.5.5.ebuild:
+  Update to eapi4 -> bit cleanup.
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> xgks-pmel-2.5.5.ebuild:
   Add dependency on virtual/fortran
