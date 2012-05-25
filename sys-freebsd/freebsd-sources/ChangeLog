@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.69 2012/05/04 18:12:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.70 2012/05/25 15:28:06 aballier Exp $
+
+*freebsd-sources-9.0-r1 (25 May 2012)
+
+  25 May 2012; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-sources-9.0-r1.ebuild, +files/freebsd-sources-9.0-sysctluint.patch:
+  Make the disable-optimizations patch unconditional and add a patch to allow
+  sys/sysctl.h to be included alone
 
   04 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-sources-9.0.ebuild,
   +files/freebsd-sources-9.0-disable-optimizations.patch:
