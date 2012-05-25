@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/pk2cmd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.5 2012/05/22 16:34:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.6 2012/05/25 08:01:20 ssuominen Exp $
+
+  25 May 2012; Samuli Suominen <ssuominen@gentoo.org> pk2cmd-1.12.0-r1.ebuild,
+  pk2cmd-1.20.ebuild:
+  Set SLOT for the virtual/libusb dependency.
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> pk2cmd-1.12.0-r1.ebuild,
   pk2cmd-1.20.ebuild:
