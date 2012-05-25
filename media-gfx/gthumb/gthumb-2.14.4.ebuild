@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.14.0.ebuild,v 1.7 2012/05/05 07:00:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.14.4.ebuild,v 1.1 2012/05/25 08:48:03 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,8 +13,8 @@ HOMEPAGE="https://live.gnome.org/gthumb"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
-IUSE="cdr exif gnome-keyring gstreamer http raw slideshow tiff test"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE="cdr exif gnome-keyring gstreamer http jpeg raw slideshow tiff test"
 
 # We can't link against libbrasero-burn3
 RDEPEND=">=dev-libs/glib-2.28.0:2
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.28.0:2
 	>=dev-libs/libunique-1.1.2:1
 
 	media-libs/libpng:0
-	virtual/jpeg:0
+	sys-libs/zlib
 	x11-libs/libSM
 
 	cdr? ( >=app-cdr/brasero-2.28
@@ -36,6 +36,7 @@ RDEPEND=">=dev-libs/glib-2.28.0:2
 	http? (
 		>=net-libs/libsoup-2.26:2.4
 		>=net-libs/libsoup-gnome-2.26:2.4 )
+	jpeg? ( virtual/jpeg:0 )
 	slideshow? (
 		>=media-libs/clutter-1:1.0
 		>=media-libs/clutter-gtk-0.10:0.10 )
@@ -66,6 +67,7 @@ pkg_setup() {
 		$(use_enable gstreamer)
 		$(use_enable gnome-keyring)
 		$(use_enable http libsoup)
+		$(use_enable jpeg)
 		$(use_enable raw libopenraw)
 		$(use_enable slideshow clutter)
 		$(use_enable test test-suite)
