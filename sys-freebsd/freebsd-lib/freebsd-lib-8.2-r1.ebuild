@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.8 2012/05/22 16:04:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.9 2012/05/25 04:13:19 naota Exp $
 
 EAPI=2
 
@@ -197,6 +197,9 @@ src_compile() {
 
 	# Bug #270098
 	append-flags $(test-flags -fno-strict-aliasing)
+
+	# Bug #324445
+	append-flags $(test-flags -fno-strict-overflow)
 
 	strip-flags
 	if [ "${CTARGET}" != "${CHOST}" ]; then

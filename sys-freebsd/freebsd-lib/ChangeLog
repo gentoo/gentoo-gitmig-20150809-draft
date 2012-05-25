@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.140 2012/05/24 12:15:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.141 2012/05/25 04:13:19 naota Exp $
+
+  25 May 2012; Naohiro Aota <naota@gentoo.org> freebsd-lib-8.0.ebuild,
+  freebsd-lib-8.2-r1.ebuild, freebsd-lib-9.0-r1.ebuild,
+  freebsd-lib-9.0-r2.ebuild:
+  Build with -fno-strict-overflow. FreeBSD time code depends on overflow.
+  #324452
 
   24 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild:
   build and install more libraries with multilib

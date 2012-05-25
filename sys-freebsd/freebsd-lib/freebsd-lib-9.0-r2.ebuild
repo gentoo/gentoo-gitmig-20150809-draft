@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.26 2012/05/24 12:15:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.27 2012/05/25 04:13:19 naota Exp $
 
 EAPI=2
 
@@ -315,6 +315,9 @@ src_compile() {
 
 	# Bug #270098
 	append-flags $(test-flags -fno-strict-aliasing)
+
+	# Bug #324445
+	append-flags $(test-flags -fno-strict-overflow)
 
 	# strip flags and do not do it later, we only add safe, and in fact
 	# needed flags after all
