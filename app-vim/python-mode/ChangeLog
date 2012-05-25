@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/python-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/ChangeLog,v 1.1 2012/04/27 09:12:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/ChangeLog,v 1.2 2012/05/25 10:42:32 xarthisius Exp $
+
+*python-mode-0.6.4 (25 May 2012)
+
+  25 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +python-mode-0.6.4.ebuild,
+  -python-mode-0.6.3.ebuild:
+  Version bump wrt #417479 by <gentoo@leiqing.org>. Use vcs-snapshot.eclass and
+  github SRC_URI to avoid mangling with S and git revision, drop dependency on
+  unzip
 
 *python-mode-0.6.3 (27 Apr 2012)
 

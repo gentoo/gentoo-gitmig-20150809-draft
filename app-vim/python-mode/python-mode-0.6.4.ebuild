@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/python-mode-0.6.3.ebuild,v 1.1 2012/04/27 09:12:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/python-mode-0.6.4.ebuild,v 1.1 2012/05/25 10:42:32 xarthisius Exp $
 
 EAPI=4
 
@@ -8,17 +8,17 @@ VIM_PLUGIN_MESSAGES="filetype"
 VIM_PLUGIN_HELPFILES="PythonModeCommands"
 VIM_PLUGIN_HELPURI="https://github.com/klen/python-mode"
 
-inherit vim-plugin
+inherit vim-plugin vcs-snapshot
 
 DESCRIPTION="Provide python code looking for bugs, refactoring and other useful things"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3770 https://github.com/klen/python-mode"
-SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=17788 -> ${P}.zip"
+SRC_URI="https://github.com/klen/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="app-arch/unzip"
+DEPEND=""
 RDEPEND="
 	dev-python/astng
 	dev-python/pep8
@@ -27,9 +27,6 @@ RDEPEND="
 	dev-python/rope
 	dev-python/ropemode
 	"
-
-GIT_REV=9956aba
-S=${WORKDIR}/klen-${PN}-${GIT_REV}
 
 src_prepare() {
 	rm -rf pylibs/{logilab,pep8.py,pyflakes,pylint,rope,ropemode} .gitignore
