@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0.ebuild,v 1.4 2012/05/24 04:23:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.0.ebuild,v 1.5 2012/05/25 21:26:29 dilfridge Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin perl static-libs"
 COLLECTD_IMPOSSIBLE_PLUGINS="netapp pinba xmms"
 
 # Plugins that still need some work
-COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors tape zfs_arc modbus amqp genericjmx lpar redis threshold write_redis v5upgrade"
+COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors tape zfs_arc modbus amqp genericjmx lpar redis write_redis"
 
 # Plugins that have been (compile) tested and can be enabled via COLLECTD_PLUGINS
 COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswitch
@@ -31,8 +31,8 @@ COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswit
 	onewire openvpn perl ping postgresql powerdns processes protocols python
 	rrdcached sensors serial snmp swap table tail tcpconns teamspeak2 ted thermal
 	tokyotyrant uptime users varnish vmem vserver wireless csv exec logfile network
-	notify_desktop notify_email oracle perl python routeros rrdcached rrdtool syslog unixsock
-	write_graphite write_http write_mongodb match_empty_counter match_hashed match_regex match_timediff
+	notify_desktop notify_email oracle perl python routeros rrdcached rrdtool syslog threshold unixsock
+	v5upgrade write_graphite write_http write_mongodb match_empty_counter match_hashed match_regex match_timediff
 	match_value target_notification target_replace target_scale target_set uuid"
 
 COLLECTD_DISABLED_PLUGINS="${COLLECTD_IMPOSSIBLE_PLUGINS} ${COLLECTD_UNTESTED_PLUGINS}"

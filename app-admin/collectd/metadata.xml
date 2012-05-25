@@ -96,11 +96,13 @@
 		<flag name='collectd_plugins_teamspeak2'>Build the teamspeak2 input plugin (collects traffic statistics from a teamspeak2 instance)</flag> 
 		<flag name='collectd_plugins_ted'>Build the ted input plugin (connects to The Energy Detective and reads the current power over connected power lines)</flag> 
 		<flag name='collectd_plugins_thermal'>Build the thermal input plugin (ACPI thermal zone information)</flag>
+		<flag name='collectd_plugins_threshold'>Build the threshold plugin</flag>
 		<flag name='collectd_plugins_tokyotyrant'>Build the tokyotyrant input plugin (number of records and file size from a running Tokyo Tyrant server)</flag> 
 		<flag name='collectd_plugins_uptime'>Build the uptime input plugin (system uptime)</flag> 
 		<flag name='collectd_plugins_unixsock'>Build the unixsock output plugin (opens a UNIX domain socket and accepts connections)</flag>
 		<flag name='collectd_plugins_users'>Build the users input plugin (number of users currently logged in)</flag> 
 		<flag name='collectd_plugins_uuid'>Build the uuid plugin (tries hard to determine the UUID of the system it is running on)</flag>
+		<flag name='collectd_plugins_v5upgrade'>Build the v5upgrade plugin</flag>
 		<flag name='collectd_plugins_varnish'>Build the varnish input plugin</flag> 
 		<flag name='collectd_plugins_vmem'>Build the vmem input plugin (information about the virtual memory subsystem)</flag> 
 		<flag name='collectd_plugins_vserver'>Build the vserver input plugin (virtual servers running on a system)</flag> 

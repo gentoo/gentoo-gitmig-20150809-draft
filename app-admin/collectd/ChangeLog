@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.38 2012/05/24 04:23:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.39 2012/05/25 21:26:29 dilfridge Exp $
+
+  25 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> collectd-5.1.0.ebuild,
+  metadata.xml:
+  Enable threshold and v5upgrade plugins
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> collectd-5.1.0-r1.ebuild,
   collectd-5.1.0.ebuild:
