@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.3.ebuild,v 1.4 2012/05/22 16:32:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.3.ebuild,v 1.5 2012/05/25 10:52:23 ssuominen Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc nls static-libs usb"
 
 RDEPEND="dev-libs/glib:2
-	usb? ( virtual/libusb )
+	usb? ( virtual/libusb:0 )
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS LOGO NEWS README ChangeLog docs/api.txt )
 
 src_configure() {
+	# --disable-libusb $(use_enable usb libusb10) would enable virtual/libusb:1
 	econf \
 		--disable-rpath \
 		$(use_enable nls) \
