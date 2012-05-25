@@ -11,7 +11,6 @@
 		<flag name="ipc">Support inter-process communication between KVIrc processes</flag>
 		<flag name="phonon">Support Phonon for audio output</flag>
 		<flag name="qt-dbus">Support Qt-DBus</flag>
-		<flag name="qt-webkit">Support Qt-WebKit</flag>
 		<flag name="transparency">Support pseudo-transparency</flag>
 	</use>
 </pkgmetadata>

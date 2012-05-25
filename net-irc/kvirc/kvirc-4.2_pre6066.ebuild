@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.2_pre6066.ebuild,v 1.4 2012/05/03 06:27:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.2_pre6066.ebuild,v 1.5 2012/05/25 23:11:54 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -14,7 +14,7 @@ SRC_URI="http://people.apache.org/~Arfrever/gentoo/${P}.tar.xz"
 LICENSE="kvirc"
 SLOT="4"
 KEYWORDS="~alpha amd64 ~ppc ~ppc64 x86"
-IUSE="audiofile dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl theora +transparency"
+IUSE="audiofile dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus webkit +ssl theora +transparency"
 
 RDEPEND="sys-libs/zlib
 	x11-libs/libX11
@@ -30,7 +30,7 @@ RDEPEND="sys-libs/zlib
 	perl? ( dev-lang/perl )
 	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.6 ) )
 	qt-dbus? ( >=x11-libs/qt-dbus-4.6 )
-	qt-webkit? ( >=x11-libs/qt-webkit-4.6 )
+	webkit? ( >=x11-libs/qt-webkit-4.6 )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.4
@@ -84,7 +84,7 @@ src_configure() {
 		$(cmake-utils_use_want profile MEMORY_PROFILE)
 		$(cmake-utils_use_want python PYTHON)
 		$(cmake-utils_use_want qt-dbus QTDBUS)
-		$(cmake-utils_use_want qt-webkit QTWEBKIT)
+		$(cmake-utils_use_want webkit QTWEBKIT)
 		$(cmake-utils_use_want ssl OPENSSL)
 		$(cmake-utils_use_want theora OGG_THEORA)
 		$(cmake-utils_use_want transparency TRANSPARENCY)
