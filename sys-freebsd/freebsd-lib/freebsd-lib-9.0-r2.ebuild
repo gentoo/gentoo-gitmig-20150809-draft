@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.28 2012/05/25 12:24:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.29 2012/05/25 12:27:00 aballier Exp $
 
 EAPI=2
 
@@ -328,7 +328,7 @@ src_compile() {
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX RANLIB
 		mymakeopts="${mymakeopts} NLS="
-		append-flags "-isystem /usr/${CTARGET}/usr/include"
+		append-flags "-I/usr/${CTARGET}/usr/include"
 		append-ldflags "-L${WORKDIR}/lib/libc"
 	fi
 
@@ -337,7 +337,7 @@ src_compile() {
 	elif ! use multilib ; then
 		# Forces to use the local copy of headers with USE=build as they might
 		# be outdated in the system. Assume they are fine otherwise.
-		use build && append-flags "-isystem '${WORKDIR}/include_proper'"
+		use build && append-flags "-I${WORKDIR}/include_proper"
 		do_compile
 	else
 		for ABI in $(get_all_abis) ; do
@@ -357,7 +357,7 @@ src_compile() {
 				CTARGET="${CHOST}" install_includes "/include_proper_${ABI}"
 				CC="${CC} -I${WORKDIR}/include_proper_${ABI}"
 			else
-				use build && append-flags "-isystem '${WORKDIR}/include_proper'" ;
+				use build && append-flags "-I${WORKDIR}/include_proper" ;
 			fi
 
 			einfo "Building for ABI ${ABI} and TARGET=$(tc-arch-kernel ${CHOST})"

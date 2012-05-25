@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.142 2012/05/25 12:24:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.143 2012/05/25 12:27:00 aballier Exp $
+
+  25 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild:
+  replace -isystem path by -Ipath as append-flags seems not to like the former
+  anymore
 
   25 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r2.ebuild,
   +files/freebsd-lib-9.0-trylock-adaptive.patch:
