@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1b.ebuild,v 1.2 2012/05/20 14:01:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1b.ebuild,v 1.3 2012/05/25 17:41:49 vapier Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 REV="1.7"
 DESCRIPTION="full-strength general purpose cryptography library (including SSL v2/v3 and TLS v1)"
