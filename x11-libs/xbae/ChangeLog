@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xbae
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.16 2012/02/09 09:46:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.17 2012/05/25 14:24:27 jlec Exp $
+
+  25 May 2012; Justin Lecher <jlec@gentoo.org> xbae-4.60.4.ebuild,
+  metadata.xml:
+  Moved to EAPI=4 and autotools.eclas to handle static-libs
 
   09 Feb 2012; Justin Lecher <jlec@gentoo.org> xbae-4.60.4.ebuild:
   Keyworded for ~-linux prefix

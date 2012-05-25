@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+	<herd>sci</herd>
+	<longdescription lang="en">
   XbaeMatrix is a free Motif(R) table widget (also compatible with the free 
   LessTif) which presents an editable array of string data to the user in a 
   scrollable table similar to a spreadsheet. The rows and columns of the Matrix 
