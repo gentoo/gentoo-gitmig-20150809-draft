@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.12 2012/01/29 10:29:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.13 2012/05/25 09:47:02 graaff Exp $
+
+  25 May 2012; Hans de Graaff <graaff@gentoo.org> -aruba-0.4.6.ebuild,
+  -aruba-0.4.10.ebuild:
+  Remove old versions.
 
   29 Jan 2012; Hans de Graaff <graaff@gentoo.org> aruba-0.4.11.ebuild:
   Add ruby19. Closes bug 293358.
