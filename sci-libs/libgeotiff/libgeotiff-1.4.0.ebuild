@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.4.0.ebuild,v 1.1 2012/05/24 19:38:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.4.0.ebuild,v 1.2 2012/05/25 11:13:39 scarabeus Exp $
 
 EAPI=4
-inherit base
+inherit base autotools
 
 MY_P=${P/_rc/RC}
 
@@ -28,6 +28,14 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P/RC*/}
 
 DOCS=( README ChangeLog )
+
+src_prepare() {
+	base_src_prepare
+	sed -i \
+		-e "s:-O3::g" \
+		configure.ac || die
+	eautoreconf
+}
 
 src_configure() {
 	econf \
