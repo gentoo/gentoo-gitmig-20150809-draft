@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.331 2012/05/24 11:54:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.332 2012/05/25 13:18:15 blueness Exp $
+
+*tor-0.2.2.36 (25 May 2012)
+
+  25 May 2012; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.2.36.ebuild:
+  Version bump
 
   24 May 2012; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.1.32.ebuild:
   Upstream informs me its unmaintained and has issues, thanks Sebastian
