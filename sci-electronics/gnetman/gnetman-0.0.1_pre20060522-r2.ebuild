@@ -1,13 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/gnetman-0.0.1_pre20060522-r2.ebuild,v 1.2 2012/04/26 15:43:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/gnetman-0.0.1_pre20060522-r2.ebuild,v 1.3 2012/05/25 07:49:02 xmw Exp $
 
 EAPI=4
 
 MY_P="${PN}-22May06"
 
 DESCRIPTION="A GNU Netlist Manipulation Library"
-HOMEPAGE="http://www.viasic.com/opensource/"
+HOMEPAGE="http://sourceforge.net/projects/gnetman/
+	http://www.viasic.com/opensource/"
 SRC_URI="http://www.viasic.com/opensource/${MY_P}.tar.gz"
 
 SLOT="0"
