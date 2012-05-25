@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.37 2012/05/03 18:49:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.38 2012/05/25 14:07:38 slyfox Exp $
 
 #BACKPORTS=1
 
@@ -261,7 +261,7 @@ src_configure() {
 		$(use_enable vhost-net)
 		$(use_enable xen)
 		$(use_enable xattr attr)
-		--disable-darwin-user --disable-bsd-user
+		--disable-bsd-user
 	"
 
 	# audio options
