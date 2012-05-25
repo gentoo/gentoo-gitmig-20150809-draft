@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.20 2012/05/24 04:11:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.21 2012/05/25 10:54:41 ssuominen Exp $
+
+  25 May 2012; Samuli Suominen <ssuominen@gentoo.org> owfs-2.7_p21.ebuild,
+  owfs-2.7_p21-r1.ebuild:
+  Pull in SLOT="0" of virtual/libusb because libusb-1 is not supported.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> owfs-2.7_p21-r1.ebuild,
   owfs-2.7_p21.ebuild:
