@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.245 2012/05/18 18:08:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.246 2012/05/25 17:21:35 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -194,3 +194,9 @@ media-libs/phonon vlc
 # >=kde-misc/polkit-kde-kcmodules-0.98_pre20101127
 # >=sys-auth/polkit-kde-agent-0.99
 kde-base/kdelibs policykit
+
+# <=sci-geosciences/gpsd-2.95-r1
+app-misc/geoclue gps
+
+# app-misc/geoclue[networkmanager]
+app-misc/geoclue skyhook
