@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.1.3.ebuild,v 1.2 2011/12/31 18:35:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.1.3.ebuild,v 1.3 2012/05/25 10:58:42 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -22,3 +22,8 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86
 IUSE=""
 
 ruby_add_bdepend "test? ( >=dev-ruby/hoe-2.10 dev-ruby/rspec:2 )"
+
+all_ruby_prepare() {
+	# Remove unneeded rspec require to avoid rspec with USE=doc.
+	sed -i -e "/require 'rspec'/d" Rakefile || die
+}
