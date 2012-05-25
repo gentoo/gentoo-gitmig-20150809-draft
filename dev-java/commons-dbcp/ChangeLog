@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.58 2012/03/12 15:07:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.59 2012/05/25 10:03:55 sera Exp $
+
+*commons-dbcp-1.4-r2 (25 May 2012)
+
+  25 May 2012; Ralph Sennhauser <sera@gentoo.org> +commons-dbcp-1.4-r2.ebuild:
+  Revbump, add missing deps, drop unused deps, fixes #205245.
+  Fix generating javadocs.
+  EAPI bump and make better use of eclasses.
+  Disable test depending on unpackaged geronimo. #348853
+  Disble one failing test as this version is already stable on some archs.
 
   12 Mar 2012; Brent Baude <ranger@gentoo.org> commons-dbcp-1.4-r1.ebuild:
   Marking commons-dbcp-1.4-r1 ppc64 for bug 348594
