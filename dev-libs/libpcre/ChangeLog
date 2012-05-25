@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.195 2012/05/14 19:57:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.196 2012/05/25 16:39:29 vapier Exp $
+
+  25 May 2012; Mike Frysinger <vapier@gentoo.org> libpcre-7.9-r1.ebuild,
+  libpcre-8.02.ebuild, libpcre-8.21.ebuild, libpcre-8.30-r2.ebuild:
+  Add missing inherits, and drop other unused ones.
 
   14 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Fix typo in metadata.xml.

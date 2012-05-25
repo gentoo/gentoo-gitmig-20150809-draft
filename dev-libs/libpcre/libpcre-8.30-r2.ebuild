@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.30-r2.ebuild,v 1.4 2012/05/04 18:35:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.30-r2.ebuild,v 1.5 2012/05/25 16:39:29 vapier Exp $
 
 EAPI="4"
 
-inherit eutils multilib libtool flag-o-matic
+inherit eutils multilib libtool flag-o-matic toolchain-funcs
 
 DESCRIPTION="Perl-compatible regular expression library"
 HOMEPAGE="http://www.pcre.org/"
