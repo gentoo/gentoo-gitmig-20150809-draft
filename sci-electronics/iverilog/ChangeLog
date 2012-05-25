@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.35 2012/05/25 13:25:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.36 2012/05/25 13:27:55 xmw Exp $
+
+  25 May 2012; Michael Weber <xmw@gentoo.org> iverilog-0.9.5.ebuild:
+  Fix RDEPEND
 
 *iverilog-0.9.5 (25 May 2012)
 
