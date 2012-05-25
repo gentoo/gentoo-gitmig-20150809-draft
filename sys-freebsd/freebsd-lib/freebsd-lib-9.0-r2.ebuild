@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.33 2012/05/25 14:58:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.34 2012/05/25 15:14:11 aballier Exp $
 
 EAPI=2
 
@@ -282,7 +282,7 @@ get_subdirs() {
 do_bootstrap() {
 	einfo "Bootstrapping on ${CHOST} for ${CTARGET}"
 	bootstrap_csu
-	is_native_abi && bootstrap_libssp_nonshared
+	bootstrap_libssp_nonshared
 }
 
 # Compile it. Assume we have the toolchain setup correctly.
