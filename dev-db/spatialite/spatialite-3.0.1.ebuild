@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/spatialite/spatialite-3.0.1.ebuild,v 1.1 2012/05/25 17:31:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/spatialite/spatialite-3.0.1.ebuild,v 1.2 2012/05/25 17:46:27 scarabeus Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_P="${MY_PN}-${PV}"
 inherit multilib
 
 DESCRIPTION="A complete Spatial DBMS in a nutshell built upon sqlite"
-HOMEPAGE="http://www.gaia-gis.it/spatialite"
+HOMEPAGE="http://www.gaia-gis.it/gaia-sins/"
 SRC_URI="http://www.gaia-gis.it/gaia-sins/${MY_PN}-sources/${MY_P}.tar.gz"
 
 LICENSE="MPL-1.1"
