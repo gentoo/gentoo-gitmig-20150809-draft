@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.851 2012/05/18 05:04:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.852 2012/05/25 20:43:51 blueness Exp $
+
+  25 May 2012; Anthony G. Basile <blueness@gentoo.org> glibc-2.14.1-r3.ebuild:
+  Keyword mips
 
 *glibc-2.15-r2 (18 May 2012)
 
