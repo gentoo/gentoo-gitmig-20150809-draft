@@ -1,6 +1,9 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.28 2012/05/06 17:33:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.29 2012/05/25 14:01:51 ago Exp $
+
+  25 May 2012; Agostino Sarubbo <ago@gentoo.org> bombono-dvd-1.2.1.ebuild:
+  Stable for amd64, wrt bug #417427
 
   06 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   bombono-dvd-1.0.0.ebuild, bombono-dvd-1.2.1.ebuild,
