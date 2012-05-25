@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.177 2012/05/24 07:44:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.178 2012/05/25 02:11:00 naota Exp $
+
+  25 May 2012; Naohiro Aota <naota@gentoo.org> zile-2.4.7.ebuild:
+  Remove -x86-fbsd. #417347
 
   24 May 2012; Agostino Sarubbo <ago@gentoo.org> zile-2.4.7.ebuild:
   Stable for amd64, wrt bug #417343
