@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.124 2012/05/24 19:20:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.125 2012/05/25 18:54:00 scarabeus Exp $
+
+*gdal-1.9.1 (25 May 2012)
+
+  25 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/gdal-1.9.1-opencl.patch, +files/gdal-1.9.1-ruby-makefile.patch,
+  +gdal-1.9.1.ebuild, metadata.xml:
+  Version bump to 1.9.1. Fixes bug#396121 and bug#395273.
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.8.1-r1.ebuild:
   Stable on amd64, x86 and ppc. Wrt bug#413835.
