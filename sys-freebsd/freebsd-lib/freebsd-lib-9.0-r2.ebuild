@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.27 2012/05/25 04:13:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r2.ebuild,v 1.28 2012/05/25 12:24:04 aballier Exp $
 
 EAPI=2
 
@@ -90,7 +90,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-6.1-csu.patch"
 	"${FILESDIR}/${PN}-8.0-rpcsec_gss.patch"
 	"${FILESDIR}/${PN}-9.0-liblink.patch"
-	"${FILESDIR}/${PN}-bsdxml2expat.patch" )
+	"${FILESDIR}/${PN}-bsdxml2expat.patch"
+	"${FILESDIR}/${PN}-9.0-trylock-adaptive.patch" )
 
 # Here we disable and remove source which we don't need or want
 # In order:
