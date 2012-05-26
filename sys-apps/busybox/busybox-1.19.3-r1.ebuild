@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.3-r1.ebuild,v 1.12 2012/04/24 19:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.3-r1.ebuild,v 1.13 2012/05/26 00:03:28 vapier Exp $
 
 EAPI="3"
-inherit eutils flag-o-matic savedconfig toolchain-funcs
+inherit eutils flag-o-matic savedconfig toolchain-funcs multilib
 
 ################################################################################
 # BUSYBOX ALTERNATE CONFIG MINI-HOWTO
