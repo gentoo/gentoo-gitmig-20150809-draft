@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.1 2012/05/25 18:54:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.2 2012/05/26 07:10:31 scarabeus Exp $
 
 EAPI=3
 
 WANT_AUTOCONF="2.5"
 
 RUBY_OPTIONAL="yes"
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 PYTHON_DEPEND="python? 2:2.6"
 
@@ -130,7 +130,7 @@ src_configure() {
 	local myopts=""
 
 	if use ruby; then
-		RUBY_MOD_DIR="$(ruby18 -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')"
+		RUBY_MOD_DIR="$(ruby19 -r rbconfig -e 'print RbConfig::CONFIG["sitearchdir"]')"
 		echo "Ruby module dir is: $RUBY_MOD_DIR"
 	fi
 
