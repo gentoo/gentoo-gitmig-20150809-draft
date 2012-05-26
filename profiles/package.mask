@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13790 2012/05/24 11:43:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13791 2012/05/26 08:39:47 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -608,10 +608,6 @@ dev-util/febootstrap
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
 =www-plugins/google-talkplugin-9999
-
-# Steve Arnold <nerdboy@gentoo.org> (12 Nov 2011)
-# Masked until gpsdrive is updated to work with the newer mapnik.
->=sci-geosciences/mapnik-2.0.0
 
 # Michael Weber <xmw@gentoo.org> (04 Nov 2011)
 # Masked due security issue bug 385967
