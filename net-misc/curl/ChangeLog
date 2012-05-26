@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.218 2012/05/26 06:11:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.219 2012/05/26 13:42:11 blueness Exp $
+
+*curl-7.26.0 (26 May 2012)
+
+  26 May 2012; Anthony G. Basile <blueness@gentoo.org> +curl-7.26.0.ebuild:
+  Version bump, restrict tests, bug #285669
 
   26 May 2012; Anthony G. Basile <blueness@gentoo.org> curl-7.25.0-r1.ebuild:
   Change dependency name net-libs/axTLS -> net-libs/axtls
