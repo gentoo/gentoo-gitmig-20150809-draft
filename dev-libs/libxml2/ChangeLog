@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.345 2012/05/25 07:13:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.346 2012/05/26 07:58:15 tetromino Exp $
+
+*libxml2-2.8.0-r1 (26 May 2012)
+
+  26 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libxml2-2.8.0.ebuild, +libxml2-2.8.0-r1.ebuild:
+  Prevent libxml2's python module from linking to out-of-build-tree libxml2
+  library by hacking the relink_command entry in its build-time .la file. Fixes
+  bug #417539 ("'LIBXML2_2.7.9' not found" errors). Forced to drop hppa and
+  amd64-fbsd keywords, bug #417569. Drop broken 2.8.0 ebuild.
 
 *libxml2-2.8.0 (25 May 2012)
 

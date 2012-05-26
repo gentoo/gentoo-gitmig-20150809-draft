@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0.ebuild,v 1.1 2012/05/25 07:13:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0-r1.ebuild,v 1.1 2012/05/26 07:58:15 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="debug doc examples icu ipv6 lzma python readline static-libs test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
@@ -36,6 +36,7 @@ RDEPEND="sys-libs/zlib
 	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
+	python? ( dev-util/fix-la-relink-command )
 	hppa? ( >=sys-devel/binutils-2.15.92.0.2 )"
 
 S="${WORKDIR}/${PN}-${PV%_rc*}"
@@ -152,6 +153,8 @@ src_install() {
 
 	if use python; then
 		installation() {
+			# bug #417539
+			fix-la-relink-command . || die "fix-la-relink-command failed"
 			emake DESTDIR="${D}" \
 				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
 				docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
