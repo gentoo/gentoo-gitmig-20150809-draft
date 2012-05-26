@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r4.ebuild,v 1.1 2012/05/25 21:48:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r4.ebuild,v 1.2 2012/05/26 10:04:43 alexxy Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs
+inherit base eutils toolchain-funcs
 
 DESCRIPTION="Device mapper target autoconfig"
 HOMEPAGE="http://christophe.varoqui.free.fr/"
