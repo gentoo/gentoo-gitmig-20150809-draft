@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.6.0.ebuild,v 1.12 2012/05/04 08:42:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.6.0.ebuild,v 1.13 2012/05/26 08:19:00 hattya Exp $
 
 EAPI="4"
 
@@ -33,6 +33,7 @@ AT_M4DIR="ac"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.[145]-*.diff
+	epatch "${FILESDIR}"/${PN}-r3033.diff
 	use crypt || cp ac/missing/gpgme.m4 ac
 	eautoreconf
 }

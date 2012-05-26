@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-3.1.3.ebuild,v 1.3 2012/05/05 11:25:51 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-3.1.3.ebuild,v 1.4 2012/05/26 08:19:00 hattya Exp $
 
 EAPI="4"
 
@@ -29,6 +29,10 @@ RDEPEND="${CDEPEND}
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	xface? ( media-libs/compface )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-r3033.diff
+}
 
 src_configure() {
 	local htmldir=/usr/share/doc/${PF}/html

@@ -1,0 +1,23 @@
+------------------------------------------------------------------------
+r3033 | hiro | 2012-03-26 16:36:06 +0900 (Mon, 26 Mar 2012) | 1 line
+
+removed direct inclusion of <glibconfig.h> and <glib/gwin32.h> (fixes Bug #53).
+------------------------------------------------------------------------
+Index: libsylph/defs.h
+===================================================================
+--- libsylph/defs.h	(revision 3032)
++++ libsylph/defs.h	(revision 3033)
+@@ -24,12 +24,8 @@
+ #  include "config.h"
+ #endif
+ 
+-#include <glibconfig.h>
++#include <glib.h>
+ 
+-#ifdef G_OS_WIN32
+-#  include <glib/gwin32.h>
+-#endif
+-
+ #if HAVE_PATHS_H
+ #  include <paths.h>
+ #endif
