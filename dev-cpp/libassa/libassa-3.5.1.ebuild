@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/libassa-3.5.1.ebuild,v 1.1 2012/05/26 20:27:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/libassa-3.5.1.ebuild,v 1.2 2012/05/26 20:32:44 angelos Exp $
 
 EAPI=4
 inherit eutils
@@ -14,8 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc static-libs"
 
-RDEPEND=""
-DEPEND="doc? ( app-doc/doxygen )"
+RDEPEND="net-libs/libtirpc"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
