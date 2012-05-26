@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GraphViz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/ChangeLog,v 1.17 2012/01/08 20:16:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/ChangeLog,v 1.18 2012/05/26 13:05:43 tove Exp $
+
+*GraphViz-2.100.0 (26 May 2012)
+
+  26 May 2012; Torsten Veller <tove@gentoo.org> +GraphViz-2.100.0.ebuild:
+  Version bump
 
 *GraphViz-2.90.0 (08 Jan 2012)
 
