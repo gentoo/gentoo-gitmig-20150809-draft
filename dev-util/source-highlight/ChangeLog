@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/source-highlight
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.44 2011/04/10 03:07:43 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.45 2012/05/26 07:54:45 dev-zero Exp $
+
+*source-highlight-3.1.6 (25 May 2012)
+
+  25 May 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +source-highlight-3.1.6.ebuild:
+  Version bump (bug #300540), solves bug #316083 (failing tests) and bug
+  #352005 (broken test with boost-1.45) as well.
 
   10 Apr 2011; Jonathan Callen <abcd@gentoo.org> source-highlight-3.1.ebuild:
   Add prefix support, bump EAPI to 3, add prefix keywords
