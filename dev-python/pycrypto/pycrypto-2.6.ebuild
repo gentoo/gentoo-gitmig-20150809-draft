@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.6.ebuild,v 1.1 2012/05/26 12:19:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.6.ebuild,v 1.2 2012/05/26 12:49:29 maksbotan Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="Python Cryptography Toolkit"
 HOMEPAGE="http://www.dlitz.net/software/pycrypto/ http://pypi.python.org/pypi/pycrypto"
@@ -23,22 +23,15 @@ RDEPEND="gmp? ( dev-libs/gmp )"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils >=dev-python/epydoc-3 )"
 
-# Some tests fail with some limit of inlining of functions.
-# Avoid warnings about breaking strict-aliasing rules.
-PYTHON_CFLAGS=("2.* + -fno-inline-functions -fno-strict-aliasing")
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 DOCS="ACKS ChangeLog README TODO"
 PYTHON_MODNAME="Crypto"
 
-src_prepare() {
-	distutils_src_prepare
-}
-
 src_configure() {
-	#Mimic behavoir of 2.5 ebuild about disabling mpir
 	econf \
 		$(use_with gmp) \
-		--without-mpir || die "econf failed"
+		--without-mpir
 }
 
 src_compile() {
@@ -55,7 +48,6 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml Doc/index.html || die "dohtml failed"
-		dohtml Doc/apidoc/* || die "dohtml failed"
+		dohtml Doc/apidoc/* Doc/index.html
 	fi
 }
