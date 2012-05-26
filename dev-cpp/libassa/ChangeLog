@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libassa
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.13 2011/07/19 20:33:31 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.14 2012/05/26 20:27:47 angelos Exp $
+
+*libassa-3.5.1 (26 May 2012)
+
+  26 May 2012; Christoph Mende <angelos@gentoo.org> +libassa-3.5.1.ebuild:
+  Version bump
 
   19 Jul 2011; Christoph Mende <angelos@gentoo.org> libassa-3.5.0.ebuild,
   +files/libassa-3.5.0-link-dynamically.patch:
