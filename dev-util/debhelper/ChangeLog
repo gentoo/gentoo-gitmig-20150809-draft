@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.46 2012/05/24 05:28:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.47 2012/05/26 09:46:53 maekke Exp $
+
+  26 May 2012; Markus Meier <maekke@gentoo.org> debhelper-9.20120322.ebuild:
+  arm stable, bug #415269
 
 *debhelper-9.20120523 (24 May 2012)
 
