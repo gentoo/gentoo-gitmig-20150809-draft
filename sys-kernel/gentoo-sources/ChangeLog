@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.973 2012/05/21 18:03:55 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.974 2012/05/26 00:48:12 mpagano Exp $
+
+*gentoo-sources-3.3.7 (26 May 2012)
+
+  26 May 2012; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.3.7.ebuild:
+  Linux patches 3.3.6 and 3.3.7. Patch to include module.h to fix modpost on
+  Tsunami
 
 *gentoo-sources-3.4.0 (21 May 2012)
 
