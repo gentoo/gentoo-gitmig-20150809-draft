@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.151 2012/05/26 16:59:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.152 2012/05/26 17:18:00 armin76 Exp $
+
+  26 May 2012; Raúl Porcel <armin76@gentoo.org> firefox-10.0.4.ebuild:
+  alpha/ia64 stable
 
   26 May 2012; Raúl Porcel <armin76@gentoo.org> firefox-10.0.3.ebuild,
   firefox-10.0.4.ebuild, firefox-12.0-r1.ebuild:
