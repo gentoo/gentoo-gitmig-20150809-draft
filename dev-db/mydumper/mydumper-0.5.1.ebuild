@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/mydumper-0.5.1.ebuild,v 1.2 2012/05/03 02:33:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/mydumper-0.5.1.ebuild,v 1.3 2012/05/26 14:14:11 idl0r Exp $
 
 EAPI=2
 inherit cmake-utils versionator
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.mydumper.org/"
 SRC_URI="http://launchpad.net/mydumper/$(get_version_component_range 1-2)/${PV}/+download/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="dev-libs/libpcre
