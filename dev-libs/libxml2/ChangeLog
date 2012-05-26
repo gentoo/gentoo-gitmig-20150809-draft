@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.348 2012/05/26 16:10:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.349 2012/05/26 17:22:43 armin76 Exp $
+
+  26 May 2012; Raúl Porcel <armin76@gentoo.org> libxml2-2.8.0_rc1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #416209
 
   26 May 2012; Alexis Ballier <aballier@gentoo.org> libxml2-2.8.0-r1.ebuild:
   keyword ~amd64-fbsd, bug #417569
