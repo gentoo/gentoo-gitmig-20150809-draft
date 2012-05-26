@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.75 2012/05/03 03:26:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.76 2012/05/26 03:02:48 mr_bones_ Exp $
+
+  26 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/gcompris-9.6.1-build.patch, -gcompris-9.6.1.ebuild:
+  old
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gcompris-9.6.1.ebuild,
   gcompris-12.01.ebuild:
