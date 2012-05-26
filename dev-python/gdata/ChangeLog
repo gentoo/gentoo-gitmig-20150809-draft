@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.103 2012/02/26 04:00:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.104 2012/05/26 03:44:44 radhermit Exp $
+
+*gdata-2.0.17 (26 May 2012)
+
+  26 May 2012; Tim Harder <radhermit@gentoo.org> +gdata-2.0.17.ebuild:
+  Version bump.
 
   26 Feb 2012; Mike Gilbert <floppym@gentoo.org> gdata-2.0.16.ebuild:
   Set EAPI=4.
