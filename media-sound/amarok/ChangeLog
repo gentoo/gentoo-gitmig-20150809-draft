@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.423 2012/05/04 13:54:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.424 2012/05/26 15:22:19 alexxy Exp $
+
+  26 May 2012; Alexey Shvetsov <alexxy@gentoo.org> amarok-2.5.0-r2.ebuild,
+  metadata.xml:
+  [media-sound/amarok] Allow installing with KDE SC 4.9
 
   04 May 2012; Johannes Huber <johu@gentoo.org> -amarok-2.4.0.ebuild,
   -amarok-2.4.3.ebuild, -amarok-2.5.0-r1.ebuild, -amarok-2.5.0.ebuild,

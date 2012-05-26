@@ -28,9 +28,6 @@
       Use <pkg>media-libs/libofa</pkg> to compute MusicDNS acoustic
       fingerprints (used by MusicBrainz)
     </flag>
-	<flag name="playdar">Build the playdar collection</flag>
-	<flag name="player">Build the player</flag>
-	<flag name="upnp">Support for upnp servers</flag>
 	<flag name="utils">
       Build the utils - old <pkg>media-sound/amarok-utils</pkg>
     </flag>
