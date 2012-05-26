@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6595 2012/05/25 19:12:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6596 2012/05/26 06:08:34 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  arch/amd64-fbsd/todo/package.use.mask, default/linux/alpha/10.0/use.mask,
+  default/linux/arm/10.0/use.mask, default/linux/hppa/10.0/use.mask,
+  default/linux/ia64/10.0/use.mask, default/linux/powerpc/use.mask,
+  default/linux/sparc/10.0/use.mask:
+  Change names in comments net-libs/axTLS -> net-libs/axtls
 
   25 May 2012; Hans de Graaff <graaff@gentoo.org> base/make.defaults:
   Add ruby19 to the default RUBY_TARGETS.
