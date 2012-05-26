@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.23.ebuild,v 1.5 2012/05/26 06:25:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.26.ebuild,v 1.1 2012/05/26 06:25:17 abcd Exp $
 
 EAPI="4"
 
@@ -10,24 +10,25 @@ MY_P=${PN}_${PV}
 
 DESCRIPTION="Utility to execute commands in a chroot environment"
 HOMEPAGE="http://packages.debian.org/source/sid/schroot"
-SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${MY_P}.orig.tar.bz2"
+SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${MY_P}.orig.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-#IUSE="btrfs +dchroot debug doc lvm nls pam test"
-IUSE="+dchroot debug doc lvm nls pam test"
+KEYWORDS="~amd64 ~x86"
+IUSE="btrfs +dchroot debug doc lvm nls pam test"
 
 COMMON_DEPEND="
 	>=dev-libs/boost-1.42.0
 	dev-libs/lockdev
 	>=sys-apps/util-linux-2.16
+	btrfs? ( >=sys-fs/btrfs-progs-0.19-r2 )
 	lvm? ( sys-fs/lvm2 )
 	pam? ( sys-libs/pam )
 "
-#	btrfs? ( >=sys-fs/btrfs-progs-0.19-r1 )
 
 DEPEND="${COMMON_DEPEND}
+	app-arch/xz-utils
+	sys-apps/groff
 	doc? (
 		app-doc/doxygen
 		media-gfx/graphviz
@@ -58,7 +59,7 @@ src_configure() {
 	root_tests=no
 	use test && (( EUID == 0 )) && root_tests=yes
 	econf \
-		--disable-btrfs-snapshot \
+		$(use_enable btrfs btrfs-snapshot) \
 		$(use_enable doc doxygen) \
 		$(use_enable dchroot) \
 		$(use_enable dchroot dchroot-dsa) \
@@ -74,7 +75,6 @@ src_configure() {
 		--disable-static \
 		--localstatedir="${EPREFIX}"/var \
 		--with-bash-completion-dir="${EPREFIX}"/usr/share/bash-completion
-#		$(use_enable btrfs btrfs-snapshot) \
 }
 
 src_compile() {
