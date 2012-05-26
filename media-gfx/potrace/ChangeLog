@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/potrace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.41 2012/05/09 17:11:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.42 2012/05/26 18:54:02 armin76 Exp $
+
+  26 May 2012; Raúl Porcel <armin76@gentoo.org> potrace-1.10-r1.ebuild:
+  alpha/ia64 stable wrt #404785
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> potrace-1.10-r1.ebuild:
   keyword ~amd64-fbsd
