@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pslib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.20 2011/02/25 20:00:34 signals Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.21 2012/05/26 18:59:49 dilfridge Exp $
+
+  26 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> pslib-0.4.1-r2.ebuild:
+  Remove de localization if not wanted, bug 408875
 
   25 Feb 2011; Kevin McCarthy <signals@gentoo.org> pslib-0.4.1-r2.ebuild:
   Update depends from media-libs/jpeg to virtual/jpeg
