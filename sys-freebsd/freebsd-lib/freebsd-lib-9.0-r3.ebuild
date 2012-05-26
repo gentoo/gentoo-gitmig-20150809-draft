@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.1 2012/05/25 15:53:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.2 2012/05/26 19:51:26 aballier Exp $
 
 EAPI=2
 
@@ -100,6 +100,7 @@ PATCHES=(
 # - archiving libraries (have their own ebuild)
 # - sendmail libraries (they are installed by sendmail)
 # - SNMP library and dependency (have their own ebuilds)
+# - Clang (compiler_rt and blocksruntime)
 #
 # The rest are libraries we already have somewhere else because
 # they are contribution.
@@ -111,6 +112,7 @@ REMOVE_SUBDIRS="ncurses \
 	libz libbz2 libarchive liblzma \
 	libsm libsmdb libsmutil \
 	libbegemot libbsnmp \
+	libcompiler_rt libblocksruntime \
 	libpam libpcap bind libwrap libmagic \
 	libcom_err libtelnet
 	libelf libedit"
@@ -261,13 +263,13 @@ get_subdirs() {
 	elif use build ; then
 		# For the non-native ABIs we only build the csu parts and very core
 		# libraries for now.
-		ret="lib/libcompiler_rt gnu/lib/libssp/libssp_nonshared"
+		ret="gnu/lib/libssp/libssp_nonshared"
 		if [ "${EBUILD_PHASE}" = "install" ]; then
 			ret="$(get_csudir $(tc-arch-kernel ${CHOST})) ${ret}"
 		fi
 	else
 		# Only build the csu parts and core libraries for now.
-		ret="lib/libcompiler_rt gnu/lib/libssp/libssp_nonshared"
+		ret="gnu/lib/libssp/libssp_nonshared"
 		if [ "${EBUILD_PHASE}" = "install" ]; then
 			ret="$(get_csudir $(tc-arch-kernel ${CHOST})) ${ret}"
 		fi
