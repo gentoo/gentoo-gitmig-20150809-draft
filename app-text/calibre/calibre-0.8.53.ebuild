@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.51.ebuild,v 1.1 2012/05/11 19:33:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.53.ebuild,v 1.1 2012/05/26 00:06:19 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -121,6 +121,7 @@ src_install() {
 	local libdir=$(get_libdir)
 	[[ -n $libdir ]] || die "get_libdir returned an empty string"
 
+	dodir "$(python_get_sitedir)" # for init_calibre.py
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
 		distutils_src_install \
 		--prefix="${EPREFIX}/usr" \
@@ -134,20 +135,6 @@ src_install() {
 	# Remove dummy calibre-mount-helper which is unused since calibre-0.8.25
 	# due to bug #389515 (instead, calibre now calls udisks via dbus).
 	rm "${ED}usr/bin/calibre-mount-helper" || die
-
-	find "${ED}"usr/share/calibre/man -type f -print0 | \
-		while read -r -d $'\0' ; do
-			if [[ ${REPLY} = *.[0-9]calibre.bz2 ]] ; then
-				newname=${REPLY%calibre.bz2}.bz2
-				mv "${REPLY}" "${newname}"
-				doman "${newname}"
-				rm -f "${newname}" || die "rm failed"
-			fi
-		done
-	rmdir "${ED}"usr/share/calibre/man/* || \
-		die "could not remove redundant man subdir(s)"
-	rmdir "${ED}"usr/share/calibre/man || \
-		die "could not remove redundant man dir"
 
 	# The menu entries end up here due to '--mode user' being added to
 	# xdg-* options in src_prepare.
