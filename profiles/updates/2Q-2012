@@ -14,3 +14,4 @@ move kde-misc/kcm-gtk-config kde-misc/kde-gtk-config
 move x11-misc/see x11-misc/seetxt
 move dev-python/Whoosh dev-python/whoosh
 move dev-texlive/texlive-latex3 dev-texlive/texlive-latexrecommended
+move net-libs/axTLS net-libs/axtls
