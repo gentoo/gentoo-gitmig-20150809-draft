@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.27 2012/04/12 12:36:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.28 2012/05/26 10:10:50 grobian Exp $
 
 EAPI="4"
 
@@ -26,6 +26,14 @@ src_unpack() {
 	subversion_src_unpack
 	cd "${S}"
 	make dependencies || die
+}
+
+src_prepare() {
+	# strip unsupported -arch (in Prefix) for OSX, e.g. bug #417401
+	epatch "${FILESDIR}"/${PN}-3.10.8.10-darwin-arch.patch
+	# make sure we don't target an anchient version of OSX
+	# issue http://code.google.com/p/v8/issues/detail?id=2151
+	#sed -i -e "/MACOSX_DEPLOYMENT_TARGET/d" build/standalone.gypi || die
 }
 
 src_compile() {
@@ -84,13 +92,23 @@ src_install() {
 	insinto /usr
 	doins -r include || die
 
-	dobin out/${mytarget}/d8 || die
-
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		# buildsystem is too horrific to get this built correctly
-		mv out/${mytarget}/lib.target/libv8.so.${soname_version} \
+		mkdir -p out/${mytarget}/lib.target
+		mv out/${mytarget}/libv8.so.${soname_version} \
 			out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) || die
+		install_name_tool \
+			-id "${EPREFIX}"/usr/$(get_libdir)/libv8$(get_libname) \
+			out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) \
+			|| die
+		install_name_tool \
+			-change \
+			"${S}"/out/${mytarget}/libv8.so.${soname_version} \
+			"${EPREFIX}"/usr/$(get_libdir)/libv8$(get_libname) \
+			out/${mytarget}/d8 || die
 	fi
+
+	dobin out/${mytarget}/d8 || die
 
 	dolib out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) || die
 	dosym libv8$(get_libname ${soname_version}) /usr/$(get_libdir)/libv8$(get_libname) || die
