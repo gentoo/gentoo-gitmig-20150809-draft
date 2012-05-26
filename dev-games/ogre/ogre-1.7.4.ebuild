@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.7.4.ebuild,v 1.2 2012/05/03 06:35:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.7.4.ebuild,v 1.3 2012/05/26 15:31:19 ago Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_src_v${MY_PV}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+boost cg doc double-precision examples +freeimage ois +opengl poco profile tbb test threads tools +zip"
 REQUIRED_USE="threads? ( || ( boost poco tbb ) )"
 RESTRICT="test" #139905
