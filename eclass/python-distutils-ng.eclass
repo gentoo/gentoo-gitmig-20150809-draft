@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.24 2012/05/24 18:18:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.25 2012/05/26 09:46:23 mgorny Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -194,6 +194,20 @@ _python-distutils-ng_default_distutils_install() {
 	"${PYTHON}" setup.py install ${compile_flags} --root="${D}" || die
 }
 
+# @FUNCTION: python-distutils-ng_rewrite_hashbang
+# @USAGE: script_file_name implementation
+# @DESCRIPTION:
+# Rewrite #! line in named script, dies if #! line is not for Python or missing.
+python-distutils-ng_rewrite_hashbang() {
+	[[ -n "${1}" ]] || die "Missing file name"
+	[[ -n "${2}" ]] || die "Missing implementation"
+	local file_name="${1}"
+	local binary="$(_python-distutils-ng_get_binary_for_implementation "${2}")"
+	[[ $(head -n 1 "${file_name}") == '#!'*(python|jython|pypy-c)* ]] || \
+		die "Missing or invalid #! line in ${file_name}"
+	sed -i -e "1c#!${binary}" "${file_name}" || die
+}
+
 # @FUNCTION: python-distutils-ng_redoscript
 # @USAGE: script_file_path [destination_directory]
 # @DESCRIPTION:
@@ -274,9 +288,7 @@ python-distutils-ng_newscript() {
 		einfo "Installing ${source_file} for single implementation (${default_impl}) in ${destination_directory}"
 		newins "${source_file}" "${destination_file}"
 		fperms 755 "${destination_directory}/${destination_file}"
-		sed -i \
-			-e "1i#!$(_python-distutils-ng_get_binary_for_implementation "${impl}")" \
-			"${D}${destination_directory}/${destination_file}" || die
+		python-distutils-ng_rewrite_hashbang "${D}${destination_directory}/${destination_file}" "${default_impl}"
 	else
 		einfo "Installing ${source_file} for multiple implementations (default: ${default_impl}) in ${destination_directory}"
 		for impl in ${PYTHON_COMPAT}; do
@@ -284,9 +296,7 @@ python-distutils-ng_newscript() {
 
 			newins "${source_file}" "${destination_file}-${impl}"
 			fperms 755 "${destination_directory}/${destination_file}-${impl}"
-			sed -i \
-				-e "1i#!$(_python-distutils-ng_get_binary_for_implementation "${impl}")" \
-				"${D}${destination_directory}/${destination_file}-${impl}" || die
+			python-distutils-ng_rewrite_hashbang "${D}${destination_directory}/${destination_file}-${impl}" "${impl}"
 		done
 
 		dosym "${destination_file}-${default_impl}" "${destination_directory}/${destination_file}"
