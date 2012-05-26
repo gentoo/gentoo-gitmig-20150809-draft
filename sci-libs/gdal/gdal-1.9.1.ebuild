@@ -1,17 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.2 2012/05/26 07:10:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.3 2012/05/26 07:13:27 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 WANT_AUTOCONF="2.5"
 
-RUBY_OPTIONAL="yes"
-USE_RUBY="ruby19"
-
 PYTHON_DEPEND="python? 2:2.6"
 
-inherit autotools eutils libtool perl-module python ruby-ng toolchain-funcs java-pkg-opt-2
+inherit autotools eutils libtool perl-module python toolchain-funcs java-pkg-opt-2
 
 DESCRIPTION="Translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
@@ -51,11 +48,10 @@ RDEPEND="
 	png? ( media-libs/libpng )
 	postgres? ( >=dev-db/postgresql-base-8.4 )
 	python? ( dev-python/numpy )
-	ruby? ( $(ruby_implementation_depend ruby18) )
+	ruby? ( dev-lang/ruby:1.9 )
 	sqlite? ( dev-db/sqlite:3 )
 	spatialite? (
 		dev-db/spatialite
-		dev-db/sqlite:3
 	)
 	xls? ( dev-libs/freexl )
 "
@@ -70,6 +66,11 @@ DEPEND="${RDEPEND}
 
 AT_M4DIR="${S}/m4"
 MAKEOPTS+=" -j1"
+
+REQUIRED_USE="
+	spatialite? ( sqlite )
+	mdb? ( java )
+"
 
 pkg_setup() {
 	if use python; then
