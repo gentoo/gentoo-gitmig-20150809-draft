@@ -1,0 +1,28 @@
+# ChangeLog for net-libs/axtls
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.1 2012/05/26 05:58:11 blueness Exp $
+
+*axtls-1.4.6 (26 May 2012)
+
+  26 May 2012; Anthony G. Basile <blueness@gentoo.org> +axtls-1.4.6.ebuild,
+  +files/axhttpd.confd, +files/axhttpd.initd, +files/config, +metadata.xml:
+  Move from axTLS and version bump
+
+  07 Apr 2012; Anthony G. Basile <blueness@gentoo.org> axTLS-1.4.5.ebuild,
+  +files/axTLS-add-missing-include.patch:
+  Add missing #include header for bigint_impl.h
+  http://sourceforge.net/tracker/?func=detail&aid=3515628&group_id=171217&atid=
+  857113
+
+  07 Apr 2012; Anthony G. Basile <blueness@gentoo.org> files/config:
+  Increase max X509 CA certs and chain length to work with ca-certificates
+
+  07 Apr 2012; Anthony G. Basile <blueness@gentoo.org> axTLS-1.4.5.ebuild:
+  Add missing depend on doxygen if USE=doc
+
+*axTLS-1.4.5 (06 Apr 2012)
+
+  06 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +axTLS-1.4.5.ebuild,
+  +files/axhttpd.confd, +files/axhttpd.initd, +files/config, +metadata.xml:
+  Initial commit
+
