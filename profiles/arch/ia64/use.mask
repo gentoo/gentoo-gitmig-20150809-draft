@@ -49,6 +49,7 @@ kde
 quvi
 upnp
 systemd
+webm
 
 # Stuff we don't want
 antlr

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.135 2012/05/25 17:42:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.136 2012/05/26 17:03:54 armin76 Exp $
+
+  26 May 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask webm
 
   25 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask webkit-gtk[geoloc,webkit2], requires app-misc/geoclue and
