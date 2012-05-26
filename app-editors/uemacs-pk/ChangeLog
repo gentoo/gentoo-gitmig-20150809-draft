@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/uemacs-pk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.15 2011/10/13 21:43:02 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.16 2012/05/26 21:14:09 ulm Exp $
+
+*uemacs-pk-4.0.15_p20120526 (26 May 2012)
+
+  26 May 2012; Ulrich Müller <ulm@gentoo.org>
+  -uemacs-pk-4.0.15_p20101216.ebuild, +uemacs-pk-4.0.15_p20120526.ebuild,
+  -files/uemacs-pk-4.0.15_p20101216-gentoo.patch:
+  Version bump, bug 387135. Remove old.
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   uemacs-pk-4.0.15_p20110825.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/uemacs-pk-4.0.15_p20101216.ebuild,v 1.7 2011/09/11 09:25:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/uemacs-pk-4.0.15_p20120526.ebuild,v 1.1 2012/05/26 21:14:09 ulm Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/uemacs-${PV}.tar.bz2"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/uemacs"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-4.0.15_p20110825-gentoo.patch
 }
 
 src_compile() {
