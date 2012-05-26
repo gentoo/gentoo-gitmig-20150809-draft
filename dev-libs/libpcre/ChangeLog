@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.197 2012/05/25 16:40:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.198 2012/05/26 13:45:19 ago Exp $
+
+  26 May 2012; Agostino Sarubbo <ago@gentoo.org> libpcre-8.30-r2.ebuild:
+  Stable for amd64, wrt bug #417571
 
   25 May 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Drop now redundant USE=jit description #416603 by Alexandre Rostovtsev.
