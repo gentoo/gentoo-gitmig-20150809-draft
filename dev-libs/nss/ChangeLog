@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.246 2012/05/08 13:13:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.247 2012/05/26 09:42:42 maekke Exp $
+
+  26 May 2012; Markus Meier <maekke@gentoo.org> nss-3.13.4.ebuild:
+  arm stable, bug #414963
 
   08 May 2012; Lars Wendler <polynomial-c@gentoo.org> nss-3.13.4.ebuild:
   Sync up with nss from mozilla overlay.

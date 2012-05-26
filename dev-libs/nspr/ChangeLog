@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.182 2012/05/07 17:46:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.183 2012/05/26 09:39:58 maekke Exp $
+
+  26 May 2012; Markus Meier <maekke@gentoo.org> nspr-4.9.ebuild:
+  arm stable, bug #414963
 
   07 May 2012; Jory A. Pratt <anarchy@gentoo.org> nspr-4.9.ebuild:
   Fix cross compilation bug #414099
