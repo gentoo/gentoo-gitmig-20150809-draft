@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.70 2012/05/22 15:45:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.71 2012/05/26 10:08:26 maekke Exp $
+
+  26 May 2012; Markus Meier <maekke@gentoo.org> racc-1.4.6-r1.ebuild:
+  add ~arm in preparation for bug #411507
 
   22 May 2012; Hans de Graaff <graaff@gentoo.org> racc-1.4.6-r1.ebuild:
   Avoid unneeded use of git, fixing bug 416963.
