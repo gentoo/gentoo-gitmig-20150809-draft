@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.70 2012/05/12 10:33:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.71 2012/05/26 18:24:58 armin76 Exp $
+
+  26 May 2012; Raúl Porcel <armin76@gentoo.org>
+  reiserfsprogs-3.6.21-r1.ebuild:
+  alpha/ia64 stable wrt #400507
 
   12 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   reiserfsprogs-3.6.21-r1.ebuild:
