@@ -1,0 +1,15 @@
+# ChangeLog for dev-util/fix-la-relink-command
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fix-la-relink-command/ChangeLog,v 1.1 2012/05/26 07:49:54 tetromino Exp $
+
+*fix-la-relink-command-0.1 (26 May 2012)
+
+  26 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +fix-la-relink-command-0.1.ebuild, +metadata.xml:
+  Add a last-resort hack for fixing up relink_command in .la files to prevent
+  libraries that are being built from linking to older versions of themselves
+  installed in the filesystem. Needed e.g. for evolution-data-server and
+  libxml2. Derived from a script used in the evolution-data-server ebuild, and
+  therefore keyworded on arches where evolution-data-server itself is
+  keyworded.
+
