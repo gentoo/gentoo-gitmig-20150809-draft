@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.89 2012/03/31 05:09:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.90 2012/05/26 10:17:01 pva Exp $
+
+*vzctl-3.1 (26 May 2012)
+
+  26 May 2012; Peter Volkov <pva@gentoo.org> +vzctl-3.1.ebuild:
+  Version bump.
 
   31 Mar 2012; Peter Volkov <pva@gentoo.org> -vzctl-3.0.28.3-r1.ebuild,
   vzctl-3.0.30.2.ebuild, vzctl-9999.ebuild:
