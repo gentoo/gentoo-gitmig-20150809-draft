@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13792 2012/05/26 16:39:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13793 2012/05/26 18:17:36 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (26 May 2012)
+# API/ABI has changed with this release.
+# Mask until the tree is fine.
+# https://bugs.gentoo.org/show_bug.cgi?id=417677
+>=media-video/ffmpeg-0.11
 
 # Markos Chandras <hwoarang@gentoo.org> (26 May 2012)
 # Abandoned patchsets. Upstream stopped regular releases.
