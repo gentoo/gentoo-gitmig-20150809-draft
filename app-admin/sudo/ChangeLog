@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.318 2012/05/26 10:09:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.319 2012/05/26 17:21:04 armin76 Exp $
+
+  26 May 2012; Raúl Porcel <armin76@gentoo.org> sudo-1.8.5_p1.ebuild:
+  ia64/m68k/s390/sh/sparc stable wrt #416281
 
   26 May 2012; Markus Meier <maekke@gentoo.org> sudo-1.8.5_p1.ebuild:
   arm stable, bug #416281
