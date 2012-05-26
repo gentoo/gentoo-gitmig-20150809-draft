@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.102 2012/05/23 13:26:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.103 2012/05/26 10:22:22 maekke Exp $
+
+  26 May 2012; Markus Meier <maekke@gentoo.org> pybugz-0.10.1.ebuild:
+  arm stable, bug #415277
 
   23 May 2012; Brent Baude <ranger@gentoo.org> pybugz-0.10.1.ebuild:
   Marking pybugz-0.10.1 ppc64 for bug 415277
