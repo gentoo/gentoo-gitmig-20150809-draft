@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.193 2012/05/19 06:52:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.194 2012/05/26 09:54:28 maekke Exp $
+
+  26 May 2012; Markus Meier <maekke@gentoo.org> icu-49.1.1-r1.ebuild:
+  arm stable, bug #394201
 
   19 May 2012; Agostino Sarubbo <ago@gentoo.org> icu-49.1.1-r1.ebuild:
   Stable for amd64, wrt bug #394201
