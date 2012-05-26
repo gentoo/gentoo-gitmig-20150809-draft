@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.251 2012/05/22 03:34:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.252 2012/05/26 16:45:40 jer Exp $
+
+  26 May 2012; Jeroen Roovers <jer@gentoo.org> nmap-6.00.ebuild:
+  Use the default src_compile() to fix parallel make by Markus Oehme (bug
+  #416987).
 
   22 May 2012; Patrick Lauer <patrick@gentoo.org> nmap-6.00.ebuild:
   Fix parallel build failure #416987
