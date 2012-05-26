@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.350 2012/05/23 15:22:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.351 2012/05/26 12:18:40 grobian Exp $
+
+  26 May 2012; Fabian Groffen <grobian@gentoo.org> -package.provided:
+  Don't package.provide a member of a virtual (shadow)
 
   23 May 2012; Jeremy Olexa <darkside@gentoo.org> package.mask:
   remove gcc-4.6.0 unmasking atom since it doesn't do anything besides cause
