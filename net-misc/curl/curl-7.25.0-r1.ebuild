@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0-r1.ebuild,v 1.4 2012/05/05 03:20:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0-r1.ebuild,v 1.5 2012/05/26 06:11:41 blueness Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ IUSE="${IUSE} curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_nss +curl_
 
 RDEPEND="ldap? ( net-nds/openldap )
 	ssl? (
-		curl_ssl_axtls? ( net-libs/axTLS app-misc/ca-certificates )
+		curl_ssl_axtls? ( net-libs/axtls app-misc/ca-certificates )
 		curl_ssl_gnutls? (
 			|| (
 				( >=net-libs/gnutls-3[static-libs?] dev-libs/nettle )
@@ -92,8 +92,8 @@ src_configure() {
 	myconf+=( --with-ca-bundle="${EPREFIX}"/etc/ssl/certs/ca-certificates.crt )
 	if use ssl ; then
 		if use curl_ssl_axtls; then
-			einfo "SSL provided by axTLS"
-			einfo "NOTE: axTLS is meant for embedded systems and"
+			einfo "SSL provided by axtls"
+			einfo "NOTE: axtls is meant for embedded systems and"
 			einfo "may not be the best choice as an ssl provider"
 			myconf+=( --with-axtls )
 		fi
