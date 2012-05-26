@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.4-r1.ebuild,v 1.4 2012/05/04 15:12:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5-r1.ebuild,v 1.1 2012/05/26 14:56:34 bicatali Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P}/src"
 
 src_prepare(){
-	epatch "${FILESDIR}"/${PN}-setup.patch
+	epatch "${FILESDIR}"/${P}-setup.patch
 	rm -rf src/C/SuiteSparse*/
 	rm -rf ../doc/build # 413905
 
@@ -44,7 +44,7 @@ src_prepare(){
 			-e "s/ -l/\',\'/g" \
 			-e 's/.,.pthread//g' \
 			-e "s:  ::")\'
-		sed -i -e "s:\(libraries.*\)'${1}'\(.*\):\1${pylib}\2:g" setup.py
+		sed -i -e "/_LIB = /s:\(.*\)'${1}'\(.*\):\1${pylib}\2:" setup.py
 	}
 
 	use_cvx() {
@@ -57,8 +57,8 @@ src_prepare(){
 
 	pkg_lib blas
 	pkg_lib lapack
-	use_cvx gsl && pkg_lib gsl
-	use_cvx fftw && pkg_lib fftw3
+	use_cvx gsl
+	use_cvx fftw
 	use_cvx glpk
 	use_cvx dsdp
 	distutils_src_prepare
