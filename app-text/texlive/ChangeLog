@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.102 2012/05/22 10:20:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.103 2012/05/26 19:44:09 aballier Exp $
+
+  26 May 2012; Alexis Ballier <aballier@gentoo.org> texlive-2011-r1.ebuild:
+  allow app-text/ttf2pk2 as a ttf2pk provider, making
+  media-libs/freetype:1[kpathsea] not mandatory, bug #412499
 
   22 May 2012; Johannes Huber <johu@gentoo.org> texlive-2011-r1.ebuild:
   Add ~x86 wrt bug #410239
