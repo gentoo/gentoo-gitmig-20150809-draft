@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.15 2012/05/19 12:54:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.16 2012/05/26 07:05:56 scarabeus Exp $
+
+  26 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -gptfdisk-0.6.13.ebuild,
+  gptfdisk-0.8.4.ebuild:
+  Stable on amd64, x86, ppc and ppc64. Remove older.
 
   19 May 2012; Anthony G. Basile <blueness@gentoo.org> gptfdisk-0.8.4.ebuild:
   Keyword mips
