@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1.ebuild,v 1.1 2012/05/23 20:46:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r1.ebuild,v 1.1 2012/05/26 01:34:57 ryao Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.src.tar.gz
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="debug multitarget +static-analyzer test"
+IUSE="debug kernel_FreeBSD multitarget +static-analyzer test"
 
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
@@ -68,6 +68,18 @@ src_prepare() {
 	# Use system llc (from llvm ebuild) for tests
 	sed -e "/^llc_props =/s/os.path.join(llvm_tools_dir, 'llc')/'llc'/" \
 		-i tools/clang/test/lit.cfg  || die "test path sed failed"
+
+	# Automatically select active system GCC's libraries, bug #406163
+	epatch "${FILESDIR}"/${P}-gentoo-runtime-gcc-detection.patch
+
+	# Fix search paths on FreeBSD, bug #409269
+	epatch "${FILESDIR}"/${P}-gentoo-freebsd-fix-lib-path.patch
+
+	# Fix regression caused by removal of USE=system-cxx-headers, bug #417541
+	epatch "${FILESDIR}"/${P}-gentoo-freebsd-fix-cxx-paths.patch
+
+	# Fix regression that prevents Clang from building itself on Linux, bug #417537
+	epatch "${FILESDIR}"/${P}-gentoo-linux-fix-cxx-include.patch
 
 	# User patches
 	epatch_user
@@ -165,6 +177,9 @@ src_install() {
 			eend $?
 		done
 	fi
+
+	# Remove unnecessary headers on FreeBSD, bug #417171
+	use kernel_FreeBSD && rm "${ED}/usr/lib/clang/3.1/include/"{arm_neon,std,float,iso,limits,tgmath,varargs}*.h
 }
 
 pkg_postinst() {
