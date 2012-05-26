@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.64 2012/05/26 07:40:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.65 2012/05/26 08:17:29 mgorny Exp $
+
+  26 May 2012; Michał Górny <mgorny@gentoo.org> clang-3.1-r2.ebuild:
+  Fix revnumber in patch-related comment.
 
 *clang-3.1-r2 (26 May 2012)
 

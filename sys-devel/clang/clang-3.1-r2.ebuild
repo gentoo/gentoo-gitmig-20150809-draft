@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r2.ebuild,v 1.1 2012/05/26 07:40:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r2.ebuild,v 1.2 2012/05/26 08:17:29 mgorny Exp $
 
 EAPI=4
 
@@ -86,7 +86,7 @@ src_prepare() {
 	# Fix regression that prevents Clang from building itself on Linux, bug #417537
 	epatch "${FILESDIR}"/${P}-gentoo-linux-fix-cxx-include.patch
 
-	# Increase recursion limit, bug #417545, upstream r155823
+	# Increase recursion limit, bug #417545, upstream r155737
 	epatch "${FILESDIR}"/${P}-increase-parser-recursion-limit.patch
 
 	# User patches
