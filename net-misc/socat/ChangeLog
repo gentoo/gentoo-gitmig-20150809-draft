@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.103 2012/05/26 17:20:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.104 2012/05/26 17:25:08 jer Exp $
+
+  26 May 2012; Jeroen Roovers <jer@gentoo.org> -socat-1.7.2.0.ebuild:
+  Old.
 
   26 May 2012; Raúl Porcel <armin76@gentoo.org> socat-1.7.2.1.ebuild:
   ia64/sparc stable wrt #415977
