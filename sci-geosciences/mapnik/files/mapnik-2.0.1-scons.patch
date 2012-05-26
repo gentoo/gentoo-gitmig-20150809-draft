@@ -1,6 +1,6 @@
---- SConstruct.orig	2011-11-06 09:52:20.000000000 -0800
-+++ SConstruct	2011-11-06 09:55:03.000000000 -0800
-@@ -314,9 +313,9 @@
+--- mapnik-v2.0.1.orig/SConstruct
++++ mapnik-v2.0.1/SConstruct
+@@ -313,9 +313,9 @@
      ('LINK_PRIORITY','Priority list in which to sort library and include paths (default order is internal, other, frameworks, user, then system - see source of `sort_paths` function for more detail)',','.join(DEFAULT_LINK_PRIORITY)),    
      
      # Install Variables
@@ -9,10 +9,10 @@
      ('PYTHON_PREFIX','Custom install path "prefix" for python bindings (default of no prefix)',''),
 -    ('DESTDIR', 'The root directory to install into. Useful mainly for binary package building', '/'),
 +    ('DESTDIR', 'The root directory to install into. Useful mainly for binary package building', '${D}'),
-     ('PATH_INSERT', 'A custom path to append to the $PATH env to prioritize usage of shell programs like pkg-config will be used if multiple are present on the system', ''),
+     ('PATH', 'A custom path (or multiple paths divided by ":") to append to the $PATH env to prioritize usage of command line programs (if multiple are present on the system)', ''),
+     ('PATH_REMOVE', 'A path prefix to exclude from all know command and compile paths', ''),
      
-     # Boost variables
-@@ -342,15 +341,17 @@
+@@ -342,15 +342,17 @@
      PathVariable('JPEG_LIBS', 'Search path for libjpeg library files', '/usr/' + LIBDIR_SCHEMA, PathVariable.PathAccept),
      PathVariable('TIFF_INCLUDES', 'Search path for libtiff include files', '/usr/include', PathVariable.PathAccept),
      PathVariable('TIFF_LIBS', 'Search path for libtiff library files', '/usr/' + LIBDIR_SCHEMA, PathVariable.PathAccept),
@@ -33,7 +33,7 @@
  
      BoolVariable('SVG_RENDERER', 'build support for native svg renderer', 'False'),
      
-@@ -1098,6 +1099,7 @@
+@@ -1087,6 +1089,7 @@
          ['z', 'zlib.h', True,'C'],
          ['proj', 'proj_api.h', True,'C'],
          [env['ICU_LIB_NAME'],'unicode/unistr.h',True,'C++'],
@@ -41,19 +41,10 @@
      ]
  
      if env['JPEG']:
---- src/build.py.orig	2011-11-05 18:30:33.000000000 -0700
-+++ src/build.py	2011-11-05 18:31:14.000000000 -0700
-@@ -37,9 +37,6 @@
-     elif not silent:
-         print stderr
- 
--def ldconfig(*args,**kwargs):
--    call('ldconfig')
--
- if env['LINKING'] == 'static':
-     lib_env.Append(CXXFLAGS="-fPIC")
- 
-@@ -326,9 +323,6 @@
+diff -ur mapnik-v2.0.1.orig/src/build.py mapnik-v2.0.1/src/build.py
+--- mapnik-v2.0.1.orig/src/build.py	2012-04-09 23:56:48.000000000 +0100
++++ mapnik-v2.0.1/src/build.py	2012-05-06 17:00:53.124452488 +0100
+@@ -333,9 +333,6 @@
      if 'uninstall' not in COMMAND_LINE_TARGETS:
        result = env.InstallAs(target=target, source=mapnik)
        env.Alias(target='install', source=result)
@@ -62,4 +53,4 @@
 -
      
      # Install symlinks
-     target1 = os.path.join(env['MAPNIK_LIB_BASE_DEST'], "%s.%d.%d" % (os.path.basename(str(mapnik[0])),major, minor))
+     target1 = os.path.join(env['MAPNIK_LIB_BASE_DEST'], "%s.%d.%d" % (os.path.basename(str(mapnik[0])),int(major), int(minor)))

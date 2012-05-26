@@ -1,25 +1,28 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.0.ebuild,v 1.6 2012/05/24 20:37:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.1.ebuild,v 1.1 2012/05/26 09:42:53 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="python? 2"
+MY_P="${PN}-v${PV}"
+
 inherit eutils python scons-utils toolchain-funcs
 
 DESCRIPTION="A Free Toolkit for developing mapping applications."
 HOMEPAGE="http://www.mapnik.org/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
+SRC_URI="http://github.com/downloads/${PN}/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="bidi cairo debug doc gdal geos nobfonts postgres python sqlite"
+IUSE="bidi cairo debug doc gdal geos postgres python sqlite"
 
 RDEPEND="net-misc/curl
 	media-libs/libpng
 	media-libs/tiff
 	sys-libs/zlib
+	media-fonts/dejavu
 	media-libs/freetype
 	dev-lang/python
 	sci-libs/proj
@@ -38,13 +41,11 @@ RDEPEND="net-misc/curl
 		python? ( dev-python/pycairo )
 	)
 	sqlite? ( dev-db/sqlite:3 )
-	nobfonts? ( media-fonts/dejavu )"
+"
 
-DEPEND="${RDEPEND}
-	doc? ( dev-python/epydoc )
-	dev-util/scons"
+DEPEND="${RDEPEND}"
 
-#EPATCH_OPTS="-F 3"
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if use python; then
@@ -54,7 +55,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch \
+		"${FILESDIR}"/${PN}-2.0.1-scons.patch \
+		"${FILESDIR}"/${PN}-2.0.1-configure-only-once.patch \
+		"${FILESDIR}"/${PN}-2.0.1-destdir.patch \
+		"${FILESDIR}"/${P}-boost_build.patch
+
+	# do not version epidoc data
+	sed -i \
+		-e 's:-`mapnik-config --version`::g' \
+		utils/epydoc_config/build_epydoc.sh || die
 }
 
 src_configure() {
@@ -64,15 +74,17 @@ src_configure() {
 	use postgres && PLUGINS+=,postgis
 	use sqlite && PLUGINS+=,sqlite
 
-	SCONOPTS="
-		CC=$(tc-getCC)
-		CXX=$(tc-getCXX)
-		INPUT_PLUGINS=${PLUGINS}
-		PREFIX=/usr
-		XMLPARSER=libxml2
-		PROJ_INCLUDES=/usr/include
-		PROJ_LIBS=/usr/lib
-		$(use_scons nobfonts SYSTEM_FONTS /usr/share/fonts '')
+	myesconsargs=(
+		"CC=$(tc-getCC)"
+		"CXX=$(tc-getCXX)"
+		"INPUT_PLUGINS=${PLUGINS}"
+		"PREFIX=/usr"
+		"XMLPARSER=libxml2"
+		"LINKING=shared"
+		"RUNTIME_LINK=shared"
+		"PROJ_INCLUDES=/usr/include"
+		"PROJ_LIBS=/usr/$(get_libdir)"
+		"SYSTEM_FONTS=/usr/share/fonts"
 		$(use_scons python BINDINGS all none)
 		$(use_scons python BOOST_PYTHON_LIB boost_python-${PYTHON_ABI})
 		$(use_scons bidi BIDI)
@@ -81,43 +93,33 @@ src_configure() {
 		$(use_scons debug XML_DEBUG)
 		$(use_scons doc DEMO)
 		$(use_scons doc SAMPLE_INPUT_PLUGINS)
-		CUSTOM_LDFLAGS=${LDFLAGS}
-		CUSTOM_LDFLAGS+=-L${D}/usr/$(get_libdir)"
+		"CUSTOM_LDFLAGS=${LDFLAGS}"
+		"CUSTOM_LDFLAGS+=-L${ED}/usr/$(get_libdir)"
+	)
 
 	# force user flags, optimization level
 	sed -i -e "s:\-O%s:${CXXFLAGS}:" \
 		-i -e "s:env\['OPTIMIZATION'\]\,::" \
 		SConstruct || die "sed 3 failed"
-
-	scons $SCONOPTS configure || die "scons configure failed"
+	escons configure
 }
 
 src_compile() {
-	scons ${MAKEOPTS} shared=1 || die "scons compile failed"
+	escons
 }
 
 src_install() {
-	#the lib itself still seems to need a DESTDIR definition
-	scons DESTDIR="${D}" install || die "scons install failed"
+	escons install
+
+	# even with all the mess it still installs into $S
+	mv "${S}/usr" "${ED}" || die
 
 	if use python ; then
-		fperms 0644 "$(python_get_sitedir)"/mapnik2/paths.py
+		fperms 0644 "$(python_get_sitedir)"/${PN}/paths.py
 		dobin utils/stats/mapdef_stats.py
-		insinto /usr/share/doc/${PF}/examples
-		doins utils/ogcserver/*
 	fi
 
-	dodoc AUTHORS README || die
-
-	# this is known to depend on mod_python and should not have a
-	# "die" after the epydoc script (see bug #370575)
-	if use doc; then
-		export PYTHONPATH="${D}$(python_get_sitedir):$(python_get_sitedir)"
-		pushd docs/epydoc_config > /dev/null
-			./build_epydoc.sh
-		popd > /dev/null
-		dohtml -r docs/api_docs/python/* || die "API doc install failed"
-	fi
+	dodoc AUTHORS.md README.md
 }
 
 pkg_postinst() {
@@ -125,4 +127,10 @@ pkg_postinst() {
 	elog "See the home page or wiki (http://trac.mapnik.org/) for more info"
 	elog "or the installed examples for the default mapnik ogcserver config."
 	elog ""
+
+	use python && python_mod_optimize ${PN}
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup ${PN}
 }

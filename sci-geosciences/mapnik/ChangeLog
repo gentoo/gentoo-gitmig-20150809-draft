@@ -1,6 +1,17 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.33 2012/05/24 20:37:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.34 2012/05/26 09:42:53 scarabeus Exp $
+
+*mapnik-2.0.1 (26 May 2012)
+
+  26 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/mapnik-2.0.1-boost_build.patch,
+  +files/mapnik-2.0.1-configure-only-once.patch,
+  +files/mapnik-2.0.1-destdir.patch, +files/mapnik-2.0.1-scons.patch,
+  +mapnik-2.0.1.ebuild, -files/mapnik-0.7.1-libagg.patch,
+  -files/mapnik-0.7.1-libpng1.5.4.patch, -files/mapnik-2.0.0-gentoo.patch,
+  -mapnik-0.7.1-r1.ebuild, -mapnik-0.7.1-r2.ebuild, -mapnik-2.0.0.ebuild:
+  Version bump to 2.0.1. Remove older. Fixes bug#414579.
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> mapnik-2.0.0.ebuild:
   Depend on virtual/jpeg wrt bug#413677.
