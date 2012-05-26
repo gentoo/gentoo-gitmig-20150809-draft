@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fix-la-relink-command/fix-la-relink-command-0.1.ebuild,v 1.1 2012/05/26 07:49:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fix-la-relink-command/fix-la-relink-command-0.1.1.ebuild,v 1.1 2012/05/26 10:21:10 tetromino Exp $
 
 EAPI="4"
 
