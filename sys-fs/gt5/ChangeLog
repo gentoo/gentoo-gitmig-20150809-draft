@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gt5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.11 2012/02/16 19:20:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.12 2012/05/27 09:07:48 angelos Exp $
+
+  27 May 2012; Christoph Mende <angelos@gentoo.org> -gt5-1.4.0-r1.ebuild:
+  Remove old
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gt5-1.4.0-r2.ebuild:
   x86 stable wrt bug #397227
