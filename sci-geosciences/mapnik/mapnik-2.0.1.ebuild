@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.1.ebuild,v 1.1 2012/05/26 09:42:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.0.1.ebuild,v 1.2 2012/05/27 08:07:31 scarabeus Exp $
 
 EAPI=4
 
@@ -18,28 +18,28 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bidi cairo debug doc gdal geos postgres python sqlite"
 
-RDEPEND="net-misc/curl
-	media-libs/libpng
-	media-libs/tiff
-	sys-libs/zlib
+RDEPEND="
+	>=dev-libs/boost-1.48[python?]
+	dev-libs/icu
+	dev-libs/libxml2
 	media-fonts/dejavu
 	media-libs/freetype
-	dev-lang/python
+	media-libs/libpng
+	media-libs/tiff
+	net-misc/curl
 	sci-libs/proj
-	dev-libs/libxml2
-	dev-libs/icu
+	sys-libs/zlib
 	virtual/jpeg
 	x11-libs/agg[truetype]
-	>=dev-libs/boost-1.48[python?]
-	postgres? ( >=dev-db/postgresql-base-8.3 )
-	gdal? ( sci-libs/gdal )
-	geos? ( sci-libs/geos )
 	bidi? ( dev-libs/fribidi )
 	cairo? (
 		x11-libs/cairo
 		dev-cpp/cairomm
 		python? ( dev-python/pycairo )
 	)
+	gdal? ( sci-libs/gdal )
+	geos? ( sci-libs/geos )
+	postgres? ( >=dev-db/postgresql-base-8.3 )
 	sqlite? ( dev-db/sqlite:3 )
 "
 
