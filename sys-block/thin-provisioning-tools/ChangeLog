@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/thin-provisioning-tools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.1 2012/05/27 07:02:24 robbat2 Exp $
+
+*thin-provisioning-tools-0.1.5 (27 May 2012)
+
+  27 May 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +thin-provisioning-tools-0.1.5.ebuild, +metadata.xml:
+  Initial commit, new dependency for LVM2.
+
