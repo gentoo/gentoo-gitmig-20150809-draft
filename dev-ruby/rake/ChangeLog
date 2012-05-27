@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.119 2012/05/26 06:18:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.120 2012/05/27 13:47:02 maekke Exp $
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> rake-0.8.7-r6.ebuild:
+  arm stable, bug #411507
 
 *rake-0.8.7-r7 (26 May 2012)
 
