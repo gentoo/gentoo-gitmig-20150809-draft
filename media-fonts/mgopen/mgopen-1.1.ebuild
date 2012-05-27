@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mgopen/mgopen-1.1.ebuild,v 1.3 2012/05/27 12:01:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mgopen/mgopen-1.1.ebuild,v 1.4 2012/05/27 12:08:45 yngwin Exp $
 
 inherit font
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="MagentaMgOpen"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 FONT_S=${S}
