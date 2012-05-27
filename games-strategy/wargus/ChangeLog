@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wargus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.17 2012/05/27 22:18:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.18 2012/05/27 23:01:31 hasufell Exp $
+
+  27 May 2012; Julian Ospald <hasufell@gentoo.org> wargus-2.2.6.ebuild:
+  clean up SRC_URI (icon is included in tarball)
 
   27 May 2012; Julian Ospald <hasufell@gentoo.org> wargus-2.2.6.ebuild:
   fix desktop file

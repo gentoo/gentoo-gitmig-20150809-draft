@@ -1,14 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.6.ebuild,v 1.2 2012/05/27 22:18:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.6.ebuild,v 1.3 2012/05/27 23:01:31 hasufell Exp $
 
 EAPI=2
 inherit eutils cdrom cmake-utils gnome2-utils games
 
 DESCRIPTION="Warcraft II for the Stratagus game engine (Needs WC2 DOS CD)"
 HOMEPAGE="http://wargus.sourceforge.net/"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${PN}_${PV}.orig.tar.gz
-	mirror://gentoo/${PN}.png"
+SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
