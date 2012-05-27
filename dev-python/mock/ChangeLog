@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.49 2012/05/23 13:13:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.50 2012/05/27 12:54:48 maekke Exp $
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> mock-0.8.0.ebuild:
+  arm stable, bug #415855
 
   23 May 2012; Brent Baude <ranger@gentoo.org> mock-0.8.0.ebuild:
   Marking mock-0.8.0 ppc64 for bug 415855
