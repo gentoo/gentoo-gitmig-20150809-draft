@@ -10,7 +10,7 @@ depend() {
 start() {
 	ebegin "Starting openerp-server"
 	PYTHONDIR=$(python -c 'from distutils.sysconfig import get_config_var; print(get_config_var("LIBP"))')
-	start-stop-daemon --start --quiet --pidfile "${PIDFILE}" --exec /usr/bin/python2.6 --startas /usr/bin/python \
+	start-stop-daemon --start --quiet --pidfile "${PIDFILE}" --exec /usr/bin/python --startas /usr/bin/python \
 		--chuid "${USER}" --chdir "${PYTHONDIR}/site-packages/openerp-server/" --background -- "openerp-server.py" ${DAEMON_OPTS}
 	eend $?
 }
