@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.4 2012/05/17 23:12:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.85-r1.ebuild,v 1.5 2012/05/27 03:03:22 naota Exp $
 
 EAPI=4
-inherit eutils flag-o-matic elisp-common toolchain-funcs
+inherit eutils flag-o-matic elisp-common toolchain-funcs multilib
 
 DESCRIPTION="DVI previewer for X Window System"
 HOMEPAGE="http://xdvi.sourceforge.net/"
@@ -64,7 +64,9 @@ src_configure() {
 		--with-system-t1lib \
 		--with-system-kpathsea \
 		--with-kpathsea-include="${EPREFIX}"/usr/include/kpathsea \
-		--with-xdvi-x-toolkit="${toolkit}"
+		--with-xdvi-x-toolkit="${toolkit}" \
+		--x-includes="${EPREFIX}"/usr/include \
+		--x-libraries="${EPREFIX}"/usr/$(get_libdir)
 }
 
 src_compile() {
