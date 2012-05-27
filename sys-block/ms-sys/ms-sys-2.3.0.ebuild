@@ -1,29 +1,36 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ms-sys-2.1.4.ebuild,v 1.1 2010/01/17 18:36:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ms-sys-2.3.0.ebuild,v 1.1 2012/05/27 16:51:03 kensington Exp $
 
-EAPI=2
+EAPI=4
+
 inherit toolchain-funcs
 
-DESCRIPTION="a command-line program for writing Microsoft compatible boot records."
+DESCRIPTION="A command-line program for writing Microsoft compatible boot records."
 HOMEPAGE="http://ms-sys.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="linguas_sv"
 
-RDEPEND=""
 DEPEND="sys-devel/gettext"
+RDEPEND="virtual/libintl"
 
 src_compile() {
 	tc-export CC
-	emake PREFIX="/usr" || die
+	default
 }
 
 src_install() {
+	local nls=""
+	if ! use linguas_sv ; then
+		nls='NLS_FILES='
+	fi
+
 	emake DESTDIR="${D}" MANDIR="/usr/share/man" \
-		PREFIX="/usr" install || die
+		PREFIX="/usr" ${nls} install
+
 	dodoc CHANGELOG CONTRIBUTORS FAQ README TODO
 }
