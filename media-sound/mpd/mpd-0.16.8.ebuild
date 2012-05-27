@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.8.ebuild,v 1.3 2012/05/22 15:44:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.8.ebuild,v 1.4 2012/05/27 07:44:46 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib systemd
@@ -26,7 +26,8 @@ REQUIRED_USE="|| ( alsa ao fifo jack network openal oss pipe pulseaudio )
 RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	dev-libs/glib:2
 	aac? ( media-libs/faad2 )
-	alsa? ( media-sound/alsa-utils )
+	alsa? ( media-sound/alsa-utils
+		media-libs/alsa-lib )
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )

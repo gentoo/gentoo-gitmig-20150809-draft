@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.282 2012/05/22 15:44:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.283 2012/05/27 07:44:46 angelos Exp $
+
+  27 May 2012; Christoph Mende <angelos@gentoo.org> mpd-0.16.8.ebuild:
+  Depend on media-libs/alsa-lib (bug #414827)
 
   22 May 2012; Christoph Mende <angelos@gentoo.org> mpd-0.16.8.ebuild:
   Apply prefix patch for bug #416945, thanks to Matthew Alexander LaChance
