@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-awn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/ChangeLog,v 1.7 2012/05/21 19:08:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/ChangeLog,v 1.8 2012/05/27 07:58:25 angelos Exp $
+
+  27 May 2012; Christoph Mende <angelos@gentoo.org> gmpc-awn-11.8.16.ebuild:
+  Depend on dev-libs/dbus-glib (bug #403033)
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gmpc-awn-0.20.0.ebuild,
   gmpc-awn-11.8.16.ebuild:

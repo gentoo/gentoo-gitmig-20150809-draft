@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/gmpc-awn-11.8.16.ebuild,v 1.5 2012/05/21 19:08:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/gmpc-awn-11.8.16.ebuild,v 1.6 2012/05/27 07:58:25 angelos Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="nls"
 
-RDEPEND=">=media-sound/gmpc-${PV}"
+RDEPEND=">=media-sound/gmpc-${PV}
+	dev-libs/dbus-glib"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( dev-util/intltool
