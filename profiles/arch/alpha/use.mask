@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.61 2012/05/26 17:03:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.62 2012/05/27 18:25:29 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -188,3 +188,7 @@ d3d
 # Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
 # mask wayland since dev-libs/wayland isn't keyworded
 wayland
+
+# Matt Turner <mattst88@gentoo.org (27 May 2012)
+# net-misc/connman is not keyworded
+connman

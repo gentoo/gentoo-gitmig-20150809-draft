@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.86 2012/05/25 17:42:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.87 2012/05/27 18:25:29 mattst88 Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 May 2012)
 # Remove mask entry when app-misc/geoclue and app-accessibility/at-spi2-core
@@ -86,10 +86,6 @@ media-video/totem youtube
 # Diego Elio Pettenò <flameeyes@gentoo.org> (17 Dec 2010)
 # needs sys-libs/libcap-ng that is masked right now
 sys-apps/smartmontools caps
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
-# net-misc/connman is not keyworded, bug 348308
-mail-client/evolution connman
 
 # Raúl Porcel <armin76@gentoo.org> (5 Dec 2010)
 # Mask doc-pdf because of Java dependencies (bug #347259)
