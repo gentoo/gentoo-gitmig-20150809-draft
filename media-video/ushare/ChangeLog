@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ushare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.9 2012/05/27 15:10:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.10 2012/05/27 16:45:01 xmw Exp $
+
+*ushare-1.1a-r3 (27 May 2012)
+
+  27 May 2012; Michael Weber <xmw@gentoo.org>
+  +files/05_all_missing_headers.patch, -ushare-1.1a-r2.ebuild,
+  +ushare-1.1a-r3.ebuild:
+  Revbump to include includes patch by Sal Gonzalez (bug 415649)
 
 *ushare-1.1a-r2 (27 May 2012)
 
