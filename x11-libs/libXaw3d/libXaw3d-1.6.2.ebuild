@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6.2.ebuild,v 1.4 2012/05/25 11:36:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/libXaw3d-1.6.2.ebuild,v 1.5 2012/05/27 18:00:31 mattst88 Exp $
 
 EAPI=4
 inherit xorg-2
@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable unicode internationalization)
+		--enable-arrow-scrollbars
+		--enable-gray-stipples
 	)
 
 	xorg-2_pkg_setup

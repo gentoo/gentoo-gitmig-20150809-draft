@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXaw3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/ChangeLog,v 1.13 2012/05/25 11:36:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/ChangeLog,v 1.14 2012/05/27 18:00:31 mattst88 Exp $
+
+  27 May 2012; Matt Turner <mattst88@gentoo.org> libXaw3d-1.6.2.ebuild:
+  Add --enable-arrow-scrollbars and --enable-gray-stipples to configure to stay
+  consistent with libXaw3d-1.5, bug 417635.
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> libXaw3d-1.6.2.ebuild:
   Stable for amd64, wrt bug #417317
