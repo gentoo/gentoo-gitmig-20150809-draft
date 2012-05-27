@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/tf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.23 2011/10/01 03:19:26 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.24 2012/05/27 21:09:58 mr_bones_ Exp $
+
+  27 May 2012; Michael Sterrett <mr_bones_@gentoo.org> tf-50_beta8-r1.ebuild,
+  +files/tf-50_beta8-pcre.patch:
+  add patch to work around libpcre changes submitted by Robert Varga via bug
+  #409779
 
   01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tf-50_beta8-r1.ebuild:
   x86 stable wrt bug #381735

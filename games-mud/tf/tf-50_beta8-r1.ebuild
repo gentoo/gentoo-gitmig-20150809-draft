@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8-r1.ebuild,v 1.2 2011/10/01 03:19:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8-r1.ebuild,v 1.3 2012/05/27 21:09:58 mr_bones_ Exp $
 EAPI=2
 
 inherit games
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${DISTDIR}"/tf-all*patch.txt )
+PATCHES=( "${DISTDIR}"/tf-all*patch.txt "${FILESDIR}"/${P}-pcre.patch )
 
 src_configure() {
 	STRIP=: egamesconf \
