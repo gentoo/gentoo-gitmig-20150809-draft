@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.4.1.ebuild,v 1.1 2012/04/26 22:36:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.4.1.ebuild,v 1.2 2012/05/27 16:48:20 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 DEPEND="sys-devel/gettext"
 RDEPEND=""
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
 MY_LANGS="ca ca@valencia cs da de el en_GB es et fi fr hu it kk nb nds nl pl pt pt_BR ru sk sv uk zh_CN zh_TW"
