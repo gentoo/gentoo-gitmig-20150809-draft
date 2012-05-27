@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.45 2012/05/27 17:08:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.46 2012/05/27 22:44:56 dilfridge Exp $
+
+  27 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> calligra-2.4.1.ebuild,
+  calligra-2.4.2.ebuild, calligra-2.4.49.9999.ebuild, calligra-2.4.90.ebuild,
+  calligra-9999.ebuild:
+  The kdepim useflag needs kdepimlibs[semantic-desktop], otherwise build fails
 
 *calligra-2.4.49.9999 (27 May 2012)
 
