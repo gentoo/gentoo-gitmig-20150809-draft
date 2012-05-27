@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.13 2012/02/20 11:05:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.14 2012/05/27 17:43:25 maekke Exp $
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> gsasl-2.ebuild:
+  arm stable, bug #416105
 
   20 Feb 2012; Naohiro Aota <naota@gentoo.org> gsasl-2.ebuild:
   Add ~x86-fbsd
