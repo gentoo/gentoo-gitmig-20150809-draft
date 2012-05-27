@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.194 2012/05/26 16:51:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.195 2012/05/27 17:39:39 maekke Exp $
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> rubygems-1.8.24.ebuild:
+  arm stable, bug #411507
 
   26 May 2012; Jeroen Roovers <jer@gentoo.org> rubygems-1.8.15.ebuild:
   Stable for HPPA (bug #348901).
