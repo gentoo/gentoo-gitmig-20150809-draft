@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/tuareg-mode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.39 2011/11/06 17:30:54 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.40 2012/05/27 15:41:00 ulm Exp $
+
+*tuareg-mode-2.0.6 (27 May 2012)
+
+  27 May 2012; Ulrich Müller <ulm@gentoo.org> +tuareg-mode-2.0.6.ebuild:
+  Version bump, bug 417531.
 
   06 Nov 2011; Raúl Porcel <armin76@gentoo.org> tuareg-mode-1.45.6.ebuild,
   tuareg-mode-2.0.1.ebuild, tuareg-mode-2.0.4.ebuild:
