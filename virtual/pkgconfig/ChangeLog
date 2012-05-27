@@ -1,6 +1,11 @@
 # ChangeLog for virtual/pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.7 2012/05/27 17:50:27 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.8 2012/05/27 17:59:22 ssuominen Exp $
+
+  27 May 2012; Samuli Suominen <ssuominen@gentoo.org> pkgconfig-0.ebuild:
+  Leave dev-util/pkgconfig-openbsd as last since it'ss not to be considered as
+  supported yet. Restore dropped version enforcement for dev-util/pkgconfig due
+  to known issues with broken pkg.m4 in 0.25.
 
   27 May 2012; Richard Yao <ryao@gentoo.org> pkgconfig-0.ebuild:
   Change order on Gentoo/*BSD, bug #417693
