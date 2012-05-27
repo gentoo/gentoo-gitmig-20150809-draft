@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/qelectrotech
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/ChangeLog,v 1.8 2010/06/25 22:13:28 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/ChangeLog,v 1.9 2012/05/27 09:50:31 hwoarang Exp $
+
+*qelectrotech-0.30_alpha (27 May 2012)
+
+  27 May 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/qelectrotech-0.3-fix-paths.patch, +qelectrotech-0.30_alpha.ebuild:
+  Version bump
 
   25 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   -qelectrotech-0.2-r1.ebuild, -qelectrotech-0.21.ebuild:
