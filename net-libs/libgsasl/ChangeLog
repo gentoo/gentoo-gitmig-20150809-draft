@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.70 2011/12/20 11:53:39 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.71 2012/05/27 17:39:13 maekke Exp $
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> libgsasl-1.6.1.ebuild:
+  arm stable, bug #416105
 
   20 Dec 2011; Naohiro Aota <naota@gentoo.org> libgsasl-1.6.1.ebuild:
   Add ~x86-fbsd
