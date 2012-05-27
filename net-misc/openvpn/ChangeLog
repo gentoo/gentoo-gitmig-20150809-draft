@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.233 2012/05/23 14:44:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.234 2012/05/27 12:50:14 maekke Exp $
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> openvpn-2.2.2.ebuild:
+  arm stable, bug #415847
 
   23 May 2012; Jeroen Roovers <jer@gentoo.org> openvpn-2.2.2.ebuild:
   Stable for HPPA (bug #415847).
