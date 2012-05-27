@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/gtk-g-rays2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/ChangeLog,v 1.7 2012/05/04 07:14:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/ChangeLog,v 1.8 2012/05/27 08:44:30 scarabeus Exp $
+
+*gtk-g-rays2-2.01 (27 May 2012)
+
+  27 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +gtk-g-rays2-2.01.ebuild,
+  -gtk-g-rays2-1.23.ebuild:
+  Version bump to latest, gtk3 version.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk-g-rays2-1.23.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
