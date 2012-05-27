@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-galatia
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-galatia/ChangeLog,v 1.10 2011/06/14 10:59:03 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-galatia/ChangeLog,v 1.11 2012/05/27 12:32:35 yngwin Exp $
+
+  27 May 2012; Ben de Groot <yngwin@gentoo.org> sil-galatia-2.1.ebuild:
+  Mark 2.1 stable. Remove old.
 
   14 Jun 2011; Peter Volkov <pva@gentoo.org> sil-galatia-2.1.ebuild:
   Add missing app-arch/unzip dependency, bug 371229 thank Piotr Szymaniak for
