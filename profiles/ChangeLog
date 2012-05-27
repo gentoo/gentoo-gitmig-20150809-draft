@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6601 2012/05/27 09:49:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6602 2012/05/27 16:03:41 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask unreleased / alpha / beta calligra
 
   27 May 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask sci-electrotech-0.3 alpha release
