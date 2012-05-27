@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.5 2012/05/21 09:51:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.6 2012/05/27 16:54:24 angelos Exp $
 
 EAPI=4
 GNOME2_LA_PUNT=yes
 
-inherit gnome2
+inherit gnome2 python
 
 DESCRIPTION="a GTK2 MPD (Music Player Daemon) client inspired by Rythmbox"
 HOMEPAGE="http://ario-player.sourceforge.net"
@@ -27,7 +27,8 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	dbus? ( dev-libs/dbus-glib )
 	libnotify? ( x11-libs/libnotify )
 	python? ( dev-python/pygtk:2
-		dev-python/pygobject:2 )
+		dev-python/pygobject:2
+		dev-lang/python:2.7 )
 	taglib? ( media-libs/taglib )
 	zeroconf? ( net-dns/avahi )"
 DEPEND="${RDEPEND}
@@ -36,6 +37,11 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS=( AUTHORS )
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-single-includes.patch
