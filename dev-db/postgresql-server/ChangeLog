@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.187 2012/05/23 14:42:52 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.188 2012/05/27 15:07:14 titanofold Exp $
+
+*postgresql-server-9.2.0_beta1-r1 (27 May 2012)
+
+  27 May 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgresql-server-9.2.0_beta1.ebuild,
+  +postgresql-server-9.2.0_beta1-r1.ebuild:
+  Fixed initscript for 9.2. Testing fix for bug 407907.
 
 *postgresql-server-9.2.0_beta1 (23 May 2012)
 
