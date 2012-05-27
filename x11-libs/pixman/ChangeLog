@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.129 2012/04/26 20:52:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.130 2012/05/27 19:13:48 mattst88 Exp $
+
+*pixman-0.26.0 (27 May 2012)
+
+  27 May 2012; Matt Turner <mattst88@gentoo.org> +pixman-0.26.0.ebuild,
+  +files/pixman-0.26.0-add-missing-_mm_empty-calls.patch:
+  Version bump.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> pixman-0.24.4.ebuild:
   keyword ~amd64-fbsd
