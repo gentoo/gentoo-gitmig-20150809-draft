@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/gtk-g-rays2-2.01.ebuild,v 1.1 2012/05/27 08:44:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/gtk-g-rays2-2.01.ebuild,v 1.2 2012/05/27 08:50:00 scarabeus Exp $
 
 EAPI=4
 
@@ -12,8 +12,8 @@ SRC_URI="http://www.zen35309.zen.co.uk/gps/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+KEYWORDS="amd64 x86"
+IUSE=""
 
 RDEPEND="
 	dev-libs/glib:2
@@ -28,7 +28,7 @@ DEPEND="${DEPEND}
 	sys-devel/gettext
 "
 
-DOCS=( README AUTHORS ChangeLog docs/gtkGrays2.pdf )
+DOCS="README AUTHORS ChangeLog"
 
 src_prepare() {
 	# werror is bad idea
@@ -36,4 +36,9 @@ src_prepare() {
 	# we run this ourselves
 	sed -i -e '/gtk-update-icon-cache/d' Makefile.am || die
 	eautoreconf
+}
+
+src_configure() {
+	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 }
