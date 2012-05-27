@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/sil-arabicfonts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-arabicfonts/ChangeLog,v 1.4 2012/01/07 23:03:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-arabicfonts/ChangeLog,v 1.5 2012/05/27 12:25:12 yngwin Exp $
+
+  27 May 2012; Ben de Groot <yngwin@gentoo.org> -sil-arabicfonts-1.0.ebuild,
+  sil-arabicfonts-1.005.ebuild:
+  Mark 1.005 stable, bug #414765. Remove old.
 
 *sil-arabicfonts-1.005 (07 Jan 2012)
 
