@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.417 2012/05/26 00:34:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.418 2012/05/27 07:22:43 robbat2 Exp $
+
+*openldap-2.4.31-r1 (27 May 2012)
+
+  27 May 2012; Robin H. Johnson <robbat2@gentoo.org> +openldap-2.4.31-r1.ebuild,
+  files/slapd-initd-2.4.28-r1:
+  Bug #417673: fix typo in checkpath call.
 
   25 May 2012; Alexis Ballier <aballier@gentoo.org> openldap-2.4.31.ebuild:
   keyword ~amd64-fbsd
