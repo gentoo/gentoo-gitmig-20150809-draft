@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/scrapy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.9 2012/04/20 18:48:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.10 2012/05/27 18:25:36 maksbotan Exp $
+
+*scrapy-0.14.4 (27 May 2012)
+
+  27 May 2012; Maxim Koltsov <maksbotan@gentoo.org> +scrapy-0.14.4.ebuild:
+  Bump to 0.14.4, thanks to idella4. Bug #417817
 
   20 Apr 2012; Mike Gilbert <floppym@gentoo.org> scrapy-0.14.2.ebuild,
   scrapy-0.14.3.ebuild:
