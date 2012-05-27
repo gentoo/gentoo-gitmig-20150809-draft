@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.3 2012/05/26 07:13:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.4 2012/05/27 07:49:48 scarabeus Exp $
 
 EAPI=4
 
@@ -135,6 +135,12 @@ src_configure() {
 		echo "Ruby module dir is: $RUBY_MOD_DIR"
 	fi
 
+	if use python; then
+		myopts+="
+			--with-pymoddir="${EPREFIX}"/$(python_get_sitedir)
+		"
+	fi
+
 	if use java; then
 		myopts+="
 			--with-java=$(java-config --jdk-home 2>/dev/null)
@@ -209,7 +215,6 @@ src_configure() {
 		$(use_with python) \
 		$(use_with threads) \
 		$(use_with xls freexl) \
-		--with-pymoddir="${EPREFIX}"/$(python_get_sitedir) \
 		${myopts}
 
 	# mysql-config puts this in (and boy is it a PITA to get it out)
