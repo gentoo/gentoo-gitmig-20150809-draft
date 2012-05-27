@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-abyssinica/sil-abyssinica-1.200.ebuild,v 1.2 2012/01/07 23:06:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-abyssinica/sil-abyssinica-1.200.ebuild,v 1.3 2012/05/27 12:21:12 yngwin Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_PN}${PV}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE="doc"
 
 DEPEND="app-arch/unzip"
