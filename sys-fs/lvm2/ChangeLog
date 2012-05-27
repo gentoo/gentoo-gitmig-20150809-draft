@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.269 2012/05/04 19:09:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.270 2012/05/27 07:05:22 robbat2 Exp $
+
+*lvm2-2.02.95-r2 (27 May 2012)
+
+  27 May 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/device-mapper.rc-2.02.95-r2, +files/lvm.rc-2.02.95-r2,
+  +lvm2-2.02.95-r2.ebuild:
+  Revbump to use /run for locking and sockets, also bring in new thin
+  provisioning tools. Please ensure you are running the new baselayout and
+  openrc before you switch to this version! The old addon scripts have been
+  converted to plain init.d scripts now. Bugs #409921, #417491.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> lvm2-2.02.67.ebuild,
   lvm2-2.02.67-r1.ebuild, lvm2-2.02.67-r2.ebuild, lvm2-2.02.70.ebuild,
