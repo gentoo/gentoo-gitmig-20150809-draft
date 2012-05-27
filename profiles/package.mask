@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13793 2012/05/26 18:17:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13794 2012/05/27 09:49:50 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@getnoo.org> (27 May 2012)
+# Mask alpha release
+=sci-electronics/qelectrotech-0.30_alpha*
 
 # Alexis Ballier <aballier@gentoo.org> (26 May 2012)
 # API/ABI has changed with this release.
