@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.6 2012/05/27 16:54:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.1.ebuild,v 1.7 2012/05/27 17:38:58 angelos Exp $
 
 EAPI=4
 GNOME2_LA_PUNT=yes
+PYTHON_DEPEND="python? 2"
 
 inherit gnome2 python
 
@@ -27,8 +28,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	dbus? ( dev-libs/dbus-glib )
 	libnotify? ( x11-libs/libnotify )
 	python? ( dev-python/pygtk:2
-		dev-python/pygobject:2
-		dev-lang/python:2.7 )
+		dev-python/pygobject:2 )
 	taglib? ( media-libs/taglib )
 	zeroconf? ( net-dns/avahi )"
 DEPEND="${RDEPEND}
