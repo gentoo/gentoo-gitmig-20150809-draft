@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-cddl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.23 2012/05/16 16:18:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.24 2012/05/27 06:23:08 naota Exp $
+
+  27 May 2012; Naohiro Aota <naota@gentoo.org> +files/zfs.initd,
+  freebsd-cddl-9.0.ebuild:
+  Add zfs initd script. #415129
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-cddl-9.0.ebuild:
   put libavl in / too as it is required by libzpool.
