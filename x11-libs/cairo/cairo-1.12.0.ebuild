@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.0.ebuild,v 1.4 2012/05/05 03:52:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.0.ebuild,v 1.5 2012/05/27 02:21:12 naota Exp $
 
 EAPI=4
 
@@ -97,6 +97,8 @@ src_configure() {
 	append-flags -finline-limit=1200
 
 	use X && myopts+=" --enable-tee=yes"
+
+	use elibc_FreeBSD && myopts+=" --disable-trace"
 
 	# --disable-xcb-lib:
 	#	do not override good xlib backed by hardforcing rendering over xcb
