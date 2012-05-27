@@ -13,6 +13,5 @@
 <use>
   <flag name='gdal'>Enable <pkg>sci-libs/gdal</pkg> library support</flag>
   <flag name="geos">Enable <pkg>sci-libs/geos</pkg> library support</flag>
-  <flag name='nobfonts'>Enable Dejavu fonts instead of built-in fonts</flag>
 </use>
 </pkgmetadata>
