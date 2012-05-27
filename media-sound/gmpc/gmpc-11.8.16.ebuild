@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-11.8.16.ebuild,v 1.7 2012/05/05 09:02:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-11.8.16.ebuild,v 1.8 2012/05/27 07:51:26 angelos Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -21,6 +21,7 @@ RDEPEND="dev-db/sqlite:3
 	net-libs/libsoup:2.4
 	>=x11-libs/gtk+-2.18:2
 	x11-libs/libX11
+	x11-themes/hicolor-icon-theme
 	unique? ( dev-libs/libunique:1 )
 	xspf? ( >=media-libs/libxspf-1.2 )"
 DEPEND="${RDEPEND}

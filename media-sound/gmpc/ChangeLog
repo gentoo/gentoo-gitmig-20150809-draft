@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.86 2012/05/05 09:02:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.87 2012/05/27 07:51:26 angelos Exp $
+
+  27 May 2012; Christoph Mende <angelos@gentoo.org> gmpc-11.8.16.ebuild:
+  Depend on x11-themes/hicolor-icon-theme (bug #380949)
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> gmpc-0.20.0.ebuild,
   gmpc-11.8.16.ebuild:
