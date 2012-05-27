@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pk2/ttf2pk2-1.5_p20120525.ebuild,v 1.1 2012/05/26 19:40:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pk2/ttf2pk2-1.5_p20120525.ebuild,v 1.2 2012/05/27 11:59:53 johu Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/texlive-${PV#*_p}-source.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # Note about blockers: it is a freetype2 based replacement for ttf2pk and
