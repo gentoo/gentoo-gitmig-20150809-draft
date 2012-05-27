@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.271 2012/05/27 07:08:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.272 2012/05/27 18:01:12 robbat2 Exp $
+
+  27 May 2012; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.95-r2.ebuild,
+  metadata.xml:
+  Bug #417735: Make thin-provisioning-tools optional because some users are
+  complaining about boost headers as a dependency.
 
   27 May 2012; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.95-r2.ebuild:
   Whitespace.

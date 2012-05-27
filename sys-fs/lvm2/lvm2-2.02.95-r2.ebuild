@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.95-r2.ebuild,v 1.2 2012/05/27 07:08:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.95-r2.ebuild,v 1.3 2012/05/27 18:01:12 robbat2 Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 
-IUSE="readline static static-libs clvm cman +lvm1 selinux +udev"
+IUSE="readline static static-libs clvm cman +lvm1 selinux +udev +thin"
 
 DEPEND_COMMON="!!sys-fs/device-mapper
 	readline? ( sys-libs/readline )
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND_COMMON}
 	!!sys-fs/lvm-user
 	!!sys-fs/clvm
 	>=sys-apps/util-linux-2.16
-	sys-block/thin-provisioning-tools"
+	thin? ( sys-block/thin-provisioning-tools )"
 
 # Upgrading to this LVM will break older cryptsetup
 RDEPEND="${RDEPEND}
@@ -133,7 +133,9 @@ src_configure() {
 	# so we cannot disable them
 	myconf="${myconf} --with-mirrors=internal"
 	myconf="${myconf} --with-snapshots=internal"
-	myconf="${myconf} --with-thin=internal"
+	use thin \
+		&& myconf="${myconf} --with-thin=internal" \
+		|| myconf="${myconf} --with-thin=none"
 
 	if use lvm1 ; then
 		myconf="${myconf} --with-lvm1=${buildmode}"
