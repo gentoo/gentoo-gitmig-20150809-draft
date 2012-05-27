@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.115 2012/05/23 13:18:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.116 2012/05/27 13:19:43 maekke Exp $
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> py-1.4.7.ebuild:
+  arm stable, bug #415885
 
   23 May 2012; Brent Baude <ranger@gentoo.org> py-1.4.7.ebuild:
   Marking py-1.4.7 ppc64 for bug 415885
