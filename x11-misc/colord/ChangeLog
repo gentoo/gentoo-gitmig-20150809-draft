@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.29 2012/05/24 05:54:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.30 2012/05/27 03:59:19 mattst88 Exp $
+
+  27 May 2012; Matt Turner <mattst88@gentoo.org> colord-0.1.21.ebuild:
+  Added ~alpha, bug 390345.
 
 *colord-0.1.21 (24 May 2012)
 
