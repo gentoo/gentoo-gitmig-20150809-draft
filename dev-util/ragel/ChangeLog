@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.51 2012/05/22 23:41:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.52 2012/05/27 13:12:56 maekke Exp $
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> ragel-6.7-r1.ebuild:
+  arm stable, bug #411507
 
 *ragel-6.7-r1 (22 May 2012)
 
