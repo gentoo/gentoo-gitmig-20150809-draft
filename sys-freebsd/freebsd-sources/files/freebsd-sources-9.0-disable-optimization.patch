@@ -4,7 +4,7 @@ Regretably, with GCC 4.4 or later this is the only flag combination
 I could find that doesn't cause kernel panics CPU triple-faults or
 other kind of severe breakage. This is Gentoo Bug #410945.
 
-We restrict this to GCC so that Clang can use -O2.
+Clang can use -O2, so we do not force -O1 on it
 
 --- a/sys/conf/kern.pre.mk
 +++ b/sys/conf/kern.pre.mk
@@ -12,7 +12,7 @@ We restrict this to GCC so that Clang can use -O2.
  .if !empty(COPTFLAGS:M-O[23s]) && empty(COPTFLAGS:M-fno-strict-aliasing)
  COPTFLAGS+= -fno-strict-aliasing
  .endif
-+.if ${CC:T:Mgcc} == "gcc" && !empty(COPTFLAGS:M-O[23s])
++.if ${CC:T:Mclang} != "clang" && !empty(COPTFLAGS:M-O[23s])
 +COPTFLAGS+= -O1
 +.endif
  .if !defined(NO_CPU_COPTFLAGS)
@@ -24,7 +24,7 @@ We restrict this to GCC so that Clang can use -O2.
  .if !empty(CFLAGS:M-O[23s]) && empty(CFLAGS:M-fno-strict-aliasing)
  CFLAGS+=	-fno-strict-aliasing
  .endif
-+.if ${CC:T:Mgcc} == "gcc" && !empty(CFLAGS:M-O[23s])
++.if ${CC:T:Mclang} != "clang" && !empty(CFLAGS:M-O[23s])
 +CFLAGS+=	-O1
 +.endif
  WERROR?=	-Werror

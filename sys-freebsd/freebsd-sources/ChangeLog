@@ -1,6 +1,15 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.71 2012/05/27 08:42:25 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.72 2012/05/27 13:06:03 ryao Exp $
+
+*freebsd-sources-9.0-r3 (27 May 2012)
+
+  27 May 2012; Richard Yao <ryao@gentoo.org>
+  +files/freebsd-sources-9.0-disable-optimization.patch,
+  +freebsd-sources-9.0-r3.ebuild,
+  -files/freebsd-sources-9.0-gcc-disable-optimization.patch,
+  -freebsd-sources-9.0-r2.ebuild:
+  Fix regression in -r2
 
 *freebsd-sources-9.0-r2 (27 May 2012)
 

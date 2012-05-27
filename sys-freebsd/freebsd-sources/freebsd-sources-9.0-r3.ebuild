@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0-r2.ebuild,v 1.1 2012/05/27 08:42:25 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0-r3.ebuild,v 1.1 2012/05/27 13:06:03 ryao Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -34,7 +34,7 @@ src_unpack() {
 		"${S}/conf/newvers.sh"
 
 	# workaround a kernel panic for amd64-fbsd, bug #408019
-	epatch "${FILESDIR}/${PN}-9.0-gcc-disable-optimization.patch"
+	epatch "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 
 	# __FreeBSD_cc_version comes from FreeBSD's gcc.
 	# on 9.0-RELEASE it's 900001.
