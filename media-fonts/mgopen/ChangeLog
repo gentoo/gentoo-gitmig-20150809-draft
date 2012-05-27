@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mgopen
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mgopen/ChangeLog,v 1.4 2009/09/29 00:11:30 dirtyepic Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mgopen/ChangeLog,v 1.5 2012/05/27 12:01:56 yngwin Exp $
+
+  27 May 2012; Ben de Groot <yngwin@gentoo.org> -mgopen-1.0.ebuild,
+  mgopen-1.1.ebuild:
+  Update homepage. Remove old.
 
   29 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> mgopen-1.0.ebuild,
   mgopen-1.1.ebuild:
