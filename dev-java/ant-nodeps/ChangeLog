@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-nodeps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.33 2012/05/25 11:21:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.34 2012/05/27 21:26:45 sera Exp $
+
+  27 May 2012; Ralph Sennhauser <sera@gentoo.org> ant-nodeps-1.8.2.ebuild:
+  Add missing jdk dep for jar command.
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> ant-nodeps-1.8.2.ebuild:
   Stable for amd64, wrt bug #417403
