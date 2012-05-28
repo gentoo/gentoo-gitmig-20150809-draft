@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.125 2012/05/28 16:49:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.126 2012/05/28 21:34:29 radhermit Exp $
+
+  28 May 2012; Tim Harder <radhermit@gentoo.org> -lynx-2.8.7_p1.ebuild,
+  -lynx-2.8.7_p2.ebuild, -files/lynx-2.8.7-include-locale.patch,
+  -lynx-2.8.8_pre11.ebuild:
+  Remove old.
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> lynx-2.8.8_pre12.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #414267
