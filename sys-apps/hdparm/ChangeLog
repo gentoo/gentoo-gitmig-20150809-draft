@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.235 2012/05/20 07:45:23 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.236 2012/05/28 17:11:59 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> hdparm-9.39.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #369569
 
   20 May 2012; Mark Loeser <halcy0n@gentoo.org> hdparm-9.39.ebuild:
   Stable for ppc/ppc64; bug #369569
