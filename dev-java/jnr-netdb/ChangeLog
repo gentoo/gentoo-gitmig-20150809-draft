@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jnr-netdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.9 2010/07/31 22:06:48 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.10 2012/05/28 17:55:54 sera Exp $
+
+*jnr-netdb-1.0.6 (28 May 2012)
+
+  28 May 2012; Ralph Sennhauser <sera@gentoo.org> +jnr-netdb-1.0.6.ebuild,
+  +files/jnr-netdb_maven-build.xml:
+  Version bump. #417889
+  Switch to https://github.com/jnr as project home.
+  Add mvn ant:ant build.xml
+  New license Apache-2.0.
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> jnr-netdb-1.0.1.ebuild:
   Stable on amd64 wrt bug #330103
