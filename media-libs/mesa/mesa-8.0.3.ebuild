@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.3.ebuild,v 1.1 2012/05/28 09:31:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.3.ebuild,v 1.2 2012/05/28 12:43:01 chithanh Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ FOLDER="${PV/_rc*/}"
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-SRC_PATCHES="mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
+SRC_PATCHES="mirror://gentoo/${P}-gentoo-patches-02.tar.bz2"
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
 else
