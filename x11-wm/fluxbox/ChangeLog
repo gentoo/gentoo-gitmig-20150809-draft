@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.303 2012/04/19 14:38:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.304 2012/05/28 15:48:00 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> fluxbox-1.3.2.ebuild:
+  alpha/ia64/sparc stable wrt #409339
 
   19 Apr 2012; Brent Baude <ranger@gentoo.org> fluxbox-1.3.2.ebuild:
   Marking fluxbox-1.3.2 ppc64 for bug 409339
