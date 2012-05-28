@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.51 2012/05/28 07:34:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.52 2012/05/28 07:45:19 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -337,9 +337,9 @@ autotools-utils_autoreconf() {
 	local x
 	for x in $(autotools_check_macro_val AC_CONFIG_SUBDIRS); do
 		if [[ -d ${x} ]] ; then
-			pushd "${x}" >/dev/null
+			pushd "${x}" >/dev/null || die
 			autotools-utils_autoreconf
-			popd >/dev/null
+			popd >/dev/null || die
 		fi
 	done
 }
@@ -415,9 +415,9 @@ autotools-utils_src_configure() {
 	econfargs+=("${myeconfargs[@]}")
 
 	mkdir -p "${AUTOTOOLS_BUILD_DIR}" || die "mkdir '${AUTOTOOLS_BUILD_DIR}' failed"
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
+	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
 	econf "${econfargs[@]}" "$@"
-	popd > /dev/null
+	popd > /dev/null || die
 }
 
 # @FUNCTION: autotools-utils_src_compile
@@ -427,9 +427,9 @@ autotools-utils_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
+	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
 	emake "$@" || die 'emake failed'
-	popd > /dev/null
+	popd > /dev/null || die
 }
 
 # @FUNCTION: autotools-utils_src_install
@@ -444,9 +444,9 @@ autotools-utils_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
+	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
 	emake DESTDIR="${D}" "$@" install || die "emake install failed"
-	popd > /dev/null
+	popd > /dev/null || die
 
 	# Move docs installed by autotools (in EAPI < 4).
 	if [[ ${EAPI} == [23] ]] \
@@ -491,8 +491,8 @@ autotools-utils_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
+	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
 	# Run default src_test as defined in ebuild.sh
 	default_src_test
-	popd > /dev/null
+	popd > /dev/null || die
 }
