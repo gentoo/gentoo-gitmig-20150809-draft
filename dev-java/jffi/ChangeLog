@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.20 2012/05/09 17:10:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.21 2012/05/28 10:06:09 sera Exp $
+
+*jffi-1.2.2 (28 May 2012)
+
+  28 May 2012; Ralph Sennhauser <sera@gentoo.org> +jffi-1.2.2.ebuild,
+  +files/jffi-1.2.2_no-werror.patch:
+  Version bump. #417889
+  New soname, new slot.
 
   09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> jffi-1.0.11.ebuild:
   x86 stable wrt bug #396305
