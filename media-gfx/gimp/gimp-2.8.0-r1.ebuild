@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0-r1.ebuild,v 1.1 2012/05/28 21:01:14 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0-r1.ebuild,v 1.2 2012/05/28 21:46:36 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -14,10 +14,11 @@ LICENSE="GPL-3 LGPL-3"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml ms my nb nds ne nl nn oc pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta te th tr tt uk vi xh zh_CN zh_HK zh_TW"  # for yi see bug #418053
+LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml ms my nb nds ne nl nn oc pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta te th tr tt uk vi xh yi zh_CN zh_HK zh_TW"
 IUSE="alsa aalib altivec bzip2 curl dbus debug doc exif gnome gs jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
 
 for lang in ${LANGS}; do
+	[[ ${lang} == yi ]] && continue  # bug #418053
 	IUSE+=" linguas_${lang}"
 done
 
@@ -120,7 +121,7 @@ src_prepare() {
 
 _clean_up_locales() {
 	elog "Cleaning up locales..."
-	for lang in ${LANGS} yi; do  # for yi see bug #418053
+	for lang in ${LANGS}; do
 		use "linguas_${lang}" && {
 			elog "- keeping ${lang}"
 			continue
