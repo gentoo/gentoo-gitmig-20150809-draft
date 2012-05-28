@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.125 2012/05/06 00:34:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.126 2012/05/28 16:35:50 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org>
+  desktop-file-utils-0.20-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #412833
 
   06 May 2012; Alexis Ballier <aballier@gentoo.org>
   desktop-file-utils-0.20-r1.ebuild:
