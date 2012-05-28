@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.624 2012/05/15 14:24:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.625 2012/05/28 13:21:03 scarabeus Exp $
+
+  28 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -xorg-x11-7.4-r1.ebuild:
+  Remove old version.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> xorg-x11-7.4-r2.ebuild:
   keyword ~amd64-fbsd
