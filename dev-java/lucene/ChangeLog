@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.87 2012/05/12 03:39:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.88 2012/05/28 23:21:36 robbat2 Exp $
+
+*lucene-3.4.0 (28 May 2012)
+*lucene-3.5.0 (28 May 2012)
+
+  28 May 2012; Robin H. Johnson <robbat2@gentoo.org> +lucene-3.4.0.ebuild,
+  +lucene-3.5.0.ebuild, metadata.xml:
+  Bump with changes written during ApacheCon NA 2011 (yes, it took me 6 months
+  to get around to this commit.)
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> lucene-2.1.0-r2.ebuild:
   keyword ~amd64-fbsd
