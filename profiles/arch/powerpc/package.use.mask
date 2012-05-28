@@ -1,7 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.121 2012/05/25 17:42:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.122 2012/05/28 20:11:33 dilfridge Exp $
 
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (28 May 2012)
+# Mask new useflag of opencv, as dependency dev-cpp/tbb is not keyworded on ppc
+media-libs/opencv tbb
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 May 2012)
 # Remove mask entry when app-misc/geoclue and app-accessibility/at-spi2-core

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.169 2012/05/25 17:42:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.170 2012/05/28 20:11:33 dilfridge Exp $
+
+  28 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  Mask new useflag of opencv, as dependency dev-cpp/tbb is not keyworded on ppc
 
   25 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask webkit-gtk[geoloc,webkit2], requires app-misc/geoclue and
