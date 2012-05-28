@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.155 2012/05/13 18:18:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.156 2012/05/28 00:56:02 mattst88 Exp $
+
+  28 May 2012; Matt Turner <mattst88@gentoo.org> seahorse-3.2.2.ebuild:
+  Added ~alpha, bug 390345.
 
 *seahorse-3.4.1 (13 May 2012)
 
