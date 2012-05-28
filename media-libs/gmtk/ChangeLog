@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gmtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/ChangeLog,v 1.7 2012/05/05 08:02:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/ChangeLog,v 1.8 2012/05/28 12:23:36 ago Exp $
+
+  28 May 2012; Agostino Sarubbo <ago@gentoo.org> gmtk-1.0.6.ebuild:
+  Stable for amd64, wrt bug #417819
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gmtk-1.0.5.ebuild,
   gmtk-1.0.6.ebuild:
