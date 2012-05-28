@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.43 2012/04/17 21:55:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.44 2012/05/28 14:10:34 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org>
+  IO-Socket-INET6-2.690.0.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #404673
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> IO-Socket-INET6-2.690.0.ebuild:
   Marking IO-Socket-INET6-2.690.0 ppc64 for bug 404673
