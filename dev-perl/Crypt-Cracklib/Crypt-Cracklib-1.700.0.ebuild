@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-1.700.0.ebuild,v 1.3 2012/04/24 12:37:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-1.700.0.ebuild,v 1.4 2012/05/28 15:58:45 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl interface to Alec Muffett's Cracklib"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="amd64 ~ia64 x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="sys-libs/cracklib"
