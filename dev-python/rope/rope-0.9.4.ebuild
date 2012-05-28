@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/rope-0.9.4.ebuild,v 1.1 2012/05/28 19:06:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/rope-0.9.4.ebuild,v 1.2 2012/05/28 21:23:50 floppym Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-python/setuptools"
 RDEPEND=""
 
 src_test() {
