@@ -1,0 +1,13 @@
+# ChangeLog for sys-libs/libcxxrt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.1 2012/05/28 13:58:04 aballier Exp $
+
+*libcxxrt-9999 (28 May 2012)
+*libcxxrt-0.0_p20120528 (28 May 2012)
+
+  28 May 2012; Alexis Ballier <aballier@gentoo.org>
+  +files/0001-Link-to-libdl-where-needed-for-dladdr-exception.cc.patch,
+  +libcxxrt-0.0_p20120528.ebuild, +libcxxrt-9999.ebuild,
+  +files/prepare_snapshot.sh, +metadata.xml:
+  Initial import, ebuild by me
+

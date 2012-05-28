@@ -1,0 +1,24 @@
+From 924fc4689d447ab73dd5acc27f1c22f697d2d4d0 Mon Sep 17 00:00:00 2001
+From: Alexis Ballier <aballier@gentoo.org>
+Date: Sun, 27 May 2012 19:39:13 -0400
+Subject: [PATCH] Link to libdl where needed for dladdr() (exception.cc)
+
+---
+ src/CMakeLists.txt |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 0b44852..b4086d9 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -13,6 +13,7 @@ set(CXXRT_SOURCES
+ 
+ add_library(cxxrt-static STATIC ${CXXRT_SOURCES})
+ add_library(cxxrt-shared SHARED ${CXXRT_SOURCES})
++target_link_libraries(cxxrt-shared ${CMAKE_DL_LIBS})
+ 
+ set_target_properties(cxxrt-static cxxrt-shared PROPERTIES
+                       OUTPUT_NAME "cxxrt"
+-- 
+1.7.8.6
+
