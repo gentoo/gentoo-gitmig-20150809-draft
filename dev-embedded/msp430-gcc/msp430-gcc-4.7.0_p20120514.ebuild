@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gcc/msp430-gcc-4.7.0_p20120514.ebuild,v 1.1 2012/05/23 08:58:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gcc/msp430-gcc-4.7.0_p20120514.ebuild,v 1.2 2012/05/28 08:19:37 radhermit Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ inherit toolchain
 
 DESCRIPTION="The GNU Compiler Collection for MSP430 microcontrollers"
 LICENSE="GPL-3 LGPL-3 || ( GPL-3 libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 SRC_URI="${SRC_URI} http://dev.gentoo.org/~radhermit/distfiles/${P}.patch.bz2"
 
 RDEPEND=""

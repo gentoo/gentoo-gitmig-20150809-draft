@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/msp430-gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gcc/ChangeLog,v 1.10 2012/05/23 08:58:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-gcc/ChangeLog,v 1.11 2012/05/28 08:19:37 radhermit Exp $
+
+  28 May 2012; Tim Harder <radhermit@gentoo.org>
+  msp430-gcc-4.7.0_p20120514.ebuild:
+  Drop keywords until library issue is fixed.
 
 *msp430-gcc-4.7.0_p20120514 (23 May 2012)
 
