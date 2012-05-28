@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.136 2012/05/26 17:03:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.137 2012/05/28 16:14:59 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Use.package.mask x11-misc/xscreensaver new-login, bug #412847
 
   26 May 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask webm

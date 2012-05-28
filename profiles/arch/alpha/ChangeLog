@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.122 2012/05/27 23:25:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.123 2012/05/28 16:14:16 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Use.package.mask x11-misc/xscreensaver new-login, bug #412847
 
   27 May 2012; Matt Turner <mattst88@gentoo.org> use.mask:
   Add entropy to use.mask.
