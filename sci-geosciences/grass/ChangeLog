@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.114 2012/05/24 19:33:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.115 2012/05/28 07:40:15 scarabeus Exp $
+
+  28 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> grass-6.4.2.ebuild:
+  Fix wxwidgets handling, thanks to papillon81
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> grass-6.4.2.ebuild:
   Whitespace to shutup repoman.

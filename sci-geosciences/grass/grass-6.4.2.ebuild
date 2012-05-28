@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.2 2012/05/24 19:33:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.3 2012/05/28 07:40:15 scarabeus Exp $
 
 EAPI=4
 
@@ -147,28 +147,30 @@ src_configure() {
 		use opengl && myconf+=" --with-tcltk"
 		use motif && use opengl && myconf+=" --with-glw"
 		use motif || myconf+=" --without-glw"
-	else
-		myconf+="
-			--without-opengl
-			--without-glw
-			--without-x
-		"
-	fi
 
-	if use wxwidgets; then
-		WX_BUILD=yes
-		WX_GTK_VER=2.8
-		need-wxwidgets unicode
-		myconf+="
-			--without-tcltk
-			--with-wxwidgets=${WX_CONFIG}
-		"
+		if use wxwidgets; then
+			WX_BUILD=yes
+			WX_GTK_VER=2.8
+			need-wxwidgets unicode
+			myconf+="
+				--without-tcltk
+				--with-wxwidgets=${WX_CONFIG}
+			"
+		else
+			WX_BUILD=no
+			# use tcl gui if wxwidgets are disabled
+			myconf+="
+				--with-tcltk
+				--without-wxwidgets
+			"
+		fi
 	else
-		WX_BUILD=no
-		# use tcl gui if wxwidgets are disabled
 		myconf+="
-			--with-tcltk
+			--without-glw
+			--without-opengl
+			--without-tcltk
 			--without-wxwidgets
+			--without-x
 		"
 	fi
 
