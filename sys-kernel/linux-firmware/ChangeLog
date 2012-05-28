@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.38 2012/05/03 15:57:31 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.39 2012/05/28 16:20:13 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org>
+  linux-firmware-20120125.ebuild, linux-firmware-20120219.ebuild,
+  linux-firmware-20120502.ebuild:
+  Add ~ia64 wrt #413665
 
 *linux-firmware-20120502 (03 May 2012)
 
