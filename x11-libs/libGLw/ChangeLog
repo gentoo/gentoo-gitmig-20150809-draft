@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libGLw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libGLw/ChangeLog,v 1.4 2012/05/17 15:50:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libGLw/ChangeLog,v 1.5 2012/05/28 12:57:47 jlec Exp $
+
+*libGLw-8.0.0 (28 May 2012)
+
+  28 May 2012; Justin Lecher <jlec@gentoo.org> +libGLw-8.0.0.ebuild:
+  Version BUmp
 
 *libGLw-1.0.0 (17 May 2012)
 
