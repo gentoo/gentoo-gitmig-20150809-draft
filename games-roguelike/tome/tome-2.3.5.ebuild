@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.5.ebuild,v 1.6 2011/03/01 07:25:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.5.ebuild,v 1.7 2012/05/28 12:23:39 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -31,7 +31,10 @@ S=${WORKDIR}/tome-${MY_PV}-src/src
 src_prepare() {
 	mv makefile.std makefile
 	epatch "${FILESDIR}/${PV}-gentoo-paths.patch" \
-		"${FILESDIR}"/${P}-overflow.patch
+		"${FILESDIR}"/${P}-noX.patch
+	sed -i \
+		-e "s:xx:x:" \
+		../lib/edit/p_info.txt
 	sed -i \
 		-e "s:GENTOO_DIR:${GAMES_STATEDIR}:" files.c init2.c \
 		|| die "sed failed"
