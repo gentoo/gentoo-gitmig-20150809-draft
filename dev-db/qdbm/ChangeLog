@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.139 2012/05/17 16:32:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.140 2012/05/28 13:58:16 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> qdbm-1.8.78-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #404629
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> qdbm-1.8.78-r1.ebuild:
   keyword ~amd64-fbsd
