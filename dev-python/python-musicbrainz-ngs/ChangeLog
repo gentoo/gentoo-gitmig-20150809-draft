@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-musicbrainz-ngs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.1 2012/05/28 08:43:39 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.2 2012/05/28 23:24:01 jdhore Exp $
+
+  28 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  python-musicbrainz-ngs-0.2.ebuild:
+  Keyword ~x86.
 
 *python-musicbrainz-ngs-0.2 (27 May 2012)
 

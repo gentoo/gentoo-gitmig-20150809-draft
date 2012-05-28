@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/munkres
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/munkres/ChangeLog,v 1.1 2012/05/27 20:39:31 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/munkres/ChangeLog,v 1.2 2012/05/28 23:22:37 jdhore Exp $
+
+  28 May 2012; Jeff Horelick <jdhore@gentoo.org> munkres-1.0.5.4.ebuild:
+  Keyword ~x86.
 
 *munkres-1.0.5.4 (27 May 2012)
 
