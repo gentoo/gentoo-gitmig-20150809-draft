@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.152 2012/05/26 17:18:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.153 2012/05/28 14:44:24 anarchy Exp $
+
+  28 May 2012; <anarchy@gentoo.org> firefox-12.0-r1.ebuild:
+  Finish adding support for gcc-4.7, bug #410557
 
   26 May 2012; Raúl Porcel <armin76@gentoo.org> firefox-10.0.4.ebuild:
   alpha/ia64 stable
