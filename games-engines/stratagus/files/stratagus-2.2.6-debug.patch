@@ -1,0 +1,19 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sun May 20 17:02:54 UTC 2012
+Subject: build-system
+
+do not rename the target if debug is enabled
+
+--- stratagus_2.2.6.orig/CMakeLists.txt
++++ stratagus_2.2.6.orig/CMakeLists.txt
+@@ -729,10 +729,6 @@
+ add_executable(stratagus WIN32 ${stratagus_SRCS} ${stratagus_HDRS})
+ target_link_libraries(stratagus ${stratagus_LIBS})
+ 
+-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+-	set_target_properties(stratagus PROPERTIES OUTPUT_NAME stratagus-dbg)
+-endif()
+-
+ if(WIN32 AND MINGW AND ENABLE_STATIC)
+ 	set_target_properties(stratagus PROPERTIES LINK_FLAGS "${LINK_FLAGS} -static-libgcc -Wl,--stack,10485760")
+ endif()
