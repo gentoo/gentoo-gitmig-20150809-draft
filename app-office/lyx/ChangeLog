@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.261 2012/05/03 20:00:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.262 2012/05/28 15:58:17 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> lyx-2.0.3.ebuild:
+  alpha/ia64/sparc stable wrt #411941
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> lyx-1.6.10.ebuild,
   lyx-2.0.1.ebuild, lyx-2.0.2.ebuild, lyx-2.0.3.ebuild:
