@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0_beta14.ebuild,v 1.2 2012/05/28 12:51:32 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0_beta14.ebuild,v 1.3 2012/05/28 23:25:22 jdhore Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ DESCRIPTION="A media library management system for obsessive-compulsive music ge
 SRC_URI="http://beets.googlecode.com/files/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://beets.radbox.org/"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="MIT"
 IUSE=""
