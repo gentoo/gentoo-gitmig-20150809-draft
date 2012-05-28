@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.13 2011/12/21 07:06:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.14 2012/05/28 19:38:23 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -30,7 +30,6 @@ S="${WORKDIR}"
 
 ESVN_REPO_URI="http://code.djangoproject.com/svn/django/trunk/"
 
-DOCS="docs/README AUTHORS"
 WEBAPP_MANUAL_SLOT="yes"
 
 pkg_setup() {

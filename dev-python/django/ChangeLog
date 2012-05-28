@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.79 2012/04/01 17:19:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.80 2012/05/28 19:38:23 xarthisius Exp $
+
+  28 May 2012; Kacper Kowalik <xarthisius@gentoo.org> django-1.1.4.ebuild,
+  django-1.2.5.ebuild, django-1.3.1.ebuild, django-1.3.ebuild,
+  django-1.4.ebuild, django-9999.ebuild:
+  Remove docs/README from DOCS as it either doesn't exist or is useless. Rely on
+  default targets for DOCS introduced in distutils.eclass Fixes #418005 by
+  Azamat H. Hackimov <azamat.hackimov@gmail.com>
 
   01 Apr 2012; Mike Gilbert <floppym@gentoo.org> django-1.4.ebuild:
   Fix dependencies. Install django/contrib/admin/static/admin/*. Ported from
