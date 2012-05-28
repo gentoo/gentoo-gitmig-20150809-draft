@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.86 2012/04/17 21:52:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.87 2012/05/28 14:05:08 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> BerkeleyDB-0.500.0.ebuild:
+  alpha/ia64/sparc stable wrt #404663
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> BerkeleyDB-0.500.0.ebuild:
   Marking BerkeleyDB-0.500.0 ppc64 for bug 404663
