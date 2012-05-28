@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13798 2012/05/28 17:41:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13799 2012/05/28 18:09:17 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -502,9 +502,6 @@ sys-auth/tcb
 =media-libs/clutter-gtk-1.2*
 =media-libs/clutter-gst-1.5*
 =media-libs/clutter-gst-1.6*
-# Farsight2 conflicts with Farstream
-# So pidgin needs a patch
-=net-im/pidgin-2.10.3-r100
 # Needs gst-plugins-flac-0.10.31 + commit 265a5bfa to write seekable flac files
 =media-sound/sound-juicer-3.4*
 
