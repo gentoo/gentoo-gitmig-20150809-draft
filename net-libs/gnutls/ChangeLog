@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.362 2012/05/10 04:59:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.363 2012/05/28 08:02:05 grobian Exp $
+
+  28 May 2012; Fabian Groffen <grobian@gentoo.org> gnutls-2.12.19.ebuild,
+  gnutls-3.0.19.ebuild:
+  Transferred Prefix keywords, fixed for Prefix
 
   10 May 2012; Tim Harder <radhermit@gentoo.org> -gnutls-2.10.5.ebuild:
   Remove old, insecure version.
