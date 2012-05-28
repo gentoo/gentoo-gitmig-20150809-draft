@@ -1,8 +1,0 @@
---- test/core/unboundmethod/test_arguments.rb.~1~	2011-01-23 12:39:57.721680315 +0100
-+++ test/core/unboundmethod/test_arguments.rb	2011-01-23 13:03:36.583697764 +0100
-@@ -1,4 +1,5 @@
- require 'facets/unboundmethod/arguments'
-+require 'test/unit'
- 
- class Test_UnboundMethod_Arguments  < Test::Unit::TestCase
- 
