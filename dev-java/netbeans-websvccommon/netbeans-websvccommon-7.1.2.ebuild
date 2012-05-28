@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/netbeans-websvccommon-7.1.2.ebuild,v 1.1 2012/04/26 21:51:17 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/netbeans-websvccommon-7.1.2.ebuild,v 1.2 2012/05/28 12:35:44 ago Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -13,7 +13,7 @@ SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.1.2/final/zip/netbeans-7
 SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-9999-r1-build.xml.patch.bz2"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 S="${WORKDIR}"
 
