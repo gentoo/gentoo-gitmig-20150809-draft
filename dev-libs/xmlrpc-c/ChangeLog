@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.118 2012/04/05 21:20:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.119 2012/05/28 13:48:38 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> xmlrpc-c-1.28.03-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #409549
 
   05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xmlrpc-c-1.28.03-r1.ebuild:
