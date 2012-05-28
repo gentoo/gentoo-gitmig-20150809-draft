@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13799 2012/05/28 18:09:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13800 2012/05/28 18:30:12 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -364,12 +364,6 @@ media-sound/qsampler
 # Fixes bug 413909
 dev-ruby/gherkin:2.9
 dev-ruby/gherkin:2.10
-
-# Kacper Kowalik <xarthisius@gentoo.org> (28 Apr 2012)
-# No longer maintained upstream, superseeded by
-# dev-python/lxml, bug 396497
-# Masked for removal in 30 days.
-dev-python/xsv
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Needs to be slotted better
