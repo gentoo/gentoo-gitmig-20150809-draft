@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/Mouse-0.930.0.ebuild,v 1.1 2011/05/19 13:44:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/Mouse-0.930.0.ebuild,v 1.2 2012/05/28 16:07:40 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Moose minus the antlers"
 SRC_URI+=" mirror://gentoo/Mouse-0.64-ppport.h.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~ppc-macos"
 IUSE="test"
 
 RDEPEND="virtual/perl-XSLoader"

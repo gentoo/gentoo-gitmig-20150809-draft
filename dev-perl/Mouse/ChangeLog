@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mouse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.32 2012/04/26 01:47:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.33 2012/05/28 16:07:40 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> Mouse-0.40.ebuild,
+  Mouse-0.930.0.ebuild, Mouse-0.970.0.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   26 Apr 2012; Jeroen Roovers <jer@gentoo.org> Mouse-0.970.0.ebuild:
   Stable for HPPA (bug #412973).

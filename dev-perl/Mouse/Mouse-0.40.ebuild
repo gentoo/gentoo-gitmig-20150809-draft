@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/Mouse-0.40.ebuild,v 1.5 2010/08/28 17:03:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/Mouse-0.40.ebuild,v 1.6 2012/05/28 16:07:40 armin76 Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Moose minus the antlers"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~x86"
 IUSE="test"
 
 RDEPEND=""
