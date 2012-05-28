@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.244 2012/05/03 07:11:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.245 2012/05/28 12:38:09 blueness Exp $
+
+  28 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-terminal-3.4.1.1.ebuild:
+  Keyword ~mips
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-terminal-2.32.1.ebuild,
   gnome-terminal-3.2.1.ebuild, gnome-terminal-3.4.0.1.ebuild,
