@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.124 2012/05/16 15:36:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.125 2012/05/28 16:49:03 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> lynx-2.8.8_pre12.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #414267
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> lynx-2.8.8_pre12.ebuild:
   Stable for HPPA (bug #414267).
