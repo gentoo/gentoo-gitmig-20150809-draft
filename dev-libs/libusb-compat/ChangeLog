@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb-compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.14 2012/05/24 15:58:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.15 2012/05/28 18:24:47 maekke Exp $
+
+  28 May 2012; Markus Meier <maekke@gentoo.org> libusb-compat-0.1.4.ebuild:
+  arm stable, bug #417135
 
   24 May 2012; Jeroen Roovers <jer@gentoo.org> libusb-compat-0.1.4.ebuild:
   Stable for HPPA (bug #417135).
