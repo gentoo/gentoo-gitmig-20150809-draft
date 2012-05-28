@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CGI-Session
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.46 2012/04/26 11:02:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.47 2012/05/28 16:11:39 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> CGI-Session-4.41.ebuild,
+  CGI-Session-4.480.0.ebuild:
+  Drop ia64/sparc keywords
 
   26 Apr 2012; Agostino Sarubbo <ago@gentoo.org> CGI-Session-4.480.0.ebuild:
   Stable for amd64, wrt bug #413083
