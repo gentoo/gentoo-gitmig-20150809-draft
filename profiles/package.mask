@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13796 2012/05/27 17:17:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13797 2012/05/28 13:29:34 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -371,30 +371,9 @@ dev-ruby/gherkin:2.10
 # Masked for removal in 30 days.
 dev-python/xsv
 
-# Hans de Graaff <graaff@gentoo.org> (28 Apr 2012)
-# History of broken code, new releases use a test system
-# that does not work itself and has many new dependencies.
-# Current stable version blocks rubygems stabilization.
-# No reverse dependencies.
-# Masked for removal in 30 days.
-dev-ruby/facets
-
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Needs to be slotted better
 =dev-libs/yaz-4*
-
-# Stratos Psomadakis <psomas@gentoo.org> (26 Apr 2012)
-# No longer maintained.
-# Masked for removal in 30 days wrt #412189
-sys-kernel/mm-sources
-
-# Michał Górny <mgorny@gentoo.org> (22 Apr 2012)
-# Obsolete and unmaintained. Their functions are provided by
-# x11-apps/xinput nowadays ('xinput set-mode' and 'xinput set-pointer'
-# respectively). Bug #411999. Masked for removal in 30 days.
-x11-apps/xsetmode
-x11-apps/xsetpointer
-<=x11-base/xorg-x11-7.4-r1
 
 # Torsten Veller <tove@gentoo.org> (21 Apr 2012)
 # Mask for removal: Doesn't install anything (#356559)

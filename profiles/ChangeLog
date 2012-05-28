@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6603 2012/05/27 17:17:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6604 2012/05/28 13:29:34 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Remove no-longer needed pmask entries.
 
   27 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask KOffice for removal
