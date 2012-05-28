@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.99.1-r1.ebuild,v 1.1 2012/01/01 01:13:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.99.1-r1.ebuild,v 1.2 2012/05/28 19:45:30 zmedico Exp $
 
 EAPI="4"
 inherit bash-completion elisp-common eutils toolchain-funcs
@@ -37,6 +37,7 @@ src_prepare() {
 		( $(gcc-major-version) -eq "3" && $(gcc-minor-version) -le 3 ) ]]; then
 		die 'requires >=gcc-3.4'
 	fi
+	epatch "${FILESDIR}/monotone-1.0-glibc-2.14-file-handle.patch"
 }
 
 src_configure() {
