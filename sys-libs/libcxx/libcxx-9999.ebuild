@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.1 2012/05/24 03:01:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.2 2012/05/28 13:59:52 aballier Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/libcxx/trunk"
 
 [ "${PV%9999}" != "${PV}" ] && SCM="subversion" || SCM=""
 
-inherit cmake-utils ${SCM} base
+inherit cmake-utils ${SCM} base flag-o-matic
 
 DESCRIPTION="New implementation of the C++ standard library, targeting C++0X"
 HOMEPAGE="http://libcxx.llvm.org/"
@@ -27,12 +27,13 @@ else
 fi
 IUSE=""
 
-RDEPEND=""
+RDEPEND="sys-libs/libcxxrt"
 DEPEND="${RDEPEND}
 	sys-devel/clang
 	app-arch/xz-utils"
 
-PATCHES=( "${FILESDIR}/multilib.patch" )
+PATCHES=( "${FILESDIR}/multilib.patch"
+		  "${FILESDIR}/cxxrt.patch" )
 DOCS=( "CREDITS.TXT" )
 
 src_prepare() {
@@ -40,6 +41,7 @@ src_prepare() {
 }
 
 src_configure() {
+	append-cppflags "-I/usr/include/libcxxrt -DLIBCXXRT"
 	# Needs to be built with clang. gcc-4.6.3 fails at least.
 	# TODO: cross-compile ?
 	export CC=clang
