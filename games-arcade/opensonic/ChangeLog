@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/opensonic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/ChangeLog,v 1.3 2012/05/17 00:42:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opensonic/ChangeLog,v 1.4 2012/05/28 17:49:08 hasufell Exp $
+
+  28 May 2012; Julian Ospald <hasufell@gentoo.org> opensonic-0.1.4-r1.ebuild:
+  respect cmake-utils_src_compile which also gives us verbosity
 
 *opensonic-0.1.4-r1 (17 May 2012)
 
