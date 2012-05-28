@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.70 2012/05/03 06:08:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.71 2012/05/28 12:24:35 ago Exp $
+
+  28 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  gecko-mediaplayer-1.0.6.ebuild:
+  Stable for amd64, wrt bug #417819
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gecko-mediaplayer-1.0.5.ebuild, gecko-mediaplayer-1.0.6.ebuild:
