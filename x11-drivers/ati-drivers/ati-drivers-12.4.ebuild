@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.4.ebuild,v 1.3 2012/05/21 12:21:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.4.ebuild,v 1.4 2012/05/28 09:12:53 mgorny Exp $
 
 EAPI=4
 
@@ -329,6 +329,9 @@ src_prepare() {
 	# https://github.com/torvalds/linux/commit/7e16838d94b566a17b65231073d179bc04d590c8#diff-1
 	# and finally backported to kernel 3.2.8.
 	epatch "${FILESDIR}"/amd-drivers-3.2.7.1.patch
+
+	# see http://ati.cchtml.com/show_bug.cgi?id=495
+	epatch "${FILESDIR}"/ati-drivers-old_rsp.patch
 
 	cd "${MODULE_DIR}"
 
