@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rye
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/ChangeLog,v 1.19 2012/01/28 09:11:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/ChangeLog,v 1.20 2012/05/28 06:08:41 graaff Exp $
+
+*rye-0.9.6 (28 May 2012)
+
+  28 May 2012; Hans de Graaff <graaff@gentoo.org> +rye-0.9.6.ebuild:
+  Version bump.
 
 *rye-0.9.5 (28 Jan 2012)
 
