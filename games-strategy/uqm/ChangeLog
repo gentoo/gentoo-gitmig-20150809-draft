@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/uqm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.32 2011/10/03 19:58:21 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.33 2012/05/28 02:45:04 mr_bones_ Exp $
+
+*uqm-0.7.0-r1 (28 May 2012)
+
+  28 May 2012; Michael Sterrett <mr_bones_@gentoo.org> +uqm-0.7.0-r1.ebuild:
+  correct install location for addon files (bug #417705)
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> uqm-0.7.0.ebuild:
   Marked ppc/ppc64 stable for bug #379419.
