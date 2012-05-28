@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.136 2012/04/26 16:44:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.137 2012/05/28 14:24:58 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> gentoo-syntax-20120109.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #410085
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   gentoo-syntax-20120109.ebuild:
