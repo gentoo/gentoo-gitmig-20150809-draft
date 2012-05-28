@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/redirfs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/ChangeLog,v 1.6 2010/01/19 11:26:21 cla Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/ChangeLog,v 1.7 2012/05/28 22:11:20 bicatali Exp $
+
+*redirfs-9999 (28 May 2012)
+
+  28 May 2012; Sébastien Fabbro <bicatali@gentoo.org> -redirfs-0.2-r1.ebuild,
+  -files/redirfs-0.2-truncate_inode_pages.patch, -redirfs-0.6.ebuild,
+  redirfs-0.8.ebuild, +redirfs-9999.ebuild, metadata.xml:
+  Bumped for a live ebuild for compatibility on kernel > 2.6.38. Setting myself
+  as maintainer.
 
 *redirfs-0.8 (19 Jan 2010)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/redirfs-0.8.ebuild,v 1.1 2010/01/19 11:26:21 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/redirfs-0.8.ebuild,v 1.2 2012/05/28 22:11:20 bicatali Exp $
 
 inherit linux-mod
 
-DESCRIPTION="The RedirFS or redirecting file system is a new layer between virtual file system switch (VFS) and file system drivers."
+DESCRIPTION="Layer between virtual file system switch and file system drivers"
 HOMEPAGE="http://www.redirfs.org"
 SRC_URI="http://www.redirfs.org/packages/${P}.tar.gz"
 
