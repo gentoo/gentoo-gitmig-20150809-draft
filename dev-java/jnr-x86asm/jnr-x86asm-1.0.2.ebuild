@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-x86asm/jnr-x86asm-1.0.2.ebuild,v 1.1 2012/05/28 09:14:49 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-x86asm/jnr-x86asm-1.0.2.ebuild,v 1.2 2012/05/28 19:35:56 sera Exp $
 
 EAPI="4"
 
@@ -9,8 +9,8 @@ JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2 vcs-snapshot
 
 DESCRIPTION="A pure-java port of asmjit."
-HOMEPAGE="http://github.com/jnr/jnr-x86asm"
-SRC_URI="http://github.com/jnr/${PN}/tarball/${PV} -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/jnr/jnr-x86asm"
+SRC_URI="https://github.com/jnr/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="1.0"
