@@ -1,0 +1,13 @@
+diff -urN libwps-0.2.6.old//src/lib/libwps_internal.h libwps-0.2.6/src/lib/libwps_internal.h
+--- libwps-0.2.6.old//src/lib/libwps_internal.h	2012-05-28 13:59:43.855727293 +0200
++++ libwps-0.2.6/src/lib/libwps_internal.h	2012-05-28 14:00:16.373727679 +0200
+@@ -25,6 +25,9 @@
+ #include <libwpd-stream/libwpd-stream.h>
+ #include <libwpd/libwpd.h>
+ #include <string>
++#ifdef DEBUG
++#include <stdio.h>
++#endif
+ 
+ #if defined(_MSC_VER) || defined(__DJGPP__)
+ typedef signed char int8_t;

@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.6.ebuild,v 1.3 2012/05/23 08:53:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.6.ebuild,v 1.4 2012/05/28 12:01:45 scarabeus Exp $
 
 EAPI=4
+
+inherit base
 
 DESCRIPTION="Microsoft Works file word processor format import filter library"
 HOMEPAGE="http://libwps.sourceforge.net/"
@@ -21,6 +23,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-debug.patch"
+)
 
 src_configure() {
 	econf \
