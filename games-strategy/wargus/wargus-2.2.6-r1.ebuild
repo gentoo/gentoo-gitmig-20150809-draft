@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.6.ebuild,v 1.3 2012/05/27 23:01:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.6-r1.ebuild,v 1.1 2012/05/28 13:18:06 hasufell Exp $
 
 EAPI=2
 inherit eutils cdrom cmake-utils gnome2-utils games
@@ -20,6 +20,7 @@ RDEPEND="=games-engines/stratagus-${PV}*[theora]
 	sys-libs/zlib
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
+	media-sound/cdparanoia
 	media-sound/timidity++
 	media-video/ffmpeg2theora
 	virtual/pkgconfig"
@@ -55,7 +56,7 @@ src_install() {
 
 	local dir=${GAMES_DATADIR}/stratagus/${PN}
 
-	"${D}"/usr/games/bin/wartool -m -v "${CDROM_ROOT}"/data "${D}/${dir}" \
+	"${D}"/usr/games/bin/wartool -m -v -r "${CDROM_ROOT}"/data "${D}/${dir}" \
 		|| die "Failed to extract data"
 
 	prepgamesdirs

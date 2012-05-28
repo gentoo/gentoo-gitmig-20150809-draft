@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/wargus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.18 2012/05/27 23:01:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.19 2012/05/28 13:18:06 hasufell Exp $
+
+*wargus-2.2.6-r1 (28 May 2012)
+
+  28 May 2012; Julian Ospald <hasufell@gentoo.org> -wargus-2.2.6.ebuild,
+  +wargus-2.2.6-r1.ebuild:
+  revbump: force users to update, cause cdparanoia was missing from DEPEND, but
+  wartool does not return an error code when failing (hence some sound files
+  could be missing)
 
   27 May 2012; Julian Ospald <hasufell@gentoo.org> wargus-2.2.6.ebuild:
   clean up SRC_URI (icon is included in tarball)
