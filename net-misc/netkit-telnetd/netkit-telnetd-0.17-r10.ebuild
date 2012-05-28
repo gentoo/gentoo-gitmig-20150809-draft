@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r10.ebuild,v 1.8 2012/05/20 08:13:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/netkit-telnetd-0.17-r10.ebuild,v 1.9 2012/05/28 17:18:05 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/netkit-telnet-${PV}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2
