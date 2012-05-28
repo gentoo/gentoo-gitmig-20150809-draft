@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.4 2012/05/28 22:33:05 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.5 2012/05/28 23:21:25 sping Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -121,6 +121,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-Xaw-configure.patch \
 		"${FILESDIR}"/${P}-automake-1.11.2.patch
+	epatch "${FILESDIR}"/${P}-dot-pangocairo-link.patch
 
 	# ToDo: Do the same thing for examples and/or
 	#       write a patch for a configuration-option
@@ -201,6 +202,7 @@ src_configure() {
 
 	econf \
 		--enable-ltdl \
+		--disable-silent-rules \
 		$(use_enable static-libs static) \
 		${myconf}
 }

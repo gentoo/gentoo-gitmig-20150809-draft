@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.251 2012/05/28 22:33:05 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.252 2012/05/28 23:21:25 sping Exp $
+
+  28 May 2012; Sebastian Pipping <sping@gentoo.org> graphviz-2.28.0.ebuild,
+  +files/graphviz-2.28.0-dot-pangocairo-link.patch:
+  Fix linking of dot command, call configure with --disable-silent-rules to
+  auto-improve future bug reports (similar to recent changes in the cmake
+  eclass)
 
   28 May 2012; Sebastian Pipping <sping@gentoo.org> graphviz-2.28.0.ebuild:
   Remove use of --with(out)-x as there is no parameter by that name. Add use
