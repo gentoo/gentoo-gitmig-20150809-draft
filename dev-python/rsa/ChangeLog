@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rsa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.1 2012/05/08 22:35:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.2 2012/05/28 17:54:18 maekke Exp $
+
+  28 May 2012; Markus Meier <maekke@gentoo.org> rsa-3.0.1.ebuild:
+  add ~arm, bug #415187
 
 *rsa-3.0.1 (08 May 2012)
 
