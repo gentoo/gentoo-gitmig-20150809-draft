@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.3 2012/05/28 21:35:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.4 2012/05/28 22:33:05 sping Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,8 @@ LICENSE="CPL-1.0"
 SLOT="0"
 #original KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 KEYWORDS=""
-IUSE="cairo devil doc examples gs gtk gts java lasi nls perl python qt4 ruby svg static-libs tcl elibc_FreeBSD"
+# NOTE: Migration from "+X" to "X" needs checking of all reverse dependencies for use of lefty
+IUSE="cairo devil doc examples gs gtk gts java lasi nls perl python qt4 ruby svg static-libs tcl +X elibc_FreeBSD"
 
 # Requires ksh
 RESTRICT="test"
@@ -30,8 +31,8 @@ RDEPEND="
 	>=media-libs/libpng-1.2:0
 	virtual/jpeg
 	virtual/libiconv
+	X? ( x11-libs/libXaw )
 	cairo?	(
-		x11-libs/libXaw
 		>=x11-libs/pango-1.12
 		>=x11-libs/cairo-1.1.10[svg]
 	)
@@ -39,7 +40,6 @@ RDEPEND="
 	gs?	( app-text/ghostscript-gpl )
 	gtk?	(
 		x11-libs/gtk+:2
-		x11-libs/libXaw
 		>=x11-libs/pango-1.12
 		>=x11-libs/cairo-1.1.10
 	)
@@ -158,13 +158,6 @@ src_configure() {
 	# libtool file collision, bug 276609
 	local myconf="--without-included-ltdl --disable-ltdl-install"
 
-	# Core functionality:
-	# All of X, cairo-output, gtk (and probably qt) need the pango+cairo functionality
-	if use gtk || use cairo || use qt4; then
-		myconf="${myconf} --with-x"
-	else
-		myconf="${myconf} --without-x"
-	fi
 	myconf="${myconf}
 		$(use_with cairo pangocairo)
 		$(use_with devil)
@@ -173,6 +166,7 @@ src_configure() {
 		$(use_with qt4)
 		$(use_with lasi)
 		$(use_with svg rsvg)
+		$(use_with X lefty)
 		--with-digcola
 		--with-fontconfig
 		--with-freetype2
