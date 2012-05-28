@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Name
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.19 2012/04/17 21:07:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.20 2012/05/28 14:08:09 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org> Sub-Name-0.50.0.ebuild:
+  alpha/ia64/sparc stable wrt #404665
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> Sub-Name-0.50.0.ebuild:
   Marking Sub-Name-0.50.0 ppc64 for bug 404665
