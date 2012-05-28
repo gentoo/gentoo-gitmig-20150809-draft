@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Statistics-Descriptive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.41 2012/05/18 15:20:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.42 2012/05/28 15:50:04 armin76 Exp $
+
+  28 May 2012; Raúl Porcel <armin76@gentoo.org>
+  Statistics-Descriptive-3.30.0.ebuild, Statistics-Descriptive-3.40.0.ebuild,
+  Statistics-Descriptive-3.50.0.ebuild, Statistics-Descriptive-3.60.100.ebuild,
+  Statistics-Descriptive-3.60.200.ebuild,
+  Statistics-Descriptive-3.60.300.ebuild, Statistics-Descriptive-3.0100.ebuild:
+  Drop ia64/sparc keywords
 
 *Statistics-Descriptive-3.60.300 (18 May 2012)
 
