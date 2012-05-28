@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13797 2012/05/28 13:29:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13798 2012/05/28 17:41:01 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -544,11 +544,6 @@ sys-apps/hardened-shadow
 # Masked until all reverse dependencies have proper versioned
 # DEPENDs.
 >=net-misc/npapi-sdk-0.27.1
-
-# Michael Weber <xmw@gentoo.org> (18 Feb 2012)
-# Project was renamed to x11-wm/spectrwm
-# See bug 404315 for details and update installations
-x11-wm/scrotwm
 
 # Tim Harder <radhermit@gentoo.org> (10 Feb 2012)
 # Masked for testing
