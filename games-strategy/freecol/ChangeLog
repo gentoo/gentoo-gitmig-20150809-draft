@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freecol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.38 2012/03/03 20:42:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.39 2012/05/28 20:19:23 mr_bones_ Exp $
+
+  28 May 2012; Michael Sterrett <mr_bones_@gentoo.org> freecol-0.10.5.ebuild:
+  tidy
 
 *freecol-0.10.5 (03 Mar 2012)
 

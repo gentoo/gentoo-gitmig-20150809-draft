@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.10.5.ebuild,v 1.1 2012/03/03 20:42:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.10.5.ebuild,v 1.2 2012/05/28 20:19:23 mr_bones_ Exp $
 
 EAPI=2
-
 inherit base eutils java-pkg-2 java-ant-2 games
 
 DESCRIPTION="An open source clone of the game Colonization"
@@ -27,7 +26,7 @@ DEPEND=">=virtual/jdk-1.5
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
 
-S="${WORKDIR}"/${PN}
+S=${WORKDIR}/${PN}
 
 PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
@@ -75,10 +74,10 @@ src_install() {
 		--jar FreeCol.jar \
 		--java_args -Xmx512M
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r data schema splash.jpg || die "doins failed"
+	doins -r data schema splash.jpg || die
 	doicon ${PN}.xpm
 	make_desktop_entry ${PN} FreeCol
-	dodoc README || die "dodoc failed"
+	dodoc README || die
 	prepgamesdirs
 }
 
