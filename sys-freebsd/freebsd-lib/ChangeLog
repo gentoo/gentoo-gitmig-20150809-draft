@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.151 2012/05/26 19:51:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.152 2012/05/28 03:17:39 aballier Exp $
+
+  28 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r3.ebuild:
+  fix broken logic in is_native_abi, by Naohiro Aota, bug #417863
 
   26 May 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r3.ebuild:
   remove libcompiler_rt and libblocksruntime as they are clang libraries

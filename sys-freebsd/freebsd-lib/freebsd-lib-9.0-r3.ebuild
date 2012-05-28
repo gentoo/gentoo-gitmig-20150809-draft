@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.2 2012/05/26 19:51:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.3 2012/05/28 03:17:39 aballier Exp $
 
 EAPI=2
 
@@ -236,8 +236,8 @@ NATIVE_SUBDIRS="lib gnu/lib/libssp/libssp_nonshared gnu/lib/libregex"
 
 # Is my $ABI native ?
 is_native_abi() {
-	is_crosscompile && return 0
-	use multilib || return 1
+	is_crosscompile && return 1
+	use multilib || return 0
 	[ "${ABI}" = "${DEFAULT_ABI}" ]
 }
 
