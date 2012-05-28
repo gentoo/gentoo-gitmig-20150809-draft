@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.52 2012/05/28 07:45:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.53 2012/05/28 07:46:59 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -259,15 +259,6 @@ remove_libtool_files() {
 			rm -f "${f}" || die
 		fi
 	done
-
-	# check for invalid eclass use
-	# this is the most commonly used function, so do it here
-	_check_build_dir
-	if [[ ! -d "${AUTOTOOLS_BUILD_DIR}" ]]; then
-		eqawarn "autotools-utils used but autotools-utils_src_configure was never called."
-		eqawarn "This is not supported and never was. Please report a bug against"
-		eqawarn "the offending ebuild. This will become a fatal error in a near future."
-	fi
 }
 
 # @FUNCTION: autotools-utils_autoreconf
