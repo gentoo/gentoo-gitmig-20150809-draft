@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.155 2012/05/23 12:59:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.156 2012/05/28 18:03:33 maekke Exp $
+
+  28 May 2012; Markus Meier <maekke@gentoo.org> layman-1.4.2-r3.ebuild:
+  arm stable, bug #416623
 
   23 May 2012; Brent Baude <ranger@gentoo.org> layman-1.4.2-r3.ebuild:
   Marking layman-1.4.2-r3 ppc64 for bug 416623
