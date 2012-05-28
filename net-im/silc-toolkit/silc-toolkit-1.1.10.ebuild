@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.10.ebuild,v 1.9 2012/05/04 06:22:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.10.ebuild,v 1.10 2012/05/28 08:53:17 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils
 
@@ -27,18 +27,14 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--datadir=/usr/share/${PN} \
-		--datarootdir=/usr/share/${PN} \
-		--includedir=/usr/include/${PN} \
-		--sysconfdir=/etc/silc \
-		--libdir=/usr/$(get_libdir)/${PN} \
-		--docdir=/usr/share/doc/${PF} \
+		--datadir="${EPREFIX}/usr/share/${PN}" \
+		--datarootdir="${EPREFIX}/usr/share/${PN}" \
+		--includedir="${EPREFIX}/usr/include/${PN}" \
+		--sysconfdir="${EPREFIX}/etc/silc" \
+		--libdir="${EPREFIX}/usr/$(get_libdir)/${PN}" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--disable-optimizations \
 		--with-simdir=/usr/$(get_libdir)/${PN}/modules \
 		$(use_enable debug) \
 		$(use_enable ipv6)
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die "make install failed"
 }
