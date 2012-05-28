@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.14.4.ebuild,v 1.1 2012/05/27 18:25:36 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.14.4.ebuild,v 1.2 2012/05/28 00:12:51 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -56,8 +56,8 @@ src_compile() {
 
 src_test() {
 	testing() {
-		# PYTHOPATH should be build-$PYTHON_ABI/lib, but causes a test fail. 
-		# Not all content is copied across to build-$PYTHON_ABI/lib, and 
+		# PYTHOPATH should be build-$PYTHON_ABI/lib, but causes a test fail.
+		# Not all content is copied across to build-$PYTHON_ABI/lib, and
 		# PYTHONPATH again requires an abs path.
 		echo PYTHONPATH="${PWD}" bin/runtests.sh
 		PYTHONPATH="${PWD}"/ bin/runtests.sh
