@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.9.ebuild,v 1.1 2012/05/26 17:53:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.9.ebuild,v 1.2 2012/05/28 15:17:54 tester Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils toolchain-funcs
@@ -60,9 +60,16 @@ src_configure() {
 	econf $(use_enable debug)
 }
 
-src_install() {
+src_compile() {
+	# Custom build system, parallel make fails
+	emake
 	emake -C plugins/amsnplus
-	default
+}
+
+src_install() {
+	# Can't use default because make install isn't parallel friendly
+	emake -j1 DESTDIR="${D}" install
+	dodoc "${DOCS[@]}"
 
 	domenu amsn.desktop
 	sed -i -e s:.png:: "${D}"/usr/share/applications/amsn.desktop || die
