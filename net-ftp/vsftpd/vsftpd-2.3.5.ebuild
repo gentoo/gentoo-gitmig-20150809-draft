@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.3.5.ebuild,v 1.8 2012/05/13 10:57:37 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.3.5.ebuild,v 1.9 2012/05/28 14:50:42 armin76 Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://security.appspot.com/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="caps pam tcpd ssl selinux xinetd"
 
 DEPEND="caps? ( >=sys-libs/libcap-2 )
