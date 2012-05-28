@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.22 2012/05/27 06:21:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.23 2012/05/28 16:43:19 xmw Exp $
+
+  28 May 2012; Michael Weber <xmw@gentoo.org> -mosh-1.2.0.97.ebuild,
+  mosh-1.2.1.ebuild, mosh-9999.ebuild, metadata.xml:
+  make mosh-hardening optional for slow machines (add USE mosh-hardening, bug
+  417919, thanks fling)
 
 *mosh-1.2.1 (27 May 2012)
 

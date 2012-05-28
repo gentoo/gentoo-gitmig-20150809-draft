@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.10 2012/05/27 06:21:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.11 2012/05/28 16:43:19 xmw Exp $
 
 EAPI=4
 EGIT_REPO_URI="https://github.com/keithw/mosh.git"
@@ -13,7 +13,7 @@ HOMEPAGE="http://mosh.mit.edu"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="bash-completion +client examples +server ufw +utempter"
+IUSE="bash-completion +client examples +mosh-hardening +server ufw +utempter"
 REQUIRED_USE="|| ( client server )
 	examples? ( client )"
 
@@ -24,6 +24,7 @@ RDEPEND="dev-libs/protobuf
 		dev-perl/IO-Tty )
 	utempter? ( sys-libs/libutempter )"
 DEPEND="${RDEPEND}
+	dev-vcs/git[curl]
 	virtual/pkgconfig"
 
 src_prepare() {
@@ -38,6 +39,7 @@ src_configure() {
 		$(use_enable server) \
 		$(use_enable examples) \
 		$(use_enable ufw) \
+		$(use_enable mosh-hardening hardening) \
 		$(use_with utempter)
 }
 
