@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.36 2012/05/25 13:27:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.37 2012/05/28 21:20:39 xmw Exp $
+
+  28 May 2012; Michael Weber <xmw@gentoo.org> iverilog-0.9.5.ebuild:
+  Add parallel build workaround (-j1) to fix bug 417579)
 
   25 May 2012; Michael Weber <xmw@gentoo.org> iverilog-0.9.5.ebuild:
   Fix RDEPEND

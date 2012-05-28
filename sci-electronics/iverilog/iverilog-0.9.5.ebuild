@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.9.5.ebuild,v 1.2 2012/05/25 13:27:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.9.5.ebuild,v 1.3 2012/05/28 21:20:39 xmw Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake \
+	emake -j1 \
 		prefix="${D}"/usr \
 		mandir="${D}"/usr/share/man \
 		infodir="${D}"/usr/share/info \
