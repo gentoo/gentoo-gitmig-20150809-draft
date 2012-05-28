@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlutils/xlutils-1.5.2.ebuild,v 1.1 2012/05/20 14:53:23 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlutils/xlutils-1.5.2.ebuild,v 1.2 2012/05/28 11:24:33 tampakrap Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -23,7 +23,7 @@ SLOT="0"
 DOCS=( xlutils/readme.txt xlutils/docs/*.txt )
 
 RDEPEND=">=dev-python/xlwt-0.7.3
-	>=dev-python/xlrd-0.7.3"
+	>=dev-python/xlrd-0.7.7"
 DEPEND="${RDEPEND}
 	test? ( dev-python/errorhandler
 	dev-python/mock
