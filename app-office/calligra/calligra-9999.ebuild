@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.20 2012/05/27 22:44:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.21 2012/05/28 00:12:22 mr_bones_ Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -29,7 +29,7 @@ case ${PV} in
 		# stable releases
 		SRC_URI="mirror://kde/stable/${P}/${P}.tar.bz2" ;;
 	2.[456789].9999)
-		# stable branch live ebuild 
+		# stable branch live ebuild
 		SRC_URI="" ;;
 	9999)
 		# master branch live ebuild
