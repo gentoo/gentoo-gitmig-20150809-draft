@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.05.ebuild,v 1.4 2012/03/26 21:47:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.05.ebuild,v 1.5 2012/05/28 08:47:21 chithanh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,8 @@ RDEPEND="sys-fs/mtools
 		dev-perl/Crypt-PasswdMD5
 		dev-perl/Digest-SHA1"
 DEPEND="${RDEPEND}
-	dev-lang/nasm"
+	dev-lang/nasm
+	<sys-kernel/linux-headers-3.4"
 
 S=${WORKDIR}/${P/_/-}
 

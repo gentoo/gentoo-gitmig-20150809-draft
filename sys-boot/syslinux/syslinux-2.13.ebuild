@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.13.ebuild,v 1.4 2010/04/04 21:51:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.13.ebuild,v 1.5 2012/05/28 08:47:21 chithanh Exp $
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
@@ -13,7 +13,8 @@ IUSE=""
 
 RDEPEND="sys-fs/mtools"
 DEPEND="${RDEPEND}
-	dev-lang/nasm"
+	dev-lang/nasm
+	<sys-kernel/linux-headers-3.4"
 
 # This ebuild is a departure from the old way of rebuilding everything in syslinux
 # This departure is necessary since hpa doesn't support the rebuilding of anything other

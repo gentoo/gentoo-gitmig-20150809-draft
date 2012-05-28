@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.84 2012/03/26 21:47:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.85 2012/05/28 08:47:21 chithanh Exp $
+
+*syslinux-4.06_pre4 (28 May 2012)
+
+  28 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +syslinux-4.06_pre4.ebuild, -syslinux-4.03.ebuild, -syslinux-4.04.ebuild,
+  syslinux-2.13.ebuild, syslinux-3.86.ebuild, syslinux-4.05.ebuild:
+  Add new prerelease for linux-headers-3.4 compatibility, bug #417133. Drop some
+  old versions.
 
   26 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   syslinux-4.05.ebuild:
