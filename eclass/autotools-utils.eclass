@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.50 2012/05/22 14:29:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.51 2012/05/28 07:34:43 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -111,14 +111,11 @@ esac
 # Note that dependencies are added for autoconf, automake and libtool only.
 # If your package needs one of the external tools listed above, you need to add
 # appropriate packages to DEPEND yourself.
-[[ ${AUTOTOOLS_AUTORECONF} ]] || _autotools_auto_dep=no
+[[ ${AUTOTOOLS_AUTORECONF} ]] || : ${AUTOTOOLS_AUTO_DEPEND:=no}
 
-AUTOTOOLS_AUTO_DEPEND=${_autotools_auto_dep} \
 inherit autotools eutils libtool
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
-
-unset _autotools_auto_dep
 
 # @ECLASS-VARIABLE: AUTOTOOLS_BUILD_DIR
 # @DEFAULT_UNSET

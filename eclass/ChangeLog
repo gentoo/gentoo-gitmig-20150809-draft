@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.270 2012/05/26 14:25:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.271 2012/05/28 07:34:43 mgorny Exp $
+
+  28 May 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  autotools.eclass no longer supports re-inheriting so we need to override
+  AUTOTOOLS_AUTO_DEPEND for good...
 
   26 May 2012; <swift@gentoo.org> selinux-policy-2.eclass:
   Introducing support for user-provided policies, fix loading logic to retry
