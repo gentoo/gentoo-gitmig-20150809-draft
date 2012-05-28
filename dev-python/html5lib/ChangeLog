@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.9 2012/05/19 21:45:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.10 2012/05/28 19:26:03 xarthisius Exp $
+
+  28 May 2012; Kacper Kowalik <xarthisius@gentoo.org> html5lib-0.95.ebuild:
+  Examples are no longer shipped with tarball. Fixes bug 417993 by Michał
+  Bartoszkiewicz <mbartoszkiewicz@gmail.com>
 
 *html5lib-0.95 (19 May 2012)
 
