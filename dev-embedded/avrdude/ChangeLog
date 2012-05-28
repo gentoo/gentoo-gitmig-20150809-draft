@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.53 2012/05/25 11:30:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.54 2012/05/28 18:05:32 maekke Exp $
+
+  28 May 2012; Markus Meier <maekke@gentoo.org> avrdude-5.11.1.ebuild:
+  arm stable, bug #414341
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> avrdude-5.11.1.ebuild:
   Stable for amd64, wrt bug #414341
