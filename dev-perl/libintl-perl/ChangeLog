@@ -1,9 +1,9 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.45 2012/05/28 17:29:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.46 2012/05/28 17:34:25 armin76 Exp $
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> libintl-perl-1.200.0.ebuild:
-  ia64/sparc stable wrt #415285
+  alpha/ia64/s390/sh/sparc stable wrt #415285
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libintl-perl-1.200.0.ebuild:
