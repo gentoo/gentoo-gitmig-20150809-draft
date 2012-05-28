@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.2.ebuild,v 1.1 2012/05/28 10:06:09 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.2.ebuild,v 1.2 2012/05/28 19:33:58 sera Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ JAVA_PKG_IUSE="doc source test"
 inherit eutils java-pkg-2 java-ant-2 versionator vcs-snapshot
 
 DESCRIPTION="An optimized Java interface to libffi"
-HOMEPAGE="http://github.com/jnr/jffi"
+HOMEPAGE="https://github.com/jnr/jffi"
 SRC_URI="https://github.com/jnr/jffi/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-3 )"
