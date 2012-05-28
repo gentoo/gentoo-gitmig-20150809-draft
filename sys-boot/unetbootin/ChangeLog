@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.78 2012/04/28 17:44:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.79 2012/05/28 13:47:30 ago Exp $
+
+  28 May 2012; Agostino Sarubbo <ago@gentoo.org> unetbootin-575.ebuild:
+  Stable for amd64, wrt bug #417977
 
 *unetbootin-575 (28 Apr 2012)
 
