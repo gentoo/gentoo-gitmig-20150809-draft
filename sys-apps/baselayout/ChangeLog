@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.525 2012/05/23 14:59:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.526 2012/05/28 18:08:06 maekke Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  28 May 2012; Markus Meier <maekke@gentoo.org> baselayout-2.1-r1.ebuild:
+  arm stable, bug #416655
 
   23 May 2012; Jeroen Roovers <jer@gentoo.org> baselayout-2.1-r1.ebuild:
   Stable for HPPA (bug #416655).
