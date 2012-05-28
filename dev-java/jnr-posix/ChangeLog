@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jnr-posix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.6 2012/05/09 17:09:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.7 2012/05/28 15:18:57 sera Exp $
+
+*jnr-posix-2.1 (28 May 2012)
+
+  28 May 2012; Ralph Sennhauser <sera@gentoo.org> +jnr-posix-2.1.ebuild:
+  Version bump. #417889
+  Disable one failing test. Upstream has ignore test failures enabled.
 
   09 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> jnr-posix-1.1.8.ebuild:
   x86 stable wrt bug #396305
