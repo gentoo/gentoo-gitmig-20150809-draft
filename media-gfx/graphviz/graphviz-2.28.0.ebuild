@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.2 2012/05/24 10:17:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.3 2012/05/28 21:35:21 sping Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -21,6 +21,7 @@ IUSE="cairo devil doc examples gs gtk gts java lasi nls perl python qt4 ruby svg
 RESTRICT="test"
 
 RDEPEND="
+	sys-libs/zlib
 	>=dev-libs/expat-2
 	>=dev-libs/glib-2.11.1
 	>=media-libs/fontconfig-2.3.95
