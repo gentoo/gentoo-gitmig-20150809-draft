@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.77 2012/04/22 14:49:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.78 2012/05/29 12:58:58 radhermit Exp $
+
+*roundcube-0.8_rc (29 May 2012)
+
+  29 May 2012; Tim Harder <radhermit@gentoo.org> +roundcube-0.8_rc.ebuild:
+  Version bump. Drop sqlite USE flag until sqlite3 is supported.
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> roundcube-0.7.2.ebuild:
   x86 stable, bug #412029
