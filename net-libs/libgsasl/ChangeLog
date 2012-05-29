@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.71 2012/05/27 17:39:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.72 2012/05/29 09:56:43 radhermit Exp $
+
+*libgsasl-1.8.0 (29 May 2012)
+
+  29 May 2012; Tim Harder <radhermit@gentoo.org> +libgsasl-1.8.0.ebuild,
+  metadata.xml:
+  Version bump. Add ntlm use flag and update to EAPI 4.
 
   27 May 2012; Markus Meier <maekke@gentoo.org> libgsasl-1.6.1.ebuild:
   arm stable, bug #416105
