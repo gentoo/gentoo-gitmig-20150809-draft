@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.24 2012/05/16 03:29:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.25 2012/05/29 15:45:47 aballier Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)
@@ -45,7 +45,7 @@ dev-lang/erlang sctp
 
 # Alexis Ballier <aballier@gentoo.org> (8 Aug 2008)
 # Linux only useflags for vlc
-media-video/vlc dc1394 ieee1394
+media-video/vlc dc1394 ieee1394 fbosd
 
 # Alexis Ballier <aballier@gentoo.org> (8 Aug 2008)
 # Depends on torque which is a linux only thing
