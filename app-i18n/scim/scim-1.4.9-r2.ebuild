@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r2.ebuild,v 1.2 2012/05/03 19:24:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r2.ebuild,v 1.3 2012/05/29 22:43:49 naota Exp $
 
 EAPI="3"
 inherit autotools eutils flag-o-matic multilib
@@ -45,7 +45,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.7-syslibltdl.patch"
 	# bug #283317
 	epatch "${FILESDIR}/${PN}-fix-disappeared-status-icon.patch"
-	rm "${S}"/src/ltdl.{cpp,h} || die
+	# remove m4/intltool.m4 to update it #417563
+	rm "${S}"/src/ltdl.{cpp,h} m4/intltool.m4 || die
 	eautoreconf
 }
 
