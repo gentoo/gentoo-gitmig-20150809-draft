@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/game-music-emu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.9 2011/07/07 03:48:31 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.10 2012/05/29 13:24:09 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org>
+  game-music-emu-0.5.5.ebuild:
+  keyword ~amd64-fbsd
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
   game-music-emu-0.5.5.ebuild:
