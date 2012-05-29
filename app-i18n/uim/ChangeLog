@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.245 2012/05/21 10:03:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.246 2012/05/29 22:38:10 naota Exp $
+
+  29 May 2012; Naohiro Aota <naota@gentoo.org> uim-1.7.3.ebuild:
+  Update Makefile.in.in. #417553
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> uim-1.7.3.ebuild:
   x86 stable wrt bug #413483

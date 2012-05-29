@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.3.ebuild,v 1.6 2012/05/21 10:03:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.3.ebuild,v 1.7 2012/05/29 22:38:10 naota Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -146,6 +146,8 @@ src_prepare() {
 
 	#./autogen.sh
 	AT_NO_RECURSIVE=1 eautoreconf
+	cp po/Makefile.in.in qt/chardict/po || die
+	cp po/Makefile.in.in qt4/chardict/po || die
 }
 
 src_configure() {
