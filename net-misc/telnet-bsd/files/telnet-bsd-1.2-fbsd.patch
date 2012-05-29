@@ -1,18 +1,20 @@
-diff -ur telnet-bsd-1.2/configure.in telnet-bsd-1.2-fbsd/configure.in
---- telnet-bsd-1.2/configure.in	2005-06-01 17:33:16.000000000 +0200
-+++ telnet-bsd-1.2-fbsd/configure.in	2005-08-13 12:14:20.000000000 +0200
-@@ -12,6 +12,8 @@
+diff --git a/configure.in b/configure.in
+index 1547e9b..eda5fb1 100644
+--- a/configure.in
++++ b/configure.in
+@@ -12,6 +12,8 @@ ALL_LINGUAS="de"
  AC_SUBST(PACKAGE)
  AC_SUBST(VERSION)
  
-+AC_CHECK_HEADERS([pty.h])
++AC_CHECK_HEADERS([pty.h utmp.h])
 +
  if test x"$ac_default_prefix" = x"/usr"
  then
  	if test x"${mandir}" = x'${prefix}/man'
-diff -ur telnet-bsd-1.2/telnet/commands.c telnet-bsd-1.2-fbsd/telnet/commands.c
---- telnet-bsd-1.2/telnet/commands.c	2005-06-02 10:12:51.000000000 +0200
-+++ telnet-bsd-1.2-fbsd/telnet/commands.c	2005-08-13 12:18:14.000000000 +0200
+diff --git a/telnet/commands.c b/telnet/commands.c
+index c0d349c..fa2cf8a 100644
+--- a/telnet/commands.c
++++ b/telnet/commands.c
 @@ -29,11 +29,13 @@
  
  #include "telnet_locl.h"
@@ -27,9 +29,10 @@ diff -ur telnet-bsd-1.2/telnet/commands.c telnet-bsd-1.2-fbsd/telnet/commands.c
  char *hostname;
  
  typedef int (*intrtn_t) __P ((int, char **));
-diff -ur telnet-bsd-1.2/telnet/ring.h telnet-bsd-1.2-fbsd/telnet/ring.h
---- telnet-bsd-1.2/telnet/ring.h	2004-02-13 22:52:55.000000000 +0100
-+++ telnet-bsd-1.2-fbsd/telnet/ring.h	2005-08-13 12:10:45.000000000 +0200
+diff --git a/telnet/ring.h b/telnet/ring.h
+index 66f7191..9ef8fb8 100644
+--- a/telnet/ring.h
++++ b/telnet/ring.h
 @@ -29,6 +29,7 @@
   */
  
@@ -38,10 +41,11 @@ diff -ur telnet-bsd-1.2/telnet/ring.h telnet-bsd-1.2-fbsd/telnet/ring.h
  #define P __P
  
  /*
-diff -ur telnet-bsd-1.2/telnetd/setproctitle.c telnet-bsd-1.2-fbsd/telnetd/setproctitle.c
---- telnet-bsd-1.2/telnetd/setproctitle.c	2004-02-13 23:18:07.000000000 +0100
-+++ telnet-bsd-1.2-fbsd/telnetd/setproctitle.c	2005-08-13 12:25:56.000000000 +0200
-@@ -72,6 +72,7 @@
+diff --git a/telnetd/setproctitle.c b/telnetd/setproctitle.c
+index f332277..b2adc92 100644
+--- a/telnetd/setproctitle.c
++++ b/telnetd/setproctitle.c
+@@ -72,6 +72,7 @@ char setproctitle_rcsid[] =
  static char **Argv = NULL;		/* pointer to argument vector */
  static char *LastArgv = NULL;		/* end of argv */
  static char Argv0[128];			/* program name */
@@ -49,7 +53,7 @@ diff -ur telnet-bsd-1.2/telnetd/setproctitle.c telnet-bsd-1.2-fbsd/telnetd/setpr
  
  void
  initsetproctitle(int argc, char **argv, char **envp)
-@@ -86,10 +87,10 @@
+@@ -86,10 +87,10 @@ initsetproctitle(int argc, char **argv, char **envp)
  
  	for (i = 0; envp[i] != NULL; i++)
  		continue;
@@ -63,20 +67,39 @@ diff -ur telnet-bsd-1.2/telnetd/setproctitle.c telnet-bsd-1.2-fbsd/telnetd/setpr
  
  	/*
  	**  Save start and extent of argv for setproctitle.
-diff -ur telnet-bsd-1.2/telnetd/sys_term.c telnet-bsd-1.2-fbsd/telnetd/sys_term.c
---- telnet-bsd-1.2/telnetd/sys_term.c	2005-06-01 13:42:23.000000000 +0200
-+++ telnet-bsd-1.2-fbsd/telnetd/sys_term.c	2005-08-13 12:14:30.000000000 +0200
-@@ -27,8 +27,13 @@
+diff --git a/telnetd/sys_term.c b/telnetd/sys_term.c
+index 1235428..6fcc601 100644
+--- a/telnetd/sys_term.c
++++ b/telnetd/sys_term.c
+@@ -27,8 +27,15 @@
   * SUCH DAMAGE.
   */
  
 +#include <config.h>
 +
 +#include <sys/types.h>
++#ifdef HAVE_UTMP_H 
  #include <utmp.h>
++#endif
 +#ifdef HAVE_PTY_H
  #include <pty.h>
 +#endif
  
  #include "telnetd.h"
  #include "pathnames.h"
+@@ -820,6 +827,7 @@ addarg (struct argv_stuff *avs, const char *val)
+ void
+ cleanup (int sig)
+ {
++#if !defined(__FreeBSD__) || __FreeBSD__ < 9
+   sigset_t sigset;
+   char *p;
+   (void) sig;
+@@ -847,6 +855,7 @@ cleanup (int sig)
+   *p = 'p';
+   chmod (line, 0666);
+   chown (line, 0, 0);
++#endif
+   shutdown (net, 2);
+   exit (1);
+ }

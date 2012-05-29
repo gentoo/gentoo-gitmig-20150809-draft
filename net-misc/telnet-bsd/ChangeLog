@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.45 2012/04/14 18:44:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.46 2012/05/29 07:34:33 naota Exp $
+
+  29 May 2012; Naohiro Aota <naota@gentoo.org> files/telnet-bsd-1.2-fbsd.patch:
+  Reworked freebsd patch to work on FreeBSD-9.0 #417509
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> telnet-bsd-1.2-r1.ebuild:
   Add ~amd64-linux keyword.
