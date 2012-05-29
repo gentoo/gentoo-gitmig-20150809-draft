@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.3.ebuild,v 1.2 2012/05/24 15:07:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.3.ebuild,v 1.3 2012/05/29 08:38:34 scarabeus Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -32,7 +32,7 @@ RDEPEND="${CDEPEND}
 
 DOCS="FAQ API_CHANGES"
 
-REQUIRED_USE="test ( examples )"
+REQUIRED_USE="test? ( examples )"
 
 src_prepare() {
 	# use /usr/share/data

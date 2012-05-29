@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.25 2012/05/24 13:03:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.26 2012/05/29 08:38:34 scarabeus Exp $
+
+  29 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> basemap-1.0.3.ebuild:
+  Fix typo in REQUIRED_USE. Thanks to tomjbe for the spotting.
 
 *basemap-1.0.3 (24 May 2012)
 
