@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.136 2012/05/28 16:08:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.137 2012/05/29 19:47:08 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> glib-perl-1.242.0.ebuild:
+  Marking glib-perl-1.242.0 ppc for bug 412995
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> glib-perl-1.242.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #412995
