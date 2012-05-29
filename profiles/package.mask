@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13800 2012/05/28 18:30:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13801 2012/05/29 13:08:48 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -513,10 +513,6 @@ kde-misc/kgtk
 # Testers and contributors are welcome, please visit the project page:
 # http://code.google.com/p/hardened-shadow/
 sys-apps/hardened-shadow
-
-# Tim Harder <radhermit@gentoo.org> (09 Mar 2012)
-# Masked for testing
-=www-apps/mediawiki-1.19*
 
 # Tim Harder <radhermit@gentoo.org> (09 Mar 2012)
 # Masked for testing
