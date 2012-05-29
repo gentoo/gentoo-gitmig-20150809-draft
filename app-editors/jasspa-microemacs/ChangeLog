@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jasspa-microemacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.51 2012/05/21 09:48:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.52 2012/05/29 19:15:08 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org>
+  jasspa-microemacs-20091011-r2.ebuild:
+  Marking jasspa-microemacs-20091011-r2 ppc for bug 415063
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   jasspa-microemacs-20091011-r2.ebuild:
