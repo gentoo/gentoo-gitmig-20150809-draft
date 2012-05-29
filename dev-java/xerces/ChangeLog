@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.120 2012/05/28 14:34:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.121 2012/05/29 15:25:14 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> xerces-2.11.0.ebuild:
+  Marking xerces-2.11.0 ppc64 for bug 280611
 
   28 May 2012; Johannes Huber <johu@gentoo.org> xerces-2.11.0.ebuild:
   Stable for x86, wrt bug #280611
