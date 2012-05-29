@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.94 2012/05/17 20:45:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.95 2012/05/29 12:56:18 aballier Exp $
 
 EAPI="4"
 
@@ -29,11 +29,11 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 IUSE="
-	aac aacplus alsa amr ass bindist bluray +bzip2 cdio celt cpudetection debug
-	doc +encode faac fontconfig frei0r gnutls gsm +hardcoded-tables
-	ieee1394 jack jpeg2k libv4l modplug mp3 network openal openssl oss pic
-	pulseaudio rtmp schroedinger sdl speex static-libs test theora threads
-	truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
+	aac aacplus alsa amr ass avresample bindist bluray +bzip2 cdio celt
+	cpudetection debug doc +encode faac fontconfig frei0r gnutls gsm
+	+hardcoded-tables ieee1394 jack jpeg2k libv4l modplug mp3 network openal
+	openssl oss pic pulseaudio rtmp schroedinger sdl speex static-libs test
+	theora threads truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -236,6 +236,9 @@ src_configure() {
 				;;
 		esac
 	fi
+
+	# avresample support for libav compatibility
+	use avresample && myconf="${myconf} --enable-avresample"
 
 	# Misc stuff
 	use hardcoded-tables && myconf="${myconf} --enable-hardcoded-tables"
