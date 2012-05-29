@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.381 2012/05/24 22:48:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.382 2012/05/29 08:16:03 polynomial-c Exp $
+
+*seamonkey-2.9.1-r2 (29 May 2012)
+
+  29 May 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -seamonkey-2.9.1-r1.ebuild, +seamonkey-2.9.1-r2.ebuild:
+  Revision bump to incorporate gcc-4.7 fixes and a better patch for
+  system-cairo support.
 
   24 May 2012; Mike Gilbert <floppym@gentoo.org> seamonkey-2.9.1-r1.ebuild,
   seamonkey-2.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1-r1.ebuild,v 1.3 2012/05/24 22:48:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.9.1-r2.ebuild,v 1.1 2012/05/29 08:16:03 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -27,7 +27,7 @@ fi
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCHFF="firefox-12.0-patches-0.3"
+PATCHFF="firefox-12.0-patches-0.5"
 PATCH="${PN}-2.7-patches-03"
 EMVER="1.4.1"
 
@@ -114,8 +114,6 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
 	popd &>/dev/null || die
-
-	epatch "${DISTDIR}"/${PN}-2.9-revert-system-cairo-breakage.patch.bz2
 
 	# Shell scripts sometimes contain DOS line endings; bug 391889
 	grep -rlZ --include="*.sh" $'\r$' . |
