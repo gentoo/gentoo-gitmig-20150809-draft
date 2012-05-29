@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-portuguese
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-portuguese/ChangeLog,v 1.48 2012/05/09 17:09:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-portuguese/ChangeLog,v 1.49 2012/05/29 18:07:07 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org>
+  -texlive-documentation-portuguese-2010.ebuild:
+  remove old
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   texlive-documentation-portuguese-2011.ebuild:
