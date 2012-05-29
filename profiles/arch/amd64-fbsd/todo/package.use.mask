@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.255 2012/05/29 16:12:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.256 2012/05/29 16:13:05 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -175,6 +175,9 @@ media-plugins/gst-plugins-meta pulseaudio
 # media-plugins/gst-plugins-taglib
 media-plugins/gst-plugins-meta taglib
 
+# >=media-libs/taglib-1.5
+media-video/vlc taglib
+
 # >=dev-cpp/clucene-0.9.21[-debug]
 app-misc/strigi clucene
 dev-libs/soprano clucene
@@ -204,6 +207,3 @@ media-video/vlc fluidsynth
 
 # media-libs/libshout
 media-video/vlc shout
-
-# >=media-libs/taglib-1.5
-media-video/vlc taglib
