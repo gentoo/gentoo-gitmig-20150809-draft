@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.4 2012/05/21 19:26:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.5 2012/05/29 17:43:13 jlec Exp $
 
 EAPI=3
 
@@ -299,6 +299,8 @@ src_install() {
 		fi
 	done
 
+	rm -f "${ED}"/usr/$(get_libdir)/*.la || die
+
 	sed \
 		-e 's:test "LD_LIBRARY_PATH":test "$LD_LIBRARY_PATH":g' \
 		-i "${S}"/include/ccp4.setup-sh || die
@@ -308,11 +310,6 @@ src_install() {
 	newins "${S}"/include/ccp4.setup-csh 40ccp4.setup.csh || die
 	newins "${S}"/include/ccp4.setup-sh 40ccp4.setup.sh || die
 	rm -f "${S}"/include/ccp4.setup*
-
-	# Fix libdir in all *.la files
-	sed -i \
-		-e "s:^\(libdir=\).*:\1\'${EPREFIX}/usr/$(get_libdir)\':g" \
-		"${ED}"/usr/$(get_libdir)/*.la || die
 
 	# Data
 	insinto /usr/share/ccp4/data/
