@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.447 2012/05/29 08:34:46 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.448 2012/05/29 12:37:53 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> openssh-6.0_p1.ebuild:
+  keyword ~amd64-fbsd
 
   29 May 2012; Richard Yao <ryao@gentoo.org>
   +files/openssh-6.0_p1-fix-freebsd-compilation.patch, openssh-6.0_p1.ebuild:
