@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.2-r1.ebuild,v 1.3 2012/05/23 13:09:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.2-r1.ebuild,v 1.4 2012/05/29 19:42:36 ranger Exp $
 
 EAPI=4
 CMAKE_MIN_VERSION="2.4.7"
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/stellarium/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 ~x86"
 IUSE="debug nls stars"
 RESTRICT="test"
 
