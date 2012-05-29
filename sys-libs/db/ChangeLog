@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.327 2012/05/24 05:34:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.328 2012/05/29 08:18:33 ryao Exp $
+
+  29 May 2012; Richard Yao <ryao@gentoo.org>
+  +files/db-4.8.30-rename-atomic-compare-exchange.patch, db-4.8.30.ebuild:
+  Rename __atomic_compare_exchange to avoid conflict with builtin, bug #417547,
+  Chainsaw approved
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> db-1.85-r3.ebuild,
   db-3.2.9_p2.ebuild, db-4.2.52_p5-r1.ebuild, db-4.2.52_p5.ebuild,
