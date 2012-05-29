@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.273 2012/05/21 09:43:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.274 2012/05/29 15:21:04 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> nano-2.3.1-r1.ebuild:
+  Marking nano-2.3.1-r1 ppc64 for bug 413897
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nano-2.3.1-r1.ebuild:
   x86 stable wrt bug #413897
