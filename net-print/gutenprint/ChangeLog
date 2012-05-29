@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gutenprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.37 2012/05/18 20:56:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.38 2012/05/29 12:39:43 radhermit Exp $
+
+  29 May 2012; Tim Harder <radhermit@gentoo.org> -gutenprint-5.2.6.ebuild:
+  Remove old.
 
   18 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   gutenprint-5.2.6.ebuild, gutenprint-5.2.7-r1.ebuild:
