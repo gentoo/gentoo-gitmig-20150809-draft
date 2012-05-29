@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/miglayout/miglayout-4.0.ebuild,v 1.2 2012/03/03 20:37:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/miglayout/miglayout-4.0.ebuild,v 1.3 2012/05/29 15:18:05 ago Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.migcalendar.com/miglayout/versions/${PV}/${P}-sources.jar"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="swt"
 
 COMMON_DEP="
