@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/hardinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/ChangeLog,v 1.3 2012/05/27 13:43:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/ChangeLog,v 1.4 2012/05/29 23:09:26 hasufell Exp $
+
+  29 May 2012; Julian Ospald <hasufell@gentoo.org>
+  hardinfo-0.5.2_pre20120527.ebuild,
+  +files/hardinfo-0.5.2_pre20120527-underlinking.patch:
+  fix underlinking wrt #418121
 
   27 May 2012; Julian Ospald <hasufell@gentoo.org>
   hardinfo-0.5.2_pre20120527.ebuild:
