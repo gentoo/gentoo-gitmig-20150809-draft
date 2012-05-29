@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.46 2012/05/23 08:45:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.47 2012/05/29 09:02:19 scarabeus Exp $
 
 EAPI=4
 
@@ -96,7 +96,7 @@ COMMON_DEPEND="
 	dev-libs/expat
 	>=dev-libs/glib-2.28
 	>=dev-libs/hyphen-2.7.1
-	>=dev-libs/icu-4.8.1.1
+	>=dev-libs/icu-49
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
 	>=dev-libs/redland-1.0.14[ssl]
@@ -196,6 +196,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-system-pyuno.patch"
 	"${FILESDIR}/${PN}-3.5-propagate-gb_FULLDEPS.patch"
 	"${FILESDIR}/${PN}-3.5-doublebuild.patch"
+	"${FILESDIR}/${PN}-3.5-hebrew-icu49.patch"
 )
 
 REQUIRED_USE="

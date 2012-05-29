@@ -1,6 +1,15 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.318 2012/05/27 15:30:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.319 2012/05/29 09:02:19 scarabeus Exp $
+
+*libreoffice-3.5.4.2-r1 (29 May 2012)
+
+  29 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libreoffice-3.5-hebrew-icu49.patch, +libreoffice-3.5.4.2-r1.ebuild,
+  -libreoffice-3.5.3.2.ebuild, -libreoffice-3.5.4.2.ebuild,
+  libreoffice-3.5.9999.ebuild:
+  Revision bump to 3.5.4.2-r1 to fix issues with hebrew. Depend on icu-49 hard.
+  Fixes bug#418095.
 
   27 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   files/generate_libreoffice_package.sh:

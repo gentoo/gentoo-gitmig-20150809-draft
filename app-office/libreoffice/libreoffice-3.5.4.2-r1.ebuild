@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.3.2.ebuild,v 1.9 2012/05/13 21:34:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.4.2-r1.ebuild,v 1.1 2012/05/29 09:02:19 scarabeus Exp $
 
 EAPI=4
 
@@ -70,7 +70,7 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding +cups dbus eds gnome +graphite gstreamer +gtk
+IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite gstreamer +gtk
 jemalloc kde mysql nlpsolver +nsplugin odk opengl pdfimport postgres svg test
 +vba +webdav +xmlsec"
 LICENSE="LGPL-3"
@@ -96,7 +96,7 @@ COMMON_DEPEND="
 	dev-libs/expat
 	>=dev-libs/glib-2.28
 	>=dev-libs/hyphen-2.7.1
-	>=dev-libs/icu-4.8.1.1
+	>=dev-libs/icu-49
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
 	>=dev-libs/redland-1.0.14[ssl]
@@ -192,11 +192,11 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-3.5.3-svtools-includes.patch"
 	# this can't be upstreamed :(
 	"${FILESDIR}/${PN}-system-pyuno.patch"
 	"${FILESDIR}/${PN}-3.5-propagate-gb_FULLDEPS.patch"
 	"${FILESDIR}/${PN}-3.5-doublebuild.patch"
+	"${FILESDIR}/${PN}-3.5-hebrew-icu49.patch"
 )
 
 REQUIRED_USE="
@@ -228,7 +228,7 @@ pkg_pretend() {
 	if use postgres; then
 		 pgslot=$(postgresql-config show)
 		 if [[ ${pgslot//.} < 90 ]] ; then
-		 	eerror "PostgreSQL slot must be set to 9.0 or higher."
+			eerror "PostgreSQL slot must be set to 9.0 or higher."
 			eerror "    postgresql-config set 9.0"
 			die "PostgreSQL slot is not set to 9.0 or higher."
 		 fi
@@ -303,6 +303,14 @@ src_prepare() {
 	fi
 
 	base_src_prepare
+
+	# please no debug in binfilter, it blows up things insanely
+	if use binfilter && ! use binfilterdebug ; then
+		for name in $(find "${S}/binfilter" -name makefile.mk) ; do
+			sed -i -e '1i\CFLAGS+= -g0' $name || die
+		done
+	fi
+
 	eautoreconf
 	# hack in the autogen.sh
 	touch autogen.lastrun
