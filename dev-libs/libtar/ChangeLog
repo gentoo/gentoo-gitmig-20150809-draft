@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.21 2012/03/02 21:07:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.22 2012/05/29 13:40:21 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> libtar-1.2.11-r4.ebuild:
+  keyword ~amd64-fbsd
 
   02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -libtar-1.2.11-r3.ebuild:
   old
