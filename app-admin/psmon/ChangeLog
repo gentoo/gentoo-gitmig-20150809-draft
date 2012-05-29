@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/psmon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.18 2011/12/18 20:02:02 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.19 2012/05/29 19:32:00 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> psmon-1.39.ebuild:
+  Marking psmon-1.39 ppc for bug 393853
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> psmon-1.39.ebuild:
   x86 stable wrt bug #393853

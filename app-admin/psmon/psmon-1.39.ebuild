@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.39.ebuild,v 1.3 2011/12/18 20:02:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/psmon-1.39.ebuild,v 1.4 2012/05/29 19:32:00 ranger Exp $
 
 inherit perl-app
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.psmon.com/"
 SRC_URI="http://www.psmon.com/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.0
