@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.13.ebuild,v 1.1 2012/05/28 21:58:14 tristan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.13.ebuild,v 1.2 2012/05/29 11:32:46 tristan Exp $
 
 EAPI=4
 
@@ -22,11 +22,12 @@ RESTRICT="test"
 RDEPEND="dev-python/pygtk
 	dev-python/pycrypto
 	dev-python/gconf-python
-	dev-python/gnome-vfs-python
-	dev-python/libbonobo-python
 	dev-python/libgnome-python
 	sys-libs/cracklib[python]
-	applet? ( dev-python/gnome-applets-python )"
+	applet? (
+		dev-python/gnome-applets-python
+		dev-python/libbonobo-python
+	)"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.23 2012/05/28 21:58:14 tristan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.24 2012/05/29 11:32:46 tristan Exp $
+
+  29 May 2012; Tristan Heaven <tristan@gentoo.org> revelation-0.4.13.ebuild:
+  Fix dependencies as pointed out by Mikel Olasagasti
 
 *revelation-0.4.13 (28 May 2012)
 
