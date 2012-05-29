@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gmt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.25 2012/05/12 12:14:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.26 2012/05/29 11:51:20 scarabeus Exp $
+
+  29 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -gmt-4.0.ebuild,
+  gmt-4.5.6.ebuild:
+  Stabilise 4.5.6 on amd64 and x86 and remove older.
 
   12 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gmt-4.5.6.ebuild:
   Fix double prefix install

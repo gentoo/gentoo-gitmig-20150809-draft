@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.6.ebuild,v 1.4 2012/05/12 12:14:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.6.ebuild,v 1.5 2012/05/29 11:51:20 scarabeus Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://gmt/GMT${PV}_src.tar.bz2
 
 LICENSE="GPL-2 gmttria? ( Artistic )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc debug gmtfull gmthigh gmttria +metric mex +netcdf octave ps"
 
 RDEPEND="
@@ -45,7 +45,7 @@ REQUIRED_USE="
 MAKEOPTS+=" -j1"
 
 src_prepare() {
-	mv -f "${WORKDIR}/share/"*  "${S}/share/" || die "Moving sources failed."
+	mv -f "${WORKDIR}/share/"* "${S}/share/" || die
 
 	epatch \
 		"${FILESDIR}/${PN}-4.5.0-no-strip.patch" \
