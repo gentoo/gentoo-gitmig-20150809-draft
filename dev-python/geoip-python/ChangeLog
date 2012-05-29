@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/geoip-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.26 2012/05/18 06:10:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.27 2012/05/29 19:56:43 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> geoip-python-1.2.7.ebuild:
+  Marking geoip-python-1.2.7 ppc for bug 415867
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> geoip-python-1.2.7.ebuild:
   marked x86 per bug 415867
