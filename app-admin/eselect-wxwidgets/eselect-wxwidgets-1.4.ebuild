@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-1.4.ebuild,v 1.7 2011/01/12 13:40:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/eselect-wxwidgets-1.4.ebuild,v 1.8 2012/05/29 14:26:28 aballier Exp $
 
 WXWRAP_VER=1.3
 WXESELECT_VER=1.4
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/wxwidgets.eselect-${WXESELECT_VER}.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND="!<=x11-libs/wxGTK-2.6.4.0-r2"
