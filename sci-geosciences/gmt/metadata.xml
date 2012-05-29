@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>sci-geosciences</herd>
 <use>
+  <flag name='gdal'>Enable <pkg>sci-libs/gdal</pkg> library support</flag>
   <flag name='gmtfull'>Full resolution bathymetry database</flag>
   <flag name='gmthigh'>Add high resolution bathymetry database</flag>
   <flag name='gmttria'>Non GNU triangulation method, more efficient</flag>
