@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.61 2012/03/07 04:08:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.62 2012/05/29 17:01:06 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org>
+  htmltidy-20090325-r1.ebuild:
+  keyword ~amd64-fbsd
 
   07 Mar 2012; Jeremy Olexa <darkside@gentoo.org> htmltidy-20090325-r1.ebuild:
   add ~x64-macos, bug 395011
