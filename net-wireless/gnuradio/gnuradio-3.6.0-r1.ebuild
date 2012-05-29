@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.0.ebuild,v 1.3 2012/05/06 13:38:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.0-r1.ebuild,v 1.1 2012/05/29 23:05:02 chithanh Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -102,6 +102,9 @@ src_install() {
 	cmake-utils_src_install
 
 	python_clean_installation_image -q
+
+	# Remove bad shebangs that creep back in during install
+	sed -i '\|#!/usr/bin/python|d' "${ED}"/usr/bin/* || die
 
 	# Install examples to /usr/share/doc/$PF
 	if use examples ; then
