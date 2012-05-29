@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.120 2012/03/08 14:53:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.121 2012/05/29 13:32:31 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> libebml-1.2.2.ebuild:
+  keyword ~amd64-fbsd
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> libebml-1.2.2.ebuild:
   Marking libebml-1.2.2 ppc64 for bug 400013
