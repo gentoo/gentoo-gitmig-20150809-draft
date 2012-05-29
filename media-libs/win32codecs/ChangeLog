@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/win32codecs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.54 2010/01/08 06:47:49 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.55 2012/05/29 15:45:01 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org>
+  win32codecs-20071007-r4.ebuild:
+  keyword ~amd64-fbsd
 
   08 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   win32codecs-20071007-r4.ebuild:
