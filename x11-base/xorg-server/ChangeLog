@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.651 2012/05/29 13:29:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.652 2012/05/29 23:46:01 chithanh Exp $
+
+*xorg-server-1.12.2 (29 May 2012)
+
+  29 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xorg-server-1.12-xf86edidmodes-array-bounds.patch,
+  +xorg-server-1.12.2.ebuild, -xorg-server-1.12.1.902.ebuild:
+  Version bump. Add patch for bug #402285.
 
 *xorg-server-1.10.6-r1 (29 May 2012)
 
