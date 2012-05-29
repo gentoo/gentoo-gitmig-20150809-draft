@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.71 2012/05/29 15:35:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.72 2012/05/29 19:12:17 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> ncmpc-0.20.ebuild:
+  Marking ncmpc-0.20 ppc for bug 417733
 
   29 May 2012; Brent Baude <ranger@gentoo.org> ncmpc-0.20.ebuild:
   Marking ncmpc-0.20 ppc64 for bug 417733
