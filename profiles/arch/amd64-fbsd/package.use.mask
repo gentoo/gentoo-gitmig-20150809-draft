@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.6 2012/05/17 14:00:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.7 2012/05/29 14:09:41 aballier Exp $
 
 # nvidia-driver uses acpid
 x11-drivers/nvidia-drivers acpi
@@ -15,3 +15,7 @@ x11-drivers/nvidia-drivers multilib
 >=media-libs/gst-plugins-good-0.10.28 -orc
 >=media-libs/gst-plugins-bad-0.10.21 -orc
 >=media-sound/pulseaudio-1.0 -orc
+
+# requires nvidia-cg-toolkit which is not available on bsd
+# see http://developer.nvidia.com/cg-toolkit-download
+media-libs/libprojectm video_cards_nvidia
