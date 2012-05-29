@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.7 2012/05/10 04:05:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.8 2012/05/29 13:14:17 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> libaacs-0.4.0.ebuild:
+  keyword ~amd64-fbsd
 
 *libaacs-0.4.0 (10 May 2012)
 

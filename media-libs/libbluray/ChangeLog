@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.29 2012/05/05 08:02:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.30 2012/05/29 13:14:34 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> libbluray-0.2.2.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libbluray-0.2.1-r1.ebuild,
   libbluray-0.2.2.ebuild, libbluray-9999.ebuild:
