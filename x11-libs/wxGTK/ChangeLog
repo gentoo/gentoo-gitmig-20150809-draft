@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.289 2012/05/05 03:52:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.290 2012/05/29 14:37:44 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> wxGTK-2.8.12.1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wxGTK-2.8.11.0.ebuild,
   wxGTK-2.8.12.0.ebuild, wxGTK-2.8.12.1.ebuild, wxGTK-2.9.1.1.ebuild,
