@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.46 2011/04/14 14:47:25 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.47 2012/05/29 17:05:57 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> cdb-0.75-r3.ebuild:
+  keyword ~amd64-fbsd
 
   14 Apr 2011; Jonathan Callen <abcd@gentoo.org> cdb-0.75-r3.ebuild:
   Add prefix support, bump EAPI to 3, add prefix keywords
