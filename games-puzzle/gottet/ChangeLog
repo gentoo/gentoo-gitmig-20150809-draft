@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gottet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gottet/ChangeLog,v 1.5 2012/04/20 15:00:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gottet/ChangeLog,v 1.6 2012/05/29 15:19:51 ago Exp $
+
+  29 May 2012; Agostino Sarubbo <ago@gentoo.org> gottet-1.0.4.ebuild:
+  Stable for amd64, wrt bug #418087
 
   20 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> gottet-1.0.3.ebuild,
   gottet-1.0.4.ebuild:
