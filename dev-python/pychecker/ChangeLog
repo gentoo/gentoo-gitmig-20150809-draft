@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pychecker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.54 2012/05/08 16:01:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.55 2012/05/29 19:50:00 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> pychecker-0.8.19.ebuild:
+  Marking pychecker-0.8.19 ppc for bug 414881
 
   08 May 2012; Brent Baude <ranger@gentoo.org> pychecker-0.8.19.ebuild:
   Marking pychecker-0.8.19 ppc64 for bug 414881
