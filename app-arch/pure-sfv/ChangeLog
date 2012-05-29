@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pure-sfv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.16 2011/12/18 19:55:07 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.17 2012/05/29 19:28:27 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> pure-sfv-0.3-r1.ebuild:
+  Marking pure-sfv-0.3-r1 ppc for bug 393755
 
   18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> pure-sfv-0.3-r1.ebuild:
   Stable for AMD64, wrt bug #393755
