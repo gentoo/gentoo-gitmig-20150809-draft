@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.115.ebuild,v 1.3 2010/03/07 12:49:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.115.ebuild,v 1.4 2012/05/29 17:55:43 jlec Exp $
 
 EAPI="3"
 
@@ -89,8 +89,8 @@ src_install() {
 
 	insinto /usr/share/${PN}/
 	doins lib/{print-prolog.ps,Sparky} || die
-	dosym ../../share/${PN}/print-prolog.ps /usr/$(get_libdir)/${PN}/
-	dosym ../../share/${PN}/Sparky /usr/$(get_libdir)/${PN}/
+	dosym ../../share/${PN}/print-prolog.ps /usr/$(get_libdir)/${PN}/print-prolog.ps
+	dosym ../../share/${PN}/Sparky /usr/$(get_libdir)/${PN}/Sparky
 
 	dohtml -r manual/* || die
 	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/${PN}/manual
