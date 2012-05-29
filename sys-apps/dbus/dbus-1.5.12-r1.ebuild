@@ -1,24 +1,25 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.20.ebuild,v 1.11 2012/05/29 15:21:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.5.12-r1.ebuild,v 1.1 2012/05/29 15:21:15 ssuominen Exp $
 
 EAPI=4
-inherit autotools eutils multilib flag-o-matic python systemd virtualx user
+inherit autotools eutils linux-info flag-o-matic python systemd virtualx user
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
 SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
-LICENSE="|| ( GPL-2 AFL-2.1 )"
+LICENSE="|| ( AFL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="debug doc selinux static-libs test X"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+IUSE="debug doc selinux static-libs systemd test X"
 
 RDEPEND=">=dev-libs/expat-2
 	selinux? (
 		sec-policy/selinux-dbus
 		sys-libs/libselinux
 		)
+	systemd? ( >=sys-apps/systemd-32 )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXt
@@ -44,23 +45,25 @@ pkg_setup() {
 	enewgroup messagebus
 	enewuser messagebus -1 -1 -1 messagebus
 
-	# FIXME: Test suite fails with Python 3.2 (last checked: 1.4.20)
 	if use test; then
 		python_set_active_version 2
 		python_pkg_setup
 	fi
+
+	if use kernel_linux; then
+		CONFIG_CHECK="~EPOLL"
+		linux-info_pkg_setup
+	fi
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-selinux-when-dropping-capabilities-only-include-AUDI.patch
+
 	# Tests were restricted because of this
 	sed -i \
 		-e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
 		-e '/"dispatch"/d' \
 		bus/test-main.c || die
-
-	epatch \
-		"${FILESDIR}"/${PN}-1.4.0-asneeded.patch \
-		"${FILESDIR}"/${PN}-1.5.12-selinux-when-dropping-capabilities-only-include-AUDI.patch
 
 	# required for asneeded patch but also for bug 263909, cross-compile so
 	# don't remove eautoreconf
@@ -76,44 +79,45 @@ src_configure() {
 	# libaudit is *only* used in DBus wrt SELinux support, so disable it, if
 	# not on an SELinux profile.
 	myconf=(
-		--disable-asserts
-		--disable-checks
-		--disable-embedded-tests
-		--disable-modular-tests
-		$(use_with X x)
-		$(use_enable debug verbose-mode)
-		$(use_enable kernel_linux inotify)
-		$(use_enable kernel_FreeBSD kqueue)
-		$(use_enable selinux)
-		$(use_enable selinux libaudit)
-		$(use_enable static-libs static)
-		--enable-shared
-		--with-xml=expat
-		--with-system-pid-file=/var/run/dbus.pid
-		--with-system-socket=/var/run/dbus/system_bus_socket
-		--with-session-socket-dir=/tmp
-		--with-dbus-user=messagebus
-		"$(systemd_with_unitdir)"
 		--localstatedir=/var
 		--docdir=/usr/share/doc/${PF}
 		--htmldir=/usr/share/doc/${PF}/html
+		$(use_enable static-libs static)
+		$(use_enable debug verbose-mode)
+		--disable-asserts
+		--disable-checks
+		$(use_enable selinux)
+		$(use_enable selinux libaudit)
+		$(use_enable kernel_linux inotify)
+		$(use_enable kernel_FreeBSD kqueue)
+		$(use_enable systemd)
+		--disable-embedded-tests
+		--disable-modular-tests
+		$(use_enable debug stats)
+		--with-xml=expat
+		--with-session-socket-dir=/tmp
+		--with-system-pid-file=/var/run/dbus.pid
+		--with-system-socket=/var/run/dbus/system_bus_socket
+		--with-dbus-user=messagebus
+		$(use_with X x)
+		"$(systemd_with_unitdir)"
 		)
 
 	mkdir "${BD}"
 	cd "${BD}"
 	einfo "Running configure in ${BD}"
 	ECONF_SOURCE="${S}" econf "${myconf[@]}" \
-		$(use_enable doc doxygen-docs) \
-		$(use_enable doc xml-docs)
+		$(use_enable doc xml-docs) \
+		$(use_enable doc doxygen-docs)
 
 	if use test; then
 		mkdir "${TBD}"
 		cd "${TBD}"
 		einfo "Running configure in ${TBD}"
 		ECONF_SOURCE="${S}" econf "${myconf[@]}" \
+			$(use_enable test asserts) \
 			$(use_enable test checks) \
 			$(use_enable test embedded-tests) \
-			$(use_enable test asserts) \
 			$(has_version dev-libs/dbus-glib && echo --enable-modular-tests)
 	fi
 }
@@ -152,9 +156,9 @@ src_install() {
 
 	# needs to exist for dbus sessions to launch
 	keepdir /usr/share/dbus-1/services
-	keepdir /etc/dbus-1/system.d
-	keepdir /etc/dbus-1/session.d
-	keepdir /var/lib/dbus # See pkg_postinst() for symlink creation
+	keepdir /etc/dbus-1/{session,system}.d
+	# machine-id symlink from pkg_postinst()
+	keepdir /var/lib/dbus
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README doc/TODO
 
