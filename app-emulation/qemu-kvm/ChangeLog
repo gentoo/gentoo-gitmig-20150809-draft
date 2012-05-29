@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.119 2012/05/25 14:07:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.120 2012/05/29 20:10:01 cardoe Exp $
+
+*qemu-kvm-1.0.1-r1 (29 May 2012)
+
+  29 May 2012; Doug Goldstein <cardoe@gentoo.org> +qemu-kvm-1.0.1-r1.ebuild,
+  +files/qemu-kvm-1.0.1-VERSION.patch:
+  Fix the version number reported by qemu-kvm to be 1.0.1 instead of 1.0,1 to
+  fix bug #418035
 
   25 May 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-kvm-9999.ebuild:
   Drop '--disable-darwin-user' from configure params. Upstream does not export
