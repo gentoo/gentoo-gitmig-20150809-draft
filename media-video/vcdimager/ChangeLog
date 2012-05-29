@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.55 2012/05/05 08:58:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.56 2012/05/29 15:06:19 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> vcdimager-0.7.23-r1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> vcdimager-0.7.23.ebuild,
   vcdimager-0.7.23-r1.ebuild:
