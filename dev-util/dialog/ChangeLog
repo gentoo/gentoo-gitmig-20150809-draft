@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.154 2012/05/27 08:37:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.155 2012/05/29 15:41:03 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> dialog-1.1.20120215.ebuild:
+  Marking dialog-1.1.20120215 ppc64 for bug 417669
 
   27 May 2012; Markos Chandras <hwoarang@gentoo.org> dialog-1.1.20120215.ebuild:
   Stable on amd64 wrt bug #417669
