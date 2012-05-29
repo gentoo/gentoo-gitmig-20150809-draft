@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.83 2012/05/23 15:10:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.84 2012/05/29 13:38:53 xmw Exp $
+
+*radvd-1.8.5-r1 (28 May 2012)
+
+  28 May 2012; Michael Weber <xmw@gentoo.org> +radvd-1.8.5-r1.ebuild,
+  +files/radvd-1.8.5.init:
+  Revbump for new initd file (bug 417975, thanks Florian Steinel)
 
   23 May 2012; Jeroen Roovers <jer@gentoo.org> radvd-1.8.5.ebuild:
   Stable for HPPA (bug #412587).
