@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.42 2012/05/10 19:01:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.43 2012/05/29 16:39:52 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org>
+  lensfun-0.2.5_p153-r1.ebuild:
+  keyword ~amd64-fbsd
 
 *lensfun-0.2.5_p153-r1 (10 May 2012)
 
