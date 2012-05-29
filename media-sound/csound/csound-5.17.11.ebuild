@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.17.6.ebuild,v 1.4 2012/05/29 12:02:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.17.11.ebuild,v 1.1 2012/05/29 12:02:17 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+alsa beats chua csoundac +cxx debug double-precision dssi examples fltk +fluidsynth
 +image jack java keyboard linear lua luajit nls osc openmp portaudio portmidi pulseaudio
-python samples static-libs stk tcl test +threads +utils vim-syntax vst"
+python samples static-libs stk tcl test +threads +utils vim-syntax"
 
 LANGS=" de en_GB en_US es_CO fr it ro ru"
 IUSE+="${LANGS// / linguas_}"
@@ -27,6 +27,7 @@ IUSE+="${LANGS// / linguas_}"
 RDEPEND=">=media-libs/libsndfile-1.0.16
 	alsa? ( media-libs/alsa-lib )
 	csoundac? ( x11-libs/fltk:1[threads?]
+		dev-cpp/eigen:3
 		dev-libs/boost
 		=dev-lang/python-2* )
 	dssi? ( media-libs/dssi
@@ -49,26 +50,21 @@ RDEPEND=">=media-libs/libsndfile-1.0.16
 	stk? ( media-libs/stk )
 	tcl? ( >=dev-lang/tcl-8.5
 		>=dev-lang/tk-8.5 )
-	utils? ( !media-sound/snd )
-	vst? ( x11-libs/fltk:1[threads?]
-		dev-libs/boost
-		=dev-lang/python-2* )"
+	utils? ( !media-sound/snd )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/yacc
 	chua? ( dev-libs/boost )
 	csoundac? ( dev-lang/swig )
 	nls? ( sys-devel/gettext )
-	test? ( =dev-lang/python-2* )
-	vst? ( dev-lang/swig )"
+	test? ( =dev-lang/python-2* )"
 
-REQUIRED_USE="vst? ( csoundac )
-	java? ( cxx )
+REQUIRED_USE="java? ( cxx )
 	linear? ( double-precision )
 	lua? ( cxx )
 	python? ( cxx )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if use openmp ; then
@@ -77,14 +73,15 @@ pkg_setup() {
 
 	if use python || use test ; then
 		python_set_active_version 2
-		python_pkg_setup
 	fi
+	use python && python_pkg_setup
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.16.6-tests.patch
-	epatch "${FILESDIR}"/${P}-fltk.patch
-	epatch "${FILESDIR}"/${P}-porttime-in-portmidi.patch
+	epatch "${FILESDIR}"/${PN}-5.17.6-fltk.patch
+	epatch "${FILESDIR}"/${PN}-5.17.6-porttime-in-portmidi.patch
+	epatch "${FILESDIR}"/${P}-cmake.patch
 
 	sed -i -e "s:^\(csoundExecutable =\).*:\1 \"${WORKDIR}/${P}_build/csound\":" \
 		tests/test.py || die
@@ -94,14 +91,18 @@ src_prepare() {
 	if [[ $(get_libdir) == "lib64" ]] ; then
 		sed -i -e '/set(LIBRARY_INSTALL_DIR/s/lib/lib64/' CMakeLists.txt || die
 	fi
+
+	if use python ; then
+		sed -i -e "/set(PYTHON_MODULE_INSTALL_DIR/s#\${LIBRARY_INSTALL_DIR}#$(python_get_sitedir)#" CMakeLists.txt || die
+	fi
 }
 
 src_configure() {
 	local myconf
 
 	if use csoundac ; then
-		use python && myconf+=" -DBUILD_CSOUND_AC_PYTHON_INTERFACE=ON"
-		use lua && myconf+=" -DBUILD_CSOUND_AC_LUA_INTERFACE=ON"
+		myconf+=" -DBUILD_CSOUND_AC_PYTHON_INTERFACE=$(usex python ON OFF)"
+		myconf+=" -DBUILD_CSOUND_AC_LUA_INTERFACE=$(usex lua ON OFF)"
 	fi
 
 	local mycmakeargs=(
