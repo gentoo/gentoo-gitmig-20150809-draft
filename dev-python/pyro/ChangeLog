@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.62 2012/05/21 12:29:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.63 2012/05/29 20:03:06 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> pyro-3.16.ebuild:
+  Marking pyro-3.16 ppc for bug 416255
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyro-3.16.ebuild:
   x86 stable wrt bug #416255
