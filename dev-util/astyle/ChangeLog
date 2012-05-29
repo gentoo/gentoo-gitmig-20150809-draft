@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/astyle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.42 2012/05/25 11:34:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.43 2012/05/29 19:39:29 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> astyle-2.02.1.ebuild:
+  Marking astyle-2.02.1 ppc for bug 391991
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> astyle-2.02.1.ebuild:
   Stable for amd64, wrt bug #391991
@@ -99,7 +102,7 @@
   Dropped ppc-macos keyword, see you in prefix
 
   14 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> astyle-1.21.ebuild:
-  Fix $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.42 2012/05/25 11:34:26 ago Exp $ string.
+  Fix $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.43 2012/05/29 19:39:29 ranger Exp $ string.
 
 *astyle-1.21 (07 Oct 2007)
 
