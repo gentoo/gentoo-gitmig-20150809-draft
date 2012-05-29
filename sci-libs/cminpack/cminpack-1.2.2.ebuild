@@ -1,14 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cminpack/cminpack-1.1.3.ebuild,v 1.1 2011/06/09 20:52:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cminpack/cminpack-1.2.2.ebuild,v 1.1 2012/05/29 18:40:07 bicatali Exp $
 
 EAPI=4
 
 inherit cmake-utils
 
 DESCRIPTION="C implementation of the MINPACK nonlinear optimization library"
-HOMEPAGE="http://devernay.free.fr/hacks/cminpack/cminpack.html"
-SRC_URI="http://devernay.free.fr/hacks/cminpack/${P}.tar.gz"
+HOMEPAGE="http://devernay.free.fr/hacks/cminpack/"
+SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
