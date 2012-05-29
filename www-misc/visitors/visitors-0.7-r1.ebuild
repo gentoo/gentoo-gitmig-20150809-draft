@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/visitors-0.7-r1.ebuild,v 1.3 2011/12/21 08:53:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/visitors-0.7-r1.ebuild,v 1.4 2012/05/29 19:31:07 ranger Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.hping.org/visitors/"
 SRC_URI="http://www.hping.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 S="${WORKDIR}/${P/-/_}"
