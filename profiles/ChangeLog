@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6606 2012/05/28 18:30:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6607 2012/05/29 06:43:52 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 May 2012; Sebastian Pipping <sping@gentoo.org> desc/linguas.desc:
+  Add Yiddish locale for media-gfx/gimp (bug #418053)
 
   28 May 2012; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Drop mask on dev-python/xsv Removed wrt #396497

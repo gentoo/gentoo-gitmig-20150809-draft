@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.59 2012/03/29 15:44:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.60 2012/05/29 06:43:52 sping Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -196,6 +196,7 @@ ve - Venda locale
 vi - Vietnamese locale
 wa - Walloon locale
 xh - Xhosa locale
+yi - Yiddish locale
 zh - Chinese locale
 zh_CN - Chinese locale for Peoples Republic of China
 zh_HK - Chinese locale for Hong Kong
