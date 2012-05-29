@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.1.ebuild,v 1.7 2012/02/20 11:12:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.3.ebuild,v 1.1 2012/05/29 20:04:06 xarthisius Exp $
 
 EAPI=4
 CMAKE_MIN_VERSION="2.4.7"
 
-inherit cmake-utils eutils
+inherit cmake-utils eutils flag-o-matic
 
 DESCRIPTION="Stellarium renders 3D photo-realistic skies in real time."
 HOMEPAGE="http://www.stellarium.org/"
@@ -20,8 +20,8 @@ SRC_URI="mirror://sourceforge/stellarium/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
-IUSE="nls stars"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE="debug nls stars"
 RESTRICT="test"
 
 RDEPEND="virtual/opengl
@@ -51,6 +51,7 @@ done
 src_prepare() {
 	sed -e "/af ar az/d" -e "/GETTEXT_CREATE_TRANSLATIONS/a \ ${LINGUAS}" \
 		-i po/stellarium{,-skycultures}/CMakeLists.txt || die #403647
+	use debug || append-cppflags -DQT_NO_DEBUG #415769
 }
 
 src_configure() {
