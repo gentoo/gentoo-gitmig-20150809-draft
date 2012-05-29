@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/uemacs-pk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.16 2012/05/26 21:14:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.17 2012/05/29 07:42:10 naota Exp $
+
+  29 May 2012; Naohiro Aota <naota@gentoo.org>
+  uemacs-pk-4.0.15_p20120526.ebuild:
+  Add ~x86-fbsd. #387135
 
 *uemacs-pk-4.0.15_p20120526 (26 May 2012)
 
