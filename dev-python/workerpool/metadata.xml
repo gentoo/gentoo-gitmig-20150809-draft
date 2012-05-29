@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-    <herd>python</herd>
-    <maintainer><email>tampakrap@gentoo.org</email></maintainer>
-    <maintainer>
-        <email>johneed@hotmail.com,della5@iinet.com.au</email>
-        <name>Ian Delaney aka idella4 proxy maintainer</name>
-    </maintainer>
-    <maintainer>
-        <email>jtriley@mit.edu</email>
-        <name>Justin Riley</name>
-    </maintainer>
+   <herd>python</herd>
+   <maintainer>
+	   <email>tampakrap@gentoo.org</email>
+   </maintainer>
+   <maintainer>
+	  <email>johneed@hotmail.com</email>
+	  <name>Ian 'idella4' Delaney</name>
+   </maintainer>
+   <maintainer>
+	  <email>jtriley@mit.edu</email>
+      <name>Justin Riley</name>
+   </maintainer>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-pipeline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.1 2012/05/20 12:15:46 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.2 2012/05/29 12:40:13 xarthisius Exp $
+
+  29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Fix metadata.xml to have only bugzilla related email for proxy maintainer
 
 *django-pipeline-1.2.6 (20 May 2012)
 

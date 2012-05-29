@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-evolution
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/ChangeLog,v 1.2 2012/05/23 18:58:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/ChangeLog,v 1.3 2012/05/29 12:34:14 xarthisius Exp $
+
+  29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Fix metadata.xml to have only bugzilla related email for proxy maintainer
 
   23 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   django-evolution-0.6.7.ebuild:
