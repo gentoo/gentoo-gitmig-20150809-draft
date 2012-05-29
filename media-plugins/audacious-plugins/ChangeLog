@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.248 2012/05/27 21:06:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.249 2012/05/29 14:44:13 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org>
+  audacious-plugins-3.2.2-r1.ebuild:
+  Marking audacious-plugins-3.2.2-r1 ppc64 for bug 417143
 
   27 May 2012; Jeff Horelick <jdhore@gentoo.org>
   -audacious-plugins-3.2.1.ebuild, -audacious-plugins-3.2.ebuild:
