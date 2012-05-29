@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.1.ebuild,v 1.1 2012/04/28 17:45:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.1.ebuild,v 1.2 2012/05/29 15:42:30 jlec Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="http://www.pyside.org/files/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="X declarative help multimedia kde opengl phonon script scripttools sql svg test webkit xmlpatterns"
 
 REQUIRED_USE="

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.32 2012/05/13 14:10:25 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.33 2012/05/29 15:42:30 jlec Exp $
+
+  29 May 2012; Justin Lecher <jlec@gentoo.org> pyside-1.1.1.ebuild:
+  Added ~-linux keywords, tested by me
 
   13 May 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Fix kde USE flag description (media-libs/phonon vs. media-sound/phonon).
