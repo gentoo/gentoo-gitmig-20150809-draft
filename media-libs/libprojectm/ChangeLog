@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.39 2012/05/08 07:26:38 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.40 2012/05/29 14:10:14 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org>
+  libprojectm-2.0.1-r1.ebuild:
+  keyword ~amd64-fbsd
 
   08 May 2012; Andreas Schuerch <nativemad@gentoo.org>
   libprojectm-2.0.1-r1.ebuild:
