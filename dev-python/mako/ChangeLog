@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.52 2012/05/18 05:58:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.53 2012/05/29 20:00:23 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> mako-0.7.0.ebuild:
+  Marking mako-0.7.0 ppc for bug 415883
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> mako-0.7.0.ebuild:
   marked x86 per bug 415883
