@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.4 2012/05/13 15:18:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.5 2012/05/29 10:34:48 gienah Exp $
+
+*glib-0.12.3.1 (29 May 2012)
+
+  29 May 2012; Mark Wright <gienah@gentoo.org> +glib-0.12.3.1.ebuild:
+  Bump glib to 0.13.3.1
 
 *glib-0.12.3 (13 May 2012)
 
