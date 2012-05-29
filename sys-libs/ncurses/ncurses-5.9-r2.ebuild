@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.8 2012/05/21 09:43:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.9 2012/05/29 08:25:43 ryao Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic toolchain-funcs
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-5.8-gfbsd.patch
 	epatch "${FILESDIR}"/${PN}-5.7-nongnu.patch
 	epatch "${FILESDIR}"/${PN}-5.9-rxvt-unicode-9.15.patch #192083 #383871
+	epatch "${FILESDIR}"/${PN}-5.9-fix-clang-build.patch #417763
 	sed -i \
 		-e '/^PKG_CONFIG_LIBDIR/s:=.*:=$(libdir)/pkgconfig:' \
 		misc/Makefile.in || die
@@ -147,6 +148,8 @@ src_install() {
 		do
 			local termfile=$(find "${D}"/usr/share/terminfo/ -name "${x}" 2>/dev/null)
 			local basedir=$(basename $(dirname "${termfile}"))
+
+
 
 			if [[ -n ${termfile} ]] ; then
 				dodir /etc/terminfo/${basedir}
