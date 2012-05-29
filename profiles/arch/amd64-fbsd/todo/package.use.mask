@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.251 2012/05/29 14:47:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.252 2012/05/29 15:44:18 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -66,6 +66,7 @@ dev-tex/latex-beamer lyx
 # net-libs/libproxy
 net-libs/neon libproxy
 net-libs/glib-networking libproxy
+media-video/vlc libproxy
 
 # dev-libs/pakchois
 net-libs/neon pkcs11
@@ -99,6 +100,7 @@ media-libs/openal pulseaudio
 media-video/ffmpeg pulseaudio
 media-libs/libcanberra pulseaudio
 media-libs/phonon pulseaudio
+media-video/vlc pulseaudio
 
 # >=sys-fs/udisks-1.90:2
 gnome-base/gvfs udisks
@@ -198,3 +200,18 @@ sys-devel/llvm gold
 
 # media-libs/liboggz
 media-libs/libkate wxwidgets
+
+# x11-libs/libva
+media-video/vlc vaapi
+
+# >=media-plugins/live-2011.12.23 (xlocale.h)
+media-video/vlc live
+
+# media-sound/fluidsynth
+media-video/vlc fluidsynth
+
+# media-libs/libshout
+media-video/vlc shout
+
+# >=media-libs/taglib-1.5
+media-video/vlc taglib
