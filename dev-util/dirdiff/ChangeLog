@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dirdiff
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.11 2011/11/28 11:34:04 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.12 2012/05/29 19:29:19 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> dirdiff-2.1-r1.ebuild:
+  Marking dirdiff-2.1-r1 ppc for bug 391617
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dirdiff-2.1-r1.ebuild:
   x86 stable wrt bug #391617
