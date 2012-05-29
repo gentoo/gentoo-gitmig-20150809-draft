@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.7.0.ebuild,v 1.1 2011/10/01 07:11:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/glew-1.7.0.ebuild,v 1.2 2012/05/29 13:57:44 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="BSD MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc static-libs"
 
 RDEPEND="x11-libs/libXmu
@@ -50,6 +50,8 @@ src_prepare() {
 
 	# don't do stupid Solaris specific stuff that won't work in Prefix
 	cp config/Makefile.linux config/Makefile.solaris || die
+	# and let freebsd be built as on linux too
+	cp config/Makefile.linux config/Makefile.freebsd || die
 }
 
 src_compile(){
