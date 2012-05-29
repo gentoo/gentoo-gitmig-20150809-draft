@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/tudor-volumed
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tudor-volumed/ChangeLog,v 1.1 2012/05/29 13:09:07 hasufell Exp $
+
+*tudor-volumed-0_pre20110427 (29 May 2012)
+
+  29 May 2012; Julian Ospald <hasufell@gentoo.org>
+  +tudor-volumed-0_pre20110427.ebuild,
+  +files/tudor-volumed-0_pre20110427-build.patch, +metadata.xml:
+  initial import
+
