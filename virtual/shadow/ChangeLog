@@ -1,6 +1,9 @@
 # ChangeLog for virtual/shadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/shadow/ChangeLog,v 1.4 2012/05/26 12:22:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/shadow/ChangeLog,v 1.5 2012/05/29 08:29:33 grobian Exp $
+
+  29 May 2012; Fabian Groffen <grobian@gentoo.org> shadow-0.ebuild:
+  Marked *-macos, *-solaris
 
   26 May 2012; Fabian Groffen <grobian@gentoo.org> shadow-0.ebuild:
   Make a no-op for Prefix, instead of requiring a package.provided package
