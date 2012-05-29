@@ -1,6 +1,13 @@
 # ChangeLog for perl-core/ExtUtils-MakeMaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ChangeLog,v 1.33 2012/04/28 02:41:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ChangeLog,v 1.34 2012/05/29 04:08:30 tove Exp $
+
+*ExtUtils-MakeMaker-6.620.0-r1 (29 May 2012)
+
+  29 May 2012; Torsten Veller <tove@gentoo.org>
+  +files/6.62-delete_packlist_podlocal.patch,
+  +ExtUtils-MakeMaker-6.620.0-r1.ebuild:
+  Create perllocal.pod for modules in site in INSTALLSITEARCH
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   ExtUtils-MakeMaker-6.620.0.ebuild:
