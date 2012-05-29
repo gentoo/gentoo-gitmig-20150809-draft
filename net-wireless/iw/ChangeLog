@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.51 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.52 2012/05/29 19:19:50 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> iw-3.3.ebuild:
+  Marking iw-3.3 ppc for bug 412381
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> iw-0.9.17.ebuild,
   iw-0.9.22.ebuild, iw-3.2.ebuild, iw-3.3.ebuild, iw-3.4.ebuild:
