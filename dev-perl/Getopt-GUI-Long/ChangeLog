@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Getopt-GUI-Long
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-GUI-Long/ChangeLog,v 1.1 2012/05/29 01:48:40 xmw Exp $
+
+*Getopt-GUI-Long-0.92 (29 May 2012)
+
+  29 May 2012; Michael Weber <xmw@gentoo.org> +Getopt-GUI-Long-0.92.ebuild,
+  +metadata.xml:
+  Initial import to resolve bug 418011 (thanks Michael Orlitzky)
+
