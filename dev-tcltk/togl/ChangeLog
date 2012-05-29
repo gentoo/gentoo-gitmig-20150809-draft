@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.28 2012/02/25 10:53:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.29 2012/05/29 14:40:02 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> togl-2.0-r2.ebuild:
+  keyword ~amd64-fbsd
 
   25 Feb 2012; Justin Lecher <jlec@gentoo.org> -togl-2.0-r1.ebuild:
   Cleaned old
