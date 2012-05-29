@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.11 2012/05/29 18:03:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.12 2012/05/29 18:48:28 mr_bones_ Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic toolchain-funcs
@@ -148,8 +148,6 @@ src_install() {
 		do
 			local termfile=$(find "${D}"/usr/share/terminfo/ -name "${x}" 2>/dev/null)
 			local basedir=$(basename $(dirname "${termfile}"))
-
-
 
 			if [[ -n ${termfile} ]] ; then
 				dodir /etc/terminfo/${basedir}
