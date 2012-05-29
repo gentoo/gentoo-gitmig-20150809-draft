@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.274 2012/05/28 16:45:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.275 2012/05/29 08:05:05 phajdan.jr Exp $
+
+  29 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnustep-2.eclass,
+  gnustep-base.eclass:
+  Apply gnustep eclass changes wrt
+  http://archives.gentoo.org/gentoo-dev/msg_eee22ea47f4d15e2fa2932583aa92db7.xm
+  l
 
   28 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> eutils.eclass:
   Simplify preserve_old_lib ewarn messages, wrt

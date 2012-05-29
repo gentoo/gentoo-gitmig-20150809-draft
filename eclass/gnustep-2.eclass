@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-2.eclass,v 1.6 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-2.eclass,v 1.7 2012/05/29 08:05:05 phajdan.jr Exp $
 
 # @ECLASS: gnustep-2.eclass
 # @MAINTAINER:
@@ -15,7 +15,7 @@ inherit gnustep-base
 DEPEND=">=gnustep-base/gnustep-make-2.0
 	virtual/gnustep-back"
 RDEPEND="${DEPEND}
-	debug? ( >=sys-devel/gdb-6.0 )"
+	debug? ( !<sys-devel/gdb-6.0 )"
 
 # The following gnustep-based EXPORT_FUNCTIONS are available:
 # * gnustep-base_pkg_setup
