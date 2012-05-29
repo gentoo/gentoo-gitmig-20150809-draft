@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3.ebuild,v 1.1 2012/05/28 12:54:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3.ebuild,v 1.2 2012/05/29 10:11:24 xarthisius Exp $
 
 EAPI=4
 
@@ -10,12 +10,12 @@ RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils bash-completion-r1
-MY_PN="StarCluster"
-MY_P="${MY_PN}-${PV}"
+MY_PN=StarCluster
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Utility for creating / managing general purpose computing clusters"
 HOMEPAGE="http://web.mit.edu/star/cluster"
-SRC_URI="mirror://pypi/${PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-3"
 KEYWORDS="~amd64 ~x86"
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	dev-python/matplotlib )
 	dev-python/setuptools"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	distutils_src_compile

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/starcluster
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/ChangeLog,v 1.1 2012/05/28 12:54:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/ChangeLog,v 1.2 2012/05/29 10:11:24 xarthisius Exp $
+
+  29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> starcluster-0.93.3.ebuild:
+  Fix SRC_URI (s->S), drop unnecessary quotes
 
 *starcluster-0.93.3 (28 May 2012)
 
