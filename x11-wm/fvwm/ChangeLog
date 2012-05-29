@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.186 2012/05/04 08:58:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.187 2012/05/29 19:09:27 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> fvwm-2.6.2.ebuild:
+  Marking fvwm-2.6.2 ppc for bug 416213
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> fvwm-2.6.2.ebuild,
   fvwm-2.6.3.ebuild:
