@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fix-la-relink-command
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fix-la-relink-command/ChangeLog,v 1.6 2012/05/28 09:59:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fix-la-relink-command/ChangeLog,v 1.7 2012/05/29 07:32:12 grobian Exp $
+
+  29 May 2012; Fabian Groffen <grobian@gentoo.org>
+  fix-la-relink-command-0.1.1.ebuild:
+  Marked *-macos
 
   28 May 2012; Anthony G. Basile <blueness@gentoo.org>
   fix-la-relink-command-0.1.1.ebuild:
