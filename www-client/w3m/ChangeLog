@@ -1,6 +1,10 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.73 2012/05/23 12:57:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.74 2012/05/29 13:39:31 naota Exp $
+
+  29 May 2012; Naohiro Aota <naota@gentoo.org> w3m-0.5.2-r4.ebuild,
+  w3m-0.5.3-r1.ebuild, w3m-0.5.3-r2.ebuild:
+  Depend on imlib2[X] #417643
 
   23 May 2012; Brent Baude <ranger@gentoo.org> w3m-0.5.3-r1.ebuild:
   Marking w3m-0.5.3-r1 ppc64 for bug 415281
