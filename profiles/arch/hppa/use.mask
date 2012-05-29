@@ -1,5 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.54 2012/05/23 14:52:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.55 2012/05/29 00:57:33 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (23 May 2012)
@@ -105,6 +105,10 @@ pm-utils
 
 # Unmask the flag which corresponds to ARCH.
 -hppa
+
+# Jeroen Roovers <jer@gentoo.org> (7 Jun 2008)
+# # dev-util/valgrind has not been ported to HPPA.
+valgrind
 
 # Jeroen Roovers <jer@gentoo.org> (4 Jan 2008)
 # Masked until someone turns up with a PA-RISC laptop:
