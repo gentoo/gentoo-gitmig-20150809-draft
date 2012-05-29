@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.14 2012/05/29 05:28:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rope/ChangeLog,v 1.15 2012/05/29 12:07:58 ago Exp $
+
+  29 May 2012; Agostino Sarubbo <ago@gentoo.org> rope-0.9.3.ebuild:
+  Stable for amd64, wrt bug #394851
 
   29 May 2012; Jeff Horelick <jdhore@gentoo.org> rope-0.9.3.ebuild:
   marked x86 per bug 394851
