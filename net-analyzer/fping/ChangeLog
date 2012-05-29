@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.47 2012/05/03 15:02:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.48 2012/05/29 10:33:11 radhermit Exp $
+
+*fping-3.2 (29 May 2012)
+
+  29 May 2012; Tim Harder <radhermit@gentoo.org> +fping-3.2.ebuild:
+  Version bump. Use append-cppflags for preprocessor flags.
 
 *fping-3.1 (03 May 2012)
 
