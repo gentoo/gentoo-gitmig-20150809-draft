@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.260 2012/05/29 16:35:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.261 2012/05/29 16:37:20 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -49,10 +49,6 @@ sys-apps/xinetd rpc
 
 # media-gfx/ufraw
 media-gfx/imagemagick raw
-
-# dev-libs/cyrus-sasl
-dev-vcs/subversion sasl
-net-nds/openldap sasl cxx
 
 # app-crypt/heimdal
 net-nds/openldap smbkrb5passwd
