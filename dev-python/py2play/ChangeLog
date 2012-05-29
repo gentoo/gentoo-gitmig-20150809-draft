@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py2play
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.21 2012/04/19 08:40:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.22 2012/05/29 05:31:41 jdhore Exp $
+
+  29 May 2012; Jeff Horelick <jdhore@gentoo.org> py2play-0.1.10.ebuild:
+  marked x86 per bug 418015
 
 *py2play-0.1.10 (19 Apr 2012)
 
