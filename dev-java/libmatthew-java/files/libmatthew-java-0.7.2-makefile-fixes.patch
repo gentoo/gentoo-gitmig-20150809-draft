@@ -1,7 +1,7 @@
 diff -Nur libmatthew-java-0.7.2/Makefile libmatthew-java-0.7.2_patched/Makefile
 --- libmatthew-java-0.7.2/Makefile	2009-04-05 12:46:42.000000000 +0300
 +++ libmatthew-java-0.7.2_patched/Makefile	2010-02-28 12:07:15.000000000 +0200
-@@ -6,13 +6,13 @@
+@@ -6,13 +6,12 @@
  CC?=gcc
  LD?=gcc
  JPPFLAGS+=-C -P
@@ -13,7 +13,6 @@ diff -Nur libmatthew-java-0.7.2/Makefile libmatthew-java-0.7.2_patched/Makefile
  JVERCFLAGS+=-source 1.5
  JCFLAGS+=
 -INCLUDES+=-I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux
-+INCLUDES=-I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux
  JAVADOCFLAGS?=-quiet -author -link http://java.sun.com/j2se/1.4.2/docs/api/
  
  LDVER?=$(shell ld -v | cut -d' ' -f1)
@@ -51,17 +50,20 @@ diff -Nur libmatthew-java-0.7.2/Makefile libmatthew-java-0.7.2_patched/Makefile
  unix-java.h: .classes
  	$(JAVAH) -classpath classes -o $@ cx.ath.matthew.unix.UnixServerSocket cx.ath.matthew.unix.UnixSocket cx.ath.matthew.unix.USInputStream cx.ath.matthew.unix.USOutputStream
  cgi-java.h: .classes
-@@ -91,12 +85,10 @@
+@@ -91,13 +85,11 @@
+ 	tar zcf $@ libmatthew-java-$(MATTVER)
  
  debug-enable-$(DEBUGVER).jar: cx/ath/matthew/debug/Debug.jpp
- 	make .enabledebug
+-	make .enabledebug
 -	echo "Class-Path: $(JARDIR)/hexdump.jar" > Manifest
 -	(cd classes;jar cfm ../$@ ../Manifest cx/ath/matthew/debug/*.class)
++	$(MAKE) .enabledebug
 +	(cd classes;jar cf ../$@ cx/ath/matthew/debug/*.class)
  debug-disable-$(DEBUGVER).jar: cx/ath/matthew/debug/Debug.jpp
- 	make .disabledebug
+-	make .disabledebug
 -	echo "Class-Path: $(JARDIR)/hexdump.jar" > Manifest
 -	(cd classes;jar cfm ../$@ ../Manifest cx/ath/matthew/debug/*.class)
++	$(MAKE) .disabledebug
 +	(cd classes;jar cf ../$@ cx/ath/matthew/debug/*.class)
  .enabledebug: cx/ath/matthew/debug/Debug.jpp 
  	mkdir -p classes
