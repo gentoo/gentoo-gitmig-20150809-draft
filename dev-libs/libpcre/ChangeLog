@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.199 2012/05/29 15:34:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.200 2012/05/29 16:14:07 vapier Exp $
+
+  29 May 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/libpcre-8.30-bzip2-typo.patch, libpcre-8.30-r2.ebuild:
+  Add fix by Richard Grenville to fix building when USE="bzip2 -zlib" #418033 by
+  GES.
 
   29 May 2012; Brent Baude <ranger@gentoo.org> libpcre-8.30-r2.ebuild:
   Marking libpcre-8.30-r2 ppc64 for bug 417571

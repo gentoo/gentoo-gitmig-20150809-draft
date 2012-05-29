@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.30-r2.ebuild,v 1.7 2012/05/29 15:34:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.30-r2.ebuild,v 1.8 2012/05/29 16:14:07 vapier Exp $
 
 EAPI="4"
 
@@ -33,13 +33,14 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	sed -i -e "s:-lpcre ::" libpcrecpp.pc.in || die
+	epatch "${FILESDIR}"/${P}-bzip2-typo.patch #418033
 	elibtoolize
 }
 
 src_configure() {
 	[[ ${CHOST} == *-mint* ]] && append-flags -D_GNU_SOURCE
 	econf \
-		--with-match-limit-recursion=$(use recursion-limit && echo 8192 || echo MATCH_LIMIT) \
+		--with-match-limit-recursion=$(usex recursion-limit 8192 MATCH_LIMIT) \
 		$(use_enable bzip2 pcregrep-libbz2) \
 		$(use_enable cxx cpp) \
 		$(use_enable jit) $(use_enable jit pcregrep-jit) \
