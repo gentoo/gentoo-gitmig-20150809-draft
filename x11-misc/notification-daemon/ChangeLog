@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.87 2012/05/05 04:53:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.88 2012/05/29 13:28:04 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org>
+  notification-daemon-0.7.4.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   notification-daemon-0.7.3.ebuild, notification-daemon-0.7.4.ebuild:
