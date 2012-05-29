@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-commons-external
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/ChangeLog,v 1.32 2012/05/28 14:33:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/ChangeLog,v 1.33 2012/05/29 15:23:29 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org>
+  xml-commons-external-1.4.01.ebuild:
+  Marking xml-commons-external-1.4.01 ppc64 for bug 280611
 
   28 May 2012; Johannes Huber <johu@gentoo.org>
   xml-commons-external-1.4.01.ebuild:
