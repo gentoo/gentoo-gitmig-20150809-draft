@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.370 2012/05/28 22:26:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.371 2012/05/29 06:47:50 sping Exp $
+
+  29 May 2012; Sebastian Pipping <sping@gentoo.org> gimp-2.6.12-r1.ebuild,
+  gimp-2.8.0-r1.ebuild:
+  Support yi locale previously held back by bug #418053
 
 *gimp-2.6.12-r1 (28 May 2012)
 

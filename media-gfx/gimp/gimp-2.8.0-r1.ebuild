@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0-r1.ebuild,v 1.2 2012/05/28 21:46:36 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0-r1.ebuild,v 1.3 2012/05/29 06:47:50 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -18,7 +18,6 @@ LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es
 IUSE="alsa aalib altivec bzip2 curl dbus debug doc exif gnome gs jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
 
 for lang in ${LANGS}; do
-	[[ ${lang} == yi ]] && continue  # bug #418053
 	IUSE+=" linguas_${lang}"
 done
 
