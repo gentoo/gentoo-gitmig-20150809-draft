@@ -1,6 +1,6 @@
 #!/bin/bash
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.11 2011/07/09 21:04:44 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.12 2012/05/29 13:42:41 aballier Exp $
 
 alias make=gmake
 alias patch=gpatch
@@ -13,7 +13,9 @@ type -P gxargs > /dev/null && alias xargs=gxargs
 # Attempt to point the default SHELL used by configure scripts to bash.
 # while most should work with BSD's bourne just fine, the extra scripts
 # used by some applications (specially test scripts) use way too many bashisms.
-export CONFIG_SHELL="/bin/bash"
+# Alexis Ballier <29 May 2012>: Disable this, we should rather fix bugs and it
+# seems to confuse libtool a couple of packages (dev-libs/libtar, net-dns/hesiod)
+# export CONFIG_SHELL="/bin/bash"
 
 # Hack to avoid every package that uses libiconv/gettext
 # install a charset.alias that will collide with libiconv's one
