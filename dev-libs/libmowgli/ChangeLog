@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.78 2012/05/23 12:59:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.79 2012/05/29 19:20:52 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> libmowgli-2.0.0.ebuild:
+  Marking libmowgli-2.0.0 ppc for bug 417145
 
   23 May 2012; Brent Baude <ranger@gentoo.org> libmowgli-2.0.0.ebuild:
   Marking libmowgli-2.0.0 ppc64 for bug 417145
