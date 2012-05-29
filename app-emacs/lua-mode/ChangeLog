@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/lua-mode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.44 2011/01/21 18:23:15 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.45 2012/05/29 15:00:56 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org>
+  lua-mode-20100617-r1.ebuild:
+  keyword ~amd64-fbsd
 
   21 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   -lua-mode-20071122.ebuild:
