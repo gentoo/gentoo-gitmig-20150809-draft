@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.6.ebuild,v 1.1 2012/04/07 09:42:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.6.ebuild,v 1.2 2012/05/29 20:46:01 xmw Exp $
 
 EAPI=4
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="high performance network sniffer for packet inspection"
 HOMEPAGE="http://netsniff-ng.org/"
@@ -19,6 +19,10 @@ DEPEND=""
 RDEPEND=""
 
 S=${WORKDIR}/${P}/src
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-man-no-compress.patch
+}
 
 src_install() {
 	cmake-utils_src_install
