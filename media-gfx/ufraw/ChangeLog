@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.98 2012/05/05 07:00:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.99 2012/05/29 17:41:36 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> ufraw-0.18.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> ufraw-0.18.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
