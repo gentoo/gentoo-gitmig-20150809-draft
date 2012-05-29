@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.68 2012/02/22 14:37:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.69 2012/05/29 14:40:59 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> pyopengl-3.0.1.ebuild:
+  keyword ~amd64-fbsd
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyopengl-3.0.1.ebuild:
   Restricting python stuff properly
