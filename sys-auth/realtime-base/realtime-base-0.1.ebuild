@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/realtime-base-0.1.ebuild,v 1.16 2012/05/24 05:06:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/realtime-base-0.1.ebuild,v 1.17 2012/05/29 15:14:49 aballier Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~amd64-fbsd"
 IUSE=""
 
 DEPEND=""

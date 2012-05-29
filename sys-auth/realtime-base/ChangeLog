@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/realtime-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/ChangeLog,v 1.16 2012/05/24 05:06:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/ChangeLog,v 1.17 2012/05/29 15:14:49 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> realtime-base-0.1.ebuild:
+  keyword ~amd64-fbsd
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> realtime-base-0.1.ebuild:
   Inherit user for enewuser/etc... rather than eutils.
