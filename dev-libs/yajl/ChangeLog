@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.27 2012/05/29 08:05:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.28 2012/05/29 15:42:54 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> yajl-2.0.3.ebuild:
+  Marking yajl-2.0.3 ppc64 for bug 402287
 
   29 May 2012; Michael Weber <xmw@gentoo.org> yajl-2.0.3.ebuild:
   ppc stable (bug 402287)
