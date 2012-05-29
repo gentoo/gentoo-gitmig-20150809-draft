@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.650 2012/05/23 15:19:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.651 2012/05/29 13:29:47 chithanh Exp $
+
+*xorg-server-1.10.6-r1 (29 May 2012)
+
+  29 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xorg-server-1.10.6-r1.ebuild:
+  Apply security bug #412609 patch to 1.10 too.
 
 *xorg-server-1.11.4-r1 (23 May 2012)
 
