@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.130 2012/05/23 13:08:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.131 2012/05/29 19:40:39 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> maildrop-2.5.5-r1.ebuild:
+  Marking maildrop-2.5.5-r1 ppc for bug 413597
 
   23 May 2012; Brent Baude <ranger@gentoo.org> maildrop-2.5.5-r1.ebuild:
   Marking maildrop-2.5.5-r1 ppc64 for bug 413597
