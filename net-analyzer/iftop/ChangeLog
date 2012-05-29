@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.43 2012/05/29 19:38:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.44 2012/05/29 19:49:02 jer Exp $
+
+  29 May 2012; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre2.ebuild:
+  Install AUTHORS. Remove unused inherit.
 
 *iftop-1.0_pre2 (29 May 2012)
 

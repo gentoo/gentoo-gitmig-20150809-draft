@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre2.ebuild,v 1.1 2012/05/29 19:38:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre2.ebuild,v 1.2 2012/05/29 19:49:02 jer Exp $
 
 EAPI=4
-
-inherit eutils
 
 DESCRIPTION="display bandwidth usage on an interface"
 SRC_URI="http://www.ex-parrot.com/~pdw/iftop/download/${P/_/}.tar.gz"
@@ -25,5 +23,5 @@ src_install() {
 	dosbin iftop
 	doman iftop.8
 
-	dodoc ChangeLog README "${FILESDIR}"/iftoprc
+	dodoc AUTHORS ChangeLog README "${FILESDIR}"/iftoprc
 }
