@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.49 2012/02/20 10:43:16 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.50 2012/05/29 10:19:43 radhermit Exp $
+
+*gsasl-1.8.0 (29 May 2012)
+
+  29 May 2012; Tim Harder <radhermit@gentoo.org> +gsasl-1.8.0.ebuild:
+  Version bump. Add threads use flag and update to EAPI 4.
 
   20 Feb 2012; Naohiro Aota <naota@gentoo.org> gsasl-1.6.1.ebuild:
   Add ~x86-fbsd
