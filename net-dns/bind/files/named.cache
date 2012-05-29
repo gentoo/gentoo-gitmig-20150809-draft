@@ -9,8 +9,8 @@
 ;           on server           FTP.INTERNIC.NET
 ;       -OR-                    RS.INTERNIC.NET
 ;
-;       last update:    Dec 12, 2008
-;       related version of root zone:   2008121200
+;       last update:    Jun 8, 2011
+;       related version of root zone:   2011060800
 ;
 ; formerly NS.INTERNIC.NET
 ;
@@ -32,6 +32,7 @@ C.ROOT-SERVERS.NET.      3600000      A     192.33.4.12
 ;
 .                        3600000      NS    D.ROOT-SERVERS.NET.
 D.ROOT-SERVERS.NET.      3600000      A     128.8.10.90
+D.ROOT-SERVERS.NET.	 3600000      AAAA  2001:500:2D::D
 ;
 ; FORMERLY NS.NASA.GOV
 ;
@@ -59,6 +60,7 @@ H.ROOT-SERVERS.NET.      3600000      AAAA  2001:500:1::803F:235
 ;
 .                        3600000      NS    I.ROOT-SERVERS.NET.
 I.ROOT-SERVERS.NET.      3600000      A     192.36.148.17
+I.ROOT-SERVERS.NET.      3600000      AAAA  2001:7FE::53
 ;
 ; OPERATED BY VERISIGN, INC.
 ;
@@ -69,14 +71,14 @@ J.ROOT-SERVERS.NET.      3600000      AAAA  2001:503:C27::2:30
 ; OPERATED BY RIPE NCC
 ;
 .                        3600000      NS    K.ROOT-SERVERS.NET.
-K.ROOT-SERVERS.NET.      3600000      A     193.0.14.129 
+K.ROOT-SERVERS.NET.      3600000      A     193.0.14.129
 K.ROOT-SERVERS.NET.      3600000      AAAA  2001:7FD::1
 ;
 ; OPERATED BY ICANN
 ;
 .                        3600000      NS    L.ROOT-SERVERS.NET.
 L.ROOT-SERVERS.NET.      3600000      A     199.7.83.42
-L.ROOT-SERVERS.NET.      3600000      AAAA  2001:500:3::42   
+L.ROOT-SERVERS.NET.      3600000      AAAA  2001:500:3::42
 ;
 ; OPERATED BY WIDE
 ;
