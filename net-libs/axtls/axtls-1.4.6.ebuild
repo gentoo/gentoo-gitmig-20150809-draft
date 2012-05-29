@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.6.ebuild,v 1.1 2012/05/26 05:58:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.6.ebuild,v 1.2 2012/05/29 07:47:36 jer Exp $
 
 EAPI="4"
 
@@ -41,7 +41,7 @@ S="${WORKDIR}/${MY_PN}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="httpd cgi-lua cgi-php static doc"
 
 # TODO: add ipv6, and c#, java, lua, perl bindings
