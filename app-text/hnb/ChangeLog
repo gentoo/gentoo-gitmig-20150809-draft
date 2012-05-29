@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hnb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.27 2012/05/10 15:24:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.28 2012/05/29 19:24:53 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> hnb-1.9.18-r1.ebuild:
+  Marking hnb-1.9.18-r1 ppc for bug 391479
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -hnb-1.9.18.ebuild:
   Remove old
