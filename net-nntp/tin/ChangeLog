@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/tin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.35 2012/05/27 17:47:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.36 2012/05/29 19:45:25 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> tin-2.0.0.ebuild:
+  Marking tin-2.0.0 ppc for bug 416105
 
   27 May 2012; Markus Meier <maekke@gentoo.org> tin-2.0.0.ebuild:
   arm stable, bug #416105
