@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/keyutils-1.5.5.ebuild,v 1.5 2012/05/29 07:51:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/keyutils-1.5.5.ebuild,v 1.6 2012/05/29 20:06:44 ranger Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://people.redhat.com/dhowells/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="!prefix? ( >=sys-kernel/linux-headers-2.6.11 )"

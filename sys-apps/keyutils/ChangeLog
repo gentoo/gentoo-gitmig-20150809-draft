@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.31 2012/05/29 07:51:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.32 2012/05/29 20:06:44 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> keyutils-1.5.5.ebuild:
+  Marking keyutils-1.5.5 ppc for bug 417445
 
   29 May 2012; Jeroen Roovers <jer@gentoo.org> keyutils-1.5.5.ebuild:
   Stable for HPPA (bug #417445).
