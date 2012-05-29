@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.12.ebuild,v 1.1 2012/05/26 18:21:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.12.ebuild,v 1.2 2012/05/29 05:07:19 dev-zero Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 
 inherit eutils python
 
-PYTHON_DEPEND="python? 2"
+PYTHON_DEPEND="2"
 
 DESCRIPTION="Set of GObject and Gtk objects for connecting to Spice servers and a client GUI."
 HOMEPAGE="http://spice-space.org http://gitorious.org/spice-gtk"
@@ -62,6 +62,8 @@ DEPEND="${RDEPEND}
 # dev-perl/Text-CSV
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 	if use gstreamer && use pulseaudio ; then
 		ewarn "spice-gtk can use only one audio backend: pulseaudio will be used since you enabled both."
 	fi
@@ -104,6 +106,7 @@ src_install() {
 	use static-libs || rm -rf "${D}"/usr/lib*/*.la
 	use python && rm -rf "${D}"/usr/lib*/python*/site-packages/*.la
 	use doc || rm -rf "${D}/usr/share/gtk-doc"
+	use python && python_convert_shebangs -r 2 "${D}"
 
 	make_desktop_entry spicy Spicy "utilities-terminal" "Network;RemoteAccess;"
 }
