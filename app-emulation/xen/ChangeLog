@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.95 2012/05/13 17:25:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.96 2012/05/29 12:46:48 xarthisius Exp $
+
+  29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Use <description> field in order to provide more compact <name>
 
   13 May 2012; Pacho Ramos <pacho@gentoo.org> -xen-3.4.2-r4.ebuild,
   metadata.xml:

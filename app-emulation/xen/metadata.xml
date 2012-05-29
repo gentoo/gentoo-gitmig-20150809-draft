@@ -4,7 +4,8 @@
 	<herd>xen</herd>
 	<maintainer>
 		<email>johneed@hotmail.com</email>
-		<name>Ian Delaney aka idella4 proxy maintainer</name>
+		<name>Ian 'idella4' Delaney</name>
+		<description>Proxy maintainer</description>
 	</maintainer>
 	<use>
 		<flag name='flask'>Enable the Flask XSM module from NSA</flag>

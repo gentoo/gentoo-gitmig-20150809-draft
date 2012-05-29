@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.111 2012/05/08 16:04:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.112 2012/05/29 12:45:28 xarthisius Exp $
+
+  29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Use <description> field in order to provide more compact <name>
 
   08 May 2012; Kacper Kowalik <xarthisius@gentoo.org> xen-tools-3.4.2-r3.ebuild,
   xen-tools-3.4.2-r5.ebuild, xen-tools-4.1.1-r5.ebuild,
