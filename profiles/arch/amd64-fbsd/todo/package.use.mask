@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.268 2012/05/29 17:07:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.269 2012/05/29 17:09:36 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -28,9 +28,6 @@ dev-lang/php sqlite
 
 # virtual/imap-c-client[ssl=]
 dev-lang/php imap
-
-# >=net-libs/c-client-2004g-r1
-dev-lang/php kolab
 
 # sys-auth/pam_krb5
 sys-auth/pambase pam_krb5
