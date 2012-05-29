@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.280 2012/05/29 02:56:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.281 2012/05/29 12:07:14 ago Exp $
+
+  29 May 2012; Agostino Sarubbo <ago@gentoo.org> pidgin-2.10.4.ebuild:
+  Stable for amd64, wrt bug #415393
 
   29 May 2012; Jeff Horelick <jdhore@gentoo.org> pidgin-2.10.4.ebuild:
   marked x86 per bug 415393
