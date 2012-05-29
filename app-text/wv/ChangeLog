@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.66 2012/05/04 03:33:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.67 2012/05/29 21:55:42 blueness Exp $
+
+  29 May 2012; Anthony G. Basile <blueness@gentoo.org> wv-1.2.9-r1.ebuild:
+  Keyword ~mips
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> wv-1.2.3-r1.ebuild,
   wv-1.2.7.ebuild, wv-1.2.9.ebuild, wv-1.2.9-r1.ebuild:
