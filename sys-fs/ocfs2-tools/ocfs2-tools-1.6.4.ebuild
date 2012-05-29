@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.6.4.ebuild,v 1.3 2012/05/05 12:59:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.6.4.ebuild,v 1.4 2012/05/29 12:52:50 xarthisius Exp $
 
 EAPI=3
 PYTHON_DEPEND="gtk? 2"
@@ -68,6 +68,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	newinitd "${FILESDIR}/ocfs2.initd" ocfs2  || die
-	newconfd "${FILESDIR}/ocfs2.confd" ocfs2  || die
+	newinitd "${FILESDIR}/ocfs2.initd" ocfs2 || die
+	newconfd "${FILESDIR}/ocfs2.confd" ocfs2 || die
 }

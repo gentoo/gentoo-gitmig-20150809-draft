@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.8.2.ebuild,v 1.3 2012/05/21 19:28:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.8.2.ebuild,v 1.4 2012/05/29 12:52:50 xarthisius Exp $
 
 EAPI=4
 PYTHON_DEPEND="gtk? 2"
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug external gtk"
 
 RDEPEND="
+	dev-libs/libaio
 	sys-apps/util-linux
 	sys-cluster/libcman
 	external? (

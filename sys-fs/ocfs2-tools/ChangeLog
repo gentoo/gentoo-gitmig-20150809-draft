@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ocfs2-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ChangeLog,v 1.12 2012/05/24 04:13:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ChangeLog,v 1.13 2012/05/29 12:52:50 xarthisius Exp $
+
+  29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> ocfs2-tools-1.6.4.ebuild,
+  ocfs2-tools-1.8.2.ebuild:
+  Add missing dependency on dev-libs/libaio wrt #417455. Thanks to victor
+  romanchuk <rom@persimplex.net> and László Szalma <dblaci@dblaci.hu> for the
+  report and confirmation respectively
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> ocfs2-tools-1.6.4-r1.ebuild:
   Inherit eutils for epatch.
