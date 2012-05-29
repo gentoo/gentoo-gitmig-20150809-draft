@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/dnssec-tools-1.12.2.ebuild,v 1.1 2012/05/22 21:11:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/dnssec-tools-1.12.2-r1.ebuild,v 1.1 2012/05/29 01:52:29 xmw Exp $
 
 EAPI=4
 
@@ -17,8 +17,10 @@ IUSE="ipv6 static-libs threads"
 
 RDEPEND="dev-lang/perl
 	dev-libs/openssl
+	dev-perl/Getopt-GUI-Long
 	dev-perl/GraphViz
 	dev-perl/MailTools
+	dev-perl/Net-DNS
 	dev-perl/XML-Simple"
 DEPEND="${RDEPEND}"
 
