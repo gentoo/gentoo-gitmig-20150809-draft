@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyacoustid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyacoustid/ChangeLog,v 1.1 2012/05/29 12:45:23 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyacoustid/ChangeLog,v 1.2 2012/05/29 17:13:25 jdhore Exp $
+
+  29 May 2012; Jeff Horelick <jdhore@gentoo.org> pyacoustid-0.7.ebuild:
+  Keyword ~x86
 
 *pyacoustid-0.7 (29 May 2012)
 

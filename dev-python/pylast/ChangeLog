@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylast
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylast/ChangeLog,v 1.1 2012/05/29 12:18:08 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylast/ChangeLog,v 1.2 2012/05/29 17:11:23 jdhore Exp $
+
+  29 May 2012; Jeff Horelick <jdhore@gentoo.org> pylast-0.5.11.ebuild:
+  Keyword ~x86
 
 *pylast-0.5.11 (29 May 2012)
 
