@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.254 2012/05/29 16:09:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.255 2012/05/29 16:12:11 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -114,6 +114,7 @@ gnome-base/gvfs gdu
 # >=x11-libs/libva-0.32
 media-video/ffmpeg vaapi
 virtual/ffmpeg vaapi
+media-video/vlc vaapi
 
 # >=media-libs/xvid-1.1.0
 media-video/ffmpeg xvid
@@ -194,9 +195,6 @@ sys-devel/llvm gold
 
 # media-libs/liboggz
 media-libs/libkate wxwidgets
-
-# x11-libs/libva
-media-video/vlc vaapi
 
 # >=media-plugins/live-2011.12.23 (xlocale.h)
 media-video/vlc live
