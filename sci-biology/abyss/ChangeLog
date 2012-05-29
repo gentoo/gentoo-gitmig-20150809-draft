@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/abyss
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/ChangeLog,v 1.11 2011/09/24 21:48:12 weaver Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/ChangeLog,v 1.12 2012/05/29 02:44:21 weaver Exp $
+
+*abyss-1.3.3 (29 May 2012)
+
+  29 May 2012; Andrey Kislyuk <weaver@gentoo.org> +abyss-1.3.3.ebuild:
+  version bump
 
 *abyss-1.3.0 (24 Sep 2011)
 
