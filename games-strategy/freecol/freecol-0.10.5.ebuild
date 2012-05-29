@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.10.5.ebuild,v 1.2 2012/05/28 20:19:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.10.5.ebuild,v 1.3 2012/05/29 12:13:14 ago Exp $
 
 EAPI=2
 inherit base eutils java-pkg-2 java-ant-2 games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 COMMON_DEP="dev-java/jsr173
