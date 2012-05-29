@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-php
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.32 2011/11/30 14:54:30 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.33 2012/05/29 16:54:30 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> eselect-php-0.6.6.ebuild:
+  keyword ~amd64-fbsd
 
   30 Nov 2011; Fabian Groffen <grobian@gentoo.org> eselect-php-0.6.6.ebuild:
   Marked ~x86-macos and ~x64-macos, bug #388163
