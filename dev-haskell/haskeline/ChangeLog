@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haskeline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.14 2012/04/14 10:25:16 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.15 2012/05/29 09:45:40 gienah Exp $
+
+*haskeline-0.6.4.7 (29 May 2012)
+
+  29 May 2012; Mark Wright <gienah@gentoo.org> +haskeline-0.6.4.7.ebuild:
+  Bump haskeline to 0.6.4.7
 
 *haskeline-0.6.4.6-r1 (14 Apr 2012)
 
