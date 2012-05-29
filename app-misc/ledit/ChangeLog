@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ledit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.37 2012/05/19 15:12:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.38 2012/05/29 19:36:46 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> ledit-2.03.ebuild:
+  Marking ledit-2.03 ppc for bug 416523
 
   19 May 2012; Agostino Sarubbo <ago@gentoo.org> ledit-2.03.ebuild:
   Stable for amd64, wrt bug #416523
