@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.393 2012/05/25 10:46:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.394 2012/05/29 22:41:55 chainsaw Exp $
+
+*asterisk-10.4.1 (29 May 2012)
+*asterisk-1.8.12.1 (29 May 2012)
+
+  29 May 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.12.0.ebuild,
+  +asterisk-1.8.12.1.ebuild, -asterisk-10.3.1.ebuild, -asterisk-10.4.0.ebuild,
+  +asterisk-10.4.1.ebuild:
+  Security updates in the 1.8 & 10 branches for an IAX2 remote crash, bug
+  #418189 (AST-2012-007/CVE-2012-2947) and an SCCP channel driver remote crash,
+  bug #418191 (AST-2012-008/CVE-2012-2948). Both filed by Rajiv Aaron Manglani.
+  Removed vulnerable ebuilds up to last stable.
 
   25 May 2012; Samuli Suominen <ssuominen@gentoo.org> asterisk-1.8.11.1.ebuild,
   asterisk-1.8.12.0.ebuild, asterisk-10.3.1.ebuild, asterisk-10.4.0.ebuild:
