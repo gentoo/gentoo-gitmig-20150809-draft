@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.28 2012/05/22 05:55:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.29 2012/05/29 19:37:39 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> ounit-1.1.1.ebuild:
+  Marking ounit-1.1.1 ppc for bug 416531
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> ounit-1.1.1.ebuild:
   marked x86 per bug 416531
