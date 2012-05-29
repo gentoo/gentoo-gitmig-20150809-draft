@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.81 2012/05/05 03:52:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.82 2012/05/29 13:28:36 aballier Exp $
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> libnotify-0.7.5.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libnotify-0.7.4.ebuild,
   libnotify-0.7.4-r1.ebuild, libnotify-0.7.5.ebuild:
