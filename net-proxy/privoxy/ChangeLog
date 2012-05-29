@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.72 2012/05/29 15:42:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.73 2012/05/29 19:43:34 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> privoxy-3.0.19.ebuild:
+  Marking privoxy-3.0.19 ppc for bug 415763
 
   29 May 2012; Brent Baude <ranger@gentoo.org> privoxy-3.0.19.ebuild:
   Marking privoxy-3.0.19 ppc64 for bug 415763
