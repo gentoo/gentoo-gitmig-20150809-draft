@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.53 2012/05/23 13:12:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.54 2012/05/29 19:50:54 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> decorator-3.3.2.ebuild:
+  Marking decorator-3.3.2 ppc for bug 415851
 
   23 May 2012; Brent Baude <ranger@gentoo.org> decorator-3.3.2.ebuild:
   Marking decorator-3.3.2 ppc64 for bug 415851
