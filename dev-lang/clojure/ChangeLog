@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/clojure
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.11 2012/05/29 05:45:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.12 2012/05/29 12:10:24 ago Exp $
+
+  29 May 2012; Agostino Sarubbo <ago@gentoo.org> clojure-1.4.0.ebuild:
+  Stable for amd64, wrt bug #418001
 
   29 May 2012; Jeff Horelick <jdhore@gentoo.org> clojure-1.4.0.ebuild:
   marked x86 per bug 418001
