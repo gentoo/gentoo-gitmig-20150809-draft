@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cortado
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cortado/ChangeLog,v 1.3 2012/03/04 15:16:54 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cortado/ChangeLog,v 1.4 2012/05/29 12:09:48 ago Exp $
+
+  29 May 2012; Agostino Sarubbo <ago@gentoo.org> cortado-0.6.0.ebuild:
+  Stable for amd64, wrt bug #418099
 
   04 Mar 2012; Tupone Alfredo <tupone@gentoo.org> cortado-0.6.0.ebuild:
   Removing git usage. Should fix bug #356441 comment 6 by Sander Sweers
