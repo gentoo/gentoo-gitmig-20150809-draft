@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-apache-oro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-oro/ChangeLog,v 1.28 2012/05/25 11:25:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-oro/ChangeLog,v 1.29 2012/05/30 08:43:27 sera Exp $
+
+*ant-apache-oro-1.8.4 (30 May 2012)
+
+  30 May 2012; Ralph Sennhauser <sera@gentoo.org> +ant-apache-oro-1.8.4.ebuild:
+  Security bump. CVE-2012-2098 #417909
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> ant-apache-oro-1.8.2.ebuild:
   Stable for amd64, wrt bug #417403

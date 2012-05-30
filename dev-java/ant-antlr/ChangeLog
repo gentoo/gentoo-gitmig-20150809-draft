@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-antlr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.38 2012/05/25 11:23:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.39 2012/05/30 08:35:10 sera Exp $
+
+*ant-antlr-1.8.4 (30 May 2012)
+
+  30 May 2012; Ralph Sennhauser <sera@gentoo.org> +ant-antlr-1.8.4.ebuild:
+  Security bump. CVE-2012-2098 #417909
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> ant-antlr-1.8.2.ebuild:
   Stable for amd64, wrt bug #417403
