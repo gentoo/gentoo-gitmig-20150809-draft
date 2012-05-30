@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.276 2012/05/30 06:15:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.277 2012/05/30 06:35:43 slyfox Exp $
+
+  30 May 2012; Sergei Trofimovich <slyfox@gentoo.org> games.eclass:
+  Allow EAPI=4.
 
   30 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium.eclass:
   Introduce chromium_suid_sandbox_check_kernel_config, deprecate
