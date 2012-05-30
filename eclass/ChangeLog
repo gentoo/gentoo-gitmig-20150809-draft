@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.279 2012/05/30 08:21:18 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.280 2012/05/30 15:25:08 slyfox Exp $
+
+  30 May 2012; Sergei Trofimovich <slyfox@gentoo.org> darcs.eclass:
+  Use 'darcs get --lazy' instead of 'darcs get --partial' (gone in darcs-2.8).
 
   30 May 2012; Ralph Sennhauser <sera@gentoo.org> ant-tasks.eclass:
   Set prefix for ant-1.8.4

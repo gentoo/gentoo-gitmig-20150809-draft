@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.14 2012/04/02 17:48:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.15 2012/05/30 15:25:08 slyfox Exp $
 
 # @ECLASS: darcs.eclass
 # @MAINTAINER:
@@ -44,7 +44,7 @@ SRC_URI=""
 # @ECLASS-VARIABLE: EDARCS_GET_CMD
 # @DESCRIPTION:
 # First fetch darcs command.
-: ${EDARCS_GET_CMD:=get --partial}
+: ${EDARCS_GET_CMD:=get --lazy}
 
 # @ECLASS-VARIABLE: EDARCS_UPDATE_CMD
 # @DESCRIPTION:
