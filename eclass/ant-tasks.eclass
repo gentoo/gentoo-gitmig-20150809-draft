@@ -3,7 +3,7 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Vlastimil Babka <caster@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.11 2012/03/03 22:39:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.12 2012/05/30 08:21:18 sera Exp $
 
 # we set ant-core dep ourselves, restricted
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
@@ -89,7 +89,14 @@ else
 	# default for final releases
 	MY_PV=${PV}
 	UPSTREAM_PREFIX="mirror://apache/ant/source"
-	GENTOO_PREFIX="http://dev.gentoo.org/~caster/distfiles"
+	case ${PV} in
+	1.8.4)
+		GENTOO_PREFIX="http://dev.gentoo.org/~sera/distfiles"
+		;;
+	*)
+		GENTOO_PREFIX="http://dev.gentoo.org/~caster/distfiles"
+		;;
+	esac
 fi
 
 # source/workdir name

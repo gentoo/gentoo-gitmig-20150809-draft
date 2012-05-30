@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.278 2012/05/30 07:59:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.279 2012/05/30 08:21:18 sera Exp $
+
+  30 May 2012; Ralph Sennhauser <sera@gentoo.org> ant-tasks.eclass:
+  Set prefix for ant-1.8.4
 
   30 May 2012; Justin Lecher <jlec@gentoo.org> flag-o-matic.eclass:
   Sort ldflags handling functions to logic place
