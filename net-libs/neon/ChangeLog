@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.37 2012/05/29 19:10:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.38 2012/05/30 19:01:56 maekke Exp $
+
+  30 May 2012; Markus Meier <maekke@gentoo.org> neon-0.29.6-r1.ebuild:
+  arm stable, bug #417325
 
   29 May 2012; Brent Baude <ranger@gentoo.org> neon-0.29.6-r1.ebuild:
   Marking neon-0.29.6-r1 ppc for bug 415479
