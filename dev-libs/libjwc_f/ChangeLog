@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libjwc_f
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/ChangeLog,v 1.9 2011/06/21 16:12:50 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/ChangeLog,v 1.10 2012/05/30 08:32:31 jlec Exp $
+
+*libjwc_f-1.1-r2 (30 May 2012)
+
+  30 May 2012; Justin Lecher <jlec@gentoo.org> +libjwc_f-1.1-r2.ebuild,
+  metadata.xml:
+  Move to EAPI=4, fix underlinking, handle static-libs
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> libjwc_f-1.1-r1.ebuild:
   Add dependency on virtual/fortran
