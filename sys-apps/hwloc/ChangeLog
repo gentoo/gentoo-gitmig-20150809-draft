@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.24 2012/05/11 11:52:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.25 2012/05/30 12:33:17 aballier Exp $
+
+  30 May 2012; Alexis Ballier <aballier@gentoo.org> hwloc-1.4.2.ebuild:
+  keyword ~amd64-fbsd
 
 *hwloc-1.4.2 (11 May 2012)
 
