@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-jai
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jai/ChangeLog,v 1.24 2012/05/25 11:27:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jai/ChangeLog,v 1.25 2012/05/30 09:10:39 sera Exp $
+
+*ant-jai-1.8.4 (30 May 2012)
+
+  30 May 2012; Ralph Sennhauser <sera@gentoo.org> +ant-jai-1.8.4.ebuild:
+  Security bump. CVE-2012-2098 #417909
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> ant-jai-1.8.2.ebuild:
   Stable for amd64, wrt bug #417403

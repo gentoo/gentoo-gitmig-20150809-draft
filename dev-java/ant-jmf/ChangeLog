@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-jmf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jmf/ChangeLog,v 1.28 2012/05/25 11:29:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jmf/ChangeLog,v 1.29 2012/05/30 09:16:25 sera Exp $
+
+*ant-jmf-1.8.4 (30 May 2012)
+
+  30 May 2012; Ralph Sennhauser <sera@gentoo.org> +ant-jmf-1.8.4.ebuild:
+  Security bump. CVE-2012-2098 #417909
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> ant-jmf-1.8.2.ebuild:
   Stable for amd64, wrt bug #417403
