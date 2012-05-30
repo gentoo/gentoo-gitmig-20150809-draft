@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.117 2012/05/27 14:57:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.118 2012/05/30 09:56:48 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -146,7 +146,9 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 
-	chromium_check_kernel_config
+	if ! use selinux; then
+		chromium_suid_sandbox_check_kernel_config
+	fi
 
 	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."

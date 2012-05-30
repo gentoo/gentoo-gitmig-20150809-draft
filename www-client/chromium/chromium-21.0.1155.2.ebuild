@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-21.0.1145.0.ebuild,v 1.2 2012/05/23 18:09:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-21.0.1155.2.ebuild,v 1.1 2012/05/30 09:56:48 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -53,6 +53,7 @@ RDEPEND="app-arch/bzip2
 	kerberos? ( virtual/krb5 )
 	selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
+	>=dev-lang/nacl-toolchain-newlib-0_p7311
 	dev-lang/perl
 	dev-lang/yasm
 	dev-python/ply
@@ -89,7 +90,9 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 
-	chromium_check_kernel_config
+	if ! use selinux; then
+		chromium_suid_sandbox_check_kernel_config
+	fi
 
 	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."
@@ -99,16 +102,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	#ln -s /usr/$(get_libdir)/nacl-toolchain-newlib \
-	#	native_client/toolchain/linux_x86_newlib || die
+	ln -s /usr/$(get_libdir)/nacl-toolchain-newlib \
+		native_client/toolchain/linux_x86_newlib || die
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
-
-	epatch "${FILESDIR}/${PN}-svnversion-r0.patch"
-
-	epatch "${FILESDIR}/${PN}-zlib-r0.patch"
 
 	epatch_user
 
@@ -189,8 +188,8 @@ src_configure() {
 	# drivers, bug #413637.
 	myconf+=" -Dlinux_use_tcmalloc=0"
 
-	# Disable Native Client until we figure out bug #417019.
-	myconf+=" -Ddisable_nacl=1"
+	# Disable glibc Native Client toolchain, we don't need it (bug #417019).
+	myconf+=" -Ddisable_glibc=1"
 
 	# Make it possible to remove third_party/adobe.
 	echo > "${T}/flapper_version.h" || die
@@ -272,7 +271,7 @@ src_configure() {
 src_compile() {
 	local test_targets
 	for x in base cacheinvalidation crypto \
-		googleurl gpu media net printing; do
+		googleurl gpu media net printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
 
@@ -333,6 +332,7 @@ src_test() {
 		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:DnsConfigServiceTest.GetSystemConfig:CertDatabaseNSSTest.ImportServerCert_SelfSigned'
 
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/printing_unittests virtualmake
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/sql_unittests virtualmake
 }
 
 src_install() {
@@ -346,10 +346,10 @@ src_install() {
 
 	doexe out/Release/chromedriver || die
 
-	#doexe out/Release/nacl_helper{,_bootstrap} || die
-	#insinto "${CHROMIUM_HOME}"
-	#doins out/Release/nacl_irt_*.nexe || die
-	#doins out/Release/libppGoogleNaClPluginChrome.so || die
+	doexe out/Release/nacl_helper{,_bootstrap} || die
+	insinto "${CHROMIUM_HOME}"
+	doins out/Release/nacl_irt_*.nexe || die
+	doins out/Release/libppGoogleNaClPluginChrome.so || die
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then
