@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101.ebuild,v 1.2 2012/02/20 14:27:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r1.ebuild,v 1.1 2012/05/30 18:11:49 xarthisius Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -48,6 +48,8 @@ src_configure() {
 
 	# Disable automagic dependency on PortMidi.
 	sed -e "s:^pypm :#&:" -i Setup || die "sed failed"
+
+	sed -i -e "s/import _camera/from pygame &/g" lib/camera.py || die #415593
 }
 
 src_test() {
