@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qsampler
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/ChangeLog,v 1.16 2009/12/04 19:01:06 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/ChangeLog,v 1.17 2012/05/30 13:43:47 yngwin Exp $
+
+*qsampler-0.2.2.2345 (30 May 2012)
+
+  30 May 2012; Ben de Groot <yngwin@gentoo.org> +qsampler-0.2.2.2345.ebuild,
+  -qsampler-0.2.2.ebuild:
+  Add new snapshot ebuild (SVN r2345), with fixes by kensington and users in
+  bugs #379663 and #380589. Remove old broken version.
 
 *qsampler-0.2.2 (04 Dec 2009)
 
