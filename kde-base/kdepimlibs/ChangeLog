@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.148 2012/05/24 11:38:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.149 2012/05/30 10:40:42 kensington Exp $
+
+  30 May 2012; Michael Palimaka <kensington@gentoo.org> kdepimlibs-4.8.3.ebuild:
+  Add boost as an rdep, since headers that include it are installed. Fixes bug
+  #418071.
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kdepimlibs-4.8.1.ebuild:
   Remove KDE SC 4.8.1
