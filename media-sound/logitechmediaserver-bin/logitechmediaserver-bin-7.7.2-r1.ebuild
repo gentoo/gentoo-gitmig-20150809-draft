@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/logitechmediaserver-bin-7.7.2.ebuild,v 1.2 2012/04/12 14:25:32 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/logitechmediaserver-bin-7.7.2-r1.ebuild,v 1.1 2012/05/30 18:45:33 lavajoe Exp $
 
 EAPI="3"
 
@@ -530,6 +530,7 @@ VARDIR="/var/lib/${MY_PN}"
 CACHEDIR="${VARDIR}/cache"
 USRPLUGINSDIR="${VARDIR}/Plugins"
 SVRPLUGINSDIR="${CACHEDIR}/InstalledPlugins"
+CLIENTPLAYLISTSDIR="${VARDIR}/ClientPlaylists"
 PREFSDIR="/etc/${MY_PN}"
 LOGDIR="/var/log/${MY_PN}"
 SVRPREFS="${PREFSDIR}/server.prefs"
@@ -550,6 +551,7 @@ pkg_setup() {
 src_prepare() {
 	# Apply patches
 	epatch "${FILESDIR}/${P}-uuid-gentoo.patch"
+	epatch "${FILESDIR}/${P}-client-playlists-gentoo.patch"
 }
 
 src_install() {
@@ -602,6 +604,11 @@ src_install() {
 	dodir "${USRPLUGINSDIR}"
 	fowners ${RUN_UID}:${RUN_GID} "${USRPLUGINSDIR}"
 	fperms 770 "${USRPLUGINSDIR}"
+
+	# Initialise the client playlists directory
+	dodir "${CLIENTPLAYLISTSDIR}"
+	fowners ${RUN_UID}:${RUN_GID} "${CLIENTPLAYLISTSDIR}"
+	fperms 770 "${CLIENTPLAYLISTSDIR}"
 
 	# Install logrotate support
 	insinto /etc/logrotate.d

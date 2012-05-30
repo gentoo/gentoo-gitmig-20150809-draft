@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/files/gentoo-filepaths.pm,v 1.1 2012/04/12 05:56:03 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/files/gentoo-filepaths.pm,v 1.2 2012/05/30 18:45:33 lavajoe Exp $
 
 # This file contains a custom OS package to provide information on the
 # installation structure on Gentoo.
@@ -38,20 +38,33 @@ sub dirsFor {
 	my ($class, $dir) = @_;
 
 	my @dirs = ();
-	
-	# Use the default behaviour to locate the directory.
-	push @dirs, $class->SUPER::dirsFor($dir);
 
 	# Overrides for specific directories.
 	if ($dir eq 'Plugins') {
 
-		# User-installed plugins are in a different place.
+		# Look in the normal places.
+		push @dirs, $class->SUPER::dirsFor($dir);
+
+		# User-installed plugins are in a different place, so add it.
 		push @dirs, '/var/lib/logitechmediaserver/Plugins';
+
+	} elsif ($dir eq 'ClientPlaylists') {
+
+		# LMS would normally try to put client playlists in the prefs
+		# directory, but they aren't really prefs since they're dynamic
+		# state of the clients. Effectively, they're the same as the
+		# database cache, so we move these under /var/lib.
+		push @dirs, '/var/lib/logitechmediaserver/ClientPlaylists';
 
 	} elsif ($dir =~ /^(?:prefs)$/) {
 
 		# Server and plugin preferences are in a different place.
 		push @dirs, $::prefsdir || '/etc/logitechmediaserver';
+
+	} else {
+
+		# Use the default behaviour to locate the directory.
+		push @dirs, $class->SUPER::dirsFor($dir);
 
 	}
 
