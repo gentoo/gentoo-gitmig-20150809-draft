@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.276 2012/05/30 12:54:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.277 2012/05/30 12:55:29 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -79,9 +79,6 @@ dev-tex/chktex doc
 
 # dev-util/source-highlight
 dev-util/gtk-doc highlight
-
-# sys-cluster/openmpi
-dev-libs/boost mpi
 
 # x11-misc/colord
 x11-libs/gtk+ colord
