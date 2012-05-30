@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0-r1.ebuild,v 1.7 2012/05/28 23:52:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0-r1.ebuild,v 1.8 2012/05/30 08:04:01 jlec Exp $
 
 EAPI=3
 
-inherit autotools eutils fdo-mime versionator
+inherit autotools eutils fdo-mime flag-o-matic versionator
 
 MY_P=${P/_}
 
@@ -66,6 +66,7 @@ src_prepare() {
 	sed -e "s/7/$(get_version_component_range 3)/" \
 		"${FILESDIR}"/FLTKConfig.cmake > CMake/FLTKConfig.cmake
 	sed -e 's:-Os::g' -i configure.in || die
+	use prefix && append-ldflags -Wl,-rpath "${LIBDIR}"
 	eautoconf
 }
 
