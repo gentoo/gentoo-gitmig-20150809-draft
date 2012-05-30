@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyacoustid/pyacoustid-0.7.ebuild,v 1.2 2012/05/29 17:13:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyacoustid/pyacoustid-0.7.ebuild,v 1.3 2012/05/30 13:00:45 xarthisius Exp $
 
 EAPI=4
+
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
@@ -17,6 +19,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-libs/chromaprint
+DEPEND="dev-python/setuptools"
+RDEPEND="media-libs/chromaprint
 		dev-python/audioread"
-RDEPEND="${DEPEND}"
