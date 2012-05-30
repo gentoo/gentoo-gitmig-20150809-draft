@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.25 2012/05/29 15:45:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.26 2012/05/30 13:26:05 aballier Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)
@@ -83,3 +83,6 @@ kde-base/kdelibs udisks upower
 
 # connman is Linux only
 x11-libs/qt-bearer connman
+
+# udisks is linux only (for now?)
+gnome-base/gvfs udisks
