@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.321 2012/05/30 09:00:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.322 2012/05/30 10:49:39 scarabeus Exp $
+
+  30 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libreoffice-3.5.4-libexttextcat.patch, libreoffice-3.5.4.2-r1.ebuild:
+  Fix build with latest libexttextcat. Resolves bug#418231.
 
   30 May 2012; Agostino Sarubbo <ago@gentoo.org> libreoffice-3.5.4.2-r1.ebuild:
   stable for amd64, wrt to bug #416457

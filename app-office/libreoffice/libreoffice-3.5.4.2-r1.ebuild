@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.4.2-r1.ebuild,v 1.3 2012/05/30 09:00:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.4.2-r1.ebuild,v 1.4 2012/05/30 10:49:39 scarabeus Exp $
 
 EAPI=4
 
@@ -192,8 +192,8 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	# this can't be upstreamed :(
 	"${FILESDIR}/${PN}-system-pyuno.patch"
+	"${FILESDIR}/${PN}-3.5.4-libexttextcat.patch"
 	"${FILESDIR}/${PN}-3.5-propagate-gb_FULLDEPS.patch"
 	"${FILESDIR}/${PN}-3.5-doublebuild.patch"
 	"${FILESDIR}/${PN}-3.5-hebrew-icu49.patch"
