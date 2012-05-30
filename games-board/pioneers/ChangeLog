@@ -1,6 +1,11 @@
 # ChangeLog for games-board/pioneers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.25 2012/05/04 04:30:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.26 2012/05/30 15:53:23 mr_bones_ Exp $
+
+*pioneers-14.1 (30 May 2012)
+
+  30 May 2012; Michael Sterrett <mr_bones_@gentoo.org> +pioneers-14.1.ebuild:
+  version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> pioneers-0.12.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
