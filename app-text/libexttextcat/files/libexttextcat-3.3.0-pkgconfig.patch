@@ -1,0 +1,12 @@
+diff --git a/libexttextcat.pc.in b/libexttextcat.pc.in
+index 5055180..228eb9b 100644
+--- a/libexttextcat.pc.in
++++ b/libexttextcat.pc.in
+@@ -10,6 +10,6 @@ Name: libexttextcat
+ Description: Library implementing N-gram-based text categorization
+ Version: @VERSION@
+ Requires:
+-Libs: -L${libdir} -lexttextcat
++Libs: -L${libdir} -lexttextcat-1.0
+ Cflags: -I${includedir}/libexttextcat/
+ 
