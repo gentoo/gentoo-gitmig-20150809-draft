@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.64 2012/05/27 23:25:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.65 2012/05/30 03:11:26 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -200,3 +200,7 @@ gnome-online-accounts
 # Matt Turner <mattst88@gentoo.org (27 May 2012)
 # sys-apps/entropy is not keyworded
 entropy
+
+# Matt Turner <mattst88@gentoo.org (29 May 2012)
+# net-libs/libsocialweb is not keyworded
+socialweb
