@@ -1,15 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.7.ebuild,v 1.1 2012/05/16 15:08:26 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.7.ebuild,v 1.2 2012/05/30 14:55:32 xarthisius Exp $
 
 EAPI=4
+
+PYTHON_DEPEND="2"
 
 inherit autotools base python
 
 MY_PN=Pacemaker
 MY_P=${MY_PN}-${PV}
 MY_TREE="b5b0a7b"
-PYTHON_DEPEND="2"
 
 DESCRIPTION="Pacemaker CRM"
 HOMEPAGE="http://www.linux-ha.org/wiki/Pacemaker"
@@ -47,6 +48,7 @@ src_prepare() {
 	sed -e "s:<glib/ghash.h>:<glib.h>:" \
 		-i lib/ais/plugin.c || die
 	eautoreconf
+	python_convert_shebangs -r 2 .
 }
 
 src_configure() {
