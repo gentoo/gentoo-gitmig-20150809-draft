@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/kombu
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.1 2012/05/30 06:37:19 iksaif Exp $
+
+*kombu-2.1.8 (30 May 2012)
+
+  30 May 2012; Corentin Chary <iksaif@gentoo.org>
+  +files/kombu-2.1.1-add-assertIsInstance-with-unittest.patch,
+  +kombu-2.1.8.ebuild, +metadata.xml:
+  New ebuild for kombu.
+
