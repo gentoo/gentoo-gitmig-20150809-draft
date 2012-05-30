@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.144 2012/04/23 10:50:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.145 2012/05/30 19:46:18 jlec Exp $
+
+*p7zip-9.20.1-r2 (30 May 2012)
+
+  30 May 2012; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1-r1.ebuild,
+  +p7zip-9.20.1-r2.ebuild, +files/p7zip-9.20.1-execstack.patch:
+  Give desktop files better names, #418179; drop in no execstack pacth from
+  fedora
 
 *p7zip-9.20.1-r1 (23 Apr 2012)
 

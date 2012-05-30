@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r1.ebuild,v 1.2 2012/05/30 19:46:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r2.ebuild,v 1.1 2012/05/30 19:46:18 jlec Exp $
 
 EAPI=4
 
@@ -33,6 +33,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-execstack.patch
+
 	if ! use pch; then
 		sed "s:PRE_COMPILED_HEADER=StdAfx.h.gch:PRE_COMPILED_HEADER=:g" -i makefile.* || die
 	fi
@@ -110,8 +113,8 @@ src_install() {
 		make_wrapper 7zG "/usr/$(get_libdir)/${PN}/7zG"
 		make_wrapper 7zFM "/usr/$(get_libdir)/${PN}/7zFM"
 
-		make_desktop_entry 7zFM ${PN} "GTK;Utility;Archiving;Compression"
-		make_desktop_entry 7zG ${PN} "GTK;Utility;Archiving;Compression"
+		make_desktop_entry 7zFM "${PN} FM" "GTK;Utility;Archiving;Compression"
+		make_desktop_entry 7zG "${PN} GUI" "GTK;Utility;Archiving;Compression"
 
 		dobin GUI/p7zipForFilemanager
 		exeinto /usr/$(get_libdir)/${PN}
