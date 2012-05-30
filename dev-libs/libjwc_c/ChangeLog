@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libjwc_c
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_c/ChangeLog,v 1.5 2011/01/23 12:54:24 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_c/ChangeLog,v 1.6 2012/05/30 08:16:26 jlec Exp $
+
+*libjwc_c-1.1-r2 (30 May 2012)
+
+  30 May 2012; Justin Lecher <jlec@gentoo.org> +libjwc_c-1.1-r2.ebuild,
+  metadata.xml:
+  Move to EAPI=4, fix underlinking, handle static-libs
 
   23 Jan 2011; Thomas Kahle <tomka@gentoo.org> libjwc_c-1.1-r1.ebuild:
   x86 stable per bug 351770
