@@ -126,7 +126,7 @@ index a74be5f..1cfb066 100644
 -	$(CC) -o $@ img.o $(SOLDFLAGS)
 +$(SOLIB)/libimg.so.${VERSION}: $(SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
 +	$(CC) $(CFLAGS) $(SOCFLAGS) $(NOREGEXFLAG) $(INCLUDES) $(WARNINGS) -c $(EXAMPLES)/img.c
-+	$(CC) $(LDFLAGS) -Wl,-soname,libimg.so.$(VERSION) $(SOCFLAGS) $(SOLDFLAGS) -o $@ img.o
++	$(CC) $(LDFLAGS) -Wl,-soname,libimg.so.$(VERSION) $(SOCFLAGS) $(SOLDFLAGS) -o $@ img.o -lm
 +	ln -sf libimg.so.$(VERSION) $(SOLIB)/libimg.so
  	rm img.o
  
