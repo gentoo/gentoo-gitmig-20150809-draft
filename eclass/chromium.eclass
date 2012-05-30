@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.4 2012/05/23 18:16:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.5 2012/05/30 06:15:24 phajdan.jr Exp $
 
 # @ECLASS: chromium.eclass
 # @MAINTAINER:
@@ -17,11 +17,11 @@ if [[ ${PN} == chromium ]]; then
 	IUSE+=" custom-cflags"
 fi
 
-# @FUNCTION: chromium_check_kernel_config
+# @FUNCTION: chromium_suid_sandbox_check_kernel_config
 # @USAGE:
 # @DESCRIPTION:
-# Ensures the system kernel is configured for full Chromium functionality.
-chromium_check_kernel_config() {
+# Ensures the system kernel supports features needed for SUID sandbox to work.
+chromium_suid_sandbox_check_kernel_config() {
 	has "${EAPI:-0}" 0 1 2 3 && die "EAPI=${EAPI} is not supported"
 
 	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
@@ -32,6 +32,16 @@ chromium_check_kernel_config() {
 		CONFIG_CHECK="~PID_NS ~NET_NS"
 		check_extra_config
 	fi
+}
+
+# @FUNCTION: chromium_check_kernel_config
+# @USAGE:
+# @DESCRIPTION:
+# Ensures the system kernel is configured for full Chromium functionality.
+chromium_check_kernel_config() {
+	eqawarn "chromium_check_kernel_config is deprecated."
+	eqawarn "Please use chromium_suid_sandbox_check_kernel_config if applicable."
+	chromium_suid_sandbox_check_kernel_config
 }
 
 # @ECLASS-VARIABLE: CHROMIUM_LANGS
