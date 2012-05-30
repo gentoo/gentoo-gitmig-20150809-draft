@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.83 2012/05/29 20:14:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.84 2012/05/30 06:48:48 jdhore Exp $
+
+  30 May 2012; Jeff Horelick <jdhore@gentoo.org> hdf5-1.8.8-r1.ebuild:
+  marked x86 per bug 417607
 
   29 May 2012; Brent Baude <ranger@gentoo.org> hdf5-1.8.8-r1.ebuild:
   Marking hdf5-1.8.8-r1 ppc for bug 417607
