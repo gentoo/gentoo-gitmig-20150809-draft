@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/celery
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.1 2012/05/30 06:45:54 iksaif Exp $
+
+*celery-2.5.3 (30 May 2012)
+
+  30 May 2012; Corentin Chary <iksaif@gentoo.org> +celery-2.5.3.ebuild,
+  +files/celery.confd, +files/celery.initd, +metadata.xml:
+  New ebuild for celery. Closes bug #342041.
+
