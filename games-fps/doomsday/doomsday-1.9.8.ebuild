@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8.ebuild,v 1.1 2012/05/30 10:21:55 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8.ebuild,v 1.2 2012/05/30 10:45:21 maksbotan Exp $
 
 EAPI=4
 
@@ -92,9 +92,9 @@ src_install() {
 
 		doicon ../snowberry/graphics/orb-doom.png
 		doom_make_wrapper jdoom doom1 orb-doom "DoomsDay Engine: Doom 1" "${res_arg}"
-		einfo "Created jdoom launcher. To play Doom place your doom.wad to"
-		einfo "\"${GAMES_DATADIR}\"/doom-data"
-		einfo
+		elog "Created jdoom launcher. To play Doom place your doom.wad to"
+		elog "\"${GAMES_DATADIR}\"/doom-data"
+		elog
 
 		if use demo; then
 			doom_make_wrapper jdoom-demo doom1-share orb-doom "DoomsDay Engine: Doom 1 Demo" \
@@ -109,17 +109,17 @@ src_install() {
 		doicon ../snowberry/graphics/orb-hexen.png
 		doom_make_wrapper jhexen hexen orb-hexen "DoomsDay Engine: Hexen"
 
-		einfo "Created jhexen launcher. To play Hexen place your hexen.wad to"
-		einfo "\"${GAMES_DATADIR}\"/${PN}/data/jhexen"
-		einfo
+		elog "Created jhexen launcher. To play Hexen place your hexen.wad to"
+		elog "\"${GAMES_DATADIR}\"/${PN}/data/jhexen"
+		elog
 	fi
 	if use heretic; then
 		doicon ../snowberry/graphics/orb-heretic.png
 		doom_make_wrapper jheretic heretic orb-heretic "DoomsDay Engine: Heretic"
 
-		einfo "Created jheretic launcher. To play Heretic place your heretic.wad to"
-		einfo "\"${GAMES_DATADIR}\"/${PN}/data/jheretic"
-		einfo
+		elog "Created jheretic launcher. To play Heretic place your heretic.wad to"
+		elog "\"${GAMES_DATADIR}\"/${PN}/data/jheretic"
+		elog
 	fi
 
 	prepgamesdirs
