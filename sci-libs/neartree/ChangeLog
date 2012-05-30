@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/neartree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.19 2012/03/01 20:04:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.20 2012/05/30 12:34:19 jlec Exp $
+
+*neartree-3.1.1-r1 (30 May 2012)
+
+  30 May 2012; Justin Lecher <jlec@gentoo.org> +neartree-3.1.1-r1.ebuild,
+  +files/CMakeLists.txt, metadata.xml:
+  Clean buildsystem and move to cmake instead of patching
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> neartree-2.3.2.ebuild:
   Marking neartree-2.3.2 ppc for bug 393999
