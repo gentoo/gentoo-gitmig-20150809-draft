@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/ChangeLog,v 1.6 2012/05/29 20:57:12 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/ChangeLog,v 1.7 2012/05/30 16:48:29 xarthisius Exp $
+
+  30 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  beets-1.0_beta14-r1.ebuild:
+  Enable test, restrict python 2.5, add correct dependencies
 
   29 May 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   -beets-1.0_beta14.ebuild, beets-1.0_beta14-r1.ebuild:
