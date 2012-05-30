@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.75 2012/05/26 15:31:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.76 2012/05/30 17:51:38 mr_bones_ Exp $
+
+*ogre-1.7.4-r1 (30 May 2012)
+
+  30 May 2012; Michael Sterrett <mr_bones_@gentoo.org> +ogre-1.7.4-r1.ebuild:
+  fix threading support with patch from hasufell (bug #418269)
 
   26 May 2012; Agostino Sarubbo <ago@gentoo.org> ogre-1.7.4.ebuild:
   Stable for amd64, wrt bug #412675
