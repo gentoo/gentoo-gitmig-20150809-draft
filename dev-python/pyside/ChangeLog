@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.33 2012/05/29 15:42:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.34 2012/05/30 07:50:16 jlec Exp $
+
+  30 May 2012; Justin Lecher <jlec@gentoo.org> pyside-1.1.1.ebuild,
+  +files/rpath.cmake:
+  Add fix for prefix, missing rpath for qt4 installation
 
   29 May 2012; Justin Lecher <jlec@gentoo.org> pyside-1.1.1.ebuild:
   Added ~-linux keywords, tested by me
