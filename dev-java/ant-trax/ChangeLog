@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant-trax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ChangeLog,v 1.30 2012/05/25 11:22:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ChangeLog,v 1.31 2012/05/30 08:32:54 sera Exp $
+
+*ant-trax-1.8.4 (30 May 2012)
+
+  30 May 2012; Ralph Sennhauser <sera@gentoo.org> +ant-trax-1.8.4.ebuild:
+  Security bump. CVE-2012-2098 #417909
+  src_postinst is pkg_postinst.
+  Add jdk dep for jar command.
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> ant-trax-1.8.2.ebuild:
   Stable for amd64, wrt bug #417403
