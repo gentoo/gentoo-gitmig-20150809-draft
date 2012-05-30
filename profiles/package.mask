@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13804 2012/05/30 10:00:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13805 2012/05/30 13:47:31 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,7 +38,7 @@
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (27 May 2012)
 # The successor of KOffice, Calligra, has now become stable
-# and we are removing KOffice soon from the portage tree.   
+# and we are removing KOffice soon from the portage tree.
 # Please upgrade; you can do that with the following commands:
 #  emerge --deselect karbon kexi koffice-data koffice-l10n koffice-libs koffice-meta kplato kpresenter krita kspread kword
 #  emerge app-office/calligra app-office/calligra-l10n
@@ -73,12 +73,12 @@ app-office/kword
 # Abandoned patchsets. Upstream stopped regular releases.
 # Live ebuild will remain in portage for now.
 # Removal in 30 days.
-# For regular releases please migrate to 
+# For regular releases please migrate to
 # sys-kernel/pf-sources
 =sys-kernel/zen-sources-2.6*
 
 # Kacper Kowalik <xarthisius@gentoo.org> (24 May 2012)
-# Masked for removal in 30 days (#324415), Doesn't build with 
+# Masked for removal in 30 days (#324415), Doesn't build with
 # libtool-2.2 (#276194), bundles vulnerable copy of libtool (#297648),
 # fails to install with new coreutils and automake-1.11 (#328549),
 # last release 2007-02-14, doesn't provide MPI-2
@@ -108,7 +108,7 @@ sys-cluster/lam-mpi
 
 # Michael Weber <xmw@gentoo.org> (22 May 2012)
 # Masked for removal in 30 days.
-# Replaced by x11-wm/xpra. 
+# Replaced by x11-wm/xpra.
 x11-wm/parti
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 May 2012)
@@ -268,7 +268,7 @@ x11-misc/xsimpsons
 sys-kernel/sparc-sources
 
 # Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Upstream reports circumvention; developer has ceased 
+# Upstream reports circumvention; developer has ceased
 # maintenance (#415255). Removal in a month.
 app-shells/rssh
 
@@ -351,13 +351,6 @@ net-im/emesene:0
 # Unstable dev channel release. Fixes build with gcc47
 # (bug #413941).
 >=media-sound/mp3diags-1.1
-
-# Davide Pesavento <pesa@gentoo.org> (02 May 2012)
-# It has been broken for more than 2 years (bug 380589),
-# last upstream release in 2009, uses deprecated qt4 eclass,
-# long list of QA issues (bug 379663).
-# Masked for removal in 30 days.
-media-sound/qsampler
 
 # Hans de Graaff <graaff@gentoo.org> (29 Apr 2012)
 # Mask new cucumber components until the whole set is ready.
