@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-3.1.1.ebuild,v 1.1 2012/05/30 19:02:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-3.1.1.ebuild,v 1.2 2012/05/30 19:03:49 jlec Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND="
 	virtual/lapack
 	mpi? ( virtual/mpi[fortran] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}-ng_${PV}"
 
