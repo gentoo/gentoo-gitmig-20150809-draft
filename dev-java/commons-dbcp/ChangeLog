@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.59 2012/05/25 10:03:55 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.60 2012/05/30 11:37:11 ago Exp $
+
+  30 May 2012; Agostino Sarubbo <ago@gentoo.org> commons-dbcp-1.4-r2.ebuild:
+  Stable for amd64, wrt bug #348594
 
 *commons-dbcp-1.4-r2 (25 May 2012)
 
