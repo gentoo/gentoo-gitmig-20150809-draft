@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.44 2012/05/29 19:49:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.45 2012/05/30 09:03:43 polynomial-c Exp $
+
+  30 May 2012; Lars Wendler <polynomial-c@gentoo.org> iftop-1.0_pre2.ebuild:
+  Non-maintainer commit: We need libpcap with ipv6 support or else iftop
+  doesn't work at all.
 
   29 May 2012; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre2.ebuild:
   Install AUTHORS. Remove unused inherit.
