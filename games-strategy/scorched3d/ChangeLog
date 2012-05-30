@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.84 2012/05/13 19:32:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.85 2012/05/30 08:32:58 slyfox Exp $
+
+  30 May 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/scorched3d-43.3d-gcc47.patch, scorched3d-43.3d.ebuild:
+  Fix build failure against gcc-4.7 (missing prototypes)
 
   13 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
   +files/scorched3d-43.3d-gcc43.patch, +files/scorched3d-43.3d-odbc.patch,
