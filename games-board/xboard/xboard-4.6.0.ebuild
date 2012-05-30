@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.6.0.ebuild,v 1.1 2012/04/19 04:59:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.6.0.ebuild,v 1.2 2012/05/30 19:55:08 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -31,7 +31,9 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}*
+	epatch \
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-gettext.patch
 	eautoreconf
 }
 

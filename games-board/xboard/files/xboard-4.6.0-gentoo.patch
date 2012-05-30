@@ -1,5 +1,5 @@
---- Makefile.am.old	2012-04-15 13:06:09.425029890 +0200
-+++ Makefile.am	2012-04-15 13:20:46.089910127 +0200
+--- Makefile.am.old
++++ Makefile.am
 @@ -42,10 +42,9 @@
  DISTCLEANFILES = stamp-h
  
@@ -55,8 +55,8 @@
  dist_sounds_DATA = \
    sounds/cymbal.wav     sounds/pop2.wav   sounds/slap.wav     sounds/ding1.wav      sounds/laser.wav \
    sounds/woodthunk.wav  sounds/gong.wav   sounds/penalty.wav  sounds/honkhonk.wav   sounds/phone.wav
---- xboard.conf.in.old	2012-04-16 21:44:25.395391094 +0200
-+++ xboard.conf.in	2012-04-16 21:44:45.014964575 +0200
+--- xboard.conf.in.old
++++ xboard.conf.in
 @@ -67,8 +67,8 @@
  ;
  ; Engines & adjudicatons in engine-engine games
@@ -68,8 +68,8 @@
  -firstChessProgramNames {fairymax
  "Fruit 2.1" -fcp fruit -fUCI
  "Crafty" -fcp crafty
---- xboard.h.old	2012-04-16 21:45:30.176682289 +0200
-+++ xboard.h	2012-04-16 21:46:00.066510987 +0200
+--- xboard.h.old
++++ xboard.h
 @@ -119,8 +119,8 @@
  
  #define BORDER_X_OFFSET 3

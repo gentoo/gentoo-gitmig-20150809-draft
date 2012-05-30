@@ -1,6 +1,12 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.45 2012/04/19 04:59:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.46 2012/05/30 19:55:08 mr_bones_ Exp $
+
+  30 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  files/xboard-4.5.2a-gentoo.patch, files/xboard-4.5.3a-gentoo.patch,
+  xboard-4.6.0.ebuild, files/xboard-4.6.0-gentoo.patch,
+  +files/xboard-4.6.0-gettext.patch:
+  work around gettext issue (bug #418267)
 
 *xboard-4.6.0 (19 Apr 2012)
 
