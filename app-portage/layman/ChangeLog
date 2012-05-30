@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.156 2012/05/28 18:03:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.157 2012/05/30 16:18:28 jer Exp $
+
+  30 May 2012; Jeroen Roovers <jer@gentoo.org> layman-1.4.2-r3.ebuild:
+  Stable for HPPA (bug #416623).
 
   28 May 2012; Markus Meier <maekke@gentoo.org> layman-1.4.2-r3.ebuild:
   arm stable, bug #416623
