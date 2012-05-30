@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.1.ebuild,v 1.2 2012/05/29 15:41:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.1.ebuild,v 1.3 2012/05/30 07:38:42 jlec Exp $
 
 EAPI=4
 
@@ -40,6 +40,12 @@ src_prepare() {
 	# caused by the usage of a different version suffix with python >= 3.2
 	sed -i -e "/get_config_var('SOABI')/d" \
 		cmake/Modules/FindPython3InterpWithDebug.cmake || die
+	if use prefix; then
+		cp "${FILESDIR}"/rpath.cmake .
+		sed \
+			-i '1iinclude(rpath.cmake)' \
+			CMakeLists.txt || die
+	fi
 }
 
 src_configure() {
