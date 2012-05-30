@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gmock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.6 2012/03/30 15:52:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.7 2012/05/30 20:03:47 vapier Exp $
+
+  30 May 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/gmock-1.4.0-gcc-4.7.patch, gmock-1.4.0.ebuild:
+  Fix via ChromiumOS from upstream for building with gcc-4.7.
 
 *gmock-1.6.0 (30 Mar 2012)
 
