@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.28 2012/03/08 23:09:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.29 2012/05/30 13:39:45 aballier Exp $
+
+  30 May 2012; Alexis Ballier <aballier@gentoo.org> ccolamd-2.7.4.ebuild:
+  keyword ~amd64-fbsd
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> ccolamd-2.7.3.ebuild:
   Marking ccolamd-2.7.3 ppc64 for bug 393945

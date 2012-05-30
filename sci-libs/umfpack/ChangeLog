@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.28 2012/05/04 08:22:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.29 2012/05/30 13:43:13 aballier Exp $
+
+  30 May 2012; Alexis Ballier <aballier@gentoo.org> umfpack-5.5.2.ebuild:
+  keyword ~amd64-fbsd
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> umfpack-5.2.0.ebuild,
   umfpack-5.5.1.ebuild, umfpack-5.5.2.ebuild:
