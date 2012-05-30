@@ -1,6 +1,11 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.104 2012/03/06 11:44:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.105 2012/05/30 23:37:05 radhermit Exp $
+
+*ejabberd-2.1.11 (30 May 2012)
+
+  30 May 2012; Tim Harder <radhermit@gentoo.org> +ejabberd-2.1.11.ebuild:
+  Version bump (bug #415347).
 
 *ejabberd-2.1.10 (06 Mar 2012)
 
