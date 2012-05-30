@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6613 2012/05/30 13:47:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6614 2012/05/30 16:31:15 ottxor Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 May 2012; Christoph Junghans <ottxor@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  google-talkplugin is pure 64bit for a while
 
   30 May 2012; Ben de Groot <yngwin@gentoo.org> package.mask:
   Remove media-sound/qsampler mask, since we now have a snapshot ebuild that
