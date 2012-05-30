@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.4.4.ebuild,v 1.6 2012/04/06 09:55:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.4.4.ebuild,v 1.7 2012/05/30 13:24:17 jlec Exp $
 
 EAPI=4
 
@@ -25,3 +25,13 @@ S="${WORKDIR}"/${P}
 DOCS="NEWS README.txt"
 
 PATCHES=( "${FILESDIR}"/${P}-zlib.patch )
+
+src_prepare() {
+	if use prefix; then
+		cp "${FILESDIR}"/rpath.cmake .
+		sed \
+			-i '1iinclude(rpath.cmake)' \
+			CMakeLists.txt || die
+	fi
+	base_src_prepare
+}
