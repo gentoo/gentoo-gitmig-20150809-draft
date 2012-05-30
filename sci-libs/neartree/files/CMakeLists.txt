@@ -14,7 +14,7 @@ target_link_libraries(CNearTree CVector m)
 
 set_target_properties(CNearTree PROPERTIES SOVERSION ${LIB_MAJOR} VERSION ${_soversion})
 
-INSTALL(TARGETS CNearTree DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR})
+INSTALL(TARGETS CNearTree DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX})
 install(FILES CNearTree.h  rhrand.h  TNear.h  triple.h
 			DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 install(FILES README_NearTree.txt DESTINATION ${CMAKE_INSTALL_PREFIX}/share/doc/neartree-${LIB_MAJOR}.${LIB_MINOR}.${LIB_RELEASE})

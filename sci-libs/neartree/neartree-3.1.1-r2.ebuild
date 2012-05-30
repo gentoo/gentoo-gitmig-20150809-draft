@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-3.1.1-r1.ebuild,v 1.1 2012/05/30 12:34:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-3.1.1-r2.ebuild,v 1.1 2012/05/30 19:04:57 jlec Exp $
 
 EAPI=4
 
