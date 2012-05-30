@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.40 2012/05/18 10:03:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.41 2012/05/30 03:57:23 patrick Exp $
+
+  30 May 2012; Patrick Lauer <patrick@gentoo.org> nodejs-0.6.17.ebuild,
+  nodejs-0.6.18.ebuild, nodejs-0.7.8.ebuild:
+  Limiting v8 dep to avoid crashes #417879
 
 *nodejs-0.6.18 (18 May 2012)
 

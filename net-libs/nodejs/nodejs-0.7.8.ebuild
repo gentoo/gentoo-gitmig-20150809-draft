@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.7.8.ebuild,v 1.2 2012/05/08 02:30:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.7.8.ebuild,v 1.3 2012/05/30 03:57:23 patrick Exp $
 
 EAPI=3
 
@@ -21,6 +21,7 @@ KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE=""
 
 DEPEND=">=dev-lang/v8-3.9.24.7
+	<dev-lang/v8-3.10
 	dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
