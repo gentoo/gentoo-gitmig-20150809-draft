@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.8 2012/05/22 12:28:49 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.9 2012/05/30 21:22:30 zmedico Exp $
 
 EAPI=4
 
-inherit autotools-utils systemd
+inherit autotools-utils eutils systemd
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
 HOMEPAGE="http://www.rsyslog.com/"
