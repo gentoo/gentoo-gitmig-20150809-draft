@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.3 2012/05/28 03:17:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.4 2012/05/30 12:25:14 aballier Exp $
 
 EAPI=2
 
@@ -337,11 +337,6 @@ src_compile() {
 
 	if is_crosscompile ; then
 		do_compile
-	elif ! use multilib ; then
-		# Forces to use the local copy of headers with USE=build as they might
-		# be outdated in the system. Assume they are fine otherwise.
-		use build && append-flags "-I${WORKDIR}/include_proper"
-		do_compile
 	else
 		for ABI in $(get_all_abis) ; do
 			# First, save the variables: CFLAGS, CXXFLAGS, LDFLAGS and mymakeopts.
@@ -353,17 +348,19 @@ src_compile() {
 
 			local target="$(tc-arch-kernel ${CHOST})"
 			mymakeopts="${mymakeopts} TARGET=${target} MACHINE=${target} MACHINE_ARCH=${target}"
+			CFLAGADD=""
 			if ! is_native_abi ; then
 				mymakeopts="${mymakeopts} COMPAT_32BIT="
 				einfo "Pre-installing includes in include_proper_${ABI}"
 				mkdir "${WORKDIR}/include_proper_${ABI}" || die
 				CTARGET="${CHOST}" install_includes "/include_proper_${ABI}"
-				CC="${CC} -I${WORKDIR}/include_proper_${ABI}"
+				CFLAGADD="-isystem ${WORKDIR}/include_proper_${ABI}"
 			else
-				use build && append-flags "-I${WORKDIR}/include_proper" ;
+				use build && CFLAGADD="-isystem ${WORKDIR}/include_proper" || CFLAGADD="-isystem /usr/include";
 			fi
 
 			einfo "Building for ABI ${ABI} and TARGET=$(tc-arch-kernel ${CHOST})"
+			CFLAGS="${CFLAGS} ${CFLAGADD}"
 
 			CTARGET="${CHOST}" do_compile
 
