@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.56 2012/05/29 15:38:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.57 2012/05/30 07:29:42 jdhore Exp $
+
+  30 May 2012; Jeff Horelick <jdhore@gentoo.org> avrdude-5.11.1.ebuild:
+  marked x86 per bug 414341
 
   29 May 2012; Brent Baude <ranger@gentoo.org> avrdude-5.11.1.ebuild:
   Marking avrdude-5.11.1 ppc64 for bug 414341
