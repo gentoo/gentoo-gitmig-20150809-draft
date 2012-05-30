@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.0.ebuild,v 1.2 2012/05/05 04:53:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.2-r1.ebuild,v 1.1 2012/05/30 14:08:08 yngwin Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -13,29 +13,34 @@ SRC_URI="http://launchpad.net/${PN}/1.2/${PV}/+download/${P}.tar.gz
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+introspection"
+IUSE="+introspection qt4"
 
 RDEPEND="dev-libs/glib:2
+	dev-libs/libxml2
+	sys-apps/accountsservice
 	virtual/pam
 	x11-libs/libxklavier
 	x11-libs/libX11
-	dev-libs/libxml2
 	introspection? ( dev-libs/gobject-introspection )
-	sys-apps/accountsservice"
+	qt4? ( x11-libs/qt-core:4
+		x11-libs/qt-dbus:4
+		x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	dev-util/intltool
-	virtual/pkgconfig
 	gnome-base/gnome-common
 	sys-devel/gettext
-	dev-util/gtk-doc-am"
-PDEPEND="x11-misc/lightdm-gtk-greeter"
+	virtual/pkgconfig"
 
 DOCS=( NEWS )
 
 src_prepare() {
 	sed -i -e "/minimum-uid/s:500:1000:" data/users.conf || die
 	sed -i -e "s:gtk+-3.0:gtk+-2.0:" configure.ac || die
+
 	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
+	epatch "${FILESDIR}/${PN}"-1.2.0-fix-configure.patch
+
 	if has_version dev-libs/gobject-introspection; then
 		eautoreconf
 	else
@@ -44,28 +49,25 @@ src_prepare() {
 }
 
 src_configure() {
-	# Maybe in the future, we can support some automatic session and user
-	# recognition. Until then, use default values
-	local default=gnome user=root greeter
-
-	# There is no qt greeter, so use gtk anyway
-	# use gtk && greeter=lightdm-gtk-greeter
-	greeter=lightdm-gtk-greeter
-
+	# Set default values if global vars unset
+	local _greeter _session _user
+	_greeter=${LIGHTDM_GREETER:=lightdm-gtk-greeter}
+	_session=${LIGHTDM_SESSION:=gnome}
+	_user=${LIGHTDM_USER:=root}
 	# Let user know how lightdm is configured
 	einfo "Gentoo configuration"
-	einfo "Default greeter: ${greeter}"
-	einfo "Default session: ${default}"
-	einfo "Greeter user: ${user}"
+	einfo "Default greeter: ${_greeter}"
+	einfo "Default session: ${_session}"
+	einfo "Greeter user: ${_user}"
 
 	# do the actual configuration
 	econf --localstatedir=/var \
 		--disable-static \
 		$(use_enable introspection) \
-		--disable-liblightdm-qt \
-		--with-user-session=${user} \
-		--with-greeter-session=${greeter} \
-		--with-greeter-user=${user} \
+		$(use_enable qt4 liblightdm-qt) \
+		--with-user-session=${_session} \
+		--with-greeter-session=${_greeter} \
+		--with-greeter-user=${_user} \
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 }
 
@@ -87,11 +89,16 @@ src_install() {
 
 pkg_postinst() {
 	elog
+	elog "You will need to install a greeter as actual GUI for LightDM."
+	elog
 	elog "Even though the default /etc/${PN}/${PN}.conf will work for"
 	elog "most users, make sure you configure it to suit your needs"
 	elog "before using ${PN} for the first time."
 	elog "You can test the configuration file using the following"
 	elog "command: ${PN} --test-mode -c /etc/${PN}/${PN}.conf. This"
 	elog "requires xorg-server to be built with the 'kdrive' useflag."
+	elog
+	elog "You can also set your own default values for LIGHTDM_GREETER,"
+	elog "LIGHTDM_SESSION, LIGHTDM_USER in /etc/make.conf"
 	elog
 }
