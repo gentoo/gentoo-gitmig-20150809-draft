@@ -1,6 +1,9 @@
 # ChangeLog for games-action/atanks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.76 2012/05/29 19:18:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.77 2012/05/30 05:40:01 jdhore Exp $
+
+  30 May 2012; Jeff Horelick <jdhore@gentoo.org> atanks-5.4.ebuild:
+  marked x86 per bug 418003
 
   29 May 2012; Brent Baude <ranger@gentoo.org> atanks-5.4.ebuild:
   Marking atanks-5.4 ppc for bug 418003
