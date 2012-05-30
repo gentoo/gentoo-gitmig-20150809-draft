@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cgcode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cgcode/ChangeLog,v 1.6 2011/11/21 16:34:36 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cgcode/ChangeLog,v 1.7 2012/05/30 08:59:54 jlec Exp $
+
+*cgcode-1.0-r2 (30 May 2012)
+
+  30 May 2012; Justin Lecher <jlec@gentoo.org> files/1.0-gentoo.patch,
+  +cgcode-1.0-r2.ebuild:
+  Fix missing linking to blas libs
 
 *cgcode-1.0-r1 (21 Nov 2011)
 

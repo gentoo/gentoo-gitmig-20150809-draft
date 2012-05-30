@@ -20,11 +20,11 @@ index 4813b55..f20af02 100644
  
  goos : mains.o libs
 -	$(F77) $(DEBUG) $(OFLAGS) $(LFLAGS) mains.o $(THELIBS) -o goos
-+	$(F77) $(LDFLAGS) mains.o -L. $(THELIBS) $(BLASLIBS) -o goos
++	$(F77) $(LDFLAGS) mains.o -L./src $(THELIBS) $(BLASLIBS) -o goos
  
  good : maind.o libs
 -	$(F77) $(DEBUG) $(OFLAGS) $(LFLAGS) maind.o $(THELIBS) -o good
-+	$(F77) $(LDFLAGS) maind.o -L. $(THELIBS) $(BLASLIBS) -o good
++	$(F77) $(LDFLAGS) maind.o -L./src $(THELIBS) $(BLASLIBS) -o good
  
 -.f.o :
 -	$(F77) $(CFLAGS) $(DEBUG) $(OFLAGS) $*$ .f
@@ -49,9 +49,9 @@ index 10cf6c3..1dfd02d 100644
  $(THISLIB) : $(SOBJLIB) $(DOBJLIB)
 -	$(AR) $(THISLIB) $(SOBJLIB) $(DOBJLIB)
 -	cp $(THISLIB) ../.
-+	$(F77) $(FFLAGS) $(LDFLAGS) -shared -fPIC -Wl,--soname,$(THISLIB).1 -o $(THISLIB).1.0 $(SOBJLIB) $(DOBJLIB)
++	$(F77) $(FFLAGS) $(LDFLAGS) -shared -fPIC -Wl,--soname,$(THISLIB).1 -o $(THISLIB).1.0 $(SOBJLIB) $(DOBJLIB) $(BLASLIBS)
++	ln -sf $(THISLIB).1.0 $(THISLIB).1
 +	ln -sf $(THISLIB).1.0 $(THISLIB)
-+	cp $(THISLIB)* ../.
  
 -.f.o :
 -	$(F77) $(CFLAGS) $(DEBUG) $(OFLAGS) $*$ .f
@@ -70,7 +70,7 @@ index 6dad0d1..5c9d24f 100644
  $(THISLIB) : $(SOBJLIB) $(DOBJLIB)
 -	$(AR) $(THISLIB) $(SOBJLIB) $(DOBJLIB)
 -	cp $(THISLIB) ../.
-+	$(F77) $(FFLAGS) $(LDFLAGS) -shared -Wl,--soname,$(THISLIB).1 -o $(THISLIB).1.0 $(SOBJLIB) $(DOBJLIB)
++	$(F77) $(FFLAGS) $(LDFLAGS) -shared -Wl,--soname,$(THISLIB).1 -o $(THISLIB).1.0 $(SOBJLIB) $(DOBJLIB) $(BLASLIBS)
 +	ln -sf $(THISLIB).1.0 $(THISLIB)
 +	cp $(THISLIB)* ../.
  
