@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/spass
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/ChangeLog,v 1.1 2012/05/30 00:53:38 gienah Exp $
+
+*spass-3.7 (30 May 2012)
+
+  30 May 2012; Mark Wright <gienah@gentoo.org> +metadata.xml, +spass-3.7.ebuild:
+  Add SPASS automated theorem prover, with optional Isabelle/HOL sledgehammer
+  integration.
+
