@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.274 2012/05/29 23:17:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.275 2012/05/30 12:33:10 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -19,6 +19,9 @@ net-misc/curl curl_ssl_axtls
 
 # sys-libs/ldb
 net-fs/samba ldb
+
+# sys-process/numactl
+sys-apps/hwloc numa
 
 # doesnt link
 dev-lang/php iconv
