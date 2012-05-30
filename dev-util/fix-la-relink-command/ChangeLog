@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fix-la-relink-command
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fix-la-relink-command/ChangeLog,v 1.8 2012/05/29 08:30:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fix-la-relink-command/ChangeLog,v 1.9 2012/05/30 00:48:21 aballier Exp $
+
+  30 May 2012; Alexis Ballier <aballier@gentoo.org>
+  fix-la-relink-command-0.1.1.ebuild:
+  keyword ~x86-fbsd
 
   29 May 2012; Fabian Groffen <grobian@gentoo.org>
   fix-la-relink-command-0.1.1.ebuild:
