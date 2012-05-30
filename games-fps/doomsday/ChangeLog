@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.43 2012/05/30 10:45:21 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.44 2012/05/30 16:25:36 maksbotan Exp $
+
+  30 May 2012; Maxim Koltsov <maksbotan@gentoo.org> doomsday-1.9.8.ebuild,
+  files/doomsday-1.9.8-2to3.patch:
+  Fix ebuild by games herd standards, thanks to Mr_Bones_
 
   30 May 2012; Maxim Koltsov <maksbotan@gentoo.org> doomsday-1.9.8.ebuild,
   files/doomsday-1.9.8-2to3.patch:

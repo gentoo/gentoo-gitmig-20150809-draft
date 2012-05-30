@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8.ebuild,v 1.2 2012/05/30 10:45:21 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8.ebuild,v 1.3 2012/05/30 16:25:36 maksbotan Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="snowberry? 2"
 
-inherit python confutils eutils games qt4-r2
+inherit python confutils eutils qt4-r2 games
 
 DESCRIPTION="A modern gaming engine for Doom, Heretic, and Hexen"
 HOMEPAGE="http://www.dengine.net/"
@@ -20,23 +20,21 @@ IUSE="openal snowberry +doom demo freedoom heretic hexen resources"
 DEPEND="
 	virtual/opengl
 	virtual/glu
-	media-libs/libsdl[joystick]
+	media-libs/libsdl[joystick,audio]
 	media-libs/sdl-mixer
 	media-libs/libpng
 	x11-libs/qt-opengl
 	x11-libs/qt-gui
 	net-misc/curl
-	openal? ( media-libs/openal )
-	"
-RDEPEND="${RDEPEND}
+	openal? ( media-libs/openal )"
+RDEPEND="${DEPEND}
 	snowberry? ( dev-python/wxpython )"
 PDEPEND="
 	demo? ( games-fps/doom-data )
 	freedoom? ( games-fps/freedoom )
-	resources? ( games-fps/doomsday-resources )
-	"
+	resources? ( games-fps/doomsday-resources )"
 
-S="${S}"/${PN}
+S=${S}/${PN}
 
 REQUIRED_USE="demo? ( doom ) freedoom? ( doom ) resources? ( doom )"
 PATCHES=( "${FILESDIR}"/${P}-2to3.patch )
@@ -56,7 +54,7 @@ src_prepare() {
 
 	if use openal; then
 		echo "CONFIG += deng_openal" >> config_user.pri
-		sed -i 's:\# Generic Unix.:LIBS += -lopenal:' doomsday/dep_openal.pri
+		sed -i 's:\# Generic Unix.:LIBS += -lopenal:' dep_openal.pri || die
 		epatch "${FILESDIR}"/${P}-openal-link.patch
 	fi
 
@@ -70,6 +68,10 @@ doom_make_wrapper() {
 	games_make_wrapper $name \
 		"doomsday -game ${game} $@"
 	make_desktop_entry $name "${de_title}" ${icon}
+}
+
+src_configure() {
+	qt4-r2_src_configure
 }
 
 src_install() {
