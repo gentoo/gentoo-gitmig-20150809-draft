@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/netbeans-nb-7.1.2.ebuild,v 1.2 2012/05/28 12:33:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/netbeans-nb-7.1.2.ebuild,v 1.3 2012/05/30 05:55:12 johu Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -14,7 +14,7 @@ SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-9999-r1-build.xml.patch.bz2
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-7.0.png"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="keychain"
 S="${WORKDIR}"
 

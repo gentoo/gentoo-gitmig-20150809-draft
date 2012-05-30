@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netbeans-cnd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/ChangeLog,v 1.13 2012/05/28 12:27:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/ChangeLog,v 1.14 2012/05/30 05:49:32 johu Exp $
+
+  30 May 2012; Johannes Huber <johu@gentoo.org> netbeans-cnd-7.1.2.ebuild:
+  Stable for x86, wrt bug #417799
 
   28 May 2012; Agostino Sarubbo <ago@gentoo.org> netbeans-cnd-7.1.2.ebuild:
   Stable for amd64, wrt bug #417799

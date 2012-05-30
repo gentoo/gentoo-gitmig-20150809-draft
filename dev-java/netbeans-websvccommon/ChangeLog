@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-websvccommon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/ChangeLog,v 1.13 2012/05/28 12:35:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/ChangeLog,v 1.14 2012/05/30 05:59:17 johu Exp $
+
+  30 May 2012; Johannes Huber <johu@gentoo.org>
+  netbeans-websvccommon-7.1.2.ebuild:
+  Stable for x86, wrt bug #417799
 
   28 May 2012; Agostino Sarubbo <ago@gentoo.org>
   netbeans-websvccommon-7.1.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javacard/netbeans-javacard-7.1.2.ebuild,v 1.2 2012/05/28 12:31:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javacard/netbeans-javacard-7.1.2.ebuild,v 1.3 2012/05/30 06:12:44 johu Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -16,7 +16,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/9C1A8BC9D3270D184F1D1BCC5F60AA81D46E1ADF-apduio.jar
 	http://hg.netbeans.org/binaries/6243337E93F5841D4FFB404011AA076BFEB1590A-javacard_ri.zip"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 
