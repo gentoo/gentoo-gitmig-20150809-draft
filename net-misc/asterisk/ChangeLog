@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.396 2012/05/30 10:41:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.397 2012/05/30 10:42:47 ago Exp $
+
+  30 May 2012; Agostino Sarubbo <ago@gentoo.org> -asterisk-1.8.11.1.ebuild:
+  Remove old
 
   30 May 2012; Agostino Sarubbo <ago@gentoo.org> asterisk-1.8.12.1.ebuild:
   Stable for amd64, wrt bug #418189
