@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.279 2012/05/30 22:43:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.280 2012/05/30 22:56:54 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -22,9 +22,6 @@ sys-apps/hwloc numa
 
 # doesnt link
 dev-lang/php iconv
-
-# =dev-db/sqlite-2*
-dev-lang/php sqlite
 
 # sys-auth/pam_krb5
 sys-auth/pambase pam_krb5
