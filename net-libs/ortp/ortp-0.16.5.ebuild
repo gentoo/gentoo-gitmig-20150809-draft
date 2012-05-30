@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.16.5.ebuild,v 1.6 2012/01/06 15:05:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.16.5.ebuild,v 1.7 2012/05/30 21:14:41 zmedico Exp $
 
 EAPI="4"
 
 DESCRIPTION="Open Real-time Transport Protocol (RTP, RFC3550) stack"
 HOMEPAGE="http://www.linphone.org/"
-SRC_URI="http://download.savannah.nongnu.org/releases-noredirect/linphone/${PN}/sources/${P}.tar.gz"
+SRC_URI="mirror://nongnu/linphone/${PN}/sources/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

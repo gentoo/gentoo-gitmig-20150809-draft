@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.72 2012/03/25 10:19:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.73 2012/05/30 21:14:41 zmedico Exp $
+
+  30 May 2012; Zac Medico <zmedico@gentoo.org> ortp-0.16.1.ebuild,
+  ortp-0.16.3.ebuild, ortp-0.16.5.ebuild:
+  Use mirror://nongnu in SRC_URI.
 
   25 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Set herd as primary maintainer as talked with volkmar.
