@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ttf2pk2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pk2/ChangeLog,v 1.5 2012/05/29 23:31:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pk2/ChangeLog,v 1.6 2012/05/30 13:51:34 jer Exp $
+
+  30 May 2012; Jeroen Roovers <jer@gentoo.org> ttf2pk2-1.5_p20120525.ebuild:
+  Marked ~hppa (bug #417685).
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org>
   ttf2pk2-1.5_p20120525.ebuild:
