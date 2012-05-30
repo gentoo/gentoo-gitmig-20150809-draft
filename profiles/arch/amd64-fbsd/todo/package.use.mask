@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.275 2012/05/30 12:33:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.276 2012/05/30 12:54:13 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -213,3 +213,30 @@ media-video/vlc fluidsynth
 
 # media-libs/libshout
 media-video/vlc shout
+
+# sys-cluster/knem
+sys-cluster/openmpi openmpi_fabrics_knem
+
+# sys-infiniband/dapl
+sys-cluster/openmpi openmpi_fabrics_dapl
+
+# sys-infiniband/ofed
+sys-cluster/openmpi openmpi_fabrics_ofed
+
+# sys-infiniband/infinipath-psm
+sys-cluster/openmpi openmpi_fabrics_psm
+
+# sys-infiniband/librdmacm
+sys-cluster/openmpi openmpi_ofed_features_rdmacm
+
+# sys-cluster/open-mx
+sys-cluster/openmpi openmpi_fabrics_open-mx
+
+# net-misc/lksctp-tools
+sys-cluster/openmpi openmpi_fabrics_sctp
+
+# sys-cluster/slurm
+sys-cluster/openmpi openmpi_rm_slurm
+
+# sys-cluster/torque
+sys-cluster/openmpi openmpi_rm_pbs
