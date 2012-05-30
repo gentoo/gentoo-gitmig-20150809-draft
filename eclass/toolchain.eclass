@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.539 2012/05/22 05:08:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.540 2012/05/30 15:47:47 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1125,7 +1125,9 @@ gcc_do_configure() {
 			*-gnu*)			 needed_libc=glibc;;
 			*-klibc)		 needed_libc=klibc;;
 			*-uclibc*)		 needed_libc=uclibc;;
-			*-cygwin)        needed_libc=cygwin;;
+			*-cygwin)		 needed_libc=cygwin;;
+			x86_64-*-mingw*|\
+			*-w64-mingw*)	 needed_libc=mingw64-runtime;;
 			mingw*|*-mingw*) needed_libc=mingw-runtime;;
 			avr)			 confgcc+=" --enable-shared --disable-threads";;
 		esac
