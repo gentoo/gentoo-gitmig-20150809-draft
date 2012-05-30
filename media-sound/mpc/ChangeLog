@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.98 2012/05/29 19:11:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.99 2012/05/30 19:21:37 maekke Exp $
+
+  30 May 2012; Markus Meier <maekke@gentoo.org> mpc-0.22.ebuild:
+  arm stable, bug #417731
 
   29 May 2012; Brent Baude <ranger@gentoo.org> mpc-0.22.ebuild:
   Marking mpc-0.22 ppc for bug 417731
