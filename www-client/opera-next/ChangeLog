@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.90 2012/05/30 14:39:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.91 2012/05/31 14:41:14 jer Exp $
+
+*opera-next-12.00.1439 (31 May 2012)
+
+  31 May 2012; Jeroen Roovers <jer@gentoo.org> -opera-next-12.00.1429.ebuild,
+  +opera-next-12.00.1439.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/05/31/password-and-font-fixes
 
 *opera-next-12.00.1438 (30 May 2012)
 
