@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.69 2012/05/17 16:37:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.70 2012/05/31 12:01:24 naota Exp $
+
+*mecab-0.993 (31 May 2012)
+
+  31 May 2012; Naohiro Aota <naota@gentoo.org> +mecab-0.993.ebuild:
+  Version bumped. #411249
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> mecab-0.991.ebuild:
   keyword ~amd64-fbsd
