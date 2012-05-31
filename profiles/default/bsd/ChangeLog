@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.107 2012/05/31 02:40:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.108 2012/05/31 02:42:27 aballier Exp $
+
+  31 May 2012; Alexis Ballier <aballier@gentoo.org> use.mask:
+  remove another useless mask: only package using the useflag isnt keyworded
 
   31 May 2012; Alexis Ballier <aballier@gentoo.org> use.mask:
   no need to mask java nor gcj these days: we have a binary jdk and gcj seems

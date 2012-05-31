@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.20 2012/05/31 02:40:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.21 2012/05/31 02:42:27 aballier Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -45,9 +45,6 @@ pax_kernel
 
 # termcap-compat doesn't work on BSD
 termcap-compat
-
-# useflags for php commercial software
-msql
 
 # This requires a kernel module that's Linux specific right now
 ifp
