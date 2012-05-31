@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.12.1.ebuild,v 1.10 2012/05/29 14:37:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.12.1.ebuild,v 1.11 2012/05/31 13:25:49 jlec Exp $
 
 EAPI="4"
 
@@ -70,6 +70,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8.11-collision.patch
 	epatch "${FILESDIR}"/${PN}-2.8.7-mmedia.patch              # Bug #174874
 	epatch "${FILESDIR}"/${PN}-2.8.10.1-odbc-defines.patch     # Bug #310923
+	sed \
+		-e "/wx_cv_std_libpath/s: /usr: ${EPREFIX}/usr:g" \
+		-i configure || die
 }
 
 src_configure() {
