@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.15.ebuild,v 1.9 2012/05/18 16:45:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.15.ebuild,v 1.10 2012/05/31 19:17:21 ssuominen Exp $
 
 EAPI=4
 inherit libtool
@@ -20,10 +20,10 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	sqlite? ( =dev-db/sqlite-3* )
 	berkdb? ( sys-libs/db )
 	xml? ( dev-libs/libxml2 )
-	!xml? ( dev-libs/expat )
-	ssl? ( dev-libs/openssl )
-	|| ( >=media-libs/raptor-2.0.7:2 <media-libs/raptor-2.0.7:2[xml?] )
-	>=dev-libs/rasqal-0.9.26
+	!xml? ( >=dev-libs/expat-2 )
+	ssl? ( dev-libs/openssl:0 )
+	>=media-libs/raptor-2.0.7
+	>=dev-libs/rasqal-0.9.28
 	postgres? ( dev-db/postgresql-base )
 	iodbc? ( dev-db/libiodbc )
 	odbc? ( dev-db/unixODBC )"

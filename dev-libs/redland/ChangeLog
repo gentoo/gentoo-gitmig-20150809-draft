@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.104 2012/05/18 16:45:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.105 2012/05/31 19:17:21 ssuominen Exp $
+
+  31 May 2012; Samuli Suominen <ssuominen@gentoo.org> redland-1.0.15.ebuild:
+  Force latest stable available raptor (and rasqal) in order to remove obsolete
+  || ( ) dependency wrt #418423 by Alessandro Capogna
 
   18 May 2012; Alexis Ballier <aballier@gentoo.org> redland-1.0.15.ebuild:
   keyword ~amd64-fbsd
