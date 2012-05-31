@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6614 2012/05/30 16:31:15 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6615 2012/05/31 07:59:47 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> base/use.mask,
+  package.mask:
+  Remove sys-auth/tcb related entries, it is removed now, bugs: #371167,
+  #408647.
 
   30 May 2012; Christoph Junghans <ottxor@gentoo.org>
   arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:

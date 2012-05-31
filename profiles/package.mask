@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13805 2012/05/30 13:47:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13806 2012/05/31 07:59:47 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -408,12 +408,6 @@ media-sound/squeezeboxserver
 # Mike Gilbert <floppym@gentoo.org> (01 Apr 2012)
 # The python-3 slot is obsolete for this package.
 =dev-python/python-dateutil-2.0
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (31 Mar 2012)
-# Masked for removal, use sys-apps/hardened-shadow instead.
-# Needs too much special patching to work in Gentoo,
-# bugs: #371167, #408647. Removal in 60 days (31 May 2012).
-sys-auth/tcb
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Mar 2012)
 # This is now the GNOME 3.4 mask
