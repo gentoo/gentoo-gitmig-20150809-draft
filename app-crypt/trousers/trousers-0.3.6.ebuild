@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6.ebuild,v 1.5 2012/05/14 19:37:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6.ebuild,v 1.6 2012/05/31 03:33:16 zmedico Exp $
 
 EAPI="3"
 
-inherit autotools eutils linux-info
+inherit autotools eutils linux-info user
 
 #MY_P="${PN}-${PV%.*}-${PV##*.}"
 

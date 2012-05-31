@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.32 2012/05/14 19:37:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.33 2012/05/31 03:33:16 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> trousers-0.3.6.ebuild:
+  inherit user for enewgroup and enewuser
 
   14 May 2012; Mike Frysinger <vapier@gentoo.org> trousers-0.3.6.ebuild:
   Add arm love for ChromiumOS.
