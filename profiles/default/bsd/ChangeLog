@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.117 2012/05/31 03:03:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.118 2012/05/31 03:06:13 aballier Exp $
+
+  31 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/use.mask:
+  there is no more beagle useflag and its going away
 
   31 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
   libproxy has no more xulrunner useflag, remove mask
