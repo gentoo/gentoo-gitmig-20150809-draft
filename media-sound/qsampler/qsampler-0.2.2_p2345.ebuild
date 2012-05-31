@@ -1,13 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.2.2.2345.ebuild,v 1.1 2012/05/30 13:43:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsampler/qsampler-0.2.2_p2345.ebuild,v 1.1 2012/05/31 09:56:40 yngwin Exp $
 
 EAPI=4
 inherit eutils qt4-r2
 
+MY_P=${P/_p/.}
 DESCRIPTION="A graphical frontend to the LinuxSampler engine"
 HOMEPAGE="http://qsampler.sourceforge.net"
-SRC_URI="mirror://gentoo/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,6 +23,8 @@ DEPEND="media-libs/alsa-lib
 	libgig? ( >=media-libs/libgig-3.2.1 )"
 RDEPEND="${DEPEND}
 	>=media-sound/linuxsampler-0.5"
+
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	econf $(use_enable debug) \
