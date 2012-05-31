@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.27 2012/05/31 02:16:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.28 2012/05/31 02:20:15 aballier Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)
@@ -30,10 +30,6 @@ sys-apps/help2man nls
 net-im/pidgin networkmanager zephyr
 
 media-video/totem bluetooth
-
-# Gilles Dartiguelongue <eva@gentoo.org> (29 Oct 2007)
-mail-client/evolution pda
-gnome-base/gnome-applets apm
 
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
 # media-plugins/gst-plugins-mythtv not keyworded

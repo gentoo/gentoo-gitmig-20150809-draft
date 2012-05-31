@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.101 2012/05/31 02:16:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.102 2012/05/31 02:20:15 aballier Exp $
+
+  31 May 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  evolution has no pda useflag, neither gnome-applets has an apm one, removing
+  useless mask
 
   31 May 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   openmpi useflags have been renamed but not the usemasks, fixing...
