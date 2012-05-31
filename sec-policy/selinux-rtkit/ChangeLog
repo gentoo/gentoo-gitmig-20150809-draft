@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-rtkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rtkit/ChangeLog,v 1.8 2012/05/13 11:50:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rtkit/ChangeLog,v 1.9 2012/05/31 08:20:41 swift Exp $
+
+  31 May 2012; <swift@gentoo.org> selinux-rtkit-2.20120215.ebuild:
+  Add dependency on selinux-dbus - fixes build failure
 
   13 May 2012; <swift@gentoo.org> -selinux-rtkit-2.20110726.ebuild:
   Removing deprecated ebuilds (cleanup)
