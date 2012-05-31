@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.31 2012/05/31 22:53:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.32 2012/05/31 22:56:51 zmedico Exp $
 
 EAPI=4
 
@@ -10,7 +10,6 @@ AUTOTOOLIZE=yes
 MY_P="${P/_rc/-rc}"
 
 if [[ ${PV} = *9999* ]]; then
-	inherit autotools git-2
 	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
 	AUTOTOOLIZE=yes
 fi
@@ -22,6 +21,7 @@ PYTHON_DEPEND="python? 2:2.5"
 inherit eutils python
 
 if [[ ${PV} = *9999* ]]; then
+	inherit autotools git-2
 	SRC_URI=""
 	KEYWORDS=""
 else
