@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.54 2012/05/17 15:32:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.55 2012/05/31 19:44:36 ssuominen Exp $
+
+  31 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libvisual-plugins-0.4.0-r2.ebuild:
+  Fix location of MKINSTALLDIRS sed wrt #417631 by Jeroen Roovers and Brett
+  Royles. Remove --enable-static from econf and remove all libtool files since
+  they are unrequired for dlopening these plugins.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   libvisual-plugins-0.4.0-r2.ebuild:
