@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Scalar-List-Utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Scalar-List-Utils/ChangeLog,v 1.45 2012/04/26 19:56:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Scalar-List-Utils/ChangeLog,v 1.46 2012/05/31 15:19:37 jer Exp $
+
+  31 May 2012; Jeroen Roovers <jer@gentoo.org>
+  Scalar-List-Utils-1.230.0.ebuild, Scalar-List-Utils-1.250.0.ebuild:
+  Remove duplicate KEYWORDS entries by Slava Bacherikov (bug #418379). Sort
+  KEYWORDS.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   Scalar-List-Utils-1.250.0.ebuild:
