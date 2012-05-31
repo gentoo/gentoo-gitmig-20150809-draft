@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.122 2012/05/28 20:11:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.123 2012/05/31 01:15:42 aballier Exp $
 
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (28 May 2012)
@@ -215,13 +215,6 @@ sys-fs/evms hb hb2
 # Tobias Scherbaum <dertobi123@gentoo.org> (1 Feb 2008)
 # Mask mono flag for gnome as tomboy is segfaulting.
 gnome-base/gnome mono
-
-# Alexis Ballier <aballier@gentoo.org> (14 Nov 2010)
-# building the documentation needs ptex
-# app-text/ptex does not build: bug #323559
-# >=dev-texlive/texlive-langcjk-2010 provides ptex too but is masked
-# unmask when TeX Live 2010 keywording is done (bug #342513)
-app-i18n/canna doc
 
 # Tomas Touceda <chiiph@gentoo.org> (21 Nov 2010)
 # JIT isn't implemented on ppc: bug #346167

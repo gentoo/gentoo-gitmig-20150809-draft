@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.101 2012/05/28 16:15:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.102 2012/05/31 01:14:16 aballier Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)
@@ -188,13 +188,6 @@ app-text/enchant zemberek
 
 # Mask srtp for ortp because libsrtp is marked -sparc
 net-libs/ortp srtp
-
-# Alexis Ballier <aballier@gentoo.org> (14 Nov 2010)
-# building the documentation needs ptex
-# app-text/ptex does not build: bug #323559
-# >=dev-texlive/texlive-langcjk-2010 provides ptex too but is masked
-# unmask when TeX Live 2010 keywording is done (bug #342513)
-app-i18n/canna doc
 
 # Ultrabug <ultrabug@gentoo.org) (05 Sept 2011)
 # missing keyword for net-libs/zeromq

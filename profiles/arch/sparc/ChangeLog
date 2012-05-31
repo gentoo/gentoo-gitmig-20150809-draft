@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.157 2012/05/28 16:15:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.158 2012/05/31 01:14:16 aballier Exp $
+
+  31 May 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  remove old mask due to texlive 2010 not being keyworded, texlive 2011 is
+  stable these days...
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   package.use.mask x11-misc/xscreensaver new-login, bug #412847
