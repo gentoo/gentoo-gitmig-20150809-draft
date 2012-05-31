@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.27 2012/05/31 03:00:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.28 2012/05/31 03:03:47 aballier Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -61,10 +61,6 @@ dev-lang/swig octave
 # Mask it for now
 gnome-base/nautilus tracker
 media-video/totem tracker
-
-# Alexis Ballier <aballier@gentoo.org> (15 May 2009)
-# Needs xulrunner 1.9
-net-libs/libproxy xulrunner
 
 # Naohiro Aota <naota@gentoo.org> (04 Aug 2011)
 # ads require krb5, which is maksed on FreeBSD
