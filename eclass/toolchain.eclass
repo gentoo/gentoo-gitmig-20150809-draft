@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.540 2012/05/30 15:47:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.541 2012/05/31 17:45:08 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1108,6 +1108,7 @@ gcc_do_configure() {
 	# reasonably sane globals (hopefully)
 	confgcc+=" \
 		--with-system-zlib \
+		--enable-obsolete \
 		--disable-werror \
 		--enable-secureplt"
 
