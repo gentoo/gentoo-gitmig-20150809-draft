@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r11.ebuild,v 1.2 2012/05/29 10:03:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r11.ebuild,v 1.3 2012/05/31 00:01:18 vapier Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -14,7 +14,7 @@
 # grub-${PVR}.ebuild package && \
 # cp -f ${PKGDIR}/${CAT}/${PF}.tbz2 ${DISTDIR}/grub-static-${PVR}.tar.bz2
 
-inherit mount-boot eutils flag-o-matic toolchain-funcs autotools linux-info pax-utils
+inherit mount-boot eutils flag-o-matic toolchain-funcs autotools linux-info pax-utils multilib
 
 PATCHVER="1.13" # Should match the revision ideally
 DESCRIPTION="GNU GRUB Legacy boot loader"

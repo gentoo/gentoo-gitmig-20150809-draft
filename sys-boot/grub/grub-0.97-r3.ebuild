@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.13 2012/02/29 23:09:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.14 2012/05/31 00:01:18 vapier Exp $
 
-inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
+inherit mount-boot eutils flag-o-matic toolchain-funcs autotools multilib
 
 PATCHVER="1.4"
 DESCRIPTION="GNU GRUB Legacy boot loader"
