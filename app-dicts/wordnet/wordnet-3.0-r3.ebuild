@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r3.ebuild,v 1.4 2010/04/06 15:34:20 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r3.ebuild,v 1.5 2012/05/31 03:36:03 zmedico Exp $
 
 EAPI="3"
 
-inherit flag-o-matic autotools
+inherit eutils flag-o-matic autotools multilib
 
 DESCRIPTION="A lexical database for the English language"
 HOMEPAGE="http://wordnet.princeton.edu/"
