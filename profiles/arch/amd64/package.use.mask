@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.129 2012/05/25 17:47:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.130 2012/05/31 02:09:59 aballier Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -218,11 +218,6 @@ media-tv/xawtv mmx
 
 # x86_64 opts are enabled with USE sse. so masking the rest
 media-sound/mpg123 mmx 3dnow 3dnowext
-
-# Apr 25th 2007: Alexis Ballier <aballier@gentoo.org>
-# Mask mmx for media-libs/mlt
-# assembler is not 64bits compliant (yet)
-media-libs/mlt mmx
 
 # 8 May 2007: Alistair Bush <ali_bush@gentoo.org>
 # Mask doc flag for fop as nearly impossible to
