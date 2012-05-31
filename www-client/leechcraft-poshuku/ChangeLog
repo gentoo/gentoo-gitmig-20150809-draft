@@ -1,6 +1,12 @@
 # ChangeLog for www-client/leechcraft-poshuku
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.11 2012/04/22 13:22:58 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.12 2012/05/31 21:10:40 maksbotan Exp $
+
+*leechcraft-poshuku-0.5.70 (31 May 2012)
+
+  31 May 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-poshuku-0.5.70.ebuild:
+  Bump LeechCraft to 0.5.70 "Hessian Blade"
 
 *leechcraft-poshuku-0.5.65 (22 Apr 2012)
 
