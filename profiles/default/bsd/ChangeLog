@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.109 2012/05/31 02:44:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.110 2012/05/31 02:46:15 aballier Exp $
+
+  31 May 2012; Alexis Ballier <aballier@gentoo.org> use.mask:
+  drop usemasks about no longer in use flags
 
   31 May 2012; Alexis Ballier <aballier@gentoo.org> use.mask:
   it seems there is no more termcap-compat useflag. removing mask
