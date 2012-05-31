@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.120 2012/05/29 20:10:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.121 2012/05/31 23:35:44 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> qemu-kvm-0.15.1-r1.ebuild,
+  qemu-kvm-1.0-r3.ebuild, qemu-kvm-1.0.1-r1.ebuild, qemu-kvm-1.0.1.ebuild,
+  qemu-kvm-9999.ebuild:
+  tweak git-2 inherit so repoman can parse it, and inherit user for enewgroup
 
 *qemu-kvm-1.0.1-r1 (29 May 2012)
 
