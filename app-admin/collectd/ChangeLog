@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.39 2012/05/25 21:26:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.40 2012/05/31 02:27:18 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> collectd-5.1.0-r1.ebuild,
+  collectd-5.1.0.ebuild:
+  inherit multilib for get_libdir
 
   25 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> collectd-5.1.0.ebuild,
   metadata.xml:
