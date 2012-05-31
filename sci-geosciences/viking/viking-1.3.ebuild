@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.2.2.ebuild,v 1.4 2012/05/04 07:14:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.3.ebuild,v 1.1 2012/05/31 14:59:43 scarabeus Exp $
 
 EAPI=4
 
@@ -36,11 +36,10 @@ DEPEND="${COMMONDEPEND}
 	sys-devel/gettext
 "
 
-DOCS=( README doc/GEOCODED-PHOTOS doc/GETTING-STARTED doc/GPSMAPPER )
+DOCS=( README doc/GETTING-STARTED doc/GPSMAPPER )
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-gpsd-2.96.patch
-	"${FILESDIR}"/1.2.1-autoreconf.patch
+	"${FILESDIR}"/1.3-autoreconf.patch
 )
 
 src_prepare() {
