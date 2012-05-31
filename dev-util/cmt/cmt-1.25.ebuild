@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.23.ebuild,v 1.1 2011/12/29 09:04:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.25.ebuild,v 1.1 2012/05/31 15:41:56 bicatali Exp $
 
 EAPI=4
 inherit eutils elisp-common toolchain-funcs versionator
