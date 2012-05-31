@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.11 2010/09/17 06:33:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.12 2012/05/31 22:30:26 zmedico Exp $
 
 EAPI=3
 
-inherit toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Classic TECO editor, Predecessor to EMACS"
 HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/editors/tty/ http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco"
