@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5-r2.ebuild,v 1.1 2012/04/21 17:20:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5-r2.ebuild,v 1.2 2012/05/31 07:53:20 phajdan.jr Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://pkg-shadow.alioth.debian.org/releases/${P}.tar.bz2"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="acl audit cracklib nls pam selinux skey tcb xattr"
+IUSE="acl audit cracklib nls pam selinux skey xattr"
 
 RDEPEND="acl? ( sys-apps/acl )
 	audit? ( sys-process/audit )
@@ -23,7 +23,6 @@ RDEPEND="acl? ( sys-apps/acl )
 		sys-libs/libsemanage
 	)
 	nls? ( virtual/libintl )
-	tcb? ( sys-auth/tcb )
 	xattr? ( sys-apps/attr )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -47,6 +46,7 @@ src_compile() {
 	tc-is-cross-compiler && export ac_cv_func_setpgrp_void=yes
 	econf \
 		--without-group-name-max-length \
+		--without-tcb \
 		--enable-shared=no \
 		--enable-static=yes \
 		$(use_with acl) \
@@ -57,7 +57,6 @@ src_compile() {
 		$(use_with selinux) \
 		$(use_enable nls) \
 		$(use_with elibc_glibc nscd) \
-		$(use_with tcb) \
 		$(use_with xattr attr)
 	emake || die
 }

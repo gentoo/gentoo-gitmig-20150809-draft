@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.269 2012/04/21 17:20:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.270 2012/05/31 07:53:20 phajdan.jr Exp $
+
+  31 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> shadow-4.1.5.ebuild,
+  shadow-4.1.5-r1.ebuild, shadow-4.1.5-r2.ebuild, metadata.xml:
+  Remove support for sys-auth/tcb which is being removed because of bugs:
+  #371167, #408647. Use sys-apps/hardened-shadow instead.
 
 *shadow-4.1.5-r2 (21 Apr 2012)
 
