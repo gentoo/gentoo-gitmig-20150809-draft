@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.23 2012/05/31 02:46:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.24 2012/05/31 02:52:01 aballier Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -71,10 +71,6 @@ video_cards_nouveau
 
 # Linux only sane backends
 sane_backends_qcam
-
-# Few database backends unlikely to be tested anytime soon.
-mssql
-firebird
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (19 oct 2010)
 # unmasking flags that only apply to FreeBSD
