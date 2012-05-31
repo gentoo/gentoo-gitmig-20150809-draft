@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.7-r1.ebuild,v 1.2 2012/05/27 13:12:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.7-r1.ebuild,v 1.3 2012/05/31 02:16:45 flameeyes Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ DOCS=( ChangeLog CREDITS README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}+gcc-4.7.patch
-	sed -i -e '/CXXFLAGS/d' configure.ac
+	sed -i -e '/CXXFLAGS/d' configure.in || die
 
 	eautoreconf
 }
