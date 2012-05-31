@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.112 2012/05/30 16:14:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.113 2012/05/31 14:25:17 pesa Exp $
+
+  31 May 2012; Davide Pesavento <pesa@gentoo.org> -smplayer-0.7.1.ebuild:
+  Remove unused version.
 
   30 May 2012; Jeroen Roovers <jer@gentoo.org> smplayer-0.8.0.ebuild:
   Stable for HPPA (bug #417979).
