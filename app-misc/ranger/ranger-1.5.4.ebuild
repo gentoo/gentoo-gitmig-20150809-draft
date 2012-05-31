@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ranger-1.5.4.ebuild,v 1.1 2012/05/03 23:02:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ranger-1.5.4.ebuild,v 1.2 2012/05/31 13:04:48 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6 3:3.1"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="sys-apps/less"
+RDEPEND="virtual/pager"
 
 pkg_postinst() {
 	distutils_pkg_postinst
