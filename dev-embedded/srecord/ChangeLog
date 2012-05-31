@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/srecord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/ChangeLog,v 1.15 2012/05/31 14:25:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/ChangeLog,v 1.16 2012/05/31 14:26:32 radhermit Exp $
+
+  31 May 2012; Tim Harder <radhermit@gentoo.org> -srecord-1.58.ebuild:
+  Remove old.
 
 *srecord-1.60 (31 May 2012)
 
