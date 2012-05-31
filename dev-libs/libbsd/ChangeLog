@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libbsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.9 2012/01/15 17:12:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.10 2012/05/31 01:38:02 ssuominen Exp $
+
+*libbsd-0.4.0 (31 May 2012)
+
+  31 May 2012; Samuli Suominen <ssuominen@gentoo.org> +libbsd-0.4.0.ebuild:
+  Version bump.
 
   15 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -libbsd-0.2.0.ebuild,
   -files/libbsd-0.2.0-arc4random-prototypes.patch,
