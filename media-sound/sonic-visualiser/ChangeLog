@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sonic-visualiser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.23 2012/05/05 08:50:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.24 2012/05/31 15:23:37 radhermit Exp $
+
+  31 May 2012; Tim Harder <radhermit@gentoo.org> sonic-visualiser-1.9.ebuild,
+  +files/sonic-visualiser-1.9-gcc47.patch:
+  Fix build with gcc-4.7 (bug #417367 by David Kredba).
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> sonic-visualiser-1.8.ebuild,
   sonic-visualiser-1.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.9.ebuild,v 1.2 2012/05/05 08:50:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.9.ebuild,v 1.3 2012/05/31 15:23:37 radhermit Exp $
 
 EAPI=4
 inherit eutils qt4-r2 autotools fdo-mime
@@ -49,6 +49,7 @@ sv_disable_opt() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8-configure.patch
+	epatch "${FILESDIR}"/${PN}-1.9-gcc47.patch
 	cd svcore
 	epatch "${FILESDIR}"/${PN}-1.7.1-liboggz11.patch
 
