@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.415 2012/05/31 03:01:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.416 2012/05/31 15:44:58 radhermit Exp $
+
+  31 May 2012; Tim Harder <radhermit@gentoo.org> clamav-0.97.4.ebuild,
+  +files/clamav-0.97.4-gcc47.patch:
+  Fix build with gcc-4.7 (bug #412349 by Alphat-PC).
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> clamav-0.97.3.ebuild,
   clamav-0.97.4.ebuild:

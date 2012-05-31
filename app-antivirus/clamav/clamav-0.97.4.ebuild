@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.4.ebuild,v 1.3 2012/05/31 03:01:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.4.ebuild,v 1.4 2012/05/31 15:44:58 radhermit Exp $
 
 EAPI=4
 
@@ -31,7 +31,10 @@ RESTRICT="test"
 
 DOCS=( AUTHORS BUGS ChangeLog FAQ INSTALL NEWS README UPGRADE )
 
-PATCHES=( "${FILESDIR}"/${PN}-0.97-nls.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.97-nls.patch
+	"${FILESDIR}"/${PN}-0.97.4-gcc47.patch
+)
 
 pkg_setup() {
 	enewgroup clamav
