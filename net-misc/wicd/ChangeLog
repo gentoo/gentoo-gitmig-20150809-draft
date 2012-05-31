@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.122 2012/05/21 07:23:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.123 2012/05/31 16:31:22 blueness Exp $
+
+  31 May 2012; Anthony G. Basile <blueness@gentoo.org> wicd-1.7.2.4-r1.ebuild:
+  Keyword ~mips
 
 *wicd-1.7.2.4-r1 (21 May 2012)
 
