@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.5.2a.ebuild,v 1.4 2011/11/02 01:10:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.6.2.ebuild,v 1.1 2012/05/31 14:13:42 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -10,21 +10,18 @@ HOMEPAGE="http://www.gnu.org/software/xboard/"
 SRC_URI="mirror://gnu/xboard/${P}.tar.gz
 	mirror://gentoo/${PN}.png"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 x86"
+KEYWORDS="~ppc ~ppc64 ~x86"
 IUSE="Xaw3d +default-font zippy"
 RESTRICT="test" #124112
 
 RDEPEND="Xaw3d? ( x11-libs/libXaw3d )
 	x11-libs/libXpm
-	x11-libs/libXaw
-	x11-libs/libSM
+	!Xaw3d? ( x11-libs/libXaw )
 	x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXmu
-	x11-libs/libXext
-	x11-libs/libICE
 	default-font? ( media-fonts/font-adobe-100dpi )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
@@ -34,7 +31,9 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}*
+	epatch \
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-gettext.patch
 	eautoreconf
 }
 
@@ -42,6 +41,7 @@ src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--datadir="${GAMES_DATADIR}"/${PN} \
+		--localedir=/usr/share/locale \
 		$(use_with Xaw3d) \
 		$(use_enable zippy)
 }
@@ -52,7 +52,6 @@ src_install() {
 	use zippy && dodoc zippy.README
 	dohtml FAQ.html
 	doicon "${DISTDIR}"/xboard.png
-	make_desktop_entry ${PN} "Xboard (Chess)"
 	prepgamesdirs
 }
 
