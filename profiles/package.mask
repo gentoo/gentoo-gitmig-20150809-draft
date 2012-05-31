@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13806 2012/05/31 07:59:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13807 2012/05/31 10:53:38 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,10 +31,6 @@
 
 #--- END OF EXAMPLES ---
 
-
-# Fabian Groffen <grobian@gentoo.org> (29 May 2012)
-# 4.80 release candidates, feedback welcome
-=mail-mta/exim-4.80_rc7
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (27 May 2012)
 # The successor of KOffice, Calligra, has now become stable
