@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/nistp224
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/ChangeLog,v 1.4 2011/07/20 17:13:55 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/ChangeLog,v 1.5 2012/05/31 03:28:12 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> nistp224-0.75-r1.ebuild:
+  inherit eutils for epatch
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -nistp224-0.75.ebuild,
   metadata.xml:

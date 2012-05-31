@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/nistp224-0.75-r1.ebuild,v 1.1 2009/03/16 11:14:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/nistp224-0.75-r1.ebuild,v 1.2 2012/05/31 03:28:12 zmedico Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs flag-o-matic fixheadtails
+inherit eutils toolchain-funcs flag-o-matic fixheadtails
 
 DESCRIPTION="nistp224 performs compressed Diffie-Hellman key exchange on the NIST P-224 elliptic curve"
 HOMEPAGE="http://cr.yp.to/nistp224.html"
