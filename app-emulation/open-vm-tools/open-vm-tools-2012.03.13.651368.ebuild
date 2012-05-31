@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-2012.03.13.651368.ebuild,v 1.2 2012/05/03 18:49:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-2012.03.13.651368.ebuild,v 1.3 2012/05/31 23:06:14 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils pam versionator flag-o-matic toolchain-funcs
+inherit eutils multilib pam user versionator flag-o-matic toolchain-funcs
 
 MY_PV="$(replace_version_separator 3 '-')"
 MY_P="${PN}-${MY_PV}"
