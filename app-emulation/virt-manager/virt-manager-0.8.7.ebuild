@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.7.ebuild,v 1.5 2012/04/13 17:46:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.7.ebuild,v 1.6 2012/05/31 23:41:58 zmedico Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ PYTHON_DEPEND="2:2.5"
 # Stop gnome2.eclass from doing stuff on USE=debug
 GCONF_DEBUG="no"
 
-inherit eutils gnome2 python ${HG_ECLASS}
+inherit eutils gnome2 python
 
 SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
 	${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"

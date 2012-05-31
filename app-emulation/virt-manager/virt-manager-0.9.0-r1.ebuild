@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0-r1.ebuild,v 1.4 2012/04/13 17:46:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0-r1.ebuild,v 1.5 2012/05/31 23:41:58 zmedico Exp $
 
 EAPI=2
 
@@ -8,7 +8,6 @@ BACKPORTS=1
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="http://git.fedorahosted.org/git/virt-manager.git"
-	GIT_ECLASS="git-2 autotools"
 fi
 
 PYTHON_DEPEND="2:2.5"
@@ -16,9 +15,10 @@ PYTHON_DEPEND="2:2.5"
 # Stop gnome2.eclass from doing stuff on USE=debug
 GCONF_DEBUG="no"
 
-inherit eutils gnome2 python ${GIT_ECLASS}
+inherit eutils gnome2 python
 
 if [[ ${PV} = *9999* ]]; then
+	inherit git-2 autotools
 	SRC_URI=""
 	KEYWORDS=""
 	VIRTINSTDEP=">=app-emulation/virtinst-9999"
