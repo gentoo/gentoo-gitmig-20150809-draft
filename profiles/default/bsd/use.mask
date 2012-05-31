@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.17 2012/05/29 15:20:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.18 2012/05/31 02:31:16 aballier Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -87,9 +87,6 @@ video_cards_v4l
 video_cards_vmware
 video_cards_nvidia
 video_cards_nouveau
-
-# Apache's MPM-itk requires sys-libs/libcap
-mpm-itk
 
 # Linux only sane backends
 sane_backends_qcam
