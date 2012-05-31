@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.44 2012/05/30 16:25:36 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.45 2012/05/31 04:29:14 maksbotan Exp $
+
+  31 May 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/doomsday-1.9.8-2to3.patch:
+  Mark 2to3 patch as binary to prevent $ expansion by CVS
 
   30 May 2012; Maxim Koltsov <maksbotan@gentoo.org> doomsday-1.9.8.ebuild,
   files/doomsday-1.9.8-2to3.patch:
