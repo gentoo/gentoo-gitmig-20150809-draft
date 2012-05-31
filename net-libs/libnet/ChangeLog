@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.87 2012/05/31 05:44:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.88 2012/05/31 08:26:58 ago Exp $
+
+  31 May 2012; Agostino Sarubbo <ago@gentoo.org> libnet-1.0.2a-r4.ebuild:
+  Stable for amd64, wrt bug #418275
 
   31 May 2012; Jeff Horelick <jdhore@gentoo.org> libnet-1.0.2a-r4.ebuild:
   marked x86 per bug 418275
