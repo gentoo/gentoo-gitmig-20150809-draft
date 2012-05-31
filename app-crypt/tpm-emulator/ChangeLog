@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/tpm-emulator
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.12 2009/10/14 01:01:50 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.13 2012/05/31 03:31:59 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> tpm-emulator-0.5.1.ebuild,
+  tpm-emulator-0.5.ebuild:
+  inherit user for enewuser, and multilib for get_libdir
 
   14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> tpm-emulator-0.5.1.ebuild:
   QA fixes; remove redundant cd 
