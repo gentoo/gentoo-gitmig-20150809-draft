@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.1-r1.ebuild,v 1.1 2009/09/20 08:28:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.1-r1.ebuild,v 1.2 2012/05/31 07:29:22 eras Exp $
 
 EAPI="2"
 
@@ -21,8 +21,9 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="ipv6 poll"
 
-DEPEND="!mail-mta/sendmail"
-RDEPEND="${DEPEND}"
+DEPEND="sys-devel/m4
+	!mail-mta/sendmail"
+RDEPEND="!mail-mta/sendmail"
 
 S="${WORKDIR}/sendmail-${SENDMAIL_VER}"
 
