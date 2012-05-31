@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.26 2012/05/31 02:59:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.27 2012/05/31 03:00:39 aballier Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -30,9 +30,6 @@ x11-misc/xscreensaver new-login
 
 # net-wireless/aircrack-ng - wireless capture tools not needed.
 net-wireless/aircrack-ng wifi
-
-# spell causes epiphany to segfault, so disable for the time being
-www-client/epiphany spell
 
 # Gilles Dartiguelongue <eva@gentoo.org> (22 Oct 2007)
 # GNU attr isn't supported
