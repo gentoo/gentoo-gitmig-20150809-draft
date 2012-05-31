@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/liberation-fonts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.33 2012/04/13 08:03:26 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.34 2012/05/31 09:52:36 jlec Exp $
+
+  31 May 2012; Justin Lecher <jlec@gentoo.org> liberation-fonts-1.07.2.ebuild:
+  Keyworded for ~-linux, tested by me
 
   13 Apr 2012; Jeff Gardner <je_fro@gentoo.org> liberation-fonts-1.07.1.ebuild,
   liberation-fonts-1.07.2.ebuild:
