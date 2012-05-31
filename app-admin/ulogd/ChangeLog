@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.68 2012/01/01 01:01:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.69 2012/05/31 03:00:39 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> ulogd-1.24-r2.ebuild,
+  ulogd-2.0.0_beta4.ebuild:
+  inherit user for enewgroup and enewuser
 
   01 Jan 2012; Christian Ruppert <idl0r@gentoo.org> files/ulogd,
   files/ulogd-0.98:

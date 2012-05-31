@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.12.ebuild,v 1.6 2012/03/24 17:28:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.12.ebuild,v 1.7 2012/05/31 02:59:03 zmedico Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Log parsing and notification program"
 HOMEPAGE="http://dev.inversepath.com/trac/tenshi"
