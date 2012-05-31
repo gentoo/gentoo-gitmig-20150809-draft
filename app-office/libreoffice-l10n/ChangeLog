@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.46 2012/05/31 10:07:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.47 2012/05/31 10:08:17 scarabeus Exp $
+
+  31 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Silence repoman wrt local desc in metadata.
 
   31 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -libreoffice-l10n-3.5.2.ebuild, libreoffice-l10n-3.5.4.ebuild:
