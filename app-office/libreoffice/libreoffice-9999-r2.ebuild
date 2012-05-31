@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.74 2012/05/23 08:45:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.75 2012/05/31 14:20:25 scarabeus Exp $
 
 EAPI=4
 
@@ -134,10 +134,7 @@ COMMON_DEPEND="
 	cups? ( net-print/cups )
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
-	gnome? (
-		gnome-base/gconf:2
-		gnome-base/orbit
-	)
+	gnome? ( gnome-base/gconf:2 )
 	gtk? (
 		x11-libs/gdk-pixbuf[X]
 		>=x11-libs/gtk+-2.24:2
