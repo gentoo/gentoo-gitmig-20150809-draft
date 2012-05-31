@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.2.27.ebuild,v 1.1 2012/05/31 21:00:54 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.2.27.ebuild,v 1.2 2012/05/31 21:16:59 je_fro Exp $
 
 EAPI=1
 WEBAPP_OPTIONAL="yes"
@@ -18,7 +18,7 @@ HOMEPAGE="http://jmol.sourceforge.net/"
 KEYWORDS="~x86 ~amd64"
 LICENSE="LGPL-2.1"
 
-IUSE="client-only vhosts"
+IUSE="+client-only vhosts"
 
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
