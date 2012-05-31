@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/quark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.19 2012/05/31 16:06:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.20 2012/05/31 16:09:44 hasufell Exp $
+
+*quark-3.24 (31 May 2012)
+
+  31 May 2012; Julian Ospald <hasufell@gentoo.org> +quark-3.24.ebuild,
+  +files/quark-3.24-build.patch, metadata.xml:
+  version bump
 
   31 May 2012; Julian Ospald <hasufell@gentoo.org> quark-3.21.ebuild:
   fix underlinking wrt #367859, fix homepage
