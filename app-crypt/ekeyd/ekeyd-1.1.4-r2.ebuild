@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r2.ebuild,v 1.1 2011/11/01 09:55:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r2.ebuild,v 1.2 2012/05/31 03:11:33 zmedico Exp $
 
 EAPI=4
 
-inherit multilib linux-info toolchain-funcs
+inherit eutils multilib linux-info toolchain-funcs
 
 DESCRIPTION="Entropy Key userspace daemon"
 HOMEPAGE="http://www.entropykey.co.uk/"

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ekeyd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.26 2011/11/01 09:55:11 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.27 2012/05/31 03:11:33 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> ekeyd-1.1.4-r2.ebuild:
+  inherit eutils for epatch
 
 *ekeyd-1.1.4-r2 (01 Nov 2011)
 
