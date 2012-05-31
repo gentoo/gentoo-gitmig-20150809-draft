@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/lsyncd-2.0.4-r1.ebuild,v 1.1 2011/07/26 15:41:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/lsyncd-2.0.4-r1.ebuild,v 1.2 2012/05/31 02:34:22 zmedico Exp $
 
 EAPI=3
 
-inherit base autotools
+inherit base autotools multilib
 
 DESCRIPTION="Live Syncing (Mirror) Daemon"
 HOMEPAGE="http://code.google.com/p/lsyncd/"
