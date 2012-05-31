@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.112 2012/05/23 09:47:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.113 2012/05/31 23:49:02 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> virtualbox-4.1.12.ebuild,
+  virtualbox-4.1.14.ebuild, virtualbox-4.1.16.ebuild, virtualbox-9999.ebuild:
+  inhert multlib for get_libdir, and user for enewgroup
 
 *virtualbox-4.1.16 (23 May 2012)
 

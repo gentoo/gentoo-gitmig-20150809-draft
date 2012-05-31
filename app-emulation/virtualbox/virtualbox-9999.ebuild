@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.29 2012/05/11 09:07:25 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.30 2012/05/31 23:49:02 zmedico Exp $
 
 EAPI=2
 
-inherit eutils fdo-mime flag-o-matic linux-mod pax-utils qt4-r2 subversion toolchain-funcs
+inherit eutils fdo-mime flag-o-matic linux-mod pax-utils qt4-r2 subversion toolchain-funcs user
 
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
