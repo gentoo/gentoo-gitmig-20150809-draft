@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc-errno-compat/emul-linux-x86-glibc-errno-compat-2.5.ebuild,v 1.2 2009/11/05 22:13:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc-errno-compat/emul-linux-x86-glibc-errno-compat-2.5.ebuild,v 1.3 2012/05/31 22:32:20 zmedico Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 PATCH_VER="1.8"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.17 2012/05/15 18:31:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.18 2012/05/31 22:36:13 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> libguestfs-1.8.16.ebuild:
+  inherit eutils for epatch
 
 *libguestfs-1.17.42 (15 May 2012)
 *libguestfs-1.16.22 (15 May 2012)

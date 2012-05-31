@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.8.16.ebuild,v 1.3 2012/03/20 14:38:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.8.16.ebuild,v 1.4 2012/05/31 22:36:13 zmedico Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ PHP_EXT_NAME="guestfs_php"
 USE_PHP="php5-3 php5-4"
 PHP_EXT_OPTIONAL_USE="php"
 
-inherit autotools bash-completion-r1 confutils versionator java-pkg-opt-2 perl-module python ruby-ng php-ext-source-r2 ghc-package multilib
+inherit autotools bash-completion-r1 confutils eutils versionator java-pkg-opt-2 perl-module python ruby-ng php-ext-source-r2 ghc-package multilib
 
 MY_PV_1="$(get_version_component_range 1-2)"
 MY_PV_2="$(get_version_component_range 2)"
