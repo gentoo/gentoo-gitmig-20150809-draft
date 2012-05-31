@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.07.ebuild,v 1.12 2006/03/15 01:45:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.07.ebuild,v 1.13 2012/05/31 02:42:49 zmedico Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="small daemon for logging console output during boot"
 HOMEPAGE="http://www.novell.com/linux/suse/"

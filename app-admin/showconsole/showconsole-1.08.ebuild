@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.08.ebuild,v 1.14 2006/10/24 00:20:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.08.ebuild,v 1.15 2012/05/31 02:42:49 zmedico Exp $
 
 # This tarball is extracted from SuSe's sysvinit-2.86-#.src.rpm
 # You can find said src rpm via opensuse.org:
 # http://mirrors.kernel.org/opensuse/distribution/SL-OSS-*/inst-source/suse/src/
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="small daemon for logging console output during boot"
 HOMEPAGE="http://www.novell.com/linux/suse/"
