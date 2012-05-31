@@ -1,6 +1,11 @@
 # ChangeLog for games-board/pychess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.14 2012/04/13 19:16:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.15 2012/05/31 11:59:04 radhermit Exp $
+
+*pychess-0.10.1 (31 May 2012)
+
+  31 May 2012; Tim Harder <radhermit@gentoo.org> +pychess-0.10.1.ebuild:
+  Version bump (bug #412083).
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> pychess-0.10.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.
