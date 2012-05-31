@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.0.7.ebuild,v 1.4 2012/05/05 08:02:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.0.7.ebuild,v 1.5 2012/05/31 17:02:31 scarabeus Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/libcdr"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc static-libs"
 
 RDEPEND="
