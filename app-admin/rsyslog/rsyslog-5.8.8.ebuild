@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.8.ebuild,v 1.4 2012/05/30 21:22:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.8.ebuild,v 1.5 2012/05/31 16:50:42 ultrabug Exp $
 
 EAPI=4
+AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-utils eutils systemd
 
@@ -42,6 +43,8 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
 
 src_prepare() {
+	autotools-utils_src_prepare
+
 	# Maintainer notes:
 	# ZeroMQ support, for now it is done by hand until upstream process bug.
 	# Bugzilla : http://bugzilla.adiscon.com/show_bug.cgi?id=277

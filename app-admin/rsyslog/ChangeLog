@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.69 2012/05/30 21:22:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.70 2012/05/31 16:50:42 ultrabug Exp $
+
+  31 May 2012; Ultrabug <ultrabug@gentoo.org> rsyslog-5.8.11.ebuild,
+  rsyslog-5.8.5.ebuild, rsyslog-5.8.8.ebuild:
+  Fix autotools-utils usage wrt #407811 thanks to vapier and mgorny.
 
   30 May 2012; Zac Medico <zmedico@gentoo.org> rsyslog-5.8.11.ebuild,
   rsyslog-5.8.5.ebuild, rsyslog-5.8.8.ebuild:
