@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.222 2012/05/29 14:53:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.223 2012/05/31 10:51:53 grobian Exp $
+
+*exim-4.80 (31 May 2012)
+
+  31 May 2012; Fabian Groffen <grobian@gentoo.org> -exim-4.80_rc7.ebuild,
+  +exim-4.80.ebuild:
+  Version bump to 4.80 release. This version uses SSLv3, and disables v2 by
+  default. Supports TLSv1.{1,2} when using OpenSSL >=1.0.1. ChangeLog should
+  become available at ftp://ftp.exim.org/pub/exim/ChangeLogs/ChangeLog-4.80
 
 *exim-4.80_rc7 (29 May 2012)
 

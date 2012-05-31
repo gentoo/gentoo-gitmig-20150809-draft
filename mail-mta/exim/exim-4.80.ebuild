@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80_rc7.ebuild,v 1.1 2012/05/29 14:53:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.ebuild,v 1.1 2012/05/31 10:51:53 grobian Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/db-3.2
@@ -46,6 +46,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 	)
 	sqlite? ( dev-db/sqlite )
 	radius? ( net-dialup/radiusclient )
+	virtual/pkgconfig
 	virtual/libiconv
 	"
 	# added X check for #57206
@@ -87,6 +88,14 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-4.76-dsn.patch
 		epatch exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
 	fi
+
+	# user Exim believes it should be
+	MAILUSER=mail
+	MAILGROUP=mail
+	if use prefix && [[ ${EUID} != 0 ]] ; then
+		MAILUSER=$(id -un)
+		MAILGROUP=$(id -gn)
+	fi
 }
 
 src_configure() {
@@ -106,7 +115,7 @@ src_configure() {
 		-e "s:# SPOOL_DIRECTORY=/var/spool/exim:SPOOL_DIRECTORY=${EPREFIX}/var/spool/exim:" \
 		-e "s:# SUPPORT_MAILDIR=yes:SUPPORT_MAILDIR=yes:" \
 		-e "s:# SUPPORT_MAILSTORE=yes:SUPPORT_MAILSTORE=yes:" \
-		-e "s:EXIM_USER=:EXIM_USER=mail:" \
+		-e "s:EXIM_USER=:EXIM_USER=${MAILUSER}:" \
 		-e "s:# AUTH_SPA=yes:AUTH_SPA=yes:" \
 		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
 		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
@@ -188,15 +197,12 @@ src_configure() {
 	use !elibc_glibc && echo "EXTRALIBS_EXIM=-liconv" >> Makefile
 
 	if use ssl; then
-		sed -i \
-			-e "s:# \(SUPPORT_TLS=yes\):\1:" Makefile
+		echo "SUPPORT_TLS=yes" >> Makefile
 		if use gnutls; then
-			sed -i \
-				-e "s:# \(USE_GNUTLS=yes\):\1:" \
-				-e "s:# \(TLS_LIBS=-lgnutls -ltasn1 -lgcrypt\):\1:" Makefile
+			echo "USE_GNUTLS=yes" >> Makefile
+			echo "USE_GNUTLS_PC=gnutls" >> Makefile
 		else
-			sed -i \
-				-e "s:# \(TLS_LIBS=-lssl -lcrypto\):\1:" Makefile
+			echo "USE_OPENSSL_PC=openssl" >> Makefile
 		fi
 	fi
 
@@ -224,9 +230,8 @@ src_configure() {
 	fi
 
 	if use sqlite; then
-		sed -i "s:# LOOKUP_SQLITE=yes: LOOKUP_SQLITE=yes:" Makefile
-		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${EROOT}usr/include/sqlite"
-		LOOKUP_LIBS="$LOOKUP_LIBS -lsqlite3"
+		echo "LOOKUP_SQLITE=yes" >> Makefile
+		echo "LOOKUP_SQLITE_PC=sqlite3" >> Makefile
 	fi
 
 	if [[ -n ${LOOKUP_INCLUDE} ]]; then
@@ -266,6 +271,7 @@ src_configure() {
 
 	# use the "native" interface to the DBM library
 	echo "USE_DB=yes" >> Makefile
+	echo "DBMLIB=-ldb" >> Makefile
 }
 
 src_compile() {
@@ -323,7 +329,7 @@ src_install () {
 
 	newconfd "${FILESDIR}"/exim.confd exim
 
-	DIROPTIONS="--mode=0750 --owner=mail --group=mail"
+	DIROPTIONS="--mode=0750 --owner=${MAILUSER} --group=${MAILGROUP}"
 	dodir /var/log/${PN}
 }
 
