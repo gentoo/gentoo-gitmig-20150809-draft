@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.101 2012/05/05 08:05:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.102 2012/05/31 15:13:42 radhermit Exp $
+
+  31 May 2012; Tim Harder <radhermit@gentoo.org> ardour-2.8.12.ebuild,
+  +files/ardour-2.8.12-gcc47.patch:
+  Fix build with gcc-4.7 (bug #414145 by David Kredba).
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> ardour-2.8.12.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

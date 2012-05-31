@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.12.ebuild,v 1.3 2012/05/05 08:05:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.12.ebuild,v 1.4 2012/05/31 15:13:42 radhermit Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs scons-utils
@@ -52,7 +52,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-2.8.11-flags.patch \
 		"${FILESDIR}"/${P}-syslibs.patch \
-		"${FILESDIR}"/${PN}-2.8.11-soundtouch.patch
+		"${FILESDIR}"/${PN}-2.8.11-soundtouch.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_compile() {

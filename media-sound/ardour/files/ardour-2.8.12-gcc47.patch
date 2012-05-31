@@ -1,0 +1,10 @@
+--- ardour-2.8.12/libs/pbd/path.cc
++++ ardour-2.8.12/libs/pbd/path.cc
+@@ -17,6 +17,7 @@
+ */
+ 
+ #include <cerrno>
++#include <unistd.h>
+ 
+ #include <glib.h>
+ #include <glib/gstdio.h>
