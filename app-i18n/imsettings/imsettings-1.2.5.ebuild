@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.2.5.ebuild,v 1.3 2012/05/03 19:24:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.2.5.ebuild,v 1.4 2012/05/31 13:20:54 naota Exp $
 
 EAPI=3
+
+inherit eutils
 
 DESCRIPTION="Delivery framework for general Input Method configuration"
 HOMEPAGE="http://tagoh.github.com/imsettings/"
@@ -39,6 +41,7 @@ src_prepare() {
 	if ! use qt4; then
 		sed -i -e 's:QtCore:dIsAbLe&:' configure || die
 	fi
+	epatch "${FILESDIR}"/${PN}-1.2.8.1-glib32.patch
 }
 
 src_configure() {
