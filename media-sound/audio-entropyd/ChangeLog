@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audio-entropyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.42 2012/05/30 07:17:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.43 2012/05/31 14:25:17 angelos Exp $
+
+  31 May 2012; Christoph Mende <angelos@gentoo.org> audio-entropyd-2.0.3.ebuild:
+  Remove -g from CFLAGS and add missing dependency on media-libs/alsa-lib
 
   30 May 2012; Jeff Horelick <jdhore@gentoo.org> audio-entropyd-2.0.3.ebuild:
   marked x86 per bug 417721
