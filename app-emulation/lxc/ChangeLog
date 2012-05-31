@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.38 2012/05/12 19:18:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.39 2012/05/31 23:03:11 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> lxc-0.8.0_rc1-r4.ebuild:
+  tweak inherit so repoman can parse it
 
   12 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> lxc-0.8.0_rc1-r4.ebuild:
   Make sure to check for CGROUP_DEVICE in particular, see bug #409371.
