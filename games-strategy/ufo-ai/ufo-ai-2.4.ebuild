@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.4.ebuild,v 1.1 2012/05/01 09:10:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.4.ebuild,v 1.2 2012/05/31 19:31:05 mr_bones_ Exp $
 
 EAPI=3
-
 inherit eutils flag-o-matic games
 
 MY_P=${P/o-a/oa}
@@ -21,7 +20,7 @@ IUSE="debug dedicated editor"
 
 # Dependencies and more instructions can be found here:
 # http://ufoai.ninex.info/wiki/index.php/Compile_for_Linux
-RDEPEND="!dedicated? (
+DEPEND="!dedicated? (
 		virtual/opengl
 		virtual/glu
 		media-libs/libsdl
@@ -45,8 +44,6 @@ RDEPEND="!dedicated? (
 		x11-libs/gtksourceview:2.0
 	)"
 
-DEPEND="${RDEPEND}"
-
 S=${WORKDIR}/${MY_P}-source
 
 src_prepare() {
@@ -60,9 +57,8 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
 	# they are special and provide hand batched configure file
-	myconf="
+	local myconf="
 		--disable-dependency-tracking
 		$(use_enable !debug release)
 		$(use_enable editor ufo2map)
