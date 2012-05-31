@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/use.mask,v 1.4 2012/05/31 03:06:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/use.mask,v 1.5 2012/05/31 03:07:40 aballier Exp $
 
 # Espeak does not run on bsd
 espeak
@@ -8,9 +8,6 @@ espeak
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
 krb4
-
-# Apache defaults to Apache 1.x, mask it for the time
-apache
 
 # fftw requires sinl and cosl function, not present in FreeBSD
 fftw
