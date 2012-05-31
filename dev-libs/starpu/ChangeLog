@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/starpu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/ChangeLog,v 1.1 2012/05/30 00:29:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/ChangeLog,v 1.2 2012/05/31 19:15:09 bicatali Exp $
+
+  31 May 2012; Sébastien Fabbro <bicatali@gentoo.org> starpu-1.0.1.ebuild,
+  +files/starpu-1.0.1-detect-qt.patch, metadata.xml:
+  Added doc, examples, and gcc-plugin flags. Fixed a wrong autoconf macro when
+  checking for qt4
 
 *starpu-1.0.1 (30 May 2012)
 
