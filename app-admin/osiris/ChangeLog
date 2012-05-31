@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/osiris
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.19 2010/08/10 13:19:15 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.20 2012/05/31 02:35:28 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> osiris-4.2.3.ebuild:
+  inherit user for enewgroup and enewuser
 
   10 Aug 2010; Markos Chandras <hwoarang@gentoo.org> osiris-4.2.3.ebuild:
   Respect CC,CFLAGS,LDFLAGS. Bug #331879. Thanks to Diego E. 'Flameeyes'

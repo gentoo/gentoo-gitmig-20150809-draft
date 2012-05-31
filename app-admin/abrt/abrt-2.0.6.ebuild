@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.6.ebuild,v 1.7 2012/05/03 18:02:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.6.ebuild,v 1.8 2012/05/31 02:21:27 zmedico Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
 
 # Need gnome2-utils for gnome2_icon_cache_update
-inherit autotools eutils gnome2-utils python systemd
+inherit autotools eutils gnome2-utils python systemd user
 
 DESCRIPTION="Automatic bug detection and reporting tool"
 HOMEPAGE="https://fedorahosted.org/abrt/"

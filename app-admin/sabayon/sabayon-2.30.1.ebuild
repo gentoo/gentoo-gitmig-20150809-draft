@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.1.ebuild,v 1.10 2012/02/10 04:02:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.1.ebuild,v 1.11 2012/05/31 02:37:59 zmedico Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
-inherit gnome2 eutils python multilib
+inherit gnome2 eutils python multilib user
 
 DESCRIPTION="Tool to maintain user profiles in a GNOME desktop"
 HOMEPAGE="http://live.gnome.org/Sabayon/"

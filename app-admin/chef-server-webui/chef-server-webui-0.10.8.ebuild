@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-0.10.8.ebuild,v 1.1 2012/01/29 12:34:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-0.10.8.ebuild,v 1.2 2012/05/31 02:24:30 zmedico Exp $
 
 EAPI="4"
 USE_RUBY="ruby18"
@@ -8,7 +8,7 @@ USE_RUBY="ruby18"
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
 
-inherit ruby-fakegem
+inherit ruby-fakegem user
 
 DESCRIPTION="Configuration management tool"
 HOMEPAGE="http://wiki.opscode.com/display/chef"

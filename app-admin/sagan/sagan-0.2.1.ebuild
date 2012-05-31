@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.1.ebuild,v 1.2 2012/05/03 18:02:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.1.ebuild,v 1.3 2012/05/31 02:39:00 zmedico Exp $
 
 EAPI=4
 
-inherit eutils autotools-utils
+inherit eutils autotools-utils user
 
 DESCRIPTION="Sagan is a multi-threaded, real time system and event log monitoring system"
 HOMEPAGE="http://sagan.softwink.com/"

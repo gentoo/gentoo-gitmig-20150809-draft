@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.89 2012/02/10 04:02:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.90 2012/05/31 02:37:59 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> sabayon-2.30.1.ebuild:
+  inherit user for enewgroup and enewuser
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> sabayon-2.30.1.ebuild:
   Changing python deps in preparation for 2.4 removal

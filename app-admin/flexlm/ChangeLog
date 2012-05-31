@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/flexlm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.19 2012/04/16 10:38:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.20 2012/05/31 02:29:01 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> flexlm-9.5-r2.ebuild:
+  inherit user for enewgroup and enewuser
 
   16 Apr 2012; Pacho Ramos <pacho@gentoo.org> files/flexlm-conf:
   And fix conf.d file.

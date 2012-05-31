@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.10.10_beta1.ebuild,v 1.1 2012/04/29 13:15:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.10.10_beta1.ebuild,v 1.2 2012/05/31 02:23:21 zmedico Exp $
 
 EAPI="4"
 USE_RUBY="ruby18"
@@ -9,7 +9,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_VERSION=${PV/_beta/.beta.}
 
-inherit ruby-fakegem
+inherit ruby-fakegem user
 
 DESCRIPTION="Chef is a systems integration framework"
 HOMEPAGE="http://wiki.opscode.com/display/chef"

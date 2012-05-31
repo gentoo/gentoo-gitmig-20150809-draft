@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r2.ebuild,v 1.1 2012/04/16 10:37:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r2.ebuild,v 1.2 2012/05/31 02:29:01 zmedico Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Macrovision FLEXlm license manager and utils"
 HOMEPAGE="http://www.macrovision.com/services/support/flexlm/lmgrd.shtml"

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.10 2011/04/07 07:51:57 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.11 2012/05/31 02:43:57 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib user
 
 DESCRIPTION="Syslog message handling tools"
 HOMEPAGE="http://untroubled.org/syslogread/"
