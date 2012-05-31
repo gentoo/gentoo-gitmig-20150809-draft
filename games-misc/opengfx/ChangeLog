@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/opengfx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.21 2012/04/19 11:53:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.22 2012/05/31 16:35:26 mr_bones_ Exp $
+
+  31 May 2012; Michael Sterrett <mr_bones_@gentoo.org> -opengfx-0.3.4.ebuild,
+  -opengfx-0.3.6.ebuild:
+  old
 
   19 Apr 2012; Agostino Sarubbo <ago@gentoo.org> opengfx-0.4.4.ebuild:
   Stable for amd64, wrt bug #398161
