@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.3 2012/05/05 07:00:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.4 2012/05/31 17:37:59 radhermit Exp $
 
 EAPI=4
 
@@ -11,7 +11,8 @@ inherit autotools eutils flag-o-matic gnome2 python
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~radhermit/dist/${P}-poppler-0.20.patch.bz2"
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="http://www.inkscape.org/"
@@ -86,6 +87,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.48.0-spell.patch \
 		"${FILESDIR}"/${PN}-0.48.1-libpng15.patch \
 		"${FILESDIR}"/${PN}-0.48.2-libwpg.patch
+
+	has_version ">=app-text/poppler-0.20.0" && epatch "${WORKDIR}"/${P}-poppler-0.20.patch
+
 	eautoreconf
 }
 
