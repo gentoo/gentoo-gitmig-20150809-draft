@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.179 2012/05/29 05:37:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.180 2012/05/31 22:53:52 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> libvirt-0.9.10-r4.ebuild,
+  libvirt-0.9.11.3.ebuild, libvirt-0.9.8.ebuild, libvirt-9999.ebuild:
+  tweak inherits so repoman can parse them
 
   28 May 2012; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.9.11.ebuild:
   Remove older version
