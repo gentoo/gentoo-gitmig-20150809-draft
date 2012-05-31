@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.58.ebuild,v 1.1 2012/05/31 10:22:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.58.ebuild,v 1.2 2012/05/31 13:45:27 radhermit Exp $
 
 EAPI="4"
 WX_GTK_VER="2.8"
 
-inherit eutils autotools-utils wxwidgets multilib
+inherit eutils autotools wxwidgets multilib
 
 DESCRIPTION="MediaInfo supplies technical and tag information about media files"
 HOMEPAGE="http://mediainfo.sourceforge.net"
@@ -23,8 +23,6 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
 S=${WORKDIR}/MediaInfo
 
 pkg_setup() {
@@ -35,33 +33,33 @@ pkg_setup() {
 src_prepare() {
 	local target
 	for target in ${TARGETS}; do
-		cd "${S}/Project/GNU/${target}"
+		cd "${S}"/Project/GNU/${target}
 		sed -i -e "s:-O2::" configure.ac
-		autotools-utils_autoreconf
+		eautoreconf
 	done
 }
 
 src_configure() {
 	local target
 	for target in ${TARGETS}; do
-		ECONF_SOURCE="${S}/Project/GNU/${target}"
-		[[ ${target} == "GUI" ]] && local myeconfargs=( --with-wxwidgets --with-wx-gui )
-		autotools-utils_src_configure
+		cd "${S}"/Project/GNU/${target}
+		[[ ${target} == "GUI" ]] && local args=( --with-wxwidgets --with-wx-gui )
+		econf ${args}
 	done
 }
 
 src_compile() {
 	local target
 	for target in ${TARGETS}; do
-		ECONF_SOURCE="${S}/Project/GNU/${target}"
-		autotools-utils_src_compile
+		cd "${S}"/Project/GNU/${target}
+		default
 	done
 }
 src_install() {
 	local target
 	for target in ${TARGETS}; do
-		ECONF_SOURCE="${S}/Project/GNU/${target}"
-		autotools-utils_src_install
+		cd "${S}"/Project/GNU/${target}
+		default
 		dodoc "${S}"/History_${target}.txt
 		if [[ ${target} == "GUI" ]]; then
 			newicon "${S}"/Source/Resource/Image/MediaInfo.png ${PN}.png
