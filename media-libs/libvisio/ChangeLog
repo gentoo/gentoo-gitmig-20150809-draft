@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.27 2012/05/23 08:47:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.28 2012/05/31 09:51:55 jlec Exp $
+
+  31 May 2012; Justin Lecher <jlec@gentoo.org> libvisio-0.0.16.ebuild:
+  Keyworded for ~-linux, tested by me
 
   23 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libvisio-0.0.15.ebuild,
   libvisio-0.0.16.ebuild:
