@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.4.0_pre1-r1.ebuild,v 1.6 2012/01/21 20:49:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.4.0_pre1-r1.ebuild,v 1.7 2012/05/31 22:34:38 zmedico Exp $
 
-inherit eutils flag-o-matic linux-mod toolchain-funcs
+inherit eutils flag-o-matic linux-mod toolchain-funcs user
 
 MY_PV=${PV/_/}
 MY_P=${PN}-${MY_PV}
