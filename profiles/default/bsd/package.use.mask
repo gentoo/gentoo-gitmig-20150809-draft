@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.29 2012/05/31 02:22:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.30 2012/05/31 02:26:26 aballier Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)
 app-text/asciidoc test highlight
 
 app-misc/mc pam
-dev-util/catalyst cdr
 
 # See http://bugzilla.gnome.org/show_bug.cgi?id=370847 for why we disable pam
 gnome-extra/gnome-screensaver pam
