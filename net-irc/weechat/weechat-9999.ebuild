@@ -1,17 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.18 2012/04/06 09:43:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.19 2012/05/31 11:15:05 scarabeus Exp $
 
-EAPI=3
-
-USE_RUBY="ruby18 ruby19"
-RUBY_OPTIONAL="yes"
+EAPI=4
 
 PYTHON_DEPEND="python? *"
 
 EGIT_REPO_URI="git://git.sv.gnu.org/weechat.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
-inherit python multilib ruby-ng cmake-utils ${GIT_ECLASS}
+inherit python multilib cmake-utils ${GIT_ECLASS}
 
 DESCRIPTION="Portable and multi-interface IRC client."
 HOMEPAGE="http://weechat.org/"
@@ -38,7 +35,7 @@ RDEPEND="
 	guile? ( dev-scheme/guile )
 	lua? ( dev-lang/lua[deprecated] )
 	perl? ( dev-lang/perl )
-	ruby? ( $(ruby_implementations_depend) )
+	ruby? ( >=dev-lang/ruby-1.9 )
 	ssl? ( net-libs/gnutls )
 	spell? ( app-text/aspell )
 	tcl? ( >=dev-lang/tcl-8.4.15 )
@@ -60,7 +57,6 @@ done
 
 pkg_setup() {
 	use python && python_pkg_setup
-	use ruby && ruby-ng_pkg_setup
 }
 
 src_prepare() {
