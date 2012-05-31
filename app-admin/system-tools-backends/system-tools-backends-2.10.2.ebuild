@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.2.ebuild,v 1.8 2012/05/03 18:02:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.2.ebuild,v 1.9 2012/05/31 02:45:53 zmedico Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit eutils gnome2 user
 
 DESCRIPTION="Tools aimed to make easy the administration of UNIX systems"
 HOMEPAGE="http://projects.gnome.org/gst/"
