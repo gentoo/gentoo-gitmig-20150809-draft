@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.18 2012/05/31 02:31:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.19 2012/05/31 02:38:50 aballier Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -47,12 +47,7 @@ pax_kernel
 termcap-compat
 
 # useflags for php commercial software
-hyperwave-api
-interbase
-mnogosearch
 msql
-ovrimos
-sapdb
 
 # Java requires that new-style virtuals are prepared for kaffe
 java
