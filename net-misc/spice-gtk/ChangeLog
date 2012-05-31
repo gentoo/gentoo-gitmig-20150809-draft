@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.21 2012/05/29 05:07:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.22 2012/05/31 05:53:39 dev-zero Exp $
+
+  31 May 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.12-parallel-install.patch, spice-gtk-0.12.ebuild:
+  fix for parallel install (bug #418295)
 
   29 May 2012; Tiziano Müller <dev-zero@gentoo.org> spice-gtk-0.12.ebuild:
   Fix building with python-3 as default interpreter (bug #418017, thanks to

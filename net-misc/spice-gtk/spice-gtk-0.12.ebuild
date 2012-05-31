@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.12.ebuild,v 1.2 2012/05/29 05:07:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.12.ebuild,v 1.3 2012/05/31 05:53:39 dev-zero Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 
-inherit eutils python
+inherit autotools eutils python
 
 PYTHON_DEPEND="2"
 
@@ -67,6 +67,12 @@ pkg_setup() {
 	if use gstreamer && use pulseaudio ; then
 		ewarn "spice-gtk can use only one audio backend: pulseaudio will be used since you enabled both."
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${PV}-parallel-install.patch"
+	eaclocal
+	eautoreconf
 }
 
 src_configure() {
