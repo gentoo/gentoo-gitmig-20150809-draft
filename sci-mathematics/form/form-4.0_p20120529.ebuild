@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/form-4.0_p20120529.ebuild,v 1.1 2012/05/31 12:25:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/form-4.0_p20120529.ebuild,v 1.2 2012/05/31 13:22:09 grozin Exp $
 
 EAPI=4
 
@@ -18,14 +18,13 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="devref doc doxygen gmp mpi threads zlib"
 
-DEPEND="devref? ( dev-texlive/texlive-latex )
-	doc? ( dev-texlive/texlive-latex )
-	doxygen? ( app-doc/doxygen )
-	gmp? ( dev-libs/gmp )
+RDEPEND="gmp? ( dev-libs/gmp )
 	mpi? ( virtual/mpi )
-	zlib? ( sys-libs/zlib )
-"
-RDEPEND="${DEPEND}"
+	zlib? ( sys-libs/zlib )"
+DEPEND="${RDEPEND}
+	devref? ( dev-texlive/texlive-latex )
+	doc? ( dev-texlive/texlive-latex )
+	doxygen? ( app-doc/doxygen )"
 
 src_prepare() {
 	sed -i 's/LINKFLAGS = -s/LINKFLAGS =/' sources/Makefile.am || die

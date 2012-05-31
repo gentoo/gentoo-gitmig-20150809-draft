@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/form
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/ChangeLog,v 1.1 2012/05/31 12:25:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/ChangeLog,v 1.2 2012/05/31 13:22:09 grozin Exp $
+
+  31 May 2012; Andrey Grozin <grozin@gentoo.org> form-4.0_p20120529.ebuild:
+  Fixing RDEPEND
 
 *form-4.0_p20120529 (31 May 2012)
 
