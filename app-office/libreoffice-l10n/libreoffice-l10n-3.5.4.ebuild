@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.4.ebuild,v 1.1 2012/05/31 09:41:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.4.ebuild,v 1.2 2012/05/31 09:59:26 scarabeus Exp $
 
 EAPI=4
 
@@ -9,15 +9,7 @@ MY_PV="3.5.4"
 RC_VERSION="rc2" # CHECK ME WITH EVERY BUMP!
 BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm"
 
-OO_EXTENSIONS=(
-	"472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
-	"53ca5e56ccd4cab3693ad32c6bd13343-Sun-ODF-Template-Pack-de_1.0.0.oxt"
-	"4ad003e7bbda5715f5f38fde1f707af2-Sun-ODF-Template-Pack-es_1.0.0.oxt"
-	"a53080dc876edcddb26eb4c3c7537469-Sun-ODF-Template-Pack-fr_1.0.0.oxt"
-	"09ec2dac030e1dcd5ef7fa1692691dc0-Sun-ODF-Template-Pack-hu_1.0.0.oxt"
-	"b33775feda3bcf823cad7ac361fd49a6-Sun-ODF-Template-Pack-it_1.0.0.oxt"
-)
-inherit rpm eutils versionator office-ext
+inherit rpm eutils versionator
 
 DESCRIPTION="Translations for the Libreoffice suite."
 HOMEPAGE="http://www.libreoffice.org"
@@ -25,7 +17,7 @@ HOMEPAGE="http://www.libreoffice.org"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="offlinehelp templates"
+IUSE="offlinehelp"
 
 LANGUAGES_HELP="bg bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA eo es et eu
 fi fr gl gu he hi hr hu id is it ja ka km ko lb mk nb ne nl nn om pl pt_BR pt ru
@@ -59,22 +51,6 @@ for X in ${SPELL_DICTS} ; do
 done
 RDEPEND="${SPELL_DICTS_DEPEND}"
 unset X SPELL_DICTS SPELL_DICTS_DEPEND
-
-# no need for iuse here as this needs to be written out and is subset
-# of lignuas anyway
-EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
-TDEPEND=""
-for i in ${OO_EXTENSIONS[@]}; do
-	lingua=${i/_*.oxt/}
-	lingua=${lingua/*Pack-/}
-	if [[ ${lingua} == en-US ]]; then
-		TDEPEND+=" ${EXT_URI}/${i}"
-	else
-		TDEPEND+=" linguas_${lingua}? ( ${EXT_URI}/${i} )"
-	fi
-done
-SRC_URI+=" templates? ( ${TDEPEND} )"
-unset i lingua TDEPEND EXT_URI
 
 # blockers for old libreoffice with bundled linguas
 RDEPEND+="
@@ -115,18 +91,6 @@ src_unpack() {
 			rpmdir="LibO_${MY_PV}${RC_VERSION}_Linux_x86_helppack-rpm_${dir}/RPMS/"
 			[[ -d ${rpmdir} ]] || die "Missing directory: \"${rpmdir}\""
 			rpm_unpack ./"${rpmdir}/"*.rpm
-		fi
-		if use templates; then
-			for i in ${OO_EXTENSIONS[@]}; do
-				lingua=${i/_*.oxt/}
-				lingua=${lingua/*Pack-/}
-				if [[ ${lang} == ${lingua} || ${lingua} == en-US ]]; then
-					if [[ ! -f "${S}/${i}" ]]; then
-						cp -v "${DISTDIR}/${i}" "${S}"
-						ooextused+=( "${i}" )
-					fi
-				fi
-			done
 		fi
 	done
 	OO_EXTENSIONS=()
