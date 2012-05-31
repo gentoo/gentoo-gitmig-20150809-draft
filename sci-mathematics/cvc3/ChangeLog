@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/cvc3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/ChangeLog,v 1.1 2012/05/30 00:51:22 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/ChangeLog,v 1.2 2012/05/31 21:33:02 ulm Exp $
+
+  31 May 2012; Ulrich Müller <ulm@gentoo.org> files/50cvc3-gentoo.el:
+  Remove spurious comment from site-init file for Emacs.
 
 *cvc3-2.4.1 (30 May 2012)
 
