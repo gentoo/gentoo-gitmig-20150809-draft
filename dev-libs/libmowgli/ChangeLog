@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmowgli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.79 2012/05/29 19:20:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmowgli/ChangeLog,v 1.80 2012/05/31 15:15:52 jer Exp $
+
+  31 May 2012; Jeroen Roovers <jer@gentoo.org> libmowgli-2.0.0.ebuild:
+  Stable for HPPA (bug #417145).
 
   29 May 2012; Brent Baude <ranger@gentoo.org> libmowgli-2.0.0.ebuild:
   Marking libmowgli-2.0.0 ppc for bug 417145
