@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/jmol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.12 2012/02/15 14:14:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.13 2012/05/31 21:00:54 je_fro Exp $
+
+*jmol-12.2.27 (31 May 2012)
+
+  31 May 2012; Jeff Gardner <je_fro@gentoo.org> +jmol-12.2.27.ebuild,
+  +files/jmol-12.2.27-nointl.patch:
+  Latest version
 
   15 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> jmol-11.0.3-r1.ebuild:
   Fix SRC_URI
