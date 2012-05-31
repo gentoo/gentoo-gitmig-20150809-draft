@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r24.ebuild,v 1.3 2012/05/19 15:58:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r24.ebuild,v 1.4 2012/05/31 22:22:54 zmedico Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
 
-inherit elisp-common flag-o-matic eutils toolchain-funcs autotools
+inherit elisp-common flag-o-matic eutils multilib toolchain-funcs autotools
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
