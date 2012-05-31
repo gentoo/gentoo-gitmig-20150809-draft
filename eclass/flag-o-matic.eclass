@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.172 2012/05/31 00:24:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.173 2012/05/31 00:29:06 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -207,7 +207,7 @@ append-flags() {
 	case " $* " in
 	*' '-[DIU]*) eqawarn 'please use append-cppflags for preprocessor flags' ;;
 	*' '-L*|\
-	*' '-Wl,*')  eqawarn 'please use append-ldflags for linker flags' ;;
+	*' '-Wl,*)  eqawarn 'please use append-ldflags for linker flags' ;;
 	esac
 	append-cflags "$@"
 	append-cxxflags "$@"
