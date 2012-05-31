@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.105 2012/05/31 11:03:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.106 2012/05/31 11:04:56 scarabeus Exp $
+
+  31 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -smb4k-0.10.10.ebuild,
+  smb4k-1.0.2.ebuild:
+  Stabilise latest on amd64 and x86 as 0.10 is not working much. Remove older.
 
 *smb4k-1.0.2 (31 May 2012)
 
