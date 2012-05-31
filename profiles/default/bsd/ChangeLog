@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.119 2012/05/31 03:07:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.120 2012/05/31 03:14:36 aballier Exp $
+
+  31 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/use.mask:
+  remove another bunch of old use masks... to be tested, may not 6 years later
 
   31 May 2012; Alexis Ballier <aballier@gentoo.org> fbsd/use.mask:
   there has not been apache 1.x in tree since a while, remove use mask
