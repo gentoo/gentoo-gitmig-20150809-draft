@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.2.ebuild,v 1.3 2012/05/22 19:37:07 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.2.ebuild,v 1.4 2012/05/31 03:25:16 zmedico Exp $
 
 EAPI=4
 # PYTHON_BDEPEND="2"
 VIRTUALX_REQUIRED="manual"
 
-inherit autotools db-use eutils libtool python toolchain-funcs virtualx flag-o-matic
+inherit autotools db-use eutils multilib python toolchain-funcs virtualx flag-o-matic
 
 MY_P="${P}"
 DESCRIPTION="Kerberos 5 implementation from KTH"
