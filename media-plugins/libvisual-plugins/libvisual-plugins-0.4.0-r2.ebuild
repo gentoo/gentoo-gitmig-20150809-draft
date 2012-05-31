@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.16 2012/05/31 19:44:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.17 2012/05/31 19:45:35 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -20,8 +20,8 @@ IUSE="alsa debug gtk jack mplayer opengl"
 
 RDEPEND="media-libs/fontconfig
 	~media-libs/libvisual-${PV}
-    x11-libs/libX11
-    x11-libs/libXext
+	x11-libs/libX11
+	x11-libs/libXext
 	x11-libs/libXrender
 	alsa? ( media-libs/alsa-lib )
 	gtk? ( x11-libs/gtk+:2 )
