@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r1.ebuild,v 1.8 2012/03/18 13:43:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r1.ebuild,v 1.9 2012/05/31 02:18:35 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 MY_P=${P/speech-/speech_}
 

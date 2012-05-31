@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.45.03.ebuild,v 1.1 2011/03/22 17:10:56 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.45.03.ebuild,v 1.2 2012/05/31 02:10:21 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 MY_P="${P}-source"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
