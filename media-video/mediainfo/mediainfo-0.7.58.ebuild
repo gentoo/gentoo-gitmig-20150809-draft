@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.58.ebuild,v 1.2 2012/05/31 13:45:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.58.ebuild,v 1.3 2012/05/31 13:54:59 radhermit Exp $
 
 EAPI="4"
 WX_GTK_VER="2.8"
@@ -43,7 +43,8 @@ src_configure() {
 	local target
 	for target in ${TARGETS}; do
 		cd "${S}"/Project/GNU/${target}
-		[[ ${target} == "GUI" ]] && local args=( --with-wxwidgets --with-wx-gui )
+		local args=""
+		[[ ${target} == "GUI" ]] && args="--with-wxwidgets --with-wx-gui"
 		econf ${args}
 	done
 }
