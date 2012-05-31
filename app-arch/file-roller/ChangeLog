@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.306 2012/05/19 23:23:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.307 2012/05/31 03:05:51 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> file-roller-2.32.2.ebuild:
+  inherit multilib for get_libdir
 
 *file-roller-3.4.2 (19 May 2012)
 

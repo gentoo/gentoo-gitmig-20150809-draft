@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r4.ebuild,v 1.1 2012/03/20 08:15:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r4.ebuild,v 1.2 2012/05/31 03:03:58 zmedico Exp $
 
 EAPI=4
 
-inherit autotools eutils toolchain-funcs
+inherit autotools eutils multilib toolchain-funcs
 
 PATCH_LEVEL=10
 

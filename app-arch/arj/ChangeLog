@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/arj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.48 2012/03/20 08:15:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.49 2012/05/31 03:03:58 zmedico Exp $
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> arj-3.10.22-r3.ebuild,
+  arj-3.10.22-r4.ebuild:
+  inherit multilib for get_libdir
 
 *arj-3.10.22-r4 (20 Mar 2012)
 
