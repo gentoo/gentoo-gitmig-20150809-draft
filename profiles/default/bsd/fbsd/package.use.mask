@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.23 2012/05/31 02:54:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.24 2012/05/31 02:56:54 aballier Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -30,9 +30,6 @@ x11-misc/xscreensaver new-login
 
 # net-wireless/aircrack-ng - wireless capture tools not needed.
 net-wireless/aircrack-ng wifi
-
-# sane-backends not yet keyworded, xv doesn't build
-dev-python/imaging scanner X
 
 # Uses consolekit, which currently doesn't build
 gnome-base/gdm pam
