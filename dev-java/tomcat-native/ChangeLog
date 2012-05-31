@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tomcat-native
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.33 2012/03/11 21:50:24 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.34 2012/05/31 08:53:24 ago Exp $
+
+  31 May 2012; Agostino Sarubbo <ago@gentoo.org> tomcat-native-1.1.23.ebuild:
+  Stable for amd64, wrt bug #418341
 
 *tomcat-native-1.1.23 (11 Mar 2012)
 
