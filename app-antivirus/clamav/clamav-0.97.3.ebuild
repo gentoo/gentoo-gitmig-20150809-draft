@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.3.ebuild,v 1.10 2012/05/02 20:14:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.3.ebuild,v 1.11 2012/05/31 03:01:52 zmedico Exp $
 
 EAPI=4
 
-inherit eutils autotools-utils flag-o-matic
+inherit eutils autotools-utils flag-o-matic user
 
 DESCRIPTION="Clam Anti-Virus Scanner"
 HOMEPAGE="http://www.clamav.net/"
