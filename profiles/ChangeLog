@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6618 2012/05/31 11:18:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6619 2012/05/31 11:20:21 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2012; Tim Harder <radhermit@gentoo.org> package.mask:
+  Re-add mistakenly removed comment line.
 
   31 May 2012; Tim Harder <radhermit@gentoo.org> package.mask:
   Unmask >=media-video/mkvtoolnix-5.1.0.
