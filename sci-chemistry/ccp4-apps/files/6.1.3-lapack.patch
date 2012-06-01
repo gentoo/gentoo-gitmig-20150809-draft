@@ -567,7 +567,7 @@ index 833f483..bcfa62d 100755
 +  # gentoo is clever
 +  make_blas=
 +  make_lapack=
-+  BLASLIB=$(pkg-config --libs lapack)
++  BLASLIB=$(pkg-config --libs blas)
 +  LAPACKLIB=$(pkg-config --libs lapack)
 +  XLAPACK_LIB="${BLASLIB} ${LAPACKLIB}"
 +  XFFLAGS_LAPACK="$(pkg-config --cflags lapack blas)"

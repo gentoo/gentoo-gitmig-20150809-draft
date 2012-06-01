@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.9 2012/04/26 15:46:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.10 2012/06/01 09:06:21 jlec Exp $
 
 EAPI=3
 
@@ -227,7 +227,7 @@ src_configure() {
 	# We agree to the license by emerging this, set in LICENSE
 	sed -i \
 		-e "s~^\(^agreed=\).*~\1yes~g" \
-		"${S}"/configure
+		"${S}"/configure || die
 
 	# Fix up variables -- need to reset CCP4_MASTER at install-time
 	sed -i \
@@ -236,7 +236,7 @@ src_configure() {
 		-e "s~^\(.*export CBIN=.*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
 		-e "s~^\(.*setenv CBIN .*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
 		-e "s~^\(setenv CCP4I_TCLTK.*\)/usr/local/bin~\1${EPREFIX}/usr/bin~g" \
-		"${S}"/include/ccp4.setup*
+		"${S}"/include/ccp4.setup* || die
 
 	# Set up variables for build
 	source "${S}"/include/ccp4.setup-sh
