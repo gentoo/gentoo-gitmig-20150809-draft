@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libattica
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.21 2012/05/17 13:12:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.22 2012/06/01 15:05:45 ago Exp $
+
+  01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libattica-0.3.0.ebuild:
+  Stable for amd64, wrt bug #418749
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> libattica-0.3.0.ebuild:
   keyword ~amd64-fbsd
