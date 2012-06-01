@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.18.4-r1.ebuild,v 1.9 2012/05/06 20:34:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.18.4-r1.ebuild,v 1.10 2012/06/01 08:54:26 jlec Exp $
 
 EAPI="4"
 
@@ -53,6 +53,16 @@ RDEPEND="${COMMON_DEPEND}
 PATCHES=( "${FILESDIR}/${P}-newline.patch" )
 
 DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
+
+src_prepare() {
+	if use prefix && use qt4; then
+		cp "${FILESDIR}"/rpath.cmake .
+		sed \
+			-i '1iinclude(rpath.cmake)' \
+			CMakeLists.txt || die
+	fi
+	base_src_prepare
+}
 
 src_configure() {
 	mycmakeargs=(
