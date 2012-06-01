@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-12.0.ebuild,v 1.1 2012/05/12 22:24:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-12.0-r2.ebuild,v 1.1 2012/06/01 15:52:27 hasufell Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -12,7 +12,7 @@ MY_PN="firefox"
 TB_V="2.2.35-11"
 
 # Patch version
-PATCH="${MY_PN}-12.0-patches-0.1"
+PATCH="${MY_PN}-12.0-patches-0.5"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${MY_PN}/releases/"
@@ -33,7 +33,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )
 	GPL-2
 	MIT
 	CCPL-Attribution-3.0"
-IUSE="bindist +crashreporter +ipc pgo selinux system-sqlite +webm"
+IUSE="bindist +crashreporter +ipc +jit pgo selinux system-sqlite +webm"
 
 SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
@@ -176,13 +176,15 @@ src_configure() {
 	mozconfig_annotate '' --enable-safe-browsing
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
-	mozconfig_annotate 'Missing features' --disable-system-cairo
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable system-sqlite
+	# Both methodjit and tracejit conflict with PaX
+	mozconfig_use_enable jit methodjit
+	mozconfig_use_enable jit tracejit
 
 	# Allow for a proper pgo build
 	if use pgo; then
@@ -244,8 +246,11 @@ src_install() {
 	obj_dir="${obj_dir%/*}"
 	cd "${S}/${obj_dir}"
 
-	# Pax mark xpcshell for hardened support, only used for startupcache creation.
-	pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
+	# Without methodjit and tracejit there's no conflict with PaX
+	if use jit; then
+		# Pax mark xpcshell for hardened support, only used for startupcache creation.
+		pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
+	fi
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install || die "emake install failed"
@@ -257,8 +262,15 @@ src_install() {
 	rm -rf "${ED}"/usr/include "${ED}${MOZILLA_FIVE_HOME}"/{idl,include,lib,sdk} || \
 		die "Failed to remove sdk and headers"
 
-	# Required in order to use plugins and even run firefox on hardened.
-	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
+	# Without methodjit and tracejit there's no conflict with PaX
+	if use jit; then
+		# Required in order to use plugins and even run firefox on hardened.
+		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin}
+	fi
+
+	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
+	# continue to work as expected.
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
 
 	# Plugins dir
 	keepdir /usr/$(get_libdir)/${PN}/${MY_PN}/plugins
