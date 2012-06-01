@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.02.ebuild,v 1.5 2011/10/04 16:56:28 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.02.ebuild,v 1.6 2012/06/01 01:56:55 zmedico Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Genealogy software program with a Web interface."
 HOMEPAGE="http://cristal.inria.fr/~ddr/GeneWeb/"

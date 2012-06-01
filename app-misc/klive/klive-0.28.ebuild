@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.28.ebuild,v 1.10 2009/10/15 20:00:26 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/klive-0.28.ebuild,v 1.11 2012/06/01 01:58:09 zmedico Exp $
 
-inherit eutils
+inherit user
 
 DESCRIPTION="Linux Kernel Live Usage Monitor"
 HOMEPAGE="http://klive.cpushare.com/"

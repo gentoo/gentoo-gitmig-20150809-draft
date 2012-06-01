@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/klive
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/ChangeLog,v 1.25 2009/10/15 20:00:26 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klive/ChangeLog,v 1.26 2012/06/01 01:58:09 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> klive-0.28.ebuild:
+  inherit user for enewuser
 
   15 Oct 2009; <djc@gentoo.org> klive-0.28.ebuild:
   Add RDEPEND on twisted and Python (#278569).
