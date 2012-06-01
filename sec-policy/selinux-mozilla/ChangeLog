@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-mozilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.23 2012/05/20 18:40:10 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.24 2012/06/01 17:39:49 swift Exp $
+
+  01 Jun 2012; <swift@gentoo.org> selinux-mozilla-2.20120215-r2.ebuild:
+  Add dependency on selinux-xserver, fixes build failure
 
 *selinux-mozilla-2.20120215-r2 (20 May 2012)
 
