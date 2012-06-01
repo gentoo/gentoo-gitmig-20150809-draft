@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-ru
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/ChangeLog,v 1.9 2012/06/01 15:02:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/ChangeLog,v 1.10 2012/06/01 22:53:33 johu Exp $
+
+  01 Jun 2012; Johannes Huber <johu@gentoo.org>
+  fortune-mod-gentoo-ru-0.26.ebuild:
+  Stable for x86, wrt bug #418985
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   fortune-mod-gentoo-ru-0.26.ebuild:
