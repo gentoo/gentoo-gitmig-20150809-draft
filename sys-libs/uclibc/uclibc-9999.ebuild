@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.1 2012/04/22 22:24:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.2 2012/06/01 04:22:53 zmedico Exp $
 
-inherit eutils flag-o-matic toolchain-funcs savedconfig
+inherit eutils flag-o-matic multilib toolchain-funcs savedconfig
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.busybox.net/uClibc"
 	inherit git-2
