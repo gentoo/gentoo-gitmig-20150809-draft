@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.8.ebuild,v 1.3 2012/06/01 15:02:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.8.ebuild,v 1.4 2012/06/01 19:49:16 johu Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}.0/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="$(add_kdebase_dep libksane)"
