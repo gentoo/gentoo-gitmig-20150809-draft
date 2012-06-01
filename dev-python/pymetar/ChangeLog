@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymetar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.17 2012/06/01 13:04:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.18 2012/06/01 21:53:52 johu Exp $
+
+  01 Jun 2012; Johannes Huber <johu@gentoo.org> pymetar-0.19.ebuild:
+  Stable for x86, wrt bug #418911
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pymetar-0.19.ebuild:
   Stable for amd64, wrt bug #418911
