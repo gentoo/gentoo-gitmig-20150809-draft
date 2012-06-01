@@ -1,19 +1,11 @@
---- a/Makefile
-+++ b/Makefile
-@@ -1,12 +1,4 @@
--INSTALLDIR = /
--
--CC=gcc
--
--CFLAGS=-Wall -O2 ${shell $(CC) -Wno-pointer-sign -S -o /dev/null -x c - < /dev/null > /dev/null 2>&1 && echo "-Wno-pointer-sign"}
--
--export CC
--export CFLAGS
--export INSTALLDIR
-+CFLAGS += -Wall ${shell $(CC) -Wno-pointer-sign -S -o /dev/null -x c - < /dev/null > /dev/null 2>&1 && echo "-Wno-pointer-sign"}
- 
- all:
- 	$(MAKE) -C sbin/ all
+--- a/Include.make
++++ b/Include.make
+@@ -1,4 +1,4 @@
+ USRSBINDIR      := /usr/sbin
+ USRLIBDIR       := /usr/lib
+ MAN8            := /usr/share/man/man8
+-CFLAGS          := -Wall -O2 ${shell $(CC) -Wno-pointer-sign -S -o /dev/null -x c - < /dev/null > /dev/null 2>&1 && echo "-Wno-pointer-sign"}
++CFLAGS          := -Wall ${shell $(CC) -Wno-pointer-sign -S -o /dev/null -x c - < /dev/null > /dev/null 2>&1 && echo "-Wno-pointer-sign"}
 --- a/kernel_test/Makefile
 +++ b/kernel_test/Makefile
 @@ -3,20 +3,18 @@ ALL_FILES = tomoyo_filesystem_test tomoyo_file_test tomoyo_rewrite_test newns to

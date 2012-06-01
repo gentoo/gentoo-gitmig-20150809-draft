@@ -67,9 +67,9 @@ index fa715b0..5b991db 100644
  	sleep 10
  
  libtomoyotools.so: tomoyotools.c tomoyotools.h
--	$(CC) $(CFLAGS) -fPIC tomoyotools.c -shared -Wl,-soname,libtomoyotools.so.3 -o libtomoyotools.so.3.0.0
-+	$(CC) $(CFLAGS) $(LDFLAGS) -fPIC tomoyotools.c -shared -Wl,-soname,libtomoyotools.so.3 -o libtomoyotools.so.3.0.0
- 	ln -sf libtomoyotools.so.3.0.0 libtomoyotools.so
+-	$(CC) $(CFLAGS) -fPIC tomoyotools.c -shared -Wl,-soname,libtomoyotools.so.3 -o libtomoyotools.so.3.0.1
++	$(CC) $(CFLAGS) $(LDFLAGS) -fPIC tomoyotools.c -shared -Wl,-soname,libtomoyotools.so.3 -o libtomoyotools.so.3.0.1
+ 	ln -sf libtomoyotools.so.3.0.1 libtomoyotools.so
  
  .c:
 -	$(CC) $(CFLAGS) -o $@ $< -ltomoyotools -L. 
