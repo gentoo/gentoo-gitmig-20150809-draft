@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libfrontend-elements
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libfrontend-elements/ChangeLog,v 1.1 2010/10/20 06:01:22 dev-zero Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libfrontend-elements/ChangeLog,v 1.2 2012/06/01 20:41:21 dev-zero Exp $
+
+  01 Jun 2012; Tiziano Müller <dev-zero@gentoo.org>
+  libfrontend-elements-1.1.4.ebuild:
+  Make sure we depend on patched libcult for gcc-4.7 compat.
 
 *libfrontend-elements-1.1.4 (20 Oct 2010)
 

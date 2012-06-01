@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libbackend-elements
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbackend-elements/ChangeLog,v 1.2 2010/10/20 05:59:57 dev-zero Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbackend-elements/ChangeLog,v 1.3 2012/06/01 20:41:05 dev-zero Exp $
+
+  01 Jun 2012; Tiziano Müller <dev-zero@gentoo.org>
+  libbackend-elements-1.7.2.ebuild:
+  Make sure we depend on patched libcult for gcc-4.7 compat.
 
 *libbackend-elements-1.7.2 (20 Oct 2010)
 
