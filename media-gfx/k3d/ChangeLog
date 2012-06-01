@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.54 2012/06/01 16:08:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.55 2012/06/01 17:32:33 axs Exp $
+
+  01 Jun 2012; Ian Stakenvicius <axs@gentoo.org> k3d-0.7.11.0-r1.ebuild,
+  +files/k3d-0.7.11.0-gtk-liststore-vs-treemodel.patch:
+  fixed compilation issue described in bug 384011, and added a missing config
+  switch related to python
 
   01 Jun 2012; Ian Stakenvicius <axs@gentoo.org> k3d-0.7.11.0-r1.ebuild:
   k3d needs boost to have USE=python, fixes bug 403029

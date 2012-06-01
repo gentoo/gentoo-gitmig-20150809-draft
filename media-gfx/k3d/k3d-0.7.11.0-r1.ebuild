@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.10 2012/06/01 16:08:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.11 2012/06/01 17:32:33 axs Exp $
 
 EAPI="2"
 
@@ -72,11 +72,13 @@ src_prepare() {
 		-e '/PKG_CHECK_MODULES/s:libpng12:libpng:' \
 		cmake/modules/K3DFindPNG.cmake || die
 
-	epatch "${FILESDIR}"/${P}-libpng14.patch
+	epatch "${FILESDIR}"/${P}-libpng14.patch \
 
 	epatch "${FILESDIR}"/${P}-fix-potfiles.patch \
 		"${FILESDIR}"/${P}-cuda.patch \
-		"${FILESDIR}"/${P}-gcc44.patch
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-gtk-liststore-vs-treemodel.patch
+
 	[[ -f CMakeCache.txt ]] && rm CMakeCache.txt
 }
 
@@ -101,6 +103,7 @@ src_configure() {
 		$(k3d_use_module png PNG_IO)
 		$(k3d_use_module python PYTHON)
 		$(k3d_use_module python PYUI)
+		$(k3d_use_module python NGUI_PYTHON_SHELL)
 		$(k3d_use_module tiff TIFF_IO)
 		$(k3d_use_module truetype FREETYPE2)"
 
