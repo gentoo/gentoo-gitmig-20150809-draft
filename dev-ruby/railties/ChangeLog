@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.24 2012/06/01 06:07:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.25 2012/06/01 07:07:00 graaff Exp $
+
+*railties-3.2.5 (01 Jun 2012)
+
+  01 Jun 2012; Hans de Graaff <graaff@gentoo.org> +railties-3.2.5.ebuild:
+  Version bump for bug 418481.
 
   01 Jun 2012; Hans de Graaff <graaff@gentoo.org> -railties-3.0.10.ebuild,
   -railties-3.0.11.ebuild:
