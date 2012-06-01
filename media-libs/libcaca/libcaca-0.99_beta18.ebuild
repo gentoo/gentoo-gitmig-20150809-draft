@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.6 2012/05/09 16:25:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.7 2012/06/01 22:52:24 ssuominen Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -87,7 +87,7 @@ src_configure() {
 		append-cflags "$(java-pkg_get-jni-cflags)"
 	fi
 
-	use mono && export CSC=gmcs #329651
+	use mono && export CSC="$(type -P gmcs)" #329651
 	export VARTEXFONTS="${T}/fonts" #44128
 
 	# python bindings are built via distutils
@@ -109,7 +109,7 @@ src_configure() {
 src_compile() {
 	default
 
-	if use python ; then
+	if use python; then
 		distutils_src_compile
 	fi
 }
@@ -117,7 +117,7 @@ src_compile() {
 src_install() {
 	default
 
-	if use python ; then
+	if use python; then
 		distutils_src_install
 	fi
 
@@ -126,7 +126,7 @@ src_install() {
 	fi
 
 	rm -rf "${D}"/usr/share/java
-	find "${D}" -name '*.la' -delete
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {

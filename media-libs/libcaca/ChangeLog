@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.103 2012/05/09 16:25:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.104 2012/06/01 22:52:24 ssuominen Exp $
+
+  01 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libcaca-0.99_beta18.ebuild:
+  Use $(type -P gmcs) for exporting the CSC variable wrt #329651, Comment #8 by
+  Conway S. Smith
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> libcaca-0.99_beta18.ebuild:
   keyword ~amd64-fbsd
