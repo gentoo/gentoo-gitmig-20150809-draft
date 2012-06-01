@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/form-4.0_p20120529.ebuild,v 1.2 2012/05/31 13:22:09 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/form-4.0_p20120529.ebuild,v 1.3 2012/06/01 17:32:49 grozin Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools
 
 DESCRIPTION="Symbolic Manipulation System"
 HOMEPAGE="http://www.nikhef.nl/~form/"
-SRC_URI="http://github.com/downloads/jauhien/sources/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~grozin/${P}.tar.gz"
 
 S="${WORKDIR}/formcvs"
 
@@ -52,17 +52,17 @@ src_configure() {
 src_compile() {
 	default
 	if use devref; then
-		pushd doc/devref > /dev/null
+		pushd doc/devref > /dev/null || die "doc/devref does not exist"
 		LANG=C emake pdf
 		popd > /dev/null
 	fi
 	if use doc; then
-		pushd doc/manual > /dev/null
+		pushd doc/manual > /dev/null || die "doc/manual does not exist"
 		LANG=C emake pdf
 		popd > /dev/null
 	fi
 	if use doxygen; then
-		pushd doc/doxygen > /dev/null
+		pushd doc/doxygen > /dev/null || die "doc/doxygen does not exist"
 		emake html
 		popd > /dev/null
 	fi
