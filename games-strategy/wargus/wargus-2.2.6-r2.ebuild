@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.6-r1.ebuild,v 1.1 2012/05/28 13:18:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.6-r2.ebuild,v 1.1 2012/06/01 20:21:09 hasufell Exp $
 
 EAPI=2
-inherit eutils cdrom cmake-utils gnome2-utils games
+inherit eutils cmake-utils gnome2-utils games
 
-DESCRIPTION="Warcraft II for the Stratagus game engine (Needs WC2 DOS CD)"
+DESCRIPTION="Warcraft II for the Stratagus game engine"
 HOMEPAGE="http://wargus.sourceforge.net/"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${PN}_${PV}.orig.tar.gz"
 
@@ -20,17 +20,15 @@ RDEPEND="=games-engines/stratagus-${PV}*[theora]
 	sys-libs/zlib
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	media-sound/cdparanoia
-	media-sound/timidity++
-	media-video/ffmpeg2theora
 	virtual/pkgconfig"
+PDEPEND="games-strategy/wargus-data"
 
 S=${WORKDIR}/${PN}_${PV}.orig
 
 src_prepare() {
-	cdrom_get_cds data/rezdat.war
 	epatch "${FILESDIR}/${PN}-2.2.5.5-libpng.patch" \
-		"${FILESDIR}/${P}-build.patch"
+		"${FILESDIR}/${P}-build.patch" \
+		"${FILESDIR}/${P}-underlinking.patch"
 
 	sed \
 		-e "/^Exec/s#/usr/games/wargus#${GAMES_BINDIR}/wargus#" \
@@ -53,12 +51,6 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-
-	local dir=${GAMES_DATADIR}/stratagus/${PN}
-
-	"${D}"/usr/games/bin/wartool -m -v -r "${CDROM_ROOT}"/data "${D}/${dir}" \
-		|| die "Failed to extract data"
-
 	prepgamesdirs
 }
 
@@ -68,7 +60,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog "Enabling OpenGL ingame seems to cause segfaults/crashes."
+	elog "Enabling OpenGL in-game seems to cause segfaults/crashes."
 	games_pkg_postinst
 	gnome2_icon_cache_update
 }

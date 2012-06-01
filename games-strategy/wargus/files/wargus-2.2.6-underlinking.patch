@@ -1,0 +1,18 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Fri Jun  1 20:15:57 UTC 2012
+Subject: build system
+
+fix underlinking
+see: https://bugs.launchpad.net/wargus/+bug/1007586
+
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -157,7 +157,7 @@
+ 
+ if(NOT WIN32)
+ 	include_directories(${GTK2_INCLUDE_DIRS})
+-	set(wargus_LIBS ${wargus_LIBS} ${GTK2_LIBRARIES})
++	set(wargus_LIBS ${wargus_LIBS} ${GTK2_LIBRARIES} X11)
+ endif()
+ 
+ if (NOT WIN32 AND NOT MAEMO)
