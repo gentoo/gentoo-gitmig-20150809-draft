@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/pycxx-6.2.4-r1.ebuild,v 1.1 2012/03/30 22:48:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/pycxx-6.2.4-r1.ebuild,v 1.2 2012/06/01 13:03:51 ago Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/cxx/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
 IUSE="doc examples"
 
 PYTHON_MODNAME="CXX"
