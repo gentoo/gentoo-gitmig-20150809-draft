@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.12 2012/06/01 05:12:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-0.5.70.ebuild,v 1.1 2012/06/01 05:12:50 maksbotan Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit leechcraft
 DESCRIPTION="Azoth, the modular IM client for LeechCraft."
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
 		+depester +embedmedia +herbicide +hili +isterique +juick +keeso +lastseen
 		+metacontacts media +modnok +nativeemoticons +otroid +p100q +rosenthal
@@ -23,7 +23,7 @@ DEPEND="~net-misc/leechcraft-core-${PV}
 		otroid? ( net-libs/libotr )
 		media? ( x11-libs/qt-multimedia )
 		rosenthal? ( app-text/hunspell )
-		xoox? ( =net-libs/qxmpp-9999[extras] media-libs/speex )
+		xoox? ( >=net-libs/qxmpp-0.3.47[extras] media-libs/speex )
 		xtazy? ( x11-libs/qt-dbus )
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )
 		zheet? ( net-libs/libmsn )"

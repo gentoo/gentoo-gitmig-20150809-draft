@@ -18,6 +18,7 @@
 	<flag name="keeso">Build plugin for changing text into SoMEtHInG lIKe THiS</flag>
 	<flag name="lastseen">Build plugin for client-side recording of the last online/available time</flag>
 	<flag name="metacontacts">Build plugin for metacontacts support</flag>
+	<flag name="media">Enable media calls</flag>
 	<flag name="modnok">Build Modnok for in-chat LaTeX formulae rendering</flag>
 	<flag name="nativeemoticons">Build support for native Azoth's emoticons packs</flag>
 	<flag name="otroid">Build OTRoid, plugin for the Off-the-Record deniable encryption system</flag>
