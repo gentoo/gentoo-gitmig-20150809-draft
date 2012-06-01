@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/dbskkd-cdb-2.00.ebuild,v 1.5 2011/02/13 19:14:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/dbskkd-cdb-2.00.ebuild,v 1.6 2012/06/01 00:14:44 zmedico Exp $
 
 EAPI="2"
-inherit eutils multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs user
 
 DESCRIPTION="Yet another Dictionary server for the SKK Japanese-input software"
 HOMEPAGE="http://dbskkd-cdb.googlecode.com/"
