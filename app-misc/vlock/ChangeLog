@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vlock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.48 2012/03/04 07:31:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.49 2012/06/01 02:05:04 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> vlock-2.2.3.ebuild:
+  inherit user for enewgroup
 
   04 Mar 2012; Justin Lecher <jlec@gentoo.org> -vlock-2.2.2-r2.ebuild:
   Clean old
