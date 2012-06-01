@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.1.14.ebuild,v 1.1 2012/04/26 18:20:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.1.14.ebuild,v 1.2 2012/06/01 00:01:53 zmedico Exp $
 
 EAPI=2
 
-inherit eutils
+inherit eutils multilib
 
 MY_BUILD="77440"
 MY_PN="Oracle_VM_VirtualBox_Extension_Pack"
