@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.8.ebuild,v 1.2 2012/05/04 17:51:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.8.ebuild,v 1.3 2012/06/01 19:31:14 ago Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://alleyoop.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 ~ppc -sparc ~x86"
+KEYWORDS="-alpha amd64 ~ppc -sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.14:2
