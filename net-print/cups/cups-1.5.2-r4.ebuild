@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.12 2012/05/24 21:37:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.13 2012/06/01 04:19:51 zmedico Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit autotools eutils fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2
+inherit autotools eutils fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python user versionator java-pkg-opt-2
 
 MY_P=${P/_}
 MY_PV=${PV/_}

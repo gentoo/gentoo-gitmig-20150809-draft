@@ -1,20 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.6 2012/05/21 22:25:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.7 2012/06/01 04:19:51 zmedico Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2:2.5"
 
+inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python user versionator java-pkg-opt-2 systemd
+
 MY_P=${P/_}
 MY_PV=${PV/_}
 
 if [[ "${PV}" != "9999" ]]; then
-	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python versionator java-pkg-opt-2 systemd
 	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
 else
-	inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python versionator java-pkg-opt-2 systemd subversion
+	inherit subversion
 	ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
 	KEYWORDS=""
 fi
