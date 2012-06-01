@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.280 2012/05/30 15:25:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.281 2012/06/01 12:19:42 sera Exp $
+
+  01 Jun 2012; Ralph Sennhauser <sera@gentoo.org> ant-tasks.eclass:
+  Don't assinging RDEPEND to DEPEND and vise versa. JRE in DEPEND confuses VM
+  switching code.
 
   30 May 2012; Sergei Trofimovich <slyfox@gentoo.org> darcs.eclass:
   Use 'darcs get --lazy' instead of 'darcs get --partial' (gone in darcs-2.8).
