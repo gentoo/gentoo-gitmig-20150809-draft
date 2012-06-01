@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gsutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.5 2012/05/21 21:48:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.6 2012/06/01 06:01:19 vapier Exp $
+
+  01 Jun 2012; Mike Frysinger <vapier@gentoo.org> -gsutil-2011.21.11-r1.ebuild:
+  Drop older version to move to non-datestamp releases.
 
 *gsutil-3.7 (21 May 2012)
 
