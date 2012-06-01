@@ -1,21 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.5_p20111022.ebuild,v 1.5 2012/05/04 03:33:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.6.ebuild,v 1.1 2012/06/01 20:13:20 dilfridge Exp $
 
 EAPI=4
 
 GCONF_DEBUG=no
 
-inherit gnome2 eutils autotools
+inherit gnome2 autotools
 
 DESCRIPTION="Xournal is an application for notetaking, sketching, and keeping a journal using a stylus."
 HOMEPAGE="http://xournal.sourceforge.net/"
 
-SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz http://dev.gentoo.org/~dilfridge/distfiles/${P}-sjg-image-rev7.patch.gz"
+SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz http://dev.gentoo.org/~dilfridge/distfiles/${P}-gentoo.patch.xz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+pdf"
 
 COMMONDEPEND="
@@ -39,7 +39,8 @@ DEPEND="${COMMONDEPEND}
 "
 
 src_prepare() {
-	epatch "${DISTDIR}"/${P}-sjg-image-rev7.patch.gz   # the image patch
+	epatch "${WORKDIR}"/${P}-gentoo.patch
+	sed -e "s:n       http:n       Gentoo release ${PVR}\\\\n       http:" -i "${S}"/src/xo-interface.c
 	eautoreconf
 }
 
