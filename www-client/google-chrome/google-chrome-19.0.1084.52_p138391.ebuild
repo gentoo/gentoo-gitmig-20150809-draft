@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-19.0.1084.52_p138391.ebuild,v 1.2 2012/06/01 15:32:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-19.0.1084.52_p138391.ebuild,v 1.3 2012/06/01 16:05:08 xmw Exp $
 
 EAPI="4"
 
@@ -116,4 +116,13 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${size}x${size}/apps
 		newins "${D}${CHROME_HOME}product_logo_${size}.png" google-chrome.png
 	done
+}
+
+pkg_postinst() {
+	chromium_pkg_postinst
+
+	einfo
+	elog "Please notice the bundled flash player (PepperFlash)."
+	elog "You can (de)activate all flash plugins via chrome://plugins"
+	einfo
 }
