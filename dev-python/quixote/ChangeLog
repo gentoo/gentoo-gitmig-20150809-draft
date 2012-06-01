@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/quixote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.35 2012/04/19 09:08:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.36 2012/06/01 13:00:13 ago Exp $
+
+  01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> quixote-2.7.ebuild:
+  Stable for amd64, wrt bug #418917
 
 *quixote-2.7 (19 Apr 2012)
 
