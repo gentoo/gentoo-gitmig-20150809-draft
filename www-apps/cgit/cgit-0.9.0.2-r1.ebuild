@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.0.2-r1.ebuild,v 1.2 2011/09/16 08:25:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.0.2-r1.ebuild,v 1.3 2012/06/01 04:30:38 zmedico Exp $
 
 EAPI="4"
 
 WEBAPP_MANUAL_SLOT="yes"
 
-inherit webapp eutils multilib
+inherit webapp eutils multilib user
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
 
