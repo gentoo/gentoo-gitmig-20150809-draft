@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.3 2012/03/20 17:09:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.4 2012/06/01 17:58:44 bicatali Exp $
 
 EAPI=4
-inherit eutils versionator toolchain-funcs
+inherit eutils flag-o-matic versionator toolchain-funcs
 
 # those 2 below change pretty much every release
 # url number
@@ -30,7 +30,10 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.0.104-tests.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.0.104-tests.patch \
+		"${FILESDIR}"/${PN}-4.0.297-underlinking.patch \
+		"${FILESDIR}"/${PN}-4.0.297-ldflags.patch
 	# use fully qualified compilers. do not force pentium4 for x86 users
 	sed -i \
 		-e "s/-O2/${CXXFLAGS}/g" \
@@ -78,6 +81,9 @@ src_compile() {
 }
 
 src_test() {
+	# fix underlinking in test phase
+	append-libs dl
+
 	local ccconf="${myconf}"
 	if use debug || use examples; then
 		${ccconf}="${myconf} test_debug tbbmalloc_test_debug"
