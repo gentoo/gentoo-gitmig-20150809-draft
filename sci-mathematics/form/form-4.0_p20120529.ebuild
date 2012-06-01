@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/form-4.0_p20120529.ebuild,v 1.3 2012/06/01 17:32:49 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/form-4.0_p20120529.ebuild,v 1.4 2012/06/01 21:17:19 tomka Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/formcvs"
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="devref doc doxygen gmp mpi threads zlib"
 
 RDEPEND="gmp? ( dev-libs/gmp )
