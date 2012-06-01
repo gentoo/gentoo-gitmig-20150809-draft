@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0.ebuild,v 1.2 2010/10/21 05:49:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0.ebuild,v 1.3 2012/06/01 20:52:32 dev-zero Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="ace doc examples zlib"
 
 RDEPEND=">=dev-libs/xerces-c-3
 	>=dev-libs/boost-1.40.0
-	>=dev-cpp/libcult-1.4.6
+	>=dev-cpp/libcult-1.4.6-r1
 	>=dev-cpp/libxsd-frontend-1.17.0
 	>=dev-cpp/libbackend-elements-1.7.2
 	ace? ( dev-libs/ace )
@@ -65,7 +65,7 @@ cxx_id       := gnu
 cxx_optimize := n
 cxx_debug    := n
 cxx_rpath    := n
-cxx_pp_extra_options :=
+cxx_pp_extra_options := -DBOOST_FILESYSTEM_VERSION=2
 cxx_extra_options    := ${CXXFLAGS} -I${BOOST_INC}
 cxx_ld_extra_options := ${LDFLAGS}
 cxx_extra_libs       :=
