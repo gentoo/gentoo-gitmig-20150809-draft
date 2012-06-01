@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.4.ebuild,v 1.9 2012/02/16 10:50:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.4.ebuild,v 1.10 2012/06/01 04:02:16 zmedico Exp $
 
 EAPI=2
 
-inherit eutils multilib toolchain-funcs autotools flag-o-matic
+inherit eutils multilib toolchain-funcs autotools flag-o-matic user
 
 IPV6_VERSION="0.4.11"
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compatible with many OSes."

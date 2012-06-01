@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-9999.ebuild,v 1.3 2012/05/14 08:23:50 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-9999.ebuild,v 1.4 2012/06/01 04:02:16 zmedico Exp $
 
 EAPI=4
 
-inherit eutils multilib toolchain-funcs autotools flag-o-matic git-2
+inherit multilib toolchain-funcs autotools flag-o-matic user git-2
 
 DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compatible with many OSes."
 EGIT_REPO_URI="https://github.com/OpenVPN/${PN}.git"
