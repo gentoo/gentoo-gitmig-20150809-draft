@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/cvc3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/ChangeLog,v 1.2 2012/05/31 21:33:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/ChangeLog,v 1.3 2012/06/01 02:12:45 gienah Exp $
+
+  01 Jun 2012; Mark Wright <gienah@gentoo.org> cvc3-2.4.1.ebuild, metadata.xml:
+  Fix bug #418455 - sci-mathematics/cvs3 license issues. Fix typos in sed.
 
   31 May 2012; Ulrich Müller <ulm@gentoo.org> files/50cvc3-gentoo.el:
   Remove spurious comment from site-init file for Emacs.

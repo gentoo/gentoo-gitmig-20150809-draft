@@ -34,7 +34,8 @@ and has a wide variety of features including:
   <flag name='isabelle'>Add integration support for the Isabelle/HOL
   theorem prover.</flag>
   <flag name='zchaff'>Use the SAT solver zchaff whose copyright is
-  owned by Princeton University and is more restrictive (see license).
+  owned by Princeton University and is more restrictive (see zchaff
+  license).
   </flag>
 </use>
 </pkgmetadata>

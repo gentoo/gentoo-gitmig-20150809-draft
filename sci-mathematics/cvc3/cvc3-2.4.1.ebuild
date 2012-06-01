@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/cvc3-2.4.1.ebuild,v 1.1 2012/05/30 00:51:22 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/cvc3-2.4.1.ebuild,v 1.2 2012/06/01 02:12:45 gienah Exp $
 
 EAPI="4"
 
@@ -10,7 +10,8 @@ DESCRIPTION="CVC3 is an automatic theorem prover for Satisfiability Modulo Theor
 HOMEPAGE="http://www.cs.nyu.edu/acsys/cvc3/index.html"
 SRC_URI="http://www.cs.nyu.edu/acsys/cvc3/releases/2.4.1/${P}.tar.gz"
 
-LICENSE="CVC3"
+LICENSE="BSD MIT as-is zchaff? ( zchaff )"
+RESTRICT="mirror zchaff? ( bindist )"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc emacs isabelle static-libs zchaff"
@@ -32,8 +33,8 @@ DEPEND="${RDEPEND}
 SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
-	sed -e 's/prefix=@prefix@/prefix=${DESTDIR}@prefix/' \
-		-e 's/libdir=@libdir@/libdir=${DESTDIR}@libdir/' \
+	sed -e 's/prefix=@prefix@/prefix=${DESTDIR}@prefix@/' \
+		-e 's/libdir=@libdir@/libdir=${DESTDIR}@libdir@/' \
 		-e 's/mandir=@mandir@/mandir=${DESTDIR}@mandir@/' \
 		-i "${S}/Makefile.local.in" \
 		|| die "Could not set DESTDIR in Makefile.local.in"
@@ -127,6 +128,16 @@ pkg_postinst() {
 				contrib/${PN}-${PV}
 			EOF
 		fi
+	fi
+	if use zchaff; then
+		einfo "This copy of CVC3 is also configured to use the SAT solver zchaff whose"
+		einfo "copyright is owned by Princeton University and is more restrictive."
+		einfo "Specifically, it may be used for internal, noncommercial, research purposes"
+		einfo "only. See the copyright notices from the zchaff source files which are"
+		einfo "included in the LICENSE file."
+		einfo "To build CVC3 without these files, please build cvc3 without the zchaff"
+		einfo "use flag (note: zchaff is disabled by default):"
+		einfo "USE=-zchaff emerge sci-mathemathematics/cvc3"
 	fi
 }
 
