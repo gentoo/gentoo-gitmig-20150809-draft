@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.65 2012/03/08 09:08:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.66 2012/06/01 01:55:14 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> dnetc-2.9011.496-r1.ebuild,
+  dnetc-2.9015.504.ebuild, dnetc-2.9103.509.ebuild, dnetc-2.9107.516.ebuild,
+  dnetc-2.9108.517.ebuild, dnetc-2.9109.518.ebuild:
+  inherit user for enewgroup and enewuser
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dnetc-2.9108.517.ebuild:
   x86 stable wrt bug #399939

@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.496-r1.ebuild,v 1.10 2009/11/18 15:02:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9011.496-r1.ebuild,v 1.11 2012/06/01 01:55:14 zmedico Exp $
 
-inherit eutils
+inherit user
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}

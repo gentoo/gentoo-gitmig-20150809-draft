@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9015.504.ebuild,v 1.4 2009/11/18 15:02:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9015.504.ebuild,v 1.5 2012/06/01 01:55:14 zmedico Exp $
 
-inherit eutils versionator linux-info
+inherit user versionator linux-info
 
 MAJ_PV="$(get_major_version).$(get_version_component_range 2)"
 MIN_PV="$(get_version_component_range 3)"
