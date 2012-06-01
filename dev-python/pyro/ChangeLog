@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.65 2012/06/01 11:44:01 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.66 2012/06/01 11:46:38 aidecoe Exp $
+
+  01 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.4.ebuild:
+  Removed oldest stable version in the slot 4.
 
   01 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.11.ebuild,
   -pyro-4.12.ebuild:
