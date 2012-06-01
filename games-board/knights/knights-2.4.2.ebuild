@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.4.2.ebuild,v 1.1 2012/04/22 07:36:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.4.2.ebuild,v 1.2 2012/06/01 19:22:39 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://kde-apps.org/content/show.php/Knights?content=122046"
 SRC_URI="http://dl.dropbox.com/u/2888238/Knights/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="debug"
 
