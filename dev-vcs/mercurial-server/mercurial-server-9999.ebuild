@@ -1,18 +1,19 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/mercurial-server-9999.ebuild,v 1.1 2011/01/13 20:22:42 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial-server/mercurial-server-9999.ebuild,v 1.2 2012/06/01 02:30:22 zmedico Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
+inherit distutils eutils user
+
 if [[ "${PV}" = "9999" ]]; then
 	EHG_REVISION="default"
-	inherit distutils eutils mercurial
+	inherit mercurial
 	EHG_REPO_URI="http://hg.opensource.lshift.net/mercurial-server"
 	KEYWORDS=""
 	S="${WORKDIR}/${PN}"
 else
-	inherit distutils eutils
 	MY_P="${PN}_${PV}"
 	SRC_URI="http://dev.lshift.net/paul/mercurial-server/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
