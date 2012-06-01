@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.2 2012/05/04 04:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.3 2012/06/01 13:01:42 ago Exp $
 
 EAPI=2
 inherit gnome2-utils games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/naev/${P}.tar.bz2
 
 LICENSE="GPL-2 GPL-3 public-domain CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug +mixer +openal"
 
 RDEPEND="media-libs/libsdl[X,audio,video]
