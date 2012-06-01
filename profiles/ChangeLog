@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6620 2012/05/31 12:03:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6621 2012/06/01 05:34:13 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jun 2012; Mike Frysinger <vapier@gentoo.org> use.desc:
+  Make USE=modplug description useful.
 
   31 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   calligra is released.

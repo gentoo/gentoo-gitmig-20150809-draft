@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.484 2012/05/19 02:13:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.485 2012/06/01 05:34:13 vapier Exp $
 
 # Keep them sorted
 
@@ -204,7 +204,7 @@ mmap - Adds mmap (memory map) support
 mms - Support for Microsoft Media Server (MMS) streams
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 mng - Adds support for libmng (MNG images)
-modplug - Adds libmodplug support
+modplug - Adds libmodplug support for playing SoundTracker-style music files
 modules - Build the kernel modules
 mono - Build Mono bindings to support dotnet type stuff
 motif - Adds support for the Motif toolkit
