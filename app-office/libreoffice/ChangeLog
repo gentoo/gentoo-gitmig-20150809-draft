@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.326 2012/06/01 17:39:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.327 2012/06/01 20:18:03 scarabeus Exp $
+
+  01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.5.4.2-r1.ebuild, libreoffice-3.5.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  le is not lt in bash comparsion. Fixes bug#419149.
 
   01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
   Activex component is no-more for != WINNT
