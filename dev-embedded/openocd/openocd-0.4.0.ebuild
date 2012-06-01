@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.4.0.ebuild,v 1.4 2012/05/25 08:14:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.4.0.ebuild,v 1.5 2012/06/01 02:26:43 zmedico Exp $
 
 EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
-inherit eutils
+inherit eutils multilib
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-2 autotools
 	#KEYWORDS=""

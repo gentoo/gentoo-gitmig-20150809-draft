@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.23 2012/05/25 08:14:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.24 2012/06/01 02:26:43 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils multilib
 if [[ ${PV} == "9999" ]] ; then
 	inherit autotools git-2
 	KEYWORDS=""
