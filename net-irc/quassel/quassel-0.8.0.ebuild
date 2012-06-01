@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.8.0.ebuild,v 1.3 2012/05/17 07:14:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.8.0.ebuild,v 1.4 2012/06/01 03:51:56 zmedico Exp $
 
 EAPI=4
 
+inherit cmake-utils eutils pax-utils user versionator
+
 EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
 EGIT_BRANCH="master"
-[[ "${PV}" == "9999" ]] && GIT_ECLASS="git-2"
+[[ "${PV}" == "9999" ]] && inherit git-2
 
 QT_MINIMAL="4.6.0"
 KDE_MINIMAL="4.4"
-
-inherit cmake-utils eutils pax-utils versionator ${GIT_ECLASS}
 
 DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
