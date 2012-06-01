@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.1.ebuild,v 1.5 2012/05/27 22:44:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.1.ebuild,v 1.6 2012/06/01 17:22:15 scarabeus Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -18,7 +18,7 @@ OPENGL_REQUIRED=optional
 KDE_HANDBOOK=optional
 
 KDE_LINGUAS_LIVE_OVERRIDE=true
-inherit kde4-base
+inherit kde4-base versionator
 
 DESCRIPTION="KDE Office Suite"
 HOMEPAGE="http://www.calligra.org/"
@@ -116,6 +116,7 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}"
+PDEPEND=">=app-office/calligra-$(get_version_component_range 1-2)"
 
 RESTRICT=test
 # bug 394273
