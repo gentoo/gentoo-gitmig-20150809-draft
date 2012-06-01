@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/raul
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.14 2012/05/05 08:02:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.15 2012/06/01 20:25:07 axs Exp $
+
+  01 Jun 2012; Ian Stakenvicius <axs@gentoo.org> raul-0.8.0.ebuild:
+  cleaned up ebuild, added logic to switch to python2 as required for this
+  particular waf
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> raul-0.5.1.ebuild,
   raul-0.6.0.ebuild, raul-0.7.0.ebuild, raul-0.8.0.ebuild:
