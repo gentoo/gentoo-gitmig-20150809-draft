@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.6 2012/04/24 13:35:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.7 2012/06/01 03:58:21 zmedico Exp $
 
 EAPI="2"
 # ruby19 needs ruby-gettext on 19 first
 USE_RUBY="ruby18"
 
-inherit ruby-ng eutils
+inherit ruby-ng eutils user
 
 DESCRIPTION="rbot is a ruby IRC bot"
 HOMEPAGE="http://ruby-rbot.org/"
