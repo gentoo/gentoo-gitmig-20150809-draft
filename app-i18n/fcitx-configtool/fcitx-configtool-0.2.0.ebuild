@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.2.0.ebuild,v 1.4 2012/05/03 19:24:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.2.0.ebuild,v 1.5 2012/06/01 00:16:10 zmedico Exp $
 
 EAPI="2"
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="A gtk GUI to edit fcitx settings"
 HOMEPAGE="http://fcitx.googlecode.com"

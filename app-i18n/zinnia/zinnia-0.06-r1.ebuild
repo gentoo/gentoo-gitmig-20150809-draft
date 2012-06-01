@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/zinnia-0.06-r1.ebuild,v 1.2 2011/04/07 23:02:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/zinnia-0.06-r1.ebuild,v 1.3 2012/06/01 00:21:10 zmedico Exp $
 
 EAPI="3"
 
-inherit perl-module flag-o-matic toolchain-funcs autotools
+inherit perl-module eutils flag-o-matic toolchain-funcs autotools
 
 DESCRIPTION="Online hand recognition system with machine learning"
 HOMEPAGE="http://zinnia.sourceforge.net/"
