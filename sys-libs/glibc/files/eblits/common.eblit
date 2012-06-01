@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.25 2011/12/22 01:09:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.26 2012/06/01 17:49:18 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -28,6 +28,9 @@ alt_build_headers() {
 	echo "${ALT_BUILD_HEADERS}"
 }
 
+alt_libdir() {
+	echo $(alt_prefix)/$(get_libdir)
+}
 alt_usrlibdir() {
 	echo $(alt_prefix)/usr/$(get_libdir)
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.20 2011/12/22 01:09:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.21 2012/06/01 17:49:18 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -165,7 +165,7 @@ toolchain-glibc_src_install() {
 toolchain-glibc_headers_install() {
 	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-headers
 	cd "${GBUILDDIR}"
-	emake install_root="${D}/usr/${CTARGET}" install-headers || die "install-headers failed"
+	emake install_root="${D}$(alt_prefix)" install-headers || die
 	# Copy over headers that are not part of install-headers ... these
 	# are pretty much taken verbatim from crosstool, see it for more details
 	insinto $(alt_headers)/bits
