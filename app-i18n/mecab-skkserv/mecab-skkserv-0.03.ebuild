@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.2 2011/04/13 15:15:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.3 2012/06/01 00:19:37 zmedico Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="mecab-skkserv is a Kana-Kanji conversion server using MeCab."
 HOMEPAGE="http://chasen.org/~taku/software/mecab-skkserv/"

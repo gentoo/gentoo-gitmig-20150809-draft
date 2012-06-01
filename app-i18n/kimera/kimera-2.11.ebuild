@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-2.11.ebuild,v 1.5 2010/03/27 00:18:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-2.11.ebuild,v 1.6 2012/06/01 00:18:50 zmedico Exp $
 
 EAPI=3
-inherit qt4-r2
+inherit qt4-r2 multilib
 
 DESCRIPTION="A Japanese input method which supports the XIM protocol"
 SRC_URI="mirror://sourceforge.jp/kimera/37271/${P}.tar.gz"
