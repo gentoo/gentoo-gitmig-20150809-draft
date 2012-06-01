@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.0.3568.ebuild,v 1.2 2011/12/31 09:13:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.1.0.3599.ebuild,v 1.1 2012/06/01 21:30:33 dilfridge Exp $
 
 EAPI="4"
 
@@ -20,11 +20,12 @@ DEPEND=">=x11-libs/qt-gui-4.3
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${P}-ldflags.patch"
+	"${FILESDIR}/${PN}-5.0.0.3568-ldflags.patch"
 )
 
 src_prepare() {
 	qt4-r2_src_prepare
+	sed -i -e '/dnl.*AM_INIT_AUTOMAKE/d' configure.in || die #398743
 	eautoreconf
 }
 
