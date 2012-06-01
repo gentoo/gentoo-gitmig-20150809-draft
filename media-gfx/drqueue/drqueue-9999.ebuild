@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-9999.ebuild,v 1.5 2011/09/20 22:43:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-9999.ebuild,v 1.6 2012/06/01 02:37:10 zmedico Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit eutils distutils git-2
+inherit distutils git-2 user
 
 DESCRIPTION="Render farm managing software"
 HOMEPAGE="http://www.drqueue.org/"
