@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.96 2012/05/29 12:46:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.97 2012/06/01 00:12:36 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> xen-4.1.1-r2.ebuild:
+  tweak inherit so repoman can parse it, and inherit eutils for epatch
 
   29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Use <description> field in order to provide more compact <name>

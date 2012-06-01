@@ -1,21 +1,21 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.7 2011/11/08 23:46:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.8 2012/06/01 00:12:36 zmedico Exp $
 
 EAPI="4"
+
+inherit eutils mount-boot flag-o-matic toolchain-funcs
 
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
 	REPO="xen-unstable.hg"
 	EHG_REPO_URI="http://xenbits.xensource.com/${REPO}"
 	S="${WORKDIR}/${REPO}"
-	live_eclass="mercurial"
+	inherit mercurial
 else
 	KEYWORDS="amd64 x86"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 fi
-
-inherit mount-boot flag-o-matic toolchain-funcs ${live_eclass}
 
 DESCRIPTION="The Xen virtual machine monitor"
 HOMEPAGE="http://xen.org/"
