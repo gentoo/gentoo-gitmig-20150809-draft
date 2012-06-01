@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.28 2012/02/21 12:24:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.29 2012/06/01 13:02:22 ago Exp $
+
+  01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> traits-4.1.0.ebuild:
+  Stable for amd64, wrt bug #418923
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> traits-3.6.0.ebuild,
   traits-4.0.0.ebuild, traits-4.1.0.ebuild:
