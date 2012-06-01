@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/xz-java
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.1 2012/06/01 17:35:18 tommy Exp $
+
+*xz-java-1.0 (01 Jun 2012)
+
+  01 Jun 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +xz-java-1.0.ebuild,
+  +files/xz-java-stop-fetching-external-files.patch, +metadata.xml:
+  Initial commit, required for >=commons-compress-1.4.1
+
