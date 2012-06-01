@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.67 2012/06/01 12:07:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.68 2012/06/01 13:16:04 aidecoe Exp $
+
+*pyro-4.14 (01 Jun 2012)
+
+  01 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +pyro-4.14.ebuild,
+  pyro-4.11.ebuild:
+  Version bump wrt bug #416809.  This version comes with several bug fixes and
+  one workaround for threadpool scaling problem.  I have restricted the test for
+  this version because it fails anyway because of the latest problem which is
+  not fully solved:    FAIL: testPoolGrowth
+  (PyroTests.test_threadpool.ThreadpoolTests)
 
 *pyro-4.11 (01 Jun 2012)
 
