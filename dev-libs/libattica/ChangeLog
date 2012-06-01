@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libattica
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.22 2012/06/01 15:05:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.23 2012/06/01 21:15:40 johu Exp $
+
+  01 Jun 2012; Johannes Huber <johu@gentoo.org> libattica-0.3.0.ebuild:
+  Stable for x86, wrt bug #418749
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libattica-0.3.0.ebuild:
   Stable for amd64, wrt bug #418749
