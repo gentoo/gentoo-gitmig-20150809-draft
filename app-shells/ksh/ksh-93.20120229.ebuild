@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20120229.ebuild,v 1.4 2012/06/01 16:26:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20120229.ebuild,v 1.5 2012/06/01 22:32:59 floppym Exp $
 
 EAPI=4
 
@@ -33,8 +33,8 @@ src_prepare() {
 	sed -i -e 's,cd /tmp,cd "${TMPDIR:-/tmp}",' \
 		bin/package src/cmd/INIT/package.sh || die
 
-	#epatch "${FILESDIR}"/${PN}-prefix.patch
-	#eprefixify src/cmd/ksh93/data/msg.c
+	epatch "${FILESDIR}"/${PN}-prefix.patch
+	eprefixify src/cmd/ksh93/data/msg.c
 }
 
 src_compile() {
