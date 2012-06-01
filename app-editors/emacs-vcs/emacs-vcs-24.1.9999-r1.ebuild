@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999.ebuild,v 1.7 2012/05/24 21:12:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.1 2012/06/01 16:47:13 ulm Exp $
 
 EAPI=4
 
@@ -89,7 +89,7 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	>=app-emacs/emacs-common-gentoo-1.3[X?]"
 
-EMACS_SUFFIX="emacs-${SLOT}"
+EMACS_SUFFIX="emacs-${SLOT}-vcs"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
 src_prepare() {
