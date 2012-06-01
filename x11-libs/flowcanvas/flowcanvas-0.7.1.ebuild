@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/flowcanvas-0.7.1.ebuild,v 1.5 2012/05/05 03:52:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/flowcanvas-0.7.1.ebuild,v 1.6 2012/06/01 19:59:46 axs Exp $
 
-EAPI=2
+EAPI=4
 
-inherit toolchain-funcs multilib eutils
+inherit waf-utils python eutils
 
 DESCRIPTION="Gtkmm/Gnomecanvasmm widget for boxes and lines environments"
 HOMEPAGE="http://wiki.drobilla.net/FlowCanvas"
@@ -20,29 +20,23 @@ RDEPEND="dev-libs/boost
 	>=dev-cpp/libgnomecanvasmm-2.6:2.6
 	media-gfx/graphviz"
 DEPEND="${RDEPEND}
+	=dev-lang/python-2*
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
+
+DOCS=( AUTHORS README ChangeLog )
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/ldconfig2.patch"
 }
 
 src_configure() {
-	tc-export CC CXX CPP AR RANLIB
-	./waf configure \
-		--prefix=/usr \
-		--libdir=/usr/$(get_libdir) \
+	waf-utils_src_configure \
 		--htmldir=/usr/share/doc/${PF}/html \
 		$(use debug && echo "--debug") \
-		$(use doc && echo "--docs") \
-		|| die
-}
-
-src_compile() {
-	./waf || die
-}
-
-src_install() {
-	./waf install --destdir="${D}" || die
-	dodoc AUTHORS README ChangeLog || die
+		$(use doc && echo "--doc")
 }
