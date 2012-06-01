@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.15 2011/02/06 10:26:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-6.0.ebuild,v 1.16 2012/06/01 04:05:38 zmedico Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="daemon for implementing remote procedure calls between computer programs"
 HOMEPAGE="http://neil.brown.name/portmap/"
