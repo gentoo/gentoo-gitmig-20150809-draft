@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-12.0-r2.ebuild,v 1.1 2012/06/01 15:52:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-12.0-r2.ebuild,v 1.2 2012/06/01 15:57:21 hasufell Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -9,7 +9,7 @@ WANT_AUTOCONF="2.1"
 MY_PN="firefox"
 # latest version of the torbrowser-bundle we use the profile-folder from
 # https://www.torproject.org/dist/torbrowser/linux/
-TB_V="2.2.35-11"
+TB_V="2.2.35-12"
 
 # Patch version
 PATCH="${MY_PN}-12.0-patches-0.5"

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/torbrowser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/ChangeLog,v 1.2 2012/06/01 15:52:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/ChangeLog,v 1.3 2012/06/01 15:57:21 hasufell Exp $
+
+  01 Jun 2012; Julian Ospald <hasufell@gentoo.org> torbrowser-12.0-r2.ebuild:
+  bump profile-folder version
 
 *torbrowser-12.0-r2 (01 Jun 2012)
 
