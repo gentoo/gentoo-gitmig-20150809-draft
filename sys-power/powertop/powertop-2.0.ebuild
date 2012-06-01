@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.0.ebuild,v 1.2 2012/06/01 17:42:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.0.ebuild,v 1.3 2012/06/01 18:29:29 vapier Exp $
 
 EAPI="4"
 
@@ -38,6 +38,12 @@ DOCS=( TODO README )
 src_configure() {
 	export ac_cv_search_delwin=$(usex unicode -lncursesw no)
 	default
+}
+
+src_compile() {
+	emake -C src csstoh
+	cp "${FILESDIR}"/csstoh src/ || die
+	emake
 }
 
 src_install() {
