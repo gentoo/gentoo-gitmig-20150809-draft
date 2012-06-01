@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.4.ebuild,v 1.3 2012/05/31 10:07:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.4.ebuild,v 1.4 2012/06/01 06:16:11 scarabeus Exp $
 
 EAPI=4
 
@@ -52,13 +52,10 @@ done
 RDEPEND="${SPELL_DICTS_DEPEND}"
 unset X SPELL_DICTS SPELL_DICTS_DEPEND
 
-# blockers for old libreoffice with bundled linguas
 RDEPEND+="
-	!=app-office/libreoffice-3.4.9999-r1
-	!=app-office/libreoffice-9999-r1
 	|| (
-		>=app-office/libreoffice-3.4.4.2-r1
-		>=app-office/libreoffice-bin-3.4.4.2-r1
+		>=app-office/libreoffice-$(get_version_component_range 1-2 ${MY_PV})
+		>=app-office/libreoffice-bin-$(get_version_component_range 1-2 ${MY_PV})
 	)
 "
 
@@ -93,10 +90,6 @@ src_unpack() {
 			rpm_unpack ./"${rpmdir}/"*.rpm
 		fi
 	done
-	OO_EXTENSIONS=()
-	for i in ${ooextused[@]}; do
-		OO_EXTENSIONS+=( ${i} )
-	done
 }
 
 src_prepare() { :; }
@@ -113,14 +106,4 @@ src_install() {
 	fi
 	# remove extensions that are in the l10n for some weird reason
 	rm -rf "${ED}"/usr/$(get_libdir)/${PN/-l10n/}/share/extensions/
-
-	echo "${OO_EXTENSIONS[@]}"
-	office-ext_src_install
-}
-
-pkg_postinst() {
-	office-ext_pkg_postinst
-}
-pkg_prerm() {
-	office-ext_pkg_prerm
 }
