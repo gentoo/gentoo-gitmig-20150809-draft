@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.34 2012/05/26 01:00:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.35 2012/06/01 03:56:38 zmedico Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
 
-inherit cmake-utils multilib python subversion
+inherit cmake-utils flag-o-matic multilib python subversion
 
 DESCRIPTION="Advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.147 2012/05/26 01:00:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.148 2012/06/01 03:56:38 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> kvirc-4.2_pre6066.ebuild,
+  kvirc-9999.ebuild:
+  inherit flag-o-matic for append-flags
 
   26 May 2012; Mike Gilbert <floppym@gentoo.org> kvirc-4.2_pre6066.ebuild,
   kvirc-9999.ebuild:
