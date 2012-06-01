@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/pdfshuffler-0.5.1-r1.ebuild,v 1.1 2012/02/29 23:54:20 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/pdfshuffler-0.5.1-r1.ebuild,v 1.2 2012/06/01 19:30:39 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-python/pyPdf
