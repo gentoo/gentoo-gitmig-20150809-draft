@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20051206-r2.ebuild,v 1.1 2012/01/20 16:20:37 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20051206-r2.ebuild,v 1.2 2012/06/01 13:01:13 ago Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.blnz.com/xt/"
 
 LICENSE="JamesClark"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 COMMON_DEP="

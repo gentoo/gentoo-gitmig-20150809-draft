@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.21 2012/01/20 16:20:37 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.22 2012/06/01 13:01:13 ago Exp $
+
+  01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xt-20051206-r2.ebuild:
+  Stable for amd64, wrt bug #418731
 
 *xt-20051206-r2 (20 Jan 2012)
 
