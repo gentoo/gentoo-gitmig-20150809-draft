@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.0.ebuild,v 1.3 2012/06/01 18:29:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.0.ebuild,v 1.4 2012/06/01 18:36:59 vapier Exp $
 
 EAPI="4"
 
@@ -34,6 +34,12 @@ RDEPEND="
 "
 
 DOCS=( TODO README )
+
+src_prepare() {
+	sed -i -r \
+		-e '/^powertop_CXXFLAGS/s: (-O2|-g|-I/usr/include/) : :g' \
+		src/Makefile.in || die
+}
 
 src_configure() {
 	export ac_cv_search_delwin=$(usex unicode -lncursesw no)
