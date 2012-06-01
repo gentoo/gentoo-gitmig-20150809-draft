@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.14.ebuild,v 1.1 2012/04/26 18:22:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.14.ebuild,v 1.2 2012/06/01 00:03:28 zmedico Exp $
 
 EAPI=2
 
-inherit eutils linux-mod
+inherit eutils linux-mod user
 
 MY_P=VirtualBox-${PV}
 DESCRIPTION="VirtualBox kernel modules and user-space tools for Linux guests"
