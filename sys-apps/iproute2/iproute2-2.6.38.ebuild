@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.38.ebuild,v 1.11 2012/02/02 15:28:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.38.ebuild,v 1.12 2012/06/01 04:26:02 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils multilib toolchain-funcs flag-o-matic
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git"
