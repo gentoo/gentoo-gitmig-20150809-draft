@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13812 2012/05/31 19:34:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13813 2012/06/01 10:03:12 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (01 Jun 2012)
+# Fails to run with font issues wrt bug 418259
+# Last release was back in 2003
+# Removal in 30 days
+x11-terms/cxterm
 
 # Michael Sterrett <mr_bones_@gentoo.org> (31 May 2012)
 # No longer needed.
