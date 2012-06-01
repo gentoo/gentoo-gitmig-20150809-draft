@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wargus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.20 2012/06/01 20:21:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.21 2012/06/01 20:24:32 hasufell Exp $
+
+  01 Jun 2012; Julian Ospald <hasufell@gentoo.org> wargus-2.2.5.5.ebuild:
+  block games-strategy/wargus-data for wargus-2.2.5.5
 
 *wargus-2.2.6-r2 (01 Jun 2012)
 
