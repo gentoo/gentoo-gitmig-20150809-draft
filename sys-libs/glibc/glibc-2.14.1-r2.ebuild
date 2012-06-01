@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.1-r2.ebuild,v 1.7 2012/04/21 15:54:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.1-r2.ebuild,v 1.8 2012/06/01 05:34:40 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -205,8 +205,7 @@ pkg_setup() {
 }
 
 eblit-src_unpack-pre() {
-	[[ ${CHOST} == x86_64* ]] && has x32 $(get_all_abis) \
-		|| GLIBC_PATCH_EXCLUDE+=" 1200_all_glibc-${PV}-x32.patch"
+	GLIBC_PATCH_EXCLUDE+=" 1200_all_glibc-${PV}-x32.patch"
 }
 
 eblit-src_unpack-post() {
