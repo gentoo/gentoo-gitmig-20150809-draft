@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.53 2012/05/05 07:00:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.54 2012/06/01 16:08:43 axs Exp $
+
+  01 Jun 2012; Ian Stakenvicius <axs@gentoo.org> k3d-0.7.11.0-r1.ebuild:
+  k3d needs boost to have USE=python, fixes bug 403029
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> k3d-0.7.11.0-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
