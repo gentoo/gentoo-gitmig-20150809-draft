@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.13 2012/06/01 17:14:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.14 2012/06/01 17:18:58 scarabeus Exp $
+
+*calligra-l10n-2.4.2 (01 Jun 2012)
+
+  01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +calligra-l10n-2.4.2.ebuild:
+  Add 2.4.2 l10n.
 
   01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> calligra-l10n-2.4.1.ebuild:
   block koffice-l10n wrt bug#418459.
