@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wipe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.26 2012/06/01 02:06:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.27 2012/06/01 15:06:12 ago Exp $
+
+  01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> wipe-2.3.1.ebuild:
+  Stable for amd64, wrt bug #418623
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> wipe-2.2.20050509-r1.ebuild:
   inherit eutils for epatch
