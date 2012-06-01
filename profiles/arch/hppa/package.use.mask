@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.101 2012/05/24 04:42:08 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.102 2012/06/01 17:08:49 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (21 May 2012)
+# HPPA is an unsupported architecture
+dev-libs/libpcre jit
 
 # Arun Raghavan <ford_prefect@gentoo.org> (24 May 2012)
 # media-sound/pulseaudio needs PyQt4[dbus] for making the equalizer module
