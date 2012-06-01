@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.3.ebuild,v 1.3 2012/04/13 09:02:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.3.ebuild,v 1.4 2012/06/01 00:22:28 zmedico Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Tracking software for asset recovery"
 HOMEPAGE="http://preyproject.com/"
