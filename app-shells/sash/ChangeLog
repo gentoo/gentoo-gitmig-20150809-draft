@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.42 2011/09/25 19:43:27 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.43 2012/06/01 06:53:42 jdhore Exp $
+
+  01 Jun 2012; Jeff Horelick <jdhore@gentoo.org> sash-3.7-r3.ebuild:
+  marked x86 per bug 418451
 
   25 Sep 2011; Mike Frysinger <vapier@gentoo.org>
   -files/sash-3.6-fix-includes.patch, files/sash-3.6-readline.patch,
