@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/build
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/build/ChangeLog,v 1.1 2010/10/20 05:53:31 dev-zero Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/build/ChangeLog,v 1.2 2012/06/01 07:02:44 dev-zero Exp $
+
+*build-0.3.9 (01 Jun 2012)
+
+  01 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> +build-0.3.9.ebuild:
+  Version bump.
 
 *build-0.3.8 (20 Oct 2010)
 
