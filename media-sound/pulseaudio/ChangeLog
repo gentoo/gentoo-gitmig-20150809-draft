@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.271 2012/05/13 14:24:32 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.272 2012/06/01 03:01:18 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> pulseaudio-0.9.22-r2.ebuild,
+  pulseaudio-0.9.22.ebuild, pulseaudio-0.9.23-r1.ebuild,
+  pulseaudio-1.1-r1.ebuild, pulseaudio-1.1.ebuild, pulseaudio-2.0.ebuild,
+  pulseaudio-9999.ebuild:
+  inherit user for enewgroup and enewuser, multilib for get_libdir, and remove
+  unused libtool inherits
 
   13 May 2012; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-2.0.ebuild:
   Drop parallel make install. Thought the failures had gone away, but they have

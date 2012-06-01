@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.0.ebuild,v 1.2 2012/05/13 14:24:32 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.0.ebuild,v 1.3 2012/06/01 03:01:18 zmedico Exp $
 
 EAPI=4
 
-inherit eutils libtool flag-o-matic versionator
+inherit eutils flag-o-matic user versionator
 
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
