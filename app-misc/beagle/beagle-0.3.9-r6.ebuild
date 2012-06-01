@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r6.ebuild,v 1.2 2012/05/03 19:41:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r6.ebuild,v 1.3 2012/06/01 00:24:39 zmedico Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
 
-inherit base gnome.org eutils mono mozextension autotools
+inherit base gnome.org eutils mono mozextension multilib user autotools
 
 DESCRIPTION="Search tool that ransacks your personal information space to find whatever you're looking for"
 HOMEPAGE="http://www.beagle-project.org/"

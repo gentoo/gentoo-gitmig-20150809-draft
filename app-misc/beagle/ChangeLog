@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.133 2012/05/03 19:41:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.134 2012/06/01 00:24:39 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> beagle-0.3.9-r5.ebuild,
+  beagle-0.3.9-r6.ebuild:
+  inherit multilib for get_libdir, and user for enewgroup and enewuser
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> beagle-0.3.9-r5.ebuild,
   beagle-0.3.9-r6.ebuild:
