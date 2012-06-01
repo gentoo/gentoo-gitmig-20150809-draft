@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.397 2012/05/28 12:43:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.398 2012/06/01 09:05:49 scarabeus Exp $
+
+  01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/eselect-mesa.conf.7.9, -files/eselect-mesa.conf.8.0,
+  -mesa-7.9.2.ebuild, -mesa-8.0.1-r2.ebuild, -mesa-8.0.1.ebuild,
+  -mesa-8.0.2.ebuild, -mesa-8.0.ebuild:
+  Cleanup some overshadowed versions and remove oldest as it failed to build for
+  me on stable.
 
   28 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-8.0.3.ebuild:
