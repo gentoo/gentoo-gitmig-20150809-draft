@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.75 2012/05/31 14:20:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.76 2012/06/01 17:09:42 scarabeus Exp $
 
 EAPI=4
 
@@ -241,8 +241,10 @@ pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		check-reqs_pkg_pretend
 
-		if [[ $(gcc-major-version) -lt 4 ]]; then
-			eerror "Compilation with gcc older than 4.0 is not supported"
+		if [[ $(gcc-major-version) -lt 4 ]] || \
+				 ( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 5 ]] ) \
+				; then
+			eerror "Compilation with gcc older than 4.5 is not supported"
 			die "Too old gcc found."
 		fi
 	fi

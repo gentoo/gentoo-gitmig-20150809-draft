@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.48 2012/05/31 14:20:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.49 2012/06/01 17:09:42 scarabeus Exp $
 
 EAPI=4
 
@@ -189,7 +189,6 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	# this can't be upstreamed :(
 	"${FILESDIR}/${PN}-system-pyuno.patch"
 	"${FILESDIR}/${PN}-3.5-propagate-gb_FULLDEPS.patch"
 	"${FILESDIR}/${PN}-3.5-doublebuild.patch"
@@ -215,8 +214,10 @@ pkg_pretend() {
 		CHECKREQS_DISK_BUILD="6G"
 		check-reqs_pkg_pretend
 
-		if [[ $(gcc-major-version) -lt 4 ]]; then
-			eerror "Compilation with gcc older than 4.0 is not supported"
+		if [[ $(gcc-major-version) -lt 4 ]] || \
+				( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 5 ]] ) \
+				; then
+			eerror "Compilation with gcc older than 4.5 is not supported"
 			die "Too old gcc found."
 		fi
 	fi
