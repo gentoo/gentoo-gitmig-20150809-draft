@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-vix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/ChangeLog,v 1.5 2011/12/03 20:15:57 vadimk Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/ChangeLog,v 1.6 2012/06/01 00:08:48 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org>
+  vmware-vix-1.6.2.156745-r2.ebuild:
+  inherit user for enewgroup
 
 *vmware-vix-1.11.1.528992 (03 Dec 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745-r2.ebuild,v 1.2 2009/08/26 17:31:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745-r2.ebuild,v 1.3 2012/06/01 00:08:48 zmedico Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -8,7 +8,7 @@
 
 EAPI="2"
 
-inherit eutils versionator
+inherit eutils user versionator
 
 MY_PV=$(replace_version_separator 3 '-' )
 MY_PN="VMware-vix-${MY_PV}"

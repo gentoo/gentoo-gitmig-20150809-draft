@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-264.3.ebuild,v 1.2 2012/05/22 14:03:20 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-264.3.ebuild,v 1.3 2012/06/01 00:06:32 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic linux-info linux-mod versionator
+inherit eutils flag-o-matic linux-info linux-mod user versionator
 
 PV_MAJOR=$(get_major_version)
 PV_MINOR=$(get_version_component_range 2)
