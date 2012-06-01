@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.55 2012/05/24 04:25:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.56 2012/06/01 16:26:31 floppym Exp $
+
+  01 Jun 2012; Mike Gilbert <floppym@gentoo.org> ksh-93.20120229.ebuild:
+  Drop prefix patch; fails to apply. Bug 418693.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> ksh-93.20120229.ebuild:
   Inherit eutils for epatch.
