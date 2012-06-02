@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.81 2012/05/05 03:52:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.82 2012/06/02 15:39:30 aballier Exp $
+
+  02 Jun 2012; Alexis Ballier <aballier@gentoo.org> xosd-2.2.14-r1.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> xosd-2.2.14-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
