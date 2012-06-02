@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uriparser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.33 2012/05/04 18:35:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.34 2012/06/02 10:43:49 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> uriparser-0.7.7.ebuild:
+  Stable for amd64, wrt bug #418769
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> uriparser-0.7.5.ebuild,
   uriparser-0.7.6.ebuild, uriparser-0.7.7.ebuild:
