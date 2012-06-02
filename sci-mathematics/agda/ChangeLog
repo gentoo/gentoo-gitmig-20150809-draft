@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/agda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.15 2012/04/13 14:58:33 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.16 2012/06/02 09:21:19 gienah Exp $
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> agda-2.3.0.1.ebuild,
+  agda-2.3.0.ebuild:
+  Add virtual/emacs and app-emacs/haskell-mode deps
 
   13 Apr 2012; Mark Wright <gienah@gentoo.org> agda-2.3.0.1.ebuild,
   agda-2.3.0.ebuild:
