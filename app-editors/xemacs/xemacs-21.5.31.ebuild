@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.7 2012/03/18 12:58:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.8 2012/06/02 14:12:09 aballier Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -18,7 +18,7 @@ SRC_URI="http://ftp.xemacs.org/xemacs-21.5/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
 IUSE="alsa debug eolconv gif gpm pop postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna xft xim athena neXt Xaw3d gdbm berkdb"
 
 X_DEPEND="x11-libs/libXt x11-libs/libXmu x11-libs/libXext x11-misc/xbitmaps"

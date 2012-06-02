@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.159 2012/03/18 12:58:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.160 2012/06/02 14:12:09 aballier Exp $
+
+  02 Jun 2012; Alexis Ballier <aballier@gentoo.org> xemacs-21.5.31.ebuild:
+  keyword ~amd64-fbsd
 
   18 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> xemacs-21.4.22-r2.ebuild,
   xemacs-21.5.29-r2.ebuild, xemacs-21.5.30.ebuild, xemacs-21.5.31.ebuild:
