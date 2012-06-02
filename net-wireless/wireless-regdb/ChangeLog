@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-regdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.25 2012/05/29 15:37:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.26 2012/06/02 09:38:58 chithanh Exp $
+
+  02 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  wireless-regdb-20110428-r1.ebuild:
+  Keyword ~arm, bug #416403.
 
   29 May 2012; Brent Baude <ranger@gentoo.org>
   wireless-regdb-20110428-r1.ebuild:

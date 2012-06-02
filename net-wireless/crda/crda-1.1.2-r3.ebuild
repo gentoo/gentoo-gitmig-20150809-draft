@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r3.ebuild,v 1.1 2012/01/23 18:08:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r3.ebuild,v 1.2 2012/06/02 09:39:51 chithanh Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs python
@@ -11,7 +11,7 @@ SRC_URI="http://linuxwireless.org/download/crda/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl
