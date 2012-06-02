@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.21.0.ebuild,v 1.1 2012/01/20 16:49:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.21.0.ebuild,v 1.2 2012/06/02 10:36:40 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.rastersoft.com/descargas/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 # from upstream ChangeLog in 3.21.0: Now uses FFMpeg as the default backend
 IUSE="+ffmpeg"
 
