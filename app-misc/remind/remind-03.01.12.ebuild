@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/remind-03.01.12.ebuild,v 1.2 2012/06/02 11:36:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/remind-03.01.12.ebuild,v 1.3 2012/06/02 21:53:50 tove Exp $
+
+inherit eutils
 
 MY_P=${P/_beta/-BETA-}
 S=${WORKDIR}/${MY_P}
@@ -18,7 +20,9 @@ RDEPEND="tk? ( dev-lang/tk dev-tcltk/tcllib )"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	sed -i 's:$(MAKE) install:&-nostripped:' "${S}"/Makefile || die
+	epatch "${FILESDIR}"/03.01.12-test.patch
 }
 
 src_test() {
