@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.142 2012/06/01 14:19:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.143 2012/06/02 10:21:28 scarabeus Exp $
+
+*rpm-5.3.5 (02 Jun 2012)
+
+  02 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +files/remaining-5.3.5.txt,
+  +rpm-5.3.5.ebuild, metadata.xml:
+  Add skel for rpm-5.3.5. The ebuild is not finished, but can stand as base to
+  start from.
 
 *rpm-4.10.0 (01 Jun 2012)
 
