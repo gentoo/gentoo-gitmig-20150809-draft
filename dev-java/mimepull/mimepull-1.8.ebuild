@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mimepull/mimepull-1.8.ebuild,v 1.1 2012/06/01 19:13:22 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mimepull/mimepull-1.8.ebuild,v 1.2 2012/06/02 12:54:55 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="https://dev.gentoo.org/~sera/distfiles/${P}.tar.bz2"
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="
