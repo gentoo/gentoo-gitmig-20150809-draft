@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.2.ebuild,v 1.1 2012/04/24 09:08:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.2.ebuild,v 1.2 2012/06/02 11:32:42 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://dspam.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 DRIVERS_IUSE="+hash mysql postgres sqlite"
 SCALES_IUSE="small-scale +domain-scale large-scale"
 IUSE="clamav daemon debug ldap static-libs syslog virtual-users user-homedirs ${DRIVERS_IUSE} ${SCALES_IUSE}"
