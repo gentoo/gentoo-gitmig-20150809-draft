@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libestr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.8 2012/03/03 00:06:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.9 2012/06/02 16:52:18 maksbotan Exp $
+
+  02 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> -libestr-0.1.0.ebuild,
+  -libestr-0.1.1.ebuild:
+  Remove old 0.1.0 and 0.1.1
 
   03 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   remove myself from metadata
