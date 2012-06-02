@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/symfony
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.7 2012/03/09 22:13:43 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.8 2012/06/02 15:48:35 phajdan.jr Exp $
+
+*symfony-1.4.18 (02 Jun 2012)
+
+  02 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> +symfony-1.4.18.ebuild:
+  Version bump wrt security bug #418427.
 
 *symfony-1.4.17 (09 Mar 2012)
 
