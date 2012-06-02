@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/glut
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.13 2010/09/16 18:08:13 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.14 2012/06/02 12:17:28 gienah Exp $
+
+*glut-2.3.0.0 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +glut-2.3.0.0.ebuild:
+  Bump glut to 2.3.0.0, fixes bug #363979
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> glut-2.1.1.1.ebuild,
   glut-2.1.1.2.ebuild:
