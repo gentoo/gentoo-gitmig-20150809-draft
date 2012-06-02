@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hxt-unicode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-unicode/ChangeLog,v 1.1 2011/12/04 16:49:29 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-unicode/ChangeLog,v 1.2 2012/06/02 08:48:33 gienah Exp $
+
+*hxt-unicode-9.0.2 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +hxt-unicode-9.0.2.ebuild:
+  Bump hxt-unicode to 9.0.2
 
 *hxt-unicode-9.0.1 (04 Dec 2011)
 
