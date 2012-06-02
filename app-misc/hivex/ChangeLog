@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hivex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.15 2012/05/03 17:00:12 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.16 2012/06/02 15:45:44 maksbotan Exp $
+
+  02 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> -hivex-1.3.1.ebuild:
+  Remove old 1.3.1
 
   03 May 2012; Maxim Koltsov <maksbotan@gentoo.org> hivex-1.3.2-r2.ebuild:
   Stable for amd64, bug 410323. Permission by Agostino Sarubbo <ago@gentoo.org>
