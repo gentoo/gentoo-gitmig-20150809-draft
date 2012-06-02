@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ja2-stracciatella-0.12.1_p7072.ebuild,v 1.1 2012/05/10 20:05:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ja2-stracciatella-0.12.1_p7072.ebuild,v 1.2 2012/06/02 16:47:21 hasufell Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils games
 
@@ -62,15 +62,15 @@ src_compile() {
 	use editor && myconf+=" JA2EDITOR=yes JA2BETAVERSION=yes"
 	use zlib && myconf+=" WITH_ZLIB=yes"
 
-	emake ${myconf} || die
+	emake ${myconf}
 }
 
 src_install() {
-	dogamesbin ja2 "${T}"/ja2-convert || die
+	dogamesbin ja2 "${T}"/ja2-convert
 
 	if use editor; then
 		insinto "${GAMES_DATADIR}"/ja2/data
-		doins "${WORKDIR}"/editor.slf || die
+		doins "${WORKDIR}"/editor.slf
 	fi
 
 	make_desktop_entry ja2 ${PN}
