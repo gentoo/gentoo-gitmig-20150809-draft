@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/poppassd_ceti
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.13 2011/07/25 14:48:06 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.14 2012/06/02 11:29:07 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> poppassd_ceti-1.8.5-r2.ebuild:
+  Stable for amd64, wrt bug #419289
 
   25 Jul 2011; Eray Aslan <eras@gentoo.org> poppassd_ceti-1.8.5-r2.ebuild:
   respect LDFLAGS - bug #335173

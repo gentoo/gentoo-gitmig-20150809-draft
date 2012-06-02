@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/poppassd_ceti-1.8.5-r2.ebuild,v 1.3 2011/07/25 14:48:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/poppassd_ceti-1.8.5-r2.ebuild,v 1.4 2012/06/02 11:29:07 ago Exp $
 
 inherit eutils toolchain-funcs pam portability
 
@@ -14,7 +14,7 @@ SRC_URI="http://echelon.pl/pubs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/pam"
