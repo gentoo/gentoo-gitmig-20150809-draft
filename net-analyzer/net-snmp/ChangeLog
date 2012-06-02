@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.224 2012/05/13 11:05:55 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.225 2012/06/02 20:27:14 tove Exp $
+
+*net-snmp-5.4.3-r1 (02 Jun 2012)
+*net-snmp-5.4.2.1-r5 (02 Jun 2012)
+
+  02 Jun 2012; Torsten Veller <tove@gentoo.org> +net-snmp-5.4.2.1-r5.ebuild,
+  -net-snmp-5.4.3.ebuild, +net-snmp-5.4.3-r1.ebuild, net-snmp-5.5.ebuild,
+  net-snmp-5.6.1.ebuild:
+  Move perl modules to the vendor branch (#342793)
 
   13 May 2012; <swift@gentoo.org> net-snmp-5.4.2.1-r4.ebuild,
   net-snmp-5.4.3.ebuild, net-snmp-5.5.ebuild, net-snmp-5.6.1.ebuild:

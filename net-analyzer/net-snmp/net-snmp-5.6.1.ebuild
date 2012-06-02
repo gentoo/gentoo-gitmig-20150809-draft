@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.6.1.ebuild,v 1.2 2012/05/13 11:05:55 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.6.1.ebuild,v 1.3 2012/06/02 20:27:14 tove Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -101,7 +101,7 @@ src_configure() {
 			$(use_enable perl embedded-perl) \
 			$(use_enable !ssl internal-md5) \
 			$(use_with elf) \
-			$(use_with perl perl-modules) \
+			$(use_with perl perl-modules INSTALLDIRS=vendor ) \
 			$(use_with python python-modules) \
 			$(use_with ssl openssl) \
 			$(use_with tcpd libwrap)"

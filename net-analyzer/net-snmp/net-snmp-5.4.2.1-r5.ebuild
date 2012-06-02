@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.3.ebuild,v 1.5 2012/05/13 11:05:55 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r5.ebuild,v 1.1 2012/06/02 20:27:14 tove Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -53,6 +53,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fix CVE-2008-6123
+	epatch "${FILESDIR}"/CVE-2008-6123.patch
+
 	# lm_sensors-3 support
 	if use lm_sensors ; then
 		epatch "${FILESDIR}"/${PN}-5.4.1-sensors3.patch \
@@ -79,14 +82,12 @@ src_prepare() {
 	sed -i -e 's|@CFLAGS@||g' -e 's|@LDFLAGS@||g' \
 		net-snmp-config.in || die "sedding CFLAGS/LDFLAGS failed"
 
-	# Respect LDFLAGS
-	sed -i Makefile.top \
-		-e '/^LIB_LD_CMD/{s|$(CFLAGS)|& $(LDFLAGS)|g}' \
-		|| die "sed LDFLAGS failed"
-
 	# Fix version number:
 	sed -i -e "s:NetSnmpVersionInfo = \".*\":NetSnmpVersionInfo = \"${PV}\":" \
 		snmplib/snmp_version.c || die "sedding version failed"
+
+	# Fix toolchain quadruplet detection, bug #330353
+	epatch "${FILESDIR}/${P}-perlcc-hppa.patch"
 
 	eautoreconf
 
@@ -108,7 +109,7 @@ src_configure() {
 			$(use_enable perl embedded-perl) \
 			$(use_enable !ssl internal-md5) \
 			$(use_with elf) \
-			$(use_with perl perl-modules) \
+			$(use_with perl perl-modules INSTALLDIRS=vendor ) \
 			$(use_with python python-modules) \
 			$(use_with ssl openssl) \
 			$(use_with tcpd libwrap)"
@@ -134,13 +135,12 @@ src_configure() {
 		--with-persistent-directory="/var/lib/net-snmp" \
 		--enable-ucd-snmp-compatibility \
 		--enable-shared \
-		--with-ldflags="${LDFLAGS}" \
 		--enable-as-needed \
 		${myconf}
 }
 
 src_compile() {
-	emake -j1 OTHERLDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake -j1 || die "emake failed"
 
 	if use doc ; then
 		einfo "Building HTML Documentation"
