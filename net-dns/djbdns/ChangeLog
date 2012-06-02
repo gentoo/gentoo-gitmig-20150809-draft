@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.127 2012/04/01 11:57:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.128 2012/06/02 07:47:29 xmw Exp $
+
+*djbdns-1.05-r26 (02 Jun 2012)
+
+  02 Jun 2012; Michael Weber <xmw@gentoo.org> +djbdns-1.05-r26.ebuild,
+  files/dnsroots.patch:
+  Revbump to install new root servers list (bug 248247)
 
   01 Apr 2012; Markos Chandras <hwoarang@gentoo.org> files/dnscache-setup,
   files/tinydns-setup:
