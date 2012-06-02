@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Alien-SDL
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/ChangeLog,v 1.7 2012/04/14 15:18:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/ChangeLog,v 1.8 2012/06/02 16:31:21 ssuominen Exp $
+
+*Alien-SDL-1.434 (02 Jun 2012)
+
+  02 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +Alien-SDL-1.434.ebuild:
+  Version bump.
 
   14 Apr 2012; Markus Meier <maekke@gentoo.org> Alien-SDL-1.430.ebuild:
   x86 stable, bug #408579
