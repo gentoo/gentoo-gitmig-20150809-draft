@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.401 2012/06/02 19:24:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.402 2012/06/02 22:35:38 dilfridge Exp $
+
+  02 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  Postgres support in calligra needs libpqxx-3* which is not in the tree
+  anymore
 
   02 Jun 2012; Michael Weber <xmw@gentoo.org> package.use.mask:
   dev-db/firebird client: Not fit for production (bug 404403, comment #5)
