@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glyr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glyr/ChangeLog,v 1.10 2012/05/22 06:39:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glyr/ChangeLog,v 1.11 2012/06/02 22:28:39 ssuominen Exp $
+
+*glyr-0.9.9 (02 Jun 2012)
+
+  02 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +glyr-0.9.9.ebuild:
+  Version bump.
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   -glyr-0_pre20120109.ebuild:
