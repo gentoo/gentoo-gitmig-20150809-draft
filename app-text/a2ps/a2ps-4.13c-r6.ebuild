@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.17 2012/04/25 16:19:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.18 2012/06/02 07:21:57 zmedico Exp $
 
-inherit eutils autotools elisp-common
+inherit eutils autotools elisp-common multilib
 
 S=${WORKDIR}/${PN}-${PV:0:4}
 DESCRIPTION="Any to PostScript filter"
