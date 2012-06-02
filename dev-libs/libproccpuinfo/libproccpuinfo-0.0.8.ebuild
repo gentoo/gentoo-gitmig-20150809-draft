@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/libproccpuinfo-0.0.8.ebuild,v 1.3 2011/07/11 15:36:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/libproccpuinfo-0.0.8.ebuild,v 1.4 2012/06/02 09:46:16 scarabeus Exp $
+
+EAPI=4
 
 inherit cmake-utils
 
-DESCRIPTION="architecture independent C API for reading /proc/cpuinfo"
+DESCRIPTION="Architecture independent C API for reading /proc/cpuinfo"
 HOMEPAGE="https://savannah.nongnu.org/projects/proccpuinfo/"
 SRC_URI="http://download.savannah.nongnu.org/releases/proccpuinfo/${P}.tar.bz2"
 
@@ -20,8 +22,8 @@ DOCS="AUTHORS ChangeLog HACKING README THANKS TODO"
 
 CMAKE_IN_SOURCE_BUILD="yes"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -e "s#DESTINATION lib#DESTINATION $(get_libdir)#" -i CMakeLists.txt
+src_prepare() {
+	sed -i \
+		-e "s#DESTINATION lib#DESTINATION $(get_libdir)#" \
+		CMakeLists.txt || die
 }
