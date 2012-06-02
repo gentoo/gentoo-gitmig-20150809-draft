@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.156 2012/05/15 03:04:04 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.157 2012/06/02 09:51:36 chithanh Exp $
+
+  02 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask udis86 flag for llvm, which is of limited use outside x86/amd64.
 
   15 May 2012; Benda Xu <heroxbd@gentoo.org> use.mask:
   unmask ocamlopt on arm, as per bug 340607. Thanks to Josh Parsons
