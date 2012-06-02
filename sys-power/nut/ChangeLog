@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.97 2012/05/24 05:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.98 2012/06/02 18:04:48 xmw Exp $
+
+*nut-2.6.3 (02 Jun 2012)
+
+  02 Jun 2012; Michael Weber <xmw@gentoo.org> +nut-2.6.3.ebuild,
+  +files/nut-2.6.3-CVE-2012-2944.patch:
+  Version bump (bug 406099, thanks Matthew Stapleton and Guillaume Castagnino).
+  Include ubuntus CVE-2012-2944.patch to fix bug 419377.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> nut-2.6.0-r1.ebuild,
   nut-2.6.2.ebuild:
