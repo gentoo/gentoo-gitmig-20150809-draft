@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.1 2012/05/24 23:37:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.2 2012/06/02 16:02:55 hasufell Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils games
 
@@ -88,7 +88,7 @@ src_compile() {
 		USE_LOCAL_HEADERS=0 \
 		OPTIMIZEVM="" \
 		Q="" \
-		release || die
+		release
 }
 
 src_install() {
@@ -100,17 +100,17 @@ src_install() {
 	dodoc ChangeLog NOTTODO README TODO {md4,voip}-readme.txt
 
 	insinto "${GAMES_DATADIR}"/${PN}/q3ut4
-	doins -r "${WORKDIR}"/UrbanTerror/q3ut4/{*.pk3,demos/,description.txt} || die
+	doins -r "${WORKDIR}"/UrbanTerror/q3ut4/{*.pk3,demos/,description.txt}
 
 	if use !dedicated ; then
-		newgamesbin build/release-linux-${my_arch}/ioquake3-smp.${my_arch} ${PN} || die
+		newgamesbin build/release-linux-${my_arch}/ioquake3-smp.${my_arch} ${PN}
 		make_desktop_entry ${PN} "UrbanTerror"
 	fi
 
 	if use dedicated || use server ; then
-		newgamesbin build/release-linux-${my_arch}/ioq3ded.${my_arch} ${PN}-dedicated || die
-		newins "${WORKDIR}"/UrbanTerror/q3ut4/mapcycle.txt mapcycle.txt.example || die
-		newins "${WORKDIR}"/UrbanTerror/q3ut4/server.cfg q3config_server.cfg.example || die
+		newgamesbin build/release-linux-${my_arch}/ioq3ded.${my_arch} ${PN}-dedicated
+		newins "${WORKDIR}"/UrbanTerror/q3ut4/mapcycle.txt mapcycle.txt.example
+		newins "${WORKDIR}"/UrbanTerror/q3ut4/server.cfg q3config_server.cfg.example
 	fi
 
 	prepgamesdirs
