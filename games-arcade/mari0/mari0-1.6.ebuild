@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/mari0-1.6.ebuild,v 1.2 2012/05/21 22:28:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/mari0-1.6.ebuild,v 1.3 2012/06/02 15:46:33 hasufell Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils gnome2-utils games
 
@@ -21,6 +21,8 @@ RESTRICT="fetch" # unsure about legality of graphics
 RDEPEND=">=games-engines/love-0.8.0
 	 media-libs/devil[gif,png]"
 DEPEND="app-arch/unzip"
+
+S=${WORKDIR}
 
 pkg_nofetch() {
 	einfo "Please download ${PN}-source.zip from:"
