@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hdbc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.13 2011/06/12 19:50:10 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.14 2012/06/02 05:58:02 gienah Exp $
+
+*hdbc-2.3.1.1 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +hdbc-2.3.1.1.ebuild:
+  Bump hdbc to 2.3.1.1
 
 *hdbc-2.2.7.0 (12 Jun 2011)
 
