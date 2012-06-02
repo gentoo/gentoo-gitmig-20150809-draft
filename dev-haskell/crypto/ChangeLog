@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/crypto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.3 2012/04/17 19:42:55 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.4 2012/06/02 06:34:53 gienah Exp $
+
+*crypto-4.2.5 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +crypto-4.2.5.ebuild:
+  Bump crypto to 4.2.5
 
   17 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/crypto-4.2.4-ghc-7.4.patch, crypto-4.2.4.ebuild:
