@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ocaml
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.17 2008/06/07 15:45:28 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.18 2012/06/02 14:52:04 aballier Exp $
+
+  02 Jun 2012; Alexis Ballier <aballier@gentoo.org> ocaml-0.06.ebuild:
+  keyword ~amd64-fbsd
 
   07 Jun 2008; Jeroen Roovers <jer@gentoo.org> ocaml-0.06.ebuild:
   Stable for HPPA (bug #224893).

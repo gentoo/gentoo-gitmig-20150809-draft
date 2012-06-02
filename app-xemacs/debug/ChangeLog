@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/debug
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/debug/ChangeLog,v 1.18 2008/03/19 19:22:13 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/debug/ChangeLog,v 1.19 2012/06/02 14:51:22 aballier Exp $
+
+  02 Jun 2012; Alexis Ballier <aballier@gentoo.org> debug-1.18.ebuild:
+  keyword ~amd64-fbsd
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer
