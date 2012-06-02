@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.2.2.ebuild,v 1.2 2012/05/12 22:40:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.2.2.ebuild,v 1.3 2012/06/02 16:40:21 hasufell Exp $
 
-EAPI=3
+EAPI=4
 
 inherit autotools eutils flag-o-matic python games
 
@@ -78,6 +78,7 @@ src_configure() {
 	append-flags -fno-strict-aliasing
 
 	egamesconf \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_enable dedicated console) \
 		$(use_enable sound) \
 		$(use_enable mp3) \
@@ -87,18 +88,18 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
+	emake
 
 	if use doc ; then
-		emake -C docs || die
+		emake -C docs
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	if ! use dedicated; then
-		newgamesbin "${FILESDIR}"/${PN}-wrapper-script.sh ${PN} || die
+		newgamesbin "${FILESDIR}"/${PN}-wrapper-script.sh ${PN}
 		doicon "${DISTDIR}"/${PN}.png
 		make_desktop_entry ${PN}
 	fi
