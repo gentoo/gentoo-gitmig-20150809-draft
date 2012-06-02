@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.0.ebuild,v 1.4 2012/05/30 16:14:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.0.ebuild,v 1.5 2012/06/02 06:17:09 yngwin Exp $
 
 EAPI=4
 LANGS="bg ca cs da de en_US es et eu fi fr gl hr hu it ja ka ko ku lt mk nl pl
@@ -25,7 +25,7 @@ DESCRIPTION="Great Qt4 GUI front-end for mplayer"
 HOMEPAGE="http://smplayer.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND="x11-libs/qt-gui:4

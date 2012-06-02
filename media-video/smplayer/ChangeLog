@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.113 2012/05/31 14:25:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.114 2012/06/02 06:17:09 yngwin Exp $
+
+  02 Jun 2012; Ben de Groot <yngwin@gentoo.org> -smplayer-0.6.9-r1.ebuild,
+  -smplayer-0.6.9-r2.ebuild, -smplayer-0.6.9.ebuild, smplayer-0.8.0.ebuild:
+  Propagate ~alpha keyword from 0.6.9-r2. Drop old and known to be broken
+  versions, even if minor arches fail to keyword and/or stable newer versions.
 
   31 May 2012; Davide Pesavento <pesa@gentoo.org> -smplayer-0.7.1.ebuild:
   Remove unused version.
