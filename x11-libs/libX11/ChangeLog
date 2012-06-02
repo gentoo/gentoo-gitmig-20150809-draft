@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.193 2012/05/28 07:34:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.194 2012/06/02 10:54:18 chithanh Exp $
+
+*libX11-1.5.0 (02 Jun 2012)
+
+  02 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libX11-1.5.0.ebuild, -libX11-1.4.99.902.ebuild:
+  Version bump.
 
 *libX11-1.4.99.902 (28 May 2012)
 
