@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/pypolicyd-spf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.21 2012/03/05 20:11:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.22 2012/06/02 14:28:48 phajdan.jr Exp $
+
+*pypolicyd-spf-1.0 (02 Jun 2012)
+
+  02 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +pypolicyd-spf-1.0.ebuild:
+  Version bump wrt bug #416765 by Michael Orlitzky. Ebuild by Jared B. but made
+  authres required (comment #5 by Michael Orlitzky).
 
   05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy maintainer
