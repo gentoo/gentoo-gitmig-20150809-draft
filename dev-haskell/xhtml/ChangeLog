@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.23 2012/05/04 13:03:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.24 2012/06/02 03:33:21 gienah Exp $
+
+*xhtml-3000.2.1 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +xhtml-3000.2.1.ebuild:
+  Bump xhtml to 3000.2.1
 
 *xhtml-3000.2.0.5 (04 May 2012)
 
