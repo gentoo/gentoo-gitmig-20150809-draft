@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.23 2012/05/28 16:43:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.24 2012/06/02 06:19:23 xmw Exp $
+
+  02 Jun 2012; Michael Weber <xmw@gentoo.org> mosh-1.2.1.ebuild:
+  Add ~ppc keyword
 
   28 May 2012; Michael Weber <xmw@gentoo.org> -mosh-1.2.0.97.ebuild,
   mosh-1.2.1.ebuild, mosh-9999.ebuild, metadata.xml:
