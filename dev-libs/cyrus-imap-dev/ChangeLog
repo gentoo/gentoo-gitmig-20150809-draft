@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.80 2012/04/19 10:23:56 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.81 2012/06/02 11:35:07 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> cyrus-imap-dev-2.4.16.ebuild:
+  Stable for amd64, wrt bug #418739
 
 *cyrus-imap-dev-2.4.16 (19 Apr 2012)
 
