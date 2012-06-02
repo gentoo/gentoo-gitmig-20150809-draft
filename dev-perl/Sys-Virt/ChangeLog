@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-Virt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.12 2012/05/06 12:20:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.13 2012/06/02 16:53:55 maksbotan Exp $
+
+  02 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> -Sys-Virt-0.9.8.ebuild:
+  Remove old 0.9.8
 
   06 May 2012; Agostino Sarubbo <ago@gentoo.org> Sys-Virt-0.9.10.ebuild:
   Stable for amd64, wrt bug #414675
