@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.46 2012/01/01 17:23:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.47 2012/06/02 13:48:44 graaff Exp $
+
+  02 Jun 2012; Hans de Graaff <graaff@gentoo.org> -eselect-rails-0.17.ebuild:
+  Remove old version.
 
   01 Jan 2012; Fabian Groffen <grobian@gentoo.org> eselect-rails-0.18.ebuild:
   Fix for Prefix, added Prefix keywords
