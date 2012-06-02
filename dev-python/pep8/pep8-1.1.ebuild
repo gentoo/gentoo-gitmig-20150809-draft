@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/pep8-1.1.ebuild,v 1.1 2012/05/29 18:33:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/pep8-1.1.ebuild,v 1.2 2012/06/02 15:24:35 xarthisius Exp $
 
 EAPI=4
 
@@ -25,9 +25,9 @@ DOCS="CHANGES.txt"
 
 src_test() {
 	test_func() {
-		test_ok=0
-		PYTHONPATH="${S}" ${PYTHON} "${S}/${PYTHON_MODNAME}" -v	--testsuite=testsuite || test_ok=1
-		PYTHONPATH="${S}" ${PYTHON} "${S}/${PYTHON_MODNAME}" --doctest -v || test_ok=1
+		local test_ok=0
+		PYTHONPATH="${S}" "$(PYTHON)" ${PYTHON_MODNAME} -v --testsuite=testsuite || test_ok=1
+		PYTHONPATH="${S}" "$(PYTHON)" ${PYTHON_MODNAME} --doctest -v || test_ok=1
 		return ${test_ok}
 	}
 	python_execute_function test_func
