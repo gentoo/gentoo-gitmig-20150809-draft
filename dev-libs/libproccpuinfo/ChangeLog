@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libproccpuinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.24 2012/06/02 09:46:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.25 2012/06/02 09:47:36 scarabeus Exp $
+
+  02 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libproccpuinfo-0.0.7.ebuild, libproccpuinfo-0.0.8.ebuild:
+  Stable on amd64 and x86. Fix license to be what webpage says. Remove older.
 
   02 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> libproccpuinfo-0.0.8.ebuild:
   Bump to eapi4 and cleanup a little.
