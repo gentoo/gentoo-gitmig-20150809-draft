@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.386 2012/05/25 16:15:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.387 2012/06/02 18:55:37 vapier Exp $
+
+  02 Jun 2012; Mike Frysinger <vapier@gentoo.org> util-linux-2.21.2.ebuild,
+  util-linux-9999.ebuild:
+  Control udev dep with USE=udev #417767 by Alexey Shvetsov.
 
 *util-linux-2.21.2 (25 May 2012)
 

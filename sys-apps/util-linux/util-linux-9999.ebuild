@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.32 2012/05/24 02:52:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.33 2012/06/02 18:55:37 vapier Exp $
 
 EAPI="3"
 
@@ -28,7 +28,7 @@ fi
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="+cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang static-libs unicode"
+IUSE="+cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang static-libs udev unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -40,7 +40,8 @@ RDEPEND="!sys-process/schedutils
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
 	perl? ( dev-lang/perl )
 	selinux? ( sys-libs/libselinux )
-	slang? ( sys-libs/slang )"
+	slang? ( sys-libs/slang )
+	udev? ( sys-fs/udev )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/os-headers"
@@ -48,7 +49,6 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
 		po/update-potfiles
-		autopoint --force
 		eautoreconf
 	else
 		use loop-aes && epatch "${WORKDIR}"/util-linux-*.diff
@@ -93,6 +93,7 @@ src_configure() {
 		$(use_with selinux) \
 		$(use_with slang) \
 		$(use_enable static-libs static) \
+		$(use_with udev) \
 		$(tc-has-tls || echo --disable-tls)
 }
 
