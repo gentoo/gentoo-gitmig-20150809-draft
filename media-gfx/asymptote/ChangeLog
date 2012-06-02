@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.96 2012/04/12 20:13:56 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.97 2012/06/02 18:17:12 grozin Exp $
+
+*asymptote-2.16 (02 Jun 2012)
+
+  02 Jun 2012; Andrey Grozin <grozin@gentoo.org> -asymptote-2.14.ebuild,
+  -files/asymptote-2.14-configure-ac.patch, -files/asymptote-2.14-info.patch,
+  -files/asymptote-2.14-xdg-utils.patch, +asymptote-2.16.ebuild,
+  +files/asymptote-2.16-configure-ac.patch, +files/asymptote-2.16-info.patch,
+  +files/asymptote-2.16-xdg-utils.patch:
+  Version bump
 
   12 Apr 2012; Andrey Grozin <grozin@gentoo.org> asymptote-2.15.ebuild:
   svg USE flag added, closing #411605

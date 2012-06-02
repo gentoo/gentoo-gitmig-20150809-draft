@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.14.ebuild,v 1.1 2011/11/17 10:46:28 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.16.ebuild,v 1.1 2012/06/02 18:17:12 grozin Exp $
 
 EAPI=3
 SUPPORT_PYTHON_ABIS=1
@@ -14,11 +14,12 @@ SRC_URI="mirror://sourceforge/asymptote/${P}.src.tgz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex python sigsegv vim-syntax X"
+IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex python sigsegv svg vim-syntax X"
 
 RDEPEND=">=sys-libs/readline-4.3-r5
 	>=sys-libs/ncurses-5.4-r5
 	imagemagick? ( media-gfx/imagemagick[png] )
+	svg? ( app-text/dvisvgm )
 	sigsegv? ( dev-libs/libsigsegv )
 	boehm-gc? ( >=dev-libs/boehm-gc-7.0[cxx,threads] )
 	fftw? ( >=sci-libs/fftw-3.0.1 )
