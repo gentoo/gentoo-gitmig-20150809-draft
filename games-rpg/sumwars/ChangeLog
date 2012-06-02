@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/sumwars
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/ChangeLog,v 1.2 2012/05/30 20:06:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/ChangeLog,v 1.3 2012/06/02 16:17:49 hasufell Exp $
+
+  02 Jun 2012; Julian Ospald <hasufell@gentoo.org> sumwars-0.5.6-r2.ebuild:
+  bump to EAPI=4
 
 *sumwars-0.5.6-r2 (30 May 2012)
 
