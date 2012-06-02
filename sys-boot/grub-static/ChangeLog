@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub-static
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.31 2011/04/10 14:26:12 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.32 2012/06/02 06:38:57 vapier Exp $
+
+*grub-static-0.97-r12 (02 Jun 2012)
+
+  02 Jun 2012; Mike Frysinger <vapier@gentoo.org> +grub-static-0.97-r12.ebuild:
+  Version bump.
 
   10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> grub-static-0.96-r1.ebuild,
   grub-static-0.97.ebuild, grub-static-0.97-r6.ebuild,
