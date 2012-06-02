@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/xymtex-5.00a.ebuild,v 1.1 2012/01/05 21:58:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/xymtex-5.00a.ebuild,v 1.2 2012/06/02 10:48:14 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}/fujitas3/${PN}/xym${MY_PV}/xym-up/${PN}${MY_PV}.zip"
 LICENSE="LPPL-1.3"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
