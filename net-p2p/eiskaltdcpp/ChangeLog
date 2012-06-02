@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.38 2012/06/01 16:24:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.39 2012/06/02 19:51:50 pva Exp $
+
+  02 Jun 2012; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild:
+  Fix uri in vcs ebuild, thank Nikoli for report.
 
 *eiskaltdcpp-2.2.7 (01 Jun 2012)
 

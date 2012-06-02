@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.29 2012/06/01 16:24:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.30 2012/06/02 19:51:50 pva Exp $
 
 EAPI="4"
 
@@ -38,7 +38,7 @@ if [[ ${PV} != *9999* ]]; then
 	SRC_URI="http://${PN/pp/}.googlecode.com/files/${P}.tar.xz"
 	KEYWORDS="~amd64 ~x86"
 else
-	EGIT_REPO_URI="git://github.com/negativ/${PN}.git"
+	EGIT_REPO_URI="git://github.com/${PN}/${PN}.git"
 	KEYWORDS=""
 fi
 
