@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.43 2012/06/01 06:53:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.44 2012/06/02 02:30:30 hparker Exp $
+
+  02 Jun 2012; Homer Parker <hparker@gentoo.org> sash-3.7-r3.ebuild:
+  stable on AMD64 to fix bug 418451
 
   01 Jun 2012; Jeff Horelick <jdhore@gentoo.org> sash-3.7-r3.ebuild:
   marked x86 per bug 418451
