@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.544 2012/06/02 20:39:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.545 2012/06/02 20:40:09 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -23,7 +23,7 @@ if [[ ${PV} == *_pre9999* ]] ; then
 	inherit git-2
 fi
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test pkg_preinst src_install pkg_postinst
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_postinst
 DESCRIPTION="The GNU Compiler Collection"
 
 FEATURES=${FEATURES/multilib-strict/}
@@ -562,10 +562,6 @@ toolchain_pkg_setup() {
 	want_minispecs
 
 	unset LANGUAGES #265283
-}
-
-toolchain_pkg_preinst() {
-	:
 }
 
 toolchain_pkg_postinst() {
