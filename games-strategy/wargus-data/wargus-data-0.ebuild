@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/wargus-data-0.ebuild,v 1.1 2012/06/01 20:16:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/wargus-data-0.ebuild,v 1.2 2012/06/02 20:22:50 hasufell Exp $
 
-EAPI=3
+EAPI=4
 
 inherit cdrom games
 
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 	media-sound/timidity++
 	media-video/ffmpeg2theora"
 
+S=${WORKDIR}
+
 src_prepare() {
 	cdrom_get_cds data/rezdat.war
 }
@@ -36,6 +38,6 @@ src_compile() {
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/stratagus/wargus
-	doins -r * || die
+	doins -r *
 	prepgamesdirs
 }
