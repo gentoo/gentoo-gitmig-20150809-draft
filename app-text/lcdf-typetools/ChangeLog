@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.79 2012/05/09 14:56:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.80 2012/06/02 10:45:04 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> lcdf-typetools-2.92.ebuild:
+  Stable for amd64, wrt bug #418647
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> lcdf-typetools-2.92.ebuild:
   keyword ~amd64-fbsd
