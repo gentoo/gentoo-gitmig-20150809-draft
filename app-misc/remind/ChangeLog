@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/remind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/ChangeLog,v 1.3 2012/02/01 18:12:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/ChangeLog,v 1.4 2012/06/02 11:36:50 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> remind-03.01.12.ebuild:
+  Stable for amd64, wrt bug #418611
 
 *remind-03.01.12 (01 Feb 2012)
 
