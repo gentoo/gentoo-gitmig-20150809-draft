@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.116 2012/05/08 22:00:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.117 2012/06/02 05:10:47 zmedico Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -27,7 +27,7 @@
 # for tests you should proceed with setting VIRTUALX_REQUIRED=test.
 : ${VIRTUALX_REQUIRED:=manual}
 
-inherit kde4-functions toolchain-funcs fdo-mime gnome2-utils base virtualx versionator eutils
+inherit kde4-functions toolchain-funcs fdo-mime gnome2-utils base virtualx versionator eutils multilib
 
 if [[ ${BUILD_TYPE} = live ]]; then
 	case ${KDE_SCM} in

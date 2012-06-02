@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.281 2012/06/01 12:19:42 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.282 2012/06/02 05:10:47 zmedico Exp $
+
+  02 Jun 2012; Zac Medico <zmedico@gentoo.org> kde4-base.eclass:
+  inherit multilib for get_libdir
 
   01 Jun 2012; Ralph Sennhauser <sera@gentoo.org> ant-tasks.eclass:
   Don't assinging RDEPEND to DEPEND and vise versa. JRE in DEPEND confuses VM
