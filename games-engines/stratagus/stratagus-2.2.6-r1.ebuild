@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.6-r1.ebuild,v 1.1 2012/05/28 11:54:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.6-r1.ebuild,v 1.2 2012/06/02 19:53:52 hasufell Exp $
 
-EAPI=2
+EAPI=4
+
 inherit cmake-utils eutils games
 
 DESCRIPTION="A realtime strategy game engine"
@@ -31,8 +32,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig"
 
-# on EAPI=4 we would set
-# REQUIRED_USE=theora? ( vorbis )
+REQUIRED_USE="theora? ( vorbis )"
 
 S=${WORKDIR}/${PN}_${PV}.orig
 
@@ -53,7 +53,7 @@ src_configure() {
 		$(cmake-utils_use_with mikmod MIKMOD)
 		$(cmake-utils_use_with mng MNG)
 		$(cmake-utils_use_with vorbis OGGVORBIS)
-		$(usex vorbis "$(cmake-utils_use_with theora THEORA)" "-DWITH_THEORA=OFF")
+		$(cmake-utils_use_with theora THEORA)
 		-DENABLE_DEV=ON
 	)
 
@@ -66,6 +66,5 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-	prepalldocs
 	prepgamesdirs
 }
