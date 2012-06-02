@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.33 2012/06/02 09:19:50 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.34 2012/06/02 11:33:30 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ibus-anthy-1.2.7.ebuild:
+  Stable for amd64, wrt bug #418583
 
   02 Jun 2012; Naohiro Aota <naota@gentoo.org> ibus-anthy-1.2.7.ebuild:
   Add missing dependency intltool
