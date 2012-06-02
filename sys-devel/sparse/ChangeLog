@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.47 2012/05/31 19:47:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.48 2012/06/02 14:29:15 jer Exp $
+
+  02 Jun 2012; Jeroen Roovers <jer@gentoo.org> sparse-0.4.3.ebuild:
+  Stable for HPPA (bug #418405).
 
   31 May 2012; Jeff Horelick <jdhore@gentoo.org> sparse-0.4.3.ebuild:
   marked x86 per bug 418405
