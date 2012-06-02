@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>perl</herd>
   <herd>games</herd>
-  <maintainer>
-    <email>ssuominen@gentoo.org</email>
-    <name>Samuli Suominen</name>
-  </maintainer>
   <upstream>
     <remote-id type="cpan">SDL</remote-id>
   </upstream>
