@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hxt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.14 2012/04/17 20:06:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.15 2012/06/02 08:45:59 gienah Exp $
+
+*hxt-9.2.2 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +hxt-9.2.2.ebuild:
+  Bump hxt to 9.2.2
 
   17 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> hxt-9.1.5.ebuild:
   Fix build breakage on ghc-7.4 (bug #412291 by Robin Johnson)
