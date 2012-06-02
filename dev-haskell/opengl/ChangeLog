@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.12 2012/03/30 03:39:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.13 2012/06/02 11:01:28 gienah Exp $
+
+*opengl-2.5.0.0 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +opengl-2.5.0.0.ebuild:
+  Bump opengl to 2.5.0.0, fixes bug #363977
 
   30 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/opengl-2.2.1.1-ghc-7.4.patch, opengl-2.2.1.1.ebuild:
