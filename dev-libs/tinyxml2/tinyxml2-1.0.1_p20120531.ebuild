@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml2/tinyxml2-1.0.1_p20120531.ebuild,v 1.1 2012/05/31 10:16:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml2/tinyxml2-1.0.1_p20120531.ebuild,v 1.2 2012/06/02 04:57:39 radhermit Exp $
 
 EAPI=4
 
@@ -15,7 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs test"
 
-PATCHES=( "${FILESDIR}"/${P}-test.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-test.patch
+	"${FILESDIR}"/${P}-test-return-status.patch
+)
 
 src_configure() {
 	local mycmakeargs=(
@@ -27,5 +30,5 @@ src_configure() {
 
 src_test() {
 	cmake-utils_src_test
-	./test
+	./test || die "Tests failed"
 }
