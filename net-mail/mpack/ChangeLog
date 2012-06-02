@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.22 2012/01/19 06:38:23 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/ChangeLog,v 1.23 2012/06/02 11:31:49 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> mpack-1.6-r3.ebuild:
+  Stable for amd64, wrt bug #419287
 
 *mpack-1.6-r3 (19 Jan 2012)
 
