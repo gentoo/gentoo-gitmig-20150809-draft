@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/mari0-1.6.ebuild,v 1.3 2012/06/02 15:46:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/mari0-1.6.ebuild,v 1.4 2012/06/02 15:52:29 hasufell Exp $
 
 EAPI=4
 
@@ -35,10 +35,10 @@ src_install() {
 	local dir=${GAMES_DATADIR}/love/${PN}
 
 	exeinto "${dir}"
-	doexe ${MY_P}.love || die
+	doexe ${MY_P}.love
 
 	insinto /usr/share/icons/hicolor/scalable/apps
-	doins "${FILESDIR}"/${PN}.svg || die
+	doins "${FILESDIR}"/${PN}.svg
 	games_make_wrapper ${PN} "love ${MY_P}.love" "${dir}"
 	make_desktop_entry ${PN}
 
