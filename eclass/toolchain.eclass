@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.542 2012/06/02 20:16:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.543 2012/06/02 20:18:57 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -548,14 +548,6 @@ toolchain_pkg_setup() {
 	then
 		die "Please \`export I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS=1\` or define it in your make.conf if you want to use this version." \
 			"This is to try and cut down on people filing bugs for a compiler we do not currently support."
-	fi
-
-	# Setup variables which would normally be in the profile
-	if is_crosscompile ; then
-		multilib_env ${CTARGET}
-		if ! is_multilib ; then
-			MULTILIB_ABIS=${DEFAULT_ABI}
-		fi
 	fi
 
 	# we dont want to use the installed compiler's specs to build gcc!
@@ -1399,7 +1391,6 @@ gcc_do_filter_flags() {
 }
 
 toolchain_src_compile() {
-	multilib_env ${CTARGET}
 	gcc_do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
