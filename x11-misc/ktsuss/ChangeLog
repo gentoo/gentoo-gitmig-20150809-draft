@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ktsuss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.13 2012/05/05 04:53:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.14 2012/06/02 13:41:51 phajdan.jr Exp $
+
+  02 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ktsuss-2.ebuild:
+  Fix HOMEPAGE wrt bug #416283 by df.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> ktsuss-2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

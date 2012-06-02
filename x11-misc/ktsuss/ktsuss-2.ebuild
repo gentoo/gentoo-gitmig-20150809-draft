@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ktsuss-2.ebuild,v 1.2 2012/05/05 04:53:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ktsuss-2.ebuild,v 1.3 2012/06/02 13:41:51 phajdan.jr Exp $
 
 EAPI=4
 
 DESCRIPTION="Graphical version of su written in C and GTK+ 2"
-HOMEPAGE="http://ktsuss.googlecode.com/"
-SRC_URI="${HOMEPAGE}/files/${P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/ktsuss/"
+SRC_URI="http://ktsuss.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
