@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alut
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.14 2011/07/31 16:05:21 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.15 2012/06/02 11:08:46 gienah Exp $
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> alut-2.2.0.0.ebuild:
+  EAPI=4, [profile?] on haskell libs (part of fix for #341795)
 
 *alut-2.2.0.0 (31 Jul 2011)
 
