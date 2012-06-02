@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/cifparse-obj-7.025.ebuild,v 1.7 2011/11/21 15:23:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/cifparse-obj-7.025.ebuild,v 1.8 2012/06/02 12:57:09 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -28,7 +28,8 @@ src_unpack() {
 
 	epatch \
 		"${FILESDIR}"/${P}-makefile.patch \
-		"${FILESDIR}"/${P}-gcc4.3.patch
+		"${FILESDIR}"/${P}-gcc4.3.patch \
+		"${FILESDIR}"/${P}-gcc4.7.patch
 
 	sed -i \
 		-e "s:^\(CC=\).*:\1$(tc-getCC):g" \
