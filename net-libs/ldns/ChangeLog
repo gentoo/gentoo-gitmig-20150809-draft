@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.26 2012/05/31 05:43:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.27 2012/06/02 15:57:55 xmw Exp $
+
+*ldns-1.6.12-r2 (02 Jun 2012)
+
+  02 Jun 2012; Michael Weber <xmw@gentoo.org> +ldns-1.6.12-r2.ebuild:
+  Revert -r1 change (inclusion of /usr/bin/drill). Add elog about it.
 
 *ldns-1.6.12-r1 (31 May 2012)
 
