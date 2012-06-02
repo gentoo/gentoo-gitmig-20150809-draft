@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.172 2012/05/31 02:04:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.173 2012/06/02 06:10:29 yngwin Exp $
+
+  02 Jun 2012; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Add mask for smplayer-themes, since there is no longer a working keyworded
+  version of media-video/smplayer
 
   31 May 2012; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove old mask due to texlive 2009 not being keyworded, texlive 2011 is

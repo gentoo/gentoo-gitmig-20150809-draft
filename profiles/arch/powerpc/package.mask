@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.52 2012/05/31 02:04:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.53 2012/06/02 06:10:29 yngwin Exp $
+
+# Ben de Groot <yngwin@gentoo.org> (2 Jun 2012)
+# Since there is no longer a working keyworded version of
+# media-video/smplayer (see bug 383945)
+x11-themes/smplayer-themes
 
 # Alexey Shvetsov <alexxy@gentoo.org> (21 May 2012)
 # Need deps pecl-apc and pecl-uploadprogress bug #416897
@@ -15,6 +20,6 @@
 =sci-biology/emboss-6.3.1*
 
 # Joseph Jezak <josejx@gentoo.org> (12 Feb 2010)
-# Masking MOL due to breakage, but leaving it in the tree in case anyone 
+# Masking MOL due to breakage, but leaving it in the tree in case anyone
 # still needs it. Unmask if you want, but there's nothing in the way of support.
 app-emulation/mol
