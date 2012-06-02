@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20120504.ebuild,v 1.3 2012/05/14 11:49:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20120504.ebuild,v 1.4 2012/06/02 15:56:16 hasufell Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils mono gnome2-utils games
 
@@ -40,7 +40,7 @@ src_install() {
 		bindir="${GAMES_BINDIR}" \
 		libdir="$(games_get_libdir)/${PN}" \
 		DESTDIR="${D}" \
-		install || die
+		install
 
 	# icons
 	insinto /usr/share/icons/
