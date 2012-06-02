@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-1.1.1.ebuild,v 1.2 2012/05/05 08:02:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/dssi-1.1.1.ebuild,v 1.3 2012/06/02 10:43:19 ago Exp $
 
 EAPI=2
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dssi/${P}.tar.gz"
 
 LICENSE="BSD LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="qt4"
 
 RDEPEND="media-libs/alsa-lib
