@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/base-unicode-symbols
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.2 2012/04/02 17:02:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.3 2012/06/02 06:24:48 gienah Exp $
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org>
+  +files/base-unicode-symbols-0.2.2.3-ghc-7.5.patch,
+  base-unicode-symbols-0.2.2.3.ebuild:
+  EAPI=4 on line 5, patch for ghc 7.5 dev snapshot
 
 *base-unicode-symbols-0.2.2.3 (02 Apr 2012)
 
