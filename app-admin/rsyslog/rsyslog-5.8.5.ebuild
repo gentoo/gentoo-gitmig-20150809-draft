@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.10 2012/05/31 16:50:42 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.11 2012/06/02 09:30:17 jlec Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-utils eutils systemd
 
-DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
+DESCRIPTION="An enhanced multi-threaded syslogd with database support and more"
 HOMEPAGE="http://www.rsyslog.com/"
 SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
 	zeromq?	( https://github.com/aggregateknowledge/rsyslog-zeromq/tarball/44b551abc29dd5b541884bd51b45b413855a93d8 -> ${PN}-zeromq.tar.gz )"
@@ -43,8 +43,6 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
 
 src_prepare() {
-	autotools-utils_src_prepare
-
 	# Maintainer notes:
 	# ZeroMQ support, for now it is done by hand until upstream process bug.
 	# Bugzilla : http://bugzilla.adiscon.com/show_bug.cgi?id=277
@@ -56,7 +54,7 @@ src_prepare() {
 
 	# Don't force '-g' CFLAG
 	sed -i 's/CFLAGS="\(.*\) -g"/CFLAGS="\1"/g' configure.ac || die
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
