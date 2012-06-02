@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.10 2012/04/23 14:05:00 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.11 2012/06/02 10:34:45 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libee-0.4.1.ebuild:
+  Stable for amd64, wrt bug #418753
 
 *libee-0.4.1 (23 Apr 2012)
 *libee-0.3.2-r2 (23 Apr 2012)
