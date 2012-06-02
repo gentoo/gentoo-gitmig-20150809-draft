@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emact
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.20 2011/12/31 10:31:17 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.21 2012/06/02 10:49:51 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> emact-2.56.0.ebuild:
+  Stable for amd64, wrt bug #418559
 
   31 Dec 2011; Ulrich Mueller <ulm@gentoo.org> Manifest:
   Manifest regenerated, upstream has replaced the 2.56.0 tarball.
