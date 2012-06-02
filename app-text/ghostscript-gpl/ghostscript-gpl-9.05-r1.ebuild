@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.05-r1.ebuild,v 1.7 2012/05/29 19:53:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.05-r1.ebuild,v 1.8 2012/06/02 08:08:27 zmedico Exp $
 
 EAPI=3
 
-inherit autotools eutils versionator flag-o-matic
+inherit autotools eutils multilib versionator flag-o-matic
 
 DESCRIPTION="Ghostscript is an interpreter for the PostScript language and for PDF"
 HOMEPAGE="http://ghostscript.com/"

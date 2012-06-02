@@ -1,6 +1,10 @@
 # ChangeLog for app-text/barcode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/ChangeLog,v 1.23 2012/05/20 09:01:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/ChangeLog,v 1.24 2012/06/02 08:03:24 zmedico Exp $
+
+  02 Jun 2012; Zac Medico <zmedico@gentoo.org> barcode-0.98-r1.ebuild,
+  barcode-0.98.ebuild:
+  inherit multilib for get_libdir
 
   20 May 2012; Mark Loeser <halcy0n@gentoo.org> barcode-0.98.ebuild:
   Revert to ~ppc/~ppc64; bug #393713

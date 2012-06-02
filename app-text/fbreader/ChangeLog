@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fbreader
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.23 2011/10/04 11:40:08 nativemad Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.24 2012/06/02 08:04:58 zmedico Exp $
+
+  02 Jun 2012; Zac Medico <zmedico@gentoo.org> fbreader-0.12.10.ebuild:
+  inherit multilib for get_libdir
 
   04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> fbreader-0.12.10.ebuild:
   x86 stable, bug 384479
