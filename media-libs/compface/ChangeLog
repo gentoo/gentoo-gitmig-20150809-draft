@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/compface
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.48 2011/08/13 13:25:59 hattya Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.49 2012/06/02 14:06:13 aballier Exp $
+
+  02 Jun 2012; Alexis Ballier <aballier@gentoo.org> compface-1.5.2.ebuild:
+  keyword ~amd64-fbsd
 
   13 Aug 2011; Akinori Hattori <hattya@gentoo.org> compface-1.5.1.ebuild,
   files/compface-1.5.1-destdir.diff, compface-1.5.2.ebuild,
