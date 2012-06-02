@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.14.ebuild,v 1.1 2012/06/01 13:16:04 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.14.ebuild,v 1.2 2012/06/02 06:38:18 aidecoe Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.6"
@@ -32,7 +32,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="Pyro4"
-RESTRICT="test"
 
 src_prepare() {
 	distutils_src_prepare

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.69 2012/06/01 13:19:38 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.70 2012/06/02 06:38:18 aidecoe Exp $
+
+  02 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> pyro-4.14.ebuild:
+  Removed the test restriction; see comment 3 in the bug #416809.
 
   01 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.13.ebuild,
   pyro-4.11.ebuild:
