@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/r8168
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.11 2012/05/18 19:38:12 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.12 2012/06/02 22:05:05 joker Exp $
+
+*r8168-8.031.00 (02 Jun 2012)
+
+  02 Jun 2012; Christian Birchinger <joker@gentoo.org> +r8168-8.031.00.ebuild:
+  Version bump
 
 *r8168-8.030.00 (18 May 2012)
 
