@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdbc-postgresql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.16 2012/06/02 06:01:00 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.17 2012/06/02 06:51:33 gienah Exp $
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> hdbc-postgresql-2.3.2.1.ebuild:
+  Add test and dev-db/postgresql-base-8 deps
 
 *hdbc-postgresql-2.3.2.1 (02 Jun 2012)
 
