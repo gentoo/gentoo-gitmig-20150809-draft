@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.66 2012/05/26 17:44:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.67 2012/06/02 09:58:27 chithanh Exp $
+
+  02 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  clang-3.1-r2.ebuild:
+  Keyword ~arm, bug #320221.
 
   26 May 2012; Alexis Ballier <aballier@gentoo.org> clang-3.1-r2.ebuild:
   keyword ~amd64-fbsd
