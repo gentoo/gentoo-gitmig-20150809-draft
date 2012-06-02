@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/schismtracker/schismtracker-20120105.ebuild,v 1.2 2012/02/07 11:31:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/schismtracker/schismtracker-20120105.ebuild,v 1.3 2012/06/02 10:41:11 ago Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.org/dl/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/alsa-lib
