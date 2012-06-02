@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xtail
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.17 2012/04/01 11:54:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.18 2012/06/02 09:21:59 hwoarang Exp $
+
+  02 Jun 2012; Markos Chandras <hwoarang@gentoo.org> xtail-2.1-r1.ebuild:
+  Restore ppc and sparc keywords
 
 *xtail-2.1-r1 (01 Apr 2012)
 
