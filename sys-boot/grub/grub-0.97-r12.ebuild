@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r12.ebuild,v 1.1 2012/05/31 00:06:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r12.ebuild,v 1.2 2012/06/02 06:37:34 vapier Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -9,10 +9,12 @@
 
 # If you need to roll a new grub-static distfile, here is how.
 # - Robin H. Johnson <robbat2@gentoo.org> - 29 Nov 2010
+# FEATURES='-noauto -noinfo -nodoc -noman -splitdebug nostrip' \
 # USE='static -ncurses -netboot -custom-cflags' \
-# GRUB_STATIC_PACKAGE_BUILDING=1 ebuild \
-# grub-${PVR}.ebuild package && \
-# cp -f ${PKGDIR}/${CAT}/${PF}.tbz2 ${DISTDIR}/grub-static-${PVR}.tar.bz2
+# PORTAGE_COMPRESS=true GRUB_STATIC_PACKAGE_BUILDING=1 ebuild \
+# grub-${PVR}.ebuild clean package && \
+# qtbz2 -s -j ${PKGDIR}/${CAT}/${PF}.tbz2 && \
+# mv ${PF}.tar.bz2 ${DISTDIR}/grub-static-${PVR}.tar.bz2
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs autotools linux-info pax-utils
 
