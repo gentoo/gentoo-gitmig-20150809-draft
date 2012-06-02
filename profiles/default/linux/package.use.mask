@@ -1,10 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.30 2012/06/02 16:58:09 xmw Exp $
-
-# Michael Weber<xmw@gentoo.org> (02 Jun 2012)
-# Not fit for production (bug 404403, comment #5)
-dev-db/firebird client
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.31 2012/06/02 19:29:41 xmw Exp $
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
