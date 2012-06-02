@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/openal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/openal/ChangeLog,v 1.12 2010/07/24 19:05:53 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/openal/ChangeLog,v 1.13 2012/06/02 11:04:56 gienah Exp $
+
+*openal-1.4.0.1 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +openal-1.4.0.1.ebuild:
+  Bump openal to 1.4.0.1
 
   24 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> -openal-1.3.ebuild,
   -openal-1.3.1.ebuild:
