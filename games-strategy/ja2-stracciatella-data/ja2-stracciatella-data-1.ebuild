@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella-data/ja2-stracciatella-data-1.ebuild,v 1.1 2012/05/10 20:10:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella-data/ja2-stracciatella-data-1.ebuild,v 1.2 2012/06/02 17:14:46 hasufell Exp $
 
-EAPI=3
+EAPI=4
 
 inherit cdrom check-reqs games
 
@@ -20,12 +20,8 @@ DEPEND="app-arch/unshield"
 
 S=${WORKDIR}
 
-pkg_setup() {
-	CHECKREQS_DISK_BUILD="3G"
-	CHECKREQS_DISK_USR="1G"
-	check-reqs_pkg_setup
-	games_pkg_setup
-}
+CHECKREQS_DISK_BUILD="3G"
+CHECKREQS_DISK_USR="1G"
 
 src_unpack() {
 	export CDROM_NAME="INSTALL_CD"
@@ -53,7 +49,7 @@ src_prepare() {
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/ja2/data
-	doins -r "${S}"/Ja2_Files/Data/* || die
+	doins -r "${S}"/Ja2_Files/Data/*
 	prepgamesdirs
 }
 
