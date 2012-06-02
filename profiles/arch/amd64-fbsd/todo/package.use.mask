@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.283 2012/06/02 13:49:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.284 2012/06/02 14:08:22 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -224,3 +224,12 @@ sys-cluster/openmpi openmpi_fabrics_open-mx
 
 # sys-cluster/slurm
 sys-cluster/openmpi openmpi_rm_slurm
+
+# x11-libs/dnd
+app-editors/xemacs dnd
+
+# app-i18n/canna
+app-editors/xemacs canna
+
+# app-i18n/freewnn
+app-editors/xemacs freewnn
