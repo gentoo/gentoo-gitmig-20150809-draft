@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.225 2012/05/04 06:08:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.226 2012/06/02 14:13:16 maksbotan Exp $
+
+*rrdtool-1.4.7 (02 Jun 2012)
+
+  02 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/0001_rrdtool-1.4.7-configure.ac.patch, +rrdtool-1.4.7.ebuild:
+  Bump to 1.4.7, fix bugs 405431, 324093 and 416259. Thanks to Andreis
+  Vinogradovs
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> rrdtool-1.4.5-r1.ebuild,
   rrdtool-1.4.5-r2.ebuild:
