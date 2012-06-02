@@ -1,11 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1026 2012/06/02 07:38:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1027 2012/06/02 07:41:53 zmedico Exp $
+
+*portage-2.2.0_alpha109 (02 Jun 2012)
+
+  02 Jun 2012; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha109.ebuild:
+  2.2.0_alpha109 version bump. This includes all of the fixes in 2.1.10.64. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
 
 *portage-2.1.10.64 (02 Jun 2012)
 
   02 Jun 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.64.ebuild:
-  2.1.10.63 version bump. This fixes bug #418309 (regression since 2.1.10.59 and
+  2.1.10.64 version bump. This fixes bug #418309 (regression since 2.1.10.59 and
   2.2.0_alpha104 which triggers intermittent ecompressdir failures). Bug #409383
   tracks all bugs fixed since portage-2.1.10.49.
 
