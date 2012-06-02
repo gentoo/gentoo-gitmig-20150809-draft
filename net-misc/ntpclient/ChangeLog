@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ntpclient
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ChangeLog,v 1.4 2009/07/30 20:07:32 solar Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ChangeLog,v 1.5 2012/06/02 15:17:17 jer Exp $
+
+*ntpclient-2010.365 (02 Jun 2012)
+
+  02 Jun 2012; Jeroen Roovers <jer@gentoo.org> +ntpclient-2010.365.ebuild:
+  Version bump by Daniel Lange (bug #402643).
 
   30 Jul 2009; <solar@gentoo.org> ntpclient-2007.365.ebuild:
   install a few docs
