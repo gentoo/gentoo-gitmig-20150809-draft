@@ -1,9 +1,12 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.86 2012/05/19 12:44:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.87 2012/06/02 12:14:30 blueness Exp $
+
+  02 Jun 2012; Anthony G. Basile <blueness@gentoo.org> udisks-1.0.4-r2.ebuild:
+  Keyword ~mips
 
   19 May 2012; Anthony G. Basile <blueness@gentoo.org> udisks-1.97.0-r1.ebuild:
-  Keyword mips
+  Keyword ~mips
 
   17 May 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.97.0-r1.ebuild:
   Check for CONFIG_SWAP wrt http://forums.gentoo.org/viewtopic-t-923640.html by
