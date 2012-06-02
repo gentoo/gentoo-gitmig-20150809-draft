@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.9.3.2.ebuild,v 1.1 2012/05/26 10:04:15 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.9.3.3.ebuild,v 1.1 2012/06/02 07:57:21 hattya Exp $
 
 EAPI="4"
 
-inherit autotools eutils user
+inherit autotools eutils
 
 MY_P="${P/g/G}"
 
@@ -28,7 +28,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-ext-ldflags.diff
 	epatch "${FILESDIR}"/${PN}-xz-info.diff
 	epatch "${FILESDIR}"/${PN}-rfc.tls.diff
-	epatch "${FILESDIR}"/${P}-Makefile.diff
+	epatch "${FILESDIR}"/${P}-gauche.threads.diff
 	eautoconf
 }
 
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_test() {
-	HOME="$(egethome ${EUID})" emake -j1 -s check
+	emake -j1 -s check
 }
 
 src_install() {

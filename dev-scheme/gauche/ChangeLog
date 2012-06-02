@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/gauche
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.36 2012/05/26 10:31:16 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.37 2012/06/02 07:57:21 hattya Exp $
+
+*gauche-0.9.3.3 (02 Jun 2012)
+
+  02 Jun 2012; Akinori Hattori <hattya@gentoo.org> -gauche-0.9.3.2.ebuild,
+  -files/gauche-0.9.3.2-Makefile.diff, +gauche-0.9.3.3.ebuild,
+  +files/gauche-0.9.3.3-gauche.threads.diff:
+  new upstream release.
 
   26 May 2012; Akinori Hattori <hattya@gentoo.org> -gauche-0.9.1.ebuild,
   -files/gauche-0.9.1-bzip2-info.diff, -files/gauche-0.9.1-list-queue.diff,
