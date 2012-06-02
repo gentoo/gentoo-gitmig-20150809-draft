@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/arrows
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.22 2011/08/01 20:26:25 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.23 2012/06/02 05:20:51 gienah Exp $
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> arrows-0.4.4.0.ebuild:
+  EAPI=4 on line 5, [profile?] on haskell library deps (part of fix for bug
+  #341795)
 
   01 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> -arrows-0.2.ebuild:
   Removed old.
