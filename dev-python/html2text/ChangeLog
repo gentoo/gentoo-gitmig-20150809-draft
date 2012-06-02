@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html2text
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.7 2012/04/13 08:07:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.8 2012/06/02 10:44:16 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> html2text-3.200.3.ebuild:
+  Stable for amd64, wrt bug #418899
 
   13 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> html2text-3.200.3.ebuild:
   Make html2text rdepend on setuptools since the installed scripts are importing
