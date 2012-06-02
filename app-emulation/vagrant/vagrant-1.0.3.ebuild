@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.0.3.ebuild,v 1.1 2012/05/02 22:59:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.0.3.ebuild,v 1.2 2012/06/02 21:02:55 radhermit Exp $
 
 EAPI="4"
 USE_RUBY="ruby18 ruby19"
@@ -8,6 +8,7 @@ USE_RUBY="ruby18 ruby19"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
 RUBY_FAKEGEM_GEMSPEC="vagrant.gemspec"
 RUBY_FAKEGEM_EXTRAINSTALL="config keys templates"
+RUBY_FAKEGEM_TASK_DOC=""
 
 inherit ruby-fakegem
 
