@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htbinit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.17 2012/03/18 19:22:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.18 2012/06/02 22:44:08 hwoarang Exp $
+
+  02 Jun 2012; Markos Chandras <hwoarang@gentoo.org> htbinit-0.8.5-r5.ebuild:
+  Stable on amd64 wrt bug #419301
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> -htbinit-0.8.5-r3.ebuild,
   metadata.xml:
