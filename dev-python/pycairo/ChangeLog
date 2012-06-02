@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.109 2012/05/12 20:19:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.110 2012/06/02 11:59:24 marienz Exp $
+
+  02 Jun 2012; Marien Zwart <marienz@gentoo.org>
+  -files/pycairo-1.8.10-cairo.version_info.patch, -pycairo-1.10.0-r1.ebuild,
+  -pycairo-1.10.0.ebuild, pycairo-1.10.0-r2.ebuild, pycairo-1.8.10.ebuild:
+  Restrict pypy (bug #397393), remove stale versions.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> pycairo-1.10.0-r2.ebuild:
   keyword ~amd64-fbsd
