@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/objectname
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/objectname/ChangeLog,v 1.1 2012/06/02 10:57:02 gienah Exp $
+
+*objectname-1.0.0.0 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +objectname-1.0.0.0.ebuild:
+  Add objectname, part of fix for bug #363977
+
