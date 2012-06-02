@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/DateTime-Format-Natural
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Natural/ChangeLog,v 1.35 2012/04/28 07:19:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Natural/ChangeLog,v 1.36 2012/06/02 19:02:34 tove Exp $
+
+*DateTime-Format-Natural-1.0.0 (02 Jun 2012)
+
+  02 Jun 2012; Torsten Veller <tove@gentoo.org>
+  +DateTime-Format-Natural-1.0.0.ebuild:
+  Version bump
 
 *DateTime-Format-Natural-0.990.0 (28 Apr 2012)
 
