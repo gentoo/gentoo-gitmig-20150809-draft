@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/renameutils-0.12.0.ebuild,v 1.1 2012/05/19 11:59:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/renameutils-0.12.0.ebuild,v 1.2 2012/06/02 07:58:01 dev-zero Exp $
 
 EAPI="4"
 
@@ -18,7 +18,9 @@ DEPEND=">=sys-libs/readline-5.0-r2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-typo.patch"
+	epatch \
+		"${FILESDIR}/${P}-typo.patch" \
+		"${FILESDIR}/${P}-autopoint.patch"
 	eautoreconf
 }
 
