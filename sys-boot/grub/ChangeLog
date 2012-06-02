@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.208 2012/06/02 06:37:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.209 2012/06/02 16:06:48 floppym Exp $
+
+*grub-2.00_beta6 (02 Jun 2012)
+
+  02 Jun 2012; Mike Gilbert <floppym@gentoo.org> +grub-2.00_beta6.ebuild,
+  grub-9999.ebuild:
+  Version bump. Fix links in grub2.info. #416035 by Martin Väth.
 
   02 Jun 2012; Mike Frysinger <vapier@gentoo.org> grub-0.97-r12.ebuild:
   Expand insns for creating grub-static binpkg so it runs more smoothly.
