@@ -1,0 +1,26 @@
+diff -ur usr.orig/share/tribler/Tribler/Core/DecentralizedTracking/pymdht/plugins/extract_routing_table.py usr/share/tribler/Tribler/Core/DecentralizedTracking/pymdht/plugins/extract_routing_table.py
+--- usr.orig/share/tribler/Tribler/Core/DecentralizedTracking/pymdht/plugins/extract_routing_table.py	2012-06-01 12:25:28.000000000 +0200
++++ usr/share/tribler/Tribler/Core/DecentralizedTracking/pymdht/plugins/extract_routing_table.py	2012-06-02 00:32:09.656471960 +0200
+@@ -41,7 +41,7 @@
+             
+             exp_obj = ExpObj()
+ 
+-             exp_obj.reg_status_of_node(msg.src_node, STATUS_ON_PROCESS)
++            exp_obj.reg_status_of_node(msg.src_node, STATUS_ON_PROCESS)
+             
+             
+             log_distance = exp_obj.next_log_dist()           
+diff -ur usr.orig/share/tribler/Tribler/Core/DecentralizedTracking/pymdht/plugins/routing_nice.py usr/share/tribler/Tribler/Core/DecentralizedTracking/pymdht/plugins/routing_nice.py
+--- usr.orig/share/tribler/Tribler/Core/DecentralizedTracking/pymdht/plugins/routing_nice.py	2012-06-01 12:25:28.000000000 +0200
++++ usr/share/tribler/Tribler/Core/DecentralizedTracking/pymdht/plugins/routing_nice.py	2012-06-02 00:35:34.163153478 +0200
+@@ -106,10 +106,7 @@
+                     queries_to_send = [self._get_maintenance_query(node_)]
+                     # This task did do some work. We are done here!
+                     break
+-<<<<<<< HEAD
+-=======
+ #        print 'nice', _MAINTENANCE_DELAY[self._maintenance_mode]
+->>>>>>> d7bed531d0bbfa54c481422b96243221bf18e2ff
+         return (_MAINTENANCE_DELAY[self._maintenance_mode],
+                 queries_to_send, maintenance_lookup_target)
+ 
