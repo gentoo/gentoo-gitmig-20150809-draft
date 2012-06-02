@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/sml-mode
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.22 2010/05/23 23:07:49 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.23 2012/06/02 11:18:16 ulm Exp $
+
+*sml-mode-5.0_beta1 (02 Jun 2012)
+
+  02 Jun 2012; Ulrich Müller <ulm@gentoo.org> +sml-mode-5.0_beta1.ebuild:
+  Version bump. Thanks to José Romildo Malaquias <j.romildo@gmail.com> in
+  bug 418025.
 
   23 May 2010; Ulrich Mueller <ulm@gentoo.org> -files/51sml-mode-gentoo.el,
   -sml-mode-4.0.ebuild:
