@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-3.1.14-r1.ebuild,v 1.1 2011/07/27 10:41:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-3.1.14-r1.ebuild,v 1.2 2012/06/02 05:02:33 zmedico Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs
+inherit toolchain-funcs user
 
 DESCRIPTION="Send and receive short messages through GSM modems"
 HOMEPAGE="http://smstools3.kekekasvi.com/"

@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/kannel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.24 2012/03/19 09:56:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.25 2012/06/02 04:58:53 zmedico Exp $
+
+  02 Jun 2012; Zac Medico <zmedico@gentoo.org> kannel-1.4.3-r1.ebuild:
+  inherit user for enewgroup and enewuser
 
   19 Mar 2012; Pacho Ramos <pacho@gentoo.org> -kannel-1.4.1.ebuild:
   Drop old version still relying on sqlite2.

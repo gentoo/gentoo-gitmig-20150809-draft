@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3-r1.ebuild,v 1.3 2010/06/17 21:26:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3-r1.ebuild,v 1.4 2012/06/02 04:58:53 zmedico Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=none
 
-inherit eutils autotools flag-o-matic ssl-cert
+inherit eutils autotools flag-o-matic ssl-cert user
 
 DESCRIPTION="Powerful SMS and WAP gateway"
 HOMEPAGE="http://www.kannel.org/"

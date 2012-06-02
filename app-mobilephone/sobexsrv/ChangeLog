@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/sobexsrv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.22 2010/10/29 21:23:23 joker Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.23 2012/06/02 05:04:06 zmedico Exp $
+
+  02 Jun 2012; Zac Medico <zmedico@gentoo.org> sobexsrv-1.0.1.ebuild:
+  inherit user for enewgroup and enewuser
 
   29 Oct 2010; Christian Birchinger <joker@gentoo.org>
   sobexsrv-1.0.1.ebuild:
