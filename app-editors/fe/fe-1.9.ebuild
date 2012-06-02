@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/fe-1.9.ebuild,v 1.1 2012/03/16 10:14:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/fe-1.9.ebuild,v 1.2 2012/06/02 10:33:36 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.moria.de/~michael/fe/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="sendmail"
 
 DEPEND="sys-libs/ncurses

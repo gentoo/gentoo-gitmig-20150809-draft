@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/fe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/ChangeLog,v 1.9 2012/03/16 10:14:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/ChangeLog,v 1.10 2012/06/02 10:33:36 ago Exp $
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> fe-1.9.ebuild:
+  Stable for amd64, wrt bug #418561
 
 *fe-1.9 (16 Mar 2012)
 
