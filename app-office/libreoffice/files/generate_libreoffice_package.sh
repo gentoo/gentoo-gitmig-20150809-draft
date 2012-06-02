@@ -10,9 +10,8 @@ die() {
 	exit 1
 }
 
-VERSION="3.5.2.2"
-
-BINRELEASE="-r1"
+VERSION="3.5.4.2-r1"
+BINVERSION="3.5.4.2-r1"
 
 # first the default subset of useflags
 IUSES_BASE="bash-completion binfilter branding cups dbus graphite gstreamer gtk nsplugin python vba webdav xmlsec -aqua -jemalloc -mysql -nlpsolver -odk -opengl -pdfimport -postgres -svg"
@@ -32,42 +31,42 @@ echo "Base"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_NK}" > /etc/portage/package.use/libreo
 emerge -v =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-${VERSION}${BINRELEASE}.tbz2  || die "Moving package failed"
+mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Base - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_NK}" > /etc/portage/package.use/libreo
 emerge -v =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-java-${VERSION}${BINRELEASE}.tbz2  || die "Moving package failed"
+mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # kde flavor
 echo "KDE"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_K}" > /etc/portage/package.use/libreo
 emerge -v =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-${VERSION}${BINRELEASE}.tbz2  || die "Moving package failed"
+mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "KDE - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_K}" > /etc/portage/package.use/libreo
 emerge -v =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-java-${VERSION}${BINRELEASE}.tbz2  || die "Moving package failed"
+mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # gnome flavor
 echo "Gnome"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_G} ${IUSES_NK}" > /etc/portage/package.use/libreo
 emerge -v =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-${VERSION}${BINRELEASE}.tbz2  || die "Moving package failed"
+mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Gnome -java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_G} ${IUSES_NK}" > /etc/portage/package.use/libreo
 emerge -v =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-java-${VERSION}${BINRELEASE}.tbz2  || die "Moving package failed"
+mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 
-for name in ./libreoffice-*-${VERSION}${BINRELEASE}.tbz2 ; do 
+for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do 
 
   BN=`basename $name .tbz2`
 
