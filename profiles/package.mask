@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13815 2012/06/02 20:39:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13816 2012/06/02 20:48:56 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -375,10 +375,6 @@ dev-ruby/gherkin:2.10
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Needs to be slotted better
 =dev-libs/yaz-4*
-
-# Torsten Veller <tove@gentoo.org> (21 Apr 2012)
-# Mask for removal: Doesn't install anything (#356559)
-dev-perl/IO-Moose
 
 # Maxim Koltsov <maksbotan@gentoo.org> (19 Apr 2012)
 # Broken, masking by maintainer's request
