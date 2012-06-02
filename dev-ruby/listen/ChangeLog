@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/listen
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.1 2012/06/02 08:49:35 graaff Exp $
+
+*listen-0.4.2 (02 Jun 2012)
+
+  02 Jun 2012; Hans de Graaff <graaff@gentoo.org> +listen-0.4.2.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for forthcoming versions of sass.
+
