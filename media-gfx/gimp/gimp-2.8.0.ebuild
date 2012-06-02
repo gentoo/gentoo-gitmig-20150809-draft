@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0.ebuild,v 1.4 2012/05/18 22:32:00 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0.ebuild,v 1.5 2012/06/02 21:42:28 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -46,7 +46,7 @@ RDEPEND=">=dev-libs/glib-2.30.2:2
 	png? ( >=media-libs/libpng-1.2.37:0 )
 	python?	( >=dev-python/pygtk-2.10.4:2 )
 	tiff? ( >=media-libs/tiff-3.5.7:0 )
-	svg? ( >=gnome-base/librsvg-2.34.2:2 )
+	svg? ( >=gnome-base/librsvg-2.36.0:2 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
 	x11-libs/libXcursor
 	sys-libs/zlib
