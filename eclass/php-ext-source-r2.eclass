@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.25 2012/02/16 11:25:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.26 2012/06/02 19:16:31 zmedico Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@
 # This eclass provides a unified interface for compiling and installing standalone
 # PHP extensions (modules).
 
-inherit flag-o-matic autotools
+inherit flag-o-matic autotools multilib
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install
 

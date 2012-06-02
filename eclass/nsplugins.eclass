@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.29 2012/05/11 10:46:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.30 2012/06/02 19:16:31 zmedico Exp $
 #
 # @ECLASS: nsplugins.eclass
 # @MAINTAINER:
@@ -12,7 +12,7 @@
 # Reusable functions that promote sharing of netscape/moz plugins, also provides
 # share_plugins_dir function for mozilla applications.
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 

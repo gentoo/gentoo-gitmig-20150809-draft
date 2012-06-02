@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common-2.eclass,v 1.4 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common-2.eclass,v 1.5 2012/06/02 19:16:31 zmedico Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -8,7 +8,7 @@
 
 # Some handy constants
 
-inherit eutils
+inherit eutils multilib
 
 CLSOURCEROOT=/usr/share/common-lisp/source/
 CLSYSTEMROOT=/usr/share/common-lisp/systems/

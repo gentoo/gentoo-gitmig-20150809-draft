@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.170 2012/01/09 10:42:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.171 2012/06/02 19:16:31 zmedico Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -19,7 +19,7 @@
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils flag-o-matic gnuconfig autotools mysql_fx versionator toolchain-funcs
+inherit eutils flag-o-matic gnuconfig autotools multilib mysql_fx versionator toolchain-funcs
 
 # Shorten the path because the socket path length must be shorter than 107 chars
 # and we will run a mysql server during test phase

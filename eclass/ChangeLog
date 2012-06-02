@@ -1,9 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.283 2012/06/02 19:02:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.284 2012/06/02 19:16:31 zmedico Exp $
 
-  02 Jun 2012; Zac Medico <zmedico@gentoo.org> gst-plugins-base.eclass,
-  kde4-base.eclass:
+  02 Jun 2012; Zac Medico <zmedico@gentoo.org> common-lisp-common-2.eclass,
+  java-ant-2.eclass, common-lisp-common-3.eclass, common-lisp-common.eclass,
+  db.eclass, depend.php.eclass, freedict.eclass, gnat.eclass,
+  gst-plugins-bad.eclass, gst-plugins-base.eclass, kde4-base.eclass,
+  mysql.eclass, mysql-autotools.eclass, mysql-cmake.eclass, nsplugins.eclass,
+  php-ext-source-r2.eclass, ruby-ng.eclass, scsh.eclass:
   inherit multilib for get_libdir
 
   01 Jun 2012; Ralph Sennhauser <sera@gentoo.org> ant-tasks.eclass:

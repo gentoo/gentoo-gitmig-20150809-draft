@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.7 2012/01/09 10:42:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.8 2012/06/02 19:16:31 zmedico Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -15,7 +15,7 @@
 # the src_unpack, src_prepare, src_configure, src_compile, scr_install,
 # pkg_preinst, pkg_postinst, pkg_config and pkg_postrm phase hooks.
 
-inherit cmake-utils
+inherit cmake-utils multilib
 
 #
 # HELPER FUNCTIONS:

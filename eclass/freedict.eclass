@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freedict.eclass,v 1.19 2011/08/22 04:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freedict.eclass,v 1.20 2012/06/02 19:16:31 zmedico Exp $
 
 # @ECLASS: freedict.eclass
 # @MAINTAINER:
@@ -22,7 +22,7 @@
 # @DESCRIPTION:
 # Please see above for a description.
 
-inherit eutils
+inherit eutils multilib
 
 IUSE=""
 
