@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fotoxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.32 2012/06/02 10:48:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.33 2012/06/02 17:21:54 grozin Exp $
+
+*fotoxx-12.06.1 (02 Jun 2012)
+
+  02 Jun 2012; Andrey Grozin <grozin@gentoo.org> -fotoxx-12.04.ebuild,
+  -files/fotoxx-12.04.patch, +fotoxx-12.06.1.ebuild,
+  +files/fotoxx-12.06.1.patch:
+  Version bump
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> fotoxx-12.05.ebuild:
   Stable for amd64, wrt bug #419065
