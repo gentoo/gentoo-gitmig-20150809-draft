@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.48 2012/06/01 06:16:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.49 2012/06/02 06:28:55 zmedico Exp $
+
+  02 Jun 2012; Zac Medico <zmedico@gentoo.org> libreoffice-l10n-3.5.4.ebuild:
+  inherit multilib for get_libdir
 
   01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-l10n-3.5.4.ebuild:

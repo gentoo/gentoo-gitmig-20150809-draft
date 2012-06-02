@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.4.ebuild,v 1.4 2012/06/01 06:16:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.5.4.ebuild,v 1.5 2012/06/02 06:28:55 zmedico Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ MY_PV="3.5.4"
 RC_VERSION="rc2" # CHECK ME WITH EVERY BUMP!
 BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm"
 
-inherit rpm eutils versionator
+inherit rpm eutils multilib versionator
 
 DESCRIPTION="Translations for the Libreoffice suite."
 HOMEPAGE="http://www.libreoffice.org"
