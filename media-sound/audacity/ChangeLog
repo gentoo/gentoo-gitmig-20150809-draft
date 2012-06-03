@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacity
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.174 2012/05/30 11:58:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.175 2012/06/03 14:01:04 blueness Exp $
+
+  03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> audacity-2.0.0.ebuild:
+  Keyword ~mips
 
   30 May 2012; Agostino Sarubbo <ago@gentoo.org> -audacity-1.3.14.ebuild:
   Remove old
