@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20120520-r2.ebuild,v 1.1 2012/06/03 09:19:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20120520-r1.ebuild,v 1.3 2012/06/03 13:30:11 hwoarang Exp $
 
 EAPI="4"
 
-inherit emul-linux-x86 toolchain-funcs
+inherit emul-linux-x86
 
 LICENSE="BSD FDL-1.2 GPL-2 LGPL-2.1 LGPL-2 as-is gsm public-domain"
 KEYWORDS="-* ~amd64"
@@ -28,10 +28,8 @@ src_prepare() {
 	fi
 
 	# libs without the rest of pulseaudio cause problems, bug 302003
+	# See bug 416751 to understand this way to disable pulseaudio
 	if ! use pulseaudio; then
-		rm -f "${S}"/usr/lib32/libpulse{,-simple}.so*
-		echo 'int main() { }' > "${T}"/tmp.c
-		$(tc-getCC) -m32 -shared -Wl,-soname -Wl,libpulse.so.0 "${T}"/tmp.c -o "${S}"/usr/lib32/libpulse.so.0
-		$(tc-getCC) -m32 -shared -Wl,-soname -Wl,libpulse-simple.so.0 "${T}"/tmp.c -o "${S}"/usr/lib32/libpulse-simple.so.0
+		chmod a-r "${S}"/usr/lib32/libpulse{,-simple}.so.* || die
 	fi
 }
