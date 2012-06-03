@@ -1,6 +1,9 @@
 # ChangeLog for app-text/t1utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.63 2012/06/02 10:47:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.64 2012/06/03 18:34:56 maekke Exp $
+
+  03 Jun 2012; Markus Meier <maekke@gentoo.org> t1utils-1.37.ebuild:
+  arm stable, bug #418659
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> t1utils-1.37.ebuild:
   Stable for amd64, wrt bug #418659
