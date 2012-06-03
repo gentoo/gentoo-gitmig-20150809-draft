@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tinycdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.33 2012/05/06 17:38:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.34 2012/06/03 19:34:42 ago Exp $
+
+  03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> tinycdb-0.77-r2.ebuild:
+  Stable for amd64, wrt bug #418671
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> tinycdb-0.77-r1.ebuild:
   ia64 stable wrt #399963
