@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/json-c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.16 2012/06/02 11:37:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.17 2012/06/03 18:37:24 maekke Exp $
+
+  03 Jun 2012; Markus Meier <maekke@gentoo.org> json-c-0.9-r1.ebuild:
+  arm stable, bug #418745
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> json-c-0.9-r1.ebuild:
   Stable for amd64, wrt bug #418745
