@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.97 2011/12/14 18:15:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.98 2012/06/03 08:27:53 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -162,19 +162,26 @@ get_install_abis() {
 # Return a list of the ABIs supported by this profile.
 # the last one in the list being the default.
 get_all_abis() {
-	local order=""
+	local order="" mvar dvar
 
-	if [[ -z ${MULTILIB_ABIS} ]] ; then
+	mvar="MULTILIB_ABIS"
+	dvar="DEFAULT_ABI"
+	if [[ -n $1 ]] ; then
+		mvar="$1_${mvar}"
+		dvar="$1_${dvar}"
+	fi
+
+	if [[ -z ${!mvar} ]] ; then
 		echo "default"
 		return 0
 	fi
 
-	for x in ${MULTILIB_ABIS}; do
-		if [[ ${x} != ${DEFAULT_ABI} ]] ; then
+	for x in ${!mvar}; do
+		if [[ ${x} != ${!dvar} ]] ; then
 			order="${order:+${order} }${x}"
 		fi
 	done
-	order="${order:+${order} }${DEFAULT_ABI}"
+	order="${order:+${order} }${!dvar}"
 
 	echo ${order}
 	return 0
