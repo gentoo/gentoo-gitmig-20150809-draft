@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.545 2012/06/02 20:40:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.546 2012/06/03 09:00:54 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -37,6 +37,10 @@ if [[ ${CTARGET} = ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
+: ${TARGET_ABI:=${ABI}}
+: ${TARGET_MULTILIB_ABIS:=${MULTILIB_ABIS}}
+: ${TARGET_DEFAULT_ABI:=${DEFAULT_ABI}}
+
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
@@ -478,12 +482,12 @@ create_gcc_env_entry() {
 	# searches that directory first.  This is a temporary
 	# workaround for libtool being stupid and using .la's from
 	# conflicting ABIs by using the first one in the search path
-	local abi=${DEFAULT_ABI}
+	local abi=${TARGET_DEFAULT_ABI}
 	local MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 	local LDPATH=${LIBPATH}
 	[[ ${MULTIDIR} != "." ]] && LDPATH+=/${MULTIDIR}
-	for abi in $(get_all_abis) ; do
-		[[ ${abi} == ${DEFAULT_ABI} ]] && continue
+	for abi in $(get_all_abis TARGET) ; do
+		[[ ${abi} == ${TARGET_DEFAULT_ABI} ]] && continue
 
 		MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 		LDPATH+=:${LIBPATH}
@@ -817,7 +821,7 @@ gcc-multilib-configure() {
 
 	# translate our notion of multilibs into gcc's
 	local abi list
-	for abi in $(get_all_abis) ; do
+	for abi in $(get_all_abis TARGET) ; do
 		local l=$(gcc-abi-map ${abi})
 		[[ -n ${l} ]] && list+=",${l}"
 	done
@@ -951,13 +955,13 @@ gcc-compiler-configure() {
 			;;
 		# Add --with-abi flags to set default ABI
 		mips)
-			confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
+			confgcc+=" --with-abi=$(gcc-abi-map ${TARGET_DEFAULT_ABI})"
 			;;
 		amd64)
 			# drop the older/ABI checks once this get's merged into some
 			# version of gcc upstream
-			if tc_version_is_at_least 4.7 && has x32 $(get_all_abis) ; then
-				confgcc+=" --with-abi=$(gcc-abi-map ${DEFAULT_ABI})"
+			if tc_version_is_at_least 4.7 && has x32 $(get_all_abis TARGET) ; then
+				confgcc+=" --with-abi=$(gcc-abi-map ${TARGET_DEFAULT_ABI})"
 			fi
 			;;
 		# Default arch for x86 is normally i386, lets give it a bump
@@ -1273,7 +1277,7 @@ gcc_do_make() {
 	else
 		# we only want to use the system's CFLAGS if not building a
 		# cross-compiler.
-		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS) ${CFLAGS}"}
+		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS ${TARGET_DEFAULT_ABI}) ${CFLAGS}"}
 	fi
 
 	pushd "${WORKDIR}"/build
