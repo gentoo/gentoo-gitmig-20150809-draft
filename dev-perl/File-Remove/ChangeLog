@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Remove
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.82 2012/05/28 14:08:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.83 2012/06/03 18:39:10 tove Exp $
+
+  03 Jun 2012; Torsten Veller <tove@gentoo.org> -File-Remove-1.42.ebuild,
+  -File-Remove-1.500.0.ebuild:
+  Cleanup
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> File-Remove-1.510.0.ebuild:
   alpha/ia64/sparc stable wrt #404669
