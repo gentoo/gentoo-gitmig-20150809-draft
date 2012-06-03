@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.6.ebuild,v 1.1 2011/07/29 19:36:58 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.7.ebuild,v 1.1 2012/06/03 16:26:12 gurligebis Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
 
-MY_PV=1.6
+MY_PV=1.7
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="MiniUPnP IGD Daemon"
@@ -17,27 +17,29 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=net-firewall/iptables-1.4.6
-	sys-apps/lsb-release
-	>=sys-kernel/linux-headers-2.6.31"
+RDEPEND=">=net-firewall/iptables-1.4.6"
 DEPEND="${RDEPEND}
 	sys-apps/util-linux
-	"
+	sys-apps/lsb-release"
 
 src_prepare() {
 	mv Makefile.linux Makefile
-	epatch "${FILESDIR}/${PN}-1.3-Makefile_fix.diff"
-	epatch "${FILESDIR}/${PN}-nf_nat-fix.diff"
 	sed -i \
 		-e "s#^CFLAGS = .*-D#CPPFLAGS += -I/usr/include -D#" \
 		-e '/^CFLAGS :=/s/CFLAGS/CPPFLAGS/g' \
+		-e "s/CFLAGS += -ansi/#CFLAGS += -ansi/g" \
 		-e "s/LIBS = -liptc/LIBS = -lip4tc/g" \
 		-e 's/genuuid||//' \
 		Makefile || die
 	sed -i \
 		-e 's/\(strncpy(\([->a-z.]\+\), "[a-zA-Z]\+", \)IPT_FUNCTION_MAXNAMELEN);/\1sizeof(\2));/' \
 		netfilter/iptcrdr.c || die
+
 	emake config.h
+
+	sed -i \
+		-e 's/\/\*#define ENABLE_LEASEFILE\*\//#define ENABLE_LEASEFILE/g' \
+		config.h || die
 }
 
 src_compile() {
