@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.87 2012/05/30 08:38:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.88 2012/06/03 18:17:05 maekke Exp $
+
+  03 Jun 2012; Markus Meier <maekke@gentoo.org> radvd-1.8.5-r1.ebuild:
+  arm stable, bug #417999
 
   30 May 2012; Jeff Horelick <jdhore@gentoo.org> radvd-1.8.5-r1.ebuild:
   marked x86 per bug 417999
