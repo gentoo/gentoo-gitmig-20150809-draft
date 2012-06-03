@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Refresh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.25 2012/05/26 18:58:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.26 2012/06/03 17:56:08 tove Exp $
+
+  03 Jun 2012; Torsten Veller <tove@gentoo.org> -Module-Refresh-0.13.ebuild,
+  -Module-Refresh-0.160.0.ebuild:
+  Cleanup
 
   26 May 2012; Raúl Porcel <armin76@gentoo.org> Module-Refresh-0.13.ebuild,
   Module-Refresh-0.160.0.ebuild, Module-Refresh-0.170.0.ebuild:
