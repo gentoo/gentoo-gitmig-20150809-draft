@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0.ebuild,v 1.2 2012/05/22 07:17:10 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0.ebuild,v 1.3 2012/06/03 08:03:26 gurligebis Exp $
 
 EAPI=4
 
@@ -20,6 +20,7 @@ RDEPEND="dbus? ( sys-apps/dbus )
 		eap-sim? ( sys-apps/pcsc-lite )
 		madwifi? ( >net-wireless/madwifi-ng-tools-0.9.3 )
 		dev-libs/libnl:1.1
+		net-wireless/crda
 	)
 	!kernel_linux? ( net-libs/libpcap )
 	qt4? (

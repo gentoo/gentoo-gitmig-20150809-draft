@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.181 2012/05/22 07:17:10 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.182 2012/06/03 08:03:26 gurligebis Exp $
+
+  03 Jun 2012; <gurligebis@gentoo.org> wpa_supplicant-1.0.ebuild:
+  Making wpa_supplicant depend on net-wireless/crda on linux, fixing bug
+  #401277
 
   22 May 2012; <gurligebis@gentoo.org> +files/wpa_supplicant-gcc470.patch,
   wpa_supplicant-0.7.3-r5.ebuild, wpa_supplicant-1.0.ebuild:
