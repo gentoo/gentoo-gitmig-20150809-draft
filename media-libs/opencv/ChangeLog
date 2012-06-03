@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.76 2012/06/03 08:45:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.77 2012/06/03 08:50:43 dilfridge Exp $
+
+  03 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.0.ebuild:
+  Depend on nvidia-cuda-toolkit-4.1 and relax gcc requirements accordingly, bug
+  418157
 
   03 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.0.ebuild,
   metadata.xml:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.0.ebuild,v 1.3 2012/06/03 08:45:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.0.ebuild,v 1.4 2012/06/03 08:50:43 dilfridge Exp $
 
 EAPI=3
 
@@ -22,7 +22,7 @@ IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k open
 RDEPEND="
 	app-arch/bzip2
 	sys-libs/zlib
-	cuda? ( >=dev-util/nvidia-cuda-toolkit-4 )
+	cuda? ( >=dev-util/nvidia-cuda-toolkit-4.1 )
 	eigen? ( dev-cpp/eigen:2 )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
@@ -136,8 +136,8 @@ src_configure() {
 	)
 
 	if use cuda; then
-		if [[ "$(gcc-version)" > "4.4" ]]; then
-			ewarn "CUDA and >=sys-devel/gcc-4.5 do not play well together. Disabling CUDA support."
+		if [[ "$(gcc-version)" > "4.5" ]]; then
+			ewarn "CUDA and >=sys-devel/gcc-4.6 do not play well together. Disabling CUDA support."
 			mycmakeargs+=( "-DWITH_CUDA=OFF" )
 			mycmakeargs+=( "-DWITH_CUBLAS=OFF" )
 			mycmakeargs+=( "-DWITH_CUFFT=OFF" )
@@ -148,6 +148,8 @@ src_configure() {
 		fi
 	else
 		mycmakeargs+=( "-DWITH_CUDA=OFF" )
+		mycmakeargs+=( "-DWITH_CUBLAS=OFF" )
+		mycmakeargs+=( "-DWITH_CUFFT=OFF" )
 	fi
 
 	if use python && use examples; then
