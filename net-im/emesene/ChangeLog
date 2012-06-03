@@ -1,6 +1,9 @@
 # ChangeLog for net-im/emesene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.25 2012/05/21 21:18:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.26 2012/06/03 22:36:49 hwoarang Exp $
+
+  03 Jun 2012; Markos Chandras <hwoarang@gentoo.org> -emesene-1.6.3-r1.ebuild:
+  remove old ebuild
 
   21 May 2012; Agostino Sarubbo <ago@gentoo.org> -emesene-2.11.11.ebuild,
   -emesene-2.11.9.ebuild, -emesene-2.12.1.ebuild:
