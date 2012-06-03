@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.39 2012/05/18 00:21:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.40 2012/06/03 13:57:45 blueness Exp $
+
+  03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> ffmpeg-0.10.3.ebuild:
+  Keyword ~mips
 
   18 May 2012; Samuli Suominen <ssuominen@gentoo.org> ffmpeg-0.10.2-r1.ebuild,
   ffmpeg-0.10.3.ebuild:
