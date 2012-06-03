@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.122 2012/05/29 19:48:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.123 2012/06/03 18:15:06 maekke Exp $
+
+  03 Jun 2012; Markus Meier <maekke@gentoo.org> pytz-2012c.ebuild:
+  arm stable, bug #412307
 
   29 May 2012; Brent Baude <ranger@gentoo.org> pytz-2012c.ebuild:
   Marking pytz-2012c ppc for bug 412307
