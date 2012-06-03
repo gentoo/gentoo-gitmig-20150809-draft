@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtomfloat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/ChangeLog,v 1.10 2011/06/10 01:08:00 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/ChangeLog,v 1.11 2012/06/03 02:31:47 vapier Exp $
+
+  03 Jun 2012; Mike Frysinger <vapier@gentoo.org> libtomfloat-0.02.ebuild:
+  Update to EAPI=4, respect ar/ranlib settings, and multilib paths.
 
   10 Jun 2011; Tim Harder <radhermit@gentoo.org> libtomfloat-0.02.ebuild:
   Update LICENSE.
