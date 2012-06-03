@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.9.3.3.ebuild,v 1.1 2012/06/02 07:57:21 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/gauche-0.9.3.3.ebuild,v 1.2 2012/06/03 08:17:22 hattya Exp $
 
 EAPI="4"
 
@@ -38,15 +38,11 @@ src_configure() {
 		--with-slib="${EPREFIX}"/usr/share/slib
 }
 
-src_compile() {
-	emake -j1
-}
-
 src_test() {
 	emake -j1 -s check
 }
 
 src_install() {
-	emake DESTDIR="${D}" install-pkg install-doc
+	emake -j1 DESTDIR="${D}" install-pkg install-doc
 	dodoc AUTHORS ChangeLog HACKING README
 }
