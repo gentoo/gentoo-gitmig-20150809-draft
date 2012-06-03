@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.53 2012/04/28 12:34:12 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.54 2012/06/03 21:36:53 ago Exp $
+
+  03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> muttprint-0.73-r1.ebuild:
+  Stable for amd64, wrt bug #418607
 
 *muttprint-0.73-r1 (28 Apr 2012)
 
