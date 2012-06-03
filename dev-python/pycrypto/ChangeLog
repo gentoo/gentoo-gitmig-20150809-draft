@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.122 2012/05/30 19:12:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.123 2012/06/03 18:04:23 armin76 Exp $
+
+  03 Jun 2012; Raúl Porcel <armin76@gentoo.org> pycrypto-2.6.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #417625
 
   30 May 2012; Markus Meier <maekke@gentoo.org> pycrypto-2.6.ebuild:
   arm stable, bug #417625
