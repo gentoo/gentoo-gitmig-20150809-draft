@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.7.ebuild,v 1.1 2012/05/18 01:11:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.7.ebuild,v 1.2 2012/06/03 13:31:33 chithanh Exp $
 
 EAPI=4
 inherit cmake-utils nsplugins multilib versionator
@@ -47,6 +47,12 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_rc*/}
+
+PATCHES=(
+	"${FILESDIR}"/${P}-llvm-3.1_0000.patch
+	"${FILESDIR}"/${P}-llvm-3.1_0001.patch
+	"${FILESDIR}"/${P}-llvm-3.1_0002.patch
+)
 
 src_configure() {
 	local audiobackends

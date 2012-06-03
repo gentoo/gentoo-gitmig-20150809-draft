@@ -1,0 +1,33 @@
+From 8381e86216b4cf23102cee566104cd38e5fb9208 Mon Sep 17 00:00:00 2001
+From: alex <devkral@web.de>
+Date: Sun, 27 May 2012 17:24:37 +0200
+Subject: [PATCH] fix second compile bug with llvm 3.1
+
+---
+ src/scripting/abc.h |    8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+diff --git a/src/scripting/abc.h b/src/scripting/abc.h
+index 8ec3e8c..c8839cf 100644
+--- a/src/scripting/abc.h
++++ b/src/scripting/abc.h
+@@ -22,13 +22,11 @@
+ 
+ #ifdef LLVM_28
+ #define alignof alignOf
+-#endif
+-#ifdef LLVM_30
+-#define LLVMTYPE llvm::Type*
+-#define LLVMMAKEARRAYREF(T) makeArrayRef(T)
+-#else
+ #define LLVMTYPE const llvm::Type*
+ #define LLVMMAKEARRAYREF(T) T
++#else
++#define LLVMTYPE llvm::Type*
++#define LLVMMAKEARRAYREF(T) makeArrayRef(T)
+ #endif
+ 
+ #include "compat.h"
+-- 
+1.7.10
+
