@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.86 2012/05/24 03:44:02 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.87 2012/06/03 12:38:27 chithanh Exp $
+
+  03 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-intel-2.8.1.ebuild, xf86-video-intel-2.9.1.ebuild:
+  Drop non-bsd keywords.
 
   24 May 2012; Matt Turner <mattst88@gentoo.org>
   xf86-video-intel-2.18.0.ebuild, xf86-video-intel-2.19.0.ebuild:

@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.9.1.ebuild,v 1.5 2010/07/09 12:51:04 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.9.1.ebuild,v 1.6 2012/06/03 12:38:27 chithanh Exp $
 
 inherit x-modular
 
 DESCRIPTION="X.Org driver for Intel cards"
 
-KEYWORDS="amd64 ia64 x86 ~x86-fbsd"
+KEYWORDS="~x86-fbsd"
 IUSE="dri"
 
 RDEPEND=">=x11-base/xorg-server-1.6
