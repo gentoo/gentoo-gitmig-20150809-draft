@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/frox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.17 2012/03/03 12:53:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.18 2012/06/03 18:30:25 ago Exp $
+
+  03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> frox-0.7.18-r4.ebuild:
+  Stable for amd64, wrt bug #419243
 
 *frox-0.7.18-r4 (03 Mar 2012)
 
