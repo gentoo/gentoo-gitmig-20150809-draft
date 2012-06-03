@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hyperestraier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.60 2012/05/20 09:36:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.61 2012/06/03 23:24:09 zmedico Exp $
+
+  03 Jun 2012; Zac Medico <zmedico@gentoo.org> hyperestraier-1.4.10-r1.ebuild,
+  hyperestraier-1.4.13.ebuild:
+  inherit multilib for get_libdir
 
   20 May 2012; Agostino Sarubbo <ago@gentoo.org> hyperestraier-1.4.13.ebuild:
   Stable for amd64, wrt bug #416423

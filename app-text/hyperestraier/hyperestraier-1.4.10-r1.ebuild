@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.10-r1.ebuild,v 1.6 2012/05/16 09:07:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.10-r1.ebuild,v 1.7 2012/06/03 23:24:09 zmedico Exp $
 
-inherit java-pkg-opt-2
+inherit java-pkg-opt-2 multilib
 
 IUSE="debug java mecab ruby"
 
