@@ -1,6 +1,17 @@
 # ChangeLog for dev-perl/mogilefs-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.36 2012/05/20 04:11:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.37 2012/06/03 16:31:19 tove Exp $
+
+  03 Jun 2012; Torsten Veller <tove@gentoo.org> mogilefs-server-2.37.ebuild,
+  mogilefs-server-2.43.ebuild, mogilefs-server-2.46.ebuild,
+  mogilefs-server-2.50.ebuild, mogilefs-server-2.51.ebuild,
+  mogilefs-server-2.53.ebuild, mogilefs-server-2.530.0.ebuild,
+  mogilefs-server-2.540.0.ebuild, mogilefs-server-2.550.0.ebuild,
+  mogilefs-server-2.560.0.ebuild, mogilefs-server-2.570.0.ebuild,
+  mogilefs-server-2.580.0.ebuild, mogilefs-server-2.590.0.ebuild,
+  mogilefs-server-2.600.0.ebuild, mogilefs-server-2.610.0.ebuild,
+  mogilefs-server-2.620.0.ebuild:
+  Inherit user.eclass for enewuser
 
 *mogilefs-server-2.620.0 (20 May 2012)
 
