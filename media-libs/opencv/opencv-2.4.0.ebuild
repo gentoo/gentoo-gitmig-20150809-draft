@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.0.ebuild,v 1.1 2012/05/28 20:13:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.0.ebuild,v 1.2 2012/06/03 08:42:59 dilfridge Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
-IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl png python qt4 sse sse2 sse3 ssse3 sse41 sse42 tbb test tiff v4l xine"
+IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl pch png python qt4 tbb test tiff v4l xine"
 
 RDEPEND="
 	app-arch/bzip2
@@ -123,15 +123,15 @@ src_configure() {
 	# install examples
 		$(cmake-utils_use examples INSTALL_C_EXAMPLES)
 	# build options
-		-DENABLE_PRECOMPILED_HEADERS=OFF			# for my sanity
+		$(cmake-utils_use_enable pch PRECOMPILED_HEADERS)
 		-DENABLE_OMIT_FRAME_POINTER=OFF				# dito
 		-DENABLE_FAST_MATH=OFF					# dito
-		$(cmake-utils_use_enable sse)
-		$(cmake-utils_use_enable sse2)
-		$(cmake-utils_use_enable sse3)
-		$(cmake-utils_use_enable ssse3)
-		$(cmake-utils_use_enable sse41)
-		$(cmake-utils_use_enable sse42)
+		-DENABLE_SSE=OFF					# these SSE options do nothing but
+		-DENABLE_SSE2=OFF					# add params to CFLAGS
+		-DENABLE_SSE3=OFF
+		-DENABLE_SSSE3=OFF
+		-DENABLE_SSE41=OFF
+		-DENABLE_SSE42=OFF
 		-DOPENCV_EXTRA_C_FLAGS_RELEASE=""			# black magic
 	)
 

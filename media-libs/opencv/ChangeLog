@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.74 2012/05/28 20:13:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.75 2012/06/03 08:42:59 dilfridge Exp $
+
+  03 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.0.ebuild,
+  metadata.xml:
+  sse* use flags only add to CFLAGS variable, so disable them as we do that
+  via, err, CFLAGS... Add pch use flag.
 
 *opencv-2.4.0 (28 May 2012)
 
