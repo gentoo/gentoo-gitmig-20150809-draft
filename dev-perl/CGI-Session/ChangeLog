@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CGI-Session
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.47 2012/05/28 16:11:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.48 2012/06/03 18:55:48 tove Exp $
+
+  03 Jun 2012; Torsten Veller <tove@gentoo.org> -CGI-Session-4.41.ebuild:
+  Cleanup
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> CGI-Session-4.41.ebuild,
   CGI-Session-4.480.0.ebuild:

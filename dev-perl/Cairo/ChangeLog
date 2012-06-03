@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.64 2012/05/28 14:12:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.65 2012/06/03 18:58:26 tove Exp $
+
+  03 Jun 2012; Torsten Veller <tove@gentoo.org> -Cairo-1.06.0.ebuild,
+  -Cairo-1.62.0.ebuild, -Cairo-1.81.0.ebuild, -Cairo-1.82.0.ebuild:
+  Cleanup
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> Cairo-1.90.0.ebuild:
   alpha/ia64/sparc stable wrt #411055
