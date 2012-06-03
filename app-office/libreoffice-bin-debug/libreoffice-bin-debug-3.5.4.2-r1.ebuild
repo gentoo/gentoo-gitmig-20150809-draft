@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/libreoffice-bin-debug-3.5.4.2-r1.ebuild,v 1.1 2012/06/03 08:26:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/libreoffice-bin-debug-3.5.4.2-r1.ebuild,v 1.2 2012/06/03 22:47:40 dilfridge Exp $
 
 EAPI=4
 
@@ -60,5 +60,5 @@ src_compile() { :; }
 
 src_install() {
 	dodir /usr
-	cp -aR "${S}"/usr/* "${ED}"/usr/
+	cp -aR "${S}"/usr/* "${ED}"/usr/ || die
 }
