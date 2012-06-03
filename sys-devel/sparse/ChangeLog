@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.49 2012/06/03 18:24:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.50 2012/06/03 19:30:14 ago Exp $
+
+  03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> sparse-0.4.3.ebuild:
+  Stable for amd64, wrt bug #418405
 
   03 Jun 2012; Markus Meier <maekke@gentoo.org> sparse-0.4.3.ebuild:
   arm stable, bug #418405
