@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.11 2012/05/05 02:54:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.12 2012/06/03 13:42:44 jlec Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -121,10 +121,13 @@ src_prepare() {
 	sed -i -e "s:gnomevfs::" "${S}/"xulrunner/confvars.sh \
 		|| die "Failed to remove gnomevfs extension"
 
+	# gcc-4.7 patch
+	epatch "${FILESDIR}/${P}-gcc47.patch"
+
 	eautoreconf
 
 	cd js/src
-	eautoreconf
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_configure() {
