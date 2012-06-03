@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.59 2012/05/02 20:22:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.60 2012/06/03 03:28:33 xmw Exp $
+
+  03 Jun 2012; Michael Weber <xmw@gentoo.org> pommed-1.31.ebuild:
+  ppc stable (bug 389661)
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> pommed-1.21-r1.ebuild,
   pommed-1.30.ebuild, pommed-1.31.ebuild, pommed-1.39.ebuild:
