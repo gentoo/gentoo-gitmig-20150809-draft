@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uulib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.19 2010/01/14 21:43:07 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.20 2012/06/03 02:21:55 vapier Exp $
+
+  03 Jun 2012; Mike Frysinger <vapier@gentoo.org> uulib-0.5.20.ebuild:
+  Update to EAPI=4 and respect ar/ranlib settings.
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> uulib-0.5.20.ebuild:
   Transfer Prefix keywords
