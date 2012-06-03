@@ -17,3 +17,4 @@ move dev-texlive/texlive-latex3 dev-texlive/texlive-latexrecommended
 move net-libs/axTLS net-libs/axtls
 move x11-misc/tudor-volumed media-sound/tudor-volumed
 move media-video/leechcraft-lmp media-sound/leechcraft-lmp
+move x11-themes/gtk-engines-nimbus x11-themes/nimbus
