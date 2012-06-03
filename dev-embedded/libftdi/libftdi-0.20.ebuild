@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.20.ebuild,v 1.1 2012/03/30 03:46:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.20.ebuild,v 1.2 2012/06/03 03:18:53 vapier Exp $
 
 EAPI="2"
 
-inherit cmake-utils
+inherit cmake-utils python
 
 if [[ ${PV} == 9999* ]] ; then
 	EGIT_REPO_URI="git://developer.intra2net.com/${PN}"
@@ -26,6 +26,12 @@ RDEPEND="virtual/libusb:0
 	python? ( dev-lang/python )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+src_prepare() {
+	sed -i \
+		-e "s:[$]{PYTHON_LIB_INSTALL}/../site-packages:$(python_get_sitedir):" \
+		bindings/CMakeLists.txt || die
+}
 
 src_configure() {
 	mycmakeargs=(
