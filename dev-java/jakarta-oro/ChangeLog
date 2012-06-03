@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jakarta-oro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.18 2012/05/03 18:05:52 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.19 2012/06/03 19:33:19 ago Exp $
+
+  03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> jakarta-oro-2.0.8-r3.ebuild:
+  Stable for amd64, wrt bug #419195
 
 *jakarta-oro-2.0.8-r3 (03 May 2012)
 
