@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.2 2012/05/21 14:32:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.3 2012/06/03 14:23:03 xmw Exp $
 
 EAPI=4
 
-inherit multilib versionator qt4-r2
+inherit eutils multilib qt4-r2
 
 DESCRIPTION="Use Fingerprint Devices with Linux"
 HOMEPAGE="http://www.n-view.net/Appliance/fingerprint/"
@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}"
 QA_SONAME="/usr/lib/libbsapi.so /usr/lib64/libbsapi.so"
 QA_PRESTRIPPED="/usr/lib/libbsapi.so /usr/lib64/libbsapi.so"
 QA_FLAGS_IGNORED="/usr/lib/libbsapi.so /usr/lib64/libbsapi.so"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-unistd.patch
+}
 
 src_configure() {
 	eqmake4 \
