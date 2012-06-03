@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.176 2012/06/02 22:00:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.177 2012/06/03 17:50:58 pesa Exp $
+
+  03 Jun 2012; Davide Pesavento <pesa@gentoo.org> -eric-4.5.0.ebuild,
+  -eric-5.2.0.ebuild, eric-4.5.3.ebuild, eric-5.2.2.ebuild:
+  x86 stable wrt bug 418953, remove old.
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> eric-4.5.3.ebuild,
   eric-5.2.2.ebuild:
