@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/iptstate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.39 2012/06/03 08:42:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.40 2012/06/03 08:45:16 ssuominen Exp $
 
   03 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -iptstate-2.2.1.ebuild,
   -files/iptstate-2.2.1-gcc43.patch, -iptstate-2.2.2.ebuild:
@@ -10,7 +10,7 @@
 
   03 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +iptstate-2.2.5.ebuild:
   Version bump. Use correct license (ZLIB instead of as-is). Stop forcing -g
-  and -O2 in CXXFLAGS.
+  and -O2 in CXXFLAGS. Remove empty CPPFLAGS= to respect environment flags.
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> iptstate-2.2.1.ebuild,
   iptstate-2.2.2.ebuild, iptstate-2.2.3.ebuild:
