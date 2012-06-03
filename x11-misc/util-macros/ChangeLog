@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/util-macros
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.117 2012/05/04 15:36:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.118 2012/06/03 11:15:15 chithanh Exp $
+
+  03 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  util-macros-1.17.ebuild:
+  Add stable keyword for s390, which was missed by `ekeyword all'.
 
   04 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   util-macros-1.17.ebuild:
