@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.0.ebuild,v 1.2 2012/06/03 08:42:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.0.ebuild,v 1.3 2012/06/03 08:45:48 dilfridge Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
-IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl pch png python qt4 tbb test tiff v4l xine"
+IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl pch png python qt4 tbb testprograms tiff v4l xine"
 
 RDEPEND="
 	app-arch/bzip2
@@ -119,7 +119,7 @@ src_configure() {
 		$(cmake-utils_use_build doc DOCS)
 		$(cmake-utils_use_build examples)
 		-DBUILD_PERF_TESTS=ON
-		$(cmake-utils_use_build test TESTS)
+		$(cmake-utils_use_build testprograms TESTS)
 	# install examples
 		$(cmake-utils_use examples INSTALL_C_EXAMPLES)
 	# build options

@@ -18,5 +18,6 @@ Face Recognition; Gesture Recognition; Motion Tracking, Ego Motion, Motion Under
 	<flag name="sse3">Enable optimization for SSE3 capable chips</flag>
 	<flag name="ssse3">faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
 	<flag name="tbb">Add support for the Intel threadingbuildingblocks library</flag>
+	<flag name="testprograms">Build and install programs for testing OpenCV (performance)</flag>
 </use>
 </pkgmetadata>
