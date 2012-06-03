@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13818 2012/06/03 22:38:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13819 2012/06/03 23:24:13 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (04 Jun 2012)
+# Dead upstream. Security problems. Bug #249112
+# Removal in 30 days
+net-misc/ptrtd
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (03 Jun 2012)
 # Not maintained well in Gentoo for a long time. Better support 
