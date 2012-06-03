@@ -1,5 +1,10 @@
 
 
+*cgminer-2.4.2 (03 Jun 2012)
+
+  03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.4.2.ebuild:
+  Version bump
+
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> cgminer-2.3.4.ebuild,
   cgminer-2.3.5.ebuild, cgminer-2.3.6.ebuild, cgminer-2.4.0.ebuild,
   cgminer-2.4.1.ebuild:
