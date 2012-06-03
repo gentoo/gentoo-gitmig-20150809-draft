@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/haskell-platform
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.6 2012/04/11 20:37:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.7 2012/06/03 04:40:19 gienah Exp $
+
+*haskell-platform-2011.4.0.0 (03 Jun 2012)
+*haskell-platform-2012.2.0.0 (03 Jun 2012)
+
+  03 Jun 2012; Mark Wright <gienah@gentoo.org>
+  +haskell-platform-2011.4.0.0.ebuild, +haskell-platform-2012.2.0.0.ebuild,
+  metadata.xml:
+  Bump haskell-platform to 2012.2.0.0 and include previous 2011.4.0.0 version
+  for ghc 7.0.4
 
 *haskell-platform-2011.2.0.1-r2 (11 Apr 2012)
 
