@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r10.ebuild,v 1.1 2012/05/20 07:25:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r10.ebuild,v 1.2 2012/06/03 13:54:26 hd_brummy Exp $
 
 EAPI="4"
 
@@ -84,6 +84,8 @@ pkg_setup() {
 
 	use debug && append-flags -g
 	PLUGIN_LIBDIR="/usr/$(get_libdir)/vdr/plugins"
+
+	tc-export CC CXX
 }
 
 add_cap() {
