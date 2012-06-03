@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1-r1.ebuild,v 1.1 2012/06/03 20:29:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1-r1.ebuild,v 1.2 2012/06/03 20:30:59 dilfridge Exp $
 
 EAPI=4
 
@@ -188,7 +188,7 @@ src_unpack() {
 		||die "sed .desktop fix failed"
 
 	# fix braindead error in nppdf.so (bug 412051)
-	base64 -d > ${WORKDIR}/nppdf.so.patch << ENDOFFILE
+	base64 -d > "${WORKDIR}/nppdf.so.patch" << ENDOFFILE
 QlNESUZGNDBIAAAAAAAAAC8AAAAAAAAAYL0CAAAAAABCWmg5MUFZJlNZFBL6EAAAFvBh+DwgDAgQ
 QAAAEABAIAAgACICaGjJtQoaaYAFPzpGDIjiUXSFYEuGy1ix8XckU4UJAUEvoQBCWmg5MUFZJlNZ
 jrYrlQABYGAAwAAIAAAIIAAwzAUppgKbECni7kinChIR1sVyoEJaaDkxQVkmU1kzGPRGAAAAEYAA
@@ -196,7 +196,7 @@ AIYFAwAgACIHqbUIYAdBF8XckU4UJAzGPRGA
 ENDOFFILE
 	einfo "Patching nppdf.so"
 	mv Adobe/Reader9/Browser/intellinux/nppdf.so Adobe/Reader9/Browser/intellinux/nppdf.so.orig || die
-	bspatch Adobe/Reader9/Browser/intellinux/nppdf.so.orig Adobe/Reader9/Browser/intellinux/nppdf.so ${WORKDIR}/nppdf.so.patch || die
+	bspatch Adobe/Reader9/Browser/intellinux/nppdf.so.orig Adobe/Reader9/Browser/intellinux/nppdf.so "${WORKDIR}/nppdf.so.patch" || die
 	rm Adobe/Reader9/Browser/intellinux/nppdf.so.orig || die
 }
 
