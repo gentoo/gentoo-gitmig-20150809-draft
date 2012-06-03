@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.84 2012/05/04 06:46:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.85 2012/06/03 15:37:32 jlec Exp $
+
+  03 Jun 2012; Justin Lecher <jlec@gentoo.org> celestia-1.6.1.ebuild,
+  +files/celestia-1.6.1-gcc47.patch:
+  Add patch for gcc47, #414015
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> celestia-1.6.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
