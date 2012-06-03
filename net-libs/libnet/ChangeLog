@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.89 2012/05/31 15:06:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.90 2012/06/03 18:22:16 maekke Exp $
+
+  03 Jun 2012; Markus Meier <maekke@gentoo.org> libnet-1.0.2a-r4.ebuild:
+  arm stable, bug #418275
 
   31 May 2012; Jeroen Roovers <jer@gentoo.org> libnet-1.0.2a-r4.ebuild:
   Stable for HPPA (bug #418275).
