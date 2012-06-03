@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10-r1.ebuild,v 1.11 2012/05/24 14:12:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10-r1.ebuild,v 1.12 2012/06/03 12:48:54 jlec Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic gnome.org libtool virtualx autotools
+inherit eutils flag-o-matic gnome.org virtualx autotools
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
@@ -80,6 +80,10 @@ set_gtk2_confdir() {
 }
 
 src_prepare() {
+	# gold detected underlinking
+	# Add missing libs, patch sent upstream
+	epatch "${FILESDIR}/${P}-gold.patch"
+
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	epatch "${FILESDIR}/${PN}-2.21.3-multilib.patch"
