@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2010.06.15-r1.ebuild,v 1.4 2011/11/24 09:12:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2010.06.15-r1.ebuild,v 1.5 2012/06/03 12:53:18 jlec Exp $
 
 EAPI="3"
 
@@ -36,9 +36,12 @@ src_prepare() {
 		src/build-system/configure || die
 	epatch \
 		"${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-gcc47.patch \
 		"${WORKDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-libpng15.patch \
 		"${FILESDIR}"/${P}-glibc-214.patch
+
+	use prefix && append-ldflags -Wl,-rpath,"${EPREFIX}/usr/$(get_libdir)/${PN}"
 }
 
 src_configure() {
