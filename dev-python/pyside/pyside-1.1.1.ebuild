@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.1.ebuild,v 1.4 2012/06/02 23:08:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.1.1.ebuild,v 1.5 2012/06/03 16:14:23 pesa Exp $
 
 EAPI=4
 
@@ -73,6 +73,7 @@ src_prepare() {
 	# library suffixed with the correct python version.
 	sed -i -e '/^Requires:/ s/shiboken$/&@SHIBOKEN_PYTHON_SUFFIX@/' \
 		libpyside/pyside.pc.in || die
+
 	if use prefix; then
 		cp "${FILESDIR}"/rpath.cmake .
 		sed \
@@ -118,7 +119,9 @@ src_test() {
 	testing() {
 		CMAKE_BUILD_DIR="${S}_${PYTHON_ABI}" virtualmake
 	}
+	python_enable_pyc
 	python_execute_function testing
+	python_disable_pyc
 }
 
 src_install() {
