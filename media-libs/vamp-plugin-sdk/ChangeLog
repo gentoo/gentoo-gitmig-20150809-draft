@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vamp-plugin-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.40 2012/03/18 18:11:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.41 2012/06/03 13:52:56 blueness Exp $
+
+  03 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  vamp-plugin-sdk-2.3.ebuild:
+  Keyword ~mips
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> vamp-plugin-sdk-2.0.ebuild,
   vamp-plugin-sdk-2.1.ebuild, vamp-plugin-sdk-2.2.ebuild,
