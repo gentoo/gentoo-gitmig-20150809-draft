@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13817 2012/06/03 20:51:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13818 2012/06/03 22:38:33 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -361,11 +361,6 @@ sys-fs/beaglefs
 app-dicts/canna-canda-med
 app-dicts/canna-shion
 app-dicts/canna-zipcode
-
-# Markos Chandras <hwoarang@gentoo.org> (06 May 2012)
-# Stopped working long time ago. Removal in 30 days
-# Use emesene:2 as an alternative
-net-im/emesene:0
 
 # Johannes Huber <johu@gentoo.org> (03 May 2012)
 # Unstable dev channel release. Fixes build with gcc47
