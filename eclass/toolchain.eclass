@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.546 2012/06/03 09:00:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.547 2012/06/03 09:02:36 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -811,10 +811,12 @@ gcc-abi-map() {
 }
 
 gcc-multilib-configure() {
-	# if multilib is disabled, get out quick!
 	if ! is_multilib ; then
 		confgcc+=" --disable-multilib"
-		return
+		# Fun times: if we are building for a target that has multiple
+		# possible ABI formats, and the user has told us to pick one
+		# that isn't the default, then not specifying it via the list
+		# below will break that on us.
 	else
 		confgcc+=" --enable-multilib"
 	fi
