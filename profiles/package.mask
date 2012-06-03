@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13816 2012/06/02 20:48:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13817 2012/06/03 20:51:18 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (03 Jun 2012)
+# Not maintained well in Gentoo for a long time. Better support 
+# for zeroconf is available via net-dns/avahi[mdnsresponder-compat]
+# - please use that instead. mDNSResponder will be removed soon.
+net-misc/mDNSResponder
 
 # Torsten Veller <tove@gentoo.org> (02 Jun 2012)
 # Install perl modules in the site branch (#280728)
