@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.45 2012/05/09 14:31:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.46 2012/06/03 17:38:58 tove Exp $
+
+  03 Jun 2012; Torsten Veller <tove@gentoo.org> -SGMLSpm-1.03-r5.ebuild,
+  -files/SGMLSpm-1.03-Makefile:
+  Cleanup
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> SGMLSpm-1.03-r6.ebuild:
   keyword ~amd64-fbsd
