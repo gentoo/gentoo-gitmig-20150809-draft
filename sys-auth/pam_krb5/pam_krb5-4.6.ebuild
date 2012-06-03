@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-4.4.ebuild,v 1.1 2011/02/18 12:48:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-4.6.ebuild,v 1.1 2012/06/03 12:27:14 eras Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit multilib
 
@@ -24,14 +24,12 @@ S="${WORKDIR}/${P/_/-}"
 
 src_configure() {
 	econf \
-		  --libdir=/$( get_libdir )
+		  --libdir=/$(get_libdir)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install
 	dodoc NEWS README TODO
 
-	# should not be necessary for a pam plugin
-	# also shouldnotlink=yes
-	rm "${D}/$( get_libdir )/security/pam_krb5.la"
+	rm "${D}/$(get_libdir)/security/pam_krb5.la"
 }
