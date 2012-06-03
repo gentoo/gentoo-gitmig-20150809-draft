@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/twolame
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.45 2012/05/29 13:51:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.46 2012/06/03 13:55:13 blueness Exp $
+
+  03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> twolame-0.3.13.ebuild:
+  Keyword ~mips
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> twolame-0.3.13.ebuild:
   keyword ~amd64-fbsd
