@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.48 2012/05/28 16:05:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.49 2012/06/03 18:22:30 tove Exp $
+
+  03 Jun 2012; Torsten Veller <tove@gentoo.org> -GnuPG-Interface-0.42.ebuild,
+  -GnuPG-Interface-0.440.0.ebuild:
+  Cleanup
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> GnuPG-Interface-0.42.ebuild,
   GnuPG-Interface-0.440.0.ebuild, GnuPG-Interface-0.450.0.ebuild:
