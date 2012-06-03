@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.121 2011/12/20 18:13:55 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.122 2012/06/03 18:30:50 ago Exp $
+
+  03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ncftp-3.2.5-r1.ebuild:
+  Stable for amd64, wrt bug #419245
 
 *ncftp-3.2.5-r1 (20 Dec 2011)
 
