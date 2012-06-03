@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-aurora/gtk-engines-aurora-1.5.1.ebuild,v 1.6 2012/06/03 08:54:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-aurora/gtk-engines-aurora-1.5.1.ebuild,v 1.7 2012/06/03 08:56:01 ssuominen Exp $
 
 EAPI=4
 inherit eutils versionator
 
 MY_MAJ=$(get_version_component_range 1-2)
 
-DESCRIPTION="Aurora GTK+ Theme Engine"
+DESCRIPTION="Aurora GTK+ 2.x Theme Engine"
 HOMEPAGE="http://www.gnome-look.org/content/show.php?content=56438"
 SRC_URI="http://gnome-look.org/CONTENT/content-files/56438-aurora-${PV}.tar.bz2"
 
