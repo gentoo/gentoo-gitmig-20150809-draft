@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py2play
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.23 2012/05/29 12:25:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.24 2012/06/03 02:50:54 xmw Exp $
+
+  03 Jun 2012; Michael Weber <xmw@gentoo.org> py2play-0.1.10.ebuild:
+  ppc stable (bug 418015)
 
   29 May 2012; Agostino Sarubbo <ago@gentoo.org> py2play-0.1.10.ebuild:
   Stable for amd64, wrt bug #418015
