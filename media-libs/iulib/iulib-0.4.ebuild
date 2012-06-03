@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/iulib-0.4.ebuild,v 1.6 2010/11/08 15:13:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/iulib-0.4.ebuild,v 1.7 2012/06/03 02:42:24 vapier Exp $
 
-inherit eutils toolchain-funcs
+EAPI="4"
+
+inherit eutils toolchain-funcs multilib scons-utils
 
 DESCRIPTION="easy-to-use image and video I/O functions"
 HOMEPAGE="http://code.google.com/p/iulib/"
@@ -24,24 +26,28 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	dev-util/scons"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.4-scons-build-env.patch
 	sed -i \
-		-e "/^have_sdl = 1/s:1:`use sdl && echo 1 || echo 0`:" \
+		-e "/^have_sdl = 1/s:1:$(usex sdl 1 0):" \
 		-e '/tiff/s:inflate:TIFFOpen:' \
 		-e '/progs.Append(LIBS=libiulib)/s:Append:Prepend:' \
+		-e "/^libdir/s:/lib:/$(get_libdir):" \
 		SConstruct || die #297326 #308955 #310439
 	sed -i '/SDL.SDL_image.h/d' utils/dgraphics.cc || die #310443
+	tc-export AR CC CXX RANLIB
+}
+
+src_configure() {
+	# Avoid configure as we build/install with scons
+	:
 }
 
 src_compile() {
-	tc-export CC CXX
-	scons prefix=/usr || die
+	escons prefix=/usr
 }
 
 src_install() {
-	scons install prefix="${D}/usr" || die
+	escons prefix="${D}"/usr install
 	dodoc CHANGES README TODO
 }
