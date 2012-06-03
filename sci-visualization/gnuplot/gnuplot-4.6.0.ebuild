@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.0.ebuild,v 1.3 2012/05/03 11:49:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.0.ebuild,v 1.4 2012/06/03 14:03:32 jlec Exp $
 
 EAPI=4
 
-inherit elisp-common multilib wxwidgets
+inherit elisp-common flag-o-matic multilib wxwidgets
 
 DESCRIPTION="Command-line driven interactive plotting program"
 HOMEPAGE="http://www.gnuplot.info/"
@@ -88,6 +88,12 @@ src_prepare() {
 	# Add special version identification as required by provision 2
 	# of the gnuplot license
 	sed -i -e "1s/.*/& (Gentoo revision ${PR})/" PATCHLEVEL || die
+
+	# hacky workaround
+	# Please hack the buildsystem if you like
+	if use prefix && use qt4; then
+		append-ldflags -Wl,-rpath,"${EPREFIX}"/usr/$(get_libdir)/qt4
+	fi
 }
 
 src_configure() {
