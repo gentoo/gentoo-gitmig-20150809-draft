@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xvkbd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.25 2011/08/02 05:50:13 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.26 2012/06/04 18:19:27 xmw Exp $
+
+*xvkbd-3.3 (04 Jun 2012)
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> +xvkbd-3.3.ebuild:
+  Version bump (reported by df, bug 415831)
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> xvkbd-3.2.ebuild:
   Renamed x11-libs/Xaw3d to x11-libs/libXaw3d.
