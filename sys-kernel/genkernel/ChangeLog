@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.310 2012/05/26 10:03:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.311 2012/06/04 04:29:01 josejx Exp $
+
+  04 Jun 2012; Joseph Jezak <josejx@gentoo.org> genkernel-3.4.24_p1.ebuild:
+  Marked ppc stable for bug #415483.
 
   26 May 2012; Markus Meier <maekke@gentoo.org> genkernel-3.4.24_p1.ebuild:
   arm stable, bug #415483
