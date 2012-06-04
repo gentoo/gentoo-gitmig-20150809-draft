@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3-r2.ebuild,v 1.1 2011/02/03 09:43:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/nettop-0.2.3-r2.ebuild,v 1.2 2012/06/04 19:31:43 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://srparish.net/software/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="
