@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lzmajio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/ChangeLog,v 1.7 2012/06/03 19:29:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/ChangeLog,v 1.8 2012/06/04 08:22:51 johu Exp $
+
+  04 Jun 2012; Johannes Huber <johu@gentoo.org> lzmajio-0.95.ebuild:
+  Stable for x86, wrt bug #418721
 
   03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> lzmajio-0.95.ebuild:
   Stable for amd64, wrt bug #418721

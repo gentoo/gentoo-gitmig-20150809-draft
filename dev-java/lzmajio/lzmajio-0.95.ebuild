@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/lzmajio-0.95.ebuild,v 1.3 2012/06/03 19:29:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/lzmajio-0.95.ebuild,v 1.4 2012/06/04 08:22:51 johu Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
@@ -13,7 +13,7 @@ SRC_URI="http://comsci.liu.edu/~league/dist/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
