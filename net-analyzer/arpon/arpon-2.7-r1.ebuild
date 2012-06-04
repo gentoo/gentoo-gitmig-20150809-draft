@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/arpon-2.7-r1.ebuild,v 1.1 2012/03/22 21:03:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/arpon-2.7-r1.ebuild,v 1.2 2012/06/04 09:37:31 ago Exp $
 
-EAPI="2"
+EAPI="4"
 inherit cmake-utils
 
 DESCRIPTION="ArpON (Arp handler inspectiON) is a portable Arp handler."
@@ -10,7 +10,7 @@ DESCRIPTION="ArpON (Arp handler inspectiON) is a portable Arp handler."
 MY_PN="ArpON"
 MY_P="${MY_PN}-${PV}"
 HOMEPAGE="http://arpon.sourceforge.net/"
-SRC_URI="mirror://sourceforge/arpon/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -31,7 +31,7 @@ src_prepare() {
 
 src_install() {
 	cmake-utils_src_install
-	newinitd "${FILESDIR}"/${PN}.initd ${PM}
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 }
 
