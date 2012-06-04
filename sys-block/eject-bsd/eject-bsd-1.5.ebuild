@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/eject-bsd/eject-bsd-1.5.ebuild,v 1.7 2012/04/24 10:42:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/eject-bsd/eject-bsd-1.5.ebuild,v 1.8 2012/06/04 22:31:12 alexxy Exp $
 
 inherit eutils portability toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ports.jp.FreeBSD.org/pub/FreeBSD-jp/OD/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
