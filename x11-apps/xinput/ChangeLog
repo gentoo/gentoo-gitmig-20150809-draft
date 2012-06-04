@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinput
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.42 2012/06/03 10:29:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.43 2012/06/04 13:08:00 chithanh Exp $
+
+  04 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xinput-1.6.0.ebuild:
+  Add missing libXinerama dependency, bug #419613.
 
 *xinput-1.6.0 (03 Jun 2012)
 
