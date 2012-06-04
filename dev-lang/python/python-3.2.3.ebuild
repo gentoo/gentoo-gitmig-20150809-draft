@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.3.ebuild,v 1.13 2012/05/17 08:39:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.3.ebuild,v 1.14 2012/06/04 23:31:27 vapier Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -72,6 +72,7 @@ src_prepare() {
 
 	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_SUFFIX="patch" \
 		epatch "${WORKDIR}/${PV}-${PATCHSET_REVISION}"
+	epatch "${FILESDIR}"/${PN}-3.2.3-x32.patch
 
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \

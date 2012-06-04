@@ -1,9 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.601 2012/06/04 18:09:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.602 2012/06/04 23:31:27 vapier Exp $
 
   04 Jun 2012; Mike Frysinger <vapier@gentoo.org> +files/python-3.2.3-x32.patch,
-  python-3.2.3-r1.ebuild:
+  python-3.2.3.ebuild, python-3.2.3-r1.ebuild:
   Fix posix subprocess module on x32.
 
   26 May 2012; Raúl Porcel <armin76@gentoo.org> python-2.6.8.ebuild,
