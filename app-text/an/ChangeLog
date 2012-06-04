@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.28 2011/01/25 02:50:58 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.29 2012/06/04 10:33:04 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> an-0.95.3.2.ebuild:
+  Stable for amd64, wrt bug #418637
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> an-0.95.3.ebuild,
   files/an-0.95-make.patch, files/an_0.95-3.diff:
