@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.10.2.ebuild,v 1.4 2011/11/10 19:26:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.10.2.ebuild,v 1.5 2012/06/04 07:12:22 zmedico Exp $
 
 EAPI=2
 
-inherit go-mono mono
+inherit go-mono mono user
 
 PATCHDIR="${FILESDIR}/2.2/"
 
