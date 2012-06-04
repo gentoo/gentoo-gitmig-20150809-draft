@@ -1,6 +1,9 @@
 # ChangeLog for virtual/shadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/shadow/ChangeLog,v 1.5 2012/05/29 08:29:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/shadow/ChangeLog,v 1.6 2012/06/04 18:25:03 grobian Exp $
+
+  04 Jun 2012; Fabian Groffen <grobian@gentoo.org> shadow-0.ebuild:
+  Marked ~m68k-mint, bug #418389
 
   29 May 2012; Fabian Groffen <grobian@gentoo.org> shadow-0.ebuild:
   Marked *-macos, *-solaris
