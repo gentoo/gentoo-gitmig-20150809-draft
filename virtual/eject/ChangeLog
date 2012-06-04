@@ -1,6 +1,9 @@
 # ChangeLog for virtual/eject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/eject/ChangeLog,v 1.6 2012/04/05 18:40:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/eject/ChangeLog,v 1.7 2012/06/04 22:32:58 alexxy Exp $
+
+  04 Jun 2012; Alexey Shvetsov <alexxy@gentoo.org> eject-0.ebuild:
+  [virtual/eject] Works on ~amd64-fbsd
 
   05 Apr 2012; Mike Frysinger <vapier@gentoo.org> eject-0.ebuild:
   Allow newer versions of util-linux to provide eject (since it does).
