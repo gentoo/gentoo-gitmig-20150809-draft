@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.6.6.ebuild,v 1.1 2011/05/19 18:02:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.6.6.ebuild,v 1.2 2012/06/04 21:00:17 zmedico Exp $
 
-inherit eutils multilib
+inherit eutils multilib user
 
 DESCRIPTION="High-performance interface between the MTA and content checkers."
 HOMEPAGE="http://www.ijs.si/software/amavisd/"
