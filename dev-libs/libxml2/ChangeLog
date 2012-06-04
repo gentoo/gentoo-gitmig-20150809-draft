@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.351 2012/05/29 15:31:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.352 2012/06/04 04:36:32 tetromino Exp $
+
+  04 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libxml2-2.8.0-r1.ebuild, +files/libxml2-2.8.0-icu-linking.patch:
+  De-uglify fix for bug #417539 with an upstreamable patch, thanks to Rafał
+  Mużyło and Arfrever.
 
   29 May 2012; Brent Baude <ranger@gentoo.org> libxml2-2.8.0_rc1.ebuild:
   Marking libxml2-2.8.0_rc1 ppc64 for bug 416209

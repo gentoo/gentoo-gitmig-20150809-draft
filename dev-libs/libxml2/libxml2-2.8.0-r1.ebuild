@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0-r1.ebuild,v 1.3 2012/05/27 15:17:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0-r1.ebuild,v 1.4 2012/06/04 04:36:32 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -36,7 +36,6 @@ RDEPEND="sys-libs/zlib
 	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
-	python? ( dev-util/fix-la-relink-command )
 	hppa? ( >=sys-devel/binutils-2.15.92.0.2 )"
 
 S="${WORKDIR}/${PN}-${PV%_rc*}"
@@ -69,6 +68,9 @@ src_prepare() {
 	epunt_cxx
 
 	epatch "${FILESDIR}/${PN}-2.7.8-disable_static_modules.patch"
+
+	# Prevent liking to out-of-build-tree libxml2, bug #417539
+	epatch "${FILESDIR}/${PN}-2.8.0-icu-linking.patch"
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
@@ -153,8 +155,6 @@ src_install() {
 
 	if use python; then
 		installation() {
-			# bug #417539
-			fix-la-relink-command . || die "fix-la-relink-command failed"
 			emake DESTDIR="${D}" \
 				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
 				docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
