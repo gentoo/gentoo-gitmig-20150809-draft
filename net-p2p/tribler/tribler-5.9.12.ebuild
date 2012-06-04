@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.12.ebuild,v 1.2 2012/06/04 11:50:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.12.ebuild,v 1.3 2012/06/04 20:08:24 blueness Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2:2.7"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="sqlite"
 
 inherit eutils python
 
@@ -18,8 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="vlc"
 
-RDEPEND="<dev-lang/python-3[sqlite]
-	>=dev-python/m2crypto-0.16
+RDEPEND=">=dev-python/m2crypto-0.16
 	>=dev-python/wxpython-2.8
 	>=dev-python/apsw-3.6
 	>=dev-libs/openssl-0.9.8

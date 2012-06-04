@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/tribler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.14 2012/06/04 11:50:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.15 2012/06/04 20:08:24 blueness Exp $
+
+  04 Jun 2012; Anthony G. Basile <blueness@gentoo.org> tribler-5.9.12.ebuild:
+  Improve python dependency, bug #419339 again
 
   04 Jun 2012; Anthony G. Basile <blueness@gentoo.org> tribler-5.9.12.ebuild:
   RDEPEND <dev-lang/python-3 to prevent pulling in python-3, bug #419339
