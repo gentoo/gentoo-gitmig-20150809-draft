@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.52 2012/03/11 18:25:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.53 2012/06/04 19:29:55 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libnids-1.24-r2.ebuild:
+  Stable for amd64, wrt bug #419271
 
   11 Mar 2012; Jeroen Roovers <jer@gentoo.org> -libnids-1.18.ebuild,
   files/libnids-1.18-chksum.c-ebx.patch, files/libnids-1.18-elif.patch,
