@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.12.ebuild,v 1.1 2012/06/02 15:46:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.12.ebuild,v 1.2 2012/06/04 11:50:19 blueness Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.7"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="vlc"
 
-RDEPEND=">=dev-lang/python-2.5[sqlite]
+RDEPEND="<dev-lang/python-3[sqlite]
 	>=dev-python/m2crypto-0.16
 	>=dev-python/wxpython-2.8
 	>=dev-python/apsw-3.6
