@@ -1,6 +1,13 @@
 # ChangeLog for media-radio/xastir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.20 2012/03/07 16:07:40 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.21 2012/06/04 17:51:52 tomjbe Exp $
+
+  04 Jun 2012; Thomas Beierlein <tomjbe@gentoo.org> -xastir-1.9.8-r1.ebuild,
+  -xastir-2.0.0.ebuild, xastir-2.0.0-r1.ebuild, xastir-2.0.0-r2.ebuild,
+  +files/xastir-2.0.0-proj48.diff:
+  Fix breakage with >=sci-libs-4.8.0. See
+  http://www.mail-archive.com/xastir-dev@lists.xastir.org/msg00285.html for
+  details. Drop old
 
 *xastir-2.0.0-r2 (07 Mar 2012)
 
