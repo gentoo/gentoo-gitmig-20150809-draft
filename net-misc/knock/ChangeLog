@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.43 2012/06/04 10:07:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.44 2012/06/04 10:42:56 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> knock-0.5-r2.ebuild:
+  ppc stable (bug 419307)
 
   04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> knock-0.5-r2.ebuild:
   Stable for amd64, wrt bug #419307
