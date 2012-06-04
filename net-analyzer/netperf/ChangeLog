@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netperf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.49 2011/12/31 20:14:06 idl0r Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.50 2012/06/04 19:31:14 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> netperf-2.5.0-r1.ebuild:
+  Stable for amd64, wrt bug #419221
 
 *netperf-2.5.0-r1 (31 Dec 2011)
 *netperf-2.4.5-r2 (31 Dec 2011)
