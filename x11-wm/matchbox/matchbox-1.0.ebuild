@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-1.0.ebuild,v 1.11 2012/03/05 11:10:31 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-1.0.ebuild,v 1.12 2012/06/04 00:38:11 xmw Exp $
 
 DESCRIPTION="Light weight WM designed for use on PDA computers"
 HOMEPAGE="http://matchbox-project.org/"
@@ -10,7 +10,7 @@ IUSE="minimal"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="amd64 ~arm ~hppa ~ppc x86"
+KEYWORDS="amd64 ~arm ~hppa ppc x86"
 
 RDEPEND="x11-wm/matchbox-common
 	x11-wm/matchbox-desktop
