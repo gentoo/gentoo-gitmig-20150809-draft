@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12.ebuild,v 1.2 2012/06/04 18:52:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12.ebuild,v 1.3 2012/06/04 19:46:14 cardoe Exp $
 
 EAPI=4
 
@@ -99,7 +99,7 @@ pkg_setup() {
 	python_pkg_setup
 
 	enewgroup qemu 77
-	enewuser qemu 77 -1 -1 qemu
+	enewuser qemu 77 -1 -1 qemu kvm
 }
 
 src_prepare() {
