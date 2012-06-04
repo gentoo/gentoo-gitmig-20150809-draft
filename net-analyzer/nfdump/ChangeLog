@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nfdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.26 2012/04/06 14:18:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.27 2012/06/04 12:10:40 jer Exp $
+
+  04 Jun 2012; Jeroen Roovers <jer@gentoo.org> nfdump-1.6.6.ebuild:
+  Add virtual/yacc dependency.
 
   06 Apr 2012; Jeroen Roovers <jer@gentoo.org> -nfdump-1.6.1-r2.ebuild:
   Old.

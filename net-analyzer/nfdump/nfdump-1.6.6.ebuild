@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.6.ebuild,v 1.1 2012/03/28 15:21:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.6.ebuild,v 1.2 2012/06/04 12:10:40 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -19,11 +19,16 @@ IUSE="compat15 debug ftconv nfprofile sflow"
 
 CDEPEND="
 	ftconv? ( sys-libs/zlib net-analyzer/flow-tools )
-	nfprofile? ( net-analyzer/rrdtool )"
+	nfprofile? ( net-analyzer/rrdtool )
+"
 #	readpcap? ( net-libs/libpcap )"
-DEPEND="${CDEPEND}
-	sys-devel/flex"
-RDEPEND=${CDEPEND}"
+DEPEND="
+	${CDEPEND}
+	sys-devel/flex
+	virtual/yacc
+"
+RDEPEND="
+	${CDEPEND}
 	dev-lang/perl"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
