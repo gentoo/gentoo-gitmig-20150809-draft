@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.78 2012/06/01 20:18:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.79 2012/06/04 16:14:37 scarabeus Exp $
 
 EAPI=4
 
@@ -192,7 +192,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	dev-util/mdds
 	virtual/pkgconfig
-	media-libs/sampleicc
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
 	sys-devel/bison
