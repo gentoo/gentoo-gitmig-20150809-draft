@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/oroborus-desklaunch/oroborus-desklaunch-1.1.8.ebuild,v 1.2 2012/05/05 04:53:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/oroborus-desklaunch/oroborus-desklaunch-1.1.8.ebuild,v 1.3 2012/06/04 19:36:28 xmw Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_PN=${PN/oroborus-//}
 
 DESCRIPTION="utility for creating desktop icons for Oroborus"
 HOMEPAGE="http://www.oroborus.org"
-SRC_URI="http://ftp.debian.org/debian/pool/main/d/${MY_PN}/${MY_PN}_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/d/${MY_PN}/${MY_PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
