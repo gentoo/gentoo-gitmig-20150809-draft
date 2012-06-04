@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbsload
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/ChangeLog,v 1.20 2011/04/16 17:46:53 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/ChangeLog,v 1.21 2012/06/04 19:04:44 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> bbsload-0.2.8.ebuild:
+  Fix HOMEPAGE, EAPI-4 (reported by df, bug 415815)
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> bbsload-0.2.8.ebuild:
   Remove bogus dependency on virtual/blackbox, bug 358825.
