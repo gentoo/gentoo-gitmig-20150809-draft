@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dcc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.65 2011/10/24 21:38:44 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.66 2012/06/04 23:45:28 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> dcc-1.3.102.ebuild,
+  dcc-1.3.140-r1.ebuild, dcc-1.3.97.ebuild:
+  inherit eutils for epatch
 
 *dcc-1.3.140-r1 (24 Oct 2011)
 
