@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.5 2012/05/28 23:21:25 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.6 2012/06/04 21:02:31 axs Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND="python? 2"
 
 inherit eutils autotools multilib python flag-o-matic
@@ -15,8 +15,7 @@ LICENSE="CPL-1.0"
 SLOT="0"
 #original KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 KEYWORDS=""
-# NOTE: Migration from "+X" to "X" needs checking of all reverse dependencies for use of lefty
-IUSE="cairo devil doc examples gs gtk gts java lasi nls perl python qt4 ruby svg static-libs tcl +X elibc_FreeBSD"
+IUSE="+cairo devil doc examples gs gtk gts java lasi nls perl python qt4 ruby svg static-libs tcl X elibc_FreeBSD"
 
 # Requires ksh
 RESTRICT="test"
@@ -31,25 +30,25 @@ RDEPEND="
 	>=media-libs/libpng-1.2:0
 	virtual/jpeg
 	virtual/libiconv
-	X? ( x11-libs/libXaw )
+	X? (
+		x11-libs/libXaw
+		x11-libs/libX11
+		x11-libs/libXmu
+		x11-libs/libXpm
+		x11-libs/libXt
+	)
 	cairo?	(
 		>=x11-libs/pango-1.12
 		>=x11-libs/cairo-1.1.10[svg]
 	)
 	devil?	( media-libs/devil[png,jpeg] )
 	gs?	( app-text/ghostscript-gpl )
-	gtk?	(
-		x11-libs/gtk+:2
-		>=x11-libs/pango-1.12
-		>=x11-libs/cairo-1.1.10
-	)
+	gtk?	( x11-libs/gtk+:2 )
 	gts?	( sci-libs/gts )
 	lasi?	( media-libs/lasi )
 	qt4?	(
 		x11-libs/qt-core:4
 		x11-libs/qt-gui:4
-		>=x11-libs/pango-1.12
-		>=x11-libs/cairo-1.1.10
 	)
 	ruby?	( dev-lang/ruby )
 	svg?	( gnome-base/librsvg )
@@ -63,6 +62,7 @@ DEPEND="${RDEPEND}
 	python?	( dev-lang/swig )
 	ruby?	( dev-lang/swig )
 	tcl?	( dev-lang/swig )"
+REQUIRED_USE="!cairo? ( !X !gtk !gs !lasi )"
 
 # Dependency description / Maintainer-Info:
 
@@ -71,20 +71,24 @@ DEPEND="${RDEPEND}
 #   the ones which are always compiled in, depend on zlib, gd
 # - gtk
 #   Directly depends on gtk-2.
+#   needs 'pangocairo' enabled in graphviz configuration
 #   gtk-2 depends on pango, cairo and libX11 directly.
 # - gdk-pixbuf
 #   Disabled, GTK-1 junk.
+# - glitz
+#   Disabled, no particular reason
+#   needs 'pangocairo' enabled in graphviz configuration
 # - ming
 #   flash plugin via -Tswf requires media-libs/ming-0.4. Disabled as it's
 #   incomplete.
-# - cairo:
+# - cairo/pango:
 #   Needs pango for text layout, uses cairo methods to draw stuff
-# - xlib :
+# - xlib:
 #   needs cairo+pango,
-#   can make use of gnomeui and inotify support,
+#   can make use of gnomeui and inotify support (??? unsure),
 #   needs libXaw for UI
-# - qt4 :
-#   based on ./configure it needs qt-core and qt-gui only
+#   UI also links directly against libX11, libXmu, and libXt
+#   and uses libXpm if available so we make sure it always is
 
 # There can be swig-generated bindings for the following languages (/tclpkg/gv):
 # - c-sharp (disabled)
@@ -107,8 +111,17 @@ DEPEND="${RDEPEND}
 # tkspline, tkstubs ; enabled with: --with-tk
 
 # And the commands (/cmd):
-# - dot, dotty, gvpr, lefty, lneato, tools/* :)
-# Lefty needs Xaw and X to build
+# - dot, dotty, gvedit, gvpr, lefty, lneato, smyrna, tools/* :)
+#   sci-libs/gts can be used for some of these
+# - lefty:
+#   needs Xaw and X to build
+# - gvedit (via 'qt4'):
+#   based on ./configure it needs qt-core and qt-gui only
+# - smyrna : experimental opengl front-end (via 'smyrna')
+#   currently disabled -- it segfaults a lot
+#   needs x11-libs/gtkglext, gnome-base/libglade, media-libs/freeglut
+#   sci-libs/gts, x11-libs/gtk.  Also needs 'gtk','glade','glut','gts' and 'png'
+#   with flags enabled at configure time
 
 pkg_setup() {
 	if use python; then
@@ -120,8 +133,8 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-Xaw-configure.patch \
-		"${FILESDIR}"/${P}-automake-1.11.2.patch
-	epatch "${FILESDIR}"/${P}-dot-pangocairo-link.patch
+		"${FILESDIR}"/${P}-automake-1.11.2.patch \
+		"${FILESDIR}"/${P}-dot-pangocairo-link.patch
 
 	# ToDo: Do the same thing for examples and/or
 	#       write a patch for a configuration-option
@@ -134,11 +147,9 @@ src_prepare() {
 	fi
 
 	# This is an old version of libtool
-	# use the existing ./configure option to exclude its use, instead of sed'ing it out
-	# but delete the dir since we don't need to eautoreconf it
+	# use the ./configure option to exclude its use, and
+	# delete the dir since we don't need to eautoreconf it
 	rm -rf libltdl
-	#sed -i -e '/libltdl/d' configure.ac || die
-	#sed -i -e 's/AC_LIBLTDL_CONVENIENCE/AC_LIBLTDL_INSTALLABLE/' configure.ac || die
 
 	# no nls, no gettext, no iconv macro, so disable it
 	use nls || { sed -i -e '/^AM_ICONV/d' configure.ac || die; }
@@ -167,6 +178,8 @@ src_configure() {
 		$(use_with qt4)
 		$(use_with lasi)
 		$(use_with svg rsvg)
+		$(use_with X x)
+		$(use_with X xaw)
 		$(use_with X lefty)
 		--with-digcola
 		--with-fontconfig
@@ -216,7 +229,7 @@ src_install() {
 		htmlinfodir="${EPREFIX}"/usr/share/doc/${PF}/html/info \
 		pdfdir="${EPREFIX}"/usr/share/doc/${PF}/pdf \
 		pkgconfigdir="${EPREFIX}"/usr/$(get_libdir)/pkgconfig \
-		install || die
+		install
 
 	use examples || rm -rf "${ED}"/usr/share/graphviz/demo
 
