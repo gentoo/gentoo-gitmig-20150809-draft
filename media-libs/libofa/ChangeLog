@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libofa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/ChangeLog,v 1.23 2012/05/05 08:02:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/ChangeLog,v 1.24 2012/06/04 12:51:28 jlec Exp $
+
+  04 Jun 2012; Justin Lecher <jlec@gentoo.org> libofa-0.9.3.ebuild,
+  +files/libofa-0.9.3-gcc-4.7.patch:
+  Add gcc-4.7 compatibility patch from fedora, #414141
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libofa-0.9.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

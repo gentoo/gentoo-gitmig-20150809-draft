@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.24 2012/05/05 08:02:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.25 2012/06/04 12:51:28 jlec Exp $
 
 EAPI=2
 
@@ -25,6 +25,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-gcc-4.patch
 	"${FILESDIR}"/${P}-gcc-4.3.patch
 	"${FILESDIR}"/${P}-gcc-4.4.patch
+	"${FILESDIR}"/${P}-gcc-4.7.patch
 	"${FILESDIR}"/${P}-curl-7.21.patch
 )
 
