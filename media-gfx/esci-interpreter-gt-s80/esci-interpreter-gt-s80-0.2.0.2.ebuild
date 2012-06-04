@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/esci-interpreter-gt-s80/esci-interpreter-gt-s80-0.2.0.2.ebuild,v 1.1 2012/06/04 22:56:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/esci-interpreter-gt-s80/esci-interpreter-gt-s80-0.2.0.2.ebuild,v 1.2 2012/06/04 22:57:11 flameeyes Exp $
 
 EAPI=4
 
-inherit rpm versionator
+inherit rpm versionator multilib
 
 MY_PV="$(get_version_component_range 1-3)"
 MY_PVR="$(replace_version_separator 3 -)"
