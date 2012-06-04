@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.20.ebuild,v 1.5 2012/03/18 15:54:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/oroborus-2.0.20.ebuild,v 1.6 2012/06/04 19:32:32 xmw Exp $
+
+EAPI=4
 
 DESCRIPTION="Small and fast window manager."
 HOMEPAGE="http://www.oroborus.org"
-SRC_URI="http://ftp.debian.org/debian/pool/main/o/${PN}/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/o/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,18 +22,17 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
 
-src_compile() {
+src_configure() {
 	econf --disable-dependency-tracking
-	emake || die "emake failed."
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install
 
 	if use gnome; then
 		insinto /usr/share/gnome/wm-properties
 		doins "${FILESDIR}"/${PN}.desktop
 	fi
 
-	dodoc AUTHORS ChangeLog example.${PN}rc README TODO || die
+	dodoc AUTHORS ChangeLog example.${PN}rc README TODO
 }
