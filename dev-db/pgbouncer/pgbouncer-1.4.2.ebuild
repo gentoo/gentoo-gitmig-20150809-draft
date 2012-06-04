@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/pgbouncer-1.4.2.ebuild,v 1.1 2011/11/16 04:17:36 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/pgbouncer-1.4.2.ebuild,v 1.2 2012/06/04 06:45:39 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils user
 
 RESTRICT="test"
 

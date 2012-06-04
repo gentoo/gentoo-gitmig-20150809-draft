@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.3.18.ebuild,v 1.10 2012/05/03 02:33:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.3.18.ebuild,v 1.11 2012/06/04 06:49:58 zmedico Exp $
 
 EAPI="4"
 
 WANT_AUTOMAKE="none"
-inherit autotools eutils multilib pam prefix versionator
+inherit autotools eutils multilib pam prefix user versionator
 
 SLOT="$(get_version_component_range 1-2)"
 

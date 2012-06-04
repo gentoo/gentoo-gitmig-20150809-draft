@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.44 2012/05/31 07:54:28 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.45 2012/06/04 06:52:15 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> redis-2.4.10.ebuild,
+  redis-2.4.13.ebuild, redis-2.4.14.ebuild, redis-2.4.4-r1.ebuild:
+  inherit user for enewgroup and enewuser
 
 *redis-2.4.14 (31 May 2012)
 
