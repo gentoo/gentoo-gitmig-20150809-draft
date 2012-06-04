@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbtime
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbtime/ChangeLog,v 1.14 2011/04/16 17:48:29 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbtime/ChangeLog,v 1.15 2012/06/04 19:16:32 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> bbtime-0.1.5.ebuild:
+  Fix HOMEPAGE and SRC_URI, EAPI-4 (reported by df, bug 415819)
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> bbtime-0.1.5.ebuild:
   Remove bogus dependency on virtual/blackbox, bug 358825.
