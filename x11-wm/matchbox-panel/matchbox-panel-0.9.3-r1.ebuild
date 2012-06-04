@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/matchbox-panel-0.9.3-r1.ebuild,v 1.3 2012/03/05 11:12:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-panel/matchbox-panel-0.9.3-r1.ebuild,v 1.4 2012/06/04 00:27:54 xmw Exp $
 
 inherit eutils autotools versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://matchbox-project.org/sources/${PN}/$(get_version_component_range
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="amd64 ~arm ~hppa ~ppc x86"
+KEYWORDS="amd64 ~arm ~hppa ppc x86"
 IUSE="acpi debug dnotify lowres nls startup-notification wifi"
 
 DEPEND=">=x11-libs/libmatchbox-1.5
