@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/regexxer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.24 2012/05/22 10:13:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.25 2012/06/04 17:44:03 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> regexxer-0.9.ebuild:
+  Fix patch filename (thanks Steffen Schaumburg, bug 419625)
 
   22 May 2012; Michael Weber <xmw@gentoo.org> regexxer-0.9.ebuild,
   regexxer-0.10.ebuild, +files/regexxer-0.10-glib-2.32.patch:
