@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/nawk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/ChangeLog,v 1.1 2012/06/04 02:31:14 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/ChangeLog,v 1.2 2012/06/04 17:21:18 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> nawk-20110810.ebuild:
+  Marked ~amd64, wrt to bug #419555
 
 *nawk-20110810 (04 Jun 2012)
 
