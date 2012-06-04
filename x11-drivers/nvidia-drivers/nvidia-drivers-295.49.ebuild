@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.49.ebuild,v 1.8 2012/05/25 01:50:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.49.ebuild,v 1.9 2012/06/04 16:22:28 cardoe Exp $
 
 EAPI="2"
 
@@ -368,7 +368,7 @@ src_install() {
 		die "failed to install libnvidia-cfg"
 	dosym libnvidia-cfg.so.${NV_SOVER} \
 		/usr/$(get_libdir)/libnvidia-cfg.so.1 || \
-		die "failed to create libnvidia-cfg.so symlink"
+		die "failed to create libnvidia-cfg.so.1 symlink"
 	dosym libnvidia-cfg.so.1 \
 		/usr/$(get_libdir)/libnvidia-cfg.so || \
 		die "failed to create libnvidia-cfg.so symlink"
@@ -414,12 +414,12 @@ src_install() {
 		die "failed to install libXvMCNVIDIA.so"
 	dosym libXvMCNVIDIA.so.${NV_SOVER} \
 		/usr/$(get_libdir)/libXvMCNVIDIA.so.1 || \
-		die "failed to create libXvMCNVIDIA.so symlink"
+		die "failed to create libXvMCNVIDIA.so.1 symlink"
 	dosym libXvMCNVIDIA.so.1 /usr/$(get_libdir)/libXvMCNVIDIA.so || \
 		die "failed to create libXvMCNVIDIA.so symlink"
 	dosym libXvMCNVIDIA.so.${NV_SOVER} \
 		/usr/$(get_libdir)/libXvMCNVIDIA_dynamic.so.1 || \
-		die "failed to create libXvMCNVIDIA_dynamic.so symlink"
+		die "failed to create libXvMCNVIDIA_dynamic.so.1 symlink"
 
 	# OpenCL ICD for NVIDIA
 	if use kernel_linux; then

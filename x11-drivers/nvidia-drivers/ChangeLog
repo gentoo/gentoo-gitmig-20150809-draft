@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.351 2012/05/25 01:50:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.352 2012/06/04 16:22:28 cardoe Exp $
+
+  04 Jun 2012; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-173.14.34.ebuild, nvidia-drivers-295.49.ebuild:
+  Document the symlink creation a little bit better. Create some more symlinks
+  that aren't used by quiets Portage's QA notices.
 
   25 May 2012; Jeff Horelick <jdhore@gentoo.org> nvidia-drivers-295.49.ebuild:
   marked x86 per bug 416993

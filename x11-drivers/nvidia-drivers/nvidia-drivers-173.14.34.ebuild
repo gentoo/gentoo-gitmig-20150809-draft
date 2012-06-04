@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.34.ebuild,v 1.4 2012/05/22 21:30:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.34.ebuild,v 1.5 2012/06/04 16:22:28 cardoe Exp $
 
 EAPI="2"
 
@@ -319,6 +319,12 @@ src_install() {
 	# NVIDIA kernel <-> userspace driver config lib
 	dolib.so ${NV_LIB}/libnvidia-cfg.so.${NV_SOVER} || \
 		die "failed to install libnvidia-cfg"
+	dosym libnvidia-cfg.so.${NV_SOVER} \
+		/usr/$(get_libdir)/libnvidia-cfg.so.1 || \
+		die "failed to create libnvidia-cfg.so.1 symlink"
+	dosym libnvidia-cfg.so.1 \
+		/usr/$(get_libdir)/libnvidia-cfg.so || \
+		die "failed to create libnvidia-cfg.so symlink"
 
 	# Xorg DDX driver
 	insinto /usr/$(get_libdir)/xorg/modules/drivers
@@ -337,8 +343,15 @@ src_install() {
 		die "failed to install libXvMCNVIDIA.so"
 	dolib.so ${NV_X11}/libXvMCNVIDIA.so.${NV_SOVER} || \
 		die "failed to install libXvMCNVIDIA.so"
-	dosym libXvMCNVIDIA.so.${NV_SOVER} /usr/$(get_libdir)/libXvMCNVIDIA.so || \
+	dosym libXvMCNVIDIA.so.${NV_SOVER} \
+		/usr/$(get_libdir)/libXvMCNVIDIA.so.1 || \
+		die "failed to create libXvMCNVIDIA.so.1 symlink"
+	dosym libXvMCNVIDIA.so.1 \
+		/usr/$(get_libdir)/libXvMCNVIDIA.so || \
 		die "failed to create libXvMCNVIDIA.so symlink"
+	dosym libXvMCNVIDIA.so.${NV_SOVER} \
+		/usr/$(get_libdir)/libXvMCNVIDIA_dynamic.so.1 || \
+		die "failed to create libXvMCNVIDIA_dynamic.so.1 symlink"
 
 	# CUDA headers (driver to come)
 	if use kernel_linux && [[ -d ${S}/usr/include/cuda ]]; then
