@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/p3scan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.16 2011/06/09 19:56:58 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.17 2012/06/04 23:59:37 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> p3scan-2.3.1.ebuild,
+  p3scan-2.3.2-r1.ebuild:
+  inherit user for enewuser
 
   09 Jun 2011; Eray Aslan <eras@gentoo.org> p3scan-2.3.2-r1.ebuild,
   -p3scan-2.3.1-r1.ebuild, -p3scan-2.3.2.ebuild:
