@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.31 2012/05/20 08:41:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.32 2012/06/04 20:26:15 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -23,7 +23,7 @@ DEPEND="dev-lang/perl
 	>=sys-devel/bison-1.875d
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
-	gold? ( >=sys-devel/binutils-2.22 )
+	gold? ( >=sys-devel/binutils-2.22[cxx] )
 	libffi? ( virtual/pkgconfig
 		virtual/libffi )
 	ocaml? ( dev-lang/ocaml )
