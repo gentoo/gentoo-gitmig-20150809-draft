@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.4.2.ebuild,v 1.2 2012/06/03 15:27:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.4.2-r1.ebuild,v 1.1 2012/06/04 12:05:10 blueness Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA miner in C"
 HOMEPAGE="https://bitcointalk.org/index.php?topic=28402.0"
-SRC_URI="http://ck.kolivas.org/apps/${PN}/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/${PN}/${PN}-${MY_PV}-1.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -103,7 +103,10 @@ src_configure() {
 
 src_install() {
 	dobin cgminer
-	dodoc AUTHORS NEWS README
+	dodoc AUTHORS NEWS README API-README
+	if use icarus; then
+		dodoc FPGA-README
+	fi
 	if use opencl; then
 		insinto /usr/lib/cgminer/opencl
 		doins *.cl

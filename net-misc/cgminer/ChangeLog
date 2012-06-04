@@ -1,5 +1,11 @@
 
 
+*cgminer-2.4.2-r1 (04 Jun 2012)
+
+  04 Jun 2012; Anthony G. Basile <blueness@gentoo.org> -cgminer-2.4.2.ebuild,
+  +cgminer-2.4.2-r1.ebuild:
+  Add missing docs
+
   03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.2.ebuild:
   Use virtual/libusb instead of dev-libs/libusb for last ebuild
 
