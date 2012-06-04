@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.0.2011.03.13.ebuild,v 1.1 2012/04/10 00:55:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.0.2011.03.13.ebuild,v 1.2 2012/06/04 06:27:25 zmedico Exp $
 
 EAPI=2
 
-inherit flag-o-matic libtool autotools eutils pam versionator
+inherit flag-o-matic libtool autotools eutils pam user versionator
 
 # Upstream version numbers live in a directory that is [+-][1-2] days either
 # side of the name the tarball! eg:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.26 2012/04/10 00:55:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.27 2012/06/04 06:27:25 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> drizzle-7.0.2011.03.13.ebuild,
+  drizzle-7.1.33.ebuild:
+  inherit user for enewuser
 
 *drizzle-7.0.2011.03.13 (10 Apr 2012)
 
