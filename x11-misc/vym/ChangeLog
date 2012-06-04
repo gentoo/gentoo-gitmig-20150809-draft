@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/vym
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.25 2011/11/21 08:46:32 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.26 2012/06/04 19:27:02 xmw Exp $
+
+*vym-2.0.12 (04 Jun 2012)
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> +vym-2.0.12.ebuild:
+  Version bump (reported by df, bug 415841)
 
   21 Nov 2011; Tim Harder <radhermit@gentoo.org> vym-1.12.7.ebuild:
   Add rdep on app-arch/zip (bug #380495).
