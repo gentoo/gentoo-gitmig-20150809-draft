@@ -1,14 +1,14 @@
 # ChangeLog for x11-terms/guake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.17 2012/06/04 18:56:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.18 2012/06/04 18:57:34 xmw Exp $
 
 *guake-0.4.2-r2 (04 Jun 2012)
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org>
   +files/guake-0.4.2-vte-titles.patch, +files/guake-0.4.2-window-title.patch,
   +guake-0.4.2-r2.ebuild:
-  Revbump to include vte-titles and window-title patches (reported by df, bug
-  418047)
+  Revbump to include vte-titles and window-title patches (reported by 
+  Federico Pires, bug 418047)
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> guake-0.4.2.ebuild,
   guake-0.4.2-r1.ebuild:
