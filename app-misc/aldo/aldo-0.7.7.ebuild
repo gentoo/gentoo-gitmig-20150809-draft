@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.7.7.ebuild,v 1.1 2012/06/04 14:32:38 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.7.7.ebuild,v 1.2 2012/06/04 15:44:43 kensington Exp $
 
 EAPI=4
 
@@ -18,11 +18,6 @@ DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS )
 
-sssrc_compile() {
-	emake LDFLAGS="${LDFLAGS}" || die
-}
-
-sssrc_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README THANKS || die
+src_compile() {
+	emake LDFLAGS="${LDFLAGS}"
 }
