@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.48.ebuild,v 1.2 2012/05/03 03:48:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.48.ebuild,v 1.3 2012/06/04 15:45:33 tomjbe Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-doc.diff" \
-		"${FILESDIR}/${PN}-2.42-appname.diff"
+		"${FILESDIR}/${PN}-2.42-appname.diff" \
+		"${FILESDIR}/${P}-hamlib.diff"
 	eautoreconf
 }
 
