@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.6-r1.ebuild,v 1.13 2012/06/04 01:05:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.6-r1.ebuild,v 1.14 2012/06/04 01:06:31 ssuominen Exp $
 
 DESCRIPTION="Basic AX.25 (Amateur Radio) user tools, additional daemons"
 HOMEPAGE="http://ax25.sourceforge.net/"
@@ -32,6 +32,6 @@ src_install() {
 	#   or move these files
 	# Moving might require changes to ax25rtd/ax25rtctl
 	dodir /var/lib/ax25/ax25rtd
-	touch "${ED}"/var/lib/ax25/ax25rtd/ax25_route
-	touch "${ED}"/var/lib/ax25/ax25rtd/ip_route
+	touch "${D}"/var/lib/ax25/ax25rtd/ax25_route
+	touch "${D}"/var/lib/ax25/ax25rtd/ip_route
 }
