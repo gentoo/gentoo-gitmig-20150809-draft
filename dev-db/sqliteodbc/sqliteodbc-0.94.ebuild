@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.94.ebuild,v 1.1 2012/05/05 11:12:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.94.ebuild,v 1.2 2012/06/04 07:04:26 zmedico Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="ODBC driver to access local SQLite database files."
 HOMEPAGE="http://www.ch-werner.de/sqliteodbc/"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.28 2012/05/10 15:42:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.29 2012/06/04 07:04:26 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> sqliteodbc-0.87.ebuild,
+  sqliteodbc-0.94.ebuild:
+  inherit multilib for get_libdir
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -sqliteodbc-0.93.ebuild:
   Remove old
