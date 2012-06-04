@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2.ebuild,v 1.6 2011/04/16 11:14:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2.ebuild,v 1.7 2012/06/04 21:15:21 zmedico Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"

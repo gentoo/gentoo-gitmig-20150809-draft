@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.150 2011/08/02 18:44:26 hanno Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.151 2012/06/04 21:15:21 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> courier-0.65.2.ebuild:
+  inherit multilib for get_libdir
 
   02 Aug 2011; Hanno Boeck <hanno@gentoo.org> -courier-0.59.0.ebuild,
   -files/courier-0.59.0-asneeded.patch, -courier-0.62.2.ebuild,
