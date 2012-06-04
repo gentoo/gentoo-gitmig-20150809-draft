@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.97 2012/06/01 16:47:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.98 2012/06/04 17:43:37 ulm Exp $
+
+  04 Jun 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.1.9999-r1.ebuild,
+  metadata.xml:
+  Add pax_kernel USE flag to trunk version, bug 411439.
 
 *emacs-vcs-24.1.9999-r1 (01 Jun 2012)
 
