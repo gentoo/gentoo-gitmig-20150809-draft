@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9-r1.ebuild,v 1.12 2012/05/29 21:55:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9-r1.ebuild,v 1.13 2012/06/04 04:08:31 zmedico Exp $
 
 EAPI="3"
 
-inherit eutils autotools
+inherit eutils autotools multilib
 
 DESCRIPTION="Tool for conversion of MSWord doc and rtf files to something readable"
 SRC_URI="http://abiword.org/downloads/${PN}/${PV}/${P}.tar.gz"

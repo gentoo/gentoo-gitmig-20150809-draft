@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.67 2012/05/29 21:55:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.68 2012/06/04 04:08:31 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> wv-1.2.9-r1.ebuild,
+  wv-1.2.9.ebuild:
+  inherit multilib for get_libdir
 
   29 May 2012; Anthony G. Basile <blueness@gentoo.org> wv-1.2.9-r1.ebuild:
   Keyword ~mips
