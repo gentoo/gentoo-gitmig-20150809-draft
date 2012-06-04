@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/anomy-sanitizer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/ChangeLog,v 1.17 2012/03/04 10:16:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/ChangeLog,v 1.18 2012/06/04 23:33:37 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> anomy-sanitizer-1.76-r1.ebuild:
+  inherit user for enewgroup and enewuser
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org>
   -files/sample_e-mail-architektur.flw, anomy-sanitizer-1.76-r1.ebuild:

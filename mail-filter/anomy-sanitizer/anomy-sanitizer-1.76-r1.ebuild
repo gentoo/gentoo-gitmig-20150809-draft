@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.4 2012/03/04 10:16:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.5 2012/06/04 23:33:37 zmedico Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Perl based e-mail filtering tool, sensitive to html tags, mime types and attachments"
 HOMEPAGE="http://mailtools.anomy.net/"

@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/assp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.41 2012/05/30 03:21:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.42 2012/06/04 23:37:01 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> assp-1.8.5.9.ebuild,
+  assp-1.9.1.3.ebuild, assp-1.9.2.0.ebuild, assp-1.9.3.5.ebuild:
+  inherit user for enewgroup and enewuser
 
   30 May 2012; Patrick Lauer <patrick@gentoo.org> assp-1.9.3.5.ebuild:
   Keywording assp-1.9 again
