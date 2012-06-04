@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ferm-2.1.ebuild,v 1.1 2011/07/30 22:14:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ferm-2.1.ebuild,v 1.2 2012/06/04 17:18:40 ago Exp $
 
 inherit versionator
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://ferm.foo-projects.org/"
 SRC_URI="http://ferm.foo-projects.org/download/${MY_PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 SLOT="0"
 
