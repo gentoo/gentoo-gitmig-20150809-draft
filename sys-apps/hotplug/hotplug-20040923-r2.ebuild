@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040923-r2.ebuild,v 1.3 2010/10/08 01:53:37 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20040923-r2.ebuild,v 1.4 2012/06/04 01:12:43 ssuominen Exp $
 
 inherit eutils
 
@@ -46,7 +46,8 @@ src_install() {
 	exeinto /etc/hotplug
 	doexe *.agent *.rc *.permissions || die
 	# stupid isapnp.rc files...
-	newexe "${FILESDIR}"/isapnp.rc.empty isapnp.rc
+	touch "${T}"/isapnp.rc.empty
+	newexe "${T}"/isapnp.rc.empty isapnp.rc
 
 	dodir /usr/lib/hotplug/firmware
 	dodir /etc/hotplug/usb

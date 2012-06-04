@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hotplug
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.71 2010/10/08 01:53:37 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.72 2012/06/04 01:12:43 ssuominen Exp $
+
+  04 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  hotplug-20040923-r1.ebuild, hotplug-20040923-r2.ebuild,
+  -files/isapnp.rc.empty:
+  Create empty isapnp.rc file from ebuild instead of shipping it in files/
+  directory. See, http://qa-reports.gentoo.org/output/find-binary-files.txt
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> hotplug-20040923-r1.ebuild,
   hotplug-20040923-r2.ebuild:
