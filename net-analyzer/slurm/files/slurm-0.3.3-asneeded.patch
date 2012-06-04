@@ -1,5 +1,5 @@
---- a/configure.in	2004-09-28 09:34:56.000000000 -0500
-+++ b/configure.in	2009-02-14 12:42:52.000000000 -0600
+--- a/configure.in
++++ b/configure.in
 @@ -40,41 +40,15 @@
  fi
  AC_DEFINE(OSTYPE, ["${OSTYPE}"], [The operating system to build for])
