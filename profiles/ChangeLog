@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6629 2012/06/03 23:24:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6630 2012/06/04 02:59:46 ottxor Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jun 2012; Christoph Junghans <ottxor@gentoo.org> package.mask:
+  masked app-admin/eselect-awk for testing
 
   03 Jun 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking net-misc/ptrtd for removal. Bug #249112

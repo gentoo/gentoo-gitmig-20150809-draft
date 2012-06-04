@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13819 2012/06/03 23:24:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13820 2012/06/04 02:59:46 ottxor Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christoph Junghans <ottxor@gentoo.org> (04 Jun 2012)
+# Mask for testing and porting. Tracker Bug #418473
+app-admin/eselect-awk
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Jun 2012)
 # Dead upstream. Security problems. Bug #249112
