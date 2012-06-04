@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/matchbox-panel-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-panel-manager/ChangeLog,v 1.12 2012/03/05 11:11:00 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-panel-manager/ChangeLog,v 1.13 2012/06/04 00:31:47 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> matchbox-panel-manager-0.1.ebuild:
+  ppc stable (bug 309407)
 
   05 Mar 2012; Thomas Kahle <tomka@gentoo.org>
   matchbox-panel-manager-0.1.ebuild:
