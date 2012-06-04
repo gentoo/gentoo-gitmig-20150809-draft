@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-live
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.32 2012/06/04 01:08:59 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.33 2012/06/04 16:08:20 idl0r Exp $
+
+  04 Jun 2012; Christian Ruppert <idl0r@gentoo.org>
+  vdr-live-0.2.0_p20120325.ebuild:
+  Fix SSL cert generation
 
 *vdr-live-0.2.0_p20120325 (04 Jun 2012)
 
