@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.55 2012/04/09 08:11:34 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.56 2012/06/04 06:25:26 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> couchdb-1.1.1.ebuild,
+  couchdb-1.2.0.ebuild:
+  inherit multilib for get_libdir, and user for enewgroup and enewuser
 
   09 Apr 2012; Dirkjan Ochtman <djc@gentoo.org> -couchdb-1.0.2.ebuild,
   -couchdb-1.1.0.ebuild:
