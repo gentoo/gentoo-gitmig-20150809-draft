@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20110817.ebuild,v 1.5 2012/04/18 20:17:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20110817.ebuild,v 1.6 2012/06/04 13:12:20 jlec Exp $
 
 EAPI=2
 
@@ -33,7 +33,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-glibc-2.10.patch" \
 		"${FILESDIR}/${PN}-0.1.5-gentoo-docdir.patch" \
 		"${FILESDIR}/${PN}-0.1.5_p2-qa.patch" \
-		"${FILESDIR}/${P}-kash-link-pthread.patch"
+		"${FILESDIR}/${P}-kash-link-pthread.patch" \
+		"${FILESDIR}/${P}-gold.patch"
 
 	cd "${S}/src/kmk"
 	eautoreconf
