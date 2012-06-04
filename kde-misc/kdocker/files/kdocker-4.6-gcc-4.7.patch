@@ -1,0 +1,10 @@
+--- solutions/qtsingleapplication/qtlocalpeer.cpp
++++ solutions/qtsingleapplication/qtlocalpeer.cpp
+@@ -48,6 +48,7 @@
+ #include "qtlocalpeer.h"
+ #include <QtCore/QCoreApplication>
+ #include <QtCore/QTime>
++#include <unistd.h>
+ 
+ #if defined(Q_OS_WIN)
+ #include <QtCore/QLibrary>
