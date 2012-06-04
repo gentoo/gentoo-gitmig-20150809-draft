@@ -1,5 +1,5 @@
---- src/Makefile.in.orig	2009-02-25 18:13:40.000000000 +0100
-+++ src/Makefile.in	2009-02-25 18:13:16.000000000 +0100
+--- src/Makefile.in.orig
++++ src/Makefile.in
 @@ -95,7 +95,7 @@
  %.o: %.cpp
  	@CXX@ @CXXFLAGS@ -o $@ -c $<

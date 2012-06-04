@@ -1,7 +1,5 @@
-Index: acinclude.m4
-===================================================================
---- acinclude.m4	(revisione 4838)
-+++ acinclude.m4	(copia locale)
+--- acinclude.m4
++++ acinclude.m4
 @@ -163,21 +163,21 @@
    libpng_prefix="")
  

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r2.ebuild,v 1.9 2011/09/29 20:11:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r2.ebuild,v 1.10 2012/06/04 20:04:18 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic toolchain-funcs multilib games
@@ -34,6 +34,7 @@ src_prepare() {
 	# Fix bug #260247
 	# Fix compability with libpng15 wrt #378735
 	# Fix buffer overwrite #257963
+	# Fix gcc47 compile #419635
 	epatch \
 		"${FILESDIR}"/${P}-libpng.patch \
 		"${FILESDIR}"/${P}-archopt-july-23-update.patch \
@@ -42,7 +43,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-depbuild.patch \
 		"${FILESDIR}"/${P}-CC-quotes.patch \
 		"${FILESDIR}"/${P}-libpng15.patch \
-		"${FILESDIR}"/${P}-buffer.patch
+		"${FILESDIR}"/${P}-buffer.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 
 	sed -i -e '67i#define OF(x) x' zip/zunzip.h || die
 

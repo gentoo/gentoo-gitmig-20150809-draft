@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/zsnes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.48 2011/09/29 20:11:35 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.49 2012/06/04 20:04:18 mr_bones_ Exp $
+
+  04 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> zsnes-1.51-r2.ebuild,
+  files/zsnes-1.51-CC-quotes.patch,
+  files/zsnes-1.51-archopt-july-23-update.patch, files/zsnes-1.51-buffer.patch,
+  files/zsnes-1.51-depbuild.patch, +files/zsnes-1.51-gcc47.patch,
+  files/zsnes-1.51-libpng.patch:
+  Fix compile with gcc47 (bug #419635), submitted by Nikos Chantziaras
 
   29 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> zsnes-1.51-r2.ebuild,
   +files/zsnes-1.51-buffer.patch:
