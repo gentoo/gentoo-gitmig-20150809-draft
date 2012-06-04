@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.23 2012/03/04 22:25:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.24 2012/06/04 19:32:38 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pktstat-1.8.5.ebuild:
+  Stable for amd64, wrt bug #419229
 
   04 Mar 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove duplicate longdescription that matches DESCRIPTION.
