@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>a3li@gentoo.org</email>
-		<name>Alex Legler</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<use>
 		<flag name="animation-rtl">Progressbar animation from right to left</flag>
