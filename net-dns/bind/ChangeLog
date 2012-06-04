@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.386 2012/05/29 10:37:50 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.387 2012/06/04 17:02:25 idl0r Exp $
+
+*bind-9.9.1_p1 (04 Jun 2012)
+*bind-9.8.3_p1 (04 Jun 2012)
+
+  04 Jun 2012; Christian Ruppert <idl0r@gentoo.org> -bind-9.7.4_p1.ebuild,
+  -bind-9.7.6.ebuild, -bind-9.8.3.ebuild, +bind-9.8.3_p1.ebuild,
+  -bind-9.9.1.ebuild, +bind-9.9.1_p1.ebuild:
+  Version bumps, CVE-2012-1667. Remove old versions
 
   29 May 2012; Christian Ruppert <idl0r@gentoo.org> files/named.cache:
   Update named.cache

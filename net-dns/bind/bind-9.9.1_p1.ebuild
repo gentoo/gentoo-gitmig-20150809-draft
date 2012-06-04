@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.3.ebuild,v 1.1 2012/05/22 12:49:39 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p1.ebuild,v 1.1 2012/06/04 17:02:25 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -24,7 +24,7 @@ SDB_LDAP_VER="1.1.0-fc14"
 # bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.8.0-P1"
+GEOIP_PV_AGAINST="9.9.1"
 GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
 GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
@@ -117,9 +117,9 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-		sed -i -e 's:^ RELEASETYPE=-P: RELEASETYPE=:' \
-			-e 's:RELEASEVER=1:RELEASEVER=:' \
-			 ${GEOIP_PATCH_A} || die
+		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+			-e 's:RELEASEVER=:RELEASEVER=1:' \
+			${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
@@ -168,7 +168,10 @@ src_configure() {
 		$(use_enable rpz rpz-nsdname) \
 		$(use_enable caps linux-caps) \
 		$(use_with gost) \
+		--without-readline \
 		${myconf}
+
+	# $(use_enable static-libs static) \
 
 	# bug #151839
 	echo '#undef SO_BSDCOMPAT' >> config.h

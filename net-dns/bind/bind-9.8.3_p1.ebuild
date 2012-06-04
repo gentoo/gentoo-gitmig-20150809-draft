@@ -1,22 +1,33 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.4_p1.ebuild,v 1.8 2011/12/22 22:33:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.3_p1.ebuild,v 1.1 2012/06/04 17:02:25 idl0r Exp $
 
-EAPI="3"
+# Re dlz/mysql and threads, needs to be verified..
+# MySQL uses thread local storage in its C api. Thus MySQL
+# requires that each thread of an application execute a MySQL
+# thread initialization to setup the thread local storage.
+# This is impossible to do safely while staying within the DLZ
+# driver API. This is a limitation caused by MySQL, and not the DLZ API.
+# Because of this BIND MUST only run with a single thread when
+# using the MySQL driver.
 
-inherit eutils autotools toolchain-funcs flag-o-matic
+EAPI="4"
+
+inherit eutils autotools toolchain-funcs flag-o-matic multilib db-use
 
 MY_PV="${PV/_p/-P}"
+MY_PV="${MY_PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
 SDB_LDAP_VER="1.1.0-fc14"
 
+# bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.7.2-P2"
-GEOIP_P="bind-geoip-${GEOIP_PV}"
-GEOIP_PATCH_A="${GEOIP_P}-${GEOIP_PV_AGAINST}.patch"
-GEOIP_DOC_A="${GEOIP_P}-readme.txt"
+GEOIP_PV_AGAINST="9.8.3"
+GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
+GEOIP_PATCH_A="${GEOIP_P}.patch"
+GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
 GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
@@ -29,9 +40,19 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
-	resolvconf urandom xml geoip gssapi sdb-ldap"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc postgres rpz sdb-ldap
+selinux ssl static-libs threads urandom xml"
+# no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
+
+REQUIRED_USE="postgres? ( dlz )
+	berkdb? ( dlz )
+	mysql? ( dlz !threads )
+	odbc? ( dlz )
+	ldap? ( dlz )
+	sdb-ldap? ( dlz )
+	gost? ( ssl )
+	threads? ( caps )"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -39,27 +60,20 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/idnkit )
 	postgres? ( dev-db/postgresql-base )
-	threads? ( >=sys-libs/libcap-2.1.0 )
+	caps? ( >=sys-libs/libcap-2.1.0 )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
 	gssapi? ( virtual/krb5 )
-	sdb-ldap? ( net-nds/openldap )"
+	sdb-ldap? ( net-nds/openldap )
+	gost? ( >=dev-libs/openssl-1.0.0 )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
-	resolvconf? ( net-dns/openresolv )
-	sys-process/psmisc"
+	|| ( sys-process/psmisc >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd )"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	use threads && {
-		ewarn
-		ewarn "If you're in vserver environment, you'll probably want to"
-		ewarn "disable threads support because of linux capabilities dependency"
-		ewarn
-	}
-
 	ebegin "Creating named group and user"
 	enewgroup named 40
 	enewuser named 40 -1 /etc/bind named
@@ -84,71 +98,38 @@ src_prepare() {
 		fi
 
 		if use odbc; then
-			epatch "${FILESDIR}/bind-9.7.3-odbc-dlz-detect.patch"
+			epatch "${FILESDIR}/${PN}-9.7.3-odbc-dlz-detect.patch"
+		fi
+
+		# sdb-ldap patch as per  bug #160567
+		# Upstream URL: http://bind9-ldap.bayour.com/
+		# New patch take from bug 302735
+		if use sdb-ldap; then
+			epatch "${WORKDIR}"/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
+			cp -fp contrib/sdb/ldap/ldapdb.[ch] bin/named/
+			cp -fp contrib/sdb/ldap/{ldap2zone.1,ldap2zone.c} bin/tools/
+			cp -fp contrib/sdb/ldap/{zone2ldap.1,zone2ldap.c} bin/tools/
 		fi
 	fi
 
 	# should be installed by bind-tools
 	sed -i -r -e "s:(nsupdate|dig) ::g" bin/Makefile.in || die
 
-	# sdb-ldap patch as per  bug #160567
-	# Upstream URL: http://bind9-ldap.bayour.com/
-	# New patch take from bug 302735
-	if use sdb-ldap; then
-		epatch "${WORKDIR}"/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
-		cp -fp contrib/sdb/ldap/ldapdb.[ch] bin/named
-		cp -fp contrib/sdb/ldap/{ldap2zone.1,ldap2zone.c} bin/tools
-		cp -fp contrib/sdb/ldap/{zone2ldap.1,zone2ldap.c} bin/tools
-	fi
-
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-		sed -i -e 's:RELEASEVER=2:RELEASEVER=1:' \
+		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+			-e 's:RELEASEVER=:RELEASEVER=1:' \
 			${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
 	# bug #220361
 	rm {aclocal,libtool}.m4
-	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf
-
-	# remove useless c++ checks
-	epunt_cxx
+	eautoreconf
 }
 
 src_configure() {
 	local myconf=""
-
-	use dlz && {
-		myconf="${myconf} --with-dlz-filesystem --with-dlz-stub"
-		use postgres && myconf="${myconf} --with-dlz-postgres"
-		use mysql && myconf="${myconf} --with-dlz-mysql"
-		use berkdb && myconf="${myconf} --with-dlz-bdb"
-		use ldap && myconf="${myconf} --with-dlz-ldap"
-		use odbc && myconf="${myconf} --with-dlz-odbc"
-	}
-
-	if use threads; then
-		if use dlz && use mysql; then
-			ewarn
-			ewarn "MySQL uses thread local storage in its C api. Thus MySQL"
-			ewarn "requires that each thread of an application execute a MySQL"
-			ewarn "\"thread initialization\" to setup the thread local storage."
-			ewarn "This is impossible to do safely while staying within the DLZ"
-			ewarn "driver API. This is a limitation caused by MySQL, and not"
-			ewarn "the DLZ API."
-			ewarn "Because of this BIND MUST only run with a single thread when"
-			ewarn "using the MySQL driver."
-			ewarn
-			myconf="${myconf} --disable-linux-caps --disable-threads"
-			ewarn "Threading support disabled"
-		else
-			myconf="${myconf} --enable-linux-caps --enable-threads"
-			einfo "Threading support enabled"
-		fi
-	else
-		myconf="${myconf} --disable-linux-caps --disable-threads"
-	fi
 
 	if use urandom; then
 		myconf="${myconf} --with-randomdev=/dev/urandom"
@@ -159,18 +140,34 @@ src_configure() {
 	use geoip && myconf="${myconf} --with-geoip"
 
 	# bug #158664
-	gcc-specs-ssp && replace-flags -O[23s] -O
+#	gcc-specs-ssp && replace-flags -O[23s] -O
+
+	# To include db.h from proper path
+	use berkdb && append-flags "-I$(db_includedir)"
 
 	export BUILD_CC=$(tc-getBUILD_CC)
 	econf \
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--with-libtool \
+		$(use_enable threads) \
+		$(use_with dlz dlopen) \
+		$(use_with dlz dlz-filesystem) \
+		$(use_with dlz dlz-stub) \
+		$(use_with postgres dlz-postgres) \
+		$(use_with mysql dlz-mysql) \
+		$(use_with berkdb dlz-bdb) \
+		$(use_with ldap dlz-ldap) \
+		$(use_with odbc dlz-odbc) \
 		$(use_with ssl openssl) \
 		$(use_with idn) \
 		$(use_enable ipv6) \
 		$(use_with xml libxml2) \
 		$(use_with gssapi) \
+		$(use_enable rpz rpz-nsip) \
+		$(use_enable rpz rpz-nsdname) \
+		$(use_enable caps linux-caps) \
+		$(use_with gost) \
 		${myconf}
 
 	# bug #151839
@@ -178,33 +175,27 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	dodoc CHANGES FAQ README
 
 	if use idn; then
-		dodoc contrib/idn/README.idnkit || die
+		dodoc contrib/idn/README.idnkit
 	fi
 
 	if use doc; then
-		dodoc doc/arm/Bv9ARM.pdf || die
+		dodoc doc/arm/Bv9ARM.pdf
 
 		docinto misc
-		dodoc doc/misc/* || die
+		dodoc doc/misc/*
 
 		# might a 'html' useflag make sense?
 		docinto html
-		dohtml -r doc/arm/* || die
-
-		docinto	draft
-		dodoc doc/draft/* || die
-
-		docinto rfc
-		dodoc doc/rfc/* || die
+		dohtml -r doc/arm/*
 
 		docinto contrib
 		dodoc contrib/named-bootconf/named-bootconf.sh \
-			contrib/nanny/nanny.pl || die
+			contrib/nanny/nanny.pl
 
 		# some handy-dandy dynamic dns examples
 		cd "${D}"/usr/share/doc/${PF}
@@ -214,20 +205,26 @@ src_install() {
 	use geoip && dodoc "${DISTDIR}"/${GEOIP_DOC_A}
 
 	insinto /etc/bind
-	newins "${FILESDIR}"/named.conf-r5 named.conf || die
+	newins "${FILESDIR}"/named.conf-r5 named.conf
 
 	# ftp://ftp.rs.internic.net/domain/named.cache:
 	insinto /var/bind
-	doins "${FILESDIR}"/named.cache || die
+	doins "${FILESDIR}"/named.cache
 
 	insinto /var/bind/pri
-	newins "${FILESDIR}"/127.zone-r1 127.zone || die
-	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone || die
+	newins "${FILESDIR}"/127.zone-r1 127.zone
+	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
 
-	newinitd "${FILESDIR}"/named.init-r11 named || die
-	newconfd "${FILESDIR}"/named.confd-r6 named || die
+	newinitd "${FILESDIR}"/named.init-r11 named
+	newconfd "${FILESDIR}"/named.confd-r6 named
 
-	newenvd "${FILESDIR}"/10bind.env 10bind || die
+	if use gost; then
+		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}/' "${D}/etc/init.d/named" || die
+	else
+		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}/' "${D}/etc/init.d/named" || die
+	fi
+
+	newenvd "${FILESDIR}"/10bind.env 10bind
 
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
 	rm -f "${D}"/usr/share/man/man1/{dig,host,nslookup}.1*
@@ -235,13 +232,18 @@ src_install() {
 	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 	rm -f "${D}"/usr/sbin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 
-	dosym /var/bind/named.cache /var/bind/root.cache || die
-	dosym /var/bind/pri /etc/bind/pri || die
-	dosym /var/bind/sec /etc/bind/sec || die
-	dosym /var/bind/dyn /etc/bind/dyn || die
+	# bug 405251, library archives aren't properly handled by --enable/disable-static
+	if ! use static-libs; then
+		find "${D}" -type f -name '*.la' -delete || die
+	fi
+
+	dosym /var/bind/named.cache /var/bind/root.cache
+	dosym /var/bind/pri /etc/bind/pri
+	dosym /var/bind/sec /etc/bind/sec
+	dosym /var/bind/dyn /etc/bind/dyn
 	keepdir /var/bind/{pri,sec,dyn}
 
-	dodir /var/{run,log}/named || die
+	dodir /var/{run,log}/named
 
 	fowners root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri,dyn}
 	fowners root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
@@ -332,6 +334,15 @@ pkg_config() {
 	mkdir -m 0755 -p ${CHROOT}/{dev,etc,var/{run,log}}
 	mkdir -m 0750 -p ${CHROOT}/etc/bind
 	mkdir -m 0770 -p ${CHROOT}/var/{bind,{run,log}/named}
+	# As of bind 9.8.0
+	if has_version net-dns/bind[gost]; then
+		if [ "$(get_libdir)" = "lib64" ]; then
+			mkdir -m 0755 -p ${CHROOT}/usr/lib64/engines
+			ln -s lib64 ${CHROOT}/usr/lib
+		else
+			mkdir -m 0755 -p ${CHROOT}/usr/lib/engines
+		fi
+	fi
 	chown root:named ${CHROOT} ${CHROOT}/var/{bind,{run,log}/named} ${CHROOT}/etc/bind
 
 	mknod ${CHROOT}/dev/null c 1 3
