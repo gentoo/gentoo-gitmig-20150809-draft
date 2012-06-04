@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbappconf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/ChangeLog,v 1.13 2011/04/16 17:19:26 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/ChangeLog,v 1.14 2012/06/04 19:13:14 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> bbappconf-0.0.2.ebuild:
+  Fix HOMEPAGE and SRC_URI, EAPI-4 (reported by df, bug 415817)
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> bbappconf-0.0.2.ebuild:
   Remove bogus dependency on virtual/blackbox, bug 358825.
