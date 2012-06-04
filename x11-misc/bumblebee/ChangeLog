@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/bumblebee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.5 2012/05/05 04:53:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.6 2012/06/04 19:46:25 pacho Exp $
+
+*bumblebee-3.0-r2 (04 Jun 2012)
+
+  04 Jun 2012; Pacho Ramos <pacho@gentoo.org> +bumblebee-3.0-r2.ebuild,
+  +files/bumblebee.confd, +files/bumblebee.envd, -bumblebee-3.0-r1.ebuild,
+  -bumblebee-3.0.ebuild, -files/bumblebee.nouveau-confd,
+  -files/bumblebee.nvidia-confd, files/bumblebee.initd, metadata.xml:
+  Fix metadata, sync with bumblebee overlay changes, apply Michał Górny's patch
+  to support systemd (bug #418627). Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> bumblebee-3.0.ebuild,
   bumblebee-3.0-r1.ebuild:

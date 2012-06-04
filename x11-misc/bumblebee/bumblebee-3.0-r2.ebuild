@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0.ebuild,v 1.3 2012/05/05 04:53:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0-r2.ebuild,v 1.1 2012/06/04 19:46:25 pacho Exp $
 
 EAPI="4"
 
-inherit multilib eutils
+inherit multilib systemd user
 
 DESCRIPTION="Service providing elegant and stable means of managing Optimus graphics chipsets"
 HOMEPAGE="https://github.com/Bumblebee-Project/Bumblebee"
-SRC_URI="mirror://github/Bumblebee-Project/${PN/bu/Bu}/${P/bu/Bu}.tar.gz"
+SRC_URI="mirror://github/Bumblebee-Project/${PN/bu/Bu}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-3"
@@ -29,8 +29,7 @@ DEPEND=">=sys-devel/autoconf-2.68
 	dev-libs/libbsd
 	sys-apps/help2man"
 
-# FIXME: move from ^^ to || once both VIDEO_CARDS are supported at the same time
-REQUIRED_USE="^^ ( video_cards_nouveau video_cards_nvidia )"
+REQUIRED_USE="|| ( video_cards_nouveau video_cards_nvidia )"
 
 src_configure() {
 	if use video_cards_nvidia ; then
@@ -51,22 +50,21 @@ src_configure() {
 }
 
 src_install() {
-	use video_cards_nvidia && newconfd "${FILESDIR}"/bumblebee.nvidia-confd bumblebee
-	use video_cards_nouveau && newconfd "${FILESDIR}"/bumblebee.nouveau-confd bumblebee
+	newconfd "${FILESDIR}"/bumblebee.confd bumblebee
 	newinitd "${FILESDIR}"/bumblebee.initd bumblebee
+	newenvd  "${FILESDIR}"/bumblebee.envd 99bumblebee
+	systemd_dounit scripts/systemd/bumblebee.service
 	default
 }
 
 pkg_preinst() {
-	! use video_cards_nvidia && rm "${ED}"/etc/bumblebee/xorg.conf.nvidia
-	! use video_cards_nouveau && rm "${ED}"/etc/bumblebee/xorg.conf.nouveau
+	! use video_cards_nvidia && rm "${D}"/etc/bumblebee/xorg.conf.nvidia
+	! use video_cards_nouveau && rm "${D}"/etc/bumblebee/xorg.conf.nouveau
 
 	enewgroup bumblebee
 }
 
 pkg_postinst() {
-	ewarn "This is *NOT* all! Bumblebee still *NOT* ready to use."
-	ewarn "You may need to setup your /etc/bumblebee/bumblebee.conf!"
-	ewarn "For example, default config suggests you have bbswitch installed."
-	ewarn "Also you should add your user to 'bumblebee' group."
+	ewarn "In order to use Bumblebee, add your user to 'bumblebee' group."
+	ewarn "You may need to setup your /etc/bumblebee/bumblebee.conf"
 }
