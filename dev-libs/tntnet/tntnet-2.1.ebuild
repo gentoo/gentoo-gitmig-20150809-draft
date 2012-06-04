@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-2.0-r1.ebuild,v 1.4 2012/06/04 16:38:22 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-2.1.ebuild,v 1.1 2012/06/04 16:38:22 idl0r Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit autotools eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="cgi doc examples gnutls server sdk ssl"
 
-RDEPEND="=dev-libs/cxxtools-2.0*
+RDEPEND="=dev-libs/cxxtools-2.1*
 	sys-libs/zlib[minizip]
 	ssl? (
 		gnutls? (
@@ -30,9 +30,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# Both fixed in the next release
-	epatch "${FILESDIR}/${P}-as-needed.patch"
-	epatch "${FILESDIR}/${P}-gnutls.patch"
-	epatch "${FILESDIR}"/${P}-zlib-minizip.patch
+	epatch "${FILESDIR}"/${PN}-2.0-zlib-minizip.patch
 	rm framework/common/{ioapi,unzip}.[ch] || die
 
 	eautoreconf

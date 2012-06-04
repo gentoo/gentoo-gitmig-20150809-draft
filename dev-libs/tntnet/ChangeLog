@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/tntnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.19 2012/05/04 18:35:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.20 2012/06/04 16:38:22 idl0r Exp $
+
+*tntnet-2.1 (04 Jun 2012)
+
+  04 Jun 2012; Christian Ruppert <idl0r@gentoo.org> tntnet-1.6.3.ebuild,
+  tntnet-2.0-r1.ebuild, +tntnet-2.1.ebuild:
+  Version bump. Fix dependencies.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> tntnet-1.6.3.ebuild,
   tntnet-2.0-r1.ebuild:

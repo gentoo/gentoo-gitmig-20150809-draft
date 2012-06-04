@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.3.ebuild,v 1.7 2012/05/04 18:35:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.3.ebuild,v 1.8 2012/06/04 16:38:22 idl0r Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~sparc x86"
 IUSE="ssl gnutls examples"
 
-RDEPEND="dev-libs/cxxtools
+RDEPEND="=dev-libs/cxxtools-1*
 	sys-libs/zlib
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-1.2.0 )
