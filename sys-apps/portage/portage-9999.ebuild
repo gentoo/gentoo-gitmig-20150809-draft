@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.47 2012/06/02 19:32:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.48 2012/06/04 23:04:14 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -33,7 +33,7 @@ DEPEND="${python_dep}
 # for now, don't pull in xattr deps for other kernels.
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
-		>=app-shells/bash-4.1
+		>=app-shells/bash-3.2_p17
 		>=app-admin/eselect-1.2 )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
 	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
@@ -41,7 +41,7 @@ RDEPEND="${python_dep}
 	>=app-misc/pax-utils-0.1.17
 	xattr? ( kernel_linux? ( || ( >=dev-lang/python-3.3_pre20110902 dev-python/pyxattr ) ) )
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
-	!<app-shells/bash-4.1
+	!<app-shells/bash-3.2_p17
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="
 	!build? (
