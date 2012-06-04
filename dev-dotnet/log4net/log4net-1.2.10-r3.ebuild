@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.10-r3.ebuild,v 1.3 2011/06/28 12:27:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.10-r3.ebuild,v 1.4 2012/06/04 07:08:28 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils mono versionator
+inherit eutils mono multilib versionator
 
 PV_MAJOR=$(get_version_component_range 1-2)
 
