@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r3.ebuild,v 1.6 2011/08/30 17:11:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r3.ebuild,v 1.7 2012/06/04 19:25:34 idl0r Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="An automated suite of programs for configuring and maintaining
 Unix-like computers"
