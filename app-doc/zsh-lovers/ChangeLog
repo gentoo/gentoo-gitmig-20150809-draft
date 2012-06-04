@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/zsh-lovers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/zsh-lovers/ChangeLog,v 1.8 2012/03/18 19:15:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/zsh-lovers/ChangeLog,v 1.9 2012/06/04 22:14:50 alexxy Exp $
+
+  04 Jun 2012; Alexey Shvetsov <alexxy@gentoo.org> zsh-lovers-0.8.3.ebuild:
+  [app-doc/zsh-lovers] Works on ~amd64-fbsd
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> zsh-lovers-0.8.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #401931
