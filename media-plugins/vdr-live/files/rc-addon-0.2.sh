@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/files/rc-addon-0.2.sh,v 1.1 2011/01/27 17:58:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/files/rc-addon-0.2.sh,v 1.2 2012/06/04 19:42:24 hd_brummy Exp $
 #
 # zzam@g.o
 # hd_brummy@g.o
@@ -10,8 +10,8 @@ plugin_pre_vdr_start() {
 			add_plugin_param "-s ${LIVE_SSL_PORT}"
 		fi
 
-		add_plugin_param "--cert=/etc/vdr/plugins/live/live.crt"
-		add_plugin_param "--key=/etc/vdr/plugins/live/live.key"
+		add_plugin_param "--cert=/etc/vdr/plugins/live/live.pem"
+		add_plugin_param "--key=/etc/vdr/plugins/live/live-key.pem"
 
 	else
 		if [ -n "${LIVE_PORT}" ]; then
