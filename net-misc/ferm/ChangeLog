@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ferm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ChangeLog,v 1.28 2011/07/30 22:14:11 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ChangeLog,v 1.29 2012/06/04 17:14:29 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -ferm-2.0.7.ebuild,
+  -ferm-2.0.9.ebuild:
+  Remove old
 
 *ferm-2.1 (30 Jul 2011)
 *ferm-2.0.9 (30 Jul 2011)
