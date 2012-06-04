@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/sendmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.98 2011/11/02 21:38:29 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.99 2012/06/04 21:12:20 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> sendmail-8.14.4.ebuild,
+  sendmail-8.14.5-r1.ebuild, sendmail-8.14.5.ebuild:
+  inherit user for enewgroup and enewuser, and multilib for get_libdir
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> sendmail-8.14.4.ebuild,
   sendmail-8.14.5.ebuild, sendmail-8.14.5-r1.ebuild:
