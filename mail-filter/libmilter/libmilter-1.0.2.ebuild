@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.2.ebuild,v 1.4 2012/05/31 07:29:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.2.ebuild,v 1.5 2012/06/04 23:53:03 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 # This library is part of sendmail, but it does not share the version number with it.
 # In order to find the right libmilter version number, check SMFI_VERSION definition

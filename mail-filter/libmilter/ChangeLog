@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libmilter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.26 2012/05/31 07:29:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.27 2012/06/04 23:53:03 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> libmilter-1.0.1-r1.ebuild,
+  libmilter-1.0.2.ebuild:
+  inherit multilib for get_libdir
 
   31 May 2012; Eray Aslan <eras@gentoo.org> libmilter-1.0.1-r1.ebuild,
   libmilter-1.0.2.ebuild:
