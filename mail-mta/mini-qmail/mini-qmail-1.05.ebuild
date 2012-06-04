@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.13 2012/03/18 15:24:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.14 2012/06/04 21:05:00 zmedico Exp $
 
-inherit eutils toolchain-funcs fixheadtails
+inherit eutils toolchain-funcs fixheadtails user
 
 DESCRIPTION="a small null client that forwards mail via QMQP to a full qmail server"
 HOMEPAGE="http://www.qmail.org/ http://cr.yp.to/qmail/mini.html"

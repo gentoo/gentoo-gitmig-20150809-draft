@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r8.ebuild,v 1.13 2012/02/12 20:57:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r8.ebuild,v 1.14 2012/06/04 21:02:40 zmedico Exp $
 
-inherit eutils toolchain-funcs fixheadtails flag-o-matic
+inherit eutils toolchain-funcs fixheadtails flag-o-matic user
 
 TLS_AUTH_PATCH=20070417
 QMAIL_SPP_PATCH=0.42

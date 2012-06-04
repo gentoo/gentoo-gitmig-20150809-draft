@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.9.ebuild,v 1.7 2012/05/21 12:18:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.9.ebuild,v 1.8 2012/06/04 21:09:58 zmedico Exp $
 
 EAPI=4
 
-inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam
+inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user
 
 MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"

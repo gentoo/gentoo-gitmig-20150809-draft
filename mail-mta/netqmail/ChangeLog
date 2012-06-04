@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.59 2012/02/12 20:57:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.60 2012/06/04 21:02:40 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> netqmail-1.05-r4.ebuild,
+  netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:
+  inherit user for enewgroup and enewuser
 
   12 Feb 2012; Mike Frysinger <vapier@gentoo.org> netqmail-1.05-r4.ebuild,
   netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:
