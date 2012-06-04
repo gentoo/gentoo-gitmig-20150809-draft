@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.218 2012/05/05 08:50:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.219 2012/06/04 06:23:23 tetromino Exp $
+
+  04 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  rhythmbox-2.95.ebuild, rhythmbox-2.96.ebuild:
+  Need gst-plugins-base[introspection] (bug #416041, thanks to Andrea Arteaga).
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> rhythmbox-0.12.8-r1.ebuild,
   rhythmbox-0.13.3.ebuild, rhythmbox-2.95.ebuild, rhythmbox-2.96.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.96.ebuild,v 1.3 2012/05/05 08:50:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.96.ebuild,v 1.4 2012/06/04 06:23:23 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -38,7 +38,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	>=dev-libs/totem-pl-parser-2.32.1
 	>=net-libs/libsoup-2.26:2.4
 	>=net-libs/libsoup-gnome-2.26:2.4
-	>=media-libs/gst-plugins-base-0.10.32:0.10
+	>=media-libs/gst-plugins-base-0.10.32:0.10[introspection]
 	>=media-libs/gstreamer-0.10.32:0.10[introspection]
 	>=sys-libs/tdb-1.2.6
 
