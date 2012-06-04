@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-2.1.ebuild,v 1.1 2012/04/22 15:53:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-2.1.ebuild,v 1.2 2012/06/04 08:43:25 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.clustal.org/download/current/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-core:4
