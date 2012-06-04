@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.79 2012/06/04 16:14:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.80 2012/06/04 16:35:13 scarabeus Exp $
 
 EAPI=4
 
@@ -95,10 +95,6 @@ NSS_DEPEND="
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 "
-# media-libs/lcms:2 is checked by configure but is only used
-# for internal libcdr build we don't build. As this package
-# is deemed to be around due to libcdr dep anyway I won't
-# add it as harddep
 COMMON_DEPEND="
 	app-arch/zip
 	app-arch/unzip
@@ -120,6 +116,7 @@ COMMON_DEPEND="
 	>=dev-libs/redland-1.0.14[ssl]
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
+	media-libs/lcms:2
 	>=media-libs/libpng-1.4
 	>=media-libs/libcdr-0.0.5
 	media-libs/libvisio
