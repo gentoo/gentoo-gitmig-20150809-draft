@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.339 2012/05/20 22:22:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.340 2012/06/04 08:00:14 tetromino Exp $
+
+  04 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org> totem-3.2.2.ebuild:
+  totem-3.2 also needs the "unset DISPLAY" hack to avoid access violations (bug
+  #419187, thanks to Travis Hansen).
 
   20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> totem-3.4.2.ebuild:
   Fix build with USE=-python (bug #416165, thanks to cyrillic).

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.2.ebuild,v 1.3 2012/05/05 08:58:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.2.ebuild,v 1.4 2012/06/04 08:00:14 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -159,6 +159,13 @@ src_prepare() {
 	use python && python_clean_py-compile_files
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	# Work around sandbox violations when FEATURES=-userpriv caused by
+	# gst-inspect-0.10 (bug #358755, #419187)
+	unset DISPLAY
+	gnome2_src_configure
 }
 
 pkg_postinst() {
