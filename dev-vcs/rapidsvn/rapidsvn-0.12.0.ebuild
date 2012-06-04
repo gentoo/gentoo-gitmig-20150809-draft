@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.9 2012/05/21 20:03:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.10 2012/06/04 12:33:55 jlec Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ WX_GTK_VER=2.8
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils eutils fdo-mime flag-o-matic libtool versionator wxwidgets
+inherit autotools-utils eutils fdo-mime flag-o-matic versionator wxwidgets
 
 MY_PV=$(get_version_component_range 1-2)
 MY_REL="1"
