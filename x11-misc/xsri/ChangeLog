@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xsri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.14 2012/05/05 04:53:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.15 2012/06/04 18:40:52 xmw Exp $
+
+*xsri-2.1.0-r2 (04 Jun 2012)
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> +xsri-2.1.0-r2.ebuild:
+  Version bump (reported by df, bug 416419)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> xsri-2.1.0-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
