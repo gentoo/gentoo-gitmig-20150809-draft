@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cxxtools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/ChangeLog,v 1.9 2011/01/19 19:01:30 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/ChangeLog,v 1.10 2012/06/04 16:31:13 idl0r Exp $
+
+*cxxtools-2.1.1 (04 Jun 2012)
+
+  04 Jun 2012; Christian Ruppert <idl0r@gentoo.org> +cxxtools-2.1.1.ebuild:
+  Version bump, bug 419173
 
 *cxxtools-2.0 (19 Jan 2011)
 
