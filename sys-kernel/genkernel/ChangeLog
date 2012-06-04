@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.311 2012/06/04 04:29:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.312 2012/06/04 20:02:36 sping Exp $
+
+*genkernel-3.4.34 (04 Jun 2012)
+
+  04 Jun 2012; Sebastian Pipping <sping@gentoo.org> +genkernel-3.4.34.ebuild:
+  Bump to 3.4.34
 
   04 Jun 2012; Joseph Jezak <josejx@gentoo.org> genkernel-3.4.24_p1.ebuild:
   Marked ppc stable for bug #415483.
