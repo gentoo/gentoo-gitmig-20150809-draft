@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.37 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.38 2012/06/04 08:27:42 sera Exp $
 
 inherit java-utils-2
 
@@ -61,7 +61,6 @@ esac
 # ------------------------------------------------------------------------------
 java-pkg-2_pkg_setup() {
 	java-pkg_init
-	java-pkg_ensure-test
 }
 
 # ------------------------------------------------------------------------------
