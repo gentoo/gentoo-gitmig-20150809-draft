@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20120128.ebuild,v 1.2 2012/02/15 18:20:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20120525.ebuild,v 1.1 2012/06/04 14:58:49 idl0r Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ DEPEND=">=virtual/linuxtv-dvb-headers-5.3"
 RDEPEND=""
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	dodoc ChangeLog README
 
