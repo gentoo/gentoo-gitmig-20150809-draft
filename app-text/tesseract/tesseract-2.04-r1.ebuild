@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.04-r1.ebuild,v 1.7 2010/11/20 11:37:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.04-r1.ebuild,v 1.8 2012/06/04 11:40:10 jlec Exp $
 
 EAPI="2"
 
@@ -48,7 +48,10 @@ src_prepare() {
 	rm "${S}/java/makefile" || die "remove obsolete java makefile failed"
 
 	# fix gcc-4.4 compilation, bug 269320
-	epatch "${FILESDIR}"/${P}-gcc44.patch
+	# fix gcc-4.7 compilation, bug 413937
+	epatch \
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_configure() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tesseract
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.29 2010/11/20 11:37:09 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.30 2012/06/04 11:40:10 jlec Exp $
+
+  04 Jun 2012; Justin Lecher <jlec@gentoo.org> tesseract-2.04-r1.ebuild,
+  +files/tesseract-2.04-gcc47.patch:
+  Include fix for gcc47, #413937
 
   20 Nov 2010; Raúl Porcel <armin76@gentoo.org> tesseract-2.04-r1.ebuild:
   Add ~arm wrt #345735
