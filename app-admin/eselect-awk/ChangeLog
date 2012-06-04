@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-awk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.1 2012/06/04 03:07:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.2 2012/06/04 17:25:28 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> eselect-awk-0.2.ebuild:
+  Marked ~amd64, wrt to bug #419559
 
 *eselect-awk-0.2 (04 Jun 2012)
 
