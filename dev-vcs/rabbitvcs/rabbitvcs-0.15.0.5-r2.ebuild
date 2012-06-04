@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.2.1.ebuild,v 1.4 2012/02/05 01:43:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.15.0.5-r2.ebuild,v 1.1 2012/06/04 20:24:23 xmw Exp $
 
-EAPI=2
+EAPI=4
 
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 
-inherit gnome2-utils multilib distutils
+inherit eutils gnome2-utils multilib distutils
 
 DESCRIPTION="Integrated version control support for your desktop"
 HOMEPAGE="http://rabbitvcs.org"
-SRC_URI="http://rabbitvcs.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://rabbitvcs.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -42,27 +42,35 @@ src_prepare() {
 	# we should not do gtk-update-icon-cache from setup script
 	# we prefer portage for that
 	sed -e 's/"install"/"fakeinstall"/' -i "${S}/setup.py" || die
+
+	epatch "${FILESDIR}"/50_fix_gedit3_plugin.patch #bug 419647
 }
 
 src_install() {
 	distutils_src_install
 
 	if use cli ; then
-		dobin clients/cli/${PN} || die
+		dobin clients/cli/${PN}
 	fi
 	if use gedit ; then
 		insinto /usr/$(get_libdir)/gedit-2/plugins
-		doins clients/gedit/${PN}-plugin.py || die
-		doins clients/gedit/${PN}.gedit-plugin || die
+		doins clients/gedit/${PN}-plugin.py
+		doins clients/gedit/${PN}-gedit2.gedit-plugin
+		insinto /usr/$(get_libdir)/gedit/plugins
+		doins clients/gedit/${PN}-plugin.py
+		doins clients/gedit/${PN}-gedit3.plugin
 	fi
 	if use nautilus ; then
 		insinto /usr/$(get_libdir)/nautilus/extensions-2.0/python
-		doins clients/nautilus/RabbitVCS.py || die
+		doins clients/nautilus/RabbitVCS.py
+		insinto /usr/share/nautilus-python/extensions
+		doins clients/nautilus-3.0/RabbitVCS.py
 	fi
 	if use thunar ; then
-		has_version '>=xfce-base/thunar-1.1.0' && tv=2 || tv=1
-		insinto "/usr/$(get_libdir)/thunarx-${tv}/python"
-		doins clients/thunar/RabbitVCS.py || die
+		insinto "/usr/$(get_libdir)/thunarx-2/python"
+		doins clients/thunar/RabbitVCS.py
+		insinto "/usr/$(get_libdir)/thunarx-1/python"
+		doins clients/thunar/RabbitVCS.py
 	fi
 }
 

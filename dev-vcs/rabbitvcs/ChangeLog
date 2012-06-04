@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/rabbitvcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.8 2012/03/07 23:11:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.9 2012/06/04 20:24:23 xmw Exp $
+
+*rabbitvcs-0.15.0.5-r2 (04 Jun 2012)
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> +files/50_fix_gedit3_plugin.patch,
+  +rabbitvcs-0.15.0.5-r2.ebuild, -rabbitvcs-0.14.2.1.ebuild,
+  -rabbitvcs-0.15.0.5.ebuild:
+  Revbump to include gedit3 patch (thanks pacho, bug 419647)
 
 *rabbitvcs-0.15.0.5-r1 (07 Mar 2012)
 
