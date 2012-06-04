@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.48 2012/05/03 06:35:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.49 2012/06/04 07:17:38 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> openscenegraph-3.0.1.ebuild:
+  inherit flag-o-matic for append-cppflags
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> openscenegraph-2.8.3.ebuild,
   openscenegraph-3.0.1.ebuild:

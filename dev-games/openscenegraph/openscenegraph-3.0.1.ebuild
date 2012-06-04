@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1.ebuild,v 1.6 2012/05/03 06:35:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1.ebuild,v 1.7 2012/06/04 07:17:38 zmedico Exp $
 
 EAPI=3
 
-inherit eutils cmake-utils wxwidgets
+inherit eutils cmake-utils flag-o-matic wxwidgets
 
 MY_PN="OpenSceneGraph"
 MY_P=${MY_PN}-${PV}
