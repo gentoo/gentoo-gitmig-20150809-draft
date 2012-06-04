@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.61 2012/05/25 14:02:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.62 2012/06/04 04:00:52 radhermit Exp $
+
+  04 Jun 2012; Tim Harder <radhermit@gentoo.org> mixxx-1.10.0.ebuild:
+  Add dependency on qt-sql.
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> mixxx-1.10.0.ebuild:
   Stable for amd64, wrt bug #417127
