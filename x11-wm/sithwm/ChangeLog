@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/sithwm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sithwm/ChangeLog,v 1.1 2012/06/04 21:13:56 xmw Exp $
+
+*sithwm-1.2.3 (04 Jun 2012)
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> +sithwm-1.2.3.ebuild,
+  +files/sithwm-1.2.3-warnings.patch, +metadata.xml:
+  Initial import (bug 212633, thanks Jon Daniel)
+
