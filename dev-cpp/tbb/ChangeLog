@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.19 2012/06/01 17:58:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.20 2012/06/04 04:41:22 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> tbb-4.0.297.ebuild:
+  inherit multilib for get_libdir
 
   01 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
   -files/tbb-3.0.174-gcc46.patch, -tbb-3.0.221.ebuild, -tbb-4.0.278.ebuild,
