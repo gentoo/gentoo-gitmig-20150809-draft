@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.1.26351.0.ebuild,v 1.1 2011/12/30 06:25:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.1.26351.0.ebuild,v 1.2 2012/06/04 06:30:31 zmedico Exp $
 
 EAPI=4
 
-inherit flag-o-matic eutils autotools multilib versionator
+inherit flag-o-matic eutils autotools multilib user versionator
 
 MY_P=${PN/f/F}-$(replace_version_separator 4 -)
 #MY_P=${PN/f/F}-${PV/_rc/-ReleaseCandidate}

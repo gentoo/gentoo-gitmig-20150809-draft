@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.4.ebuild,v 1.2 2012/04/03 08:48:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.4.ebuild,v 1.3 2012/06/04 06:34:29 zmedico Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
 
-inherit eutils multilib pax-utils scons-utils versionator
+inherit eutils multilib pax-utils scons-utils user versionator
 
 MY_P=${PN}-src-r${PV/_rc/-rc}
 

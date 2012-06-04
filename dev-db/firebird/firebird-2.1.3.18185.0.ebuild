@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.3.18185.0.ebuild,v 1.3 2010/06/16 19:25:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.3.18185.0.ebuild,v 1.4 2012/06/04 06:30:31 zmedico Exp $
 
-inherit flag-o-matic eutils autotools versionator
+inherit flag-o-matic eutils autotools user versionator
 
 MY_P=Firebird-$(replace_version_separator 4 -)
 #MY_P=Firebird-${PV/_rc/-ReleaseCandidate}
