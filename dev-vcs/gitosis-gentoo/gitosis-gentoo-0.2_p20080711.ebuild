@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis-gentoo/gitosis-gentoo-0.2_p20080711.ebuild,v 1.2 2011/04/06 19:39:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis-gentoo/gitosis-gentoo-0.2_p20080711.ebuild,v 1.3 2012/06/04 20:57:17 zmedico Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit eutils distutils
+inherit eutils distutils user
 
 DESCRIPTION="gitosis -- software for hosting git repositories, Gentoo fork"
 HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/gitosis-gentoo.git"

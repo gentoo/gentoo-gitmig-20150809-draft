@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/gitosis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis/ChangeLog,v 1.3 2011/04/06 19:27:19 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis/ChangeLog,v 1.4 2012/06/04 20:58:28 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> gitosis-0.2_p20080626.ebuild,
+  gitosis-0.2_p20080825.ebuild:
+  inherit user for enewgroup and enewuser
 
   06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gitosis-0.2_p20080626.ebuild, gitosis-0.2_p20080825.ebuild:
