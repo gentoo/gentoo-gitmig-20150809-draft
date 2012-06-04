@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.11.3.ebuild,v 1.7 2012/05/31 22:56:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.11.3.ebuild,v 1.8 2012/06/04 06:56:04 cardoe Exp $
 
 EAPI=4
 
@@ -62,7 +62,7 @@ RDEPEND="sys-libs/readline
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
 	iscsi? ( sys-block/open-iscsi )
-	libvirtd? ( net-misc/bridge-utils )
+	lxc? ( sys-power/pm-utils )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	nfs? ( net-fs/nfs-utils )
 	numa? ( >sys-process/numactl-2.0.2 )
@@ -74,8 +74,11 @@ RDEPEND="sys-libs/readline
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
-	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 )
-		dev-libs/yajl )
+	qemu? ( 
+		|| ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 )
+		dev-libs/yajl
+		sys-power/pm-utils
+	)
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )

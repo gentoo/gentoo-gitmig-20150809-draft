@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.180 2012/05/31 22:53:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.181 2012/06/04 06:56:04 cardoe Exp $
+
+  04 Jun 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.11.3.ebuild:
+  add missing depend on sys-power/pm-utils and remove no long necessary
+  net-misc/bridge-utils.
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> libvirt-0.9.10-r4.ebuild,
   libvirt-0.9.11.3.ebuild, libvirt-0.9.8.ebuild, libvirt-9999.ebuild:
