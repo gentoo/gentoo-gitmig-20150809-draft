@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.174 2012/06/04 05:57:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.175 2012/06/04 06:01:24 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> package.use.mask,
+  ppc32/package.use.mask:
+  move mask USE=apbs on sci-chemistry/pymol in the right location, fix typo
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> ppc32/package.use.mask:
   Masking USE=apbs on sci-chemistry/pymol (bug 366229)

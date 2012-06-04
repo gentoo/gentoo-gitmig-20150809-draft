@@ -1,7 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.123 2012/05/31 01:15:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.124 2012/06/04 06:01:24 xmw Exp $
 
+
+# Michael Weber <xmw@gentoo.org> (3 Jun 2012)
+# pymol got stabled (bug 366229) but USE=apbs deps aren't keyworded
+sci-chemistry/pymol apbs
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (28 May 2012)
 # Mask new useflag of opencv, as dependency dev-cpp/tbb is not keyworded on ppc

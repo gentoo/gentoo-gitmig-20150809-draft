@@ -1,12 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.28 2012/06/04 05:57:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.29 2012/06/04 06:01:24 xmw Exp $
 
 # This file requires >=portage-2.1.1
-
-# Michael Weber <xmw@gentoo.org> (3 Jun 2012)
-# pymol got stabled (bug 366229) but USE=abps deps aren't keyworded
-sci-chemistry/pymol abps
 
 # ranger <ranger@gentoo.org> (17 apr 2012)
 # masking libvirt for cfengine (bug #412253)
