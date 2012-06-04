@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.256 2012/06/01 01:59:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.257 2012/06/04 22:05:16 alexxy Exp $
+
+  04 Jun 2012; Alexey Shvetsov <alexxy@gentoo.org> mc-4.8.3-r2.ebuild:
+  [app-misc/mc] Works on ~amd64-fbsd
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> mc-4.8.2-r2.ebuild:
   inherit eutils for epatch
