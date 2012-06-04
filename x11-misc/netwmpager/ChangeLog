@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/netwmpager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/ChangeLog,v 1.15 2012/05/05 04:53:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/ChangeLog,v 1.16 2012/06/04 19:52:37 xmw Exp $
+
+*netwmpager-2.04 (04 Jun 2012)
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> +netwmpager-2.04.ebuild:
+  Version bump, fix SRC_URI/HOMEPAGE (reported by df, bug 416163)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> netwmpager-1.6.ebuild,
   netwmpager-1.11-r1.ebuild:
