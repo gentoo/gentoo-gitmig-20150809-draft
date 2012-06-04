@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.69 2012/05/21 18:44:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.70 2012/06/04 07:30:23 tetromino Exp $
+
+  04 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gobject-introspection-0.10.8.ebuild, gobject-introspection-1.30.0-r1.ebuild,
+  gobject-introspection-1.30.0-r2.ebuild, gobject-introspection-1.32.0.ebuild,
+  gobject-introspection-1.32.1.ebuild:
+  Need PYTHON_USE_WITH="xml"(bug #418083, thanks to Arfrever).
 
   21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gobject-introspection-1.30.0-r1.ebuild,
