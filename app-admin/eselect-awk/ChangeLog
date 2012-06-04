@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/eselect-awk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.1 2012/06/04 03:07:33 ottxor Exp $
+
+*eselect-awk-0.2 (04 Jun 2012)
+
+  04 Jun 2012; Christoph Junghans <ottxor@gentoo.org> +eselect-awk-0.2.ebuild,
+  +metadata.xml:
+  initial commit
+
