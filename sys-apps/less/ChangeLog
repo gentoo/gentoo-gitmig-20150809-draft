@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.142 2012/04/26 14:17:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.143 2012/06/04 19:08:14 grobian Exp $
+
+  04 Jun 2012; Fabian Groffen <grobian@gentoo.org> less-445-r1.ebuild:
+  Fix for Prefix, add Prefix keywords, bug #388209
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> less-445-r1.ebuild:
   keyword ~amd64-fbsd
