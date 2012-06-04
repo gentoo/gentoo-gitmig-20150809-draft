@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.7.ebuild,v 1.2 2012/05/13 19:47:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.7.ebuild,v 1.3 2012/06/04 18:03:13 vapier Exp $
 
 EAPI="4"
 
@@ -34,6 +34,7 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${P}-glibc-2.15.patch #414637
+	epatch "${FILESDIR}"/${P}-x32.patch
 
 	filter-lfs-flags # configure handles this sanely
 	use static && append-ldflags -static
