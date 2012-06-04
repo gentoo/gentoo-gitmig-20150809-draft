@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.11.3.ebuild,v 1.8 2012/06/04 06:56:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.11.3.ebuild,v 1.9 2012/06/04 18:52:01 mr_bones_ Exp $
 
 EAPI=4
 
@@ -74,7 +74,7 @@ RDEPEND="sys-libs/readline
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
-	qemu? ( 
+	qemu? (
 		|| ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 )
 		dev-libs/yajl
 		sys-power/pm-utils
