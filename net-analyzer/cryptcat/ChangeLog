@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cryptcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/ChangeLog,v 1.17 2012/04/16 21:12:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/ChangeLog,v 1.18 2012/06/04 10:48:55 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> cryptcat-1.2.1-r1.ebuild:
+  Stable for amd64, wrt bug #419207
 
   16 Apr 2012; Brent Baude <ranger@gentoo.org> cryptcat-1.2.1.ebuild:
   Marking cryptcat-1.2.1 ppc for bug 409523
