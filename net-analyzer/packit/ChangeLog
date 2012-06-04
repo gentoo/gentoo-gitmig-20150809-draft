@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/packit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.26 2011/08/01 20:42:38 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.27 2012/06/04 11:26:12 jer Exp $
+
+  04 Jun 2012; Jeroen Roovers <jer@gentoo.org> packit-1.0-r2.ebuild:
+  Set RDEPEND. Do not install VERSION.
 
 *packit-1.0-r2 (01 Aug 2011)
 

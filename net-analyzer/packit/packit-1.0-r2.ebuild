@@ -1,9 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-1.0-r2.ebuild,v 1.1 2011/08/01 20:12:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/packit-1.0-r2.ebuild,v 1.2 2012/06/04 11:26:12 jer Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit eutils
 
 DESCRIPTION="network auditing tool that allows you to monitor, manipulate, and inject customized IPv4 traffic"
@@ -17,6 +16,7 @@ IUSE=""
 
 DEPEND=">=net-libs/libnet-1.1.2
 	net-libs/libpcap"
+RDEPEND="${DEPEND}"
 
 src_prepare(){
 	sed -i 's:net/bpf.h:pcap-bpf.h:g' "${S}"/src/{globals.h,main.h} || die
@@ -29,5 +29,5 @@ src_prepare(){
 
 src_install() {
 	default
-	dodoc VERSION docs/*
+	dodoc docs/*
 }
