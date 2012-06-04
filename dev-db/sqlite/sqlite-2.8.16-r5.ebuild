@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.6 2012/05/30 22:56:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.7 2012/06/04 06:55:12 zmedico Exp $
 
-inherit eutils alternatives toolchain-funcs
+inherit eutils alternatives multilib toolchain-funcs
 
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
