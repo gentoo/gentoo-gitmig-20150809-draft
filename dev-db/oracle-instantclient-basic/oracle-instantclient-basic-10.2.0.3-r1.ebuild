@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3-r1.ebuild,v 1.5 2009/08/23 01:47:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3-r1.ebuild,v 1.6 2012/06/04 06:37:16 zmedico Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_P_x86="${PN/oracle-/}-linux32-${PV}-20061115"
 MY_PSDK_x86="${MY_P_x86/basic/sdk}"

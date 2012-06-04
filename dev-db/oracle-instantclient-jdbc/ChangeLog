@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/oracle-instantclient-jdbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.32 2012/03/07 16:25:45 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.33 2012/06/04 06:39:47 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org>
+  oracle-instantclient-jdbc-10.2.0.3.ebuild,
+  oracle-instantclient-jdbc-11.2.0.2.ebuild,
+  oracle-instantclient-jdbc-11.2.0.3.ebuild:
+  inherit multilib for get_libdir
 
   07 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
   oracle-instantclient-jdbc-11.2.0.3.ebuild:

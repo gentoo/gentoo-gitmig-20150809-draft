@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.48 2012/03/09 17:04:41 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.49 2012/06/04 06:37:16 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org>
+  oracle-instantclient-basic-10.2.0.3-r1.ebuild,
+  oracle-instantclient-basic-11.2.0.2.ebuild:
+  inherit multilib for get_libdir
 
   09 Mar 2012; Michael Haubenwallner <haubi@gentoo.org>
   oracle-instantclient-basic-11.2.0.3.ebuild:
