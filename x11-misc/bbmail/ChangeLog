@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/ChangeLog,v 1.20 2011/12/02 22:53:49 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbmail/ChangeLog,v 1.21 2012/06/04 18:54:14 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> bbmail-0.8.3.ebuild,
+  bbmail-0.9.3.ebuild:
+  Fix HOMEPAGE (reported by df, bug 415811)
 
   02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> bbmail-0.9.3.ebuild:
   Stable on amd64 wrt bug #391639
