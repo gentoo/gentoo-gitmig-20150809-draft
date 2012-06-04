@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.5 2012/06/04 04:41:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.6 2012/06/04 21:10:06 hasufell Exp $
 
 EAPI=4
-inherit eutils flag-o-matic multilib versionator toolchain-funcs
+inherit eutils multilib versionator toolchain-funcs
 
 # those 2 below change pretty much every release
 # url number
@@ -81,9 +81,6 @@ src_compile() {
 }
 
 src_test() {
-	# fix underlinking in test phase
-	append-libs dl
-
 	local ccconf="${myconf}"
 	if use debug || use examples; then
 		${ccconf}="${myconf} test_debug tbbmalloc_test_debug"
