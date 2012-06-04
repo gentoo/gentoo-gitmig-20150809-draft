@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20110311.ebuild,v 1.12 2012/05/16 16:04:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20110311.ebuild,v 1.13 2012/06/04 18:43:52 grobian Exp $
 
-EAPI=2
+EAPI=3
 inherit autotools eutils texlive-common
 
 DESCRIPTION="DVI to PDF translator with multi-byte character support"
@@ -11,7 +11,7 @@ SRC_URI="http://project.ktug.or.kr/${PN}/snapshot/latest/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
 
 DEPEND="app-text/libpaper
@@ -32,7 +32,7 @@ src_prepare() {
 src_install() {
 	# Override dvipdfmx.cfg default installation location so that it is easy to
 	# modify it and it gets config protected. Symlink it from the old location.
-	emake configdatadir="/etc/texmf/dvipdfmx" DESTDIR="${D}" install || die
+	emake configdatadir="${EPREFIX}/etc/texmf/dvipdfmx" DESTDIR="${D}" install || die
 	dosym /etc/texmf/dvipdfmx/dvipdfmx.cfg /usr/share/texmf/dvipdfmx/dvipdfmx.cfg || die
 
 	# Symlink poppler-data cMap, bug #201258
@@ -40,7 +40,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog README || die
 
 	# Remove symlink conflicting with app-text/dvipdfm (bug #295235)
-	rm "${D}"/usr/bin/ebb
+	rm "${ED}"/usr/bin/ebb
 }
 
 pkg_postinst() {
