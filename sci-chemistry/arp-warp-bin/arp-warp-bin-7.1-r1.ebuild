@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1-r1.ebuild,v 1.2 2011/12/24 09:01:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1-r1.ebuild,v 1.3 2012/06/04 08:49:15 jlec Exp $
 
 EAPI=3
 
@@ -31,6 +31,8 @@ DEPEND=""
 RESTRICT="fetch"
 
 S="${WORKDIR}/${MY_P}"
+
+QA_PREBUILT="opt/arp-warp-bin/bin/.*"
 
 pkg_nofetch(){
 	elog "Fill out the form at http://www.embl-hamburg.de/ARP/"
