@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0-r1.ebuild,v 1.11 2012/05/04 08:58:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0-r1.ebuild,v 1.12 2012/06/04 19:00:52 jdhore Exp $
 
 EAPI="2"
 inherit multilib autotools eutils
@@ -37,6 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-configure-imlib2.patch
 	sed -i -e "s:-O0 -ggdb ::" "${S}"/m4/openbox.m4 || die
+	epatch_user
 	eautopoint
 	eautoreconf
 }

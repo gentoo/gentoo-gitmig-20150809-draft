@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019.ebuild,v 1.4 2012/05/06 09:01:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019.ebuild,v 1.5 2012/06/04 19:00:52 jdhore Exp $
 
 EAPI="2"
 inherit multilib autotools eutils
@@ -37,6 +37,7 @@ S="${WORKDIR}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
 	sed -i -e "s:-O0 -ggdb ::" "${S}"/m4/openbox.m4 || die
+	epatch_user
 	eautopoint
 	eautoreconf
 }
