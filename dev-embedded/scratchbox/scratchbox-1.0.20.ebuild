@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.20.ebuild,v 1.1 2010/09/19 10:16:33 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.20.ebuild,v 1.2 2012/06/04 07:13:48 zmedico Exp $
 
-inherit eutils
+inherit eutils user
 
 SBOX_GROUP="sbox"
 

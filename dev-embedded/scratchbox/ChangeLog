@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/scratchbox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.17 2010/09/19 10:16:33 ayoy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.18 2012/06/04 07:13:48 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> scratchbox-1.0.19.ebuild,
+  scratchbox-1.0.20.ebuild:
+  inherit user for enewgroup
 
 *scratchbox-1.0.20 (19 Sep 2010)
 
