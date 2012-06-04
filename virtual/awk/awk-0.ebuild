@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/awk/awk-0.ebuild,v 1.1 2012/06/04 02:52:17 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/awk/awk-0.ebuild,v 1.2 2012/06/04 04:57:12 ssuominen Exp $
 
 DESCRIPTION="Virtual for awk implementation"
 HOMEPAGE=""
@@ -17,5 +17,5 @@ RDEPEND="
 		sys-apps/gawk
 		sys-apps/mawk
 		sys-apps/nawk
-		 sys-apps/busybox
+		sys-apps/busybox
 	)"
