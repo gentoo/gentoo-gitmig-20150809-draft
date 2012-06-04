@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.89 2012/04/24 18:35:30 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.90 2012/06/04 17:17:19 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> esearch-1.1-r2.ebuild:
+  Stable for amd64, wrt bug #418631
 
   24 Apr 2012; Paul Varner <fuzzyray@gentoo.org>
   -files/0.7.2-esync-quiet.patch, -files/0.7.2-make-prefix-aware.patch,
