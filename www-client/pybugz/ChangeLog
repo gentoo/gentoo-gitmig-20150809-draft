@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.104 2012/05/29 20:09:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.105 2012/06/04 22:20:50 alexxy Exp $
+
+  04 Jun 2012; Alexey Shvetsov <alexxy@gentoo.org> pybugz-0.10.1.ebuild:
+  [www-client/pybugz] Works on ~amd64-fbsd
 
   29 May 2012; Brent Baude <ranger@gentoo.org> pybugz-0.10.1.ebuild:
   Marking pybugz-0.10.1 ppc for bug 415277
