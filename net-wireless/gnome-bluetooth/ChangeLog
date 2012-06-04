@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.109 2012/05/13 23:38:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.110 2012/06/04 06:51:36 ssuominen Exp $
+
+  04 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-bluetooth-3.2.2.ebuild, gnome-bluetooth-3.4.0.ebuild:
+  inherit eutils for preserve_old_lib_notify
 
 *gnome-bluetooth-3.4.0 (13 May 2012)
 

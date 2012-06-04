@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.2.2.ebuild,v 1.3 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.2.2.ebuild,v 1.4 2012/06/04 06:51:36 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 # libgnome-bluetooth-applet.la is needed by gnome-shell during compilation
 GNOME2_LA_PUNT="no"
 
-inherit gnome2 multilib
+inherit eutils gnome2 multilib
 
 DESCRIPTION="Fork of bluez-gnome focused on integration with GNOME"
 HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
