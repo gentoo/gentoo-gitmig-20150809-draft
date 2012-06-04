@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.122 2012/04/26 14:22:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.123 2012/06/04 21:13:39 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> ssmtp-2.62-r8.ebuild,
+  ssmtp-2.64-r2.ebuild:
+  inherit user for enewgroup
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> ssmtp-2.64-r2.ebuild:
   keyword ~amd64-fbsd
