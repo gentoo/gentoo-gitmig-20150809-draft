@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.148 2012/06/02 11:32:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.149 2012/06/04 23:51:12 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> dspam-3.10.1-r1.ebuild,
+  dspam-3.10.2.ebuild:
+  inherit user for egetent, enewgroup, and enewuser
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> dspam-3.10.2.ebuild:
   Stable for amd64, wrt bug #419017
