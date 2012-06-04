@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Signal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/ChangeLog,v 1.13 2011/09/04 11:23:58 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/ChangeLog,v 1.14 2012/06/04 02:06:55 xmw Exp $
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> IPC-Signal-1.0.0.ebuild:
+  ppc stable (bug 400757)
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -IPC-Signal-1.00.ebuild:
   Cleanup
