@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.79 2012/06/02 09:56:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.80 2012/06/04 20:23:35 mgorny Exp $
+
+  04 Jun 2012; Michał Górny <mgorny@gentoo.org> llvm-3.0-r2.ebuild,
+  llvm-3.1.ebuild:
+  Depend on binutils[cxx] for gold plugin wrt #419383.
 
   02 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   llvm-3.1.ebuild:
