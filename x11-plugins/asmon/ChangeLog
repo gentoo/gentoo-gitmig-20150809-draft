@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asmon
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.26 2008/06/27 20:22:48 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.27 2012/06/04 08:42:58 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> asmon-0.71.ebuild:
+  Stable for amd64, wrt bug #418265
 
   27 Jun 2008; Raúl Porcel <armin76@gentoo.org> asmon-0.71.ebuild:
   alpha/sparc/x86 stable wrt #229539
