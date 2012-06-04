@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.77 2012/06/02 20:27:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.78 2012/06/04 10:31:26 ago Exp $
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-3.5.4.2-r1.ebuild:
+  Stable for amd64, wrt bug #416457
 
 *libreoffice-bin-3.5.4.2-r1 (02 Jun 2012)
 
