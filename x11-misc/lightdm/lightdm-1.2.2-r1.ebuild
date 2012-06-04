@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.2-r1.ebuild,v 1.1 2012/05/30 14:08:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.2-r1.ebuild,v 1.2 2012/06/04 23:23:38 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -40,6 +40,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
 	epatch "${FILESDIR}/${PN}"-1.2.0-fix-configure.patch
+	epatch_user
 
 	if has_version dev-libs/gobject-introspection; then
 		eautoreconf
