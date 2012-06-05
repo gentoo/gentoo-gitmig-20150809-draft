@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.1.0_pre2-r3.ebuild,v 1.1 2010/08/26 16:36:52 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.1.0_pre2-r3.ebuild,v 1.2 2012/06/05 10:32:20 hwoarang Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tvision/rhtvision_${PV/_pre/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}
