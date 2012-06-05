@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-3.20120522.ebuild,v 1.1 2012/06/02 08:49:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-3.20120522.ebuild,v 1.2 2012/06/05 01:01:33 mr_bones_ Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc test"
 RESTRICT=test # don't seem to like our git environment much
 
 RDEPEND=">=dev-vcs/git-1.7.7" # TODO: add more deps?

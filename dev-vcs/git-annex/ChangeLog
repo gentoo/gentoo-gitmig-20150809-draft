@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.5 2012/06/02 08:49:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.6 2012/06/05 01:01:33 mr_bones_ Exp $
+
+  05 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  git-annex-3.20120522.ebuild:
+  add missing test to IUSE
 
 *git-annex-3.20120522 (02 Jun 2012)
 
