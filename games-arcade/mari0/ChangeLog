@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/mari0
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.3 2012/06/02 15:46:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.4 2012/06/05 18:46:37 hasufell Exp $
+
+  05 Jun 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
+  use new doicon functionality
 
   02 Jun 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
   bump to EAPI=4
