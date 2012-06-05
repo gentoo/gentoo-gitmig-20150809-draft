@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6633 2012/06/05 10:44:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6634 2012/06/05 14:27:16 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Mask ati-drivers-12.6_beta
 
   05 Jun 2012; Luca Barbato <lu_zero@gentoo.org> package.mask:
   Prepare to use the new eselect-opengl
