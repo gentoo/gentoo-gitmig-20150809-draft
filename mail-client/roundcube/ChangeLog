@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.79 2012/05/29 12:59:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.80 2012/06/05 21:37:03 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> roundcube-0.7.2.ebuild:
+  Marking roundcube-0.7.2 ppc64 for bug 412029
 
   29 May 2012; Tim Harder <radhermit@gentoo.org> -roundcube-0.8_beta.ebuild:
   Remove old.
