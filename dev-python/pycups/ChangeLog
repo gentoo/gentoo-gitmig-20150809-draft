@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.51 2012/06/05 10:25:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.52 2012/06/05 21:17:29 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> pycups-1.9.61.ebuild:
+  Marking pycups-1.9.61 ppc64 for bug 418905
 
   05 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pycups-1.9.61.ebuild:
   Stable for amd64, wrt bug #418905
