@@ -7,7 +7,4 @@
     <name>Julian Ospald</name>
     <description>hasufell at Freenode</description>
   </maintainer>
-  <use>
-    <flag name='webkit'>Enable GTK+ based WebKit support</flag>
-  </use>
 </pkgmetadata>
