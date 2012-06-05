@@ -1,6 +1,13 @@
 # ChangeLog for app-office/unoconv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.3 2012/03/31 11:57:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.4 2012/06/05 11:25:08 graaff Exp $
+
+*unoconv-20120522 (05 Jun 2012)
+
+  05 Jun 2012; Hans de Graaff <graaff@gentoo.org> +unoconv-20120522.ebuild,
+  metadata.xml:
+  Version bump, fixes bug 417719. Install additional docs. Add myself as
+  co-maintainer.
 
   31 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> unoconv-20120327.ebuild,
   unoconv-99999999.ebuild:
