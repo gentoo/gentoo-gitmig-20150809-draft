@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wildmidi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.20 2012/06/04 09:51:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.21 2012/06/05 20:40:36 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> wildmidi-0.2.3.5.ebuild:
+  Marking wildmidi-0.2.3.5 ppc64 for bug 419137
 
   04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> wildmidi-0.2.3.5.ebuild:
   Stable for amd64, wrt bug #419137
