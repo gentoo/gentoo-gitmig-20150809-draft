@@ -1,6 +1,11 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.95 2012/05/10 17:57:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.96 2012/06/05 11:48:30 lu_zero Exp $
+
+*glproto-1.4.15-r1 (05 Jun 2012)
+
+  05 Jun 2012; Luca Barbato <lu_zero@gentoo.org> +glproto-1.4.15-r1.ebuild:
+  New layout in eselect-opengl due multiple gles implementations support
 
   10 May 2012; Alexis Ballier <aballier@gentoo.org> glproto-1.4.15.ebuild:
   keyword ~amd64-fbsd
