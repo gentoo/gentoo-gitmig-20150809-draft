@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.247 2012/05/30 17:02:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.248 2012/06/05 21:36:04 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> uim-1.7.3.ebuild:
+  Marking uim-1.7.3 ppc64 for bug 413483
 
   30 May 2012; Jeroen Roovers <jer@gentoo.org> uim-1.7.3.ebuild:
   Stable for HPPA (bug #413483).
