@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.65 2012/06/02 16:06:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.66 2012/06/05 19:02:50 floppym Exp $
 
 EAPI=4
 
@@ -208,8 +208,10 @@ src_prepare() {
 
 	# autogen.sh does more than just run autotools
 	if [[ -n ${DO_AUTORECONF} ]] ; then
-		sed -i -e '/^autoreconf/s:^:set +e; e:' autogen.sh || die
-		(. ./autogen.sh) || die
+	#	sed -i -e '/^autoreconf/s:^:set +e; e:' autogen.sh || die
+	#	(. ./autogen.sh) || die
+		autotools_env_setup
+		./autogen.sh || die
 	fi
 
 	# install into the right dir for eselect #372735
