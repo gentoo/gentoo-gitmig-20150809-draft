@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.6 2012/06/04 21:10:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.7 2012/06/05 14:37:23 hasufell Exp $
 
 EAPI=4
 inherit eutils multilib versionator toolchain-funcs
@@ -24,6 +24,10 @@ LICENSE="GPL-2-with-exceptions"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="debug doc examples"
+# FIXME
+# https://bugs.gentoo.org/show_bug.cgi?id=412675#c10
+# restricting test for stabilization
+RESTRICT="test"
 
 DEPEND=""
 RDEPEND="${DEPEND}"

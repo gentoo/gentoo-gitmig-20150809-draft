@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.21 2012/06/04 21:10:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.22 2012/06/05 14:37:23 hasufell Exp $
+
+  05 Jun 2012; Julian Ospald <hasufell@gentoo.org> tbb-4.0.297.ebuild:
+  restricting test for stabilization wrt #412675
 
   04 Jun 2012; Julian Ospald <hasufell@gentoo.org> tbb-4.0.297.ebuild:
   remove flag-o-matic stuff, cause we already patch underlinking
