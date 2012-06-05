@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hotot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.10 2012/05/22 08:08:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.11 2012/06/05 05:37:38 xmw Exp $
+
+*hotot-0.9.8.7 (05 Jun 2012)
+
+  05 Jun 2012; Michael Weber <xmw@gentoo.org> +hotot-0.9.8.7.ebuild:
+  Version bump
 
 *hotot-0.9.8.4 (22 May 2012)
 
