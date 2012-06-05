@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.10 2011/06/09 12:19:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.11 2012/06/05 00:58:42 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools wxwidgets games
@@ -75,8 +75,7 @@ src_configure() {
 }
 
 src_compile() {
-	local jamopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
-	jam -dx -q ${jamopts} || die "jam failed"
+	jam -dx -q -j $(makeopts_jobs) || die "jam failed"
 }
 
 src_install() {

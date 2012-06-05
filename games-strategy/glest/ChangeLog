@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/glest
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.30 2011/06/09 12:19:44 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.31 2012/06/05 00:58:42 mr_bones_ Exp $
+
+  05 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> glest-3.2.2.ebuild:
+  use makeopts_jobs
 
   09 Jun 2011; Tupone Alfredo <tupone@gentoo.org> glest-3.2.2.ebuild,
   +files/glest-3.2.2-underlink.patch:
