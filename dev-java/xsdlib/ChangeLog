@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/xsdlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.33 2012/04/15 18:38:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.34 2012/06/05 12:42:42 sera Exp $
+
+*xsdlib-20090415 (05 Jun 2012)
+
+  05 Jun 2012; Ralph Sennhauser <sera@gentoo.org> +xsdlib-20090415.ebuild:
+  Version bump. Based on work of James Le Cuirot <chewi@aura-online.co.uk> in
+  java-overlay.
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> xsdlib-20050627-r2.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
