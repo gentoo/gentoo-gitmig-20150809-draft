@@ -1,15 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.10 2012/06/04 12:33:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.11 2012/06/05 14:19:49 jlec Exp $
 
 EAPI=4
 
+PYTHON_DEPEND="2"
 WANT_AUTOCONF="2.5"
 WX_GTK_VER=2.8
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils eutils fdo-mime flag-o-matic versionator wxwidgets
+inherit autotools-utils eutils fdo-mime flag-o-matic python versionator wxwidgets
 
 MY_PV=$(get_version_component_range 1-2)
 MY_REL="1"
@@ -44,6 +45,8 @@ DOCS=( HACKING.txt TRANSLATIONS )
 
 pkg_setup() {
 	wxwidgets_pkg_setup
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_configure() {

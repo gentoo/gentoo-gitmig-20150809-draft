@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/rapidsvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.12 2012/06/04 12:33:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.13 2012/06/05 14:19:49 jlec Exp $
+
+  05 Jun 2012; Justin Lecher <jlec@gentoo.org> rapidsvn-0.12.0.ebuild,
+  rapidsvn-0.12.1_pre8247.ebuild:
+  Fix for py3 as system ABI, #411621
 
   04 Jun 2012; Justin Lecher <jlec@gentoo.org> rapidsvn-0.12.0.ebuild,
   rapidsvn-0.12.1_pre8247.ebuild:
