@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.92 2012/06/04 21:42:58 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.93 2012/06/05 21:31:03 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> esearch-1.1-r2.ebuild:
+  Marking esearch-1.1-r2 ppc64 for bug 418631
 
   04 Jun 2012; Paul Varner <fuzzyray@gentoo.org> ChangeLog:
   Forcing a signed manifest
