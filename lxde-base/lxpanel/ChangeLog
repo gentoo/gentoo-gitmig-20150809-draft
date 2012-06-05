@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.42 2012/05/12 17:53:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.43 2012/06/05 00:43:59 xmw Exp $
+
+  05 Jun 2012; Michael Weber <xmw@gentoo.org> lxpanel-0.5.8.ebuild:
+  ppc stable (bug 385189)
 
   12 May 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/lxpanel-0.5.9-libwnck-check.patch, lxpanel-0.5.9.ebuild:
