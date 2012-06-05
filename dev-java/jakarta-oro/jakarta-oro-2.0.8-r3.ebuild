@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/jakarta-oro-2.0.8-r3.ebuild,v 1.3 2012/06/04 10:47:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/jakarta-oro-2.0.8-r3.ebuild,v 1.4 2012/06/05 20:43:38 ranger Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://apache/jakarta/oro/source/${P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="2.0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.3"
