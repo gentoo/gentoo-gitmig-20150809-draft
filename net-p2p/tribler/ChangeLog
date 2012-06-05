@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/tribler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.15 2012/06/04 20:08:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.16 2012/06/05 16:45:16 blueness Exp $
+
+*tribler-5.9.13 (05 Jun 2012)
+
+  05 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +tribler-5.9.13.ebuild:
+  Version bump
 
   04 Jun 2012; Anthony G. Basile <blueness@gentoo.org> tribler-5.9.12.ebuild:
   Improve python dependency, bug #419339 again
