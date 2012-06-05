@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.79 2012/06/04 22:32:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.80 2012/06/05 22:14:52 dilfridge Exp $
+
+  05 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-3.5.4.2-r1.ebuild:
+  Fix libcmis version
 
   04 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-bin-3.5.4.2-r1.ebuild:
