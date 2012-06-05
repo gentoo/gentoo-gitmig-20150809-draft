@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.0-r1.ebuild,v 1.2 2012/06/01 13:03:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.0-r1.ebuild,v 1.3 2012/06/05 20:55:39 ranger Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE="test"
 
 DEPEND="test? ( app-arch/ncompress )"

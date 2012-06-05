@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.65 2012/06/01 13:03:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.66 2012/06/05 20:55:39 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> xdelta-3.0.0-r1.ebuild:
+  Marking xdelta-3.0.0-r1 ppc64 for bug 418967
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xdelta-3.0.0-r1.ebuild:
   Stable for amd64, wrt bug #418967
