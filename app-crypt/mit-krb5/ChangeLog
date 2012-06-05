@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.320 2012/04/21 12:14:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.321 2012/06/05 14:13:02 eras Exp $
+
+*mit-krb5-1.10.2 (05 Jun 2012)
+
+  05 Jun 2012; Eray Aslan <eras@gentoo.org> +mit-krb5-1.10.2.ebuild:
+  security bump - bug #419765
 
   21 Apr 2012; Markus Meier <maekke@gentoo.org> mit-krb5-1.10.1-r3.ebuild:
   add ~arm, bug #412489
