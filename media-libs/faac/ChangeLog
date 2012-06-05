@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.90 2012/06/02 10:34:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.91 2012/06/05 21:22:53 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> faac-1.28-r3.ebuild:
+  Marking faac-1.28-r3 ppc64 for bug 419077
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> faac-1.28-r3.ebuild:
   Stable for amd64, wrt bug #419077
