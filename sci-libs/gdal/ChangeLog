@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.128 2012/05/27 07:49:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.129 2012/06/05 21:08:15 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> gdal-1.8.1-r1.ebuild:
+  Marking gdal-1.8.1-r1 ppc64 for bug 413835
 
   27 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.9.1.ebuild:
   Fix configure failure when building with -python. thanks to Nikoli for
