@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.79 2012/06/01 13:04:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.80 2012/06/05 21:20:10 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> pygments-1.5.ebuild:
+  Marking pygments-1.5 ppc64 for bug 418909
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pygments-1.5.ebuild:
   Stable for amd64, wrt bug #418909
