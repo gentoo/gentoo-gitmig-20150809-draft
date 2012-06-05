@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/dssi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.30 2012/06/02 10:43:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.31 2012/06/05 21:16:30 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> dssi-1.1.1.ebuild:
+  Marking dssi-1.1.1 ppc64 for bug 419073
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> dssi-1.1.1.ebuild:
   Stable for amd64, wrt bug #419073
