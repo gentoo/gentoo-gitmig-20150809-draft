@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.83 2012/05/09 17:27:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.84 2012/06/05 16:28:12 jlec Exp $
+
+*ming-0.4.4 (05 Jun 2012)
+
+  05 Jun 2012; Justin Lecher <jlec@gentoo.org> +ming-0.4.4.ebuild,
+  +files/ming-0.4.4-vasprintf.patch:
+  Version Bump, moved to EAPI=4 and autotools-utils.eclass, add fix for
+  gcc-4.7, #417499
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> ming-0.4.3-r2.ebuild:
   keyword ~amd64-fbsd
