@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/grutatxt/grutatxt-2.0.16.ebuild,v 1.3 2012/04/28 18:01:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/grutatxt/grutatxt-2.0.16.ebuild,v 1.4 2012/06/05 21:22:00 ranger Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc ~x86"
 
 # set the script path to /usr/bin, rather than /usr/local/bin
 myconf="INSTALLSCRIPT=/usr/bin"
