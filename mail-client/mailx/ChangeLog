@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mailx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.67 2012/06/02 11:29:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.68 2012/06/05 21:03:22 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> mailx-8.1.2.20050715-r5.ebuild:
+  Marking mailx-8.1.2.20050715-r5 ppc64 for bug 419011
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   mailx-8.1.2.20050715-r5.ebuild:
