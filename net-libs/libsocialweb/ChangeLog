@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsocialweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.8 2012/05/05 02:54:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.9 2012/06/05 08:19:13 jlec Exp $
+
+  05 Jun 2012; Justin Lecher <jlec@gentoo.org> libsocialweb-0.25.20.ebuild,
+  +files/libsocialweb-0.25.20-gold.patch:
+  Add fix for underlinking, detected by gold;
+  https://bugzilla.gnome.org/show_bug.cgi?id=677445
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libsocialweb-0.25.19.ebuild,
   libsocialweb-0.25.20.ebuild:
