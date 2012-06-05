@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.1-r2.ebuild,v 1.2 2012/06/05 10:29:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.1-r2.ebuild,v 1.3 2012/06/05 18:53:39 xmw Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://fishshell.com/files/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="X vanilla"
 
 DEPEND="sys-libs/ncurses
