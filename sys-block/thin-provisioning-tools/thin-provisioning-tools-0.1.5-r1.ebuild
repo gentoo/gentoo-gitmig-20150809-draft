@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.1.5-r1.ebuild,v 1.1 2012/06/05 11:42:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.1.5-r1.ebuild,v 1.2 2012/06/05 19:55:41 jer Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 		dev-libs/boost"
 
 src_prepare() {
-	epatch "${FILESDIR}"${P}-LDFLAGS.patch
+	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
 }
 
 src_configure() {
