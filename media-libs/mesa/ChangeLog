@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.398 2012/06/01 09:05:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.399 2012/06/05 20:47:31 lu_zero Exp $
+
+*mesa-8.0.3-r1 (05 Jun 2012)
+
+  05 Jun 2012; Luca Barbato <lu_zero@gentoo.org> +mesa-8.0.3-r1.ebuild:
+  New revision to support new opengl-eselect layout
 
   01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/eselect-mesa.conf.7.9, -files/eselect-mesa.conf.8.0,
