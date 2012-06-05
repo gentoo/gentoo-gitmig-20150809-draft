@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.24 2010/11/09 14:32:06 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.25 2012/06/05 00:07:53 zmedico Exp $
+
+  05 Jun 2012; Zac Medico <zmedico@gentoo.org>
+  spamassassin-fuzzyocr-3.6.0-r2.ebuild, spamassassin-fuzzyocr-3.6.0.ebuild:
+  inherit user for enewgroup
 
   09 Nov 2010; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
   Remove myself from maintainers
