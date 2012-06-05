@@ -1,6 +1,9 @@
 # ChangeLog for games-util/grfcodec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.13 2012/06/02 12:53:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.14 2012/06/05 20:38:49 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> grfcodec-6.0.0.ebuild:
+  Marking grfcodec-6.0.0 ppc64 for bug 418401
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> grfcodec-6.0.0.ebuild:
   Stable for amd64, wrt bug #418401
