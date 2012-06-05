@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.1_p1.ebuild,v 1.1 2012/06/04 17:12:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.1_p1.ebuild,v 1.2 2012/06/05 14:57:41 idl0r Exp $
 
 EAPI="4"
 
@@ -33,6 +33,9 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	# bug 231247
 	epatch "${FILESDIR}"/${PN}-9.5.0_p1-lwconfig.patch
+
+	# Disable tests for now, bug 406399
+	sed -i '/^SUBDIRS/s:tests::' bin/Makefile.in lib/Makefile.in || die
 
 	# bug #220361
 	rm {aclocal,libtool}.m4
