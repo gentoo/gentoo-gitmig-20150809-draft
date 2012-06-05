@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.180 2012/06/05 09:15:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.181 2012/06/05 15:59:54 ago Exp $
+
+  05 Jun 2012; Agostino Sarubbo <ago@gentoo.org> postgresql-base-8.3.19.ebuild,
+  postgresql-base-8.4.12.ebuild, postgresql-base-9.0.7.ebuild,
+  postgresql-base-9.0.8.ebuild, postgresql-base-9.1.3.ebuild,
+  postgresql-base-9.1.4.ebuild:
+  Stable for amd64, wrt to bug #419727
 
 *postgresql-base-9.0.8 (05 Jun 2012)
 *postgresql-base-8.4.12 (05 Jun 2012)

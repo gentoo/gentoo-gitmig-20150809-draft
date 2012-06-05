@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.150 2012/06/05 09:14:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.151 2012/06/05 16:01:04 ago Exp $
+
+  05 Jun 2012; Agostino Sarubbo <ago@gentoo.org> postgresql-docs-8.3.19.ebuild,
+  postgresql-docs-8.4.12.ebuild, postgresql-docs-9.0.8.ebuild,
+  postgresql-docs-9.1.4.ebuild:
+  Stable for amd64, wrt to bug #419727
 
 *postgresql-docs-9.1.4 (05 Jun 2012)
 *postgresql-docs-8.3.19 (05 Jun 2012)
