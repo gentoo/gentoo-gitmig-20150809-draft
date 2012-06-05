@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0-r1.ebuild,v 1.3 2012/05/21 20:52:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0-r1.ebuild,v 1.4 2012/06/05 19:59:38 hd_brummy Exp $
 
 EAPI="4"
 
@@ -40,6 +40,10 @@ src_prepare() {
 
 	if has_version ">=media-video/vdr-1.7.25"; then
 		epatch "${FILESDIR}/${P}_vdr-1.7.25.diff"
+	fi
+
+	if has_version ">=media-video/vdr-1.7.28"; then
+		sed -i "s:SetRecording(recording->FileName(), recording->Title:SetRecording(recording->FileName:" menu_searchresults.c
 	fi
 
 	# disable automagic deps
