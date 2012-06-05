@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.67 2012/06/02 09:58:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.68 2012/06/05 01:33:18 ryao Exp $
+
+  05 Jun 2012; Richard Yao <ryao@gentoo.org> metadata.xml:
+  Add self to maintainer list
 
   02 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   clang-3.1-r2.ebuild:
