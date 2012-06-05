@@ -6,6 +6,6 @@
 <flag name="make-symlinks">Create all the appropriate symlinks in /bin and /sbin.</flag>
 <flag name="math">Enable math support in gawk (requires libm)</flag>
 <flag name="mdev">Create the appropriate symlink in /sbin and install mdev.conf and support files</flag>
-<flag name="sep-usr">Support a separate /usr without needing an initramfs by booting with init=/bbinit</flag>
+<flag name="sep-usr">Support a separate /usr without needing an initramfs by booting with init=/ginit</flag>
 </use>
 </pkgmetadata>
