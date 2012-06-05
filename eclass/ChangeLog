@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.286 2012/06/05 02:07:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.287 2012/06/05 02:16:40 dirtyepic Exp $
+
+  05 Jun 2012; Ryan Hill <dirtyepic@gentoo.org> flag-o-matic.eclass:
+  Update Intel/AMD instruction sets for 4.7.
 
   05 Jun 2012; Ryan Hill <dirtyepic@gentoo.org> flag-o-matic.eclass:
   Add -mfloat-abi=* to ALLOWED_FLAGS (bug #419615 by Hector Martin).
