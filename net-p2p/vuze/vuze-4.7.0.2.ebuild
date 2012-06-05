@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.7.0.2.ebuild,v 1.2 2012/04/17 11:15:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.7.0.2.ebuild,v 1.3 2012/06/05 15:04:15 sera Exp $
 
 EAPI=2
 
@@ -91,6 +91,7 @@ src_compile() {
 	use x86   && mem="192"
 	use ppc   && mem="192"
 	use ppc64 && mem="256"
+	use sparc && mem="320"
 	export ANT_OPTS="-Xmx${mem}m"
 	java-pkg-2_src_compile
 
