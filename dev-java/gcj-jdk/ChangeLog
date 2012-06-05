@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/gcj-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.5 2012/04/15 17:51:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.6 2012/06/05 18:32:28 sera Exp $
+
+*gcj-jdk-4.6.3 (05 Jun 2012)
+*gcj-jdk-4.6.2-r1 (05 Jun 2012)
+*gcj-jdk-4.6.1 (05 Jun 2012)
+*gcj-jdk-4.6.0 (05 Jun 2012)
+
+  05 Jun 2012; Ralph Sennhauser <sera@gentoo.org> +gcj-jdk-4.6.0.ebuild,
+  +gcj-jdk-4.6.1.ebuild, +gcj-jdk-4.6.2-r1.ebuild, +gcj-jdk-4.6.3.ebuild:
+  Import from java-overlay.
+  Adds Prefix support and missing use dep, thanks to XU Benda
+  <heroxbd@gentoo.org>. #416367
+  Remove JAVA_PROVIDE, old style virtuals are dead.
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> gcj-jdk-4.5.3.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
