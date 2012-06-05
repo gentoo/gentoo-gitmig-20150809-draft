@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libverto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.4 2012/05/12 19:34:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/ChangeLog,v 1.5 2012/06/05 19:00:52 xmw Exp $
+
+  05 Jun 2012; Michael Weber <xmw@gentoo.org> libverto-0.2.4.ebuild:
+  adding ~ppc (bug 412489)
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> libverto-0.2.4.ebuild:
   keyword ~amd64-fbsd
