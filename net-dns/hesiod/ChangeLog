@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.38 2012/05/09 15:32:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.39 2012/06/05 16:53:26 ago Exp $
+
+  05 Jun 2012; Agostino Sarubbo <ago@gentoo.org> hesiod-3.1.0.ebuild:
+  Stable for amd64, wrt bug #419715
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> hesiod-3.1.0.ebuild:
   keyword ~amd64-fbsd
