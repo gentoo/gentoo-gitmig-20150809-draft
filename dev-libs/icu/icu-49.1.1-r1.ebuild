@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-49.1.1-r1.ebuild,v 1.10 2012/06/03 17:18:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-49.1.1-r1.ebuild,v 1.11 2012/06/05 20:57:37 jer Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ SRC_URI="${BASE_URI}/${SRC_ARCHIVE}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc examples static-libs"
 
 DEPEND="doc? ( app-arch/unzip )"
@@ -60,8 +60,8 @@ src_prepare() {
 }
 
 src_configure() {
-	# Fails without this on s390/sparc
-	if use s390 || use sparc; then
+	# Fails without this on hppa/s390/sparc
+	if use hppa || use s390 || use sparc; then
 		append-flags "-DU_IS_BIG_ENDIAN=1"
 	fi
 
