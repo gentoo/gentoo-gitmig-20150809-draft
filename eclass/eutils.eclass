@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.393 2012/05/28 16:45:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.394 2012/06/05 17:40:12 hasufell Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -944,45 +944,122 @@ newmenu() {
 	)
 }
 
-# @FUNCTION: doicon
-# @USAGE: <list of icons>
+# @FUNCTION: _iconins
+# @INTERNAL
 # @DESCRIPTION:
-# Install the list of icons into the icon directory (/usr/share/pixmaps).
-# This is useful in conjunction with creating desktop/menu files.
-doicon() {
+# function for use in doicon and newicon
+_iconins() {
 	(
 	# wrap the env here so that the 'insinto' call
 	# doesn't corrupt the env of the caller
-	local i j ret
-	insinto /usr/share/pixmaps
-	for i in "$@" ; do
-		if [[ -f ${i} ]] ; then
-			doins "${i}"
-			((ret+=$?))
-		elif [[ -d ${i} ]] ; then
-			for j in "${i}"/*.png ; do
-				doins "${j}"
-				((ret+=$?))
-			done
-		else
-			((++ret))
-		fi
+	local funcname=$1; shift
+	local size dir
+	local context=apps
+	local theme=hicolor
+
+	while [[ $# -gt 0 ]] ; do
+		case $1 in
+		-s|--size)
+			if [[ ${2%%x*}x${2%%x*} == "$2" ]] ; then
+				size=${2%%x*}
+			else
+				size=${2}
+			fi
+			case ${size} in
+			16|22|24|32|36|48|64|72|96|128|192|256)
+				size=${size}x${size};;
+			scalable)
+				;;
+			*)
+				eerror "${size} is an unsupported icon size!"
+				exit 1;;
+			esac
+			shift 2;;
+		-t|--theme)
+			theme=${2}
+			shift 2;;
+		-c|--context)
+			context=${2}
+			shift 2;;
+		*)
+			if [[ -z ${size} ]] ; then
+				insinto /usr/share/pixmaps
+			else
+				insinto /usr/share/icons/${theme}/${size}/${context}
+			fi
+
+			if [[ ${funcname} == doicon ]] ; then
+				if [[ -f $1 ]] ; then
+					doins "${1}"
+				elif [[ -d $1 ]] ; then
+					shopt -s nullglob
+					doins "${1}"/*.{png,svg}
+					shopt -u nullglob
+				else
+					eerror "${1} is not a valid file/directory!"
+					exit 1
+				fi
+			else
+				break
+			fi
+			shift 1;;
+		esac
 	done
-	exit ${ret}
-	)
+	if [[ ${funcname} == newicon ]] ; then
+		newins "$@"
+	fi
+	) || die
+}
+
+# @FUNCTION: doicon
+# @USAGE: [options] <icons>
+# @DESCRIPTION:
+# Install icon into the icon directory /usr/share/icons or into
+# /usr/share/pixmaps if "--size" is not set.
+# This is useful in conjunction with creating desktop/menu files.
+#
+# @CODE
+#  options:
+#  -s, --size
+#    !!! must specify to install into /usr/share/icons/... !!!
+#    size of the icon, like 48 or 48x48
+#    supported icon sizes are:
+#    16 22 24 32 36 48 64 72 96 128 192 256 scalable
+#  -c, --context
+#    defaults to "apps"
+#  -t, --theme
+#    defaults to "hicolor"
+#
+# icons: list of icons
+#
+# example 1: doicon foobar.png fuqbar.svg
+# results in: insinto /usr/share/pixmaps
+#             doins foobar.png fuqbar.svg
+#
+# example 2: doicon -s 48 foobar.png fuqbar.png
+# results in: insinto /usr/share/icons/hicolor/48x48/apps
+#             doins foobar.png fuqbar.png
+# @CODE
+doicon() {
+	_iconins ${FUNCNAME} "$@"
 }
 
 # @FUNCTION: newicon
-# @USAGE: <icon> <newname>
+# @USAGE: [options] <icon> <newname>
 # @DESCRIPTION:
-# Like all other new* functions, install the specified icon as newname.
+# Like doicon, install the specified icon as newname.
+#
+# @CODE
+# example 1: newicon foobar.png NEWNAME.png
+# results in: insinto /usr/share/pixmaps
+#             newins foobar.png NEWNAME.png
+#
+# example 2: newicon -s 48 foobar.png NEWNAME.png 
+# results in: insinto /usr/share/icons/hicolor/48x48/apps
+#             newins foobar.png NEWNAME.png
+# @CODE
 newicon() {
-	(
-	# wrap the env here so that the 'insinto' call
-	# doesn't corrupt the env of the caller
-	insinto /usr/share/pixmaps
-	newins "$@"
-	)
+	_iconins ${FUNCNAME} "$@"
 }
 
 # @FUNCTION: strip-linguas
