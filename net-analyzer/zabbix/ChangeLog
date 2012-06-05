@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.97 2012/05/22 11:34:02 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.98 2012/06/05 05:40:35 mattm Exp $
+
+*zabbix-2.0.0-r1 (05 Jun 2012)
+
+  05 Jun 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.0-r1.ebuild:
+  Added nls use flag to php frontend dependency and ensured the db upgrade
+  patches from 1.8.x are installed in /usr/share/zabbix/upgrades. Fix bug
+  #417931 and #417933.
 
 *zabbix-2.0.0 (22 May 2012)
 
