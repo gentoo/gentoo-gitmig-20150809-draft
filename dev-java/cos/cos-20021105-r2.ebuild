@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/cos-20021105-r2.ebuild,v 1.1 2008/02/14 03:06:43 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cos/cos-20021105-r2.ebuild,v 1.2 2012/06/05 14:28:17 sera Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -20,6 +20,7 @@ IUSE=""
 RDEPEND=">=virtual/jre-1.4
 	java-virtuals/servlet-api:2.3"
 DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
 	${RDEPEND}"
 S=${WORKDIR}
 
