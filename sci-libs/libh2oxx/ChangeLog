@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/libh2oxx
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2oxx/ChangeLog,v 1.1 2012/06/05 18:06:23 mgorny Exp $
+
+*libh2oxx-0.1 (05 Jun 2012)
+
+  05 Jun 2012; Michał Górny <mgorny@gentoo.org> +libh2oxx-0.1.ebuild,
+  +metadata.xml:
+  Introduce libh2o++, a C++ wrapper to libh2o.
+
