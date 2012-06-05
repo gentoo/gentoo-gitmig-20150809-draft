@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libh2o
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/ChangeLog,v 1.1 2012/06/05 15:37:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/ChangeLog,v 1.2 2012/06/05 15:42:09 mgorny Exp $
+
+  05 Jun 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Update issue tracker URI.
 
 *libh2o-0.1 (05 Jun 2012)
 
