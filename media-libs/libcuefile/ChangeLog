@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.28 2012/06/02 10:35:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.29 2012/06/05 21:23:46 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> libcuefile-477.ebuild:
+  Marking libcuefile-477 ppc64 for bug 419081
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libcuefile-477.ebuild:
   Stable for amd64, wrt bug #419081
