@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.27 2012/06/04 13:12:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.28 2012/06/05 07:05:59 polynomial-c Exp $
+
+  05 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> -kbuild-0.1.5-r1.ebuild,
+  -kbuild-0.1.5_p2.ebuild, -kbuild-0.1.5_p2-r1.ebuild:
+  Removed old versions.
 
   04 Jun 2012; Justin Lecher <jlec@gentoo.org>
   kbuild-0.1.9998_pre20110817.ebuild,
