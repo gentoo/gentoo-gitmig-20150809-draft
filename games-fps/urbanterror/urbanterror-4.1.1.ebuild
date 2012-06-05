@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.2 2012/06/02 16:02:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.3 2012/06/05 19:20:28 hasufell Exp $
 
 EAPI=4
 
@@ -94,8 +94,7 @@ src_compile() {
 src_install() {
 	local my_arch=$(usex amd64 "x86_64" "i386")
 
-	insinto /usr/share/icons/hicolor/scalable/apps
-	doins "${DISTDIR}"/${PN}.svg
+	doicon -s scalable "${DISTDIR}"/${PN}.svg
 
 	dodoc ChangeLog NOTTODO README TODO {md4,voip}-readme.txt
 
