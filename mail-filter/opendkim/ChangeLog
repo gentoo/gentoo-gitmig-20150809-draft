@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.35 2012/05/04 10:21:11 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.36 2012/06/04 23:58:02 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> opendkim-2.4.2.ebuild,
+  opendkim-2.4.3.ebuild, opendkim-2.5.1.ebuild, opendkim-2.5.2-r1.ebuild,
+  opendkim-2.5.2.ebuild:
+  inherit user for enewgroup and enewuser
 
 *opendkim-2.5.2-r1 (04 May 2012)
 

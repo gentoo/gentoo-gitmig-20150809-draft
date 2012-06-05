@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.6.ebuild,v 1.5 2011/06/21 16:11:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.6.ebuild,v 1.6 2012/06/05 00:08:32 zmedico Exp $
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="SQLgrey is a postfix policy service implementing a grey-listing policy"
 SRC_URI="mirror://sourceforge/sqlgrey/${P}.tar.bz2"

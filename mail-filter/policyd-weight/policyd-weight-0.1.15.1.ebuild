@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.15.1.ebuild,v 1.4 2011/12/21 09:04:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/policyd-weight-0.1.15.1.ebuild,v 1.5 2012/06/05 00:02:12 zmedico Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Weighted Policy daemon for Postfix"
 HOMEPAGE="http://www.policyd-weight.org/"

@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/sid-milter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.17 2012/04/06 21:52:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.18 2012/06/05 00:05:52 zmedico Exp $
+
+  05 Jun 2012; Zac Medico <zmedico@gentoo.org> sid-milter-1.0.0-r5.ebuild:
+  inherit user for enewgroup and enewuser
 
   06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #63588

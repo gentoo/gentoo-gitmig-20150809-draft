@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.4.3.ebuild,v 1.3 2012/03/24 17:18:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.4.3.ebuild,v 1.4 2012/06/04 23:58:02 zmedico Exp $
 
 EAPI=4
 
-inherit eutils db-use
+inherit eutils db-use user
 
 # for betas
 #MY_P=${P/_b/.B}

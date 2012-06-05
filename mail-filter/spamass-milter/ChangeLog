@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamass-milter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.30 2011/11/29 21:52:06 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.31 2012/06/05 00:06:47 zmedico Exp $
+
+  05 Jun 2012; Zac Medico <zmedico@gentoo.org> spamass-milter-0.3.1-r5.ebuild,
+  spamass-milter-0.3.2.ebuild:
+  inherit user for enewgroup and enewuser
 
 *spamass-milter-0.3.2 (29 Nov 2011)
 

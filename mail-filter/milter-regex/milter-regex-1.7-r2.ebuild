@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.7-r2.ebuild,v 1.2 2011/08/11 02:29:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.7-r2.ebuild,v 1.3 2012/06/04 23:54:25 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="A milter-based regular expression filter"
 HOMEPAGE="http://www.benzedrine.cx/milter-regex.html"

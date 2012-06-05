@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.05.ebuild,v 1.9 2012/02/05 17:55:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.05.ebuild,v 1.10 2012/06/05 00:04:07 zmedico Exp $
 
-inherit fixheadtails toolchain-funcs eutils
+inherit fixheadtails toolchain-funcs eutils user
 
 Q_S_DATE=20080728
 DESCRIPTION="E-Mail virus scanner for qmail."

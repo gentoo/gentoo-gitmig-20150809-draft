@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.1-r5.ebuild,v 1.2 2011/11/22 16:08:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.1-r5.ebuild,v 1.3 2012/06/05 00:06:47 zmedico Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils user
 
 IUSE=""
 
