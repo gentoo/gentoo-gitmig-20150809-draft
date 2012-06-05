@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/jmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jmx/ChangeLog,v 1.15 2012/06/04 08:39:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jmx/ChangeLog,v 1.16 2012/06/05 20:41:31 ranger Exp $
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> jmx-1.0-r3.ebuild:
+  Marking jmx-1.0-r3 ppc64 for bug 419001
 
   04 Jun 2012; Johannes Huber <johu@gentoo.org> jmx-1.0-r3.ebuild:
   Stable for x86, wrt bug #419001
