@@ -1,6 +1,9 @@
 # ChangeLog for app-office/unoconv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.4 2012/06/05 11:25:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.5 2012/06/05 13:06:12 scarabeus Exp $
+
+  05 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Whitespace in metadata.xml
 
 *unoconv-20120522 (05 Jun 2012)
 
