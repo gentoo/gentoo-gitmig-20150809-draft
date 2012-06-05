@@ -1,6 +1,27 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.381 2012/04/26 12:59:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.382 2012/06/05 17:52:35 tove Exp $
+
+*perl-5.16.0 (05 Jun 2012)
+
+  05 Jun 2012; Torsten Veller <tove@gentoo.org>
+  +files/eblits/common-v50160001.eblit,
+  +files/eblits/pkg_postinst-v50160001.eblit,
+  +files/eblits/pkg_postrm-v50160001.eblit,
+  +files/eblits/pkg_setup-v50160001.eblit,
+  +files/eblits/src_configure-v50160001.eblit,
+  +files/eblits/src_install-v50160001.eblit,
+  +files/eblits/src_prepare-v50160001.eblit,
+  +files/eblits/src_test-v50160001.eblit, +perl-5.16.0.ebuild:
+  Version bump.
+  - Use eblits
+  - Move prefix patches to the patchset.
+  - Use debian patch list for -V
+  - Fix Dsiteprefix, Dsiteman1dir and Dsiteman3dir
+  - Move perllocal.pod from site_install to DESTINSTALLSITEARCH
+  - Remove the rebuild-modules-before-system-is-usable-again warning from
+  pkg-pretend again (#389771)
+  - Drop the build useflag
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> perl-5.12.4-r2.ebuild:
   keyword ~amd64-fbsd
