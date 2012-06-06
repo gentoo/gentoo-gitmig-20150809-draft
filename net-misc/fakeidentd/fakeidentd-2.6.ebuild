@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.6.ebuild,v 1.1 2012/06/05 21:02:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.6.ebuild,v 1.2 2012/06/06 01:36:15 floppym Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ src_unpack() {
 
 src_compile() {
 	echoit $(tc-getCC) ${CFLAGS} ${LDFLAGS} \
-		-DTRG=\"${PN}\" -DVERSION=\"${PV}\" \
+		-DTRG=\"${PN}\" -DUSE_UNIX_OS -DVERSION=\"${PV}\" \
 		-o ${PN} ${P}.c || die
 }
 
