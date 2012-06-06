@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.82 2012/05/31 16:27:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.83 2012/06/06 20:50:36 jer Exp $
+
+*libnl-3.2.10 (06 Jun 2012)
+
+  06 Jun 2012; Jeroen Roovers <jer@gentoo.org> +libnl-3.2.10.ebuild:
+  Version bump. Bring back ~ppc64 keywording now that app-text/xmlstarlet is no
+  longer needed.
 
   31 May 2012; Anthony G. Basile <blueness@gentoo.org> libnl-1.1-r3.ebuild:
   Keyword ~mips
