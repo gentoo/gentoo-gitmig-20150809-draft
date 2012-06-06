@@ -12,13 +12,6 @@
 #library.
 --- src/map_tif.c	2010/01/31 02:12:24	1.45
 +++ src/map_tif.c	2012/05/15 15:29:36	1.46
-@@ -1,5 +1,5 @@
- /* -*- c-basic-offset: 4; indent-tabs-mode: nil -*-
-- * $Id: xastir-2.0.0-proj48.diff,v 1.1 2012/06/04 17:51:52 tomjbe Exp $
-+ * $Id: xastir-2.0.0-proj48.diff,v 1.1 2012/06/04 17:51:52 tomjbe Exp $
-  *
-  * XASTIR, Amateur Station Tracking and Information Reporting
-  * Copyright (C) 1999,2000  Frank Giannandrea
 @@ -93,7 +93,7 @@
  
  // Needed for GTIFProj4FromLatLong() replacement below

@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xastir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.21 2012/06/04 17:51:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.22 2012/06/06 16:16:50 ssuominen Exp $
+
+  06 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  files/xastir-2.0.0-proj48.diff:
+  Punt cvs "* $Id:" from the -proj48.patch wrt #419937 by Teun Blok
 
   04 Jun 2012; Thomas Beierlein <tomjbe@gentoo.org> -xastir-1.9.8-r1.ebuild,
   -xastir-2.0.0.ebuild, xastir-2.0.0-r1.ebuild, xastir-2.0.0-r2.ebuild,
