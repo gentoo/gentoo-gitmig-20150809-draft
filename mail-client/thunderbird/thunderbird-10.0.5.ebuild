@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.3.ebuild,v 1.5 2012/05/04 08:42:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.5.ebuild,v 1.1 2012/06/06 14:42:14 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -30,7 +30,7 @@ inherit flag-o-matic toolchain-funcs mozconfig-3 makeedit multilib autotools pax
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist gconf +crashreporter +crypt +ipc +lightning +minimal mozdom +webm"
@@ -115,6 +115,7 @@ src_prepare() {
 
 	# Apply our patchset from firefox to thunderbird as well
 	pushd "${S}"/mozilla &>/dev/null || die
+	EPATCH_EXCLUDE="6012_fix_shlibsign.patch 6013_fix_abort_declaration.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
@@ -131,6 +132,13 @@ src_prepare() {
 		-i "${S}"/mozilla/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc \
 		-i "${S}"/mozilla/config/system-headers \
 		-i "${S}"/mozilla/js/src/config/system-headers || die "Sed failed"
+
+	# Shell scripts sometimes contain DOS line endings; bug 391889
+	grep -rlZ --include="*.sh" $'\r$' . |
+	while read -r -d $'\0' file ; do
+		einfo edos2unix "${file}"
+		edos2unix "${file}"
+	done
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
