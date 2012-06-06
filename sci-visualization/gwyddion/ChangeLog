@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.36 2012/05/04 08:07:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.37 2012/06/06 18:51:55 bicatali Exp $
+
+*gwyddion-2.28 (06 Jun 2012)
+
+  06 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> +gwyddion-2.28.ebuild:
+  Version bump. Forcing in source building, hopefully fixing bug #419899
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gwyddion-2.25.ebuild,
   gwyddion-2.27.ebuild:
