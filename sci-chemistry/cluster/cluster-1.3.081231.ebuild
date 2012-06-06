@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cluster/cluster-1.3.081231.ebuild,v 1.2 2012/05/23 08:00:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cluster/cluster-1.3.081231.ebuild,v 1.3 2012/06/06 08:48:29 jlec Exp $
 
 EAPI=4
 
@@ -11,12 +11,9 @@ HOMEPAGE="http://kinemage.biochem.duke.edu/software/index.php"
 SRC_URI="http://kinemage.biochem.duke.edu/downloads/software/${PN}/${PN}.${PV}.src.tgz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="richardson"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
-
-RDEPEND=""
-DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}1.3src
 
