@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.143 2012/06/05 18:31:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.144 2012/06/06 17:15:08 mgorny Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -165,10 +165,13 @@ eautoreconf() {
 	# Run all the tools before aclocal so we can gather the .m4 files.
 	local i tools=(
 		# <tool> <was run> <command>
-		gettext  false "eautopoint --force"
+		glibgettext false "autotools_run_tool glib-gettextize --copy --force"
+		gettext     false "eautopoint --force"
 		# intltool must come after autopoint.
-		intltool false "autotools_run_tool intltoolize --automake --copy --force"
-		libtool  false "_elibtoolize --install --copy --force"
+		intltool    false "autotools_run_tool intltoolize --automake --copy --force"
+		gtkdoc      false "autotools_run_tool gtkdocize --copy"
+		gnomedoc    false "autotools_run_tool gnome-doc-prepare --copy --force"
+		libtool     false "_elibtoolize --install --copy --force"
 	)
 	for (( i = 0; i < ${#tools[@]}; i += 3 )) ; do
 		if _at_uses_${tools[i]} ; then
@@ -222,11 +225,14 @@ _at_uses_pkg() {
 		egrep -q "${args[@]}" configure.??
 	fi
 }
-_at_uses_autoheader() { _at_uses_pkg AC_CONFIG_HEADERS; }
-_at_uses_automake()   { _at_uses_pkg AM_INIT_AUTOMAKE; }
-_at_uses_gettext()    { _at_uses_pkg AM_GNU_GETTEXT_VERSION; }
-_at_uses_intltool()   { _at_uses_pkg {AC,IT}_PROG_INTLTOOL; }
-_at_uses_libtool()    { _at_uses_pkg A{C,M}_PROG_LIBTOOL LT_INIT; }
+_at_uses_autoheader()  { _at_uses_pkg AC_CONFIG_HEADERS; }
+_at_uses_automake()    { _at_uses_pkg AM_INIT_AUTOMAKE; }
+_at_uses_gettext()     { _at_uses_pkg AM_GNU_GETTEXT_VERSION; }
+_at_uses_glibgettext() { _at_uses_pkg AM_GLIB_GNU_GETTEXT; }
+_at_uses_intltool()    { _at_uses_pkg {AC,IT}_PROG_INTLTOOL; }
+_at_uses_gtkdoc()      { _at_uses_pkg GTK_DOC_CHECK; }
+_at_uses_gnomedoc()    { _at_uses_pkg GNOME_DOC_INIT; }
+_at_uses_libtool()     { _at_uses_pkg A{C,M}_PROG_LIBTOOL LT_INIT; }
 
 # @FUNCTION: eaclocal_amflags
 # @DESCRIPTION:
@@ -462,8 +468,11 @@ ALL_AUTOTOOLS_MACROS=(
 	AC_CONFIG_SUBDIRS
 	AC_CONFIG_AUX_DIR AC_CONFIG_MACRO_DIR
 	AM_INIT_AUTOMAKE
+	AM_GLIB_GNU_GETTEXT
 	AM_GNU_GETTEXT_VERSION
 	{AC,IT}_PROG_INTLTOOL
+	GTK_DOC_CHECK
+	GNOME_DOC_INIT
 )
 autotools_check_macro() {
 	[[ -f configure.ac || -f configure.in ]] || return 0
