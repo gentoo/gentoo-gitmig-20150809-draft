@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.9.ebuild,v 1.1 2012/05/30 16:44:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.9-r1.ebuild,v 1.1 2012/06/06 19:40:27 xarthisius Exp $
 
 EAPI=4
 
@@ -68,7 +68,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-sharedlib-rpath \
 		--enable-production \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--enable-deprecated-symbols \

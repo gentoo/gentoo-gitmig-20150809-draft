@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.85 2012/05/30 16:44:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.86 2012/06/06 19:40:27 xarthisius Exp $
+
+*hdf5-1.8.9-r1 (06 Jun 2012)
+
+  06 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> +hdf5-1.8.9-r1.ebuild,
+  -hdf5-1.8.9.ebuild:
+  Don't disable rpath for shared libraries wrt #419677 by William Throwe
+  <wtt6@cornell.edu>
 
 *hdf5-1.8.9 (30 May 2012)
 
