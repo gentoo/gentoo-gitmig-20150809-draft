@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.3.ebuild,v 1.7 2012/05/03 20:00:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.3.ebuild,v 1.8 2012/06/06 21:12:31 darkside Exp $
 
 EAPI=4
 inherit multilib xfconf
@@ -44,8 +44,8 @@ pkg_setup() {
 
 src_install() {
 	xfconf_src_install \
-		docdir=/usr/share/doc/${PF}/html \
-		imagesdir=/usr/share/doc/${PF}/html/images
+		docdir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		imagesdir="${EPREFIX}"/usr/share/doc/${PF}/html/images
 
 	# Create compability symlink for retarded path hardcoding in src/{mainbox,parameters}.c
 	dosym /usr/share/doc/${PF}/html /usr/share/${PN}/doc/C
