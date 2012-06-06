@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r5.ebuild,v 1.3 2012/05/14 19:39:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r5.ebuild,v 1.4 2012/06/06 03:43:03 zmedico Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ EAPI="2"
 # http://gitorious.org/~flameeyes/opencryptoki/flameeyess-opencryptoki
 BACKPORTS=3
 
-inherit autotools eutils multilib flag-o-matic
+inherit autotools eutils multilib flag-o-matic user
 
 DESCRIPTION="PKCS#11 provider cryptographic hardware"
 HOMEPAGE="http://sourceforge.net/projects/opencryptoki"
