@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r1.ebuild,v 1.4 2011/10/08 15:37:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r1.ebuild,v 1.5 2012/06/06 03:45:11 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib user
 
 DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://www.opensc-project.org/openct/"

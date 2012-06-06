@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openct
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.96 2011/10/08 15:37:42 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.97 2012/06/06 03:45:11 zmedico Exp $
+
+  06 Jun 2012; Zac Medico <zmedico@gentoo.org> openct-0.6.20-r1.ebuild,
+  openct-0.6.20.ebuild:
+  inherit multilib for get_libdir, and user for enewgroup and enewuser
 
   08 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   openct-0.6.20-r1.ebuild:
