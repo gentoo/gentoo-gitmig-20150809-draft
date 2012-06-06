@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.8.ebuild,v 1.3 2012/03/25 15:31:51 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.10.ebuild,v 1.1 2012/06/06 04:06:32 jdhore Exp $
 
 EAPI="4"
 
 # This list can be updated with scripts/get_langs.sh from the mozilla overlay
 MOZ_LANGS=(be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it ja lt nb-NO nl pl
-pt-PT ru sk sv-SE tr zh-CN)
+pt-PT ru sk sv-SE tr uk zh-CN zh-TW)
 
 MOZ_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 MOZ_PV="${MOZ_PV/_beta/b}" # Handle beta for SRC_URI
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip mirror binchecks"
 QA_EXECSTACK="opt/seamonkey/*"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="startup-notification"
