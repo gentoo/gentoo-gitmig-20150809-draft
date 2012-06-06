@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.93 2012/06/06 13:02:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.94 2012/06/06 18:49:18 maekke Exp $
+
+  06 Jun 2012; Markus Meier <maekke@gentoo.org> faac-1.28-r3.ebuild:
+  arm stable, bug #419077
 
   06 Jun 2012; Jeroen Roovers <jer@gentoo.org> faac-1.28-r3.ebuild:
   Stable for HPPA (bug #419077).
