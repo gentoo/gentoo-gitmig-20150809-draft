@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.394 2012/06/05 17:40:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.395 2012/06/06 15:37:50 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -18,7 +18,7 @@
 if [[ ${___ECLASS_ONCE_EUTILS} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_EUTILS="recur -_+^+_- spank"
 
-inherit multilib user
+inherit multilib toolchain-funcs user
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -1397,6 +1397,100 @@ makeopts_jobs() {
 		-e 's:.*[[:space:]](-j|--jobs[=[:space:]])[[:space:]]*([0-9]+).*:\2:p' \
 		-e 's:.*[[:space:]](-j|--jobs)[[:space:]].*:999:p')
 	echo ${jobs:-1}
+}
+
+# @FUNCTION: prune_libtool_files
+# @USAGE: [--all]
+# @DESCRIPTION:
+# Locate unnecessary libtool files (.la) and libtool static archives
+# (.a) and remove them from installation image.
+#
+# By default, .la files are removed whenever the static linkage can
+# either be performed using pkg-config or doesn't introduce additional
+# flags.
+#
+# If '--all' argument is passed, all .la files are removed. This is
+# usually useful when the package installs plugins and does not use .la
+# files for loading them.
+#
+# The .a files are only removed whenever corresponding .la files state
+# that they should not be linked to, i.e. whenever these files
+# correspond to plugins.
+#
+# Note: if your package installs any .pc files, this function implicitly
+# calls pkg-config. You should add it to your DEPEND in that case.
+prune_libtool_files() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local removing_all opt
+	for opt; do
+		case "${opt}" in
+			--all)
+				removing_all=1
+				;;
+			*)
+				die "Invalid argument to ${FUNCNAME}(): ${opt}"
+		esac
+	done
+
+	# Create a list of all .pc-covered libs.
+	local pc_libs=()
+	if [[ ! ${removing_all} ]]; then
+		local f
+		local tf=${T}/prune-lt-files.pc
+		local pkgconf=$(tc-getPKG_CONFIG)
+
+		while IFS= read -r -d '' f; do # for all .pc files
+			local arg
+
+			sed -e '/^Requires:/d' "${f}" > "${tf}"
+			for arg in $("${pkgconf}" --libs "${tf}"); do
+				[[ ${arg} == -l* ]] && pc_libs+=( lib${arg#-l}.la )
+			done
+		done < <(find "${D}" -type f -name '*.pc' -print0)
+
+		rm -f "${tf}"
+	fi
+
+	local f
+	while IFS= read -r -d '' f; do # for all .la files
+		local archivefile=${f/%.la/.a}
+
+		[[ ${f} != ${archivefile} ]] || die 'regex sanity check failed'
+
+		# Remove static libs we're not supposed to link against.
+		if grep -q '^shouldnotlink=yes$' "${f}"; then
+			einfo "Removing unnecessary ${archivefile#${D%/}}"
+			rm -f "${archivefile}"
+
+			# The .la file may be used by a module loader, so avoid removing it
+			# unless explicitly requested.
+			[[ ${removing_all} ]] || continue
+		fi
+
+		# Remove .la files when:
+		# - user explicitly wants us to remove all .la files,
+		# - respective static archive doesn't exist,
+		# - they are covered by a .pc file already,
+		# - they don't provide any new information (no libs & no flags).
+		local reason
+		if [[ ${removing_all} ]]; then
+			reason='requested'
+		elif [[ ! -f ${archivefile} ]]; then
+			reason='no static archive'
+		elif has "${f##*/}" "${pc_libs[@]}"; then
+			reason='covered by .pc'
+		elif [[ ! $(sed -nre \
+				"s/^(dependency_libs|inherited_linker_flags)='(.*)'$/\2/p" \
+				"${f}") ]]; then
+			reason='no libs & flags'
+		fi
+
+		if [[ ${reason} ]]; then
+			einfo "Removing unnecessary ${f#${D%/}} (${reason})"
+			rm -f "${f}"
+		fi
+	done < <(find "${D}" -type f -name '*.la' -print0)
 }
 
 check_license() { die "you no longer need this as portage supports ACCEPT_LICENSE itself"; }
