@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2008-r2.ebuild,v 1.1 2010/01/21 11:20:13 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-4.1.3.2008-r2.ebuild,v 1.2 2012/06/06 03:05:44 zmedico Exp $
 
-inherit gnatbuild
+inherit autotools gnatbuild
 
 DESCRIPTION="GNAT Ada Compiler - AdaCore GPL version"
 HOMEPAGE="https://libre.adacore.com/"
