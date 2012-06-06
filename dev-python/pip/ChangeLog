@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.7 2012/02/24 15:15:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.8 2012/06/06 05:18:30 heroxbd Exp $
+
+  06 Jun 2012; Benda Xu <heroxbd@gentoo.org> pip-1.1.ebuild:
+  keyword ~amd64-linux and ~x86-linux
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pip-1.0.2.ebuild:
   x86 stable wrt bug #403871
