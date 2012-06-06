@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.94 2012/06/06 12:35:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.95 2012/06/06 18:03:50 jer Exp $
+
+  06 Jun 2012; Jeroen Roovers <jer@gentoo.org> opera-next-12.00.1445.ebuild:
+  Introduce USE=multilib to not install operapluginwrapper-ia32-linux on
+  no-multilib profiles.
 
 *opera-next-12.00.1445 (06 Jun 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1445.ebuild,v 1.1 2012/06/06 12:35:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1445.ebuild,v 1.2 2012/06/06 18:03:50 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.opera.com/"
 SLOT="0"
 LICENSE="OPERA-11 LGPL-2 LGPL-3"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-IUSE="elibc_FreeBSD gtk gtk3 kde +gstreamer"
+IUSE="elibc_FreeBSD gtk gtk3 kde +gstreamer multilib"
 
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
@@ -135,6 +135,9 @@ src_prepare() {
 	fi
 	if ! use gstreamer; then
 		rm -r lib/${PN}/gstreamer || die
+	fi
+	if use amd64 && ! use multilib; then
+		rm lib/${PN}/pluginwrapper/operapluginwrapper-ia32-linux || die
 	fi
 
 	# Unzip the man pages before sedding
