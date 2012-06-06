@@ -1,18 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-12.0-r2.ebuild,v 1.2 2012/06/01 15:57:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-10.0.5.ebuild,v 1.1 2012/06/06 22:21:08 hasufell Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
+MOZ_ESR="1"
 
 MY_PN="firefox"
 # latest version of the torbrowser-bundle we use the profile-folder from
 # https://www.torproject.org/dist/torbrowser/linux/
-TB_V="2.2.35-12"
+TB_V="2.2.36-1"
+
+MOZ_P="${MY_PN}-${PV}"
+
+if [[ ${MOZ_ESR} == 1 ]]; then
+	# ESR releases have slightly version numbers
+	MOZ_P="${MOZ_P}esr"
+fi
 
 # Patch version
-PATCH="${MY_PN}-12.0-patches-0.5"
+PATCH="${MY_PN}-10.0-patches-0.8"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${MY_PN}/releases/"
@@ -33,11 +41,11 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )
 	GPL-2
 	MIT
 	CCPL-Attribution-3.0"
-IUSE="bindist +crashreporter +ipc +jit pgo selinux system-sqlite +webm"
+IUSE="bindist +crashreporter +ipc pgo selinux system-sqlite +webm"
 
 SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
-	${MOZ_FTP_URI}/${PV}/source/${MY_PN}-${PV}.source.tar.bz2
+	${MOZ_FTP_URI}/${PV}/source/${MOZ_P}.source.tar.bz2
 	amd64? ( https://www.torproject.org/dist/${PN}/linux/tor-browser-gnu-linux-x86_64-${TB_V}-dev-en-US.tar.gz )
 	x86? ( https://www.torproject.org/dist/${PN}/linux/tor-browser-gnu-linux-i686-${TB_V}-dev-en-US.tar.gz )"
 
@@ -46,13 +54,13 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.3
-	>=dev-libs/nspr-4.9
+	>=dev-libs/nss-3.13.5
+	>=dev-libs/nspr-4.9.1
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	virtual/libffi
-	system-sqlite? ( >=dev-db/sqlite-3.7.10[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	webm? ( >=media-libs/libvpx-1.0.0
 		media-libs/alsa-lib )
 	crashreporter? ( net-misc/curl )
@@ -67,7 +75,11 @@ DEPEND="${RDEPEND}
 		amd64? ( ${ASM_DEPEND} )
 		virtual/opengl )"
 
-S="${WORKDIR}/mozilla-release"
+if [[ ${MOZ_ESR} == 1 ]]; then
+	S="${WORKDIR}/mozilla-esr${PV%%.*}"
+else
+	S="${WORKDIR}/mozilla-release"
+fi
 
 QA_PRESTRIPPED="usr/$(get_libdir)/${PN}/${MY_PN}/firefox"
 
@@ -108,15 +120,18 @@ pkg_setup() {
 
 src_prepare() {
 	# Apply our patches
+	EPATCH_EXCLUDE="6012_fix_shlibsign.patch 6013_fix_abort_declaration.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
 
-	# Torbrowser patches for firefox 12, check regularly/for every version-bump
+	# Torbrowser patches for firefox 10.0.5esr, check regularly/for every version-bump
 	# https://gitweb.torproject.org/torbrowser.git/history/HEAD:/src/current-patches
+	# exclude vidalia patch, cause we don't force the user to use it
+	EPATCH_EXCLUDE="0007-Make-Tor-Browser-exit-when-not-launched-from-Vidalia.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	epatch "${FILESDIR}/${PV}"
+	epatch "${FILESDIR}/${PN}-patches"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
@@ -181,11 +196,6 @@ src_configure() {
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 
-	mozconfig_use_enable system-sqlite
-	# Both methodjit and tracejit conflict with PaX
-	mozconfig_use_enable jit methodjit
-	mozconfig_use_enable jit tracejit
-
 	# Allow for a proper pgo build
 	if use pgo; then
 		echo "mk_add_options PROFILE_GEN_SCRIPT='\$(PYTHON) \$(OBJDIR)/_profile/pgo/profileserver.py'" >> "${S}"/.mozconfig
@@ -246,11 +256,8 @@ src_install() {
 	obj_dir="${obj_dir%/*}"
 	cd "${S}/${obj_dir}"
 
-	# Without methodjit and tracejit there's no conflict with PaX
-	if use jit; then
-		# Pax mark xpcshell for hardened support, only used for startupcache creation.
-		pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
-	fi
+	# Pax mark xpcshell for hardened support, only used for startupcache creation.
+	pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install || die "emake install failed"
@@ -262,15 +269,8 @@ src_install() {
 	rm -rf "${ED}"/usr/include "${ED}${MOZILLA_FIVE_HOME}"/{idl,include,lib,sdk} || \
 		die "Failed to remove sdk and headers"
 
-	# Without methodjit and tracejit there's no conflict with PaX
-	if use jit; then
-		# Required in order to use plugins and even run firefox on hardened.
-		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin}
-	fi
-
-	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
-	# continue to work as expected.
-	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
+	# Required in order to use plugins and even run firefox on hardened.
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
 
 	# Plugins dir
 	keepdir /usr/$(get_libdir)/${PN}/${MY_PN}/plugins
@@ -282,9 +282,13 @@ src_install() {
 	# create wrapper to start torbrowser
 	make_wrapper ${PN} "/usr/$(get_libdir)/${PN}/${MY_PN}/${MY_PN} -no-remote -profile ~/.${PN}/profile"
 
-	newicon "${WORKDIR}"/tor-browser_en-US/App/Firefox/icons/mozicon128.png ${PN}.png
+	newicon -s 128 "${WORKDIR}"/tor-browser_en-US/App/Firefox/icons/mozicon128.png ${PN}.png
 	make_desktop_entry ${PN} "Torbrowser" ${PN} "Network;WebBrowser"
 	dodoc "${WORKDIR}"/tor-browser_en-US/Docs/changelog
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
@@ -300,4 +304,10 @@ pkg_postinst() {
 	einfo
 	elog "The update check when you first start ${PN} does not recognize this version."
 	einfo
+
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

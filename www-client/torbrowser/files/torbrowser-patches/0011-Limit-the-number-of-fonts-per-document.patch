@@ -1,7 +1,7 @@
-From c4d1c23872e2be83f33f2b9bfc5c49d2b98c73a6 Mon Sep 17 00:00:00 2001
+From 6eff7de2e19b0970b04b8721be4f46577617894c Mon Sep 17 00:00:00 2001
 From: Mike Perry <mikeperry-git@torproject.org>
 Date: Wed, 1 Feb 2012 16:01:21 -0800
-Subject: [PATCH 11/16] Limit the number of fonts per document.
+Subject: [PATCH 11/18] Limit the number of fonts per document.
 
 We create two prefs:
 browser.display.max_font_count and browser.display.max_font_attempts.
@@ -23,7 +23,7 @@ https://www.torproject.org/projects/torbrowser/design/#fingerprinting-linkabilit
  3 files changed, 119 insertions(+), 3 deletions(-)
 
 diff --git a/layout/base/nsPresContext.cpp b/layout/base/nsPresContext.cpp
-index 49b201e..0a8db3c 100644
+index e1587db..9690d9c 100644
 --- a/layout/base/nsPresContext.cpp
 +++ b/layout/base/nsPresContext.cpp
 @@ -98,6 +98,8 @@
@@ -35,7 +35,7 @@ index 49b201e..0a8db3c 100644
  
  #ifdef IBMBIDI
  #include "nsBidiPresUtils.h"
-@@ -733,6 +735,10 @@ nsPresContext::GetUserPreferences()
+@@ -706,6 +708,10 @@ nsPresContext::GetUserPreferences()
    // * use fonts?
    mUseDocumentFonts =
      Preferences::GetInt("browser.display.use_document_fonts") != 0;
@@ -46,7 +46,7 @@ index 49b201e..0a8db3c 100644
  
    // * replace backslashes with Yen signs? (bug 245770)
    mEnableJapaneseTransform =
-@@ -1334,6 +1340,100 @@ nsPresContext::GetDefaultFont(PRUint8 aFontID) const
+@@ -1300,6 +1306,100 @@ nsPresContext::GetDefaultFont(PRUint8 aFontID) const
    return font;
  }
  
@@ -148,10 +148,10 @@ index 49b201e..0a8db3c 100644
  nsPresContext::SetFullZoom(float aZoom)
  {
 diff --git a/layout/base/nsPresContext.h b/layout/base/nsPresContext.h
-index 4b70c2f..ae8fcd5 100644
+index ecd01d8..552a69a 100644
 --- a/layout/base/nsPresContext.h
 +++ b/layout/base/nsPresContext.h
-@@ -535,6 +535,13 @@ public:
+@@ -548,6 +548,13 @@ public:
      }
    }
  
@@ -165,7 +165,7 @@ index 4b70c2f..ae8fcd5 100644
    PRInt32 MinFontSize() const {
      return NS_MAX(mMinFontSize, mMinimumFontSizePref);
    }
-@@ -1127,6 +1134,8 @@ protected:
+@@ -1117,6 +1124,8 @@ protected:
    PRUint32              mInterruptChecksToSkip;
  
    mozilla::TimeStamp    mReflowStartTime;
@@ -175,10 +175,10 @@ index 4b70c2f..ae8fcd5 100644
    unsigned              mHasPendingInterrupt : 1;
    unsigned              mInterruptsEnabled : 1;
 diff --git a/layout/style/nsRuleNode.cpp b/layout/style/nsRuleNode.cpp
-index 9eb41ac..47065d0 100644
+index 27336bf..827585a 100644
 --- a/layout/style/nsRuleNode.cpp
 +++ b/layout/style/nsRuleNode.cpp
-@@ -3087,6 +3087,7 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
+@@ -3091,6 +3091,7 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
  
    // See if there is a minimum font-size constraint to honor
    nscoord minimumFontSize = mPresContext->MinFontSize();
@@ -186,7 +186,7 @@ index 9eb41ac..47065d0 100644
  
    if (minimumFontSize < 0)
      minimumFontSize = 0;
-@@ -3098,10 +3099,10 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
+@@ -3102,10 +3103,10 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
    // We only need to know this to determine if we have to use the
    // document fonts (overriding the useDocumentFonts flag), or to
    // determine if we have to override the minimum font-size constraint.
@@ -199,7 +199,7 @@ index 9eb41ac..47065d0 100644
      minimumFontSize = 0;
    }
  
-@@ -3116,9 +3117,13 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
+@@ -3120,9 +3121,13 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
      // generic?
      nsFont::GetGenericID(font->mFont.name, &generic);
  
@@ -214,7 +214,7 @@ index 9eb41ac..47065d0 100644
        // Extract the generic from the specified font family...
        nsAutoString genericName;
        if (!font->mFont.EnumerateFamilies(ExtractGeneric, &genericName)) {
-@@ -3154,6 +3159,8 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
+@@ -3158,6 +3163,8 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
                                 minimumFontSize, font);
    }
  

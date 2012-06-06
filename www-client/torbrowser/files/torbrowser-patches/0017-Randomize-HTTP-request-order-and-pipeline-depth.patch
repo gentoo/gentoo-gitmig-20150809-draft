@@ -1,7 +1,7 @@
-From 6147cea4de151dade922b3c2787016f70c222458 Mon Sep 17 00:00:00 2001
+From 60d369378ea65b1502ba2ab28a851318e7910a64 Mon Sep 17 00:00:00 2001
 From: Mike Perry <mikeperry-git@torproject.org>
-Date: Tue, 24 Apr 2012 17:21:45 -0700
-Subject: [PATCH 12/16] Randomize HTTP request order and pipeline depth.
+Date: Wed, 6 Jun 2012 11:08:56 -0700
+Subject: [PATCH 17/18] Randomize HTTP request order and pipeline depth.
 
 This is an experimental defense against
 http://lorre.uni.lu/~andriy/papers/acmccs-wpes11-fingerprinting.pdf
@@ -12,18 +12,18 @@ https://blog.torproject.org/blog/experimental-defense-website-traffic-fingerprin
 This defense has been improved since that blog post to additionally randomize
 the order and concurrency of non-pipelined HTTP requests.
 ---
- netwerk/protocol/http/nsHttpConnectionMgr.cpp |  133 ++++++++++++++++++++++++-
+ netwerk/protocol/http/nsHttpConnectionMgr.cpp |  136 ++++++++++++++++++++++++-
  netwerk/protocol/http/nsHttpConnectionMgr.h   |    5 +
- 2 files changed, 133 insertions(+), 5 deletions(-)
+ 2 files changed, 136 insertions(+), 5 deletions(-)
 
 diff --git a/netwerk/protocol/http/nsHttpConnectionMgr.cpp b/netwerk/protocol/http/nsHttpConnectionMgr.cpp
-index 6e1099d..3eec5b3 100644
+index 23ef893..788368f 100644
 --- a/netwerk/protocol/http/nsHttpConnectionMgr.cpp
 +++ b/netwerk/protocol/http/nsHttpConnectionMgr.cpp
-@@ -100,6 +100,12 @@ nsHttpConnectionMgr::nsHttpConnectionMgr()
+@@ -94,6 +94,12 @@ nsHttpConnectionMgr::nsHttpConnectionMgr()
+ {
+     LOG(("Creating nsHttpConnectionMgr @%x\n", this));
      mCT.Init();
-     mAlternateProtocolHash.Init(16);
-     mSpdyPreferredHash.Init();
 +
 +    nsresult rv;
 +    mRandomGenerator = do_GetService("@mozilla.org/security/random-generator;1", &rv);
@@ -33,7 +33,7 @@ index 6e1099d..3eec5b3 100644
  }
  
  nsHttpConnectionMgr::~nsHttpConnectionMgr()
-@@ -353,8 +359,12 @@ nsHttpConnectionMgr::AddTransactionToPipeline(nsHttpPipeline *pipeline)
+@@ -342,8 +348,12 @@ nsHttpConnectionMgr::AddTransactionToPipeline(nsHttpPipeline *pipeline)
          nsConnectionEntry *ent = mCT.Get(ci->HashKey());
          if (ent) {
              // search for another request to pipeline...
@@ -48,7 +48,7 @@ index 6e1099d..3eec5b3 100644
                  nsHttpTransaction *trans = ent->mPendingQ[i];
                  if (trans->Caps() & NS_HTTP_ALLOW_PIPELINING) {
                      pipeline->AddTransaction(trans);
-@@ -365,6 +375,8 @@
+@@ -354,6 +364,8 @@ nsHttpConnectionMgr::AddTransactionToPipeline(nsHttpPipeline *pipeline)
                      break;
                  }
              }
@@ -57,17 +57,17 @@ index 6e1099d..3eec5b3 100644
          }
      }
  }
-@@ -898,12 +908,17 @@ nsHttpConnectionMgr::ProcessPendingQForEntry(nsConnectionEntry *ent)
+@@ -585,12 +597,17 @@ nsHttpConnectionMgr::ProcessPendingQForEntry(nsConnectionEntry *ent)
+     LOG(("nsHttpConnectionMgr::ProcessPendingQForEntry [ci=%s]\n",
+         ent->mConnInfo->HashKey().get()));
  
-     ProcessSpdyPendingQ(ent);
- 
--    PRUint32 i, count = ent->mPendingQ.Length();
+-    PRInt32 i, count = ent->mPendingQ.Length();
 +    PRUint32 h, i = 0, count = ent->mPendingQ.Length();
      if (count > 0) {
          LOG(("  pending-count=%u\n", count));
          nsHttpTransaction *trans = nsnull;
          nsHttpConnection *conn = nsnull;
--        for (i = 0; i < count; ++i) {
+-        for (i=0; i<count; ++i) {
 +
 +        PRUint32* ind = new PRUint32[count];
 +        ShuffleRequestOrder(ind, count);
@@ -77,22 +77,22 @@ index 6e1099d..3eec5b3 100644
              trans = ent->mPendingQ[i];
  
              // When this transaction has already established a half-open
-@@ -927,6 +944,7 @@
-                               "something mutated pending queue from "
-                               "GetConnection()");
+@@ -610,6 +627,7 @@ nsHttpConnectionMgr::ProcessPendingQForEntry(nsConnectionEntry *ent)
+             if (conn)
+                 break;
          }
 +        delete [] ind;
          if (conn) {
              LOG(("  dispatching pending transaction...\n"));
  
-@@ -1011,6 +1026,19 @@ nsHttpConnectionMgr::AtActiveConnectionLimit(nsConnectionEntry *ent, PRUint8 cap
+@@ -694,6 +712,19 @@ nsHttpConnectionMgr::AtActiveConnectionLimit(nsConnectionEntry *ent, PRUint8 cap
          maxPersistConns = mMaxPersistConnsPerHost;
      }
  
 +    // Fuzz maxConns for website fingerprinting attack
 +    // We create a range of maxConns/5 up to 6*maxConns/5 
 +    // because this function is called repeatedly, and we'll
-+    // end up converging on a the high side of concurrent connections
++    // end up converging to the high side of concurrent connections
 +    // after a short while. 
 +    PRUint8 *bytes = nsnull;
 +    nsresult rv = mRandomGenerator->GenerateRandomBytes(1, &bytes);
@@ -105,8 +105,8 @@ index 6e1099d..3eec5b3 100644
      // use >= just to be safe
      return (totalCount >= maxConns) || ( (caps & NS_HTTP_ALLOW_KEEPALIVE) &&
                                           (persistCount >= maxPersistConns) );
-@@ -1227,7 +1255,7 @@ nsHttpConnectionMgr::DispatchTransaction(nsConnectionEntry *ent,
- 
+@@ -865,7 +896,7 @@ nsHttpConnectionMgr::DispatchTransaction(nsConnectionEntry *ent,
+     nsHttpPipeline *pipeline = nsnull;
      if (conn->SupportsPipelining() && (caps & NS_HTTP_ALLOW_PIPELINING)) {
          LOG(("  looking to build pipeline...\n"));
 -        if (BuildPipeline(ent, trans, &pipeline))
@@ -114,7 +114,7 @@ index 6e1099d..3eec5b3 100644
              trans = pipeline;
      }
  
-@@ -1300,6 +1328,101 @@ nsHttpConnectionMgr::BuildPipeline(nsConnectionEntry *ent,
+@@ -938,6 +969,101 @@ nsHttpConnectionMgr::BuildPipeline(nsConnectionEntry *ent,
      return true;
  }
  
@@ -217,19 +217,19 @@ index 6e1099d..3eec5b3 100644
  nsHttpConnectionMgr::ProcessNewTransaction(nsHttpTransaction *trans)
  {
 diff --git a/netwerk/protocol/http/nsHttpConnectionMgr.h b/netwerk/protocol/http/nsHttpConnectionMgr.h
-index a13da0f..59ee9b9 100644
+index cdf21a9..81b282a 100644
 --- a/netwerk/protocol/http/nsHttpConnectionMgr.h
 +++ b/netwerk/protocol/http/nsHttpConnectionMgr.h
-@@ -54,6 +54,7 @@
+@@ -51,6 +51,7 @@
+ 
  #include "nsIObserver.h"
  #include "nsITimer.h"
- #include "nsIX509Cert3.h"
 +#include "nsIRandomGenerator.h"
  
  class nsHttpPipeline;
  
-@@ -317,6 +318,8 @@ private:
-     nsresult DispatchTransaction(nsConnectionEntry *, nsHttpTransaction *,
+@@ -276,6 +277,8 @@ private:
+     nsresult DispatchTransaction(nsConnectionEntry *, nsAHttpTransaction *,
                                   PRUint8 caps, nsHttpConnection *);
      bool     BuildPipeline(nsConnectionEntry *, nsAHttpTransaction *, nsHttpPipeline **);
 +    bool     BuildRandomizedPipeline(nsConnectionEntry *, nsAHttpTransaction *, nsHttpPipeline **);
@@ -237,7 +237,7 @@ index a13da0f..59ee9b9 100644
      nsresult ProcessNewTransaction(nsHttpTransaction *);
      nsresult EnsureSocketThreadTargetIfOnline();
      void     ClosePersistentConnections(nsConnectionEntry *ent);
-@@ -409,6 +412,8 @@ private:
+@@ -353,6 +356,8 @@ private:
      PRUint64 mTimeOfNextWakeUp;
      // Timer for next pruning of dead connections.
      nsCOMPtr<nsITimer> mTimer;
