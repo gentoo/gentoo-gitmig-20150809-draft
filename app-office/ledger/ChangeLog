@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ledger
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.28 2011/11/02 18:09:43 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.29 2012/06/06 17:35:03 darkside Exp $
+
+  06 Jun 2012; Jeremy Olexa <darkside@gentoo.org> ledger-2.6.3-r1.ebuild:
+  Fix out of Prefix errors, bug 419654
 
   02 Nov 2011; Tim Harder <radhermit@gentoo.org> -ledger-2.6.3.ebuild:
   Remove old.
