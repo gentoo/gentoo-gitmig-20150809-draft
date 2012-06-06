@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r7.ebuild,v 1.2 2012/03/21 18:26:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r7.ebuild,v 1.3 2012/06/06 08:16:21 jlec Exp $
 
 EAPI=3
 
@@ -30,7 +30,7 @@ FORTRAN_NEED_OPENMP=1
 
 S="${WORKDIR}/${MY_P}"
 
-RESTRICT="fetch"
+RESTRICT="fetch test"
 
 pkg_nofetch() {
 	elog "Fill out the form at http://cns.csb.yale.edu/cns_request/"
@@ -152,8 +152,8 @@ src_test() {
 	# We need to force on g77 manually, because we can't get aliases working
 	# when we source in a -c
 	einfo "Running tests ..."
-	sh -c \
-		"export CNS_G77=ON; source ${T}/cns_solve_env_sh; make run_tests" \
+	csh -c \
+		"export CNS_G77=ON; source ${S}/cns_solve_env; make run_tests" \
 		|| die "tests failed"
 	einfo "Displaying test results ..."
 	cat "${S}"/*_g77/test/*.diff-test
