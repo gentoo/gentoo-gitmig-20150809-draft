@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.294 2012/06/06 17:15:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.295 2012/06/06 17:17:30 mgorny Exp $
+
+  06 Jun 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Reuse eautoreconf, deprecate autotools-utils_autoreconf.
 
   06 Jun 2012; Michał Górny <mgorny@gentoo.org> autotools.eclass:
   Support other GNOME-related tools in eautoreconf: gtk-doc, gnome-doc &

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.54 2012/06/06 15:43:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.55 2012/06/06 17:17:30 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -271,6 +271,10 @@ remove_libtool_files() {
 autotools-utils_autoreconf() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	eqawarn "The autotools-utils_autoreconf() function was deprecated."
+	eqawarn "Please call autotools-utils_src_prepare()"
+	eqawarn "with AUTOTOOLS_AUTORECONF set instead."
+
 	# Override this func to not require unnecessary eaclocal calls.
 	autotools_check_macro() {
 		local x
@@ -367,7 +371,7 @@ autotools-utils_src_prepare() {
 		fi
 	fi
 
-	[[ ${want_autoreconf} ]] && autotools-utils_autoreconf
+	[[ ${want_autoreconf} ]] && eautoreconf
 	elibtoolize --patch-only
 }
 
