@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.52 2012/06/05 21:10:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.53 2012/06/06 07:06:00 jdhore Exp $
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libdnet-1.11-r2.ebuild:
+  marked x86 per bug 418751
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> libdnet-1.11-r2.ebuild:
   Marking libdnet-1.11-r2 ppc64 for bug 418751
