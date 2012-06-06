@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.292 2012/06/06 15:43:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.293 2012/06/06 17:00:09 mpagano Exp $
+
+  06 Jun 2012; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Move ppc/powerpc fix to after we apply linux patches
 
   06 Jun 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Start using prune_libtool_files() from eutils, deprecate
