@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.5.1.ebuild,v 1.1 2012/06/06 14:34:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.5.1.ebuild,v 1.2 2012/06/06 19:09:45 ssuominen Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ src_install() {
 
 pkg_postinst() {
 	local f="${EROOT}/usr/bin/yacc"
-	if [[ ! -e ${f} ]]; then
+	if [[ ! -e ${f} ]] ; then
 		ln -s yacc.bison "${f}"
 	fi
 }
@@ -54,7 +54,7 @@ pkg_postinst() {
 pkg_postrm() {
 	# clean up the dead symlink when we get unmerged #377469
 	local f="${EROOT}/usr/bin/yacc"
-	if [[ -L ${f} && ! -e ${f} ]]; then
+	if [[ -L ${f} && ! -e ${f} ]] ; then
 		rm -f "${f}"
 	fi
 }
