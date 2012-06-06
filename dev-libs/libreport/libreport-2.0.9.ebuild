@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.9.ebuild,v 1.4 2012/05/04 18:35:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.9.ebuild,v 1.5 2012/06/06 03:37:34 zmedico Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
 
-inherit autotools eutils python
+inherit autotools eutils python user
 
 DESCRIPTION="Generic library for reporting software bugs"
 HOMEPAGE="https://fedorahosted.org/abrt/"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libreport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.9 2012/05/04 18:35:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.10 2012/06/06 03:37:34 zmedico Exp $
+
+  06 Jun 2012; Zac Medico <zmedico@gentoo.org> libreport-2.0.7.ebuild,
+  libreport-2.0.9.ebuild:
+  inherit user for enewgroup and enewuser
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libreport-2.0.7.ebuild,
   libreport-2.0.9.ebuild:
