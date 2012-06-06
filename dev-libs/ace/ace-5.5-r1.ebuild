@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.10 2007/10/08 09:06:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.11 2012/06/06 03:24:54 zmedico Exp $
 
-inherit eutils
+inherit eutils multilib toolchain-funcs
 
 S="${WORKDIR}/ACE_wrappers"
 DESCRIPTION="The Adaptive Communications Environment"

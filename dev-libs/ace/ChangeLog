@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.65 2012/05/05 21:59:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.66 2012/06/06 03:24:54 zmedico Exp $
+
+  06 Jun 2012; Zac Medico <zmedico@gentoo.org> ace-5.5-r1.ebuild,
+  ace-5.7.2.ebuild:
+  inherit multilib for get_libdir
 
   05 May 2012; Brent Baude <ranger@gentoo.org> ace-5.7.2.ebuild:
   Marking ace-5.7.2 ppc for bug 273186
