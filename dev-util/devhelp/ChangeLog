@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.134 2012/05/29 23:21:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.135 2012/06/06 19:07:22 maekke Exp $
+
+  06 Jun 2012; Markus Meier <maekke@gentoo.org> devhelp-3.4.1.ebuild:
+  add ~arm, bug #416571
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> devhelp-3.4.1.ebuild:
   keyword ~amd64-fbsd
