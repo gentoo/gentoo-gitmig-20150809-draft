@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-4.8.1.1-r1.ebuild,v 1.9 2012/04/01 14:47:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-4.8.1.1-r1.ebuild,v 1.10 2012/06/06 03:29:24 zmedico Exp $
 
 EAPI="4"
 
-inherit versionator
+inherit eutils versionator
 
 MAJOR_VERSION="$(get_version_component_range 1)"
 MINOR_VERSION="$(get_version_component_range 2)"

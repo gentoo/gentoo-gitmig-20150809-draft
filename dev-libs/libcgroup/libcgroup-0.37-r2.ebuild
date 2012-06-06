@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.37-r2.ebuild,v 1.1 2011/05/14 18:11:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.37-r2.ebuild,v 1.2 2012/06/06 03:30:43 zmedico Exp $
 
 EAPI="2"
 
-inherit autotools linux-info pam
+inherit autotools eutils linux-info pam
 
 DESCRIPTION="Tools and libraries to configure and manage kernel control groups"
 HOMEPAGE="http://libcg.sourceforge.net/"
