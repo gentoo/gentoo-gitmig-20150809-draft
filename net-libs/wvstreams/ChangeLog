@@ -1,6 +1,19 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.143 2012/05/05 02:54:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.144 2012/06/06 20:33:49 ssuominen Exp $
+
+  06 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  wvstreams-4.6.1-r1.ebuild:
+  inherit eutils for epatch
+
+*wvstreams-4.6.1-r2 (06 Jun 2012)
+
+  06 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +wvstreams-4.6.1-r2.ebuild, +files/wvstreams-4.6.1-gcc47.patch:
+  Pass --localstatedir=/var to correct uniconfd.ini location. Use
+  -fno-strict-aliasing since this package is not ready for aliasing. Fix
+  compability with sys-devel/gcc >= 4.7 wrt #419563 and #419971 by Ioannis
+  Galanomatis.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wvstreams-4.6.1-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

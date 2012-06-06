@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r1.ebuild,v 1.9 2012/06/06 20:33:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r2.ebuild,v 1.1 2012/06/06 20:33:49 ssuominen Exp $
 
-EAPI=2
-inherit autotools eutils toolchain-funcs versionator
+EAPI=4
+inherit autotools eutils flag-o-matic toolchain-funcs versionator
 
 DESCRIPTION="A network programming library in C++"
 HOMEPAGE="http://alumnit.ca/wiki/?WvStreams"
@@ -11,7 +11,7 @@ SRC_URI="http://wvstreams.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="pam doc +ssl +dbus debug"
 
 #Tests fail if openssl is not compiled with -DPURIFY. Gentoo's isn't. FAIL!
@@ -23,13 +23,15 @@ RESTRICT="test"
 
 RDEPEND="sys-libs/readline
 	sys-libs/zlib
-	dbus? ( >=sys-apps/dbus-1.2.14 )
-	dev-libs/openssl
+	dbus? ( >=sys-apps/dbus-1.4.20 )
+	dev-libs/openssl:0
 	pam? ( sys-libs/pam )
 	virtual/c++-tr1-functional"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
+
+DOCS="ChangeLog README*"
 
 pkg_setup() {
 	if has_version '>=sys-devel/gcc-4.1' && ! has_version '>=dev-libs/boost-1.34.1'
@@ -44,18 +46,24 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-parallel-make.patch \
+	epatch \
+		"${FILESDIR}"/${P}-parallel-make.patch \
 		"${FILESDIR}"/${P}-openssl-1.0.0.patch \
-		"${FILESDIR}"/${P}-glibc212.patch
+		"${FILESDIR}"/${P}-glibc212.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
+
 	eautoreconf
-	cd argp
+	pushd argp >/dev/null
 	eautoreconf
+	popd >/dev/null
 }
 
 src_configure() {
-	export CXX="$(tc-getCXX)"
+	append-flags -fno-strict-aliasing
+	tc-export CXX
 
 	econf \
+		--localstatedir=/var \
 		$(use_enable debug) \
 		--disable-optimization \
 		$(use_with dbus) \
@@ -68,7 +76,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
+	default
 
 	if use doc; then
 		doxygen || die
@@ -76,12 +84,11 @@ src_compile() {
 }
 
 src_test() {
-	emake test || die
+	emake test
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc ChangeLog README*
+	default
 
 	if use doc; then
 		#the list of files is too big for dohtml -r Docs/doxy-html/*
