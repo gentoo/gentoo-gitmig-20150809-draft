@@ -5,9 +5,6 @@
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
 </maintainer>
-<use>
-	<flag name='webcam'>Enable support for webcam</flag>
-</use>
 <longdescription lang="en">
 </longdescription>
 </pkgmetadata>
