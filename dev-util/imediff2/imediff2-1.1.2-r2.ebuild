@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/imediff2-1.1.2-r2.ebuild,v 1.1 2012/06/06 08:49:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/imediff2-1.1.2-r2.ebuild,v 1.2 2012/06/06 15:05:05 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
     python_set_active_version 2
-	python_pkg_setup	
+	python_pkg_setup
 }
 
 src_prepare() {
