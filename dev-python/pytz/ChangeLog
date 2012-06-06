@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.124 2012/06/05 21:15:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.125 2012/06/06 15:20:45 jer Exp $
+
+  06 Jun 2012; Jeroen Roovers <jer@gentoo.org> pytz-2012c.ebuild:
+  Stable for HPPA (bug #412307).
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> pytz-2012c.ebuild:
   Marking pytz-2012c ppc64 for bug 412307
