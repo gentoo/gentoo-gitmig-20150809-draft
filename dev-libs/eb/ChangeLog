@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.40 2012/06/05 20:56:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.41 2012/06/06 23:38:12 jdhore Exp $
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> eb-4.4.1.ebuild:
+  marked x86 per bug 419721
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> eb-4.4.1.ebuild:
   Marking eb-4.4.1 ppc64 for bug 419721
