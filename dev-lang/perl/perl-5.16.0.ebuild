@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.16.0.ebuild,v 1.1 2012/06/05 17:52:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.16.0.ebuild,v 1.2 2012/06/06 03:40:15 tove Exp $
 
 EAPI=4
 
@@ -52,7 +52,7 @@ dual_scripts() {
 	src_remove_dual      perl-core/Encode             2.440.0      enc2xs piconv
 	src_remove_dual      perl-core/ExtUtils-MakeMaker 6.630.200_rc instmodsh
 	src_remove_dual      perl-core/ExtUtils-ParseXS   3.160.0      xsubpp
-	src_remove_dual      perl-core/IO-Compress        2.480.0      zipdetails
+	src_remove_dual      perl-core/IO-Compress        2.48.0       zipdetails
 	src_remove_dual      perl-core/JSON-PP            2.272.0      json_pp
 	src_remove_dual      perl-core/Module-Build       0.390.100_rc config_data
 	src_remove_dual      perl-core/Module-CoreList    2.660.0      corelist
