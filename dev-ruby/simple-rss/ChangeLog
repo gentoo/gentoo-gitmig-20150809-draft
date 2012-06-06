@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/simple-rss
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/ChangeLog,v 1.8 2011/01/10 17:59:51 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/ChangeLog,v 1.9 2012/06/06 06:04:42 graaff Exp $
+
+*simple-rss-1.2.3-r1 (06 Jun 2012)
+
+  06 Jun 2012; Hans de Graaff <graaff@gentoo.org> +simple-rss-1.2.3-r1.ebuild:
+  Revision bump: EAPI=4, add ruby19,ree18,jruby.
 
   10 Jan 2011; Hans de Graaff <graaff@gentoo.org> simple-rss-1.2.3.ebuild:
   Keyword ~x86-macos.
