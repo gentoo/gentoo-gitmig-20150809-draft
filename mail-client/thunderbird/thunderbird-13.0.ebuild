@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-12.0.1-r2.ebuild,v 1.1 2012/05/28 18:45:29 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-13.0.ebuild,v 1.1 2012/06/06 12:06:55 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -35,8 +35,8 @@ SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist gconf +crashreporter +crypt +ipc +jit +lightning +minimal mozdom +webm"
 
-PATCH="thunderbird-12.0-patches-0.1"
-PATCHFF="firefox-12.0-patches-0.5"
+PATCH="thunderbird-13.0-patches-0.1"
+PATCHFF="firefox-13.0-patches-0.1"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
