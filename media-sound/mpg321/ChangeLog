@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.82 2012/06/05 21:29:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.83 2012/06/06 07:53:16 jdhore Exp $
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> mpg321-0.3.1.ebuild:
+  marked x86 per bug 419127
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> mpg321-0.3.1.ebuild:
   Marking mpg321-0.3.1 ppc64 for bug 419127
