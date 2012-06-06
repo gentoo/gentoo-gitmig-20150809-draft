@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.4.2-r1.ebuild,v 1.8 2012/06/05 15:43:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.4.2-r1.ebuild,v 1.9 2012/06/06 12:44:12 scarabeus Exp $
 
 EAPI=4
 
@@ -91,7 +91,7 @@ COMMON_DEPEND="
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
-	dev-cpp/libcmis
+	<dev-cpp/libcmis-0.2
 	dev-db/unixODBC
 	dev-libs/expat
 	>=dev-libs/glib-2.28
