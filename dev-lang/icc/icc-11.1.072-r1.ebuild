@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.072-r1.ebuild,v 1.3 2012/02/12 23:20:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.072-r1.ebuild,v 1.4 2012/06/06 03:14:06 zmedico Exp $
 
 EAPI="3"
 
-inherit rpm versionator check-reqs
+inherit multilib rpm versionator check-reqs
 
 PB=cproc
 PACKAGEID="l_${PB}_p_${PV}"

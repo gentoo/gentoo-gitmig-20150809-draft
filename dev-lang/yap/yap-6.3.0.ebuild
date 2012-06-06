@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.3.0.ebuild,v 1.3 2012/01/24 07:08:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.3.0.ebuild,v 1.4 2012/06/06 03:17:38 zmedico Exp $
 
 EAPI=2
 
-inherit eutils flag-o-matic java-pkg-opt-2
+inherit eutils flag-o-matic java-pkg-opt-2 multilib
 
 PATCHSET_VER="1"
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.07.ebuild,v 1.1 2012/01/09 08:30:13 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.07.ebuild,v 1.2 2012/06/06 03:15:39 zmedico Exp $
 
 EAPI=2
 
-inherit eutils
+inherit eutils multilib
 
 PATCHSET_VER="0"
 MY_P=${PN}-${PV}
