@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.397 2012/05/30 10:42:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.398 2012/06/06 10:07:45 chainsaw Exp $
+
+*asterisk-10.5.0 (06 Jun 2012)
+*asterisk-1.8.13.0 (06 Jun 2012)
+
+  06 Jun 2012; Tony Vroon <chainsaw@gentoo.org> +files/1.8.0/find_call_ids.sh,
+  +files/1.8.0/find_call_sip_trace.sh, +asterisk-1.8.13.0.ebuild,
+  +asterisk-10.5.0.ebuild:
+  Bugfix releases on both the 1.8 & 10 branches, squelches a warning with bind
+  address set to "any", prevents an overflow on 32-bit systems for
+  ast_tvdiff_ms calculation and various rerouting/transfer fixes. Updated
+  helper scripts by Jaco Kroon, closes bug #414585.
 
   30 May 2012; Agostino Sarubbo <ago@gentoo.org> -asterisk-1.8.11.1.ebuild:
   Remove old
