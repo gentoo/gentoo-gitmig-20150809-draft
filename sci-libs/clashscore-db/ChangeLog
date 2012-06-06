@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/clashscore-db
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clashscore-db/ChangeLog,v 1.2 2010/07/23 11:41:45 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clashscore-db/ChangeLog,v 1.3 2012/06/06 09:33:50 jlec Exp $
+
+  06 Jun 2012; Justin Lecher <jlec@gentoo.org> clashscore-db-3.17.ebuild,
+  metadata.xml:
+  Move to EAPI=4
 
   23 Jul 2010; Justin Lecher <jlec@gentoo.org> clashscore-db-3.17.ebuild:
   Keyworded for *-linux prefix
