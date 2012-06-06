@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13828 2012/06/06 13:22:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13829 2012/06/06 13:41:42 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -392,23 +392,6 @@ media-tv/linuxtv-dvb
 # 0.6 introduced severe bug (0.5.2 unaffected)
 # https://github.com/hhatto/autopep8/issues/12
 >=dev-python/autopep8-0.6
-
-# Samuli Suominen <ssuominen@gentoo.org> (07 May 2012)
-# Upstream discontinued security support for 3.6 series.
-# Blocking net-libs/xulrunner removal wrt bug #403415.
-# If you still need these, now is the time to copy them
-# to your local overlay.
-# Masked for removal in 30 days.
-=www-client/firefox-3.6*
-
-# Samuli Suominen <ssuominen@gentoo.org> (07 May 2012)
-# Dead upstream. Removal in 30 days. Bugs 339811,
-# 372009 and 414837. Use app-misc/tracker or any other
-# indexer instead.
-app-misc/beagle
-app-misc/beagle-xesam
-dev-libs/libbeagle
-sys-fs/beaglefs
 
 # Naohiro Aota <naota@gentoo.org> (07 May 2012)
 # Dead upstream.
