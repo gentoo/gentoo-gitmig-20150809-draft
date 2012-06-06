@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.129 2012/06/05 21:12:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.130 2012/06/06 04:57:34 jer Exp $
+
+  06 Jun 2012; Jeroen Roovers <jer@gentoo.org> portage-utils-0.10.ebuild:
+  Stable for HPPA (bug #419663).
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> portage-utils-0.10.ebuild:
   Marking portage-utils-0.10 ppc64 for bug 419663
