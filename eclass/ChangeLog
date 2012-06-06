@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.291 2012/06/06 15:37:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.292 2012/06/06 15:43:45 mgorny Exp $
+
+  06 Jun 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Start using prune_libtool_files() from eutils, deprecate
+  remove_libtool_files().
 
   06 Jun 2012; Michał Górny <mgorny@gentoo.org> eutils.eclass:
   Introduce prune_libtool_files() for .la file removal. Based on one used

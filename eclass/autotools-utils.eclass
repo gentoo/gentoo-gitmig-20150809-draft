@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.53 2012/05/28 07:46:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.54 2012/06/06 15:43:45 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -204,6 +204,10 @@ _check_build_dir() {
 remove_libtool_files() {
 	debug-print-function ${FUNCNAME} "$@"
 	local removing_all
+
+	eqawarn "The remove_libtool_files() function was deprecated."
+	eqawarn "Please use prune_libtool_files() from eutils eclass instead."
+
 	[[ ${#} -le 1 ]] || die "Invalid number of args to ${FUNCNAME}()"
 	if [[ ${#} -eq 1 ]]; then
 		case "${1}" in
@@ -472,7 +476,7 @@ autotools-utils_src_install() {
 	fi
 
 	# Remove libtool files and unnecessary static libs
-	remove_libtool_files
+	prune_libtool_files
 }
 
 # @FUNCTION: autotools-utils_src_test
