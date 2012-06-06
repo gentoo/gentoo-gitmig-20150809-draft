@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.90.ebuild,v 1.4 2012/06/01 17:22:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.90.ebuild,v 1.5 2012/06/06 13:39:04 scarabeus Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -130,7 +130,7 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}"
-PDEPEND=">=app-office/calligra-$(get_version_component_range 1-2)"
+PDEPEND=">=app-office/calligra-l10n-$(get_version_component_range 1-2)"
 
 RESTRICT=test
 # bug 394273
