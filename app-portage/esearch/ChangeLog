@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.94 2012/06/06 04:31:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.95 2012/06/06 07:57:12 jdhore Exp $
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> esearch-1.1-r2.ebuild:
+  marked x86 per bug 418631
 
   06 Jun 2012; Jeroen Roovers <jer@gentoo.org> esearch-1.1-r2.ebuild:
   Stable for HPPA (bug #418631).
