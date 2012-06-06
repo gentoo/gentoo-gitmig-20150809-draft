@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.156 2012/06/06 12:58:36 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.157 2012/06/06 13:35:34 ssuominen Exp $
+
+  06 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -files/icon/firefox-1.5-unbranded.desktop, -files/icon/firefox-1.5.desktop,
+  -files/xulrunner-1.9.2-gtk+-2.21.patch, -firefox-3.6.20.ebuild,
+  -firefox-3.6.22.ebuild, -files/firefox.1, -files/firefox-default-prefs.js,
+  -files/fix-preferences-gentoo.patch, -files/gentoo-default-prefs.js:
+  old
 
   06 Jun 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-13.0.ebuild:
   Fix nss/nspr dep
