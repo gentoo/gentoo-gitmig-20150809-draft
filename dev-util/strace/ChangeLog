@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.178 2012/06/05 20:31:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.179 2012/06/06 06:25:30 jdhore Exp $
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> strace-4.7.ebuild:
+  marked x86 per bug 419803
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> strace-4.7.ebuild:
   Marking strace-4.7 ppc64 for bug 419803
