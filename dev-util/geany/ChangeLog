@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.51 2012/05/04 17:51:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.52 2012/06/06 13:24:05 polynomial-c Exp $
+
+*geany-0.21-r1 (06 Jun 2012)
+
+  06 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> -geany-0.20.ebuild,
+  -geany-0.21.ebuild, +geany-0.21-r1.ebuild:
+  Simple docdir fix (bug #419745). Bumped straight to stable. Removed old
+  versions.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> geany-0.19.2.ebuild,
   geany-0.20.ebuild, geany-0.21.ebuild:
