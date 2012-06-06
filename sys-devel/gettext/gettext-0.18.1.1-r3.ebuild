@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.1.1-r3.ebuild,v 1.5 2012/06/05 03:46:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.1.1-r3.ebuild,v 1.6 2012/06/06 16:08:47 vapier Exp $
 
 EAPI="2"
 
@@ -64,7 +64,7 @@ src_configure() {
 		$(use_enable openmp) \
 		$(use_enable static-libs static) \
 		$(use_with git) \
-		$(usex git --without-git $(use_with cvs))
+		$(usex git --without-cvs $(use_with cvs))
 }
 
 src_install() {
