@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.282 2012/06/03 16:24:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.283 2012/06/06 14:10:17 ranger Exp $
+
+  06 Jun 2012; Brent Baude <ranger@gentoo.org> pidgin-2.10.4.ebuild:
+  Marking pidgin-2.10.4 ppc64 for bug 415393
 
   03 Jun 2012; Raúl Porcel <armin76@gentoo.org> pidgin-2.10.4.ebuild:
   alpha/ia64/sparc stable wrt #415393
