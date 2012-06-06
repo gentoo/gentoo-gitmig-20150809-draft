@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.399 2012/06/05 20:47:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.400 2012/06/06 06:54:51 lu_zero Exp $
+
+  06 Jun 2012; Luca Barbato <lu_zero@gentoo.org> mesa-8.0.3-r1.ebuild:
+  Fix glproto dep
 
 *mesa-8.0.3-r1 (05 Jun 2012)
 

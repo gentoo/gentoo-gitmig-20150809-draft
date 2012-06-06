@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.3-r1.ebuild,v 1.1 2012/06/05 20:47:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.3-r1.ebuild,v 1.2 2012/06/06 06:54:51 lu_zero Exp $
 
 EAPI=4
 
@@ -76,7 +76,7 @@ LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.32"
 # depend on this package, bug #342393
 EXTERNAL_DEPEND="
 	>=x11-proto/dri2proto-2.6
-	>=x11-proto/glproto-1.4.15
+	>=x11-proto/glproto-1.4.15-r1
 "
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
