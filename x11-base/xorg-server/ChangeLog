@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.655 2012/06/06 04:23:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.656 2012/06/06 14:57:16 ranger Exp $
+
+  06 Jun 2012; Brent Baude <ranger@gentoo.org> xorg-server-1.10.6-r1.ebuild,
+  xorg-server-1.11.4-r1.ebuild:
+  Marking -1.10.6-r1 -1.11.4-r1 ppc64 for sec bug 412609
 
   06 Jun 2012; Jeroen Roovers <jer@gentoo.org> xorg-server-1.11.4-r1.ebuild:
   Stable for HPPA (bug #412609).
