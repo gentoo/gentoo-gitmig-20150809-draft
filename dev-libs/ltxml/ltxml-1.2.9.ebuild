@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ltxml-1.2.9.ebuild,v 1.2 2011/11/14 04:11:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ltxml-1.2.9.ebuild,v 1.3 2012/06/06 03:39:11 zmedico Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Integrated set of XML tools and a developers tool-kit with C API"
 HOMEPAGE="http://www.ltg.ed.ac.uk/software/xml/"

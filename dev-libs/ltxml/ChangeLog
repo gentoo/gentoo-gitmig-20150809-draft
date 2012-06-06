@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ltxml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.13 2011/11/14 04:11:11 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.14 2012/06/06 03:39:11 zmedico Exp $
+
+  06 Jun 2012; Zac Medico <zmedico@gentoo.org> ltxml-1.2.9.ebuild:
+  inherit multilib for get_libdir
 
   14 Nov 2011; Michael Weber <xmw@gentoo.org> ltxml-1.2.9.ebuild:
   Fix CFLAGS (bug 240225)
