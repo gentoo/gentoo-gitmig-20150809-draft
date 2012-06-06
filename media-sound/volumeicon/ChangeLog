@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/volumeicon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volumeicon/ChangeLog,v 1.5 2012/05/05 08:54:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volumeicon/ChangeLog,v 1.6 2012/06/06 11:09:30 ssuominen Exp $
+
+  06 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> volumeicon-0.4.6.ebuild:
+  Force ALSA for now wrt #419891 by Maurizio Camisaschi
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> volumeicon-0.4.6.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
