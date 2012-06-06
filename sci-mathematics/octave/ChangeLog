@@ -1,6 +1,16 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.125 2012/05/04 07:46:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.126 2012/06/06 21:31:28 bicatali Exp $
+
+*octave-3.6.2 (06 Jun 2012)
+
+  06 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/octave-3.2.0_as_needed.patch, -files/octave-3.2.0_parallel_make.patch,
+  -octave-3.2.4-r1.ebuild, -files/octave-3.2.4-curl-headers.patch,
+  -files/octave-3.2.4-fltk-magic.patch, -files/octave-3.2.4-imread.patch,
+  -files/octave-3.2.4-ldflags.patch, -octave-3.6.0.ebuild,
+  +octave-3.6.2.ebuild:
+  Version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> octave-3.2.4-r1.ebuild,
   octave-3.4.3-r1.ebuild, octave-3.6.0.ebuild, octave-3.6.1.ebuild:

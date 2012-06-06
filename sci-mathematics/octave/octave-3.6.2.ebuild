@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.0.ebuild,v 1.7 2012/05/04 07:46:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.2.ebuild,v 1.1 2012/06/06 21:31:28 bicatali Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.octave.org/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-IUSE="curl doc fftw +glpk +imagemagick opengl +qhull +qrupdate
+IUSE="curl doc fftw +glpk gnuplot +imagemagick opengl +qhull +qrupdate
 	readline +sparse static-libs X zlib"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 
@@ -24,6 +24,7 @@ RDEPEND="dev-libs/libpcre
 	curl? ( net-misc/curl )
 	fftw? ( sci-libs/fftw:3.0 )
 	glpk? ( sci-mathematics/glpk )
+	gnuplot? ( sci-visualization/gnuplot )
 	imagemagick? ( || (
 			media-gfx/graphicsmagick[cxx]
 			media-gfx/imagemagick[cxx] ) )
@@ -56,6 +57,9 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,help,texi}.patch )
 
 src_configure() {
+	# occasional fail on install, force regeneration  see bug #401189
+	rm -f doc/interpreter/contributors.texi || die
+
 	# hdf5 disabled because not really useful (bug #299876)
 	local myconf="--without-magick"
 	if use imagemagick; then
@@ -66,7 +70,7 @@ src_configure() {
 		fi
 	fi
 
-	myeconfargs+=(
+	local myeconfargs+=(
 		--localstatedir="${EPREFIX}/var/state/octave"
 		--without-hdf5
 		--with-blas="$(pkg-config --libs blas)"
