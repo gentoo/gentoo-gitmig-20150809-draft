@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.15.ebuild,v 1.3 2012/04/15 17:01:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.15.ebuild,v 1.4 2012/06/06 08:30:35 patrick Exp $
 
 EAPI="4"
 
@@ -50,7 +50,7 @@ HTTP_SLOWFS_CACHE_MODULE_PV="1.6"
 HTTP_SLOWFS_CACHE_MODULE_P="ngx_slowfs_cache-${HTTP_SLOWFS_CACHE_MODULE_PV}"
 HTTP_SLOWFS_CACHE_MODULE_URI="http://labs.frickle.com/files/${HTTP_SLOWFS_CACHE_MODULE_P}.tar.gz"
 
-inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic
+inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://nginx.org"

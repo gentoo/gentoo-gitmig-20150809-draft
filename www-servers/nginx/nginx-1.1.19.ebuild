@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.1.19.ebuild,v 1.3 2012/04/18 16:02:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.1.19.ebuild,v 1.4 2012/06/06 08:30:35 patrick Exp $
 
 EAPI="4"
 
@@ -58,7 +58,7 @@ HTTP_FANCYINDEX_MODULE_PNPN="ngx-fancyindex-ngx-fancyindex"
 HTTP_FANCYINDEX_MODULE_P="${HTTP_FANCYINDEX_MODULE_PN}-${HTTP_FANCYINDEX_MODULE_PV}"
 HTTP_FANCYINDEX_MODULE_URI="http://gitorious.org/${HTTP_FANCYINDEX_MODULE_PN}/${HTTP_FANCYINDEX_MODULE_PN}/archive-tarball/v${HTTP_FANCYINDEX_MODULE_PV}"
 
-inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic
+inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 HOMEPAGE="http://nginx.org"
