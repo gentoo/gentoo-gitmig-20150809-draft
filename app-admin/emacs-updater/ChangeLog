@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/emacs-updater
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.58 2012/03/02 23:49:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.59 2012/06/06 12:21:43 blueness Exp $
+
+  06 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  emacs-updater-1.9.ebuild:
+  Keyword ~mips, bug #419199
 
   02 Mar 2012; Ulrich Müller <ulm@gentoo.org> -emacs-updater-1.7.ebuild,
   -emacs-updater-1.8.ebuild:
