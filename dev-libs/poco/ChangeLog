@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.17 2012/05/30 09:32:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.18 2012/06/06 03:47:35 zmedico Exp $
+
+  06 Jun 2012; Zac Medico <zmedico@gentoo.org> poco-1.3.3_p1.ebuild,
+  poco-1.3.6_p2.ebuild, poco-1.4.3_p1.ebuild:
+  inherit multilib for get_libdir
 
   30 May 2012; Jeff Horelick <jdhore@gentoo.org> poco-1.4.3_p1.ebuild:
   marked x86 per bug 417087

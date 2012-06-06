@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-1.2.7.ebuild,v 1.2 2012/04/06 21:05:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-1.2.7.ebuild,v 1.3 2012/06/06 03:48:30 zmedico Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit multilib toolchain-funcs
 
 DESCRIPTION="development files used for building software at skarnet.org: essentially general-purpose libraries"
 HOMEPAGE="http://www.skarnet.org/software/skalibs/index.html"

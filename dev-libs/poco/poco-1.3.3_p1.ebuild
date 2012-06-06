@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.3_p1.ebuild,v 1.4 2010/07/14 08:16:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.3_p1.ebuild,v 1.5 2012/06/06 03:47:35 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs flag-o-matic versionator
+inherit eutils toolchain-funcs flag-o-matic multilib versionator
 
 MY_P="${P/_}"
 MY_DOCP="${PN}-$(get_version_component_range 1-3)-doc"
