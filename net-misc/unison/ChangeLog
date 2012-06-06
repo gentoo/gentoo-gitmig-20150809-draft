@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/unison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.65 2012/02/05 18:44:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.66 2012/06/06 16:36:31 heroxbd Exp $
+
+*unison-2.40.65 (06 Jun 2012)
+
+  06 Jun 2012; Benda Xu <heroxbd@gentoo.org> +unison-2.40.65.ebuild:
+  bump closing bug 353282. Thanks to Thomas and all the people who commented and
+  pushed
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> unison-2.13.16-r1.ebuild,
   unison-2.27.57-r1.ebuild, unison-2.32.52.ebuild:
