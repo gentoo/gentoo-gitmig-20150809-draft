@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.147 2012/06/06 12:06:55 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.148 2012/06/06 12:56:51 anarchy Exp $
+
+  06 Jun 2012; Jory A. Pratt <anarchy@gentoo.org> thunderbird-13.0.ebuild:
+  Fix nss/nspr dep
 
 *thunderbird-13.0 (06 Jun 2012)
 
