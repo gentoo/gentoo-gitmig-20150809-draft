@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplegeneric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.6 2012/05/09 11:32:49 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.7 2012/06/06 05:15:43 heroxbd Exp $
+
+  06 Jun 2012; Benda Xu <heroxbd@gentoo.org> simplegeneric-0.8.1.ebuild:
+  keyword ~amd64-linux
 
   09 May 2012; Benda Xu <heroxbd@gentoo.org> simplegeneric-0.8.1.ebuild:
   keyword ~x86-linux
