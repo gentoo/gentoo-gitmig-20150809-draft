@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.125 2012/06/05 20:33:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.126 2012/06/06 04:27:30 jer Exp $
+
+  06 Jun 2012; Jeroen Roovers <jer@gentoo.org> tigervnc-1.1.0-r6.ebuild:
+  Stable for HPPA (bug #419549).
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> tigervnc-1.1.0-r6.ebuild:
   Marking tigervnc-1.1.0-r6 ppc64 for bug 419549
