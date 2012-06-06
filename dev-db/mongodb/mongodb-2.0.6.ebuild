@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.4.ebuild,v 1.3 2012/06/04 06:34:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.6.ebuild,v 1.1 2012/06/06 07:44:16 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -12,7 +12,7 @@ MY_P=${PN}-src-r${PV/_rc/-rc}
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="http://www.mongodb.org"
 SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz
-	mms-agent? ( http://dev.gentoo.org/~ultrabug/20111027-10gen-mms-agent.zip )"
+	mms-agent? ( http://dev.gentoo.org/~ultrabug/20120514-10gen-mms-agent.zip )"
 
 LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
@@ -25,8 +25,7 @@ RDEPEND="!v8? ( <dev-lang/spidermonkey-1.8[unicode] )
 	dev-libs/boost
 	dev-libs/libpcre[cxx]
 	net-libs/libpcap
-	app-arch/snappy
-	"
+	app-arch/snappy"
 DEPEND="${RDEPEND}
 	sys-libs/readline
 	sys-libs/ncurses"
@@ -47,7 +46,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0-fix-scons.patch"
-	epatch "${FILESDIR}/${P}-fix-utils.patch"
 
 	# drop -Werror
 	sed -i -e '/Werror/d' SConstruct || die
@@ -81,6 +79,9 @@ src_install() {
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 	newinitd "${FILESDIR}/${PN/db/s}.initd" ${PN/db/s}
 	newconfd "${FILESDIR}/${PN/db/s}.confd" ${PN/db/s}
+
+	insinto /etc/logrotate.d/
+	newins "${FILESDIR}/${PN}.logrotate" ${PN}
 
 	if use mms-agent; then
 		local MY_PN="mms-agent"
