@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.2.0.ebuild,v 1.1 2012/05/21 08:47:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.2.0.ebuild,v 1.2 2012/06/06 05:14:16 heroxbd Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples test"
 
 RDEPEND=">=net-libs/zeromq-2.1.9"
