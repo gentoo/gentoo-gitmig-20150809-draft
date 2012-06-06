@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/mingw64-runtime-2.0.1.ebuild,v 1.1 2012/03/12 05:26:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/mingw64-runtime-2.0.1.ebuild,v 1.2 2012/06/06 19:58:24 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -60,9 +60,12 @@ src_compile() {
 src_install() {
 	insinto /usr/${CTARGET}/usr/include
 	doins -r "${WORKDIR}"/sysroot/usr/${CTARGET}/include/* || die
-	is_crosscompile \
-		&& dosym usr /usr/${CTARGET}/${CTARGET} \
-		&& dosym usr/include /usr/${CTARGET}/sys-include
+	if is_crosscompile ; then
+		# gcc is configured to look at specific hard-coded paths for mingw #419601
+		dosym usr /usr/${CTARGET}/mingw
+		dosym usr /usr/${CTARGET}/${CTARGET}
+		dosym usr/include /usr/${CTARGET}/sys-include
+	fi
 	just_headers && return 0
 
 	emake install DESTDIR="${D}" || die
