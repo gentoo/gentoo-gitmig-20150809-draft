@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/scapy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.35 2012/01/28 15:34:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.36 2012/06/06 00:09:40 ikelos Exp $
+
+  06 Jun 2012; Mike Auty <ikelos@gentoo.org> -scapy-1.1.1-r1.ebuild,
+  -files/scapy-1.1.1-config-file.patch, -scapy-2.0.1.ebuild, -files/ethertypes:
+  Remove old versions, fixes bugs 419811 and 419813.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> scapy-2.2.0-r1.ebuild:
   x86 stable wrt bug #400427
