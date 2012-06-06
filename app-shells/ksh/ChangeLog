@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.59 2012/06/06 05:53:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.60 2012/06/06 19:18:49 maekke Exp $
+
+  06 Jun 2012; Markus Meier <maekke@gentoo.org> ksh-93.20120229.ebuild:
+  arm stable, bug #418633
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> ksh-93.20120229.ebuild:
   marked x86 per bug 418633
