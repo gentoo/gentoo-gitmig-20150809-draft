@@ -1,19 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.12_pre2.ebuild,v 1.5 2012/05/05 07:00:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13.ebuild,v 1.1 2012/06/06 19:33:31 axs Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit nsplugins eutils flag-o-matic java-pkg-opt-2
 
 DESCRIPTION="VRML97 and X3D compliant browser, library, and web-browser plugin"
-SRC_URI="mirror://sourceforge/freewrl/${P}.tar.bz2"
 HOMEPAGE="http://freewrl.sourceforge.net/"
+SRC_URI="mirror://sourceforge/freewrl/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="curl debug expat +glew java libeai motif +nsplugin osc +sox static-libs"
+IUSE="curl debug +glew java libeai motif +nsplugin osc +sox static-libs"
 
 COMMONDEPEND="x11-libs/libXau
 	x11-libs/libXdmcp
@@ -30,13 +30,12 @@ COMMONDEPEND="x11-libs/libXau
 	>=media-libs/freetype-2
 	media-libs/fontconfig
 	curl? ( net-misc/curl )
-	expat? ( dev-libs/expat )
 	osc? ( media-libs/liblo )
 	dev-lang/spidermonkey"
 DEPEND="${COMMONDEPEND}
 	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.4 )
-	nsplugin? ( =net-misc/npapi-sdk-0.27 )"
+	nsplugin? ( net-misc/npapi-sdk )"
 RDEPEND="${COMMONDEPEND}
 	media-fonts/dejavu
 	|| ( media-gfx/imagemagick
@@ -47,32 +46,32 @@ RDEPEND="${COMMONDEPEND}
 
 src_configure() {
 	local myconf="--enable-fontconfig
+		--without-expat
 		--with-x
 		--with-imageconvert=/usr/bin/convert
 		--with-unzip=/usr/bin/unzip"
 	if use motif; then
-		myconf="${myconf} --with-target=motif --with-statusbar=standard"
+		myconf+=" --with-target=motif --with-statusbar=standard"
 	else
-		myconf="${myconf} --with-target=x11 --with-statusbar=hud"
+		myconf+=" --with-target=x11 --with-statusbar=hud"
 	fi
 	if use nsplugin; then
-		myconf="${myconf} --with-plugindir=/usr/$(get_libdir)/${PLUGINS_DIR}"
-		# override auto-detection for npapi headers, can be removed for next upstream release
-		myconf="${myconf} --disable-mozilla-plugin --disable-xulrunner-plugin --disable-seamonkey-plugin --disable-firefox-plugin"
-		MOZILLA_PLUGIN_CFLAGS="$(pkg-config --cflags npapi-sdk)"
-		MOZILLA_PLUGIN_LIBS="$(pkg-config --libs npapi-sdk)"
-		export MOZILLA_PLUGIN_CFLAGS
-		export MOZILLA_PLUGIN_LIBS
+		myconf+=" --with-plugindir=/usr/$(get_libdir)/${PLUGINS_DIR}"
+		myconf+=" --disable-mozilla-plugin --disable-xulrunner-plugin"
 	fi
 	if use sox; then
-		myconf="${myconf} --with-soundconv=/usr/bin/sox"
+		myconf+=" --with-soundconv=/usr/bin/sox"
 	fi
 	# disable the checks for other js libs, in case they are installed
 	if has_version ">=dev-lang/spidermonkey-1.8.5" ; then
 		# spidermonkey-1.8.5 provides a .pc to pkg-config, it should be findable via mozjs185
-		myconf="${myconf} --disable-mozilla-js --disable-xulrunner-js --disable-firefox-js --disable-seamonkey-js --disable-firefox2-js"
+		for x in mozilla-js xulrunner-js firefox-js firefox2-js seamonkey-js; do
+			myconf+=" --disable-${x}"
+		done
 	else
-		myconf="${myconf} --disable-mozjs185 --disable-mozilla-js --disable-xulrunner-js --disable-firefox-js --disable-seamonkey-js"
+		for x in mozjs185 mozilla-js xulrunner-js firefox-js seamonkey-js; do
+			myconf+=" --disable-${x}"
+		done
 		# spidermonkey pre-1.8.5 has no pkg-config, so override ./configure
 		JAVASCRIPT_ENGINE_CFLAGS="-I/usr/include/js -DXP_UNIX"
 		if has_version ">=dev-lang/spidermonkey-1.8" ; then
@@ -82,14 +81,11 @@ src_configure() {
 			JAVASCRIPT_ENGINE_LIBS="-ljs"
 		fi
 		if has_version dev-lang/spidermonkey[threadsafe] ; then
-			JAVASCRIPT_ENGINE_CFLAGS="${JAVASCRIPT_ENGINE_CFLAGS} -DJS_THREADSAFE $(pkg-config --cflags nspr)"
+			JAVASCRIPT_ENGINE_CFLAGS+=" -DJS_THREADSAFE $(pkg-config --cflags nspr)"
 			JAVASCRIPT_ENGINE_LIBS="$(pkg-config --libs nspr) ${JAVASCRIPT_ENGINE_LIBS}"
 		fi
 		export JAVASCRIPT_ENGINE_CFLAGS
 		export JAVASCRIPT_ENGINE_LIBS
-	fi
-	if ! use expat; then
-		myconf="${myconf} --without-expat"
 	fi
 	econf	${myconf} \
 		$(use_enable curl libcurl) \
@@ -104,7 +100,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	if use java; then
 		insinto /usr/share/${PN}/lib
