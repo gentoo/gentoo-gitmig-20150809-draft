@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/milksets
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/milksets/ChangeLog,v 1.1 2012/06/06 22:37:42 bicatali Exp $
+
+*milksets-0.1.3 (06 Jun 2012)
+
+  06 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> +milksets-0.1.3.ebuild,
+  +metadata.xml:
+  Initial import
+
