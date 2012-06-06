@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20070912.ebuild,v 1.12 2011/04/30 17:53:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20070912.ebuild,v 1.13 2012/06/06 03:32:37 zmedico Exp $
 
-inherit toolchain-funcs eutils
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Library that converts FORTRAN to C source."
 HOMEPAGE="ftp://ftp.netlib.org/f2c/index.html"
