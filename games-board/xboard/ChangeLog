@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.48 2012/06/05 09:05:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.49 2012/06/06 17:42:07 mr_bones_ Exp $
+
+  06 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> xboard-4.6.2.ebuild:
+  more default-font love (bug #419751)
 
   05 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xboard-4.6.2.ebuild:
   Marked ~amd64, wrt to bug #384521

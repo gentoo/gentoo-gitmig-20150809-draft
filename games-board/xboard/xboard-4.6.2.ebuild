@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.6.2.ebuild,v 1.2 2012/06/05 09:05:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.6.2.ebuild,v 1.3 2012/06/06 17:42:07 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -22,7 +22,9 @@ RDEPEND="Xaw3d? ( x11-libs/libXaw3d )
 	x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXmu
-	default-font? ( media-fonts/font-adobe-100dpi )"
+	default-font? (
+		media-fonts/font-adobe-100dpi[nls]
+		media-fonts/font-misc-misc[nls] )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
