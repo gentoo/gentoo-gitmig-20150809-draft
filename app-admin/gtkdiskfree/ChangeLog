@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.36 2012/06/01 15:05:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.37 2012/06/06 08:03:41 jdhore Exp $
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> gtkdiskfree-2.0.1.ebuild:
+  marked x86 per bug 418491
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gtkdiskfree-2.0.1.ebuild:
   Stable for amd64, wrt bug #418491
