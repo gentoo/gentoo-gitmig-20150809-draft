@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.3 2012/06/05 19:20:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.4 2012/06/06 08:36:43 mr_bones_ Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ RDEPEND="
 		speex? ( media-libs/speex )
 		vorbis? ( media-libs/libogg media-libs/libvorbis )
 	)"
-# server target needs libsdl and some 
+# server target needs libsdl and some
 # other headers for build-time
 # added them for dedicated useflag
 DEPEND="${RDEPEND}
