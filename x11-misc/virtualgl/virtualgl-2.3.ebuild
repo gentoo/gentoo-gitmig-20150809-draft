@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.ebuild,v 1.1 2012/04/21 13:14:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.ebuild,v 1.2 2012/06/06 11:54:11 pacho Exp $
 
 EAPI="4"
 
@@ -113,9 +113,5 @@ src_install() {
 	newconfd "${FILESDIR}/vgl.confd" vgl
 
 	# Rename glxinfo to vglxinfo to avoid conflict with x11-apps/mesa-progs
-	mv "${ED}"/usr/bin/{,v}glxinfo || die
-}
-
-pkg_postinst() {
-	ewarn "You might need to adjust /etc/conf.d/vgl for your setup!"
+	mv "${D}"/usr/bin/{,v}glxinfo || die
 }
