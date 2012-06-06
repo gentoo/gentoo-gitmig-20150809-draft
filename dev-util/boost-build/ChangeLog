@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.88 2012/06/06 20:28:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.89 2012/06/06 20:31:24 jer Exp $
+
+  06 Jun 2012; Jeroen Roovers <jer@gentoo.org> boost-build-1.37.0.ebuild,
+  boost-build-1.39.0.ebuild:
+  Drop HPPA keywording for more ancient versions.
 
   06 Jun 2012; Jeroen Roovers <jer@gentoo.org> boost-build-1.34.1.ebuild,
   boost-build-1.35.0-r1.ebuild, boost-build-1.35.0-r2.ebuild:
