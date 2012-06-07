@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4-r2.ebuild,v 1.2 2012/02/27 19:05:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4-r2.ebuild,v 1.3 2012/06/07 21:44:28 ranger Exp $
 
 EAPI=4
 inherit toolchain-funcs eutils
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/bmf/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 DEPEND="mysql? ( virtual/mysql )
 	berkdb? ( >=sys-libs/db-3.2.9 )"
