@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-AMF/Data-AMF-0.90.0.ebuild,v 1.2 2011/09/03 21:04:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-AMF/Data-AMF-0.90.0.ebuild,v 1.3 2012/06/07 14:45:01 tove Exp $
 
 EAPI=4
 
@@ -21,5 +21,11 @@ RDEPEND="dev-perl/DateTime
 
 DEPEND="${RDEPEND}
 	test? ( dev-perl/yaml )"
+
+src_prepare() {
+	sed -i '/^inc\/YAML.pm/d' MANIFEST || die
+	rm inc/YAML.pm || die
+	perl-module_src_prepare
+}
 
 SRC_TEST="do"
