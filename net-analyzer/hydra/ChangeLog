@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.68 2012/05/29 19:28:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.69 2012/06/07 21:54:53 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> hydra-7.2.ebuild:
+  Marking hydra-7.2 ppc for bug 418173
 
 *hydra-7.3 (29 May 2012)
 
