@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/libbulletml-0.0.6.ebuild,v 1.9 2011/05/18 16:08:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/libbulletml-0.0.6.ebuild,v 1.10 2012/06/07 17:29:16 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="A Library of Bullet Markup Language"
-HOMEPAGE="http://user.ecc.u-tokyo.ac.jp/~s31552/wp/libbulletml/index_en.html"
-SRC_URI="http://user.ecc.u-tokyo.ac.jp/~s31552/wp/libbulletml/${P}.tar.bz2"
+HOMEPAGE="http://shinh.skr.jp/libbulletml/index_en.html"
+SRC_URI="http://shinh.skr.jp/libbulletml/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -25,20 +25,20 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die "emake failed"
+	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die
 }
 
 src_install() {
-	dolib.a libbulletml.a || die "dolib.a failed"
+	dolib.a libbulletml.a || die
 
 	insinto /usr/include/bulletml
-	doins *.h || die "doins .h failed"
+	doins *.h || die
 
 	insinto /usr/include/bulletml/tinyxml
-	doins tinyxml/tinyxml.h || die "doins tinyxml.h failed"
+	doins tinyxml/tinyxml.h || die
 
 	insinto /usr/include/bulletml/ygg
-	doins ygg/ygg.h || die "doins ygg.h failed"
+	doins ygg/ygg.h || die
 
 	dodoc ../README*
 }
