@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r3.ebuild,v 1.1 2012/06/05 02:03:46 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r4.ebuild,v 1.1 2012/06/07 00:27:55 ryao Exp $
 
 EAPI=4
 
@@ -74,17 +74,14 @@ src_prepare() {
 	sed -e "/^llc_props =/s/os.path.join(llvm_tools_dir, 'llc')/'llc'/" \
 		-i tools/clang/test/lit.cfg  || die "test path sed failed"
 
-	# Automatically select active system GCC's libraries, bugs #406163, #417913, #418141
-	epatch "${FILESDIR}"/${P}-gentoo-runtime-gcc-detection-v2.patch
+	# Automatically select active system GCC's libraries, bugs #406163 and #417913
+	epatch "${FILESDIR}"/${P}-gentoo-runtime-gcc-detection-v3.patch
 
 	# Fix search paths on FreeBSD, bug #409269
 	epatch "${FILESDIR}"/${P}-gentoo-freebsd-fix-lib-path.patch
 
 	# Fix regression caused by removal of USE=system-cxx-headers, bug #417541
-	epatch "${FILESDIR}"/${P}-gentoo-freebsd-fix-cxx-paths.patch
-
-	# Fix regression that prevents Clang from building itself on Linux, bug #417537
-	epatch "${FILESDIR}"/${P}-gentoo-linux-fix-cxx-include.patch
+	epatch "${FILESDIR}"/${P}-gentoo-freebsd-fix-cxx-paths-v2.patch
 
 	# Increase recursion limit, bug #417545, upstream r155737
 	epatch "${FILESDIR}"/${P}-increase-parser-recursion-limit.patch
