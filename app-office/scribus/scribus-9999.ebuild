@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.1 2012/02/13 09:25:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.2 2012/06/07 18:01:49 jlec Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/boost"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.4.0_rc5-docs.patch
+	"${FILESDIR}"/${PN}-1.5.0-docs.patch
 	)
 
 pkg_setup() {
