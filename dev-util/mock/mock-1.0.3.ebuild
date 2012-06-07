@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/mock-1.0.3.ebuild,v 1.2 2011/11/02 22:44:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/mock-1.0.3.ebuild,v 1.3 2012/06/07 21:35:09 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="create chroots and build packages in them for Fedora and RedHat"
 HOMEPAGE="http://fedoraproject.org/wiki/Projects/Mock"
