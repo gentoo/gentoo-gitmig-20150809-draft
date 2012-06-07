@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/tkcvs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/ChangeLog,v 1.9 2012/03/01 12:30:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/ChangeLog,v 1.10 2012/06/07 22:15:13 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> tkcvs-8.2.2.ebuild,
+  tkcvs-8.2.3.ebuild:
+  inherit multilib for get_libdir
 
   01 Mar 2012; Justin Lecher <jlec@gentoo.org> -tkcvs-8.0.4.ebuild:
   Dropped old

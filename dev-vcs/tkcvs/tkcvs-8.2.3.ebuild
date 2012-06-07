@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/tkcvs-8.2.3.ebuild,v 1.2 2012/02/05 18:32:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/tkcvs-8.2.3.ebuild,v 1.3 2012/06/07 22:15:13 zmedico Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Tcl/Tk-based graphical interface to CVS with Subversion support"
 HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html"
