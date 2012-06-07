@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.32 2012/05/18 11:11:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.33 2012/06/07 10:03:34 blueness Exp $
+
+*vidalia-0.2.19 (07 Jun 2012)
+
+  07 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +vidalia-0.2.19.ebuild:
+  Version bump stable 0.2.x branch
 
 *vidalia-0.2.18 (18 May 2012)
 
