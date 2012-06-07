@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.7.0.ebuild,v 1.7 2007/04/20 06:13:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.7.0.ebuild,v 1.8 2012/06/07 20:39:34 zmedico Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="high-level widget set for Tcl/Tk completely written in Tcl"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcl-sql
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.6 2010/12/15 20:06:31 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.7 2012/06/07 20:41:43 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> tcl-sql-20000114-r2.ebuild:
+  inherit multilib for get_libdir
 
 *tcl-sql-20000114-r2 (15 Dec 2010)
 

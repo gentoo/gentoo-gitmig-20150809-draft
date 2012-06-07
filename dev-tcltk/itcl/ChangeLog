@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itcl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.54 2011/06/04 18:56:46 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.55 2012/06/07 20:40:52 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> itcl-3.3.1_pre20090417-r1.ebuild:
+  inherit multilib for get_libdir
 
   04 Jun 2011; Raúl Porcel <armin76@gentoo.org> itcl-3.4_beta1.ebuild:
   alpha/ia64/sparc stable wrt #363991

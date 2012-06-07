@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkcon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/ChangeLog,v 1.4 2010/07/19 17:34:20 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/ChangeLog,v 1.5 2012/06/07 20:45:32 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> tkcon-2.5.ebuild:
+  inherit multilib for get_libdir
 
   19 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Removing myself as maintainer

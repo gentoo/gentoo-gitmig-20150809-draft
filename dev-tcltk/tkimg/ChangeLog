@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.47 2012/03/18 17:43:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.48 2012/06/07 20:46:44 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> tkimg-1.4-r4.ebuild,
+  tkimg-1.4-r5.ebuild:
+  inherit multilib for get_libdir
 
   18 Mar 2012; Justin Lecher <jlec@gentoo.org> -tkimg-1.4-r3.ebuild:
   Cleaned old

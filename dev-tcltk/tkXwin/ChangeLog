@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkXwin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.25 2011/11/28 11:44:44 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.26 2012/06/07 20:43:26 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> tkXwin-1.0-r1.ebuild,
+  tkXwin-1.0-r2.ebuild:
+  inherit multilib for get_libdir
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tkXwin-1.0-r2.ebuild:
   x86 stable wrt bug #391489

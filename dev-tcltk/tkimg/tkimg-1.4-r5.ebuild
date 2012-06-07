@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r5.ebuild,v 1.2 2012/03/18 15:34:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r5.ebuild,v 1.3 2012/06/07 20:46:43 zmedico Exp $
 
 EAPI=3
 
 VIRTUALX_USE=test
 
-inherit eutils prefix virtualx
+inherit eutils multilib prefix virtualx
 
 MYP="${PN}${PV}"
 

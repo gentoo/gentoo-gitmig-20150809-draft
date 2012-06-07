@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/bwidget
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.16 2009/09/06 08:31:02 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.17 2012/06/07 20:39:34 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> bwidget-1.7.0.ebuild,
+  bwidget-1.8.0.ebuild:
+  inherit multilib for get_libdir
 
   06 Sep 2009; Markus Meier <maekke@gentoo.org> bwidget-1.8.0.ebuild:
   amd64 stable, bug #280484

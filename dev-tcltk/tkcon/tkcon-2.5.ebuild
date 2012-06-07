@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/tkcon-2.5.ebuild,v 1.1 2009/08/01 12:52:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/tkcon-2.5.ebuild,v 1.2 2012/06/07 20:45:32 zmedico Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Tk GUI console"
 HOMEPAGE="http://tkcon.sourceforge.net/"
