@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/kdesvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/ChangeLog,v 1.21 2012/04/19 05:53:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/ChangeLog,v 1.22 2012/06/07 22:11:40 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> kdesvn-1.5.5-r1.ebuild:
+  inherit flag-o-matic for append-cppflags
 
   19 Apr 2012; Johannes Huber <johu@gentoo.org> -kdesvn-1.5.5.ebuild:
   Remove old.

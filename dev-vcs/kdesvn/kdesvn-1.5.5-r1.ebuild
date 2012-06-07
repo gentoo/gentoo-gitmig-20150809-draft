@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.5.5-r1.ebuild,v 1.3 2012/04/19 04:09:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.5.5-r1.ebuild,v 1.4 2012/06/07 22:11:40 zmedico Exp $
 
 EAPI="3"
 
 KDE_LINGUAS="de es fr ja lt pt_BR ro"
-inherit kde4-base
+inherit flag-o-matic kde4-base
 
 DESCRIPTION="KDESvn is a frontend to the subversion vcs."
 HOMEPAGE="http://kdesvn.alwins-world.de/"
