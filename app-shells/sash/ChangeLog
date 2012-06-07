@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.45 2012/06/05 20:51:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.46 2012/06/07 21:28:46 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> sash-3.7-r3.ebuild:
+  Marking sash-3.7-r3 ppc for bug 418451
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> sash-3.7-r3.ebuild:
   Marking sash-3.7-r3 ppc64 for bug 418451
