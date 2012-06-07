@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/clozurecl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.7 2012/03/31 10:17:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.8 2012/06/07 17:31:52 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> clozurecl-1.7.ebuild,
+  clozurecl-1.8.ebuild:
+  inherit multilib for get_libdir
 
 *clozurecl-1.8 (31 Mar 2012)
 
