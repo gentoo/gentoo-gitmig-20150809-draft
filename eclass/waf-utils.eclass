@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.10 2012/05/10 03:58:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.11 2012/06/07 05:02:33 vapier Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -15,7 +15,7 @@
 # waf-based packages much easier.
 # Its main features are support of common portage default settings.
 
-inherit base eutils multilib toolchain-funcs
+inherit base eutils multilib toolchain-funcs multiprocessing
 
 case ${EAPI:-0} in
 	4|3) EXPORT_FUNCTIONS src_configure src_compile src_install ;;
