@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.112 2012/05/31 11:15:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.113 2012/06/07 15:22:49 scarabeus Exp $
+
+*weechat-0.3.8 (07 Jun 2012)
+
+  07 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +weechat-0.3.8.ebuild:
+  Version bump to 0.3.8. Wrt bug#420119.
 
   31 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> weechat-9999.ebuild:
   Do not use ruby-ng eclass as the optional work is completely fucked.
