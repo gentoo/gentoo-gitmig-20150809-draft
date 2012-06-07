@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/hop-2.0.1.ebuild,v 1.1 2010/04/09 00:39:57 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/hop-2.0.1.ebuild,v 1.2 2012/06/07 20:34:19 zmedico Exp $
 
 EAPI="2"
 
-inherit multilib eutils
+inherit eutils multilib user
 
 DESCRIPTION="Hop is a higher-order language for programming interactive web applications"
 HOMEPAGE="http://hop.inria.fr/"
