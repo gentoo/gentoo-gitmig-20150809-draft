@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/thor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.14 2012/05/01 18:24:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.15 2012/06/07 21:57:39 flameeyes Exp $
+
+*thor-0.15.2 (07 Jun 2012)
+
+  07 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +thor-0.15.2.ebuild:
+  Version bump; new dependency, fixed tests.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> thor-0.14.6.ebuild:
   Drop ia64/sparc keywords
