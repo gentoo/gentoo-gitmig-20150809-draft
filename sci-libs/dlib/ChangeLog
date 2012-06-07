@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/dlib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dlib/ChangeLog,v 1.1 2012/06/07 19:55:23 bicatali Exp $
+
+*dlib-17.46 (07 Jun 2012)
+
+  07 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> +dlib-17.46.ebuild,
+  +metadata.xml:
+  Initial import
+
