@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/zipper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.16 2010/02/10 21:45:26 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.17 2012/06/07 23:25:35 voyageur Exp $
+
+*zipper-1.4 (07 Jun 2012)
+
+  07 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> +zipper-1.4.ebuild:
+  Version bump, now adopted by GAP project. Update homepage and source
 
   10 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org> -zipper-1.2.ebuild:
   Drop old version
