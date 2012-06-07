@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libshout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.34 2012/06/06 18:55:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.35 2012/06/07 22:21:11 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> libshout-2.3.0.ebuild:
+  Marking libshout-2.3.0 ppc for bug 419097
 
   06 Jun 2012; Markus Meier <maekke@gentoo.org> libshout-2.3.0.ebuild:
   arm stable, bug #419097
