@@ -1,7 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/files/iodined.init,v 1.1 2009/09/26 19:24:35 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/files/iodined.init,v 1.2 2012/06/07 19:53:54 floppym Exp $
+
+PID_FILE="/var/run/iodined.pid"
 
 depend() {
 	need net
@@ -49,12 +51,12 @@ start() {
 		eerror "Please set a domain (IODINED_DOMAIN) in /etc/conf.d/iodined!"
 		return 1
 	fi
-	start-stop-daemon --start --exec /usr/bin/iodined -- $ARGS
+	start-stop-daemon --start --exec /usr/bin/iodined --pidfile $PID_FILE -- -F $PID_FILE $ARGS
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping iodined"
-	start-stop-daemon --stop --exec /usr/bin/iodined
+	start-stop-daemon --stop --exec /usr/bin/iodined --pidfile $PID_FILE
 	eend $?
 }
