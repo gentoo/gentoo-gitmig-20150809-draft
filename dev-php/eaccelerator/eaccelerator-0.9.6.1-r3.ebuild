@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.6.1-r3.ebuild,v 1.4 2012/04/13 18:59:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.6.1-r3.ebuild,v 1.5 2012/06/07 20:27:42 zmedico Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ PHP_EXT_ZENDEXT="no"
 
 [[ -z "${EACCELERATOR_CACHEDIR}" ]] && EACCELERATOR_CACHEDIR="/var/cache/eaccelerator-php5/"
 
-inherit php-ext-source-r2 eutils depend.apache
+inherit php-ext-source-r2 eutils depend.apache user
 
 KEYWORDS="~amd64 ~x86"
 

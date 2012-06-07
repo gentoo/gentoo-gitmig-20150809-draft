@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/eaccelerator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.26 2012/04/13 18:59:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.27 2012/06/07 20:27:42 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> eaccelerator-0.9.6.1-r1.ebuild,
+  eaccelerator-0.9.6.1-r3.ebuild, eaccelerator-0.9.6.1-r4.ebuild,
+  eaccelerator-0.9.6.1-r5.ebuild:
+  inherit user for enewgroup and enewuser
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> eaccelerator-0.9.6.1-r1.ebuild,
   eaccelerator-0.9.6.1-r3.ebuild, eaccelerator-0.9.6.1-r4.ebuild,
