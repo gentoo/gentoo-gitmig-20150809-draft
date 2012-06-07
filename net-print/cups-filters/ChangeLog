@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.5 2012/06/02 19:47:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.6 2012/06/07 21:37:12 dilfridge Exp $
+
+*cups-filters-9999 (07 Jun 2012)
+
+  07 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-filters-9999.ebuild, +files/cups-filters-9999-beta.patch,
+  +files/cups-filters-9999-lib.patch, +files/cups-filters-9999-warnings.patch:
+  Started with live ebuild, does not link yet
 
 *cups-filters-1.0.18 (02 Jun 2012)
 
