@@ -2,7 +2,7 @@
 
 source tests-common.sh
 
-inherit eutils
+inherit multiprocessing
 
 test-makeopts_jobs() {
 	local exp=$1; shift
