@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/scala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/ChangeLog,v 1.14 2012/06/03 19:31:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/ChangeLog,v 1.15 2012/06/07 15:40:41 jlec Exp $
+
+  07 Jun 2012; Justin Lecher <jlec@gentoo.org> -scala-3.3.18-r1.ebuild,
+  metadata.xml:
+  Drop old
 
   03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> scala-3.3.18-r2.ebuild:
   Stable for amd64, wrt bug #418413
