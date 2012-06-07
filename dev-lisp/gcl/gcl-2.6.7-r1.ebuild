@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r1.ebuild,v 1.7 2008/09/03 21:42:59 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r1.ebuild,v 1.8 2012/06/07 18:59:25 zmedico Exp $
 
-inherit elisp-common flag-o-matic autotools
+inherit elisp-common eutils flag-o-matic autotools
 
 DESCRIPTION="GNU Common Lisp"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"

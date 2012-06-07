@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.57 2012/04/24 10:00:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.58 2012/06/07 18:59:25 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> gcl-2.6.7-r1.ebuild,
+  gcl-2.6.7-r2.ebuild, gcl-2.6.7-r3.ebuild, gcl-2.6.7.ebuild,
+  gcl-2.6.8_pre20090419.ebuild, gcl-2.6.8_pre20111221.ebuild:
+  inherit eutils for epatch
 
   24 Apr 2012; Michał Górny <mgorny@gentoo.org> gcl-2.6.7-r2.ebuild,
   gcl-2.6.7-r3.ebuild:

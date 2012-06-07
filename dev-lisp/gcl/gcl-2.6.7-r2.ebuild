@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.10 2012/04/24 10:00:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r2.ebuild,v 1.11 2012/06/07 18:59:25 zmedico Exp $
 
-inherit elisp-common flag-o-matic
+inherit elisp-common eutils flag-o-matic
 
 DEB_PV=32
 

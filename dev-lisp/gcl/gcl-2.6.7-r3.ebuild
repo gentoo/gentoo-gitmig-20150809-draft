@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r3.ebuild,v 1.5 2012/04/24 10:00:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.7-r3.ebuild,v 1.6 2012/06/07 18:59:25 zmedico Exp $
 
 #removing flag-o-matic results in make install failing due to a segfault
-inherit elisp-common flag-o-matic
+inherit elisp-common eutils flag-o-matic
 
 DEB_PV=34
 

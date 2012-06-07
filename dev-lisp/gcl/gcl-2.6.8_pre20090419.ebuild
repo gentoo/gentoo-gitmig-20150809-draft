@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.8_pre20090419.ebuild,v 1.2 2009/07/21 16:30:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.8_pre20090419.ebuild,v 1.3 2012/06/07 18:59:25 zmedico Exp $
 
 EAPI=1
 
 #removing flag-o-matic results in make install failing due to a segfault
-inherit elisp-common flag-o-matic
+inherit elisp-common eutils flag-o-matic
 
 DESCRIPTION="GNU Common Lisp"
 HOMEPAGE="http://www.gnu.org/software/gcl/gcl.html"
