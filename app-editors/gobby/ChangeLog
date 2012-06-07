@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.48 2012/06/03 19:29:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.49 2012/06/07 21:01:08 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> gobby-0.4.13.ebuild:
+  Marking gobby-0.4.13 ppc for bug 418563
 
   03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gobby-0.4.13.ebuild:
   Stable for amd64, wrt bug #418563
