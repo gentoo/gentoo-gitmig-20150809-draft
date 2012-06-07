@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.5.ebuild,v 1.2 2011/08/05 11:55:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/terminal-0.9.8.ebuild,v 1.1 2012/06/07 23:17:04 voyageur Exp $
 
-EAPI=2
+EAPI=4
 
 inherit gnustep-2
 
@@ -19,9 +19,3 @@ IUSE=""
 
 RDEPEND="!x11-terms/terminal" #376257
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.9.5_pre20060324-size_t.patch
-	# Correct link command for --as-needed
-	sed -i -e "s/Terminal_LDFLAGS/ADDITIONAL_TOOL_LIBS/" GNUmakefile || die "sed failed"
-}
