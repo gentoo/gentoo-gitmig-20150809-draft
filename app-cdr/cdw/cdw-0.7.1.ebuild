@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.7.1.ebuild,v 1.3 2012/06/03 23:17:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.7.1.ebuild,v 1.4 2012/06/07 21:50:59 ranger Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/cdw/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/cdrtools
