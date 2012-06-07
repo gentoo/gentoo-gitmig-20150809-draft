@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/childlabor
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.1 2012/06/07 19:43:53 flameeyes Exp $
+
+*childlabor-0.0.3 (07 Jun 2012)
+
+  07 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +childlabor-0.0.3.ebuild,
+  +metadata.xml:
+  Initial import of childlabor (new dependency of thor0.
+
