@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.226 2012/05/24 11:38:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.227 2012/06/07 22:34:35 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> kstars-4.7.4.ebuild,
+  kstars-4.8.3.ebuild:
+  inherit flag-o-matic for append-flags
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kstars-4.8.1.ebuild:
   Remove KDE SC 4.8.1
