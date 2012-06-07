@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.295 2012/06/06 17:17:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.296 2012/06/07 15:36:49 pesa Exp $
+
+  07 Jun 2012; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Specify SLOT in blocker atoms, to avoid blocking Qt5 packages.
 
   06 Jun 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
   Reuse eautoreconf, deprecate autotools-utils_autoreconf.
