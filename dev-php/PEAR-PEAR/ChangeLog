@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.153 2012/02/10 13:37:31 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.154 2012/06/07 20:24:48 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> PEAR-PEAR-1.9.3.ebuild,
+  PEAR-PEAR-1.9.4.ebuild:
+  inherit eutils for epatch
 
   10 Feb 2012; Ole Markus With <olemarkus@gentoo.org> PEAR-PEAR-1.9.3.ebuild,
   PEAR-PEAR-1.9.4.ebuild:

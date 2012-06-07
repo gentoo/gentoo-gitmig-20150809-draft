@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.4.ebuild,v 1.3 2012/02/10 13:37:31 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.4.ebuild,v 1.4 2012/06/07 20:24:48 zmedico Exp $
 
 EAPI="4"
 
-inherit depend.php
+inherit depend.php eutils
 
 PEAR="${PV}"
 
