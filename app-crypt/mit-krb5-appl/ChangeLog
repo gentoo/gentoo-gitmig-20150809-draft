@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5-appl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.31 2012/05/23 13:05:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.32 2012/06/07 21:20:16 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> mit-krb5-appl-1.0.3.ebuild:
+  Marking mit-krb5-appl-1.0.3 ppc for bug 413593
 
   23 May 2012; Brent Baude <ranger@gentoo.org> mit-krb5-appl-1.0.3.ebuild:
   Marking mit-krb5-appl-1.0.3 ppc64 for bug 413593
