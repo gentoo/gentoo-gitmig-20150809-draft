@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.9 2010/01/05 23:43:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.10 2012/06/07 21:47:16 zmedico Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Stanford GraphBase"
 HOMEPAGE="ftp://labrea.stanford.edu/pub/sgb/"
