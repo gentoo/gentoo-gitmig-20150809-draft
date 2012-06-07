@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.162 2012/06/05 21:33:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.163 2012/06/07 22:12:09 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> numpy-1.6.1-r1.ebuild:
+  Marking numpy-1.6.1-r1 ppc for bug 418419
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> numpy-1.6.1-r1.ebuild:
   Marking numpy-1.6.1-r1 ppc64 for bug 418419
