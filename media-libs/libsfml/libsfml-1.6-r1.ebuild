@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-1.6-r1.ebuild,v 1.4 2011/09/14 09:14:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-1.6-r1.ebuild,v 1.5 2012/06/07 20:18:23 radhermit Exp $
 
 EAPI=4
 
@@ -35,6 +35,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-destdir.patch \
 		"${FILESDIR}"/${P}-deps-and-flags.patch \
 		"${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-gcc47.patch \
 		"${FILESDIR}"/${P}-libpng15.patch
 }
 

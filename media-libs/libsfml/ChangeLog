@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsfml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/ChangeLog,v 1.7 2011/09/14 09:14:02 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/ChangeLog,v 1.8 2012/06/07 20:18:23 radhermit Exp $
+
+  07 Jun 2012; Tim Harder <radhermit@gentoo.org> libsfml-1.6-r1.ebuild,
+  +files/libsfml-1.6-gcc47.patch:
+  Fix build with gcc-4.7 (bug #420017 by Sergey Zubkov).
 
   14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> libsfml-1.6-r1.ebuild,
   +files/libsfml-1.6-libpng15.patch:
