@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.7.ebuild,v 1.1 2012/06/06 18:22:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.7.ebuild,v 1.2 2012/06/07 13:51:31 idl0r Exp $
 
 EAPI="3"
 
@@ -20,7 +20,8 @@ SLOT="1"
 #
 # We need both, apache and perl but either apache without threads or perl with
 # ithreads, bug 373943
-DEPEND=">=dev-perl/Apache-Test-1.360
+DEPEND="<www-servers/apache-2.4
+	>=dev-perl/Apache-Test-1.360
 	>=virtual/perl-CGI-3.08
 	dev-lang/perl
 	www-servers/apache
