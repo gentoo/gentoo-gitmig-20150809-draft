@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/trove
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.15 2012/06/06 08:54:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.16 2012/06/07 21:25:57 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> trove-3.0.2.ebuild:
+  Marking trove-3.0.2 ppc for bug 418729
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> trove-3.0.2.ebuild:
   marked x86 per bug 418729
