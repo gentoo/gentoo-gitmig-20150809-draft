@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0.ebuild,v 1.3 2012/04/09 12:15:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/pantomime-1.2.0.ebuild,v 1.4 2012/06/07 18:43:54 xmw Exp $
 
 EAPI=4
 inherit eutils gnustep-2
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.collaboration-world.com/pantomime/"
 SRC_URI="http://download.gna.org/gnustep-nonfsf/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1 Elm"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
