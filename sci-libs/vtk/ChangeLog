@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.97 2012/03/20 14:51:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.98 2012/06/07 14:39:26 jlec Exp $
+
+*vtk-5.10.0 (07 Jun 2012)
+
+  07 Jun 2012; Justin Lecher <jlec@gentoo.org> files/vtk-5.8.0-boost.patch,
+  +vtk-5.10.0.ebuild, metadata.xml:
+  Version Bump, #420103; Update boost patch, #412945
 
   20 Mar 2012; Jeroen Roovers <jer@gentoo.org> vtk-5.8.0.ebuild:
   Sort IUSE entries. Remove IUSE=tk duplicate by zvasylvv (bug #408871).
