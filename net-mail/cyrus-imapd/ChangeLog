@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.194 2012/06/02 22:15:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.195 2012/06/07 21:52:55 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> cyrus-imapd-2.4.16.ebuild:
+  Marking cyrus-imapd-2.4.16 ppc for bug 419329
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> cyrus-imapd-2.4.16.ebuild:
   Stable for amd64, wrt bug #419329
