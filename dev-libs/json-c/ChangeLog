@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/json-c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.19 2012/06/06 06:30:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.20 2012/06/07 21:05:44 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> json-c-0.9-r1.ebuild:
+  Marking json-c-0.9-r1 ppc for bug 418745
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> json-c-0.9-r1.ebuild:
   marked x86 per bug 418745
