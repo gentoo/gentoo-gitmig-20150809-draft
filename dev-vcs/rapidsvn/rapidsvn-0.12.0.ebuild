@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.11 2012/06/05 14:19:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.12 2012/06/07 16:27:01 jlec Exp $
 
 EAPI=4
 
@@ -62,7 +62,7 @@ src_configure() {
 				--without-dot )
 	fi
 
-	append-flags $( "${EPREFIX}"/usr/bin/apr-1-config --cppflags )
+	append-cppflags $( "${EPREFIX}"/usr/bin/apr-1-config --cppflags )
 
 	myeconfargs+=(
 		--with-svn-lib="${EPREFIX}"/usr/$(get_libdir)
