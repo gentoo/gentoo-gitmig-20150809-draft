@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.39 2012/05/30 20:04:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.40 2012/06/07 18:48:37 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> neon-0.29.6-r1.ebuild:
+  Marking neon-0.29.6-r1 ppc for bug 417325
 
   30 May 2012; Jeroen Roovers <jer@gentoo.org> neon-0.29.6-r1.ebuild:
   Stable for HPPA (bug #417325).
