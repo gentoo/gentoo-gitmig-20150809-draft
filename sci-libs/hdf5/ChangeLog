@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.87 2012/06/06 22:21:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.88 2012/06/07 10:57:29 xarthisius Exp $
+
+  07 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> hdf5-1.8.9-r1.ebuild:
+  Add explicit rpath for prefix wrt #419677 by William Throwe <wtt6@cornell.edu>
 
   06 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +files/hdf5-1.8.9-static_libgfortran.patch, hdf5-1.8.9-r1.ebuild:

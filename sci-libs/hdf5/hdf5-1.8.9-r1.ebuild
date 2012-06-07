@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.9-r1.ebuild,v 1.2 2012/06/06 22:21:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.9-r1.ebuild,v 1.3 2012/06/07 10:57:29 xarthisius Exp $
 
 EAPI=4
 
-inherit autotools eutils fortran-2 toolchain-funcs
+inherit autotools eutils fortran-2 flag-o-matic toolchain-funcs
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
@@ -65,6 +65,7 @@ src_prepare() {
 	eautoreconf
 	# enable shared libs by default for h5cc config utility
 	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in	|| die
+	use prefix && append-ldflags -Wl,-rpath,"${EPREFIX}"/lib #419677
 }
 
 src_configure() {
