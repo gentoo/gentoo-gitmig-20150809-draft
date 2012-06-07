@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r2.ebuild,v 1.5 2012/05/21 19:05:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r2.ebuild,v 1.6 2012/06/07 23:01:30 voyageur Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-automake-1.11.patch
 	epatch "${FILESDIR}"/${P}-lfs_support.patch
 	eautoreconf
 }
@@ -47,6 +48,8 @@ src_configure() {
 }
 
 src_install() {
+	# Bug 414863
+	dodir /usr/share/doc/${PF}/html
 	emake DESTDIR="${D}" install
 	rm -f "${D}/usr/share/doc/${MY_P}/COPYING"
 }
