@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.82 2012/06/05 15:43:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.83 2012/06/07 11:45:15 scarabeus Exp $
 
 EAPI=4
 
@@ -101,6 +101,7 @@ COMMON_DEPEND="
 	>=app-text/hunspell-1.3.2-r3
 	app-text/mythes
 	>=app-text/libexttextcat-3.2
+	app-text/libmspub
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
