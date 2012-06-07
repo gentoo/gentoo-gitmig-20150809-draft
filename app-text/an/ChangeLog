@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.30 2012/06/05 20:45:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.31 2012/06/07 21:09:26 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> an-0.95.3.2.ebuild:
+  Marking an-0.95.3.2 ppc for bug 418637
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> an-0.95.3.2.ebuild:
   Marking an-0.95.3.2 ppc64 for bug 418637
