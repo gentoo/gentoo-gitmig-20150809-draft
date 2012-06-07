@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.13.ebuild,v 1.10 2011/03/26 19:48:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.13.ebuild,v 1.11 2012/06/07 16:29:50 hasufell Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
 
-inherit eutils toolchain-funcs multilib wxwidgets
+inherit eutils flag-o-matic toolchain-funcs multilib wxwidgets
 
 DESCRIPTION="Port of 7-Zip archiver for Unix"
 HOMEPAGE="http://p7zip.sourceforge.net/"
@@ -25,9 +25,12 @@ S=${WORKDIR}/${PN}_${PV}
 
 pkg_setup() {
 	use wxwidgets && wxwidgets_pkg_setup
+	append-flags -fno-strict-aliasing
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-QA.patch
+
 	if use kde && ! use wxwidgets ; then
 		einfo "USE-flag kde needs wxwidgets flag"
 		einfo "silently enabling wxwidgets flag"

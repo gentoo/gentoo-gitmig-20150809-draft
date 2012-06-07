@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.145 2012/05/30 19:46:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.146 2012/06/07 16:29:50 hasufell Exp $
+
+  07 Jun 2012; Julian Ospald <hasufell@gentoo.org> p7zip-9.13.ebuild,
+  p7zip-9.13-r3.ebuild, +files/p7zip-9.13-QA.patch, -p7zip-9.20.1.ebuild,
+  -p7zip-9.20.1-r1.ebuild, p7zip-9.20.1-r2.ebuild,
+  +files/p7zip-9.20.1-QA.patch:
+  fix QA issues wrt bug #420011 and drop old
 
 *p7zip-9.20.1-r2 (30 May 2012)
 

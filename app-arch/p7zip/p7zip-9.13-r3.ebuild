@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.13-r3.ebuild,v 1.3 2011/03/26 19:48:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.13-r3.ebuild,v 1.4 2012/06/07 16:29:50 hasufell Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -28,6 +28,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-QA.patch
+
 	if ! use pch; then
 		sed "s:PRE_COMPILED_HEADER=StdAfx.h.gch:PRE_COMPILED_HEADER=:g" -i makefile.* || die
 	fi
