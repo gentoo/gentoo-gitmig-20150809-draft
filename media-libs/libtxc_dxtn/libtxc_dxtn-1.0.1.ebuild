@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1.ebuild,v 1.5 2012/06/03 19:19:53 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1.ebuild,v 1.6 2012/06/07 13:07:38 scarabeus Exp $
 
 EAPI=4
 
@@ -14,6 +14,9 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+
+RDEPEND="media-libs/mesa"
+DEPEND="${RDEPEND}"
 
 RESTRICT="bindist"
 
