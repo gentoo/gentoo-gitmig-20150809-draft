@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r1.ebuild,v 1.11 2012/05/04 19:09:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r1.ebuild,v 1.12 2012/06/07 09:21:12 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="debug doc nls remote-access"
 
 COMMON_DEPEND="
-	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-147[extras] )
+	|| ( >=sys-fs/udev-171-r5[gudev,hwdb] <sys-fs/udev-171[extras] )
 	>=dev-libs/glib-2.16.1:2
 	>=sys-apps/dbus-1.4.0
 	>=dev-libs/dbus-glib-0.92

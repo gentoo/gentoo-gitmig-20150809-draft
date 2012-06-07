@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0-r1.ebuild,v 1.5 2012/05/19 12:44:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.97.0-r1.ebuild,v 1.6 2012/06/07 09:21:12 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -17,7 +17,7 @@ IUSE="debug doc crypt +gptfdisk +introspection systemd"
 COMMON_DEPEND=">=dev-libs/glib-2.32
 	>=sys-auth/polkit-0.104-r1
 	>=dev-libs/libatasmart-0.18
-	|| ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] )
+	|| ( >=sys-fs/udev-171-r6[gudev,hwdb] <sys-fs/udev-171[extras] )
 	virtual/acl
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )
 	systemd? ( >=sys-apps/systemd-44 )"

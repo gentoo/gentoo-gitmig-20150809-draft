@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.87 2012/06/02 12:14:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.88 2012/06/07 09:21:12 ssuominen Exp $
+
+  07 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r1.ebuild,
+  udisks-1.0.4-r2.ebuild, udisks-1.97.0-r1.ebuild:
+  Force USE="hwdb" enabled for sys-fs/udev wrt #418013 by "Sebastian"
 
   02 Jun 2012; Anthony G. Basile <blueness@gentoo.org> udisks-1.0.4-r2.ebuild:
   Keyword ~mips
