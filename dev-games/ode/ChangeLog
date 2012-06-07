@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ode
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.58 2010/09/20 03:47:35 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.59 2012/06/07 19:16:45 mr_bones_ Exp $
+
+*ode-0.12 (07 Jun 2012)
+
+  07 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> +ode-0.12.ebuild:
+  version bump
 
   20 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org> ode-0.11.1.ebuild:
   fix build with /bin/sh != bash (bug #335760); add USE=static-libs
