@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-aacenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.28 2012/06/06 19:15:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.29 2012/06/07 22:22:57 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> vo-aacenc-0.1.2.ebuild:
+  Marking vo-aacenc-0.1.2 ppc for bug 419109
 
   06 Jun 2012; Markus Meier <maekke@gentoo.org> vo-aacenc-0.1.2.ebuild:
   arm stable, bug #419109
