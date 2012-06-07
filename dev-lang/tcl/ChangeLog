@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.157 2012/04/26 16:15:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.158 2012/06/07 16:36:40 jlec Exp $
+
+*tcl-8.5.11-r1 (07 Jun 2012)
+
+  07 Jun 2012; Justin Lecher <jlec@gentoo.org> +tcl-8.5.11-r1.ebuild:
+  Drop standard lib locataion from tclConfig.sh, #420129; thanks Ian
+  Stakenvicius for the patch
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> tcl-8.5.11.ebuild:
   keyword ~amd64-fbsd
