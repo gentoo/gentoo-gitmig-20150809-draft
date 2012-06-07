@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luarocks/luarocks-2.0.8.ebuild,v 1.1 2012/03/06 10:28:05 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luarocks/luarocks-2.0.8.ebuild,v 1.2 2012/06/07 19:13:37 zmedico Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A deployment and management system for Lua modules"
 HOMEPAGE="http://www.luarocks.org"
