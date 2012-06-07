@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.4.1.ebuild,v 1.3 2012/01/16 23:58:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.6.0.ebuild,v 1.1 2012/06/07 19:28:44 dilfridge Exp $
 
 EAPI=4
 
@@ -17,7 +17,8 @@ KDE_HANDBOOK="optional"
 
 inherit flag-o-matic kde4-base
 
-MY_P="digikam-${PV/_/-}"
+MY_PV=${PV/_/-}
+MY_P="digikam-${MY_PV}"
 
 DESCRIPTION="Plugins for the KDE Image Plugin Interface"
 HOMEPAGE="http://www.digikam.org/"
@@ -25,9 +26,9 @@ SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mjpeg panorama redeyes scanner vkontakte"
+IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner vkontakte"
 
 DEPEND="
 	$(add_kdebase_dep libkipi)
@@ -37,7 +38,7 @@ DEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/qjson
-	gpssync?	( >=media-libs/libkgeomap-${PV} )
+	gpssync?	( media-libs/libkgeomap )
 	media-libs/libpng
 	media-libs/tiff
 	virtual/jpeg
@@ -46,13 +47,15 @@ DEPEND="
 	ipod?		(
 			  media-libs/libgpod
 			  x11-libs/gtk+:2
+	mediawiki?	( >=media-libs/libmediawiki-2.6.0 )
 			)
-	redeyes?	( >=media-libs/opencv-2.2.0-r10 )
+	panorama?	( dev-libs/boost )
+	redeyes?	( media-libs/opencv )
 	scanner? 	(
 			  $(add_kdebase_dep libksane)
 			  media-gfx/sane-backends
 			)
-	vkontakte?	( >=net-libs/libkvkontakte-${PV} )
+	vkontakte?	( net-libs/libkvkontakte )
 "
 RDEPEND="${DEPEND}
 	cdr? 		( app-cdr/k3b )
@@ -68,9 +71,7 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${MY_P}/extra/${PN}
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.7.0-expoblending.patch"
-	"${FILESDIR}/${PN}-2.0.0-tests.patch"
-	"${FILESDIR}/${PN}-2.2.0-panorama.patch"
+	"${FILESDIR}/${PN}-2.6.0_beta3-options.patch"
 )
 
 src_prepare() {
@@ -104,6 +105,7 @@ src_configure() {
 		$(cmake-utils_use_with ipod Gpod)
 		$(cmake-utils_use_with calendar KdepimLibs)
 		$(cmake-utils_use_with gpssync KGeoMap)
+		$(cmake-utils_use_with mediawiki MEDIAWIKI)
 		$(cmake-utils_use_with redeyes OpenCV)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with crypt QCA2)
