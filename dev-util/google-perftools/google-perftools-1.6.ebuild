@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-1.6.ebuild,v 1.3 2010/10/13 20:14:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-1.6.ebuild,v 1.4 2012/06/07 21:32:04 zmedico Exp $
 
 EAPI=2
 
-inherit toolchain-funcs
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Fast, multi-threaded malloc() and nifty performance analysis tools"
 HOMEPAGE="http://code.google.com/p/google-perftools/"
