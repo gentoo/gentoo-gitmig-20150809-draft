@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.133 2012/05/21 19:51:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.134 2012/06/07 22:42:15 voyageur Exp $
+
+*windowmaker-0.95.3 (07 Jun 2012)
+
+  07 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -windowmaker-0.95.1.ebuild, windowmaker-0.95.2.ebuild,
+  +windowmaker-0.95.3.ebuild:
+  Version bump, bug #417417. Do not enable xrandr by default, as recommended
+  upstream
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   windowmaker-0.95.1.ebuild, windowmaker-0.95.2.ebuild:
