@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r102.ebuild,v 1.8 2011/07/08 11:10:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r102.ebuild,v 1.9 2012/06/07 00:14:47 idl0r Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user multilib
 
 DESCRIPTION="Nagios $PV NRPE - Nagios Remote Plugin Executor"
 HOMEPAGE="http://www.nagios.org/"
@@ -17,6 +17,7 @@ KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="ssl command-args"
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0
 	ssl? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}"
 S="${WORKDIR}/nrpe-${PV}"
 
 pkg_setup() {

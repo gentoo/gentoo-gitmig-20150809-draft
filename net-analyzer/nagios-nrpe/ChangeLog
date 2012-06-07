@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.73 2012/06/07 00:07:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.74 2012/06/07 00:14:47 idl0r Exp $
+
+  07 Jun 2012; Christian Ruppert <idl0r@gentoo.org> metadata.xml,
+  nagios-nrpe-2.12-r102.ebuild, nagios-nrpe-2.12-r103.ebuild:
+  Fix some repoman complains
 
 *nagios-nrpe-2.13 (07 Jun 2012)
 
