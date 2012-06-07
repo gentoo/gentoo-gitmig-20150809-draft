@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.7.ebuild,v 1.2 2012/05/18 23:30:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.7.ebuild,v 1.3 2012/06/07 21:41:19 zmedico Exp $
 
 EAPI=2
-inherit eutils linux-info java-pkg-opt-2
+inherit eutils linux-info multilib user java-pkg-opt-2
 
 MY_P=${PN}-${PV/_/-}
 DESCRIPTION="A transparent low-overhead system-wide profiler"
