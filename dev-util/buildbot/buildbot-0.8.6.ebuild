@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.6.ebuild,v 1.1 2012/03/29 09:29:52 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.6.ebuild,v 1.2 2012/06/07 21:07:27 zmedico Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="trial"
 DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 
-inherit distutils eutils
+inherit distutils eutils user
 
 MY_PV="${PV/_p/p}"
 MY_P="${PN}-${MY_PV}"
