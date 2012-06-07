@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-3.2.1.ebuild,v 1.2 2012/05/05 05:38:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-3.2.1.ebuild,v 1.3 2012/06/07 10:49:51 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -66,6 +66,11 @@ pkg_setup() {
 		$(use_enable introspection)
 		$(use_enable eds)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gold.patch
+	gnome2_src_prepare
 }
 
 pkg_postinst() {
