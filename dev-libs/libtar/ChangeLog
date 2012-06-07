@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.22 2012/05/29 13:40:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.23 2012/06/07 10:28:53 pacho Exp $
+
+*libtar-1.2.11-r5 (07 Jun 2012)
+
+  07 Jun 2012; Pacho Ramos <pacho@gentoo.org> +libtar-1.2.11-r5.ebuild:
+  Revision bump to use latest patchset, also seems to fix bug #417935 by Xake.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> libtar-1.2.11-r4.ebuild:
   keyword ~amd64-fbsd
