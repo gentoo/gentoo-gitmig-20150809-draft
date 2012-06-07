@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ferm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ChangeLog,v 1.30 2012/06/04 17:18:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ChangeLog,v 1.31 2012/06/07 16:01:18 johu Exp $
+
+  07 Jun 2012; Johannes Huber <johu@gentoo.org> ferm-2.1.ebuild:
+  Stable for x86, wrt bug #419619
 
   04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ferm-2.1.ebuild:
   Stable for amd64, wrt bug #419619
