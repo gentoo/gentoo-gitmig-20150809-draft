@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-16.ebuild,v 1.1 2011/12/26 12:28:40 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-16.ebuild,v 1.2 2012/06/07 20:49:07 zmedico Exp $
 
 EAPI="3"
 
-inherit eutils
+inherit eutils user
 
 MY_P="android-sdk_r${PV}-linux"
 
