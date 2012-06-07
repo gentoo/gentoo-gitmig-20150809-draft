@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsd/cvsd-1.0.7.ebuild,v 1.1 2010/06/19 00:30:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsd/cvsd-1.0.7.ebuild,v 1.2 2012/06/07 21:48:58 zmedico Exp $
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="CVS pserver daemon."
 HOMEPAGE="http://ch.tudelft.nl/~arthur/cvsd/"

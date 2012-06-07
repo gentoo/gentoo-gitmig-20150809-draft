@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/cvsd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsd/ChangeLog,v 1.1 2010/06/19 00:30:49 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsd/ChangeLog,v 1.2 2012/06/07 21:48:58 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> cvsd-1.0.16.ebuild,
+  cvsd-1.0.7.ebuild, cvsd-1.0.8.ebuild:
+  inherit user for enewgroup and enewuser
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> +cvsd-1.0.7.ebuild,
   +cvsd-1.0.8.ebuild, +cvsd-1.0.16.ebuild, +files/cvsd.rc6, +metadata.xml:
