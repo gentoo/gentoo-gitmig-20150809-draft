@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.145 2012/06/07 04:50:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.146 2012/06/07 06:00:05 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@
 if [[ ${___ECLASS_ONCE_AUTOTOOLS} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_AUTOTOOLS="recur -_+^+_- spank"
 
-inherit libtool
+inherit libtool multiprocessing
 
 # @ECLASS-VARIABLE: WANT_AUTOCONF
 # @DESCRIPTION:
@@ -144,14 +144,20 @@ unset _automake_atom _autoconf_atom
 # Should do a full autoreconf - normally what most people will be interested in.
 # Also should handle additional directories specified by AC_CONFIG_SUBDIRS.
 eautoreconf() {
-	local x g
+	local x g multitop
 
-	if [[ -z ${AT_NO_RECURSIVE} ]]; then
+	if [[ -z ${AT_TOPLEVEL_EAUTORECONF} ]] ; then
+		AT_TOPLEVEL_EAUTORECONF="yes"
+		multitop="yes"
+		multijob_init
+	fi
+
+	if [[ -z ${AT_NO_RECURSIVE} ]] ; then
 		# Take care of subdirs
 		for x in $(autotools_check_macro_val AC_CONFIG_SUBDIRS) ; do
 			if [[ -d ${x} ]] ; then
 				pushd "${x}" >/dev/null
-				AT_NOELIBTOOLIZE="yes" eautoreconf
+				AT_NOELIBTOOLIZE="yes" multijob_child_init eautoreconf || die
 				popd >/dev/null
 			fi
 		done
@@ -199,11 +205,16 @@ eautoreconf() {
 	eautoheader
 	[[ ${AT_NOEAUTOMAKE} != "yes" ]] && FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
 
-	[[ ${AT_NOELIBTOOLIZE} == "yes" ]] && return 0
+	if [[ ${AT_NOELIBTOOLIZE} != "yes" ]] ; then
+		# Call it here to prevent failures due to elibtoolize called _before_
+		# eautoreconf.  We set $S because elibtoolize runs on that #265319
+		S=${PWD} elibtoolize --force
+	fi
 
-	# Call it here to prevent failures due to elibtoolize called _before_
-	# eautoreconf.  We set $S because elibtoolize runs on that #265319
-	S=${PWD} elibtoolize --force
+	if [[ -n ${multitop} ]] ; then
+		unset AT_TOPLEVEL_EAUTORECONF
+		multijob_finish || die
+	fi
 
 	return 0
 }
