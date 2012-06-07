@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.218 2012/05/05 08:53:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.219 2012/06/07 05:37:35 tetromino Exp $
+
+  07 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  sound-juicer-2.99.0_pre20111001.ebuild:
+  Fix access violations with FEATURES=-userpriv (bug #419183, thanks to Travis
+  Hansen).
 
   05 May 2012; Michał Górny <mgorny@gentoo.org>
   sound-juicer-2.32.0-r1.ebuild, sound-juicer-2.99.0_pre20111001.ebuild,
