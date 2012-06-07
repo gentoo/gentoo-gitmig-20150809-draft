@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.62 2012/06/06 06:14:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.63 2012/06/07 22:00:12 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> libssh-0.5.2.ebuild:
+  Marking libssh-0.5.2 ppc for bug 419273
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libssh-0.5.2.ebuild:
   marked x86 per bug 419273
