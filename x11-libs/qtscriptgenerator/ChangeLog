@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qtscriptgenerator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.23 2012/06/01 19:21:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.24 2012/06/07 20:21:47 johu Exp $
+
+  07 Jun 2012; Johannes Huber <johu@gentoo.org> qtscriptgenerator-0.2.0.ebuild:
+  Stable for x86, wrt bug #419035
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   qtscriptgenerator-0.2.0.ebuild:
