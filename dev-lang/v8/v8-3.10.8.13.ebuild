@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.10.8.10.ebuild,v 1.3 2012/05/29 08:55:33 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.10.8.13.ebuild,v 1.1 2012/06/07 00:56:01 floppym Exp $
 
 EAPI="4"
 
@@ -24,11 +24,11 @@ pkg_setup() {
 
 src_prepare() {
 	# strip unsupported -arch (in Prefix) for OSX, e.g. bug #417401
-	epatch "${FILESDIR}"/${P}-darwin-arch.patch
+	epatch "${FILESDIR}"/${PN}-3.10.8.10-darwin-arch.patch
 	# make sure we don't target an anchient version of OSX
 	# issue http://code.google.com/p/v8/issues/detail?id=2151
 	#sed -i -e "/MACOSX_DEPLOYMENT_TARGET/d" build/standalone.gypi || die
-	epatch "${FILESDIR}"/${P}-freebsd9.patch
+	epatch "${FILESDIR}"/${PN}-3.10.8.10-freebsd9.patch
 }
 
 src_compile() {
