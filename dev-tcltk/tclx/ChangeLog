@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.43 2012/04/30 15:00:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.44 2012/06/07 17:34:48 jlec Exp $
+
+  07 Jun 2012; Justin Lecher <jlec@gentoo.org> tclx-8.4-r2.ebuild,
+  metadata.xml:
+  Moved to EAPI=4
 
   30 Apr 2012; Jeroen Roovers <jer@gentoo.org> files/tclx-8.4-ldflags.patch:
   Improve LDFLAGS patch.

@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.4-r2.ebuild,v 1.1 2010/04/02 09:22:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.4-r2.ebuild,v 1.2 2012/06/07 17:34:48 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A set of extensions to TCL"
 HOMEPAGE="http://tclx.sourceforge.net"
@@ -15,8 +15,10 @@ IUSE="tk threads"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
-DEPEND=">=dev-lang/tcl-8.4.6
+DEPEND="
+	>=dev-lang/tcl-8.4.6
 	tk? ( >=dev-lang/tk-8.4.6 )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${PN}${PV}
 
@@ -24,9 +26,10 @@ S="${WORKDIR}"/${PN}${PV}
 RESTRICT="test"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-relid.patch
-	epatch "${FILESDIR}"/${P}-varinit.patch
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch \
+		"${FILESDIR}"/${P}-relid.patch \
+		"${FILESDIR}"/${P}-varinit.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_configure() {
@@ -34,8 +37,7 @@ src_configure() {
 		$(use_enable tk) \
 		$(use_enable threads) \
 		--enable-shared \
-		--with-tcl="${EPREFIX}/usr/lib/" \
-		|| die "econf failed"
+		--with-tcl="${EPREFIX}/usr/$(get_libdir)/"
 
 	# adjust install_name on darwin
 	if [[ ${CHOST} == *-darwin* ]]; then
@@ -46,7 +48,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README
+	default
 	doman doc/*.[n3]
 }
