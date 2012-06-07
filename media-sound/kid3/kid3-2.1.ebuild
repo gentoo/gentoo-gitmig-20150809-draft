@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-2.1.ebuild,v 1.1 2012/06/07 13:06:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-2.1.ebuild,v 1.2 2012/06/07 13:24:55 kensington Exp $
 
 EAPI=4
 KDE_LINGUAS="cs de es et fi fr it nl pl ru sr sr@ijekavian sr@ijekavianlatin sr@Latn tr zh_TW"
@@ -45,7 +45,6 @@ src_configure() {
 		$(cmake-utils_use_with mp4 MP4V2)
 		$(cmake-utils_use_with vorbis)
 		$(cmake-utils_use_with taglib)
-		"-DWITH_TUNEPIMP=OFF"
 		"-DWITH_KDE=ON"
 		)
 
