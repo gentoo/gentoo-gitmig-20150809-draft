@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/x48
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.27 2012/05/31 15:46:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.28 2012/06/07 22:02:55 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> x48-0.6.4.ebuild:
+  Marking x48-0.6.4 ppc for bug 415223
 
   31 May 2012; Jeroen Roovers <jer@gentoo.org> x48-0.6.4.ebuild:
   Stable for HPPA (bug #415223).
