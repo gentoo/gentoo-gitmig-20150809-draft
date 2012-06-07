@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.70 2012/05/31 02:59:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.71 2012/06/07 21:01:36 xmw Exp $
+
+*tenshi-0.14 (07 Jun 2012)
+
+  07 Jun 2012; Michael Weber <xmw@gentoo.org> +tenshi-0.14.ebuild:
+  Version bump (bug 420003 by Brian De Wolf)
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> tenshi-0.12.ebuild:
   inherit user for enewgroup and enewuser
