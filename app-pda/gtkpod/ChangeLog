@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.104 2012/05/10 07:25:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.105 2012/06/07 00:35:44 ssuominen Exp $
+
+*gtkpod-2.1.2_beta2 (07 Jun 2012)
+
+  07 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +gtkpod-2.1.2_beta2.ebuild:
+  Version bump to development release in order to get rid of the
+  media-libs/libmp4v2 dependency problem.
 
   10 May 2012; Samuli Suominen <ssuominen@gentoo.org> -gtkpod-2.1.1-r2.ebuild:
   old
