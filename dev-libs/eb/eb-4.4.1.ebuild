@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.4.1.ebuild,v 1.4 2012/06/06 23:38:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/eb-4.4.1.ebuild,v 1.5 2012/06/07 21:37:52 ranger Exp $
 
 IUSE="nls ipv6 threads"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.sra.co.jp/pub/misc/eb/${P}.tar.lzma"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
 
 RDEPEND="sys-libs/zlib
 	nls? ( virtual/libintl )"
