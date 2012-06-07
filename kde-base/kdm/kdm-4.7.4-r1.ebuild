@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.7.4-r1.ebuild,v 1.1 2012/02/03 16:10:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.7.4-r1.ebuild,v 1.2 2012/06/07 22:28:32 zmedico Exp $
 
 EAPI=4
 
 KDE_HANDBOOK="optional"
 KMNAME="kde-workspace"
-inherit kde4-meta flag-o-matic
+inherit kde4-meta flag-o-matic user
 
 DESCRIPTION="KDE login manager, similar to xdm and gdm"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"

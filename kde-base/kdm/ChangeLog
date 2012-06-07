@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.295 2012/05/24 11:38:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.296 2012/06/07 22:28:32 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> kdm-4.7.4-r1.ebuild,
+  kdm-4.7.4.ebuild, kdm-4.8.3.ebuild:
+  inherit user for enewgroup and enewuser
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kdm-4.8.1.ebuild:
   Remove KDE SC 4.8.1
