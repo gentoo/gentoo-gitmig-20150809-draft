@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.95-r2.ebuild,v 1.3 2012/05/27 18:01:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.95-r2.ebuild,v 1.4 2012/06/07 03:30:37 robbat2 Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -48,7 +48,6 @@ pkg_setup() {
 	use udev && local WARNING_SYSVIPC="CONFIG_SYSVIPC:\tis not set (required for udev sync)\n"
 	check_extra_config
 	# 1. Genkernel no longer copies /sbin/lvm blindly.
-	# 2. There are no longer any linking deps in /usr.
 	if use static; then
 		elog "Warning, we no longer overwrite /sbin/lvm and /sbin/dmsetup with"
 		elog "their static versions. If you need the static binaries,"
@@ -120,7 +119,6 @@ src_configure() {
 		einfo "Building static LVM, for usage inside genkernel"
 		buildmode="internal"
 		# This only causes the .static versions to become available
-		# For recent systems, there are no linkages against anything in /usr anyway.
 		# We explicitly provide the .static versions so that they can be included in
 		# initramfs environments.
 		myconf="${myconf} --enable-static_link"
