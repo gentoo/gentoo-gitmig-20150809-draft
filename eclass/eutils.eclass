@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.395 2012/06/06 15:37:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.396 2012/06/07 05:59:20 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1378,26 +1378,6 @@ use_if_iuse() {
 # If USE flag is set, echo [true output][true suffix] (defaults to "yes"),
 # otherwise echo [false output][false suffix] (defaults to "no").
 usex() { use "$1" && echo "${2-yes}$4" || echo "${3-no}$5" ; } #382963
-
-# @FUNCTION: makeopts_jobs
-# @USAGE: [${MAKEOPTS}]
-# @DESCRIPTION:
-# Searches the arguments (defaults to ${MAKEOPTS}) and extracts the jobs number
-# specified therein.  Useful for running non-make tools in parallel too.
-# i.e. if the user has MAKEOPTS=-j9, this will show "9".
-# We can't return the number as bash normalizes it to [0, 255].  If the flags
-# haven't specified a -j flag, then "1" is shown as that is the default `make`
-# uses.  Since there's no way to represent infinity, we return 999 if the user
-# has -j without a number.
-makeopts_jobs() {
-	[[ $# -eq 0 ]] && set -- ${MAKEOPTS}
-	# This assumes the first .* will be more greedy than the second .*
-	# since POSIX doesn't specify a non-greedy match (i.e. ".*?").
-	local jobs=$(echo " $* " | sed -r -n \
-		-e 's:.*[[:space:]](-j|--jobs[=[:space:]])[[:space:]]*([0-9]+).*:\2:p' \
-		-e 's:.*[[:space:]](-j|--jobs)[[:space:]].*:999:p')
-	echo ${jobs:-1}
-}
 
 # @FUNCTION: prune_libtool_files
 # @USAGE: [--all]
