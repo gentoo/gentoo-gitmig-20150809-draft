@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-share/nautilus-share-0.7.3.ebuild,v 1.1 2012/05/20 11:54:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-share/nautilus-share-0.7.3.ebuild,v 1.2 2012/06/07 22:23:13 zmedico Exp $
 
 EAPI=4
 
-inherit gnome2 eutils
+inherit gnome2 eutils user
 
 DESCRIPTION="A nautilus plugin to easily share folders over the SMB protocol"
 HOMEPAGE="http://gentoo.ovibes.net/nautilus-share http://packages.debian.org/unstable/nautilus-share"

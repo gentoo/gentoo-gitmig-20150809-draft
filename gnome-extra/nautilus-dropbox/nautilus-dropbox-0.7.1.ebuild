@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.1.ebuild,v 1.5 2012/05/05 06:25:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.1.ebuild,v 1.6 2012/06/07 22:22:02 zmedico Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
-inherit autotools eutils python linux-info gnome2
+inherit autotools eutils python linux-info gnome2 user
 
 DESCRIPTION="Store, Sync and Share Files Online"
 HOMEPAGE="http://www.dropbox.com/"
