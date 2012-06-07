@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.144 2012/06/06 17:15:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.145 2012/06/07 04:50:04 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -166,11 +166,11 @@ eautoreconf() {
 	local i tools=(
 		# <tool> <was run> <command>
 		glibgettext false "autotools_run_tool glib-gettextize --copy --force"
-		gettext     false "eautopoint --force"
+		gettext     false "autotools_run_tool --at-missing autopoint --force"
 		# intltool must come after autopoint.
 		intltool    false "autotools_run_tool intltoolize --automake --copy --force"
-		gtkdoc      false "autotools_run_tool gtkdocize --copy"
-		gnomedoc    false "autotools_run_tool gnome-doc-prepare --copy --force"
+		gtkdoc      false "autotools_run_tool --at-missing gtkdocize --copy"
+		gnomedoc    false "autotools_run_tool --at-missing gnome-doc-prepare --copy --force"
 		libtool     false "_elibtoolize --install --copy --force"
 	)
 	for (( i = 0; i < ${#tools[@]}; i += 3 )) ; do
@@ -402,18 +402,19 @@ autotools_env_setup() {
 }
 
 # @FUNCTION: autotools_run_tool
-# @USAGE: [--at-no-fail] [--at-m4flags] <autotool> [tool-specific flags]
+# @USAGE: [--at-no-fail] [--at-m4flags] [--at-missing] <autotool> [tool-specific flags]
 # @INTERNAL
 # @DESCRIPTION:
 # Run the specified autotool helper, but do logging and error checking
 # around it in the process.
 autotools_run_tool() {
 	# Process our own internal flags first
-	local autofail=true m4flags=false
+	local autofail=true m4flags=false missing_ok=false
 	while [[ -n $1 ]] ; do
 		case $1 in
 		--at-no-fail) autofail=false;;
 		--at-m4flags) m4flags=true;;
+		--at-missing) missing_ok=true;;
 		# whatever is left goes to the actual tool
 		*) break;;
 		esac
@@ -422,6 +423,11 @@ autotools_run_tool() {
 
 	if [[ ${EBUILD_PHASE} != "unpack" && ${EBUILD_PHASE} != "prepare" ]]; then
 		ewarn "QA Warning: running $1 in ${EBUILD_PHASE} phase"
+	fi
+
+	if ${missing_ok} && ! type -P ${1} >/dev/null ; then
+		einfo "Skipping '$*' due $1 not installed"
+		return 0
 	fi
 
 	autotools_env_setup
