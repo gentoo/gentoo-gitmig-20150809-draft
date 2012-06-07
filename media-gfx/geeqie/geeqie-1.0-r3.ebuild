@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r2.ebuild,v 1.7 2012/06/07 23:08:29 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r3.ebuild,v 1.1 2012/06/07 23:08:30 voyageur Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/geeqie/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc exif lcms lirc xmp"
 
 RDEPEND="x11-libs/gtk+:2
@@ -28,7 +28,13 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-automake-1.11.patch
+	epatch "${FILESDIR}"/${P}-copy_chown.patch
+	epatch "${FILESDIR}"/${P}-filedata_compare.patch
+	epatch "${FILESDIR}"/${P}-fix_fullscreen.patch
 	epatch "${FILESDIR}"/${P}-lfs_support.patch
+	epatch "${FILESDIR}"/${P}-ui_pathsel.patch
+	epatch "${FILESDIR}"/${P}-vflist-refresh.patch
+
 	eautoreconf
 }
 
