@@ -1,6 +1,13 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.138 2012/06/05 01:39:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.139 2012/06/07 00:50:39 floppym Exp $
+
+*google-chrome-20.0.1132.27_beta140692 (07 Jun 2012)
+
+  07 Jun 2012; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-20.0.1132.27_beta140692.ebuild,
+  -google-chrome-20.0.1132.21_beta139451.ebuild:
+  Beta channel bump.
 
 *google-chrome-21.0.1163.0_alpha140240 (05 Jun 2012)
 
