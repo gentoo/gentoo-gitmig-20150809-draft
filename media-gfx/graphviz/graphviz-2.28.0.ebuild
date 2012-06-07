@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.7 2012/06/05 20:00:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.8 2012/06/07 15:24:31 jlec Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -28,6 +28,7 @@ RDEPEND="
 	>=media-libs/freetype-2.1.10
 	>=media-libs/gd-2.0.34[fontconfig,jpeg,png,truetype]
 	>=media-libs/libpng-1.2:0
+	!<=sci-chemistry/cluster-1.3.081231
 	virtual/jpeg
 	virtual/libiconv
 	X? (
