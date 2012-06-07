@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.67 2012/06/06 23:24:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.68 2012/06/07 21:33:19 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> xdelta-3.0.0-r1.ebuild:
+  Marking xdelta-3.0.0-r1 ppc for bug 418967
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> xdelta-3.0.0-r1.ebuild:
   marked x86 per bug 418967
