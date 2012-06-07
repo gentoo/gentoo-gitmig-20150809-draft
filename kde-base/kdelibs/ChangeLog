@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.848 2012/05/24 11:37:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.849 2012/06/07 22:27:05 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> kdelibs-4.7.4-r12.ebuild,
+  kdelibs-4.7.4.ebuild, kdelibs-4.8.3.ebuild:
+  inherit flag-o-matic for append-flags
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kdelibs-4.8.1-r1.ebuild,
   -kdelibs-4.8.1-r2.ebuild:

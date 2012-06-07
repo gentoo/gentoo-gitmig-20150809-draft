@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.3.ebuild,v 1.5 2012/05/24 08:42:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.3.ebuild,v 1.6 2012/06/07 22:27:05 zmedico Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ CPPUNIT_REQUIRED="optional"
 DECLARATIVE_REQUIRED="always"
 OPENGL_REQUIRED="optional"
 KDE_SCM="git"
-inherit kde4-base fdo-mime toolchain-funcs
+inherit kde4-base fdo-mime flag-o-matic toolchain-funcs
 
 # The "master" branch is out of date, so use KDE/4.8 per upstream's
 # recommendation.

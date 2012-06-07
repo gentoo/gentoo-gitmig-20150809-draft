@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.4.ebuild,v 1.9 2012/03/27 18:33:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.4.ebuild,v 1.10 2012/06/07 22:27:05 zmedico Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ CPPUNIT_REQUIRED="optional"
 DECLARATIVE_REQUIRED="always"
 OPENGL_REQUIRED="optional"
 KDE_SCM="git"
-inherit kde4-base fdo-mime toolchain-funcs
+inherit kde4-base fdo-mime flag-o-matic toolchain-funcs
 
 DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
