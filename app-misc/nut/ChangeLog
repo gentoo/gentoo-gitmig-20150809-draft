@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.43 2012/06/01 19:29:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.44 2012/06/07 16:25:47 johu Exp $
+
+  07 Jun 2012; Johannes Huber <johu@gentoo.org> nut-17.7.ebuild:
+  Stable for x86, wrt bug #418609
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> nut-17.7.ebuild:
   Stable for amd64, wrt bug #418609
