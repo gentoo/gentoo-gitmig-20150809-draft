@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.6.0_beta3.ebuild,v 1.1 2012/04/08 19:54:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.6.0.ebuild,v 1.1 2012/06/07 18:58:41 dilfridge Exp $
 
 EAPI=4
 
@@ -16,7 +16,8 @@ KDE_DOC_DIRS="doc-digikam doc-showfoto"
 
 inherit kde4-base
 
-MY_P="${PN}-${PV/_/-}"
+MY_PV=${PV/_/-}
+MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Digital photo management application for KDE"
 HOMEPAGE="http://www.digikam.org/"
@@ -24,7 +25,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="4"
 IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
 
@@ -37,16 +38,16 @@ CDEPEND="
 	$(add_kdebase_dep solid)
 	media-libs/jasper
 	media-libs/lcms:0
-	>=media-libs/lensfun-0.2.5
+	media-libs/lensfun
 	media-libs/libkface
 	media-libs/libkgeomap
 	media-libs/liblqr
 	>=media-libs/libpgf-6.11.28
 	media-libs/libpng
 	media-libs/tiff
+	sci-libs/clapack
 	virtual/jpeg
 	x11-libs/qt-gui[qt3support]
-	>=sci-libs/clapack-3.2.1-r6
 	|| ( x11-libs/qt-sql[mysql] x11-libs/qt-sql[sqlite] )
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	gphoto2? ( media-libs/libgphoto2 )
