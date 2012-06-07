@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.23 2012/05/28 19:45:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.24 2012/06/07 22:13:04 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> monotone-0.99.1-r1.ebuild,
+  monotone-1.0-r2.ebuild, monotone-1.0-r3.ebuild:
+  inherit user for enewgroup and enewuser
 
   28 May 2012; Zac Medico <zmedico@gentoo.org> monotone-0.99.1-r1.ebuild,
   monotone-1.0-r2.ebuild:

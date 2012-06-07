@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r2.ebuild,v 1.2 2012/05/28 19:45:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r2.ebuild,v 1.3 2012/06/07 22:13:04 zmedico Exp $
 
 # QA failiures reported in https://code.monotone.ca/p/monotone/issues/181/
 EAPI="4"
-inherit bash-completion elisp-common eutils toolchain-funcs
+inherit bash-completion elisp-common eutils toolchain-funcs user
 
 DESCRIPTION="Monotone Distributed Version Control System"
 HOMEPAGE="http://monotone.ca"
