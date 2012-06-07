@@ -1,6 +1,9 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.40 2012/06/02 10:44:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.41 2012/06/07 22:16:42 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> html-xml-utils-6.0.ebuild:
+  Marking html-xml-utils-6.0 ppc for bug 418645
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> html-xml-utils-6.0.ebuild:
   Stable for amd64, wrt bug #418645
