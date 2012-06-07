@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/graphos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/graphos/ChangeLog,v 1.3 2012/02/09 20:12:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/graphos/ChangeLog,v 1.4 2012/06/07 23:20:11 voyageur Exp $
+
+*graphos-0.3 (07 Jun 2012)
+
+  07 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> +graphos-0.3.ebuild:
+  Version bump, improved inspector and new file format
 
   09 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> -graphos-0.1.ebuild,
   graphos-0.2.ebuild, +files/graphos-0.2-remove_psDescription.patch:
