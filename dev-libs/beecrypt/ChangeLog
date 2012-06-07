@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.81 2012/03/03 12:09:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.82 2012/06/07 16:43:17 kensington Exp $
+
+  07 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/beecrypt-4.2.1-gcc-4.7.patch, beecrypt-4.2.1.ebuild:
+  Fix build with GCC 4.7 wrt bug #413951. Thanks to Olivier Huber
+  <oli.huber@gmail.com> for the patch.
 
   03 Mar 2012; Pacho Ramos <pacho@gentoo.org> beecrypt-4.2.1.ebuild:
   Run java-pkg-opt-2_pkg_setup to use jdk when compiling, bug #401803 by DrSlony
