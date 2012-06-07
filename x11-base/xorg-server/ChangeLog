@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.656 2012/06/06 14:57:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.657 2012/06/07 19:57:27 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> xorg-server-1.11.4.ebuild:
+  Marking xorg-server-1.11.4 ppc for bug 419549
 
   06 Jun 2012; Brent Baude <ranger@gentoo.org> xorg-server-1.10.6-r1.ebuild,
   xorg-server-1.11.4-r1.ebuild:
