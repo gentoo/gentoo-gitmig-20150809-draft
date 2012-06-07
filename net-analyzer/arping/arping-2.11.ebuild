@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.11.ebuild,v 1.4 2012/06/06 19:25:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.11.ebuild,v 1.5 2012/06/07 02:09:59 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.habets.pp.se/synscan/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 arm ~hppa ~ia64 ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 arm hppa ~ia64 ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="net-libs/libpcap
@@ -31,11 +31,6 @@ src_prepare() {
 	sed \
 		-e "s|\(${PN}\) |\12 |g" \
 		-i extra/${PN}-scan-net.sh || die "sed ${PN}-scan-net.sh failed"
-}
-
-src_test() {
-	einfo "Selftest only works as root"
-	#make SUDO= HOST=`hostname` MAC=`ifconfig -a | fgrep HWaddr | sed 's/.*HWaddr //g'` test
 }
 
 src_install() {
