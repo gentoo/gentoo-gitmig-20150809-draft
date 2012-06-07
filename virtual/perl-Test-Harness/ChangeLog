@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Test-Harness
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.68 2012/05/21 11:50:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.69 2012/06/07 06:33:35 tove Exp $
+
+*perl-Test-Harness-3.250.0 (07 Jun 2012)
+
+  07 Jun 2012; Torsten Veller <tove@gentoo.org>
+  +perl-Test-Harness-3.250.0.ebuild:
+  Version bump
 
 *perl-Test-Harness-3.230.0-r3 (21 May 2012)
 
