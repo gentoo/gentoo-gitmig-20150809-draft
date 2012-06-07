@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.198 2012/06/06 03:29:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.199 2012/06/07 00:37:18 floppym Exp $
+
+  07 Jun 2012; Mike Gilbert <floppym@gentoo.org> -files/icu-4.8.1-fix_nan.patch,
+  -icu-4.8.1.1-r1.ebuild:
+  Drop old per Arfrever.
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> icu-4.8.1.1-r1.ebuild:
   inherit eutils for epatch
