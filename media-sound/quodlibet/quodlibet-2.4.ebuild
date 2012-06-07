@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.4.ebuild,v 1.2 2012/04/17 09:04:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.4.ebuild,v 1.3 2012/06/07 08:47:15 ssuominen Exp $
 
 EAPI=4
 
@@ -39,6 +39,10 @@ DEPEND="${COMMON_DEPEND}
 REQUIRED_USE="ipod? ( dbus )"
 
 src_prepare() {
+	if has_version '>=sys-fs/udev-183'; then
+		sed -i -e '/LoadLibrary/s:libudev.so.0:libudev.so.1:' ${PN}/devices/__init__.py || die
+	fi
+
 	local qlconfig=${PN}/config.py
 
 	if ! use gstreamer; then
