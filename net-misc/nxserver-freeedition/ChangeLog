@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/nxserver-freeedition
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.58 2011/11/04 15:38:44 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.59 2012/06/07 22:51:44 voyageur Exp $
+
+  07 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freeedition-3.5.0.5.ebuild, -nxserver-freeedition-3.5.0.8.ebuild,
+  nxserver-freeedition-3.5.0.9.ebuild, +nxserver-freeedition-3.5.0.11.ebuild:
+  Maintenance release bump, mostly fixes for newer cairo support. Inherit user
+  eclass
+
+*nxserver-freeedition-3.5.0.11 (07 Jun 2012)
+
+  07 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +nxserver-freeedition-3.5.0.11.ebuild:
+  Maintenance release bump, mostly fixes for newer cairo support
 
 *nxserver-freeedition-3.5.0.9 (04 Nov 2011)
 
