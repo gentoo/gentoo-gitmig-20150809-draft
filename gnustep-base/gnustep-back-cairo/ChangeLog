@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-back-cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.35 2012/05/02 21:21:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.36 2012/06/07 14:42:06 xmw Exp $
+
+  07 Jun 2012; Michael Weber <xmw@gentoo.org> gnustep-back-cairo-0.22.0.ebuild:
+  ppc stable (bug 410601)
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gnustep-back-cairo-0.18.0.ebuild, gnustep-back-cairo-0.22.0.ebuild:
