@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.78 2012/06/05 21:09:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.79 2012/06/07 02:11:33 jer Exp $
+
+  07 Jun 2012; Jeroen Roovers <jer@gentoo.org> httping-1.5.3.ebuild:
+  Stable for HPPA (bug #419217).
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> httping-1.5.3.ebuild:
   Marking httping-1.5.3 ppc64 for bug 419217
