@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.26 2012/06/06 08:03:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.27 2012/06/07 18:49:29 ranger Exp $
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> lzip-1.13.ebuild:
+  Marking lzip-1.13 ppc for bug 418507
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> lzip-1.13.ebuild:
   marked x86 per bug 418507
