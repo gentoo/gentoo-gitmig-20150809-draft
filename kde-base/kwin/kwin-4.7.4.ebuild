@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.7.4.ebuild,v 1.4 2012/02/18 16:08:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.7.4.ebuild,v 1.5 2012/06/07 22:35:57 zmedico Exp $
 
 EAPI=4
 
 KMNAME="kde-workspace"
 OPENGL_REQUIRED="optional"
-inherit kde4-meta
+inherit flag-o-matic kde4-meta
 
 DESCRIPTION="KDE window manager"
 KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"

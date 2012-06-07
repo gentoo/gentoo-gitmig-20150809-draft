@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.278 2012/05/24 11:37:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.279 2012/06/07 22:35:57 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> kwin-4.7.4.ebuild,
+  kwin-4.8.3.ebuild:
+  inherit flag-o-matic for append-cppflags
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kwin-4.8.1.ebuild:
   Remove KDE SC 4.8.1
