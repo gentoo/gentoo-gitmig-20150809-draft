@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.10.1.ebuild,v 1.4 2012/05/03 18:49:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.10.1.ebuild,v 1.5 2012/06/07 15:36:01 jlec Exp $
 
 EAPI=4
 
@@ -39,7 +39,9 @@ DEPEND="virtual/pkgconfig
 # * TODO: add slirp for tunnel-support
 
 src_prepare() {
-	epatch "${FILESDIR}/0.10.1-disable-werror.patch"
+	epatch \
+		"${FILESDIR}/0.10.1-disable-werror.patch" \
+		"${FILESDIR}/${PV}-gold.patch"
 	eautoreconf
 }
 

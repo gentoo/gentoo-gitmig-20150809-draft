@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.24 2012/05/03 18:49:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.25 2012/06/07 15:36:01 jlec Exp $
+
+  07 Jun 2012; Justin Lecher <jlec@gentoo.org> +files/0.10.1-gold.patch,
+  spice-0.10.1.ebuild:
+  Add fix for underlinking detected by gold
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> spice-0.8.1.ebuild,
   spice-0.8.2-r1.ebuild, spice-0.10.0.ebuild, spice-0.10.1.ebuild:
