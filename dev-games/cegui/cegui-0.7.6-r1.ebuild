@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.6-r1.ebuild,v 1.5 2012/05/26 15:30:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.6-r1.ebuild,v 1.6 2012/06/07 21:51:20 hasufell Exp $
 
 EAPI="4"
+
+inherit eutils
 
 MY_P=CEGUI-${PV}
 MY_D=CEGUI-DOCS-${PV}
@@ -43,6 +45,12 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_P}
+S2=${WORKDIR}/${MY_P}_static
+
+src_unpack() {
+	default
+	cp -a "${S}" "${S2}" || die
+}
 
 src_prepare() {
 	# use minizip from zlib rather than local code
@@ -65,45 +73,67 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf=(
+		$(use_enable bidi bidirectional-text)
+		$(use_enable debug)
+		$(use_enable devil)
+		$(use_enable examples samples)
+		$(use_enable expat)
+		$(use_enable truetype freetype)
+		$(use_enable irrlicht irrlicht-renderer)
+		$(use_enable lua lua-module)
+		$(use_enable lua toluacegui)
+		--enable-external-toluapp
+		$(use_enable ogre ogre-renderer)
+		$(use_enable opengl opengl-renderer)
+		--enable-external-glew
+		$(use_enable pcre)
+		$(use_enable tinyxml)
+		--enable-external-tinyxml
+		$(use_enable xerces-c)
+		$(use_enable xml libxml)
+		$(use_enable zip minizip-resource-provider)
+		--enable-null-renderer
+		--enable-stb
+		--enable-tga
+		--disable-corona
+		--disable-dependency-tracking
+		--disable-freeimage
+		--disable-rapidxml
+		--disable-samples
+		--disable-silly
+		$(use_with gtk gtk2)
+	)
+
 	econf \
-		$(use_enable bidi bidirectional-text) \
-		$(use_enable debug) \
-		$(use_enable devil) \
-		$(use_enable examples samples) \
-		$(use_enable expat) \
-		$(use_enable truetype freetype) \
-		$(use_enable irrlicht irrlicht-renderer) \
-		$(use_enable lua lua-module) \
-		$(use_enable lua toluacegui) \
-		--enable-external-toluapp \
-		$(use_enable ogre ogre-renderer) \
-		$(use_enable opengl opengl-renderer) \
-		--enable-external-glew \
-		$(use_enable pcre) \
-		$(use_enable tinyxml) \
-		--enable-external-tinyxml \
-		$(use_enable xerces-c) \
-		$(use_enable xml libxml) \
-		$(use_enable zip minizip-resource-provider) \
-		--enable-null-renderer \
-		--enable-stb \
-		--enable-tga \
-		--disable-corona \
-		--disable-dependency-tracking \
-		--disable-freeimage \
-		--disable-rapidxml \
-		--disable-samples \
-		--disable-silly \
-		$(use_with gtk gtk2) \
-		$(use_enable static-libs static) \
+		"${myconf[@]}" \
+		--disable-static \
 		--enable-shared
+
+	if use static-libs ; then
+		cd "${S2}" || die
+		econf \
+			"${myconf[@]}" \
+			--enable-static \
+			--disable-shared
+	fi
+
+	# we are doing a double build here cause
+	# the build system does not permit
+	# "--enable-static --enable-shared"
+}
+
+src_compile() {
+	default
+
+	if use static-libs ; then
+		emake -C "${S2}"
+	fi
 }
 
 src_install() {
+	local i
 	default
-
-	# remove .la files
-	use static-libs || rm -f "${D}"/usr/*/*.la
 
 	if use doc ; then
 		emake html || die
@@ -112,5 +142,19 @@ src_install() {
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/Samples
 		doins -r Samples.clean/* || die
+	fi
+
+	if use static-libs ; then
+		find "${S2}" -name "*CEGUI*.a" -exec dolib.a '{}' \;
+
+		# fix/merge .la files
+		for i in `find "${D}" -name "*.la"` ; do
+			sed \
+				-e "s/old_library=''/old_library='$(basename ${i%.la}).a'/" \
+				-i ${i} || die "fixing .la files failed"
+		done
+	else
+		# remove .la files
+		prune_libtool_files --all
 	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.46 2012/05/26 15:30:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.47 2012/06/07 21:51:20 hasufell Exp $
+
+  07 Jun 2012; Julian Ospald <hasufell@gentoo.org> cegui-0.7.6-r1.ebuild:
+  fix static-libs useflag wrt bug #412675
 
   26 May 2012; Agostino Sarubbo <ago@gentoo.org> cegui-0.7.6-r1.ebuild:
   Stable for amd64, wrt bug #412675
