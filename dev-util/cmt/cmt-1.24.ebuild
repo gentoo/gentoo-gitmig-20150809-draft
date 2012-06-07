@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.24.ebuild,v 1.1 2012/03/12 16:21:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.24.ebuild,v 1.2 2012/06/07 21:28:44 zmedico Exp $
 
 EAPI=4
-inherit eutils elisp-common toolchain-funcs versionator
+inherit eutils elisp-common multilib toolchain-funcs versionator
 
 CPV=($(get_version_components ${PV}))
 CMT_PV=v${CPV[0]}r${CPV[1]}
