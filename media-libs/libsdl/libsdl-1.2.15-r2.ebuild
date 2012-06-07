@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r2.ebuild,v 1.1 2012/06/06 17:45:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r2.ebuild,v 1.2 2012/06/07 21:55:08 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic multilib toolchain-funcs eutils libtool
@@ -140,7 +140,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	use static-libs || rm -f "${D}"/usr/$(get_libdir)/lib*.la
+	use static-libs || prune_libtool_files --all
 	dodoc BUGS CREDITS README README-SDL.txt README.HG TODO WhatsNew
 	dohtml -r ./
 }
