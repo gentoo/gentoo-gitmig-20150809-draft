@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.489 2012/06/05 23:23:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.490 2012/06/07 19:42:52 dilfridge Exp $
+
+  07 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -cups-1.5.2-r21.ebuild, cups-1.5.3.ebuild, cups-1.6_beta1.ebuild,
+  cups-9999.ebuild:
+  Fix bashism in install-sh, bug 419735
 
   05 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cups-1.5.3.ebuild:
   Keyword ~mips, bug #401067

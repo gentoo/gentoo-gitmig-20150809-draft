@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.3.ebuild,v 1.2 2012/06/05 23:23:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.3.ebuild,v 1.3 2012/06/07 19:42:52 dilfridge Exp $
 
 EAPI=4
 
@@ -224,6 +224,9 @@ src_compile() {
 }
 
 src_install() {
+	# Fix install-sh, posix sh does not have 'function'.
+	sed 's#function gzipcp#gzipcp()#g' -i "${S}/install-sh"
+
 	emake BUILDROOT="${D}" install
 	dodoc {CHANGES,CREDITS,README}.txt
 
