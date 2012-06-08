@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.140 2012/05/31 07:59:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.141 2012/06/08 13:08:52 chithanh Exp $
 
 # not ready for primetime
 packagekit
@@ -126,6 +126,7 @@ video_cards_vmware
 video_cards_virtualbox
 
 # not needed on non-arm systems
+video_cards_exynos
 video_cards_omap
 video_cards_omapfb
 

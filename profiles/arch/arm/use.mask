@@ -141,6 +141,7 @@ zvbi
 aacplus
 
 # Unmask ARM-only video-cards
+-video_cards_exynos
 -video_cards_omapfb
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>

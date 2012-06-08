@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.31 2012/04/14 18:48:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.32 2012/06/08 13:08:52 chithanh Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -14,6 +14,7 @@ cirrus - VIDEO_CARDS setting to build driver for cirrus video cards
 cyrix - VIDEO_CARDS setting to build driver for cyrix video cards
 dummy - VIDEO_CARDS setting to build driver for dummy video cards
 epson - VIDEO_CARDS setting to build driver for epson video cards
+exynos - VIDEO_CARDS setting to build driver for Samsung Exynos video cards
 fbdev - VIDEO_CARDS setting to build driver for fbdev video cards
 fglrx - VIDEO_CARDS setting to build driver for fglrx video cards
 geode - VIDEO_CARDS setting to build driver for AMD Geode GX and LX video cards
