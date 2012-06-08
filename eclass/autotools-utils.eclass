@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.55 2012/06/06 17:17:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.56 2012/06/08 17:50:10 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -13,7 +13,7 @@
 # out of source build with overridable build dir location, static archives
 # handling, libtool files removal.
 #
-# Please note note that autotools-utils does not support mixing of its phase
+# Please note that autotools-utils does not support mixing of its phase
 # functions with regular econf/emake calls. If necessary, please call
 # autotools-utils_src_compile instead of the latter.
 #
