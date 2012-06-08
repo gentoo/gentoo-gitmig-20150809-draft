@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-9999.ebuild,v 1.6 2012/05/31 17:02:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-9999.ebuild,v 1.7 2012/06/08 23:55:46 zmedico Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/libreoffice/libcdr/"
-[[ ${PV} == 9999 ]] && vcs="autotools git-2"
-inherit base ${vcs}
-unset vcs
+inherit base
+[[ ${PV} == 9999 ]] && inherit autotools git-2
 
 DESCRIPTION="Library parsing the Corel cdr documents"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/libcdr"
