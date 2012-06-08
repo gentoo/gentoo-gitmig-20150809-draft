@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/golly
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.13 2012/06/01 15:03:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.14 2012/06/08 11:55:18 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> golly-2.3-r1.ebuild:
+  x86 stable wrt bug #418605
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> golly-2.3-r1.ebuild:
   Stable for amd64, wrt bug #418605
