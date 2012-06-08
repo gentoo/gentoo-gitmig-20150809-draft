@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.149 2012/06/04 23:51:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.150 2012/06/08 11:43:02 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dspam-3.10.2.ebuild:
+  x86 stable wrt bug #419017
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> dspam-3.10.1-r1.ebuild,
   dspam-3.10.2.ebuild:
