@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.52 2012/05/21 10:01:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.53 2012/06/08 17:43:03 ranger Exp $
+
+  08 Jun 2012; Brent Baude <ranger@gentoo.org> mod_fcgid-2.3.7.ebuild:
+  Marking mod_fcgid-2.3.7 ppc for bug 409373
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mod_fcgid-2.3.7.ebuild:
   x86 stable wrt bug #409373
