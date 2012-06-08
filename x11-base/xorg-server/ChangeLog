@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.658 2012/06/08 12:07:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.659 2012/06/08 13:40:11 chithanh Exp $
+
+  08 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.10.4-r1.ebuild, xorg-server-1.10.6-r1.ebuild,
+  xorg-server-1.10.6.ebuild, xorg-server-1.11.2-r1.ebuild,
+  xorg-server-1.11.2-r2.ebuild, xorg-server-1.11.3.ebuild,
+  xorg-server-1.11.4-r1.ebuild, xorg-server-1.11.4.ebuild,
+  xorg-server-1.12.2.ebuild, xorg-server-1.9.5-r1.ebuild:
+  Filter -O3 from CFLAGS for 1.11.4-r1 too. inherit flag-o-matic more to shut up
+  repoman.
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xorg-server-1.10.6-r1.ebuild:

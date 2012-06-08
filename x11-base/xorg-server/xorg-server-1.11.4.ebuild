@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.4.ebuild,v 1.3 2012/06/07 19:57:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.4.ebuild,v 1.4 2012/06/08 13:40:11 chithanh Exp $
 
 EAPI=4
 
 XORG_DOC=doc
 XORG_EAUTORECONF=yes
-inherit xorg-2 multilib versionator
+inherit flag-o-matic xorg-2 multilib versionator
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
 DESCRIPTION="X.Org X servers"

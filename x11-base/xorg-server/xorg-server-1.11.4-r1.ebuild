@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.4-r1.ebuild,v 1.4 2012/06/06 14:57:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.4-r1.ebuild,v 1.5 2012/06/08 13:40:11 chithanh Exp $
 
 EAPI=4
 
 XORG_DOC=doc
 XORG_EAUTORECONF=yes
-inherit xorg-2 multilib versionator
+inherit flag-o-matic xorg-2 multilib versionator
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
 DESCRIPTION="X.Org X servers"
@@ -176,6 +176,9 @@ pkg_setup() {
 		ln -s "${EROOT}usr/$(get_libdir)/opengl/global/include/$i.h" "${T}/mesa-symlinks/GL/$i.h" || die
 	done
 	append-cppflags "-I${T}/mesa-symlinks"
+
+	# Make breakage less obvious, bug #402285.
+	replace-flags -O3 -O2
 }
 
 src_install() {
