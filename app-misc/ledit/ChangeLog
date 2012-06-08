@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ledit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.39 2012/06/08 11:50:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ChangeLog,v 1.40 2012/06/08 15:02:30 aballier Exp $
+
+  08 Jun 2012; Alexis Ballier <aballier@gentoo.org> -ledit-2.02.1.ebuild:
+  remove old
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ledit-2.03.ebuild:
   x86 stable wrt bug #416523
