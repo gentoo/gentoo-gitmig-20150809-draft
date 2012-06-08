@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mailx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.70 2012/06/07 21:42:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.71 2012/06/08 11:44:22 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mailx-8.1.2.20050715-r5.ebuild:
+  x86 stable wrt bug #419011
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> mailx-8.1.2.20050715-r5.ebuild:
   Marking mailx-8.1.2.20050715-r5 ppc for bug 419011
