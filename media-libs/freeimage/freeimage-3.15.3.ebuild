@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.3.ebuild,v 1.3 2012/04/22 16:37:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.3.ebuild,v 1.4 2012/06/08 23:48:21 zmedico Exp $
 
 EAPI=3
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils multilib
 
 MY_PN=FreeImage
 MY_PV=${PV//.}
