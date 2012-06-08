@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.13 2012/06/02 10:42:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.14 2012/06/08 11:41:51 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> liblognorm-0.3.4.ebuild:
+  x86 stable wrt bug #418759
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> liblognorm-0.3.4.ebuild:
   Stable for amd64, wrt bug #418759
