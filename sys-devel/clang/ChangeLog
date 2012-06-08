@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.70 2012/06/07 00:27:55 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.71 2012/06/08 13:20:02 mgorny Exp $
+
+  08 Jun 2012; Michał Górny <mgorny@gentoo.org> clang-9999.ebuild:
+  Enable cpp target by default wrt #418441.
 
 *clang-3.1-r4 (07 Jun 2012)
 

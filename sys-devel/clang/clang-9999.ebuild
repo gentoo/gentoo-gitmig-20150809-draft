@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.29 2012/04/13 14:14:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.30 2012/06/08 13:20:02 mgorny Exp $
 
 EAPI=4
 
@@ -94,7 +94,7 @@ src_configure() {
 	if use multitarget; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
 	else
-		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host-only"
+		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host,cpp"
 	fi
 
 	if use amd64; then
