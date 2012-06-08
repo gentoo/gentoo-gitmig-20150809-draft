@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-1.10.ebuild,v 1.3 2012/06/02 10:46:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-1.10.ebuild,v 1.4 2012/06/08 12:00:53 phajdan.jr Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]] ; then
 	#KEYWORDS=""
 else
 	SRC_URI="http://download.gna.org/nfoview/1.10/${P}.tar.gz"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="simple viewer for NFO files, which are ASCII art in the CP437 codepage"
