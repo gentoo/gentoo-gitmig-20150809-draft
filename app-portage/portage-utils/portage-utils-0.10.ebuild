@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.10.ebuild,v 1.5 2012/06/06 04:57:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.10.ebuild,v 1.6 2012/06/08 04:44:40 vapier Exp $
 
 EAPI="3"
 
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="small and fast portage helper tools written in C"
 HOMEPAGE="http://www.gentoo.org/"
@@ -14,6 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="static"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-x86-test.patch #412067
+}
 
 src_configure() {
 	use static && append-ldflags -static

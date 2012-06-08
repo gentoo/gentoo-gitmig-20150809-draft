@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.130 2012/06/06 04:57:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.131 2012/06/08 04:44:40 vapier Exp $
+
+  08 Jun 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/portage-utils-0.10-x86-test.patch, portage-utils-0.10.ebuild:
+  Fix tests failing on x86 #412067 by Toralf Förster.
 
   06 Jun 2012; Jeroen Roovers <jer@gentoo.org> portage-utils-0.10.ebuild:
   Stable for HPPA (bug #419663).
