@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13835 2012/06/08 13:05:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13836 2012/06/08 17:45:13 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (08 Jun 2012)
+# Masked for removal (#420109)
+# Depends on Devel-DProf, removed from perl-5.16.
+# Use dev-perl/Devel-NYTProf instead
+dev-perl/Devel-Profiler
 
 # Bernard Cafarelli <voyageur@gentoo.org> (08 Jun 2012)
 # Masked for removal in 30 days, bug #417357
