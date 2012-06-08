@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5d.ebuild,v 1.9 2011/01/09 13:58:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5d.ebuild,v 1.10 2012/06/08 23:28:02 zmedico Exp $
 
 EAPI="2"
-inherit toolchain-funcs eutils flag-o-matic
+inherit toolchain-funcs eutils flag-o-matic multilib
 
 MY_P=${PN}.${PV}
 
