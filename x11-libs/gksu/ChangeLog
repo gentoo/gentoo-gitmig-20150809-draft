@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.64 2012/05/05 03:52:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.65 2012/06/08 13:05:23 pacho Exp $
+
+  08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer from metadata as talked with him, bug #90641.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gksu-2.0.2.ebuild,
   gksu-2.0.2-r1.ebuild:
