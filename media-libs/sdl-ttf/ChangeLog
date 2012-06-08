@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.65 2012/03/18 19:06:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.66 2012/06/08 19:38:07 mr_bones_ Exp $
+
+  08 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> sdl-ttf-2.0.11.ebuild:
+  use prune_libtool_files instead of rolling our own
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> sdl-ttf-2.0.11.ebuild:
   alpha/ia64/sparc stable wrt #403995

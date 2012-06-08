@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.11.ebuild,v 1.8 2012/03/18 19:06:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.11.ebuild,v 1.9 2012/06/08 19:38:07 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -36,5 +36,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc CHANGES README
-	use static-libs || find "${D}" -type f -name '*.la' -exec rm {} +
+	use static-libs || prune_libtool_files --all
 }
