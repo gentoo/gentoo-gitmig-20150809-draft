@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.327 2012/05/29 20:44:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.328 2012/06/08 18:50:14 mr_bones_ Exp $
+
+*syslog-ng-3.3.5-r1 (08 Jun 2012)
+
+  08 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +syslog-ng-3.3.5-r1.ebuild, +files/syslog-ng-3.3.5-threading.patch,
+  +files/syslog-ng-3.3.5-utmpx.patch:
+  Add a couple of upstream patches
 
   29 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -files/syslog-ng-3.3.4-compile.patch, -files/syslog-ng-3.3.4-memleak.patch,
