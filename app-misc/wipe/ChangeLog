@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wipe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.27 2012/06/01 15:06:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.28 2012/06/08 11:57:22 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> wipe-2.3.1.ebuild:
+  x86 stable wrt bug #418623
 
   01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> wipe-2.3.1.ebuild:
   Stable for amd64, wrt bug #418623
