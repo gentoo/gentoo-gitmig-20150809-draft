@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.8.7.ebuild,v 1.1 2008/10/09 14:36:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.9.1.ebuild,v 1.1 2012/06/08 11:12:34 voyageur Exp $
 
+EAPI=3
 inherit gnustep-2
 
 DESCRIPTION="A workspace manager for GNUstep"
@@ -12,21 +13,19 @@ KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-#pdf support disabled, needs updated popplerkit patch
 IUSE=""
-DEPEND=">=gnustep-apps/systempreferences-1.0.1_p24791
-	>=dev-db/sqlite-3.2.8"
-RDEPEND="!gnustep-apps/desktop
-	!gnustep-apps/recycler"
 
-src_compile() {
+# GWMetadata compilation broken for now
+#DEPEND=">=gnustep-apps/systempreferences-1.0.1_p24791
+#	>=dev-db/sqlite-3.2.8"
+#RDEPEND="${DEPEND}"
+
+src_configure() {
 	local myconf=""
-
 	use kernel_linux && myconf="${myconf} --with-inotify"
 
 	egnustep_env
-	econf ${myconf}
-	egnustep_make
+	econf --disable-gwmetadata ${myconf}
 }
 
 src_install() {
