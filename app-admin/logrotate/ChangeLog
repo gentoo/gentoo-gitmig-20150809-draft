@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.115 2012/02/12 14:37:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.116 2012/06/08 12:51:53 pacho Exp $
+
+  08 Jun 2012; Pacho Ramos <pacho@gentoo.org> -files/logrotate-3.7.7-fbsd.patch,
+  -files/logrotate-3.7.7-ignore-hidden.patch,
+  -files/logrotate-3.7.7-weekly.patch,
+  -files/logrotate-3.7.9-atomic-create.patch,
+  -files/logrotate-3.7.9-no-cloexec.patch, -files/logrotate-3.7.9-shred.patch,
+  -files/logrotate-3.7.9-skip-empty-files.patch,
+  -files/logrotate-3.7.9-statefile.patch,
+  -files/logrotate-3.8.0-noasprintf.patch, -logrotate-3.7.8.ebuild,
+  -logrotate-3.7.9-r1.ebuild, -logrotate-3.7.9-r2.ebuild,
+  -logrotate-3.7.9.ebuild, -logrotate-3.8.0.ebuild, metadata.xml:
+  Drop maintainer from metadata as talked with him, bug #90641. Drop old.
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> logrotate-3.8.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #398529
