@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-3.0.0.57.4402.0_beta.ebuild,v 1.7 2012/04/17 13:36:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-3.0.0.57.4402.0_beta.ebuild,v 1.8 2012/06/08 02:57:49 zmedico Exp $
 
 # needs SRC_URI arrows
 EAPI=2
 
-inherit eutils versionator rpm nsplugins
+inherit eutils multilib versionator rpm nsplugins
 
 MY_P="${PN}-$(get_version_component_range 1-2)"
 DESCRIPTION="Google's photo organizer"
