@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan-plugin-gt-f720
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/ChangeLog,v 1.3 2011/04/21 14:29:09 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/ChangeLog,v 1.4 2012/06/08 02:16:33 zmedico Exp $
+
+  08 Jun 2012; Zac Medico <zmedico@gentoo.org>
+  iscan-plugin-gt-f720-0.0.1.ebuild:
+  inherit multilib for get_libdir
 
   21 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   iscan-plugin-gt-f720-0.0.1.ebuild:

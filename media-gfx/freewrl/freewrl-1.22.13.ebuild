@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13.ebuild,v 1.1 2012/06/06 19:33:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13.ebuild,v 1.2 2012/06/08 02:13:08 zmedico Exp $
 
 EAPI=4
 
-inherit nsplugins eutils flag-o-matic java-pkg-opt-2
+inherit nsplugins eutils flag-o-matic java-pkg-opt-2 multilib
 
 DESCRIPTION="VRML97 and X3D compliant browser, library, and web-browser plugin"
 HOMEPAGE="http://freewrl.sourceforge.net/"

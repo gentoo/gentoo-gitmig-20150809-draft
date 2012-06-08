@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.42 2012/06/06 19:33:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.43 2012/06/08 02:13:08 zmedico Exp $
+
+  08 Jun 2012; Zac Medico <zmedico@gentoo.org> freewrl-1.22.13.ebuild:
+  inherit multilib for get_libdir
 
 *freewrl-1.22.13 (06 Jun 2012)
 

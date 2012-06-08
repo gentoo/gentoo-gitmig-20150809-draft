@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/iscan-plugin-gt-f720-0.0.1.ebuild,v 1.4 2011/04/21 14:29:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f720/iscan-plugin-gt-f720-0.0.1.ebuild,v 1.5 2012/06/08 02:16:33 zmedico Exp $
 
 EAPI="2"
 
-inherit rpm
+inherit multilib rpm
 
 # Revision used by upstream
 SRC_REV="2"
