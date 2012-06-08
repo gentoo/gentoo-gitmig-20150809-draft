@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/Date-Pcalc-6.100.0.ebuild,v 1.2 2011/09/03 21:04:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/Date-Pcalc-6.100.0.ebuild,v 1.3 2012/06/08 18:05:45 tove Exp $
 
 EAPI=4
 
@@ -20,3 +20,4 @@ RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 mydoc="ToDo"
+PATCHES=( "${FILESDIR}"/6.100.0_identifier_before_numeric_constant.patch )
