@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r2.ebuild,v 1.6 2012/05/17 12:02:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r2.ebuild,v 1.7 2012/06/08 13:25:19 polynomial-c Exp $
 
 EAPI=4
 MY_P=${P/_/}
@@ -40,7 +40,8 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	epatch "${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-m4.patch
+		"${FILESDIR}"/${P}-m4.patch \
+		"${FILESDIR}"/${P}-gentoo_bug_334797.patch
 	AT_M4DIR="config/m4" eautoreconf
 }
 

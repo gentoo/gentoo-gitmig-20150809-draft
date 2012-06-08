@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rezound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.61 2012/05/17 12:02:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.62 2012/06/08 13:25:19 polynomial-c Exp $
+
+  21 May 2012; Lars Wendler <polynomial-c@gentoo.org>
+  rezound-0.12.3_beta-r2.ebuild,
+  +files/rezound-0.12.3_beta-gentoo_bug_334797.patch:
+  non-maintainer commit: Fixed long standing -O2 optimization bug. Thanks to
+  Petr Novak for reporting this in bug #334797 and to Martin von Gagern for
+  providing a working patch.
 
   17 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   rezound-0.12.3_beta-r2.ebuild:
