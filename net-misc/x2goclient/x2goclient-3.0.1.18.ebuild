@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.0.1.18.ebuild,v 1.3 2012/05/21 20:03:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.0.1.18.ebuild,v 1.4 2012/06/08 11:42:07 voyageur Exp $
 
 EAPI=4
 inherit eutils qt4-r2
@@ -16,7 +16,7 @@ IUSE="ldap"
 
 DEPEND="net-libs/libssh
 	net-print/cups
-	x11-libs/qt-core:4
+	x11-libs/qt-core:4[ssl]
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
 	ldap? ( net-nds/openldap )"
