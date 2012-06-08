@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.86 2012/05/29 13:38:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.87 2012/06/08 19:56:50 mr_bones_ Exp $
+
+  08 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> sdl-image-1.2.12.ebuild:
+  use prune_libtool_files instead of rolling our own
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> sdl-image-1.2.12.ebuild:
   keyword ~amd64-fbsd
