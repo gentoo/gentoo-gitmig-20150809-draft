@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.41 2009/02/26 23:52:04 lack Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.42 2012/06/08 12:59:34 pacho Exp $
+
+  08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer from metadata as talked with him, bug #90641.
 
   26 Feb 2009; Jim Ramsay <lack@gentoo.org> ChangeLog:
   Version cleanup, plus added patch for 2.6.27 compatibility (Bug #244756)
