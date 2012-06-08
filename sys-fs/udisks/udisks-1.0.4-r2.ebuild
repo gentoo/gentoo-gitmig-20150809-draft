@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.7 2012/06/07 09:21:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.8 2012/06/08 00:43:02 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info
@@ -11,17 +11,17 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86"
 IUSE="debug nls remote-access"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
-	>=dev-libs/glib-2.20
+	>=dev-libs/glib-2.28
 	>=dev-libs/libatasmart-0.18
 	>=sys-auth/polkit-0.104-r1
 	>=sys-apps/dbus-1.4.20
 	>=sys-apps/sg3_utils-1.27.20090411
 	>=sys-block/parted-3
-	|| ( >=sys-fs/udev-171-r6[gudev,hwdb] <sys-fs/udev-171[extras] )
+	|| ( >=sys-fs/udev-171-r5[gudev,hwdb] <sys-fs/udev-171[extras] )
 	>=sys-fs/lvm2-2.02.66"
 # util-linux -> mount, umount, swapon, swapoff (see also #403073)
 RDEPEND="${COMMON_DEPEND}
