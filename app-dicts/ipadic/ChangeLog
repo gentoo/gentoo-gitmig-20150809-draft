@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ipadic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.24 2012/06/02 10:47:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.25 2012/06/08 12:14:08 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ipadic-2.7.0-r2.ebuild:
+  x86 stable wrt bug #418533
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ipadic-2.7.0-r2.ebuild:
   Stable for amd64, wrt bug #418533

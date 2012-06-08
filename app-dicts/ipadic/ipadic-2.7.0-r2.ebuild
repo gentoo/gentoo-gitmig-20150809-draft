@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.7.0-r2.ebuild,v 1.3 2012/06/02 10:47:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.7.0-r2.ebuild,v 1.4 2012/06/08 12:14:08 phajdan.jr Exp $
 
 EAPI="4"
 inherit autotools eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.jp/projects/ipadic/"
 SRC_URI="mirror://sourceforge.jp/${PN}/24435/${P}.tar.gz"
 
 LICENSE="ipadic"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
 IUSE=""
 
