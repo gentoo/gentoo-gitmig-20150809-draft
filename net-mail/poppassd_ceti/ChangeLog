@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/poppassd_ceti
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.14 2012/06/02 11:29:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.15 2012/06/08 11:41:03 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  poppassd_ceti-1.8.5-r2.ebuild:
+  x86 stable wrt bug #419289
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> poppassd_ceti-1.8.5-r2.ebuild:
   Stable for amd64, wrt bug #419289
