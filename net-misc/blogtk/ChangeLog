@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/blogtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.25 2012/05/05 03:20:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.26 2012/06/08 12:56:10 pacho Exp $
+
+  08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer from metadata as talked with him, bug #90641.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> blogtk-2.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
