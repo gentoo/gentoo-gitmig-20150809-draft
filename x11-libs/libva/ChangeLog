@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.36 2012/06/08 15:30:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.37 2012/06/08 15:33:00 aballier Exp $
+
+  08 Jun 2012; Alexis Ballier <aballier@gentoo.org> libva-1.1.0.ebuild,
+  libva-9999.ebuild:
+  bump intel-driver version requirements as lastest version is required
 
 *libva-1.1.0 (08 Jun 2012)
 

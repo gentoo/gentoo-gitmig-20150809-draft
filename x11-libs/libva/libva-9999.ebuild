@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.6 2012/06/08 15:30:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.7 2012/06/08 15:33:00 aballier Exp $
 
 EAPI="3"
 
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 PDEPEND="video_cards_nvidia? ( x11-libs/vdpau-video )
 	video_cards_fglrx? ( x11-libs/xvba-video )
-	video_cards_intel? ( x11-libs/libva-intel-driver )
+	video_cards_intel? ( >=x11-libs/libva-intel-driver-1.0.18 )
 	"
 
 src_prepare() {
