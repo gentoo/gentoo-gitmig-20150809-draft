@@ -1,11 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.4 2012/06/08 08:11:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.5 2012/06/08 16:41:36 mr_bones_ Exp $
 
 EAPI=4
-
-DESCRIPTION="Cups PDF filters"
-HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
 
 if [[ "${PV}"=="9999" ]] ; then
 	inherit base autotools bzr
@@ -16,6 +13,8 @@ else
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.gz"
 	KEYWORDS=""
 fi
+DESCRIPTION="Cups PDF filters"
+HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
 
 LICENSE="GPL-2"
 SLOT="0"

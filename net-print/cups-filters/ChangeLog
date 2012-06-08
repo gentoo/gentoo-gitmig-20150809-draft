@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.8 2012/06/08 08:11:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.9 2012/06/08 16:41:36 mr_bones_ Exp $
+
+  08 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> cups-filters-9999.ebuild:
+  DESCRIPTION goes after inherit
 
   08 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
   Remanifest the patch as it changed.
