@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.857 2012/06/03 08:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.858 2012/06/08 22:06:51 vapier Exp $
+
+  08 Jun 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1-r1.ebuild,
+  glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild,
+  glibc-2.13-r2.ebuild, glibc-2.13-r4.ebuild, glibc-2.14.1-r2.ebuild,
+  glibc-2.14.1-r3.ebuild, glibc-2.14.ebuild, glibc-2.15-r1.ebuild,
+  glibc-2.15-r2.ebuild, glibc-2.9_p20081201-r3.ebuild, glibc-9999.ebuild:
+  Move to multiprocessing eclass for makeopts_jobs as pointed out by Christian
+  Ruppert.
 
   03 Jun 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.15-r2.ebuild:
   Update x32 patchset.
