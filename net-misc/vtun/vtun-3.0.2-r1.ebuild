@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-3.0.2-r1.ebuild,v 1.4 2012/06/07 21:36:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-3.0.2-r1.ebuild,v 1.5 2012/06/08 12:15:27 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://vtun.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ~sparc x86"
 IUSE="lzo socks5 ssl zlib"
 
 RDEPEND="ssl? ( dev-libs/openssl )
