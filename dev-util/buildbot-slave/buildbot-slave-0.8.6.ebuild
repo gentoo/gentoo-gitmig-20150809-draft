@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.6.ebuild,v 1.2 2012/06/07 21:09:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.6.ebuild,v 1.3 2012/06/08 07:44:54 radhermit Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="trial buildslave"
 DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 
-inherit distutils eutils user
+inherit distutils user
 
 DESCRIPTION="BuildBot Slave Daemon"
 HOMEPAGE="http://trac.buildbot.net/ http://code.google.com/p/buildbot/ http://pypi.python.org/pypi/buildbot-slave"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/buildbot-slave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.24 2012/06/07 21:09:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.25 2012/06/08 07:44:54 radhermit Exp $
+
+  08 Jun 2012; Tim Harder <radhermit@gentoo.org> buildbot-slave-0.8.3.ebuild,
+  buildbot-slave-0.8.5.ebuild, buildbot-slave-0.8.6.ebuild,
+  buildbot-slave-0.8.6_p1.ebuild:
+  Drop unused eutils inherit.
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> buildbot-slave-0.8.3.ebuild,
   buildbot-slave-0.8.5.ebuild, buildbot-slave-0.8.6.ebuild,
