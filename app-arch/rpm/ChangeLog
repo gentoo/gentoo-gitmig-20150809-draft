@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.148 2012/06/06 14:07:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.149 2012/06/08 17:57:47 ranger Exp $
+
+  08 Jun 2012; Brent Baude <ranger@gentoo.org> rpm-4.9.1.3.ebuild:
+  Marking rpm-4.9.1.3 ppc for bug 410949
 
   06 Jun 2012; Brent Baude <ranger@gentoo.org> rpm-4.9.1.3.ebuild:
   Marking rpm-4.9.1.3 ppc64 for bug 410949
