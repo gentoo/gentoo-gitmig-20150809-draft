@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/expect-lite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect-lite/ChangeLog,v 1.15 2012/06/03 19:32:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect-lite/ChangeLog,v 1.16 2012/06/08 11:35:46 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  expect-lite-4.3.0.ebuild:
+  x86 stable wrt bug #418929
 
   03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> expect-lite-4.3.0.ebuild:
   Stable for amd64, wrt bug #418929
