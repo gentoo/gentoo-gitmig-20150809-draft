@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.52 2012/04/01 15:12:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.53 2012/06/08 13:53:06 pacho Exp $
+
+  08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer from metadata as talked with him.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> elfkickers-3.0a.ebuild:
   sparc stable wrt #404735
