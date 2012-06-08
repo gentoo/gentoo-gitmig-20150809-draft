@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.3_p1.ebuild,v 1.4 2012/06/06 04:37:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.3_p1.ebuild,v 1.5 2012/06/08 18:22:30 ranger Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -40,7 +40,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc postgres rpz sdb-ldap
 selinux ssl static-libs threads urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
