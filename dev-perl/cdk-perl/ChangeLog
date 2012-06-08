@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/cdk-perl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.23 2011/02/09 17:01:24 idl0r Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.24 2012/06/08 20:07:12 tove Exp $
+
+*cdk-perl-20120324 (08 Jun 2012)
+
+  08 Jun 2012; Torsten Veller <tove@gentoo.org> +cdk-perl-20120324.ebuild:
+  Version bump. Fixes bug #420171
 
   13 Mar 2007; Michael Cummings <mcummings@gentoo.org>
   cdk-perl-20031210.ebuild:
