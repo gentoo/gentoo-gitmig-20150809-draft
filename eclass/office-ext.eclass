@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.5 2012/05/10 09:33:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.6 2012/06/08 03:36:09 vapier Exp $
 
 # @ECLASS: office-ext.eclass
-# @AUTHOR:
-# Tomáš Chvátal <scarabeus@gentoo.org>
 # @MAINTAINER:
 # The office team <openoffice@gentoo.org>
+# @AUTHOR:
+# Tomáš Chvátal <scarabeus@gentoo.org>
 # @BLURB: Eclass for installing libreoffice/openoffice extensions
 # @DESCRIPTION:
 # Eclass for easing maitenance of libreoffice/openoffice extensions.
