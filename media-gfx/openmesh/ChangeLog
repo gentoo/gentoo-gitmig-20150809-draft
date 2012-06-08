@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/openmesh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.21 2012/02/20 22:30:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.22 2012/06/08 02:55:55 zmedico Exp $
+
+  08 Jun 2012; Zac Medico <zmedico@gentoo.org> openmesh-2.0_rc5.ebuild:
+  inherit flag-o-matic for append-cppflags
 
 *openmesh-2.1 (20 Feb 2012)
 
