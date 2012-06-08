@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.4.ebuild,v 1.1 2012/05/03 21:01:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.4.ebuild,v 1.2 2012/06/08 20:12:04 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic eutils qt4-r2 games
@@ -53,11 +53,10 @@ src_prepare() {
 	boost_ver=${boost_ver/./_}
 
 	einfo "Using boost version ${boost_ver}"
-	append-cxxflags \
-		-I/usr/include/boost-${boost_ver}
+	append-cppflags \
+		-I/usr/include/boost-${boost_ver} -DBOOST_FILESYSTEM_VERSION=2
 	append-ldflags \
 		-L/usr/$(get_libdir)/boost-${boost_ver}
-	append-flags -DBOOST_FILESYSTEM_VERSION=2
 
 	export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
 	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
