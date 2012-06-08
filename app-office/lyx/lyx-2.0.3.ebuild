@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.3.ebuild,v 1.10 2012/05/28 15:58:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.3.ebuild,v 1.11 2012/06/08 15:06:55 aballier Exp $
 
 EAPI=3
 
@@ -129,8 +129,8 @@ src_install() {
 		doins "${T}"/hebrew.bind || die
 	fi
 
-	doicon ${PN} "$S/development/Win32/packaging/icons/lyx_32x32.png"
-	make_desktop_entry ${PN} "LyX" "/usr/share/pixmaps/lyx_32x32.png" "Office" "MimeType=application/x-lyx;"
+	newicon -s 32 "$S/development/Win32/packaging/icons/lyx_32x32.png" ${PN}.png
+	make_desktop_entry ${PN} "LyX" "${PN}" "Office" "MimeType=application/x-lyx;"
 
 	# fix for bug 91108
 	if use latex ; then

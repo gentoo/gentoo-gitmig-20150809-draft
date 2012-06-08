@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.262 2012/05/28 15:58:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.263 2012/06/08 15:06:55 aballier Exp $
+
+  08 Jun 2012; Alexis Ballier <aballier@gentoo.org> lyx-1.6.10.ebuild,
+  lyx-2.0.3.ebuild:
+  fix doicon mess, bug #420117 by Richard Freeman
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> lyx-2.0.3.ebuild:
   alpha/ia64/sparc stable wrt #411941
