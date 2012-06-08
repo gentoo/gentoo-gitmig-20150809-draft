@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.15 2011/10/05 18:58:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.16 2012/06/08 03:01:10 zmedico Exp $
 
 EAPI="1"
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib user
 
 # gphoto and v4l are handled by their usual USE flags.
 # The pint backend was disabled because I could not get it to compile.
