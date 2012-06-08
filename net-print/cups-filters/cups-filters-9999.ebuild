@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.6 2012/06/08 19:45:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.7 2012/06/08 22:33:42 dilfridge Exp $
 
 EAPI=4
 
@@ -34,6 +34,13 @@ RDEPEND="
 	tiff? ( media-libs/tiff )
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-png.patch"
+	"${FILESDIR}/${P}-imagetopdf.patch"
+	"${FILESDIR}/${P}-imagetoraster.patch"
+)
+
 
 src_prepare() {
 	base_src_prepare

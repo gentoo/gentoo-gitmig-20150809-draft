@@ -1,0 +1,15 @@
+=== modified file 'Makefile.am'
+--- Makefile.am	2012-06-08 21:57:38 +0000
++++ Makefile.am	2012-06-08 22:10:33 +0000
+@@ -479,7 +479,9 @@
+ 	filter/common.h \
+ 	filter/imagetoraster.c
+ imagetoraster_CFLAGS = $(CUPS_CFLAGS)
+-imagetoraster_LDADD = $(CUPS_LIBS)
++imagetoraster_LDADD = \
++	$(CUPS_LIBS) \
++	libcupsfilters.la
+ 
+ pdftoijs_SOURCES = \
+ 	filter/pdftoijs.cxx \
+
