@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nat-traverse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nat-traverse/ChangeLog,v 1.7 2012/06/02 11:38:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nat-traverse/ChangeLog,v 1.8 2012/06/08 11:29:20 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nat-traverse-0.5.ebuild:
+  x86 stable wrt bug #419315
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> nat-traverse-0.5.ebuild:
   Stable for amd64, wrt bug #419315
