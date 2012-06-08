@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/html2text-3.200.3.ebuild,v 1.3 2012/06/02 10:44:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/html2text-3.200.3.ebuild,v 1.4 2012/06/08 11:33:53 phajdan.jr Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/chardet
