@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.50 2012/06/07 22:14:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.51 2012/06/08 11:43:28 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  eselect-rails-0.18.ebuild:
+  x86 stable wrt bug #418489
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> eselect-rails-0.18.ebuild:
   Marking eselect-rails-0.18 ppc for bug 418489
