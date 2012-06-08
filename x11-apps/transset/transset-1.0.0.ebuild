@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/transset/transset-1.0.0.ebuild,v 1.1 2012/06/06 13:02:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/transset/transset-1.0.0.ebuild,v 1.2 2012/06/08 00:37:02 ssuominen Exp $
 
 EAPI=4
 inherit xorg-2
@@ -15,3 +15,5 @@ IUSE=""
 RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}
 	>=x11-proto/xproto-7.0.17"
+
+PATCHES=( "${FILESDIR}"/${P}-no_transset-df.patch )
