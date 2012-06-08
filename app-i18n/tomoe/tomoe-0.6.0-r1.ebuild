@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0-r1.ebuild,v 1.4 2012/06/02 11:28:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0-r1.ebuild,v 1.5 2012/06/08 11:52:50 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tomoe/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc hyperestraier mysql ruby python static-libs subversion"
 
 RDEPEND=">=dev-libs/glib-2.4
