@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gcolor2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.32 2012/05/05 04:53:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.33 2012/06/08 13:07:10 pacho Exp $
+
+  08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer from metadata as talked with him, bug #90641.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gcolor2-0.4-r3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
