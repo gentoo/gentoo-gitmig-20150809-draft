@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openslp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.54 2012/06/07 22:04:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.55 2012/06/08 12:09:22 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> openslp-1.2.1-r2.ebuild:
+  x86 stable wrt bug #419277
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> openslp-1.2.1-r2.ebuild:
   Marking openslp-1.2.1-r2 ppc for bug 419277
