@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.28 2012/06/07 22:28:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.29 2012/06/08 11:38:46 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  debugedit-5.3.5-r1.ebuild:
+  x86 stable wrt bug #418947
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> debugedit-5.3.5-r1.ebuild:
   Marking debugedit-5.3.5-r1 ppc for bug 418947
