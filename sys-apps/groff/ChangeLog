@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.123 2012/04/26 15:12:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.124 2012/06/08 05:17:13 vapier Exp $
+
+  08 Jun 2012; Mike Frysinger <vapier@gentoo.org> groff-1.21-r1.ebuild,
+  groff-1.21.ebuild:
+  Depend on yacc when LINGUAS=ja #385613 by Bryan Gardiner.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> groff-1.21-r1.ebuild:
   keyword ~amd64-fbsd
