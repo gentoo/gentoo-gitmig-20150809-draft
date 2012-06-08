@@ -1,6 +1,6 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.270 2012/05/28 16:31:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.271 2012/06/08 00:58:36 williamh Exp $
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> iptables-1.4.13.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #414329
@@ -10,7 +10,7 @@
   21 May 2012; William Hubbs <williamh@gentoo.org>
   +files/ip6tables-1.4.13.confd, +files/iptables-1.4.13.confd,
   +files/iptables-1.4.13.init, +iptables-1.4.13-r1.ebuild:
-  /tmp/msg
+  Make "use logger" configurable by the user. This is for bug #387751.
 
   15 May 2012; Jeroen Roovers <jer@gentoo.org> iptables-1.4.13.ebuild:
   Stable for HPPA (bug #414329).
