@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.10.ebuild,v 1.11 2012/06/08 15:06:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.10.ebuild,v 1.12 2012/06/08 15:45:26 hasufell Exp $
 
 EAPI=2
 
 PYTHON_DEPEND="2"
 
-inherit qt4-r2 eutils flag-o-matic font python toolchain-funcs
+inherit gnome2-utils qt4-r2 eutils flag-o-matic font python toolchain-funcs
 
 MY_P="${P/_}"
 
@@ -138,8 +138,13 @@ src_install() {
 	python_convert_shebangs -r 2 "${D}"/usr/share/${PN}
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	font_pkg_postinst
+	gnome2_icon_cache_update
 
 	# fix for bug 91108
 	if use latex ; then
@@ -159,6 +164,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	gnome2_icon_cache_update
+
 	if use latex ; then
 		texhash
 	fi
