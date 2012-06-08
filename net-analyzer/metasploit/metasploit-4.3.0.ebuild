@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.3.0.ebuild,v 1.1 2012/05/02 04:42:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.3.0.ebuild,v 1.2 2012/06/08 09:28:04 patrick Exp $
 
 EAPI="3"
 inherit eutils
@@ -72,7 +72,7 @@ src_install() {
 			"Metasploit Framework" \
 			metasploit \
 			'GNOME;System;Network;' &&
-		doicon "${FILESDIR}"/metasploit.xpm
+		doicon "${FILESDIR}"/metasploit.icon
 
 	# Avoid useless revdep-rebuild trigger #377617
 	dodir /etc/revdep-rebuild/

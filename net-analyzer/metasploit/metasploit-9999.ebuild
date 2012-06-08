@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.1 2011/08/03 05:56:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.2 2012/06/08 09:28:04 patrick Exp $
 
 EAPI="3"
 inherit eutils subversion
@@ -75,7 +75,7 @@ src_install() {
 			"Metasploit Framework" \
 			metasploit \
 			'GNOME;System;Network;' &&
-		doicon "${FILESDIR}"/metasploit.xpm
+		doicon "${FILESDIR}"/metasploit.icon
 }
 
 pkg_postinst() {
