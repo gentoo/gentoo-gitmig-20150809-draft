@@ -1,6 +1,9 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.40 2012/06/02 10:36:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.41 2012/06/08 11:58:07 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> devede-3.21.0.ebuild:
+  x86 stable wrt bug #419139
 
   02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> devede-3.21.0.ebuild:
   Stable for amd64, wrt bug #419139
