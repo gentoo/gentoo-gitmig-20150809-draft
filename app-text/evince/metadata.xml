@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>gnome</herd>
-	<maintainer>
-		<email>dang@gentoo.org</email>
-	</maintainer>
 	<use>
 		<flag name="gnome">Enable the use of <pkg>gnome-base/gconf</pkg> to honour
 		lockdown settings</flag>
