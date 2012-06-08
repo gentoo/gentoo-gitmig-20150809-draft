@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106.ebuild,v 1.1 2012/06/08 00:11:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106.ebuild,v 1.2 2012/06/08 00:12:06 ssuominen Exp $
 
 EAPI=4
 inherit eutils user pam systemd
@@ -32,7 +32,7 @@ PDEPEND="
 		) )
 	kde? ( || (
 		sys-auth/polkit-kde-agent
-		sys-auth/polkit-kde 
+		sys-auth/polkit-kde
 		) )
 	!systemd? (
 		>=sys-auth/consolekit-0.4.5_p2012[policykit]
@@ -82,4 +82,3 @@ src_install() {
 		doins src/examples/{*.c,*.policy*}
 	fi
 }
-
