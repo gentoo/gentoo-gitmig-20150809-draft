@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-23.4.ebuild,v 1.1 2012/05/15 17:44:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-23.4.ebuild,v 1.2 2012/06/08 18:31:31 ulm Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ DEPEND="app-arch/xz-utils"
 S="${WORKDIR}/lispref"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-23.3-direntry.patch"
+	epatch "${FILESDIR}/${P}-direntry.patch"
 }
 
 src_compile() {
