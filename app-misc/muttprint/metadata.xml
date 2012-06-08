@@ -9,6 +9,9 @@
 		Pretty printing of your mails
 	</longdescription>
 	<longdescription lang="es">
-		Impresión elegante de tus correos
+		Impresión elegante de sus correos
 	</longdescription>
+	<use>
+		<flag name='doc'>Builds documentation</flag>
+	</use>
 </pkgmetadata>

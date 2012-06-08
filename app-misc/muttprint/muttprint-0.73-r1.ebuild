@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.73-r1.ebuild,v 1.2 2012/06/03 21:36:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.73-r1.ebuild,v 1.3 2012/06/08 18:20:27 nimiux Exp $
 
 EAPI=4
 
@@ -24,6 +24,8 @@ DEPEND="dev-lang/perl
 RDEPEND="dev-lang/perl
 	virtual/latex-base
 	dev-texlive/texlive-latexextra"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 patch_docs() {
 	sed -i -e 's/db2pdf/docbook2pdf/' "${S}"/configure.ac || die
@@ -61,7 +63,7 @@ src_configure() {
 }
 
 src_compile() {
-	# Paralell build does not work when USE="doc"
+	# Parallel build does not work when USE="doc"
 	emake -j1
 }
 
