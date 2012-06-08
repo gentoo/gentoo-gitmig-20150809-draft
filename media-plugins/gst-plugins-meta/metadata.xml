@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <herd>gstreamer</herd>
-<maintainer>
-<email>dang@gentoo.org</email>
-<name>Daniel Gryniewicz</name>
-</maintainer>
 <longdescription lang="en">
 This package pulls in various gstreamer plugins based on USE flags.  It's
 intended to be used as a runtime-depend for apps that need various gstreamer
