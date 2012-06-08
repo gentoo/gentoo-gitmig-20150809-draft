@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.188 2012/05/29 13:06:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.189 2012/06/08 18:13:24 ranger Exp $
+
+  08 Jun 2012; Brent Baude <ranger@gentoo.org> mediawiki-1.18.2.ebuild:
+  Marking mediawiki-1.18.2 ppc for bug 409513
 
   29 May 2012; Tim Harder <radhermit@gentoo.org> -mediawiki-1.19.0_rc1.ebuild:
   Remove old.
