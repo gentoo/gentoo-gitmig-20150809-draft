@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.139 2012/05/22 22:54:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.140 2012/06/08 04:49:52 vapier Exp $
+
+  08 Jun 2012; Mike Frysinger <vapier@gentoo.org> xbmc-11.0.ebuild,
+  xbmc-9999.ebuild:
+  Update path to xbmc icon #419989 by candrews.
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> xbmc-11.0.ebuild:
   marked x86 per bug 415907

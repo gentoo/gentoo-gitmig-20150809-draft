@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.114 2012/05/22 16:45:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.115 2012/06/08 04:49:52 vapier Exp $
 
 EAPI="4"
 
@@ -215,7 +215,7 @@ src_install() {
 
 	insinto /usr/share/applications
 	doins tools/Linux/xbmc.desktop
-	doicon tools/Linux/xbmc.png
+	newicon tools/Linux/xbmc-48x48.png xbmc.png
 
 	insinto "$(python_get_sitedir)" #309885
 	doins tools/EventClients/lib/python/xbmcclient.py || die
