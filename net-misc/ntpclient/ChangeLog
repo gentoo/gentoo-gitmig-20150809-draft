@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntpclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ChangeLog,v 1.5 2012/06/02 15:17:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ChangeLog,v 1.6 2012/06/08 13:55:26 pacho Exp $
+
+  08 Jun 2012; Pacho Ramos <pacho@gentoo.org> -ntpclient-2007.365.ebuild,
+  metadata.xml:
+  Drop maintainer from metadata as talked with him.
 
 *ntpclient-2010.365 (02 Jun 2012)
 
