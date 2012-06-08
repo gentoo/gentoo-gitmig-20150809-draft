@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.2.0.ebuild,v 1.2 2012/04/16 13:27:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.2.0-r1.ebuild,v 1.1 2012/06/08 13:16:37 pesa Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -139,6 +139,6 @@ src_install() {
 		done
 	fi
 
-	doicon resources/universalIndentGUI.png
-	make_desktop_entry ${PN} UniversalIndentGUI universalIndentGUI "Qt;Development"
+	newicon resources/universalIndentGUI_512x512.png ${PN}
+	make_desktop_entry ${PN} UniversalIndentGUI ${PN} "Qt;Development"
 }
