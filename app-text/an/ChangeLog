@@ -1,6 +1,9 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.32 2012/06/09 06:48:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.33 2012/06/09 14:39:02 jer Exp $
+
+  09 Jun 2012; Jeroen Roovers <jer@gentoo.org> an-0.95.3.2.ebuild:
+  Stable for HPPA (bug #418637).
 
   09 Jun 2012; Jeff Horelick <jdhore@gentoo.org> an-0.95.3.2.ebuild:
   marked x86 per bug 418637
