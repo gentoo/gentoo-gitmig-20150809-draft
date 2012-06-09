@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20.1-r2.ebuild,v 1.6 2012/06/08 00:41:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20.1-r2.ebuild,v 1.7 2012/06/09 09:02:21 maekke Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2 autotools
 	#KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-linux"
+	KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-linux"
 fi
 
 MY_PV=${PV/_/-}
