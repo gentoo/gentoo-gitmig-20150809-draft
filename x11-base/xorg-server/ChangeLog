@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.662 2012/06/09 18:54:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.663 2012/06/09 19:49:30 chithanh Exp $
+
+  09 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/xdm.initd-4, -files/xdm.initd-6, -files/xdm.initd-7,
+  -files/xorg-server-1.11-pointer-to-int-cast.patch,
+  -xorg-server-1.10.4-r1.ebuild, -xorg-server-1.10.6.ebuild,
+  -xorg-server-1.11.2-r1.ebuild, -xorg-server-1.11.2-r2.ebuild,
+  -xorg-server-1.11.3.ebuild, -xorg-server-1.11.4.ebuild,
+  -xorg-server-1.12.0-r1.ebuild, -xorg-server-1.12.0.ebuild,
+  -xorg-server-1.12.1.ebuild:
+  Drop vulnerable versions.
 
   09 Jun 2012; Raúl Porcel <armin76@gentoo.org> xorg-server-1.10.6-r1.ebuild,
   xorg-server-1.11.4-r1.ebuild:
