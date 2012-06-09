@@ -1,6 +1,36 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.62 2012/05/18 08:12:04 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.63 2012/06/09 13:16:12 aidecoe Exp $
+
+*dracut-019 (09 Jun 2012)
+
+  09 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-019.ebuild,
+  +files/dracut-019-multipath-udev-rules.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - initqueue/online hook 
+  - fixes for ifcfg write out 
+  - rootfs-block: avoid remount when options don't change 
+  - virtfs root filesystem support 
+  - cope with systemd-udevd 
+  - mount tmpfs with strictatime 
+  - include all kernel/drivers/net/phy drivers 
+  - add debug_on() and debug_off() functions 
+  - add arguments for source_hook() and source_all() 
+  - cleanup hook 
+  - plymouth: get consoledev from /sys/class/tty/console/active 
+  - install xhci-hcd kernel module 
+  - dracut: new "--mount" option 
+  - lsinitrd: new option --printsize 
+  - ARM storage kernel modules added 
+  - /etc/initrd-release in the initrd 
+  - vlan support 
+  - full bonding and bridge support 
+  - removed scsi_wait_scan kernel module from standard install 
+  - support rd.luks.allow-discards and honor options in crypttab 
+  - lots of bugfixes 
 
   18 May 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-018-r1.ebuild:
   Added 'bootchart' module.
