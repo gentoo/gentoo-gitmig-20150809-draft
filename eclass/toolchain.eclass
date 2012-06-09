@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.548 2012/06/05 17:08:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.549 2012/06/09 06:56:14 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -943,7 +943,7 @@ gcc-compiler-configure() {
 			fi
 
 			# Enable hardvfp
-			if [[ $(tc-is-softfloat) == no ]] && \
+			if [[ $(tc-is-softfloat) == "no" ]] && \
 			   [[ ${CTARGET} == armv[67]* ]] && \
 			   tc_version_is_at_least "4.5"
 			then
@@ -1083,8 +1083,16 @@ gcc_do_configure() {
 		confgcc+=" $(use_enable lto)"
 	fi
 
-	[[ $(tc-is-softfloat) == "yes" ]] && confgcc+=" --with-float=soft"
-	[[ $(tc-is-hardfloat) == "yes" ]] && confgcc+=" --with-float=hard"
+	case $(tc-is-softfloat) in
+	yes)    confgcc+=" --with-float=soft" ;;
+	softfp) confgcc+=" --with-float=softfp" ;;
+	*)
+		# If they've explicitly opt-ed in, do hardfloat,
+		# otherwise let the gcc default kick in.
+		[[ ${CTARGET//_/-} == *-hardfloat-* ]] \
+			&& confgcc+=" --with-float=hard"
+		;;
+	esac
 
 	# Native Language Support
 	if use nls ; then
