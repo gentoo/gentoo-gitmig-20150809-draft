@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.18 2012/06/06 23:37:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.19 2012/06/09 14:29:42 sping Exp $
+
+  09 Jun 2012; Sebastian Pipping <sping@gentoo.org> gitg-0.0.6.ebuild,
+  gitg-0.1.0.ebuild, gitg-0.1.2.ebuild, gitg-0.2.2.ebuild, gitg-0.2.4.ebuild,
+  gitg-0.2.5.ebuild:
+  Fix homepage link (bug #420019)
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> gitg-0.1.2.ebuild:
   marked x86 per bug 419893
