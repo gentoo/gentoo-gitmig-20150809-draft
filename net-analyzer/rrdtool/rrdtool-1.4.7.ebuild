@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7.ebuild,v 1.1 2012/06/02 14:13:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7.ebuild,v 1.2 2012/06/09 13:30:11 maksbotan Exp $
 
 EAPI="4"
 
 GENTOO_DEPEND_ON_PERL="no"
 PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit eutils distutils flag-o-matic multilib perl-module autotools
@@ -40,10 +41,7 @@ DEPEND="${RDEPEND}
 DISTUTILS_SETUP_FILES=("bindings/python|setup.py")
 
 pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use python && python_pkg_setup
 }
 
 src_prepare() {
