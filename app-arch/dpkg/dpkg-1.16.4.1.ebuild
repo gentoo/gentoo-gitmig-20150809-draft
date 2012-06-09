@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.4.ebuild,v 1.1 2012/06/08 15:58:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.4.1.ebuild,v 1.1 2012/06/09 13:52:42 jer Exp $
 
 EAPI=4
 
