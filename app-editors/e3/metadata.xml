@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>emacs</herd>
-<longdescription>
+	<herd>emacs</herd>
+	<longdescription>
   e3 is a full-screen, user-friendly text editor with an interface similar to
   that of either WordStar, Emacs, Pico, Nedit, or vi. It's heavily optimized
   for size and independent of libc or any other libraries, making it useful
