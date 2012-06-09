@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.66 2012/06/05 19:02:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.67 2012/06/09 04:47:30 floppym Exp $
 
 EAPI=4
 
@@ -208,10 +208,11 @@ src_prepare() {
 
 	# autogen.sh does more than just run autotools
 	if [[ -n ${DO_AUTORECONF} ]] ; then
-	#	sed -i -e '/^autoreconf/s:^:set +e; e:' autogen.sh || die
-	#	(. ./autogen.sh) || die
-		autotools_env_setup
-		./autogen.sh || die
+		sed -i -e '/^autoreconf/s:^:set +e; e:' autogen.sh || die
+		(
+			autopoint() { :; }
+			. ./autogen.sh
+		) || die
 	fi
 
 	# install into the right dir for eselect #372735
@@ -225,7 +226,7 @@ src_prepare() {
 		use grub_platforms_${i} && GRUB_ENABLED_PLATFORMS+=" ${i}"
 	done
 	[[ -z ${GRUB_ENABLED_PLATFORMS} ]] && GRUB_ENABLED_PLATFORMS="guessed"
-	elog "Going to build following platforms: ${GRUB_ENABLED_PLATFORMS}"
+	einfo "Going to build following platforms: ${GRUB_ENABLED_PLATFORMS}"
 }
 
 src_configure() {
