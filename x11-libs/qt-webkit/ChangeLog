@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.153 2012/05/22 19:47:43 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.154 2012/06/09 20:49:03 pesa Exp $
+
+  09 Jun 2012; Davide Pesavento <pesa@gentoo.org> qt-webkit-4.8.2.ebuild:
+  Turn the libxml2[icu] blocker into a USE dep because portage displays better
+  error messages for unsatisfied USE deps than for blockers.
 
   22 May 2012; Michael Palimaka <kensington@gentoo.org> qt-webkit-4.8.2.ebuild:
   Fix build with GCC 4.7, wrt bug #417147 by Joe Kappus <joecool1029@gmail.com>.
