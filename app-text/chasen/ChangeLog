@@ -1,6 +1,10 @@
 # ChangeLog for app-text/chasen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.47 2012/05/06 19:05:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.48 2012/06/09 19:10:36 armin76 Exp $
+
+  09 Jun 2012; Raúl Porcel <armin76@gentoo.org> chasen-2.4.0.ebuild,
+  chasen-2.4.4.ebuild, chasen-2.4.4-r1.ebuild, chasen-2.4.4-r2.ebuild:
+  Drop sparc keywords
 
   06 May 2012; Mark Loeser <halcy0n@gentoo.org> chasen-2.4.0.ebuild,
   chasen-2.4.4.ebuild:
