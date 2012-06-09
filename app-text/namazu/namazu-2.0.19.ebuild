@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.19.ebuild,v 1.1 2009/03/12 16:44:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.19.ebuild,v 1.2 2012/06/09 19:00:57 armin76 Exp $
 
 inherit eutils elisp-common
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.namazu.org/"
 SRC_URI="http://www.namazu.org/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 
 DEPEND=">=dev-perl/File-MMagic-1.20
