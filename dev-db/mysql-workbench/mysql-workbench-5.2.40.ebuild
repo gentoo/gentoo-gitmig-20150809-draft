@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.40.ebuild,v 1.1 2012/05/17 11:21:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.40.ebuild,v 1.2 2012/06/09 08:02:10 graaff Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ SRC_URI="mirror://mysql/Downloads/MySQLGUITools/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug doc nls static-libs"
+IUSE="debug doc gnome-keyring nls static-libs"
 
 CDEPEND="dev-db/sqlite:3
 	>=x11-libs/gtk+-2.6:2
@@ -41,6 +41,7 @@ CDEPEND="dev-db/sqlite:3
 	dev-python/pexpect
 	>=dev-python/paramiko-1.7.4
 	doc? ( dev-python/pysqlite:2 )
+	gnome-keyring? ( gnome-base/libgnome-keyring )
 	nls? ( sys-devel/gettext )"
 RDEPEND="${CDEPEND}
 	app-admin/sudo
