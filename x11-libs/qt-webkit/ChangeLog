@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.154 2012/06/09 20:49:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.155 2012/06/09 20:53:45 pesa Exp $
+
+  09 Jun 2012; Davide Pesavento <pesa@gentoo.org> qt-webkit-4.6.3-r1.ebuild,
+  qt-webkit-4.6.3-r2.ebuild, qt-webkit-4.7.4.ebuild:
+  Drop redundant append-flags (already done in qt4-build.eclass).
 
   09 Jun 2012; Davide Pesavento <pesa@gentoo.org> qt-webkit-4.8.2.ebuild:
   Turn the libxml2[icu] blocker into a USE dep because portage displays better

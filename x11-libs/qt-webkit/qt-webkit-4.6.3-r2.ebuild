@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.6.3-r2.ebuild,v 1.4 2012/01/03 08:56:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.6.3-r2.ebuild,v 1.5 2012/06/09 20:53:45 pesa Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -38,11 +38,6 @@ pkg_setup() {
 	QCONFIG_DEFINE="QT_WEBKIT"
 
 	qt4-build_pkg_setup
-}
-
-src_prepare() {
-	[[ $(tc-arch) == "ppc64" ]] && append-flags -mminimal-toc #241900
-	qt4-build_src_prepare
 }
 
 src_configure() {
