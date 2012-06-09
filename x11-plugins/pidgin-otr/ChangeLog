@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-otr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.26 2012/06/08 18:04:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.27 2012/06/09 19:10:23 armin76 Exp $
+
+  09 Jun 2012; Raúl Porcel <armin76@gentoo.org> pidgin-otr-3.2.0.ebuild,
+  pidgin-otr-3.2.1.ebuild:
+  Drop sparc keywords
 
   08 Jun 2012; Brent Baude <ranger@gentoo.org> pidgin-otr-3.2.1.ebuild:
   Marking pidgin-otr-3.2.1 ppc for bug 416263
