@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.8.ebuild,v 1.3 2012/02/20 23:52:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.8.ebuild,v 1.4 2012/06/09 23:18:48 zmedico Exp $
 
 EAPI="4"
 
-inherit multilib flag-o-matic autotools
+inherit autotools eutils flag-o-matic multilib
 
 DESCRIPTION="Snd is a sound editor"
 HOMEPAGE="http://ccrma.stanford.edu/software/snd/"
