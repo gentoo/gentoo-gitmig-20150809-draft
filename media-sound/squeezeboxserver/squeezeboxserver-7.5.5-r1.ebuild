@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.5-r1.ebuild,v 1.1 2011/11/07 21:41:50 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.5-r1.ebuild,v 1.2 2012/06/09 23:21:17 zmedico Exp $
 
 EAPI="3"
 
-inherit eutils
+inherit eutils multilib user
 
 MAJOR_VER="${PV:0:3}"
 MINOR_VER="${PV:4:1}"
