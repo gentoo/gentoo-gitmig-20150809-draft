@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.3-r3.ebuild,v 1.5 2012/05/19 08:04:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.3-r3.ebuild,v 1.6 2012/06/09 23:13:11 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils qt4-r2
+inherit eutils qt4-r2 user
 
 MY_P="${PN/murmur/mumble}-${PV/_/~}"
 

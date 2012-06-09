@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2-r1.ebuild,v 1.8 2010/04/24 17:00:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/rplay-3.3.2-r1.ebuild,v 1.9 2012/06/09 23:15:53 zmedico Exp $
 
-inherit autotools eutils multilib
+inherit autotools eutils multilib user
 
 DESCRIPTION="Play sounds on remote Unix systems, without sending audio data over the network."
 HOMEPAGE="http://rplay.doit.org/"
