@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/alienarena
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.38 2012/05/03 03:23:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.39 2012/06/09 03:53:33 mr_bones_ Exp $
+
+  09 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  alienarena-20111227.ebuild:
+  use internal ode since alienarena doesn't work with dev-games/ode-0.12 (bug
+  #420327)
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> alienarena-20110311.ebuild,
   alienarena-20111227.ebuild:

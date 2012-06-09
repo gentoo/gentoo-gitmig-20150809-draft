@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20111227.ebuild,v 1.4 2012/05/03 03:23:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20111227.ebuild,v 1.5 2012/06/09 03:53:33 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -44,7 +44,7 @@ src_configure() {
 		--disable-silent-rules \
 		--disable-dependency-tracking \
 		--with-icondir=/usr/share/pixmaps \
-		--with-system-libode \
+		--without-system-libode \
 		$(use_enable !dedicated client) \
 		$(use_with dga xf86dga) \
 		$(use_with vidmode xf86vm)
