@@ -1,0 +1,25 @@
+--- herbstluftwm-0.3/rules.mk
++++ herbstluftwm-0.3/rules.mk
+@@ -4,18 +4,14 @@
+ rb: clean all
+ 
+ $(TARGET): $(OBJ)
+-	$(call colorecho,LD,$(TARGET))
+-	@$(LD) -o $@ $(LDFLAGS)  $(OBJ) $(LIBS)
++	$(LD) -o $@ $(LDFLAGS)  $(OBJ) $(LIBS)
+ 
+ $(SRCDIR)/%.o: $(SRCDIR)/%.c $(HEADER)
+-	$(call colorecho,CC,$<)
+-	@$(CC) -c $(CFLAGS) -o $@ $<
++	$(CC) -c $(CFLAGS) -o $@ $<
+ 
+ clean:
+-	$(call colorecho,RM,$(TARGET))
+-	@rm -f $(TARGET)
+-	$(call colorecho,RM,$(OBJ))
+-	@rm -f $(OBJ)
++	rm -f $(TARGET)
++	rm -f $(OBJ)
+ 
+ info:
+ 	@echo Some Info:

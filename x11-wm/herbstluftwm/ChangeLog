@@ -1,0 +1,13 @@
+# ChangeLog for x11-wm/herbstluftwm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.1 2012/06/09 21:50:16 radhermit Exp $
+
+*herbstluftwm-9999 (09 Jun 2012)
+*herbstluftwm-0.3 (09 Jun 2012)
+
+  09 Jun 2012; Tim Harder <radhermit@gentoo.org> +herbstluftwm-0.3.ebuild,
+  +files/herbstluftwm-0.3-flags.patch, +files/herbstluftwm-0.3-install.patch,
+  +files/herbstluftwm-0.3-verbose-build.patch, +herbstluftwm-9999.ebuild,
+  +files/herbstluftwm-9999-install.patch, +metadata.xml:
+  Initial import. Ebuilds by me.
+
