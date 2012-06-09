@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.7 2012/06/08 22:33:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.8 2012/06/09 21:09:24 scarabeus Exp $
 
 EAPI=4
 
-inherit base
+inherit base perl-module
 
 if [[ "${PV}"=="9999" ]] ; then
 	inherit autotools bzr
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdf
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="jpeg png static-libs tiff"
+IUSE="jpeg perl png static-libs tiff"
 
 RDEPEND="
 	app-text/ghostscript-gpl
@@ -30,6 +30,7 @@ RDEPEND="
 	>net-print/cups-1.5.9999
 	sys-libs/zlib
 	jpeg? ( virtual/jpeg )
+	perl? ( dev-lang/perl )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 "
@@ -60,8 +61,26 @@ src_configure() {
 		--without-php
 }
 
+src_compile() {
+	default
+
+	if use perl; then
+		pushd "${S}/scripting/perl" > /dev/null
+		perl-module_src_prep
+		perl-module_src_compile
+		popd > /dev/null
+	fi
+}
+
 src_install() {
 	default
+
+	if use perl; then
+		pushd "${S}/scripting/perl" > /dev/null
+		perl-module_src_install
+		fixlocalpod
+		popd > /dev/null
+	fi
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
 }
