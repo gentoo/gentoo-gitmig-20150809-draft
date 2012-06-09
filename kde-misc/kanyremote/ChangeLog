@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kanyremote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.23 2012/03/25 12:27:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.24 2012/06/09 16:07:37 hwoarang Exp $
+
+*kanyremote-6.0 (09 Jun 2012)
+
+  09 Jun 2012; Markos Chandras <hwoarang@gentoo.org> +kanyremote-6.0.ebuild:
+  Version bump. Bug #420229
 
   25 Mar 2012; Johannes Huber <johu@gentoo.org> -kanyremote-5.11.9.ebuild,
   -kanyremote-5.12.ebuild:
