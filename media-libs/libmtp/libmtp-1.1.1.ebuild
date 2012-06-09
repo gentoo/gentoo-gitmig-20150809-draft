@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.1.ebuild,v 1.7 2012/02/24 19:21:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.1.ebuild,v 1.8 2012/06/09 00:12:46 zmedico Exp $
 
 EAPI=4
-inherit eutils multilib
+inherit eutils multilib user
 
 DESCRIPTION="An implementation of Microsoft's Media Transfer Protocol (MTP)."
 HOMEPAGE="http://libmtp.sourceforge.net"
