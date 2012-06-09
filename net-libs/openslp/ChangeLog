@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openslp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.55 2012/06/08 12:09:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.56 2012/06/09 08:38:35 maekke Exp $
+
+  09 Jun 2012; Markus Meier <maekke@gentoo.org> openslp-1.2.1-r2.ebuild:
+  arm stable, bug #419277
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> openslp-1.2.1-r2.ebuild:
   x86 stable wrt bug #419277
