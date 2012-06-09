@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/mtdev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.6 2012/05/10 16:34:34 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.7 2012/06/09 09:06:57 scarabeus Exp $
+
+  09 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -mtdev-1.1.0.ebuild,
+  mtdev-1.1.2.ebuild:
+  Keyword ppc and ppc64. Fixes bug#396669.
 
   10 May 2012; Matt Turner <mattst88@gentoo.org> mtdev-1.1.2.ebuild:
   Added ~mips, bug 396669.
