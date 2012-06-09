@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0i.ebuild,v 1.4 2009/06/01 17:49:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0i.ebuild,v 1.5 2012/06/09 02:08:39 zmedico Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Software convolution engine for applying long FIR filters"
 HOMEPAGE="http://www.ludd.luth.se/~torger/brutefir.html"
