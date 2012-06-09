@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.2 2012/06/01 04:22:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.3 2012/06/09 06:47:12 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs savedconfig
 if [[ ${PV} == "9999" ]] ; then
@@ -159,10 +159,6 @@ src_config() {
 	sed -i -e '/ARCH_.*_ENDIAN/d' .config
 	kconfig_q_opt y "ARCH_WANTS_$(uclibc_endian)_ENDIAN"
 
-	if [[ $(tc-is-softfloat) != "no" ]] ; then
-		kconfig_q_opt n UCLIBC_HAS_FPU
-	fi
-
 	if [[ ${CTARGET} == arm* ]] ; then
 		kconfig_q_opt n CONFIG_ARM_OABI
 		kconfig_q_opt y CONFIG_ARM_EABI
@@ -173,12 +169,13 @@ src_config() {
 		DO_C99_MATH
 		UCLIBC_HAS_{CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC}
 		UCLIBC_HAS_FENV
-		UCLIBC_HAS_FTW
+		UCLIBC_HAS_{N,}FTW
 		UCLIBC_HAS_GNU_GLOB
 		UCLIBC_HAS_LIBUTIL
 		UCLIBC_HAS_PROGRAM_INVOCATION_NAME
 		UCLIBC_HAS_RESOLVER_SUPPORT
 		UCLIBC_HAS_TZ_FILE_READ_MANY
+		UCLIBC_HAS_UTMPX
 		UCLIBC_SUSV3_LEGACY
 		UCLIBC_SUSV3_LEGACY_MACROS
 		UCLIBC_SUSV4_LEGACY

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.1-r1.ebuild,v 1.9 2011/04/20 18:10:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.1-r1.ebuild,v 1.10 2012/06/09 06:47:12 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -207,10 +207,6 @@ src_unpack() {
 
 	sed -i -e '/ARCH_.*_ENDIAN/d' .config
 	set_opt "ARCH_WANTS_$(uclibc_endian | tr [a-z] [A-Z])_ENDIAN" y
-
-	if [[ $(tc-is-softfloat) != "no" ]] ; then
-		set_opt UCLIBC_HAS_FPU n
-	fi
 
 	if [[ ${CTARGET/eabi} != ${CTARGET} ]] ; then
 		set_opt CONFIG_ARM_OABI n
