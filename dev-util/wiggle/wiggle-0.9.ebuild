@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.8.ebuild,v 1.1 2010/03/24 18:15:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.9.ebuild,v 1.1 2012/06/09 15:49:18 jlec Exp $
 
-inherit eutils fixheadtails toolchain-funcs
+EAPI=4
+
+inherit eutils fixheadtails flag-o-matic toolchain-funcs
 
 DESCRIPTION="program for applying patches that patch cannot apply because of conflicting changes"
 HOMEPAGE="http://neil.brown.name/wiggle http://neil.brown.name/git?p=wiggle"
@@ -16,7 +18,8 @@ IUSE="test"
 # The 'p' tool does support bitkeeper, but I'm against just dumping it in here
 # due to it's size.  I've explictly listed every other dependancy here due to
 # the nature of the shell program 'p'
-RDEPEND="dev-util/diffstat
+RDEPEND="
+	dev-util/diffstat
 	dev-util/patchutils
 	sys-apps/diffutils
 	sys-apps/findutils
@@ -30,11 +33,7 @@ DEPEND="${RDEPEND}
 	sys-apps/groff
 	test? ( sys-process/time )"
 
-src_unpack() {
-	use prefix || EPREFIX=
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Fix the reference to the help file so `p help' works
 	sed -i "s:\$0.help:${EPREFIX}/usr/share/wiggle/p.help:" p || die "sed failed on p"
 
@@ -45,17 +44,18 @@ src_unpack() {
 	sed -i "s:/usr/bin/time:${EPREFIX}/usr/bin/time:" dotest || die "sed failed on dotest"
 
 	ht_fix_file p
+
+	append-cppflags -I.
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Wall" \
-		wiggle || die "emake wiggle failed."
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Wall" ${PN}
 }
 
 src_install() {
-	dobin wiggle p || die "failed to install binaries"
-	doman wiggle.1 || die "failed to install man page"
-	dodoc ANNOUNCE INSTALL TODO DOC/diff.ps notes || die "failed to install docs"
+	dobin wiggle p
+	doman wiggle.1
+	dodoc ANNOUNCE INSTALL TODO DOC/diff.ps notes
 	insinto /usr/share/wiggle
-	doins p.help || die "failed to install help file"
+	doins p.help
 }
