@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.119 2012/03/14 15:11:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.120 2012/06/09 23:30:58 zmedico Exp $
+
+  09 Jun 2012; Zac Medico <zmedico@gentoo.org> gentoo-vdr-scripts-0.4.7.ebuild,
+  gentoo-vdr-scripts-0.4.9.ebuild, gentoo-vdr-scripts-0.5.0_rc2.ebuild,
+  gentoo-vdr-scripts-0.5.1.ebuild, gentoo-vdr-scripts-0.5.2.ebuild:
+  inherit user for enewgroup and enewuser
 
 *gentoo-vdr-scripts-0.5.2 (14 Mar 2012)
 
