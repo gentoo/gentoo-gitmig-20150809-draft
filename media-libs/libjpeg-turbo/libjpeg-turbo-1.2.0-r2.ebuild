@@ -1,21 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r2.ebuild,v 1.2 2012/06/03 19:04:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r2.ebuild,v 1.3 2012/06/09 00:05:35 zmedico Exp $
 
 EAPI=4
-
-unset _inherits
 
 JPEG_ABI=8
 
 if [[ ${PV} == *_p20* ]]; then
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
-	_inherits=autotools
+	inherit autotools
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 fi
 
-inherit ${_inherits} eutils java-pkg-opt-2 libtool toolchain-funcs
+inherit eutils java-pkg-opt-2 libtool toolchain-funcs
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
 HOMEPAGE="http://libjpeg-turbo.virtualgl.org/ http://sourceforge.net/projects/libjpeg-turbo/"

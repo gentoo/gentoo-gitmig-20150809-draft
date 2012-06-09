@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.44 2012/06/03 19:04:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.45 2012/06/09 00:05:35 zmedico Exp $
+
+  09 Jun 2012; Zac Medico <zmedico@gentoo.org> libjpeg-turbo-1.2.0-r1.ebuild,
+  libjpeg-turbo-1.2.0-r2.ebuild:
+  tweak inherits so repoman can parse them
 
   03 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
   libjpeg-turbo-1.2.0-r2.ebuild:
