@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.299 2012/06/09 10:01:19 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.300 2012/06/09 22:14:03 hasufell Exp $
+
+  09 Jun 2012; Julian Ospald <hasufell@gentoo.org> games.eclass:
+  fix for games.eclass wrt bug #336626 #c21
 
   09 Jun 2012; Marien Zwart <marienz@gentoo.org> python.eclass:
   Add pypy-1.9 to the list of supported python ABIs.
