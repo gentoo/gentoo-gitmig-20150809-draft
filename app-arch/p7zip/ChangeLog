@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.146 2012/06/07 16:29:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.147 2012/06/09 14:43:20 jlec Exp $
+
+*p7zip-9.20.1-r3 (09 Jun 2012)
+
+  09 Jun 2012; Justin Lecher <jlec@gentoo.org> -p7zip-9.20.1-r2.ebuild,
+  +p7zip-9.20.1-r3.ebuild:
+  Drop -O -pipe from buildsystem, add -- to emake so that -l doesn't get
+  confused by 7z* make targets, #420393
 
   07 Jun 2012; Julian Ospald <hasufell@gentoo.org> p7zip-9.13.ebuild,
   p7zip-9.13-r3.ebuild, +files/p7zip-9.13-QA.patch, -p7zip-9.20.1.ebuild,

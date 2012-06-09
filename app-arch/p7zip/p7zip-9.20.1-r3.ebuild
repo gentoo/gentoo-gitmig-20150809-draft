@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r2.ebuild,v 1.2 2012/06/07 16:29:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r3.ebuild,v 1.1 2012/06/09 14:43:20 jlec Exp $
 
 EAPI=4
 
@@ -44,6 +44,8 @@ src_prepare() {
 	sed \
 		-e 's:-m32 ::g' \
 		-e 's:-m64 ::g' \
+		-e 's:-O::g' \
+		-e 's:-pipe::g' \
 		-e "/^CC/s:\$(ALLFLAGS):${CFLAGS} \$(ALLFLAGS):g" \
 		-e "/^CXX/s:\$(ALLFLAGS):${CXXFLAGS} \$(ALLFLAGS):g" \
 		-i makefile* || die
@@ -95,8 +97,8 @@ src_prepare() {
 src_compile() {
 	emake all3
 	if use kde || use wxwidgets; then
-		emake 7zG
-		emake 7zFM
+		emake -- 7zG
+		emake -- 7zFM
 	fi
 }
 
