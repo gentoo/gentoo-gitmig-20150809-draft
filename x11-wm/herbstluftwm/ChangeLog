@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/herbstluftwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.1 2012/06/09 21:50:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.2 2012/06/09 23:53:28 radhermit Exp $
+
+  09 Jun 2012; Tim Harder <radhermit@gentoo.org> herbstluftwm-9999.ebuild:
+  Add xinerama use flag.
 
 *herbstluftwm-9999 (09 Jun 2012)
 *herbstluftwm-0.3 (09 Jun 2012)

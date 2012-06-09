@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.1 2012/06/09 21:50:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.2 2012/06/09 23:53:28 radhermit Exp $
 
 EAPI=4
 
@@ -15,10 +15,11 @@ SRC_URI=""
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="examples zsh-completion"
+IUSE="examples xinerama zsh-completion"
 
 CDEPEND=">=dev-libs/glib-2.24:2
-	x11-libs/libX11"
+	x11-libs/libX11
+	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${CDEPEND}
 	app-shells/bash
 	zsh-completion? ( app-shells/zsh )"
@@ -31,7 +32,8 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" LD="$(tc-getCC)" COLOR=0 VERBOSE=""
+	emake CC="$(tc-getCC)" LD="$(tc-getCC)" COLOR=0 VERBOSE= \
+		$(use xinerama || echo XINERAMAFLAGS= XINERAMALIBS= )
 }
 
 src_install() {
