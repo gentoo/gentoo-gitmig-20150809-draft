@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.655 2012/06/09 10:26:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.656 2012/06/09 11:31:59 phajdan.jr Exp $
+
+*chromium-20.0.1132.27-r1 (09 Jun 2012)
+*chromium-19.0.1084.56-r1 (09 Jun 2012)
+
+  09 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-alignment-r0.patch, +chromium-19.0.1084.56-r1.ebuild,
+  -chromium-20.0.1132.21.ebuild, +chromium-20.0.1132.27-r1.ebuild:
+  Backport upstream crash fix, bug #420357 by Bkmz.
 
   09 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-19.0.1084.52.ebuild, chromium-19.0.1084.56.ebuild,

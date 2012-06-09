@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1132.21.ebuild,v 1.2 2012/06/09 10:26:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-20.0.1132.27-r1.ebuild,v 1.1 2012/06/09 11:31:59 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -89,7 +89,7 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 
-	chromium_check_kernel_config
+	chromium_suid_sandbox_check_kernel_config
 
 	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."
@@ -114,6 +114,9 @@ src_prepare() {
 
 	# Fix build without tcmalloc. To be upstreamed.
 	epatch "${FILESDIR}/${PN}-tcmalloc-r0.patch"
+
+	# Backport a crash fix, bug #420357.
+	epatch "${FILESDIR}/${PN}-alignment-r0.patch"
 
 	epatch_user
 
