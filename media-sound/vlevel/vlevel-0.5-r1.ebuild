@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5-r1.ebuild,v 1.3 2012/02/16 18:56:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/vlevel-0.5-r1.ebuild,v 1.4 2012/06/09 23:27:14 zmedico Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Dynamic compressor to amplify quiet parts of music"
 HOMEPAGE="http://vlevel.sourceforge.net/"
