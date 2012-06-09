@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motion
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.40 2012/01/16 20:08:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.41 2012/06/09 23:36:03 zmedico Exp $
+
+  09 Jun 2012; Zac Medico <zmedico@gentoo.org> motion-3.2.12-r2.ebuild:
+  inherit user for enewuser
 
   16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -motion-3.2.12-r1.ebuild:
   old
