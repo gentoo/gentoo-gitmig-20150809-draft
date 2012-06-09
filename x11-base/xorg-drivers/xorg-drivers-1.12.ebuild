@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.12.ebuild,v 1.5 2012/05/13 21:14:04 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.12.ebuild,v 1.6 2012/06/09 10:03:08 chithanh Exp $
 
 EAPI=4
 
@@ -45,6 +45,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_intel
 	video_cards_mach64
 	video_cards_mga
+	video_cards_modesetting
 	video_cards_neomagic
 	video_cards_newport
 	video_cards_nouveau
@@ -111,6 +112,7 @@ PDEPEND="
 	video_cards_intel?         ( x11-drivers/xf86-video-intel )
 	video_cards_mach64?        ( x11-drivers/xf86-video-mach64 )
 	video_cards_mga?           ( x11-drivers/xf86-video-mga )
+	video_cards_modesetting?   ( x11-drivers/xf86-video-modesetting )
 	video_cards_neomagic?      ( x11-drivers/xf86-video-neomagic )
 	video_cards_newport?       ( x11-drivers/xf86-video-newport )
 	video_cards_nouveau?       ( x11-drivers/xf86-video-nouveau )
