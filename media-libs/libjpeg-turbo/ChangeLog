@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.45 2012/06/09 00:05:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.46 2012/06/09 07:43:27 vapier Exp $
+
+  09 Jun 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/libjpeg-turbo-1.2.0-x32.patch, libjpeg-turbo-1.2.0-r2.ebuild:
+  Fix building for x32 targets #420239 by Xavier Miller.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> libjpeg-turbo-1.2.0-r1.ebuild,
   libjpeg-turbo-1.2.0-r2.ebuild:
