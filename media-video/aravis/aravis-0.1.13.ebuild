@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aravis/aravis-0.1.13.ebuild,v 1.2 2012/05/05 08:58:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aravis/aravis-0.1.13.ebuild,v 1.3 2012/06/09 23:35:14 zmedico Exp $
 
 EAPI=4
+
+inherit versionator
 
 KEYWORDS="~amd64"
 
@@ -10,9 +12,8 @@ if [[ ${PV} == "9999" ]]; then
 	KEYWORDS=""
 	EGIT_REPO_URI="git://git.gnome.org/aravis"
 	EGIT_COMMIT="${aravis_LIVE_COMMIT:-master}"
+	inherit git-2 autotools
 fi
-
-inherit versionator ${EGIT_COMMIT+git-2 autotools}
 
 DESCRIPTION="Library for video acquisition using Genicam cameras."
 HOMEPAGE="http://live.gnome.org/Aravis"
