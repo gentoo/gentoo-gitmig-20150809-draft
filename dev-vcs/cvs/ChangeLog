@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/cvs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.6 2012/04/28 02:48:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.7 2012/06/09 07:10:57 vapier Exp $
+
+  09 Jun 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/cvs-1.12.12-mktime-x32.patch, cvs-1.12.12-r6.ebuild,
+  cvs-1.12.12-r9.ebuild:
+  Backport fix from upstream gnulib to fix building on x32 systems #395641 by
+  Sergei Trofimovich.
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org> cvs-1.12.12-r9.ebuild:
   keyword ~amd64-fbsd

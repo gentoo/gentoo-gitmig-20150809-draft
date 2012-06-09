@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r6.ebuild,v 1.1 2010/06/19 00:27:23 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r6.ebuild,v 1.2 2012/06/09 07:10:57 vapier Exp $
 
 inherit eutils pam
 
@@ -31,7 +31,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-cvs-gnulib-vasnprintf.patch
 	epatch "${FILESDIR}"/${P}-install-sh.patch
-	elog "If you want any CVS server functionality, you MUST emerge with USE=server!"
+	epatch "${FILESDIR}"/${P}-mktime-x32.patch # 395641
+	use server || elog "If you want any CVS server functionality, you MUST emerge with USE=server!"
 }
 
 src_compile() {

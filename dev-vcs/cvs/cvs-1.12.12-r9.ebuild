@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r9.ebuild,v 1.2 2012/04/28 02:48:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r9.ebuild,v 1.3 2012/06/09 07:10:57 vapier Exp $
 
 EAPI=3
 
@@ -38,7 +38,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-hash-nameclash.patch # for AIX
 	epatch "${FILESDIR}"/${P}-getdelim.patch # 314791
 	epatch "${FILESDIR}"/${PN}-1.12.12-rcs2log-coreutils.patch # 144114
-	elog "If you want any CVS server functionality, you MUST emerge with USE=server!"
+	epatch "${FILESDIR}"/${P}-mktime-x32.patch # 395641
+	use server || elog "If you want any CVS server functionality, you MUST emerge with USE=server!"
 }
 
 src_configure() {
