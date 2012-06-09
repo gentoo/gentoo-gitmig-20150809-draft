@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.11 2012/06/07 19:42:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.12 2012/06/09 10:59:47 dilfridge Exp $
 
 EAPI=4
 
@@ -249,6 +249,10 @@ src_install() {
 
 	# create /etc/cups/client.conf, bug #196967 and #266678
 	echo "ServerName /var/run/cups/cups.sock" >> "${ED}"/etc/cups/client.conf
+
+	# the following files are now provided by cups-filters:
+	rm -r "${ED}"/usr/share/cups/banners || die
+	rm -r "${ED}"/usr/share/cups/data/testprint || die
 }
 
 pkg_preinst() {
