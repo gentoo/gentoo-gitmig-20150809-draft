@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.118 2012/03/06 18:23:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.119 2012/06/09 07:11:12 jdhore Exp $
+
+  09 Jun 2012; Jeff Horelick <jdhore@gentoo.org> diffstat-1.55.ebuild:
+  marked x86 per bug 418951
 
   06 Mar 2012; Justin Lecher <jlec@gentoo.org> -diffstat-1.53.ebuild,
   metadata.xml:
