@@ -1,12 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.9 2011/09/09 10:43:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.10 2012/06/09 14:02:29 ulm Exp $
 
 EAPI=4
-ESVN_REPO_URI="svn://anonsvn.gentoo.org/eselect/trunk"
-ESVN_BOOTSTRAP="autogen.bash"
 
-inherit subversion bash-completion-r1
+EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/eselect.git"
+EGIT_BOOTSTRAP="autogen.bash"
+
+inherit git-2 bash-completion-r1
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -47,6 +48,8 @@ src_install() {
 
 	# needed by news module
 	keepdir /var/lib/gentoo/news
+	fowners root:portage /var/lib/gentoo/news || die
+	fperms g+w /var/lib/gentoo/news || die
 }
 
 pkg_postinst() {
