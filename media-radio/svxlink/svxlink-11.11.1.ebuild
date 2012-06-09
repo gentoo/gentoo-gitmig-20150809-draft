@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-11.11.1.ebuild,v 1.2 2012/05/03 03:48:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-11.11.1.ebuild,v 1.3 2012/06/09 00:30:51 zmedico Exp $
 
 EAPI=4
-inherit eutils multilib qt4-r2
+inherit eutils multilib qt4-r2 user
 
 DESCRIPTION="Multi Purpose Voice Services System, including Qtel for EchoLink"
 HOMEPAGE="http://svxlink.sourceforge.net/"

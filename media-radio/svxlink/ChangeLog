@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.19 2012/05/03 03:48:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.20 2012/06/09 00:30:51 zmedico Exp $
+
+  09 Jun 2012; Zac Medico <zmedico@gentoo.org> svxlink-11.11.1.ebuild:
+  inherit user for enewgroup and enewuser
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> svxlink-11.11.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
