@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.82 2012/06/07 22:30:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.83 2012/06/09 06:22:43 jdhore Exp $
+
+  09 Jun 2012; Jeff Horelick <jdhore@gentoo.org> cython-0.16.ebuild:
+  marked x86 per bug 418291
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> cython-0.16.ebuild:
   Marking cython-0.16 ppc for bug 418291
