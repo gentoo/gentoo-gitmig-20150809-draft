@@ -1,0 +1,11 @@
+# ChangeLog for www-apps/ownpaste
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ChangeLog,v 1.1 2012/06/09 05:33:48 rafaelmartins Exp $
+
+*ownpaste-9999 (09 Jun 2012)
+*ownpaste-0.1 (09 Jun 2012)
+
+  09 Jun 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +ownpaste-0.1.ebuild, +ownpaste-9999.ebuild, +metadata.xml:
+  Initial version.
+
