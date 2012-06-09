@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-1.3.0.ebuild,v 1.2 2012/05/29 13:34:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-1.3.0.ebuild,v 1.3 2012/06/09 00:07:40 zmedico Exp $
 
 EAPI="4"
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit flag-o-matic eutils multilib toolchain-funcs
 
 DESCRIPTION="Extensible multimedia container format based on EBML"
 HOMEPAGE="http://www.matroska.org/"

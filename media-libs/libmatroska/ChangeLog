@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.101 2012/05/29 13:34:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.102 2012/06/09 00:07:40 zmedico Exp $
+
+  09 Jun 2012; Zac Medico <zmedico@gentoo.org> libmatroska-1.2.0.ebuild,
+  libmatroska-1.3.0.ebuild:
+  inherit multilib for get_libdir
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> libmatroska-1.3.0.ebuild:
   keyword ~amd64-fbsd
