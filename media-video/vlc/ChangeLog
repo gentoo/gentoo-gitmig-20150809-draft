@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.803 2012/06/02 15:55:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.804 2012/06/09 15:38:19 aballier Exp $
+
+  09 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
+  backport upstream fix to build with automake 1.12, by Bernard Cafarelli, bug
+  #420207
 
   02 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   Fix default projectm font path and add media-font/dejvu to projectm deps
