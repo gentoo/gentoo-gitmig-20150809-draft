@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/nmzmail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.11 2010/10/07 07:47:03 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.12 2012/06/09 18:59:42 armin76 Exp $
+
+  09 Jun 2012; Raúl Porcel <armin76@gentoo.org> nmzmail-1.1.ebuild:
+  Drop sparc keywords
 
   07 Oct 2010; Tim Harder <radhermit@gentoo.org> -nmzmail-0.1.3.ebuild,
   nmzmail-1.1.ebuild:
