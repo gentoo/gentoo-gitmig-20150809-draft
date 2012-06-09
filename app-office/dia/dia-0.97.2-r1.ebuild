@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r1.ebuild,v 1.2 2012/06/02 22:07:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r1.ebuild,v 1.3 2012/06/09 16:02:59 jlec Exp $
 
 EAPI=4
 
@@ -95,8 +95,8 @@ src_install() {
 	# Install second desktop file for integrated mode (bug #415495)
 	sed -e 's|^Exec=dia|Exec=dia --integrated|' \
 			-e '/^Name=/ s|$| (integrated mode)|' \
-			"${D}"/usr/share/applications/dia.desktop \
-			> "${D}"/usr/share/applications/dia-integrated.desktop || die
+			"${ED}"/usr/share/applications/dia.desktop \
+			> "${ED}"/usr/share/applications/dia-integrated.desktop || die
 }
 
 pkg_postinst() {

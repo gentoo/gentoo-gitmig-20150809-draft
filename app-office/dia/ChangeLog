@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.144 2012/06/02 22:07:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.145 2012/06/09 16:02:59 jlec Exp $
+
+  09 Jun 2012; Justin Lecher <jlec@gentoo.org> dia-0.97.2-r1.ebuild:
+  Prefix fix
 
   02 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> dia-0.97.2-r1.ebuild:
   Pull in correct SLOT of media-libs/libpng for headers and symlink.
