@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.176 2012/05/10 16:34:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.177 2012/06/09 09:08:05 scarabeus Exp $
+
+  09 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  xf86-input-evdev-2.7.0.ebuild:
+  Keyword ppc and ppc64 wrt bug#408735.
 
   10 May 2012; Matt Turner <mattst88@gentoo.org> xf86-input-evdev-2.7.0.ebuild:
   Added ~mips, bug 408735.
