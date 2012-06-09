@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/ganyremote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.18 2012/04/04 21:31:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.19 2012/06/09 16:11:08 hwoarang Exp $
+
+*ganyremote-6.0 (09 Jun 2012)
+
+  09 Jun 2012; Markos Chandras <hwoarang@gentoo.org> +ganyremote-6.0.ebuild:
+  Versun bump
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> ganyremote-5.13.ebuild:
   marked x86 per bug 404613
