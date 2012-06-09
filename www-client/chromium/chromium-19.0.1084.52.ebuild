@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-19.0.1084.52.ebuild,v 1.3 2012/05/26 16:46:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-19.0.1084.52.ebuild,v 1.4 2012/06/09 10:26:17 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -164,7 +164,7 @@ src_prepare() {
 
 	local v8_bundled="$(chromium_bundled_v8_version)"
 	local v8_installed="$(chromium_installed_v8_version)"
-	elog "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
+	einfo "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
 
 	# Remove bundled v8.
 	find v8 -type f \! -iname '*.gyp*' -delete || die

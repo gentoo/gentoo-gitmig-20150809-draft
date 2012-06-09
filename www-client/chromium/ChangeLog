@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.654 2012/06/09 01:14:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.655 2012/06/09 10:26:17 phajdan.jr Exp $
+
+  09 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-19.0.1084.52.ebuild, chromium-19.0.1084.56.ebuild,
+  chromium-20.0.1132.21.ebuild, chromium-20.0.1132.27.ebuild,
+  chromium-21.0.1155.2.ebuild, chromium-21.0.1163.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Use einfo instead of elog to display V8 version. Bug #419397 by pacho.
 
 *chromium-19.0.1084.56 (09 Jun 2012)
 
