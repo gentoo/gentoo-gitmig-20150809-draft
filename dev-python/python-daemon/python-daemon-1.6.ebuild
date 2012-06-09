@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-1.6.ebuild,v 1.6 2012/02/22 07:40:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-1.6.ebuild,v 1.7 2012/06/09 08:20:18 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="PSF-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 arm x86"
 IUSE="test"
 
 RDEPEND=">=dev-python/lockfile-0.9"
