@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-DumpXML
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.17 2011/09/04 11:23:37 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.18 2012/06/09 22:11:17 chithanh Exp $
+
+  09 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  Data-DumpXML-1.60.0.ebuild:
+  Keyword ~sparc-solaris, bug #379587.
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Data-DumpXML-1.06.ebuild:
   Cleanup
