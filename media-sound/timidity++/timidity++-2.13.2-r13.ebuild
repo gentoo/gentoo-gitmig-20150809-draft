@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r13.ebuild,v 1.12 2011/10/23 16:12:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r13.ebuild,v 1.13 2012/06/09 23:24:27 zmedico Exp $
 
 EAPI=2
-inherit autotools eutils elisp-common
+inherit autotools eutils elisp-common user
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
