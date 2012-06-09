@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.10 2012/03/04 09:52:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.11 2012/06/09 00:17:35 zmedico Exp $
 
 EAPI=2
-inherit eutils versionator flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
 MY_PV=$(replace_version_separator 3 '-')
 MY_PN=inventor
