@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.65 2012/05/30 03:11:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.66 2012/06/09 19:02:10 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -32,6 +32,7 @@ pcmcia
 pda
 sms
 upnp
+ups
 wifi
 
 # Hardware not available on alpha
