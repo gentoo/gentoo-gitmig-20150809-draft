@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/teamspeak-server-bin-3.0.0_beta30.ebuild,v 1.2 2012/04/14 11:13:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/teamspeak-server-bin-3.0.0_beta30.ebuild,v 1.3 2012/06/09 23:22:53 zmedico Exp $
 
 EAPI=1
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="TeamSpeak Server - Voice Communication Software"
 HOMEPAGE="http://teamspeak.com/"
