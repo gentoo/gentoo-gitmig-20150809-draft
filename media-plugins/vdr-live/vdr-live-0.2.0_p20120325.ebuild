@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0_p20120325.ebuild,v 1.4 2012/06/04 19:42:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0_p20120325.ebuild,v 1.5 2012/06/10 14:24:54 hd_brummy Exp $
 
 EAPI="4"
 
@@ -25,6 +25,8 @@ VDR_CONFD_FILE="${FILESDIR}/confd-0.2"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.2.sh"
 
 S="${WORKDIR}/${P}"
+
+KEEP_I18NOBJECT="yes"
 
 make_live_cert() {
 	# TODO: still true?
@@ -68,9 +70,6 @@ src_prepare() {
 
 	epatch "${FILESDIR}/vdr-1.7.28-compatibility.patch"
 	epatch "${FILESDIR}/vdr-live_pcre.patch"
-
-	# fix for vdr-plugin-2.eclass
-	sed -i -e "s:setup.o:setup.o i18n.o:" Makefile
 }
 
 src_install() {
