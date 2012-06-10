@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.112 2012/05/03 18:49:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.113 2012/06/10 20:15:57 slyfox Exp $
+
+  10 Jun 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-9999.ebuild:
+  Drop '--disable-darwin-user' from configure params. Upstream does not export
+  it anymore.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> qemu-0.11.1.ebuild,
   qemu-0.11.1-r1.ebuild, qemu-1.0-r2.ebuild, qemu-1.0-r3.ebuild,

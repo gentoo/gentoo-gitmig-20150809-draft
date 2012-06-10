@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.18 2012/05/03 18:49:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.19 2012/06/10 20:15:57 slyfox Exp $
 
 EAPI=4
 
@@ -196,7 +196,7 @@ src_configure() {
 		$(use_enable xen)
 		$(use_enable xattr attr)
 		$(use_enable xfs xfsctl)
-		--disable-darwin-user --disable-bsd-user
+		--disable-bsd-user
 	"
 
 	# audio options
