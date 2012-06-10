@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/boost-m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.1 2012/02/01 02:21:01 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.2 2012/06/10 03:35:20 binki Exp $
+
+  10 Jun 2012; Nathan Phillip Brink <binki@gentoo.org> boost-m4-0.2.ebuild:
+  Use tarball instead of zipball, reducing DEPENDencies and (hopefully) making
+  mgorny happier.
 
 *boost-m4-0.2 (01 Feb 2012)
 

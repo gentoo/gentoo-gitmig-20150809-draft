@@ -1,24 +1,22 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/boost-m4-0.2.ebuild,v 1.1 2012/02/01 02:21:01 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/boost-m4-0.2.ebuild,v 1.2 2012/06/10 03:35:20 binki Exp $
 
 EAPI=4
 
 DESCRIPTION="Another set of autoconf macros for compiling against boost"
 HOMEPAGE="http://github.com/tsuna/boost.m4"
-SRC_URI="${HOMEPAGE}/zipball/v${PV} -> ${P}.zip"
+SRC_URI="${HOMEPAGE}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="app-arch/unzip"
-
 src_unpack() {
 	default
 
-	# The github-generated zipball kludge.
+	# The github-generated tarball kludge.
 	mv *-boost.m4-* ${P} || die
 }
 
