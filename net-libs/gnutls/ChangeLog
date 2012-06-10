@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.366 2012/06/09 07:57:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.367 2012/06/10 05:06:40 radhermit Exp $
+
+  10 Jun 2012; Tim Harder <radhermit@gentoo.org> gnutls-2.12.18.ebuild,
+  gnutls-2.12.19.ebuild:
+  Don't make automake warnings into errors.
 
   09 Jun 2012; Tim Harder <radhermit@gentoo.org> gnutls-3.0.20.ebuild:
   Don't make automake warnings into errors.

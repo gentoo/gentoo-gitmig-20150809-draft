@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.19.ebuild,v 1.3 2012/05/28 08:02:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.19.ebuild,v 1.4 2012/06/10 05:06:40 radhermit Exp $
 
 EAPI=4
 
@@ -57,6 +57,7 @@ pkg_setup() {
 src_prepare() {
 	# tests/suite directory is not distributed.
 	sed -i -e 's|AC_CONFIG_FILES(\[tests/suite/Makefile\])|:|' \
+		-e '/^AM_INIT_AUTOMAKE/s/-Werror//' \
 		configure.ac || die
 
 	sed -i -e 's/imagesdir = $(infodir)/imagesdir = $(htmldir)/' \
