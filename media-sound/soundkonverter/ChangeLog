@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/soundkonverter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.29 2012/06/10 16:43:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.30 2012/06/10 16:48:07 kensington Exp $
+
+  10 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  -soundkonverter-1.4.0.ebuild:
+  Remove old.
 
 *soundkonverter-1.6.1 (10 Jun 2012)
 
