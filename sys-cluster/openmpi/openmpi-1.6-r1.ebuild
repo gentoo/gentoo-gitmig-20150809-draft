@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.ebuild,v 1.2 2012/05/30 12:54:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6-r1.ebuild,v 1.1 2012/06/10 06:38:46 xarthisius Exp $
 
 EAPI=4
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs versionator
@@ -88,6 +88,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-hostfile.patch
 	# Necessary for scalibility, see
 	# http://www.open-mpi.org/community/lists/users/2008/09/6514.php
 	if use threads; then

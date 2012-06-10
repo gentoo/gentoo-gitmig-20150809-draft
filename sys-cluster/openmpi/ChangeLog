@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.106 2012/05/30 12:54:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.107 2012/06/10 06:38:46 xarthisius Exp $
+
+*openmpi-1.6-r1 (10 Jun 2012)
+
+  10 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/openmpi-1.6-hostfile.patch, +openmpi-1.6-r1.ebuild,
+  -openmpi-1.6.ebuild:
+  Add patch from upstream to fix default hostfile location wrt #420431 by
+  William Throwe <wtt6@cornell.edu>
 
   30 May 2012; Alexis Ballier <aballier@gentoo.org> openmpi-1.6.ebuild:
   keyword ~amd64-fbsd
