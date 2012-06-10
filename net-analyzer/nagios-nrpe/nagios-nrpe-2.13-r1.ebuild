@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.13.ebuild,v 1.1 2012/06/07 00:07:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.13-r1.ebuild,v 1.1 2012/06/10 18:25:26 idl0r Exp $
 
 EAPI=4
 
@@ -40,8 +40,10 @@ src_prepare() {
 	# http://opsview-blog.opsera.com/dotorg/2008/08/enhancing-nrpe.html
 	epatch "${FILESDIR}/${P}-multiline.patch"
 
-	# tcp wrappers conditional, bug 326367
+	# TCP wrappers conditional, bug 326367
 	epatch "${FILESDIR}/${P}-tcpd.patch"
+	# Make command-args really conditional, bug 397603
+	epatch "${FILESDIR}/${P}-command-args.patch"
 
 	sed -i -e "s:/usr/local/nagios/var/rw/nagios.cmd:${NAGIOS_COMMAND_FILE:-/var/rw/nagios.cmd}:" contrib/nrpe_check_control.c || die
 	sed -i -e "s:/usr/local/nagios/etc/services.cfg:${NAGIOS_SERVICES_FILE:-/etc/services.cfg}:" contrib/nrpe_check_control.c || die
