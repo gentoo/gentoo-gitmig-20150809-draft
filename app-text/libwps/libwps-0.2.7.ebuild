@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.7.ebuild,v 1.1 2012/06/10 13:41:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.7.ebuild,v 1.2 2012/06/10 20:49:08 flameeyes Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${P}-debug.patch"
+	"${FILESDIR}/${PN}-0.2.6-debug.patch"
 )
 
 src_configure() {
