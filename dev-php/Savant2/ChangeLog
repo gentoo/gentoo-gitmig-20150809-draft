@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/Savant2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant2/ChangeLog,v 1.3 2007/03/18 16:01:47 chtekk Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant2/ChangeLog,v 1.4 2012/06/10 11:55:48 mabi Exp $
+
+  10 Jun 2012; Matti Bickel <mabi@gentoo.org> Savant2-2.4.3.ebuild:
+  remove unneeded depend.php call
 
 *Savant2-2.4.3 (18 Mar 2007)
 
