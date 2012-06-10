@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.116 2012/06/08 12:51:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.117 2012/06/10 21:24:21 nimiux Exp $
+
+  10 Jun 2012; Chema Alonso <nimiux@gentoo.org> metadata.xml:
+  Add myself as maintainer. Add description and use flags to metadata.
 
   08 Jun 2012; Pacho Ramos <pacho@gentoo.org> -files/logrotate-3.7.7-fbsd.patch,
   -files/logrotate-3.7.7-ignore-hidden.patch,
