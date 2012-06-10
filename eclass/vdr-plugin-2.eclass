@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.6 2012/06/10 14:21:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.7 2012/06/10 14:59:55 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -269,7 +269,7 @@ linguas_support() {
 			|| die "sed failed for Linguas"
 	done
 
-	strip-linguas ${PLUGIN_LINGUAS}
+	strip-linguas ${PLUGIN_LINGUAS} en
 
 	# maintainer check
 	if [[ ! -d po ]]; then
