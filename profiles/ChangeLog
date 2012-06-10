@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6656 2012/06/10 20:34:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6657 2012/06/10 21:08:41 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Unmask beta ati-drivers.
 
   10 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

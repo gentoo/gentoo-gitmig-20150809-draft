@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13844 2012/06/10 20:34:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13845 2012/06/10 21:08:41 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -117,10 +117,6 @@ x11-plugins/replytolist
 >=perl-core/ExtUtils-ParseXS-3.0
 >=virtual/perl-ExtUtils-ParseXS-3.0
 =dev-lang/perl-5.16*
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (05 Jun 2012)
-# prerelease, hardware support changes need documentation #419493
-=x11-drivers/ati-drivers-12.6_beta*
 
 # Luca Barbato <lu_zero@gentoo.org> (05 Jun 2012)
 # Full support for gles2 pending drivers providing it
