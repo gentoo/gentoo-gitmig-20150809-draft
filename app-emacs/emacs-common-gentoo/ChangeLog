@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.71 2012/06/07 21:50:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.72 2012/06/10 14:24:55 ulm Exp $
+
+*emacs-common-gentoo-1.3-r3 (10 Jun 2012)
+
+  10 Jun 2012; Ulrich Müller <ulm@gentoo.org>
+  +emacs-common-gentoo-1.3-r3.ebuild, metadata.xml:
+  Sync from emacs overlay: Move game score files from emacs ebuilds to here.
+  Create games user with USE=games, bug 368647.
 
   07 Jun 2012; Johannes Huber <johu@gentoo.org>
   emacs-common-gentoo-1.3-r2.ebuild:
