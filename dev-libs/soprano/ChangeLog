@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.92 2012/05/18 16:48:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.93 2012/06/10 10:56:04 scarabeus Exp $
+
+  10 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -soprano-2.7.4.ebuild,
+  -soprano-2.7.5.ebuild, soprano-2.7.6.ebuild:
+  Stabilise 2.7.6 on amd64, x86, pcc and ppc64. Remove older. Solves crasher for
+  me in stable.
 
   18 May 2012; Alexis Ballier <aballier@gentoo.org> soprano-2.7.6.ebuild:
   keyword ~amd64-fbsd
