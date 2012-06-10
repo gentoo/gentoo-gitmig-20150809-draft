@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.3.ebuild,v 1.2 2012/06/10 02:16:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.3.ebuild,v 1.3 2012/06/10 18:40:59 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -16,17 +16,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 
-# IUSE="gtk gtk3" is in use here as some plugins are disabled when gtk3 is
-# enabled and users may not want that. This will be fixed in audacious 3.3.
-IUSE="chardet +gtk gtk3 nls session"
+IUSE="chardet nls session"
 
 RDEPEND=">=dev-libs/dbus-glib-0.60
 	>=dev-libs/glib-2.16
 	dev-libs/libxml2
 	>=x11-libs/cairo-1.2.6
 	>=x11-libs/pango-1.8.0
-	gtk? ( x11-libs/gtk+:2 )
-	gtk3? ( x11-libs/gtk+:3 )
+	x11-libs/gtk+:2
 	session? ( x11-libs/libSM )"
 
 DEPEND="${RDEPEND}
@@ -35,7 +32,6 @@ DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
 
 PDEPEND=">=media-plugins/audacious-plugins-3.2.3"
-REQUIRED_USE="^^ ( gtk gtk3 )"
 
 src_prepare() {
 	epatch "$FILESDIR"/${P}-fix-mutex.patch
@@ -47,10 +43,12 @@ src_configure() {
 	# Building without D-Bus is *unsupported* and a USE-flag
 	# will not be added due to the bug reports that will result.
 	# Bugs #197894, #199069, #207330, #208606
-	# Use of GTK+2 causes plugin build failures, bug #384185
+	# Use of gtk+:3 causes some plugins to not have preference pages
+	# and statusicon to not build. Disable till Audacious 3.3 when
+	# these issues will have been fixed.
 	econf \
 		--enable-dbus \
-		$(use_enable gtk3) \
+		--disable-gtk3 \
 		$(use_enable chardet) \
 		$(use_enable nls) \
 		$(use_enable session sm)

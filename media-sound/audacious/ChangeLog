@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.269 2012/06/10 02:16:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.270 2012/06/10 18:40:59 jdhore Exp $
+
+  10 Jun 2012; Jeff Horelick <jdhore@gentoo.org> audacious-3.2.3.ebuild:
+  Drop gtk3 support for now as it is currently a bit broken.
 
   10 Jun 2012; Jeff Horelick <jdhore@gentoo.org> audacious-3.2.3.ebuild:
   Add a comment explaining why IUSE="gtk gtk3" exists. Please see bug #420433
