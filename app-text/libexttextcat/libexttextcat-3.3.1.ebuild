@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/libexttextcat-3.3.0-r1.ebuild,v 1.1 2012/05/30 14:00:35 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/libexttextcat-3.3.1.ebuild,v 1.1 2012/06/10 07:05:20 scarabeus Exp $
 
 EAPI=4
-
-inherit eutils
 
 DESCRIPTION="Library implementing N-gram-based text categorization"
 HOMEPAGE="http://software.wise-guys.nl/libtextcat/"
@@ -17,10 +15,6 @@ IUSE="static-libs"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-pkgconfig.patch"
-}
 
 src_configure() {
 	econf \
