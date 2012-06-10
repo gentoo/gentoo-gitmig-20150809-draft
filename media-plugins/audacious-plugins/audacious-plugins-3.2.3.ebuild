@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.3.ebuild,v 1.1 2012/05/27 21:02:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.3.ebuild,v 1.2 2012/06/10 18:44:25 jdhore Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://distfiles.audacious-media-player.org/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
-IUSE="aac adplug alsa bs2b cdda cue ffmpeg flac fluidsynth gnome +gtk gtk3 ipv6 jack
+IUSE="aac adplug alsa bs2b cdda cue ffmpeg flac fluidsynth gnome ipv6 jack
 lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile vorbis wavpack"
 
 RDEPEND="app-arch/unzip
@@ -22,8 +22,7 @@ RDEPEND="app-arch/unzip
 	media-libs/libmodplug
 	>=media-sound/audacious-3.2.3
 	>=net-libs/neon-0.26.4
-	gtk? ( x11-libs/gtk+:2 )
-	gtk3? ( x11-libs/gtk+:3 )
+	x11-libs/gtk+:2
 	aac? ( >=media-libs/faad2-2.7 )
 	adplug? ( >=dev-cpp/libbinio-1.4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.16 )
@@ -56,8 +55,6 @@ DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
 	virtual/pkgconfig"
 
-REQUIRED_USE="^^ ( gtk gtk3 )"
-
 DOCS="AUTHORS"
 
 mp3_warning() {
@@ -72,6 +69,7 @@ src_configure() {
 	econf \
 		--enable-modplug \
 		--enable-neon \
+		--disable-gtk3 \
 		$(use_enable adplug) \
 		$(use_enable aac) \
 		$(use_enable alsa) \
@@ -83,7 +81,6 @@ src_configure() {
 		$(use_enable flac flacng) \
 		$(use_enable fluidsynth amidiplug-flsyn) \
 		$(use_enable flac filewriter_flac) \
-		$(use_enable gtk3) \
 		$(use_enable ipv6) \
 		$(use_enable jack) \
 		$(use_enable gnome gnomeshortcuts) \
