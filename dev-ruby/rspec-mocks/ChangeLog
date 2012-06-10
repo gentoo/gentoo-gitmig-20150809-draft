@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.23 2012/05/06 15:15:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.24 2012/06/10 06:51:41 graaff Exp $
+
+*rspec-mocks-2.10.1 (10 Jun 2012)
+
+  10 Jun 2012; Hans de Graaff <graaff@gentoo.org> +rspec-mocks-2.10.1.ebuild:
+  Version bump. Drop x86 keyword, bug 417587.
 
   06 May 2012; Kacper Kowalik <xarthisius@gentoo.org> rspec-mocks-2.6.0.ebuild:
   ppc64 stable wrt #369573
