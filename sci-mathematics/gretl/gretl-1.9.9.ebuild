@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.7.ebuild,v 1.4 2012/06/10 18:46:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.9.ebuild,v 1.1 2012/06/10 18:46:33 jlec Exp $
 
 EAPI=4
 
@@ -26,21 +26,21 @@ RDEPEND="
 	sci-visualization/gnuplot
 	virtual/lapack
 	virtual/latex-base
-	readline? ( sys-libs/readline )
 	accessibility? ( app-accessibility/flite )
+	emacs? ( virtual/emacs )
 	gtk? (
 			media-libs/gd[png]
 			sci-visualization/gnuplot[gd]
-			x11-libs/gtk+:2
-			x11-libs/gtksourceview:2.0 )
+			x11-libs/gtk+:3
+			x11-libs/gtksourceview:3.0 )
 	gnome? (
-			sci-visualization/gnuplot[gd]
-			media-libs/gd[png]
-			gnome-base/libgnomeui
-			gnome-base/gconf:2 )
-	R? ( dev-lang/R )
+				media-libs/gd[png]
+				sci-visualization/gnuplot[gd]
+				gnome-base/libgnomeui
+				gnome-base/gconf:2 )
 	odbc? ( dev-db/unixODBC )
-	emacs? ( virtual/emacs )"
+	R? ( dev-lang/R )
+	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -61,6 +61,7 @@ src_configure() {
 		--enable-shared \
 		--with-mpfr \
 		$(use_enable gtk gui) \
+		$(use_enable gtk gtk3) \
 		$(use_enable nls) \
 		$(use_enable openmp) \
 		$(use_enable sse2) \

@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.8.ebuild,v 1.2 2012/05/04 07:46:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.8.ebuild,v 1.3 2012/06/10 18:46:33 jlec Exp $
 
 EAPI=4
+
 USE_EINSTALL=true
 
 inherit eutils gnome2 elisp-common toolchain-funcs
@@ -14,10 +15,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="accessibility emacs gnome gtk nls odbc openmp readline sse2 R static-libs"
 
-IUSE="accessibility emacs gnome gtk gtk3 nls odbc openmp readline sse2 R static-libs"
-
-RDEPEND="dev-libs/glib:2
+RDEPEND="
+	dev-libs/glib:2
 	dev-libs/gmp
 	dev-libs/libxml2:2
 	dev-libs/mpfr
@@ -27,18 +28,16 @@ RDEPEND="dev-libs/glib:2
 	virtual/latex-base
 	accessibility? ( app-accessibility/flite )
 	emacs? ( virtual/emacs )
-	gtk?  ( media-libs/gd[png]
+	gtk? (
+			media-libs/gd[png]
 			sci-visualization/gnuplot[gd]
 			x11-libs/gtk+:2
 			x11-libs/gtksourceview:2.0 )
-	gtk3? ( media-libs/gd[png]
+	gnome? (
+			media-libs/gd[png]
 			sci-visualization/gnuplot[gd]
-			x11-libs/gtk+:3
-			x11-libs/gtksourceview:3.0 )
-	gnome? ( media-libs/gd[png]
-			 sci-visualization/gnuplot[gd]
-			 gnome-base/libgnomeui
-			 gnome-base/gconf:2 )
+			gnome-base/libgnomeui
+			gnome-base/gconf:2 )
 	odbc? ( dev-db/unixODBC )
 	R? ( dev-lang/R )
 	readline? ( sys-libs/readline )"
@@ -62,7 +61,6 @@ src_configure() {
 		--enable-shared \
 		--with-mpfr \
 		$(use_enable gtk gui) \
-		$(use_enable gtk3) \
 		$(use_enable nls) \
 		$(use_enable openmp) \
 		$(use_enable sse2) \
@@ -89,7 +87,7 @@ src_install() {
 	else
 		einstall svprefix="${ED}usr"
 	fi
-	if use gtk || use gtk3 && ! use gnome; then
+	if use gtk && ! use gnome; then
 		doicon gnome/gretl.png
 		make_desktop_entry gretl_x11 gretl
 	fi
