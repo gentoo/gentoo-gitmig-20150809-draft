@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.6-r1.ebuild,v 1.6 2012/06/07 21:51:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.6-r1.ebuild,v 1.7 2012/06/10 23:01:12 hasufell Exp $
 
 EAPI="4"
 
@@ -70,6 +70,11 @@ src_prepare() {
 		cp -r Samples Samples.clean
 		rm -f $(find Samples.clean -name 'Makefile*')
 	fi
+
+	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug #420293
+	# and http://www.cegui.org.uk/mantis/view.php?id=813
+	sed -i '1i#define OF(x) x' \
+		"${S2}"/cegui/src/minizip/{ioapi,unzip}.h || die
 }
 
 src_configure() {
