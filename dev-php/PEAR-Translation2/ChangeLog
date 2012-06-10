@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Translation2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/ChangeLog,v 1.32 2012/02/09 01:24:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Translation2/ChangeLog,v 1.33 2012/06/10 11:40:14 mabi Exp $
+
+  10 Jun 2012; Matti Bickel <mabi@gentoo.org>
+  -PEAR-Translation2-2.0.0_rc3.ebuild:
+  remove old
 
   09 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Translation2-2.0.4.ebuild:
   Stable for HPPA (bug #399359).
