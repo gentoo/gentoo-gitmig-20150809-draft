@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.217 2012/06/09 08:41:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.218 2012/06/10 04:03:13 vapier Exp $
+
+*gcc-config-1.7.3 (10 Jun 2012)
+
+  10 Jun 2012; Mike Frysinger <vapier@gentoo.org> +gcc-config-1.7.3.ebuild:
+  Version bump.
 
   09 Jun 2012; Markus Meier <maekke@gentoo.org> gcc-config-1.6.ebuild:
   arm stable, bug #419399
