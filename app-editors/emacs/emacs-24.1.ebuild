@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.1.ebuild,v 1.1 2012/06/10 15:13:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.1.ebuild,v 1.2 2012/06/10 18:12:08 ulm Exp $
 
 EAPI=4
 
@@ -131,7 +131,6 @@ src_configure() {
 		myconf="${myconf} $(use_with gconf)"
 		myconf="${myconf} $(use_with gsettings)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
-		myconf="${myconf} $(use_with wide-int)"
 		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
 		myconf="${myconf} $(use_with png) $(use_with svg rsvg)"
 		myconf="${myconf} $(use_with tiff) $(use_with xpm)"
@@ -201,6 +200,7 @@ src_configure() {
 		$(use_with gnutls) \
 		$(use_with libxml2 xml2) \
 		$(use_with selinux) \
+		$(use_with wide-int) \
 		${myconf}
 }
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.492 2012/06/10 15:13:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.493 2012/06/10 18:12:08 ulm Exp $
 
 *emacs-24.1 (10 Jun 2012)
 *emacs-23.4-r3 (10 Jun 2012)
@@ -10,6 +10,7 @@
   +emacs-23.4-r3.ebuild, +emacs-24.1.ebuild:
   Emacs 24.1 released, ebuild and patchset based on emacs-24.1_rc.
   Game score files moved to app-emacs/emacs-common-gentoo.
+  USE=wide-int is independent of X, move option to correct place.
 
 *emacs-24.1_rc (01 Jun 2012)
 
