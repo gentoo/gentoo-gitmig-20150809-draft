@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.302 2012/06/10 11:05:46 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.303 2012/06/10 11:31:12 hattya Exp $
+
+  10 Jun 2012; Akinori Hattori <hattya@gentoo.org> subversion.eclass:
+  reorder public functions
 
   10 Jun 2012; Akinori Hattori <hattya@gentoo.org> subversion.eclass:
   fixes bug #416743.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.78 2012/06/10 11:05:46 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.79 2012/06/10 11:31:12 hattya Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -406,23 +406,6 @@ subversion_bootstrap() {
 	fi
 }
 
-# @FUNCTION: subversion_src_unpack
-# @DESCRIPTION:
-# Default src_unpack. Fetch and, in older EAPIs, bootstrap.
-subversion_src_unpack() {
-	subversion_fetch || die "${ESVN}: unknown problem occurred in subversion_fetch."
-	if has "${EAPI:-0}" 0 1; then
-		subversion_bootstrap || die "${ESVN}: unknown problem occurred in subversion_bootstrap."
-	fi
-}
-
-# @FUNCTION: subversion_src_prepare
-# @DESCRIPTION:
-# Default src_prepare. Bootstrap.
-subversion_src_prepare() {
-	subversion_bootstrap || die "${ESVN}: unknown problem occurred in subversion_bootstrap."
-}
-
 # @FUNCTION: subversion_wc_info
 # @USAGE: [repo_uri]
 # @RETURN: ESVN_WC_URL, ESVN_WC_ROOT, ESVN_WC_UUID, ESVN_WC_REVISION and ESVN_WC_PATH
@@ -447,6 +430,46 @@ subversion_wc_info() {
 	export ESVN_WC_UUID="$(subversion__svn_info "${wc_path}" "Repository UUID")"
 	export ESVN_WC_REVISION="$(subversion__svn_info "${wc_path}" "Revision")"
 	export ESVN_WC_PATH="${wc_path}"
+}
+
+# @FUNCTION: subversion_src_unpack
+# @DESCRIPTION:
+# Default src_unpack. Fetch and, in older EAPIs, bootstrap.
+subversion_src_unpack() {
+	subversion_fetch || die "${ESVN}: unknown problem occurred in subversion_fetch."
+	if has "${EAPI:-0}" 0 1; then
+		subversion_bootstrap || die "${ESVN}: unknown problem occurred in subversion_bootstrap."
+	fi
+}
+
+# @FUNCTION: subversion_src_prepare
+# @DESCRIPTION:
+# Default src_prepare. Bootstrap.
+subversion_src_prepare() {
+	subversion_bootstrap || die "${ESVN}: unknown problem occurred in subversion_bootstrap."
+}
+
+# @FUNCTION: subversion_pkg_preinst
+# @USAGE: [repo_uri]
+# @DESCRIPTION:
+# Log the svn revision of source code. Doing this in pkg_preinst because we
+# want the logs to stick around if packages are uninstalled without messing with
+# config protection.
+subversion_pkg_preinst() {
+	local pkgdate=$(date "+%Y%m%d %H:%M:%S")
+	subversion_wc_info "${1}"
+	if [[ -n ${ESCM_LOGDIR} ]]; then
+		local dir="${ROOT}/${ESCM_LOGDIR}/${CATEGORY}"
+		if [[ ! -d ${dir} ]]; then
+			mkdir -p "${dir}" || eerror "Failed to create '${dir}' for logging svn revision"
+		fi
+		local logmessage="svn: ${pkgdate} - ${PF}:${SLOT} was merged at revision ${ESVN_WC_REVISION}"
+		if [[ -d ${dir} ]]; then
+			echo "${logmessage}" >>"${dir}/${PN}.log"
+		else
+			eerror "Could not log the message '${logmessage}' to '${dir}/${PN}.log'"
+		fi
+	fi
 }
 
 ## -- Private Functions
@@ -512,27 +535,4 @@ subversion__get_peg_revision() {
 	fi
 
 	echo "${peg_rev}"
-}
-
-# @FUNCTION: subversion_pkg_preinst
-# @USAGE: [repo_uri]
-# @DESCRIPTION:
-# Log the svn revision of source code. Doing this in pkg_preinst because we
-# want the logs to stick around if packages are uninstalled without messing with
-# config protection.
-subversion_pkg_preinst() {
-	local pkgdate=$(date "+%Y%m%d %H:%M:%S")
-	subversion_wc_info "${1}"
-	if [[ -n ${ESCM_LOGDIR} ]]; then
-		local dir="${ROOT}/${ESCM_LOGDIR}/${CATEGORY}"
-		if [[ ! -d ${dir} ]]; then
-			mkdir -p "${dir}" || eerror "Failed to create '${dir}' for logging svn revision"
-		fi
-		local logmessage="svn: ${pkgdate} - ${PF}:${SLOT} was merged at revision ${ESVN_WC_REVISION}"
-		if [[ -d ${dir} ]]; then
-			echo "${logmessage}" >>"${dir}/${PN}.log"
-		else
-			eerror "Could not log the message '${logmessage}' to '${dir}/${PN}.log'"
-		fi
-	fi
 }
