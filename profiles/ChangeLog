@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6654 2012/06/10 16:01:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6655 2012/06/10 20:10:19 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jun 2012; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask new ocaml version
 
   10 Jun 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask dev-libs/libnl-3.2.10 (bug #420261).
