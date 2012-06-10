@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.300 2012/06/09 22:14:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.301 2012/06/10 10:08:36 hattya Exp $
+
+  10 Jun 2012; Akinori Hattori <hattya@gentoo.org> subversion.eclass:
+  update @MAINTAINER and minor cleanup.
 
   09 Jun 2012; Julian Ospald <hasufell@gentoo.org> games.eclass:
   fix for games.eclass wrt bug #336626 #c21
