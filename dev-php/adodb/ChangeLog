@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/adodb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.117 2012/02/08 20:06:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.118 2012/06/10 12:12:11 mabi Exp $
+
+*adodb-5.17 (10 Jun 2012)
+
+  10 Jun 2012; Matti Bickel <mabi@gentoo.org> +adodb-5.17.ebuild,
+  -adodb-5.08a.ebuild, -adodb-5.11.ebuild:
+  version bump & remove old
 
   08 Feb 2012; Jeroen Roovers <jer@gentoo.org> adodb-5.14.ebuild:
   Stable for HPPA (bug #400841).
