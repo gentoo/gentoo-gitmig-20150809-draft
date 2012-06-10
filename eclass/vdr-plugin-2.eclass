@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.5 2012/05/25 19:56:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.6 2012/06/10 14:21:20 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -43,7 +43,7 @@
 #
 # For more details about it please take a look at the eutils.class.
 
-inherit base multilib eutils flag-o-matic
+inherit base eutils flag-o-matic multilib toolchain-funcs
 
 if ! has "${EAPI:-4}" 4; then
 	die "API of vdr-plugin-2.eclass in EAPI=\"${EAPI}\" not established"
@@ -291,9 +291,15 @@ vdr_i18n() {
 
 	local I18N_OBJECT=$( grep i18n.o Makefile )
 	if [[ -n ${I18N_OBJECT} ]]; then
-		sed -i "s:i18n.o::g" Makefile
-		dev_check "OBJECT i18n.o found"
-		dev_check "removed per sed \n"
+
+		if [[ "${KEEP_I18NOBJECT:-no}" = "yes" ]]; then
+			dev_check "Forced to keep i18n.o"
+		else
+			sed -i "s:i18n.o::g" Makefile
+			dev_check "OBJECT i18n.o found"
+			dev_check "removed per sed \n"
+		fi
+
 	else
 		dev_check "OBJECT i18n.o not found in Makefile"
 		dev_check "all fine or manual review needed? \n"
@@ -364,8 +370,11 @@ vdr-plugin-2_pkg_setup() {
 	# Plugins need to be compiled with position independent code, otherwise linking
 	# VDR against it will fail
 	if has_version ">=media-video/vdr-1.7.13"; then
-		append-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+		append-cppflags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 	fi
+
+	# missing ${chost}- tag
+	tc-export CC CXX
 
 	# Where should the plugins live in the filesystem
 	VDR_PLUGIN_DIR="/usr/$(get_libdir)/vdr/plugins"
