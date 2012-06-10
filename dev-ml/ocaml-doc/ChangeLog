@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-doc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ChangeLog,v 1.10 2012/06/04 17:19:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ChangeLog,v 1.11 2012/06/10 04:53:22 jdhore Exp $
+
+  10 Jun 2012; Jeff Horelick <jdhore@gentoo.org> ocaml-doc-3.12.ebuild:
+  marked x86 per bug 419417
 
   04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ocaml-doc-3.12.ebuild:
   Stable for amd64, wrt bug #419417
