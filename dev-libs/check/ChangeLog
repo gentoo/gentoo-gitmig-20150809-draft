@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.78 2012/06/10 03:07:18 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.79 2012/06/10 03:26:38 binki Exp $
+
+  10 Jun 2012; Nathan Phillip Brink <binki@gentoo.org> check-0.9.8-r1.ebuild:
+  Fix compilation with automake-1.12 broken by automake's -Werror switch (bug
+  #420373 by hwoarang).
 
   10 Jun 2012; Nathan Phillip Brink <binki@gentoo.org> -check-0.9.8.ebuild:
   Drop old revision of check-0.9.8 as bug #392773 is fixed.
