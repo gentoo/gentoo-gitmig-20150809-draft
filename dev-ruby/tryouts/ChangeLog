@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tryouts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.10 2011/02/13 09:26:55 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.11 2012/06/10 06:02:55 graaff Exp $
+
+  10 Jun 2012; Hans de Graaff <graaff@gentoo.org> -tryouts-2.0.1.002.ebuild,
+  -tryouts-2.0.3.ebuild, -tryouts-2.0.4.ebuild:
+  Remove old versions.
 
 *tryouts-2.1.0 (13 Feb 2011)
 
