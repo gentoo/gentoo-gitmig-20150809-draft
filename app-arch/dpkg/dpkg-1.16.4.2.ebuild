@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.4.2.ebuild,v 1.1 2012/06/10 15:38:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.4.2.ebuild,v 1.2 2012/06/10 15:49:06 jer Exp $
 
 EAPI=4
 
@@ -67,6 +67,7 @@ src_configure() {
 		$(use_with zlib) \
 		--disable-compiler-warnings \
 		--disable-compiler-optimisations \
+		--disable-linker-optimisations \
 		--without-selinux \
 		--disable-start-stop-daemon
 }

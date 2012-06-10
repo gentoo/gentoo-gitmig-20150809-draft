@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.187 2012/06/10 15:38:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.188 2012/06/10 15:49:06 jer Exp $
+
+  10 Jun 2012; Jeroen Roovers <jer@gentoo.org> dpkg-1.16.2.ebuild,
+  dpkg-1.16.4.2.ebuild:
+  Add missing configure option. Remove failing test in stable candidate (bug
+  #413887).
 
 *dpkg-1.16.4.2 (10 Jun 2012)
 

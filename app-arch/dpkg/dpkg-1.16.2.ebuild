@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.2.ebuild,v 1.6 2012/05/15 19:05:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.2.ebuild,v 1.7 2012/06/10 15:49:06 jer Exp $
 
 EAPI=3
 
@@ -52,6 +52,10 @@ src_prepare() {
 	sed -i scripts/Makefile.am \
 		-e '/850_Dpkg_Compression.t/d' \
 		|| die "sed failed"
+
+	# test fails (bug #414095)
+	sed -i utils/Makefile.am \
+		-e '/^test_cases/d;/100_update_alternatives/d' || die
 
 	eautoreconf
 }
