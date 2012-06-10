@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-arghdirector
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-arghdirector/ChangeLog,v 1.9 2012/04/25 06:36:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-arghdirector/ChangeLog,v 1.10 2012/06/10 14:54:51 hd_brummy Exp $
+
+  10 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-arghdirector-0.2.6.ebuild:
+  converted to vdr-plugin-2.eclass
 
   25 Apr 2012; Christian Ruppert <idl0r@gentoo.org>
   vdr-arghdirector-0.2.6.ebuild:

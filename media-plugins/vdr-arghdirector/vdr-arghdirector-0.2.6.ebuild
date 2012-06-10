@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-arghdirector/vdr-arghdirector-0.2.6.ebuild,v 1.9 2012/04/25 06:36:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-arghdirector/vdr-arghdirector-0.2.6.ebuild,v 1.10 2012/06/10 14:54:51 hd_brummy Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: use the multifeed option of some Premiere channels - fork of vdr-director"
 HOMEPAGE="http://www.arghgra.de/arghdirector.html"
@@ -23,12 +23,3 @@ PATCHES=(
 	"${FILESDIR}/${P}-vdr-1.5.3.diff"
 	"${FILESDIR}/${P}-i18n.patch"
 	)
-
-src_prepare() {
-	vdr-plugin_src_prepare
-
-	# Temp. fix for >= 1.7.27
-	if has_version ">=media-video/vdr-1.7.27"; then
-		sed -i -e 's:i18n.o::' Makefile || die
-	fi
-}
