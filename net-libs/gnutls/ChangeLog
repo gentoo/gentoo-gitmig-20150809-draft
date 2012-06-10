@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.367 2012/06/10 05:06:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.368 2012/06/10 05:24:41 radhermit Exp $
+
+  10 Jun 2012; Tim Harder <radhermit@gentoo.org> gnutls-2.12.18.ebuild,
+  gnutls-2.12.19.ebuild:
+  Drop -Werror flag from all relevant configure files.
 
   10 Jun 2012; Tim Harder <radhermit@gentoo.org> gnutls-2.12.18.ebuild,
   gnutls-2.12.19.ebuild:
