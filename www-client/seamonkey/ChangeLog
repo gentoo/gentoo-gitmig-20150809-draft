@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.385 2012/06/08 13:33:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.386 2012/06/10 02:18:20 polynomial-c Exp $
+
+  10 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.10.ebuild:
+  Fixed dependency on libpng. Thanks to Nathan Phillip Brink who reported this
+  in bug #420457.
 
   08 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.10.ebuild:
   Added new ff-patchset to fix bug #419801.
