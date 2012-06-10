@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13843 2012/06/10 20:10:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13844 2012/06/10 20:34:29 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -43,6 +43,7 @@
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (09 Jun 2012)
 # Doesn't work, bug #420269. Bad dependencies, bugs #420173, #420307.
 =sys-auth/polkit-0.106
+=sys-fs/udisks-1.98.0
 
 # Michael Weber <xmw@gentoo.org> (9 Jun 2012)
 # The mentioned versions fail to assemble raid 0/1/5 devices.
