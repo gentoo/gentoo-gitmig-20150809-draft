@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.10.ebuild,v 1.2 2012/06/06 21:03:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.10.ebuild,v 1.3 2012/06/10 15:56:23 jer Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -18,7 +18,7 @@ DEPEND="
 	virtual/yacc
 	doc? (
 		app-text/asciidoc
-		<app-doc/doxygen-1.8.0[latex]
+		app-doc/doxygen[latex]
 		media-gfx/mscgen
 	)
 "
