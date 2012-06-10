@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.2 2012/06/04 17:43:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.3 2012/06/10 14:30:55 ulm Exp $
 
 EAPI=4
 
@@ -34,6 +34,7 @@ IUSE="alsa athena dbus gconf gif gnutls gpm gsettings gtk gtk3 gzip-el hesiod im
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
+	>=app-emacs/emacs-common-gentoo-1.3[X?]
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
 	kerberos? ( virtual/krb5 )
@@ -86,9 +87,6 @@ DEPEND="${RDEPEND}
 	X? ( virtual/pkgconfig )
 	gzip-el? ( app-arch/gzip )
 	pax_kernel? ( sys-apps/paxctl )"
-
-RDEPEND="${RDEPEND}
-	>=app-emacs/emacs-common-gentoo-1.3[X?]"
 
 EMACS_SUFFIX="${PN/emacs/emacs-${SLOT}}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
@@ -261,8 +259,7 @@ src_install () {
 	# avoid collision between slots, see bug #169033 e.g.
 	rm "${ED}"/usr/share/emacs/site-lisp/subdirs.el
 	rm -rf "${ED}"/usr/share/{applications,icons}
-	rm "${ED}"/var/lib/games/emacs/{snake,tetris}-scores
-	keepdir /var/lib/games/emacs
+	rm -rf "${ED}"/var
 
 	# remove unused <version>/site-lisp dir
 	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
@@ -320,12 +317,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	local f
-	for f in "${EROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
-		[[ -e ${f} ]] || touch "${f}"
-	done
-	chown "${GAMES_USER_DED:-games}" "${EROOT}"/var/lib/games/emacs
-
 	elisp-site-regen
 	eselect emacs update ifunset
 
