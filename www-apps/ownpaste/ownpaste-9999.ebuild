@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ownpaste-9999.ebuild,v 1.1 2012/06/09 05:33:48 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ownpaste-9999.ebuild,v 1.2 2012/06/10 21:40:14 rafaelmartins Exp $
 
 EAPI=4
 
@@ -35,6 +35,7 @@ RDEPEND="dev-python/setuptools
 	>=dev-python/flask-sqlalchemy-0.15
 	>=dev-python/jinja-2.6
 	>=dev-python/werkzeug-0.8
+	>=dev-python/sqlalchemy-migrate-0.7.2
 	dev-python/pygments
 	dev-python/pytz"
 DEPEND="${RDEPEND}
