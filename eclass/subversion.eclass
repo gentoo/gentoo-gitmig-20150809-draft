@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.77 2012/06/10 10:08:36 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.78 2012/06/10 11:05:46 hattya Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -231,7 +231,7 @@ subversion_fetch() {
 		mkdir -m 775 -p "${ESVN_STORE_DIR}" || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
 	fi
 
-	pushd "${ESVN_STORE_DIR}" > /dev/null || die "${ESVN}: can't chdir to ${ESVN_STORE_DIR}"
+	pushd "${ESVN_STORE_DIR}" >/dev/null || die "${ESVN}: can't chdir to ${ESVN_STORE_DIR}"
 
 	local wc_path="$(subversion__get_wc_path "${repo_uri}")"
 	local options="${ESVN_OPTIONS} --config-dir ${ESVN_STORE_DIR}/.subversion"
@@ -361,7 +361,7 @@ subversion_fetch() {
 		rsync -rlpgo --exclude=".svn/" . "${S}" || die "${ESVN}: can't export to ${S}."
 	fi
 
-	popd > /dev/null
+	popd >/dev/null
 	echo
 }
 
@@ -522,16 +522,15 @@ subversion__get_peg_revision() {
 # config protection.
 subversion_pkg_preinst() {
 	local pkgdate=$(date "+%Y%m%d %H:%M:%S")
-	subversion_wc_info "${1:-${ESVN_REPO_URI}}"
+	subversion_wc_info "${1}"
 	if [[ -n ${ESCM_LOGDIR} ]]; then
 		local dir="${ROOT}/${ESCM_LOGDIR}/${CATEGORY}"
 		if [[ ! -d ${dir} ]]; then
-			mkdir -p "${dir}" || \
-				eerror "Failed to create '${dir}' for logging svn revision to '${PORTDIR_SCM}'"
+			mkdir -p "${dir}" || eerror "Failed to create '${dir}' for logging svn revision"
 		fi
 		local logmessage="svn: ${pkgdate} - ${PF}:${SLOT} was merged at revision ${ESVN_WC_REVISION}"
 		if [[ -d ${dir} ]]; then
-			echo "${logmessage}" >> "${dir}/${PN}.log"
+			echo "${logmessage}" >>"${dir}/${PN}.log"
 		else
 			eerror "Could not log the message '${logmessage}' to '${dir}/${PN}.log'"
 		fi
