@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.25 2012/05/26 09:46:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.26 2012/06/10 14:23:43 floppym Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -38,7 +38,7 @@ if [[ -z "${PYTHON_COMPAT}" ]]; then
 	PYTHON_COMPAT="  python2_5 python2_6 python2_7"
 	PYTHON_COMPAT+=" python3_1 python3_2"
 	PYTHON_COMPAT+=" jython2_5"
-	PYTHON_COMPAT+=" pypy1_7 pypy1_8"
+	PYTHON_COMPAT+=" pypy1_8 pypy1_9"
 fi
 
 # @ECLASS-VARIABLE: PYTHON_OPTIONAL
@@ -270,7 +270,7 @@ python-distutils-ng_newscript() {
 	done
 
 	if [[ -z "${default_impl}" ]]; then
-		for impl in python{2_7,2_6,2_5,3_2,3_1} pypy{1_8,1_7} jython2_5; do
+		for impl in python{2_7,2_6,2_5,3_2,3_1} pypy{1_9,1_8,1_7} jython2_5; do
 			use "python_targets_${impl}" || continue
 			default_impl="${impl}"
 			break
