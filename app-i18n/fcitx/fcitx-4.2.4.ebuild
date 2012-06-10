@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.4.ebuild,v 1.1 2012/06/07 06:28:17 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.4.ebuild,v 1.2 2012/06/10 09:15:46 qiaomuf Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="+cairo debug gir gtk gtk3 lua opencc +pango qt snooper static-libs +table test"
+IUSE="+cairo debug gtk gtk3 introspection lua opencc +pango qt4 snooper static-libs +table test"
 
 RDEPEND="
 	cairo? (
@@ -33,9 +33,10 @@ RDEPEND="
 		dev-libs/glib:2
 		dev-libs/dbus-glib
 	)
+	introspection? ( dev-libs/gobject-introspection )
 	lua? ( dev-lang/lua )
 	opencc? ( app-i18n/opencc )
-	qt? (
+	qt4? (
 		x11-libs/qt-gui:4
 		x11-libs/qt-dbus:4
 	)
@@ -43,8 +44,12 @@ RDEPEND="
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
+	app-text/enchant
+	app-text/iso-codes
+	dev-libs/icu
 	dev-util/intltool
 	virtual/pkgconfig
+	x11-libs/libxkbfile
 	x11-proto/xproto"
 
 update_gtk_immodules() {
@@ -78,13 +83,13 @@ src_configure() {
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
 		$(cmake-utils_use_enable cairo CARIO)
 		$(cmake-utils_use_enable debug DEBUG)
-		$(cmake-utils_use_enable gir GIR)
 		$(cmake-utils_use_enable gtk GTK2_IM_MODULE)
 		$(cmake-utils_use_enable gtk3 GTK3_IM_MODULE)
+		$(cmake-utils_use_enable introspection GIR)
 		$(cmake-utils_use_enable lua LUA)
 		$(cmake-utils_use_enable opencc OPENCC)
 		$(cmake-utils_use_enable pango PANGO)
-		$(cmake-utils_use_enable qt QT_IM_MODULE)
+		$(cmake-utils_use_enable qt4 QT_IM_MODULE)
 		$(cmake-utils_use_enable snooper SNOOPER)
 		$(cmake-utils_use_enable static-libs STATIC)
 		$(cmake-utils_use_enable table TABLE)
