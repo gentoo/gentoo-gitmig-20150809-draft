@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.39 2011/01/06 21:30:46 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.40 2012/06/10 12:55:01 jlec Exp $
+
+  10 Jun 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop redundant maintainer
 
   06 Jan 2011; Justin Lecher <jlec@gentoo.org> -dog-1.7-r3.ebuild,
   dog-1.7-r4.ebuild:
