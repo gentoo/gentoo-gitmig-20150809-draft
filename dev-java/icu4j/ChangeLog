@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/icu4j
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.55 2011/12/31 12:32:47 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.56 2012/06/10 10:37:28 sera Exp $
+
+*icu4j-49.1 (10 Jun 2012)
+
+  10 Jun 2012; Ralph Sennhauser <sera@gentoo.org> +icu4j-49.1.ebuild:
+  Version bump. #339526
+  Require at least jdk6. #361593
+  Build javadocs instead of downloading them.
+  Add use examples to install samples and demos.
+  No longer force javac as compiler.
+  No longer disable any tests.
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> icu4j-3.8.1-r1.ebuild,
   icu4j-4.0.1.1.ebuild, icu4j-4.2.1.1.ebuild, icu4j-4.4.1.1.ebuild,
