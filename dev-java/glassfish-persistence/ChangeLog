@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/glassfish-persistence
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-persistence/ChangeLog,v 1.6 2007/08/19 20:04:22 wltjr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-persistence/ChangeLog,v 1.7 2012/06/10 08:23:21 sera Exp $
+
+*glassfish-persistence-1.0-r1 (10 Jun 2012)
+
+  10 Jun 2012; Ralph Sennhauser <sera@gentoo.org>
+  +glassfish-persistence-1.0-r1.ebuild,
+  +files/glassfish-persistence-1.0-python2.7-sax-parser.patch:
+  Fix building without python2.6 installed. #414807
+  Bump EAPI, fix HOMPAGE and QA issues.
 
   19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   glassfish-persistence-1.0.ebuild:
