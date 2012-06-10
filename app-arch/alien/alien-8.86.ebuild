@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.86.ebuild,v 1.1 2012/01/29 20:47:44 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.86.ebuild,v 1.2 2012/06/10 21:20:21 jdhore Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc x86"
 IUSE="+bzip2"
 
 RDEPEND="app-arch/rpm
