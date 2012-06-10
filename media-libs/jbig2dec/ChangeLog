@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbig2dec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.26 2012/06/04 18:21:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.27 2012/06/10 06:29:15 heroxbd Exp $
+
+  10 Jun 2012; Benda Xu <heroxbd@gentoo.org> jbig2dec-0.11-r1.ebuild:
+  keyword ~amd64-linux ~x86-linux
 
   04 Jun 2012; Fabian Groffen <grobian@gentoo.org> jbig2dec-0.11-r1.ebuild:
   Marked ~m68k-mint, bug #418389
