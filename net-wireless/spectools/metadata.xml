@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>mobile</herd>
 	<maintainer>
-		<email>sidhayn@gmail.com</email>
+		<email>zerochaos@gentoo.org</email>
+		<name>Rick Farina</name>
 		<description>maintainer, has access to all hardware as needed</description>
 	</maintainer>
 	<maintainer>
