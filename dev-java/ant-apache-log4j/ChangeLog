@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-apache-log4j
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-log4j/ChangeLog,v 1.30 2012/06/11 09:29:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-log4j/ChangeLog,v 1.31 2012/06/11 12:58:28 johu Exp $
+
+  11 Jun 2012; Johannes Huber <johu@gentoo.org> ant-apache-log4j-1.8.4.ebuild:
+  Stable for x86, wrt bug #417909
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ant-apache-log4j-1.8.4.ebuild:
   Stable for amd64, wrt bug #417909

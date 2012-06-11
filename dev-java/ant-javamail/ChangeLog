@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-javamail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-javamail/ChangeLog,v 1.32 2012/06/11 09:34:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-javamail/ChangeLog,v 1.33 2012/06/11 13:01:13 johu Exp $
+
+  11 Jun 2012; Johannes Huber <johu@gentoo.org> ant-javamail-1.8.4.ebuild:
+  Stable for x86, wrt bug #417909
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ant-javamail-1.8.4.ebuild:
   Stable for amd64, wrt bug #417909

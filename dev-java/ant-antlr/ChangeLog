@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-antlr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.40 2012/06/11 09:28:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.41 2012/06/11 13:00:20 johu Exp $
+
+  11 Jun 2012; Johannes Huber <johu@gentoo.org> ant-antlr-1.8.4.ebuild:
+  Stable for x86, wrt bug #417909
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ant-antlr-1.8.4.ebuild:
   Stable for amd64, wrt bug #417909
