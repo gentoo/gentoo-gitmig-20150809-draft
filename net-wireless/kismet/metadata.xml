@@ -4,12 +4,12 @@
 	<herd>mobile</herd>
 	<maintainer>
 		<email>sidhayn@gmail.com</email>
-		<description>Proxied maintainer, assign bugs to him</description>
+		<description>maintainer</description>
 	</maintainer>
 	<maintainer>
 		<email>steev@gentoo.org</email>
 		<name>Steev Klimaszewski</name>
-		<description>Proxy-maintainer, CC him on bugs</description>
+		<description>co-maintainer, CC him on bugs</description>
 	</maintainer>
 	<use>
 		<flag name="client">Build the ncurses-based user interface</flag>
