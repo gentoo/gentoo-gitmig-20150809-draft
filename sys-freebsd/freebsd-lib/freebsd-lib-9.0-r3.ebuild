@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.4 2012/05/30 12:25:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.5 2012/06/11 13:33:52 aballier Exp $
 
 EAPI=2
 
@@ -215,7 +215,7 @@ bootstrap_csu() {
 	cd "${WORKDIR}/${csudir}" || die "Missing ${csudir}."
 	freebsd_src_compile
 
-	append-flags "-B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
+	CFLAGS="${CFLAGS} -B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
 	append-ldflags "-B ${MAKEOBJDIRPREFIX}/${WORKDIR}/${csudir}"
 }
 
