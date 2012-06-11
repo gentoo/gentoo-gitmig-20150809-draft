@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.80 2012/05/29 19:17:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.81 2012/06/11 16:01:14 darkside Exp $
+
+  11 Jun 2012; Jeremy Olexa <darkside@gentoo.org> boehm-gc-7.2_alpha6.ebuild:
+  add prefix keywords, as tested in overlay
 
 *boehm-gc-7.2_alpha6 (29 May 2012)
 
