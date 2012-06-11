@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/xf86-video-r128-6.8.2.ebuild,v 1.2 2012/05/16 00:55:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/xf86-video-r128-6.8.2-r1.ebuild,v 1.1 2012/06/11 13:10:15 scarabeus Exp $
 
 EAPI=4
 XORG_DRI=dri
@@ -15,5 +15,7 @@ RDEPEND=">=x11-base/xorg-server-1.2"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	XORG_CONFIGURE_OPTIONS="$(use_enable dri)"
+	XORG_CONFIGURE_OPTIONS=(
+		$(use_enable dri)
+	)
 }
