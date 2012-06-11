@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/pcc-libs-1.0.0.ebuild,v 1.1 2011/04/04 10:20:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/pcc-libs-1.0.0.ebuild,v 1.2 2012/06/11 00:29:04 ryao Exp $
 
 EAPI=2
 
@@ -12,11 +12,16 @@ HOMEPAGE="http://pcc.ludd.ltu.se"
 SRC_URI="ftp://pcc.ludd.ltu.se/pub/pcc-releases/${P}.tgz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~amd64-fbsd"
 
 IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+src_prepare()
+{
+	epatch "${FILESIR}/${P}-check-builtin.patch"
+}
 
 src_compile() {
 	# not parallel-safe yet
