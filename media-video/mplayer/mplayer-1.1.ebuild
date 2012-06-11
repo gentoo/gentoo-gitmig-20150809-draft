@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1.ebuild,v 1.1 2012/06/10 16:40:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1.ebuild,v 1.2 2012/06/11 12:47:01 aballier Exp $
 
 EAPI=4
 
@@ -193,6 +193,7 @@ REQUIRED_USE="bindist? ( !faac !win32codecs )
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0_rc4-pkg-config.patch"
+	"${FILESDIR}/${P}-ffmpeg.patch"
 )
 
 pkg_setup() {
@@ -223,12 +224,15 @@ src_unpack() {
 		cd "${WORKDIR}"
 		rm -rf "${WORKDIR}/${P}/ffmpeg/"
 		( S="${WORKDIR}/${P}/ffmpeg/" git-2_src_unpack )
+	else
+		unpack ${A}
+	fi
+
+	if [[ ${PV} = *9999* ]] || [[ "${PV%_rc*}" = "${PV}" ]]; then
 		cd "${S}"
 		cp "${FILESDIR}/dump_ffmpeg.sh" . || die
 		chmod +x dump_ffmpeg.sh
 		./dump_ffmpeg.sh || die
-	else
-		unpack ${A}
 	fi
 
 	if ! use truetype; then

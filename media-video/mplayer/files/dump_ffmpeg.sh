@@ -6,7 +6,7 @@ SYSTEM_FFMPEG_DIR=${EPREFIX}/usr/include
 
 # Move directories
 
-[ -d "${FFMPEG_DIR}/.git" ] && mv "${FFMPEG_DIR}" "${FFMPEG_MOVED_DIR}"
+[ -d "${FFMPEG_DIR}" ] && mv "${FFMPEG_DIR}" "${FFMPEG_MOVED_DIR}"
 [ -d "${FFMPEG_MOVED_DIR}" ] || exit 1
 [ -d "${FFMPEG_DIR}" ] || mkdir "${FFMPEG_DIR}"
 
