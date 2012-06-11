@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ncdc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ChangeLog,v 1.17 2012/05/21 09:17:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ChangeLog,v 1.18 2012/06/11 10:16:05 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ncdc-1.11.ebuild:
+  Stable for amd64, wrt bug #420651
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ncdc-1.9.ebuild:
   x86 stable wrt bug #412687
