@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.55 2012/05/09 20:19:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.56 2012/06/11 12:57:14 scarabeus Exp $
 
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -418,7 +418,7 @@ xorg-2_src_configure() {
 			eqawarn "to preserve namespace."
 		fi
 
-		local xorgconfadd=(${CONFIGURE_OPTIONS})
+		local xorgconfadd=(${CONFIGURE_OPTIONS} ${XORG_CONFIGURE_OPTIONS})
 	else
 		local xorgconfadd=("${XORG_CONFIGURE_OPTIONS[@]}")
 	fi
