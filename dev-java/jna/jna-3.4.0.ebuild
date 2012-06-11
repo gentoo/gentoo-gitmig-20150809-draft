@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.8 2012/06/07 21:18:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/jna-3.4.0.ebuild,v 1.9 2012/06/11 14:05:33 mgorny Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ inherit java-pkg-2 java-ant-2 toolchain-funcs flag-o-matic vcs-snapshot
 
 DESCRIPTION="Java Native Access (JNA)"
 HOMEPAGE="https://github.com/twall/jna#readme"
-SRC_URI="https://github.com/twall/jna/tarball/3.4.0 -> ${P}-src.tar.gz"
+SRC_URI="https://github.com/twall/jna/tarball/3.4.0 -> ${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
