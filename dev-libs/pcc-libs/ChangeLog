@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pcc-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/ChangeLog,v 1.7 2012/06/11 00:29:04 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/ChangeLog,v 1.8 2012/06/11 01:19:48 ryao Exp $
+
+  11 Jun 2012; Richard Yao <ryao@gentoo.org> pcc-libs-1.0.0.ebuild:
+  Fix typo
 
   11 Jun 2012; Richard Yao <ryao@gentoo.org>
   +files/pcc-libs-1.0.0-check-builtin.patch, pcc-libs-1.0.0.ebuild:
