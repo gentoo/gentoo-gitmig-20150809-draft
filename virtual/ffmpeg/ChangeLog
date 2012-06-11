@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.41 2012/06/06 04:54:25 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.42 2012/06/11 11:26:00 heroxbd Exp $
+
+  11 Jun 2012; Benda Xu <heroxbd@gentoo.org> ffmpeg-0.10.3.ebuild:
+  keyword ~x86-linux
 
   06 Jun 2012;  <heroxbd@gentoo.org> ffmpeg-0.10.3.ebuild:
   keyword ~amd64-linux
