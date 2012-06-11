@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.150 2012/06/08 13:26:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.151 2012/06/11 12:25:32 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> thunderbird-10.0.5.ebuild:
+  Stable for amd64, wrt bug #420125
 
   08 Jun 2012; Jory A. Pratt <anarchy@gentoo.org> thunderbird-13.0.ebuild:
   Update ff patchset, bug #419801
