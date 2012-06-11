@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.5 2012/06/11 13:33:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0-r3.ebuild,v 1.6 2012/06/11 13:52:38 aballier Exp $
 
 EAPI=2
 
@@ -168,9 +168,6 @@ src_prepare() {
 		# shouldn't be a symlink to /usr/src/sys (which should be already patched)
 		epatch "${FILESDIR}"/${PN}-7.1-types.h-fix.patch
 		epatch "${FILESDIR}"/freebsd-sources-9.0-sysctluint.patch
-		# Preinstall includes so we don't use the system's ones.
-		mkdir "${WORKDIR}/include_proper" || die "Couldn't create ${WORKDIR}/include_proper"
-		install_includes "/include_proper"
 		return 0
 	fi
 
@@ -284,6 +281,14 @@ get_subdirs() {
 # build against it.
 do_bootstrap() {
 	einfo "Bootstrapping on ${CHOST} for ${CTARGET}"
+	if ! is_crosscompile ; then
+		# Pre-install headers, but not when building a cross-compiler since we
+		# assume they have been installed in the previous pass.
+		einfo "Pre-installing includes in include_proper_${ABI}"
+		mkdir "${WORKDIR}/include_proper_${ABI}" || die
+		CTARGET="${CHOST}" install_includes "/include_proper_${ABI}"
+		CFLAGS="${CFLAGS} -isystem ${WORKDIR}/include_proper_${ABI}"
+	fi
 	bootstrap_csu
 	bootstrap_libssp_nonshared
 }
@@ -351,16 +356,11 @@ src_compile() {
 			CFLAGADD=""
 			if ! is_native_abi ; then
 				mymakeopts="${mymakeopts} COMPAT_32BIT="
-				einfo "Pre-installing includes in include_proper_${ABI}"
-				mkdir "${WORKDIR}/include_proper_${ABI}" || die
-				CTARGET="${CHOST}" install_includes "/include_proper_${ABI}"
-				CFLAGADD="-isystem ${WORKDIR}/include_proper_${ABI}"
 			else
-				use build && CFLAGADD="-isystem ${WORKDIR}/include_proper" || CFLAGADD="-isystem /usr/include";
+				use build || CFLAGS="${CFLAGS} -isystem /usr/include";
 			fi
 
 			einfo "Building for ABI ${ABI} and TARGET=$(tc-arch-kernel ${CHOST})"
-			CFLAGS="${CFLAGS} ${CFLAGADD}"
 
 			CTARGET="${CHOST}" do_compile
 
