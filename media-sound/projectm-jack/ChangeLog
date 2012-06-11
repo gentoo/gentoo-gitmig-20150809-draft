@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/projectm-jack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/projectm-jack/ChangeLog,v 1.8 2012/05/08 07:29:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/projectm-jack/ChangeLog,v 1.9 2012/06/11 13:31:15 aballier Exp $
+
+*projectm-jack-2.1.0 (11 Jun 2012)
+
+  11 Jun 2012; Alexis Ballier <aballier@gentoo.org>
+  +projectm-jack-2.1.0.ebuild:
+  version bump
 
   08 May 2012; Andreas Schuerch <nativemad@gentoo.org>
   projectm-jack-2.0.1.ebuild:
