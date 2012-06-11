@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.9.ebuild,v 1.3 2012/05/12 17:53:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.9.ebuild,v 1.4 2012/06/11 18:40:13 hwoarang Exp $
 
 EAPI="4"
 
@@ -32,6 +32,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-sandbox.patch
 	#bug #415595
 	epatch "${FILESDIR}"/${P}-libwnck-check.patch
+	#bug #420583
+	sed -i "s:-Werror::" configure.ac || die
 	eautoreconf
 }
 
