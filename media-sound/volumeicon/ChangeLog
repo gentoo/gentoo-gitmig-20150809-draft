@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/volumeicon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volumeicon/ChangeLog,v 1.7 2012/06/10 04:46:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volumeicon/ChangeLog,v 1.8 2012/06/11 09:20:29 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> volumeicon-0.4.6.ebuild:
+  Stable for amd64, wrt bug #419697
 
   10 Jun 2012; Jeff Horelick <jdhore@gentoo.org> volumeicon-0.4.6.ebuild:
   marked x86 per bug 419697
