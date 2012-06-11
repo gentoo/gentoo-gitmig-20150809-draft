@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ws4py-9999.ebuild,v 1.2 2012/04/24 02:31:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ws4py-9999.ebuild,v 1.3 2012/06/11 14:13:15 mgorny Exp $
 
 # The gevent package isn't in the tree yet, so we delete
 # those implementations.
@@ -18,7 +18,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 else
 	inherit vcs-snapshot
-	SRC_URI="https://github.com/Lawouach/WebSocket-for-Python/tarball/v${PV} -> ${P}-src.tar.gz"
+	SRC_URI="https://github.com/Lawouach/WebSocket-for-Python/tarball/v${PV} -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
