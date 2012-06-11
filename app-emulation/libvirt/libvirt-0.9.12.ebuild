@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12.ebuild,v 1.3 2012/06/04 19:46:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12.ebuild,v 1.4 2012/06/11 02:01:38 cardoe Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ PYTHON_DEPEND="python? 2:2.5"
 #RESTRICT_PYTHON_ABIS="3.*"
 #SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils python user autotools
+inherit eutils python user autotools linux-info
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-2
@@ -47,12 +47,14 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
+# We can use both libnl:1.1 and libnl:3, but if you have both installed, the
+# package will use 1.1 by default
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
 	dev-libs/libgcrypt
 	>=dev-libs/libxml2-2.7.6
-	dev-libs/libnl:3
+	dev-libs/libnl:1.1
 	>=net-libs/gnutls-1.0.25
 	sys-apps/dmidecode
 	>=sys-apps/util-linux-2.17
@@ -94,12 +96,52 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1"
 
+LXC_CONFIG_CHECK="
+	~CGROUPS
+	~CGROUP_FREEZER
+	~CGROUP_DEVICE
+	~CPUSETS
+	~CGROUP_CPUACCT
+	~RESOURCE_COUNTERS
+	~CGROUP_MEM_RES_CTLR
+	~CGROUP_SCHED
+	~BLK_CGROUP
+	~NAMESPACES
+	~UTS_NS
+	~IPC_NS
+	~USER_NS
+	~PID_NS
+	~NET_NS
+	~DEVPTS_MULTIPLE_INSTANCES
+	~VETH
+	~MACVLAN
+	~POSIX_MQUEUE
+	~!GRKERNSEC_CHROOT_MOUNT
+	~!GRKERNSEC_CHROOT_DOUBLE
+	~!GRKERNSEC_CHROOT_PIVOT
+	~!GRKERNSEC_CHROOT_CHMOD
+	~!GRKERNSEC_CHROOT_CAPS
+"
+
+VIRTNET_CONFIG_CHECK="
+	~BRIDGE_NF_EBTABLES
+	~NETFILTER_ADVANCED
+	~NETFILTER_XT_TARGET_CHECKSUM
+"
+
 pkg_setup() {
 	use python && python_set_active_version 2
 	python_pkg_setup
 
 	enewgroup qemu 77
 	enewuser qemu 77 -1 -1 qemu kvm
+
+	CONFIG_CHECK=""
+	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
+	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
+	if [[ -n ${CONFIG_CHECK} ]]; then
+		linux-info_pkg_setup
+	fi
 }
 
 src_prepare() {

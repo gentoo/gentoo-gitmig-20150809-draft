@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.183 2012/06/04 19:46:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.184 2012/06/11 02:01:38 cardoe Exp $
+
+  10 Jun 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.12.ebuild:
+  Fix up libnl depend when both slots are installed. Add kernel param checks
+  for all the various components of LXC and the virt-network USE flag.
 
   04 Jun 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.12.ebuild:
   Add the qemu user to the kvm group so it can use KVM.
