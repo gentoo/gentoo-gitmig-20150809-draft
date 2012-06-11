@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-compress
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/ChangeLog,v 1.6 2012/06/01 21:28:09 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/ChangeLog,v 1.7 2012/06/11 09:39:08 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> commons-compress-1.4.1.ebuild:
+  Stable for amd64, wrt bug #417909
 
 *commons-compress-1.4.1 (01 Jun 2012)
 
