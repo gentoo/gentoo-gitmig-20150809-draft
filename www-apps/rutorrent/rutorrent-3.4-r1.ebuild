@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/rutorrent-3.4-r1.ebuild,v 1.1 2012/06/11 10:21:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/rutorrent-3.4-r1.ebuild,v 1.2 2012/06/11 14:27:45 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -36,7 +36,7 @@ src_install() {
 	mv plugins rutorrent
 	cd rutorrent
 	doins -r .
-	
+
 	chmod +x "${ED}${MY_HTDOCSDIR}"/plugins/*/*.sh \
 		"$ED${MY_HTDOCSDIR}"/php/test.sh || die "chmod failed"
 
