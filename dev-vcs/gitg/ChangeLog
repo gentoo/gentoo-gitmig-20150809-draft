@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.19 2012/06/09 14:29:42 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.20 2012/06/11 09:19:31 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gitg-0.1.2.ebuild:
+  Stable for amd64, wrt bug #419893
 
   09 Jun 2012; Sebastian Pipping <sping@gentoo.org> gitg-0.0.6.ebuild,
   gitg-0.1.0.ebuild, gitg-0.1.2.ebuild, gitg-0.2.2.ebuild, gitg-0.2.4.ebuild,
