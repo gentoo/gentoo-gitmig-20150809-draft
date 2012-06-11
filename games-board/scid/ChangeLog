@@ -1,6 +1,9 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.33 2012/05/07 19:28:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.34 2012/06/11 11:15:18 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> scid-4.3.ebuild:
+  Stable for amd64, wrt bug #420137
 
 *scid-4.3 (07 May 2012)
 

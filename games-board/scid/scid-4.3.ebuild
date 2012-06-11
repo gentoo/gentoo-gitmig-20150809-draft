@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.3.ebuild,v 1.1 2012/05/07 19:28:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.3.ebuild,v 1.2 2012/06/11 11:15:18 ago Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/scid/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="=dev-lang/tk-8.5*
