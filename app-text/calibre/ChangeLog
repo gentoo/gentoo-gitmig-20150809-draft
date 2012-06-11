@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.209 2012/06/08 20:01:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.210 2012/06/11 22:06:29 zmedico Exp $
+
+  11 Jun 2012; Zac Medico <zmedico@gentoo.org> calibre-0.8.55.ebuild:
+  Add new qt-dbus and qt-svg deps for building calibre_style.so.
 
 *calibre-0.8.55 (08 Jun 2012)
 
