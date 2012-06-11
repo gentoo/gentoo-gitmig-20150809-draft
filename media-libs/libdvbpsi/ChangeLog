@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.56 2012/05/29 13:22:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.57 2012/06/11 10:13:45 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libdvbpsi-0.2.2.ebuild:
+  Stable for amd64, wrt bug #419083
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> libdvbpsi-0.2.2.ebuild:
   keyword ~amd64-fbsd
