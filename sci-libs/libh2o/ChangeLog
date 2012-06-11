@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libh2o
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/ChangeLog,v 1.3 2012/06/06 15:33:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/ChangeLog,v 1.4 2012/06/11 21:03:09 mgorny Exp $
+
+*libh2o-0.2.1 (11 Jun 2012)
+
+  11 Jun 2012; Michał Górny <mgorny@gentoo.org> +libh2o-0.2.1.ebuild:
+  Version bump. The new version adds expansion calculation functions.
 
 *libh2o-0.2 (06 Jun 2012)
 
