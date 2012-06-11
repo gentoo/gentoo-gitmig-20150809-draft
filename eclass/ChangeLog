@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.309 2012/06/11 14:22:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.310 2012/06/11 19:46:32 sera Exp $
+
+  11 Jun 2012; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
+  Add app-admin/eselect-java as preferred provider of eselect java-vm.
 
   11 Jun 2012; Michał Górny <mgorny@gentoo.org> vcs-snapshot.eclass:
   Unpack tarballs in directory matching their name rather than ${P}. This

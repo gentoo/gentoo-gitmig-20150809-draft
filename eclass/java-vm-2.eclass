@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.42 2011/12/05 07:07:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.43 2012/06/11 19:46:32 sera Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -14,11 +14,11 @@
 
 inherit eutils fdo-mime multilib pax-utils prefix
 
-DEPEND="=dev-java/java-config-2*"
-has "${EAPI}" 0 1 && DEPEND="${DEPEND} >=sys-apps/portage-2.1"
-
 RDEPEND="
-	=dev-java/java-config-2*"
+	=dev-java/java-config-2*
+	|| ( app-admin/eselect-java <dev-java/java-config-2.2 )"
+DEPEND="${RDEPEND}"
+has "${EAPI}" 0 1 && DEPEND="${DEPEND} >=sys-apps/portage-2.1"
 
 export WANT_JAVA_CONFIG=2
 
