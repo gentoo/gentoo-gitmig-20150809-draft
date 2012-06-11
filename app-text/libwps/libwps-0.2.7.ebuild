@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.7.ebuild,v 1.2 2012/06/10 20:49:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.7.ebuild,v 1.3 2012/06/11 08:41:15 scarabeus Exp $
 
 EAPI=4
 
@@ -23,10 +23,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 "
-
-PATCHES=(
-	"${FILESDIR}/${PN}-0.2.6-debug.patch"
-)
 
 src_configure() {
 	econf \
