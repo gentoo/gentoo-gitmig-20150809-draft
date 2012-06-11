@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ebtables
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.46 2011/12/17 03:29:13 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.47 2012/06/11 09:18:28 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ebtables-2.0.10.4.ebuild:
+  Stable for amd64, wrt bug #404265
 
 *ebtables-2.0.10.4 (17 Dec 2011)
 
