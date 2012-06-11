@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bacon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bacon/ChangeLog,v 1.10 2012/05/01 18:24:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bacon/ChangeLog,v 1.11 2012/06/11 17:38:11 graaff Exp $
+
+  11 Jun 2012; Hans de Graaff <graaff@gentoo.org> -bacon-1.1.0.ebuild:
+  Remove old version.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> bacon-1.1.0-r1.ebuild:
   Drop ia64/sparc keywords
