@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.16 2012/06/06 05:01:55 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.17 2012/06/11 11:26:47 heroxbd Exp $
+
+  11 Jun 2012; Benda Xu <heroxbd@gentoo.org> xpra-0.3.2.ebuild:
+  keyword ~x86-linux
 
   06 Jun 2012; Benda Xu <heroxbd@gentoo.org> xpra-0.3.2.ebuild:
   keyword ~amd64-linux
