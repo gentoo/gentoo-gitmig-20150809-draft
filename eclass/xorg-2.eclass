@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.56 2012/06/11 12:57:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.57 2012/06/11 13:02:21 mgorny Exp $
 
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -468,8 +468,8 @@ xorg-2_src_install() {
 		dodoc "${S}"/ChangeLog || die "dodoc failed"
 	fi
 
-	# Don't install libtool archives (even with static-libs)
-	remove_libtool_files all
+	# Don't install libtool archives (even for modules)
+	prune_libtool_files --all
 
 	[[ -n ${FONT} ]] && remove_font_metadata
 }

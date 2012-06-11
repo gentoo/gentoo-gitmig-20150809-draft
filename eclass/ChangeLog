@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.307 2012/06/11 12:57:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.308 2012/06/11 13:02:21 mgorny Exp $
+
+  11 Jun 2012; Michał Górny <mgorny@gentoo.org> xorg-2.eclass:
+  Replace remove_libtool_files with prune_libtool_files.
 
   11 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> xorg-2.eclass:
   Fix not assigned variable. IE bug#416673.
