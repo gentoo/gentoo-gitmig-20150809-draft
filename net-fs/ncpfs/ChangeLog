@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/ncpfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.30 2012/06/11 08:28:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.31 2012/06/11 09:20:53 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ncpfs-2.2.6-r2.ebuild:
+  Stable for amd64, wrt bug #418227
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -ncpfs-2.2.6-r1.ebuild:
   Remove old
