@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2006.09.1.ebuild,v 1.1 2012/02/19 22:27:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2006.09.1.ebuild,v 1.2 2012/06/11 02:34:03 zerochaos Exp $
 
 MY_PN=wispy-tools
 MY_PV=${PV/\./-}
@@ -20,6 +20,7 @@ IUSE="debug gtk ncurses"
 DEPEND="=virtual/libusb-0*
 		ncurses? ( sys-libs/ncurses )
 		gtk? ( =x11-libs/gtk+-2* )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf $(use_with gtk gtk-version 2) || die "econf failed"

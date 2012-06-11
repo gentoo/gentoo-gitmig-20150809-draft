@@ -4,12 +4,12 @@
 	<herd>mobile</herd>
 	<maintainer>
 		<email>sidhayn@gmail.com</email>
-		<description>Proxied maintainer, assign bugs to him</description>
+		<description>maintainer, has access to all hardware as needed</description>
 	</maintainer>
 	<maintainer>
 		<email>steev@gentoo.org</email>
 		<name>Steev Klimaszewski</name>
-		<description>Proxy-maintainer, CC him on bugs</description>
+		<description>co-maintainer, CC him on bugs</description>
 	</maintainer>
 	<maintainer>
 		<email>robbat2@gentoo.org</email>
