@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r2.ebuild,v 1.1 2012/05/06 19:22:22 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/proxool-0.8.3-r2.ebuild,v 1.2 2012/06/11 12:44:27 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 # Tests disabled because they would need hibernate
