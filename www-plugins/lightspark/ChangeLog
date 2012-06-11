@@ -1,6 +1,19 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.43 2012/06/03 13:31:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.44 2012/06/11 21:28:15 chithanh Exp $
+
+*lightspark-0.6.0.1 (11 Jun 2012)
+
+  11 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/lightspark-0.6.0.1-gcc-4.5_0000.patch,
+  +files/lightspark-0.6.0.1-gcc-4.5_0001.patch,
+  +files/lightspark-0.6.0.1-gcc-4.5_0002.patch,
+  +files/lightspark-0.6.0.1-gcc-4.5_0003.patch,
+  +files/lightspark-0.6.0.1-gcc-4.5_0004.patch,
+  +files/lightspark-0.6.0.1-gcc-4.5_0005.patch,
+  +files/lightspark-0.6.0.1-gcc-4.5_0006.patch, +lightspark-0.6.0.1.ebuild,
+  metadata.xml:
+  Version bump.
 
   03 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/lightspark-0.5.7-llvm-3.1_0000.patch,
