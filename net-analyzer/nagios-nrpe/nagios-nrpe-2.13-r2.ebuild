@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.13-r1.ebuild,v 1.1 2012/06/10 18:25:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.13-r2.ebuild,v 1.1 2012/06/11 20:16:22 idl0r Exp $
 
 EAPI=4
 
@@ -100,7 +100,7 @@ src_install() {
 	use ssl && dodoc README.SSL
 
 	if use xinetd; then
-		insinto /etc/xinet.d/
+		insinto /etc/xinetd.d/
 		doins "${FILESDIR}/nrpe.xinetd"
 	fi
 }
