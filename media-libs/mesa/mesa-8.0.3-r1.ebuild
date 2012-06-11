@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.3-r1.ebuild,v 1.2 2012/06/06 06:54:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.3-r1.ebuild,v 1.3 2012/06/11 12:32:04 scarabeus Exp $
 
 EAPI=4
 
@@ -292,8 +292,12 @@ src_install() {
 					|| die "Failed to move ${x}"
 			fi
 		done
-		mv "${ED}"/usr/include/{EGL,GLES*,VG,KHR}/ "${ED}"/${gl_dir}/include \
-			|| die "Failed to move headers"
+		for x in "${ED}"/usr/include/{EGL,GLES*,VG,KHR}; do
+			if [ -d ${x} ]; then
+				mv -f "${x}" "${ED}"/${gl_dir}/include \
+					|| die "Failed to move ${x}"
+			fi
+		done
 	eend $?
 
 	if use classic || use gallium; then
