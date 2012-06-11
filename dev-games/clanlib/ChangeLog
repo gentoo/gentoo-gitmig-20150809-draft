@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.53 2012/05/03 06:35:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.54 2012/06/11 12:43:14 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> clanlib-2.3.4.ebuild:
+  Stable for amd64, wrt bug #420141
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> clanlib-2.3.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
