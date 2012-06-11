@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vtun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.45 2012/06/08 12:15:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.46 2012/06/11 17:57:01 maksbotan Exp $
+
+  11 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Add Sergey Popov <admin@pinkbyte.ru> as maintainer
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> vtun-3.0.2-r1.ebuild:
   x86 stable wrt bug #419323
