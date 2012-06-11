@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r1.ebuild,v 1.12 2012/06/11 13:18:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r2.ebuild,v 1.1 2012/06/11 13:18:12 voyageur Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils versionator toolchain-funcs
 
@@ -19,13 +19,13 @@ SRC_URI="http://gogo6.com/downloads/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 hppa sparc x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE="debug"
 
 DEPEND="dev-libs/openssl"
 RDEPEND="${DEPEND}
 	sys-apps/iproute2
-	<sys-apps/net-tools-1.60_p20120127084908"
+	>=sys-apps/net-tools-1.60_p20120127084908"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -41,7 +41,12 @@ src_prepare() {
 
 	sed -i -e 's:/usr/local/etc/gogoc:/etc/gogoc:' \
 		gogoc-tsp/platform/*/tsp_local.c \
-		|| die "sed failed"
+		|| die "path sed failed"
+
+	# Newer net-tools use /bin
+	sed -i -e "/^\(route\|ifconfig\)=/s/sbin/bin/" \
+		gogoc-tsp/template/linux.sh \
+		|| die "net-tools sed failed"
 }
 
 src_configure() { :; }
@@ -53,31 +58,31 @@ src_compile() {
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getCXX)" \
 		EXTRA_CFLAGS="${CFLAGS}" EXTRA_CXXFLAGS="${CXXFLAGS}" \
 		$(use debug && echo DEBUG=1) \
-		all target=linux || die "Build Failed"
+		all target=linux
 
 	emake -C gogoc-tsp/conf \
 		PLATFORM=linux PLATFORM_DIR=../platform BIN_DIR=../bin \
-		gogoc.conf.sample || die
+		gogoc.conf.sample
 }
 
 src_install() {
-	dodoc README || die
+	dodoc README
 
 	cd "${S}"/gogoc-tsp
-	dosbin bin/gogoc || die
+	dosbin bin/gogoc
 
-	dodoc bin/gogoc.conf.sample || die
+	dodoc bin/gogoc.conf.sample
 
 	exeinto /etc/gogoc/template
-	doexe template/linux.sh || die
+	doexe template/linux.sh
 
-	newinitd "${FILESDIR}"/gogoc.rc gogoc || die
+	newinitd "${FILESDIR}"/gogoc.rc gogoc
 
-	doman man/{man5/gogoc.conf.5,man8/gogoc.8} || die
-	keepdir /var/lib/gogoc || die
+	doman man/{man5/gogoc.conf.5,man8/gogoc.8}
+	keepdir /var/lib/gogoc
 
 	diropts -m0700
-	keepdir /etc/gogoc || die
+	keepdir /etc/gogoc
 }
 
 pkg_postinst() {
