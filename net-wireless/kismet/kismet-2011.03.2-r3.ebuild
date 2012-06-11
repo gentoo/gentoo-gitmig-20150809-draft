@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r1.ebuild,v 1.3 2012/05/22 16:19:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r3.ebuild,v 1.1 2012/06/11 01:17:06 steev Exp $
 
 EAPI=4
 
-inherit toolchain-funcs linux-info eutils
+inherit toolchain-funcs eutils
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.kismetwireless.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+ncurses +pcre speech +plugin-autowep +plugin-btscan +plugin-dot15d4 +plugin-ptw +plugin-spectools +ruby +suid"
+IUSE="+client +pcre speech +plugin-autowep +plugin-btscan +plugin-dot15d4 +plugin-ptw +plugin-spectools +ruby +suid"
 
 # Bluez 4.98 breaks c++ building, so we choose to use -r2 which has the patch
 # or 4.96 which still builds properly.
@@ -34,7 +34,7 @@ RDEPEND="net-wireless/wireless-tools
 	net-libs/libpcap
 	pcre? ( dev-libs/libpcre )
 	suid? ( sys-libs/libcap )
-	ncurses? ( sys-libs/ncurses )
+	client? ( sys-libs/ncurses )
 	!arm? ( speech? ( app-accessibility/flite ) )
 	ruby? ( dev-lang/ruby )
 	plugin-btscan? ( || (
@@ -60,19 +60,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/bluechanfix_r3184.patch
 	epatch "${FILESDIR}"/kismet-console-scrolling-backport.patch
 	epatch "${FILESDIR}"/header_alignment_r3326.patch
+	epatch "${FILESDIR}"/use-hostname-by-default.patch
 }
 
 src_configure() {
-	if ! use ncurses; then
-		myconf="${myconf} --disable-curses --disable-panel"
-	fi
-
-	if ! use pcre; then
-		myconf="${myconf} --disable-pcre"
-	fi
-
-	econf ${myconf} \
-		--with-linuxheaders="${KV_DIR}"
+	econf \
+		$(use_enable client) \
+		$(use_enable pcre)
 }
 
 src_compile() {
