@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666.ebuild,v 1.3 2011/12/06 19:57:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5666-r1.ebuild,v 1.1 2012/06/11 18:06:40 grobian Exp $
 
 EAPI="3"
 
@@ -99,7 +99,12 @@ src_prepare() {
 	sed -i -e "s:tail +16c:tail -c +16:g" \
 		gcc/Makefile.in || die "sed gcc/Makefile.in failed."
 
+	# default to AltiVec on PPC, like for older releases
 	epatch "${FILESDIR}"/${PN}-4.0.1_p5465-default-altivec.patch
+
+	# support -arch XXX if XXX is actually what the toolchain targets because
+	# some upstreams insist on setting it
+	epatch "${FILESDIR}"/${PN}-4.2.1-arch-option.patch
 
 	# dsymutil stuff breaks on 10.4/x86, revert it
 	[[ ${CHOST} == *86*-apple-darwin8 ]] && \
