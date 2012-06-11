@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pear
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.31 2011/11/02 13:18:08 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.32 2012/06/11 15:26:20 mabi Exp $
+
+  11 Jun 2012; Matti Bickel <mabi@gentoo.org> pear-1.9.3.ebuild,
+  pear-1.9.4.ebuild:
+  remove superfluous depend.php
 
 *pear-1.9.4 (02 Nov 2011)
 

@@ -1,8 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/pear-1.9.3.ebuild,v 1.6 2011/08/25 11:55:58 jer Exp $
-
-inherit depend.php
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/pear-1.9.3.ebuild,v 1.7 2012/06/11 15:26:20 mabi Exp $
 
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 
