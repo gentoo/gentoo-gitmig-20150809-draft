@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/spectools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.5 2012/06/11 02:34:03 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.6 2012/06/11 13:11:23 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> spectools-2011.08.1-r1.ebuild:
+  Stable for amd64, wrt bug #420619
 
   11 Jun 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml,
   spectools-2006.03.1.ebuild, spectools-2006.09.1.ebuild:
