@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.663 2012/06/09 19:49:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.664 2012/06/11 13:14:18 scarabeus Exp $
+
+  11 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/xdm.confd-3,
+  -files/xdm.initd-3, -files/xorg-cve-2011-4028+4029.patch,
+  -files/xorg-server-glapi_c.patch, -xorg-server-1.9.5-r1.ebuild:
+  Drop oldest version that was accidentaly built automagically as there are 2
+  newer stable versions to pick from.
 
   09 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/xdm.initd-4, -files/xdm.initd-6, -files/xdm.initd-7,
