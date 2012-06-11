@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.83 2012/06/07 11:45:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.84 2012/06/11 14:01:00 scarabeus Exp $
 
 EAPI=4
 
@@ -70,9 +70,9 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite gstreamer +gtk gtk3
-jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba +webdav
-+xmlsec"
+IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite
+gstreamer +gtk gtk3 jemalloc kde mysql +nsplugin odk opengl postgres svg test
++vba +webdav +xmlsec"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:

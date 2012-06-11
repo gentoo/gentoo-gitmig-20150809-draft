@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.3 2012/06/05 15:43:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.4 2012/06/11 14:01:00 scarabeus Exp $
 
 EAPI=4
 
@@ -70,9 +70,9 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite gstreamer +gtk gtk3
-jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba +webdav
-+xmlsec"
+IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite
+gstreamer +gtk jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba
++webdav +xmlsec"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -136,7 +136,6 @@ COMMON_DEPEND="
 		x11-libs/gdk-pixbuf[X]
 		>=x11-libs/gtk+-2.24:2
 	)
-	gtk3? ( >=x11-libs/gtk+-3.2:3 )
 	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
@@ -481,6 +480,7 @@ src_configure() {
 		--without-help \
 		--with-helppack-integration \
 		--without-sun-templates \
+		--disable-gtk3 \
 		$(use_enable binfilter) \
 		$(use_enable cups) \
 		$(use_enable dbus) \
@@ -491,7 +491,6 @@ src_configure() {
 		$(use_enable graphite) \
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
-		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
 		$(use_enable nsplugin) \
