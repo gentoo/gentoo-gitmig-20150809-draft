@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.308 2012/06/11 13:02:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.309 2012/06/11 14:22:19 mgorny Exp $
+
+  11 Jun 2012; Michał Górny <mgorny@gentoo.org> vcs-snapshot.eclass:
+  Unpack tarballs in directory matching their name rather than ${P}. This
+  allows the eclass to handle multiple tarballs in one ebuild, and non-snapshot
+  tarballs should work fine too.
 
   11 Jun 2012; Michał Górny <mgorny@gentoo.org> xorg-2.eclass:
   Replace remove_libtool_files with prune_libtool_files.
