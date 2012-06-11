@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.116 2012/06/11 01:50:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.117 2012/06/11 02:26:23 zerochaos Exp $
+
+  11 Jun 2012; Rick Farina <zerochaos@gentoo.org> -kismet-2010.01.1.ebuild,
+  metadata.xml:
+  -kismet-2010.01.1.ebuild remove obsolete version
 
   11 Jun 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   Updating metadata.xml to take maintainership
