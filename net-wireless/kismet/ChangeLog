@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.117 2012/06/11 02:26:23 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.118 2012/06/11 13:11:57 ago Exp $
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> kismet-2011.03.2-r3.ebuild:
+  Stable for amd64, wrt bug #420615
 
   11 Jun 2012; Rick Farina <zerochaos@gentoo.org> -kismet-2010.01.1.ebuild,
   metadata.xml:
