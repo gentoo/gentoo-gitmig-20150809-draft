@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.0.7.ebuild,v 1.6 2012/06/08 23:55:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.0.8.ebuild,v 1.1 2012/06/11 12:47:05 scarabeus Exp $
 
 EAPI=4
 
@@ -28,10 +28,6 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	doc? ( app-doc/doxygen )
 "
-
-PATCHES=(
-	"${FILESDIR}/${P}-clang.patch"
-)
 
 src_prepare() {
 	base_src_prepare
