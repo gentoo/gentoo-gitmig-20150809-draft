@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/unison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.66 2012/06/06 16:36:31 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.67 2012/06/11 12:28:47 heroxbd Exp $
+
+*unison-2.45.4 (11 Jun 2012)
+
+  11 Jun 2012; Benda Xu <heroxbd@gentoo.org> +unison-2.45.4.ebuild:
+  bump to beta version of 2.45.4, bug 420679. Thanks to xmw
 
 *unison-2.40.65 (06 Jun 2012)
 
