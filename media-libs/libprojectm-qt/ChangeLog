@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libprojectm-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/ChangeLog,v 1.10 2012/05/08 07:27:39 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/ChangeLog,v 1.11 2012/06/11 13:23:51 aballier Exp $
+
+*libprojectm-qt-2.1.0 (11 Jun 2012)
+
+  11 Jun 2012; Alexis Ballier <aballier@gentoo.org>
+  +libprojectm-qt-2.1.0.ebuild, +files/libprojectm-qt-2.1.0-multilib.patch:
+  version bump
 
   08 May 2012; Andreas Schuerch <nativemad@gentoo.org>
   libprojectm-qt-2.0.1.ebuild:
