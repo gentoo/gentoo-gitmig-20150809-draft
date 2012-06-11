@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-3.0.7.ebuild,v 1.2 2012/01/28 14:04:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-3.0.7-r1.ebuild,v 1.1 2012/06/11 15:12:54 mabi Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.aditus.nu/jpgraph/"
 SRC_URI="http://hem.bredband.net/jpgraph2/${P}.tar.bz2"
 LICENSE="QPL-1.0"
 SLOT="0"
-IUSE="truetype"
+IUSE="truetype +examples"
 
 DEPEND=""
 RDEPEND="truetype? ( media-fonts/corefonts )
@@ -38,6 +38,10 @@ pkg_setup() {
 		ewarn "HTTPD_USER and HTTPD_GROUP variables and re-emerge ${PN}."
 		epause 3
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/cve-2009-4422.patch"
 }
 
 src_install() {
@@ -66,14 +70,16 @@ src_install() {
 
 	# patch 4:
 	# disable READ_CACHE in jpgraph
-
 	sed -i "s|^define('READ_CACHE',true);|define('READ_CACHE',false);|" src/jpg-config.inc.php \
 		|| die "sed failed in patch 4"
 
 	# install php files
 	einfo "Building list of files to install"
 	insinto "/usr/share/php/${PN}"
-	doins -r src/
+	doins -r src/*
+
+	# remove unwanted examples
+	use examples || rm -rf "${D}/usr/share/php/${PN}/Examples"
 
 	# install documentation
 	einfo "Installing documentation"
