@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/rutorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/ChangeLog,v 1.4 2012/05/24 16:57:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/ChangeLog,v 1.5 2012/06/11 10:21:46 maksbotan Exp $
+
+*rutorrent-3.4-r1 (11 Jun 2012)
+
+  11 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +rutorrent-3.4-r1.ebuild:
+  Make bash scripts in htdocs +x
 
 *rutorrent-3.4 (24 May 2012)
 
