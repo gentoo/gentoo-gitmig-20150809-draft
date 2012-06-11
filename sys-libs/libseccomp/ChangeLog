@@ -1,3 +1,9 @@
 # ChangeLog for sys-libs/libseccomp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/ChangeLog,v 1.1 2012/06/11 17:48:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/ChangeLog,v 1.2 2012/06/11 17:50:40 vapier Exp $
+
+*libseccomp-0.1.0 (11 Jun 2012)
+
+  11 Jun 2012; Mike Frysinger <vapier@gentoo.org> +libseccomp-0.1.0.ebuild,
+  +metadata.xml:
+  Initial ebuild based on Kees Cook's work #420323.
