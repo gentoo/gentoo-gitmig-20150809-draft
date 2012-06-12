@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/smbldap-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.35 2012/05/03 09:35:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.36 2012/06/12 20:05:05 vostorga Exp $
+
+  12 Jun 2012; Víctor Ostorga <vostorga@gentoo.org>
+  smbldap-tools-0.9.8.ebuild:
+  Adding man pages bug 413329 , Adding smbldap-passwd.cmd symlink 
 
 *smbldap-tools-0.9.8 (03 May 2012)
 

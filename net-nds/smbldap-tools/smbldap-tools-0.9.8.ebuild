@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.8.ebuild,v 1.1 2012/05/03 09:35:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.8.ebuild,v 1.2 2012/06/12 20:05:05 vostorga Exp $
 
 EAPI=4
 
@@ -29,11 +29,13 @@ src_install() {
 	default
 
 	newsbin smbldap-config.cmd smbldap-config
+	dosym smbldap-passwd /usr/sbin/smbldap-passwd.cmd
 
 	dodoc CONTRIBUTORS ChangeLog FILES INFRA INSTALL README TODO doc/*conf* doc/smbldap-tools*
 	dodoc -r doc/migration_scripts
 
 	sed -i 's/.CMD//g' smbldap-[gpu]*.8 || die
+	doman smbldap-[gpu]*.8
 
 	insinto /etc/smbldap-tools
 	doins smbldap.conf smbldap_bind.conf
