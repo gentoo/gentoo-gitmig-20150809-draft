@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.1.ebuild,v 1.3 2012/05/15 23:31:52 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.1.ebuild,v 1.4 2012/06/12 22:24:11 williamh Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ DEPEND="sys-apps/ed
 	${COMMON_DEPEND}"
 RDEPEND="bash-completion? ( app-shells/bash-completion )
 	emacs? ( virtual/emacs )
-	vim-syntax? ( app-editors/vim )
+	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 	zsh-completion? ( app-shells/zsh-completion )
 	${COMMON_DEPEND}"
 

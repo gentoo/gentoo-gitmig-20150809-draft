@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.2 2012/05/16 00:26:13 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.3 2012/06/12 22:24:11 williamh Exp $
+
+  12 Jun 2012; William Hubbs <williamh@gentoo.org> go-1.0.1.ebuild,
+  go-9999.ebuild:
+  Add optional depend on gvim for bug #419957 thanks to
+  michel.boaventura@gmail.com.
 
   16 May 2012; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
   sync live ebuild and test repoman commit
