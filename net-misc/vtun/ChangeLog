@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vtun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.46 2012/06/11 17:57:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.47 2012/06/12 12:13:18 maksbotan Exp $
+
+*vtun-3.0.2-r2 (12 Jun 2012)
+
+  12 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/vtun-3.0.2-build-racing-condition-fix.patch,
+  +files/vtun-3.0.2-remove-config-presence-check.patch, +vtun-3.0.2-r2.ebuild,
+  -vtun-2.6-r1.ebuild, -vtun-3.0.2.ebuild:
+  Fix bug #364923 with rev bump, thanks to Pinkbyte. Drop old.
 
   11 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Add Sergey Popov <admin@pinkbyte.ru> as maintainer
