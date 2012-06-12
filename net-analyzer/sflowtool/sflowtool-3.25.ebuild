@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.25.ebuild,v 1.1 2012/03/28 14:57:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.25.ebuild,v 1.2 2012/06/12 03:01:23 zmedico Exp $
 
 EAPI=4
-inherit autotools flag-o-matic
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="sflowtool is a utility for collecting and processing sFlow data"
 HOMEPAGE="http://www.inmon.com/technology/sflowTools.php"
