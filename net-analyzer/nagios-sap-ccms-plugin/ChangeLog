@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-sap-ccms-plugin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.9 2010/10/20 00:31:55 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.10 2012/06/12 02:47:09 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org>
+  nagios-sap-ccms-plugin-0.7.3-r1.ebuild, nagios-sap-ccms-plugin-0.8.ebuild:
+  inherit multilib for get_libdir
 
   20 Oct 2010; Jeroen Roovers <jer@gentoo.org>
   nagios-sap-ccms-plugin-0.8.ebuild:
