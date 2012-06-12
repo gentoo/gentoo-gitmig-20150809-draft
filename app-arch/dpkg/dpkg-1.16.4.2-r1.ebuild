@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.4.2.ebuild,v 1.2 2012/06/10 15:49:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.4.2-r1.ebuild,v 1.1 2012/06/12 15:37:28 jer Exp $
 
 EAPI=4
 
@@ -41,6 +41,9 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="dselect? ( nls )"
 
 src_prepare() {
+	# do not expect Debian's gzip --rsyncable extension
+	epatch "${FILESDIR}"/${P}-gzip-rsyncable.patch
+
 	# Force the use of the running bash for get-version (this file is never
 	# installed, so no need to worry about hardcoding a temporary bash)
 	sed -i -e '1c\#!'"${BASH}" get-version || die
@@ -50,6 +53,7 @@ src_prepare() {
 	sed -i scripts/Makefile.am \
 		-e '/850_Dpkg_Compression.t/d' \
 		|| die "sed failed"
+
 	# test fails (bug #414095)
 	sed -i utils/Makefile.am \
 		-e '/^test_cases/d;/100_update_alternatives/d' || die
