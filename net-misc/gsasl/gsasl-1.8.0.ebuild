@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.8.0.ebuild,v 1.1 2012/05/29 10:19:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.8.0.ebuild,v 1.2 2012/06/12 20:48:28 eras Exp $
 
 EAPI="4"
 
@@ -25,6 +25,11 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-gss-extra.patch"
+	sed -i -e '/AC_PROG_CC/i AM_PROG_AR' \
+           -e '/gl_WARN_ADD(\[-Werror/d' \
+           -e 's/ -Werror//' configure.ac || die
+	sed -i -e '/AC_PROG_CC/i AM_PROG_AR' \
+           -e 's/ -Werror//' lib/configure.ac || die
 	eautoreconf
 }
 
