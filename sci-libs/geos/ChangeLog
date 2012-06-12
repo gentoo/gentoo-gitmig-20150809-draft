@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.64 2012/05/24 20:36:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.65 2012/06/12 09:17:16 ago Exp $
+
+  12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> geos-3.3.3.ebuild:
+  Stable for amd64, wrt bug #420125
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> geos-3.3.3.ebuild:
   Depends on php[-threads] wrt bug#415023.
