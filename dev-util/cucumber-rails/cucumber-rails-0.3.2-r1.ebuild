@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/cucumber-rails-0.3.2-r1.ebuild,v 1.2 2011/01/10 18:29:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/cucumber-rails-0.3.2-r1.ebuild,v 1.3 2012/06/12 11:49:01 iksaif Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -16,7 +16,7 @@ RUBY_FAKEGEM_EXTRADOC="HACKING.rdoc History.txt README.rdoc"
 inherit ruby-fakegem
 
 DESCRIPTION="Executable feature scenarios for Rails"
-HOMEPAGE="http://github.com/aslakhellesoy/cucumber/wikis"
+HOMEPAGE="https://github.com/cucumber/cucumber/wikis"
 LICENSE="Ruby"
 
 KEYWORDS="~amd64 ~x86 ~x86-macos"

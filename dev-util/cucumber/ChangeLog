@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.48 2012/04/27 07:40:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.49 2012/06/12 11:51:05 iksaif Exp $
+
+  12 Jun 2012; Corentin Chary <iksaif@gentoo.org> cucumber-0.10.2.ebuild,
+  cucumber-0.10.3.ebuild, cucumber-0.7.3-r1.ebuild, cucumber-1.0.0.ebuild,
+  cucumber-1.0.1.ebuild, cucumber-1.0.2.ebuild, cucumber-1.0.6.ebuild,
+  cucumber-1.1.4.ebuild:
+  New HOMEPAGE is https://github.com/cucumber/cucumber/wikis
 
   27 Apr 2012; Hans de Graaff <graaff@gentoo.org> cucumber-1.1.4.ebuild:
   Tie gherkin dependency to a slot.

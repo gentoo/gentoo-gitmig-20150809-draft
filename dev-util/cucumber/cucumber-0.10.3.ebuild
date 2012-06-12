@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-0.10.3.ebuild,v 1.1 2011/05/29 07:04:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-0.10.3.ebuild,v 1.2 2012/06/12 11:51:05 iksaif Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -15,7 +15,7 @@ RUBY_FAKEGEM_GEMSPEC="cucumber.gemspec"
 inherit ruby-fakegem
 
 DESCRIPTION="Executable feature scenarios"
-HOMEPAGE="http://github.com/aslakhellesoy/cucumber/wikis"
+HOMEPAGE="https://github.com/cucumber/cucumber/wikis"
 LICENSE="Ruby"
 
 KEYWORDS="~amd64"
