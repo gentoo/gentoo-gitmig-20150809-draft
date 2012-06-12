@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.715 2012/06/12 13:22:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.716 2012/06/12 14:33:44 jer Exp $
+
+  12 Jun 2012; Jeroen Roovers <jer@gentoo.org> -opera-12.00.1448.ebuild,
+  opera-12.00.1456.ebuild:
+  Remove IUSE=gtk3 (bug #420563).
 
 *opera-12.00.1456 (12 Jun 2012)
 
