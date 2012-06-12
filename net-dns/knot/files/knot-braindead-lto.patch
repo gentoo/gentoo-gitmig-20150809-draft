@@ -1,0 +1,11 @@
+diff -urN knot-1.0.5.old/configure.ac knot-1.0.5/configure.ac
+--- knot-1.0.5.old/configure.ac	2012-06-12 15:50:47.954879966 +0200
++++ knot-1.0.5/configure.ac	2012-06-12 16:50:33.207942404 +0200
+@@ -123,7 +123,6 @@
+     ])
+ 
+ # Check for link time optimizations support and predictive commoning
+-AX_CHECK_COMPILER_FLAGS("-flto", [CFLAGS="$CFLAGS -flto"], [])
+ AX_CHECK_COMPILER_FLAGS("-fpredictive-commoning", [CFLAGS="$CFLAGS -fpredictive-commoning"], [])
+ 
+ # Checks for libraries.

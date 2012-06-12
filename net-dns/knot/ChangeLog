@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/knot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.6 2012/05/22 00:14:27 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.7 2012/06/12 14:54:00 scarabeus Exp $
+
+*knot-1.0.5 (12 Jun 2012)
+
+  12 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/knot-braindead-lto.patch, +files/knot-move-pidfile-to-var.patch,
+  +knot-1.0.5.ebuild, -knot-1.0.0.ebuild:
+  Version bump to latest version. Fixes bug#420741.
 
   22 May 2012; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Remove bind herd.. It's "empty" for years anyway, bug 417001.

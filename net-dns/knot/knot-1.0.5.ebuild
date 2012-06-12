@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.0.0.ebuild,v 1.2 2012/05/03 03:59:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.0.5.ebuild,v 1.1 2012/06/12 14:54:00 scarabeus Exp $
 
 EAPI=4
 
-inherit autotools
+inherit eutils autotools
 
 DESCRIPTION="High-performance authoritative-only DNS server"
 HOMEPAGE="http://www.knot-dns.cz/"
@@ -27,6 +27,9 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	epatch \
+		"${FILESDIR}"/${PN}-move-pidfile-to-var.patch \
+		"${FILESDIR}"/${PN}-braindead-lto.patch
 	sed -i \
 		-e 's:-Werror::g' \
 		configure.ac || die
