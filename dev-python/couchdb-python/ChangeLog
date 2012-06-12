@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/couchdb-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.15 2011/04/11 13:35:52 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.16 2012/06/12 06:17:25 jlec Exp $
+
+  12 Jun 2012; Justin Lecher <jlec@gentoo.org> couchdb-python-0.6.1.ebuild,
+  couchdb-python-0.7.ebuild, couchdb-python-0.8.ebuild:
+  Remove NonExistingDep on python:2.4
 
   11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   couchdb-python-0.8.ebuild:
