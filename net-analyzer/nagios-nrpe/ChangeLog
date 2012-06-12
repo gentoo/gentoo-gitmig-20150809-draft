@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.76 2012/06/11 20:16:22 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.77 2012/06/12 13:31:20 ago Exp $
+
+  12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> nagios-nrpe-2.13-r2.ebuild:
+  Stable for amd64, wrt bug #397603
 
 *nagios-nrpe-2.13-r2 (11 Jun 2012)
 
