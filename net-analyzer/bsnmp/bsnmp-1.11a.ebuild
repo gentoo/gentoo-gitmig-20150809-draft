@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/bsnmp-1.11a.ebuild,v 1.2 2006/05/23 16:40:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/bsnmp-1.11a.ebuild,v 1.3 2012/06/12 02:23:41 zmedico Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Mini-SNMP Daemon and Library"
 HOMEPAGE="http://people.freebsd.org/~harti/"
