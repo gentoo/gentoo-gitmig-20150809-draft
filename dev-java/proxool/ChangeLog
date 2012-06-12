@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/proxool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/ChangeLog,v 1.15 2012/06/11 12:44:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/ChangeLog,v 1.16 2012/06/12 11:32:25 johu Exp $
+
+  12 Jun 2012; Johannes Huber <johu@gentoo.org> proxool-0.8.3-r2.ebuild:
+  Stable for x86, wrt bug #420661
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> proxool-0.8.3-r2.ebuild:
   Stable for amd64, wrt bug #420661
