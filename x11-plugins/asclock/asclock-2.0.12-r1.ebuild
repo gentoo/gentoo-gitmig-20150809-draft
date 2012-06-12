@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12-r1.ebuild,v 1.9 2010/08/25 15:41:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12-r1.ebuild,v 1.10 2012/06/12 13:32:15 ago Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.tigr.net/afterstep/download/asclock/${P}.tar.gz"
 HOMEPAGE="http://www.tigr.net/afterstep/list.pl"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ppc sparc x86 ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="amd64 ~mips ppc sparc x86 ~amd64-linux ~x86-linux ~x64-solaris"
 
 DEPEND="x11-libs/libXpm"
 RDEPEND="${DEPEND}
