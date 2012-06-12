@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.13 2012/05/25 09:47:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.14 2012/06/12 11:47:54 iksaif Exp $
+
+  12 Jun 2012; Corentin Chary <iksaif@gentoo.org> aruba-0.4.11.ebuild:
+  New HOMEPAGE is https://github.com/cucumber/aruba
 
   25 May 2012; Hans de Graaff <graaff@gentoo.org> -aruba-0.4.6.ebuild,
   -aruba-0.4.10.ebuild:
