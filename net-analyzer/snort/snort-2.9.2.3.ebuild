@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.2.3.ebuild,v 1.1 2012/06/07 07:05:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.2.3.ebuild,v 1.2 2012/06/12 03:23:21 zmedico Exp $
 
 EAPI="2"
-inherit eutils autotools multilib
+inherit autotools multilib user
 
 DESCRIPTION="The de facto standard for intrusion detection/prevention"
 HOMEPAGE="http://www.snort.org/"

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.193 2012/06/07 07:05:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.194 2012/06/12 03:23:21 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> snort-2.9.0.5.ebuild,
+  snort-2.9.1.ebuild, snort-2.9.2.1.ebuild, snort-2.9.2.2.ebuild,
+  snort-2.9.2.3.ebuild:
+  inherit user for enewgroup and enewuser
 
 *snort-2.9.2.3 (07 Jun 2012)
 
