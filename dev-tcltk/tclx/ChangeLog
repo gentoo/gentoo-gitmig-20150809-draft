@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.45 2012/06/11 10:20:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.46 2012/06/12 06:30:57 jdhore Exp $
+
+  12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> tclx-8.4-r2.ebuild:
+  marked x86 per bug 418933
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> tclx-8.4-r2.ebuild:
   Stable for amd64, wrt bug #418933
