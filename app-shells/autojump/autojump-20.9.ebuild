@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-20.9.ebuild,v 1.1 2012/06/11 06:54:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-20.9.ebuild,v 1.2 2012/06/12 12:38:36 xmw Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit python
+inherit python vcs-snapshot
 
 DESCRIPTION="change directory command that learns"
 HOMEPAGE="http://github.com/joelthelion/autojump"
@@ -22,11 +22,6 @@ RDEPEND="gtk? ( dev-python/pygtk:2 )
 	bash-completion? ( >=app-shells/bash-4 )
 	zsh-completion? ( app-shells/zsh app-shells/zsh-completion )"
 DEPEND="test? ( dev-lang/python )"
-
-src_unpack() {
-	default
-	mv *-${PN}-* ${P} || die
-}
 
 src_prepare() {
 	#https://github.com/joelthelion/autojump/issues/129

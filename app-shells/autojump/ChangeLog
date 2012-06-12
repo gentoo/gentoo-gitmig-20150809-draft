@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/autojump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.3 2012/06/11 06:54:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.4 2012/06/12 12:38:36 xmw Exp $
+
+  12 Jun 2012; Michael Weber <xmw@gentoo.org> -autojump-14.ebuild,
+  autojump-20.9.ebuild:
+  vcs-snapshot.eclass, remove old.
 
 *autojump-20.9 (11 Jun 2012)
 
