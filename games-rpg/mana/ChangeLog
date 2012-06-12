@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/mana
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.8 2012/06/11 12:43:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.9 2012/06/12 06:06:01 jdhore Exp $
+
+  12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> mana-0.6.0.ebuild:
+  marked x86 per bug 420143
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> mana-0.6.0.ebuild:
   Stable for amd64, wrt bug #420143
