@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-23.4.ebuild,v 1.3 2012/06/11 10:19:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-23.4.ebuild,v 1.4 2012/06/12 17:28:39 jdhore Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="FDL-1.3"
 SLOT="23"
-KEYWORDS="amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="app-arch/xz-utils"
