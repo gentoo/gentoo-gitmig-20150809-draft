@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.91 2012/06/09 09:16:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.92 2012/06/12 09:16:01 ago Exp $
+
+  12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> udisks-1.0.4-r2.ebuild:
+  Stable for amd64, wrt bug #420169
 
   09 Jun 2012; Markus Meier <maekke@gentoo.org> udisks-1.0.4-r2.ebuild:
   arm stable, bug #420169
