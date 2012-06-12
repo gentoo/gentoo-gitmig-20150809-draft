@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.805 2012/06/12 17:52:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.806 2012/06/12 18:30:09 aballier Exp $
+
+  12 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  skins require xinerama too, by ago
 
   12 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
   disable maintainer-mode since we are patching Modules.am, to avoid useless

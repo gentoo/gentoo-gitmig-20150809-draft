@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.12 2012/05/29 16:05:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.13 2012/06/12 18:30:09 aballier Exp $
 
 EAPI="4"
 
@@ -122,7 +122,7 @@ RDEPEND="
 			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
 		shout? ( media-libs/libshout )
 		sid? ( media-libs/libsidplay:2 )
-		skins? ( x11-libs/libXext x11-libs/libXpm )
+		skins? ( x11-libs/libXext x11-libs/libXpm x11-libs/libXinerama )
 		speex? ( media-libs/speex )
 		sqlite? ( >=dev-db/sqlite-3.6.0:3 )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
