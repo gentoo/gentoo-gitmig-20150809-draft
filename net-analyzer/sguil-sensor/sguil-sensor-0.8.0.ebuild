@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.8.0.ebuild,v 1.1 2012/05/03 15:21:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.8.0.ebuild,v 1.2 2012/06/12 03:07:34 zmedico Exp $
 
 EAPI=4
-inherit eutils
+inherit user
 
 MY_PV="${PV/_p/p}"
 DESCRIPTION="Sensor part of sguil Network Security Monitoring"
