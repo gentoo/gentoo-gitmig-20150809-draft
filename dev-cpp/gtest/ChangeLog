@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.9 2012/06/12 18:32:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.10 2012/06/12 18:55:16 jdhore Exp $
+
+  12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> gtest-1.6.0.ebuild:
+  marked x86 per bug 420853
 
   12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0.ebuild:
   Stable for amd64, wrt bug #420853
