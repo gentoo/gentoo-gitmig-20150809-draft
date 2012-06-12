@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mwcollect
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.18 2009/09/04 23:24:25 vostorga Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.19 2012/06/12 02:30:40 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> mwcollect-3.0.4-r1.ebuild:
+  inherit multilib for get_libdir
 
   04 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
   -mwcollect-2.1.2.ebuild, -mwcollect-3.0.4.ebuild:
