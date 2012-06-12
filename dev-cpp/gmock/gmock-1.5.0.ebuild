@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/gmock-1.5.0.ebuild,v 1.3 2011/11/11 20:35:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/gmock-1.5.0.ebuild,v 1.4 2012/06/12 18:44:43 ago Exp $
 
 EAPI="4"
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="static-libs"
 
 RDEPEND=">=dev-cpp/gtest-${PV}"
-DEPEND="${RDEPEND}"
+DEPEND="app-arch/unzip
+	${RDEPEND}"
 
 src_unpack() {
 	default
