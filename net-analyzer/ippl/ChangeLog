@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ippl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.18 2011/03/21 14:49:51 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.19 2012/06/12 02:26:26 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> ippl-1.4.14-r1.ebuild,
+  ippl-1.4.14-r2.ebuild:
+  inherit user for enewuser
 
   21 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> ippl-1.4.14-r2.ebuild:
   QA: workaround parallel make failure until bug #351287 is properly fixed.
