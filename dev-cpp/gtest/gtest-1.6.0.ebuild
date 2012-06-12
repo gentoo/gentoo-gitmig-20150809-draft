@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.6.0.ebuild,v 1.3 2012/06/01 16:48:47 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.6.0.ebuild,v 1.4 2012/06/12 02:18:53 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
-inherit python
+inherit python libtool
 
 DESCRIPTION="Google C++ Testing Framework"
 HOMEPAGE="http://code.google.com/p/googletest/"
@@ -29,6 +29,7 @@ src_prepare() {
 	sed -i -r \
 		-e '/^install-(data|exec)-local:/s|^.*$|&\ndisabled-&|' \
 		Makefile.in
+	elibtoolize
 
 	python_convert_shebangs -r 2 .
 }

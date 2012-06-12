@@ -1,6 +1,8 @@
-# ChangeLog for dev-cpp/gtest
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.7 2012/06/01 16:48:47 mattst88 Exp $
+# ChangeLog for dev-cpp/gtest# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.8 2012/06/12 02:18:53 vapier Exp $
+
+  12 Jun 2012; Mike Frysinger <vapier@gentoo.org> gtest-1.6.0.ebuild:
+  Run elibtoolize to fix cross-compiles.
 
   01 Jun 2012; Matt Turner <mattst88@gentoo.org> gtest-1.6.0.ebuild:
   Add app-arch/unzip to DEPEND, bug 410393.
