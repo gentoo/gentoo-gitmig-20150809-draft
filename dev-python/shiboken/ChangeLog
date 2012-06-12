@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.29 2012/06/08 11:36:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.30 2012/06/12 20:21:35 pesa Exp $
+
+  12 Jun 2012; Davide Pesavento <pesa@gentoo.org> -shiboken-1.1.0-r2.ebuild:
+  Remove old.
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> shiboken-1.1.1.ebuild:
   x86 stable wrt bug #418421
