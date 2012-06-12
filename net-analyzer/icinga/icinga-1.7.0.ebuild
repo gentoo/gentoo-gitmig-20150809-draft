@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.7.0.ebuild,v 1.1 2012/05/15 22:09:09 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.7.0.ebuild,v 1.2 2012/06/12 02:25:00 zmedico Exp $
 
 EAPI=2
 
-inherit depend.apache eutils multilib toolchain-funcs versionator
+inherit depend.apache eutils multilib toolchain-funcs user versionator
 
 DESCRIPTION="Nagios Fork - Check daemon, CGIs, docs, IDOutils"
 HOMEPAGE="http://www.icinga.org/"

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.69 2012/04/18 16:42:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.70 2012/06/12 02:29:22 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> munin-1.4.6-r4.ebuild,
+  munin-1.4.7.ebuild:
+  inherit user for enewgroup and enewuser
 
 *munin-1.4.7 (18 Apr 2012)
 
