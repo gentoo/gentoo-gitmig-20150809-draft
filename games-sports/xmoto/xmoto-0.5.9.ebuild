@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.9.ebuild,v 1.4 2012/04/22 14:42:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.9.ebuild,v 1.5 2012/06/12 18:15:12 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -48,7 +48,8 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${P}-libpng.patch \
-		"${FILESDIR}"/${P}-utf8.patch
+		"${FILESDIR}"/${P}-utf8.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_configure() {

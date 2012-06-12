@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.63 2012/05/17 06:20:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.64 2012/06/12 18:15:12 mr_bones_ Exp $
+
+  12 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> xmoto-0.5.9.ebuild,
+  +files/xmoto-0.5.9-gcc47.patch:
+  Add patch to build with gcc47 submitted by Philipp Middendorf via bug #420799
 
   17 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -files/0.5.7-libpng.patch, -xmoto-0.5.4.ebuild, -xmoto-0.5.7.ebuild,
