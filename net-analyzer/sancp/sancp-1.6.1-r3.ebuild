@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/sancp-1.6.1-r3.ebuild,v 1.1 2010/09/15 00:07:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/sancp-1.6.1-r3.ebuild,v 1.2 2012/06/12 02:59:01 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="SANCP is a network security tool designed to collect statistical \
 	information regarding network traffic and collect the traffic itself in pcap format."

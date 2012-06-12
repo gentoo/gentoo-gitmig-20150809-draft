@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.70 2011/08/20 20:33:23 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.71 2012/06/12 02:56:28 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> ngrep-1.45-r3.ebuild:
+  inherit user for enewgroup and enewuser
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove useless maintainer and longdescription tag.

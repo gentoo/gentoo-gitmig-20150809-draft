@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.45-r3.ebuild,v 1.7 2011/01/10 18:50:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.45-r3.ebuild,v 1.8 2012/06/12 02:56:28 zmedico Exp $
 
 EAPI="3"
 
-inherit eutils autotools
+inherit autotools eutils user
 
 DESCRIPTION="A grep for network layers"
 HOMEPAGE="http://ngrep.sourceforge.net/"
