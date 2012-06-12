@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.72 2012/05/29 09:56:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.73 2012/06/12 19:56:05 eras Exp $
+
+  12 Jun 2012; Eray Aslan <eras@gentoo.org> libgsasl-1.8.0.ebuild:
+  Fix failing autoreconf - bug #420681
 
 *libgsasl-1.8.0 (29 May 2012)
 
