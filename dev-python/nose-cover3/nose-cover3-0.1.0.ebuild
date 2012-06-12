@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-cover3/nose-cover3-0.1.0.ebuild,v 1.1 2012/05/30 06:27:05 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-cover3/nose-cover3-0.1.0.ebuild,v 1.2 2012/06/12 11:37:53 iksaif Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ DISTUTILS_SRC_TEST="nosetests"
 inherit distutils
 
 DESCRIPTION="Coverage 3.x support for Nose"
-HOMEPAGE="https://github.com/ask/nosecover3 http://pypi.python.org/pypi/nosecover3"
+HOMEPAGE="https://github.com/ask/nosecover3 http://pypi.python.org/pypi/nose-cover3"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
