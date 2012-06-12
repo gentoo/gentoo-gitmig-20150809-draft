@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ykpers-1.3.4.ebuild,v 1.3 2012/05/22 16:15:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ykpers-1.3.4.ebuild,v 1.4 2012/06/12 11:52:06 iksaif Exp $
 
 EAPI=2
 inherit eutils autotools
 
 DESCRIPTION="Library and tool for personalization of Yubico's YubiKey"
 SRC_URI="http://yubikey-personalization.googlecode.com/files/${P}.tar.gz"
-HOMEPAGE="http://code.google.com/p/yubikey-personalizaiton/"
+HOMEPAGE="http://code.google.com/p/yubikey-personalization"
 
 KEYWORDS="~amd64"
 SLOT="0"
