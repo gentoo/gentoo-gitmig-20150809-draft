@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkclean/mkclean-0.8.6-r1.ebuild,v 1.1 2012/01/27 23:36:08 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkclean/mkclean-0.8.6-r1.ebuild,v 1.2 2012/06/12 21:36:55 sbriesen Exp $
 
 EAPI=4
 
@@ -28,9 +28,9 @@ src_configure() {
 }
 
 src_compile() {
-	emake -f GNUmakefile
-	emake -C mkclean -f mkWDclean.mak
-	emake -C mkclean/regression -f mkcleanreg.mak
+	emake -f GNUmakefile -j1
+	emake -C mkclean -f mkWDclean.mak -j1
+	emake -C mkclean/regression -f mkcleanreg.mak -j1
 }
 
 src_install() {
