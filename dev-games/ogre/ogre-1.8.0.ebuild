@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.0.ebuild,v 1.1 2012/06/12 22:41:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.0.ebuild,v 1.2 2012/06/12 22:42:19 hasufell Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}_src_v${MY_PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.7.4-threading.patch
+	epatch "${FILESDIR}"/${P}-threading.patch
 	epatch "${FILESDIR}"/${P}-flags.patch
 	sed -i \
 		-e "s:share/OGRE/docs:share/doc/${PF}:" \
