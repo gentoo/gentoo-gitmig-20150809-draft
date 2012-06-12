@@ -1,14 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.1.3_p20120519.ebuild,v 1.2 2012/05/21 15:10:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.0.ebuild,v 1.1 2012/06/12 22:22:24 hasufell Exp $
 
 EAPI=4
 
-inherit linux-info
+inherit gnome2-utils linux-info
+
+MY_P="pgl-${PV}"
 
 DESCRIPTION="Privacy oriented firewall application"
 HOMEPAGE="https://sourceforge.net/projects/peerguardian/"
-SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
+SRC_URI="mirror://sourceforge/peerguardian/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
@@ -23,7 +25,9 @@ COMMON_DEPEND="
 	qt4? ( sys-auth/polkit-qt
 		x11-libs/qt-core:4
 		x11-libs/qt-dbus:4
-		x11-libs/qt-gui:4 )"
+		x11-libs/qt-gui:4
+		|| ( kde-base/kdesu x11-libs/gksu x11-misc/ktsuss )
+	)"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	sys-devel/libtool:2"
@@ -51,15 +55,24 @@ CONFIG_CHECK="~NETFILTER_NETLINK
 	~IP_NF_IPTABLES
 	~IP_NF_TARGET_REJECT"
 
+S=${WORKDIR}/${MY_P}
+
 src_configure() {
 	econf \
 		--localstatedir=/var \
-		$(use_enable cron) \
-		$(use_enable dbus) \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_enable logrotate) \
+		$(use_enable cron) \
 		$(use_enable networkmanager) \
 		$(use_enable zlib) \
+		$(use_enable dbus) \
+		--disable-lowmem \
+		--with-iconsdir=/usr/share/icons/hicolor/128x128/apps \
 		$(use_with qt4)
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
@@ -68,10 +81,10 @@ pkg_postinst() {
 	elog "  app-arch/unzip (needed for blocklists packed as .zip)"
 	elog "  virtual/mta (needed to send informational (blocklist updates) and"
 	elog "    warning mails (if pglcmd.wd detects a problem.))"
-	if use qt4 ; then
-		elog "You need one of the following graphical su/sudo:"
-		elog "  x11-misc/ktsuss"
-		elog "  x11-libs/gksu"
-		elog "  kde-base/kdesu"
-	fi
+
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
