@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.61 2012/04/01 15:33:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.62 2012/06/12 03:36:17 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> vnstat-1.10-r1.ebuild,
+  vnstat-1.11-r2.ebuild:
+  inherit user for enewgroup and enewuser
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> vnstat-1.11-r2.ebuild:
   sparc stable wrt #403019

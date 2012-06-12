@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r2.ebuild,v 1.8 2012/04/01 15:33:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r2.ebuild,v 1.9 2012/06/12 03:36:17 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs user
 
 DESCRIPTION="Console-based network traffic monitor that keeps statistics of network usage"
 HOMEPAGE="http://humdi.net/vnstat/"

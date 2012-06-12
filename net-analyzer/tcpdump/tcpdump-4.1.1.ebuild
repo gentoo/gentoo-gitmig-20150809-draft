@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.1.ebuild,v 1.5 2011/11/10 13:22:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.1.ebuild,v 1.6 2012/06/12 03:32:07 zmedico Exp $
 
 EAPI="2"
-inherit flag-o-matic toolchain-funcs eutils
+inherit flag-o-matic user
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"

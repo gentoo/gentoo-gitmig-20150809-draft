@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.151 2012/04/23 07:27:15 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.152 2012/06/12 03:32:07 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> tcpdump-3.9.8-r1.ebuild,
+  tcpdump-3.9.8.ebuild, tcpdump-4.1.1.ebuild, tcpdump-4.2.0.ebuild,
+  tcpdump-4.2.1.ebuild:
+  inherit user for enewgroup and enewuser
 
   23 Apr 2012; Benda Xu <heroxbd@gentoo.org> tcpdump-4.2.1.ebuild:
   fixes directories in configure options for Prefix. closes bug #412005
