@@ -1,6 +1,11 @@
 # ChangeLog for virtual/pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.11 2012/05/28 22:26:49 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.12 2012/06/12 17:49:03 jdhore Exp $
+
+  12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pkgconfig-0.ebuild:
+  Move dev-util/pkgconf to being the 2nd choice. The pkg-config USE flag for it
+  is now on by default, it's been extensively tested in Gentoo, it's stable on 2
+  arches (with more to come) and it's used by default in Funtoo now.
 
   28 May 2012; Richard Yao <ryao@gentoo.org> pkgconfig-0.ebuild:
   Remove superfluous userland_BSD from IUSE
