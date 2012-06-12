@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.0-r1.ebuild,v 1.1 2012/06/05 05:40:35 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.0-r1.ebuild,v 1.2 2012/06/12 03:55:18 zmedico Exp $
 
 EAPI="2"
 
 # needed to make webapp-config dep optional
 WEBAPP_OPTIONAL="yes"
-inherit eutils flag-o-matic webapp depend.php autotools java-pkg-opt-2
+inherit flag-o-matic webapp depend.php autotools java-pkg-opt-2 user
 
 DESCRIPTION="ZABBIX is software for monitoring of your applications, network and servers."
 HOMEPAGE="http://www.zabbix.com/"
