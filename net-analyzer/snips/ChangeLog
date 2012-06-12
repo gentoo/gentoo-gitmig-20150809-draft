@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snips
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.6 2010/06/15 14:06:41 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.7 2012/06/12 03:16:00 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> snips-1.2-r2.ebuild:
+  inherit user for enewgroup and enewuser
 
   15 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> snips-1.2-r2.ebuild:
   Use virtual/mailx, rather than just mailx.

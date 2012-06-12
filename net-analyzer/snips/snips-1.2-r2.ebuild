@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r2.ebuild,v 1.3 2010/06/15 14:06:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/snips-1.2-r2.ebuild,v 1.4 2012/06/12 03:16:00 zmedico Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="System & Network Integrated Polling Software"
 HOMEPAGE="http://www.netplex-tech.com/snips/"
