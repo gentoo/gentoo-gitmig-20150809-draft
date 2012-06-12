@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.8.0.ebuild,v 1.2 2012/05/15 14:39:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.8.0.ebuild,v 1.3 2012/06/12 03:11:20 zmedico Exp $
 
 EAPI=4
 
-inherit eutils ssl-cert
+inherit multilib ssl-cert user
 
 MY_PV="${PV/_p/p}"
 DESCRIPTION="Daemon for Sguil Network Security Monitoring"
