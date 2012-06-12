@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-proxy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-proxy/ChangeLog,v 1.8 2008/04/28 11:04:47 zzam Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-proxy/ChangeLog,v 1.9 2012/06/12 19:26:34 hd_brummy Exp $
+
+*vdr-proxy-0.1.4-r1 (12 Jun 2012)
+
+  12 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-proxy-0.1.4-r1.ebuild:
+  eapi=4; vdr-plugin-2.eclass
 
   28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> vdr-proxy-0.1.4.ebuild:
   Marked stable on x86.
