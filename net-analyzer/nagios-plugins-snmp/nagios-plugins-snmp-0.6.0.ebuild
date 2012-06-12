@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/nagios-plugins-snmp-0.6.0.ebuild,v 1.4 2009/04/15 19:50:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/nagios-plugins-snmp-0.6.0.ebuild,v 1.5 2012/06/12 02:41:55 zmedico Exp $
 
-inherit eutils autotools
+inherit autotools multilib user
 
 DESCRIPTION="Additional Nagios plugins for monitoring SNMP capable devices"
 HOMEPAGE="http://nagios.manubulon.com"

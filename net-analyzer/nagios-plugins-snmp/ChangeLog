@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.14 2012/02/09 10:38:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.15 2012/06/12 02:41:55 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org>
+  nagios-plugins-snmp-0.6.0-r1.ebuild, nagios-plugins-snmp-0.6.0.ebuild:
+  inherit user for enewgroup and enewuser, and multilib for get_libdir
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
