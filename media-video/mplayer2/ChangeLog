@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.55 2012/06/12 09:05:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.56 2012/06/12 13:11:33 scarabeus Exp $
+
+  12 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
+  Set + on desired default cpuopts to behave same way like before the split.
+  Spotted by nikoli.
 
   12 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   Merge with mplayer1 ebuild. Thanks to nikoli for the patchset.

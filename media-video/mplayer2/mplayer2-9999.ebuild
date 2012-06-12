@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.37 2012/06/12 09:05:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.38 2012/06/12 13:11:33 scarabeus Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ IUSE="+a52 aalib +alsa aqua +ass bidi bindist bl bluray bs2b cddb +cdio
 	xanim xinerama +xscreensaver +xv xvid"
 IUSE+=" symlink"
 
-CPU_FEATURES="3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3"
+CPU_FEATURES="3dnow 3dnowext altivec +mmx mmxext +shm sse sse2 ssse3"
 for x in ${CPU_FEATURES}; do
 	IUSE+=" ${x}"
 done
@@ -417,7 +417,7 @@ src_configure() {
 	use cpudetection && myconf+=" --enable-runtime-cpudetection"
 
 	for i in ${CPU_FEATURES}; do
-		myconf+=" $(use_enable ${i})"
+		myconf+=" $(use_enable ${i/+/})"
 	done
 
 	use debug && myconf+=" --enable-debug=3"
