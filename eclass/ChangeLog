@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.310 2012/06/11 19:46:32 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.311 2012/06/12 09:17:33 sera Exp $
+
+  12 Jun 2012; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
+  Convert docs to eclass-manpages.
 
   11 Jun 2012; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
   Add app-admin/eselect-java as preferred provider of eselect java-vm.
