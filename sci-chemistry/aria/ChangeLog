@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.12 2012/03/21 11:48:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.13 2012/06/12 18:28:07 ago Exp $
+
+  12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> aria-2.3.2-r3.ebuild:
+  Stable for amd64, wrt bug #419885
 
 *aria-2.3.2-r3 (21 Mar 2012)
 

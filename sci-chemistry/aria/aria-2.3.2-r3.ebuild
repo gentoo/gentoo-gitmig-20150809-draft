@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2-r3.ebuild,v 1.1 2012/03/21 11:48:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2-r3.ebuild,v 1.2 2012/06/12 18:28:07 ago Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="http://aria.pasteur.fr/archives/${MY_P}.2.tar.gz"
 
 SLOT="0"
 LICENSE="cns"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RDEPEND="
