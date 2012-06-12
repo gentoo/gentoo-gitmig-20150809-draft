@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-0.0.10.ebuild,v 1.2 2011/10/22 12:25:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-0.0.10.ebuild,v 1.3 2012/06/12 11:46:42 iksaif Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRADOC="README.md"
 inherit ruby-fakegem
 
 DESCRIPTION="A Text Progress Bar Library for Ruby"
-HOMEPAGE="http://github.com/nex3/ruby-progressbar"
+HOMEPAGE="https://github.com/jfelchner/ruby-progressbar"
 
 LICENSE="|| ( Ruby GPL-2 )"
 SLOT="0"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-progressbar
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.36 2011/10/22 12:25:13 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.37 2012/06/12 11:46:42 iksaif Exp $
+
+  12 Jun 2012; Corentin Chary <iksaif@gentoo.org>
+  ruby-progressbar-0.0.10.ebuild, ruby-progressbar-0.0.9-r1.ebuild,
+  ruby-progressbar-0.0.9.ebuild:
+  New HOMEPAGE is https://github.com/jfelchner/ruby-progressbar
 
   22 Oct 2011; Hans de Graaff <graaff@gentoo.org>
   ruby-progressbar-0.0.10.ebuild:
