@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ndoutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.12 2012/02/09 10:43:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ChangeLog,v 1.13 2012/06/12 02:48:43 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> ndoutils-1.4_beta9.ebuild:
+  inherit user for enewgroup and enewuser
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926

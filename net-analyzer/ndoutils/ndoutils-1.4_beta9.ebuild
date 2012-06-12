@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta9.ebuild,v 1.1 2010/06/03 18:41:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta9.ebuild,v 1.2 2012/06/12 02:48:43 zmedico Exp $
 
-inherit eutils
+inherit user
 
 MY_P=${P/_beta/b}
 
