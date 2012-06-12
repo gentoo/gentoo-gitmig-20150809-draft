@@ -1,0 +1,9 @@
+# ChangeLog for net-wireless/iwl2030-ucode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl2030-ucode/ChangeLog,v 1.1 2012/06/12 19:15:48 vapier Exp $
+
+*iwl2030-ucode-18.168.6.1 (12 Jun 2012)
+
+  12 Jun 2012; Mike Frysinger <vapier@gentoo.org>
+  +iwl2030-ucode-18.168.6.1.ebuild, +metadata.xml:
+  Initial ebuild based on iwl3945-ucode by Shawn Nematbakhsh for ChromiumOS.
