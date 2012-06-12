@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.1.ebuild,v 1.12 2012/06/09 15:38:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.1.ebuild,v 1.13 2012/06/12 17:52:02 aballier Exp $
 
 EAPI="4"
 
@@ -326,6 +326,7 @@ src_configure() {
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-optimizations \
 		--without-tuning \
+		--disable-maintainer-mode \
 		--enable-fast-install
 }
 
