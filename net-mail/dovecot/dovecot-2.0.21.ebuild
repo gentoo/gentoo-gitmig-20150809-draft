@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1.6.ebuild,v 1.1 2012/05/07 12:42:57 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.21.ebuild,v 1.1 2012/06/12 07:32:33 eras Exp $
 
 EAPI=4
 inherit eutils versionator ssl-cert systemd
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
-sieve_version="0.3.0"
-SRC_URI="http://www.dovecot.org/releases/${major_minor}/${MY_P}.tar.gz
+sieve_version="0.2.6"
+SRC_URI="http://dovecot.org/releases/${major_minor}/${MY_P}.tar.gz
 	sieve? (
 	http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-pigeonhole-${sieve_version}.tar.gz
 	)
@@ -20,15 +20,14 @@ HOMEPAGE="http://www.dovecot.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1 MIT"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
-IUSE="bzip2 caps cydir sdbox doc ipv6 imapc kerberos ldap lucene +maildir managesieve mbox
+IUSE="bzip2 caps cydir sdbox doc ipv6 kerberos ldap +maildir managesieve mbox
 mdbox mysql pam postgres sieve sqlite +ssl static-libs suid vpopmail zlib"
 
 DEPEND="caps? ( sys-libs/libcap )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
-	lucene? ( >=dev-cpp/clucene-2.3 )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base !dev-db/postgresql-base[ldap,threads] )
@@ -68,7 +67,7 @@ src_configure() {
 	fi
 
 	local storages=""
-	for storage in cydir sdbox mdbox maildir mbox imapc; do
+	for storage in cydir sdbox mdbox maildir mbox; do
 		use ${storage} && storages="${storage} ${storages}"
 	done
 	[ "${storages}" ] || storages="maildir"
@@ -81,8 +80,6 @@ src_configure() {
 		$( use_with caps libcap ) \
 		$( use_with kerberos gssapi ) \
 		$( use_with ldap ) \
-		$( use_with lucene ) \
-		--without-stemmer \
 		$( use_with mysql ) \
 		$( use_with pam ) \
 		$( use_with postgres pgsql ) \
@@ -99,7 +96,7 @@ src_configure() {
 	if use sieve || use managesieve ; then
 		# The sieve plugin needs this file to be build to determine the plugin
 		# directory and the list of libraries to link to.
-		emake dovecot-config
+		emake dovecot-config || die "emake dovecot-config failed"
 		cd "../dovecot-${major_minor}-pigeonhole-${sieve_version}" || die "cd failed"
 		econf \
 			$( use_enable static-libs static ) \
@@ -255,7 +252,19 @@ src_install () {
 		doman doc/man/*.{1,7}
 	fi
 
-	use static-libs || find "${ED}"/usr/lib* -name '*.la' -delete
+	use static-libs || prune_libtool_files
+}
+
+pkg_preinst() {
+	if has_version "<${CATEGORY}/${PN}-2" ; then
+		elog "There are a lot of changes in configuration files in dovecot-2.0."
+		elog "Please read http://wiki.dovecot.org/Upgrading and"
+		elog "check the conf files in ${ROOT}etc/dovecot."
+		elog "You can also run doveconf -n before running etc-update or"
+		elog "dispatch-conf to get an idea about what needs to be changed."
+		ewarn "\nDo NOT {re}start dovecot without checking your conf files"
+		ewarn "and making the necessary changes.\n"
+	fi
 }
 
 pkg_postinst() {
@@ -268,7 +277,4 @@ pkg_postinst() {
 			install_cert /etc/ssl/dovecot/server
 		fi
 	fi
-
-	elog "Upgrade notes can be found at:"
-	elog "\thttp://wiki2.dovecot.org/Upgrading"
 }
