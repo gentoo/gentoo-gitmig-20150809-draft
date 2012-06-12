@@ -27,6 +27,7 @@
 		<flag name="plugin-dot15d4">Build the dot15d4 plugin</flag>
 		<flag name="plugin-ptw">Build the ptw plugin</flag>
 		<flag name="plugin-spectools">Build the spectools plugin. This uses <pkg>net-wireless/spectools</pkg></flag>
+		<flag name="plugin-syslog">Build the syslog plugin.</flag>
 		<flag name="ruby">Build extras which are written in ruby, example plugins and the like.</flag>
 	</use>
 </pkgmetadata>
