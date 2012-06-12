@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.151 2012/06/11 12:25:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.152 2012/06/12 05:20:37 polynomial-c Exp $
+
+  12 Jun 2012; Lars Wendler <polynomial-c@gentoo.org>
+  thunderbird-10.0.5.ebuild, thunderbird-13.0.ebuild:
+  Fixed dependency on libpng.
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> thunderbird-10.0.5.ebuild:
   Stable for amd64, wrt bug #420125
