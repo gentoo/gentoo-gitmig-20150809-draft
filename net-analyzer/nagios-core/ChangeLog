@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.183 2012/02/09 10:35:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.184 2012/06/12 02:34:26 zmedico Exp $
+
+  12 Jun 2012; Zac Medico <zmedico@gentoo.org> nagios-core-3.2.3.ebuild,
+  nagios-core-3.3.1.ebuild:
+  inherit multilib for get_libdir, and user for enewgroup and enewuser
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
