@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tablelist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/ChangeLog,v 1.15 2012/06/11 10:19:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/ChangeLog,v 1.16 2012/06/12 06:30:45 jdhore Exp $
+
+  12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> tablelist-5.6.ebuild:
+  marked x86 per bug 418931
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> tablelist-5.6.ebuild:
   Stable for amd64, wrt bug #418931
