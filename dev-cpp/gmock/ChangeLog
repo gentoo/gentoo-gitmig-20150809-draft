@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gmock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.7 2012/05/30 20:03:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.8 2012/06/12 18:32:02 ago Exp $
+
+  12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gmock-1.6.0.ebuild:
+  Stable for amd64, wrt bug #420853
 
   30 May 2012; Mike Frysinger <vapier@gentoo.org>
   +files/gmock-1.4.0-gcc-4.7.patch, gmock-1.4.0.ebuild:
