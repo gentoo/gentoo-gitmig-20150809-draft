@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/clashscore-db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clashscore-db/ChangeLog,v 1.4 2012/06/12 13:25:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clashscore-db/ChangeLog,v 1.5 2012/06/12 17:42:11 ago Exp $
+
+  12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> clashscore-db-3.17.ebuild:
+  Stable for amd64, wrt bug #419879
 
   12 Jun 2012; Justin Lecher <jlec@gentoo.org> clashscore-db-3.17.ebuild:
   Define S, thanks agostino for kicking me
