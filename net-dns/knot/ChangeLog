@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/knot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.7 2012/06/12 14:54:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.8 2012/06/12 17:48:03 scarabeus Exp $
+
+  12 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Add highly-nonrelevant me as maintainer, but don't expect magic.
 
 *knot-1.0.5 (12 Jun 2012)
 
