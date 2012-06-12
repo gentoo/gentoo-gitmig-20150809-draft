@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.8.0.ebuild,v 1.2 2012/06/12 19:56:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.8.0.ebuild,v 1.3 2012/06/12 21:07:47 eras Exp $
 
 EAPI="4"
 
@@ -25,8 +25,7 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-gss-extra.patch"
-	sed -i -e '/AC_PROG_CC/i AM_PROG_AR' \
-	       -e 's/ -Werror//' configure.ac || die
+	sed -i -e 's/ -Werror//' configure.ac || die
 	eautoreconf
 }
 
