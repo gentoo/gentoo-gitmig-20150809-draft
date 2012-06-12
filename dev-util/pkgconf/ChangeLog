@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.20 2012/06/12 09:17:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.21 2012/06/12 17:45:12 jdhore Exp $
+
+  12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pkgconf-0.8.ebuild:
+  marked x86 per bug 420717
 
   12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pkgconf-0.8.ebuild:
   Stable for amd64, wrt bug #420717
