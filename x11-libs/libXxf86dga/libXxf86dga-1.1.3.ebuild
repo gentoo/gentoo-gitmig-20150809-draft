@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/libXxf86dga-1.1.3.ebuild,v 1.2 2012/05/09 13:21:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/libXxf86dga-1.1.3.ebuild,v 1.3 2012/06/12 13:11:44 chithanh Exp $
 
 EAPI=4
 inherit xorg-2
@@ -16,3 +16,8 @@ RDEPEND="x11-libs/libX11
 	x11-proto/xproto
 	>=x11-proto/xf86dgaproto-2.0.99.2"
 DEPEND="${RDEPEND}"
+
+PATCHES=(
+	"${FILESDIR}"/libXxf86dga-1.1.3-x32-off_t-cast.patch
+	"${FILESDIR}"/libXxf86dga-1.1.3-x32-stdint-include.patch
+)
