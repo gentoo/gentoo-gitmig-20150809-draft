@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/bibtex2html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.29 2012/05/21 21:09:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.30 2012/06/12 12:46:57 aballier Exp $
+
+  12 Jun 2012; Alexis Ballier <aballier@gentoo.org> -bibtex2html-1.96.ebuild:
+  remove old
 
   21 May 2012; Johannes Huber <johu@gentoo.org> bibtex2html-1.97.ebuild:
   Stable for x86, wrt bug #416537
