@@ -1,6 +1,9 @@
 # ChangeLog for net-im/leechcraft-azoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.21 2012/06/01 05:12:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.22 2012/06/12 18:04:26 maksbotan Exp $
+
+  12 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix zheet use flag description in metadata
 
 *leechcraft-azoth-0.5.70 (01 Jun 2012)
 
