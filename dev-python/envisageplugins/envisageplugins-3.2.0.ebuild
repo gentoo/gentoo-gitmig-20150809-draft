@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisageplugins/envisageplugins-3.2.0.ebuild,v 1.3 2011/03/27 22:39:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisageplugins/envisageplugins-3.2.0.ebuild,v 1.4 2012/06/12 11:57:53 iksaif Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ MY_PN="EnvisagePlugins"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Enthought Tool Suite: Plug-ins for the Envisage framework"
-HOMEPAGE="http://code.enthought.com/projects/envisage_plugins.php http://pypi.python.org/pypi/EnvisagePlugins"
+HOMEPAGE="http://code.enthought.com/projects/envisage_plugins.php"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 LICENSE="BSD"

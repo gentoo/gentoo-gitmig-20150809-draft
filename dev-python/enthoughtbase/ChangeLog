@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enthoughtbase
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.28 2011/04/01 16:09:04 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.29 2012/06/12 11:53:59 iksaif Exp $
+
+  12 Jun 2012; Corentin Chary <iksaif@gentoo.org> enthoughtbase-3.1.0.ebuild:
+  Remove dead HOMEPAGE
 
   01 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org>
   enthoughtbase-3.1.0.ebuild:

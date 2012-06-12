@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/traitsbackendqt-3.6.0.ebuild,v 1.5 2011/04/01 16:03:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/traitsbackendqt-3.6.0.ebuild,v 1.6 2012/06/12 12:02:05 iksaif Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ MY_PN="TraitsBackendQt"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="PyQt backend for Traits and TraitsGUI (Pyface)"
-HOMEPAGE="http://code.enthought.com/projects/traits_gui/ http://pypi.python.org/pypi/TraitsBackendQt"
+HOMEPAGE="http://code.enthought.com/projects/traits_gui/"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 LICENSE="BSD"
