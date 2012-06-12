@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.36 2012/05/22 16:44:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.37 2012/06/12 09:05:10 scarabeus Exp $
 
 EAPI=4
 
@@ -32,40 +32,42 @@ if [[ ${PV} == *9999* ]]; then
 else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 fi
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
-	bs2b cddb +cdio cpudetection custom-cpuopts debug directfb doc +dts +dv dvb
-	+dvd +dvdnav dxr3 +enca +faad fbcon ftp gif ggi +iconv ipv6 jack joystick
-	jpeg kernel_linux ladspa libcaca lirc mad md5sum +mmx mmxext mng +mp3 nas
-	+network nut +opengl oss png pnm portaudio postproc pulseaudio pvr +quicktime
-	radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga +theora +truetype
-	+unicode v4l vdpau +vorbis win32codecs +X xanim xinerama +xscreensaver +xv
-	xvid"
+IUSE="+a52 aalib +alsa aqua +ass bidi bindist bl bluray bs2b cddb +cdio
+	cpudetection debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad
+	fbcon ftp gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa
+	libcaca lirc mad md5sum mng +mp3 nas +network nut +opengl oss png pnm
+	portaudio postproc pulseaudio pvr +quicktime radio +rar +real +rtc samba
+	sdl +speex tga +theora +truetype +unicode v4l vdpau +vorbis win32codecs +X
+	xanim xinerama +xscreensaver +xv xvid"
 IUSE+=" symlink"
 
-VIDEO_CARDS="s3virge mga tdfx vesa"
+CPU_FEATURES="3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3"
+for x in ${CPU_FEATURES}; do
+	IUSE+=" ${x}"
+done
+
+VIDEO_CARDS="s3virge mga tdfx"
 for x in ${VIDEO_CARDS}; do
 	IUSE+=" video_cards_${x}"
 done
 
 # bindist does not cope with win32codecs, which are nonfree
-REQUIRED_USE="bindist? ( !win32codecs )
+REQUIRED_USE="
+	ass? ( truetype )
+	bindist? ( !win32codecs )
 	cddb? ( cdio network )
 	dvdnav? ( dvd )
-	radio? ( || ( dvb v4l ) )
 	dxr3? ( X )
 	ggi? ( X )
 	opengl? ( X )
+	radio? ( || ( dvb v4l ) )
+	truetype? ( iconv )
 	vdpau? ( X )
 	xinerama? ( X )
 	xscreensaver? ( X )
 	xv? ( X )
 "
 
-FONT_RDEPS="
-	virtual/ttf-fonts
-	media-libs/fontconfig
-	>=media-libs/freetype-2.2.1:2
-"
 # Rar: althrought -gpl version is nice, it cant do most functions normal rars can
 #	nemesi? ( net-libs/libnemesi )
 RDEPEND+="
@@ -94,7 +96,7 @@ RDEPEND+="
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?,fontconfig] )
+	ass? ( >=media-libs/libass-0.9.10[enca?,fontconfig] )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
@@ -136,7 +138,11 @@ RDEPEND+="
 	sdl? ( media-libs/libsdl )
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora )
-	truetype? ( ${FONT_RDEPS} )
+	truetype? (
+		media-libs/fontconfig
+		>=media-libs/freetype-2.2.1:2
+		virtual/ttf-fonts
+	)
 	vorbis? ( media-libs/libvorbis )
 	xanim? ( media-video/xanim )
 	xvid? ( media-libs/xvid )
@@ -183,23 +189,6 @@ pkg_setup() {
 		ewarn "You won't need this turned on if you are only building"
 		ewarn "mplayer for this system. Also, if your compile fails, try"
 		ewarn "disabling this use flag."
-	fi
-
-	if use custom-cpuopts; then
-		ewarn
-		ewarn "You are using the custom-cpuopts flag which will"
-		ewarn "specifically allow you to enable / disable certain"
-		ewarn "CPU optimizations."
-		ewarn
-		ewarn "Most desktop users won't need this functionality, but it"
-		ewarn "is included for corner cases like cross-compiling and"
-		ewarn "certain profiles. If unsure, disable this flag and MPlayer"
-		ewarn "will automatically detect and use your available CPU"
-		ewarn "optimizations."
-		ewarn
-		ewarn "Using this flag means your build is unsupported, so"
-		ewarn "please make sure your CPU optimization use flags (3dnow"
-		ewarn "3dnowext mmx mmxext sse sse2 ssse3) are properly set."
 	fi
 
 	einfo "For various format support you need to enable the support on your ffmpeg package:"
@@ -283,14 +272,8 @@ src_configure() {
 	#
 	# use external libdvdcss, dvdread and dvdnav
 	myconf+=" --disable-dvdread-internal --disable-libdvdcss-internal"
-	if use dvd; then
-		use dvdnav || myconf+=" --disable-dvdnav"
-	else
-		myconf+="
-			--disable-dvdnav
-			--disable-dvdread
-		"
-	fi
+	use dvd || myconf+=" --disable-dvdread"
+	use dvdnav || myconf+=" --disable-dvdnav"
 
 	#############
 	# Subtitles #
@@ -298,15 +281,8 @@ src_configure() {
 	# SRT/ASS/SSA (subtitles) requires freetype support
 	# freetype support requires iconv
 	# iconv optionally can use unicode
-	if ! use ass && ! use truetype; then
-		myconf+=" --disable-freetype"
-		if ! use iconv; then
-			myconf+="
-				--disable-iconv
-				--charset=noconv
-			"
-		fi
-	fi
+	use truetype || myconf+=" --disable-freetype"
+	use iconv || myconf+=" --disable-iconv --charset=noconv"
 	use iconv && use unicode && myconf+=" --charset=UTF-8"
 
 	#####################################
@@ -440,16 +416,9 @@ src_configure() {
 	# Platform specific flags, hardcoded on amd64 (see below)
 	use cpudetection && myconf+=" --enable-runtime-cpudetection"
 
-	# Turning off CPU optimizations usually will break the build.
-	# However, this use flag, if enabled, will allow users to completely
-	# specify which ones to use. If disabled, mplayer will automatically
-	# enable all CPU optimizations that the host build supports.
-	if use custom-cpuopts; then
-		uses="3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3"
-		for i in ${uses}; do
-			myconf+=" $(use_enable ${i})"
-		done
-	fi
+	for i in ${CPU_FEATURES}; do
+		myconf+=" $(use_enable ${i})"
+	done
 
 	use debug && myconf+=" --enable-debug=3"
 
@@ -458,40 +427,16 @@ src_configure() {
 		append-ldflags -nopie
 	fi
 
-	is-flag -O? || append-flags -O2
-
-	# workaround bug, x86 just has too few registers, see c.f.
-	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=402950#44
-	# and 32-bits OSX, bug 329861
-	if [[ ${CHOST} == i?86-* ]] ; then
-		use debug || append-flags -fomit-frame-pointer
-	fi
-
 	###########################
 	# X enabled configuration #
 	###########################
-	myconf+=" --disable-dga1 --disable-dga2"
-	if use X; then
-		uses="dxr3 ggi xinerama xv"
-		for i in ${uses}; do
-			use ${i} || myconf+=" --disable-${i}"
-		done
-		use opengl || myconf+=" --disable-gl"
-		use vdpau || myconf+=" --disable-vdpau"
-		use video_cards_vesa || myconf+=" --disable-vesa"
-		use xscreensaver || myconf+=" --disable-xss"
-	else
-		myconf+="
-			--disable-dxr3
-			--disable-ggi
-			--disable-gl
-			--disable-vdpau
-			--disable-xinerama
-			--disable-xss
-			--disable-xv
-			--disable-x11
-		"
-	fi
+	myconf+=" --disable-dga1 --disable-dga2 --disable-vesa"
+	uses="dxr3 ggi vdpau xinerama xv"
+	for i in ${uses}; do
+		use ${i} || myconf+=" --disable-${i}"
+	done
+	use opengl || myconf+=" --disable-gl"
+	use xscreensaver || myconf+=" --disable-xss"
 
 	############################
 	# OSX (aqua) configuration #
@@ -563,7 +508,7 @@ src_install() {
 		dohtml -r "${S}"/DOCS/HTML/*
 	fi
 
-	if ! use ass && ! use truetype; then
+	if ! use truetype; then
 		dodir /usr/share/${PN}/fonts
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
