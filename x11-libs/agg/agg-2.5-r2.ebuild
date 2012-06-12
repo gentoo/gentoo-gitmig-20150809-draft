@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.6 2012/05/05 03:52:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.7 2012/06/12 12:54:33 chithanh Exp $
 
 EAPI="2"
 
@@ -36,6 +36,8 @@ src_prepare() {
 	sed -r -i \
 		-e 's:^(.*)  -L@.*:\1:' \
 		src/platform/X11/Makefile.am || die "Failed to sed"
+	# fix building against automake-1.12, bug 420701
+	sed -i '/^AM_C_PROTOTYPES/d' configure.in || die
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/agg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.23 2012/05/05 03:52:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.24 2012/06/12 12:54:33 chithanh Exp $
+
+  12 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  agg-2.5-r2.ebuild:
+  Fix building against automake-1.12, bug #420701.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> agg-2.5.ebuild,
   agg-2.5-r2.ebuild:
