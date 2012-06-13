@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.3 2012/06/13 11:06:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.4 2012/06/13 12:17:17 scarabeus Exp $
 
 # @ECLASS: aspell-dict.eclass
 # @MAINTAINER:
@@ -48,9 +48,9 @@ myspell-r2_src_unpack() {
 	for f in ${A}; do
 		case ${f} in
 			*.oxt)
-				echo ">>> Unpacking ${f} to ${PWD}"
-				unzip -qoj ${f}
-				assert "failed unpacking ${f}"
+				echo ">>> Unpacking "${DISTDIR}/${f}" to ${PWD}"
+				unzip -qoj ${DISTDIR}/${f}
+				assert "failed unpacking ${DISTDIR}/${f}"
 				;;
 			*) unpack ${f} ;;
 		esac
