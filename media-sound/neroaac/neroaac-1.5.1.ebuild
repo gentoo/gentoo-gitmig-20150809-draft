@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/neroaac/neroaac-1.5.1.ebuild,v 1.3 2011/03/12 13:11:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/neroaac/neroaac-1.5.1.ebuild,v 1.4 2012/06/13 08:15:35 sbriesen Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils
 
@@ -22,6 +22,7 @@ RESTRICT="strip mirror test"
 
 QA_PRESTRIPPED="opt/${PN}/${PV}/neroAac\(Dec\|Enc\|Tag\)"
 QA_EXECSTACK="opt/${PN}/${PV}/neroAacDec opt/${PN}/${PV}/neroAacEnc"
+QA_FLAGS_IGNORED="${QA_PRESTRIPPED}"
 
 S="${WORKDIR}"
 
@@ -33,9 +34,9 @@ src_install() {
 	exeinto /opt/${PN}/${PV}
 	doexe linux/*
 	dodir /opt/bin
-	dosym ../${PN}/${PV}/neroAacDec /opt/bin
-	dosym ../${PN}/${PV}/neroAacEnc /opt/bin
-	dosym ../${PN}/${PV}/neroAacTag /opt/bin
+	dosym ../${PN}/${PV}/neroAacDec /opt/bin/neroAacDec
+	dosym ../${PN}/${PV}/neroAacEnc /opt/bin/neroAacEnc
+	dosym ../${PN}/${PV}/neroAacTag /opt/bin/neroAacTag
 	newdoc readme.txt README
 	newdoc license.txt LICENSE
 	newdoc changelog.txt ChangeLog
