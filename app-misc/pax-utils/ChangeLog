@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.135 2012/04/29 06:34:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.136 2012/06/13 05:59:56 jdhore Exp $
+
+  13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pax-utils-0.4.ebuild:
+  marked x86 per bug 420919
 
 *pax-utils-0.4 (29 Apr 2012)
 
