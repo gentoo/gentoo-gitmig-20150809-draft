@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/dssp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/ChangeLog,v 1.6 2012/06/03 15:06:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/ChangeLog,v 1.7 2012/06/13 11:01:38 jlec Exp $
+
+*dssp-0.70831 (13 Jun 2012)
+
+  13 Jun 2012; Justin Lecher <jlec@gentoo.org> +dssp-0.70831.ebuild,
+  -dssp-101007.ebuild:
+  Change Version numbers to be lower 1 in order to be able to follow upstream
+  new versioning scheme; Drop old unstable
 
 *dssp-2.0.4 (03 Jun 2012)
 
