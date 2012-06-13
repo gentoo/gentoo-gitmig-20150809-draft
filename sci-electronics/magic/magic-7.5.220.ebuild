@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.5.202.ebuild,v 1.4 2012/06/13 14:00:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-7.5.220.ebuild,v 1.1 2012/06/13 14:00:34 xmw Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.opencircuitdesign.com/magic/archive/${P}.tgz \
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses

@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/magic
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.59 2011/12/18 19:54:46 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.60 2012/06/13 14:00:34 xmw Exp $
+
+*magic-7.5.220 (13 Jun 2012)
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> +magic-7.5.220.ebuild,
+  magic-7.5.202.ebuild:
+  ppc stable, version bump
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> magic-7.5.202.ebuild:
   x86 stable wrt bug #393765
