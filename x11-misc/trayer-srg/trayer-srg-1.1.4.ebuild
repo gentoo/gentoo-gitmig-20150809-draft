@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/trayer-srg-1.1.4.ebuild,v 1.5 2012/06/13 16:35:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/trayer-srg-1.1.4.ebuild,v 1.6 2012/06/13 19:08:10 jdhore Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/sargon/${PN}/tarball/${P/-srg/} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/gdk-pixbuf:2

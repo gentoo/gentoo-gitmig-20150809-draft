@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer-srg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.6 2012/06/13 16:35:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.7 2012/06/13 19:08:10 jdhore Exp $
+
+  13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> trayer-srg-1.1.4.ebuild:
+  marked x86 per bug 420977
 
   13 Jun 2012; Agostino Sarubbo <ago@gentoo.org> trayer-srg-1.1.4.ebuild:
   Stable for amd64, wrt bug #420977
