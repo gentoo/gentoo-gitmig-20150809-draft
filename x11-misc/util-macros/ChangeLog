@@ -1,6 +1,10 @@
-# ChangeLog for x11-misc/util-macros
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.118 2012/06/03 11:15:15 chithanh Exp $
+# ChangeLog for x11-misc/util-macros# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.119 2012/06/13 03:54:01 vapier Exp $
+
+  13 Jun 2012; Mike Frysinger <vapier@gentoo.org> util-macros-1.14.0.ebuild,
+  util-macros-1.15.0.ebuild, util-macros-1.16.0.ebuild,
+  util-macros-1.16.1.ebuild, util-macros-1.16.2.ebuild, util-macros-1.17.ebuild:
+  Drop useless DEPEND variables.
 
   03 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   util-macros-1.17.ebuild:
