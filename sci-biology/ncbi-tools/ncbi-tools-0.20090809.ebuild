@@ -1,18 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20100808.ebuild,v 1.4 2010/11/15 21:07:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-0.20090809.ebuild,v 1.1 2012/06/13 10:49:23 jlec Exp $
 
-EAPI="3"
+EAPI="2"
 
 inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="Development toolkit and applications for computational biology, including NCBI BLAST"
-LICENSE="public-domain"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
-SRC_URI="ftp://ftp.ncbi.nlm.nih.gov/toolbox/ncbi_tools/old/${PV}/ncbi.tar.gz -> ${P}.tar.gz"
+SRC_URI="ftp://ftp.ncbi.nlm.nih.gov/toolbox/ncbi_tools/old/${PV/0./}/ncbi.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+LICENSE="public-domain"
+KEYWORDS="~alpha amd64 ~ppc64 x86"
 
 # IUSE=mpi deprecated, use sci-biology/mpiblast separately
 IUSE="doc X"
@@ -60,32 +60,32 @@ src_prepare() {
 	cd "${S}"/platform
 	# ... on x86...
 	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
-		-e "s/NCBI_LDFLAGS1 = -O3 -mcpu=pentium4/NCBI_LDFLAGS1 = ${CFLAGS} ${LDFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O3 -mcpu=pentium4/NCBI_LDFLAGS1 = ${CFLAGS}/" \
 		-e "s/NCBI_OPTFLAG = -O3 -mcpu=pentium4/NCBI_OPTFLAG = ${CFLAGS}/" \
 		-i linux-x86.ncbi.mk || die
 	# ... on alpha...
 	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
-		-e "s/NCBI_LDFLAGS1 = -O3 -mieee/NCBI_LDFLAGS1 = -mieee ${CFLAGS} ${LDFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O3 -mieee/NCBI_LDFLAGS1 = -mieee ${CFLAGS}/" \
 		-e "s/NCBI_OPTFLAG = -O3 -mieee/NCBI_OPTFLAG = -mieee ${CFLAGS}/" \
 		-i linux-alpha.ncbi.mk || die
 	# ... on hppa...
 	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
-		-e "s/NCBI_LDFLAGS1 = -O2/NCBI_LDFLAGS1 = ${CFLAGS} ${LDFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O2/NCBI_LDFLAGS1 = ${CFLAGS}/" \
 		-e "s/NCBI_OPTFLAG = -O2/NCBI_OPTFLAG = ${CFLAGS}/" \
 		-i hppalinux.ncbi.mk || die
 	# ... on ppc...
 	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
-		-e "s/NCBI_LDFLAGS1 = -O2/NCBI_LDFLAGS1 = ${CFLAGS} ${LDFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O2/NCBI_LDFLAGS1 = ${CFLAGS}/" \
 		-e "s/NCBI_OPTFLAG = -O2/NCBI_OPTFLAG = ${CFLAGS}/" \
 		-i ppclinux.ncbi.mk || die
 	# ... on generic 64-bit Linux...
 	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
-		-e "s/NCBI_LDFLAGS1 = -O3/NCBI_LDFLAGS1 = ${CFLAGS} ${LDFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O3/NCBI_LDFLAGS1 = ${CFLAGS}/" \
 		-e "s/NCBI_OPTFLAG = -O3/NCBI_OPTFLAG = ${CFLAGS}/" \
 		-i linux64.ncbi.mk || die
 	# ... on generic Linux.
 	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
-		-e "s/NCBI_LDFLAGS1 = -O3/NCBI_LDFLAGS1 = ${CFLAGS} ${LDFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O3/NCBI_LDFLAGS1 = ${CFLAGS}/" \
 		-e "s/NCBI_OPTFLAG = -O3/NCBI_OPTFLAG = ${CFLAGS}/" \
 		-i linux.ncbi.mk || die
 
@@ -108,39 +108,26 @@ src_prepare() {
 
 	# We use dynamic libraries
 	sed -i -e "s/-Wl,-Bstatic//" *linux*.ncbi.mk || die
-
-	sed \
-		-re "s:/usr(/bin/.*sh):\1:g" \
-		-e "s:(/bin/.*sh):${EPREFIX}\1:g" \
-		-i $(find "${S}" -type f) || die
 }
 
 src_compile() {
 	export EXTRA_VIB
 	cd "${WORKDIR}"
-	csh ncbi/make/makedis.csh || die
+	ncbi/make/makedis.csh || die
 	mkdir "${S}"/cgi
 	mkdir "${S}"/real
 	mv "${S}"/bin/*.cgi "${S}"/cgi || die
 	mv "${S}"/bin/*.REAL "${S}"/real || die
-	cd "${S}"/demo
-	emake \
-		-f ../make/makenet.unx \
-		CC="$(tc-getCC) ${CFLAGS} -I../include  -L../lib" \
-		LDFLAGS="${LDFLAGS}" \
-		spidey || die
-	cp spidey ../bin/ || die
 }
 
 src_install() {
-	mv "${S}"/bin/cdscan "${S}"/bin/cdscan-ncbi #sci-geosciences/cdat-lite
 	dobin "${S}"/bin/* || die "Failed to install binaries."
 	for i in ${EXTRA_VIB}; do
 		dobin "${S}"/build/${i} || die "Failed to install binaries."
 	done
 	dolib "${S}"/lib/* || die "Failed to install libraries."
-	mkdir -p "${ED}"/usr/include/ncbi
-	cp -RL "${S}"/include/* "${ED}"/usr/include/ncbi || \
+	mkdir -p "${D}"/usr/include/ncbi
+	cp -RL "${S}"/include/* "${D}"/usr/include/ncbi || \
 		die "Failed to install headers."
 
 	# TODO: wwwblast with webapps
@@ -150,7 +137,7 @@ src_install() {
 	#doins ${S}/real/*
 
 	# Basic documentation
-	dodoc "${S}"/{README,VERSION,doc/{*.txt,README.*}} || \
+	dodoc "${S}"/{README,VERSION,doc/{*.txt,README.asn2xml}} || \
 		die "Failed to install basic documentation."
 	newdoc "${S}"/doc/fa2htgs/README README.fa2htgs || \
 		die "Failed renaming fa2htgs documentation."
@@ -166,20 +153,16 @@ src_install() {
 		die "Failed to install man pages."
 
 	# Hypertext user documentation
-	dohtml "${S}"/{README.htm,doc/{*.html,*.htm,*.gif}} || \
+	dohtml "${S}"/{README.htm,doc/{*.html,*.gif}} || \
 		die "Failed to install HTML documentation."
 	insinto /usr/share/doc/${PF}/html/blast
 	doins "${S}"/doc/blast/* || die "Failed to install blast HTML documentation."
-	insinto /usr/share/doc/${PF}/html/images
-	doins "${S}"/doc/images/* || die "Failed to install documentation images."
-	insinto /usr/share/doc/${PF}/html/seq_install
-	doins "${S}"/doc/seq_install/* || die "Failed to install seq_install documentation."
 
 	# Developer documentation
 	if use doc; then
 		# Demo programs
-		mkdir "${ED}"/usr/share/ncbi
-		mv "${S}"/demo "${ED}"/usr/share/ncbi/demo || die
+		mkdir "${D}"/usr/share/ncbi
+		mv "${S}"/demo "${D}"/usr/share/ncbi/demo || die
 	fi
 
 	# Shared data (similarity matrices and such) and database directory.
