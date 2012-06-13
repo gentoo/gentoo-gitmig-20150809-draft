@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.13-r2.ebuild,v 1.2 2012/06/12 13:31:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.13-r2.ebuild,v 1.3 2012/06/13 14:59:09 jer Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nagios/nrpe-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="command-args ssl tcpd xinetd"
 
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0
