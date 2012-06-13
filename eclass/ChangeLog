@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.311 2012/06/12 09:17:33 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.312 2012/06/13 11:06:17 scarabeus Exp $
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-r2.eclass:
+  Handle dodoc correctly to not die if no documents are found.
 
   12 Jun 2012; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
   Convert docs to eclass-manpages.
