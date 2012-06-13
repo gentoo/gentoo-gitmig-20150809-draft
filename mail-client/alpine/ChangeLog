@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/alpine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.13 2011/10/09 07:50:39 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.14 2012/06/13 09:49:13 xmw Exp $
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> alpine-2.00-r4.ebuild:
+  ppc stable (bug 317971)
 
   09 Oct 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove tove from metadata.xml
