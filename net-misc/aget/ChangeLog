@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.20 2012/06/13 16:34:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/ChangeLog,v 1.21 2012/06/13 18:58:09 jdhore Exp $
+
+  13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> aget-0.4.1-r1.ebuild:
+  marked x86 per bug 420969
 
   13 Jun 2012; Agostino Sarubbo <ago@gentoo.org> aget-0.4.1-r1.ebuild:
   Stable for amd64, wrt bug #420969
