@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.4.1.ebuild,v 1.1 2012/05/26 12:23:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.4.1.ebuild,v 1.2 2012/06/13 07:04:16 naota Exp $
 
 EAPI=4
 
@@ -37,8 +37,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	>py-compile
-	python_convert_shebangs 2 setup/ibus-setup-hangul.in
+	python_clean_py-compile_files
+	sed -ie "s:python:${EPYTHON}:" \
+		setup/ibus-setup-hangul.in || die
 }
 
 src_configure() {
