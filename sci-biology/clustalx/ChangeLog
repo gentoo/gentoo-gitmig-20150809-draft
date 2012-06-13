@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustalx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.24 2012/06/13 07:02:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.25 2012/06/13 07:08:33 johu Exp $
+
+  13 Jun 2012; Johannes Huber <johu@gentoo.org> -clustalx-2.0.11.ebuild:
+  Remove old wrt bug #311481.
 
   13 Jun 2012; Johannes Huber <johu@gentoo.org> clustalx-2.1.ebuild:
   Stable for x86, wrt bug #416891
