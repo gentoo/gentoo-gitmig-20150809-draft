@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.75 2012/05/04 07:10:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.76 2012/06/13 13:39:41 xmw Exp $
+
+*gtkwave-3.3.37 (13 Jun 2012)
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> +gtkwave-3.3.37.ebuild:
+  Version bump (thanks euscan)
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkwave-3.3.14.ebuild,
   gtkwave-3.3.23.ebuild, gtkwave-3.3.28.ebuild, gtkwave-3.3.31.ebuild:
