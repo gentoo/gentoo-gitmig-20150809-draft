@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.4.ebuild,v 1.3 2012/06/11 12:42:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.4.ebuild,v 1.4 2012/06/13 09:31:30 johu Exp $
 
 EAPI=2
 inherit flag-o-matic eutils qt4-r2 games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pokerth/${MY_P}.tar.bz2"
 
 LICENSE="AGPL-3 GPL-1 GPL-2 GPL-3 BitstreamVera public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated"
 
 RDEPEND="dev-db/sqlite:3
