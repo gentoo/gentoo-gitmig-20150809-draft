@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r3.ebuild,v 1.8 2011/01/15 20:01:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r3.ebuild,v 1.9 2012/06/13 22:43:43 radhermit Exp $
 
 EAPI="2"
 
@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-autotools.patch
 	epatch "${FILESDIR}"/${PN}-implicit-decl.patch
+	epatch "${FILESDIR}"/${P}-automake-2.12.patch
 
 	# automake is unhappy if this is missing
 	>> config.rpath

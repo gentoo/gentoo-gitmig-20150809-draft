@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/lrzsz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.29 2012/04/06 21:55:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.30 2012/06/13 22:43:43 radhermit Exp $
+
+  13 Jun 2012; Tim Harder <radhermit@gentoo.org> lrzsz-0.12.20-r3.ebuild,
+  +files/lrzsz-0.12.20-automake-2.12.patch:
+  Fix build with automake-2.12 (bug #420691).
 
   06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #63588
