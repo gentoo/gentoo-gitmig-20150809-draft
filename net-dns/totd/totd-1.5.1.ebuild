@@ -1,30 +1,34 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.7 2010/07/13 14:43:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.8 2012/06/13 12:08:36 xmw Exp $
+
+EAPI=4
 
 inherit eutils
 
 DESCRIPTION="Trick Or Treat Daemon, a DNS proxy for 6to4"
-HOMEPAGE="http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html"
-SRC_URI="ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/${P}.tar.gz"
-LICENSE="BSD as-is"
+HOMEPAGE="http://www.dillema.net/software/totd.html"
+SRC_URI="http://www.dillema.net/software/${PN}/${P}.tar.gz"
 
+LICENSE="BSD as-is"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
+
 DEPEND=""
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-no_werror.patch
 }
 
-src_compile() {
-	econf --enable-ipv4 --enable-ipv6 --enable-stf \
-		--enable-scoped-rewrite --disable-http-server || die "configure failed"
-	emake || die "make failed"
+src_configure() {
+	econf \
+		--enable-ipv4 \
+		--enable-ipv6 \
+		--enable-stf \
+		--enable-scoped-rewrite \
+		--disable-http-server
 }
 
 src_install() {
