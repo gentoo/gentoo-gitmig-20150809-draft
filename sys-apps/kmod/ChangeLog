@@ -1,6 +1,9 @@
-# ChangeLog for sys-apps/kmod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.38 2012/05/23 23:12:45 vapier Exp $
+# ChangeLog for sys-apps/kmod# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.39 2012/06/13 15:46:09 vapier Exp $
+
+  13 Jun 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/kmod-8-gc-sections.patch, kmod-8.ebuild:
+  Add fix from upstream for building w/out gc-sections.
 
   23 May 2012; Mike Frysinger <vapier@gentoo.org> kmod-7.ebuild, kmod-8.ebuild,
   kmod-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-8.ebuild,v 1.4 2012/05/23 23:12:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-8.ebuild,v 1.5 2012/06/13 15:46:09 vapier Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ unset vcs
 
 if [[ ${PV} != 9999 ]] ; then
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~hppa ~m68k ~mips ~ppc ~ppc64 ~s390 ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~x86"
 fi
 
 DESCRIPTION="library and tools for managing linux kernel modules"
@@ -39,6 +39,7 @@ RESTRICT="test"
 
 src_prepare()
 {
+	epatch "${FILESDIR}"/${P}-gc-sections.patch
 	if [ ! -e configure ]; then
 		if use doc; then
 			gtkdocize --copy --docdir libkmod/docs || die
