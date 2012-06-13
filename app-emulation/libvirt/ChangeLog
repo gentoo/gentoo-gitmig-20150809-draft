@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.184 2012/06/11 02:01:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.185 2012/06/13 20:02:03 cardoe Exp $
+
+  13 Jun 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.12.ebuild:
+  Fix issue where we tried to set permissions on directories that don't exist.
+  bug #420221
 
   10 Jun 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.12.ebuild:
   Fix up libnl depend when both slots are installed. Add kernel param checks
