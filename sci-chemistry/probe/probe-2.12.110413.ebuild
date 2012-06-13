@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/probe-2.12.110413.ebuild,v 1.5 2012/06/11 09:18:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/probe-2.12.110413.ebuild,v 1.6 2012/06/13 06:24:53 jdhore Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://kinemage.biochem.duke.edu/downloads/software/probe/${MY_P}.src.z
 
 SLOT="0"
 LICENSE="richardson"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=""
