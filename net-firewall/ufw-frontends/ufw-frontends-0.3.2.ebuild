@@ -1,9 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ufw-frontends-0.2.0.ebuild,v 1.2 2011/10/24 06:03:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ufw-frontends-0.3.2.ebuild,v 1.1 2012/06/13 21:07:43 thev00d00 Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND="2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
 inherit distutils
 
 DESCRIPTION="Provides graphical frontend to ufw"
@@ -20,13 +22,9 @@ DEPEND=""
 RDEPEND="${DEPEND}
 	dev-python/pygobject:2
 	dev-python/pygtk
+	dev-python/pyinotify
 	net-firewall/ufw
 	x11-libs/gksu"
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
 
 src_prepare() {
 	sed -i 's/^Exec=su-to-root -X -c/Exec=gksu/' \
