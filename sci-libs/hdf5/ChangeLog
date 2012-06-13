@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.88 2012/06/07 10:57:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.89 2012/06/13 18:59:33 xarthisius Exp $
+
+*hdf5-1.8.9-r2 (13 Jun 2012)
+
+  13 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/hdf5-1.8.9-mpicxx.patch, +hdf5-1.8.9-r2.ebuild, -hdf5-1.8.9-r1.ebuild:
+  Prevent accidental inclusion of mpi c++ headers when hdf5.h is included by
+  third party C++ program/library. Fixes #420777 Juergen Rose <rose@rz.uni-
+  potsdam.de>
 
   07 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> hdf5-1.8.9-r1.ebuild:
   Add explicit rpath for prefix wrt #419677 by William Throwe <wtt6@cornell.edu>
