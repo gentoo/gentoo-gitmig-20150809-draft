@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.10.ebuild,v 1.8 2012/02/19 15:39:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.10.ebuild,v 1.9 2012/06/13 19:49:51 ryao Exp $
 
 EAPI=2
 
@@ -34,6 +34,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0.9-x32.patch
+	epatch_user
 	elibtoolize
 }
 
