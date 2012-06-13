@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.360 2012/06/02 22:35:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.361 2012/06/13 06:11:24 zmedico Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Zac Medico <zmedico@gentoo.org> (13 Jun 2012)
+# Mask USE=pypy1_9 for sys-apps/portage, since pypy has limited KEYWORDS.
+sys-apps/portage pypy1_9
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (03 Jun 2012)
 # needs libpqxx-3* which is not in the tree anymore
@@ -103,10 +107,6 @@ www-plugins/gnash directfb
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Feb 2012)
 # lirc support is broken in older gnash
 <www-plugins/gnash-0.8.10 lirc
-
-# Zac Medico <zmedico@gentoo.org> (18 Feb 2012)
-# Mask USE=pypy1_8 for sys-apps/portage, since pypy has limited KEYWORDS.
-sys-apps/portage pypy1_8
 
 # Justin Lecher <jlec@gentoo.org> (13. Feb 2012)
 # Is broken somehow, upstream informed
