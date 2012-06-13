@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/myspell-et
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-et/ChangeLog,v 1.19 2012/05/17 18:14:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-et/ChangeLog,v 1.20 2012/06/13 16:57:59 scarabeus Exp $
+
+*myspell-et-20030606 (13 Jun 2012)
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +myspell-et-20030606.ebuild, -myspell-et-20060316.ebuild:
+  Use upstream package for et dict. It should be basically inline with what
+  debian does.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-et-20060316.ebuild:
   keyword ~amd64-fbsd
