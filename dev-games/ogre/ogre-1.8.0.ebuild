@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.0.ebuild,v 1.2 2012/06/12 22:42:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.0.ebuild,v 1.3 2012/06/13 01:52:54 mr_bones_ Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit eutils cmake-utils
 
 MY_PV=${PV//./-}
@@ -45,8 +44,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}_src_v${MY_PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-threading.patch
-	epatch "${FILESDIR}"/${P}-flags.patch
+	epatch \
+		"${FILESDIR}"/${P}-threading.patch \
+		"${FILESDIR}"/${P}-flags.patch
 	sed -i \
 		-e "s:share/OGRE/docs:share/doc/${PF}:" \
 		Docs/CMakeLists.txt || die
