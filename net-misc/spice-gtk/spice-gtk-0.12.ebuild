@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.12.ebuild,v 1.4 2012/06/13 09:12:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.12.ebuild,v 1.5 2012/06/13 09:27:43 dev-zero Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -72,7 +72,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-parallel-install.patch"
-	eaclocal
 	eautoreconf
 }
 
@@ -113,7 +112,6 @@ src_install() {
 	use static-libs || rm -rf "${D}"/usr/lib*/*.la
 	use python && rm -rf "${D}"/usr/lib*/python*/site-packages/*.la
 	use doc || rm -rf "${D}/usr/share/gtk-doc"
-	use python && python_convert_shebangs -r 2 "${D}"
 
 	make_desktop_entry spicy Spicy "utilities-terminal" "Network;RemoteAccess;"
 }
