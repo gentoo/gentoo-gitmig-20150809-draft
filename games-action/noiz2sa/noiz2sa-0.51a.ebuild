@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.11 2011/06/14 06:26:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.12 2012/06/13 06:44:24 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,10 +18,10 @@ DEPEND="media-libs/sdl-mixer[vorbis]
 	>=dev-libs/libbulletml-0.0.3
 	virtual/opengl"
 
-S="${WORKDIR}"/${PN}/src
+S=${WORKDIR}/${PN}/src
 
-PATCHES=( "${FILESDIR}/${P}"-gcc41.patch
-	"${FILESDIR}/${P}"-underlink.patch
+PATCHES=( "${FILESDIR}"/${P}-gcc41.patch
+	"${FILESDIR}"/${P}-underlink.patch
 )
 
 src_prepare(){
@@ -46,14 +46,4 @@ src_install(){
 	touch "${D}${GAMES_STATEDIR}/${PN}.prf"
 	fperms 660 "${GAMES_STATEDIR}/${PN}.prf"
 	prepgamesdirs
-}
-
-pkg_postinst() {
-	games_pkg_postinst
-	if ! has_version "media-libs/sdl-mixer[vorbis]" ; then
-		elog "${PN} will not have sound since sdl-mixer"
-		elog "is built with USE=-vorbis"
-		elog "Please emerge sdl-mixer with USE=vorbis"
-		elog "if you want sound support"
-	fi
 }
