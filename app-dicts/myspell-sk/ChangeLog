@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-sk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sk/ChangeLog,v 1.20 2012/05/17 18:28:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sk/ChangeLog,v 1.21 2012/06/13 16:22:13 scarabeus Exp $
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -myspell-sk-20060316.ebuild,
+  myspell-sk-20110224.ebuild:
+  Stable it and remove older.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-sk-20060316.ebuild,
   myspell-sk-20110224.ebuild:
