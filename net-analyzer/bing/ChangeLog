@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bing
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bing/ChangeLog,v 1.22 2010/10/25 17:51:51 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bing/ChangeLog,v 1.23 2012/06/13 11:54:32 xmw Exp $
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> -bing-1.1.3.ebuild:
+  drop old.
 
   25 Oct 2010; Brent Baude <ranger@gentoo.org> bing-1.1.3-r1.ebuild:
   stable ppc, bug 335332
