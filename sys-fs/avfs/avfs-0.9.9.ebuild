@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.9.ebuild,v 1.10 2012/06/13 08:02:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.9.ebuild,v 1.11 2012/06/13 08:09:23 radhermit Exp $
 
 EAPI=3
 inherit eutils linux-info
@@ -17,7 +17,7 @@ IUSE="static-libs +lzma"
 RDEPEND=">=sys-fs/fuse-2.4
 	lzma? ( app-arch/xz-utils )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	lzma? ( virtual/pkgconfig )"
 
 pkg_setup() {
 	kernel_is lt 2 6 && die "Must have a version 2.6 kernel. Cannot continue. :("

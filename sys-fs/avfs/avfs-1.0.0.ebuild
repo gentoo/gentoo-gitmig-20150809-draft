@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-1.0.0.ebuild,v 1.6 2012/06/13 08:02:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-1.0.0.ebuild,v 1.7 2012/06/13 08:09:23 radhermit Exp $
 
 EAPI=4
 inherit eutils
@@ -19,7 +19,7 @@ RDEPEND=">=sys-fs/fuse-2.4
 	app-arch/bzip2
 	lzma? ( app-arch/xz-utils )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	lzma? ( virtual/pkgconfig )"
 
 src_prepare() {
 	# Fixes bug #258295
