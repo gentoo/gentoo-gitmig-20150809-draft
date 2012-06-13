@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.2 2012/06/13 04:32:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.3 2012/06/13 06:34:49 zerochaos Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ else
 		SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
 		KEYWORDS="~amd64 ~arm ~ppc ~x86"
 fi
+
 DESCRIPTION="Spectrum Analyzer for Meta-Geek Wi-Spy and GSG Ubertooth hardware"
 HOMEPAGE="http://www.kismetwireless.net/spectools/"
 
