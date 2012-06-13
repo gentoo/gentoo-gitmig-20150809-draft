@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dietsniff/dietsniff-0.4.ebuild,v 1.1 2012/05/24 07:16:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dietsniff/dietsniff-0.4.ebuild,v 1.2 2012/06/13 12:01:31 xmw Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit toolchain-funcs vcs-snapshot
 
 DESCRIPTION="small and static packet sniffer based on dietlibc and libowfat"
 HOMEPAGE="https://github.com/hynek/dietsniff"
@@ -18,12 +18,6 @@ IUSE=""
 RDEPEND=""
 DEPEND="dev-libs/libowfat
 	dev-libs/dietlibc"
-
-src_unpack() {
-	default
-
-	mv *-${PN}-* ${P} || die
-}
 
 src_prepare() {
 	sed -e '/^prefix=/s:=.*:=/usr:' \
