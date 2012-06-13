@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-bootpd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.25 2010/11/11 17:40:11 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.26 2012/06/13 12:48:58 xmw Exp $
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> -netkit-bootpd-2.4.ebuild:
+  drop old
 
   11 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   netkit-bootpd-2.4-r1.ebuild:
