@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.17 2012/05/05 05:12:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.18 2012/06/13 23:00:45 naota Exp $
+
+*compiz-plugins-main-0.8.8 (13 Jun 2012)
+
+  13 Jun 2012; Naohiro Aota <naota@gentoo.org>
+  +compiz-plugins-main-0.8.8.ebuild, metadata.xml:
+  Version bump. #416025. Assign Sergey Popov as a proxy maintainer.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   compiz-plugins-main-0.8.6-r1.ebuild:
