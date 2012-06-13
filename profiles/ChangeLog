@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6658 2012/06/12 20:46:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6659 2012/06/13 11:26:08 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/amd64/x32/parent:
+  Add hardened/linux/amd64/x32 profile
 
   12 Jun 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
   Mask dev-python/{apiextractor,generatorrunner} for removal.
