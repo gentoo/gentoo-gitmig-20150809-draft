@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-eo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-eo/ChangeLog,v 1.19 2012/05/17 18:12:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-eo/ChangeLog,v 1.20 2012/06/13 16:45:08 scarabeus Exp $
+
+*myspell-eo-1.0 (13 Jun 2012)
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-eo-1.0.ebuild,
+  -myspell-eo-20060316.ebuild:
+  Bump to latest esperanto package
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-eo-20060316.ebuild:
   keyword ~amd64-fbsd
