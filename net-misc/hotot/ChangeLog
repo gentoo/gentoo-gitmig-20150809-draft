@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/hotot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.13 2012/06/06 23:09:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.14 2012/06/13 11:02:00 xmw Exp $
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> hotot-0.9.8.4.ebuild,
+  hotot-0.9.8.7.ebuild:
+  vcs-snapshot eclass
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> hotot-0.9.8.ebuild:
   marked x86 per bug 419695
