@@ -1,6 +1,10 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.74 2012/05/29 13:39:31 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.75 2012/06/13 04:27:51 naota Exp $
+
+  13 Jun 2012; Naohiro Aota <naota@gentoo.org>
+  +files/w3m-0.5.3-gdk-pixbuf.patch, w3m-0.5.3-r2.ebuild:
+  Apply patch to depend on gdk-pixbuf instead of gtk
 
   29 May 2012; Naohiro Aota <naota@gentoo.org> w3m-0.5.2-r4.ebuild,
   w3m-0.5.3-r1.ebuild, w3m-0.5.3-r2.ebuild:
