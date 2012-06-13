@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.120 2012/06/12 22:31:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.121 2012/06/13 00:51:03 zerochaos Exp $
+
+  13 Jun 2012; Rick Farina <zerochaos@gentoo.org> kismet-2011.03.2-r3.ebuild,
+  kismet-9999.ebuild:
+  fix inherit lines, remove unneeded toolchain-funcs and add explicit inherits
+  for multilib and user
 
 *kismet-9999 (12 Jun 2012)
 
