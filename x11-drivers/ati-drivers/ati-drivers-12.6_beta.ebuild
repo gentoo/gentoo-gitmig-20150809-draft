@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta.ebuild,v 1.1 2012/06/05 14:27:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta.ebuild,v 1.2 2012/06/13 13:51:53 chithanh Exp $
 
 EAPI=4
 
@@ -221,6 +221,14 @@ _check_kernel_config() {
 		eerror "    CONFIG_BKL=y"
 		eerror "in /usr/src/linux/.config"
 		error+=" BKL disabled;"
+		failed=1
+	fi
+
+	if linux_chkconfig_present X86_X32; then
+		eerror "You've enabled x32 in the kernel."
+		eerror "Unfortunately, this option is not supported yet and prevents the fglrx"
+		eerror "kernel module from loading."
+		error+=" X86_32 enabled;"
 		failed=1
 	fi
 
