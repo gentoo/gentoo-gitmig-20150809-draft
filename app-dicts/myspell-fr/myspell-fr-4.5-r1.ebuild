@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/myspell-fr-4.5.ebuild,v 1.2 2012/06/13 13:03:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/myspell-fr-4.5-r1.ebuild,v 1.1 2012/06/13 17:41:04 scarabeus Exp $
 
 EAPI=4
 
@@ -9,8 +9,8 @@ MYSPELL_DICT=(
 	"fr-moderne.dic"
 	"fr-classique.aff"
 	"fr-classique.dic"
-	"fr-classique+reforme1990.aff"
-	"fr-classique+reforme1990.dic"
+	"fr_FR.aff"
+	"fr_FR.dic"
 	"fr-reforme1990.aff"
 	"fr-reforme1990.dic"
 )
@@ -41,6 +41,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE=""
 
 src_prepare() {
+	# the default should be classique+reforme1990
+	# renaming to fr_FR
+	mv fr-classique+reforme1990.aff fr_FR.aff || die
+	mv fr-classique+reforme1990.dic fr_FR.dic || die
+
 	# move the hyphen/thes to common used name
 	# versions determined from README files
 	mv hyph_fr.dic hyph_fr_FR_v3.dic || die

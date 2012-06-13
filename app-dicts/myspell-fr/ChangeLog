@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/myspell-fr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/ChangeLog,v 1.23 2012/06/13 13:03:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/ChangeLog,v 1.24 2012/06/13 17:41:04 scarabeus Exp $
+
+*myspell-fr-4.5-r1 (13 Jun 2012)
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -myspell-fr-4.5.ebuild,
+  +myspell-fr-4.5-r1.ebuild, -myspell-fr-20060316.ebuild:
+  Stabilise new dict and name fr_FR the default one as proposed by bicatali and
+  confirmed by what we do in suse.
 
   13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-fr-20060316.ebuild,
   myspell-fr-4.5.ebuild:
