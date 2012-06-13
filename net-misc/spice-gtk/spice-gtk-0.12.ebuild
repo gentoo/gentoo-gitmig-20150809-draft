@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.12.ebuild,v 1.3 2012/05/31 05:53:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.12.ebuild,v 1.4 2012/06/13 09:12:44 dev-zero Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
+WANT_AUTOMAKE="1.11"
 
 inherit autotools eutils python
 
