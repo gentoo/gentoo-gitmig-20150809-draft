@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.30.ebuild,v 1.2 2012/06/13 16:41:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.30.ebuild,v 1.3 2012/06/13 16:52:29 ago Exp $
 
 EAPI=2
 inherit games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dgen/files/${P}.tar.gz"
 
 LICENSE="dgen-sdl as-is LGPL-2.1 GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="joystick opengl"
 
 RDEPEND="media-libs/libsdl[joystick?]
