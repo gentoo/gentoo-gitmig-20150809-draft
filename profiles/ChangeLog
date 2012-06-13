@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6661 2012/06/13 14:19:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6662 2012/06/13 16:03:00 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2012; Luca Barbato <lu_zero@gentoo.org> package.mask:
+  Update eselect-opengl mask
 
   13 Jun 2012; Michael Weber <xmw@gentoo.org> package.mask:
   Mask beta versions of sci-electronics/xcircuit for testing
@@ -673,7 +676,7 @@
   25 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +hardened/linux/powerpc/ppc64/32bit-userland/package.mask,
   +hardened/linux/powerpc/ppc64/32bit-userland/package.use.mask:
-  Mask app-admin/puppet[rrdtool] and app-misc/beagle 
+  Mask app-admin/puppet[rrdtool] and app-misc/beagle
   due to nonsolvable dependencies
 
   25 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org>
@@ -1154,7 +1157,7 @@
   18 Mar 2012; Tim Harder <radhermit@gentoo.org> package.mask:
   Drop old app-misc/task mask.
 
-  18 Mar 2012; Magnus Granberg <zorry@gentoo.org> 
+  18 Mar 2012; Magnus Granberg <zorry@gentoo.org>
   hardened/linux/package.use.mask, hardened/linux/use.mask
   mask profile for media-tv/xbmc only.
 
@@ -1770,7 +1773,7 @@
   Mask KDE SC 4.8.0
 
   24 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
-  Finally mask media-fonts/gnu-gs-fonts-* for last-riting, ending 
+  Finally mask media-fonts/gnu-gs-fonts-* for last-riting, ending
   year-long annoyance in bug 247657. Replaced by media-fonts/urw-fonts.
 
   24 Jan 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
@@ -1980,7 +1983,7 @@
   package.mask:
   Last Rites for esound daemon as per mail to gentoo-dev
 
-  02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2007, 
+  02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2007,
   +ChangeLog-2008, +ChangeLog-2009, +ChangeLog-2010, +ChangeLog-2011:
   Split ChangeLog
 

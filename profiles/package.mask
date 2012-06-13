@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13851 2012/06/13 14:19:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13852 2012/06/13 16:03:00 lu_zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -67,7 +67,7 @@ dev-python/generatorrunner
 # The mentioned versions fail to assemble raid 0/1/5 devices.
 # As reported in bug 416081 users end up with multiple raids
 # all consiting of single drives. disk/by-uuid is preseved
-# for single disks, so users end up with auto-mounted raids 
+# for single disks, so users end up with auto-mounted raids
 # effectivly running on single disks.
 # @base-system feel free to re-evaluate the severeness of this
 # regression and drop the mask. Masked for now.
@@ -138,7 +138,7 @@ x11-plugins/replytolist
 
 # Luca Barbato <lu_zero@gentoo.org> (05 Jun 2012)
 # Full support for gles2 pending drivers providing it
-=app-admin/eselect-opengl-1.2.6
+=app-admin/eselect-opengl-1.2.6*
 =x11-proto/glproto-1.4.15-r1
 =media-libs/mesa-8.0.3-r1
 
