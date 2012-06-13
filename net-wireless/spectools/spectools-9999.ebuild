@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2011.08.1-r1.ebuild,v 1.4 2012/06/13 03:10:50 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.1 2012/06/13 03:10:50 zerochaos Exp $
 
 EAPI=4
 
@@ -14,17 +14,17 @@ DESCRIPTION="Spectrum Analyzer for Meta-Geek Wi-Spy and GSG Ubertooth hardware"
 HOMEPAGE="http://www.kismetwireless.net/spectools/"
 
 if [[ ${PV} == "9999" ]] ; then
-	ESVN_REPO_URI="https://www.kismetwireless.net/code/svn/tools/${PN}"
+		ESVN_REPO_URI="https://www.kismetwireless.net/code/svn/tools/${PN}"
 		inherit subversion
 		KEYWORDS=""
 else
 		SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
-		KEYWORDS="amd64 ~arm ~ppc ~x86"
+		KEYWORDS="~amd64 ~arm ~ppc ~x86"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ncurses gtk"
+IUSE="debug ncurses gtk"
 
 DEPEND="${RDEPEND}"
 RDEPEND="virtual/libusb:0
@@ -38,15 +38,13 @@ RDEPEND="virtual/libusb:0
 src_compile() {
 	emake depend
 
-	emake spectool_net spectool_raw
+	emake spectool_net
 
-	if use ncurses; then
-		emake spectool_curses
-	fi
+	use debug && emake spectool_raw
 
-	if use gtk; then
-		emake spectool_gtk
-	fi
+	use ncurses && emake spectool_curses
+
+	use gtk && emake spectool_gtk
 
 	#if use maemo; then
 	#	emake spectool_hildon usbcontrol \
@@ -55,7 +53,8 @@ src_compile() {
 }
 
 src_install() {
-	dobin spectool_net spectool_raw
+	dobin spectool_net
+	use debug && dobin spectool_raw
 	use ncurses && dobin spectool_curses
 	use gtk && dobin spectool_gtk
 
