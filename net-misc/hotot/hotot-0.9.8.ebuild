@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.ebuild,v 1.3 2012/06/06 23:09:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.ebuild,v 1.4 2012/06/13 12:30:04 xmw Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="gtk? 2"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit cmake-utils python
+inherit cmake-utils python vcs-snapshot
 
 DESCRIPTION="lightweight & open source microblogging client"
 HOMEPAGE="http://hotot.org"
@@ -35,11 +35,6 @@ pkg_setup() {
 		fi
 	fi
 	python_pkg_setup
-}
-
-src_unpack() {
-	default
-	mv shellex-Hotot-* ${P} || die
 }
 
 src_configure() {
