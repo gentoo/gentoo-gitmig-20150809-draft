@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.9 2010/10/10 21:18:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/clustalx-1.83-r2.ebuild,v 1.10 2012/06/13 07:28:55 jlec Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp-igbmc.u-strasbg.fr/pub/ClustalX/clustalx1.83.sun.tar.gz"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="amd64 x86 ~sparc"
+KEYWORDS="~sparc"
 IUSE=""
 
 DEPEND="sci-biology/clustalw:1
