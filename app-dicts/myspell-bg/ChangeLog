@@ -1,6 +1,14 @@
 # ChangeLog for app-dicts/myspell-bg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.25 2012/05/17 18:07:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.26 2012/06/13 11:27:16 scarabeus Exp $
+
+*myspell-bg-4.3 (13 Jun 2012)
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-bg-4.3.ebuild,
+  -myspell-bg-20060316.ebuild, -myspell-bg-20071211.ebuild,
+  -myspell-bg-20071211-r1.ebuild, -files/myspell-bg-20071211-encoding.patch:
+  Version bump to latest release, punt older which seems to be newer in
+  versioning. As it is copying few files directly to stable.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-bg-20060316.ebuild,
   myspell-bg-20071211-r1.ebuild, myspell-bg-20071211.ebuild:
