@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/myspell-fr-4.5.ebuild,v 1.1 2012/06/13 12:47:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/myspell-fr-4.5.ebuild,v 1.2 2012/06/13 13:03:38 scarabeus Exp $
 
 EAPI=4
 
@@ -16,12 +16,12 @@ MYSPELL_DICT=(
 )
 
 MYSPELL_HYPH=(
-	"hyph_fr.dic"
+	"hyph_fr_FR_v3.dic"
 )
 
 MYSPELL_THES=(
-	"thes_fr.dat"
-	"thes_fr.idx"
+	"th_fr_FR_v3.dat"
+	"th_fr_FR_v3.idx"
 )
 
 inherit myspell-r2
@@ -39,3 +39,11 @@ LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-linux ~x86-macos"
 IUSE=""
+
+src_prepare() {
+	# move the hyphen/thes to common used name
+	# versions determined from README files
+	mv hyph_fr.dic hyph_fr_FR_v3.dic || die
+	mv thes_fr.dat th_fr_FR_v3.dat || die
+	mv thes_fr.idx th_fr_FR_v3.idx || die
+}
