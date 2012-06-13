@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-es
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-es/ChangeLog,v 1.20 2012/05/17 18:13:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-es/ChangeLog,v 1.21 2012/06/13 12:22:47 scarabeus Exp $
+
+*myspell-es-0.6 (13 Jun 2012)
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-es-0.6.ebuild,
+  -myspell-es-20060316.ebuild, -myspell-es-20120418.ebuild:
+  Use upstream packages and versioning for the 20120418 version. Prune older.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-es-20060316.ebuild,
   myspell-es-20120418.ebuild:
