@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.99 2012/06/13 15:17:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.100 2012/06/13 18:45:00 jdhore Exp $
+
+  13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> global-6.2.2.ebuild:
+  marked x86 per bug 418957
 
   13 Jun 2012; Agostino Sarubbo <ago@gentoo.org> global-6.2.2.ebuild:
   Stable for amd64, wrt bug #418957
