@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.31-r1.ebuild,v 1.1 2012/05/27 07:22:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.31-r1.ebuild,v 1.2 2012/06/13 11:06:45 xarthisius Exp $
 
 EAPI="4"
 
@@ -259,6 +259,9 @@ src_prepare() {
 
 	# unbreak /bin/sh -> dash
 	epatch "${FILESDIR}"/${PN}-2.4.28-fix-dash.patch
+
+	# bug #420959
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 
 	cd "${S}"/build
 	einfo "Making sure upstream build strip does not do stripping too early"

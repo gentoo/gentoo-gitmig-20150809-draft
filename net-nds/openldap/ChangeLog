@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.418 2012/05/27 07:22:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.419 2012/06/13 11:06:45 xarthisius Exp $
+
+  13 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/openldap-2.4.31-gcc47.patch, openldap-2.4.31-r1.ebuild:
+  Fix building with gcc-4.7 wrt #420959 by Tiziano Müller
 
 *openldap-2.4.31-r1 (27 May 2012)
 
