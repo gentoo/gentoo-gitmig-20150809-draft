@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer-srg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.4 2012/06/13 12:54:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.5 2012/06/13 12:56:00 xmw Exp $
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> trayer-srg-1.1.4.ebuild:
+  Fix inherit
 
 *trayer-srg-1.1.5 (13 Jun 2012)
 
