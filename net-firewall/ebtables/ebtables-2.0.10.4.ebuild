@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.10.4.ebuild,v 1.2 2012/06/11 09:18:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.10.4.ebuild,v 1.3 2012/06/13 06:19:48 jdhore Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Utility that enables basic Ethernet frame filtering on a Linux brid
 HOMEPAGE="http://ebtables.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="static"
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.47 2012/06/11 09:18:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.48 2012/06/13 06:19:48 jdhore Exp $
+
+  13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> ebtables-2.0.10.4.ebuild:
+  marked x86 per bug 404265
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ebtables-2.0.10.4.ebuild:
   Stable for amd64, wrt bug #404265
