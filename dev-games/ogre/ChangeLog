@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.79 2012/06/12 22:42:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.80 2012/06/13 07:03:30 mr_bones_ Exp $
+
+  13 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> -ogre-1.7.4.ebuild:
+  old
 
   12 Jun 2012; Julian Ospald <hasufell@gentoo.org> ogre-1.8.0.ebuild:
   fix patch
