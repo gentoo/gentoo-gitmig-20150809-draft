@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/oftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.32 2012/06/13 16:33:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.33 2012/06/13 18:52:04 jdhore Exp $
+
+  13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> oftpd-0.3.7-r7.ebuild:
+  marked x86 per bug 420965
 
   13 Jun 2012; Agostino Sarubbo <ago@gentoo.org> oftpd-0.3.7-r7.ebuild:
   Stable for amd64, wrt bug #420965
