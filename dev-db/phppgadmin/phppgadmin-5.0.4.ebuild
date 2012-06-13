@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-5.0.4.ebuild,v 1.3 2012/06/11 11:16:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-5.0.4.ebuild,v 1.4 2012/06/13 11:59:19 nativemad Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://phppgadmin.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 hppa ~ppc ~x86"
+KEYWORDS="amd64 hppa ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-lang/php[postgres,session]

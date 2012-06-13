@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.105 2012/06/11 11:16:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.106 2012/06/13 11:59:19 nativemad Exp $
+
+  13 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> phppgadmin-5.0.4.ebuild:
+  x86 stable, see bug 410671
 
   11 Jun 2012; Jeroen Roovers <jer@gentoo.org> phppgadmin-5.0.4.ebuild:
   Stable for HPPA (bug #410671).
