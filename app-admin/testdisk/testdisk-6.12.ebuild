@@ -1,27 +1,28 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.6 2012/03/15 21:32:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.7 2012/06/13 08:32:53 jlec Exp $
 
 EAPI=4
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Checks and undeletes partitions + PhotoRec, signature based recovery tool"
-HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk"
+HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk/"
 SRC_URI="http://www.cgsecurity.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="static reiserfs ntfs jpeg"
+IUSE="jpeg ntfs reiserfs static"
 
 # WARNING: reiserfs support does NOT work with reiserfsprogs
 # you MUST use progsreiserfs-0.3.1_rc8 (the last version ever released).
-DEPEND=">=sys-libs/ncurses-5.2
+DEPEND="
+		>=sys-libs/ncurses-5.2
 		jpeg? ( virtual/jpeg )
-	  	ntfs? ( sys-fs/ntfs3g )
-	  	reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )
-	  	>=sys-fs/e2fsprogs-1.35
+		ntfs? ( sys-fs/ntfs3g )
+		reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )
+		>=sys-fs/e2fsprogs-1.35
 		sys-libs/zlib"
 RDEPEND="!static? ( ${DEPEND} )"
 
