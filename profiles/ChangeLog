@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6662 2012/06/13 16:03:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6663 2012/06/13 19:36:29 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2012; Torsten Veller <tove@gentoo.org> package.mask:
+  Unmask dev-lang/perl-5.16.0 and ExtUtils-ParseXS-3*
 
   13 Jun 2012; Luca Barbato <lu_zero@gentoo.org> package.mask:
   Update eselect-opengl mask
