@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uvconv/uvconv-1.1.3b-r1.ebuild,v 1.1 2008/12/17 12:20:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uvconv/uvconv-1.1.3b-r1.ebuild,v 1.2 2012/06/13 22:40:26 naota Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,8 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch" \
+		"${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
