@@ -61,5 +61,8 @@
       greatly in applications that support it by performing acoustic echo
       cancellation, analog gain control, noise suppression and other processing.
     </flag>
+    <flag name="xen">
+      Builds a special paravirtualized module for running in a Xen guest.
+    </flag>
   </use>
 </pkgmetadata>
