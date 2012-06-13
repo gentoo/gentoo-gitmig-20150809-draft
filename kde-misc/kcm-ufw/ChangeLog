@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kcm-ufw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/ChangeLog,v 1.7 2012/04/19 19:24:08 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/ChangeLog,v 1.8 2012/06/13 21:27:42 thev00d00 Exp $
+
+*kcm-ufw-0.4.3 (13 Jun 2012)
+
+  13 Jun 2012; Ian Whyman <thev00d00@gentoo.org> +kcm-ufw-0.4.3.ebuild:
+  Version bump for new UFW
 
   19 Apr 2012; Ian Whyman <thev00d00@gentoo.org> +kcm-ufw-0.4.1-r3.ebuild,
   -kcm-ufw-0.4.2.ebuild:
