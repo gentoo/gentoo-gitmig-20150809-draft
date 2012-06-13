@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-1.0.0.ebuild,v 1.5 2012/03/20 13:25:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-1.0.0.ebuild,v 1.6 2012/06/13 08:02:16 radhermit Exp $
 
 EAPI=4
 inherit eutils
@@ -14,11 +14,12 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ppc ppc64 x86"
 IUSE="static-libs +lzma"
 
-DEPEND=">=sys-fs/fuse-2.4
+RDEPEND=">=sys-fs/fuse-2.4
 	sys-libs/zlib
 	app-arch/bzip2
 	lzma? ( app-arch/xz-utils )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
 	# Fixes bug #258295

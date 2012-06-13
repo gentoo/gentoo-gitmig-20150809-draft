@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.9.ebuild,v 1.9 2011/01/13 20:47:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/avfs-0.9.9.ebuild,v 1.10 2012/06/13 08:02:16 radhermit Exp $
 
 EAPI=3
 inherit eutils linux-info
@@ -14,9 +14,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc ppc64 x86"
 IUSE="static-libs +lzma"
 
-DEPEND=">=sys-fs/fuse-2.4
+RDEPEND=">=sys-fs/fuse-2.4
 	lzma? ( app-arch/xz-utils )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 pkg_setup() {
 	kernel_is lt 2 6 && die "Must have a version 2.6 kernel. Cannot continue. :("
