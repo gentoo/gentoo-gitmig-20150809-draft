@@ -1,6 +1,36 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.100 2012/05/15 17:43:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.101 2012/06/13 15:42:21 bicatali Exp $
+
+  13 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/root-5.32.00-dotfont.patch, +files/root-5.32.00-htmldoc.patch,
+  +root-5.32.03-r2.ebuild, metadata.xml:
+  Import to the main tree. Fix again openmp check for non gcc compilers
+
+  30 May 2012; Andrew Savchenko <bircoph@gmail.com> root-5.32.03-r2.ebuild,
+  root-9999.ebuild:
+  Use virtualx eclass for Xvfb during htmldoc generation.
+
+*root-5.32.03-r2 (29 May 2012)
+
+  29 May 2012; Andrew Savchenko <bircoph@gmail.com>
+  +files/root-5.32.00-dotfont.patch, +files/root-5.32.00-htmldoc.patch,
+  -root-5.32.03-r1.ebuild, +root-5.32.03-r2.ebuild,
+  +files/root-5.34-htmldoc.patch, root-9999.ebuild, metadata.xml:
+  Add USE="htmldoc" for htmtl documentation build. This obsoletes
+  app-doc/root-docs. Fix fonts for dot code generation, force DejeVu
+  Serif.
+
+  25 May 2012; Andrew Savchenko <bircoph@gmail.com> root-9999.ebuild:
+  Adapt for upstream changes:
+  - enable-exceptions is gone;
+  - as-needed patch is upstream.
+
+*root-5.32.03-r1 (23 May 2012)
+
+  23 May 2012; Andrew Savchenko <bircoph@gmail.com> -root-5.32.03.ebuild,
+  +root-5.32.03-r1.ebuild, root-9999.ebuild:
+  Update ROOT User's Guide.
 
   15 May 2012; Sébastien Fabbro <bicatali@gentoo.org> +root-5.32.03.ebuild:
   Import to the main tree, openmp checks on gcc
