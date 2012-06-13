@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.23 2012/06/11 11:17:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.24 2012/06/13 17:34:14 jer Exp $
+
+  13 Jun 2012; Jeroen Roovers <jer@gentoo.org> lib_users-0.5.ebuild:
+  Stable for HPPA (bug #420039).
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> lib_users-0.5.ebuild:
   Stable for amd64, wrt bug #420039
