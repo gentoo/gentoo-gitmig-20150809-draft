@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-fo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fo/ChangeLog,v 1.19 2012/05/17 18:14:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fo/ChangeLog,v 1.20 2012/06/13 17:35:18 scarabeus Exp $
+
+*myspell-fo-0.4.1 (13 Jun 2012)
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +myspell-fo-0.4.1.ebuild, -myspell-fo-20060316.ebuild:
+  Bump to latest faroese dict and remove the old one.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-fo-20060316.ebuild:
   keyword ~amd64-fbsd
