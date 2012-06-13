@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: triplea-1.5.2.1.ebuild,v 1.1 2012/06/13 06:01:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-1.5.2.1.ebuild,v 1.2 2012/06/13 06:03:29 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils java-pkg-2 java-ant-2 versionator games
@@ -50,7 +50,7 @@ src_prepare() {
 		lib/commons-codec-1.3.jar
 	# installs the test files
 	java-pkg_jar-from --into lib junit
-  	# Needs the substance package
+	# Needs the substance package
 	#java-pkg_jar-from substance substance.jar \
 	#	lib/substance_5_3.jar
 	#java-pkg_ensure-no-bundled-jars
