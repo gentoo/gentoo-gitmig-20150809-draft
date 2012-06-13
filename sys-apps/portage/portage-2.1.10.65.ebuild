@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.65.ebuild,v 1.1 2012/06/04 23:02:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.65.ebuild,v 1.2 2012/06/13 06:11:55 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -12,15 +12,15 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +ipc linguas_pl pypy1_8 python2 python3 selinux xattr"
+IUSE="build doc epydoc +ipc linguas_pl pypy1_9 python2 python3 selinux xattr"
 
 # Import of the io module in python-2.6 raises ImportError for the
 # thread module if threading is disabled.
 python_dep="python3? ( =dev-lang/python-3* )
-	!pypy1_8? ( !python2? ( !python3? (
+	!pypy1_9? ( !python2? ( !python3? (
 		|| ( >=dev-lang/python-2.7 dev-lang/python:2.6[threads] )
 	) ) )
-	pypy1_8? ( !python2? ( !python3? ( dev-python/pypy:1.8[bzip2] ) ) )
+	pypy1_9? ( !python2? ( !python3? ( dev-python/pypy:1.9[bzip2] ) ) )
 	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) ) )"
 
 # The pysqlite blocker is for bug #282760.
@@ -100,15 +100,15 @@ pkg_setup() {
 		ewarn "Both python2 and python3 USE flags are enabled, but only one"
 		ewarn "can be in the shebangs. Using python3."
 	fi
-	if use pypy1_8 && use python3 ; then
-		ewarn "Both pypy1_8 and python3 USE flags are enabled, but only one"
+	if use pypy1_9 && use python3 ; then
+		ewarn "Both pypy1_9 and python3 USE flags are enabled, but only one"
 		ewarn "can be in the shebangs. Using python3."
 	fi
-	if use pypy1_8 && use python2 ; then
-		ewarn "Both pypy1_8 and python2 USE flags are enabled, but only one"
+	if use pypy1_9 && use python2 ; then
+		ewarn "Both pypy1_9 and python2 USE flags are enabled, but only one"
 		ewarn "can be in the shebangs. Using python2"
 	fi
-	if ! use pypy1_8 && ! use python2 && ! use python3 && \
+	if ! use pypy1_9 && ! use python2 && ! use python3 && \
 		! compatible_python_is_selected ; then
 		ewarn "Attempting to select a compatible default python interpreter"
 		local x success=0
@@ -133,8 +133,8 @@ pkg_setup() {
 		python_set_active_version 3
 	elif use python2; then
 		python_set_active_version 2
-	elif use pypy1_8; then
-		python_set_active_version 2.7-pypy-1.8
+	elif use pypy1_9; then
+		python_set_active_version 2.7-pypy-1.9
 	fi
 }
 
@@ -173,9 +173,9 @@ src_prepare() {
 	elif use python2; then
 		einfo "Converting shebangs for python2..."
 		python_convert_shebangs -r 2 .
-	elif use pypy1_8; then
-		einfo "Converting shebangs for pypy-c1.8..."
-		python_convert_shebangs -r 2.7-pypy-1.8 .
+	elif use pypy1_9; then
+		einfo "Converting shebangs for pypy-c1.9..."
+		python_convert_shebangs -r 2.7-pypy-1.9 .
 	fi
 
 	cd "${S}/cnf" || die
