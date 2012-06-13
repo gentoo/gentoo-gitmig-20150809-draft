@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/portmidi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portmidi/ChangeLog,v 1.3 2012/05/25 14:03:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portmidi/ChangeLog,v 1.4 2012/06/13 12:58:07 johu Exp $
+
+  13 Jun 2012; Johannes Huber <johu@gentoo.org> portmidi-217.ebuild:
+  Stable for x86, wrt bug #417127
 
   25 May 2012; Agostino Sarubbo <ago@gentoo.org> portmidi-217.ebuild:
   Stable for amd64, wrt bug #417127
