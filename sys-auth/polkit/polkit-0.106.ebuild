@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106.ebuild,v 1.3 2012/06/13 14:45:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106.ebuild,v 1.4 2012/06/13 15:28:32 ssuominen Exp $
 
 EAPI=4
 inherit eutils user pam systemd
@@ -11,7 +11,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug examples gtk +introspection kde nls pam systemd"
 
 RDEPEND=">=dev-lang/spidermonkey-1.8.5
@@ -44,13 +44,13 @@ DOCS="docs/TODO HACKING NEWS README"
 
 pkg_setup() {
 	enewgroup polkitd
-	enewuser polkitd -1 -1 -1 polkitd
+	enewuser polkitd -1 -1 /var/lib/polkit-1 polkitd
 }
 
 src_prepare() {
 	# http://bugs.gentoo.org/401513
-	ewarn "Switching from group \"wheel\" to group \"0\" in	/etc/polkit-1/rules.d/*.rules"
-	sed -i -e '/unix-group/s:wheel:0:' src/polkitbackend/*.rules || die
+	ewarn "Switching from group \"wheel\" to group \"0\" in	/etc/polkit-1/rules.d/*-default.rules"
+	sed -i -e '/unix-group/s:wheel:0:' src/polkitbackend/*-default.rules || die
 }
 
 src_configure() {
@@ -75,11 +75,18 @@ src_install() {
 
 	prune_libtool_files
 
-	diropts -m0700 -o root -g root
+	diropts -m0700 -o polkitd -g polkitd
 	keepdir /var/lib/polkit-1
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins src/examples/{*.c,*.policy*}
 	fi
+}
+
+pkg_postinst() {
+	# fowners in src_install fails and Portage sets these back to root:root
+	chown -R polkitd:polkitd "${EROOT}"/{etc,usr/share}/polkit-1/rules.d
+	# enewuser fails to refresh itself for new home directory #420269
+	sed -i -e '/^polkitd/s:/dev/null:/var/lib/polkit-1:' "${EROOT}"/etc/passwd
 }
