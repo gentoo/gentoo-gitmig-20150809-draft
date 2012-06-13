@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/triplea
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.40 2008/07/08 19:26:10 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.41 2012/06/13 06:01:10 mr_bones_ Exp $
+
+*triplea-1.5.2.1 (13 Jun 2012)
+
+  13 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> +triplea-1.5.2.1.ebuild:
+  version bump with patch from Joe Sapp (bug #349341)
 
 *triplea-1.0.0.3 (08 Jul 2008)
 
