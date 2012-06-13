@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/files/ufw-2.initd,v 1.1 2011/07/24 11:18:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/files/ufw-2.initd,v 1.2 2012/06/13 21:14:52 thev00d00 Exp $
 
 depend() {
 	before net
@@ -99,7 +99,7 @@ _source_file() {
 	fi
 
 	local _path=$PATH
-	if ! source "$sourced_f"; then
+	if ! . "$sourced_f"; then
 		# PATH can be broken here, fix it...
 		PATH=$_path
 		eerror "Error sourcing file $sourced_f"
@@ -124,7 +124,7 @@ _check_if_enabled_in_cfg() {
 		return 2
 	fi
 
-	if ! source "$sourced_f"; then
+	if ! . "$sourced_f"; then
 		eerror "Error sourcing file $sourced_f"
 		return 2
 	fi
