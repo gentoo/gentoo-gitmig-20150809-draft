@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-ro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.19 2012/06/13 11:09:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.20 2012/06/13 16:03:22 scarabeus Exp $
+
+  13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-ro-3.3.7.ebuild:
+  Keyword accidentaly dropped amd64-fbsd
 
 *myspell-ro-3.3.7 (13 Jun 2012)
 
