@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0-r1.ebuild,v 1.10 2012/06/09 20:52:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0-r1.ebuild,v 1.11 2012/06/13 04:45:51 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils base autotools
@@ -20,13 +20,11 @@ DEPEND="doc? (
 	)"
 RDEPEND=""
 
-pkg_setup() {
+src_prepare() {
 	DOCS=( AUTHORS ChangeLog README TODO )
 	use doc && HTML_DOCS=( docs/html/api docs/html/guide )
 	PATCHES=( "${FILESDIR}"/${P}-gcc43.patch )
-}
 
-src_prepare() {
 	base_src_prepare
 	if use doc; then
 		sed -i \
