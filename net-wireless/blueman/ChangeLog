@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.12 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.13 2012/06/13 08:31:27 dev-zero Exp $
+
+*blueman-1.23 (13 Jun 2012)
+
+  13 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> +blueman-1.23.ebuild,
+  +files/blueman-1.23-fix-broken-status-icon.patch,
+  +files/blueman-1.23-plugins-conf-file.patch, metadata.xml:
+  Version bump (bug #386575, thanks to Leho Kraav for the hint for the broken
+  status icon), also fixes bug #337947 by depending on the hicolor-icon-theme
+  package, bug #351647 based on the patch by Vince C. and modified by me and bug
+  #392241 by now using the gconf USE flag instead of gnome.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> blueman-1.21-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
