@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/topal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.9 2011/10/09 07:51:25 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.10 2012/06/13 09:46:57 xmw Exp $
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> topal-72.ebuild:
+  ppc stable (bug 317971)
 
   09 Oct 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove tove from metadata.xml
