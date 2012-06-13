@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/clashlist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/clashlist/ChangeLog,v 1.3 2012/06/11 13:35:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/clashlist/ChangeLog,v 1.4 2012/06/13 08:00:44 jdhore Exp $
+
+  13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> clashlist-3.17.ebuild:
+  marked x86 per bug 419867
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> clashlist-3.17.ebuild:
   Stable for amd64, wrt bug #419867
