@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.38 2012/05/22 00:03:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.39 2012/06/13 07:13:03 mr_bones_ Exp $
+
+  13 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/mednafen-0.8.13.3-zlib-1.2.6.patch,
+  -files/mednafen-0.8.13.3-zlib.patch, -mednafen-0.8.13.3-r1.ebuild,
+  -mednafen-0.8.13.3.ebuild:
+  old
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> mednafen-0.9.21.ebuild:
   marked x86 per bug 413831
