@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-1.4.2.ebuild,v 1.5 2012/05/01 21:45:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-1.4.2.ebuild,v 1.6 2012/06/13 06:43:27 mr_bones_ Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit eutils toolchain-funcs
 
 MY_P="linuxconsoletools-${PV}"
@@ -25,10 +24,6 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
 	export PREFIX=/usr
-}
-
-src_compile() {
 	tc-export CC PKG_CONFIG
 	export USE_SDL=$(usex sdl)
-	emake
 }
