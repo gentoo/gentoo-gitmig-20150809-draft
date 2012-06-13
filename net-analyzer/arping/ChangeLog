@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.54 2012/06/07 21:55:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.55 2012/06/13 07:25:58 jdhore Exp $
+
+  13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> arping-2.11.ebuild:
+  marked x86 per bug 419203
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> arping-2.11.ebuild:
   Marking arping-2.11 ppc for bug 419203
