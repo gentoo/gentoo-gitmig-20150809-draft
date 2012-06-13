@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.40 2012/05/30 19:03:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.41 2012/06/13 10:57:51 jlec Exp $
+
+*arpack-0.96-r3 (13 Jun 2012)
+
+  13 Jun 2012; Justin Lecher <jlec@gentoo.org> +arpack-0.96-r3.ebuild,
+  -arpack-96-r2.ebuild:
+  Change Version numbers from 96 to 0.96 in order to be able to follow upstream
+  new versioning scheme; Drop old unstable
 
   30 May 2012; Justin Lecher <jlec@gentoo.org> arpack-3.1.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

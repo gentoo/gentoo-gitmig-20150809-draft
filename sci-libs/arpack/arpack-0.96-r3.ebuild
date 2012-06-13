@@ -1,17 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.27 2012/05/04 08:22:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-0.96-r3.ebuild,v 1.1 2012/06/13 10:57:51 jlec Exp $
 
-EAPI=2
+EAPI=4
 
-inherit autotools eutils fortran-2 toolchain-funcs
+inherit autotools eutils flag-o-matic fortran-2 toolchain-funcs
+
+MY_PV="96"
+MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Arnoldi package library to solve large scale eigenvalue problems."
 HOMEPAGE="http://www.caam.rice.edu/software/ARPACK/"
 SRC_URI="
-	http://www.caam.rice.edu/software/ARPACK/SRC/${PN}${PV}.tar.gz
-	http://www.caam.rice.edu/software/ARPACK/SRC/p${PN}${PV}.tar.gz
-	http://dev.gentoo.org/~bicatali/${P}-patches.tar.bz2
+	http://www.caam.rice.edu/software/ARPACK/SRC/${PN}${MY_PV}.tar.gz
+	http://www.caam.rice.edu/software/ARPACK/SRC/p${PN}${MY_PV}.tar.gz
+	http://dev.gentoo.org/~bicatali/${MY_P}-patches-2.tar.bz2
 	doc? (
 		http://www.caam.rice.edu/software/ARPACK/SRC/ug.ps.gz
 		http://www.caam.rice.edu/software/ARPACK/DOCS/tutorial.ps.gz )"
@@ -39,7 +42,10 @@ src_unpack() {
 src_prepare() {
 	cd "${WORKDIR}"
 	epatch "${WORKDIR}"/${PN}-arscnd.patch
+	# http://savannah.gnu.org/bugs/?func=detailitem&item_id=31479
+	epatch "${WORKDIR}"/${PN}-neupd.patch
 	epatch "${WORKDIR}"/${PN}-autotools.patch
+
 	cd "${S}"
 	# fix examples library paths
 	sed -i \
@@ -55,6 +61,10 @@ src_prepare() {
 		-e 's:$(PFC):mpif77:g' \
 		-e 's:$(PFFLAGS):$(FFLAGS) $(LDFLAGS) $(EXTOBJS):g' \
 		PARPACK/EXAMPLES/MPI/makefile || die "sed failed"
+
+	# bug #354993
+	rm -f PARPACK/{SRC,UTIL,EXAMPLES}/MPI/mpif.h
+	#ln -s "${EPREFIX}"/usr/include/mpif*.h PARPACK/SRC/MPI/
 	eautoreconf
 }
 
@@ -98,19 +108,17 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
-	dodoc README DOCUMENTS/*.doc || die "dodoc failed"
-	newdoc DOCUMENTS/README README.doc || die "newdoc failed"
-	if use doc; then
-		dodoc "${WORKDIR}"/*.ps || die "dodoc postscript failed"
-	fi
+	dodoc README DOCUMENTS/*.doc
+	newdoc DOCUMENTS/README README.doc
+	use doc && dodoc "${WORKDIR}"/*.ps
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r EXAMPLES || die "doins examples failed"
+		doins -r EXAMPLES
 		if use mpi; then
 			insinto /usr/share/doc/${PF}/EXAMPLES/PARPACK
-			doins -r PARPACK/EXAMPLES/MPI || die "doins mpi examples failed"
+			doins -r PARPACK/EXAMPLES/MPI
 		fi
 	fi
 }
