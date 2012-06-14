@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.6 2012/01/25 22:05:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.7 2012/06/14 05:56:35 xmw Exp $
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> libmnl-1.0.2.ebuild:
+  adding ~ppc keyword (bug 304037)
 
 *libmnl-1.0.2 (25 Jan 2012)
 
