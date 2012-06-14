@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-volume
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.34 2012/06/14 13:21:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.35 2012/06/14 13:23:14 ago Exp $
+
+  14 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  -gkrellm-volume-2.1.13-r1.ebuild:
+  Remove old
 
   14 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   gkrellm-volume-2.1.13-r2.ebuild:
