@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.157 2012/06/02 09:51:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.158 2012/06/14 22:26:08 pesa Exp $
+
+  14 Jun 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
+  Consolidate USE=jit masking/unmasking for qt-script and qt-webkit.
 
   02 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:

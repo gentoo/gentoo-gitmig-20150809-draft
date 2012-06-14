@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.89 2012/05/25 17:47:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.90 2012/06/14 22:26:08 pesa Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -40,7 +40,7 @@ gnustep-base/gnustep-make -libobjc2
 # The SPICE server is only supported on 64-bit platforms and not on 32-bit
 app-emulation/qemu-kvm spice
 
-# Alexandre Rostovtsev <tetromono@gentoo.org> (09 Jan 2012)
+# Alexandre Rostovtsev <tetromino@gentoo.org> (09 Jan 2012)
 # jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
 # it's masked in base profile and unmasked here (bug #396313).
 net-libs/webkit-gtk -jit
@@ -51,8 +51,9 @@ media-video/transcode -nuv -pic
 
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
 # JavaScriptCore JIT is supported only on amd64/arm/x86,
-# so it's masked in base profile and unmasked here
->=x11-libs/qt-webkit-4.7 -jit
+# so it's masked in base profile and unmasked here.
+x11-libs/qt-script -jit
+x11-libs/qt-webkit -jit
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Nov 2011)
 # Expose USE="suid" for USE="svga" only for x86 users,

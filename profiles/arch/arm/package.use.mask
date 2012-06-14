@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.77 2012/06/02 09:51:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.78 2012/06/14 22:26:08 pesa Exp $
 
 # Chí-Thanh Christopher Nguyen <chithanh@gentoo.org> (02 Jun 2012)
 # Mask udis86 flag for llvm, which is of limited use outside x86/amd64.
@@ -27,15 +27,16 @@ dev-libs/gobject-introspection -doctool
 # arm is missing keywords for >=dev-libs/json-glib-0.12
 app-admin/syslog-ng json
 
-# Alexandre Rostovtsev <tetromono@gentoo.org> (09 Jan 2012)
+# Alexandre Rostovtsev <tetromino@gentoo.org> (09 Jan 2012)
 # jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
 # it's masked in base profile and unmasked here (bug #396313).
 net-libs/webkit-gtk -jit
 
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
 # JavaScriptCore JIT is supported only on amd64/arm/x86,
-# so it's masked in base profile and unmasked here
->=x11-libs/qt-webkit-4.7 -jit
+# so it's masked in base profile and unmasked here.
+x11-libs/qt-script -jit
+x11-libs/qt-webkit -jit
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Nov 2011)
 # Missing keywords on dev-libs/libgusb, bug #392057
