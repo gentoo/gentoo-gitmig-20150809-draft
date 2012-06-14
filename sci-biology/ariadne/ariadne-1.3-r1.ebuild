@@ -1,19 +1,21 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.7 2008/09/30 20:20:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.8 2012/06/14 19:01:19 jlec Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="Protein sequences and profiles comparison"
-LICENSE="as-is"
+
 HOMEPAGE="http://www.well.ox.ac.uk/ariadne/"
 SRC_URI="http://www.well.ox.ac.uk/${PN}/${P}.tar.Z"
 
 SLOT="0"
+LICENSE="as-is"
 IUSE=""
 KEYWORDS="~amd64 x86"
 
-DEPEND=">=sci-biology/ncbi-tools-20041020-r1"
+DEPEND=">=sci-biology/ncbi-tools-0.20041020-r1"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/SRC-${PV}"
 

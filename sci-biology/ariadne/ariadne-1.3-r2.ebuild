@@ -1,21 +1,21 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r2.ebuild,v 1.1 2011/03/15 18:39:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r2.ebuild,v 1.2 2012/06/14 19:01:19 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Protein sequences and profiles comparison"
-LICENSE="as-is"
 HOMEPAGE="http://www.well.ox.ac.uk/ariadne/"
 SRC_URI="http://www.well.ox.ac.uk/${PN}/${P}.tar.Z"
 
 SLOT="0"
-IUSE=""
+LICENSE="as-is"
+IUSE="static-libs"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=sci-biology/ncbi-tools-20041020-r1"
+DEPEND=">=sci-biology/ncbi-tools-0.20041020-r1"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/SRC-${PV}
@@ -28,12 +28,12 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" OPTIMISE="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" OPTIMISE="${CFLAGS}"
 }
 
 src_install() {
-	dobin Linux/{ariadne,prospero} || die
-	dolib Linux/libseq.a || die
+	dobin Linux/{ariadne,prospero}
+	use static-libs && dolib.a Linux/libseq.a
 	insinto /usr/include/${PN}
 	doins Include/*.h || die
 	dodoc README || die
