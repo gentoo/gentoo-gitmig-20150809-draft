@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.125 2012/06/14 05:38:22 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.126 2012/06/14 22:37:22 pesa Exp $
 
 
 # Michael Weber <xmw@gentoo.org> (3 Jun 2012)
@@ -120,10 +120,6 @@ mail-client/claws-mail pda
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)
 app-text/asciidoc test
-
-# Joseph Jezak <JoseJX@gentoo.org> (25 Jan 2011)
-# x11-libs/qt-webkit doesn't have a working JIT yet on PowerPC
-x11-libs/qt-webkit jit
 
 # Kacper Kowalik <xarthisius@gentoo.org> (16 Jan 2011)
 # bug 303931
