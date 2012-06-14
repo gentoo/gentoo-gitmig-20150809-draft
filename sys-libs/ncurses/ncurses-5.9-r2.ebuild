@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.12 2012/05/29 18:48:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.13 2012/06/14 03:39:56 vapier Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic toolchain-funcs
@@ -39,8 +39,8 @@ src_unpack() {
 
 src_compile() {
 	unset TERMINFO #115036
-	tc-export BUILD_CC
-	export BUILD_CPPFLAGS+=" -D_GNU_SOURCE" #214642
+	tc-export_build_env BUILD_{CC,CPP}
+	BUILD_CPPFLAGS+=" -D_GNU_SOURCE" #214642
 
 	# when cross-compiling, we need to build up our own tic
 	# because people often don't keep matching host/target
