@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/gbuffy-0.2.6-r1.ebuild,v 1.4 2011/06/14 11:30:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/gbuffy-0.2.6-r1.ebuild,v 1.5 2012/06/14 15:41:58 ssuominen Exp $
 
 EAPI=1
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ssl"
 
-DEPEND="x11-libs/libPropList
+DEPEND="x11-libs/libproplist
 	media-libs/compface
-	>=x11-libs/gtk+-1.1.11:1
-	ssl? ( dev-libs/openssl )"
+	x11-libs/gtk+:1
+	ssl? ( dev-libs/openssl:0 )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
