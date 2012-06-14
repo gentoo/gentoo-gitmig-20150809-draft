@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.27.0-r1.ebuild,v 1.1 2012/06/14 15:54:14 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.27.0-r1.ebuild,v 1.2 2012/06/14 18:58:27 mr_bones_ Exp $
 
 EAPI=3
 
@@ -117,7 +117,7 @@ src_prepare() {
 	# fix LDFLAGS handling in ecl (#378195)
 	epatch "${FILESDIR}"/${PN}-ecl-ldflags.patch
 
-	#fix init files 
+	#fix init files
 	epatch "${FILESDIR}"/${P}-inhibit-sys_usr-inits.patch
 
 	# bug #343331
