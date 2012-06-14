@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.16 2012/06/14 18:35:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.17 2012/06/14 18:39:18 hwoarang Exp $
 
 EAPI=3
 
@@ -27,6 +27,8 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig
 	sys-devel/gettext"
+
+RESTRICT="test"
 
 src_prepare() {
 	intltoolize --force --copy --automake || die
