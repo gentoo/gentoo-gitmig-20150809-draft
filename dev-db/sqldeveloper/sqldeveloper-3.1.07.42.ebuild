@@ -12,7 +12,7 @@ RESTRICT="fetch"
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="mssql mysql sybase"
 
 DEPEND="mssql? ( dev-java/jtds:1.2 )
