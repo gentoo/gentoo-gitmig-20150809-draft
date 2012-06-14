@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.27 2012/04/26 14:05:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.28 2012/06/14 23:13:33 ssuominen Exp $
+
+  14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> libffi-0.ebuild:
+  Raise dev-libs/libffi dependency to >= 3.0.10.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libffi-0.ebuild:
   keyword ~amd64-fbsd
