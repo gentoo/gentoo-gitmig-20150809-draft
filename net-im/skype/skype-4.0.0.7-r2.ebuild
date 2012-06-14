@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7-r2.ebuild,v 1.1 2012/06/14 22:04:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7-r2.ebuild,v 1.2 2012/06/14 22:11:49 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils
@@ -75,10 +75,7 @@ src_install() {
 
 	local res
 	for res in 16 32 48; do
-		insinto /usr/share/icons/hicolor/${res}x${res}/apps
-		newins icons/SkypeBlue_${res}x${res}.png skype.png
-		# http://bugs.gentoo.org/421169
-		# doicon -s ${res} icons/SkypeBlue_${res}x${res}.png ${PN}.png
+		newicon -s ${res} icons/SkypeBlue_${res}x${res}.png ${PN}.png
 	done
 
 	make_desktop_entry ${PN} 'Skype VoIP' ${PN} 'Network;InstantMessaging;Telephony'
