@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cmigemo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.22 2012/06/14 09:15:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.23 2012/06/14 09:33:05 jdhore Exp $
+
+  14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> cmigemo-1.3c-r2.ebuild:
+  marked x86 per bug 418641
 
   14 Jun 2012; Agostino Sarubbo <ago@gentoo.org> cmigemo-1.3c-r2.ebuild:
   Stable for amd64, wrt bug #418641
