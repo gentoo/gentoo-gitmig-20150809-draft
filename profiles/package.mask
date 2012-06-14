@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13854 2012/06/14 08:16:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13855 2012/06/14 10:04:38 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kacper Kowalik <xarthisius@gentoo.org> (14 Jun 2012)
+# Mask latest version for testing. Make sure you read
+# http://vbellur.wordpress.com/2012/05/31/upgrading-to-glusterfs-3-3/
+# *BEFORE* upgrading
+>=sys-cluster/glusterfs-3.3.0
 
 # Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
 # Mask old Qt ebuilds with several security vulnerabilities,
