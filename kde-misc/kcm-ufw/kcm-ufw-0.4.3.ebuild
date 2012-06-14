@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.3.ebuild,v 1.1 2012/06/13 21:27:42 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.3.ebuild,v 1.2 2012/06/14 19:42:36 thev00d00 Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ for lingua in ${LINGUAS}; do
 done
 
 COMMON_DEPEND="
-	<net-firewall/ufw-0.31
+	>=net-firewall/ufw-0.31
 	sys-auth/polkit-kde-agent
 "
 DEPEND="${COMMON_DEPEND}

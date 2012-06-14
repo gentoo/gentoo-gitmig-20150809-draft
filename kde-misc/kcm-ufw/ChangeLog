@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcm-ufw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/ChangeLog,v 1.8 2012/06/13 21:27:42 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/ChangeLog,v 1.9 2012/06/14 19:42:36 thev00d00 Exp $
+
+  14 Jun 2012; Ian Whyman <thev00d00@gentoo.org> kcm-ufw-0.4.3.ebuild:
+  Fix net-firewall/ufw dependency
 
 *kcm-ufw-0.4.3 (13 Jun 2012)
 
