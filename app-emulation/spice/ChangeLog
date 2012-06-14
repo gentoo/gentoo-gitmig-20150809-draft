@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.27 2012/06/13 13:05:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.28 2012/06/14 20:04:44 jlec Exp $
+
+  14 Jun 2012; Justin Lecher <jlec@gentoo.org> spice-0.11.0.ebuild,
+  metadata.xml:
+  Readd gold patch
 
   13 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> spice-0.11.0.ebuild:
   Added missing dependency on pyparsing.

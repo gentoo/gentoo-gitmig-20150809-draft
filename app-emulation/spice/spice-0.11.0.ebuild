@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.0.ebuild,v 1.2 2012/06/13 13:05:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.0.ebuild,v 1.3 2012/06/14 20:04:44 jlec Exp $
 
 EAPI=4
 
@@ -62,6 +62,12 @@ pkg_setup() {
 # maintainer notes:
 # * opengl support is currently broken
 # * TODO: add slirp for tunnel-support
+
+src_prepare() {
+	epatch \
+		"${FILESDIR}/0.10.1-gold.patch"
+	eautoreconf
+}
 
 src_configure() {
 	python_convert_shebangs 2 spice-common/spice_codegen.py
