@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpstat
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/ChangeLog,v 1.20 2008/08/14 14:57:48 armin76 Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/ChangeLog,v 1.21 2012/06/14 13:29:17 ago Exp $
+
+  14 Jun 2012; Agostino Sarubbo <ago@gentoo.org> tcpstat-1.5-r1.ebuild:
+  stable for amd64
 
   14 Aug 2008; Raúl Porcel <armin76@gentoo.org> tcpstat-1.5-r1.ebuild:
   sparc/x86 stable
