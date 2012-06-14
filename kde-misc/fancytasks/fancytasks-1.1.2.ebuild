@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.99.ebuild,v 1.1 2012/03/13 08:32:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.1.2.ebuild,v 1.1 2012/06/14 15:39:02 kensington Exp $
 
 EAPI=4
 KDE_LINGUAS="de en_GB es et fr km nds pl pt ru sv tr uk"
