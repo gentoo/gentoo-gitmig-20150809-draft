@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.47 2012/05/01 16:16:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.48 2012/06/14 15:33:43 xmw Exp $
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> bitbake-1.14.0.ebuild:
+  ppc stable (bug 403759)
 
 *bitbake-1.15.2 (01 May 2012)
 
