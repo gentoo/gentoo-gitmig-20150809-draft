@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.15 2012/05/27 02:44:57 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.16 2012/06/14 10:20:10 ryao Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 May 2005)
 # SGI's FAM is dead upstream, and requires mayor changes.
@@ -20,3 +20,7 @@ dev-util/strace
 # Don't use them, use the one in base system
 dev-util/yacc
 dev-util/byacc
+
+# Richard Yao <ryao@gentoo.org> (14 June 2012)
+# libarchive-3.0.4 breaks tar on FreeBSD. Bug #413865
+=app-arch/libarchive-3.0.4
