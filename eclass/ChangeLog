@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.313 2012/06/13 12:17:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.314 2012/06/14 23:07:31 hasufell Exp $
+
+  14 Jun 2012; Julian Ospald <hasufell@gentoo.org> eutils.eclass:
+  small enhancement to examples of doicon
 
   13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-r2.eclass:
   Make the oxt unpacking really work.
