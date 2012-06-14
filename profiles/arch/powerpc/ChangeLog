@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.177 2012/06/14 22:37:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.178 2012/06/14 22:39:05 pesa Exp $
+
+  14 Jun 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
+  Remove redundant mask of USE=jit for qt-script, now masked in base profile.
 
   14 Jun 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
   Remove redundant mask of USE=jit for qt-webkit, already masked in base

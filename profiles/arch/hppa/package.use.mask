@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.102 2012/06/01 17:08:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.103 2012/06/14 22:42:18 pesa Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -48,7 +48,6 @@ app-office/lyx gnumeric
 # Jeroen Roovers <jer@gentoo.org> (24 Feb 2011)
 # No JIT compiler support for HPPA
 x11-libs/qt-core jit
-x11-libs/qt-script jit
 
 # Jeroen Roovers <jer@gentoo.org> (24 Feb 2011)
 # Needs Java (bug #355353)

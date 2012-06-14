@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.152 2012/06/01 17:08:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.153 2012/06/14 22:42:18 pesa Exp $
+
+  14 Jun 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
+  Remove redundant mask of USE=jit for qt-script, now masked in base profile.
 
   01 Jun 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=jit for dev-libs/libpcre by Dakon.
