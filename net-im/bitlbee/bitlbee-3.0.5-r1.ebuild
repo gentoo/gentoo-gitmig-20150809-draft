@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.5-r1.ebuild,v 1.5 2012/06/14 20:44:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.5-r1.ebuild,v 1.6 2012/06/14 20:49:36 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="skype? 2:2.5"
 
-inherit eutils multilib python
+inherit eutils multilib python user
 
 DESCRIPTION="irc to IM gateway that support multiple IM protocols"
 HOMEPAGE="http://www.bitlbee.org/"
