@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.94 2012/05/17 13:10:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.95 2012/06/14 07:08:45 yngwin Exp $
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> qca-2.0.3.ebuild:
+  Destabling to ~ia64 because last available stable qt will be masked pending
+  removal
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> qca-2.0.3.ebuild:
   keyword ~amd64-fbsd

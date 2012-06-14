@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-ossl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.34 2011/08/17 16:41:55 chithanh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.35 2012/06/14 07:01:37 yngwin Exp $
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> qca-ossl-2.0.0_beta3-r2.ebuild:
+  Destabling to ~ia64 because last available stable qt will be masked pending
+  removal
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   qca-ossl-2.0.0_beta3-r2.ebuild:

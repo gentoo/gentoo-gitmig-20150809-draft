@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-gnupg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.22 2010/03/26 23:41:47 yngwin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.23 2012/06/14 07:05:18 yngwin Exp $
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> qca-gnupg-2.0.0_beta3.ebuild:
+  Destabling to ~ia64 because last available stable qt will be masked pending
+  removal
 
   26 Mar 2010; Ben de Groot <yngwin@gentoo.org>
   qca-gnupg-2.0.0_beta3.ebuild:
