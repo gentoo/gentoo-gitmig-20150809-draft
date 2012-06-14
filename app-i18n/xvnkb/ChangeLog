@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/xvnkb
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.21 2009/01/07 15:33:14 matsuu Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.22 2012/06/14 04:55:10 naota Exp $
+
+  14 Jun 2012; Naohiro Aota <naota@gentoo.org>
+  +files/xvnkb-0.2.9a-ldflags.patch, xvnkb-0.2.9a-r1.ebuild:
+  Add patch to use LDFLAGS
 
   07 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> xvnkb-0.2.8a-r1.ebuild,
   -xvnkb-0.2.9a.ebuild, xvnkb-0.2.9a-r1.ebuild:
