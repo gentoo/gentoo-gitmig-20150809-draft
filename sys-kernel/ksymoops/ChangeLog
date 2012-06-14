@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ksymoops
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.31 2012/02/12 15:30:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.32 2012/06/14 07:58:28 xmw Exp $
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> ksymoops-2.4.11-r1.ebuild:
+  ppc stable (bug 397235)
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> ksymoops-2.4.11-r1.ebuild:
   alpha/ia64/s390/sparc/x86 stable wrt #397235
