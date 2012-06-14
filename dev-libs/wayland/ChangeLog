@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.4 2012/03/09 14:13:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.5 2012/06/14 23:17:12 ssuominen Exp $
+
+  14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> wayland-0.85.0.ebuild:
+  Use virtual/libffi instead of dev-libs/libffi.
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> wayland-0.85.0.ebuild:
   Marking wayland-0.85.0 ~ppc64 for bug 403015

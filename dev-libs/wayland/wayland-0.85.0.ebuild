@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-0.85.0.ebuild,v 1.4 2012/03/09 14:13:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-0.85.0.ebuild,v 1.5 2012/06/14 23:17:12 ssuominen Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc64 ~x86"
 IUSE="static-libs"
 
 RDEPEND="dev-libs/expat
-	dev-libs/libffi"
+	virtual/libffi"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
