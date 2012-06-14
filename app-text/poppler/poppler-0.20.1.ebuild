@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.20.0.ebuild,v 1.2 2012/05/21 21:12:14 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.20.1.ebuild,v 1.1 2012/06/14 11:46:29 scarabeus Exp $
 
 EAPI="4"
 
@@ -50,11 +50,11 @@ RDEPEND="${COMMON_DEPEND}
 	cjk? ( >=app-text/poppler-data-0.4.4 )
 "
 
-PATCHES=(
-	"${FILESDIR}/${P}-lcms-automagic.patch"
-)
-
 DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
+
+PATCHES=(
+	"${FILESDIR}/${PN}-0.20.1-lcms-automagic.patch"
+)
 
 src_configure() {
 	mycmakeargs=(
