@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.128 2012/06/14 16:39:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.129 2012/06/14 16:44:56 yngwin Exp $
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> package.use.mask:
+  Add eigen[examples] to qt mask
 
   14 Jun 2012; Ben de Groot <yngwin@gentoo.org> package.mask:
   Add app-text/djview to qt mask
