@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.22 2012/06/07 21:35:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.23 2012/06/14 02:55:58 jdhore Exp $
+
+  14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> bwwhois-5.0-r1.ebuild:
+  marked x86 per bug 419713
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> bwwhois-5.0-r1.ebuild:
   Marking bwwhois-5.0-r1 ppc for bug 419713
