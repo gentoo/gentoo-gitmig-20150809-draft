@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9.ebuild,v 1.4 2012/06/14 04:53:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9.ebuild,v 1.5 2012/06/14 05:01:30 vapier Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+blksha1 +curl cgi doc emacs gtk +iconv +nls +pcre +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
+IUSE="+blksha1 +curl cgi doc emacs +gpg gtk +iconv +nls +pcre +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
 
 # Common to both DEPEND and RDEPEND
 CDEPEND="
@@ -57,7 +57,7 @@ CDEPEND="
 	emacs?  ( virtual/emacs )"
 
 RDEPEND="${CDEPEND}
-	app-crypt/gnupg
+	gpg? ( app-crypt/gnupg )
 	perl? ( dev-perl/Error
 			dev-perl/Net-SMTP-SSL
 			dev-perl/Authen-SASL
