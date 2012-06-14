@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.132 2012/04/06 21:59:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.133 2012/06/14 05:41:16 xmw Exp $
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> quagga-0.99.20-r1.ebuild:
+  ppc stable (bug 387375)
 
   06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #63588
