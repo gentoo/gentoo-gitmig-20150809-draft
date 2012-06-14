@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7-r1.ebuild,v 1.1 2012/06/14 20:06:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7-r1.ebuild,v 1.2 2012/06/14 21:08:27 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils unpacker
@@ -8,6 +8,8 @@ inherit eutils gnome2-utils pax-utils unpacker
 DESCRIPTION="An P2P Internet Telephony (VoiceIP) client"
 HOMEPAGE="http://www.skype.com/"
 SKYPE_URI="http://download.${PN}.com/linux"
+# TODO: skype-4.0.0.7.tar.bz2 is now present in the same SRC_URI, flip it
+# on the next time fixing something else here
 SRC_URI="amd64? ( ${SKYPE_URI}/${PN}-debian_${PV}-1_amd64.deb )
 	x86? ( ${SKYPE_URI}/${PN}-debian_${PV}-1_i386.deb )"
 
