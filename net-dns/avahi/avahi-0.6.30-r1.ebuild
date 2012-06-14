@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r1.ebuild,v 1.10 2012/05/03 03:59:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r1.ebuild,v 1.11 2012/06/14 01:55:24 zmedico Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2"
 PYTHON_USE_WITH="gdbm"
 PYTHON_USE_WITH_OPT="python"
 
-inherit autotools eutils mono python multilib flag-o-matic
+inherit autotools eutils mono python multilib flag-o-matic user
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://avahi.org/"

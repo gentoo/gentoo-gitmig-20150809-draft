@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.225 2012/05/13 20:48:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.226 2012/06/14 01:55:24 zmedico Exp $
+
+  14 Jun 2012; Zac Medico <zmedico@gentoo.org> avahi-0.6.30-r1.ebuild,
+  avahi-0.6.30-r3.ebuild:
+  inherit user for enewgroup and enewuser
 
   13 May 2012; Alexis Ballier <aballier@gentoo.org> avahi-0.6.30-r3.ebuild:
   keyword ~amd64-fbsd
@@ -938,4 +942,3 @@
   22 Aug 2005; Sven Wegener <swegener@gentoo.org> +files/avahi.initd,
   +files/avahi-dnsconfd.initd, +metadata.xml, +avahi-0.1.ebuild:
   Initial commit, ebuild written by me.
-
