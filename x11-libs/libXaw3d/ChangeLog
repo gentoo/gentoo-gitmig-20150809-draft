@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/ChangeLog,v 1.17 2012/05/30 18:45:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/ChangeLog,v 1.18 2012/06/14 15:35:54 jer Exp $
+
+  14 Jun 2012; Jeroen Roovers <jer@gentoo.org> libXaw3d-1.6.2.ebuild:
+  Stable for HPPA (bug #417317).
 
   30 May 2012; Markus Meier <maekke@gentoo.org> libXaw3d-1.6.2.ebuild:
   arm stable, bug #417317
