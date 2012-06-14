@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.5.ebuild,v 1.2 2012/05/04 07:20:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.7.ebuild,v 1.1 2012/06/14 10:00:48 xarthisius Exp $
 
 EAPI=4
 
