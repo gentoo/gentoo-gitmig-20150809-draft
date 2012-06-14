@@ -1,8 +1,11 @@
 # ChangeLog for dev-ada/asis-gcc
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/ChangeLog,v 1.19 2012/06/14 11:38:14 george Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/ChangeLog,v 1.20 2012/06/14 13:08:30 george Exp $
 
-  14 Jun 2012; george <george@gentoo.org> asis-gcc-4.3.1-r1.ebuild:
+  14 Jun 2012; George Shapovalov <george@gentoo.org> asis-gcc-4.4.ebuild:
+  the 4.4 needs this catch too.
+
+  14 Jun 2012; George Shapovalov <george@gentoo.org> asis-gcc-4.3.1-r1.ebuild:
   added pkg_setup check to prevent build failure against already installed
   version
 
