@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.603 2012/06/11 09:23:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.604 2012/06/14 15:12:28 jer Exp $
+
+  14 Jun 2012; Jeroen Roovers <jer@gentoo.org> python-2.7.3-r2.ebuild:
+  Stable for HPPA (bug #419575).
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> python-2.7.3-r2.ebuild:
   Stable for amd64, wrt bug #419575
