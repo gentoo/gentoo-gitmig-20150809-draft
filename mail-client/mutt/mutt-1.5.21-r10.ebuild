@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r8.ebuild,v 1.5 2012/03/15 20:10:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r10.ebuild,v 1.1 2012/06/14 17:13:42 grobian Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r11"
+PATCHSET_REV="-r13"
 
 DESCRIPTION="A small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org/"
@@ -81,6 +81,8 @@ src_prepare() {
 	epatch "${PATCHDIR}"/interix-btowc.patch
 	epatch "${PATCHDIR}"/solaris-ncurses-chars.patch
 	epatch "${PATCHDIR}"/gpgme-1.2.0.patch
+	epatch "${PATCHDIR}"/emptycharset-segfault.patch
+	epatch "${PATCHDIR}"/gpgkeyverify-segfault.patch
 	# same category, but functional bits
 	epatch "${PATCHDIR}"/dont-reveal-bbc.patch
 
@@ -206,10 +208,15 @@ src_install() {
 	rm "${ED}"/etc/${PN}/mime.types
 	dosym /etc/mime.types /etc/${PN}/mime.types
 
-	# A man-page is always handy
+	# A man-page is always handy, so fake one
 	if use !doc; then
 		make -C doc DESTDIR="${D}" muttrc.man || die
-		cp doc/mutt.man mutt.1
+		# make the fake slightly better, bug #413405
+		sed -e 's#@docdir@/manual.txt#http://www.mutt.org/doc/devel/manual.html#' \
+			-e 's#in @docdir@,#at http://www.mutt.org/,#' \
+			-e "s#@sysconfdir@#${EPREFIX}/etc/${PN}#" \
+			-e "s#@bindir@#${EPREFIX}/usr/bin#" \
+			doc/mutt.man > mutt.1
 		cp doc/muttbug.man flea.1
 		cp doc/muttrc.man muttrc.5
 		doman mutt.1 flea.1 muttrc.5

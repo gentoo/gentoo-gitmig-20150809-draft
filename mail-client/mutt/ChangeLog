@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.227 2012/04/28 15:05:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.228 2012/06/14 17:13:42 grobian Exp $
+
+*mutt-1.5.21-r10 (14 Jun 2012)
+
+  14 Jun 2012; Fabian Groffen <grobian@gentoo.org> +mutt-1.5.21-r10.ebuild,
+  -mutt-1.5.21-r8.ebuild:
+  Revbump for automake-1.12 fix, bug #420955.
 
 *mutt-1.5.21-r9 (28 Apr 2012)
 
