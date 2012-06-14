@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.9 2012/03/18 13:27:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.10 2012/06/14 18:44:07 ssuominen Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://largo.windowmaker.org/files/${P}.tar.gz"
 HOMEPAGE="http://largo.windowmaker.org/"
 
 RDEPEND=">=x11-wm/windowmaker-0.80.2-r1
-	>=x11-libs/libPropList-0.10.1-r3
+	x11-libs/libproplist
 	>=media-sound/wmsound-data-1.0.0"
 
 DEPEND="${RDEPEND}
