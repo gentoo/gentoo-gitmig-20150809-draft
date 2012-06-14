@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libqxt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.19 2011/11/26 20:04:50 pesa Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.20 2012/06/14 18:47:55 ago Exp $
+
+  14 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libqxt-0.6.2.ebuild:
+  Stable for amd64, wrt bug #421119
 
 *libqxt-0.6.2 (26 Nov 2011)
 
