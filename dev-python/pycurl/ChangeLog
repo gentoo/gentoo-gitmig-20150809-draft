@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.70 2012/06/13 11:20:28 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.71 2012/06/14 17:33:31 marienz Exp $
+
+  14 Jun 2012; Marien Zwart <marienz@gentoo.org> pycurl-7.19.0-r1.ebuild:
+  Clean up IUSE and tighten curl USE dependencies further, thanks to comments
+  from Arfrever.
 
 *pycurl-7.19.0-r1 (13 Jun 2012)
 

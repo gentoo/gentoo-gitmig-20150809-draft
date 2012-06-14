@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0-r1.ebuild,v 1.1 2012/06/13 11:20:28 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0-r1.ebuild,v 1.2 2012/06/14 17:33:31 marienz Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -17,9 +17,7 @@ SRC_URI="http://pycurl.sourceforge.net/download/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="examples"
-# Copied from the curl ebuild. Keep in sync.
-IUSE="${IUSE} curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl curl_ssl_polarssl"
+IUSE="curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl examples ssl"
 
 # Depend on a curl with curl_ssl_* USE flags.
 # libcurl must not be using an ssl backend we do not support.
@@ -27,8 +25,11 @@ IUSE="${IUSE} curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_nss +curl_
 # If curl uses gnutls, depend on at least gnutls 2.11.0 so that pycurl
 # does not need to initialize gcrypt threading and we do not need to
 # explicitly link to libgcrypt.
-DEPEND=">=net-misc/curl-7.25.0-r1[curl_ssl_gnutls=,curl_ssl_openssl=,curl_ssl_nss=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl]
-	curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 )"
+DEPEND=">=net-misc/curl-7.25.0-r1[ssl=]
+	ssl? (
+		net-misc/curl[curl_ssl_gnutls=,curl_ssl_nss=,curl_ssl_openssl=,-curl_ssl_axtls,-curl_ssl_cyassl,-curl_ssl_polarssl]
+		curl_ssl_gnutls? ( >=net-libs/gnutls-2.11.0 )
+	)"
 RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="curl"
