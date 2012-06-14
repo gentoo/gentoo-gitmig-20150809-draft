@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.96 2012/05/09 20:06:02 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.97 2012/06/14 22:15:21 blueness Exp $
+
+  14 Jun 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Remove xattr use mask on sys-apps/portage, bug #402215
 
   09 May 2012; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Remove taglib's test package.use.mask.

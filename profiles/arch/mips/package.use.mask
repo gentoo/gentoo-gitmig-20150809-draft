@@ -1,11 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.48 2012/05/09 20:06:02 mattst88 Exp $
-
-# Zac Medico <zmedico@gentoo.org> (21 Feb 2012)
-# Bug #402215: Mask USE=xattr for sys-apps/portage, pending ~mips keyword for
-# dev-python/pyxattr.
-sys-apps/portage xattr
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.49 2012/06/14 22:15:21 blueness Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 May 2011)
 # depends on dev-libs/dmalloc which is not keyworded
