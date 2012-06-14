@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.352 2012/06/06 14:45:39 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.353 2012/06/14 23:33:44 pesa Exp $
+
+  14 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  darwin/macos/arch/ppc/package.use.mask:
+  Remove redundant mask of USE=jit for qt-script and qt-webkit on ppc, since
+  the flag is already masked in base profile.
 
   06 Jun 2012; Benda Xu <heroxbd@gentoo.org> darwin/package.mask, package.mask,
   sunos/solaris/package.mask:
