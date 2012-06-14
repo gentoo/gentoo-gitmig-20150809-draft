@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9_rc2.ebuild,v 1.4 2012/01/28 20:35:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9_rc2.ebuild,v 1.5 2012/06/14 04:48:02 vapier Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+blksha1 +curl cgi doc emacs gtk iconv +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
+IUSE="+blksha1 +curl cgi doc emacs gtk +iconv +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
 
 # Common to both DEPEND and RDEPEND
 CDEPEND="
@@ -143,11 +143,7 @@ exportmakeopts() {
 	sed -i -e '/\/usr\/local/s/BASIC_/#BASIC_/' Makefile
 
 	use iconv \
-		|| einfo "Forcing iconv for ${PVR} due to bugs #321895, #322205."
-	#	|| myopts="${myopts} NO_ICONV=YesPlease"
-	# because, above, we need to do this unconditionally (no "&& use iconv")
-	use !elibc_glibc && myopts="${myopts} NEEDS_LIBICONV=YesPlease"
-
+		|| myopts="${myopts} NO_ICONV=YesPlease"
 	use tk \
 		|| myopts="${myopts} NO_TCLTK=YesPlease"
 	use perl \
@@ -217,10 +213,6 @@ src_prepare() {
 	# JS install fixup
 	# Merged in 1.7.5.x
 	#epatch "${FILESDIR}"/git-1.7.2-always-install-js.patch
-
-	# USE=-iconv causes segfaults, fixed post 1.7.1
-	# Gentoo bug #321895
-	#epatch "${FILESDIR}"/git-1.7.1-noiconv-segfault-fix.patch
 
 	# Fix false positives with t3404 due to SHELL=/bin/false for the portage
 	# user.
