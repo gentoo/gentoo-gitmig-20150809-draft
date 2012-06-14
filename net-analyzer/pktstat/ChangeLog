@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pktstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.25 2012/06/13 08:56:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pktstat/ChangeLog,v 1.26 2012/06/14 14:24:34 jer Exp $
+
+  14 Jun 2012; Jeroen Roovers <jer@gentoo.org> -pktstat-1.8.4.ebuild:
+  Old.
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pktstat-1.8.5.ebuild:
   marked x86 per bug 419229
