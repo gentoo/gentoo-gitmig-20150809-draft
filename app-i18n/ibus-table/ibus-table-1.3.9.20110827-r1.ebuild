@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ibus-table-1.3.9.20110827.ebuild,v 1.2 2012/05/03 19:24:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ibus-table-1.3.9.20110827-r1.ebuild,v 1.1 2012/06/14 12:37:38 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -36,7 +36,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable nls) --disable-additional
+	econf $(use_enable nls) --disable-additional PYTHON="${EPREFIX}"/usr/bin/python2
 }
 
 src_install() {
