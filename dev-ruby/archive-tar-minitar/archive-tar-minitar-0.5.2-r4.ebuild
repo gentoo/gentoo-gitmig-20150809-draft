@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/archive-tar-minitar-0.5.2-r3.ebuild,v 1.6 2011/01/29 11:20:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/archive-tar-minitar-0.5.2-r4.ebuild,v 1.1 2012/06/14 16:26:18 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST=""
@@ -22,3 +22,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-li
 IUSE=""
 
 RESTRICT="test"
+
+RUBY_PATCHES=(
+	${P}-gentoo.patch
+)

@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.32 2011/09/14 16:06:37 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.33 2012/06/14 16:26:18 flameeyes Exp $
+
+*archive-tar-minitar-0.5.2-r4 (14 Jun 2012)
+
+  14 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +archive-tar-minitar-0.5.2-r4.ebuild,
+  +files/archive-tar-minitar-0.5.2-gentoo.patch,
+  -archive-tar-minitar-0.5.2-r3.ebuild:
+  Fix minitar command on recent systems.
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org>
   archive-tar-minitar-0.5.2-r2.ebuild:
