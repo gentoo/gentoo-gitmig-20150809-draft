@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uvconv/uvconv-1.1.3b-r1.ebuild,v 1.3 2012/06/14 00:07:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uvconv/uvconv-1.1.3b-r1.ebuild,v 1.4 2012/06/14 09:16:18 ago Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://unikey.org/"
 SRC_URI="mirror://sourceforge/unikey/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 
