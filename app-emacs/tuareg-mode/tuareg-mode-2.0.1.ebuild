@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/tuareg-mode-2.0.1.ebuild,v 1.5 2011/11/06 17:30:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/tuareg-mode-2.0.1.ebuild,v 1.6 2012/06/14 05:42:34 xmw Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://forge.ocamlcore.org/frs/download.php/410/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 S="${WORKDIR}/tuareg-${PV}"
