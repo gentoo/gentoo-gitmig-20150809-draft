@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.58 2012/02/21 09:02:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.59 2012/06/14 05:57:20 xmw Exp $
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> ipset-6.11.ebuild:
+  adding ~ppc keyword (bug 304037)
 
 *ipset-6.11 (21 Feb 2012)
 
