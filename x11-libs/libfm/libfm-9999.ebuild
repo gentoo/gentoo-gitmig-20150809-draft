@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.22 2012/05/05 03:52:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.23 2012/06/14 18:33:22 hwoarang Exp $
 
 EAPI=3
 
@@ -51,6 +51,8 @@ src_prepare() {
 	myvalac="$(type -p valac-${myvalaver})"
 	[[ -x "${myvalac}" ]] || die "Vala compiler ${myvalac} not found"
 	export VALAC=${myvalac}
+	#Remove -Werror for automake-1.12. Bug #421101
+	sed -i "s:-Werror::" configure.ac || die
 	eautoreconf
 }
 
