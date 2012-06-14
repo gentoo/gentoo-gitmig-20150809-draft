@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.4.ebuild,v 1.2 2012/04/26 13:40:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.4-r1.ebuild,v 1.1 2012/06/14 16:44:33 ryao Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -33,6 +33,10 @@ DEPEND="${RDEPEND}
 		)"
 
 DOCS="NEWS README"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-handle-unsupported-acl-types.patch"
+}
 
 src_configure() {
 	export ac_cv_header_ext2fs_ext2_fs_h=$(usex e2fsprogs) #354923

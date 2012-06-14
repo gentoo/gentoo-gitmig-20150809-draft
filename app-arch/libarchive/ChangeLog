@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.123 2012/05/18 18:18:53 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.124 2012/06/14 16:44:33 ryao Exp $
+
+*libarchive-3.0.4-r1 (14 Jun 2012)
+
+  14 Jun 2012; Richard Yao <ryao@gentoo.org>
+  +files/libarchive-3.0.4-handle-unsupported-acl-types.patch,
+  +libarchive-3.0.4-r1.ebuild, -libarchive-3.0.4.ebuild:
+  Apply upstream patch by Naohiro Aota to handle unknown acl types, bug #413865
 
   18 May 2012;  <richard@gentoo.org> libarchive-3.0.3.ebuild:
   keyword ~amd64-fbsd
