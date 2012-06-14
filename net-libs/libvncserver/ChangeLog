@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.59 2012/06/09 08:35:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.60 2012/06/14 15:26:10 jer Exp $
+
+  14 Jun 2012; Jeroen Roovers <jer@gentoo.org> libvncserver-0.9.8.2-r2.ebuild:
+  Stable for HPPA (bug #419275).
 
   09 Jun 2012; Markus Meier <maekke@gentoo.org> libvncserver-0.9.8.2-r2.ebuild:
   arm stable, bug #419275
