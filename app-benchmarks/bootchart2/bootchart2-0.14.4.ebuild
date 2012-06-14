@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.2-r2.ebuild,v 1.3 2012/05/15 14:31:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.4.ebuild,v 1.1 2012/06/14 06:31:21 jlec Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-pypy-*"
 
 inherit linux-info python systemd toolchain-funcs
 
@@ -31,9 +32,11 @@ src_prepare() {
 	tc-export CC
 	sed \
 		-e "/^install/s:py-install-compile::g" \
-		-e "/^VER/s:0.14.1:0.14.2:g" \
 		-e "/^SYSTEMD_UNIT_DIR/s:=.*:= $(systemd_get_unitdir):g" \
 		-i Makefile || die
+	sed \
+		-e '/^EXIT_PROC/s:^.*$:EXIT_PROC="agetty mgetty mingetty":g' \
+		-i bootchartd.conf bootchartd.in || die
 }
 
 src_test() {
@@ -67,7 +70,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Please add the init script to your default runlevel"
+	elog "If you are using an initrd during boot"
+	echo
+	elog "please add the init script to your default runlevel"
 	elog "rc-update add bootchart2 default"
 	echo
 	python_mod_optimize pybootchartgui

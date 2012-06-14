@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.2-r3.ebuild,v 1.1 2012/05/29 18:00:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.2-r3.ebuild,v 1.2 2012/06/14 06:31:21 jlec Exp $
 
 EAPI=4
 
@@ -70,7 +70,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Please add the init script to your default runlevel"
+	elog "If you are using an initrd during boot"
+	echo
+	elog "please add the init script to your default runlevel"
 	elog "rc-update add bootchart2 default"
 	echo
 	python_mod_optimize pybootchartgui
