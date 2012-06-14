@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.124 2012/06/04 06:01:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.125 2012/06/14 05:38:22 xmw Exp $
 
 
 # Michael Weber <xmw@gentoo.org> (3 Jun 2012)
@@ -49,7 +49,6 @@ app-text/evince xps
 >=gnome-base/gnome-menus-3.2 test
 >=gnome-base/gnome-panel-3 eds
 >=gnome-base/nautilus-3 previewer sendto tracker
-net-misc/networkmanager wimax
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 Nov 2011)
 # Dropped dietlibc wrt #364103
