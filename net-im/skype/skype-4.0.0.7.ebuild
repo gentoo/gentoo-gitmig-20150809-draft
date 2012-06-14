@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7.ebuild,v 1.2 2012/06/14 17:35:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7.ebuild,v 1.3 2012/06/14 17:51:06 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils unpacker
@@ -81,7 +81,7 @@ pkg_postinst() {
 
 	# http://bugs.gentoo.org/360815
 	elog "For webcam support, see \"LD_PRELOAD\" section of \"README.lib\" document provided by"
-	elog "media-libs/libv4l"
+	elog "media-libs/libv4l and \"README\" document of this package."
 	use amd64 && elog "You can install app-emulation/emul-linux-x86-medialibs for 32bit media-libs/libv4l"
 }
 
