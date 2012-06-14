@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libcmis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.9 2012/06/05 15:40:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.10 2012/06/14 08:41:31 scarabeus Exp $
+
+*libcmis-0.2.3 (14 Jun 2012)
+
+  14 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libcmis-0.2.3.ebuild,
+  -files/libcmis-0.2.2-docbook.patch, -libcmis-0.2.2.ebuild,
+  libcmis-9999.ebuild, metadata.xml:
+  Bump to latest and use the switches i added upstream. Remove broken one.
 
 *libcmis-0.2.2 (05 Jun 2012)
 

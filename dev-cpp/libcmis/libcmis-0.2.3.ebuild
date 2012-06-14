@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.2.2.ebuild,v 1.1 2012/06/05 15:40:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.2.3.ebuild,v 1.1 2012/06/14 08:41:31 scarabeus Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://gitorious.org/libcmis/libcmis.git"
 [[ ${PV} == 9999 ]] && SCM_ECLASS="git-2"
-inherit eutils autotools ${SCM_ECLASS}
+inherit autotools ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="C++ client library for the CMIS interface"
@@ -15,8 +15,8 @@ HOMEPAGE="https://sourceforge.net/projects/libcmis/"
 
 LICENSE="|| ( GPL-2 LGPL-2 MPL-1.1 )"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="static-libs test"
+[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+IUSE="static-libs man test"
 
 RDEPEND="
 	dev-libs/boost
@@ -24,6 +24,7 @@ RDEPEND="
 	net-misc/curl
 "
 DEPEND="${RDEPEND}
+	man? ( app-text/docbook2X )
 	test? ( dev-util/cppunit )
 "
 
@@ -31,14 +32,13 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
-	# docbook2X everyitme for one manpage, nope nope
-	epatch "${FILESDIR}/${PN}-0.2.2-docbook.patch"
 	eautoreconf
 }
 
 src_configure() {
 	econf \
 		--disable-werror \
+		$(use_with man) \
 		$(use_enable static-libs static) \
 		$(use_enable test tests) \
 		--enable-client
