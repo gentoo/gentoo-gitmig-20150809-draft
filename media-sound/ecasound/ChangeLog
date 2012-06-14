@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ecasound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.63 2012/06/14 05:55:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.64 2012/06/14 06:22:46 radhermit Exp $
+
+*ecasound-2.9.0 (14 Jun 2012)
+
+  14 Jun 2012; Tim Harder <radhermit@gentoo.org> +ecasound-2.9.0.ebuild,
+  metadata.xml:
+  Version bump. Add lv2 use flag and update to EAPI 4.
 
   14 Jun 2012; Tim Harder <radhermit@gentoo.org> ecasound-2.8.1.ebuild:
   Fix conditional sed line (bug #387819) and use prune_libtool_files.
