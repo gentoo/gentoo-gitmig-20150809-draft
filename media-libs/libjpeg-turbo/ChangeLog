@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.46 2012/06/09 07:43:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.47 2012/06/14 15:44:29 vapier Exp $
+
+  14 Jun 2012; Mike Frysinger <vapier@gentoo.org> libjpeg-turbo-1.2.0-r2.ebuild:
+  Disable simd code for x32 ABIs so the package at least works (passes tests)
+  #420239 by Xavier Miller.
 
   09 Jun 2012; Mike Frysinger <vapier@gentoo.org>
   +files/libjpeg-turbo-1.2.0-x32.patch, libjpeg-turbo-1.2.0-r2.ebuild:
@@ -216,4 +220,3 @@
   23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   +libjpeg-turbo-1.0.0.ebuild:
   Initial commit wrt #327487 by Siarhei Siamashka.
-
