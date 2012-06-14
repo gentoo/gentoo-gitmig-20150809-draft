@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5-r1.ebuild,v 1.1 2012/06/14 19:23:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5-r1.ebuild,v 1.2 2012/06/14 19:28:01 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
 
-DESCRIPTION="WindowMaker sound server"
-HOMEPAGE="http://largo.windowmaker.org/"
-SRC_URI="http://largo.windowmaker.org/files/${P}.tar.gz"
+DESCRIPTION="An sound server for the WindowMaker desktop"
+HOMEPAGE="http://windowmaker.org/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
