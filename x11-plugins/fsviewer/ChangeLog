@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/fsviewer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.19 2011/11/12 10:43:57 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/ChangeLog,v 1.20 2012/06/14 15:43:54 ssuominen Exp $
+
+  14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> fsviewer-0.2.5.ebuild:
+  x11-libs/libPropList rename to x11-libs/libproplist
 
   12 Nov 2011; Justin Lecher <jlec@gentoo.org> fsviewer-0.2.5.ebuild:
   Corrected slotting for png and tiff
