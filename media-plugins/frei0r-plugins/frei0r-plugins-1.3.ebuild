@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.3.ebuild,v 1.5 2012/05/05 08:27:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.3.ebuild,v 1.6 2012/06/14 14:12:20 xmw Exp $
 
 EAPI=4
 inherit cmake-utils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://www.piksel.no/frei0r/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ppc x86 ~x86-fbsd"
 IUSE="doc +facedetect +scale0tilt"
 
 RDEPEND="facedetect? ( >=media-libs/opencv-2.3.0 )
