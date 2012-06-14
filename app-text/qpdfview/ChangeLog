@@ -1,6 +1,11 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.4 2012/06/12 05:00:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.5 2012/06/14 09:16:36 yngwin Exp $
+
+*qpdfview-0.3_beta3 (14 Jun 2012)
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> +qpdfview-0.3_beta3.ebuild:
+  Version bump. Depend on qt-core[iconv] see bug #413653.
 
 *qpdfview-0.3_beta2 (12 Jun 2012)
 
