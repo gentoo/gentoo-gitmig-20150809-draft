@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.79 2012/05/12 14:50:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.80 2012/06/14 03:07:30 vapier Exp $
+
+  14 Jun 2012; Mike Frysinger <vapier@gentoo.org> libmng-1.0.10-r1.ebuild:
+  Add fix by Vadim for building with newer automake #420223 by Leonid Kopylov.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> libmng-1.0.10-r1.ebuild:
   keyword ~amd64-fbsd

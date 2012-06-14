@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.10-r1.ebuild,v 1.9 2012/05/12 14:50:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.10-r1.ebuild,v 1.10 2012/06/14 03:07:30 vapier Exp $
 
 EAPI=3
 inherit autotools
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	ln -s makefiles/configure.in .
 	ln -s makefiles/Makefile.am .
+	sed -i '/^AM_C_PROTOTYPES$/d' configure.in || die #420223
 
 	eautoreconf
 }
