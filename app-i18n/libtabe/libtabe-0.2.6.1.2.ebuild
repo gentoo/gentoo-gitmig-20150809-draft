@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.6.1.2.ebuild,v 1.1 2009/06/02 09:38:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/libtabe-0.2.6.1.2.ebuild,v 1.2 2012/06/14 06:02:48 naota Exp $
+
+WANT_AUTOMAKE=1.11
 
 inherit eutils libtool autotools multilib versionator
 
@@ -29,6 +31,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${DEBIAN_PATCH}
 	epatch "${FILESDIR}"/${ORIG_P}-fabs.patch
+	epatch "${FILESDIR}"/${ORIG_P}-ldflags.patch
 
 	ln -s script/configure.in . || die
 	eautoreconf
