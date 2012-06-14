@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmsound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/ChangeLog,v 1.11 2012/06/14 18:44:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/ChangeLog,v 1.12 2012/06/14 19:15:02 ssuominen Exp $
+
+  14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> wmsound-0.9.5.ebuild:
+  Update this ancient ebuild to not use /usr/X11R6 anymore. Use
+  toolchain-funcs.eclass to pass correct CC. Convert from "einstall" to "emake
+  install". Missing x11-misc/gccmakedep DEPEND.
 
   14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> wmsound-0.9.5.ebuild:
   x11-libs/libPropList rename to x11-libs/libproplist

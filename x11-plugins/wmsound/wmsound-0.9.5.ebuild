@@ -1,56 +1,46 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.10 2012/06/14 18:44:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.11 2012/06/14 19:15:02 ssuominen Exp $
 
-inherit eutils
-
-IUSE=""
+EAPI=4
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="WindowMaker sound server"
-SRC_URI="http://largo.windowmaker.org/files/${P}.tar.gz"
 HOMEPAGE="http://largo.windowmaker.org/"
+SRC_URI="http://largo.windowmaker.org/files/${P}.tar.gz"
 
-RDEPEND=">=x11-wm/windowmaker-0.80.2-r1
+RDEPEND="media-sound/wmsound-data
 	x11-libs/libproplist
-	>=media-sound/wmsound-data-1.0.0"
-
+	x11-wm/windowmaker"
 DEPEND="${RDEPEND}
+	x11-misc/gccmakedep
 	x11-misc/imake"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+SLOT="0"
+KEYWORDS="~ppc x86"
+IUSE=""
 
-src_unpack()
-{
-	unpack ${A}
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${PN}-config.patch \
+		"${FILESDIR}"/${PN}-ComplexProgramTargetNoMan.patch
 
-	cd "${S}"
-	epatch "${FILESDIR}/wmsound-config.patch"
-	epatch "${FILESDIR}/wmsound-ComplexProgramTargetNoMan.patch"
-
-	#Fix compilation with --as-needed.
-	sed -i 's:-lPropList $(WMSOUNDLIB):$(WMSOUNDLIB) -lPropList:' src/Imakefile
-	sed -i 's:-lPropList $(XLIB) $(WMSOUNDLIB):$(WMSOUNDLIB) -lPropList $(XLIB):' utils/Imakefile
+	# Fix building with -Wl,--as-needed
+	sed -i \
+		-e 's:-lPropList $(WMSOUNDLIB):$(WMSOUNDLIB) -lPropList:' \
+		src/Imakefile || die
+	sed -i \
+		-e 's:-lPropList $(XLIB) $(WMSOUNDLIB):$(WMSOUNDLIB) -lPropList	$(XLIB):' \
+		utils/Imakefile || die
 }
 
-src_compile()
-{
-	export PATH="${PATH}:/usr/X11R6/bin"
-
-	cd "${S}"
-	xmkmf -a
-	emake CDEBUGFLAGS="${CFLAGS}" LDOPTIONS="${LDFLAGS}" || die "make failed"
+src_compile() {
+	xmkmf -a || die
+	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" LDOPTIONS="${LDFLAGS}"
 }
 
-src_install()
-{
-	cd "${S}"
-	einstall PREFIX="${D}/usr" USRLIBDIR="${D}/usr/X11R6/lib" || die "make install failed"
+src_install() {
+	emake PREFIX="${D}/usr" USRLIBDIR="${D}/usr/$(get_libdir)" install
 	dodoc AUTHORS BUGS ChangeLog
-}
-
-pkg_postinst()
-{
-	einfo "WMSound currently supports 8 or 16 bit .wav files."
 }
