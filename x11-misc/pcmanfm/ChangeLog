@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.78 2012/05/07 09:51:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.79 2012/06/14 18:35:48 hwoarang Exp $
+
+  14 Jun 2012; Markos Chandras <hwoarang@gentoo.org> pcmanfm-9999.ebuild:
+  Drop -Werror due to new automake-1.12. Bug #421101
 
   07 May 2012; Markos Chandras <hwoarang@gentoo.org> -pcmanfm-0.9.9.ebuild,
   -pcmanfm-0.9.9_pre20110422.ebuild, -pcmanfm-0.9.9_pre20110614.ebuild:
