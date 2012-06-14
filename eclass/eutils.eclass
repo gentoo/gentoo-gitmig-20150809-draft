@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.398 2012/06/14 23:07:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.399 2012/06/14 23:40:29 ssuominen Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1036,9 +1036,9 @@ _iconins() {
 # results in: insinto /usr/share/pixmaps
 #             doins foobar.png fuqbar.svg suckbar.png
 #
-# example 2: doicon -s 48 foobar.png fuqbar.png gaybar.png
+# example 2: doicon -s 48 foobar.png fuqbar.png blobbar.png
 # results in: insinto /usr/share/icons/hicolor/48x48/apps
-#             doins foobar.png fuqbar.png gaybar.png
+#             doins foobar.png fuqbar.png blobbar.png
 # @CODE
 doicon() {
 	_iconins ${FUNCNAME} "$@"
