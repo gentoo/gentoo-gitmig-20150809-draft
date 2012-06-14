@@ -1,27 +1,24 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.32 2012/05/31 22:56:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.33 2012/06/14 05:19:56 cardoe Exp $
 
 EAPI=4
 
 #BACKPORTS=1
-AUTOTOOLIZE=yes
+#AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
-
-if [[ ${PV} = *9999* ]]; then
-	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
-	AUTOTOOLIZE=yes
-fi
 
 PYTHON_DEPEND="python? 2:2.5"
 #RESTRICT_PYTHON_ABIS="3.*"
 #SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils python
+inherit eutils python user autotools linux-info
 
 if [[ ${PV} = *9999* ]]; then
-	inherit autotools git-2
+	inherit git-2
+	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
+	AUTOTOOLIZE=yes
 	SRC_URI=""
 	KEYWORDS=""
 else
@@ -37,22 +34,24 @@ DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="avahi caps debug iscsi +libvirtd lvm +lxc macvtap nfs \
+IUSE="avahi +caps debug iscsi +libvirtd lvm +lxc macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux +udev \
 	uml virtualbox virt-network xen elibc_glibc"
 # IUSE=one : bug #293416 & bug #299011
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
-	lxc? ( libvirtd ) openvz? ( libvirtd ) qemu? ( libvirtd ) uml? ( libvirtd )
+	lxc? ( caps libvirtd ) openvz? ( libvirtd ) qemu? ( libvirtd ) uml? ( libvirtd )
 	virtualbox? ( libvirtd ) xen? ( libvirtd )"
 
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
+# We can use both libnl:1.1 and libnl:3, but if you have both installed, the
+# package will use 1.1 by default
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
 	dev-libs/libgcrypt
 	>=dev-libs/libxml2-2.7.6
-	>=dev-libs/libnl-1.1:1.1
+	dev-libs/libnl:1.1
 	>=net-libs/gnutls-1.0.25
 	sys-apps/dmidecode
 	>=sys-apps/util-linux-2.17
@@ -62,10 +61,13 @@ RDEPEND="sys-libs/readline
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
 	iscsi? ( sys-block/open-iscsi )
-	libvirtd? ( net-misc/bridge-utils )
+	lxc? ( sys-power/pm-utils )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	nfs? ( net-fs/nfs-utils )
-	numa? ( >sys-process/numactl-2.0.2 )
+	numa? (
+		>sys-process/numactl-2.0.2
+		sys-process/numad
+	)
 	openvz? ( sys-kernel/openvz-sources )
 	parted? (
 		>=sys-block/parted-1.8[device-mapper]
@@ -74,8 +76,11 @@ RDEPEND="sys-libs/readline
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
-	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 )
-		dev-libs/yajl )
+	qemu? (
+		|| ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 )
+		dev-libs/yajl
+		sys-power/pm-utils
+	)
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
@@ -91,9 +96,52 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1"
 
+LXC_CONFIG_CHECK="
+	~CGROUPS
+	~CGROUP_FREEZER
+	~CGROUP_DEVICE
+	~CPUSETS
+	~CGROUP_CPUACCT
+	~RESOURCE_COUNTERS
+	~CGROUP_MEM_RES_CTLR
+	~CGROUP_SCHED
+	~BLK_CGROUP
+	~NAMESPACES
+	~UTS_NS
+	~IPC_NS
+	~USER_NS
+	~PID_NS
+	~NET_NS
+	~DEVPTS_MULTIPLE_INSTANCES
+	~VETH
+	~MACVLAN
+	~POSIX_MQUEUE
+	~!GRKERNSEC_CHROOT_MOUNT
+	~!GRKERNSEC_CHROOT_DOUBLE
+	~!GRKERNSEC_CHROOT_PIVOT
+	~!GRKERNSEC_CHROOT_CHMOD
+	~!GRKERNSEC_CHROOT_CAPS
+"
+
+VIRTNET_CONFIG_CHECK="
+	~BRIDGE_NF_EBTABLES
+	~NETFILTER_ADVANCED
+	~NETFILTER_XT_TARGET_CHECKSUM
+"
+
 pkg_setup() {
 	use python && python_set_active_version 2
 	python_pkg_setup
+
+	enewgroup qemu 77
+	enewuser qemu 77 -1 -1 qemu kvm
+
+	CONFIG_CHECK=""
+	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
+	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
+	if [[ -n ${CONFIG_CHECK} ]]; then
+		linux-info_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -102,6 +150,7 @@ src_prepare() {
 			epatch
 
 	if [[ ${PV} = *9999* ]]; then
+
 		# git checkouts require bootstrapping to create the configure script.
 		# Additionally the submodules must be cloned to the right locations
 		# bug #377279
@@ -111,6 +160,8 @@ src_prepare() {
 			git hash-object bootstrap.conf
 		) >.git-module-status
 	fi
+
+	epatch_user
 
 	[[ -n ${AUTOTOOLIZE} ]] && eautoreconf
 }
@@ -155,7 +206,9 @@ src_configure() {
 	myconf="${myconf} $(use_with iscsi storage-iscsi)"
 	myconf="${myconf} $(use_with parted storage-disk)"
 	myconf="${myconf} $(use_with lvm storage-mpath)"
+	#myconf="${myconf} --without-storage-rbd"
 	myconf="${myconf} $(use_with numa numactl)"
+	myconf="${myconf} $(use_with numa numad)"
 	myconf="${myconf} $(use_with selinux)"
 
 	# udev for device support details
@@ -175,6 +228,15 @@ src_configure() {
 	## other
 	myconf="${myconf} $(use_enable nls)"
 	myconf="${myconf} $(use_with python)"
+
+	# user privilege bits fir qemu/kvm
+	if use caps; then
+		myconf="${myconf} --with-qemu-user=qemu"
+		myconf="${myconf} --with-qemu-group=qemu"
+	else
+		myconf="${myconf} --with-qemu-user=root"
+		myconf="${myconf} --with-qemu-group=root"
+	fi
 
 	## stuff we don't yet support
 	myconf="${myconf} --without-netcf --without-audit"
@@ -256,16 +318,20 @@ pkg_preinst() {
 pkg_postinst() {
 	use python && python_mod_optimize libvirt.py
 
-	elog
-	if use policykit && has_version sys-auth/policykit; then
-		elog "You must have run the following at least once:"
-		elog
-		elog "$ polkit-auth --grant org.libvirt.unix.manage --user \"USERNAME\""
-		elog
-		elog "to grant USERNAME access to libvirt when using USE=policykit"
-	else
+	# support for dropped privileges
+	fperms 0750 "${EROOT}/var/lib/libvirt/qemu"
+	fperms 0750 "${EROOT}/var/cache/libvirt/qemu"
+	if use caps && use qemu; then
+		fowners -R qemu:qemu "${EROOT}/var/lib/libvirt/qemu"
+		fowners -R qemu:qemu "${EROOT}/var/cache/libvirt/qemu"
+	elif use qemu; then
+		fowners -R root:root "${EROOT}/var/lib/libvirt/qemu"
+		fowners -R root:root "${EROOT}/var/cache/libvirt/qemu"
+	fi
+
+	if ! use policykit; then
 		elog "To allow normal users to connect to libvirtd you must change the"
-		elog " unix sock group and/or perms in /etc/libvirt/libvirtd.conf"
+		elog "unix sock group and/or perms in /etc/libvirt/libvirtd.conf"
 	fi
 
 	use libvirtd || return 0
@@ -284,6 +350,11 @@ pkg_postinst() {
 		ewarn " interface or except-interface"
 		ewarn
 		ewarn "Otherwise you might have issues with your existing DNS server."
+	fi
+
+	if use caps && use qemu; then
+		elog "libvirt will now start qemu/kvm VMs with non-root privileges."
+		elog "Ensure any resources your VMs use are accessible by qemu:qemu"
 	fi
 }
 
