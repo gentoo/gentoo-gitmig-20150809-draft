@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tvision
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.28 2012/06/07 21:38:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.29 2012/06/14 03:05:45 jdhore Exp $
+
+  14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> tvision-2.1.0_pre2-r3.ebuild:
+  marked x86 per bug 419723
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> tvision-2.1.0_pre2-r3.ebuild:
   Marking tvision-2.1.0_pre2-r3 ppc for bug 419723
