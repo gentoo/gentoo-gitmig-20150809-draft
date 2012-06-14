@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wimax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.16 2012/02/25 17:13:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.17 2012/06/14 05:24:15 xmw Exp $
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> wimax-1.5.2-r1.ebuild:
+  adding ~ppc keyword (bug 379275)
 
   25 Feb 2012; Jeroen Roovers <jer@gentoo.org> wimax-1.5.2.ebuild,
   wimax-1.5.2-r1.ebuild:
