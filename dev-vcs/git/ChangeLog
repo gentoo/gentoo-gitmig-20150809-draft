@@ -1,10 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.134 2012/06/14 04:55:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.135 2012/06/14 04:57:27 vapier Exp $
 
   14 Jun 2012; Mike Frysinger <vapier@gentoo.org> git-1.7.9.1.ebuild,
   git-1.7.9.2.ebuild, git-1.7.9.3.ebuild, git-1.7.9.4.ebuild,
-  git-1.7.9.7.ebuild, git-1.7.9.ebuild, git-9999.ebuild:
+  git-1.7.9.7.ebuild, git-1.7.9.ebuild, git-1.7.10.ebuild,
+  git-1.7.10.2.ebuild, git-9999.ebuild:
   Add USE=nls support to control gettext requirement.
 
   14 Jun 2012; Mike Frysinger <vapier@gentoo.org> git-1.7.8.1.ebuild,
