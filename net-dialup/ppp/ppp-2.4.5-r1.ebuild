@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r1.ebuild,v 1.7 2011/07/17 11:54:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r1.ebuild,v 1.8 2012/06/14 01:48:45 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs linux-info pam
+inherit eutils multilib toolchain-funcs linux-info pam
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
