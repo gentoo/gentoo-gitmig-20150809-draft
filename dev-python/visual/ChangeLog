@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.57 2012/05/23 20:38:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.58 2012/06/14 18:43:35 jdhore Exp $
+
+  14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> visual-5.72-r2.ebuild:
+  marked x86 per bug 413815
 
   23 May 2012; Agostino Sarubbo <ago@gentoo.org> visual-5.72-r2.ebuild:
   Stable for amd64, wrt bug #413815

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9-r1.ebuild,v 1.2 2012/06/08 12:19:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9-r1.ebuild,v 1.3 2012/06/14 18:49:09 jdhore Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 LICENSE="LGPL-2.1 MPL-1.1 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="3ds"
 
 S="${WORKDIR}/${MY_P}"
