@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.3.1-r1.ebuild,v 1.1 2012/04/27 13:53:11 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-4.3.1-r1.ebuild,v 1.2 2012/06/14 11:38:14 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -44,6 +44,15 @@ pkg_setup() {
 		eerror "eselect gnat set ${CTARGET}-${Gnat_Name}-${SLOT}"
 		eerror "env-update && source /etc/profile"
 		eerror "and then emerge asis-gcc:${SLOT} again.."
+		echo
+		die
+	fi
+	if [[ -e ${LIBPATH}/adalib/libasis.a ]] ; then
+		echo
+		ewarn "Already installed asis appears to interfer with the build."
+		eerror "Please unmerge matching asis-gcc first and then resume the merge:"
+		eerror "emerge --unmerge asis-gcc:${SLOT} && emerge asis-gcc"
+		ewarn
 		echo
 		die
 	fi
