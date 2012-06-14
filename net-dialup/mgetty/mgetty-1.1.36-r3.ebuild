@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.7 2010/01/03 00:23:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.8 2012/06/14 01:46:13 zmedico Exp $
 
 EAPI=1
-inherit toolchain-funcs flag-o-matic eutils
+inherit toolchain-funcs flag-o-matic eutils user
 
 DESCRIPTION="fax and voice modem programs"
 SRC_URI="ftp://mgetty.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Jun15.tar.gz"

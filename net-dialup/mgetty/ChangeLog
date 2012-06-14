@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.100 2010/01/03 00:23:17 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.101 2012/06/14 01:46:13 zmedico Exp $
+
+  14 Jun 2012; Zac Medico <zmedico@gentoo.org> mgetty-1.1.36-r3.ebuild:
+  inherit user for enewgroup and enewuser
 
   03 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   mgetty-1.1.36-r3.ebuild:
