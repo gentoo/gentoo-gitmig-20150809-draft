@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/opus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.1 2011/11/19 16:16:02 lu_zero Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.2 2012/06/14 18:53:37 lu_zero Exp $
+
+*opus-0.9.14 (14 Jun 2012)
+
+  14 Jun 2012; Luca Barbato <lu_zero@gentoo.org> +opus-0.9.14.ebuild:
+  New version
 
 *opus-0.9.8 (19 Nov 2011)
 
