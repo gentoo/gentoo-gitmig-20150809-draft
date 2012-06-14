@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.15 2012/03/11 14:21:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.16 2012/06/14 19:45:46 xmw Exp $
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> daq-0.6.2.ebuild:
+  rekeyword ~ppc (bug 407795)
 
   11 Mar 2012; Joshua Kinard <kumba@gentoo.org> -daq-0.2.ebuild,
   -daq-0.3.ebuild, -daq-0.4.ebuild, -daq-0.6.1.ebuild, daq-0.6.2.ebuild:
