@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libtabe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/ChangeLog,v 1.16 2012/06/14 06:24:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/ChangeLog,v 1.17 2012/06/14 09:15:59 ago Exp $
+
+  14 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libtabe-0.2.6.1.2.ebuild:
+  Stable for amd64, wrt bug #418587
 
   14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libtabe-0.2.6.1.2.ebuild:
   marked x86 per bug 418587
