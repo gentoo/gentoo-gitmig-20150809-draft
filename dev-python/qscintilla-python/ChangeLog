@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.85 2012/05/23 04:47:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.86 2012/06/14 07:17:42 yngwin Exp $
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> qscintilla-python-2.4.5.ebuild:
+  Destabling to ~ia64 because last available stable qt will be masked pending
+  removal
 
   23 May 2012; Jeff Horelick <jdhore@gentoo.org>
   qscintilla-python-2.6.1.ebuild:

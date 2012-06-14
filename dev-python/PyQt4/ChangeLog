@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.184 2012/05/23 04:48:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.185 2012/06/14 07:22:35 yngwin Exp $
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> PyQt4-4.8.1.ebuild:
+  Destabling to ~ia64 because last available stable qt will be masked pending
+  removal
 
   23 May 2012; Jeff Horelick <jdhore@gentoo.org> PyQt4-4.9.1.ebuild:
   marked x86 per bug 412929
