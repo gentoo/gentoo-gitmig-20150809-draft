@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/numad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.1 2012/06/14 05:13:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.2 2012/06/14 05:28:06 cardoe Exp $
+
+  13 Jun 2012; Doug Goldstein <cardoe@gentoo.org> numad-0.5.ebuild:
+  Fix SRC_URL before it hits rsync
 
 *numad-9999 (13 Jun 2012)
 *numad-0.5 (13 Jun 2012)
