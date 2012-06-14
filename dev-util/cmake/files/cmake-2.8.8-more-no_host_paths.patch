@@ -47,7 +47,7 @@ diff -ruN cmake-2.8.8.orig/Modules/Platform/UnixPaths.cmake cmake-2.8.8/Modules/
    /usr/local /usr /
  
    # CMake install location
-@@ -44,43 +45,39 @@
+@@ -44,43 +45,41 @@
  
  # List common include file locations not under the common prefixes.
  LIST(APPEND CMAKE_SYSTEM_INCLUDE_PATH
@@ -78,6 +78,7 @@ diff -ruN cmake-2.8.8.orig/Modules/Platform/UnixPaths.cmake cmake-2.8.8/Modules/
 +  @GENTOO_PORTAGE_GCCLIBDIR@/gcc
 +  @GENTOO_PORTAGE_GCCLIBDIR@
 +  @GENTOO_PORTAGE_EPREFIX@usr/lib64
++  @GENTOO_PORTAGE_EPREFIX@usr/libx32
 +  @GENTOO_PORTAGE_EPREFIX@usr/lib32
 +  @GENTOO_PORTAGE_EPREFIX@usr/lib
 +  @GENTOO_PORTAGE_EPREFIX@lib
@@ -93,10 +94,12 @@ diff -ruN cmake-2.8.8.orig/Modules/Platform/UnixPaths.cmake cmake-2.8.8/Modules/
 +  @GENTOO_PORTAGE_GCCLIBDIR@/gcc
 +  @GENTOO_PORTAGE_GCCLIBDIR@
 +  @GENTOO_PORTAGE_EPREFIX@usr/lib64
++  @GENTOO_PORTAGE_EPREFIX@usr/libx32
 +  @GENTOO_PORTAGE_EPREFIX@usr/lib32
 +  @GENTOO_PORTAGE_EPREFIX@usr/lib
 +  @GENTOO_PORTAGE_EPREFIX@lib
-   /lib /usr/lib /usr/lib32 /usr/lib64
++  /lib /usr/lib /usr/lib32 /usr/lib64 /usr/libx32
+-  /lib /usr/lib /usr/lib32 /usr/lib64
    )
  
  LIST(APPEND CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES
