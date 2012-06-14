@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.103 2012/06/14 07:58:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.104 2012/06/14 16:50:38 yngwin Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
 # Since x11-libs/qt-* will no longer be available for sparc, we need
 # to mask the reverse dependencies
+dev-cpp/eigen examples
 media-sound/pulseaudio equalizer
 media-video/vlc skins
 
