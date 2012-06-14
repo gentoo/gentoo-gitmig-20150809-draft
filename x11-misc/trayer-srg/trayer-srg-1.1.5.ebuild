@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/trayer-srg-1.1.5.ebuild,v 1.1 2012/06/13 12:54:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/trayer-srg-1.1.5.ebuild,v 1.2 2012/06/14 00:18:04 xmw Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs vcs-snapshot
 
 DESCRIPTION="trayer fork with multi monitor support, cleaned up codebase and other fancy stuff"
 HOMEPAGE="https://github.com/sargon/trayer-srg"
