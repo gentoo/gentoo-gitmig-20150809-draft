@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.99.4.ebuild,v 1.6 2011/12/18 08:08:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.99.4.ebuild,v 1.7 2012/06/14 21:25:44 radhermit Exp $
 
 EAPI=2
 AUTOTOOLS_AUTO_DEPEND="no"
@@ -8,7 +8,7 @@ AUTOTOOLS_AUTO_DEPEND="no"
 inherit autotools eutils flag-o-matic java-pkg-2 java-vm-2
 
 DESCRIPTION="Cacao Java Virtual Machine"
-HOMEPAGE="http://cacaovm.org/"
+HOMEPAGE="http://www.cacaojvm.org/"
 SRC_URI="http://www.complang.tuwien.ac.at/cacaojvm/download/${P}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"

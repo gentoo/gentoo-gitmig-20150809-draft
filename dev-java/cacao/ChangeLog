@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cacao
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.21 2011/12/18 08:08:44 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.22 2012/06/14 21:25:44 radhermit Exp $
+
+  14 Jun 2012; Tim Harder <radhermit@gentoo.org> cacao-0.99.4.ebuild:
+  Update HOMEPAGE.
 
   18 Dec 2011; Ralph Sennhauser <sera@gentoo.org> cacao-0.99.4.ebuild:
   Fix dependency on ecj, eselect-ecj's PDEPEND doesn't guarantee it's
