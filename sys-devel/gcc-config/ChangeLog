@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.218 2012/06/10 04:03:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.219 2012/06/14 15:15:01 jer Exp $
+
+  14 Jun 2012; Jeroen Roovers <jer@gentoo.org> gcc-config-1.6.ebuild:
+  Stable for HPPA (bug #419399).
 
 *gcc-config-1.7.3 (10 Jun 2012)
 
