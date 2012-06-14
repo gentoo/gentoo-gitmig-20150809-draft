@@ -13,7 +13,7 @@
 --- lame-3.99.5/doc/html/Makefile.am
 +++ lame-3.99.5/doc/html/Makefile.am
 @@ -1,6 +1,6 @@
- ## $Id: lame-3.99.5-automake-2.12.patch,v 1.1 2012/06/14 02:08:30 radhermit Exp $
+ ## $Id: lame-3.99.5-automake-2.12.patch,v 1.2 2012/06/14 02:13:17 radhermit Exp $
  
 -AUTOMAKE_OPTIONS = foreign ansi2knr
 +AUTOMAKE_OPTIONS = foreign
@@ -23,7 +23,7 @@
 --- lame-3.99.5/doc/man/Makefile.am
 +++ lame-3.99.5/doc/man/Makefile.am
 @@ -1,6 +1,6 @@
- ## $Id: lame-3.99.5-automake-2.12.patch,v 1.1 2012/06/14 02:08:30 radhermit Exp $
+ ## $Id: lame-3.99.5-automake-2.12.patch,v 1.2 2012/06/14 02:13:17 radhermit Exp $
  
 -AUTOMAKE_OPTIONS = foreign ansi2knr
 +AUTOMAKE_OPTIONS = foreign
@@ -33,7 +33,7 @@
 --- lame-3.99.5/libmp3lame/i386/Makefile.am
 +++ lame-3.99.5/libmp3lame/i386/Makefile.am
 @@ -1,6 +1,6 @@
- ## $Id: lame-3.99.5-automake-2.12.patch,v 1.1 2012/06/14 02:08:30 radhermit Exp $
+ ## $Id: lame-3.99.5-automake-2.12.patch,v 1.2 2012/06/14 02:13:17 radhermit Exp $
  
 -AUTOMAKE_OPTIONS = foreign $(top_srcdir)/ansi2knr
 +AUTOMAKE_OPTIONS = foreign
