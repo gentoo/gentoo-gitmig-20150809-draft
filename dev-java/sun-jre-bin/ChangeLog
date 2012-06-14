@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.211 2012/05/07 11:58:18 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.212 2012/06/14 09:00:49 sera Exp $
+
+*sun-jre-bin-1.6.0.33 (14 Jun 2012)
+
+  14 Jun 2012; Ralph Sennhauser <sera@gentoo.org> +sun-jre-bin-1.6.0.33.ebuild:
+  Security bump. #421073
+  Add ia64 support.
 
   07 May 2012; Ralph Sennhauser <sera@gentoo.org> sun-jre-bin-1.6.0.31.ebuild,
   sun-jre-bin-1.6.0.32.ebuild:
