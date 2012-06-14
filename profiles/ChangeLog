@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6669 2012/06/14 17:00:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6670 2012/06/14 17:23:57 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> license_groups:
+  Include skype-4.0.0.7-copyright in EULA and
+  skype-4.0.0.7-third-party_attributions.txt in MISC-FREE.
 
   14 Jun 2012; Ben de Groot <yngwin@gentoo.org> package.mask:
   Add dev-embedded/qvfb to qt mask
