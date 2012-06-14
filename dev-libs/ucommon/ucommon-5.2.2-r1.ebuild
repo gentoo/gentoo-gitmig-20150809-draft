@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-5.2.1.ebuild,v 1.2 2012/05/04 18:35:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-5.2.2-r1.ebuild,v 1.1 2012/06/14 16:44:43 maksbotan Exp $
 
 EAPI="4"
 
@@ -23,6 +23,7 @@ DEPEND="virtual/pkgconfig
 
 DOCS=(README NEWS SUPPORT ChangeLog AUTHORS)
 PATCHES=( "${FILESDIR}"/disable_rtf_gen_doxy.patch )
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	local myconf=""
@@ -40,7 +41,6 @@ src_configure() {
 		${myconf}
 		--enable-atomics
 		--with-pkg-config
-		--enable-posix-timers
 	)
 	autotools-utils_src_configure
 }

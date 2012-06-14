@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.3 2012/05/04 18:35:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.4 2012/06/14 16:44:43 maksbotan Exp $
+
+*ucommon-5.2.2-r1 (14 Jun 2012)
+
+  14 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +ucommon-5.2.2-r1.ebuild,
+  -ucommon-5.2.1.ebuild, -ucommon-5.2.2.ebuild:
+  Fix bugs 416059 and 416043, thanks to slepnoga
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> ucommon-5.2.1.ebuild,
   ucommon-5.2.2.ebuild:
