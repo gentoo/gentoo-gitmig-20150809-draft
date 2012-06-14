@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.447 2012/06/13 20:39:22 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.448 2012/06/14 17:04:06 tove Exp $
 
   13 Jun 2012; Richard Yao <ryao@gentoo.org> binutils-2.22-r1.ebuild:
   Push out fix for build failure on FreeBSD (bug #347931) by Naohiro Aota and keyword ~amd64-fbsd
@@ -57,16 +57,16 @@
   Add fixes from upstream for ppc/hppa/s390x, and a hardened fix for static
   linking.
 
-  11 Dec 2011; RaÃºl Porcel <armin76@gentoo.org> binutils-2.21.1-r1.ebuild:
+  11 Dec 2011; Raúl Porcel <armin76@gentoo.org> binutils-2.21.1-r1.ebuild:
   sparc stable wrt #378485
 
   05 Dec 2011; Mike Frysinger <vapier@gentoo.org> Manifest:
   Update patch tarball digests to match published one #393233 by Jerome Kurtz.
 
   05 Dec 2011; Mike Frysinger <vapier@gentoo.org> binutils-2.21.1-r1.ebuild:
-  Fix building on s390x systems #391431 by RaÃºl Porcel.
+  Fix building on s390x systems #391431 by Raúl Porcel.
 
-  23 Nov 2011; Diego E. PettenÃ² <flameeyes@gentoo.org> binutils-2.22.ebuild:
+  23 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> binutils-2.22.ebuild:
   QA: make sure to depend on a patch(1) version that actually applies all the
   patches.
 
@@ -224,7 +224,7 @@
   +binutils-2.20.51.0.10.ebuild:
   Version bump #329023 by Arfrever Frehtes Taifersar Arahesis.
 
-  18 Jul 2010; RaÃºl Porcel <armin76@gentoo.org> binutils-2.20.1-r1.ebuild:
+  18 Jul 2010; Raúl Porcel <armin76@gentoo.org> binutils-2.20.1-r1.ebuild:
   sh/sparc stable wrt #298571
 
   11 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
@@ -313,7 +313,7 @@
   +binutils-2.20.51.0.5.ebuild:
   Version bump.
 
-  11 Jan 2010; RaÃºl Porcel <armin76@gentoo.org> binutils-2.19.1-r1.ebuild:
+  11 Jan 2010; Raúl Porcel <armin76@gentoo.org> binutils-2.19.1-r1.ebuild:
   arm stable
 
 *binutils-2.20.51.0.4 (18 Dec 2009)
@@ -332,7 +332,7 @@
   Version bump #293141.
 
   14 Nov 2009; Mike Frysinger <vapier@gentoo.org> binutils-2.20.ebuild:
-  Add fix from upstream for USE=multitarget #289756 by RafaÅ MuÅ¼yÅo.
+  Add fix from upstream for USE=multitarget #289756 by Rafał Mużyło.
 
 *binutils-2.20 (19 Oct 2009)
 
@@ -345,7 +345,7 @@
   +binutils-2.20.51.0.2.ebuild:
   Version bump.
 
-  14 Sep 2009; RaÃºl Porcel <armin76@gentoo.org> binutils-2.19.1-r1.ebuild:
+  14 Sep 2009; Raúl Porcel <armin76@gentoo.org> binutils-2.19.1-r1.ebuild:
   s390 stable
 
   09 Sep 2009; Mike Frysinger <vapier@gentoo.org> binutils-2.19.1-r1.ebuild:
@@ -412,7 +412,7 @@
   +binutils-2.19.51.0.6.ebuild:
   Version bump.
 
-  26 May 2009; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  26 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   binutils-2.19.51.0.5.ebuild:
   Update patchlevel to pick up the new patch to update ld(1) wrt
   --enable-new-dtags.
@@ -440,7 +440,7 @@
   14 Mar 2009; Mike Frysinger <vapier@gentoo.org>
   +binutils-2.19.1-r1.ebuild:
   Add strip fixes from upstream for #183725 by Harald van Dijk and #257783
-  by Alexey Shvetsov and RaÃºl Porcel.
+  by Alexey Shvetsov and Raúl Porcel.
 
 *binutils-2.19.51.0.3 (10 Mar 2009)
 
@@ -526,7 +526,7 @@
   07 Jul 2008; Markus Meier <maekke@gentoo.org> binutils-2.18-r3.ebuild:
   amd64 stable, bug #230593
 
-  07 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> binutils-2.18-r3.ebuild:
+  07 Jul 2008; Raúl Porcel <armin76@gentoo.org> binutils-2.18-r3.ebuild:
   alpha/ia64/sparc stable wrt security #230593
 
   07 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
@@ -585,7 +585,7 @@
   +binutils-2.18.50.0.3.ebuild:
   Version bump.
 
-  17 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> binutils-2.18-r1.ebuild:
+  17 Oct 2007; Raúl Porcel <armin76@gentoo.org> binutils-2.18-r1.ebuild:
   alpha/ia64/sparc stable wrt #195511
 
   16 Oct 2007; Christoph Mende <angelos@gentoo.org> binutils-2.18-r1.ebuild:
@@ -633,7 +633,7 @@
   +binutils-2.18.50.0.2.ebuild:
   Version bump.
 
-  26 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> binutils-2.17-r1.ebuild:
+  26 Sep 2007; Raúl Porcel <armin76@gentoo.org> binutils-2.17-r1.ebuild:
   sparc stable wrt #192258
 
   26 Sep 2007; Joshua Kinard <kumba@gentoo.org> binutils-2.17-r1.ebuild:
@@ -645,7 +645,7 @@
   16 Sep 2007; Christoph Mende <angelos@gentoo.org> binutils-2.17-r1.ebuild:
   Stable on amd64 wrt bug #192258
 
-  13 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> binutils-2.17-r1.ebuild:
+  13 Sep 2007; Raúl Porcel <armin76@gentoo.org> binutils-2.17-r1.ebuild:
   ia64/x86 stable wrt #192258
 
   12 Sep 2007; Mike Frysinger <vapier@gentoo.org>
@@ -697,7 +697,7 @@
   24 Jun 2007; Christoph Mende <angelos@gentoo.org> binutils-2.17.ebuild:
   Stable on amd64 wrt security bug 134112
 
-  24 Jun 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  24 Jun 2007; Piotr Jaroszyński <peper@gentoo.org>
   binutils-2.17.50.0.9.ebuild, binutils-2.17.50.0.10.ebuild,
   binutils-2.17.50.0.11.ebuild, binutils-2.17.50.0.13.ebuild,
   binutils-2.17.50.0.14.ebuild, binutils-2.17.50.0.15.ebuild:
@@ -709,7 +709,7 @@
   +binutils-2.17.50.0.17.ebuild:
   Version bump.
 
-  14 May 2007; Bryan Ãstergaard <kloeri@gentoo.org>
+  14 May 2007; Bryan Østergaard <kloeri@gentoo.org>
   binutils-2.17.50.0.16.ebuild:
   Add ~alpha keyword as .15 and newer fixes an ugly bug in ld on Alpha.
 
@@ -746,7 +746,7 @@
   +binutils-2.17.50.0.13.ebuild:
   Version bump.
 
-  13 Feb 2007; Bryan Ãstergaard <kloeri@gentoo.org> binutils-2.17.ebuild:
+  13 Feb 2007; Bryan Østergaard <kloeri@gentoo.org> binutils-2.17.ebuild:
   Stable on Alpha.
 
 *binutils-2.17.50.0.12 (28 Jan 2007)
@@ -828,7 +828,7 @@
   +binutils-2.17.50.0.3.ebuild:
   Version bump.
 
-  04 Jul 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  04 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
   binutils-2.16.1-r3.ebuild:
   Stable on alpha.
 
@@ -841,7 +841,7 @@
   27 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> binutils-2.17.ebuild:
   Keyworded ~sparc
 
-  27 Jun 2006; Diego PettenÃ² <flameeyes@gentoo.org> binutils-2.17.ebuild:
+  27 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> binutils-2.17.ebuild:
   Add ~x86-fbsd keyword.
 
   25 Jun 2006; Markus Rothe <corsair@gentoo.org> binutils-2.17.ebuild:
@@ -894,11 +894,11 @@
   17 Apr 2006; Mike Frysinger <vapier@gentoo.org> +binutils-2.16.92.ebuild:
   Version bump.
 
-  11 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  11 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   binutils-2.16.1-r2.ebuild:
   Add ~x86-fbsd keyword.
 
-  30 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org> binutils-2.15.ebuild:
+  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> binutils-2.15.ebuild:
   Add ~x86-fbsd keyword to binutils 2.15 that has FreeBSD patches.
 
 *binutils-2.16.91.0.7 (18 Mar 2006)
@@ -1018,11 +1018,11 @@
   binutils-2.16-r1.ebuild:
   Added ~ppc64 to KEYWORDS
 
-  29 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  29 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   binutils-2.14.90.0.8-r3.ebuild:
   Stable on ia64, bug 91398.
 
-  29 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  29 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   binutils-2.14.90.0.8-r3.ebuild:
   Stable on alpha, bug 91398.
 
@@ -1380,7 +1380,7 @@
   binutils-2.14.90.0.8-r2.ebuild:
   added filter-flags for freduce-all-givs (bug id 27456)
 
-  03 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   binutils-2.14.90.0.8-r1.ebuild:
   Stable on alpha.
 
