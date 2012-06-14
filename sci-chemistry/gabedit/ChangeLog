@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gabedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.15 2012/05/04 07:02:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.16 2012/06/14 10:42:18 jlec Exp $
+
+  14 Jun 2012; Justin Lecher <jlec@gentoo.org> gabedit-2.4.2.ebuild:
+  Add gold underlinking patch
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gabedit-2.3.6.ebuild,
   gabedit-2.4.0.ebuild, gabedit-2.4.2.ebuild:
