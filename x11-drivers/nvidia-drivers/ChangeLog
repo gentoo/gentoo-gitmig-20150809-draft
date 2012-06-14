@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.354 2012/06/08 12:02:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.355 2012/06/14 05:40:51 cardoe Exp $
+
+*nvidia-drivers-295.59 (13 Jun 2012)
+*nvidia-drivers-173.14.35 (13 Jun 2012)
+
+  13 Jun 2012; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-173.14.35.ebuild, +nvidia-drivers-295.59.ebuild:
+  Bump to 295.59 for DPMS blanking fixes with DisplayPort and new hardware
+  support. Bump 173.14.35 to fix libGL.so loading in 32-bit X servers.
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   nvidia-drivers-173.14.34.ebuild:
