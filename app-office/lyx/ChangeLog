@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.265 2012/06/08 15:45:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.266 2012/06/14 07:15:34 yngwin Exp $
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> lyx-1.6.10.ebuild,
+  lyx-2.0.1.ebuild, lyx-2.0.2.ebuild, lyx-2.0.3.ebuild:
+  Destabling to ~ia64 because last available stable qt will be masked pending
+  removal
 
   08 Jun 2012; Julian Ospald <hasufell@gentoo.org> lyx-1.6.10.ebuild,
   lyx-2.0.1.ebuild, lyx-2.0.2.ebuild, lyx-2.0.3.ebuild:
