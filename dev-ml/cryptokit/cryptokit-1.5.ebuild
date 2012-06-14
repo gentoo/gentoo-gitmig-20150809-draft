@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.5.ebuild,v 1.3 2012/06/08 12:10:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.5.ebuild,v 1.4 2012/06/14 17:51:45 xmw Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://forge.ocamlcore.org/projects/cryptokit/"
 SRC_URI="http://forge.ocamlcore.org/frs/download.php/639/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="zlib"
 
 DEPEND="zlib? ( >=sys-libs/zlib-1.1 )"
