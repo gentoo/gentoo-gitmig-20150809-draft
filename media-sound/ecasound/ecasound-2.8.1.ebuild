@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.8.1.ebuild,v 1.3 2012/05/05 08:22:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.8.1.ebuild,v 1.4 2012/06/14 05:55:53 radhermit Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -38,8 +38,11 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
-	use python && sed -i -e "s:\$(ecasoundc_libs):\0 $(python_get_library -l):" \
-		pyecasound/Makefile.am || die "sed failed"
+
+	if use python ; then
+		sed -i -e "s:\$(ecasoundc_libs):\0 $(python_get_library -l):" \
+			pyecasound/Makefile.am || die "sed failed"
+	fi
 
 	eautoreconf
 }
@@ -84,7 +87,7 @@ src_install() {
 		dodoc Documentation/programmers_guide/ecasound_programmers_guide.txt || die
 	fi
 
-	use static-libs || find "${ED}" -name '*.la' -exec rm -f '{}' +
+	prune_libtool_files
 }
 
 pkg_postinst() {
