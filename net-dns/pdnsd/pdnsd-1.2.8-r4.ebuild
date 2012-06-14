@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.8-r4.ebuild,v 1.2 2012/02/15 18:26:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.8-r4.ebuild,v 1.3 2012/06/14 02:20:57 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit user
 
 DESCRIPTION="Proxy DNS server with permanent caching"
 HOMEPAGE="http://www.phys.uu.nl/~rombouts/pdnsd.html"

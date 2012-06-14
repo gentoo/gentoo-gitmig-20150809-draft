@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/rbldnsd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.18 2011/04/04 14:13:29 c1pher Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.19 2012/06/14 02:21:49 zmedico Exp $
+
+  14 Jun 2012; Zac Medico <zmedico@gentoo.org> rbldnsd-0.996b.ebuild:
+  inherit user for enewgroup and enewuser
 
   04 Apr 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
   Update metadata to reflect Michael Orlitzky as maintainer w/ me as his
@@ -74,4 +77,3 @@
   +files/example, +files/initd, +metadata.xml, +rbldnsd-0.995.ebuild:
   Initial commit to the tree. This closes bug #39975. Thanks to Martin
   Hierling for the initial ebuild.
-

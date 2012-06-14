@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996b.ebuild,v 1.7 2010/01/14 06:51:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996b.ebuild,v 1.8 2012/06/14 02:21:49 zmedico Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="a DNS daemon which is designed to serve DNSBL zones"
 HOMEPAGE="http://www.corpit.ru/mjt/rbldnsd.html"

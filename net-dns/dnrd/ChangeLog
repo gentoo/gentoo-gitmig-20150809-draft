@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnrd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.14 2008/10/15 10:20:11 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.15 2012/06/14 02:05:55 zmedico Exp $
+
+  14 Jun 2012; Zac Medico <zmedico@gentoo.org> dnrd-2.20.3-r1.ebuild:
+  inherit user for enewgroup and enewuser
 
 *dnrd-2.20.3-r1 (15 Oct 2008)
 
@@ -71,4 +74,3 @@
   +files/dnrd.conf, +dnrd-2.17.2.ebuild:
   Initial import into the tree. This closes bug #56378. Thanks to initial ebuild
   submission by Natanael Copa <mlists@tanael.org>.
-

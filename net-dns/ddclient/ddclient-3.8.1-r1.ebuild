@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.8.1-r1.ebuild,v 1.1 2011/08/13 00:47:23 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.8.1-r1.ebuild,v 1.2 2012/06/14 02:02:30 zmedico Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Perl updater client for dynamic DNS services"
 HOMEPAGE="http://ddclient.sourceforge.net/"

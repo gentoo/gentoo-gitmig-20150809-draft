@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.16.ebuild,v 1.5 2012/05/21 09:54:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.16.ebuild,v 1.6 2012/06/14 02:23:04 zmedico Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
-inherit eutils flag-o-matic python
+inherit eutils flag-o-matic python user
 
 DESCRIPTION="A validating, recursive and caching DNS resolver"
 HOMEPAGE="http://unbound.net/"

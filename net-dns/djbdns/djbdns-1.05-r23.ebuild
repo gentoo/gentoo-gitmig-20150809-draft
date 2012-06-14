@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r23.ebuild,v 1.9 2012/03/24 09:26:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r23.ebuild,v 1.10 2012/06/14 02:04:37 zmedico Exp $
 
 IUSE="doc ipv6 selinux static"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs user
 
 DESCRIPTION="Excellent high-performance DNS services"
 HOMEPAGE="http://cr.yp.to/djbdns.html"

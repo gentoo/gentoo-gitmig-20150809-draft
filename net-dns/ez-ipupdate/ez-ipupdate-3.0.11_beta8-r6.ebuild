@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r6.ebuild,v 1.3 2011/01/23 20:21:09 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8-r6.ebuild,v 1.4 2012/06/14 02:09:47 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils user
 
 PATCH_VERSION="10"
 MY_PV="${PV/_beta/b}"

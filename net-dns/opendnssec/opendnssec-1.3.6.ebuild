@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.6.ebuild,v 1.1 2012/02/22 17:06:27 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.6.ebuild,v 1.2 2012/06/14 02:15:19 zmedico Exp $
 
 EAPI=4
 
 MY_P="${P/_}"
 PKCS11_IUSE="+softhsm opensc external-hsm"
-inherit base autotools multilib
+inherit base autotools multilib user
 
 DESCRIPTION="An open-source turn-key solution for DNSSEC"
 HOMEPAGE="http://www.opendnssec.org/"

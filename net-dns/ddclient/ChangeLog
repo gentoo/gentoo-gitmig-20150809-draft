@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.56 2012/03/08 21:24:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.57 2012/06/14 02:02:30 zmedico Exp $
+
+  14 Jun 2012; Zac Medico <zmedico@gentoo.org> ddclient-3.7.3-r1.ebuild,
+  ddclient-3.8.0.ebuild, ddclient-3.8.1-r1.ebuild, ddclient-3.8.1-r2.ebuild,
+  ddclient-3.8.1-r3.ebuild, ddclient-3.8.1-r4.ebuild, ddclient-3.8.1.ebuild:
+  inherit user for enewgroup and enewuser
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> ddclient-3.8.1-r4.ebuild:
   Marking ddclient-3.8.1-r4 ppc64 for bug 394571

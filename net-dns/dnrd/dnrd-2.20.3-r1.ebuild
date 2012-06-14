@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.20.3-r1.ebuild,v 1.1 2008/10/15 10:20:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.20.3-r1.ebuild,v 1.2 2012/06/14 02:05:55 zmedico Exp $
 
-inherit autotools eutils
+inherit autotools eutils user
 
 DESCRIPTION="A caching DNS proxy server"
 HOMEPAGE="http://dnrd.sourceforge.net/"
