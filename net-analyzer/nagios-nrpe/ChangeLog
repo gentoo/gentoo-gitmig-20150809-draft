@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.78 2012/06/13 14:59:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.79 2012/06/14 06:02:46 jdhore Exp $
+
+  14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> nagios-nrpe-2.13-r2.ebuild:
+  marked x86 per bug 397603
 
   13 Jun 2012; Jeroen Roovers <jer@gentoo.org> nagios-nrpe-2.13-r2.ebuild:
   Stable for HPPA (bug #397603).
