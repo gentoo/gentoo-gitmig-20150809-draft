@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.62 2012/01/21 16:34:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.63 2012/06/14 14:28:42 xmw Exp $
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> laptop-mode-tools-1.60-r1.ebuild:
+  ppc stable (bug 398083)
 
   21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   laptop-mode-tools-1.60-r1.ebuild:
