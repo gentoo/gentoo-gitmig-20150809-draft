@@ -1,6 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.102 2012/05/31 01:14:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.103 2012/06/14 07:58:34 yngwin Exp $
+
+# Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
+# Since x11-libs/qt-* will no longer be available for sparc, we need
+# to mask the reverse dependencies
+media-sound/pulseaudio equalizer
+media-video/vlc skins
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)
