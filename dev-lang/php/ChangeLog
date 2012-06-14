@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.599 2012/06/06 16:50:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.600 2012/06/14 11:43:14 naota Exp $
+
+  14 Jun 2012; Naohiro Aota <naota@gentoo.org> php-5.3.14_rc2.ebuild,
+  php-5.4.4_rc2.ebuild:
+  Add ~x86-fbsd. #364139
 
   06 Jun 2012; Ole Markus With <olemarkus@gentoo.org> -php-5.3.10.ebuild:
   Removing old 5.3 ebuild
