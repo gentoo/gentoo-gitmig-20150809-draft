@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/sendpage
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.11 2008/12/13 13:35:32 mrness Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.12 2012/06/14 01:50:05 zmedico Exp $
+
+  14 Jun 2012; Zac Medico <zmedico@gentoo.org> sendpage-1.1.0-r1.ebuild:
+  inherit user for enewgroup and enewuser
 
   13 Dec 2008; Alin Năstac <mrness@gentoo.org> sendpage-1.1.0-r1.ebuild:
   Fix collision with net-misc/hylafax (#248091).
@@ -58,4 +61,3 @@
   sendpage-0.9.14.ebuild:
   ebuild submitted by Russell Adams <rladams@kelsey-seybold.com> in bug 19405;
   cleaned up
-
