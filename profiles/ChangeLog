@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6663 2012/06/13 19:36:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6664 2012/06/14 08:16:36 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Mask <qt-*-4.7.3, because of security vulnerabilities, bug #335730, #335734,
+  #382171
 
   13 Jun 2012; Torsten Veller <tove@gentoo.org> package.mask:
   Unmask dev-lang/perl-5.16.0 and ExtUtils-ParseXS-3*
