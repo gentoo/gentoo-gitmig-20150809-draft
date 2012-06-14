@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.89 2012/05/17 16:42:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.90 2012/06/14 07:12:40 yngwin Exp $
+
+  14 Jun 2012; Ben de Groot <yngwin@gentoo.org> strigi-0.7.7.ebuild:
+  Destabling to ~ia64 because last available stable qt will be masked pending
+  removal
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> strigi-0.7.7-r1.ebuild:
   keyword ~amd64-fbsd
