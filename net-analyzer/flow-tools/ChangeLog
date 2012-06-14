@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.57 2012/06/07 21:59:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.58 2012/06/14 04:28:37 jdhore Exp $
+
+  14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> flow-tools-0.68.5.1-r1.ebuild:
+  marked x86 per bug 419211
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> flow-tools-0.68.5.1-r1.ebuild:
   Marking flow-tools-0.68.5.1-r1 ppc for bug 419211
