@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.10.ebuild,v 1.1 2011/05/26 15:31:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.10.ebuild,v 1.2 2012/06/14 01:43:16 zmedico Exp $
 
 EAPI="2"
 
-inherit eutils multilib pam autotools libtool
+inherit eutils multilib pam autotools libtool user
 
 DESCRIPTION="Highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${PN}-server-${PV}.tar.gz"
