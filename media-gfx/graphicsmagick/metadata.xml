@@ -13,6 +13,7 @@
 </longdescription>
 <use>
   <flag name='fpx'>Enable FlashPix support with <pkg>media-libs/libfpx</pkg></flag>
+  <flag name='gs'>Enable ghostscript support</flag>
   <flag name='modules'>Compile graphicsmagick with dynamically loadable modules</flag>
   <flag name='q16'>Set storage quantum size to 16 (~2*memory)</flag>
   <flag name='q32'>Set storage quantum size to 32 (~5*memory)</flag>
