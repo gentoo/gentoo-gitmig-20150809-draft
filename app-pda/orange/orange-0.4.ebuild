@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.4.ebuild,v 1.5 2012/06/15 08:45:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.4.ebuild,v 1.6 2012/06/15 08:48:27 ssuominen Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="static-libs"
 
 RDEPEND="|| ( app-pda/synce-core dev-libs/libsynce )
 	>=app-pda/dynamite-0.1.1
-	>=app-arch/unshield-0.5.1
+	>=app-arch/unshield-0.6
 	sys-apps/file
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
