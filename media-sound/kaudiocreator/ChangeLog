@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kaudiocreator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaudiocreator/ChangeLog,v 1.8 2012/06/14 14:10:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaudiocreator/ChangeLog,v 1.9 2012/06/15 11:08:06 ago Exp $
+
+  15 Jun 2012; Agostino Sarubbo <ago@gentoo.org> kaudiocreator-1.3.ebuild:
+  Stable for amd64, wrt bug #420455
 
   14 Jun 2012; Michael Palimaka <kensington@gentoo.org>
   kaudiocreator-1.3.ebuild:
