@@ -1,14 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.13.ebuild,v 1.1 2011/02/03 20:27:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-12.04.4.ebuild,v 1.1 2012/06/15 18:13:13 ulm Exp $
 
 EAPI=4
 
 inherit elisp
 
+MY_P=${PN}-${PV%.*}-${PV##*.}
 DESCRIPTION="Emacs Speaks Statistics"
 HOMEPAGE="http://ess.r-project.org/"
-SRC_URI="http://ess.r-project.org/downloads/ess/${P}.tgz"
+SRC_URI="http://ess.r-project.org/downloads/ess/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,11 +20,11 @@ DEPEND="app-text/texi2html
 	virtual/latex-base"
 RDEPEND=""
 
+S="${WORKDIR}/${MY_P}"
 SITEFILE="50${PN}-gentoo.el"
 
-# This is NOT redundant, elisp.eclass redefines src_compile.
 src_compile() {
-	emake
+	default
 }
 
 src_install() {
