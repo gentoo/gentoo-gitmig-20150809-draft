@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.42 2012/06/15 09:25:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.43 2012/06/15 09:36:46 ago Exp $
+
+  15 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libzen-0.4.26.ebuild:
+  Stable for amd64, wrt bug #420725
 
   15 Jun 2012; Tim Harder <radhermit@gentoo.org> libzen-0.4.26.ebuild,
   libzen-0.4.27.ebuild:
