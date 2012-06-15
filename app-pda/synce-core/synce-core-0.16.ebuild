@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16.ebuild,v 1.3 2012/06/15 08:54:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16.ebuild,v 1.4 2012/06/15 09:17:46 ssuominen Exp $
 
 EAPI=4
 
@@ -19,14 +19,18 @@ IUSE="python static-libs"
 
 # AC_PATH_PROG -> pppd -> net-dialup/ppp
 # AC_PATH_PROG -> ifconfig -> sys-apps/net-tools
-RDEPEND=">=dev-libs/dbus-glib-0.98
+RDEPEND="!app-pda/synce-connector
+	>=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.28
 	!dev-libs/librapi2
 	!dev-libs/libsynce
 	net-dialup/ppp
 	sys-apps/net-tools
 	|| ( >=sys-fs/udev-171-r6[gudev] <sys-fs/udev-171[extras] )
-	python? ( >=dev-python/pyrex-0.9.6 )"
+	python? (
+		>=dev-python/pyrex-0.9.6
+		dev-python/python-gudev
+		)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -42,6 +46,8 @@ src_prepare() {
 	local dhclient=true
 	type -P dhclient >/dev/null && dhclient=dhclient
 	sed -i -e "s:dhclient:${dhclient}:" configure || die
+
+	use python && python_convert_shebangs -r 2 .
 }
 
 src_configure() {
