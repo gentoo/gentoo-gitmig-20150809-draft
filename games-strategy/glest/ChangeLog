@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/glest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.31 2012/06/05 00:58:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.32 2012/06/15 15:52:01 mr_bones_ Exp $
+
+  15 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> glest-3.2.2.ebuild:
+  add multiprocessing for makeopts_jobs
 
   05 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> glest-3.2.2.ebuild:
   use makeopts_jobs

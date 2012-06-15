@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.11 2012/06/05 00:58:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.12 2012/06/15 15:52:01 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils autotools wxwidgets games
+inherit eutils multiprocessing autotools wxwidgets games
 
 DESCRIPTION="Cross-platform 3D realtime strategy game"
 HOMEPAGE="http://www.glest.org/"
