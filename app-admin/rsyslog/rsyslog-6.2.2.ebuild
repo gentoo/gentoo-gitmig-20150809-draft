@@ -1,23 +1,27 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.8.ebuild,v 1.6 2012/06/02 09:30:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-6.2.2.ebuild,v 1.1 2012/06/15 11:05:25 ultrabug Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-utils eutils systemd
 
-DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
+DESCRIPTION="An enhanced multi-threaded syslogd with database support and more"
 HOMEPAGE="http://www.rsyslog.com/"
 SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
 	zeromq?	( https://github.com/aggregateknowledge/rsyslog-zeromq/tarball/44b551abc29dd5b541884bd51b45b413855a93d8 -> ${PN}-zeromq.tar.gz )"
 
 LICENSE="GPL-3 LGPL-3 Apache-2.0"
-KEYWORDS="~amd64 ~arm ~hppa ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="dbi debug doc extras kerberos mysql oracle postgres relp snmp ssl static-libs zeromq zlib"
 
-RDEPEND="dbi? ( dev-db/libdbi )
+RDEPEND="
+	dev-libs/libee
+	dev-libs/libestr
+	dev-libs/liblognorm
+	dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
 	kerberos? ( virtual/krb5 )
 	mysql? ( virtual/mysql )
@@ -31,7 +35,7 @@ RDEPEND="dbi? ( dev-db/libdbi )
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-BRANCH="5-stable"
+BRANCH="6-stable"
 
 # need access to certain device nodes
 RESTRICT="test"
@@ -44,16 +48,16 @@ DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
 
 src_prepare() {
 	# Maintainer notes:
-	# ZeroMQ support, for now it is done by hand until upstream process bug.
-	# Bugzilla : http://bugzilla.adiscon.com/show_bug.cgi?id=277
+	# ZeroMQ support,upstream bug #277
 	if use zeromq; then
 		local ZEROPATH=${WORKDIR}/aggregateknowledge-rsyslog-zeromq-44b551a
-		epatch ${ZEROPATH}/rsyslog-zeromq.patch
+		epatch "${FILESDIR}/${BRANCH}/rsyslog6-zeromq.patch"
 		cp -r ${ZEROPATH}/{i,o}mzeromq "${S}/plugins"
 	fi
 
 	# Don't force '-g' CFLAG
-	sed -i 's/CFLAGS="\(.*\) -g"/CFLAGS="\1"/g' configure.ac || die
+	sed -e 's/CFLAGS="\(.*\) -g"/CFLAGS="\1"/g' -i configure.ac || die
+
 	autotools-utils_src_prepare
 }
 
@@ -64,43 +68,46 @@ src_configure() {
 	# * About the java GUI:
 	#   The maintainer says there is no real installation support
 	#   for the java GUI, so we disable it for now.
+	# * mongodb : no plugin in the sources, we'll wait for bug #330 upstream
 	local myeconfargs=(
 		--disable-gui
 		--disable-rfc3195
-		--enable-largefile
-		--enable-unlimited-select
 		--enable-imdiag
 		--enable-imfile
 		--enable-impstats
 		--enable-imtemplate
 		--enable-imptcp
+		--enable-largefile
 		--enable-mail
+		--enable-mmnormalize
 		--enable-omprog
 		--enable-omstdout
 		--enable-omtemplate
-		--enable-omdbalerting
+		--disable-omdbalerting
 		--enable-omuxsock
 		--enable-pmlastmsg
 		--enable-pmrfc3164sd
 		--enable-pmcisconames
 		--enable-pmaixforwardedfrom
 		--enable-pmsnare
-		$(use_enable extras omudpspoof)
-		$(use_enable zlib)
-		$(use_enable mysql)
+		--enable-sm_cust_bindcdr
+		--enable-unlimited-select
 		$(use_enable dbi libdbi)
-		$(use_enable postgres pgsql)
-		$(use_enable oracle oracle)
-		$(use_enable ssl gnutls)
-		$(use_enable kerberos gssapi-krb5)
-		$(use_enable relp)
-		$(use_enable snmp)
-		$(use_enable snmp mmsnmptrapd)
 		$(use_enable debug)
 		$(use_enable debug rtinst)
 		$(use_enable debug diagtools)
 		$(use_enable debug memcheck)
 		$(use_enable debug valgrind)
+		$(use_enable extras omudpspoof)
+		$(use_enable kerberos gssapi-krb5)
+		$(use_enable mysql)
+		$(use_enable oracle)
+		$(use_enable postgres pgsql)
+		$(use_enable relp)
+		$(use_enable snmp)
+		$(use_enable snmp mmsnmptrapd)
+		$(use_enable ssl gnutls)
+		$(use_enable zlib)
 	)
 
 	use zeromq && myeconfargs=(
