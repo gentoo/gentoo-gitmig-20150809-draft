@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.33 2012/06/14 05:19:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.34 2012/06/15 16:31:58 cardoe Exp $
 
 EAPI=4
 
@@ -130,7 +130,7 @@ VIRTNET_CONFIG_CHECK="
 "
 
 pkg_setup() {
-	use python && python_set_active_version 2
+	python_set_active_version 2
 	python_pkg_setup
 
 	enewgroup qemu 77
