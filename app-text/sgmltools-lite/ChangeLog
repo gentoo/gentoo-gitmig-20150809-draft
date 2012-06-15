@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.54 2012/03/29 21:20:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.55 2012/06/15 21:13:50 ago Exp $
+
+  15 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  sgmltools-lite-3.0.3-r11.ebuild:
+  Stable for amd64, wrt bug #410193
 
 *sgmltools-lite-3.0.3-r11 (29 Mar 2012)
 
