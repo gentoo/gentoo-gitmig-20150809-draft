@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/gargoyle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.17 2012/06/07 05:51:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.18 2012/06/15 15:40:37 mr_bones_ Exp $
+
+  15 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> gargoyle-2011.1.ebuild:
+  games goes last on inherit line
 
   07 Jun 2012; Mike Frysinger <vapier@gentoo.org> gargoyle-2011.1.ebuild:
   Inherit new multiprocessing for makeopts_jobs.

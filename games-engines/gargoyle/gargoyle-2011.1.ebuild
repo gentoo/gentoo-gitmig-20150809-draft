@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-2011.1.ebuild,v 1.2 2012/06/07 05:51:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-2011.1.ebuild,v 1.3 2012/06/15 15:40:37 mr_bones_ Exp $
 
 # Regarding licenses: libgarglk is licensed under the GPLv2. Bundled
 # interpreters are licensed under GPLv2, BSD or MIT license, except:
@@ -10,8 +10,7 @@
 # don't apply. (Fonts are installed through dependencies instead.)
 
 EAPI=3
-
-inherit eutils games multiprocessing
+inherit eutils multiprocessing games
 
 DESCRIPTION="An Interactive Fiction (IF) player supporting all major formats"
 HOMEPAGE="http://ccxvii.net/gargoyle/"
