@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.2.0-r1.ebuild,v 1.1 2012/02/06 12:28:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.4.0.ebuild,v 1.1 2012/06/15 20:41:10 pacho Exp $
 
 EAPI="4"
 
 inherit base mono
 
 DESCRIPTION="Community-developed plugins for the Banshee media player"
-HOMEPAGE="http://banshee.fm/"
+HOMEPAGE="http://banshee.fm/download/extensions/"
 SRC_URI="http://download.banshee-project.org/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="MIT"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc lastfmfingerprint lirc lyrics mirage telepathy zeitgeist"
 
 DEPEND=">=dev-lang/mono-2.0
-	>=media-sound/banshee-2.1.0[web]
+	>=media-sound/banshee-2.4.0[web]
 	>=gnome-base/gconf-2.0
 	dev-dotnet/gconf-sharp:2
 	doc? ( >=app-text/gnome-doc-utils-0.17.3 )
@@ -45,6 +45,8 @@ RDEPEND="${DEPEND}
 	!media-plugins/banshee-lyrics
 	!media-plugins/banshee-mirage"
 
+DOCS=( AUTHORS NEWS README )
+
 src_configure() {
 	# Disable ClutterFlow as we don't have clutter-sharp and co in tree
 	# Disable UbuntuOneMusicStore as we don't have ubuntuone-sharp
@@ -62,7 +64,7 @@ src_configure() {
 		--disable-clutterflow --disable-appindicator --disable-openvp
 		--enable-ampache --enable-karaoke --enable-jamendo
 		--enable-randombylastfm --enable-albumartwriter
-		--enable-duplicatesongdetector"
+		--enable-duplicatesongdetector --enable-foldersync"
 
 	econf \
 		$(use_enable doc user-help) \
@@ -78,6 +80,5 @@ src_configure() {
 
 src_install() {
 	base_src_install
-	find "${D}" -name "*.la" -delete || die "remove of la files failed"
-	dodoc AUTHORS NEWS README
+	prune_libtool_files --all
 }
