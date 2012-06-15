@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6673 2012/06/15 15:00:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6674 2012/06/15 17:00:30 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  -hardened/linux/x86/10.0/deprecated,
+  -hardened/linux/x86/10.0/desktop/deprecated,
+  -hardened/linux/x86/10.0/desktop/parent,
+  -hardened/linux/x86/10.0/developer/deprecated,
+  -hardened/linux/x86/10.0/developer/parent,
+  -hardened/linux/x86/10.0/make.defaults, -hardened/linux/x86/10.0/parent,
+  -hardened/linux/x86/10.0/server/deprecated,
+  -hardened/linux/x86/10.0/server/parent:
+  Remove ancient deprecated hardened 10.0 profiles from x86 as well
 
   15 Jun 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove libnl-3.2.10 mask.
