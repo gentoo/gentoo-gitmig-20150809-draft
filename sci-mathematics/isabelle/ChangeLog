@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/isabelle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.4 2012/05/30 00:45:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.5 2012/06/15 14:10:40 gienah Exp $
+
+  15 Jun 2012; Mark Wright <gienah@gentoo.org>
+  +files/isabelle-2012-redundant-equations-in-function-definitions-error.patch,
+  +files/isabelle-2012-signal-handling.patch, isabelle-2012.ebuild:
+  Patch signal handling:
+  http://article.gmane.org/gmane.science.mathematics.logic.isabelle.devel/2732
+  Change "Ignoring redundant equation" warning to an error to avoid proofs being
+  undertaken on the basis of a mistaken definition:
+  http://article.gmane.org/gmane.science.mathematics.logic.isabelle.devel/2780
 
 *isabelle-2012 (30 May 2012)
 *isabelle-2011.1-r1 (30 May 2012)

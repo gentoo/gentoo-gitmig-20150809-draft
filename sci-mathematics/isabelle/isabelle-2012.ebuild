@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2012.ebuild,v 1.1 2012/05/30 00:45:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2012.ebuild,v 1.2 2012/06/15 14:10:40 gienah Exp $
 
 EAPI="4"
 
@@ -71,6 +71,10 @@ pkg_setup() {
 src_prepare() {
 	java-pkg-2_src_prepare
 	epatch "${FILESDIR}/${PN}-2012-gentoo-settings.patch"
+	# http://article.gmane.org/gmane.science.mathematics.logic.isabelle.devel/2732
+	epatch "${FILESDIR}/${PN}-2012-signal-handling.patch"
+	# http://article.gmane.org/gmane.science.mathematics.logic.isabelle.devel/2780
+	epatch "${FILESDIR}/${PN}-2012-redundant-equations-in-function-definitions-error.patch"
 	polymlver=$(poly -v | cut -d' ' -f2)
 	polymlarch=$(poly -v | cut -d' ' -f9 | cut -d'-' -f1)
 	sed -e "s@5.4.0@${polymlver}@g" \
