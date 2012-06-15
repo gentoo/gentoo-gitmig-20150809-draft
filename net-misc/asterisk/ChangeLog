@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.398 2012/06/06 10:07:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.399 2012/06/15 11:00:19 chainsaw Exp $
+
+*asterisk-10.5.1 (15 Jun 2012)
+
+  15 Jun 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-10.4.1.ebuild,
+  -asterisk-10.5.0.ebuild, +asterisk-10.5.1.ebuild:
+  Security upgrade on the 10.5 branch addressing a remote crash vulnerability
+  in the SCCP channel driver, CVE-2012-3553/AST-2012-009. Remove vulnerable
+  ebuilds.
 
 *asterisk-10.5.0 (06 Jun 2012)
 *asterisk-1.8.13.0 (06 Jun 2012)
