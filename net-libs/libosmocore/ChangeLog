@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/libosmocore
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/ChangeLog,v 1.1 2012/06/15 13:51:23 chithanh Exp $
+
+*libosmocore-0.4.2 (15 Jun 2012)
+*libosmocore-9999 (15 Jun 2012)
+
+  15 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libosmocore-0.4.2.ebuild, +libosmocore-9999.ebuild, +metadata.xml:
+  Initial commit, based in part on ebuild by Peter Stuge.
+
