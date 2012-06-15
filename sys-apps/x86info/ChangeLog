@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/x86info
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.35 2012/03/30 13:20:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.36 2012/06/15 11:59:22 jlec Exp $
+
+  15 Jun 2012; Justin Lecher <jlec@gentoo.org> x86info-1.30.ebuild,
+  metadata.xml:
+  Use linux-info.eclas instead of elog
 
   30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -x86info-1.21.ebuild,
   -x86info-1.24-r1.ebuild, -x86info-1.24-r2.ebuild, -x86info-1.25.ebuild,
