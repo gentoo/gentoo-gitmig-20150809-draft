@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/live
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.155 2012/05/09 18:42:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.156 2012/06/15 13:31:47 grobian Exp $
+
+  15 Jun 2012; Fabian Groffen <grobian@gentoo.org> live-2012.04.21.ebuild:
+  Fix building shared library on Darwin
 
   09 May 2012; Fabian Groffen <grobian@gentoo.org> live-2012.04.21.ebuild:
   Fix compilation on Solaris as per instructions in liveMedia/include/Locale.hh

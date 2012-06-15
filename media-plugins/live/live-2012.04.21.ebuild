@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2012.04.21.ebuild,v 1.2 2012/05/09 18:42:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2012.04.21.ebuild,v 1.3 2012/06/15 13:31:47 grobian Exp $
 
 EAPI=3
 inherit flag-o-matic eutils toolchain-funcs multilib
@@ -61,6 +61,7 @@ src_prepare() {
 				-e '/^LINK /s/$/ /' \
 				-e '/^LIBRARY_LINK /s/=.*$/= $(CXX) -o /' \
 				-e '/^LIBRARY_LINK_OPTS /s:-shared.*$:-undefined suppress -flat_namespace -dynamiclib -install_name '"${EPREFIX}/usr/$(get_libdir)/"'$@:' \
+				-e '/^LIB_SUFFIX /s/so/dylib/' \ 
 				live-shared/config.gentoo-so-r1 \
 				|| die shared
 		;;
