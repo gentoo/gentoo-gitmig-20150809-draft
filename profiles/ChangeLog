@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6672 2012/06/15 13:19:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6673 2012/06/15 15:00:31 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jun 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Remove libnl-3.2.10 mask.
 
   15 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
   -hardened/linux/amd64/10.0/deprecated,
