@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/watchdog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.31 2011/06/09 01:36:47 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.32 2012/06/15 04:39:15 vapier Exp $
+
+*watchdog-5.12 (15 Jun 2012)
+
+  15 Jun 2012; Mike Frysinger <vapier@gentoo.org> +watchdog-5.12.ebuild:
+  Version bump and update to EAPI=4 #421083 by Malte Starostik.
 
 *watchdog-5.9-r1 (09 Jun 2011)
 
