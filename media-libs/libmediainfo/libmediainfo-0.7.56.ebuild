@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.56.ebuild,v 1.2 2012/05/05 08:02:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.56.ebuild,v 1.3 2012/06/15 09:34:26 radhermit Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
 
-S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
+S=${WORKDIR}/${MY_PN}Lib/Project/GNU/Library
 
 src_prepare() {
 	pushd "${WORKDIR}"/${MY_PN}Lib > /dev/null
@@ -35,8 +35,8 @@ src_prepare() {
 	# Don't force -O2 by default
 	sed -i -e "s:-O2::" configure.ac
 
-	append-flags -DMEDIAINFO_LIBMMS_DESCRIBE_SUPPORT=0
-	append-flags -DTIXML_USE_STL
+	append-cppflags -DMEDIAINFO_LIBMMS_DESCRIBE_SUPPORT=0
+	append-cppflags -DTIXML_USE_STL
 	eautoreconf
 }
 
@@ -62,8 +62,9 @@ src_compile() {
 src_install() {
 	default
 
+	edos2unix ${PN}.pc #414545
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins "${S}"/${PN}.pc
+	doins ${PN}.pc
 
 	for x in ./ Archive Audio Duplicate Export Image Multiple Reader Tag Text Video; do
 		insinto /usr/include/${MY_PN}/${x}
@@ -78,5 +79,5 @@ src_install() {
 		dohtml -r "${WORKDIR}"/${MY_PN}Lib/Doc/*
 	fi
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files
 }

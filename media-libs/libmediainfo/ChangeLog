@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.48 2012/06/09 00:09:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.49 2012/06/15 09:34:26 radhermit Exp $
+
+  15 Jun 2012; Tim Harder <radhermit@gentoo.org> libmediainfo-0.7.56.ebuild,
+  libmediainfo-0.7.58.ebuild:
+  Use prune_libtool_files and backport updates from 0.7.58 to 0.7.56.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> libmediainfo-0.7.58.ebuild:
   inherit eutils for edos2unix

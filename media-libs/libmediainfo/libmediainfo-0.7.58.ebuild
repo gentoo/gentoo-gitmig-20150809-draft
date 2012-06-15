@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.58.ebuild,v 1.2 2012/06/09 00:09:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.58.ebuild,v 1.3 2012/06/15 09:34:26 radhermit Exp $
 
 EAPI="4"
 
@@ -74,5 +74,5 @@ src_install() {
 		dohtml -r "${WORKDIR}"/${MY_PN}Lib/Doc/*
 	fi
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files
 }
