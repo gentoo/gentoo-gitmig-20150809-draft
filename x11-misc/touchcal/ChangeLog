@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/touchcal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.9 2012/05/15 16:04:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.10 2012/06/15 12:55:52 ago Exp $
+
+  15 Jun 2012; Agostino Sarubbo <ago@gentoo.org> touchcal-0.50.ebuild:
+  Stable for amd64, wrt bug #412227
 
 *touchcal-0.50 (15 May 2012)
 
