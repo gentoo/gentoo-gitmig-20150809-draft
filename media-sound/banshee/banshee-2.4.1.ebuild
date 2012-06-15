@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.4.0-r1.ebuild,v 1.6 2012/05/14 15:42:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.4.1.ebuild,v 1.1 2012/06/15 20:24:52 pacho Exp $
 
 EAPI="4"
 
@@ -75,15 +75,11 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	)"
 
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
 	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 src_prepare () {
-	# UPnPServerSource: Fix crash when getting the root object (bgo#672744)
-	epatch "${FILESDIR}/${P}-upnp-crash.patch"
-
 	# Fix build against libgpod-sharp 0.8.2
 	epatch "${FILESDIR}/${PN}-2.4.0-libgpod-082.patch"
 
@@ -132,8 +128,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	default
+	prune_libtool_files --all
 }
 
 pkg_preinst() {
@@ -141,11 +137,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	ewarn
-	ewarn "If ${PN} doesn't play some format, please check your"
-	ewarn "USE flags on media-plugins/gst-plugins-meta"
-	ewarn
-
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
