@@ -1,0 +1,34 @@
+From b05bf9461093b0a60c3dde4b7ad6e959d12c3ff8 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@flameeyes.eu>
+Date: Fri, 15 Jun 2012 11:46:12 -0700
+Subject: [PATCH] build: make sure to declare the generated source files as
+ BUILT_SOURCES
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+This allows proper building when using parallel make on a multi-core
+system.
+
+Signed-off-by: Diego Elio Pettenò <flameeyes@flameeyes.eu>
+---
+ src/Makefile.am |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 5550f3b..8b3b578 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -150,6 +150,9 @@ libcmd_p11tool_la_LIBADD += ../gl/libgnu.la $(INET_PTON_LIB)
+ 
+ endif # ENABLE_PKCS11
+ 
++BUILT_SOURCES = ocsptool-args.c p11tool-args.c psk-args.c cli-debug-args.c \
++		cli-args.c serv-args.c srptool-args.c certtool-args.c
++
+ ocsptool-args.c: $(srcdir)/args-std.def $(srcdir)/ocsptool-args.def
+ 	-autogen ocsptool-args.def
+ p11tool-args.c: $(srcdir)/args-std.def $(srcdir)/p11tool-args.def
+-- 
+1.7.8.6
+

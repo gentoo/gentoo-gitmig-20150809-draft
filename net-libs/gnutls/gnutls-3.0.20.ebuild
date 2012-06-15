@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.20.ebuild,v 1.2 2012/06/09 07:57:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.20.ebuild,v 1.3 2012/06/15 19:17:10 flameeyes Exp $
 
 EAPI=4
 
@@ -76,6 +76,8 @@ src_prepare() {
 	# support user patches
 	epatch_user
 
+	epatch "${FILESDIR}"/${P}-parallelmake.patch
+
 	eautoreconf
 
 	# Use sane .so versioning on FreeBSD.
@@ -95,6 +97,11 @@ src_configure() {
 		$(use_with pkcs11 p11-kit) \
 		$(use_with zlib) \
 		${myconf}
+}
+
+src_test() {
+	# let it build in parallel
+	emake check
 }
 
 src_install() {
