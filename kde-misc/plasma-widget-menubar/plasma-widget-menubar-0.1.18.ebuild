@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-menubar/plasma-widget-menubar-0.1.18.ebuild,v 1.1 2012/06/14 11:44:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-menubar/plasma-widget-menubar-0.1.18.ebuild,v 1.2 2012/06/15 10:54:13 kensington Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!kde-misc/plasma-indicatordisplay
+	x11-misc/appmenu-qt
 "
 
 # last checked 0.1.18
