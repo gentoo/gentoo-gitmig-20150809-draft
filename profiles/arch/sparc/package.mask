@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.31 2012/06/14 16:50:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.32 2012/06/15 04:35:49 yngwin Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
 # Since x11-libs/qt-* will no longer be available for sparc, we need
@@ -21,8 +21,12 @@ dev-util/automoc
 dev-util/kscope
 dev-vcs/qbzr
 games-emulation/dboxfe
+media-gfx/pictureflow
+media-libs/phonon
 net-irc/kvirc
 sys-devel/qconf
+x11-libs/qscintilla
+x11-libs/qwt
 x11-themes/qtcurve-qt4
 
 # Justin Lecher <jlec@gentoo.org> (9 Mar 2011)
