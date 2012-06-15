@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnatspec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/ChangeLog,v 1.14 2012/06/14 21:22:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/ChangeLog,v 1.15 2012/06/15 09:34:44 ago Exp $
+
+  15 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libnatspec-0.2.6.ebuild:
+  Stable for amd64, wrt bug #420725
 
   14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libnatspec-0.2.6.ebuild:
   marked x86 per bug 420725
