@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.91 2012/06/14 16:44:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.92 2012/06/15 04:13:45 yngwin Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
 # Since x11-libs/qt-* will no longer be available for alpha, we need
 # to mask the reverse dependencies
 dev-cpp/eigen examples
+dev-tex/latex-beamer lyx
 media-sound/pulseaudio equalizer
 media-video/vlc skins
 
