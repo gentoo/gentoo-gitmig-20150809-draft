@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/xcircuit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.52 2012/06/13 13:14:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.53 2012/06/15 07:32:35 jdhore Exp $
+
+  15 Jun 2012; Jeff Horelick <jdhore@gentoo.org> xcircuit-3.7.39.ebuild:
+  marked x86 per bug 420981
 
 *xcircuit-3.8.24 (13 Jun 2012)
 
