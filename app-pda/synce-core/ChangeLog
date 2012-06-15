@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/ChangeLog,v 1.1 2012/06/15 07:52:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/ChangeLog,v 1.2 2012/06/15 08:54:33 ssuominen Exp $
+
+  15 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> synce-core-0.16.ebuild:
+  Block dev-libs/librapi2 and dev-libs/libsynce since this package is replacing
+  both.
 
 *synce-core-0.16 (15 Jun 2012)
 

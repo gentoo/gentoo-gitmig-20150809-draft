@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16.ebuild,v 1.2 2012/06/15 07:59:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16.ebuild,v 1.3 2012/06/15 08:54:33 ssuominen Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ IUSE="python static-libs"
 # AC_PATH_PROG -> ifconfig -> sys-apps/net-tools
 RDEPEND=">=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.28
+	!dev-libs/librapi2
 	!dev-libs/libsynce
 	net-dialup/ppp
 	sys-apps/net-tools
