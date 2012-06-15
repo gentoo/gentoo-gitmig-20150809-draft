@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/netaddr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.4 2012/04/23 20:19:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.5 2012/06/15 09:44:44 maksbotan Exp $
+
+*netaddr-0.7.6-r1 (15 Jun 2012)
+
+  15 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +netaddr-0.7.6-r1.ebuild,
+  -netaddr-0.7.6.ebuild, metadata.xml:
+  Add cli use flag with dep on ipython, thanks to slepnoga
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> netaddr-0.7.6.ebuild:
   Use mirror://github.
