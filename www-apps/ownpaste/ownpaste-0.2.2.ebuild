@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ownpaste-0.2.1.ebuild,v 1.1 2012/06/15 00:17:51 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ownpaste-0.2.2.ebuild,v 1.1 2012/06/15 03:18:05 rafaelmartins Exp $
 
 EAPI=4
 
