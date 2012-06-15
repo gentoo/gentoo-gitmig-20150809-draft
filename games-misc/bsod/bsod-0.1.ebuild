@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsod/bsod-0.1.ebuild,v 1.1 2012/06/15 03:23:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsod/bsod-0.1.ebuild,v 1.2 2012/06/15 03:25:30 ssuominen Exp $
 
 EAPI=2
 inherit eutils games
@@ -21,7 +21,7 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin ${PN}
+	dogamesbin ${PN} || die
 	dodoc Changes
 
 	prepgamesdirs
