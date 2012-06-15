@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsynce/libsynce-0.15.1.ebuild,v 1.3 2012/05/04 18:35:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsynce/libsynce-0.15.1.ebuild,v 1.4 2012/06/15 08:53:13 ssuominen Exp $
 
 EAPI=2
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dbus static-libs"
 
-RDEPEND="dbus? ( >=dev-libs/dbus-glib-0.88 )"
+RDEPEND="!app-pda/synce-core
+	dbus? ( >=dev-libs/dbus-glib-0.98 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
