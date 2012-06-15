@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.48 2012/06/15 09:11:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.49 2012/06/15 09:37:35 ago Exp $
+
+  15 Jun 2012; Agostino Sarubbo <ago@gentoo.org> varnish-3.0.2-r1.ebuild:
+  Stable for amd64, wrt bug #421205
 
   15 Jun 2012; Jeff Horelick <jdhore@gentoo.org> varnish-3.0.2-r1.ebuild:
   marked x86 per bug 421205
