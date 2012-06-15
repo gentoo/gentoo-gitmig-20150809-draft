@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3_p20120601.ebuild,v 1.1 2012/05/31 21:26:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3_p20120601.ebuild,v 1.2 2012/06/15 10:45:17 ssuominen Exp $
 
 EAPI=4
-EAUTORECONF=yes
-inherit xfconf
+#EAUTORECONF=yes
+inherit autotools libtool xfconf
 
 DESCRIPTION="GTK+ based CD and DVD burning application"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/xfburn"
@@ -27,6 +27,7 @@ RDEPEND=">=dev-libs/glib-2.30
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-util/intltool
+	>=dev-util/xfce4-dev-tools-4.9.1
 	sys-devel/gettext
 	virtual/pkgconfig"
 
@@ -52,6 +53,14 @@ src_prepare() {
 	# .in.in -> .in
 	sed -i -e '/^exec.*xdt-autogen/d' autogen.sh || die
 	./autogen.sh
+
+	# Prevent glib-gettextize from running wrt #420639
+	intltoolize --automake --copy --force
+	_elibtoolize --copy --force --install
+	AT_M4DIR=${EPREFIX}/usr/share/xfce4/dev-tools/m4macros eaclocal
+	eautoconf
+	eautoheader
+	eautomake
 
 	xfconf_src_prepare
 }
