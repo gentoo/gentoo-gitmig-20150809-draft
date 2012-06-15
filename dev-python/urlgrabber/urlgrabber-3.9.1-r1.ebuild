@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/urlgrabber-3.9.1-r1.ebuild,v 1.6 2011/07/17 11:50:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/urlgrabber-3.9.1-r1.ebuild,v 1.7 2012/06/15 14:44:56 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython *-pypy-*"
 
 inherit distutils eutils
 

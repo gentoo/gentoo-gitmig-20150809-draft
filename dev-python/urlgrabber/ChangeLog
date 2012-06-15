@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urlgrabber
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.38 2011/08/05 22:33:23 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.39 2012/06/15 14:44:56 jlec Exp $
+
+  15 Jun 2012; Justin Lecher <jlec@gentoo.org> urlgrabber-3.9.1-r1.ebuild:
+  Restrict pypy because pycurl doesn't support it
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -urlgrabber-3.9.1.ebuild:
   Remove old ebuild. Requested by Arfrever
