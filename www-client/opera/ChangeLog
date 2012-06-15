@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.721 2012/06/15 04:48:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.722 2012/06/15 14:09:02 jer Exp $
+
+  15 Jun 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove USE=gtk3 description.
 
   15 Jun 2012; Jeroen Roovers <jer@gentoo.org> -opera-11.64.1403.ebuild:
   Old.

@@ -25,8 +25,7 @@ display in your primary Opera browser. This ensures that your valuable data and
 settings remain untouched when you try out our latest changes.
 </longdescription>
 <use>
-<flag name='gtk'>Set runtime dependencies to support GTK+/GNOME version 2 desktop integration</flag>
-<flag name='gtk3'>Set runtime dependencies to support GTK+/GNOME version 3 desktop integration</flag>
+<flag name='gtk'>Set runtime dependencies to support GTK+/GNOME desktop integration</flag>
 <flag name='kde'>Set runtime dependencies to support KDE desktop integration</flag>
 </use>
 </pkgmetadata>
