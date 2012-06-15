@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16.ebuild,v 1.1 2012/06/15 07:52:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16.ebuild,v 1.2 2012/06/15 07:59:34 ssuominen Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ src_prepare() {
 src_configure() {
 	append-cflags -fno-strict-aliasing
 
-	# hal OR udev -> udev -> dbus -> build all of odccm, udev, bluetooth
+	# hal OR udev -> udev -> dbus -> build all of bluetooth, odccm, udev
 	econf \
 		$(use_enable static-libs static) \
 		--enable-dccm-file-support \
