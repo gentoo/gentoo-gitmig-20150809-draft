@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.20 2012/06/08 16:52:09 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.21 2012/06/15 09:30:40 djc Exp $
+
+  15 Jun 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove myself as a maintainer, I'm in the python herd.
 
 *pypy-1.9 (08 Jun 2012)
 
