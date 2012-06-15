@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7-r2.ebuild,v 1.2 2012/06/14 22:11:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7-r2.ebuild,v 1.3 2012/06/15 11:47:23 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils
@@ -38,6 +38,7 @@ RDEPEND="virtual/ttf-fonts
 			>=dev-libs/glib-2.28
 			media-libs/fontconfig
 			>=media-libs/freetype-2
+			>=media-libs/tiff-3.9.5-r3:3
 			sys-libs/zlib
 			x11-libs/libICE
 			x11-libs/libSM
