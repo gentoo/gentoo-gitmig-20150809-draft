@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7-r2.ebuild,v 1.3 2012/06/15 11:47:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.7-r2.ebuild,v 1.4 2012/06/15 11:50:32 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils
@@ -19,7 +19,7 @@ IUSE="pax_kernel qt-static"
 QA_PREBUILT=opt/bin/${PN}
 RESTRICT="mirror strip" #299368
 
-EMUL_X86_VER=20120127
+EMUL_X86_VER=20120520
 
 RDEPEND="virtual/ttf-fonts
 	amd64? (
