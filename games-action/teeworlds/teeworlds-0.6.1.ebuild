@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.1.ebuild,v 1.2 2012/04/18 21:43:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.1.ebuild,v 1.3 2012/06/15 15:41:08 mr_bones_ Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
-inherit eutils python toolchain-funcs games
+inherit eutils multiprocessing python toolchain-funcs games
 
 REVISION="b177-r50edfd37"
 
@@ -80,10 +80,7 @@ src_compile() {
 		fi
 	fi
 
-	# Taken from the libreoffice-3.5.2.2 ebuild
-	local jobs=$(sed -ne 's/.*\(-j[[:space:]]*\|--jobs=\)\([[:digit:]]\+\).*/\2/;T;p' <<< "${MAKEOPTS}")
-
-	bam -a -j ${jobs} ${myopt} || die
+	bam -a -j $(makeopts_jobs) ${myopt} || die
 }
 
 src_install() {
