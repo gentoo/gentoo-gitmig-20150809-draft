@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.49 2012/05/21 10:02:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.50 2012/06/15 05:54:33 graaff Exp $
+
+*passenger-3.0.13 (15 Jun 2012)
+
+  15 Jun 2012; Hans de Graaff <graaff@gentoo.org> +passenger-3.0.13.ebuild:
+  Version bump.
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> passenger-3.0.7.ebuild:
   x86 stable wrt bug #410409
