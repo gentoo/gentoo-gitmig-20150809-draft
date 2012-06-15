@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13-r1.ebuild,v 1.2 2012/05/05 08:27:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13-r1.ebuild,v 1.3 2012/06/15 14:58:44 jlec Exp $
 
-EAPI=1
+EAPI=4
 
-inherit flag-o-matic eutils base
+inherit base eutils flag-o-matic
 
 PD=${FILESDIR}/${PV}
 MY_PN=${PN/-plugins}
@@ -31,7 +31,9 @@ RDEPEND=">=media-libs/gstreamer-0.10.31
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_compile() {
+PATCHES=( "${FILESDIR}"/${PV}-gcc-4.7.patch )
+
+src_configure() {
 	append-flags -fno-strict-aliasing
 
 	if ! use hardened; then
@@ -41,11 +43,4 @@ src_compile() {
 		econf $(use_enable orc) \
 			--with-ffmpeg-extra-configure='--disable-mmx --disable-mmx2'
 	fi
-
-	emake || die "emake failed."
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog NEWS README TODO
 }
