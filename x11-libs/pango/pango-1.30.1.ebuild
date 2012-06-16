@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.30.1.ebuild,v 1.1 2012/06/07 07:21:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.30.1.ebuild,v 1.2 2012/06/16 09:24:59 grobian Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -60,6 +60,9 @@ pkg_setup() {
 src_prepare() {
 	# In next release
 	epatch "${FILESDIR}/${P}-coretext-hash.patch"
+
+	# missing declaration causing QA abort on x64-macos, notified upstream
+	epatch "${FILESDIR}"/${P}-config_get_key_system-declaration.patch
 
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system.  Fix building for

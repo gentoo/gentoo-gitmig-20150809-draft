@@ -1,0 +1,12 @@
+https://bugzilla.gnome.org/show_bug.cgi?id=667960#c5
+
+--- pango/pango-utils.h
++++ pango/pango-utils.h
+@@ -42,6 +42,7 @@
+ 			       int         *out);
+ 
+ #ifdef PANGO_ENABLE_BACKEND
++char *   pango_config_key_get_system (const char *key);
+ char *   pango_config_key_get (const char  *key);
+ void     pango_lookup_aliases (const char   *fontname,
+ 			       char       ***families,

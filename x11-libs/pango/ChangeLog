@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.348 2012/06/07 07:21:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.349 2012/06/16 09:24:59 grobian Exp $
+
+  16 Jun 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/pango-1.30.1-config_get_key_system-declaration.patch,
+  pango-1.30.1.ebuild:
+  Add patch to fix QA abort on x64-macos due to missing function declaration
 
 *pango-1.30.1 (07 Jun 2012)
 
