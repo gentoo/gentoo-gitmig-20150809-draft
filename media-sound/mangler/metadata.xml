@@ -6,6 +6,7 @@
     <flag name="celt">High quality, low delay audio codec</flag>
     <flag name="espeak">Text to speach engine</flag>
     <flag name="g15">Logitech g15 lcd support</flag>
+	<flag name="opus">Codec specialized for speach over the internet</flag>
   </use>
   <maintainer>
     <email>prometheanfire@gentoo.org</email>
