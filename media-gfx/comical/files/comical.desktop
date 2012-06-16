@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Comical
 GenericName=Comic Book Reader
-Comment=Comic book reader
 Exec=comical %F
 Icon=comical
 Type=Application
