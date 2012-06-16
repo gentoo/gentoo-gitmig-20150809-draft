@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.7.1.ebuild,v 1.5 2012/05/08 15:35:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.7.1.ebuild,v 1.6 2012/06/16 10:26:34 grobian Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -22,6 +22,12 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	rm -R src/{libpng,zlib} || die
 	find . -type d -name build -exec rm -R {} + || die
+
+	# next release is almost a complete rewrite, so plug this compilation
+	# problem in anticipation of the much (c)leaner(?) rewrite
+	sed -i \
+		-e 's/^#ifdef AT_FDCWD/#if defined(AT_FDCWD) \&\& !(defined (__SVR4) \&\& defined (__sun))/' \
+		src/optipng/osys.c || die
 }
 
 src_configure() {
