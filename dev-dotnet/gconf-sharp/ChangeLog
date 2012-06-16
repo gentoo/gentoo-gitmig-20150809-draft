@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gconf-sharp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.68 2011/03/21 20:21:58 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.69 2012/06/16 11:56:23 ago Exp $
+
+  16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -gconf-sharp-2.24.1.ebuild:
+  Remove old as requested by Pacho Ramos, <pacho@gentoo.org>
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> gconf-sharp-2.24.2.ebuild:
   Marking gconf-sharp-2.24.2 ppc stable for bug 359651

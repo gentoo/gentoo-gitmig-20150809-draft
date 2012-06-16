@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/art-sharp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.73 2011/03/21 20:21:11 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.74 2012/06/16 11:55:18 ago Exp $
+
+  16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -art-sharp-2.24.1.ebuild:
+  Remove old as requested by Pacho Ramos, <pacho@gentoo.org>
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> art-sharp-2.24.2.ebuild:
   Marking art-sharp-2.24.2 ppc stable for bug 359651

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gnomevfs-sharp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.46 2011/03/21 20:23:09 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.47 2012/06/16 11:58:35 ago Exp $
+
+  16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -gnomevfs-sharp-2.24.1.ebuild:
+  Remove old as requested by Pacho Ramos, <pacho@gentoo.org>
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> gnomevfs-sharp-2.24.2.ebuild:
   Marking gnomevfs-sharp-2.24.2 ppc stable for bug 359651

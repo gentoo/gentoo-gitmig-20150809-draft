@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gsf-sharp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.18 2012/05/04 03:56:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.19 2012/06/16 11:59:34 ago Exp $
+
+  16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -gsf-sharp-0.8.ebuild:
+  Remove old as requested by Pacho Ramos, <pacho@gentoo.org>
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gsf-sharp-0.8.ebuild,
   gsf-sharp-0.8.1.ebuild:
