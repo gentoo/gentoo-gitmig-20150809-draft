@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.100 2012/06/16 11:29:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.101 2012/06/16 11:39:06 pacho Exp $
+
+*monodevelop-3.0.2-r1 (16 Jun 2012)
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/monodevelop-3.0.2-pc-fix.patch, +monodevelop-3.0.2-r1.ebuild,
+  -monodevelop-3.0.2.ebuild:
+  Fix .pc file.
 
 *monodevelop-3.0.2 (16 Jun 2012)
 

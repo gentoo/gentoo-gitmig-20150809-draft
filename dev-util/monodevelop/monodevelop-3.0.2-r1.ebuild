@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-3.0.2.ebuild,v 1.1 2012/06/16 11:29:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-3.0.2-r1.ebuild,v 1.1 2012/06/16 11:39:06 pacho Exp $
 
 EAPI=4
-inherit fdo-mime gnome2-utils mono versionator
+inherit fdo-mime gnome2-utils mono versionator eutils
 
 DESCRIPTION="Integrated Development Environment for .NET"
 HOMEPAGE="http://www.monodevelop.com/"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+subversion +git"
 
-RDEPEND=">=dev-lang/mono-2.6.1
+RDEPEND=">=dev-lang/mono-2.10.9
 	>=dev-dotnet/gconf-sharp-2.24.0
 	>=dev-dotnet/glade-sharp-2.12.9
 	>=dev-dotnet/gnome-sharp-2.24.0
@@ -44,6 +44,10 @@ DEPEND="${RDEPEND}
 	x11-misc/shared-mime-info"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-pc-fix.patch"
+}
 
 src_configure() {
 	econf \
