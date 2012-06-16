@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.131 2012/05/22 12:15:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.132 2012/06/16 11:54:35 ago Exp $
+
+  16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -tomboy-1.6.1.ebuild:
+  Remove old as requested by Pacho Ramos, <pacho@gentoo.org>
 
   22 May 2012; Agostino Sarubbo <ago@gentoo.org> tomboy-1.8.3.ebuild:
   Stable for amd64, wrt bug #407701
