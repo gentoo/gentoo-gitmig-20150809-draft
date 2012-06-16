@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.06_pre4.ebuild,v 1.1 2012/05/28 08:47:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.06_pre6.ebuild,v 1.1 2012/06/16 13:43:59 chithanh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,9 +33,6 @@ src_unpack() {
 	cd "${S}"
 	# Fix building on hardened
 	epatch "${FILESDIR}"/${PN}-4.05-nopie.patch
-
-	# Fix building with --as-needed
-	epatch "${FILESDIR}"/${PN}-4.05-asneeded-linking-order.patch
 
 	rm -f gethostip #bug 137081
 
