@@ -2,15 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>leio@gentoo.org</email>
-	</maintainer>
-	<maintainer>
 		<email>idl0r@gentoo.org</email>
 		<name>Christian Ruppert</name>
 	</maintainer>
 	<maintainer>
 		<email>peter@stuge.se</email>
 		<description>Please CC on all bugs</description>
+	</maintainer>
+	<maintainer> 
+		<email>leio@gentoo.org</email>
 	</maintainer>
 	<use>
 		<flag name="atahpt">Highpoint (HPT) ATA/RAID controller support</flag>
