@@ -1,6 +1,8 @@
 USE="kdrive minimal multicall zlib"
 CFLAGS="-Os -pipe"
 CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
 
 CLEAN_DELAY="0"
 EPAUSE_IGNORE="1"

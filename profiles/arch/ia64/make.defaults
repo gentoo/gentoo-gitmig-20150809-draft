@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/make.defaults,v 1.4 2009/12/13 21:45:27 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/make.defaults,v 1.5 2012/06/16 11:44:12 jlec Exp $
 
 ARCH="ia64"
 ACCEPT_KEYWORDS="ia64"
@@ -8,6 +8,8 @@ ACCEPT_KEYWORDS="ia64"
 CHOST="ia64-unknown-linux-gnu"
 CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers

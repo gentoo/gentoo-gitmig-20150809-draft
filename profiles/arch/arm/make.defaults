@@ -6,6 +6,8 @@ ACCEPT_KEYWORDS="arm"
 CHOST="arm-unknown-linux-gnu"
 CFLAGS="-O2"
 CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers

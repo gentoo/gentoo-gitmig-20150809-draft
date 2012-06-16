@@ -1,11 +1,13 @@
-# Copyright 2004-2009 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/make.defaults,v 1.3 2009/12/13 21:45:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/make.defaults,v 1.4 2012/06/16 11:44:13 jlec Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="x86-fbsd"
 CFLAGS="-march=i486 -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
 
 ACCEPT_KEYWORDS="x86-fbsd ~x86-fbsd"
 

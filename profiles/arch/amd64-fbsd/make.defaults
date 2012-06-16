@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.7 2012/05/18 16:43:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.8 2012/06/16 11:44:11 jlec Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"
@@ -8,6 +8,8 @@ ACCEPT_KEYWORDS="amd64-fbsd ~amd64-fbsd"
 
 CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
 
 MULTILIB_ABIS="amd64_fbsd x86_fbsd"
 DEFAULT_ABI="amd64_fbsd"

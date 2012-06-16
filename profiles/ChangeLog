@@ -1,10 +1,27 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6676 2012/06/16 10:03:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6677 2012/06/16 11:44:10 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jun 2012; Justin Lecher <jlec@gentoo.org> arch/alpha/make.defaults,
+  arch/amd64-fbsd/make.defaults, arch/amd64/make.defaults,
+  arch/arm/armv4/make.defaults, arch/arm/armv4t/make.defaults,
+  arch/arm/armv5te/make.defaults, arch/arm/armv6j/make.defaults,
+  arch/arm/armv7a/make.defaults, arch/arm/make.defaults,
+  arch/ia64/make.defaults, arch/m68k/make.defaults,
+  arch/mips/mips64/multilib/make.defaults,
+  arch/mips/mipsel/mips64el/multilib/make.defaults,
+  arch/powerpc/ppc32/make.defaults, arch/powerpc/ppc64/make.defaults,
+  arch/s390/make.defaults, arch/sh/make.defaults,
+  arch/sparc-fbsd/make.defaults, arch/x86-fbsd/make.defaults,
+  arch/x86/make.defaults, arch/x86/xbox/make.defaults, embedded/make.defaults,
+  hardened/linux/amd64/make.defaults, hardened/linux/x86/make.defaults,
+  hardened/linux/x86/minimal/make.defaults, info_vars, uclibc/make.defaults:
+  Set default values of FFLAGS and FCFLAGS to profiles default CFLAGS, equally
+  as CXXFLAGS handling
 
   16 Jun 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Update app-shells/rssh message
