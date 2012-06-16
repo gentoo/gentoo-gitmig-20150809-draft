@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-epi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.9 2012/06/16 07:41:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.10 2012/06/16 13:09:20 ago Exp $
+
+  16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xmlrpc-epi-0.54.2.ebuild:
+  Stable for amd64, wrt bug #421323
 
   16 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as he is not able to maintain this anymore.
