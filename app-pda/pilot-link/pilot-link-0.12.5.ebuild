@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.5.ebuild,v 1.9 2011/04/09 13:07:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.5.ebuild,v 1.10 2012/06/16 14:02:53 ssuominen Exp $
 
 EAPI=3
 
@@ -17,16 +17,16 @@ SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="perl java python png readline threads bluetooth usb debug"
+IUSE="bluetooth debug java perl png python readline static-libs threads usb"
 
-COMMON_DEPEND="virtual/libiconv
-	>=sys-libs/ncurses-5.7
-	>=dev-libs/popt-1.15
-	perl? ( >=dev-lang/perl-5.8.8-r2 )
-	png? ( >=media-libs/libpng-1.4 )
+COMMON_DEPEND="dev-libs/popt
+	>=sys-libs/ncurses-5.7-r7
+	virtual/libiconv
+	bluetooth? ( net-wireless/bluez )
+	perl? ( >=dev-lang/perl-5.12 )
+	png? ( media-libs/libpng:0 )
 	readline? ( >=sys-libs/readline-6 )
-	usb? ( virtual/libusb:0 )
-	bluetooth? ( net-wireless/bluez )"
+	usb? ( virtual/libusb:0 )"
 DEPEND="${COMMON_DEPEND}
 	java? ( >=virtual/jdk-1.4 )"
 RDEPEND="${COMMON_DEPEND}
@@ -35,13 +35,15 @@ RDEPEND="${COMMON_DEPEND}
 PYTHON_MODNAME="pisock.py pisockextras.py"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.12.3-java-install.patch \
+	epatch \
+		"${FILESDIR}"/${PN}-0.12.3-java-install.patch \
 		"${FILESDIR}"/${PN}-0.12.3-respect-javacflags.patch \
 		"${FILESDIR}"/${PN}-0.12.2-werror_194921.patch \
 		"${FILESDIR}"/${PN}-0.12.2-threads.patch \
 		"${FILESDIR}"/${PN}-0.12.3-{libpng14,png}.patch \
 		"${FILESDIR}"/${PN}-0.12.3-distutils.patch \
-		"${FILESDIR}"/${PN}-0.12.3-libusb-compat-usb_open.patch
+		"${FILESDIR}"/${PN}-0.12.3-libusb-compat-usb_open.patch \
+		"${FILESDIR}"/${PN}-0.12.5-perl514.patch
 
 	AT_M4DIR="m4" eautoreconf
 }
@@ -50,7 +52,7 @@ src_configure() {
 	# tcl/tk support is disabled as per upstream request.
 	econf \
 		--includedir="${EPREFIX}"/usr/include/libpisock \
-		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
 		--enable-conduits \
 		$(use_enable threads) \
 		$(use_enable usb libusb) \
@@ -99,6 +101,8 @@ src_install() {
 		cd "${S}"/bindings/Python
 		distutils_src_install
 	fi
+
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_preinst() {

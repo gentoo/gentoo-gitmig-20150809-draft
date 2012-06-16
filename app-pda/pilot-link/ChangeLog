@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.72 2011/04/09 13:07:50 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.73 2012/06/16 14:02:53 ssuominen Exp $
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> pilot-link-0.12.5.ebuild,
+  +files/pilot-link-0.12.5-perl514.patch:
+  Fix building with dev-lang/perl >= 5.14 wrt #420761 by Patrick Lauer
 
   09 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> pilot-link-0.12.5.ebuild:
   Link perl Pilot.so against -lpisock (workaround a bug in perl-module.eclass)
