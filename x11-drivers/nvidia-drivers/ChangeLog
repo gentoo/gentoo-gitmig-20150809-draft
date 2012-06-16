@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.355 2012/06/14 05:40:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.356 2012/06/16 18:47:13 cardoe Exp $
+
+*nvidia-drivers-302.17 (16 Jun 2012)
+
+  16 Jun 2012; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-302.17.ebuild:
+  Version bump for the 302 series. Has not undergone as much testing as the 295
+  series so if you run into anything. Step back to the 295 series.
 
 *nvidia-drivers-295.59 (13 Jun 2012)
 *nvidia-drivers-173.14.35 (13 Jun 2012)
