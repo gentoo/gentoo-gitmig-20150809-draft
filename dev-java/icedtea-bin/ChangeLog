@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.18 2012/06/05 15:35:28 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.19 2012/06/16 17:11:04 caster Exp $
+
+*icedtea-bin-7.2.2.1 (16 Jun 2012)
+*icedtea-bin-6.1.11.3 (16 Jun 2012)
+
+  16 Jun 2012; Vlastimil Babka <caster@gentoo.org>
+  +icedtea-bin-6.1.11.3.ebuild, +icedtea-bin-7.2.2.1.ebuild:
+  Version bump, security bug #404095.
 
   05 Jun 2012; Ralph Sennhauser <sera@gentoo.org>
   icedtea-bin-6.1.11.1-r1.ebuild, icedtea-bin-7.2.1-r1.ebuild:
