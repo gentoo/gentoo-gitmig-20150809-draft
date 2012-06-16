@@ -1,5 +1,11 @@
 
 
+*cgminer-2.4.3 (16 Jun 2012)
+
+  16 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.2-r1.ebuild,
+  +cgminer-2.4.3.ebuild:
+  Version bump
+
   04 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.1.ebuild:
   Upstream moved tarball for 2.4.1
 
