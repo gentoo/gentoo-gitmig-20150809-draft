@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13868 2012/06/16 17:41:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13869 2012/06/16 20:41:30 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1023,6 +1023,9 @@ media-tv/v4l-dvb-hg
 ~app-i18n/skk-jisyo-9999
 net-misc/netcomics-cvs
 app-portage/layman-dbtools
+sci-astronomy/casa-data
+# rdep on the one above
+sci-astronomy/casacore
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open
