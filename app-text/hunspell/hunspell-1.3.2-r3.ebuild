@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r3.ebuild,v 1.11 2012/06/13 16:14:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r3.ebuild,v 1.12 2012/06/16 07:22:18 pacho Exp $
 
 EAPI=4
 inherit eutils multilib autotools flag-o-matic versionator
@@ -83,10 +83,4 @@ src_install() {
 	pushd "${ED}"/usr/$(get_libdir)/ >/dev/null
 	ln -s lib${PN}{-$(get_major_version).$(get_version_component_range 2).so.0.0.0,.so}
 	popd >/dev/null
-}
-
-pkg_postinst() {
-	elog "To use this package you will also need a dictionary."
-	elog "Hunspell uses myspell format dictionaries; find them"
-	elog "in the app-dicts category as myspell-<LANG>."
 }
