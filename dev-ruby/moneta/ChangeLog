@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/moneta
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/moneta/ChangeLog,v 1.4 2010/10/09 08:42:23 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/moneta/ChangeLog,v 1.5 2012/06/16 05:59:23 graaff Exp $
+
+  16 Jun 2012; Hans de Graaff <graaff@gentoo.org> moneta-0.6.0-r1.ebuild:
+  Don't run memcache tests, bug 332919. Add ree18.
 
   09 Oct 2010; Hans de Graaff <graaff@gentoo.org> moneta-0.6.0-r1.ebuild:
   Depend on rspec-1.
