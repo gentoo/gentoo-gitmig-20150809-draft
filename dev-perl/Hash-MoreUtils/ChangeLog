@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Hash-MoreUtils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hash-MoreUtils/ChangeLog,v 1.1 2012/06/16 19:55:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hash-MoreUtils/ChangeLog,v 1.2 2012/06/16 20:08:08 flameeyes Exp $
+
+  16 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  Hash-MoreUtils-0.02.ebuild:
+  Fix header. Remove extra dep.
 
 *Hash-MoreUtils-0.02 (16 Jun 2012)
 
