@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.13 2012/06/16 14:07:32 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.14 2012/06/16 15:19:46 xarthisius Exp $
+
+  16 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> -autopep8-0.5.2.ebuild,
+  -autopep8-0.5.ebuild, -autopep8-0.6.2.ebuild, -autopep8-0.6.3.ebuild,
+  -autopep8-0.6.ebuild:
+  Drop old leaving last version unaffected by issue #12 and latest masked
 
 *autopep8-0.7 (16 Jun 2012)
 
