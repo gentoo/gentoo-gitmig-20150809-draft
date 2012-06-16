@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13859 2012/06/15 15:00:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13860 2012/06/16 07:50:00 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -310,16 +310,6 @@ games-arcade/ssc
 # Ultrabug <ultrabug@gentoo.org> (16 May 2012)
 # Masked for testing
 >=sys-cluster/corosync-2.0.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (16 May 2012)
-# Internal copy of vulnerable dev-libs/expat wrt #250930,
-# CVE-2009-{3720,3560} and CVE-2012-{0876,1147,1148}.
-#
-# Fails to compile wrt bug #368089
-# Bad migration away from dev-python/pyxml wrt #367745
-#
-# Removal in 30 days.
-dev-python/4suite
 
 # Markos Chandras <hwoarang@gentoo.org> (15 May 2012)
 # Masked for testing
