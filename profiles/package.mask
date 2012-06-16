@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13863 2012/06/16 13:22:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13864 2012/06/16 14:22:15 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,131 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Bundles unsecure libexpat, all packages still needing it
+# are dead, orphan and have replacements. See bug #251433.
+# Removal in 30 days.
+net-libs/libtlen
+net-im/gnugadu
+net-im/tleenx2
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Bundles python-2.3 and other libs affected by security
+# issues, bug #251875. Removal in 30 days.
+dev-ada/gps-bin
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Upstream dead and very broken, bug #276238. Removal 
+# in a month.
+dev-ruby/mmap
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Upstream tagged it as deprecated time ago, it's no longer
+# useful, see bug #327029. Removal in a month
+dev-python/psyco
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Broken for a long time with stable libevent, upstream
+# doesn't care, see bug #333099. Removal in a month.
+net-analyzer/honeyd
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Not compatible with current avahi, see bug #339609.
+# Removal in a month.
+x11-misc/service-discovery-applet
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Bundles unsecure tcl/tk versions, bug #343529.
+# Removal in a month.
+dev-util/sourcenav
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Old, nothing needs it in the tree. We are unable to bump
+# to new version and nobody is willing to maintain it. See
+# bug #399697. Removal in a month.
+dev-dotnet/nlog
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Doesn't respect CXXFLAGS, nothing requires it, dead since
+# 2003, see bug #401631. Removal in a month.
+app-doc/doc++
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Bundles old tcl/tk libs (bug #251617) and is the only
+# consumer of pdksh (bug #408705). Removal in a month.
+sci-biology/staden-bin
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Packages still relying on old gdome2 (#415725).
+# Removal in a month.
+dev-perl/XML-GDOME
+x11-libs/gtkmathview-bonobo
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Only for kernel 2.6.37 or older, bug #417333. Removal in
+# a month.
+media-video/camserv
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# The replacement is to use aspell for statical dictionary
+# or hunspell for the myspell hyphen based one, bug #418375
+# Removal in a month.
+app-text/ispell
+app-dicts/ispell-bg
+app-dicts/ispell-cs
+app-dicts/ispell-da
+app-dicts/ispell-de-alt
+app-dicts/ispell-de
+app-dicts/ispell-es
+app-dicts/ispell-et
+app-dicts/ispell-fi
+app-dicts/ispell-fr
+app-dicts/ispell-ga
+app-dicts/ispell-hu
+app-dicts/ispell-it
+app-dicts/ispell-lt
+app-dicts/ispell-nl
+app-dicts/ispell-no
+app-dicts/ispell-pl
+app-dicts/ispell-pt-br
+app-dicts/ispell-pt
+app-dicts/ispell-ru
+app-dicts/ispell-sl
+app-dicts/ispell-sv
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Still using old linux-atm, replaced by linux-atm
+# >=2.5 versions, bug #420309. Removal in a month.
+<net-dialup/linux-atm-2.5
+net-misc/br2684ctl
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Not needed with pulseaudio >=1, bug #420441. Removal
+# in a month
+media-sound/padevchooser
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Completely broken and still requiring old tcldom, see
+# bug #302805. Removal in a month.
+app-admin/moodss
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Replaced by newer dev-tcltk/tclxml, bug #421341.
+# Removal in a month.
+dev-tcltk/tcldom
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# Remove old dotnet packages no longer required by anything
+# (#421359). Removal in a month.
+dev-dotnet/evolution-sharp
+dev-dotnet/gnome-print-sharp
+
+# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
+# It doesn't escape special characters, buggy and dead
+# for ages, see bug #250269, use mksh or ksh instead.
+# Removal in a month.
+app-shells/pdksh
 
 # Kacper Kowalik <xarthisius@gentoo.org> (14 Jun 2012)
 # Mask latest version for testing. Make sure you read
