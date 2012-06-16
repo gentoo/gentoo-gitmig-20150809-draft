@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>mobile-phone</herd>
-	<longdescription>galicesms is a GTK2 GUI interface written in Perl which
-allow clients of the Italian ADSL service called "Rosso Alice" to send up to 10 free SMS messages a day.</longdescription>
-</pkgmetadata>
