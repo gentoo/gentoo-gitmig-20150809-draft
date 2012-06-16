@@ -1,7 +1,0 @@
-#!/bin/sh
-
-. /etc/profile
-
-java -Djava.awt.headless=true \
-    -cp "$(java-config -p commons-cli-1):$(java-config -pbootchart)" \
-    org.bootchart.Main "$@"
