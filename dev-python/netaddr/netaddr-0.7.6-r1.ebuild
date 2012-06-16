@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/netaddr-0.7.6-r1.ebuild,v 1.2 2012/06/15 09:46:10 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/netaddr-0.7.6-r1.ebuild,v 1.3 2012/06/16 20:26:58 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -35,6 +35,7 @@ src_test() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	if ! use cli; then
 		ewarn "If you intend to use netaddr shell in terminal, enable cli USE flag"
 	fi
