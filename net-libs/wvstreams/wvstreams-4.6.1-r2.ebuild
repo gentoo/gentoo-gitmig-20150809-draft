@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r2.ebuild,v 1.1 2012/06/06 20:33:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r2.ebuild,v 1.2 2012/06/16 20:51:14 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic toolchain-funcs versionator
@@ -59,7 +59,10 @@ src_prepare() {
 }
 
 src_configure() {
+
 	append-flags -fno-strict-aliasing
+	append-flags -fno-tree-dce -fno-optimize-sibling-calls #421375
+
 	tc-export CXX
 
 	econf \
