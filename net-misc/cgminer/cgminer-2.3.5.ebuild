@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.3.5.ebuild,v 1.4 2012/05/22 16:10:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.3.5.ebuild,v 1.5 2012/06/16 08:54:41 blueness Exp $
 
 EAPI="4"
 
@@ -22,6 +22,7 @@ REQUIRED_USE="
 	|| ( bitforce cpumining icarus opencl ztex )
 	adl? ( opencl )
 	altivec? ( cpumining ppc ppc64 )
+	opencl? ( ncurses )
 	padlock? ( cpumining || ( amd64 x86 ) )
 	sse2? ( cpumining || ( amd64 x86 ) )
 	sse4? ( cpumining amd64 )
