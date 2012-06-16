@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.1 2012/06/16 16:01:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.2 2012/06/16 18:51:31 hasufell Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="bazaar? 2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.* 2.7-pypy-*"
 
@@ -15,20 +15,24 @@ HOMEPAGE="http://kitenet.net/~joey/code/etckeeper/"
 SRC_URI="http://git.kitenet.net/?p=${PN}.git;a=snapshot;h=refs/tags/${PV};sf=tgz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-IUSE=""
+IUSE="bazaar"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
 VCS_DEPEND="
 	dev-vcs/git
 	dev-vcs/mercurial
-	dev-vcs/bzr
-	dev-vcs/darcs"
+	dev-vcs/darcs
+	bazaar? ( dev-vcs/bzr )"
 RDEPEND="app-portage/portage-utils
 	|| ( ${VCS_DEPEND} )"
 
 src_prepare(){
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
+
+src_compile() {
+	use bazaar && emake
 }
 
 src_install(){
@@ -38,7 +42,7 @@ src_install(){
 	$(PYTHON) ./etckeeper-bzr/__init__.py install --root="${D}" ||
 		die "bzr support installation failed!"
 	}
-	python_execute_function bzr_install
+	use bazaar && python_execute_function bzr_install
 
 	newbashcomp bash_completion ${PN}
 	insinto /usr/share/doc/${PN}/examples

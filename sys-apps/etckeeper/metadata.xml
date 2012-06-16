@@ -11,5 +11,8 @@
 		<name>Manuel Rüger</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<use>
+		<flag name='bazaar'>Support <pkg>dev-vcs/bzr</pkg> based repository</flag>
+	</use>
 </pkgmetadata>
 
