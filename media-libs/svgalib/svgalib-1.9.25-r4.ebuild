@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25-r3.ebuild,v 1.1 2012/04/07 12:10:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25-r4.ebuild,v 1.1 2012/06/16 09:59:36 pacho Exp $
 
 EAPI="4"
 
@@ -35,6 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.9.25-linux2.6.36-r1.patch
 	epatch "${FILESDIR}"/${PN}-1.9.25-segfault.patch
 	epatch "${FILESDIR}"/${PN}-1.9.25-build2.patch
+	epatch "${FILESDIR}"/${PN}-1.9.25-qa.patch
 	sed -i -e '/linux\/smp_lock.h/d' kernel/svgalib_helper/main.c || die
 }
 
@@ -98,7 +99,7 @@ src_install() {
 	doins src/vga.h gl/vgagl.h src/mouse/vgamouse.h src/joystick/vgajoystick.h
 	doins src/keyboard/vgakeyboard.h kernel/svgalib_helper/svgalib_helper.h
 
-	insinto /etc/udev/rules.d
+	insinto /lib/udev/rules.d
 	newins "${FILESDIR}"/svgalib.udev.rules.d.2 30-svgalib.rules
 
 	exeinto /usr/lib/svgalib/demos
@@ -116,7 +117,10 @@ src_install() {
 	cd "${S}"/doc
 	dodoc CHANGES DESIGN TODO
 	docinto txt
-	dodoc Driver-programming-HOWTO README.* add_driver svgalib.lsm
+	dodoc Driver-programming-HOWTO add_driver svgalib.lsm \
+		README.{joystick,keymap,multi-monitor,patching,vesa}
+	# avoid installation of a broken symlink
+	newdoc ../lrmi-0.6m/README README.lrmi
 }
 
 pkg_postinst() {

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.94 2012/04/07 12:10:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.95 2012/06/16 09:59:36 pacho Exp $
+
+*svgalib-1.9.25-r4 (16 Jun 2012)
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> +files/svgalib-1.9.25-qa.patch,
+  +svgalib-1.9.25-r4.ebuild, -svgalib-1.9.25-r3.ebuild:
+  Fix QA warnings and installation of some files, by Andrew Savchenko. Drop old.
 
 *svgalib-1.9.25-r3 (07 Apr 2012)
 
