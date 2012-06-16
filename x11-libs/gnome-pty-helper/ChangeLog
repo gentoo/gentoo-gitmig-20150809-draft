@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gnome-pty-helper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.12 2012/04/14 09:11:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.13 2012/06/16 10:44:50 pacho Exp $
+
+*gnome-pty-helper-0.32.2 (16 Jun 2012)
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> +gnome-pty-helper-0.32.2.ebuild:
+  Version bump.
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> gnome-pty-helper-0.32.0.ebuild:
   Add ~amd64-linux keyword.
