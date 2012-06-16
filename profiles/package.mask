@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13865 2012/06/16 14:38:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13866 2012/06/16 16:58:16 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -441,12 +441,6 @@ app-arch/hardlink++
 # Markos Chandras <hwoarang@gentoo.org> (15 May 2012)
 # Masked for testing
 =net-misc/dibbler-0.8.2
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Upstream reports circumvention; developer has ceased
-# maintenance (#415255). Pending security patch.
-# Proxy-maintainers will take care of it
-app-shells/rssh
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 May 2012)
 # Nouveau API break, mask until situation becomes palatable for users

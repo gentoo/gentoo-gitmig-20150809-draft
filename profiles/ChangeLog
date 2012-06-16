@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6682 2012/06/16 16:18:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6683 2012/06/16 16:58:16 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jun 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  app-shells/rssh is fixed
 
   16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> use.desc:
   New USE flag called "postscript" to replace USE="ps" and USE="gs"
