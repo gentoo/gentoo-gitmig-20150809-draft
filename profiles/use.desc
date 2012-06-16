@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.486 2012/06/06 18:34:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.487 2012/06/16 16:18:27 ssuominen Exp $
 
 # Keep them sorted
 
@@ -270,6 +270,7 @@ policykit - Enable PolicyKit authentication support
 portaudio - Adds support for the crossplatform portaudio audio API
 posix - Adds support for POSIX-compatible functions
 postgres - Adds support for the postgresql database
+postscript - Enable support for the PostScript language (often using app-text/ghostscript-gpl)
 ppds - Adds support for automatically generated ppd (printing driver) files
 prefix - Defines if a Gentoo Prefix offset installation is used
 prelude - Adds support/bindings for the Prelude Intrusion Detection System
