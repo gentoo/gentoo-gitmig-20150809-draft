@@ -4,6 +4,7 @@
 <herd>netmon</herd>
 <maintainer>
 	<email>wormo@gentoo.org</email>
+	<description>CC her in bug reports and assign to herd</description>
 </maintainer>
 <longdescription>interface to packets that have been logged by the kernel packet filter</longdescription>
 </pkgmetadata>

@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnetfilter_log
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.14 2012/05/05 02:54:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.15 2012/06/16 09:38:00 pacho Exp $
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> -libnetfilter_log-0.0.13.ebuild,
+  -libnetfilter_log-0.0.15.ebuild, -libnetfilter_log-0.0.16.ebuild,
+  -libnetfilter_log-1.0.0.ebuild, metadata.xml:
+  Wormo will only take care of bug wrangling, keep she only CCed to keep an eye
+  on this. Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   libnetfilter_log-0.0.15.ebuild, libnetfilter_log-0.0.16.ebuild,
