@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13867 2012/06/16 17:20:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13868 2012/06/16 17:41:05 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (16 Jun 2012)
+# Mask for removal (#421461)
+# Test suite fails since perl 5.13.6
+dev-perl/Tie-RegexpHash
 
 # Torsten Veller <tove@gentoo.org> (16 Jun 2012)
 # Mask for removal (#310711)
