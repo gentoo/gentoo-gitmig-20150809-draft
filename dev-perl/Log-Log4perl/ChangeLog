@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Log-Log4perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.80 2012/06/02 18:53:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.81 2012/06/16 18:46:36 armin76 Exp $
+
+  16 Jun 2012; Raúl Porcel <armin76@gentoo.org> Log-Log4perl-1.28.ebuild,
+  Log-Log4perl-1.330.0.ebuild, Log-Log4perl-1.340.0.ebuild,
+  Log-Log4perl-1.360.0.ebuild, Log-Log4perl-1.370.0.ebuild:
+  Drop ia64/sparc keywords
 
 *Log-Log4perl-1.370.0 (02 Jun 2012)
 
