@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbsql
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.9 2011/07/20 15:46:33 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.10 2012/06/16 14:56:15 pacho Exp $
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> xbsql-0.11.ebuild:
+  Be less strict with xbase dependency.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #47265

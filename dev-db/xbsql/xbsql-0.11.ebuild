@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/xbsql-0.11.ebuild,v 1.8 2007/02/03 09:11:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/xbsql-0.11.ebuild,v 1.9 2012/06/16 14:56:15 pacho Exp $
 
 inherit base
 
@@ -13,15 +13,14 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
-DEPEND="sys-devel/automake
-	sys-devel/libtool
-	=dev-db/xbase-2.0.0
+RDEPEND="~dev-db/xbase-2.0.0
 	sys-libs/readline"
-RDEPEND="=dev-db/xbase-2.0.0
-	sys-libs/readline"
+DEPEND="${RDEPEND}
+	sys-devel/automake
+	sys-devel/libtool"
 
 src_install() {
 	base_src_install
-	dodoc AUTHORS Announce COPYING ChangeLog INSTALL README TODO
+	dodoc AUTHORS Announce ChangeLog INSTALL README TODO
 	use doc && dohtml doc/*
 }
