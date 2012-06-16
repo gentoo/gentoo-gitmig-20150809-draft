@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.8.3.ebuild,v 1.4 2012/05/24 08:05:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.8.3.ebuild,v 1.5 2012/06/16 16:45:24 ssuominen Exp $
 
 EAPI=4
 
@@ -10,12 +10,12 @@ inherit kde4-base
 
 DESCRIPTION="KDE4 interface for doing mathematics and scientific computing"
 KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
-IUSE="analitza debug ps +R"
+IUSE="analitza debug postscript +R"
 
 # TODO Add Sage Mathematics Software backend (http://www.sagemath.org)
 RDEPEND="
 	analitza? ( $(add_kdebase_dep analitza) )
-	ps? ( app-text/libspectre )
+	postscript? ( app-text/libspectre )
 	R? ( dev-lang/R )
 "
 DEPEND="${RDEPEND}
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with analitza)
-		$(cmake-utils_use_with ps LibSpectre)
+		$(cmake-utils_use_with postscript LibSpectre)
 		$(cmake-utils_use_with R)
 	)
 	kde4-base_src_configure
