@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.10 2012/05/24 13:33:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.11 2012/06/16 16:54:35 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
-IUSE="dbus debug djvu dvi gnome gnome-keyring +introspection nautilus +ps t1lib tiff"
+IUSE="dbus debug djvu dvi gnome gnome-keyring +introspection nautilus +postscript t1lib tiff"
 
 # Since 2.26.2, can handle poppler without cairo support. Make it optional ?
 # not mature enough
@@ -38,7 +38,7 @@ RDEPEND="
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.22.0 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6 )
 	nautilus? ( >=gnome-base/nautilus-2.10[introspection?] )
-	ps? ( >=app-text/libspectre-0.2.0 )
+	postscript? ( >=app-text/libspectre-0.2.0 )
 	tiff? ( >=media-libs/tiff-3.6:0 )
 "
 DEPEND="${RDEPEND}
@@ -78,7 +78,7 @@ pkg_setup() {
 		$(use_with gnome-keyring keyring)
 		$(use_enable introspection)
 		$(use_enable nautilus)
-		$(use_enable ps)
+		$(use_enable postscript ps)
 		$(use_enable t1lib)
 		$(use_enable tiff)"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
