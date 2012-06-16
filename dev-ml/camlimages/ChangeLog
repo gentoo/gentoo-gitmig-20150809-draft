@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.31 2012/04/10 12:22:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.32 2012/06/16 16:37:51 ssuominen Exp $
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> camlimages-3.0.2.ebuild,
+  camlimages-4.0.1.ebuild, metadata.xml:
+  Use global USE flag "postscript" instead of local USE flag "gs" for
+  PostScript support
 
 *camlimages-4.0.1 (10 Apr 2012)
 

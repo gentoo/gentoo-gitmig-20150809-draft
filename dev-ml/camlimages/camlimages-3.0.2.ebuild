@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-3.0.2.ebuild,v 1.9 2011/02/28 18:10:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-3.0.2.ebuild,v 1.10 2012/06/16 16:37:51 ssuominen Exp $
 
 EAPI=2
 
 inherit eutils autotools
 
-IUSE="doc gif gs gtk jpeg tiff truetype xpm"
+IUSE="doc gif gtk jpeg postscript tiff truetype xpm"
 
 DESCRIPTION="An image manipulation library for ocaml"
 HOMEPAGE="http://cristal.inria.fr/camlimages/"
@@ -19,10 +19,10 @@ KEYWORDS="~amd64 ppc x86"
 RDEPEND=">=dev-lang/ocaml-3.10.2[X,ocamlopt]
 	gif? ( media-libs/giflib )
 	gtk? ( dev-ml/lablgtk )
-	gs? ( app-text/ghostscript-gpl )
 	jpeg? ( virtual/jpeg )
+	postscript? ( app-text/ghostscript-gpl )
 	tiff? ( media-libs/tiff )
-	>=media-libs/libpng-1.4
+	>=media-libs/libpng-1.4:0
 	truetype? ( >=media-libs/freetype-2 )
 	xpm? ( x11-libs/libXpm )
 	"
@@ -42,7 +42,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_with gif) \
-		$(use_with gs) \
+		$(use_with postscript gs) \
 		$(use_with gtk lablgtk2) \
 		--without-lablgtk \
 		$(use_with jpeg) \
