@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.21.ebuild,v 1.7 2011/11/06 20:13:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.21.ebuild,v 1.8 2012/06/16 11:06:27 grobian Exp $
 
 EAPI=3
 
@@ -16,14 +16,14 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="ssl nls kerberos hesiod tk socks"
 
 RDEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 )
 	nls? ( virtual/libintl )
-	elibc_FreeBSD? ( sys-libs/e2fsprogs-libs )
+	!elibc_glibc? ( sys-libs/e2fsprogs-libs )
 	socks? ( net-proxy/dante )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
@@ -56,8 +56,8 @@ src_configure() {
 		--enable-NTLM \
 		--enable-SDPS \
 		$(use_enable nls) \
-		$(use_with ssl) \
-		$(use kerberos && echo "--with-ssl" ) \
+		$(use_with ssl ssl ${EPREFIX}/usr) \
+		$(use kerberos && echo "--with-ssl=${EPREFIX}/usr" ) \
 		$(use_with kerberos gssapi) \
 		$(use_with kerberos kerberos5) \
 		$(use_with hesiod) \
