@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.85 2012/05/06 20:18:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.86 2012/06/16 17:31:19 armin76 Exp $
+
+  16 Jun 2012; Raúl Porcel <armin76@gentoo.org> MailTools-2.90.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #412979
 
   06 May 2012; Brent Baude <ranger@gentoo.org> MailTools-2.90.0.ebuild:
   Marking MailTools-2.90.0 ppc for bug 412979
