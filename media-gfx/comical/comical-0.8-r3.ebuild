@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8-r3.ebuild,v 1.1 2012/06/16 12:47:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8-r3.ebuild,v 1.2 2012/06/16 12:59:54 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils toolchain-funcs wxwidgets
 
-DESCRIPTION="Comical is a sequential image display program, to deal with .cbr and .cbz files"
+DESCRIPTION="A sequential image display program, to deal with .cbr and .cbz files"
 HOMEPAGE="http://comical.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
