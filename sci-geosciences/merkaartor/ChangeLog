@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/merkaartor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.23 2012/05/24 20:40:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.24 2012/06/16 08:29:42 scarabeus Exp $
+
+  16 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> merkaartor-9999.ebuild:
+  Depend only on boost. By nikoli.
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> merkaartor-0.17.2.ebuild,
   merkaartor-9999.ebuild:

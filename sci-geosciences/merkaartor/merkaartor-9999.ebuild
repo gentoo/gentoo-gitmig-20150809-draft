@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.12 2012/05/24 20:40:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.13 2012/06/16 08:29:42 scarabeus Exp $
 
 EAPI=4
 
@@ -20,8 +20,7 @@ SLOT="0"
 IUSE="debug exif gps nls libproxy webkit"
 
 QT_MINIMAL="4.7.2"
-DEPEND="
-	>=dev-libs/boost-1.46
+RDEPEND="
 	>=sci-libs/gdal-1.6.0
 	>=sci-libs/proj-4.6
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4
@@ -31,7 +30,9 @@ DEPEND="
 	libproxy? ( net-libs/libproxy )
 	webkit? ( >=x11-libs/qt-webkit-${QT_MINIMAL}:4 )
 "
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	>=dev-libs/boost-1.46
+"
 
 DOCS="AUTHORS CHANGELOG HACKING"
 
