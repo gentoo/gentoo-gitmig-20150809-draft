@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Const-Fast
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Const-Fast/ChangeLog,v 1.1 2012/06/16 19:55:52 bicatali Exp $
+
+*Const-Fast-0.11.0 (16 Jun 2012)
+
+  16 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +Const-Fast-0.11.0.ebuild, +metadata.xml:
+  Initial import
+
