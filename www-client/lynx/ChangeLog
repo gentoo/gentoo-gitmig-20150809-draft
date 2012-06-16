@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.126 2012/05/28 21:34:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.127 2012/06/16 09:39:35 pacho Exp $
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Wormo will only take care of bug wrangling, keep she only CCed to keep an eye
+  on this.
 
   28 May 2012; Tim Harder <radhermit@gentoo.org> -lynx-2.8.7_p1.ebuild,
   -lynx-2.8.7_p2.ebuild, -files/lynx-2.8.7-include-locale.patch,
