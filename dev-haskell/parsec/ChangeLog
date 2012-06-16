@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/parsec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parsec/ChangeLog,v 1.22 2012/03/20 16:29:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parsec/ChangeLog,v 1.23 2012/06/16 13:15:41 gienah Exp $
+
+*parsec-3.1.3 (16 Jun 2012)
+
+  16 Jun 2012; Mark Wright <gienah@gentoo.org> +parsec-3.1.3.ebuild:
+  Bump parsec to 3.1.3
 
   20 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> parsec-3.1.2-r1.ebuild:
   ~ia64 rekeyworded. restored ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
