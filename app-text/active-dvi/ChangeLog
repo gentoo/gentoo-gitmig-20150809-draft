@@ -1,6 +1,11 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.42 2012/04/10 12:22:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.43 2012/06/16 16:41:19 ssuominen Exp $
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> active-dvi-1.8.ebuild,
+  active-dvi-1.9.ebuild, active-dvi-1.10.2.ebuild:
+  Use global USE flag "postscript" instead of local USE flag "gs" for
+  PostScript support
 
 *active-dvi-1.10.2 (10 Apr 2012)
 
