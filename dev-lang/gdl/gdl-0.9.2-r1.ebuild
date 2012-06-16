@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.3 2012/03/16 20:18:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.4 2012/06/16 16:48:40 ssuominen Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/gnudatalanguage/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="fftw grib gshhs hdf hdf5 imagemagick netcdf openmp proj ps python
+IUSE="fftw grib gshhs hdf hdf5 imagemagick netcdf openmp proj postscript python
 	static-libs udunits wxwidgets X"
 
 RDEPEND="sci-libs/gsl
@@ -36,7 +36,7 @@ RDEPEND="sci-libs/gsl
 	imagemagick? ( media-gfx/imagemagick )
 	netcdf? ( sci-libs/netcdf )
 	proj? ( sci-libs/proj )
-	ps? ( dev-libs/pslib )
+	postscript? ( dev-libs/pslib )
 	python? ( dev-python/numpy )
 	udunits? ( sci-libs/udunits )
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] )"
@@ -90,7 +90,7 @@ src_configure() {
 		$(cmake-utils_use netcdf)
 		$(cmake-utils_use openmp)
 		$(cmake-utils_use proj LIBPROJ4)
-		$(cmake-utils_use ps PSLIB)
+		$(cmake-utils_use postscript PSLIB)
 		$(cmake-utils_use udunits)
 		$(cmake-utils_use wxwidgets)
 	)

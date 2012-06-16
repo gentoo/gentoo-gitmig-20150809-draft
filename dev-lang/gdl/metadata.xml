@@ -13,7 +13,6 @@
 
   <flag name='grib'>Add support for the meteorological GRIB format with <pkg>sci-libs/grib_api</pkg></flag>
   <flag name="proj">Add support for <pkg>sci-libs/proj</pkg> (geographic projections)</flag>
-  <flag name="ps">Add support for Postscript with <pkg>dev-libs/pslib</pkg></flag>
   <flag name='udunits'>Add support for manipulating units of physical quantities</flag>
 </use>
 </pkgmetadata>

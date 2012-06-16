@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.29 2012/03/16 20:18:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.30 2012/06/16 16:48:40 ssuominen Exp $
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> gdl-0.9.2.ebuild,
+  gdl-0.9.2-r1.ebuild, metadata.xml:
+  Use global USE flag "postscript" instead of local USE flag "ps" for
+  PostScript support
 
   16 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> gdl-0.9.2-r1.ebuild:
   Restrict pypy
