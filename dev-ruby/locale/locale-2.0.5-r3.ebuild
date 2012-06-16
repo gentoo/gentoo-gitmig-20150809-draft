@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.5-r3.ebuild,v 1.3 2012/05/21 20:41:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.5-r3.ebuild,v 1.4 2012/06/16 05:44:29 graaff Exp $
 
 EAPI=2
 
@@ -25,6 +25,11 @@ IUSE=""
 ruby_add_bdepend "test? ( || ( virtual/ruby-test-unit dev-ruby/test-unit:2 ) )"
 
 RUBY_PATCHES=( "${FILESDIR}/${PN}-language-fixes.patch" )
+
+all_ruby_prepare() {
+	# Avoid automagic dependency on allison, bug 334937
+	sed -i -e '/allison/ s:^:#:' Rakefile || die
+}
 
 each_ruby_prepare() {
 	case ${RUBY} in
