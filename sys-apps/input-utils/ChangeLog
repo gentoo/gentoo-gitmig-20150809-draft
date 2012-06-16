@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/input-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.8 2011/07/03 07:56:19 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.9 2012/06/16 13:08:59 ago Exp $
+
+  16 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  input-utils-0.0.1_pre20081014.ebuild:
+  Stable for amd64, wrt bug #420041
 
 *input-utils-0.0.1_pre20081014 (03 Jul 2011)
 
