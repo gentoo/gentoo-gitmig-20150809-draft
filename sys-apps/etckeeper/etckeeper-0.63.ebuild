@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.2 2012/06/16 18:51:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.3 2012/06/16 18:55:45 hasufell Exp $
 
 EAPI=4
 
@@ -39,8 +39,8 @@ src_install(){
 	default
 
 	bzr_install() {
-	$(PYTHON) ./etckeeper-bzr/__init__.py install --root="${D}" ||
-		die "bzr support installation failed!"
+		$(PYTHON) ./etckeeper-bzr/__init__.py install --root="${D}" ||
+			die "bzr support installation failed!"
 	}
 	use bazaar && python_execute_function bzr_install
 
