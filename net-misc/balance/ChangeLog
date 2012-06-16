@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/balance
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.19 2012/06/16 09:23:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/ChangeLog,v 1.20 2012/06/16 22:51:30 xmw Exp $
+
+*balance-3.54 (16 Jun 2012)
+
+  16 Jun 2012; Michael Weber <xmw@gentoo.org> +balance-3.54.ebuild,
+  +files/balance-3.54-Makefile.patch:
+  Version bump (bug 365965, thanks CJ Kucera), respect LDFLAGS (bug 336958)
 
   16 Jun 2012; Michael Weber <xmw@gentoo.org> metadata.xml:
   Taking maint.
