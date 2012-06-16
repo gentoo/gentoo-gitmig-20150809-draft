@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/CHI
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CHI/ChangeLog,v 1.1 2012/06/16 21:02:58 flameeyes Exp $
+
+*CHI-0.54 (16 Jun 2012)
+
+  16 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +CHI-0.54.ebuild,
+  +metadata.xml:
+  Initial import of CHI, new dependency on google-api-adwords-perl.
+
