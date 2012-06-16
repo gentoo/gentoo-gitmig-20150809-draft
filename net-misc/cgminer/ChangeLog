@@ -1,5 +1,8 @@
 
 
+  16 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.2-r1.ebuild:
+  Fix SRC_URI
+
   16 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.4.ebuild,
   cgminer-2.3.5.ebuild, cgminer-2.3.6.ebuild, cgminer-2.4.0.ebuild,
   cgminer-2.4.1.ebuild, cgminer-2.4.2-r1.ebuild, cgminer-2.4.3.ebuild:
