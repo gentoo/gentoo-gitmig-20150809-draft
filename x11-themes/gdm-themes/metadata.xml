@@ -4,9 +4,6 @@
 	<maintainer>
 		<email>beandog@gentoo.org</email>
 	</maintainer>
-	<maintainer>
-		<email>cla@gentoo.org</email>
-	</maintainer>
 	<longdescription>
 		This will install a very long list of gdm themes. Most of them were 
 		tested and found to work in gdm-2.18.4. They may or might not work 
