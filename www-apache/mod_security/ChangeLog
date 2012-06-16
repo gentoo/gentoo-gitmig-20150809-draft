@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.72 2012/04/01 15:39:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.73 2012/06/16 17:34:52 flameeyes Exp $
+
+*mod_security-2.6.6 (16 Jun 2012)
+
+  16 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +mod_security-2.6.6.ebuild, -mod_security-2.6.1.ebuild,
+  -mod_security-2.6.5.ebuild, mod_security-2.6.3.ebuild:
+  Version bump; remove old; fix 2.6.3 to use only automake 1.11 (since 1.12 will
+  fail); do not rebuild autotools on the new versions.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> mod_security-2.6.3.ebuild:
   sparc stable wrt #409199

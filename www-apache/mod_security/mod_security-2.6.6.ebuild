@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.5.ebuild,v 1.1 2012/03/21 16:29:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.6.ebuild,v 1.1 2012/06/16 17:34:52 flameeyes Exp $
 
 EAPI=4
 
-inherit apache-module autotools
+inherit apache-module
 
 MY_PN=modsecurity-apache
 MY_PV=${PV/_rc/-rc}
@@ -40,8 +40,6 @@ need_apache2
 
 src_prepare() {
 	cp "${FILESDIR}"/modsecurity.conf "${T}"/79_modsecurity.conf || die
-
-	eautoreconf
 }
 
 src_configure() {

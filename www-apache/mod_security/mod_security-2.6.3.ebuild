@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.3.ebuild,v 1.5 2012/04/01 15:39:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.3.ebuild,v 1.6 2012/06/16 17:34:52 flameeyes Exp $
 
 EAPI=4
+
+WANT_AUTOMAKE=1.11
 
 inherit apache-module autotools
 
