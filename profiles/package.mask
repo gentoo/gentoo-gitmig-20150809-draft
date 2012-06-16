@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13861 2012/06/16 10:03:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13862 2012/06/16 12:19:46 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -302,11 +302,6 @@ app-arch/hardlink++
 =app-text/poppler-0.20.0
 =app-text/poppler-0.20.1
 
-# Michael Sterrett <mr_bones_@gentoo.org> (16 May 2012)
-# doesn't work with latest ode and last release in 2003.
-# Masked for removal on 20120615
-games-arcade/ssc
-
 # Ultrabug <ultrabug@gentoo.org> (16 May 2012)
 # Masked for testing
 >=sys-cluster/corosync-2.0.0
@@ -315,136 +310,11 @@ games-arcade/ssc
 # Masked for testing
 =net-misc/dibbler-0.8.2
 
-# Naohiro Aota <naota@gentoo.org> (07 May 2012)
-# Dead upstream.
-# Removal in 30 days - bug 415735
-app-dicts/sumika
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Upstream dead, needs to be ported to mp4v2-1.9.1 or gpac utils.
-# Removal in a month.
-media-video/undvd
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Overflow (#337410), no new version for a long time and nothing
-# needs it. Removal in a month.
-media-sound/ssrc
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# For kernel-2.2, doesn't respect LDFLAGS (#337685). Removal in a
-# month.
-net-firewall/ipchains
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Doesn't respect LDFLAGS (#337906), only supports really old
-# flash. Removal in a month.
-media-libs/libflash
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Dead for a long time, opened bugs, doesn't work (#356241). Use
-# net-fs/smbnetfs instead. Removal in a month.
-net-fs/fusesmb
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# No longer works due Telecom Italia modifications in their
-# website (#363115). Removal in a month.
-app-mobilephone/galicesms
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# net-misc/batman-adv replaces them (#381659). Removal in a
-# month.
-net-misc/batmand
-net-misc/batman-vis
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# No needed for a long time (#395545). Removal in a month.
-www-plugins/libflashsupport
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Broken, nobody wants to maintain it as it's hard to keep
-# in a proper state (#410639). Removal in a month.
-sci-physics/abinit
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# No needed since kernel-2.6.38 (#406577). Removal in a month.
-sys-kernel/xen-sources
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# No release since 2006, broken with cups-1.5 (#408315),
-# nobody willing to maintain it. A lot of image viewers in the
-# tree to replace it. Removal in a month.
-media-gfx/flphoto
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Still needs old qof slot that relies on sqlite2 (#408831).
-# Removal in a month.
-dev-libs/qof:0
-app-office/gnotime
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Still using glib-1, there are some replacements in the tree
-# and nothing RDEPENDs on it (#409537). Removal in a month.
-app-crypt/quintuple-agent
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Still using glib-1, only needed for really old devices and
-# only supporting up to 64 MB due a bug (#409539). Removal
-# in a month.
-app-misc/rio500
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Nothing looks to need this old slot (#409833). Removal in a
-# month.
-dev-util/glade:2
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Needs old tcl/tk, doesn't respect CC, LDFLAGS, CFLAGS (#410511).
-# Removal in a month.
-dev-ada/tash
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Doesn't work (#412139), use games-misc/xpenguins instead.
-# Removal in a month.
-x11-misc/xsimpsons
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Only for kernel-2.4 (#412193). Removal in a month.
-sys-kernel/sparc-sources
-
 # Pacho Ramos <pacho@gentoo.org> (13 May 2012)
 # Upstream reports circumvention; developer has ceased
 # maintenance (#415255). Pending security patch.
 # Proxy-maintainers will take care of it
 app-shells/rssh
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Replaced by x11-misc/gbdfed (#415651). Removal in a month.
-x11-misc/xmbdfed
-
-# Pacho Ramos <pacho@gentoo.org> (13 May 2012)
-# Dead for a long time and nothing needs them (#415669, #415675).
-# Removal in a month.
-x11-misc/fme
-x11-misc/fxred
-
-# Pacho Ramos <pacho@gentoo.org> (11 May 2012)
-# No GPL releases for a long time, bundles external classes (#162788)
-# Use app-benchmarks/bootchart2 instead. Removal in a month.
-app-benchmarks/bootchart
-
-# Pacho Ramos <pacho@gentoo.org> (11 May 2012)
-# Fails to build, bug #280920 and is unmaintained for a long time.
-# Removal in a month.
-dev-embedded/parapin-driver
-
-# Pacho Ramos <pacho@gentoo.org> (11 May 2012)
-# Unmaintained since 2005, see bug #281502 for reference. Removal
-# in a month.
-dev-perl/adocman
-
-# Pacho Ramos <pacho@gentoo.org> (11 May 2012)
-# Old and only for kernel-2.4, bug #287125. Removal in a month.
-media-tv/linuxtv-dvb
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 May 2012)
 # Nouveau API break, mask until situation becomes palatable for users
@@ -464,13 +334,6 @@ media-tv/linuxtv-dvb
 # 0.6 introduced severe bug (0.5.2 unaffected)
 # https://github.com/hhatto/autopep8/issues/12
 >=dev-python/autopep8-0.6
-
-# Naohiro Aota <naota@gentoo.org> (07 May 2012)
-# Dead upstream.
-# Removal in 30 days - bug 412503, 412505, 412511
-app-dicts/canna-canda-med
-app-dicts/canna-shion
-app-dicts/canna-zipcode
 
 # Johannes Huber <johu@gentoo.org> (03 May 2012)
 # Unstable dev channel release. Fixes build with gcc47
@@ -509,12 +372,6 @@ dev-ruby/ruby-panel-applet2
 >=www-servers/apache-2.4
 >=app-admin/apache-tools-2.4
 >=www-apache/mod_macro-1.2.1
-
-# Joe Peterson <lavajoe@gentoo.org> (12 Apr 2012)
-# Replaced by new package: media-sound/logitechmediaserver-bin
-#   - Upstream retired the old package/name
-# Removal in 30 days - see bug 377825
-media-sound/squeezeboxserver
 
 # Ulrich Mueller <ulm@gentoo.org> (09 Apr 2012)
 # Christian Faulhammer <fauli@gentoo.org>
@@ -649,7 +506,7 @@ kde-misc/kgtk
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jan 2012)
 # Mask compiz for last-rites unless someone steps up
-# to maintain it. Removal in 30 days.
+# to maintain it. Proxy maintainers will take care of this.
 x11-libs/compiz-bcop
 x11-libs/compizconfig-backend-gconf
 x11-libs/compizconfig-backend-kconfig4
