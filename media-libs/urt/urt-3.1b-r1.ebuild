@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.30 2012/05/09 00:22:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/urt/urt-3.1b-r1.ebuild,v 1.31 2012/06/16 16:32:52 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,14 +11,14 @@ SRC_URI="ftp://ftp.iastate.edu/pub/utah-raster/${P}.tar.Z"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="gif gs tiff X"
+IUSE="gif postscript tiff X"
 
 DEPEND="X? ( x11-libs/libXext
 			x11-proto/xextproto
 		)
 	gif? ( media-libs/giflib )
 	tiff? ( media-libs/tiff )
-	gs? ( app-text/ghostscript-gpl )"
+	postscript? ( app-text/ghostscript-gpl )"
 
 S=${WORKDIR}
 
@@ -47,7 +47,7 @@ src_unpack() {
 	cp "${FILESDIR}"/gentoo-config config/gentoo
 	cat >> config/gentoo <<-EOF
 	$(urt_config X X11)
-	$(urt_config gs POSTSCRIPT)
+	$(urt_config postscript POSTSCRIPT)
 	$(urt_config tiff TIFF)
 	ExtraCFLAGS = ${CFLAGS}
 	MFLAGS = ${MAKEOPTS}
