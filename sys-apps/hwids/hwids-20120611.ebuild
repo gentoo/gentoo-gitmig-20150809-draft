@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20120611.ebuild,v 1.1 2012/06/12 17:32:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20120611.ebuild,v 1.2 2012/06/16 12:51:59 flameeyes Exp $
 
 EAPI="4"
 
 DESCRIPTION="Hardware (PCI, USB) IDs databases"
-HOMEPAGE="https://github.com/Flameeyes/hwids"
-SRC_URI="https://github.com/Flameeyes/hwids/tarball/${P} -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/gentoo/hwids"
+SRC_URI="https://github.com/gentoo/hwids/tarball/${P} -> ${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
