@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/rabbit-0.9.2.ebuild,v 1.1 2011/05/07 06:45:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/rabbit-0.9.2.ebuild,v 1.2 2012/06/16 16:35:04 ssuominen Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -14,13 +14,13 @@ SRC_URI="http://www.cozmixng.org/~kou/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls gs migemo tgif enscript emacs"
+IUSE="nls postscript migemo tgif enscript emacs"
 
 CDEPEND="emacs? ( virtual/emacs )"
 DEPEND="${DEPEND} ${CDEPEND}"
 RDEPEND="${RDEPEND} ${CDEPEND}
 	nls? ( dev-ruby/ruby-gettext )
-	gs? ( app-text/ghostscript-gpl )
+	postscript? ( app-text/ghostscript-gpl )
 	migemo? ( app-text/migemo )
 	enscript? ( app-text/enscript )
 	tgif? ( media-gfx/tgif )"

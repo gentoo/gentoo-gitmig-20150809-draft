@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>ruby</herd>
 <use>
-  <flag name='gs'>Ghostscript support (<pkg>app-text/ghostscript-gpl</pkg>)</flag>
   <flag name='tgif'>tgif support (<pkg>media-gfx/tgif</pkg>)</flag>
   <flag name='markdown'>Markdown support (<pkg>dev-ruby/kramdown</pkg>)</flag>
 </use>
