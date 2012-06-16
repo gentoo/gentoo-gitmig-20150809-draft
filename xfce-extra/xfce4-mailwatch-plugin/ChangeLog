@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-mailwatch-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/ChangeLog,v 1.6 2012/05/05 07:17:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/ChangeLog,v 1.7 2012/06/16 14:52:16 ssuominen Exp $
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-mailwatch-plugin-1.1.0.ebuild,
+  +files/xfce4-mailwatch-plugin-1.1.0-gnutls-3.patch:
+  Fix building with net-libs/gnutls >= 3 wrt #421407 by Diego Elio Pettenò
 
   05 May 2012; Michał Górny <mgorny@gentoo.org>
   xfce4-mailwatch-plugin-1.1.0.ebuild:
