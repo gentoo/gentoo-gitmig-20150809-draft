@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/pacman-4.0.1.ebuild,v 1.2 2012/05/08 18:47:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/pacman-4.0.1.ebuild,v 1.3 2012/06/16 05:28:26 binki Exp $
 
 EAPI=4
 
@@ -41,6 +41,15 @@ src_prepare() {
 	# Remove a line that adds -Werror in ./configure when --enable-debug
 	# is passed:
 	sed -i -e '/-Werror/d' configure.ac || die "-Werror"
+
+	# autopoint is unwilling to replace m4/gettext.m4 with the correct
+	# version even though it'll gladly replace */po/Makefile.in.in,
+	# creating an inconsistency between gettext m4 macros and
+	# Makefile.in.in. Also, AM_MKINSTALLDIRS apparently doesn't exist
+	# anymore, so we need newer gettext macros. #420469
+	rm m4/gettext.m4 || die
+	sed -i -e '/AM_GNU_GETTEXT_VERSION/s/0\.13\.1/0.18.1/' configure.ac || die
+
 	eautoreconf
 }
 
