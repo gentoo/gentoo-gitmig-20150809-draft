@@ -10,8 +10,4 @@
   scientific and engineering processes (original version:1978).
   Gentoo version adds autotools to facilitate building and robustness.
 </longdescription>
-<use>
-  <flag name='gs'>Add Ghostscript support (<pkg>app-text/ghostscript-gpl</pkg>)
-    </flag>
-</use>
 </pkgmetadata>
