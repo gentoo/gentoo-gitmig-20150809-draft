@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.4 2012/05/31 17:37:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.5 2012/06/16 16:30:05 ssuominen Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.inkscape.org/"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-IUSE="dia gnome gs inkjar lcms nls spell wmf"
+IUSE="dia gnome postscript inkjar lcms nls spell wmf"
 
 RESTRICT="test"
 
@@ -61,7 +61,7 @@ RDEPEND="
 	dev-python/numpy
 	media-gfx/uniconvertor
 	dia? ( app-office/dia )
-	gs? ( app-text/ghostscript-gpl )
+	postscript? ( app-text/ghostscript-gpl )
 	wmf? ( media-libs/libwmf )"
 
 DEPEND="${COMMON_DEPEND}

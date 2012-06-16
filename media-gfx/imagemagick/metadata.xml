@@ -6,7 +6,6 @@
     <flag name='autotrace'>Use <pkg>media-gfx/autotrace</pkg> to convert bitmaps into vector graphics</flag>
     <flag name='corefonts'>Use <pkg>media-fonts/corefonts</pkg> which is required by some commands</flag> 
     <flag name='fpx'>Enable <pkg>media-libs/libfpx</pkg> support</flag>
-    <flag name='gs'>Enable ghostscript support</flag>
     <flag name='hdri'>enable High Dynamic Range Images formats</flag>
     <flag name='lqr'>Enable experimental liquid rescale support using <pkg>media-libs/liblqr</pkg></flag>
     <flag name='opencl'>Enable OpenCL support</flag>

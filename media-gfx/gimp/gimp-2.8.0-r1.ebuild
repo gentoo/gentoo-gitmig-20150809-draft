@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0-r1.ebuild,v 1.4 2012/06/02 21:42:28 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.0-r1.ebuild,v 1.5 2012/06/16 16:28:39 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -15,7 +15,7 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml ms my nb nds ne nl nn oc pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta te th tr tt uk vi xh yi zh_CN zh_HK zh_TW"
-IUSE="alsa aalib altivec bzip2 curl dbus debug doc exif gnome gs jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
+IUSE="alsa aalib altivec bzip2 curl dbus debug doc exif gnome postscript jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
 
 for lang in ${LANGS}; do
 	IUSE+=" linguas_${lang}"
@@ -56,7 +56,7 @@ RDEPEND=">=dev-libs/glib-2.30.2:2
 	x11-libs/libXcursor
 	sys-libs/zlib
 	bzip2? ( app-arch/bzip2 )
-	gs? ( app-text/ghostscript-gpl )
+	postscript? ( app-text/ghostscript-gpl )
 	udev? ( sys-fs/udev[gudev] )"
 DEPEND="${RDEPEND}
 	sys-apps/findutils
@@ -87,7 +87,7 @@ pkg_setup() {
 		$(use_with jpeg2k libjasper) \
 		$(use_with exif libexif) \
 		$(use_with lcms) \
-		$(use_with gs) \
+		$(use_with postscript gs) \
 		$(use_enable mmx) \
 		$(use_with mng libmng) \
 		$(use_with pdf poppler) \

@@ -9,8 +9,5 @@
 		<flag name='inkjar'>
 			enables support for OpenOffice.org SVG jar files
 		</flag>
-		<flag name='gs'>
-			enables support for the PostScript import extension
-		</flag>
 	</use>
 </pkgmetadata>

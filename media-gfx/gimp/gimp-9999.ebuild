@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.45 2012/05/18 22:32:00 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.46 2012/06/16 16:28:39 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -17,7 +17,7 @@ LICENSE="GPL-3 LGPL-3"
 SLOT="2"
 KEYWORDS=""
 
-IUSE="alsa aalib altivec bzip2 curl dbus debug doc exif gnome gs jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
+IUSE="alsa aalib altivec bzip2 curl dbus debug doc exif gnome postscript jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
 
 RDEPEND=">=dev-libs/glib-2.30.2:2
 	>=dev-libs/atk-2.2.0
@@ -54,7 +54,7 @@ RDEPEND=">=dev-libs/glib-2.30.2:2
 	x11-libs/libXcursor
 	sys-libs/zlib
 	bzip2? ( app-arch/bzip2 )
-	gs? ( app-text/ghostscript-gpl )
+	postscript? ( app-text/ghostscript-gpl )
 	udev? ( sys-fs/udev[gudev] )"
 DEPEND="${RDEPEND}
 	sys-apps/findutils
@@ -84,7 +84,7 @@ pkg_setup() {
 		$(use_with jpeg2k libjasper) \
 		$(use_with exif libexif) \
 		$(use_with lcms) \
-		$(use_with gs) \
+		$(use_with postscript gs) \
 		$(use_enable mmx) \
 		$(use_with mng libmng) \
 		$(use_with pdf poppler) \
