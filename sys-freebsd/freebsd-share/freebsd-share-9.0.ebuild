@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-9.0.ebuild,v 1.3 2012/04/26 14:40:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-9.0.ebuild,v 1.4 2012/06/16 00:12:39 naota Exp $
 
 inherit bsdmk freebsd
 
@@ -46,6 +46,9 @@ src_unpack() {
 
 	# Remove make.conf manpage as it describes bsdmk's make.conf.
 	sed -i -e 's:make.conf.5::' "${S}/man/man5/Makefile"
+	# Remove rc.conf manpage as it describes bsd's rc.conf.
+	sed -i -e 's:\brc.conf.5::' "${S}/man/man5/Makefile"
+	sed -i -e 's:\brc.conf.local.5::' "${S}/man/man5/Makefile"
 	# Remove mailer.conf manpage
 	sed -i -e 's:mailer.conf.5::' "${S}/man/man5/Makefile"
 	# Remove pbm and moduli(ssh) manpages

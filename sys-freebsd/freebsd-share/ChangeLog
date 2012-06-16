@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.44 2012/04/26 14:40:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.45 2012/06/16 00:12:39 naota Exp $
+
+  16 Jun 2012; Naohiro Aota <naota@gentoo.org> freebsd-share-9.0.ebuild:
+  Drop rc.conf{,.local} man pages. #420797
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-share-9.0.ebuild:
   keyword ~amd64-fbsd
