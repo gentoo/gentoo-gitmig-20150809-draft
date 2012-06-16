@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.16.1.ebuild,v 1.1 2011/12/10 10:21:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.16.1.ebuild,v 1.2 2012/06/16 16:56:56 ssuominen Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-INDEX_HELPERS="audio chm djvu dvi exif ps ics info lyx msdoc msppt msxls pdf rtf tex wordperfect xml"
+INDEX_HELPERS="audio chm djvu dvi exif postscript ics info lyx msdoc msppt msxls pdf rtf tex wordperfect xml"
 IUSE="+spell +inotify +qt4 +session camelcase xattr fam ${INDEX_HELPERS}"
 
 DEPEND="
@@ -35,7 +35,7 @@ RDEPEND="
 	sys-apps/sed
 	|| ( sys-apps/gawk sys-apps/mawk )
 	pdf? ( app-text/poppler )
-	ps? ( app-text/pstotext )
+	postscript? ( app-text/pstotext )
 	msdoc? ( app-text/antiword )
 	msxls? ( app-text/catdoc )
 	msppt? ( app-text/catdoc )

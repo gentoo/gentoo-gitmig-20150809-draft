@@ -18,7 +18,6 @@
 	<flag name='msppt'>Index Microsoft PowerPoint documents</flag>
 	<flag name='msxls'>Index Microsoft Excel documents</flag>
 	<flag name='pdf'>Index PDF documents</flag>
-	<flag name='ps'>Index PostScript files</flag>
 	<flag name='rtf'>Index Microsoft RTF documents</flag>
 	<flag name='wordperfect'>Index wordperfect documents</flag>
 	<flag name='session'>Stop monitoring file alterations when X11 session terminates</flag>
@@ -26,7 +25,4 @@
 	<flag name='wordperfect'>Index WordPerfect documents</flag>
 	<flag name='xml'>Index several XML-based formats (Abiword, FictionBook, Kword, Office OpenXML, OpenDocument, SVG)</flag>
 </use>
-<longdescription lang="en">
-</longdescription>
 </pkgmetadata>
-

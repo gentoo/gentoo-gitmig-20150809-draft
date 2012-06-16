@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/recoll
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.6 2012/05/21 09:32:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.7 2012/06/16 16:56:56 ssuominen Exp $
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> recoll-1.16.1.ebuild,
+  recoll-1.16.2.ebuild, metadata.xml:
+  Use global USE flag "postscript" instead of local USE flag "ps" for
+  PostScript support
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> recoll-1.16.2.ebuild:
   x86 stable wrt bug #414823
