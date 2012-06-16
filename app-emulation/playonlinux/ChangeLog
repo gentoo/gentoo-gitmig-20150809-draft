@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/playonlinux
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.16 2011/12/15 17:20:23 thev00d00 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.17 2012/06/16 07:38:37 pacho Exp $
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> -playonlinux-3.8.12.ebuild,
+  -playonlinux-3.8.8.ebuild, metadata.xml:
+  Drop maintainer as he is not able to maintain this anymore, drop old.
 
 *playonlinux-4.0.14 (15 Dec 2011)
 
