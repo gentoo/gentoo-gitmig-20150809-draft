@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.3 2012/06/16 18:55:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.4 2012/06/16 19:11:00 hasufell Exp $
 
 EAPI=4
 
@@ -23,8 +23,10 @@ VCS_DEPEND="
 	dev-vcs/git
 	dev-vcs/mercurial
 	dev-vcs/darcs
-	bazaar? ( dev-vcs/bzr )"
-RDEPEND="app-portage/portage-utils
+	dev-vcs/bzr"
+DEPEND="bazaar? ( dev-vcs/bzr )"
+RDEPEND="${DEPEND}
+	app-portage/portage-utils
 	|| ( ${VCS_DEPEND} )"
 
 src_prepare(){
@@ -52,6 +54,7 @@ src_install(){
 pkg_postinst(){
 	elog "${PN} supports the following VCS: ${VCS_DEPEND}"
 	elog "This ebuild just ensures at least one is installed!"
+	elog "For dev-vcs/bzr you additionally need to enable 'bazaar' useflag."
 	elog
 	elog "You may want to adjust your /etc/portage/bashrc"
 	elog "see the example file in /usr/share/doc/${PN}/examples"
