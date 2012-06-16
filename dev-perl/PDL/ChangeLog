@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/PDL
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.98 2011/07/29 17:27:47 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.99 2012/06/16 20:08:08 bicatali Exp $
+
+*PDL-2.4.11 (16 Jun 2012)
+
+  16 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> +PDL-2.4.11.ebuild,
+  +files/PDL-2.4.11-fortran.patch, +files/PDL-2.4.11-shared-hdf.patch,
+  metadata.xml:
+  Version bump. Added many use flags, previously assumed automagic'ed. Respect
+  user fortran compiler and flags. Added a port_rm to remove generated files.
+  Added sci as maintainer and a long description. USe the newer PDL homepage
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -PDL-2.4.6.ebuild:
   Cleanup

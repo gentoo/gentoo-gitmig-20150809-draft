@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>perl</herd>
-  <use>
-    <flag name="badval">Enable badval support</flag>
-  </use>
-  <upstream>
-    <remote-id type="cpan">PDL</remote-id>
-  </upstream>
+<herd>sci</herd>
+<herd>perl</herd>
+<longdescription lang="en">
+ The Perl Data Language  gives standard perl the ability to compactly
+ store and speedily manipulate the large N-dimensional data arrays 
+ which are the bread and butter of scientific computing.  The idea 
+ is to turn perl in to a free, array-oriented, numerical language 
+ in the same sense as commercial packages like IDL and MatLab. One
+ can write simple perl expressions to manipulate entire numerical
+ arrays all at once.
+</longdescription>
+<use>
+  <flag name="badval">Enable bad values support</flag>
+  <flag name="hdf">Enable HDF (version 4) format support</flag>
+  <flag name="netpbm">Enable NETPBM and MPEG support</flag>
+  <flag name="pdl2">Build pdf2 shell (requires Devel-REPL)</flag>
+  <flag name="proj">Enable projection support</flag>
+  <flag name="pgplot">Enable PGPLOT plotting capabilities</flag>
+  <flag name="plplot">Enable plplot plotting capabilities</flag>
+</use>
+<upstream>
+  <remote-id type="cpan">PDL</remote-id>
+</upstream>
 </pkgmetadata>
