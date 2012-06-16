@@ -1,12 +1,12 @@
 # ChangeLog for media-gfx/comical
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.16 2012/06/16 12:47:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.17 2012/06/16 12:55:24 ssuominen Exp $
 
 *comical-0.8-r3 (16 Jun 2012)
 
   16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +comical-0.8-r3.ebuild,
   +files/comical-0.8-syslibs.patch, files/comical.desktop:
-  Ensure x11-libs/wxGTK has USE="X" enabled wrt #407267 and Use system
+  Ensure x11-libs/wxGTK has USE="X" enabled wrt #407267 and use system
   libminizip and libunrar wrt #407269 by Piotr Szymaniak. Remove redudant
   Comment= from desktop entry. Use CXX and CXXFLAGS instead of CC and CFLAGS
   for g++. Stop using LDFLAGS for passing libraries and use LDLIBS instead.
