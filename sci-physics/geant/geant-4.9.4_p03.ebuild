@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p03.ebuild,v 1.1 2011/12/18 07:13:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p03.ebuild,v 1.2 2012/06/16 13:08:36 ago Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ done
 
 LICENSE="geant4"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+data dawn examples gdml geant3 granular qt4 static-libs vrml zlib"
 
 RDEPEND="virtual/fortran

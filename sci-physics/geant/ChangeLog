@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.63 2012/05/20 17:10:11 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.64 2012/06/16 13:08:36 ago Exp $
+
+  16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> geant-4.9.4_p03.ebuild:
+  Stable for amd64, wrt bug #420295
 
   20 May 2012; Benda Xu <heroxbd@gentoo.org> geant-4.9.5-r1.ebuild,
   geant-4.9.5_p01.ebuild:
