@@ -1,9 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/Net-IRC-0.79.ebuild,v 1.7 2012/05/29 19:44:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/Net-IRC-0.790.0.ebuild,v 1.1 2012/06/16 17:05:20 tove Exp $
 
 EAPI=2
+
 MODULE_AUTHOR="APEIRON"
+MODULE_VERSION=0.79
 inherit perl-module
 
 DESCRIPTION="Perl IRC module"
@@ -16,8 +18,6 @@ IUSE=""
 SRC_TEST="do"
 
 mydoc="TODO"
-
-DEPEND="dev-lang/perl"
 
 src_prepare() {
 	# Remove the stdin and warning input required re deprecated.
