@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-mailwatch-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/ChangeLog,v 1.7 2012/06/16 14:52:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/ChangeLog,v 1.8 2012/06/16 15:22:08 ssuominen Exp $
+
+*xfce4-mailwatch-plugin-1.1.0-r1 (16 Jun 2012)
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-mailwatch-plugin-1.1.0-r1.ebuild,
+  +files/xfce4-mailwatch-plugin-1.1.0-libxfce4ui.patch:
+  Port from libxfcegui4 to libxfce4ui usin.
 
   16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-mailwatch-plugin-1.1.0.ebuild,
