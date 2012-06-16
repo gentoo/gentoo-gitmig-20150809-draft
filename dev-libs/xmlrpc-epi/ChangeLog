@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-epi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.8 2012/05/22 11:21:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.9 2012/06/16 07:41:15 pacho Exp $
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as he is not able to maintain this anymore.
 
 *xmlrpc-epi-0.54.2 (22 May 2012)
 
