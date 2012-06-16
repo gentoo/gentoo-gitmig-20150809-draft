@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13860 2012/06/16 07:50:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13861 2012/06/16 10:03:25 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -413,7 +413,8 @@ sys-kernel/sparc-sources
 
 # Pacho Ramos <pacho@gentoo.org> (13 May 2012)
 # Upstream reports circumvention; developer has ceased
-# maintenance (#415255). Removal in a month.
+# maintenance (#415255). Pending security patch.
+# Proxy-maintainers will take care of it
 app-shells/rssh
 
 # Pacho Ramos <pacho@gentoo.org> (13 May 2012)
