@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/rssh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.23 2011/04/30 17:29:18 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.24 2012/06/16 16:58:14 hwoarang Exp $
+
+*rssh-2.3.3-r1 (16 Jun 2012)
+
+  16 Jun 2012; Markos Chandras <hwoarang@gentoo.org> -rssh-2.3.2.ebuild,
+  -rssh-2.3.3.ebuild, +rssh-2.3.3-r1.ebuild, +files/rssh-2.3.3-envvars.patch,
+  metadata.xml:
+  Revbump to fix security problem. bug #415255. Thanks to Marios Andreopoulos
+  <opensource@andmarios.com>. Take over by proxy-maintainers
 
   30 Apr 2011; Raúl Porcel <armin76@gentoo.org> rssh-2.3.3.ebuild:
   sparc stable wrt #344339
