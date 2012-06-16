@@ -1,6 +1,9 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.15 2012/05/16 09:27:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.16 2012/06/16 07:48:44 pacho Exp $
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as he is not able to maintain this anymore.
 
   16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/4.0.1-ffmpeg.patch,
   -files/miro-2.5.3-disable-xine-hack.patch,
