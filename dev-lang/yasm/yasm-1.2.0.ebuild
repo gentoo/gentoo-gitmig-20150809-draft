@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-1.2.0.ebuild,v 1.7 2012/05/13 16:08:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-1.2.0.ebuild,v 1.8 2012/06/16 10:48:02 grobian Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.7"
@@ -30,6 +30,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-fix_cython_check.patch"
+	# ksh doesn't grok $(xxx), makes aclocal fail
+	sed -i -e '1c\#!/usr/bin/env sh' YASM-VERSION-GEN.sh || die
 	eautoreconf
 }
 

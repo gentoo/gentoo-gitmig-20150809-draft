@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.54 2012/05/13 16:08:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.55 2012/06/16 10:48:02 grobian Exp $
+
+  16 Jun 2012; Fabian Groffen <grobian@gentoo.org> yasm-1.2.0.ebuild:
+  Fix autoreconf for platforms where /bin/sh doesn't understand $(xxx)
 
   13 May 2012; Alexis Ballier <aballier@gentoo.org> yasm-1.2.0.ebuild:
   keyword ~amd64-fbsd
