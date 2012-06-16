@@ -30,10 +30,6 @@ a database of telephone calls or e-mail messages
 </longdescription>
 	<use>
 		<flag name="devil">Enables DevIL output plugin -Tdevil</flag>
-		<flag name="gs">
-		Enables PostScript output via ghostscript, for 
-		plugin -Tgs (needs cairo)
-	</flag>
 		<flag name="gtk">Enables gtk+ output plugin -Tgtk (needs cairo)</flag>
 		<flag name="gts">Enables support for gts</flag>
 		<flag name="lasi">
