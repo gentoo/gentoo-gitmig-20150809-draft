@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.15.ebuild,v 1.2 2012/06/14 23:35:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.15.ebuild,v 1.3 2012/06/16 16:22:59 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -14,12 +14,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.xz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="bzip2 cxx debug fpx gs imagemagick jbig jpeg jpeg2k lcms lzma modules openmp perl png q16 q32 static-libs svg threads tiff truetype wmf X zlib"
+IUSE="bzip2 cxx debug fpx imagemagick jbig jpeg jpeg2k lcms lzma modules openmp perl png postscript q16 q32 static-libs svg threads tiff truetype wmf X zlib"
 
 RDEPEND=">=sys-devel/libtool-2.2.6b
 	bzip2? ( app-arch/bzip2 )
 	fpx? ( media-libs/libfpx )
-	gs? ( app-text/ghostscript-gpl )
 	imagemagick? ( !media-gfx/imagemagick )
 	jbig? ( media-libs/jbigkit )
 	jpeg? ( virtual/jpeg )
@@ -28,6 +27,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	lzma? ( app-arch/xz-utils )
 	perl? ( dev-lang/perl )
 	png? ( media-libs/libpng:0 )
+	postscript? ( app-text/ghostscript-gpl )
 	svg? ( dev-libs/libxml2 )
 	tiff? ( media-libs/tiff:0 )
 	truetype? (
@@ -78,7 +78,7 @@ src_configure() {
 		$(use_with perl) \
 		--with-perl-options=INSTALLDIRS=vendor \
 		$(use_with bzip2 bzlib) \
-		$(use_with gs dps) \
+		$(use_with postscript dps) \
 		$(use_with fpx) \
 		--without-gslib \
 		$(use_with jbig) \
