@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kfilebox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kfilebox/ChangeLog,v 1.6 2012/05/03 07:37:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kfilebox/ChangeLog,v 1.7 2012/06/16 16:46:19 kensington Exp $
+
+  16 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/kfilebox-0.4.5-installroot.patch, -kfilebox-0.4.5.ebuild,
+  -kfilebox-0.4.7.ebuild:
+  Remove old.
 
 *kfilebox-0.4.9 (03 May 2012)
 
