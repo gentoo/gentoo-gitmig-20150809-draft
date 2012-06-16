@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-0.ebuild,v 1.5 2012/05/13 17:27:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-0.ebuild,v 1.6 2012/06/16 14:37:45 pacho Exp $
 
 EAPI=2
 
@@ -19,7 +19,6 @@ RDEPEND="|| (
 		sys-kernel/vanilla-sources
 		sys-kernel/cell-sources
 		sys-kernel/ck-sources
-		sys-kernel/cluster-sources
 		sys-kernel/git-sources
 		sys-kernel/hardened-sources
 		sys-kernel/mips-sources
