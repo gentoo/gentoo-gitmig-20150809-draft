@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.80 2012/06/13 07:03:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.81 2012/06/16 15:40:45 hasufell Exp $
+
+  16 Jun 2012; Julian Ospald <hasufell@gentoo.org> ogre-1.7.4-r1.ebuild,
+  ogre-1.8.0.ebuild:
+  remove test useflag completely and disable build of tests wrt bug #412675
 
   13 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> -ogre-1.7.4.ebuild:
   old

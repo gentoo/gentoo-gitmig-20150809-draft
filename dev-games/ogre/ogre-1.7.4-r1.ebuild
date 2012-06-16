@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.7.4-r1.ebuild,v 1.2 2012/06/04 17:16:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.7.4-r1.ebuild,v 1.3 2012/06/16 15:40:45 hasufell Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_src_v${MY_PV}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="+boost cg doc double-precision examples +freeimage ois +opengl poco profile tbb test threads tools +zip"
+IUSE="+boost cg doc double-precision examples +freeimage ois +opengl poco profile tbb threads tools +zip"
 REQUIRED_USE="threads? ( || ( boost poco tbb ) )"
 RESTRICT="test" #139905
 
@@ -37,8 +37,7 @@ RDEPEND="media-libs/freetype:2
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
 	virtual/pkgconfig
-	doc? ( app-doc/doxygen )
-	test? ( dev-util/cppunit )"
+	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${PN}_src_v${MY_PV}
 
@@ -65,7 +64,7 @@ src_configure() {
 		$(cmake-utils_use freeimage OGRE_CONFIG_ENABLE_FREEIMAGE)
 		$(cmake-utils_use opengl OGRE_BUILD_RENDERSYSTEM_GL)
 		$(cmake-utils_use profile OGRE_PROFILING)
-		$(cmake-utils_use test OGRE_BUILD_TESTS)
+		-DOGRE_BUILD_TESTS=FALSE
 		$(usex threads "-DOGRE_CONFIG_THREADS=2" "-DOGRE_CONFIG_THREADS=0")
 		$(cmake-utils_use tools OGRE_BUILD_TOOLS)
 		$(cmake-utils_use zip OGRE_CONFIG_ENABLE_ZIP)
