@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/google-api-adwords-perl/google-api-adwords-perl-2.6.1.ebuild,v 1.1 2012/06/15 21:58:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/google-api-adwords-perl/google-api-adwords-perl-2.6.1.ebuild,v 1.2 2012/06/16 21:08:04 flameeyes Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ inherit perl-module
 SRC_TEST="do"
 
 # tests seem to be failing, contacted upstream.
-# code has been tested to work on 2.5.5 though
+# code has been tested to work on 2.6.0 though
 RESTRICT="test"
 
 DESCRIPTION="Google AdWords API Perl Client"
@@ -34,7 +34,8 @@ RDEPEND="dev-perl/Cache
 	>=dev-perl/SOAP-WSDL-2.00.10
 	dev-perl/URI
 	dev-perl/XML-Simple
-	dev-perl/XML-XPath"
+	dev-perl/XML-XPath
+	dev-perl/CHI"
 
 DEPEND="${RDEPEND}
 	test? (

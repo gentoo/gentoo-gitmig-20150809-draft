@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/google-api-adwords-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/google-api-adwords-perl/ChangeLog,v 1.3 2012/06/15 21:58:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/google-api-adwords-perl/ChangeLog,v 1.4 2012/06/16 21:08:04 flameeyes Exp $
+
+  16 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  google-api-adwords-perl-2.6.1.ebuild:
+  Add new dependency which I forgot due to Perl being Perl. Thanks Grant in bug
+  #421319.
 
 *google-api-adwords-perl-2.6.1 (15 Jun 2012)
 
