@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.367 2012/04/28 18:59:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.368 2012/06/16 15:53:32 ssuominen Exp $
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -libpng-1.2.47.ebuild,
+  -libpng-1.5.8.ebuild, -libpng-1.5.9.ebuild:
+  old
 
   28 Apr 2012; Raúl Porcel <armin76@gentoo.org> libpng-1.5.10.ebuild:
   alpha/sparc stable wrt #410153
