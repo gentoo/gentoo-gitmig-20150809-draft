@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12.ebuild,v 1.7 2012/06/15 16:31:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12.ebuild,v 1.8 2012/06/16 20:39:08 floppym Exp $
 
 EAPI=4
 
@@ -91,7 +91,8 @@ RDEPEND="sys-libs/readline
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	app-text/xhtml1"
+	app-text/xhtml1
+	=dev-lang/python-2*"
 
 LXC_CONFIG_CHECK="
 	~CGROUPS
