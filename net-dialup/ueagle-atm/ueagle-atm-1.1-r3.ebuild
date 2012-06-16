@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1-r3.ebuild,v 1.2 2011/06/15 21:49:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1-r3.ebuild,v 1.3 2012/06/16 14:11:44 pacho Exp $
 
 EAPI="2"
 
@@ -68,9 +68,9 @@ pkg_postinst() {
 		echo
 	fi
 	# Check user-space for PPPoE support
-	if ! has_version net-misc/br2684ctl ; then
+	if ! has_version >=net-dialup/linux-atm-2.5.0 ; then
 		ewarn "Run the following command if connecting via PPPoE protocol:"
-		ewarn "   emerge net-misc/br2684ctl"
+		ewarn "   emerge net-dialup/linux-atm"
 		echo
 	fi
 

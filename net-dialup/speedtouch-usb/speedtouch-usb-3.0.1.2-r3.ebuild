@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2-r3.ebuild,v 1.1 2009/08/23 06:59:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2-r3.ebuild,v 1.2 2012/06/16 14:10:22 pacho Exp $
 
 inherit eutils linux-info
 
@@ -90,9 +90,9 @@ pkg_postinst() {
 		echo
 	fi
 	# Check user-space for PPPoE support
-	if ! has_version net-misc/br2684ctl ; then
+	if ! has_version >=net-dialup/linux-atm-2.5.0 ; then
 		ewarn "Run the following command if connecting via PPPoE protocol:"
-		ewarn "   emerge net-misc/br2684ctl"
+		ewarn "   emerge net-dialup/linux-atm"
 		echo
 	fi
 
