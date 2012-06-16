@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.129 2012/06/15 23:56:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.130 2012/06/16 09:57:25 hwoarang Exp $
+
+  16 Jun 2012; Markos Chandras <hwoarang@gentoo.org>
+  -rb_libtorrent-0.15.6.ebuild, -rb_libtorrent-0.15.8.ebuild,
+  -rb_libtorrent-0.15.9-r1.ebuild, -rb_libtorrent-0.16.0.ebuild:
+  Remove old
 
 *rb_libtorrent-0.16.1 (15 Jun 2012)
 
