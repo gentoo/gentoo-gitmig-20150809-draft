@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8-r2.ebuild,v 1.3 2010/10/12 09:03:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/comical-0.8-r2.ebuild,v 1.4 2012/06/16 12:50:09 ssuominen Exp $
 
 EAPI=2
 
@@ -10,10 +10,10 @@ DESCRIPTION="Comical is a sequential image display program, to deal with .cbr an
 HOMEPAGE="http://comical.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2 unRAR"
+LICENSE="GPL-2 unRAR ZLIB"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
-DEPEND="x11-libs/wxGTK:2.8"
+DEPEND="x11-libs/wxGTK:2.8[X]"
 RDEPEND="${DEPEND}"
 IUSE=""
 
