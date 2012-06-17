@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.25 2012/06/17 05:51:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.26 2012/06/17 15:03:33 ago Exp $
+
+  17 Jun 2012; Agostino Sarubbo <ago@gentoo.org> rssh-2.3.3-r1.ebuild:
+  Stable for amd64, wrt bug #415255
 
   17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> rssh-2.3.3-r1.ebuild:
   marked x86 per bug 415255
