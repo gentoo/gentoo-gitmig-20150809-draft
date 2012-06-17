@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/clipper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.17 2012/06/17 19:02:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.18 2012/06/17 21:07:39 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> clipper-20100511-r1.ebuild:
+  marked x86 per bug 421645
 
   17 Jun 2012; Justin Lecher <jlec@gentoo.org> clipper-20100511-r1.ebuild,
   +files/clipper-20100511-outofsourcebuild.patch:
