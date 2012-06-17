@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.88 2012/06/02 19:14:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.89 2012/06/17 17:26:13 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> DateManip-6.310.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #413009
 
 *DateManip-6.320.0 (02 Jun 2012)
 
