@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.4 2012/06/17 07:00:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.5 2012/06/17 07:06:45 radhermit Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs bash-completion-r1 git-2
+inherit toolchain-funcs bash-completion-r1 git-2
 
 EGIT_REPO_URI="git://git.informatik.uni-erlangen.de/re06huxa/herbstluftwm"
 
