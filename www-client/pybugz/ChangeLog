@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.105 2012/06/04 22:20:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.106 2012/06/17 18:53:13 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> pybugz-0.10.1.ebuild:
+  alpha/ia64/sparc stable wrt #415277
 
   04 Jun 2012; Alexey Shvetsov <alexxy@gentoo.org> pybugz-0.10.1.ebuild:
   [www-client/pybugz] Works on ~amd64-fbsd
