@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.3 2012/06/09 23:55:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/herbstluftwm-9999.ebuild,v 1.4 2012/06/17 07:00:40 radhermit Exp $
 
 EAPI=4
 
@@ -27,18 +27,22 @@ DEPEND="${CDEPEND}
 	app-text/asciidoc
 	virtual/pkgconfig"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-install.patch
-}
-
 src_compile() {
-	emake -j1 CC="$(tc-getCC)" LD="$(tc-getCC)" COLOR=0 VERBOSE= \
+	emake CC="$(tc-getCC)" LD="$(tc-getCC)" COLOR=0 VERBOSE= \
 		$(use xinerama || echo XINERAMAFLAGS= XINERAMALIBS= )
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install
+	dobin herbstluftwm herbstclient
 	dodoc BUGS NEWS README
+
+	doman doc/{herbstluftwm,herbstclient}.1
+
+	exeinto /etc/xdg/herbstluftwm
+	doexe share/{autostart,panel.sh,restartpanels.sh}
+
+	insinto /usr/share/xsessions
+	doins share/herbstluftwm.desktop
 
 	newbashcomp share/herbstclient-completion herbstclient
 
