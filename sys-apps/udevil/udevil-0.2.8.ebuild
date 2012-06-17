@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.2.8.ebuild,v 1.1 2012/06/17 17:10:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.2.8.ebuild,v 1.2 2012/06/17 17:16:26 hasufell Exp $
 
 EAPI=4
 
@@ -18,8 +18,7 @@ IUSE=""
 RDEPEND=">=app-shells/bash-4.0
 	sys-apps/util-linux
 	>=sys-fs/udev-143
-	virtual/acl
-	virtual/libc"
+	virtual/acl"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
@@ -36,7 +35,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-setfacl-prog=/bin/setfacl
+		--with-setfacl-prog="$(type -P setfacl)"
 }
 
 src_install() {

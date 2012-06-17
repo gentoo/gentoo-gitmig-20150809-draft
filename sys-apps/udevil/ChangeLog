@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/udevil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.1 2012/06/17 17:10:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.2 2012/06/17 17:16:26 hasufell Exp $
+
+  17 Jun 2012; Julian Ospald <hasufell@gentoo.org> udevil-0.2.8.ebuild:
+  remove virtual/libc and fix --with-setfacl-prog
 
 *udevil-0.2.8 (17 Jun 2012)
 
