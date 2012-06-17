@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.22 2012/06/17 15:29:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.23 2012/06/17 23:01:13 darkside Exp $
+
+  17 Jun 2012; Jeremy Olexa <darkside@gentoo.org> pypy-1.9-r1.ebuild:
+  add prefix keywords, bug 420621
 
 *pypy-1.9-r1 (17 Jun 2012)
 

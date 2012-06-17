@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.9-r1.ebuild,v 1.1 2012/06/17 15:29:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.9-r1.ebuild,v 1.2 2012/06/17 23:01:13 darkside Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SLOTVER=$(get_version_component_range 1-2 ${PV})
 LICENSE="MIT"
 SLOT="${SLOTVER}"
 PYTHON_ABI="2.7-pypy-${SLOTVER}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="bzip2 doc examples +jit ncurses sandbox shadowstack sqlite ssl +xml"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
