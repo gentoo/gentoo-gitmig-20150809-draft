@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/myspell-de-alt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.13 2012/05/17 18:11:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.14 2012/06/17 10:50:18 scarabeus Exp $
+
+*myspell-de-alt-20061123 (17 Jun 2012)
+
+  17 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -myspell-de-alt-20060124.ebuild, +myspell-de-alt-20061123.ebuild:
+  Pseudo version bump to use new eclass and file layout. Use the version number
+  from the web.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   myspell-de-alt-20060124.ebuild:
