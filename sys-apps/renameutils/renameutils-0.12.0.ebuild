@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/renameutils-0.12.0.ebuild,v 1.2 2012/06/02 07:58:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/renameutils-0.12.0.ebuild,v 1.3 2012/06/17 15:03:11 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.nongnu.org/renameutils/"
 SRC_URI="http://savannah.nongnu.org/download/renameutils/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="nls"
 
 DEPEND=">=sys-libs/readline-5.0-r2"
