@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.11.ebuild,v 1.1 2012/06/15 14:36:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.11.ebuild,v 1.2 2012/06/17 20:00:14 maekke Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.infradead.org/~tgr/libnl/"
 SRC_URI="http://www.infradead.org/~tgr/libnl/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="3"
-KEYWORDS="~amd64 ~s390 ~sh ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~s390 ~sh ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="doc static-libs utils"
 
 DEPEND="
