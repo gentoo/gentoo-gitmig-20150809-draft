@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.252 2012/06/17 18:22:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.253 2012/06/17 19:18:12 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  audacious-plugins-3.3_alpha1.ebuild:
+  Drop oss and mtp USE flags as the plugins were dropped upstream.
 
 *audacious-plugins-3.3_alpha1 (17 Jun 2012)
 

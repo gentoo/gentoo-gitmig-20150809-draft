@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.3_alpha1.ebuild,v 1.1 2012/06/17 18:22:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.3_alpha1.ebuild,v 1.2 2012/06/17 19:18:12 jdhore Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="aac adplug alsa bs2b cdda cue ffmpeg flac fluidsynth gnome ipv6 jack
-lame libnotify libsamplerate lirc midi mms mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile vorbis wavpack"
+lame libnotify libsamplerate lirc midi mms mp3 nls pulseaudio scrobbler sdl sid sndfile vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
@@ -42,7 +42,6 @@ RDEPEND="app-arch/unzip
 	lirc? ( app-misc/lirc )
 	mms? ( >=media-libs/libmms-0.3 )
 	mp3? ( >=media-sound/mpg123-1.12.1 )
-	mtp? ( media-libs/libmtp )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
 	sdl? ( media-libs/libsdl[audio] )
@@ -91,9 +90,7 @@ src_configure() {
 		$(use_enable mms) \
 		$(use_enable mp3) \
 		$(use_enable midi amidiplug) \
-		$(use_enable mtp mtp_up) \
 		$(use_enable nls) \
-		$(use_enable oss) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable scrobbler) \
 		$(use_enable sdl sdlout) \
