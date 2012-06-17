@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amqp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amqp/ChangeLog,v 1.2 2011/08/06 14:08:11 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amqp/ChangeLog,v 1.3 2012/06/17 16:36:11 hollow Exp $
+
+  17 Jun 2012; Benedikt Böhm <hollow@gentoo.org> -amqp-0.6.7.ebuild,
+  amqp-0.6.7-r1.ebuild:
+  add ruby19 + cleanup
 
 *amqp-0.6.7-r1 (06 Aug 2011)
 
