@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb-compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.15 2012/05/28 18:24:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.16 2012/06/17 18:23:10 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> libusb-compat-0.1.4.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #417135
 
   28 May 2012; Markus Meier <maekke@gentoo.org> libusb-compat-0.1.4.ebuild:
   arm stable, bug #417135
