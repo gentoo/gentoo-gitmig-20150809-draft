@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.8-r3.ebuild,v 1.1 2012/06/14 10:22:27 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.8-r3.ebuild,v 1.2 2012/06/17 15:31:44 grobian Exp $
 
 EAPI=4
 
@@ -73,7 +73,8 @@ cmake_src_bootstrap() {
 
 	tc-export CC CXX LD
 
-	./bootstrap \
+	# bootstrap script isn't exactly /bin/sh compatible
+	${CONFIG_SHELL:-sh} ./bootstrap \
 		--prefix="${T}/cmakestrap/" \
 		${par_arg} \
 		|| die "Bootstrap failed"
