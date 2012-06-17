@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jformatstring
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jformatstring/ChangeLog,v 1.1 2011/04/10 17:04:12 nerdboy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jformatstring/ChangeLog,v 1.2 2012/06/17 15:20:15 sera Exp $
+
+*jformatstring-0.9-r1 (17 Jun 2012)
+
+  17 Jun 2012; Ralph Sennhauser <sera@gentoo.org> +jformatstring-0.9-r1.ebuild,
+  +files/build.xml:
+  Add build.xml and fix various QA issues. #364915
 
 *jformatstring-1.0 (10 Apr 2011)
 
