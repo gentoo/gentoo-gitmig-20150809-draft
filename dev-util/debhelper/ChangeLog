@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.49 2012/06/09 13:59:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.50 2012/06/17 17:43:53 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> debhelper-9.20120322.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #415269
 
 *debhelper-9.20120608 (09 Jun 2012)
 
