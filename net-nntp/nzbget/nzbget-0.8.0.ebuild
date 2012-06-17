@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.8.0.ebuild,v 1.1 2012/05/07 17:52:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.8.0.ebuild,v 1.2 2012/06/17 08:34:42 radhermit Exp $
 
 EAPI="4"
 
-inherit eutils autotools
+inherit eutils autotools user
 
 DESCRIPTION="A command-line based binary newsgrapper supporting .nzb files"
 HOMEPAGE="http://nzbget.sourceforge.net/"

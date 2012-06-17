@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.7.0.ebuild,v 1.7 2012/05/03 04:32:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.7.0.ebuild,v 1.8 2012/06/17 08:34:43 radhermit Exp $
 
 EAPI="2"
 
-inherit eutils autotools
+inherit eutils autotools user
 
 MY_P="${P/_pre/-testing-r}"
 
