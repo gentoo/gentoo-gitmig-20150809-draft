@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.56 2012/06/12 13:11:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.57 2012/06/17 05:38:52 yngwin Exp $
+
+  17 Jun 2012; Ben de Groot <yngwin@gentoo.org> metadata.xml,
+  mplayer2-2.0_p20120309.ebuild, mplayer2-9999.ebuild:
+  Move USE=ass usage to new global libass useflag (bug #328245)
 
   12 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   Set + on desired default cpuopts to behave same way like before the split.

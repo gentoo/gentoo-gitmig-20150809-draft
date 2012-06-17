@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120309.ebuild,v 1.9 2012/05/22 16:44:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120309.ebuild,v 1.10 2012/06/17 05:38:52 yngwin Exp $
 
 EAPI=4
 
@@ -32,10 +32,10 @@ if [[ ${PV} == *9999* ]]; then
 else
 	KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux"
 fi
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl
+IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua bidi bindist bl
 bluray bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts
 debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad fbcon ftp
-gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc
+gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa +libass libcaca lirc
 mad md5sum +mmx mmxext mng +mp3 nas +network nut +opengl oss png pnm pulseaudio
 pvr +quicktime radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3 tga
 +theora +truetype +unicode v4l vdpau +vorbis win32codecs +X xanim xinerama
@@ -52,6 +52,8 @@ REQUIRED_USE="bindist? ( !win32codecs )
 	cdio? ( !cdparanoia )
 	cddb? ( || ( cdio cdparanoia ) network )
 	dvdnav? ( dvd )
+	libass? ( truetype )
+	truetype? ( iconv )
 	radio? ( || ( dvb v4l ) )
 	dxr3? ( X )
 	ggi? ( X )
@@ -95,7 +97,6 @@ RDEPEND+="
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?,fontconfig] )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
@@ -116,6 +117,7 @@ RDEPEND+="
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( virtual/jpeg )
 	ladspa? ( media-libs/ladspa-sdk )
+	libass? ( >=media-libs/libass-0.9.10[enca?,fontconfig] )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
 	mad? ( media-libs/libmad )
@@ -253,12 +255,11 @@ src_configure() {
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"
-	uses="bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
+	uses="bl bluray enca ftp libass rtc" # nemesi <- not working with in-tree ebuild
 	myconf+=" --disable-nemesi" # nemesi automagic disable
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
-	use ass || myconf+=" --disable-libass"
 	use bidi || myconf+=" --disable-fribidi"
 	use ipv6 || myconf+=" --disable-inet6"
 	use nut || myconf+=" --disable-libnut"
@@ -303,7 +304,7 @@ src_configure() {
 	# SRT/ASS/SSA (subtitles) requires freetype support
 	# freetype support requires iconv
 	# iconv optionally can use unicode
-	if ! use ass && ! use truetype; then
+	if ! use truetype; then
 		myconf+=" --disable-freetype"
 		if ! use iconv; then
 			myconf+="
@@ -568,7 +569,7 @@ src_install() {
 		dohtml -r "${S}"/DOCS/HTML/*
 	fi
 
-	if ! use ass && ! use truetype; then
+	if ! use truetype; then
 		dodir /usr/share/${PN}/fonts
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...

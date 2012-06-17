@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.38 2012/06/12 13:11:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.39 2012/06/17 05:38:52 yngwin Exp $
 
 EAPI=4
 
@@ -32,10 +32,10 @@ if [[ ${PV} == *9999* ]]; then
 else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 fi
-IUSE="+a52 aalib +alsa aqua +ass bidi bindist bl bluray bs2b cddb +cdio
+IUSE="+a52 aalib +alsa aqua bidi bindist bl bluray bs2b cddb +cdio
 	cpudetection debug directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +faad
 	fbcon ftp gif ggi +iconv ipv6 jack joystick jpeg kernel_linux ladspa
-	libcaca lirc mad md5sum mng +mp3 nas +network nut +opengl oss png pnm
+	+libass libcaca lirc mad md5sum mng +mp3 nas +network nut +opengl oss png pnm
 	portaudio postproc pulseaudio pvr +quicktime radio +rar +real +rtc samba
 	sdl +speex tga +theora +truetype +unicode v4l vdpau +vorbis win32codecs +X
 	xanim xinerama +xscreensaver +xv xvid"
@@ -53,7 +53,7 @@ done
 
 # bindist does not cope with win32codecs, which are nonfree
 REQUIRED_USE="
-	ass? ( truetype )
+	libass? ( truetype )
 	bindist? ( !win32codecs )
 	cddb? ( cdio network )
 	dvdnav? ( dvd )
@@ -96,7 +96,6 @@ RDEPEND+="
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( >=media-libs/libass-0.9.10[enca?,fontconfig] )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
@@ -116,6 +115,7 @@ RDEPEND+="
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( virtual/jpeg )
 	ladspa? ( media-libs/ladspa-sdk )
+	libass? ( >=media-libs/libass-0.9.10[enca?,fontconfig] )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
 	mad? ( media-libs/libmad )
@@ -238,12 +238,11 @@ src_configure() {
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"
-	uses="bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
+	uses="bl bluray enca ftp libass rtc" # nemesi <- not working with in-tree ebuild
 	myconf+=" --disable-nemesi" # nemesi automagic disable
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
-	use ass || myconf+=" --disable-libass"
 	use bidi || myconf+=" --disable-fribidi"
 	use ipv6 || myconf+=" --disable-inet6"
 	use nut || myconf+=" --disable-libnut"
