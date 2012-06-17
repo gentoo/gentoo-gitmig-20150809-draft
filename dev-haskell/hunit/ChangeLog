@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.49 2012/05/05 16:41:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.50 2012/06/17 08:48:50 gienah Exp $
+
+*hunit-1.2.4.3 (17 Jun 2012)
+
+  17 Jun 2012; Mark Wright <gienah@gentoo.org> +hunit-1.2.4.3.ebuild,
+  metadata.xml:
+  Bump hunit to 1.2.4.3
 
   05 May 2012; Sergei Trofimovich <slyfox@gentoo.org> hunit-1.2.4.2.ebuild:
   alpha/ia64/ppc64/sparc stable (bug #404637)
