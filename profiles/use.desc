@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.488 2012/06/16 16:53:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.489 2012/06/17 04:31:59 yngwin Exp $
 
 # Keep them sorted
 
@@ -174,6 +174,7 @@ lash - Adds LASH Audio Session Handler support
 latex - Adds support for LaTeX (typesetting package)
 lcms - Adds lcms support (color management engine)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
+libass - SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
 libcaca - Add support for colored ASCII-art graphics
 libedit - Use the libedit library (replacement for readline)
 libffi - Enable support for Foreign Function Interface library

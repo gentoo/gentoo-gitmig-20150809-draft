@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6686 2012/06/16 20:41:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6687 2012/06/17 04:31:59 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2012; Ben de Groot <yngwin@gentoo.org> use.desc:
+  Add libass global useflag
 
   16 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask casa-data as it's an unmasked live ebuild.
