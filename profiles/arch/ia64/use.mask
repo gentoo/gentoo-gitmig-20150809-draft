@@ -6,6 +6,7 @@
 # No hardware to test by the team
 3dfx
 bluetooth
+bluray
 dvb
 dvd
 gnokii

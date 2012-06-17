@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.138 2012/06/14 07:40:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.139 2012/06/17 18:25:52 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask bluray
 
   14 Jun 2012; Ben de Groot <yngwin@gentoo.org> package.use.mask:
   Since there is no longer a stable qt available for ia64, we need to mask the
