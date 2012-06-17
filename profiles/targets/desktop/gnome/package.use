@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.11 2012/05/20 09:31:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.12 2012/06/17 06:38:10 tetromino Exp $
 
 # Required by app-accessibility/orca-3
 app-accessibility/speech-dispatcher python
@@ -31,6 +31,7 @@ net-misc/spice-gtk gtk3
 # gnome-documents in gnome-3.2) has +nss in IUSE, pulls in curl[-gnutls,nss]
 # In >=curl-7.25.0-r1, need CURL_SSL="-gnutls nss -openssl"
 net-misc/curl -curl_ssl_gnutls curl_ssl_nss -curl_ssl_openssl -gnutls nss
+dev-python/pycurl -curl_ssl_gnutls curl_ssl_nss -curl_ssl_openssl
 
 # Required by app-admin/sabayon
 x11-base/xorg-server kdrive
