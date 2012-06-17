@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_whatkilledus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_whatkilledus/ChangeLog,v 1.4 2008/03/23 11:59:37 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_whatkilledus/ChangeLog,v 1.5 2012/06/17 16:24:28 flameeyes Exp $
+
+*mod_whatkilledus-0.0.1-r1 (17 Jun 2012)
+
+  17 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +mod_whatkilledus-0.0.1-r1.ebuild, -mod_whatkilledus-0.0.1.ebuild:
+  Bump EAPI and use USE deps instead of confutils eclass.
 
   23 Mar 2008; Benedikt Böhm <hollow@gentoo.org>
   mod_whatkilledus-0.0.1.ebuild:

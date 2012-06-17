@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_whatkilledus/mod_whatkilledus-0.0.1.ebuild,v 1.3 2008/03/23 11:59:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_whatkilledus/mod_whatkilledus-0.0.1-r1.ebuild,v 1.1 2012/06/17 16:24:28 flameeyes Exp $
 
-inherit apache-module eutils toolchain-funcs confutils
+EAPI=4
+
+inherit apache-module eutils toolchain-funcs
 
 KEYWORDS="~amd64 ~x86"
 
@@ -21,9 +23,8 @@ APACHE2_MOD_DEFINE="WHATKILLEDUS"
 
 need_apache2_2
 
-pkg_setup() {
-	confutils_require_built_with_all www-servers/apache debug
-}
+RDEPEND+="
+	www-servers/apache:2[debug]"
 
 src_unpack() {
 	mkdir -p "${S}" || die "mkdir S failed"
@@ -34,6 +35,7 @@ src_compile() {
 	$(tc-getCC) \
 		$(/usr/bin/apr-1-config --includes) \
 		$(/usr/bin/apr-1-config --cppflags) \
+		${CFLAGS} ${LDFLAGS} \
 		-o "${S}"/gen_test_char \
 		"${FILESDIR}"/gen_test_char.c
 	"${S}"/gen_test_char > "${S}"/test_char.h
