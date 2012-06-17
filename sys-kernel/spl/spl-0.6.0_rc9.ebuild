@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc9.ebuild,v 1.1 2012/06/16 18:57:43 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc9.ebuild,v 1.2 2012/06/17 16:40:27 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -33,6 +33,7 @@ AUTOTOOLS_IN_SOURCE_BUILD="1"
 pkg_setup() {
 	CONFIG_CHECK="
 		!DEBUG_LOCK_ALLOC
+		!GRKERNSEC_HIDESYM
 		!PREEMPT
 		!PREEMPT_VOLUNTARY
 		MODULES
