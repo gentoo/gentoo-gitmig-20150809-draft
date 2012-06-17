@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MethodMaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.82 2012/05/06 20:29:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.83 2012/06/17 14:24:09 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org>
+  Class-MethodMaker-2.180.0.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #413085
 
   06 May 2012; Brent Baude <ranger@gentoo.org>
   Class-MethodMaker-2.180.0.ebuild:
