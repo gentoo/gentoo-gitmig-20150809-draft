@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pinta/pinta-1.3.ebuild,v 1.4 2012/06/08 11:46:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pinta/pinta-1.3.ebuild,v 1.5 2012/06/17 22:57:08 hasufell Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://github/PintaProject/Pinta/${P}.tar.gz"
 LICENSE="MIT CCPL-Attribution-3.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="jpeg tiff"
+IUSE=""
 
 COMMON_DEPEND="dev-dotnet/atk-sharp:2
 	dev-dotnet/gdk-sharp:2
@@ -24,7 +24,7 @@ COMMON_DEPEND="dev-dotnet/atk-sharp:2
 	dev-lang/mono"
 RDEPEND="${COMMON_DEPEND}
 	x11-libs/cairo[X]
-	x11-libs/gdk-pixbuf[X,jpeg=,tiff=]
+	x11-libs/gdk-pixbuf[X,jpeg,tiff]
 	x11-themes/gnome-icon-theme"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
