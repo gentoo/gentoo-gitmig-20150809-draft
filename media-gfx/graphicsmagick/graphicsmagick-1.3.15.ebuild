@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.15.ebuild,v 1.3 2012/06/16 16:22:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.15.ebuild,v 1.4 2012/06/17 19:16:03 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -46,6 +46,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.3.13-lzma_configure.patch
+	echo 'Graphics::Magick T_PTROBJ' > PerlMagick/typemap #378197
 }
 
 src_configure() {
