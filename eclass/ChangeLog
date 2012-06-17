@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.314 2012/06/14 23:07:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.315 2012/06/17 10:50:20 scarabeus Exp $
+
+  17 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-r2.eclass:
+  Remove licenses prior copying docs.
 
   14 Jun 2012; Julian Ospald <hasufell@gentoo.org> eutils.eclass:
   small enhancement to examples of doicon
