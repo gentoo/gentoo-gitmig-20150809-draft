@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.117 2012/05/29 19:59:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.118 2012/06/17 18:44:45 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> py-1.4.7.ebuild:
+  alpha/ia64/sh/sparc stable wrt #415885
 
   29 May 2012; Brent Baude <ranger@gentoo.org> py-1.4.7.ebuild:
   Marking py-1.4.7 ppc for bug 415885
