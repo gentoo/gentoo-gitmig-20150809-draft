@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/fssm-0.2.8.1.ebuild,v 1.3 2012/05/01 18:24:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/fssm-0.2.8.1.ebuild,v 1.4 2012/06/17 07:38:58 graaff Exp $
 
 EAPI=4
 
@@ -43,6 +43,9 @@ all_ruby_prepare() {
 	if use kernel_linux; then
 		sed -i -e '/^end/i s.add_dependency "rb-inotify"' ${RUBY_FAKEGEM_GEMSPEC} || die
 	fi
+
+	# Avoid a dependency on git.
+	sed -i -e '/git ls-files/d' ${PN}.gemspec || die
 }
 
 all_ruby_install() {
