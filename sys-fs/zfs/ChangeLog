@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.24 2012/06/17 14:07:51 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.25 2012/06/17 16:52:21 ryao Exp $
+
+  17 Jun 2012; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc9.ebuild:
+  Modify sys-kernel/spl dependency to permit revisions
 
   17 Jun 2012; Richard Yao <ryao@gentoo.org>
   +files/zfs-0.6.0_rc9-hardened-support.patch, zfs-0.6.0_rc9.ebuild,

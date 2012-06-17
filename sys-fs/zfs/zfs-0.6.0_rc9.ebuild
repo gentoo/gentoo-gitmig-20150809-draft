@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9.ebuild,v 1.2 2012/06/17 14:07:51 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9.ebuild,v 1.3 2012/06/17 16:52:21 ryao Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ SLOT="0"
 IUSE="custom-cflags debug dracut +rootfs test test-suite static-libs"
 
 DEPEND="
-	>=sys-kernel/spl-${PV}
+	=sys-kernel/spl-${PV}*
 	sys-apps/util-linux[static-libs?]
 	sys-libs/zlib[static-libs(+)?]
 "
