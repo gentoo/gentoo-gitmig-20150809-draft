@@ -1,0 +1,9 @@
+# ChangeLog for app-text/zathura-meta
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.1 2012/06/17 09:45:17 ssuominen Exp $
+
+*zathura-meta-0 (17 Jun 2012)
+
+  17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +zathura-meta-0.ebuild:
+  Initial commit.
+
