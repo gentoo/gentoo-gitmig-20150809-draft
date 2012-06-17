@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.605 2012/06/17 08:17:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.606 2012/06/17 19:46:40 maekke Exp $
+
+  17 Jun 2012; Markus Meier <maekke@gentoo.org> python-2.7.3-r2.ebuild:
+  arm stable, bug #419575
 
   17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> python-2.7.3-r2.ebuild:
   marked x86 per bug 419575
