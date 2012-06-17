@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.23 2012/06/17 15:22:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.24 2012/06/17 19:02:30 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> miniupnpc-1.6.20120509.ebuild:
+  marked x86 per bug 421535
 
   17 Jun 2012; Agostino Sarubbo <ago@gentoo.org> miniupnpc-1.6.20120509.ebuild:
   Stable for AMD64, wrt bug #421535
