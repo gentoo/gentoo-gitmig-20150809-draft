@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.121 2012/06/11 15:32:27 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.122 2012/06/17 15:51:16 gurligebis Exp $
+
+  17 Jun 2012; <gurligebis@gentoo.org> hostapd-1.0-r1.ebuild, metadata.xml:
+  Making CRDA dependency optional, fixing bug #421087
 
   11 Jun 2012; <gurligebis@gentoo.org> hostapd-1.0-r1.ebuild:
   Making net-wireless/hostapd depend on net-wireless/crda, fixing bug #420645

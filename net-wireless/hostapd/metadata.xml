@@ -12,8 +12,9 @@
 		RADIUS Authentication client, RADIUS Accounting client
 	</longdescription>
 	<use>
+		<flag name='crda'>Add CRDA support</flag>
 		<flag name='debug'>Enables debugging</flag>
-		<flag name='logwatch'>Install support files for
+		<flag name='logwatch'>Install support files for 
 			<pkg>sys-app/logwatch</pkg></flag>
 		<flag name='madwifi'>Add support for madwifi (Atheros chipset)</flag>
 		<flag name='wps'>Add support for Wi-Fi Protected Setup</flag>

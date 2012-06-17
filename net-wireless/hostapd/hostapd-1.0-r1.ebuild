@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0-r1.ebuild,v 1.2 2012/06/11 15:32:27 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0-r1.ebuild,v 1.3 2012/06/17 15:51:16 gurligebis Exp $
 
 EAPI="2"
 
@@ -13,12 +13,12 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
-IUSE="debug ipv6 logwatch madwifi +ssl +wps"
+IUSE="debug ipv6 logwatch madwifi +ssl +wps +crda"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	kernel_linux? (
 		dev-libs/libnl:1.1
-	net-wireless/crda
+		crda? ( net-wireless/crda )
 	)
 	madwifi? ( ||
 		( >net-wireless/madwifi-ng-tools-0.9.3
