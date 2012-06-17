@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2012.1.ebuild,v 1.1 2012/05/23 17:09:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2012.1-r1.ebuild,v 1.1 2012/06/17 23:15:17 bicatali Exp $
 
 EAPI=4
 
@@ -29,6 +29,8 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
+	# compatibility with previous installs
+	dosym libqhull /usr/include/qhull
 	use doc || rm -rf "${ED}"/usr/share/doc/${PF}/html
 	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/lib*.a
 }
