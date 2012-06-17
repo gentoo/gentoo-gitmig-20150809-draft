@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/pmtools-20071116.ebuild,v 1.7 2009/09/23 20:57:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/pmtools-20071116.ebuild,v 1.8 2012/06/17 03:43:17 cardoe Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="ACPI disassembler tools, including acpidump"
-HOMEPAGE="http://ftp.kernel.org/pub/linux/kernel/people/lenb/acpi/"
-SRC_URI="http://ftp.kernel.org/pub/linux/kernel/people/lenb/acpi/utils/${P}.tar.gz"
+HOMEPAGE="http://www.lesswatts.org/projects/acpi/utilities.php"
+SRC_URI="http://www.lesswatts.org/patches/linux_acpi/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
