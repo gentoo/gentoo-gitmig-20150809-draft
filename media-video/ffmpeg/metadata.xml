@@ -11,7 +11,6 @@
       instruction set, present in modern AMD CPUs.  (Check for
       3dnowext in /proc/cpuinfo to know whether your CPU supports it).
     </flag>
-	<flag name="ass">Enables <pkg>media-libs/libass</pkg> based subtitle renderer.</flag>
     <flag name="aacplus">AAC+ encoding via <pkg>media-libs/libaacplus</pkg>.</flag>
     <flag name="amr">Enables Adaptive Multi-Rate Audio support</flag>
 	<flag name="avresample">Enables libavresample, <pkg>media-video/libav</pkg> version of libswresample (which installed and makes libavresample redundant): A conversion library between uncompressed audio formats.</flag>

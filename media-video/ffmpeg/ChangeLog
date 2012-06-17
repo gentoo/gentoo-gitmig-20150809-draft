@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.563 2012/06/13 16:47:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.564 2012/06/17 04:56:29 yngwin Exp $
+
+  17 Jun 2012; Ben de Groot <yngwin@gentoo.org> ffmpeg-0.10.2.ebuild,
+  ffmpeg-0.10.3.ebuild, ffmpeg-0.11.1.ebuild, ffmpeg-9999.ebuild, metadata.xml:
+  Move USE=ass usage to new global libass useflag (bug #328245)
 
   13 Jun 2012; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.10.3.ebuild:
   Stable for HPPA (bug #420305).
