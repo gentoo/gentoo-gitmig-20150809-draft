@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/kile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.154 2012/05/24 10:59:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.155 2012/06/17 04:59:57 ssuominen Exp $
+
+  17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> kile-2.1.2.ebuild:
+  Use global USE flag "postscript" instead of local USE flag "ps" for
+  PostScript support
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kile-2.1.1.ebuild:
   Remove old.
