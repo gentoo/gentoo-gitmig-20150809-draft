@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.196 2012/06/13 10:09:19 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.197 2012/06/17 20:06:27 maekke Exp $
+
+  17 Jun 2012; Markus Meier <maekke@gentoo.org>
+  postgresql-server-8.3.19.ebuild, postgresql-server-8.4.12.ebuild:
+  arm stable, bug #419727
 
   13 Jun 2012; Andreas Schuerch <nativemad@gentoo.org>
   postgresql-server-8.3.19.ebuild, postgresql-server-8.4.12.ebuild,
