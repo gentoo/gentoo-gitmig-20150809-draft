@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cache-Memcached
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.67 2011/09/01 11:41:10 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.68 2012/06/17 18:42:46 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  Cache-Memcached-1.290.0.ebuild:
+  marked x86 per bug 421613
 
 *Cache-Memcached-1.290.0 (01 Sep 2011)
 
