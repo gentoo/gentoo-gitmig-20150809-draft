@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.82 2012/05/29 19:33:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.83 2012/06/17 18:37:23 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org>
+  portaudio-19_pre20110326.ebuild:
+  alpha/ia64/sh/sparc stable wrt #416235
 
   29 May 2012; Brent Baude <ranger@gentoo.org> portaudio-19_pre20110326.ebuild:
   Marking portaudio-19_pre20110326 ppc for bug 416235
