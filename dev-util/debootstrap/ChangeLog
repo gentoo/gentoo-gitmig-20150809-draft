@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.178 2012/06/07 21:13:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.179 2012/06/17 19:50:27 maekke Exp $
+
+  17 Jun 2012; Markus Meier <maekke@gentoo.org> debootstrap-1.0.40.ebuild:
+  arm stable, bug #419777
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> debootstrap-1.0.40.ebuild:
   Marking debootstrap-1.0.40 ppc for bug 419777
