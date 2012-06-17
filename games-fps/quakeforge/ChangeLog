@@ -1,12 +1,12 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.28 2012/06/17 11:28:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.29 2012/06/17 11:31:31 ssuominen Exp $
 
   17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
   quakeforge-0.5.5-r2.ebuild, +files/quakeforge-0.5.5-libc.patch,
   +files/quakeforge-0.5.5-zlib-1.2.6.patch:
-  Fix building with recent sys-libs/glibc and sys-libs/zlib wrt #421547 Diego
-  Elio Pettenò
+  Fix building with recent sys-libs/glibc and sys-libs/zlib wrt #421547 by
+  Diego Elio Pettenò
 
   03 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
   quakeforge-0.5.5-r2.ebuild:
