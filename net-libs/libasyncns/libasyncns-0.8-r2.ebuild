@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/libasyncns-0.8-r2.ebuild,v 1.9 2012/04/23 07:35:45 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/libasyncns-0.8-r2.ebuild,v 1.10 2012/06/17 17:30:51 flameeyes Exp $
 
 EAPI=3
 inherit eutils libtool flag-o-matic
@@ -27,7 +27,7 @@ src_prepare() {
 
 src_configure() {
 	# libasyncns uses assert()
-	use debug || append-flags -DNDEBUG
+	use debug || append-cppflags -DNDEBUG
 
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \

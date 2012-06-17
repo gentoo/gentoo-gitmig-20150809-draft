@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libasyncns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.31 2012/04/23 07:35:45 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.32 2012/06/17 17:30:51 flameeyes Exp $
+
+  17 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> -libasyncns-0.7.ebuild,
+  -libasyncns-0.8-r1.ebuild, libasyncns-0.8-r2.ebuild:
+  Remove old; fix append-cflags warning (thanks to David J Cozatt in bug
+  #420491).
 
   23 Apr 2012; Benda Xu <heroxbd@gentoo.org> libasyncns-0.8-r2.ebuild:
   keyword amd64-linux. bug #412819
