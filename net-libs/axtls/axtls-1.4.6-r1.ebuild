@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.6-r1.ebuild,v 1.1 2012/06/07 00:13:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.6-r1.ebuild,v 1.2 2012/06/17 21:14:32 blueness Exp $
 
 EAPI="4"
 
-inherit eutils savedconfig toolchain-funcs user
+inherit eutils multilib savedconfig toolchain-funcs user
 
 ################################################################################
 # axtls CONFIG MINI-HOWTO
@@ -42,7 +42,7 @@ S="${WORKDIR}/${MY_PN}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
-IUSE="httpd cgi-lua cgi-php static doc"
+IUSE="httpd cgi-lua cgi-php static static-libs doc"
 
 # TODO: add ipv6, and c#, java, lua, perl bindings
 # Currently these all have some issue
@@ -74,6 +74,10 @@ src_prepare() {
 	tc-export CC
 
 	epatch "${FILESDIR}/bigint_impl.h-add-missing-include.patch"
+	epatch "${FILESDIR}/explicit-libdir.patch"
+
+	sed -i -e 's:^LIBDIR.*/lib:LIBDIR = $(PREFIX)/'"$(get_libdir):" \
+		"${S}"/Makefile
 
 	#Use CC as the host compiler for mconf
 	sed -i -e "s:^HOSTCC.*:HOSTCC=${CC}:" \
@@ -155,6 +159,11 @@ src_install() {
 	fi
 
 	emake PREFIX="${ED}/usr" install
+
+	if ! use static-libs; then
+		rm -f "${ED}"/usr/$(get_libdir)/libaxtls.a
+	fi
+
 	if [ -f "${ED}"/usr/bin/htpasswd ]; then
 		mv "${ED}"/usr/bin/{,ax}htpasswd
 	fi

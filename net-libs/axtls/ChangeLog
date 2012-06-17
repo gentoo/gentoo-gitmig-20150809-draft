@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/axtls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.3 2012/06/07 00:13:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.4 2012/06/17 21:14:32 blueness Exp $
+
+  17 Jun 2012; Anthony G. Basile <blueness@gentoo.org> axtls-1.4.6-r1.ebuild,
+  +files/explicit-libdir.patch:
+  Make build system multilib aware, add USE=static-libs, for bug #421479
 
 *axtls-1.4.6-r1 (07 Jun 2012)
 
