@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/ChangeLog,v 1.2 2012/03/24 09:32:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/ChangeLog,v 1.3 2012/06/17 05:48:42 yngwin Exp $
+
+  17 Jun 2012; Ben de Groot <yngwin@gentoo.org>
+  smplayer2-0.7.0_pre20111120.ebuild, smplayer2-0.7.1_p20120301.ebuild,
+  smplayer2-9999.ebuild:
+  Use the new global libass useflag (bug #328245)
 
 *smplayer2-0.7.1_p20120301 (24 Mar 2012)
 

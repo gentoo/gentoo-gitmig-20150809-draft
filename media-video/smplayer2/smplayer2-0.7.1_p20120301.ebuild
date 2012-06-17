@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/smplayer2-0.7.1_p20120301.ebuild,v 1.1 2012/03/24 09:32:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/smplayer2-0.7.1_p20120301.ebuild,v 1.2 2012/06/17 05:48:42 yngwin Exp $
 
 EAPI="4"
 LANGS="bg ca cs da de en_US es et eu fi fr gl hu it ja ka ko ku lt mk nl pl pt pt_BR sk sr sv tr zh_CN zh_TW"
@@ -28,7 +28,7 @@ DEPEND="
 	download-subs? ( dev-libs/quazip )
 "
 RDEPEND="${DEPEND}
-	media-video/mplayer2[ass,png]
+	media-video/mplayer2[libass,png]
 "
 
 src_configure() {

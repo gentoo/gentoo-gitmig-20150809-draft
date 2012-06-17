@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.115 2012/06/02 06:18:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.116 2012/06/17 05:46:17 yngwin Exp $
+
+  17 Jun 2012; Ben de Groot <yngwin@gentoo.org> smplayer-0.8.0.ebuild:
+  Use the new global libass useflag (bug #328245)
 
   02 Jun 2012; Ben de Groot <yngwin@gentoo.org>
   -files/smplayer-0.6.8-quit.patch, -files/smplayer-0.6.9-quazip.patch:
