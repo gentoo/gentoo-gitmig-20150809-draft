@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.54 2012/05/29 19:50:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.55 2012/06/17 18:41:23 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> decorator-3.3.2.ebuild:
+  alpha/ia64/sparc stable wrt #415851
 
   29 May 2012; Brent Baude <ranger@gentoo.org> decorator-3.3.2.ebuild:
   Marking decorator-3.3.2 ppc for bug 415851
