@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.6.ebuild,v 1.2 2011/04/10 03:20:29 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.6.ebuild,v 1.3 2012/06/17 18:40:55 armin76 Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v$(get_version_component_range 1
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="cancel-locks crypt debug evil forgery idn ipv6 nls unicode socks5 +etiquette"
 
 DEPEND="

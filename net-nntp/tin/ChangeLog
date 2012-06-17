@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/tin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.36 2012/05/29 19:45:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.37 2012/06/17 18:40:55 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> tin-1.8.3.ebuild,
+  tin-1.9.4-r1.ebuild, tin-1.9.6.ebuild, tin-2.0.0.ebuild, tin-2.0.1.ebuild:
+  Drop ia64/sparc keywords
 
   29 May 2012; Brent Baude <ranger@gentoo.org> tin-2.0.0.ebuild:
   Marking tin-2.0.0 ppc for bug 416105
