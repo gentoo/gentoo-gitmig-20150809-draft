@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-5.0.1.ebuild,v 1.1 2012/06/17 01:49:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-5.0.1.ebuild,v 1.2 2012/06/17 01:52:39 jdhore Exp $
 
 EAPI=3
 
@@ -40,7 +40,7 @@ RDEPEND="${CDEPEND}
 	libnotify? ( dev-python/notify-python )
 	musepack? ( media-plugins/gst-plugins-musepack:0.10 )
 	xvid? ( media-plugins/gst-plugins-xvid:0.10 )
-	net-dns/avahi"
+	net-dns/avahi[mdnsresponder-compat]"
 
 DEPEND="${CDEPEND}"
 

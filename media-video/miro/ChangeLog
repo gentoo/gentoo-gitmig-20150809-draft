@@ -1,6 +1,9 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.18 2012/06/17 01:49:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.19 2012/06/17 01:52:39 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> miro-5.0.1.ebuild:
+  Depend on the avahi mdnsresponder-compat USE flag being set, not JUST avahi.
 
 *miro-5.0.1 (17 Jun 2012)
 
