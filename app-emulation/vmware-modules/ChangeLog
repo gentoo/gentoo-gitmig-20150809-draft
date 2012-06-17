@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.96 2012/06/01 00:06:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.97 2012/06/17 13:09:10 vadimk Exp $
+
+*vmware-modules-238.6 (17 Jun 2012)
+*vmware-modules-264.4 (17 Jun 2012)
+
+  17 Jun 2012; Vadim Kuznetsov vadimk@gentoo.org +vmware-modules-238.6.ebuild,
+  +vmware-modules-264.4.ebuild, -vmware-modules-238.5-r1.ebuild,
+  -vmware-modules-264.3.ebuild:
+  bump vmware desktop. bug 421269
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> vmware-modules-238.5-r1.ebuild,
   vmware-modules-264.3.ebuild:

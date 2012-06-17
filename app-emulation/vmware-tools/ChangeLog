@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-tools/ChangeLog,v 1.10 2012/05/05 14:49:10 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-tools/ChangeLog,v 1.11 2012/06/17 13:10:27 vadimk Exp $
+
+*vmware-tools-8.8.4.744019 (17 Jun 2012)
+*vmware-tools-8.4.9.744570 (17 Jun 2012)
+
+  17 Jun 2012; Vadim Kuznetsov vadimk@gentoo.org
+  +vmware-tools-8.4.9.744570.ebuild, +vmware-tools-8.8.4.744019.ebuild,
+  -vmware-tools-8.4.8.491717.ebuild, -vmware-tools-8.8.2.703057.ebuild:
+  bump vmware desktop. bug 421269
 
 *vmware-tools-8.8.2.703057 (05 May 2012)
 

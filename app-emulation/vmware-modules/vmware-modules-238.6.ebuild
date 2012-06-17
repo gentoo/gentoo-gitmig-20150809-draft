@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-264.3.ebuild,v 1.3 2012/06/01 00:06:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-238.6.ebuild,v 1.1 2012/06/17 13:09:10 vadimk Exp $
 
 EAPI="4"
 
@@ -17,12 +17,12 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pax_kernel"
+IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	|| ( =app-emulation/vmware-player-4.0.${PV_MINOR}*
-	=app-emulation/vmware-workstation-8.0.${PV_MINOR}* )"
+	|| ( =app-emulation/vmware-player-3.1.${PV_MINOR}*
+		 =app-emulation/vmware-workstation-7.1.${PV_MINOR}* )"
 
 S=${WORKDIR}
 
@@ -62,10 +62,10 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV_MAJOR}-makefile-kernel-dir.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-makefile-include.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-jobserver.patch"
+	kernel_is ge 2 6 37 && epatch "${FILESDIR}/${PV_MAJOR}-sema.patch"
+	kernel_is ge 2 6 39 && epatch "${FILESDIR}/${PV_MAJOR}-2.6.39.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-netdevice.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-3.2.0.patch"
-	use pax_kernel && epatch "${FILESDIR}/hardened.patch"
-	epatch "${FILESDIR}/${PV_MAJOR}-apic.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-d-make-root.patch"
 }
 

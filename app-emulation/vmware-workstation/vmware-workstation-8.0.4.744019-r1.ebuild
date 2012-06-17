@@ -1,28 +1,29 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.3.703057.ebuild,v 1.1 2012/05/05 14:52:20 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.4.744019-r1.ebuild,v 1.1 2012/06/17 13:11:13 vadimk Exp $
 
 EAPI="4"
 
 inherit eutils versionator fdo-mime gnome2-utils pam vmware-bundle
 
 MY_PN="VMware-Workstation"
-MY_PV="$(replace_version_separator 3 - $PV)"
-MY_P="${MY_PN}-Full-${MY_PV}"
+MY_PV=$(get_version_component_range 1-3)
 PV_MINOR=$(get_version_component_range 3)
+PV_BUILD=$(get_version_component_range 4)
+MY_P="${MY_PN}-${MY_PV}-${PV_BUILD}"
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/workstation/"
+BASE_URI="https://softwareupdate.vmware.com/cds/vmw-desktop/ws/${MY_PV}/${PV_BUILD}/linux/core/"
 SRC_URI="
-	x86? ( ${MY_P}.i386.bundle )
-	amd64? ( ${MY_P}.x86_64.bundle )
+	x86? ( ${BASE_URI}${MY_P}.i386.bundle.tar )
+	amd64? ( ${BASE_URI}${MY_P}.x86_64.bundle.tar )
 	"
-
 LICENSE="vmware"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="cups doc gnome kde ovftool server vix vmware-tools"
-RESTRICT="binchecks fetch mirror strip"
+IUSE="cups doc ovftool server vix vmware-tools"
+RESTRICT="binchecks mirror strip"
 
 # vmware-workstation should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
@@ -57,8 +58,6 @@ RDEPEND="dev-cpp/cairomm
 	sys-libs/glibc
 	sys-libs/zlib
 	x11-libs/cairo
-	gnome? ( x11-libs/gksu )
-	kde? ( kde-base/kdesu )
 	x11-libs/gtk+:2
 	x11-libs/libgksu
 	x11-libs/libICE
@@ -91,21 +90,9 @@ VM_INSTALL_DIR="/opt/vmware"
 VM_DATA_STORE_DIR="/var/lib/vmware/Shared VMs"
 VM_HOSTD_USER="root"
 
-pkg_nofetch() {
-	local bundle
-
-	if use x86; then
-		bundle="${MY_P}.i386.bundle"
-	elif use amd64; then
-		bundle="${MY_P}.x86_64.bundle"
-	fi
-
-	einfo "Please download ${bundle}"
-	einfo "from ${HOMEPAGE}"
-	einfo "and place it in ${DISTDIR}"
-}
-
 src_unpack() {
+	default
+	local bundle=${A%.tar}
 	local component; for component in \
 		vmware-vmx \
 		vmware-player-app \
@@ -115,21 +102,20 @@ src_unpack() {
 		vmware-network-editor-ui \
 		vmware-usbarbitrator
 	do
-		vmware-bundle_extract-bundle-component "${DISTDIR}/${A}" "${component}" "${S}"
+		vmware-bundle_extract-bundle-component "${bundle}" "${component}" "${S}"
 	done
 
 	if use server; then
-		vmware-bundle_extract-bundle-component "${DISTDIR}/${A}" vmware-workstation-server #"${S}"
+		vmware-bundle_extract-bundle-component "${bundle}" vmware-workstation-server #"${S}"
 	fi
 
 	if use vix; then
-		vmware-bundle_extract-bundle-component "${DISTDIR}/${A}" vmware-vix-core vmware-vix
-		vmware-bundle_extract-bundle-component "${DISTDIR}/${A}" vmware-vix-lib-Workstation800andvSphere500 vmware-vix
+		vmware-bundle_extract-bundle-component "${bundle}" vmware-vix-core vmware-vix
+		vmware-bundle_extract-bundle-component "${bundle}" vmware-vix-lib-Workstation800andvSphere500 vmware-vix
 	fi
 	if use ovftool; then
-		vmware-bundle_extract-bundle-component "${DISTDIR}/${A}" vmware-ovftool
+		vmware-bundle_extract-bundle-component "${bundle}" vmware-ovftool
 	fi
-
 }
 
 src_prepare() {
@@ -204,6 +190,10 @@ src_install() {
 		# install binaries
 		into "${VM_INSTALL_DIR}"/lib/vmware
 		dobin bin/*
+
+		dobin "${FILESDIR}"/configure-hostd.sh
+
+		dobin "${FILESDIR}"/configure-hostd.sh
 
 		# install the libraries
 		insinto "${VM_INSTALL_DIR}"/lib/vmware/lib
@@ -287,14 +277,6 @@ src_install() {
 	dosym "${VM_INSTALL_DIR}"/lib/vmware/bin/vmware "${VM_INSTALL_DIR}"/bin/vmware
 	dosym "${VM_INSTALL_DIR}"/lib/vmware/icu /etc/vmware/icu
 
-	# fixing gksu problem
-	if use gnome; then
-		dosym /usr/bin/gksu "${VM_INSTALL_DIR}"/bin/vmware-gksu
-	fi
-	if use kde; then
-		dosym /usr/bin/kdesu "${VM_INSTALL_DIR}"/bin/vmware-gksu
-	fi
-
 	# fix permissions
 	fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/bin/{appLoader,fusermount,launcher.sh,mkisofs,vmware-remotemks}
 	fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/lib/{wrapper-gtk24.sh,libgksu2.so.0/gksu-run-helper}
@@ -304,6 +286,7 @@ src_install() {
 	if use server; then
 		fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/bin/vmware-{hostd,vim-cmd,wssc-adminTool}
 		fperms 4711 "${VM_INSTALL_DIR}"/sbin/vmware-authd
+		fperms 1777 "${VM_DATA_STORE_DIR}"
 	fi
 	if use vix; then
 		fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware-vix/setup/vmware-config
