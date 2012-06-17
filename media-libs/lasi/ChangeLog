@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lasi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.31 2012/05/29 16:30:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.32 2012/06/17 06:55:39 naota Exp $
+
+  17 Jun 2012; Naohiro Aota <naota@gentoo.org> lasi-1.1.1.ebuild:
+  Add ~x86-fbsd. #419621
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> lasi-1.1.1.ebuild:
   keyword ~amd64-fbsd
