@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ftdi_eeprom-0.3-r1.ebuild,v 1.2 2012/05/25 08:10:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ftdi_eeprom-0.3-r1.ebuild,v 1.3 2012/06/17 23:46:33 vapier Exp $
 
 EAPI=4
 inherit eutils
@@ -20,9 +20,10 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-newer-chips.patch #376117
+	epatch "${FILESDIR}"/${PN}-0.2-chip-type.patch #390805
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog README src/example.conf
+	default
+	dodoc src/example.conf
 }
