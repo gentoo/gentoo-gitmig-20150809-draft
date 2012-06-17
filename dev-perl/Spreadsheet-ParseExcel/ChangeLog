@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Spreadsheet-ParseExcel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.52 2012/05/23 13:32:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.53 2012/06/17 17:29:30 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org>
+  Spreadsheet-ParseExcel-0.57.ebuild, Spreadsheet-ParseExcel-0.580.0.ebuild,
+  Spreadsheet-ParseExcel-0.590.0.ebuild:
+  Drop ia64/sparc keywords
 
   23 May 2012; Johannes Huber <johu@gentoo.org>
   Spreadsheet-ParseExcel-0.590.0.ebuild:

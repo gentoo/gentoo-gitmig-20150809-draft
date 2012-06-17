@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.57.ebuild,v 1.4 2010/05/22 10:47:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.57.ebuild,v 1.5 2012/06/17 17:29:30 armin76 Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Get information from Excel file"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ia64 sparc x86"
+KEYWORDS="amd64 x86"
 IUSE="test cjk unicode"
 
 RDEPEND=">=dev-perl/OLE-StorageLite-0.19
