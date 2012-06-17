@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/netaddr-0.7.6-r1.ebuild,v 1.3 2012/06/16 20:26:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/netaddr-0.7.6-r1.ebuild,v 1.4 2012/06/17 07:06:45 jdhore Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="mirror://github/drkjam/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cli"
 
 DEPEND=""
