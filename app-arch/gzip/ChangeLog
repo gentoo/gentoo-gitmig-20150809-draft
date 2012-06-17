@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/gzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.113 2012/05/22 22:04:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.114 2012/06/17 21:20:49 vapier Exp $
+
+*gzip-1.5 (17 Jun 2012)
+
+  17 Jun 2012; Mike Frysinger <vapier@gentoo.org> +gzip-1.5.ebuild:
+  Version bump.
 
   22 May 2012; Mike Frysinger <vapier@gentoo.org> +files/gzip-1.4-no-gets.patch,
   gzip-1.4.ebuild:
