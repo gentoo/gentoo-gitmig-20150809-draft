@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CPAN-Mini
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.43 2012/05/21 10:09:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.44 2012/06/17 16:33:54 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> CPAN-Mini-0.562.ebuild,
+  CPAN-Mini-1.111.7.ebuild, CPAN-Mini-1.111.8.ebuild:
+  Drop ia64/sparc keywords
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   CPAN-Mini-1.111.8.ebuild:
