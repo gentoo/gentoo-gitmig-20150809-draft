@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20100511-r1.ebuild,v 1.3 2012/02/10 20:27:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20100511-r1.ebuild,v 1.4 2012/06/17 19:02:49 jlec Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ S="${WORKDIR}"/${PN}-2.1
 PATCHES=(
 	"${FILESDIR}"/20091215-missing-var.patch
 	"${FILESDIR}"/${PV}-makefile.patch
+	"${FILESDIR}"/${P}-outofsourcebuild.patch
 	)
 
 src_configure() {
@@ -44,7 +45,7 @@ src_configure() {
 		--enable-minimol
 		--enable-mmdb
 		--enable-phs
-		--with-mmdb="${EPREFIX}"/usr
+		--with-mmdb="${EPREFIX}/usr"
 		$(use_enable debug)
 		)
 	autotools-utils_src_configure
