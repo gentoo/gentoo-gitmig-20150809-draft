@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/renameutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/ChangeLog,v 1.14 2012/06/17 15:03:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/ChangeLog,v 1.15 2012/06/17 19:57:21 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> renameutils-0.12.0.ebuild:
+  marked x86 per bug 412509
 
   17 Jun 2012; Agostino Sarubbo <ago@gentoo.org> renameutils-0.12.0.ebuild:
   Stable for amd64, wrt bug #412509
