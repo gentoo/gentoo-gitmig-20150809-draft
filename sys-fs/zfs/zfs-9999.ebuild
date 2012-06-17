@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.22 2012/06/16 18:57:39 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.23 2012/06/17 14:07:51 ryao Exp $
 
 EAPI="4"
 
@@ -10,11 +10,11 @@ AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 inherit flag-o-matic linux-mod toolchain-funcs autotools-utils
 
-if [[ ${PV} == "9999" ]] ; then
+if [ ${PV} == "9999" ] ; then
 	inherit git-2
 	EGIT_REPO_URI="git://github.com/zfsonlinux/${PN}.git"
 else
-	inherit versionator
+	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
 	SRC_URI="https://github.com/downloads/zfsonlinux/${PN}/${PN}-${MY_PV}.tar.gz"
 	S="${WORKDIR}/${PN}-${MY_PV}"
@@ -64,6 +64,7 @@ pkg_setup() {
 		MODULES
 		ZLIB_DEFLATE
 		ZLIB_INFLATE"
+	use rootfs && CONFIG_CHECK="${CONFIG_CHECK} DEVTMPFS"
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
 }
@@ -73,6 +74,12 @@ src_prepare() {
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/common.sh.in || die
 	# Workaround rename
 	sed -i "s|/usr/bin/scsi-rescan|/usr/sbin/rescan-scsi-bus|" scripts/common.sh.in || die
+
+	if [ ${PV} != "9999" ]
+	then
+		epatch "${FILESDIR}/${P}-hardened-support.patch"
+	fi
+
 	autotools-utils_src_prepare
 }
 
@@ -92,7 +99,7 @@ src_configure() {
 }
 
 src_test() {
-	if [[ $UID -ne 0 ]]
+	if [ $UID -ne 0 ]
 	then
 		ewarn "Cannot run make check tests with FEATURES=userpriv."
 		ewarn "Skipping make check tests."
