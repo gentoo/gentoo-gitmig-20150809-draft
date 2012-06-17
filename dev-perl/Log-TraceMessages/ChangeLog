@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Log-TraceMessages
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.14 2007/01/16 01:20:56 mcummings Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.15 2012/06/17 14:07:26 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> Log-TraceMessages-1.4.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   16 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -Log-TraceMessages-1.3.ebuild, Log-TraceMessages-1.4.ebuild:

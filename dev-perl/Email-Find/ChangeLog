@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Find
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Find/ChangeLog,v 1.28 2011/09/04 11:23:28 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Find/ChangeLog,v 1.29 2012/06/17 14:08:36 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> Email-Find-0.100.0.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Email-Find-0.10.ebuild:
   Cleanup
