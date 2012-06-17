@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.36 2012/05/28 18:02:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.37 2012/06/17 18:12:34 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> tix-8.4.3.ebuild:
+  Add ~alpha/~ia64/~s390/~sh wrt #413433
 
   28 May 2012; Markus Meier <maekke@gentoo.org> tix-8.4.3.ebuild:
   add ~arm, bug #413433
