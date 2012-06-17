@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20110322-r1.ebuild,v 1.11 2012/05/05 08:58:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20110322-r1.ebuild,v 1.12 2012/06/17 05:19:59 yngwin Exp $
 
 EAPI=4
 
@@ -14,16 +14,16 @@ inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 # BUMP ME PLZ, NO COOKIES OTHERWISE
 [[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r33094
 
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
+IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac
 directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode +faac +faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
-libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 mpg123 nas
-+network nut openal amr +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
-radio +rar +real +rtc rtmp samba +shm +schroedinger sdl +speex sse sse2 ssse3
-tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
-+vorbis vpx win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
-zoran"
++libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 mpg123
+nas +network nut openal amr +opengl +osdmenu oss png pnm pulseaudio pvr
++quicktime radio +rar +real +rtc rtmp samba +shm +schroedinger sdl +speex
+sse sse2 ssse3 tga +theora +tremor +truetype +toolame +twolame +unicode
+v4l vdpau vidix +vorbis vpx win32codecs +X +x264 xanim xinerama +xscreensaver
++xv +xvid xvmc zoran"
 [[ ${PV} == *9999* ]] && IUSE+=" external-ffmpeg"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
@@ -89,7 +89,6 @@ RDEPEND+="
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	amr? ( !bindist? ( media-libs/opencore-amr ) )
-	ass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?] )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
@@ -121,6 +120,7 @@ RDEPEND+="
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/openjpeg )
 	ladspa? ( media-libs/ladspa-sdk )
+	libass? ( ${FONT_RDEPS} >=media-libs/libass-0.9.10[enca?] )
 	libcaca? ( media-libs/libcaca )
 	libmpeg2? ( media-libs/libmpeg2 )
 	lirc? ( app-misc/lirc )
@@ -297,13 +297,14 @@ src_configure() {
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"
-	uses="ass bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
+	uses="bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
 	myconf+=" --disable-nemesi" # nemesi automagic disable
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
 	use bidi || myconf+=" --disable-fribidi"
 	use ipv6 || myconf+=" --disable-inet6"
+	use libass || myconf+=" --disable-ass"
 	use nut || myconf+=" --disable-libnut"
 	use rar || myconf+=" --disable-unrarexec"
 	use samba || myconf+=" --disable-smb"
@@ -350,7 +351,7 @@ src_configure() {
 	# SRT/ASS/SSA (subtitles) requires freetype support
 	# freetype support requires iconv
 	# iconv optionally can use unicode
-	if ! use ass && ! use truetype; then
+	if ! use libass && ! use truetype; then
 		myconf+=" --disable-freetype"
 		if ! use iconv; then
 			myconf+="
@@ -688,7 +689,7 @@ src_install() {
 		dohtml -r "${S}"/DOCS/HTML/*
 	fi
 
-	if ! use ass && ! use truetype; then
+	if ! use libass && ! use truetype; then
 		dodir /usr/share/mplayer/fonts
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
@@ -712,7 +713,7 @@ _EOF_
 		doins "${S}/etc/menu.conf"
 	fi
 
-	if use ass || use truetype; then
+	if use libass || use truetype; then
 		cat >> "${ED}/etc/mplayer/mplayer.conf" << _EOF_
 fontconfig=1
 subfont-osd-scale=4

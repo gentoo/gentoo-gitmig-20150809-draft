@@ -8,7 +8,6 @@
 <use>
 	<flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
 	<flag name="amr">Enables Adaptive Multi-Rate format support</flag>
-	<flag name="ass">SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support</flag>
 	<flag name="bl">Blinkenlights video output</flag>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
 	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20120405.ebuild,v 1.5 2012/05/05 08:58:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20120405.ebuild,v 1.6 2012/06/17 05:19:59 yngwin Exp $
 
 EAPI=4
 
@@ -10,11 +10,11 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
+IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection debug dga
 directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode faac +faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
-libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
++libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
 tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
@@ -66,7 +66,6 @@ RDEPEND+="
 	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( >=media-libs/libass-0.9.10[enca?] )
 	bidi? ( dev-libs/fribidi )
 	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
@@ -97,6 +96,7 @@ RDEPEND+="
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/openjpeg )
 	ladspa? ( media-libs/ladspa-sdk )
+	libass? ( >=media-libs/libass-0.9.10[enca?] )
 	libcaca? ( media-libs/libcaca )
 	libmpeg2? ( media-libs/libmpeg2 )
 	lirc? ( app-misc/lirc )
@@ -173,7 +173,7 @@ fi
 # xvmc requires xvideo support
 REQUIRED_USE="bindist? ( !faac !win32codecs )
 	dvdnav? ( dvd )
-	ass? ( truetype )
+	libass? ( truetype )
 	truetype? ( iconv )
 	dxr3? ( X )
 	ggi? ( X )
@@ -279,13 +279,14 @@ src_configure() {
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"
-	uses="ass bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
+	uses="bl bluray enca ftp rtc" # nemesi <- not working with in-tree ebuild
 	myconf+=" --disable-nemesi" # nemesi automagic disable
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
 	use bidi  || myconf+=" --disable-fribidi"
 	use ipv6  || myconf+=" --disable-inet6"
+	use libass || myconf+=" --disable-libass"
 	use nut   || myconf+=" --disable-libnut"
 	use rar   || myconf+=" --disable-unrarexec"
 	use samba || myconf+=" --disable-smb"
