@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/mari0-1.6.ebuild,v 1.5 2012/06/05 18:46:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/mari0-1.6.ebuild,v 1.6 2012/06/17 12:03:08 ssuominen Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ src_install() {
 	exeinto "${dir}"
 	doexe ${MY_P}.love
 
-	doins -s scalable "${FILESDIR}"/${PN}.svg
+	doicon -s scalable "${FILESDIR}"/${PN}.svg
 	games_make_wrapper ${PN} "love ${MY_P}.love" "${dir}"
 	make_desktop_entry ${PN}
 
