@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ticpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ChangeLog,v 1.6 2012/06/17 22:13:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ChangeLog,v 1.7 2012/06/17 22:16:40 ago Exp $
+
+*ticpp-0_p20120423 (17 Jun 2012)
+
+  17 Jun 2012; Agostino Sarubbo <ago@gentoo.org> +ticpp-0_p20120423.ebuild:
+  Add new snapshot, wrt to bug #412081
 
   17 Jun 2012; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
   Take maintainership
