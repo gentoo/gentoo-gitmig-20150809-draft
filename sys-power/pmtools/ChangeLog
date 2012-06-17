@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pmtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.18 2012/06/17 03:43:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.19 2012/06/17 03:58:18 cardoe Exp $
+
+  16 Jun 2012; Doug Goldstein <cardoe@gentoo.org> -pmtools-20100123.ebuild:
+  Missed dropping one ebuild from the previous commit.
 
   16 Jun 2012; Doug Goldstein <cardoe@gentoo.org> pmtools-20071116.ebuild,
   -pmtools-20100430.ebuild, -pmtools-20100825.ebuild, -pmtools-20101221.ebuild:
