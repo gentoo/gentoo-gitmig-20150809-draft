@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc5.ebuild,v 1.1 2012/03/13 19:13:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc5.ebuild,v 1.2 2012/06/17 13:51:33 jlec Exp $
 
 EAPI=4
 
@@ -40,6 +40,8 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
+	epatch "${FILESDIR}"/3.7.0_rc3-user-conf.patch
+
 	# Change some destination directories that cannot be adjusted via configure
 	cp configure.ac configure.ac.orig
 	sed \
@@ -53,13 +55,12 @@ src_prepare() {
 		-e "s:^povlibdir = .*:povlibdir = @datadir@/${PN}:" \
 		-e "s:^povdocdir = .*:povdocdir = @datadir@/doc/${PF}:" \
 		-e "s:^povconfdir = .*:povconfdir = @sysconfdir@/${PN}:" \
+		-e 's:mkdir_p:MKDIR_P:g' \
 		-i Makefile.am || die
 
 	# The "+p" option on the test command line causes a pause and
 	# prompts the user to interact, so remove it.
 	sed -i -e "s:biscuit.pov -f +d +p:biscuit.pov -f +d:" Makefile.am || die
-
-	epatch "${FILESDIR}"/3.7.0_rc3-user-conf.patch
 
 	eautoreconf
 }
@@ -104,10 +105,6 @@ src_configure() {
 src_test() {
 	# For the beta releases, we generate a license extension in case needed
 	POVRAY_BETA=`./unix/povray --betacode 2>&1` emake check
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
 }
 
 pkg_preinst() {
