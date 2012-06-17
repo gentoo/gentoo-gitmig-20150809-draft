@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.2.1.ebuild,v 1.1 2012/06/16 09:07:13 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.2.1.ebuild,v 1.2 2012/06/17 12:12:17 tommy Exp $
 
 EAPI="2"
 
@@ -24,9 +24,6 @@ DEPEND="${RDEPEND}
 		dev-util/lcov
 	)"
 
-#tests are currently broken
-RESTRICT="test"
-
 src_prepare() {
 	cp "${FILESDIR}"/city.h src/tests/ || die
 
@@ -45,7 +42,7 @@ src_configure() {
 	$(use_enable !debug amalgamation)
 	$(use_enable debug stringshare-usage)
 	$(use_enable debug assert)
-	$(use debug || echo " --with-internal-maximum-log-level=2")
+	$(( use debug || use test ) || echo " --with-internal-maximum-log-level=2")
 	$(use_enable debug valgrind)
 	$(use_enable default-mempool)
 	$(use_enable doc)
