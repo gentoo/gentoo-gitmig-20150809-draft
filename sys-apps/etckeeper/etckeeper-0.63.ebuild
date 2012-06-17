@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.6 2012/06/17 12:37:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.7 2012/06/17 12:39:51 hasufell Exp $
 
 EAPI=4
 
@@ -48,7 +48,7 @@ src_install(){
 
 	newbashcomp bash_completion ${PN}
 	docinto examples
-	doins "${FILESDIR}"/bashrc
+	dodoc "${FILESDIR}"/bashrc
 }
 
 pkg_postinst(){
