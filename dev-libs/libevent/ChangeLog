@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.223 2012/05/27 12:45:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.224 2012/06/17 17:59:25 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> libevent-2.0.18.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #415581
 
   27 May 2012; Markus Meier <maekke@gentoo.org> libevent-2.0.18.ebuild:
   arm stable, bug #415581
