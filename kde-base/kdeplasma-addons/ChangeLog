@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.136 2012/05/24 11:37:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.137 2012/06/17 21:11:05 dilfridge Exp $
+
+  17 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdeplasma-addons-4.8.3.ebuild:
+  Newer fcitx always has dbus support, bug 421187
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kdeplasma-addons-4.8.1.ebuild:
   Remove KDE SC 4.8.1

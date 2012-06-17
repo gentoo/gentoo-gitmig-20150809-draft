@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.8.3.ebuild,v 1.5 2012/05/24 08:49:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.8.3.ebuild,v 1.6 2012/06/17 21:11:05 dilfridge Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 	attica? ( dev-libs/libattica )
 	desktopglobe? ( $(add_kdebase_dep marble) )
 	exif? ( $(add_kdebase_dep libkexiv2) )
-	fcitx? ( app-i18n/fcitx[dbus] )
+	fcitx? ( app-i18n/fcitx[dbus(+)] )
 	ibus? ( app-i18n/ibus )
 	qalculate? ( sci-libs/libqalculate )
 	qwt? ( x11-libs/qwt:5 )
