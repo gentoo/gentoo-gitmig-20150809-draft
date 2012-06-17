@@ -1,6 +1,14 @@
 # ChangeLog for app-dicts/myspell-de
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.27 2012/05/17 18:10:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.28 2012/06/17 10:31:03 scarabeus Exp $
+
+*myspell-de-2012.06.10 (17 Jun 2012)
+
+  17 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +myspell-de-2012.06.10.ebuild, -myspell-de-20060316.ebuild,
+  -myspell-de-20080915-r1.ebuild:
+  Version bump to latest release wrt bug#305725. Remove older which represent
+  itself as newer.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-de-20060316.ebuild,
   myspell-de-20080915-r1.ebuild:
