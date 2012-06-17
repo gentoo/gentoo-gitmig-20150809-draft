@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.8 2012/01/30 13:41:34 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.9 2012/06/17 01:05:11 chithanh Exp $
 
 EAPI="3"
 
@@ -57,6 +57,8 @@ src_prepare() {
 		libs/webcam/include/webcam/V4LWebcamDriver.h \
 		libs/webcam/src/v4l/V4LWebcamDriver.cpp || die
 	epatch "${FILESDIR}"/${PN}-2.2-no-deprecated-avcodec-decode-video.patch
+	# do not include gtypes.h, bug #421415
+	sed -i '/gtypes.h/d' libs/imwrapper/src/purple/PurpleIMFactory.h || die
 }
 
 src_configure() {
