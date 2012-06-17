@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r3.ebuild,v 1.13 2012/06/17 11:36:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r3.ebuild,v 1.14 2012/06/17 11:38:38 ssuominen Exp $
 
 EAPI=3
 # desklets don't run with USE=debug
@@ -25,7 +25,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 # is libgsf needed for runtime or just compiling?
 # only need expat for python-2.4, I think
-RDEPEND=">=dev-libs/glib-2.4
+RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/librsvg-2.8
 	>=gnome-base/libgtop-2.8.2
 	>=dev-python/pygtk-2.10
@@ -36,11 +36,10 @@ RDEPEND=">=dev-libs/glib-2.4
 	|| ( >=dev-python/gnome-vfs-python-2.6 >=dev-python/libgnome-python-2.6 )
 	>=dev-libs/expat-1.95.8
 	dbus? ( dev-python/dbus-python )"
-
 DEPEND="${RDEPEND}
+	dev-util/intltool
 	sys-devel/gettext
-	virtual/pkgconfig
-	dev-util/intltool"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 CONVERT_SHEBANGS="ctrlinfo gdesklets gdesklets-daemon gdesklets-logview \
@@ -76,7 +75,6 @@ src_install() {
 	insinto /usr/$(get_libdir)/gdesklets
 	insopts -m0555
 	doins "${FILESDIR}"/gdesklets-control-getid
-
 }
 
 pkg_postinst() {
@@ -106,7 +104,6 @@ pkg_postinst() {
 	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/contrib/gdesklets-migration-tool"
 	elog "after the first time you run gDesklets"
 	elog
-
 }
 
 pkg_postrm() {
@@ -114,5 +111,4 @@ pkg_postrm() {
 	# Cleanup after our cavalier python compilation
 	# The function takes care of ${ROOT} for us
 	python_mod_cleanup /usr/$(get_libdir)/gdesklets
-
 }
