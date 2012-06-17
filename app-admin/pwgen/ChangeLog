@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.57 2012/06/17 15:34:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.58 2012/06/17 20:03:37 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pwgen-2.06-r1.ebuild:
+  marked x86 per bug 421565
 
   17 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pwgen-2.06-r1.ebuild:
   Stable for amd64, wrt bug #421565
