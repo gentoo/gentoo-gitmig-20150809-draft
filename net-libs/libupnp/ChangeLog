@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.27 2012/05/29 15:14:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.28 2012/06/17 09:21:32 hwoarang Exp $
+
+*libupnp-1.6.17 (17 Jun 2012)
+
+  17 Jun 2012; Markos Chandras <hwoarang@gentoo.org> +libupnp-1.6.17.ebuild:
+  Version bump. Bug #415655
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> libupnp-1.6.14.ebuild:
   keyword ~amd64-fbsd
