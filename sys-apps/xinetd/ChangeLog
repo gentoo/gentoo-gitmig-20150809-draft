@@ -1,5 +1,8 @@
 # ChangeLog for sys-apps/xinetd
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.62 2012/06/16 13:10:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.63 2012/06/17 05:36:31 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> xinetd-2.3.15.ebuild:
+  marked x86 per bug 420927
 
   16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xinetd-2.3.15.ebuild:
   Stable for amd64, wrt bug #420927
