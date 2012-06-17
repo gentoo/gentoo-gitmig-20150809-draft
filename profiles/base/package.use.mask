@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.362 2012/06/14 22:34:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.363 2012/06/17 22:12:11 pesa Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -125,25 +125,25 @@ www-plugins/gnash directfb
 >=sci-libs/fftw-3 paired-single zbus
 
 # Alex Alexander <wired@gentoo.org> (29 Jan 2012)
-# Experimental use flags
-=x11-libs/qt-assistant-4.8* c++0x qpa
-=x11-libs/qt-bearer-4.8* c++0x qpa
-=x11-libs/qt-core-4.8* c++0x qpa
-=x11-libs/qt-declarative-4.8* c++0x qpa
-=x11-libs/qt-dbus-4.8* c++0x qpa
-=x11-libs/qt-demo-4.8* c++0x qpa
-=x11-libs/qt-gui-4.8* c++0x qpa
-=x11-libs/qt-multimedia-4.8* c++0x qpa
-=x11-libs/qt-opengl-4.8* c++0x qpa
-=x11-libs/qt-openvg-4.8* c++0x qpa
-=x11-libs/qt-phonon-4.8* c++0x qpa
-=x11-libs/qt-qt3support-4.8* c++0x qpa
-=x11-libs/qt-script-4.8* c++0x qpa
-=x11-libs/qt-sql-4.8* c++0x qpa
-=x11-libs/qt-svg-4.8* c++0x qpa
-=x11-libs/qt-test-4.8* c++0x qpa
-=x11-libs/qt-webkit-4.8* c++0x qpa
-=x11-libs/qt-xmlpatterns-4.8* c++0x qpa
+# Experimental USE flags.
+<x11-libs/qt-assistant-4.8.3 c++0x qpa
+<x11-libs/qt-bearer-4.8.3 c++0x qpa
+<x11-libs/qt-core-4.8.3 c++0x qpa
+<x11-libs/qt-declarative-4.8.3 c++0x qpa
+<x11-libs/qt-dbus-4.8.3 c++0x qpa
+<x11-libs/qt-demo-4.8.3 c++0x qpa
+<x11-libs/qt-gui-4.8.3 c++0x qpa
+<x11-libs/qt-multimedia-4.8.3 c++0x qpa
+<x11-libs/qt-opengl-4.8.3 c++0x qpa
+<x11-libs/qt-openvg-4.8.3 c++0x qpa
+<x11-libs/qt-phonon-4.8.3 c++0x qpa
+<x11-libs/qt-qt3support-4.8.3 c++0x qpa
+<x11-libs/qt-script-4.8.3 c++0x qpa
+<x11-libs/qt-sql-4.8.3 c++0x qpa
+<x11-libs/qt-svg-4.8.3 c++0x qpa
+<x11-libs/qt-test-4.8.3 c++0x qpa
+<x11-libs/qt-webkit-4.8.3 c++0x qpa
+<x11-libs/qt-xmlpatterns-4.8.3 c++0x qpa
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2012)
 # This is required only for Linux, so mask it here and unmask in
