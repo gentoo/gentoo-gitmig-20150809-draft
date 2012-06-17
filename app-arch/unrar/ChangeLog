@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.177 2012/06/15 12:56:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.178 2012/06/17 07:25:41 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> unrar-4.2.3.ebuild:
+  marked x86 per bug 421221
 
   15 Jun 2012; Agostino Sarubbo <ago@gentoo.org> unrar-4.2.3.ebuild:
   Stable for amd64, wrt bug #421221
