@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.13 2011/09/01 21:53:59 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.14 2012/06/17 22:37:23 flameeyes Exp $
 
 EAPI=1
 
@@ -48,12 +48,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}" || die
+	cd ${P}
 	epatch "${FILESDIR}"/${P}-db44.patch
 	epatch "${FILESDIR}"/${P}-db.patch
 	epatch "${FILESDIR}"/${P}-perl-as-needed.patch
 	epatch "${FILESDIR}"/${P}-perl-shortnames.patch
-	cd ../dist || die
+	cd dist || die
 	chmod +x findconfig || die
 	append-flags -I"$(db_includedir ${DBSLOTS})"
 	sed -i -e "s@-ldb@-l$(db_libname ${DBSLOTS})@" configure.in || die

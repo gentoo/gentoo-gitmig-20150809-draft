@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/nvi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.86 2011/09/01 21:53:59 neurogeek Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.87 2012/06/17 22:37:23 flameeyes Exp $
+
+  17 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/nvi-1.81.6-db.patch, files/nvi-1.81.6-db44.patch,
+  files/nvi-1.81.6-perl-as-needed.patch, files/nvi-1.81.6-perl-shortnames.patch,
+  nvi-1.81.6-r3.ebuild:
+  QA: Fix patches so that they don't use ../ .
 
   01 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> nvi-1.81.6-r3.ebuild:
   Added sys-libs/ncurses to DEPEND wrt bug #381025
