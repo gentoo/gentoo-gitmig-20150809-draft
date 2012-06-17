@@ -1,0 +1,61 @@
+From: Elijah El Lazkani <ThyArmageddon+Gentoo@Gmail.com>
+Date: Wed Jun 13 22:45:09 UTC 2012
+Subject: Removing explicit LDFLAGS and CPPFLAGS
+
+--- configure.ac
++++ configure.ac
+@@ -16,42 +16,6 @@
+ AC_DEFINE_UNQUOTED(UDEVIL_VERSION, "$VERSION", [udevil version])
+ 
+ 
+-dnl linker optimizations
+-AC_MSG_CHECKING([whether $LD accepts --as-needed])
+-case `$LD --as-needed -v 2>&1 </dev/null` in
+-*GNU* | *'with BFD'*)
+-  LDFLAGS="$LDFLAGS -Wl,--as-needed"
+-  AC_MSG_RESULT([yes])
+-  ;;
+-*)
+-  AC_MSG_RESULT([no])
+-  ;;
+-esac
+-AC_MSG_CHECKING([whether $LD accepts -O1])
+-case `$LD -O1 -v 2>&1 </dev/null` in
+-*GNU* | *'with BFD'*)
+-  LDFLAGS="$LDFLAGS -Wl,-O1"
+-  AC_MSG_RESULT([yes])
+-  ;;
+-*)
+-  AC_MSG_RESULT([no])
+-  ;;
+-esac
+-AC_MSG_CHECKING([whether $LD accepts -Bsymbolic-functions])
+-case `$LD -Bsymbolic-functions -v 2>&1 </dev/null` in
+-*GNU* | *'with BFD'*)
+-  LDFLAGS="$LDFLAGS -Wl,-Bsymbolic-functions"
+-  AC_MSG_RESULT([yes])
+-  ;;
+-*)                                                                              
+-  AC_MSG_RESULT([no])
+-  ;;
+-esac
+-
+-dnl advanced compiler tweaking
+-CPPFLAGS="$CPPFLAGS -fstrict-aliasing -fmessage-length=0"
+-
+-
+ # program paths
+ AC_ARG_WITH(mount-prog, 
+ 	AC_HELP_STRING([--with-mount-prog=PATH], [Path to mount program (default: /bin/mount)]),
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -16,8 +16,7 @@
+ 
+ udevil_CFLAGS = \
+     @GLIB_CFLAGS@ \
+-    @LIBUDEV_CFLAGS@ \
+-    -Werror-implicit-function-declaration
++    @LIBUDEV_CFLAGS@
+ 
+ udevil_LDADD = \
+     $(INTLLIBS) \
