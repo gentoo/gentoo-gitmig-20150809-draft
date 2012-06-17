@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc9.ebuild,v 1.2 2012/06/17 16:40:27 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc9.ebuild,v 1.3 2012/06/17 17:03:12 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 	EGIT_REPO_URI="git://github.com/zfsonlinux/${PN}.git"
 else
-	inherit versionator
+	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
 	SRC_URI="https://github.com/downloads/zfsonlinux/${PN}/${PN}-${MY_PV}.tar.gz"
 	S="${WORKDIR}/${PN}-${MY_PV}"
@@ -48,6 +48,12 @@ pkg_setup() {
 src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
+
+	if [ ${PV} != "9999" ]
+	then
+		epatch "${FILESDIR}/${P}-detect-kernel-honors-gfp-flags.patch"
+	fi
+
 	autotools-utils_src_prepare
 }
 
