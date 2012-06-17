@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.26 2012/06/16 23:59:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.27 2012/06/17 17:31:44 hasufell Exp $
+
+  17 Jun 2012; Julian Ospald <hasufell@gentoo.org> spacefm-0.7.8.ebuild,
+  spacefm-9999.ebuild:
+  add udevil to optional dependencies
 
 *spacefm-0.7.8 (16 Jun 2012)
 

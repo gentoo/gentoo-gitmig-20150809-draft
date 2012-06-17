@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.8.ebuild,v 1.1 2012/06/16 23:59:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.8.ebuild,v 1.2 2012/06/17 17:31:44 hasufell Exp $
 
 EAPI=4
 
@@ -41,11 +41,14 @@ src_configure() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	einfo ""
+	einfo
 	elog "To mount as non-root user you need one of the following:"
+	elog "  sys-apps/udevil (recommended, see below)"
 	elog "  sys-apps/pmount"
 	elog "  sys-fs/udisks:0"
 	elog "  sys-fs/udisks:2"
+	elog "To support ftp/nfs/smb/ssh URLs in the path bar you need:"
+	elog "  sys-apps/udevil"
 	elog "To perform as root functionality you need one of the following:"
 	elog "  x11-misc/ktsuss"
 	elog "  x11-libs/gksu"
