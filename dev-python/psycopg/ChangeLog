@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.147 2012/05/29 19:54:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.148 2012/06/17 18:42:57 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> psycopg-2.4.5.ebuild:
+  alpha/ia64/sparc stable wrt #415863
 
   29 May 2012; Brent Baude <ranger@gentoo.org> psycopg-2.4.5.ebuild:
   Marking psycopg-2.4.5 ppc for bug 415863
