@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.64 2012/05/29 19:21:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.65 2012/06/17 18:36:19 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> pinfo-0.6.10-r3.ebuild:
+  alpha/ia64/sparc stable wrt #415291
 
   29 May 2012; Brent Baude <ranger@gentoo.org> pinfo-0.6.10-r3.ebuild:
   Marking pinfo-0.6.10-r3 ppc for bug 415291
