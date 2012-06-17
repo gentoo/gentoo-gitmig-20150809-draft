@@ -1,6 +1,23 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.21 2012/06/15 09:30:40 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.22 2012/06/17 15:29:17 marienz Exp $
+
+*pypy-1.9-r1 (17 Jun 2012)
+
+  17 Jun 2012; Marien Zwart <marienz@gentoo.org>
+  +files/1.9-get_python_lib_standard_lib-04ea518e5b71.patch,
+  +files/1.9-getargs-freelist-c26dc70ee340.patch,
+  +files/1.9-more-ignored-ops-146ddf82a279.patch,
+  +files/1.9-more-ignored-ops-a9a8faa76bca.patch,
+  +files/1.9-no-static-hack.patch,
+  +files/1.9-pybuffer-release-double-decref-4ec2a5b49386.patch,
+  +files/1.9-signal-a33052b17f4e.patch,
+  +files/1.9-ssl-errors-25d3418150d2.patch,
+  +files/1.9-ssl-threads-1-34b3b5aac082.patch,
+  +files/1.9-ssl-threads-2-25cd11066d95.patch, +pypy-1.9-r1.ebuild:
+  Revision bump including several patches from upstream (including a fix for bug
+  #421361), a fix needed for prefix (bug #420621, thanks to XU Benda) and
+  support for picking up -j from MAKEOPTS (bug #403991).
 
   15 Jun 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove myself as a maintainer, I'm in the python herd.
