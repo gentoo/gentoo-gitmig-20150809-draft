@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.211 2012/06/09 04:47:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.212 2012/06/17 03:37:43 floppym Exp $
+
+  17 Jun 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Remove redundant maintainer node.
 
   09 Jun 2012; Mike Gilbert <floppym@gentoo.org> grub-9999.ebuild:
   Stub out autopoint before calling eautoreconf.
