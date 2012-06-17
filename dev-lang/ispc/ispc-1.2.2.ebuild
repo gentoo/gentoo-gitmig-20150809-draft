@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ispc-1.2.2.ebuild,v 1.1 2012/06/14 17:31:34 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ispc-1.2.2.ebuild,v 1.2 2012/06/17 02:47:26 ottxor Exp $
 
 EAPI=4
 GITHUB_ID="2c75ac1"
@@ -12,7 +12,7 @@ HOMEPAGE="http://ispc.github.com/"
 SRC_URI="https://github.com/ispc/ispc/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
 S="${WORKDIR}/${PN}-${PN}-${GITHUB_ID}"
 
-LICENSE="ispc"
+LICENSE="BSD BSD-2 UoI-NCSA"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="examples"
