@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/phpvirtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.1 2012/03/16 22:44:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.2 2012/06/17 09:17:36 hwoarang Exp $
+
+*phpvirtualbox-4.1.7-r1 (17 Jun 2012)
+
+  17 Jun 2012; Markos Chandras <hwoarang@gentoo.org> +files/vboxinit-initd,
+  +phpvirtualbox-4.1.7-r1.ebuild:
+  Add init script to automatically start/save virtual machines on boot/shutdown.
+  Thanks to Balint SZENTE <balint@szentedwg.ro>. Bug #420991
 
 *phpvirtualbox-4.1.7 (16 Mar 2012)
 
