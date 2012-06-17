@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc5.ebuild,v 1.2 2012/06/17 13:51:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc5.ebuild,v 1.3 2012/06/17 20:53:46 jlec Exp $
 
 EAPI=4
 
@@ -77,8 +77,7 @@ src_configure() {
 	# but the code compiles using incorrect [default] paths
 	# (based on /usr/local...), so povray will not find the system
 	# config files without the following fix:
-	append-flags -DPOVLIBDIR=\\\"${EROOT}usr/share/${PN}\\\"
-	append-flags -DPOVCONFDIR=\\\"${EROOT}etc/${PN}\\\"
+	append-cppflags -DPOVLIBDIR=\\\"${EROOT}usr/share/${PN}\\\" -DPOVCONFDIR=\\\"${EROOT}etc/${PN}\\\"
 
 	if ! use tiff ; then
 		non_redist_conf="NON_REDISTRIBUTABLE_BUILD=yes"
