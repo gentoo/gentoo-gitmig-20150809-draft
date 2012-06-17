@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/icoutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/ChangeLog,v 1.26 2012/06/03 18:05:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/ChangeLog,v 1.27 2012/06/17 05:51:22 jdhore Exp $
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> icoutils-0.29.1-r2.ebuild:
+  marked x86 per bug 421473
 
 *icoutils-0.29.1-r2 (03 Jun 2012)
 
