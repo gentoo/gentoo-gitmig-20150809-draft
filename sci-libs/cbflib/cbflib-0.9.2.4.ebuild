@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.2.4.ebuild,v 1.1 2012/06/10 12:52:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.2.4.ebuild,v 1.2 2012/06/17 18:53:33 jlec Exp $
 
 EAPI=4
 
@@ -8,16 +8,16 @@ inherit eutils flag-o-matic fortran-2 toolchain-funcs
 
 MY_P1="CBFlib-${PV}"
 #MY_P2="CBFlib_${PV}"
-MY_P2="CBFlib_0.9.2"
+MY_P2="CBFlib_0.9.3"
 
 DESCRIPTION="Library providing a simple mechanism for accessing CBF files and imgCIF files"
 HOMEPAGE="http://www.bernstein-plus-sons.com/software/CBF/"
 BASE_TEST_URI="http://arcib.dowling.edu/software/CBFlib/downloads/version_${PV}/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P1}.tar.gz
-	test? (
-		mirror://sourceforge/${PN}/${MY_P2}_Data_Files_Input.tar.gz
-		mirror://sourceforge/${PN}/${MY_P2}_Data_Files_Output.tar.gz
-	)"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P1}.tar.gz"
+#	test? (
+#		mirror://sourceforge/${PN}/${MY_P2}_Data_Files_Input.tar.gz
+#		mirror://sourceforge/${PN}/${MY_P2}_Data_Files_Output.tar.gz
+#	)"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,6 +29,8 @@ RDEPEND="${DEPEND}"
 #test? ( sys-process/time )"
 
 S=${WORKDIR}/${MY_P1}
+
+RESTRICT="test"
 
 src_prepare(){
 	rm -rf Py* drel* dRel* ply*
@@ -66,7 +68,5 @@ src_install() {
 	dolib.so solib/lib*
 
 	dodoc README
-	if use doc; then
-		dohtml -r README.html html_graphics doc
-	fi
+	use doc && dohtml -r README.html html_graphics doc
 }
