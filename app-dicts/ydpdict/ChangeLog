@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ydpdict
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ChangeLog,v 1.17 2012/05/03 02:18:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ChangeLog,v 1.18 2012/06/17 11:14:00 flameeyes Exp $
+
+  17 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> ydpdict-1.0.0.ebuild:
+  QA: fix ebuild for EAPI=2; econf was being executed twice.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> ydpdict-0.99.3.ebuild,
   ydpdict-1.0.0.ebuild:
