@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epspdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.8 2012/05/22 10:15:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.9 2012/06/17 16:57:44 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> epspdf-0.5.3.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #410239
 
   22 May 2012; Johannes Huber <johu@gentoo.org> epspdf-0.5.3.ebuild:
   Add ~x86 wrt bug #410239
