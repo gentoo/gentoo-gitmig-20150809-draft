@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.20.ebuild,v 1.1 2012/06/11 03:47:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.20.ebuild,v 1.2 2012/06/17 08:54:09 grobian Exp $
 
 EAPI=4
 
@@ -67,6 +67,8 @@ src_prepare() {
 		rm -f "${dir}/lt"* "${dir}/libtool.m4"
 	done
 	find . -name ltmain.sh -exec rm {} \;
+
+	epatch "${FILESDIR}"/${P}-AF_UNIX.patch
 
 	# support user patches
 	epatch_user

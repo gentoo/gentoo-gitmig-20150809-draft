@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.371 2012/06/15 19:17:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.372 2012/06/17 08:54:09 grobian Exp $
+
+  17 Jun 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/gnutls-2.12.20-AF_UNIX.patch, gnutls-2.12.20.ebuild:
+  Add backport of AF_LOCAL/AF_UNIX fix from upstream to fix compilation on e.g.
+  Solaris.
 
   15 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/gnutls-3.0.20-parallelmake.patch, gnutls-3.0.20.ebuild:
