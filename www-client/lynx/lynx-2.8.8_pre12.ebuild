@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.11 2012/05/28 16:49:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.12 2012/06/17 16:48:53 grobian Exp $
 
 EAPI=4
 
@@ -62,9 +62,11 @@ src_configure() {
 		# the latter enabling openssl support so it should be
 		# _not_ be used if gnutls ssl implementation is desired
 		if use gnutls ; then
-			myargs+=" --with-gnutls" # ssl implementation = gnutls
+			# ssl implementation = gnutls
+			myargs+=" --with-gnutls=${EPREFIX}/usr"
 		else
-			myargs+=" --with-ssl"    # ssl implementation = openssl
+			# ssl implementation = openssl
+			myargs+=" --with-ssl=${EPREFIX}/usr"
 		fi
 	fi
 

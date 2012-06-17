@@ -1,6 +1,9 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.127 2012/06/16 09:39:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.128 2012/06/17 16:48:53 grobian Exp $
+
+  17 Jun 2012; Fabian Groffen <grobian@gentoo.org> lynx-2.8.8_pre12.ebuild:
+  Pass path to --with-{snutls,ssl} arguments for Prefix
 
   16 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Wormo will only take care of bug wrangling, keep she only CCed to keep an eye
