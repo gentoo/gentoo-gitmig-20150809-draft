@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.30.1.ebuild,v 1.2 2012/06/16 09:24:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.30.1.ebuild,v 1.3 2012/06/17 08:17:22 grobian Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -61,7 +61,8 @@ src_prepare() {
 	# In next release
 	epatch "${FILESDIR}/${P}-coretext-hash.patch"
 
-	# missing declaration causing QA abort on x64-macos, notified upstream
+	# missing declaration causing QA abort on x64-macos, should be in next
+	# release
 	epatch "${FILESDIR}"/${P}-config_get_key_system-declaration.patch
 
 	# make config file location host specific so that a 32bit and 64bit pango
@@ -87,7 +88,7 @@ pkg_postinst() {
 
 	# be atomic!
 	if pango-querymodules --system \
-		"${EROOT}"usr/$(get_libdir)/pango/1.6.0/modules/*.so \
+		"${EROOT}"usr/$(get_libdir)/pango/1.6.0/modules/*$(get_modname) \
 			> "${tmp_file}"; then
 		cat "${tmp_file}" > "${pango_conf}" || {
 			rm "${tmp_file}"; die; }

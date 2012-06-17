@@ -1,4 +1,5 @@
 https://bugzilla.gnome.org/show_bug.cgi?id=667960#c5
+http://git.gnome.org/browse/pango/commit/?id=ee3537107a0bc41d5e5b2dc5c71106dec42ad144
 
 --- pango/pango-utils.h
 +++ pango/pango-utils.h
