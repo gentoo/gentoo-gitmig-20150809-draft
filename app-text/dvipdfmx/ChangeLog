@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.73 2012/06/04 18:43:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.74 2012/06/17 16:28:45 armin76 Exp $
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> dvipdfmx-20110311.ebuild:
+  ia64/s390/sh/sparc stable wrt #414431
 
   04 Jun 2012; Fabian Groffen <grobian@gentoo.org> dvipdfmx-20110311.ebuild:
   Fix ebuild for Prefix, add Prefix keywords by MATSUI Tetsushi, bug #419043
