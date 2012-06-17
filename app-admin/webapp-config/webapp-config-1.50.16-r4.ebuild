@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r4.ebuild,v 1.4 2012/06/14 06:35:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.16-r4.ebuild,v 1.5 2012/06/17 18:39:10 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,6 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-htdocs-symlink.patch"
 	epatch "${FILESDIR}/${P}-absolute-paths.patch"
 	epatch "${FILESDIR}/${P}-update-servers.patch"
+	epatch "${FILESDIR}/${P}-fix-unicode-tests.patch"
 	# Do not build nor install eclass manual, bug 322759
 	rm -f doc/webapp.eclass.5*
 	sed -e '/MAN_PAGES/s/webapp.eclass.5//' \
