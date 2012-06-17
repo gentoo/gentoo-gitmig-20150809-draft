@@ -1,0 +1,1100 @@
+ab8aba2 Switch KM_SLEEP to KM_PUSHPAGE
+diff --git a/module/zfs/bplist.c b/module/zfs/bplist.c
+index 5d1cf7e..d196351 100644
+--- a/module/zfs/bplist.c
++++ b/module/zfs/bplist.c
+@@ -44,7 +44,7 @@
+ void
+ bplist_append(bplist_t *bpl, const blkptr_t *bp)
+ {
+-	bplist_entry_t *bpe = kmem_alloc(sizeof (*bpe), KM_SLEEP);
++	bplist_entry_t *bpe = kmem_alloc(sizeof (*bpe), KM_PUSHPAGE);
+ 
+ 	mutex_enter(&bpl->bpl_lock);
+ 	bpe->bpe_blk = *bp;
+diff --git a/module/zfs/dbuf.c b/module/zfs/dbuf.c
+index 34ce2f6..d5b469f 100644
+--- a/module/zfs/dbuf.c
++++ b/module/zfs/dbuf.c
+@@ -298,7 +298,7 @@ static void __dbuf_hold_impl_init(struct dbuf_hold_impl_data *dh,
+ #if defined(_KERNEL) && defined(HAVE_SPL)
+ 	/* Large allocations which do not require contiguous pages
+ 	 * should be using vmem_alloc() in the linux kernel */
+-	h->hash_table = vmem_zalloc(hsize * sizeof (void *), KM_SLEEP);
++	h->hash_table = vmem_zalloc(hsize * sizeof (void *), KM_PUSHPAGE);
+ #else
+ 	h->hash_table = kmem_zalloc(hsize * sizeof (void *), KM_NOSLEEP);
+ #endif
+@@ -1719,7 +1719,7 @@ static void __dbuf_hold_impl_init(struct dbuf_hold_impl_data *dh,
+ 	ASSERT(RW_LOCK_HELD(&dn->dn_struct_rwlock));
+ 	ASSERT(dn->dn_type != DMU_OT_NONE);
+ 
+-	db = kmem_cache_alloc(dbuf_cache, KM_SLEEP);
++	db = kmem_cache_alloc(dbuf_cache, KM_PUSHPAGE);
+ 
+ 	db->db_objset = os;
+ 	db->db.db_object = dn->dn_object;
+@@ -2019,7 +2019,7 @@ static void __dbuf_hold_impl_init(struct dbuf_hold_impl_data *dh,
+ 	int error;
+ 
+ 	dh = kmem_zalloc(sizeof(struct dbuf_hold_impl_data) *
+-	    DBUF_HOLD_IMPL_MAX_DEPTH, KM_SLEEP);
++	    DBUF_HOLD_IMPL_MAX_DEPTH, KM_PUSHPAGE);
+ 	__dbuf_hold_impl_init(dh, dn, level, blkid, fail_sparse, tag, dbp, 0);
+ 
+ 	error = __dbuf_hold_impl(dh);
+diff --git a/module/zfs/dmu.c b/module/zfs/dmu.c
+index cda4f84..1d4d125 100644
+--- a/module/zfs/dmu.c
++++ b/module/zfs/dmu.c
+@@ -381,7 +381,7 @@
+ 		}
+ 		nblks = 1;
+ 	}
+-	dbp = kmem_zalloc(sizeof (dmu_buf_t *) * nblks, KM_SLEEP | KM_NODEBUG);
++	dbp = kmem_zalloc(sizeof (dmu_buf_t *) * nblks, KM_PUSHPAGE | KM_NODEBUG);
+ 
+ 	if (dn->dn_objset->os_dsl_dataset)
+ 		dp = dn->dn_objset->os_dsl_dataset->ds_dir->dd_pool;
+@@ -863,11 +863,11 @@
+ 	uio_t *uio = &xuio->xu_uio;
+ 
+ 	uio->uio_iovcnt = nblk;
+-	uio->uio_iov = kmem_zalloc(nblk * sizeof (iovec_t), KM_SLEEP);
++	uio->uio_iov = kmem_zalloc(nblk * sizeof (iovec_t), KM_PUSHPAGE);
+ 
+-	priv = kmem_zalloc(sizeof (dmu_xuio_t), KM_SLEEP);
++	priv = kmem_zalloc(sizeof (dmu_xuio_t), KM_PUSHPAGE);
+ 	priv->cnt = nblk;
+-	priv->bufs = kmem_zalloc(nblk * sizeof (arc_buf_t *), KM_SLEEP);
++	priv->bufs = kmem_zalloc(nblk * sizeof (arc_buf_t *), KM_PUSHPAGE);
+ 	priv->iovp = uio->uio_iov;
+ 	XUIO_XUZC_PRIV(xuio) = priv;
+ 
+@@ -1431,7 +1431,7 @@
+ 		return (EIO);	/* Make zl_get_data do txg_waited_synced() */
+ 	}
+ 
+-	dsa = kmem_alloc(sizeof (dmu_sync_arg_t), KM_SLEEP);
++	dsa = kmem_alloc(sizeof (dmu_sync_arg_t), KM_PUSHPAGE);
+ 	dsa->dsa_dr = NULL;
+ 	dsa->dsa_done = done;
+ 	dsa->dsa_zgd = zgd;
+@@ -1555,7 +1555,7 @@
+ 	dr->dt.dl.dr_override_state = DR_IN_DMU_SYNC;
+ 	mutex_exit(&db->db_mtx);
+ 
+-	dsa = kmem_alloc(sizeof (dmu_sync_arg_t), KM_SLEEP);
++	dsa = kmem_alloc(sizeof (dmu_sync_arg_t), KM_PUSHPAGE);
+ 	dsa->dsa_dr = dr;
+ 	dsa->dsa_done = done;
+ 	dsa->dsa_zgd = zgd;
+diff --git a/module/zfs/dmu_tx.c b/module/zfs/dmu_tx.c
+index ead0f3e..81c6dfe 100644
+--- a/module/zfs/dmu_tx.c
++++ b/module/zfs/dmu_tx.c
+@@ -63,7 +63,7 @@ typedef void (*dmu_tx_hold_func_t)(dmu_tx_t *tx, struct dnode *dn,
+ dmu_tx_t *
+ dmu_tx_create_dd(dsl_dir_t *dd)
+ {
+-	dmu_tx_t *tx = kmem_zalloc(sizeof (dmu_tx_t), KM_SLEEP);
++	dmu_tx_t *tx = kmem_zalloc(sizeof (dmu_tx_t), KM_PUSHPAGE);
+ 	tx->tx_dir = dd;
+ 	if (dd)
+ 		tx->tx_pool = dd->dd_pool;
+@@ -141,7 +141,7 @@ typedef void (*dmu_tx_hold_func_t)(dmu_tx_t *tx, struct dnode *dn,
+ 		}
+ 	}
+ 
+-	txh = kmem_zalloc(sizeof (dmu_tx_hold_t), KM_SLEEP);
++	txh = kmem_zalloc(sizeof (dmu_tx_hold_t), KM_PUSHPAGE);
+ 	txh->txh_tx = tx;
+ 	txh->txh_dnode = dn;
+ #ifdef DEBUG_DMU_TX
+@@ -1241,7 +1241,7 @@ typedef void (*dmu_tx_hold_func_t)(dmu_tx_t *tx, struct dnode *dn,
+ {
+ 	dmu_tx_callback_t *dcb;
+ 
+-	dcb = kmem_alloc(sizeof (dmu_tx_callback_t), KM_SLEEP);
++	dcb = kmem_alloc(sizeof (dmu_tx_callback_t), KM_PUSHPAGE);
+ 
+ 	dcb->dcb_func = func;
+ 	dcb->dcb_data = data;
+diff --git a/module/zfs/dmu_zfetch.c b/module/zfs/dmu_zfetch.c
+index 897ea8a..1763bae 100644
+--- a/module/zfs/dmu_zfetch.c
++++ b/module/zfs/dmu_zfetch.c
+@@ -699,7 +699,7 @@
+ 			if (cur_streams >= max_streams) {
+ 				return;
+ 			}
+-			newstream = kmem_zalloc(sizeof (zstream_t), KM_SLEEP);
++			newstream = kmem_zalloc(sizeof (zstream_t), KM_PUSHPAGE);
+ 		}
+ 
+ 		newstream->zst_offset = zst.zst_offset;
+diff --git a/module/zfs/dnode.c b/module/zfs/dnode.c
+index 5438f60..99ac625 100644
+--- a/module/zfs/dnode.c
++++ b/module/zfs/dnode.c
+@@ -372,7 +372,7 @@
+ dnode_create(objset_t *os, dnode_phys_t *dnp, dmu_buf_impl_t *db,
+     uint64_t object, dnode_handle_t *dnh)
+ {
+-	dnode_t *dn = kmem_cache_alloc(dnode_cache, KM_SLEEP);
++	dnode_t *dn = kmem_cache_alloc(dnode_cache, KM_PUSHPAGE);
+ 
+ 	ASSERT(!POINTER_IS_VALID(dn->dn_objset));
+ 	dn->dn_moved = 0;
+@@ -1491,7 +1491,7 @@
+ 		} else if (blkid > rp->fr_blkid && endblk < fr_endblk) {
+ 			/* clear a chunk out of this range */
+ 			free_range_t *new_rp =
+-			    kmem_alloc(sizeof (free_range_t), KM_SLEEP);
++			    kmem_alloc(sizeof (free_range_t), KM_PUSHPAGE);
+ 
+ 			new_rp->fr_blkid = endblk;
+ 			new_rp->fr_nblks = fr_endblk - endblk;
+@@ -1669,7 +1669,7 @@
+ 		avl_tree_t *tree = &dn->dn_ranges[tx->tx_txg&TXG_MASK];
+ 
+ 		/* Add new range to dn_ranges */
+-		rp = kmem_alloc(sizeof (free_range_t), KM_SLEEP);
++		rp = kmem_alloc(sizeof (free_range_t), KM_PUSHPAGE);
+ 		rp->fr_blkid = blkid;
+ 		rp->fr_nblks = nblks;
+ 		found = avl_find(tree, rp, &where);
+diff --git a/module/zfs/lzjb.c b/module/zfs/lzjb.c
+index 4da30cf..43d0df0 100644
+--- a/module/zfs/lzjb.c
++++ b/module/zfs/lzjb.c
+@@ -56,7 +56,7 @@
+ 	uint16_t *hp;
+ 	uint16_t *lempel;
+ 
+-	lempel = kmem_zalloc(LEMPEL_SIZE * sizeof (uint16_t), KM_SLEEP);
++	lempel = kmem_zalloc(LEMPEL_SIZE * sizeof (uint16_t), KM_PUSHPAGE);
+ 	while (src < (uchar_t *)s_start + s_len) {
+ 		if ((copymask <<= 1) == (1 << NBBY)) {
+ 			if (dst >= (uchar_t *)d_start + d_len - 1 - 2 * NBBY) {
+diff --git a/module/zfs/metaslab.c b/module/zfs/metaslab.c
+index c33c5e8..d06012f 100644
+--- a/module/zfs/metaslab.c
++++ b/module/zfs/metaslab.c
+@@ -102,7 +102,7 @@
+ {
+ 	metaslab_class_t *mc;
+ 
+-	mc = kmem_zalloc(sizeof (metaslab_class_t), KM_SLEEP);
++	mc = kmem_zalloc(sizeof (metaslab_class_t), KM_PUSHPAGE);
+ 
+ 	mc->mc_spa = spa;
+ 	mc->mc_rotor = NULL;
+@@ -217,7 +217,7 @@
+ {
+ 	metaslab_group_t *mg;
+ 
+-	mg = kmem_zalloc(sizeof (metaslab_group_t), KM_SLEEP);
++	mg = kmem_zalloc(sizeof (metaslab_group_t), KM_PUSHPAGE);
+ 	mutex_init(&mg->mg_lock, NULL, MUTEX_DEFAULT, NULL);
+ 	avl_create(&mg->mg_metaslab_tree, metaslab_compare,
+ 	    sizeof (metaslab_t), offsetof(struct metaslab, ms_group_node));
+@@ -422,9 +422,9 @@
+ 	space_seg_t *ss;
+ 
+ 	ASSERT(sm->sm_ppd == NULL);
+-	sm->sm_ppd = kmem_zalloc(64 * sizeof (uint64_t), KM_SLEEP);
++	sm->sm_ppd = kmem_zalloc(64 * sizeof (uint64_t), KM_PUSHPAGE);
+ 
+-	sm->sm_pp_root = kmem_alloc(sizeof (avl_tree_t), KM_SLEEP);
++	sm->sm_pp_root = kmem_alloc(sizeof (avl_tree_t), KM_PUSHPAGE);
+ 	avl_create(sm->sm_pp_root, metaslab_segsize_compare,
+ 	    sizeof (space_seg_t), offsetof(struct space_seg, ss_pp_node));
+ 
+@@ -725,7 +725,7 @@
+ 	vdev_t *vd = mg->mg_vd;
+ 	metaslab_t *msp;
+ 
+-	msp = kmem_zalloc(sizeof (metaslab_t), KM_SLEEP);
++	msp = kmem_zalloc(sizeof (metaslab_t), KM_PUSHPAGE);
+ 	mutex_init(&msp->ms_lock, NULL, MUTEX_DEFAULT, NULL);
+ 
+ 	msp->ms_smo_syncing = *smo;
+diff --git a/module/zfs/spa.c b/module/zfs/spa.c
+index a43b883..c33a33a 100644
+--- a/module/zfs/spa.c
++++ b/module/zfs/spa.c
+@@ -151,7 +151,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	const char *propname = zpool_prop_to_name(prop);
+ 	nvlist_t *propval;
+ 
+-	VERIFY(nvlist_alloc(&propval, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++	VERIFY(nvlist_alloc(&propval, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 	VERIFY(nvlist_add_uint64(propval, ZPROP_SOURCE, src) == 0);
+ 
+ 	if (strval != NULL)
+@@ -233,7 +233,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	zap_attribute_t za;
+ 	int err;
+ 
+-	err = nvlist_alloc(nvp, NV_UNIQUE_NAME, KM_SLEEP);
++	err = nvlist_alloc(nvp, NV_UNIQUE_NAME, KM_PUSHPAGE);
+ 	if (err)
+ 		return err;
+ 
+@@ -285,7 +285,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 
+ 				strval = kmem_alloc(
+ 				    MAXNAMELEN + strlen(MOS_DIR_NAME) + 1,
+-				    KM_SLEEP);
++				    KM_PUSHPAGE);
+ 				dsl_dataset_name(ds, strval);
+ 				dsl_dataset_rele(ds, FTAG);
+ 				rw_exit(&dp->dp_config_rwlock);
+@@ -304,7 +304,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 
+ 		case 1:
+ 			/* string property */
+-			strval = kmem_alloc(za.za_num_integers, KM_SLEEP);
++			strval = kmem_alloc(za.za_num_integers, KM_PUSHPAGE);
+ 			err = zap_lookup(mos, spa->spa_pool_props_object,
+ 			    za.za_name, 1, za.za_num_integers, strval);
+ 			if (err) {
+@@ -510,7 +510,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 		return;
+ 
+ 	dp = kmem_alloc(sizeof (spa_config_dirent_t),
+-	    KM_SLEEP);
++	    KM_PUSHPAGE);
+ 
+ 	if (cachefile[0] == '\0')
+ 		dp->scd_path = spa_strdup(spa_config_path);
+@@ -1083,7 +1083,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	 * active configuration, then we also mark this vdev as an active spare.
+ 	 */
+ 	spa->spa_spares.sav_vdevs = kmem_alloc(nspares * sizeof (void *),
+-	    KM_SLEEP);
++	    KM_PUSHPAGE);
+ 	for (i = 0; i < spa->spa_spares.sav_count; i++) {
+ 		VERIFY(spa_config_parse(spa, &vd, spares[i], NULL, 0,
+ 		    VDEV_ALLOC_SPARE) == 0);
+@@ -1131,7 +1131,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	    DATA_TYPE_NVLIST_ARRAY) == 0);
+ 
+ 	spares = kmem_alloc(spa->spa_spares.sav_count * sizeof (void *),
+-	    KM_SLEEP);
++	    KM_PUSHPAGE);
+ 	for (i = 0; i < spa->spa_spares.sav_count; i++)
+ 		spares[i] = vdev_config_generate(spa,
+ 		    spa->spa_spares.sav_vdevs[i], B_TRUE, VDEV_CONFIG_SPARE);
+@@ -1165,7 +1165,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	if (sav->sav_config != NULL) {
+ 		VERIFY(nvlist_lookup_nvlist_array(sav->sav_config,
+ 		    ZPOOL_CONFIG_L2CACHE, &l2cache, &nl2cache) == 0);
+-		newvdevs = kmem_alloc(nl2cache * sizeof (void *), KM_SLEEP);
++		newvdevs = kmem_alloc(nl2cache * sizeof (void *), KM_PUSHPAGE);
+ 	} else {
+ 		nl2cache = 0;
+ 	}
+@@ -1259,7 +1259,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	VERIFY(nvlist_remove(sav->sav_config, ZPOOL_CONFIG_L2CACHE,
+ 	    DATA_TYPE_NVLIST_ARRAY) == 0);
+ 
+-	l2cache = kmem_alloc(sav->sav_count * sizeof (void *), KM_SLEEP);
++	l2cache = kmem_alloc(sav->sav_count * sizeof (void *), KM_PUSHPAGE);
+ 	for (i = 0; i < sav->sav_count; i++)
+ 		l2cache[i] = vdev_config_generate(spa,
+ 		    sav->sav_vdevs[i], B_TRUE, VDEV_CONFIG_L2CACHE);
+@@ -1285,7 +1285,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	nvsize = *(uint64_t *)db->db_data;
+ 	dmu_buf_rele(db, FTAG);
+ 
+-	packed = kmem_alloc(nvsize, KM_SLEEP | KM_NODEBUG);
++	packed = kmem_alloc(nvsize, KM_PUSHPAGE | KM_NODEBUG);
+ 	error = dmu_read(spa->spa_meta_objset, obj, 0, nvsize, packed,
+ 	    DMU_READ_PREFETCH);
+ 	if (error == 0)
+@@ -1341,8 +1341,8 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 		uint64_t idx = 0;
+ 
+ 		child = kmem_alloc(rvd->vdev_children * sizeof (nvlist_t **),
+-		    KM_SLEEP);
+-		VERIFY(nvlist_alloc(&nv, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++		    KM_PUSHPAGE);
++		VERIFY(nvlist_alloc(&nv, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 
+ 		for (c = 0; c < rvd->vdev_children; c++) {
+ 			vdev_t *tvd = rvd->vdev_child[c];
+@@ -1697,7 +1697,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	    &glist, &gcount) != 0)
+ 		return;
+ 
+-	vd = kmem_zalloc(gcount * sizeof (vdev_t *), KM_SLEEP);
++	vd = kmem_zalloc(gcount * sizeof (vdev_t *), KM_PUSHPAGE);
+ 
+ 	/* attempt to online all the vdevs & validate */
+ 	attempt_reopen = B_TRUE;
+@@ -1778,7 +1778,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 		if (nvlist_lookup_nvlist(config, ZPOOL_CONFIG_SPLIT,
+ 		    &nvl) == 0) {
+ 			VERIFY(nvlist_dup(nvl, &spa->spa_config_splitting,
+-			    KM_SLEEP) == 0);
++			    KM_PUSHPAGE) == 0);
+ 		}
+ 
+ 		gethrestime(&spa->spa_loaded_ts);
+@@ -2435,7 +2435,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 			 */
+ 			if (config != NULL && spa->spa_config) {
+ 				VERIFY(nvlist_dup(spa->spa_config, config,
+-				    KM_SLEEP) == 0);
++				    KM_PUSHPAGE) == 0);
+ 				VERIFY(nvlist_add_nvlist(*config,
+ 				    ZPOOL_CONFIG_LOAD_INFO,
+ 				    spa->spa_load_info) == 0);
+@@ -2811,13 +2811,13 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 		    &olddevs, &oldndevs) == 0);
+ 
+ 		newdevs = kmem_alloc(sizeof (void *) *
+-		    (ndevs + oldndevs), KM_SLEEP);
++		    (ndevs + oldndevs), KM_PUSHPAGE);
+ 		for (i = 0; i < oldndevs; i++)
+ 			VERIFY(nvlist_dup(olddevs[i], &newdevs[i],
+-			    KM_SLEEP) == 0);
++			    KM_PUSHPAGE) == 0);
+ 		for (i = 0; i < ndevs; i++)
+ 			VERIFY(nvlist_dup(devs[i], &newdevs[i + oldndevs],
+-			    KM_SLEEP) == 0);
++			    KM_PUSHPAGE) == 0);
+ 
+ 		VERIFY(nvlist_remove(sav->sav_config, config,
+ 		    DATA_TYPE_NVLIST_ARRAY) == 0);
+@@ -2832,7 +2832,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 		 * Generate a new dev list.
+ 		 */
+ 		VERIFY(nvlist_alloc(&sav->sav_config, NV_UNIQUE_NAME,
+-		    KM_SLEEP) == 0);
++		    KM_PUSHPAGE) == 0);
+ 		VERIFY(nvlist_add_nvlist_array(sav->sav_config, config,
+ 		    devs, ndevs) == 0);
+ 	}
+@@ -2958,7 +2958,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	if (nvlist_lookup_nvlist_array(nvroot, ZPOOL_CONFIG_SPARES,
+ 	    &spares, &nspares) == 0) {
+ 		VERIFY(nvlist_alloc(&spa->spa_spares.sav_config, NV_UNIQUE_NAME,
+-		    KM_SLEEP) == 0);
++		    KM_PUSHPAGE) == 0);
+ 		VERIFY(nvlist_add_nvlist_array(spa->spa_spares.sav_config,
+ 		    ZPOOL_CONFIG_SPARES, spares, nspares) == 0);
+ 		spa_config_enter(spa, SCL_ALL, FTAG, RW_WRITER);
+@@ -2973,7 +2973,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	if (nvlist_lookup_nvlist_array(nvroot, ZPOOL_CONFIG_L2CACHE,
+ 	    &l2cache, &nl2cache) == 0) {
+ 		VERIFY(nvlist_alloc(&spa->spa_l2cache.sav_config,
+-		    NV_UNIQUE_NAME, KM_SLEEP) == 0);
++		    NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 		VERIFY(nvlist_add_nvlist_array(spa->spa_l2cache.sav_config,
+ 		    ZPOOL_CONFIG_L2CACHE, l2cache, nl2cache) == 0);
+ 		spa_config_enter(spa, SCL_ALL, FTAG, RW_WRITER);
+@@ -3111,7 +3111,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	/*
+ 	 * Put this pool's top-level vdevs into a root vdev.
+ 	 */
+-	VERIFY(nvlist_alloc(&nvroot, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++	VERIFY(nvlist_alloc(&nvroot, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 	VERIFY(nvlist_add_string(nvroot, ZPOOL_CONFIG_TYPE,
+ 	    VDEV_TYPE_ROOT) == 0);
+ 	VERIFY(nvlist_add_uint64(nvroot, ZPOOL_CONFIG_ID, 0ULL) == 0);
+@@ -3422,7 +3422,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 			    ZPOOL_CONFIG_SPARES, DATA_TYPE_NVLIST_ARRAY) == 0);
+ 		else
+ 			VERIFY(nvlist_alloc(&spa->spa_spares.sav_config,
+-			    NV_UNIQUE_NAME, KM_SLEEP) == 0);
++			    NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 		VERIFY(nvlist_add_nvlist_array(spa->spa_spares.sav_config,
+ 		    ZPOOL_CONFIG_SPARES, spares, nspares) == 0);
+ 		spa_config_enter(spa, SCL_ALL, FTAG, RW_WRITER);
+@@ -3437,7 +3437,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 			    ZPOOL_CONFIG_L2CACHE, DATA_TYPE_NVLIST_ARRAY) == 0);
+ 		else
+ 			VERIFY(nvlist_alloc(&spa->spa_l2cache.sav_config,
+-			    NV_UNIQUE_NAME, KM_SLEEP) == 0);
++			    NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 		VERIFY(nvlist_add_nvlist_array(spa->spa_l2cache.sav_config,
+ 		    ZPOOL_CONFIG_L2CACHE, l2cache, nl2cache) == 0);
+ 		spa_config_enter(spa, SCL_ALL, FTAG, RW_WRITER);
+@@ -3520,7 +3520,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 		 * pools are bootable.
+ 		 */
+ 		if ((!error || error == EEXIST) && spa->spa_bootfs) {
+-			char *tmpname = kmem_alloc(MAXPATHLEN, KM_SLEEP);
++			char *tmpname = kmem_alloc(MAXPATHLEN, KM_PUSHPAGE);
+ 
+ 			/*
+ 			 * We have to play games with the name since the
+@@ -3529,7 +3529,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 			if (dsl_dsobj_to_dsname(spa_name(spa),
+ 			    spa->spa_bootfs, tmpname) == 0) {
+ 				char *cp;
+-				char *dsname = kmem_alloc(MAXPATHLEN, KM_SLEEP);
++				char *dsname = kmem_alloc(MAXPATHLEN, KM_PUSHPAGE);
+ 
+ 				cp = strchr(tmpname, '/');
+ 				if (cp == NULL) {
+@@ -3934,7 +3934,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	if (strcmp(oldvd->vdev_path, newvd->vdev_path) == 0) {
+ 		spa_strfree(oldvd->vdev_path);
+ 		oldvd->vdev_path = kmem_alloc(strlen(newvd->vdev_path) + 5,
+-		    KM_SLEEP);
++		    KM_PUSHPAGE);
+ 		(void) sprintf(oldvd->vdev_path, "%s/%s",
+ 		    newvd->vdev_path, "old");
+ 		if (oldvd->vdev_devid != NULL) {
+@@ -4329,8 +4329,8 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	    nvlist_lookup_nvlist(nvl, ZPOOL_CONFIG_L2CACHE, &tmp) == 0)
+ 		return (spa_vdev_exit(spa, NULL, txg, EINVAL));
+ 
+-	vml = kmem_zalloc(children * sizeof (vdev_t *), KM_SLEEP);
+-	glist = kmem_zalloc(children * sizeof (uint64_t), KM_SLEEP);
++	vml = kmem_zalloc(children * sizeof (vdev_t *), KM_PUSHPAGE);
++	glist = kmem_zalloc(children * sizeof (uint64_t), KM_PUSHPAGE);
+ 
+ 	/* then, loop over each vdev and validate it */
+ 	for (c = 0; c < children; c++) {
+@@ -4410,7 +4410,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	 * Temporarily record the splitting vdevs in the spa config.  This
+ 	 * will disappear once the config is regenerated.
+ 	 */
+-	VERIFY(nvlist_alloc(&nvl, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++	VERIFY(nvlist_alloc(&nvl, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 	VERIFY(nvlist_add_uint64_array(nvl, ZPOOL_CONFIG_SPLIT_LIST,
+ 	    glist, children) == 0);
+ 	kmem_free(glist, children * sizeof (uint64_t));
+@@ -4457,7 +4457,7 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	/* if that worked, generate a real config for the new pool */
+ 	if (newspa->spa_root_vdev != NULL) {
+ 		VERIFY(nvlist_alloc(&newspa->spa_config_splitting,
+-		    NV_UNIQUE_NAME, KM_SLEEP) == 0);
++		    NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 		VERIFY(nvlist_add_uint64(newspa->spa_config_splitting,
+ 		    ZPOOL_CONFIG_SPLIT_GUID, spa_guid(spa)) == 0);
+ 		spa_config_set(newspa, spa_config_generate(newspa, NULL, -1ULL,
+@@ -4569,12 +4569,12 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	int i, j;
+ 
+ 	if (count > 1)
+-		newdev = kmem_alloc((count - 1) * sizeof (void *), KM_SLEEP);
++		newdev = kmem_alloc((count - 1) * sizeof (void *), KM_PUSHPAGE);
+ 
+ 	for (i = 0, j = 0; i < count; i++) {
+ 		if (dev[i] == dev_to_remove)
+ 			continue;
+-		VERIFY(nvlist_dup(dev[i], &newdev[j++], KM_SLEEP) == 0);
++		VERIFY(nvlist_dup(dev[i], &newdev[j++], KM_PUSHPAGE) == 0);
+ 	}
+ 
+ 	VERIFY(nvlist_remove(config, name, DATA_TYPE_NVLIST_ARRAY) == 0);
+@@ -5229,10 +5229,10 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 	 * saves us a pre-read to get data we don't actually care about.
+ 	 */
+ 	bufsize = P2ROUNDUP(nvsize, SPA_CONFIG_BLOCKSIZE);
+-	packed = vmem_alloc(bufsize, KM_SLEEP);
++	packed = vmem_alloc(bufsize, KM_PUSHPAGE);
+ 
+ 	VERIFY(nvlist_pack(nv, &packed, &nvsize, NV_ENCODE_XDR,
+-	    KM_SLEEP) == 0);
++	    KM_PUSHPAGE) == 0);
+ 	bzero(packed + nvsize, bufsize - nvsize);
+ 
+ 	dmu_write(spa->spa_meta_objset, obj, 0, bufsize, packed, tx);
+@@ -5270,11 +5270,11 @@ static inline int spa_load_impl(spa_t *spa, uint64_t, nvlist_t *config,
+ 		    &sav->sav_object, tx) == 0);
+ 	}
+ 
+-	VERIFY(nvlist_alloc(&nvroot, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++	VERIFY(nvlist_alloc(&nvroot, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 	if (sav->sav_count == 0) {
+ 		VERIFY(nvlist_add_nvlist_array(nvroot, config, NULL, 0) == 0);
+ 	} else {
+-		list = kmem_alloc(sav->sav_count * sizeof (void *), KM_SLEEP);
++		list = kmem_alloc(sav->sav_count * sizeof (void *), KM_PUSHPAGE);
+ 		for (i = 0; i < sav->sav_count; i++)
+ 			list[i] = vdev_config_generate(spa, sav->sav_vdevs[i],
+ 			    B_FALSE, VDEV_CONFIG_L2CACHE);
+diff --git a/module/zfs/spa_config.c b/module/zfs/spa_config.c
+index d84d6b0..eca2328 100644
+--- a/module/zfs/spa_config.c
++++ b/module/zfs/spa_config.c
+@@ -81,7 +81,7 @@
+ 	/*
+ 	 * Open the configuration file.
+ 	 */
+-	pathname = kmem_alloc(MAXPATHLEN, KM_SLEEP);
++	pathname = kmem_alloc(MAXPATHLEN, KM_PUSHPAGE);
+ 
+ 	(void) snprintf(pathname, MAXPATHLEN, "%s%s",
+ 	    (rootdir != NULL) ? "./" : "", spa_config_path);
+@@ -96,7 +96,7 @@
+ 	if (kobj_get_filesize(file, &fsize) != 0)
+ 		goto out;
+ 
+-	buf = kmem_alloc(fsize, KM_SLEEP | KM_NODEBUG);
++	buf = kmem_alloc(fsize, KM_PUSHPAGE | KM_NODEBUG);
+ 
+ 	/*
+ 	 * Read the nvlist from the file.
+@@ -107,7 +107,7 @@
+ 	/*
+ 	 * Unpack the nvlist.
+ 	 */
+-	if (nvlist_unpack(buf, fsize, &nvlist, KM_SLEEP) != 0)
++	if (nvlist_unpack(buf, fsize, &nvlist, KM_PUSHPAGE) != 0)
+ 		goto out;
+ 
+ 	/*
+@@ -159,11 +159,11 @@
+ 	 */
+ 	VERIFY(nvlist_size(nvl, &buflen, NV_ENCODE_XDR) == 0);
+ 
+-	buf = kmem_alloc(buflen, KM_SLEEP | KM_NODEBUG);
+-	temp = kmem_zalloc(MAXPATHLEN, KM_SLEEP);
++	buf = kmem_alloc(buflen, KM_PUSHPAGE | KM_NODEBUG);
++	temp = kmem_zalloc(MAXPATHLEN, KM_PUSHPAGE);
+ 
+ 	VERIFY(nvlist_pack(nvl, &buf, &buflen, NV_ENCODE_XDR,
+-	    KM_SLEEP) == 0);
++	    KM_PUSHPAGE) == 0);
+ 
+ 	/*
+ 	 * Write the configuration to disk.  We need to do the traditional
+@@ -232,7 +232,7 @@
+ 
+ 			if (nvl == NULL)
+ 				VERIFY(nvlist_alloc(&nvl, NV_UNIQUE_NAME,
+-				    KM_SLEEP) == 0);
++				    KM_PUSHPAGE) == 0);
+ 
+ 			VERIFY(nvlist_add_nvlist(nvl, spa->spa_name,
+ 			    spa->spa_config) == 0);
+@@ -275,7 +275,7 @@
+ 	if (*generation == spa_config_generation)
+ 		return (NULL);
+ 
+-	VERIFY(nvlist_alloc(&pools, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++	VERIFY(nvlist_alloc(&pools, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 
+ 	mutex_enter(&spa_namespace_lock);
+ 	while ((spa = spa_next(spa)) != NULL) {
+@@ -332,7 +332,7 @@
+ 	if (txg == -1ULL)
+ 		txg = spa->spa_config_txg;
+ 
+-	VERIFY(nvlist_alloc(&config, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++	VERIFY(nvlist_alloc(&config, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 
+ 	VERIFY(nvlist_add_uint64(config, ZPOOL_CONFIG_VERSION,
+ 	    spa_version(spa)) == 0);
+@@ -407,21 +407,21 @@
+ 		ddt_stat_t *dds;
+ 		ddt_object_t *ddo;
+ 
+-		ddh = kmem_zalloc(sizeof (ddt_histogram_t), KM_SLEEP);
++		ddh = kmem_zalloc(sizeof (ddt_histogram_t), KM_PUSHPAGE);
+ 		ddt_get_dedup_histogram(spa, ddh);
+ 		VERIFY(nvlist_add_uint64_array(config,
+ 		    ZPOOL_CONFIG_DDT_HISTOGRAM,
+ 		    (uint64_t *)ddh, sizeof (*ddh) / sizeof (uint64_t)) == 0);
+ 		kmem_free(ddh, sizeof (ddt_histogram_t));
+ 
+-		ddo = kmem_zalloc(sizeof (ddt_object_t), KM_SLEEP);
++		ddo = kmem_zalloc(sizeof (ddt_object_t), KM_PUSHPAGE);
+ 		ddt_get_dedup_object_stats(spa, ddo);
+ 		VERIFY(nvlist_add_uint64_array(config,
+ 		    ZPOOL_CONFIG_DDT_OBJ_STATS,
+ 		    (uint64_t *)ddo, sizeof (*ddo) / sizeof (uint64_t)) == 0);
+ 		kmem_free(ddo, sizeof (ddt_object_t));
+ 
+-		dds = kmem_zalloc(sizeof (ddt_stat_t), KM_SLEEP);
++		dds = kmem_zalloc(sizeof (ddt_stat_t), KM_PUSHPAGE);
+ 		ddt_get_dedup_stats(spa, dds);
+ 		VERIFY(nvlist_add_uint64_array(config,
+ 		    ZPOOL_CONFIG_DDT_STATS,
+diff --git a/module/zfs/spa_history.c b/module/zfs/spa_history.c
+index 243f2b4..508df2e 100644
+--- a/module/zfs/spa_history.c
++++ b/module/zfs/spa_history.c
+@@ -233,7 +233,7 @@
+ 	}
+ #endif
+ 
+-	VERIFY(nvlist_alloc(&nvrecord, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++	VERIFY(nvlist_alloc(&nvrecord, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 	VERIFY(nvlist_add_uint64(nvrecord, ZPOOL_HIST_TIME,
+ 	    gethrestime_sec()) == 0);
+ 	VERIFY(nvlist_add_uint64(nvrecord, ZPOOL_HIST_WHO, hap->ha_uid) == 0);
+@@ -265,10 +265,10 @@
+ 	}
+ 
+ 	VERIFY(nvlist_size(nvrecord, &reclen, NV_ENCODE_XDR) == 0);
+-	record_packed = kmem_alloc(reclen, KM_SLEEP);
++	record_packed = kmem_alloc(reclen, KM_PUSHPAGE);
+ 
+ 	VERIFY(nvlist_pack(nvrecord, &record_packed, &reclen,
+-	    NV_ENCODE_XDR, KM_SLEEP) == 0);
++	    NV_ENCODE_XDR, KM_PUSHPAGE) == 0);
+ 
+ 	mutex_enter(&spa->spa_history_lock);
+ 	if (hap->ha_log_type == LOG_CMD_POOL_CREATE)
+@@ -315,7 +315,7 @@
+ 		return (err);
+ 	}
+ 
+-	ha = kmem_alloc(sizeof (history_arg_t), KM_SLEEP);
++	ha = kmem_alloc(sizeof (history_arg_t), KM_PUSHPAGE);
+ 	ha->ha_history_str = strdup(history_str);
+ 	ha->ha_zone = strdup(spa_history_zone());
+ 	ha->ha_log_type = what;
+@@ -441,7 +441,7 @@
+ 	if (tx->tx_txg == TXG_INITIAL)
+ 		return;
+ 
+-	ha = kmem_alloc(sizeof (history_arg_t), KM_SLEEP);
++	ha = kmem_alloc(sizeof (history_arg_t), KM_PUSHPAGE);
+ 	va_copy(adx_copy, adx);
+ 	ha->ha_history_str = kmem_vasprintf(fmt, adx_copy);
+ 	va_end(adx_copy);
+diff --git a/module/zfs/spa_misc.c b/module/zfs/spa_misc.c
+index 1016ac7..33b5575 100644
+--- a/module/zfs/spa_misc.c
++++ b/module/zfs/spa_misc.c
+@@ -424,7 +424,7 @@
+ 
+ 	ASSERT(MUTEX_HELD(&spa_namespace_lock));
+ 
+-	spa = kmem_zalloc(sizeof (spa_t), KM_SLEEP | KM_NODEBUG);
++	spa = kmem_zalloc(sizeof (spa_t), KM_PUSHPAGE | KM_NODEBUG);
+ 
+ 	mutex_init(&spa->spa_async_lock, NULL, MUTEX_DEFAULT, NULL);
+ 	mutex_init(&spa->spa_errlist_lock, NULL, MUTEX_DEFAULT, NULL);
+@@ -471,12 +471,12 @@
+ 	list_create(&spa->spa_config_list, sizeof (spa_config_dirent_t),
+ 	    offsetof(spa_config_dirent_t, scd_link));
+ 
+-	dp = kmem_zalloc(sizeof (spa_config_dirent_t), KM_SLEEP);
++	dp = kmem_zalloc(sizeof (spa_config_dirent_t), KM_PUSHPAGE);
+ 	dp->scd_path = altroot ? NULL : spa_strdup(spa_config_path);
+ 	list_insert_head(&spa->spa_config_list, dp);
+ 
+ 	VERIFY(nvlist_alloc(&spa->spa_load_info, NV_UNIQUE_NAME,
+-	    KM_SLEEP) == 0);
++	    KM_PUSHPAGE) == 0);
+ 
+ 	if (config != NULL)
+ 		VERIFY(nvlist_dup(config, &spa->spa_config, 0) == 0);
+@@ -646,7 +646,7 @@
+ 	if ((aux = avl_find(avl, &search, &where)) != NULL) {
+ 		aux->aux_count++;
+ 	} else {
+-		aux = kmem_zalloc(sizeof (spa_aux_t), KM_SLEEP);
++		aux = kmem_zalloc(sizeof (spa_aux_t), KM_PUSHPAGE);
+ 		aux->aux_guid = vd->vdev_guid;
+ 		aux->aux_count = 1;
+ 		avl_insert(avl, aux, where);
+@@ -1130,7 +1130,7 @@
+ 	char *new;
+ 
+ 	len = strlen(s);
+-	new = kmem_alloc(len + 1, KM_SLEEP);
++	new = kmem_alloc(len + 1, KM_PUSHPAGE);
+ 	bcopy(s, new, len);
+ 	new[len] = '\0';
+ 
+diff --git a/module/zfs/space_map.c b/module/zfs/space_map.c
+index 1ce7b2a..9c0cdb6 100644
+--- a/module/zfs/space_map.c
++++ b/module/zfs/space_map.c
+@@ -134,7 +134,7 @@
+ 			avl_remove(sm->sm_pp_root, ss_after);
+ 		ss = ss_after;
+ 	} else {
+-		ss = kmem_alloc(sizeof (*ss), KM_SLEEP);
++		ss = kmem_alloc(sizeof (*ss), KM_PUSHPAGE);
+ 		ss->ss_start = start;
+ 		ss->ss_end = end;
+ 		avl_insert(&sm->sm_root, ss, where);
+@@ -181,7 +181,7 @@
+ 		avl_remove(sm->sm_pp_root, ss);
+ 
+ 	if (left_over && right_over) {
+-		newseg = kmem_alloc(sizeof (*newseg), KM_SLEEP);
++		newseg = kmem_alloc(sizeof (*newseg), KM_PUSHPAGE);
+ 		newseg->ss_start = end;
+ 		newseg->ss_end = ss->ss_end;
+ 		ss->ss_end = start;
+@@ -551,7 +551,7 @@
+ {
+ 	space_ref_t *sr;
+ 
+-	sr = kmem_alloc(sizeof (*sr), KM_SLEEP);
++	sr = kmem_alloc(sizeof (*sr), KM_PUSHPAGE);
+ 	sr->sr_offset = offset;
+ 	sr->sr_refcnt = refcnt;
+ 
+diff --git a/module/zfs/txg.c b/module/zfs/txg.c
+index 6e64adf..5021e44 100644
+--- a/module/zfs/txg.c
++++ b/module/zfs/txg.c
+@@ -339,7 +339,7 @@
+ 			    TASKQ_THREADS_CPU_PCT | TASKQ_PREPOPULATE);
+ 		}
+ 
+-		cb_list = kmem_alloc(sizeof (list_t), KM_SLEEP);
++		cb_list = kmem_alloc(sizeof (list_t), KM_PUSHPAGE);
+ 		list_create(cb_list, sizeof (dmu_tx_callback_t),
+ 		    offsetof(dmu_tx_callback_t, dcb_node));
+ 
+diff --git a/module/zfs/vdev.c b/module/zfs/vdev.c
+index 1630d2f..3f50489 100644
+--- a/module/zfs/vdev.c
++++ b/module/zfs/vdev.c
+@@ -193,7 +193,7 @@
+ 	pvd->vdev_children = MAX(pvd->vdev_children, id + 1);
+ 	newsize = pvd->vdev_children * sizeof (vdev_t *);
+ 
+-	newchild = kmem_zalloc(newsize, KM_SLEEP);
++	newchild = kmem_zalloc(newsize, KM_PUSHPAGE);
+ 	if (pvd->vdev_child != NULL) {
+ 		bcopy(pvd->vdev_child, newchild, oldsize);
+ 		kmem_free(pvd->vdev_child, oldsize);
+@@ -263,7 +263,7 @@
+ 		if (pvd->vdev_child[c])
+ 			newc++;
+ 
+-	newchild = kmem_alloc(newc * sizeof (vdev_t *), KM_SLEEP);
++	newchild = kmem_alloc(newc * sizeof (vdev_t *), KM_PUSHPAGE);
+ 
+ 	for (c = newc = 0; c < oldc; c++) {
+ 		if ((cvd = pvd->vdev_child[c]) != NULL) {
+@@ -286,7 +286,7 @@
+ 	vdev_t *vd;
+ 	int t;
+ 
+-	vd = kmem_zalloc(sizeof (vdev_t), KM_SLEEP);
++	vd = kmem_zalloc(sizeof (vdev_t), KM_PUSHPAGE);
+ 
+ 	if (spa->spa_root_vdev == NULL) {
+ 		ASSERT(ops == &vdev_root_ops);
+@@ -835,7 +835,7 @@
+ 
+ 	ASSERT(oldc <= newc);
+ 
+-	mspp = kmem_zalloc(newc * sizeof (*mspp), KM_SLEEP | KM_NODEBUG);
++	mspp = kmem_zalloc(newc * sizeof (*mspp), KM_PUSHPAGE | KM_NODEBUG);
+ 
+ 	if (oldc != 0) {
+ 		bcopy(vd->vdev_ms, mspp, oldc * sizeof (*mspp));
+@@ -990,7 +990,7 @@
+ 	mutex_enter(&vd->vdev_probe_lock);
+ 
+ 	if ((pio = vd->vdev_probe_zio) == NULL) {
+-		vps = kmem_zalloc(sizeof (*vps), KM_SLEEP);
++		vps = kmem_zalloc(sizeof (*vps), KM_PUSHPAGE);
+ 
+ 		vps->vps_flags = ZIO_FLAG_CANFAIL | ZIO_FLAG_PROBE |
+ 		    ZIO_FLAG_DONT_CACHE | ZIO_FLAG_DONT_AGGREGATE |
+diff --git a/module/zfs/vdev_cache.c b/module/zfs/vdev_cache.c
+index e2f8040..bf4ae7b 100644
+--- a/module/zfs/vdev_cache.c
++++ b/module/zfs/vdev_cache.c
+@@ -177,7 +177,7 @@
+ 		vdev_cache_evict(vc, ve);
+ 	}
+ 
+-	ve = kmem_zalloc(sizeof (vdev_cache_entry_t), KM_SLEEP);
++	ve = kmem_zalloc(sizeof (vdev_cache_entry_t), KM_PUSHPAGE);
+ 	ve->ve_offset = offset;
+ 	ve->ve_lastused = ddi_get_lbolt();
+ 	ve->ve_data = zio_buf_alloc(VCBS);
+@@ -274,7 +274,7 @@
+ 
+ 	mutex_enter(&vc->vc_lock);
+ 
+-	ve_search = kmem_alloc(sizeof(vdev_cache_entry_t), KM_SLEEP);
++	ve_search = kmem_alloc(sizeof(vdev_cache_entry_t), KM_PUSHPAGE);
+ 	ve_search->ve_offset = cache_offset;
+ 	ve = avl_find(&vc->vc_offset_tree, ve_search, NULL);
+ 	kmem_free(ve_search, sizeof(vdev_cache_entry_t));
+diff --git a/module/zfs/vdev_disk.c b/module/zfs/vdev_disk.c
+index 28a4861..febb6d0 100644
+--- a/module/zfs/vdev_disk.c
++++ b/module/zfs/vdev_disk.c
+@@ -171,7 +171,7 @@
+ 		return EINVAL;
+ 	}
+ 
+-	vd = kmem_zalloc(sizeof(vdev_disk_t), KM_SLEEP);
++	vd = kmem_zalloc(sizeof(vdev_disk_t), KM_PUSHPAGE);
+ 	if (vd == NULL)
+ 		return ENOMEM;
+ 
+@@ -252,7 +252,7 @@
+ 	int i;
+ 
+ 	dr = kmem_zalloc(sizeof(dio_request_t) +
+-	                 sizeof(struct bio *) * bio_count, KM_SLEEP);
++	                 sizeof(struct bio *) * bio_count, KM_PUSHPAGE);
+ 	if (dr) {
+ 		init_completion(&dr->dr_comp);
+ 		atomic_set(&dr->dr_ref, 0);
+@@ -721,7 +721,7 @@
+ 	}
+ 
+ 	size = P2ALIGN_TYPED(s, sizeof(vdev_label_t), uint64_t);
+-	label = vmem_alloc(sizeof(vdev_label_t), KM_SLEEP);
++	label = vmem_alloc(sizeof(vdev_label_t), KM_PUSHPAGE);
+ 
+ 	for (i = 0; i < VDEV_LABELS; i++) {
+ 	        uint64_t offset, state, txg = 0;
+diff --git a/module/zfs/vdev_file.c b/module/zfs/vdev_file.c
+index ce49fe0..25d0bad 100644
+--- a/module/zfs/vdev_file.c
++++ b/module/zfs/vdev_file.c
+@@ -72,7 +72,7 @@
+ 		goto skip_open;
+ 	}
+ 
+-	vf = vd->vdev_tsd = kmem_zalloc(sizeof (vdev_file_t), KM_SLEEP);
++	vf = vd->vdev_tsd = kmem_zalloc(sizeof (vdev_file_t), KM_PUSHPAGE);
+ 
+ 	/*
+ 	 * We always open the files from the root of the global zone, even if
+diff --git a/module/zfs/vdev_label.c b/module/zfs/vdev_label.c
+index 3774d71..7ac2350 100644
+--- a/module/zfs/vdev_label.c
++++ b/module/zfs/vdev_label.c
+@@ -212,7 +212,7 @@
+ {
+ 	nvlist_t *nv = NULL;
+ 
+-	VERIFY(nvlist_alloc(&nv, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++	VERIFY(nvlist_alloc(&nv, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 
+ 	VERIFY(nvlist_add_string(nv, ZPOOL_CONFIG_TYPE,
+ 	    vd->vdev_ops->vdev_op_type) == 0);
+@@ -319,7 +319,7 @@
+ 		ASSERT(!vd->vdev_ishole);
+ 
+ 		child = kmem_alloc(vd->vdev_children * sizeof (nvlist_t *),
+-		    KM_SLEEP);
++		    KM_PUSHPAGE);
+ 
+ 		for (c = 0, idx = 0; c < vd->vdev_children; c++) {
+ 			vdev_t *cvd = vd->vdev_child[c];
+@@ -408,7 +408,7 @@
+ 	uint64_t *array;
+ 	uint_t c, idx;
+ 
+-	array = kmem_alloc(rvd->vdev_children * sizeof (uint64_t), KM_SLEEP);
++	array = kmem_alloc(rvd->vdev_children * sizeof (uint64_t), KM_PUSHPAGE);
+ 
+ 	for (c = 0, idx = 0; c < rvd->vdev_children; c++) {
+ 		vdev_t *tvd = rvd->vdev_child[c];
+@@ -709,7 +709,7 @@
+ 		 * active hot spare (in which case we want to revert the
+ 		 * labels).
+ 		 */
+-		VERIFY(nvlist_alloc(&label, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++		VERIFY(nvlist_alloc(&label, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 
+ 		VERIFY(nvlist_add_uint64(label, ZPOOL_CONFIG_VERSION,
+ 		    spa_version(spa)) == 0);
+@@ -722,7 +722,7 @@
+ 		/*
+ 		 * For level 2 ARC devices, add a special label.
+ 		 */
+-		VERIFY(nvlist_alloc(&label, NV_UNIQUE_NAME, KM_SLEEP) == 0);
++		VERIFY(nvlist_alloc(&label, NV_UNIQUE_NAME, KM_PUSHPAGE) == 0);
+ 
+ 		VERIFY(nvlist_add_uint64(label, ZPOOL_CONFIG_VERSION,
+ 		    spa_version(spa)) == 0);
+@@ -749,7 +749,7 @@
+ 	buf = vp->vp_nvlist;
+ 	buflen = sizeof (vp->vp_nvlist);
+ 
+-	error = nvlist_pack(label, &buf, &buflen, NV_ENCODE_XDR, KM_SLEEP);
++	error = nvlist_pack(label, &buf, &buflen, NV_ENCODE_XDR, KM_PUSHPAGE);
+ 	if (error != 0) {
+ 		nvlist_free(label);
+ 		zio_buf_free(vp, sizeof (vdev_phys_t));
+@@ -1061,7 +1061,7 @@
+ 	buf = vp->vp_nvlist;
+ 	buflen = sizeof (vp->vp_nvlist);
+ 
+-	if (nvlist_pack(label, &buf, &buflen, NV_ENCODE_XDR, KM_SLEEP) == 0) {
++	if (nvlist_pack(label, &buf, &buflen, NV_ENCODE_XDR, KM_PUSHPAGE) == 0) {
+ 		for (; l < VDEV_LABELS; l += 2) {
+ 			vdev_label_write(zio, vd, l, vp,
+ 			    offsetof(vdev_label_t, vl_vdev_phys),
+@@ -1094,7 +1094,7 @@
+ 
+ 		ASSERT(!vd->vdev_ishole);
+ 
+-		good_writes = kmem_zalloc(sizeof (uint64_t), KM_SLEEP);
++		good_writes = kmem_zalloc(sizeof (uint64_t), KM_PUSHPAGE);
+ 		vio = zio_null(zio, spa, NULL,
+ 		    (vd->vdev_islog || vd->vdev_aux != NULL) ?
+ 		    vdev_label_sync_ignore_done : vdev_label_sync_top_done,
+diff --git a/module/zfs/vdev_mirror.c b/module/zfs/vdev_mirror.c
+index 47181d4..96623d2 100644
+--- a/module/zfs/vdev_mirror.c
++++ b/module/zfs/vdev_mirror.c
+@@ -79,7 +79,7 @@
+ 
+ 		c = BP_GET_NDVAS(zio->io_bp);
+ 
+-		mm = kmem_zalloc(offsetof(mirror_map_t, mm_child[c]), KM_SLEEP);
++		mm = kmem_zalloc(offsetof(mirror_map_t, mm_child[c]), KM_PUSHPAGE);
+ 		mm->mm_children = c;
+ 		mm->mm_replacing = B_FALSE;
+ 		mm->mm_preferred = spa_get_random(c);
+@@ -106,7 +106,7 @@
+ 	} else {
+ 		c = vd->vdev_children;
+ 
+-		mm = kmem_zalloc(offsetof(mirror_map_t, mm_child[c]), KM_SLEEP);
++		mm = kmem_zalloc(offsetof(mirror_map_t, mm_child[c]), KM_PUSHPAGE);
+ 		mm->mm_children = c;
+ 		mm->mm_replacing = (vd->vdev_ops == &vdev_replacing_ops ||
+ 		    vd->vdev_ops == &vdev_spare_ops);
+diff --git a/module/zfs/vdev_raidz.c b/module/zfs/vdev_raidz.c
+index b987ac4..21c6e03 100644
+--- a/module/zfs/vdev_raidz.c
++++ b/module/zfs/vdev_raidz.c
+@@ -456,7 +456,7 @@
+ 
+ 	ASSERT3U(acols, <=, scols);
+ 
+-	rm = kmem_alloc(offsetof(raidz_map_t, rm_col[scols]), KM_SLEEP);
++	rm = kmem_alloc(offsetof(raidz_map_t, rm_col[scols]), KM_PUSHPAGE);
+ 
+ 	rm->rm_cols = acols;
+ 	rm->rm_scols = scols;
+@@ -1196,7 +1196,7 @@
+ 	size_t psize;
+ 
+ 	psize = sizeof (invlog[0][0]) * n * nmissing;
+-	p = kmem_alloc(psize, KM_SLEEP);
++	p = kmem_alloc(psize, KM_PUSHPAGE);
+ 
+ 	for (pp = p, i = 0; i < nmissing; i++) {
+ 		invlog[i] = pp;
+@@ -1313,7 +1313,7 @@
+ 
+ 	psize = (sizeof (rows[0][0]) + sizeof (invrows[0][0])) *
+ 	    nmissing_rows * n + sizeof (used[0]) * n;
+-	p = kmem_alloc(psize, KM_SLEEP);
++	p = kmem_alloc(psize, KM_PUSHPAGE);
+ 
+ 	for (pp = p, i = 0; i < nmissing_rows; i++) {
+ 		rows[i] = pp;
+diff --git a/module/zfs/zfs_fm.c b/module/zfs/zfs_fm.c
+index 7801837..0b98231 100644
+--- a/module/zfs/zfs_fm.c
++++ b/module/zfs/zfs_fm.c
+@@ -519,7 +519,7 @@
+ 	size_t offset = 0;
+ 	ssize_t start = -1;
+ 
+-	zfs_ecksum_info_t *eip = kmem_zalloc(sizeof (*eip), KM_SLEEP);
++	zfs_ecksum_info_t *eip = kmem_zalloc(sizeof (*eip), KM_PUSHPAGE);
+ 
+ 	/* don't do any annotation for injected checksum errors */
+ 	if (info != NULL && info->zbc_injected)
+@@ -688,7 +688,7 @@
+     struct zio *zio, uint64_t offset, uint64_t length, void *arg,
+     zio_bad_cksum_t *info)
+ {
+-	zio_cksum_report_t *report = kmem_zalloc(sizeof (*report), KM_SLEEP);
++	zio_cksum_report_t *report = kmem_zalloc(sizeof (*report), KM_PUSHPAGE);
+ 
+ 	if (zio->io_vsd != NULL)
+ 		zio->io_vsd_ops->vsd_cksum_report(zio, report, arg);
+@@ -697,7 +697,7 @@
+ 
+ 	/* copy the checksum failure information if it was provided */
+ 	if (info != NULL) {
+-		report->zcr_ckinfo = kmem_zalloc(sizeof (*info), KM_SLEEP);
++		report->zcr_ckinfo = kmem_zalloc(sizeof (*info), KM_PUSHPAGE);
+ 		bcopy(info, report->zcr_ckinfo, sizeof (*info));
+ 	}
+ 
+diff --git a/module/zfs/zil.c b/module/zfs/zil.c
+index 5296b38..895ba52 100644
+--- a/module/zfs/zil.c
++++ b/module/zfs/zil.c
+@@ -144,7 +144,7 @@
+ 	if (avl_find(t, dva, &where) != NULL)
+ 		return (EEXIST);
+ 
+-	zn = kmem_alloc(sizeof (zil_bp_node_t), KM_SLEEP);
++	zn = kmem_alloc(sizeof (zil_bp_node_t), KM_PUSHPAGE);
+ 	zn->zn_dva = *dva;
+ 	avl_insert(t, zn, where);
+ 
+@@ -434,7 +434,7 @@
+ {
+ 	lwb_t *lwb;
+ 
+-	lwb = kmem_cache_alloc(zil_lwb_cache, KM_SLEEP);
++	lwb = kmem_cache_alloc(zil_lwb_cache, KM_PUSHPAGE);
+ 	lwb->lwb_zilog = zilog;
+ 	lwb->lwb_blk = *bp;
+ 	lwb->lwb_buf = zio_buf_alloc(BP_GET_LSIZE(bp));
+@@ -731,7 +731,7 @@
+ 	for (i = 0; i < ndvas; i++) {
+ 		zvsearch.zv_vdev = DVA_GET_VDEV(&bp->blk_dva[i]);
+ 		if (avl_find(t, &zvsearch, &where) == NULL) {
+-			zv = kmem_alloc(sizeof (*zv), KM_SLEEP);
++			zv = kmem_alloc(sizeof (*zv), KM_PUSHPAGE);
+ 			zv->zv_vdev = zvsearch.zv_vdev;
+ 			avl_insert(t, zv, where);
+ 		}
+@@ -1235,7 +1235,7 @@
+ 		}
+ 		ASSERT(itxg->itxg_sod == 0);
+ 		itxg->itxg_txg = txg;
+-		itxs = itxg->itxg_itxs = kmem_zalloc(sizeof (itxs_t), KM_SLEEP);
++		itxs = itxg->itxg_itxs = kmem_zalloc(sizeof (itxs_t), KM_PUSHPAGE);
+ 
+ 		list_create(&itxs->i_sync_list, sizeof (itx_t),
+ 		    offsetof(itx_t, itx_node));
+@@ -1255,7 +1255,7 @@
+ 
+ 		ian = avl_find(t, &foid, &where);
+ 		if (ian == NULL) {
+-			ian = kmem_alloc(sizeof (itx_async_node_t), KM_SLEEP);
++			ian = kmem_alloc(sizeof (itx_async_node_t), KM_PUSHPAGE);
+ 			list_create(&ian->ia_list, sizeof (itx_t),
+ 			    offsetof(itx_t, itx_node));
+ 			ian->ia_foid = foid;
+@@ -1626,7 +1626,7 @@
+ 	zilog_t *zilog;
+ 	int i;
+ 
+-	zilog = kmem_zalloc(sizeof (zilog_t), KM_SLEEP);
++	zilog = kmem_zalloc(sizeof (zilog_t), KM_PUSHPAGE);
+ 
+ 	zilog->zl_header = zh_phys;
+ 	zilog->zl_os = os;
+@@ -1948,7 +1948,7 @@
+ 	zr.zr_replay = replay_func;
+ 	zr.zr_arg = arg;
+ 	zr.zr_byteswap = BP_SHOULD_BYTESWAP(&zh->zh_log);
+-	zr.zr_lr = vmem_alloc(2 * SPA_MAXBLOCKSIZE, KM_SLEEP);
++	zr.zr_lr = vmem_alloc(2 * SPA_MAXBLOCKSIZE, KM_PUSHPAGE);
+ 
+ 	/*
+ 	 * Wait for in-progress removes to sync before starting replay.
+-- 
+1.7.10
+

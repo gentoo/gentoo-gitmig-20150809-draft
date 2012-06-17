@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9.ebuild,v 1.3 2012/06/17 16:52:21 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9.ebuild,v 1.4 2012/06/17 17:38:43 ryao Exp $
 
 EAPI="4"
 
@@ -78,6 +78,12 @@ src_prepare() {
 	if [ ${PV} != "9999" ]
 	then
 		epatch "${FILESDIR}/${P}-hardened-support.patch"
+
+		# Fix various deadlocks
+		epatch "${FILESDIR}/${P}-use-pushpage.patch"
+		epatch "${FILESDIR}/${P}-remove-pfmalloc-1-of-3.patch"
+		epatch "${FILESDIR}/${P}-remove-pfmalloc-2-of-3.patch"
+		epatch "${FILESDIR}/${P}-remove-pfmalloc-3-of-3.patch"
 	fi
 
 	autotools-utils_src_prepare
