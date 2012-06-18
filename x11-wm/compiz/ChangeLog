@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.64 2012/05/04 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.65 2012/06/18 18:45:24 ssuominen Exp $
+
+  18 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> compiz-0.8.8.ebuild:
+  Update to EAPI4 and prune_libtool_files.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> compiz-0.8.6-r3.ebuild,
   compiz-0.8.8.ebuild:

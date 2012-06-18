@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.2 2012/05/04 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.3 2012/06/18 18:45:24 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit autotools eutils gnome2-utils
 
 DESCRIPTION="OpenGL window and compositing manager"
@@ -16,10 +15,10 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+cairo dbus fuse gnome gconf gtk kde +svg"
 
 COMMONDEPEND="
-	dev-libs/glib:2
-	dev-libs/libxml2:2
+	>=dev-libs/glib-2
+	dev-libs/libxml2
 	dev-libs/libxslt
-	media-libs/libpng
+	media-libs/libpng:0
 	>=media-libs/mesa-6.5.1-r1
 	>=x11-base/xorg-server-1.1.1-r1
 	>=x11-libs/libX11-1.4
@@ -71,9 +70,8 @@ RDEPEND="${COMMONDEPEND}
 "
 
 src_prepare() {
-
-	echo "gtk/gnome/compiz-wm.desktop.in" >> "${S}/po/POTFILES.skip"
-	echo "metadata/core.xml.in" >> "${S}/po/POTFILES.skip"
+	echo gtk/gnome/compiz-wm.desktop.in >> po/POTFILES.skip
+	echo metadata/core.xml.in >> po/POTFILES.skip
 
 	if ! use gnome || ! use gconf; then
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch
@@ -86,7 +84,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=
+	local myconf
 
 	# We make gconf optional by itself, but only if gnome is also
 	# enabled, otherwise we simply disable it.
@@ -97,7 +95,6 @@ src_configure() {
 	fi
 
 	econf \
-		--disable-dependency-tracking \
 		--enable-fast-install \
 		--disable-static \
 		--disable-gnome-keybindings \
@@ -116,21 +113,21 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
-	find "${D}" -name '*.la' -delete || die
+	prune_libtool_files --all
 
 	# Install compiz-manager
-	dobin "${FILESDIR}/compiz-manager" || die "dobin failed"
+	dobin "${FILESDIR}"/compiz-manager
 
 	# Add the full-path to lspci
-	sed -i "s#lspci#/usr/sbin/lspci#" "${D}/usr/bin/compiz-manager" || die "sed 1 failed"
+	sed -i "s#lspci#/usr/sbin/lspci#" "${D}/usr/bin/compiz-manager" || die
 
 	# Fix the hardcoded lib paths
-	sed -i "s#/lib/#/$(get_libdir)/#g" "${D}/usr/bin/compiz-manager" || die "sed 2 failed"
+	sed -i "s#/lib/#/$(get_libdir)/#g" "${D}/usr/bin/compiz-manager" || die
 
 	# Create gentoo's config file
-	dodir /etc/xdg/compiz || die "dodir failed"
+	dodir /etc/xdg/compiz
 
 	cat <<- EOF > "${D}/etc/xdg/compiz/compiz-manager"
 	COMPIZ_BIN_PATH="/usr/bin/"
@@ -142,10 +139,9 @@ src_install() {
 	SKIP_CHECKS="yes"
 	EOF
 
-	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
-	insinto "/usr/share/applications"
-	doins "${FILESDIR}/compiz.desktop" || die "Failed to install compiz.desktop"
+	domenu "${FILESDIR}"/compiz.desktop
 }
 
 pkg_preinst() {
