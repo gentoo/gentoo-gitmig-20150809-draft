@@ -24,4 +24,8 @@
 	<flag name="tools">Build various useful tools (e.g.: qcrmlgen, servicexmlgen, vsexplorer, ...)</flag>
 	<flag name="versit">Build the QtVersit module</flag>
 </use>
+<upstream>
+	<bugs-to>https://bugreports.qt-project.org/</bugs-to>
+	<doc>http://doc.qt.nokia.com/qtmobility/index.html</doc>
+</upstream>
 </pkgmetadata>
