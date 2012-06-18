@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-ssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.100 2012/06/17 07:10:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.101 2012/06/18 10:21:52 ago Exp $
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> net-ssh-2.2.2.ebuild:
+  Stable for amd64, wrt bug #421345
 
   17 Jun 2012; Hans de Graaff <graaff@gentoo.org> net-ssh-2.2.2.ebuild:
   Drop ruby19 to create a new stable candidate, too many dependencies are not
