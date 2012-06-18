@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/balance-3.54.ebuild,v 1.1 2012/06/16 22:51:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/balance/balance-3.54.ebuild,v 1.2 2012/06/18 00:26:09 mr_bones_ Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
-DEPEND="doc? ( app-text/ghostscript-gpl 
+DEPEND="doc? ( app-text/ghostscript-gpl
 		sys-apps/groff )"
 RDEPEND=""
 
@@ -25,7 +25,7 @@ src_prepare() {
 	use doc || touch balance.pdf
 }
 
-src_install() {	
+src_install() {
 	default
 	use doc && dodoc balance.pdf
 }
