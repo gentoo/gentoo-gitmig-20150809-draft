@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.1-r1.ebuild,v 1.1 2012/06/12 22:31:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.1-r1.ebuild,v 1.2 2012/06/18 19:37:01 chithanh Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -21,6 +21,7 @@ IUSE="alsa doc examples fcd grc jack oss portaudio qt4 sdl utils wavelet wxwidge
 # uhd? ( dev-libs/uhd )
 RDEPEND=">=dev-lang/orc-0.4.12
 	dev-libs/boost
+	dev-python/cheetah
 	dev-util/cppunit
 	sci-libs/fftw:3.0
 	fcd? ( virtual/libusb:1 )
@@ -28,7 +29,6 @@ RDEPEND=">=dev-lang/orc-0.4.12
 		media-libs/alsa-lib
 	)
 	grc? (
-		dev-python/cheetah
 		dev-python/lxml
 		dev-python/numpy
 		dev-python/pygtk:2
