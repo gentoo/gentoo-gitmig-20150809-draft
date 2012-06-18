@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.9.0.ebuild,v 1.1 2012/06/14 06:22:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.9.0.ebuild,v 1.2 2012/06/18 08:36:51 radhermit Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa audiofile debug doc jack libsamplerate lv2 mikmod ncurses oil osc oss
-python ruby sndfile static-libs"
+python ruby sndfile static-libs test"
+REQUIRED_USE="test? ( lv2 )"
 
 RDEPEND="sys-libs/readline
 	alsa? ( media-libs/alsa-lib )
@@ -34,7 +35,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	use python && python_set_active_version 2
+	if use python ; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -52,11 +56,8 @@ src_configure() {
 	local pyconf
 
 	if use python ; then
-		pyconf="--enable-pyecasound=c
-			--with-python-includes=$(python_get_includedir)
+		pyconf="--with-python-includes=$(python_get_includedir)
 			--with-python-modules=$(python_get_libdir)"
-	else
-		pyconf="--disable-pyecasound"
 	fi
 
 	econf \
@@ -74,6 +75,7 @@ src_configure() {
 		$(use_enable oil liboil) \
 		$(use_enable osc liblo) \
 		$(use_enable oss) \
+		$(use_enable python pyecasound) \
 		$(use_enable ruby rubyecasound) \
 		$(use_enable sndfile) \
 		$(use_enable static-libs static) \
