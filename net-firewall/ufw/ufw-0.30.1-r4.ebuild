@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.30.1-r4.ebuild,v 1.1 2012/02/28 11:42:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.30.1-r4.ebuild,v 1.2 2012/06/18 19:39:03 thev00d00 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.5"
@@ -26,8 +26,9 @@ RDEPEND=">=net-firewall/iptables-1.4"
 RESTRICT="test"
 
 pkg_pretend() {
-	local CONFIG_CHECK="~PROC_FS ~NETFILTER_XT_MATCH_COMMENT ~IP6_NF_MATCH_HL \
-		~NETFILTER_XT_MATCH_LIMIT ~NETFILTER_XT_MATCH_MULTIPORT \
+	local CONFIG_CHECK="~PROC_FS
+		~NETFILTER_XT_MATCH_COMMENT ~NETFILTER_XT_MATCH_HL
+		~NETFILTER_XT_MATCH_LIMIT ~NETFILTER_XT_MATCH_MULTIPORT
 		~NETFILTER_XT_MATCH_RECENT ~NETFILTER_XT_MATCH_STATE"
 
 	if kernel_is -ge 2 6 39; then

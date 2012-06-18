@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ufw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ChangeLog,v 1.6 2012/06/13 21:14:52 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ChangeLog,v 1.7 2012/06/18 19:39:03 thev00d00 Exp $
+
+  18 Jun 2012; Ian Whyman <thev00d00@gentoo.org> ufw-0.30.1-r4.ebuild,
+  ufw-0.31.1.ebuild:
+  Fix kernel option check, bug #421283 by José Romildo Malaquias
 
 *ufw-0.31.1 (13 Jun 2012)
 
