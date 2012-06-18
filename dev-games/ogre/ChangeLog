@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.81 2012/06/16 15:40:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.82 2012/06/18 18:12:05 hasufell Exp $
+
+  18 Jun 2012; Julian Ospald <hasufell@gentoo.org> ogre-1.7.4-r1.ebuild:
+  stable for x86 wrt bug #412675
 
   16 Jun 2012; Julian Ospald <hasufell@gentoo.org> ogre-1.7.4-r1.ebuild,
   ogre-1.8.0.ebuild:
