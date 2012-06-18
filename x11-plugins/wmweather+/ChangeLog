@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmweather+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/ChangeLog,v 1.26 2012/02/15 10:29:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/ChangeLog,v 1.27 2012/06/18 16:24:17 xmw Exp $
+
+  18 Jun 2012; Michael Weber <xmw@gentoo.org> wmweather+-2.11.ebuild:
+  ppc stable (bug 409551)
 
 *wmweather+-2.13 (15 Feb 2012)
 
