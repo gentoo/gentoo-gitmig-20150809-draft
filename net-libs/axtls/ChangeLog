@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/axtls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.4 2012/06/17 21:14:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.5 2012/06/18 10:23:12 ago Exp $
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> axtls-1.4.6-r1.ebuild:
+  Stable for amd64, wrt bug #421479
 
   17 Jun 2012; Anthony G. Basile <blueness@gentoo.org> axtls-1.4.6-r1.ebuild,
   +files/explicit-libdir.patch:
