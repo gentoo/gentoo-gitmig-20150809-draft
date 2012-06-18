@@ -20,8 +20,6 @@
 <flag name='fading-colors'>Enable colors fading when off focus</flag>
 <flag name='focused-urgency'>Enable the urgent flag when a terminal window is focused</flag>
 <flag name='font-styles'>Enable support for bold and italic fonts</flag>
-<flag name='force-hints'>Force WM hints on rxvt-unicode's geometry. Read
-	http://bugs.gentoo.org/show_bug.cgi?id=346553</flag>
 <flag name='iso14755'>Enable ISO-14755 support</flag>
 <flag name='mousewheel'>Enable scrolling via mouse wheel or buttons 4 and 5</flag>
 <flag name='perl'>Enable perl script support. You can still disable this at runtime with -pe ""</flag>
