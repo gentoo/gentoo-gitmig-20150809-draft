@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.17.ebuild,v 1.9 2012/05/05 03:52:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.17.ebuild,v 1.10 2012/06/18 19:28:29 hwoarang Exp $
 
 EAPI=4
 
@@ -32,6 +32,8 @@ src_prepare() {
 	sed -ie '/SUBDIRS=/s#docs##' "${S}"/Makefile.am || die "sed failed"
 	sed -i -e '/^[[:space:]]*docs/d' -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" \
 		configure.ac || die "sed failed"
+	#Remove -Werror for automake-1.12. Bug #421101
+	sed -i "s:-Werror::" configure.ac || die
 	eautoreconf
 }
 

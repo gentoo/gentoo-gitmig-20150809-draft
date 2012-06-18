@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.66 2012/06/14 18:33:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.67 2012/06/18 19:28:29 hwoarang Exp $
+
+  18 Jun 2012; Markos Chandras <hwoarang@gentoo.org> libfm-0.1.17.ebuild:
+  Backport automake-1.12 fix from bug #421101
 
   14 Jun 2012; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
   Drop -Werror due to new automake-1.12. Bug #421101
