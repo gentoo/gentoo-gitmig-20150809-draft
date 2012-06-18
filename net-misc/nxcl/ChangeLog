@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.11 2012/05/21 19:14:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/ChangeLog,v 1.12 2012/06/18 15:17:36 voyageur Exp $
+
+  18 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> nxcl-0.9-r2.ebuild,
+  +files/nxcl-0.9-gcc47.patch:
+  Fix compilation with GCC 4.7, bug #421731
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> nxcl-0.9-r1.ebuild,
   nxcl-0.9-r2.ebuild:

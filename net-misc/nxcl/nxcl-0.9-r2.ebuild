@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/nxcl-0.9-r2.ebuild,v 1.2 2012/05/21 19:14:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxcl/nxcl-0.9-r2.ebuild,v 1.3 2012/06/18 15:17:36 voyageur Exp $
 
-EAPI=2
+EAPI=4
 
 inherit autotools eutils
 
@@ -34,13 +34,14 @@ src_prepare() {
 		epatch "${FILESDIR}"/${P}-no_nxssh.patch
 	fi
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_with doc doxygen) || die "configure failed"
+	econf $(use_with doc doxygen)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install
 }
