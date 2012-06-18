@@ -1,21 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/golly-2.3.ebuild,v 1.4 2012/02/24 14:41:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/golly-2.4.ebuild,v 1.1 2012/06/18 22:38:11 xmw Exp $
 
-EAPI=2
+EAPI=4
 PYTHON_DEPEND=2
 WX_GTK_VER=2.8
 
-inherit eutils python wxwidgets
+inherit python toolchain-funcs wxwidgets
 
 MY_P=${P}-src
-DESCRIPTION="A simulator for Conway's Game of Life and other cellular automata"
+DESCRIPTION="simulator for Conway's Game of Life and other cellular automata"
 HOMEPAGE="http://golly.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
@@ -27,6 +27,11 @@ S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	sed -e 's:-O2::' -i configure Makefile.{am,in} || die
 }
 
 src_configure() {
@@ -36,6 +41,6 @@ src_configure() {
 }
 
 src_install() {
-	emake docdir= DESTDIR="${D}" install || die
-	dodoc README
+	emake docdir= DESTDIR="${D}" install
+	dodoc README TODO
 }

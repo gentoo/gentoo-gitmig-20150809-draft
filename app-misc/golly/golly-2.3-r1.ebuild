@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/golly-2.3-r1.ebuild,v 1.3 2012/06/08 11:55:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/golly-2.3-r1.ebuild,v 1.4 2012/06/18 22:38:11 xmw Exp $
 
 EAPI=4
 PYTHON_DEPEND=2
 WX_GTK_VER=2.8
 
-inherit eutils python toolchain-funcs wxwidgets
+inherit python toolchain-funcs wxwidgets
 
 MY_P=${P}-src
 DESCRIPTION="simulator for Conway's Game of Life and other cellular automata"

@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/golly
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.14 2012/06/08 11:55:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.15 2012/06/18 22:38:11 xmw Exp $
+
+*golly-2.4 (18 Jun 2012)
+
+  18 Jun 2012; Michael Weber <xmw@gentoo.org> -golly-2.2.ebuild,
+  -golly-2.2-r1.ebuild, -files/golly-2.2-perl-5.14.patch, -golly-2.3.ebuild,
+  golly-2.3-r1.ebuild, +golly-2.4.ebuild:
+  Version bump (thanks Maks Verver, bug 421485), drop old, remove eutils
+  eclass.
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> golly-2.3-r1.ebuild:
   x86 stable wrt bug #418605
