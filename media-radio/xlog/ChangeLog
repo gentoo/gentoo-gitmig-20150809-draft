@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.24 2012/05/03 03:48:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.25 2012/06/18 09:05:13 ago Exp $
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -xlog-2.0.4.ebuild:
+  Remove old
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> xlog-2.0.4.ebuild,
   xlog-2.0.5.ebuild:

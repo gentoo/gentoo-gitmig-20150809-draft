@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tlf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.34 2012/05/30 04:58:20 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.35 2012/06/18 09:02:26 ago Exp $
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -tlf-1.0.5.ebuild:
+  Remove old
 
   30 May 2012; Thomas Beierlein <tomjbe@gentoo.org> -tlf-1.0.0.ebuild,
   -tlf-1.1.0.ebuild:
