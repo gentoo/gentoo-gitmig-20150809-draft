@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.132 2012/06/07 15:36:49 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.133 2012/06/18 21:33:50 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -33,7 +33,7 @@ case ${QT4_BUILD_TYPE} in
 	live)
 		EGIT_REPO_URI="git://gitorious.org/qt/qt.git
 			https://git.gitorious.org/qt/qt.git"
-		EGIT_BRANCH="${PV%.9999}"
+		EGIT_BRANCH=${PV%.9999}
 		;;
 	release)
 		if version_is_at_least 4.8.1; then
@@ -45,11 +45,10 @@ case ${QT4_BUILD_TYPE} in
 esac
 
 IUSE="aqua debug pch"
-if [[ ${CATEGORY}/${PN} != x11-libs/qt-xmlpatterns ]]; then
-	IUSE+=" +exceptions"
-fi
+[[ ${CATEGORY}/${PN} != x11-libs/qt-xmlpatterns ]] && IUSE+=" +exceptions"
 if version_is_at_least 4.8; then
-	IUSE+=" c++0x qpa"
+	[[ ${CATEGORY}/${PN} != x11-libs/qt-webkit ]] && IUSE+=" c++0x"
+	version_is_at_least 4.8.3 || IUSE+=" qpa"
 fi
 
 DEPEND="virtual/pkgconfig"
@@ -104,31 +103,16 @@ S=${WORKDIR}/${MY_P}
 qt4-build_pkg_setup() {
 	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
 
-	# Protect users by not allowing downgrades between releases
-	# Downgrading revisions within the same release should be allowed
+	# Protect users by not allowing downgrades between releases.
+	# Downgrading revisions within the same release should be allowed.
 	if has_version ">${CATEGORY}/${P}-r9999:4"; then
 		if [[ -z ${I_KNOW_WHAT_I_AM_DOING} ]]; then
-			eerror
-			eerror "Sanity check to keep you from breaking your system:"
-			eerror "  Downgrading Qt is completely unsupported and will break your system!"
-			eerror
+			eerror "    ***  Sanity check to keep you from breaking your system  ***"
+			eerror "Downgrading Qt is completely unsupported and will break your system!"
 			die "aborting to save your system"
 		else
 			ewarn "Downgrading Qt is completely unsupported and will break your system!"
 		fi
-	fi
-
-	if [[ ${PN} == qt-webkit ]]; then
-		eshopts_push -s extglob
-		if is-flagq '-g?(gdb)?([1-9])'; then
-			echo
-			ewarn "You have enabled debug info (probably have -g or -ggdb in your CFLAGS/CXXFLAGS)."
-			ewarn "You may experience really long compilation times and/or increased memory usage."
-			ewarn "If compilation fails, please try removing -g/-ggdb before reporting a bug."
-			ewarn "For more info check out bug #307861"
-			echo
-		fi
-		eshopts_pop
 	fi
 
 	PATH="${S}/bin${PATH:+:}${PATH}"
@@ -143,27 +127,42 @@ qt4-build_pkg_setup() {
 			QT4_EXTRACT_DIRECTORIES="src/gui/kernel/qapplication_mac.mm
 				${QT4_EXTRACT_DIRECTORIES}"
 	fi
-
-	if ! version_is_at_least 4.1 $(gcc-version); then
-		ewarn "Using a GCC version lower than 4.1 is not supported."
-	fi
 }
 
-# @ECLASS-VARIABLE: QT4_TARGET_DIRECTORIES
-# @DESCRIPTION:
-# Arguments for build_target_directories. Takes the directories in which the
-# code should be compiled. This is a space-separated list.
-
 # @ECLASS-VARIABLE: QT4_EXTRACT_DIRECTORIES
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Space-separated list including the directories that will be extracted from
 # Qt tarball.
+
+# @ECLASS-VARIABLE: QT4_TARGET_DIRECTORIES
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Arguments for build_target_directories. Takes the directories in which the
+# code should be compiled. This is a space-separated list.
 
 # @FUNCTION: qt4-build_src_unpack
 # @DESCRIPTION:
 # Unpacks the sources.
 qt4-build_src_unpack() {
 	setqtenv
+
+	if ! version_is_at_least 4.1 $(gcc-version); then
+		ewarn "Using a GCC version lower than 4.1 is not supported."
+	fi
+
+	if [[ ${PN} == qt-webkit ]]; then
+		eshopts_push -s extglob
+		if is-flagq '-g?(gdb)?([1-9])'; then
+			echo
+			ewarn "You have enabled debug info (probably have -g or -ggdb in your CFLAGS/CXXFLAGS)."
+			ewarn "You may experience really long compilation times and/or increased memory usage."
+			ewarn "If compilation fails, please try removing -g/-ggdb before reporting a bug."
+			ewarn "For more info check out https://bugs.gentoo.org/307861"
+			echo
+		fi
+		eshopts_pop
+	fi
 
 	case ${QT4_BUILD_TYPE} in
 		live)
@@ -210,11 +209,9 @@ qt4-build_src_prepare() {
 	fi
 
 	if version_is_at_least 4.7; then
-		# fix libX11 dependency on non X packages
+		# avoid X11 dependency in non-gui packages
 		local nolibx11_pkgs="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
 		has ${PN} ${nolibx11_pkgs} && qt_nolibx11
-
-		qt_assistant_cleanup
 	fi
 
 	if use aqua; then
@@ -245,14 +242,7 @@ qt4-build_src_prepare() {
 	fi
 
 	if use_if_iuse c++0x; then
-		echo
-		ewarn "You are about to build Qt4 using the C++11 standard. Even though"
-		ewarn "this is an official standard, some of the reverse dependencies"
-		ewarn "may fail to compile or link againt the Qt4 libraries. Before"
-		ewarn "reporting a bug, make sure your bug is reproducible with c++0x"
-		ewarn "disabled."
-		echo
-		append-flags -std=c++0x
+		append-cxxflags -std=c++0x
 	fi
 
 	# Unsupported old gcc versions - hardened needs this :(
@@ -870,36 +860,6 @@ qt_mkspecs_dir() {
 	fi
 
 	echo "${spec}"
-}
-
-# @FUNCTION: qt_assistant_cleanup
-# @INTERNAL
-# @DESCRIPTION:
-# Tries to clean up tools.pro for qt-assistant ebuilds.
-# Meant to be called in src_prepare().
-# Since Qt 4.7.4 this function is a no-op.
-qt_assistant_cleanup() {
-	# apply patching to qt-assistant ebuilds only
-	[[ ${PN} != qt-assistant ]] && return
-
-	# no longer needed for 4.7.4 and later
-	version_is_at_least 4.7.4 && return
-
-	# different versions (and branches...) may need different handling,
-	# add a case if you need special handling
-	case "${MY_PV_EXTRA}" in
-		*kde-qt*)
-			sed -e "/^[ \t]*porting/,/^[ \t]*win32.*activeqt$/d" \
-				-e "/mac/,/^embedded.*makeqpf$/d" \
-				-i tools/tools.pro || die "patching tools.pro failed"
-		;;
-		*)
-			sed -e "/^[ \t]*porting/,/^[ \t]*win32.*activeqt$/d" \
-				-e "/mac/,/^embedded.*makeqpf$/d" \
-				-e "s/^\([ \t]*pixeltool\) /\1 qdoc3 /" \
-				-i tools/tools.pro || die "patching tools.pro failed"
-		;;
-	esac
 }
 
 # @FUNCTION: qt_nolibx11
