@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ticpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ChangeLog,v 1.7 2012/06/17 22:16:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ChangeLog,v 1.8 2012/06/18 08:38:12 ago Exp $
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ticpp-9999.ebuild:
+  Port recent changes to 9999
 
 *ticpp-0_p20120423 (17 Jun 2012)
 
