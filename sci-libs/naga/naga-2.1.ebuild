@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/naga/naga-2.1.ebuild,v 1.2 2012/05/31 20:59:46 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/naga/naga-2.1.ebuild,v 1.3 2012/06/18 23:08:10 je_fro Exp $
 EAPI=4
 
-inherit subversion java-pkg-2 java-ant-2
+inherit java-pkg-2 java-ant-2
 
-ESVN_REPO_URI="http://naga.googlecode.com/svn/trunk@57"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 MY_PV=${PV//./_}
 MY_PVR="${MY_PV}-r43"
 
