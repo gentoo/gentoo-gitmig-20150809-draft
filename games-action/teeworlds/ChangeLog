@@ -1,6 +1,12 @@
 # ChangeLog for games-action/teeworlds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.8 2012/06/15 15:41:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.9 2012/06/18 00:11:43 mr_bones_ Exp $
+
+  18 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/teeworlds-0.5.2-gcc46.patch, -files/teeworlds-0.5.2-system-libs.patch,
+  -files/teeworlds-0.5.2-wavpack.patch, -teeworlds-0.5.2.ebuild,
+  teeworlds-0.6.1.ebuild:
+  old
 
   15 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> teeworlds-0.6.1.ebuild:
   use makeopts_jobs (bug #421173)
