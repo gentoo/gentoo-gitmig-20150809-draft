@@ -1,5 +1,8 @@
 # ChangeLog for sys-apps/xinetd
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.63 2012/06/17 05:36:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.64 2012/06/18 23:20:34 jer Exp $
+
+  18 Jun 2012; Jeroen Roovers <jer@gentoo.org> xinetd-2.3.15.ebuild:
+  Stable for HPPA (bug #420927).
 
   17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> xinetd-2.3.15.ebuild:
   marked x86 per bug 420927
