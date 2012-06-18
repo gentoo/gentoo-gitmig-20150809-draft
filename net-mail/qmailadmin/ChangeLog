@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmailadmin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.28 2011/02/12 17:51:35 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailadmin/ChangeLog,v 1.29 2012/06/18 23:25:29 jer Exp $
+
+  18 Jun 2012; Jeroen Roovers <jer@gentoo.org> qmailadmin-1.2.10.ebuild:
+  Marked ~hppa (bug #269123).
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> qmailadmin-1.2.15.ebuild:
   s390/sh/sparc stable wrt #263123
