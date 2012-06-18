@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1467.ebuild,v 1.1 2012/06/13 14:01:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1467.ebuild,v 1.2 2012/06/18 02:36:52 jer Exp $
 
 EAPI="4"
 
@@ -51,7 +51,7 @@ GTKRDEPEND="
 	dev-libs/glib:2
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	gtk? ( || ( x11-libs/gtk+:2 x11-libs/gtk+:3 ) )
+	gtk? ( || ( x11-libs/gtk+:3 x11-libs/gtk+:2 ) )
 	x11-libs/pango
 	x11-libs/pixman
 "

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.722 2012/06/15 14:09:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.723 2012/06/18 02:34:00 jer Exp $
+
+  18 Jun 2012; Jeroen Roovers <jer@gentoo.org> opera-12.00.1467.ebuild:
+  Reorder SLOTs in x11-libs/gtk+ USE=gtk RDEPEND.
 
   15 Jun 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove USE=gtk3 description.
