@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.1.ebuild,v 1.8 2012/05/20 13:19:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.1.ebuild,v 1.9 2012/06/18 22:38:38 pesa Exp $
 
 EAPI=4
 
@@ -17,9 +17,9 @@ DEPEND="
 	dev-db/sqlite:3
 	x11-libs/libX11
 	x11-libs/libXrender
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=,ssl,qpa=]
-	~x11-libs/qt-gui-${PV}[aqua=,c++0x=,debug=,qpa=]
-	~x11-libs/qt-xmlpatterns-${PV}[aqua=,c++0x=,debug=,qpa=]
+	~x11-libs/qt-core-${PV}[aqua=,debug=,ssl,qpa=]
+	~x11-libs/qt-gui-${PV}[aqua=,debug=,qpa=]
+	~x11-libs/qt-xmlpatterns-${PV}[aqua=,debug=,qpa=]
 	gstreamer? (
 		dev-libs/glib:2
 		media-libs/gstreamer:0.10
