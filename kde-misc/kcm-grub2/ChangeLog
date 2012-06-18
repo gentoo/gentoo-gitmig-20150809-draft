@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kcm-grub2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.6 2012/06/15 16:30:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.7 2012/06/18 16:19:08 scarabeus Exp $
+
+*kcm-grub2-0.5.8 (18 Jun 2012)
+
+  18 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +kcm-grub2-0.5.8.ebuild,
+  -files/kcm-grub2-use-gentoo-grub-commands.patch, -kcm-grub2-0.5.5.ebuild:
+  Version bump to latest.
 
   15 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -kcm-grub2-0.5.0.ebuild:
   Remove old.
