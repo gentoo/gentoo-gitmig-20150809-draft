@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.8.2.ebuild,v 1.1 2012/05/22 15:21:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.8.2.ebuild,v 1.2 2012/06/18 21:47:07 pesa Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ DEPEND="
 	opengl? ( ~x11-libs/qt-opengl-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?] )
 	openvg? ( ~x11-libs/qt-openvg-${PV}:4[aqua=,c++0x=,debug=,qpa=,qt3support?] )
 	qt3support? ( ~x11-libs/qt-qt3support-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
-	webkit? ( ~x11-libs/qt-webkit-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
+	webkit? ( ~x11-libs/qt-webkit-${PV}:4[aqua=,debug=,qpa=] )
 	xmlpatterns? ( ~x11-libs/qt-xmlpatterns-${PV}:4[aqua=,c++0x=,debug=,qpa=] )
 "
 RDEPEND="${DEPEND}"

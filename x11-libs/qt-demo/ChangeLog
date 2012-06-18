@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.91 2012/05/22 15:21:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.92 2012/06/18 21:47:07 pesa Exp $
+
+  18 Jun 2012; Davide Pesavento <pesa@gentoo.org> qt-demo-4.8.1-r1.ebuild,
+  qt-demo-4.8.2.ebuild:
+  USE=c++0x is gone from qt-webkit.
 
 *qt-demo-4.8.2 (22 May 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.8.1.ebuild,v 1.5 2012/05/20 13:05:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.8.1.ebuild,v 1.6 2012/06/18 21:46:29 pesa Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ DEPEND="
 	~x11-libs/qt-svg-${PV}[accessibility=,aqua=,c++0x=,debug=,qpa=]
 	~x11-libs/qt-xmlpatterns-${PV}[aqua=,c++0x=,debug=,qpa=]
 	qt3support? ( ~x11-libs/qt-qt3support-${PV}[accessibility=,aqua=,c++0x=,debug=,qpa=] )
-	webkit? ( ~x11-libs/qt-webkit-${PV}[aqua=,c++0x=,debug=,qpa=] )
+	webkit? ( ~x11-libs/qt-webkit-${PV}[aqua=,debug=,qpa=] )
 "
 RDEPEND="${DEPEND}"
 
