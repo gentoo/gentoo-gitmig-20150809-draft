@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WebService-MusicBrainz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WebService-MusicBrainz/ChangeLog,v 1.2 2012/05/19 15:55:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WebService-MusicBrainz/ChangeLog,v 1.3 2012/06/18 18:39:40 ago Exp $
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  WebService-MusicBrainz-0.930.0.ebuild:
+  Stable for amd64, wrt bug #421795
 
 *WebService-MusicBrainz-0.930.0 (19 May 2012)
 
