@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/unison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.67 2012/06/11 12:28:47 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.68 2012/06/18 11:41:49 heroxbd Exp $
+
+*unison-2.27.157 (18 Jun 2012)
+
+  18 Jun 2012; Benda Xu <heroxbd@gentoo.org> +unison-2.27.157.ebuild:
+  version bump to 2.27.157, wrt bug 417619. keyword ~amd64-linux
 
 *unison-2.45.4 (11 Jun 2012)
 
