@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/empty
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/empty/ChangeLog,v 1.1 2012/06/18 16:40:50 maksbotan Exp $
+
+*empty-0.6.18b (18 Jun 2012)
+
+  18 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +empty-0.6.18b.ebuild,
+  +files/overflow-fixes.patch, +metadata.xml:
+  Add app-misc/empty, ebuild by James Le Cuirot <chewi@aura-online.co.uk>. Bug
+  #97387
+
