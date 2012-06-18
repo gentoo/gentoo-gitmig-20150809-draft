@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/kile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.155 2012/06/17 04:59:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.156 2012/06/18 22:22:32 dilfridge Exp $
+
+*kile-2.1.2-r1 (18 Jun 2012)
+
+  18 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> +kile-2.1.2-r1.ebuild,
+  +files/kile-2.1.2-cwd.patch:
+  Add fix for kdebug 301808, incorrect working dir used
 
   17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> kile-2.1.2.ebuild:
   Use global USE flag "postscript" instead of local USE flag "ps" for
