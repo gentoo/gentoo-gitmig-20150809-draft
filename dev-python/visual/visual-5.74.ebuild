@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.74.ebuild,v 1.1 2012/06/18 10:16:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.74.ebuild,v 1.2 2012/06/18 15:38:51 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,12 +32,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	# Delete redundant file, which causes compilation failure.
-	rm -f src/gtk2/random_device.cpp
-	sed -i \
-		-e "s/ random_device.l\?o//" \
-		src/Makefile.in src/gtk2/makefile || die
-
 	# Verbose build.
 	sed -i \
 		-e 's/2\?>>[[:space:]]*\$(LOGFILE).*//' \
@@ -78,9 +72,6 @@ src_install() {
 	python_clean_installation_image
 
 	dodoc authors.txt HACKING.txt NEWS.txt
-
-	# Don't install useless vpython script.
-	rm -fr "${ED}usr/bin"
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.59 2012/06/18 10:16:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.60 2012/06/18 15:38:51 floppym Exp $
+
+  18 Jun 2012; Mike Gilbert <floppym@gentoo.org> visual-5.74.ebuild:
+  Remove workarounds due to changes in build system upstream. Thanks Arfrever.
 
 *visual-5.74 (18 Jun 2012)
 
