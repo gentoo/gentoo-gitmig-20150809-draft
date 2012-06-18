@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.184 2012/05/22 15:22:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.185 2012/06/18 22:58:25 pesa Exp $
+
+  18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Cleanup metadata and add upstream info.
 
 *qt-gui-4.8.2 (22 May 2012)
 

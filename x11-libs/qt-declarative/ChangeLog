@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.45 2012/06/18 21:46:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.46 2012/06/18 22:57:20 pesa Exp $
+
+  18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Cleanup metadata and add upstream info.
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> qt-declarative-4.8.1.ebuild,
   qt-declarative-4.8.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.112 2012/05/22 15:23:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.113 2012/06/18 22:59:34 pesa Exp $
+
+  18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Cleanup metadata and add upstream info.
 
 *qt-opengl-4.8.2 (22 May 2012)
 

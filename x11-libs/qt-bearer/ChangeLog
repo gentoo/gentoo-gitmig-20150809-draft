@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-bearer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.8 2012/05/25 16:17:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.9 2012/06/18 22:55:31 pesa Exp $
+
+  18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Cleanup metadata and add upstream info.
 
   25 May 2012; Alexis Ballier <aballier@gentoo.org> qt-bearer-4.8.2.ebuild:
   keyword ~amd64-fbsd, bug #412915
