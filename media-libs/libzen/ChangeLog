@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.44 2012/06/18 06:33:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.45 2012/06/18 22:31:14 radhermit Exp $
+
+  18 Jun 2012; Tim Harder <radhermit@gentoo.org> -libzen-0.4.23.ebuild:
+  Remove old.
 
   18 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libzen-0.4.26.ebuild:
   marked x86 per bug 419103
