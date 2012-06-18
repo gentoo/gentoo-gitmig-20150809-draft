@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.175 2012/06/05 02:16:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.176 2012/06/18 06:45:28 grobian Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -20,7 +20,7 @@ all-flag-vars() {
 	echo {C,CPP,CXX,CCAS,F,FC,LD}FLAGS
 }
 
-# {C,CXX,F,FC}FLAGS that we allow in strip-flags
+# {C,CPP,CXX,CCAS,F,FC,LD}FLAGS that we allow in strip-flags
 # Note: shell globs and character lists are allowed
 setup-allowed-flags() {
 	ALLOWED_FLAGS="-pipe"
@@ -54,6 +54,9 @@ setup-allowed-flags() {
 	ALLOWED_FLAGS+=" -mno-fsgsbase -mno-rdrnd -mno-f16c -mno-bmi -mno-tbm"
 	# 4.7
 	ALLOWED_FLAGS+=" -mno-avx2 -mno-bmi2 -mno-fma -mno-lzcnt"
+
+	# CPPFLAGS and LDFLAGS
+	ALLOWED_FLAGS+=" -I* -L* -R* -Wl,*"
 
 	export ALLOWED_FLAGS
 	return 0
@@ -344,7 +347,8 @@ filter-mfpmath() {
 
 # @FUNCTION: strip-flags
 # @DESCRIPTION:
-# Strip C[XX]FLAGS of everything except known good/safe flags.
+# Strip *FLAGS of everything except known good/safe flags.  This runs over all
+# flags returned by all_flag_vars().
 strip-flags() {
 	local x y var
 
