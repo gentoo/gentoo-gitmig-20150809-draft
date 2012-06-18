@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.2.ebuild,v 1.2 2012/05/10 07:00:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.2.ebuild,v 1.3 2012/06/18 18:39:00 ago Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://abcde.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="aac cdparanoia flac id3 lame musicbrainz normalize replaygain speex vorbis"
 
 # See `grep :: abcde-musicbrainz-tool` output for USE musicbrainz dependencies.
