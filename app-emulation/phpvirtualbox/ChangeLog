@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/phpvirtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.2 2012/06/17 09:17:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.3 2012/06/18 17:28:40 hwoarang Exp $
+
+*phpvirtualbox-4.1.7-r2 (18 Jun 2012)
+
+  18 Jun 2012; Markos Chandras <hwoarang@gentoo.org>
+  +phpvirtualbox-4.1.7-r2.ebuild, -phpvirtualbox-4.1.7-r1.ebuild,
+  files/vboxinit-initd:
+  Revbump for improved init script. Bug #420991, comment #17
 
 *phpvirtualbox-4.1.7-r1 (17 Jun 2012)
 
