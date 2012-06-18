@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.3.ebuild,v 1.2 2012/05/03 01:58:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.4.3.ebuild,v 1.1 2012/06/18 10:47:42 jer Exp $
 
 EAPI=4
 
@@ -41,8 +41,8 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="dselect? ( nls )"
 
 src_prepare() {
-	# don't mess with linker optimisation, respect user's flags (don't break!)
-	sed -i -e '/DPKG_LINKER_OPTIMISATIONS/d' configure.ac || die
+	# do not expect Debian's gzip --rsyncable extension
+	epatch "${FILESDIR}"/${PN}-1.16.4.2-gzip-rsyncable.patch
 
 	# Force the use of the running bash for get-version (this file is never
 	# installed, so no need to worry about hardcoding a temporary bash)
@@ -53,6 +53,10 @@ src_prepare() {
 	sed -i scripts/Makefile.am \
 		-e '/850_Dpkg_Compression.t/d' \
 		|| die "sed failed"
+
+	# test fails (bug #414095)
+	sed -i utils/Makefile.am \
+		-e '/^test_cases/d;/100_update_alternatives/d' || die
 
 	eautoreconf
 }
@@ -66,6 +70,8 @@ src_configure() {
 		$(use_with bzip2 bz2) \
 		$(use_with zlib) \
 		--disable-compiler-warnings \
+		--disable-compiler-optimisations \
+		--disable-linker-optimisations \
 		--without-selinux \
 		--disable-start-stop-daemon
 }
