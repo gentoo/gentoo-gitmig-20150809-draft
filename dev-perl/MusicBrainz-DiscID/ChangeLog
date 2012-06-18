@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MusicBrainz-DiscID
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MusicBrainz-DiscID/ChangeLog,v 1.2 2012/06/18 18:39:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MusicBrainz-DiscID/ChangeLog,v 1.3 2012/06/18 19:05:30 jdhore Exp $
+
+  18 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  MusicBrainz-DiscID-0.03.ebuild:
+  marked x86 per bug 421795
 
   18 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   MusicBrainz-DiscID-0.03.ebuild:
