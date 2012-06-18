@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.27.157.ebuild,v 1.1 2012/06/18 11:41:49 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.27.157.ebuild,v 1.2 2012/06/18 15:55:24 heroxbd Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ doc? ( http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}-man
 	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/${P}/${P}-manual.html )"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${PN}-2.27.57-as-needed.patch"
 	epatch "${FILESDIR}/${PN}-mymap.patch"
 }
 
