@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/comical
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.18 2012/06/17 06:01:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comical/ChangeLog,v 1.19 2012/06/18 18:38:28 ago Exp $
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> comical-0.8-r3.ebuild:
+  Stable for amd64, wrt bug #421375
 
   17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> comical-0.8-r3.ebuild:
   marked x86 per bug 421375
