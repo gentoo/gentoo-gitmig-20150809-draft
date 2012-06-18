@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.38 2012/05/04 08:22:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.39 2012/06/18 20:05:31 bicatali Exp $
+
+*plplot-5.9.9-r1 (18 Jun 2012)
+
+  18 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/plplot-5.9.9-CMakeLists.txt.patch, +plplot-5.9.9-r1.ebuild,
+  -plplot-5.9.7-r1.ebuild:
+  Adjust java installation directories. Remove D support, since we have no in
+  the tree. Add dependency on cairo-ocaml for OCaml bindings if cairo is on.
+  Fixed cmake error, bug #419743, thanks Juergen Rose for the patch.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> plplot-5.9.7-r1.ebuild,
   plplot-5.9.9.ebuild:
