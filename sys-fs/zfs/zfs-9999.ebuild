@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.23 2012/06/17 14:07:51 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.24 2012/06/18 15:19:14 ryao Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ else
 	MY_PV=$(replace_version_separator 3 '-')
 	SRC_URI="https://github.com/downloads/zfsonlinux/${PN}/${PN}-${MY_PV}.tar.gz"
 	S="${WORKDIR}/${PN}-${MY_PV}"
-	KEYWORDS=""
+	KEYWORDS="~amd64"
 fi
 
 DESCRIPTION="Native ZFS for Linux"
@@ -29,7 +29,7 @@ SLOT="0"
 IUSE="custom-cflags debug dracut +rootfs test test-suite static-libs"
 
 DEPEND="
-	>=sys-kernel/spl-${PV}
+	=sys-kernel/spl-${PV}*
 	sys-apps/util-linux[static-libs?]
 	sys-libs/zlib[static-libs(+)?]
 "
@@ -78,6 +78,12 @@ src_prepare() {
 	if [ ${PV} != "9999" ]
 	then
 		epatch "${FILESDIR}/${P}-hardened-support.patch"
+
+		# Fix various deadlocks
+		epatch "${FILESDIR}/${P}-use-pushpage.patch"
+		epatch "${FILESDIR}/${P}-remove-pfmalloc-1-of-3.patch"
+		epatch "${FILESDIR}/${P}-remove-pfmalloc-2-of-3.patch"
+		epatch "${FILESDIR}/${P}-remove-pfmalloc-3-of-3.patch"
 	fi
 
 	autotools-utils_src_prepare

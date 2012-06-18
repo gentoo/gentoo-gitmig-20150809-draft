@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.26 2012/06/17 17:38:43 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.27 2012/06/18 15:19:14 ryao Exp $
+
+  18 Jun 2012; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc9.ebuild,
+  zfs-9999.ebuild:
+  Keyword ~amd64
 
   17 Jun 2012; Richard Yao <ryao@gentoo.org>
   +files/zfs-0.6.0_rc9-remove-pfmalloc-1-of-3.patch,
