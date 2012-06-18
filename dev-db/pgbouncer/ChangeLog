@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgbouncer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/ChangeLog,v 1.4 2012/06/04 06:45:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/ChangeLog,v 1.5 2012/06/18 07:53:26 patrick Exp $
+
+*pgbouncer-1.5.2 (18 Jun 2012)
+
+  18 Jun 2012; Patrick Lauer <patrick@gentoo.org> +pgbouncer-1.5.2.ebuild:
+  Bump
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> pgbouncer-1.4.2.ebuild,
   pgbouncer-1.5.1.ebuild, pgbouncer-1.5.ebuild:
