@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/dnssec-tools-1.12.2-r1.ebuild,v 1.1 2012/05/29 01:52:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/dnssec-tools-1.12.2-r2.ebuild,v 1.1 2012/06/18 15:28:26 flameeyes Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ src_configure() {
 		--with-nsec3 \
 		--with-gnu-ld \
 		--with-validator \
+		--with-perl-build-args=INSTALLDIRS=vendor \
 		$(use_with ipv6) \
 		$(use_enable static-libs static) \
 		$(use_with threads)
