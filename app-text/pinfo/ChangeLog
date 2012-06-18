@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.65 2012/06/17 18:36:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.66 2012/06/18 01:53:11 jer Exp $
+
+  18 Jun 2012; Jeroen Roovers <jer@gentoo.org> -pinfo-0.6.10-r2.ebuild:
+  Old.
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> pinfo-0.6.10-r3.ebuild:
   alpha/ia64/sparc stable wrt #415291
