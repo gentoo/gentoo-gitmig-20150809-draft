@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libcompizconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.29 2012/05/05 03:52:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.30 2012/06/18 18:36:02 ssuominen Exp $
+
+  18 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libcompizconfig-0.8.8.ebuild:
+  Update to EAPI4 and prune_libtool_files but use --all argument wrt #421197
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   libcompizconfig-0.8.4-r2.ebuild, libcompizconfig-0.8.8.ebuild:
