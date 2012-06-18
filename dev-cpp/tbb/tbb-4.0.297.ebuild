@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.7 2012/06/05 14:37:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.8 2012/06/18 18:06:59 hasufell Exp $
 
 EAPI=4
 inherit eutils multilib versionator toolchain-funcs
@@ -22,7 +22,7 @@ SRC_URI="http://www.threadingbuildingblocks.org/uploads/${MYU}/${PV1}.${PV2}${MY
 LICENSE="GPL-2-with-exceptions"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc examples"
 # FIXME
 # https://bugs.gentoo.org/show_bug.cgi?id=412675#c10
