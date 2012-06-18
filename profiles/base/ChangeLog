@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.406 2012/06/18 12:06:38 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.407 2012/06/18 19:25:46 swift Exp $
+
+  18 Jun 2012; <swift@gentoo.org> package.mask:
+  Removing obsoleted packages, see #415729
 
   18 Jun 2012; Ultrabug <ultrabug@gentoo.org> package.use.mask:
   Drop gevent USE mask for www-servers/uwsgi wrt gevent-1.0_beta2 being
