@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.10.ebuild,v 1.8 2012/05/05 04:53:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.10.ebuild,v 1.9 2012/06/18 19:29:23 hwoarang Exp $
 
 EAPI=4
 
@@ -33,8 +33,9 @@ src_prepare() {
 		|| die "failed to fix desktop icon"
 	# drop -O0 -g. Bug #382265 and #382265
 	sed -i -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" "${S}"/configure.ac || die
+	#Remove -Werror for automake-1.12. Bug #421101
+	sed -i "s:-Werror::" configure.ac || die
 	eautoreconf
-
 }
 
 src_configure() {
