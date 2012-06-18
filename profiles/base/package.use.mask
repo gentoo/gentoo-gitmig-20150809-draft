@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.363 2012/06/17 22:12:11 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.364 2012/06/18 12:06:38 ultrabug Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -20,10 +20,6 @@ dev-db/firebird client
 # Andreas K. Huettel <dilfridge@gentoo.org> (25 Mai 2012)
 # Requires icc which does not emerge (distfile unavailable)
 media-libs/opencv ipp
-
-# Tiziano Müller <dev-zero@gentoo.org> (24 May 2012)
-# Requires gevent-1 which is still p.masked
-www-servers/uwsgi gevent
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (14 May 2012)
 # This is the GNOME 3.4 package.use mask

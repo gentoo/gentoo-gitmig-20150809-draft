@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6691 2012/06/18 08:55:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6692 2012/06/18 12:06:38 ultrabug Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jun 2012; Ultrabug <ultrabug@gentoo.org> package.mask:
+  Unmask gevent-1.0_beta2 with approval of xarthisius and dev-zero
 
   18 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask kicad (live ebuild in ~arch).

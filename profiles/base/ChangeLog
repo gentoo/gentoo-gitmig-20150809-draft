@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.405 2012/06/17 22:12:11 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.406 2012/06/18 12:06:38 ultrabug Exp $
+
+  18 Jun 2012; Ultrabug <ultrabug@gentoo.org> package.use.mask:
+  Drop gevent USE mask for www-servers/uwsgi wrt gevent-1.0_beta2 being
+  unmasked
 
   17 Jun 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
   Restrict c++0x and qpa USE mask to Qt < 4.8.3 only.
