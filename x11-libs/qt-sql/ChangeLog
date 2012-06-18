@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.136 2012/06/18 23:02:57 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.137 2012/06/18 23:13:27 pesa Exp $
+
+  18 Jun 2012; Davide Pesavento <pesa@gentoo.org> -qt-sql-4.8.1-r1.ebuild:
+  Remove unused revision.
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata and add upstream info.
