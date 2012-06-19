@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.9.ebuild,v 1.3 2012/06/19 16:21:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.9.ebuild,v 1.4 2012/06/19 18:51:30 floppym Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://libvncserver.sourceforge.net/LibVNCServer-${PV/_}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="+24bpp gcrypt gnutls ipv6 +jpeg ssl test threads +zlib"
+IUSE="+24bpp gcrypt gnutls ipv6 +jpeg +png ssl test threads +zlib"
 
 DEPEND="
 	gcrypt? ( dev-libs/libgcrypt )
@@ -26,6 +26,7 @@ DEPEND="
 		ssl? ( dev-libs/openssl )
 	)
 	jpeg? ( virtual/jpeg )
+	png? ( media-libs/libpng:0 )
 	zlib? ( sys-libs/zlib )
 "
 RDEPEND="${DEPEND}"
@@ -50,6 +51,7 @@ src_configure() {
 		$(usex gnutls --without-ssl $(use_with ssl)) \
 		$(use_with ipv6) \
 		$(use_with jpeg) \
+		$(use_with png) \
 		$(use_with threads pthread) \
 		$(use_with zlib)
 }
