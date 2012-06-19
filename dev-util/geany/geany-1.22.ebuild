@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-1.22.ebuild,v 1.1 2012/06/19 09:18:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-1.22.ebuild,v 1.2 2012/06/19 09:33:06 polynomial-c Exp $
 
 EAPI=4
 inherit eutils gnome2-utils
 
-LANGS="ast be bg ca cs de el en_GB es fi fr gl hu it ja kk ko lb nl pl pt pt_BR ro ru sl sv tr uk vi zh_CN ZH_TW"
+LANGS="ar ast be bg ca cs de el en_GB es fi fr gl hu id it ja kk ko lb lt mn nl nn pl pt pt_BR ro ru sk sl sv tr uk vi zh_CN ZH_TW"
 NOSHORTLANGS="en_GB zh_CN zh_TW"
 
 DESCRIPTION="GTK+ based fast and lightweight IDE"

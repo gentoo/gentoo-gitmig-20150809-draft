@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.54 2012/06/19 09:18:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.55 2012/06/19 09:33:06 polynomial-c Exp $
+
+  19 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> geany-1.22.ebuild:
+  Completed list of translations.
 
 *geany-1.22 (19 Jun 2012)
 
