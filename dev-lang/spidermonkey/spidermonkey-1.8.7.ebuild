@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.7.ebuild,v 1.1 2012/06/19 13:00:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.7.ebuild,v 1.2 2012/06/19 23:18:48 blueness Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -18,7 +18,7 @@ SRC_URI="http://people.mozilla.com/~dmandelin/${TARBALL_P}.tar.gz
 
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug jit static-libs test"
 
 S="${WORKDIR}/${MY_P}"
