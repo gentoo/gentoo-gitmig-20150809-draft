@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Listing
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Listing/ChangeLog,v 1.23 2012/05/05 23:48:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Listing/ChangeLog,v 1.24 2012/06/19 03:12:00 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> File-Listing-6.40.0.ebuild:
+  marked x86 per bug 414735
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> File-Listing-6.40.0.ebuild:
   keyword ~amd64-fbsd
