@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.10.ebuild,v 1.6 2012/06/08 12:05:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.10.ebuild,v 1.7 2012/06/19 07:28:21 scarabeus Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils
 PROTOCOL_IUSE="+aim gadu +icq +irc +jabber lj +msn rss +yahoo"
 IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg otr"
 
-DESCRIPTION="CenterIM is a fork of CenterICQ - a ncurses ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client"
+DESCRIPTION="CenterIM is a ncurses ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client"
 if [[ ${PV} = *_p* ]] # is this a snaphot?
 then
 	SRC_URI="http://www.centerim.org/download/snapshots/${PN}-${PV/*_p/}.tar.gz"
