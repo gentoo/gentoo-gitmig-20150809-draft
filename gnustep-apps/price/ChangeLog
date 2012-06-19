@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/price
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.26 2012/04/24 12:43:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.27 2012/06/19 06:45:11 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> price-1.1.0.ebuild:
+  marked x86 per bug 418999
 
 *price-1.1.0 (24 Apr 2012)
 
