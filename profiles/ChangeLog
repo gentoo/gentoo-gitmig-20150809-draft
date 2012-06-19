@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6696 2012/06/19 12:55:56 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6697 2012/06/19 22:23:38 je_fro Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jun 2012; Jeff Gardner <je_fro@gentoo.org> package.mask:
+  Removing sci-chemistry/jmol and sci-libs/naga from package.mask after
+  mirroring naga tarball.
 
   19 Jun 2012; Ian Stakenvicius <axs@gentoo.org> package.mask:
   added spidermonkey-1.8.7 to p.mask

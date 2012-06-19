@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13876 2012/06/19 12:55:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13877 2012/06/19 22:23:38 je_fro Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1021,9 +1021,6 @@ app-portage/layman-dbtools
 sci-astronomy/casa-data
 # rdep on the one above
 sci-astronomy/casacore
-sci-libs/naga
-# rdep on the one above
->=sci-chemistry/jmol-12.2
 sci-electronics/kicad
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
