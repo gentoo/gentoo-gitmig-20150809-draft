@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.236.ebuild,v 1.3 2012/06/11 10:14:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.236.ebuild,v 1.4 2012/06/19 19:32:58 lack Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -256,9 +256,4 @@ pkg_postinst() {
 			elog "you must install www-plugins/nspluginwrapper"
 		fi
 	fi
-
-	ewarn "Flash player is closed-source, with a long history of security"
-	ewarn "issues.  Please consider only running flash applets you know to"
-	ewarn "be safe.  The 'flashblock' extension may help for mozilla users:"
-	ewarn "  https://addons.mozilla.org/en-US/firefox/addon/433"
 }
