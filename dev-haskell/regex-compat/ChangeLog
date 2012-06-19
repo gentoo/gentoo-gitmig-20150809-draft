@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/regex-compat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-compat/ChangeLog,v 1.29 2011/12/04 17:44:28 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-compat/ChangeLog,v 1.30 2012/06/19 13:11:38 ago Exp $
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> regex-compat-0.95.1.ebuild:
+  Stable for amd64, wrt bug #414711
 
 *regex-compat-0.95.1 (04 Dec 2011)
 
