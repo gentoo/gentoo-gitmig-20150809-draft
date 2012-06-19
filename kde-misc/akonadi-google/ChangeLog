@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/akonadi-google
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.12 2012/06/19 20:00:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.13 2012/06/19 20:17:18 dilfridge Exp $
+
+*akonadi-google-20120619 (19 Jun 2012)
+
+  19 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akonadi-google-20120619.ebuild:
+  Add snapshot as there will be no releases anymore, merged into
+  kdepim-runtime-4.9
 
   19 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   akonadi-google-0.3.1.ebuild:
