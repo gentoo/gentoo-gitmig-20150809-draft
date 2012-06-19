@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.601 2012/06/14 22:10:11 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.602 2012/06/19 07:26:44 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> php-5.3.14.ebuild:
+  marked x86 per bug 421489
 
 *php-5.3.14 (14 Jun 2012)
 *php-5.4.4 (14 Jun 2012)
