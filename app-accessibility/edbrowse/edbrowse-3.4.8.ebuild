@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/edbrowse-3.4.8.ebuild,v 1.1 2011/11/15 16:35:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/edbrowse-3.4.8.ebuild,v 1.2 2012/06/19 17:45:19 axs Exp $
 
 EAPI="4"
 inherit eutils
@@ -19,11 +19,18 @@ COMMON_DEPEND=">=dev-lang/spidermonkey-1.8.5
 	>=dev-libs/openssl-0.9.8j
 	odbc? ( dev-db/unixODBC )"
 DEPEND="${COMMON_DEPEND}
+	virtual/pkgconfig
 	app-arch/unzip"
 RDEPEND="${COMMON_DEPEND}"
 
 src_compile() {
-	emake -j1 prefix=/usr STRIP=''
+	local jslib="-lmozjs185"
+	local jscppflags="-DXP_UNIX -DX86_LINUX -I/usr/include/js"
+	if has_version ~dev-lang/spidermonkey-1.8.7 ; then
+		jscppflags=$(pkg-config --cflags mozjs187)
+		jslib=$(pkg-config --libs mozjs187)
+	fi
+	emake -j1 prefix=/usr JSLIB="${jslib}" JS_CPPFLAGS="${jscppflags}" STRIP=''
 	if use odbc; then
 		# Top-level makefile doesn't have this target.
 		cd src
