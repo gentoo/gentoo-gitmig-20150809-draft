@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.54 2012/05/12 01:50:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.55 2012/06/19 01:50:57 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> IPC-Run3-0.45.0.ebuild:
+  marked x86 per bug 414745
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> IPC-Run3-0.45.0.ebuild:
   keyword ~amd64-fbsd
