@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.4.ebuild,v 1.5 2012/06/11 09:23:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.4.ebuild,v 1.6 2012/06/19 14:03:31 maksbotan Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ IUSE="doc"
 RDEPEND="dev-libs/popt
 	>=sys-libs/talloc-2.0.7[python]
 	>=sys-libs/tevent-0.9.14
-	>=sys-libs/tdb-1.2.9[python]
+	~sys-libs/tdb-1.2.9[python]
 	net-nds/openldap
 	!!<net-fs/samba-3.6.0[ldb]
 	!!>=net-fs/samba-4.0.0[ldb]

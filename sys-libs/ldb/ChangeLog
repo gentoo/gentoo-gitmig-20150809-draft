@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.25 2012/06/11 09:23:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.26 2012/06/19 14:03:31 maksbotan Exp $
+
+  19 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> -ldb-1.1.3.ebuild,
+  ldb-1.1.4.ebuild, ldb-1.1.6.ebuild:
+  Depend strictly on tdb version, bug 420713. Remove old 1.1.3
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ldb-1.1.4.ebuild:
   Stable for amd64, wrt bug #419961
