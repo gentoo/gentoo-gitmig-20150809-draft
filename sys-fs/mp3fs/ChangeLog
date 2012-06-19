@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mp3fs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.16 2012/04/06 14:26:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.17 2012/06/19 18:11:26 xmw Exp $
+
+*mp3fs-0.32 (19 Jun 2012)
+
+  19 Jun 2012; Michael Weber <xmw@gentoo.org> +mp3fs-0.32.ebuild:
+  Version bump
 
   06 Apr 2012; Michael Weber <xmw@gentoo.org> metadata.xml:
   Grabing package, remove old version.
