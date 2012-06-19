@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20111022.ebuild,v 1.3 2012/05/03 03:35:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20111022.ebuild,v 1.4 2012/06/19 17:32:43 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -22,7 +22,7 @@ RDEPEND="app-arch/libarchive
 	media-libs/sdl-image[png]
 	media-libs/libvorbis
 	net-misc/curl
-	sci-physics/bullet
+	sci-physics/bullet[-double-precision]
 	virtual/opengl
 	virtual/glu"
 DEPEND="${RDEPEND}
