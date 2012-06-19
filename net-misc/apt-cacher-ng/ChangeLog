@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/apt-cacher-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.12 2012/04/25 17:44:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.13 2012/06/19 22:08:51 jer Exp $
+
+*apt-cacher-ng-0.7.6 (19 Jun 2012)
+
+  19 Jun 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.1.ebuild,
+  -apt-cacher-ng-0.7.2.ebuild, apt-cacher-ng-0.7.3.ebuild,
+  +apt-cacher-ng-0.7.6.ebuild:
+  Version bump. Inherit user instead of eutils.
 
 *apt-cacher-ng-0.7.3 (25 Apr 2012)
 
