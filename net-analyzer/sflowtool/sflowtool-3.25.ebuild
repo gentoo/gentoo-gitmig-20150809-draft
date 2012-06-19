@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.25.ebuild,v 1.2 2012/06/12 03:01:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.25.ebuild,v 1.3 2012/06/19 20:27:01 jer Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic
@@ -22,6 +22,6 @@ src_prepare() {
 }
 
 src_configure() {
-	append-flags -DSPOOFSOURCE
-	econf
+	append-cppflags -DSPOOFSOURCE
+	default
 }
