@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.4.3.ebuild,v 1.4 2012/05/04 09:17:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.4.3.ebuild,v 1.5 2012/06/19 19:48:57 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://spice-space.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="static-libs"
 
 RDEPEND="virtual/libusb:1"
