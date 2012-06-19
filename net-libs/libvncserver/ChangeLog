@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.60 2012/06/14 15:26:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.61 2012/06/19 16:21:02 floppym Exp $
+
+  19 Jun 2012; Mike Gilbert <floppym@gentoo.org> -libvncserver-0.9.8.2.ebuild,
+  libvncserver-0.9.9.ebuild, metadata.xml:
+  Force gcrypt when gnutls is selected, bug 420803. Add openssl dependency.
+  Rename crypt and no24bpp use flags to gcrypt and 24bpp.
 
   14 Jun 2012; Jeroen Roovers <jer@gentoo.org> libvncserver-0.9.8.2-r2.ebuild:
   Stable for HPPA (bug #419275).
