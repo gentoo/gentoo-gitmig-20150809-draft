@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/numactl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.22 2012/03/22 21:50:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.23 2012/06/19 19:54:26 ago Exp $
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> numactl-2.0.7-r2.ebuild:
+  Stable for amd64, wrt bug #422237
 
 *numactl-2.0.7-r2 (22 Mar 2012)
 
