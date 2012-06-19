@@ -1,5 +1,8 @@
 
 
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> bitflu-1.43.ebuild:
+  Stable for amd64, wrt bug #422151
+
 *bitflu-1.43 (02 May 2012)
 
   02 May 2012; Anthony G. Basile <blueness@gentoo.org> +bitflu-1.43.ebuild:
