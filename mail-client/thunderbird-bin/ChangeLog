@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.76 2012/06/17 01:18:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.77 2012/06/19 05:02:07 nativemad Exp $
+
+  19 Jun 2012; Andreas Schuerch <nativemad@gentoo.org>
+  thunderbird-bin-10.0.5.ebuild:
+  x86 stable, thanks Mikle Kolyada
 
 *thunderbird-bin-13.0.1 (17 Jun 2012)
 
