@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.72 2012/06/18 10:45:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.73 2012/06/19 13:13:32 blueness Exp $
+
+*c-ares-1.9.1 (19 Jun 2012)
+
+  19 Jun 2012; Anthony G. Basile <blueness@gentoo.org> -c-ares-1.9.0.ebuild,
+  +c-ares-1.9.1.ebuild:
+  Version bump fixes bug in 1.9.0, removed.
+  http://c-ares.haxx.se/mail/c-ares-archive-2012-06/0012.shtml
 
 *c-ares-1.9.0 (18 Jun 2012)
 

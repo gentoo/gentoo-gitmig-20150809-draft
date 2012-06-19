@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/c-ares-1.9.0.ebuild,v 1.1 2012/06/18 10:45:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/c-ares-1.9.1.ebuild,v 1.1 2012/06/19 13:13:33 blueness Exp $
 
 EAPI=4
 
