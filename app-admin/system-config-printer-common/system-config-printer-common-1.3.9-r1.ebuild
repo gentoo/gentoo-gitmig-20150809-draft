@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r1.ebuild,v 1.8 2012/05/24 13:26:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r1.ebuild,v 1.9 2012/06/19 22:10:03 reavertm Exp $
 
 EAPI="3"
 
@@ -52,6 +52,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.9-split.patch"
+	epatch "${FILESDIR}/${PN}-1.3.9-cups_filters_path.patch"
 	eautoreconf
 }
 
