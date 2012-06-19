@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.292 2012/06/04 07:32:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.293 2012/06/19 14:36:26 fordfrog Exp $
+
+*tomcat-7.0.28 (19 Jun 2012)
+
+  19 Jun 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/7/7.0.28-build-xml.patch, +tomcat-7.0.28.ebuild:
+  Version bump
 
   04 Jun 2012; Johannes Huber <johu@gentoo.org> tomcat-7.0.27.ebuild:
   Stable for x86, wrt bug #414375
