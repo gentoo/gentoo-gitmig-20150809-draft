@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/soap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/ChangeLog,v 1.14 2012/01/23 13:17:46 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/ChangeLog,v 1.15 2012/06/19 19:44:56 ago Exp $
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> soap-2.3.1-r3.ebuild:
+  Stable for amd64, wrt bug #422029
 
 *soap-2.3.1-r3 (23 Jan 2012)
 
