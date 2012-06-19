@@ -1,6 +1,14 @@
 # ChangeLog for dev-scheme/guile-www
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.24 2011/11/21 15:32:15 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.25 2012/06/19 12:11:34 jlec Exp $
+
+*guile-www-2.34 (19 Jun 2012)
+
+  19 Jun 2012; Justin Lecher <jlec@gentoo.org> guile-www-2.30.ebuild,
+  +files/guile-www-2.30-alive.test.patch,
+  +files/guile-www-2.30-alive.test2.patch, +guile-www-2.34.ebuild,
+  metadata.xml:
+  Fix for broken test, #421781; Version Bump
 
   21 Nov 2011; Justin Lecher <jlec@gentoo.org> guile-www-2.30.ebuild:
   keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
