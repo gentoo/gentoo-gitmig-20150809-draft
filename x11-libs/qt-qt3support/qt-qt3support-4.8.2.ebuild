@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.8.2.ebuild,v 1.1 2012/05/22 15:24:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/qt-qt3support-4.8.2.ebuild,v 1.2 2012/06/19 22:36:56 pesa Exp $
 
 EAPI=4
 
@@ -21,6 +21,10 @@ DEPEND="
 	~x11-libs/qt-sql-${PV}[aqua=,c++0x=,debug=,qpa=,qt3support]
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${PV}-qatomic-x32.patch"
+)
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="

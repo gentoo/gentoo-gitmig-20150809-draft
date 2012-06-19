@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.8.2.ebuild,v 1.1 2012/05/22 15:20:18 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.8.2.ebuild,v 1.2 2012/06/19 22:32:01 pesa Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.7-qdbusintegrator-no-const.patch"
+	"${FILESDIR}/${PV}-qatomic-x32.patch"
 )
 
 pkg_setup() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.2.ebuild,v 1.4 2012/06/18 22:38:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.8.2.ebuild,v 1.5 2012/06/19 22:40:45 pesa Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.8.0-c++0x-fix.patch"
 	"${FILESDIR}/${PN}-4.8.1+glib-2.31.patch"
 	"${FILESDIR}/${PN}-4.8.1-no-use-ld-gold.patch"
+	"${FILESDIR}/${PV}-qatomic-x32.patch"
 )
 
 pkg_setup() {

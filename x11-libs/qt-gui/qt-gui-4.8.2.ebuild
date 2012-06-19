@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.2.ebuild,v 1.1 2012/05/22 15:22:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.2.ebuild,v 1.2 2012/06/19 22:33:09 pesa Exp $
 
 EAPI=4
 
@@ -60,6 +60,7 @@ PDEPEND="qt3support? ( ~x11-libs/qt-qt3support-${PV}[aqua=,c++0x=,debug=,qpa=] )
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.7.3-cups.patch"
+	"${FILESDIR}/${PV}-qatomic-x32.patch"
 )
 
 pkg_setup() {

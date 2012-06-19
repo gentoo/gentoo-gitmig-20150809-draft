@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.175 2012/06/18 22:56:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.176 2012/06/19 22:31:29 pesa Exp $
+
+  19 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/4.8.2-qatomic-x32.patch, qt-core-4.8.2.ebuild:
+  Add patch for x32 support in qatomic asm code (bug 420705).
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata and add upstream info.

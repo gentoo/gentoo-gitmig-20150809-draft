@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.156 2012/06/18 22:38:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.157 2012/06/19 22:40:45 pesa Exp $
+
+  19 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/4.8.2-qatomic-x32.patch, qt-webkit-4.8.2.ebuild:
+  Add patch for x32 support in qatomic asm code (bug 420705).
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml,
   qt-webkit-4.8.1.ebuild, qt-webkit-4.8.2.ebuild:

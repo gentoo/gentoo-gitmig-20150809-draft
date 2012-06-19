@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-openvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.9 2012/06/18 23:00:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.10 2012/06/19 22:35:16 pesa Exp $
+
+  19 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/4.8.2-qatomic-x32.patch, qt-openvg-4.8.2.ebuild:
+  Add patch for x32 support in qatomic asm code (bug 420705).
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata and add upstream info.

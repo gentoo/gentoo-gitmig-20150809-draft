@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/qt-openvg-4.8.2.ebuild,v 1.1 2012/05/22 15:23:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/qt-openvg-4.8.2.ebuild,v 1.2 2012/06/19 22:35:16 pesa Exp $
 
 EAPI=4
 
@@ -21,6 +21,10 @@ DEPEND="
 	~x11-libs/qt-gui-${PV}[aqua=,c++0x=,debug=,egl,qpa=,qt3support=]
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${PV}-qatomic-x32.patch"
+)
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.2.ebuild,v 1.2 2012/06/18 21:44:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.2.ebuild,v 1.3 2012/06/19 22:30:13 pesa Exp $
 
 EAPI=4
 
@@ -27,6 +27,10 @@ DEPEND="
 	webkit? ( ~x11-libs/qt-webkit-${PV}[aqua=,debug=,qpa=] )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${PV}-qatomic-x32.patch"
+)
 
 pkg_setup() {
 	# Pixeltool isn't really assistant related, but it relies on

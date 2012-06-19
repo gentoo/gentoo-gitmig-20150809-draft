@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-bearer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.9 2012/06/18 22:55:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.10 2012/06/19 22:30:55 pesa Exp $
+
+  19 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/4.8.2-qatomic-x32.patch, qt-bearer-4.8.2.ebuild:
+  Add patch for x32 support in qatomic asm code (bug 420705).
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata and add upstream info.
