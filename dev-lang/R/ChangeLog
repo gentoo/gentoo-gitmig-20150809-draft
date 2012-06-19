@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.200 2012/06/19 16:55:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.201 2012/06/19 19:16:55 bicatali Exp $
+
+  19 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> R-2.15.0.ebuild:
+  commented patches with upstream reports
 
   19 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> R-2.15.0.ebuild:
   Update bash completion file with newer one and fix installation
