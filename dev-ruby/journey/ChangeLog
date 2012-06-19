@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/journey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/ChangeLog,v 1.4 2012/05/17 10:59:53 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/ChangeLog,v 1.5 2012/06/19 04:45:33 graaff Exp $
+
+*journey-1.0.4 (19 Jun 2012)
+
+  19 Jun 2012; Hans de Graaff <graaff@gentoo.org> +journey-1.0.4.ebuild:
+  Version bump.
 
   17 May 2012; Thomas Kahle <tomka@gentoo.org> journey-1.0.3.ebuild:
   marked ~x86 per bug 396547
