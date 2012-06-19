@@ -1,15 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.0.ebuild,v 1.3 2012/06/06 02:50:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.0.ebuild,v 1.4 2012/06/19 16:55:00 bicatali Exp $
 
 EAPI=4
 
 inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator
 
+BCP=${PN}-20120306.bash_completion
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
 SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
-	bash-completion? ( mirror://gentoo/R.bash_completion.bz2 )"
+	bash-completion? ( http://dev.gentoo.org/~bicatali/distfiles/${BCP}.bz2 )"
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
 SLOT="0"
@@ -148,7 +149,7 @@ src_install() {
 		R_HOME=${R_DIR}
 	EOF
 	doenvd 99R
-	use bash-completion && dobashcomp "${WORKDIR}"/R.bash_completion
+	use bash-completion && newbashcomp "${WORKDIR}"/${BCP} ${PN}
 }
 
 pkg_postinst() {
