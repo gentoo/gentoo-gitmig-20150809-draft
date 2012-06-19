@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.12.ebuild,v 1.1 2012/04/17 17:04:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.12.ebuild,v 1.2 2012/06/19 18:20:26 jlec Exp $
 
-EAPI="4"
+EAPI=4
+
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils java-pkg-opt-2 python flag-o-matic toolchain-funcs
@@ -37,19 +38,21 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/3.11-openmp.patch \
-		"${FILESDIR}"/3.12-makefile.patch
+		"${FILESDIR}"/3.12-makefile2.patch
 	sed -i -e "s@\.\./@${EPREFIX}/usr/bin/@g" tools/*.py \
 		|| die "Failed to fix paths in python files"
+
 	if use java; then
 		local JAVAC_FLAGS="$(java-pkg_javac-args)"
 		sed -i \
 			-e "s/JAVAC_FLAGS =/JAVAC_FLAGS=${JAVAC_FLAGS}/g" \
 			java/Makefile || die "Failed to fix java makefile"
 	fi
+	tc-export CXX
 }
 
 src_compile() {
-	emake
+	default
 	use java && emake -C java
 }
 

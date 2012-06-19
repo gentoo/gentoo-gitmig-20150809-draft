@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libsvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.26 2012/04/17 17:04:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.27 2012/06/19 18:20:26 jlec Exp $
+
+  19 Jun 2012; Justin Lecher <jlec@gentoo.org> +files/3.12-makefile2.patch,
+  libsvm-3.12.ebuild:
+  Fix for gcc-4.7, #422099
 
 *libsvm-3.12 (17 Apr 2012)
 
