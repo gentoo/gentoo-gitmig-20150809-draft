@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/sudoku
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.5 2011/08/05 11:39:24 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.6 2012/06/19 06:36:35 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> sudoku-0.7.ebuild:
+  marked x86 per bug 400359
 
 *sudoku-0.7 (05 Aug 2011)
 *sudoku-0.6 (05 Aug 2011)
