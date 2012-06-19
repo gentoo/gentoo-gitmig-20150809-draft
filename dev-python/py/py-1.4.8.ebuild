@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.4.8.ebuild,v 1.1 2012/06/19 03:34:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.4.8.ebuild,v 1.2 2012/06/19 17:56:27 xarthisius Exp $
 
-EAPI="3"
+EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="py.test"
 
@@ -19,16 +19,7 @@ IUSE=""
 
 DEPEND="app-arch/unzip
 	dev-python/setuptools
-	test? ( >=dev-python/pytest-2.0.3 )"
+	test? ( >=dev-python/pytest-2 )"
 RDEPEND=""
 
 DOCS="CHANGELOG README.txt"
-
-src_prepare() {
-	distutils_src_prepare
-
-	# Disable failing tests.
-	rm -f testing/path/test_svnauth.py
-	rm -f testing/path/test_svnurl.py
-	rm -f testing/path/test_svnwc.py
-}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.119 2012/06/19 03:34:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.120 2012/06/19 17:56:27 xarthisius Exp $
+
+  19 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> py-1.4.8.ebuild:
+  Use EAPI=4. Simplify dependencies. Reenable tests fixed by upstream thanks to
+  report by Arfrever (py issue #8). Backported from Progress Overlay. Patch by
+  Arfrever
 
 *py-1.4.8 (19 Jun 2012)
 
