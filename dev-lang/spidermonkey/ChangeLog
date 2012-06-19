@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.74 2012/05/07 17:51:46 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.75 2012/06/19 13:00:21 axs Exp $
+
+*spidermonkey-1.8.7 (19 Jun 2012)
+
+  19 Jun 2012; Ian Stakenvicius <axs@gentoo.org> +spidermonkey-1.8.7.ebuild,
+  +files/spidermonkey-1.8.7-filter_desc.patch:
+  Version bump. Base name of library changed again, so rdeps will need to be
+  patched
 
   07 May 2012; Jory A. Pratt <anarchy@gentoo.org> spidermonkey-1.8.5-r1.ebuild:
   Fix cross compilation bug #414473
