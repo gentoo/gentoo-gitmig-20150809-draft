@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.35 2012/06/17 16:13:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.36 2012/06/19 07:58:28 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> gnumail-1.2.0.ebuild:
+  marked x86 per bug 421335
 
   17 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gnumail-1.2.0.ebuild:
   Stable for amd64, wrt bug #421335
