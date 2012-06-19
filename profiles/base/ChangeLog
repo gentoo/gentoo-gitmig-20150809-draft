@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.407 2012/06/18 19:25:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.408 2012/06/19 14:27:26 chithanh Exp $
+
+  19 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  mask wayland flag for stable mesa, #419473
 
   18 Jun 2012; <swift@gentoo.org> package.mask:
   Removing obsoleted packages, see #415729
