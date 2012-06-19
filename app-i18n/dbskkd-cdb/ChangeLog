@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.25 2012/06/01 00:14:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.26 2012/06/19 09:14:24 naota Exp $
+
+  19 Jun 2012; Naohiro Aota <naota@gentoo.org>
+  files/dbskkd-cdb-2.00-gentoo.patch:
+  Also try to include /usr/include/cdb. Respect LDFLAGS. #316615
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> dbskkd-cdb-2.00.ebuild:
   inherit user for enewuser
