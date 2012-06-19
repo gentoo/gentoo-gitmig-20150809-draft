@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.20.1.ebuild,v 1.1 2012/06/14 11:46:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.20.1.ebuild,v 1.2 2012/06/19 22:00:59 reavertm Exp $
 
 EAPI="4"
 
@@ -50,24 +50,22 @@ RDEPEND="${COMMON_DEPEND}
 	cjk? ( >=app-text/poppler-data-0.4.4 )
 "
 
-DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
-
 PATCHES=(
-	"${FILESDIR}/${PN}-0.20.1-lcms-automagic.patch"
+	"${FILESDIR}/${P}-lcms-automagic.patch"
 )
+
+DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
 
 src_configure() {
 	mycmakeargs=(
 		-DBUILD_GTK_TESTS=OFF
 		-DBUILD_QT4_TESTS=OFF
 		-DBUILD_CPP_TESTS=OFF
-		-DENABLE_LCMS=OFF
 		-DENABLE_SPLASH=ON
 		-DENABLE_ZLIB=ON
 		$(cmake-utils_use_enable curl LIBCURL)
 		$(cmake-utils_use_enable cxx CPP)
 		$(cmake-utils_use_enable jpeg2k LIBOPENJPEG)
-		$(cmake-utils_use_enable lcms LCMS2)
 		$(cmake-utils_use_enable utils)
 		$(cmake-utils_use_enable xpdf-headers XPDF_HEADERS)
 		$(cmake-utils_use_with cairo)
@@ -77,6 +75,11 @@ src_configure() {
 		$(cmake-utils_use_with qt4)
 		$(cmake-utils_use_with tiff)
 	)
+	if use lcms; then
+		mycmakeargs+=(-DENABLE_CMS=lcms2)
+	else
+		mycmakeargs+=(-DENABLE_CMS=)
+	fi
 
 	cmake-utils_src_configure
 }
