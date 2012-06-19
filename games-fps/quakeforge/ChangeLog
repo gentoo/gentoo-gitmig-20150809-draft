@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.29 2012/06/17 11:31:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.30 2012/06/19 02:19:25 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> quakeforge-0.5.5-r2.ebuild:
+  marked x86 per bug 418411
 
   17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
   quakeforge-0.5.5-r2.ebuild, +files/quakeforge-0.5.5-libc.patch,
