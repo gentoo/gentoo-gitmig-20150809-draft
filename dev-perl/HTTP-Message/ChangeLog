@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Message
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.20 2012/05/05 23:49:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.21 2012/06/19 06:16:36 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> HTTP-Message-6.30.0.ebuild:
+  marked x86 per bug 414741
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> HTTP-Message-6.30.0.ebuild:
   keyword ~amd64-fbsd
