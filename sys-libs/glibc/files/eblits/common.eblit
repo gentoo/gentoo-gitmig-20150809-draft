@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.26 2012/06/01 17:49:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.27 2012/06/19 22:06:23 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -241,7 +241,9 @@ want__thread() {
 
 use_multiarch() {
 	# Make sure binutils is new enough to support indirect functions #336792
-	local bver=$($(tc-getLD ${CTARGET}) -v | awk '{print $NF}') nver
+	# This funky sed supports gold and bfd linkers.
+	local bver nver
+	bver=$($(tc-getLD ${CTARGET}) -v | sed -n -r '1{s:[^0-9]*::;s:^([0-9.]*).*:\1:;p}')
 	case $(tc-arch ${CTARGET}) in
 		amd64|x86) nver="2.20" ;;
 		sparc)     nver="2.21" ;;
