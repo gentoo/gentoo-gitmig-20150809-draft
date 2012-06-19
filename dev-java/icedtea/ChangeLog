@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.75 2012/06/19 20:30:04 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.76 2012/06/19 21:02:24 sera Exp $
+
+  19 Jun 2012; Ralph Sennhauser <sera@gentoo.org> -icedtea-6.1.10.6.ebuild,
+  -icedtea-6.1.11.1.ebuild, -files/icedtea-6.1.11.1-cacao_jvm.cfg.patch,
+  -icedtea-7.2.0.1.ebuild, metadata.xml:
+  Drop 1.10 and 2.0 branches.
 
 *icedtea-7.2.2.1 (19 Jun 2012)
 *icedtea-7.2.1.1 (19 Jun 2012)
