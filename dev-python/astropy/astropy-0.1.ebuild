@@ -1,11 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.1.ebuild,v 1.2 2012/06/19 19:51:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.1.ebuild,v 1.3 2012/06/19 20:43:31 bicatali Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST=setup.py
+# configobj is restricted to 2.*
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils distutils
 
@@ -15,7 +17,7 @@ SRC_URI="http://github.com/downloads/${PN}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 RDEPEND="dev-libs/expat
@@ -23,7 +25,7 @@ RDEPEND="dev-libs/expat
 DEPEND="${RDEPEND}
 	dev-python/configobj
 	dev-python/pytest
-	doc? ( dev-python/sphinx )"
+	doc? ( dev-python/sphinx dev-python/matplotlib )"
 
 src_prepare() {
 	# Remove most of the bundled deps
