@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.1.ebuild,v 1.1 2012/06/19 16:01:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.1.ebuild,v 1.2 2012/06/19 19:51:29 xarthisius Exp $
 
 EAPI=4
 
@@ -22,8 +22,8 @@ RDEPEND="dev-libs/expat
 	dev-python/numpy"
 DEPEND="${RDEPEND}
 	dev-python/configobj
-	doc? ( dev-python/sphinx )
-	test? ( dev-python/pytest )"
+	dev-python/pytest
+	doc? ( dev-python/sphinx )"
 
 src_prepare() {
 	# Remove most of the bundled deps
