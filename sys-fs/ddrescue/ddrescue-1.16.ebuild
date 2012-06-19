@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.14.ebuild,v 1.4 2011/07/26 21:12:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.16.ebuild,v 1.1 2012/06/19 09:42:54 polynomial-c Exp $
+
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -10,24 +12,22 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 ppc ~sparc x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux"
 IUSE=""
 
 DEPEND=""
 RDEPEND=""
 
-src_compile() {
+src_configure() {
 	# not a normal configure script
-	./configure \
-		--prefix=/usr \
+	econf \
+		--prefix="${EPREFIX}"/usr \
 		CC="$(tc-getCC)" \
 		CXX="$(tc-getCXX)" \
 		CPPFLAGS="${CPPFLAGS}" \
 		CFLAGS="${CFLAGS}" \
 		CXXFLAGS="${CXXFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		|| die "configure failed"
-	emake || die "emake failed"
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_test() {
@@ -35,6 +35,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-man || die "make install failed"
+	emake DESTDIR="${D}" install install-man
 	dodoc ChangeLog README NEWS AUTHORS
 }
