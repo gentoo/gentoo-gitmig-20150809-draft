@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r10.ebuild,v 1.3 2012/06/10 16:00:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r10.ebuild,v 1.4 2012/06/19 18:40:07 hd_brummy Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 # Switches supported by extensions-patch
 EXT_PATCH_FLAGS="analogtv atsc cmdsubmenu cutterlimit cutterqueue cuttime ddepgentry
@@ -40,7 +40,7 @@ SRC_URI="ftp://ftp.tvdr.de/vdr/${MY_P}.tar.bz2
 	ftp://ftp.tvdr.de/vdr/Developer/${MY_P}-2.diff
 	http://www.zulu-entertainment.de/files/patches/${EXT_P}.tar.bz2"
 
-KEYWORDS="~arm ~amd64 ~ppc ~x86"
+KEYWORDS="~arm amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
