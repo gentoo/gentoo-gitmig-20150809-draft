@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.106 2012/06/11 11:12:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.107 2012/06/19 05:50:42 ssuominen Exp $
+
+  19 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gtkpod-2.1.2_beta2.ebuild:
+  Export the GST_INSPECT environment variable to "true" in order to avoid
+  running gst-inspect-0.10 which is breaking sandbox when accessing
+  /root/.gstreamer-0.10 wrt #420279. Thanks to Kirk Diviney for testing and
+  "Maeredhel" for reporting.
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gtkpod-2.1.1-r3.ebuild:
   Stable for amd64, wrt bug #420007

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.2_beta2.ebuild,v 1.1 2012/06/07 00:35:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.2_beta2.ebuild,v 1.2 2012/06/19 05:50:42 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils
@@ -57,6 +57,8 @@ src_prepare() {
 }
 
 src_configure() {
+	export GST_INSPECT=true #420279
+
 	econf \
 		--disable-static \
 		$(use_enable webkit plugin-coverweb) \
@@ -76,9 +78,9 @@ src_install() {
 		figuresdir=/usr/share/doc/${PF}/html/figures \
 		install
 
-	dodoc AUTHORS ChangeLog NEWS README TODO TROUBLESHOOTING
+	prune_libtool_files --all
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	dodoc AUTHORS ChangeLog NEWS README TODO TROUBLESHOOTING
 	rm -f "${ED}"/usr/share/gtkpod/data/{AUTHORS,COPYING}
 }
 
