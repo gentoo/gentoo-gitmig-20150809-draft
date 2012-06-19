@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.39.ebuild,v 1.1 2011/10/02 08:31:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.39.ebuild,v 1.2 2012/06/19 21:02:06 jer Exp $
 
 EAPI="4"
 inherit eutils linux-info linux-mod multilib
@@ -25,9 +25,14 @@ DEPEND=">=net-firewall/iptables-1.4.3"
 RDEPEND="${DEPEND}
 	xtables_addons_ipset6? (
 		!net-firewall/ipset
-		net-libs/libmnl )
-	xtables_addons_geoip? ( virtual/perl-Getopt-Long
-		dev-perl/Text-CSV_XS )"
+		net-libs/libmnl
+	)
+	xtables_addons_geoip? (
+		app-arch/unzip
+		dev-perl/Text-CSV_XS
+		virtual/perl-Getopt-Long
+	)
+"
 
 DEPEND="${DEPEND}
 	virtual/linux-sources"
