@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13873 2012/06/18 12:06:38 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13874 2012/06/19 03:13:04 calchan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1020,7 +1020,7 @@ sci-astronomy/casacore
 sci-libs/naga
 # rdep on the one above
 >=sci-chemistry/jmol-12.2
-sci-electronics/kicad
+>=sci-electronics/kicad-99999999
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open
