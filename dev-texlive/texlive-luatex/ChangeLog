@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-luatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.30 2012/05/09 13:47:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.31 2012/06/19 13:58:22 aballier Exp $
+
+  19 Jun 2012; Alexis Ballier <aballier@gentoo.org>
+  -texlive-luatex-2010-r1.ebuild:
+  remove old
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> texlive-luatex-2011.ebuild:
   keyword ~amd64-fbsd

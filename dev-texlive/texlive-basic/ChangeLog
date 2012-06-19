@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-basic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.65 2012/05/09 13:44:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.66 2012/06/19 13:51:45 aballier Exp $
+
+  19 Jun 2012; Alexis Ballier <aballier@gentoo.org> -texlive-basic-2010.ebuild:
+  remove old
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   texlive-basic-2011-r1.ebuild:
