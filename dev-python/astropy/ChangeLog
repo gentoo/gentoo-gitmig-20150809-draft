@@ -1,9 +1,9 @@
 # ChangeLog for dev-python/astropy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.2 2012/06/19 19:51:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.3 2012/06/19 19:52:55 xarthisius Exp $
 
   19 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> astropy-0.1.ebuild:
-  Depend on dev-python/py unconditionally
+  Depend on dev-python/pytest unconditionally
 
 *astropy-0.1 (19 Jun 2012)
 
