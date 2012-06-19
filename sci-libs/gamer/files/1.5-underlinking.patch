@@ -1,10 +1,26 @@
+ src/aaa_lib/Makefile.am |   17 +++--------------
+ 1 files changed, 3 insertions(+), 14 deletions(-)
+
 diff --git a/src/aaa_lib/Makefile.am b/src/aaa_lib/Makefile.am
-index de1d7c3..b2420c8 100644
+index de1d7c3..83e2e5c 100644
 --- a/src/aaa_lib/Makefile.am
 +++ b/src/aaa_lib/Makefile.am
-@@ -35,18 +35,17 @@ LIBTETGEN   = libtetgen.la
- #LIBTETGEN   = 
- #endif
+@@ -22,31 +22,20 @@ BASE_LIBS   = ../base/libbase.la
+ BIOM_LIBS   = ../biom/libbiom.la
+ 
+ TRIANGLE_LIBS = ../triangle/libtriangle.la
+-#if BUILD_TRIANGLE
+-LIBTRIANGLE   = libtriangle.la
+-#else
+-#LIBTRIANGLE   = 
+-#endif
+ 
+ TETGEN_LIBS = ../tetgen/libtetgen.la
+-#if BUILD_TETGEN
+-LIBTETGEN   = libtetgen.la
+-#else
+-#LIBTETGEN   = 
+-#endif
  
 -libdir = ${prefix}/lib
  lib_LTLIBRARIES = libgamer.la ${LIBTRIANGLE} ${LIBTETGEN}
