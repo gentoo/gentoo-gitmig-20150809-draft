@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.74 2012/06/10 13:56:19 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.75 2012/06/19 20:30:04 sera Exp $
+
+*icedtea-7.2.2.1 (19 Jun 2012)
+*icedtea-7.2.1.1 (19 Jun 2012)
+*icedtea-6.1.11.3 (19 Jun 2012)
+
+  19 Jun 2012; Ralph Sennhauser <sera@gentoo.org> +icedtea-6.1.11.3.ebuild,
+  +files/icedtea-6-pass_javac_memory_args_to_vm.patch,
+  +files/icedtea-7.2.2.1-pr986-cacao_memory_fix.patch,
+  +files/icedtea-7-compile_for_7_cacao_mem.patch, +icedtea-7.2.1.1.ebuild,
+  +files/icedtea-7.2.1.1-pr986-cacao_memory_fix.patch, +icedtea-7.2.2.1.ebuild,
+  +files/icedtea-7-compiler_detection_cleanup.patch,
+  +files/icedtea-7-no_suffix.patch, metadata.xml:
+  Security bump. Imported from java-overlay. #421031
 
 *icedtea-7.2.2 (10 Jun 2012)
 

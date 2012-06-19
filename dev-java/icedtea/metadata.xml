@@ -16,6 +16,7 @@
 <use>
   <flag name="X">Make X buildtime-only depenency.</flag>
   <flag name="alsa">Make alsa buildtime-only dependency.</flag>
+  <flag name="cacao">Build CACAO virtual machine on platforms supporting HotSpot. (experimental)</flag>
   <flag name="cups">Make CUPS build-only dependency.</flag>
   <flag name="hs20">Use the new version of HotSpot (20).</flag>
   <flag name="jbootstrap">If possible, recompile the final IcedTea executables with itself.</flag>
