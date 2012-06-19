@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/bowtie
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/ChangeLog,v 1.13 2011/03/06 17:18:05 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/ChangeLog,v 1.14 2012/06/19 11:34:11 jlec Exp $
+
+*bowtie-0.12.8 (19 Jun 2012)
+
+  19 Jun 2012; Justin Lecher <jlec@gentoo.org> +bowtie-0.12.8.ebuild,
+  +files/bowtie-0.12.8-gcc-47.patch:
+  Version Bump, Fix compilation with gcc-4.7, #421919
 
 *bowtie-0.12.7 (06 Mar 2011)
 
