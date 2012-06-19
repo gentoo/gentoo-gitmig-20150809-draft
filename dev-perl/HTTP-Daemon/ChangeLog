@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.19 2012/06/19 06:11:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.20 2012/06/19 13:07:23 ago Exp $
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> HTTP-Daemon-6.10.0.ebuild:
+  Stable for amd64, wrt bug #414739
 
   19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> HTTP-Daemon-6.10.0.ebuild:
   marked x86 per bug 414739
