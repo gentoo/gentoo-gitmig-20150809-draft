@@ -11,5 +11,9 @@
     <flag name="debug">
       Add debug output to the driver library for pcsc-lite.
     </flag>
+
+    <flag name="udev">
+      Install rules for <pkg>sys-fs/udev</pkg> to auto-start openct.
+    </flag>
   </use>
 </pkgmetadata>

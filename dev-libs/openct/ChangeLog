@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.97 2012/06/06 03:45:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.98 2012/06/19 13:56:54 flameeyes Exp $
+
+*openct-0.6.20-r2 (19 Jun 2012)
+
+  19 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/openct.rc.2,
+  +openct-0.6.20-r2.ebuild, -openct-0.6.20-r1.ebuild, metadata.xml:
+  Update init script to use checkpath instead of using keepdir in the ebuild;
+  add an udev USE flag to not install the rules; use EAPI=4; use append-cppflags
+  for -DDEBUG_IFDH.
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> openct-0.6.20-r1.ebuild,
   openct-0.6.20.ebuild:

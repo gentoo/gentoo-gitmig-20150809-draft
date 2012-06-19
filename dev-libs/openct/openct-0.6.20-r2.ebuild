@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r1.ebuild,v 1.5 2012/06/06 03:45:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r2.ebuild,v 1.1 2012/06/19 13:56:54 flameeyes Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils flag-o-matic multilib user
 
@@ -14,16 +14,22 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="doc pcsc-lite usb debug"
+IUSE="doc pcsc-lite usb debug +udev"
 
 # libtool is required at runtime for libltdl
 RDEPEND="pcsc-lite? ( >=sys-apps/pcsc-lite-1.7.2-r1 )
 	usb? ( virtual/libusb:0 )
-	>=sys-fs/udev-096
 	sys-devel/libtool"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+# udev is not required at all at build-time as it's only a matter of
+# installing the rules; add openrc for the checkpath used in the new
+# init script
+RDEPEND="${RDEPEND}
+	udev? ( >=sys-fs/udev-096 )
+	sys-apps/openrc"
 
 pkg_setup() {
 	enewgroup openct
@@ -31,7 +37,7 @@ pkg_setup() {
 }
 
 src_configure() {
-	use debug && append-flags -DDEBUG_IFDH
+	use debug && append-cppflags -DDEBUG_IFDH
 
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
@@ -50,17 +56,16 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	find "${D}" -name '*.la' -delete
 	rm "${D}"/usr/$(get_libdir)/openct-ifd.*
 
-	insinto /lib/udev/rules.d/
-	newins etc/openct.udev 70-openct.rules || die "newins 70-openct.rules failed"
+	if use udev; then
+		insinto /lib/udev/rules.d/
+		newins etc/openct.udev 70-openct.rules
+	fi
 
-	diropts -m0750 -gopenct -oopenctd
-	keepdir /var/run/openct
-
-	newinitd "${FILESDIR}"/openct.rc openct
+	newinitd "${FILESDIR}"/openct.rc.2 openct
 }
 
 pkg_postinst() {
