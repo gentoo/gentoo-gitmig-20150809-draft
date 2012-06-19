@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.6 2012/06/17 15:03:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.7 2012/06/19 20:24:29 dilfridge Exp $
 
 EAPI=4
 
@@ -213,7 +213,6 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.6-system-pyuno.patch"
-	"${FILESDIR}/${PN}-3.6.9999-parins.patch"
 )
 
 REQUIRED_USE="
