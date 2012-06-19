@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9-r1.ebuild,v 1.5 2012/02/16 18:24:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9-r1.ebuild,v 1.6 2012/06/19 09:58:29 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="OpenGL virtual desktop switching"
@@ -14,44 +14,42 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="x11-libs/libX11
-	x11-libs/libXmu
-	x11-libs/libXt
+RDEPEND="media-libs/freeglut
+	>=media-libs/freetype-2
+	media-libs/imlib2[X]
+	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXi
-	x11-libs/libXxf86vm
-	media-libs/imlib2
-	media-libs/freeglut
-	media-libs/freetype"
+	x11-libs/libXmu
+	x11-libs/libXt
+	x11-libs/libXxf86vm"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
 	x11-proto/xproto"
 
+DOCS="AUTHORS TODO ChangeLog README README.windowmanagers"
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc4.patch \
+	epatch \
+		"${FILESDIR}"/${P}-gcc4.patch \
 		"${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-missing-include.patch \
 		"${FILESDIR}"/${P}-gl_init.patch
+
 	eautoreconf
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS TODO ChangeLog README README.windowmanagers
-}
-
 pkg_postinst() {
-	einfo
-	einfo "This ebuild installed a configuration file called /etc/3ddesktop.conf"
-	einfo "The default configuration makes a screenshot of the virtual desktops"
-	einfo "every X seconds. This is non-optimal behavior."
-	einfo
-	einfo "To enable a more intelligent way of updating the virtual desktops,"
-	einfo "execute the following:"
-	einfo
-	einfo "  echo \"AutoAcquire 0\" >> /etc/3ddesktop.conf"
-	einfo
-	einfo "This will cause 3ddesktop to update the virtual desktop snapshots"
-	einfo "only when a 3d desktop switch is required."
-	einfo
+	echo
+	elog "This ebuild installed a configuration file called /etc/3ddesktop.conf"
+	elog "The default configuration makes a screenshot of the virtual desktops"
+	elog "every X seconds. This is non-optimal behavior."
+	elog
+	elog "To enable a more intelligent way of updating the virtual desktops,"
+	elog "execute the following:"
+	elog
+	elog "  echo \"AutoAcquire 0\" >> /etc/3ddesktop.conf"
+	elog
+	elog "This will cause 3ddesktop to update the virtual desktop snapshots"
+	elog "only when a 3d desktop switch is required."
 }
