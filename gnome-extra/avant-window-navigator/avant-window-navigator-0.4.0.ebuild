@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.4 2012/05/05 06:25:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.5 2012/06/19 13:45:15 ssuominen Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ IUSE="doc +gconf vala"
 
 RDEPEND=">=dev-libs/dbus-glib-0.80
 	>=dev-libs/glib-2.16
+	dev-python/dbus-python
 	dev-python/librsvg-python
 	dev-python/pycairo
 	dev-python/pygobject:2
