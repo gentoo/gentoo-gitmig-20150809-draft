@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/sun-jmx-1.2.1-r3.ebuild,v 1.10 2010/01/03 20:57:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jmx/sun-jmx-1.2.1-r3.ebuild,v 1.11 2012/06/19 16:07:42 sera Exp $
+
+EAPI=4
 
 JAVA_PKG_IUSE="doc examples"
 
@@ -8,11 +10,13 @@ inherit java-pkg-2
 
 MY_P=jmx-${PV//./_}
 DESCRIPTION="Java Management Extensions for managing and monitoring devices, applications, and services."
-HOMEPAGE="http://java.sun.com/products/JavaManagement/index.jsp"
+HOMEPAGE="http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html"
 SRC_URI="${MY_P}-ri.zip"
-LICENSE="sun-bcla-jmx"
+
+LICENSE="Oracle-BCLA-JavaSE"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
+IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip"
@@ -20,9 +24,8 @@ RDEPEND=">=virtual/jre-1.4"
 RESTRICT="fetch"
 
 S="${WORKDIR}/${MY_P}-bin"
-IUSE=""
 
-DOWNLOADSITE="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=7657-jmx-1.2.1-oth-JPR@CDS-CDS_Developer"
+DOWNLOADSITE="http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-java-plat-419418.html"
 
 src_compile() { :; }
 
