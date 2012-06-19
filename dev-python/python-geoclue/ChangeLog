@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-geoclue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/ChangeLog,v 1.3 2012/02/24 08:55:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/ChangeLog,v 1.4 2012/06/19 10:31:48 jlec Exp $
+
+  19 Jun 2012; Justin Lecher <jlec@gentoo.org> python-geoclue-0.1.0.ebuild:
+  Use virtualx for during src_test, #421911
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-geoclue-0.1.0.ebuild:
   Restricting pypy and jython

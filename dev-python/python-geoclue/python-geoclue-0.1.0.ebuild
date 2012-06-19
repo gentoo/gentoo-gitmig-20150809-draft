@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/python-geoclue-0.1.0.ebuild,v 1.4 2012/02/24 08:55:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/python-geoclue-0.1.0.ebuild,v 1.5 2012/06/19 10:31:48 jlec Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* 2.5 2.7-pypy-* *-jython"
 PYTHON_MODNAME="Geoclue"
 
-inherit distutils
+inherit distutils virtualx
 
 DESCRIPTION="Geoclue python module"
 HOMEPAGE="http://live.gnome.org/gtg/soc/python_geoclue/"
@@ -29,7 +29,8 @@ S="${WORKDIR}"/${PN}
 
 src_test() {
 	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" tests/test.py
+		VIRTUALX_COMMAND="$(PYTHON)"
+		PYTHONPATH="build-${PYTHON_ABI}/lib" virtualmake tests/test.py
 	}
 	python_execute_function testing
 }
