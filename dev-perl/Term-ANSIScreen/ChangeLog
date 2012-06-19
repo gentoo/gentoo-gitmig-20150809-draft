@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ANSIScreen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.21 2012/06/19 01:34:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.22 2012/06/19 14:03:05 ago Exp $
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  Term-ANSIScreen-1.500.0.ebuild:
+  Stable for amd64, wrt bug #414751
 
   19 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
   Term-ANSIScreen-1.500.0.ebuild:
