@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm_advmultiselect
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm_advmultiselect/ChangeLog,v 1.3 2009/08/22 22:44:56 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm_advmultiselect/ChangeLog,v 1.4 2012/06/19 06:17:47 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  PEAR-HTML_QuickForm_advmultiselect-1.5.1.ebuild:
+  marked x86 per bug 414755
 
 *PEAR-HTML_QuickForm_advmultiselect-1.5.1 (22 Aug 2009)
 
