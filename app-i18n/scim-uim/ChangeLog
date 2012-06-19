@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-uim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.36 2012/06/18 19:55:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.37 2012/06/19 06:54:59 jdhore Exp $
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> scim-uim-0.2.0-r2.ebuild:
+  marked x86 per bug 421425
 
   18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> scim-uim-0.2.0-r2.ebuild:
   Stable for amd64, wrt bug #421425
