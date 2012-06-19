@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Message
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.21 2012/06/19 06:16:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.22 2012/06/19 13:20:21 ago Exp $
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> HTTP-Message-6.30.0.ebuild:
+  Stable for amd64, wrt bug #414741
 
   19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> HTTP-Message-6.30.0.ebuild:
   marked x86 per bug 414741
