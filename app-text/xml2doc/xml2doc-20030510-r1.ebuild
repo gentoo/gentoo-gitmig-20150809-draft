@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510-r1.ebuild,v 1.10 2011/02/22 16:36:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510-r1.ebuild,v 1.11 2012/06/19 03:28:39 floppym Exp $
 
-inherit eutils
+EAPI=4
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool to convert simple XML to a variety of formats (pdf, html, txt, manpage)"
 
@@ -20,24 +22,23 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Fix pointer-related bug detected by a QA notice.
 	epatch "${FILESDIR}/${PN}-pointer_fix.patch"
 
 	# Don't strip symbols from binary (bug #152266)
 	sed -i -e '/^\s*strip/d' \
-		-e '/^CC=/d' \
 		-e 's/^\t$(CC) $(LFLAGS).*/\t$(LINK.o) $(L_PDF) $^ -lxml2 -o $(BIN)/' \
 		-e '/^\t$(CC) $(CFLAGS) /d' \
 		src/Makefile.in
 }
 
-src_compile() {
+src_configure() {
 	econf --disable-pdf
-	emake || die "Compilation failed"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)"
 
 	cd "${S}/doc"
 	"${S}"/src/xml2doc -oM manpage.xml xml2doc.1 || die

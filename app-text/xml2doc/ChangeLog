@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xml2doc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.26 2011/02/22 16:36:27 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.27 2012/06/19 03:28:39 floppym Exp $
+
+  19 Jun 2012; Mike Gilbert <floppym@gentoo.org> xml2doc-20030510-r1.ebuild:
+  Respect CC, bug 243764.
 
   22 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   xml2doc-20030510-r1.ebuild:
