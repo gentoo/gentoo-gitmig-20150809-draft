@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/geolizer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/geolizer/ChangeLog,v 1.3 2010/09/17 06:47:32 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/geolizer/ChangeLog,v 1.4 2012/06/19 21:09:55 jer Exp $
+
+  19 Jun 2012; Jeroen Roovers <jer@gentoo.org>
+  geolizer-2.01.10_p20070115-r1.ebuild:
+  Fix building against net-libs/geoip[-static-libs] by Diego Elio Pettenò (bug
+  #369525).
 
 *geolizer-2.01.10_p20070115-r1 (17 Sep 2010)
 
