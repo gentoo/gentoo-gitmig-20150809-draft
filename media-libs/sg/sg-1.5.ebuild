@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.5.ebuild,v 1.4 2012/05/02 10:33:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.5.ebuild,v 1.5 2012/06/19 10:27:13 jlec Exp $
 
 EAPI=4
 
@@ -15,18 +15,16 @@ SRC_URI="http://www.fetk.org/codes/download/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
-IUSE="doc opengl static-libs"
+IUSE="doc static-libs"
 
 RDEPEND="
 	dev-libs/maloc
 	x11-libs/libXaw
 	x11-libs/openmotif
-	opengl? (
-		|| (
-			<media-libs/mesa-8[motif]
-			( media-libs/mesa x11-libs/libGLw )
-			media-libs/opengl-apple )
-	)"
+	|| (
+		<media-libs/mesa-8[motif]
+		( media-libs/mesa x11-libs/libGLw )
+		media-libs/opengl-apple )"
 DEPEND="
 	${RDEPEND}
 	doc? (
@@ -65,7 +63,7 @@ src_configure() {
 
 	use doc || myeconfargs+=( --with-doxygen= --with-dot= )
 
-	use opengl && myeconfargs+=( --enable-glforce --enable-gluforce --enable-glwforce )
+	myeconfargs+=( --enable-glforce --enable-gluforce --enable-glwforce )
 
 	myeconfargs+=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
