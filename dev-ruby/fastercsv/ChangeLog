@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fastercsv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/ChangeLog,v 1.13 2011/01/14 07:37:52 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/ChangeLog,v 1.14 2012/06/19 04:35:26 graaff Exp $
+
+*fastercsv-1.5.5 (19 Jun 2012)
+
+  19 Jun 2012; Hans de Graaff <graaff@gentoo.org> +fastercsv-1.5.5.ebuild:
+  Version bump.
 
 *fastercsv-1.5.4 (14 Jan 2011)
 
