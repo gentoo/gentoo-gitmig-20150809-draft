@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/qtm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/ChangeLog,v 1.22 2012/05/06 17:15:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/ChangeLog,v 1.23 2012/06/19 19:43:59 ago Exp $
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> qtm-1.3.10.ebuild:
+  Stable for amd64, wrt bug #422145
 
 *qtm-1.3.10 (06 May 2012)
 
