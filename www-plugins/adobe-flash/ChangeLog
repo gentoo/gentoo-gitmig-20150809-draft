@@ -1,6 +1,6 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.137 2012/06/19 19:34:55 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.138 2012/06/20 13:41:37 tove Exp $
 
   19 Jun 2012; Jim Ramsay <jim_ramsay@gentoo.org>
   adobe-flash-10.3.183.18.ebuild, -adobe-flash-11.2.202.228.ebuild,
@@ -41,7 +41,7 @@
   +adobe-flash-11.2.202.233.ebuild:
   Version bump (Bug #414039)
 
-  24 Apr 2012; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  24 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   adobe-flash-11.2.202.228.ebuild:
   Unbreak the check for SSE2. Beside, should this actually be performed for
   AMD64?
@@ -134,14 +134,14 @@
   +adobe-flash-11.1.102.55.ebuild:
   Bug #390149: Flash player 11.1.102.55 is released
 
-  05 Oct 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  05 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   adobe-flash-11.0.1.152.ebuild:
   Unpack the uri properly, This was supposed to be in previous commit, dunno
   why it didn't get there.
 
 *adobe-flash-11.0.1.152 (05 Oct 2011)
 
-  05 Oct 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  05 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -adobe-flash-11.0.1.129_rc201109061.ebuild, +adobe-flash-11.0.1.152.ebuild:
   Add flash-11 final release because RCs are again unfetchable. Non-maintainer
   commit.
@@ -161,7 +161,7 @@
 
 *adobe-flash-11.0.1.129_rc201109061 (08 Sep 2011)
 
-  08 Sep 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  08 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -adobe-flash-11.0.1.60_beta201107131-r1.ebuild,
   -adobe-flash-11.0.1.60_beta201108082.ebuild,
   +adobe-flash-11.0.1.129_rc201109061.ebuild:
@@ -169,7 +169,7 @@
 
 *adobe-flash-10.3.183.7 (02 Sep 2011)
 
-  02 Sep 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  02 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -adobe-flash-10.3.181.26.ebuild, -adobe-flash-10.3.181.34.ebuild,
   -adobe-flash-10.3.183.5.ebuild, +adobe-flash-10.3.183.7.ebuild:
   Non-maintainer commit: add new 10.3 version that has fetchable sources.
@@ -660,7 +660,7 @@
   adobe-flash-10.0.32.18.ebuild:
   x86 stable, bug #278819
 
-  02 Aug 2009; Olivier CrÃªte <tester@gentoo.org>
+  02 Aug 2009; Olivier Crête <tester@gentoo.org>
   adobe-flash-10.0.32.18.ebuild:
   Stable on amd64, security bug #278819
 
@@ -792,7 +792,7 @@
   netscape-flash-10.0.12.36-r1.ebuild:
   x86 stable, bug #239543
 
-  18 Oct 2008; Dawid WÄgliÅski <cla@gentoo.org>
+  18 Oct 2008; Dawid Węgliński <cla@gentoo.org>
   netscape-flash-10.0.12.36-r1.ebuild:
   Stable on amd64 - security bug #239543
 
@@ -880,7 +880,7 @@
   -netscape-flash-9.0.60.0_beta100107.ebuild:
   Upstream source no longer available for these beta versions (Bug #206210)
 
-  01 Jan 2008; RaÃºl Porcel <armin76@gentoo.org>
+  01 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   netscape-flash-9.0.115.0.ebuild:
   x86 stable wrt security #193519
 
@@ -920,13 +920,13 @@
   14 Jul 2007; <tester@gentoo.org> netscape-flash-9.0.48.0.ebuild:
   Remove file that no longer exists
 
-  13 Jul 2007; Olivier CrÃªte <tester@gentoo.org>
+  13 Jul 2007; Olivier Crête <tester@gentoo.org>
   files/digest-netscape-flash-9.0.48.0, Manifest:
   Seems like the files were changed upstream
 
 *netscape-flash-9.0.48.0 (13 Jul 2007)
 
-  13 Jul 2007; Olivier CrÃªte <tester@gentoo.org>
+  13 Jul 2007; Olivier Crête <tester@gentoo.org>
   -netscape-flash-9.0.31.0.ebuild, +netscape-flash-9.0.48.0.ebuild:
   Security update, bugs #185141 and #185044
 
@@ -934,19 +934,19 @@
   netscape-flash-9.0.31.0.ebuild:
   amd64 stable, bug 167483
 
-  18 Feb 2007; RaÃºl Porcel <armin76@gentoo.org>
+  18 Feb 2007; Raúl Porcel <armin76@gentoo.org>
   netscape-flash-9.0.31.0.ebuild:
   x86 stable wrt bug 167483
 
-  31 Jan 2007; RaÃºl Porcel <armin76@gentoo.org>
+  31 Jan 2007; Raúl Porcel <armin76@gentoo.org>
   netscape-flash-7.0.68.ebuild, netscape-flash-9.0.31.0.ebuild:
   Remove net-www/gplflash blocker from DEPEND, bug 132922
 
-  27 Jan 2007; Olivier CrÃªte <tester@gentoo.org>
+  27 Jan 2007; Olivier Crête <tester@gentoo.org>
   netscape-flash-9.0.31.0.ebuild:
   Add warning on installation of debug version
 
-  19 Jan 2007; Olivier CrÃªte <tester@gentoo.org>
+  19 Jan 2007; Olivier Crête <tester@gentoo.org>
   -netscape-flash-9.0.21.78.ebuild, netscape-flash-9.0.31.0.ebuild:
   Add debug version and standalone player, thanks to Jakub, closes bug #162600
 
@@ -958,18 +958,18 @@
 
 *netscape-flash-9.0.31.0 (17 Jan 2007)
 
-  17 Jan 2007; Olivier CrÃªte <tester@gentoo.org>
+  17 Jan 2007; Olivier Crête <tester@gentoo.org>
   +netscape-flash-9.0.31.0.ebuild, -netscape-flash-9.0.21.55.ebuild,
   -netscape-flash-7.0.63.ebuild:
   New release (non-beta)
 
 *netscape-flash-9.0.21.78 (21 Nov 2006)
 
-  21 Nov 2006; Olivier CrÃªte <tester@gentoo.org>
+  21 Nov 2006; Olivier Crête <tester@gentoo.org>
   +netscape-flash-9.0.21.78.ebuild:
   New beta of flashplayer
 
-  01 Nov 2006; Olivier CrÃªte <tester@gentoo.org>
+  01 Nov 2006; Olivier Crête <tester@gentoo.org>
   netscape-flash-9.0.21.55.ebuild:
   Remove meaninless use flag, bug #153185
 
@@ -985,7 +985,7 @@
 
 *netscape-flash-9.0.21.55 (19 Oct 2006)
 
-  19 Oct 2006; Olivier CrÃªte <tester@gentoo.org>
+  19 Oct 2006; Olivier Crête <tester@gentoo.org>
   +netscape-flash-9.0.21.55.ebuild:
   New beta version
 
@@ -1011,13 +1011,13 @@
   20 Mar 2006; Michele Noberasco <s4t4n@gentoo.org> netscape-flash-7.0.63.ebuild:
   Stable for x86 per security bug #102777. Added missing metadata.xml.
 
-  20 Mar 2006; Olivier CrÃªte <tester@gentoo.org>
+  20 Mar 2006; Olivier Crête <tester@gentoo.org>
   netscape-flash-7.0.63.ebuild:
   Stable on amd64 per security bug #102777
 
 *netscape-flash-7.0.63 (19 Mar 2006)
 
-  19 Mar 2006; Petteri RÃ¤ty <betelgeuse@gentoo.org>
+  19 Mar 2006; Petteri Räty <betelgeuse@gentoo.org>
   +netscape-flash-7.0.63.ebuild:
   Version bump for bug #102777. Added stricter to RESTRICT because upstream
   binaries contain text relocations and there isn't much we can do about it.
@@ -1036,7 +1036,7 @@
   security bump, security flaw found in the previous versions. 
   a secure gflashplayer is no longer available, and has therefore been dropped.
 
-  11 Aug 2005; Diego PettenÃ² <flameeyes@gentoo.org>
+  11 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   netscape-flash-6.0.79.ebuild, netscape-flash-6.0.81.ebuild,
   netscape-flash-7.0.25.ebuild:
   Call has_multilib_profile from pkg_setup instead of global scope.
