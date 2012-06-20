@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.74 2012/04/29 19:01:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.75 2012/06/20 22:52:02 ulm Exp $
+
+  20 Jun 2012; Ulrich Müller <ulm@gentoo.org> cedet-1.1.ebuild:
+  When installing, ignore *.pt files produced by tests. Bug 422697.
 
 *cedet-1.1 (29 Apr 2012)
 

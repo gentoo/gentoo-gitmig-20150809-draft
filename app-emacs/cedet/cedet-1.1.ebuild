@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.1.ebuild,v 1.1 2012/04/29 19:01:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.1.ebuild,v 1.2 2012/06/20 22:52:02 ulm Exp $
 
 EAPI=4
 NEED_EMACS=22
@@ -42,7 +42,7 @@ src_install() {
 		file=${target##*/}
 		dir=${target%/*}; dir=${dir#./}
 		case "${file}" in
-			*~ | Makefile | *.texi | *-script | PRERELEASE_CHECKLIST \
+			*~ | Makefile | *.pt | *.texi | *-script | PRERELEASE_CHECKLIST \
 				| Project.ede | USING_CEDET_FROM_BZR | grammar-fw-ov.txt)
 				# ignore
 				;;
