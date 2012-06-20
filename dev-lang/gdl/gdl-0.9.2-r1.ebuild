@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.4 2012/06/16 16:48:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.5 2012/06/20 23:11:51 bicatali Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fftw grib gshhs hdf hdf5 imagemagick netcdf openmp proj postscript python
-	static-libs udunits wxwidgets X"
+	static-libs udunits wxwidgets"
 
 RDEPEND="sci-libs/gsl
 	sci-libs/plplot
@@ -34,7 +34,7 @@ RDEPEND="sci-libs/gsl
 	hdf? ( sci-libs/hdf )
 	hdf5? ( sci-libs/hdf5 )
 	imagemagick? ( media-gfx/imagemagick )
-	netcdf? ( sci-libs/netcdf )
+	netcdf? ( || ( sci-libs/netcdf-cxx sci-libs/netcdf[cxx] ) )
 	proj? ( sci-libs/proj )
 	postscript? ( dev-libs/pslib )
 	python? ( dev-python/numpy )
@@ -53,7 +53,7 @@ pkg_setup() {
 
 src_prepare() {
 	use hdf5 && has_version sci-libs/hdf5[mpi] && export CXX=mpicxx
-	epatch "${FILESDIR}"/${PV}-{antlr,numpy,proj4,include,tests}.patch
+	epatch "${FILESDIR}"/${PV}-{antlr,numpy,proj4,include,tests,semaphore}.patch
 	# make sure antlr includes are from system
 	rm -rf src/antlr
 	# gentoo: use proj instead of libproj4 (libproj4 last update: 2004)
@@ -71,6 +71,12 @@ src_prepare() {
 		for abi in ${PYTHON_ABIS}; do
 			mkdir "${S}"-${abi}
 		done
+	fi
+	if has_version sci-libs/netcdf-cxx; then
+		sed -i \
+			-e 's/netcdfcpp.h/netcdf/g' \
+			CMakeLists.txt src/ncdf_var_cl.cpp \
+			src/ncdf_cl.hpp src/ncdf_{att,dim}_cl.cpp || die
 	fi
 }
 
@@ -110,11 +116,7 @@ src_compile() {
 
 src_test() {
 	# defines a check target instead of the ctest to define some LDPATH
-	if use X; then
-		Xemake -j1 -C ${CMAKE_BUILD_DIR} check
-	else
-		emake -j1 -C ${CMAKE_BUILD_DIR} check
-	fi
+	Xemake -j1 -C ${CMAKE_BUILD_DIR} check
 }
 
 src_install() {
