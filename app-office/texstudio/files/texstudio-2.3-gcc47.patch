@@ -1,0 +1,41 @@
+ qcodeedit/lib/document/qdocumentcommand.cpp |    1 +
+ qtsingleapplication/qtlocalpeer.cpp         |    6 +++---
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/qcodeedit/lib/document/qdocumentcommand.cpp b/qcodeedit/lib/document/qdocumentcommand.cpp
+index 308e4e4..35b7d9f 100644
+--- a/qcodeedit/lib/document/qdocumentcommand.cpp
++++ b/qcodeedit/lib/document/qdocumentcommand.cpp
+@@ -32,6 +32,7 @@
+ 	\brief The base class for document editing command
+ */
+ 
++#include <unistd.h>
+ 
+ /*!
+ 	\brief ctor
+diff --git a/qtsingleapplication/qtlocalpeer.cpp b/qtsingleapplication/qtlocalpeer.cpp
+index 120a8e8..cab57cd 100644
+--- a/qtsingleapplication/qtlocalpeer.cpp
++++ b/qtsingleapplication/qtlocalpeer.cpp
+@@ -48,9 +48,9 @@
+ #include "qtlocalpeer.h"
+ #include <QtCore/QCoreApplication>
+ #include <QtCore/QTime>
+-#if QT_VERSION >= 0x040600
++#if QT_VERSION >= 0x040600
+ #include <QtCore/QProcessEnvironment>
+-#endif
++#endif
+ 
+ #if defined(Q_OS_WIN)
+ #include <QtCore/QLibrary>
+@@ -103,7 +103,7 @@ QtLocalPeer::QtLocalPeer(QObject* parent, const QString &appId)
+         socketName += QLatin1Char('-') + QString::number(sessionId, 16);
+     }
+ #else
+-    socketName += QLatin1Char('-') + QString::number(::getuid(), 16);
++    socketName += QLatin1Char('-') + QString::number(QtLP_Private::getuid(), 16);
+ #endif
+ 
+     server = new QLocalServer(this);
