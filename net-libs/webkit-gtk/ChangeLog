@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.166 2012/05/30 22:40:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.167 2012/06/20 06:34:59 ssuominen Exp $
+
+  20 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  webkit-gtk-1.8.1-r201.ebuild, webkit-gtk-1.8.1-r301.ebuild:
+  Fix compability with sys-devel/automake >= 1.12 wrt #420591 by Ryan Pennucci
 
   30 May 2012; Alexis Ballier <aballier@gentoo.org>
   webkit-gtk-1.8.1-r201.ebuild:

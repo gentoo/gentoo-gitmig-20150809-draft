@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.1-r201.ebuild,v 1.4 2012/05/30 22:40:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.1-r201.ebuild,v 1.5 2012/06/20 06:34:59 ssuominen Exp $
 
 EAPI="4"
 
@@ -132,6 +132,9 @@ src_prepare() {
 
 	# occasional test failure due to additional Xvfb process spawned
 	epatch "${FILESDIR}/${PN}-1.8.1-tests-xvfb.patch"
+
+	# For >=sys-devel/automake-1.12 compability wrt #420591
+	sed -i -e 's:mkdir_p:MKDIR_P:' {.,Source/WebKit/gtk/po}/GNUmakefile.am || die
 
 	# Respect CC, otherwise fails on prefix #395875
 	tc-export CC
