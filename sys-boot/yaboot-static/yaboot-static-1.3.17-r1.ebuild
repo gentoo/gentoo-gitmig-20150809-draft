@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.17-r1.ebuild,v 1.1 2012/05/12 03:20:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.17-r1.ebuild,v 1.2 2012/06/20 13:56:16 josejx Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://penguinppc.org/projects/yaboot/"
 SRC_URI="mirror://gentoo/yaboot-static-${PV}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~ppc64"
+KEYWORDS="-* ppc64"
 IUSE="ibm"
 DEPEND="!sys-boot/yaboot
 		sys-apps/powerpc-utils"
