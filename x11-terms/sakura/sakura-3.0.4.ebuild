@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-3.0.4.ebuild,v 1.1 2012/05/12 16:41:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-3.0.4.ebuild,v 1.2 2012/06/20 05:54:31 jdhore Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 LANGS=" ca cs de es fr hr hu it ja ko pl pt_BR ru zh_CN"
 IUSE="${LANGS// / linguas_}"
 
