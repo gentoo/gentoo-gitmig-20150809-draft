@@ -1,6 +1,12 @@
 # ChangeLog for media-video/aravis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aravis/ChangeLog,v 1.6 2012/06/09 23:35:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aravis/ChangeLog,v 1.7 2012/06/20 16:36:14 flameeyes Exp $
+
+*aravis-0.1.14 (20 Jun 2012)
+
+  20 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +aravis-0.1.14.ebuild,
+  metadata.xml:
+  Version bump; also fix the wrong herd in metadata.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> aravis-0.1.13.ebuild,
   aravis-9999.ebuild:
