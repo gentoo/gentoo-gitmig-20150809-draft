@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0.ebuild,v 1.1 2012/06/20 10:58:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0.ebuild,v 1.2 2012/06/20 19:48:44 mr_bones_ Exp $
 
 EAPI=4
-
 
 if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git
@@ -72,7 +71,6 @@ QA_WX_LOAD="
 	usr/bin/qemu-static-sparc64-binfmt
 	usr/bin/qemu-static-mipsn32-binfmt
 "
-
 
 src_prepare() {
 	cd "${S}"
