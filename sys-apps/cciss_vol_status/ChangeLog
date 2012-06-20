@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/cciss_vol_status
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.11 2012/06/20 06:01:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.12 2012/06/20 14:42:28 ago Exp $
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  cciss_vol_status-1.09-r1.ebuild:
+  Stable for amd64, wrt bug #422167
 
   20 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
   cciss_vol_status-1.09-r1.ebuild:
