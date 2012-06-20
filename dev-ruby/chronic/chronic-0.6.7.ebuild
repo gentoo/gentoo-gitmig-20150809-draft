@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/chronic-0.6.7.ebuild,v 1.1 2012/04/07 08:33:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/chronic-0.6.7.ebuild,v 1.2 2012/06/20 17:47:02 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 jruby ruby19"
@@ -19,3 +19,7 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
+
+all_ruby_prepare() {
+	sed -i -e '/git ls-files/d' chronic.gemspec || die
+}
