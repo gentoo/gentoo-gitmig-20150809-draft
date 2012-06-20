@@ -1,5 +1,8 @@
 
 
+  20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> bitflu-1.43.ebuild:
+  marked x86 per bug 422151
+
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> bitflu-1.43.ebuild:
   Stable for amd64, wrt bug #422151
 
