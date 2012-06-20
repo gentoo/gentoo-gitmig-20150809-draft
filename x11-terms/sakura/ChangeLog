@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.32 2012/06/20 05:54:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.33 2012/06/20 14:44:02 ago Exp $
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> sakura-3.0.4.ebuild:
+  Stable for amd64, wrt bug #422431
 
   20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> sakura-3.0.4.ebuild:
   marked x86 per bug 422431
