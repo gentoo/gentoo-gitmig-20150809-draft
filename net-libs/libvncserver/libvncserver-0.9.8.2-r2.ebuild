@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.8.2-r2.ebuild,v 1.9 2012/06/19 19:15:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.8.2-r2.ebuild,v 1.10 2012/06/20 22:06:30 floppym Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--without-x11vnc \
-		$(use_with !no24bpp 24bpp) \
+		$(use_with 24bpp) \
 		$(use_with gcrypt) \
 		$(use_with gnutls) \
 		$(use_with ipv6) \

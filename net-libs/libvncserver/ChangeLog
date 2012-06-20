@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.63 2012/06/19 19:15:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.64 2012/06/20 22:06:30 floppym Exp $
+
+  20 Jun 2012; Mike Gilbert <floppym@gentoo.org> libvncserver-0.9.8.2-r2.ebuild:
+  Fix 24bpp use flag, bug 422503 by Fab.
 
   19 Jun 2012; Mike Gilbert <floppym@gentoo.org> libvncserver-0.9.8.2-r2.ebuild:
   Rename 24bpp and crypt use flags.
