@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/xfi-drivers-1.00.ebuild,v 1.4 2012/06/20 13:57:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/xfi-drivers-1.00.ebuild,v 1.5 2012/06/20 15:37:52 mr_bones_ Exp $
 
 EAPI=4
 
@@ -21,11 +21,13 @@ IUSE="debug"
 S=${WORKDIR}/${MY_P}
 
 MODULE_NAMES="ctxfi(sound:${S}:${S})"
-BUILD_TARGETS="all"
-BUILD_PARAMS="$(use debug&&echo DEBUG=y)"
 CONFIG_CHECK="SND SOUND"
 
 src_prepare() {
+
+	BUILD_TARGETS="all"
+	BUILD_PARAMS="$(use debug&&echo DEBUG=y)"
+
 	sed -r \
 		-e 's/KERNELDIR/KERNEL_DIR/g' \
 		-e 's/CFLAGS/EXTRA_CFLAGS/' \
