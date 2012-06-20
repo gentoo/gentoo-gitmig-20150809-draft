@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.104 2012/06/18 02:36:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.105 2012/06/20 14:32:51 jer Exp $
+
+*opera-next-12.01.1473 (20 Jun 2012)
+
+  20 Jun 2012; Jeroen Roovers <jer@gentoo.org> +opera-next-12.01.1473.ebuild:
+  Add more pax-marking by Alex Efros (bug #421859).
+  http://my.opera.com/desktopteam/blog/2012/06/20/new-snapshot-12-01
 
   18 Jun 2012; Jeroen Roovers <jer@gentoo.org> opera-next-12.00.1467.ebuild:
   Reorder SLOTs in x11-libs/gtk+ USE=gtk RDEPEND.
