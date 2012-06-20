@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-HTTP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.24 2012/06/19 14:02:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.25 2012/06/20 20:03:40 maekke Exp $
+
+  20 Jun 2012; Markus Meier <maekke@gentoo.org> Net-HTTP-6.30.0.ebuild:
+  arm stable, bug #414749
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> Net-HTTP-6.30.0.ebuild:
   Stable for amd64, wrt bug #414749
