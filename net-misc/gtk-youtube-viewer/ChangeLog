@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gtk-youtube-viewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk-youtube-viewer/ChangeLog,v 1.3 2012/05/21 23:30:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk-youtube-viewer/ChangeLog,v 1.4 2012/06/20 20:33:42 hasufell Exp $
+
+  20 Jun 2012; Julian Ospald <hasufell@gentoo.org>
+  gtk-youtube-viewer-2.0.5.ebuild:
+  stable for amd64 wrt bug #422473
 
 *gtk-youtube-viewer-2.0.5 (21 May 2012)
 
