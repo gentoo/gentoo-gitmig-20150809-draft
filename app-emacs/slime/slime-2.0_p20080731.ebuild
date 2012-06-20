@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.8 2012/04/07 14:58:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20080731.ebuild,v 1.9 2012/06/20 07:07:38 ssuominen Exp $
 
 inherit common-lisp elisp eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2 xref.lisp"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc"
 
 RDEPEND="virtual/commonlisp dev-lisp/asdf"

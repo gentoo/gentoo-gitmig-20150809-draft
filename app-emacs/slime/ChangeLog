@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/slime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.70 2012/04/07 14:58:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.71 2012/06/20 07:07:38 ssuominen Exp $
+
+  20 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  slime-2.0_p20080731.ebuild:
+  Revert to ~sparc wrt #326217
 
   07 Apr 2012; Ulrich Müller <ulm@gentoo.org> slime-2.0_p20080731.ebuild,
   slime-2.0_p20080731-r1.ebuild, slime-2.0_p20101103.ebuild:
