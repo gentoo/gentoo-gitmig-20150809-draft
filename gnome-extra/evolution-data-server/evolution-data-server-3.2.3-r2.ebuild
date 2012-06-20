@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.3-r2.ebuild,v 1.1 2012/05/07 05:58:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.3-r2.ebuild,v 1.2 2012/06/20 06:51:30 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -90,6 +90,13 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-caldav-cannot-modify.patch"
 	# fix Google calendar event adding, bug #412829
 	epatch "${FILESDIR}/${P}-google-calendar.patch"
+
+	# Fix >=sys-devel/automake-1.12 compability wrt #420351
+	sed -i \
+		-e '/PROG_MKDIR_P/s:AM:AC:' \
+		-e 's:mkdir_p:MKDIR_P:' \
+		-e '/AM_INIT_AUTOMAKE/s:-Werror ::' \
+		m4/po.m4 po/Makefile.in.in configure.ac || die
 
 	eautoreconf
 
