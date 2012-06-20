@@ -1,47 +1,57 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.3-r1.ebuild,v 1.3 2011/06/08 18:22:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.5-r1.ebuild,v 1.1 2012/06/20 06:22:44 xmw Exp $
 
-EAPI=3
+EAPI=4
 
-inherit eutils
+inherit autotools eutils linux-info
 
 DESCRIPTION="Miredo is an open-source Teredo IPv6 tunneling software."
 HOMEPAGE="http://www.remlab.net/miredo/"
-SRC_URI="http://www.remlab.net/files/miredo/miredo-1.2.3.tar.bz2"
+SRC_URI="http://www.remlab.net/files/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+caps"
 
-DEPEND="dev-libs/judy
+RDEPEND="sys-apps/iproute2
+	dev-libs/judy
 	caps? ( sys-libs/libcap )"
-RDEPEND="${DEPEND}
-	sys-apps/iproute2"
+DEPEND="${RDEPEND}
+	app-arch/xz-utils"
+
+CONFIG_CHECK="~IPV6" #318777
 
 #tries to connect to external networks (#339180)
 RESTRICT="test"
 
+DOCS=( AUTHORS ChangeLog NEWS README TODO THANKS )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-configure-libcap.diff
+	eautoreconf
+}
+
 src_configure() {
-	econf --enable-miredo-user \
-		--prefix=/usr \
-		--sysconfdir=/etc \
+	econf \
+		--disable-static \
+		--enable-miredo-user \
 		--localstatedir=/var \
-		--docdir="/usr/share/doc/${P}"
-	use caps || \
-		echo "#undef HAVE_SYS_CAPABILITY_H" >> config.h
+		$(use_with caps libcap "${ROOT}usr")
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "failed install"
+	default
+	prune_libtool_files
+
 	newinitd "${FILESDIR}"/miredo-server.rc miredo-server
 	newconfd "${FILESDIR}"/miredo-server.conf miredo-server
 	newinitd "${FILESDIR}"/miredo.rc miredo
 	newconfd "${FILESDIR}"/miredo.conf miredo
+
 	insinto /etc/miredo
 	doins misc/miredo-server.conf
-	dodoc README NEWS ChangeLog AUTHORS THANKS TODO
 }
 
 pkg_preinst() {

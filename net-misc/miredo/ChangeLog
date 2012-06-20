@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/miredo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.13 2012/06/13 07:35:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.14 2012/06/20 06:22:44 xmw Exp $
+
+*miredo-1.2.5-r1 (20 Jun 2012)
+
+  20 Jun 2012; Michael Weber <xmw@gentoo.org>
+  +files/miredo-1.2.5-configure-libcap.diff, +miredo-1.2.5-r1.ebuild,
+  -miredo-1.2.3-r1.ebuild:
+  Revbump to improve ebuils (thanks for suggestions by Bertrand Jacquin and
+  Diego Elio Pettenò on bug 421171), drop old.
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> miredo-1.2.5.ebuild:
   marked x86 per bug 419313
