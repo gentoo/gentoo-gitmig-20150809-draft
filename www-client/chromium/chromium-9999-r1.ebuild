@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.120 2012/06/12 13:53:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.121 2012/06/20 13:41:20 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -26,7 +26,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.10.2.1
+	>=dev-lang/v8-3.11.10.6
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	dev-libs/expat
@@ -206,6 +206,7 @@ src_prepare() {
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tlslite/*' \
+		\! -path 'third_party/trace-viewer/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/v8-i18n/*' \
 		\! -path 'third_party/webdriver/*' \
