@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13-r2.ebuild,v 1.1 2012/06/20 11:02:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13-r2.ebuild,v 1.2 2012/06/20 14:40:38 scarabeus Exp $
 
 EAPI=4
 
@@ -23,9 +23,11 @@ IUSE="+orc"
 
 S=${WORKDIR}/${MY_P}
 
+# the libpostproc dep should be cleaned in future
 RDEPEND=">=media-libs/gstreamer-0.10.31
 	>=media-libs/gst-plugins-base-0.10.31
 	>=virtual/ffmpeg-0.10
+	|| ( media-video/ffmpeg media-libs/libpostproc <media-video/libav-0.8.2-r1 )
 	orc? ( >=dev-lang/orc-0.4.6 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
