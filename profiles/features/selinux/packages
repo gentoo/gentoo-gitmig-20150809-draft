@@ -1,18 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation.
+# Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/packages,v 1.2 2011/08/09 04:29:55 zmedico Exp $
-
-# This file extends the base packages file for the default profile that all
-# architectures will enjoy.  Please note that default is what most architectures
-# will have.  Some will have an selinux profile (see ${PORTDIR}/profiles/selinux).
-# The idea is to only create a new family of profiles when absolutely necessary.
-
-*sys-apps/busybox
-*sys-apps/hdparm
-*sys-apps/man-pages
-
-##############################################################################
-# Basic SELinux required versionings
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/packages,v 1.3 2012/06/20 14:38:44 swift Exp $
 
 # Base SELinux packages
 *sys-libs/libsepol
@@ -21,7 +9,3 @@
 *sys-apps/checkpolicy
 *sys-apps/policycoreutils
 *sec-policy/selinux-base-policy
-
-# SELinux-aware packages
-*>=sys-apps/util-linux-2.12
-*>=sys-libs/pam-0.77
