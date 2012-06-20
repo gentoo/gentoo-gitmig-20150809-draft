@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.265 2012/05/28 13:49:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.266 2012/06/20 20:09:15 fuzzyray Exp $
+
+*gentoolkit-0.3.0.6-r3 (20 Jun 2012)
+
+  20 Jun 2012; Paul Varner <fuzzyray@gentoo.org> +gentoolkit-0.3.0.6-r3.ebuild,
+  +files/0.3.0.6-euse-422675.patch:
+  Revision bump to add patch for euse to support the md5-dict metadata cache
+  format.
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> gentoolkit-0.3.0.5.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #411479
