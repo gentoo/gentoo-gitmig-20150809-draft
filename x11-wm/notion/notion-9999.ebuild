@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-9999.ebuild,v 1.1 2012/06/20 18:52:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-9999.ebuild,v 1.2 2012/06/20 19:49:13 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -63,7 +63,7 @@ src_install() {
 
 	exeinto /etc/X11/Sessions
 	doexe "${FILESDIR}"/notion
-	
+
 	insinto /usr/share/xsessions
 	doins "${FILESDIR}"/notion.desktop
 }
