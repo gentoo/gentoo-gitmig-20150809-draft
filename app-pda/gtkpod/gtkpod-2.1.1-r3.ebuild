@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.1-r3.ebuild,v 1.2 2012/06/11 11:12:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.1.1-r3.ebuild,v 1.3 2012/06/20 08:17:39 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="aac clutter curl flac gstreamer mp3 vorbis webkit"
 
 # libmp4v2.so.1 from SLOT=1 is dlopened but gtkpod has switched to
