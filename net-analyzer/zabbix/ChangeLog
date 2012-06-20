@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.99 2012/06/12 03:55:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.100 2012/06/20 20:11:59 mattm Exp $
+
+*zabbix-2.0.1_rc2 (20 Jun 2012)
+
+  20 Jun 2012; Matthew Marlowe <mattm@gentoo.org>
+  files/1.6.6/zabbix_proxy.conf, files/1.6.6/zabbix_server.conf,
+  files/1.6.6/zabbix_trapper.conf, +zabbix-2.0.1_rc2.ebuild:
+  Bump for Zabbix 2.0.1_rc2 which is currently masked. If no major bugs
+  reported, will release into testing arches soon making the 2.0.x releases
+  ~arch while keeping 1.8.x releases in stable. Also, minor mysql socket file
+  path update in default config files to fix bug #377241 which has been waiting
+  patiently for closure.
 
   12 Jun 2012; Zac Medico <zmedico@gentoo.org> zabbix-1.8.10-r1.ebuild,
   zabbix-1.8.10-r2.ebuild, zabbix-1.8.11-r1.ebuild, zabbix-1.8.11-r2.ebuild,
