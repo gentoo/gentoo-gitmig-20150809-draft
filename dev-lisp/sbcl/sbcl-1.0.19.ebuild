@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.19.ebuild,v 1.11 2012/06/07 19:01:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.19.ebuild,v 1.12 2012/06/20 07:09:29 ssuominen Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic multilib
 
@@ -30,7 +30,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="-* amd64 ppc sparc x86"
+KEYWORDS="-* amd64 ppc ~sparc x86"
 
 IUSE="ldb source threads unicode doc cobalt"
 
