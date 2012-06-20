@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-core-sounds/asterisk-core-sounds-1.4.22.ebuild,v 1.1 2012/02/20 16:33:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-core-sounds/asterisk-core-sounds-1.4.22.ebuild,v 1.2 2012/06/20 14:51:33 ago Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ done
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND=">=net-misc/asterisk-1.4"
 
