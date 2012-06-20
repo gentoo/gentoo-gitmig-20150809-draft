@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.80 2012/06/20 13:26:26 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.81 2012/06/20 17:55:42 marienz Exp $
+
+  20 Jun 2012; Marien Zwart <marienz@gentoo.org> pyxdg-0.20_rc1.ebuild:
+  Update SRC_URI again to use dev.gentoo.org instead of mirror://gentoo/ (bug
+  #422639).
 
   20 Jun 2012; Marien Zwart <marienz@gentoo.org> pyxdg-0.20_rc1.ebuild:
   Use gentoo's mirrors for the snapshot as the cgit-generated one changes (bug
