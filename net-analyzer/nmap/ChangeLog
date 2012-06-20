@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.253 2012/06/15 15:32:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.254 2012/06/20 17:33:05 jer Exp $
+
+*nmap-6.01 (20 Jun 2012)
+
+  20 Jun 2012; Jeroen Roovers <jer@gentoo.org> +nmap-6.01.ebuild,
+  +files/nmap-6.01-make.patch, metadata.xml:
+  Version bump. Add a parallel make patch (bug #416987). Add more USE flags for
+  optional utilities.
 
   15 Jun 2012; Jeroen Roovers <jer@gentoo.org> nmap-6.00.ebuild:
   Reinstate -j1 (bug #416987).
