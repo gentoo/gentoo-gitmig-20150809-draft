@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.167 2012/06/19 19:46:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.168 2012/06/20 07:44:56 jdhore Exp $
+
+  20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libxklavier-5.2.1.ebuild:
+  marked x86 per bug 422363
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libxklavier-5.2.1.ebuild:
   Stable for amd64, wrt bug #422363
