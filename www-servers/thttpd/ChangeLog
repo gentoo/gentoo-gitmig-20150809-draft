@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.40 2012/06/19 19:55:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.41 2012/06/20 06:39:26 jdhore Exp $
+
+  20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> thttpd-2.26.2.ebuild:
+  marked x86 per bug 422247
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> thttpd-2.26.2.ebuild:
   Stable for amd64, wrt bug #422247

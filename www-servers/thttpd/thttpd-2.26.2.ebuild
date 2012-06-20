@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.2.ebuild,v 1.4 2012/06/19 19:55:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.2.ebuild,v 1.5 2012/06/20 06:39:26 jdhore Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~mips x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=""
