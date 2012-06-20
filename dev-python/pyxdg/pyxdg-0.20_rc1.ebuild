@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.20_rc1.ebuild,v 1.2 2012/06/20 08:02:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.20_rc1.ebuild,v 1.3 2012/06/20 13:26:26 marienz Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit distutils
 
 DESCRIPTION="A Python module to deal with freedesktop.org specifications"
 HOMEPAGE="http://freedesktop.org/wiki/Software/pyxdg http://cgit.freedesktop.org/xdg/pyxdg/"
-SRC_URI="http://cgit.freedesktop.org/xdg/${PN}/snapshot/rel-${PV/_}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}-snapshot.tar.gz"
 
 LICENSE="GPL-2 LGPL-2" # xdg/Menu.py says GPL-2 but COPYING says LGPL-2
 SLOT="0"
