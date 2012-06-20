@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23-r1.ebuild,v 1.2 2012/06/20 06:12:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23-r2.ebuild,v 1.1 2012/06/20 06:12:44 dev-zero Exp $
 
 EAPI="4"
 
@@ -42,7 +42,7 @@ RDEPEND="${CDEPEND}
 	pulseaudio? ( media-sound/pulseaudio )"
 
 pkg_setup() {
-	python_set_active_version 2
+	python_set_active_version 2.7
 	python_pkg_setup
 }
 
@@ -71,6 +71,8 @@ src_configure() {
 
 src_install() {
 	default
+
+	python_convert_shebangs 2.7 "${D}"/usr/bin/blueman-* "${D}/usr/libexec/blueman-mechanism"
 
 	rm "${D}"/$(python_get_sitedir)/*.la
 	use sendto && rm "${D}"/usr/lib*/nautilus-sendto/plugins/*.la

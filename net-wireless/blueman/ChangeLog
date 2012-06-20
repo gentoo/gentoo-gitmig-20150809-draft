@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.14 2012/06/19 06:10:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.15 2012/06/20 06:12:44 dev-zero Exp $
+
+*blueman-1.23-r2 (20 Jun 2012)
+
+  20 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> +blueman-1.23-r2.ebuild,
+  blueman-1.23-r1.ebuild:
+  Convert shebangs to make sure python2.7 is used and set dependency to
+  python-2.7 since it does not work with python-2.6 (bug #421631).
 
 *blueman-1.23-r1 (19 Jun 2012)
 
