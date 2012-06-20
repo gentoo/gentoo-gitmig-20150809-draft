@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.0.ebuild,v 1.5 2012/06/19 19:16:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.0.ebuild,v 1.6 2012/06/20 18:12:23 calchan Exp $
 
 EAPI=4
 
-inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator
+inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator toolchain-funcs
 
 BCP=${PN}-20120306.bash_completion
 DESCRIPTION="Language and environment for statistical computing and graphics"
@@ -58,6 +58,11 @@ pkg_setup() {
 	filter-ldflags -Wl,-Bdirect -Bdirect
 	# avoid using existing R installation
 	unset R_HOME
+	# Temporary fix for bug #419761
+	if [[ ($(tc-getCC) == *gcc) && ($(gcc-version) == 4.7) ]]; then
+		append-flags -fno-ipa-cp-clone
+	fi
+	exit
 }
 
 src_prepare() {

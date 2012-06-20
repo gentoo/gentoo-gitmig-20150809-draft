@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.201 2012/06/19 19:16:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.202 2012/06/20 18:12:23 calchan Exp $
+
+  20 Jun 2012; Denis Dupeyron <calchan@gentoo.org> R-2.15.0.ebuild:
+  Fix bug #419761
 
   19 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> R-2.15.0.ebuild:
   commented patches with upstream reports
