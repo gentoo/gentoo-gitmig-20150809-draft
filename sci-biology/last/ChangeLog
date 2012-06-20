@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/last
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.19 2012/02/10 18:01:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.20 2012/06/20 21:20:03 jlec Exp $
+
+*last-230 (20 Jun 2012)
+
+  20 Jun 2012; Justin Lecher <jlec@gentoo.org> +last-230.ebuild:
+  Version BUmp, allows to compile with gcc-4.7, #422573
 
 *last-192 (10 Feb 2012)
 
