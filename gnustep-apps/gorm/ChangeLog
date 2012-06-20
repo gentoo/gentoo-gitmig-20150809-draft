@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.43 2012/04/07 14:54:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.44 2012/06/20 08:21:59 voyageur Exp $
+
+*gorm-1.2.18 (20 Jun 2012)
+
+  20 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> -gorm-1.2.12.ebuild,
+  -files/gorm-1.2.12-objc2_support.patch, +gorm-1.2.18.ebuild:
+  Version bump, code cleanup, stability fixes and support for newer runtimes.
+  Remove old
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> gorm-1.2.16.ebuild:
   x86 stable, bug #410601
