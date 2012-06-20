@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.399 2012/06/14 23:40:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.400 2012/06/20 09:26:50 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1438,8 +1438,10 @@ prune_libtool_files() {
 
 		# Remove static libs we're not supposed to link against.
 		if grep -q '^shouldnotlink=yes$' "${f}"; then
-			einfo "Removing unnecessary ${archivefile#${D%/}}"
-			rm -f "${archivefile}"
+			if [[ -f ${archivefile} ]]; then
+				einfo "Removing unnecessary ${archivefile#${D%/}} (static plugin)"
+				rm -f "${archivefile}"
+			fi
 
 			# The .la file may be used by a module loader, so avoid removing it
 			# unless explicitly requested.
