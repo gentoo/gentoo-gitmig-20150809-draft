@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.43 2012/05/03 18:49:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.44 2012/06/20 10:58:19 lu_zero Exp $
+
+*qemu-user-9999 (20 Jun 2012)
+*qemu-user-1.1.0 (20 Jun 2012)
+
+  20 Jun 2012; Luca Barbato <lu_zero@gentoo.org> +qemu-user-1.1.0.ebuild,
+  +qemu-user-9999.ebuild:
+  New version
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> qemu-user-1.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
