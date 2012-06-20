@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/regex-markup
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.14 2008/05/11 14:01:15 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.15 2012/06/20 12:23:18 jlec Exp $
+
+  20 Jun 2012; Justin Lecher <jlec@gentoo.org> regex-markup-0.10.0.ebuild,
+  +files/regex-markup-0.10.0-locale.patch:
+  Fix missing declerations, #240044; bump EAPI=4; add missing configure options
 
   11 May 2008; Markus Meier <maekke@gentoo.org> -regex-markup-0.9.0.ebuild:
   old
