@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.100 2012/06/20 20:11:59 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.101 2012/06/20 20:22:22 mattm Exp $
+
+  20 Jun 2012; Matthew Marlowe <mattm@gentoo.org> -zabbix-1.8.10-r1.ebuild,
+  -zabbix-1.8.10-r2.ebuild, -zabbix-1.8.11.ebuild, -zabbix-1.8.11-r1.ebuild,
+  -zabbix-1.8.12.ebuild:
+  Remove obsolete ebuilds - 1.8.11r2 is current stable, 1.8.13-r1 is future
+  stable, 1.8.14 will enter testing when released, and latest 2.0.1 will be the
+  first 2.0.x ebuild to be unmasked for testing on ~amd and ~x86 in the next
+  week.
 
 *zabbix-2.0.1_rc2 (20 Jun 2012)
 
