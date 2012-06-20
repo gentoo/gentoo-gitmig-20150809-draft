@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/chronic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.7 2012/04/07 08:33:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.8 2012/06/20 17:34:58 graaff Exp $
+
+  20 Jun 2012; Hans de Graaff <graaff@gentoo.org> -chronic-0.6.4.ebuild,
+  -chronic-0.6.4-r1.ebuild, -chronic-0.6.6.ebuild:
+  Remove old versions.
 
 *chronic-0.6.7 (07 Apr 2012)
 
