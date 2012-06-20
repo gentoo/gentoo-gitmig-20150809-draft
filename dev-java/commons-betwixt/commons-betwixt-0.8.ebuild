@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.8.ebuild,v 1.7 2010/02/09 11:30:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.8.ebuild,v 1.8 2012/06/20 07:29:38 sera Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc test source"
@@ -24,7 +24,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}
 	test? (
-		dev-java/ant-junit
+		dev-java/ant-junit:0
 		>=dev-java/xerces-2.7:2
 	)"
 
@@ -40,9 +40,10 @@ java_prepare() {
 	epatch "${FILESDIR}/${PN}-0.8-test-dtd.patch"
 }
 
+EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH},xerces-2"
+
 src_test() {
-	java-pkg_jar-from --into target/lib xerces-2,junit
-	ANT_TASKS="ant-junit" eant test -DJunit.present=true
+	java-pkg-2_src_test
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-betwixt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/ChangeLog,v 1.24 2010/03/20 10:53:03 betelgeuse Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/ChangeLog,v 1.25 2012/06/20 07:29:38 sera Exp $
+
+  20 Jun 2012; Ralph Sennhauser <sera@gentoo.org> commons-betwixt-0.8.ebuild:
+  Use eclass src_test instead of custom one. Fixes test failures due to missing
+  xerces deps in test classpath. #422457
 
   20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
   -commons-betwixt-0.7-r1.ebuild, -commons-betwixt-0.7-r2.ebuild:
