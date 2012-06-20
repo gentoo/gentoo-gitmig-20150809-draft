@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.124 2012/03/16 02:44:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.125 2012/06/20 14:53:11 ago Exp $
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> trac-0.12.3.ebuild:
+  Stable for amd64, wrt bug #422241
 
   16 Mar 2012; Mike Gilbert <floppym@gentoo.org> trac-0.12.3.ebuild:
   Use EAPI="4". Restrict Jython ABIs. Inherit only user.eclass for enewgroup()
