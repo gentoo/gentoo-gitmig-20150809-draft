@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13-r1.ebuild,v 1.4 2012/06/20 11:02:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13-r2.ebuild,v 1.1 2012/06/20 11:02:35 scarabeus Exp $
 
 EAPI=4
 
@@ -35,4 +35,12 @@ src_configure() {
 	econf \
 		--with-system-ffmpeg \
 		$(use_enable orc)
+}
+
+pkg_postinst() {
+	if has_version "media-video/ffmpeg"; then
+		elog "Please note that upstream uses media-video/libav"
+		elog "rather than media-video/ffmpeg. If you encoutner any"
+		elog "issues try to move from ffmpeg to libav."
+	fi
 }

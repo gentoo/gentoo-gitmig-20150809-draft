@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.135 2012/06/15 14:58:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.136 2012/06/20 11:02:35 scarabeus Exp $
+
+*gst-plugins-ffmpeg-0.10.13-r2 (20 Jun 2012)
+
+  20 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +gst-plugins-ffmpeg-0.10.13-r2.ebuild, gst-plugins-ffmpeg-0.10.13-r1.ebuild:
+  Revision bump the latest to use system ffmpeg like old version did. Remove the
+  patch for 4.7 which patched only libav code, same goes for hardened useflag.
+  Add some elog informations for ffmpeg users informing about upstream using
+  libav.
 
   15 Jun 2012; Justin Lecher <jlec@gentoo.org>
   gst-plugins-ffmpeg-0.10.13-r1.ebuild, +files/0.10.13-gcc-4.7.patch,
