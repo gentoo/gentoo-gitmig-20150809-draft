@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.121 2012/06/18 11:10:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.122 2012/06/20 20:03:15 maekke Exp $
+
+  20 Jun 2012; Markus Meier <maekke@gentoo.org> diffstat-1.55.ebuild:
+  arm stable, bug #418951
 
   18 Jun 2012; Jeroen Roovers <jer@gentoo.org> diffstat-1.55.ebuild:
   Stable for HPPA (bug #418951).
