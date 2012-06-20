@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/prank
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/ChangeLog,v 1.8 2012/02/28 05:37:06 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/ChangeLog,v 1.9 2012/06/20 21:12:38 jlec Exp $
+
+  20 Jun 2012; Justin Lecher <jlec@gentoo.org> prank-100701.ebuild,
+  prank-111130.ebuild, +files/prank-111130-gcc-4.7.patch:
+  Fix compilation with gcc-4.7, #422581
 
 *prank-111130 (28 Feb 2012)
 

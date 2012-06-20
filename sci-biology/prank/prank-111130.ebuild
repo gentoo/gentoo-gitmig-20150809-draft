@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/prank-111130.ebuild,v 1.1 2012/02/28 05:37:06 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/prank-111130.ebuild,v 1.2 2012/06/20 21:12:38 jlec Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Probabilistic Alignment Kit"
 HOMEPAGE="http://code.google.com/p/prank-msa/ http://www.ebi.ac.uk/goldman-srv/prank/prank/"
@@ -18,14 +18,21 @@ KEYWORDS="~amd64 ~x86"
 S="${WORKDIR}/prank-msa/src"
 
 src_prepare() {
-	sed -i -e "s/\$(LINK)/& \$(LDFLAGS)/" Makefile || die
+	epatch "${FILESDIR}"/${P}-gcc-4.7.patch
+	sed \
+		-e "s/\$(LINK)/& \$(LDFLAGS)/" \
+		-e "s:/usr/lib:${EPREFIX}/usr/$(get_libdir):g" \
+		-i Makefile || die
 }
 
 src_compile() {
-	emake LINK="$(tc-getCXX)" CFLAGS="${CFLAGS}" \
-		CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" || die
+	emake \
+		LINK="$(tc-getCXX)" \
+		CXX="$(tc-getCXX)" \
+		CFLAGS="${CFLAGS}" \
+		CXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
-	dobin prank || die
+	dobin prank
 }
