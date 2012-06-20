@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/deprecated
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.20 2012/05/01 18:24:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.21 2012/06/20 05:43:34 graaff Exp $
+
+  20 Jun 2012; Hans de Graaff <graaff@gentoo.org> deprecated-2.0.1-r2.ebuild:
+  Fix tests with ruby19, bug 421929.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> deprecated-2.0.1-r1.ebuild,
   deprecated-2.0.1-r2.ebuild, deprecated-3.0.0.ebuild:
