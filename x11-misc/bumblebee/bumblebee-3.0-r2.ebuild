@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0-r2.ebuild,v 1.2 2012/06/05 08:45:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0-r2.ebuild,v 1.3 2012/06/20 12:49:22 scarabeus Exp $
 
 EAPI="4"
 
@@ -58,8 +58,8 @@ src_install() {
 }
 
 pkg_preinst() {
-	! use video_cards_nvidia && rm "${D}"/etc/bumblebee/xorg.conf.nvidia
-	! use video_cards_nouveau && rm "${D}"/etc/bumblebee/xorg.conf.nouveau
+	use video_cards_nvidia || rm "${ED}"/etc/bumblebee/xorg.conf.nvidia
+	use video_cards_nouveau || rm "${ED}"/etc/bumblebee/xorg.conf.nouveau
 
 	enewgroup bumblebee
 }
