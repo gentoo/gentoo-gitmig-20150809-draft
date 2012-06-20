@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/hxd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.12 2012/05/10 16:05:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.13 2012/06/20 12:53:28 jlec Exp $
+
+*hxd-0.70.02-r1 (20 Jun 2012)
+
+  20 Jun 2012; Justin Lecher <jlec@gentoo.org> -hxd-0.70.02.ebuild,
+  +hxd-0.70.02-r1.ebuild, +files/hxd-0.70.02-llong-redef.patch,
+  +files/hxd-0.70.02-prll-flags.patch, metadata.xml:
+  Fix parallel build, #240257; fix LLONG_MAX redefinition, bump EAPI
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -hxd-0.70.ebuild:
   Remove old
