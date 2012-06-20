@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/trash-cli-0.12.4.ebuild,v 1.1 2012/05/10 14:51:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/trash-cli-0.12.4.ebuild,v 1.2 2012/06/20 06:15:58 jdhore Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/andreafrancia/${PN}/tarball/${PV} ->
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
