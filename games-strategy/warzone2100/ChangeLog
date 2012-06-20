@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.72 2012/05/04 04:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.73 2012/06/20 20:55:39 mr_bones_ Exp $
+
+  20 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  warzone2100-2.3.9.ebuild:
+  work around autopoint build issue with patch from Julian Ospald (bug #421511)
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> warzone2100-2.3.8.ebuild,
   warzone2100-2.3.9.ebuild:
