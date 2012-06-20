@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.42 2012/05/18 09:02:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.43 2012/06/20 08:29:19 nimiux Exp $
+
+*tripwire-2.4.2.2-r1 (20 Jun 2012)
+
+  20 Jun 2012; Chema Alonso <nimiux@gentoo.org> +tripwire-2.4.2.2-r1.ebuild,
+  +files/tripwire-2.4.2.2-gcc-4.7.patch, metadata.xml:
+  Bump revision to fix compilation with gcc-4.7 wrt bug #421715. Add
+  spanish longdescription and missing use flags to metadata
 
   18 May 2012; Jeff Horelick <jdhore@gentoo.org> tripwire-2.4.2.2.ebuild:
   marked x86 per bug 414487
