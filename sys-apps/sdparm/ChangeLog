@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.66 2012/06/19 19:47:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.67 2012/06/20 08:05:15 jdhore Exp $
+
+  20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> sdparm-1.07.ebuild:
+  marked x86 per bug 422189
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> sdparm-1.07.ebuild:
   Stable for amd64, wrt bug #422189
