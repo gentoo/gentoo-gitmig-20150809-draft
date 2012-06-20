@@ -1,49 +1,55 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.13 2010/04/06 09:04:00 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.14 2012/06/20 13:17:30 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit multilib autotools
+inherit autotools eutils multilib
 
 DESCRIPTION="A clean, lightweight, object oriented scripting language"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.ferite.org/"
-
-DEPEND=">=dev-libs/libpcre-5
-	dev-libs/libxml2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="as-is"
 KEYWORDS="~alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
+DEPEND="
+	>=dev-libs/libpcre-5
+	dev-libs/libxml2"
+RDEPEND="${DEPEND}"
+
 src_prepare() {
 	# use docsdir variable, install to DESTDIR
-	sed -i -e '/docsdir =/!s:$(prefix)/share/doc/ferite:$(DESTDIR)$(docsdir):' \
-		docs/Makefile.am || die
+	sed \
+		-e '/docsdir =/!s:$(prefix)/share/doc/ferite:$(DESTDIR)$(docsdir):' \
+		-i docs/Makefile.am || die
 
 	# Install docs to /usr/share/doc/${PF}, not .../${PN}
-	sed -i -e "s:doc/ferite:doc/${PF}:" \
-		Makefile.am \
+	sed \
+		-e "s:doc/ferite:doc/${PF}:" \
+		-i Makefile.am \
 		docs/Makefile.am \
 		scripts/test/Makefile.am \
 		scripts/test/rmi/Makefile.am || die
 
 	# Don't override the user's LDFLAGS
-	sed -i -e 's:_LDFLAGS = :&$(AM_LDFLAGS) :' \
+	sed \
+		-e 's:_LDFLAGS = :&$(AM_LDFLAGS) :' \
 		-e '/^LDFLAGS/s:^:AM_:' \
-		modules/*/Makefile.am \
+		-i modules/*/Makefile.am \
 		libs/{aphex,triton}/src/Makefile.am \
 		src/Makefile.am || die
 
 	# Only build/install shared libs for modules (can't use static anyway)
 	sed -i -e '/_LDFLAGS/s:-module:& -shared:' modules/*/Makefile.am || die
 
-	# use LIBADD to ensure proper deps (fix parellel build)
-	sed -i -e '/^stream_la_LDFLAGS/s:-L\. -lferitestream::' \
+	# use LIBADD to ensure proper deps (fix parallel build)
+	sed \
+		-e '/^stream_la_LDFLAGS/s:-L\. -lferitestream::' \
 		-e '/^stream_la_LIBADD/s:$:libferitestream.la:' \
-		modules/stream/Makefile.am || die
+		-i modules/stream/Makefile.am || die
 
 	# Make sure we install in $(get_libdir), not lib
 	sed -i -e "s|\$prefix/lib|\$prefix/$(get_libdir)|g" configure.ac || die
@@ -57,14 +63,15 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --libdir="${EPREFIX}"/usr/$(get_libdir)
+	econf --libdir="${EPREFIX}/usr/$(get_libdir)"
 }
 
 src_install() {
-	cp tools/doc/feritedoc "${T}"
-	sed -i -e '/^prefix/s:prefix:${T}' "${T}"/feritedoc
-	sed -i -e '/^$prefix/s:$prefix/bin/ferite:'"${ED}"'usr/bin/ferite:' "${T}"/feritedoc
-	sed -i -e 's:$library_path $library_path:${S}/tools/doc ${S}/tools/doc:' "${T}"/feritedoc
+	cp tools/doc/feritedoc "${T}" || die
+	sed -i -e '/^prefix/s:prefix:${T}:g' "${T}"/feritedoc || die
+	sed -i -e '/^$prefix/s:$prefix/bin/ferite:'"${ED}"'usr/bin/ferite:' "${T}"/feritedoc || die
+	sed -i -e 's:$library_path $library_path:${S}/tools/doc ${S}/tools/doc:' "${T}"/feritedoc || die
 	export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}${LD_LIBRARY_PATH:+:}${ED}usr/lib"
-	emake -j1 DESTDIR="${D}" LIBDIR="${EPREFIX}"/usr/$(get_libdir) install || die
+	emake DESTDIR="${D}" LIBDIR="${EPREFIX}"/usr/$(get_libdir) install
+	prune_libtool_files
 }
