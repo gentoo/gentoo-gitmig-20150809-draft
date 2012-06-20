@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13877 2012/06/19 22:23:38 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13878 2012/06/20 13:07:29 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (20 Jun 2012)
+# New systemd versions bundle udev. It doesn't use Gentoo patchsets,
+# I guess it won't work well with OpenRC and expect other random
+# breakages.
+>=sys-apps/systemd-183
 
 # Ian Stakenvicius <axs@gentoo.org> (19 Jun 2012)
 # Mask new spidermonkey until rdeps can accept it
