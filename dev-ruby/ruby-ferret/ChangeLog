@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-ferret
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ferret/ChangeLog,v 1.9 2012/04/16 05:53:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ferret/ChangeLog,v 1.10 2012/06/20 05:55:46 graaff Exp $
+
+  20 Jun 2012; Hans de Graaff <graaff@gentoo.org>
+  -ruby-ferret-0.11.6-r1.ebuild:
+  Remove old version.
 
 *ruby-ferret-0.11.8.4 (08 Mar 2012)
 
