@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.16.ebuild,v 1.4 2010/11/10 17:56:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.16.ebuild,v 1.5 2012/06/20 21:05:06 jlec Exp $
 
-EAPI="3"
+EAPI=4
+
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
@@ -12,7 +13,8 @@ inherit distutils
 
 DESCRIPTION="Python library for arbitrary-precision floating-point arithmetic"
 HOMEPAGE="http://code.google.com/p/mpmath/ http://pypi.python.org/pypi/mpmath"
-SRC_URI="http://mpmath.googlecode.com/files/${P}.tar.gz
+SRC_URI="
+	http://mpmath.googlecode.com/files/${P}.tar.gz
 	doc? ( http://mpmath.googlecode.com/files/${PN}-docsrc-${PV}.tar.gz )"
 
 LICENSE="BSD"
@@ -20,7 +22,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-linux ~ppc-macos"
 IUSE="doc examples gmp matplotlib"
 
-RDEPEND="gmp? ( dev-python/gmpy )
+RDEPEND="
+	gmp? ( dev-python/gmpy )
 	matplotlib? ( dev-python/matplotlib )"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )"
@@ -46,8 +49,11 @@ src_compile() {
 }
 
 src_test() {
-	cd mpmath/tests
-	distutils_src_test
+	testing() {
+		cd "${S}"/mpmath/tests
+		PYTHONPATH="${S}/build-${PYTHON_ABI}/lib" "$(PYTHON)" runtests.py
+	}
+	python_execute_function testing
 }
 
 src_install() {

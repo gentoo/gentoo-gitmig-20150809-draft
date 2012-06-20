@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mpmath
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.19 2011/05/18 21:04:30 grozin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.20 2012/06/20 21:05:06 jlec Exp $
+
+  20 Jun 2012; Justin Lecher <jlec@gentoo.org> mpmath-0.16.ebuild,
+  mpmath-0.17.ebuild, metadata.xml:
+  Bump EAPI to 4, fix testing, #422593
 
   18 May 2011; Andrey Grozin <grozin@gentoo.org> mpmath-0.17.ebuild:
   Fixing prefix-related bug #367461, thanks to Steven Trogdon
