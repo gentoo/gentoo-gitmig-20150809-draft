@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.32 2012/06/16 22:37:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.33 2012/06/20 15:59:24 ago Exp $
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.5.6_rc2.ebuild:
+  Stable for amd64, wrt bug #422219
 
   16 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
   +files/0.4.7-reopen_log_file.patch, +files/0.6.0.8-reopen_log_file.patch:
