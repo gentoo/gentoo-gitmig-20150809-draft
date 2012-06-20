@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.92 2012/06/08 17:47:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.93 2012/06/20 11:09:21 scarabeus Exp $
+
+*libav-0.8.3 (20 Jun 2012)
+
+  20 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libav-0.8.3.ebuild:
+  Version bump to latest release.
 
   08 Jun 2012; Brent Baude <ranger@gentoo.org> libav-0.8.2.ebuild:
   Marking libav-0.8.2 ppc for bug 408555
