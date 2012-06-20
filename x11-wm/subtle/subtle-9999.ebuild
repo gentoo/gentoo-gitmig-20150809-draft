@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/subtle-9999.ebuild,v 1.4 2011/10/29 05:38:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/subtle-9999.ebuild,v 1.5 2012/06/20 19:40:15 radhermit Exp $
 
 EAPI="4"
 USE_RUBY="ruby19"
 
-inherit mercurial ruby-ng
+inherit mercurial ruby-ng toolchain-funcs
 
 EHG_REPO_URI="http://hg.subforge.org/subtle"
 
@@ -24,7 +24,8 @@ RDEPEND="x11-libs/libX11
 	xpm? ( x11-libs/libXpm )
 	xtest? ( x11-libs/libXtst )
 	xrandr? ( x11-libs/libXrandr )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 ruby_add_rdepend "dev-ruby/archive-tar-minitar"
 ruby_add_bdepend "dev-ruby/rake"
@@ -42,15 +43,19 @@ each_ruby_configure() {
 	use xtest && myconf+=" xtest=yes" || myconf+=" xtest=no"
 	use xrandr && myconf+=" xrandr=yes" || myconf+=" xrandr=no"
 
-	${RUBY} -S rake destdir="${D}" ${myconf} config || die
+	${RUBY} -S rake -v CC="$(tc-getCC)" destdir="${D}" ${myconf} config || die
 }
 
 each_ruby_compile() {
-	${RUBY} -S rake build || die
+	${RUBY} -S rake -v build || die
+}
+
+all_ruby_compile() {
+	use doc && { rake rdoc || die ; }
 }
 
 each_ruby_install() {
-	${RUBY} -S rake install || die
+	${RUBY} -S rake -v install || die
 }
 
 all_ruby_install() {
@@ -61,15 +66,15 @@ all_ruby_install() {
 	EOF
 	fperms a+x /etc/X11/Sessions/${PN}
 
+	insinto /usr/share/xsessions
+	doins data/${PN}.desktop
+
 	dodoc AUTHORS NEWS
 
-	if use doc ; then
-		rake rdoc || die
-		dohtml -r html/*
-	fi
+	use doc && dohtml -r html/*
 }
 
 pkg_postinst() {
 	elog "Note that surserver will currently not work since dev-ruby/datamapper"
-	elog "is not in the tree yet."
+	elog "is not in the tree."
 }
