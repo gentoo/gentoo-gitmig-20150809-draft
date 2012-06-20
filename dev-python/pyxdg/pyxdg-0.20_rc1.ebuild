@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.20_rc1.ebuild,v 1.1 2012/06/20 07:59:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.20_rc1.ebuild,v 1.2 2012/06/20 08:02:06 ssuominen Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2:2.6 3:3.2"
 SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS="2.5 3.1 *-jython 2.7-pypy-*"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="A Python module to deal with freedesktop.org specifications"
 HOMEPAGE="http://freedesktop.org/wiki/Software/pyxdg http://cgit.freedesktop.org/xdg/pyxdg/"
