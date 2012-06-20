@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.31 2012/05/24 02:36:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.32 2012/06/20 13:48:30 mgorny Exp $
+
+*systemd-185 (20 Jun 2012)
+
+  20 Jun 2012; Michał Górny <mgorny@gentoo.org> +systemd-185.ebuild,
+  metadata.xml:
+  Version bump. The new version comes with bundled udev and is highly
+  experimental. You need to put udev in package.provided to use it, and beware -
+  something will break, certainly.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> systemd-29-r3.ebuild,
   systemd-29-r6.ebuild, systemd-39.ebuild, systemd-44-r1.ebuild:
@@ -165,4 +173,3 @@
   +metadata.xml:
   Introduce sys-apps/systemd wrt bug #318365. The ebuild is currently
   hard-masked for testing.
-
