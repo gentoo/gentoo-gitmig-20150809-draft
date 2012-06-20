@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.6.3.ebuild,v 1.2 2012/05/20 09:25:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.6.3.ebuild,v 1.3 2012/06/20 05:54:53 jdhore Exp $
 
 EAPI=4
 inherit gnome2-utils python toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/roxterm/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/dbus-glib-0.98
