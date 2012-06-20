@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.22 2012/06/13 16:37:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.23 2012/06/20 20:17:40 maekke Exp $
+
+  20 Jun 2012; Markus Meier <maekke@gentoo.org> cifs-utils-5.4.ebuild:
+  arm stable, bug #420895
 
   13 Jun 2012; Agostino Sarubbo <ago@gentoo.org> cifs-utils-5.4.ebuild:
   Stable for amd64, wrt bug #420895
