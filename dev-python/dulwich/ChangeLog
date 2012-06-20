@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.51 2012/05/08 09:33:54 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.52 2012/06/20 14:46:37 ago Exp $
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> dulwich-0.8.5.ebuild:
+  Stable for amd64, wrt bug #422061
 
 *dulwich-0.8.5 (08 May 2012)
 
