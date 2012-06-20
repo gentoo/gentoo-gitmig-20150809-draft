@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-1.2.11.ebuild,v 1.3 2012/05/22 01:32:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-1.2.11.ebuild,v 1.4 2012/06/20 15:06:38 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="furigana +graph latex recording +sound"
 
-RDEPEND="dev-python/beautifulsoup
+# beautifulsoup-4 is not supported in 1.2.11
+RDEPEND="
+	<dev-python/beautifulsoup-4
 	>=dev-python/PyQt4-4.7[X,svg,webkit]
 	>=dev-python/sqlalchemy-0.5.3
 	>=dev-python/simplejson-1.7.3
