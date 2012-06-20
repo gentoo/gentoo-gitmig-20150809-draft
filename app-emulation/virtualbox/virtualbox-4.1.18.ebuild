@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.14.ebuild,v 1.4 2012/05/31 23:49:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.18.ebuild,v 1.1 2012/06/20 16:14:50 polynomial-c Exp $
 
 EAPI=4
 
