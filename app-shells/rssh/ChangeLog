@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/rssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.26 2012/06/17 15:03:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.27 2012/06/21 21:24:37 hwoarang Exp $
+
+*rssh-2.3.3-r2 (21 Jun 2012)
+
+  21 Jun 2012; Markos Chandras <hwoarang@gentoo.org> +rssh-2.3.3-r2.ebuild,
+  -rssh-2.3.3-r1.ebuild:
+  New revbump which fixes quotation problems
 
   17 Jun 2012; Agostino Sarubbo <ago@gentoo.org> rssh-2.3.3-r1.ebuild:
   Stable for amd64, wrt bug #415255
