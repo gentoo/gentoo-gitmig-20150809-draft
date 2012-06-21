@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting errd"
+		start-stop-daemon --start --make-pidfile --pidfile ${ERR_PID_FILE} --background --quiet \
+			--exec /usr/bin/python2 -- /usr/bin/err.py -c ${ERR_CONFIG_PATH} -u ${ERR_USER} -g ${ERR_GROUP}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping errd"
+		start-stop-daemon --stop --pidfile ${ERR_PID_FILE}
+	eend $?
+}

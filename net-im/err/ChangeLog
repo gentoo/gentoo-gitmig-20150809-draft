@@ -1,0 +1,11 @@
+# ChangeLog for net-im/err
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/err/ChangeLog,v 1.1 2012/06/21 11:27:53 maksbotan Exp $
+
+*err-9999 (21 Jun 2012)
+*err-1.2.1 (21 Jun 2012)
+
+  21 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +err-1.2.1.ebuild,
+  +err-9999.ebuild, +files/errd.confd, +files/errd.initd, +metadata.xml:
+  Add net-im/err, bug 421373. Thanks to Pinkbyte
+
