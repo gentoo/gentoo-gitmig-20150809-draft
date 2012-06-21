@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/gam-server-0.1.10-r1.ebuild,v 1.3 2012/06/20 14:51:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/gam-server-0.1.10-r1.ebuild,v 1.4 2012/06/21 06:45:28 jdhore Exp $
 
 EAPI="3"
 GNOME_ORG_MODULE="gamin"
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="debug kernel_linux"
 
 RDEPEND=">=dev-libs/glib-2:2
