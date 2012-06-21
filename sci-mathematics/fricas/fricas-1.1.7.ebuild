@@ -1,7 +1,7 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.5.ebuild,v 1.1 2011/12/17 05:21:26 grozin Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.7.ebuild,v 1.1 2012/06/21 08:24:23 grozin Exp $
+EAPI=4
 inherit multilib elisp-common
 
 DESCRIPTION="FriCAS is a fork of Axiom computer algebra system"
@@ -66,7 +66,7 @@ src_configure() {
 
 src_compile() {
 	# bug #300132
-	emake -j1 || die "emake failed"
+	emake -j1
 }
 
 src_test() {
@@ -74,8 +74,8 @@ src_test() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die 'emake install failed'
-	dodoc README FAQ || die "dodoc failed"
+	emake -j1 DESTDIR="${D}" install
+	dodoc README FAQ
 
 	if use emacs; then
 		sed -e "s|(setq load-path (cons (quote \"/usr/$(get_libdir)/fricas/emacs\") load-path)) ||" \
