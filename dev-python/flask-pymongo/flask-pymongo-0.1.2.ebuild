@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-pymongo/flask-pymongo-0.1.1.ebuild,v 1.1 2012/06/18 08:45:36 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-pymongo/flask-pymongo-0.1.2.ebuild,v 1.1 2012/06/21 12:36:51 ultrabug Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -20,17 +20,36 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc examples"
 
 RDEPEND=">=dev-python/flask-0.8
 	>=dev-python/pymongo-2.1"
 DEPEND="${RDEPEND}
+	doc? ( dev-python/sphinx )
 	dev-python/setuptools
 	dev-python/nose"
 
 S="${WORKDIR}/${MY_P}"
 
-# Maintainer's notes:
-# - no docs / examples in the pypi pkg vs github
-# - no nspkg.pth file
-# PYTHON_MODNAME="flaskext/pymongo.py"
+src_compile() {
+	distutils_src_compile
+
+	if use doc; then
+		einfo "Generation of documentation"
+		cd docs
+		PYTHONPATH=".." emake html || die "Generation of documentation failed"
+	fi
+}
+
+src_install() {
+	distutils_src_install
+
+	if use doc; then
+		dohtml -r docs/_build/html/* || die "Installation of documentation failed"
+	fi
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r examples || die "Installation of examples failed"
+	fi
+}
