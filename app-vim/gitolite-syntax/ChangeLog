@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gitolite-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitolite-syntax/ChangeLog,v 1.5 2012/06/19 19:57:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitolite-syntax/ChangeLog,v 1.6 2012/06/21 06:09:14 jdhore Exp $
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  gitolite-syntax-20111225.ebuild:
+  marked x86 per bug 422009
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   gitolite-syntax-20111225.ebuild:
