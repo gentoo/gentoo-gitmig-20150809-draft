@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r2.ebuild,v 1.5 2012/06/13 07:00:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r2.ebuild,v 1.6 2012/06/21 10:31:15 flameeyes Exp $
 
 EAPI="3"
 inherit eutils
@@ -101,6 +101,11 @@ src_configure() {
 		$(use_with ssl) \
 		$(use_enable xface) \
 		${myconf} || die
+}
+
+src_compile() {
+	# bug #362249
+	emake -j1 || die
 }
 
 src_install() {

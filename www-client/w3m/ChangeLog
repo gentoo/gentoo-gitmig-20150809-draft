@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.77 2012/06/17 20:28:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.78 2012/06/21 10:31:15 flameeyes Exp $
+
+  21 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> w3m-0.5.3-r2.ebuild:
+  QA: don't use parallel build until bug #362249 is fixed.
 
   17 Jun 2012; Michael Weber <xmw@gentoo.org> w3m-0.5.3-r1.ebuild:
   ppc stable (bug 415281)
