@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/stklos-1.01.ebuild,v 1.2 2011/01/17 13:48:51 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stklos/stklos-1.01.ebuild,v 1.3 2012/06/21 06:29:22 hkbst Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# kill bundled libs
-	rm -rf ${S}/{ffi,gc,gmp,pcre}
+	rm -rf "${S}"/{ffi,gc,gmp,pcre}
 }
 
 src_configure() {
