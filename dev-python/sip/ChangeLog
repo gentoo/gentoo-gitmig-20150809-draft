@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.215 2012/05/23 04:50:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.216 2012/06/21 18:43:17 hwoarang Exp $
+
+*sip-4.13.3 (21 Jun 2012)
+
+  21 Jun 2012; Markos Chandras <hwoarang@gentoo.org> +sip-4.13.3.ebuild:
+  Version bump
 
   23 May 2012; Jeff Horelick <jdhore@gentoo.org> sip-4.13.2-r1.ebuild:
   marked x86 per bug 412929
