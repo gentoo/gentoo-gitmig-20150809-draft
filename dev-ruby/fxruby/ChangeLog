@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.99 2012/05/01 18:24:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.100 2012/06/21 18:22:29 graaff Exp $
+
+*fxruby-1.6.25 (21 Jun 2012)
+
+  21 Jun 2012; Hans de Graaff <graaff@gentoo.org> +fxruby-1.6.25.ebuild:
+  Version bump. Fix dependencies to work with ruby-fakegem, fixing bug 422759.
+  Add missing swig dependency. Run tests that pass instead of skipping
+  everything.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> fxruby-1.6.20-r1.ebuild,
   fxruby-1.6.23.ebuild:
