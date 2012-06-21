@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/polygon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.5 2012/06/20 14:47:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.6 2012/06/21 01:26:52 jdhore Exp $
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> polygon-3.0.4.ebuild:
+  marked x86 per bug 422067
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> polygon-3.0.4.ebuild:
   Stable for amd64, wrt bug #422067
