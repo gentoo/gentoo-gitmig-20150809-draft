@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/webfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.25 2012/06/21 07:16:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.26 2012/06/21 19:33:24 ago Exp $
+
+  21 Jun 2012; Agostino Sarubbo <ago@gentoo.org> webfs-1.21-r2.ebuild:
+  Stable for amd64, wrt bug #422249
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> webfs-1.21-r2.ebuild:
   marked x86 per bug 422249
