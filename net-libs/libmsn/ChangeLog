@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmsn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.34 2012/06/20 14:54:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.35 2012/06/21 01:50:34 jdhore Exp $
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libmsn-4.2.1.ebuild:
+  marked x86 per bug 422137
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libmsn-4.2.1.ebuild:
   Stable for amd64, wrt bug #422137
