@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.30 2012/06/20 16:00:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.31 2012/06/21 00:22:17 jdhore Exp $
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> bitcoin-qt-0.5.6_rc2.ebuild:
+  marked x86 per bug 422219
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> bitcoin-qt-0.5.6_rc2.ebuild:
   Stable for amd64, wrt bug #422219
