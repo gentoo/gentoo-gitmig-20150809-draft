@@ -1,33 +1,40 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.9 2011/06/21 14:30:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.10 2012/06/21 14:50:03 jlec Exp $
 
-EAPI=2
+EAPI=4
+
 inherit eutils fortran-2 toolchain-funcs
 
 DESCRIPTION="scientific visualization tool"
 HOMEPAGE="http://www.cmap.polytechnique.fr/~jouve/xd3d/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
-IUSE=""
+IUSE="examples"
 
 RDEPEND="
 	virtual/fortran
-x11-libs/libXpm"
+	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	app-shells/tcsh"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.diff
-	epatch "${FILESDIR}"/${P}-parallel.patch
-	epatch "${FILESDIR}"/${P}-rotated.patch
+	epatch \
+		"${FILESDIR}"/${P}-gentoo.diff \
+		"${FILESDIR}"/${P}-parallel.patch \
+		"${FILESDIR}"/${P}-rotated.patch
+	sed \
+		-e 's:"zutil.h":<zlib.h>:g' \
+		-i src/qlib/timestuff.c || die
 }
 
 src_configure() {
-	export FC=$(tc-getFC)
-	sed -e "s:##D##:${D}:" \
+	tc-export FC CC
+	sed \
+		-e "s:##D##:${D}:" \
 		-e "s:##lib##:$(get_libdir):" \
 		-i RULES.gentoo \
 		|| die "failed to set up RULES.gentoo"
@@ -36,12 +43,14 @@ src_configure() {
 
 src_install() {
 	dodir /usr/bin
-	emake install || die "emake install failed"
+	emake install
 
 	dodoc BUGS CHANGELOG FAQ FORMATS README
 	insinto /usr/share/doc/${PF}
-	doins Manuals/* || die
+	doins Manuals/*
 
-	insinto /usr/share/doc/${PF}/examples
-	doins -r Examples/* || die
+	if use examples; then
+		insinto /usr/share/doc/${PF}/
+		doins -r Examples
+	fi
 }
