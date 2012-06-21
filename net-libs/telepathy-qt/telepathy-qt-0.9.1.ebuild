@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.1.ebuild,v 1.2 2012/05/05 02:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.1.ebuild,v 1.3 2012/06/21 10:14:04 kensington Exp $
 
 EAPI=4
 
@@ -43,7 +43,10 @@ DEPEND="${RDEPEND}
 
 REQUIRED_USE="farsight? ( !farstream )"
 
-PATCHES=( "${FILESDIR}/${P}-automagicness.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-automagicness.patch"
+	"${FILESDIR}/${P}-gcc-4.7.patch"
+)
 DOCS=( AUTHORS ChangeLog HACKING NEWS README )
 
 pkg_setup() {
