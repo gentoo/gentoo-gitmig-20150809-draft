@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/okindd-0.6.1.ebuild,v 1.1 2012/05/18 23:50:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/okindd-0.6.1.ebuild,v 1.2 2012/06/21 09:51:23 kensington Exp $
 
 EAPI=4
 
@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
 DOCS="changelog"
+PATCHES=( "${FILESDIR}/${P}-gcc-4.7.patch" )
 
 src_install() {
 	qt4-r2_src_install
