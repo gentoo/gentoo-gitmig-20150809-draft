@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20120405.ebuild,v 1.6 2012/06/17 05:19:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20120405.ebuild,v 1.7 2012/06/21 08:10:42 yngwin Exp $
 
 EAPI=4
 
@@ -286,7 +286,7 @@ src_configure() {
 	done
 	use bidi  || myconf+=" --disable-fribidi"
 	use ipv6  || myconf+=" --disable-inet6"
-	use libass || myconf+=" --disable-libass"
+	use libass || myconf+=" --disable-ass"
 	use nut   || myconf+=" --disable-libnut"
 	use rar   || myconf+=" --disable-unrarexec"
 	use samba || myconf+=" --disable-smb"
