@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.42 2012/06/20 04:58:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.43 2012/06/21 07:37:15 yngwin Exp $
+
+  21 Jun 2012; Ben de Groot <yngwin@gentoo.org> lightdm-1.2.2-r2.ebuild:
+  Re-tidy. Restore glib slot. Drop unnecessary gobject-introspection minimal
+  version (there is nothing lower in tree). Restore useful comments.
 
 *lightdm-1.2.2-r2 (20 Jun 2012)
 

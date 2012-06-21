@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.2-r2.ebuild,v 1.1 2012/06/20 04:58:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.2-r2.ebuild,v 1.2 2012/06/21 07:37:15 yngwin Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -15,18 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+introspection qt4"
 
-COMMON_DEPEND=">=dev-libs/glib-2
+COMMON_DEPEND="dev-libs/glib:2
 	dev-libs/libxml2
 	sys-apps/accountsservice
 	virtual/pam
 	x11-libs/libX11
 	>=x11-libs/libxklavier-5
-	introspection? ( >=dev-libs/gobject-introspection-1 )
-	qt4? (
-		x11-libs/qt-core:4
+	introspection? ( dev-libs/gobject-introspection )
+	qt4? ( x11-libs/qt-core:4
 		x11-libs/qt-dbus:4
-		x11-libs/qt-gui:4
-		)"
+		x11-libs/qt-gui:4 )"
 RDEPEND="${COMMON_DEPEND}
 	>=sys-auth/pambase-20101024-r2"
 DEPEND="${COMMON_DEPEND}
@@ -36,7 +34,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 
-DOCS="NEWS"
+DOCS=( NEWS )
 
 src_prepare() {
 	sed -i -e 's:getgroups:lightdm_&:' tests/src/libsystem.c || die #412369
@@ -54,18 +52,18 @@ src_prepare() {
 }
 
 src_configure() {
+	# Set default values if global vars unset
 	local _greeter _session _user
 	_greeter=${LIGHTDM_GREETER:=lightdm-gtk-greeter}
 	_session=${LIGHTDM_SESSION:=gnome}
 	_user=${LIGHTDM_USER:=root}
-
+	# Let user know how lightdm is configured
 	einfo "Gentoo configuration"
 	einfo "Default greeter: ${_greeter}"
 	einfo "Default session: ${_session}"
 	einfo "Greeter user: ${_user}"
 
-	econf \
-		--localstatedir=/var \
+	econf --localstatedir=/var \
 		--disable-static \
 		$(use_enable introspection) \
 		$(use_enable qt4 liblightdm-qt) \
@@ -78,15 +76,17 @@ src_configure() {
 src_install() {
 	default
 
+	# Install missing files
 	insinto /etc/${PN}
 	doins data/{${PN},users,keys}.conf
-
 	doins "${FILESDIR}"/Xsession
 	fperms +x /etc/${PN}/Xsession
 
+	# Remove unnecessary files
 	prune_libtool_files --all
 	rm -rf "${ED}"/etc/init
 
+	# Install proper pam files
 	pamd_mimic system-local-login ${PN} auth account session
 	pamd_mimic system-local-login ${PN}-autologin auth account session
 }
