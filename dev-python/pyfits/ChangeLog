@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pyfits
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.31 2012/04/16 09:20:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.32 2012/06/21 15:52:40 xarthisius Exp $
+
+*pyfits-3.0.8 (21 Jun 2012)
+
+  21 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/pyfits-3.0.8-debundle_zlib.patch, +pyfits-3.0.8.ebuild,
+  -files/pyfits-3.0.4-tests_python3.patch, -pyfits-3.0.6.ebuild,
+  -pyfits-3.0.7.ebuild:
+  Version bump wrt #422839 by Ian Delaney <johneed@hotmail.com> Debundle zlib,
+  execute tests properly, drop old versions
 
 *pyfits-3.0.7 (16 Apr 2012)
 
