@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/LWP-MediaTypes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.20 2012/06/19 14:02:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.21 2012/06/21 04:29:15 maekke Exp $
+
+  21 Jun 2012; Markus Meier <maekke@gentoo.org> LWP-MediaTypes-6.20.0.ebuild:
+  arm stable, bug #414747
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> LWP-MediaTypes-6.20.0.ebuild:
   Stable for amd64, wrt bug #414747
