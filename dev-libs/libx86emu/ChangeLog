@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libx86emu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86emu/ChangeLog,v 1.8 2012/04/14 07:59:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86emu/ChangeLog,v 1.9 2012/06/21 14:26:27 jlec Exp $
+
+  21 Jun 2012; Justin Lecher <jlec@gentoo.org> libx86emu-1.1.ebuild,
+  metadata.xml:
+  Fix for broken test phase, #339656
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> libx86emu-1.1.ebuild:
   Add ~amd64-linux keyword.
