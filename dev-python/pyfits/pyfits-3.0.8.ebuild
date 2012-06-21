@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.0.8.ebuild,v 1.1 2012/06/21 15:52:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.0.8.ebuild,v 1.2 2012/06/21 16:29:41 xarthisius Exp $
 
 EAPI=4
 
@@ -25,6 +25,8 @@ RDEPEND="dev-python/numpy
 DEPEND="${RDEPEND}
 	dev-python/stsci-distutils
 	dev-python/d2to1"
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-debundle_zlib.patch
