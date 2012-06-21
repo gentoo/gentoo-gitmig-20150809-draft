@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.4.0.ebuild,v 1.2 2012/05/10 20:18:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.4.0.ebuild,v 1.3 2012/06/21 18:57:34 bicatali Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
 VIRTUALX_REQUIRED=test
-
+RESTRICT_PYTHON_ABIS="2.4 2.7-pypy-*"
 inherit distutils virtualx
 
 MYPN="${PN/scikits_/}"

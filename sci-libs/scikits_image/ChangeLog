@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scikits_image
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.4 2012/03/02 06:12:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.5 2012/06/21 18:59:03 bicatali Exp $
+
+  21 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> scikits_image-0.5.ebuild:
+  Restrict pypy
 
 *scikits_image-0.5 (02 Mar 2012)
 
