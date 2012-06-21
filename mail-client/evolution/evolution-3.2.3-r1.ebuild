@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3-r1.ebuild,v 1.2 2012/05/04 08:42:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3-r1.ebuild,v 1.3 2012/06/21 07:05:02 ssuominen Exp $
 
-EAPI="4"
-GCONF_DEBUG="no"
-GNOME2_LA_PUNT="yes"
+EAPI=4
+GCONF_DEBUG=no
+GNOME2_LA_PUNT=yes
 PYTHON_DEPEND="python? 2:2.5"
 
 inherit autotools eutils flag-o-matic gnome2 python
@@ -137,12 +137,20 @@ pkg_setup() {
 
 src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=663077, requires eautoreconf
-	epatch "${FILESDIR}/${PN}-3.2.1-reorder-mx-clutter-gtk.patch"
+	epatch "${FILESDIR}"/${PN}-3.2.1-reorder-mx-clutter-gtk.patch
 	# Fix build failure with glib-2.32
-	epatch "${FILESDIR}/${P}-gmodule-explicit.patch"
-	epatch "${FILESDIR}/${P}-g_thread_init.patch"
+	epatch "${FILESDIR}"/${P}-gmodule-explicit.patch
+	epatch "${FILESDIR}"/${P}-g_thread_init.patch
 	# Fix crashes and linking failure with gtkhtml-4.4
-	epatch "${FILESDIR}/${P}-gtkhtml-4.4.patch"
+	epatch "${FILESDIR}"/${P}-gtkhtml-4.4.patch
+
+	# Fix >=sys-devel/automake-1.12 compability wrt #421307
+	sed -i \
+		-e '/PROG_MKDIR_P/s:AM:AC:' \
+		-e 's:mkdir_p:MKDIR_P:' \
+		-e '/AM_INIT_AUTOMAKE/s:-Werror ::' \
+		m4/po.m4 po/Makefile.in.in configure.ac || die
+
 	eautoreconf
 
 	gnome2_src_prepare
