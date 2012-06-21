@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.1.ebuild,v 1.3 2012/06/19 20:43:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.1-r1.ebuild,v 1.1 2012/06/21 16:34:43 xarthisius Exp $
 
 EAPI=4
 
@@ -27,13 +27,26 @@ DEPEND="${RDEPEND}
 	dev-python/pytest
 	doc? ( dev-python/sphinx dev-python/matplotlib )"
 
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+
 src_prepare() {
-	# Remove most of the bundled deps
-	rm -rf cextern ${PN}/extern
+	# Remove most of the bundled deps (expat,zlib)
+	rm -rf cextern ${PN}/extern ${PN}/io/fits/src/{zlib,inffast,inftrees,trees}.{c,h}
+
 	export ASTROPY_USE_SYSTEM_PYTEST=1
-	epatch "${FILESDIR}"/${P}-expat.patch
+	epatch "${FILESDIR}"/${P}-expat.patch \
+		"${FILESDIR}"/${P}-debundle_zlib.patch
 	sed -e 's/from ..extern.configobj //g' \
 		-i astropy/config/configuration.py || die
+
+	# 422659
+	sed -e 's/fitscheck/&_astropy/g' \
+		-i ${PN}/io/fits/{scripts/fitscheck.py,hdu/base.py} \
+		docs/io/fits/{appendix/faq.rst,appendix/history.rst} \
+		scripts/fitscheck || die
+	mv ${PN}/io/fits/scripts/fitscheck{,_${PN}}.py || die
+	mv scripts/fitscheck{,_${PN}} || die
+
 	distutils_src_prepare
 }
 
