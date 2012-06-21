@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/origin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/ChangeLog,v 1.1 2012/06/21 12:43:34 flameeyes Exp $
+
+*origin-1.0.1 (21 Jun 2012)
+
+  21 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +origin-1.0.1.ebuild:
+  Initial import of origin (required by mongoid 3).
+
