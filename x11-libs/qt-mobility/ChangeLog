@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-mobility
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.6 2012/06/18 00:36:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.7 2012/06/21 13:45:40 pesa Exp $
+
+  21 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  qt-mobility-1.2.2_p20120403.ebuild:
+  Enable contacts by default wrt bug 422825.
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Add <upstream> metadata tag.

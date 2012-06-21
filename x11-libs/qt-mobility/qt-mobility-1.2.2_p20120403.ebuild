@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.2 2012/05/02 17:16:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.3 2012/06/21 13:45:40 pesa Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-QT_MOBILITY_MODULES=(bearer connectivity contacts feedback gallery
+QT_MOBILITY_MODULES=(bearer connectivity +contacts feedback gallery
 		location messaging multimedia organizer publishsubscribe
 		sensors serviceframework systeminfo versit)
 IUSE="bluetooth debug doc networkmanager pulseaudio qml +tools
