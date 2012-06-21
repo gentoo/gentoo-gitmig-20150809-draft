@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.71 2012/05/21 07:50:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.72 2012/06/21 15:41:16 ago Exp $
+
+  21 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libmp4v2-2.0.0.ebuild:
+  Stable for amd64, wrt bug #422517
 
 *libmp4v2-2.0.0 (21 May 2012)
 
