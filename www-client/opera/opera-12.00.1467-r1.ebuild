@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.00.1467-r1.ebuild,v 1.1 2012/06/20 14:34:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.00.1467-r1.ebuild,v 1.2 2012/06/21 16:47:04 jer Exp $
 
 EAPI="4"
 
@@ -26,11 +26,6 @@ SRC_URI="
 	x86? ( ${O_U}linux/${O_D}/${O_P}.i386.linux.tar.xz )
 	x86-fbsd? ( ${O_U}unix/${O_D}/${O_P}.i386.freebsd.tar.xz )
 "
-
-OPREFIX="/usr/$(get_libdir)"
-
-QA_DT_HASH="${OPREFIX}/${PN}/.*"
-QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
 
 O_LINGUAS="
 	af ar az be bg bn cs da de el en-GB es-ES es-LA et fa fi fr fr-CA fy gd he
@@ -90,6 +85,10 @@ src_unpack() {
 }
 
 src_prepare() {
+	export OPREFIX="/usr/$(get_libdir)"
+	export QA_DT_HASH="${OPREFIX}/${PN}/.*"
+	export QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
+
 	local LNGDIR="share/${PN}/locale"
 
 	# Count linguas
