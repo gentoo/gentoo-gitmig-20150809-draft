@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.150 2012/06/21 14:22:36 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.151 2012/06/21 16:16:30 naota Exp $
+
+  21 Jun 2012; Naohiro Aota <naota@gentoo.org> scim-1.4.11-r1.ebuild:
+  Revert mis-stabized KEYWORDs; Use gnome2_query_immodules_gtk2. #413521
 
   21 Jun 2012; Naohiro Aota <naota@gentoo.org> scim-1.4.11-r1.ebuild,
   scim-1.4.11.ebuild, scim-1.4.9-r1.ebuild, scim-1.4.9-r2.ebuild:
