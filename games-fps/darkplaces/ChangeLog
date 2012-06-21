@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/darkplaces
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.13 2012/05/16 16:29:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.14 2012/06/21 05:51:37 jdhore Exp $
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> darkplaces-20110628.ebuild:
+  marked x86 per bug 422129
 
 *darkplaces-20110628 (16 May 2012)
 
