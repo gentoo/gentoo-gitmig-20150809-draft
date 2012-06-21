@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/knot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.8 2012/06/12 17:48:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.9 2012/06/21 18:08:30 scarabeus Exp $
+
+*knot-1.0.6 (21 Jun 2012)
+
+  21 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.0.6.ebuild,
+  -knot-1.0.5.ebuild:
+  Bumpity. Note that until some user opens stabilisation request this package
+  stays testing-only.
 
   12 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Add highly-nonrelevant me as maintainer, but don't expect magic.
