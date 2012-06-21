@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.29 2012/01/31 09:22:41 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.30 2012/06/21 12:23:30 ali_bush Exp $
+
+*scala-2.9.2 (21 Jun 2012)
+
+  21 Jun 2012; Alistair Bush <ali_bush@gentoo.org> +scala-2.9.2.ebuild:
+  Version Bump.
 
   31 Jan 2012; Alistair Bush <ali_bush@gentoo.org> scala-2.9.1.ebuild:
   Update jdk dependency as errors building with jdk-1.7.
