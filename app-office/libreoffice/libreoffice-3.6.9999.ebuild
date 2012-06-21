@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.7 2012/06/19 20:24:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.8 2012/06/21 15:34:20 scarabeus Exp $
 
 EAPI=4
 
@@ -203,7 +203,7 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xineramaproto
 	x11-proto/xproto
 	java? (
-		=virtual/jdk-1.6*
+		>=virtual/jdk-1.6
 		>=dev-java/ant-core-1.7
 		test? ( dev-java/junit:4 )
 	)
