@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/lisaac-0.13.1-r1.ebuild,v 1.2 2012/02/13 04:49:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/lisaac-0.13.1-r2.ebuild,v 1.1 2012/06/21 12:05:40 jlec Exp $
 
 EAPI="4"
 inherit versionator elisp-common eutils
@@ -23,6 +23,7 @@ SITEFILE=50${PN}-gentoo.el
 
 src_prepare(){
 	epatch "${FILESDIR}/${P}-makefile.patch"
+	rm lib/number/essai
 }
 
 src_compile(){
