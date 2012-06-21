@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libsmbios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.39 2012/06/21 11:03:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.40 2012/06/21 19:25:26 polynomial-c Exp $
+
+  21 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> libsmbios-2.2.28.ebuild,
+  +files/libsmbios-2.2.28-cppunit-tests.patch:
+  Fixed test runs. Thanks to Markus Meier for reporting this in bug #381975 and
+  big kudos to Ian Stakenvicius for looking into this problem and providing a
+  working patch.
 
   21 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> libsmbios-2.2.28.ebuild:
   Fixed building with automake-1.12. Thanks to flameeyes who reported this in
