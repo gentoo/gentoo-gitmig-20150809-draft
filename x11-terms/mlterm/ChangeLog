@@ -1,6 +1,15 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.90 2012/05/03 07:11:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.91 2012/06/21 13:41:09 naota Exp $
+
+*mlterm-3.0.11-r1 (21 Jun 2012)
+*mlterm-3.0.9-r1 (21 Jun 2012)
+
+  21 Jun 2012; Naohiro Aota <naota@gentoo.org> +mlterm-3.0.11-r1.ebuild,
+  +mlterm-3.0.9-r1.ebuild, -mlterm-3.0.1.ebuild, -mlterm-3.0.11.ebuild,
+  -mlterm-3.0.3.ebuild, -mlterm-3.0.5.ebuild, -mlterm-3.0.6.ebuild,
+  -mlterm-3.0.7.ebuild, -mlterm-3.0.8.ebuild, mlterm-2.9.4-r4.ebuild:
+  Fix desktop file's category. #421517; Drop old versions.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> mlterm-2.9.4-r4.ebuild,
   mlterm-3.0.1.ebuild, mlterm-3.0.3.ebuild, mlterm-3.0.5.ebuild,
