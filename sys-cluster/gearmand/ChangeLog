@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/gearmand
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.14 2012/06/21 14:43:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.15 2012/06/21 15:08:50 flameeyes Exp $
+
+  21 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> -files/gearmand.init.d,
+  -gearmand-0.12.ebuild, -gearmand-0.14.ebuild, -gearmand-0.24.ebuild:
+  Remove old and fix append-cppflags.
 
   21 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/gearmand-0.33+gcc-4.7.patch, gearmand-0.33.ebuild:
