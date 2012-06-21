@@ -1,15 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/multimon-1.0-r2.ebuild,v 1.2 2011/06/01 23:59:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/multimon-1.0-r2.ebuild,v 1.3 2012/06/21 11:10:13 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
-S=${WORKDIR}/multimon
-SRC_URI="http://www.baycom.org/~tom/ham/linux/multimon.tar.gz"
+DESCRIPTION="Decoding digital transmission codes"
 HOMEPAGE="http://www.baycom.org/~tom/ham/linux/multimon.html"
-DESCRIPTION="Multimon decodes digital transmission codes using OSS"
+SRC_URI="http://www.baycom.org/~tom/ham/linux/multimon.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -17,26 +16,29 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11"
-
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
+
+S=${WORKDIR}/multimon
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-flags.patch \
+		"${FILESDIR}"/${P}-prll.patch \
 		"${FILESDIR}"/${P}-includes.patch
+	sed \
+		-e '/^$(BINDIR)\//s:$: $(BINDIR):g' \
+		-i Makefile || die
 }
 
 src_compile() {
 	# bug #369713
-	emake -j1 CFLAGS="${CFLAGS}" CC=$(tc-getCC) || die
+	emake CFLAGS="${CFLAGS}" CC=$(tc-getCC)
 }
 
 src_install() {
-	local myarch
-	myarch=`uname -m`
-	mv bin-${myarch}/gen bin-${myarch}/multimon-gen
-	dobin bin-${myarch}/multimon-gen bin-${myarch}/mkcostab bin-${myarch}/multimon
+	mv gen multimon-gen
+	dobin multimon-gen mkcostab multimon
 }
 
 pkg_postinst() {

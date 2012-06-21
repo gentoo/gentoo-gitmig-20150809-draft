@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/multimon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.14 2012/05/10 15:15:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.15 2012/06/21 11:10:13 jlec Exp $
+
+  21 Jun 2012; Justin Lecher <jlec@gentoo.org> multimon-1.0-r2.ebuild,
+  +files/multimon-1.0-prll.patch, metadata.xml:
+  Add fix for parallel build, #369713
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -multimon-1.0-r1.ebuild:
   Remove old
