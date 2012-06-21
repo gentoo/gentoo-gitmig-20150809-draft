@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.1.33.ebuild,v 1.2 2012/06/04 06:27:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.1.33.ebuild,v 1.3 2012/06/21 16:11:46 flameeyes Exp $
 
 EAPI=2
+
+WANT_AUTOMAKE=1.11
 
 inherit flag-o-matic libtool autotools eutils pam user versionator
 
@@ -48,8 +50,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	#epatch "${FILESDIR}/${PN}-2009.12.1240-nolint.patch"
-
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
 }
@@ -58,7 +58,7 @@ src_configure() {
 	local myconf=
 
 	if use debug; then
-		append-flags -DDEBUG
+		append-cppflags -DDEBUG
 	fi
 
 	# while I applaud upstreams goal of 0 compiler warnings
@@ -66,7 +66,7 @@ src_configure() {
 	append-flags -Wno-error
 
 	# Bug #362901
-	append-flags -DBOOST_FILESYSTEM_VERSION=2
+	append-cppflags -DBOOST_FILESYSTEM_VERSION=2
 
 	# NOTE disable-all and without-all no longer recognized options
 	# NOTE using --enable on some plugins can cause test failures.

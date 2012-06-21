@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.27 2012/06/04 06:27:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.28 2012/06/21 16:11:46 flameeyes Exp $
+
+  21 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  -drizzle-7.0.2011.03.13.ebuild, -files/drizzle-2009.12.1240-nolint.patch,
+  drizzle-7.1.33.ebuild:
+  Remove old; use append-cppflags where it makes sense; fix on automake 1.11 as
+  it fails with 1.12.
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> drizzle-7.0.2011.03.13.ebuild,
   drizzle-7.1.33.ebuild:
