@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-6.1.1.ebuild,v 1.1 2012/06/04 22:19:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-6.1.1.ebuild,v 1.2 2012/06/21 18:49:26 xarthisius Exp $
 
 EAPI=4
 
@@ -29,6 +29,12 @@ PATCHES=(
 	"${FILESDIR}"/${P}-check-shared-libs.patch
 	"${FILESDIR}"/${P}-use-system-ltdl.patch
 )
+
+src_prepare() {
+	sed -e '/AM_C_PROTOTYPES/d' \
+		-i configure.ac libcext/configure.ac || die #422455
+	autotools-utils_src_prepare
+}
 
 src_configure() {
 	myeconfargs+=(

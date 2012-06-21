@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/cpl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.8 2012/06/04 22:19:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.9 2012/06/21 18:49:26 xarthisius Exp $
+
+  21 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> -cpl-5.2.0-r1.ebuild,
+  -files/cpl-5.2.0-test.patch, cpl-6.1.1.ebuild:
+  Fix aclocal with >=sys-devel/automake-1.12 wrt #422455 by Diego Elio Pettenò
+  <flameeyes@gentoo.org>, drop old
 
 *cpl-6.1.1 (04 Jun 2012)
 
