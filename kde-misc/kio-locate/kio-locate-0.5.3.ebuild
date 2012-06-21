@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.5.3.ebuild,v 1.1 2012/01/11 20:44:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.5.3.ebuild,v 1.2 2012/06/21 08:27:22 kensington Exp $
 
 EAPI=4
 
@@ -17,7 +17,8 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DOCS=(AUTHORS ChangeLog)
+DOCS=( AUTHORS ChangeLog )
+PATCHES=( "${FILESDIR}/${P}-gcc-4.7.patch" )
 
 RDEPEND="${RDEPEND}
 	sys-apps/mlocate
