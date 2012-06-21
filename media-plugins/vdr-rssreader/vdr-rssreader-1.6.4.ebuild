@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/vdr-rssreader-1.6.4.ebuild,v 1.3 2012/02/07 00:26:02 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/vdr-rssreader-1.6.4.ebuild,v 1.4 2012/06/21 13:23:14 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: RSS feed reader"
 HOMEPAGE="http://www.saunalahti.fi/~rahrenbe/vdr/rssreader/"
@@ -22,10 +22,11 @@ DEPEND=">=media-video/vdr-1.6.0
 RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-gentoo-rss.diff"
-	"${FILESDIR}/${P}-curl-headers.patch" )
+	"${FILESDIR}/${P}-curl-headers.patch"
+	"${FILESDIR}/${P}_gcc-4.7.diff" )
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	insinto /etc/vdr/plugins/rssreader
 	doins "${S}/rssreader/rssreader.conf"
