@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.2.27.ebuild,v 1.2 2012/05/31 21:16:59 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-12.2.27.ebuild,v 1.3 2012/06/21 14:41:23 je_fro Exp $
 
 EAPI=1
 WEBAPP_OPTIONAL="yes"
@@ -63,7 +63,7 @@ src_unpack() {
 	java-pkg_jar-from jmol-acme jmol-acme.jar Acme.jar
 	java-pkg_jar-from commons-cli-1 commons-cli.jar commons-cli-1.0.jar
 	java-pkg_jar-from naga
-	java-pkg_jar-from saxon-6.5 saxon.jar
+	java-pkg_jar-from --build-only saxon-6.5 saxon.jar
 
 	mkdir -p "${S}/build/appjars" || die
 }

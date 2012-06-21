@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/jmol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.14 2012/05/31 21:16:59 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.15 2012/06/21 14:41:23 je_fro Exp $
+
+  21 Jun 2012; Jeff Gardner <je_fro@gentoo.org> jmol-12.2.27.ebuild:
+  Add --build-only to saxon, fix bug 422757 thanks to Diego Elio Petteno
 
   31 May 2012; Jeff Gardner <je_fro@gentoo.org> jmol-12.2.27.ebuild:
   Make client-only the default
