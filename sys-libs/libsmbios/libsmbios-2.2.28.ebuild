@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.28.ebuild,v 1.5 2012/05/04 07:33:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.28.ebuild,v 1.6 2012/06/21 11:03:17 polynomial-c Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? *:2.5"
@@ -31,6 +31,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-2.2.28-gcc46.patch \
 		"${FILESDIR}"/${PN}-fix-pie.patch
 	>pkg/py-compile
+	# dist-lzma was removed from automake-1.12 (bug #422779)
+	sed 's@dist-lzma@dist-xz@' -i "${S}"/configure.ac || die
 	eautoreconf
 }
 
