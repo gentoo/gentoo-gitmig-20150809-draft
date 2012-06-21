@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.73 2012/06/21 05:23:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.74 2012/06/21 05:30:06 graaff Exp $
+
+  21 Jun 2012; Hans de Graaff <graaff@gentoo.org> racc-1.4.8.ebuild:
+  Add missing test dependency on hoe, bug 421925.
 
   21 Jun 2012; Hans de Graaff <graaff@gentoo.org> -racc-1.4.7.ebuild:
   Remove old version.
