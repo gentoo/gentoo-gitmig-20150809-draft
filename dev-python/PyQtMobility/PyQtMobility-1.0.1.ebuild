@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQtMobility/PyQtMobility-1.0.1.ebuild,v 1.1 2012/03/13 11:44:34 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQtMobility/PyQtMobility-1.0.1.ebuild,v 1.2 2012/06/21 14:03:04 pesa Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ SLOT="0"
 LICENSE="|| ( GPL-2 GPL-3 )"
 KEYWORDS="~amd64"
 
-PYQTM_MODULES="contacts feedback gallery location messaging multimedia organizer
+PYQTM_MODULES="+contacts feedback gallery location messaging multimedia organizer
 		publishsubscribe sensors serviceframework systeminfo versit"
 IUSE="debug ${PYQTM_MODULES}"
 
