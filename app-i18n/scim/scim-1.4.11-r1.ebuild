@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.11-r1.ebuild,v 1.4 2012/06/21 16:16:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.11-r1.ebuild,v 1.5 2012/06/21 19:32:58 ago Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic multilib gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="x11-libs/libX11
