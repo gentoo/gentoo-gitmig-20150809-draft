@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ccaudio2/ccaudio2-2.0.5.ebuild,v 1.1 2012/02/26 19:43:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ccaudio2/ccaudio2-2.0.5.ebuild,v 1.2 2012/06/21 18:36:57 maksbotan Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/ccaudio/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="debug static-libs speex gsm"
+IUSE="debug static-libs +speex gsm"
 
 DEPEND="dev-libs/ucommon
 	gsm? ( media-sound/gsm )
