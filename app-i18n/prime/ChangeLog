@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/prime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.65 2012/01/22 11:06:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.66 2012/06/21 17:58:39 naota Exp $
+
+*prime-1.0.0.1-r2 (21 Jun 2012)
+
+  21 Jun 2012; Naohiro Aota <naota@gentoo.org>
+  +files/prime-1.0.0.1-require.patch, +prime-1.0.0.1-r2.ebuild,
+  -prime-1.0.0.1-r1.ebuild:
+  Patch Kernel::require to require to include rubygem path. #420499
 
 *prime-1.0.0.1-r1 (22 Jan 2012)
 

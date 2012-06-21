@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-1.0.0.1-r1.ebuild,v 1.1 2012/01/22 11:06:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-1.0.0.1-r2.ebuild,v 1.1 2012/06/21 17:58:39 naota Exp $
 
 EAPI="3"
 # don't work with ruby19
@@ -18,6 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
+ruby_add_bdepend "virtual/rubygems"
 ruby_add_rdepend ">=app-dicts/prime-dict-1.0.0
 	>=dev-libs/suikyo-2.1.0
 	dev-ruby/ruby-progressbar
@@ -28,7 +29,14 @@ S="${WORKDIR}/${P/_/-}"
 all_ruby_prepare() {
 	epatch \
 		"${FILESDIR}/${P}-parallel.patch" \
-		"${FILESDIR}/${P}-libdir.patch"
+		"${FILESDIR}/${P}-libdir.patch" \
+		"${FILESDIR}/${P}-require.patch"
+	# eautoreconf
+}
+
+each_ruby_prepare() {
+	sed -i -e "s:ruby -r:${RUBY} -r:" acinclude.m4 || die
+	sed -i -e "s:ruby -e:${RUBY} -e:" src/Makefile.am || die
 	eautoreconf
 }
 
