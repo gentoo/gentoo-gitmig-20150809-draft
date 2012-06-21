@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ffmpegthumbs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.58 2012/06/03 09:01:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.59 2012/06/21 21:55:00 dilfridge Exp $
+
+*ffmpegthumbs-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +ffmpegthumbs-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
 
   03 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   ffmpegthumbs-4.8.3.ebuild:

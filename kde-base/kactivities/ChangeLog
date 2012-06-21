@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kactivities
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.27 2012/05/24 11:37:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.28 2012/06/21 21:54:56 dilfridge Exp $
+
+*kactivities-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kactivities-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.8.1.ebuild,
   -kactivities-4.8.1-r1.ebuild:

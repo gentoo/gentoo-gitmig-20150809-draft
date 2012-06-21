@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.849 2012/06/07 22:27:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.850 2012/06/21 21:54:47 dilfridge Exp $
+
+*kdelibs-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> +kdelibs-4.8.4.ebuild,
+  +files/kdelibs-4.8.4-bytecode.patch, +files/kdelibs-4.8.4-power.patch,
+  +files/kdelibs-4.8.4-sopranorevert1.patch,
+  +files/kdelibs-4.8.4-sopranorevert2.patch:
+  Version bump KDE SC 4.8.4
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> kdelibs-4.7.4-r12.ebuild,
   kdelibs-4.7.4.ebuild, kdelibs-4.8.3.ebuild:

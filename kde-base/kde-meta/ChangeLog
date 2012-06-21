@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.225 2012/05/24 11:37:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.226 2012/06/21 21:54:43 dilfridge Exp $
+
+*kde-meta-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kde-meta-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kde-meta-4.8.1.ebuild:
   Remove KDE SC 4.8.1

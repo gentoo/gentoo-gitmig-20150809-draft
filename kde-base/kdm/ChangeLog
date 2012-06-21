@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.296 2012/06/07 22:28:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.297 2012/06/21 21:54:52 dilfridge Exp $
+
+*kdm-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> +kdm-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> kdm-4.7.4-r1.ebuild,
   kdm-4.7.4.ebuild, kdm-4.8.3.ebuild:

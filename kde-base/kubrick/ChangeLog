@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.106 2012/05/24 11:38:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.107 2012/06/21 21:54:36 dilfridge Exp $
+
+*kubrick-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> +kubrick-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
 
   24 May 2012; Johannes Huber <johu@gentoo.org> -kubrick-4.8.1.ebuild:
   Remove KDE SC 4.8.1

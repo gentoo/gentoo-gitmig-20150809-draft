@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.279 2012/06/07 22:35:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.280 2012/06/21 21:54:50 dilfridge Exp $
+
+*kwin-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> +kwin-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> kwin-4.7.4.ebuild,
   kwin-4.8.3.ebuild:

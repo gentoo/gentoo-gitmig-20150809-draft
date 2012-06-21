@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/cantor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.71 2012/06/16 16:45:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.72 2012/06/21 21:54:46 dilfridge Exp $
+
+*cantor-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> +cantor-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
 
   16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> cantor-4.7.4.ebuild,
   cantor-4.8.3.ebuild, metadata.xml:

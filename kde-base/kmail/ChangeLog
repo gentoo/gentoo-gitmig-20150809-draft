@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.288 2012/06/07 22:32:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.289 2012/06/21 21:54:58 dilfridge Exp $
+
+*kmail-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> +kmail-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> kmail-4.4.11.1.ebuild,
   kmail-4.7.4-r1.ebuild, kmail-4.7.4.ebuild, kmail-4.8.3.ebuild:
