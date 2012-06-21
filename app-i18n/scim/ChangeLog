@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.149 2012/05/29 22:43:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.150 2012/06/21 14:22:36 naota Exp $
+
+  21 Jun 2012; Naohiro Aota <naota@gentoo.org> scim-1.4.11-r1.ebuild,
+  scim-1.4.11.ebuild, scim-1.4.9-r1.ebuild, scim-1.4.9-r2.ebuild:
+  Add notice to modify /etc/scim/global properly. #217375
 
   29 May 2012; Naohiro Aota <naota@gentoo.org> scim-1.4.9-r1.ebuild,
   scim-1.4.9-r2.ebuild:

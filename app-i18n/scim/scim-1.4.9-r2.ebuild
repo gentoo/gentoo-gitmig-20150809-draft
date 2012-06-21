@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r2.ebuild,v 1.3 2012/05/29 22:43:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r2.ebuild,v 1.4 2012/06/21 14:22:36 naota Exp $
 
 EAPI="3"
 inherit autotools eutils flag-o-matic multilib
@@ -94,6 +94,9 @@ pkg_postinst() {
 	elog "	# emerge app-i18n/scim-anthy"
 	elog "To use various input methods (more than 30 languages):"
 	elog "	# emerge app-i18n/scim-m17n"
+	elog
+	elog "Please modify ${EPREFIX}/etc/scim/global and add your UTF-8 locale to"
+	elog "/SupportedUnicodeLocales entry."
 	elog
 	ewarn
 	ewarn "If you upgraded from scim-1.2.x or scim-1.0.x, you should remerge all SCIM modules."
