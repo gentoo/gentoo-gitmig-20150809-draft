@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.30 2012/05/05 05:12:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/ChangeLog,v 1.31 2012/06/21 15:22:28 ssuominen Exp $
+
+  21 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> wmbiff-0.4.27.ebuild:
+  Fix sys-devel/automake >= 1.12 compability wrt #421411
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmbiff-0.4.27.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
