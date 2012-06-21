@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pureadmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.21 2012/05/03 05:37:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.22 2012/06/21 11:25:00 jlec Exp $
+
+  21 Jun 2012; Justin Lecher <jlec@gentoo.org> pureadmin-0.4-r1.ebuild,
+  +files/pureadmin-0.4-gold.patch, metadata.xml:
+  Add fix for gold, #369103
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> pureadmin-0.2.2.ebuild,
   pureadmin-0.3.ebuild, pureadmin-0.4-r1.ebuild:
