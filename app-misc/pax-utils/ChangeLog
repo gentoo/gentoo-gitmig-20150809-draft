@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.138 2012/06/20 20:20:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.139 2012/06/21 15:06:06 jer Exp $
+
+  21 Jun 2012; Jeroen Roovers <jer@gentoo.org> pax-utils-0.4.ebuild:
+  Stable for HPPA (bug #420919).
 
   20 Jun 2012; Markus Meier <maekke@gentoo.org> pax-utils-0.4.ebuild:
   arm stable, bug #420919
