@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/kencfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kencfs/ChangeLog,v 1.2 2012/01/10 14:44:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kencfs/ChangeLog,v 1.3 2012/06/21 09:35:07 kensington Exp $
+
+  21 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/kencfs-1.2-gcc-4.7.patch, kencfs-1.2.ebuild:
+  Fix build with GCC 4.7, wrt bug #421905.
 
 *kencfs-1.2 (10 Jan 2012)
 
