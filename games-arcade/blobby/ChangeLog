@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blobby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/ChangeLog,v 1.5 2012/05/04 04:22:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/ChangeLog,v 1.6 2012/06/21 07:47:03 tupone Exp $
+
+  21 Jun 2012; Tupone Alfredo <tupone@gentoo.org> blobby-0.9c.ebuild,
+  +files/blobby-0.9c-gcc47.patch:
+  Compile on gcc-4.7 Bug #421967 by flameeyes@gentoo.org
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> blobby-0.9c.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

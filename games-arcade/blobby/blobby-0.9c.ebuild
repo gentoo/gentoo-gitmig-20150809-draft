@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/blobby-0.9c.ebuild,v 1.5 2012/05/04 04:22:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/blobby-0.9c.ebuild,v 1.6 2012/06/21 07:47:03 tupone Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -28,6 +28,7 @@ src_prepare() {
 	sed -i -e "s:share/${PN}:${GAMES_DATADIR}/${PN}:" data/CMakeLists.txt || die
 	sed -i -e "s:share/${PN}:${GAMES_DATADIR/\/usr\/}/${PN}:" src/main.cpp || die
 	sed -i -e "/DESTINATION/s:bin:${GAMES_BINDIR}:" src/CMakeLists.txt || die
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_configure() {
