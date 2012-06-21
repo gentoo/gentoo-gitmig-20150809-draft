@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.321 2012/06/20 09:26:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.322 2012/06/21 15:10:59 naota Exp $
+
+  21 Jun 2012; Naohiro Aota <naota@gentoo.org> gnome2-utils.eclass:
+  Add new function gnome2_query_immodules_gtk{2,3} to update immodules cache.
+  #413529
 
   20 Jun 2012; Michał Górny <mgorny@gentoo.org> eutils.eclass:
   prune_libtool_files(): report .a removal only if it exists, and explain the

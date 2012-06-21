@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.27 2012/05/02 21:05:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.28 2012/06/21 15:10:59 naota Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -385,4 +385,42 @@ gnome2_schemas_update() {
 	ebegin "Updating GSettings schemas"
 	${updater} --allow-any-name "$@" "${EROOT%/}/usr/share/glib-2.0/schemas" &>/dev/null
 	eend $?
+}
+
+# @FUNCTION: gnome2_query_immodules_gtk2
+# @USAGE: gnome2_query_immodules_gtk2
+# @DESCRIPTION:
+# Updates gtk2 immodules/gdk-pixbuf loaders listing.
+gnome2_query_immodules_gtk2() {
+	local GTK2_CONFDIR="/etc/gtk-2.0/$(get_abi_CHOST)"
+
+	local query_exec="${EPREFIX}/usr/bin/gtk-query-immodules-2.0"
+	local gtk_conf="${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
+	local gtk_conf_dir=$(dirname "${gtk_conf}")
+
+	einfo "Generating Gtk2 immodules/gdk-pixbuf loaders listing:"
+	einfo "-> ${gtk_conf}"
+
+	mkdir -p "${gtk_conf_dir}"
+	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgtk_query_immodules)
+	if [ -z "${tmp_file}" ]; then
+		ewarn "gtk_query_immodules: cannot create temporary file"
+		return 1
+	fi
+
+	if ${query_exec} > "${tmp_file}"; then
+		cat "${tmp_file}" > "${gtk_conf}" || \
+			ewarn "Failed to write to ${gtk_conf}"
+	else
+		ewarn "Cannot update gtk.immodules, file generation failed"
+	fi
+	rm "${tmp_file}"
+}
+
+# @FUNCTION: gnome2_query_immodules_gtk3
+# @USAGE: gnome2_query_immodules_gtk3
+# @DESCRIPTION:
+# Updates gtk3 immodules/gdk-pixbuf loaders listing.
+gnome2_query_immodules_gtk3() {
+	"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
 }
