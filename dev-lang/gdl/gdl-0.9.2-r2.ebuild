@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r1.ebuild,v 1.5 2012/06/20 23:11:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r2.ebuild,v 1.1 2012/06/21 18:32:34 bicatali Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ RDEPEND="sci-libs/gsl
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] )"
 
 DEPEND="${RDEPEND}
-	>=dev-java/antlr-2.7.7-r5:0[cxx]"
+	>=dev-java/antlr-2.7.7-r5:0[cxx,script]"
 
 pkg_setup() {
 	use wxwidgets && wxwidgets_pkg_setup
@@ -53,9 +53,18 @@ pkg_setup() {
 
 src_prepare() {
 	use hdf5 && has_version sci-libs/hdf5[mpi] && export CXX=mpicxx
+
 	epatch "${FILESDIR}"/${PV}-{antlr,numpy,proj4,include,tests,semaphore}.patch
-	# make sure antlr includes are from system
+	# make sure antlr includes are from system and rebuild the sources with it
+	# https://sourceforge.net/tracker/?func=detail&atid=618685&aid=3465878&group_id=97659
+
 	rm -rf src/antlr
+	einfo "Regenerate grammar"
+	pushd src > /dev/null
+	local i
+	for i in *.g; do antlr ${i} || die ; done
+	popd > /dev/null
+
 	# gentoo: use proj instead of libproj4 (libproj4 last update: 2004)
 	sed -i \
 		-e 's:proj4:proj:' \
