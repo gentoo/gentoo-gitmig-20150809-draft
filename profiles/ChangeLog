@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6700 2012/06/21 17:14:55 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6701 2012/06/21 18:48:01 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/arm/armv4/eapi, +hardened/linux/arm/armv4/parent,
+  +hardened/linux/arm/armv4t/eapi, +hardened/linux/arm/armv4t/parent,
+  +hardened/linux/arm/armv5te/eapi, +hardened/linux/arm/armv5te/parent,
+  +hardened/linux/arm/armv6j/eapi, +hardened/linux/arm/armv6j/parent,
+  +hardened/linux/arm/armv7a/eapi, +hardened/linux/arm/armv7a/parent,
+  +hardened/linux/arm/eapi, +hardened/linux/arm/parent:
+  Add hardened/linux/arm profiles
 
   21 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
   Restore mask for feboostrap-3
