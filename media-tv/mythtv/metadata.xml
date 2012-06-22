@@ -15,7 +15,6 @@
 		will only give you /dev/dsp devices in the drop down.</flag>
 	<flag name="altivec">Builds ffmpeg's codec libraries with altivec
 		support.</flag>
-	<flag name="ass">Use the ASS/SSA subtitle render</flag>
 	<flag name="autostart">Uses a custom autostart configuration gleaned from
 		experience with MythTV since its early versions and discussed with
 		other MythTV maintainers and users. Does not rely on KDE being installed
@@ -44,6 +43,8 @@
 		<pkg>app-misc/lcdproc</pkg> configured on your machine and it should
 		output information such as current time, show name, episode name, etc to
 		that LCD.</flag>
+	<flag name="libass">SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle
+		support</flag>
 	<flag name="lirc">Adds LIRC support directly to MythTV allowing for built in
 		control via a LIRC device.</flag>
 	<flag name="perl">Builds the perl bindings for MythTV. Allows you to write

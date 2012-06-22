@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.4 2012/06/22 04:27:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.5 2012/06/22 13:33:58 cardoe Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
 IUSE_INPUT_DEVICES="input_devices_joystick"
-IUSE="alsa altivec ass autostart bluray cec crystalhd debug dvb dvd \
+IUSE="alsa altivec libass autostart bluray cec crystalhd debug dvb dvd \
 ieee1394 jack lcd lirc perl pulseaudio python xvmc vaapi vdpau \
 ${IUSE_INPUT_DEVICES}"
 
@@ -42,7 +42,6 @@ SDEPEND="
 	virtual/opengl
 	virtual/glu
 	alsa? ( >=media-libs/alsa-lib-1.0.24 )
-	ass? ( >=media-libs/libass-0.9.11 )
 	cec? ( dev-libs/libcec )
 	dvb? ( media-libs/libdvb virtual/linuxtv-dvb-headers )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
@@ -50,6 +49,7 @@ SDEPEND="
 			>=media-libs/libiec61883-1.0.0 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
+	libass? ( >=media-libs/libass-0.9.11 )
 	lirc? ( app-misc/lirc )
 	perl? (	dev-perl/DBD-mysql
 		dev-perl/Net-UPnP
@@ -111,7 +111,7 @@ src_prepare() {
 	sed -e "s:pure_install:pure_install INSTALLDIRS=vendor:" \
 		-i "${S}"/bindings/perl/Makefile
 
-	epatch "${FILESDIR}/fixLdconfSandbox.patch"
+	epatch "${FILESDIR}/fixLdconfSandbox.${PV}.patch"
 
 	epatch_user
 }
