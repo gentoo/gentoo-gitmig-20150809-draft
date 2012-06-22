@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.20 2012/06/22 15:14:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.21 2012/06/22 18:57:33 axs Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -439,14 +439,21 @@ esethome() {
 		;;
 
 	*-freebsd*|*-dragonfly*)
-		pw usermod "${euser}" -d "${ehome}" || die
+		pw usermod "${euser}" -d "${ehome}" && return 0
+		[[ $? == 8 ]] && eerror "${euser} is in use, cannot update home"
+		eerror "There was an error when attempting to update the home directory for ${euser}"
+		eerror "Please update it manually on your system:"
+		eerror "\t pw usermod \"${euser}\" -d \"${ehome}\""
 		;;
 
 	*)
-		usermod -d "${ehome}" "${euser}" || die
+		usermod -d "${ehome}" "${euser}" && return 0
+		[[ $? == 8 ]] && eerror "${euser} is in use, cannot update home"
+		eerror "There was an error when attempting to update the home directory for ${euser}"
+		eerror "Please update it manually on your system (as root):"
+		eerror "\t usermod -d \"${ehome}\" \"${euser}\""
 		;;
 	esac
-
 }
 
 fi

@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.325 2012/06/22 15:14:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.326 2012/06/22 18:57:33 axs Exp $
+
+  22 Jun 2012; Ian Stakenvicius <axs@gentoo.org> user.eclass:
+  esethome: eerror and not die when home dir cannot be updated, due to for
+  instance user being in use
 
   22 Jun 2012; Ian Stakenvicius <axs@gentoo.org> user.eclass:
   fixed esethome, directory must exist befure user record can be updated
