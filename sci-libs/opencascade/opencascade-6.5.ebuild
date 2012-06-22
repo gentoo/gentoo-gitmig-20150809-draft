@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.ebuild,v 1.1 2011/11/13 20:42:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.ebuild,v 1.2 2012/06/22 13:13:02 jlec Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ CHECKREQS_MEMORY="256M"
 CHECKREQS_DISK_BUILD="3584M"
 
 pkg_setup() {
-	check_reqs_pkg_setup
+	check-reqs_pkg_setup
 	java-pkg-opt-2_pkg_setup
 
 	# Determine itk, itcl, tix, tk and tcl versions
@@ -57,6 +57,10 @@ pkg_setup() {
 
 src_prepare() {
 	java-pkg-opt-2_src_prepare
+
+	sed \
+		-e '/AM_C_PROTOTYPES/d' \
+		-i configure.* || die
 
 	# Substitute with our ready-made env.sh script
 	cp -f "${FILESDIR}"/env.sh.template env.sh || die

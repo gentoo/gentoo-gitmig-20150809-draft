@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/opencascade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/ChangeLog,v 1.5 2012/01/07 16:30:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/ChangeLog,v 1.6 2012/06/22 13:13:02 jlec Exp $
+
+  22 Jun 2012; Justin Lecher <jlec@gentoo.org> opencascade-6.5.ebuild,
+  metadata.xml:
+  Fix for automake-1.12, #422115; fix type in check-reqs_pkg_setup
 
   07 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -opencascade-6.3-r3.ebuild, -files/opencascade-6.3-fixed-DESTDIR.patch,
