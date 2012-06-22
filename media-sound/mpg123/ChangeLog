@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.260 2012/06/20 06:32:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.261 2012/06/22 16:08:16 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> mpg123-1.14.2.ebuild:
+  Marking mpg123-1.14.2 ppc64 for bug 422127
 
   20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> mpg123-1.14.2.ebuild:
   marked x86 per bug 422127
