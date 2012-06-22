@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.40 2012/05/09 17:13:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.41 2012/06/22 15:41:31 aballier Exp $
+
+*chktex-1.7.0 (22 Jun 2012)
+
+  22 Jun 2012; Alexis Ballier <aballier@gentoo.org> +chktex-1.7.0.ebuild,
+  +files/chktex-1.7.0-asneeded.patch:
+  version bump
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> chktex-1.6.6.ebuild:
   keyword ~amd64-fbsd
