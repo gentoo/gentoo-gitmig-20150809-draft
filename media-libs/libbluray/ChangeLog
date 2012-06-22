@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.32 2012/06/20 09:28:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.33 2012/06/22 15:19:52 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> libbluray-0.2.2.ebuild:
+  Marking libbluray-0.2.2 ppc64 for bug 422107
 
   20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libbluray-0.2.2.ebuild:
   marked x86 per bug 422107
