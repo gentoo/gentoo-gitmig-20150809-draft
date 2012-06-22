@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.15 2012/04/18 09:32:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.16 2012/06/22 14:29:21 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> wmtop-0.9.0-r1.ebuild:
+  Stable for amd64, wrt bug #422405
 
 *wmtop-0.9.0-r1 (18 Apr 2012)
 
