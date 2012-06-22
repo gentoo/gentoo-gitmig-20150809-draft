@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.60 2012/06/20 20:06:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.61 2012/06/22 16:06:26 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> opensp-1.5.2-r3.ebuild:
+  Marking opensp-1.5.2-r3 ppc64 for bug 410273
 
   20 Jun 2012; Markus Meier <maekke@gentoo.org> opensp-1.5.2-r3.ebuild:
   arm stable, bug #410273
