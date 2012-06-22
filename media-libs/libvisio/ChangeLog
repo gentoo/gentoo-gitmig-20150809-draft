@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.31 2012/06/22 11:19:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.32 2012/06/22 12:24:42 scarabeus Exp $
+
+  22 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> libvisio-0.0.17.ebuild:
+  Really stable 0.0.17. Seems like bug of ekeyword. Thanks to Rene Neumann for
+  the report.
 
 *libvisio-0.0.18 (22 Jun 2012)
 
