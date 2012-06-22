@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.5.0.0.ebuild,v 1.2 2012/06/20 17:54:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.5.0.0.ebuild,v 1.3 2012/06/22 07:45:30 jdhore Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/asc-hq/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
