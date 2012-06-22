@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfire
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/ChangeLog,v 1.21 2012/05/05 05:12:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/ChangeLog,v 1.22 2012/06/22 14:28:28 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> wmfire-1.2.4-r2.ebuild:
+  Stable for amd64, wrt bug #422401
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmfire-1.2.3.ebuild,
   wmfire-1.2.4-r1.ebuild, wmfire-1.2.4-r2.ebuild:
