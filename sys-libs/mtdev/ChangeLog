@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/mtdev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.7 2012/06/09 09:06:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.8 2012/06/22 20:20:01 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> mtdev-1.1.2.ebuild:
+  Stable for amd64, wrt bug #419473
 
   09 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -mtdev-1.1.0.ebuild,
   mtdev-1.1.2.ebuild:
