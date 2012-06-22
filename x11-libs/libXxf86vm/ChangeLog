@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXxf86vm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/ChangeLog,v 1.63 2012/05/09 01:08:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/ChangeLog,v 1.64 2012/06/22 21:03:25 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libXxf86vm-1.1.2.ebuild:
+  Stable for amd64, wrt bug #419473
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> libXxf86vm-1.1.2.ebuild:
   keyword ~amd64-fbsd

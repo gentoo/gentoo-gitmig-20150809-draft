@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.76 2012/05/09 01:03:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.77 2012/06/22 21:05:13 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libpciaccess-0.13.1.ebuild:
+  Stable for amd64, wrt bug #419473
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> libpciaccess-0.13.1.ebuild:
   keyword ~amd64-fbsd

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.194 2012/06/02 10:54:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.195 2012/06/22 20:53:21 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libX11-1.5.0.ebuild:
+  Stable for amd64, wrt bug #419473
 
 *libX11-1.5.0 (02 Jun 2012)
 

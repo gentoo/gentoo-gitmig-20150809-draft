@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libFS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.51 2012/03/04 21:02:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.52 2012/06/22 20:51:37 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libFS-1.0.4.ebuild:
+  Stable for amd64, wrt bug #419473
 
 *libFS-1.0.4 (04 Mar 2012)
 

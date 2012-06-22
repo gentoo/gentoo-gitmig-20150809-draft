@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.70 2012/05/10 17:13:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.71 2012/06/22 21:02:02 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libXv-1.0.7.ebuild:
+  Stable for amd64, wrt bug #419473
 
   10 May 2012; Alexis Ballier <aballier@gentoo.org> libXv-1.0.7.ebuild:
   keyword ~amd64-fbsd
