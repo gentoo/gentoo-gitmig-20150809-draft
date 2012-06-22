@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lndir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lndir/ChangeLog,v 1.21 2012/03/09 00:06:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lndir/ChangeLog,v 1.22 2012/06/22 21:10:47 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> lndir-1.0.3.ebuild:
+  Stable for amd64, wrt bug #419473
 
 *lndir-1.0.3 (09 Mar 2012)
 

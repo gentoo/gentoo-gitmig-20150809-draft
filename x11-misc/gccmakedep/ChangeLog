@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gccmakedep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.25 2012/05/09 16:13:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.26 2012/06/22 21:10:02 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gccmakedep-1.0.2-r1.ebuild:
+  Stable for amd64, wrt bug #419473
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> gccmakedep-1.0.2-r1.ebuild:
   keyword ~amd64-fbsd

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/makedepend
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/makedepend/ChangeLog,v 1.58 2012/05/09 01:06:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/makedepend/ChangeLog,v 1.59 2012/06/22 21:11:11 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> makedepend-1.0.4.ebuild:
+  Stable for amd64, wrt bug #419473
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> makedepend-1.0.4.ebuild:
   keyword ~amd64-fbsd

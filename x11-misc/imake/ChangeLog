@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.50 2012/05/09 16:17:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.51 2012/06/22 21:10:26 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> imake-1.0.5.ebuild:
+  Stable for amd64, wrt bug #419473
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> imake-1.0.5.ebuild:
   keyword ~amd64-fbsd

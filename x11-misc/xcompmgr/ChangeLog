@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.45 2012/02/24 15:37:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.46 2012/06/22 21:11:33 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xcompmgr-1.1.6.ebuild:
+  Stable for amd64, wrt bug #419473
 
 *xcompmgr-1.1.6 (24 Feb 2012)
 
