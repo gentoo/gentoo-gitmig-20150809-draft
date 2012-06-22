@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xauth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/ChangeLog,v 1.79 2012/05/07 12:28:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/ChangeLog,v 1.80 2012/06/22 20:25:22 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xauth-1.0.7.ebuild:
+  Stable for amd64, wrt bug #419473
 
   07 May 2012; Alexis Ballier <aballier@gentoo.org> xauth-1.0.7.ebuild:
   keyword ~amd64-fbsd

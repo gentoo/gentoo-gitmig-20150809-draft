@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.47 2012/05/15 14:18:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.48 2012/06/22 20:34:20 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xwd-1.0.5.ebuild:
+  Stable for amd64, wrt bug #419473
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> xwd-1.0.5.ebuild:
   keyword ~amd64-fbsd
