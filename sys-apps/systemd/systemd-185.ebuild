@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-185.ebuild,v 1.1 2012/06/20 13:48:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-185.ebuild,v 1.2 2012/06/22 14:23:04 mgorny Exp $
 
 EAPI=4
 
@@ -50,6 +50,8 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	>=sys-kernel/linux-headers-${MINKV}
 	doc? ( dev-util/gtk-doc )"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	enewgroup lock # used by var-lock.mount
