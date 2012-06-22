@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/ampache
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.50 2010/12/09 10:01:47 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.51 2012/06/22 21:24:02 mabi Exp $
+
+  22 Jun 2012; Matti Bickel <mabi@gentoo.org> -ampache-3.4.4.ebuild,
+  -ampache-3.5.3.ebuild, ampache-3.5.3-r1.ebuild, ampache-3.5.4.ebuild:
+  remove ebuilds wrt bug #297709, fix doc install location wrt bug #365581, drop
+  unneeded depend.php usage
 
 *ampache-3.5.4 (09 Dec 2010)
 

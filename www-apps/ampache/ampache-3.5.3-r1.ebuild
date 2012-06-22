@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.5.3-r1.ebuild,v 1.3 2010/10/20 14:19:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.5.3-r1.ebuild,v 1.4 2012/06/22 21:24:02 mabi Exp $
 
 EAPI="2"
 
-inherit webapp depend.php
+inherit webapp
 
 DESCRIPTION="Ampache is a PHP-based tool for managing, updating and playing your audio files via a web interface."
 HOMEPAGE="http://www.ampache.org/"
@@ -35,7 +35,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "Install and upgrade instructions can be found here:"
-	elog "  /usr/share/doc/${P}/INSTALL.gz"
-	elog "  /usr/share/doc/${P}/MIGRATION.gz"
+	elog "  /usr/share/doc/${P}/INSTALL.bz2"
+	elog "  /usr/share/doc/${P}/MIGRATION.bz2"
 	webapp_pkg_postinst
 }
