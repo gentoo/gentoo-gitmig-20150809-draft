@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-tokenstream
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_TokenStream/ChangeLog,v 1.2 2012/06/22 17:34:42 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_TokenStream/ChangeLog,v 1.3 2012/06/22 17:36:30 mabi Exp $
+
+  22 Jun 2012; Matti Bickel <mabi@gentoo.org> PHP_TokenStream-1.1.3.ebuild:
+  make repoman happy, also remove redundant php requirement
 
 *PHP_TokenStream-1.1.3 (22 Jun 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_TokenStream/PHP_TokenStream-1.1.3.ebuild,v 1.1 2012/06/22 17:34:42 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_TokenStream/PHP_TokenStream-1.1.3.ebuild,v 1.2 2012/06/22 17:36:30 mabi Exp $
 
 EAPI=4
 
@@ -19,6 +19,5 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-lang/php[tokenizer]
-    >=dev-lang/php-5.2.7
 	>=dev-php/pear-1.9.4"
 RDEPEND="${DEPEND}"
