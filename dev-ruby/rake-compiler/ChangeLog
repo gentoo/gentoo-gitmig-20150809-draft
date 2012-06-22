@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.48 2012/06/22 08:10:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.49 2012/06/22 21:43:36 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> rake-compiler-0.8.1.ebuild:
+  Stable for amd64, wrt bug #422931
 
   22 Jun 2012; Hans de Graaff <graaff@gentoo.org> rake-compiler-0.8.1.ebuild:
   Restrict tests to be able to bootstrap ruby19 stable.
