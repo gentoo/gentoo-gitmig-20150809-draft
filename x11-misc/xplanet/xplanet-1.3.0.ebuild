@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.3.0.ebuild,v 1.3 2012/06/20 08:37:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.3.0.ebuild,v 1.4 2012/06/22 15:23:45 ranger Exp $
 
 EAPI=4
 inherit flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ppc64 ~sparc x86"
 IUSE="gif jpeg png tiff truetype X"
 
 RDEPEND="gif? ( media-libs/giflib )
