@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.59 2012/06/20 20:09:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.60 2012/06/22 16:12:45 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> libdvbpsi-0.2.2.ebuild:
+  Marking libdvbpsi-0.2.2 ppc64 for bug 419083
 
   20 Jun 2012; Markus Meier <maekke@gentoo.org> libdvbpsi-0.2.2.ebuild:
   arm stable, bug #419083
