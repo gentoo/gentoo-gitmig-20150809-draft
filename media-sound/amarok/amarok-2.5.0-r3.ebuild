@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0-r2.ebuild,v 1.3 2012/05/26 15:22:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0-r3.ebuild,v 1.1 2012/06/22 01:29:47 creffett Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ inherit flag-o-matic kde4-base
 DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
 if [[ ${PV} != *9999* ]]; then
-	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 else
 	KEYWORDS=""
 fi
@@ -74,6 +74,7 @@ RDEPEND="${COMMONDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.5.0-kde48.patch"
+	"${FILESDIR}/${PN}-2.5.0-qtdebug.patch"
 )
 
 src_prepare() {
