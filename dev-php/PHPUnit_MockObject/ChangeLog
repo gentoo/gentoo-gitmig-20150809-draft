@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/phpunit-mockobject
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHPUnit_MockObject/ChangeLog,v 1.1 2012/03/10 15:17:52 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHPUnit_MockObject/ChangeLog,v 1.2 2012/06/22 17:33:15 mabi Exp $
+
+*PHPUnit_MockObject-1.1.1 (22 Jun 2012)
+
+  22 Jun 2012; Matti Bickel <mabi@gentoo.org> +PHPUnit_MockObject-1.1.1.ebuild:
+  version bump, epear import
 
 *phpunit-mockobject-1.1.0 (03 Nov 2011)
 

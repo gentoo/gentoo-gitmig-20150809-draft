@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/yaml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/ChangeLog,v 1.1 2012/03/10 14:33:53 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/ChangeLog,v 1.2 2012/06/22 17:33:51 mabi Exp $
+
+*YAML-1.0.6 (22 Jun 2012)
+
+  22 Jun 2012; Matti Bickel <mabi@gentoo.org> +YAML-1.0.6.ebuild:
+  version bump, epear import
 
   28 Jun 2011; Ole Markus With <olemarkus@gentoo.org> yaml-1.0.5.ebuild:
   Added missing PHP_PEAR_URI

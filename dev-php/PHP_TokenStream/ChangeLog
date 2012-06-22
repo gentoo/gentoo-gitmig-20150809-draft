@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php-tokenstream
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_TokenStream/ChangeLog,v 1.1 2012/03/10 15:27:49 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_TokenStream/ChangeLog,v 1.2 2012/06/22 17:34:42 mabi Exp $
+
+*PHP_TokenStream-1.1.3 (22 Jun 2012)
+
+  22 Jun 2012; Matti Bickel <mabi@gentoo.org> +PHP_TokenStream-1.1.3.ebuild:
+  version bump, epear import
 
   14 Dec 2011; Matti Bickel <mabi@gentoo.org> php-tokenstream-1.0.1.ebuild,
   php-tokenstream-1.1.0.ebuild:
