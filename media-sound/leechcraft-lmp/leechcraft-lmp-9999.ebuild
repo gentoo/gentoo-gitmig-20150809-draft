@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lmp/leechcraft-lmp-9999.ebuild,v 1.3 2012/06/18 17:19:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lmp/leechcraft-lmp-9999.ebuild,v 1.4 2012/06/22 14:58:43 maksbotan Exp $
 
 EAPI="4"
 
@@ -16,7 +16,8 @@ DEPEND="~net-misc/leechcraft-core-${PV}
 		kde? ( media-libs/phonon )
 		!kde? ( x11-libs/qt-phonon )
 		media-libs/taglib
-		mpris? ( x11-libs/qt-dbus )"
+		mpris? ( x11-libs/qt-dbus )
+		x11-libs/qt-declarative"
 RDEPEND="${DEPEND}"
 
 src_configure() {
