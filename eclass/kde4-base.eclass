@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.118 2012/06/07 22:06:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.119 2012/06/22 09:19:46 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -19,6 +19,10 @@
 # For any other value, add selinux to IUSE, and depending on that useflag
 # add a dependency on sec-policy/selinux-${KDE_SELINUX_MODULE} to (R)DEPEND
 : ${KDE_SELINUX_MODULE:=none}
+
+# @ECLASS-VARIABLE: VIRTUALDBUS_TEST
+# @DESCRIPTION:
+# If defined, launch and use a private dbus session during src_test.
 
 # @ECLASS-VARIABLE: VIRTUALX_REQUIRED
 # @DESCRIPTION:
@@ -166,8 +170,8 @@ case ${KDEBASE} in
 	kde-base)
 		HOMEPAGE="http://www.kde.org/"
 		LICENSE="GPL-2"
-		if [[ $BUILD_TYPE = live ]]; then
-			# Disable tests for live ebuilds
+		if [[ ${BUILD_TYPE} = live && -z ${I_KNOW_WHAT_I_AM_DOING} ]]; then
+			# Disable tests for live ebuilds by default
 			RESTRICT+=" test"
 		fi
 
@@ -446,12 +450,15 @@ _calculate_src_uri() {
 					# KDEPIM 4.4, special case
 					# TODO: Remove this part when KDEPIM 4.4 gets out of the tree
 					SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2" ;;
-				4.[456789].8[05] | 4.[456789].9[0235678])
+				4.[4567].8[05] | 4.[4567].9[0235678])
 					# Unstable KDE SC releases
 					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
 				4.8.[12345])
 					# Stable KDE SC releases with .xz support
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.xz" ;;
+				4.[89].8[05] | 4.[89].9[0235678])
+					# Unstable KDE SC releases
+					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.xz" ;;
 				*)
 					# Stable KDE SC releases
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
@@ -801,16 +808,28 @@ kde4-base_src_compile() {
 kde4-base_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	# Override this value, set in kde4-base_src_configure()
-	mycmakeargs+=(-DKDE4_BUILD_TESTS=ON)
-	cmake-utils_src_configure
-	kde4-base_src_compile
+	local kded4_pid
+
+	_test_runner() {
+		if [[ -n "${VIRTUALDBUS_TEST}" ]]; then
+			export $(dbus-launch)
+			kded4 2>&1 > /dev/null &
+			kded4_pid=$!
+		fi
+
+		cmake-utils_src_test
+	}		
 
 	# When run as normal user during ebuild development with the ebuild command, the
 	# kde tests tend to access the session DBUS. This however is not possible in a real
 	# emerge or on the tinderbox.
 	# > make sure it does not happen, so bad tests can be recognized and disabled
-	unset DBUS_SESSION_BUS_ADDRESS
+	unset DBUS_SESSION_BUS_ADDRESS DBUS_SESSION_BUS_PID
+
+	# Override this value, set in kde4-base_src_configure()
+	mycmakeargs+=(-DKDE4_BUILD_TESTS=ON)
+	cmake-utils_src_configure
+	kde4-base_src_compile
 
 	if [[ ${VIRTUALX_REQUIRED} == always || ${VIRTUALX_REQUIRED} == test ]]; then
 		# check for sanity if anyone already redefined VIRTUALX_COMMAND from the default
@@ -820,12 +839,20 @@ kde4-base_src_test() {
 			debug-print "           You may NOT set VIRTUALX_COMMAND or call virtualmake from the ebuild."
 			debug-print "           Setting VIRTUALX_REQUIRED is completely sufficient. See the"
 			debug-print "           kde4-base.eclass docs for details... Applying workaround."
-			cmake-utils_src_test
+			_test_runner
 		else
-			VIRTUALX_COMMAND="cmake-utils_src_test" virtualmake
+			VIRTUALX_COMMAND="_test_runner" virtualmake
 		fi
 	else
-		cmake-utils_src_test
+		_test_runner
+	fi
+
+	if [ -n "${kded4_pid}" ] ; then
+		kill ${kded4_pid}
+	fi
+
+	if [ -n "${DBUS_SESSION_BUS_PID}" ] ; then
+		kill ${DBUS_SESSION_BUS_PID}
 	fi
 }
 

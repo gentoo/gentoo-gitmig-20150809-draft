@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.322 2012/06/21 15:10:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.323 2012/06/22 09:19:46 kensington Exp $
+
+  22 Jun 2012; Michael233 <michael@gentoo.org> kde4-base.eclass:
+  Sync from kde overlay: Enable tests for live ebuilds, add support for virtual
+  dbus during src_test, update tarball extension for unstable releases.
 
   21 Jun 2012; Naohiro Aota <naota@gentoo.org> gnome2-utils.eclass:
   Add new function gnome2_query_immodules_gtk{2,3} to update immodules cache.
