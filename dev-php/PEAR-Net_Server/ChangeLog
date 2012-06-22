@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_Server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.30 2012/06/13 19:55:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.31 2012/06/22 15:53:59 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> PEAR-Net_Server-1.0.2-r1.ebuild:
+  Marking PEAR-Net_Server-1.0.2-r1 ppc64 for bug 418893
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
   PEAR-Net_Server-1.0.2-r1.ebuild:
