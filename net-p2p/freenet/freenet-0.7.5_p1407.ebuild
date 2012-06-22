@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1407.ebuild,v 1.2 2012/04/16 20:50:51 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1407.ebuild,v 1.3 2012/06/22 18:36:27 tommy Exp $
 
 EAPI="2"
 DATE=20120415
@@ -19,35 +19,39 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="freemail test"
 
-CDEPEND="freemail? ( >=dev-java/bcprov-1.45 )
-	dev-java/commons-compress
+CDEPEND="freemail? ( >=dev-java/bcprov-1.45:0 )
+	dev-java/commons-compress:0
 	dev-db/db-je:3.3
-	dev-java/fec
-	dev-java/java-service-wrapper
-	dev-java/db4o-jdk11
-	dev-java/db4o-jdk12
-	dev-java/db4o-jdk5
-	dev-java/jbitcollider-core
-	dev-java/lzma
-	dev-java/lzmajio
-	dev-java/mersennetwister"
+	dev-java/fec:0
+	dev-java/java-service-wrapper:0
+	dev-java/db4o-jdk11:0
+	dev-java/db4o-jdk12:0
+	dev-java/db4o-jdk5:0
+	dev-java/jbitcollider-core:0
+	dev-java/lzma:0
+	dev-java/lzmajio:0
+	dev-java/mersennetwister:0"
 DEPEND="app-arch/unzip
 	>=virtual/jdk-1.6
 	${CDEPEND}
-	test? ( dev-java/junit
-		dev-java/ant-junit )
-	dev-java/ant-core"
+	test? ( dev-java/junit:0
+		dev-java/ant-junit:0 )
+	dev-java/ant-core:0"
 RDEPEND=">=virtual/jre-1.6
-	net-libs/nativebiginteger
+	net-libs/nativebiginteger:0
 	${CDEPEND}"
-PDEPEND="net-libs/NativeThread"
+PDEPEND="net-libs/NativeThread:0"
+
+JAVA_PKG_BSFIX_NAME+=" build-clean.xml"
+JAVA_ANT_REWRITE_CLASSPATH="yes"
+JAVA_ANT_CLASSPATH_TAGS+=" javadoc"
+JAVA_ANT_ENCODING="utf8"
 
 EANT_BUILD_TARGET="package"
 EANT_TEST_TARGET="unit"
 EANT_BUILD_XML="build-clean.xml"
-EANT_GENTOO_CLASSPATH="commons-compress db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper jbitcollider-core lzma lzmajio mersennetwister"
-EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.junit.present=true"
-export EANT_EXTRA_ARGS+=" -Dtest.skip=true"
+EANT_GENTOO_CLASSPATH="commons-compress,db4o-jdk5,db4o-jdk12,db4o-jdk11,db-je-3.3,fec,java-service-wrapper,jbitcollider-core,lzma,lzmajio,mersennetwister"
+EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.junit.present=true -Dtest.skip=true"
 
 pkg_setup() {
 	has_version dev-java/icedtea[cacao] && {
@@ -66,7 +70,7 @@ src_unpack() {
 	mv "${WORKDIR}"/freenet-fred-* "${S}"
 }
 
-src_prepare() {
+java_prepare() {
 	cp "${FILESDIR}"/freenet-0.7.5_p1389-wrapper.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
 	epatch "${FILESDIR}"/0.7.5_p1302-ext.patch \
@@ -96,20 +100,12 @@ src_prepare() {
 		done
 	fi
 
-	java-ant_rewrite-classpath "${EANT_BUILD_XML}"
-	java-pkg-2_src_prepare
 	cp "${DISTDIR}"/freenet-ant-1.7.1.jar lib/ant.jar || die
 }
 
+EANT_TEST_EXTRA_ARGS="-Dtest.skip=false"
+
 src_test() {
-	java-pkg_jar-from --into lib fec
-	java-pkg_jar-from --into lib java-service-wrapper
-	java-pkg_jar-from --into lib mersennetwister
-	java-pkg_jar-from --into lib lzma
-	java-pkg_jar-from --into lib db4o-jdk5
-	java-pkg_jar-from --into lib db4o-jdk12
-	java-pkg_jar-from --into lib db4o-jdk11
-	export EANT_EXTRA_ARGS+=" -Dtest.skip=false"
 	java-pkg-2_src_test
 }
 
