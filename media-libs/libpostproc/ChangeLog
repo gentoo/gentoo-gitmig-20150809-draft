@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpostproc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.6 2012/05/18 19:24:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.7 2012/06/22 09:10:01 scarabeus Exp $
+
+  22 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libpostproc-0.8.0.20120229.ebuild:
+  Lower the dep on virtual/ffmpeg for now. As the change that required testing
+  version is no longer in there (reverted by using different approach).
 
 *libpostproc-0.8.0.20120229 (18 May 2012)
 
