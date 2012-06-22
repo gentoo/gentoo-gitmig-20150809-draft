@@ -1,6 +1,11 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.37 2012/05/02 20:09:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.38 2012/06/22 20:48:51 sping Exp $
+
+  22 Jun 2012; Sebastian Pipping <sping@gentoo.org> httrack-3.45.4.ebuild,
+  +files/httrack-3.45.4-install-once.patch,
+  +files/httrack-3.45.4-parallel.patch:
+  Fix parallel make issue (bug #421499) and installing two files twice
 
 *httrack-3.45.4 (02 May 2012)
 
