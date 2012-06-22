@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.55.ebuild,v 1.2 2012/06/11 22:06:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.57.ebuild,v 1.1 2012/06/22 10:24:39 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -75,7 +75,7 @@ src_prepare() {
 	sed -e "s:if os.geteuid() == 0:if False and os.geteuid() == 0:" \
 		-i setup/install.py || die "sed failed to patch install.py"
 
-	sed -e "/^            self\\.check_call(qmc + \\[ext\\.name+'\\.pro'\\])$/a\
+	sed -e "/^            self\\.check_call(qmc + \\[.*\\.pro'\\])$/a\
 \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ self.check_call(['sed', \
 '-e', 's|^CFLAGS .*|\\\\\\\\0 ${CFLAGS}|', \
 '-e', 's|^CXXFLAGS .*|\\\\\\\\0 ${CXXFLAGS}|', \
