@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.44 2012/06/21 01:44:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.45 2012/06/22 15:18:51 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> testtools-0.9.15.ebuild:
+  Marking testtools-0.9.15 ppc64 for bug 422071
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> testtools-0.9.15.ebuild:
   marked x86 per bug 422071
