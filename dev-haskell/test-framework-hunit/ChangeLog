@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/test-framework-hunit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/ChangeLog,v 1.13 2012/06/19 13:19:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/ChangeLog,v 1.14 2012/06/22 15:37:58 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org>
+  test-framework-hunit-0.2.7.ebuild:
+  Marking test-framework-hunit-0.2.7 ppc64 for bug 414713
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   test-framework-hunit-0.2.7.ebuild:
