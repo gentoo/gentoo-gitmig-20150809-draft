@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.3 2012/06/22 04:09:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.4 2012/06/22 04:27:09 cardoe Exp $
 
 EAPI=4
 
@@ -33,10 +33,10 @@ SDEPEND="
 	x11-libs/libXv
 	x11-libs/libXrandr
 	x11-libs/libXxf86vm
-	x11-libs/qt-core:4[qt3support]
-	x11-libs/qt-gui:4[qt3support]
-	x11-libs/qt-sql:4[qt3support,mysql]
-	x11-libs/qt-opengl:4[qt3support]
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4[dbus]
+	x11-libs/qt-sql:4[mysql]
+	x11-libs/qt-opengl:4
 	x11-libs/qt-webkit:4
 	virtual/mysql
 	virtual/opengl
@@ -79,7 +79,6 @@ RDEPEND="${SDEPEND}
 			x11-apps/xset )
 	bluray? ( media-libs/libbluray )
 	dvd? ( media-libs/libdvdcss )
-	vdpau? ( >=x11-drivers/nvidia-drivers-256 )
 	"
 
 DEPEND="${SDEPEND}
