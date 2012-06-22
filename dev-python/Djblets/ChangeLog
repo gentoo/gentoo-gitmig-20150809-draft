@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/Djblets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.9 2012/06/11 09:51:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.10 2012/06/22 07:28:02 xmw Exp $
+
+*Djblets-0.6.14 (22 Jun 2012)
+
+  22 Jun 2012; Michael Weber <xmw@gentoo.org> +Djblets-0.6.14.ebuild,
+  -Djblets-0.6.11.ebuild, -Djblets-0.6.12.ebuild:
+  Version bump (thanks euscan), drop old.
 
 *Djblets-0.6.13 (11 Jun 2012)
 
