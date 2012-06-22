@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-amrwbenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.21 2012/06/21 15:07:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.22 2012/06/22 16:07:21 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> vo-amrwbenc-0.1.2.ebuild:
+  Marking vo-amrwbenc-0.1.2 ppc64 for bug 414769
 
   21 Jun 2012; Jeroen Roovers <jer@gentoo.org> vo-amrwbenc-0.1.2.ebuild:
   Stable for HPPA (bug #414769).
