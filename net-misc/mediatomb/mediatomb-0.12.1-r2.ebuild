@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r2.ebuild,v 1.2 2012/05/19 09:13:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r2.ebuild,v 1.3 2012/06/22 15:25:41 ago Exp $
 
 EAPI=2
 inherit autotools eutils linux-info
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/mediatomb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~x86"
 IUSE="debug +exif +ffmpeg inotify +javascript lastfm libextractor +mp4 mysql +taglib thumbnail"
 
 DEPEND="
