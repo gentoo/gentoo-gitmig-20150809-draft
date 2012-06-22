@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.197 2012/06/17 19:47:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.198 2012/06/22 16:02:40 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> transmission-2.52.ebuild:
+  Marking transmission-2.52 ppc64 for bug 421537
 
   17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> transmission-2.52.ebuild:
   marked x86 per bug 421537
