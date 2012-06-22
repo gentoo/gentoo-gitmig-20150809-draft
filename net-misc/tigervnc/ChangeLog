@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.129 2012/06/10 08:44:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.130 2012/06/22 15:16:56 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> tigervnc-1.1.0-r7.ebuild:
+  Marking tigervnc-1.1.0-r7 ppc64 for bug 421939
 
   10 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -tigervnc-1.0.1_p20110618-r1.ebuild, -tigervnc-1.1.0-r4.ebuild,
