@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.21 2012/06/22 18:57:33 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.22 2012/06/22 19:18:24 axs Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -422,6 +422,13 @@ esethome() {
 	if [[ ${ehome} == "-1" ]] ; then
 		ehome="/dev/null"
 	fi
+
+	# exit with no message if home dir is up to date
+	if [[ $(egethome "${euser}") == ${ehome} ]]; then
+		return 0
+	fi
+
+	einfo "Updating home for user '${euser}' ..."
 	einfo " - Home: ${ehome}"
 
 	# ensure home directory exists, otherwise update will fail
