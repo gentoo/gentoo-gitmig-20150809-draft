@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gofish
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.18 2011/04/06 22:10:38 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.19 2012/06/22 11:05:59 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gofish-1.2.ebuild:
+  Stable for amd64, wrt bug #422929
 
 *gofish-1.2 (06 Apr 2011)
 
