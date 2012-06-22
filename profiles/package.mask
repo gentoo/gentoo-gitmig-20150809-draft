@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13882 2012/06/22 02:51:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13883 2012/06/22 22:02:29 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1083,6 +1083,7 @@ dev-util/mingw-runtime
 dev-util/mingw64-runtime
 dev-util/w32api
 sys-libs/newlib
+dev-embedded/msp430-binutils
 
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # The development branch, to be unmasked when out of beta by upstream.
