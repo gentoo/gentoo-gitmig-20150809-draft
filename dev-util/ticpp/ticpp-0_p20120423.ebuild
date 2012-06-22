@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ticpp-0_p20120423.ebuild,v 1.2 2012/06/18 14:20:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ticpp-0_p20120423.ebuild,v 1.3 2012/06/22 21:45:51 ago Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://code.google.com/p/ticpp/"
 SRC_URI="http://dev.gentoo.org/~ago/distfiles/${P}.tar.bz2"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="debug doc"
 
