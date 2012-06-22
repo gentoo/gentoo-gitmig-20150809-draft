@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.139 2012/06/21 15:06:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.140 2012/06/22 16:05:29 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> pax-utils-0.4.ebuild:
+  Marking pax-utils-0.4 ppc64 for bug 420919
 
   21 Jun 2012; Jeroen Roovers <jer@gentoo.org> pax-utils-0.4.ebuild:
   Stable for HPPA (bug #420919).
