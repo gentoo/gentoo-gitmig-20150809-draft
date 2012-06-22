@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libshout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.35 2012/06/07 22:21:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.36 2012/06/22 16:14:17 aballier Exp $
+
+*libshout-2.3.1 (22 Jun 2012)
+
+  22 Jun 2012; Alexis Ballier <aballier@gentoo.org> +libshout-2.3.1.ebuild:
+  version bump
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> libshout-2.3.0.ebuild:
   Marking libshout-2.3.0 ppc for bug 419097
