@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.2 2012/06/22 03:56:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.3 2012/06/22 04:09:47 cardoe Exp $
 
 EAPI=4
 
@@ -111,6 +111,8 @@ src_prepare() {
 	# Perl bits need to go into vender_perl and not site_perl
 	sed -e "s:pure_install:pure_install INSTALLDIRS=vendor:" \
 		-i "${S}"/bindings/perl/Makefile
+
+	epatch "${FILESDIR}/fixLdconfSandbox.patch"
 
 	epatch_user
 }
