@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.35 2012/05/02 21:44:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.36 2012/06/22 08:20:43 xmw Exp $
+
+*gurlchecker-0.13.1 (22 Jun 2012)
+
+  22 Jun 2012; Michael Weber <xmw@gentoo.org> +gurlchecker-0.13.1.ebuild:
+  Version bump (bug 304023 by Peter Volkov)
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> gurlchecker-0.10.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
