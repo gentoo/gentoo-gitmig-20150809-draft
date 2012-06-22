@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.74 2012/06/21 14:58:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.75 2012/06/22 15:15:12 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> lsscsi-0.26.ebuild:
+  Marking lsscsi-0.26 ppc64 for bug 422213
 
   21 Jun 2012; Jeroen Roovers <jer@gentoo.org> lsscsi-0.26.ebuild:
   Stable for HPPA (bug #422213).
