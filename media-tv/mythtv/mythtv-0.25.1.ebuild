@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.5 2012/06/22 13:33:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.6 2012/06/22 19:26:41 cardoe Exp $
 
 EAPI=4
 
@@ -199,7 +199,7 @@ src_install() {
 	newinitd "${FILESDIR}"/mythbackend.init mythbackend
 	newconfd "${FILESDIR}"/mythbackend.conf mythbackend
 
-	dodoc keys.txt docs/*.{txt,pdf}
+	dodoc keys.txt 
 	dohtml docs/*.html
 
 	keepdir /etc/mythtv
