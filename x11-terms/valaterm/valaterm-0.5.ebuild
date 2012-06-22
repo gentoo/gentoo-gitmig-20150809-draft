@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/valaterm-0.5.ebuild,v 1.1 2012/06/22 08:54:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/valaterm-0.5.ebuild,v 1.2 2012/06/22 09:56:00 ssuominen Exp $
 
 EAPI=4
 inherit waf-utils
@@ -12,7 +12,7 @@ DESCRIPTION="A lightweight vala based terminal"
 HOMEPAGE="http://gitorious.org/valaterm"
 SRC_URI="http://gitorious.org/${PN}/${PN}/archive-tarball/${PV} -> ${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
