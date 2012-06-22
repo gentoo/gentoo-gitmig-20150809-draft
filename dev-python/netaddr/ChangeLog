@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/netaddr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.8 2012/06/17 07:06:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.9 2012/06/22 08:20:12 maksbotan Exp $
+
+*netaddr-0.7.7 (22 Jun 2012)
+
+  22 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +netaddr-0.7.7.ebuild:
+  Bump to 0.7.7 and add 3.* to PYTHON_TESTS_FAILURES_TOLERANT_ABIS, bug 422749.
+  Thanks to idella4
 
   17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> netaddr-0.7.6-r1.ebuild:
   marked x86 per bug 421105
