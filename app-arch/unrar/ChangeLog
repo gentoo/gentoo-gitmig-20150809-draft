@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.179 2012/06/20 20:22:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.180 2012/06/22 15:13:25 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> unrar-4.2.3.ebuild:
+  Marking unrar-4.2.3 ppc64 for bug 421221
 
   20 Jun 2012; Markus Meier <maekke@gentoo.org> unrar-4.2.3.ebuild:
   arm stable, bug #421221
