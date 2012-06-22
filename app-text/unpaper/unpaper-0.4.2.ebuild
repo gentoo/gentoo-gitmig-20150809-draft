@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/unpaper-0.4.1.ebuild,v 1.1 2012/06/20 13:51:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/unpaper-0.4.2.ebuild,v 1.1 2012/06/22 21:30:51 flameeyes Exp $
 
 EAPI=4
 
