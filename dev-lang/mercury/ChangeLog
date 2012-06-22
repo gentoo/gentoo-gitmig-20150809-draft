@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.147 2012/03/10 11:07:09 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.148 2012/06/22 18:02:29 keri Exp $
+
+  22 Jun 2012; <keri@gentoo.org> mercury-11.07.1.ebuild:
+  Include missing testsuite patches. Closes #422477
 
   09 Mar 2012; <keri@gentoo.org> mercury-11.07.1.ebuild:
   Update Mmake.vars to set INSTALL_LIBDIR
