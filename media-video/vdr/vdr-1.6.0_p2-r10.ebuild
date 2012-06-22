@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r10.ebuild,v 1.4 2012/06/19 18:40:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r10.ebuild,v 1.5 2012/06/22 15:53:36 hd_brummy Exp $
 
 EAPI="4"
 
@@ -243,7 +243,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/vdr-1.6.0-gcc-4.4.diff
 		epatch "${FILESDIR}"/vdr-1.6.0-extensions-72-gcc-4.4.diff
 		epatch "${FILESDIR}"/vdr-1.6.0-shared-tinyxml.diff
-		epatch "${FILESDIR}"/vdr-1.6.0_p2_linguas-v2.diff
+		epatch "${FILESDIR}"/vdr-1.6.0_p2_linguas-v3.diff
 		epatch "${FILESDIR}"/vdr-1.6.0_p2_fontconfig_fontsort.patch
 		epatch "${FILESDIR}"/vdr-1.6.0_p2_gcc-4.7.patch
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.164 2012/06/19 18:40:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.165 2012/06/22 15:53:36 hd_brummy Exp $
+
+  22 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r10.ebuild,
+  -files/vdr-1.6.0_p2_linguas-v2.diff, +files/vdr-1.6.0_p2_linguas-v3.diff:
+  fixed linguas patch, failed install, reported by flameeyes@g.o
 
   19 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r10.ebuild:
   added missing inherit toolchain-funcs; stable x86 amd64

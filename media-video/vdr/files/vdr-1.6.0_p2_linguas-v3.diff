@@ -13,3 +13,12 @@ diff -Naur vdr-1.7.27.orig/Makefile vdr-1.7.27/Makefile
  I18Nmsgs  = $(addprefix $(LOCALEDIR)/, $(addsuffix /LC_MESSAGES/vdr.mo, $(notdir $(foreach file, $(I18Npo), $(basename $(file))))))
  I18Npot   = $(PODIR)/vdr.pot
  
+@@ -167,7 +167,7 @@
+ 
+ install-i18n:
+ 	@mkdir -p $(DESTDIR)$(LOCDIR)
+-	@(cd $(LOCALEDIR); cp -r --parents * $(DESTDIR)$(LOCDIR))
++	@(cd $(LOCALEDIR); for linguas in $(LINGUAS); do [ "$$linguas" = "en" ] && continue; cp -r --parents $$linguas* $(DESTDIR)$(LOCDIR); done)
+ 
+ # The 'include' directory (for plugins):
+ 
