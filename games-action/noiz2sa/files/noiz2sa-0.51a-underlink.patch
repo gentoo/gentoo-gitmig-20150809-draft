@@ -11,7 +11,7 @@
  
  DEFAULT_CFLAGS = `sdl-config --cflags`
 -LDFLAGS        = `sdl-config --libs` -L. -lglut -lbulletml -lSDL_mixer -mwindows -lstdc++
-+LDLIBS         = `sdl-config --libs` -lGL -lbulletml -lSDL_mixer -mwindows -lstdc++ -lm
++LDLIBS         = `sdl-config --libs` -lGL -lbulletml -lSDL_mixer -lstdc++ -lm
  
 -MORE_CFLAGS = -O3
 -
