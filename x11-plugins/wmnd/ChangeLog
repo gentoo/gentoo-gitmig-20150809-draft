@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.49 2012/02/15 11:37:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.50 2012/06/22 14:28:55 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> wmnd-0.4.16.ebuild:
+  Stable for amd64, wrt bug #422403
 
 *wmnd-0.4.16 (15 Feb 2012)
 
