@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.25 2012/06/18 12:44:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.26 2012/06/22 15:58:37 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> miniupnpc-1.6.20120509.ebuild:
+  Marking miniupnpc-1.6.20120509 ppc64 for bug 421535
 
 *miniupnpc-1.7 (18 Jun 2012)
 
