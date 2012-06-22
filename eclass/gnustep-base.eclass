@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.26 2012/06/19 09:06:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.27 2012/06/22 12:41:51 voyageur Exp $
 
 # @ECLASS: gnustep-base.eclass
 # @MAINTAINER:
@@ -158,7 +158,7 @@ egnustep_env() {
 			|| GS_ENV=( "${GS_ENV[@]}" "debug=no" )
 
 		# About 20 gnustep packages still use EAPI 0
-		if built_with_use gnustep-base/gnustep-make libobjc2;
+		if built_with_use --missing false gnustep-base/gnustep-make libobjc2;
 		then
 			# Set clang for packages that do not respect gnustep-make
 			# settings (gnustep-base's configure for example)
