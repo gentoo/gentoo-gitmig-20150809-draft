@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagvis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/ChangeLog,v 1.8 2012/02/09 10:43:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/ChangeLog,v 1.9 2012/06/22 20:56:51 mabi Exp $
+
+*nagvis-1.4.4-r1 (22 Jun 2012)
+
+  22 Jun 2012; Matti Bickel <mabi@gentoo.org> +nagvis-1.4.4-r1.ebuild:
+  cut dependency on depend.php.eclass, move to EAPI4
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
