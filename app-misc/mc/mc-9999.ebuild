@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.6 2012/05/03 19:41:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.7 2012/06/22 12:07:45 slyfox Exp $
 
 EAPI=4
 
@@ -24,12 +24,13 @@ HOMEPAGE="http://www.midnight-commander.org"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+edit gpm mclib nls samba +slang test X +xdg"
+IUSE="+edit gpm mclib nls samba sftp +slang test X +xdg"
 
 RDEPEND=">=dev-libs/glib-2.8:2
 	gpm? ( sys-libs/gpm )
 	kernel_linux? ( sys-fs/e2fsprogs )
 	samba? ( net-fs/samba )
+	sftp? ( net-libs/libssh2 )
 	slang? ( >=sys-libs/slang-2 )
 	!slang? ( sys-libs/ncurses )
 	X? ( x11-libs/libX11
@@ -79,6 +80,7 @@ src_configure() {
 		--enable-charset \
 		$(use_with X x) \
 		$(use_enable samba vfs-smb) \
+		$(use_enable sftp vfs-sftp) \
 		$(use_with gpm gpm-mouse) \
 		--with-screen=${myscreen} \
 		$(use_with edit) \
