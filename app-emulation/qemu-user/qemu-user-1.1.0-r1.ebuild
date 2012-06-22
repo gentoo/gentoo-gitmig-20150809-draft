@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-9999.ebuild,v 1.3 2012/06/22 13:52:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0-r1.ebuild,v 1.1 2012/06/22 13:52:59 lu_zero Exp $
 
 EAPI=4
+
 
 if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git
@@ -16,7 +17,7 @@ MY_P=${P/-user/}
 
 if [[ ${PV} != *9999 ]]; then
 SRC_URI="http://wiki.qemu.org/download/${MY_P}-1.tar.bz2
-		 http://dev.gentoo.org/~lu_zero/distfiles/qemu-1.1.0-r1-patches.tar.xz"
+		 http://dev.gentoo.org/~lu_zero/distfiles/qemu-${PVR}-patches.tar.xz"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
 S="${WORKDIR}/${MY_P}"
 fi
@@ -71,6 +72,7 @@ QA_WX_LOAD="
 	usr/bin/qemu-static-sparc64-binfmt
 	usr/bin/qemu-static-mipsn32-binfmt
 "
+
 
 src_prepare() {
 	cd "${S}"
