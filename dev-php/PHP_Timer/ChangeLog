@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-timer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_Timer/ChangeLog,v 1.1 2012/03/10 14:52:23 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_Timer/ChangeLog,v 1.2 2012/06/22 19:42:13 mabi Exp $
+
+  22 Jun 2012; Matti Bickel <mabi@gentoo.org> -PHP_Timer-1.0.0.ebuild:
+  remove old
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> php-timer-1.0.2.ebuild:
   x86 stable wrt bug #404709
