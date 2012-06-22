@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/jwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.22 2012/01/31 23:02:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.23 2012/06/22 14:30:17 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> jwm-2.1.0.ebuild:
+  Stable for amd64, wrt bug #422443
 
 *jwm-2.1.0 (31 Jan 2012)
 
