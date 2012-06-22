@@ -1,0 +1,67 @@
+Description: fix FTBFS with gcc-4.7
+Author: Philipp Büttgenbach <Philipp.Buettgenbach@gmx.de>
+Reviewed-by: Anton Gladky <gladky.anton@gmail.com>
+Last-Update: 2012-04-20
+
+--- a/include/gmm/gmm_except.h
++++ b/include/gmm/gmm_except.h
+@@ -76,7 +76,7 @@
+   }
+ # define GMM_THROW_(type, errormsg) {					\
+     std::stringstream msg;						\
+-    msg << "Error in "__FILE__ << ", line "				\
++    msg << "Error in " << __FILE__ << ", line "				\
+ 	<< __LINE__ << " " << GMM_PRETTY_FUNCTION << ": \n"		\
+ 	<< errormsg << ends;						\
+     throw (type)(msg.str());						\
+@@ -91,7 +91,7 @@
+   }
+ # define GMM_THROW_(type, errormsg) {					\
+     std::stringstream msg;						\
+-    msg << "Error in "__FILE__ << ", line "				\
++    msg << "Error in " << __FILE__ << ", line "				\
+ 	<< __LINE__ << " " << GMM_PRETTY_FUNCTION << ": \n"		\
+ 	<< errormsg   << ends;						\
+     ::abort();								\
+@@ -148,7 +148,7 @@
+ 
+ #define GMM_WARNING_MSG(level_, thestr)  {			       \
+       std::stringstream msg;                                           \
+-      msg << "Level " << level_ << " Warning in "__FILE__ << ", line " \
++      msg << "Level " << level_ << " Warning in " << __FILE__ << ", line " \
+           << __LINE__ << ": " << thestr << ends;		       \
+        std::cerr << msg.str() << std::endl;                            \
+     }
+@@ -210,7 +210,7 @@
+ #define GMM_TRACE_MSG(level_, thestr)  {			       \
+     GMM_TRACE_MSG_MPI {						       \
+       std::stringstream msg;                                           \
+-      msg << "Trace " << level_ << " in "__FILE__ << ", line "         \
++      msg << "Trace " << level_ << " in " << __FILE__ << ", line "         \
+           << __LINE__ << ": " << thestr				       \
+           << ends;						       \
+       std::cout << msg.str() << std::endl;			       \
+
+Description: fix FTBFS with gcc-4.7
+Author: Anton Gladky <gladky.anton@gmail.com>
+Last-Update: 2012-05-25
+
+--- a/include/gmm/gmm_vector.h
++++ b/include/gmm/gmm_vector.h
+@@ -235,14 +235,14 @@
+   template<typename T>  void wsvector<T>::clean(double eps) {
+     iterator it = this->begin(), itf = it, ite = this->end();
+     while (it != ite) {
+-      ++itf; if (gmm::abs(it->second) <= eps) erase(it); it = itf;
++      ++itf; if (gmm::abs(it->second) <= eps) base_type::erase(it); it = itf;
+     }
+   }
+ 
+   template<typename T>  void wsvector<T>::resize(size_type n) {
+     if (n < nbl) {
+       iterator it = this->begin(), itf = it, ite = this->end();
+-      while (it != ite) { ++itf; if (it->first >= n) erase(it); it = itf; }
++      while (it != ite) { ++itf; if (it->first >= n) base_type::erase(it); it = itf; }
+     }
+     nbl = n;
+   }
