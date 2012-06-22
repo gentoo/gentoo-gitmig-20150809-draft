@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.152 2012/06/21 19:32:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.153 2012/06/22 06:00:30 jdhore Exp $
+
+  22 Jun 2012; Jeff Horelick <jdhore@gentoo.org> scim-1.4.11-r1.ebuild:
+  marked x86 per bug 422875
 
   21 Jun 2012; Agostino Sarubbo <ago@gentoo.org> scim-1.4.11-r1.ebuild:
   Stable for amd64, wrt bug #422875
