@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.72 2012/06/12 17:49:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.73 2012/06/22 13:36:45 voyageur Exp $
+
+  22 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  files/clang-3.1-increase-parser-recursion-limit.patch:
+  Convert patch from DOS to Unix format, to prevent bugs like #422725
 
   12 Jun 2012; Fabian Groffen <grobian@gentoo.org> clang-3.1-r4.ebuild:
   Marked ~x64-macos
