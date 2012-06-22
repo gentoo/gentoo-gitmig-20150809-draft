@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.131 2012/06/22 18:06:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.132 2012/06/22 21:43:05 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> tigervnc-1.1.0-r7.ebuild:
+  Stable for amd64, wrt bug #421939
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> tigervnc-1.1.0-r7.ebuild:
   Reverting tigervnc-1.1.0-r7 ~ppc64
