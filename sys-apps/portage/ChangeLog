@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1035 2012/06/22 15:29:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1036 2012/06/22 21:57:02 jdhore Exp $
+
+  22 Jun 2012; Jeff Horelick <jdhore@gentoo.org> portage-2.1.10.65.ebuild:
+  marked x86 per bug 422721
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> portage-2.1.10.65.ebuild:
   Marking portage-2.1.10.65 ppc64 for bug 422721
