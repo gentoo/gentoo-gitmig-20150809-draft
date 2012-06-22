@@ -1,7 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.127 2012/06/14 22:39:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.128 2012/06/22 14:49:30 pesa Exp $
 
+
+# Davide Pesavento <pesa@gentoo.org> (22 Jun 2012)
+# gtk-engines-qtcurve-1.6.4 is stable on ppc{,64} but firefox isn't
+=x11-themes/gtk-engines-qtcurve-1.6.4 mozilla firefox3
 
 # Michael Weber <xmw@gentoo.org> (3 Jun 2012)
 # pymol got stabled (bug 366229) but USE=apbs deps aren't keyworded

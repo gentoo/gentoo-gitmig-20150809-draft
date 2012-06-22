@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6701 2012/06/21 18:48:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6702 2012/06/22 14:49:30 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  arch/powerpc/package.use.mask:
+  Mask mozilla and firefox3 USE flags for stable
+  x11-themes/gtk-engines-qtcurve.
 
   21 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
   +hardened/linux/arm/armv4/eapi, +hardened/linux/arm/armv4/parent,
