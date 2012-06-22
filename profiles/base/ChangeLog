@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.408 2012/06/19 14:27:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.409 2012/06/22 10:33:10 chainsaw Exp $
+
+  22 Jun 2012; Tony Vroon <chainsaw@gentoo.org> make.defaults:
+  Add VOICEMAIL_STORAGE to USE_EXPAND for net-misc/asterisk; approved by Ian
+  "axs" Stakenvicius on gentoo-dev.
 
   19 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
