@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/4ti2-1.3.2-r1.ebuild,v 1.5 2012/03/25 18:47:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/4ti2-1.3.2-r1.ebuild,v 1.6 2012/06/22 12:39:26 jlec Exp $
 
 EAPI=4
 
@@ -24,7 +24,10 @@ RDEPEND="${DEPEND}"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-PATCHES=( "${FILESDIR}"/${P}-gold.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-gold.patch
+	"${FILESDIR}"/${P}-gcc47.patch
+	)
 
 src_prepare() {
 	sed \
