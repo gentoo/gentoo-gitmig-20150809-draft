@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.139 2012/05/21 20:26:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.140 2012/06/22 14:21:32 pesa Exp $
+
+  22 Jun 2012; Davide Pesavento <pesa@gentoo.org> -qtcurve-qt4-1.8.10.ebuild,
+  -qtcurve-qt4-1.8.9.ebuild:
+  Remove old.
 
   21 May 2012; Johannes Huber <johu@gentoo.org> qtcurve-qt4-1.8.12.ebuild:
   Stable for x86, wrt bug #411845
