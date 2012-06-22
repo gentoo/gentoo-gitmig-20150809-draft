@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.25 2012/06/13 17:29:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.26 2012/06/22 15:44:18 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> libtar-1.2.11-r5.ebuild:
+  Marking libtar-1.2.11-r5 ppc64 for bug 420935
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libtar-1.2.11-r5.ebuild:
   marked x86 per bug 420935
