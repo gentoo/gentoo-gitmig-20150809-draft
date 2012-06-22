@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.39 2012/06/17 15:37:00 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.40 2012/06/22 15:34:09 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> crda-1.1.2-r3.ebuild:
+  Marking crda-1.1.2-r3 ppc64 for bug 419909
 
   17 Jun 2012; <gurligebis@gentoo.org> crda-1.1.2-r3.ebuild:
   Correcting dependency to just dev-libs/libnl, not dev-libs/libnl:1.1, fixing
