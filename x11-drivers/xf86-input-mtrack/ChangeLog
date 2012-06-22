@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-mtrack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mtrack/ChangeLog,v 1.4 2012/03/27 00:27:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mtrack/ChangeLog,v 1.5 2012/06/22 20:39:10 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  xf86-input-mtrack-0.2.0.ebuild:
+  Stable for amd64, wrt bug #419473
 
   27 Mar 2012; Naohiro Aota <naota@gentoo.org>
   +files/xf86-input-mtrack-0.2.0-drop-mtrack-test.patch,

@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-i740
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i740/ChangeLog,v 1.35 2012/05/16 00:49:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i740/ChangeLog,v 1.36 2012/06/22 20:43:54 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-i740-1.3.3.ebuild:
+  Stable for amd64, wrt bug #419473
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org>
   xf86-video-i740-1.3.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-s3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3/ChangeLog,v 1.48 2012/05/16 00:57:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-s3/ChangeLog,v 1.49 2012/06/22 20:48:07 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-s3-0.6.4.ebuild:
+  Stable for amd64, wrt bug #419473
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> xf86-video-s3-0.6.4.ebuild:
   keyword ~amd64-fbsd (compile tested only)

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-vmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.63 2012/03/22 21:37:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.64 2012/06/22 20:51:14 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  xf86-video-vmware-12.0.2.ebuild:
+  Stable for amd64, wrt bug #419473
 
 *xf86-video-vmware-12.0.2 (22 Mar 2012)
 

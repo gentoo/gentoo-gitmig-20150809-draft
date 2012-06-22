@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-ark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ark/ChangeLog,v 1.46 2012/05/16 00:44:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ark/ChangeLog,v 1.47 2012/06/22 20:40:57 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-ark-0.7.4.ebuild:
+  Stable for amd64, wrt bug #419473
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org>
   xf86-video-ark-0.7.4.ebuild:
