@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/tomoe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/ChangeLog,v 1.16 2012/06/08 11:52:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/ChangeLog,v 1.17 2012/06/22 02:13:29 naota Exp $
+
+  22 Jun 2012; Naohiro Aota <naota@gentoo.org> +files/tomoe-0.6.0-glib232.patch,
+  tomoe-0.6.0-r1.ebuild:
+  Add patch to build with glib-2.32. #422781
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tomoe-0.6.0-r1.ebuild:
   x86 stable wrt bug #418593

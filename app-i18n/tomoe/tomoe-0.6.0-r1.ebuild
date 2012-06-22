@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0-r1.ebuild,v 1.5 2012/06/08 11:52:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0-r1.ebuild,v 1.6 2012/06/22 02:13:29 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -46,7 +46,8 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}/${P}-export-symbols.patch" \
-		"${FILESDIR}/${P}-ldflags.patch"
+		"${FILESDIR}/${P}-ldflags.patch" \
+		"${FILESDIR}/${P}-glib232.patch"
 
 	if ! use hyperestraier ; then
 		sed -i -e "s/use_est=yes/use_est=no/" configure.ac || die
