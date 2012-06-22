@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.19 2012/06/18 16:51:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.20 2012/06/22 15:14:10 axs Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -424,6 +424,14 @@ esethome() {
 	fi
 	einfo " - Home: ${ehome}"
 
+	# ensure home directory exists, otherwise update will fail
+	if [[ ! -e ${ROOT}/${ehome} ]] ; then
+		einfo " - Creating ${ehome} in ${ROOT}"
+		mkdir -p "${ROOT}/${ehome}"
+		chown "${euser}" "${ROOT}/${ehome}"
+		chmod 755 "${ROOT}/${ehome}"
+	fi
+
 	# update the home directory
 	case ${CHOST} in
 	*-darwin*)
@@ -439,12 +447,6 @@ esethome() {
 		;;
 	esac
 
-	if [[ ! -e ${ROOT}/${ehome} ]] ; then
-		einfo " - Creating ${ehome} in ${ROOT}"
-		mkdir -p "${ROOT}/${ehome}"
-		chown "${euser}" "${ROOT}/${ehome}"
-		chmod 755 "${ROOT}/${ehome}"
-	fi
 }
 
 fi
