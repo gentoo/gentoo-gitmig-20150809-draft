@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.56 2012/06/15 07:53:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.57 2012/06/22 15:47:36 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> muttprint-0.73-r1.ebuild:
+  Marking muttprint-0.73-r1 ppc64 for bug 418607
 
   15 Jun 2012; Jeff Horelick <jdhore@gentoo.org> muttprint-0.73-r1.ebuild:
   marked x86 per bug 418607
