@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.7.0.ebuild,v 1.1 2012/06/22 15:41:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/chktex-1.7.0.ebuild,v 1.2 2012/06/22 15:42:23 aballier Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=true
@@ -19,9 +19,9 @@ IUSE="debug doc +pcre test"
 REQUIRED_USE="test? ( pcre )"
 
 RDEPEND="virtual/latex-base
+	dev-lang/perl
 	pcre? ( dev-libs/libpcre )"
 DEPEND="${RDEPEND}
-	dev-lang/perl
 	sys-apps/groff
 	doc? ( dev-tex/latex2html )"
 
