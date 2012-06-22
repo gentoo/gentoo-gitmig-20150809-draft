@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/blazeblogger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blazeblogger/ChangeLog,v 1.2 2012/05/29 21:16:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blazeblogger/ChangeLog,v 1.3 2012/06/22 05:57:16 xmw Exp $
+
+  22 Jun 2012; Michael Weber <xmw@gentoo.org> -blazeblogger-1.1.0.ebuild:
+  drop old.
 
 *blazeblogger-1.2.0 (29 May 2012)
 
