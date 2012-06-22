@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.150 2012/06/22 18:36:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.151 2012/06/22 18:37:41 tommy Exp $
+
+  22 Jun 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  freenet-0.7.5_p1407.ebuild:
+  Add missing user eclass inherit
 
   22 Jun 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   freenet-0.7.5_p1407.ebuild:
