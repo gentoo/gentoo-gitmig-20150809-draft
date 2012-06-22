@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/coppermine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.30 2011/06/27 10:54:57 pva Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.31 2012/06/22 22:14:38 mabi Exp $
+
+*coppermine-1.5.20 (22 Jun 2012)
+
+  22 Jun 2012; Matti Bickel <mabi@gentoo.org> +coppermine-1.5.20.ebuild:
+  version bump. fixes security issues, see http://forum.coppermine-
+  gallery.net/index.php/topic,74682.0.html for the release announcement
 
   27 Jun 2011; Peter Volkov <pva@gentoo.org> -coppermine-1.4.26.ebuild:
   Drop vulnerable version, bug #347287, thank Tim Sammut for report.
