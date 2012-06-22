@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.401 2012/06/11 12:32:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.402 2012/06/22 20:19:39 ago Exp $
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> mesa-8.0.3.ebuild:
+  Stable for amd64, wrt bug #419473
 
   11 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> mesa-8.0.3-r1.ebuild:
   Fix die on missing VG include dir with -openvg. Fixes bug#420369.
