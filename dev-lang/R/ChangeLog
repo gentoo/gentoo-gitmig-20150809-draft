@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.202 2012/06/20 18:12:23 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.203 2012/06/22 15:50:57 calchan Exp $
+
+  22 Jun 2012; Denis Dupeyron <calchan@gentoo.org> R-2.15.0.ebuild:
+  Removed debugging code which stayed behind by mistake. Many thanks to Gabriel
+  Marcano in bug #419761.
 
   20 Jun 2012; Denis Dupeyron <calchan@gentoo.org> R-2.15.0.ebuild:
   Fix bug #419761
