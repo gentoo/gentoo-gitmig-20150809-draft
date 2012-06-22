@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.342 2012/06/22 03:30:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.343 2012/06/22 03:56:07 cardoe Exp $
+
+  21 Jun 2012; Doug Goldstein <cardoe@gentoo.org> mythtv-0.25.1.ebuild:
+  Python, EROOT/ED cleanups and depend cleanups
 
 *mythtv-0.25.1 (21 Jun 2012)
 

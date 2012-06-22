@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.1 2012/06/22 03:30:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.2 2012/06/22 03:56:07 cardoe Exp $
 
 EAPI=4
 
 inherit flag-o-matic multilib eutils python user
 
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="python? 2"
 
 #MYTHTV_VERSION="v${PV}-15-g${MYTHTV_SREV}"
 #MYTHTV_BRANCH="fixes/0.25"
@@ -41,8 +41,8 @@ SDEPEND="
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
-	alsa? ( >=media-libs/alsa-lib-0.9 )
-	ass? ( media-libs/libass )
+	alsa? ( >=media-libs/alsa-lib-1.0.24 )
+	ass? ( >=media-libs/libass-0.9.11 )
 	cec? ( dev-libs/libcec )
 	dvb? ( media-libs/libdvb virtual/linuxtv-dvb-headers )
 	ieee1394? (	>=sys-libs/libraw1394-1.2.0
@@ -93,7 +93,7 @@ MYTHTV_GROUPS="video,audio,tty,uucp"
 pkg_setup() {
 	einfo "This ebuild now uses a heavily stripped down version of your CFLAGS"
 
-	python_set_active_version 2
+	use python && python_set_active_version 2
 	python_pkg_setup
 
 	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS}
@@ -216,7 +216,7 @@ src_install() {
 
 	if use autostart; then
 		dodir /etc/env.d/
-		echo 'CONFIG_PROTECT="/home/mythtv/"' > "${D}"/etc/env.d/95mythtv
+		echo 'CONFIG_PROTECT="/home/mythtv/"' > "${ED}"/etc/env.d/95mythtv
 
 		insinto /home/mythtv
 		newins "${FILESDIR}"/bash_profile .bash_profile
@@ -229,11 +229,11 @@ src_install() {
 }
 
 pkg_preinst() {
-	export CONFIG_PROTECT="${CONFIG_PROTECT} ${ROOT}/home/mythtv/"
+	export CONFIG_PROTECT="${CONFIG_PROTECT} ${EROOT}/home/mythtv/"
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize
+	use python && python_mod_optimize MythTV
 
 	elog "To have this machine operate as recording host for MythTV, "
 	elog "mythbackend must be running. Run the following:"
@@ -247,6 +247,10 @@ pkg_postinst() {
 	elog "http://dev.gentoo.org/~cardoe/mythtv/autostart.html"
 }
 
+pkg_postrm() {
+	use python && python_mod_cleanup MythTV
+}
+
 pkg_info() {
 	if [[ -f "${EROOT}"/usr/bin/mythfrontend ]]; then
 		"${EROOT}"/usr/bin/mythfrontend --version
@@ -256,5 +260,5 @@ pkg_info() {
 pkg_config() {
 	echo "Creating mythtv MySQL user and mythconverg database if it does not"
 	echo "already exist. You will be prompted for your MySQL root password."
-	"${ROOT}"/usr/bin/mysql -u root -p < "${ROOT}"/usr/share/mythtv/database/mc.sql
+	"${EROOT}"/usr/bin/mysql -u root -p < "${EROOT}"/usr/share/mythtv/database/mc.sql
 }
