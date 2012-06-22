@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.59 2012/05/25 14:21:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.60 2012/06/22 00:12:25 rafaelmartins Exp $
+
+  22 Jun 2012; Rafael G. Martins <rafaelmartins@gentoo.org> metadata.xml:
+  Dropped to maintainer-needed
 
   25 May 2012; Michael Weber <xmw@gentoo.org> -kicad-20090320.1666-r2.ebuild,
   -kicad-20100314_p2456.ebuild, -kicad-20100505_p2356.ebuild:
