@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.120 2012/06/18 01:59:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.121 2012/06/22 16:01:41 ranger Exp $
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> qt-creator-2.5.0.ebuild:
+  Marking qt-creator-2.5.0 ppc64 for bug 408711
 
   18 Jun 2012; Jeff Horelick <jdhore@gentoo.org> qt-creator-2.5.0.ebuild:
   marked x86 per bug 408711
