@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/pictureframe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/pictureframe/ChangeLog,v 1.8 2012/06/19 06:40:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/pictureframe/ChangeLog,v 1.9 2012/06/23 09:59:15 ago Exp $
+
+  23 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pictureframe-1.1.3.ebuild:
+  Stable for amd64, wrt bug #418997
 
   19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pictureframe-1.1.3.ebuild:
   marked x86 per bug 418997
