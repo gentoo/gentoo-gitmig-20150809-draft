@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/autocutsel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.24 2012/01/04 22:03:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.25 2012/06/23 23:31:39 xmw Exp $
+
+  23 Jun 2012; Michael Weber <xmw@gentoo.org> autocutsel-0.9.0.ebuild:
+  Fix HOMEPAGE (bug 415807, thanks df)
 
   04 Jan 2012; Raúl Porcel <armin76@gentoo.org> autocutsel-0.9.0.ebuild:
   amd64 stable
