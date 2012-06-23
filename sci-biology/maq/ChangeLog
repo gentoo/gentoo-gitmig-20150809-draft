@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/maq
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.9 2011/12/18 19:53:20 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.10 2012/06/23 10:15:20 jlec Exp $
+
+  23 Jun 2012; Justin Lecher <jlec@gentoo.org> maq-0.7.1-r1.ebuild,
+  +files/maq-0.7.1-gcc-4.7.patch:
+  Add patch for gcc-4.7, #422869
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> maq-0.7.1-r1.ebuild:
   x86 stable wrt bug #393759

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/maq-0.7.1-r1.ebuild,v 1.5 2011/12/18 19:53:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/maq-0.7.1-r1.ebuild,v 1.6 2012/06/23 10:15:20 jlec Exp $
 
 EAPI=4
 
@@ -23,7 +23,8 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-flags.patch \
-		"${FILESDIR}"/${P}-bfr-overfl.patch
+		"${FILESDIR}"/${P}-bfr-overfl.patch \
+		"${FILESDIR}"/${P}-gcc-4.7.patch
 	sed \
 		-e '/ext_CFLAGS/s:-m64::g' \
 		-i configure* || die
