@@ -1,6 +1,16 @@
 # ChangeLog for sci-chemistry/molden
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.38 2011/06/21 16:03:06 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.39 2012/06/23 11:21:23 jlec Exp $
+
+*molden-5.0 (23 Jun 2012)
+*molden-4.8-r2 (23 Jun 2012)
+
+  23 Jun 2012; Justin Lecher <jlec@gentoo.org> -molden-4.7-r1.ebuild,
+  -molden-4.8.ebuild, -molden-4.8-r1.ebuild, +molden-4.8-r2.ebuild,
+  files/molden-4.8-overflow.patch, +molden-5.0.ebuild,
+  +files/molden-5.0-ambfor.patch, metadata.xml:
+  Fix buffer overflow, #342907; Version Bump, #355741; Fix build failures,
+  #358917, #423015; drop old
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> molden-4.7.ebuild,
   molden-4.7-r1.ebuild, molden-4.8.ebuild, molden-4.8-r1.ebuild:
