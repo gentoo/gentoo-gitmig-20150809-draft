@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.49 2012/06/16 13:50:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.50 2012/06/23 22:44:01 dilfridge Exp $
+
+  23 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> calligra-2.4.2.ebuild,
+  +files/calligra-2.4.2-marble.patch, calligra-2.4.49.9999.ebuild,
+  -calligra-2.4.90.ebuild:
+  Fix build with marble shape, remove old
 
 *calligra-2.4.91 (16 Jun 2012)
 

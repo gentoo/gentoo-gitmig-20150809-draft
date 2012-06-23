@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.49.9999.ebuild,v 1.4 2012/06/06 13:39:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.49.9999.ebuild,v 1.5 2012/06/23 22:44:01 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -120,6 +120,8 @@ PDEPEND=">=app-office/calligra-l10n-$(get_version_component_range 1-2)"
 
 RESTRICT=test
 # bug 394273
+
+PATCHES=( "${FILESDIR}/${PN}-2.4.2-marble.patch" )
 
 src_configure() {
 	local cal_ft
