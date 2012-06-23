@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wmctrl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.17 2012/05/05 04:53:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.18 2012/06/23 23:28:43 xmw Exp $
+
+  23 Jun 2012; Michael Weber <xmw@gentoo.org> wmctrl-1.07-r1.ebuild,
+  wmctrl-1.07.ebuild:
+  Fix HOMEPAGE and SRC_URI (bug 411245, thanks df)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmctrl-1.07.ebuild,
   wmctrl-1.07-r1.ebuild:
