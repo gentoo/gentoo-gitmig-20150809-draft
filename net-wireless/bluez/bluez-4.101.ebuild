@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.96.ebuild,v 1.9 2012/05/22 16:16:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101.ebuild,v 1.1 2012/06/23 11:46:55 pacho Exp $
 
 EAPI="4"
+PYTHON_DEPEND="test-programs? 2"
 
-inherit multilib eutils systemd
+inherit multilib eutils systemd python
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
@@ -12,39 +13,43 @@ HOMEPAGE="http://www.bluez.org/"
 # Because of oui.txt changing from time to time without noticement, we need to supply it
 # ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
 # See bugs #345263 and #349473 for reference.
-OUIDATE="20110801"
-SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
+OUIDATE="20120623"
+SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz
 	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt.xz"
+
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc ppc64 x86"
-
-IUSE="alsa caps +consolekit cups debug gstreamer maemo6 health old-daemons pcmcia pnat test-programs usb"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+IUSE="alsa +consolekit cups debug gstreamer pcmcia test-programs usb readline"
 
 CDEPEND="
-	>=dev-libs/glib-2.14:2
-	sys-apps/dbus
-	>=sys-fs/udev-146[extras]
+	>=dev-libs/glib-2.28:2
+	>=sys-apps/dbus-1.4
+	>=sys-fs/udev-169
 	alsa? (
 		media-libs/alsa-lib[alsa_pcm_plugins_extplug(+),alsa_pcm_plugins_ioplug(+)]
 		media-libs/libsndfile
 	)
-	caps? ( >=sys-libs/libcap-ng-0.6.2 )
 	cups? ( net-print/cups )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10:0.10
 		>=media-libs/gst-plugins-base-0.10:0.10
 	)
-	usb? ( virtual/libusb:1 )
+	usb? ( virtual/libusb:0 )
+	readline? ( sys-libs/readline )
 "
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	sys-devel/flex
+	test-programs? ( >=dev-libs/check-0.9.6 )
 "
 RDEPEND="${CDEPEND}
 	!net-wireless/bluez-libs
 	!net-wireless/bluez-utils
-	consolekit? ( sys-auth/consolekit )
+	consolekit? (
+		|| ( sys-auth/consolekit
+			>=sys-apps/systemd-37 )
+	)
 	test-programs? (
 		dev-python/dbus-python
 		dev-python/pygobject:2
@@ -56,6 +61,10 @@ DOCS=( AUTHORS ChangeLog README )
 pkg_setup() {
 	if ! use consolekit; then
 		enewgroup plugdev
+	fi
+
+	if use test-programs; then
+		python_pkg_setup
 	fi
 }
 
@@ -73,7 +82,10 @@ src_prepare() {
 }
 
 src_configure() {
+	use readline || export ac_cv_header_readline_readline_h=no
+
 	econf \
+		--enable-hid2hci \
 		--enable-audio \
 		--enable-bccmd \
 		--enable-datafiles \
@@ -87,19 +99,16 @@ src_configure() {
 		--localstatedir=/var \
 		--with-systemdunitdir="$(systemd_get_unitdir)" \
 		$(use_enable alsa) \
-		$(use_enable caps capng) \
 		$(use_enable cups) \
 		$(use_enable debug) \
 		$(use_enable gstreamer) \
-		$(use_enable health) \
-		$(use_enable maemo6) \
-		$(use_enable old-daemons dund) \
-		$(use_enable old-daemons hidd) \
-		$(use_enable old-daemons pand) \
 		$(use_enable pcmcia) \
-		$(use_enable pnat) \
 		$(use_enable test-programs test) \
-		$(use_enable usb)
+		$(use_enable usb) \
+		--enable-health \
+		--enable-maemo6 \
+		--enable-pnat \
+		--enable-wiimote
 }
 
 src_install() {
@@ -116,14 +125,8 @@ src_install() {
 		insinto /usr/share/doc/${PF}/test-services
 		doins service-*
 
+		python_convert_shebangs -r 2 "${ED}"
 		cd "${S}"
-	fi
-
-	if use old-daemons; then
-		newconfd "${FILESDIR}/conf.d-hidd" hidd
-		newinitd "${FILESDIR}/init.d-hidd" hidd
-		newconfd "${FILESDIR}/conf.d-dund" dund
-		newinitd "${FILESDIR}/init.d-dund" dund
 	fi
 
 	insinto /etc/bluetooth
@@ -133,19 +136,15 @@ src_install() {
 		network/network.conf \
 		serial/serial.conf
 
-	insinto /lib/udev/rules.d/
-	newins "${FILESDIR}/${PN}-4.18-udev.rules" 70-bluetooth.rules
-	exeinto /lib/udev/
-	newexe "${FILESDIR}/${PN}-4.18-udev.script" bluetooth.sh
-
-	newinitd "${FILESDIR}/bluetooth-init.d" bluetooth
-	newconfd "${FILESDIR}/bluetooth-conf.d" bluetooth
+	newinitd "${FILESDIR}/bluetooth-init.d-r1" bluetooth
+	newinitd "${FILESDIR}/rfcomm-init.d" rfcomm
+	newconfd "${FILESDIR}/rfcomm-conf.d" rfcomm
 
 	# Install oui.txt as requested in bug #283791 and approved by upstream
 	insinto /var/lib/misc
 	newins "${WORKDIR}/oui-${OUIDATE}.txt" oui.txt
 
-	find "${ED}" -name "*.la" -delete
+	prune_libtool_files --all
 }
 
 pkg_postinst() {
@@ -153,14 +152,6 @@ pkg_postinst() {
 
 	if ! has_version "net-dialup/ppp"; then
 		elog "To use dial up networking you must install net-dialup/ppp."
-	fi
-
-	if use old-daemons; then
-		elog "dund and hidd init scripts were installed because you have the old-daemons"
-		elog "use flag on. They are not started by default via udev so please add them"
-		elog "to the required runlevels using rc-update <runlevel> add <dund/hidd>. If"
-		elog "you need init scripts for the other daemons, please file requests"
-		elog "to https://bugs.gentoo.org."
 	fi
 
 	if use consolekit; then
@@ -171,5 +162,12 @@ pkg_postinst() {
 		elog "bluetooth clients as root. If you want to be able to run bluetooth clientes as "
 		elog "a regular user, you need to enable the consolekit use flag for this package or"
 		elog "to add the user to the plugdev group."
+	fi
+
+	if [ "$(rc-config list default | grep bluetooth)" = "" ] ; then
+		elog "You will need to add bluetooth service to default runlevel"
+		elog "for getting your devices detected from startup without needing"
+		elog "to reconnect them. For that please run:"
+		elog "'rc-update add bluetooth default'"
 	fi
 }
