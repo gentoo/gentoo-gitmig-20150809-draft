@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.1.ebuild,v 1.2 2012/05/31 19:15:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.1.ebuild,v 1.3 2012/06/23 04:46:43 ssuominen Exp $
 
 EAPI=4
 
@@ -41,6 +41,11 @@ PATCHES=(
 	"${FILESDIR}"/${P}-no-examples.patch
 	"${FILESDIR}"/${P}-no-pc-ldflags.patch
 )
+
+src_prepare() {
+	sed -i -e '/AM_INIT_AUTOMAKE/s:-Werror ::' configure.ac || die #423011
+	autotools-utils_src_prepare
+}
 
 src_configure() {
 	use blas && export BLAS_LIBS="$(pkg-config --libs blas)"
