@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.158 2012/06/22 20:57:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.159 2012/06/23 20:24:47 scarabeus Exp $
+
+  23 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libXfont-1.4.3.ebuild,
+  libXfont-1.4.4.ebuild, libXfont-1.4.5.ebuild:
+  Fix configure warning about unused var. Fixes bug#378875.
 
   22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libXfont-1.4.5.ebuild:
   Stable for amd64, wrt bug #419473
@@ -633,4 +637,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libXfont-0.99.0.ebuild:
   Initial commit for modular X.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/libXfont-1.4.5.ebuild,v 1.4 2012/06/22 20:57:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/libXfont-1.4.5.ebuild,v 1.5 2012/06/23 20:24:47 scarabeus Exp $
 
 EAPI=4
 
@@ -20,14 +20,13 @@ RDEPEND="x11-libs/xtrans
 	x11-proto/fontsproto"
 DEPEND="${RDEPEND}"
 
-pkg_setup() {
-	xorg-2_pkg_setup
+src_configure() {
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable ipv6)
 		$(use_enable doc devel-docs)
 		$(use_with doc xmlto)
 		--with-bzip2
 		--without-fop
-		--with-encodingsdir="${EPREFIX}/usr/share/fonts/encodings"
 	)
+	xorg-2_src_configure
 }

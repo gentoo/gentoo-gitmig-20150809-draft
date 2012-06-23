@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/libXfont-1.4.4.ebuild,v 1.7 2011/08/15 15:24:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/libXfont-1.4.4.ebuild,v 1.8 2012/06/23 20:24:47 scarabeus Exp $
 
 EAPI=4
 
@@ -28,6 +28,5 @@ pkg_setup() {
 		$(use_with doc xmlto)
 		--with-bzip2
 		--without-fop
-		--with-encodingsdir="${EPREFIX}/usr/share/fonts/encodings"
 	)
 }
