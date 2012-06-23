@@ -1,6 +1,6 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.327 2012/06/22 19:18:24 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.328 2012/06/23 14:18:48 kensington Exp $
 
   22 Jun 2012; Ian Stakenvicius <axs@gentoo.org> user.eclass:
   esethome: silently exit if home dir already up to date, improve messaging
@@ -15,7 +15,7 @@
   22 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> gnustep-base.eclass:
   Stable gnustep-base does not have USE=libobjc2, thanks ago
 
-  22 Jun 2012; Michael233 <michael@gentoo.org> kde4-base.eclass:
+  22 Jun 2012; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass:
   Sync from kde overlay: Enable tests for live ebuilds, add support for virtual
   dbus during src_test, update tarball extension for unstable releases.
 
