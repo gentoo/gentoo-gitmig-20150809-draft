@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.176 2012/06/18 06:45:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.177 2012/06/23 22:21:50 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -197,7 +197,7 @@ append-ldflags() {
 	local flag
 	for flag in "$@"; do
 		[[ ${flag} == -l* ]] && \
-			ewarn "Appending a library link instruction (${flag}); libraries to link to should not be passed through LDFLAGS"
+			eqawarn "Appending a library link instruction (${flag}); libraries to link to should not be passed through LDFLAGS"
 	done
 
 	export LDFLAGS="${LDFLAGS} $*"
