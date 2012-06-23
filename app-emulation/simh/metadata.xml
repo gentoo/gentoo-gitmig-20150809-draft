@@ -5,11 +5,9 @@
 	<maintainer>
 		<email>alex.buell@munted.eu</email>
 		<name>Alex Buell</name>
-		<description>Proxy maintainer. Assign bugs to him</description>
 	</maintainer>
 	<maintainer>
 		<email>xmw@gentoo.org</email>
 		<name>Michael Weber</name>
-		<description>CC him on bugs</description>
 	</maintainer>
 </pkgmetadata>

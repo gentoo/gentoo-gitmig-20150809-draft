@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.9.0.ebuild,v 1.1 2012/05/19 09:52:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.9.0-r1.ebuild,v 1.1 2012/06/23 19:10:37 xmw Exp $
 
 EAPI=4
 
@@ -51,7 +51,7 @@ src_compile() {
 
 src_install() {
 	for BINFILE in BIN/* ; do
-		newbin ${BINFILE} "simh-${BINFILE}"
+		newbin ${BINFILE} "simh-$(basename ${BINFILE})"
 	done
 
 	insinto /usr/share/simh
