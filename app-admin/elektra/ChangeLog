@@ -1,8 +1,9 @@
 # ChangeLog for app-admin/elektra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.5 2012/06/23 04:36:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.6 2012/06/23 07:47:24 ssuominen Exp $
 
-  23 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> elektra-0.7.1.ebuild:
+  23 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> elektra-0.7.1.ebuild,
+  +files/elektra-0.7.1-automake-1.12.patch:
   Fix building with sys-devel/automake >= 1.12 wrt #421589
 
   09 Feb 2012; Michael Weber <xmw@gentoo.org> elektra-0.7.1.ebuild:
