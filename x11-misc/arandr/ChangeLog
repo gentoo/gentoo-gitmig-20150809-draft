@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/arandr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/ChangeLog,v 1.5 2012/06/19 19:12:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/ChangeLog,v 1.6 2012/06/23 22:47:53 xmw Exp $
+
+  23 Jun 2012; Michael Weber <xmw@gentoo.org> -arandr-0.1.5.ebuild:
+  Drop old
 
 *arandr-0.1.6 (19 Jun 2012)
 
