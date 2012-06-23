@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1039 2012/06/23 07:32:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1040 2012/06/23 21:08:20 zmedico Exp $
+
+*portage-2.1.11.1 (23 Jun 2012)
+
+  23 Jun 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.1.ebuild,
+  -portage-2.1.11.ebuild:
+  2.1.11 version bump. This fixes bug #423127 (regression in 2.1.11 and
+  2.2.0_alpha111 which triggers annoying eerror messages about preserved /lib
+  and /usr/lib symlinks). Bug #423075 tracks all bugs fixed since
+  portage-2.1.10.65.
 
   23 Jun 2012; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Merge diff from 2.2.0_alpha111 ebuild.
