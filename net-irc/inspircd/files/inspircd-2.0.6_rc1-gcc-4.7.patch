@@ -1,0 +1,11 @@
+diff -Nur a/include/inspircd.h b/include/inspircd.h
+--- a/include/inspircd.h	2012-04-09 15:38:53.000000000 +0200
++++ b/include/inspircd.h	2012-06-23 18:05:15.059901531 +0200
+@@ -43,6 +43,7 @@
+ #include <cstring>
+ #include <climits>
+ #include <cstdio>
++#include <unistd.h>
+ 
+ #include <sstream>
+ #include <string>

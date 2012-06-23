@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.6_rc1.ebuild,v 1.1 2012/04/12 20:17:22 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.6_rc1.ebuild,v 1.2 2012/06/23 17:16:04 nimiux Exp $
 
 EAPI=4
 
@@ -8,17 +8,18 @@ inherit eutils flag-o-matic multilib versionator
 
 MY_PV="$(delete_version_separator 3)"
 DESCRIPTION="Inspire IRCd - The Stable, High-Performance Modular IRCd"
-HOMEPAGE="http://www.inspircd.org/"
+HOMEPAGE="http://inspircd.github.com/"
 SRC_URI="http://github.com/inspircd/inspircd/downloads/InspIRCd-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnutls ipv6 ldap mysql postgres sqlite ssl"
+IUSE="geoip gnutls ipv6 ldap mysql postgres sqlite ssl"
 
 RDEPEND="
 	dev-lang/perl
 	ssl? ( dev-libs/openssl )
+	geoip? ( dev-libs/geoip )
 	gnutls? ( net-libs/gnutls dev-libs/libgcrypt )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
@@ -38,6 +39,7 @@ src_prepare() {
 	sed -i -e "s/@UID@/${PN}/" "${S}/make/template/${PN}" || die
 
 	epatch "${FILESDIR}/${PF}-fix-path-builds.patch"
+	epatch "${FILESDIR}/${PF}-gcc-4.7.patch"
 }
 
 src_configure() {
@@ -46,12 +48,13 @@ src_configure() {
 	local egnutls="--enable-gnutls"
 	local dipv6="--disable-ipv6"
 
-	use ssl && extras="${extras}m_ssl_openssl.cpp,"
+	use geoip && extras="${extras}m_geoip.cpp,"
 	use gnutls && extras="${extras}m_ssl_gnutls.cpp,"
 	use ldap && extras="${extras}m_ldapauth.cpp,"
 	use mysql && extras="${extras}m_mysql.cpp,"
 	use postgres && extras="${extras}m_pgsql.cpp,"
 	use sqlite && extras="${extras}m_sqlite3.cpp,"
+	use ssl && extras="${extras}m_ssl_openssl.cpp,"
 
 	# allow inspircd to be built by root
 	touch .force-root-ok || die

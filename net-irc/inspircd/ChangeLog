@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.49 2012/05/21 09:39:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.50 2012/06/23 17:16:04 nimiux Exp $
+
+  23 Jun 2012; Chema Alonso <nimiux@gentoo.org> inspircd-2.0.6_rc1.ebuild,
+  +files/inspircd-2.0.6_rc1-gcc-4.7.patch, metadata.xml:
+  Fix compile for gcc-4.7 wrt bug #421409. Add geoip use flag wrt bug #413747.
+  Update longdescription, maintainer info and use flags in metadata.
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   inspircd-2.0.5-r2.ebuild:
