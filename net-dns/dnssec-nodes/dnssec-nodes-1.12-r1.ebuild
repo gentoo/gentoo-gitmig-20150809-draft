@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-nodes/dnssec-nodes-1.12.ebuild,v 1.1 2012/05/22 21:50:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-nodes/dnssec-nodes-1.12-r1.ebuild,v 1.1 2012/06/23 20:21:48 xmw Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="net-dns/dnssec-tools"
+RDEPEND="net-dns/dnssec-tools[threads]"
 DEPEND="${RDEPEND}"
 
 src_configure() {

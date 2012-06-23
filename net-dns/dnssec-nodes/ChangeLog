@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnssec-nodes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-nodes/ChangeLog,v 1.1 2012/05/22 21:50:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-nodes/ChangeLog,v 1.2 2012/06/23 20:21:48 xmw Exp $
+
+*dnssec-nodes-1.12-r1 (23 Jun 2012)
+
+  23 Jun 2012; Michael Weber <xmw@gentoo.org> -dnssec-nodes-1.12.ebuild,
+  +dnssec-nodes-1.12-r1.ebuild:
+  Fix dependency net-dns/dnssec-tools[threads] (bug 423019, thanks Diego Elio
+  Pettenò)
 
 *dnssec-nodes-1.12 (22 May 2012)
 
