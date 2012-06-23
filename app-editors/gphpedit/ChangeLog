@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gphpedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.24 2012/05/03 18:33:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.25 2012/06/23 10:08:34 pacho Exp $
+
+*gphpedit-0.9.98_rc1 (23 Jun 2012)
+
+  23 Jun 2012; Pacho Ramos <pacho@gentoo.org> +gphpedit-0.9.98_rc1.ebuild,
+  -gphpedit-0.9.91.ebuild:
+  Version bump to stop using deprecated gtkhtml:2, remove old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gphpedit-0.9.91.ebuild,
   gphpedit-0.9.91-r1.ebuild:
@@ -90,4 +96,3 @@
   20 Jul 2003; Alastair Tse <liquidx@gentoo.org> gphpedit-0.4.3.ebuild:
   initial commit. contributed by TGL <degrenier@easyconnect.fr> and Mike
   Gardiner <driver@iinet.net.au>
-
