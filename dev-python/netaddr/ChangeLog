@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/netaddr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.9 2012/06/22 08:20:12 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.10 2012/06/23 22:50:34 radhermit Exp $
+
+  23 Jun 2012; Tim Harder <radhermit@gentoo.org> netaddr-0.7.7.ebuild:
+  Tests should now work for python-3 and remove obsolete workarounds for tests
+  (thanks to Arfrever).
 
 *netaddr-0.7.7 (22 Jun 2012)
 
