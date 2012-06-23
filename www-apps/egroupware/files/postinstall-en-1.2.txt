@@ -6,7 +6,7 @@ You are almost done!
 and follow the install/upgrade script.
 
 Don't forget to read the installation manual, available from
-http://egroupware.org/specialpages/index.php?page_name=wiki&wikipage=ManualSetup
+http://community.egroupware.org/index.php?page_name=wiki&lang=&wikipage=ManualSetupCheck_install
 It describes the rest of the installation process.
 
 Enjoy eGroupWare!
