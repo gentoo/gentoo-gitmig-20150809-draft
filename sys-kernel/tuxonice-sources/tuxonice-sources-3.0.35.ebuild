@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-3.0.26.ebuild,v 1.1 2012/03/24 09:46:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-3.0.35.ebuild,v 1.1 2012/06/23 07:34:11 pacho Exp $
 
 EAPI="4"
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="22"
+K_GENPATCHES_VER="26"
 
 inherit kernel-2
 detect_version
@@ -44,9 +44,3 @@ K_EXTRAELOG="If there are issues with this kernel, please direct any
 queries to the tuxonice-users mailing list:
 http://lists.tuxonice.net/mailman/listinfo/tuxonice-users/"
 K_SECURITY_UNSUPPORTED="1"
-
-pkg_postinst() {
-	kernel-2_pkg_postinst
-	einfo "For more info on this patchset, and how to report problems, see:"
-	einfo "${HOMEPAGE}"
-}
