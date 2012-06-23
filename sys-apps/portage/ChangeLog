@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1036 2012/06/22 21:57:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1037 2012/06/23 07:19:50 zmedico Exp $
+
+*portage-2.1.11 (23 Jun 2012)
+
+  23 Jun 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.ebuild:
+  2.1.11 version bump. This fixes bug #384061 (user-defined package sets in
+  /etc/portage/sets), bug #419717 (make repoman skip signing of non-existent
+  Manifest when appropriate), bug #420735 (make repoman update Manifest
+  immediately after the ChangeLog is written with --ask), bug #420847 (make
+  autounmask handle license unmask without unnecessary keyword unmasking), bug
+  #421165 (unmerge orphan symlinks when CONTENTS lists directory instead), and
+  bug #421659 (add UNINSTALL_IGNORE variable to protect paths from being
+  unmerged). User-defined package sets can now be created by placing files in
+  the /etc/portage/sets/ directory. Refer to the emerge(1) and portage(5) man
+  pages for more information. There is experimental support for EAPI "4-slot-
+  abi". Refer to the corresponding html documentation that is installed with
+  USE=doc, and also to the emerge(1) man page for information about the related
+  --ignore-built-slot-abi-deps and --rebuild-if-new-slot-abi options. Bug
+  #423075 tracks all bugs fixed since portage-2.1.10.65.
 
   22 Jun 2012; Jeff Horelick <jdhore@gentoo.org> portage-2.1.10.65.ebuild:
   marked x86 per bug 422721
