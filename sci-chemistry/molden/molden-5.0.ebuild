@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-5.0.ebuild,v 1.1 2012/06/23 11:21:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-5.0.ebuild,v 1.2 2012/06/23 11:54:24 jlec Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-ambfor.patch \
-		"${FILESDIR}"/${PN}-4.8-overflow.patch \
+		"${FILESDIR}"/${P}-overflow.patch \
 		"${FILESDIR}"/${PN}-4.8-ldflags.patch \
 		"${FILESDIR}"/${PN}-4.7-implicit-dec.patch
 	sed \
