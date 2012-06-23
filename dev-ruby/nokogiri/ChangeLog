@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.72 2012/06/22 08:00:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.73 2012/06/23 10:00:03 ago Exp $
+
+  23 Jun 2012; Agostino Sarubbo <ago@gentoo.org> nokogiri-1.5.2.ebuild:
+  Stable for amd64, wrt bug #423071
 
   22 Jun 2012; Hans de Graaff <graaff@gentoo.org> -nokogiri-1.5.0.ebuild,
   -nokogiri-1.5.0-r1.ebuild, -nokogiri-1.5.0-r2.ebuild, nokogiri-1.5.2.ebuild:

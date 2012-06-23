@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.23 2012/05/06 14:30:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.24 2012/06/23 10:00:33 ago Exp $
+
+  23 Jun 2012; Agostino Sarubbo <ago@gentoo.org> rexical-1.0.5-r1.ebuild:
+  Stable for amd64, wrt bug #423071
 
   06 May 2012; Kacper Kowalik <xarthisius@gentoo.org> rexical-1.0.5.ebuild:
   ppc64 stable wrt #369573
