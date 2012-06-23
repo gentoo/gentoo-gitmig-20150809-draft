@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/dragonflycms
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.20 2009/07/07 23:31:43 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.21 2012/06/23 13:41:38 mabi Exp $
+
+*dragonflycms-9.3.3.1 (23 Jun 2012)
+
+  23 Jun 2012; Matti Bickel <mabi@gentoo.org> +dragonflycms-9.3.3.1.ebuild,
+  -dragonflycms-9.2.1.ebuild:
+  version bump. remove old b/c of security issues (see
+  http://secunia.com/advisories/47999/)
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   dragonflycms-9.2.1.ebuild:
