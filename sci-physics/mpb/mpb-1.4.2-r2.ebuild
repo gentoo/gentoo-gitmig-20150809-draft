@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2-r2.ebuild,v 1.4 2012/05/04 07:55:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2-r2.ebuild,v 1.5 2012/06/23 16:57:27 jlec Exp $
 
-EAPI=2
-inherit eutils autotools flag-o-matic
+EAPI=4
+
+inherit eutils autotools flag-o-matic toolchain-funcs
 
 DESCRIPTION="Photonic band structure program"
 SRC_URI="http://ab-initio.mit.edu/mpb/${P}.tar.gz"
@@ -27,11 +28,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-autotools.patch
-	epatch "${FILESDIR}"/${P}-headers.patch
+	epatch \
+		"${FILESDIR}"/${P}-autotools.patch \
+		"${FILESDIR}"/${P}-headers.patch
 	cd "${S}"
-	rm -f config.*
-	AT_NOELIBTOOLIZE=yes eautoreconf
+	eautoreconf
 	# version with inversion symmetry (mpbi).
 	cp -r "${S}" "${S}_inv"
 	# version with hermitian eps (mpbh).
@@ -42,6 +43,7 @@ src_prepare() {
 		cp -r "${S}" "${S}_inv_mpi"
 		cp -r "${S}" "${S}_herm_mpi"
 	fi
+	tc-export CC
 }
 
 src_configure() {
@@ -82,8 +84,8 @@ src_compile() {
 	local dirs="${S} ${S}_inv ${S}_herm"
 	for d in ${dirs}; do
 		cd "${d}"
-		emake -C mpb-ctl ctl-io.c || die
-		emake || die "emake in ${d} failed"
+		emake -C mpb-ctl ctl-io.c
+		emake
 	done
 	local dirs="${S} ${S}_inv ${S}_herm"
 	if use mpi; then

@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/mpb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.14 2012/05/04 07:55:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.15 2012/06/23 16:57:27 jlec Exp $
+
+  23 Jun 2012; Justin Lecher <jlec@gentoo.org> mpb-1.4.2-r2.ebuild,
+  metadata.xml:
+  Respect CC, fix buildfailure due to remove configure.sub, #423123
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> mpb-1.4.2-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
