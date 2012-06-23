@@ -1,0 +1,13 @@
+error: 'ptrdiff_t' does not name a type
+
+--- bindings/python/_PreludeEasy.cxx
++++ bindings/python/_PreludeEasy.cxx
+@@ -2845,7 +2845,7 @@
+ 
+ #include <string>
+ #include <stdexcept>
+-
++#include <cstddef>
+   
+ namespace swig {
+   struct stop_iteration {
