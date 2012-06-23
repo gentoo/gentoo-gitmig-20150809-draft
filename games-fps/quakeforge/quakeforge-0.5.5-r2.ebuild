@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.11 2012/06/19 02:19:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.12 2012/06/23 10:59:05 xarthisius Exp $
 
 EAPI=2
 inherit base eutils autotools games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/quake/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="cdinstall debug fbcon opengl sdl svga X ncurses vorbis zlib ipv6 xv dga alsa oss"
 RESTRICT="userpriv"
 
