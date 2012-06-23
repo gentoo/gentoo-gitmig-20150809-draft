@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1.ebuild,v 1.4 2012/02/09 23:59:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1.ebuild,v 1.5 2012/06/23 04:36:18 ssuominen Exp $
 
 EAPI=4
 
@@ -27,6 +27,8 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-test.patch \
 		"${FILESDIR}"/${P}-ltdl.patch
+
+	sed -i -e 's:mkdir_p:MKDIR_P:' doc/Makefile.am || die #421589
 
 	touch config.rpath
 	eautoreconf
