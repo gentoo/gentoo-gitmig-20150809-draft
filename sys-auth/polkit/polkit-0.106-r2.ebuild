@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106-r2.ebuild,v 1.3 2012/06/19 12:04:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106-r2.ebuild,v 1.4 2012/06/23 04:01:20 ssuominen Exp $
 
 EAPI=4
 inherit eutils pam systemd user
@@ -44,8 +44,13 @@ PDEPEND="
 DOCS="docs/TODO HACKING NEWS README"
 
 pkg_setup() {
-	enewgroup polkitd
-	enewuser polkitd -1 -1 /var/lib/polkit-1 polkitd
+	local u=polkitd
+	local g=polkitd
+	local h=/var/lib/polkit-1
+
+	enewgroup ${g}
+	enewuser ${u} -1 -1 ${h} ${g}
+	esethome ${u} ${h}
 }
 
 src_prepare() {
@@ -93,10 +98,6 @@ src_install() {
 pkg_postinst() {
 	chown -R polkitd:root "${EROOT}"/{etc,usr/share}/polkit-1/rules.d
 	chown -R polkitd:polkitd "${EROOT}"/var/lib/polkit-1
-
-	echo
-	ewarn "If home directory of unix-user \"polkitd\" is set to /dev/null, run:"
-	ewarn "# usermod -d /var/lib/polkit-1 polkitd"
 
 	echo
 	ewarn "The default administrator unix-group was changed from \"wheel\" to"
