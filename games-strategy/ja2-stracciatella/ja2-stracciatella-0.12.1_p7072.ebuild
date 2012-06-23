@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ja2-stracciatella-0.12.1_p7072.ebuild,v 1.2 2012/06/02 16:47:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ja2-stracciatella-0.12.1_p7072.ebuild,v 1.3 2012/06/23 22:10:51 hasufell Exp $
 
 EAPI=4
 
@@ -20,11 +20,9 @@ RDEPEND="media-libs/libsdl[X,audio,video]
 	cdinstall? ( games-strategy/ja2-stracciatella-data )
 	zlib? ( sys-libs/zlib )"
 
-LANGS="en de fr it nl pl ru ru_gold"
-for l in ${LANGS}; do
-	IUSE="$IUSE linguas_${l}"
-done
-unset l
+LANGS="linguas_de +linguas_en linguas_fr linguas_it linguas_nl linguas_pl linguas_ru linguas_ru_gold"
+IUSE="$IUSE $LANGS"
+REQUIRED_USE="^^ ( ${LANGS//+/} )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
@@ -39,24 +37,19 @@ src_prepare() {
 }
 
 src_compile() {
-	local myconf i
+	local myconf
 
-	for i in ${LANGS} ; do
-		if has ${i} ${LINGUAS} ; then
-			case ${i} in
-				de) myconf="LNG=GERMAN" ;;
-				nl) myconf="LNG=DUTCH" ;;
-				fr) myconf="LNG=FRENCH" ;;
-				it) myconf="LNG=ITALIAN" ;;
-				pl) myconf="LNG=POLISH" ;;
-				ru) myconf="LNG=RUSSIAN" ;;
-				ru_gold) myconf="LNG=RUSSIAN_GOLD" ;;
-				en) myconf="LNG=ENGLISH" ;;
-				*) die "wat" ;;
-			esac
-			break
-		fi
-	done
+	case ${LINGUAS} in
+		de) myconf="LNG=GERMAN" ;;
+		nl) myconf="LNG=DUTCH" ;;
+		fr) myconf="LNG=FRENCH" ;;
+		it) myconf="LNG=ITALIAN" ;;
+		pl) myconf="LNG=POLISH" ;;
+		ru) myconf="LNG=RUSSIAN" ;;
+		ru_gold) myconf="LNG=RUSSIAN_GOLD" ;;
+		en) myconf="LNG=ENGLISH" ;;
+		*) die "wat" ;;
+	esac
 	elog "Chosen language is ${myconf#LNG=}"
 
 	use editor && myconf+=" JA2EDITOR=yes JA2BETAVERSION=yes"
