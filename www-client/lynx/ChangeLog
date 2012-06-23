@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.129 2012/06/23 20:10:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.130 2012/06/23 20:22:04 radhermit Exp $
+
+  23 Jun 2012; Tim Harder <radhermit@gentoo.org> lynx-2.8.8_pre12.ebuild:
+  Add dep on dev-libs/libgcrypt when gnutls ssl support is enabled (bug
+  #421201).
 
   17 Jun 2012; Fabian Groffen <grobian@gentoo.org> lynx-2.8.8_pre12.ebuild:
   Pass path to --with-{gnutls,ssl} arguments for Prefix

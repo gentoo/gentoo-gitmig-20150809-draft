@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.12 2012/06/17 16:48:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.13 2012/06/23 20:22:04 radhermit Exp $
 
 EAPI=4
 
@@ -32,7 +32,10 @@ RDEPEND="sys-libs/ncurses[unicode?]
 	nls? ( virtual/libintl )
 	ssl? (
 		!gnutls? ( >=dev-libs/openssl-0.9.8 )
-		gnutls? ( >=net-libs/gnutls-2.6.4 )
+		gnutls? (
+			dev-libs/libgcrypt
+			>=net-libs/gnutls-2.6.4
+		)
 	)
 	bzip2? ( app-arch/bzip2 )
 	idn? ( net-dns/libidn )"
