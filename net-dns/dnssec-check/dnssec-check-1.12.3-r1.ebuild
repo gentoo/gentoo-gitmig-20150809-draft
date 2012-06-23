@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-check/dnssec-check-1.12.3.ebuild,v 1.1 2012/05/22 21:26:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-check/dnssec-check-1.12.3-r1.ebuild,v 1.1 2012/06/23 20:24:13 xmw Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="net-dns/dnssec-tools
+RDEPEND="net-dns/dnssec-tools[threads]
 	x11-libs/qt-declarative:4"
 DEPEND="${RDEPEND}"
 
