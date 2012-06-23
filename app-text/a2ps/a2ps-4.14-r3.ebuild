@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14-r3.ebuild,v 1.1 2012/06/23 05:54:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14-r3.ebuild,v 1.2 2012/06/23 05:56:29 ssuominen Exp $
 
 EAPI=4
 inherit autotools elisp-common eutils flag-o-matic
@@ -74,7 +74,6 @@ src_prepare() {
 	sed -i \
 		-e '/^AM_C_PROTOTYPES/d' \
 		-e '/^AUTOMAKE_OPTIONS.*ansi2knr/d' \
-		-e '/PROG_MKDIR_P/s:AM:AC:' \
 		configure.in {contrib/sample,lib,src}/Makefile.am || die
 
 	eautoreconf
