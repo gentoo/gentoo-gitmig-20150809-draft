@@ -6,7 +6,4 @@
     Driver for ivtv based tv tuner cards, currently supports Hauppauge 
     PVR-[23]50 cards
   </longdescription>
-  <upstream>
-    <remote-id type="cpan">Video-ivtv</remote-id>
-  </upstream>
 </pkgmetadata>
