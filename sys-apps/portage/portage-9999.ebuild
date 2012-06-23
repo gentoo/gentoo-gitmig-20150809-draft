@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.49 2012/06/13 06:11:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.50 2012/06/23 07:32:47 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -262,12 +262,10 @@ pkg_preinst() {
 		ewarn "to enable RMD160 hash support."
 		ewarn "See bug #198398 for more information."
 	fi
-	if [ ! -L "${EROOT}/etc/make.globals" ]; then
-		rm -f "${EROOT}/etc/make.globals"
+	if [[ ! -L "${EROOT}/etc/make.globals" &&
+		-f "${EROOT}/etc/make.globals" ]]; then
+		rm "${EROOT}/etc/make.globals"
 	fi
-
-	has_version "<${CATEGORY}/${PN}-2.2_alpha" \
-		&& MINOR_UPGRADE=true || MINOR_UPGRADE=false
 
 	has_version "<=${CATEGORY}/${PN}-2.2_pre5" \
 		&& WORLD_MIGRATION_UPGRADE=true || WORLD_MIGRATION_UPGRADE=false
@@ -278,9 +276,6 @@ pkg_preinst() {
 		! ( [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
 		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ) \
 		&& NEEDED_REBUILD_UPGRADE=true || NEEDED_REBUILD_UPGRADE=false
-
-	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12" \
-		&& REPO_LAYOUT_CONF_WARN=true || REPO_LAYOUT_CONF_WARN=false
 }
 
 pkg_postinst() {
@@ -288,7 +283,8 @@ pkg_postinst() {
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
-	if $WORLD_MIGRATION_UPGRADE ; then
+	if $WORLD_MIGRATION_UPGRADE && \
+		grep -q "^@" "${EROOT}/var/lib/portage/world"; then
 		einfo "moving set references from the worldfile into world_sets"
 		cd "${EROOT}/var/lib/portage/"
 		grep "^@" world >> world_sets
@@ -312,24 +308,6 @@ pkg_postinst() {
 				done < "${cpv}/NEEDED"
 			fi
 		done
-	fi
-
-	if $REPO_LAYOUT_CONF_WARN ; then
-		ewarn
-		echo "If you want overlay eclasses to override eclasses from" \
-			"other repos then see the portage(5) man page" \
-			"for information about the new layout.conf and repos.conf" \
-			"configuration files." \
-			| fmt -w 75 | while read -r ; do ewarn "$REPLY" ; done
-		ewarn
-	fi
-
-	if $MINOR_UPGRADE ; then
-		elog "If you're upgrading from a pre-2.2 version of portage you might"
-		elog "want to remerge world (emerge -e world) to take full advantage"
-		elog "of some of the new features in 2.2."
-		elog "This is not required however for portage to function properly."
-		elog
 	fi
 }
 
