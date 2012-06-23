@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.7 2012/06/23 03:19:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.8 2012/06/23 22:26:31 cardoe Exp $
 
 EAPI=4
 
@@ -188,7 +188,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "install failed"
+	emake INSTALL_ROOT="${D}" install || die "install failed"
 	dodoc AUTHORS FAQ UPGRADING  README
 
 	insinto /usr/share/mythtv/database
