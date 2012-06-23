@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.94 2012/06/20 11:10:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.95 2012/06/23 05:12:30 jer Exp $
+
+  23 Jun 2012; Jeroen Roovers <jer@gentoo.org> libav-0.8.3.ebuild:
+  Stable for HPPA (bug #422537).
 
   20 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.2.ebuild:
   0.8.2 works on ppc64 stable too, so stabilise.
