@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-1.0.0-r1.ebuild,v 1.8 2011/07/26 07:47:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-1.0.0-r1.ebuild,v 1.9 2012/06/23 09:29:00 ssuominen Exp $
 
 EAPI="3"
 GENTOO_DEPEND_ON_PERL="no"
@@ -25,6 +25,7 @@ RDEPEND=">=dev-libs/libprelude-0.9.9
 	postgres? ( dev-db/postgresql-server )
 	sqlite? ( =dev-db/sqlite-3* )"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	doc? ( dev-util/gtk-doc )"
 
 DISTUTILS_SETUP_FILES=("bindings/python|setup.py")
@@ -47,6 +48,8 @@ src_prepare() {
 		-e "s/^python: python-build/python:/" \
 		-e "/cd python && \$(PYTHON) setup.py install/d" \
 		-i bindings/Makefile.am || die "sed failed"
+
+	rm -f m4/gtk-doc.m4 #420767
 
 	eautoreconf
 }
