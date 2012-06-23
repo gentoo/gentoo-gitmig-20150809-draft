@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsval
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsval/ChangeLog,v 1.1 2012/06/23 21:19:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsval/ChangeLog,v 1.2 2012/06/23 21:33:13 xmw Exp $
+
+  23 Jun 2012; Michael Weber <xmw@gentoo.org> dnsval-1.13.ebuild:
+  Fix static libs handling
 
 *dnsval-1.13 (23 Jun 2012)
 

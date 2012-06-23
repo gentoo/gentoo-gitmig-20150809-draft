@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsval/dnsval-1.13.ebuild,v 1.1 2012/06/23 21:19:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsval/dnsval-1.13.ebuild,v 1.2 2012/06/23 21:33:13 xmw Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.dnssec-tools.org/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ipv6 +threads"
+IUSE="ipv6 static-libs +threads"
 
 RDEPEND="dev-libs/openssl
 	!<net-dns/dnssec-tools-1.13"
@@ -26,7 +26,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-nsec3 \
-		--with-dlv
+		--with-dlv \
 		$(use_with ipv6) \
 		$(use_with threads)
 }
@@ -37,4 +37,7 @@ src_install() {
 
 	insinto /etc/dnssec-tools
 	doins etc/{{dnsval,resolv}.conf,root.hints}
+
+	use static-libs || find "${D}" -name "*.a" -delete
+	prune_libtool_files
 }
