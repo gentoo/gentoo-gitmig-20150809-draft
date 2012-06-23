@@ -4,5 +4,7 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">MIME-Types</remote-id>
+		<remote-id type="cpan-module">MIME::Type</remote-id>
+		<remote-id type="cpan-module">MIME::Types</remote-id>
 	</upstream>
 </pkgmetadata>
