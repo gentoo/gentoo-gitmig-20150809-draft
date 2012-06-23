@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.12 2012/06/23 09:20:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.13 2012/06/23 09:22:37 ssuominen Exp $
 
 EAPI="3"
 GENTOO_DEPEND_ON_PERL="no"
@@ -19,7 +19,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="doc lua perl python ruby"
 
-RDEPEND=">=net-libs/gnutls-1.0.17
+RDEPEND=">=dev-libs/libgcrypt-1.1.94
+	>=net-libs/gnutls-1.0.17
 	lua? ( dev-lang/lua )
 	perl? ( dev-lang/perl )
 	ruby? ( dev-lang/ruby )
