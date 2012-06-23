@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Log-TraceMessages</remote-id>
+    <remote-id type="cpan-module">Log::TraceMessages</remote-id>
   </upstream>
 </pkgmetadata>
