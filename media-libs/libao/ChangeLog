@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libao
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.105 2012/05/05 08:02:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.106 2012/06/24 04:00:20 radhermit Exp $
+
+  24 Jun 2012; Tim Harder <radhermit@gentoo.org> libao-1.1.0-r1.ebuild:
+  Remove explicit --disable-dependency-tracking econf option since it is
+  implicitly added for EAPI=4 and use prune_libtool_files.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libao-1.0.0-r1.ebuild,
   libao-1.1.0.ebuild, libao-1.1.0-r1.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.1.0-r1.ebuild,v 1.2 2012/05/05 08:02:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.1.0-r1.ebuild,v 1.3 2012/06/24 04:00:20 radhermit Exp $
 
 EAPI=4
 
-inherit libtool multilib
+inherit libtool multilib eutils
 
 DESCRIPTION="The Audio Output library"
 HOMEPAGE="http://www.xiph.org/ao/"
@@ -30,7 +30,6 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable static-libs static) \
-		--disable-dependency-tracking \
 		--disable-esd \
 		$(use_enable alsa alsa) \
 		$(use_enable mmap alsa-mmap) \
@@ -42,5 +41,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" docdir="${EPREFIX}/usr/share/doc/${PF}/html" install
 	dodoc AUTHORS CHANGES README TODO
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }
