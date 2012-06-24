@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.07-r1.ebuild,v 1.2 2011/11/20 05:36:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.10.ebuild,v 1.1 2012/06/24 04:30:22 dirtyepic Exp $
 
 EAPI=4
 inherit eutils
@@ -33,5 +33,5 @@ src_configure() {
 
 src_install() {
 	default
-	rm -f "${ED}"usr/lib*/libisl.la
+	prune_libtool_files
 }
