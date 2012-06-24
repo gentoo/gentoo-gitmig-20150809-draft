@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/timer_entropyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/ChangeLog,v 1.11 2012/06/24 21:20:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/ChangeLog,v 1.12 2012/06/24 21:25:26 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/timer_entropyd.initd, -timer_entropyd-0.1-r2.ebuild:
+  Remove old version.
 
   24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata, helps my own bug templating script.
