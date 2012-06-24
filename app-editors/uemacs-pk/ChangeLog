@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/uemacs-pk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.17 2012/05/29 07:42:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.18 2012/06/24 22:00:55 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  uemacs-pk-4.0.15_p20120526.ebuild:
+  Stable for amd64, wrt bug #423339
 
   29 May 2012; Naohiro Aota <naota@gentoo.org>
   uemacs-pk-4.0.15_p20120526.ebuild:
