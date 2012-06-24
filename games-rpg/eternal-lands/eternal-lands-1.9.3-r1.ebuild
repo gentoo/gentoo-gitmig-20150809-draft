@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r1.ebuild,v 1.2 2012/06/24 11:58:25 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r1.ebuild,v 1.3 2012/06/24 13:11:45 rich0 Exp $
 
 EAPI=2
-inherit eutils flag-o-matic games
+inherit eutils flag-o-matic gnome2-utils games
 
 DESCRIPTION="An online MMORPG written in C and SDL"
 HOMEPAGE="http://www.eternal-lands.com"
@@ -118,7 +118,7 @@ src_compile() {
 }
 
 src_install() {
-	newicon "${DISTDIR}/eternal-lands.png" ${PN}.png
+	newicon -s 64 "${DISTDIR}/eternal-lands.png" ${PN}.png
 
 	newgamesbin el.x86.linux.bin el \
 		|| die "newgamesbin failed"
@@ -137,8 +137,14 @@ src_install() {
 	prepgamesdirs
 }
 
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	games_pkg_postinst
+	gnome2_icon_cache_update
 	elog "Auto Update is now enabled in Eternal Lands"
 	elog "If an update occurs then the client will suddenly exit"
 	elog "Updates only happen when the game first loads"
@@ -150,5 +156,8 @@ pkg_postinst() {
 
 	# Make sure new files stay in games group
 	find "${ROOT}/${GAMES_DATADIR}/${PN}" -type d -exec chmod g+sx {} \;
+}
 
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
