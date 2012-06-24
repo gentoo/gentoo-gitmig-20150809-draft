@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.130 2012/06/23 20:22:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.131 2012/06/24 07:32:09 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/lynx-2.8.8_pre12-jobserver.patch, lynx-2.8.8_pre12.ebuild:
+  Add patch to solve 'jobserver unavailable' issues (and increase parallel
+  build).
 
   23 Jun 2012; Tim Harder <radhermit@gentoo.org> lynx-2.8.8_pre12.ebuild:
   Add dep on dev-libs/libgcrypt when gnutls ssl support is enabled (bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.13 2012/06/23 20:22:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre12.ebuild,v 1.14 2012/06/24 07:32:09 flameeyes Exp $
 
 EAPI=4
 
@@ -55,6 +55,7 @@ src_prepare() {
 	epatch "${FILESDIR}/lynx-2.8.7-configure-openssl.patch"
 	epatch "${FILESDIR}"/${PN}-2.8.6-mint.patch
 	epatch "${FILESDIR}"/lynx-2.8.8_pre12-parallel.patch
+	epatch "${FILESDIR}"/lynx-2.8.8_pre12-jobserver.patch
 }
 
 src_configure() {
