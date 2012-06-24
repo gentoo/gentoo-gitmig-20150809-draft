@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6708 2012/06/24 13:45:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6709 2012/06/24 22:18:03 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jun 2012; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask dev-embedded/msp430-* as they're not supposed to be used without
+  crossdev.
 
   24 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask cups live ebuild
