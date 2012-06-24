@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.415 2012/06/10 03:24:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.416 2012/06/24 23:23:11 tetromino Exp $
+
+*wine-1.5.7 (24 Jun 2012)
+*wine-1.4.1 (24 Jun 2012)
+
+  24 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.2.ebuild,
+  wine-1.2.1.ebuild, wine-1.2.2.ebuild, wine-1.2.3.ebuild, +wine-1.4.1.ebuild,
+  +wine-1.5.7.ebuild, wine-9999.ebuild:
+  Bump, see http://www.winehq.org/announce/1.5.7 and
+  http://www.winehq.org/announce/1.4.1 for the announcements. Enable optional
+  native pulseaudio support for 1.5.7 (bug #421365, thanks to Lee Trager). Fix
+  emul-linux-x86-soundlibs dependency (bug #423093, thanks to Pacho Ramos).
 
 *wine-1.5.6 (10 Jun 2012)
 
