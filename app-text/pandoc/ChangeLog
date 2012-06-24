@@ -1,6 +1,14 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.7 2012/06/22 20:04:23 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.8 2012/06/24 11:38:18 slyfox Exp $
+
+*pandoc-1.9.4.1-r1 (24 Jun 2012)
+
+  24 Jun 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/pandoc-1.9.4.1-file-enc.patch, +pandoc-1.9.4.1-r1.ebuild,
+  -pandoc-1.9.4.1.ebuild:
+  Pick upstream patch to fix filename encodings. Original problem reported by
+  Nikolaj Sjujskij.
 
 *pandoc-1.9.4.1 (23 Jun 2012)
 

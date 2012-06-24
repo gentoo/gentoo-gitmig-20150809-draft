@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.9.4.1.ebuild,v 1.1 2012/06/22 20:04:23 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.9.4.1-r1.ebuild,v 1.1 2012/06/24 11:38:18 slyfox Exp $
 
 EAPI=4
 
@@ -17,6 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
+RESTRICT="test" # missing files in tarball
 
 RDEPEND="=dev-haskell/base64-bytestring-0.1*[profile?]
 		=dev-haskell/blaze-html-0.5*[profile?]
@@ -64,7 +65,9 @@ DEPEND="${RDEPEND}
 			dev-haskell/test-framework[profile?]
 		)"
 
-PATCHES=("${FILESDIR}/${PN}-1.9.4.1-ghc-7.5.patch")
+PATCHES=("${FILESDIR}/${PN}-1.9.4.1-ghc-7.5.patch"
+	"${FILESDIR}/${PN}-1.9.4.1-file-enc.patch"
+	)
 
 src_configure() {
 	cabal_src_configure \
