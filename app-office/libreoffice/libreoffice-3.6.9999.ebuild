@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.8 2012/06/21 15:34:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.9 2012/06/24 21:50:55 dilfridge Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEV_URI="
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
-BRANDING="${PN}-branding-gentoo-0.5.tar.xz"
+BRANDING="${PN}-branding-gentoo-0.6.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
@@ -402,9 +402,8 @@ src_configure() {
 	fi
 
 	if use branding; then
-		internal_libs+="
-			--with-intro-bitmap="${WORKDIR}/branding-intro.png"
-		"
+		# hack...
+		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
 	fi
 
 	# it's not entirely clear to me where the failure is, boost libreoffice gcc come to my mind

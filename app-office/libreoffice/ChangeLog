@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.340 2012/06/21 15:34:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.341 2012/06/24 21:50:55 dilfridge Exp $
+
+  24 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-3.6.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Branding: The Return of Larry!
 
   21 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.5.9999.ebuild,
   libreoffice-3.6.9999.ebuild, libreoffice-9999-r2.ebuild:
