@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Config-Auto
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Auto/ChangeLog,v 1.1 2012/06/24 00:12:28 cardoe Exp $
+
+*Config-Auto-0.42 (23 Jun 2012)
+
+  23 Jun 2012; Doug Goldstein <cardoe@gentoo.org> +Config-Auto-0.42.ebuild,
+  +metadata.xml:
+  Add initial version
+
