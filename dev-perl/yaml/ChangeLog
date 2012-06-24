@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.94 2012/04/19 18:41:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.95 2012/06/24 10:54:07 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> yaml-0.810.0.ebuild:
+  Stable for amd64, wrt bug #423227
 
 *yaml-0.810.0 (19 Apr 2012)
 
