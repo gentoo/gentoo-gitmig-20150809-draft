@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ranger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.16 2012/05/31 13:04:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.17 2012/06/24 03:42:02 radhermit Exp $
+
+*ranger-9999 (24 Jun 2012)
+
+  24 Jun 2012; Tim Harder <radhermit@gentoo.org> +ranger-9999.ebuild:
+  Add live ebuild.
 
   31 May 2012; Tim Harder <radhermit@gentoo.org> ranger-1.5.4.ebuild:
   Use virtual/pager instead of sys-apps/less since any pager should work and
