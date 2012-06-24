@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Package-DeprecationManager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.24 2012/04/01 16:28:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.25 2012/06/24 13:00:18 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org>
   Package-DeprecationManager-0.110.0.ebuild,
@@ -109,4 +112,3 @@
   26 Jul 2010; Torsten Veller <tove@gentoo.org>
   +Package-DeprecationManager-0.04.ebuild, +metadata.xml:
   Initial commit for dev-perl/Class-MOP
-

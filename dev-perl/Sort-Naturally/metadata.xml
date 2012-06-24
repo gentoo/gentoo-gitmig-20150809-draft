@@ -10,5 +10,6 @@
 </longdescription>
   <upstream>
     <remote-id type="cpan">Sort-Naturally</remote-id>
+    <remote-id type="cpan-module">Sort::Naturally</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.69 2012/04/12 17:49:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.70 2012/06/24 13:00:22 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   12 Apr 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Fix cpan distribution in metadata.xml
@@ -296,4 +299,3 @@
   23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
   math-pari-2.010500.ebuild:
   First import of math-pari, needed for ssh/crypt function in perl
-

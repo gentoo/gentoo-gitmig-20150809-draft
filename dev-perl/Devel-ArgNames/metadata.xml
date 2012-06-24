@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Devel-ArgNames</remote-id>
+    <remote-id type="cpan-module">DB</remote-id>
+    <remote-id type="cpan-module">Devel::ArgNames</remote-id>
   </upstream>
 </pkgmetadata>

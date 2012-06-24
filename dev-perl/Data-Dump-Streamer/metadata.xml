@@ -7,5 +7,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Data-Dump-Streamer</remote-id>
+    <remote-id type="cpan-module">Data::Dump::Streamer</remote-id>
+    <remote-id type="cpan-module">Data::Dump::Streamer::Deparser</remote-id>
   </upstream>
 </pkgmetadata>

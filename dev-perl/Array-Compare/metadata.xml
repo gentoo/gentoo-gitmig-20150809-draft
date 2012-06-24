@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Array-Compare</remote-id>
+    <remote-id type="cpan-module">Array::Compare</remote-id>
   </upstream>
 </pkgmetadata>

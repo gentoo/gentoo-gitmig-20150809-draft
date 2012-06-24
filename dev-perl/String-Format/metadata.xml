@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">String-Format</remote-id>
+    <remote-id type="cpan-module">String::Format</remote-id>
   </upstream>
 </pkgmetadata>

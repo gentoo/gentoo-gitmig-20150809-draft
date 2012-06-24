@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Factory-Util
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.27 2011/09/04 11:23:16 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.28 2012/06/24 12:58:47 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Class-Factory-Util-1.7.ebuild:
   Cleanup
@@ -108,4 +111,3 @@
   04 Mar 2004; Michael Cummings <mcummings@gentoo.org>
   Class-Factory-Util-1.6.ebuild, metadata.xml:
   dep for gwine, bug 27301
-

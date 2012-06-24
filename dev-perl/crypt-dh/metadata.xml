@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Crypt-DH</remote-id>
+    <remote-id type="cpan-module">Crypt::DH</remote-id>
   </upstream>
 </pkgmetadata>

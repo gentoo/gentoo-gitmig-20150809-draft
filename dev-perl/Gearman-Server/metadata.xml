@@ -8,5 +8,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Gearman-Server</remote-id>
+    <remote-id type="cpan-module">Gearman::Server</remote-id>
+    <remote-id type="cpan-module">Gearman::Server::Client</remote-id>
+    <remote-id type="cpan-module">Gearman::Server::Job</remote-id>
+    <remote-id type="cpan-module">Gearman::Server::Listener</remote-id>
   </upstream>
 </pkgmetadata>

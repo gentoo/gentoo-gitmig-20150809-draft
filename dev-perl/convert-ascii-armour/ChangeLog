@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/convert-ascii-armour
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/ChangeLog,v 1.26 2011/09/04 11:20:59 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/ChangeLog,v 1.27 2012/06/24 12:59:48 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -convert-ascii-armour-1.4.ebuild:
@@ -99,4 +102,3 @@
   23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
   convert-ascii-armour-1.4.ebuild:
   dep for crypt-rsa, which is a dep for net-ssh
-

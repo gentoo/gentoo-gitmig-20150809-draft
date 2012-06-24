@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-LinkExtractor</remote-id>
+    <remote-id type="cpan-module">HTML::LinkExtractor</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Statistics-Descriptive</remote-id>
+    <remote-id type="cpan-module">Statistics::Descriptive</remote-id>
+    <remote-id type="cpan-module">Statistics::Descriptive::Full</remote-id>
+    <remote-id type="cpan-module">Statistics::Descriptive::Smoother</remote-id>
+    <remote-id type="cpan-module">Statistics::Descriptive::Smoother::Exponential</remote-id>
+    <remote-id type="cpan-module">Statistics::Descriptive::Smoother::Weightedexponential</remote-id>
+    <remote-id type="cpan-module">Statistics::Descriptive::Sparse</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Patch</remote-id>
+    <remote-id type="cpan-module">Text::Patch</remote-id>
   </upstream>
 </pkgmetadata>

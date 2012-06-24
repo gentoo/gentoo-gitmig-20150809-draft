@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DelimMatch</remote-id>
+    <remote-id type="cpan-module">Text::DelimMatch</remote-id>
   </upstream>
 </pkgmetadata>

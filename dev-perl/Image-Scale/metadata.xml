@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Image-Scale</remote-id>
+    <remote-id type="cpan-module">Image::Scale</remote-id>
   </upstream>
 </pkgmetadata>

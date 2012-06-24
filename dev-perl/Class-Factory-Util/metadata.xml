@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Factory-Util</remote-id>
+    <remote-id type="cpan-module">Class::Factory::Util</remote-id>
   </upstream>
 </pkgmetadata>

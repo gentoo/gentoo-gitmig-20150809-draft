@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PatchReader
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.31 2012/04/21 18:46:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PatchReader/ChangeLog,v 1.32 2012/06/24 12:58:34 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   21 Apr 2012; Torsten Veller <tove@gentoo.org> -PatchReader-0.9.5.ebuild:
   Cleanup
@@ -110,4 +113,3 @@
   16 Jul 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
   +PatchReader-0.9.4.ebuild:
   Initial import; for net-www/bugzilla; by Renat Lumpau <lumpau@freeshell.org>
-

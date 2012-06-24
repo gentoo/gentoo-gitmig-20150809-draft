@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-TableExtract</remote-id>
+    <remote-id type="cpan-module">HTML::TableExtract</remote-id>
+    <remote-id type="cpan-module">HTML::TableExtract::Rasterize</remote-id>
+    <remote-id type="cpan-module">HTML::TableExtract::StripHTML</remote-id>
+    <remote-id type="cpan-module">HTML::TableExtract::Table</remote-id>
   </upstream>
 </pkgmetadata>

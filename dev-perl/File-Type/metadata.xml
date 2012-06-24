@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-Type</remote-id>
+    <remote-id type="cpan-module">File::Type</remote-id>
+    <remote-id type="cpan-module">File::Type::Builder</remote-id>
   </upstream>
 </pkgmetadata>

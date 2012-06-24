@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Proc-Wait3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Wait3/ChangeLog,v 1.1 2012/02/02 16:13:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Wait3/ChangeLog,v 1.2 2012/06/24 13:00:32 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Proc-Wait3-0.40.0 (02 Feb 2012)
 
@@ -18,4 +21,3 @@
   28 Jun 2010; Kent Fredric <kentfredric@gmail.com> +Proc-Wait3-0.03.ebuild,
   +metadata.xml:
   Added
-

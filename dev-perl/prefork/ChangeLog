@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/prefork
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.45 2012/05/06 20:23:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.46 2012/06/24 12:58:45 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   06 May 2012; Samuli Suominen <ssuominen@gentoo.org> prefork-1.40.0.ebuild:
   Keyword ~ppc64 wrt #408399
@@ -148,4 +151,3 @@
   23 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +prefork-1.00.ebuild:
   Missing dep for File-Flat
-

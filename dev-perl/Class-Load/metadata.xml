@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Load</remote-id>
+    <remote-id type="cpan-module">Class::Load</remote-id>
+    <remote-id type="cpan-module">Class::Load::PP</remote-id>
   </upstream>
 </pkgmetadata>

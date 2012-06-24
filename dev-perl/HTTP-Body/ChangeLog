@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Body
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Body/ChangeLog,v 1.1 2012/02/02 18:34:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Body/ChangeLog,v 1.2 2012/06/24 13:00:21 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *HTTP-Body-1.150.0 (02 Feb 2012)
 
@@ -56,4 +59,3 @@
 
   22 Jan 2010; Torsten Veller <tove@gentoo.org> +HTTP-Body-1.06.ebuild:
   Version bump
-

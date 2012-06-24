@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>perl</herd>
 <herd>sound</herd>
+<upstream>
+<remote-id type="cpan">MusicBrainz-DiscID</remote-id>
+<remote-id type="cpan-module">MusicBrainz::DiscID</remote-id>
+</upstream>
 </pkgmetadata>

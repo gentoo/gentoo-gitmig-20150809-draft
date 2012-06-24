@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">POE-XS-Loop-EPoll</remote-id>
+    <remote-id type="cpan-module">POE::XS::Loop::EPoll</remote-id>
   </upstream>
 </pkgmetadata>

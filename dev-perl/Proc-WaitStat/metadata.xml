@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Proc-WaitStat</remote-id>
+    <remote-id type="cpan-module">Proc::WaitStat</remote-id>
   </upstream>
 </pkgmetadata>

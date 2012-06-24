@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Time-TAI64</remote-id>
+    <remote-id type="cpan-module">Time::TAI64</remote-id>
   </upstream>
 </pkgmetadata>

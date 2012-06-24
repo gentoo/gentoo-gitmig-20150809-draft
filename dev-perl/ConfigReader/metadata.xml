@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">ConfigReader</remote-id>
+    <remote-id type="cpan-module">ConfigReader::DirectiveStyle</remote-id>
+    <remote-id type="cpan-module">ConfigReader::Spec</remote-id>
+    <remote-id type="cpan-module">ConfigReader::Values</remote-id>
   </upstream>
 </pkgmetadata>

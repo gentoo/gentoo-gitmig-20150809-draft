@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TimeDate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.42 2012/06/16 03:39:46 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.43 2012/06/24 13:00:28 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   16 Jun 2012; Akinori Hattori <hattya@gentoo.org> TimeDate-1.200.0.ebuild:
   ia64 stable wrt bug #400247.

@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-WikiFormat</remote-id>
+    <remote-id type="cpan-module">Text::WikiFormat</remote-id>
+    <remote-id type="cpan-module">Text::WikiFormat::Block</remote-id>
+    <remote-id type="cpan-module">Text::WikiFormat::Block::code</remote-id>
+    <remote-id type="cpan-module">Text::WikiFormat::Blocks</remote-id>
   </upstream>
 </pkgmetadata>

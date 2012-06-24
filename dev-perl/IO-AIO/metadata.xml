@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">IO-AIO</remote-id>
+    <remote-id type="cpan-module">IO::AIO</remote-id>
   </upstream>
 </pkgmetadata>

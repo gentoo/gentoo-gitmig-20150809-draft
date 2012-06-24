@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Gentoo-PerlMod-Version</remote-id>
+		<remote-id type="cpan-module">Gentoo::PerlMod::Version</remote-id>
 	</upstream>
 </pkgmetadata>

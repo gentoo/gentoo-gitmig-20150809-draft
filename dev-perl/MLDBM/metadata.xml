@@ -4,5 +4,10 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">MLDBM</remote-id>
+    <remote-id type="cpan-module">MLDBM</remote-id>
+    <remote-id type="cpan-module">MLDBM::Serializer</remote-id>
+    <remote-id type="cpan-module">MLDBM::Serializer::Data::Dumper</remote-id>
+    <remote-id type="cpan-module">MLDBM::Serializer::FreezeThaw</remote-id>
+    <remote-id type="cpan-module">MLDBM::Serializer::Storable</remote-id>
   </upstream>
 </pkgmetadata>

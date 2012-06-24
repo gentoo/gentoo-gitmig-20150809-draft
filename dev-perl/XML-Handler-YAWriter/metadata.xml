@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">XML-Handler-YAWriter</remote-id>
+    <remote-id type="cpan-module">XML::Handler::YAWriter</remote-id>
   </upstream>
 </pkgmetadata>

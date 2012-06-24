@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Exception-Died
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Died/ChangeLog,v 1.6 2011/09/04 11:21:43 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Died/ChangeLog,v 1.7 2012/06/24 13:00:14 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Exception-Died-0.06.ebuild:
   Cleanup
@@ -24,4 +27,3 @@
   23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
   +Exception-Died-0.06.ebuild, +metadata.xml:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

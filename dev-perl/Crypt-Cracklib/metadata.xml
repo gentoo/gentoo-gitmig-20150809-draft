@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Crypt-Cracklib</remote-id>
+    <remote-id type="cpan-module">Crypt::Cracklib</remote-id>
   </upstream>
 </pkgmetadata>

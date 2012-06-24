@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">POE-XS-Queue-Array</remote-id>
+    <remote-id type="cpan-module">POE::XS::Queue::Array</remote-id>
   </upstream>
 </pkgmetadata>

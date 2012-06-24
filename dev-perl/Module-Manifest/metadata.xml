@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Module-Manifest</remote-id>
+		<remote-id type="cpan-module">Module::Manifest</remote-id>
 	</upstream>
 </pkgmetadata>

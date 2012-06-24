@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Router-Simple</remote-id>
+    <remote-id type="cpan-module">Router::Simple</remote-id>
+    <remote-id type="cpan-module">Router::Simple::Declare</remote-id>
+    <remote-id type="cpan-module">Router::Simple::Route</remote-id>
+    <remote-id type="cpan-module">Router::Simple::SubMapper</remote-id>
   </upstream>
 </pkgmetadata>

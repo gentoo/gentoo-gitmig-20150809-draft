@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Simple/ChangeLog,v 1.6 2012/04/14 15:14:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Simple/ChangeLog,v 1.7 2012/06/24 13:00:27 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   14 Apr 2012; Markus Meier <maekke@gentoo.org> Tie-Simple-1.03.ebuild:
   x86 stable, bug #408579
@@ -21,4 +24,3 @@
 
   21 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +Tie-Simple-1.03.ebuild:
   Initial commit (as part of #356535 by Satoshi Hayazaki)
-

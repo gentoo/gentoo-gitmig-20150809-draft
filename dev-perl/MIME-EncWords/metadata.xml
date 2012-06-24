@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">MIME-EncWords</remote-id>
+    <remote-id type="cpan-module">Encode::MIME::EncWords</remote-id>
+    <remote-id type="cpan-module">MIME::EncWords</remote-id>
   </upstream>
 </pkgmetadata>

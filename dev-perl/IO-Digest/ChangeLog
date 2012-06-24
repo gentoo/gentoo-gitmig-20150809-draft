@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Digest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Digest/ChangeLog,v 1.21 2012/03/25 16:56:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Digest/ChangeLog,v 1.22 2012/06/24 12:59:29 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> IO-Digest-0.100.0.ebuild:
   Drop ia64/sparc
@@ -73,4 +76,3 @@
 
   27 Nov 2004; <pclouds@gentoo.org> +metadata.xml, +IO-Digest-0.10.ebuild:
   New ebuild
-

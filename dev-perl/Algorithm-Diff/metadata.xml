@@ -5,5 +5,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Algorithm-Diff</remote-id>
+    <remote-id type="cpan-module">Algorithm::Diff</remote-id>
+    <remote-id type="cpan-module">Algorithm::Diff::_impl</remote-id>
   </upstream>
 </pkgmetadata>

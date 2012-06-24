@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Finance-YahooQuote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/ChangeLog,v 1.30 2012/03/31 07:19:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-YahooQuote/ChangeLog,v 1.31 2012/06/24 12:58:29 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org>
   -Finance-YahooQuote-0.22.ebuild:
@@ -130,4 +133,3 @@
   07 Feb 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Finance-YahooQuote-0.20.ebuild:
   New dep for app-misc/smsm. Also provides /usr/bin/yahooquote.
-

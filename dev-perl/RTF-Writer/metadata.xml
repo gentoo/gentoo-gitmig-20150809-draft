@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">RTF-Writer</remote-id>
+    <remote-id type="cpan-module">RTF::Writer</remote-id>
+    <remote-id type="cpan-module">RTF::Writer::TableRowDecl</remote-id>
   </upstream>
 </pkgmetadata>

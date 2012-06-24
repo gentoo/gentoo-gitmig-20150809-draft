@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">List-UtilsBy</remote-id>
+    <remote-id type="cpan-module">List::UtilsBy</remote-id>
   </upstream>
 </pkgmetadata>

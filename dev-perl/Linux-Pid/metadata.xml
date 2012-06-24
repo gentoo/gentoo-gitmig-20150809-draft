@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Linux-Pid</remote-id>
+		<remote-id type="cpan-module">Linux::Pid</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-FreeDB</remote-id>
+    <remote-id type="cpan-module">Net::FreeDB</remote-id>
   </upstream>
 </pkgmetadata>

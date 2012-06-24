@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Test-SharedFork</remote-id>
+    <remote-id type="cpan-module">Test::SharedFork</remote-id>
+    <remote-id type="cpan-module">Test::SharedFork::Array</remote-id>
+    <remote-id type="cpan-module">Test::SharedFork::Scalar</remote-id>
+    <remote-id type="cpan-module">Test::SharedFork::Store</remote-id>
   </upstream>
 </pkgmetadata>

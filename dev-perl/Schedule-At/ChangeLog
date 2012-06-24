@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Schedule-At
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.31 2012/05/04 14:07:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.32 2012/06/24 13:00:27 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Schedule-At-1.150.0 (04 May 2012)
 
@@ -126,4 +129,3 @@
   14 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Schedule-At-1.05.ebuild:
   Bug 88118 - portknock dep
-

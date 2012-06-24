@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Filesys-Notify-Simple</remote-id>
+    <remote-id type="cpan-module">Filesys::Notify::Simple</remote-id>
   </upstream>
 </pkgmetadata>

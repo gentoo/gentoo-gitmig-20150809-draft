@@ -9,5 +9,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">PBS-Client</remote-id>
+    <remote-id type="cpan-module">PBS::Client</remote-id>
+    <remote-id type="cpan-module">PBS::Client::Job</remote-id>
   </upstream>
 </pkgmetadata>

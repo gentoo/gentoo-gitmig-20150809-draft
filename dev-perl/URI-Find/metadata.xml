@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">URI-Find</remote-id>
+    <remote-id type="cpan-module">URI::Find</remote-id>
+    <remote-id type="cpan-module">URI::Find::Schemeless</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Bignum
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Bignum/ChangeLog,v 1.32 2011/12/13 09:08:06 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Bignum/ChangeLog,v 1.33 2012/06/24 12:58:59 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   13 Dec 2011; Naohiro Aota <naota@gentoo.org>
   Crypt-OpenSSL-Bignum-0.40.0.ebuild:
@@ -133,4 +136,3 @@
   20 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Crypt-OpenSSL-Bignum-0.03.ebuild:
   Optional dep for Crypt-OpenSSL-RSA
-

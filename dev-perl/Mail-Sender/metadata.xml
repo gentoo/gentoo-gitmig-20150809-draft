@@ -10,5 +10,8 @@
 	</longdescription>
   <upstream>
     <remote-id type="cpan">Mail-Sender</remote-id>
+    <remote-id type="cpan-module">Mail::Sender</remote-id>
+    <remote-id type="cpan-module">Mail::Sender::DBIO</remote-id>
+    <remote-id type="cpan-module">Mail::Sender::IO</remote-id>
   </upstream>
 </pkgmetadata>

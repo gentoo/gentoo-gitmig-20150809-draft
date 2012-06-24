@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Object-Realize-Later</remote-id>
+    <remote-id type="cpan-module">Object::Realize::Later</remote-id>
   </upstream>
 </pkgmetadata>

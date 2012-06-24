@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Test-TCP</remote-id>
+    <remote-id type="cpan-module">Test::TCP</remote-id>
   </upstream>
 </pkgmetadata>

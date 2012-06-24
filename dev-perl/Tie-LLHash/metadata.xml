@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Tie-LLHash</remote-id>
+    <remote-id type="cpan-module">Tie::LLHash</remote-id>
   </upstream>
 </pkgmetadata>

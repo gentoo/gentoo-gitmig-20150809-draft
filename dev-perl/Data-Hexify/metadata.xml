@@ -10,7 +10,8 @@
 	<email>maksbotan@gentoo.org</email>
 	<name>Maxim Koltsov</name>
 </maintainer>
-	<upstream>
-		<remote-id type="cpan">Data-Hexify</remote-id>
-	</upstream>
+<upstream>
+	<remote-id type="cpan">Data-Hexify</remote-id>
+	<remote-id type="cpan-module">Data::Hexify</remote-id>
+</upstream>
 </pkgmetadata>

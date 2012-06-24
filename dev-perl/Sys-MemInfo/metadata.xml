@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Sys-MemInfo</remote-id>
+    <remote-id type="cpan-module">Sys::MemInfo</remote-id>
   </upstream>
 </pkgmetadata>

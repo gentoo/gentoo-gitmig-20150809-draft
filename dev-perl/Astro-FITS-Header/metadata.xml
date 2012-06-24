@@ -4,5 +4,12 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Astro-FITS-Header</remote-id>
+    <remote-id type="cpan-module">Astro::FITS::Header</remote-id>
+    <remote-id type="cpan-module">Astro::FITS::Header::AST</remote-id>
+    <remote-id type="cpan-module">Astro::FITS::Header::CFITSIO</remote-id>
+    <remote-id type="cpan-module">Astro::FITS::Header::GSD</remote-id>
+    <remote-id type="cpan-module">Astro::FITS::Header::Item</remote-id>
+    <remote-id type="cpan-module">Astro::FITS::Header::NDF</remote-id>
+    <remote-id type="cpan-module">Astro::FITS::HeaderCollection</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Exception-Class</remote-id>
+    <remote-id type="cpan-module">Exception::Class</remote-id>
+    <remote-id type="cpan-module">Exception::Class::Base</remote-id>
   </upstream>
 </pkgmetadata>

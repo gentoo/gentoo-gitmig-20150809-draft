@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">PostScript-Simple</remote-id>
+    <remote-id type="cpan-module">PostScript::Simple</remote-id>
+    <remote-id type="cpan-module">PostScript::Simple::EPS</remote-id>
   </upstream>
 </pkgmetadata>

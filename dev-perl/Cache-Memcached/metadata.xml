@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Cache-Memcached</remote-id>
+    <remote-id type="cpan-module">Cache::Memcached</remote-id>
+    <remote-id type="cpan-module">Cache::Memcached::GetParser</remote-id>
   </upstream>
 </pkgmetadata>

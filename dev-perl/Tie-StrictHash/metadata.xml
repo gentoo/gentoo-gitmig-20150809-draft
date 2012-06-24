@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Tie-StrictHash</remote-id>
+    <remote-id type="cpan-module">Tie::StrictHash</remote-id>
   </upstream>
 </pkgmetadata>

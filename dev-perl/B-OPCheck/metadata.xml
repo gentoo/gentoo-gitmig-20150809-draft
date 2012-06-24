@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">B-OPCheck</remote-id>
+    <remote-id type="cpan-module">B::OPCheck</remote-id>
   </upstream>
 </pkgmetadata>

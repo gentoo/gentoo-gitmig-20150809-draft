@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Spiffy</remote-id>
+    <remote-id type="cpan-module">Class::Spiffy</remote-id>
+    <remote-id type="cpan-module">Class::Spiffy::mixin</remote-id>
+    <remote-id type="cpan-module">DB</remote-id>
   </upstream>
 </pkgmetadata>

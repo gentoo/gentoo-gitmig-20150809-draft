@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DBD-Pg</remote-id>
+    <remote-id type="cpan-module">Bundle::DBD::Pg</remote-id>
+    <remote-id type="cpan-module">DBD::Pg</remote-id>
   </upstream>
 </pkgmetadata>

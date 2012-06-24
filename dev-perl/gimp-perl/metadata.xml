@@ -4,5 +4,22 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Gimp</remote-id>
+    <remote-id type="cpan-module">Gimp</remote-id>
+    <remote-id type="cpan-module">Gimp::Compat</remote-id>
+    <remote-id type="cpan-module">Gimp::Data</remote-id>
+    <remote-id type="cpan-module">Gimp::Feature</remote-id>
+    <remote-id type="cpan-module">Gimp::Fu</remote-id>
+    <remote-id type="cpan-module">Gimp::Lib</remote-id>
+    <remote-id type="cpan-module">Gimp::Module</remote-id>
+    <remote-id type="cpan-module">Gimp::Net</remote-id>
+    <remote-id type="cpan-module">Gimp::PDL</remote-id>
+    <remote-id type="cpan-module">Gimp::Parasite</remote-id>
+    <remote-id type="cpan-module">Gimp::PixelRgn</remote-id>
+    <remote-id type="cpan-module">Gimp::Pod</remote-id>
+    <remote-id type="cpan-module">Gimp::Tile</remote-id>
+    <remote-id type="cpan-module">Gimp::UI</remote-id>
+    <remote-id type="cpan-module">Gimp::Util</remote-id>
+    <remote-id type="cpan-module">Gimp::basewidget</remote-id>
+    <remote-id type="cpan-module">Gimp::run_mode</remote-id>
   </upstream>
 </pkgmetadata>

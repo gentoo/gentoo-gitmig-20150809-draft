@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Reform</remote-id>
+    <remote-id type="cpan-module">Text::Reform</remote-id>
   </upstream>
 </pkgmetadata>

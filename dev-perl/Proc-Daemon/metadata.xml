@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Proc-Daemon</remote-id>
+    <remote-id type="cpan-module">Proc::Daemon</remote-id>
   </upstream>
 </pkgmetadata>

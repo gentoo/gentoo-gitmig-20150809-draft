@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Convert-UUlib</remote-id>
+    <remote-id type="cpan-module">Convert::UUlib</remote-id>
   </upstream>
 </pkgmetadata>

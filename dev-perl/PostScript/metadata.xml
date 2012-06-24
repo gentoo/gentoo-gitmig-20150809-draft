@@ -9,5 +9,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">PostScript</remote-id>
+    <remote-id type="cpan-module">PostScript::Document</remote-id>
+    <remote-id type="cpan-module">PostScript::Elements</remote-id>
+    <remote-id type="cpan-module">PostScript::Metrics</remote-id>
+    <remote-id type="cpan-module">PostScript::TextBlock</remote-id>
   </upstream>
 </pkgmetadata>

@@ -7,5 +7,8 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Fatal-Exception</remote-id>
+    <remote-id type="cpan-module">Exception::Argument</remote-id>
+    <remote-id type="cpan-module">Exception::Fatal</remote-id>
+    <remote-id type="cpan-module">Fatal::Exception</remote-id>
   </upstream>
 </pkgmetadata>

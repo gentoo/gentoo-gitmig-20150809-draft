@@ -11,5 +11,6 @@
 	</longdescription>
   <upstream>
     <remote-id type="cpan">Sort-Tree</remote-id>
+    <remote-id type="cpan-module">Sort::Tree</remote-id>
   </upstream>
 </pkgmetadata>

@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">DateTime-Format-ISO8601</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::ISO8601</remote-id>
   </upstream>
 </pkgmetadata>

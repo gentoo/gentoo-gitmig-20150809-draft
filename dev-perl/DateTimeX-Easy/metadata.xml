@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DateTimeX-Easy</remote-id>
+    <remote-id type="cpan-module">DateTimeX::Easy</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Email-MIME-ContentType</remote-id>
+    <remote-id type="cpan-module">Email::MIME::ContentType</remote-id>
   </upstream>
 </pkgmetadata>

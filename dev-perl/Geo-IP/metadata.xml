@@ -6,5 +6,8 @@
   <longdescription>Look up country by IP Address</longdescription>
   <upstream>
     <remote-id type="cpan">Geo-IP</remote-id>
+    <remote-id type="cpan-module">Geo::IP</remote-id>
+    <remote-id type="cpan-module">Geo::IP::Record</remote-id>
+    <remote-id type="cpan-module">Geo::Mirror</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Term-ProgressBar</remote-id>
+    <remote-id type="cpan-module">Term::ProgressBar</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-UTF8simple
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8simple/ChangeLog,v 1.12 2011/09/04 11:21:09 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8simple/ChangeLog,v 1.13 2012/06/24 12:59:22 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -Unicode-UTF8simple-1.06.ebuild:
@@ -51,4 +54,3 @@
   01 Jun 2006; <mcummings@gentoo.org> +metadata.xml,
   +Unicode-UTF8simple-1.06.ebuild:
   Dep for xmltv
-

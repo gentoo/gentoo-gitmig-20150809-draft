@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Test-use-ok</remote-id>
+    <remote-id type="cpan-module">Test::use::ok</remote-id>
+    <remote-id type="cpan-module">ok</remote-id>
   </upstream>
 </pkgmetadata>

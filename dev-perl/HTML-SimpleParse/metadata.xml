@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-SimpleParse</remote-id>
+    <remote-id type="cpan-module">HTML::SimpleParse</remote-id>
   </upstream>
 </pkgmetadata>

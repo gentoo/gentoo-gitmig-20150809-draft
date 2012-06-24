@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Quoted
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/ChangeLog,v 1.28 2011/09/04 11:21:12 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/ChangeLog,v 1.29 2012/06/24 12:59:48 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Text-Quoted-2.06.ebuild:
   Cleanup
@@ -110,4 +113,3 @@
   25 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
   +Text-Quoted-1.7.ebuild:
   Initial ebuild. RT dependency. OK'd by mcummings.
-

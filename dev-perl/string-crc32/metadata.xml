@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">String-CRC32</remote-id>
+    <remote-id type="cpan-module">String::CRC32</remote-id>
   </upstream>
 </pkgmetadata>

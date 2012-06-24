@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Validate-Net</remote-id>
+    <remote-id type="cpan-module">Validate::Net</remote-id>
   </upstream>
 </pkgmetadata>

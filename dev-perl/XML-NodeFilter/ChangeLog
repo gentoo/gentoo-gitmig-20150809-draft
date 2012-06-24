@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-NodeFilter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NodeFilter/ChangeLog,v 1.13 2011/09/04 11:21:26 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NodeFilter/ChangeLog,v 1.14 2012/06/24 12:59:08 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -XML-NodeFilter-0.01.ebuild:
   Cleanup
@@ -48,4 +51,3 @@
   17 Jun 2003; Michael Cummings <mcummings@gentoo.org>
   XML-NodeFilter-0.01.ebuild:
   This is a missing perl dep for a lot of XML modules
-

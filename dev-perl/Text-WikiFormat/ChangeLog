@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-WikiFormat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.30 2011/09/04 11:23:42 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.31 2012/06/24 13:00:01 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Text-WikiFormat-0.79.ebuild:
   Cleanup
@@ -127,4 +130,3 @@
   11 Aug 2005; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
   +Text-WikiFormat-0.76.ebuild:
   Initial ebuild. www-apps/rt dependency
-

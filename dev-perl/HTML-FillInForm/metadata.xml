@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-FillInForm</remote-id>
+    <remote-id type="cpan-module">HTML::FillInForm</remote-id>
   </upstream>
 </pkgmetadata>

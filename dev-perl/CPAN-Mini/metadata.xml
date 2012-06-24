@@ -5,5 +5,7 @@
   <longdescription>Provides minicpan, a means of creating a portable CPAN distribution to remote sites.</longdescription>
   <upstream>
     <remote-id type="cpan">CPAN-Mini</remote-id>
+    <remote-id type="cpan-module">CPAN::Mini</remote-id>
+    <remote-id type="cpan-module">CPAN::Mini::App</remote-id>
   </upstream>
 </pkgmetadata>

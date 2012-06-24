@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lingua-Stem-It
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.19 2011/09/04 11:21:21 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.20 2012/06/24 12:58:21 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Lingua-Stem-It-0.02.ebuild:
   Cleanup
@@ -75,4 +78,3 @@
   06 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Lingua-Stem-It-0.01.ebuild:
   Dep for Plucene - perl port of lucene
-

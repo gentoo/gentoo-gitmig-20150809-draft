@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Unicode-Map8</remote-id>
+    <remote-id type="cpan-module">Unicode::Map8</remote-id>
   </upstream>
 </pkgmetadata>

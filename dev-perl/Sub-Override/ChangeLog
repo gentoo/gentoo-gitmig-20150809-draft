@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Override
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/ChangeLog,v 1.25 2012/04/14 16:58:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/ChangeLog,v 1.26 2012/06/24 12:59:24 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> Sub-Override-0.80.0.ebuild:
   Add ~amd64-linux keyword.
@@ -96,4 +99,3 @@
   17 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Sub-Override-0.05.ebuild:
   New dep for HTML-TokeParser-Simple. Tested with a sparc
-

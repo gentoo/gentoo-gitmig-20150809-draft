@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-UUID
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.60 2012/03/31 07:31:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.61 2012/06/24 12:58:24 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Data-UUID-1.202.ebuild:
   Cleanup
@@ -237,4 +240,3 @@
 
   05 Dec 2005; <mcumming@gentoo.org> +metadata.xml, +Data-UUID-0.11.ebuild:
   Bug 114071, dep for asterisk/festival scripts
-

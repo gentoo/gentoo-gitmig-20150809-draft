@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Sub-Uplevel</remote-id>
+    <remote-id type="cpan-module">Sub::Uplevel</remote-id>
   </upstream>
 </pkgmetadata>

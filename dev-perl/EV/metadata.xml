@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">EV</remote-id>
+    <remote-id type="cpan-module">EV</remote-id>
+    <remote-id type="cpan-module">EV::MakeMaker</remote-id>
   </upstream>
 </pkgmetadata>

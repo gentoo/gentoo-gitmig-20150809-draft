@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">IO-BufferedSelect</remote-id>
+    <remote-id type="cpan-module">IO::BufferedSelect</remote-id>
   </upstream>
 </pkgmetadata>

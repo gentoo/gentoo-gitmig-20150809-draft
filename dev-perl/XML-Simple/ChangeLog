@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.73 2012/05/15 23:30:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.74 2012/06/24 12:58:39 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> XML-Simple-2.180.0.ebuild:
   keyword ~amd64-fbsd

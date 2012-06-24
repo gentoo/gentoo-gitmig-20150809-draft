@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Digest-BubbleBabble</remote-id>
+    <remote-id type="cpan-module">Digest::BubbleBabble</remote-id>
   </upstream>
 </pkgmetadata>

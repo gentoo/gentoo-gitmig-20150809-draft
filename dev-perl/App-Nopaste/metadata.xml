@@ -12,5 +12,17 @@
   </use>
   <upstream>
     <remote-id type="cpan">App-Nopaste</remote-id>
+    <remote-id type="cpan-module">App::Nopaste</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Command</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::Codepeek</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::Debian</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::Gist</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::PastebinCom</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::Pastie</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::Shadowcat</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::Snitch</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::Ubuntu</remote-id>
+    <remote-id type="cpan-module">App::Nopaste::Service::ssh</remote-id>
   </upstream>
 </pkgmetadata>

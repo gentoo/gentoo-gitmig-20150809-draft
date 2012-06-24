@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">GStreamer-Interfaces</remote-id>
+    <remote-id type="cpan-module">GStreamer::Interfaces</remote-id>
   </upstream>
 </pkgmetadata>

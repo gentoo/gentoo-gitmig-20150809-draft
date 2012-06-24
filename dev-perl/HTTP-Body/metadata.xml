@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTTP-Body</remote-id>
+    <remote-id type="cpan-module">HTTP::Body</remote-id>
+    <remote-id type="cpan-module">HTTP::Body::MultiPart</remote-id>
+    <remote-id type="cpan-module">HTTP::Body::OctetStream</remote-id>
+    <remote-id type="cpan-module">HTTP::Body::UrlEncoded</remote-id>
+    <remote-id type="cpan-module">HTTP::Body::XForms</remote-id>
+    <remote-id type="cpan-module">HTTP::Body::XFormsMultipart</remote-id>
   </upstream>
 </pkgmetadata>

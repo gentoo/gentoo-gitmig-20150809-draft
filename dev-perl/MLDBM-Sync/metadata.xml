@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">MLDBM-Sync</remote-id>
+    <remote-id type="cpan-module">MLDBM::Sync</remote-id>
+    <remote-id type="cpan-module">MLDBM::Sync::SDBM_File</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">GD-SVG</remote-id>
+    <remote-id type="cpan-module">GD::SVG</remote-id>
+    <remote-id type="cpan-module">GD::SVG::Font</remote-id>
+    <remote-id type="cpan-module">GD::SVG::Image</remote-id>
+    <remote-id type="cpan-module">GD::SVG::Polygon</remote-id>
   </upstream>
 </pkgmetadata>

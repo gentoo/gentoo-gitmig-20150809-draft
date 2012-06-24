@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">DBIx-Class-InflateColumn-Boolean</remote-id>
+    <remote-id type="cpan-module">DBIx::Class::InflateColumn::Boolean</remote-id>
   </upstream>
 </pkgmetadata>

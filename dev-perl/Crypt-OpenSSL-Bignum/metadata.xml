@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Crypt-OpenSSL-Bignum</remote-id>
+    <remote-id type="cpan-module">Crypt::OpenSSL::Bignum</remote-id>
+    <remote-id type="cpan-module">Crypt::OpenSSL::Bignum::CTX</remote-id>
   </upstream>
 </pkgmetadata>

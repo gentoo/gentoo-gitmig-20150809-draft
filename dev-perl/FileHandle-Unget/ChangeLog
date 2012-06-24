@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FileHandle-Unget
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.24 2011/01/14 12:10:55 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.25 2012/06/24 12:59:51 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *FileHandle-Unget-0.162.300 (14 Jan 2011)
 
@@ -109,4 +112,3 @@
   20 Nov 2003; Martin Holzer <mholzer@gentoo.org>
   FileHandle-Unget-0.11.ebuild:
   Initial ebuild.
-

@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IP-Country</remote-id>
+    <remote-id type="cpan-module">IP::Authority</remote-id>
+    <remote-id type="cpan-module">IP::Country</remote-id>
+    <remote-id type="cpan-module">IP::Country::Fast</remote-id>
+    <remote-id type="cpan-module">IP::Country::MaxMind</remote-id>
+    <remote-id type="cpan-module">IP::Country::Medium</remote-id>
+    <remote-id type="cpan-module">IP::Country::Slow</remote-id>
   </upstream>
 </pkgmetadata>

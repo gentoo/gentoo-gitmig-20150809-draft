@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">LWP-UserAgent-Determined</remote-id>
+    <remote-id type="cpan-module">LWP::UserAgent::Determined</remote-id>
   </upstream>
 </pkgmetadata>

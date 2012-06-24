@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Tie-RegexpHash</remote-id>
+    <remote-id type="cpan-module">Tie::RegexpHash</remote-id>
   </upstream>
 </pkgmetadata>

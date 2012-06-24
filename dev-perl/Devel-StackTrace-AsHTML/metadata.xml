@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Devel-StackTrace-AsHTML</remote-id>
+    <remote-id type="cpan-module">Devel::StackTrace::AsHTML</remote-id>
   </upstream>
 </pkgmetadata>

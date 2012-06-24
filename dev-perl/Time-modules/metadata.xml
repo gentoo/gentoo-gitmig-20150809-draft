@@ -4,5 +4,10 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Time-modules</remote-id>
+    <remote-id type="cpan-module">Time::CTime</remote-id>
+    <remote-id type="cpan-module">Time::DaysInMonth</remote-id>
+    <remote-id type="cpan-module">Time::JulianDay</remote-id>
+    <remote-id type="cpan-module">Time::ParseDate</remote-id>
+    <remote-id type="cpan-module">Time::Timezone</remote-id>
   </upstream>
 </pkgmetadata>

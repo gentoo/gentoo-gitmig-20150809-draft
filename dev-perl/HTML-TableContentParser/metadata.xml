@@ -9,5 +9,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">HTML-TableContentParser</remote-id>
+    <remote-id type="cpan-module">HTML::TableContentParser</remote-id>
   </upstream>
 </pkgmetadata>

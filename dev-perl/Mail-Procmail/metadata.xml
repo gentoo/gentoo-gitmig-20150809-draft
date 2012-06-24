@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Mail-Procmail</remote-id>
+    <remote-id type="cpan-module">Mail::Procmail</remote-id>
   </upstream>
 </pkgmetadata>

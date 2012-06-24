@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Unix-Syslog</remote-id>
+    <remote-id type="cpan-module">Unix::Syslog</remote-id>
   </upstream>
 </pkgmetadata>

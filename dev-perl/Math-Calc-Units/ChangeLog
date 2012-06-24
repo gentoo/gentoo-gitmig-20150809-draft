@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-Calc-Units
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.7 2011/11/30 16:01:31 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.8 2012/06/24 12:58:56 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   30 Nov 2011; Jeroen Roovers <jer@gentoo.org> Math-Calc-Units-1.70.0.ebuild:
   Marked ~hppa (Dakon).
@@ -32,4 +35,3 @@
   15 Feb 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +Math-Calc-Units-1.06.ebuild:
   Initial commit. Used by Nagios-Plugin (#257580)
-

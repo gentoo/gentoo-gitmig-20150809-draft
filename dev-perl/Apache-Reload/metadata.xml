@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Apache-Reload</remote-id>
+    <remote-id type="cpan-module">Apache2::Reload</remote-id>
+    <remote-id type="cpan-module">Apache::Reload</remote-id>
   </upstream>
 </pkgmetadata>

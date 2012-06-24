@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime-Format-W3CDTF
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-W3CDTF/ChangeLog,v 1.26 2012/03/31 07:29:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-W3CDTF/ChangeLog,v 1.27 2012/06/24 12:58:48 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org>
   -DateTime-Format-W3CDTF-0.04.ebuild:
@@ -113,4 +116,3 @@
   19 Nov 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +DateTime-Format-W3CDTF-0.04.ebuild:
   New dep for dev-perl/XML-RSS
-

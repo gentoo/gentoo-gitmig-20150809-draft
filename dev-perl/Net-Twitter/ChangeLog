@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Twitter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Twitter/ChangeLog,v 1.38 2012/04/25 16:11:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Twitter/ChangeLog,v 1.39 2012/06/24 13:00:06 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Net-Twitter-3.180.20 (25 Apr 2012)
 
@@ -194,4 +197,3 @@
   10 Oct 2009; Torsten Veller <tove@gentoo.org> +Net-Twitter-3.07002.ebuild,
   +metadata.xml:
   Initial commit (#288326)
-

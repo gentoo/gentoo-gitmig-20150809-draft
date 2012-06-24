@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">PPIx-Utilities</remote-id>
+    <remote-id type="cpan-module">PPIx::Utilities</remote-id>
+    <remote-id type="cpan-module">PPIx::Utilities::Exception::Bug</remote-id>
+    <remote-id type="cpan-module">PPIx::Utilities::Node</remote-id>
+    <remote-id type="cpan-module">PPIx::Utilities::Statement</remote-id>
   </upstream>
 </pkgmetadata>

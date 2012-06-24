@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Class-Base</remote-id>
+    <remote-id type="cpan-module">Class::Base</remote-id>
   </upstream>
 </pkgmetadata>

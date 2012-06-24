@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Data-ShowTable</remote-id>
+    <remote-id type="cpan-module">Data::ShowTable</remote-id>
   </upstream>
 </pkgmetadata>

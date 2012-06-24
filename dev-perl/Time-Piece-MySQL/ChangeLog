@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Time-Piece-MySQL
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece-MySQL/ChangeLog,v 1.4 2011/09/04 11:22:18 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece-MySQL/ChangeLog,v 1.5 2012/06/24 12:58:39 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Time-Piece-MySQL-0.06.ebuild:
   Cleanup
@@ -20,4 +23,3 @@
   14 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
   +Time-Piece-MySQL-0.06.ebuild, +metadata.xml:
   Initial commit. Ebuild by g-cpan. Dependancy for DBIx-Class-0.08113.
-

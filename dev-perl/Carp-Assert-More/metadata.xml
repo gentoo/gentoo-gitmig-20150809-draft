@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Carp-Assert-More</remote-id>
+    <remote-id type="cpan-module">Carp::Assert::More</remote-id>
   </upstream>
 </pkgmetadata>

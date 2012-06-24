@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-Which</remote-id>
+    <remote-id type="cpan-module">File::Which</remote-id>
   </upstream>
 </pkgmetadata>

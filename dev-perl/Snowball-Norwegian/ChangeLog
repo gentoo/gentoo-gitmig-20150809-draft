@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Snowball-Norwegian
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/ChangeLog,v 1.22 2011/09/04 11:23:53 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/ChangeLog,v 1.23 2012/06/24 13:00:18 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Snowball-Norwegian-1.2.ebuild:
   Cleanup
@@ -96,4 +99,3 @@
   06 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Snowball-Norwegian-1.0.ebuild:
   Dep for Plucene - perl port of lucene
-

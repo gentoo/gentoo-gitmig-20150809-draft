@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Math-Spline</remote-id>
+    <remote-id type="cpan-module">Math::Spline</remote-id>
   </upstream>
 </pkgmetadata>

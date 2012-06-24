@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Gtk2-ImageView</remote-id>
+    <remote-id type="cpan-module">Gtk2::ImageView</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Taint
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.22 2011/09/04 11:20:53 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.23 2012/06/24 13:00:13 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Test-Taint-1.04.ebuild:
   Cleanup
@@ -75,4 +78,3 @@
   19 Mar 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Test-Taint-1.04.ebuild:
   Testing dep for WWW-Mechanize
-

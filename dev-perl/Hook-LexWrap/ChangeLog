@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Hook-LexWrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hook-LexWrap/ChangeLog,v 1.30 2012/03/31 07:15:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hook-LexWrap/ChangeLog,v 1.31 2012/06/24 12:59:52 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Hook-LexWrap-0.22.ebuild:
   Cleanup
@@ -113,4 +116,3 @@
   12 Jun 2005; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
   +Hook-LexWrap-0.20.ebuild:
   Initial ebuild. www-apps/rt dependency. Ok'd by beu.
-

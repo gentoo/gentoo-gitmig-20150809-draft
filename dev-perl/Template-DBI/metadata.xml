@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Template-DBI</remote-id>
+    <remote-id type="cpan-module">Template::Plugin::DBI</remote-id>
+    <remote-id type="cpan-module">Template::Plugin::DBI::Iterator</remote-id>
+    <remote-id type="cpan-module">Template::Plugin::DBI::Query</remote-id>
   </upstream>
 </pkgmetadata>

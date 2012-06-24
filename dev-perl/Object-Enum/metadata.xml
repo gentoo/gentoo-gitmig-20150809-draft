@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Object-Enum</remote-id>
+    <remote-id type="cpan-module">Object::Enum</remote-id>
   </upstream>
 </pkgmetadata>

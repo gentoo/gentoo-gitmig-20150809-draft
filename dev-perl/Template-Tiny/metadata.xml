@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Template-Tiny</remote-id>
+    <remote-id type="cpan-module">Template::Tiny</remote-id>
   </upstream>
 </pkgmetadata>

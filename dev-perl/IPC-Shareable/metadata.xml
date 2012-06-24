@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IPC-Shareable</remote-id>
+    <remote-id type="cpan-module">IPC::Shareable</remote-id>
+    <remote-id type="cpan-module">IPC::Shareable::SharedMem</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">HTTP-Date</remote-id>
+		<remote-id type="cpan-module">HTTP::Date</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Convert-TNEF</remote-id>
+    <remote-id type="cpan-module">Convert::TNEF</remote-id>
+    <remote-id type="cpan-module">Convert::TNEF::Data</remote-id>
   </upstream>
 </pkgmetadata>

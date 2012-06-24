@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IP-Anonymous</remote-id>
+    <remote-id type="cpan-module">IP::Anonymous</remote-id>
   </upstream>
 </pkgmetadata>

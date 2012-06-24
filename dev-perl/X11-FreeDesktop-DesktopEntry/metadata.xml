@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">X11-FreeDesktop-DesktopEntry</remote-id>
+    <remote-id type="cpan-module">X11::FreeDesktop::DesktopEntry</remote-id>
   </upstream>
 </pkgmetadata>

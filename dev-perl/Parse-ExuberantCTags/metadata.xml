@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Parse-ExuberantCTags</remote-id>
+    <remote-id type="cpan-module">Parse::ExuberantCTags</remote-id>
   </upstream>
 </pkgmetadata>

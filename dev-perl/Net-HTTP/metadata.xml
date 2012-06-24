@@ -4,5 +4,9 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Net-HTTP</remote-id>
+		<remote-id type="cpan-module">Net::HTTP</remote-id>
+		<remote-id type="cpan-module">Net::HTTP::Methods</remote-id>
+		<remote-id type="cpan-module">Net::HTTP::NB</remote-id>
+		<remote-id type="cpan-module">Net::HTTPS</remote-id>
 	</upstream>
 </pkgmetadata>

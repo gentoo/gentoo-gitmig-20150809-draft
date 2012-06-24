@@ -7,5 +7,8 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Devel-Declare</remote-id>
+    <remote-id type="cpan-module">Devel::Declare</remote-id>
+    <remote-id type="cpan-module">Devel::Declare::Context::Simple</remote-id>
+    <remote-id type="cpan-module">Devel::Declare::MethodInstaller::Simple</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Proc-Wait3</remote-id>
+    <remote-id type="cpan-module">Proc::Wait3</remote-id>
   </upstream>
 </pkgmetadata>

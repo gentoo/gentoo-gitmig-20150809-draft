@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">XML-XSLT</remote-id>
+    <remote-id type="cpan-module">XML::XSLT</remote-id>
+    <remote-id type="cpan-module">XML::XSLT::DOM::TextDOE</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.65 2012/03/31 07:17:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.66 2012/06/24 13:00:22 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Geo-IP-1.38.ebuild:
   Cleanup
@@ -240,4 +243,3 @@
 
   29 Jun 2003; <solar@gentoo.org> Geo-IP-1.15.ebuild:
   Initial Import of Geo-IP perl module
-

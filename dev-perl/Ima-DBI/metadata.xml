@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Ima-DBI</remote-id>
+    <remote-id type="cpan-module">Ima::DBI</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Statistics-Descriptive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.43 2012/06/03 17:35:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.44 2012/06/24 12:59:06 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org>
   -Statistics-Descriptive-3.30.0.ebuild, -Statistics-Descriptive-3.50.0.ebuild,
@@ -214,4 +217,3 @@
   04 May 2005; Christian Andreetta <satya@gentoo.org> +metadata.xml,
   +Statistics-Descriptive-2.6.ebuild:
   initial ebuild
-

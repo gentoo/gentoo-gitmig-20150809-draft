@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Crypt-Twofish</remote-id>
+    <remote-id type="cpan-module">Crypt::Twofish</remote-id>
   </upstream>
 </pkgmetadata>

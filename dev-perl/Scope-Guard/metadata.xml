@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Scope-Guard</remote-id>
+    <remote-id type="cpan-module">Scope::Guard</remote-id>
   </upstream>
 </pkgmetadata>

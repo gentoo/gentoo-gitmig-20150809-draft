@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/String-Ediff
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Ediff/ChangeLog,v 1.18 2011/09/04 11:22:32 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Ediff/ChangeLog,v 1.19 2012/06/24 12:59:27 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -String-Ediff-0.09.ebuild:
   Cleanup
@@ -73,4 +76,3 @@
   05 Aug 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
   +String-Ediff-0.03.ebuild:
   Add String-Ediff module in support of cvsweb-3.0.1 (not yet in portage)
-

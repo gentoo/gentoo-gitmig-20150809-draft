@@ -4,5 +4,13 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">NetPacket</remote-id>
+    <remote-id type="cpan-module">NetPacket</remote-id>
+    <remote-id type="cpan-module">NetPacket::ARP</remote-id>
+    <remote-id type="cpan-module">NetPacket::Ethernet</remote-id>
+    <remote-id type="cpan-module">NetPacket::ICMP</remote-id>
+    <remote-id type="cpan-module">NetPacket::IGMP</remote-id>
+    <remote-id type="cpan-module">NetPacket::IP</remote-id>
+    <remote-id type="cpan-module">NetPacket::TCP</remote-id>
+    <remote-id type="cpan-module">NetPacket::UDP</remote-id>
   </upstream>
 </pkgmetadata>

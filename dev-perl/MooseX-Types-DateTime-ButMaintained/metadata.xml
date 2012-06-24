@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">MooseX-Types-DateTime-ButMaintained</remote-id>
+    <remote-id type="cpan-module">MooseX::Types::DateTime::ButMaintained</remote-id>
   </upstream>
 </pkgmetadata>

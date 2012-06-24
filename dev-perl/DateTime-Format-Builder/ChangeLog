@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime-Format-Builder
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/ChangeLog,v 1.10 2011/09/04 11:22:50 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/ChangeLog,v 1.11 2012/06/24 12:58:18 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -DateTime-Format-Builder-0.80.ebuild:
@@ -50,4 +53,3 @@
   09 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +DateTime-Format-Builder-0.7901.ebuild:
   Initial commit, dep for new dev-libs/OpenSRF-1.0.1
-

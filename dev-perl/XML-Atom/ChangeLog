@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Atom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Atom/ChangeLog,v 1.22 2012/04/13 09:18:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Atom/ChangeLog,v 1.23 2012/06/24 12:59:14 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   13 Apr 2012; Agostino Sarubbo <ago@gentoo.org> XML-Atom-0.410.0.ebuild:
   Stable for amd64, wrt bug #411409
@@ -96,4 +99,3 @@
   01 Aug 2008; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +XML-Atom-0.28.ebuild:
   Initial commit
-

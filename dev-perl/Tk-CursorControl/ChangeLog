@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tk-CursorControl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-CursorControl/ChangeLog,v 1.15 2011/09/30 16:54:12 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-CursorControl/ChangeLog,v 1.16 2012/06/24 13:00:35 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   30 Sep 2011; Mike Frysinger <vapier@gentoo.org>
   Tk-CursorControl-0.400.0.ebuild:
@@ -64,4 +67,3 @@
   30 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Tk-CursorControl-0.4.ebuild:
   Initial import, dep for misterhouse, bug 71006
-

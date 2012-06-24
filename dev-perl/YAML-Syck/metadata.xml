@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">YAML-Syck</remote-id>
+    <remote-id type="cpan-module">JSON::Syck</remote-id>
+    <remote-id type="cpan-module">YAML::Dumper::Syck</remote-id>
+    <remote-id type="cpan-module">YAML::Loader::Syck</remote-id>
+    <remote-id type="cpan-module">YAML::Syck</remote-id>
   </upstream>
 </pkgmetadata>

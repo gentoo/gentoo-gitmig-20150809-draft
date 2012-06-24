@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">POE-Component-PreforkDispatch</remote-id>
+    <remote-id type="cpan-module">POE::Component::PreforkDispatch</remote-id>
   </upstream>
 </pkgmetadata>

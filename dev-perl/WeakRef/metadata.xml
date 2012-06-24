@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">WeakRef</remote-id>
+    <remote-id type="cpan-module">WeakRef</remote-id>
   </upstream>
 </pkgmetadata>

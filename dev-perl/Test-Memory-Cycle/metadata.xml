@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Test-Memory-Cycle</remote-id>
+    <remote-id type="cpan-module">Test::Memory::Cycle</remote-id>
   </upstream>
 </pkgmetadata>

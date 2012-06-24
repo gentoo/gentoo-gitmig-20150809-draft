@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Math-GMP</remote-id>
+    <remote-id type="cpan-module">Math::GMP</remote-id>
   </upstream>
 </pkgmetadata>

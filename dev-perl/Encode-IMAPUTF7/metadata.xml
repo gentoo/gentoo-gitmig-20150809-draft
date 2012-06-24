@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Encode-IMAPUTF7</remote-id>
+    <remote-id type="cpan-module">Encode::IMAPUTF7</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Error</remote-id>
+    <remote-id type="cpan-module">Error</remote-id>
+    <remote-id type="cpan-module">Error::Simple</remote-id>
+    <remote-id type="cpan-module">Error::WarnDie</remote-id>
+    <remote-id type="cpan-module">Error::subs</remote-id>
   </upstream>
 </pkgmetadata>

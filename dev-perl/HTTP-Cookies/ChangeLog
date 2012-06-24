@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Cookies
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cookies/ChangeLog,v 1.18 2012/05/05 23:51:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cookies/ChangeLog,v 1.19 2012/06/24 12:58:39 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> HTTP-Cookies-6.0.1.ebuild:
   keyword ~amd64-fbsd
@@ -64,4 +67,3 @@
   09 Mar 2011; Torsten Veller <tove@gentoo.org> +HTTP-Cookies-6.0.0.ebuild,
   +metadata.xml:
   Initial commit - unbundled from libwww-perl
-

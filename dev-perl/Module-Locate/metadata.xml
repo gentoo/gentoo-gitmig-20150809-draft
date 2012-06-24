@@ -4,5 +4,6 @@
     <herd>perl</herd>
     <upstream>
         <remote-id type="cpan">Module-Locate</remote-id>
+        <remote-id type="cpan-module">Module::Locate</remote-id>
     </upstream>
 </pkgmetadata>

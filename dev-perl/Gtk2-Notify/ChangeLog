@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Gtk2-Notify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Notify/ChangeLog,v 1.5 2012/05/20 14:24:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Notify/ChangeLog,v 1.6 2012/06/24 13:00:42 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove myself from metadata.xml and leave the package to the perl herd.
@@ -20,4 +23,3 @@
   14 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +Gtk2-Notify-0.05.ebuild,
   +files/Gtk2-Notify-0.05-libnotify.patch:
   Initial commit wrt #398699 by "khorio"
-

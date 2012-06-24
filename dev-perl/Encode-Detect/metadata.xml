@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Encode-Detect</remote-id>
+    <remote-id type="cpan-module">Encode::Detect</remote-id>
+    <remote-id type="cpan-module">Encode::Detect::Detector</remote-id>
   </upstream>
 </pkgmetadata>

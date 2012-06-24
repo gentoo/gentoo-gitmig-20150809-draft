@@ -4,5 +4,13 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">XML-Elemental</remote-id>
+    <remote-id type="cpan-module">XML::Elemental</remote-id>
+    <remote-id type="cpan-module">XML::Elemental::Characters</remote-id>
+    <remote-id type="cpan-module">XML::Elemental::Document</remote-id>
+    <remote-id type="cpan-module">XML::Elemental::Element</remote-id>
+    <remote-id type="cpan-module">XML::Elemental::Node</remote-id>
+    <remote-id type="cpan-module">XML::Elemental::SAXHandler</remote-id>
+    <remote-id type="cpan-module">XML::Elemental::Util</remote-id>
+    <remote-id type="cpan-module">XML::Parser::Style::Elemental</remote-id>
   </upstream>
 </pkgmetadata>

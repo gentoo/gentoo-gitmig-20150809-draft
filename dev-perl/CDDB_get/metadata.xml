@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">CDDB_get</remote-id>
+    <remote-id type="cpan-module">CDDB_cache</remote-id>
+    <remote-id type="cpan-module">CDDB_get</remote-id>
   </upstream>
 </pkgmetadata>

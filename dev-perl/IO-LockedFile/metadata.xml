@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IO-LockedFile</remote-id>
+    <remote-id type="cpan-module">IO::LockedFile</remote-id>
+    <remote-id type="cpan-module">IO::LockedFile::Flock</remote-id>
   </upstream>
 </pkgmetadata>

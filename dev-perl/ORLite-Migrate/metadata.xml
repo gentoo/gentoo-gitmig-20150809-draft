@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">ORLite-Migrate</remote-id>
+    <remote-id type="cpan-module">ORLite::Migrate</remote-id>
+    <remote-id type="cpan-module">ORLite::Migrate::Patch</remote-id>
+    <remote-id type="cpan-module">ORLite::Migrate::Timeline</remote-id>
   </upstream>
 </pkgmetadata>

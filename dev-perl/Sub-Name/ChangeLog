@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Name
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.20 2012/05/28 14:08:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Name/ChangeLog,v 1.21 2012/06/24 13:00:16 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> Sub-Name-0.50.0.ebuild:
   alpha/ia64/sparc stable wrt #404665
@@ -68,4 +71,3 @@
   14 Jan 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +Sub-Name-0.04.ebuild:
   Initial version. From the perl overlay
-

@@ -9,5 +9,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Bio-ASN1-EntrezGene</remote-id>
+    <remote-id type="cpan-module">Bio::ASN1::EntrezGene</remote-id>
+    <remote-id type="cpan-module">Bio::ASN1::EntrezGene::Indexer</remote-id>
+    <remote-id type="cpan-module">Bio::ASN1::Sequence</remote-id>
+    <remote-id type="cpan-module">Bio::ASN1::Sequence::Indexer</remote-id>
   </upstream>
 </pkgmetadata>

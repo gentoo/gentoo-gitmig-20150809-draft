@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Log-Log4perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.81 2012/06/16 18:46:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Log4perl/ChangeLog,v 1.82 2012/06/24 12:59:51 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   16 Jun 2012; Raúl Porcel <armin76@gentoo.org> Log-Log4perl-1.28.ebuild,
   Log-Log4perl-1.330.0.ebuild, Log-Log4perl-1.340.0.ebuild,
@@ -349,4 +352,3 @@
   03 Jan 2005; Don Seiler <rizzo@gentoo.org> +metadata.xml,
   +Log-Log4perl-0.50.ebuild:
   Initial add.  Thought this was already in portage
-

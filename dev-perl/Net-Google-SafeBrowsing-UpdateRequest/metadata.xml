@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Net-Google-SafeBrowsing-UpdateRequest</remote-id>
+    <remote-id type="cpan-module">Net::Google::SafeBrowsing::UpdateRequest</remote-id>
   </upstream>
 </pkgmetadata>

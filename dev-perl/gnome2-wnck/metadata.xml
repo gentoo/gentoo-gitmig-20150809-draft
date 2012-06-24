@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Gnome2-Wnck</remote-id>
+    <remote-id type="cpan-module">Gnome2::Wnck</remote-id>
   </upstream>
 </pkgmetadata>

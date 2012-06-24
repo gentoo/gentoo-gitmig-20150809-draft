@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Net-DNS-Resolver-Programmable</remote-id>
+    <remote-id type="cpan-module">Net::DNS::Resolver::Programmable</remote-id>
   </upstream>
 </pkgmetadata>

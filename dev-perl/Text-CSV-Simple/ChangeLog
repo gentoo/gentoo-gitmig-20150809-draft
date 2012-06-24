@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CSV-Simple
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/ChangeLog,v 1.8 2011/09/04 11:22:26 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/ChangeLog,v 1.9 2012/06/24 12:59:51 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Text-CSV-Simple-1.00.ebuild:
   Cleanup
@@ -34,4 +37,3 @@
   23 May 2006; Christian Hartmann <ian@gentoo.org> +metadata.xml,
   +Text-CSV-Simple-1.00.ebuild:
   New package. Fixes bug 122118.
-

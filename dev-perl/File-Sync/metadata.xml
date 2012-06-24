@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-Sync</remote-id>
+    <remote-id type="cpan-module">File::Sync</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Nmap-Parser</remote-id>
+    <remote-id type="cpan-module">Nmap::Parser</remote-id>
+    <remote-id type="cpan-module">Nmap::Parser::Host</remote-id>
+    <remote-id type="cpan-module">Nmap::Parser::Host::OS</remote-id>
+    <remote-id type="cpan-module">Nmap::Parser::Host::Service</remote-id>
+    <remote-id type="cpan-module">Nmap::Parser::Host::TraceHop</remote-id>
+    <remote-id type="cpan-module">Nmap::Parser::Session</remote-id>
   </upstream>
 </pkgmetadata>

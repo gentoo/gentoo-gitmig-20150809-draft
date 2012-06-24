@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-Tail</remote-id>
+    <remote-id type="cpan-module">File::Tail</remote-id>
   </upstream>
 </pkgmetadata>

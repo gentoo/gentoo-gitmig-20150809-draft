@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-Mason-PSGIHandler</remote-id>
+    <remote-id type="cpan-module">HTML::Mason::PSGIHandler</remote-id>
+    <remote-id type="cpan-module">HTML::Mason::PSGIHandler::Streamy</remote-id>
+    <remote-id type="cpan-module">HTML::Mason::Request::PSGI</remote-id>
   </upstream>
 </pkgmetadata>

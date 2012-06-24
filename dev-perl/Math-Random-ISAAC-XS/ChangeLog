@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-Random-ISAAC-XS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random-ISAAC-XS/ChangeLog,v 1.12 2012/03/01 16:17:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random-ISAAC-XS/ChangeLog,v 1.13 2012/06/24 12:58:17 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
@@ -49,4 +52,3 @@
   25 Jan 2011; Torsten Veller <tove@gentoo.org>
   +Math-Random-ISAAC-XS-1.1.ebuild, +metadata.xml:
   Initial commit for Math-Random-Secure
-

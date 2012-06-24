@@ -8,5 +8,6 @@
   </use>
   <upstream>
     <remote-id type="cpan">Sysadm-Install</remote-id>
+    <remote-id type="cpan-module">Sysadm::Install</remote-id>
   </upstream>
 </pkgmetadata>

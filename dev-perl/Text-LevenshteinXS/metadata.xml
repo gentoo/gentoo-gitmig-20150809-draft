@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-LevenshteinXS</remote-id>
+    <remote-id type="cpan-module">Text::LevenshteinXS</remote-id>
   </upstream>
 </pkgmetadata>

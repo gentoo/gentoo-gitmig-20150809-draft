@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Perl6-Junction</remote-id>
+    <remote-id type="cpan-module">Perl6::Junction</remote-id>
+    <remote-id type="cpan-module">Perl6::Junction::All</remote-id>
+    <remote-id type="cpan-module">Perl6::Junction::Any</remote-id>
+    <remote-id type="cpan-module">Perl6::Junction::Base</remote-id>
+    <remote-id type="cpan-module">Perl6::Junction::None</remote-id>
+    <remote-id type="cpan-module">Perl6::Junction::One</remote-id>
   </upstream>
 </pkgmetadata>

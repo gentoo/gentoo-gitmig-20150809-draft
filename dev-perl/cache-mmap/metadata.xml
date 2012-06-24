@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Cache-Mmap</remote-id>
+    <remote-id type="cpan-module">Cache::Mmap</remote-id>
   </upstream>
 </pkgmetadata>

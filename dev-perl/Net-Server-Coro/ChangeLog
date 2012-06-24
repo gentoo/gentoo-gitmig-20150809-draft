@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Server-Coro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Coro/ChangeLog,v 1.7 2012/03/01 16:17:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Coro/ChangeLog,v 1.8 2012/06/24 12:59:06 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
@@ -35,4 +38,3 @@
   15 Aug 2011; Patrick Lauer <patrick@gentoo.org> +Net-Server-Coro-0.9.ebuild,
   +metadata.xml:
   Initial import from Rion overlay, ebuilds by the respective authors
-

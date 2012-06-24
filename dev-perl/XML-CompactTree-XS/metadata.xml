@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">XML-CompactTree-XS</remote-id>
+    <remote-id type="cpan-module">XML::CompactTree::XS</remote-id>
   </upstream>
 </pkgmetadata>

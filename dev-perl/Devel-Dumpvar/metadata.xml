@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Devel-Dumpvar</remote-id>
+    <remote-id type="cpan-module">Devel::Dumpvar</remote-id>
   </upstream>
 </pkgmetadata>

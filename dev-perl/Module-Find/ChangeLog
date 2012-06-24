@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Find
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Find/ChangeLog,v 1.13 2012/05/23 18:19:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Find/ChangeLog,v 1.14 2012/06/24 12:59:03 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Module-Find-0.110.0 (23 May 2012)
 
@@ -55,4 +58,3 @@
   23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
   +Module-Find-0.06.ebuild, +metadata.xml:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

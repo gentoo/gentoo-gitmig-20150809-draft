@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-Telnet</remote-id>
+    <remote-id type="cpan-module">Net::Telnet</remote-id>
   </upstream>
 </pkgmetadata>

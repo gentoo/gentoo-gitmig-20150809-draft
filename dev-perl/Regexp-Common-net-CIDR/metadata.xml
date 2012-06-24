@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Regexp-Common-net-CIDR</remote-id>
+    <remote-id type="cpan-module">Regexp::Common::net::CIDR</remote-id>
   </upstream>
 </pkgmetadata>

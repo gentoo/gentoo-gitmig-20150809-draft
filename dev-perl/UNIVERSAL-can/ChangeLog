@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/UNIVERSAL-can
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-can/ChangeLog,v 1.8 2011/09/04 11:21:45 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-can/ChangeLog,v 1.9 2012/06/24 12:58:40 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -UNIVERSAL-can-1.201.106.140.ebuild:
@@ -52,4 +55,3 @@
   22 Jun 2009; Michele Beltrame <mb@cattlegrid.info>
   +UNIVERSAL-can-1.14.ebuild:
   Bump
-

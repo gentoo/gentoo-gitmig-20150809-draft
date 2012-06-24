@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Debug-Client</remote-id>
+    <remote-id type="cpan-module">Debug::Client</remote-id>
   </upstream>
 </pkgmetadata>

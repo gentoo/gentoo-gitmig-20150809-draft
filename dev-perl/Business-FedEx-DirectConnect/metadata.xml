@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Business-FedEx-DirectConnect</remote-id>
+    <remote-id type="cpan-module">Business::FedEx::Constants</remote-id>
+    <remote-id type="cpan-module">Business::FedEx::DirectConnect</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Valid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.61 2012/06/17 14:11:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.62 2012/06/24 12:58:39 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> Email-Valid-0.184.ebuild,
   Email-Valid-0.187.0.ebuild, Email-Valid-0.188.0.ebuild,
@@ -241,4 +244,3 @@
   Initial import from bug 4919. Thanks to Erwann CORVELLEC
   <Erwann.Corvellec@free.fr>. g-cpan.pl can almost handle this one, except for
   the Net-DNS dependency.
-

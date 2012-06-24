@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-Next</remote-id>
+    <remote-id type="cpan-module">File::Next</remote-id>
   </upstream>
 </pkgmetadata>

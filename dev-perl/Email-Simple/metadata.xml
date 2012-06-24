@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Email-Simple</remote-id>
+    <remote-id type="cpan-module">Email::Simple</remote-id>
+    <remote-id type="cpan-module">Email::Simple::Creator</remote-id>
+    <remote-id type="cpan-module">Email::Simple::Header</remote-id>
   </upstream>
 </pkgmetadata>

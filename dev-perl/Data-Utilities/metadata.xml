@@ -8,5 +8,10 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Data-Utilities</remote-id>
+    <remote-id type="cpan-module">Data::Comparator</remote-id>
+    <remote-id type="cpan-module">Data::Differences</remote-id>
+    <remote-id type="cpan-module">Data::Merger</remote-id>
+    <remote-id type="cpan-module">Data::Transformator</remote-id>
+    <remote-id type="cpan-module">Data::Utilities</remote-id>
   </upstream>
 </pkgmetadata>

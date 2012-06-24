@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Path-Class</remote-id>
+    <remote-id type="cpan-module">Path::Class</remote-id>
+    <remote-id type="cpan-module">Path::Class::Dir</remote-id>
+    <remote-id type="cpan-module">Path::Class::Entity</remote-id>
+    <remote-id type="cpan-module">Path::Class::File</remote-id>
   </upstream>
 </pkgmetadata>

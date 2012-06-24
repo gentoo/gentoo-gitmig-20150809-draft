@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Date-ICal</remote-id>
+    <remote-id type="cpan-module">Date::ICal</remote-id>
+    <remote-id type="cpan-module">Date::ICal::Duration</remote-id>
   </upstream>
 </pkgmetadata>

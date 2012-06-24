@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">JSON-XS-VersionOneAndTwo</remote-id>
+    <remote-id type="cpan-module">JSON::XS::VersionOneAndTwo</remote-id>
   </upstream>
 </pkgmetadata>

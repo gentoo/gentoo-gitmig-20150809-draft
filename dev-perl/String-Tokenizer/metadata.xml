@@ -8,5 +8,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">String-Tokenizer</remote-id>
+    <remote-id type="cpan-module">String::Tokenizer</remote-id>
+    <remote-id type="cpan-module">String::Tokenizer::Iterator</remote-id>
   </upstream>
 </pkgmetadata>

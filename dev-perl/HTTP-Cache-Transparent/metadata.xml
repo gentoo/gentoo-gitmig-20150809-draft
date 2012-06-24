@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTTP-Cache-Transparent</remote-id>
+    <remote-id type="cpan-module">HTTP::Cache::Transparent</remote-id>
   </upstream>
 </pkgmetadata>

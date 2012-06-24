@@ -8,5 +8,8 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Text-CSV</remote-id>
+    <remote-id type="cpan-module">Text::CSV</remote-id>
+    <remote-id type="cpan-module">Text::CSV::ErrorDiag</remote-id>
+    <remote-id type="cpan-module">Text::CSV_PP</remote-id>
   </upstream>
 </pkgmetadata>

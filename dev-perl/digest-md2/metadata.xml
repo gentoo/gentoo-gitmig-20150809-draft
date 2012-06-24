@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Digest-MD2</remote-id>
+    <remote-id type="cpan-module">Digest::MD2</remote-id>
   </upstream>
 </pkgmetadata>

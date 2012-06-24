@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-Quoted</remote-id>
+    <remote-id type="cpan-module">HTML::Quoted</remote-id>
+    <remote-id type="cpan-module">HTML::Quoted::Parser</remote-id>
   </upstream>
 </pkgmetadata>

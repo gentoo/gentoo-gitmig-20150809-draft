@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Olson-Abbreviations</remote-id>
+    <remote-id type="cpan-module">Olson::Abbreviations</remote-id>
   </upstream>
 </pkgmetadata>

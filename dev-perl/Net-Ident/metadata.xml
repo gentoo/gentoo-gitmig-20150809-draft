@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-Ident</remote-id>
+    <remote-id type="cpan-module">Net::Ident</remote-id>
   </upstream>
 </pkgmetadata>

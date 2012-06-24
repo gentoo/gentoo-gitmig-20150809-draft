@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Time-Duration</remote-id>
+    <remote-id type="cpan-module">Time::Duration</remote-id>
   </upstream>
 </pkgmetadata>

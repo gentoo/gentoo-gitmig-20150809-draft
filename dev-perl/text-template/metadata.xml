@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Template</remote-id>
+    <remote-id type="cpan-module">Text::Template</remote-id>
+    <remote-id type="cpan-module">Text::Template::Preprocess</remote-id>
   </upstream>
 </pkgmetadata>

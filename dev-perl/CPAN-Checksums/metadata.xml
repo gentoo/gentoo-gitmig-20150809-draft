@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">CPAN-Checksums</remote-id>
+    <remote-id type="cpan-module">CPAN::Checksums</remote-id>
   </upstream>
 </pkgmetadata>

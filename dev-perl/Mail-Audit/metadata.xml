@@ -4,5 +4,12 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Mail-Audit</remote-id>
+    <remote-id type="cpan-module">Mail::Audit</remote-id>
+    <remote-id type="cpan-module">Mail::Audit::KillDups</remote-id>
+    <remote-id type="cpan-module">Mail::Audit::MAPS</remote-id>
+    <remote-id type="cpan-module">Mail::Audit::MailInternet</remote-id>
+    <remote-id type="cpan-module">Mail::Audit::MimeEntity</remote-id>
+    <remote-id type="cpan-module">Mail::Audit::Util::Tempdir</remote-id>
+    <remote-id type="cpan-module">Mail::Audit::Vacation</remote-id>
   </upstream>
 </pkgmetadata>

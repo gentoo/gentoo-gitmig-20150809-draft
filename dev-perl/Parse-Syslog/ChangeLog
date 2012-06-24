@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Parse-Syslog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.17 2011/09/04 11:21:24 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.18 2012/06/24 12:59:44 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Parse-Syslog-1.10.ebuild:
   Cleanup
@@ -62,4 +65,3 @@
   26 Jun 2007; Christian Hartmann <ian@gentoo.org> +metadata.xml,
   +Parse-Syslog-1.09.ebuild:
   New package requested by dertobi123
-

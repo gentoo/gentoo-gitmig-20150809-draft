@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Config-Crontab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Crontab/ChangeLog,v 1.17 2012/02/18 15:24:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Crontab/ChangeLog,v 1.18 2012/06/24 12:59:12 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   18 Feb 2012; Torsten Veller <tove@gentoo.org> -Config-Crontab-1.20.ebuild:
   Cleanup
@@ -69,4 +72,3 @@
   07 Mar 2006; <mcumming@gentoo.org> +metadata.xml,
   +Config-Crontab-1.11.ebuild:
   Bug 124981, dep for media-tv/kalva
-

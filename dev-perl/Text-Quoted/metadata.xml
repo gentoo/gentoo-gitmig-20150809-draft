@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Quoted</remote-id>
+    <remote-id type="cpan-module">Text::Quoted</remote-id>
   </upstream>
 </pkgmetadata>

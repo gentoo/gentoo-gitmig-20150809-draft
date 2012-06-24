@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lingua-Stem-Snowball-Da
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Snowball-Da/ChangeLog,v 1.16 2011/09/04 11:21:09 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Snowball-Da/ChangeLog,v 1.17 2012/06/24 12:58:47 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -Lingua-Stem-Snowball-Da-1.01-r1.ebuild:
@@ -73,4 +76,3 @@
   06 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Lingua-Stem-Snowball-Da-1.01.ebuild:
   Dep for Plucene - perl port of lucene
-

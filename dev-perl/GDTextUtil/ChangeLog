@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDTextUtil
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.23 2011/09/04 11:20:38 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.24 2012/06/24 12:58:19 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -GDTextUtil-0.86.ebuild:
   Cleanup
@@ -70,4 +73,3 @@
 *GDTextUtil-0.83 (05 Nov 2002)
 
   05 Nov 2002; J Robert Ray <jrray@gentoo.org> : New ebuild.
-

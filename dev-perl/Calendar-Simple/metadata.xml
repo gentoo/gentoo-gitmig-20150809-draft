@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Calendar-Simple</remote-id>
+    <remote-id type="cpan-module">Calendar::Simple</remote-id>
   </upstream>
 </pkgmetadata>

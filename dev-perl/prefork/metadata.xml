@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">prefork</remote-id>
+    <remote-id type="cpan-module">prefork</remote-id>
   </upstream>
 </pkgmetadata>

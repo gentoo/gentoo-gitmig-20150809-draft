@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-BinHex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.18 2011/09/04 11:22:24 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.19 2012/06/24 12:58:33 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Convert-BinHex-1.119.ebuild:
   Cleanup
@@ -66,4 +69,3 @@
   metadata.xml:
   Initial version. Closes bug #46332. Thanks to Richard Brown for the
   submission!
-

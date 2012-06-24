@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Date-Leapyear</remote-id>
+    <remote-id type="cpan-module">Date::Leapyear</remote-id>
   </upstream>
 </pkgmetadata>

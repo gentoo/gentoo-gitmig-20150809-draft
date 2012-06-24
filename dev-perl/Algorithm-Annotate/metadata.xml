@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Algorithm-Annotate</remote-id>
+    <remote-id type="cpan-module">Algorithm::Annotate</remote-id>
   </upstream>
 </pkgmetadata>

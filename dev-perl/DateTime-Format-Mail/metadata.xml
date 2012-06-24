@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DateTime-Format-Mail</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Mail</remote-id>
   </upstream>
 </pkgmetadata>

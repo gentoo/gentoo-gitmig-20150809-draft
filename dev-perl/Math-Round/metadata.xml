@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Math-Round</remote-id>
+    <remote-id type="cpan-module">Math::Round</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Audit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.69 2012/04/21 19:10:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.70 2012/06/24 12:59:58 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   21 Apr 2012; Torsten Veller <tove@gentoo.org> -Mail-Audit-2.221.ebuild,
   -Mail-Audit-2.225.0.ebuild, -Mail-Audit-2.226.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MooseX-Types-DateTime-MoreCoercions
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-MoreCoercions/ChangeLog,v 1.3 2012/04/21 19:02:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-MoreCoercions/ChangeLog,v 1.4 2012/06/24 13:00:08 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   21 Apr 2012; Torsten Veller <tove@gentoo.org>
   -MooseX-Types-DateTime-MoreCoercions-0.80.0.ebuild:
@@ -23,4 +26,3 @@
   30 Dec 2011; Michele Beltrame <m@cattlegrid.info>
   +MooseX-Types-DateTime-MoreCoercions-0.08.ebuild, +metadata.xml:
   Initial
-

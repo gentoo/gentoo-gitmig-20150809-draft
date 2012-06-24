@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-RewriteAttributes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-RewriteAttributes/ChangeLog,v 1.6 2011/09/04 11:21:47 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-RewriteAttributes/ChangeLog,v 1.7 2012/06/24 13:00:14 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -HTML-RewriteAttributes-0.04.ebuild:
@@ -31,4 +34,3 @@
   08 Sep 2008; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +HTML-RewriteAttributes-0.03.ebuild:
   Initial commit (#235891). Thanks to Nick Prater for the ebuild.
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Linux-Pid
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Pid/ChangeLog,v 1.6 2011/09/04 11:21:53 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Pid/ChangeLog,v 1.7 2012/06/24 12:59:01 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Linux-Pid-0.04.ebuild:
   Cleanup
@@ -24,4 +27,3 @@
   14 Mar 2011; Christian Ruppert <idl0r@gentoo.org> +Linux-Pid-0.04.ebuild,
   +metadata.xml:
   Initial commit for dev-perl/Linux-Pid
-

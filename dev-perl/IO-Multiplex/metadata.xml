@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IO-Multiplex</remote-id>
+    <remote-id type="cpan-module">IO::Multiplex</remote-id>
+    <remote-id type="cpan-module">IO::Multiplex::Handle</remote-id>
   </upstream>
 </pkgmetadata>

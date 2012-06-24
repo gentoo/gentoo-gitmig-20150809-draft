@@ -7,5 +7,6 @@
 	moment is the x86/amd64 family.</longdescription>
   <upstream>
     <remote-id type="cpan">Archive-Rar</remote-id>
+    <remote-id type="cpan-module">Archive::Rar</remote-id>
   </upstream>
 </pkgmetadata>

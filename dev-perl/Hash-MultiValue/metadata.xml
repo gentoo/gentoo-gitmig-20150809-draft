@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Hash-MultiValue</remote-id>
+    <remote-id type="cpan-module">Hash::MultiValue</remote-id>
   </upstream>
 </pkgmetadata>

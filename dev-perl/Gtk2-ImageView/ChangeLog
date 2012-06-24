@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Gtk2-ImageView
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-ImageView/ChangeLog,v 1.6 2011/09/04 11:22:46 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-ImageView/ChangeLog,v 1.7 2012/06/24 13:00:08 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Gtk2-ImageView-0.05.ebuild:
   Cleanup
@@ -26,4 +29,3 @@
   14 Jun 2009; Torsten Veller <tove@gentoo.org> +Gtk2-ImageView-0.05.ebuild,
   +metadata.xml:
   Initial commit (#272308 and #254704). Thanks to Toffanin and Jimmy.Jazz
-

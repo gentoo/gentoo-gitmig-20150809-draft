@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/LWPx-ParanoidAgent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWPx-ParanoidAgent/ChangeLog,v 1.10 2011/10/09 07:46:07 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWPx-ParanoidAgent/ChangeLog,v 1.11 2012/06/24 12:58:39 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   09 Oct 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove tove from metadata.xml
@@ -53,4 +56,3 @@
   01 Aug 2008; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +LWPx-ParanoidAgent-1.03.ebuild:
   Initial commit
-

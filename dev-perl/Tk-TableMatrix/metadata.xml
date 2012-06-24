@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Tk-TableMatrix</remote-id>
+    <remote-id type="cpan-module">Tk::TableMatrix</remote-id>
+    <remote-id type="cpan-module">Tk::TableMatrix::Spreadsheet</remote-id>
+    <remote-id type="cpan-module">Tk::TableMatrix::SpreadsheetHideRows</remote-id>
   </upstream>
 </pkgmetadata>

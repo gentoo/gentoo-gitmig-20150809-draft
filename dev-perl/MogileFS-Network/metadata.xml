@@ -8,5 +8,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">MogileFS-Network</remote-id>
+    <remote-id type="cpan-module">MogileFS::Network</remote-id>
+    <remote-id type="cpan-module">MogileFS::Plugin::ZoneLocal</remote-id>
+    <remote-id type="cpan-module">MogileFS::ReplicationPolicy::HostsPerNetwork</remote-id>
+    <remote-id type="cpan-module">MogileFS::ReplicationPolicy::MultipleNetworks</remote-id>
   </upstream>
 </pkgmetadata>

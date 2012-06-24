@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-LevenshteinXS
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-LevenshteinXS/ChangeLog,v 1.14 2011/09/04 11:21:57 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-LevenshteinXS/ChangeLog,v 1.15 2012/06/24 13:00:18 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -Text-LevenshteinXS-0.03.ebuild:
@@ -61,4 +64,3 @@
   30 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Text-LevenshteinXS-0.03.ebuild:
   Initial import, dep for misterhouse, bug 71006
-

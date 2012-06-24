@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Class-DBI-AbstractSearch</remote-id>
+    <remote-id type="cpan-module">Class::DBI::AbstractSearch</remote-id>
   </upstream>
 </pkgmetadata>

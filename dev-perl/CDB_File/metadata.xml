@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">CDB_File</remote-id>
+    <remote-id type="cpan-module">CDB_File</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">XML-Writer</remote-id>
+    <remote-id type="cpan-module">XML::Writer</remote-id>
+    <remote-id type="cpan-module">XML::Writer::Namespaces</remote-id>
+    <remote-id type="cpan-module">XML::Writer::_PrintChecker</remote-id>
+    <remote-id type="cpan-module">XML::Writer::_String</remote-id>
   </upstream>
 </pkgmetadata>

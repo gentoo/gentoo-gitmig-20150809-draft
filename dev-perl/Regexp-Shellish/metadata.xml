@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Regexp-Shellish</remote-id>
+    <remote-id type="cpan-module">Regexp::Shellish</remote-id>
   </upstream>
 </pkgmetadata>

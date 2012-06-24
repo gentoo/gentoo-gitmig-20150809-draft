@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.61 2012/06/03 17:15:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.62 2012/06/24 13:00:34 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org> -XML-Parser-2.36-r1.ebuild:
   Cleanup

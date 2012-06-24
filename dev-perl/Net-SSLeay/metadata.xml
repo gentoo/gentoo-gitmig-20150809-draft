@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-SSLeay</remote-id>
+    <remote-id type="cpan-module">Net::SSLeay</remote-id>
+    <remote-id type="cpan-module">Net::SSLeay::Handle</remote-id>
   </upstream>
 </pkgmetadata>

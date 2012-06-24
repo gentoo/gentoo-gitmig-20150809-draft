@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Charset
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/ChangeLog,v 1.11 2012/06/09 08:29:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/ChangeLog,v 1.12 2012/06/24 13:00:34 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *MIME-Charset-1.9.2 (09 Jun 2012)
 
@@ -48,4 +51,3 @@
   22 Mar 2010; Torsten Veller <tove@gentoo.org> +MIME-Charset-1.008.ebuild,
   +metadata.xml:
   Initial import for www-apps/postfixadmin (#310069). Thanks to Andreis Vinogradovs
-

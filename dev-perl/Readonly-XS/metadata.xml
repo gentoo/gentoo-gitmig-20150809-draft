@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Readonly-XS</remote-id>
+    <remote-id type="cpan-module">Readonly::XS</remote-id>
   </upstream>
 </pkgmetadata>

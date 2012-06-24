@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.48 2012/06/03 18:17:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.49 2012/06/24 13:00:11 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org> -libintl-perl-1.16.ebuild:
   Cleanup
@@ -167,4 +170,3 @@
 
   01 May 2004; Eric Sammer <esammer@gentoo.org> :
   Initial import. Closes bug #49429.
-

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Data-Buffer</remote-id>
+    <remote-id type="cpan-module">Data::Buffer</remote-id>
   </upstream>
 </pkgmetadata>

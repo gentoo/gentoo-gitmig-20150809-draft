@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">CGI-Builder</remote-id>
+    <remote-id type="cpan-module">CGI::Builder</remote-id>
   </upstream>
 </pkgmetadata>

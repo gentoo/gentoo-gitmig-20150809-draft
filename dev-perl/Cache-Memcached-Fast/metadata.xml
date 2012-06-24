@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Cache-Memcached-Fast</remote-id>
+    <remote-id type="cpan-module">Cache::Memcached::Fast</remote-id>
   </upstream>
 </pkgmetadata>

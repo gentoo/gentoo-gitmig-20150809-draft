@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Digest-Nilsimsa</remote-id>
+    <remote-id type="cpan-module">Digest::Nilsimsa</remote-id>
   </upstream>
 </pkgmetadata>

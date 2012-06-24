@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Std</remote-id>
+    <remote-id type="cpan-module">Class::Std</remote-id>
+    <remote-id type="cpan-module">Class::Std::SCR</remote-id>
   </upstream>
 </pkgmetadata>

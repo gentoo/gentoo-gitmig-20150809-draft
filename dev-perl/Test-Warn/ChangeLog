@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.42 2012/06/17 13:51:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.43 2012/06/24 12:59:47 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> Test-Warn-0.230.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #412985
@@ -155,4 +158,3 @@
   19 Mar 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Test-Warn-0.08.ebuild:
   Testing dep for WWW-Mechanize
-

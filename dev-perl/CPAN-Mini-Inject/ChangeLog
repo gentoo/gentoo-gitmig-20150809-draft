@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CPAN-Mini-Inject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/ChangeLog,v 1.24 2012/06/03 18:51:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/ChangeLog,v 1.25 2012/06/24 12:59:13 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org> -CPAN-Mini-Inject-0.18.ebuild,
   -CPAN-Mini-Inject-0.300.0.ebuild:
@@ -116,4 +119,3 @@
   08 Mar 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +CPAN-Mini-Inject-0.16.ebuild:
   Provides injection mechanism for minicpan distros
-

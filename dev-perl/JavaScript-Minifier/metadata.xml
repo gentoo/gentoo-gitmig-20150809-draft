@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">JavaScript-Minifier</remote-id>
+    <remote-id type="cpan-module">JavaScript::Minifier</remote-id>
   </upstream>
 </pkgmetadata>

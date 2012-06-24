@@ -4,5 +4,10 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Date-Pcalc</remote-id>
+    <remote-id type="cpan-module">Date::Pcalc</remote-id>
+    <remote-id type="cpan-module">Date::Pcalc::Object</remote-id>
+    <remote-id type="cpan-module">Date::Pcalendar</remote-id>
+    <remote-id type="cpan-module">Date::Pcalendar::Profiles</remote-id>
+    <remote-id type="cpan-module">Date::Pcalendar::Year</remote-id>
   </upstream>
 </pkgmetadata>

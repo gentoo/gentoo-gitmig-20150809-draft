@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Feed-Find</remote-id>
+    <remote-id type="cpan-module">Feed::Find</remote-id>
   </upstream>
 </pkgmetadata>

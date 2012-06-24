@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Parallel-ForkManager</remote-id>
+    <remote-id type="cpan-module">Parallel::ForkManager</remote-id>
   </upstream>
 </pkgmetadata>

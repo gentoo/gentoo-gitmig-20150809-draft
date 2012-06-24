@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-IMAP-Simple</remote-id>
+    <remote-id type="cpan-module">Net::IMAP::Simple</remote-id>
+    <remote-id type="cpan-module">Net::IMAP::Simple::PipeSocket</remote-id>
+    <remote-id type="cpan-module">Net::IMAP::SimpleX</remote-id>
+    <remote-id type="cpan-module">Net::IMAP::SimpleX::Body</remote-id>
+    <remote-id type="cpan-module">Net::IMAP::SimpleX::BodySummary</remote-id>
+    <remote-id type="cpan-module">Net::IMAP::SimpleX::NIL</remote-id>
   </upstream>
 </pkgmetadata>

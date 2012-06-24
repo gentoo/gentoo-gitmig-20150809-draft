@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-SigAction
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-SigAction/ChangeLog,v 1.5 2012/06/24 10:55:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-SigAction/ChangeLog,v 1.6 2012/06/24 13:00:31 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> Sys-SigAction-0.150.0.ebuild:
   Stable for amd64, wrt bug #423225
@@ -24,4 +27,3 @@
   28 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
   +Sys-SigAction-0.11.ebuild, +metadata.xml:
   Initial commit. Dep for dev-perl/Devel-REPL-1.003009.
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Signal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/ChangeLog,v 1.14 2012/06/04 02:06:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/ChangeLog,v 1.15 2012/06/24 13:00:33 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> IPC-Signal-1.0.0.ebuild:
   ppc stable (bug 400757)
@@ -52,4 +55,3 @@
   19 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +IPC-Signal-1.00.ebuild:
   Initial import, requested by johnm for asterisk
-

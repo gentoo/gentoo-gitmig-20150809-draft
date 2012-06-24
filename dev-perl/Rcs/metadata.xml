@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Rcs</remote-id>
+    <remote-id type="cpan-module">Rcs</remote-id>
   </upstream>
 </pkgmetadata>

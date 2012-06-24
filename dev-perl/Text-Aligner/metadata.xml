@@ -8,5 +8,8 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Text-Aligner</remote-id>
+    <remote-id type="cpan-module">Text::Aligner</remote-id>
+    <remote-id type="cpan-module">Text::Aligner::Auto</remote-id>
+    <remote-id type="cpan-module">Text::Aligner::MaxKeeper</remote-id>
   </upstream>
 </pkgmetadata>

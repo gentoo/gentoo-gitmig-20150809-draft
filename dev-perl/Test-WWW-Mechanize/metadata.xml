@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Test-WWW-Mechanize</remote-id>
+    <remote-id type="cpan-module">Test::WWW::Mechanize</remote-id>
   </upstream>
 </pkgmetadata>

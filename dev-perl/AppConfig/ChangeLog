@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AppConfig
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.69 2011/09/04 11:22:34 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.70 2012/06/24 12:59:35 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -AppConfig-1.66.ebuild:
   Cleanup
@@ -237,4 +240,3 @@
 *AppConfig-1.52 (07 AUG 2002)
 
   07 AUG 2002; achim <achim@gentoo.org> Initial version
-

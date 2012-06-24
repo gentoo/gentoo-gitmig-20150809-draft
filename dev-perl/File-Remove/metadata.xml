@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-Remove</remote-id>
+    <remote-id type="cpan-module">File::Remove</remote-id>
   </upstream>
 </pkgmetadata>

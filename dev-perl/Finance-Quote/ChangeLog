@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Finance-Quote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.65 2012/03/25 15:17:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.66 2012/06/24 12:59:44 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Finance-Quote-1.17.ebuild,
   Finance-Quote-1.170.0.ebuild:
@@ -247,5 +250,3 @@
  
   New package to get stock market quotes from the web. Submitted by:
   gustavo@felisberto.net (Gustavo Felisberto) in bug #8926.
-
-

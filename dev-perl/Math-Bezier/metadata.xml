@@ -5,5 +5,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Math-Bezier</remote-id>
+    <remote-id type="cpan-module">Math::Bezier</remote-id>
   </upstream>
 </pkgmetadata>

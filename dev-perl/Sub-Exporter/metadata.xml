@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Sub-Exporter</remote-id>
+    <remote-id type="cpan-module">Sub::Exporter</remote-id>
+    <remote-id type="cpan-module">Sub::Exporter::Util</remote-id>
   </upstream>
 </pkgmetadata>

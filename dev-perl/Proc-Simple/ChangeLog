@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Proc-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.40 2012/03/31 06:56:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Simple/ChangeLog,v 1.41 2012/06/24 12:58:32 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Proc-Simple-1.24.ebuild:
   Cleanup

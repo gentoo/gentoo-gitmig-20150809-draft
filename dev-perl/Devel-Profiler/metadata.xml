@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Devel-Profiler</remote-id>
+    <remote-id type="cpan-module">Devel::Profiler</remote-id>
+    <remote-id type="cpan-module">Devel::Profiler::Apache</remote-id>
+    <remote-id type="cpan-module">Devel::Profiler::Test</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ExtUtils-XSpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSpp/ChangeLog,v 1.24 2012/02/18 15:05:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSpp/ChangeLog,v 1.25 2012/06/24 12:59:38 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   18 Feb 2012; Torsten Veller <tove@gentoo.org> -ExtUtils-XSpp-0.11.ebuild:
   Cleanup
@@ -111,4 +114,3 @@
   10 Aug 2009; Torsten Veller <tove@gentoo.org> +ExtUtils-XSpp-0.04.ebuild,
   +metadata.xml:
   Initial commit
-

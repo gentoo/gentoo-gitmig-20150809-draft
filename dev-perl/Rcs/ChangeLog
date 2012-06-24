@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Rcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Rcs/ChangeLog,v 1.5 2012/03/01 16:17:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Rcs/ChangeLog,v 1.6 2012/06/24 12:58:38 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
@@ -22,4 +25,3 @@
   08 Dec 2010; <chainsaw@gentoo.org> +Rcs-1.05.ebuild, +metadata.xml:
   Initial commit, ebuild by g-cpan with some minor touchups. For the LINX
   engineering team.
-

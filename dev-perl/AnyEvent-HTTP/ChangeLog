@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AnyEvent-HTTP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent-HTTP/ChangeLog,v 1.5 2012/05/21 18:40:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent-HTTP/ChangeLog,v 1.6 2012/06/24 12:58:33 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   21 May 2012; Johannes Huber <johu@gentoo.org> AnyEvent-HTTP-2.130.0.ebuild:
   Stable for x86, wrt bug #416111
@@ -24,4 +27,3 @@
   31 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   +AnyEvent-HTTP-2.13.ebuild:
   Initial commit by Julian Ospald; required by media-sound/gmusicbrowser
-

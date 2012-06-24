@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Requires
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.19 2012/04/01 16:14:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.20 2012/06/24 12:59:31 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> Test-Requires-0.60.0.ebuild:
   Add ~ia64/~s390/~sh/~sparc wrt #403413

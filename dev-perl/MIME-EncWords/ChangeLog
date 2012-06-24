@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-EncWords
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-EncWords/ChangeLog,v 1.13 2012/04/05 18:27:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-EncWords/ChangeLog,v 1.14 2012/06/24 12:59:29 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   05 Apr 2012; Torsten Veller <tove@gentoo.org> -MIME-EncWords-1.012.ebuild,
   -MIME-EncWords-1.12.3.ebuild:
@@ -58,4 +61,3 @@
   22 Mar 2010; Torsten Veller <tove@gentoo.org>
   +MIME-EncWords-1.011.1.ebuild, +metadata.xml:
   Initial import for www-apps/postfixadmin (#310065). Thanks to Andreis Vinogradovs
-

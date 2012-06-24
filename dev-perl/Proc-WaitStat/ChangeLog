@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Proc-WaitStat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-WaitStat/ChangeLog,v 1.15 2012/06/04 02:07:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-WaitStat/ChangeLog,v 1.16 2012/06/24 12:59:20 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> Proc-WaitStat-1.0.0.ebuild:
   ppc stable (bug 400757)
@@ -57,4 +60,3 @@
   19 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Proc-WaitStat-1.00.ebuild:
   Initial import for johnm, asterisk dep work
-

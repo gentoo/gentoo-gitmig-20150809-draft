@@ -8,5 +8,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Cisco-IPPhone</remote-id>
+    <remote-id type="cpan-module">Cisco::IPPhone</remote-id>
   </upstream>
 </pkgmetadata>

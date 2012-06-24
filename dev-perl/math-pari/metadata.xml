@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Math-Pari</remote-id>
+    <remote-id type="cpan-module">Math::Pari</remote-id>
+    <remote-id type="cpan-module">Math::Pari::Arr</remote-id>
+    <remote-id type="cpan-module">Math::PariBuild</remote-id>
   </upstream>
 </pkgmetadata>

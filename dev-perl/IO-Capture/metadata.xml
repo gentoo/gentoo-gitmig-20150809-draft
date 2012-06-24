@@ -7,5 +7,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">IO-Capture</remote-id>
+    <remote-id type="cpan-module">IO::Capture</remote-id>
+    <remote-id type="cpan-module">IO::Capture::Stderr</remote-id>
+    <remote-id type="cpan-module">IO::Capture::Stdout</remote-id>
+    <remote-id type="cpan-module">IO::Capture::Tie_STDx</remote-id>
   </upstream>
 </pkgmetadata>

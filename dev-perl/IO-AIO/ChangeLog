@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-AIO
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.19 2012/04/21 02:23:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.20 2012/06/24 12:59:24 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *IO-AIO-4.150.0 (21 Apr 2012)
 
@@ -91,4 +94,3 @@
   +IO-AIO-2.33.ebuild:
   Initial Commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>. Yet another
   dep for mogilefs-server.
-

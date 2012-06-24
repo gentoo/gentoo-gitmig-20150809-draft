@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Z3950-ZOOM
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Z3950-ZOOM/ChangeLog,v 1.10 2011/09/04 11:21:26 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Z3950-ZOOM/ChangeLog,v 1.11 2012/06/24 12:58:23 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Net-Z3950-ZOOM-1.28.ebuild:
   Cleanup
@@ -45,4 +48,3 @@
   +Net-Z3950-ZOOM-1.24.ebuild:
   New ebuild by Robin H. Johnson <robbat2@gentoo.org>. Dependancy for
   OpenSRF/Evergreen.
-

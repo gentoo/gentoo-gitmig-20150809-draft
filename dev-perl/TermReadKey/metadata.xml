@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">TermReadKey</remote-id>
+    <remote-id type="cpan-module">Term::ReadKey</remote-id>
   </upstream>
 </pkgmetadata>

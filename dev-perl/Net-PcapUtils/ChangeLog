@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-PcapUtils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-PcapUtils/ChangeLog,v 1.18 2012/03/25 16:08:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-PcapUtils/ChangeLog,v 1.19 2012/06/24 13:00:18 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Net-PcapUtils-0.10.0.ebuild:
   Drop ia64/sparc

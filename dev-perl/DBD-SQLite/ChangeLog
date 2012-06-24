@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.106 2012/06/17 14:20:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.107 2012/06/24 12:59:38 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> DBD-SQLite-1.350.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #413007
@@ -417,4 +420,3 @@
   31 Mar 2004; Michael Cummings <mcummings@gentoo.org> DBD-SQLite-0.31.ebuild,
   metadata.xml:
   bug 32824
-

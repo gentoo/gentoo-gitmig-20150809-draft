@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBIx-Class
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/ChangeLog,v 1.37 2012/06/16 16:54:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/ChangeLog,v 1.38 2012/06/24 13:00:13 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   16 Jun 2012; Torsten Veller <tove@gentoo.org> -DBIx-Class-0.08120.ebuild:
   Cleanup
@@ -177,4 +180,3 @@
   23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
   +DBIx-Class-0.08107.ebuild, +metadata.xml:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

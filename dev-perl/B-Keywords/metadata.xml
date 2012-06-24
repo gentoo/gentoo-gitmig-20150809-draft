@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">B-Keywords</remote-id>
+    <remote-id type="cpan-module">B::Keywords</remote-id>
   </upstream>
 </pkgmetadata>

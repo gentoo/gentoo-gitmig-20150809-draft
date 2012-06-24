@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.135 2012/06/17 13:57:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.136 2012/06/24 13:00:10 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> gtk2-perl-1.242.0.ebuild:
   alpha/ia64/sparc stable wrt #412989
@@ -563,4 +566,3 @@
   05 Jul 2003; Michael Cummings <mcummings@gentoo.org> gtk2-perl-0.12.ebuild:
   Fills bug 17222; original version of ebuild submitted by Kfir Ozer
   <ufk2k@yahoo.com>
-

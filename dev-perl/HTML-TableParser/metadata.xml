@@ -7,5 +7,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">HTML-TableParser</remote-id>
+    <remote-id type="cpan-module">HTML::TableParser</remote-id>
+    <remote-id type="cpan-module">HTML::TableParser::Table</remote-id>
   </upstream>
 </pkgmetadata>

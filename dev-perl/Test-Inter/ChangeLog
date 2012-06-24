@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.20 2012/06/17 17:20:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.21 2012/06/24 13:00:12 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> Test-Inter-1.30.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #413009
@@ -71,4 +74,3 @@
   +Test-Inter-1.01.ebuild, +metadata.xml:
   Initial commit. Ebuild by g-cpan. New dependency for
   dev-perl/DateManip-6.11.
-

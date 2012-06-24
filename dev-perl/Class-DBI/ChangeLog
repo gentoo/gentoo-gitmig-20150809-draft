@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.51 2012/02/18 15:27:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.52 2012/06/24 13:00:24 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   18 Feb 2012; Torsten Veller <tove@gentoo.org> -Class-DBI-3.0.16.ebuild:
   Cleanup
@@ -191,4 +194,3 @@
   31 Mar 2004; Michael Cummings <mcummings@gentoo.org> Class-DBI-0.95.ebuild,
   metadata.xml:
   dep for class-dbi-mysql
-

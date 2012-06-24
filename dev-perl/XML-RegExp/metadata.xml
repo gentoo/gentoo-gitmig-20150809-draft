@@ -9,5 +9,6 @@
 	</longdescription>
   <upstream>
     <remote-id type="cpan">XML-RegExp</remote-id>
+    <remote-id type="cpan-module">XML::RegExp</remote-id>
   </upstream>
 </pkgmetadata>

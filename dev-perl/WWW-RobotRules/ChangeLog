@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-RobotRules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-RobotRules/ChangeLog,v 1.19 2012/05/05 23:30:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-RobotRules/ChangeLog,v 1.20 2012/06/24 12:58:12 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org>
   WWW-RobotRules-6.10.0.ebuild:
@@ -69,4 +72,3 @@
   09 Mar 2011; Torsten Veller <tove@gentoo.org> +WWW-RobotRules-6.0.0.ebuild,
   +metadata.xml:
   Initial commit - unbundled from libwww-perl
-

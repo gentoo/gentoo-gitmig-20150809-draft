@@ -4,5 +4,13 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">SGMLSpm</remote-id>
+    <remote-id type="cpan-module">SGMLS</remote-id>
+    <remote-id type="cpan-module">SGMLS::Output</remote-id>
+    <remote-id type="cpan-module">SGMLS::Refs</remote-id>
+    <remote-id type="cpan-module">SGMLS_Attribute</remote-id>
+    <remote-id type="cpan-module">SGMLS_Element</remote-id>
+    <remote-id type="cpan-module">SGMLS_Entity</remote-id>
+    <remote-id type="cpan-module">SGMLS_Event</remote-id>
+    <remote-id type="cpan-module">SGMLS_Notation</remote-id>
   </upstream>
 </pkgmetadata>

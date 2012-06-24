@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Sys-Hostname-Long</remote-id>
+    <remote-id type="cpan-module">Sys::Hostname::Long</remote-id>
   </upstream>
 </pkgmetadata>

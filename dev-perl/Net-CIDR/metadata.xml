@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-CIDR</remote-id>
+    <remote-id type="cpan-module">Net::CIDR</remote-id>
   </upstream>
 </pkgmetadata>

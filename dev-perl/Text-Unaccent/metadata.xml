@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Unaccent</remote-id>
+    <remote-id type="cpan-module">Text::Unaccent</remote-id>
   </upstream>
 </pkgmetadata>

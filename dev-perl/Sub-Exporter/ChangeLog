@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Exporter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.18 2012/06/07 06:26:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.19 2012/06/24 12:59:56 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Sub-Exporter-0.984.0 (07 Jun 2012)
 
@@ -69,4 +72,3 @@
   14 Jan 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +Sub-Exporter-0.981.ebuild:
   Initial commit. From the perl overlay
-

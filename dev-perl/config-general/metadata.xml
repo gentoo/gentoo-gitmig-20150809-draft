@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Config-General</remote-id>
+    <remote-id type="cpan-module">Config::General</remote-id>
+    <remote-id type="cpan-module">Config::General::Extended</remote-id>
+    <remote-id type="cpan-module">Config::General::Interpolated</remote-id>
   </upstream>
 </pkgmetadata>

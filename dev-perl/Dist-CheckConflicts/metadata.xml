@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Dist-CheckConflicts</remote-id>
+    <remote-id type="cpan-module">Dist::CheckConflicts</remote-id>
   </upstream>
 </pkgmetadata>

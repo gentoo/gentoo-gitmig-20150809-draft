@@ -8,5 +8,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Danga-Socket</remote-id>
+    <remote-id type="cpan-module">Danga::Socket</remote-id>
+    <remote-id type="cpan-module">Danga::Socket::Timer</remote-id>
   </upstream>
 </pkgmetadata>

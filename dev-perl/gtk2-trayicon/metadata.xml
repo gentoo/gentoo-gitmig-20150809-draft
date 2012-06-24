@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Gtk2-TrayIcon</remote-id>
+    <remote-id type="cpan-module">Gtk2::TrayIcon</remote-id>
   </upstream>
 </pkgmetadata>

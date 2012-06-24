@@ -4,5 +4,10 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Locale-Msgfmt</remote-id>
+    <remote-id type="cpan-module">Locale::Msgfmt</remote-id>
+    <remote-id type="cpan-module">Locale::Msgfmt::Utils</remote-id>
+    <remote-id type="cpan-module">Locale::Msgfmt::mo</remote-id>
+    <remote-id type="cpan-module">Locale::Msgfmt::po</remote-id>
+    <remote-id type="cpan-module">Module::Install::Msgfmt</remote-id>
   </upstream>
 </pkgmetadata>

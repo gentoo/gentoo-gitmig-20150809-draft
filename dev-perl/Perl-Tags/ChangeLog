@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Perl-Tags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Tags/ChangeLog,v 1.4 2012/03/01 16:17:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Tags/ChangeLog,v 1.5 2012/06/24 13:00:34 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
@@ -20,4 +23,3 @@
   03 Apr 2011; Kent Fredric <kentfredric@gmail.com> +Perl-Tags-0.280.0.ebuild,
   +metadata.xml:
   Added because app-vim/perl-support actually needs this not to drive you crazy
-

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Lingua-Preferred</remote-id>
+    <remote-id type="cpan-module">Lingua::Preferred</remote-id>
   </upstream>
 </pkgmetadata>

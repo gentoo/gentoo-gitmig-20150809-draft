@@ -7,5 +7,6 @@ GTK+ does't has an buildin canvas widget. GooCanvas is wonderful. It is easy to 
 </longdescription>
   <upstream>
     <remote-id type="cpan">Goo-Canvas</remote-id>
+    <remote-id type="cpan-module">Goo::Canvas</remote-id>
   </upstream>
 </pkgmetadata>

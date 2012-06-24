@@ -1,10 +1,12 @@
 # ChangeLog for dev-perl/File-Map
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/ChangeLog,v 1.1 2012/06/16 19:56:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/ChangeLog,v 1.2 2012/06/24 13:00:27 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *File-Map-0.510.0 (16 Jun 2012)
 
   16 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +File-Map-0.510.0.ebuild, +metadata.xml:
   Initial import
-

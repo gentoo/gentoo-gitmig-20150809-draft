@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">WWW-Bugzilla</remote-id>
+    <remote-id type="cpan-module">WWW::Bugzilla</remote-id>
+    <remote-id type="cpan-module">WWW::Bugzilla::Search</remote-id>
   </upstream>
 </pkgmetadata>

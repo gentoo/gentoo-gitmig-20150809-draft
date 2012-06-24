@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Speech-Recognizer-SPX</remote-id>
+    <remote-id type="cpan-module">Audio::MFCC</remote-id>
+    <remote-id type="cpan-module">Audio::SPX</remote-id>
+    <remote-id type="cpan-module">Speech::Recognizer::SPX</remote-id>
+    <remote-id type="cpan-module">Speech::Recognizer::SPX::Hypothesis</remote-id>
+    <remote-id type="cpan-module">Speech::Recognizer::SPX::Segment</remote-id>
+    <remote-id type="cpan-module">Speech::Recognizer::SPX::Server</remote-id>
   </upstream>
 </pkgmetadata>

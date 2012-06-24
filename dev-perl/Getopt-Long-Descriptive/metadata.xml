@@ -7,5 +7,8 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Getopt-Long-Descriptive</remote-id>
+    <remote-id type="cpan-module">Getopt::Long::Descriptive</remote-id>
+    <remote-id type="cpan-module">Getopt::Long::Descriptive::Opts</remote-id>
+    <remote-id type="cpan-module">Getopt::Long::Descriptive::Usage</remote-id>
   </upstream>
 </pkgmetadata>

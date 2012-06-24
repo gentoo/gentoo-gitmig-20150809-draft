@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-Scan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Scan/ChangeLog,v 1.29 2012/06/16 16:47:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Scan/ChangeLog,v 1.30 2012/06/24 13:00:39 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   16 Jun 2012; Torsten Veller <tove@gentoo.org> -Audio-Scan-0.82.ebuild,
   -Audio-Scan-0.840.ebuild, -Audio-Scan-0.870.0.ebuild,
@@ -142,4 +145,3 @@
   09 Feb 2010; Torsten Veller <tove@gentoo.org> +Audio-Scan-0.59.ebuild,
   +metadata.xml:
   Initial commit (#287264)
-

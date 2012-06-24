@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Math-Base36</remote-id>
+    <remote-id type="cpan-module">Math::Base36</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Sub-Install</remote-id>
+    <remote-id type="cpan-module">Sub::Install</remote-id>
   </upstream>
 </pkgmetadata>

@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Taint-Runtime</remote-id>
+    <remote-id type="cpan-module">Taint::Runtime</remote-id>
   </upstream>
 </pkgmetadata>

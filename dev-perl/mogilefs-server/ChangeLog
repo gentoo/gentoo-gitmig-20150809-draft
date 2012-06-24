@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/mogilefs-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.38 2012/06/09 08:57:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.39 2012/06/24 12:58:35 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *mogilefs-server-2.630.0 (09 Jun 2012)
 
@@ -244,4 +247,3 @@
   30 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +mogilefs-server-2.10.ebuild:
   Initial commit, ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

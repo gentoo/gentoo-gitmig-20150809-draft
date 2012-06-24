@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-SNPP</remote-id>
+    <remote-id type="cpan-module">Net::SNPP</remote-id>
+    <remote-id type="cpan-module">Net::SNPP::HylaFAX</remote-id>
+    <remote-id type="cpan-module">Net::SNPP::Server</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Date-ISO</remote-id>
+    <remote-id type="cpan-module">Date::ISO</remote-id>
   </upstream>
 </pkgmetadata>

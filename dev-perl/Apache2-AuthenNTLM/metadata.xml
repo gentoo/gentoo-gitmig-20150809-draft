@@ -12,5 +12,7 @@ password again.
 </longdescription>
   <upstream>
     <remote-id type="cpan">Apache2-AuthenNTLM</remote-id>
+    <remote-id type="cpan-module">Apache2::AuthenNTLM</remote-id>
+    <remote-id type="cpan-module">Apache2::AuthenNTLM::Lock</remote-id>
   </upstream>
 </pkgmetadata>

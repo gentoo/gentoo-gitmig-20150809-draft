@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">PerlIO-via-dynamic</remote-id>
+    <remote-id type="cpan-module">PerlIO::via::dynamic</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">List-MoreUtils</remote-id>
+    <remote-id type="cpan-module">List::MoreUtils</remote-id>
   </upstream>
 </pkgmetadata>

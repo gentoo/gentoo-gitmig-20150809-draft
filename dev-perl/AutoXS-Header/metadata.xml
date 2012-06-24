@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">AutoXS-Header</remote-id>
+    <remote-id type="cpan-module">AutoXS::Header</remote-id>
   </upstream>
 </pkgmetadata>

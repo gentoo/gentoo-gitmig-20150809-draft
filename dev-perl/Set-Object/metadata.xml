@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Set-Object</remote-id>
+    <remote-id type="cpan-module">Set::Object</remote-id>
+    <remote-id type="cpan-module">Set::Object::TieArray</remote-id>
+    <remote-id type="cpan-module">Set::Object::TieHash</remote-id>
+    <remote-id type="cpan-module">Set::Object::Weak</remote-id>
   </upstream>
 </pkgmetadata>

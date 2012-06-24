@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Path-Class
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.33 2012/06/16 08:58:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.34 2012/06/24 12:59:25 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Path-Class-0.260.0 (16 Jun 2012)
 
@@ -123,4 +126,3 @@
   +Path-Class-0.16.ebuild:
   Initial import. Ebuild contribued by Mark Davies (bug #162743), dependency
   required by dev-util/svk.
-

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">libvorbis-perl</remote-id>
+    <remote-id type="cpan-module">Ogg::Vorbis</remote-id>
   </upstream>
 </pkgmetadata>

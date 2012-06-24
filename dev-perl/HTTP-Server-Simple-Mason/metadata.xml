@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTTP-Server-Simple-Mason</remote-id>
+    <remote-id type="cpan-module">HTTP::Server::Simple::Mason</remote-id>
   </upstream>
 </pkgmetadata>

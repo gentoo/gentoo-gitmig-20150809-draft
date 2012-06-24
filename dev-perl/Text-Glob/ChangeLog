@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Glob
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.47 2012/04/05 18:21:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.48 2012/06/24 12:58:24 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   05 Apr 2012; Torsten Veller <tove@gentoo.org> -Text-Glob-0.08.ebuild:
   Cleanup
@@ -158,4 +161,3 @@
 
   03 Jun 2003; Michael Cummings <mcummings@gentoo.org> Text-Glob-0.05.ebuild:
   Fills bug 21791
-

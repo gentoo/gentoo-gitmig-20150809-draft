@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Shellwords</remote-id>
+    <remote-id type="cpan-module">Text::Shellwords</remote-id>
   </upstream>
 </pkgmetadata>

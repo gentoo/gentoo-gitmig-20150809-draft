@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">NTLM</remote-id>
+    <remote-id type="cpan-module">Authen::NTLM</remote-id>
+    <remote-id type="cpan-module">Authen::NTLM::DES</remote-id>
+    <remote-id type="cpan-module">Authen::NTLM::MD4</remote-id>
   </upstream>
 </pkgmetadata>

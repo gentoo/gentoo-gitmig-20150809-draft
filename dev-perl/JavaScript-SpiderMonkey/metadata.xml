@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">JavaScript-SpiderMonkey</remote-id>
+    <remote-id type="cpan-module">JavaScript::SpiderMonkey</remote-id>
   </upstream>
 </pkgmetadata>

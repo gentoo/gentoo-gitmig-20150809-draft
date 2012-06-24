@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IO-Pager</remote-id>
+    <remote-id type="cpan-module">IO::Pager</remote-id>
+    <remote-id type="cpan-module">IO::Pager::Buffered</remote-id>
+    <remote-id type="cpan-module">IO::Pager::Page</remote-id>
+    <remote-id type="cpan-module">IO::Pager::Unbuffered</remote-id>
   </upstream>
 </pkgmetadata>

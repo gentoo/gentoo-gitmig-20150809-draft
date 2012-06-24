@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">String-Approx</remote-id>
+    <remote-id type="cpan-module">String::Approx</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime-Format-HTTP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-HTTP/ChangeLog,v 1.15 2012/03/31 07:30:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-HTTP/ChangeLog,v 1.16 2012/06/24 13:00:29 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org>
   -DateTime-Format-HTTP-0.38.ebuild:
@@ -66,4 +69,3 @@
   05 Feb 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +DateTime-Format-HTTP-0.37.ebuild:
   Initial commit
-

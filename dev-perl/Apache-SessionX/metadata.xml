@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Apache-SessionX</remote-id>
+    <remote-id type="cpan-module">Apache::SessionX</remote-id>
+    <remote-id type="cpan-module">Apache::SessionX::Generate::MD5</remote-id>
+    <remote-id type="cpan-module">Apache::SessionX::Manager</remote-id>
+    <remote-id type="cpan-module">Apache::SessionX::Store::File</remote-id>
   </upstream>
 </pkgmetadata>

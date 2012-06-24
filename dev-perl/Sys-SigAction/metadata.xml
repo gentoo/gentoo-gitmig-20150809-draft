@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Sys-SigAction</remote-id>
+    <remote-id type="cpan-module">Sys::SigAction</remote-id>
   </upstream>
 </pkgmetadata>

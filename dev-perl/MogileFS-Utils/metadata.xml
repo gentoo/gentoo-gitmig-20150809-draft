@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">MogileFS-Utils</remote-id>
+    <remote-id type="cpan-module">MogileFS::Utils</remote-id>
   </upstream>
 </pkgmetadata>

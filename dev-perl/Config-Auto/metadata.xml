@@ -4,6 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Config-Auto</remote-id>
+		<remote-id type="cpan-module">Config::Auto</remote-id>
 	</upstream>
 </pkgmetadata>
-

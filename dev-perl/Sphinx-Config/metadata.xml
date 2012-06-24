@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Sphinx-Config</remote-id>
+    <remote-id type="cpan-module">Sphinx::Config</remote-id>
   </upstream>
 </pkgmetadata>

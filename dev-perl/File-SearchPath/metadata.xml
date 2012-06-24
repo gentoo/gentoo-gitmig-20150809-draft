@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">File-SearchPath</remote-id>
+    <remote-id type="cpan-module">File::SearchPath</remote-id>
   </upstream>
 </pkgmetadata>

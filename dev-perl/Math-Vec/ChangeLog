@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-Vec
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Vec/ChangeLog,v 1.7 2011/09/04 11:21:16 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Vec/ChangeLog,v 1.8 2012/06/24 13:00:34 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Math-Vec-1.01.ebuild:
   Cleanup
@@ -27,4 +30,3 @@
   26 Sep 2007; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
   +Math-Vec-1.01.ebuild:
   Initial commit, vectors for perl.
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDF-API2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/ChangeLog,v 1.24 2012/06/03 17:45:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/ChangeLog,v 1.25 2012/06/24 13:00:13 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org> -PDF-API2-0.57.ebuild:
   Cleanup
@@ -101,4 +104,3 @@
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +PDF-API2-0.55.ebuild:
   Bug 152023, new dep for www/otrs
-

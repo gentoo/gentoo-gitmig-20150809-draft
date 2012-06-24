@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-HTMLDoc</remote-id>
+    <remote-id type="cpan-module">HTML::HTMLDoc</remote-id>
+    <remote-id type="cpan-module">HTML::HTMLDoc::PDF</remote-id>
   </upstream>
 </pkgmetadata>

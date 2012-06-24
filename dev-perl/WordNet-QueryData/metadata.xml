@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">WordNet-QueryData</remote-id>
+    <remote-id type="cpan-module">WordNet::QueryData</remote-id>
   </upstream>
 </pkgmetadata>

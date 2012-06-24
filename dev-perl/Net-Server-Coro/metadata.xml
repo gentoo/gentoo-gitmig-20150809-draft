@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-Server-Coro</remote-id>
+    <remote-id type="cpan-module">Net::Server::Coro</remote-id>
+    <remote-id type="cpan-module">Net::Server::Proto::Coro</remote-id>
+    <remote-id type="cpan-module">Net::Server::Proto::Coro::FH</remote-id>
   </upstream>
 </pkgmetadata>

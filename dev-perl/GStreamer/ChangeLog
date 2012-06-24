@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GStreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.17 2012/06/03 18:21:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.18 2012/06/24 13:00:10 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org> -GStreamer-0.09.ebuild,
   -GStreamer-0.160.0.ebuild:
@@ -72,4 +75,3 @@
   19 Nov 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +GStreamer-0.09.ebuild:
   Bug 110995 for metalgod, ebuild originally from Ed
-

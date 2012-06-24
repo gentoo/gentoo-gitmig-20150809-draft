@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-TableExtract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.51 2012/04/21 19:18:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/ChangeLog,v 1.52 2012/06/24 13:00:08 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   21 Apr 2012; Torsten Veller <tove@gentoo.org>
   -HTML-TableExtract-2.100.0.ebuild:

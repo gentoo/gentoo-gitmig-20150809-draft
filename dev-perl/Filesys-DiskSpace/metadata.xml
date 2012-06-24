@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Filesys-DiskSpace</remote-id>
+    <remote-id type="cpan-module">Filesys::DiskSpace</remote-id>
   </upstream>
 </pkgmetadata>

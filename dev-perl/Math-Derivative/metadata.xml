@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Math-Derivative</remote-id>
+    <remote-id type="cpan-module">Math::Derivative</remote-id>
   </upstream>
 </pkgmetadata>

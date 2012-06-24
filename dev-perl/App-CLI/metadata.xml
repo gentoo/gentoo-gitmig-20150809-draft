@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">App-CLI</remote-id>
+    <remote-id type="cpan-module">App::CLI</remote-id>
+    <remote-id type="cpan-module">App::CLI::Command</remote-id>
+    <remote-id type="cpan-module">App::CLI::Command::Help</remote-id>
+    <remote-id type="cpan-module">App::CLI::Helper</remote-id>
   </upstream>
 </pkgmetadata>

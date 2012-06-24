@@ -8,5 +8,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">MARC-XML</remote-id>
+    <remote-id type="cpan-module">MARC::File::SAX</remote-id>
+    <remote-id type="cpan-module">MARC::File::XML</remote-id>
   </upstream>
 </pkgmetadata>

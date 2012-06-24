@@ -4,5 +4,6 @@
     <herd>perl</herd>
     <upstream>
         <remote-id type="cpan">Params-Classify</remote-id>
+        <remote-id type="cpan-module">Params::Classify</remote-id>
     </upstream>
 </pkgmetadata>

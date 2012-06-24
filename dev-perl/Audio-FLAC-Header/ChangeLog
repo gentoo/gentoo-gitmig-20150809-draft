@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-FLAC-Header
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-FLAC-Header/ChangeLog,v 1.21 2012/06/03 18:59:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-FLAC-Header/ChangeLog,v 1.22 2012/06/24 12:58:16 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org> -Audio-FLAC-Header-2.3.ebuild:
   Cleanup
@@ -93,4 +96,3 @@
   25 Jun 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Audio-FLAC-Header-1.4.ebuild:
   Bug 103940. Original version of this ebuild submitted by Paul Marks.
-

@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Data-DumpXML</remote-id>
+    <remote-id type="cpan-module">Data::DumpXML</remote-id>
+    <remote-id type="cpan-module">Data::DumpXML::ParseStyle</remote-id>
+    <remote-id type="cpan-module">Data::DumpXML::Parser</remote-id>
   </upstream>
 </pkgmetadata>

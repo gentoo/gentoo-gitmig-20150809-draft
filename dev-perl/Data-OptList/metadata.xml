@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Data-OptList</remote-id>
+    <remote-id type="cpan-module">Data::OptList</remote-id>
   </upstream>
 </pkgmetadata>

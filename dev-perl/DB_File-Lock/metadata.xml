@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DB_File-Lock</remote-id>
+    <remote-id type="cpan-module">DB_File::Lock</remote-id>
   </upstream>
 </pkgmetadata>

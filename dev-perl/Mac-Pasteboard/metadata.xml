@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Mac-Pasteboard</remote-id>
+    <remote-id type="cpan-module">Mac::Pasteboard</remote-id>
   </upstream>
 </pkgmetadata>

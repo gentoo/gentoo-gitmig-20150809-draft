@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Aspell</remote-id>
+    <remote-id type="cpan-module">Text::Aspell</remote-id>
   </upstream>
 </pkgmetadata>

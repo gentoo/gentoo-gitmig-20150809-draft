@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Tk-CursorControl</remote-id>
+    <remote-id type="cpan-module">Tk::CursorControl</remote-id>
   </upstream>
 </pkgmetadata>

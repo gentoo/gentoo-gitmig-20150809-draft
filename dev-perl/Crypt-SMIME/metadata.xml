@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Crypt-SMIME</remote-id>
+		<remote-id type="cpan-module">Crypt::SMIME</remote-id>
 	</upstream>
 </pkgmetadata>

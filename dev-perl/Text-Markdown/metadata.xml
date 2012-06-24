@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Markdown</remote-id>
+    <remote-id type="cpan-module">Text::Markdown</remote-id>
   </upstream>
 </pkgmetadata>

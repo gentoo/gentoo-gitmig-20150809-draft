@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Inline-Files</remote-id>
+    <remote-id type="cpan-module">Inline::Files</remote-id>
+    <remote-id type="cpan-module">Inline::Files::Data</remote-id>
+    <remote-id type="cpan-module">Inline::Files::Virtual</remote-id>
   </upstream>
 </pkgmetadata>

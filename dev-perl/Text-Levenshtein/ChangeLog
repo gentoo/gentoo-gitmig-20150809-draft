@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Levenshtein
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Levenshtein/ChangeLog,v 1.17 2011/12/01 16:13:10 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Levenshtein/ChangeLog,v 1.18 2012/06/24 12:58:55 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Dec 2011; Torsten Veller <tove@gentoo.org> Text-Levenshtein-0.50.0.ebuild:
   Drop explicit dev-lang/perl dependency
@@ -67,4 +70,3 @@
   29 Mar 2004; Michael Cummings <mcummings@gentoo.org>
   Text-Levenshtein-0.04.ebuild, metadata.xml:
   dep for bricolage, bug 21549
-

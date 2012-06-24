@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Socket6
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.42 2011/12/13 13:16:14 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.43 2012/06/24 13:00:39 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   13 Dec 2011; Naohiro Aota <naota@gentoo.org> Socket6-0.230.0.ebuild:
   Add ~x86-fbsd
@@ -146,4 +149,3 @@
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org> Socket6-0.11.ebuild:
   ipv6 dep for POE
-

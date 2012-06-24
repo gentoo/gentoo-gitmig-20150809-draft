@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-chmod</remote-id>
+    <remote-id type="cpan-module">File::chmod</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">UNIVERSAL-isa</remote-id>
+    <remote-id type="cpan-module">UNIVERSAL::isa</remote-id>
   </upstream>
 </pkgmetadata>

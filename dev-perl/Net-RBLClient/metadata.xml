@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-RBLClient</remote-id>
+    <remote-id type="cpan-module">Net::RBLClient</remote-id>
   </upstream>
 </pkgmetadata>

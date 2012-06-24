@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Dist-CheckConflicts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Dist-CheckConflicts/ChangeLog,v 1.14 2012/04/01 16:23:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Dist-CheckConflicts/ChangeLog,v 1.15 2012/06/24 12:58:43 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org>
   Dist-CheckConflicts-0.20.0.ebuild:
@@ -61,4 +64,3 @@
   13 Jan 2011; Torsten Veller <tove@gentoo.org>
   +Dist-CheckConflicts-0.20.ebuild, +metadata.xml:
   Initial commit for Package-Stash
-

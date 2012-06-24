@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Deep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.55 2012/06/16 19:01:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.56 2012/06/24 12:58:49 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Test-Deep-0.110.0 (16 Jun 2012)
 
@@ -207,4 +210,3 @@
   04 Jul 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Test-Deep-0.095.ebuild:
   Missing dep for Apache-Session
-

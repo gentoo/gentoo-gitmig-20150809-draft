@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">strictures</remote-id>
+		<remote-id type="cpan-module">strictures</remote-id>
 	</upstream>
 </pkgmetadata>

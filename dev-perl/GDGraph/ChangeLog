@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDGraph
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.39 2011/09/04 11:21:30 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.40 2012/06/24 13:00:10 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -GDGraph-1.44.ebuild:
   Cleanup
@@ -132,4 +135,3 @@
 *GDGraph-1.35 (05 Nov 2002)
 
   05 Nov 2002; J Robert Ray <jrray@gentoo.org> : New ebuild.
-

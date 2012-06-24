@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geography-Countries
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.29 2012/03/31 07:16:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geography-Countries/ChangeLog,v 1.30 2012/06/24 13:00:03 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org>
   -Geography-Countries-1.4.ebuild:
@@ -123,4 +126,3 @@
   22 Sep 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Geography-Countries-1.4.ebuild:
   Dep for a package for spamassassin
-

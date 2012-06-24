@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CSV
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.43 2011/09/04 11:22:59 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.44 2012/06/24 12:58:22 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Text-CSV-1.210.ebuild:
   Cleanup
@@ -122,4 +125,3 @@
   09 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +Text-CSV-1.10.ebuild:
   Initial commit, dep for new dev-libs/OpenSRF-1.0.1
-

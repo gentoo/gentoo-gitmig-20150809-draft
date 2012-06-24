@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Test-Portability-Files</remote-id>
+    <remote-id type="cpan-module">Test::Portability::Files</remote-id>
   </upstream>
 </pkgmetadata>

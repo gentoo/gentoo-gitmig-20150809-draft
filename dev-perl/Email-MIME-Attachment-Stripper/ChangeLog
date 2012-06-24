@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-MIME-Attachment-Stripper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Attachment-Stripper/ChangeLog,v 1.31 2012/06/17 14:17:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Attachment-Stripper/ChangeLog,v 1.32 2012/06/24 13:00:24 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org>
   Email-MIME-Attachment-Stripper-1.316.0.ebuild:
@@ -130,4 +133,3 @@
   05 Feb 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Email-MIME-Attachment-Stripper-1.313.ebuild:
   Bug 165190
-

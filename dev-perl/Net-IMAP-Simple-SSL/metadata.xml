@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-IMAP-Simple-SSL</remote-id>
+    <remote-id type="cpan-module">Net::IMAP::Simple::SSL</remote-id>
   </upstream>
 </pkgmetadata>

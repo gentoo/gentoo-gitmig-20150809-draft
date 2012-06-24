@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Pod-Readme</remote-id>
+    <remote-id type="cpan-module">Pod::Readme</remote-id>
   </upstream>
 </pkgmetadata>

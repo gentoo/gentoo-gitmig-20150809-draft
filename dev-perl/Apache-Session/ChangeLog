@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Session
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.67 2012/03/31 07:42:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.68 2012/06/24 12:58:53 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Apache-Session-1.83.ebuild:
   Cleanup
@@ -272,4 +275,3 @@
   files/digest-Apache-Session-1.54 :
 	
   Initial import.
-

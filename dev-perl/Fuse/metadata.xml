@@ -2,9 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>perl</herd>
-  <longdescription lang="en">
-	</longdescription>
   <upstream>
     <remote-id type="cpan">Fuse</remote-id>
+    <remote-id type="cpan-module">Fuse</remote-id>
+    <remote-id type="cpan-module">test::helper</remote-id>
   </upstream>
 </pkgmetadata>

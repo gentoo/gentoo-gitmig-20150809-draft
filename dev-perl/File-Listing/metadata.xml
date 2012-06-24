@@ -4,5 +4,11 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">File-Listing</remote-id>
+		<remote-id type="cpan-module">File::Listing</remote-id>
+		<remote-id type="cpan-module">File::Listing::apache</remote-id>
+		<remote-id type="cpan-module">File::Listing::dosftp</remote-id>
+		<remote-id type="cpan-module">File::Listing::netware</remote-id>
+		<remote-id type="cpan-module">File::Listing::unix</remote-id>
+		<remote-id type="cpan-module">File::Listing::vms</remote-id>
 	</upstream>
 </pkgmetadata>

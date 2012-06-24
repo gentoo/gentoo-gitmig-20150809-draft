@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-vFile-asData</remote-id>
+    <remote-id type="cpan-module">Text::vFile::asData</remote-id>
   </upstream>
 </pkgmetadata>

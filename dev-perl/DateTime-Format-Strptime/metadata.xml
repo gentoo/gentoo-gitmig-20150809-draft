@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">DateTime-Format-Strptime</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Strptime</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">SVG</remote-id>
+    <remote-id type="cpan-module">SVG</remote-id>
+    <remote-id type="cpan-module">SVG::DOM</remote-id>
+    <remote-id type="cpan-module">SVG::Element</remote-id>
+    <remote-id type="cpan-module">SVG::Extension</remote-id>
+    <remote-id type="cpan-module">SVG::Manual</remote-id>
+    <remote-id type="cpan-module">SVG::XML</remote-id>
   </upstream>
 </pkgmetadata>

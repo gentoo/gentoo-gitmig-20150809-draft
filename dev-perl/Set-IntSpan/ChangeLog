@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Set-IntSpan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/ChangeLog,v 1.46 2012/03/31 06:54:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/ChangeLog,v 1.47 2012/06/24 12:58:30 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Set-IntSpan-1.14.ebuild:
   Cleanup
@@ -182,4 +185,3 @@
 
   23 Dec 2003; <rac@gentoo.org> Set-IntSpan-1.07.ebuild:
   Initial import based on bug 34203
-

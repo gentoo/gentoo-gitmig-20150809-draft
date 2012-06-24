@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">XML-NodeFilter</remote-id>
+    <remote-id type="cpan-module">XML::NodeFilter</remote-id>
   </upstream>
 </pkgmetadata>

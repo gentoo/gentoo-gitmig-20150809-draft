@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Mail-POP3Client</remote-id>
+    <remote-id type="cpan-module">Mail::POP3Client</remote-id>
   </upstream>
 </pkgmetadata>

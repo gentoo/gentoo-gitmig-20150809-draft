@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">GSSAPI</remote-id>
+    <remote-id type="cpan-module">GSSAPI</remote-id>
+    <remote-id type="cpan-module">GSSAPI::OID</remote-id>
+    <remote-id type="cpan-module">GSSAPI::OID::Set</remote-id>
+    <remote-id type="cpan-module">GSSAPI::Status</remote-id>
   </upstream>
 </pkgmetadata>

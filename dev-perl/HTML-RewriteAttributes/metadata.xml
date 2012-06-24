@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-RewriteAttributes</remote-id>
+    <remote-id type="cpan-module">HTML::RewriteAttributes</remote-id>
+    <remote-id type="cpan-module">HTML::RewriteAttributes::Links</remote-id>
+    <remote-id type="cpan-module">HTML::RewriteAttributes::Resources</remote-id>
   </upstream>
 </pkgmetadata>

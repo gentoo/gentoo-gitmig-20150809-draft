@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-FillInForm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.28 2012/04/21 19:20:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.29 2012/06/24 13:00:05 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   21 Apr 2012; Torsten Veller <tove@gentoo.org> -HTML-FillInForm-2.0.0.ebuild:
   Cleanup
@@ -116,4 +119,3 @@
   01 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +HTML-FillInForm-1.05.ebuild:
   Dep for new swish-e
-

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Tie-ToObject</remote-id>
+    <remote-id type="cpan-module">Tie::ToObject</remote-id>
   </upstream>
 </pkgmetadata>

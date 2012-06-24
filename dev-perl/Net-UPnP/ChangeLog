@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-UPnP
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-UPnP/ChangeLog,v 1.9 2011/04/24 16:06:07 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-UPnP/ChangeLog,v 1.10 2012/06/24 13:00:40 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> Net-UPnP-1.4.2.ebuild:
   Marked ~x86-solaris, bug #296509
@@ -35,4 +38,3 @@
   27 Jun 2009; Torsten Veller <tove@gentoo.org> +Net-UPnP-1.41.ebuild,
   +metadata.xml:
   Initial commit (#275548)
-

@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-RsyncP</remote-id>
+    <remote-id type="cpan-module">File::RsyncP</remote-id>
+    <remote-id type="cpan-module">File::RsyncP::Digest</remote-id>
+    <remote-id type="cpan-module">File::RsyncP::FileIO</remote-id>
+    <remote-id type="cpan-module">File::RsyncP::FileList</remote-id>
   </upstream>
 </pkgmetadata>

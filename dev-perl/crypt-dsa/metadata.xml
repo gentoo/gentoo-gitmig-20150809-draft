@@ -4,5 +4,13 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Crypt-DSA</remote-id>
+    <remote-id type="cpan-module">BufferWithInt</remote-id>
+    <remote-id type="cpan-module">Crypt::DSA</remote-id>
+    <remote-id type="cpan-module">Crypt::DSA::Key</remote-id>
+    <remote-id type="cpan-module">Crypt::DSA::Key::PEM</remote-id>
+    <remote-id type="cpan-module">Crypt::DSA::Key::SSH2</remote-id>
+    <remote-id type="cpan-module">Crypt::DSA::KeyChain</remote-id>
+    <remote-id type="cpan-module">Crypt::DSA::Signature</remote-id>
+    <remote-id type="cpan-module">Crypt::DSA::Util</remote-id>
   </upstream>
 </pkgmetadata>

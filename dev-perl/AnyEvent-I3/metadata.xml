@@ -8,5 +8,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="cpan">AnyEvent-I3</remote-id>
+		<remote-id type="cpan-module">AnyEvent::I3</remote-id>
 	</upstream>
 </pkgmetadata>

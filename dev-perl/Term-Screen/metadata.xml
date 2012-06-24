@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Term-Screen</remote-id>
+    <remote-id type="cpan-module">Term::Screen</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Iconv</remote-id>
+    <remote-id type="cpan-module">Text::Iconv</remote-id>
   </upstream>
 </pkgmetadata>

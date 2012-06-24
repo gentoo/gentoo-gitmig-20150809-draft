@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Form
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Form/ChangeLog,v 1.16 2012/04/21 19:19:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Form/ChangeLog,v 1.17 2012/06/24 13:00:04 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   21 Apr 2012; Torsten Veller <tove@gentoo.org> -HTML-Form-6.10.0.ebuild:
   Cleanup
@@ -56,4 +59,3 @@
   09 Mar 2011; Torsten Veller <tove@gentoo.org> +HTML-Form-6.0.0.ebuild,
   +metadata.xml:
   Initial commit - unbundled from libwww-perl
-

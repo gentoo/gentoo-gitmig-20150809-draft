@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Audio-FLAC-Header</remote-id>
+    <remote-id type="cpan-module">Audio::FLAC::Header</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Proc-Background
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Background/ChangeLog,v 1.7 2011/09/04 11:23:54 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Background/ChangeLog,v 1.8 2012/06/24 12:59:15 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Proc-Background-1.10.ebuild:
   Cleanup
@@ -35,4 +38,3 @@
   30 Jun 2009; Torsten Veller <tove@gentoo.org>
   +Proc-Background-1.08.ebuild, +metadata.xml:
   Initial commit (#275940)
-

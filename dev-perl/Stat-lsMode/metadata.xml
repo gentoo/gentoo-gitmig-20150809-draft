@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Stat-lsMode</remote-id>
+    <remote-id type="cpan-module">Stat::lsMode</remote-id>
   </upstream>
 </pkgmetadata>

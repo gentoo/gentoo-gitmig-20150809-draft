@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Data-Random</remote-id>
+    <remote-id type="cpan-module">Data::Random</remote-id>
+    <remote-id type="cpan-module">Data::Random::WordList</remote-id>
   </upstream>
 </pkgmetadata>

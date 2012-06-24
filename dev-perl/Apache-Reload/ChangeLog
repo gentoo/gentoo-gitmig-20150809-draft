@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Reload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Reload/ChangeLog,v 1.22 2012/04/01 13:31:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Reload/ChangeLog,v 1.23 2012/06/24 12:59:36 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Apache-Reload-0.120.0 (01 Apr 2012)
 
@@ -81,4 +84,3 @@
   05 Jul 2009; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
   +Apache-Reload-0.10.ebuild:
   initial ebuild, bug #224985
-

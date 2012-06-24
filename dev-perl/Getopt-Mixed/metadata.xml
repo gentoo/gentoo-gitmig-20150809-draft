@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Getopt-Mixed</remote-id>
+    <remote-id type="cpan-module">Getopt::Mixed</remote-id>
   </upstream>
 </pkgmetadata>

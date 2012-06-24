@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Devel-Symdump</remote-id>
+    <remote-id type="cpan-module">Devel::Symdump</remote-id>
+    <remote-id type="cpan-module">Devel::Symdump::Export</remote-id>
   </upstream>
 </pkgmetadata>

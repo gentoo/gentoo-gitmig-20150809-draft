@@ -4,5 +4,6 @@
     <herd>perl</herd>
     <upstream>
 	<remote-id type="cpan">Eval-Closure</remote-id>
+	<remote-id type="cpan-module">Eval::Closure</remote-id>
     </upstream>
 </pkgmetadata>

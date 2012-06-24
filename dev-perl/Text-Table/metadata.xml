@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Text-Table</remote-id>
+    <remote-id type="cpan-module">Text::Table</remote-id>
   </upstream>
 </pkgmetadata>

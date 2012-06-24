@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Autouse</remote-id>
+    <remote-id type="cpan-module">Class::Autouse</remote-id>
+    <remote-id type="cpan-module">Class::Autouse::Parent</remote-id>
   </upstream>
 </pkgmetadata>

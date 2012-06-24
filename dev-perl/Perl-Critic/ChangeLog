@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Perl-Critic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.85 2012/06/03 17:43:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.86 2012/06/24 13:00:11 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org> -Perl-Critic-1.106.ebuild,
   -Perl-Critic-1.111.ebuild, -Perl-Critic-1.116.0.ebuild:
@@ -376,4 +379,3 @@
   +Perl-Critic-0.15.ebuild:
   Initial import of Perl-Critic, used to criticize perl code based on Conways
   Perl Best Practices. Used in app-vim/perl-support optionally
-

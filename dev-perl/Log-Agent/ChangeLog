@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Log-Agent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.28 2011/09/04 11:22:13 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.29 2012/06/24 12:59:34 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Log-Agent-0.307.ebuild:
   Cleanup
@@ -105,4 +108,3 @@
   28 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
   +Log-Agent-0.306.ebuild:
   Initial ebuild. Metadot dependency.
-

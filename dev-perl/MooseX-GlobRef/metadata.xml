@@ -7,5 +7,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">MooseX-GlobRef</remote-id>
+    <remote-id type="cpan-module">MooseX::GlobRef</remote-id>
+    <remote-id type="cpan-module">MooseX::GlobRef::Object</remote-id>
+    <remote-id type="cpan-module">MooseX::GlobRef::Role::Meta::Instance</remote-id>
+    <remote-id type="cpan-module">MooseX::GlobRef::Role::Object</remote-id>
   </upstream>
 </pkgmetadata>

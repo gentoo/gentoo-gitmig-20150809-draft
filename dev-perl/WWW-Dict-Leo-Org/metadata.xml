@@ -7,5 +7,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">WWW-Dict-Leo-Org</remote-id>
+    <remote-id type="cpan-module">WWW::Dict::Leo::Org</remote-id>
   </upstream>
 </pkgmetadata>

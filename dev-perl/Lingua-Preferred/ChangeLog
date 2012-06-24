@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lingua-Preferred
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.18 2012/06/17 14:01:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.19 2012/06/24 13:00:07 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> Lingua-Preferred-0.2.4.ebuild:
   Drop alpha/ia64/sparc keywords

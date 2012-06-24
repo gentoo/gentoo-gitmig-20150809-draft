@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Data-Hierarchy</remote-id>
+    <remote-id type="cpan-module">Data::Hierarchy</remote-id>
+    <remote-id type="cpan-module">Data::Hierarchy::Relative</remote-id>
   </upstream>
 </pkgmetadata>

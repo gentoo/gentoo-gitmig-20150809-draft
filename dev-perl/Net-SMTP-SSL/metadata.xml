@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Net-SMTP-SSL</remote-id>
+    <remote-id type="cpan-module">Net::SMTP::SSL</remote-id>
   </upstream>
 </pkgmetadata>

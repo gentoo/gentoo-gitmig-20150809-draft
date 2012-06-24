@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Accessor-Chained</remote-id>
+    <remote-id type="cpan-module">Class::Accessor::Chained</remote-id>
+    <remote-id type="cpan-module">Class::Accessor::Chained::Fast</remote-id>
   </upstream>
 </pkgmetadata>

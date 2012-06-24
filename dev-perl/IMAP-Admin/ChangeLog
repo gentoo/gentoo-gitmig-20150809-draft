@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IMAP-Admin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IMAP-Admin/ChangeLog,v 1.10 2012/02/18 14:59:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IMAP-Admin/ChangeLog,v 1.11 2012/06/24 13:00:18 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   18 Feb 2012; Torsten Veller <tove@gentoo.org> -IMAP-Admin-1.6.4.ebuild:
   Cleanup
@@ -41,4 +44,3 @@
   30 Sep 2006; Christian Hartmann <ian@gentoo.org> +metadata.xml,
   +IMAP-Admin-1.6.4.ebuild:
   New package; dep for new websieve version
-

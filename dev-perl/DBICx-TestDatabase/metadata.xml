@@ -7,5 +7,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">DBICx-TestDatabase</remote-id>
+    <remote-id type="cpan-module">DBICx::TestDatabase</remote-id>
+    <remote-id type="cpan-module">DBICx::TestDatabase::Subclass</remote-id>
   </upstream>
 </pkgmetadata>

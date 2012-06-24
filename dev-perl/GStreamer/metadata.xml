@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">GStreamer</remote-id>
+    <remote-id type="cpan-module">GStreamer</remote-id>
+    <remote-id type="cpan-module">GStreamer::Caps</remote-id>
   </upstream>
 </pkgmetadata>

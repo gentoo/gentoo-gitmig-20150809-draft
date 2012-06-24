@@ -4,5 +4,6 @@
 <herd>perl</herd>
 <upstream>
   <remote-id type="cpan">AnyEvent-HTTP</remote-id>
+  <remote-id type="cpan-module">AnyEvent::HTTP</remote-id>
 </upstream>
 </pkgmetadata>

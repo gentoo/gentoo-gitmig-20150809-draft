@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Glob</remote-id>
+    <remote-id type="cpan-module">Text::Glob</remote-id>
   </upstream>
 </pkgmetadata>

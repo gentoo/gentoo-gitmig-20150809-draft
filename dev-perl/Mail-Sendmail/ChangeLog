@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Sendmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.26 2011/09/04 11:21:17 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.27 2012/06/24 12:58:51 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Mail-Sendmail-0.79.ebuild:
   Cleanup
@@ -89,4 +92,3 @@
   22 Sep 2005; Carlos Silva <r3pek@gentoo.org> +metadata.xml,
   +Mail-Sendmail-0.79.ebuild:
   Initial commit. Ebuild by me
-

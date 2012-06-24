@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Uplevel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.77 2012/03/31 06:50:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.78 2012/06/24 12:59:26 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Sub-Uplevel-0.20.02.ebuild:
   Cleanup
@@ -287,4 +290,3 @@
 
   29 Mar 2004; Michael Cummings <mcummings@gentoo.org> :
   dep for a dep of bricolage, bug 21549
-

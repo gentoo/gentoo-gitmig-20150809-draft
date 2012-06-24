@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DBIx-Migration</remote-id>
+    <remote-id type="cpan-module">DBIx::Migration</remote-id>
   </upstream>
 </pkgmetadata>

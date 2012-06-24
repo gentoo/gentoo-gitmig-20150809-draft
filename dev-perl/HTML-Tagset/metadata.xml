@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-Tagset</remote-id>
+    <remote-id type="cpan-module">HTML::Tagset</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.25 2012/03/02 20:55:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.26 2012/06/24 12:59:53 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> Class-C3-0.230.0.ebuild:
   Marking Class-C3-0.230.0 ppc64 for bug 400097
@@ -89,4 +92,3 @@
   14 Jan 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +Class-C3-0.20.ebuild:
   Initial commit. From the perl overlay
-

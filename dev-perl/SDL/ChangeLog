@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SDL
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/ChangeLog,v 1.14 2012/06/02 16:38:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/ChangeLog,v 1.15 2012/06/24 12:59:31 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   02 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Leave the maintaining for games and perl. I can still contribute here if

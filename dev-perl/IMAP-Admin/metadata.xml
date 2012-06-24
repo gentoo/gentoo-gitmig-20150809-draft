@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IMAP-Admin</remote-id>
+    <remote-id type="cpan-module">IMAP::Admin</remote-id>
   </upstream>
 </pkgmetadata>

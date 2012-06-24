@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">URI-Fetch</remote-id>
+    <remote-id type="cpan-module">URI::Fetch</remote-id>
+    <remote-id type="cpan-module">URI::Fetch::Response</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Proc-Simple</remote-id>
+    <remote-id type="cpan-module">Proc::Simple</remote-id>
   </upstream>
 </pkgmetadata>

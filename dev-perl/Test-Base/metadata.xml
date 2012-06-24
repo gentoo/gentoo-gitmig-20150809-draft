@@ -4,5 +4,10 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Test-Base</remote-id>
+    <remote-id type="cpan-module">Module::Install::TestBase</remote-id>
+    <remote-id type="cpan-module">Test::Base</remote-id>
+    <remote-id type="cpan-module">Test::Base::Block</remote-id>
+    <remote-id type="cpan-module">Test::Base::Filter</remote-id>
+    <remote-id type="cpan-module">Test::Base::Handle</remote-id>
   </upstream>
 </pkgmetadata>

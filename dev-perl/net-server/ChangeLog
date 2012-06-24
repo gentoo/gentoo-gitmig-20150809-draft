@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-server
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.68 2011/09/04 11:22:30 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.69 2012/06/24 12:58:37 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -net-server-0.99.ebuild:
   Cleanup
@@ -261,4 +264,3 @@
 
   27 Jun 2003; Michael Cummings <mcummings@gentoo.org> net-server-0.85.ebuild:
   ebuild submitted by Max Kalika <alkern23@yahoo.com> in bug 21432
-

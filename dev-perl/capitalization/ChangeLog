@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/capitalization
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/capitalization/ChangeLog,v 1.18 2011/09/04 11:22:13 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/capitalization/ChangeLog,v 1.19 2012/06/24 13:00:06 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -capitalization-0.03.ebuild:
   Cleanup
@@ -70,4 +73,3 @@
   13 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +capitalization-0.03.ebuild:
   New dep for DBIx-SearchBuilder
-

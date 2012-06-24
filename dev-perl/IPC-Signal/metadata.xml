@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IPC-Signal</remote-id>
+    <remote-id type="cpan-module">IPC::Signal</remote-id>
   </upstream>
 </pkgmetadata>

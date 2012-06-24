@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Package-DeprecationManager</remote-id>
+    <remote-id type="cpan-module">Package::DeprecationManager</remote-id>
   </upstream>
 </pkgmetadata>

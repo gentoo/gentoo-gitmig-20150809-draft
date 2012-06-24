@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Class-Method-Modifiers</remote-id>
+		<remote-id type="cpan-module">Class::Method::Modifiers</remote-id>
 	</upstream>
 </pkgmetadata>

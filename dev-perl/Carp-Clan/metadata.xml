@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Carp-Clan</remote-id>
+    <remote-id type="cpan-module">Carp::Clan</remote-id>
+    <remote-id type="cpan-module">DB</remote-id>
   </upstream>
 </pkgmetadata>

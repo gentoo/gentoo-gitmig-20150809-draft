@@ -7,5 +7,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Module-Find</remote-id>
+    <remote-id type="cpan-module">Module::Find</remote-id>
+    <remote-id type="cpan-module">ModuleFindTest</remote-id>
+    <remote-id type="cpan-module">ModuleFindTest::SubMod</remote-id>
+    <remote-id type="cpan-module">ModuleFindTest::SubMod::SubSubMod</remote-id>
   </upstream>
 </pkgmetadata>

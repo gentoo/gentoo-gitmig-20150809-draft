@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Snowball-Swedish</remote-id>
+    <remote-id type="cpan-module">Lingua::Stem::Snowball::Se</remote-id>
   </upstream>
 </pkgmetadata>

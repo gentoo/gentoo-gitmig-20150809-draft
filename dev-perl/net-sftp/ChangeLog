@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-sftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.18 2012/03/25 16:37:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.19 2012/06/24 12:59:46 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> net-sftp-0.100.0.ebuild:
   Drop sparc keywords
@@ -71,4 +74,3 @@
 
   23 Jun 2003; Michael Cummings <mcummings@gentoo.org> net-sftp-0.05.ebuild:
   net-sftp is a dep for bricolage, a new ebuild from bugzie
-

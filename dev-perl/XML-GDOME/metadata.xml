@@ -4,5 +4,13 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">XML-GDOME</remote-id>
+    <remote-id type="cpan-module">XML::GDOME</remote-id>
+    <remote-id type="cpan-module">XML::GDOME::Document</remote-id>
+    <remote-id type="cpan-module">XML::GDOME::Element</remote-id>
+    <remote-id type="cpan-module">XML::GDOME::Node</remote-id>
+    <remote-id type="cpan-module">XML::GDOME::SAX::AttributeNode</remote-id>
+    <remote-id type="cpan-module">XML::GDOME::SAX::Builder</remote-id>
+    <remote-id type="cpan-module">XML::GDOME::SAX::Generator</remote-id>
+    <remote-id type="cpan-module">XML::GDOME::SAX::Parser</remote-id>
   </upstream>
 </pkgmetadata>

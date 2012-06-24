@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Context-Preserve</remote-id>
+    <remote-id type="cpan-module">Context::Preserve</remote-id>
   </upstream>
 </pkgmetadata>

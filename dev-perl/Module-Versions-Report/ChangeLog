@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Versions-Report
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Versions-Report/ChangeLog,v 1.25 2012/03/31 07:05:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Versions-Report/ChangeLog,v 1.26 2012/06/24 12:59:09 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org>
   -Module-Versions-Report-1.03.ebuild:
@@ -110,4 +113,3 @@
   25 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
   +Module-Versions-Report-1.02.ebuild:
   Initial ebuild. RT dependency. OK'd by mcummings.
-

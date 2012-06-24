@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Lucene</remote-id>
+    <remote-id type="cpan-module">Lucene</remote-id>
   </upstream>
 </pkgmetadata>

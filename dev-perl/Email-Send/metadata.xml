@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Email-Send</remote-id>
+    <remote-id type="cpan-module">Email::Send</remote-id>
+    <remote-id type="cpan-module">Email::Send::NNTP</remote-id>
+    <remote-id type="cpan-module">Email::Send::Qmail</remote-id>
+    <remote-id type="cpan-module">Email::Send::SMTP</remote-id>
+    <remote-id type="cpan-module">Email::Send::Sendmail</remote-id>
+    <remote-id type="cpan-module">Email::Send::Test</remote-id>
   </upstream>
 </pkgmetadata>

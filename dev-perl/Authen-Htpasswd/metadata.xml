@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Authen-Htpasswd</remote-id>
+    <remote-id type="cpan-module">Authen::Htpasswd</remote-id>
+    <remote-id type="cpan-module">Authen::Htpasswd::User</remote-id>
+    <remote-id type="cpan-module">Authen::Htpasswd::Util</remote-id>
   </upstream>
 </pkgmetadata>

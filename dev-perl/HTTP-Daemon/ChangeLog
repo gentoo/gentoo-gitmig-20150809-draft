@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.22 2012/06/22 15:49:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.23 2012/06/24 12:59:06 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> HTTP-Daemon-6.10.0.ebuild:
   Marking HTTP-Daemon-6.10.0 ppc64 for bug 414739
@@ -74,4 +77,3 @@
   09 Mar 2011; Torsten Veller <tove@gentoo.org> +HTTP-Daemon-6.0.0.ebuild,
   +metadata.xml:
   Initial commit - unbundled from libwww-perl
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.65 2012/02/18 08:52:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.66 2012/06/24 12:58:56 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   18 Feb 2012; Torsten Veller <tove@gentoo.org> -Test-Base-0.58.ebuild:
   Cleanup
@@ -242,4 +245,3 @@
   16 Jan 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Test-Base-0.46.ebuild:
   New dep for yaml
-

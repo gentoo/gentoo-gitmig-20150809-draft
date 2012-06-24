@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">HTTP-Negotiate</remote-id>
+		<remote-id type="cpan-module">HTTP::Negotiate</remote-id>
 	</upstream>
 </pkgmetadata>

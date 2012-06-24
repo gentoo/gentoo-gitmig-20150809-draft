@@ -4,5 +4,7 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">HTTP-Daemon</remote-id>
+		<remote-id type="cpan-module">HTTP::Daemon</remote-id>
+		<remote-id type="cpan-module">HTTP::Daemon::ClientConn</remote-id>
 	</upstream>
 </pkgmetadata>

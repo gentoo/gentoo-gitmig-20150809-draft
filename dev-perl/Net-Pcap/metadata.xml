@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-Pcap</remote-id>
+    <remote-id type="cpan-module">Net::Pcap</remote-id>
   </upstream>
 </pkgmetadata>

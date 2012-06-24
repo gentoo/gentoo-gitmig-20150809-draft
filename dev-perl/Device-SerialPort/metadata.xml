@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Device-SerialPort</remote-id>
+    <remote-id type="cpan-module">Device::SerialPort</remote-id>
   </upstream>
 </pkgmetadata>

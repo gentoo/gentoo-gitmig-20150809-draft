@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Diff</remote-id>
+    <remote-id type="cpan-module">Text::Diff</remote-id>
+    <remote-id type="cpan-module">Text::Diff::Base</remote-id>
+    <remote-id type="cpan-module">Text::Diff::Config</remote-id>
+    <remote-id type="cpan-module">Text::Diff::Table</remote-id>
   </upstream>
 </pkgmetadata>

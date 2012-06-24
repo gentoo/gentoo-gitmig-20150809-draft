@@ -10,5 +10,8 @@
 	</longdescription>
   <upstream>
     <remote-id type="cpan">Apache-AuthTicket</remote-id>
+    <remote-id type="cpan-module">Apache2::AuthTicket</remote-id>
+    <remote-id type="cpan-module">Apache::AuthTicket</remote-id>
+    <remote-id type="cpan-module">Apache::AuthTicket::Base</remote-id>
   </upstream>
 </pkgmetadata>

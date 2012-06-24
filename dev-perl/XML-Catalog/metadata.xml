@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">XML-Catalog</remote-id>
+    <remote-id type="cpan-module">XML::Catalog</remote-id>
+    <remote-id type="cpan-module">XML::Catalog::XML</remote-id>
   </upstream>
 </pkgmetadata>

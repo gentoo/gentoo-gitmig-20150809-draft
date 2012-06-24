@@ -6,5 +6,8 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="cpan">TeX-Encode</remote-id>
+		<remote-id type="cpan-module">TeX::Encode</remote-id>
+		<remote-id type="cpan-module">TeX::Encode::BibTeX</remote-id>
+		<remote-id type="cpan-module">TeX::Encode::charmap</remote-id>
 	</upstream>
 </pkgmetadata>

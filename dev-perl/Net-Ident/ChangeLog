@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Ident
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.29 2011/09/04 11:21:57 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Ident/ChangeLog,v 1.30 2012/06/24 12:59:13 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Net-Ident-1.23.ebuild:
   Cleanup
@@ -103,4 +106,3 @@
   22 Sep 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Net-Ident-1.20.ebuild:
   Optional dependancy for spamassassin 3
-

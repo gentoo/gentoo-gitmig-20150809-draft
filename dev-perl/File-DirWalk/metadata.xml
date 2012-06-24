@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-DirWalk</remote-id>
+    <remote-id type="cpan-module">File::DirWalk</remote-id>
   </upstream>
 </pkgmetadata>

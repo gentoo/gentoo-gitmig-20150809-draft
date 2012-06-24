@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lirc-Client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/ChangeLog,v 1.7 2012/03/29 17:50:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/ChangeLog,v 1.8 2012/06/24 12:59:45 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   29 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   Lirc-Client-1.540.0.ebuild:
@@ -29,4 +32,3 @@
   12 Dec 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
   +Lirc-Client-1.50.ebuild, +Lirc-Client-1.51.ebuild:
   Initial commit, bug 214297, thanks to Jiri Tyr for original ebuilds
-

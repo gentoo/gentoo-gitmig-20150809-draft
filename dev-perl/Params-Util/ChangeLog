@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Params-Util
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/ChangeLog,v 1.94 2012/03/04 13:43:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/ChangeLog,v 1.95 2012/06/24 12:58:19 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Params-Util-1.60.0 (04 Mar 2012)
 
@@ -388,4 +391,3 @@
   23 Nov 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Params-Util-0.07.ebuild:
   New dep for Test-Inline
-

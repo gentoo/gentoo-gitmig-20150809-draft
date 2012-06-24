@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-NFSLock</remote-id>
+    <remote-id type="cpan-module">File::NFSLock</remote-id>
   </upstream>
 </pkgmetadata>

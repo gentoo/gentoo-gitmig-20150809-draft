@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Mail-SPF-Query</remote-id>
+    <remote-id type="cpan-module">DirectiveSet</remote-id>
+    <remote-id type="cpan-module">Mail::SPF::Query</remote-id>
   </upstream>
 </pkgmetadata>

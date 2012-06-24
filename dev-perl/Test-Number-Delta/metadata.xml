@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Test-Number-Delta</remote-id>
+    <remote-id type="cpan-module">Test::Number::Delta</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DelimMatch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.27 2011/08/17 16:44:27 chithanh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DelimMatch/ChangeLog,v 1.28 2012/06/24 13:00:38 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   DelimMatch-1.06.ebuild:
@@ -83,4 +86,3 @@
  
   12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
-

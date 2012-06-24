@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Image-Imlib2</remote-id>
+    <remote-id type="cpan-module">Image::Imlib2</remote-id>
   </upstream>
 </pkgmetadata>

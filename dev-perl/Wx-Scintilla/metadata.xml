@@ -4,5 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Wx-Scintilla</remote-id>
+    <remote-id type="cpan-module">Wx::Scintilla</remote-id>
+    <remote-id type="cpan-module">Wx::Scintilla::Constant</remote-id>
+    <remote-id type="cpan-module">Wx::Scintilla::TextCtrl</remote-id>
+    <remote-id type="cpan-module">Wx::Scintilla::TextEvent</remote-id>
+    <remote-id type="cpan-module">Wx::ScintillaTextCtrl</remote-id>
+    <remote-id type="cpan-module">Wx::ScintillaTextEvent</remote-id>
   </upstream>
 </pkgmetadata>

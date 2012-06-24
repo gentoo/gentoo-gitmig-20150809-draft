@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DateTime-Event-ICal</remote-id>
+    <remote-id type="cpan-module">DateTime::Event::ICal</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Inspector</remote-id>
+    <remote-id type="cpan-module">Class::Inspector</remote-id>
+    <remote-id type="cpan-module">Class::Inspector::Functions</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IPC-ShareLite</remote-id>
+    <remote-id type="cpan-module">IPC::ShareLite</remote-id>
   </upstream>
 </pkgmetadata>

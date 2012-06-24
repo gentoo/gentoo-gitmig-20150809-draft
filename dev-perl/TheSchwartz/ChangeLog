@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TheSchwartz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TheSchwartz/ChangeLog,v 1.15 2012/02/12 18:04:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TheSchwartz/ChangeLog,v 1.16 2012/06/24 12:58:59 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> TheSchwartz-1.100.0.ebuild:
   Drop alpha/ia64/sparc keywords
@@ -55,4 +58,3 @@
   +TheSchwartz-1.07.ebuild, +metadata.xml:
   Initial commit. Extra dependancy for Bugzilla-3.4. Ebuild by Robin H.
   Johnson <robbat2@gentoo.org>.
-

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Any-Moose</remote-id>
+    <remote-id type="cpan-module">Any::Moose</remote-id>
   </upstream>
 </pkgmetadata>

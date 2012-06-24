@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Tree-DAG_Node</remote-id>
+    <remote-id type="cpan-module">Tree::DAG_Node</remote-id>
   </upstream>
 </pkgmetadata>

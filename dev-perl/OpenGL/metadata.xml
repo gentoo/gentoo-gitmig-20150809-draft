@@ -12,5 +12,6 @@
 </longdescription>
 <upstream>
   <remote-id type="cpan">OpenGL</remote-id>
+  <remote-id type="cpan-module">OpenGL</remote-id>
 </upstream>
 </pkgmetadata>

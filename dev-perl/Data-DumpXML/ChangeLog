@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-DumpXML
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.18 2012/06/09 22:11:17 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-DumpXML/ChangeLog,v 1.19 2012/06/24 12:59:49 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   09 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   Data-DumpXML-1.60.0.ebuild:
@@ -65,4 +68,3 @@
 
   20 Feb 2005; <dams@gentoo.org> +Data-DumpXML-1.06.ebuild:
   first gentoo ebuild
-

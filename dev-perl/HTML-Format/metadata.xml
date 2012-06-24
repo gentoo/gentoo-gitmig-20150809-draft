@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">HTML-Format</remote-id>
+    <remote-id type="cpan-module">HTML::FormatPS</remote-id>
+    <remote-id type="cpan-module">HTML::FormatRTF</remote-id>
+    <remote-id type="cpan-module">HTML::FormatText</remote-id>
+    <remote-id type="cpan-module">HTML::Formatter</remote-id>
   </upstream>
 </pkgmetadata>

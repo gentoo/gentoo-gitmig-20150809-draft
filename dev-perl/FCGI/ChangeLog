@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FCGI
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.25 2012/06/17 16:27:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.26 2012/06/24 12:58:59 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> FCGI-0.67.ebuild,
   FCGI-0.71.ebuild, FCGI-0.730.0.ebuild, FCGI-0.740.0.ebuild:
@@ -93,4 +96,3 @@
   25 Aug 2004; Renat Lumpau <rl03@gentoo.org> +metadata.xml,
   +FCGI-0.67.ebuild:
   Initial ebuild. RT dependency. OK'd by mcummings.
-

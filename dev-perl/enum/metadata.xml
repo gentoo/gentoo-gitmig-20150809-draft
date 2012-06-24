@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">enum</remote-id>
+    <remote-id type="cpan-module">enum</remote-id>
   </upstream>
 </pkgmetadata>

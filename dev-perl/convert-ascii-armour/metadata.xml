@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Convert-ASCII-Armour</remote-id>
+    <remote-id type="cpan-module">Convert::ASCII::Armor</remote-id>
+    <remote-id type="cpan-module">Convert::ASCII::Armour</remote-id>
   </upstream>
 </pkgmetadata>

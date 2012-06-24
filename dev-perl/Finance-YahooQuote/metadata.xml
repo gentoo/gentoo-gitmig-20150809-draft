@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Finance-YahooQuote</remote-id>
+    <remote-id type="cpan-module">Finance::YahooQuote</remote-id>
+    <remote-id type="cpan-module">RequestAgent</remote-id>
   </upstream>
 </pkgmetadata>

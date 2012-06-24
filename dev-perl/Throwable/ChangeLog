@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Throwable
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Throwable/ChangeLog,v 1.8 2011/03/27 08:48:58 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Throwable/ChangeLog,v 1.9 2012/06/24 12:59:32 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   27 Mar 2011; Torsten Veller <tove@gentoo.org> Throwable-0.102.80.ebuild:
   Stable on x86 (#358353)
@@ -35,4 +38,3 @@
   12 Jan 2010; Torsten Veller <tove@gentoo.org> +Throwable-0.100090.ebuild,
   +metadata.xml:
   Initial commit for Email-Sender
-

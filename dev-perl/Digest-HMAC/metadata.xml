@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Digest-HMAC</remote-id>
+    <remote-id type="cpan-module">Digest::HMAC</remote-id>
+    <remote-id type="cpan-module">Digest::HMAC_MD5</remote-id>
+    <remote-id type="cpan-module">Digest::HMAC_SHA1</remote-id>
   </upstream>
 </pkgmetadata>

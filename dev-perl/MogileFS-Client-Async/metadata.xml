@@ -8,5 +8,8 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">MogileFS-Client-Async</remote-id>
+    <remote-id type="cpan-module">MogileFS::Client::Async</remote-id>
+    <remote-id type="cpan-module">MogileFS::Client::Callback</remote-id>
+    <remote-id type="cpan-module">MogileFS::Client::CallbackFile</remote-id>
   </upstream>
 </pkgmetadata>

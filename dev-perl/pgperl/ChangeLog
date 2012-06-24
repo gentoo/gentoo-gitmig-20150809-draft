@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/pgperl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/ChangeLog,v 1.14 2012/04/12 17:58:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/ChangeLog,v 1.15 2012/06/24 12:58:44 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   12 Apr 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Fix and comment cpan remote-id in metadata.xml as only old versions are on
@@ -47,4 +50,3 @@
 
   06 Jun 2003; Masatomo Nakano <nakano@gentoo.org> pgperl-2.0.2.ebuild:
   Initial import. Thanks to Junji Shiokawa <junji@fork.co.jp>.
-

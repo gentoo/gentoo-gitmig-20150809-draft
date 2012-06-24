@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-XSAccessor</remote-id>
+    <remote-id type="cpan-module">Class::XSAccessor</remote-id>
+    <remote-id type="cpan-module">Class::XSAccessor::Array</remote-id>
   </upstream>
 </pkgmetadata>

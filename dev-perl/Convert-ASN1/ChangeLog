@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-ASN1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.61 2012/06/10 16:18:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.62 2012/06/24 13:00:13 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Convert-ASN1-0.260.0 (10 Jun 2012)
 

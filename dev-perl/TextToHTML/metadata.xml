@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">txt2html</remote-id>
+    <remote-id type="cpan-module">HTML::TextToHTML</remote-id>
   </upstream>
 </pkgmetadata>

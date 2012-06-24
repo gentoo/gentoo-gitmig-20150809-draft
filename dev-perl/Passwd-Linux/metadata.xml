@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Passwd-Linux</remote-id>
+    <remote-id type="cpan-module">Passwd::Linux</remote-id>
   </upstream>
 </pkgmetadata>

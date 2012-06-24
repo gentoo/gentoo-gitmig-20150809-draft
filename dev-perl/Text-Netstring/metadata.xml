@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Text-Netstring</remote-id>
+    <remote-id type="cpan-module">Text::Netstring</remote-id>
   </upstream>
 </pkgmetadata>

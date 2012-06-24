@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVN-Simple
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.24 2011/09/04 11:21:07 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.25 2012/06/24 12:58:28 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -SVN-Simple-0.27.ebuild:
   Cleanup
@@ -88,4 +91,3 @@
 
   27 Nov 2004; <pclouds@gentoo.org> +metadata.xml, +SVN-Simple-0.26.ebuild:
   New ebuild
-

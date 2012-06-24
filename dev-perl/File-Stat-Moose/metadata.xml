@@ -7,5 +7,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">File-Stat-Moose</remote-id>
+    <remote-id type="cpan-module">Exception::IO</remote-id>
+    <remote-id type="cpan-module">File::Stat::Moose</remote-id>
+    <remote-id type="cpan-module">MooseX::Types::CacheFileHandle</remote-id>
+    <remote-id type="cpan-module">MooseX::Types::OpenHandle</remote-id>
   </upstream>
 </pkgmetadata>

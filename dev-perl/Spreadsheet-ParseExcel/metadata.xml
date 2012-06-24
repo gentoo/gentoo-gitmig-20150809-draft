@@ -4,5 +4,20 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Spreadsheet-ParseExcel</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::Cell</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::Dump</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::FmtDefault</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::FmtJapan</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::FmtJapan2</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::FmtUnicode</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::Font</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::Format</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::SaveParser</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::SaveParser::Workbook</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::SaveParser::Worksheet</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::Utility</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::Workbook</remote-id>
+    <remote-id type="cpan-module">Spreadsheet::ParseExcel::Worksheet</remote-id>
   </upstream>
 </pkgmetadata>

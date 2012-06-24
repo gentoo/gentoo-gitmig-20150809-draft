@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-CUPS</remote-id>
+    <remote-id type="cpan-module">Net::CUPS</remote-id>
+    <remote-id type="cpan-module">Net::CUPS::Destination</remote-id>
+    <remote-id type="cpan-module">Net::CUPS::IPP</remote-id>
+    <remote-id type="cpan-module">Net::CUPS::PPD</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Sub-Name</remote-id>
+    <remote-id type="cpan-module">Sub::Name</remote-id>
   </upstream>
 </pkgmetadata>

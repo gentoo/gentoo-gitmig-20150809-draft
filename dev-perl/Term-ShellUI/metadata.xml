@@ -4,5 +4,7 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Term-ShellUI</remote-id>
+		<remote-id type="cpan-module">Term::ShellUI</remote-id>
+		<remote-id type="cpan-module">Text::Shellwords::Cursor</remote-id>
 	</upstream>
 </pkgmetadata>

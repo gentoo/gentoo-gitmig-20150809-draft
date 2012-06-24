@@ -8,5 +8,9 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">UltraDNS</remote-id>
+    <remote-id type="cpan-module">UltraDNS</remote-id>
+    <remote-id type="cpan-module">UltraDNS::Methods</remote-id>
+    <remote-id type="cpan-module">UltraDNS::Parser</remote-id>
+    <remote-id type="cpan-module">UltraDNS::Type</remote-id>
   </upstream>
 </pkgmetadata>

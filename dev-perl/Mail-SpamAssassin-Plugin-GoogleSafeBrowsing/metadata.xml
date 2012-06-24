@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Mail-SpamAssassin-Plugin-GoogleSafeBrowsing</remote-id>
+    <remote-id type="cpan-module">Mail::SpamAssassin::Plugin::GoogleSafeBrowsing</remote-id>
   </upstream>
 </pkgmetadata>

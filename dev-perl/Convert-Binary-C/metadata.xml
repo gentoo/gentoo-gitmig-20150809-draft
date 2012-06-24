@@ -8,5 +8,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Convert-Binary-C</remote-id>
+    <remote-id type="cpan-module">Convert::Binary::C</remote-id>
+    <remote-id type="cpan-module">Convert::Binary::C::Cached</remote-id>
   </upstream>
 </pkgmetadata>

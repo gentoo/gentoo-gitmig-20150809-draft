@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Server-Starter</remote-id>
+    <remote-id type="cpan-module">Server::Starter</remote-id>
   </upstream>
 </pkgmetadata>

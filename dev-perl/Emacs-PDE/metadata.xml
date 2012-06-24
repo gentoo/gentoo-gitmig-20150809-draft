@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Emacs-PDE</remote-id>
+    <remote-id type="cpan-module">Emacs::PDE</remote-id>
+    <remote-id type="cpan-module">Emacs::PDE::Util</remote-id>
   </upstream>
 </pkgmetadata>

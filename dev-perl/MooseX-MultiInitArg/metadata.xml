@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">MooseX-MultiInitArg</remote-id>
+    <remote-id type="cpan-module">MooseX::MultiInitArg</remote-id>
+    <remote-id type="cpan-module">MooseX::MultiInitArg::Attribute</remote-id>
+    <remote-id type="cpan-module">MooseX::MultiInitArg::Trait</remote-id>
   </upstream>
 </pkgmetadata>

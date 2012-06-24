@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">namespace-clean</remote-id>
+    <remote-id type="cpan-module">namespace::clean</remote-id>
   </upstream>
 </pkgmetadata>

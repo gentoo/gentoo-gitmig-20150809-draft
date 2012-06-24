@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Hash-Merge</remote-id>
+    <remote-id type="cpan-module">Hash::Merge</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Filesys-Df</remote-id>
+    <remote-id type="cpan-module">Filesys::Df</remote-id>
   </upstream>
 </pkgmetadata>

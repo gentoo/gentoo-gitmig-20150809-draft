@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Config-Simple</remote-id>
+    <remote-id type="cpan-module">Config::Simple</remote-id>
   </upstream>
 </pkgmetadata>

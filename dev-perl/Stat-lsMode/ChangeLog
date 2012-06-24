@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Stat-lsMode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Stat-lsMode/ChangeLog,v 1.20 2011/09/04 11:21:11 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Stat-lsMode/ChangeLog,v 1.21 2012/06/24 13:00:16 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Stat-lsMode-0.50.ebuild:
   Cleanup
@@ -70,4 +73,3 @@
   Initial import of Stat-lsMode submitted by Sven Wegener
   <sven.wegener@stealer.net> as a dependency for the yet to be added
   app-misc/filer. Thanks to Sven Wegener. Part of bug #41605.
-

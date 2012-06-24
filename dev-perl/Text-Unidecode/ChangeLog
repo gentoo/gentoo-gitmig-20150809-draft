@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Unidecode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.19 2012/05/28 16:40:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unidecode/ChangeLog,v 1.20 2012/06/24 12:58:11 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> Text-Unidecode-0.40.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #414929
@@ -63,4 +66,3 @@
   30 Jun 2009; Torsten Veller <tove@gentoo.org> +Text-Unidecode-0.04.ebuild,
   +metadata.xml:
   Initial commit (#275939)
-

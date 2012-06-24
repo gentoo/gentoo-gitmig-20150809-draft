@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DBIx-ContextualFetch</remote-id>
+    <remote-id type="cpan-module">DBIx::ContextualFetch</remote-id>
+    <remote-id type="cpan-module">DBIx::ContextualFetch::db</remote-id>
+    <remote-id type="cpan-module">DBIx::ContextualFetch::st</remote-id>
   </upstream>
 </pkgmetadata>

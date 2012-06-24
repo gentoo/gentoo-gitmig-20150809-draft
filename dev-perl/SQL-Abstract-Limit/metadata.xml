@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">SQL-Abstract-Limit</remote-id>
+    <remote-id type="cpan-module">SQL::Abstract::Limit</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Devel-Size</remote-id>
+    <remote-id type="cpan-module">Devel::Size</remote-id>
   </upstream>
 </pkgmetadata>

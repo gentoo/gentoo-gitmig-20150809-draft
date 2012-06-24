@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Schedule-At</remote-id>
+    <remote-id type="cpan-module">Schedule::At</remote-id>
   </upstream>
 </pkgmetadata>

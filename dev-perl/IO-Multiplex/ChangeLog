@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.37 2012/02/02 20:54:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.38 2012/06/24 12:58:33 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   02 Feb 2012; Brent Baude <ranger@gentoo.org> IO-Multiplex-1.130.0.ebuild:
   Marking IO-Multiplex-1.130.0 ppc for bug 393743
@@ -138,4 +141,3 @@
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +IO-Multiplex-1.08.ebuild:
   Bug 90775 for ticho :)
-

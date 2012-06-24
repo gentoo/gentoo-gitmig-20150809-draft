@@ -8,5 +8,12 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">DateTime-Format-Builder</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Builder</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Builder::Parser</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Builder::Parser::Dispatch</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Builder::Parser::Quick</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Builder::Parser::Regex</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Builder::Parser::Strptime</remote-id>
+    <remote-id type="cpan-module">DateTime::Format::Builder::Parser::generic</remote-id>
   </upstream>
 </pkgmetadata>

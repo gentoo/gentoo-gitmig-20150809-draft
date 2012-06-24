@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-ErrorHandler</remote-id>
+    <remote-id type="cpan-module">Class::ErrorHandler</remote-id>
   </upstream>
 </pkgmetadata>

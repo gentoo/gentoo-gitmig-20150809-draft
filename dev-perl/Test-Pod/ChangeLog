@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Pod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.69 2012/04/28 02:42:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.70 2012/06/24 12:58:44 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org> Test-Pod-1.450.0.ebuild:
   keyword ~amd64-fbsd
@@ -248,4 +251,3 @@
   16 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
   Test-Pod-1.08.ebuild, metadata.xml:
   Test-Pod is a dep for XML::Twig
-

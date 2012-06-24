@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-ShareDir</remote-id>
+    <remote-id type="cpan-module">File::ShareDir</remote-id>
   </upstream>
 </pkgmetadata>

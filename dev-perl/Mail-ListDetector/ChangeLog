@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-ListDetector
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.27 2012/06/17 14:10:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.28 2012/06/24 12:59:41 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org>
   Mail-ListDetector-1.40.0.ebuild:
@@ -114,4 +117,3 @@
   20 Aug 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Mail-ListDetector-0.34.ebuild:
   Dep for Mail-Audit
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DNS-Resolver-Programmable
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.17 2011/12/20 11:39:49 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.18 2012/06/24 13:00:39 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   20 Dec 2011; Naohiro Aota <naota@gentoo.org>
   Net-DNS-Resolver-Programmable-0.3.0.ebuild:
@@ -73,4 +76,3 @@
   10 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
   +Net-DNS-Resolver-Programmable-0.003.ebuild, +metadata.xml:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

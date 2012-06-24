@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Virtual</remote-id>
+    <remote-id type="cpan-module">Class::Virtual</remote-id>
+    <remote-id type="cpan-module">Class::Virtually::Abstract</remote-id>
   </upstream>
 </pkgmetadata>

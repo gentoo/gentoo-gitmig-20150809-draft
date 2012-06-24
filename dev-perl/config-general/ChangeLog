@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/config-general
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.76 2012/03/31 07:36:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.77 2012/06/24 13:00:00 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -config-general-2.49.ebuild:
   Cleanup
@@ -305,4 +308,3 @@
   config-general-2.21.ebuild:
   Original ebuild submitted in bug 27233 by Janne Pikkarainen
   <jaba@mikrobitti.fi>
-

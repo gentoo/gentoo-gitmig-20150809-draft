@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Statistics-Descriptive-Discrete</remote-id>
+    <remote-id type="cpan-module">Statistics::Descriptive::Discrete</remote-id>
   </upstream>
 </pkgmetadata>

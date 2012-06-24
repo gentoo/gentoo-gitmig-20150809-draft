@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-Syscall
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Syscall/ChangeLog,v 1.8 2011/09/05 18:19:47 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Syscall/ChangeLog,v 1.9 2012/06/24 12:59:25 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   05 Sep 2011; Torsten Veller <tove@gentoo.org> -Sys-Syscall-0.22.ebuild,
   -Sys-Syscall-0.23.ebuild, Sys-Syscall-0.230.0.ebuild:
@@ -39,4 +42,3 @@
   package CAN be hardware specific. As of 0.22 it should support x86_64, ppc,
   ppc64, ia64, alpha and i386. Other arches are advised to check the source to
   ensure that the correct syscall numbers are used.
-

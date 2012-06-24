@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Math-Random-ISAAC-XS</remote-id>
+		<remote-id type="cpan-module">Math::Random::ISAAC::XS</remote-id>
 	</upstream>
 </pkgmetadata>

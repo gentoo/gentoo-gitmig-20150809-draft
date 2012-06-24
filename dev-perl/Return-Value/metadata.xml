@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Return-Value</remote-id>
+    <remote-id type="cpan-module">Return::Value</remote-id>
   </upstream>
 </pkgmetadata>

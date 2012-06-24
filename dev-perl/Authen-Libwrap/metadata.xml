@@ -3,10 +3,11 @@
 <pkgmetadata>
   <herd>perl</herd>
   <maintainer>
-  	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
+    <email>hwoarang@gentoo.org</email>
+    <name>Markos Chandras</name>
   </maintainer>
   <upstream>
     <remote-id type="cpan">Authen-Libwrap</remote-id>
+    <remote-id type="cpan-module">Authen::Libwrap</remote-id>
   </upstream>
 </pkgmetadata>

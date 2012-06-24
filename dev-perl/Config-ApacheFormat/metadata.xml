@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Config-ApacheFormat</remote-id>
+    <remote-id type="cpan-module">Config::ApacheFormat</remote-id>
   </upstream>
 </pkgmetadata>

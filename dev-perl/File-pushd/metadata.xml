@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-pushd</remote-id>
+    <remote-id type="cpan-module">File::pushd</remote-id>
   </upstream>
 </pkgmetadata>

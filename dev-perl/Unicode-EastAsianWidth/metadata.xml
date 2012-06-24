@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Unicode-EastAsianWidth</remote-id>
+		<remote-id type="cpan-module">Unicode::EastAsianWidth</remote-id>
 	</upstream>
 </pkgmetadata>

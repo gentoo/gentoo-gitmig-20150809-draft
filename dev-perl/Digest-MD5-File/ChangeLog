@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-MD5-File
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5-File/ChangeLog,v 1.4 2012/04/09 07:34:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5-File/ChangeLog,v 1.5 2012/06/24 13:00:04 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Digest-MD5-File-0.80.0 (09 Apr 2012)
 
@@ -24,4 +27,3 @@
   06 Oct 2009; Michele Beltrame <m@cattlegrid.info>
   +Digest-MD5-File-0.07.ebuild:
   Initial import
-

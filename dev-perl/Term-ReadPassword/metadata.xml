@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Term-ReadPassword</remote-id>
+    <remote-id type="cpan-module">Term::ReadPassword</remote-id>
   </upstream>
 </pkgmetadata>

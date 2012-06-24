@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">IPC-Run3</remote-id>
+    <remote-id type="cpan-module">IPC::Run3</remote-id>
   </upstream>
 </pkgmetadata>

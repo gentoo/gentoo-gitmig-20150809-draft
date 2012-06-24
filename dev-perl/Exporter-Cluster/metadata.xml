@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Exporter-Cluster</remote-id>
+    <remote-id type="cpan-module">Exporter::Cluster</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-CPU
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.20 2012/03/17 17:54:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.21 2012/06/24 12:59:00 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   17 Mar 2012; Raúl Porcel <armin76@gentoo.org> Sys-CPU-0.520.0.ebuild:
   sparc stable wrt #356387
@@ -65,4 +68,3 @@
   04 Dec 2009; Benedikt Böhm <hollow@gentoo.org> +Sys-CPU-0.51.ebuild,
   +metadata.xml:
   initial ebuild. required by sys-apps/logwatch
-

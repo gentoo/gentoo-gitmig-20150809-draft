@@ -4,5 +4,8 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Config-Grammar</remote-id>
+		<remote-id type="cpan-module">Config::Grammar</remote-id>
+		<remote-id type="cpan-module">Config::Grammar::Document</remote-id>
+		<remote-id type="cpan-module">Config::Grammar::Dynamic</remote-id>
 	</upstream>
 </pkgmetadata>

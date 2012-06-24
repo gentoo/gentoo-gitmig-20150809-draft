@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">ParaDNS</remote-id>
+    <remote-id type="cpan-module">ParaDNS</remote-id>
+    <remote-id type="cpan-module">ParaDNS::Resolver</remote-id>
+    <remote-id type="cpan-module">ParaDNS::Resolver::Query</remote-id>
   </upstream>
 </pkgmetadata>

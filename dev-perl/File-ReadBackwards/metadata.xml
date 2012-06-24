@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-ReadBackwards</remote-id>
+    <remote-id type="cpan-module">File::ReadBackwards</remote-id>
   </upstream>
 </pkgmetadata>

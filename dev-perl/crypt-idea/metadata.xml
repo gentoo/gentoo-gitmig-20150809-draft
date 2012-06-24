@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Crypt-IDEA</remote-id>
+    <remote-id type="cpan-module">Crypt::IDEA</remote-id>
+    <remote-id type="cpan-module">IDEA</remote-id>
   </upstream>
 </pkgmetadata>

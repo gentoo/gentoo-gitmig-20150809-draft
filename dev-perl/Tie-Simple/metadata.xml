@@ -8,5 +8,11 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Tie-Simple</remote-id>
+    <remote-id type="cpan-module">Tie::Simple</remote-id>
+    <remote-id type="cpan-module">Tie::Simple::Array</remote-id>
+    <remote-id type="cpan-module">Tie::Simple::Handle</remote-id>
+    <remote-id type="cpan-module">Tie::Simple::Hash</remote-id>
+    <remote-id type="cpan-module">Tie::Simple::Scalar</remote-id>
+    <remote-id type="cpan-module">Tie::Simple::Util</remote-id>
   </upstream>
 </pkgmetadata>

@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Tie-Sub</remote-id>
+    <remote-id type="cpan-module">Tie::Sub</remote-id>
   </upstream>
 </pkgmetadata>

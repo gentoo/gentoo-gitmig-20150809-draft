@@ -8,5 +8,8 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Linux-Inotify2</remote-id>
+    <remote-id type="cpan-module">Linux::Inotify2</remote-id>
+    <remote-id type="cpan-module">Linux::Inotify2::Event</remote-id>
+    <remote-id type="cpan-module">Linux::Inotify2::Watch</remote-id>
   </upstream>
 </pkgmetadata>

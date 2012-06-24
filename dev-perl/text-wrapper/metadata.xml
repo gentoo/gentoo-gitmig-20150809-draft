@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Wrapper</remote-id>
+    <remote-id type="cpan-module">Text::Wrapper</remote-id>
   </upstream>
 </pkgmetadata>

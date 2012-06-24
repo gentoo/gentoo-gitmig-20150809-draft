@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Devel-Cycle</remote-id>
+    <remote-id type="cpan-module">Devel::Cycle</remote-id>
   </upstream>
 </pkgmetadata>

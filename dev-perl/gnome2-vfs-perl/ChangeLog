@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.53 2012/05/04 04:10:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.54 2012/06/24 12:59:09 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome2-vfs-perl-1.81.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -222,4 +225,3 @@
   Initial check in - this is a dependancy for the current stable gnome2-perl.
   The vfs.typemap in files/ contains a two line addition that allows this to
   build correctly. I've submitted a bug via CPAN for this, #4787.
-

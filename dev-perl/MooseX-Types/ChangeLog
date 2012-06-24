@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MooseX-Types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.30 2012/05/19 13:45:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.31 2012/06/24 13:00:00 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *MooseX-Types-0.350.0 (19 May 2012)
 
@@ -152,4 +155,3 @@
 
   19 Apr 2009; Michele Beltrame <mb@cattlegrid.info>:
   Initial
-

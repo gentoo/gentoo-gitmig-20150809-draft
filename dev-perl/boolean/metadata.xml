@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">boolean</remote-id>
+    <remote-id type="cpan-module">boolean</remote-id>
   </upstream>
 </pkgmetadata>

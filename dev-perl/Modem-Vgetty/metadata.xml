@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Modem-Vgetty</remote-id>
+    <remote-id type="cpan-module">Modem::Vgetty</remote-id>
   </upstream>
 </pkgmetadata>

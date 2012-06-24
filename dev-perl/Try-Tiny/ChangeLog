@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.33 2012/04/21 18:31:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.34 2012/06/24 13:00:14 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   21 Apr 2012; Torsten Veller <tove@gentoo.org> -Try-Tiny-0.90.0.ebuild:
   Cleanup
@@ -118,4 +121,3 @@
   17 Sep 2009; Torsten Veller <tove@gentoo.org> +Try-Tiny-0.02.ebuild,
   +metadata.xml:
   Initial commit
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SQL-Abstract-Limit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/ChangeLog,v 1.9 2011/09/04 11:23:52 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/ChangeLog,v 1.10 2012/06/24 12:58:27 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -SQL-Abstract-Limit-0.141-r1.ebuild:
@@ -48,4 +51,3 @@
   +SQL-Abstract-Limit-0.12.ebuild:
   New ebuild by Robin H. Johnson <robbat2@gentoo.org>. Dependancy for
   OpenSRF/Evergreen.
-

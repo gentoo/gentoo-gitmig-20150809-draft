@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Format-Human-Bytes</remote-id>
+    <remote-id type="cpan-module">Format::Human::Bytes</remote-id>
   </upstream>
 </pkgmetadata>

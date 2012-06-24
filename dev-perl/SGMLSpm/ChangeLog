@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.46 2012/06/03 17:38:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.47 2012/06/24 13:00:04 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   03 Jun 2012; Torsten Veller <tove@gentoo.org> -SGMLSpm-1.03-r5.ebuild,
   -files/SGMLSpm-1.03-Makefile:
@@ -155,4 +158,3 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
-

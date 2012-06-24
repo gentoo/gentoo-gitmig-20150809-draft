@@ -8,6 +8,6 @@
 </maintainer>
 <upstream>
 	<remote-id type="cpan">Getopt-GUI-Long</remote-id>
+	<remote-id type="cpan-module">Getopt::GUI::Long</remote-id>
 </upstream>
 </pkgmetadata>
-

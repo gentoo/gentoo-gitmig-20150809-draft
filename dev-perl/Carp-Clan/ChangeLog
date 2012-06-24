@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.49 2011/09/04 11:23:22 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.50 2012/06/24 12:58:53 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Carp-Clan-6.04.ebuild:
   Cleanup
@@ -175,4 +178,3 @@
   18 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Carp-Clan-5.3.ebuild:
   new dep for Bit-Vector. Only adding testable archs
-

@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Spiffy</remote-id>
+    <remote-id type="cpan-module">DB</remote-id>
+    <remote-id type="cpan-module">Spiffy</remote-id>
   </upstream>
 </pkgmetadata>

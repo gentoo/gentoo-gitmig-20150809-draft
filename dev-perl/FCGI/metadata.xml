@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">FCGI</remote-id>
+    <remote-id type="cpan-module">FCGI</remote-id>
   </upstream>
 </pkgmetadata>

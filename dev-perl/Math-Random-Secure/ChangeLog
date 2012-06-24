@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-Random-Secure
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random-Secure/ChangeLog,v 1.7 2012/03/01 16:17:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random-Secure/ChangeLog,v 1.8 2012/06/24 12:59:01 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)
@@ -32,4 +35,3 @@
   25 Jan 2011; Torsten Veller <tove@gentoo.org>
   +Math-Random-Secure-0.60.ebuild, +metadata.xml:
   Initial commit for bugzilla
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Random
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.11 2012/03/31 16:50:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.12 2012/06/24 12:59:58 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> Data-Random-0.60.0.ebuild:
   Drop jsonmeta call from Makefile.PL to avoid dev-perl/YAML-Tiny dependency
@@ -41,4 +44,3 @@
   15 Jan 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Data-Random-0.05.ebuild:
   Initial import, bug 161229
-

@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Sane</remote-id>
+    <remote-id type="cpan-module">Sane</remote-id>
+    <remote-id type="cpan-module">Sane::Device</remote-id>
+    <remote-id type="cpan-module">Sane::Status</remote-id>
   </upstream>
 </pkgmetadata>

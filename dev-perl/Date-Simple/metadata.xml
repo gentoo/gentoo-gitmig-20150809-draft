@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Date-Simple</remote-id>
+    <remote-id type="cpan-module">Date::Simple</remote-id>
+    <remote-id type="cpan-module">Date::Simple::D8</remote-id>
+    <remote-id type="cpan-module">Date::Simple::Fmt</remote-id>
+    <remote-id type="cpan-module">Date::Simple::ISO</remote-id>
   </upstream>
 </pkgmetadata>

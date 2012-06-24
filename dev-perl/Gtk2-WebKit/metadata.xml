@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Gtk2-WebKit</remote-id>
+    <remote-id type="cpan-module">Gtk2::WebKit</remote-id>
   </upstream>
 </pkgmetadata>

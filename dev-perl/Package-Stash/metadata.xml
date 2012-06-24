@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Package-Stash</remote-id>
+    <remote-id type="cpan-module">Package::Stash</remote-id>
+    <remote-id type="cpan-module">Package::Stash::PP</remote-id>
   </upstream>
 </pkgmetadata>

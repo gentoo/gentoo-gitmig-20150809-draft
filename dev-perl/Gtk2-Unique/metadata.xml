@@ -6,9 +6,8 @@
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
 </maintainer>
-<longdescription lang="en">
-</longdescription>
-        <upstream>
-                <remote-id type="cpan">Gtk2-Unique</remote-id>
-        </upstream>
+<upstream>
+<remote-id type="cpan">Gtk2-Unique</remote-id>
+<remote-id type="cpan-module">Gtk2::Unique</remote-id>
+</upstream>
 </pkgmetadata>

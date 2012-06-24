@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Module-Refresh</remote-id>
+    <remote-id type="cpan-module">Module::Refresh</remote-id>
   </upstream>
 </pkgmetadata>

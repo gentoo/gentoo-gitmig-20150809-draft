@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Expect
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.21 2011/09/04 11:21:15 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.22 2012/06/24 12:58:25 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Expect-1.21.ebuild:
   Cleanup
@@ -81,4 +84,3 @@
 
   03 Apr 2006; <mcumming@gentoo.org> +metadata.xml, +Expect-1.15.ebuild:
   Deps for mon
-

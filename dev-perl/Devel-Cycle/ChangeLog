@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Cycle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.29 2012/03/31 07:28:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.30 2012/06/24 13:00:01 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   31 Mar 2012; Torsten Veller <tove@gentoo.org> -Devel-Cycle-1.07.ebuild:
   Cleanup
@@ -117,4 +120,3 @@
   05 Dec 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Devel-Cycle-1.02.ebuild:
   Dep for Test-Memory-Cycle
-

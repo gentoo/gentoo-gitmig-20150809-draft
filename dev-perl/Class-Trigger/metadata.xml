@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-Trigger</remote-id>
+    <remote-id type="cpan-module">Class::Trigger</remote-id>
   </upstream>
 </pkgmetadata>

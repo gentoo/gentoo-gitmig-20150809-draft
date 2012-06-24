@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-GDOME
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.30 2012/05/04 04:10:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.31 2012/06/24 12:59:18 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> XML-GDOME-0.860.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -106,4 +109,3 @@
 
   03 Oct 2003; Michael Cummings <mcummings@gentoo.org> XML-GDOME-0.83.ebuild:
   Dependancy for XML-LibXML-XPathContext, a dep for xml-xsh
-

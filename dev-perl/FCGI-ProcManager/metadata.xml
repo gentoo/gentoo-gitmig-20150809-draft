@@ -7,5 +7,7 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">FCGI-ProcManager</remote-id>
+    <remote-id type="cpan-module">FCGI::ProcManager</remote-id>
+    <remote-id type="cpan-module">FCGI::ProcManager::Constrained</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">MD5</remote-id>
+    <remote-id type="cpan-module">MD5</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">CDDB-File</remote-id>
+    <remote-id type="cpan-module">CDDB::File</remote-id>
+    <remote-id type="cpan-module">CDDB::File::Track</remote-id>
   </upstream>
 </pkgmetadata>
