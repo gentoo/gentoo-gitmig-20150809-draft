@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.2.1.ebuild,v 1.2 2012/06/23 11:17:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.2.1.ebuild,v 1.3 2012/06/24 10:37:43 ago Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/mira-assembler/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 CDEPEND=">=dev-libs/boost-1.41.0-r3
 	dev-util/google-perftools"
