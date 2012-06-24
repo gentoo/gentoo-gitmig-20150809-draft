@@ -1,26 +1,28 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.5.ebuild,v 1.1 2011/07/10 00:51:10 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.6.ebuild,v 1.1 2012/06/24 12:22:55 sbriesen Exp $
 
-EAPI="2"
+EAPI="4"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
 DESCRIPTION="Python module for DNS (Domain Name Service)"
 HOMEPAGE="http://pydns.sourceforge.net/ http://pypi.python.org/pypi/pydns"
-SRC_URI="http://downloads.sourceforge.net/project/${PN}/${PN}/${P}/${P}.tar.gz"
+SRC_URI="http://downloads.sourceforge.net/project/pydns/pydns/${P}/${P}.tar.gz"
 
 LICENSE="CNRI"
-SLOT="0"
+SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND="virtual/libiconv"
+DEPEND="!dev-python/pydns:0
+	virtual/libiconv"
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
-DOCS="CREDITS.txt"
+DOCS="CREDITS"
 PYTHON_MODNAME="DNS"
 
 src_prepare() {
@@ -30,10 +32,15 @@ src_prepare() {
 	done
 
 	# Don't compile bytecode.
-	sed -i -e 's:^\(compile\).*:\1 = 0:g' -e 's:^\(optimize\).*:\1 = 0:g' setup.cfg
+	sed -i -e 's:^\(compile\|optimize\).*:\1 = 0:g' setup.cfg
 
 	# Fix Python shebangs in examples.
-	sed -i -e 's:#!/.*\(python\).*/*$:#!/usr/bin/\12:g' {tests,tools}/*.py
+	python_convert_shebangs -r 2 .
+
+	# cleanup docs
+	rm -f -- "README-guido.txt"
+	mv -f -- "README.txt" "README"
+	mv -f -- "CREDITS.txt" "CREDITS"
 }
 
 src_install(){
@@ -41,6 +48,7 @@ src_install(){
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
+		docompress -x /usr/share/doc/${PF}/examples
 		doins tests/*.py tools/*.py
 	fi
 }
