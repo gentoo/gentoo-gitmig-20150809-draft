@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.9.ebuild,v 1.8 2012/03/17 17:38:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.10.ebuild,v 1.1 2012/06/24 03:34:36 dirtyepic Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 
 LICENSE="FTL GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="X auto-hinter bindist bzip2 debug doc fontforge static-libs utils"
 
 DEPEND="sys-libs/zlib
@@ -30,7 +30,7 @@ src_prepare() {
 		sed -i -e "/#define $1/a #define $1" \
 			include/freetype/config/ftoption.h \
 			|| die "unable to enable option $1"
-	}
+}
 
 	disable_option() {
 		sed -i -e "/#define $1/ { s:^:/*:; s:$:*/: }" \
@@ -94,6 +94,7 @@ src_compile() {
 	emake
 
 	if use utils; then
+		einfo "Building utils"
 		cd "${WORKDIR}/ft2demos-${PV}"
 		# fix for Prefix, bug #339334
 		emake X11_PATH="${EPREFIX}/usr/$(get_libdir)"
@@ -103,12 +104,8 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	dodoc ChangeLog README
-	dodoc docs/{CHANGES,CUSTOMIZE,DEBUG,*.txt,PROBLEMS,TODO}
-
-	use doc && dohtml -r docs/*
-
 	if use utils; then
+		einfo "Installing utils"
 		rm "${WORKDIR}"/ft2demos-${PV}/bin/README
 		for ft2demo in ../ft2demos-${PV}/bin/*; do
 			./builds/unix/libtool --mode=install $(type -P install) -m 755 "$ft2demo" \
@@ -125,10 +122,12 @@ src_install() {
 			cp ${header} "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})"
 		done
 	fi
-}
 
-pkg_postinst() {
-	elog "The TrueType bytecode interpreter is no longer patented and thus no"
-	elog "longer controlled by the bindist USE flag.  Enable the auto-hinter"
-	elog "USE flag if you want the old USE="bindist" hinting behavior."
+	prune_libtool_files
+
+	dodoc ChangeLog README
+	dodoc docs/{CHANGES,CUSTOMIZE,DEBUG,*.txt,PROBLEMS,TODO}
+
+	use doc && dohtml -r docs/*
+
 }
