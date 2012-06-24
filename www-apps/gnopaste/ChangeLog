@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gnopaste
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.6 2008/02/23 22:28:20 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/ChangeLog,v 1.7 2012/06/24 08:59:57 mabi Exp $
+
+  24 Jun 2012; Matti Bickel <mabi@gentoo.org> gnopaste-0.5.5.ebuild:
+  update to EAPI4 and get rid of depend.php on the way
 
   23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   gnopaste-0.5.5.ebuild:

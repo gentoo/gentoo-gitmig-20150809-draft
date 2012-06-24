@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/gnopaste-0.5.5.ebuild,v 1.5 2008/02/23 22:28:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gnopaste/gnopaste-0.5.5.ebuild,v 1.6 2012/06/24 08:59:57 mabi Exp $
 
-inherit webapp depend.php eutils
+EAPI=4
+
+inherit webapp eutils
 
 DESCRIPTION="gnopaste is a nopaste script based on PHP with MySQL"
 HOMEPAGE="http://gnopaste.sf.net/"
@@ -12,18 +14,13 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
+RDEPEND="virtual/httpd-php
+	dev-lang/php[mysql]"
+
 need_httpd_cgi
-need_php_httpd
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	esvn_clean
-}
-
-pkg_setup() {
-	require_php_with_use mysql
-	webapp_pkg_setup
 }
 
 src_install() {
