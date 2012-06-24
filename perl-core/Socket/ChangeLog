@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Socket
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Socket/ChangeLog,v 1.1 2012/06/16 20:12:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Socket/ChangeLog,v 1.2 2012/06/24 15:39:03 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   16 Jun 2012; Torsten Veller <tove@gentoo.org> +Socket-2.1.0.ebuild,
   +Socket-2.2.0.ebuild, +metadata.xml:
@@ -29,4 +32,3 @@
   05 Dec 2011; Kent Fredric <kentfredric@gmail.com> +Socket-1.950.0.ebuild,
   +metadata.xml:
   Added as is newer than core and needed
-

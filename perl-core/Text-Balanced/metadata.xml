@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Text-Balanced</remote-id>
+    <remote-id type="cpan-module">Text::Balanced</remote-id>
+    <remote-id type="cpan-module">Text::Balanced::ErrorMsg</remote-id>
+    <remote-id type="cpan-module">Text::Balanced::Extractor</remote-id>
   </upstream>
 </pkgmetadata>

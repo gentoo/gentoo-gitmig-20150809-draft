@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">XSLoader</remote-id>
+    <remote-id type="cpan-module">DynaLoader</remote-id>
+    <remote-id type="cpan-module">XSLoader</remote-id>
   </upstream>
 </pkgmetadata>

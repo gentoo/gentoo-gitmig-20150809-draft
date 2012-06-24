@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Locale-Maketext-Simple</remote-id>
+    <remote-id type="cpan-module">Locale::Maketext::Simple</remote-id>
   </upstream>
 </pkgmetadata>

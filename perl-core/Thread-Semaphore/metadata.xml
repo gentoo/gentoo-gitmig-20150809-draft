@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Thread-Semaphore</remote-id>
+    <remote-id type="cpan-module">Thread::Semaphore</remote-id>
   </upstream>
 </pkgmetadata>

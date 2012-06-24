@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">parent</remote-id>
+    <remote-id type="cpan-module">parent</remote-id>
   </upstream>
 </pkgmetadata>

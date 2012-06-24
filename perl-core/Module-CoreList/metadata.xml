@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="cpan">Module-CoreList</remote-id>
+    <remote-id type="cpan-module">Module::CoreList</remote-id>
   </upstream>
 </pkgmetadata>

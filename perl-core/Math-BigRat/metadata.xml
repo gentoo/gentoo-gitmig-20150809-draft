@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Math-BigRat</remote-id>
+    <remote-id type="cpan-module">Math::BigRat</remote-id>
   </upstream>
 </pkgmetadata>

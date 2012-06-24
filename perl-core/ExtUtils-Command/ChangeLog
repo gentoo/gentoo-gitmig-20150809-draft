@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/ExtUtils-Command
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Command/ChangeLog,v 1.20 2012/04/28 02:39:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Command/ChangeLog,v 1.21 2012/06/24 15:39:03 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   ExtUtils-Command-1.170.0.ebuild:
@@ -81,4 +84,3 @@
   29 Apr 2010; Torsten Veller <tove@gentoo.org>
   +ExtUtils-Command-1.16.ebuild, +metadata.xml:
   Import from perl-experimental for ExtUtils-MakeMaker
-

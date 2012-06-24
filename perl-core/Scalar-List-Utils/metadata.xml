@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Scalar-List-Utils</remote-id>
+    <remote-id type="cpan-module">List::Util</remote-id>
+    <remote-id type="cpan-module">List::Util::XS</remote-id>
+    <remote-id type="cpan-module">Scalar::Util</remote-id>
   </upstream>
 </pkgmetadata>

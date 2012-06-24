@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-Ping</remote-id>
+    <remote-id type="cpan-module">Net::Ping</remote-id>
   </upstream>
 </pkgmetadata>

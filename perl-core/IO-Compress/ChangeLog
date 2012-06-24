@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO-Compress
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Compress/ChangeLog,v 1.47 2012/05/02 13:59:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Compress/ChangeLog,v 1.48 2012/06/24 15:39:02 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *IO-Compress-2.52.0 (02 May 2012)
 
@@ -201,4 +204,3 @@
   +IO-Compress-2.017.ebuild:
   Initial commit. IO-Compress replaces Compress-Zlib, IO-Compress-Zlib,
   IO-Compress-Bzip2 and IO-Compress-Base
-

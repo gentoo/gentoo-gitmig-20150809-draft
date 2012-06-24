@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-CoreList
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.47 2012/05/21 03:42:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.48 2012/06/24 15:39:05 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Module-CoreList-2.660.0 (21 May 2012)
 
@@ -243,4 +246,3 @@
   23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
   +Module-CoreList-2.17.ebuild, +metadata.xml:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

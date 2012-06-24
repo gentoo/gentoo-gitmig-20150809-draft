@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/digest-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.50 2012/05/05 23:23:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/ChangeLog,v 1.51 2012/06/24 15:39:01 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> digest-base-1.170.0.ebuild:
   keyword ~amd64-fbsd
@@ -239,4 +242,3 @@
   24 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
   digest-base-1.05.ebuild, metadata.xml:
   New dep for Digest-MD5
-

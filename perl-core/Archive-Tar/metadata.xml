@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Archive-Tar</remote-id>
+    <remote-id type="cpan-module">Archive::Tar</remote-id>
+    <remote-id type="cpan-module">Archive::Tar::Constant</remote-id>
+    <remote-id type="cpan-module">Archive::Tar::File</remote-id>
   </upstream>
 </pkgmetadata>

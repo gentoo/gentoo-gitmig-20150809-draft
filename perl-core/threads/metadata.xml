@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">threads</remote-id>
+    <remote-id type="cpan-module">threads</remote-id>
   </upstream>
 </pkgmetadata>

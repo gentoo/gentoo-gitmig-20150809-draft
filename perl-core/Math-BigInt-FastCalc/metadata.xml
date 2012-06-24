@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Math-BigInt-FastCalc</remote-id>
+    <remote-id type="cpan-module">Math::BigInt::FastCalc</remote-id>
   </upstream>
 </pkgmetadata>

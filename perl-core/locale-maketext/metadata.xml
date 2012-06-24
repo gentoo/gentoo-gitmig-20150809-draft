@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Locale-Maketext</remote-id>
+    <remote-id type="cpan-module">Locale::Maketext</remote-id>
+    <remote-id type="cpan-module">Locale::Maketext::Guts</remote-id>
+    <remote-id type="cpan-module">Locale::Maketext::GutsLoader</remote-id>
   </upstream>
 </pkgmetadata>

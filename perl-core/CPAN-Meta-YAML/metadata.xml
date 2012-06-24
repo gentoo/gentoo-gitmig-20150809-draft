@@ -4,5 +4,6 @@
 	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">CPAN-Meta-YAML</remote-id>
+		<remote-id type="cpan-module">CPAN::Meta::YAML</remote-id>
 	</upstream>
 </pkgmetadata>

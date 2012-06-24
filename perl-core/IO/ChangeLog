@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.31 2012/04/28 02:36:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.32 2012/06/24 15:38:57 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   28 Apr 2012; Alexis Ballier <aballier@gentoo.org> IO-1.25.ebuild:
   keyword ~amd64-fbsd
@@ -103,4 +106,3 @@
   06 Nov 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +IO-1.23.01.ebuild:
   New dep for Test-Class - requires newer version than shipped with perl
-

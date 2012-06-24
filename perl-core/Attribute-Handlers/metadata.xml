@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Attribute-Handlers</remote-id>
+    <remote-id type="cpan-module">Attribute::Handlers</remote-id>
+    <remote-id type="cpan-module">Demo</remote-id>
+    <remote-id type="cpan-module">Descriptions</remote-id>
+    <remote-id type="cpan-module">MyClass</remote-id>
   </upstream>
 </pkgmetadata>

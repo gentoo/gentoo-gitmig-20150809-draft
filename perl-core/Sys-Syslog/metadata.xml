@@ -8,5 +8,7 @@
 	benefit from the ebuild.</longdescription>
   <upstream>
     <remote-id type="cpan">Sys-Syslog</remote-id>
+    <remote-id type="cpan-module">Sys::Syslog</remote-id>
+    <remote-id type="cpan-module">Sys::Syslog::Win32</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Safe</remote-id>
+    <remote-id type="cpan-module">Safe</remote-id>
   </upstream>
 </pkgmetadata>

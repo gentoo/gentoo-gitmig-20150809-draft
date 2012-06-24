@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">MIME-Base64</remote-id>
+    <remote-id type="cpan-module">MIME::Base64</remote-id>
+    <remote-id type="cpan-module">MIME::QuotedPrint</remote-id>
   </upstream>
 </pkgmetadata>

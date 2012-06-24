@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Archive-Tar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.45 2012/06/02 18:42:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.46 2012/06/24 15:38:57 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
 *Archive-Tar-1.880.0 (02 Jun 2012)
 

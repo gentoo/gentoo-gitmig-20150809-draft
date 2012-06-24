@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-Path</remote-id>
+    <remote-id type="cpan-module">File::Path</remote-id>
   </upstream>
 </pkgmetadata>

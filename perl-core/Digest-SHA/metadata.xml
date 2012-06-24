@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Digest-SHA</remote-id>
+    <remote-id type="cpan-module">Digest::SHA</remote-id>
   </upstream>
 </pkgmetadata>

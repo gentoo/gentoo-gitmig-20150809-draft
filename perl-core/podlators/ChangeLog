@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/podlators
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.7 2012/06/02 18:45:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.8 2012/06/24 15:38:58 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   02 Jun 2012; Torsten Veller <tove@gentoo.org> podlators-2.4.2.ebuild:
   Run tests parallel
@@ -33,4 +36,3 @@
   16 Nov 2009; Torsten Veller <tove@gentoo.org> +podlators-2.2.2.ebuild,
   +metadata.xml:
   Initial commit (#286962)
-

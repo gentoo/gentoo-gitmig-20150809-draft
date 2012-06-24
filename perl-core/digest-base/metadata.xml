@@ -4,5 +4,8 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Digest</remote-id>
+    <remote-id type="cpan-module">Digest</remote-id>
+    <remote-id type="cpan-module">Digest::base</remote-id>
+    <remote-id type="cpan-module">Digest::file</remote-id>
   </upstream>
 </pkgmetadata>

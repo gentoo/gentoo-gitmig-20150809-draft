@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">DB_File</remote-id>
+    <remote-id type="cpan-module">DB_File</remote-id>
+    <remote-id type="cpan-module">DB_File::BTREEINFO</remote-id>
+    <remote-id type="cpan-module">DB_File::HASHINFO</remote-id>
+    <remote-id type="cpan-module">DB_File::RECNOINFO</remote-id>
   </upstream>
 </pkgmetadata>

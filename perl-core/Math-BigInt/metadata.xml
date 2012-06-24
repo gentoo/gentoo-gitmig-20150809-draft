@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Math-BigInt</remote-id>
+    <remote-id type="cpan-module">Math::BigFloat</remote-id>
+    <remote-id type="cpan-module">Math::BigInt</remote-id>
+    <remote-id type="cpan-module">Math::BigInt::Calc</remote-id>
+    <remote-id type="cpan-module">Math::BigInt::CalcEmu</remote-id>
   </upstream>
 </pkgmetadata>

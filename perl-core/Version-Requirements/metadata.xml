@@ -4,5 +4,6 @@
     <herd>perl</herd>
     <upstream>
         <remote-id type="cpan">Version-Requirements</remote-id>
+        <remote-id type="cpan-module">Version::Requirements</remote-id>
     </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Math-BigRat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.32 2011/06/24 14:35:38 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.33 2012/06/24 15:38:58 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   24 Jun 2011; Fabian Groffen <grobian@gentoo.org>
   Math-BigRat-0.260.200.ebuild:
@@ -129,4 +132,3 @@
   03 Apr 2007; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +Math-BigRat-0.17.ebuild:
   New PDEP for perl-core/Math-BigInt
-

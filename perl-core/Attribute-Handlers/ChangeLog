@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Attribute-Handlers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.26 2012/03/24 13:02:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.27 2012/06/24 15:39:05 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
   Attribute-Handlers-0.930.0.ebuild:
@@ -110,4 +113,3 @@
   23 Nov 2009; Torsten Veller <tove@gentoo.org>
   +Attribute-Handlers-0.87.ebuild, +metadata.xml:
   Initial commit (#294206)
-

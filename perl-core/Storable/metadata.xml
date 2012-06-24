@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Storable</remote-id>
+    <remote-id type="cpan-module">Storable</remote-id>
   </upstream>
 </pkgmetadata>

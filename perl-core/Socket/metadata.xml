@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan-module">Socket</remote-id>
     <remote-id type="cpan">Socket</remote-id>
+    <remote-id type="cpan-module">Socket</remote-id>
   </upstream>
 </pkgmetadata>

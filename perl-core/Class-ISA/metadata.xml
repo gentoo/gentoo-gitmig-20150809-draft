@@ -4,5 +4,6 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Class-ISA</remote-id>
+    <remote-id type="cpan-module">Class::ISA</remote-id>
   </upstream>
 </pkgmetadata>

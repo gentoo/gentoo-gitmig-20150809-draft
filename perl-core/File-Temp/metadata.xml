@@ -4,5 +4,7 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">File-Temp</remote-id>
+    <remote-id type="cpan-module">File::Temp</remote-id>
+    <remote-id type="cpan-module">File::Temp::Dir</remote-id>
   </upstream>
 </pkgmetadata>

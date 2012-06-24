@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.60 2012/05/15 19:26:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.61 2012/06/24 15:39:05 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
 
   15 May 2012; Mark Loeser <halcy0n@gentoo.org> Module-Build-0.380.0.ebuild:
   Stable for ppc64; bug #393397
@@ -568,4 +571,3 @@
   26 Jun 2003; Michael Cummings <mcummings@gentoo.org>
   module-build-0.18.ebuild:
   module-build is a dep for alzabo; it's a new perl module installer
-
