@@ -1,6 +1,15 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.75 2012/06/22 21:56:40 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.76 2012/06/24 16:35:44 flameeyes Exp $
+
+*mod_security-2.7.0_rc2 (24 Jun 2012)
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/modsecurity-2.7.conf, +mod_security-2.7.0_rc2.ebuild,
+  -files/2.5.10/99_mod_security.conf,
+  -files/mod_security-2.5.10-as-needed.patch:
+  Version bump to 2.7 RC2; add a new setting to the default config file for
+  httpBL API key. Dropped sparc keyword due to libpcre's jit support.
 
   22 Jun 2012; Andreas Schuerch <nativemad@gentoo.org>
   mod_security-2.6.6.ebuild:
@@ -504,4 +513,3 @@
   files/99_mod_security.conf, files/mod_security.conf:
   Initial version,e build written by dju` <dju @ elegiac.net>.
   Closes #32190.
-
