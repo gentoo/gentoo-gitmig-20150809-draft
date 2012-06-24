@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r2.ebuild,v 1.1 2012/06/24 14:57:01 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r2.ebuild,v 1.2 2012/06/24 16:17:30 rich0 Exp $
 
 EAPI=4
 inherit eutils flag-o-matic gnome2-utils games
@@ -65,7 +65,7 @@ src_prepare() {
 src_compile() {
 	emake \
 		DEBUG="$(usex debug "yes" "no")" \
-		BSD_KERNEL="$(usex kernel_linux "no" "yes")" \
+		BSD_KERNEL="$(usex !kernel_linux)" \
 		DATADIR="${GAMES_DATADIR}/${PN}/"
 
 	if use doc; then

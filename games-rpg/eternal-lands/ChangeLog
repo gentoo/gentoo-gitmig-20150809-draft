@@ -1,6 +1,14 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.64 2012/06/24 14:57:01 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.65 2012/06/24 16:17:30 rich0 Exp $
+
+  24 Jun 2012; Richard Freeman <rich0@gentoo.org>
+  eternal-lands-1.9.3-r2.ebuild:
+  Now fixing bug introduced during cosmetic change. I hate cosmetic changes...
+
+  24 Jun 2012; Richard Freeman <rich0@gentoo.org>
+  eternal-lands-1.9.3-r2.ebuild:
+  Minor cosmetic fix - thanks ssuominen.
 
 *eternal-lands-1.9.3-r2 (24 Jun 2012)
 
