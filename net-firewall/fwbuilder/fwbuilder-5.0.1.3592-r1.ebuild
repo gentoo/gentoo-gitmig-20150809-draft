@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.1.3592-r1.ebuild,v 1.5 2012/06/08 12:05:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-5.0.1.3592-r1.ebuild,v 1.6 2012/06/24 20:22:28 dilfridge Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-5.0.0.3568-ldflags.patch"
+	"${FILESDIR}/${PN}-5.0.1.3592-gcc47.patch"
 )
 
 src_prepare() {
