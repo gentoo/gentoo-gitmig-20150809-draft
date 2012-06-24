@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.9.ebuild,v 1.3 2012/05/31 15:23:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.9.ebuild,v 1.4 2012/06/24 04:10:22 radhermit Exp $
 
 EAPI=4
 inherit eutils qt4-r2 autotools fdo-mime
@@ -12,7 +12,7 @@ SRC_URI="http://code.soundsoftware.ac.uk/attachments/download/194/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="fftw id3tag jack mad ogg osc portaudio pulseaudio"
+IUSE="fftw id3tag jack mad ogg osc +portaudio pulseaudio"
 
 RDEPEND="x11-libs/qt-core:4
 	x11-libs/qt-gui:4

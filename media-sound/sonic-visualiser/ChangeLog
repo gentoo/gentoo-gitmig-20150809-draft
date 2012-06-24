@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonic-visualiser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.24 2012/05/31 15:23:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.25 2012/06/24 04:10:22 radhermit Exp $
+
+  24 Jun 2012; Tim Harder <radhermit@gentoo.org> sonic-visualiser-1.9.ebuild:
+  Enable portaudio backend by default (fixes bug #422809).
 
   31 May 2012; Tim Harder <radhermit@gentoo.org> sonic-visualiser-1.9.ebuild,
   +files/sonic-visualiser-1.9-gcc47.patch:
