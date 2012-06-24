@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.2 2011/03/26 22:26:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.3 2012/06/24 08:13:25 jlec Exp $
 
 EAPI=3
 
@@ -28,11 +28,16 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
+PATCHES=(
+	"${FILESDIR}"/${P}-openbabel-231.patch
+	)
+
 src_prepare() {
 	sed -e "/LIBRARY DESTINATION/ s/lib/$(get_libdir)/g" \
 		-i libmolsketch/src/CMakeLists.txt || die #351246
 	sed -e "s:doc/molsketch:doc/${PF}:g" \
 		-i molsketch/src/{CMakeLists.txt,mainwindow.cpp} || die
+	base_src_prepare
 }
 
 src_configure() {
