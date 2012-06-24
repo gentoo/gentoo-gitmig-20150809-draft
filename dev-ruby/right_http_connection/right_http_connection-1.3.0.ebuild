@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_http_connection/right_http_connection-1.3.0.ebuild,v 1.2 2012/05/01 18:24:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_http_connection/right_http_connection-1.3.0.ebuild,v 1.3 2012/06/24 05:12:36 graaff Exp $
 
 EAPI=4
 
@@ -23,8 +23,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
+RESTRICT="test"
+#USE_RUBY="ruby19 ree18" ruby_add_bdepend "test? ( dev-util/cucumber )"
+
 all_ruby_prepare() {
 	rm Gemfile Gemfile.lock || die
+	sed -i -e '/bundler/ s:^:#:' features/support/env.rb || die
 }
 
 each_ruby_test() {
@@ -34,7 +38,7 @@ each_ruby_test() {
 		*jruby)
 			;;
 		*)
-			each_fakegem_test
+			${RUBY} -S cucumber features || die
 			;;
 	esac
 }
