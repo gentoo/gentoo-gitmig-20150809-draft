@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.5.ebuild,v 1.1 2012/06/24 16:34:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.5.ebuild,v 1.2 2012/06/24 20:07:37 radhermit Exp $
 
 EAPI=4
 
-inherit eutils autotools-utils flag-o-matic user
+inherit eutils flag-o-matic user
 
 DESCRIPTION="Clam Anti-Virus Scanner"
 HOMEPAGE="http://www.clamav.net/"
@@ -42,26 +42,24 @@ pkg_setup() {
 
 src_prepare() {
 	use ppc64 && append-flags -mminimal-toc
-	autotools-utils_src_prepare
 }
 
 src_configure() {
-	local myeconfargs=(
-		--disable-experimental
-		--enable-id-check
-		--with-dbdir=/var/lib/clamav
-		--with-system-tommath
-		$(use_enable bzip2)
-		$(use_enable clamdtop)
-		$(use_enable ipv6)
-		$(use_enable milter)
+	econf \
+		--disable-experimental \
+		--enable-id-check \
+		--with-dbdir=/var/lib/clamav \
+		--with-system-tommath \
+		$(use_enable bzip2) \
+		$(use_enable clamdtop) \
+		$(use_enable ipv6) \
+		$(use_enable milter) \
+		$(use_enable static-libs static) \
 		$(use_with iconv)
-	)
-	autotools-utils_src_configure
 }
 
 src_install() {
-	autotools-utils_src_install
+	default
 
 	rm -rf "${ED}"/var/lib/clamav
 	newinitd "${FILESDIR}"/clamd.rc clamd
@@ -113,6 +111,8 @@ src_install() {
 			START_MILTER=no
 		EOF
 	fi
+
+	prune_libtool_files
 }
 
 pkg_postinst() {

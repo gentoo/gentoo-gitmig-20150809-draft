@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.417 2012/06/24 16:34:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.418 2012/06/24 20:07:37 radhermit Exp $
+
+  24 Jun 2012; Tim Harder <radhermit@gentoo.org> clamav-0.97.5.ebuild:
+  Use prune_libtool_files instead of autotools-utils.
 
 *clamav-0.97.5 (24 Jun 2012)
 
