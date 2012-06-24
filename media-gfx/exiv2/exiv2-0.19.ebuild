@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.19.ebuild,v 1.9 2012/05/05 07:00:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.19.ebuild,v 1.10 2012/06/24 21:36:09 sbriesen Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 		dev-lang/python
 		app-doc/doxygen
 		dev-libs/libxslt
-		virtual/pkgconfig
+		dev-util/pkgconfig
 		media-gfx/graphviz
 	)
 	nls? ( sys-devel/gettext )

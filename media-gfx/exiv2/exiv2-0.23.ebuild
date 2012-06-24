@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.21.1-r2.ebuild,v 1.5 2012/06/24 21:36:09 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23.ebuild,v 1.1 2012/06/24 21:36:09 sbriesen Exp $
 
-EAPI=3
-PYTHON_DEPEND="2"
+EAPI=4
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
-inherit eutils multilib toolchain-funcs python
+inherit eutils autotools-utils multilib toolchain-funcs python
 
 DESCRIPTION="EXIF and IPTC metadata C++ library and command line utility"
 HOMEPAGE="http://www.exiv2.org/"
@@ -13,10 +13,9 @@ SRC_URI="http://www.exiv2.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="contrib doc examples nls xmp zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE_LINGUAS="de es fi fr pl ru sk"
-IUSE="${IUSE} $(printf 'linguas_%s ' ${IUSE_LINGUAS})"
+IUSE="contrib doc examples nls xmp zlib static-libs $(printf 'linguas_%s ' ${IUSE_LINGUAS})"
 
 RDEPEND="
 	virtual/libiconv
@@ -31,9 +30,12 @@ DEPEND="${RDEPEND}
 		dev-libs/libxslt
 		dev-util/pkgconfig
 		media-gfx/graphviz
+		=dev-lang/python-2*
 	)
 	nls? ( sys-devel/gettext )
 "
+
+DOCS=( README doc/ChangeLog doc/cmd.txt )
 
 src_prepare() {
 	# exiv2 fails to build with boost-1.46 due to boost filesystem
@@ -46,10 +48,8 @@ src_prepare() {
 		's|^\(#include <boost/filesystem.hpp>.*\)|#define BOOST_FILESYSTEM_VERSION 2\n\1|g' \
 		contrib/organize/helpers.hpp
 
-	# fix for off by 1 hour date error for -T option (bug #368419)
-	epatch "${FILESDIR}/${P}-time-fix.patch"
-
 	# convert docs to UTF-8
+	local i
 	for i in doc/cmd.txt; do
 		einfo "Converting "${i}" to UTF-8"
 		iconv -f LATIN1 -t UTF-8 "${i}" > "${i}~" && mv -f "${i}~" "${i}" || rm -f "${i}~"
@@ -58,6 +58,7 @@ src_prepare() {
 	if use doc; then
 		einfo "Updating doxygen config"
 		doxygen 2>&1 >/dev/null -u config/Doxyfile
+		python_convert_shebangs -r 2 doc/templates
 	fi
 
 	if use contrib; then
@@ -67,27 +68,28 @@ src_prepare() {
 			-e 's:/usr/local/lib/lib:-l:g' -e 's:-gcc..-mt-._..\.a::g' \
 			contrib/organize/boost.mk
 	fi
-
-	# fix python shebang
-	python_convert_shebangs -r 2 doc/templates
 }
 
 src_configure() {
-	local myconf="$(use_enable nls) $(use_enable xmp)"
-	use zlib || myconf="${myconf} --without-zlib"  # plain 'use_with' fails
+	local myeconfargs=(
+		$(use_enable nls)
+		$(use_enable xmp)
+		$(use_enable static-libs static)
+	)
+
+	# plain 'use_with' fails
+	use zlib || myeconfargs+=("${myconf} --without-zlib")
 
 	# Bug #78720. amd64/gcc-3.4/-fvisibility* fail.
-	if [[ $(gcc-major-version) -lt 4 ]]; then
-		use amd64 && myconf="${myconf} --disable-visibility"
+	if [ $(gcc-major-version) -lt 4 ]; then
+		use amd64 && myeconfargs+=("${myconf} --disable-visibility")
 	fi
 
-	econf \
-		--disable-static \
-		${myconf}
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	emake || die "emake failed"
+	autotools-utils_src_compile
 
 	if use contrib; then
 		emake -C contrib/organize \
@@ -102,19 +104,17 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	autotools-utils_src_install
 
 	if use contrib; then
 		emake DESTDIR="${D}" -C contrib/organize install || die "emake install organize failed"
 	fi
 
-	dodoc README doc/{ChangeLog,cmd.txt}
 	use xmp && dodoc doc/{COPYING-XMPSDK,README-XMP,cmdxmp.txt}
 	use doc && dohtml -r doc/html/.
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
+		docompress -x /usr/share/doc/${PF}/examples
 		doins samples/*.cpp
 	fi
 }
