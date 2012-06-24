@@ -1,11 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.8.ebuild,v 1.2 2012/05/20 14:14:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.8.ebuild,v 1.3 2012/06/24 14:27:17 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-pypy-*" # mis-detected sitedir
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
+
+# Automake build does not genereate the correct value for site-packages
+# with pypy.
+RESTRICT_PYTHON_ABIS="*-pypy-*"
 
 inherit python
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.17 2012/05/20 14:14:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.18 2012/06/24 14:27:17 floppym Exp $
+
+  24 Jun 2012; Mike Gilbert <floppym@gentoo.org> subunit-0.0.8.ebuild:
+  Improve comment explaining pypy restriction.
 
   20 May 2012; Mike Gilbert <floppym@gentoo.org> subunit-0.0.8.ebuild:
   Remove PYTHON_DEPEND.
@@ -66,4 +69,3 @@
   08 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   +subunit-0.0.5.ebuild, +metadata.xml:
   initial commit by me
-
