@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13884 2012/06/24 06:20:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13885 2012/06/24 10:51:34 mabi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matti Bickel <mabi@gentoo.org> (24 Jun 2012)
+# Replaced by eGroupware, removal on 23th Jul 2012
+www-apps/phpgroupware
 
 # Doug Goldstein <cardoe@gentoo.org> (21 Jun 2012)
 # A stab at a MythTV 0.25 series ebuild
