@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.8 2012/06/23 22:26:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.9 2012/06/24 20:06:49 cardoe Exp $
 
 EAPI=4
 
@@ -189,17 +189,15 @@ src_compile() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "install failed"
-	dodoc AUTHORS FAQ UPGRADING  README
+	dodoc AUTHORS UPGRADING README
 
 	insinto /usr/share/mythtv/database
 	doins database/*
 
-	exeinto /usr/share/mythtv
-
 	newinitd "${FILESDIR}"/mythbackend.init mythbackend
 	newconfd "${FILESDIR}"/mythbackend.conf mythbackend
 
-	dodoc keys.txt 
+	dodoc keys.txt
 
 	keepdir /etc/mythtv
 	chown -R mythtv "${ED}"/etc/mythtv

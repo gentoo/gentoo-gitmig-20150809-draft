@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.349 2012/06/23 22:26:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.350 2012/06/24 20:06:49 cardoe Exp $
+
+  24 Jun 2012; Doug Goldstein <cardoe@gentoo.org> mythtv-0.25.1.ebuild,
+  files/mythbackend.init:
+  Specify the PID file that SSD should look at since MythBackend makes the PID
+  file. Remove the user perm drop since SSD does that for us.
 
   23 Jun 2012; Doug Goldstein <cardoe@gentoo.org> mythtv-0.25.1.ebuild:
   Approach the sandbox violation / ${ED}/${ED} install issue from another
