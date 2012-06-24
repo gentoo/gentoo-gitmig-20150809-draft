@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-11.07.1.ebuild,v 1.3 2012/06/22 18:02:29 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-11.07.1.ebuild,v 1.4 2012/06/24 15:42:56 keri Exp $
 
 EAPI=2
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
-PATCHSET_VER="2"
+PATCHSET_VER="3"
 MY_P=${PN}-compiler-${PV}
 
 DESCRIPTION="Mercury is a modern general-purpose logic/functional programming language"
