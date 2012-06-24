@@ -4,5 +4,9 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Email-MIME</remote-id>
+    <remote-id type="cpan-module">Email::MIME</remote-id>
+    <remote-id type="cpan-module">Email::MIME::Creator</remote-id>
+    <remote-id type="cpan-module">Email::MIME::Header</remote-id>
+    <remote-id type="cpan-module">Email::MIME::Modifier</remote-id>
   </upstream>
 </pkgmetadata>
