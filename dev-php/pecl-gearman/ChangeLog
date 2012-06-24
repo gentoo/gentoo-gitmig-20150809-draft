@@ -1,6 +1,9 @@
-# ChangeLog for dev-php5/pecl-gearman
+# ChangeLog for dev-php/pecl-gearman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-gearman/ChangeLog,v 1.4 2012/03/06 08:25:41 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-gearman/ChangeLog,v 1.5 2012/06/24 21:19:56 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata, helps my own bug templating script.
 
 *pecl-gearman-1.0.2 (06 Mar 2012)
 
@@ -54,4 +57,3 @@
   +pecl-gearman-0.6.0.ebuild, +metadata.xml:
   Initial imprort of PHP support for gearman. Thanks to Pavel Stratil once
   again for the ebuil.
-

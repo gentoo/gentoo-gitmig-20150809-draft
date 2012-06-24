@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-drizzle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-drizzle/ChangeLog,v 1.2 2012/04/13 19:01:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-drizzle/ChangeLog,v 1.3 2012/06/24 21:19:32 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata, helps my own bug templating script.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> pecl-drizzle-0.4.2-r1.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.
@@ -28,4 +31,3 @@
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +pecl-drizzle-0.4.2.ebuild, +metadata.xml:
   Initial import of pecl-drizzle, ebuild proxy-maintained by Pavel Stratil.
-
