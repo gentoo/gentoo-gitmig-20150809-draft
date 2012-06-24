@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/CoverageTestRunner
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/CoverageTestRunner/ChangeLog,v 1.1 2012/06/24 15:09:38 mschiff Exp $
+
+*CoverageTestRunner-1.8 (24 Jun 2012)
+
+  24 Jun 2012; Marc Schiffbauer <mschiff@gentoo.org>
+  +CoverageTestRunner-1.8.ebuild, +metadata.xml:
+  Initial commit for CoverageTestRunner
+
