@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/dbunit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/DBUnit/ChangeLog,v 1.1 2012/03/10 16:37:09 olemarkus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/DBUnit/ChangeLog,v 1.2 2012/06/24 18:36:12 olemarkus Exp $
+
+  24 Jun 2012; Ole Markus With <olemarkus@gentoo.org> DBUnit-1.0.1.ebuild:
+  DbUnit does not really depend on ezc-ConsoleTools
 
   14 Dec 2011; Matti Bickel <mabi@gentoo.org> dbunit-1.0.1.ebuild:
   Merging categories dev-php5 and dev-php (bug #324665)
