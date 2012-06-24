@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.9.1-r1.ebuild,v 1.1 2012/06/22 02:57:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.9.1-r2.ebuild,v 1.1 2012/06/24 03:56:49 anarchy Exp $
 
 EAPI=3
 WANT_AUTOCONF="2.1"
@@ -31,7 +31,7 @@ src_prepare() {
 	#epatch "${FILESDIR}"/${PN}-4.8.3-aix-soname.patch
 	epatch "${FILESDIR}"/${PN}-4.8.4-darwin-install_name.patch
 	epatch "${FILESDIR}"/${PN}-4.8.9-link-flags.patch
-	epatch "${FILESDIR}"/${PN}-4.9.1-x32.patch
+	epatch "${FILESDIR}"/${PN}-4.9.1-x32_v0.1.patch
 
 	# We must run eautoconf to regenerate configure
 	cd "${S}"/mozilla/nsprpub
