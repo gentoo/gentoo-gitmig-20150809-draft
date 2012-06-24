@@ -7,20 +7,6 @@
     <name>Diego E. Pettenò</name>
   </maintainer>
   <use>
-    <flag name="perl">
-      Add a dependency upon Perl and install the script to update the
-      Core Rule Set. Please note that this script will use the
-      original Core Rule Set, and it's currently mostly untested.
-    </flag>
-    <flag name="vanilla">
-      Provide the original ModSecurity Core Rule Set without
-      Gentoo-specific relaxation. When this flag is enabled, we
-      install the unadulterated Core Rule Set. Warning! The original
-      Core Rule Set is draconic and most likely will break your web
-      applications, including Rails-based web applications and
-      Bugzilla.
-    </flag>
-
     <flag name='geoip'>
       Configure ModSecurity to query the GeoIP database from MaxMind,
       provided by <pkg>dev-libs/geoip</pkg>. This flag only controls
@@ -31,6 +17,12 @@
     <flag name='curl'>
       Build the ModSecurity Audit Log Collector (mlogc) that depends
       on <pkg>net-misc/curl</pkg>.
+    </flag>
+
+    <flag name='jit'>
+      Add support for the PCRE Just-in-Time optimisation, as enabled
+      by <pkg>dev-libs/libpcre</pkg> with jit USE flag enabled. Might
+      not be available on hardened systems.
     </flag>
   </use>
 </pkgmetadata>
