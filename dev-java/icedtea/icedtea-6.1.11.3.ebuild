@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.11.3.ebuild,v 1.1 2012/06/19 20:30:04 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.11.3.ebuild,v 1.2 2012/06/24 08:19:48 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -142,7 +142,7 @@ java_prepare() {
 	# icedtea doesn't like some locales. #330433 #389717
 	export LANG="C" LC_ALL="C"
 
-	epatch "${FILESDIR}"/${PN}-${SLOT}_pax_kernel_support.patch #389751
+	epatch "${FILESDIR}"/${PN}-${SLOT}_pax_kernel_support.patch #389751 #422525
 	epatch "${FILESDIR}"/${PN}-${SLOT}-pass_javac_memory_args_to_vm.patch
 	eautoreconf
 }
