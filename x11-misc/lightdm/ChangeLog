@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.43 2012/06/21 07:37:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.44 2012/06/24 12:29:34 ssuominen Exp $
+
+*lightdm-1.2.2-r3 (24 Jun 2012)
+
+  24 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +lightdm-1.2.2-r3.ebuild,
+  files/lightdm-autologin:
+  Including 'auth include system-local-login' doesn't work for autologin
+  feature. Replace it with pam_env.so, pam_nologin.so and pam_permit.so wrt
+  #423163 by Henry Gebhardt
 
   21 Jun 2012; Ben de Groot <yngwin@gentoo.org> lightdm-1.2.2-r2.ebuild:
   Re-tidy. Restore glib slot. Drop unnecessary gobject-introspection minimal
