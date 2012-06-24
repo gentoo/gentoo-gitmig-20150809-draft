@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/haildb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.6 2012/01/14 17:23:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.7 2012/06/24 21:18:45 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata, helps my own bug templating script.
 
   14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   tcmalloc is now global
@@ -27,4 +30,3 @@
   +haildb-2.2.0.ebuild, +haildb-2.3.1.ebuild, +metadata.xml:
   Initial import of haildb proxy-maintained by Pavel Stratil, that will be
   used in the (near) future by dev-db/drizzle.
-

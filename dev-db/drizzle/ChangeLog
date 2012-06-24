@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.28 2012/06/21 16:11:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.29 2012/06/24 21:19:11 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata, helps my own bug templating script.
 
   21 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   -drizzle-7.0.2011.03.13.ebuild, -files/drizzle-2009.12.1240-nolint.patch,
@@ -179,4 +182,3 @@
   Initial import of drizzle, masked, some things are definitely yet to
   polish, like PAM integration, upstream as well as in Gentoo. Once again
   thanks to Pavel Stratil for the base ebuild and testing work.
-
