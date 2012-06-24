@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/eid-mw-4.0.2_p1188.ebuild,v 1.3 2012/05/31 03:10:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/eid-mw-4.0.2_p1188.ebuild,v 1.4 2012/06/24 08:38:34 flameeyes Exp $
 
 EAPI=4
 
@@ -38,6 +38,10 @@ DEPEND="${RDEPEND}
 if [[ ${PV} == "9999" ]]; then
 	src_prepare() {
 		eautoreconf
+	}
+else
+	src_prepare() {
+		epatch "${FILESDIR}"/${P}+gcc-4.7.patch
 	}
 fi
 
