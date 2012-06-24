@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXau
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.86 2012/06/22 20:54:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.87 2012/06/24 19:20:10 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libXau-1.0.7.ebuild:
+  Stable for x86, wrt bug #419473
 
   22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libXau-1.0.7.ebuild:
   Stable for amd64, wrt bug #419473

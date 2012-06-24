@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.82 2012/06/22 20:52:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.83 2012/06/24 19:17:30 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libICE-1.0.8.ebuild:
+  Stable for x86, wrt bug #419473
 
   22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libICE-1.0.8.ebuild:
   Stable for amd64, wrt bug #419473
