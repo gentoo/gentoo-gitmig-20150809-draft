@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.430 2012/05/31 03:13:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.431 2012/06/24 10:39:27 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gnupg-2.0.19.ebuild:
+  Stable for amd64, wrt bug #421591
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> gnupg-2.0.17-r2.ebuild,
   gnupg-2.0.17-r3.ebuild, gnupg-2.0.18.ebuild, gnupg-2.0.19.ebuild:
