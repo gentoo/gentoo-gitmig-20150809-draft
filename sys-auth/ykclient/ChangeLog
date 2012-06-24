@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/ykclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykclient/ChangeLog,v 1.2 2012/06/24 10:32:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykclient/ChangeLog,v 1.3 2012/06/24 10:33:59 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> -ykclient-2.3.ebuild:
+  Remove ebuild as well.
 
 *ykclient-2.8 (24 Jun 2012)
 
