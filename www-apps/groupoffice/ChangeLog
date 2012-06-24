@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/groupoffice
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.25 2008/08/25 15:31:05 armin76 Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.26 2012/06/24 10:06:46 mabi Exp $
+
+*groupoffice-3.7.52 (24 Jun 2012)
+*groupoffice-4.0.47 (24 Jun 2012)
+
+  24 Jun 2012; Matti Bickel <mabi@gentoo.org> +groupoffice-3.7.52.ebuild,
+  +groupoffice-4.0.47.ebuild, -groupoffice-2.15.ebuild,
+  -groupoffice-2.16.8.ebuild:
+  version bump. 4.0 is still beta, so use 3.7 in production. this is a security
+  update (bug #361221). Also fixes bugs #332525, #285538, #417223.
 
   25 Aug 2008; Raúl Porcel <armin76@gentoo.org> groupoffice-2.18.6.ebuild:
   alpha stable wrt #235058
