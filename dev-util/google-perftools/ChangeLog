@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/google-perftools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.15 2012/06/07 21:32:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.16 2012/06/24 10:39:50 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> google-perftools-1.8.3.ebuild:
+  Stable for amd64, wrt bug #418445
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> google-perftools-1.6.ebuild:
   inherit flag-o-matic for append-cppflags
