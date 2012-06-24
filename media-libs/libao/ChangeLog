@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libao
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.107 2012/06/24 04:04:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.108 2012/06/24 10:55:08 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libao-1.1.0-r1.ebuild:
+  Stable for amd64, wrt bug #423243
 
   24 Jun 2012; Tim Harder <radhermit@gentoo.org> -libao-1.1.0.ebuild:
   Remove old.
