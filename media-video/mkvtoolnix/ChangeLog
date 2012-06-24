@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.169 2012/06/04 00:18:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.170 2012/06/24 15:15:42 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> mkvtoolnix-5.0.1-r1.ebuild:
+  Stable for amd64, wrt bug #423133
 
   04 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> mkvtoolnix-5.6.0.ebuild:
   Ensure GCC is at least 4.6.0 for C++11 range-based 'for' and nullptr support
