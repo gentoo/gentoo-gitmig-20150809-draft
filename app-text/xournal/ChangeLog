@@ -1,6 +1,16 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.35 2012/06/24 11:03:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.36 2012/06/24 11:08:44 dilfridge Exp $
+
+*xournal-0.4.6-r1 (24 Jun 2012)
+
+  24 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -xournal-0.4.5_p20111022-r1.ebuild,
+  -files/xournal-0.4.5_p20111022-aspectratio.patch,
+  -files/xournal-0.4.5_p20111022-gtk-recent.patch,
+  -files/xournal-0.4.5_p20111022-underlinking.patch, +xournal-0.4.6-r1.ebuild:
+  Add custom ruling / invert colors patch by Jonathan R Young, gi1242, and
+  Witold Piłat, bug 414729; remove old
 
   24 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   xournal-0.4.5_p20111022-r2.ebuild,

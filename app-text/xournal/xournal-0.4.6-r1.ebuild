@@ -1,21 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.5_p20111022-r1.ebuild,v 1.6 2012/05/04 03:33:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.6-r1.ebuild,v 1.1 2012/06/24 11:08:44 dilfridge Exp $
 
 EAPI=4
 
 GCONF_DEBUG=no
 
-inherit base gnome2 autotools
+inherit gnome2 autotools
 
 DESCRIPTION="Xournal is an application for notetaking, sketching, and keeping a journal using a stylus."
 HOMEPAGE="http://xournal.sourceforge.net/"
 
-SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz http://dev.gentoo.org/~dilfridge/distfiles/${P}-sjg-image-rev7.patch.gz"
+SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz http://dev.gentoo.org/~dilfridge/distfiles/${PN}-${PVR}-gentoo.patch.xz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+pdf"
 
 COMMONDEPEND="
@@ -38,15 +38,9 @@ DEPEND="${COMMONDEPEND}
 	virtual/pkgconfig
 "
 
-PATCHES=(
-	"${DISTDIR}"/${P}-sjg-image-rev7.patch.gz
-	"${FILESDIR}"/${P}-gtk-recent.patch
-	"${FILESDIR}"/${P}-aspectratio.patch
-	"${FILESDIR}"/${P}-underlinking.patch
-)
-
 src_prepare() {
-	base_src_prepare
+	epatch "${WORKDIR}"/${PN}-${PVR}-gentoo.patch
+	sed -e "s:n       http:n       Gentoo release ${PVR}\\\\n       http:" -i "${S}"/src/xo-interface.c
 	eautoreconf
 }
 
