@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.81 2012/06/20 17:55:42 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.82 2012/06/24 16:01:51 ssuominen Exp $
+
+*pyxdg-0.20_rc1_p20120624 (24 Jun 2012)
+
+  24 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +pyxdg-0.20_rc1_p20120624.ebuild:
+  Use snapshot to relicense Menu.py with LGPL-2 and incorporate
+  -subprocess.patch.
 
   20 Jun 2012; Marien Zwart <marienz@gentoo.org> pyxdg-0.20_rc1.ebuild:
   Update SRC_URI again to use dev.gentoo.org instead of mirror://gentoo/ (bug
