@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/sumwars-0.5.6-r2.ebuild,v 1.4 2012/06/05 19:10:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/sumwars-0.5.6-r2.ebuild,v 1.5 2012/06/24 21:59:44 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sumwars/${P//_/-}-src.tar.bz2"
 
 LICENSE="GPL-3 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+tools debug"
 
 LANGS="de en it pl pt ru uk"
