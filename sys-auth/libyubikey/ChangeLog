@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/libyubikey
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libyubikey/ChangeLog,v 1.1 2010/10/23 16:38:54 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libyubikey/ChangeLog,v 1.2 2012/06/24 10:07:41 ssuominen Exp $
+
+  24 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> libyubikey-1.6.ebuild:
+  USE="static-libs" and convert to prune_libtool_files() function. Remove
+  -Werror from AM_INIT_AUTOMAKE for compability with sys-devel/automake >= 1.12
+  wrt #423255 by Diego Elio Pettenò.
 
 *libyubikey-1.6 (23 Oct 2010)
 
