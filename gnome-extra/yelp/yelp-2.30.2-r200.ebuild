@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r200.ebuild,v 1.8 2012/06/06 17:45:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r200.ebuild,v 1.9 2012/06/24 15:58:09 ssuominen Exp $
 
 # git clone git://git.gnome.org/yelp
 # cd yelp
@@ -15,7 +15,7 @@ MY_P=${P}+webkit
 
 DESCRIPTION="Help browser for GNOME"
 HOMEPAGE="http://projects.gnome.org/yelp/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${MY_P}.tar.xz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
