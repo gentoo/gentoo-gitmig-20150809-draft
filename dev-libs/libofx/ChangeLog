@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.70 2012/05/04 18:35:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.71 2012/06/24 20:13:26 dilfridge Exp $
+
+  24 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> libofx-0.9.4.ebuild,
+  +files/libofx-0.9.4-gcc47.patch:
+  Fix compilation with gcc-4.7, bug 423157
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libofx-0.9.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

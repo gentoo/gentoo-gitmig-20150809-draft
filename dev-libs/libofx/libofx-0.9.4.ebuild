@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.4.ebuild,v 1.7 2012/05/04 18:35:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.4.ebuild,v 1.8 2012/06/24 20:13:26 dilfridge Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="A library to support the Open Financial eXchange XML format"
 HOMEPAGE="http://libofx.sourceforge.net/"
@@ -25,6 +27,7 @@ src_prepare() {
 	sed -i \
 		-e 's:$(DESTDIR)$(docdir):$(DESTDIR)$(LIBOFX_DTD_DIR):' \
 		dtd/Makefile.in || die
+	epatch "${FILESDIR}/${P}-gcc47.patch"
 }
 
 src_configure() {
