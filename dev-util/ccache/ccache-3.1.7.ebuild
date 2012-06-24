@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.7.ebuild,v 1.6 2012/06/07 22:15:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.7.ebuild,v 1.7 2012/06/24 03:28:03 vapier Exp $
 
-inherit multilib
+EAPI="4"
+
+inherit multilib eutils
 
 DESCRIPTION="fast compiler cache"
 HOMEPAGE="http://ccache.samba.org/"
@@ -16,19 +18,20 @@ IUSE=""
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# make sure we always use system zlib
 	rm -rf zlib
+	epatch "${FILESDIR}"/${PN}-3.1.7-no-perl.patch #421609
+	sed \
+		-e "/^LIBDIR=/s:lib:$(get_libdir):" \
+		"${FILESDIR}"/ccache-config > ccache-config || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	default
 	dodoc AUTHORS.txt MANUAL.txt NEWS.txt README.txt
 
-	dobin "${FILESDIR}"/ccache-config || die
-	dosed "/^LIBDIR=/s:lib:$(get_libdir):" /usr/bin/ccache-config
+	dobin ccache-config
 
 	diropts -m0700
 	dodir /root/.ccache
