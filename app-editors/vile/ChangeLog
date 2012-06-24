@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.42 2012/06/24 09:30:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.43 2012/06/24 10:38:11 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> vile-9.8g.ebuild:
+  Stable for amd64, wrt bug #418409
 
   24 Jun 2012; Kacper Kowalik <xarthisius.kk@gmail.com> vile-9.8g.ebuild:
   ppc stable wrt #418409
