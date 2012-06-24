@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/ngspice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ChangeLog,v 1.2 2012/05/23 18:43:02 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ChangeLog,v 1.3 2012/06/24 08:55:11 jlec Exp $
+
+  24 Jun 2012; Justin Lecher <jlec@gentoo.org> ngspice-24.ebuild,
+  +files/ngspice-24-automake-1.12.patch, metadata.xml:
+  ADd fix for automake-1.12, #423189
 
 *ngspice-24 (23 May 2012)
 
