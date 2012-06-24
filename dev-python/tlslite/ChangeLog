@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tlslite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.14 2012/06/24 19:42:11 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.15 2012/06/24 22:00:34 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> tlslite-0.4.0.ebuild:
+  Stable for amd64, wrt bug #418921
 
 *tlslite-0.4.1 (24 Jun 2012)
 
