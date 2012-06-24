@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.58 2012/05/04 14:51:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.59 2012/06/24 10:41:45 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> automake-wrapper-7.ebuild:
+  Stable for amd64, wrt bug #422203
 
   04 May 2012; Alexis Ballier <aballier@gentoo.org> automake-wrapper-7.ebuild:
   keyword ~amd64-fbsd
