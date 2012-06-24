@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.162 2012/03/30 15:58:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.163 2012/06/24 05:35:02 vapier Exp $
+
+  24 Jun 2012; Mike Frysinger <vapier@gentoo.org> sandbox-2.5.ebuild:
+  Parallelize configure steps for multiple ABIs, and run tests in parallel.
 
   30 Mar 2012; Alexis Ballier <aballier@gentoo.org> sandbox-1.6-r2.ebuild:
   keyword -x86-fbsd for bug #374425, sandbox is broken of fbsd and this leaves
