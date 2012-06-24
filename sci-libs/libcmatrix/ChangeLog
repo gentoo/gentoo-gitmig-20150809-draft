@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libcmatrix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.7 2012/05/21 15:08:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.8 2012/06/24 07:43:11 jlec Exp $
+
+  24 Jun 2012; Justin Lecher <jlec@gentoo.org> +files/3.2.1-gcc4.7.patch,
+  libcmatrix-3.9.0.ebuild:
+  Fix compilation with gcc-4.7, #423181
 
 *libcmatrix-3.11.0 (21 May 2012)
 
