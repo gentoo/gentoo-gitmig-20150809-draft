@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.91.ebuild,v 1.1 2012/06/16 13:50:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.91.ebuild,v 1.2 2012/06/24 11:46:39 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -42,7 +42,7 @@ SLOT="4"
 [[ ${PV} == *9999 ]] || KEYWORDS="~amd64 ~x86"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
-gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
+gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular opengtl openexr
 +pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
 word-perfect xbase +xml +xslt"
 
@@ -102,7 +102,7 @@ RDEPEND="
 	marble? ( $(add_kdebase_dep marble) )
 	mysql? ( virtual/mysql )
 	okular? ( $(add_kdebase_dep okular) )
-	openctl? ( >=media-libs/opengtl-0.9.15 )
+	opengtl? ( >=media-libs/opengtl-0.9.15 )
 	openexr? ( media-libs/openexr )
 	pdf? (
 		app-text/poppler
@@ -189,7 +189,7 @@ src_configure() {
 		$(cmake-utils_use_with marble Marble)
 		$(cmake-utils_use_with mysql MySQL)
 		$(cmake-utils_use_with okular Okular)
-		$(cmake-utils_use_with openctl OpenCTL)
+		$(cmake-utils_use_with opengtl OpenCTL)
 		$(cmake-utils_use_with openexr OpenEXR)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with pdf Poppler)
