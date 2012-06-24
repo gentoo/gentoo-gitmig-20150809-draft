@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.34 2012/06/18 18:40:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.35 2012/06/24 11:03:29 dilfridge Exp $
+
+  24 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  xournal-0.4.5_p20111022-r2.ebuild,
+  +files/xournal-0.4.5_p20111022-underlinking-2.patch:
+  Fix underlinking and automake strangeness, bug 423285
 
   18 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   xournal-0.4.5_p20111022-r2.ebuild:
