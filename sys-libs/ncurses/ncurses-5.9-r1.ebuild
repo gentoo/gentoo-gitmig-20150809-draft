@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r1.ebuild,v 1.1 2011/11/21 22:08:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r1.ebuild,v 1.2 2012/06/24 00:24:08 vapier Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic toolchain-funcs
@@ -136,7 +136,7 @@ src_install() {
 	gen_usr_ldscript -a ncurses
 	use unicode && gen_usr_ldscript -a ncursesw
 	ln -sf libncurses.so "${D}"/usr/$(get_libdir)/libcurses.so || die
-	use static-libs || rm "${D}"/usr/$(get_libdir)/*.a
+	use static-libs || find "${D}"/usr/ -name '*.a' -a '!' -name '*curses++*.a' -delete
 
 #	if ! use berkdb ; then
 		# We need the basic terminfo files in /etc, bug #37026
