@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta.ebuild,v 1.4 2012/06/22 20:36:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta.ebuild,v 1.5 2012/06/24 18:59:11 ago Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ fi
 IUSE="debug +modules multilib pax_kernel qt4 static-libs"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="1"
 
 RESTRICT="bindist"

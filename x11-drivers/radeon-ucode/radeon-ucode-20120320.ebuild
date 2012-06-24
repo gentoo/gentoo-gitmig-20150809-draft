@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/radeon-ucode-20120320.ebuild,v 1.2 2012/06/22 20:37:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/radeon-ucode-20120320.ebuild,v 1.3 2012/06/24 18:59:27 ago Exp $
 
 inherit linux-info
 
@@ -67,7 +67,7 @@ SRC_URI="${UCODE_FILES[@]/#/${UCODE_BASE_URI}/}"
 
 LICENSE="radeon-ucode"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 src_unpack() { :; }
