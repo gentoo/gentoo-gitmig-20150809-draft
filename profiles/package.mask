@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13883 2012/06/22 22:02:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13884 2012/06/24 06:20:27 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -419,12 +419,6 @@ sys-cluster/lam-mpi
 # Replaced by x11-wm/xpra.
 x11-wm/parti
 
-# Samuli Suominen <ssuominen@gentoo.org> (20 May 2012)
-# Still using vulnerable net-libs/xulrunner wrt bug 412341
-# Build problems wrt bug 390325
-# Version 0.9_beta5 will be removed in approx. 30 days
-~app-text/kiwix-0.9_beta5
-
 # Benda Xu <heroxbd@gentoo.org> (20 May 2012)
 # geant-4.9.5_p01 has a major class declaration change that renders
 # geant-python (g4py upstream) unable to compile
@@ -441,12 +435,6 @@ x11-wm/parti
 # Requires dev-scheme/guile-2.0.5 which is in lisp overlay and masked;
 # bug #416683
 >=games-board/aisleriot-3.3.1
-
-# Samuli Suominen <ssuominen@gentoo.org> (19 May 2012)
-# Dead project wrt http://bugs.gentoo.org/416613
-# Use app-arch/hardlink or app-arch/hardlink-fedora instead
-# Removal in 30 days
-app-arch/hardlink++
 
 # Maciej Mrozowski <reavertm@gentoo.org> (18 May 2012)
 # Masked for testing, luatex compilation fails due to API change.
