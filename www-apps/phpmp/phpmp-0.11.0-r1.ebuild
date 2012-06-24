@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp/phpmp-0.11.0-r1.ebuild,v 1.3 2010/10/20 14:19:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpmp/phpmp-0.11.0-r1.ebuild,v 1.4 2012/06/24 10:59:25 mabi Exp $
 
 EAPI="2"
 
-inherit webapp depend.php
+inherit webapp
 
 MY_PN="phpMp"
 MY_P="${MY_PN}-${PV}"
@@ -17,10 +17,10 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )"
+RDEPEND="virtual/httpd-php
+	|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )"
 
 need_httpd_cgi
-need_php_httpd
 
 S="${WORKDIR}"/${MY_P}
 
