@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.1.ebuild,v 1.3 2012/06/13 17:59:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.1.ebuild,v 1.4 2012/06/24 15:12:02 ulm Exp $
 
 EAPI=4
 
@@ -178,6 +178,10 @@ src_configure() {
 		myconf="${myconf} --without-x --without-ns"
 	fi
 
+	# Save version information in the Emacs binary. It will be available
+	# in variable "system-configuration-options".
+	myconf="${myconf} GENTOO_PACKAGE=${CATEGORY}/${PF}"
+
 	# According to configure, this option is only used for GNU/Linux
 	# (x86_64 and s390). For Gentoo Prefix we have to explicitly spell
 	# out the location because $(get_libdir) does not necessarily return
@@ -206,8 +210,6 @@ src_configure() {
 
 src_compile() {
 	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
-	# set last component of emacs-version to (package revision + 1)
-	touch src/emacs-${FULL_VERSION}.${PR#r}
 	emake CC="$(tc-getCC)"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.5 2012/06/10 18:34:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.6 2012/06/24 15:13:05 ulm Exp $
 
 EAPI=4
 
@@ -191,10 +191,10 @@ src_configure() {
 		myconf="${myconf} --without-x --without-ns"
 	fi
 
+	# Save version information in the Emacs binary. It will be available
+	# in variable "system-configuration-options".
+	myconf="${myconf} GENTOO_PACKAGE=${CATEGORY}/${PF}"
 	if [[ ${PV##*.} = 9999 ]]; then
-		# These variables are not needed for building. We add them to
-		# configure options because they are stored in the Emacs binary
-		# and available in variable "system-configuration-options".
 		myconf="${myconf} EBZR_BRANCH=${EBZR_BRANCH} EBZR_REVNO=${EBZR_REVNO}"
 	fi
 
@@ -230,8 +230,6 @@ src_compile() {
 		# cleanup, otherwise emacs will be dumped again in src_install
 		(cd src; emake versionclean)
 	fi
-	# set last component of emacs-version to (package revision + 1)
-	touch src/emacs-${FULL_VERSION}.${PR#r}
 	emake CC="$(tc-getCC)"
 }
 
