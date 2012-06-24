@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8g.ebuild,v 1.1 2012/03/19 06:42:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8g.ebuild,v 1.2 2012/06/24 09:30:51 xarthisius Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://invisible-island.net/vile/current/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="perl"
 
 RDEPEND=">=sys-libs/ncurses-5.2
