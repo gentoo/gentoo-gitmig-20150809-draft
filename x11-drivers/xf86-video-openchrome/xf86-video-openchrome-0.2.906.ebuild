@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.906.ebuild,v 1.2 2012/06/22 20:46:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.906.ebuild,v 1.3 2012/06/24 11:16:53 ago Exp $
 
 EAPI=4
 XORG_DRI="dri"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.openchrome.org"
 SRC_URI="http://www.openchrome.org/releases/${P}.tar.bz2"
 LICENSE="MIT"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug viaregtool"
 
 RDEPEND=">=x11-base/xorg-server-1.9"
