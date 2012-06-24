@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13885 2012/06/24 10:51:34 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13886 2012/06/24 12:03:01 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -352,24 +352,6 @@ x11-terms/cxterm
 # No longer needed.
 # Masked for removal on 20120630
 games-util/nforenum
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (27 May 2012)
-# The successor of KOffice, Calligra, has now become stable
-# and we are removing KOffice soon from the portage tree.
-# Please upgrade; you can do that with the following commands:
-#  emerge --deselect karbon kexi koffice-data koffice-l10n koffice-libs koffice-meta kplato kpresenter krita kspread kword
-#  emerge app-office/calligra app-office/calligra-l10n
-app-office/karbon
-app-office/kexi
-app-office/koffice-data
-app-office/koffice-l10n
-app-office/koffice-libs
-app-office/koffice-meta
-app-office/kplato
-app-office/kpresenter
-app-office/krita
-app-office/kspread
-app-office/kword
 
 # Markos Chandras <hwoarang@getnoo.org> (27 May 2012)
 # Mask alpha release
