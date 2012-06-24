@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.105 2012/06/15 04:16:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.106 2012/06/24 16:40:30 flameeyes Exp $
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (24 Jun 2012)
+# Requires libpcre with jit
+www-apache/mod_security jit
 
 # Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
 # Since x11-libs/qt-* will no longer be available for sparc, we need

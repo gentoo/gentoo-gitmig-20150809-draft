@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.162 2012/06/15 04:16:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.163 2012/06/24 16:40:30 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.use.mask:
+  Mask jit USE flag for mod_security.
 
   15 Jun 2012; Ben de Groot <yngwin@gentoo.org> package.use.mask:
   Add latex-beamer[lyx] to qt mask
