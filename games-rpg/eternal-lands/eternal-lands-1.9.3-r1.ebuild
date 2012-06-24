@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r1.ebuild,v 1.1 2012/03/02 18:28:24 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r1.ebuild,v 1.2 2012/06/24 11:58:25 rich0 Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -118,7 +118,7 @@ src_compile() {
 }
 
 src_install() {
-	doicon "${DISTDIR}/eternal-lands.png" ${PN}.png
+	newicon "${DISTDIR}/eternal-lands.png" ${PN}.png
 
 	newgamesbin el.x86.linux.bin el \
 		|| die "newgamesbin failed"
