@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-SigAction
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-SigAction/ChangeLog,v 1.4 2011/07/29 17:02:37 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-SigAction/ChangeLog,v 1.5 2012/06/24 10:55:30 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> Sys-SigAction-0.150.0.ebuild:
+  Stable for amd64, wrt bug #423225
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -Sys-SigAction-0.11.ebuild,
   -Sys-SigAction-0.130.0.ebuild:
