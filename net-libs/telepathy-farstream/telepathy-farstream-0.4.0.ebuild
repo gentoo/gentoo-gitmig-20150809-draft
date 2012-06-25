@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/telepathy-farstream-0.1.1.ebuild,v 1.1 2011/10/30 03:26:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/telepathy-farstream-0.4.0.ebuild,v 1.1 2012/06/25 04:17:12 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -9,7 +9,7 @@ PYTHON_USE_WITH_OPT="python"
 
 inherit python
 
-DESCRIPTION="Telepathy client library that uses Farsight2 to handle Call channels"
+DESCRIPTION="Telepathy client library that uses Farstream to handle Call channels"
 HOMEPAGE="http://telepathy.freedesktop.org"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
@@ -18,11 +18,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples python"
 
-RDEPEND=">=dev-libs/glib-2.16:2
+RDEPEND=">=dev-libs/glib-2.30:2
 	>=sys-apps/dbus-0.60
 	>=dev-libs/dbus-glib-0.60
-	>=net-libs/telepathy-glib-0.13.4
-	>=net-libs/farsight2-0.0.28
+	>=net-libs/telepathy-glib-0.17.5
+	>=net-libs/farstream-0.1.0
 	python? (
 		>=dev-python/pygobject-2.12.0:2
 		>=dev-python/gst-python-0.10.10 )"
