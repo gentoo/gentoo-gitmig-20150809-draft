@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.225 2012/06/22 15:25:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.226 2012/06/25 19:20:27 maekke Exp $
+
+  25 Jun 2012; Markus Meier <maekke@gentoo.org> curl-7.25.0-r1.ebuild:
+  arm stable, bug #421479
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> curl-7.25.0-r1.ebuild:
   Marking curl-7.25.0-r1 ppc64 for bug 421479
