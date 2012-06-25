@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.9 2012/05/27 18:15:14 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.10 2012/06/25 08:07:56 tetromino Exp $
+
+*accountsservice-0.6.21 (25 Jun 2012)
+
+  25 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -accountsservice-0.6.14.ebuild, +accountsservice-0.6.21.ebuild,
+  +files/accountsservice-0.6.21-gentoo-system-users.patch, metadata.xml:
+  Version bump with bugfixes and systemd support. Drop old.
 
   27 May 2012; Matt Turner <mattst88@gentoo.org> accountsservice-0.6.15.ebuild:
   Added ~alpha, bug 379651.
