@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.16 2012/06/02 08:25:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.17 2012/06/25 17:46:48 graaff Exp $
+
+*sass-3.1.19 (25 Jun 2012)
+
+  25 Jun 2012; Hans de Graaff <graaff@gentoo.org> +sass-3.1.19.ebuild:
+  Version bump. Avoid known-to-be-broken tests on jruby. Fixes bug 422937.
 
   02 Jun 2012; Hans de Graaff <graaff@gentoo.org> -sass-3.1.4.ebuild,
   -sass-3.1.5.ebuild, -sass-3.1.10.ebuild, -sass-3.1.10-r1.ebuild,
