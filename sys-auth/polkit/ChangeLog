@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.86 2012/06/23 04:01:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.87 2012/06/25 09:32:04 tetromino Exp $
+
+*polkit-0.106-r3 (25 Jun 2012)
+
+  25 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +polkit-0.106-r3.ebuild:
+  pax-mark polkitd to fix crashes on hardened/PaX systems.
 
   23 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> polkit-0.106-r2.ebuild:
   Convert pkg_postinst() message about polkitd home directory to new
