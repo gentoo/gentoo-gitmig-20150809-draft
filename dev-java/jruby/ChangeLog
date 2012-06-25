@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.85 2012/05/09 04:03:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.86 2012/06/25 07:43:03 nativemad Exp $
+
+  25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> jruby-1.6.5.1.ebuild:
+  Pawel obviously forgot that package for x86 on bug 396305... I need it now
+  for rubygems in bug 411507.
 
 *jruby-1.6.7.2 (09 May 2012)
 
