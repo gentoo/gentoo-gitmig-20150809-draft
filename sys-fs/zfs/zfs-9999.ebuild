@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.24 2012/06/18 15:19:14 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.25 2012/06/25 21:19:41 ryao Exp $
 
 EAPI="4"
 
@@ -64,7 +64,9 @@ pkg_setup() {
 		MODULES
 		ZLIB_DEFLATE
 		ZLIB_INFLATE"
-	use rootfs && CONFIG_CHECK="${CONFIG_CHECK} DEVTMPFS"
+	use rootfs && \
+		CONFIG_CHECK="${CONFIG_CHECK} BLK_DEV_INITRD
+			DEVTMPFS"
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
 }
@@ -84,6 +86,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-1-of-3.patch"
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-2-of-3.patch"
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-3-of-3.patch"
+		epatch "${FILESDIR}/${P}-range-lock-caller-allocate.patch"
 	fi
 
 	autotools-utils_src_prepare
