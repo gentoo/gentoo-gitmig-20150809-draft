@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>chithanh@gentoo.org</email>
-		<name>Chí-Thanh Christopher Nguyễn</name>
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
 		<flag name='messages'>enable error messages</flag>
