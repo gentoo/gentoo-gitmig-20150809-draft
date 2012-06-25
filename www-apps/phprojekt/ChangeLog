@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/phprojekt
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.28 2007/06/03 19:39:49 rl03 Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.29 2012/06/25 19:03:47 mabi Exp $
+
+*phprojekt-6.1.2 (25 Jun 2012)
+
+  25 Jun 2012; Matti Bickel <mabi@gentoo.org> +files/postinstall-6-en.txt,
+  +phprojekt-6.1.2.ebuild:
+  version bump. note that version 6 is a rewrite, but can import your version 5
+  configuration/data at the end of setup.
 
   03 Jun 2007; Renat Lumpau <rl03@gentoo.org>
   -files/phprojekt-4.2.3-fix-chat-vuln.diff, -phprojekt-4.2.3.ebuild:
