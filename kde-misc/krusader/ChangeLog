@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.105 2012/06/22 21:17:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.106 2012/06/25 18:51:18 kensington Exp $
+
+  25 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  -krusader-2.4.0_beta1.ebuild:
+  Remove old.
 
   22 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
   krusader-2.4.0_beta1-r1.ebuild:
@@ -251,4 +255,3 @@
   18 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -krusader-1.70.0.ebuild,
   -krusader-1.70.0-r1.ebuild, krusader-1.70.1.ebuild:
   No javascript for Sparc for now.
-
