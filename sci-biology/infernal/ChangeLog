@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/infernal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.10 2011/02/11 13:04:33 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.11 2012/06/25 07:08:17 jlec Exp $
+
+  25 Jun 2012; Justin Lecher <jlec@gentoo.org> infernal-1.0.2-r1.ebuild,
+  +files/infernal-1.0.2-perl-5.16.patch:
+  Fix for perl-5.16, #422561; move to EAPI=4
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> infernal-1.0.2-r1.ebuild:
   Stable on amd64 wrt bug #353571
