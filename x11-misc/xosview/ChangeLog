@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.48 2012/06/24 10:36:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.49 2012/06/25 05:41:45 jdhore Exp $
+
+  25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> xosview-1.9.3.ebuild:
+  marked x86 per bug 422391
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xosview-1.9.3.ebuild:
   Stable for amd64, wrt bug #422391
