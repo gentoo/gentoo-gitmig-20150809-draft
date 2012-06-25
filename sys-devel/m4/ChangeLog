@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.154 2012/04/26 12:09:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.155 2012/06/25 05:48:57 jdhore Exp $
+
+  25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> m4-1.4.16.ebuild:
+  marked x86 per bug 423239
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> m4-1.4.16.ebuild:
   keyword ~amd64-fbsd
