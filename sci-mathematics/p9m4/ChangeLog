@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/p9m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/ChangeLog,v 1.3 2012/01/30 05:22:18 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/ChangeLog,v 1.4 2012/06/25 22:37:59 flameeyes Exp $
+
+  25 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Fix typo.
 
   30 Jan 2012; Mark Wright <gienah@gentoo.org> metadata.xml:
   Note I am the maintainer in metadata.xml.
@@ -15,4 +18,3 @@
   +files/p9m4-v05-python2.6.patch, +p9m4-05.ebuild,
   +files/p9m4-v05-use-inst-paths.patch, +metadata.xml:
   New p9m4 prover9 mace4 gui ebuild by me fixes #398021
-
