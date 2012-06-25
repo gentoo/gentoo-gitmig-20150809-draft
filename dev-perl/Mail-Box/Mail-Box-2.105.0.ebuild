@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Box/Mail-Box-2.105.0.ebuild,v 1.1 2012/05/16 20:49:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Box/Mail-Box-2.105.0.ebuild,v 1.2 2012/06/25 08:03:16 jdhore Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Mail folder manager and MUA backend"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="test"
 
 RDEPEND="
