@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.6 2012/04/25 16:41:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.7 2012/06/25 18:33:23 jsbronder Exp $
 
 EAPI=2
 
@@ -26,9 +26,8 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="
 	fortran? ( virtual/fortran )
-${COMMON_DEPEND}
-	!sys-cluster/openmpi
-	!sys-cluster/lam-mpi"
+	${COMMON_DEPEND}
+	!sys-cluster/openmpi"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
 

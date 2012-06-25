@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpi-dotnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.9 2012/05/21 19:27:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.10 2012/06/25 18:38:03 jsbronder Exp $
+
+  25 Jun 2012; Justin Bronder <jsbronder@gentoo.org> mpi-dotnet-1.0.0.ebuild:
+  Drop blocker (sys-cluster/lam-mpi) that is no longer in the tree.
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> mpi-dotnet-1.0.0.ebuild:
   Add missing inheritance of eutils.eclass

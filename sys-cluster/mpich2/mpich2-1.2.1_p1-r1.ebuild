@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.13 2011/06/21 14:24:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.14 2012/06/25 18:33:23 jsbronder Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -26,10 +26,9 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="
 	fortran? ( virtual/fortran )
-${COMMON_DEPEND}
+	${COMMON_DEPEND}
 	!media-sound/mpd
-	!sys-cluster/openmpi
-	!sys-cluster/lam-mpi"
+	!sys-cluster/openmpi"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
 
