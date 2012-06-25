@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.8.1.ebuild,v 1.8 2012/05/20 13:18:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.8.1.ebuild,v 1.9 2012/06/25 15:56:23 armin76 Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit multilib qt4-build
 
 DESCRIPTION="The SQL module for the Qt toolkit"
 SLOT="4"
-KEYWORDS="amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="firebird freetds mysql odbc postgres qt3support +sqlite"
 
 REQUIRED_USE="

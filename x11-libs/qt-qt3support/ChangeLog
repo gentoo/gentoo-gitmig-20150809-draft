@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-qt3support
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.119 2012/06/19 22:36:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.120 2012/06/25 15:58:48 armin76 Exp $
+
+  25 Jun 2012; Raúl Porcel <armin76@gentoo.org> qt-qt3support-4.8.1.ebuild,
+  qt-qt3support-4.8.2.ebuild:
+  Add ~alpha, alpha/ia64 stable wrt #414241
 
   19 Jun 2012; Davide Pesavento <pesa@gentoo.org>
   +files/4.8.2-qatomic-x32.patch, qt-qt3support-4.8.2.ebuild:
