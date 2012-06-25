@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/fishsupper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/ChangeLog,v 1.3 2012/02/24 14:34:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/ChangeLog,v 1.4 2012/06/25 07:44:57 tupone Exp $
+
+  25 Jun 2012; Tupone Alfredo <tupone@gentoo.org> fishsupper-0.1.6.ebuild,
+  +files/fishsupper-0.1.6-asneeded.patch,
+  +files/fishsupper-0.1.6-ovflfix.patch:
+  Fix overflow & asneeded Bug #423061 by flameeyes@gentoo.org
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> fishsupper-0.1.6.ebuild:
   x86 stable wrt bug #404159

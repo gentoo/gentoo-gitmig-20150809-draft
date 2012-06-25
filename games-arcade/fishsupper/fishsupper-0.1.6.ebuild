@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/fishsupper-0.1.6.ebuild,v 1.3 2012/02/24 14:34:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/fishsupper-0.1.6.ebuild,v 1.4 2012/06/25 07:44:57 tupone Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils autotools games
 
 DESCRIPTION="A simple arcade/puzzle game, loosely based on the retro classic Frogger"
 HOMEPAGE="http://sourceforge.net/projects/fishsupper/"
@@ -20,6 +20,12 @@ RDEPEND="media-libs/libsdl[audio,video,opengl,X]
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-libs/boost"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-ovflfix.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
+}
 
 src_configure() {
 	egamesconf \
