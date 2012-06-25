@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.41 2012/06/18 10:36:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.42 2012/06/25 19:45:21 prometheanfire Exp $
+
+*pnp4nagios-0.6.14-r1 (25 Jun 2012)
+
+  25 Jun 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +pnp4nagios-0.6.14-r1.ebuild:
+  you can use icinga or nagios with pnp4nagios now, fixes bug #422711
 
   18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -pnp4nagios-0.6.11.ebuild,
   -pnp4nagios-0.6.7.ebuild:
