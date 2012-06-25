@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.74 2012/06/21 05:30:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.75 2012/06/25 07:17:18 nativemad Exp $
+
+  25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> racc-1.4.6-r1.ebuild:
+  x86 stable, see bug 411507
 
   21 Jun 2012; Hans de Graaff <graaff@gentoo.org> racc-1.4.8.ebuild:
   Add missing test dependency on hoe, bug 421925.
