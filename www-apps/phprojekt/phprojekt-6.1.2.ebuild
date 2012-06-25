@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-6.1.2.ebuild,v 1.1 2012/06/25 19:03:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-6.1.2.ebuild,v 1.2 2012/06/25 20:27:22 mr_bones_ Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ src_install() {
 
 	cp -R phprojekt/* "${D}/${MY_HTDOCSDIR}"
 	cp phprojekt/.htaccess "${D}/${MY_HTDOCSDIR}"
-	
+
 	webapp_serverowned "${MY_HTDOCSDIR}"
 
 	dodir "${MY_HOSTROOTDIR}/phprojekt_private"
