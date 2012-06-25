@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.18 2012/05/13 13:02:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.19 2012/06/25 20:07:58 swift Exp $
+
+*sepolgen-1.1.5-r2 (25 Jun 2012)
+
+  25 Jun 2012; <swift@gentoo.org> +sepolgen-1.1.5-r2.ebuild:
+  Support python3, fix audit2allow support. bugs #415091 and #408179
 
   13 May 2012; <swift@gentoo.org> -sepolgen-1.0.23.ebuild,
   -sepolgen-1.1.0.ebuild:
