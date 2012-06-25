@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/telepathy-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.36 2011/03/22 20:07:03 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.37 2012/06/25 01:19:08 tetromino Exp $
+
+  25 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  telepathy-python-0.15.19.ebuild,
+  +files/telepathy-python-0.15.19-mkdir_p.patch:
+  Fix building with automake-1.12.x (bug #423249, thanks to Diego Elio Pettenò
+  for reporting).
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org>
   telepathy-python-0.15.19.ebuild:
