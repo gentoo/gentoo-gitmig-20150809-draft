@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/uemacs-pk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.18 2012/06/24 22:00:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.19 2012/06/25 07:43:18 jdhore Exp $
+
+  25 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  uemacs-pk-4.0.15_p20120526.ebuild:
+  marked x86 per bug 423339
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   uemacs-pk-4.0.15_p20120526.ebuild:
