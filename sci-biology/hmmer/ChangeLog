@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/hmmer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.31 2010/07/18 11:38:27 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.32 2012/06/25 06:23:12 jlec Exp $
+
+  25 Jun 2012; Justin Lecher <jlec@gentoo.org> hmmer-3.0.ebuild,
+  +files/hmmer-3.0-perl-5.16.patch, metadata.xml:
+  Fix for build with perl-5.16, #421799; handle static-libs
 
   18 Jul 2010; Christian Faulhammer <fauli@gentoo.org> hmmer-3.0.ebuild:
   stable x86, bug 328419
