@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-2.0.0.ebuild,v 1.1 2012/05/27 15:34:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-2.0.0.ebuild,v 1.2 2012/06/25 17:27:10 jlec Exp $
 
 EAPI=4
 
-inherit qt4-r2 eutils cmake-utils
+inherit qt4-r2 eutils cmake-utils user
 
 DESCRIPTION="Intelligent Teaching And Learning with Computers (iTALC) supports working with computers in school"
 HOMEPAGE="http://italc.sourceforge.net/"
@@ -13,15 +13,14 @@ SRC_URI="mirror://sourceforge/italc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
 IUSE=""
-PROPERTIES="interactive"
 
-RDEPEND="dev-libs/lzo
-	sys-apps/tcp-wrappers
-	virtual/jpeg
-	sys-libs/zlib
+RDEPEND="
+	dev-libs/lzo
 	dev-libs/openssl
+	sys-apps/tcp-wrappers
+	sys-libs/zlib
+	virtual/jpeg
 	x11-libs/qt-core
 	x11-libs/qt-xmlpatterns
 	x11-libs/libICE
@@ -37,13 +36,14 @@ RDEPEND="dev-libs/lzo
 DEPEND="${RDEPEND}
 	x11-proto/inputproto"
 
+PROPERTIES="interactive"
+
+PATCHES=( "${FILESDIR}"/${P}-gcc-4.7.patch )
+
+DOCS=( TODO README AUTHORS INSTALL ChangeLog )
+
 pkg_setup() {
 	enewgroup italc
-}
-
-src_install() {
-	cmake-utils_src_install
-	dodoc TODO README AUTHORS INSTALL ChangeLog
 }
 
 pkg_postinst() {
@@ -53,7 +53,7 @@ pkg_postinst() {
 	elog "Please add the logins of master users (teachers) to the italc group by running"
 	elog "# usermod -a -G italc <loginname>"
 
-	elog ""
+	echo ""
 }
 
 pkg_config() {

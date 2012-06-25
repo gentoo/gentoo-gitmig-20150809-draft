@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.27 2012/05/27 15:34:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.28 2012/06/25 17:27:10 jlec Exp $
+
+  25 Jun 2012; Justin Lecher <jlec@gentoo.org> italc-1.0.9.ebuild,
+  italc-2.0.0.ebuild, +files/italc-2.0.0-gcc-4.7.patch:
+  Fix for gcc-4.7, #423183
 
 *italc-2.0.0 (27 May 2012)
 
