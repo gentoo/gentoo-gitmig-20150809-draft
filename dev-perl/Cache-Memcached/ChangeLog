@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cache-Memcached
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.71 2012/06/24 12:58:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.72 2012/06/25 19:34:48 maekke Exp $
+
+  25 Jun 2012; Markus Meier <maekke@gentoo.org> Cache-Memcached-1.290.0.ebuild:
+  arm stable, bug #421613
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
