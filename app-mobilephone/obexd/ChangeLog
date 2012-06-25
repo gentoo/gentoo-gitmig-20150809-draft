@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.60 2012/06/20 14:52:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.61 2012/06/25 19:44:26 maekke Exp $
+
+  25 Jun 2012; Markus Meier <maekke@gentoo.org> obexd-0.46.ebuild:
+  arm stable, bug #421995
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> obexd-0.46.ebuild:
   Stable for amd64, wrt bug #421995
