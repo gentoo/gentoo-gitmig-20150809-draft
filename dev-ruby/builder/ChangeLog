@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.69 2012/06/20 17:53:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.70 2012/06/25 19:38:16 maekke Exp $
+
+  25 Jun 2012; Markus Meier <maekke@gentoo.org> builder-2.1.2-r3.ebuild:
+  arm stable, bug #421615
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> builder-2.1.2-r3.ebuild:
   Stable for amd64, wrt bug #421615
