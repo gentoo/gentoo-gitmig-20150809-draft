@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.196 2012/06/16 05:01:36 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.197 2012/06/25 07:44:50 nativemad Exp $
+
+  25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> rubygems-1.8.24.ebuild:
+  x86 stable, see bug 411507
 
   16 Jun 2012; Akinori Hattori <hattya@gentoo.org> rubygems-1.8.15.ebuild:
   ia64 stable wrt bug #348901.
