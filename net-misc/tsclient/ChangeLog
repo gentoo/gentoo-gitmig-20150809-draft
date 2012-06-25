@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tsclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.38 2012/05/05 03:20:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.39 2012/06/25 00:38:39 tetromino Exp $
+
+  25 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  tsclient-2.0.1-r1.ebuild, +files/tsclient-2.0.1-glib-2.32.patch:
+  Fix building with glib-2.32 (bug #423283, thanks to Diego Elio Pettenò).
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> tsclient-2.0.1-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

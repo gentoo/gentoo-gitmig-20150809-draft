@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1-r1.ebuild,v 1.4 2012/05/05 03:20:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1-r1.ebuild,v 1.5 2012/06/25 00:38:39 tetromino Exp $
 
 EAPI=2
 
@@ -38,7 +38,8 @@ src_prepare() {
 	# Fix .desktop file as per upstream changes, bug #351386
 	epatch "${FILESDIR}"/${P}-no-networkmanager.patch \
 		"${FILESDIR}"/${P}-libnotify-0.7.patch \
-		"${FILESDIR}"/${P}-desktop-file.patch
+		"${FILESDIR}"/${P}-desktop-file.patch \
+		"${FILESDIR}"/${P}-glib-2.32.patch
 
 	# For recent libgnomeui
 	sed -i -e 's:libgnome-2\.0:\0 libgnomeui-2\.0:' \
