@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.102 2012/05/30 13:22:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.103 2012/06/25 03:55:38 tetromino Exp $
+
+*vala-0.16.1 (25 Jun 2012)
+
+  25 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +vala-0.16.1.ebuild:
+  Version bump with bugfixes and binding updates.
 
   30 May 2012; Alexis Ballier <aballier@gentoo.org> vala-0.14.2-r1.ebuild:
   keyword ~amd64-fbsd
