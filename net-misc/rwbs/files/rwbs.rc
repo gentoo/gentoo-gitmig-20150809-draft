@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/files/rwbs.rc,v 1.3 2004/07/15 00:12:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/files/rwbs.rc,v 1.4 2012/06/25 17:32:32 jlec Exp $
 
 depend() {
 	need net
@@ -9,13 +9,13 @@ depend() {
 
 start() {
 	ebegin "Starting Roger Wilco base station"
-	start-stop-daemon --start --quiet --exec /usr/bin/rwbs -b \
+	start-stop-daemon --start --quiet --exec /opt/bin/rwbs -b \
 		-- \${RWBS_OPTS} >>/var/log/rwbs 2>&1
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping Roger Wilco base station"
-	start-stop-daemon --stop --quiet --exec /usr/bin/rwbs > /dev/null 2>&1
+	start-stop-daemon --stop --quiet --exec /opt/bin/rwbs > /dev/null 2>&1
 	eend $?
 }

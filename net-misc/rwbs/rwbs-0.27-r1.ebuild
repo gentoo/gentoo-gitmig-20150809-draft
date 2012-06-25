@@ -1,15 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/rwbs-0.27.ebuild,v 1.8 2007/04/22 15:56:23 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/rwbs-0.27-r1.ebuild,v 1.1 2012/06/25 17:32:32 jlec Exp $
+
+EAPI=4
 
 DESCRIPTION="Roger Wilco base station"
 HOMEPAGE="http://rogerwilco.gamespy.com/"
 SRC_URI="http://games.gci.net/pub/VoiceOverIP/RogerWilco/rwbs_Linux_0_27.tar.gz"
 
+SLOT="0"
 LICENSE="Resounding"
 KEYWORDS="x86"
 IUSE=""
-SLOT="0"
 
 # Everything is statically linked
 DEPEND=""
@@ -18,7 +20,8 @@ S=${WORKDIR}
 
 src_install() {
 	dodoc README.TXT CHANGES.TXT
-	dobin rwbs run_rwbs
+	exeinto /opt/bin
+	doexe rwbs run_rwbs
 
 	# Put distribution into /usr/share/rwbs
 	insinto /usr/share/rwbs/
