@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r2.ebuild,v 1.1 2012/06/19 22:20:07 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r2.ebuild,v 1.2 2012/06/25 07:57:31 tetromino Exp $
 
 EAPI="3"
 
@@ -40,7 +40,7 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( dev-python/epydoc )
 "
 RDEPEND="${COMMON_DEPEND}
-	!<app-admin/system-config-printer-gnome-${PVR}
+	!<app-admin/system-config-printer-gnome-${PV}
 	policykit? ( sys-auth/polkit )
 "
 
