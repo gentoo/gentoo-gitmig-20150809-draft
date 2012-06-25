@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.149 2012/06/24 15:42:56 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.150 2012/06/25 12:22:53 keri Exp $
+
+  25 Jun 2012; <keri@gentoo.org> mercury-11.07.1.ebuild:
+  Ensure debugger/completion test passes with --force-readline ml option
 
   24 Jun 2012; <keri@gentoo.org> mercury-11.07.1.ebuild:
   Check mmc is sufficiently recent when bootstrapping with installed mercury
