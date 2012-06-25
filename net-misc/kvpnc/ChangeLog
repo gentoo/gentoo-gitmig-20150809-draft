@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/kvpnc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.47 2011/02/02 05:27:40 tampakrap Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.48 2012/06/25 20:23:49 dilfridge Exp $
+
+*kvpnc-0.9.6a-r1 (25 Jun 2012)
+
+  25 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/kvpnc-0.9.6a-gcc47.patch, +files/kvpnc-0.9.6a-scriptsec.patch,
+  +kvpnc-0.9.6a-r1.ebuild:
+  Fix breakage with openvpn-2.2
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> kvpnc-0.9.6a.ebuild:
   EAPI3
