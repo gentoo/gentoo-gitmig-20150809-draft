@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/vaal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.7 2011/02/11 19:50:04 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.8 2012/06/25 18:42:57 xarthisius Exp $
+
+  25 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/vaal-1.6-gcc47.patch, files/vaal-1.6-respect-flags.patch,
+  vaal-1.6.ebuild:
+  Fix building with gcc-4.7 wrt #423497 by Diego Elio Pettenò
+  <flameeyes@gentoo.org>, drop -O3 -ggdb from CXXFLAGS
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> vaal-1.6.ebuild:
   Stable on amd64 wrt bug #353572

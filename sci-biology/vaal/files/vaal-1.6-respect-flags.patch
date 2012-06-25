@@ -6,7 +6,7 @@ diff -dur vaal-33805.orig/configure.ac vaal-33805/configure.ac
  AC_OPENMP_CEHCK
  
 -CXXFLAGS=" -imacros config.h -Wextra -Wall -Wno-unused -ansi -pedantic -Wno-long-long -Wsign-promo -Woverloaded-virtual -Wendif-labels -O3 -ggdb3  -ftemplate-depth-50 -Wno-deprecated -Wno-parentheses -fno-strict-aliasing -mieee-fp -iquote ."
-+CXXFLAGS=" ${CXXFLAGS} -imacros config.h -Wextra -Wall -Wno-unused -ansi -pedantic -Wno-long-long -Wsign-promo -Woverloaded-virtual -Wendif-labels -O3 -ggdb3  -ftemplate-depth-50 -Wno-deprecated -Wno-parentheses -fno-strict-aliasing -mieee-fp -iquote ."
++CXXFLAGS=" ${CXXFLAGS} -imacros config.h -Wextra -Wall -Wno-unused -ansi -pedantic -Wno-long-long -Wsign-promo -Woverloaded-virtual -Wendif-labels -ftemplate-depth-50 -Wno-deprecated -Wno-parentheses -fno-strict-aliasing -mieee-fp -iquote ."
  
  OS_RELEASE="`uname -r`"
  AC_SUBST(CXXFLAGS)
