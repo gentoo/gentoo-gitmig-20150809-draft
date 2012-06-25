@@ -1,18 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.93 2012/06/25 15:33:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.94 2012/06/25 16:14:09 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jun 2012)
 # x11-libs/qt-webkit doesn't seem to work
 x11-libs/qt-assistant webkit
-
-# Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
-# Since x11-libs/qt-* will no longer be available for alpha, we need
-# to mask the reverse dependencies
-dev-cpp/eigen examples
-dev-tex/latex-beamer lyx
-media-sound/pulseaudio equalizer
-media-video/vlc skins
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)
@@ -36,10 +28,6 @@ sys-auth/consolekit acl
 # Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
 # UDisks2 untested wrt http://bugs.gentoo.org/412801
 gnome-base/gvfs udisks
-
-# Davide Pesavento <pesa@gentoo.org> (2 May 2012)
-# Requires Qt 4.8, which is not keyworded on alpha.
-x11-libs/cairo qt4
 
 # Raúl Porcel <armin76@gentoo.org> (26 Dec 2011)
 # Fails to build

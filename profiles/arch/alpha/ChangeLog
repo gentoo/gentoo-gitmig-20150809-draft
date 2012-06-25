@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.131 2012/06/25 15:33:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.132 2012/06/25 16:14:09 armin76 Exp $
+
+  25 Jun 2012; Raúl Porcel <armin76@gentoo.org> package.mask,
+  package.use.mask:
+  Unmask qt-related stuff
 
   25 Jun 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask x11-libs/qt-assistant webkit

@@ -1,11 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.80 2012/06/14 07:40:27 yngwin Exp $
-
-# Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
-# Since there is no longer a stable qt available for ia64, we need to mask
-# the qt4 useflag for stable versions of avahi
-=net-dns/avahi-0.6.30-r1 qt4
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.81 2012/06/25 16:15:11 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)

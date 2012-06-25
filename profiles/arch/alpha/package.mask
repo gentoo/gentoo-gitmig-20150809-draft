@@ -1,32 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.30 2012/06/15 04:35:49 yngwin Exp $
-
-# Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
-# Since x11-libs/qt-* will no longer be available for alpha, we need
-# to mask the reverse dependencies
-app-crypt/qca
-app-crypt/qca-cyrus-sasl
-app-crypt/qca-gnupg
-app-crypt/qca-logger
-app-crypt/qca-ossl
-app-office/lyx
-app-text/djview
-dev-db/tora
-dev-libs/quazip
-dev-python/PyQt4
-dev-python/qscintilla-python
-dev-util/automoc
-dev-vcs/qbzr
-net-irc/kvirc
-x11-themes/qtcurve-qt4
-dev-vcs/bzr-explorer
-media-gfx/pictureflow
-media-libs/phonon
-media-video/smplayer
-x11-libs/qscintilla
-x11-libs/qwt
-x11-libs/qwtplot3d
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.31 2012/06/25 16:14:09 armin76 Exp $
 
 # Tobias Klausman <klausman@gentoo.org> (31 Oct 2011)
 # Breaks since accept4() is not implemented on alpha
