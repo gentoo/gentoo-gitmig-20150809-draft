@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.16.1.ebuild,v 1.1 2012/06/25 03:55:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.16.1-r1.ebuild,v 1.1 2012/06/25 07:41:17 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -39,14 +39,24 @@ src_install() {
 
 	insinto /usr/share/aclocal
 	newins vala.m4 vala-${SLOT/./-}.m4
+	if use vapigen; then
+		insinto /usr/share/vala-${SLOT}
+		doins vapigen/Makefile.vapigen
+	fi
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
 	alternatives_auto_makesym /usr/share/aclocal/vala.m4 "vala-0-[0-9][0-9].m4"
+	use vapigen &&
+		alternatives_auto_makesym /usr/share/vala/Makefile.vapigen \
+			"/usr/share/vala-0.[0-9][0-9]/Makefile.vapigen"
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
 	alternatives_auto_makesym /usr/share/aclocal/vala.m4 "vala-0-[0-9][0-9].m4"
+	use vapigen &&
+		alternatives_auto_makesym /usr/share/vala/Makefile.vapigen \
+			"/usr/share/vala-0.[0-9][0-9]/Makefile.vapigen"
 }
