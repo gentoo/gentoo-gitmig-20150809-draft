@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.139 2012/06/19 22:30:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.140 2012/06/25 16:07:22 armin76 Exp $
+
+  25 Jun 2012; Raúl Porcel <armin76@gentoo.org> qt-assistant-4.8.1-r1.ebuild,
+  qt-assistant-4.8.2.ebuild:
+  Add ~alpha, alpha/ia64 stable wrt #414241
 
   19 Jun 2012; Davide Pesavento <pesa@gentoo.org>
   +files/4.8.2-qatomic-x32.patch, qt-assistant-4.8.2.ebuild:
