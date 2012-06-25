@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r5.ebuild,v 1.4 2012/06/22 15:44:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r5.ebuild,v 1.5 2012/06/25 17:13:38 jlec Exp $
 
 EAPI=4
 inherit autotools eutils multilib
@@ -25,7 +25,9 @@ src_prepare() {
 	sed -i -e '/#/d' "${d}"/series || die
 	EPATCH_SOURCE="${d}" epatch $(<"${d}"/series)
 
-	epatch "${FILESDIR}"/${P}-f{ree,ortify}.patch
+	epatch \
+		"${FILESDIR}"/${P}-f{ree,ortify}.patch \
+		"${FILESDIR}"/${P}-impl-dec.patch
 
 	sed -i \
 		-e '/INSTALL_PROGRAM/s:-s::' \
@@ -37,6 +39,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-encap \
+		--disable-epkg-install \
 		$(use_enable static-libs static) \
 		$(use_with zlib)
 }
