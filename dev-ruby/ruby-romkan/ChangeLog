@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-romkan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.28 2011/10/12 17:00:36 matsuu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.29 2012/06/25 17:25:20 graaff Exp $
+
+*ruby-romkan-0.4-r4 (25 Jun 2012)
+
+  25 Jun 2012; Hans de Graaff <graaff@gentoo.org>
+  +files/ruby-romkan-ruby19.patch, +ruby-romkan-0.4-r4.ebuild:
+  Add ruby19 with patch provided by Rafał Mużyło in bug 423445.
 
 *ruby-romkan-0.4-r3 (12 Oct 2011)
 
