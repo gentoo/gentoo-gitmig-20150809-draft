@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-1.1.0.ebuild,v 1.1 2012/06/14 17:16:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-1.1.0.ebuild,v 1.2 2012/06/25 19:41:18 bicatali Exp $
 
 EAPI=4
 
@@ -12,7 +12,8 @@ MYPD=${PN}-data-0.3
 DESCRIPTION="Large Scale Machine Learning Toolbox"
 HOMEPAGE="http://shogun-toolbox.org/"
 SRC_URI="ftp://shogun-toolbox.org/shogun/releases/${MYPV}/sources/${P}.tar.bz2
-	test? ( ftp://shogun-toolbox.org/shogun/data/${MYPD}.tar.bz2 )"
+	test? ( ftp://shogun-toolbox.org/shogun/data/${MYPD}.tar.bz2 )
+	examples? ( ftp://shogun-toolbox.org/shogun/data/${MYPD}.tar.bz2 )"
 
 LICENSE="GPL-3 free-noncomm"
 SLOT="0"
@@ -150,8 +151,8 @@ src_install() {
 	use doc && dohtml -r ../doc/html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		emake -C ../examples clean
-		doins -r ../examples
-		newins -r ../../${MYPD} data
+		emake -C ../examples clean && doins -r ../examples
+		insinto /usr/share/doc/${PF}/data
+		doins -r "${WORKDIR}"/${MYPD}/*
 	fi
 }
