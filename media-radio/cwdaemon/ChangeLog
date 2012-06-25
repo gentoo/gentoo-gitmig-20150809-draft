@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/cwdaemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.17 2012/05/03 03:48:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.18 2012/06/25 18:37:35 tomjbe Exp $
+
+  25 Jun 2012; Thomas Beierlein <tomjbe@gentoo.org> cwdaemon-0.9.4.ebuild,
+  +files/cwdaemon-0.9.4-unixcw3.patch:
+  Adapt to new unixcw-3. Bug #423389. Thanks Diego
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> cwdaemon-0.9.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
