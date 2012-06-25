@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-1.0.6.ebuild,v 1.1 2012/04/07 08:50:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-1.0.6.ebuild,v 1.2 2012/06/25 06:06:31 graaff Exp $
 
 EAPI=4
 
@@ -33,3 +33,7 @@ IUSE=""
 # 330621. We use this convoluted way because redcloth isn't available
 # yet for jruby.
 USE_RUBY="${USE_RUBY/jruby/}" ruby_add_bdepend "test? ( >=dev-ruby/redcloth-4.2.2 )"
+
+all_ruby_prepare() {
+	sed -i -e '/git ls-files/ s:^:#:' coderay.gemspec || die
+}

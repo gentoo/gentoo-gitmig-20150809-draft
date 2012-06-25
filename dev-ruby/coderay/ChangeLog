@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.51 2012/04/07 08:50:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.52 2012/06/25 06:06:31 graaff Exp $
+
+  25 Jun 2012; Hans de Graaff <graaff@gentoo.org> coderay-1.0.6.ebuild:
+  Avoid unneeded dependency on git.
 
 *coderay-1.0.6 (07 Apr 2012)
 
