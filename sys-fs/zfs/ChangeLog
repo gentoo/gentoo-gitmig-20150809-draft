@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.27 2012/06/18 15:19:14 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.28 2012/06/25 00:50:51 ryao Exp $
+
+*zfs-0.6.0_rc9-r1 (25 Jun 2012)
+
+  25 Jun 2012; Richard Yao <ryao@gentoo.org>
+  +files/zfs-0.6.0_rc9-range-lock-caller-allocate.patch,
+  +zfs-0.6.0_rc9-r1.ebuild:
+  Fix swap deadlock involving zfs_range_lock() and zvols
 
   18 Jun 2012; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc9.ebuild,
   zfs-9999.ebuild:
