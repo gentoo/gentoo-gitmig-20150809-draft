@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-validator/dnssec-validator-1.13.ebuild,v 1.1 2012/06/23 22:23:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-validator/dnssec-validator-1.13.ebuild,v 1.2 2012/06/25 20:26:17 mr_bones_ Exp $
 
 EAPI=4
 
@@ -42,7 +42,6 @@ src_install() {
 	doins etc/{dnsval.conf,root.hints}
 	elog "Creating /etc/dnssec-tools/resolv.conf as symlink to /etc/resolv.conf"
 	dosym ../resolv.conf /etc/dnssec-tools/resolv.conf
-
 
 	use static-libs || find "${D}" -name "*.a" -delete
 	prune_libtool_files
