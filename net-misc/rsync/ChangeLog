@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.225 2012/04/26 14:55:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.226 2012/06/25 10:37:15 flameeyes Exp $
+
+  25 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> rsync-3.0.9-r2.ebuild,
+  rsync-3.0.9.ebuild:
+  Add dependency over dev-lang/perl at build time.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> rsync-3.0.9-r2.ebuild:
   keyword ~amd64-fbsd
