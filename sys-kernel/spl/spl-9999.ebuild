@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.18 2012/06/18 15:18:12 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.19 2012/06/25 17:54:06 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -52,6 +52,7 @@ src_prepare() {
 	if [ ${PV} != "9999" ]
 	then
 		epatch "${FILESDIR}/${P}-detect-kernel-honors-gfp-flags.patch"
+		epatch "${FILESDIR}/${P}-constify-free-functions.patch"
 	fi
 
 	autotools-utils_src_prepare
