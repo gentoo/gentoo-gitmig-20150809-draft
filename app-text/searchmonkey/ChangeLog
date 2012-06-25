@@ -1,6 +1,10 @@
 # ChangeLog for app-text/searchmonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/ChangeLog,v 1.8 2012/05/04 03:33:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/ChangeLog,v 1.9 2012/06/25 17:18:36 jlec Exp $
+
+  25 Jun 2012; Justin Lecher <jlec@gentoo.org> searchmonkey-2.0.0.ebuild,
+  +files/searchmonkey-2.0.0-gcc4.7.patch, metadata.xml:
+  Fix for gcc-4.7, #423191
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> searchmonkey-0.8.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
