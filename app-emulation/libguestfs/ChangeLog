@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.18 2012/05/31 22:36:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.19 2012/06/25 20:17:28 maksbotan Exp $
+
+  25 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> -libguestfs-1.8.16.ebuild:
+  1.8 branch is now unsupported by upstream, remove it
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> libguestfs-1.8.16.ebuild:
   inherit eutils for epatch
@@ -93,4 +96,3 @@
   +files/1.8/1.8.15/configure_ac_automagic.patch, +libguestfs-1.8.15.ebuild,
   +files/1.8/1.8.15/disable_php_in_makefile.patch, +metadata.xml:
   Add app-emulation/libguestfs, bug 302614. Thanks to slepnoga
-
