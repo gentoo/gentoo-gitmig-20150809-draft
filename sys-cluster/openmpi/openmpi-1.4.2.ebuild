@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.2.ebuild,v 1.17 2011/06/24 15:09:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.2.ebuild,v 1.18 2012/06/25 18:28:11 jsbronder Exp $
 
 EAPI=3
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs
@@ -24,8 +24,6 @@ RDEPEND="
 		!app-text/lcdf-typetools
 	)
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
-	!sys-cluster/mpich
-	!sys-cluster/lam-mpi
 	!sys-cluster/mpich2
 	!sys-cluster/mpiexec"
 DEPEND="${RDEPEND}"
