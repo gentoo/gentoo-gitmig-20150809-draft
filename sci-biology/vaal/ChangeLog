@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/vaal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.9 2012/06/25 18:50:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.10 2012/06/25 19:09:19 jlec Exp $
+
+*vaal-42179 (25 Jun 2012)
+
+  25 Jun 2012; Justin Lecher <jlec@gentoo.org> +vaal-42179.ebuild:
+  Version Bump
 
   25 Jun 2012; Justin Lecher <jlec@gentoo.org> -vaal-1.2-r1.ebuild,
   vaal-1.6.ebuild, files/vaal-1.6-respect-flags.patch:
