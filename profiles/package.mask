@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13890 2012/06/25 16:25:53 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13891 2012/06/25 18:35:52 jsbronder Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -383,14 +383,6 @@ games-util/nforenum
 # For regular releases please migrate to
 # sys-kernel/pf-sources
 =sys-kernel/zen-sources-2.6*
-
-# Kacper Kowalik <xarthisius@gentoo.org> (24 May 2012)
-# Masked for removal in 30 days (#324415), Doesn't build with
-# libtool-2.2 (#276194), bundles vulnerable copy of libtool (#297648),
-# fails to install with new coreutils and automake-1.11 (#328549),
-# last release 2007-02-14, doesn't provide MPI-2
-# Superseeded by sys-cluster/{openmpi,mpich2}
-sys-cluster/lam-mpi
 
 # Markos Chandras <hwoarang@gentoo.org> (23 May 2012)
 # Mask beta release for testing
