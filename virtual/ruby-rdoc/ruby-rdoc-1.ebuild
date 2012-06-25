@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ruby-rdoc-1.ebuild,v 1.7 2012/05/27 14:56:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ruby-rdoc-1.ebuild,v 1.8 2012/06/25 07:10:48 nativemad Exp $
 
 EAPI=2
 USE_RUBY="ruby19"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${USE_RUBY}"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="|| ( dev-ruby/rdoc[ruby_targets_ruby19] <dev-lang/ruby-1.9.2_rc2-r1:1.9 )"

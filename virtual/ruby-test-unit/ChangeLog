@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.29 2012/05/27 13:51:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.30 2012/06/25 07:13:12 nativemad Exp $
+
+  25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org>
+  ruby-test-unit-0-r4.ebuild:
+  x86 stable, see bug 411507
 
   27 May 2012; Markus Meier <maekke@gentoo.org> ruby-test-unit-0-r4.ebuild:
   arm stable, bug #411507

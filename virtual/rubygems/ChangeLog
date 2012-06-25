@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.35 2012/05/27 13:44:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.36 2012/06/25 07:08:11 nativemad Exp $
+
+  25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> rubygems-4.ebuild:
+  x86 stable, see bug 411507
 
   27 May 2012; Markus Meier <maekke@gentoo.org> rubygems-1.ebuild:
   arm stable, bug #411507
