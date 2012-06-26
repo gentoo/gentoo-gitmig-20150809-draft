@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.103 2012/06/08 07:42:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.104 2012/06/26 15:37:39 jer Exp $
+
+  26 Jun 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Denote Dustin as an upstream maintainer, not a Gentoo one.
 
   08 Jun 2012; Tim Harder <radhermit@gentoo.org> buildbot-0.8.3_p1.ebuild,
   buildbot-0.8.5.ebuild, buildbot-0.8.6.ebuild, buildbot-0.8.6_p1.ebuild:
