@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mpmath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.22 2012/06/26 05:54:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.23 2012/06/26 06:58:04 jlec Exp $
+
+  26 Jun 2012; Justin Lecher <jlec@gentoo.org> mpmath-0.17.ebuild:
+  Remove test dependency, as it is automatically added by eclass
 
   26 Jun 2012; Justin Lecher <jlec@gentoo.org> mpmath-0.17.ebuild:
   Add missing dep on pytest for tests, remove src_test and use eclass default,

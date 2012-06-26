@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.17.ebuild,v 1.5 2012/06/26 05:54:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.17.ebuild,v 1.6 2012/06/26 06:58:04 jlec Exp $
 
 EAPI=4
 
@@ -27,8 +27,7 @@ RDEPEND="
 	gmp? ( dev-python/gmpy )
 	matplotlib? ( dev-python/matplotlib )"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx )
-	test? ( dev-python/pytest )"
+	doc? ( dev-python/sphinx )"
 
 S="${WORKDIR}/${MY_P}"
 
