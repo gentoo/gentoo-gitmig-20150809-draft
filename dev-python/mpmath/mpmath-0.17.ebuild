@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.17.ebuild,v 1.3 2012/06/20 21:05:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.17.ebuild,v 1.4 2012/06/26 03:13:34 bicatali Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ src_prepare() {
 
 	# don't install tests
 	epatch "${FILESDIR}/${PN}.patch"
+	epatch "${FILESDIR}"/${P}-python-3.2.patch
 
 	# this fails with the current version of dev-python/py
 	rm -f ${PN}/conftest.py
@@ -67,9 +68,7 @@ src_test() {
 src_install() {
 	distutils_src_install
 
-	if use doc; then
-		dohtml -r doc/build/* || die "Installation of documentation failed"
-	fi
+	use doc && dohtml -r doc/build/*
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
@@ -80,9 +79,8 @@ src_install() {
 		local path="${ED}$(python_get_sitedir)/${PN}/libmp/"
 		if [[ "${PYTHON_ABI}" == 2.* ]]; then
 			rm -f "${path}exec_py3.py"
-		else if [[ "${PYTHON_ABI}" == 3.* ]]; then
+		elif [[ "${PYTHON_ABI}" == 3.* ]]; then
 			rm -f "${path}exec_py2.py"
-		fi
 		fi
 	}
 
