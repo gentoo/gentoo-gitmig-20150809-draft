@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.99 2012/06/08 17:11:57 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.100 2012/06/26 04:37:40 zmedico Exp $
+
+  26 Jun 2012; Zac Medico <zmedico@gentoo.org> shorewall-lite-4.4.23.2.ebuild,
+  shorewall-lite-4.4.27-r1.ebuild, shorewall-lite-4.4.27.ebuild:
+  inherit eutils for epatch
 
 *shorewall-lite-4.5.4.2 (08 Jun 2012)
 
@@ -486,4 +490,3 @@
   +shorewall-lite-3.2.4.ebuild:
   Was forgotten to add during addition of Shorewall 3.2 Series, fixing bug
   #140001
-

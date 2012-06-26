@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-4.4.27.ebuild,v 1.1 2012/01/03 08:50:38 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-4.4.27.ebuild,v 1.2 2012/06/26 04:37:40 zmedico Exp $
 
 EAPI="4"
 
-inherit versionator
+inherit eutils versionator
 
 # Select version (stable, RC, Beta):
 MY_PV_TREE=$(get_version_component_range 1-2)   # for devel versions use "development/$(get_version_component_range 1-2)"
