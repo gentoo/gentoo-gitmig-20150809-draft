@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.75 2012/06/25 20:07:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.76 2012/06/26 04:59:51 floppym Exp $
+
+  26 Jun 2012; Mike Gilbert <floppym@gentoo.org> setools-3.3.7-r1.ebuild,
+  setools-3.3.7-r3.ebuild:
+  Restict pypy per Arfrever.
 
 *setools-3.3.7-r3 (25 Jun 2012)
 
@@ -321,4 +325,3 @@
 
   02 Jul 2003; Chris PeBenito <pebenito@gentoo.org> setools-20030609.ebuild:
   Initial commit
-
