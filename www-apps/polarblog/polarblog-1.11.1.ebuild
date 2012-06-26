@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.10.0.ebuild,v 1.1 2007/02/12 00:36:11 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/polarblog/polarblog-1.11.1.ebuild,v 1.1 2012/06/26 11:06:59 mabi Exp $
 
-inherit webapp depend.php
+inherit webapp
 
 MY_PV=${PV//./}
 S=${WORKDIR}/PB_v${MY_PV}
@@ -12,11 +12,11 @@ IUSE=""
 DESCRIPTION="PolarBlog is an open source embedded weblog solution"
 HOMEPAGE="http://polarblog.polarlava.com"
 SRC_URI="http://polarblog.polarlava.com/releases/pb_v${MY_PV}.tgz"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 LICENSE="GPL-2"
 
-need_php
+RDEPEND="virtual/httpd-php"
 
 src_install() {
 	webapp_src_preinst
