@@ -7,7 +7,6 @@
 	</maintainer>
 	<longdescription>tinc is an easy to configure VPN implementation.</longdescription>
 	<use>
-		<flag name='raw'> Enable support for Raw Sockets</flag>
 		<flag name='uml'> Enable support for User Mode Linux Sockets</flag>
 		<flag name='vde'> Enable Virtual Distributed Ethernet (VDE) based networking</flag>
 	</use>
