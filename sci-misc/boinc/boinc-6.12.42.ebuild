@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.42.ebuild,v 1.2 2011/11/04 19:22:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.42.ebuild,v 1.3 2012/06/26 13:01:32 ssuominen Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="
 	!app-admin/quickswitch
 	>=app-misc/ca-certificates-20080809
 	dev-libs/openssl
-	net-misc/curl[ssl,-gnutls]
+	net-misc/curl[ssl,curl_ssl_openssl]
 	sys-apps/util-linux
 	sys-libs/zlib
 	cuda? (
@@ -51,11 +51,15 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	# use system ssl certificates
-	mkdir "${S}"/curl
-	ln -s /etc/ssl/certs/ca-certificates.crt "${S}"/curl/ca-bundle.crt
+	mkdir curl
+	ln -s /etc/ssl/certs/ca-certificates.crt curl/ca-bundle.crt
 
 	# prevent bad changes in compile flags, bug 286701
-	sed -i -e "s:BOINC_SET_COMPILE_FLAGS::" configure.ac || die "sed failed"
+	sed -i -e 's:BOINC_SET_COMPILE_FLAGS::' configure.ac || die
+
+	sed -i -e 's:AC_PROG_CC:&\nAC_PROG_OBJCXX:' configure.ac || die #423081
+
+	sed -i -e 's:glib/gtypes.h:glib.h:' clientgui/gtk/taskbarex.cpp || die #413675
 
 	base_src_prepare
 
@@ -91,13 +95,13 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 
 	dodir /var/lib/${PN}/
 	keepdir /var/lib/${PN}/
 
 	if use X; then
-		newicon "${S}"/packages/generic/sea/${PN}mgr.48x48.png ${PN}.png || die
+		newicon -s 48 "${S}"/packages/generic/sea/${PN}mgr.48x48.png ${PN}.png
 		make_desktop_entry boincmgr "${PN}" "${PN}" "Math;Science" "Path=/var/lib/${PN}"
 	fi
 
