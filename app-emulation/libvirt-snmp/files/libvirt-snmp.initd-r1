@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/files/libvirt-snmp.initd,v 1.1 2011/05/11 08:57:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/files/libvirt-snmp.initd-r1,v 1.1 2012/06/26 09:34:35 dev-zero Exp $
 
 depend() {
     need snmpd
@@ -20,7 +20,8 @@ start() {
 
 stop() {
     ebegin "Stopping libvirt subagent"
+    # "--exec /usr/bin/libvirtMib_subagent" does not work and the name gets truncated
     start-stop-daemon --stop \
-        --exec /usr/bin/libvirtMib_subagent
+        --name libvirtMib_suba
     eend $?
 }

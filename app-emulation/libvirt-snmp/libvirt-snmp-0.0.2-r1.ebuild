@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/libvirt-snmp-0.0.2.ebuild,v 1.2 2012/05/03 18:49:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/libvirt-snmp-0.0.2-r1.ebuild,v 1.1 2012/06/26 09:34:34 dev-zero Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 src_install() {
 	default
-	newinitd "${FILESDIR}/libvirt-snmp.initd" "${PN}"
+	newinitd "${FILESDIR}/libvirt-snmp.initd-r1" "${PN}"
 	newconfd "${FILESDIR}/libvirt-snmp.confd" "${PN}"
 }
 
