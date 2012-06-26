@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.49 2012/06/25 20:05:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.50 2012/06/26 05:04:33 floppym Exp $
+
+  26 Jun 2012; Mike Gilbert <floppym@gentoo.org> libsemanage-2.1.6-r2.ebuild,
+  libsemanage-2.1.6.ebuild:
+  Restrict pypy per Arfrever.
 
 *libsemanage-2.1.6-r2 (25 Jun 2012)
 
@@ -210,4 +214,3 @@
   09 Dec 2005; Chris PeBenito <pebenito@gentoo.org> +metadata.xml,
   +libsemanage-1.4.ebuild:
   Initial commit.
-
