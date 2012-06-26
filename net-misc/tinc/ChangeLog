@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.35 2012/05/12 05:28:45 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.36 2012/06/26 13:52:39 blueness Exp $
+
+*tinc-1.0.19 (26 Jun 2012)
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +tinc-1.0.19.ebuild:
+  Version bump
 
   12 May 2012; Benda Xu <heroxbd@gentoo.org> tinc-1.0.18.ebuild:
   keyword ~amd64-linux
