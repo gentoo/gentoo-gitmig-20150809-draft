@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/christine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/ChangeLog,v 1.10 2012/05/05 08:16:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/ChangeLog,v 1.11 2012/06/26 12:28:19 ssuominen Exp $
+
+  26 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> christine-0.7.0.ebuild:
+  Use MKDIR_P instead of mkdir_p for sys-devel/automake >= 1.12 compability wrt
+  #423113
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> christine-0.7.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

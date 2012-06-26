@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.7.0.ebuild,v 1.2 2012/05/05 08:16:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.7.0.ebuild,v 1.3 2012/06/26 12:28:19 ssuominen Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-validate.patch
+	find . -name 'Makefile.*' -exec sed -i -e 's:mkdir_p:MKDIR_P:g' {} + #423113
 	eautoreconf
 }
 
