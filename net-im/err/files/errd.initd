@@ -8,8 +8,8 @@ depend() {
 
 start() {
 	ebegin "Starting errd"
-		start-stop-daemon --start --make-pidfile --pidfile ${ERR_PID_FILE} --background --quiet \
-			--exec /usr/bin/python2 -- /usr/bin/err.py -c ${ERR_CONFIG_PATH} -u ${ERR_USER} -g ${ERR_GROUP}
+		start-stop-daemon --start --make-pidfile --pidfile ${ERR_PID_FILE} --background --quiet -u ${ERR_USER}:${ERR_GROUP} \
+			--exec /usr/bin/python2 -- /usr/bin/err.py -c ${ERR_CONFIG_PATH}
 	eend $?
 }
 
