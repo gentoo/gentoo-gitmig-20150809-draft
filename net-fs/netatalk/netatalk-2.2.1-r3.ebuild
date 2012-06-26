@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.1-r3.ebuild,v 1.6 2012/04/24 12:43:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.1-r3.ebuild,v 1.7 2012/06/26 04:40:58 zmedico Exp $
 
 EAPI="4"
 
-inherit pam flag-o-matic multilib autotools
+inherit pam eutils flag-o-matic multilib autotools
 
 RESTRICT="test"
 DESCRIPTION="Open Source AFP server and other AppleTalk-related utilities"
