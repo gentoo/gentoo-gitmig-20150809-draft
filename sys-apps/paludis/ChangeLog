@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.219 2012/05/04 09:17:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.220 2012/06/26 10:35:42 dev-zero Exp $
+
+*paludis-0.76.0 (26 Jun 2012)
+
+  26 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> +paludis-0.76.0.ebuild:
+  Version bump (adjust dep for libarchive, drop dependency on allison).
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> paludis-0.66.0.ebuild,
   paludis-0.68.0.ebuild, paludis-0.70.2.ebuild, paludis-0.72.0.ebuild,
@@ -1134,5 +1139,3 @@
   03 May 2006; Stephen Bennett <spb@gentoo.org> +metadata.xml,
   +paludis-0.2.1.ebuild:
   Added new package.
-
-
