@@ -5,9 +5,8 @@ depend() {
 	provide jabber-server
 }
 
-
-
 start() {
+	[ -d /var/run/jabber ] || mkdir /var/run/jabber
 	#source /etc/env.d/java/20sun-jdk-1.5.0.06
 	#OPENFIRE_CMD="${JAVA_HOME}/bin/java"
 	OPENFIRE_CMD=`GENTOO_VM=${GENTOO_VM} java-config -J`
