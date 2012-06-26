@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.35 2012/06/26 02:34:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.36 2012/06/26 03:02:42 blueness Exp $
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +bitcoind-0.6.3.ebuild:
+  Version bump
 
 *bitcoind-0.6.3 (26 Jun 2012)
 *bitcoind-0.6.0.9_rc1 (26 Jun 2012)
