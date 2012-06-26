@@ -1,9 +1,14 @@
---- Makefile.orig	2012-01-01 15:10:52.000000000 +0000
-+++ Makefile	2012-04-16 17:52:32.000000000 +0100
-@@ -1,9 +1,10 @@
+ Makefile |   23 ++++++++++++-----------
+ 1 files changed, 12 insertions(+), 11 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 6b7b123..f7ec65d 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,25 +1,26 @@
  CXX ?= g++
 -CFLAGS = -Wall -Wconversion -O3 -fPIC
-+CXXFLAGS ?= -Wall -Wconversion -O3
++CXXFLAGS ?= -Wall -Wconversion
  SHVER = 2
  OS = $(shell uname)
 +PICFLAGS ?= -fPIC
@@ -13,9 +18,11 @@
  
  lib: svm.o
  	if [ "$(OS)" = "Darwin" ]; then \
-@@ -11,15 +12,15 @@
+-		SHARED_LIB_FLAG="-dynamiclib -W1,-install_name,libsvm.so.$(SHVER)"; \
++		SHARED_LIB_FLAG="-dynamiclib -Wl,-install_name,libsvm.so.$(SHVER)"; \
  	else \
- 		SHARED_LIB_FLAG="-shared -W1,-soname,libsvm.so.$(SHVER)"; \
+-		SHARED_LIB_FLAG="-shared -W1,-soname,libsvm.so.$(SHVER)"; \
++		SHARED_LIB_FLAG="-shared -Wl,-soname,libsvm.so.$(SHVER)"; \
  	fi; \
 -	$(CXX) $${SHARED_LIB_FLAG} svm.o -o libsvm.so.$(SHVER)
 -

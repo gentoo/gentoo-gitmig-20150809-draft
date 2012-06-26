@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.12.ebuild,v 1.2 2012/06/19 18:20:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.12.ebuild,v 1.3 2012/06/26 23:49:24 bicatali Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.csie.ntu.edu.tw/~cjlin/libsvm/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="java openmp python tools"
 
 DEPEND="java? ( >=virtual/jdk-1.4 )"
@@ -38,7 +38,7 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/3.11-openmp.patch \
-		"${FILESDIR}"/3.12-makefile2.patch
+		"${FILESDIR}"/3.12-makefile.patch
 	sed -i -e "s@\.\./@${EPREFIX}/usr/bin/@g" tools/*.py \
 		|| die "Failed to fix paths in python files"
 
