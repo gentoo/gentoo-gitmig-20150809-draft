@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.131 2012/06/14 22:26:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.132 2012/06/26 21:04:30 pesa Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -58,7 +58,8 @@ net-libs/webkit-gtk -jit
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
 # JavaScriptCore JIT is supported only on amd64/arm/x86,
 # so it's masked in base profile and unmasked here.
-x11-libs/qt-script -jit
+# Davide Pesavento <pesa@gentoo.org> (26 Jun 2012)
+# Keep it masked for qt-script wrt bug 423141.
 x11-libs/qt-webkit -jit
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2011)
