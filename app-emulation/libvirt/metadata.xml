@@ -49,8 +49,10 @@
     </flag>
 
     <!-- Miscellaneous flags -->
+	<flag name='audit'>support <pkg>sys-process/audit</pkg></flag>
     <flag name='numa'>
-      Use NUMA for memory segmenting via <pkg>sys-process/numactl</pkg>
+      Use NUMA for memory segmenting via <pkg>sys-process/numactl</pkg> and
+	  <pkg>sys-process/numad</pkg>
     </flag>
     <flag name='libvirtd'>
       Builds the libvirtd daemon as well as the client utilities instead of just the client
@@ -65,6 +67,8 @@
 		macvtap support requires very new kernels and is
 		currently evolving. Support for this is experimental at best.
     </flag>
+	<flag name='vepa'>Virtual Ethernet Port Aggregator (VEPA) / 802.1Qbg
+		support. Relies on macvtap support.</flag>
     <flag name='json'>
       Support QEmu 0.13 JSON-based interface, using <pkg>dev-libs/yajl</pkg>.
     </flag>
