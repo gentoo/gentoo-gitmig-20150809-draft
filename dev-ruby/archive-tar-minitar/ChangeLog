@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.37 2012/06/26 17:51:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.38 2012/06/26 18:16:59 graaff Exp $
+
+  26 Jun 2012; Hans de Graaff <graaff@gentoo.org>
+  archive-tar-minitar-0.5.3-r2.ebuild:
+  Remove non-existing all_fakegem_prepare. Document some unexpected things. Add
+  test scenario and link to upstream bug about current failures.
 
   26 Jun 2012; Hans de Graaff <graaff@gentoo.org>
   -archive-tar-minitar-0.5.2-r1.ebuild:
