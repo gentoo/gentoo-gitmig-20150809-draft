@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.20.ebuild,v 1.1 2012/05/09 12:36:04 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.20-r1.ebuild,v 1.1 2012/06/26 17:52:48 maksbotan Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND="net-misc/wget
 src_install() {
 	dobin ${PN}
 	insinto /etc/wgetpaste.d
-	newins "${FILESDIR}"/wgetpaste-config-lugons lugons.conf
+	newins "${FILESDIR}"/wgetpaste-config-services services.conf
 	use lodgeit-default && \
 		newins "${FILESDIR}"/wgetpaste-config-default-lodgeit gentoo-default.conf
 	if use zsh-completion ; then
