@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.1.5.ebuild,v 1.3 2012/04/29 10:08:34 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.1.5.ebuild,v 1.4 2012/06/26 05:00:43 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
 inherit python
 
