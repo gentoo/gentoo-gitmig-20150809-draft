@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.67 2012/04/25 15:20:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.68 2012/06/26 18:24:07 hwoarang Exp $
+
+  26 Jun 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/lastfmplayer-1.5.4.27091-gcc47.patch,
+  lastfmplayer-1.5.4.27091-r2.ebuild:
+  Fix compilation with gcc-4.7. Bug #423221
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org>
   lastfmplayer-1.5.4.27091-r2.ebuild,
@@ -344,4 +349,3 @@
   02 Apr 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +lastfmplayer-1.1.4_p2099.ebuild:
   New ebuild thanks to David Li <matrixhax0r@yahoo.com> in bug 102059
-

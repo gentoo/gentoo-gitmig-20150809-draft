@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.27091-r2.ebuild,v 1.2 2012/04/25 15:20:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.27091-r2.ebuild,v 1.3 2012/06/26 18:24:07 hwoarang Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs qt4-r2
@@ -56,6 +56,8 @@ src_prepare() {
 
 	# only glib.h can be included directly in >glib-2.32
 	epatch "${FILESDIR}"/${P}-glib.h.patch
+	# Gcc 4.7 definitions. Bug #423221
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_configure() {
