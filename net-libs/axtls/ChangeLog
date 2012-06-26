@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/axtls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.6 2012/06/21 15:03:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.7 2012/06/26 19:14:26 blueness Exp $
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org> -axtls-1.4.6.ebuild:
+  Remove version with broken crypto/bigint_impl.h
 
   21 Jun 2012; Jeroen Roovers <jer@gentoo.org> axtls-1.4.6-r1.ebuild:
   Stable for HPPA (bug #421479).
