@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.16.0.ebuild,v 1.1 2011/08/11 15:51:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.16.0.ebuild,v 1.2 2012/06/26 00:08:06 robbat2 Exp $
 
 EAPI=4
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/dri2proto-2.6"
 
 pkg_setup() {
+	linux-info_pkg_setup
 	xorg-2_pkg_setup
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable dri)

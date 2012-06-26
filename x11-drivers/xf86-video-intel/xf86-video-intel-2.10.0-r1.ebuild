@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.10.0-r1.ebuild,v 1.4 2010/09/30 03:47:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.10.0-r1.ebuild,v 1.5 2012/06/26 00:08:06 robbat2 Exp $
 
 EAPI=3
 
@@ -34,6 +34,7 @@ PATCHES=(
 )
 
 pkg_setup() {
+	linux-info_pkg_setup
 	xorg-2_pkg_setup
 	CONFIGURE_OPTIONS="$(use_enable dri) --enable-xvmc"
 }

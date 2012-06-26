@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.14.0.ebuild,v 1.5 2011/03/05 15:51:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.14.0.ebuild,v 1.6 2012/06/26 00:08:06 robbat2 Exp $
 
 EAPI=3
 
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 	       x11-proto/glproto )"
 
 pkg_setup() {
+	linux-info_pkg_setup
 	xorg-2_pkg_setup
 	CONFIGURE_OPTIONS="$(use_enable dri) --enable-xvmc"
 }
