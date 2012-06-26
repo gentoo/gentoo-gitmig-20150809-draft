@@ -1,9 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.1.2.2.ebuild,v 1.2 2012/06/06 04:37:11 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.1.2.2.ebuild,v 1.3 2012/06/26 06:09:11 jlec Exp $
 
 EAPI=4
-inherit autotools eutils
+
+AUTOTOOLS_AUTORECONF=yes
+
+inherit autotools-utils
 
 DESCRIPTION="High Energy Physics C++ library"
 HOMEPAGE="http://www.cern.ch/clhep"
@@ -17,6 +20,8 @@ RDEPEND=""
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PV}/CLHEP"
+
+PATCHES=( "${FILESDIR}"/${P}-automake-1.12.patch )
 
 src_prepare() {
 	local d
@@ -37,11 +42,10 @@ src_prepare() {
 			${d} || die
 		# fixing parallel build
 	done
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
-	econf \
-		$(use_enable exceptions) \
-		$(use_enable static-libs static)
+	local myeconfargs=( $(use_enable exceptions) )
+	autotools-utils_src_configure
 }
