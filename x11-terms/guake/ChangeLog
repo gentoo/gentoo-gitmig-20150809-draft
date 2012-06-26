@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/guake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.21 2012/06/15 00:35:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/ChangeLog,v 1.22 2012/06/26 19:40:50 lu_zero Exp $
+
+  26 Jun 2012; Luca Barbato <lu_zero@gentoo.org> guake-0.4.3.ebuild:
+  Mark ~arm, thanks to Joost for testing
 
 *guake-0.4.3 (15 Jun 2012)
 
