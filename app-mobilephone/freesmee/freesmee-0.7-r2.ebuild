@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.7-r1.ebuild,v 1.2 2012/05/10 17:39:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.7-r2.ebuild,v 1.1 2012/06/26 13:07:49 ago Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ DEPEND="dev-util/ticpp
 	x11-libs/qt-webkit:4"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}"/${PN}-qt-4.8.1.patch )
+PATCHES=( "${FILESDIR}"/${PN}-qt-4.8.1.patch "${FILESDIR}"/${PN}-gcc47.patch )
 
 src_install() {
 	newbin Freesmee ${PN}

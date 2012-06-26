@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/jacksms-desktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.5 2012/05/10 17:39:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.6 2012/06/26 13:07:49 ago Exp $
+
+*freesmee-0.7-r2 (26 Jun 2012)
+
+  26 Jun 2012; Agostino Sarubbo <ago@gentoo.org> +files/freesmee-gcc47.patch,
+  +freesmee-0.7-r2.ebuild, -freesmee-0.7-r1.ebuild:
+  Fix failure with gcc-4.7, wrt bug #415425, thanks to Michael Palimaka
+  (kensington), remove old
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> freesmee-0.7-r1.ebuild:
   fix ebuild.badheader
