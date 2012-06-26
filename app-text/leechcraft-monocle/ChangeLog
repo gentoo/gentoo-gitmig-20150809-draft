@@ -1,0 +1,9 @@
+# ChangeLog for app-text/leechcraft-monocle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.1 2012/06/26 17:01:34 maksbotan Exp $
+
+*leechcraft-monocle-9999 (26 Jun 2012)
+
+  26 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-monocle-9999.ebuild, +metadata.xml:
+  Add app-text/leechcraft-monocle, thanks to 0xd34df00d
