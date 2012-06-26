@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.56 2012/06/12 09:18:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.57 2012/06/26 06:20:37 jdhore Exp $
+
+  26 Jun 2012; Jeff Horelick <jdhore@gentoo.org> test-unit-2.4.8.ebuild:
+  marked x86 per bug 420709
 
   12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> test-unit-2.4.8.ebuild:
   Stable for amd64, wrt bug #420709
