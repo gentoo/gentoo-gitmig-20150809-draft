@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.42.ebuild,v 1.3 2012/06/26 13:01:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.42.ebuild,v 1.4 2012/06/26 13:13:18 ssuominen Exp $
 
 EAPI=4
 
-inherit flag-o-matic eutils wxwidgets autotools base
+inherit flag-o-matic eutils wxwidgets autotools base user
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
