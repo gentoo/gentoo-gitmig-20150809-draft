@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13891 2012/06/25 18:35:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13892 2012/06/26 05:54:50 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (26 Jun 2012)
+# Dead upstream. QA problems in ebuild. Still uses old
+# ruby.eclass. Use dev-ruby/memcache-client instead.
+# Masked for removal in 30 days.
+dev-ruby/Ruby-MemCache
 
 # Richard Yao <ryao@gentoo.org> (25 Jun 2012)
 # Patch causes issues on Linux 3.2.y kernels

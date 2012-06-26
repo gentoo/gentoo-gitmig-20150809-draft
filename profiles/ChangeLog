@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6712 2012/06/25 18:35:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6713 2012/06/26 05:54:50 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jun 2012; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/Ruby-MemCache for removal.
 
   25 Jun 2012; Justin Bronder <jsbronder@gentoo.org> package.mask:
   Remove sys-cluster/lam-mpi from package.mask
