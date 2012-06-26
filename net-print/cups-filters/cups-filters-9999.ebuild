@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.9 2012/06/10 10:34:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.10 2012/06/26 20:19:09 dilfridge Exp $
 
 EAPI=4
+
+GENTOO_DEPEND_ON_PERL=no
 
 inherit base perl-module
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.492 2012/06/14 12:03:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.493 2012/06/26 20:17:34 dilfridge Exp $
+
+  26 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.5.2-r4.ebuild,
+  cups-1.5.3.ebuild:
+  Fix perl dependency, thanks _AxS_
 
   14 Jun 2012; Naohiro Aota <naota@gentoo.org> cups-1.5.3.ebuild:
   Add ~x86-fbsd. #401067

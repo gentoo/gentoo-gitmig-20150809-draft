@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.3.ebuild,v 1.4 2012/06/14 12:03:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.3.ebuild,v 1.5 2012/06/26 20:17:34 dilfridge Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2:2.5"
+GENTOO_DEPEND_ON_PERL=no
 
 inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam perl-module python user versionator java-pkg-opt-2 systemd
 
