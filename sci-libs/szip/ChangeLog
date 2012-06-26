@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/szip
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.22 2011/12/21 22:13:36 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.23 2012/06/26 23:07:51 bicatali Exp $
+
+  26 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> szip-2.1-r1.ebuild:
+  keyword amd64-linux and x86-linux
 
 *szip-2.1-r1 (21 Dec 2011)
 
