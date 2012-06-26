@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/nero
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.52 2011/12/02 20:30:00 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.53 2012/06/26 11:34:53 ssuominen Exp $
+
+  26 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> nero-4.0.0.0b.ebuild:
+  Install desktop entry for neroexpress wrt #409035. Use linux-info.eclass
+  instead of linux-mod.eclass for CONFIG_CHECK wrt #423457.
 
   02 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> nero-4.0.0.0b.ebuild:
   Remove usage of check_license (eutils.eclass) in favour of ACCEPT_LICENSE
