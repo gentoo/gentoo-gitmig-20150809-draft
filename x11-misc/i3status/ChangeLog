@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i3status
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.9 2012/06/20 14:52:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.10 2012/06/26 07:25:44 jdhore Exp $
+
+  26 Jun 2012; Jeff Horelick <jdhore@gentoo.org> i3status-2.5.1.ebuild:
+  marked x86 per bug 422373
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> i3status-2.5.1.ebuild:
   Stable for amd64, wrt bug #422373
