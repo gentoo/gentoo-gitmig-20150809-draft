@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/User-Identity/User-Identity-0.930.0.ebuild,v 1.2 2012/06/25 07:17:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/User-Identity/User-Identity-0.930.0.ebuild,v 1.3 2012/06/26 12:18:52 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Maintains info about a physical person"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="
