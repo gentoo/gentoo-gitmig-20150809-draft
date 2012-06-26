@@ -1,26 +1,30 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.0.8_rc2.ebuild,v 1.1 2012/06/16 22:31:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.4.7_rc3.ebuild,v 1.1 2012/06/26 02:34:02 blueness Exp $
 
-EAPI="4"
+EAPI=4
 
 DB_VER="4.8"
 
-inherit db-use eutils versionator toolchain-funcs
+inherit db-use eutils versionator
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
-	http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.6.0-eligius_sendfee.patch.xz
+SRC_URI="http://gitorious.org/bitcoin/${PN}-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+	bip16? ( http://luke.dashjr.org/programs/bitcoin/files/bip16/0.4.7-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch.xz )
+	eligius? (
+		!bip16? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.4.5rc1-eligius_sendfee.patch.xz )
+	)
 "
 
 LICENSE="MIT ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+eligius examples logrotate ssl upnp"
+KEYWORDS="~amd64 ~x86"
+IUSE="+bip16 +eligius logrotate ssl upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0
+	dev-libs/crypto++
 	dev-libs/openssl[-bindist]
 	logrotate? (
 		app-admin/logrotate
@@ -34,7 +38,7 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-S="${WORKDIR}/bitcoin-bitcoind-stable"
+S="${WORKDIR}/bitcoin-${PN}-stable"
 
 pkg_setup() {
 	local UG='bitcoin'
@@ -44,43 +48,38 @@ pkg_setup() {
 
 src_prepare() {
 	cd src || die
-	use eligius && epatch "${WORKDIR}/0.6.0-eligius_sendfee.patch"
-	use logrotate && epatch "${FILESDIR}/0.6.0.8-reopen_log_file.patch"
+	cp "${FILESDIR}/0.4.2-Makefile.gentoo" "Makefile" || die
+	if use bip16; then
+		epatch "${WORKDIR}/0.4.7-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch"
+		use eligius && epatch "${FILESDIR}/0.4.4+bip16-eligius_sendfee.patch"
+	else
+		use eligius && epatch "${WORKDIR}/0.4.5rc1-eligius_sendfee.patch"
+	fi
+	use logrotate && epatch "${FILESDIR}/0.4.7-reopen_log_file.patch"
 }
 
 src_compile() {
-	OPTS=()
+	local OPTS=()
 	local BOOST_PKG BOOST_VER BOOST_INC
 
-	OPTS+=("DEBUGFLAGS=")
 	OPTS+=("CXXFLAGS=${CXXFLAGS}")
-	OPTS+=("LDFLAGS=${LDFLAGS}")
+	OPTS+=( "LDFLAGS=${LDFLAGS}")
 
-	OPTS+=("BDB_INCLUDE_PATH=$(db_includedir "${DB_VER}")")
-	OPTS+=("BDB_LIB_SUFFIX=-${DB_VER}")
+	OPTS+=("DB_CXXFLAGS=-I$(db_includedir "${DB_VER}")")
+	OPTS+=("DB_LDFLAGS=-ldb_cxx-${DB_VER}")
 
 	BOOST_PKG="$(best_version 'dev-libs/boost')"
 	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
 	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
 	BOOST_INC="/usr/include/boost-${BOOST_VER}"
-	OPTS+=("BOOST_INCLUDE_PATH=${BOOST_INC}")
+	OPTS+=("BOOST_CXXFLAGS=-I${BOOST_INC}")
 	OPTS+=("BOOST_LIB_SUFFIX=-${BOOST_VER}")
 
 	use ssl  && OPTS+=(USE_SSL=1)
-	if use upnp; then
-		OPTS+=(USE_UPNP=1)
-	else
-		OPTS+=(USE_UPNP=)
-	fi
+	use upnp && OPTS+=(USE_UPNP=1)
 
 	cd src || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}
-}
-
-src_test() {
-	cd src || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" test_bitcoin
-	./test_bitcoin || die 'Tests failed'
+	emake "${OPTS[@]}" ${PN}
 }
 
 src_install() {
@@ -101,11 +100,6 @@ src_install() {
 	dosym /etc/bitcoin/bitcoin.conf /var/lib/bitcoin/.bitcoin/bitcoin.conf
 
 	dodoc doc/README
-
-	if use examples; then
-		docinto examples
-		dodoc -r contrib/{bitrpc,pyminer,wallettools}
-	fi
 
 	if use logrotate; then
 		insinto /etc/logrotate.d
