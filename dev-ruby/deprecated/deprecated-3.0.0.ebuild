@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/deprecated-3.0.0.ebuild,v 1.8 2012/06/22 21:42:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/deprecated-3.0.0.ebuild,v 1.9 2012/06/26 07:26:01 jdhore Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://rubyforge.org/projects/deprecated"
 
 LICENSE="BSD"
 SLOT="3"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="test"
 
 ruby_add_bdepend "test? ( dev-ruby/test-unit:2 )"
