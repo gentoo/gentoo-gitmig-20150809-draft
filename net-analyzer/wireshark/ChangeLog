@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.352 2012/06/26 20:30:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.353 2012/06/26 20:41:27 jer Exp $
+
+  26 Jun 2012; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.0.ebuild:
+  Remove unneeded elibtoolize.
 
 *wireshark-1.8.0 (26 Jun 2012)
 
