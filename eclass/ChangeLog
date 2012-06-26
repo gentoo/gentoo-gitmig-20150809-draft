@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.329 2012/06/24 17:52:38 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.330 2012/06/26 00:06:14 robbat2 Exp $
+
+  26 Jun 2012; Robin H. Johnson <robbat2@gentoo.org> linux-info.eclass:
+  You must ensure at least one of the version setup functions gets called in
+  linux-info.eclass before you can use the config functions.
 
   24 Jun 2012; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Add dev-lang/perl to kernel-2.eclass RDEPEND. Bug #421483

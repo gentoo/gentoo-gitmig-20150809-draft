@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.91 2011/12/12 22:01:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.92 2012/06/26 00:06:14 robbat2 Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -18,6 +18,14 @@
 # "kernel config" in this file means:
 # The .config of the currently installed sources is used as the first
 # preference, with a fall-back to bundled config (/proc/config.gz) if available.
+#
+# Before using any of the config-handling functions in this eclass, you must
+# ensure that one of the following functions has been called (in order of
+# preference), otherwise you will get bugs like #364041):
+# linux-info_pkg_setup
+# linux-info_get_any_version
+# get_version
+# get_running_version
 
 # A Couple of env vars are available to effect usage of this eclass
 # These are as follows:
