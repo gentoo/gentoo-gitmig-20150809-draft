@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.7.2-r2.ebuild,v 1.9 2012/05/24 04:12:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.4.ebuild,v 1.1 2012/06/26 21:35:46 flameeyes Exp $
 
 EAPI="4"
 
@@ -9,21 +9,27 @@ inherit multilib eutils user
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
 
-STUPID_NUM="3533"
+STUPID_NUM="3734"
 MY_P="${PN}-${PV/_/-}"
 SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 m68k ~ppc ppc64 s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="usb kernel_linux"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
-RDEPEND="!kernel_linux? ( usb? ( virtual/libusb:1 ) )
-	kernel_linux? ( sys-fs/udev )"
-DEPEND="${RDEPEND}
+# This is called libusb so that it doesn't fool people in thinking that
+# it is _required_ for USB support. Otherwise they'll disable udev and
+# that's going to be worse.
+IUSE="libusb +udev"
+
+REQUIRED_USE="^^ ( udev libusb )"
+
+CDEPEND="libusb? ( virtual/libusb:1 )
+	udev? ( sys-fs/udev )"
+DEPEND="${CDEPEND}
 	virtual/pkgconfig"
-RDEPEND="${RDEPEND}
+RDEPEND="${CDEPEND}
 	!<app-crypt/ccid-1.4.1-r1"
 
 pkg_setup() {
@@ -33,31 +39,26 @@ pkg_setup() {
 }
 
 src_configure() {
-	local myconf=
-
-	if use kernel_linux; then
-		myconf="${myconf} --enable-libudev --disable-libusb"
-	else
-		myconf="${myconf} --disable-libudev $(use_enable usb libusb)"
-	fi
-
 	econf \
 		--disable-maintainer-mode \
 		--disable-dependency-tracking \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-usbdropdir="${EPREFIX}/usr/$(get_libdir)/readers/usb" \
+		--without-systemdsystemunitdir \
+		$(use_enable udev libudev) \
+		$(use_enable libusb) \
 		${myconf}
 }
 
+DOCS=( AUTHORS DRIVERS HELP README SECURITY ChangeLog )
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	find "${D}" -name '*.la' -delete
 
-	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog
+	newinitd "${FILESDIR}/pcscd-init.5" pcscd
 
-	newinitd "${FILESDIR}/pcscd-init.4" pcscd
-
-	if use kernel_linux; then
+	if use udev; then
 		insinto /lib/udev/rules.d
 		doins "${FILESDIR}"/99-pcscd-hotplug.rules
 	fi
@@ -75,10 +76,9 @@ pkg_postinst() {
 	elog "pass further options to pcscd, create a file and set the"
 	elog "EXTRA_OPTS variable."
 	elog ""
-	if use kernel_linux; then
-		elog "HAL support has been dropped by the ebuild; if you want hotplug"
-		elog "support, that's provided already by UDEV rules; you only need to"
-		elog "tell the init system to hotplug it, by setting this variable in"
+	if use udev; then
+		elog "Hotplug support is provided by udev rules; you only need to tell"
+		elog "the init system to hotplug it, by setting this variable in"
 		elog "/etc/rc.conf:"
 		elog ""
 		elog "    rc_hotplug=\"pcscd\""
