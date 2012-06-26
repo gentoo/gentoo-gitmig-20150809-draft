@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/autobook-1.5.ebuild,v 1.8 2007/06/24 21:12:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/autobook-1.5.ebuild,v 1.9 2012/06/26 05:11:38 dirtyepic Exp $
 
 DESCRIPTION="GNU Autoconf, Automake and Libtool"
 HOMEPAGE="http://sources.redhat.com/autobook/"
@@ -18,6 +18,7 @@ KEYWORDS="amd64 arm hppa ia64 m68k ppc s390 sh x86"
 IUSE="examples"
 
 DEPEND=""
+RDEPEND=""
 
 src_install() {
 	dohtml * || die

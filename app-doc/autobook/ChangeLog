@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/autobook
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.14 2007/09/12 00:26:41 dirtyepic Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.15 2012/06/26 05:11:38 dirtyepic Exp $
+
+  26 Jun 2012; Ryan Hill <dirtyepic@gentoo.org> autobook-1.5.ebuild,
+  metadata.xml:
+  Maintainer -> app-doc. Set RDEPEND.
 
   12 Sep 2007; Ryan Hill <dirtyepic@gentoo.org> -files/digest-autobook-1.4:
   Remove lost digest.
