@@ -11,5 +11,6 @@ An Open Implementation of SIP/Simple protocol for Live Communications Server 200
 </longdescription>
 <use>
   <flag name="voice">Enable experimental voice/video support</flag>
+  <flag name="ocs2005-message-hack">disable message timeout for OCS2005 clients which causes "false" not delivered error messages</flag>
 </use>
 </pkgmetadata>
