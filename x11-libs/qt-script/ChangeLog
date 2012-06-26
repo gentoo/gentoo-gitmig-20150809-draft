@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.120 2012/06/25 16:04:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.121 2012/06/26 21:18:48 pesa Exp $
+
+  26 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/4.8.2-javascriptcore-x32.patch, qt-script-4.8.2.ebuild:
+  Apply another patch for x32 support in JavaScriptCore (bug 421009).
 
   25 Jun 2012; Raúl Porcel <armin76@gentoo.org> qt-script-4.8.1.ebuild,
   qt-script-4.8.2.ebuild:
@@ -471,4 +475,3 @@
   21 Dec 2007; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
   +qt-script-4.4.0_rc1.ebuild:
   Initial ebuild
-
