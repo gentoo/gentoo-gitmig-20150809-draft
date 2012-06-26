@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/awl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/awl/ChangeLog,v 1.2 2012/03/22 00:20:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/awl/ChangeLog,v 1.3 2012/06/26 09:36:20 patrick Exp $
+
+*awl-0.52 (26 Jun 2012)
+
+  26 Jun 2012; Patrick Lauer <patrick@gentoo.org> +awl-0.52.ebuild:
+  Bump
 
 *awl-0.51-r1 (22 Mar 2012)
 
@@ -92,4 +97,3 @@
   23 Jun 2008; lebarjack <francois.perichon@univ-lille2.fr>
   +libawl-php-0.29.ebuild, +metadata.xml:
   New ebuild for bug 229025 - (initial work by Cory Coager <ccoager@gmail.com>)
-
