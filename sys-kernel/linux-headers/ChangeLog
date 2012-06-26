@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.347 2012/05/22 03:21:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.348 2012/06/26 17:57:01 ago Exp $
+
+  26 Jun 2012; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.4.ebuild:
+  Stable for amd64, wrt bug #423091
 
 *linux-headers-3.4 (22 May 2012)
 
