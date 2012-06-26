@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.155 2012/06/25 05:48:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.156 2012/06/26 17:41:23 ago Exp $
+
+  26 Jun 2012; Agostino Sarubbo <ago@gentoo.org> m4-1.4.16.ebuild:
+  Stable for amd64, wrt bug #423239
 
   25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> m4-1.4.16.ebuild:
   marked x86 per bug 423239
