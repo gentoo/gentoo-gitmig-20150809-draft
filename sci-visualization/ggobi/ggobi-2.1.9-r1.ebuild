@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ggobi-2.1.9.ebuild,v 1.3 2012/05/04 08:06:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ggobi-2.1.9-r1.ebuild,v 1.1 2012/06/26 05:19:19 bicatali Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -24,6 +24,11 @@ src_prepare() {
 	sed -i \
 		-e 's|ND_coord_i|ND_coord|' \
 		plugins/GraphLayout/graphviz.c || die
+	rm -f m4/libool.m4 m4/lt*m4
+	epatch \
+		"${FILESDIR}"/${PN}-2.1.8-plugindir.patch \
+		"${FILESDIR}"/${PN}-2.1.9-as-needed.patch
+	eautoreconf
 }
 
 src_configure() {
