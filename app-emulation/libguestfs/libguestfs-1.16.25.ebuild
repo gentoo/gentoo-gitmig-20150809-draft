@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.17.42.ebuild,v 1.1 2012/05/15 18:31:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.16.25.ebuild,v 1.1 2012/06/26 16:14:41 maksbotan Exp $
 
 EAPI="4"
 
@@ -36,7 +36,6 @@ COMMON_DEPEND="
 	dev-libs/libpcre
 	app-arch/cpio
 	dev-lang/perl
-	dev-util/gtk-doc
 	app-cdr/cdrkit
 	>=app-emulation/qemu-kvm-1.0[qemu_user_targets_x86_64,qemu_softmmu_targets_x86_64]
 	sys-apps/fakeroot
@@ -70,13 +69,14 @@ COMMON_DEPEND="
 	"
 
 DEPEND="${COMMON_DEPEND}
+	sys-apps/sed
 	dev-util/gperf
 	doc? ( app-text/po4a )
 	ruby? ( dev-lang/ruby virtual/rubygems dev-ruby/rake )
 	"
 RDEPEND="${COMMON_DEPEND}"
 
-PATCHES=(${FILESDIR}/1.17/*.patch)
+PATCHES=("${FILESDIR}"/1.17/0002-configure_ac_automagic.patch  )
 
 DOCS=(AUTHORS BUGS HACKING README RELEASE-NOTES ROADMAP TODO)
 
