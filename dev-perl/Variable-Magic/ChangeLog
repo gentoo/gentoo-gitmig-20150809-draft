@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Variable-Magic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.45 2012/06/24 12:58:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.46 2012/06/26 19:06:06 tove Exp $
+
+*Variable-Magic-0.500.0 (26 Jun 2012)
+
+  26 Jun 2012; Torsten Veller <tove@gentoo.org> +Variable-Magic-0.500.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
