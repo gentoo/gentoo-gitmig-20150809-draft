@@ -1,6 +1,12 @@
 # ChangeLog for app-text/lodgeit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.6 2012/05/21 12:30:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.7 2012/06/26 17:46:04 maksbotan Exp $
+
+*lodgeit-0.3_p20120614 (26 Jun 2012)
+
+  26 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +files/lodgeitrc,
+  +lodgeit-0.3_p20120614.ebuild, -lodgeit-0.3.ebuild:
+  Add new snapshot, set http://bpaste.net as default service
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   lodgeit-0.3_p20120507.ebuild:
@@ -27,4 +33,3 @@
   +metadata.xml:
   Initial import from bug 270343. Ebuild by Dror Levin, who will be
   maintainer by proxy until he becomes full dev.
-
