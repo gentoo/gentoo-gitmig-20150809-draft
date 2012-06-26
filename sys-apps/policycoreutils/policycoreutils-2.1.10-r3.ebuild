@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.10-r3.ebuild,v 1.1 2012/06/25 20:08:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.10-r3.ebuild,v 1.2 2012/06/26 05:02:43 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*"
 PYTHON_USE_WITH="xml"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
 inherit multilib python toolchain-funcs eutils
 
