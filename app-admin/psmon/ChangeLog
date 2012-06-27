@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/psmon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.19 2012/05/29 19:32:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/psmon/ChangeLog,v 1.20 2012/06/27 16:04:44 kensington Exp $
+
+  27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -psmon-1.0.4.ebuild,
+  -psmon-1.29.ebuild:
+  Remove old.
 
   29 May 2012; Brent Baude <ranger@gentoo.org> psmon-1.39.ebuild:
   Marking psmon-1.39 ppc for bug 393853
@@ -65,4 +69,3 @@
 
   30 Oct 2003; Martin Holzer <mholzer@gentoo.org> psmon-1.0.4.ebuild:
   Inital ebuild. Submitted by Janne Pikkarainen <jaba@mikrobitti.fi> in #27237.
-
