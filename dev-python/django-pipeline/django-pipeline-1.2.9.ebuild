@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.2.9.ebuild,v 1.2 2012/06/27 11:06:58 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.2.9.ebuild,v 1.3 2012/06/27 17:29:57 xarthisius Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -37,7 +37,7 @@ src_test() {
 		pushd build-${PYTHON_ABI}/lib/tests/tests/ > /dev/null || die
 		for test in [a-z]*.py
 		do
-			if ! "${PYTHON}" ${test}; then
+			if ! "$(PYTHON)" ${test}; then
 				eerror "test "${test}" failed"
 				exit_status="1"
 			else

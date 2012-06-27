@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-pipeline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.4 2012/06/27 11:06:58 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.5 2012/06/27 17:29:57 xarthisius Exp $
+
+  27 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  django-pipeline-1.2.9.ebuild:
+  Fix PYTHON invocation, thanks to Arfrever for the report
 
   27 Jun 2012; Theo Chatzimichos <tampakrap@gentoo.org>
   django-pipeline-1.2.9.ebuild:
