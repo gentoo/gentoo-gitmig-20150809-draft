@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nmh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.30 2012/03/04 15:20:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.31 2012/06/27 02:39:47 jer Exp $
+
+  27 Jun 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix metadata to reflect reality, drop bug assignment recipes.
 
   04 Mar 2012; Eray Aslan <eras@gentoo.org> metadata.xml:
   add net-mail to maintainers

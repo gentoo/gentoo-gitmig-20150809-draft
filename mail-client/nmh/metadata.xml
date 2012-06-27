@@ -3,14 +3,14 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-<description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
-<maintainer>
 <email>in-gentoo@baka.org</email>
 <name>Seth Robertson</name>
-<description>Maintainer. Assign bugs to him</description>
+<description>Maintainer</description>
+</maintainer>
+<maintainer>
+<email>hwoarang@gentoo.org</email>
+<name>Markos Chandras</name>
+<description>Proxy maintainer</description>
 </maintainer>
 <longdescription lang="en">
 </longdescription>
