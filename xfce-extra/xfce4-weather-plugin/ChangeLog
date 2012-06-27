@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-weather-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.19 2012/05/05 07:47:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.20 2012/06/27 14:20:01 ssuominen Exp $
+
+*xfce4-weather-plugin-0.7.4-r2 (27 Jun 2012)
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-weather-plugin-0.7.4-r1.ebuild, +xfce4-weather-plugin-0.7.4-r2.ebuild:
+  Restore original weather.com key wrt #423691 by Balint SZENTE
 
   05 May 2012; Michał Górny <mgorny@gentoo.org>
   xfce4-weather-plugin-0.7.4-r1.ebuild:
