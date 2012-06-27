@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.76 2012/06/27 06:58:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.77 2012/06/27 11:56:43 ago Exp $
+
+  27 Jun 2012; Agostino Sarubbo <ago@gentoo.org> audit-2.1.3-r1.ebuild:
+  Stable for amd64, wrt bug #418395
 
   27 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> audit-2.1.3-r1.ebuild:
   Use explicit filenames for dodoc instead of shell glob wrt #415081 by David J
