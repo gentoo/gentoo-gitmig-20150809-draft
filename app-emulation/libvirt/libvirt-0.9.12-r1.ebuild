@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12-r1.ebuild,v 1.2 2012/06/27 00:34:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12-r1.ebuild,v 1.3 2012/06/27 15:52:51 cardoe Exp $
 
 EAPI=4
 
@@ -329,8 +329,11 @@ pkg_postinst() {
 	use python && python_mod_optimize libvirt.py
 
 	# support for dropped privileges
-	fperms 0750 "${EROOT}/var/lib/libvirt/qemu"
-	fperms 0750 "${EROOT}/var/cache/libvirt/qemu"
+	if use qemu; then
+		fperms 0750 "${EROOT}/var/lib/libvirt/qemu"
+		fperms 0750 "${EROOT}/var/cache/libvirt/qemu"
+	fi
+
 	if use caps && use qemu; then
 		fowners -R qemu:qemu "${EROOT}/var/lib/libvirt/qemu"
 		fowners -R qemu:qemu "${EROOT}/var/cache/libvirt/qemu"

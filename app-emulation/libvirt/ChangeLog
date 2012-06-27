@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.190 2012/06/27 00:34:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.191 2012/06/27 15:52:51 cardoe Exp $
+
+  27 Jun 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.12.ebuild,
+  libvirt-0.9.12-r1.ebuild, libvirt-9999.ebuild:
+  Perm tweaks when qemu isn't enabled. bug #423725
 
   26 Jun 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.12-r1.ebuild,
   libvirt-9999.ebuild, metadata.xml:
