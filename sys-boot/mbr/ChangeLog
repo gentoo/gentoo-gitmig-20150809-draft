@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/mbr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/mbr/ChangeLog,v 1.3 2012/06/13 07:29:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/mbr/ChangeLog,v 1.4 2012/06/27 14:24:48 kensington Exp $
+
+  27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -mbr-1.1.10.ebuild:
+  Remove old.
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> mbr-1.1.11.ebuild:
   marked x86 per bug 419711
