@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.137 2012/06/26 16:24:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.138 2012/06/27 11:57:38 ago Exp $
+
+  27 Jun 2012; Agostino Sarubbo <ago@gentoo.org> git-1.7.8.6.ebuild:
+  Stable for amd64, wrt bug #418381
 
   26 Jun 2012; Jeremy Olexa <darkside@gentoo.org> -git-1.7.3.5-r2.ebuild,
   -git-1.7.4.5.ebuild, -git-1.7.5.3.ebuild, -git-1.7.6.4.ebuild,
