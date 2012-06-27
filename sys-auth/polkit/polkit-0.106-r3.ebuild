@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106-r3.ebuild,v 1.1 2012/06/25 09:32:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106-r3.ebuild,v 1.2 2012/06/27 10:01:25 ssuominen Exp $
 
 EAPI=4
-inherit eutils pam pax-utils systemd user
+inherit eutils multilib pam pax-utils systemd user
 
 DESCRIPTION="Policy framework for controlling privileges for system-wide services"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/polkit"
@@ -40,8 +40,6 @@ PDEPEND="
 		!systemd? ( sys-auth/pambase[consolekit] )
 		)
 	!systemd? ( >=sys-auth/consolekit-0.4.5_p2012[policykit] )"
-
-DOCS="docs/TODO HACKING NEWS README"
 
 pkg_setup() {
 	local u=polkitd
@@ -80,7 +78,12 @@ src_configure() {
 }
 
 src_install() {
-	default
+	emake \
+		DESTDIR="${D}" \
+		libprivdir="${EPREFIX}"/usr/$(get_libdir)/polkit-1 \
+		install
+	
+	dodoc docs/TODO HACKING NEWS README
 
 	fowners -R polkitd:root /{etc,usr/share}/polkit-1/rules.d
 
@@ -95,7 +98,7 @@ src_install() {
 	fi
 
 	# Required for polkitd on hardened/PaX due to spidermonkey's JIT
-	pax-mark mr "${ED}usr/lib/polkit-1/polkitd"
+	pax-mark mr "${ED}"/usr/$(get_libdir)/polkit-1/polkitd
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.87 2012/06/25 09:32:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.88 2012/06/27 10:01:25 ssuominen Exp $
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> polkit-0.106-r3.ebuild:
+  Redefine libprivdir in install for multilib-strict wrt #423381 by Michael
+  Palimaka
 
 *polkit-0.106-r3 (25 Jun 2012)
 
