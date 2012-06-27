@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lightdm-gtk-greeter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.6 2012/04/28 14:52:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.7 2012/06/27 21:19:16 steev Exp $
+
+  27 Jun 2012; Steev Klimaszewski <steev@gentoo.org>
+  lightdm-gtk-greeter-1.1.5.ebuild:
+  Keyword lightdm-gtk-greeter 1.1.5 ~arm, tested on an EfikaMX Smarttop (armv7)
 
 *lightdm-gtk-greeter-1.1.5 (28 Apr 2012)
 
