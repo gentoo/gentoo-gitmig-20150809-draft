@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.28 2012/06/27 19:13:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.29 2012/06/27 19:23:53 radhermit Exp $
+
+  27 Jun 2012; Tim Harder <radhermit@gentoo.org> libpst-0.6.54-r1.ebuild:
+  Use eautoreconf instead of eautomake and revert prune_libtool_files usage
+  until it properly removes useless python la files.
 
   27 Jun 2012; Tim Harder <radhermit@gentoo.org> -libpst-0.6.52.ebuild,
   -libpst-0.6.53.ebuild, -libpst-0.6.54.ebuild:
