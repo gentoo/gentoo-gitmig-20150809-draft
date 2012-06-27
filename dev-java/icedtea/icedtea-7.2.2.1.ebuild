@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.2.1.ebuild,v 1.2 2012/06/24 08:19:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.2.1.ebuild,v 1.3 2012/06/27 19:08:57 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -163,6 +163,7 @@ java_prepare() {
 	epatch "${FILESDIR}"/${P}-pr986-cacao_memory_fix.patch
 	epatch "${FILESDIR}"/${PN}-${SLOT}-compile_for_7_cacao_mem.patch
 	epatch "${FILESDIR}"/${P}-pax_mark_rmic_java.patch #422525
+	epatch "${FILESDIR}"/${P}-warnings_are_errors.patch #310503 #418359
 	eautoreconf
 }
 
@@ -229,6 +230,7 @@ src_configure() {
 		--with-jdk-home="$(java-config -O)" \
 		--with-abs-install-dir=/usr/$(get_libdir)/icedtea${SLOT} \
 		--disable-downloading \
+		--disable-warnings-are-errors \
 		$(use_enable !debug optimizations) \
 		$(use_enable doc docs) \
 		$(use_enable nss) \
