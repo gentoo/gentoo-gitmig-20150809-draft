@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.44.ebuild,v 1.2 2012/05/04 07:20:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.44.ebuild,v 1.3 2012/06/27 13:53:17 ssuominen Exp $
 
 EAPI=4
 
@@ -17,6 +17,8 @@ IUSE="debug fuse gtk libatomic radosgw static-libs tcmalloc"
 
 CDEPEND="
 	dev-libs/boost
+	dev-libs/fcgi
+	dev-libs/libaio
 	dev-libs/libedit
 	dev-libs/crypto++
 	sys-apps/keyutils
@@ -48,6 +50,7 @@ src_prepare() {
 	sed -e '/testsnaps/d' -i src/Makefile.am || die
 	sed -e "/bin=/ s:lib:$(get_libdir):" "${FILESDIR}"/${PN}.initd \
 		> "${T}"/${PN}.initd || die
+	sed -i -e '/AM_INIT_AUTOMAKE/s:-Werror ::' src/leveldb/configure.ac || die #423755
 	eautoreconf
 }
 

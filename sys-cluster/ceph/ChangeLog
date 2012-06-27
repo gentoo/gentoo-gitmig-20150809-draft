@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.21 2012/05/04 07:20:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.22 2012/06/27 13:53:17 ssuominen Exp $
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> ceph-0.44.ebuild:
+  Missing dev-libs/fcgi and dev-libs/libaio dependencies wrt #410003 by Stoian
+  Ivanov. Fix building with sys-devel/automake >= 1.12 by removing -Werror from
+  AM_INIT_AUTOMAKE wrt #423755 by Diego Elio Pettenò.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> ceph-0.38.ebuild,
   ceph-0.40.ebuild, ceph-0.41.ebuild, ceph-0.44.ebuild:
