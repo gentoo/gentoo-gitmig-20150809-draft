@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.401 2012/06/19 17:50:50 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.402 2012/06/27 14:19:45 lack Exp $
+
+*vim-core-7.3.566 (27 Jun 2012)
+
+  27 Jun 2012; Jim Ramsay <jim_ramsay@gentoo.org> +vim-core-7.3.566.ebuild:
+  Version bump: 7.3.566 is released
 
 *vim-core-7.3.556 (19 Jun 2012)
 
