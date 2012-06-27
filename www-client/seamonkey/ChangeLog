@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.392 2012/06/20 04:18:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.393 2012/06/27 12:02:52 polynomial-c Exp $
+
+  27 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.10.1.ebuild:
+  Added missing languages.
 
   20 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.9.ebuild,
   -seamonkey-2.9.1-r2.ebuild, -seamonkey-2.10.ebuild:
