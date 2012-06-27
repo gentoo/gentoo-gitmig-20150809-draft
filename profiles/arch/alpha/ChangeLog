@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.133 2012/06/27 10:36:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.134 2012/06/27 17:27:54 armin76 Exp $
+
+  27 Jun 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  P.use.mask net-irc/kvirc webkit
 
   27 Jun 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
   Mask USE=webkit for PyQt4 too, because qt-webkit is not keyworded on alpha.
