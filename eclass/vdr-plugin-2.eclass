@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.7 2012/06/10 14:59:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.8 2012/06/27 18:54:58 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -45,9 +45,10 @@
 
 inherit base eutils flag-o-matic multilib toolchain-funcs
 
-if ! has "${EAPI:-4}" 4; then
-	die "API of vdr-plugin-2.eclass in EAPI=\"${EAPI}\" not established"
-fi
+case ${EAPI:-0} in
+    4) ;;
+    *) die "EAPI ${EAPI} unsupported."
+esac
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_compile src_install pkg_postinst pkg_postrm pkg_config
 

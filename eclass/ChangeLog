@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.330 2012/06/26 00:06:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.331 2012/06/27 18:54:58 hd_brummy Exp $
+
+  27 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  fixed eapi block; bug 423657
 
   26 Jun 2012; Robin H. Johnson <robbat2@gentoo.org> linux-info.eclass:
   You must ensure at least one of the version setup functions gets called in
