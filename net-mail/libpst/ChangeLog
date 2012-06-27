@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.27 2012/06/27 19:10:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.28 2012/06/27 19:13:48 radhermit Exp $
+
+  27 Jun 2012; Tim Harder <radhermit@gentoo.org> -libpst-0.6.52.ebuild,
+  -libpst-0.6.53.ebuild, -libpst-0.6.54.ebuild:
+  Remove old.
 
   27 Jun 2012; Tim Harder <radhermit@gentoo.org> libpst-0.6.54-r1.ebuild:
   Use prune_libtool_files.
