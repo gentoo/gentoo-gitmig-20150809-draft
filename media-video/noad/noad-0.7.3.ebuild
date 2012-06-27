@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.3.ebuild,v 1.2 2012/05/16 09:33:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.3.ebuild,v 1.3 2012/06/27 18:34:25 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils flag-o-matic autotools
 
@@ -24,13 +24,17 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 
 	epatch "${FILESDIR}"/patches-0.7.x/"${P}"-hangcheck.diff
-	eautoreconf
+
 	# UINT64_C is needed by ffmpeg headers
 	append-flags -D__STDC_CONSTANT_MACROS
 
 	if has_version ">=media-video/vdr-1.7.15"; then
 		sed -e "s:2001:6419:" -i svdrpc.cpp
 	fi
+
+	epatch "${FILESDIR}/patches-0.7.x/${P}_gcc-4.7.diff"
+
+	eautoreconf
 }
 
 src_configure() {

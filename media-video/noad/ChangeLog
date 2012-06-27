@@ -1,6 +1,12 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.51 2012/05/16 09:33:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.52 2012/06/27 18:34:25 hd_brummy Exp $
+
+  27 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/patches-0.7.x/noad-0.7.2-cflags.patch,
+  -files/patches-0.7.x/noad-0.7.2-hangcheck.diff,
+  +files/patches-0.7.x/noad-0.7.3_gcc-4.7.diff, noad-0.7.3.ebuild:
+  gcc-4.7 compile fixed, bug 423623
 
   16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/0.6.0-r7/confd_vdraddon.noad, -noad-0.6.0-r9.ebuild,
