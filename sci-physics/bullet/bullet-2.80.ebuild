@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.80.ebuild,v 1.1 2012/05/22 17:28:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.80.ebuild,v 1.2 2012/06/27 18:12:33 bicatali Exp $
 
 EAPI=4
 
@@ -15,16 +15,22 @@ SRC_URI="http://bullet.googlecode.com/files/${MYP}.tgz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc double-precision examples extras"
 
 RDEPEND="virtual/opengl
 	media-libs/freeglut"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen[dot] )"
 
 PATCHES=( "${FILESDIR}"/${PN}-2.78-soversion.patch )
 
 S="${WORKDIR}/${MYP}"
+
+src_prepare() {
+	# allow to generate docs
+	sed -i -e 's/GENERATE_HTMLHELP.*//g' Doxyfile || die
+}
 
 src_configure() {
 	mycmakeargs=(
@@ -40,9 +46,16 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+src_compile() {
+	cmake-utils_src_compile
+	if use doc; then
+		doxygen || die
+	fi
+}
+
 src_install() {
 	cmake-utils_src_install
-	use doc && dodoc *.pdf
+	use doc && dodoc *.pdf && dohtml -r html
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r Extras Demos
