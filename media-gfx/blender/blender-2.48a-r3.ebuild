@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48a-r3.ebuild,v 1.20 2012/06/14 15:18:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48a-r3.ebuild,v 1.21 2012/06/27 21:25:30 ssuominen Exp $
 
 EAPI=2
 
@@ -13,13 +13,14 @@ IUSE="blender-game ffmpeg jpeg nls openal openexr openmp
 	player png quicktime verse"
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org/"
-SRC_URI="http://download.blender.org/source/${P}.tar.gz"
+SRC_URI="http://download.blender.org/source/${P}.tar.gz
+	http://dev.gentoo.org/~ssuominen/${P}.png.bz2"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="amd64 ppc ppc64 x86"
 
-RDEPEND=">=dev-libs/openssl-0.9.6
+RDEPEND=">=dev-libs/openssl-0.9.6:0
 	ffmpeg? ( virtual/ffmpeg )
 	jpeg? ( virtual/jpeg )
 	media-libs/tiff:0
@@ -141,10 +142,8 @@ src_install() {
 
 	mv "${WORKDIR}"/install/linux2/.blender/scripts "${D}"/usr/share/${PN}
 
-	insinto /usr/share/pixmaps
-	doins "${FILESDIR}"/${PN}.png
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop
+	newicon -s 48 "${WORKDIR}"/${P}.png ${PN}.png
+	domenu "${FILESDIR}"/${PN}.desktop
 
 	dodoc INSTALL README
 	dodoc "${WORKDIR}"/install/linux2/BlenderQuickStart.pdf

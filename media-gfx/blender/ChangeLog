@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.225 2012/06/14 15:18:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.226 2012/06/27 21:25:30 ssuominen Exp $
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> blender-2.48a-r3.ebuild,
+  -files/blender.png:
+  Upload blender.png to mirrors as blender-2.48a.png.bz2 wrt #370903
 
   14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> blender-2.48a-r3.ebuild,
   blender-2.49a.ebuild, blender-2.49b-r2.ebuild:
