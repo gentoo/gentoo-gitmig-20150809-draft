@@ -1,28 +1,9 @@
- Makefile.am |    1 +
- Makefile.in |    1 +
- 2 files changed, 2 insertions(+), 0 deletions(-)
-
-diff --git a/Makefile.am b/Makefile.am
-index 2bf4898..3ffa6a3 100644
---- a/Makefile.am
 +++ b/Makefile.am
 @@ -333,6 +333,7 @@ wireshark_LDADD = \
  	@LIBGNUTLS_LIBS@		\
  	@LIBSMI_LDFLAGS@		\
  	@PORTAUDIO_LIBS@		\
 +	@GLIB_LIBS@			\
- 	@GTK_LIBS@ -lm
- 
- wireshark_CFLAGS = $(AM_CLEAN_CFLAGS) $(py_dissectors_dir)
-diff --git a/Makefile.in b/Makefile.in
-index a7c8474..c94ebc9 100644
---- a/Makefile.in
-+++ b/Makefile.in
-@@ -1051,6 +1051,7 @@ wireshark_LDADD = \
- 	@LIBGNUTLS_LIBS@		\
- 	@LIBSMI_LDFLAGS@		\
- 	@PORTAUDIO_LIBS@		\
-+	@GLIB_LIBS@				\
  	@GTK_LIBS@ -lm
  
  wireshark_CFLAGS = $(AM_CLEAN_CFLAGS) $(py_dissectors_dir)
