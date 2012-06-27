@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.158 2012/06/14 22:26:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.159 2012/06/27 17:23:07 maekke Exp $
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org> use.mask:
+  use.mask devil and gts, bug #419621
 
   14 Jun 2012; Davide Pesavento <pesa@gentoo.org> package.use.mask:
   Consolidate USE=jit masking/unmasking for qt-script and qt-webkit.
