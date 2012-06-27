@@ -1,10 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.92 2012/06/27 11:45:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.93 2012/06/27 11:56:12 ssuominen Exp $
 
   27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> polkit-0.106-r5.ebuild:
-  pax-mark polkitd only when spidermonkey is built with JIT enabled (by using
-  has_version check)
+  pax-mark polkitd only when spidermonkey is built with JIT enabled and only
+  'm' instead of 'mr' when version is >= 1.8.7 (by using has_version check)
 
   27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -polkit-0.106-r2.ebuild,
   -polkit-0.106-r3.ebuild, -polkit-0.106-r4.ebuild:
