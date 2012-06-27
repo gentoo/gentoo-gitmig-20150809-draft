@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_queue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.18 2012/06/14 19:45:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.19 2012/06/27 18:10:45 maekke Exp $
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org>
+  libnetfilter_queue-1.0.1.ebuild:
+  add ~arm, bug #407795
 
   14 Jun 2012; Michael Weber <xmw@gentoo.org> libnetfilter_queue-1.0.1.ebuild:
   rekeyword ~ppc (bug 407795)
