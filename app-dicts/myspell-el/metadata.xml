@@ -2,4 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>app-dicts</herd>
+	<maintainer>
+		<email>dastergon@gmail.com</email>
+		<name>Pavlos Ratis</name>
+	</maintainer>
+	<maintainer>
+		<email>tampakrap@gentoo.org</email>
+	</maintainer>
 </pkgmetadata>
