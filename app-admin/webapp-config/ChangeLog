@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.78 2012/06/27 01:44:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.79 2012/06/27 11:56:05 ago Exp $
+
+  27 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  webapp-config-1.50.16-r4.ebuild:
+  Stable for amd64, wrt bug #392329
 
   27 Jun 2012; Jeroen Roovers <jer@gentoo.org> webapp-config-1.50.16-r4.ebuild:
   Stable for HPPA (bug #392329).
