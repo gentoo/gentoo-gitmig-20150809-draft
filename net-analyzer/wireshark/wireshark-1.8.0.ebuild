@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.0.ebuild,v 1.3 2012/06/27 20:35:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.0.ebuild,v 1.4 2012/06/27 20:48:54 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns ares doc doc-pdf gtk ipv6 lua gcrypt geoip kerberos
-profile +pcap portaudio python +caps selinux smi ssl threads zlib"
+profile +pcap portaudio python +caps selinux smi ssl zlib"
 
 RDEPEND=">=dev-libs/glib-2.14:2
 	zlib? ( sys-libs/zlib
@@ -153,7 +153,6 @@ src_configure() {
 		$(use_with ssl gnutls) \
 		$(use_with gcrypt) \
 		$(use_enable ipv6) \
-		$(use_enable threads) \
 		$(use_with lua) \
 		$(use_with kerberos krb5) \
 		$(use_with smi libsmi) \
