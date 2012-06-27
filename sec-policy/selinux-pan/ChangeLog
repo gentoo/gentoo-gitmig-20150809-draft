@@ -1,5 +1,10 @@
 
 
+*selinux-pan-2.20120215-r1 (27 Jun 2012)
+
+  27 Jun 2012; <swift@gentoo.org> +selinux-pan-2.20120215-r1.ebuild:
+  Bump to revision 13
+
   01 Jun 2012; <swift@gentoo.org> selinux-pan-2.20120215.ebuild:
   Add dependency on selinux-xserver, fixes build failure
 
