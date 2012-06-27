@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.5 2012/06/27 14:38:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.6 2012/06/27 14:41:17 ssuominen Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
 
-inherit autotools eutils gnome.org linux-info systemd
+inherit autotools eutils gnome.org linux-info systemd user
 
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
