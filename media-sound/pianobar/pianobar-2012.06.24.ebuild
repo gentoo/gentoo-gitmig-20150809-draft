@@ -1,20 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-9999.ebuild,v 1.3 2012/06/27 09:51:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-2012.06.24.ebuild,v 1.1 2012/06/27 09:51:27 radhermit Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs flag-o-matic eutils multilib git-2
-
-EGIT_REPO_URI="git://github.com/PromyLOPh/pianobar.git"
+inherit toolchain-funcs flag-o-matic eutils multilib
 
 DESCRIPTION="A console-based replacement for Pandora's flash player"
 HOMEPAGE="http://6xq.net/projects/pianobar/"
-SRC_URI=""
+SRC_URI="http://6xq.net/static/projects/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+aac mp3 static-libs"
 
 RDEPEND="media-libs/libao
@@ -28,8 +26,9 @@ DEPEND="${RDEPEND}
 
 REQUIRED_USE="|| ( aac mp3 )"
 
-# Only releases are tested since patches required for testing often break
-RESTRICT="test"
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2011.12.11-tests.patch
+}
 
 src_compile() {
 	local myconf="DYNLINK=1"
@@ -39,6 +38,11 @@ src_compile() {
 	append-cflags -std=c99
 	tc-export CC
 	emake ${myconf}
+}
+
+src_test() {
+	cp src/libwaitress/waitress.c src/libwaitress/waitress-test.c
+	emake test
 }
 
 src_install() {

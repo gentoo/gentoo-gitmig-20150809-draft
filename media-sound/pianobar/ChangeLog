@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pianobar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.20 2012/05/14 09:36:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.21 2012/06/27 09:51:27 radhermit Exp $
+
+*pianobar-2012.06.24 (27 Jun 2012)
+
+  27 Jun 2012; Tim Harder <radhermit@gentoo.org> +pianobar-2012.06.24.ebuild,
+  pianobar-9999.ebuild:
+  Version bump. Change default to aac instead of mp3 since mp3 streams can only
+  be used by premium users.
 
   14 May 2012; Tim Harder <radhermit@gentoo.org> pianobar-9999.ebuild:
   Update live ebuild.
