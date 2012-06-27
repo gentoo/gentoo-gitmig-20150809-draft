@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/visitors
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.15 2012/05/29 19:31:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.16 2012/06/27 18:47:03 kensington Exp $
+
+  27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -visitors-0.5.ebuild,
+  -visitors-0.7.ebuild:
+  Remove old.
 
   29 May 2012; Brent Baude <ranger@gentoo.org> visitors-0.7-r1.ebuild:
   Marking visitors-0.7-r1 ppc for bug 394003
@@ -69,4 +73,3 @@
   11 Jun 2004; Chuck Short <zul@gentoo.org> metadata.xml,
   visitors-0.2a.ebuild:
   Initial Ebuild written by Sven Wegener. Closes #50919.
-
