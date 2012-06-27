@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.220 2012/06/26 10:35:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.221 2012/06/27 11:29:34 dev-zero Exp $
+
+  27 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> paludis-0.76.0.ebuild:
+  Raise dependency for libarchive to 3.0.4.
 
 *paludis-0.76.0 (26 Jun 2012)
 
