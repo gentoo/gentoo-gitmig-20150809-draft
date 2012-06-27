@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.6.54-r1.ebuild,v 1.3 2012/06/27 19:23:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.6.54-r1.ebuild,v 1.4 2012/06/27 19:37:30 radhermit Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -19,6 +19,7 @@ IUSE="debug dii doc python static-libs"
 RDEPEND="dii? ( media-gfx/imagemagick[png] )"
 DEPEND="${RDEPEND}
 	virtual/libiconv
+	virtual/pkgconfig
 	dii? ( media-libs/gd[png] )
 	python? ( >=dev-libs/boost-1.48[python] )"
 
@@ -30,14 +31,17 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Don't build the static python library
+	# don't build the static python library
 	epatch "${FILESDIR}"/${PN}-0.6.52-no-static-python-lib.patch
 
-	# Fix pkgconfig file for static linking
+	# fix pkgconfig file for static linking
 	epatch "${FILESDIR}"/${PN}-0.6.53-pkgconfig-static.patch
 
-	# Conditionally install the extra documentation
+	# conditionally install the extra documentation
 	use doc || sed -i -e "/SUBDIRS/s: html::" Makefile.am
+
+	# don't install duplicate docs
+	sed -i -e "/^html_DATA =/d" Makefile.am
 
 	eautoreconf
 }
@@ -54,7 +58,5 @@ src_configure() {
 
 src_install() {
 	default
-
-	# Remove useless .la files
-	find "${ED}" -name '*.la' -exec rm {} +
+	prune_libtool_files --all
 }
