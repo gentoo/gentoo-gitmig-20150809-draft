@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.03-r2.ebuild,v 1.2 2012/06/27 17:55:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.00.ebuild,v 1.1 2012/06/27 17:55:35 bicatali Exp $
 
 EAPI=4
 
@@ -8,8 +8,7 @@ PYTHON_DEPEND="python? 2"
 
 if [[ ${PV} == "9999" ]] ; then
 	_SVN=subversion
-	ESVN_REPO_URI="https://root.cern.ch/svn/root/trunk"
-	ESVN_OPTIONS="--non-interactive --trust-server-cert"
+	ESVN_REPO_URI="http://root.cern.ch/svn/root/trunk"
 	SRC_URI=""
 	KEYWORDS=""
 else
@@ -38,9 +37,9 @@ SRC_URI="${SRC_URI}
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-IUSE="+X afs avahi clarens doc emacs examples fits fftw graphviz htmldoc kerberos
-	ldap +math mpi mysql odbc +opengl openmp oracle postgres prefix pythia6
-	pythia8 python qt4 +reflex ruby ssl xft xinetd xml xrootd"
+IUSE="+X afs avahi -c++0x clarens doc emacs examples fits fftw graphviz htmldoc
+	kerberos ldap +math mpi mysql odbc +opengl openmp oracle postgres prefix
+	pythia6 pythia8 python qt4 +reflex ruby ssl xft xinetd xml xrootd"
 
 CDEPEND="
 	app-arch/xz-utils
@@ -95,7 +94,7 @@ CDEPEND="
 			dev-ruby/rubygems )
 	ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2 )
-	xrootd? ( net-libs/xrootd )"
+	xrootd? ( >=net-libs/xrootd-3.2.0 )"
 
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
@@ -131,8 +130,8 @@ pkg_setup() {
 
 	if use math; then
 		if use openmp; then
-			if [[ $(tc-getCC)$ == *gcc* ]] && ! tc-has-openmp; then
-				ewarn "You are using a gcc without OpenMP capabilities"
+			if [[ $(tc-getCXX)$ == *g++* ]] && ! tc-has-openmp; then
+				ewarn "You are using a g++ without OpenMP capabilities"
 				die "Need an OpenMP capable compiler"
 			else
 				export USE_OPENMP=1 USE_PARALLEL_MINUIT2=1
@@ -141,19 +140,22 @@ pkg_setup() {
 			export USE_MPI=1 USE_PARALLEL_MINUIT2=1
 		fi
 	fi
+	if use c++0x && [[ $(tc-getCXX)$ == *g++* ]] && \
+		! version_is_at_least "4.7.0" "$(gcc-version)"; then
+		ewarn "You are using a g++ without C++0x capabilities"
+		die "Need an C++0x capable compiler"
+	fi
 }
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-${PATCH_PV}-prop-ldflags.patch \
-		"${FILESDIR}"/${PN}-${PATCH_PV}-asneeded.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-nobyte-compile.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV}-glibc212.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV}-unuran.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-afs.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-cfitsio.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-chklib64.patch \
-		"${FILESDIR}"/${PN}-${PATCH_PV2}-explicit-functions.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-dotfont.patch
 
 	# make sure we use system libs and headers
@@ -228,7 +230,6 @@ src_configure() {
 		--disable-builtin-lzma \
 		--disable-cling \
 		--enable-astiff \
-		--enable-exceptions	\
 		--enable-explicitlink \
 		--enable-gdml \
 		--enable-memstat \
@@ -277,7 +278,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake OPT="${CXXFLAGS}" F77OPT="${FFLAGS}"
+	emake OPT="${CXXFLAGS}" F77OPT="${FFLAGS}" ROOTSYS="${S}" LD_LIBRARY_PATH="${S}/lib"
 	if use emacs; then
 		elisp-compile build/misc/*.el || die "elisp-compile failed"
 	fi
