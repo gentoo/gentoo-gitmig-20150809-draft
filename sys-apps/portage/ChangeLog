@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1044 2012/06/27 03:16:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1045 2012/06/27 23:07:51 zmedico Exp $
+
+*portage-2.1.11.3 (27 Jun 2012)
+
+  27 Jun 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.3.ebuild,
+  -portage-2.1.11.2.ebuild:
+  2.1.11.3 version bump. This fixes a TypeError exception that's triggered by a
+  slot conflict involving EAPI 4-slot-abi sub-slot dependencies, and fixes a
+  backtracking bug which caused the backtracker to ignore relevant solutions in
+  some cases. Bug #423075 tracks all bugs fixed since portage-2.1.10.65.
 
   27 Jun 2012; Jeroen Roovers <jer@gentoo.org> portage-2.1.10.65.ebuild:
   Stable for HPPA (bug #422721).
