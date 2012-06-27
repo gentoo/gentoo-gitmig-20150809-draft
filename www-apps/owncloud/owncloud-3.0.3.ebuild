@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-3.0.3.ebuild,v 1.1 2012/05/11 09:18:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-3.0.3.ebuild,v 1.2 2012/06/27 09:06:50 voyageur Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://owncloud.org/releases/${P}.tar.bz2"
 LICENSE="AGPL-3"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="+curl mysql postgres sqlite3"
+IUSE="+curl mysql postgres +sqlite3"
 REQUIRED_USE="|| ( mysql postgres sqlite3 )"
 
 DEPEND=""
