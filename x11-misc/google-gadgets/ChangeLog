@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.46 2012/05/05 04:53:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.47 2012/06/27 09:48:43 voyageur Exp $
+
+  27 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  google-gadgets-0.11.2.ebuild, +files/google-gadgets-0.11.2-gcc-4.7.patch:
+  Fix compilation with GCC 4.7 with patch from Debian, bug #423021
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> google-gadgets-0.11.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
