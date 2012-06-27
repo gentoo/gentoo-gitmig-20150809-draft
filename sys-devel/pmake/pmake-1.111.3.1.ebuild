@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.1.ebuild,v 1.6 2011/07/10 14:29:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.1.ebuild,v 1.7 2012/06/27 11:46:04 naota Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -49,7 +49,8 @@ src_compile() {
 	CFLAGS="${CFLAGS} -Wall -Wno-unused -D_GNU_SOURCE \
 		-DHAVE_STRERROR -DHAVE_STRDUP -DHAVE_SETENV \
 		-D__COPYRIGHT\(x\)= -D__RCSID\(x\)= -I. \
-		-DMACHINE=\\\"gentoo\\\" -DMACHINE_ARCH=\\\"$(tc-arch-kernel)\\\""
+		-DMACHINE=\\\"gentoo\\\" -DMACHINE_ARCH=\\\"$(tc-arch-kernel)\\\" \
+		-DHAVE_VSNPRINTF"
 	if [[ "${USERLAND}" == "GNU" ]]; then
 		CFLAGS="${CFLAGS} -D_PATH_DEFSYSPATH=\\\"/usr/share/mk/${PN}\\\""
 	fi
