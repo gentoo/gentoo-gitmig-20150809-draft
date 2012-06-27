@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.106 2012/05/31 11:04:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.107 2012/06/27 08:54:21 kensington Exp $
+
+*smb4k-1.0.3 (27 Jun 2012)
+
+  27 Jun 2012; Michael Palimaka <kensington@gentoo.org> +smb4k-1.0.3.ebuild,
+  metadata.xml:
+  Version bump. Fix handbook linguas handling and drop unused configure option.
+  Add upstream metadata.
 
   31 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -smb4k-0.10.10.ebuild,
   smb4k-1.0.2.ebuild:
@@ -482,5 +489,3 @@
 - Separated KProcess stuff from the widget classes.
 - Login information is stored in a separate file with strict permissions.
 - Many more improvements, bug fixes and code clean-ups.
-
-
