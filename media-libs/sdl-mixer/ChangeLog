@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.102 2012/06/22 15:33:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.103 2012/06/27 17:22:32 maekke Exp $
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org> sdl-mixer-1.2.12-r1.ebuild:
+  arm stable, bug #422125
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> sdl-mixer-1.2.12-r1.ebuild:
   Marking sdl-mixer-1.2.12-r1 ppc64 for bug 422125
