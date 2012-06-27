@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pspresent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.31 2012/05/29 19:26:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/ChangeLog,v 1.32 2012/06/27 15:46:01 kensington Exp $
+
+  27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -pspresent-1.3.ebuild:
+  Remove old.
 
   29 May 2012; Brent Baude <ranger@gentoo.org> pspresent-1.3-r1.ebuild:
   Marking pspresent-1.3-r1 ppc for bug 391599
@@ -103,4 +106,3 @@
   19 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> pspresent-1.1.ebuild:
   Initial import. Ebuild submitted by gim <ghostgim@yahoo.fr>.
   This closes Bug #29064
-
