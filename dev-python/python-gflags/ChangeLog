@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-gflags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/ChangeLog,v 1.7 2012/03/26 16:28:01 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/ChangeLog,v 1.8 2012/06/27 05:05:34 xarthisius Exp $
+
+  27 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> python-gflags-2.0.ebuild:
+  Update PYTHON_COMPAT to pypy version available in tree. Thanks to Mr_Bones_
+  for the report
 
   26 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org> python-gflags-2.0.ebuild:
   Migrate to python-distutils-ng.eclass and EAPI 4.
