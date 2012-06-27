@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.34 2012/06/03 18:57:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.35 2012/06/27 17:56:31 hwoarang Exp $
+
+*q4wine-0.999_rc8 (27 Jun 2012)
+
+  27 Jun 2012; Markos Chandras <hwoarang@gentoo.org> +q4wine-0.999_rc8.ebuild:
+  Version bump
 
 *q4wine-0.999_rc7 (03 Jun 2012)
 
@@ -150,4 +155,3 @@
   +q4wine-0.111.ebuild:
   Initial commit for q4wine application. Thanks to John Brezerk
   <brezerk@gmail.com> for the initial ebuild. Fixes bug #256502
-
