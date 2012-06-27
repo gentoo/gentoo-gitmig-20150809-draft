@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.18 2011/06/21 15:08:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.19 2012/06/27 10:05:28 jlec Exp $
 
 EAPI=2
 
@@ -21,6 +21,10 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
 	doc? ( virtual/latex-base )"
+
+pkg_setup() {
+	use fortran && fortran-2_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch

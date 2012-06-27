@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1-r4.ebuild,v 1.13 2012/03/25 10:35:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1-r4.ebuild,v 1.14 2012/06/27 10:05:28 jlec Exp $
 
 EAPI=3
 
@@ -37,7 +37,7 @@ PATCHES=(
 )
 
 pkg_setup() {
-	fortran-2_pkg_setup
+	use fortran && fortran-2_pkg_setup
 	if use hdf5 && has_version sci-libs/hdf5[mpi]; then
 		export CC=mpicc
 		if use cxx; then
