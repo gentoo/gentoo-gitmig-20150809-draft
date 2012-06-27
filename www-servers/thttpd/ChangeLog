@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.41 2012/06/20 06:39:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.42 2012/06/27 15:57:02 jer Exp $
+
+  27 Jun 2012; Jeroen Roovers <jer@gentoo.org> thttpd-2.26.2.ebuild:
+  Marked ~hppa (bug #422445).
 
   20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> thttpd-2.26.2.ebuild:
   marked x86 per bug 422247
