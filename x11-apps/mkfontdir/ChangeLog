@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mkfontdir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontdir/ChangeLog,v 1.76 2012/06/24 18:44:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontdir/ChangeLog,v 1.77 2012/06/27 18:07:29 maekke Exp $
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org> mkfontdir-1.0.7.ebuild:
+  arm stable, bug #419473
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> mkfontdir-1.0.7.ebuild:
   Stable for x86, wrt bug #419473
