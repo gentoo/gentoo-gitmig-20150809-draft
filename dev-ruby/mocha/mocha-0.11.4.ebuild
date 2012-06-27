@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.11.4.ebuild,v 1.3 2012/06/13 17:39:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.11.4.ebuild,v 1.4 2012/06/27 16:58:31 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -38,6 +38,10 @@ all_ruby_compile() {
 	if use doc; then
 		rake examples || die
 	fi
+}
+
+each_ruby_test() {
+	${RUBY} -Ilib -S testrb test/unit/* || die
 }
 
 all_ruby_install() {

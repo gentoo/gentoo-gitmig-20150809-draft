@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.61 2012/06/13 17:47:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.62 2012/06/27 16:58:31 graaff Exp $
+
+  27 Jun 2012; Hans de Graaff <graaff@gentoo.org> mocha-0.11.4.ebuild:
+  Run tests directly instead of via rake to avoid unneeded dependency on yard,
+  bug 423187.
 
   13 Jun 2012; Hans de Graaff <graaff@gentoo.org> -mocha-0.9.10.ebuild,
   -mocha-0.10.0.ebuild, -mocha-0.10.3.ebuild:
