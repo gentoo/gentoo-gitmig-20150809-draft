@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.3.ebuild,v 1.6 2012/06/23 20:25:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.4.ebuild,v 1.1 2012/06/27 16:01:19 axs Exp $
 
 EAPI=4
 
@@ -34,9 +34,8 @@ PDEPEND="branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
 
 src_prepare() {
 	# Our Gentoo-specific config changes
-	epatch "${FILESDIR}"/${P}-config.diff
-	# Bug 414891
-	epatch "${FILESDIR}"/${P}-xmu-cmakelists.patch
+	epatch "${FILESDIR}"/${PN}-1.3.3-config.diff
+	epatch "${FILESDIR}"/${P}-libpng.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
@@ -46,11 +45,6 @@ src_prepare() {
 	if use branding; then
 		sed -i -e 's/  default/  slim-gentoo-simple/' slim.conf || die
 	fi
-
-	# Upstream bug #15287 (still not fixed in codebase)
-	epatch "${FILESDIR}"/15287-fix-pam-authentication-with-pam_unix2.patch
-	# Gentoo bug 405579, Upstream bug #18552
-	epatch "${FILESDIR}"/405579-fix-numlock.patch
 }
 
 src_configure() {
