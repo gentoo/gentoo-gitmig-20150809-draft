@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmobar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.16 2012/05/18 17:42:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/ChangeLog,v 1.17 2012/06/27 21:08:45 slyfox Exp $
+
+  27 Jun 2012; Sergei Trofimovich <slyfox@gentoo.org> xmobar-0.14.ebuild:
+  Raise lower bound to require ghc-7 (bug #419387 by Marco Paolone).
 
   18 May 2012; Sergei Trofimovich <slyfox@gentoo.org> xmobar-0.14.ebuild:
   Raise depend to require dev-haskell/parsec-3 (fixes build failure reported by
