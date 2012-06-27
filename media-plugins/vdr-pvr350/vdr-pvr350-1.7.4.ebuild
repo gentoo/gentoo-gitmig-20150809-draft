@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-1.7.3.ebuild,v 1.2 2012/06/27 17:36:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-1.7.4.ebuild,v 1.1 2012/06/27 17:36:59 hd_brummy Exp $
 
 EAPI="4"
 
 inherit vdr-plugin-2
 
-VERSION="995"
+VERSION="996"
 
 DESCRIPTION="VDR plugin: use a PVR350 as output device"
 HOMEPAGE="http://projects.vdr-developer.org/projects/plg-pvr350"
