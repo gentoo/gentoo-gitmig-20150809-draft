@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.94 2012/06/25 16:14:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.95 2012/06/27 10:36:12 pesa Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jun 2012)
 # x11-libs/qt-webkit doesn't seem to work
+dev-python/PyQt4 webkit
 x11-libs/qt-assistant webkit
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
