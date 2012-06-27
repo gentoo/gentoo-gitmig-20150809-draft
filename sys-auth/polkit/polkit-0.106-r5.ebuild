@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106-r5.ebuild,v 1.1 2012/06/27 10:24:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106-r5.ebuild,v 1.2 2012/06/27 11:45:47 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib pam pax-utils systemd user
@@ -95,7 +95,9 @@ src_install() {
 	rm -f "${ED}"/usr/lib*/pkgconfig/polkit-backend-1.pc #423431
 
 	# Required for polkitd on hardened/PaX due to spidermonkey's JIT
-	pax-mark mr "${ED}"/usr/$(get_libdir)/polkit-1/polkitd
+	if has_version '<dev-lang/spidermonkey-1.8.7' || has_version 'dev-lang/spidermonkey[jit]'; then
+		pax-mark mr "${ED}"/usr/$(get_libdir)/polkit-1/polkitd
+	fi
 }
 
 pkg_postinst() {
