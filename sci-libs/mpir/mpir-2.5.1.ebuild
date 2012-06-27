@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.5.1.ebuild,v 1.1 2012/04/24 19:55:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.5.1.ebuild,v 1.2 2012/06/27 14:11:29 ssuominen Exp $
 
 EAPI=4
 
@@ -22,7 +22,8 @@ RDEPEND=""
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-2.2.0-yasm.patch \
-		"${FILESDIR}"/${PN}-1.3.0-ABI-multilib.patch
+		"${FILESDIR}"/${PN}-1.3.0-ABI-multilib.patch \
+		"${FILESDIR}"/${PN}-2.5.1-automake-1.12.patch
 
 	# In the same way there was QA regarding executable stacks
 	# with GMP we have some here as well. We cannot apply the
