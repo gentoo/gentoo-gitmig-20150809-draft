@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.21 2012/05/12 01:47:05 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.22 2012/06/27 11:29:18 yngwin Exp $
+
+*rst2pdf-0.92 (27 Jun 2012)
+
+  27 Jun 2012; Ben de Groot <yngwin@gentoo.org> +rst2pdf-0.92.ebuild:
+  Version bump. Update homepage.
 
 *rst2pdf-0.91 (12 May 2012)
 
@@ -90,4 +95,3 @@
   +metadata.xml:
   Initial commit. Ebuild partly based on the one contributed by Maxim
   Treskin in bug #275474.
-
