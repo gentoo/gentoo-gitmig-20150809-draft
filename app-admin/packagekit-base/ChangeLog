@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/packagekit-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.23 2012/06/27 18:49:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.24 2012/06/27 18:54:20 ssuominen Exp $
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  packagekit-base-0.7.4.ebuild:
+  Remove call to bash-completion_pkg_postinst from pkg_postinst() since such
+  function is not present in bash-completion-r1.eclass. Since bash-completion
+  shouldn't be behind USE flag always pass --enable-command-not-found.
 
   27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
   packagekit-base-0.7.4.ebuild:
