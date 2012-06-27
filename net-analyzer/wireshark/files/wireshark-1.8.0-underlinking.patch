@@ -1,3 +1,4 @@
+--- a/Makefile.am
 +++ b/Makefile.am
 @@ -333,6 +333,7 @@ wireshark_LDADD = \
  	@LIBGNUTLS_LIBS@		\
