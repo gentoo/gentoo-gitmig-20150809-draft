@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/cliapp-0.29.ebuild,v 1.2 2012/06/24 15:13:58 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/cliapp-0.29.ebuild,v 1.3 2012/06/27 04:44:09 mr_bones_ Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://code.liw.fi/debian/pool/main/p/python-${PN}/python-${PN}_${PV}.o
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 DEPEND="test? ( dev-python/CoverageTestRunner )"
 
