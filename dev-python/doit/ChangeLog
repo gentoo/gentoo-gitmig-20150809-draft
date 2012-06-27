@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/doit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/doit/ChangeLog,v 1.1 2012/06/27 08:03:32 yngwin Exp $
+
+*doit-0.16.1 (27 Jun 2012)
+
+  27 Jun 2012; Ben de Groot <yngwin@gentoo.org> +doit-0.16.1.ebuild,
+  +metadata.xml:
+  Initial commit. Needed as dep for www-apps/nikola.
