@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/landslide/landslide-1.0.0.ebuild,v 1.1 2011/09/15 16:20:44 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/landslide/landslide-1.0.0.ebuild,v 1.2 2012/06/27 21:25:49 naota Exp $
 
 EAPI=3
 
-inherit distutils
+PYTHON_DEPEND="2"
+
+inherit distutils python vcs-snapshot
 
 DESCRIPTION="Landslide generates a slideshow using the slides that power the html5-slides presentation"
 HOMEPAGE="https://github.com/adamzap/landslide"
@@ -21,7 +23,7 @@ RDEPEND="dev-python/docutils
 	dev-python/markdown
 	dev-python/pygments"
 
-src_unpack() {
-	unpack ${A}
-	mv adamzap-landslide-* ${P} || die
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 }
