@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.23 2012/06/22 15:27:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.24 2012/06/27 03:13:33 jer Exp $
+
+  27 Jun 2012; Jeroen Roovers <jer@gentoo.org> pkgconf-0.8.ebuild:
+  Stable for HPPA (bug #420717).
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> pkgconf-0.8.ebuild:
   Marking pkgconf-0.8 ppc64 for bug 420717
