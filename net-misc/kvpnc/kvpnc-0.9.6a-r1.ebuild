@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.6a-r1.ebuild,v 1.1 2012/06/25 20:23:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.6a-r1.ebuild,v 1.2 2012/06/27 18:56:23 dilfridge Exp $
 
 EAPI=3
 KDE_LINGUAS="ar br cs da de el en_GB eo es et eu fr ga gl hi hne it ja ka lt
@@ -15,10 +15,10 @@ SRC_URI="http://download.gna.org/kvpnc/${P}-kde4.tar.bz2
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="+crypt debug"
+IUSE="debug"
 
 RDEPEND="
-	crypt? ( dev-libs/libgcrypt )
+	dev-libs/libgcrypt
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -46,9 +46,6 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
-		$(cmake-utils_use_with crypt libgcrypt)
-	)
-
+	mycmakeargs=( "-DWITH_libgcrypt=ON" )
 	kde4-base_src_configure
 }

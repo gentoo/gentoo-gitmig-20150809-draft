@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kvpnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.48 2012/06/25 20:23:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.49 2012/06/27 18:56:23 dilfridge Exp $
+
+  27 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kvpnc-0.9.6a-r1.ebuild:
+  libgcrypt is now actually needed, bug 423857
 
 *kvpnc-0.9.6a-r1 (25 Jun 2012)
 
