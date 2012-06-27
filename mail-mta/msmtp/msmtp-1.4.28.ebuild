@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.28.ebuild,v 1.2 2012/05/02 21:28:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.28.ebuild,v 1.3 2012/06/27 19:50:47 radhermit Exp $
 
 EAPI=4
 inherit multilib python
@@ -51,7 +51,7 @@ REQUIRED_USE="gnutls? ( ssl )"
 
 src_prepare() {
 	# Use default Gentoo location for mail aliases
-	sed -i -e 's:/etc/aliases:/etc/mail/aliases:' scripts/find_alias/find_alias_for_msmtp.sh
+	sed -i -e 's:/etc/aliases:/etc/mail/aliases:' scripts/find_alias/find_alias_for_msmtp.sh || die
 
 	python_convert_shebangs 2 scripts/msmtp-gnome-tool/msmtp-gnome-tool.py
 }
