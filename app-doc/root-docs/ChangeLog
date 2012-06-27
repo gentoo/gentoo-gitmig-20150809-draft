@@ -1,11 +1,52 @@
 # ChangeLog for app-doc/root-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.18 2012/03/13 17:15:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.19 2012/06/27 17:30:22 bicatali Exp $
+
+  27 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> -root-docs-5.32.ebuild,
+  +root-docs-5.32.03.ebuild, +files/root-docs-5.32-makehtml.patch,
+  +root-docs-5.34.00.ebuild, +files/root-docs-5.34-makehtml.patch,
+  metadata.xml:
+  import to the main tree. keyword ~amd64-linux and ~x86-linux. cleaning
+
+*root-docs-5.32.03 (20 Jun 2012)
+
+  20 Jun 2012; Andrew Savchenko <bircoph@gmail.com> -root-docs-5.32.ebuild,
+  +root-docs-5.32.03.ebuild, +files/root-docs-5.32-makehtml.patch:
+  Backport htmldoc generation fixes for 5.32 branch.
+
+*root-docs-5.34.00 (19 Jun 2012)
+
+  19 Jun 2012; Andrew Savchenko <bircoph@gmail.com> +root-docs-5.34.00.ebuild:
+  Version bump based on live ebuild.
+
+*root-docs-9999 (19 Jun 2012)
+
+  19 Jun 2012; Andrew Savchenko <bircoph@gmail.com>
+  +files/root-docs-5.34-makehtml.patch, +root-docs-9999.ebuild:
+  htmldoc generation for root must be separated, because it is
+  supposed to be run only root was installed to the live
+  filesystem. It can't be faked easily in the sandbox environment,
+  because ROOTSYS is not respected when --prefix or --*dir are
+  used for configure script.
 
 *root-docs-5.32 (13 Mar 2012)
 
   13 Mar 2012; Sébastien Fabbro <bicatali@gentoo.org> +root-docs-5.32.ebuild:
-  Version bump
+  Import to the main tree.
+
+*root-docs-5.32 (03 Dec 2011)
+
+  03 Dec 2011; Andrew Savchenko <bircoph@gmail.com> -root-docs-5.30.ebuild,
+  +root-docs-5.32.ebuild:
+  Version bump.
+  Remove useless html/html32/ patch chunk, thus html files will be
+  installed directly into /usr/share/doc/${PF}/.
+
+*root-docs-5.30 (02 Aug 2011)
+
+  02 Aug 2011; Andrew Savchenko <bircoph@gmail.com> +root-docs-5.30.ebuild,
+  +metadata.xml:
+  Version bump.
 
 *root-docs-5.28-r1 (17 May 2011)
 
