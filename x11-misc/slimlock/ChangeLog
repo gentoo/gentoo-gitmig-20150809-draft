@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/slimlock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slimlock/ChangeLog,v 1.1 2012/06/27 14:22:51 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slimlock/ChangeLog,v 1.2 2012/06/27 15:29:10 ssuominen Exp $
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> slimlock-0.11.ebuild:
+  Missing quoting when $(tc-getCC) and $(tc-getCXX) are used as args.
+  Fix media-libs/freetype depend to >= 2 since it's slotted.
 
 *slimlock-0.11 (27 Jun 2012)
 
