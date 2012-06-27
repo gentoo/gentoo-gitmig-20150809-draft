@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.74 2012/03/18 18:18:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.75 2012/06/27 18:13:20 kensington Exp $
+
+  27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -ypbind-1.32-r1.ebuild,
+  -ypbind-1.32.ebuild:
+  Remove old.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> ypbind-1.33.ebuild:
   alpha/ia64/sparc stable wrt #404843
