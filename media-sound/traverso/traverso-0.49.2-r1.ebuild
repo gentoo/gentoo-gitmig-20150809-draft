@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.49.2-r1.ebuild,v 1.1 2012/05/07 11:33:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.49.2-r1.ebuild,v 1.2 2012/06/27 19:35:01 ssuominen Exp $
 
 EAPI=4
-
-inherit eutils cmake-utils
+inherit cmake-utils eutils gnome2-utils
 
 DESCRIPTION="Professional Audio Tools for GNU/Linux"
 HOMEPAGE="http://traverso-daw.org/"
@@ -37,9 +36,10 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog README resources/help.text )
 
 PATCHES=(
-	"${FILESDIR}/${PN}-0.49.1-slv2.patch"
-	"${FILESDIR}/${P}-desktop.patch"
-	"${FILESDIR}/${P}-gold.patch"
+	"${FILESDIR}"/${PN}-0.49.1-slv2.patch
+	"${FILESDIR}"/${P}-desktop.patch
+	"${FILESDIR}"/${P}-gold.patch
+	"${FILESDIR}"/${P}-gcc47.patch
 	)
 
 src_configure() {
@@ -55,8 +55,19 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	doicon resources/freedesktop/icons/128x128/apps/traverso.png
+
+	local res
+	for res in 16 24 48 64 128; do
+		doicon -s ${res} resources/freedesktop/icons/${res}x${res}/apps/${PN}.png
+	done
+	doicon -s scalable resources/freedesktop/icons/scalable/apps/${PN}.svg
+
 	domenu resources/traverso.desktop
+
 	insinto /usr/share/${PN}
 	doins -r resources/themes
 }
+
+pkg_preinst() { gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update; }
+pkg_postrm() { gnome2_icon_cache_update; }
