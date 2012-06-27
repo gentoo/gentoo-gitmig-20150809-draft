@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpegthumbnailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.136 2012/06/22 15:43:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.137 2012/06/27 17:48:50 maekke Exp $
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org>
+  ffmpegthumbnailer-2.0.7-r1.ebuild:
+  arm stable, bug #422133
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org>
   ffmpegthumbnailer-2.0.7-r1.ebuild:
