@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.44 2012/06/27 05:49:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.45 2012/06/27 06:07:39 patrick Exp $
+
+*nodejs-0.7.12 (27 Jun 2012)
+
+  27 Jun 2012; Patrick Lauer <patrick@gentoo.org> +nodejs-0.7.12.ebuild:
+  Bump for #419345 #417241
 
   27 Jun 2012; Patrick Lauer <patrick@gentoo.org> nodejs-0.8.0.ebuild:
   Fixing nodejs 0.8 v8 dep
