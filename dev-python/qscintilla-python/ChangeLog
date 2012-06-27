@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.86 2012/06/14 07:17:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.87 2012/06/27 13:42:26 pesa Exp $
+
+*qscintilla-python-2.6.2 (27 Jun 2012)
+
+  27 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  +qscintilla-python-2.6.2.ebuild, -qscintilla-python-2.4.6.ebuild,
+  -qscintilla-python-2.6.ebuild:
+  Version bump and remove old.
 
   14 Jun 2012; Ben de Groot <yngwin@gentoo.org> qscintilla-python-2.4.5.ebuild:
   Destabling to ~ia64 because last available stable qt will be masked pending
@@ -386,4 +393,3 @@
   +qscintilla-python-2.1.ebuild:
   split dev-python/qscintilla to x11-libs/qscintilla and
   dev-python/qscintilla-python, to break circular dependency bug 199543.
-
