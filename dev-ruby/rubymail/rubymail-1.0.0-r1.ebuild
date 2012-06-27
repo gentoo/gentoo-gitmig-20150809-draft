@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-1.0.0-r1.ebuild,v 1.3 2012/05/01 18:24:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-1.0.0-r1.ebuild,v 1.4 2012/06/27 16:51:20 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -17,6 +17,10 @@ IUSE="doc"
 S="${WORKDIR}/rmail-${PV}"
 
 ruby_add_bdepend "doc? ( dev-ruby/rake )"
+
+all_ruby_prepare() {
+	sed -i -e '212 s:^:#:' test/testheader.rb || die
+}
 
 each_ruby_configure() {
 	${RUBY} install.rb config --prefix=/usr || die
