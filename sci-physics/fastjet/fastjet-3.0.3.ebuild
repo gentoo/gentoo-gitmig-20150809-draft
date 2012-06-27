@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/fastjet/fastjet-3.0.2.ebuild,v 1.1 2012/01/20 00:39:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/fastjet/fastjet-3.0.3.ebuild,v 1.1 2012/06/27 18:49:32 bicatali Exp $
 
 EAPI=4
+
 inherit autotools-utils fortran-2 flag-o-matic
 
 DESCRIPTION="Fast implementation of several recombination jet algorithms"
@@ -19,6 +20,10 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	plugins? ( virtual/fortran )"
 
+pkg_setup() {
+	use plugins && fortran-2_pkg_setup
+}
+
 src_configure() {
 	use cgal && has_version sci-mathematics/cgal[gmp] && append-ldflags -lgmp
 	myeconfargs+=(
@@ -31,12 +36,14 @@ src_configure() {
 
 src_compile() {
 	autotools-utils_src_compile
-	use doc && doxygen Doxyfile
+	if use doc; then
+		doxygen Doxyfile || die
+	fi
 }
 
 src_install() {
 	autotools-utils_src_install
-	use doc && dohtml html/*
+	use doc && dohtml -r html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		find example \
