@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.6.6.ebuild,v 1.6 2012/06/27 19:40:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/slv2-0.6.6.ebuild,v 1.7 2012/06/27 19:46:57 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib python toolchain-funcs
@@ -33,13 +33,14 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC CXX CPP AR RANLIB
+	LINKFLAGS="${LDFLAGS}" \
 	./waf configure \
-		  --prefix=/usr \
-		  --libdir=/usr/$(get_libdir)/ \
-		  --htmldir=/usr/share/doc/${PF}/html \
-		  $(use doc && echo "--build-docs") \
-		  $(use jack || echo "--no-jack") \
-		  || die "failed to configure"
+		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
+		--htmldir=/usr/share/doc/${PF}/html \
+		$(use doc && echo --build-docs) \
+		$(use jack || echo --no-jack) \
+		|| die
 }
 
 src_compile() {
