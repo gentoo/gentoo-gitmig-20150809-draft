@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.26 2012/05/29 08:38:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.27 2012/06/27 07:19:01 patrick Exp $
+
+*basemap-1.0.4 (27 Jun 2012)
+
+  27 Jun 2012; Patrick Lauer <patrick@gentoo.org> +basemap-1.0.4.ebuild:
+  Bump for #423735
 
   29 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> basemap-1.0.3.ebuild:
   Fix typo in REQUIRED_USE. Thanks to tomjbe for the spotting.
@@ -139,4 +144,3 @@
   +files/basemap-syslib.patch, +metadata.xml, +basemap-0.9.4.ebuild:
   Initial import. Close bug #105482 together with dev-python/basemap-data.
   Thanks Mike Elson <mike.elson@tiscali.de> for his initial ebuild.
-
