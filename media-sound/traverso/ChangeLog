@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/traverso
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.32 2012/06/27 19:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.33 2012/06/27 19:57:00 ssuominen Exp $
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  traverso-0.49.2-r1.ebuild:
+  Fix building with USE="lv2" by querying Cflags: from slv2.pc pkg-config file
+  for raptor2.h include path wrt #415165
 
   27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
   traverso-0.49.2-r1.ebuild, +files/traverso-0.49.2-gcc47.patch:
