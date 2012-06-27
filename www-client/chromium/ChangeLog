@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.662 2012/06/26 05:13:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.663 2012/06/27 01:38:01 rich0 Exp $
+
+  27 Jun 2012; Richard Freeman <rich0@gentoo.org> chromium-20.0.1132.43.ebuild:
+  amd64 stable - 423719
 
 *chromium-20.0.1132.43 (26 Jun 2012)
 *chromium-21.0.1180.11 (26 Jun 2012)
