@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.180 2012/06/22 15:13:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.181 2012/06/27 01:33:09 jer Exp $
+
+  27 Jun 2012; Jeroen Roovers <jer@gentoo.org> unrar-4.2.3.ebuild:
+  Stable for HPPA (bug #421221).
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> unrar-4.2.3.ebuild:
   Marking unrar-4.2.3 ppc64 for bug 421221
