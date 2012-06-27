@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cssselect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.4 2012/05/27 03:10:06 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.5 2012/06/27 17:30:56 maekke Exp $
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org> cssselect-0.6.1.ebuild:
+  add ~arm, bug #416099
 
   27 May 2012; Naohiro Aota <naota@gentoo.org> cssselect-0.6.1.ebuild:
   Add ~x86-fbsd. #416099
