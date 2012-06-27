@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106-r3.ebuild,v 1.2 2012/06/27 10:01:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.106-r3.ebuild,v 1.3 2012/06/27 10:02:14 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib pam pax-utils systemd user
@@ -82,7 +82,7 @@ src_install() {
 		DESTDIR="${D}" \
 		libprivdir="${EPREFIX}"/usr/$(get_libdir)/polkit-1 \
 		install
-	
+
 	dodoc docs/TODO HACKING NEWS README
 
 	fowners -R polkitd:root /{etc,usr/share}/polkit-1/rules.d
