@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.22 2012/06/21 18:29:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.23 2012/06/27 18:48:55 qnikst Exp $
+
+  27 Jun 2012; Alexander Vershilov <qnikst@gentoo.org> Manifest:
+  fixing metadata (due #423701) asked by slepnoga
 
 *sssd-1.8.4 (21 Jun 2012)
 
