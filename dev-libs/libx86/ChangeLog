@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libx86
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.13 2009/07/01 20:30:01 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.14 2012/06/27 16:39:40 kensington Exp $
+
+  27 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/libx86-0.99-build.patch, -libx86-0.99.ebuild, -libx86-1.1.ebuild:
+  Remove old.
 
   01 Jul 2009; Markus Meier <maekke@gentoo.org> libx86-1.1-r1.ebuild:
   amd64 stable, bug #267719
@@ -51,4 +55,3 @@
   17 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org>
   +files/libx86-0.99-build.patch, +metadata.xml, +libx86-0.99.ebuild:
   Initial add, bug#156431
-
