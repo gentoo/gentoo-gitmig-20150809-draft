@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.138 2012/06/22 11:07:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.139 2012/06/27 16:19:48 scarabeus Exp $
+
+  27 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  gst-plugins-ffmpeg-0.10.13-r1.ebuild:
+  Revert the -r1 to use the internal version. It was commited accidentaly, the
+  change was ment only for -r2.
 
   22 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-ffmpeg-0.10.13-r2.ebuild:
