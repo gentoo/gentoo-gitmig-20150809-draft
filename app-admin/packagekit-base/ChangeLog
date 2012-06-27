@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/packagekit-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.22 2012/05/27 23:26:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.23 2012/06/27 18:49:04 ssuominen Exp $
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  packagekit-base-0.7.4.ebuild:
+  Remove check for polkit-backend-1 which is now marked as "noinst" in polkit
+  >= 0.106 wrt #423431 by Pim Vullers
 
   27 May 2012; Matt Turner <mattst88@gentoo.org> packagekit-base-0.7.4.ebuild:
   Added ~alpha, bug 387959.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.7.4.ebuild,v 1.2 2012/05/27 23:26:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.7.4.ebuild,v 1.3 2012/06/27 18:49:04 ssuominen Exp $
 
 EAPI="3"
 
@@ -72,6 +72,8 @@ RESTRICT="test" # tests are failing atm
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7.x-npapi-sdk.patch #383141
+	# http://pkgs.fedoraproject.org/gitweb/?p=PackageKit.git;a=commit;h=0b378668288db34890b82c7be007fc76c7fcd956
+	sed -i -e '/polkit-backend-1/d' configure || die #423431
 }
 
 src_configure() {
