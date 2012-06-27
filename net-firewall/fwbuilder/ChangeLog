@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.120 2012/06/24 20:22:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.121 2012/06/27 00:38:01 dilfridge Exp $
+
+  27 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  fwbuilder-5.1.0.3599.ebuild, +files/fwbuilder-5.1.0.3599-gcc47.patch:
+  Fix compilation with gcc-4.7, bug 423695
 
   24 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   fwbuilder-5.0.1.3592-r1.ebuild, +files/fwbuilder-5.0.1.3592-gcc47.patch:
