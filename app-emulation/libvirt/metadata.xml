@@ -45,7 +45,7 @@
       <pkg>app-emulation/virtualbox-ose</pkg>)
     </flag>
     <flag name='phyp'>
-      Support management of virtualisation through the PHYP hypervisor protocol.
+      Support IBM HMC / IVM hypervisor via PHYP protocol
     </flag>
 
     <!-- Miscellaneous flags -->

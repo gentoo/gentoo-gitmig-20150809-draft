@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12-r1.ebuild,v 1.1 2012/06/26 02:38:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.12-r1.ebuild,v 1.2 2012/06/27 00:34:36 cardoe Exp $
 
 EAPI=4
 
@@ -37,7 +37,6 @@ SLOT="0"
 IUSE="audit avahi +caps debug iscsi +libvirtd lvm +lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux +udev \
 	uml +vepa virtualbox virt-network xen elibc_glibc"
-# IUSE=one : bug #293416 & bug #299011
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 	lxc? ( caps libvirtd )
 	openvz? ( libvirtd )
@@ -191,6 +190,7 @@ src_configure() {
 	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify)"
 	 # leave it automagic as it depends on the version of xen used.
 	use xen || myconf+=" --without-libxl"
+	use xen || myconf+=" --without-xenapi"
 
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
@@ -202,10 +202,6 @@ src_configure() {
 	myconf="${myconf} $(use_with uml)"
 	myconf="${myconf} $(use_with qemu)"
 	myconf="${myconf} $(use_with qemu yajl)" # Use QMP over HMP
-	# doesn't belong with hypervisors but links to libvirtd for some reason
-	#myconf="${myconf} $(use_with one)"
-
-	## hypervisor protocols
 	myconf="${myconf} $(use_with phyp)"
 	myconf="${myconf} --with-esx"
 
