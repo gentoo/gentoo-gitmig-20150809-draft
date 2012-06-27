@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.56 2012/03/02 05:58:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.57 2012/06/27 18:50:00 radhermit Exp $
+
+  27 Jun 2012; Tim Harder <radhermit@gentoo.org> sleuthkit-3.2.3.ebuild:
+  Use autotools and prune_libtool_files instead of the autotools-utils eclass.
 
   02 Mar 2012; Tim Harder <radhermit@gentoo.org> -sleuthkit-2.09.ebuild,
   -sleuthkit-3.0.0-r1.ebuild, -sleuthkit-3.1.0.ebuild,
