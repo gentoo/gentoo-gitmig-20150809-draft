@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/touchcal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.11 2012/06/17 07:18:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.12 2012/06/27 16:11:47 kensington Exp $
+
+  27 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/touchcal-0.31-buff-overflow.patch, -touchcal-0.31-r1.ebuild,
+  -touchcal-0.31.ebuild, -touchcal-0.40.ebuild, metadata.xml:
+  Remove old. Add upstream metadata.
 
   17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> touchcal-0.50.ebuild:
   marked x86 per bug 421227
@@ -46,4 +51,3 @@
   08 Nov 2006; Daniel Drake <dsd@gentoo.org> +metadata.xml,
   +touchcal-0.31.ebuild:
   Initial release
-
