@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.4 2012/05/24 03:04:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.5 2012/06/27 14:38:28 ssuominen Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -171,8 +171,10 @@ src_install() {
 	newins "${FILESDIR}/nm-system-settings.conf-ifnet" NetworkManager.conf
 
 	# Allow users in plugdev group to modify system connections
-	insinto /etc/polkit-1/localauthority/10-vendor.d
-	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.pkla"
+	if has_version '<sys-auth/polkit-0.106'; then
+		insinto /etc/polkit-1/localauthority/10-vendor.d
+		doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.pkla"
+	fi
 
 	# Default conf.d file
 	newconfd "${FILESDIR}/conf.d.NetworkManager" NetworkManager
