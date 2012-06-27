@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-20.9.ebuild,v 1.2 2012/06/12 12:38:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-20.9.ebuild,v 1.3 2012/06/27 17:39:56 xarthisius Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ src_test() {
 	#https://github.com/joelthelion/autojump/issues/130
 	mkdir -p "${HOME}"/.local/share/autojump || die
 
-	${PYTHON} ./tests/runtests.py
+	"$(PYTHON)" ./tests/runtests.py
 }
 
 src_compile() { :; }
