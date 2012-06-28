@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.19.ebuild,v 1.3 2012/06/28 21:09:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.50.19.ebuild,v 1.4 2012/06/28 23:28:24 blueness Exp $
 
 EAPI="3"
 
@@ -26,7 +26,8 @@ PYTHON_MODNAME="WebappConfig"
 
 src_compile() {
 	distutils_src_compile
-	emake -C doc/
+	#parallel build fixed in next release
+	emake -j1 -C doc/
 }
 
 src_install() {
