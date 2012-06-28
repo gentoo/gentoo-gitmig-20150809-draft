@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/uulib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.21 2012/06/27 20:45:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.22 2012/06/28 20:28:33 slyfox Exp $
+
+  28 Jun 2012; Sergei Trofimovich <slyfox@gentoo.org> uulib-0.9.12.ebuild:
+  ppc/ppc64/sparc stable (bug #393775)
 
 *uulib-0.9.14 (27 Jun 2012)
 
