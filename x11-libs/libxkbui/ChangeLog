@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.36 2012/06/24 19:34:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.37 2012/06/28 15:10:48 jer Exp $
+
+  28 Jun 2012; Jeroen Roovers <jer@gentoo.org> libxkbui-1.0.2-r1.ebuild:
+  Stable for HPPA (bug #419473).
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libxkbui-1.0.2-r1.ebuild:
   Stable for x86, wrt bug #419473
