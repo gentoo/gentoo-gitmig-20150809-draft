@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.1 2012/06/28 09:36:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.2 2012/06/28 09:39:05 patrick Exp $
 
 EAPI="4"
 
@@ -74,7 +74,7 @@ DEPEND="${RDEPEND}
 		nls? ( sys-devel/gettext )
 "
 
-PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
+#PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 # Support /var/run or /run for the socket directory
 [[ ! -d /run ]] && RUNDIR=/var
