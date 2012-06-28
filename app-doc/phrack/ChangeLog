@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/phrack
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.20 2011/08/18 21:53:53 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.21 2012/06/28 15:53:05 vapier Exp $
+
+*phrack-68 (28 Jun 2012)
+
+  28 Jun 2012; Mike Frysinger <vapier@gentoo.org> +phrack-68.ebuild:
+  Version bump #423709 by Christian Inci.
 
 *phrack-67 (18 Aug 2011)
 
