@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/hmmer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.33 2012/06/28 16:34:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.34 2012/06/28 16:36:08 jlec Exp $
+
+  28 Jun 2012; Justin Lecher <jlec@gentoo.org> files/hmmer-3.0-perl-5.16.patch,
+  metadata.xml:
+  fix patch again
 
   28 Jun 2012; Justin Lecher <jlec@gentoo.org> files/hmmer-3.0-perl-5.16.patch:
   Fix patch, screwed VCS tags, #423983
