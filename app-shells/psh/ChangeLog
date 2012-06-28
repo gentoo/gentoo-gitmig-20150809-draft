@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/psh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.26 2012/06/28 07:20:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/psh/ChangeLog,v 1.27 2012/06/28 10:39:14 ago Exp $
+
+  28 Jun 2012; Agostino Sarubbo <ago@gentoo.org> psh-1.8.1.ebuild:
+  Stable for amd64, wrt bug #423851
 
   28 Jun 2012; Jeff Horelick <jdhore@gentoo.org> psh-1.8.1.ebuild:
   marked x86 per bug 423851
