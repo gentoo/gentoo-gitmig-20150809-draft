@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.77 2012/05/04 08:22:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.78 2012/06/28 21:30:27 bicatali Exp $
+
+  28 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> -scipy-0.10.0.ebuild,
+  -scipy-0.9.0-r3.ebuild, scipy-0.10.1.ebuild:
+  Cleaned up a bit the pkg-config mangling for blas/lapack. Hack to strip -lm
+  because it would not link with system blas/lapack on prefix
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> scipy-0.9.0-r1.ebuild,
   scipy-0.9.0-r3.ebuild, scipy-0.10.0.ebuild, scipy-0.10.1.ebuild:

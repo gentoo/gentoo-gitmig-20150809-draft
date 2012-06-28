@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.1.ebuild,v 1.2 2012/05/04 08:22:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.1.ebuild,v 1.3 2012/06/28 21:30:27 bicatali Exp $
 
 EAPI=4
 
@@ -66,21 +66,33 @@ src_unpack() {
 	fi
 }
 
+
+pc_incdir() {
+	pkg-config --cflags-only-I $@ | \
+		sed -e 's/^-I//' -e 's/[ ]*-I/:/g'
+}
+
+pc_libdir() {
+	pkg-config --libs-only-L $@ | \
+		sed -e 's/^-L//' -e 's/[ ]*-L/:/g'
+}
+
+pc_libs() {
+	pkg-config --libs-only-l $@ | \
+		sed -e 's/[ ]-l*\(pthread\|m\)[ ]*//g' \
+		-e 's/^-l//' -e 's/[ ]*-l/,/g'
+}
+
 src_prepare() {
 	local libdir="${EPREFIX}"/usr/$(get_libdir)
 	cat >> site.cfg <<-EOF
 		[blas]
-		include_dirs = $(pkg-config --cflags-only-I \
-			cblas | sed -e 's/^-I//' -e 's/ -I/:/g')
-		library_dirs = $(pkg-config --libs-only-L \
-			cblas blas | sed -e 's/^-L//' -e 's/ -L/:/g' -e 's/ //g'):${libdir}
-		blas_libs = $(pkg-config --libs-only-l \
-			cblas blas | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
+		include_dirs = $(pc_incdir cblas)
+		library_dirs = $(pc_libdir cblas blas):${libdir}
+		blas_libs = $(pc_libs cblas blas)
 		[lapack]
-		library_dirs = $(pkg-config --libs-only-L \
-			lapack | sed -e 's/^-L//' -e 's/ -L/:/g' -e 's/ //g'):${libdir}
-		lapack_libs = $(pkg-config --libs-only-l \
-			lapack | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
+		library_dirs = $(pc_libdir lapack):${libdir}
+		lapack_libs = $(pc_libs lapack)
 	EOF
 }
 
