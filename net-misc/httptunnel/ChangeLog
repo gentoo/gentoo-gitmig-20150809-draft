@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/httptunnel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.22 2012/06/27 18:44:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.23 2012/06/28 10:04:23 ago Exp $
+
+  28 Jun 2012; Agostino Sarubbo <ago@gentoo.org> httptunnel-3.3-r2.ebuild:
+  Stable for amd64, wrt bug #397169
 
 *httptunnel-3.3-r2 (27 Jun 2012)
 
