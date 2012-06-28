@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinput
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.45 2012/06/24 18:51:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.46 2012/06/28 05:29:07 maekke Exp $
+
+  28 Jun 2012; Markus Meier <maekke@gentoo.org> xinput-1.6.0.ebuild:
+  arm stable, bug #419473
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xinput-1.6.0.ebuild:
   Stable for x86, wrt bug #419473
