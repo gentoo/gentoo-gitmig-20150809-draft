@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.7 2012/05/15 21:50:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.8 2012/06/28 06:31:59 patrick Exp $
+
+*greenlet-0.4.0 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +greenlet-0.4.0.ebuild:
+  Bump
 
   15 May 2012; Kacper Kowalik <xarthisius@gentoo.org> greenlet-0.3.4-r1.ebuild:
   Reintroduce mistakenly dropped -fno-strict-aliasing for python 2.x. Thanks to
@@ -34,4 +39,3 @@
   18 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +greenlet-0.3.1.ebuild, +metadata.xml:
   Initial addition. Ebuild written by me.
-

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/libcloud
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/ChangeLog,v 1.3 2012/04/19 06:56:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/ChangeLog,v 1.4 2012/06/28 06:36:52 patrick Exp $
+
+*libcloud-0.10.1 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +libcloud-0.10.1.ebuild:
+  Bump
 
 *libcloud-0.9.1 (19 Apr 2012)
 
@@ -17,4 +22,3 @@
   25 Jul 2011; Patrick Lauer <patrick@gentoo.org> +libcloud-0.5.2.ebuild,
   +metadata.xml:
   Initial import. Ebuild by me.
-
