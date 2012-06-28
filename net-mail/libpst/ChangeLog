@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.31 2012/06/27 19:42:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.32 2012/06/28 07:55:00 jdhore Exp $
+
+  28 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libpst-0.6.54-r1.ebuild:
+  marked x86 per bug 420885
 
   27 Jun 2012; Tim Harder <radhermit@gentoo.org> libpst-0.6.54-r1.ebuild:
   Die on sed failures.
