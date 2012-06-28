@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/zeitgeist-sharp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/zeitgeist-sharp/ChangeLog,v 1.2 2012/05/04 03:56:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/zeitgeist-sharp/ChangeLog,v 1.3 2012/06/28 10:55:11 jlec Exp $
+
+  28 Jun 2012; Justin Lecher <jlec@gentoo.org> zeitgeist-sharp-0.8.0.0.ebuild,
+  +files/zeitgeist-sharp-0.8.0.0-automake-1.12.patch:
+  Correct version of zeitgeist dep (missing zeitgeist-daemon.pc), #423937; fix
+  building with automake-1.12
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   zeitgeist-sharp-0.8.0.0.ebuild:

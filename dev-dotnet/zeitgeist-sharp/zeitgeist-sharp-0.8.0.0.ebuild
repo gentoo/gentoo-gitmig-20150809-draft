@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/zeitgeist-sharp/zeitgeist-sharp-0.8.0.0.ebuild,v 1.2 2012/05/04 03:56:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/zeitgeist-sharp/zeitgeist-sharp-0.8.0.0.ebuild,v 1.3 2012/06/28 10:55:11 jlec Exp $
 
 EAPI=4
 
@@ -25,11 +25,13 @@ RDEPEND="
 	dev-dotnet/dbus-sharp-glib
 	dev-dotnet/glib-sharp
 	dev-lang/mono
-	gnome-extra/zeitgeist"
+	<gnome-extra/zeitgeist-0.9"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
+PATCHES=( "${FILESDIR}"/${P}-automake-1.12.patch )
 
 src_install() {
 	autotools-utils_src_install
