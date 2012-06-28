@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcf/netcf-0.1.6.ebuild,v 1.2 2011/10/27 17:05:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcf/netcf-0.1.9.ebuild,v 1.1 2012/06/28 05:32:21 cardoe Exp $
 
-EAPI=2
+EAPI=4
 
 DESCRIPTION="netcf is a cross-platform network configuration library"
 HOMEPAGE="https://fedorahosted.org/netcf/"
@@ -26,6 +26,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${ED}" install || die "install failed"
 	dodoc AUTHORS ChangeLog README NEWS
 }
