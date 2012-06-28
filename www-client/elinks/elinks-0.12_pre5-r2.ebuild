@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.1 2012/04/16 11:02:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.2 2012/06/28 17:05:31 axs Exp $
 
 EAPI=4
 inherit eutils autotools flag-o-matic
@@ -59,6 +59,11 @@ src_prepare() {
 			epatch "${WORKDIR}"/patches/${P}-js185-1-heartbeat.patch
 			epatch "${WORKDIR}"/patches/${P}-js185-2-up.patch
 			epatch "${WORKDIR}"/patches/${P}-js185-3-histback.patch
+			epatch "${FILESDIR}"/${P}-sm185-jsval-fixes.patch
+			# expand lib check to also match mozjs187
+			if has_version ">=dev-lang/spidermonkey-1.8.7"; then
+				sed -i 's:mozjs185:mozjs187 mozjs185:' configure.in
+			fi
 		else
 			epatch "${FILESDIR}"/${MY_P}-spidermonkey-callback.patch
 		fi
