@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.83 2012/06/09 06:22:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.84 2012/06/28 15:48:53 jer Exp $
+
+  28 Jun 2012; Jeroen Roovers <jer@gentoo.org> cython-0.16.ebuild:
+  Stable for HPPA (bug #418291).
 
   09 Jun 2012; Jeff Horelick <jdhore@gentoo.org> cython-0.16.ebuild:
   marked x86 per bug 418291
