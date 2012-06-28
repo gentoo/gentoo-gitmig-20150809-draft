@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.78 2012/06/28 02:44:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.79 2012/06/28 09:52:18 blueness Exp $
+
+*xapian-1.2.12 (28 Jun 2012)
+
+  28 Jun 2012; Anthony G. Basile <blueness@gentoo.org> -xapian-1.2.11.ebuild,
+  +xapian-1.2.12.ebuild:
+  Version bump fixes broken SONAME in 1.2.11
 
 *xapian-1.2.11 (28 Jun 2012)
 
