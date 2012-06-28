@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.140 2012/06/25 16:07:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.141 2012/06/28 17:36:00 pesa Exp $
+
+*qt-assistant-4.8.2-r1 (28 Jun 2012)
+
+  28 Jun 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/qt-assistant-4.8.2+gcc-4.7.patch, +qt-assistant-4.8.2-r1.ebuild,
+  -qt-assistant-4.8.2.ebuild:
+  Fix assistant crash on start if compiled with gcc-4.7 (bug 423723). Thanks to
+  Bernd Buschinski <b.buschinski@googlemail.com> for the patch.
 
   25 Jun 2012; Raúl Porcel <armin76@gentoo.org> qt-assistant-4.8.1-r1.ebuild,
   qt-assistant-4.8.2.ebuild:
@@ -583,4 +591,3 @@
   24 Dec 2007; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
   +qt-assistant-4.4.0_rc1.ebuild:
   Initial ebuild
-

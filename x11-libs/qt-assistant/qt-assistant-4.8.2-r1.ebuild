@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.2.ebuild,v 1.4 2012/06/25 16:07:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.2-r1.ebuild,v 1.1 2012/06/28 17:36:00 pesa Exp $
 
 EAPI=4
 
@@ -30,6 +30,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PV}-qatomic-x32.patch"
+	"${FILESDIR}/${P}+gcc-4.7.patch"
 )
 
 pkg_setup() {
