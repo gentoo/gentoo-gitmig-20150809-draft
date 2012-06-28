@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/olsrd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.28 2012/04/22 12:05:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.29 2012/06/28 01:53:08 jer Exp $
+
+*olsrd-0.6.3 (28 Jun 2012)
+
+  28 Jun 2012; Jeroen Roovers <jer@gentoo.org> -olsrd-0.5.6.7.ebuild,
+  -files/olsrd-0.5.6.7-build_fix.patch, -olsrd-0.6.1.ebuild,
+  files/olsrd-0.6.1-build_fix.patch, -olsrd-0.6.2.ebuild, +olsrd-0.6.3.ebuild,
+  +files/olsrd-0.6.3-make-gtk.patch:
+  Version bump.
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> olsrd-0.6.2-r1.ebuild:
   x86 stable, bug #333827

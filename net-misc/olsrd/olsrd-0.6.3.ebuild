@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.5.6.7.ebuild,v 1.3 2010/04/06 07:21:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.6.3.ebuild,v 1.1 2012/06/28 01:53:08 jer Exp $
 
-inherit eutils toolchain-funcs versionator
+EAPI=4
+inherit eutils multilib toolchain-funcs versionator
 
 MY_PV=$(replace_version_separator 3 '-r')
 DESCRIPTION="An implementation of the Optimized Link State Routing protocol"
@@ -11,45 +12,46 @@ SRC_URI="http://www.olsr.org/releases/$(get_version_component_range 1-2)/${PN}-$
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
-DEPEND="gtk? ( =x11-libs/gtk+-2* )"
+DEPEND="
+	gtk? (
+		dev-libs/glib:2
+		x11-libs/gdk-pixbuf:2
+		x11-libs/gtk+:2
+	)
+"
 RDEPEND=$DEPEND
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.5.6.7-build_fix.patch"
+src_prepare() {
+	epatch \
+		"${FILESDIR}/${PN}-0.6.1-build_fix.patch" \
+		"${FILESDIR}/${P}-make-gtk.patch"
 }
 
 src_compile() {
-	emake OS=linux CC="$(tc-getCC)" build_all || die "emake failed"
-
-	if use gtk ; then
-		cd "${S}/gui/linux-gtk"
-		einfo "Building GUI ..."
-		emake CC="$(tc-getCC)" || die "emake failed"
+	emake LIBDIR="/usr/$(get_libdir)/${PN}" OS=linux CC="$(tc-getCC)" build_all
+	if use gtk; then
+		emake -C "${S}/gui/linux-gtk" LIBDIR="/usr/$(get_libdir)/${PN}" CC="$(tc-getCC)"
 	fi
 }
 
 src_install() {
-	emake OS=linux DESTDIR="${D}" STRIP=true install_all || die "emake install_all failed"
-
+	emake OS=linux LIBDIR="${D}/usr/$(get_libdir)/${PN}" \
+		DESTDIR="${D}" STRIP=true install_all
 	if use gtk; then
-		cd "${S}/gui/linux-gtk"
-		emake DESTDIR="${D}" install || die "emake install failed"
+		emake -C "${S}/gui/linux-gtk" \
+			LIBDIR="${D}/usr/$(get_libdir)/${PN}" DESTDIR="${D}" install
 	fi
 
 	doinitd "${FILESDIR}/olsrd"
 
-	cd "${S}"
-	dodoc CHANGELOG features.txt README README-Olsr-Switch.html \
-		README-FreeBSD-libnet README-Link-Quality-Fish-Eye.txt \
-		README-Link-Quality.html valgrind-howto.txt files/olsrd.conf.default.rfc \
+	dodoc CHANGELOG \
+		valgrind-howto.txt files/olsrd.conf.default.rfc \
 		files/olsrd.conf.default.lq files/olsrd.conf.default.lq-fisheye \
 		lib/arprefresh/README_ARPREFRESH \
-		lib/bmf/README_BMF.txt \
+		lib/bmf/README_BMF \
 		lib/dot_draw/README_DOT_DRAW \
 		lib/dyn_gw/README_DYN_GW \
 		lib/dyn_gw_plain/README_DYN_GW_PLAIN \
