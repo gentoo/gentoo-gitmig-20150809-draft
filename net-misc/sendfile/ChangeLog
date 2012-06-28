@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sendfile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/ChangeLog,v 1.14 2012/06/27 17:10:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/ChangeLog,v 1.15 2012/06/28 10:05:34 ago Exp $
+
+  28 Jun 2012; Agostino Sarubbo <ago@gentoo.org> sendfile-2.1b-r1.ebuild:
+  Stable for amd64, wrt bug #397181
 
   27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -sendfile-2.1a.ebuild,
   -sendfile-2.1b.ebuild:
