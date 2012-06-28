@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/mjpg-streamer-0_pre20120421.ebuild,v 1.1 2012/04/23 10:00:59 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/mjpg-streamer-0_pre20120421.ebuild,v 1.2 2012/06/28 07:31:28 aidecoe Exp $
 
 EAPI=4
 
@@ -14,9 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-INPUT_PLUGINS="input_testpicture input_control input_file input_uvc "
+INPUT_PLUGINS="input_testpicture input_control input_file input_uvc"
 OUTPUT_PLUGINS="output_file output_udp output_http output_autofocus output_rtsp"
-IUSE_PLUGINS="${INPUT_PLUGINS} ${OUTPUT_PLUGINS}"
+IUSE_PLUGINS="${INPUT_PLUGINS} ${OUTPUT_PLUGINS} +input_file +output_http"
 IUSE="${IUSE_PLUGINS} www v4l"
 REQUIRED_USE="|| ( ${INPUT_PLUGINS} )
 	|| ( ${OUTPUT_PLUGINS} )
