@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.00.ebuild,v 1.1 2012/06/27 17:55:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.00.ebuild,v 1.2 2012/06/28 17:02:39 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ else
 	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 fi
 
-inherit elisp-common eutils fdo-mime fortran-2 multilib python toolchain-funcs user ${_SVN}
+inherit elisp-common eutils fdo-mime fortran-2 multilib python toolchain-funcs user ${_SVN} versionator
 
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4.03
@@ -140,9 +140,9 @@ pkg_setup() {
 			export USE_MPI=1 USE_PARALLEL_MINUIT2=1
 		fi
 	fi
-	if use c++0x && [[ $(tc-getCXX)$ == *g++* ]] && \
-		! version_is_at_least "4.7.0" "$(gcc-version)"; then
-		ewarn "You are using a g++ without C++0x capabilities"
+	if use c++0x && [[ $(tc-getCXX) == *g++* ]] && \
+		! version_is_at_least "4.7" "$(gcc-version)"; then
+		eerror "You are using a g++ without C++0x capabilities"
 		die "Need an C++0x capable compiler"
 	fi
 }

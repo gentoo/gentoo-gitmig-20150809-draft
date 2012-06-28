@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.14 2012/05/04 07:55:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.15 2012/06/28 17:02:39 jlec Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2"
 
-inherit versionator eutils fortran-2 elisp-common fdo-mime python toolchain-funcs
+inherit versionator eutils fortran-2 elisp-common fdo-mime python toolchain-funcs user
 
 DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 ROOFIT_DOC_PV=2.91-33
