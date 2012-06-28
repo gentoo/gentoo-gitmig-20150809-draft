@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvidtune
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.38 2012/06/28 05:51:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.39 2012/06/28 14:39:15 jer Exp $
+
+  28 Jun 2012; Jeroen Roovers <jer@gentoo.org> xvidtune-1.0.2-r1.ebuild:
+  Stable for HPPA (bug #419473).
 
   28 Jun 2012; Markus Meier <maekke@gentoo.org> xvidtune-1.0.2-r1.ebuild:
   arm stable, bug #419473

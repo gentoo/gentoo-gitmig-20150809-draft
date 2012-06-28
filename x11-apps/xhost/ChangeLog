@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xhost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xhost/ChangeLog,v 1.68 2012/06/27 18:45:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xhost/ChangeLog,v 1.69 2012/06/28 14:29:00 jer Exp $
+
+  28 Jun 2012; Jeroen Roovers <jer@gentoo.org> xhost-1.0.5.ebuild:
+  Stable for HPPA (bug #419473).
 
   27 Jun 2012; Markus Meier <maekke@gentoo.org> xhost-1.0.5.ebuild:
   arm stable, bug #419473
