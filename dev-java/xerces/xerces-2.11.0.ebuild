@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.11.0.ebuild,v 1.5 2012/06/14 01:30:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.11.0.ebuild,v 1.6 2012/06/28 21:13:10 sera Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.4"
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.4
-	dev-java/xjavac:1"
+	>=dev-java/xjavac-20110814:1"
 
 S="${WORKDIR}/${PN}-${SRC_PV}"
 
