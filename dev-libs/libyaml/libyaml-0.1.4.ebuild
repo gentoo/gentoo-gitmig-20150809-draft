@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/libyaml-0.1.4.ebuild,v 1.5 2012/06/26 12:03:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/libyaml-0.1.4.ebuild,v 1.6 2012/06/28 01:19:50 sbriesen Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils autotools-utils
 
 MY_P="${P/lib}"
 
@@ -28,12 +28,8 @@ src_prepare() {
 	fi
 }
 
-src_configure() {
-	econf $(use_enable static-libs static)
-}
-
 src_install() {
-	default
+	autotools-utils_src_install
 	use doc && dohtml -r doc/html/.
 	if use examples ; then
 		docompress -x /usr/share/doc/${PF}/examples
