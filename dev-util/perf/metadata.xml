@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>flameeyes@gentoo.org</email>
+    <email>naota@gentoo.org</email>
   </maintainer>
   <use>
     <flag name="demangle">
