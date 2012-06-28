@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kvpnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.49 2012/06/27 18:56:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.50 2012/06/28 10:58:34 ago Exp $
+
+  28 Jun 2012; Agostino Sarubbo <ago@gentoo.org> kvpnc-0.9.6a-r1.ebuild:
+  Stable for AMD64, wrt bug #423529
 
   27 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   kvpnc-0.9.6a-r1.ebuild:
