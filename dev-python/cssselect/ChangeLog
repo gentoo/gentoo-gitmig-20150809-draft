@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cssselect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.5 2012/06/27 17:30:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.6 2012/06/28 06:17:34 patrick Exp $
+
+*cssselect-0.7.1 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +cssselect-0.7.1.ebuild:
+  Bump
 
   27 Jun 2012; Markus Meier <maekke@gentoo.org> cssselect-0.6.1.ebuild:
   add ~arm, bug #416099
@@ -20,4 +25,3 @@
   +metadata.xml:
   Initial import, ebuild written by me. It's new dependency for >=dev-
   python/pyquery-1.2
-
