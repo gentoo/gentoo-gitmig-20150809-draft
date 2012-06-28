@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.87 2012/03/06 17:06:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.88 2012/06/28 04:57:27 bicatali Exp $
+
+  28 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/pari-2.5.1-gcc47.patch, pari-2.5.1.ebuild:
+  Fixed linear solving with gcc-4.7, bug #423617
 
 *pari-2.5.1 (06 Mar 2012)
 

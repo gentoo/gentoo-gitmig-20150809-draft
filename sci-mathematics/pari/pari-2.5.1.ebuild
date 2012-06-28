@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.5.1.ebuild,v 1.1 2012/03/06 17:06:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.5.1.ebuild,v 1.2 2012/06/28 04:57:27 bicatali Exp $
 
 EAPI="4"
 
@@ -43,6 +43,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}"-2.5.0-mp.c.patch
 	# OS X: add -install_name to the linker option
 	epatch "${FILESDIR}/${PN}"-2.5.0-macos.patch
+	# from debian, fies bug #423617
+	epatch "${FILESDIR}/${PN}"-2.5.1-gcc47.patch
 
 	# disable default building of docs during install
 	sed -i \
