@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.58 2012/06/11 10:22:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.59 2012/06/28 12:52:22 ranger Exp $
+
+  28 Jun 2012; Brent Baude <ranger@gentoo.org> when-1.1.29.ebuild:
+  Marking when-1.1.29 ppc for bug 418621
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> when-1.1.29.ebuild:
   Stable for amd64, wrt bug #418621
