@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/files/grub.default-2,v 1.1 2012/06/28 10:10:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/files/grub.default-2,v 1.2 2012/06/28 22:36:53 floppym Exp $
 #
 # To populate all changes in this file you need to regenerate your
 # grub configuration file afterwards:
@@ -28,9 +28,9 @@ GRUB_CMDLINE_LINUX=""
 #GRUB_GFXMODE=640x480
 
 # Path to theme spec txt file.
-# The starfiled is by default provided with use truetype.
+# The starfield is by default provided with use truetype.
 # NOTE: when enabling custom theme, ensure you have required font/etc.
-#GRUB_THEME="/boot/grub/themes/starfield/theme.txt"
+#GRUB_THEME="/boot/grub2/themes/starfield/theme.txt"
 
 # Background image used on graphical terminal.
 # Can be in various bitmap formats.
