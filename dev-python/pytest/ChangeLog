@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.36 2012/05/12 20:13:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.37 2012/06/28 07:12:18 patrick Exp $
+
+*pytest-2.2.4 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +pytest-2.2.4.ebuild:
+  Bump
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> pytest-2.2.3.ebuild:
   keyword ~amd64-fbsd
@@ -134,4 +139,3 @@
   13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +pytest-2.0.0.ebuild, +metadata.xml:
   Initial addition. Ebuild written by me.
-
