@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.33 2012/06/20 14:44:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.34 2012/06/28 10:06:49 kensington Exp $
+
+  28 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/sakura-2.4.2-cflags.patch, -sakura-2.4.2.ebuild, -sakura-3.0.3.ebuild:
+  Remove old.
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> sakura-3.0.4.ebuild:
   Stable for amd64, wrt bug #422431
@@ -146,4 +150,3 @@
   +sakura-2.1.1.ebuild:
   This package was submitted by Josh Glover in bug #187785; thanks to Michal
   Kurgan <moloh@gentoo.org> for his 2.x ebuilds
-
