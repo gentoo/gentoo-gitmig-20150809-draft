@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.164 2012/06/08 11:36:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.165 2012/06/28 15:48:33 jer Exp $
+
+  28 Jun 2012; Jeroen Roovers <jer@gentoo.org> numpy-1.6.1-r1.ebuild:
+  Stable for HPPA (bug #418419).
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> numpy-1.6.1-r1.ebuild:
   x86 stable wrt bug #418419
