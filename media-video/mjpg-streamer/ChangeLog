@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpg-streamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.5 2012/06/28 07:31:28 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.6 2012/06/28 07:35:44 aidecoe Exp $
+
+  28 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -mjpg-streamer-0_pre20110522.ebuild:
+  Remove old version.
 
   28 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
   mjpg-streamer-0_pre20120421.ebuild:
@@ -27,4 +31,3 @@
   +files/mjpg-streamer.initd, +metadata.xml:
   Proxy commit on behalf of Andrzej Pauli <andrzej.pauli@gmail.com>. Initial
   ebuild. Fixes bug #260969.
-
