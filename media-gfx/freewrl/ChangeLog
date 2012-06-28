@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.44 2012/06/13 18:05:51 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.45 2012/06/28 19:12:02 axs Exp $
+
+  28 Jun 2012; Ian Stakenvicius <axs@gentoo.org> freewrl-1.22.13.ebuild,
+  +files/freewrl-1.22.13-mozjs187-config.patch:
+  patched in support for spidermonkey-1.8.7
 
   13 Jun 2012; Ian Stakenvicius <axs@gentoo.org> freewrl-1.22.13.ebuild:
   updated ebuild to use new upstream tarball, fixes minor build system issue

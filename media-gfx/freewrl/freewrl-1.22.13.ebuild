@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13.ebuild,v 1.3 2012/06/13 18:05:51 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13.ebuild,v 1.4 2012/06/28 19:12:02 axs Exp $
 
 EAPI=4
 
-inherit nsplugins eutils flag-o-matic java-pkg-opt-2 multilib
+inherit autotools nsplugins eutils flag-o-matic java-pkg-opt-2 multilib
 
 DESCRIPTION="VRML97 and X3D compliant browser, library, and web-browser plugin"
 HOMEPAGE="http://freewrl.sourceforge.net/"
@@ -44,6 +44,13 @@ RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.4 )
 	sox? ( media-sound/sox )"
 
+src_prepare() {
+	if has_version ">=dev-lang/spidermonkey-1.8.7" ; then
+		epatch "${FILESDIR}"/${P}-mozjs187-config.patch
+		eautoreconf
+	fi
+}
+
 src_configure() {
 	local myconf="--enable-fontconfig
 		--without-expat
@@ -69,7 +76,7 @@ src_configure() {
 			myconf+=" --disable-${x}"
 		done
 	else
-		for x in mozjs185 mozilla-js xulrunner-js firefox-js seamonkey-js; do
+		for x in mozjs187 mozjs185 mozilla-js xulrunner-js firefox-js seamonkey-js; do
 			myconf+=" --disable-${x}"
 		done
 		# spidermonkey pre-1.8.5 has no pkg-config, so override ./configure
