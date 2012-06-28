@@ -1,0 +1,10 @@
+# ChangeLog for games-board/domination
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/domination/ChangeLog,v 1.1 2012/06/28 05:36:39 mr_bones_ Exp $
+
+*domination-1.1.0.9 (28 Jun 2012)
+
+  28 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +domination-1.1.0.9.ebuild, +metadata.xml:
+  initial commit; package renamed from jrisk
+
