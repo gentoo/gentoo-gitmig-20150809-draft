@@ -1,10 +1,14 @@
 # ChangeLog for dev-python/anyjson
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/ChangeLog,v 1.1 2012/05/30 06:29:28 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/ChangeLog,v 1.2 2012/06/28 05:55:21 patrick Exp $
+
+*anyjson-0.3.3 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +anyjson-0.3.3.ebuild:
+  Bump
 
 *anyjson-0.3.1 (30 May 2012)
 
   30 May 2012; Corentin Chary <iksaif@gentoo.org> +anyjson-0.3.1.ebuild,
   +metadata.xml:
   New ebuild for anyjson.
-
