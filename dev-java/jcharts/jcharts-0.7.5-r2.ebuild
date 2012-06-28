@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/jcharts-0.7.5-r2.ebuild,v 1.1 2012/05/27 20:11:25 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/jcharts-0.7.5-r2.ebuild,v 1.2 2012/06/28 10:04:02 ago Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 # tests need X11
