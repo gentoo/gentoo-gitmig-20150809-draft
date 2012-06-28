@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/fontsproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/fontsproto/ChangeLog,v 1.50 2012/06/24 19:41:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/fontsproto/ChangeLog,v 1.51 2012/06/28 15:19:26 jer Exp $
+
+  28 Jun 2012; Jeroen Roovers <jer@gentoo.org> fontsproto-2.1.2.ebuild:
+  Stable for HPPA (bug #419473).
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> fontsproto-2.1.2.ebuild:
   Stable for x86, wrt bug #419473
