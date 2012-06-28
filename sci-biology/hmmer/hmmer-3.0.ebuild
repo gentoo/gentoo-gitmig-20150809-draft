@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+## Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.5 2012/06/25 06:23:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.6 2012/06/28 16:50:49 jlec Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-fix_tests.patch \
-		"${FILESDIR}"/${P}-perl-5.16.patch
+		"${FILESDIR}"/${P}-perl-5.16-2.patch
 }
 
 src_configure() {
