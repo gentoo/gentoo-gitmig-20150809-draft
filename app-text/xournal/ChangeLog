@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.36 2012/06/24 11:08:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.37 2012/06/28 23:34:04 dilfridge Exp $
+
+*xournal-0.4.6-r2 (28 Jun 2012)
+
+  28 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +xournal-0.4.6-r2.ebuild:
+  Rebase on upstreamed image patch
 
 *xournal-0.4.6-r1 (24 Jun 2012)
 
