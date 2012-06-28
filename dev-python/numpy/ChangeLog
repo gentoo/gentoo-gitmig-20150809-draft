@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.165 2012/06/28 15:48:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.166 2012/06/28 21:16:40 bicatali Exp $
+
+  28 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> numpy-1.6.2.ebuild:
+  Cleaned up a bit the pkg-config mangling for blas/lapack. Hack to strip -lm
+  because it would not link with system blas/lapack on prefix
 
   28 Jun 2012; Jeroen Roovers <jer@gentoo.org> numpy-1.6.1-r1.ebuild:
   Stable for HPPA (bug #418419).
