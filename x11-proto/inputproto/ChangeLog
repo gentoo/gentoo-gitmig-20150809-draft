@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/inputproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.128 2012/06/28 04:59:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.129 2012/06/28 14:32:07 jer Exp $
+
+  28 Jun 2012; Jeroen Roovers <jer@gentoo.org> inputproto-2.2.ebuild:
+  Stable for HPPA (bug #419473).
 
   28 Jun 2012; Markus Meier <maekke@gentoo.org> inputproto-2.2.ebuild:
   arm stable, bug #419473
