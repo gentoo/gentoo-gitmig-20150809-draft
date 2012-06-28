@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/colpack-1.0.6.ebuild,v 1.1 2012/04/13 03:24:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/colpack-1.0.6.ebuild,v 1.2 2012/06/28 23:39:16 bicatali Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.cscapes.org/download/${MYPN}/${MYPN}-${PV}.tar.gz"
 
 SLOT="0"
 IUSE="openmp static-libs"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
@@ -23,12 +23,8 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MYPN}-${PV}"
 
 pkg_setup() {
-	if use openmp &&
-		[[ $(tc-getCC)$ == *gcc* ]] &&
-		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
-			! has_version sys-devel/gcc[openmp] )
-	then
-		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
+	if use openmp && [[ $(tc-getCC)$ == *gcc* ]] &&	! tc-has-openmp; then
+		ewarn "You are using gcc without OpenMP"
 		die "Need an OpenMP capable compiler"
 	fi
 }
