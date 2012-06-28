@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.134 2012/06/25 07:23:24 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.135 2012/06/28 05:47:18 graaff Exp $
+
+  28 Jun 2012; Hans de Graaff <graaff@gentoo.org> hoe-2.13.0.ebuild:
+  Add rdoc as a runtime dependency for the publish task. It is possible for
+  packages to turn off the rdoc dependency, but the default is to enable it and
+  simple initializing the Hoe object already requires it. Fixes bug 423883.
 
   25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> hoe-2.12.5.ebuild:
   x86 stable, see bug 411507
