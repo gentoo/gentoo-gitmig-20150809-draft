@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.884 2012/06/15 00:28:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.885 2012/06/28 13:46:23 blueness Exp $
+
+  28 Jun 2012; Anthony G. Basile <blueness@gentoo.org> gcc-4.6.3.ebuild:
+  PIE and SSP work on mips glibc systems, tested on lemote yeeloong
 
 *gcc-4.7.1 (15 Jun 2012)
 
