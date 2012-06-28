@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.157 2012/06/27 02:56:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.158 2012/06/28 12:43:25 ranger Exp $
+
+  28 Jun 2012; Brent Baude <ranger@gentoo.org> m4-1.4.16.ebuild:
+  Marking m4-1.4.16 ppc for bug 423239
 
   27 Jun 2012; Jeroen Roovers <jer@gentoo.org> m4-1.4.16.ebuild:
   Stable for HPPA (bug #423239).
