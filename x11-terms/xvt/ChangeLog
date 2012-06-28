@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xvt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.21 2012/03/02 23:03:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.22 2012/06/28 09:29:34 kensington Exp $
+
+  28 Jun 2012; Michael Palimaka <kensington@gentoo.org> -xvt-2.1-r1.ebuild,
+  -xvt-2.1-r2.ebuild:
+  Remove old.
 
   02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> xvt-2.1-r3.ebuild:
   Stable on alpha, bug #397297
@@ -78,4 +82,3 @@
   23 Nov 2003; Tavis Ormandy <taviso@gentoo.org> xvt-2.1.ebuild,
   files/xvt-2.1.diff.gz:
   initial import
-
