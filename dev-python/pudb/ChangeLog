@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pudb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudb/ChangeLog,v 1.9 2012/02/20 07:49:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudb/ChangeLog,v 1.10 2012/06/28 06:50:57 patrick Exp $
+
+*pudb-2012.2.1 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +pudb-2012.2.1.ebuild:
+  Bump
 
 *pudb-2012.1 (20 Feb 2012)
 
@@ -47,4 +52,3 @@
   03 Jul 2009; Andrey Grozin <grozin@gentoo.org> +pudb-0.92.3.ebuild,
   +metadata.xml:
   Initial import
-
