@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.1 2012/06/18 20:05:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.2 2012/06/28 01:47:59 bicatali Exp $
 
 EAPI=4
 
@@ -58,6 +58,7 @@ DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
 	test? ( media-fonts/font-misc-misc
 			media-fonts/font-cursor-misc )"
+REQUIRED_USE="test? ( latex )"
 
 pkg_setup() {
 	if use fortran; then
@@ -152,6 +153,7 @@ src_configure() {
 		$(cmake-utils_use truetype PLD_psttf)
 		$(cmake-utils_use svg PLD_svg)
 		$(cmake-utils_use wxwidgets PLD_wxpng)
+		$(cmake-utils_use test PLD_ps)
 		$(cmake-utils_use wxwidgets PLD_wxwidgets)
 		$(cmake-utils_use X PLD_xwin)
 	)
