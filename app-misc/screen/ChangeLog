@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.167 2012/06/27 11:58:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.168 2012/06/28 07:20:46 jdhore Exp $
+
+  28 Jun 2012; Jeff Horelick <jdhore@gentoo.org> screen-4.0.3-r5.ebuild:
+  marked x86 per bug 423775
 
   27 Jun 2012; Agostino Sarubbo <ago@gentoo.org> screen-4.0.3-r5.ebuild:
   Stable for amd64, wrt bug #423775
