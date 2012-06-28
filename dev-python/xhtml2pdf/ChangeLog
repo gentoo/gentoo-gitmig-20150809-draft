@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/xhtml2pdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xhtml2pdf/ChangeLog,v 1.5 2012/05/21 17:35:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xhtml2pdf/ChangeLog,v 1.6 2012/06/28 07:57:15 patrick Exp $
+
+*xhtml2pdf-0.0.4 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +xhtml2pdf-0.0.4.ebuild:
+  Bump
 
   21 May 2012; Krzysztof Pawlik <nelchael@gentoo.org> xhtml2pdf-0.0.3.ebuild:
   Remove calls to python-distutils-ng_redoscript, it is automated in eclass.
@@ -20,4 +25,3 @@
   +metadata.xml:
   New package: dev-python/xhtml2pidf - an HTML to PDF converter, successor to
   dev-python/pisa.
-

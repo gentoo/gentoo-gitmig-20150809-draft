@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/webpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.24 2012/02/24 15:21:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.25 2012/06/28 07:52:26 patrick Exp $
+
+*webpy-0.37 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +webpy-0.37.ebuild:
+  Bump
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> webpy-0.36.ebuild:
   x86 stable wrt bug #400341
@@ -91,4 +96,3 @@
 
   19 Jan 2007; <wrobel@gentoo.org> +metadata.xml, +webpy-0.2.ebuild:
   Added web.py-0.2 to the tree.
-
