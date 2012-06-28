@@ -28,7 +28,7 @@ index a4dc126..b61fa7a 100755
 +++ b/easel/devkit/esl-dependencies
 @@ -13,8 +13,8 @@
  # SRE, Mon Jun 11 11:15:31 2007
- # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.5 2012/06/28 16:39:03 jlec Exp $
+ # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.6 2012/06/28 16:47:02 jlec Exp $
  
 -require "getopts.pl"
 -&Getopts('1afr');
@@ -43,7 +43,7 @@ index af3adf6..0cdb458 100755
 +++ b/easel/devkit/sqc
 @@ -205,12 +205,11 @@
  # SRE, Tue Aug  6 11:16:39 2002
- # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.5 2012/06/28 16:39:03 jlec Exp $
+ # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.6 2012/06/28 16:47:02 jlec Exp $
  
 -require "getopts.pl";
 -require "importenv.pl";
@@ -74,7 +74,7 @@ index 9c77791..024ed34
 @@ -16,9 +16,9 @@
  #
  # SRE, Thu Mar  1 19:22:57 2007 (Janelia)
- # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.5 2012/06/28 16:39:03 jlec Exp $
+ # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.6 2012/06/28 16:47:02 jlec Exp $
 -require  "getopts.pl";
 +use Getopt::Std;
  $have_sloccount = 1;
@@ -89,7 +89,7 @@ index 757854d..a9a8902 100755
 +++ b/easel/testsuite/driver_report.pl
 @@ -25,8 +25,8 @@
  # SRE, Fri Mar  2 10:01:44 2007 (Janelia)
- # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.5 2012/06/28 16:39:03 jlec Exp $
+ # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.6 2012/06/28 16:47:02 jlec Exp $
  
 -require  "getopts.pl";
 -&Getopts('c');
@@ -107,7 +107,7 @@ index 186a392..07026a0
 @@ -10,8 +10,8 @@
  #
  # SRE, Fri Mar  2 08:37:48 2007 [Janelia]
- # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.5 2012/06/28 16:39:03 jlec Exp $
+ # SVN $Id: hmmer-3.0-perl-5.16.patch,v 1.6 2012/06/28 16:47:02 jlec Exp $
 -require  "getopts.pl";
 -&Getopts('c');
 +use Getopt::Std;
