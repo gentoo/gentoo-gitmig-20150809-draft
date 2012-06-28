@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.214 2012/06/28 10:10:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.215 2012/06/28 14:54:59 floppym Exp $
+
+  28 Jun 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild:
+  Add ewarn message with instructions for adding grub:0 to the world file.
 
 *grub-2.00 (28 Jun 2012)
 

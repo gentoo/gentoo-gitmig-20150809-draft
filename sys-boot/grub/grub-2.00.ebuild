@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.1 2012/06/28 10:10:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.2 2012/06/28 14:54:59 floppym Exp $
 
 EAPI=4
 
@@ -300,5 +300,10 @@ pkg_postinst() {
 	fi
 	if ! has_version dev-libs/libisoburn; then
 		elog "Install dev-libs/libisoburn to enable creation of rescue media using grub2-mkrescue."
+	fi
+	if has_version sys-boot/grub:0; then
+		ewarn "If you want to keep GRUB Legacy (grub-0.97) installed, please run"
+		ewarn "the following to add sys-boot/grub:0 to your world file."
+		ewarn "emerge --noreplace sys-boot/grub:0"
 	fi
 }
