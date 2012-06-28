@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/domination/domination-1.1.0.9.ebuild,v 1.1 2012/06/28 05:36:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/domination/domination-1.1.0.9.ebuild,v 1.2 2012/06/28 05:39:02 mr_bones_ Exp $
 
 inherit eutils java-pkg-2 java-ant-2 games
 
@@ -31,18 +31,16 @@ src_compile() {
 }
 
 src_install() {
-	mkdir -p ${D}${GAMES_PREFIX}/bin
-	cp ${S}/FlashGUI.sh ${D}${GAMES_PREFIX}/bin/${PN} \
-		|| die "copy failed"
+	mkdir -p "${D}${GAMES_PREFIX}"/bin
+	cp "${S}"/FlashGUI.sh "${D}${GAMES_PREFIX}"/bin/${PN} || die
 	sed -i \
-		-e "s|cd.*|cd ${GAMES_DATADIR}/${PN}|" \
-		${D}${GAMES_PREFIX}/bin/${PN} \
-		|| die "sed failed"
-	chmod +x ${D}${GAMES_PREFIX}/bin/${PN} \
-		|| die "chmod failed"
+		-e "s|cd.*|cd \"${GAMES_DATADIR}\"/${PN}|" \
+		"${D}${GAMES_PREFIX}"/bin/${PN} \
+		|| die
+	chmod +x "${D}${GAMES_PREFIX}"/bin/${PN} || die
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r ${S}/* || die "doins failed"
+	doins -r "${S}"/* || die
 	rm -f "${D}${GAMES_DATADIR}"/${PN}/*.cmd || die
 	java-pkg_regjar "${D}/${GAMES_DATADIR}/${PN}"/*.jar
 
