@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.61 2012/06/27 03:08:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.62 2012/06/28 12:36:39 ranger Exp $
+
+  28 Jun 2012; Brent Baude <ranger@gentoo.org> automake-wrapper-7.ebuild:
+  Marking automake-wrapper-7 ppc for bug 422203
 
   27 Jun 2012; Jeroen Roovers <jer@gentoo.org> automake-wrapper-7.ebuild:
   Stable for HPPA (bug #422203).
