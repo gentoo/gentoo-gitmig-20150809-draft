@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/authres
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.6 2012/05/09 03:44:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.7 2012/06/28 06:05:53 patrick Exp $
+
+*authres-0.402 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +authres-0.402.ebuild:
+  Bump
 
   09 May 2012; Mike Gilbert <floppym@gentoo.org> -authres-0.3.ebuild:
   Just remove the old version instead.
@@ -27,4 +32,3 @@
   +metadata.xml:
   Initial import, ebuild written by me. Fixes #410907 by Ian Delaney
   <johneed@hotmail.com>
-
