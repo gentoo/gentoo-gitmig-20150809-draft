@@ -1,6 +1,17 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.213 2012/06/25 03:53:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.214 2012/06/28 10:10:04 scarabeus Exp $
+
+*grub-2.00 (28 Jun 2012)
+
+  28 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +files/grub.default-2,
+  -grub-2.00_beta0.ebuild, -grub-2.00_beta1.ebuild, -grub-2.00_beta2.ebuild,
+  -grub-2.00_beta2-r1.ebuild, -grub-2.00_beta3.ebuild,
+  -grub-2.00_beta3-r2.ebuild, -grub-2.00_beta5.ebuild, -grub-2.00_rc1.ebuild,
+  +grub-2.00.ebuild, grub-9999.ebuild:
+  Version bump to 2.00. Depend also on dejavu (otherwise starfield is not
+  distributed). Add info about themes to default config file. Remove older
+  betas/rcs apart from latest beta to ensure fallback if 2.00 has regressions.
 
 *grub-2.00_rc1 (25 Jun 2012)
 

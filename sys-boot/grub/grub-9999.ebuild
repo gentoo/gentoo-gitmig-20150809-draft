@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.68 2012/06/25 03:53:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.69 2012/06/28 10:10:04 scarabeus Exp $
 
 EAPI=4
 
@@ -60,6 +60,7 @@ RDEPEND="
 	mount? ( sys-fs/fuse )
 	truetype? (
 		media-libs/freetype
+		media-fonts/dejavu
 		>=media-fonts/unifont-5
 	)
 	ppc? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
@@ -287,7 +288,7 @@ src_install() {
 	# can't be in docs array as we use default_src_install in different builddir
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	insinto /etc/default
-	newins "${FILESDIR}"/grub.default grub
+	newins "${FILESDIR}"/grub.default-2 grub
 }
 
 pkg_postinst() {
