@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.75 2012/06/28 14:45:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.76 2012/06/28 20:55:59 maekke Exp $
+
+  28 Jun 2012; Markus Meier <maekke@gentoo.org> xorg-drivers-1.12.ebuild:
+  arm stable, bug #419473
 
   28 Jun 2012; Jeroen Roovers <jer@gentoo.org> xorg-drivers-1.12.ebuild:
   Stable for HPPA (bug #419473).
