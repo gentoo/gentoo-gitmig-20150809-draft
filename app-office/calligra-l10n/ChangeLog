@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.17 2012/06/24 14:08:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.18 2012/06/28 12:55:46 scarabeus Exp $
+
+*calligra-l10n-2.4.3 (28 Jun 2012)
+
+  28 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +calligra-l10n-2.4.3.ebuild:
+  Bumpy to 2.4.3.
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -calligra-l10n-2.4.1.ebuild:
   Remove old
@@ -86,4 +91,3 @@
   15 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   +calligra-l10n-2.3.81.ebuild, +metadata.xml:
   Initial commit for the calligra translations.
-
