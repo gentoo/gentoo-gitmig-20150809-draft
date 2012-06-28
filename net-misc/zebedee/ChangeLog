@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zebedee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.26 2012/06/27 17:17:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/ChangeLog,v 1.27 2012/06/28 10:03:38 ago Exp $
+
+  28 Jun 2012; Agostino Sarubbo <ago@gentoo.org> zebedee-2.5.3-r1.ebuild:
+  Stable for amd64, wrt bug #397185
 
   27 Jun 2012; Michael Palimaka <kensington@gentoo.org>
   -zebedee-2.4.1-r1.ebuild, -zebedee-2.5.3.ebuild:
