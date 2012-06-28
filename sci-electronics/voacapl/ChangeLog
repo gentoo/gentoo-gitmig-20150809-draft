@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/voacapl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/voacapl/ChangeLog,v 1.7 2012/03/24 17:14:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/voacapl/ChangeLog,v 1.8 2012/06/28 06:21:19 tomjbe Exp $
+
+  28 Jun 2012; Thomas Beierlein <tomjbe@gentoo.org> -voacapl-0.5.7.ebuild,
+  voacapl-0.5.8.ebuild:
+  Depend on virtual/fortran (Bug #423873). Thanks Diego. Drop old
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> voacapl-0.5.8.ebuild:
   x86 stable wrt bug #407665

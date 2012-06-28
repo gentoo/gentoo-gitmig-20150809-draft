@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/voacapl/voacapl-0.5.8.ebuild,v 1.3 2012/03/24 17:14:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/voacapl/voacapl-0.5.8.ebuild,v 1.4 2012/06/28 06:21:19 tomjbe Exp $
 
-EAPI="2"
+EAPI="4"
+
+inherit fortran-2
 
 DESCRIPTION="HF propagation prediction tool"
 HOMEPAGE="http://www.qsl.net/hz1jw/voacapl/index.html"
@@ -13,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
+DEPEND="virtual/fortran"
+
 src_install() {
-	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF} install \
-		|| die "make install failed"
+	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF} install
 }
