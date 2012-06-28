@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.32 2012/06/28 17:12:45 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.33 2012/06/28 17:23:51 axs Exp $
+
+  28 Jun 2012; Ian Stakenvicius <axs@gentoo.org> mediatomb-0.12.1-r1.ebuild,
+  mediatomb-0.12.1-r2.ebuild:
+  set proper version dep on spidermonkey, interim fix for bug 423991
 
   28 Jun 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   remove myself from maintainer since I don't use this software anymore,
