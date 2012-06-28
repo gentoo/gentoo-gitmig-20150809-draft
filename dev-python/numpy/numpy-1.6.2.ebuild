@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2.ebuild,v 1.2 2012/06/28 21:16:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2.ebuild,v 1.3 2012/06/28 21:59:22 floppym Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
 inherit distutils eutils flag-o-matic fortran-2 toolchain-funcs versionator
 
@@ -136,12 +136,12 @@ src_install() {
 	python_execute_function -q delete_txt
 
 	docinto f2py
-	dodoc numpy/f2py/docs/*.txt || die "dodoc f2py failed"
-	doman numpy/f2py/f2py.1 || die "doman failed"
+	dodoc numpy/f2py/docs/*.txt
+	doman numpy/f2py/f2py.1
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r "${WORKDIR}"/html || die
-		doins  "${DISTDIR}"/${DOC_P}*pdf || die
+		doins -r "${WORKDIR}"/html
+		doins  "${DISTDIR}"/${DOC_P}*pdf
 	fi
 }

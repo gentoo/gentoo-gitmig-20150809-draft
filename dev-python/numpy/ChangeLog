@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.166 2012/06/28 21:16:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.167 2012/06/28 21:59:22 floppym Exp $
+
+  28 Jun 2012; Mike Gilbert <floppym@gentoo.org> numpy-1.6.2.ebuild:
+  Cleanup die usage for EAPI 4.
 
   28 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> numpy-1.6.2.ebuild:
   Cleaned up a bit the pkg-config mangling for blas/lapack. Hack to strip -lm
@@ -667,4 +670,3 @@
 
   07 Feb 2006; Alastair Tse <liquidx@gentoo.org> +numpy-0.9.4.ebuild:
   initial ebuild thanks to Alok Singhal (#119305)
-
