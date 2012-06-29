@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.25 2012/06/10 06:50:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.26 2012/06/29 07:59:18 graaff Exp $
+
+  29 Jun 2012; Hans de Graaff <graaff@gentoo.org> rspec-core-2.10.1.ebuild:
+  Avoid dependency on git. Add dependency on yard to build documentation since
+  that is what is actually used. Avoid Rakefile with all its dependencies when
+  building documentation, fixing bug 421669.
 
 *rspec-core-2.10.1 (10 Jun 2012)
 

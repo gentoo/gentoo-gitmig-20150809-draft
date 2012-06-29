@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.10.1.ebuild,v 1.1 2012/06/10 06:50:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.10.1.ebuild,v 1.2 2012/06/29 07:59:18 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -37,6 +37,7 @@ ruby_add_bdepend "test? (
 		dev-ruby/rspec-expectations:2
 		dev-ruby/rspec-mocks:2
 	)"
+ruby_add_bdepend "doc? ( dev-ruby/yard )"
 
 #	>=dev-ruby/cucumber-0.5.3
 #	>=dev-ruby/autotest-4.2.9 -> zentest-4.4.1
@@ -60,6 +61,9 @@ all_ruby_prepare() {
 	# also depends on this and fixing that is going to be fragile. This
 	# way we can at least install proper bin scripts.
 	cp -R exe bin || die
+
+	# Avoid unneeded dependency on git.
+	sed -i -e '/git ls-files/ s:^:#:' rspec-core.gemspec || die
 }
 
 each_ruby_prepare() {
@@ -76,7 +80,7 @@ each_ruby_prepare() {
 
 all_ruby_compile() {
 	if use doc ; then
-		RUBYLIB="${S}/lib" rake rdoc || die "Unable to create documentation."
+		yardoc || die
 	fi
 }
 
