@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13896 2012/06/29 13:22:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13897 2012/06/29 13:57:55 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+>=dev-lang/v8-3.12
 
 # Michael Weber <xmw@gentoo.org> (29 Jun 2012)
 # Masking for security reasons (bug 424025, CVE-2012-3366)
@@ -416,11 +420,6 @@ games-util/nforenum
 # experimental features and accept a more unstable release.
 >=www-client/chromium-21
 >=www-client/google-chrome-21
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (22 May 2012)
-# Mask v8 versions used for www-client/chromium dev channel releases.
->=dev-lang/v8-3.11
->=net-libs/nodejs-0.8.0
 
 # Michael Weber <xmw@gentoo.org> (22 May 2012)
 # Masked for removal in 30 days.
