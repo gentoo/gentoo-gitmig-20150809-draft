@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.1.ebuild,v 1.1 2010/04/29 21:12:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.1.ebuild,v 1.2 2012/06/29 14:47:55 flameeyes Exp $
 
 EAPI="3"
 
@@ -36,6 +36,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}-respect_LDFLAGS.patch"
 	epatch "${FILESDIR}/${PN}-1.0_rc4-fix_build.patch"
+	epatch "${FILESDIR}/${P}-parallelmake.patch"
 }
 
 src_compile() {

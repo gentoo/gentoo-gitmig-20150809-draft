@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/aircrack-ng
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.59 2010/10/17 23:38:42 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.60 2012/06/29 14:47:55 flameeyes Exp $
+
+  29 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/aircrack-ng-1.1-parallelmake.patch, aircrack-ng-1.1.ebuild:
+  Fix parallel make (bug #363199).
 
   17 Oct 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Herds are not the same thing as maintainers.
@@ -260,4 +264,3 @@
   18 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
   +aircrack-ng-0.4.ebuild:
   Initial commit for bug 127210. Thanks to <cygeus at gmail dot com>.
-
