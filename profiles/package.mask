@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13897 2012/06/29 13:57:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13898 2012/06/29 20:49:50 ryao Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Richard Yao <ryao@gentoo.org> (29 Jun 2012)
+# Patch introduced regressions
+=sys-fs/zfs-0.6.0_rc9-r3
+
 # Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
 # Mask v8 versions used for www-client/chromium dev channel releases.
 >=dev-lang/v8-3.12
@@ -50,10 +54,6 @@ www-apps/phpwiki
 # ruby.eclass. Use dev-ruby/memcache-client instead.
 # Masked for removal in 30 days.
 dev-ruby/Ruby-MemCache
-
-# Richard Yao <ryao@gentoo.org> (25 Jun 2012)
-# Patch causes issues on Linux 3.2.y kernels
-=sys-fs/zfs-x11-0.6.0_rc9-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Jun 2012)
 # Replaced by the new 1.0.0 release of x11-apps/transset.
