@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rodent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.7 2012/05/05 04:53:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.8 2012/06/29 16:09:40 angelos Exp $
+
+*rodent-4.8.0 (29 Jun 2012)
+
+  29 Jun 2012;  <christoph@gentoo.org> +rodent-4.8.0.ebuild, metadata.xml:
+  Version bump (bug #423903)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> rodent-4.6.4.ebuild,
   rodent-4.7.4.ebuild:
@@ -34,4 +39,3 @@
   02 Apr 2011; Christoph Mende <angelos@gentoo.org> +rodent-4.6.2.ebuild,
   +files/rodent-4.6.2-libs.patch, +metadata.xml:
   Initial import
-
