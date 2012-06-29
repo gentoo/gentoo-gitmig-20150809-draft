@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.359 2012/06/28 15:23:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.360 2012/06/29 18:32:32 maekke Exp $
+
+  29 Jun 2012; Markus Meier <maekke@gentoo.org> xterm-279.ebuild:
+  arm stable, bug #419473
 
   28 Jun 2012; Jeroen Roovers <jer@gentoo.org> xterm-279.ebuild:
   Stable for HPPA (bug #419473).
