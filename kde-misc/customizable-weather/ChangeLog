@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/customizable-weather
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/ChangeLog,v 1.33 2012/06/29 09:16:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/ChangeLog,v 1.34 2012/06/29 09:20:14 johu Exp $
+
+  29 Jun 2012; Johannes Huber <johu@gentoo.org>
+  -customizable-weather-1.5.14.ebuild:
+  Remove old.
 
   29 Jun 2012; Johannes Huber <johu@gentoo.org>
   customizable-weather-1.6.2.ebuild:
@@ -186,4 +190,3 @@
   +customizable-weather-1.0.4.ebuild, +metadata.xml:
   Initial commit of customizable-weather plasmoid. Moved from kde overlay.
   Fixes bug #322477
-
