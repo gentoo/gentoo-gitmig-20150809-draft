@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.2-r2.ebuild,v 1.6 2012/05/21 17:27:50 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.6.ebuild,v 1.1 2012/06/29 15:52:45 billie Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ COMMON_DEPEND="
 	acl? ( || ( >=sys-auth/consolekit-0.4.5-r3[acl] >=sys-fs/udev-171-r5[acl] <sys-fs/udev-171-r5[extras] ) )
 	!minimal? (
 		>=net-print/cups-1.4.0
-		virtual/libusb:0
+		virtual/libusb:1
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		fax? ( sys-apps/dbus )
 		snmp? (
@@ -185,6 +185,8 @@ src_configure() {
 		--disable-foomatic-rip-hplip-install \
 		--disable-shadow-build \
 		--disable-qt3 \
+		--disable-libusb01_build \
+		--enable-udev_sysfs_rules \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--with-docdir=/usr/share/doc/${PF} \
@@ -227,7 +229,7 @@ pkg_postinst() {
 	elog "a look at the hplip section of the gentoo printing guide:"
 	elog "http://www.gentoo.org/doc/en/printing-howto.xml"
 	elog
-	elog "Any user who want to print must be in the lp group."
+	elog "Any user who wants to print must be in the lp group."
 }
 
 pkg_postrm() {

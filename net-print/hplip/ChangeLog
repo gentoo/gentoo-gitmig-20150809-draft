@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.228 2012/05/21 17:27:50 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.229 2012/06/29 15:52:45 billie Exp $
+
+*hplip-3.12.6 (29 Jun 2012)
+
+  29 Jun 2012; Daniel Pielmeier <billie@gentoo.org> -hplip-3.12.2-r2.ebuild,
+  +hplip-3.12.6.ebuild:
+  Version bump. Remove old.
 
   21 May 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.2-r2.ebuild,
   hplip-3.12.4.ebuild:
