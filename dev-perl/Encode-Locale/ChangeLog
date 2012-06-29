@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Encode-Locale
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.27 2012/06/28 12:47:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.28 2012/06/29 14:55:08 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> Encode-Locale-1.30.0.ebuild:
+  Stable for HPPA (bug #414733).
 
   28 Jun 2012; Brent Baude <ranger@gentoo.org> Encode-Locale-1.30.0.ebuild:
   Marking Encode-Locale-1.30.0 ppc for bug 414733
