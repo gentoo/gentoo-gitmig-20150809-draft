@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.178 2012/06/17 16:04:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.179 2012/06/29 03:07:32 radhermit Exp $
+
+*whois-5.0.17 (29 Jun 2012)
+
+  29 Jun 2012; Tim Harder <radhermit@gentoo.org> +whois-5.0.17.ebuild:
+  Version bump. Don't generate po files when nls is disabled (bug #419889).
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> whois-5.0.15.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #414239
