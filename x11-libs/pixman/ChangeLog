@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.133 2012/06/28 15:11:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.134 2012/06/29 05:40:02 maekke Exp $
+
+  29 Jun 2012; Markus Meier <maekke@gentoo.org> pixman-0.26.0.ebuild:
+  arm stable, bug #419473
 
   28 Jun 2012; Jeroen Roovers <jer@gentoo.org> pixman-0.26.0.ebuild:
   Stable for HPPA (bug #419473).
