@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.96 2012/06/24 03:28:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.97 2012/06/29 15:29:37 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> ccache-3.1.7.ebuild:
+  Stable for HPPA (bug #418945).
 
   24 Jun 2012; Mike Frysinger <vapier@gentoo.org>
   +files/ccache-3.1.7-no-perl.patch, ccache-3.1.7.ebuild:
