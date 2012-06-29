@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.23 2012/06/24 12:59:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.24 2012/06/29 14:56:28 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> HTTP-Daemon-6.10.0.ebuild:
+  Stable for HPPA (bug #414739).
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
