@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.169 2012/06/22 15:32:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.170 2012/06/29 12:42:35 ranger Exp $
+
+  29 Jun 2012; Brent Baude <ranger@gentoo.org> libxklavier-5.2.1.ebuild:
+  Marking libxklavier-5.2.1 ppc for bug 422363
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> libxklavier-5.2.1.ebuild:
   Marking libxklavier-5.2.1 ppc64 for bug 422363
