@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xtrans
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.94 2012/06/28 15:15:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.95 2012/06/29 17:51:19 maekke Exp $
+
+  29 Jun 2012; Markus Meier <maekke@gentoo.org> xtrans-1.2.7.ebuild:
+  arm stable, bug #419473
 
   28 Jun 2012; Jeroen Roovers <jer@gentoo.org> xtrans-1.2.7.ebuild:
   Stable for HPPA (bug #419473).
