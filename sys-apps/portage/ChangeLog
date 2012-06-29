@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1046 2012/06/27 23:09:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1047 2012/06/29 12:35:58 ranger Exp $
+
+  29 Jun 2012; Brent Baude <ranger@gentoo.org> portage-2.1.10.65.ebuild:
+  Marking portage-2.1.10.65 ppc for bug 422721
 
 *portage-2.2.0_alpha114 (27 Jun 2012)
 
