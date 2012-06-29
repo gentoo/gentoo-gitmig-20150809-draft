@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.90 2012/06/14 06:20:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.91 2012/06/29 15:18:24 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> ming-0.4.3-r2.ebuild:
+  Stable for HPPA (bug #419719).
 
   14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> ming-0.4.3-r2.ebuild:
   marked x86 per bug 419719
