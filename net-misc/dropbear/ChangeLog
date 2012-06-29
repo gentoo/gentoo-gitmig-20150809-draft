@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.95 2012/04/04 17:46:29 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.96 2012/06/29 15:54:16 vapier Exp $
+
+  29 Jun 2012; Mike Frysinger <vapier@gentoo.org> dropbear-2012.55.ebuild:
+  Also depend on libtommath to avoid using the bundled one #424029 by Kerin
+  Millar.
 
   04 Apr 2012; Benda XU <heroxbd@gentoo.org> dropbear-2012.55.ebuild:
   add prefix support and ~{x86,amd64}-linux keywords, bug #410759

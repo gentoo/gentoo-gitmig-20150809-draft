@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.10 2012/04/04 17:42:56 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.11 2012/06/29 15:54:16 vapier Exp $
 
 EAPI="4"
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE="bsdpty minimal multicall pam static syslog zlib"
 
-LIB_DEPEND="zlib? ( sys-libs/zlib[static-libs(+)] )"
+LIB_DEPEND="zlib? ( sys-libs/zlib[static-libs(+)] )
+	dev-libs/libtommath[static-libs(+)]"
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
