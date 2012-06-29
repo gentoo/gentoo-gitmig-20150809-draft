@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/mana
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.9 2012/06/12 06:06:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/ChangeLog,v 1.10 2012/06/29 12:47:24 ranger Exp $
+
+  29 Jun 2012; Brent Baude <ranger@gentoo.org> mana-0.6.0.ebuild:
+  Marking mana-0.6.0 ppc for bug 420143
 
   12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> mana-0.6.0.ebuild:
   marked x86 per bug 420143

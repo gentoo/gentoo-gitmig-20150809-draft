@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.0.ebuild,v 1.5 2012/06/12 06:06:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.0.ebuild,v 1.6 2012/06/29 12:47:24 ranger Exp $
 
 EAPI=2
 inherit eutils cmake-utils games
@@ -11,7 +11,7 @@ SRC_URI="http://manasource.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="nls opengl"
 
 RDEPEND="!=games-rpg/tmw-0.5.2
