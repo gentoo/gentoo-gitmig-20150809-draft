@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r12.ebuild,v 1.2 2012/06/02 06:37:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r12.ebuild,v 1.3 2012/06/29 16:21:21 floppym Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -215,10 +215,9 @@ setup_boot_dir() {
 		ebeep
 	fi
 
-	einfo "Copying files from /lib/grub, /usr/lib/grub and /usr/share/grub to ${dir}"
+	einfo "Copying files from /lib/grub and /usr/share/grub to ${dir}"
 	for x in \
 		"${ROOT}"/lib*/grub/*/* \
-		"${ROOT}"/usr/lib*/grub/*/* \
 		"${ROOT}"/usr/share/grub/* ; do
 		[[ -f ${x} ]] && cp -p "${x}" "${dir}"/
 	done
