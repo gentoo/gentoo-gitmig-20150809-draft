@@ -1,0 +1,9 @@
+# ChangeLog for virtual/leechcraft-storage-device-manager
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-storage-device-manager/ChangeLog,v 1.1 2012/06/29 19:43:32 maksbotan Exp $
+
+*leechcraft-storage-device-manager-9999 (29 Jun 2012)
+
+  29 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-storage-device-manager-9999.ebuild, +metadata.xml:
+  Add virtual/leechcraft-storage-device-manager, thanks to 0xd34df00d
