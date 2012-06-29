@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/kbproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/kbproto/ChangeLog,v 1.62 2012/06/28 15:19:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/kbproto/ChangeLog,v 1.63 2012/06/29 18:12:00 maekke Exp $
+
+  29 Jun 2012; Markus Meier <maekke@gentoo.org> kbproto-1.0.6.ebuild:
+  arm stable, bug #419473
 
   28 Jun 2012; Jeroen Roovers <jer@gentoo.org> kbproto-1.0.6.ebuild:
   Stable for HPPA (bug #419473).
