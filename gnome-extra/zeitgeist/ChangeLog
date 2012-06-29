@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/zeitgeist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.16 2012/06/28 10:37:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.17 2012/06/29 09:00:12 jlec Exp $
+
+*zeitgeist-0.9.0.1 (29 Jun 2012)
+
+  29 Jun 2012; Justin Lecher <jlec@gentoo.org> +zeitgeist-0.9.0.1.ebuild,
+  metadata.xml:
+  Version Bump
 
   28 Jun 2012; Justin Lecher <jlec@gentoo.org> -zeitgeist-0.7.ebuild,
   -zeitgeist-0.7.1.ebuild, -zeitgeist-0.7.1-r1.ebuild,

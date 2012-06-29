@@ -12,6 +12,7 @@ are logged. It is the heart of Zeitgeist.
 </longdescription>
 	<use>
 		<flag name="extensions">Use <pkg>gnome-extra/zeitgeist-extentions</pkg> to enhance the internal routines</flag>
+		<flag name="sql-debug">Enable SQL debugging</flag>
 		<flag name="passiv">Use <pkg>gnome-extra/zeitgeist-datahub</pkg> to passively inject events</flag>
 		<flag name="plugins">Use <pkg>gnome-extra/zeitgeist-datasources</pkg> to enable numerous packages to inject events</flag>
 		<flag name="fts">Enable the full text search extension</flag>
