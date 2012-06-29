@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.9.ebuild,v 1.9 2012/06/25 10:37:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.9.ebuild,v 1.10 2012/06/29 05:11:14 vapier Exp $
 
 EAPI="2"
 
@@ -36,8 +36,8 @@ src_configure() {
 		$(use_enable xattr xattr-support) \
 		$(use_enable ipv6) \
 		$(use_enable iconv) \
-		--with-rsyncd-conf=/etc/rsyncd.conf \
-		|| die
+		--with-rsyncd-conf=/etc/rsyncd.conf
+	touch proto.h-tstamp #421625
 }
 
 src_install() {

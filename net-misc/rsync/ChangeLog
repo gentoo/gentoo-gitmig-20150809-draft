@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.226 2012/06/25 10:37:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.227 2012/06/29 05:11:14 vapier Exp $
+
+  29 Jun 2012; Mike Frysinger <vapier@gentoo.org> rsync-3.0.9-r2.ebuild,
+  rsync-3.0.9.ebuild:
+  Avoid regenerating proto.h which requires perl -- the shipped one should work
+  in all places we care about #421625 by László Szalma.
 
   25 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> rsync-3.0.9-r2.ebuild,
   rsync-3.0.9.ebuild:
