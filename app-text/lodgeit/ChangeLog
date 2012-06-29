@@ -1,6 +1,12 @@
 # ChangeLog for app-text/lodgeit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.7 2012/06/26 17:46:04 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.8 2012/06/29 07:49:49 maksbotan Exp $
+
+*lodgeit-0.3_p20120618 (29 Jun 2012)
+
+  29 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +lodgeit-0.3_p20120618.ebuild, -lodgeit-0.3_p20120614.ebuild:
+  Add new snapshot, thanks to sterkrig
 
 *lodgeit-0.3_p20120614 (26 Jun 2012)
 

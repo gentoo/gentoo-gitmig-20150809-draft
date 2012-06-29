@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3_p20120614.ebuild,v 1.1 2012/06/26 17:46:04 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3_p20120618.ebuild,v 1.1 2012/06/29 07:49:49 maksbotan Exp $
 
 EAPI="4"
 
-MY_REV="0f51a7cb1576"
+MY_REV="1ca55b8189de"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
