@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.14 2012/05/12 06:30:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.15 2012/06/29 06:46:31 jdhore Exp $
+
+  29 Jun 2012; Jeff Horelick <jdhore@gentoo.org> tig-1.0.ebuild:
+  marked x86 per bug 422081
 
 *tig-1.0 (12 May 2012)
 
