@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/execjs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.4 2012/03/05 10:02:02 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.5 2012/06/29 05:05:04 graaff Exp $
+
+*execjs-1.4.0 (29 Jun 2012)
+
+  29 Jun 2012; Hans de Graaff <graaff@gentoo.org> +execjs-1.4.0.ebuild:
+  Version bump.
 
   05 Mar 2012; Thomas Kahle <tomka@gentoo.org> execjs-1.2.13-r1.ebuild:
   marked ~x86 per bug 397435
