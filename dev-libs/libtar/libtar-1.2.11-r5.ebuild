@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r5.ebuild,v 1.5 2012/06/25 17:13:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r5.ebuild,v 1.6 2012/06/29 12:57:41 ranger Exp $
 
 EAPI=4
 inherit autotools eutils multilib
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.feep.net/pub/software/libtar/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 ~sparc x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="static-libs zlib"
 
 DEPEND="zlib? ( sys-libs/zlib )
