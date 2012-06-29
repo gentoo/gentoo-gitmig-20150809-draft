@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/webfs-1.21-r2.ebuild,v 1.3 2012/06/21 19:33:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/webfs-1.21-r2.ebuild,v 1.4 2012/06/29 12:58:34 ranger Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://linux.bytesex.org/misc/webfs.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ppc ~sparc x86"
 IUSE="ssl threads"
 
 DEPEND="ssl? ( dev-libs/openssl )"
