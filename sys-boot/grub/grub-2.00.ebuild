@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.3 2012/06/29 02:51:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.4 2012/06/29 03:02:58 floppym Exp $
 
 EAPI=4
 
@@ -46,6 +46,8 @@ GRUB_PLATFORMS=(
 	efi-64
 )
 IUSE+=" ${GRUB_PLATFORMS[@]/#/grub_platforms_}"
+
+REQUIRED_USE="grub_platforms_qemu? ( truetype )"
 
 # os-prober: Used on runtime to detect other OSes
 # xorriso (dev-libs/libisoburn): Used on runtime for mkrescue
