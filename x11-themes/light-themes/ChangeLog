@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/light-themes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.11 2012/06/16 13:53:08 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.12 2012/06/29 18:30:07 sping Exp $
+
+*light-themes-0.1.11 (29 Jun 2012)
+
+  29 Jun 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.11.ebuild:
+  Bump to 0.1.11
 
 *light-themes-0.1.9.2 (16 Jun 2012)
 
