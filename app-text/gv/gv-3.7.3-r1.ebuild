@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.9 2012/06/08 11:41:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.10 2012/06/29 15:35:26 jer Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/gv/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~mips ppc ppc64 ~sparc x86"
 IUSE="unicode xinerama"
 
 RDEPEND="app-text/ghostscript-gpl
