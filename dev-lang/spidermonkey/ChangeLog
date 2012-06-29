@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.76 2012/06/19 23:18:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.77 2012/06/29 15:50:38 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> spidermonkey-1.8.5-r1.ebuild,
+  spidermonkey-1.8.7.ebuild:
+  Marked ~hppa (bug #420997).
 
   19 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
   spidermonkey-1.8.5-r1.ebuild, spidermonkey-1.8.7.ebuild:
