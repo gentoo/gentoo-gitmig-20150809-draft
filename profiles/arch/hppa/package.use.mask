@@ -1,12 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.104 2012/06/29 15:54:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.105 2012/06/29 16:01:33 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
-
-# Jeroen Roovers <jer@gentoo.org> (29 Jun 2012)
-# sys-apps/gptfdisk is untested, and probably will not work on HPPA
-sys-fs/udisks gptfdisk
 
 # Jeroen Roovers <jer@gentoo.org> (21 May 2012)
 # HPPA is an unsupported architecture
