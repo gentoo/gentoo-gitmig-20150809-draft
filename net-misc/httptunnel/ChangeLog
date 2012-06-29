@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/httptunnel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.24 2012/06/29 05:50:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.25 2012/06/29 12:55:46 ranger Exp $
+
+  29 Jun 2012; Brent Baude <ranger@gentoo.org> httptunnel-3.3-r2.ebuild:
+  Marking httptunnel-3.3-r2 ppc for bug 397169
 
   29 Jun 2012; Jeff Horelick <jdhore@gentoo.org> httptunnel-3.3-r2.ebuild:
   marked x86 per bug 397169
