@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.21 2012/06/28 10:51:43 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.22 2012/06/29 12:53:06 ranger Exp $
+
+  29 Jun 2012; Brent Baude <ranger@gentoo.org> binary-0.5.1.0.ebuild:
+  Marking binary-0.5.1.0 ppc for bug 414707
 
   28 Jun 2012; Mark Wright <gienah@gentoo.org> binary-0.5.1.0.ebuild:
   binary 0.5.1.0 is a ghc 7.4.2 core lib
