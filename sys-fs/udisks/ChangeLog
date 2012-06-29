@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.93 2012/06/20 07:18:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.94 2012/06/29 16:14:16 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> udisks-1.0.4-r1.ebuild,
+  udisks-1.0.4-r2.ebuild:
+  Drop HPPA keywording (bug #412801).
 
   20 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.97.0-r1.ebuild:
   old
