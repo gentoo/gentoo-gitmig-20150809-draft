@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.71 2012/06/29 03:02:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.72 2012/06/29 03:10:31 floppym Exp $
 
 EAPI=4
 
@@ -17,9 +17,7 @@ else
 		SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
 		mirror://gentoo/${MY_P}.tar.xz"
 	fi
-	# Masked until documentation guys consolidate the guide and approve
-	# it for usage.
-	#KEYWORDS="~amd64 ~mips ~x86"
+	KEYWORDS="~amd64"
 	S=${WORKDIR}/${MY_P}
 fi
 
