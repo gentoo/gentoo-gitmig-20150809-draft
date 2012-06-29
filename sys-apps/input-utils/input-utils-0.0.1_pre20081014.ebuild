@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20081014.ebuild,v 1.3 2012/06/17 08:21:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/input-utils-0.0.1_pre20081014.ebuild,v 1.4 2012/06/29 12:34:38 ranger Exp $
 
 EAPI=4
 inherit eutils
@@ -13,7 +13,7 @@ SRC_URI="http://dl.bytesex.org/cvs-snapshots/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
