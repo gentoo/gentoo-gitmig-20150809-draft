@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.409 2012/06/22 10:33:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.410 2012/06/29 04:33:39 floppym Exp $
+
+  29 Jun 2012; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Mask libzfs flag for grub due to sys-fs/zfs keywords.
 
   22 Jun 2012; Tony Vroon <chainsaw@gentoo.org> make.defaults:
   Add VOICEMAIL_STORAGE to USE_EXPAND for net-misc/asterisk; approved by Ian

@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.365 2012/06/19 14:27:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.366 2012/06/29 04:33:39 floppym Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
+# sys-fs/zfs is not available everywhere.
+sys-boot/grub libzfs
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (19 Jun 2012)
 # mask wayland flag for stable mesa, #419473
