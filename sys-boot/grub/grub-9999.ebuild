@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.72 2012/06/29 03:10:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.73 2012/06/29 15:34:20 floppym Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ else
 		SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
 		mirror://gentoo/${MY_P}.tar.xz"
 	fi
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 	S=${WORKDIR}/${MY_P}
 fi
 
@@ -50,7 +50,7 @@ REQUIRED_USE="grub_platforms_qemu? ( truetype )"
 # os-prober: Used on runtime to detect other OSes
 # xorriso (dev-libs/libisoburn): Used on runtime for mkrescue
 RDEPEND="
-	dev-libs/lzo
+	app-arch/xz-utils
 	>=sys-libs/ncurses-5.2-r5
 	debug? (
 		sdl? ( media-libs/libsdl )

@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.220 2012/06/29 04:35:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.221 2012/06/29 15:34:20 floppym Exp $
+
+  29 Jun 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild,
+  grub-9999.ebuild:
+  Replace lzo with xz-utils, bug 424045 by Andrey Volkov.
 
   29 Jun 2012; Jeff Horelick <jdhore@gentoo.org> grub-2.00.ebuild:
   Keyword ~x86 wrt bug 424019
