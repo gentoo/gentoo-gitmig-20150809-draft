@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Message
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.25 2012/06/24 13:00:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.26 2012/06/29 14:57:15 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> HTTP-Message-6.30.0.ebuild:
+  Stable for HPPA (bug #414741).
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
