@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.42 2012/06/13 16:36:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.43 2012/06/29 12:49:16 ranger Exp $
+
+  29 Jun 2012; Brent Baude <ranger@gentoo.org>
+  visualboyadvance-1.7.2-r3.ebuild:
+  Marking visualboyadvance-1.7.2-r3 ppc for bug 420905
 
   13 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   visualboyadvance-1.7.2-r3.ebuild:
