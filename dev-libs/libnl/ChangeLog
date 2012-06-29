@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.87 2012/06/17 20:00:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.88 2012/06/29 16:36:47 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> libnl-3.2.7.ebuild,
+  libnl-3.2.9.ebuild, libnl-3.2.11.ebuild:
+  Replace virtual/yacc with sys-devel/bison by Joseph C. Lehner (bug #424007).
 
   17 Jun 2012; Markus Meier <maekke@gentoo.org> libnl-3.2.11.ebuild:
   add ~arm, bug #419987

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.11.ebuild,v 1.2 2012/06/17 20:00:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.11.ebuild,v 1.3 2012/06/29 16:36:47 jer Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -15,7 +15,7 @@ IUSE="doc static-libs utils"
 
 DEPEND="
 	sys-devel/flex
-	virtual/yacc
+	sys-devel/bison
 	doc? (
 		app-text/asciidoc
 		app-doc/doxygen[latex]

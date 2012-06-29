@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.7.ebuild,v 1.7 2012/05/28 16:30:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.7.ebuild,v 1.8 2012/06/29 16:36:47 jer Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ IUSE="static-libs utils"
 
 DEPEND="
 	sys-devel/flex
-	virtual/yacc
+	sys-devel/bison
 "
 
 src_prepare() {
