@@ -4,10 +4,5 @@
 	<maintainer>
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
-		<description>Proxy Maintainer</description>
-	</maintainer>
-	<maintainer>
-		<email>eplumlee@yahoo.com</email>
-		<name>Evan Plumlee</name>
 	</maintainer>
 </pkgmetadata>
