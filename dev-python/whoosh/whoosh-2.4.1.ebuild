@@ -1,14 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/whoosh-2.4.1.ebuild,v 1.1 2012/06/29 16:46:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/whoosh-2.4.1.ebuild,v 1.2 2012/06/29 16:50:31 blueness Exp $
 
 EAPI="3"
 
-PYTHON_DEPEND="2:2.5 3:3.1"
+PYTHON_DEPEND="2:2.6 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4"
 DISTUTILS_SRC_TEST="setup.py"
-#PYTHON_TESTS_RESTRICTED_ABIS="3.*"
 PYTHON_MODNAME="whoosh"
 
 MY_PN="Whoosh"
