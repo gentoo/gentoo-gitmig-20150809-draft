@@ -1,6 +1,13 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.151 2012/06/29 00:37:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.152 2012/06/29 03:32:31 jdhore Exp $
+
+*google-chrome-21.0.1180.15_alpha144745 (29 Jun 2012)
+
+  29 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  +google-chrome-21.0.1180.15_alpha144745.ebuild,
+  -google-chrome-21.0.1180.11_alpha143993.ebuild:
+  Dev channel bump.
 
 *google-chrome-20.0.1132.47_p144678 (29 Jun 2012)
 *google-chrome-20.0.1132.47_beta144678 (29 Jun 2012)
