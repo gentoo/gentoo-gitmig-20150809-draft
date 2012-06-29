@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.132 2012/06/26 21:04:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.133 2012/06/29 04:37:47 floppym Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
+# sys-fs/zfs is not available everywhere.
+sys-boot/grub -libzfs
 
 # Robert Piasek <dagger@gentoo.org> (26 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches
