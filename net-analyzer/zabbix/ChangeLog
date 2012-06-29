@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.101 2012/06/20 20:22:22 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.102 2012/06/29 14:24:47 mattm Exp $
+
+*zabbix-1.8.14 (29 Jun 2012)
+
+  29 Jun 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-1.8.14.ebuild:
+  Bump for Zabbix 1.8.14 which seems to be just bug fixes for legacy 1.8.x tree
 
   20 Jun 2012; Matthew Marlowe <mattm@gentoo.org> -zabbix-1.8.10-r1.ebuild,
   -zabbix-1.8.10-r2.ebuild, -zabbix-1.8.11.ebuild, -zabbix-1.8.11-r1.ebuild,
