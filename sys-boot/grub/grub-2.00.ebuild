@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.7 2012/06/29 15:34:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.8 2012/06/29 22:06:15 floppym Exp $
 
 EAPI=4
 
@@ -242,8 +242,10 @@ src_configure() {
 	local i
 
 	use custom-cflags || unset CFLAGS CPPFLAGS LDFLAGS
-	use libzfs && addpredict /etc/dfs
 	use static && append-ldflags -static
+
+	# Sandbox bug 404013.
+	use libzfs && addpredict /etc/dfs:/dev/zfs
 
 	for i in ${GRUB_ENABLED_PLATFORMS}; do
 		grub_run_phase ${FUNCNAME} ${i}
