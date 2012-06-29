@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13895 2012/06/29 06:34:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13896 2012/06/29 13:22:46 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1028,6 +1028,7 @@ sci-astronomy/casa-data
 # rdep on the one above
 sci-astronomy/casacore
 sci-electronics/kicad
+dev-ruby/rcsparse
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open
