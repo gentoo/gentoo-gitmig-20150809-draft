@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.32 2012/06/22 12:24:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.33 2012/06/29 11:56:42 scarabeus Exp $
+
+  29 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libvisio-0.0.17.ebuild,
+  libvisio-0.0.18.ebuild:
+  Stable 0.0.18 on amd64 x86 and ppc. Drop older. The bugfix didnt cause
+  regressions yay.
 
   22 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> libvisio-0.0.17.ebuild:
   Really stable 0.0.17. Seems like bug of ekeyword. Thanks to Rene Neumann for
@@ -153,4 +158,3 @@
   +libvisio-9999.ebuild, +metadata.xml:
   Initial commit of libvisio library used by libreoffice:3.5. Not for
   production yet.
-
