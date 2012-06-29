@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.7.ebuild,v 1.4 2012/06/17 18:24:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.7.ebuild,v 1.5 2012/06/29 11:51:33 scarabeus Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="doc debug static-libs"
 
 RDEPEND="

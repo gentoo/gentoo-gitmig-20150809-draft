@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libwps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.31 2012/06/17 18:24:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.32 2012/06/29 11:51:33 scarabeus Exp $
+
+  29 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/libwps-0.2.6-debug.patch, -libwps-0.2.6.ebuild, libwps-0.2.7.ebuild:
+  Stable 0.2.7 on amd64 x86 and ppc. Drop older.
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> libwps-0.2.6.ebuild,
   libwps-0.2.7.ebuild:
@@ -119,4 +123,3 @@
   30 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libwps-0.2.0.ebuild,
   +metadata.xml:
   Initial commit to fix bug #284159.
-
