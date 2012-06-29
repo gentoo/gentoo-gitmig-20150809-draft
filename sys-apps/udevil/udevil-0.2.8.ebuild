@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.2.8.ebuild,v 1.2 2012/06/17 17:16:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.2.8.ebuild,v 1.3 2012/06/29 22:34:47 hasufell Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils autotools user
 
 DESCRIPTION="mount and unmount removable devices without a password"
 HOMEPAGE="http://ignorantguru.github.com/udevil/"
-SRC_URI="https://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
