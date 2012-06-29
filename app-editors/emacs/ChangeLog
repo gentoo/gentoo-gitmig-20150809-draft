@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.498 2012/06/28 14:16:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.499 2012/06/29 07:58:35 ulm Exp $
+
+  29 Jun 2012; Ulrich Müller <ulm@gentoo.org> emacs-22.3-r10.ebuild,
+  emacs-23.4-r3.ebuild, emacs-24.1.ebuild, metadata.xml:
+  Add built with use dependency for emacs-common-gentoo[games?], bug 368647.
 
   28 Jun 2012; Brent Baude <ranger@gentoo.org> emacs-23.4-r3.ebuild:
   Marking emacs-23.4-r3 ppc for bug 423507

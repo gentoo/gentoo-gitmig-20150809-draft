@@ -19,6 +19,7 @@
 <use>
   <flag name='athena'>Enable the MIT Athena widget set
     (<pkg>x11-libs/libXaw</pkg>)</flag>
+  <flag name='games'>Support shared score files for games</flag>
   <flag name='gconf'>Use <pkg>gnome-base/gconf</pkg> to read the system
     font name</flag>
   <flag name='gsettings'>Use gsettings (<pkg>dev-libs/glib</pkg>) to read the

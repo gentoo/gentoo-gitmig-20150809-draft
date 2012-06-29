@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.6 2012/06/24 15:13:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.7 2012/06/29 07:59:16 ulm Exp $
 
 EAPI=4
 
@@ -30,11 +30,11 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode PSF-2"
 SLOT="24"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="alsa athena dbus gconf gif gnutls gpm gsettings gtk gtk3 gzip-el hesiod imagemagick jpeg kerberos libxml2 m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm"
+IUSE="alsa athena dbus games gconf gif gnutls gpm gsettings gtk gtk3 gzip-el hesiod imagemagick jpeg kerberos libxml2 m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
-	>=app-emacs/emacs-common-gentoo-1.3[X?]
+	>=app-emacs/emacs-common-gentoo-1.3[games?,X?]
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
 	kerberos? ( virtual/krb5 )
