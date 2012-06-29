@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.69 2012/06/28 10:10:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.70 2012/06/29 02:51:54 floppym Exp $
 
 EAPI=4
 
@@ -69,7 +69,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-lang/python-2.5.2
 	sys-devel/flex
-	virtual/yacc
+	sys-devel/bison
 	sys-apps/texinfo
 	static? (
 		truetype? (
@@ -300,5 +300,10 @@ pkg_postinst() {
 	fi
 	if ! has_version dev-libs/libisoburn; then
 		elog "Install dev-libs/libisoburn to enable creation of rescue media using grub2-mkrescue."
+	fi
+	if has_version sys-boot/grub:0; then
+		ewarn "If you want to keep GRUB Legacy (grub-0.97) installed, please run"
+		ewarn "the following to add sys-boot/grub:0 to your world file."
+		ewarn "emerge --noreplace sys-boot/grub:0"
 	fi
 }

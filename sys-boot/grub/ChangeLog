@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.216 2012/06/28 22:36:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.217 2012/06/29 02:51:54 floppym Exp $
+
+  29 Jun 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild,
+  grub-9999.ebuild:
+  Depend on bison, bug 380019.
 
   28 Jun 2012; Mike Gilbert <floppym@gentoo.org> files/grub.default-2:
   Fix typos in grub.default, #424005 by Chris Mayo.
