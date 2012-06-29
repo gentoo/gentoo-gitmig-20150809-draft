@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ldapvi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.28 2012/06/13 22:20:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.29 2012/06/29 15:25:35 jer Exp $
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> ldapvi-1.7-r1.ebuild:
+  Stable for HPPA (bug #420973).
 
   13 Jun 2012; Michael Weber <xmw@gentoo.org> ldapvi-1.7-r1.ebuild:
   ppc stable (bug 420973)
