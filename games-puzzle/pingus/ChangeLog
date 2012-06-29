@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.40 2012/05/24 18:06:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.41 2012/06/29 20:11:51 mr_bones_ Exp $
+
+  29 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> pingus-0.7.6.ebuild:
+  use the latest boost
 
   24 May 2012; Michael Sterrett <mr_bones_@gentoo.org> pingus-0.7.6.ebuild:
   Add strip-flags for bug #396149
