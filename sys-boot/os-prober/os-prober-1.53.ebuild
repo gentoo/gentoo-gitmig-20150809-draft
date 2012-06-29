@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.47.ebuild,v 1.3 2012/02/14 15:37:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.53.ebuild,v 1.1 2012/06/29 16:25:49 scarabeus Exp $
 
 EAPI=4
 
@@ -15,11 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-S=${WORKDIR}/${PN}
-
 src_prepare() {
-	find "${S}" -type f -exec sed -i -e "s:/usr/lib/:/usr/libexec/:g" {} + || die "failed on find and sed lib->libexec"
-	sed -i -e "s:/lib/ld\*\.so\*:/lib*/ld*.so*:g" os-probes/mounted/common/90linux-distro  || die "sed failed on 90linux-distro"
+	find "${S}" -type f -exec sed -i -e "s:/usr/lib/:/usr/libexec/:g" {} + || die
 
 	# use default GNU rules
 	rm Makefile
