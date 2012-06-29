@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/logmein-hamachi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.4 2011/08/24 13:40:06 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.5 2012/06/29 08:06:49 maksbotan Exp $
+
+*logmein-hamachi-2.1.0.68 (29 Jun 2012)
+
+  29 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +logmein-hamachi-2.1.0.68.ebuild, metadata.xml:
+  Bump to 2.1.0.68, thanks to Simone Scanzoni. Clean up metadata
 
   24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Assign package to proxy-maintainers team
@@ -29,4 +35,3 @@
   than a new version. Thanks to Simone Scanzoni <nonno.cicala@libero.it> for
   the ebuilds and scripts. He will proxy maintain it. The old client will be
   removed in 30 days
-
