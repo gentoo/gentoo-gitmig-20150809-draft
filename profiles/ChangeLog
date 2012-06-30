@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6734 2012/06/30 19:36:33 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6735 2012/06/30 21:33:47 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask sci-biology/picard (live ebuild).
 
   30 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-plugins/vdr-cdda-0.1.0-r1 pmasked for removal, bug 423047 424263
