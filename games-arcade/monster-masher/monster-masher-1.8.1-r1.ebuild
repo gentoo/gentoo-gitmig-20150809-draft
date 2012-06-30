@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/monster-masher-1.8.1-r1.ebuild,v 1.3 2012/05/04 04:22:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/monster-masher-1.8.1-r1.ebuild,v 1.4 2012/06/30 22:17:34 mr_bones_ Exp $
 
 EAPI=3
 GCONF_DEBUG="no"
@@ -31,6 +31,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Port to libcanberra, bug #348605
 	epatch "${FILESDIR}"/${P}-libcanberra.patch
+	# build with newer glib - bug #424313
+	sed -i -e 's:glib/gtypes:glib:' src/pixbuf-drawing.hpp || die
 
 	intltoolize --force --copy --automake || die
 	eautoreconf

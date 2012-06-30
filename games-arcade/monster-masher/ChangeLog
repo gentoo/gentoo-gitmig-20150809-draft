@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monster-masher
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.27 2012/05/04 04:22:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.28 2012/06/30 22:17:34 mr_bones_ Exp $
+
+  30 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  monster-masher-1.8.1-r1.ebuild:
+  build with newer glib - bug #424313
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   monster-masher-1.8.1-r1.ebuild:
