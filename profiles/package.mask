@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13907 2012/06/30 15:07:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13908 2012/06/30 15:33:56 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -49,7 +49,7 @@ dev-ml/pipebang
 =mail-client/claws-mail-acpi-notifier-1.0.27
 =mail-client/claws-mail-address_keeper-1.0.6
 =mail-client/claws-mail-archive-0.6.12
-=mail-client/claws-mail-att-remover-1.0.13
+=mail-client/claws-mail-att-remover-1.0.14
 =mail-client/claws-mail-attachwarner-0.2.24
 =mail-client/claws-mail-clamd-3.5.4
 =mail-client/claws-mail-fancy-0.9.16
