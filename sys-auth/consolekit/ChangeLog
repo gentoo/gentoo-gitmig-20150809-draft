@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.128 2012/05/28 18:14:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.129 2012/06/30 10:35:54 swift Exp $
+
+  30 Jun 2012; <swift@gentoo.org> consolekit-0.4.5-r1.ebuild,
+  consolekit-0.4.5_p20120320.ebuild:
+  Add SELinux consolekit dependency when USE=selinux is set
 
   28 May 2012; Markus Meier <maekke@gentoo.org>
   consolekit-0.4.5_p20120320.ebuild:
