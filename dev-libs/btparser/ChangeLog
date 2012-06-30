@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/btparser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/ChangeLog,v 1.6 2012/03/15 18:09:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/btparser/ChangeLog,v 1.7 2012/06/30 12:12:27 pacho Exp $
+
+*btparser-0.17 (30 Jun 2012)
+
+  30 Jun 2012; Pacho Ramos <pacho@gentoo.org> +btparser-0.17.ebuild,
+  -btparser-0.13.ebuild:
+  Version bump, remove old.
 
   15 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> btparser-0.16.ebuild:
   x86 stable wrt bug #407011
@@ -26,4 +32,3 @@
   16 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   +btparser-0.13.ebuild, +metadata.xml:
   Add gdb backtrace parsing library from the gnome overlay; needed for abrt.
-
