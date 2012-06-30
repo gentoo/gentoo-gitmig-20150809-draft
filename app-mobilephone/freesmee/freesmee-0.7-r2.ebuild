@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.7-r2.ebuild,v 1.1 2012/06/26 13:07:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.7-r2.ebuild,v 1.2 2012/06/30 13:49:59 ago Exp $
 
 EAPI=4
 
-inherit eutils qt4-r2
+inherit qt4-r2
 
 DESCRIPTION="Tool for sending SMS and sending/receiving Freesmee-Message-Service"
 HOMEPAGE="http://www.freesmee.com"
