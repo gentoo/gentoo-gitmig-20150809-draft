@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.112 2012/04/14 17:18:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.113 2012/06/30 19:16:12 robbat2 Exp $
+
+*smartmontools-5.43 (30 Jun 2012)
+
+  30 Jun 2012; Robin H. Johnson <robbat2@gentoo.org> +smartmontools-5.43.ebuild:
+  Version bump.
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> smartmontools-5.42.ebuild,
   smartmontools-9999.ebuild:
