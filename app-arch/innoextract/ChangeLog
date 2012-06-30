@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/innoextract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/innoextract/ChangeLog,v 1.1 2012/06/29 21:26:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/innoextract/ChangeLog,v 1.2 2012/06/30 15:30:50 hasufell Exp $
+
+  30 Jun 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  add proxy-maintainer
 
 *innoextract-1.2 (29 Jun 2012)
 
