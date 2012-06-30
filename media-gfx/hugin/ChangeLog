@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.121 2012/05/05 07:00:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.122 2012/06/30 21:36:05 dilfridge Exp $
+
+*hugin-2011.4.0-r1 (30 Jun 2012)
+
+  30 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +hugin-2011.4.0-r1.ebuild, +files/hugin-2011.4.0-boost148.patch,
+  +files/hugin-2011.4.0-gcc47.patch:
+  Add simple build fixes for gcc-4.7 and boost-1.48+ from upstream.
+  Unfortunately boost-1.48 has an ugly bug with gcc-4.7 itself (bug 424319)
+  which means we need boost-1.49.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> hugin-2011.0.0.ebuild,
   hugin-2011.2.0.ebuild, hugin-2011.4.0.ebuild:
