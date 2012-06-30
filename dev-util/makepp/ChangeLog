@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/makepp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/makepp/ChangeLog,v 1.4 2011/08/07 20:48:25 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/makepp/ChangeLog,v 1.5 2012/06/30 15:56:05 vapier Exp $
+
+*makepp-2.0 (30 Jun 2012)
+
+  30 Jun 2012; Mike Frysinger <vapier@gentoo.org> +makepp-2.0.ebuild:
+  Version bump #424237 by PetaMem R&D.
 
 *makepp-1.50_pre110621 (07 Aug 2011)
 
@@ -27,4 +32,3 @@
 
   27 Apr 2003; <rac@gentoo.org> makepp-1.18.ebuild:
   Initial import, requested in bug 4191
-
