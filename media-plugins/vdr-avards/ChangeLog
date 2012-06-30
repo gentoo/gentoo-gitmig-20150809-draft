@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-avards
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-avards/ChangeLog,v 1.15 2012/04/19 15:59:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-avards/ChangeLog,v 1.16 2012/06/30 17:42:53 hd_brummy Exp $
+
+  30 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-avards-0.2.4.ebuild:
+  vdr-plugin-2.eclass
 
   19 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-avards-0.2.2.ebuild, vdr-avards-0.2.4.ebuild:
