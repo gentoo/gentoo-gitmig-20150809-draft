@@ -1,12 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0-r2.ebuild,v 1.4 2012/05/21 23:17:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.26.2.ebuild,v 1.1 2012/06/30 18:05:43 pacho Exp $
 
-EAPI="2"
+EAPI=4
+GNOME_TARBALL_SUFFIX="bz2"
+GNOME2_LA_PUNT="yes"
+
 inherit java-pkg-2 gnome2 eutils autotools
 
 DESCRIPTION="Gnome Java Accessibility Bridge"
-HOMEPAGE="http://developer.gnome.org/projects/gap/"
+HOMEPAGE="https://live.gnome.org/Java%20Access%20Bridge/"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -14,7 +17,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 COMMON_DEPEND=">=gnome-base/libbonobo-2
-	>=gnome-extra/at-spi-1.7.10:1"
+	>=gnome-extra/at-spi-1.7.10:1
+	x11-apps/xprop"
 
 RDEPEND="$COMMON_DEPEND
 	>=virtual/jre-1.4"
@@ -27,13 +31,14 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 src_prepare() {
 	java-pkg-2_src_prepare
-	epatch "${FILESDIR}"/${P}-missingclasses.patch
+	epatch "${FILESDIR}"/${PN}-1.6.0-missingclasses.patch
 	eautoreconf
 }
 
 pkg_setup() {
 	java-pkg-2_pkg_setup
-	G2CONF="--with-java-home=${JDK_HOME}"
+	G2CONF+="--disable-static
+		--with-java-home=${JDK_HOME}"
 }
 
 src_configure() {
@@ -41,7 +46,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake JAVAC="${JAVAC} ${JAVACFLAGS}" || die "compile failure"
+	emake JAVAC="${JAVAC} ${JAVACFLAGS}"
 }
 
 src_install() {
@@ -61,8 +66,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog
-	elog "The Java Accessibility Bridge for GNOME has been installed."
 	elog
 	elog "To enable accessibility support with your java applications, you"
 	elog "have to enable CORBA traffic over IP. To do this, you may add the"
