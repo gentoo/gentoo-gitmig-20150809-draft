@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.494 2012/06/30 22:21:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.495 2012/06/30 22:26:03 dilfridge Exp $
+
+  30 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6_rc1.ebuild,
+  cups-9999.ebuild:
+  Correct language list
 
 *cups-1.6_rc1 (30 Jun 2012)
 
