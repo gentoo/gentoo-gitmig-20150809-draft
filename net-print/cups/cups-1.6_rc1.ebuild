@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6_beta1-r1.ebuild,v 1.1 2012/06/09 10:59:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6_rc1.ebuild,v 1.1 2012/06/30 22:21:14 dilfridge Exp $
 
 EAPI=4
 
@@ -8,8 +8,8 @@ PYTHON_DEPEND="python? 2:2.5"
 
 inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python user versionator java-pkg-opt-2 systemd
 
-MY_P=${P/_beta/b}
-MY_PV=${PV/_beta/b}
+MY_P=${P/_/}
+MY_PV=${PV/_/}
 
 if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
