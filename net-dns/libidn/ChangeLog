@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.168 2012/06/30 11:08:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.169 2012/06/30 21:58:56 jdhore Exp $
+
+  30 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libidn-1.25.ebuild:
+  marked x86 per bug 424125
 
   30 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libidn-1.25.ebuild:
   Stable for amd64, wrt bug #424125
