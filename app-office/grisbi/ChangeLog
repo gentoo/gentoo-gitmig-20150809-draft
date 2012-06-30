@@ -1,6 +1,18 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.56 2012/05/03 20:00:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.57 2012/06/30 17:50:39 pacho Exp $
+
+*grisbi-0.8.9 (30 Jun 2012)
+
+  30 Jun 2012; Pacho Ramos <pacho@gentoo.org> +grisbi-0.8.9.ebuild,
+  -files/0.6.0_rc2-properly-detect-gmodule.patch,
+  -files/0.8.2-0001-fixes-bug-1289.patch,
+  -files/0.8.2-0002-fixes-a-crash-when-importing-a-file-without-extensio.patch,
+  -files/0.8.2-0003-fixes-bug-1293-Problem-of-updating-of-the-pointing-b.patch,
+  -files/0.8.2-0004-fix-memory-leaks-thanks-Philippe-D.patch,
+  -files/0.8.2-0005-fixes-bug-of-compilation.patch, -files/grisbi.desktop,
+  -grisbi-0.6.0_rc2.ebuild, -grisbi-0.8.2.ebuild:
+  Version bump, remove old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> grisbi-0.6.0_rc2.ebuild,
   grisbi-0.8.2.ebuild, grisbi-0.8.8.ebuild:
@@ -237,4 +249,3 @@
   new accounting office package. Ebuild submitted by: Guillaume Castagnino
   <guilc@fr.st> in bug #52595. Guillaume will be the third party maintainer for
   this package. Seemant will be his gentoo proxy
-

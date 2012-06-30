@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Grisbi
-Comment=A personnal account manager
-Exec=grisbi
-Icon=grisbi
-Terminal=false
-Type=Application
-MimeType=application/x-grisbi;
-Categories=Office;
