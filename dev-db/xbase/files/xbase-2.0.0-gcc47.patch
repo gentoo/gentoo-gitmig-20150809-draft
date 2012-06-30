@@ -1,0 +1,21 @@
+ bin/dumprecs.cpp |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/bin/dumprecs.cpp b/bin/dumprecs.cpp
+index 94baab0..b7eaa57 100644
+--- a/bin/dumprecs.cpp
++++ b/bin/dumprecs.cpp
+@@ -80,10 +80,10 @@ int main(int ac,char** av)
+      }
+ 
+      cout << "\nLoop through forwards...\n";
+-     int i = 0;
++     int j = 0;
+      while(i<MyFile.NoOfRecords()) {
+-       MyFile.DumpRecord(i+1);
+-       i++;
++       MyFile.DumpRecord(j+1);
++       j++;
+      }
+ 
+      MyFile.CloseDatabase();	/* close database */

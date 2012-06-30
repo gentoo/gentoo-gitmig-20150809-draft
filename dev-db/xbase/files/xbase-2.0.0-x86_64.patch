@@ -1,0 +1,12 @@
+diff -up xbase-2.0.0/config.sub.BAD xbase-2.0.0/config.sub
+--- xbase-2.0.0/config.sub.BAD	2008-06-05 15:47:20.000000000 -0400
++++ xbase-2.0.0/config.sub	2008-06-05 15:49:10.000000000 -0400
+@@ -182,7 +182,7 @@ case $basic_machine in
+ 	      | sparc64-* | mips64-* | mipsel-* \
+ 	      | mips64el-* | mips64orion-* | mips64orionel-*  \
+ 	      | mipstx39-* | mipstx39el-* \
+-	      | f301-*)
++	      | f301-* | x86_64-* | ppc64-*)
+ 		;;
+ 	# Recognize the various machine names and aliases which stand
+ 	# for a CPU type and a company and sometimes even an OS.

@@ -1,0 +1,11 @@
+--- xbase-2.0.0/xbase-config.in.BAD	2005-07-10 08:38:03.000000000 -0500
++++ xbase-2.0.0/xbase-config.in	2005-07-10 08:37:25.000000000 -0500
+@@ -5,7 +5,7 @@
+ exec_prefix_set=no
+ CC="@CC@"
+ CXX="@CXX@"
+-LD="@SHARED_LD@"
++LD="@LD@"
+ 
+ usage="\
+ Usage: xbase-config [--prefix[=DIR]] [--exec-prefix[=DIR]] [--version] [--libs] [--cflags] [--cc] [--cxx] [--ld]"

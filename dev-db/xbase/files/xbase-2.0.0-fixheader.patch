@@ -1,0 +1,11 @@
+--- xbase-2.0.0/xbase/ntx.h.BAD	2006-06-04 08:36:08.000000000 -0500
++++ xbase-2.0.0/xbase/ntx.h	2006-06-04 08:36:13.000000000 -0500
+@@ -218,7 +218,7 @@
+    xbShort  KeyExists( char * Key ) { return FindKey( Key, strlen( Key ), 0 ); }
+    xbShort  KeyExists( xbDouble );
+ 
+-   xbShort xbNtx::AllocKeyBufs(void);
++   xbShort  AllocKeyBufs(void);
+ 
+    virtual void GetExpression(char *buf, int len);
+ };

@@ -1,6 +1,20 @@
 # ChangeLog for dev-db/xbase
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.26 2012/06/29 14:42:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.27 2012/06/30 13:41:45 jlec Exp $
+
+*xbase-3.1.2 (30 Jun 2012)
+*xbase-2.0.0-r2 (30 Jun 2012)
+
+  30 Jun 2012; Justin Lecher <jlec@gentoo.org> xbase-2.0.0.ebuild,
+  +xbase-2.0.0-r2.ebuild, +files/xbase-2.0.0-fixconfig.patch,
+  +files/xbase-2.0.0-fixheader.patch, +files/xbase-2.0.0-gcc47.patch,
+  +files/xbase-2.0.0-ppc.patch, +files/xbase-2.0.0-x86_64.patch,
+  +xbase-3.1.2.ebuild, +files/xbase-3.1.2-fixconfig.patch,
+  +files/xbase-3.1.2-gcc-version.patch, +files/xbase-3.1.2-gcc44.patch,
+  +files/xbase-3.1.2-gcc47.patch, +files/xbase-3.1.2-lesserg.patch,
+  +files/xbase-3.1.2-outofsource.patch, +files/xbase-3.1.2-xbnode.patch,
+  metadata.xml:
+  Version BUmp, add all fixes from fedora including gcc-4.7 compatibility
 
   29 Jun 2012; Jeroen Roovers <jer@gentoo.org> xbase-2.0.0-r1.ebuild:
   Stable for HPPA (bug #418673).
