@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.209 2012/06/09 00:00:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.210 2012/06/30 12:33:43 pacho Exp $
+
+*libgphoto2-2.4.14 (30 Jun 2012)
+
+  30 Jun 2012; Pacho Ramos <pacho@gentoo.org> +libgphoto2-2.4.14.ebuild:
+  Version bump.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> libgphoto2-2.4.11-r1.ebuild,
   libgphoto2-2.4.12.ebuild:
