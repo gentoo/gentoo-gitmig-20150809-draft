@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.115 2012/05/08 01:10:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.116 2012/06/30 12:22:37 pacho Exp $
+
+*balsa-2.4.12 (30 Jun 2012)
+
+  30 Jun 2012; Pacho Ramos <pacho@gentoo.org> +balsa-2.4.12.ebuild:
+  Version bump.
 
   08 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   webkit is now global wrt #285743
