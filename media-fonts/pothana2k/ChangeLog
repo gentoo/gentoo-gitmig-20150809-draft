@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/pothana2k
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.6 2009/09/07 21:33:45 dirtyepic Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.7 2012/06/30 05:37:12 yngwin Exp $
+
+  30 Jun 2012; Ben de Groot <yngwin@gentoo.org> pothana2k-2006-r1.ebuild:
+  Mark stable, bug #286245
 
   07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> pothana2k-2006-r1.ebuild:
   Drop pkg_postinst message, handled by eclass now.
@@ -29,4 +32,3 @@
   +pothana2k-2006.ebuild:
   Initial commit. Closes bug 102389. Thanks to Francisco José Cañizares
   Santofimia <telefrancisco@gmail.com> for providing the initial ebuild.
-
