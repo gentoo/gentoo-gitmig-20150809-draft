@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.4.ebuild,v 1.1 2012/06/21 21:54:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.8.4.ebuild,v 1.2 2012/06/30 12:16:48 aballier Exp $
 
 EAPI=4
 
@@ -64,7 +64,7 @@ COMMONDEPEND="
 		x11-libs/libXrender
 		x11-libs/libXScrnSaver
 		x11-libs/libXtst
-		!kernel_SunOS? ( sys-libs/libutempter )
+		!kernel_SunOS? ( || ( sys-libs/libutempter >=sys-freebsd/freebsd-lib-9.0 ) )
 	)
 	bzip2? ( app-arch/bzip2 )
 	fam? ( virtual/fam )

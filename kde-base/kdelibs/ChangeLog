@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.850 2012/06/21 21:54:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.851 2012/06/30 12:16:48 aballier Exp $
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org> kdelibs-4.8.4.ebuild:
+  fix, again, utempter deps on freebsd, even repoman complains.
 
 *kdelibs-4.8.4 (21 Jun 2012)
 
