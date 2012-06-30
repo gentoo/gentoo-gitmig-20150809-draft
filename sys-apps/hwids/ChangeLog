@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.13 2012/06/30 09:37:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.14 2012/06/30 15:16:10 flameeyes Exp $
+
+  30 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> hwids-20120625.ebuild:
+  Fix; next time make sure the box you test and the box you commit are the same.
 
 *hwids-20120625 (30 Jun 2012)
 
