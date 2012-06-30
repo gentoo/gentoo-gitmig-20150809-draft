@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-demo/arx-fatalis-demo-0.ebuild,v 1.1 2012/06/29 21:48:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-demo/arx-fatalis-demo-0.ebuild,v 1.2 2012/06/30 15:09:54 hasufell Exp $
 
 EAPI=4
 
@@ -42,7 +42,8 @@ src_install() {
 	doins bin/Logo.bmp bin/Arx.ttf
 
 	# convert to lowercase
-	find "${D}" -type f -exec sh -c 'echo "${1}"
+	cd "${D}"
+	find . -type f -exec sh -c 'echo "${1}"
 	lower="`echo "${1}" | tr [:upper:] [:lower:]`"
 	[ "${1}" = "${lower}" ] || mv "${1}" "${lower}"' - {} \;
 
