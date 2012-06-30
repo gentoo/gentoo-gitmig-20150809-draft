@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-dvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.21 2012/01/28 04:28:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.22 2012/06/30 20:36:04 hd_brummy Exp $
+
+  30 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-dvd-0.3.7_pre20090106.ebuild:
+  eapi=4; vdr-plugin-2.eclass
 
   28 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/dvd-a52drc-pre20071113.diff, -vdr-dvd-0.3.7_pre20071113-r1.ebuild,

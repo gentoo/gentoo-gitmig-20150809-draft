@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20090106.ebuild,v 1.4 2012/01/28 04:26:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20090106.ebuild,v 1.5 2012/06/30 20:36:04 hd_brummy Exp $
 
-EAPI=3
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 MY_P=${PN}-cvs-${PV#*_pre}
 S=${WORKDIR}/${MY_P#vdr-}
