@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/rbtree-0.3.0-r2.ebuild,v 1.1 2011/06/15 17:41:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/rbtree-0.3.0-r2.ebuild,v 1.2 2012/06/30 06:19:01 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -20,6 +20,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
+
+all_ruby_prepare() {
+	# Fix test for random hash ordering.
+	sed -i -e '527 s/flatten/flatten.sort/g' test.rb || die
+}
 
 each_ruby_configure() {
 	${RUBY} extconf.rb || die
