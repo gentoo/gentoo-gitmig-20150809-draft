@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13905 2012/06/30 14:43:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13906 2012/06/30 14:48:00 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,6 +40,7 @@
 >=dev-ml/sexplib-7.0.5
 dev-ml/pa_ounit
 dev-ml/variantslib
+dev-ml/pipebang
 
 # Christian Faulhammer <fauli@gentoo.org> (30 Jun 2012)
 # temp mask until bump is finished
