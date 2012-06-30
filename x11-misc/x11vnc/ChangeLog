@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.96 2011/11/20 00:31:54 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.97 2012/06/30 11:04:59 ago Exp $
+
+  30 Jun 2012; Agostino Sarubbo <ago@gentoo.org> x11vnc-0.9.13.ebuild:
+  Stable for amd64, wrt bug #381699
 
 *x11vnc-0.9.13 (20 Nov 2011)
 
