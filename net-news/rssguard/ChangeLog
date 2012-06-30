@@ -1,0 +1,9 @@
+# ChangeLog for net-news/rssguard
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/rssguard/ChangeLog,v 1.1 2012/06/30 09:11:12 yngwin Exp $
+
+*rssguard-1.1.1 (30 Jun 2012)
+
+  30 Jun 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +rssguard-1.1.1.ebuild:
+  Initial commit. Fixes bug #401411.
