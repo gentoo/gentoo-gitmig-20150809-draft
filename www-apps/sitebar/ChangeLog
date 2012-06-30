@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/sitebar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.25 2010/09/11 15:18:00 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.26 2012/06/30 15:44:50 sbriesen Exp $
+
+*sitebar-3.3.9-r2 (30 Jun 2012)
+
+  30 Jun 2012; Stefan Briesenick <sbriesen@gentoo.org>
+  +sitebar-3.3.9-r2.ebuild, +files/inc_writer.inc.php.diff, metadata.xml:
+  EAPI=4, added PHP 5.3 patch, added optional plugins.
 
   11 Sep 2010; Matti Bickel <mabi@gentoo.org> sitebar-3.3.9-r1.ebuild:
   change virtual/php to virtual/httpd-php (bug #319623)
