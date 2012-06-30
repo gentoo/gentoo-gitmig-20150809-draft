@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1.ebuild,v 1.1 2012/05/31 11:59:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1.ebuild,v 1.2 2012/06/30 21:57:54 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ SRC_URI="http://pychess.googlecode.com/files/${P/_/}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="gstreamer"
 
 DEPEND="dev-python/librsvg-python

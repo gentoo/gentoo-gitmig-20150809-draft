@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pychess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.15 2012/05/31 11:59:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.16 2012/06/30 21:57:54 jdhore Exp $
+
+  30 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pychess-0.10.1.ebuild:
+  marked x86 per bug 424249
 
 *pychess-0.10.1 (31 May 2012)
 
