@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.41 2012/06/29 20:11:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.42 2012/06/30 05:00:28 mr_bones_ Exp $
+
+  30 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/pingus-0.7.6-noopengl.patch, pingus-0.7.6.ebuild:
+  fix USE=-opengl compile (bug #404425)
 
   29 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> pingus-0.7.6.ebuild:
   use the latest boost

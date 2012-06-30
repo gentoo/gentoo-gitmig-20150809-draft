@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.6.ebuild,v 1.6 2012/06/29 20:11:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.6.ebuild,v 1.7 2012/06/30 05:00:28 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic scons-utils toolchain-funcs games
@@ -38,6 +38,7 @@ src_prepare() {
 	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
 
 	strip-flags
+	epatch "${FILESDIR}"/${P}-noopengl.patch
 }
 
 src_compile() {
