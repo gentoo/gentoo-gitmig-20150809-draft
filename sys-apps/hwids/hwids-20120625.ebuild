@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20120611.ebuild,v 1.2 2012/06/16 12:51:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20120625.ebuild,v 1.1 2012/06/30 09:37:26 flameeyes Exp $
 
 EAPI="4"
 
