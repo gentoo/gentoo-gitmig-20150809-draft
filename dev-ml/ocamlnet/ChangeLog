@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.61 2012/06/30 18:16:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.62 2012/06/30 18:18:04 aballier Exp $
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org> ocamlnet-3.5.1.ebuild:
+  propagate ~ppc keywords since they were forgotten when rekeywording
 
   30 Jun 2012; Alexis Ballier <aballier@gentoo.org>
   -files/build_w_camlp5.dpatch, -ocamlnet-2.2.9-r1.ebuild,
