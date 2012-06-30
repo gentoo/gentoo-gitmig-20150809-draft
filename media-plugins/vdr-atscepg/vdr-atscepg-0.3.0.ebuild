@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/vdr-atscepg-0.3.0.ebuild,v 1.2 2009/10/30 20:28:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/vdr-atscepg-0.3.0.ebuild,v 1.3 2012/06/30 17:31:40 hd_brummy Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: receive schedule and event information from ATSC broadcasts"
 HOMEPAGE="http://www.fepg.org/atscepg.html"
@@ -19,8 +19,7 @@ DEPEND=">=media-video/vdr-1.6[atsc]"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	vdr-plugin_src_prepare
-	cd "${S}"
+	vdr-plugin-2_src_prepare
 
 	fix_vdr_libsi_include tables.cpp filter.cpp
 }
