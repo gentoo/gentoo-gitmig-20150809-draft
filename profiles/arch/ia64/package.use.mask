@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.82 2012/06/27 13:04:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.83 2012/06/30 12:56:37 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (30 Jun 2012)
+# Missing keywords for connman
+net-libs/gupnp connman
 
 # Davide Pesavento <pesa@gentoo.org> (27 Jun 2012)
 # qscintilla is stable but qscintilla-python, required by
