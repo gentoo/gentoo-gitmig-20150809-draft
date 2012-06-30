@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13911 2012/06/30 17:17:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13912 2012/06/30 18:55:41 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,19 +34,6 @@
 # Tim Harder <radhermit@gentoo.org> (30 Jun 2012)
 # Mask development releases
 =media-gfx/luminance-hdr-2.3.0*
-
-# Alexis Ballier <aballier@gentoo.org> (30 Jun 2012)
-# type-conv breaks its rev. deps. Mask it and packages depending on it until
-# everything is fine
->=dev-ml/type-conv-3.0.5
->=dev-ml/bin-prot-108.00.01
->=dev-ml/fieldslib-108.00.01
->=dev-ml/sexplib-7.0.5
-dev-ml/pa_ounit
-dev-ml/variantslib
-dev-ml/pipebang
->=dev-ml/core-108.00.01
->=dev-ml/core_extended-108.00.01
 
 # Richard Yao <ryao@gentoo.org> (29 Jun 2012)
 # Patch introduced regressions
