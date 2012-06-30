@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.0-r1.ebuild,v 1.2 2012/06/19 14:44:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/libXcm-0.5.1.ebuild,v 1.1 2012/06/30 07:35:41 xmw Exp $
 
 EAPI=4
-
-inherit autotools eutils
 
 DESCRIPTION="reference implementation of the net-color spec"
 HOMEPAGE="http://www.oyranos.org/libxcm/"
@@ -21,11 +19,6 @@ RDEPEND="X? ( x11-libs/libXmu
 		x11-proto/xproto )"
 DEPEND="${RDEPEND}
 	app-doc/doxygen"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-buildsystem.patch
-	eautoreconf
-}
 
 src_configure() {
 	econf --disable-silent-rules \
