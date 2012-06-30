@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/screengrab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.24 2012/06/30 21:58:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.25 2012/06/30 22:02:15 johu Exp $
+
+  30 Jun 2012; Johannes Huber <johu@gentoo.org> -screengrab-0.9.85.ebuild:
+  Remove old.
 
   30 Jun 2012; Jeff Horelick <jdhore@gentoo.org> screengrab-0.9.90-r1.ebuild:
   marked x86 per bug 424223
@@ -106,4 +109,3 @@
   +screengrab-0.6.1.ebuild, +metadata.xml:
   Initial commit of screengrab application. Fixes bug #307093. Thanks to
   tuupic <me@tuupic.org.ru> for the initial ebuild. 
-
