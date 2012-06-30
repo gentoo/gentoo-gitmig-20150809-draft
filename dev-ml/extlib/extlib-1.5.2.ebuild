@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.5.2.ebuild,v 1.4 2012/03/08 11:46:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/extlib/extlib-1.5.2.ebuild,v 1.5 2012/06/30 20:25:34 aballier Exp $
 
 EAPI="2"
 
@@ -15,6 +15,10 @@ RDEPEND="${DEPEND}"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc +ocamlopt"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-ocaml4.patch"
+}
 
 src_compile() {
 	emake all || die "failed to build"
