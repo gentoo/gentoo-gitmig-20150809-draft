@@ -1,14 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.3 2012/04/07 02:06:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.4 2012/06/30 18:45:04 hd_brummy Exp $
 
 EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 VERSION="832" # every bump, new version!
-
-#RESTRICT="test"
 
 DESCRIPTION="VDR Plugin: burn records on DVD"
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/plg-burn"
@@ -39,7 +37,7 @@ DEPEND="${DEPEND}
 S="${WORKDIR}/${P#vdr-}"
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	epatch "${FILESDIR}/${P}_gentoo-path.diff"
 	epatch "${FILESDIR}/${P}_setdefaults.diff"
@@ -62,7 +60,7 @@ src_prepare() {
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	dobin "${S}"/*.sh
 
@@ -98,7 +96,7 @@ pkg_postinst() {
 		chown vdr:vdr "${DMH_FILE}"
 	fi
 
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	einfo
 	einfo "This ebuild comes only with the standard template"
