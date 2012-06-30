@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.122 2011/06/01 19:49:53 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.123 2012/06/30 01:20:52 creffett Exp $
+
+  30 Jun 2012; <creffett@gentoo.org> kaffeine-1.2.2.ebuild,
+  +files/kaffeine-1.2.2-gcc4.7.patch:
+  Added patch to fix building with gcc 4.7, wrt bug 424057
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> kaffeine-1.2.2.ebuild:
   Marking kaffeine-1.2.2 ppc stable for bug 354033

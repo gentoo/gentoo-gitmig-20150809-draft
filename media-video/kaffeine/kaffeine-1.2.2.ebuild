@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-1.2.2.ebuild,v 1.4 2011/06/01 19:49:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-1.2.2.ebuild,v 1.5 2012/06/30 01:20:52 creffett Exp $
 
 EAPI=4
 
@@ -28,6 +28,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 DOCS=( Changelog NOTES )
+
+PATCHES=( "${FILESDIR}/${PN}-1.2.2-gcc4.7.patch" )
 
 src_configure() {
 	local mycmakeargs=(
