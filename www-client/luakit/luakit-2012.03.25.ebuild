@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.20 2012/06/30 13:05:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-2012.03.25.ebuild,v 1.1 2012/06/30 13:05:47 radhermit Exp $
 
 EAPI=4
 

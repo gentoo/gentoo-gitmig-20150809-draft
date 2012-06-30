@@ -1,6 +1,13 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.28 2012/05/03 06:01:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.29 2012/06/30 13:05:47 radhermit Exp $
+
+*luakit-2012.03.25 (30 Jun 2012)
+
+  30 Jun 2012; Tim Harder <radhermit@gentoo.org> +luakit-2012.03.25.ebuild,
+  luakit-9999.ebuild:
+  Version bump (bug #410729) and update live ebuild. Update to EAPI 4, respect
+  CFLAGS, respect CC, and use vcs-snapshot eclass to unpack release tarballs.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> luakit-2010.12.25_p2.ebuild,
   luakit-2011.04.13.ebuild, luakit-2011.04.13_p1.ebuild,
