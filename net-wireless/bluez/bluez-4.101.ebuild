@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101.ebuild,v 1.1 2012/06/23 11:46:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101.ebuild,v 1.2 2012/06/30 11:10:25 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -119,7 +119,7 @@ src_install() {
 		dobin simple-agent simple-service monitor-bluetooth
 		newbin list-devices list-bluetooth-devices
 		rm test-textfile.{c,o} || die # bug #356529
-		for b in apitest hsmicro hsplay test-* ; do
+		for b in hsmicro hsplay test-* ; do
 			newbin "${b}" "bluez-${b}"
 		done
 		insinto /usr/share/doc/${PF}/test-services
