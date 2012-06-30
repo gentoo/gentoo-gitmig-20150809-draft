@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/squeezeslave-1.1_p350.ebuild,v 1.1 2012/06/30 10:49:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/squeezeslave-1.1_p350.ebuild,v 1.2 2012/06/30 11:00:21 radhermit Exp $
 
 EAPI="4"
 
@@ -47,6 +47,6 @@ src_install() {
 	dobin bin/${PN}
 	dodoc ChangeLog TODO
 
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
-	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	newconfd "${FILESDIR}"/${PN}.confd-r1 ${PN}
+	newinitd "${FILESDIR}"/${PN}.initd-r1 ${PN}
 }
