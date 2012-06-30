@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/squeezeslave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/ChangeLog,v 1.8 2012/05/16 08:42:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/ChangeLog,v 1.9 2012/06/30 10:49:55 radhermit Exp $
+
+*squeezeslave-1.1_p350 (30 Jun 2012)
+
+  30 Jun 2012; Tim Harder <radhermit@gentoo.org> +squeezeslave-1.1_p350.ebuild,
+  +files/squeezeslave-1.1_p350-tremor-headers.patch, metadata.xml:
+  Version bump. Add tremor use flag.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> squeezeslave-1.1_p309.ebuild,
   squeezeslave-1.1_p312.ebuild:
