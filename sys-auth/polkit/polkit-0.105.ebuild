@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.105.ebuild,v 1.2 2012/05/20 13:15:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.105.ebuild,v 1.3 2012/06/30 10:27:11 swift Exp $
 
 EAPI=4
 inherit pam
@@ -12,12 +12,13 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug doc examples gtk +introspection kde nls pam systemd"
+IUSE="debug doc examples gtk +introspection kde nls pam selinux systemd"
 
 RDEPEND=">=dev-libs/glib-2.30
 	>=dev-libs/expat-2
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 	pam? ( virtual/pam )
+	selinux? ( sec-policy/selinux-policykit )
 	systemd? ( sys-apps/systemd )"
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
