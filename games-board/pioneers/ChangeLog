@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pioneers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.26 2012/05/30 15:53:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.27 2012/06/30 21:57:49 jdhore Exp $
+
+  30 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pioneers-14.1.ebuild:
+  marked x86 per bug 424247
 
 *pioneers-14.1 (30 May 2012)
 
