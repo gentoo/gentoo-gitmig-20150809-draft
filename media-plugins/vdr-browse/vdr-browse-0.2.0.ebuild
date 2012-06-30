@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-browse/vdr-browse-0.2.0.ebuild,v 1.2 2011/01/28 17:42:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-browse/vdr-browse-0.2.0.ebuild,v 1.3 2012/06/30 18:23:55 hd_brummy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: browse now/next epg info while keep watching the current channel"
 HOMEPAGE="http://www.fepg.org/"
