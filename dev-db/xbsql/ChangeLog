@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/xbsql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.10 2012/06/16 14:56:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.11 2012/06/30 17:15:51 jlec Exp $
+
+*xbsql-0.11-r1 (30 Jun 2012)
+
+  30 Jun 2012; Justin Lecher <jlec@gentoo.org> xbsql-0.11.ebuild,
+  +xbsql-0.11-r1.ebuild, +files/xbsql-0.11-autotools.patch,
+  +files/xbsql-0.11-ncurses64.patch, +files/xbsql-0.11-xbase64.patch,
+  metadata.xml:
+  Add fixes for newer xbase library, use autotools-utils and autoreconf,
+  respect LDFLAGS, #334897
 
   16 Jun 2012; Pacho Ramos <pacho@gentoo.org> xbsql-0.11.ebuild:
   Be less strict with xbase dependency.

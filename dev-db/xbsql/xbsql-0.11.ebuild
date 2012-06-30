@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/xbsql-0.11.ebuild,v 1.9 2012/06/16 14:56:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/xbsql-0.11.ebuild,v 1.10 2012/06/30 17:15:51 jlec Exp $
 
 inherit base
 
-DESCRIPTION="XBSQL: An SQL Wrapper for the XBase library"
+DESCRIPTION="An SQL Wrapper for the XBase library"
 HOMEPAGE="http://www.rekallrevealed.org/"
 SRC_URI="http://www.rekallrevealed.org/packages/${P}.tgz"
 
