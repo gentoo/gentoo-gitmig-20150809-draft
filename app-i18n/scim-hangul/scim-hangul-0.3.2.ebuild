@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.3.2.ebuild,v 1.8 2012/05/03 19:24:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-hangul/scim-hangul-0.3.2.ebuild,v 1.9 2012/06/30 13:53:34 naota Exp $
 
 EAPI=2
 inherit base
@@ -21,7 +21,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-PATCHES=( "${FILESDIR}/${P}+gcc-4.3.patch" )
+PATCHES=( 
+	"${FILESDIR}/${P}+gcc-4.3.patch"
+	"${FILESDIR}/${P}+gcc-4.7.patch" )
 
 src_configure() {
 	econf \
