@@ -1,34 +1,31 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.5.ebuild,v 1.1 2012/05/06 16:15:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.5.ebuild,v 1.2 2012/06/30 16:05:52 jlec Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs
+
+AUTOTOOLS_AUTORECONF=yes
+
+inherit autotools-utils eutils toolchain-funcs
 
 DESCRIPTION="library for Irman control of Unix software"
-SRC_URI="http://www.lirc.org/software/snapshots/${P}.tar.bz2"
 HOMEPAGE="http://www.lirc.org/software/snapshots/"
+SRC_URI="http://www.lirc.org/software/snapshots/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="static-libs"
 
-pkg_setup() {
+DOCS=( TECHNICAL NEWS README TODO )
+
+src_prepare() {
 	tc-export CC LD AR RANLIB
-}
-
-src_configure() {
-	econf --disable-static
+	autotools-utils_src_prepare
 }
 
 src_install() {
-	dodir /usr/include
+	autotools-utils_src_install LIRC_DRIVER_DEVICE="${D}/dev/lirc"
 
-	emake DESTDIR="${D}" LIRC_DRIVER_DEVICE="${D}/dev/lirc" install
-
-	dobin test_func test_io test_name
-	dodoc NEWS README* TECHNICAL TODO
-
-	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+	dobin ${AUTOTOOLS_BUILD_DIR}/test_{func,io,name}
 }
