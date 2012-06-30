@@ -1,0 +1,22 @@
+diff -burN razorqt-0.4.1.orig/razorqt-session/src/main.cpp razorqt-0.4.1/razorqt-session/src/main.cpp
+--- razorqt-0.4.1.orig/razorqt-session/src/main.cpp	2012-06-30 13:57:37.761145972 +0800
++++ razorqt-0.4.1/razorqt-session/src/main.cpp	2012-06-30 14:01:22.813260094 +0800
+@@ -27,6 +27,7 @@
+ 
+ #include <QApplication>
+ #include <QIcon>
++#include <unistd.h>
+ 
+ #include "razormodman.h"
+ #include "sessiondbusadaptor.h"
+diff -burN razorqt-0.4.1.orig/razorqt-session/src/razormodman.cpp razorqt-0.4.1/razorqt-session/src/razormodman.cpp
+--- razorqt-0.4.1.orig/razorqt-session/src/razormodman.cpp	2012-02-13 18:24:51.000000000 +0800
++++ razorqt-0.4.1/razorqt-session/src/razormodman.cpp	2012-06-30 14:02:05.859693558 +0800
+@@ -28,6 +28,7 @@
+ #include "razormodman.h"
+ #include <razorqt/razorsettings.h>
+ #include <qtxdg/xdgautostart.h>
++#include <unistd.h>
+ 
+ #include <QtDebug>
+ #include <QDBusInterface>

@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/razorqt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/ChangeLog,v 1.4 2012/04/23 20:38:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/ChangeLog,v 1.5 2012/06/30 06:17:05 yngwin Exp $
+
+  30 Jun 2012; Ben de Groot <yngwin@gentoo.org>
+  +files/razorqt-0.4.1-add-missing-headers.patch, -razorqt-0.4.1-r1.ebuild,
+  razorqt-0.4.1-r2.ebuild:
+  Add patch to fix compilation with gcc-4.7 (bug #423759). Remove old revision.
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> razorqt-0.4.1-r1.ebuild,
   razorqt-0.4.1-r2.ebuild:
@@ -27,4 +32,3 @@
   +razorqt-0.4.1.ebuild:
   Initial commit of Razor-qt WM. Thanks to all the people who contributed on bug
   #382875
-

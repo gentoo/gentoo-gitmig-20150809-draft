@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/razorqt-0.4.1-r2.ebuild,v 1.2 2012/04/23 20:38:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/razorqt/razorqt-0.4.1-r2.ebuild,v 1.3 2012/06/30 06:17:05 yngwin Exp $
 
 EAPI=4
 
@@ -60,6 +60,7 @@ RDEPEND="${COMMON_DEPEND}
 PATCHES=(
 	"${FILESDIR}/${P}-automagic.patch"
 	"${FILESDIR}/${P}-unbundle-xdg-utils.patch"
+	"${FILESDIR}/${P}-add-missing-headers.patch"
 )
 
 src_configure() {
