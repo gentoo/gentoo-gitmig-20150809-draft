@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/dsiutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.14 2012/04/13 18:05:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.15 2012/06/30 21:50:40 sera Exp $
+
+*dsiutils-1.0.10-r2 (30 Jun 2012)
+
+  30 Jun 2012; Ralph Sennhauser <sera@gentoo.org> -dsiutils-1.0.4.ebuild,
+  -dsiutils-1.0.5.ebuild, -dsiutils-1.0.7.ebuild, -dsiutils-1.0.10.ebuild,
+  +dsiutils-1.0.10-r2.ebuild:
+  Restrict build to <jdk7. #423519
+  Fix source zip and make better use of eclasses.
+  Remove old.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> dsiutils-1.0.4.ebuild,
   dsiutils-1.0.5.ebuild, dsiutils-1.0.7.ebuild, dsiutils-1.0.10.ebuild,
