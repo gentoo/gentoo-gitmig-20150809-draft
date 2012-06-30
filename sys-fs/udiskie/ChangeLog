@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udiskie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.17 2012/04/17 15:13:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.18 2012/06/30 03:08:16 radhermit Exp $
+
+*udiskie-0.4.0 (30 Jun 2012)
+
+  30 Jun 2012; Tim Harder <radhermit@gentoo.org> +udiskie-0.4.0.ebuild:
+  Version bump.
 
   17 Apr 2012; Michał Górny <mgorny@gentoo.org> udiskie-0.3.10.ebuild:
   Use mirror://bitbucket.
