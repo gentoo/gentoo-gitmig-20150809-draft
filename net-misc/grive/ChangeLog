@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/grive
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.1 2012/06/30 00:56:07 ottxor Exp $
+
+*grive-0.2_pre20120628 (30 Jun 2012)
+
+  30 Jun 2012; Christoph Junghans <ottxor@gentoo.org>
+  +grive-0.2_pre20120628.ebuild, +metadata.xml:
+  initial commit
+
