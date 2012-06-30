@@ -1,6 +1,15 @@
 # ChangeLog for games-rpg/arx-fatalis-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/ChangeLog,v 1.1 2012/06/29 21:48:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/ChangeLog,v 1.2 2012/06/30 15:17:15 hasufell Exp $
+
+*arx-fatalis-data-1.21-r1 (30 Jun 2012)
+
+  30 Jun 2012; Julian Ospald <hasufell@gentoo.org>
+  -arx-fatalis-data-1.21.ebuild, +arx-fatalis-data-1.21-r1.ebuild,
+  metadata.xml:
+  add proxy-maintainer, fix installation for custom PORTAGE_TMPDIR, don't
+  assume any case for .pak files, support languages for the patch so we get
+  updated loc.pak
 
 *arx-fatalis-data-1.21 (29 Jun 2012)
 
