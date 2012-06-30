@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta.ebuild,v 1.5 2012/06/24 18:59:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6.ebuild,v 1.1 2012/06/30 09:17:19 scarabeus Exp $
 
 EAPI=4
 
@@ -287,12 +287,11 @@ pkg_setup() {
 src_unpack() {
 	if [[ ${MY_V[2]} == beta ]]; then
 		unpack ${A}
-		RUN=${A/%.zip/.run}
+		RUN="${S}/${A/%.zip/.run}"
 	else
-		RUN=${A}
+		RUN="${DISTDIR}/${A}"
 	fi
-	sh "${S}"/${RUN} --extract "${S}" # 2>&1 > /dev/null || die \
-#	'unpack failed'
+	sh ${RUN} --extract "${S}" # 2>&1 > /dev/null || die
 }
 
 src_prepare() {

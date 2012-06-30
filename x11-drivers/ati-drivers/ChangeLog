@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.289 2012/06/24 18:59:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.290 2012/06/30 09:17:19 scarabeus Exp $
+
+*ati-drivers-12.6 (30 Jun 2012)
+
+  30 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -ati-drivers-12.6_beta.ebuild, +ati-drivers-12.6.ebuild:
+  Version bump to proper release from the beta.
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ati-drivers-12.6_beta.ebuild:
   Stable for x86, wrt bug #419473
