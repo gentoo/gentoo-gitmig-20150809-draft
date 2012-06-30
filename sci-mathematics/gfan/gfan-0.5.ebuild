@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/gfan-0.5.ebuild,v 1.6 2011/12/14 09:00:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/gfan-0.5.ebuild,v 1.7 2012/06/30 02:06:45 tomka Exp $
 
 EAPI="3"
 
@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}${PV}/"
 
 src_prepare () {
+	epatch "${FILESDIR}/${P}-double-declare-fix.patch"
 	sed -i -e "s/-O2/${CXXFLAGS}/" \
 		-e "/GPROFFLAG =/d" \
 		-e "s/g++/$(tc-getCXX)/" \

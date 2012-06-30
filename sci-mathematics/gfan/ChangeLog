@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gfan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/ChangeLog,v 1.9 2011/12/14 09:00:45 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/ChangeLog,v 1.10 2012/06/30 02:06:45 tomka Exp $
+
+  30 Jun 2012; Thomas Kahle <tomka@gentoo.org> gfan-0.5.ebuild,
+  +files/gfan-0.5-double-declare-fix.patch:
+  Fix double declare (for gcc-4.7) in bug 424099
 
   14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gfan-0.5.ebuild:
   x86 stable wrt bug #393785
