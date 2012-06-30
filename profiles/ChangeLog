@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6730 2012/06/30 16:09:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6731 2012/06/30 16:43:42 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jun 2012; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask =media-gfx/luminance-hdr-2.3.0* development releases.
 
   30 Jun 2012; Christian Faulhammer <fauli@gentoo.org> package.mask:
   remove temp mask for Claws Mail and plugins, bump finished
