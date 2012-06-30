@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.133 2012/06/19 06:52:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.134 2012/06/30 08:06:29 ssuominen Exp $
+
+*psmisc-22.19 (30 Jun 2012)
+
+  30 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +psmisc-22.19.ebuild:
+  Version bump.
 
   19 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -psmisc-22.15.ebuild,
   -files/psmisc-22.15-COMM_LEN-to-18.patch, -psmisc-22.17.ebuild:
