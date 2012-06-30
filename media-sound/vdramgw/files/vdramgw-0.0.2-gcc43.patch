@@ -5,7 +5,7 @@ diff -ur amarok-0.0.2.orig/Sockets.cpp amarok-0.0.2/Sockets.cpp
  
  #include "Sockets.h"
  
-+#include <string.h>
++#include <cstring>
  #include <sstream>
  
  #ifndef WIN32
@@ -16,7 +16,7 @@ diff -ur amarok-0.0.2.orig/vdramgw/Sockets.cpp amarok-0.0.2/vdramgw/Sockets.cpp
  
  #include "Sockets.h"
  
-+#include <string.h>
++#include <cstring>
  #include <sstream>
  
  #ifndef WIN32
@@ -28,7 +28,7 @@ diff -ur amarok-0.0.2.orig/vdramgw/vdramgw.cpp amarok-0.0.2/vdramgw/vdramgw.cpp
  #endif
  
 -
-+#include <string.h>
++#include <cstring>
  #include <unistd.h>
  #include <getopt.h>
  #include <iostream>

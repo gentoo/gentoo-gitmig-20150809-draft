@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vdramgw/vdramgw-0.0.2.ebuild,v 1.5 2010/08/13 21:31:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vdramgw/vdramgw-0.0.2.ebuild,v 1.6 2012/06/30 16:03:20 hd_brummy Exp $
+
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -16,18 +18,20 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
-
-S="${WORKDIR}/${MY_P#vdr-}/${PN}"
+RDEPEND="${DEPEND}"
 RDEPEND="media-sound/amarok"
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+S="${WORKDIR}/${MY_P#vdr-}/${PN}"
+
+src_prepare() {
 	# Respect CC,CXXFLAGS, LDFLAGS
 	sed -i -e "/^CXX /s:?=.*:= $(tc-getCXX):" \
 		-e "/^CXXFLAGS/s:?=.*:= ${CFLAGS}:" \
 		-e "s:\$(CXXFLAGS):& \$(LDFLAGS) :" "${S}"/Makefile
+
+	cd "${WORKDIR}/${MY_P#vdr-}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}/${P}_gcc-4.7.diff"
 }
 
 src_install() {
