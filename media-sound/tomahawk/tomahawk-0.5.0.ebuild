@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.4.1.ebuild,v 1.1 2012/04/06 22:32:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.5.0.ebuild,v 1.1 2012/06/30 21:33:39 johu Exp $
 
 EAPI=4
 
@@ -22,49 +22,42 @@ HOMEPAGE="http://tomahawk-player.org/"
 
 LICENSE="GPL-3 BSD"
 SLOT="0"
-IUSE="debug fftw jabber libsamplerate +resolver twitter"
+IUSE="debug fftw jabber libsamplerate twitter"
 
 DEPEND="
 	app-crypt/qca
 	>=dev-cpp/clucene-2.3.3.4
 	>=dev-libs/boost-1.41
-	>=dev-libs/qjson-0.7.1
-	>=media-libs/libechonest-1.1.10
+	>=dev-libs/libattica-0.4.0
+	dev-libs/qjson
+	dev-libs/quazip
+	>=media-libs/liblastfm-1.0.1
+	media-libs/libechonest
 	>=media-libs/phonon-4.5.0
 	media-libs/taglib
+	x11-libs/libX11
 	>=x11-libs/qt-core-${QT_MINIMAL}:4
+	>=x11-libs/qt-dbus-${QT_MINIMAL}:4
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4
 	>=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite]
 	>=x11-libs/qt-webkit-${QT_MINIMAL}:4
-	>=x11-libs/qt-xmlpatterns-${QT_MINIMAL}:4
 	fftw? ( sci-libs/fftw:3.0 )
 	jabber? ( net-libs/jreen )
 	libsamplerate? ( media-libs/libsamplerate )
-	resolver? (
-		dev-libs/libattica
-		>=dev-libs/quazip-0.4.3
-	)
 	twitter? ( net-libs/qtweetlib )
 "
 RDEPEND="${DEPEND}
 	app-crypt/qca-ossl
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-0.3.2-remove-quazip.patch"
-)
-
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with jabber Jreen)
-		$(cmake-utils_use_with resolver LibAttica)
-		$(cmake-utils_use_with resolver QuaZip)
 		$(cmake-utils_use_with twitter QTweetLib)
-		-DINTERNAL_JREEN=OFF
 	)
 
 	if [[ ${PV} != *9999* ]]; then
-		mycmakeargs+=(	-DBUILD_RELEASE=ON )
+		mycmakeargs+=( -DBUILD_RELEASE=ON )
 	fi
 
 	cmake-utils_src_configure
@@ -76,13 +69,4 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-}
-
-pkg_postinst() {
-	if ! use resolver; then
-		echo
-		elog "Information on how to get more resolvers for ${PN}"
-		elog "is available at ${HOMEPAGE}resolvers"
-		echo
-	fi
 }
