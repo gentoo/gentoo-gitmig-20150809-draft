@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/files/mythbackend.init,v 1.3 2012/06/27 00:39:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/files/mythbackend.init,v 1.4 2012/06/30 05:05:10 cardoe Exp $
 
 description="MythTV backend recording daemon"
 extra_commands="resched upnprebuild"
@@ -30,7 +30,7 @@ start() {
 	ebegin "Starting MythTV Backend"
 	start-stop-daemon --start --quiet --exec /usr/bin/mythbackend \
                 --pidfile /var/run/mythbackend.pid -- \
-		--daemon --pidfile /var/run/mythbackend.pid --user mythtv
+		--daemon --pidfile /var/run/mythbackend.pid --user mythtv \
 		--verbose ${MYTHBACKEND_VERBOSE} \
 		--logpath /var/log/mythtv/ \
 		${MYTHBACKEND_OPTS}

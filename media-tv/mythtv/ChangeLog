@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.352 2012/06/28 15:01:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.353 2012/06/30 05:05:10 cardoe Exp $
+
+  30 Jun 2012; Doug Goldstein <cardoe@gentoo.org> files/mythbackend.init:
+  Fix typo in the init script
 
   28 Jun 2012; Doug Goldstein <cardoe@gentoo.org> mythtv-0.25.1.ebuild:
   Add missing depend on x11-libs/qt-dbus.
