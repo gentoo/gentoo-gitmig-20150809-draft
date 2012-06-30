@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13899 2012/06/30 12:18:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13900 2012/06/30 12:31:50 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (30 Jun 2012)
+# type-conv breaks its rev. deps. Mask it and packages depending on it until
+# everything is fine
+>=dev-ml/type-conv-3.0.5
 
 # Christian Faulhammer <fauli@gentoo.org> (30 Jun 2012)
 # temp mask until bump is finished
