@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.60 2012/06/14 17:52:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.61 2012/06/30 18:16:20 aballier Exp $
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org>
+  -files/build_w_camlp5.dpatch, -ocamlnet-2.2.9-r1.ebuild,
+  -files/ocamlnet-2.2.9-glibc28.patch, -ocamlnet-3.2.1.ebuild,
+  -ocamlnet-3.4.1.ebuild:
+  remove old
 
   14 Jun 2012; Michael Weber <xmw@gentoo.org> ocamlnet-3.5.ebuild:
   ppc stable (bug 405959)
