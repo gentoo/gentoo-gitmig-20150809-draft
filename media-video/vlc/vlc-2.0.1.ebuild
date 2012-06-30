@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.1.ebuild,v 1.17 2012/06/14 21:35:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.1.ebuild,v 1.18 2012/06/30 20:12:06 aballier Exp $
 
 EAPI="4"
 
@@ -162,9 +162,7 @@ REQUIRED_USE="
 	dvb? ( dvbpsi )
 	dxva2? ( avcodec )
 	egl? ( X )
-	avcodec? ( ffmpeg )
-	avformat? ( ffmpeg )
-	swscale? ( ffmpeg )
+	ffmpeg? ( avcodec avformat swscale postproc )
 	fontconfig? ( truetype )
 	gnutls? ( gcrypt )
 	libtar? ( skins )

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.811 2012/06/30 12:26:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.812 2012/06/30 20:12:06 aballier Exp $
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.2.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  fix ffmpeg useflag logic: it means avcodec, avformat, swscale and postproc,
+  bug #423017 by Hans
 
 *vlc-2.0.2 (30 Jun 2012)
 

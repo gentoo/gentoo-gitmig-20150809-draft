@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.176 2012/06/12 18:30:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.177 2012/06/30 20:12:06 aballier Exp $
 
 EAPI="4"
 
@@ -159,9 +159,7 @@ REQUIRED_USE="
 	dvb? ( dvbpsi )
 	dxva2? ( avcodec )
 	egl? ( X )
-	avcodec? ( ffmpeg )
-	avformat? ( ffmpeg )
-	swscale? ( ffmpeg )
+	ffmpeg? ( avcodec avformat swscale postproc )
 	fontconfig? ( truetype )
 	gnutls? ( gcrypt )
 	libcaca? ( X )
