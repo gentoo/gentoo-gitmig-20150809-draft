@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6729 2012/06/30 15:07:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6730 2012/06/30 16:09:02 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jun 2012; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  remove temp mask for Claws Mail and plugins, bump finished
 
   30 Jun 2012; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask new dev-ml/core
