@@ -1,7 +1,7 @@
-From 6eff7de2e19b0970b04b8721be4f46577617894c Mon Sep 17 00:00:00 2001
+From 649b237e95315e9858cfb038f9f7f95199584cbd Mon Sep 17 00:00:00 2001
 From: Mike Perry <mikeperry-git@torproject.org>
-Date: Wed, 1 Feb 2012 16:01:21 -0800
-Subject: [PATCH 11/18] Limit the number of fonts per document.
+Date: Thu, 7 Jun 2012 15:09:59 -0700
+Subject: [PATCH 16/20] Limit the number of fonts per document.
 
 We create two prefs:
 browser.display.max_font_count and browser.display.max_font_attempts.
@@ -23,10 +23,10 @@ https://www.torproject.org/projects/torbrowser/design/#fingerprinting-linkabilit
  3 files changed, 119 insertions(+), 3 deletions(-)
 
 diff --git a/layout/base/nsPresContext.cpp b/layout/base/nsPresContext.cpp
-index e1587db..9690d9c 100644
+index f3815fb..1ab210e 100644
 --- a/layout/base/nsPresContext.cpp
 +++ b/layout/base/nsPresContext.cpp
-@@ -98,6 +98,8 @@
+@@ -97,6 +97,8 @@
  #include "FrameLayerBuilder.h"
  #include "nsDOMMediaQueryList.h"
  #include "nsSMILAnimationController.h"
@@ -35,7 +35,7 @@ index e1587db..9690d9c 100644
  
  #ifdef IBMBIDI
  #include "nsBidiPresUtils.h"
-@@ -706,6 +708,10 @@ nsPresContext::GetUserPreferences()
+@@ -772,6 +774,10 @@ nsPresContext::GetUserPreferences()
    // * use fonts?
    mUseDocumentFonts =
      Preferences::GetInt("browser.display.use_document_fonts") != 0;
@@ -46,7 +46,7 @@ index e1587db..9690d9c 100644
  
    // * replace backslashes with Yen signs? (bug 245770)
    mEnableJapaneseTransform =
-@@ -1300,6 +1306,100 @@ nsPresContext::GetDefaultFont(PRUint8 aFontID) const
+@@ -1381,6 +1387,100 @@ nsPresContext::GetDefaultFont(PRUint8 aFontID, nsIAtom *aLanguage) const
    return font;
  }
  
@@ -148,10 +148,10 @@ index e1587db..9690d9c 100644
  nsPresContext::SetFullZoom(float aZoom)
  {
 diff --git a/layout/base/nsPresContext.h b/layout/base/nsPresContext.h
-index ecd01d8..552a69a 100644
+index e367c5f..3d979f1 100644
 --- a/layout/base/nsPresContext.h
 +++ b/layout/base/nsPresContext.h
-@@ -548,6 +548,13 @@ public:
+@@ -535,6 +535,13 @@ public:
      }
    }
  
@@ -162,10 +162,10 @@ index ecd01d8..552a69a 100644
 +  PRBool FontUseCountReached(const nsFont &font);
 +  PRBool FontAttemptCountReached(const nsFont &font);
 +
-   PRInt32 MinFontSize() const {
-     return NS_MAX(mMinFontSize, mMinimumFontSizePref);
-   }
-@@ -1117,6 +1124,8 @@ protected:
+   /**
+    * Get the minimum font size for the specified language. If aLanguage
+    * is nsnull, then the document's language is used.
+@@ -1188,6 +1195,8 @@ protected:
    PRUint32              mInterruptChecksToSkip;
  
    mozilla::TimeStamp    mReflowStartTime;
@@ -175,31 +175,28 @@ index ecd01d8..552a69a 100644
    unsigned              mHasPendingInterrupt : 1;
    unsigned              mInterruptsEnabled : 1;
 diff --git a/layout/style/nsRuleNode.cpp b/layout/style/nsRuleNode.cpp
-index 27336bf..827585a 100644
+index 4b134b2..82b1dd7 100644
 --- a/layout/style/nsRuleNode.cpp
 +++ b/layout/style/nsRuleNode.cpp
-@@ -3091,6 +3091,7 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
+@@ -3102,14 +3102,15 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
  
-   // See if there is a minimum font-size constraint to honor
-   nscoord minimumFontSize = mPresContext->MinFontSize();
-+  PRBool isXUL = PR_FALSE;
+   bool useDocumentFonts =
+     mPresContext->GetCachedBoolPref(kPresContext_UseDocumentFonts);
++  bool isXUL = PR_FALSE;
  
-   if (minimumFontSize < 0)
-     minimumFontSize = 0;
-@@ -3102,10 +3103,10 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
+   // See if we are in the chrome
    // We only need to know this to determine if we have to use the
-   // document fonts (overriding the useDocumentFonts flag), or to
-   // determine if we have to override the minimum font-size constraint.
--  if ((!useDocumentFonts || minimumFontSize > 0) && mPresContext->IsChrome()) {
+   // document fonts (overriding the useDocumentFonts flag).
+-  if (!useDocumentFonts && mPresContext->IsChrome()) {
 +  if (mPresContext->IsChrome()) {
      // if we are not using document fonts, but this is a XUL document,
      // then we use the document fonts anyway
 -    useDocumentFonts = true;
-+    isXUL = PR_TRUE;
-     minimumFontSize = 0;
++    isXUL = true;
    }
  
-@@ -3120,9 +3121,13 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
+   // Figure out if we are a generic font
+@@ -3123,9 +3124,13 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
      // generic?
      nsFont::GetGenericID(font->mFont.name, &generic);
  
@@ -214,8 +211,8 @@ index 27336bf..827585a 100644
        // Extract the generic from the specified font family...
        nsAutoString genericName;
        if (!font->mFont.EnumerateFamilies(ExtractGeneric, &genericName)) {
-@@ -3158,6 +3163,8 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
-                                minimumFontSize, font);
+@@ -3161,6 +3166,8 @@ nsRuleNode::ComputeFontData(void* aStartStruct,
+                                font);
    }
  
 +  if (font->mGenericID == kGenericFont_NONE)

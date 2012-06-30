@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-10.0.5.ebuild,v 1.1 2012/06/06 22:21:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-13.0.ebuild,v 1.1 2012/06/30 20:43:10 hasufell Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
-MOZ_ESR="1"
+MOZ_ESR=""
 
 MY_PN="firefox"
 # latest version of the torbrowser-bundle we use the profile-folder from
 # https://www.torproject.org/dist/torbrowser/linux/
-TB_V="2.2.36-1"
+TB_V="2.2.37-1"
 
 MOZ_P="${MY_PN}-${PV}"
 
@@ -20,7 +20,7 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${MY_PN}-10.0-patches-0.8"
+PATCH="${MY_PN}-13.0-patches-0.2"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${MY_PN}/releases/"
@@ -58,9 +58,9 @@ RDEPEND="
 	>=dev-libs/nspr-4.9.1
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
-	media-libs/libpng[apng]
+	>=media-libs/libpng-1.5.9[apng]
 	virtual/libffi
-	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.10[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	webm? ( >=media-libs/libvpx-1.0.0
 		media-libs/alsa-lib )
 	crashreporter? ( net-misc/curl )
@@ -128,7 +128,7 @@ src_prepare() {
 	# Torbrowser patches for firefox 10.0.5esr, check regularly/for every version-bump
 	# https://gitweb.torproject.org/torbrowser.git/history/HEAD:/src/current-patches
 	# exclude vidalia patch, cause we don't force the user to use it
-	EPATCH_EXCLUDE="0007-Make-Tor-Browser-exit-when-not-launched-from-Vidalia.patch" \
+	EPATCH_EXCLUDE="0015-Make-Tor-Browser-exit-when-not-launched-from-Vidalia.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${FILESDIR}/${PN}-patches"
@@ -195,6 +195,8 @@ src_configure() {
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
+
+	mozconfig_use_enable system-sqlite
 
 	# Allow for a proper pgo build
 	if use pgo; then

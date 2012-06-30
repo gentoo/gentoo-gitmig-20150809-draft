@@ -1,7 +1,7 @@
-From 70161b38e1855ce4b7a61ac1e9572fb07dfbedda Mon Sep 17 00:00:00 2001
+From 3eebe3b7e2882de39e2c686a38e7084cccfa4c60 Mon Sep 17 00:00:00 2001
 From: Mike Perry <mikeperry-git@fscked.org>
 Date: Wed, 7 Dec 2011 19:36:38 -0800
-Subject: [PATCH 08/18] Disable SSL Session ID tracking.
+Subject: [PATCH 07/20] Disable SSL Session ID tracking.
 
 We can't easily bind SSL Session ID tracking to url bar domain,
 so we have to disable them to satisfy

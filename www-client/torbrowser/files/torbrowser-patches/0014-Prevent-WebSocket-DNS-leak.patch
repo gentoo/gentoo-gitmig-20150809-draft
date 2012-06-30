@@ -1,7 +1,7 @@
-From 975bce873ae2d127e6a0681466b21d55e14b1550 Mon Sep 17 00:00:00 2001
+From 0607517f87c2a0060f4f1e437f0ac37a889047a9 Mon Sep 17 00:00:00 2001
 From: Mike Perry <mikeperry-git@torproject.org>
 Date: Wed, 2 May 2012 17:44:39 -0700
-Subject: [PATCH 16/18] Prevent WebSocket DNS leak.
+Subject: [PATCH 14/20] Prevent WebSocket DNS leak.
 
 This is due to an improper implementation of the WebSocket spec by Mozilla.
 
@@ -29,10 +29,10 @@ bug can't turn up in other components or due to 3rd party addons.
  3 files changed, 30 insertions(+), 3 deletions(-)
 
 diff --git a/netwerk/dns/nsDNSService2.cpp b/netwerk/dns/nsDNSService2.cpp
-index 68ad8a5..1253b2f 100644
+index 7458729..40fbaba 100644
 --- a/netwerk/dns/nsDNSService2.cpp
 +++ b/netwerk/dns/nsDNSService2.cpp
-@@ -383,6 +383,7 @@ nsDNSService::Init()
+@@ -403,6 +403,7 @@ nsDNSService::Init()
      bool     enableIDN        = true;
      bool     disableIPv6      = false;
      bool     disablePrefetch  = false;
@@ -40,7 +40,7 @@ index 68ad8a5..1253b2f 100644
      int      proxyType        = nsIProtocolProxyService::PROXYCONFIG_DIRECT;
      
      nsAdoptingCString ipv4OnlyDomains;
-@@ -404,6 +405,10 @@ nsDNSService::Init()
+@@ -426,6 +427,10 @@ nsDNSService::Init()
  
          // If a manual proxy is in use, disable prefetch implicitly
          prefs->GetIntPref("network.proxy.type", &proxyType);
@@ -51,7 +51,7 @@ index 68ad8a5..1253b2f 100644
      }
  
      if (mFirstTime) {
-@@ -420,7 +425,7 @@ nsDNSService::Init()
+@@ -443,7 +448,7 @@ nsDNSService::Init()
  
              // Monitor these to see if there is a change in proxy configuration
              // If a manual proxy is in use, disable prefetch implicitly
@@ -60,7 +60,7 @@ index 68ad8a5..1253b2f 100644
          }
      }
  
-@@ -448,6 +453,7 @@ nsDNSService::Init()
+@@ -472,6 +477,7 @@ nsDNSService::Init()
          mIDN = idn;
          mIPv4OnlyDomains = ipv4OnlyDomains; // exchanges buffer ownership
          mDisableIPv6 = disableIPv6;
@@ -68,7 +68,7 @@ index 68ad8a5..1253b2f 100644
  
          // Disable prefetching either by explicit preference or if a manual proxy is configured 
          mDisablePrefetch = disablePrefetch || (proxyType == nsIProtocolProxyService::PROXYCONFIG_MANUAL);
-@@ -547,6 +553,14 @@ nsDNSService::AsyncResolve(const nsACString  &hostname,
+@@ -583,6 +589,14 @@ nsDNSService::AsyncResolve(const nsACString  &hostname,
          if (mDisablePrefetch && (flags & RESOLVE_SPECULATE))
              return NS_ERROR_DNS_LOOKUP_QUEUE_FULL;
  
@@ -83,7 +83,7 @@ index 68ad8a5..1253b2f 100644
          res = mResolver;
          idn = mIDN;
      }
-@@ -597,6 +611,14 @@ nsDNSService::Resolve(const nsACString &hostname,
+@@ -669,6 +683,14 @@ nsDNSService::Resolve(const nsACString &hostname,
          MutexAutoLock lock(mLock);
          res = mResolver;
          idn = mIDN;
@@ -109,10 +109,10 @@ index 1749b41..3ec8eba 100644
 +    bool                      mDisableDNS;
  };
 diff --git a/netwerk/protocol/websocket/WebSocketChannel.cpp b/netwerk/protocol/websocket/WebSocketChannel.cpp
-index 9e446e9..42aa6ca 100644
+index 3578866..b1aaec2 100644
 --- a/netwerk/protocol/websocket/WebSocketChannel.cpp
 +++ b/netwerk/protocol/websocket/WebSocketChannel.cpp
-@@ -1698,8 +1698,12 @@ WebSocketChannel::ApplyForAdmission()
+@@ -1884,8 +1884,12 @@ WebSocketChannel::ApplyForAdmission()
    LOG(("WebSocketChannel::ApplyForAdmission: checking for concurrent open\n"));
    nsCOMPtr<nsIThread> mainThread;
    NS_GetMainThread(getter_AddRefs(mainThread));

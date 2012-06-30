@@ -1,7 +1,7 @@
-From a1fcacb6cf3286226552028775aa41c4109546a6 Mon Sep 17 00:00:00 2001
+From 622437f3baf410f14610b21bcca7f9a0fcc8c6d9 Mon Sep 17 00:00:00 2001
 From: Erinn Clark <erinn@torproject.org>
 Date: Wed, 25 Apr 2012 09:14:00 -0300
-Subject: [PATCH 12/18] Rebrand Firefox to TorBrowser
+Subject: [PATCH 10/20] Rebrand Firefox to TorBrowser
 
 This patch does some basic renaming of Firefox to TorBrowser. The rest of the
 branding is done by images and icons.

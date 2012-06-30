@@ -1,6 +1,55 @@
 # ChangeLog for www-client/torbrowser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/ChangeLog,v 1.4 2012/06/06 22:21:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/ChangeLog,v 1.5 2012/06/30 20:43:10 hasufell Exp $
+
+*torbrowser-13.0 (30 Jun 2012)
+
+  30 Jun 2012; Julian Ospald <hasufell@gentoo.org>
+  +files/torbrowser-patches/0007-Disable-SSL-Session-ID-tracking.patch,
+  +files/torbrowser-patches/0008-Provide-an-observer-event-to-close-persistent-
+  connec.patch,
+  +files/torbrowser-patches/0009-Limit-device-and-system-specific-CSS-Media-Que
+  ries.patch,
+  +files/torbrowser-patches/0010-Rebrand-Firefox-to-TorBrowser.patch,
+  +files/torbrowser-patches/0011-Make-Download-manager-memory-only.patch,
+  +files/torbrowser-patches/0012-Add-DDG-and-StartPage-to-Omnibox.patch,
+  +files/torbrowser-patches/0013-Make-nsICacheService.EvictEntries-synchronous.
+  patch, +files/torbrowser-patches/0014-Prevent-WebSocket-DNS-leak.patch,
+  +files/torbrowser-patches/0015-Make-Tor-Browser-exit-when-not-launched-from-V
+  idalia.patch,
+  +files/torbrowser-patches/0016-Limit-the-number-of-fonts-per-document.patch,
+  +files/torbrowser-patches/0018-Adapt-Steven-Michaud-s-Mac-crashfix-patch.patc
+  h,
+  +files/torbrowser-patches/0020-Fix-internal-compile-error-for-sub-ancient-GCC
+  s.patch,
+  -files/torbrowser-patches/0007-Make-Tor-Browser-exit-when-not-launched-from-V
+  idalia.patch,
+  -files/torbrowser-patches/0008-Disable-SSL-Session-ID-tracking.patch,
+  -files/torbrowser-patches/0009-Provide-an-observer-event-to-close-persistent-
+  connec.patch,
+  -files/torbrowser-patches/0010-Provide-client-values-only-to-CSS-Media-Querie
+  s.patch,
+  -files/torbrowser-patches/0011-Limit-the-number-of-fonts-per-document.patch,
+  -files/torbrowser-patches/0012-Rebrand-Firefox-to-TorBrowser.patch,
+  -files/torbrowser-patches/0013-Make-Download-manager-memory-only.patch,
+  -files/torbrowser-patches/0014-Add-DDG-and-StartPage-to-Omnibox.patch,
+  -files/torbrowser-patches/0015-Make-nsICacheService.EvictEntries-synchronous.
+  patch, -files/torbrowser-patches/0016-Prevent-WebSocket-DNS-leak.patch,
+  -files/torbrowser-patches/0018-Add-HTTP-auth-headers-before-the-modify-reques
+  t-obse.patch,
+  files/torbrowser-patches/0001-Block-Components.interfaces-lookupMethod-from-c
+  onten.patch,
+  files/torbrowser-patches/0002-Make-Permissions-Manager-memory-only.patch,
+  -torbrowser-10.0.5.ebuild,
+  files/torbrowser-patches/0003-Make-Intermediate-Cert-Store-memory-only.patch,
+  files/torbrowser-patches/0004-Add-a-string-based-cacheKey.patch,
+  files/torbrowser-patches/0005-Block-all-plugins-except-flash.patch,
+  files/torbrowser-patches/0006-Make-content-pref-service-memory-only-clearable
+  .patch,
+  files/torbrowser-patches/0017-Randomize-HTTP-request-order-and-pipeline-depth
+  .patch, +torbrowser-13.0.ebuild,
+  +files/torbrowser-patches/0019-Fix-Firefox-13-build-process.patch:
+  version bump, also fixes bug #423343
 
 *torbrowser-10.0.5 (06 Jun 2012)
 

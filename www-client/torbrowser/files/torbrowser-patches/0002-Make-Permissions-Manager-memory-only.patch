@@ -1,7 +1,7 @@
-From 336217485d707ff63ef42d2a0bc3705c2c7f7a3c Mon Sep 17 00:00:00 2001
+From 4c65de64fc28ca767009a0d0acfcefd8f2a73ad8 Mon Sep 17 00:00:00 2001
 From: Mike Perry <mikeperry-git@torproject.org>
 Date: Wed, 1 Feb 2012 15:45:16 -0800
-Subject: [PATCH 02/18] Make Permissions Manager memory-only
+Subject: [PATCH 02/20] Make Permissions Manager memory-only
 
 This patch exposes a pref 'permissions.memory_only' that properly isolates the
 permissions manager to memory, which is responsible for all user specified
@@ -16,7 +16,7 @@ https://trac.torproject.org/projects/tor/ticket/2950
  1 files changed, 31 insertions(+), 3 deletions(-)
 
 diff --git a/extensions/cookie/nsPermissionManager.cpp b/extensions/cookie/nsPermissionManager.cpp
-index 67eb216..12cc7cf 100644
+index cdfe21b..a7a0efb 100644
 --- a/extensions/cookie/nsPermissionManager.cpp
 +++ b/extensions/cookie/nsPermissionManager.cpp
 @@ -58,6 +58,10 @@
@@ -75,7 +75,7 @@ index 67eb216..12cc7cf 100644
      NS_ENSURE_SUCCESS(rv, rv);
  
      mDBConn->GetConnectionReady(&ready);
-@@ -783,7 +806,12 @@ NS_IMETHODIMP nsPermissionManager::Observe(nsISupports *aSubject, const char *aT
+@@ -794,7 +817,12 @@ NS_IMETHODIMP nsPermissionManager::Observe(nsISupports *aSubject, const char *aT
  {
    ENSURE_NOT_CHILD_PROCESS;
  
