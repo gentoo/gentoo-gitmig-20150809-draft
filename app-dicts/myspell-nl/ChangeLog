@@ -1,6 +1,14 @@
 # ChangeLog for app-dicts/myspell-nl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.24 2012/05/17 18:24:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.25 2012/06/30 08:34:28 scarabeus Exp $
+
+*myspell-nl-2.10g (30 Jun 2012)
+
+  30 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +myspell-nl-2.10g.ebuild, -myspell-nl-20060316.ebuild,
+  -myspell-nl-20070607.ebuild, -myspell-nl-20090725.ebuild:
+  Version bump to latest upstream release. Track the version with upstream
+  versioning scheme. Thanks to Qantourisc for the poke on this.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-nl-20060316.ebuild,
   myspell-nl-20070607.ebuild, myspell-nl-20090725.ebuild:
