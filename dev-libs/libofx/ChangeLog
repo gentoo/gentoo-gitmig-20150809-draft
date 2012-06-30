@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.71 2012/06/24 20:13:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.72 2012/06/30 20:01:52 dilfridge Exp $
+
+*libofx-0.9.5 (30 Jun 2012)
+
+  30 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> +libofx-0.9.5.ebuild,
+  +files/libofx-0.9.5-gcc47.patch:
+  Version bump
 
   24 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org> libofx-0.9.4.ebuild,
   +files/libofx-0.9.4-gcc47.patch:
