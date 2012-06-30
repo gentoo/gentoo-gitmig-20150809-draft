@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gramps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.150 2012/05/03 19:41:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.151 2012/06/30 16:59:23 fauli Exp $
+
+*gramps-3.4.0 (30 Jun 2012)
+
+  30 Jun 2012; Christian Faulhammer <fauli@gentoo.org> +gramps-3.4.0.ebuild,
+  +files/gramps-3.4.0-use_bsddb3.patch:
+  version bump for bug 423315, with help from Yaron Tausky
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gramps-3.2.5.ebuild,
   gramps-3.2.6.ebuild, gramps-3.3.1.ebuild:
