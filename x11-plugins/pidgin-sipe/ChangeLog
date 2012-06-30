@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/pidgin-sipe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/ChangeLog,v 1.14 2012/06/26 21:47:46 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/ChangeLog,v 1.15 2012/06/30 22:00:30 thev00d00 Exp $
+
+*pidgin-sipe-1.13.2-r1 (30 Jun 2012)
+
+  30 Jun 2012; Ian Whyman <thev00d00@gentoo.org> -pidgin-sipe-1.13.2.ebuild,
+  +pidgin-sipe-1.13.2-r1.ebuild, -files/pidgin-sipe-1.13.2-fix-sandbox.patch,
+  +files/pidgin-sipe-1.13.2-fix-sandbox-r1.patch:
+  Fix build with USE="kerberos" and krb5 dependency
 
 *pidgin-sipe-1.13.2 (26 Jun 2012)
 
