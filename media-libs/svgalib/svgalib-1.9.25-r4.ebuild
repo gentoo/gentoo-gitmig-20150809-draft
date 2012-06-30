@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25-r4.ebuild,v 1.1 2012/06/16 09:59:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25-r4.ebuild,v 1.2 2012/06/30 11:14:14 pacho Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.9.25-segfault.patch
 	epatch "${FILESDIR}"/${PN}-1.9.25-build2.patch
 	epatch "${FILESDIR}"/${PN}-1.9.25-qa.patch
+	epatch "${FILESDIR}"/${PN}-1.9.25-kernel3.4.patch
 	sed -i -e '/linux\/smp_lock.h/d' kernel/svgalib_helper/main.c || die
 }
 
