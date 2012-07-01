@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.25-r1.ebuild,v 1.4 2012/07/01 11:03:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.33.ebuild,v 1.1 2012/07/01 11:03:09 jlec Exp $
 
 EAPI=4
 
@@ -8,9 +8,9 @@ inherit toolchain-funcs
 
 DESCRIPTION="Dell Inspiron and Latitude utilities"
 HOMEPAGE="http://packages.debian.org/sid/i8kutils"
-SRC_URI="http://people.debian.org/~dz/i8k/${P/-/_}.tar.gz"
+SRC_URI="mirror://debian/pool/main/i/${PN}/${P/-/_}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="examples tk"
@@ -28,10 +28,6 @@ src_prepare() {
 		-i Makefile || die
 
 	tc-export CC
-}
-
-src_compile() {
-	make all || die
 }
 
 src_install() {

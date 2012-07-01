@@ -1,10 +1,17 @@
 # ChangeLog for app-laptop/i8kutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.18 2012/07/01 10:42:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.19 2012/07/01 11:03:09 jlec Exp $
+
+*i8kutils-1.33 (01 Jul 2012)
+
+  01 Jul 2012; Justin Lecher <jlec@gentoo.org> i8kutils-1.25.ebuild,
+  i8kutils-1.25-r1.ebuild, +i8kutils-1.33.ebuild:
+  Version BUmp, Correct HOMEPAGE, correct SRC_URI; respect CFLAGS, #240015;
+  respect LDFLAGS, #337349; respect CC, #243602; handle examples installation
+  through USE; move to EAPI=4
 
   01 Jul 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
-
   also needs to contain m-needed@g.o.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> i8kutils-1.25.ebuild,
