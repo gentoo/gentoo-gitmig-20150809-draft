@@ -76,7 +76,8 @@
 			encoding="ISO-8859-1"
 			source="1.5"
 			srcdir="${test.dir}"
-			target="1.5"/>
+			target="1.5"
+			excludes="**/fixtures/**"/>
 		<junit haltonfailure="on" showoutput="no" printsummary="yes">
 			<classpath>
 				<path refid="dist.classpath"/>
