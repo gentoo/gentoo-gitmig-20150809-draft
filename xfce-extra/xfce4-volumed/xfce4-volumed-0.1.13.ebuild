@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volumed/xfce4-volumed-0.1.13.ebuild,v 1.5 2012/05/05 07:47:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volumed/xfce4-volumed-0.1.13.ebuild,v 1.6 2012/07/01 08:56:33 angelos Exp $
 
 EAPI=4
 inherit xfconf
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="alsa debug libnotify oss"
 
-COMMON_DEPEND="dev-libs/keybinder
+COMMON_DEPEND="dev-libs/keybinder:0
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
 	>=xfce-base/xfconf-4.8
