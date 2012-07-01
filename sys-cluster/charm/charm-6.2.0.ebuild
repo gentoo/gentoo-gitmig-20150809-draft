@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.2.0.ebuild,v 1.2 2012/02/15 19:10:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.2.0.ebuild,v 1.3 2012/07/01 14:12:34 jlec Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic multilib toolchain-funcs
+inherit eutils flag-o-matic fortran-2 multilib toolchain-funcs
 
 DESCRIPTION="Message-passing parallel language and runtime system"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
@@ -30,7 +30,11 @@ case ${ARCH} in
 		CHARM_ARCH="net-linux-amd64" ;;
 esac
 
+FORTRAN_STANDARD="90"
+
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc-4.7.patch
+
 	# TCP instead of default UDP for socket comunication
 	# protocol
 	if use tcp; then
@@ -46,6 +50,28 @@ src_prepare() {
 	if use cmkopt; then
 		append-flags -DCMK_OPTIMIZE=1
 	fi
+
+	sed \
+		-e "/CMK_CF90/s:f90:${FC}:g" \
+		-e "/CMK_CXX/s:g++:$(tc-getCXX):g" \
+		-e "/CMK_CC/s:gcc:$(tc-getCC):g" \
+		-e '/CMK_F90_MODINC/s:-p:-I:g' \
+		-e "/CMK_LD/s:\"$: ${LDFLAGS} \":g" \
+		-i src/arch/net-linux*/*sh || die
+
+	sed \
+		-e "s:\(-o conv-cpm\):${LDFLAGS} \1:g" \
+		-e "s:\(-o charmxi\):${LDFLAGS} \1:g" \
+		-e "s:\(-o charmrun-silent\):${LDFLAGS} \1:g" \
+		-e "s:\(-o charmrun-notify\):${LDFLAGS} \1:g" \
+		-e "s:\(-o charmrun\):${LDFLAGS} \1:g" \
+		-e "s:\(-o charmd_faceless\):${LDFLAGS} \1:g" \
+		-e "s:\(-o charmd\):${LDFLAGS} \1:g" \
+		-i \
+			src/scripts/Makefile \
+			src/arch/net/charmrun/Makefile
+
+	append-cflags -DALLOCA_H
 
 	echo "charm opts: ${CHARM_OPTS}"
 }
