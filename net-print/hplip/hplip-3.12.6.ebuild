@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.6.ebuild,v 1.1 2012/06/29 15:52:45 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.6.ebuild,v 1.2 2012/07/01 12:51:02 billie Exp $
 
 EAPI=4
 
@@ -186,7 +186,7 @@ src_configure() {
 		--disable-shadow-build \
 		--disable-qt3 \
 		--disable-libusb01_build \
-		--enable-udev_sysfs_rules \
+		--disable-udev_sysfs_rules \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--with-docdir=/usr/share/doc/${PF} \
