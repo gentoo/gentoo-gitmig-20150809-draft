@@ -1,6 +1,10 @@
 # ChangeLog for net-news/raggle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.18 2012/06/20 05:27:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.19 2012/07/01 17:56:00 armin76 Exp $
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> raggle-0.4.4-r1.ebuild,
+  raggle-0.4.4-r2.ebuild:
+  Drop alpha keywords
 
 *raggle-0.4.4-r2 (20 Jun 2012)
 

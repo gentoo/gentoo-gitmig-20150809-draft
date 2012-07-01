@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/raggle-0.4.4-r2.ebuild,v 1.1 2012/06/20 05:27:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/raggle-0.4.4-r2.ebuild,v 1.2 2012/07/01 17:55:59 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -15,7 +15,7 @@ SRC_URI="http://www.raggle.org/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~x86"
 
 ruby_add_rdepend ">=dev-ruby/ncurses-ruby-0.8"
 
