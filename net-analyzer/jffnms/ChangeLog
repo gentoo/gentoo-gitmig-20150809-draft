@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/jffnms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.13 2012/06/12 07:59:04 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/ChangeLog,v 1.14 2012/07/01 22:04:43 mabi Exp $
+
+  01 Jul 2012; Matti Bickel <mabi@gentoo.org> -jffnms-0.8.3-r2.ebuild:
+  remove old version. approved by Zero_Chaos
 
 *jffnms-0.9.3 (12 Jun 2012)
 
