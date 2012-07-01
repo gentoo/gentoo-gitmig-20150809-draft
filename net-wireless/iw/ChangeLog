@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.52 2012/05/29 19:19:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.53 2012/07/01 13:32:45 zerochaos Exp $
+
+*iw-3.5 (01 Jul 2012)
+
+  01 Jul 2012; Rick Farina <zerochaos@gentoo.org> +iw-3.5.ebuild:
+  version bump to 3.5 after quick functionality check
 
   29 May 2012; Brent Baude <ranger@gentoo.org> iw-3.3.ebuild:
   Marking iw-3.3 ppc for bug 412381
@@ -219,4 +224,3 @@
   +iw-0_p20080605.ebuild:
   Initial version of iw for aircrack-ng, ebuild contributions by Roel Aaij and
   Pierre Guinoiseau, bug 233285.
-
