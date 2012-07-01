@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-2.3.ebuild,v 1.1 2012/03/21 10:52:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-2.3.ebuild,v 1.2 2012/07/01 12:35:35 ssuominen Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/keybinder[python]
+RDEPEND="dev-libs/keybinder:0[python]
 	>=dev-libs/libappindicator-0.4:0
 	dev-python/gconf-python
 	dev-python/pycrypto
