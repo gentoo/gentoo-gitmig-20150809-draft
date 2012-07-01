@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-108.00.01.ebuild,v 1.1 2012/06/30 18:13:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-108.00.01.ebuild,v 1.2 2012/07/01 16:08:34 mr_bones_ Exp $
 
 EAPI="3"
 
 OASIS_BUILD_DOCS=1
 #FIXME!
-#OASIS_BUILD_TESTS=1 
+#OASIS_BUILD_TESTS=1
 
 inherit oasis
 
