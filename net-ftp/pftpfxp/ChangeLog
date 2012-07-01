@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pftpfxp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/ChangeLog,v 1.17 2012/03/16 16:48:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/ChangeLog,v 1.18 2012/07/01 12:44:51 jlec Exp $
+
+  01 Jul 2012; Justin Lecher <jlec@gentoo.org> pftpfxp-1.12-r1.ebuild,
+  metadata.xml:
+  Don't add additional optimization flags to CXXFLAGS
 
 *pftpfxp-1.12-r1 (16 Mar 2012)
 

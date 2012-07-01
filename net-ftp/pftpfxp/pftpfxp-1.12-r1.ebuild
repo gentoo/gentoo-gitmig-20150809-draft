@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-1.12-r1.ebuild,v 1.1 2012/03/16 16:48:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-1.12-r1.ebuild,v 1.2 2012/07/01 12:44:51 jlec Exp $
 
 EAPI=4
+
 inherit eutils toolchain-funcs
 
 MY_P=pftp-shit.v.${PV}
@@ -14,14 +15,12 @@ SRC_URI="http://www.geekspot.nl/wp-content/uploads/2011/03/${MY_P}.zip"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-
 IUSE="ssl"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )"
 DEPEND="
 	app-arch/unzip
-	${RDEPEND}
-"
+	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -30,26 +29,28 @@ src_prepare() {
 
 	# do no strip
 	# look for the correct library (bug #408231)
-	sed -i configure \
+	sed \
 		-e 's|[^D]*DO.*||g' \
 		-e 's|libssl.a|libssl.so|g' \
-		|| die
+		-e 's:-O2::g' \
+		-e 's:-g::g' \
+		-i configure || die
 
 	#fix permissions of configure script
 	chmod +x configure
 
 	# use CXX not CPP
 	# respect LDFLAGS
-	sed -i src/Makefile.in \
+	sed \
 		-e 's/CPP/CXX/g' \
 		-e 's|$(CXX) -o |$(CXX) $(GENTOO_LDFLAGS) -o |g' \
-		|| die
+		-i src/Makefile.in || die
 }
 
 src_configure() {
 	#note: not a proper autoconf
 	./configure $(use ssl || echo --nossl) || die "configure failed"
-	sed -i -e 's:$<:$(CPPFLAGS) $<:' -e 's/LINKFLAGS/LDFLAGS/g'  src/Makefile
+	sed -i -e 's:$<:$(CPPFLAGS) $<:' -e 's/LINKFLAGS/LDFLAGS/g'  src/Makefile || die
 }
 
 src_compile() {
