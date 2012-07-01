@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/mtree
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/ChangeLog,v 1.14 2009/03/14 11:54:05 nixnut Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtree/ChangeLog,v 1.15 2012/07/01 16:44:39 ryao Exp $
+
+*mtree-1.0 (01 Jul 2012)
+
+  01 Jul 2012; Richard Yao <ryao@gentoo.org> +mtree-1.0.ebuild,
+  -mtree-1.5.ebuild, -mtree-2007.4.ebuild, metadata.xml:
+  Rebase on mtree-port to fix build issues. Approved by Flameeyes in IRC. Drop
+  keywords on untested architectures.
 
   14 Mar 2009; nixnut <nixnut@gentoo.org> mtree-2007.4.ebuild:
   ppc stable #258256
