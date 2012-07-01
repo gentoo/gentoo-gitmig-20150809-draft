@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.34 2012/06/05 21:19:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.35 2012/07/01 18:21:34 armin76 Exp $
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> keyutils-1.5.5.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #417445
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> keyutils-1.5.5.ebuild:
   Marking keyutils-1.5.5 ppc64 for bug 417445
