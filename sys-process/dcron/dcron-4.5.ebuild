@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-4.5.ebuild,v 1.8 2012/05/24 05:48:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/dcron-4.5.ebuild,v 1.9 2012/07/01 18:20:07 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.jimpryor.net/linux/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 src_prepare() {
