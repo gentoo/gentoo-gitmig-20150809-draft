@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/bzr-rewrite-0.6.3.ebuild,v 1.1 2012/03/17 10:57:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/bzr-rewrite-0.6.3.ebuild,v 1.2 2012/07/01 06:09:57 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-vcs/bzr-1.14
+DEPEND=">=dev-vcs/bzr-2.5.0
 	!dev-vcs/bzr-rebase"
 RDEPEND="${DEPEND}
 	!<dev-vcs/bzr-svn-0.6"
