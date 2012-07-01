@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.32 2012/06/25 21:19:41 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.33 2012/07/01 12:29:44 ryao Exp $
+
+  01 Jul 2012; Richard Yao <ryao@gentoo.org> +files/bash-completion,
+  zfs-0.6.0_rc9-r3.ebuild, zfs-0.6.0_rc9.ebuild, zfs-9999.ebuild:
+  Import bash-completion from zfs-fuse
 
   25 Jun 2012; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc9-r3.ebuild,
   zfs-9999.ebuild:

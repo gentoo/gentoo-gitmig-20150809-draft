@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9.ebuild,v 1.5 2012/06/18 15:19:14 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9.ebuild,v 1.6 2012/07/01 12:29:44 ryao Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-inherit flag-o-matic linux-mod toolchain-funcs autotools-utils
+inherit bash-completion-r1 flag-o-matic linux-mod toolchain-funcs autotools-utils
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
@@ -26,7 +26,7 @@ HOMEPAGE="http://zfsonlinux.org/"
 
 LICENSE="CDDL GPL-2"
 SLOT="0"
-IUSE="custom-cflags debug dracut +rootfs test test-suite static-libs"
+IUSE="bash-completion custom-cflags debug dracut +rootfs test test-suite static-libs"
 
 DEPEND="
 	=sys-kernel/spl-${PV}*
@@ -126,6 +126,8 @@ src_install() {
 		exeinto /usr/share/zfs
 		doexe "${FILESDIR}/linuxrc"
 	fi
+
+	newbashcomp "${FILESDIR}/bash-completion" zfs
 
 }
 
