@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.38 2012/07/01 18:20:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.39 2012/07/01 18:35:53 dilfridge Exp $
+
+  01 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  xournal-0.4.6-r3.ebuild:
+  Sync with live ebuild and thereby add keywords
 
 *xournal-9999 (01 Jul 2012)
 *xournal-0.4.6-r3 (01 Jul 2012)
