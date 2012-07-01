@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR_PackageFileManager_Cli
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_PackageFileManager_Cli/ChangeLog,v 1.4 2008/03/17 12:49:20 jokey Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_PackageFileManager_Cli/ChangeLog,v 1.5 2012/07/01 21:41:26 mabi Exp $
+
+  01 Jul 2012; Matti Bickel <mabi@gentoo.org>
+  PEAR-PEAR_PackageFileManager_Cli-0.3.0.ebuild:
+  package does not really use depend.php
 
   17 Mar 2008; <jokey@gentoo.org>
   PEAR-PEAR_PackageFileManager_Cli-0.3.0.ebuild:
