@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.61 2012/06/07 21:07:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.62 2012/07/01 18:43:11 armin76 Exp $
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> ksh-93.20120229.ebuild:
+  alpha/ia64/s390/sparc stable wrt #418633
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> ksh-93.20120229.ebuild:
   Marking ksh-93.20120229 ppc for bug 418633
