@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.8 2012/06/29 22:06:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.9 2012/07/01 21:31:16 floppym Exp $
 
 EAPI=4
 
@@ -19,6 +19,7 @@ else
 	fi
 	KEYWORDS="~amd64 ~x86"
 	S=${WORKDIR}/${MY_P}
+	DO_AUTORECONF="true"
 fi
 
 inherit eutils flag-o-matic pax-utils toolchain-funcs ${DO_AUTORECONF:+autotools} ${LIVE_ECLASS}
@@ -70,6 +71,7 @@ DEPEND="${RDEPEND}
 	>=dev-lang/python-2.5.2
 	sys-devel/flex
 	sys-devel/bison
+	sys-apps/help2man
 	sys-apps/texinfo
 	static? (
 		truetype? (
@@ -84,7 +86,7 @@ RDEPEND+="
 	grub_platforms_efi-64? ( sys-boot/efibootmgr )
 "
 if [[ -n ${DO_AUTORECONF} ]] ; then
-	DEPEND+=" >=sys-devel/autogen-5.10 sys-apps/help2man"
+	DEPEND+=" >=sys-devel/autogen-5.10"
 else
 	DEPEND+=" app-arch/xz-utils"
 fi
@@ -206,6 +208,8 @@ grub_src_install() {
 
 src_prepare() {
 	local i j
+
+	epatch "${FILESDIR}/${P}-manpage-race.patch"
 
 	# fix texinfo file name, bug 416035
 	sed -i \

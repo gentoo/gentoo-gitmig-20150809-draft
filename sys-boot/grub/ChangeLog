@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.223 2012/06/29 22:06:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.224 2012/07/01 21:31:16 floppym Exp $
+
+  01 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/grub-2.00-manpage-race.patch,
+  -files/grub-2.00-10_linux-genkernel.patch, grub-2.00.ebuild, grub-9999.ebuild:
+  Add patch to fix build race for bug 424231 by Wonko.
 
   29 Jun 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild,
   grub-9999.ebuild:
