@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3_p20120618.ebuild,v 1.1 2012/06/29 07:49:49 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3_p20120618-r1.ebuild,v 1.1 2012/07/01 10:43:35 maksbotan Exp $
 
 EAPI="4"
 
@@ -47,7 +47,11 @@ src_install() {
 	doins "${FILESDIR}"/lodgeitrc
 
 	if use vim; then
-		insinto /usr/share/vim/vimfiles/plugin
-		newins "${DISTDIR}/${P}.vim" "${PN}.vim"
+		local vimdir=/usr/share/vim/vimfiles/plugin
+		insinto ${vimdir}
+		newins "${DISTDIR}"/${P}.vim ${PN}.vim
+		#Change default service for Lodgeit vim script
+		sed -e 's:paste.pocoo.org:bpaste.net:g' \
+			-i "${ED}"${vimdir}/${PN}.vim || die "sed failed"
 	fi
 }
