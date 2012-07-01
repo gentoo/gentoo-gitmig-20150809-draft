@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-audiorecorder
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.14 2011/04/03 19:13:12 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.15 2012/07/01 11:33:15 hd_brummy Exp $
+
+*vdr-audiorecorder-0.1.0_pre14-r2 (01 Jul 2012)
+
+  01 Jul 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-audiorecorder-0.1.0_pre14-r2.ebuild,
+  +files/vdr-audiorecorder-0.1.0_pre14_ffmpeg.diff,
+  +files/vdr-audiorecorder-0.1.0_pre14_obsolete-i18n.diff:
+  fixed ffmpeg compile, bug 423671; vdr-plugin-2.eclass
+
 
   03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -vdr-audiorecorder-0.1.0_pre14.ebuild,
