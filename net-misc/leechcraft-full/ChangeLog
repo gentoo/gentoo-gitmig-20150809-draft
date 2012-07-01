@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.21 2012/06/29 19:47:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.22 2012/07/01 13:38:35 maksbotan Exp $
+
+  01 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-full-9999.ebuild:
+  Move leechraft-vrooby to sys-fs
 
   29 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-full-9999.ebuild:
   Add monocle and vrooby plugins to 9999 full packgage

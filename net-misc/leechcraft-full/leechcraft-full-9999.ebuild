@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.13 2012/06/29 19:47:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.14 2012/07/01 13:38:35 maksbotan Exp $
 
 EAPI="4"
 
@@ -18,7 +18,6 @@ RDEPEND="
 		~media-sound/leechcraft-lmp-${PV}
 		~media-sound/leechcraft-lastfmscrobble-${PV}
 		~net-analyzer/leechcraft-networkmonitor-${PV}
-		~net-fs/leechcraft-vrooby-${PV}
 		~net-im/leechcraft-azoth-${PV}
 		~net-misc/leechcraft-advancednotifications-${PV}
 		kde? ( ~net-misc/leechcraft-anhero-${PV} )
@@ -47,6 +46,7 @@ RDEPEND="
 		~net-news/leechcraft-aggregator-${PV}
 		~net-p2p/leechcraft-bittorrent-${PV}
 		~net-proxy/leechcraft-xproxy-${PV}
+		~sys-fs/leechcraft-vrooby-${PV}
 		~www-client/leechcraft-deadlyrics-${PV}
 		~www-client/leechcraft-dolozhee-${PV}
 		~www-client/leechcraft-poshuku-${PV}
