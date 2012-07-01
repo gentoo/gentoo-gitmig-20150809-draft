@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.80 2012/05/31 15:56:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.81 2012/07/01 18:16:28 armin76 Exp $
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> gentoo-syntax-1.19.ebuild:
+  alpha/ia64/sparc stable wrt #417305
 
   31 May 2012; Jeroen Roovers <jer@gentoo.org> gentoo-syntax-1.19.ebuild:
   Stable for HPPA (bug #417305).
