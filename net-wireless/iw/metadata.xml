@@ -6,4 +6,9 @@
 		<email>gurligebis@gentoo.org</email>
 		<name>Bjarke Istrup Pedersen</name>
 	</maintainer>
+	<maintainer>
+		<email>zerochaos@gentoo.org</email>
+		<name>Rick Farina</name>
+		<description>co-maintainer, please cc on bugs</description>
+	</maintainer>
 </pkgmetadata>
