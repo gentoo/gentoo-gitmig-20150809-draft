@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/live
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.156 2012/06/15 13:31:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.157 2012/07/01 19:08:34 aballier Exp $
+
+*live-2012.06.26 (01 Jul 2012)
+
+  01 Jul 2012; Alexis Ballier <aballier@gentoo.org> +live-2012.06.26.ebuild:
+  version bump
 
   15 Jun 2012; Fabian Groffen <grobian@gentoo.org> live-2012.04.21.ebuild:
   Fix building shared library on Darwin
