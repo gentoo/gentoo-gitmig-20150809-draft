@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r1.ebuild,v 1.3 2012/05/31 08:46:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r1.ebuild,v 1.4 2012/07/01 18:15:31 armin76 Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,7 +20,7 @@ fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~ppc sparc x86 ~x86-fbsd"
 IUSE="doc examples X"
 
 DEPEND="dev-python/numpy
