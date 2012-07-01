@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_CSS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_CSS/ChangeLog,v 1.3 2012/01/18 19:39:49 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_CSS/ChangeLog,v 1.4 2012/07/01 21:02:11 mabi Exp $
+
+  01 Jul 2012; Matti Bickel <mabi@gentoo.org> PEAR-HTML_CSS-1.5.4.ebuild:
+  make use of transitive php dependency (from pear) to remove depend.php
+  requirement
 
   18 Jan 2012; Matti Bickel <mabi@gentoo.org> -PEAR-HTML_CSS-1.5.1.ebuild:
   remove old
