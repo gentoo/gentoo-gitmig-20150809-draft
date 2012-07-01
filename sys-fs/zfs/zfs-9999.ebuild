@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.26 2012/07/01 12:29:44 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.27 2012/07/01 13:03:28 ryao Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ fi
 DESCRIPTION="Native ZFS for Linux"
 HOMEPAGE="http://zfsonlinux.org/"
 
-LICENSE="CDDL GPL-2"
+LICENSE="CDDL GPL-2 MIT"
 SLOT="0"
 IUSE="bash-completion custom-cflags debug dracut +rootfs test test-suite static-libs"
 
