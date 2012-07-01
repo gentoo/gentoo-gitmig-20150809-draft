@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/anope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.20 2012/01/12 00:35:32 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.21 2012/07/01 21:07:35 binki Exp $
+
+  01 Jul 2012; Nathan Phillip Brink <binki@gentoo.org> anope-1.8.7.ebuild:
+  Ensure that /var/lib/anope/backups directory exists so that database backups
+  succeed, fixing bug #410741.
 
   12 Jan 2012; Nathan Phillip Brink <binki@gentoo.org> anope-1.8.7.ebuild,
   +files/anope-1.8.7-mariadb.patch:
@@ -99,4 +103,3 @@
 
   29 Aug 2006; Bjarke Istrup Pedersen <gurligebis@gentoo.org> :
   Initial import.  Based on ebuild by Björn Stiddien <keeper@anope.org>.
-
