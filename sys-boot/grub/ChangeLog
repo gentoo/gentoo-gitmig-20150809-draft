@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.224 2012/07/01 21:31:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.225 2012/07/01 22:11:04 floppym Exp $
+
+  01 Jul 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild,
+  grub-9999.ebuild:
+  Unset CCASFLAGS. Reported by tommy.
 
   01 Jul 2012; Mike Gilbert <floppym@gentoo.org>
   +files/grub-2.00-manpage-race.patch,

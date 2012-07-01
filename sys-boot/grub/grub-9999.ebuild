@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.75 2012/07/01 21:31:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.76 2012/07/01 22:11:04 floppym Exp $
 
 EAPI=4
 
@@ -209,7 +209,9 @@ grub_src_install() {
 src_prepare() {
 	local i j
 
-	epatch "${FILESDIR}/${P}-manpage-race.patch"
+	if [[ ${PV} != 9999 ]]; then
+		epatch "${FILESDIR}/${P}-manpage-race.patch"
+	fi
 
 	# fix texinfo file name, bug 416035
 	sed -i \
@@ -245,7 +247,7 @@ src_prepare() {
 src_configure() {
 	local i
 
-	use custom-cflags || unset CFLAGS CPPFLAGS LDFLAGS
+	use custom-cflags || unset CCASFLAGS CFLAGS CPPFLAGS LDFLAGS
 	use static && append-ldflags -static
 
 	# Sandbox bug 404013.
