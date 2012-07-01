@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-soundmenu-plugin/xfce4-soundmenu-plugin-0.4.1.ebuild,v 1.4 2012/05/22 05:24:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-soundmenu-plugin/xfce4-soundmenu-plugin-0.4.1.ebuild,v 1.5 2012/07/01 12:33:41 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -15,7 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE="debug +glyr lastfm"
 
 RDEPEND=">=dev-libs/dbus-glib-0.98
-	>=dev-libs/keybinder-0.2.2
+	>=dev-libs/keybinder-0.2.2:0
 	>=x11-libs/gtk+-2.20:2
 	x11-libs/libX11
 	>=xfce-base/libxfce4ui-4.8
