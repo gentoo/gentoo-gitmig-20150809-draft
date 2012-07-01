@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/openra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.5 2012/06/02 15:56:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.6 2012/07/01 00:42:56 hasufell Exp $
+
+*openra-20120630 (01 Jul 2012)
+
+  01 Jul 2012; Julian Ospald <hasufell@gentoo.org> -openra-20120504.ebuild,
+  -files/openra-20120504-makefile.patch, +openra-20120630.ebuild,
+  +files/openra-20120630-sound.patch:
+  version bump, remove old
 
   02 Jun 2012; Julian Ospald <hasufell@gentoo.org> openra-20120504.ebuild:
   bump to EAPI=4
