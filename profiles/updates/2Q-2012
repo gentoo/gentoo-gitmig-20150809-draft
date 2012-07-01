@@ -21,3 +21,4 @@ move x11-themes/gtk-engines-nimbus x11-themes/nimbus
 move media-gfx/iscan-plugin-gt-s80 media-gfx/esci-interpreter-gt-s80
 move x11-libs/libPropList x11-libs/libproplist
 move dev-perl/Text-ParseWords perl-core/Text-ParseWords
+move net-fs/leechcraft-vrooby sys-fs/leechcraft-vrooby
