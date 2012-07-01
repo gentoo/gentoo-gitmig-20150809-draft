@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.50.1.ebuild,v 1.3 2012/03/01 17:47:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.54.0.ebuild,v 1.1 2012/07/01 00:38:05 floppym Exp $
 
 EAPI="4"
 
@@ -23,19 +23,18 @@ RDEPEND=">=virtual/jre-1.6.0
 	tsmuxer? ( media-video/tsmuxer )
 	transcode? ( media-video/mplayer[encode] )"
 
-S=${WORKDIR}/pms-linux-${PV}
+S=${WORKDIR}/pms-${PV}
 PMS_HOME=/opt/${PN}
 
 src_prepare() {
 	if use multiuser; then
-		echo multiuser is on
 		cat > ${PN} <<-EOF
 		#!/bin/sh
 		if [ ! -e ~/.${PN} ]; then
 			echo "Copying ${PMS_HOME} to ~/.${PN}"
 			cp -pPR "${PMS_HOME}" ~/.${PN}
 		fi
-		export PMS_HOME=~/.${PN}
+		export PMS_HOME=\${HOME}/.${PN}
 		exec "\${PMS_HOME}/PMS.sh" "\$@"
 		EOF
 	else
@@ -68,7 +67,7 @@ src_install() {
 	insinto ${PMS_HOME}
 	doins -r pms.jar *.conf documentation plugins renderers *.xml
 	use tsmuxer && dosym /opt/tsmuxer/bin/tsMuxeR ${PMS_HOME}/linux/tsMuxeR
-	dodoc CHANGELOG README
+	dodoc CHANGELOG README.md
 
 	insinto /usr/share/icons/hicolor/32x32/apps
 	newins icon-32.png ${PN}.png
