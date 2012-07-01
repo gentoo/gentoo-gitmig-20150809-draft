@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-duplicates
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-duplicates/ChangeLog,v 1.2 2012/06/05 21:09:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-duplicates/ChangeLog,v 1.3 2012/07/01 07:53:17 hd_brummy Exp $
+
+  01 Jul 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-duplicates-0.0.4.ebuild:
+  fixed broken include on vdr-1.6, bug 422627
 
   05 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-duplicates-0.0.4.ebuild:

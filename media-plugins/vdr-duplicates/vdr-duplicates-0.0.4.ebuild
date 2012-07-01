@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-duplicates/vdr-duplicates-0.0.4.ebuild,v 1.2 2012/06/05 21:09:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-duplicates/vdr-duplicates-0.0.4.ebuild,v 1.3 2012/07/01 07:53:17 hd_brummy Exp $
 
 EAPI="4"
 
@@ -24,4 +24,6 @@ src_prepare() {
 	if has_version ">=media-video/vdr-1.7.28"; then
 		sed -i "s:SetRecording(recording->FileName(), recording->Title:SetRecording(recording->FileName:" menu.c
 	fi
+
+	sed -e "s:include \$(VDRDIR)/Make.global:-include \$(VDRDIR)/Make.global:" -i Makefile
 }
