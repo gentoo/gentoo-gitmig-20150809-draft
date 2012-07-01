@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.95 2012/05/31 16:30:53 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.96 2012/07/01 10:45:17 gurligebis Exp $
+
+*strongswan-5.0.0 (01 Jul 2012)
+
+  01 Jul 2012; <gurligebis@gentoo.org> +strongswan-5.0.0.ebuild:
+  Bumping to 5.0.0
 
 *strongswan-4.6.4 (31 May 2012)
 

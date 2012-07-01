@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.6.4.ebuild,v 1.2 2012/07/01 10:45:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.0.ebuild,v 1.1 2012/07/01 10:45:17 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info user
@@ -12,7 +12,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~ppc ~sparc ~x86"
-IUSE="+caps cisco curl debug dhcp eap farp gcrypt ldap +ikev1 +ikev2 mysql nat-transport +non-root +openssl smartcard sqlite"
+IUSE="+caps curl debug dhcp eap farp gcrypt ldap +ikev1 +ikev2 mysql +non-root +openssl sqlite"
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
@@ -20,7 +20,6 @@ COMMON_DEPEND="!net-misc/openswan
 	caps? ( sys-libs/libcap )
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )
-	smartcard? ( dev-libs/opensc )
 	openssl? ( >=dev-libs/openssl-0.9.8[-bindist] )
 	mysql? ( virtual/mysql )
 	sqlite? ( >=dev-db/sqlite-3.3.1 )"
@@ -114,8 +113,6 @@ src_configure() {
 		$(use_with caps capabilities libcap) \
 		$(use_enable curl) \
 		$(use_enable ldap) \
-		$(use_enable smartcard) \
-		$(use_enable cisco cisco-quirks) \
 		$(use_enable debug leak-detective) \
 		$(use_enable eap eap-sim) \
 		$(use_enable eap eap-sim-file) \
@@ -129,13 +126,12 @@ src_configure() {
 		$(use_enable eap eap-aka-3gpp2) \
 		$(use_enable eap eap-mschapv2) \
 		$(use_enable eap eap-radius) \
-		$(use_enable nat-transport) \
 		$(use_enable openssl) \
 		$(use_enable gcrypt) \
 		$(use_enable mysql) \
 		$(use_enable sqlite) \
-		$(use_enable ikev1 pluto) \
-		$(use_enable ikev2 charon) \
+		$(use_enable ikev1) \
+		$(use_enable ikev2) \
 		$(use_enable dhcp) \
 		$(use_enable farp) \
 		${myconf}
@@ -169,7 +165,7 @@ src_install() {
 		/etc/ipsec.d/private \
 		/etc/ipsec.d/reqs
 
-	dodoc CREDITS NEWS README TODO || die
+	dodoc NEWS README TODO || die
 
 	# shared libs are used only internally and there are no static libs,
 	# so it's safe to get rid of the .la files
