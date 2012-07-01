@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.40 2012/06/07 18:48:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.41 2012/07/01 18:40:35 armin76 Exp $
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> neon-0.29.6-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #417325
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> neon-0.29.6-r1.ebuild:
   Marking neon-0.29.6-r1 ppc for bug 417325
