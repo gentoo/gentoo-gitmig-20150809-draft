@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_LDAP
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP/ChangeLog,v 1.11 2009/08/22 19:34:57 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP/ChangeLog,v 1.12 2012/07/01 21:33:46 mabi Exp $
+
+  01 Jul 2012; Matti Bickel <mabi@gentoo.org> -PEAR-Net_LDAP-1.1.0.ebuild,
+  -PEAR-Net_LDAP-1.1.1.ebuild, PEAR-Net_LDAP-1.1.5.ebuild:
+  cleanup, move 1.1.5 to EAPI4 to get rid of depend.php
 
 *PEAR-Net_LDAP-1.1.5 (22 Aug 2009)
 
