@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/w3mimgfb/w3mimgfb-0.9.1.ebuild,v 1.8 2005/05/16 04:30:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/w3mimgfb/w3mimgfb-0.9.1.ebuild,v 1.9 2012/07/01 11:39:16 jlec Exp $
+
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -10,43 +12,25 @@ SRC_URI="http://homepage3.nifty.com/slokar/fb/${P}.tar.gz"
 
 LICENSE="w3m BSD"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 x86 ppc"
 IUSE=""
 
-DEPEND=">=media-libs/stimg-0.1.0
+DEPEND="media-libs/stimg"
+RDEPEND="${DEPEND}
 	virtual/w3m"
 
-src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+src_prepare() {
+	sed \
+		-e '/^CC/d' \
+		-e '/^CFLAGS/d' \
+		-e '/^LDFLAGS/d' \
+		-i Makefile || die
+	tc-export CC
 }
 
 src_install() {
+	exeinto /usr/libexec/w3m
+	doexe w3mimgdisplayfb
 
-	local realbin
-
-	if has_version '<www-client/w3m-0.4.2' ; then
-		exeinto /usr/lib/w3m
-		doexe w3mimgdisplayfb
-	elif has_version '>=www-client/w3m-0.4.2-r1' ; then
-		exeinto /usr/libexec/w3m
-		doexe w3mimgdisplayfb
-	fi
-	if has_version '<www-client/w3m-m17n-0.4.2' ; then
-		exeinto /usr/lib/w3m-m17n
-		doexe w3mimgdisplayfb
-	elif has_version '>=www-client/w3m-m17n-0.4.2' ; then
-		exeinto /usr/libexec/w3m-m17n
-		doexe w3mimgdisplayfb
-	fi
-
-	for exe in /usr/lib{,exec}/w3m{,-m17n}/w3mimgdisplayfb ; do
-		if [ -n "$realexe" ] ; then
-			rm ${D}$exe
-			dohard $realexe $exe
-		elif [ -x ${D}$exe ] ; then
-			realexe=$exe
-		fi
-	done
-
-	dodoc COPYING readme.txt
+	dodoc readme.txt
 }
