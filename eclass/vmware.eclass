@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.35 2012/03/28 22:22:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.36 2012/07/01 19:43:30 vadimk Exp $
+
+# @DEAD
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.

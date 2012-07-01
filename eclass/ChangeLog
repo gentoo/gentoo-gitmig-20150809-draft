@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.332 2012/06/30 08:30:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.333 2012/07/01 19:43:30 vadimk Exp $
+
+  01 Jul 2012; Vadim Kuznetsov vadimk@gentoo.org vmware.eclass,
+  vmware-mod.eclass:
+  Makred vmware.eclass and vmware-mod.eclass dead.
 
   30 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-r2.eclass:
   Remove also lower case licenses.

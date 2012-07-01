@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.19 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.20 2012/07/01 19:43:30 vadimk Exp $
 
+# @DEAD
 
 # Ensure vmware comes before linux-mod since we want linux-mod's pkg_preinst and
 # pkg_postinst, along with our own pkg_setup, src_unpack and src_compile
