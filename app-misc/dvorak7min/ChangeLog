@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvorak7min
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.14 2009/11/24 19:29:06 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.15 2012/07/01 09:49:58 jlec Exp $
+
+  01 Jul 2012; Justin Lecher <jlec@gentoo.org> dvorak7min-1.6.1.ebuild:
+  Respect LDFLAGS, #337846; bumped to EAPI=4
 
   24 Nov 2009; Jeremy Olexa <darkside@gentoo.org> dvorak7min-1.6.1.ebuild:
   Add prefix keywords, as tested in prefix overlay
