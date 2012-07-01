@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.85 2012/05/30 08:32:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.86 2012/07/01 18:23:27 ago Exp $
+
+  01 Jul 2012; Agostino Sarubbo <ago@gentoo.org> scorched3d-43.3d.ebuild:
+  Stable for amd64, wrt bug #424243
 
   30 May 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/scorched3d-43.3d-gcc47.patch, scorched3d-43.3d.ebuild:
