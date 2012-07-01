@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>dirtyepic@gentoo.org</email>
-		<name>Ryan Hill</name>
-	</maintainer>
+	<herd>app-doc</herd>
 	<use>
 		<flag name='html'>Install the docs in multipage HTML format (default)</flag>
 		<flag name='htmlsingle'>Install the docs in single page HTML format</flag>
