@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtrain
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/ChangeLog,v 1.11 2009/09/23 17:24:33 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/ChangeLog,v 1.12 2012/07/01 10:12:22 jlec Exp $
+
+  01 Jul 2012; Justin Lecher <jlec@gentoo.org> libtrain-0.9b.ebuild,
+  +files/libtrain-0.9b-impl-dec.patch, metadata.xml:
+  Fix some implicit declarations, respect LDFLAGS #337649; bump to EAPI=4,
+  handle debug configure option
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> libtrain-0.9b.ebuild:
   Remove virtual/libc

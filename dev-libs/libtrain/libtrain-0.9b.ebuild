@@ -1,8 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/libtrain-0.9b.ebuild,v 1.13 2009/09/23 17:24:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtrain/libtrain-0.9b.ebuild,v 1.14 2012/07/01 10:12:22 jlec Exp $
 
-inherit toolchain-funcs
+EAPI=4
+
+AUTOTOOLS_AUTORECONF=yes
+
+inherit autotools-utils
 
 DESCRIPTION="Library for calculating fastest train routes"
 SRC_URI="http://www.on.rim.or.jp/~katamuki/software/train/${P}.tar.gz"
@@ -11,16 +15,11 @@ HOMEPAGE="http://www.on.rim.or.jp/~katamuki/software/train/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~ppc sparc x86"
-IUSE=""
+IUSE="debug static-libs "
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+PATCHES=( "${FILESDIR}"/${P}-impl-dec.patch )
 
-src_compile() {
-	econf || die
-	emake CC="$(tc-getCC)" || die
-}
-
-src_install () {
-	make DESTDIR="${D}" install || die
+src_configure() {
+	local myeconfargs=( $(use_enable debug) )
+	autotools-utils_src_configure
 }
