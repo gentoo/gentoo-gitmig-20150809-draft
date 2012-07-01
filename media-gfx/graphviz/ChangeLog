@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.263 2012/06/27 17:28:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.264 2012/07/01 18:14:39 armin76 Exp $
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> graphviz-2.26.3-r4.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #417327
 
   27 Jun 2012; Markus Meier <maekke@gentoo.org> graphviz-2.28.0.ebuild:
   add ~arm, bug #419621
