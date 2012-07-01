@@ -1,6 +1,10 @@
 # ChangeLog for app-text/o3read
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/o3read/ChangeLog,v 1.17 2010/01/02 11:30:59 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/o3read/ChangeLog,v 1.18 2012/07/01 11:21:09 jlec Exp $
+
+  01 Jul 2012; Justin Lecher <jlec@gentoo.org> o3read-0.0.4.ebuild,
+  metadata.xml:
+  Respect LDFALGS, #336811; bumped to EAPI=4
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> o3read-0.0.4.ebuild:
   Transfer Prefix keywords
