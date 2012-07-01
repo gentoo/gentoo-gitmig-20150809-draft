@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>app-doc</herd>
 	<maintainer>
-		<email>dirtyepic@gentoo.org</email>
-		<name>Ryan Hill</name>
+		<email>app-doc@gentoo.org</email>
 	</maintainer>
 	<use>
-		<flag name='htmlsingle'>Also install single-page HTML version</flag>
+		<flag name='htmlsingle'>Install all-on-one-page HTML version.</flag>
 	</use>
 </pkgmetadata>
