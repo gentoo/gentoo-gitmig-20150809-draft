@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/makepp/makepp-2.0.ebuild,v 1.1 2012/06/30 15:56:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/makepp/makepp-2.0-r1.ebuild,v 1.1 2012/07/01 18:52:49 vapier Exp $
 
 EAPI="4"
+
+inherit eutils
 
 MY_PV=${PV/_}
 MY_P="${PN}-${MY_PV}"
@@ -25,6 +27,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.0-destdir.patch
+
 	# default "all" rule is to run tests :x
 	sed -i '/^all:/s:test::' config.pl || die
 }
