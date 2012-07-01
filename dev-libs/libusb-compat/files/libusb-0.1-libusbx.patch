@@ -1,4 +1,5 @@
 http://libusb.org/ticket/138
+http://sourceforge.net/apps/trac/libusbx/ticket/31
 http://bugs.gentoo.org/423135
 
 --- libusb/core.c
