@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.4.1.ebuild,v 1.4 2012/05/03 19:24:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.4.1.ebuild,v 1.5 2012/07/01 07:58:19 qiaomuf Exp $
 
 EAPI="3"
 
@@ -16,7 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk gtk3"
 
 RDEPEND="dev-libs/glib:2
-	x11-libs/gtk+:2"
+	gtk? (
+		x11-libs/gtk+:2
+	)
+	gtk3? (
+		x11-libs/gtk+:3
+	)"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	~app-i18n/fcitx-4.2.1
