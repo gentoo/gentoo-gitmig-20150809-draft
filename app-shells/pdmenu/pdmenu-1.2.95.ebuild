@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.95.ebuild,v 1.3 2012/06/08 11:59:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.95.ebuild,v 1.4 2012/07/01 11:14:56 jlec Exp $
+
+EAPI=4
+
+inherit eutils
 
 DESCRIPTION="A simple console menu program"
 HOMEPAGE="http://www.kitenet.net/programs/pdmenu/"
@@ -11,7 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ~mips x86"
 IUSE="nls gpm examples"
 
-DEPEND="sys-libs/slang
+DEPEND="
+	sys-libs/slang
 	gpm? ( sys-libs/gpm )
 	nls? ( sys-devel/gettext )"
 
@@ -19,28 +24,29 @@ S=${WORKDIR}/${PN}
 
 RESTRICT="test"
 
-src_compile() {
+src_prepare() {
+	sed \
+		-e 's:\(-o pdmenu\):$(LDFLAGS) \1:g' \
+		-i Makefile || die
+}
+
+src_configure() {
 	econf \
 		$(use_with gpm) \
-		$(use_enable nls) \
-		|| die "econf failed"
-
-	emake || die "emake failed"
+		$(use_enable nls)
 }
 
 src_install() {
+	dobin pdmenu
+
 	dodoc doc/ANNOUNCE doc/BUGS doc/TODO
 
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
+	use examples && doins -r examples
 
 	mv doc/pdmenu.man doc/pdmenu.1
 	mv doc/pdmenurc.man doc/pdmenurc.5
 	doman doc/pdmenu.1 doc/pdmenurc.5
 
-	dobin pdmenu
 }
 
 pkg_postinst() {
