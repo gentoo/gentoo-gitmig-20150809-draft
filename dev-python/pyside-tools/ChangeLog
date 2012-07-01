@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyside-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.21 2012/06/02 13:42:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.22 2012/07/01 21:27:25 pesa Exp $
+
+  01 Jul 2012; Davide Pesavento <pesa@gentoo.org> pyside-tools-0.2.14.ebuild:
+  pyside-rcc tests are not (yet) supposed to pass against python3. Thanks to ago
+  in bug 424233.
 
 *pyside-tools-0.2.14 (02 Jun 2012)
 
@@ -99,4 +103,3 @@
   20 Dec 2009; Dominik Kapusta <ayoy@gentoo.org> +pyside-tools-0.1.2.ebuild,
   +files/pyside-tools-0.1.2-qtgui.patch, +metadata.xml:
   Initial commit for pyside-tools (bug #282138)
-
