@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.188 2012/06/28 09:39:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.189 2012/07/01 16:21:10 armin76 Exp $
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> postgresql-base-8.3.19.ebuild,
+  postgresql-base-8.4.12.ebuild, postgresql-base-9.0.8.ebuild,
+  postgresql-base-9.1.4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #419727
 
   28 Jun 2012; Patrick Lauer <patrick@gentoo.org> postgresql-base-9999.ebuild:
   Fixing missing -docs for -9999
