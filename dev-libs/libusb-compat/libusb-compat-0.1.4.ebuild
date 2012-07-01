@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.4.ebuild,v 1.9 2012/07/01 17:57:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.4.ebuild,v 1.10 2012/07/01 18:08:09 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -40,5 +40,5 @@ src_install() {
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/*.c
 
-	rm -f "${ED}"/usr/lib*/*.la
+	prune_libtool_files
 }
