@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/parallel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.28 2012/06/25 06:28:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.29 2012/07/01 06:02:09 fauli Exp $
+
+  01 Jul 2012; Christian Faulhammer <fauli@gentoo.org>
+  -parallel-20120422.ebuild:
+  clean up
 
   25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> parallel-20120522.ebuild:
   marked x86 per bug 423211
