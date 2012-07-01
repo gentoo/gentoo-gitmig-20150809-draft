@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pioneers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.27 2012/06/30 21:57:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.28 2012/07/01 18:25:28 ago Exp $
+
+  01 Jul 2012; Agostino Sarubbo <ago@gentoo.org> pioneers-14.1.ebuild:
+  Stable for amd64, wrt bug #424247
 
   30 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pioneers-14.1.ebuild:
   marked x86 per bug 424247
