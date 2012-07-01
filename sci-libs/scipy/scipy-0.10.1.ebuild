@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.1.ebuild,v 1.3 2012/06/28 21:30:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.1.ebuild,v 1.4 2012/07/01 16:09:05 mr_bones_ Exp $
 
 EAPI=4
 
@@ -65,7 +65,6 @@ src_unpack() {
 		unzip -qo "${DISTDIR}"/${P}-html.zip -d html || die
 	fi
 }
-
 
 pc_incdir() {
 	pkg-config --cflags-only-I $@ | \
