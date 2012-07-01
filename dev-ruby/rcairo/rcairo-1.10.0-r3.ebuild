@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.0-r3.ebuild,v 1.3 2012/05/04 18:47:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.0-r3.ebuild,v 1.4 2012/07/01 18:31:41 armin76 Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Ruby GPL-2 )"
-KEYWORDS="alpha amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="${RDEPEND}
 	>=x11-libs/cairo-1.2.0[svg]"

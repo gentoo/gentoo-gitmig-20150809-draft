@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.100 2012/05/01 18:24:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.101 2012/07/01 18:31:43 armin76 Exp $
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> mysql-ruby-2.8.1-r1.ebuild,
+  mysql-ruby-2.8.1-r2.ebuild, mysql-ruby-2.8.2.ebuild,
+  mysql-ruby-2.8.2-r1.ebuild:
+  Drop alpha keywords
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> mysql-ruby-2.8.1-r1.ebuild,
   mysql-ruby-2.8.1-r2.ebuild, mysql-ruby-2.8.2.ebuild,
