@@ -1,0 +1,9 @@
+# ChangeLog for net-fs/leechcraft-vrooby
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/leechcraft-vrooby/ChangeLog,v 1.1 2012/07/01 13:36:56 maksbotan Exp $
+
+*leechcraft-vrooby-9999 (29 Jun 2012)
+
+  29 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-vrooby-9999.ebuild, +metadata.xml:
+  Add net-fs/leechcraft-vrooby, thanks to 0xd34df00d
