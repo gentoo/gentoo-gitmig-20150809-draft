@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.105 2012/05/05 03:52:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.106 2012/07/01 18:27:01 ago Exp $
+
+  01 Jul 2012; Agostino Sarubbo <ago@gentoo.org> goffice-0.8.17-r1.ebuild:
+  Stable for amd64, wrt bug #421471
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> goffice-0.8.17.ebuild,
   goffice-0.8.17-r1.ebuild:
