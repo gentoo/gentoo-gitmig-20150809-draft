@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-21.0.1180.15_alpha144745.ebuild,v 1.1 2012/06/29 03:32:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-21.0.1180.15_alpha144745.ebuild,v 1.2 2012/07/02 18:43:44 floppym Exp $
 
 EAPI="4"
 
@@ -116,6 +116,22 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${size}x${size}/apps
 		newins "${D}${CHROME_HOME}product_logo_${size}.png" google-chrome.png
 	done
+}
+
+any_cpu_missing_flag() {
+	local value=$1
+	grep '^flags' /proc/cpuinfo | grep -qv "$value"
+}
+
+
+pkg_preinst() {
+	chromium_pkg_preinst
+	if any_cpu_missing_flag sse2; then
+		ewarn "The bundled PepperFlash plugin requires a CPU that supports the"
+		ewarn "SSE2 instruction set, and at least one of your CPUs does not"
+		ewarn "support this feature. Renaming PepperFlash."
+		mv -v "${D}"opt/google/chrome/PepperFlash/libpepflashplayer.so{,.bak} || die
+	fi
 }
 
 pkg_postinst() {
