@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.41 2012/05/22 10:57:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.42 2012/07/02 08:43:37 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -17,18 +17,18 @@
 # @DESCRIPTION:
 # This should be an array defining arguments for econf
 
-AUTOTOOLS_AUTO_DEPEND="no"
+AUTOTOOLS_AUTO_DEPEND=no
 
 unset _xfconf_live
 [[ $PV == *9999* ]] && _xfconf_live=git-2
 
 inherit ${_xfconf_live} autotools base eutils fdo-mime gnome2-utils libtool
 
-EGIT_BOOTSTRAP="autogen.sh"
+EGIT_BOOTSTRAP=autogen.sh
 EGIT_REPO_URI="git://git.xfce.org/xfce/${MY_PN:-${PN}}"
 
 _xfconf_deps=""
-_xfconf_m4=">=dev-util/xfce4-dev-tools-4.9.1 ${AUTOTOOLS_DEPEND}"
+_xfconf_m4=">=dev-util/xfce4-dev-tools-4.10 ${AUTOTOOLS_DEPEND}"
 
 [[ -n $_xfconf_live ]] && _xfconf_deps+=" dev-util/gtk-doc ${_xfconf_m4}"
 [[ -n $EAUTORECONF ]] && _xfconf_deps+=" ${_xfconf_m4}"
