@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.140 2012/06/08 04:49:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.141 2012/07/02 22:13:55 vapier Exp $
+
+  02 Jul 2012; Mike Frysinger <vapier@gentoo.org>
+  files/xbmc-9999-no-arm-flags.patch:
+  Update patch to latest git #424485 by tsubus.
 
   08 Jun 2012; Mike Frysinger <vapier@gentoo.org> xbmc-11.0.ebuild,
   xbmc-9999.ebuild:
@@ -575,4 +579,3 @@
   +xbmc-9999.ebuild:
   Initial ebuild by many people at #198849 (Peter Fern, Rick Harris, etc...)
   cleaned up by me.
-
