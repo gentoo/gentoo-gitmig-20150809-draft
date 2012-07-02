@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.90 2012/05/24 14:06:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.91 2012/07/02 18:49:36 pacho Exp $
+
+  02 Jul 2012; Pacho Ramos <pacho@gentoo.org> -gtk-vnc-0.4.3-r1.ebuild,
+  -gtk-vnc-0.5.0.ebuild, gtk-vnc-0.5.0-r1.ebuild:
+  Drop old and add a comment to last 0.5 version to check in next bump with
+  parallel installation again as upstream thinks 0.5.x could fix it.
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org> gtk-vnc-0.5.0-r1.ebuild:
   ppc stable wrt #410611
@@ -366,4 +371,3 @@
   +gtk-vnc-0.2.0.ebuild:
   (#189824) Add VNC widget for GTK+, based on the work of Jiri Tyr. This is a
   dep of new virt-manager.
-

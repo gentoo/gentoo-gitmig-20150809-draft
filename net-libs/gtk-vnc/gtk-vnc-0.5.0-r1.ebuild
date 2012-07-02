@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.0-r1.ebuild,v 1.6 2012/05/24 14:06:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.0-r1.ebuild,v 1.7 2012/07/02 18:49:36 pacho Exp $
 
 EAPI="4"
 
@@ -156,7 +156,7 @@ src_install() {
 
 	cd ${GTK2_BUILDDIR}
 	einfo "Running make install in ${GTK2_BUILDDIR}"
-	# bug #328273
+	# bug #328273, try again parallel installation in next testing version
 	MAKEOPTS="${MAKEOPTS} -j1" base_src_install
 
 	if use gtk3; then
