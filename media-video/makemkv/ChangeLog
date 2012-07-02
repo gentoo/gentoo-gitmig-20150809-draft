@@ -1,6 +1,15 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.4 2012/07/01 05:49:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.5 2012/07/02 03:46:19 mattm Exp $
+
+*makemkv-1.7.4-r1 (02 Jul 2012)
+
+  02 Jul 2012; Matthew Marlowe <mattm@gentoo.org> -makemkv-1.6.16.ebuild,
+  +makemkv-1.7.4-r1.ebuild, +files/makemkv-1.7.4-makefile.linux.patch:
+  Per request from Bug 396253, took over maintainership of media-video/makemkv.
+  Bumped to latest user contributed ebuild. Verified dependencies and
+  installation/operation, supplemented basic elog install directions, and
+  removed obsolete/non functional prior ebuild.
 
   01 Jul 2012; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Reassign as per bug #396253
