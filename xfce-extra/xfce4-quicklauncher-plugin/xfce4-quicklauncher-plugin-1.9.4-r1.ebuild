@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/xfce4-quicklauncher-plugin-1.9.4-r1.ebuild,v 1.14 2012/07/02 17:50:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/xfce4-quicklauncher-plugin-1.9.4-r1.ebuild,v 1.15 2012/07/02 18:31:51 ssuominen Exp $
 
 EAPI=4
 #EAUTORECONF=yes
@@ -38,9 +38,10 @@ src_prepare() {
 		configure.ac || die
 
 	# Prevent glib-gettextize from running wrt #423115
+	export AT_M4DIR=${EPREFIX}/usr/share/xfce4/dev-tools/m4macros
 	intltoolize --automake --copy --force
 	_elibtoolize --copy --force --install
-	AT_M4DIR=${EPREFIX}/usr/share/xfce4/dev-tools/m4macros eaclocal
+	eaclocal
 	eautoconf
 	eautoheader
 	eautomake
