@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.5.1.ebuild,v 1.1 2012/07/01 06:07:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.5.1.ebuild,v 1.2 2012/07/02 11:54:26 marienz Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -29,7 +29,7 @@ RDEPEND="|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celem
 
 DEPEND="test? (
 		${RDEPEND}
-		|| ( dev-python/pyftpdlib dev-python/medusa )
+		>=dev-python/pyftpdlib-0.7.0
 		dev-python/subunit
 		>=dev-python/testtools-0.9.5
 	)"
@@ -46,6 +46,8 @@ src_prepare() {
 
 	# Don't regenerate .c files from .pyx when pyrex is found.
 	epatch "${FILESDIR}/${PN}-2.4.2-no-pyrex-citon.patch"
+
+	epatch "${FILESDIR}/${P}-sphinx-test-failures.patch"
 }
 
 src_test() {
