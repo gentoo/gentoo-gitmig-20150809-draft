@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6738 2012/07/02 19:46:10 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6739 2012/07/02 20:21:14 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite dev-python/sexy-python wrt #380193
 
   02 Jul 2012; Joe Peterson <lavajoe@gentoo.org> package.mask:
   Mask sys-fs/btrfs-progs-0.19*
