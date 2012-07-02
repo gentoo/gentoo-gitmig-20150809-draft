@@ -1,6 +1,10 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.68 2012/07/02 18:24:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.69 2012/07/02 18:48:57 hwoarang Exp $
+
+  02 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/minitube-1.8-gcc4.7.patch, minitube-1.8.ebuild:
+  Update linguas. Fix compilation with gcc-4.7. Bug #422977
 
 *minitube-1.8 (02 Jul 2012)
 

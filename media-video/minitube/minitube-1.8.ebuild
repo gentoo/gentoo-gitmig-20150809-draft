@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.8.ebuild,v 1.1 2012/07/02 18:24:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.8.ebuild,v 1.2 2012/07/02 18:48:57 hwoarang Exp $
 
 EAPI=4
-LANGS="ca da el en_US es es_AR es_ES fr gl hr hu ia id it nb nl pl pt pt_BR
-	ro ru sl sq sr sv_SE te tr zh_CN"
+LANGS="ar ca da el en es es_AR es_ES fi fr gl hr hu ia id it nb nl nn pl pt pt_BR ro ru sk sl sq sr sv_SE te tr zh_CN"
 LANGSLONG="ca_ES de_DE fi_FI he_IL id_ID ka_GE pl_PL uk_UA"
 
 inherit qt4-r2
@@ -49,6 +48,8 @@ src_prepare() {
 	if [[ -n ${trans} ]]; then
 		sed -i -e "/^TRANSLATIONS/s/+=.*/+=${trans}/" locale/locale.pri || die
 	fi
+	# gcc-4.7. Bug #422977
+	epatch "${FILESDIR}"/${P}-gcc4.7.patch
 }
 
 src_install() {
