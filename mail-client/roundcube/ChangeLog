@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.81 2012/06/07 22:31:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.82 2012/07/02 12:14:03 jer Exp $
+
+  02 Jul 2012; Jeroen Roovers <jer@gentoo.org> roundcube-0.7.2.ebuild,
+  roundcube-0.8_rc.ebuild:
+  Marked ~hppa too.
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> roundcube-0.7.2.ebuild:
   Marking roundcube-0.7.2 ppc for bug 412029
