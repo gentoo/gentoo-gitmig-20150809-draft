@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13914 2012/06/30 21:33:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13915 2012/07/02 04:56:40 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -390,11 +390,6 @@ net-im/silc-client
 # Last release was back in 2003
 # Removal in 30 days
 x11-terms/cxterm
-
-# Michael Sterrett <mr_bones_@gentoo.org> (31 May 2012)
-# No longer needed.
-# Masked for removal on 20120630
-games-util/nforenum
 
 # Markos Chandras <hwoarang@getnoo.org> (27 May 2012)
 # Mask alpha release
