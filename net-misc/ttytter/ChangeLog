@@ -1,11 +1,11 @@
 # ChangeLog for net-misc/ttytter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ttytter/ChangeLog,v 1.3 2012/07/02 18:26:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ttytter/ChangeLog,v 1.4 2012/07/02 18:33:44 hwoarang Exp $
 
 *ttytter-2.0.01 (02 Jul 2012)
 
   02 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +ttytter-2.0.01.ebuild:
-  i
+  Version bump. Bug #422501
 
 *ttytter-1.2.05 (24 Dec 2011)
 
