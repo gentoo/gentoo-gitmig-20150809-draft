@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.90 2012/05/29 19:35:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.91 2012/07/02 15:32:34 angelos Exp $
+
+*qmpdclient-1.2.2-r1 (02 Jul 2012)
+
+  02 Jul 2012; Christoph Mende <angelos@gentoo.org>
+  +files/qmpdclient-1.2.2-qt48.patch, +qmpdclient-1.2.2-r1.ebuild:
+  Apply patch for Qt-4.8 (bug #418937 by Kent Fredric)
 
   29 May 2012; Brent Baude <ranger@gentoo.org> qmpdclient-1.2.2.ebuild:
   Marking qmpdclient-1.2.2 ppc for bug 400407
@@ -371,4 +377,3 @@
   +qmpdclient-1.0.3.ebuild:
   Initial import. Based on an ebuild by Gorch <gorch at 12move.de> and Avuton
   Olrich <avuton at gmail.com>. Closes bug #122048.
-
