@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.1_rc2.ebuild,v 1.1 2012/06/20 20:11:59 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.1.ebuild,v 1.1 2012/07/02 05:43:41 mattm Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://prdownloads.sourceforge.net/zabbix/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="agent java curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server ssh snmp sqlite iodbc odbc static"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
@@ -128,7 +128,7 @@ pkg_postinst() {
 		elog "Have a look at /usr/share/zabbix for"
 		elog "database creation and upgrades."
 		elog
-		elog "Execute schema, images, and data sql files in order."
+		elog "Execute schema, images, and data sql files in that order."
 		elog
 		elog "For more info read the Zabbix manual at"
 		elog "http://www.zabbix.com/documentation.php"
@@ -175,15 +175,6 @@ pkg_postinst() {
 	elog "zabbix-trapper   10051/udp Zabbix Trapper"
 	elog
 
-	elog
-	elog "Zabbix will be officially supporting database upgrades from"
-	elog "2.0.0rc3 to the final 2.0.0 release when it is available."
-	elog "At some point, there should be some support for upgrading from 1.8.x"
-	elog "to a 2.0.x release."
-	elog
-	elog "Note that this is the first gentoo ebuild for 2.0.x and likely"
-	elog "will need further tuning with bumps/revisions as bugs are closed."
-	elog
 	elog "Zabbix is incompatible with fping 3.0 - (Zabbix bug #ZBX-4894)."
 	elog
 	elog "Feel free to download or contribute gentoo specific zabbix templates"
