@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/hashcat-bin-0.39.ebuild,v 1.1 2012/07/01 22:41:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/hashcat-bin-0.39.ebuild,v 1.2 2012/07/02 01:19:04 zerochaos Exp $
 
 EAPI=4
 
@@ -25,7 +25,8 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-RESTRICT="strip binchecks"
+RESTRICT="strip"
+QA_PREBUILT="hashcat-cli*.bin"
 
 src_install() {
 	dodoc docs/*
