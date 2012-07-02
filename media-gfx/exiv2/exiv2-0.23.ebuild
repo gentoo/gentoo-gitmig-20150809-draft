@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23.ebuild,v 1.1 2012/06/24 21:36:09 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23.ebuild,v 1.2 2012/07/02 20:33:22 ssuominen Exp $
 
 EAPI=4
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -117,14 +117,4 @@ src_install() {
 		docompress -x /usr/share/doc/${PF}/examples
 		doins samples/*.cpp
 	fi
-}
-
-pkg_postinst() {
-	ewarn
-	ewarn "PLEASE PLEASE take note of this:"
-	ewarn "Please make *sure* to run revdep-rebuild now"
-	ewarn "Certain things on your system may have linked against a"
-	ewarn "different version of exiv2 -- those things need to be"
-	ewarn "recompiled. Sorry for the inconvenience!"
-	ewarn
 }
