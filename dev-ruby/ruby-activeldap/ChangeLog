@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-activeldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.32 2012/04/15 08:45:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.33 2012/07/02 08:25:02 graaff Exp $
+
+*ruby-activeldap-3.1.1-r1 (02 Jul 2012)
+
+  02 Jul 2012; Hans de Graaff <graaff@gentoo.org>
+  +ruby-activeldap-3.1.1-r1.ebuild:
+  Extend versioning to activemodel 3.2 since it is mostly compatible:
+  https://github.com/activeldap/activeldap/pull/39
 
 *ruby-activeldap-3.1.1 (15 Apr 2012)
 
