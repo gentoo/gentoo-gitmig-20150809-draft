@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmoe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.24 2012/07/01 18:24:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.25 2012/07/02 10:23:55 naota Exp $
+
+  02 Jul 2012; Naohiro Aota <naota@gentoo.org> -libmoe-1.5.8-r1.ebuild:
+  Drop old revision. #424121
 
   01 Jul 2012; Agostino Sarubbo <ago@gentoo.org> libmoe-1.5.8-r2.ebuild:
   Stable for amd64, wrt bug #302326
