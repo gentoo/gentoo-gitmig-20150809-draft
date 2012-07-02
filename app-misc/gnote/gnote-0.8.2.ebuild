@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.8.2.ebuild,v 1.5 2012/05/22 11:31:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.8.2.ebuild,v 1.6 2012/07/02 18:46:26 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="http://live.gnome.org/Gnote"
@@ -42,6 +42,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-signal_idle-header.patch" #424317
+
 	gnome2_src_prepare
 
 	# Do not set idiotic defines in a released tarball, bug #311979
