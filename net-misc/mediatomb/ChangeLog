@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.33 2012/06/28 17:23:51 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.34 2012/07/02 07:57:43 jdhore Exp $
+
+  02 Jul 2012; Jeff Horelick <jdhore@gentoo.org> mediatomb-0.12.1-r2.ebuild:
+  marked x86 per bug 422919
 
   28 Jun 2012; Ian Stakenvicius <axs@gentoo.org> mediatomb-0.12.1-r1.ebuild,
   mediatomb-0.12.1-r2.ebuild:
