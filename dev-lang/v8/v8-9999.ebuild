@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.28 2012/05/26 10:10:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.29 2012/07/02 17:13:05 grobian Exp $
 
 EAPI="4"
 
@@ -26,14 +26,6 @@ src_unpack() {
 	subversion_src_unpack
 	cd "${S}"
 	make dependencies || die
-}
-
-src_prepare() {
-	# strip unsupported -arch (in Prefix) for OSX, e.g. bug #417401
-	epatch "${FILESDIR}"/${PN}-3.10.8.10-darwin-arch.patch
-	# make sure we don't target an anchient version of OSX
-	# issue http://code.google.com/p/v8/issues/detail?id=2151
-	#sed -i -e "/MACOSX_DEPLOYMENT_TARGET/d" build/standalone.gypi || die
 }
 
 src_compile() {
@@ -63,6 +55,7 @@ src_compile() {
 	# http://code.google.com/p/v8/issues/detail?id=1781
 
 	emake V=1 \
+		GYPFLAGS="-Dmac_deployment_target=${MACOSX_DEPLOYMENT_TARGET}" \
 		library=shared \
 		werror=no \
 		soname_version=${soname_version} \
