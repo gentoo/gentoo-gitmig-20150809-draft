@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.138 2012/06/27 11:57:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.139 2012/07/02 05:49:01 jdhore Exp $
+
+  02 Jul 2012; Jeff Horelick <jdhore@gentoo.org> git-1.7.8.6.ebuild:
+  marked x86 per bug 418381
 
   27 Jun 2012; Agostino Sarubbo <ago@gentoo.org> git-1.7.8.6.ebuild:
   Stable for amd64, wrt bug #418381
