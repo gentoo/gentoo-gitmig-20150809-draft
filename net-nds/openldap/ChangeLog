@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.419 2012/06/13 11:06:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.420 2012/07/02 23:12:32 naota Exp $
+
+  02 Jul 2012; Naohiro Aota <naota@gentoo.org> openldap-2.4.21.ebuild,
+  openldap-2.4.23.ebuild, openldap-2.4.24.ebuild, openldap-2.4.25-r1.ebuild,
+  openldap-2.4.25.ebuild, openldap-2.4.28-r1.ebuild, openldap-2.4.28.ebuild,
+  openldap-2.4.30.ebuild:
+  Drop x86-fbsd keyword, due to #290571 #408001 #408009
 
   13 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +files/openldap-2.4.31-gcc47.patch, openldap-2.4.31-r1.ebuild:
