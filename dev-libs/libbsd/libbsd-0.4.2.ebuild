@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/libbsd-0.4.2.ebuild,v 1.2 2012/06/28 10:38:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/libbsd-0.4.2.ebuild,v 1.3 2012/07/02 08:25:53 jdhore Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="BSD BSD-2 BSD-4 ISC"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 DOCS="ChangeLog README TODO"
