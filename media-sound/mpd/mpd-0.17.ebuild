@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.ebuild,v 1.1 2012/06/27 18:16:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.ebuild,v 1.2 2012/07/02 15:18:50 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib systemd user
@@ -11,11 +11,12 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x64-macos"
-IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug +fifo +ffmpeg flac
-fluidsynth profile +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate
-+mad mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio sid
-sndfile sqlite tcpd twolame unicode vorbis wavpack wildmidi zeroconf zip"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd ~x64-macos"
+IUSE="aac +alsa ao audiofile bzip2 cdio +curl debug +fifo +ffmpeg flac
+fluidsynth +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate +mad
+mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio sid
+sndfile soundcloud soup sqlite tcpd twolame unicode vorbis wavpack wildmidi
+zeroconf zip"
 
 REQUIRED_USE="|| ( alsa ao fifo jack network openal oss pipe pulseaudio )
 	|| ( aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123 musepack
@@ -32,7 +33,6 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )
 	cdio? ( dev-libs/libcdio[-minimal] )
-	cue? ( media-libs/libcue )
 	curl? ( net-misc/curl )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
@@ -54,6 +54,8 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	pulseaudio? ( media-sound/pulseaudio )
 	sid? ( media-libs/libsidplay:2 )
 	sndfile? ( media-libs/libsndfile )
+	soundcloud? ( >=dev-libs/yajl-2 )
+	soup? ( net-libs/libsoup:2.4 )
 	sqlite? ( dev-db/sqlite:3 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	twolame? ( media-sound/twolame )
@@ -84,9 +86,10 @@ src_prepare() {
 }
 
 src_configure() {
-	local mpdconf="--enable-tcp --enable-un	--disable-documentation
-		--disable-ffado --disable-gme --enable-largefile
-		--disable-mvp --docdir=${EPREFIX}/usr/share/doc/${PF}"
+	local mpdconf="--disable-despotify --disable-documentation --disable-ffado
+		--disable-gme --disable-mvp --disable-roar --enable-largefile
+		--enable-recorder-output --enable-tcp --enable-un
+		--docdir=${EPREFIX}/usr/share/doc/${PF}"
 
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
@@ -99,12 +102,6 @@ src_configure() {
 			--disable-twolame-encoder --disable-wave-encoder"
 	fi
 
-	if use flac && use ogg; then
-		mpdconf+=" --enable-oggflac"
-	else
-		mpdconf+=" --disable-oggflac"
-	fi
-
 	append-lfs-flags
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
 
@@ -114,8 +111,8 @@ src_configure() {
 		$(use_enable ao) \
 		$(use_enable audiofile) \
 		$(use_enable bzip2) \
+		$(use_enable cdio cdio-paranoia) \
 		$(use_enable cdio iso9660) \
-		$(use_enable cue) \
 		$(use_enable curl) \
 		$(use_enable debug) \
 		$(use_enable ffmpeg) \
@@ -127,20 +124,21 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable jack) \
 		$(use_enable lastfmradio lastfm) \
-		$(use_enable mms) \
 		$(use_enable libsamplerate lsr) \
 		$(use_enable mad) \
 		$(use_enable mikmod) \
+		$(use_enable mms) \
 		$(use_enable modplug) \
 		$(use_enable mpg123) \
 		$(use_enable musepack mpc) \
 		$(use_enable openal) \
 		$(use_enable oss) \
 		$(use_enable pipe pipe-output) \
-		$(use_enable profile gprof) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable sid sidplay) \
 		$(use_enable sndfile sndfile) \
+		$(use_enable soundcloud) \
+		$(use_enable soup) \
 		$(use_enable sqlite) \
 		$(use_enable tcpd libwrap) \
 		$(use_enable vorbis) \
