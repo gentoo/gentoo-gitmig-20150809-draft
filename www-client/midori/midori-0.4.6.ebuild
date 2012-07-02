@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.6.ebuild,v 1.3 2012/06/15 09:59:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.6.ebuild,v 1.4 2012/07/02 16:49:07 ssuominen Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://git.xfce.org/apps/${PN}"
 	_live_inherits=git-2
 else
-	KEYWORDS="amd64 ~arm ~ppc x86 ~x86-fbsd"
+	KEYWORDS="amd64 ~arm ppc x86 ~x86-fbsd"
 	SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 fi
 
