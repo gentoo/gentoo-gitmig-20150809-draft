@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/logitechmediaserver-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/ChangeLog,v 1.5 2012/06/09 23:10:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/ChangeLog,v 1.6 2012/07/02 15:30:52 lavajoe Exp $
+
+*logitechmediaserver-bin-7.7.2-r2 (02 Jul 2012)
+
+  02 Jul 2012; Joe Peterson <lavajoe@gentoo.org>
+  -logitechmediaserver-bin-7.7.2-r1.ebuild,
+  +logitechmediaserver-bin-7.7.2-r2.ebuild:
+  Restrict perl to version 5.14 or lower (bug #423997)
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org>
   logitechmediaserver-bin-7.7.2-r1.ebuild:

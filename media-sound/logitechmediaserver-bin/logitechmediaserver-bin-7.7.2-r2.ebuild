@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/logitechmediaserver-bin-7.7.2-r1.ebuild,v 1.2 2012/06/09 23:10:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/logitechmediaserver-bin-7.7.2-r2.ebuild,v 1.1 2012/07/02 15:30:52 lavajoe Exp $
 
 EAPI="3"
 
-inherit eutils user
+inherit eutils
 
 BUILD_NUM="33893"
 SRC_DIR="LogitechMediaServer_v${PV}"
@@ -32,6 +32,7 @@ RDEPEND="
 	!prefix? ( >=sys-apps/baselayout-2.0.0 )
 	!prefix? ( virtual/logger )
 	>=dev-lang/perl-5.8.8[ithreads]
+	<dev-lang/perl-5.15[ithreads]
 	>=dev-perl/Data-UUID-1.202
 	"
 
