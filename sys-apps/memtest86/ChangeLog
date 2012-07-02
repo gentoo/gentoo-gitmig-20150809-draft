@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/memtest86
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.40 2011/06/15 05:02:34 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.41 2012/07/02 11:00:47 flameeyes Exp $
+
+*memtest86-4.0s (02 Jul 2012)
+
+  02 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +memtest86-4.0s.ebuild,
+  -files/memtest86-3.4-build.patch, -files/memtest86-3.5-build.patch,
+  -memtest86-3.4.ebuild, -memtest86-3.5.ebuild:
+  Cleanup old; bump to version 4.0s (also called 4.0b) and make the ebuild
+  almost identical to memtest86+; install a grub2 configuration file as well.
 
   15 Jun 2011; Jeroen Roovers <jer@gentoo.org> files/memtest86-4.0-build.patch:
   Clean up patch.
