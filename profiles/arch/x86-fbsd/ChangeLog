@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.31 2012/03/18 09:33:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.32 2012/07/02 23:13:55 naota Exp $
+
+  02 Jul 2012; Naohiro Aota <naota@gentoo.org> package.use.mask:
+  Mask smbkrb5passwd for net-nds/openldap.
 
   18 Mar 2012; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Use mask kde for net-im/gajim
