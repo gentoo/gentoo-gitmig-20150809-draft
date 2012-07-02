@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.56 2012/06/06 03:08:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.57 2012/07/02 11:52:49 keri Exp $
+
+*gprolog-1.4.1 (02 Jul 2012)
+
+  02 Jul 2012; <keri@gentoo.org> +gprolog-1.4.1.ebuild,
+  +files/gprolog-1.4.1-ldflags.patch, +files/gprolog-1.4.1-links.patch,
+  +files/gprolog-1.4.1-nodocs.patch, +files/gprolog-1.4.1-txt-file.patch:
+  Version bump
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> gprolog-1.4.0.ebuild:
   inherit multilib for get_libdir
