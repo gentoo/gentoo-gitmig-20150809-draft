@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/moosefs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/ChangeLog,v 1.3 2011/08/02 08:47:31 ultrabug Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/ChangeLog,v 1.4 2012/07/02 13:51:07 ultrabug Exp $
+
+*moosefs-1.6.25 (02 Jul 2012)
+
+  02 Jul 2012; Ultrabug <ultrabug@gentoo.org> +moosefs-1.6.25.ebuild:
+  version bump
 
 *moosefs-1.6.20-r2 (02 Aug 2011)
 
