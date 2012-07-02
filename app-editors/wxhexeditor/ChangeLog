@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/wxhexeditor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.2 2011/08/19 04:44:27 dirtyepic Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.3 2012/07/02 03:47:52 dirtyepic Exp $
+
+*wxhexeditor-0.20 (02 Jul 2012)
+
+  02 Jul 2012; Ryan Hill <dirtyepic@gentoo.org> -wxhexeditor-0.09.ebuild,
+  -files/wxhexeditor-0.09-gcc45.patch, +wxhexeditor-0.20.ebuild,
+  +files/wxhexeditor-0.20-makefile.patch:
+  Version bump, bug #407161. Remove old.
 
 *wxhexeditor-0.11 (19 Aug 2011)
 
