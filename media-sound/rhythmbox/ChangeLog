@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.219 2012/06/04 06:23:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.220 2012/07/02 00:39:39 nirbheek Exp $
+
+*rhythmbox-2.97 (02 Jul 2012)
+
+  02 Jul 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +rhythmbox-2.97.ebuild,
+  -rhythmbox-2.95.ebuild:
+  Bump to 2.97. Last.fm plugin is now always built because the dependency is not
+  optional any more.
 
   04 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   rhythmbox-2.95.ebuild, rhythmbox-2.96.ebuild:

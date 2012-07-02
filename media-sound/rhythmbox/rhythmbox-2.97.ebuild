@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.95.ebuild,v 1.6 2012/06/04 06:23:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.1 2012/07/02 00:39:39 nirbheek Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="cdr clutter daap dbus doc gnome-keyring html ipod +lastfm libnotify lirc
+IUSE="cdr clutter daap dbus doc gnome-keyring html ipod libnotify lirc
 musicbrainz mtp nsplugin +python test +udev upnp webkit zeitgeist"
 # vala
 KEYWORDS="~amd64 ~x86"
@@ -29,8 +29,8 @@ REQUIRED_USE="
 
 # FIXME: double check what to do with fm-radio plugin
 # NOTE: gst-python is still needed because gstreamer introspection is incomplete
-COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
-	dev-libs/libxml2:2
+COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
+	>=dev-libs/libxml2-2.7.8:2
 	>=x11-libs/gtk+-3.2:3[introspection]
 	>=x11-libs/gdk-pixbuf-2.18.0:2
 	>=dev-libs/gobject-introspection-0.10.0
@@ -41,6 +41,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
 	>=media-libs/gst-plugins-base-0.10.32:0.10[introspection]
 	>=media-libs/gstreamer-0.10.32:0.10[introspection]
 	>=sys-libs/tdb-1.2.6
+	dev-libs/json-glib
 
 	clutter? (
 		>=media-libs/clutter-1.2:1.0
@@ -53,11 +54,11 @@ COMMON_DEPEND=">=dev-libs/glib-2.26.0:2
 		>=net-dns/avahi-0.6 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	html? ( >=net-libs/webkit-gtk-1.3.9:3 )
-	lastfm? ( dev-libs/json-glib )
 	libnotify? ( >=x11-libs/libnotify-0.7.0 )
 	lirc? ( app-misc/lirc )
 	musicbrainz? (
-		media-libs/musicbrainz:3
+		|| ( >=media-libs/musicbrainz-4.0.0:4
+		     >=media-libs/musicbrainz-3.0.2:3 )
 		gnome-base/gconf:2 )
 	python? ( dev-python/pygobject:3 )
 	udev? (
@@ -125,7 +126,6 @@ pkg_setup() {
 		--without-hal
 		$(use_enable clutter visualizer)
 		$(use_enable daap)
-		$(use_enable lastfm)
 		$(use_enable libnotify)
 		$(use_enable lirc)
 		$(use_enable musicbrainz)
@@ -145,14 +145,6 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-
-	# Not needed for next release
-	# https://bugzilla.gnome.org/show_bug.cgi?id=667980
-	epatch "${FILESDIR}/${P}-port-im-status-plugin.patch"
-	epatch "${FILESDIR}/${P}-port-rb-set-rating-py-example.patch"
-	epatch "${FILESDIR}/${P}-fix-db-dbus-interface.patch"
-
-	# Disable pyc compiling
 	echo > py-compile
 }
 
