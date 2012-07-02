@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.33 2012/07/02 03:58:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.34 2012/07/02 04:20:41 jer Exp $
+
+  02 Jul 2012; Jeroen Roovers <jer@gentoo.org> units-2.00.ebuild:
+  Add dev-lang/python dependency for units_cur.
 
 *units-2.00 (02 Jul 2012)
 
