@@ -1,6 +1,11 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.67 2012/04/06 19:37:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.68 2012/07/02 18:24:03 hwoarang Exp $
+
+*minitube-1.8 (02 Jul 2012)
+
+  02 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +minitube-1.8.ebuild:
+  Version bump
 
   06 Apr 2012; Davide Pesavento <pesa@gentoo.org> -minitube-1.6.ebuild,
   -minitube-1.7.ebuild:
@@ -289,4 +294,3 @@
   09 Jun 2009; Markos Chandras <hwoarang@gentoo.org> +minitube-0.2.1.ebuild,
   +files/kde_phonon.patch, +metadata.xml:
   Initial commit of minitube application
-
