@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1049 2012/07/01 21:26:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1050 2012/07/02 22:04:21 zmedico Exp $
+
+*portage-2.1.11.4 (02 Jul 2012)
+
+  02 Jul 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.4.ebuild:
+  2.1.11.4 version bump. This fixes abug #156282 (support FEATURES=unmerge-
+  backup), bug #424275 (support FEATURES=downgrade-backup), bug #424259 (don't
+  use SIGUSR1 under Jython), and bug #424489 (fix incorrect evaluation of EAPI 4
+  -slot-abi deps that have USE conditionals). Bug #423075 tracks all bugs fixed
+  since portage-2.1.10.65.
 
   01 Jul 2012; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.49.ebuild,
   -portage-2.2.0_alpha89.ebuild:
