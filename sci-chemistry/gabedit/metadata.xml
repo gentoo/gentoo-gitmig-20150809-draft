@@ -6,8 +6,4 @@
 		<email>jlec@gentoo.org</email>
 		<description>Tree Proxy for Max</description>
 	</maintainer>
-	<maintainer>
-		<email>max-braeu@gmx.de</email>
-		<description>Maintainer, please CC to bugs</description>
-	</maintainer>
 </pkgmetadata>

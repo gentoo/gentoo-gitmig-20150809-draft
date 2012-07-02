@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.6.ebuild,v 1.7 2012/07/02 09:07:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.4.3.ebuild,v 1.1 2012/07/02 09:07:32 jlec Exp $
 
-EAPI=2
+EAPI=4
 
-inherit toolchain-funcs versionator multilib
+inherit eutils toolchain-funcs versionator
 
 MY_PN=${PN/g/G}
 MY_PV=$(delete_all_version_separators)
@@ -12,11 +12,11 @@ MY_P="${MY_PN}Src${MY_PV}"
 
 DESCRIPTION="GUI for computational chemistry packages"
 HOMEPAGE="http://gabedit.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/GabeditDevloppment/${MY_PN}${MY_PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="openmp"
 
 RDEPEND="
@@ -34,31 +34,31 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	tc-export CC
-}
-
 src_prepare() {
 	sed -i "/rmdir tmp/d" "${S}"/Makefile
-	sed -e "/GTK_DISABLE_DEPRECATED/s:define:undef:g" \
+	sed \
+		-e "/GTK_DISABLE_DEPRECATED/s:define:undef:g" \
 		-i "${S}/Config.h" || die
 	sed -e 's:-g::g' -i Makefile || die
 	cp "${FILESDIR}"/CONFIG.Gentoo "${S}"/CONFIG
 
 	if use openmp && tc-has-openmp; then
 		cat <<- EOF >> "${S}/CONFIG"
-			OMPLIB=-L/usr/$(get_libdir) -lgomp
+			OMPLIB=-fopenmp
 			OMPCFLAGS=-DENABLE_OMP -fopenmp
 		EOF
 	fi
 	echo "COMMONCFLAGS = ${CFLAGS} -DENABLE_DEPRECATED \$(OMPCFLAGS) \$(DRAWGEOMGL)" >> CONFIG
+
+	tc-export CC
 }
 
 src_compile() {
-	emake external_gl2ps=1 || die "emake failed"
+	emake clean
+	emake external_gl2ps=1
 }
 
 src_install() {
-	dobin ${PN} || die
-	dodoc ChangeLog || die
+	dobin ${PN}
+	dodoc ChangeLog
 }
