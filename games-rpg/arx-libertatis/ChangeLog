@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/arx-libertatis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.1 2012/06/29 21:47:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.2 2012/07/02 20:55:21 hasufell Exp $
+
+*arx-libertatis-1.0.2-r1 (02 Jul 2012)
+
+  02 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  -arx-libertatis-1.0.2.ebuild, +arx-libertatis-1.0.2-r1.ebuild,
+  +files/arx-data-copy:
+  install arx-data-copy script to support steam/windows installations
 
 *arx-libertatis-1.0.2 (29 Jun 2012)
 

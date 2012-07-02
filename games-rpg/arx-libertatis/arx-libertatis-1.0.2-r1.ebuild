@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.2.ebuild,v 1.1 2012/06/29 21:47:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.2-r1.ebuild,v 1.1 2012/07/02 20:55:21 hasufell Exp $
 
 EAPI=4
 
@@ -63,6 +63,7 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
+	dogamesbin "${FILESDIR}"/arx-data-copy
 	prepgamesdirs
 }
 
@@ -76,7 +77,11 @@ pkg_postinst() {
 	if ! use cdinstall || ! use demo ; then
 		elog "You need the demo or full game data."
 		elog "See http://wiki.arx-libertatis.org/Getting_the_game_data for more information"
-		elog "or enable cdinstall or demo useflag."
+		elog
+		elog "You might want to enable cdinstall or demo useflag."
+		elog
+		elog "If you have already installed the game or use the STEAM version,"
+		elog "run \"${GAMES_BINDIR}/arx-data-copy /path/to/installed-arx /usr/local/share/games/arx\"."
 	fi
 
 	games_pkg_postinst
