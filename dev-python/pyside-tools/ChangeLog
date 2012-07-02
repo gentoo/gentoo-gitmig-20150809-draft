@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.22 2012/07/01 21:27:25 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.23 2012/07/02 08:44:22 jdhore Exp $
+
+  02 Jul 2012; Jeff Horelick <jdhore@gentoo.org> pyside-tools-0.2.14.ebuild:
+  marked x86 per bug 424221
 
   01 Jul 2012; Davide Pesavento <pesa@gentoo.org> pyside-tools-0.2.14.ebuild:
   pyside-rcc tests are not (yet) supposed to pass against python3. Thanks to ago
