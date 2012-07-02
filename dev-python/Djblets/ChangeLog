@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/Djblets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.10 2012/06/22 07:28:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.11 2012/07/02 07:20:35 xmw Exp $
+
+*Djblets-0.6.19 (02 Jul 2012)
+
+  02 Jul 2012; Michael Weber <xmw@gentoo.org> +Djblets-0.6.19.ebuild,
+  -Djblets-0.6.13.ebuild:
+  Version bump (thanks euscan), drop old
 
 *Djblets-0.6.14 (22 Jun 2012)
 
@@ -41,4 +47,3 @@
   24 Aug 2010; Michael Weber <xmw@gentoo.org> +Djblets-0.6.3.ebuild,
   +metadata.xml:
   Initial commit for Djblets. Fixes bug #318993
-
