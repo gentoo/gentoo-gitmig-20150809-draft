@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.4.2.ebuild,v 1.1 2012/05/24 07:54:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.4.2.ebuild,v 1.2 2012/07/02 22:26:13 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="clutter packagekit raw"
 
 # FIXME: fix detection of docbook2man
+# Need gtk+-3.3.8 for https://bugzilla.gnome.org/show_bug.cgi?id=673331
 COMMON_DEPEND=">=dev-libs/glib-2.31.10:2
 	gnome-base/gnome-desktop:3
 	>=media-libs/lcms-2.2:2
@@ -26,7 +27,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.31.10:2
 
 	x11-libs/libX11
 	x11-libs/libXrandr
-	>=x11-libs/gtk+-2.91:3
+	>=x11-libs/gtk+-3.3.8:3
 	>=x11-libs/vte-0.25.1:2.90
 	>=x11-misc/colord-0.1.12
 
