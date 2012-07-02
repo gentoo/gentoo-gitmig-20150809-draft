@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2.ebuild,v 1.1 2012/07/02 10:43:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2.ebuild,v 1.2 2012/07/02 12:58:33 xmw Exp $
 
 EAPI=3
 inherit eutils linux-info
@@ -35,7 +35,7 @@ RDEPEND="app-arch/cpio
 	sys-apps/grep
 	>=sys-apps/kmod-7
 	>=sys-apps/util-linux-2.21
-	udev? ( sys-fs/udev )
+	udev? ( >sys-fs/udev-171-r6 )
 	device-mapper? ( sys-fs/lvm2[static] )
 	cryptsetup? ( sys-fs/cryptsetup[static] )
 	mdadm? ( sys-fs/mdadm[static] )
@@ -62,12 +62,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-consolefont-install.patch
 	epatch "${FILESDIR}"/${PN}-keymap-install.patch
 	cd "${WORKDIR}"
-	epatch "${FILESDIR}"/${PN}-udev-install.patch
-	epatch "${FILESDIR}"/${PN}-lvm2-install.patch
-	epatch "${FILESDIR}"/${PN}-mdadm_udev-install.patch
-	epatch "${FILESDIR}"/${PN}-dmraid-install.patch
-	epatch "${FILESDIR}"/${PN}-pcmcia-install.patch
-	epatch "${FILESDIR}"/${PN}-encrypt-install.patch
+	use udev && epatch "${FILESDIR}"/${PN}-udev-install.patch
+	use device-mapper && epatch "${FILESDIR}"/${PN}-lvm2-install.patch
+	use mdadm epatch "${FILESDIR}"/${PN}-mdadm_udev-install.patch
+	use dmraid && epatch "${FILESDIR}"/${PN}-dmraid-install.patch
+	use pcmcia && epatch "${FILESDIR}"/${PN}-pcmcia-install.patch
+	use cryptsetup && epatch "${FILESDIR}"/${PN}-encrypt-install.patch
 }
 
 src_install() {
