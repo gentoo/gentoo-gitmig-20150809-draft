@@ -1,7 +1,5 @@
-Index: libs/lensfun/CMakeLists.txt
-===================================================================
---- libs/lensfun/CMakeLists.txt	(Revision 158)
-+++ libs/lensfun/CMakeLists.txt	(Arbeitskopie)
+--- libs/lensfun/CMakeLists.txt
++++ libs/lensfun/CMakeLists.txt
 @@ -26,3 +26,12 @@
          RUNTIME DESTINATION ${BINDIR}
          LIBRARY DESTINATION ${LIBDIR}

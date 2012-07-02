@@ -1,7 +1,5 @@
-Index: docs/CMakeLists.txt
-===================================================================
---- docs/CMakeLists.txt	(Revision 153)
-+++ docs/CMakeLists.txt	(Arbeitskopie)
+--- docs/CMakeLists.txt
++++ docs/CMakeLists.txt
 @@ -11,7 +11,7 @@
  CONFIGURE_FILE(doxyfile.in.cmake ${DOXYFILE} @ONLY)
  
@@ -18,10 +16,8 @@ Index: docs/CMakeLists.txt
 -FILE(GLOB doc_files "${CMAKE_DOC_OUT}/*.*")
 -INSTALL(FILES ${doc_files} DESTINATION ${DOCDIR})
 +INSTALL(DIRECTORY "${CMAKE_BINARY_DIR}/doc_doxygen/" DESTINATION ${DOCDIR})
-Index: CMakeLists.txt
-===================================================================
---- CMakeLists.txt	(Revision 153)
-+++ CMakeLists.txt	(Arbeitskopie)
+--- CMakeLists.txt
++++ CMakeLists.txt
 @@ -30,7 +30,7 @@
  
  # options controlling the build process
