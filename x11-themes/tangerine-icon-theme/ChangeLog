@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/tangerine-icon-theme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.26 2012/07/02 06:48:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.27 2012/07/02 06:54:35 ssuominen Exp $
+
+  02 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  tangerine-icon-theme-0.27.ebuild:
+  Use "rsvg-convert" instead of "rsvg" for compability with recent librsvg wrt
+  #423179
 
   02 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   -tangerine-icon-theme-0.26.ebuild:
