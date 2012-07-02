@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.126 2012/06/29 12:40:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.127 2012/07/02 21:46:07 johu Exp $
+
+  02 Jul 2012; Johannes Huber <johu@gentoo.org> trac-0.12.3.ebuild:
+  Stable for x86, wrt bug #422241
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org> trac-0.12.3.ebuild:
   Marking trac-0.12.3 ppc for bug 422241
