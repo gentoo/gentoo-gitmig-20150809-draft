@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ja2-stracciatella-0.12.1_p7072.ebuild,v 1.3 2012/06/23 22:10:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ja2-stracciatella-0.12.1_p7072.ebuild,v 1.4 2012/07/02 16:56:46 hasufell Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz
 
 LICENSE="SFI-SCLA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="cdinstall editor zlib"
 
 RDEPEND="media-libs/libsdl[X,audio,video]
