@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webrat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/ChangeLog,v 1.13 2012/07/02 05:52:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/ChangeLog,v 1.14 2012/07/02 06:06:47 graaff Exp $
+
+  02 Jul 2012; Hans de Graaff <graaff@gentoo.org> webrat-0.7.3.ebuild:
+  Add dependency on mechanize for testing, fixing bug 424387.
 
   02 Jul 2012; Hans de Graaff <graaff@gentoo.org> -webrat-0.7.1.ebuild:
   Remove old version.
