@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.9.1.ebuild,v 1.1 2012/06/29 08:09:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.9.1-r1.ebuild,v 1.1 2012/07/02 06:47:29 xmw Exp $
 
 EAPI=4
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="kernel_FreeBSD selinux"
 
-RDEPEND="selinux? ( sec-policy/selinux-radvd )"
+RDEPEND="dev-libs/libdaemon
+	selinux? ( sec-policy/selinux-radvd )"
 DEPEND="${RDEPEND}
-	dev-libs/libdaemon
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig"

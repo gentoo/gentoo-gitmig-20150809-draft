@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.91 2012/06/29 08:09:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.92 2012/07/02 06:47:29 xmw Exp $
+
+*radvd-1.9.1-r1 (02 Jul 2012)
+
+  02 Jul 2012; Michael Weber <xmw@gentoo.org> +radvd-1.9.1-r1.ebuild,
+  -radvd-1.9.1.ebuild:
+  Add dev-libs/libdaemon as RDEPEND (bug 424361, thanks gurligebis)
 
 *radvd-1.9.1 (29 Jun 2012)
 
