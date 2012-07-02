@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.36 2012/05/17 17:54:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.37 2012/07/02 19:28:55 sping Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -16,7 +16,6 @@ VERSION_LVM='2.02.88'
 VERSION_UNIONFS_FUSE='0.24'
 VERSION_GPG='1.4.11'
 
-MY_HOME="http://wolf31o2.org"
 RH_HOME="ftp://sources.redhat.com/pub"
 DM_HOME="http://people.redhat.com/~heinzm/sw/dmraid/src"
 BB_HOME="http://www.busybox.net/downloads"
@@ -43,10 +42,7 @@ then
 else
 	inherit bash-completion-r1 eutils
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		${MY_HOME}/sources/genkernel/${P}.tar.bz2
 		${COMMON_URI}"
-	# Please don't touch individual KEYWORDS.  Since this is maintained/tested by
-	# Release Engineering, it's easier for us to deal with all arches at once.
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 fi
 
