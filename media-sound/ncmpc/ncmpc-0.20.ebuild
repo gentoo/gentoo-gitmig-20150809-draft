@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.20.ebuild,v 1.7 2012/05/29 19:12:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.20.ebuild,v 1.8 2012/07/02 15:46:11 angelos Exp $
 
 EAPI=4
 inherit multilib
@@ -17,7 +17,8 @@ IUSE="artist-screen colors debug +help-screen key-screen lirc lyrics-screen mous
 RDEPEND=">=dev-libs/glib-2.12:2
 	>=media-libs/libmpdclient-2.2
 	sys-libs/ncurses
-	lirc? ( app-misc/lirc )"
+	lirc? ( app-misc/lirc )
+	nls? ( sys-libs/ncurses[unicode] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
