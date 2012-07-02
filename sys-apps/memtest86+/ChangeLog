@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/memtest86+
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.64 2011/06/18 20:32:42 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.65 2012/07/02 11:02:00 flameeyes Exp $
+
+*memtest86+-4.20-r1 (02 Jul 2012)
+
+  02 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/memtest86+-4.20-hardcoded_cc.patch, +memtest86+-4.20-r1.ebuild,
+  -files/memtest86+-2.10-hardcoded_cc.patch,
+  -files/memtest86+-2.11-hardcoded_cc.patch,
+  -files/memtest86+-4.10-hardcoded_cc.patch, -memtest86+-2.10.ebuild,
+  -memtest86+-2.11.ebuild, -memtest86+-4.10-r1.ebuild, -memtest86+-4.10.ebuild,
+  -memtest86+-4.20.ebuild:
+  Cleanup old; revbump to make the ebuild look more almost identical to the new
+  one from memtest86; install a grub2 configuration file; limit to the 0-slot of
+  grub for the floppy USE flag; strip during build as we can't use the
+  splitdebug anyway.
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   no maintainer info required since it is already maintained by base-system
@@ -296,4 +310,3 @@
   metadata.xml:
   Initial commit, closes bug #38828, thanks to Frank Dörfler for the original
   ebuild.
-
