@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/yajhfc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yajhfc/ChangeLog,v 1.1 2012/07/02 14:48:24 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yajhfc/ChangeLog,v 1.2 2012/07/02 14:51:33 mattm Exp $
+
+  02 Jul 2012; Matthew Marlowe <mattm@gentoo.org> yajhfc-0.5.2.ebuild:
+  Gpg sign failed on prior commit - recommiting.
 
 *yajhfc-0.5.2 (02 Jul 2012)
 
