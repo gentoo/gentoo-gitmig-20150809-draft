@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.37 2012/01/15 15:39:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.38 2012/07/02 21:42:02 mr_bones_ Exp $
+
+  02 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/hedgewars-0.9.15-fixes.patch, -files/hedgewars-0.9.15-lua.patch,
+  -hedgewars-0.9.15.ebuild, -hedgewars-0.9.16.ebuild:
+  old
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> hedgewars-0.9.17.ebuild:
   x86 stable wrt bug #396625

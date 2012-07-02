@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.137 2012/05/21 10:10:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.138 2012/07/02 21:42:55 mr_bones_ Exp $
+
+  02 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/freeciv-2.3.0-clean-man.patch, -files/freeciv-2.3.1-clean-man.patch,
+  -freeciv-2.3.0.ebuild, -freeciv-2.3.1.ebuild:
+  old
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> freeciv-2.3.2.ebuild:
   x86 stable wrt bug #414521
