@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmodbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/ChangeLog,v 1.7 2012/06/11 09:46:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/ChangeLog,v 1.8 2012/07/02 07:12:33 xmw Exp $
+
+*libmodbus-3.1.0 (02 Jul 2012)
+
+  02 Jul 2012; Michael Weber <xmw@gentoo.org> +libmodbus-3.1.0.ebuild,
+  -libmodbus-3.0.1.ebuild:
+  Version bump (thanks euscan), drop old
 
 *libmodbus-3.0.3 (11 Jun 2012)
 
