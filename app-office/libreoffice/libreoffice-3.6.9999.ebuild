@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.9 2012/06/24 21:50:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.10 2012/07/02 10:38:32 scarabeus Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ BRANDING="${PN}-branding-gentoo-0.6.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
+inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python multilib toolchain-funcs flag-o-matic ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
@@ -71,7 +71,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite
-gstreamer +gtk jemalloc kde mysql +nsplugin odk opengl postgres svg test +vba
+gstreamer +gtk jemalloc kde mysql odk opengl postgres svg test +vba
 +webdav +xmlsec"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
@@ -216,7 +216,6 @@ PATCHES=(
 )
 
 REQUIRED_USE="
-	nsplugin? ( gtk )
 	gnome? ( gtk )
 	eds? ( gnome )
 	libreoffice_extensions_nlpsolver? ( java )
@@ -456,6 +455,7 @@ src_configure() {
 		--disable-kde \
 		--disable-ldap \
 		--disable-mozilla \
+		--disable-nsplugin \
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
@@ -495,7 +495,6 @@ src_configure() {
 		$(use_enable gtk) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
-		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
@@ -544,11 +543,6 @@ src_install() {
 	# Fix bash completion placement
 	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN}
 	rm -rf "${ED}"/etc/
-
-	# symlink the nsplugin to system location
-	if use nsplugin; then
-		inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
-	fi
 
 	if use branding; then
 		insinto /usr/$(get_libdir)/${PN}/program
