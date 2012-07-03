@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/cenon-3.9.4.ebuild,v 1.1 2011/08/19 12:38:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/cenon-3.9.6.ebuild,v 1.1 2012/07/03 18:37:08 voyageur Exp $
 
 EAPI=4
 inherit gnustep-2
@@ -15,9 +15,10 @@ SLOT="0"
 LICENSE="Cenon"
 IUSE=""
 
+DEPEND=""
 RDEPEND=">=gnustep-libs/cenonlibrary-3.9.0"
 
 src_prepare() {
-	sed -e "s/App.m/App.m UpdateController.m/" -i GNUmakefile || die "UpdateController sed failed"
-	epatch "${FILESDIR}"/${P}-install.patch
+	epatch "${FILESDIR}"/${PN}-3.9.4-install.patch
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
