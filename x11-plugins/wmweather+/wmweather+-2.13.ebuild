@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/wmweather+-2.13.ebuild,v 1.3 2012/06/26 06:52:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/wmweather+-2.13.ebuild,v 1.4 2012/07/03 16:39:09 ranger Exp $
 
 EAPI=4
 inherit flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wmweatherplus/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~mips ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/libpcre
