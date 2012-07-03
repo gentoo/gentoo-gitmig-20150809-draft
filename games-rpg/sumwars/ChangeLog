@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/sumwars
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/ChangeLog,v 1.6 2012/06/24 21:59:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/ChangeLog,v 1.7 2012/07/03 09:03:12 jdhore Exp $
+
+  03 Jul 2012; Jeff Horelick <jdhore@gentoo.org> sumwars-0.5.6-r2.ebuild:
+  marked x86 per bug 423237
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> sumwars-0.5.6-r2.ebuild:
   Stable for amd64, wrt bug #423237
