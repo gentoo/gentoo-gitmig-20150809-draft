@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.10.2.ebuild,v 1.2 2012/05/05 08:02:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.10.8.ebuild,v 1.1 2012/07/03 07:46:55 tetromino Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
