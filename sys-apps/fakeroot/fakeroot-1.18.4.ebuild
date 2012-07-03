@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/fakeroot-1.18.4.ebuild,v 1.1 2012/06/07 09:10:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/fakeroot-1.18.4.ebuild,v 1.2 2012/07/03 09:52:42 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -20,6 +20,10 @@ DEPEND="${RDEPEND}
 	test? ( app-arch/sharutils )"
 
 DOCS="AUTHORS BUGS DEBUG README doc/README.saving"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.18.4-no-acl_h.patch
+}
 
 src_configure() {
 	export ac_cv_header_sys_acl_h=$(usex acl)
