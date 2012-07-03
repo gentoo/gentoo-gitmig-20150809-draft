@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.9 2010/10/05 20:29:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/wmxres-1.2.ebuild,v 1.10 2012/07/03 14:15:54 voyageur Exp $
 
+EAPI=4
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Dock application to select your display mode among those possible"
@@ -24,17 +25,15 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}.app
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-debian-1.1-1.2.patch
 	sed -e "s:-g -c -O2:${CFLAGS} -c:" \
-		-e "s:cc:$(tc-getCC) \$(LDFLAGS):g" -i Makefile
+		-e "s:\tcc :\t $(tc-getCC) \$(LDFLAGS) :g" \
+		-i Makefile || die "sed failed"
 }
 
 src_compile() {
-	emake INCDIR="-I/usr/include" \
-		LIBDIR="-L/usr/$(get_libdir)" || die "emake failed."
+	emake INCDIR="-I/usr/include" LIBDIR="-L/usr/$(get_libdir)"
 }
 
 src_install() {
