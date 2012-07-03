@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.333 2012/07/01 19:43:30 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.334 2012/07/03 09:10:00 mabi Exp $
+
+  01 Jul 2012; Matti Bickel <mabi@gentoo.org> php-pear-lib-r1.eclass:
+  Remove requirement for depend.php.eclass. Since our switch to /usr/share/php
+  only it is no longer needed.
 
   01 Jul 2012; Vadim Kuznetsov vadimk@gentoo.org vmware.eclass,
   vmware-mod.eclass:

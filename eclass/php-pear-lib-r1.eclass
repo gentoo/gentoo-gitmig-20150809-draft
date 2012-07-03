@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.25 2012/06/23 14:58:17 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.26 2012/07/03 09:10:00 mabi Exp $
 
 # @ECLASS: php-pear-lib-r1.eclass
 # @MAINTAINER:
@@ -13,7 +13,7 @@
 # such as Creole, Jargon, Phing etc., while retaining the functionality to put
 # the libraries into version-dependant directories.
 
-inherit depend.php multilib
+inherit multilib
 
 EXPORT_FUNCTIONS pkg_setup src_install
 
@@ -26,7 +26,7 @@ if [[ -n $PHP_PEAR_CHANNEL ]] ; then
 	[[ -z ${PHP_PEAR_PN} ]] && die "Missing PHP_PEAR_PN. Please notify the maintainer"
 	PHP_PEAR_P=${PHP_PEAR_PN}-${PHP_PEAR_PV}
 
-	S=${WORKDIR}/${PHP_PEAR_P}
+	S="${WORKDIR}/${PHP_PEAR_P}"
 
 	SRC_URI="http://${PHP_PEAR_URI}/get/${PHP_PEAR_P}.tgz"
 fi
@@ -50,8 +50,6 @@ php-pear-lib-r1_pkg_setup() {
 # @DESCRIPTION:
 # Takes care of standard install for PEAR-based libraries.
 php-pear-lib-r1_src_install() {
-	has_php
-
 	# SNMP support
 	addpredict /usr/share/snmp/mibs/.index
 	addpredict /var/lib/net-snmp/
@@ -82,19 +80,7 @@ php-pear-lib-r1_src_install() {
 	"${D}/usr/share/php/.lock" \
 	"${D}/usr/share/php/.registry"
 
-	# install to the correct phpX folder, if not specified
-	# /usr/share/php will be kept, also sedding to substitute
-	# the path, many files can specify it wrongly
-	if [[ -n "${PHP_SHARED_CAT}" ]] && [[ "${PHP_SHARED_CAT}" != "php" ]] ; then
-		mv -f "${D}/usr/share/php" "${D}/usr/share/${PHP_SHARED_CAT}" || die "Unable to move files"
-		find "${D}/" -type f -exec sed -e "s|/usr/share/php|/usr/share/${PHP_SHARED_CAT}|g" -i {} \; \
-			|| die "Unable to change PHP path"
-		einfo
-		einfo "Installing to /usr/share/${PHP_SHARED_CAT} ..."
-		einfo
-	else
-		einfo
-		einfo "Installing to /usr/share/php ..."
-		einfo
-	fi
+	einfo
+	einfo "Installing to /usr/share/php ..."
+	einfo
 }
