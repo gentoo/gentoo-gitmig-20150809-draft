@@ -1,5 +1,5 @@
---- makemkv-oss-1.7.6/makefile.linux.orig       2012-06-29 04:17:45.000000000 -0700
-+++ makemkv-oss-1.7.6/makefile.linux    2012-07-02 08:12:16.388552664 -0700
+--- makemkv-oss-1.7.6/makefile.linux.orig
++++ makemkv-oss-1.7.6/makefile.linux
 @@ -8,7 +8,7 @@
  MOC=moc
  endif
@@ -13,8 +13,8 @@
         install -D -m 644 makemkvgui/src/img/128/mkv_icon.png $(DESTDIR)$(PREFIX)/share/icons/hicolor/128x128/apps/makemkv.png
  
  out/%: out/%.full
--       objcopy --strip-all --strip-debug --strip-unneeded --discard-all $< $@ 
-+       objcopy --discard-all $< $@ 
+-	objcopy --strip-all --strip-debug --strip-unneeded --discard-all $< $@ 
++	objcopy --discard-all $< $@ 
  
  out/libdriveio.so.0.full:
         mkdir -p out
