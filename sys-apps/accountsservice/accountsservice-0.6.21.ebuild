@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.21.ebuild,v 1.1 2012/06/25 08:07:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.21.ebuild,v 1.2 2012/07/03 06:19:39 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,6 +25,7 @@ RDEPEND=">=dev-libs/glib-2.32:2
 	!systemd? ( sys-auth/consolekit )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
+	dev-util/gdbus-codegen
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig
