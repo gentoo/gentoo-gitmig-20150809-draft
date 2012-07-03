@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.00.ebuild,v 1.2 2012/06/28 17:02:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.00.ebuild,v 1.3 2012/07/03 18:58:04 jlec Exp $
 
 EAPI=4
 
@@ -116,6 +116,7 @@ S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	fortran-2_pkg_setup
+	python_set_active_version 2
 	python_pkg_setup
 	echo
 	elog "There are extra options on packages not yet in Gentoo:"

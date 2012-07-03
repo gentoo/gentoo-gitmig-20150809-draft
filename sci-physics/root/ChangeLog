@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.103 2012/06/28 17:02:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.104 2012/07/03 18:58:04 jlec Exp $
+
+  03 Jul 2012; Justin Lecher <jlec@gentoo.org> root-5.34.00.ebuild:
+  Set active pyton version to 2, #424145
 
   28 Jun 2012; Justin Lecher <jlec@gentoo.org> root-5.26.00e-r1.ebuild,
   -root-5.26.00g.ebuild, -root-5.28.00h-r1.ebuild, -root-5.32.02-r1.ebuild,
