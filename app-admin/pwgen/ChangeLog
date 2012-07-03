@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.61 2012/06/29 14:53:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.62 2012/07/03 16:10:30 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> pwgen-2.06-r1.ebuild:
+  Marking pwgen-2.06-r1 ppc for bug 421565
 
   29 Jun 2012; Jeroen Roovers <jer@gentoo.org> pwgen-2.06-r1.ebuild:
   Remove empty DEPEND.
