@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.105 2012/06/07 21:41:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.106 2012/07/03 20:32:58 jer Exp $
+
+  03 Jul 2012; Jeroen Roovers <jer@gentoo.org> libdvdcss-1.2.12.ebuild:
+  Stable for HPPA (bug #419085).
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> libdvdcss-1.2.12.ebuild:
   Marking libdvdcss-1.2.12 ppc for bug 419085
