@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Sys-Virt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.15 2012/06/24 12:59:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.16 2012/07/03 17:41:25 tove Exp $
+
+*Sys-Virt-0.9.13 (03 Jul 2012)
+
+  03 Jul 2012; Torsten Veller <tove@gentoo.org> +Sys-Virt-0.9.13.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
