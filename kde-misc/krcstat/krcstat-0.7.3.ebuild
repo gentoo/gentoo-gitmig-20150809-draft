@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krcstat/krcstat-0.7.3.ebuild,v 1.1 2011/04/20 20:38:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krcstat/krcstat-0.7.3.ebuild,v 1.2 2012/07/03 13:22:54 kensington Exp $
 
 EAPI=4
 
@@ -19,3 +19,5 @@ DEPEND="
 	$(add_kdebase_dep konsole)
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-gcc-4.7.patch" )
