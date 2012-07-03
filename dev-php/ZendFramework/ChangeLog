@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/ZendFramework
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.12 2011/12/15 22:03:55 gurligebis Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.13 2012/07/03 14:35:06 gurligebis Exp $
+
+*ZendFramework-1.11.12 (03 Jul 2012)
+
+  03 Jul 2012; <gurligebis@gentoo.org> -ZendFramework-1.11.10.ebuild,
+  +ZendFramework-1.11.12.ebuild:
+  Bumping to 1.11.12
 
   15 Dec 2011; <gurligebis@gentoo.org> ZendFramework-1.11.6.ebuild,
   ZendFramework-1.11.10.ebuild:
