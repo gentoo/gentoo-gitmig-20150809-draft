@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.1.ebuild,v 1.1 2012/06/30 20:57:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mana/mana-0.6.1.ebuild,v 1.2 2012/07/03 14:51:52 hasufell Exp $
 
 EAPI=2
 inherit eutils cmake-utils games
@@ -34,7 +34,7 @@ RDEPEND="!=games-rpg/tmw-0.5.2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
-	server? ( net-libs/enet )"
+	server? ( net-libs/enet:1.3 )"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
 PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
