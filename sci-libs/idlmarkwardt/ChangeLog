@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/idlmarkwardt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/idlmarkwardt/ChangeLog,v 1.1 2012/02/01 18:22:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/idlmarkwardt/ChangeLog,v 1.2 2012/07/03 22:26:19 bicatali Exp $
+
+*idlmarkwardt-20120524 (03 Jul 2012)
+
+  03 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +idlmarkwardt-20120524.ebuild, -idlmarkwardt-20111221.ebuild:
+  Version bump. keyword amd64-linux and x86-linux
 
 *idlmarkwardt-20111221 (01 Feb 2012)
 
