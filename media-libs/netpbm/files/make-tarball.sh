@@ -17,13 +17,22 @@ T=/tmp
 maint_pkg_create() {
 	local base="/usr/local/src"
 	local srcdir="${base}/netpbm/release_number"
+	local htmldir="${base}/netpbm/userguide"
 	if [[ -d ${srcdir} ]] ; then
 		cd "${T}" || die
 
 		rm -rf ${P}
 
 		ebegin "Exporting ${srcdir}/${PV} to ${P}"
-		svn export -q ${srcdir}/${PV} ${P}
+		svn export -q "${srcdir}/${PV}" ${P}
+		eend $? || return 1
+
+		ebegin "Exporting ${htmldir} to ${P}/userguide"
+		svn export -q "${htmldir}" ${P}/userguide
+		eend $? || return 1
+
+		ebegin "Generating manpages from html"
+		(cd "${P}/userguide" && ../buildtools/makeman *.html)
 		eend $? || return 1
 
 		ebegin "Creating ${P}.tar.xz"
