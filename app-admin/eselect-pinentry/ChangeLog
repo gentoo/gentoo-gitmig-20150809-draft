@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-pinentry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pinentry/ChangeLog,v 1.8 2012/06/25 19:23:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pinentry/ChangeLog,v 1.9 2012/07/03 19:37:46 jer Exp $
+
+  03 Jul 2012; Jeroen Roovers <jer@gentoo.org> eselect-pinentry-0.3.ebuild:
+  Stable for HPPA (bug #421593).
 
   25 Jun 2012; Markus Meier <maekke@gentoo.org> eselect-pinentry-0.3.ebuild:
   arm stable, bug #421593
