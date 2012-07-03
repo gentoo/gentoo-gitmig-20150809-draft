@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/foolscap-0.6.4.ebuild,v 1.1 2012/06/28 06:23:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/foolscap-0.6.4.ebuild,v 1.2 2012/07/03 19:43:18 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -25,13 +25,6 @@ RDEPEND=">=dev-python/twisted-2.4.0
 	ssl? ( dev-python/pyopenssl )"
 DEPEND="${DEPEND}
 	dev-python/setuptools"
-
-src_prepare() {
-	distutils_src_prepare
-
-	# Disable test failing with dev-python/pyopenssl and dev-libs/openssl-1.
-	sed -e "s/test_generate/_&/" -i foolscap/test/test_tub.py
-}
 
 src_test() {
 	LC_ALL="C" distutils_src_test

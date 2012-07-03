@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.38 2012/06/28 06:23:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.39 2012/07/03 19:43:18 floppym Exp $
+
+  03 Jul 2012; Mike Gilbert <floppym@gentoo.org> foolscap-0.6.4.ebuild:
+  Drop src_prepare per Arfrever.
 
 *foolscap-0.6.4 (28 Jun 2012)
 
