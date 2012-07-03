@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/fakeroot-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot-ng/ChangeLog,v 1.7 2012/07/03 10:04:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot-ng/ChangeLog,v 1.8 2012/07/03 10:07:17 ssuominen Exp $
+
+  03 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> fakeroot-ng-0.17.ebuild,
+  -files/fakeroot-ng-0.17-gcc47.patch:
+  Move patch to mirrors because it's 47 KiB
 
   03 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> fakeroot-ng-0.17.ebuild,
   +files/fakeroot-ng-0.17-gcc47.patch:
