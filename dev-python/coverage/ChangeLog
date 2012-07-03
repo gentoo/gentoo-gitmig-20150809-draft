@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.67 2012/06/25 19:48:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.68 2012/07/03 16:25:52 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> coverage-3.5.2.ebuild:
+  Marking coverage-3.5.2 ppc for bug 422059
 
   25 Jun 2012; Markus Meier <maekke@gentoo.org> coverage-3.5.2.ebuild:
   arm stable, bug #422059
