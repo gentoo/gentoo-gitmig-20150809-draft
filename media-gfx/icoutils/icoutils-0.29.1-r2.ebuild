@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/icoutils-0.29.1-r2.ebuild,v 1.3 2012/06/17 16:13:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/icoutils-0.29.1-r2.ebuild,v 1.4 2012/07/03 16:19:54 ranger Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A set of programs for extracting and converting images in Microsoft
 HOMEPAGE="http://www.nongnu.org/icoutils/"
 SRC_URI="http://savannah.nongnu.org/download/icoutils/${P}.tar.bz2"
 
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="nls"
