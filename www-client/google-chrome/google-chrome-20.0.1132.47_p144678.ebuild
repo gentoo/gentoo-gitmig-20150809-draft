@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-20.0.1132.47_p144678.ebuild,v 1.2 2012/07/02 18:43:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-20.0.1132.47_p144678.ebuild,v 1.3 2012/07/03 03:26:01 floppym Exp $
 
 EAPI="4"
 
@@ -85,12 +85,11 @@ QA_PREBUILT="*"
 S=${WORKDIR}
 
 pkg_setup() {
+	CHROME_HOME="opt/google/chrome/"
 	chromium_suid_sandbox_check_kernel_config
 }
 
 src_install() {
-	CHROME_HOME="opt/google/chrome/"
-
 	pax-mark m ${CHROME_HOME}chrome || die
 	rm -rf usr/share/menu || die
 	mv usr/share/doc/${PN} usr/share/doc/${PF} || die
@@ -104,9 +103,7 @@ src_install() {
 	fperms u+s "/${CHROME_HOME}chrome-sandbox" || die
 
 	if use plugins ; then
-		local args='"$@"'
-		local plugins="/usr/$(get_libdir)/nsbrowser/plugins"
-		sed -e "s:${args}:--extra-plugin-dir=\"${plugins}\" \\0:" \
+		sed -e "/^exec/ i set -- --extra-plugin-dir=/usr/$(get_libdir)/nsbrowser/plugins \"$@\"" \
 			-i "${D}${CHROME_HOME}google-chrome" || die
 	fi
 
@@ -129,8 +126,9 @@ pkg_preinst() {
 	if any_cpu_missing_flag sse2; then
 		ewarn "The bundled PepperFlash plugin requires a CPU that supports the"
 		ewarn "SSE2 instruction set, and at least one of your CPUs does not"
-		ewarn "support this feature. Renaming PepperFlash."
-		mv -v "${D}"opt/google/chrome/PepperFlash/libpepflashplayer.so{,.bak} || die
+		ewarn "support this feature. Disabling PepperFlash."
+		sed -e "/^exec/ i set -- --disable-bundled-ppapi-flash \"$@\"" \
+			-i "${D}${CHROME_HOME}google-chrome" || die
 	fi
 }
 
