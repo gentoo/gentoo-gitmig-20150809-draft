@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/phing-2.4.5.ebuild,v 1.2 2011/03/26 11:22:41 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/phing-2.4.5.ebuild,v 1.3 2012/07/03 14:48:05 mabi Exp $
 
 EAPI="2"
 inherit php-pear-lib-r1 eutils
@@ -24,8 +24,6 @@ RDEPEND="!minimal? ( >=dev-php/PEAR-PhpDocumentor-1.4.0
 	>=dev-lang/php-5.0.2[xml,xsl]
 	|| ( <dev-lang/php-5.3.1[pcre,reflection,spl] >=dev-lang/php-5.3.1 )
 	"
-
-need_php_by_category
 
 S=${WORKDIR}/${PN}-${PV/_/}
 
