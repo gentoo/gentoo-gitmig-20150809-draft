@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.10.1.ebuild,v 1.3 2012/06/19 05:11:50 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.10.1.ebuild,v 1.4 2012/07/03 05:57:18 jdhore Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ QA_EXECSTACK="opt/seamonkey/*"
 
 KEYWORDS="-* amd64 x86"
 SLOT="0"
-LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
+LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 IUSE="startup-notification"
 
 DEPEND="app-arch/unzip"

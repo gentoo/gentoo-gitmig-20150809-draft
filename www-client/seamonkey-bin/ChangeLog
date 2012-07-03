@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.141 2012/06/19 05:11:50 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.142 2012/07/03 05:57:18 jdhore Exp $
+
+  03 Jul 2012; Jeff Horelick <jdhore@gentoo.org> -seamonkey-bin-2.10.ebuild,
+  seamonkey-bin-2.10.1.ebuild:
+  Remove old and change seamonkey-2.10.1 to MPL-2.0
 
   19 Jun 2012; Andreas Schuerch <nativemad@gentoo.org>
   seamonkey-bin-2.10.1.ebuild:
@@ -589,4 +593,3 @@
 
   08 Jan 2007; Raúl Porcel <armin76@gentoo.org> ChangeLog:
   New ebuild, from Anarchy, bug 147826
-
