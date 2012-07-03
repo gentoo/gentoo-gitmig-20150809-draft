@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.163 2012/06/24 05:35:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.164 2012/07/03 19:49:46 vapier Exp $
+
+*sandbox-2.6 (03 Jul 2012)
+
+  03 Jul 2012; Mike Frysinger <vapier@gentoo.org> +sandbox-2.6.ebuild:
+  Various fixes, and x32 support.
 
   24 Jun 2012; Mike Frysinger <vapier@gentoo.org> sandbox-2.5.ebuild:
   Parallelize configure steps for multiple ABIs, and run tests in parallel.
