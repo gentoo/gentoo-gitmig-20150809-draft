@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.46 2012/06/12 06:30:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.47 2012/07/03 16:28:40 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> tclx-8.4-r2.ebuild:
+  Marking tclx-8.4-r2 ppc for bug 418933
 
   12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> tclx-8.4-r2.ebuild:
   marked x86 per bug 418933
