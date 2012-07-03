@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-108.00.01.ebuild,v 1.2 2012/07/01 16:08:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-108.00.01.ebuild,v 1.3 2012/07/03 17:38:32 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SRC_URI="http://bitbucket.org/yminsky/ocaml-core/downloads/${P}.tar.gz"
 LICENSE="LGPL-2.1-linking-exception"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="test"
 
 RDEPEND="dev-ml/pcre-ocaml
 	>=dev-ml/sexplib-108.00.01
