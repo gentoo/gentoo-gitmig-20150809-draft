@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.268 2012/07/03 13:06:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.269 2012/07/03 13:11:10 aballier Exp $
+
+  03 Jul 2012; Alexis Ballier <aballier@gentoo.org> -lyx-2.0.2.ebuild:
+  remove old
 
 *lyx-2.0.4 (03 Jul 2012)
 
