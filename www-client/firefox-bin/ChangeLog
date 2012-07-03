@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.107 2012/06/19 05:09:13 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.108 2012/07/03 05:59:40 jdhore Exp $
+
+  03 Jul 2012; Jeff Horelick <jdhore@gentoo.org> -firefox-bin-13.0.ebuild,
+  firefox-bin-13.0.1.ebuild:
+  Remove old and change firefox-bin-13.0.1 to MPL-2.0
 
   19 Jun 2012; Andreas Schuerch <nativemad@gentoo.org>
   firefox-bin-10.0.5.ebuild:
@@ -1694,4 +1698,3 @@
   files/icon/firefox-icon.png, files/icon/mozillafirefox.desktop:
   mozilla-firefox-bin, soon to replace firebird. This ebuild features the GTK+2
   binary with antialiased fonts, and that groovy groovy icon.
-

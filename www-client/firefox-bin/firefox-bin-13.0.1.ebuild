@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-13.0.1.ebuild,v 1.1 2012/06/17 01:16:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-13.0.1.ebuild,v 1.2 2012/07/03 05:59:40 jdhore Exp $
 
 EAPI="4"
 
@@ -33,7 +33,7 @@ RESTRICT="strip mirror binchecks"
 
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
-LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
+LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 IUSE="startup-notification"
 
 DEPEND="app-arch/unzip"
