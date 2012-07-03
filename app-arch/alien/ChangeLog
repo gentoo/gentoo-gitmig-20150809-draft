@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/alien
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.31 2012/06/11 10:15:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.32 2012/07/03 16:45:40 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> alien-8.86.ebuild:
+  Marking alien-8.86 ppc for bug 418503
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> alien-8.86.ebuild:
   Stable for amd64, wrt bug #418503
