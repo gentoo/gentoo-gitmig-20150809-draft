@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.13.ebuild,v 1.1 2012/07/02 10:16:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.13-r1.ebuild,v 1.1 2012/07/03 08:32:18 scarabeus Exp $
 
 EAPI=4
 
@@ -68,4 +68,11 @@ src_install() {
 	doexe pdq/gs-pnm2ppa
 	exeinto /etc/pdq/interfaces
 	doexe pdq/dummy
+
+	# install docs
+	cd docs/en
+	dodoc CALIBRATION*txt COLOR*txt PPA*txt RELEASE* CREDITS README sgml/*.sgml
+
+	cd "${S}"
+	dohtml -r .
 }
