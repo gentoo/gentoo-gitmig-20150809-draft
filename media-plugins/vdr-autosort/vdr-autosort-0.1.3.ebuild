@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/vdr-autosort-0.1.3.ebuild,v 1.1 2012/06/30 17:38:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-autosort/vdr-autosort-0.1.3.ebuild,v 1.2 2012/07/03 18:33:27 hd_brummy Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}"
 src_install() {
 	vdr-plugin-2_src_install
 	insinto /etc/vdr/plugins
-	doins autosort.conf
+	doins examples/autosort.conf
 }
 
 pkg_preinst() {
