@@ -1,0 +1,11 @@
+--- setup.py.orig	2012-06-23 21:20:47.305550337 +0400
++++ setup.py	2012-06-23 21:20:57.400549755 +0400
+@@ -25,7 +25,7 @@
+     packages = find_packages(),
+     scripts = ['scripts/err.py'],
+ 
+-    install_requires = ['xmpppy', 'yapsy', 'configparser', 'python-daemon'],
++    install_requires = ['xmpppy', 'yapsy', 'python-daemon'],
+ 
+     package_data = {
+         '': ['*.txt', '*.rst', '*.plug'],

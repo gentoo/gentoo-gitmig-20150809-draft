@@ -1,6 +1,14 @@
 # ChangeLog for net-im/err
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/err/ChangeLog,v 1.2 2012/06/26 16:51:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/err/ChangeLog,v 1.3 2012/07/03 15:45:35 maksbotan Exp $
+
+*err-1.3.0-r1 (03 Jul 2012)
+*err-1.2.1-r1 (03 Jul 2012)
+
+  03 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org> +err-1.2.1-r1.ebuild,
+  +err-1.3.0-r1.ebuild, +files/err-tests.patch, -err-1.2.1.ebuild,
+  -err-1.3.0.ebuild:
+  Fix tests, bug 316083. Thanks to Pinkbyte
 
 *err-1.3.0 (26 Jun 2012)
 

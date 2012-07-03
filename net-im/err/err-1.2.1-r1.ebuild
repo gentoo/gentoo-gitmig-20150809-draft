@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/err/err-1.2.1.ebuild,v 1.1 2012/06/21 11:27:53 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/err/err-1.2.1-r1.ebuild,v 1.1 2012/07/03 15:45:35 maksbotan Exp $
 
 EAPI=4
 
@@ -32,6 +32,10 @@ pkg_setup() {
 	enewgroup 'err'
 	enewuser 'err' -1 -1 -1 'err'
 	eend ${?}
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/err-tests.patch
 }
 
 src_install() {
