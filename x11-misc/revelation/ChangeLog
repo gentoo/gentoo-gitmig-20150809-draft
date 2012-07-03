@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.26 2012/07/03 11:13:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.27 2012/07/03 17:24:29 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> revelation-0.4.14.ebuild:
+  Marking revelation-0.4.14 ppc for bug 421571
 
   03 Jul 2012; Agostino Sarubbo <ago@gentoo.org> revelation-0.4.14.ebuild:
   Stable for amd64, wrt bug #421571
