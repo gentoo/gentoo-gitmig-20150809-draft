@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.6.20120509.ebuild,v 1.5 2012/06/22 15:58:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.6.20120509.ebuild,v 1.6 2012/07/03 16:20:49 ranger Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://miniupnp.free.fr/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="kernel_linux static-libs"
 
 RESTRICT="test" #409349
