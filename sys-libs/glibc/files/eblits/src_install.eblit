@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.21 2012/06/01 17:49:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.22 2012/07/03 20:07:34 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -155,7 +155,9 @@ toolchain-glibc_src_install() {
 	echo 'LDPATH="include ld.so.conf.d/*.conf"' > "${T}"/00glibc
 	doenvd "${T}"/00glibc || die
 
-	dodoc BUGS ChangeLog* CONFORMANCE FAQ NEWS NOTES PROJECTS README*
+	for d in BUGS ChangeLog* CONFORMANCE FAQ NEWS NOTES PROJECTS README* ; do
+		[[ -s ${d} ]] && dodoc ${d}
+	done
 
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	# creation of the "factory" symlink in pkg_postinst().

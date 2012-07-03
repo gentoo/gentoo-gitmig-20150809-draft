@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.10 2012/07/03 20:07:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.16.0.ebuild,v 1.1 2012/07/03 20:07:34 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -33,8 +33,8 @@ esac
 MANPAGE_VER=""                                 # pregenerated manpages
 INFOPAGE_VER=""                                # pregenerated infopages
 LIBIDN_VER=""                                  # it's integrated into the main tarball now
-PATCH_VER=""                                   # Gentoo patchset
-PORTS_VER=""                                   # version of glibc ports addon
+PATCH_VER="1"                                  # Gentoo patchset
+PORTS_VER=${RELEASE_VER}                       # version of glibc ports addon
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
 
 IUSE="debug gd hardened multilib selinux systemtap profile vanilla crosscompile_opts_headers-only"
