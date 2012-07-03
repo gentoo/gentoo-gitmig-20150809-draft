@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.16.ebuild,v 1.3 2012/06/26 07:06:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.16.ebuild,v 1.4 2012/07/03 16:34:26 ranger Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.thregr.org/~wavexx/software/wmnd/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x64-solaris"
 IUSE="snmp"
 
 RDEPEND="x11-libs/libX11

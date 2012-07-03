@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.51 2012/06/26 07:06:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.52 2012/07/03 16:34:26 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> wmnd-0.4.16.ebuild:
+  Marking wmnd-0.4.16 ppc for bug 422403
 
   26 Jun 2012; Jeff Horelick <jdhore@gentoo.org> wmnd-0.4.16.ebuild:
   marked x86 per bug 422403
