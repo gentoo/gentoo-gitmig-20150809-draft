@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.123 2012/07/03 16:37:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.124 2012/07/03 20:37:56 zerochaos Exp $
+
+  03 Jul 2012; Rick Farina <zerochaos@gentoo.org> kismet-9999.ebuild:
+  simplfy bluez deps and turn dot15d4 off due to build failure
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> kismet-2011.03.2-r3.ebuild:
   Marking kismet-2011.03.2-r3 ppc for bug 420615

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-9999.ebuild,v 1.2 2012/06/13 00:51:03 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-9999.ebuild,v 1.3 2012/07/03 20:37:56 zerochaos Exp $
 
 EAPI=4
 
@@ -24,10 +24,8 @@ HOMEPAGE="http://www.kismetwireless.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+client +pcre speech +plugin-autowep +plugin-btscan +plugin-dot15d4 +plugin-ptw +plugin-spectools +plugin-syslog +ruby +suid"
+IUSE="+client +pcre speech +plugin-autowep +plugin-btscan plugin-dot15d4 +plugin-ptw +plugin-spectools +plugin-syslog +ruby +suid"
 
-# Bluez 4.98 breaks c++ building, so we choose to use -r2 which has the patch
-# or 4.96 which still builds properly.
 RDEPEND="net-wireless/wireless-tools
 	kernel_linux? ( sys-libs/libcap
 		>=dev-libs/libnl-1.1 )
@@ -37,10 +35,7 @@ RDEPEND="net-wireless/wireless-tools
 	client? ( sys-libs/ncurses )
 	!arm? ( speech? ( app-accessibility/flite ) )
 	ruby? ( dev-lang/ruby )
-	plugin-btscan? ( || (
-			>=net-wireless/bluez-4.98-r2
-			=net-wireless/bluez-4.96
-			) )
+	plugin-btscan? ( net-wireless/bluez )
 	plugin-dot15d4? ( virtual/libusb:0 )
 	plugin-spectools? ( net-wireless/spectools )"
 
