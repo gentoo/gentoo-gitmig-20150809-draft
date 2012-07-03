@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.623 2012/07/01 20:37:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.624 2012/07/03 13:11:40 blueness Exp $
+
+*hardened-sources-3.4.2-r1 (03 Jul 2012)
+
+  03 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.4.2-r1.ebuild:
+  Based on hardened-sources-3.4.2 + fix for FW_MIPS_FILE_06 regression
 
 *hardened-sources-3.2.21-r2 (01 Jul 2012)
 
