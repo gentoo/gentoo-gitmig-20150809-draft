@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.78 2012/06/24 16:43:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.79 2012/07/03 16:03:02 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> mod_security-2.6.6.ebuild:
+  Marking mod_security-2.6.6 ppc for bug 422973
 
   24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update USE descriptions.
