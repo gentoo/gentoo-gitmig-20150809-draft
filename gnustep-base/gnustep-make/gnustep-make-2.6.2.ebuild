@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.2.ebuild,v 1.9 2012/06/16 09:31:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.2.ebuild,v 1.10 2012/07/03 18:23:12 voyageur Exp $
 
 EAPI=4
 inherit gnustep-base eutils prefix toolchain-funcs
@@ -16,7 +16,8 @@ IUSE="native-exceptions"
 
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=sys-devel/make-3.75
-	>=sys-devel/gcc-3.3[objc]"
+	>=sys-devel/gcc-3.3[objc]
+	!!gnustep-base/libobjc2"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -24,10 +25,20 @@ pkg_setup() {
 	if use libobjc2; then
 		libobjc_version=libobjc.so.4
 	else
-		# Test new libobjc.so.3
-		$(tc-getCC) -Werror -Wl,-l:libobjc.so.3 "${FILESDIR}"/testlibobjc.m -o /dev/null 2> /dev/null \
-			&& libobjc_version=libobjc.so.3 \
-			|| libobjc_version=libobjc.so.2
+		# Find version in active gcc
+		for ver in {2..5};
+		do
+			if $(tc-getCC) -Werror -Wl,-l:libobjc.so.${ver} \
+				"${FILESDIR}"/testlibobjc.m -o /dev/null 2> /dev/null;
+			then
+				libobjc_version=libobjc.so.${ver}
+			fi
+		done
+	fi
+
+	# Stop if we could not get libobjc.so
+	if [[ -z ${libobjc_version} ]]; then
+		die "Could not find Objective-C runtime"
 	fi
 
 	# For existing installations, determine if we will use another libobjc.so
