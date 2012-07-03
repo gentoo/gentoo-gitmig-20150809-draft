@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.43 2012/06/30 12:57:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.44 2012/07/03 20:13:43 jer Exp $
+
+  03 Jul 2012; Jeroen Roovers <jer@gentoo.org> gupnp-0.18.3.ebuild:
+  Marked ~hppa (bug #424225).
 
 *gupnp-0.18.3 (30 Jun 2012)
 
