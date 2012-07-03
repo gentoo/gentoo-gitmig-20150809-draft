@@ -1,5 +1,8 @@
 # ChangeLog for sys-apps/xinetd
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.66 2012/06/23 17:11:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.67 2012/07/03 16:02:09 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> xinetd-2.3.15.ebuild:
+  Marking xinetd-2.3.15 ppc for bug 420927
 
   23 Jun 2012; Raúl Porcel <armin76@gentoo.org> xinetd-2.3.15.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #420927
