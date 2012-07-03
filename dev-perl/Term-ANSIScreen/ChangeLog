@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-ANSIScreen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.23 2012/06/24 13:00:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.24 2012/07/03 20:36:11 jer Exp $
+
+  03 Jul 2012; Jeroen Roovers <jer@gentoo.org> Term-ANSIScreen-1.500.0.ebuild:
+  Stable for HPPA (bug #414751).
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
