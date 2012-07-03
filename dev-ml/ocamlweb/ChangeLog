@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.17 2012/06/21 01:11:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.18 2012/07/03 16:18:58 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> ocamlweb-1.38.ebuild:
+  Marking ocamlweb-1.38 ppc for bug 422035
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> ocamlweb-1.38.ebuild:
   marked x86 per bug 422035
