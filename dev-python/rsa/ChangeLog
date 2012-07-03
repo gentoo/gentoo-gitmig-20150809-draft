@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rsa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.3 2012/06/28 07:26:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.4 2012/07/03 19:44:15 floppym Exp $
+
+  03 Jul 2012; Mike Gilbert <floppym@gentoo.org> rsa-3.1.1.ebuild:
+  Drop unzip dep per Arfrever.
 
 *rsa-3.1.1 (28 Jun 2012)
 

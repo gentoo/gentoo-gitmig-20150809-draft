@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/rsa-3.1.1.ebuild,v 1.1 2012/06/28 07:26:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/rsa-3.1.1.ebuild,v 1.2 2012/07/03 19:44:15 floppym Exp $
 
 EAPI="4"
 
@@ -22,5 +22,4 @@ IUSE=""
 
 RDEPEND=">=dev-python/pyasn1-0.0.13
 	>=dev-python/setuptools-0.6.10"
-DEPEND="${RDEPEND}
-	app-arch/unzip"
+DEPEND="${RDEPEND}"
