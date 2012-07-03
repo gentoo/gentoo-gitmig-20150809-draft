@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.147 2012/06/21 19:33:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.148 2012/07/03 16:13:15 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> portpeek-2.0.24.ebuild:
+  Marking portpeek-2.0.24 ppc for bug 421997
 
   21 Jun 2012; Agostino Sarubbo <ago@gentoo.org> portpeek-2.0.24.ebuild:
   Stable for amd64, wrt bug #421997
