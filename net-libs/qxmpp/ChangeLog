@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/qxmpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.10 2012/06/14 21:07:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.11 2012/07/03 15:32:50 maksbotan Exp $
+
+*qxmpp-0.3.61-r1 (03 Jul 2012)
+
+  03 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/01_enable_shared_linking.patch, +qxmpp-0.3.61-r1.ebuild,
+  -qxmpp-0.3.47.ebuild, -qxmpp-0.3.61.ebuild:
+  Add patch to enable shared lib building, bug 402829. Thanks to Pinkbyte
 
   14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> qxmpp-0.3.47.ebuild:
   marked x86 per bug 421123
@@ -42,4 +49,3 @@
   +qxmpp-9999.ebuild, +metadata.xml:
   Copy net-libs/qxmpp ebuilds from rion-overlay, thanks to 0xd34df00d. Bugs
   353690 and 375991
-
