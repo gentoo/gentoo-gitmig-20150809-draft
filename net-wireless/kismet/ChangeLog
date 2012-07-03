@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.122 2012/06/13 08:07:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.123 2012/07/03 16:37:15 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> kismet-2011.03.2-r3.ebuild:
+  Marking kismet-2011.03.2-r3 ppc for bug 420615
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> kismet-2011.03.2-r3.ebuild:
   marked x86 per bug 420615
