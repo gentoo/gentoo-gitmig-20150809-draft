@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.75 2012/05/17 10:59:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.76 2012/07/03 05:56:00 graaff Exp $
+
+*haml-3.1.6 (03 Jul 2012)
+
+  03 Jul 2012; Hans de Graaff <graaff@gentoo.org> +haml-3.1.6.ebuild,
+  +files/haml-3.1.6-sass.patch:
+  Version bump. Move hpricot to the test dependencies since it is an optional
+  dependency. This matches the upstream gemspec.
 
   17 May 2012; Thomas Kahle <tomka@gentoo.org> haml-3.1.4-r3.ebuild:
   marked ~x86 per bug 396547
