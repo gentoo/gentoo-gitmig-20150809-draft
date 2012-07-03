@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.62 2012/07/03 20:15:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.63 2012/07/03 20:20:58 radhermit Exp $
+
+  03 Jul 2012; Tim Harder <radhermit@gentoo.org> -sleuthkit-3.2.1.ebuild:
+  Remove old.
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> sleuthkit-3.2.3.ebuild:
   Stable for HPPA (bug #418581).
