@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6741 2012/07/03 15:29:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6742 2012/07/03 18:15:18 lavajoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jul 2012; Joe Peterson <lavajoe@gentoo.org> package.mask:
+  Unmask sys-fs/btrfs-progs-0.19* (see bug #420477)
 
   03 Jul 2012; Ben de Groot <yngwin@gentoo.org> package.mask:
   Lastrite app-laptop/lenovo-sl-laptop

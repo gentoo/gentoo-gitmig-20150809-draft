@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13920 2012/07/03 15:29:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13921 2012/07/03 18:15:18 lavajoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,14 +47,6 @@ www-apps/zina
 # See, http://bugs.gentoo.org/380193
 # Removal in 30 days
 dev-python/sexy-python
-
-# Joe Peterson <lavajoe@gentoo.org> (02 Jul 2012)
-# This old version has become out of sync with kernel btrfs, so is dangerous
-# (except for those who have an older kernel and know what they are doing).
-# Use of the live build (btrfs-progs-9999) is recommended, since no upstream
-# versioning is available, and the live build keeps pace with new kernels.
-# See bug #420477
-=sys-fs/btrfs-progs-0.19*
 
 # Markos Chandras <hwoarang@gentoo.org> (02 Jul 2012)
 # Mask rc release for testing
