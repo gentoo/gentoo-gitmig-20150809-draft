@@ -13,6 +13,7 @@
     <remote-id type="cpan-module">SQL::Translator::Filter::DefaultExtra</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Filter::Globals</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Filter::Names</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Generator::DDL::PostgreSQL</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Generator::DDL::SQLServer</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Generator::DDL::SQLite</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Generator::Role::DDL</remote-id>
