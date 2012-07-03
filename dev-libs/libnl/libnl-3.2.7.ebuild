@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.7.ebuild,v 1.8 2012/06/29 16:36:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.7.ebuild,v 1.9 2012/07/03 13:24:45 ranger Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.infradead.org/~tgr/libnl/"
 SRC_URI="http://www.infradead.org/~tgr/libnl/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="3"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 ~s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 ~s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="static-libs utils"
 
 DEPEND="
