@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gspeakers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.15 2012/07/02 06:38:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.16 2012/07/03 14:03:13 ago Exp $
+
+  03 Jul 2012; Agostino Sarubbo <ago@gentoo.org> gspeakers-0.11-r1.ebuild:
+  Stable for amd64, wrt bug #424465
 
   02 Jul 2012; Jeff Horelick <jdhore@gentoo.org> gspeakers-0.11-r1.ebuild:
   marked x86 per bug 424465
