@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tkcvs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/ChangeLog,v 1.12 2012/06/12 06:37:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tkcvs/ChangeLog,v 1.13 2012/07/03 16:30:31 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> tkcvs-8.2.3.ebuild:
+  Marking tkcvs-8.2.3 ppc for bug 418981
 
   12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> tkcvs-8.2.3.ebuild:
   marked x86 per bug 418981
