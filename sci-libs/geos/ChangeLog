@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.66 2012/06/18 08:17:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.67 2012/07/03 13:37:59 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> geos-3.3.4.ebuild:
+  Marking geos-3.3.4 ppc for bug 420125
 
 *geos-3.3.4 (18 Jun 2012)
 
