@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.72 2012/06/07 21:45:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.73 2012/07/03 19:52:26 jer Exp $
+
+  03 Jul 2012; Jeroen Roovers <jer@gentoo.org> liblockfile-1.09.ebuild:
+  Stable for HPPA (bug #419261).
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> liblockfile-1.09.ebuild:
   Marking liblockfile-1.09 ppc for bug 419261
