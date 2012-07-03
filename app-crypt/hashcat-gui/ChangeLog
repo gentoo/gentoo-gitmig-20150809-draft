@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/hashcat-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-gui/ChangeLog,v 1.1 2012/07/02 02:12:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-gui/ChangeLog,v 1.2 2012/07/03 21:45:22 zerochaos Exp $
+
+  03 Jul 2012; Rick Farina <zerochaos@gentoo.org> hashcat-gui-0.5.1.ebuild:
+  address a few ebuild QA violations and style concerns
 
 *hashcat-gui-0.5.1 (02 Jul 2012)
 
