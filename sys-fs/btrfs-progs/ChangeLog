@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.45 2012/05/11 14:15:00 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.46 2012/07/03 18:12:38 lavajoe Exp $
+
+*btrfs-progs-0.19.11 (03 Jul 2012)
+
+  03 Jul 2012; Joe Peterson <lavajoe@gentoo.org> +btrfs-progs-0.19.11.ebuild:
+  Added new version 0.19.11 (bug #420477)
 
   11 May 2012; Joe Peterson <lavajoe@gentoo.org> btrfs-progs-0.19-r3.ebuild,
   btrfs-progs-9999.ebuild:
