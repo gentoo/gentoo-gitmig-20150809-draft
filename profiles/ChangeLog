@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6739 2012/07/02 20:21:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6740 2012/07/03 09:08:41 mabi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jul 2012; Matti Bickel <mabi@gentoo.org> package.mask:
+  Lastrite www-apps/zina
 
   02 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite dev-python/sexy-python wrt #380193
