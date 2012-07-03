@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.147 2012/06/21 02:03:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.148 2012/07/03 19:34:06 jer Exp $
+
+  03 Jul 2012; Jeroen Roovers <jer@gentoo.org> wvstreams-4.6.1-r2.ebuild:
+  Stable for HPPA (bug #421983).
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> wvstreams-4.6.1-r2.ebuild:
   marked x86 per bug 421983
