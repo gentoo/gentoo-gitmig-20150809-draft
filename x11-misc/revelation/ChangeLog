@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.27 2012/07/03 17:24:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.28 2012/07/03 23:30:11 jdhore Exp $
+
+  03 Jul 2012; Jeff Horelick <jdhore@gentoo.org> revelation-0.4.14.ebuild:
+  marked x86 per bug 421571
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> revelation-0.4.14.ebuild:
   Marking revelation-0.4.14 ppc for bug 421571
