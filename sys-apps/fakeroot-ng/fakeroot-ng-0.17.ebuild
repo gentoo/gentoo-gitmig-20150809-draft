@@ -1,6 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot-ng/fakeroot-ng-0.17.ebuild,v 1.1 2009/07/27 07:03:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot-ng/fakeroot-ng-0.17.ebuild,v 1.2 2012/07/03 10:04:22 ssuominen Exp $
+
+EAPI=4
+inherit eutils
 
 DESCRIPTION="A utility to run commands with fake root privileges"
 HOMEPAGE="http://sourceforge.net/projects/fakerootng/"
@@ -11,10 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND=""
+DOCS="AUTHORS ChangeLog NEWS README"
 
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README NEWS AUTHORS
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
