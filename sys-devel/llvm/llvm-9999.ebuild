@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.33 2012/06/08 13:18:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.34 2012/07/03 14:32:17 voyageur Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
-inherit subversion eutils flag-o-matic multilib toolchain-funcs python
+inherit subversion eutils flag-o-matic multilib toolchain-funcs python pax-utils
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -150,6 +150,11 @@ src_compile() {
 #	emake ${infiles[@]/.rst/.1}
 
 	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1
+
+	pax-mark m Release/bin/lli
+	if use test; then
+		pax-mark m unittests/ExecutionEngine/JIT/Release/JITTests
+	fi
 }
 
 src_install() {
