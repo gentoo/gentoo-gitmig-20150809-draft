@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.26 2012/06/19 14:03:31 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.27 2012/07/03 19:52:52 maksbotan Exp $
+
+  03 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org> ldb-1.1.4.ebuild:
+  Add more specific tevent depends to 1.1.4, bug 424635
 
   19 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> -ldb-1.1.3.ebuild,
   ldb-1.1.4.ebuild, ldb-1.1.6.ebuild:
@@ -84,4 +87,3 @@
   04 Aug 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
   +ldb-1.1.0.ebuild, +metadata.xml:
   Added ebuild for sys-libs/ldb-1.1.0, thanks to spamslepnoga@inbox.ru. bug
-
