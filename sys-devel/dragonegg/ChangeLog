@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/dragonegg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.7 2012/05/24 12:13:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/ChangeLog,v 1.8 2012/07/03 13:57:17 voyageur Exp $
+
+  03 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> dragonegg-3.1.ebuild,
+  dragonegg-9999.ebuild:
+  Tests require lit from llvm. Note that at the moment, test suites are
+  external, so running tests will not produce many results. Bug #423511
 
 *dragonegg-3.1 (24 May 2012)
 

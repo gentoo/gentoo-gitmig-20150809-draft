@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-9999.ebuild,v 1.1 2011/12/02 23:54:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-9999.ebuild,v 1.2 2012/07/03 13:57:17 voyageur Exp $
 
 EAPI=4
 inherit subversion multilib
@@ -20,6 +20,14 @@ DEPEND="|| ( sys-devel/gcc:4.5[lto]
 	~sys-devel/llvm-${PV}"
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	if use test;
+	then
+		ESVN_PROJECT=llvm S="${WORKDIR}"/llvm subversion_fetch "http://llvm.org/svn/llvm-project/llvm/trunk"
+	fi
+	subversion_fetch
+}
+
 src_prepare() {
 	# Replace svnversion call
 	subversion_wc_info
@@ -30,6 +38,10 @@ src_prepare() {
 src_compile() {
 	# GCC: compiler to use plugin with
 	emake CC="$(tc-getCC)" GCC="$(tc-getCC)" CXX="$(tc-getCXX)" VERBOSE=1
+}
+
+src_test() {
+	emake LIT_DIR="${WORKDIR}"/llvm/utils/lit check
 }
 
 src_install() {
