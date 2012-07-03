@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.59 2012/06/22 16:09:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.60 2012/07/03 16:29:35 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> binutils-config-3-r3.ebuild:
+  Marking binutils-config-3-r3 ppc for bug 420355
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> binutils-config-3-r3.ebuild:
   Marking binutils-config-3-r3 ppc64 for bug 420355
