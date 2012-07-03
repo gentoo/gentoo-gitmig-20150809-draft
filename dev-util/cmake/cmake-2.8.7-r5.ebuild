@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.7-r5.ebuild,v 1.9 2012/05/23 13:07:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.7-r5.ebuild,v 1.10 2012/07/03 13:41:21 kensington Exp $
 
 EAPI=4
 
@@ -36,6 +36,9 @@ RDEPEND="${DEPEND}
 		)
 	)
 "
+
+# bug 390533
+RESTRICT="test"
 
 SITEFILE="50${PN}-gentoo.el"
 VIMFILE="${PN}.vim"

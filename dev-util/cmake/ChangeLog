@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.205 2012/06/28 15:47:02 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.206 2012/07/03 13:41:21 kensington Exp $
+
+  03 Jul 2012; Michael Palimaka <kensington@gentoo.org> cmake-2.8.6-r4.ebuild,
+  cmake-2.8.7-r5.ebuild:
+  Restrict tests wrt bug #390533 and #423637.
 
   28 Jun 2012; Michael Palimaka <kensington@gentoo.org> -cmake-2.8.7-r4.ebuild,
   -cmake-2.8.8-r2.ebuild, -files/cmake-2.8.3-fix_assembler_test.patch,
