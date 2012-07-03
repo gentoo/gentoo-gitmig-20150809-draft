@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.39 2012/07/03 14:13:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.40 2012/07/03 19:40:04 blueness Exp $
+
+  03 Jul 2012; Anthony G. Basile <blueness@gentoo.org> libelf-0.8.13-r1.ebuild:
+  Keyword ~mips
 
   03 Jul 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   I will give it love to check elfutils' insanity!
