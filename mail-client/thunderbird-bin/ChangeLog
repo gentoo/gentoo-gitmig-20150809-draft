@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.77 2012/06/19 05:02:07 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.78 2012/07/03 06:01:38 jdhore Exp $
+
+  03 Jul 2012; Jeff Horelick <jdhore@gentoo.org> -thunderbird-bin-13.0.ebuild,
+  thunderbird-bin-13.0.1.ebuild:
+  Remove old and change thunderbird-bin-13.0.1 to MPL-2.0
 
   19 Jun 2012; Andreas Schuerch <nativemad@gentoo.org>
   thunderbird-bin-10.0.5.ebuild:
@@ -1130,4 +1134,3 @@
   files/thunderbird-0.3-antialiasing-patch,
   files/icon/mozillathunderbird.desktop, files/icon/thunderbird-icon.png:
   Import of mozilla-thunderbird-bin to the tree, starting with 0.4.
-
