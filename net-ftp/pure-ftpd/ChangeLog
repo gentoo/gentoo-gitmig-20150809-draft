@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.144 2012/06/25 19:41:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.145 2012/07/03 16:22:44 ranger Exp $
+
+  03 Jul 2012; Brent Baude <ranger@gentoo.org> pure-ftpd-1.0.36.ebuild:
+  Marking pure-ftpd-1.0.36 ppc for bug 421729
 
   25 Jun 2012; Markus Meier <maekke@gentoo.org> pure-ftpd-1.0.36.ebuild:
   arm stable, bug #421729
