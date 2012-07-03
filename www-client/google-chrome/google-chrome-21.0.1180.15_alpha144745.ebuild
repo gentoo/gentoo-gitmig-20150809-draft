@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-21.0.1180.15_alpha144745.ebuild,v 1.4 2012/07/03 03:32:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-21.0.1180.15_alpha144745.ebuild,v 1.5 2012/07/03 14:42:06 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -120,7 +120,6 @@ any_cpu_missing_flag() {
 	local value=$1
 	grep '^flags' /proc/cpuinfo | grep -qv "$value"
 }
-
 
 pkg_preinst() {
 	chromium_pkg_preinst
