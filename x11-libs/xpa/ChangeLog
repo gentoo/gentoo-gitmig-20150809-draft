@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xpa
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/ChangeLog,v 1.9 2011/08/05 20:58:18 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/ChangeLog,v 1.10 2012/07/04 20:29:20 bicatali Exp $
+
+*xpa-2.1.14 (04 Jul 2012)
+
+  04 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +xpa-2.1.14.ebuild:
+  Version bump
 
   05 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> xpa-2.1.13.ebuild:
   Added static-libs. Simplified ebuild for EAPI4
@@ -42,4 +47,3 @@
   +files/xpa-2.1.8-ds9-5.4.patch, +files/xpa-2.1.8-makefile.patch,
   +metadata.xml, +xpa-2.1.8.ebuild:
   Initial import
-
