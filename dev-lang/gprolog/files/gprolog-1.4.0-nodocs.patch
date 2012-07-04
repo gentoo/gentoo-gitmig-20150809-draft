@@ -1,14 +1,5 @@
 --- gprolog-1.4.0.orig/src/Makefile.in	2011-04-09 04:35:22.000000000 +1200
 +++ gprolog-1.4.0/src/Makefile.in	2011-07-02 08:25:22.000000000 +1200
-@@ -82,7 +81,7 @@
- # --- Links --- #
- 
- install-links: uninstall-links
--	if test $(LINKS_DIR) != none; then \
-+	if test $(LINKS_DIR) != $(DESTDIR)none; then \
- 	   ./mkinstalldirs $(LINKS_DIR); \
- 	   (cd $(LINKS_DIR) ; $(LN_S) $(INSTALL_DIR)/bin/* .); \
- 	fi
 @@ -97,7 +96,7 @@
  # --- Documentation --- #
  
