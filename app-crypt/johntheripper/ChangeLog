@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.141 2012/04/08 05:19:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.142 2012/07/04 18:15:42 zerochaos Exp $
+
+*johntheripper-1.7.9-r3 (04 Jul 2012)
+
+  04 Jul 2012; Rick Farina <zerochaos@gentoo.org>
+  +johntheripper-1.7.9-r3.ebuild, metadata.xml:
+  update to jumbo6, marking self as maintainer
 
 *johntheripper-1.7.9-r2 (08 Apr 2012)
 
