@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/mountapp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/mountapp/ChangeLog,v 1.9 2008/10/04 15:25:45 betelgeuse Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/mountapp/ChangeLog,v 1.10 2012/07/04 10:06:52 voyageur Exp $
+
+*mountapp-3.1 (04 Jul 2012)
+
+  04 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> mountapp-3.0.ebuild,
+  +mountapp-3.1.ebuild, +files/mountapp-3.1-WINGs_path.patch,
+  +files/mountapp-3.1-wmaker-0.95.patch:
+  Bump, add support for newer windowmaker, fix WINGs library detection, ebuild
+  cleanup. Limit stable version to old windowmaker. Fixes bug #424677
 
   04 Oct 2008; Petteri Räty <betelgeuse@gentoo.org> mountapp-3.0.ebuild:
   Add missing X11 deps. Fixes bug #204566.
