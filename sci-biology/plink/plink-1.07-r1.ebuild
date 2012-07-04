@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.07-r1.ebuild,v 1.4 2011/12/13 23:38:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/plink-1.07-r1.ebuild,v 1.5 2012/07/04 09:31:26 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -26,7 +26,9 @@ S="${WORKDIR}/${P}-src"
 # Package contains bytecode-only jar gPLINK.jar. Ignored, notified upstream.
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-flags.patch
+	epatch \
+		"${FILESDIR}"/${PV}-flags.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 	use webcheck || sed -i '/WITH_WEBCHECK =/ s/^/#/' "${S}/Makefile" || die
 	use R || sed -i '/WITH_R_PLUGINS =/ s/^/#/' "${S}/Makefile" || die
 	use lapack || sed -i '/WITH_LAPACK =/ s/^/#/' "${S}/Makefile" || die
@@ -34,11 +36,10 @@ src_prepare() {
 
 src_compile() {
 	emake \
-		CXX_UNIX=$(tc-getCXX) \
-		|| die
+		CXX_UNIX=$(tc-getCXX)
 }
 
 src_install() {
-	newbin plink p-link || die
-	dodoc README.txt || die
+	newbin plink p-link
+	dodoc README.txt
 }
