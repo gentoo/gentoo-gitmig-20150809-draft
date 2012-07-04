@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/oclhashcat-lite-bin-0.10.ebuild,v 1.2 2012/07/04 02:58:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/oclhashcat-lite-bin-0.10.ebuild,v 1.3 2012/07/04 17:41:29 zerochaos Exp $
 
 EAPI=4
 
@@ -44,12 +44,12 @@ src_install() {
 		rm cudaHashcat-lite32.bin || die
 	fi
 	if ! use video_cards_fglrx; then
-		rm -rf kernels/4098 || die
-		rm -f oclHashcat-lite*.bin || die
+		rm -r kernels/4098 || die
+		rm oclHashcat-lite*.bin || die
 	fi
 	if ! use video_cards_nvidia; then
-		rm -rf kernels/4318 || die
-		rm -f cudaHashcat-lite*.bin || die
+		rm -r kernels/4318 || die
+		rm cudaHashcat-lite*.bin || die
 	fi
 
 	#I assume this is needed but I didn't check
@@ -61,9 +61,9 @@ src_install() {
 	dodir /opt/bin
 
 	cat <<-EOF > "${ED}"/opt/bin/oclhashcat-lite
-	#! /bin/sh
-	echo "oclHashcat-lite and all related files have been installed in /opt/${PN}"
-	echo "Please run one of the following binaries to use gpu accelerated hashcat:"
+		#! /bin/sh
+		echo "oclHashcat-lite and all related files have been installed in /opt/${PN}"
+		echo "Please run one of the following binaries to use gpu accelerated hashcat:"
 	EOF
 
 	for x in oclHashcat-lite64.bin oclHashcat-lite32.bin cudaHashcat-lite64.bin cudaHashcat-lite32.bin
@@ -88,10 +88,10 @@ src_install() {
 			fperms +x /opt/${PN}/${x}
 
 			cat <<-EOF > "${ED}"/opt/bin/${x}
-			#! /bin/sh
-			cd /opt/${PN}
-			echo "Warning: ${x} is running from /opt/${PN} so be careful of relative paths."
-			./${x} "\$@"
+				#! /bin/sh
+				cd /opt/${PN}
+				echo "Warning: ${x} is running from /opt/${PN} so be careful of relative paths."
+				exec ./${x} "\$@"
 			EOF
 
 			fperms +x /opt/bin/${x}
