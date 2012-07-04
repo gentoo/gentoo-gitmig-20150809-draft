@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.142 2012/07/03 05:57:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.143 2012/07/04 20:06:50 axs Exp $
+
+  04 Jul 2012; Ian Stakenvicius <axs@gentoo.org> seamonkey-bin-2.9.ebuild,
+  seamonkey-bin-2.10.1.ebuild, metadata.xml:
+  Fixed license, added mozilla herd to metadata
 
   03 Jul 2012; Jeff Horelick <jdhore@gentoo.org> -seamonkey-bin-2.10.ebuild,
   seamonkey-bin-2.10.1.ebuild:
