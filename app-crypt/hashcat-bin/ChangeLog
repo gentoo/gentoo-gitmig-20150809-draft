@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/hashcat-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.3 2012/07/03 22:27:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.4 2012/07/04 17:48:59 zerochaos Exp $
+
+  04 Jul 2012; Rick Farina <zerochaos@gentoo.org> hashcat-bin-0.39.ebuild:
+  minor QA for ebuild
 
   03 Jul 2012; Rick Farina <zerochaos@gentoo.org> hashcat-bin-0.39.ebuild:
   fix loader location and minor ebuild style improvements
