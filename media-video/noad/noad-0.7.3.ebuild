@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.3.ebuild,v 1.3 2012/06/27 18:34:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.3.ebuild,v 1.4 2012/07/04 21:33:43 hd_brummy Exp $
 
 EAPI="4"
 
@@ -60,20 +60,19 @@ src_install() {
 	# example scripts are installed as dokumentation
 	dodoc allnewnoad allnoad allnoadnice clearlogos noadifnew stat2html
 
-	CONF_SOURCE="${FILESDIR}/0.7.1"
-	newconfd "${CONF_SOURCE}"/confd_vdraddon.noad vdraddon.noad
+	newconfd "${FILEDIR}"/confd_vdraddon.noad vdraddon.noad
 
 	insinto /usr/share/vdr/record
-	doins "${CONF_SOURCE}"/record-50-noad.sh
+	doins "${FILESDIR}"/record-50-noad.sh
 
 	insinto /usr/share/vdr/shutdown
 	doins "${FILESDIR}"/pre-shutdown-15-noad.sh
 
 	insinto /etc/vdr/reccmds
-	doins "${CONF_SOURCE}"/reccmds.noad.conf
+	doins "${FILESDIR}"/reccmds.noad.conf
 
 	exeinto /usr/share/vdr/bin
-	doexe "${CONF_SOURCE}"/noad-reccmd
+	doexe "${FILESDIR}"/noad-reccmd
 }
 
 pkg_postinst() {
