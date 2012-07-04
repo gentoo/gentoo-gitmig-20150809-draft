@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.4.ebuild,v 1.7 2012/05/26 17:18:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.4.ebuild,v 1.8 2012/07/04 19:17:28 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -39,7 +39,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 
 KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~ppc ~ppc64 -sparc x86 ~amd64-linux ~x86-linux"
 SLOT="0"
-LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
+LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="bindist +crashreporter +ipc +minimal pgo selinux system-sqlite +webm"
 
 # More URIs appended below...
