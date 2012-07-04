@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libharu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/ChangeLog,v 1.8 2012/04/22 12:23:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/ChangeLog,v 1.9 2012/07/04 22:12:45 bicatali Exp $
+
+  04 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> libharu-2.2.1-r1.ebuild:
+  Keyword amd64-linux, x86-linux
 
   22 Apr 2012; Markus Meier <maekke@gentoo.org> libharu-2.2.1-r1.ebuild:
   x86 stable, bug #411085
