@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/swarp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/swarp/ChangeLog,v 1.6 2011/08/04 18:33:44 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/swarp/ChangeLog,v 1.7 2012/07/04 21:39:45 bicatali Exp $
+
+  04 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/swarp-configure.patch, -swarp-2.17.1.ebuild, -swarp-2.17.6.ebuild,
+  swarp-2.19.1.ebuild:
+  Switch to EAPI4, removed old, keyword amd64-linux, x86-linux
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
