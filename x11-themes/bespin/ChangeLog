@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/bespin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.1 2012/07/04 02:20:21 creffett Exp $
+
+*bespin-0_p20120703 (04 Jul 2012)
+
+  04 Jul 2012; Chris Reffett <creffett@gentoo.org> +bespin-0_p20120703.ebuild,
+  +metadata.xml:
+  Snapshot of package already in KDE overlay, wrt bug 424595
