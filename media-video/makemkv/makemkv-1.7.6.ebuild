@@ -1,15 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.6.ebuild,v 1.1 2012/07/02 04:00:20 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.6.ebuild,v 1.2 2012/07/04 09:03:05 ssuominen Exp $
 
-EAPI=3
+EAPI=4
+inherit eutils gnome2-utils multilib
 
-RESTRICT="mirror"
-
-inherit multilib eutils
-
-MY_P="makemkv-oss-${PV}"
-MY_PB="makemkv-bin-${PV}"
+MY_P=makemkv-oss-${PV}
+MY_PB=makemkv-bin-${PV}
 
 DESCRIPTION="Tool for ripping Blu-Ray, HD-DVD and DVD discs and copying content to a Matroska container"
 HOMEPAGE="http://www.makemkv.com/"
@@ -21,59 +18,70 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4
-	dev-libs/openssl:0
-	media-libs/mesa
-	dev-libs/expat
-	x11-libs/qt-dbus:4
-	sys-libs/zlib"
-RDEPEND="${DEPEND}"
+QA_PREBUILT=opt/bin/makemkvcon
+RESTRICT=mirror
 
-QA_PREBUILT="opt/bin/makemkvcon"
-DEFAULT_PROFILE="default.mmcp.xml"
+RDEPEND="dev-libs/expat
+	dev-libs/openssl:0
+	sys-libs/zlib
+	virtual/opengl
+	x11-libs/qt-dbus:4
+	x11-libs/qt-gui:4"
+DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${MY_P}
+
+DEFAULT_PROFILE=default.mmcp.xml
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-makefile.linux.patch"
-	cd "${MY_P}"
+	epatch "${FILESDIR}"/${P}-makefile.linux.patch
 }
 
 src_compile() {
-	cd "${MY_P}"
-	emake GCC="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" -f makefile.linux || die "make failed"
+	emake GCC="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" -f makefile.linux
 }
 
 src_install() {
 	# install oss package
-	cd "${MY_P}"
-	dolib.so out/libdriveio.so.0 || die "dolib.so out/libdriveio.so.0 died"
-	dolib.so out/libmakemkv.so.1 || die "dolib.so out/libmakemkv.so.1 died"
-	dosym libdriveio.so.0 /usr/$(get_libdir)/libdriveio.so.0.${PV} || die "dosym libdriveio.so.0 died "
-	dosym libdriveio.so.0 /usr/$(get_libdir)/libdriveio.so || die "dosym libdriveio.so.0 died "
-	dosym libmakemkv.so.1 /usr/$(get_libdir)/libmakemkv.so.1.${PV} || die "dosym libmakemkv.so.1 died"
-	dosym libmakemkv.so.1 /usr/$(get_libdir)/libmakemkv.so || die "dosym libmakemkv.so.1 died"
+	dolib.so out/libdriveio.so.0
+	dolib.so out/libmakemkv.so.1
+	dosym libdriveio.so.0 /usr/$(get_libdir)/libdriveio.so.0.${PV}
+	dosym libdriveio.so.0 /usr/$(get_libdir)/libdriveio.so
+	dosym libmakemkv.so.1 /usr/$(get_libdir)/libmakemkv.so.1.${PV}
+	dosym libmakemkv.so.1 /usr/$(get_libdir)/libmakemkv.so
 	into /opt
-	dobin out/makemkv || die "dobin makemkv died"
+	dobin out/makemkv
 
-	newicon makemkvgui/src/img/128/mkv_icon.png ${PN}.png
-	make_desktop_entry ${PN} "MakeMKV" ${PN} "Qt;AudioVideo;Video"
+	local res
+	for res in 16 22 32 64 128; do
+		newicon -s ${res} makemkvgui/src/img/${res}/mkv_icon.png ${PN}.png
+	done
+
+	make_desktop_entry ${PN} MakeMKV ${PN} 'Qt;AudioVideo;Video'
 
 	# install bin package
-	cd "${WORKDIR}/${MY_PB}/bin"
+	pushd "${WORKDIR}"/${MY_PB}/bin >/dev/null
 	if use x86; then
-		dobin i386/makemkvcon || die "dobin makemkvcon died"
+		dobin i386/makemkvcon
 	elif use amd64; then
-		dobin amd64/makemkvcon || die "dobin makemkvcon died"
+		dobin amd64/makemkvcon
 	fi
+	popd >/dev/null
 
 	# install license and default profile
-	cd "${WORKDIR}/${MY_PB}/src"
+	pushd "${WORKDIR}"/${MY_PB}/src >/dev/null
 	into /usr
 	dodoc eula_en_linux.txt
 	insinto /usr/share/${PF}
 	doins share/${DEFAULT_PROFILE}
+	popd >/dev/null
 }
 
+pkg_preinst() {	gnome2_icon_savelist; }
+
 pkg_postinst() {
+	gnome2_icon_cache_update
+
 	elog "While MakeMKV is in beta mode, upstream has provided a license"
 	elog "to use if you do not want to purchase one."
 	elog ""
@@ -87,3 +95,5 @@ pkg_postinst() {
 	elog "to the config directory:"
 	elog "cp /usr/share/${PF}/${DEFAULT_PROFILE} ~/.MakeMKV/${DEFAULT_PROFILE}"
 }
+
+pkg_postrm() { gnome2_icon_cache_update; }

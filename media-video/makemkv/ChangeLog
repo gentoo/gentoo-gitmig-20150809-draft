@@ -1,6 +1,10 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.8 2012/07/03 16:16:12 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.9 2012/07/04 09:03:05 ssuominen Exp $
+
+  04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> makemkv-1.7.6.ebuild:
+  Install hicolor icons and update icon cache. Use virtual/opengl instead of
+  media-libs/mesa.
 
   03 Jul 2012; Matthew Marlowe <mattm@gentoo.org>
   files/makemkv-1.7.6-makefile.linux.patch:
