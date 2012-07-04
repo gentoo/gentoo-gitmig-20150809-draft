@@ -1,13 +1,11 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.10 2012/07/04 09:08:02 ssuominen Exp $
-
-  04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> makemkv-1.7.6.ebuild:
-  Stop installing the EULA to the filesystem.
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.11 2012/07/04 09:23:46 ssuominen Exp $
 
   04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> makemkv-1.7.6.ebuild:
   Install hicolor icons and update icon cache. Use virtual/opengl instead of
-  media-libs/mesa.
+  media-libs/mesa. Missing LICENSE information from file headers; LGPL-2.1,
+  MPL-1.1 and openssl. Install translation files. Install mmdtsdec utility.
 
   03 Jul 2012; Matthew Marlowe <mattm@gentoo.org>
   files/makemkv-1.7.6-makefile.linux.patch:
