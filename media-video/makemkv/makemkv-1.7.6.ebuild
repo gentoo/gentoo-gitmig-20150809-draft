@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.6.ebuild,v 1.5 2012/07/04 09:24:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.6.ebuild,v 1.6 2012/07/04 09:28:35 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils multilib
@@ -89,10 +89,10 @@ pkg_postinst() {
 	elog ""
 	elog "Note that beta license may have an expiration date and you will"
 	elog "need to check for newer licenses/releases. "
-#	elog ""
-#	elog "If this is a new install, remember to copy the default profile"
-#	elog "to the config directory:"
-#	elog "cp /usr/share/MakeMKV/default.mmcp.xml ~/.MakeMKV/"
+	elog ""
+	elog "If this is a new install, remember to copy the default profile"
+	elog "to the config directory:"
+	elog "cp /usr/share/MakeMKV/default.mmcp.xml ~/.MakeMKV/"
 }
 
 pkg_postrm() { gnome2_icon_cache_update; }
