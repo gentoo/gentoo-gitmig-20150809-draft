@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbase/gbase-0.5.ebuild,v 1.4 2012/05/13 16:47:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbase/gbase-0.5.ebuild,v 1.5 2012/07/04 07:02:42 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils toolchain-funcs
 
 DESCRIPTION="a convert program for decimal, hexadecimal, octal and binary values."
@@ -11,7 +11,7 @@ SRC_URI="http://www.fluxcode.net/files/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
@@ -24,8 +24,10 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
-	emake || die "emake failed."
+	emake
 }
+
+src_test() { :; } #424671
 
 src_install() {
 	dobin ${PN}
