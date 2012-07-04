@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-3.1.7.ebuild,v 1.1 2012/07/04 09:46:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-3.1.7-r1.ebuild,v 1.1 2012/07/04 12:39:20 dev-zero Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/src-highlite/${P}.tar.gz"
 LICENSE="GPL-3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 SLOT="0"
-IUSE="bash-completion doc static-libs"
+IUSE="doc static-libs"
 
 DEPEND=">=dev-libs/boost-1.49.0
 	dev-util/ctags"
@@ -38,7 +38,7 @@ src_install () {
 
 	use static-libs || rm -rf "${D}"/usr/lib*/*.la
 
-	use bash-completion && dobashcompletion completion/source-highlight
+	dobashcomp completion/source-highlight
 
 	# That's not how we want it
 	rm -fr "${ED}/usr/share"/{aclocal,doc}

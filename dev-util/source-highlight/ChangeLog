@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.46 2012/07/04 09:46:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.47 2012/07/04 12:39:20 dev-zero Exp $
+
+*source-highlight-3.1.7-r1 (04 Jul 2012)
+
+  04 Jul 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +source-highlight-3.1.7-r1.ebuild,
+  -files/source-highlight-2.10.bash-completion,
+  -files/source-highlight-2.8.bash-completion, -source-highlight-3.1.7.ebuild:
+  Fix bash-completion installation (bug #424753) and cleanup old bash-completion
+  files.
 
 *source-highlight-3.1.7 (04 Jul 2012)
 
