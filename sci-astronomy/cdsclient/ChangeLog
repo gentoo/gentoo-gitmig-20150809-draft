@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/cdsclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/ChangeLog,v 1.12 2012/06/15 17:02:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/ChangeLog,v 1.13 2012/07/04 21:24:49 bicatali Exp $
+
+  04 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> cdsclient-3.7.1.ebuild:
+  respect prefix bindir
 
 *cdsclient-3.7.1 (15 Jun 2012)
 
