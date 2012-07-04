@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.55 2012/06/11 09:15:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.56 2012/07/04 06:40:25 jdhore Exp $
+
+  04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> devil-1.7.8-r1.ebuild:
+  marked x86 per bug 419809
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> devil-1.7.8-r1.ebuild:
   Stable for amd64, wrt bug #419809
