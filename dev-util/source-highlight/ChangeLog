@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.45 2012/05/26 07:54:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.46 2012/07/04 09:46:37 dev-zero Exp $
+
+*source-highlight-3.1.7 (04 Jul 2012)
+
+  04 Jul 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +source-highlight-3.1.7.ebuild, -source-highlight-2.11.1.ebuild,
+  -source-highlight-2.11.ebuild, -source-highlight-2.9.ebuild,
+  -source-highlight-3.1.6.ebuild:
+  Version bump (contains fix for bug #421039). Drop old versions.
 
 *source-highlight-3.1.6 (25 May 2012)
 

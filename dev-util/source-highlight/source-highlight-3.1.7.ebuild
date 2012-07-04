@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-3.1.6.ebuild,v 1.1 2012/05/26 07:54:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-3.1.7.ebuild,v 1.1 2012/07/04 09:46:37 dev-zero Exp $
 
 EAPI="4"
 
