@@ -1,3 +1,11 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.use.mask,v 1.9 2012/07/04 07:18:21 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (04 Jul 2012)
+# Disable 32-bit parts of wine, bug #351436
+app-emulation/wine mono win32
+
 # Feb 06 2010 Justin LEcher <jlec@gentoo.org>
 # icc maked
 sci-biology/fasta icc

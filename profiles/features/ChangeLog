@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.38 2012/06/20 14:38:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.39 2012/07/04 07:18:21 tetromino Exp $
+
+  04 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  64bit-native/package.mask, 64bit-native/package.use.mask,
+  +64bit-native/package.use.force:
+  Allow win64-only wine on amd64 with features/64bit-native (bug #351436).
 
   20 Jun 2012; <swift@gentoo.org> selinux/packages:
   Remove duplicate system dependencies, cleaning to only contain
