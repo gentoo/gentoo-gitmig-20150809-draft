@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r1.ebuild,v 1.3 2012/06/27 14:41:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r3.ebuild,v 1.1 2012/07/04 07:56:22 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -12,10 +12,11 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="avahi bluetooth connection-sharing dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss +ppp resolvconf systemd wimax"
+IUSE="avahi bluetooth connection-sharing dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd +wext wimax"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 REQUIRED_USE="
+	modemmanager? ( ppp )
 	^^ ( nss gnutls )
 	^^ ( dhclient dhcpcd )"
 
@@ -29,7 +30,6 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-147[extras] )
 	>=dev-libs/glib-2.26
 	>=sys-auth/polkit-0.97
-	dev-libs/libnl:1.1
 	>=net-libs/libsoup-2.26:2.4
 	>=net-wireless/wpa_supplicant-0.7.3-r3[dbus]
 	bluetooth? ( >=net-wireless/bluez-4.82 )
@@ -41,16 +41,18 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	dhclient? ( net-misc/dhcp )
 	dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
-	ppp? (
-		>=net-misc/modemmanager-0.4
-		>=net-dialup/ppp-2.4.5 )
+	ppp? ( >=net-dialup/ppp-2.4.5 )
 	resolvconf? ( net-dns/openresolv )
 	connection-sharing? (
 		net-dns/dnsmasq
 		net-firewall/iptables )
-	wimax? ( >=net-wireless/wimax-1.5.1 )"
+	wimax? (
+		dev-libs/libnl:1.1
+		>=net-wireless/wimax-1.5.1 )
+	!wimax? ( dev-libs/libnl:3 )"
 
 RDEPEND="${COMMON_DEPEND}
+	modemmanager? ( >=net-misc/modemmanager-0.4 )
 	systemd? ( >=sys-apps/systemd-31 )
 	!systemd? ( sys-auth/consolekit )"
 
@@ -95,13 +97,22 @@ src_prepare() {
 	# Don't build tests
 	epatch "${FILESDIR}/${PN}-0.9_rc3-fix-tests.patch"
 	# Build against libnl:1.1 for net-wireless/wimax-1.5.2 compatibility
-	epatch "${FILESDIR}/${PN}-0.9.4.0-force-libnl1.1.patch"
+	epatch "${FILESDIR}/${PN}-0.9.4.0-force-libnl1.1-r1.patch"
 	# Update init.d script to provide net and use inactive status if not connected
 	epatch "${FILESDIR}/${PN}-0.9.2.0-init-provide-net-r1.patch"
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
 	epatch "${FILESDIR}/${PN}-0.9.2.0-pre-sleep.patch"
 	# Fix quote handling for global data (Bug #410821)
 	epatch "${FILESDIR}/${PN}-0.9.4.0-fix-quote-handling.patch"
+	# Fix uninitialized variables in libnm-glib
+	epatch "${FILESDIR}/${P}-libnm-glib-ensure_inited.patch"
+	epatch "${FILESDIR}/${P}-libnm-glib-init-gerror.patch"
+	# Fix building against linux-headers-3.4, #417055
+	epatch "${FILESDIR}/${P}-ip_ppp.h.patch"
+	# Fix ipv6 default route bug, #417529
+	epatch "${FILESDIR}/${P}-ipv6-route.patch"
+
+	epatch_user
 
 	eautoreconf
 	default
@@ -124,6 +135,8 @@ src_configure() {
 		$(use_with dhcpcd)
 		$(use_with doc docs)
 		$(use_with resolvconf)
+		$(use_with wext)
+		$(use_with wimax libnl-1)
 		$(systemd_with_unitdir)"
 
 		if use nss ; then
@@ -162,8 +175,12 @@ src_install() {
 	newins "${FILESDIR}/nm-system-settings.conf-ifnet" NetworkManager.conf
 
 	# Allow users in plugdev group to modify system connections
-	insinto /etc/polkit-1/localauthority/10-vendor.d
-	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.pkla"
+	insinto /etc/polkit-1/rules.d
+	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.rules"
+	if has_version '<sys-auth/polkit-0.106'; then
+		insinto /etc/polkit-1/localauthority/10-vendor.d
+		doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.pkla"
+	fi
 
 	# Default conf.d file
 	newconfd "${FILESDIR}/conf.d.NetworkManager" NetworkManager
