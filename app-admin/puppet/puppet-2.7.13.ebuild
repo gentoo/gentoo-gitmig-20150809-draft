@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.13.ebuild,v 1.9 2012/05/31 02:36:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.13.ebuild,v 1.10 2012/07/04 20:06:49 swift Exp $
 
 EAPI="4"
 # ruby19: dev-ruby/ruby-ldap has no ruby19
@@ -41,12 +41,16 @@ ruby_add_rdepend "
 
 DEPEND="${DEPEND}
 	emacs? ( virtual/emacs )
-	xemacs? ( app-editors/xemacs )"
+	xemacs? ( app-editors/xemacs )
+	selinux? ( sec-policy/selinux-puppet )"
 RDEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )
 	xemacs? ( app-editors/xemacs )
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
-	selinux? ( sys-libs/libselinux[ruby] )
+	selinux? (
+		sys-libs/libselinux[ruby]
+		sec-policy/selinux-puppet
+	)
 	>=app-portage/eix-0.18.0"
 
 SITEFILE="50${PN}-mode-gentoo.el"
