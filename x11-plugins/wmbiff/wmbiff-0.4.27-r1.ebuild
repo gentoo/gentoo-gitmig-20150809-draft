@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.27.ebuild,v 1.12 2012/07/04 20:10:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.27-r1.ebuild,v 1.1 2012/07/04 20:10:14 voyageur Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="crypt"
 
 RDEPEND="x11-libs/libX11
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	crypt? (
 		>=dev-libs/libgcrypt-1.2.1
-		<net-libs/gnutls-3.0
+		>=net-libs/gnutls-1.2.3
 		)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -30,6 +30,8 @@ DOCS="ChangeLog FAQ NEWS README README.licq TODO wmbiff/sample.wmbiffrc"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gnutls.patch
+	epatch "${FILESDIR}"/${P}-gnutls-3.patch
+	epatch "${FILESDIR}"/${P}-invalid-strncpy.patch
 	sed -i -e '/AC_PATH_XTRA_CORRECTED/d' configure.ac || die
 	sed -i -e '/pkg.*SCRIPTS/s:pkglib:pkgdata:' scripts/Makefile.am || die #421411
 	eautoreconf
