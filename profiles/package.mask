@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13924 2012/07/04 07:30:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13925 2012/07/04 21:53:44 ottxor Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -369,10 +369,6 @@ x11-plugins/replytolist
 =app-admin/eselect-opengl-1.2.6*
 =x11-proto/glproto-1.4.15-r1
 =media-libs/mesa-8.0.3-r1
-
-# Christoph Junghans <ottxor@gentoo.org> (04 Jun 2012)
-# Mask for testing and porting. Tracker Bug #418473
-app-admin/eselect-awk
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Jun 2012)
 # Dead upstream. Security problems. Bug #249112
