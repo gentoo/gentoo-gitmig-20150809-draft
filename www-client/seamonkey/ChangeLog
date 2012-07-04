@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.394 2012/07/02 14:09:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.395 2012/07/04 19:20:50 anarchy Exp $
+
+  04 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> seamonkey-2.0.14-r1.ebuild,
+  seamonkey-2.4.1-r1.ebuild, seamonkey-2.10.1.ebuild:
+  Fix license on >=seamonkey-*
 
   02 Jul 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.10.1.ebuild:
   Update license on >=seamonkey-2.10.1 to MPL-2.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.4.1-r1.ebuild,v 1.8 2012/05/03 06:01:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.4.1-r1.ebuild,v 1.9 2012/07/04 19:20:50 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -47,7 +47,7 @@ DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
 
 SLOT="0"
-LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
+LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="+alsa +chatzilla +crypt +ipc +methodjit +roaming system-sqlite +webm"
 
 SRC_URI="${REL_URI}/source/${MY_P}.source.tar.bz2 -> ${P}.source.tar.bz2
