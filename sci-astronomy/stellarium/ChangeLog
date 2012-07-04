@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.95 2012/07/03 16:16:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.96 2012/07/04 04:19:58 jdhore Exp $
+
+  04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> stellarium-0.11.3.ebuild:
+  marked x86 per bug 424245
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> stellarium-0.11.3.ebuild:
   Marking stellarium-0.11.3 ppc for bug 424245
