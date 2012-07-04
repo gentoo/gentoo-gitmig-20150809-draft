@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.83 2012/06/30 12:56:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.84 2012/07/04 07:34:54 ssuominen Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (30 Jun 2012)
 # Missing keywords for connman
@@ -45,7 +45,6 @@ dev-vcs/subversion java
 gnome-extra/libgda java
 media-libs/libcaca java
 net-dns/libidn java
-net-libs/xulrunner java
 net-misc/mDNSResponder java
 net-print/cups java
 sys-libs/db java
@@ -145,8 +144,6 @@ dev-ruby/nokogiri ffi
 # Raúl Porcel <armin76@gentoo.org> (26 Jun 2010)
 # custom-optimization doesn't work on ia64
 mail-client/thunderbird custom-optimization
-net-libs/xulrunner custom-optimization
-www-client/icecat custom-optimization
 www-client/firefox custom-optimization
 www-client/seamonkey custom-optimization
 x11-plugins/enigmail custom-optimization

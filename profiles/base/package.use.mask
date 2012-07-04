@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.366 2012/06/29 04:33:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.367 2012/07/04 07:31:10 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -323,9 +323,7 @@ dev-lang/ruby-enterprise fastthreading
 # Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
-net-libs/xulrunner ipc
 www-client/firefox ipc
-www-client/icecat ipc
 
 # Tomas Touceda <chiiph@gentoo.org> (13 Apr 2010)
 # Masked because libsvm module is broken with this release on every arch.

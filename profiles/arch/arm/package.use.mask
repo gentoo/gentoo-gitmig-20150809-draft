@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.78 2012/06/14 22:26:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.79 2012/07/04 07:32:47 ssuominen Exp $
 
 # Chí-Thanh Christopher Nguyen <chithanh@gentoo.org> (02 Jun 2012)
 # Mask udis86 flag for llvm, which is of limited use outside x86/amd64.
@@ -69,8 +69,7 @@ app-admin/packagekit-base entropy
 dev-libs/libmemcached tcmalloc sasl
 
 # Until we get bug 372199 fixed or subprofiles, we have to mask this
->=net-libs/xulrunner-2.0 alsa webm
->=www-client/firefox-5.0 alsa webm
+www-client/firefox alsa webm
 
 # Pacho Ramos <pacho@gentoo.org> (19 Jul 2011)
 # Missing keywords on dependencies
@@ -113,9 +112,7 @@ app-misc/nut X
 # Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
-net-libs/xulrunner -ipc
 www-client/firefox -ipc
-www-client/icecat -ipc
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
 # Needs app-mobilephone/obex-data-server keyworded, bug 305913

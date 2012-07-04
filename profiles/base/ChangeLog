@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.410 2012/06/29 04:33:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.411 2012/07/04 07:31:10 ssuominen Exp $
+
+  04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove obsolete entries to net-libs/xulrunner and www-client/icecat wrt
+  #424617
 
   29 Jun 2012; Mike Gilbert <floppym@gentoo.org> package.use.mask:
   Mask libzfs flag for grub due to sys-fs/zfs keywords.
