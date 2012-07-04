@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.081.ebuild,v 1.2 2012/07/04 03:38:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.081.ebuild,v 1.3 2012/07/04 17:51:22 zerochaos Exp $
 
 EAPI=4
 
@@ -37,9 +37,9 @@ QA_PREBUILT="*Hashcat-plus*.bin"
 
 src_install() {
 	dodoc docs/*
-	rm -rf *.exe docs || die
+	rm -r *.exe docs || die
 	#patches already in aircrack-ng
-	rm -rf contrib/aircrack-ng_r1959 || die
+	rm -r contrib/aircrack-ng_r1959 || die
 
 	#the current release (0.08) seperates 64bit from 32 bit, will he stay with this?
 	#if ! use amd64; then
@@ -53,12 +53,12 @@ src_install() {
 	#	rm kernels/4098/*32* kernels/4318/*32* || die
 	#fi
 	if ! use video_cards_fglrx; then
-		rm -rf kernels/4098 || die
-		rm -f oclHashcat-plus*.bin || die
+		rm -r kernels/4098 || die
+		rm oclHashcat-plus*.bin || die
 	fi
 	if ! use video_cards_nvidia; then
-		rm -rf kernels/4318 || die
-		rm -f cudaHashcat-plus*.bin || die
+		rm -r kernels/4318 || die
+		rm cudaHashcat-plus*.bin || die
 	fi
 	pax-mark m *Hashcat-plus*.bin
 
@@ -68,9 +68,9 @@ src_install() {
 	dodir /opt/bin
 
 	cat <<-EOF > "${ED}"/opt/bin/oclhashcat-plus
-	#! /bin/sh
-	echo "oclHashcat-plus and all related files have been installed in /opt/${PN}"
-	echo "Please run one of the following binaries to use gpu accelerated hashcat:"
+		#! /bin/sh
+		echo "oclHashcat-plus and all related files have been installed in /opt/${PN}"
+		echo "Please run one of the following binaries to use gpu accelerated hashcat:"
 	EOF
 
 	for x in oclHashcat-plus64.bin oclHashcat-plus32.bin cudaHashcat-plus64.bin cudaHashcat-plus32.bin
@@ -95,10 +95,10 @@ src_install() {
 			fperms +x /opt/${PN}/${x}
 
 			cat <<-EOF > "${ED}"/opt/bin/${x}
-			#! /bin/sh
-			cd /opt/${PN}
-			echo "Warning: ${x} is running from /opt/${PN} so be careful of relative paths."
-			./${x} "\$@"
+				#! /bin/sh
+				cd /opt/${PN}
+				echo "Warning: ${x} is running from /opt/${PN} so be careful of relative paths."
+				exec ./${x} "\$@"
 			EOF
 
 			fperms +x /opt/bin/${x}
