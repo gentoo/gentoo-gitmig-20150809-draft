@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.5 2012/04/14 19:39:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.6 2012/07/04 01:11:25 jdhore Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${
 	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf.gz )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 x86"
 IUSE="doc examples +ncurses mono python ruby test debug"
 
 RDEPEND=">=dev-libs/expat-2.0.1

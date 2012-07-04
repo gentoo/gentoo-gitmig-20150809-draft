@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.12 2012/06/04 18:14:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.13 2012/07/04 01:11:25 jdhore Exp $
+
+  04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> Ice-3.4.2.ebuild:
+  marked x86 per bug 418415
 
   04 Jun 2012; Ulrich Müller <ulm@gentoo.org> -Ice-3.3.1-r2.ebuild,
   -files/Ice-3.3.1-cross-compile.patch, -Ice-3.4.0.ebuild,
