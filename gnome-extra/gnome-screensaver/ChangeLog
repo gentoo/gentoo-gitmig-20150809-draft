@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.154 2012/05/05 06:25:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.155 2012/07/04 23:21:55 tetromino Exp $
+
+*gnome-screensaver-3.4.2 (04 Jul 2012)
+
+  04 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-screensaver-3.4.2.ebuild:
+  Version bump, now only shows the panel on primary monitor.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gnome-screensaver-2.30.2-r1.ebuild, gnome-screensaver-3.2.2.ebuild,
