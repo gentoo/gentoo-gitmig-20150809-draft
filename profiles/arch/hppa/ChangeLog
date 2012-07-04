@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.157 2012/07/04 07:21:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.158 2012/07/04 15:20:05 jer Exp $
+
+  04 Jul 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=doc for dev-libs/libnl since media-gfx/mscgen does not work on HPPA
+  (bug #419987).
 
   04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> make.defaults:
   Remove reference to USE="xulrunner" wrt #424617
