@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kvpnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.51 2012/07/04 06:43:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.52 2012/07/04 07:03:02 johu Exp $
+
+  04 Jul 2012; Johannes Huber <johu@gentoo.org> -kvpnc-0.9.6a.ebuild:
+  Remove old.
 
   04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> kvpnc-0.9.6a-r1.ebuild:
   marked x86 per bug 423529
