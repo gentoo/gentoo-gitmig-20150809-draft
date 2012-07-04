@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.16.ebuild,v 1.6 2012/07/04 14:43:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.16.ebuild,v 1.7 2012/07/04 14:47:28 jer Exp $
 
 EAPI=4
 
-inherit db-use eutils ssl-cert pam multilib
+inherit db-use eutils multilib pam ssl-cert user
 
 MY_P=${P/_/}
 
