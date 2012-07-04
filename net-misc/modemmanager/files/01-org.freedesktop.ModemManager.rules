@@ -1,0 +1,6 @@
+polkit.addRule(function(action, subject) {
+    if (/^org\.freedesktop\.ModemManager\.(Device\.Control|Contacts|SMS|Location)$/.test(action.id) &&
+        subject.isInGroup("plugdev") && subject.active) {
+        return "yes";
+    }
+});
