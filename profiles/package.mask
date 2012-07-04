@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13921 2012/07/03 18:15:18 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13922 2012/07/04 03:28:29 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (4 Jul 2012)
+# Dysfunctional version with no will to do anything useful
+=net-fs/cifs-utils-5.5
 
 # Ben de Groot <yngwin@gentoo.org> (3 Jul 2012)
 # Dead upstream. Doesn't compile with current kernels.
