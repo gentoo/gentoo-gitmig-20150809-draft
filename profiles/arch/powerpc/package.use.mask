@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.128 2012/06/22 14:49:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.129 2012/07/04 07:36:27 ssuominen Exp $
 
 
 # Davide Pesavento <pesa@gentoo.org> (22 Jun 2012)
@@ -37,7 +37,6 @@ net-misc/connman wimax ofono
 # Tested not working with ppc64/10.0/64bit-userland/desktop,
 # gcc-4.5.3, glibc-2.13-r4 and by users in bug #396565
 www-client/firefox crashreporter
-www-client/icecat crashreporter
 mail-client/thunderbird crashreporter
 
 # Alexey Shvetsov <alexxy@gentoo.org> (20 Jan 2012)
