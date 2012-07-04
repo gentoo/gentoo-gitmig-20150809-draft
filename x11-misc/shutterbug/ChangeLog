@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/shutterbug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.30 2012/02/12 22:35:09 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.31 2012/07/04 18:56:46 mabi Exp $
+
+*shutterbug-1.7.33 (04 Jul 2012)
+
+  04 Jul 2012; Matti Bickel <mabi@gentoo.org> +shutterbug-1.7.33.ebuild:
+  version bump (fixes bug #416101)
 
 *shutterbug-1.7.32 (12 Feb 2012)
 
@@ -129,4 +134,3 @@
   +shutterbug-1.4.12.ebuild, +shutterbug-1.5.4.ebuild:
   Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
   Fixes #88924
-
