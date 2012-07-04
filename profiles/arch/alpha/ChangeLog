@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.134 2012/06/27 17:27:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.135 2012/07/04 07:25:54 ssuominen Exp $
+
+  04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove obsolete entries for net-libs/xulrunner and www-client/icecat wrt
+  #424617
 
   27 Jun 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask net-irc/kvirc webkit

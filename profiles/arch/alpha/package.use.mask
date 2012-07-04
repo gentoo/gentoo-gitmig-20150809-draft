@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.96 2012/06/27 17:27:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.97 2012/07/04 07:25:54 ssuominen Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jun 2012)
 # x11-libs/qt-webkit doesn't seem to work
@@ -115,8 +115,6 @@ media-gfx/povray mkl
 # Raúl Porcel <armin76@gentoo.org> (26 Jun 2010)
 # custom-optimization doesn't work on alpha
 mail-client/thunderbird custom-optimization
-net-libs/xulrunner custom-optimization
-www-client/icecat custom-optimization
 www-client/firefox custom-optimization
 www-client/seamonkey custom-optimization
 x11-plugins/enigmail custom-optimization

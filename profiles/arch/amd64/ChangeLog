@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.182 2012/06/29 04:37:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.183 2012/07/04 07:26:51 ssuominen Exp $
+
+  04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove obsolete entries for net-libs/xulrunner and www-client/icecat wrt
+  #424617
 
   29 Jun 2012; Mike Gilbert <floppym@gentoo.org> package.use.mask:
   Unmask libzfs flag for grub on amd64.
