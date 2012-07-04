@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r2.ebuild,v 1.5 2012/06/14 15:44:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.2.0-r2.ebuild,v 1.6 2012/07/04 18:24:10 ssuominen Exp $
 
 EAPI=4
 
@@ -48,6 +48,9 @@ src_prepare() {
 	else
 		eautoreconf
 	fi
+
+	epunt_cxx #424689
+
 	java-pkg-opt-2_src_prepare
 }
 
