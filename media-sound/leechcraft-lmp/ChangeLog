@@ -1,6 +1,9 @@
-# ChangeLog for media-video/leechcraft-lmp
+# ChangeLog for media-sound/leechcraft-lmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lmp/ChangeLog,v 1.5 2012/06/22 14:58:43 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lmp/ChangeLog,v 1.6 2012/07/04 21:06:00 ago Exp $
+
+  04 Jul 2012; Agostino Sarubbo <ago@gentoo.org> leechcraft-lmp-0.5.70.ebuild:
+  Stable for amd64, wrt bug #424613
 
   22 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
   leechcraft-lmp-0.5.70.ebuild, leechcraft-lmp-9999.ebuild:
