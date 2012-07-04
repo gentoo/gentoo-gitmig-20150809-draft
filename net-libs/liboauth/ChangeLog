@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/liboauth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.13 2012/05/11 04:19:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.14 2012/07/04 12:53:30 flameeyes Exp $
+
+*liboauth-0.9.7 (04 Jul 2012)
+
+  04 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +liboauth-0.9.7.ebuild:
+  Version bump.
 
   11 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> -liboauth-0.9.5.ebuild,
   liboauth-0.9.6.ebuild:
@@ -79,4 +84,3 @@
   +metadata.xml:
   Import liboauth 0.8.8, thanks to Ricardo Ichizo in bug #328209 for the
   base ebuild.
-
