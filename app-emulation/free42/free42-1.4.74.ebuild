@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/free42-1.4.74.ebuild,v 1.2 2012/07/03 04:55:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/free42-1.4.74.ebuild,v 1.3 2012/07/04 17:37:31 nimiux Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND="dev-libs/atk
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/gtk+
+	x11-libs/gtk+:2
 	x11-libs/pango"
 
 RDEPEND="${DEPEND}"
@@ -26,11 +26,14 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	sed -i -e 's/hash-style=both/hash-style=gnu/' "${S}/gtk/Makefile" || die
+	sed -i -e '/^CXXFLAGS :=/{s/-g //;s/$/ \$\{CXXFLAGS\}/}' \
+		"${S}/gtk/Makefile" || die
+	sed -i -e 's/-Wl,--hash-style=both/-O1 -Wl,--hash-style=gnu,--as-needed/' \
+		"${S}/gtk/Makefile" || die
 }
 
 src_compile() {
-	make CXX="$(tc-getCXX)" -C "${S}/gtk" || die
+	emake -j1 CXX="$(tc-getCXX)" -C "${S}/gtk"
 }
 
 src_install() {
