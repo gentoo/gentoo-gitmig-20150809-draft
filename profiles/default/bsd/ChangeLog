@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.121 2012/06/02 14:52:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.122 2012/07/04 07:40:40 ssuominen Exp $
+
+  04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> fbsd/package.use.mask:
+  Remove obsolete net-libs/xulrunner entry wrt #424617
 
   02 Jun 2012; Alexis Ballier <aballier@gentoo.org> fbsd/use.mask:
   xemacs is fine, unmask
