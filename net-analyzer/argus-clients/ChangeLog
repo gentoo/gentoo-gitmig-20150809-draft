@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/argus-clients
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.44 2012/06/20 14:53:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.45 2012/07/04 07:18:51 jdhore Exp $
+
+  04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> argus-clients-3.0.6.1.ebuild:
+  marked x86 per bug 422135
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> argus-clients-3.0.6.1.ebuild:
   Stable for amd64, wrt bug #422135

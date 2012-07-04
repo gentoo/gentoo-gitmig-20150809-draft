@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.6.ebuild,v 1.5 2012/06/20 14:54:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.6.ebuild,v 1.6 2012/07/04 07:20:27 jdhore Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://qosient.com/argus/dev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug sasl tcpd"
 
 RDEPEND="
