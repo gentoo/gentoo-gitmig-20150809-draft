@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-12.0.ebuild,v 1.1 2012/04/24 20:09:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-12.0.ebuild,v 1.2 2012/07/04 19:56:06 axs Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ RESTRICT="strip mirror binchecks"
 
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
-LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
+LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="+crashreporter"
 
 DEPEND="app-arch/unzip"
