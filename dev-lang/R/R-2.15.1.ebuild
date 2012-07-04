@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.1.ebuild,v 1.1 2012/06/29 00:30:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.1.ebuild,v 1.2 2012/07/04 19:27:38 bicatali Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-fbsd ~x86-linux ~x64-macos"
 IUSE="bash-completion cairo doc icu java jpeg lapack minimal nls openmp perl png profile readline static-libs tiff tk X"
 REQUIRED_USE="png? ( || ( cairo X ) ) jpeg? ( || ( cairo X ) ) tiff? ( || ( cairo X ) )"
 
@@ -108,6 +108,22 @@ src_prepare() {
 	fi
 	use perl && \
 		export PERL5LIB="${S}/share/perl:${PERL5LIB:+:}${PERL5LIB}"
+
+	# don't search /usr/local
+	sed -i -e '/FLAGS=.*\/local\//c\: # removed by ebuild' configure.ac || die
+	# Fix for Darwin (OS X)
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		sed -e 's:-install_name libR.dylib:-install_name ${libdir}/R/lib/libR.dylib:' \
+			-e 's:-install_name libRlapack.dylib:-install_name ${libdir}/R/lib/libRlapack.dylib:' \
+			-e 's:-install_name libRblas.dylib:-install_name ${libdir}/R/lib/libRblas.dylib:' \
+			-e "/SHLIB_EXT/s/\.so/.dylib/" \
+			-i configure.ac || die
+
+		# sort of "undo" 2.14.1-rmath-shared.patch
+		sed "s:-Wl,-soname=libRmath.so:-install_name ${EPREFIX}/usr/$(get_libdir)/libRmath.dylib:" \
+			-i src/nmath/standalone/Makefile.in || die
+	fi
+
 	AT_M4DIR=m4 eaclocal
 	eautoconf
 }
@@ -116,6 +132,7 @@ src_configure() {
 	econf \
 		--enable-byte-compiled-packages \
 		--enable-R-shlib \
+		--disable-R-framework \
 		--with-system-zlib \
 		--with-system-bzlib \
 		--with-system-pcre \
@@ -141,7 +158,7 @@ src_configure() {
 		$(use_with X x)
 }
 
-src_compile(){
+src_compile() {
 	export VARTEXFONTS="${T}/fonts"
 	emake
 	emake -C src/nmath/standalone shared $(use static-libs && echo static)
@@ -163,6 +180,20 @@ src_install() {
 	EOF
 	doenvd 99R
 	use bash-completion && newbashcomp "${WORKDIR}"/${BCP} ${PN}
+	# The buildsystem has a different understanding of install_names than what
+	# we require.  Since it builds modules like shared objects (wrong), many
+	# objects (all modules) get an incorrect install_name.  Fixing the build
+	# system here is not really trivial.
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		local mod
+		pushd "${ED}"/usr/lib/R > /dev/null
+		for mod in $(find . -name "*.dylib") ; do
+			mod=${mod#./}
+			install_name_tool -id "${EPREFIX}/usr/lib/R/${mod}" \
+				"${mod}"
+		done
+		popd > /dev/null
+	fi
 }
 
 pkg_postinst() {
