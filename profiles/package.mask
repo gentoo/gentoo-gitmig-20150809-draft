@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13923 2012/07/04 06:28:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13924 2012/07/04 07:30:04 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -349,11 +349,6 @@ gnustep-apps/projectmanager
 gnustep-apps/keyarcher
 gnustep-apps/plconv
 gnustep-libs/wizardkit
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Jun 2012)
-# Vulnerable and no longer used by anything in tree wrt #403415
-# Removal in 30 days
-<net-libs/xulrunner-10.0
 
 # Jory A. Pratt <anarchy@gentoo.org> (06 Jun 2012)
 # Upstream discontinued security support for 3.1 series.
