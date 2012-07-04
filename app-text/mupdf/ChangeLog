@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.45 2012/06/05 19:52:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.46 2012/07/04 19:34:29 xmw Exp $
+
+  04 Jul 2012; Michael Weber <xmw@gentoo.org> +files/mupdf-1.0-zoom.patch,
+  +files/mupdf-9999-zoom-2.patch, -files/mupdf-9999-zoom-1.patch,
+  mupdf-1.0.ebuild, mupdf-9999.ebuild:
+  Fix live ebuild, rename patches
 
   05 Jun 2012; Michael Weber <xmw@gentoo.org>
   -files/mupdf-0.8.165-buildsystem.patch, -files/mupdf-0.8.165-zoom.patch,
@@ -195,4 +200,3 @@
   +files/mupdf-0.6-buildsystem.patch, +metadata.xml:
   New ebuild for app-text/mupdf from sunrise. Fixes bug #280469. Thanks to
   Manu Wächter for the initial ebuilds.
-

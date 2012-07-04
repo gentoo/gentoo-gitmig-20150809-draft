@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.0.ebuild,v 1.7 2012/06/02 18:10:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.0.ebuild,v 1.8 2012/07/04 19:34:29 xmw Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-buildsystem.patch
 
 	if ! use vanilla ; then
-		epatch "${FILESDIR}"/${PN}-9999-zoom-1.patch
+		epatch "${FILESDIR}"/${P}-zoom.patch
 	fi
 }
 
