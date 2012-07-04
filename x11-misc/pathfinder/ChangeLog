@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/pathfinder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.33 2012/02/12 22:27:24 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.34 2012/07/04 18:59:24 mabi Exp $
+
+*pathfinder-1.7.33 (04 Jul 2012)
+
+  04 Jul 2012; Matti Bickel <mabi@gentoo.org> +pathfinder-1.7.33.ebuild:
+  version bump
 
 *pathfinder-1.7.32 (12 Feb 2012)
 
@@ -141,4 +146,3 @@
   +pathfinder-1.5.4.ebuild:
   Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
   Fixes #88924
-
