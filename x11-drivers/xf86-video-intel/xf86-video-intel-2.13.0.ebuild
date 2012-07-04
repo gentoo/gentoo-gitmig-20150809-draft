@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.13.0.ebuild,v 1.5 2012/06/26 00:08:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.13.0.ebuild,v 1.6 2012/07/04 22:13:45 remi Exp $
 
 EAPI=3
 
@@ -17,7 +17,8 @@ RDEPEND=">=x11-base/xorg-server-1.6
 	x11-libs/libXext
 	x11-libs/libXfixes
 	x11-libs/libXvMC
-	>=x11-libs/libxcb-1.5"
+	>=x11-libs/libxcb-1.5
+	x11-libs/xcb-util"
 DEPEND="${RDEPEND}
 	>=x11-proto/dri2proto-1.99.3
 	x11-proto/fontsproto
