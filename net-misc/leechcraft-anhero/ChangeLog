@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-anhero
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-anhero/ChangeLog,v 1.12 2012/05/31 20:51:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-anhero/ChangeLog,v 1.13 2012/07/04 21:08:06 ago Exp $
+
+  04 Jul 2012; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-anhero-0.5.70.ebuild:
+  Stable for amd64, wrt bug #424613
 
 *leechcraft-anhero-0.5.70 (31 May 2012)
 

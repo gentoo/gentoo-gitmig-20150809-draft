@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-pintab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-pintab/ChangeLog,v 1.5 2012/05/31 21:00:10 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-pintab/ChangeLog,v 1.6 2012/07/04 21:15:02 ago Exp $
+
+  04 Jul 2012; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-pintab-0.5.70.ebuild:
+  Stable for amd64, wrt bug #424613
 
 *leechcraft-pintab-0.5.70 (31 May 2012)
 

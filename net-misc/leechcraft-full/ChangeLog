@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.22 2012/07/01 13:38:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.23 2012/07/04 21:10:30 ago Exp $
+
+  04 Jul 2012; Agostino Sarubbo <ago@gentoo.org> leechcraft-full-0.5.70.ebuild:
+  Stable for amd64, wrt bug #424613
 
   01 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-full-9999.ebuild:
   Move leechraft-vrooby to sys-fs
