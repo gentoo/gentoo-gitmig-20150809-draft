@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.90 2012/06/14 22:26:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.91 2012/07/04 07:24:34 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -127,7 +127,6 @@ net-libs/gnutls -valgrind
 # Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
-net-libs/xulrunner -ipc
 www-client/firefox -ipc
 www-client/icecat -ipc
 
