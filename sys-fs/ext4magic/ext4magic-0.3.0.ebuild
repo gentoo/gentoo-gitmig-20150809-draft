@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ext4magic-0.3.0.ebuild,v 1.1 2012/03/04 15:28:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ext4magic-0.3.0.ebuild,v 1.2 2012/07/04 20:31:35 ssuominen Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
