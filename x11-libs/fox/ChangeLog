@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.155 2012/07/04 18:55:52 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.156 2012/07/04 19:05:03 mabi Exp $
+
+*fox-1.6.45 (04 Jul 2012)
+
+  04 Jul 2012; Matti Bickel <mabi@gentoo.org> +fox-1.6.45.ebuild:
+  version bump
 
 *fox-1.7.33 (04 Jul 2012)
 
