@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/gccxml-0.9.0_pre20120309.ebuild,v 1.1 2012/07/04 10:45:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/gccxml-0.9.0_pre20120309.ebuild,v 1.2 2012/07/04 11:53:55 jlec Exp $
 
 EAPI=4
 
@@ -20,4 +20,9 @@ src_prepare() {
 	sed -i \
 		-e 's/xatexit.c//' \
 		"${S}/GCC/libiberty/CMakeLists.txt" || die "sed failed"
+}
+
+src_configure() {
+	local mycmakeargs=( -DGCCXML_DOC_DIR:STRING=share/doc/${PF} )
+	cmake-utils_src_configure
 }
