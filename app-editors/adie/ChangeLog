@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.38 2012/03/02 22:54:19 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.39 2012/07/04 18:58:33 mabi Exp $
+
+*adie-1.7.33 (04 Jul 2012)
+
+  04 Jul 2012; Matti Bickel <mabi@gentoo.org> +adie-1.7.33.ebuild:
+  version bump
 
 *adie-1.7.32 (02 Mar 2012)
 
@@ -150,4 +155,3 @@
   +adie-1.2.15.ebuild, +adie-1.4.12.ebuild, +adie-1.5.4.ebuild:
   Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
   Fixes #88924
-
