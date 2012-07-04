@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.29 2012/06/28 10:38:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.30 2012/07/04 03:18:16 jdhore Exp $
+
+  04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> libupnp-1.6.14.ebuild:
+  marked x86 per bug 423747
 
   28 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libupnp-1.6.17.ebuild:
   Stable for amd64, wrt bug #423747
