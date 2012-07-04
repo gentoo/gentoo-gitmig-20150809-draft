@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/gccxml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.30 2010/01/01 16:43:00 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.31 2012/07/04 10:45:02 jlec Exp $
+
+*gccxml-0.9.0_pre20120309 (04 Jul 2012)
+
+  04 Jul 2012; Justin Lecher <jlec@gentoo.org>
+  gccxml-0.9.0_pre20090516-r1.ebuild, +gccxml-0.9.0_pre20120309.ebuild,
+  metadata.xml:
+  Bump to version which fedora ships, includes gcc-4.7 compatibility
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gccxml-0.9.0_pre20090516-r1.ebuild:
