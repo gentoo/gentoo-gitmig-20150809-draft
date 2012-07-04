@@ -1,6 +1,10 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.143 2012/06/28 17:05:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.144 2012/07/04 18:45:08 axs Exp $
+
+  04 Jul 2012; Ian Stakenvicius <axs@gentoo.org> elinks-0.12_pre5-r2.ebuild,
+  +files/elinks-0.12_pre5-ruby-config.patch:
+  fixed configure check for ruby-1.9 and above, bug 424789
 
   28 Jun 2012; Ian Stakenvicius <axs@gentoo.org> elinks-0.12_pre5-r2.ebuild,
   +files/elinks-0.12_pre5-sm185-jsval-fixes.patch:

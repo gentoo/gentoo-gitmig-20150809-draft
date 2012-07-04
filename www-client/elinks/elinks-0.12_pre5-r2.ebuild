@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.2 2012/06/28 17:05:31 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.3 2012/07/04 18:45:08 axs Exp $
 
 EAPI=4
 inherit eutils autotools flag-o-matic
@@ -68,6 +68,7 @@ src_prepare() {
 			epatch "${FILESDIR}"/${MY_P}-spidermonkey-callback.patch
 		fi
 	fi
+	epatch "${FILESDIR}"/${P}-ruby-config.patch
 
 	sed -i -e 's/-Werror//' configure*
 	eautoreconf
