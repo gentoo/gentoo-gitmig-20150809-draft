@@ -1,5 +1,5 @@
---- pcmciautils-018-4/usr/lib/initcpio/install/pcmcia
-+++ pcmciautils-018-4/usr/lib/initcpio/install/pcmcia
+--- mkinitcpio-modules-0_p20120704/install/pcmcia
++++ mkinitcpio-modules-0_p20120704/install/pcmcia
 @@ -6,9 +6,9 @@
  
      [[ $MODULES ]] && MODULES+=" sd_mod?"

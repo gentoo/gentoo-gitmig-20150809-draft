@@ -1,5 +1,5 @@
---- mdadm-3.2.5-2/usr/lib/initcpio/install/mdadm_udev
-+++ mdadm-3.2.5-2/usr/lib/initcpio/install/mdadm_udev
+--- mkinitcpio-modules-0_p20120704/install/mdadm_udev
++++ mkinitcpio-modules-0_p20120704/install/mdadm_udev
 @@ -10,7 +10,7 @@
      fi
  

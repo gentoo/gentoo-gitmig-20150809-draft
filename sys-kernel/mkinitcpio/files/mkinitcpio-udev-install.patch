@@ -1,5 +1,5 @@
---- systemd-tools-185/usr/lib/initcpio/install/udev
-+++ systemd-tools-185/usr/lib/initcpio/install/udev
+--- mkinitcpio-modules-0_p20120704/install/udev
++++ mkinitcpio-modules-0_p20120704/install/udev
 @@ -4,14 +4,14 @@
      local rules tool
  

@@ -1,5 +1,5 @@
---- dmraid-1.0.0.rc16.3-7/usr/lib/initcpio/install/dmraid
-+++ dmraid-1.0.0.rc16.3-7/usr/lib/initcpio/install/dmraid
+--- mkinitcpio-modules-0_p20120704/install/dmraid
++++ mkinitcpio-modules-0_p20120704/install/dmraid
 @@ -6,9 +6,9 @@
  
      add_binary 'dmraid'

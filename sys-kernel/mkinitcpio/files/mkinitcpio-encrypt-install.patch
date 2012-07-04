@@ -1,5 +1,5 @@
---- cryptsetup-1.4.3-1/usr/lib/initcpio/install/encrypt
-+++ cryptsetup-1.4.3-1/usr/lib/initcpio/install/encrypt
+--- mkinitcpio-modules-0_p20120704/install/encrypt
++++ mkinitcpio-modules-0_p20120704/install/encrypt
 @@ -14,9 +14,9 @@
  
      add_binary "cryptsetup"
