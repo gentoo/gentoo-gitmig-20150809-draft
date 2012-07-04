@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.081.ebuild,v 1.1 2012/07/02 01:52:04 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.081.ebuild,v 1.2 2012/07/04 03:38:29 zerochaos Exp $
 
 EAPI=4
 
@@ -37,75 +37,76 @@ QA_PREBUILT="*Hashcat-plus*.bin"
 
 src_install() {
 	dodoc docs/*
-	rm -rf *.exe docs
-	if use x86; then
-		rm oclHashcat-plus64.bin
-		rm cudaHashcat-plus64.bin
-		rm kernels/4098/*64* kernels/4318/*64*
-	fi
-	if use amd64; then
-		rm oclHashcat-plus32.bin
-		rm cudaHashcat-plus32.bin
-		rm kernels/4098/*32* kernels/4318/*32*
-	fi
+	rm -rf *.exe docs || die
+	#patches already in aircrack-ng
+	rm -rf contrib/aircrack-ng_r1959 || die
+
+	#the current release (0.08) seperates 64bit from 32 bit, will he stay with this?
+	#if ! use amd64; then
+	#	rm oclHashcat-plus64.bin || die
+	#	rm cudaHashcat-plus64.bin || die
+	#	rm kernels/4098/*64* kernels/4318/*64* || die
+	#fi
+	#if ! use x86; then
+	#	rm oclHashcat-plus32.bin || die
+	#	rm cudaHashcat-plus32.bin || die
+	#	rm kernels/4098/*32* kernels/4318/*32* || die
+	#fi
 	if ! use video_cards_fglrx; then
-		rm -rf kernels/4098
-		rm -f oclHashcat-plus*.bin
+		rm -rf kernels/4098 || die
+		rm -f oclHashcat-plus*.bin || die
 	fi
 	if ! use video_cards_nvidia; then
-		rm -rf kernels/4318
-		rm -f cudaHashcat-plus*.bin
+		rm -rf kernels/4318 || die
+		rm -f cudaHashcat-plus*.bin || die
 	fi
 	pax-mark m *Hashcat-plus*.bin
 
 	insinto /opt/${PN}
 	doins -r "${S}"/* || die "Copy files failed"
 
-	dodir /usr/bin
-	echo '#! /bin/sh' > "${ED}"/usr/bin/oclhashcat-plus
-	echo 'echo "oclHashcat-plus and all related files have been installed in /opt/oclhashcat-plus-bin"' >> "${ED}"/usr/bin/oclhashcat-plus
-	echo 'echo "Please run one of the following binaries to use gpu accelerated hashcat:"' >> "${ED}"/usr/bin/oclhashcat-plus
-	if [ -f "${ED}"/opt/${PN}/oclHashcat-plus64.bin ]
-	then
-		echo 'echo "64 bit ATI accelerated \"oclHashcat-plus64.bin\""' >> "${ED}"/usr/bin/oclhashcat-plus
-		fperms +x /opt/${PN}/oclHashcat-plus64.bin
-		echo '#! /bin/sh' > "${ED}"/usr/bin/oclHashcat-plus64.bin
-		echo 'cd /opt/oclhashcat-plus-bin' >> "${ED}"/usr/bin/oclHashcat-plus64.bin
-		echo 'echo "Warning: oclHashcat-plus64.bin is running from $(pwd) so be careful of relative paths."' >> "${ED}"/usr/bin/oclHashcat-plus64.bin
-		echo './oclHashcat-plus64.bin $@' >> "${ED}"/usr/bin/oclHashcat-plus64.bin
-		fperms +x /usr/bin/oclHashcat-plus64.bin
+	dodir /opt/bin
 
-	fi
-	if [ -f "${ED}"/opt/${PN}/oclHashcat-plus32.bin ]
-	then
-		echo 'echo "32 bit ATI accelerated \"oclHashcat-plus32.bin\""' >> "${ED}"/usr/bin/oclhashcat-plus
-		fperms +x /opt/${PN}/oclHashcat-plus32.bin
-		echo '#! /bin/sh' > "${ED}"/usr/bin/oclHashcat-plus32.bin
-		echo 'cd /opt/oclhashcat-plus-bin' >> "${ED}"/usr/bin/oclHashcat-plus32.bin
-		echo 'echo "Warning: oclHashcat-plus32.bin is running from $(pwd) so be careful of relative paths."' >> "${ED}"/usr/bin/oclHashcat-plus32.bin
-		echo './oclHashcat-plus32.bin $@' >> "${ED}"/usr/bin/oclHashcat-plus32.bin
-		fperms +x /usr/bin/oclHashcat-plus32.bin
-	fi
-	if [ -f "${ED}"/opt/${PN}/cudaHashcat-plus64.bin ]
-	then
-		echo 'echo "64 bit NVIDIA accelerated \"cudaHashcat-plus64.bin\""' >> "${ED}"/usr/bin/oclhashcat-plus
-		fperms +x /opt/${PN}/cudaHashcat-plus64.bin
-		echo '#! /bin/sh' > "${ED}"/usr/bin/cudaHashcat-plus64.bin
-		echo 'cd /opt/oclhashcat-plus-bin' >> "${ED}"/usr/bin/cudaHashcat-plus64.bin
-		echo 'echo "Warning: cudaHashcat-plus64.bin is running from $(pwd) so be careful of relative paths."' >> "${ED}"/usr/bin/cudaHashcat-plus64.bin
-		echo './cudaHashcat-plus64.bin $@' >> "${ED}"/usr/bin/cudaHashcat-plus64.bin
-		fperms +x /usr/bin/cudaHashcat-plus64.bin
+	cat <<-EOF > "${ED}"/opt/bin/oclhashcat-plus
+	#! /bin/sh
+	echo "oclHashcat-plus and all related files have been installed in /opt/${PN}"
+	echo "Please run one of the following binaries to use gpu accelerated hashcat:"
+	EOF
 
-	fi
-	if [ -f "${ED}"/opt/${PN}/cudaHashcat-plus32.bin ]
-	then
-		echo 'echo 32 bit NVIDIA accelerated \"cudaHashcat-plus32.bin\""' >> "${ED}"/usr/bin/oclhashcat-plus
-		fperms +x /opt/${PN}/cudaHashcat-plus32.bin
-		echo '#! /bin/sh' > "${ED}"/usr/bin/cudaHashcat-plus32.bin
-		echo 'cd /opt/oclhashcat-plus-bin' >> "${ED}"/usr/bin/cudaHashcat-plus32.bin
-		echo 'echo "Warning: cudaHashcat-plus32.bin is running from $(pwd) so be careful of relative paths."' >> "${ED}"/usr/bin/cudaHashcat-plus32.bin
-		echo './cudaHashcat-plus32.bin $@' >> "${ED}"/usr/bin/cudaHashcat-plus32.bin
-		fperms +x /usr/bin/oclHashcat-plus32.bin
-	fi
-	fperms +x /usr/bin/oclhashcat-plus
+	for x in oclHashcat-plus64.bin oclHashcat-plus32.bin cudaHashcat-plus64.bin cudaHashcat-plus32.bin
+	do
+		if [ -f "${ED}"/opt/${PN}/${x} ]
+		then
+			case "${x}" in
+				oclHashcat-plus64.bin)
+					echo "echo '64 bit ATI accelerated \"oclHashcat-plus64.bin\"'" >> "${ED}"/opt/bin/oclhashcat-plus
+					;;
+				oclHashcat-plus32.bin)
+					echo "echo '32 bit ATI accelerated \"oclHashcat-plus32.bin\"'" >> "${ED}"/opt/bin/oclhashcat-plus
+					;;
+				cudaHashcat-plus64.bin)
+					echo "echo '64 bit NVIDIA accelerated \"cudaHashcat-plus64.bin\"'" >> "${ED}"/opt/bin/oclhashcat-plus
+					;;
+				cudaHashcat-plus32.bin)
+					echo "echo '32 bit NVIDIA accelerated \"cudaHashcat-plus32.bin\"'" >> "${ED}"/opt/bin/oclhashcat-plus
+					;;
+			esac
+
+			fperms +x /opt/${PN}/${x}
+
+			cat <<-EOF > "${ED}"/opt/bin/${x}
+			#! /bin/sh
+			cd /opt/${PN}
+			echo "Warning: ${x} is running from /opt/${PN} so be careful of relative paths."
+			./${x} "\$@"
+			EOF
+
+			fperms +x /opt/bin/${x}
+
+		fi
+	done
+
+	fperms +x /opt/bin/oclhashcat-plus
+	fowners root:video /opt/${PN}
+	einfo "oclhashcat-plus can be run as user if you are in the video group"
 }
