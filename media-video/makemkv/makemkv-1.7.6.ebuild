@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.6.ebuild,v 1.2 2012/07/04 09:03:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.6.ebuild,v 1.3 2012/07/04 09:08:02 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils multilib
@@ -70,8 +70,6 @@ src_install() {
 
 	# install license and default profile
 	pushd "${WORKDIR}"/${MY_PB}/src >/dev/null
-	into /usr
-	dodoc eula_en_linux.txt
 	insinto /usr/share/${PF}
 	doins share/${DEFAULT_PROFILE}
 	popd >/dev/null
