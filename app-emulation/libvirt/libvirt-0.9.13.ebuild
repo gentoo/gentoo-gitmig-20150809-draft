@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.13.ebuild,v 1.1 2012/07/02 18:03:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.13.ebuild,v 1.2 2012/07/04 16:54:31 cardoe Exp $
 
 EAPI=4
 
@@ -49,13 +49,14 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
 # We can use both libnl:1.1 and libnl:3, but if you have both installed, the
-# package will use 1.1 by default
+# package will use 3 by default. Since we don't have slot pinning in an API,
+# we must go with the most recent
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
 	dev-libs/libgcrypt
 	>=dev-libs/libxml2-2.7.6
-	dev-libs/libnl:1.1
+	dev-libs/libnl:3
 	>=net-libs/gnutls-1.0.25
 	sys-apps/dmidecode
 	>=sys-apps/util-linux-2.17
