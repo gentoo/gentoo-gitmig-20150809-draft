@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.689 2012/07/03 19:23:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.690 2012/07/04 21:03:12 williamh Exp $
+
+*udev-186 (04 Jul 2012)
+
+  04 Jul 2012; William Hubbs <williamh@gentoo.org> +udev-186.ebuild:
+  version bump. I would like to thank Jonathan Callen for his assistance
+  with this ebuild.
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> udev-171-r6.ebuild:
   Stable for HPPA (bug #416653).
