@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9-bin/ds9-bin-7.0.ebuild,v 1.1 2012/06/06 20:17:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9-bin/ds9-bin-7.0.2.ebuild,v 1.1 2012/07/04 20:26:20 bicatali Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/ds9.png.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-libs/libxml2
@@ -30,7 +30,8 @@ RDEPEND="dev-libs/libxml2
 
 DEPEND=""
 S="${WORKDIR}"
-QA_PRESTRIPPED="/usr/bin/ds9"
+
+QA_PRESTRIPPED="usr/bin/ds9"
 
 src_install () {
 	dobin ds9
