@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.54 2012/03/18 18:56:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.55 2012/07/04 07:39:10 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -34,10 +34,6 @@ gnome
 # Peter Volkov <pva@gentoo.org> MPI was never tested on mips, but
 # some programs with this useflag are useful, e.g #227631
 mpi
-
-# Ryan Hill <dirtyepic@gentoo.org>
-# No version of xulrunner keyworded at the moment
-xulrunner
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # virtual/blas virtual/cblas and virtual/lapack not keyworded
