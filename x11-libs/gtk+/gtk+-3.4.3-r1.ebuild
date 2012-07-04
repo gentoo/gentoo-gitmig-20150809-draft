@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.2.ebuild,v 1.6 2012/06/03 12:48:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.3-r1.ebuild,v 1.1 2012/07/04 22:48:58 tetromino Exp $
 
 EAPI="4"
 
@@ -8,6 +8,9 @@ inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
+
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}-patches-1.tar.xz"
 
 LICENSE="LGPL-2"
 SLOT="3"
@@ -97,11 +100,14 @@ src_prepare() {
 	replace-flags -O3 -O2
 	strip-flags
 
-	# https://bugzilla.gnome.org/show_bug.cgi?id=65410
+	# https://bugzilla.gnome.org/show_bug.cgi?id=654108
 	epatch "${FILESDIR}/${PN}-3.3.18-fallback-theme.patch"
 
 	# Apparently needed for new libxkbcommon headers; bug #408131
 	epatch "${FILESDIR}/${PN}-3.3.20-wayland-xkbcommon-headers.patch"
+
+	# Various upstream patches, will be in next 3.4 release
+	epatch ../patch/*.patch
 
 	# Work around https://bugzilla.gnome.org/show_bug.cgi?id=663991
 	if [[ ${CHOST} == *-solaris* ]]; then
@@ -173,7 +179,9 @@ src_test() {
 		ewarn "required version of gnome-themes-standard."
 		return 0
 	fi
+
 	unset DBUS_SESSION_BUS_ADDRESS
+
 	# Exporting HOME fixes tests using XDG directories spec since all defaults
 	# are based on $HOME. It is also backward compatible with functions not
 	# yet ported to this spec.
@@ -189,7 +197,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
 	# Remove unneeded *.la files
-	find "${D}" -name '*.la' -exec rm -f {} +
+	find "${D}" -name '*.la' -exec rm -f {} + || die
 
 	# add -framework Carbon to the .pc files
 	use aqua && for i in gtk+-3.0.pc gtk+-quartz-3.0.pc gtk+-unix-print-3.0.pc; do
