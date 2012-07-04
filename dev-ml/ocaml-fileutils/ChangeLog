@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-fileutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ChangeLog,v 1.6 2012/07/04 21:25:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ChangeLog,v 1.7 2012/07/04 21:26:38 aballier Exp $
+
+  04 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  -ocaml-fileutils-0.4.3.ebuild:
+  remove old
 
   04 Jul 2012; Alexis Ballier <aballier@gentoo.org>
   ocaml-fileutils-0.4.4.ebuild:
