@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.6a-r1.ebuild,v 1.3 2012/06/28 10:58:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.6a-r1.ebuild,v 1.4 2012/07/04 06:43:43 jdhore Exp $
 
 EAPI=3
 KDE_LINGUAS="ar br cs da de el en_GB eo es et eu fr ga gl hi hne it ja ka lt
@@ -14,7 +14,7 @@ SRC_URI="http://download.gna.org/kvpnc/${P}-kde4.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="
