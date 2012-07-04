@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.3.61-r1.ebuild,v 1.1 2012/07/03 15:32:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.3.61-r2.ebuild,v 1.1 2012/07/04 19:49:52 maksbotan Exp $
 
 EAPI=3
 
@@ -21,6 +21,12 @@ DEPEND="x11-libs/qt-core
 RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}"/01_enable_shared_linking.patch )
+
+src_prepare() {
+	#Disable silly debug library '_d' suffix
+	sed -e 's/qxmpp-lc_d/qxmpp-lc/' -i qxmpp.pri || die "sed faild"
+	qt4-r2_src_prepare
+}
 
 src_configure(){
 	eqmake4 "${S}"/qxmpp.pro "PREFIX=/usr" "LIBDIR=$(get_libdir)"
