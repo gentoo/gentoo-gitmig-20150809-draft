@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.7-r1.ebuild,v 1.2 2012/05/17 16:42:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.7-r1.ebuild,v 1.3 2012/07/04 12:07:44 johu Exp $
 
 EAPI=4
 
@@ -48,7 +48,10 @@ DEPEND="${COMMONDEPEND}
 	test? ( dev-util/cppunit )"
 RDEPEND=${COMMONDEPEND}
 
-PATCHES=( "${FILESDIR}/${P}-gcc47.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-gcc47.patch"
+	"${FILESDIR}/${P}-ffmpeg-0.11.patch"
+)
 
 src_configure() {
 	# Enabled: POLLING (only reliable way to check for files changed.)

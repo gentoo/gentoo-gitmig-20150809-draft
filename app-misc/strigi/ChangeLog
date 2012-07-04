@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.90 2012/06/14 07:12:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.91 2012/07/04 12:07:44 johu Exp $
+
+  04 Jul 2012; Johannes Huber <johu@gentoo.org>
+  +files/strigi-0.7.7-ffmpeg-0.11.patch, strigi-0.7.7-r1.ebuild:
+  Add mandriva patch to build with ffmpeg-0.11 spotted by Hanno Boeck
+  <hanno@gentoo.org> wrt bug #417877.
 
   14 Jun 2012; Ben de Groot <yngwin@gentoo.org> strigi-0.7.7.ebuild:
   Destabling to ~ia64 because last available stable qt will be masked pending
@@ -466,4 +471,3 @@
   strigi-0.5.1.ebuild, strigi-9999.ebuild:
   Added metadata.xml and Changelog. Thanks to Franz Fellner for the initial
   ebuild.
-
