@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.32 2012/07/02 23:13:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.33 2012/07/04 07:23:43 ssuominen Exp $
+
+  04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove obsolete entry for dev-python/gnome-python-extras.
 
   02 Jul 2012; Naohiro Aota <naota@gentoo.org> package.use.mask:
   Mask smbkrb5passwd for net-nds/openldap.

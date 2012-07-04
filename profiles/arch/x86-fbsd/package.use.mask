@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.30 2012/07/02 23:13:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.31 2012/07/04 07:23:43 ssuominen Exp $
 
 # Justin Lecher <jlec@gentoo.org> (18 Mar 2010)
 # Unkeyworded deps
@@ -27,10 +27,6 @@ net-im/gajim jingle
 # Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
 # MKL not available on this arch
 media-gfx/povray mkl
-
-# Pacho Ramos <pacho@gentoo.org> (22 Mar 2010)
-# xulrunner:1.9 and libgda:3 not keyworded, bug 282291
-dev-python/gnome-python-extras libgda xulrunner
 
 # Romain Perier <mrpouet@gentoo.org> (18 Oct. 2009)
 # >=networkmanager-0.7.0 is not keyworded.
