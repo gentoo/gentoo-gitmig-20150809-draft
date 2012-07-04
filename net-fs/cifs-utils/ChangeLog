@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.24 2012/06/28 08:15:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.25 2012/07/04 06:26:46 polynomial-c Exp $
+
+*cifs-utils-5.5-r1 (04 Jul 2012)
+
+  04 Jul 2012; Lars Wendler <polynomial-c@gentoo.org> cifs-utils-5.4.ebuild,
+  -cifs-utils-5.5.ebuild, +cifs-utils-5.5-r1.ebuild,
+  +files/cifs-utils-5.5-initialize_rc_var_properly.patch:
+  non-maintainer commit: Added patch to 5.5 version so it mounts shares again.
+  Thanks to Martin Wegner for reporting this problem in bug #424487. Fixed
+  leading spaces in ebuilds.
 
 *cifs-utils-5.5 (28 Jun 2012)
 
