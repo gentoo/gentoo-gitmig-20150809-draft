@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.48 2012/06/12 13:31:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.49 2012/07/04 14:44:14 jlec Exp $
+
+*cns-1.3_p7 (04 Jul 2012)
+
+  04 Jul 2012; Justin Lecher <jlec@gentoo.org> +files/1.3_p7-delete.patch,
+  +files/1.3_p7-gentoo.patch, -files/1.3_p5-delete.patch,
+  -files/1.3_p5-gentoo.patch, -files/cns_solve_env_sh-1.3_p5,
+  -cns-1.3_p5.ebuild, +files/cns_solve_env_sh-1.3_p7, +cns-1.3_p7.ebuild:
+  Version Bump, #424655
 
   12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> cns-1.2.1-r7.ebuild:
   Stable for amd64, wrt bug #419859

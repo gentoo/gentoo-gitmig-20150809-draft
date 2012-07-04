@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p5.ebuild,v 1.5 2011/06/21 16:05:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p7.ebuild,v 1.1 2012/07/04 14:44:14 jlec Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ MY_P="${MY_PN}_${MY_PV}"
 DESCRIPTION="Crystallography and NMR System"
 HOMEPAGE="http://cns.csb.yale.edu/"
 SRC_URI="
-	${MY_P/p5}_all.tar.gz
+	${MY_P/p7}_all.tar.gz
 	aria? ( aria2.3.1.tar.gz )"
 
 SLOT="0"
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}"
 
 FORTRAN_NEED_OPENMP=1
 
-S="${WORKDIR}/${MY_P/p5}"
+S="${WORKDIR}/${MY_P/p7}"
 
 RESTRICT="fetch"
 
