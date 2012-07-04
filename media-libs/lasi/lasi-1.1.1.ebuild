@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/lasi-1.1.1.ebuild,v 1.10 2012/06/17 06:55:39 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/lasi-1.1.1.ebuild,v 1.11 2012/07/04 22:07:06 bicatali Exp $
 
 EAPI=4
 
-inherit cmake-utils eutils
+inherit cmake-utils eutils multilib
 
 MY_PN=libLASi
 MY_P=${MY_PN}-${PV}
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux"
 IUSE="doc examples"
 
 RDEPEND="
@@ -49,8 +49,7 @@ src_prepare() {
 src_configure() {
 	CMAKE_BUILD_TYPE=None
 	local mycmakeargs=(
-		-DCMAKE_SKIP_RPATH=OFF
-		-DUSE_RPATH=OFF
+		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}"/usr/$(get_libdir)
 		)
 		use doc || mycmakeargs+=( -DDOXYGEN_EXECUTABLE= )
 	cmake-utils_src_configure
