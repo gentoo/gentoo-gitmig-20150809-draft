@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/odns/odns-0.3.ebuild,v 1.1 2011/03/04 12:33:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/odns/odns-0.3.ebuild,v 1.2 2012/07/04 21:38:25 aballier Exp $
 
 EAPI=3
 
-inherit findlib
+inherit findlib eutils
 
 DESCRIPTION="OCaml library to query DNS servers"
 HOMEPAGE="http://odns.tuxfamily.org/"
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	sed -i -e "s/version=\"0.2\"/version=\"${PV}\"/" META || die
+	epatch "${FILESDIR}/${P}-parmake.patch"
 }
 
 src_install() {
