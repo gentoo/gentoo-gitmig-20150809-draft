@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/frobby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/ChangeLog,v 1.11 2012/05/18 16:32:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/ChangeLog,v 1.12 2012/07/04 06:27:07 jlec Exp $
+
+  04 Jul 2012; Justin Lecher <jlec@gentoo.org> frobby-0.9.0.ebuild,
+  +files/frobby-gcc-4.7.patch, metadata.xml:
+  Fix for build with gcc-4.7, #424663; handle static-libs
 
   18 May 2012; Thomas Kahle <tomka@gentoo.org> -files/frobby-latex.patch,
   -files/frobby-useless-checks.patch, -frobby-0.8.2-r1.ebuild,
