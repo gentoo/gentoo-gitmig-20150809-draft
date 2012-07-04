@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/prng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prng/ChangeLog,v 1.3 2012/07/04 10:13:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prng/ChangeLog,v 1.4 2012/07/04 18:03:52 jdhore Exp $
+
+  04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> prng-3.0.2.ebuild:
+  marked x86 per bug 424741
 
   04 Jul 2012; Justin Lecher <jlec@gentoo.org> prng-3.0.2.ebuild, metadata.xml:
   Move to autotool-utils.eclass
