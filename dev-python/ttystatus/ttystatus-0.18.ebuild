@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ttystatus-0.18.ebuild,v 1.1 2012/06/15 10:18:46 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ttystatus-0.18.ebuild,v 1.2 2012/07/04 23:39:51 mschiff Exp $
 
 EAPI=4
 
@@ -16,6 +16,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RESTRICT="test"
 
 pkg_setup() {
 	python_set_active_version 2
