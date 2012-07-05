@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/dnssec-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/ChangeLog,v 1.4 2012/06/23 21:44:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/ChangeLog,v 1.5 2012/07/05 12:21:40 xmw Exp $
+
+*dnssec-tools-1.13-r1 (05 Jul 2012)
+
+  05 Jul 2012; Michael Weber <xmw@gentoo.org> -dnssec-tools-1.12.2-r2.ebuild,
+  +dnssec-tools-1.13-r1.ebuild, +files/dnssec-tools-1.13-dtinitconf.patch,
+  +files/donutsd.confd, +files/donutsd.initd, +files/rollerd.confd,
+  +files/rollerd.initd:
+  Version bump to correct paths and add runlevel scripts (thanks lorem_ipsum)
 
 *dnssec-tools-1.13 (23 Jun 2012)
 
