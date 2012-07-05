@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rngstreams/rngstreams-1.0.1.ebuild,v 1.4 2012/07/04 18:03:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rngstreams/rngstreams-1.0.1.ebuild,v 1.5 2012/07/05 13:20:27 jlec Exp $
 
 EAPI=4
 
@@ -19,9 +19,7 @@ src_install() {
 	autotools-utils_src_install
 	use doc && dohtml -r doc/rngstreams.html/* && dodoc doc/${PN}.pdf
 	if use examples; then
-		emake distclean -C examples
-		rm -f examples/Makefile*
-		insinto /usr/share/doc/${PF}
+		rm -f examples/Makefile* || die
 		doins -r examples
 	fi
 }
