@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-ast
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/ChangeLog,v 1.24 2012/06/24 19:04:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/ChangeLog,v 1.25 2012/07/05 15:56:55 chithanh Exp $
+
+*xf86-video-ast-0.96.0 (05 Jul 2012)
+
+  05 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-ast-0.96.0.ebuild:
+  Version bump.
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-ast-0.95.0.ebuild:
   Stable for x86, wrt bug #419473
@@ -109,4 +115,3 @@
   19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>; +files/ast.xinf,
   +metadata.xml, +xf86-video-ast-0.85.0.ebuild:
   Initial commit of ast driver for ASpeedTech video cards.
-

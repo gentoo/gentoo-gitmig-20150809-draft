@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-r128
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.25 2012/06/24 19:11:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.26 2012/07/05 15:59:29 chithanh Exp $
+
+*xf86-video-r128-6.8.3 (05 Jul 2012)
+
+  05 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-r128-6.8.3.ebuild:
+  Version bump.
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-r128-6.8.2-r1.ebuild:
@@ -106,4 +112,3 @@
   +metadata.xml, +xf86-video-r128-6.8.0.ebuild:
   New package: ATI Rage128 video driver, split off from xf86-video-ati
   between 6.8.0 and 6.9.0.
-
