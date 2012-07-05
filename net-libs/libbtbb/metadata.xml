@@ -2,13 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>sidhayn@gmail.com</email>
-    <name>Zero_Chaos</name>
-    <description>Proxy Maintainer, assign bugs</description>
-  </maintainer>
-  <maintainer>
-    <email>binki@gentoo.org</email>
-    <name>Nathan Phillip Brink</name>
-    <description>Committer, CC in bugs</description>
+    <email>zerochaos@gentoo.org</email>
+    <name>Rick Farina</name>
   </maintainer>
 </pkgmetadata>
