@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.137 2012/07/04 07:56:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.138 2012/07/05 02:33:10 tetromino Exp $
+
+*networkmanager-0.9.4.0-r4 (05 Jul 2012)
+
+  05 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/10-openrc-status-r2, -networkmanager-0.9.4.0-r3.ebuild,
+  +networkmanager-0.9.4.0-r4.ebuild,
+  +files/networkmanager-0.9.4.0-dhclient-ipv6.patch:
+  Fix the hang in 10-openrc-status that resulted in networkmanager getting
+  marked as 'inactive' on resuming from suspend; many thanks to Travis Hansen
+  for the solution (bugs #410661, #417283). Fix incompatibility with
+  net-misc/dhcp[-ipv6] (bug #335147, thanks to Rick Harris). Move polkit
+  rules.d file to /usr/share (bug #421577 comment #12, thanks to Dennis
+  Lissov).
 
 *networkmanager-0.9.4.0-r3 (04 Jul 2012)
 
