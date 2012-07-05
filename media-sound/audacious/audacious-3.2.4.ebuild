@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.3_alpha1.ebuild,v 1.2 2012/06/17 19:14:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.4.ebuild,v 1.1 2012/07/05 01:00:52 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -14,7 +14,7 @@ SRC_URI="http://distfiles.audacious-media-player.org/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 
 IUSE="chardet nls session"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2
 	>=x11-libs/cairo-1.2.6
 	>=x11-libs/pango-1.8.0
-	x11-libs/gtk+:3
+	x11-libs/gtk+:2
 	session? ( x11-libs/libSM )"
 
 DEPEND="${RDEPEND}
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	chardet? ( >=app-i18n/libguess-1.1 )
 	nls? ( dev-util/intltool )"
 
-PDEPEND=">=media-plugins/audacious-plugins-3.3_alpha1"
+PDEPEND=">=media-plugins/audacious-plugins-3.2.4"
 
 src_configure() {
 	# D-Bus is a mandatory dependency, remote control,
@@ -39,8 +39,10 @@ src_configure() {
 	# Building without D-Bus is *unsupported* and a USE-flag
 	# will not be added due to the bug reports that will result.
 	# Bugs #197894, #199069, #207330, #208606
+	# Disable gtk+:3 till Audacious 3.3 
 	econf \
 		--enable-dbus \
+		--disable-gtk3 \
 		$(use_enable chardet) \
 		$(use_enable nls) \
 		$(use_enable session sm)
@@ -48,7 +50,7 @@ src_configure() {
 
 src_install() {
 	default
-	dodoc AUTHORS
+	dodoc AUTHORS README
 
 	# Gentoo_ice skin installation; bug #109772
 	insinto /usr/share/audacious/Skins/gentoo_ice
