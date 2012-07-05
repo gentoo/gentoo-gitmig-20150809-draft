@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.367 2012/07/04 07:31:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.368 2012/07/05 21:10:20 zerochaos Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Rick Farina <zerochaos@gentoo.org> (05 July 2012)
+# cuda is available on x86/amd64 only
+app-crypt/johntheripper cuda
 
 # Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
 # sys-fs/zfs is not available everywhere.
