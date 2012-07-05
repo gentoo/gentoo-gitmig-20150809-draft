@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/eagle
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.51 2011/08/08 19:18:22 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.52 2012/07/05 09:06:21 xmw Exp $
+
+*eagle-6.2.0 (05 Jul 2012)
+
+  05 Jul 2012; Michael Weber <xmw@gentoo.org> +eagle-6.2.0.ebuild:
+  Version bump (thanks idl0r, bug 397491), PMASKED until the libpng14 issue gets
+  solved.
 
   08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> eagle-5.11.0.ebuild:
   Stable on amd64 wrt bug #377643
@@ -221,4 +227,3 @@
   +eagle-4.16_p1.ebuild:
   Initial commit. Thanks to Michael Ihde for the initial ebuild submission.
   This closes bug #37217.
-
