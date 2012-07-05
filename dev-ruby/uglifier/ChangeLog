@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/uglifier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/ChangeLog,v 1.9 2012/06/28 06:26:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/ChangeLog,v 1.10 2012/07/05 22:03:43 flameeyes Exp $
+
+  05 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> -uglifier-1.2.4.ebuild,
+  uglifier-1.2.5.ebuild:
+  Cleanup old, use the new rspec support.
 
 *uglifier-1.2.5 (28 Jun 2012)
 
@@ -38,4 +42,3 @@
   30 Dec 2011; Hans de Graaff <graaff@gentoo.org> +uglifier-1.2.1.ebuild,
   +metadata.xml:
   Initial import. Needed for default Rails 3.1 asset pipeline.
-
