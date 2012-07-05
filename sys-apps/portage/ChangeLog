@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1051 2012/07/02 22:05:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1052 2012/07/05 03:58:29 zmedico Exp $
+
+*portage-2.1.11.5 (05 Jul 2012)
+
+  05 Jul 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.5.ebuild:
+  2.1.11.5 version bump. This fixes bug #424651 (when necessary for downgrades,
+  trigger rebuilds to solve EAPI 4-slot-abi deps). Bug #423075 tracks all bugs
+  fixed since portage-2.1.10.65.
 
 *portage-2.2.0_alpha115 (02 Jul 2012)
 
