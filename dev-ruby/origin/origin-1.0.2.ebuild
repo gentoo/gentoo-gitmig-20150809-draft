@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/origin-1.0.1.ebuild,v 1.2 2012/06/21 13:28:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/origin-1.0.2.ebuild,v 1.1 2012/07/05 12:28:55 flameeyes Exp $
 
 EAPI=4
 
 # does not support Ruby 1.8 syntax
 USE_RUBY="ruby19" #jruby
 
-#RUBY_FAKEGEM_TASK_DOC=""
+RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
 
 RUBY_FAKEGEM_EXTRADOC="README.md CHANGELOG.md"
@@ -39,10 +39,7 @@ ruby_add_bdepend "
 		>=dev-ruby/tzinfo-0.3.22
 	)"
 
-all_ruby_prepare() {
-	# remove references to bundler, as the gemfile does not add anything
-	# we need to care about.
-	sed -i -e '/[bB]undler/d' Rakefile || die
-	# remove the Gemfile as well or it'll try to load it during testing
-	rm Gemfile || die
+each_ruby_test() {
+	[[ ${TEST_VERBOSE} == 1 ]] || local rspec_params="-f p"
+	${RUBY} -S rspec ${rspec_params} || die
 }
