@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.6.ebuild,v 1.1 2012/06/01 20:13:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.1 2012/07/05 22:53:15 dilfridge Exp $
 
 EAPI=4
 
@@ -11,12 +11,25 @@ inherit gnome2 autotools
 DESCRIPTION="Xournal is an application for notetaking, sketching, and keeping a journal using a stylus."
 HOMEPAGE="http://xournal.sourceforge.net/"
 
-SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz http://dev.gentoo.org/~dilfridge/distfiles/${P}-gentoo.patch.xz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="+pdf"
+IUSE="+pdf vanilla"
+
+if [[ "${PV}" != "9999" ]]; then
+	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz !vanilla? ( http://dev.gentoo.org/~dilfridge/distfiles/${PN}-${PVR}-gentoo.patch.xz )"
+	KEYWORDS="~amd64 ~x86"
+else
+	inherit git-2
+	SRC_URI=""
+	KEYWORDS=""
+	if use vanilla; then
+		EGIT_REPO_URI="git://xournal.git.sourceforge.net/gitroot/xournal/xournal"
+	else
+		EGIT_REPO_URI="git://gitorious.org/gentoo-stuff/xournal-gentoo.git"
+		EGIT_BRANCH="gentoo"
+	fi
+fi
 
 COMMONDEPEND="
 	app-text/poppler[cairo]
@@ -39,8 +52,12 @@ DEPEND="${COMMONDEPEND}
 "
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-gentoo.patch
-	sed -e "s:n       http:n       Gentoo release ${PVR}\\\\n       http:" -i "${S}"/src/xo-interface.c
+	if ! use vanilla && [[ "${PV}" != "9999" ]]; then
+		epatch "${WORKDIR}"/${PN}-${PVR}-gentoo.patch
+	fi
+	if ! use vanilla; then 
+		sed -e "s:n       http:n       Gentoo release ${PVR}\\\\n       http:" -i "${S}"/src/xo-interface.c
+	fi
 	eautoreconf
 }
 
