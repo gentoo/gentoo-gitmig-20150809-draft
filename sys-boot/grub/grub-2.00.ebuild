@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.10 2012/07/01 22:11:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.11 2012/07/05 01:32:59 vapier Exp $
 
 EAPI=4
 
@@ -211,6 +211,7 @@ src_prepare() {
 
 	if [[ ${PV} != 9999 ]]; then
 		epatch "${FILESDIR}/${P}-manpage-race.patch"
+		epatch "${FILESDIR}/${P}-no-gets.patch" #424703
 	fi
 
 	# fix texinfo file name, bug 416035
