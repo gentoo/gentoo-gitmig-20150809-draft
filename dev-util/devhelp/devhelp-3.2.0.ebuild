@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.2.0.ebuild,v 1.7 2012/05/24 13:45:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.2.0.ebuild,v 1.8 2012/07/05 17:52:54 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -9,7 +9,7 @@ PYTHON_DEPEND="2"
 
 inherit eutils gnome2 python toolchain-funcs
 
-DESCRIPTION="An API documentation browser for GNOME 2"
+DESCRIPTION="An API documentation browser for GNOME"
 HOMEPAGE="http://live.gnome.org/devhelp"
 
 LICENSE="GPL-2"

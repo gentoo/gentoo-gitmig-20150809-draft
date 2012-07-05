@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.135 2012/06/06 19:07:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.136 2012/07/05 17:52:54 tetromino Exp $
+
+  05 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  devhelp-2.32.0.ebuild, devhelp-3.2.0.ebuild, devhelp-3.4.1.ebuild:
+  Update description.
 
   06 Jun 2012; Markus Meier <maekke@gentoo.org> devhelp-3.4.1.ebuild:
   add ~arm, bug #416571
