@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.2-r1.ebuild,v 1.1 2012/06/11 22:33:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.2-r1.ebuild,v 1.2 2012/07/05 18:04:26 bicatali Exp $
 
 EAPI=4
 
@@ -57,7 +57,17 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	virtual/pkgconfig"
 
-PATCHES=( "${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,help,texi}.patch )
+PATCHES=( "${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,help,texi,gets}.patch )
+
+src_prepare() {
+	# nasty prefix hack for fltk:1 linking
+	if use prefix && use opengl; then
+		sed -i \
+			-e "s:ldflags\`:ldflags\` -Wl,-rpath,${EPREFIX}/usr/$(get_libdir)/fltk-1:" \
+			configure.ac
+	fi
+	autotools-utils_src_prepare
+}
 
 src_configure() {
 	# occasional fail on install, force regeneration  see bug #401189

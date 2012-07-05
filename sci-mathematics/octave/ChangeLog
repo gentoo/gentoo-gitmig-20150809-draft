@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.127 2012/06/11 22:33:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.128 2012/07/05 18:04:26 bicatali Exp $
+
+  05 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/octave-3.4.3-gets.patch, octave-3.6.2-r1.ebuild:
+  Fixed for newer glib and added a prefix hack to link with fltk for native
+  graphics
 
 *octave-3.6.2-r1 (11 Jun 2012)
 
@@ -769,4 +774,3 @@
   19 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, octave-2.0.16.ebuild :
   Initial commit. GNU Octave is a high-level language, primarily intended
   for numerical computations. It is mostly compatible with Matlab.
-
