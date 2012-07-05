@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.3.ebuild,v 1.4 2012/07/04 21:33:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.3.ebuild,v 1.5 2012/07/05 15:41:01 hd_brummy Exp $
 
 EAPI="4"
 
@@ -60,7 +60,7 @@ src_install() {
 	# example scripts are installed as dokumentation
 	dodoc allnewnoad allnoad allnoadnice clearlogos noadifnew stat2html
 
-	newconfd "${FILEDIR}"/confd_vdraddon.noad vdraddon.noad
+	newconfd "${FILESDIR}"/confd_vdraddon.noad vdraddon.noad
 
 	insinto /usr/share/vdr/record
 	doins "${FILESDIR}"/record-50-noad.sh
