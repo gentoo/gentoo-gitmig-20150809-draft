@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.49 2012/06/29 13:46:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.50 2012/07/05 14:23:43 flameeyes Exp $
+
+  05 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/freeipmi-1.0.5-strictaliasing.patch, -freeipmi-1.0.8.ebuild,
+  freeipmi-1.1.5.ebuild:
+  Mark freeipmi 1.1.5 stable as per bug #424109. Remove old.
 
 *freeipmi-1.1.6 (29 Jun 2012)
 
