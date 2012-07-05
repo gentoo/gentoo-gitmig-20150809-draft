@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xhost/xhost-1.0.5.ebuild,v 1.6 2012/06/28 14:29:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xhost/xhost-1.0.5.ebuild,v 1.7 2012/07/05 15:24:20 chithanh Exp $
 
 EAPI=4
 
@@ -17,5 +17,5 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	CONFIGURE_OPTIONS="$(use_enable ipv6)"
+	XORG_CONFIGURE_OPTIONS="$(use_enable ipv6)"
 }

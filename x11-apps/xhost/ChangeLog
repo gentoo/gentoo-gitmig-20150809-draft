@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xhost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xhost/ChangeLog,v 1.69 2012/06/28 14:29:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xhost/ChangeLog,v 1.70 2012/07/05 15:24:20 chithanh Exp $
+
+  05 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xhost-1.0.5.ebuild:
+  Migrate to XORG_CONFIGURE_OPTIONS, bug #424555.
 
   28 Jun 2012; Jeroen Roovers <jer@gentoo.org> xhost-1.0.5.ebuild:
   Stable for HPPA (bug #419473).
@@ -240,4 +244,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +xhost-0.99.0.ebuild:
   Initial commit for modular X.
-
