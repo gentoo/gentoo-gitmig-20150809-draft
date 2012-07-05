@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.88 2012/05/27 03:03:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.89 2012/07/05 11:03:09 blueness Exp $
+
+  05 Jul 2012; Anthony G. Basile <blueness@gentoo.org> xdvik-22.85-r1.ebuild:
+  Keyword ~mips
 
   27 May 2012; Naohiro Aota <naota@gentoo.org> xdvik-22.85-r1.ebuild:
   Include/link prefix X headers/libs. #341671
