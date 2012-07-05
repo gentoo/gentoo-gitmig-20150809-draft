@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.362 2012/06/17 14:34:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.363 2012/07/05 14:25:55 jer Exp $
+
+*lftp-4.3.8 (05 Jul 2012)
+
+  05 Jul 2012; Jeroen Roovers <jer@gentoo.org> +lftp-4.3.8.ebuild:
+  Version bump.
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> lftp-4.3.6.ebuild:
   alpha/ia64/s390/sparc stable wrt #414253
