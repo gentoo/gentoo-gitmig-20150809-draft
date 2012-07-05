@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-1.2.6.ebuild,v 1.1 2012/07/05 22:17:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-1.2.6.ebuild,v 1.2 2012/07/05 22:19:54 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -20,7 +20,7 @@ DESCRIPTION="Ruby wrapper for UglifyJS JavaScript compressor."
 HOMEPAGE="https://github.com/lautis/uglifier"
 
 SRC_URI+="
-	test? ( https://github.com/mishoo/UglifyJS/tarball/v${UGLIFYJS_VERSION} )"
+	test? ( https://github.com/mishoo/UglifyJS/tarball/v${UGLIFYJS_VERSION} -> ${PN}-uglifyjs-${UGLIFYJS_VERSION}.tar.gz )"
 
 LICENSE="MIT"
 SLOT="0"
