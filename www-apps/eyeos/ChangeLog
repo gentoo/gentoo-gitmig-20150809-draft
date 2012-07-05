@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/eyeos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/ChangeLog,v 1.12 2012/01/09 18:07:44 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/ChangeLog,v 1.13 2012/07/05 17:09:15 voyageur Exp $
+
+  19 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> -eyeos-2.4.ebuild,
+  -eyeos-2.4.1.ebuild:
+  Remove previous (unstable) versions. Further development upstream is
+  commercial only, 2.5 is probably the last open-source release
 
   09 Jan 2012; Bernard Cafarelli <voyageur@gentoo.org> -eyeos-1.9.0.3.1.ebuild,
   -files/postinstall-en.txt:
