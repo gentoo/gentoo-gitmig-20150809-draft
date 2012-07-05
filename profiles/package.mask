@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13927 2012/07/05 09:53:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13928 2012/07/05 22:14:09 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -378,12 +378,6 @@ x11-plugins/replytolist
 # Dead upstream. Security problems. Bug #249112
 # Removal in 30 days
 net-misc/ptrtd
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (03 Jun 2012)
-# Not maintained well in Gentoo for a long time. Better support
-# for zeroconf is available via net-dns/avahi[mdnsresponder-compat]
-# - please use that instead. mDNSResponder will be removed soon.
-net-misc/mDNSResponder
 
 # Torsten Veller <tove@gentoo.org> (02 Jun 2012)
 # Install perl modules in the site branch (#280728)

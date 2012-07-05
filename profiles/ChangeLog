@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6749 2012/07/05 08:46:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6750 2012/07/05 22:14:09 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove obsolete mask of mDNSResponder
 
   05 Jul 2012; Michael Weber <xmw@gentoo.org> package.mask:
   sci-electronics/eagle-6.2.0: Masking for missing libpng14.so.14 (bug 424866)
