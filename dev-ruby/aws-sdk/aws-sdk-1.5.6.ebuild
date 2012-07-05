@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/aws-sdk-1.5.6.ebuild,v 1.1 2012/06/30 21:12:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/aws-sdk-1.5.6.ebuild,v 1.2 2012/07/05 21:36:58 flameeyes Exp $
 
 EAPI=4
 
 USE_RUBY="ruby18 ruby19 ree18"
 
-RUBY_FAKEGEM_TASK_TEST=""
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
@@ -25,7 +25,7 @@ DESCRIPTION="Official SDK for Amazon Web Services"
 HOMEPAGE="http://aws.amazon.com/sdkforruby"
 SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/tarball/${PV} -> ${GITHUB_PROJECT}-${PV}.tar.gz"
 
-LICENSE="APSL-2"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -35,12 +35,8 @@ ruby_add_rdepend "virtual/ruby-ssl
 	>=dev-ruby/json-1.4
 	>=dev-ruby/nokogiri-1.4.4
 	>=dev-ruby/uuidtools-2.1"
-ruby_add_bdepend "
-	test? ( dev-ruby/rspec )"
 
 all_ruby_prepare() {
-	rm Gemfile* || die
-
 	epatch "${FILESDIR}"/${PN}-1.5.3-disabletest.patch
 }
 
@@ -51,7 +47,7 @@ all_ruby_compile() {
 }
 
 each_ruby_test() {
-	${RUBY} -S rspec -Ilib -raws || die
+	ruby-ng_rspec -Ilib -raws
 }
 
 each_ruby_install() {
