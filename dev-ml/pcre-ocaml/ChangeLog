@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.46 2012/07/03 16:12:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.47 2012/07/05 02:07:11 aballier Exp $
+
+  05 Jul 2012; Alexis Ballier <aballier@gentoo.org> -pcre-ocaml-6.1.1.ebuild,
+  -pcre-ocaml-6.2.2.ebuild:
+  remove old
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> pcre-ocaml-6.2.5.ebuild:
   Marking pcre-ocaml-6.2.5 ppc for bug 416533
