@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.159 2012/07/04 15:24:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.160 2012/07/05 14:18:12 jer Exp $
+
+  05 Jul 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Revert that, SLOTs are not allowed.
 
   04 Jul 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Specify dev-libs/libnl version.
