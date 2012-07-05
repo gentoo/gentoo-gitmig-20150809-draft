@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.3.61-r2.ebuild,v 1.2 2012/07/04 21:02:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.3.61-r2.ebuild,v 1.3 2012/07/05 19:43:41 jdhore Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://github/0xd34df00d/qxmpp-dev/${P}-extras.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug +extras"
 
 DEPEND="x11-libs/qt-core

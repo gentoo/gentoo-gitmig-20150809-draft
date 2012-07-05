@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/qxmpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.13 2012/07/04 21:02:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.14 2012/07/05 19:43:41 jdhore Exp $
+
+  05 Jul 2012; Jeff Horelick <jdhore@gentoo.org> qxmpp-0.3.61-r2.ebuild:
+  marked x86 per bug 424619
 
   04 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qxmpp-0.3.61-r2.ebuild:
   Stable for amd64, wrt bug #424619
