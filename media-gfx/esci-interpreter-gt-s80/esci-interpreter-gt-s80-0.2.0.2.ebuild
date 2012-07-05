@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/esci-interpreter-gt-s80/esci-interpreter-gt-s80-0.2.0.2.ebuild,v 1.2 2012/06/04 22:57:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/esci-interpreter-gt-s80/esci-interpreter-gt-s80-0.2.0.2.ebuild,v 1.3 2012/07/05 16:30:43 flameeyes Exp $
 
 EAPI=4
 
@@ -27,7 +27,13 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
 
-QA_PRESTRIPPED="/opt/iscan/esci/*"
+QA_PREBUILT="
+	/opt/iscan/esci/libesci-interpreter-gt-s80.so
+	/opt/iscan/esci/libesci-interpreter-gt-s80.so.0
+	/opt/iscan/esci/libesci-interpreter-gt-s80.so.0.0.0
+	/opt/iscan/esci/libesci-interpreter-gt-s50.so
+	/opt/iscan/esci/libesci-interpreter-gt-s50.so.0
+	/opt/iscan/esci/libesci-interpreter-gt-s50.so.0.0.0"
 
 src_configure() { :; }
 src_compile() { :; }
