@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prng/prng-3.0.2.ebuild,v 1.5 2012/07/05 13:22:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prng/prng-3.0.2.ebuild,v 1.6 2012/07/05 16:22:30 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs"
 
 PATCHES=( "${FILESDIR}"/${P}-shared.patch )
