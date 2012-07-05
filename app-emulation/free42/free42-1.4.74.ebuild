@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/free42-1.4.74.ebuild,v 1.5 2012/07/05 13:21:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/free42-1.4.74.ebuild,v 1.6 2012/07/05 16:06:12 nimiux Exp $
 
 EAPI=4
 
@@ -30,8 +30,7 @@ src_prepare() {
 		"${S}/gtk/Makefile" || die
 	sed -i -e '/^LDFLAGS =/{s/=/:=/;s/$/ \$\{LDFLAGS\}/}' \
 		"${S}/gtk/Makefile" || die
-	sed -i -e 's/-Wl,--hash-style=both/-Wl,--hash-style=gnu/' \
-		"${S}/gtk/Makefile" || die
+	sed -i -e '/^LDFLAGS +=/d' "${S}/gtk/Makefile" || die
 }
 
 src_compile() {
