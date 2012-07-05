@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.33 2012/05/24 04:20:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.34 2012/07/05 00:11:07 tetromino Exp $
+
+*vhba-20120422 (05 Jul 2012)
+
+  05 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/1.2.1-kerneldir.patch, -files/vhba-1.2.1-kernel-2.6.33.patch,
+  -files/1.2.1-parallel_build.patch, -files/vhba-1.0.0-makefile.patch,
+  -files/vhba-1.0.0-scatterlist.patch, -files/vhba-1.0.0-scsicmnd.patch,
+  -vhba-1.2.1.ebuild, -files/vhba-1.2.1-kernel-2.6.34.patch,
+  -vhba-20101015-r1.ebuild,
+  -files/vhba-20101015-scsi-host-lock-push-down.patch, +vhba-20120422.ebuild:
+  Version bump. Drop ancient versions incompatible with modern kernels.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> vhba-1.2.1.ebuild,
   vhba-20101015-r1.ebuild, vhba-20110915.ebuild:
