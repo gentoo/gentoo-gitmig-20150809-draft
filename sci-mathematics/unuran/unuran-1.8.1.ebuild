@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/unuran-1.8.1.ebuild,v 1.3 2012/07/04 09:32:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/unuran-1.8.1.ebuild,v 1.4 2012/07/05 13:22:47 jlec Exp $
 
 EAPI=4
 
@@ -38,9 +38,7 @@ src_install() {
 	autotools-utils_src_install
 	use doc && dodoc doc/${PN}.pdf
 	if use examples; then
-		emake distclean -C examples
-		rm -f examples/Makefile*
-		insinto /usr/share/doc/${PF}
+		rm -f examples/Makefile* || die
 		doins -r examples
 	fi
 }
