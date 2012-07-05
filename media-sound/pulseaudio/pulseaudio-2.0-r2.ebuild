@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.0.ebuild,v 1.3 2012/06/01 03:01:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.0-r2.ebuild,v 1.1 2012/07/05 14:22:12 ford_prefect Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl +gdbm +webrtc-aec"
+IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib gtk test doc +udev ipv6 system-wide realtime +orc ssl +gdbm +webrtc-aec xen"
 
 RDEPEND=">=media-libs/libsndfile-1.0.20
 	X? (
@@ -38,6 +38,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	tcpd? ( sys-apps/tcp-wrappers )
 	lirc? ( app-misc/lirc )
 	dbus? ( >=sys-apps/dbus-1.0.0 )
+	gtk? ( x11-libs/gtk+:2 )
 	gnome? ( >=gnome-base/gconf-2.4.0 )
 	bluetooth? (
 		>=net-wireless/bluez-4
@@ -46,16 +47,21 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	asyncns? ( net-libs/libasyncns )
 	udev? ( || ( >=sys-fs/udev-171[hwdb] >=sys-fs/udev-143[extras] ) )
 	realtime? ( sys-auth/rtkit )
-	equalizer? ( sci-libs/fftw:3.0 )
+	equalizer? (
+		sci-libs/fftw:3.0
+		dev-python/PyQt4[dbus]
+	)
 	orc? ( >=dev-lang/orc-0.4.9 )
 	ssl? ( dev-libs/openssl )
 	>=media-libs/speex-1.2_rc1
 	gdbm? ( sys-libs/gdbm )
 	webrtc-aec? ( media-libs/webrtc-audio-processing )
+	xen? ( app-emulation/xen )
 	dev-libs/json-c
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
 
 DEPEND="${RDEPEND}
+	sys-devel/m4
 	doc? ( app-doc/doxygen )
 	X? (
 		x11-proto/xproto
@@ -88,6 +94,10 @@ pkg_setup() {
 	enewuser pulse -1 -1 /var/run/pulse pulse,audio
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-udev-symbols.patch"
+}
+
 src_configure() {
 	# It's a binutils bug, once I can find time to fix that I'll add a
 	# proper dependency and fix this up. — flameeyes
@@ -116,6 +126,7 @@ src_configure() {
 		--disable-hal \
 		$(use_enable dbus) \
 		$(use_enable gnome gconf) \
+		$(use_enable gtk gtk2) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable bluetooth bluez) \
 		$(use_enable X x11) \
@@ -124,6 +135,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable ssl openssl) \
 		$(use_enable webrtc-aec) \
+		$(use_enable xen) \
 		$(use_with caps) \
 		$(use_with equalizer fftw) \
 		--disable-adrian-aec \

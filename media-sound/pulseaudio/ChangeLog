@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.274 2012/07/05 14:18:14 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.275 2012/07/05 14:22:12 ford_prefect Exp $
+
+*pulseaudio-2.0-r2 (05 Jul 2012)
+
+  05 Jul 2012; Arun Raghavan <ford_prefect@gentoo.org> -pulseaudio-2.0.ebuild,
+  +pulseaudio-2.0-r2.ebuild, +files/pulseaudio-2.0-udev-symbols.patch:
+  Add fix for building against udev >= 183. Also drop 2.0 since it is
+  superceded by 2.0-r1 and above.
 
   05 Jul 2012; Arun Raghavan <ford_prefect@gentoo.org>
   -pulseaudio-0.9.22.ebuild, -pulseaudio-0.9.23-r1.ebuild,
