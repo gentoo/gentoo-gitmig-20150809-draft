@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/nekohtml-1.9.6.ebuild,v 1.5 2008/07/27 07:34:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nekohtml/nekohtml-1.9.6.ebuild,v 1.6 2012/07/05 19:50:21 sera Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -14,12 +14,15 @@ LICENSE="Apache-2.0"
 
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
+IUSE=""
 
 COMMON_DEP=">=dev-java/xerces-2.7"
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
+
+JAVA_ANT_CLASSPATH_TAGS="${JAVA_ANT_CLASSPATH_TAGS} taskdef"
 
 src_unpack() {
 	unpack ${A}
@@ -32,8 +35,7 @@ src_unpack() {
 EANT_DOC_TARGET=""
 
 src_test() {
-	EANT_GENTOO_CLASSPATH="ant-core,xerces-2" eant test \
-		-Djava.class.path="$(java-pkg_getjars xerces-2)"
+	EANT_GENTOO_CLASSPATH="ant-core,xerces-2" eant test
 }
 
 src_install() {
