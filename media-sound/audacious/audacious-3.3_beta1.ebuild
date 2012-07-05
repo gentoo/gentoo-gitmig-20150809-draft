@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.3_beta1.ebuild,v 1.1 2012/07/05 01:00:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.3_beta1.ebuild,v 1.2 2012/07/05 17:41:29 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -16,15 +16,14 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS=""
 
-IUSE="chardet nls session"
+IUSE="chardet nls"
 
 RDEPEND=">=dev-libs/dbus-glib-0.60
 	>=dev-libs/glib-2.16
 	dev-libs/libxml2
 	>=x11-libs/cairo-1.2.6
 	>=x11-libs/pango-1.8.0
-	x11-libs/gtk+:3
-	session? ( x11-libs/libSM )"
+	x11-libs/gtk+:3"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
