@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/gnome-icon-theme-extras-2.30.1.ebuild,v 1.4 2012/05/05 04:10:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-extras/gnome-icon-theme-extras-2.30.1.ebuild,v 1.5 2012/07/05 17:57:05 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
 inherit autotools gnome2
 
-DESCRIPTION="GNOME 2 icon theme extras"
+DESCRIPTION="Extra GNOME icons for specific devices and file types"
 HOMEPAGE="http://www.gnome.org/ http://git.gnome.org/browse/gnome-icon-theme-extras/"
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
