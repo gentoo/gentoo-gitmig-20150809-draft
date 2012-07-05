@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.309 2012/05/04 07:33:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.310 2012/07/05 16:17:52 flameeyes Exp $
+
+  05 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/Linux-PAM-1.1.5+glibc-2.16.patch, -pam-1.1.3.ebuild, pam-1.1.5.ebuild:
+  Add patch to build with glibc 2.16. Thanks to Stevan Bajić in bug #424920 for
+  the patch. Also remove old version.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> pam-1.1.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -1273,5 +1278,3 @@
   17 Feb 2002; Bruce A. Locke <blocke@shivan.org> pam-0.75-r2.ebuild :
 
   Part 1 of PAM revamp.  Ebuild is masked out...  FOR DEVELOPER TESTING ONLY
-
-
