@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-186.ebuild,v 1.1 2012/07/04 21:03:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-186.ebuild,v 1.2 2012/07/05 17:11:15 williamh Exp $
 
 EAPI=4
 
-	KV_min=2.6.39
+KV_min=2.6.39
 
 inherit autotools eutils linux-info
 
@@ -33,7 +33,11 @@ COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
 	!<sys-libs/glibc-2.10"
 
 DEPEND="${COMMON_DEPEND}
-		dev-util/gperf
+	dev-util/gperf
+	>=dev-util/intltool-0.40.0
+	virtual/pkgconfig
+	virtual/os-headers
+	!<sys-kernel/linux-headers-${KV_min}
 	doc? ( dev-util/gtk-doc )"
 
 if [[ ${PV} = 9999* ]]; then
