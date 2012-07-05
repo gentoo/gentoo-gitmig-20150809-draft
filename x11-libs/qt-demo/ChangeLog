@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.93 2012/06/18 22:57:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.94 2012/07/05 12:23:06 ago Exp $
+
+  05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-demo-4.8.2.ebuild:
+  Stable for amd64, wrt bug #424625
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata and add upstream info.

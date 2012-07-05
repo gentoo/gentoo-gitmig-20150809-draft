@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.59 2012/06/19 22:34:00 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.60 2012/07/05 12:25:21 ago Exp $
+
+  05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-multimedia-4.8.2.ebuild:
+  Stable for amd64, wrt bug #424625
 
   19 Jun 2012; Davide Pesavento <pesa@gentoo.org>
   +files/4.8.2-qatomic-x32.patch, qt-multimedia-4.8.2.ebuild:

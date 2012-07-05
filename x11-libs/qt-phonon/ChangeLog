@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.117 2012/06/19 22:36:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.118 2012/07/05 12:26:52 ago Exp $
+
+  05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-phonon-4.8.2.ebuild:
+  Stable for amd64, wrt bug #424625
 
   19 Jun 2012; Davide Pesavento <pesa@gentoo.org>
   +files/4.8.2-qatomic-x32.patch, qt-phonon-4.8.2.ebuild:

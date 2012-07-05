@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.111 2012/06/25 16:09:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.112 2012/07/05 12:29:36 ago Exp $
+
+  05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-test-4.8.2.ebuild:
+  Stable for amd64, wrt bug #424625
 
   25 Jun 2012; Raúl Porcel <armin76@gentoo.org> qt-test-4.8.1.ebuild,
   qt-test-4.8.2.ebuild:
