@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.26 2012/05/01 18:24:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.27 2012/07/05 23:10:41 flameeyes Exp $
+
+*mime-types-1.19 (05 Jul 2012)
+
+  05 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +mime-types-1.19.ebuild:
+  Version bump.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> mime-types-1.16-r2.ebuild,
   mime-types-1.16-r3.ebuild, mime-types-1.18.ebuild:
@@ -108,4 +113,3 @@
   24 Feb 2007; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +mime-types-1.15.ebuild:
   Add dev-ruby/mime-types as a dependency for dev-ruby/rflickr.
-
