@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.273 2012/06/07 03:30:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.274 2012/07/05 08:55:13 ssuominen Exp $
+
+*lvm2-2.02.95-r3 (05 Jul 2012)
+
+  05 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> +lvm2-2.02.95-r3.ebuild,
+  +files/lvm2-2.02.95-udev185.patch:
+  Fix compability with sys-fs/udev >= 185 wrt #424810 by Marien Zwart
 
   07 Jun 2012; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.95-r2.ebuild:
   Bug #419871: Drop comments that say /usr is not used.
