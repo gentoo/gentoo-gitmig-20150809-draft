@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.74 2012/06/21 01:28:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.75 2012/07/05 15:18:06 jer Exp $
+
+  05 Jul 2012; Jeroen Roovers <jer@gentoo.org> egenix-mx-base-3.2.4.ebuild:
+  Stable for HPPA (bug #422063).
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> egenix-mx-base-3.2.4.ebuild:
   marked x86 per bug 422063
