@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.4.ebuild,v 1.1 2012/07/05 01:00:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.4.ebuild,v 1.2 2012/07/05 17:48:35 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -50,7 +50,7 @@ src_configure() {
 
 src_install() {
 	default
-	dodoc AUTHORS README
+	dodoc AUTHORS
 
 	# Gentoo_ice skin installation; bug #109772
 	insinto /usr/share/audacious/Skins/gentoo_ice
