@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/text-hyphen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.40 2012/07/05 06:00:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.41 2012/07/05 06:10:14 graaff Exp $
+
+*text-hyphen-1.3 (05 Jul 2012)
+
+  05 Jul 2012; Hans de Graaff <graaff@gentoo.org> +text-hyphen-1.3.ebuild:
+  Version bump.
 
   05 Jul 2012; Hans de Graaff <graaff@gentoo.org> -text-hyphen-1.0.0-r3.ebuild,
   -text-hyphen-1.0.2.ebuild:
