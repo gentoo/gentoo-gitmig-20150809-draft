@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/origin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/ChangeLog,v 1.4 2012/07/05 15:59:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/ChangeLog,v 1.5 2012/07/05 21:38:01 flameeyes Exp $
+
+  05 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> origin-1.0.3.ebuild:
+  Use the new rspec support in the eclasses.
 
 *origin-1.0.3 (05 Jul 2012)
 

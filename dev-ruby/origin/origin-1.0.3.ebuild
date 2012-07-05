@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/origin-1.0.3.ebuild,v 1.1 2012/07/05 15:59:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/origin-1.0.3.ebuild,v 1.2 2012/07/05 21:38:01 flameeyes Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ EAPI=4
 USE_RUBY="ruby19" #jruby
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST=""
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_EXTRADOC="README.md CHANGELOG.md"
 
@@ -29,17 +29,11 @@ LICENSE="MIT"
 
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="test"
+IUSE=""
 
 ruby_add_bdepend "
 	test? (
 		>=dev-ruby/activesupport-3.1
-		dev-ruby/rspec:2
 		>=dev-ruby/i18n-0.6
 		>=dev-ruby/tzinfo-0.3.22
 	)"
-
-each_ruby_test() {
-	[[ ${TEST_VERBOSE} == 1 ]] || local rspec_params="-f p"
-	${RUBY} -S rspec ${rspec_params} || die
-}
