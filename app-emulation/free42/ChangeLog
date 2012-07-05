@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/free42
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.4 2012/07/05 10:02:13 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.5 2012/07/05 13:21:01 ago Exp $
+
+  05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> free42-1.4.74.ebuild:
+  Stable for amd64, wrt bug #424503
 
   05 Jul 2012; Chema Alonso <nimiux@gentoo.org> free42-1.4.74.ebuild:
   Respect LDFLAGS wrt bug #424503.
