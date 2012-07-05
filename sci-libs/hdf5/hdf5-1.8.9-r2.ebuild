@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.9-r2.ebuild,v 1.1 2012/06/13 18:59:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.9-r2.ebuild,v 1.2 2012/07/05 16:45:27 bicatali Exp $
 
 EAPI=4
 
-inherit autotools eutils fortran-2 flag-o-matic toolchain-funcs
+inherit autotools eutils fortran-2 flag-o-matic toolchain-funcs multilib
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
@@ -66,7 +66,10 @@ src_prepare() {
 	eautoreconf
 	# enable shared libs by default for h5cc config utility
 	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in	|| die
-	use prefix && append-ldflags -Wl,-rpath,"${EPREFIX}"/lib #419677
+	# bug #419677
+	use prefix && \
+		append-ldflags -Wl,-rpath,"${EPREFIX}"/usr/$(get_libdir) \
+		-Wl,-rpath,"${EPREFIX}"/$(get_libdir)
 }
 
 src_configure() {
@@ -76,6 +79,7 @@ src_configure() {
 		--enable-deprecated-symbols \
 		--enable-shared \
 		--disable-silent-rules \
+		$(use_enable prefix sharedlib-rpath) \
 		$(use_enable static-libs static) \
 		$(use_enable debug debug all) \
 		$(use_enable debug codestack) \
