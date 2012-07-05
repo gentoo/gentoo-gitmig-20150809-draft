@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.46 2012/06/02 19:16:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.47 2012/07/05 21:23:01 flameeyes Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -626,4 +626,35 @@ ruby_get_implementation() {
 			echo "mri"
 			;;
 	esac
+}
+
+# @FUNCTION: ruby-ng_rspec
+# @DESCRIPTION:
+# This is simply a wrapper around the rspec command (executed by $RUBY})
+# which also respects TEST_VERBOSE and NOCOLOR environment variables.
+ruby-ng_rspec() {
+	if [[ ${DEPEND} != *"dev-ruby/rspec"* ]]; then
+		ewarn "Missing dev-ruby/rspec in \${DEPEND}"
+	fi
+
+	local rspec_params=
+	case ${NOCOLOR} in
+		1|yes|true)
+			rspec_params+=" --no-color"
+			;;
+		*)
+			rspec_params+=" --color"
+			;;
+	esac
+
+	case ${TEST_VERBOSE} in
+		1|yes|true)
+			rspec_params+=" --format documentation"
+			;;
+		*)
+			rspec_params+=" --format progress"
+			;;
+	esac
+
+	${RUBY} -S rspec ${rspec_params} "$@" || die "rspec failed"
 }

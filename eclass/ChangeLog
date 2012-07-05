@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.335 2012/07/05 20:07:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.336 2012/07/05 21:23:01 flameeyes Exp $
+
+  05 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> ruby-fakegem.eclass,
+  ruby-ng.eclass:
+  Add support for running rspec while respecting some common variables
+  (TEST_VERBOSE and NOCOLOR) in ruby-ng; then use this with a new variable in
+  ruby-fakegem.
 
   05 Jul 2012; Ralph Sennhauser <sera@gentoo.org> java-utils-2.eclass:
   Remove java-pkg_ensure-gcj and java-pkg_ensure-test. #261562 #278965
