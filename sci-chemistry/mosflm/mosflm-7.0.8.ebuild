@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.7.ebuild,v 1.1 2011/09/07 15:21:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.8.ebuild,v 1.1 2012/07/05 13:50:48 jlec Exp $
 
 EAPI=4
 
@@ -20,29 +20,35 @@ IUSE=""
 
 RDEPEND="
 	virtual/fortran
-
 	app-shells/tcsh
 	virtual/jpeg
+	sci-libs/cbflib
 	sci-libs/ccp4-libs
 	sys-libs/ncurses
 	x11-libs/libxdl_view"
 DEPEND="${RDEPEND}"
-# Needs older version as current, perhaps we can fix that next release
-#	sci-libs/cbflib
 
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-# See DEPEND
-#	sed -e "s:../cbf/lib/libcbf.a:${EPREFIX}/usr/$(get_libdir)/libcbf.a:g" \
-	sed -e "s:../jpg/libjpeg.a:-ljpeg:g" \
+	sed \
+		-e "s:../cbf/lib/libcbf.a:-lcbf -limg:g" \
+		-e "s:../jpg/libjpeg.a:-ljpeg:g" \
 		-i ${PN}/Makefile || die
 
+	sed \
+		-e '/jinclude.h/d' \
+		-i mosflm/mosflm_jpeg.c || die
+
+	cp DATETIME.C mosflm/datetime.c
+
 	epatch \
-		"${FILESDIR}"/7.0.6-Makefile.patch \
-		"${FILESDIR}"/7.0.6-parallel.patch \
-		"${FILESDIR}"/7.0.6-impl-dec.patch
-	rm test.f || die
+		"${FILESDIR}"/${PV}-parallel.patch \
+		"${FILESDIR}"/7.0.6-impl-dec.patch \
+		"${FILESDIR}"/${PN}-7.0.7-buffer-overflow.patch \
+		"${FILESDIR}"/${PN}-7.0.7-impl-dec.patch
+
+	rm -rf test.f {cbf,jpg}/*.{h,c} || die
 }
 
 src_compile() {
@@ -56,7 +62,7 @@ src_compile() {
 		MOSLIBS='-lccp4f -lccp4c -lxdl_view -lcurses -lXt -lmmdb -lccif -lstdc++' \
 		MCFLAGS="-O0 -fno-second-underscore" \
 		MOSFLAGS="${FFLAGS} -fno-second-underscore" \
-		FFLAGS="${FFLAGS:- -O2} -fno-second-underscore" \
+		FFLAGS="${FFLAGS} -fno-second-underscore" \
 		CFLAGS="${CFLAGS}" \
 		MOSCFLAGS="${CFLAGS}" \
 		LFLAGS="${LDFLAGS}"
