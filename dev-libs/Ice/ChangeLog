@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.13 2012/07/04 01:11:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.14 2012/07/05 12:32:54 ago Exp $
+
+  05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> Ice-3.4.2.ebuild:
+  Stable for amd64, wrt bug #418415
 
   04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> Ice-3.4.2.ebuild:
   marked x86 per bug 418415
