@@ -1,0 +1,48 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-1.6.3.ebuild,v 1.1 2012/07/05 02:06:09 aballier Exp $
+
+EAPI="2"
+
+inherit findlib eutils
+
+IUSE="doc +ocamlopt"
+
+MY_P="sqlite3-ocaml-${PV}"
+DESCRIPTION="A package for ocaml that provides access to SQLite databases."
+SRC_URI="http://bitbucket.org/mmottl/sqlite3-ocaml/downloads/${MY_P}.tar.gz"
+HOMEPAGE="http://bitbucket.org/mmottl/sqlite3-ocaml"
+
+DEPEND=">=dev-lang/ocaml-3.11[ocamlopt?]
+	>=dev-db/sqlite-3.3.3"
+
+RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${MY_P}"
+SLOT="0"
+LICENSE="MIT"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.22.0-destdir.patch"
+	epatch "${FILESDIR}/${PN}-0.23.0-noocamlopt.patch"
+	epatch "${FILESDIR}/${PN}-1.5.1-werror.patch"
+}
+
+src_compile() {
+	emake -j1 bytecode || die "make bytecode failed"
+	if use ocamlopt; then
+		emake -j1 opt || die "make opt failed"
+	fi
+	if use doc; then
+		emake -j1 docs || die "make doc failed"
+	fi
+}
+
+src_install() {
+	findlib_src_preinst
+	export OCAMLPATH="${OCAMLFIND_DESTDIR}"
+	emake DESTDIR="${D}" install || die "make install failed"
+	dodoc Changelog README.txt TODO
+	use doc && dohtml doc/*
+}
