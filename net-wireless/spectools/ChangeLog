@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/spectools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.13 2012/07/03 16:33:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/ChangeLog,v 1.14 2012/07/05 16:16:39 zerochaos Exp $
+
+  05 Jul 2012; Rick Farina <zerochaos@gentoo.org> spectools-9999.ebuild:
+  following kismet, spectools development has been converted to git
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> spectools-2011.08.1-r1.ebuild:
   Marking spectools-2011.08.1-r1 ppc for bug 420619
@@ -60,4 +63,3 @@
   17 Feb 2012; Steev Klimaszewsk <steev@gentoo.org>
   +spectools-2011.08.1.ebuild, +metadata.xml:
   New tool, spectools added as a dependency for new Kismet ebuilds.
-

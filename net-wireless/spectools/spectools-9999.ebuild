@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.3 2012/06/13 06:34:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.4 2012/07/05 16:16:39 zerochaos Exp $
 
 EAPI=4
 
@@ -11,8 +11,8 @@ MY_P="${MY_PN}-${MY_PV}"
 S=${WORKDIR}/${MY_P}
 
 if [[ ${PV} == "9999" ]] ; then
-		ESVN_REPO_URI="https://www.kismetwireless.net/code/svn/tools/${PN}"
-		inherit subversion
+		EGIT_REPO_URI="https://www.kismetwireless.net/${PN}.git"
+		inherit git-2
 		KEYWORDS=""
 else
 		SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
