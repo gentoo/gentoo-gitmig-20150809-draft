@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.334 2012/07/03 09:10:00 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.335 2012/07/05 20:07:47 sera Exp $
+
+  05 Jul 2012; Ralph Sennhauser <sera@gentoo.org> java-utils-2.eclass:
+  Remove java-pkg_ensure-gcj and java-pkg_ensure-test. #261562 #278965
 
   01 Jul 2012; Matti Bickel <mabi@gentoo.org> php-pear-lib-r1.eclass:
   Remove requirement for depend.php.eclass. Since our switch to /usr/share/php
