@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.274 2012/07/05 17:41:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.275 2012/07/05 17:44:07 jdhore Exp $
+
+  05 Jul 2012; Jeff Horelick <jdhore@gentoo.org> audacious-3.3_beta1.ebuild:
+  Drop the use_enable line for session too. I guess it's going to be one of
+  those days...
 
   05 Jul 2012; Jeff Horelick <jdhore@gentoo.org> audacious-3.3_beta1.ebuild:
   Drop the session flag on 3.3 as it was dropped by upstream.

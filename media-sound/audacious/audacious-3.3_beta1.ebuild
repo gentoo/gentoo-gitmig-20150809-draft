@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.3_beta1.ebuild,v 1.2 2012/07/05 17:41:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.3_beta1.ebuild,v 1.3 2012/07/05 17:44:07 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -41,8 +41,7 @@ src_configure() {
 	econf \
 		--enable-dbus \
 		$(use_enable chardet) \
-		$(use_enable nls) \
-		$(use_enable session sm)
+		$(use_enable nls)
 }
 
 src_install() {
