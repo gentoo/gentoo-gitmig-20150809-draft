@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.3_alpha1.ebuild,v 1.2 2012/06/17 19:18:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.4.ebuild,v 1.1 2012/07/05 01:04:15 jdhore Exp $
 
 EAPI=4
 
@@ -12,17 +12,17 @@ SRC_URI="http://distfiles.audacious-media-player.org/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="aac adplug alsa bs2b cdda cue ffmpeg flac fluidsynth gnome ipv6 jack
-lame libnotify libsamplerate lirc midi mms mp3 nls pulseaudio scrobbler sdl sid sndfile vorbis wavpack"
+lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2:2
 	media-libs/libmodplug
-	>=media-sound/audacious-3.3_alpha1
+	>=media-sound/audacious-3.2.4
 	>=net-libs/neon-0.26.4
-	x11-libs/gtk+:3
+	x11-libs/gtk+:2
 	aac? ( >=media-libs/faad2-2.7 )
 	adplug? ( >=dev-cpp/libbinio-1.4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.16 )
@@ -39,9 +39,9 @@ RDEPEND="app-arch/unzip
 	lame? ( media-sound/lame )
 	libnotify? ( x11-libs/libnotify )
 	libsamplerate? ( media-libs/libsamplerate )
-	lirc? ( app-misc/lirc )
 	mms? ( >=media-libs/libmms-0.3 )
 	mp3? ( >=media-sound/mpg123-1.12.1 )
+	mtp? ( media-libs/libmtp )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
 	sdl? ( media-libs/libsdl[audio] )
@@ -69,6 +69,7 @@ src_configure() {
 	econf \
 		--enable-modplug \
 		--enable-neon \
+		--disable-gtk3 \
 		$(use_enable adplug) \
 		$(use_enable aac) \
 		$(use_enable alsa) \
@@ -86,11 +87,12 @@ src_configure() {
 		$(use_enable lame filewriter_mp3) \
 		$(use_enable libnotify notify) \
 		$(use_enable libsamplerate resample) \
-		$(use_enable lirc) \
 		$(use_enable mms) \
 		$(use_enable mp3) \
 		$(use_enable midi amidiplug) \
+		$(use_enable mtp mtp_up) \
 		$(use_enable nls) \
+		$(use_enable oss) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable scrobbler) \
 		$(use_enable sdl sdlout) \
