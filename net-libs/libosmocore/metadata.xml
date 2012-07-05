@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>chithanh@gentoo.org</email>
-		<name>Chí-Thanh Christopher Nguyễn</name>
-	</maintainer>
+	<herd>radio</herd>
 	<use>
 		<flag name='embedded'>Build for embedded use and disable unsupported features</flag>
 	</use>
