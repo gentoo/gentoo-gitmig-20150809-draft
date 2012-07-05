@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/xpath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xpath/ChangeLog,v 1.4 2012/01/11 06:51:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xpath/ChangeLog,v 1.5 2012/07/05 21:53:59 flameeyes Exp $
+
+  05 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> xpath-0.1.4.ebuild:
+  Use the new rspec testing support; remove jruby from the compatible
+  implementations because tests fail only there.
 
   11 Jan 2012; Hans de Graaff <graaff@gentoo.org> xpath-0.1.4.ebuild:
   Add ruby19.
@@ -16,4 +20,3 @@
   18 May 2011; Hans de Graaff <graaff@gentoo.org> +xpath-0.1.4.ebuild,
   +metadata.xml:
   Initial import. Dependency of forthcoming capybara.
-
