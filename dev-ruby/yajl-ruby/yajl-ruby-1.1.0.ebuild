@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/yajl-ruby-1.1.0.ebuild,v 1.7 2012/03/11 13:06:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/yajl-ruby-1.1.0.ebuild,v 1.8 2012/07/05 21:44:28 flameeyes Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
 
-RUBY_FAKEGEM_TASK_TEST=""
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -34,8 +34,4 @@ each_ruby_configure() {
 each_ruby_compile() {
 	emake -Cext/yajl CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}" || die "make extension failed"
 	cp ext/yajl/yajl$(get_modname) lib/yajl/ || die
-}
-
-each_ruby_test() {
-	${RUBY} -Ilib -S rspec spec || die "Tests failed"
 }
