@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.3.ebuild,v 1.2 2012/06/04 21:09:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.3.ebuild,v 1.3 2012/07/05 06:15:04 naota Exp $
 
 EAPI=4
 
@@ -76,6 +76,8 @@ src_prepare() {
 	if ! use berkdb; then
 		epatch "${FILESDIR}/${PN}_no-berkdb.patch"
 	fi
+
+	epatch "${FILESDIR}"/${P}-freebsd9.patch
 
 	sed -i -e "/^#define ALIAS_DB_MAP/s|:/etc/aliases|:/etc/mail/aliases|" \
 		src/util/sys_defs.h || die "sed failed"
