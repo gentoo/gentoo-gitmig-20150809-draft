@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xcalibrateproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/ChangeLog,v 1.11 2012/02/23 18:31:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/ChangeLog,v 1.12 2012/07/05 15:31:02 chithanh Exp $
+
+  05 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xcalibrateproto-0.1_pre20081210.ebuild:
+  Fix missing configure, bug #423803.
 
   23 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   xcalibrateproto-0.1_pre20081210.ebuild:
@@ -47,4 +51,3 @@
   15 Mar 2009; <solar@gentoo.org> +metadata.xml,
   +xcalibrateproto-0.1_pre20081210.ebuild:
   - initial commit of xcalibrateproto from snapshot
-

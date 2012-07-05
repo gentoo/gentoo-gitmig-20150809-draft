@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/xcalibrateproto-0.1_pre20081210.ebuild,v 1.12 2012/02/23 18:31:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/xcalibrateproto-0.1_pre20081210.ebuild,v 1.13 2012/07/05 15:31:02 chithanh Exp $
 
 EAPI=4
 
 MY_P="${PN/x/}-${PV#*_pre}"
-
+XORG_EAUTORECONF="yes"
 inherit xorg-2
 
 DESCRIPTION="Touchscreen calibration protocol"
