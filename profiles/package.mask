@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13925 2012/07/04 21:53:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13926 2012/07/05 08:46:33 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Weber <xmw@gentoo.org> (29 Jun 2012)
+# Masking for missing libpng14.so.14 (bug 424866)
+sci-electronics/eagle-6.2.0
 
 # Ben de Groot <yngwin@gentoo.org> (3 Jul 2012)
 # Dead upstream. Doesn't compile with current kernels.
