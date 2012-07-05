@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.2.0-r1.ebuild,v 1.1 2012/07/04 06:53:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.2.0-r2.ebuild,v 1.1 2012/07/05 02:53:40 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="ModemManager"
@@ -53,7 +53,7 @@ src_install() {
 
 	# Allow users in plugdev group full control over their modem
 	if use policykit; then
-		insinto /etc/polkit-1/rules.d
+		insinto /usr/share/polkit-1/rules.d/
 		doins "${FILESDIR}"/01-org.freedesktop.ModemManager.rules
 		if has_version '<sys-auth/polkit-0.106'; then
 			insinto /etc/polkit-1/localauthority/10-vendor.d
@@ -71,6 +71,25 @@ pkg_postinst() {
 		elog "To control your modem without needing to enter the root password,"
 		elog "add your user account to the 'plugdev' group."
 		elog
+	fi
+
+	# The polkit rules file moved to /usr/share
+	old_rules="${EROOT}etc/polkit-1/rules.d/01-org.freedesktop.ModemManager.rules"
+	if [[ -f "${old_rules}" ]]; then
+		case "$(md5sum ${old_rules})" in
+		  c5ff02532cb1da2c7545c3069e5d0992* | 5c50f0dc603c0a56e2851a5ce9389335* )
+			# Automatically delete the old rules.d file if the user did not change it
+			elog
+			elog "Removing old ${old_rules} ..."
+			rm -f "${old_rules}" || eerror "Failed, please remove ${old_rules} manually"
+			;;
+		  * )
+			elog "The ${old_rules}"
+			elog "file moved to /usr/share/polkit-1/rules.d/ in >=modemmanager-0.5.2.0-r2"
+			elog "If you edited ${old_rules}"
+			elog "without changing its behavior, you may want to remove it."
+			;;
+		esac
 	fi
 
 	elog "If your USB modem shows up as a Flash drive when you plug it in,"
