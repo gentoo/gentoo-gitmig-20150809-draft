@@ -1,29 +1,29 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r4.ebuild,v 1.5 2011/09/14 16:01:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r5.ebuild,v 1.1 2012/07/05 22:00:11 bicatali Exp $
 
-EAPI=2
-inherit eutils fortran-2 toolchain-funcs
+EAPI=4
+inherit eutils fortran-2 toolchain-funcs multilib
 
 MY_P="${PN}${PV//.}"
+
 DESCRIPTION="FORTRAN/C device-independent scientific graphic library"
 HOMEPAGE="http://www.astro.caltech.edu/~tjp/pgplot/"
 SRC_URI="ftp://ftp.astro.caltech.edu/pub/pgplot/${MY_P}.tar.gz"
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
-IUSE="doc motif tk"
-RDEPEND="
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+IUSE="doc motif static-libs tk"
+RDEPEND="media-libs/libpng
 	virtual/fortran
 	x11-libs/libX11
 	x11-libs/libXt
-	media-libs/libpng
 	motif? ( >=x11-libs/openmotif-2.3:0 )
 	tk? ( dev-lang/tk )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	epatch \
@@ -31,19 +31,17 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-makemake.patch \
 		"${FILESDIR}"/${PN}-compile-setup.patch \
 		"${FILESDIR}"/${PN}-headers.patch \
-		"${FILESDIR}"/${PN}-ldflags.patch \
 		"${FILESDIR}"/${PN}-libpng15.patch
 
 	# gfortran < 4.3 does not compile gif, pp and wd drivers
-	if [[ "$(tc-getFC)" == gfortran ]] &&
+	if [[ $(tc-getFC) == *gfortran* ]] &&
 		[[ $(gcc-major-version)$(gcc-minor-version) -lt 43 ]] ; then
 		ewarn
 		ewarn "Warning!"
 		ewarn "gfortran < 4.3 selected: does not compile all drivers"
 		ewarn "disabling gif, wd, and ppd drivers"
-		ewarn "if you want more drivers, use gfortran >= 4.3, g77 or ifort"
+		ewarn "if you want more drivers, use gfortran >= 4.3"
 		ewarn
-		epause 4
 		sed -i \
 			-e 's/GIDRIV/! GIDRIV/g' \
 			-e 's/PPDRIV/! GIDRIV/g' \
@@ -81,22 +79,27 @@ src_prepare() {
 	use tk && sed -i -e '/TKDRIV/s/!//' drivers.list
 }
 
-src_compile() {
+src_configure() {
 	./makemake . linux
-	einfo "Doing static libs and execs"
-	emake all cpg || die "emake static failed"
-	emake -j1 clean
-	einfo "Doing shared libs"
+	# post makefile creation prefix hack
+	sed -i -e "s|/usr|${EROOT}/usr|g" makefile || die
+}
+
+src_compile() {
 	emake \
 		CFLAGS="${CFLAGS} -fPIC" \
 		FFLAGS="${FFLAGS} -fPIC" \
-		shared cpg-shared \
-		|| die "emake shared failed"
+		shared cpg-shared pgxwin_server pgdisp pgplot.doc
+
+	use tk && emake CFLAGS="${CFLAGS} -fPIC" libtkpgplot.so
+	use motif && emake CFLAGS="${CFLAGS} -fPIC" libXmPgplot.so
+
+	emake -j1 clean
+	use static-libs && emake all cpg
 
 	if use doc; then
 		export VARTEXFONTS="${T}/fonts"
-		emake pgplot.html || die "make pgplot.html failed"
-		emake pgplot-routines.tex  || die "make pgplot-routines failed"
+		emake pgplot.html pgplot-routines.tex
 		pdflatex pgplot-routines.tex
 		pdflatex pgplot-routines.tex
 	fi
@@ -106,8 +109,8 @@ src_compile() {
 }
 
 src_test() {
-	einfo "Testing various demo programs"
 	# i can go to 16
+	local i j
 	for i in 1 2 3; do
 		emake pgdemo${i}
 		# j can also be LATEX CPS...
@@ -123,32 +126,33 @@ src_test() {
 
 src_install() {
 	insinto /usr/$(get_libdir)/pgplot
-	doins grfont.dat grexec.f *.inc rgb.txt || die
+	doins grfont.dat grexec.f *.inc rgb.txt
 
-	# FORTRAN libs
-	dolib.a libpgplot.a || die "dolib.a failed"
-	dolib.so libpgplot.so* || die "dolib.so failed"
-	dobin pgxwin_server pgdisp || die "dobin failed"
+	dolib.so libpgplot.so*
+	dobin pgxwin_server pgdisp
 
 	# C binding
 	insinto /usr/include
-	doins cpgplot.h || die "doins C binding failed"
-	dolib.a libcpgplot.a || die "dolib.a failed"
-	dolib.so libcpgplot.so* || die "dolib C failed"
+	doins cpgplot.h
+	dolib.so libcpgplot.so*
 
 	if use motif; then
-		doins XmPgplot.h || die "doins motif failed"
-		dolib.a libXmPgplot.a || die "dolib.a motif failed"
+		insinto /usr/include
+		doins XmPgplot.h
+		dolib.so libXmPgplot.so*
 	fi
 
 	if use tk; then
-		doins tkpgplot.h || die "doins tk failed"
-		dolib.a libtkpgplot.a || die "dolib.a tk failed"
+		insinto /usr/include
+		doins tkpgplot.h
+		dolib.so libtkpgplot.so*
 	fi
 
+	use static-libs && dolib.a lib*pgplot.a
+
 	# minimal doc
-	dodoc aaaread.me pgplot.doc || die "dodoc minimal doc failed"
-	newdoc pgdispd/aaaread.me pgdispd.txt || die "install pgdispd doc failed"
+	dodoc aaaread.me pgplot.doc
+	newdoc pgdispd/aaaread.me pgdispd.txt
 
 	if use doc; then
 		dodoc cpg/cpgplot.doc applications/curvefit/curvefit.doc

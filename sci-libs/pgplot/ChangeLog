@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/pgplot
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.23 2011/09/14 16:01:26 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.24 2012/07/05 22:00:11 bicatali Exp $
+
+*pgplot-5.2.2-r5 (05 Jul 2012)
+
+  05 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +pgplot-5.2.2-r5.ebuild,
+  -files/pgplot-ldflags.patch, -pgplot-5.2.2-r3.ebuild, -pgplot-5.2.2-r4.ebuild,
+  files/pgplot-makemake.patch:
+  Switch to EAPI4, added static-libs, fixed makemake patch, keyword amd64-linux,
+  x86-linux
 
   14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
   +files/pgplot-libpng15.patch, pgplot-5.2.2-r4.ebuild:
