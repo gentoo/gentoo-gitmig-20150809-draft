@@ -7,6 +7,5 @@
 	</maintainer>
 	<use>
 		<flag name="soup">Enables XML HTTP request extension based on <pkg>net-libs/libsoup</pkg></flag>
-		<flag name="webkit">Enables browser element and script runtime based on <pkg>net-libs/webkit-gtk</pkg></flag>
 	</use>
 </pkgmetadata>

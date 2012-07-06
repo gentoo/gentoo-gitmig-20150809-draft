@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.48 2012/07/06 13:00:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.49 2012/07/06 15:41:20 voyageur Exp $
+
+  06 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  google-gadgets-0.11.2.ebuild, metadata.xml:
+  And webkit browser/runtime support is broken too now, removing USE-flag. This
+  package will get its last rites soon
 
   06 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org>
   google-gadgets-0.11.2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.18 2012/07/06 13:00:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.19 2012/07/06 15:41:20 voyageur Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime multilib
@@ -15,7 +15,7 @@ SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 x86"
-IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification webkit"
+IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification"
 REQUIRED_USE="|| ( gtk qt4 )"
 
 # Weird things happen when we start mix-n-matching, so for the time being
@@ -51,8 +51,7 @@ RDEPEND="
 		dbus? ( >=x11-libs/qt-dbus-4.4.0 )
 	)
 	soup? ( >=net-libs/libsoup-2.26:2.4 )
-	startup-notification? ( x11-libs/startup-notification )
-	webkit? ( >=net-libs/webkit-gtk-1.0.3:2 )"
+	startup-notification? ( x11-libs/startup-notification )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -98,8 +97,6 @@ src_configure() {
 		$(use_enable gstreamer gst-video-element) \
 		$(use_with networkmanager) \
 		$(use_enable soup soup-xml-http-request) \
-		$(use_enable webkit webkit-script-runtime) \
-		$(use_enable webkit gtkwebkit-browser-element) \
 		$(use_enable gtk gtk-host) \
 		$(use_enable gtk libggadget-gtk ) \
 		$(use_enable gtk gtk-edit-element) \
@@ -114,7 +111,9 @@ src_configure() {
 		$(use_enable qt4 qt-xml-http-request) \
 		$(use_enable qt4 qt-script-runtime) \
 		--disable-gtkmoz-browser-element \
-		--disable-smjs-script-runtime
+		--disable-smjs-script-runtime \
+		--disable-gtkwebkit-browser-element \
+		--disable-webkit-script-runtime
 }
 
 src_test() {
