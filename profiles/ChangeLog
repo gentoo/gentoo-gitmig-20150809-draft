@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6751 2012/07/06 00:44:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6752 2012/07/06 01:28:00 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/uclibc/amd64/make.defaults,
+  +hardened/linux/uclibc/amd64/parent, +hardened/linux/uclibc/make.defaults,
+  +hardened/linux/uclibc/package.accept_keywords,
+  +hardened/linux/uclibc/package.mask, +hardened/linux/uclibc/package.use,
+  +hardened/linux/uclibc/packages, +hardened/linux/uclibc/parent,
+  +hardened/linux/uclibc/use.force, +hardened/linux/uclibc/use.mask,
+  +hardened/linux/uclibc/x86/make.defaults, +hardened/linux/uclibc/x86/parent:
+  Add new hardened/linux/uclibc/{amd64,x86} profiles
 
   06 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask google-perftools-2 (gperftools) until tested.
