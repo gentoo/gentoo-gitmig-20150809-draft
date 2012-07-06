@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/qtermwidget
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/ChangeLog,v 1.1 2012/07/06 13:35:52 yngwin Exp $
+
+*qtermwidget-0.4.0 (06 Jul 2012)
+
+  06 Jul 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +qtermwidget-0.4.0.ebuild:
+  Initial commit. Ebuild based on live ebuild in qt overlay. Needed for
+  qterminal.
