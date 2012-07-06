@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.64 2012/05/29 18:42:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.65 2012/07/06 14:07:34 ago Exp $
+
+  06 Jul 2012; Agostino Sarubbo <ago@gentoo.org> mathomatic-15.8.5.ebuild:
+  Stable for amd64, wrt bug #425060
 
 *mathomatic-15.8.5 (29 May 2012)
 
