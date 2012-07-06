@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101.ebuild,v 1.2 2012/06/30 11:10:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101.ebuild,v 1.3 2012/07/06 12:29:54 ssuominen Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
 
-inherit multilib eutils systemd python
+inherit multilib eutils systemd python user
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
