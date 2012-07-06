@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.2.ebuild,v 1.1 2012/06/16 19:49:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.2.ebuild,v 1.2 2012/07/06 01:11:41 lu_zero Exp $
 
 EAPI=4
 
-inherit libtool multilib
+inherit eutils libtool multilib
 
 if [[ ${PV} == *9999* ]]; then
 	EHG_REPO_URI="http://hg.debian.org/hg/xine-lib/xine-lib-1.2"
@@ -118,7 +118,7 @@ REQUIRED_USE="vidix? ( || ( X fbcon ) )
 
 src_prepare() {
 	sed -i -e '/define VDR_ABS_FIFO_DIR/s|".*"|"/var/vdr/xine"|' src/vdr/input_vdr.c || die
-
+	epatch ${FILESDIR}/${P}-libav.patch
 	if [[ ${PV} == *9999* ]]; then
 		epatch_user
 		eautoreconf
