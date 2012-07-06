@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.1-r1.ebuild,v 1.7 2012/06/13 15:16:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.1-r1.ebuild,v 1.8 2012/07/06 03:29:00 jdhore Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ayatana cdda +dbus ios ipod kde lastfm mms mtp projectm test +udev wiimote"
 IUSE+="${LANGS// / linguas_}"
 
