@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jzlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.36 2012/03/14 15:39:46 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.37 2012/07/06 11:31:11 ago Exp $
+
+  06 Jul 2012; Agostino Sarubbo <ago@gentoo.org> jzlib-1.1.1.ebuild:
+  Stable for amd64, wrt bug #418719
 
 *jzlib-1.1.1 (14 Mar 2012)
 
