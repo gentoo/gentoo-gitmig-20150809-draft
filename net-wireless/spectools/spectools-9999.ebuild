@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.4 2012/07/05 16:16:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.5 2012/07/06 21:14:42 zerochaos Exp $
 
 EAPI=4
 
@@ -12,6 +12,7 @@ S=${WORKDIR}/${MY_P}
 
 if [[ ${PV} == "9999" ]] ; then
 		EGIT_REPO_URI="https://www.kismetwireless.net/${PN}.git"
+		SRC_URI=""
 		inherit git-2
 		KEYWORDS=""
 else

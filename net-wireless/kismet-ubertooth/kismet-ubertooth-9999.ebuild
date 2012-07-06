@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.1 2012/07/06 20:40:57 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.2 2012/07/06 21:12:10 zerochaos Exp $
 
 EAPI="4"
 
@@ -11,6 +11,7 @@ HOMEPAGE="http://ubertooth.sourceforge.net/"
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://ubertooth.svn.sourceforge.net/svnroot/ubertooth/trunk/host"
+	SRC_URI=""
 	inherit subversion
 	KEYWORDS=""
 else
