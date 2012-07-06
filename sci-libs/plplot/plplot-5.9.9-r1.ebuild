@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.2 2012/06/28 01:47:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.3 2012/07/06 14:31:58 bicatali Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ WX_GTK_VER="2.8"
 PYTHON_DEPEND="python? 2"
 
 inherit eutils fortran-2 cmake-utils python toolchain-funcs virtualx \
-	wxwidgets java-pkg-opt-2
+	wxwidgets java-pkg-opt-2 multilib
 
 DESCRIPTION="Multi-language scientific plotting library"
 HOMEPAGE="http://plplot.sourceforge.net/"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="ada cairo cxx doc dynamic examples fortran gd java jpeg latex lua
 	  ocaml octave pdf perl png python qhull qt4 svg tcl test threads tk
 	  truetype wxwidgets X"
@@ -170,10 +170,17 @@ src_configure() {
 	use python && mycmakeargs+=( $(cmake-utils_use_enable qt4 pyqt4) )
 	use doc && mycmakeargs+=( -DPREBUILT_DOC=ON )
 	cmake-utils_src_configure
+
+	# clean up bloated pkg-config files (help linking properly on prefix)
+	sed -i \
+		-e "/Cflags/s:-I\(${EPREFIX}\|\)/usr/include[[:space:]]::g" \
+		-e "/Libs/s:-L\(${EPREFIX}\|\)/usr/lib\(64\|\)[[:space:]]::g" \
+		-e "s:${LDFLAGS}::g" \
+		"${CMAKE_BUILD_DIR}"/pkgcfg/*pc || die
 }
 
 src_test() {
-	pushd "${S}_build" > /dev/null
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 	Xemake test || die "tests failed"
 	popd > /dev/null
 }
