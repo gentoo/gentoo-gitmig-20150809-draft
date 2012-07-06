@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.366 2012/07/05 23:58:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.367 2012/07/06 13:58:36 jer Exp $
+
+  06 Jul 2012; Jeroen Roovers <jer@gentoo.org> lftp-4.3.8.ebuild,
+  +files/lftp-4.3.8-gets.patch:
+  Fix building against glibc-2.16 by Martin Jansa (bug #425026).
 
   05 Jul 2012; Jeff Horelick <jdhore@gentoo.org> lftp-4.3.7.ebuild:
   marked x86 per bug 424922

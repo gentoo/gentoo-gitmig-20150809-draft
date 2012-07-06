@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.8.ebuild,v 1.1 2012/07/05 14:25:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.8.ebuild,v 1.2 2012/07/06 13:58:36 jer Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https/torrent client and file transfer program"
@@ -52,7 +51,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-4.0.2.91-lafile.patch" \
 		"${FILESDIR}/${PN}-4.0.3-autoconf-2.64.patch" \
-		"${FILESDIR}/${PN}-4.3.5-autopoint.patch"
+		"${FILESDIR}/${PN}-4.3.5-autopoint.patch" \
+		"${FILESDIR}/${PN}-4.3.8-gets.patch"
 	eautoreconf
 }
 
