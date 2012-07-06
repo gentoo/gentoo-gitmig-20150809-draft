@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.10.1.ebuild,v 1.1 2012/04/25 23:11:29 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.10.1.ebuild,v 1.2 2012/07/06 22:24:13 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ DISTUTILS_SRC_TEST="setup.py"
 HG_ECLASS=""
 if [[ ${PV} = *9999* ]]; then
 	HG_ECLASS="mercurial"
-	EHG_REPO_URI="https://hg.rafaelmartins.eng.br/blohg/"
+	EHG_REPO_URI="http://hg.rafaelmartins.eng.br/blohg/"
 	EHG_REVISION="default"
 fi
 

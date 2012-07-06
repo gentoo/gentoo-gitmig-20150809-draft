@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/blohg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.18 2012/04/25 23:11:29 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.19 2012/07/06 22:24:13 rafaelmartins Exp $
+
+  06 Jul 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  blohg-0.10.1.ebuild, blohg-9999.ebuild:
+  Fixed EHG_REPO_URI
 
 *blohg-0.10.1 (25 Apr 2012)
 
