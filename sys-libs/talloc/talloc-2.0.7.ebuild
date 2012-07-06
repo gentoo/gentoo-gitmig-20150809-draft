@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.7.ebuild,v 1.5 2012/05/12 19:20:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.7.ebuild,v 1.6 2012/07/06 02:39:30 jdhore Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -13,7 +13,7 @@ SRC_URI="http://samba.org/ftp/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris"
 IUSE="compat python"
 
 RDEPEND="!!<sys-libs/talloc-2.0.5"

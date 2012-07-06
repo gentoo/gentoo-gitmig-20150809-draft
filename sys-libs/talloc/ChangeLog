@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.34 2012/05/12 19:20:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.35 2012/07/06 02:39:30 jdhore Exp $
+
+  06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> talloc-2.0.7.ebuild:
+  marked x86 per bug 417113
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> talloc-2.0.7.ebuild:
   keyword ~amd64-fbsd
