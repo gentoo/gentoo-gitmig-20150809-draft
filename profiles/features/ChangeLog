@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.39 2012/07/04 07:18:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.40 2012/07/06 06:28:56 tetromino Exp $
+
+  06 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  selinux/package.use.mask:
+  Remove wine[win64] mask since gcc-4.4 is marked stable everywhere.
 
   04 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   64bit-native/package.mask, 64bit-native/package.use.mask,

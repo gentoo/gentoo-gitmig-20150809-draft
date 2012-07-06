@@ -1,9 +1,10 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.use.mask,v 1.2 2012/07/06 06:28:56 tetromino Exp $
+
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
 # Unmask when we get HAL 0.5.10 straightened out
 media-sound/pulseaudio policykit
-
-# requires gcc-4.4
-app-emulation/wine win64
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (18 Feb 2011)
 # sys-apps/portage depends on sys-libs/libselinux, which currently does not support Python 3.
