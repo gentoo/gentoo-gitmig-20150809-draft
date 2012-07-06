@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r2.ebuild,v 1.8 2012/05/22 16:16:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.98-r2.ebuild,v 1.9 2012/07/06 12:28:21 ssuominen Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -26,6 +26,7 @@ CDEPEND="
 	>=dev-libs/glib-2.14:2
 	sys-apps/dbus
 	>=sys-fs/udev-169
+	<sys-fs/udev-185
 	alsa? (
 		media-libs/alsa-lib[alsa_pcm_plugins_extplug(+),alsa_pcm_plugins_ioplug(+)]
 		media-libs/libsndfile

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.136 2012/06/30 11:10:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.137 2012/07/06 12:28:21 ssuominen Exp $
+
+  06 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> bluez-4.98-r2.ebuild,
+  bluez-4.99.ebuild:
+  Pin old net-wireless/bluez to old sys-fs/udev wrt #425002
 
   30 Jun 2012; Pacho Ramos <pacho@gentoo.org> bluez-4.101.ebuild:
   Apitest is no longer provided, bug #423331 by Mike Callahan and others.
