@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.4.ebuild,v 1.11 2012/05/22 22:04:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.4.ebuild,v 1.12 2012/07/06 17:58:32 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu-alpha/gzip/${P}.tar.gz
 	mirror://gnu/gzip/${P}.tar.gz
 	mirror://gentoo/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="nls pic static"
