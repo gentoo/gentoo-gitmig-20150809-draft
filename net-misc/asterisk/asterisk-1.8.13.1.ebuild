@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.13.0.ebuild,v 1.1 2012/06/06 10:07:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.13.1.ebuild,v 1.1 2012/07/06 13:27:13 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -15,8 +15,20 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex sqlite sqlite3 srtp static syslog usb vorbis"
-REQUIRED_USE="gtalk? ( jabber )"
+IUSE_VOICEMAIL_STORAGE="
+	+voicemail_storage_file
+	voicemail_storage_odbc
+	voicemail_storage_imap
+"
+IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex sqlite sqlite3 srtp static syslog usb vorbis"
+
+IUSE_EXPAND="VOICEMAIL_STORAGE"
+
+REQUIRED_USE="
+	gtalk? ( jabber )
+	^^ ( ${IUSE_VOICEMAIL_STORAGE/+/} )
+	voicemail_storage_odbc? ( odbc )
+"
 
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
@@ -62,6 +74,7 @@ RDEPEND="dev-libs/popt
 	vorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
+	voicemail_storage_imap? ( virtual/imap-c-client )
 	!net-libs/openh323"
 
 RDEPEND="${RDEPEND}
@@ -91,6 +104,8 @@ src_prepare() {
 }
 
 src_configure() {
+	local vmst
+
 	econf \
 		--libdir="/usr/$(get_libdir)" \
 		--localstatedir="/var" \
@@ -172,6 +187,13 @@ src_configure() {
 	use_select syslog		cdr_syslog
 	use_select usb			chan_usbradio
 	use_select vorbis		format_ogg_vorbis
+
+	# Voicemail storage ...
+	for vmst in ${IUSE_VOICEMAIL_STORAGE/+/}; do
+		if use ${vmst}; then
+			menuselect/menuselect --enable $(echo ${vmst##*_} | tr '[:lower:]' '[:upper:]')_STORAGE menuselect.makeopts
+		fi
+	done
 }
 
 src_compile() {
