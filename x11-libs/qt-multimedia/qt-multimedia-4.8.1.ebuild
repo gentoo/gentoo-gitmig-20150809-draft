@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/qt-multimedia-4.8.1.ebuild,v 1.3 2012/05/20 13:14:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/qt-multimedia-4.8.1.ebuild,v 1.4 2012/07/06 05:08:04 xmw Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit qt4-build
 
 DESCRIPTION="The Multimedia module for the Qt toolkit"
 SLOT="4"
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~ia64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="alsa"
 
 DEPEND="

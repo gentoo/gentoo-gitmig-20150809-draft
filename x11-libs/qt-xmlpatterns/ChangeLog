@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-xmlpatterns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.113 2012/07/05 12:30:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.114 2012/07/06 05:06:25 xmw Exp $
+
+  06 Jul 2012; Michael Weber <xmw@gentoo.org> qt-xmlpatterns-4.8.1.ebuild:
+  ppc stable (bug 414241)
 
   05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-xmlpatterns-4.8.2.ebuild:
   Stable for amd64, wrt bug #424625
@@ -482,4 +485,3 @@
   21 Dec 2007; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
   +qt-xmlpatterns-4.4.0_rc1.ebuild:
   Initial ebuild
-
