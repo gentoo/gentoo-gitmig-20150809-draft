@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/unuran
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/ChangeLog,v 1.8 2012/07/05 16:31:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/ChangeLog,v 1.9 2012/07/06 00:40:29 jdhore Exp $
+
+  06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> unuran-1.8.1.ebuild:
+  marked x86 per bug 424739
 
   05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> unuran-1.8.1.ebuild:
   Stable for amd64, wrt bug #424739

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/unuran-1.8.1.ebuild,v 1.5 2012/07/05 16:31:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/unuran-1.8.1.ebuild,v 1.6 2012/07/06 00:40:29 jdhore Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="amd64 ~amd64 ~x86 ~x86-linux"
+KEYWORDS="amd64 ~amd64 x86 ~x86-linux"
 IUSE="doc examples gsl prng +rngstreams static-libs"
 
 DEPEND="
