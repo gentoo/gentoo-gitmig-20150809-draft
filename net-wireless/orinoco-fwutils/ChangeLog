@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/orinoco-fwutils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-fwutils/ChangeLog,v 1.6 2007/02/09 05:11:18 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-fwutils/ChangeLog,v 1.7 2012/07/06 19:31:10 steev Exp $
+
+*orinoco-fwutils-0.3 (06 Jul 2012)
+
+  06 Jul 2012; Steev Klimaszewski <steev@gentoo.org>
+  orinoco-fwutils-0.1.ebuild, -orinoco-fwutils-0.2.ebuild,
+  +orinoco-fwutils-0.3.ebuild:
+  Version bump for orinoco-fwutils. Remove 0.2 which was unstable. Fix quoting
+  issues, as well as headers.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

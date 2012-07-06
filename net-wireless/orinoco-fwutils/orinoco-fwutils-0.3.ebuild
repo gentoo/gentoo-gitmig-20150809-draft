@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-fwutils/orinoco-fwutils-0.2.ebuild,v 1.2 2007/05/10 08:42:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-fwutils/orinoco-fwutils-0.3.ebuild,v 1.1 2012/07/06 19:31:10 steev Exp $
 
 DESCRIPTION="ORiNOCO IEEE 802.11 wireless LAN firmware utilities"
 HOMEPAGE="http://www.nongnu.org/orinoco/"
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 
 	# fix paths
-	for file in ${S}/get_*; do
+	for file in "${S}"/get_*; do
 		sed -i \
 			-e "s:parse_:/usr/bin/parse_:g" \
 			-e "s:\./::g" \
