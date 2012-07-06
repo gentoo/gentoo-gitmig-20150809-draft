@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.13.1.ebuild,v 1.1 2012/07/06 13:27:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.13.1.ebuild,v 1.2 2012/07/06 15:09:50 ago Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/${MY_P}.tar.gz
 	 mirror://gentoo/gentoo-asterisk-patchset-1.13.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE_VOICEMAIL_STORAGE="
 	+voicemail_storage_file
