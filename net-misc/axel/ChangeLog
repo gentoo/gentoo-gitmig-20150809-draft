@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/axel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.62 2012/07/06 15:13:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.63 2012/07/06 15:24:02 jlec Exp $
+
+  06 Jul 2012; Justin Lecher <jlec@gentoo.org> axel-2.4-r2.ebuild,
+  +files/axel-2.4-max-redir.patch:
+  Increase max redirections to 25, as this services like github need this
 
 *axel-2.4-r2 (06 Jul 2012)
 

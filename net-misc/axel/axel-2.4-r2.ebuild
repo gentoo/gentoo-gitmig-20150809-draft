@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-2.4-r2.ebuild,v 1.1 2012/07/06 15:13:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-2.4-r2.ebuild,v 1.2 2012/07/06 15:24:02 jlec Exp $
 
 EAPI=4
 
@@ -26,7 +26,8 @@ src_prepare() {
 	append-lfs-flags
 	epatch \
 		"${FILESDIR}"/${P}-buildsystem.patch \
-		"${FILESDIR}"/${P}-bffr-overflow.patch
+		"${FILESDIR}"/${P}-bffr-overflow.patch \
+		"${FILESDIR}"/${P}-max-redir.patch
 	tc-export CC
 }
 
