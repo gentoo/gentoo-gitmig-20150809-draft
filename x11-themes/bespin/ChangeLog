@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/bespin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.1 2012/07/04 02:20:21 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.2 2012/07/06 22:33:11 creffett Exp $
+
+*bespin-0_p20120703-r1 (06 Jul 2012)
+
+  06 Jul 2012; Chris Reffett <creffett@gentoo.org>
+  +bespin-0_p20120703-r1.ebuild, -bespin-0_p20120703.ebuild, metadata.xml:
+  Revision bumped, removed old. Changed description, added windeco, kde and
+  plasma USEs, and made KDE optional (since package does not require it). Credit
+  to Franz Fellner (alpine.art.de@googlemail.com)
 
 *bespin-0_p20120703 (04 Jul 2012)
 
