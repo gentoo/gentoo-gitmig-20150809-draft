@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13932 2012/07/06 21:21:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13933 2012/07/06 23:12:39 naota Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Naohiro Aota <naota@gentoo.org> (07 Jul 2012) 
+# Masked for removal in 30 days. Dead upstream and
+# can be replaced with dev-db/textsearch-ja. #425038
+dev-db/pgmecab
 
 # Mike Gilbert <floppym@gentoo.org> (06 Jul 2012)
 # Masked for testing per Arfrever.
