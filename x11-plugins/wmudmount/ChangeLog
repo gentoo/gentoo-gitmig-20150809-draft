@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmudmount
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.13 2012/07/06 08:32:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.14 2012/07/06 12:48:40 ssuominen Exp $
+
+*wmudmount-1.13 (06 Jul 2012)
+
+  06 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> +wmudmount-1.13.ebuild,
+  +files/wmudmount-headers.patch:
+  Version bump.
 
   06 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -wmudmount-1.8.ebuild,
   -files/wmudmount-1.8-libnotify-0.7.patch:
