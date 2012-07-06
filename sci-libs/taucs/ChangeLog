@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/taucs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/ChangeLog,v 1.7 2012/05/04 08:22:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/ChangeLog,v 1.8 2012/07/06 19:01:37 bicatali Exp $
+
+  06 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/taucs-2.2-no-test-cilk.patch, taucs-2.2.ebuild:
+  Remove buggy cilk from tests and cleanup shared library building
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> taucs-2.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -25,4 +29,3 @@
   27 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +taucs-2.2.ebuild:
   Initial import
-
