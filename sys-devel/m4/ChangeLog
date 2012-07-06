@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.158 2012/06/28 12:43:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.159 2012/07/06 04:22:53 vapier Exp $
+
+  06 Jul 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/m4-1.4.16-no-gets.patch, m4-1.4.16.ebuild:
+  Fix building with glibc-2.16 #424978 by Stevan Bajić.
 
   28 Jun 2012; Brent Baude <ranger@gentoo.org> m4-1.4.16.ebuild:
   Marking m4-1.4.16 ppc for bug 423239

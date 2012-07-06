@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.16.ebuild,v 1.8 2012/06/28 12:43:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.16.ebuild,v 1.9 2012/07/06 04:22:53 vapier Exp $
 
 EAPI="3"
 
@@ -21,6 +21,7 @@ RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-test-readlink.patch #376639
+	epatch "${FILESDIR}"/${P}-no-gets.patch #424978
 }
 
 src_configure() {
