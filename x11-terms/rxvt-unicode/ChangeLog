@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.221 2012/06/18 02:42:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.222 2012/07/06 16:20:03 jer Exp $
+
+  06 Jul 2012; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.15-r1.ebuild,
+  +files/rxvt-unicode-9.15-xsubpp.patch:
+  Fix building against >perl-core/ExtUtils-ParseX-3 (reported by Keshav Kini in
+  bug #424697).
 
 *rxvt-unicode-9.15-r1 (18 Jun 2012)
 

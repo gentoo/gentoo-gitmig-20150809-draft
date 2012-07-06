@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15-r1.ebuild,v 1.1 2012/06/18 02:42:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15-r1.ebuild,v 1.2 2012/07/06 16:20:03 jer Exp $
 
 EAPI="4"
 
@@ -41,7 +41,9 @@ REQUIRED_USE="vanilla? ( !alt-font-width !buffer-on-clear focused-urgency !secon
 
 src_prepare() {
 	# fix for prefix not installing properly
-	epatch "${FILESDIR}"/${PN}-9.06-case-insensitive-fs.patch
+	epatch \
+		"${FILESDIR}"/${PN}-9.06-case-insensitive-fs.patch \
+		"${FILESDIR}"/${PN}-9.15-xsubpp.patch
 
 	if ! use afterimage && ! use pixbuf; then
 		einfo " + If you want transparency support, please enable either the *pixbuf*"
