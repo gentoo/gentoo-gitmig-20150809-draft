@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.8.ebuild,v 1.1 2012/07/05 13:50:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.9.ebuild,v 1.1 2012/07/06 13:38:49 jlec Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}-parallel.patch \
 		"${FILESDIR}"/7.0.6-impl-dec.patch \
-		"${FILESDIR}"/${PN}-7.0.7-buffer-overflow.patch \
+		"${FILESDIR}"/${P}-buffer-overflow.patch \
 		"${FILESDIR}"/${PN}-7.0.7-impl-dec.patch
 
 	rm -rf test.f {cbf,jpg}/*.{h,c} || die

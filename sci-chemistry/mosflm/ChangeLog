@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/mosflm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.17 2012/07/05 13:50:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.18 2012/07/06 13:38:49 jlec Exp $
+
+*mosflm-7.0.9 (06 Jul 2012)
+
+  06 Jul 2012; Justin Lecher <jlec@gentoo.org> -files/7.0.8-parallel.patch,
+  -mosflm-7.0.8.ebuild, +mosflm-7.0.9.ebuild,
+  +files/mosflm-7.0.9-buffer-overflow.patch, +files/7.0.9-parallel.patch:
+  Version Bump
 
 *mosflm-7.0.8 (05 Jul 2012)
 
