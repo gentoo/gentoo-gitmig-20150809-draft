@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.3 2012/07/06 14:31:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.4 2012/07/06 15:55:15 bicatali Exp $
 
 EAPI=4
 
@@ -95,8 +95,6 @@ src_prepare() {
 
 src_configure() {
 	mycmakeargs=(
-		-DUSE_RPATH=OFF
-		-DUSE_RELATIVE_PATH=OFF
 		-DDEFAULT_ALL_DEVICES=ON
 		-DTEST_DYNDRIVERS=OFF
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
