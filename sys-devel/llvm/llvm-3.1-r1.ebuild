@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r1.ebuild,v 1.1 2012/07/05 22:27:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r1.ebuild,v 1.2 2012/07/06 07:19:49 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -114,7 +114,7 @@ src_configure() {
 	if use multitarget; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
 	else
-		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host-only"
+		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host,cpp"
 	fi
 
 	if use amd64; then
