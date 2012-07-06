@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.98 2012/06/27 10:05:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.99 2012/07/06 07:50:51 jlec Exp $
+
+  06 Jul 2012; Justin Lecher <jlec@gentoo.org> -netcdf-3.6.3.ebuild:
+  Version 3* dropped, due to unfixed bfr overflow, #424976
 
   27 Jun 2012; Justin Lecher <jlec@gentoo.org> netcdf-3.6.3.ebuild,
   netcdf-4.1.1-r4.ebuild, metadata.xml:
