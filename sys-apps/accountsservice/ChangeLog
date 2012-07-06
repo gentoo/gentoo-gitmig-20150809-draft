@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.14 2012/07/05 21:45:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.15 2012/07/06 09:51:42 ago Exp $
+
+  06 Jul 2012; Agostino Sarubbo <ago@gentoo.org> accountsservice-0.6.22.ebuild:
+  Stable for amd64, wrt bug #424842
 
   05 Jul 2012; Jeff Horelick <jdhore@gentoo.org> accountsservice-0.6.22.ebuild:
   marked x86 per bug 424842
