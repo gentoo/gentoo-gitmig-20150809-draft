@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/imosflm-1.0.7.ebuild,v 1.1 2012/07/05 14:33:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/imosflm-1.0.7.ebuild,v 1.2 2012/07/06 13:39:21 jlec Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="
 	dev-tcltk/anigif
 	dev-tcltk/combobox
 	dev-tcltk/tablelist
-	>=sci-chemistry/mosflm-7.0.4"
+	>=sci-chemistry/mosflm-7.0.9"
 DEPEND="app-arch/unzip"
 
 S="${WORKDIR}"/${PN}
