@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libbtbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.4 2012/07/05 23:12:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.5 2012/07/06 21:15:21 zerochaos Exp $
+
+  06 Jul 2012; Rick Farina <zerochaos@gentoo.org> libbtbb-9999.ebuild:
+  fixing missing SRC_URI in live conditional
 
 *libbtbb-0.8 (05 Jul 2012)
 
