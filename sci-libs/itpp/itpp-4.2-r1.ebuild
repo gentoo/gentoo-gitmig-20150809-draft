@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.11 2012/05/04 08:22:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.12 2012/07/06 07:45:00 jlec Exp $
 
 EAPI=4
 
@@ -25,8 +25,9 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.0.7-fastica-fix-endless-loop.patch
-	"${FILESDIR}"/${PN}-4.2-fastica-correct-dim.patch
-	"${FILESDIR}"/${PN}-4.2-test-fftw.patch
+	"${FILESDIR}"/${P}-fastica-correct-dim.patch
+	"${FILESDIR}"/${P}-test-fftw.patch
+	"${FILESDIR}"/${P}-automake-1.12.patch
 	)
 
 src_prepare() {
@@ -34,9 +35,10 @@ src_prepare() {
 	use debug || append-flags -DNDEBUG
 	sed \
 		-e 's:-pipe::g' \
+		-e 's:-Werror::g' \
 		-i configure* || die
 	autotools-utils_src_prepare
-	eautoreconf
+	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_configure() {

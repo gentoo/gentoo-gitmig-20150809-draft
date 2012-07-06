@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.6.ebuild,v 1.10 2012/04/26 15:23:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.0.6.ebuild,v 1.11 2012/07/06 07:45:01 jlec Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="C++ library of mathematical, signal processing and communication"
 HOMEPAGE="http://itpp.sourceforge.net/"
