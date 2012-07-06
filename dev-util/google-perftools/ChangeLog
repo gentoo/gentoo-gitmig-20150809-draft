@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/google-perftools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.17 2012/06/25 06:28:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.18 2012/07/06 00:57:34 flameeyes Exp $
+
+*google-perftools-2.0 (06 Jul 2012)
+*google-perftools-1.10 (06 Jul 2012)
+
+  06 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +google-perftools-1.10.ebuild, +google-perftools-2.0.ebuild,
+  -files/google-perftools-1.7-syntax.patch, -google-perftools-1.6.ebuild,
+  -google-perftools-1.7.ebuild:
+  Version bump  (both 1.10 and 2.0, the latter masked). Remove old versions.
 
   25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> google-perftools-1.8.3.ebuild:
   marked x86 per bug 418445
@@ -89,4 +98,3 @@
   Initial import of google's perftools package, from Sven Wegener
   (swegener)'s overlay, upon request by Pavel Stratil. Tests restricted as
   per bug #290249.
-

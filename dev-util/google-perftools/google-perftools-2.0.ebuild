@@ -1,25 +1,26 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-1.7.ebuild,v 1.1 2011/03/06 12:50:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0.ebuild,v 1.1 2012/07/06 00:57:34 flameeyes Exp $
 
-EAPI=2
+EAPI=4
+
+MY_P="gperftools-${PV}"
 
 inherit toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="Fast, multi-threaded malloc() and nifty performance analysis tools"
-HOMEPAGE="http://code.google.com/p/google-perftools/"
-SRC_URI="http://google-perftools.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/gperftools/"
+SRC_URI="http://gperftools.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="largepages +debug minimal" # test"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+IUSE="largepages +debug minimal test"
 
 DEPEND="sys-libs/libunwind"
 RDEPEND="${DEPEND}"
 
-# tests end up in an infinite loop, even without sandbox
-RESTRICT=test
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	# set up the make options in here so that we can actually make use
@@ -29,17 +30,12 @@ pkg_setup() {
 	# tests; this trick here allows us to ignore the tests without
 	# touching the build system (and thus without rebuilding
 	# autotools). Keep commented as long as it's restricted.
-
-	# use test && \
+	use test || \
 		makeopts="${makeopts} noinst_PROGRAMS= "
 
 	# don't install _anything_ from the documentation, since it would
 	# install it in non-standard locations, and would just waste time.
 	makeopts="${makeopts} dist_doc_DATA= "
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-syntax.patch"
 }
 
 src_configure() {
@@ -56,7 +52,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake ${makeopts} || die "emake failed"
+	emake ${makeopts}
 }
 
 src_test() {
@@ -68,17 +64,17 @@ src_test() {
 			;;
 	esac
 
-	emake check || die "tests failed"
+	emake check
 }
 
 src_install() {
-	emake DESTDIR="${D}" install ${makeopts} || die "emake install failed"
+	emake DESTDIR="${D}" install ${makeopts}
 
 	# Remove libtool files since we dropped the static libraries
 	find "${D}" -name '*.la' -delete
 
-	dodoc README AUTHORS ChangeLog TODO NEWS || die
+	dodoc README AUTHORS ChangeLog TODO NEWS
 	pushd doc
-	dohtml -r * || die
+	dohtml -r *
 	popd
 }
