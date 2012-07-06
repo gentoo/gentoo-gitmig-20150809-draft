@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.17 2012/05/25 09:49:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.18 2012/07/06 00:02:54 flameeyes Exp $
+
+*childprocess-0.3.3 (06 Jul 2012)
+
+  06 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +childprocess-0.3.3.ebuild, -childprocess-0.3.2.ebuild:
+  Version bump; use the new rspec support in the eclasses; remove git references
+  from gemfile.
 
   25 May 2012; Hans de Graaff <graaff@gentoo.org> -childprocess-0.2.3.ebuild,
   -childprocess-0.2.5.ebuild, -childprocess-0.3.0.ebuild,
@@ -83,4 +90,3 @@
   20 Feb 2011; Hans de Graaff <graaff@gentoo.org>
   +childprocess-0.1.7.ebuild, +metadata.xml:
   Initial import. Dependency for forthcoming dev-util/aruba.
-
