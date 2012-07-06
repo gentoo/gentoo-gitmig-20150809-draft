@@ -1,6 +1,9 @@
 # ChangeLog for virtual/awk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/awk/ChangeLog,v 1.1 2012/06/04 02:52:17 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/awk/ChangeLog,v 1.2 2012/07/06 02:49:22 ottxor Exp $
+
+  06 Jul 2012; Christoph Junghans <ottxor@gentoo.org> awk-0.ebuild:
+  add ~x86-macos
 
 *awk-0 (04 Jun 2012)
 
