@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.8.4.ebuild,v 1.1 2012/06/21 21:54:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.8.4.ebuild,v 1.2 2012/07/06 20:52:53 dilfridge Exp $
 
 EAPI=4
 
@@ -18,6 +18,10 @@ IUSE="debug designer-plugin gps +kde plasma python"
 # RESTRICT=test
 
 DEPEND="
+	x11-libs/qt-core
+	x11-libs/qt-gui[dbus]
+	x11-libs/qt-script
+	x11-libs/qt-webkit
 	gps? ( >=sci-geosciences/gpsd-2.95[qt4] )
 	python? (
 		>=dev-python/PyQt4-4.4.4-r1
@@ -26,6 +30,8 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 "
+# the qt dependencies are needed because with USE=-kde nothing is pulled in
+# by default... bug 414165
 
 REQUIRED_USE="
 	plasma? ( kde )

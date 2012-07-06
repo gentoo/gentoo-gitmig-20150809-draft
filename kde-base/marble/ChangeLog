@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.143 2012/06/21 21:54:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.144 2012/07/06 20:52:53 dilfridge Exp $
+
+  06 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> marble-4.8.3.ebuild,
+  marble-4.8.4.ebuild:
+  Add manual qt dependencies for the USE=-kde case, bug 414165
 
 *marble-4.8.4 (21 Jun 2012)
 
