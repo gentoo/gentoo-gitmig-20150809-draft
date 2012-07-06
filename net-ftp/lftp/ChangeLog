@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.367 2012/07/06 13:58:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.368 2012/07/06 14:43:36 jer Exp $
+
+  06 Jul 2012; Jeroen Roovers <jer@gentoo.org> files/lftp-4.3.8-gets.patch:
+  Move the #endif so it applies where it counts.
 
   06 Jul 2012; Jeroen Roovers <jer@gentoo.org> lftp-4.3.8.ebuild,
   +files/lftp-4.3.8-gets.patch:
