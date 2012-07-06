@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.156 2012/07/04 19:05:03 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.157 2012/07/06 19:37:07 mabi Exp $
+
+  06 Jul 2012; Matti Bickel <mabi@gentoo.org> fox-1.7.33.ebuild:
+  backport compile fix for x86 (bug #425032)
 
 *fox-1.6.45 (04 Jul 2012)
 

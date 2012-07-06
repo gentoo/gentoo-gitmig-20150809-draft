@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.33.ebuild,v 1.1 2012/07/04 18:55:52 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.33.ebuild,v 1.2 2012/07/06 19:37:07 mabi Exp $
 
 EAPI=4
 
@@ -28,6 +28,12 @@ RDEPEND="x11-libs/libXrandr
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-libs/libXt"
+
+src_prepare() {
+	# remove those in 1.7.34 (bug #425032)
+	sed -i -e '301s/)$/))/' lib/FXAtomic.cpp
+	sed -i -e '311s/TBool/FXbool/' lib/FXAtomic.cpp
+}
 
 src_configure() {
 	FOXCONF="$(use_enable bzip2 bz2lib) \
