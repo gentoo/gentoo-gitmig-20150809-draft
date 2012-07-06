@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.1 2012/06/16 20:08:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.2 2012/07/06 03:53:51 bicatali Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl Data Language for scientific computing"
 
 LICENSE="Artistic as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+badval doc fftw fortran gd gsl hdf netpbm opengl pdl2 proj pgplot plplot threads"
 
 RDEPEND="sys-libs/ncurses
@@ -60,6 +60,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.11-fortran.patch
 	# search for shared hdf instead of static
 	epatch "${FILESDIR}"/${PN}-2.4.11-shared-hdf.patch
+	find . -name Makefile.PL -exec \
+		sed -i -e "s|/usr|${EPREFIX}/usr|g" {} \; || die
 }
 
 src_configure() {
@@ -89,26 +91,18 @@ src_test() {
 
 src_install() {
 	perl-module_src_install
-	insinto /${VENDOR_ARCH}/PDL/Doc
-	doins Doc/{scantree.pl,mkhtmldoc.pl}
+	cp Doc/{scantree.pl,mkhtmldoc.pl} \
+		"${D}"/${VENDOR_ARCH}/PDL/Doc/ || die
 }
 
 pkg_postinst() {
-	if [[ ${EROOT} = / ]] ; then
-		perl ${VENDOR_ARCH}/PDL/Doc/scantree.pl
-		elog "Building perldl.db done. You can recreatethis at any time"
-		elog "by running"
-	else
-		elog "You must create perldl.db by running"
-	fi
+	perl ${VENDOR_ARCH}/PDL/Doc/scantree.pl || die
+	elog "Building perldl.db done. You can recreate this at any time"
+	elog "by running:"
 	elog "perl ${VENDOR_ARCH}/PDL/Doc/scantree.pl"
-	elog "PDL requires that glx and dri support be enabled in"
-	elog "your X configuration for certain parts of the graphics"
-	elog "engine to work. See your X's documentation for futher"
-	elog "information."
 }
 
 pkg_prerm() {
 	rm -rf "${EROOT}"/var/lib/pdl/html
-	rm -f  "${EROOT}"/var/lib/pdl/pdldoc.db "${EROOT}"/var/lib/pdl/Index.pod
+	rm -f  "${EROOT}"/var/lib/pdl/{pdldoc.db,Index.pod}
 }

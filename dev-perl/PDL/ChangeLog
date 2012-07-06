@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.100 2012/06/24 12:59:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.101 2012/07/06 03:53:51 bicatali Exp $
+
+  06 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> PDL-2.4.11.ebuild:
+  Prefix fixes and keywording amd64-linux, x86-linux
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
