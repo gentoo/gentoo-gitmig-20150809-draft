@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6750 2012/07/05 22:14:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6751 2012/07/06 00:44:42 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask google-perftools-2 (gperftools) until tested.
 
   05 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove obsolete mask of mDNSResponder
