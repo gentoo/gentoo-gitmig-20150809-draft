@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.11.1.ebuild,v 1.8 2012/02/13 09:58:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.11.1.ebuild,v 1.9 2012/07/06 04:21:44 vapier Exp $
 
 EAPI="2"
 
@@ -21,6 +21,10 @@ DEPEND="sys-apps/texinfo
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-no-gets.patch #424994
+}
 
 src_configure() {
 	strip-linguas -u po
