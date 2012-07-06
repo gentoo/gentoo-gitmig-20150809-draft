@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101.ebuild,v 1.3 2012/07/06 12:29:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r1.ebuild,v 1.1 2012/07/06 18:41:14 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -136,7 +136,7 @@ src_install() {
 		network/network.conf \
 		serial/serial.conf
 
-	newinitd "${FILESDIR}/bluetooth-init.d-r1" bluetooth
+	newinitd "${FILESDIR}/bluetooth-init.d-r2" bluetooth
 	newinitd "${FILESDIR}/rfcomm-init.d" rfcomm
 	newconfd "${FILESDIR}/rfcomm-conf.d" rfcomm
 
@@ -148,7 +148,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	udevadm control --reload-rules && udevadm trigger --subsystem-match=bluetooth
+	udevadm control --reload-rules
 
 	if ! has_version "net-dialup/ppp"; then
 		elog "To use dial up networking you must install net-dialup/ppp."
@@ -166,8 +166,7 @@ pkg_postinst() {
 
 	if [ "$(rc-config list default | grep bluetooth)" = "" ] ; then
 		elog "You will need to add bluetooth service to default runlevel"
-		elog "for getting your devices detected from startup without needing"
-		elog "to reconnect them. For that please run:"
+		elog "for getting your devices detected. For that please run:"
 		elog "'rc-update add bluetooth default'"
 	fi
 }
