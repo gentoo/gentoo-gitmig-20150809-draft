@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/unuran
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/ChangeLog,v 1.10 2012/07/06 08:07:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/unuran/ChangeLog,v 1.11 2012/07/06 23:47:30 bicatali Exp $
+
+  06 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> unuran-1.8.1.ebuild:
+  fixed examples installation directory, bug #424942
 
   06 Jul 2012; Justin Lecher <jlec@gentoo.org> unuran-1.8.1.ebuild:
   Korrekt typo in keywords amd64 -> amd64-linux
@@ -50,4 +53,3 @@
   16 Oct 2010; Sébastien Fabbro <bicatali@gentoo.org> +unuran-1.7.1.ebuild,
   +files/unuran-1.7.1-nogsl.patch, +metadata.xml:
   Initial import
-

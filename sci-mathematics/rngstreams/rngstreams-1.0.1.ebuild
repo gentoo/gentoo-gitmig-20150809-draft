@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rngstreams/rngstreams-1.0.1.ebuild,v 1.6 2012/07/05 16:23:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rngstreams/rngstreams-1.0.1.ebuild,v 1.7 2012/07/06 23:47:04 bicatali Exp $
 
 EAPI=4
 
@@ -19,7 +19,8 @@ src_install() {
 	autotools-utils_src_install
 	use doc && dohtml -r doc/rngstreams.html/* && dodoc doc/${PN}.pdf
 	if use examples; then
-		rm -f examples/Makefile* || die
+		rm examples/Makefile*
+		insinto /ust/share/doc/${PF}
 		doins -r examples
 	fi
 }

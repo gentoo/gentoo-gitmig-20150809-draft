@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/rngstreams
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rngstreams/ChangeLog,v 1.6 2012/07/05 16:23:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rngstreams/ChangeLog,v 1.7 2012/07/06 23:47:04 bicatali Exp $
+
+  06 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> rngstreams-1.0.1.ebuild:
+  fixed examples installation directory, bug #424942
 
   05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> rngstreams-1.0.1.ebuild:
   Stable for amd64, wrt bug #424711
@@ -27,4 +30,3 @@
   16 Oct 2010; Sébastien Fabbro <bicatali@gentoo.org>
   +rngstreams-1.0.1.ebuild, +metadata.xml:
   Initial import
-
