@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13930 2012/07/06 07:41:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13931 2012/07/06 21:20:29 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (06 Jul 2012)
+# Masked for testing per Arfrever.
+dev-libs/boost:1.50
+dev-libs/boost-build:1.50
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (6 Jul 2012)
 # Masked for testing — Tinderbox will run before this is unmasked.
