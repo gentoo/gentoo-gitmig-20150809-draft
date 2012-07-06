@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/gspeakers-0.11-r1.ebuild,v 1.7 2012/07/05 06:53:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/gspeakers-0.11-r1.ebuild,v 1.8 2012/07/06 05:12:52 tomjbe Exp $
 
 EAPI="1"
 
@@ -29,6 +29,7 @@ DOCS="AUTHORS ChangeLog NEWS README* TODO"
 
 src_unpack() {
 	gnome2_src_unpack
+	sed -i -e "s/-O0//" src/Makefile.am
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
 }
