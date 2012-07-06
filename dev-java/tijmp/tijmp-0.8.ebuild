@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tijmp/tijmp-0.8.ebuild,v 1.5 2010/05/25 21:42:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tijmp/tijmp-0.8.ebuild,v 1.6 2012/07/06 10:55:32 sera Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ DEPEND=">=virtual/jdk-1.6"
 
 java_prepare() {
 	epatch "${FILESDIR}/${PN}-jni.h.patch"
+	epatch "${FILESDIR}/${P}-respect-javacflags.patch"
 	eautoreconf
 }
 
