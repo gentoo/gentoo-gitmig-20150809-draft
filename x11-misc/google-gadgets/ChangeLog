@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.47 2012/06/27 09:48:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.48 2012/07/06 13:00:15 voyageur Exp $
+
+  06 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  google-gadgets-0.11.2.ebuild,
+  +files/google-gadgets-0.11.2-configure_ggl_nm.patch,
+  +files/google-gadgets-0.11.2-networkmanager-0.9.patch:
+  Fix networkmanager detection, add support for 0.9, clean ebuild a bit. Fixes
+  bug #425024
 
   27 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
   google-gadgets-0.11.2.ebuild, +files/google-gadgets-0.11.2-gcc-4.7.patch:

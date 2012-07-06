@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.17 2012/06/27 09:48:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.18 2012/07/06 13:00:15 voyageur Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime multilib
@@ -16,6 +16,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 x86"
 IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification webkit"
+REQUIRED_USE="|| ( gtk qt4 )"
 
 # Weird things happen when we start mix-n-matching, so for the time being
 # I've just locked the deps to the versions I had as of Summer 2008. With any
@@ -51,11 +52,9 @@ RDEPEND="
 	)
 	soup? ( >=net-libs/libsoup-2.26:2.4 )
 	startup-notification? ( x11-libs/startup-notification )
-	webkit? ( >=net-libs/webkit-gtk-1.0.3:2 )
-"
+	webkit? ( >=net-libs/webkit-gtk-1.0.3:2 )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
@@ -64,15 +63,6 @@ RESTRICT="test"
 DOCS="ChangeLog README"
 
 pkg_setup() {
-	# If a non-google, non-qt4 and non-gtk host system for google-gadgets is ever developed,
-	# I'll consider changing the error below.
-	if ! use gtk && ! use qt4; then
-		eerror "You must choose which toolkit to build for. Either qt4 or gtk can be"
-		eerror "chosen. For qt4, see also above. To enable \$toolkit, do:"
-		eerror "echo \"${CATEGORY}/${PN} \$toolkit\" >> /etc/portage/package.use"
-		die "You need to choose a toolkit"
-	fi
-
 	if ! use gstreamer; then
 		ewarn "Disabling gstreamer disables the multimedia functions of ${PN}."
 		ewarn "This is not recommended. To enable gstreamer, do:"
@@ -81,12 +71,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-configure_ggl_nm.patch
 	epatch "${FILESDIR}"/${P}-glib-2.31.patch
 	epatch "${FILESDIR}"/${P}-gcc-4.7.patch
-
-	sed -i -r \
-		-e '/^GGL_SYSDEPS_INCLUDE_DIR/ c\GGL_SYSDEPS_INCLUDE_DIR=$GGL_INCLUDE_DIR' \
-		configure.ac || die
+	epatch "${FILESDIR}"/${P}-networkmanager-0.9.patch
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 385477.
 	has_version '>=sys-libs/zlib-1.2.5.1-r1' && sed -i -e \
@@ -108,6 +96,7 @@ src_configure() {
 		$(use_enable dbus libggadget-dbus) \
 		$(use_enable gstreamer gst-audio-framework) \
 		$(use_enable gstreamer gst-video-element) \
+		$(use_with networkmanager) \
 		$(use_enable soup soup-xml-http-request) \
 		$(use_enable webkit webkit-script-runtime) \
 		$(use_enable webkit gtkwebkit-browser-element) \
