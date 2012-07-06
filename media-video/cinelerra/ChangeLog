@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.56 2012/05/16 09:03:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.57 2012/07/06 14:42:35 aballier Exp $
+
+  06 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  +files/cinelerra-ffmpeg-0.11.patch, cinelerra-20111223.ebuild:
+  fix build with ffmpeg 0.11 and git master
 
   16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -cinelerra-20101104.ebuild,
   -files/cinelerra-v4l1_removal.patch:
