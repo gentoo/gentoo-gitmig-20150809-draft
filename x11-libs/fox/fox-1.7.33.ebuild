@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.33.ebuild,v 1.2 2012/07/06 19:37:07 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.33.ebuild,v 1.3 2012/07/06 19:54:20 mabi Exp $
 
 EAPI=4
 
@@ -33,6 +33,8 @@ src_prepare() {
 	# remove those in 1.7.34 (bug #425032)
 	sed -i -e '301s/)$/))/' lib/FXAtomic.cpp
 	sed -i -e '311s/TBool/FXbool/' lib/FXAtomic.cpp
+
+	fox_src_prepare
 }
 
 src_configure() {
