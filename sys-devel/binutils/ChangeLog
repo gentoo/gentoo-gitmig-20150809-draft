@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.450 2012/06/15 23:31:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.451 2012/07/06 04:10:45 vapier Exp $
+
+*binutils-2.22.52.0.4 (06 Jul 2012)
+
+  06 Jul 2012; Mike Frysinger <vapier@gentoo.org> +binutils-2.22.52.0.4.ebuild:
+  Version bump.
 
   15 Jun 2012; Naohiro Aota <naota@gentoo.org> binutils-2.22-r1.ebuild:
   Add ~x86-fbsd.
