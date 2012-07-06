@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.65.ebuild,v 1.8 2012/07/01 16:51:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.65.ebuild,v 1.9 2012/07/06 17:54:12 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -16,12 +16,15 @@ IUSE="build doc epydoc +ipc linguas_pl pypy1_9 python2 python3 selinux xattr"
 
 # Import of the io module in python-2.6 raises ImportError for the
 # thread module if threading is disabled.
-python_dep="python3? ( =dev-lang/python-3* )
+python_dep_ssl="python3? ( =dev-lang/python-3*[ssl] )
 	!pypy1_9? ( !python2? ( !python3? (
-		|| ( >=dev-lang/python-2.7 dev-lang/python:2.6[threads] )
+		|| ( >=dev-lang/python-2.7[ssl] dev-lang/python:2.6[threads,ssl] )
 	) ) )
-	pypy1_9? ( !python2? ( !python3? ( dev-python/pypy:1.9[bzip2] ) ) )
-	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) ) )"
+	pypy1_9? ( !python2? ( !python3? ( dev-python/pypy:1.9[bzip2,ssl] ) ) )
+	python2? ( !python3? ( || ( dev-lang/python:2.7[ssl] dev-lang/python:2.6[ssl,threads] ) ) )"
+python_dep="${python_dep_ssl//\[ssl\]}"
+python_dep="${python_dep//,ssl}"
+python_dep="${python_dep//ssl,}"
 
 # The pysqlite blocker is for bug #282760.
 DEPEND="${python_dep}
@@ -33,7 +36,8 @@ DEPEND="${python_dep}
 # quite slow, so it's not considered in the dependencies as an alternative to
 # to python-3.3 / pyxattr. Also, xattr support is only tested with Linux, so
 # for now, don't pull in xattr deps for other kernels.
-RDEPEND="${python_dep}
+# For whirlpool hash, require python[ssl] or python-mhash (bug #425046).
+RDEPEND="${python_dep} || ( ${python_dep_ssl} dev-python/python-mhash )
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
 		>=app-admin/eselect-1.2 )
