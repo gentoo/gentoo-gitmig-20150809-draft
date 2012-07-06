@@ -1,6 +1,24 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.155 2012/07/04 19:14:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.156 2012/07/06 07:37:05 ssuominen Exp $
+
+  06 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -files/1001-xulrunner_fix_jemalloc_vs_aslr.patch, -files/libnotify-0.7.patch,
+  -files/enigmail-1.1.2-20110124-locale-fixup.diff,
+  -files/enigmail-1.3.3-bug373733.patch,
+  -files/thunderbird-xul-1.9.2-arm-fixes.patch,
+  -files/1002_fix-system-hunspell-dict-detections.patch,
+  -files/cups-1.4.4-fixup.patch, -files/xulrunner-1.9.2-gtk+-2.21.patch,
+  -files/thunderbird-gentoo-default-prefs-1.js,
+  -files/thunderbird-3.1-gcc45.patch,
+  -files/2000-thunderbird_gentoo_install_dirs.patch,
+  -thunderbird-3.1.12.ebuild, -thunderbird-3.1.14.ebuild,
+  -files/thunderbird-3.1-noalsa-fixup.patch,
+  -files/thunderbird-3.3-gconf-config-update.patch, -files/bug-606109.patch,
+  -files/icon/thunderbird-icon.png, -files/icon/thunderbird-icon-unbranded.png,
+  -files/thunderbird-gentoo-default-prefs.js,
+  -files/thunderbird-respect-ldflags.patch:
+  old
 
   04 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> thunderbird-10.0.4.ebuild,
   thunderbird-10.0.5.ebuild, thunderbird-13.0.ebuild:
