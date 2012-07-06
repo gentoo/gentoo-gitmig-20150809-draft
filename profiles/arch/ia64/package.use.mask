@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.84 2012/07/04 07:34:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.85 2012/07/06 07:42:19 ssuominen Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (30 Jun 2012)
 # Missing keywords for connman
@@ -146,7 +146,6 @@ dev-ruby/nokogiri ffi
 mail-client/thunderbird custom-optimization
 www-client/firefox custom-optimization
 www-client/seamonkey custom-optimization
-x11-plugins/enigmail custom-optimization
 
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
 # qt-multimedia is not keyworded, bug 293671

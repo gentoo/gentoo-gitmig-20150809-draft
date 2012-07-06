@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.135 2012/07/04 07:25:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.136 2012/07/06 07:42:13 ssuominen Exp $
+
+  06 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove unnecessary x11-plugins/enigmail entry.
 
   04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Remove obsolete entries for net-libs/xulrunner and www-client/icecat wrt
