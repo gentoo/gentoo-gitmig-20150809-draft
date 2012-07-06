@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.14-r1.ebuild,v 1.4 2012/05/04 07:33:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.14-r1.ebuild,v 1.5 2012/07/06 03:16:12 jdhore Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://samba.org/ftp/tevent/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4.2
