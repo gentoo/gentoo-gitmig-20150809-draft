@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.8.5.ebuild,v 1.2 2012/07/06 14:07:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.8.5.ebuild,v 1.3 2012/07/06 17:49:59 jdhore Exp $
 
 EAPI=4
 inherit toolchain-funcs flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}/archive/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc gnuplot"
 
 DEPEND="sys-libs/readline
