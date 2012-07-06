@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.4.ebuild,v 1.13 2012/04/26 15:39:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.4.ebuild,v 1.14 2012/07/06 02:44:16 zerochaos Exp $
 
 EAPI="4"
 
@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	sed -e "/CFLAGS=/s: -ggdb3::" -i configure.ac || die "sed failed"
 	epatch "${FILESDIR}"/${P}-darwin-shlink.patch
+	epatch "${FILESDIR}"/${P}-missing-libm-link.patch
 	sed -i -e 's/solaris\*)/sunldsolaris*)/' configure.ac || die
 	eautoreconf
 }
