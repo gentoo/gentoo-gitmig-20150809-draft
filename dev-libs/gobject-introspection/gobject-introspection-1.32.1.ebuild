@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.5 2012/06/04 07:30:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.6 2012/07/07 13:00:03 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.7"
 PYTHON_USE_WITH="xml"
 
-inherit gnome2 python
+inherit gnome2 python toolchain-funcs
 
 DESCRIPTION="Introspection infrastructure for generating gobject library bindings for various languages"
 HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
@@ -33,6 +33,9 @@ DEPEND="${RDEPEND}
 PDEPEND="x11-libs/cairo[glib]"
 
 pkg_setup() {
+	# To prevent crosscompiling problems, bug #414105
+	CC=$(tc-getCC)
+
 	DOCS="AUTHORS CONTRIBUTORS ChangeLog NEWS README TODO"
 	G2CONF="${G2CONF}
 		--disable-static
