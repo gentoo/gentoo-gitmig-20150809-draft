@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.74.ebuild,v 1.2 2012/06/18 15:38:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.74.ebuild,v 1.3 2012/07/07 19:19:25 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 3.* *-jython 2.7-pypy-*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
-inherit flag-o-matic multilib python versionator
+inherit eutils flag-o-matic multilib python versionator
 
 MY_P="${PN}-$(delete_version_separator 2)_release"
 
@@ -36,6 +36,8 @@ src_prepare() {
 	sed -i \
 		-e 's/2\?>>[[:space:]]*\$(LOGFILE).*//' \
 		src/Makefile.in || die
+
+	epatch "${FILESDIR}/${P}-boost-1.50.patch"
 
 	python_clean_py-compile_files
 	python_src_prepare
