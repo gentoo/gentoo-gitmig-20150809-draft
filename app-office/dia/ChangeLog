@@ -1,6 +1,11 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.145 2012/06/09 16:02:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.146 2012/07/07 15:49:05 mgorny Exp $
+
+  07 Jul 2012; Michał Górny <mgorny@gentoo.org>
+  +files/dia-0.97.2-underlinking.patch, dia-0.97.2-r1.ebuild:
+  Fix underlinking (bug #420685). Also remove intltoolize call which is
+  redundant with newer eautoreconf.
 
   09 Jun 2012; Justin Lecher <jlec@gentoo.org> dia-0.97.2-r1.ebuild:
   Prefix fix

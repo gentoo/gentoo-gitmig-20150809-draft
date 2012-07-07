@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r1.ebuild,v 1.3 2012/06/09 16:02:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r1.ebuild,v 1.4 2012/07/07 15:49:05 mgorny Exp $
 
 EAPI=4
 
@@ -69,6 +69,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.97.0-gnome-doc.patch #159831
 	epatch "${FILESDIR}"/${PN}-0.97.2-glib-2.31.patch #401331
+	epatch "${FILESDIR}"/${PN}-0.97.2-underlinking.patch #420685
 
 	if use python; then
 		python_convert_shebangs -r 2 .
@@ -83,7 +84,6 @@ src_prepare() {
 	# Fix naming conflict on Darwin/OSX
 	sed -i -e 's/isspecial/char_isspecial/' objects/GRAFCET/boolequation.c || die
 
-	intltoolize --force --copy --automake || die
 	eautoreconf
 
 	gnome2_src_prepare
