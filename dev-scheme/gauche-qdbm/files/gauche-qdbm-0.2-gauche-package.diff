@@ -112,3 +112,13 @@
  
  distclean : clean
  	rm -rf $(CONFIG_GENERATED)
+--- Gauche-qdbm-0.2.orig/configure.ac
++++ Gauche-qdbm-0.2/configure.ac
+@@ -16,6 +16,7 @@
+ AC_LIB_LINKFLAGS(qdbm)
+ 
+ AC_GAUCHE_FIX_LIBS
++AC_GAUCHE_MAKE_GPD
+ 
+ echo $PACKAGE_VERSION > VERSION
+ AC_OUTPUT(Makefile)
