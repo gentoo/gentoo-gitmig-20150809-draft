@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-20.0.1132.47_beta144678.ebuild,v 1.5 2012/07/03 14:42:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-20.0.1132.47_beta144678.ebuild,v 1.6 2012/07/07 16:57:05 floppym Exp $
 
 EAPI="4"
 
@@ -114,6 +114,9 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${size}x${size}/apps
 		newins "${D}${CHROME_HOME}product_logo_${size}.png" google-chrome.png
 	done
+
+	# Compatibility symlink for newer udev, bug 423415.
+	dosym "/usr/$(get_libdir)/libudev.so" "${CHROME_HOME}libudev.so.0"
 }
 
 any_cpu_missing_flag() {
