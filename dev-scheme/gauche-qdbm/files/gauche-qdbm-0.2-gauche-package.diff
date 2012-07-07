@@ -114,11 +114,23 @@
  	rm -rf $(CONFIG_GENERATED)
 --- Gauche-qdbm-0.2.orig/configure.ac
 +++ Gauche-qdbm-0.2/configure.ac
-@@ -16,6 +16,7 @@
+@@ -4,18 +4,11 @@
+ AC_INIT(Gauche-qdbm, 0.2)
+ AC_CONFIG_SRCDIR(qdbm.c)
+ 
+-AC_CANONICAL_SYSTEM
+-
+ AC_GAUCHE_INIT_EXT
+-AC_GAUCHE_INSTALL_TYPE(site)
+ AC_GAUCHE_CC
+-AC_GAUCHE_FLAGS
+-
+-AC_PROG_INSTALL
+ 
  AC_LIB_LINKFLAGS(qdbm)
  
- AC_GAUCHE_FIX_LIBS
+-AC_GAUCHE_FIX_LIBS
+-
 +AC_GAUCHE_MAKE_GPD
- 
  echo $PACKAGE_VERSION > VERSION
  AC_OUTPUT(Makefile)
