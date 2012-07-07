@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6755 2012/07/06 23:12:39 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6756 2012/07/07 12:40:43 xmw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Jul 2012; Michael Weber <xmw@gentoo.org> package.mask:
+  sci-electronics/eagle-6.2.0_beta: Masked for testing only beta (bug 424866)
 
   06 Jul 2012; Naohiro Aota <naota@gentoo.org> package.mask:
   Mask dev-db/pgmecab for removal.
