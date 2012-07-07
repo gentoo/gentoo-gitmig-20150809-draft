@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.76 2012/07/01 22:11:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.77 2012/07/07 22:55:48 floppym Exp $
 
 EAPI=4
 
@@ -207,10 +207,9 @@ grub_src_install() {
 }
 
 src_prepare() {
-	local i j
-
 	if [[ ${PV} != 9999 ]]; then
-		epatch "${FILESDIR}/${P}-manpage-race.patch"
+		epatch "${FILESDIR}/${P}-parallel-make.patch" #424231
+		epatch "${FILESDIR}/${P}-no-gets.patch" #424703
 	fi
 
 	# fix texinfo file name, bug 416035
@@ -237,6 +236,7 @@ src_prepare() {
 
 	# get enabled platforms
 	GRUB_ENABLED_PLATFORMS=""
+	local i
 	for i in ${GRUB_PLATFORMS[@]}; do
 		use grub_platforms_${i} && GRUB_ENABLED_PLATFORMS+=" ${i}"
 	done
