@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.7 2012/06/14 02:17:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.8 2012/07/07 11:43:21 swegener Exp $
 
 EAPI=2
 
-inherit eutils multilib autotools user
+inherit eutils multilib autotools user toolchain-funcs
 
 DESCRIPTION="The PowerDNS Daemon"
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -61,6 +61,8 @@ src_configure() {
 }
 
 src_compile() {
+	emake -C pdns/ext/polarssl CC="$(tc-getCC)" OFLAGS="${CFLAGS}"
+
 	default
 
 	if use doc
