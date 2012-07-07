@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.14 2012/07/07 12:15:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.15 2012/07/07 14:12:18 hasufell Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -132,6 +132,9 @@ src_prepare() {
 	# Fix build failure, conflicting types for 'games_sound_init',
 	# in libgames-support/games_sound.c.
 	epatch "${FILESDIR}/${PN}-2.28.1-conflicting-types-libgames-support.patch"
+
+	# fix underlinking
+	epatch "${FILESDIR}"/${P}-underlinking.patch
 
 	# If calling eautoreconf, this ebuild uses libtool-2
 	eautoreconf
