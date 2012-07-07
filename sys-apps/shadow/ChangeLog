@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.270 2012/05/31 07:53:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.271 2012/07/07 03:29:19 vapier Exp $
+
+  07 Jul 2012; Mike Frysinger <vapier@gentoo.org> shadow-4.1.4.3.ebuild,
+  shadow-4.1.5.ebuild, shadow-4.1.5-r1.ebuild, shadow-4.1.5-r2.ebuild:
+  Fix building when rpc support is disabled #425052 by Dustin Polke.
 
   31 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> shadow-4.1.5.ebuild,
   shadow-4.1.5-r1.ebuild, shadow-4.1.5-r2.ebuild, metadata.xml:

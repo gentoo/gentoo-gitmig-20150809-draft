@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.3.ebuild,v 1.12 2012/03/26 22:01:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.3.ebuild,v 1.13 2012/07/07 03:29:19 vapier Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -50,6 +50,7 @@ src_compile() {
 		$(use_with selinux) \
 		$(use_enable nls) \
 		$(use_with elibc_glibc nscd)
+	has_version 'sys-libs/uclibc[-rpc]' && sed -i '/RLOGIN/d' config.h #425052
 	emake || die "compile problem"
 }
 
