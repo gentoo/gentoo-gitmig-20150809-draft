@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocaml-data-notation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.8 2012/05/05 14:20:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.9 2012/07/07 16:20:06 aballier Exp $
+
+*ocaml-data-notation-0.0.9 (07 Jul 2012)
+
+  07 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  +ocaml-data-notation-0.0.9.ebuild:
+  version bump, fixing bug #425078
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> -files/typeconv3.patch,
   -ocaml-data-notation-0.0.6.ebuild:
