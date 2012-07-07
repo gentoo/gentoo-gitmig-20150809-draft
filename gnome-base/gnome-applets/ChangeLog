@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.353 2012/05/24 08:44:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.354 2012/07/07 12:36:48 pacho Exp $
+
+*gnome-applets-2.32.1.1-r1 (07 Jul 2012)
+
+  07 Jul 2012; Pacho Ramos <pacho@gentoo.org> +gnome-applets-2.32.1.1-r1.ebuild,
+  metadata.xml:
+  Fix automagic dependencies on cpufreq (#390877) and other packages (#394893).
 
   24 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-applets-3.4.1.ebuild:
