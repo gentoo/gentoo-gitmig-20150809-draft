@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.63 2012/07/06 03:29:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.64 2012/07/07 08:03:03 ssuominen Exp $
+
+*clementine-1.0.1-r2 (07 Jul 2012)
+
+  07 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +clementine-1.0.1-r2.ebuild, +files/clementine-1.0.1-liblastfm-1.patch:
+  Import Fedora patch for compability with media-libs/liblastfm >= 1 wrt
+  #423241 by Ryan Hill
 
   06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> clementine-1.0.1-r1.ebuild:
   marked x86 per bug 419945
