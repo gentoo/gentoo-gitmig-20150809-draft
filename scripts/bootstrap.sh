@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.94 2011/11/17 01:51:06 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.95 2012/07/07 03:34:53 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.94 2011/11/17 01:51:06 jmbsvicetto Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.95 2012/07/07 03:34:53 vapier Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -119,11 +119,15 @@ else
 	export BOOTSTRAP_STAGE=0
 fi
 
-if type -P realpath > /dev/null ; then
-    MYPROFILEDIR=$(realpath /etc/make.profile)
-else
-    MYPROFILEDIR=$(readlink -f /etc/make.profile)
-fi
+for p in /etc/portage /etc ; do
+	p+="/make.profile"
+	[[ -e ${p} ]] || continue
+	if type -P realpath >/dev/null ; then
+		MYPROFILEDIR=$(realpath ${p})
+	else
+		MYPROFILEDIR=$(readlink -f ${p})
+	fi
+done
 if [[ ! -d ${MYPROFILEDIR} ]] ; then
 	eerror "Error:  '${MYPROFILEDIR}' does not exist.  Exiting."
 	exit 1
