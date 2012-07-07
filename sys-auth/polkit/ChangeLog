@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.97 2012/07/07 08:23:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.98 2012/07/07 08:24:53 ssuominen Exp $
+
+  07 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -polkit-0.106-r5.ebuild,
+  -polkit-0.106-r6.ebuild:
+  old
 
   07 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> polkit-0.106-r7.ebuild:
   Remove USE="debug" because --enable/--disable-verbose-mode is no-op wrt
