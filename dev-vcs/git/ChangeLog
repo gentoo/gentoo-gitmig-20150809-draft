@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.140 2012/07/03 19:28:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.141 2012/07/07 05:29:55 robbat2 Exp $
+
+*git-1.7.11.1 (07 Jul 2012)
+
+  07 Jul 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/git-1.7.11.1-optional-cvs.patch, +git-1.7.11.1.ebuild:
+  Version bump. Still suffers from bug #391707: git-svn failures.
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> git-1.7.8.6.ebuild:
   Stable for HPPA (bug #418381).
