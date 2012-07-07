@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1-r1.ebuild,v 1.4 2012/05/05 06:25:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1-r1.ebuild,v 1.5 2012/07/07 17:17:15 hasufell Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -89,6 +89,7 @@ pkg_setup() {
 	python_pkg_setup
 
 	G2CONF="${G2CONF}
+		--disable-silent-rules
 		--disable-schemas-compile
 		--disable-static
 		--enable-sound
