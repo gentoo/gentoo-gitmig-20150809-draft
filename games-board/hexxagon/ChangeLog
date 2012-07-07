@@ -1,6 +1,10 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.32 2012/05/04 04:30:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.33 2012/07/07 23:10:25 tristan Exp $
+
+  07 Jul 2012; Tristan Heaven <tristan@gentoo.org> hexxagon-1.0.1.ebuild,
+  +files/hexxagon-1.0.1-gcc47.patch:
+  Patch to fix building with gcc-4.7 from Daniel Johnson, bug #423465
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> hexxagon-1.0.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
