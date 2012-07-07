@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.13 2012/05/05 06:25:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.14 2012/07/07 12:15:48 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME_TARBALL_SUFFIX="bz2"
 WANT_AUTOMAKE="1.11"
 PYTHON_DEPEND="2"
 
@@ -119,8 +120,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# disable pyc compiling
-	echo > py-compile
+	python_clean_py-compile_files
+	python_convert_shebangs -r 2 .
 
 	# Fix implicit declaration of yylex.
 	epatch "${FILESDIR}/${PN}-2.26.3-implicit-declaration.patch"
