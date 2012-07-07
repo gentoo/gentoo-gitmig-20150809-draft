@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/leechcraft-networkmonitor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/leechcraft-networkmonitor/ChangeLog,v 1.13 2012/07/04 21:06:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/leechcraft-networkmonitor/ChangeLog,v 1.14 2012/07/07 10:18:32 johu Exp $
+
+  07 Jul 2012; Johannes Huber <johu@gentoo.org>
+  leechcraft-networkmonitor-0.5.70.ebuild:
+  Stable for x86, wrt bug #424613
 
   04 Jul 2012; Agostino Sarubbo <ago@gentoo.org>
   leechcraft-networkmonitor-0.5.70.ebuild:
