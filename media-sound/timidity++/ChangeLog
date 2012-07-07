@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.146 2012/06/09 23:24:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.147 2012/07/07 07:48:46 ssuominen Exp $
+
+*timidity++-2.14.0 (07 Jul 2012)
+
+  07 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +timidity++-2.14.0.ebuild, +files/timidity++-2.14.0-params.patch,
+  +files/timidity++-2.14.0-revert-for-required-ctl_speana_data-function.patch:
+  Version bump.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> timidity++-2.13.2-r13.ebuild,
   timidity++-2.13.2-r14.ebuild:
