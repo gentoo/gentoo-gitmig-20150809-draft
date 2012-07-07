@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.140 2012/05/28 13:58:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.141 2012/07/07 12:51:46 hattya Exp $
+
+  07 Jul 2012; Akinori Hattori <hattya@gentoo.org> -qdbm-1.8.77.ebuild:
+  remove old ebuild.
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> qdbm-1.8.78-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #404629
