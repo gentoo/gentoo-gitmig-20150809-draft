@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbterm/fbterm-1.7.ebuild,v 1.1 2012/06/21 17:41:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbterm/fbterm-1.7.ebuild,v 1.2 2012/07/07 07:49:23 yngwin Exp $
 
 EAPI="4"
 inherit autotools-utils
 
-DESCRIPTION="fast FrameBuffer based TERMinal emulator for Linux"
-HOMEPAGE="http://fbterm.googlecode.com"
+DESCRIPTION="Fast terminal emulator for the Linux framebuffer"
+HOMEPAGE="http://fbterm.googlecode.com/"
 SRC_URI="http://fbterm.googlecode.com/files/${P}.0.tar.gz"
 
 LICENSE="GPL-2"
@@ -18,7 +18,7 @@ RDEPEND="caps? ( sys-libs/libcap )
 	gpm? ( sys-libs/gpm )
 	video_cards_vesa? ( dev-libs/libx86 )
 	media-libs/fontconfig
-	>=media-libs/freetype-2"
+	media-libs/freetype:2"
 DEPEND="${RDEPEND}
 	sys-libs/ncurses
 	virtual/pkgconfig"
@@ -42,16 +42,16 @@ src_install() {
 	if use caps; then
 		setcap "cap_sys_tty_config+ep" "${ED}"/usr/bin/fbterm
 	else
-		fperm u+s /usr/bin/fbterm
+		fperms u+s /usr/bin/fbterm
 	fi
 }
 
 pkg_postinst() {
 	einfo
 	einfo " ${PN} won't work with vga16fb. You have to use other native"
-	einfo "framebuffer drivers or vesa driver."
-	einfo "  See ${EPREFIX}/usr/share/doc/${P}/README for details."
-	einfo "  To use ${PN}, ensure You are in video group."
-	einfo "  To input CJK merge \"app-i18n/fbterm-ucimf\""
+	einfo " framebuffer drivers or vesa driver."
+	einfo " See ${EPREFIX}/usr/share/doc/${P}/README for details."
+	einfo " To use ${PN}, ensure you are in video group."
+	einfo " To input CJK merge app-i18n/fbterm-ucimf"
 	einfo
 }
