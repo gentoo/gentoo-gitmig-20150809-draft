@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.29.ebuild,v 1.2 2009/12/12 03:54:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/anyterm/anyterm-1.1.29.ebuild,v 1.3 2012/07/07 19:02:28 floppym Exp $
 
 EAPI="2"
 
@@ -22,10 +22,11 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.1.28-respect-LDFLAGS.patch"
 	epatch "${FILESDIR}/${P}-gcc-4.4.patch"
+	epatch "${FILESDIR}/${P}-boost-1.50.patch"
 }
 
 src_compile() {
-	# this package uses `ld -r -b binary` and thus resulting executalbe contains
+	# this package uses `ld -r -b binary` and thus resulting executable contains
 	# executable stack
 	append-ldflags -Wl,-z,noexecstack
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
