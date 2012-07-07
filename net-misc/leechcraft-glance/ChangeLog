@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-glance
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-glance/ChangeLog,v 1.13 2012/07/04 21:11:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-glance/ChangeLog,v 1.14 2012/07/07 10:25:31 johu Exp $
+
+  07 Jul 2012; Johannes Huber <johu@gentoo.org>
+  leechcraft-glance-0.5.70.ebuild:
+  Stable for x86, wrt bug #424613
 
   04 Jul 2012; Agostino Sarubbo <ago@gentoo.org>
   leechcraft-glance-0.5.70.ebuild:
