@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/leechcraft-lastfmscrobble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lastfmscrobble/ChangeLog,v 1.6 2012/07/07 10:34:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lastfmscrobble/ChangeLog,v 1.7 2012/07/07 20:09:59 maksbotan Exp $
+
+  07 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-lastfmscrobble-9999.ebuild:
+  Re-enable >=liblastfm-1.0 in 9999 as it's working now. Thanks to 0xd34df00d
 
   07 Jul 2012; Johannes Huber <johu@gentoo.org>
   leechcraft-lastfmscrobble-0.5.70.ebuild:
