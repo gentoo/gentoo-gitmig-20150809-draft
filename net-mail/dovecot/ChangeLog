@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.368 2012/07/06 17:29:15 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.369 2012/07/07 12:28:07 blueness Exp $
+
+  07 Jul 2012; Anthony G. Basile <blueness@gentoo.org> dovecot-2.1.7.ebuild,
+  dovecot-2.1.8.ebuild:
+  Keyword ~mips
 
   06 Jul 2012; Eray Aslan <eras@gentoo.org> +dovecot-2.1.8.ebuild:
   version bump - bug #425058
