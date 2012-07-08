@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.4 2012/06/06 08:36:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.5 2012/07/08 16:01:07 hasufell Exp $
 
 EAPI=4
 
-inherit eutils games
+inherit eutils gnome2-utils games
 
 MY_PV=${PV//./}
 IOQ3_SVN=1807
@@ -113,4 +113,18 @@ src_install() {
 	fi
 
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
