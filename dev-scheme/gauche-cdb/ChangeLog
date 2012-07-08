@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/gauche-cdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/ChangeLog,v 1.12 2012/07/07 14:34:32 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/ChangeLog,v 1.13 2012/07/08 06:58:56 hattya Exp $
+
+  08 Jul 2012; Akinori Hattori <hattya@gentoo.org> gauche-cdb-0.3.1-r1.ebuild,
+  gauche-cdb-0.3.1.ebuild:
+  ia64 stable
 
   07 Jul 2012; Akinori Hattori <hattya@gentoo.org> gauche-cdb-0.3.1-r1.ebuild,
   gauche-cdb-0.3.1.ebuild:
