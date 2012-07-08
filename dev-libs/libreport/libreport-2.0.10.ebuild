@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.10.ebuild,v 1.1 2012/07/08 11:13:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.10.ebuild,v 1.2 2012/07/08 17:19:34 jlec Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -55,12 +55,23 @@ src_prepare() {
 	# Modify uploader_event so that the gui recognizes it
 	epatch "${FILESDIR}/${PN}-2.0.7-uploader_event-syntax.patch"
 
+	# automake-1.12
+	sed \
+		-e 's:AM_PROG_MKDIR_P:AC_PROG_MKDIR_P:g' \
+		-i aclocal.m4 || die
+	sed \
+		-e 's:mkdir_p:MKDIR_P:g' \
+		-i src/plugins/Makefile.am src/lib/Makefile.am || die
+	sed \
+		-e "/AC_PROG_LIBTOOL/s:^:AM_PROG_AR\n:g" \
+		-i configure.ac || die
+
 	# -Werror should not be used by default
 	sed -e "s/-Werror\( \|$\)//" \
 		-i src/client-python/Makefile.* src/cli/Makefile.* \
 		   src/gtk-helpers/Makefile.* src/gui-wizard-gtk/Makefile.* \
 		   src/lib/Makefile.* src/plugins/Makefile.* \
-		   src/report-python/Makefile.* || die "sed failed"
+		   src/report-python/Makefile.* configure.ac || die "sed failed"
 
 	python_clean_py-compile_files
 
