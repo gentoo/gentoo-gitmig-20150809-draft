@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gstreamermm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.24 2012/05/26 19:26:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.25 2012/07/08 19:28:30 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
   26 May 2012; Jeff Horelick <jdhore@gentoo.org> gstreamermm-0.10.10.1.ebuild:
   marked x86 per bug 412317
@@ -112,4 +115,3 @@
   +gstreamermm-0.10.6.ebuild, +metadata.xml:
   Initial import of the C++ bindings for gstreamer. Thanks to the guys who
   contributed the ebuilds in bug #211417.
-
