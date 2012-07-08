@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fast_xs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.7 2012/04/28 23:46:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.8 2012/07/08 16:22:54 jer Exp $
+
+  08 Jul 2012; Jeroen Roovers <jer@gentoo.org> fast_xs-0.8.0.ebuild:
+  Marked ~hppa (bug #417573).
 
   28 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org> fast_xs-0.8.0.ebuild:
   Fix testing: add rack and mongrel to dependencies (the latter only in ruby18),

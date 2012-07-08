@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.72 2012/06/26 08:11:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.73 2012/07/08 16:19:01 jer Exp $
+
+  08 Jul 2012; Jeroen Roovers <jer@gentoo.org> daemons-1.1.8.ebuild:
+  Marked ~hppa (bug #417573).
 
   26 Jun 2012; Jeff Horelick <jdhore@gentoo.org> daemons-1.1.8.ebuild:
   marked x86 per bug 421619

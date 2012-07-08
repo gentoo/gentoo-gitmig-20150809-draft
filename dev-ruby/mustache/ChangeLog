@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.18 2012/04/07 15:01:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.19 2012/07/08 16:24:31 jer Exp $
+
+  08 Jul 2012; Jeroen Roovers <jer@gentoo.org> mustache-0.99.4-r1.ebuild:
+  Marked ~hppa (bug #417573).
 
   07 Apr 2012; Markus Meier <maekke@gentoo.org> mustache-0.99.4.ebuild:
   x86 stable, bug #398847

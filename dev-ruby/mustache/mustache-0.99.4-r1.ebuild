@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/mustache-0.99.4-r1.ebuild,v 1.1 2012/01/14 07:13:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/mustache-0.99.4-r1.ebuild,v 1.2 2012/07/08 16:24:31 jer Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://mustache.github.com/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 ruby_add_bdepend "doc? ( app-text/ronn )"
