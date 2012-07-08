@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.34 2012/05/05 03:20:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.35 2012/07/08 00:37:54 floppym Exp $
+
+*remmina-1.0.0_p20120529 (08 Jul 2012)
+
+  08 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  +remmina-1.0.0_p20120529.ebuild, -remmina-0.7.5.ebuild, -remmina-0.9.3.ebuild,
+  -remmina-1.0.0-r1.ebuild, remmina-9999.ebuild:
+  Version bump. Should resolve bug 423841. Remove old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> remmina-0.7.5.ebuild,
   remmina-0.9.3.ebuild, remmina-1.0.0-r1.ebuild,
@@ -138,4 +145,3 @@
   26 May 2010; Tristan Heaven <nyhm@gentoo.org> +remmina-0.7.5.ebuild,
   +metadata.xml:
   Initial commit, based on Anthony Low's ebuild from bug #301069
-

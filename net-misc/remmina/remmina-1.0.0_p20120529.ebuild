@@ -1,28 +1,38 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0-r1.ebuild,v 1.9 2012/05/05 03:20:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20120529.ebuild,v 1.1 2012/07/08 00:37:54 floppym Exp $
 
 EAPI="4"
 
 inherit gnome2-utils cmake-utils
 
+if [[ ${PV} != 9999 ]]; then
+	SRC_URI="mirror://github/FreeRDP/Remmina/${P}.tar.gz
+		mirror://gentoo/${P}.tar.gz
+		http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+else
+	inherit git-2
+	SRC_URI=""
+	EGIT_REPO_URI="git://github.com/FreeRDP/Remmina.git"
+	KEYWORDS=""
+fi
+
 DESCRIPTION="A GTK+ RDP, VNC, XDMCP and SSH client"
 HOMEPAGE="http://remmina.sourceforge.net/"
-SRC_URI="mirror://github/FreeRDP/Remmina/Remmina-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="ayatana avahi crypt debug freerdp gnome-keyring nls ssh telepathy vte"
 
-# net-libs/libvncserver is bundled; add dep for next release
 RDEPEND="
 	x11-libs/gtk+:3
+	>=net-libs/libvncserver-0.9.8.2
 	x11-libs/libxkbfile
 	avahi? ( net-dns/avahi[gtk3] )
 	ayatana? ( dev-libs/libappindicator )
 	crypt? ( dev-libs/libgcrypt )
-	freerdp? ( >=net-misc/freerdp-1.0 )
+	freerdp? ( >=net-misc/freerdp-1.0.1_p20120704 )
 	gnome-keyring? ( gnome-base/libgnome-keyring )
 	ssh? ( net-libs/libssh[sftp] )
 	telepathy? ( net-libs/telepathy-glib )
@@ -38,18 +48,6 @@ RDEPEND+="
 "
 
 DOCS=( README )
-
-src_unpack() {
-	default
-	mv FreeRDP-Remmina-* "${S}" || die
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-desktop-file.patch"
-	epatch "${FILESDIR}/${P}-fix-desktop-file.patch"
-	epatch "${FILESDIR}/${P}-optional-gnome-keyring.patch"
-	sed -i -e "/REMMINA_PLUGINDIR/s:lib:$(get_libdir):" CMakeLists.txt || die
-}
 
 src_configure() {
 	local mycmakeargs=(
