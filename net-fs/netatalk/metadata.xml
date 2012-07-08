@@ -3,14 +3,6 @@
 <pkgmetadata>
 	<herd>net-fs</herd>
 	<maintainer restrict="&gt;=net-fs/netatalk-2.2.1-r1">
-		<email>flameeyes@gentoo.org</email>
-		<description>
-      CC me on the bugs so I can take a look at them. I actually use
-      this software and I know how it is supposed to work, at least
-      partially.
-    </description>
-	</maintainer>
-	<maintainer restrict="&gt;=net-fs/netatalk-2.2.1-r1">
 		<email>jlec@gentoo.org</email>
 	</maintainer>
 	<use>
