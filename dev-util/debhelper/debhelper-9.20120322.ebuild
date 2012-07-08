@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20120322.ebuild,v 1.7 2012/06/17 17:43:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20120322.ebuild,v 1.8 2012/07/08 15:17:33 jer Exp $
 
 EAPI="4"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Collection of programs that can be used to automate common tasks in debian/rules"
-HOMEPAGE="http://packages.qa.debian.org/d/debhelper.html http://kitenet.net/~joey/code/debhelper.html"
+HOMEPAGE="http://packages.qa.debian.org/d/debhelper.html http://joeyh.name/code/debhelper/"
 SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
