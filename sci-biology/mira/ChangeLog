@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/mira
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.17 2012/06/25 20:12:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.18 2012/07/08 18:01:08 jlec Exp $
+
+  08 Jul 2012; Justin Lecher <jlec@gentoo.org> -mira-3.0.5.ebuild,
+  -mira-3.2.0.ebuild:
+  Drop old
 
   25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> mira-3.2.1.ebuild:
   marked x86 per bug 418439
