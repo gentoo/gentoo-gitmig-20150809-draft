@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/spe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.41 2010/04/26 10:48:59 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.42 2012/07/08 15:27:28 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> spe-0.8.4h.ebuild:
+  Drop sparc keywords
 
   26 Apr 2010; Christian Faulhammer <fauli@gentoo.org> spe-0.8.4h.ebuild:
   stable x86, bug 313913
