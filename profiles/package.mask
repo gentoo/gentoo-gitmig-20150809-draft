@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13934 2012/07/07 12:40:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13935 2012/07/08 03:29:01 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (07 Jul 2012)
+# Mask for dev
+=app-emulation/qemu-kvm-1.1.0
 
 # Michael Weber <xmw@gentoo.org> (07 Jul 2012)
 # Masked for testing only beta (bug 424866)
@@ -916,10 +920,6 @@ net-analyzer/ncrack
 # Doug Goldstein <cardoe@gentoo.org> (8 Sep 2010)
 # masked live version
 =x11-libs/cairo-9999*
-
-# Doug Goldstein <cardoe@gentoo.org> (28 Aug 2010)
-# Need to investigate build errors on some kernels
-=app-emulation/kvm-kmod-2.6.35
 
 # Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)
 # reasons for masking:
