@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/pficommon-1.3.1.0.ebuild,v 1.1 2011/11/12 23:55:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/pficommon-1.3.1.0.ebuild,v 1.2 2012/07/08 19:56:24 naota Exp $
 
 EAPI=4
 
@@ -36,7 +36,8 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libdir.patch \
 		"${FILESDIR}"/${P}-soname.patch \
-		"${FILESDIR}"/${P}-postgresql.patch
+		"${FILESDIR}"/${P}-postgresql.patch \
+		"${FILESDIR}"/${P}-gcc-4.7.patch
 }
 
 src_configure() {
