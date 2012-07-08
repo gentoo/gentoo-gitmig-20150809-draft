@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/pdmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/ChangeLog,v 1.17 2012/07/01 11:14:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/ChangeLog,v 1.18 2012/07/08 15:17:57 jer Exp $
+
+  08 Jul 2012; Jeroen Roovers <jer@gentoo.org> pdmenu-1.2.89.ebuild,
+  pdmenu-1.2.95.ebuild, pdmenu-1.3.2.ebuild:
+  Update HOMEPAGE.
 
 *pdmenu-1.3.2 (01 Jul 2012)
 

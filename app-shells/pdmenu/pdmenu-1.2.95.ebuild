@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.95.ebuild,v 1.4 2012/07/01 11:14:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.95.ebuild,v 1.5 2012/07/08 15:17:57 jer Exp $
 
 EAPI=4
 
 inherit eutils
 
 DESCRIPTION="A simple console menu program"
-HOMEPAGE="http://www.kitenet.net/programs/pdmenu/"
+HOMEPAGE="http://joeyh.name/code/pdmenu/"
 SRC_URI="mirror://debian/pool/main/p/pdmenu/pdmenu_${PV}.tar.gz"
 
 LICENSE="GPL-2"
