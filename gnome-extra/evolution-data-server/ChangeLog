@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.338 2012/06/24 08:45:02 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.339 2012/07/08 11:30:29 pacho Exp $
+
+  08 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  -evolution-data-server-3.2.3-r1.ebuild, -evolution-data-server-3.4.1.ebuild,
+  -evolution-data-server-3.4.2.ebuild, evolution-data-server-2.32.3-r2.ebuild:
+  Doesn't work with automake-1.12 (#425296 by Pascariu Olimpiu), drop Werror
+  usage allowing it compile against libgdata-0.10.x (#415043 by venom01 and
+  Peter Alfredsen). Drop old.
 
 *evolution-data-server-3.4.3 (24 Jun 2012)
 
@@ -1891,4 +1898,3 @@
   +evolution-data-server-0.0.97.ebuild:
   initial commit for evolution-data-server ebuild. based on ebuild submitted buy
   Joe McCann <joe@breakmygentoo.net> (#35456)
-

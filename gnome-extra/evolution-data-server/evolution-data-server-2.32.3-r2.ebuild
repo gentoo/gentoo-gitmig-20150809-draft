@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r2.ebuild,v 1.9 2012/05/24 13:53:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r2.ebuild,v 1.10 2012/07/08 11:30:29 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="bz2"
+WANT_AUTOMAKE="1.11"
 
 inherit autotools db-use eutils flag-o-matic gnome2 versionator virtualx
 
@@ -104,7 +105,8 @@ src_prepare() {
 	sed 's/^\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
 		-i configure.ac configure || die "sed 3 failed"
 
-	intltoolize --force --copy --automake || die "intltoolize failed"
+	sed -e "/AM_INIT_AUTOMAKE/s/-Werror//" -i configure.ac || die
+
 	eautoreconf
 	gnome2_src_prepare
 }
