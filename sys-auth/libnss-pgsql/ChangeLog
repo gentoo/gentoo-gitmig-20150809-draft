@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/libnss-pgsql
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/ChangeLog,v 1.6 2010/06/17 21:10:42 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/ChangeLog,v 1.7 2012/07/08 19:42:28 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> libnss-pgsql-1.4.0.ebuild:
   Migrating away from deprecated postgres virtuals
@@ -50,4 +53,3 @@
   12 Jan 2005; Masatomo Nakano <nakano@gentoo.org> +metadata.xml,
   +files/postgres-and-glibc.patch, +libnss-pgsql-1.0.0.ebuild:
   Initil import. (#34627)
-
