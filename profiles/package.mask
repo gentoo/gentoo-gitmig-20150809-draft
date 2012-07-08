@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13939 2012/07/08 22:59:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13940 2012/07/08 23:27:16 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -126,7 +126,7 @@ www-apps/phpgroupware
 
 # Doug Goldstein <cardoe@gentoo.org> (21 Jun 2012)
 # A stab at a MythTV 0.25 series ebuild
-=media-tv/mythtv-0.25.1_p20120608
+=media-tv/mythtv-0.25.1_p20120708
 
 # Maxim Koltsov <maksbotan@gentoo.org> (21 Jun 2012)
 # It's not what it's called now, mask it not protect people
