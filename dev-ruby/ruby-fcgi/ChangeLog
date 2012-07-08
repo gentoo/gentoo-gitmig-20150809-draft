@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.46 2012/06/11 17:39:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.47 2012/07/08 16:13:08 jer Exp $
+
+  08 Jul 2012; Jeroen Roovers <jer@gentoo.org> ruby-fcgi-0.8.8-r2.ebuild:
+  Marked ~hppa (bug #417573).
 
   11 Jun 2012; Hans de Graaff <graaff@gentoo.org> -ruby-fcgi-0.8.8-r1.ebuild:
   Remove old version.
