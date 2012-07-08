@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencore-amr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.26 2012/06/08 11:34:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.27 2012/07/08 15:24:12 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> opencore-amr-0.1.3.ebuild:
+  alpha/ia64/sparc stable wrt #419105
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   opencore-amr-0.1.3.ebuild:
