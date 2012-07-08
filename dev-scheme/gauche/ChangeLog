@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/gauche
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.38 2012/06/03 08:17:22 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.39 2012/07/08 08:46:58 hattya Exp $
+
+  08 Jul 2012; Akinori Hattori <hattya@gentoo.org> gauche-0.9.2.ebuild,
+  gauche-0.9.3.3.ebuild:
+  keyword ~alpha wrt bug #316469
 
   03 Jun 2012; Akinori Hattori <hattya@gentoo.org> gauche-0.9.3.3.ebuild:
   fixes parallel make race condition.
