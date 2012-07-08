@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.100 2012/07/08 11:10:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.101 2012/07/08 23:30:11 jdhore Exp $
+
+  08 Jul 2012; Jeff Horelick <jdhore@gentoo.org> latex-beamer-3.20.ebuild:
+  marked x86 per bug 425194
 
   08 Jul 2012; Johannes Huber <johu@gentoo.org> -latex-beamer-3.11.ebuild,
   -latex-beamer-3.17.ebuild, -latex-beamer-3.19.ebuild:
