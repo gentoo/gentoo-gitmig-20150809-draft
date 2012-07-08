@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.35 2012/07/08 00:37:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.36 2012/07/08 00:55:34 floppym Exp $
+
+  08 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  -remmina-1.0.0_p20120529.ebuild:
+  Remove version bump; freerdp master has issues.
 
 *remmina-1.0.0_p20120529 (08 Jul 2012)
 
