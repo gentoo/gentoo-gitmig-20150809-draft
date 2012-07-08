@@ -1,18 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-9999.ebuild,v 1.3 2012/03/26 09:14:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-9999.ebuild,v 1.4 2012/07/08 08:54:50 xmw Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="gtk? 2"
 RESTRICT_PYTHON_ABIS="3.*"
 
-EGIT_REPO_URI="https://github.com/shellex/Hotot.git"
-
 inherit cmake-utils git-2 python
 
 DESCRIPTION="lightweight & open source microblogging client"
 HOMEPAGE="http://hotot.org"
+EGIT_REPO_URI="https://github.com/shellex/Hotot.git"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -26,13 +25,12 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
+REQUIRED_USE="|| ( chrome gtk qt4 )"
+
 pkg_setup() {
 	if ! use gtk ; then
 		if ! use qt4 ; then
 			ewarn "neither gtk not qt4 binaries will be build"
-			if ! use chrome ; then
-				die "enable one use flag of chrome, gtk or qt4"
-			fi
 		fi
 	fi
 	python_pkg_setup

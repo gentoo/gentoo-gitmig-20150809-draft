@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/hotot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.15 2012/06/13 12:30:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.16 2012/07/08 08:54:50 xmw Exp $
+
+  08 Jul 2012; Michael Weber <xmw@gentoo.org> hotot-0.9.8.ebuild,
+  hotot-0.9.8.4.ebuild, hotot-0.9.8.7.ebuild, hotot-9999.ebuild:
+  Add REQUIRED_USE (bug 424910, thanks Diego Elio Pettenò)
 
   13 Jun 2012; Michael Weber <xmw@gentoo.org> hotot-0.9.8.ebuild:
   vcs-snapshot eclass

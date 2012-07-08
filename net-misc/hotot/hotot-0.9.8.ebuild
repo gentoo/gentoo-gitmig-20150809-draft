@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.ebuild,v 1.4 2012/06/13 12:30:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.ebuild,v 1.5 2012/07/08 08:54:50 xmw Exp $
 
 EAPI=4
 
@@ -25,13 +25,12 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
+REQUIRED_USE="|| ( chrome gtk qt4 )"
+
 pkg_setup() {
 	if ! use gtk ; then
 		if ! use qt4 ; then
 			ewarn "neither gtk not qt4 binaries will be build"
-			if ! use chrome ; then
-				die "enable one use flag of chrome, gtk or qt4"
-			fi
 		fi
 	fi
 	python_pkg_setup
