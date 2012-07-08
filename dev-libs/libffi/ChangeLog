@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.149 2012/06/13 19:49:51 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.150 2012/07/08 18:26:43 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> libffi-3.0.11.ebuild:
+  ia64/m68k/s390/sh/sparc stable wrt #416669
 
   13 Jun 2012; Richard Yao <ryao@gentoo.org> libffi-3.0.10.ebuild,
   libffi-3.0.11.ebuild:
