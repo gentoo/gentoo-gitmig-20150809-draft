@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/libskk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/ChangeLog,v 1.4 2012/07/08 18:24:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/ChangeLog,v 1.5 2012/07/08 21:26:18 naota Exp $
+
+*libskk-0.0.12 (08 Jul 2012)
+
+  08 Jul 2012; Naohiro Aota <naota@gentoo.org> +libskk-0.0.12.ebuild:
+  Version bump to 0.0.12.
 
   08 Jul 2012; Naohiro Aota <naota@gentoo.org> libskk-0.0.11.ebuild:
   Run test under virtual X. #421507
