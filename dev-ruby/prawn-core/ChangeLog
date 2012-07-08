@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/prawn-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.9 2012/03/02 13:02:38 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.10 2012/07/08 07:34:20 graaff Exp $
+
+  08 Jul 2012; Hans de Graaff <graaff@gentoo.org> prawn-core-0.8.4-r2.ebuild:
+  Fix test-unit dependency for changes in test-spec, reported in bug 417513.
+  Avoid broken encoding test altogether since current patches do not work with
+  ruby 1.9.3.
 
   02 Mar 2012; Naohiro Aota <naota@gentoo.org> prawn-core-0.8.4-r2.ebuild:
   Add ~x86-fbsd
