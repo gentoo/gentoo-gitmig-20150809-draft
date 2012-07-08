@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/gwaei
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.27 2012/05/03 18:18:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.28 2012/07/08 21:43:01 naota Exp $
+
+*gwaei-3.2.0 (08 Jul 2012)
+
+  08 Jul 2012; Naohiro Aota <naota@gentoo.org> +gwaei-3.2.0.ebuild:
+  Bump to 3.2.0
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gwaei-3.0.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -146,4 +151,3 @@
   09 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
   +gwaei-0.11.0.ebuild:
   Initial import.
-
