@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.228 2012/05/20 19:36:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.229 2012/07/08 11:40:40 pacho Exp $
+
+  08 Jul 2012; Pacho Ramos <pacho@gentoo.org> -gtkmm-2.22.0.ebuild,
+  -gtkmm-2.24.0.ebuild, -gtkmm-3.0.1.ebuild, gtkmm-3.4.0.ebuild:
+  Enable X USE flag by default, bug #422803 by Diego Elio Pettenò. Drop old.
 
   20 May 2012; Samuli Suominen <ssuominen@gentoo.org> gtkmm-3.2.0.ebuild:
   ppc stable wrt #407643
