@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.40 2012/07/08 22:07:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.41 2012/07/08 22:57:39 cardoe Exp $
 
 EAPI="4"
 
 PYTHON_DEPEND="2"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user
-
+#BACKPORTS=1
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
@@ -16,7 +16,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
 	${BACKPORTS:+
-		http://dev.gentoo.org/~cardoe/distfiles/${P}-bp-${BACKPORTS}.tar.bz2}"
+		http://dev.gentoo.org/~cardoe/distfiles/${P}-bp-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
@@ -27,7 +27,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty +curl debug doc fdt kernel_linux \
 kernel_FreeBSD ncurses opengl pulseaudio python rbd sasl sdl \
-smartcard spice static tci test tls usbredir vde +vhost-net xattr xen xfs"
+smartcard spice static tci tls usbredir vde +vhost-net xattr xen xfs"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb"
@@ -97,8 +97,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-text/texi2html
 	virtual/pkgconfig
-	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
-	test? ( dev-libs/check )"
+	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
 
@@ -165,28 +164,20 @@ pkg_pretend() {
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 
 	enewgroup kvm 78
 }
 
 src_prepare() {
-	# prevent docs to get automatically installed
-	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
 	# Alter target makefiles to accept CFLAGS set via flag-o
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
-	# append CFLAGS while linking
-	sed -i 's/$(LDFLAGS)/$(QEMU_CFLAGS) $(CFLAGS) $(LDFLAGS)/' rules.mak || die
 
 	# remove part to make udev happy
-	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
+	#sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
 
-	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
-
-	# Patch the use of sys/sysctl.h on FreeBSD
-	epatch "${FILESDIR}"/${P}-freebsd-sysctl-header.patch
-
-	python_convert_shebangs scripts/kvm/kvm_stat
+	python_convert_shebangs -r 2 "${S}/scripts/kvm/kvm_stat"
 
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
@@ -241,14 +232,12 @@ src_configure() {
 	# $(use_enable xen xen-pci-passthrough) for 1.2
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
-		--disable-darwin-user \
 		--disable-bsd-user \
 		--disable-libiscsi \
 		--disable-strip \
 		--disable-werror \
 		--enable-guest-agent \
 		--enable-pie \
-		--enable-virtfs \
 		--enable-vnc-jpeg \
 		--enable-vnc-png \
 		--enable-vnc-thread \
@@ -264,7 +253,6 @@ src_configure() {
 		$(use_enable fdt) \
 		$(use_enable kernel_linux kvm) \
 		$(use_enable kernel_linux kvm-device-assignment) \
-		$(use_enable kernel_linux kvm-pit) \
 		$(use_enable kernel_linux nptl) \
 		$(use_enable kernel_linux uuid) \
 		$(use_enable ncurses curses) \
@@ -276,12 +264,12 @@ src_configure() {
 		$(use_enable smartcard smartcard-nss) \
 		$(use_enable spice) \
 		$(use_enable tci tcg-interpreter) \
-		$(use_enable test check-utests) \
 		$(use_enable tls vnc-tls) \
 		$(use_enable usbredir usb-redir) \
 		$(use_enable vde) \
 		$(use_enable vhost-net) \
 		$(use_enable xattr attr) \
+		$(use_enable xattr virtfs) \
 		$(use_enable xen) \
 		$(use_enable xfs xfsctl) \
 		--audio-drv-list="${audio_opts}" \
@@ -309,7 +297,7 @@ src_install() {
 	if [[ -n ${softmmu_targets} ]]; then
 		if use kernel_linux; then
 			insinto /lib/udev/rules.d/
-			doins kvm/scripts/65-kvm.rules || die
+			doins "${FILESDIR}"/65-kvm.rules || die
 		fi
 
 		if use qemu_softmmu_targets_x86_64 ; then
