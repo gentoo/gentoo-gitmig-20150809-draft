@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.8.4.ebuild,v 1.1 2012/06/21 21:54:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.8.4-r1.ebuild,v 1.1 2012/07/08 22:31:54 dilfridge Exp $
 
 EAPI=4
 
@@ -64,3 +64,7 @@ KMEXTRACTONLY="
 "
 
 KMSAVELIBS="true"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.8.4-sec.patch"
+)
