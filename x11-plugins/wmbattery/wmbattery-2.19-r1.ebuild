@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.19-r1.ebuild,v 1.7 2007/07/22 05:24:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.19-r1.ebuild,v 1.8 2012/07/08 15:24:35 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${PN}
 
 DESCRIPTION="A dockable app to report APM battery stats."
 SRC_URI="http://kitenet.net/programs/wmbattery/${P/-/_}.tar.gz"
-HOMEPAGE="http://kitenet.net/programs/wmbattery"
+HOMEPAGE="http://joeyh.name/code/wmbattery/"
 
 SLOT="0"
 LICENSE="GPL-2"
