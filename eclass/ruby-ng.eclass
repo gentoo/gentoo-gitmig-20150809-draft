@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.47 2012/07/05 21:23:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.48 2012/07/08 12:38:10 flameeyes Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -657,4 +657,38 @@ ruby-ng_rspec() {
 	esac
 
 	${RUBY} -S rspec ${rspec_params} "$@" || die "rspec failed"
+}
+
+# @FUNCTION: ruby-ng_testrb-2
+# @DESCRIPTION:
+# This is simply a replacement for the testrb command that load the test
+# files and execute them, with test-unit 2.x. This actually requires
+# either an old test-unit-2 version or 2.5.1-r1 or later, as they remove
+# their script and we installed a broken wrapper for a while.
+# This also respects TEST_VERBOSE and NOCOLOR environment variables.
+ruby-ng_testrb-2() {
+	if [[ ${DEPEND} != *"dev-ruby/test-unit"* ]]; then
+		ewarn "Missing dev-ruby/test-unit in \${DEPEND}"
+	fi
+
+	local testrb_params=
+	case ${NOCOLOR} in
+		1|yes|true)
+			testrb_params+=" --no-use-color"
+			;;
+		*)
+			testrb_params+=" --use-color=auto"
+			;;
+	esac
+
+	case ${TEST_VERBOSE} in
+		1|yes|true)
+			testrb_params+=" --verbose=verbose"
+			;;
+		*)
+			testrb_params+=" --verbose=normal"
+			;;
+	esac
+
+	${RUBY} -S testrb-2 ${testrb_params} "$@" || die "testrb-2 failed"
 }
