@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.4.3.ebuild,v 1.2 2012/07/08 20:40:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.4.3.ebuild,v 1.3 2012/07/08 20:44:32 naota Exp $
 
 EAPI="4"
 
@@ -44,8 +44,9 @@ src_unpack() {
 	rm -vf libstdc++.so.6 libz* libssl* libbz2* libpopt.so.0 libcrypto.so.0.9.8 libpng12.so.0 || die
 	if ! use librsync-bundled; then
 		rm -vf librsync.so.1 || die
+	else
+		patchelf --set-rpath '$ORIGIN' _librsync.so || die
 	fi
-	patchelf --set-rpath '$ORIGIN' _librsync.so || die
 	pax-mark cm "${S}/src/dropbox"
 	cd "${WORKDIR}"
 }
