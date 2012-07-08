@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libxmlpatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libxmlpatch/ChangeLog,v 1.4 2012/05/04 03:33:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libxmlpatch/ChangeLog,v 1.5 2012/07/08 19:15:02 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Re-assign to maintainer-needed.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libxmlpatch-0.3.1.ebuild,
   libxmlpatch-0.3.3.ebuild:
@@ -24,4 +27,3 @@
   +files/libxmlpatch-0.3.1-asneeded.patch, +metadata.xml,
   +libxmlpatch-0.3.1.ebuild:
   Initial import of Nokia's xmlpatch suite.
-
