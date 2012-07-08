@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/ChangeLog,v 1.5 2012/04/24 10:02:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/ChangeLog,v 1.6 2012/07/08 19:38:21 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
   24 Apr 2012; Michał Górny <mgorny@gentoo.org> gdbserver-7.0.ebuild,
   gdbserver-7.2.ebuild, gdbserver-7.3.1.ebuild:
@@ -28,4 +31,3 @@
   Initial import of a gdbserver ebuild, a cross-compilable ebuild for the
   simple gdbserver command. It uses the same patchset as the main
   sys-devel/gdb.
-
