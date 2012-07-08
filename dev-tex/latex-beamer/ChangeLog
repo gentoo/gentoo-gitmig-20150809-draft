@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.99 2012/07/01 14:38:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.100 2012/07/08 11:10:46 johu Exp $
+
+  08 Jul 2012; Johannes Huber <johu@gentoo.org> -latex-beamer-3.11.ebuild,
+  -latex-beamer-3.17.ebuild, -latex-beamer-3.19.ebuild:
+  Remove old.
 
   01 Jul 2012; Raúl Porcel <armin76@gentoo.org> latex-beamer-3.16.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #415331
@@ -390,4 +394,3 @@
 
   22 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> latex-beamer-2.00.ebuild:
   Initial import. This closes bug #33244
-
