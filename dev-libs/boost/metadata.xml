@@ -14,6 +14,10 @@
   	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
   </maintainer>
+  <maintainer>
+    <email>arfrever.fta@gmail.com</email>
+    <name>Arfrever Frehtes Taifersar Arahesis</name>
+  </maintainer>
 <longdescription>
 Boost is a free peer-reviewed portable C++ source libraries.
 </longdescription>
