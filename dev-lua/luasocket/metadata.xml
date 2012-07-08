@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>flameeyes@gentoo.org</email>
-    <description>
-      I need this for app-crypt/ekeyd, if you care about this for LUA,
-      or for any other reason, you're free to pick it up; please just
-      leave the unix socket support in, thanks!
-    </description>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
 </pkgmetadata>
