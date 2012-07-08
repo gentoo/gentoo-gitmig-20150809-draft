@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/ruby-inline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.47 2012/04/21 06:42:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.48 2012/07/08 11:23:20 flameeyes Exp $
+
+*ruby-inline-3.11.3 (08 Jul 2012)
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ruby-inline-3.11.3.ebuild, -ruby-inline-3.11.0.ebuild,
+  -ruby-inline-3.11.1.ebuild, -ruby-inline-3.11.2.ebuild,
+  -ruby-inline-3.8.6-r1.ebuild, -ruby-inline-3.9.0.ebuild:
+  Version bump, remove old.
 
 *ruby-inline-3.11.2 (21 Apr 2012)
 
@@ -203,4 +211,3 @@
   04 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
   +ruby-inline-3.6.2.ebuild:
   Initial ebuild by Guillaume Benny <guillaume.benny@sympatico.ca>, #147065
-

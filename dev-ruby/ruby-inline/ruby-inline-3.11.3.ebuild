@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ruby-inline-3.8.6-r1.ebuild,v 1.1 2011/02/17 07:04:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ruby-inline-3.11.3.ebuild,v 1.1 2012/07/08 11:23:20 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 USE_RUBY="ruby18 ree18 ruby19"
 
@@ -19,8 +19,8 @@ HOMEPAGE="http://www.zenspider.com/ZSS/Products/RubyInline/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+IUSE="doc test"
 
 ruby_add_rdepend dev-ruby/zentest
 
@@ -32,26 +32,22 @@ ruby_add_bdepend "
 	test? (
 		dev-ruby/hoe
 		dev-ruby/hoe-seattlerb
-		virtual/ruby-test-unit
 	)"
 
 all_ruby_prepare() {
-	# we have to patch the code so that it takes the RUBY_DESCRIPTION
-	# into consideration, to avoid loading Ruby-Enterprise (REE18)
-	# objects in MRI and vice-versa; we're a bit “greedier” since we
-	# will rebuild objects even when just switching versions, but
-	# it'll be better this way than being too conservatives.
-	epatch "${FILESDIR}/${PN}-3.8.4-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-3.11.0-gentoo.patch"
 
 	# Respect ruby's (and thus Gentoo's) LDFLAGS, and explicitly link
 	# against the ruby shared library to avoid confusion and potential
 	# crashes when later using the shared object.
-	epatch "${FILESDIR}/${PN}-3.8.4-ldflags.patch"
+	epatch "${FILESDIR}/${PN}-3.11.1-ldflags.patch"
+
+	sed -i -e '/isolate/ s:^:#:' Rakefile || die
 }
 
 all_ruby_install() {
 	all_fakegem_install
 
 	docinto examples
-	dodoc example.rb example2.rb demo/*.rb || die
+	dodoc example.rb example2.rb demo/*.rb
 }
