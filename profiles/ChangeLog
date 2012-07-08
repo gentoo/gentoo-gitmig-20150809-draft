@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6756 2012/07/07 12:40:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6757 2012/07/08 18:04:27 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask netkit-ftp for removal.
 
   07 Jul 2012; Michael Weber <xmw@gentoo.org> package.mask:
   sci-electronics/eagle-6.2.0_beta: Masked for testing only beta (bug 424866)
