@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.13.ebuild,v 1.3 2012/07/08 04:12:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.13.ebuild,v 1.4 2012/07/08 04:23:26 cardoe Exp $
 
 EAPI=4
 
@@ -159,6 +159,8 @@ src_prepare() {
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
+
+	epatch "${FILESDIR}/${P}-qemu-add-rbd-to-whitelist-of-migration-safe-formats.patch"
 
 	if [[ ${PV} = *9999* ]]; then
 
