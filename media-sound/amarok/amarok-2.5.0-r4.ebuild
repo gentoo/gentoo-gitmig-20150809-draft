@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0-r3.ebuild,v 1.5 2012/07/08 15:10:40 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0-r4.ebuild,v 1.1 2012/07/08 15:10:40 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
-	KEYWORDS="amd64 ~ppc ~ppc64 x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 else
 	KEYWORDS=""
 fi
@@ -39,14 +39,16 @@ COMMONDEPEND="
 	>=media-libs/taglib-extras-1.0.1
 	sys-libs/zlib
 	>=virtual/mysql-5.1[embedded?]
+	x11-libs/qt-core
+	x11-libs/qt-dbus
 	x11-libs/qt-script
 	>=x11-libs/qtscriptgenerator-0.1.0
 	cdda? (
 		$(add_kdebase_dep libkcddb)
 		$(add_kdebase_dep libkcompactdisc)
 		|| (
-			$(add_kdebase_dep kdemultimedia-kioslaves)
 			$(add_kdebase_dep audiocd-kio)
+			$(add_kdebase_dep kdemultimedia-kioslaves)
 		)
 	)
 	ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
@@ -68,26 +70,15 @@ DEPEND="${COMMONDEPEND}
 	virtual/pkgconfig
 "
 RDEPEND="${COMMONDEPEND}
-	$(add_kdebase_dep phonon-kde)
 	!media-sound/amarok-utils
+	$(add_kdebase_dep phonon-kde)
 "
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.5.0-kde48.patch"
 	"${FILESDIR}/${PN}-2.5.0-qtdebug.patch"
+	"${FILESDIR}/${PN}-2.5.0-fix-context-view-on-startup.patch"
 )
-
-src_prepare() {
-	# en locale is special in a way that it is always enabled. English Amarok
-	# handbook however lies in the doc/en_US folder and thus is not picked
-	# up by kde4-functions eclass. Rename it.
-	sed -e 's:add_subdirectory(en_US):add_subdirectory(en):' \
-		-i "${S}/doc/CMakeLists.txt" \
-		|| die "Replacing en_US by en in doc/CMakeLists.txt failed."
-	mv "${S}/doc/en_US" "${S}/doc/en" || die "Moving doc/en_US to doc/en failed."
-
-	kde4-base_src_prepare
-}
 
 src_configure() {
 	# Append minimal-toc cflag for ppc64, see bug 280552 and 292707
@@ -111,8 +102,9 @@ src_configure() {
 	mycmakeargs+=(
 		$(cmake-utils_use_with utils UTILITIES)
 	)
-		# $(cmake-utils_use_with semantic-desktop Nepomuk)
-		# $(cmake-utils_use_with semantic-desktop Soprano)
+
+	# $(cmake-utils_use_with semantic-desktop Nepomuk)
+	# $(cmake-utils_use_with semantic-desktop Soprano)
 
 	kde4-base_src_configure
 }
