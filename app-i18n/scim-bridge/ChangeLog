@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.35 2012/05/03 19:24:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.36 2012/07/08 19:43:42 naota Exp $
+
+  08 Jul 2012; Naohiro Aota <naota@gentoo.org>
+  +files/scim-bridge-0.4.16+gcc-4.7.patch, scim-bridge-0.4.16-r2.ebuild:
+  Add patch to build on gcc-4.7. #421899
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-bridge-0.4.16-r1.ebuild,
   scim-bridge-0.4.16-r2.ebuild:
@@ -176,4 +180,3 @@
   26 Sep 2006; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
   +scim-bridge-0.4.5.ebuild:
   Initial import, bug 143295.
-
