@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13936 2012/07/08 18:04:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13937 2012/07/08 19:48:18 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,9 @@
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2012)
 # Dead upstream (domain is gone as well), very bad code.
-# Remove by 2012-08-08, replace with net-ftp/tftp-hpa.
+# If possible use net-ftp/tftp-hpa; if that is not possible, we're
+# going to keep this around for a while, but let us know by filing a
+# bug and blocking against bug #425362
 net-ftp/netkit-tftp
 
 # Doug Goldstein <cardoe@gentoo.org> (07 Jul 2012)

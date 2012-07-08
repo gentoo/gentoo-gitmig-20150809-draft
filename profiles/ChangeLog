@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6757 2012/07/08 18:04:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6758 2012/07/08 19:48:18 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Downgrade netkit-tftp masking to non-removal.
 
   08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask netkit-ftp for removal.
