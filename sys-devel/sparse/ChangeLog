@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.52 2012/06/22 15:40:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.53 2012/07/08 17:34:30 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> sparse-0.4.3.ebuild:
+  ia64/s390/sh/sparc stable wrt #418405
 
   22 Jun 2012; Brent Baude <ranger@gentoo.org> sparse-0.4.3.ebuild:
   Marking sparse-0.4.3 ppc64 for bug 418405
