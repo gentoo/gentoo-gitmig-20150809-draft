@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/spice-vdagent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/ChangeLog,v 1.5 2012/05/03 18:49:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/ChangeLog,v 1.6 2012/07/08 03:20:31 cardoe Exp $
+
+*spice-vdagent-0.10.1 (07 Jul 2012)
+
+  07 Jul 2012; Doug Goldstein <cardoe@gentoo.org> -spice-vdagent-0.8.0.ebuild,
+  -spice-vdagent-0.8.1.ebuild, +spice-vdagent-0.10.1.ebuild,
+  +files/spice-vdagent.confd-2, +files/spice-vdagent.initd-2:
+  Version bump. Check for CONFIG_VIRTIO_CONSOLE since its necessary. Check if
+  we should use /dev/uinput or /dev/input/uinput on startup. bug #378833
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> spice-vdagent-0.8.0.ebuild,
   spice-vdagent-0.8.1.ebuild, spice-vdagent-0.8.1-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.8.0.ebuild,v 1.3 2012/05/03 18:49:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.10.1.ebuild,v 1.1 2012/07/08 03:20:31 cardoe Exp $
 
 EAPI=4
 
@@ -18,13 +18,14 @@ IUSE="+consolekit"
 RDEPEND="x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libX11
-	>=app-emulation/spice-protocol-0.8.0
+	>=app-emulation/spice-protocol-0.10.1
 	consolekit? ( sys-auth/consolekit sys-apps/dbus )"
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
-CONFIG_CHECK="~INPUT_UINPUT"
-ERROR_INPUT_UINPUT="User level driver support is required to run the spice-vdagent daemon"
+CONFIG_CHECK="~INPUT_UINPUT ~VIRTIO_CONSOLE"
+ERROR_INPUT_UINPUT="User level input support is required"
+ERROR_VIRTIO_CONSOLE="VirtIO console/serial device support is required"
 
 src_configure() {
 	econf \
@@ -40,11 +41,6 @@ src_install() {
 	keepdir /var/run/spice-vdagentd
 	keepdir /var/log/spice-vdagentd
 
-	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
-	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
-}
-
-pkg_postinst() {
-	elog "Make sure that the User level driver support kernel module 'uinput' is loaded"
-	elog "if built as a module before starting the vdagent daemon."
+	newinitd "${FILESDIR}/${PN}.initd-2" "${PN}"
+	newconfd "${FILESDIR}/${PN}.confd-2" "${PN}"
 }
