@@ -1,26 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.3 2012/07/08 03:25:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.4 2012/07/08 22:03:30 cardoe Exp $
 
 EAPI="4"
 
+PYTHON_DEPEND="2"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user
 
-#BACKPORTS=1
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
-
 	inherit git-2
-
 	SRC_URI=""
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
 	${BACKPORTS:+
-		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
-		http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS=""
+		http://dev.gentoo.org/~cardoe/distfiles/${P}-bp-${BACKPORTS}.tar.bz2}"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -28,14 +25,13 @@ HOMEPAGE="http://www.linux-kvm.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-# xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty +curl debug fdt ncurses \
-opengl pulseaudio rbd sasl sdl smartcard spice static test
-+threads tls usbredir vde +vhost-net xattr xen"
+IUSE="+aio alsa bluetooth brltty +curl debug doc fdt kernel_linux \
+kernel_FreeBSD ncurses opengl pulseaudio python rbd sasl sdl \
+smartcard spice static tci test tls usbredir vde +vhost-net xattr xen xfs"
 
-COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
+COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb"
+IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 
 # Setup the default SoftMMU targets, while using the loops
 # below to setup the other targets. x86_64 should be the only
@@ -53,14 +49,17 @@ for target in ${IUSE_USER_TARGETS}; do
 	IUSE="${IUSE} qemu_user_targets_${target}"
 done
 
+REQUIRED_USE="static? ( !alsa !pulseaudio )
+	amd64? ( qemu_softmmu_targets_x86_64 )
+	x86? ( qemu_softmmu_targets_x86_64 )"
+
 RDEPEND="
 	!app-emulation/kqemu
 	!app-emulation/qemu
-	!app-emulation/qemu-user
+	!<app-emulation/qemu-1.0
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	sys-apps/pciutils
-	>=sys-apps/util-linux-2.16.0
 	virtual/jpeg
 	amd64? ( sys-apps/seabios
 		sys-apps/vgabios )
@@ -72,9 +71,11 @@ RDEPEND="
 	brltty? ( app-accessibility/brltty )
 	curl? ( >=net-misc/curl-7.15.4 )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
+	kernel_linux? ( >=sys-apps/util-linux-2.16.0 )
 	ncurses? ( sys-libs/ncurses )
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
+	python? ( =dev-lang/python-2*[ncurses] )
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( static? ( >=media-libs/libsdl-1.2.11[static-libs,X] )
@@ -82,19 +83,21 @@ RDEPEND="
 	static? ( sys-libs/zlib[static-libs(+)] )
 	!static? ( sys-libs/zlib )
 	smartcard? ( dev-libs/nss )
-	spice? ( >=app-emulation/spice-0.9.0
-			>=app-emulation/spice-protocol-0.8.1 )
+	spice? ( >=app-emulation/spice-protocol-0.8.1
+			static? ( >=app-emulation/spice-0.9.0[static-libs] )
+			!static? ( >=app-emulation/spice-0.9.0 )
+	)
 	tls? ( net-libs/gnutls )
 	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
 	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen-tools )
-"
+	xfs? ( sys-fs/xfsprogs )"
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
 	virtual/pkgconfig
-	>=sys-kernel/linux-headers-2.6.35
+	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
 	test? ( dev-libs/check )"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
@@ -126,18 +129,9 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 	usr/bin/qemu-sparc32plus"
 
 pkg_pretend() {
-	if ! use qemu_softmmu_targets_x86_64 && use amd64 ; then
-		eerror "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
-	fi
-
-	if ! use qemu_softmmu_targets_x86_64 && use x86 ; then
-		eerror "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
-	fi
-
-	if kernel_is lt 2 6 25; then
+	if use kernel_linux && kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
-		eerror "Either upgrade your kernel"
-	else
+	elif use kernel_linux; then
 		if ! linux_config_exists; then
 			eerror "Unable to check your kernel for KVM support"
 		else
@@ -159,6 +153,9 @@ pkg_pretend() {
 			if use amd64 || use x86 || use amd64-linux || use x86-linux; then
 				CONFIG_CHECK+=" ~KVM_AMD ~KVM_INTEL"
 			fi
+
+			use python && CONFIG_CHECK+="~DEBUG_FS"
+			ERROR_DEBUG_FS="debugFS support required for kvm_stat"
 
 			# Now do the actual checks setup above
 			check_extra_config
@@ -184,20 +181,12 @@ src_prepare() {
 	# remove part to make udev happy
 	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
 
-	# ${PN}-guest-hang-on-usb-add.patch was sent by Timothy Jones
-	# to the qemu-devel ml - bug 337988
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
 
-	# Fix compilation of the qemu-system-ppc component
-	epatch "${FILESDIR}"/${PN}-1.0-fix-qemu-system-ppc.patch
+	# Patch the use of sys/sysctl.h on FreeBSD
+	epatch "${FILESDIR}"/${P}-freebsd-sysctl-header.patch
 
-	# drop '-g' by default as it tends to eat
-	# A LOT (~2GB) of ram for each job #355861
-	sed -e 's/CFLAGS="-g $CFLAGS"/CFLAGS="$CFLAGS"/g' \
-		-i configure || die
-
-	# Quick fix for the bad version number
-	epatch "${FILESDIR}"/${P}-VERSION.patch
+	python_convert_shebangs scripts/kvm/kvm_stat
 
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
@@ -239,15 +228,17 @@ src_configure() {
 	# Add support for static builds
 	use static && conf_opts="${conf_opts} --static"
 
-	# Support debug USE flag
-	use debug && conf_opts="${conf_opts} --enable-debug"
-
 	# audio options
 	audio_opts="oss"
 	use alsa && audio_opts="alsa ${audio_opts}"
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
 
+	# conditionally making UUID work on Linux only is wrong
+	# but the Gentoo/FreeBSD guys need to figure out what
+	# provides libuuid on their platform
+	# --enable-vnc-thread will go away in 1.2
+	# $(use_enable xen xen-pci-passthrough) for 1.2
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--disable-darwin-user \
@@ -255,21 +246,27 @@ src_configure() {
 		--disable-libiscsi \
 		--disable-strip \
 		--disable-werror \
-		--enable-kvm \
-		--enable-kvm-device-assignment \
-		--enable-kvm-pit \
+		--enable-guest-agent \
 		--enable-pie \
-		--enable-nptl \
-		--enable-tcg-interpreter \
-		--enable-uuid \
+		--enable-virtfs \
 		--enable-vnc-jpeg \
 		--enable-vnc-png \
+		--enable-vnc-thread \
 		--python=python2 \
 		$(use_enable aio linux-aio) \
 		$(use_enable bluetooth bluez) \
 		$(use_enable brltty brlapi) \
 		$(use_enable curl) \
+		$(use_enable debug debug-info) \
+		$(use_enable debug debug-mon) \
+		$(use_enable debug debug-tcg) \
+		$(use_enable doc docs) \
 		$(use_enable fdt) \
+		$(use_enable kernel_linux kvm) \
+		$(use_enable kernel_linux kvm-device-assignment) \
+		$(use_enable kernel_linux kvm-pit) \
+		$(use_enable kernel_linux nptl) \
+		$(use_enable kernel_linux uuid) \
 		$(use_enable ncurses curses) \
 		$(use_enable opengl) \
 		$(use_enable rbd) \
@@ -278,18 +275,20 @@ src_configure() {
 		$(use_enable smartcard smartcard) \
 		$(use_enable smartcard smartcard-nss) \
 		$(use_enable spice) \
+		$(use_enable tci tcg-interpreter) \
 		$(use_enable test check-utests) \
 		$(use_enable tls vnc-tls) \
-		$(use_enable threads vnc-thread) \
 		$(use_enable usbredir usb-redir) \
 		$(use_enable vde) \
 		$(use_enable vhost-net) \
-		$(use_enable xen) \
 		$(use_enable xattr attr) \
+		$(use_enable xen) \
+		$(use_enable xfs xfsctl) \
 		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
 		--cc="$(tc-getCC)" \
 		--host-cc="$(tc-getBUILD_CC)" \
+		${conf_opts} \
 		|| die "configure failed"
 
 		# this is for qemu upstream's threaded support which is
@@ -297,14 +296,21 @@ src_configure() {
 		# the kvm project has its own support for threaded IO
 		# which is always on and works
 		# --enable-io-thread \
+
+		# FreeBSD's kernel does not support QEMU assigning/grabbing
+		# host USB devices yet
+		use kernel_FreeBSD && \
+			sed -E -e "s|^(HOST_USB=)bsd|\1stub|" -i "${S}"/config-host.mak
 }
 
 src_install() {
 	emake DESTDIR="${ED}" install || die "make install failed"
 
 	if [[ -n ${softmmu_targets} ]]; then
-		insinto /lib/udev/rules.d/
-		doins kvm/scripts/65-kvm.rules || die
+		if use kernel_linux; then
+			insinto /lib/udev/rules.d/
+			doins kvm/scripts/65-kvm.rules || die
+		fi
 
 		if use qemu_softmmu_targets_x86_64 ; then
 			dobin "${FILESDIR}"/qemu-kvm
@@ -320,6 +326,10 @@ src_install() {
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
 	newdoc pc-bios/README README.pc-bios || die
 	dohtml qemu-doc.html qemu-tech.html || die
+
+	if use python; then
+		dobin scripts/kvm/kvm_stat || die
+	fi
 
 	# FIXME: Need to come up with a solution for non-x86 based systems
 	if use x86 || use amd64; then
@@ -357,5 +367,4 @@ pkg_postinst() {
 		elog "The ssl USE flag was renamed to tls, so adjust your USE flags."
 		elog "The nss USE flag was renamed to smartcard, so adjust your USE flags."
 	fi
-
 }
