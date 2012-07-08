@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.5.1.ebuild,v 1.1 2012/07/08 11:15:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.5.1-r1.ebuild,v 1.1 2012/07/08 12:37:11 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -43,4 +43,10 @@ each_ruby_test() {
 	[[ ${RUBY} == */jruby ]] && rubyflags="-X+O"
 
 	${RUBY} ${rubyflags} test/run-test.rb || die "testsuite failed"
+}
+
+all_ruby_install() {
+	all_fakegem_install
+
+	newbin "${FILESDIR}"/testrb testrb-2
 }
