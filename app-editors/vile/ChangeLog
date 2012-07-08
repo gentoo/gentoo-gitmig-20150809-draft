@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.44 2012/06/25 20:13:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.45 2012/07/08 18:16:13 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> vile-9.8g.ebuild:
+  alpha/ia64/sparc stable wrt #418409
 
   25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> vile-9.8g.ebuild:
   marked x86 per bug 418409
