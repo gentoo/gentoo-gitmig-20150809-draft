@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bti
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.19 2012/05/05 03:20:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.20 2012/07/08 19:41:47 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> bti-029.ebuild,
   bti-031.ebuild:
@@ -97,4 +100,3 @@
   26 Oct 2008; Greg Kroah-Hartman <gregkh@gentoo.org> +metadata.xml,
   +bti-007.ebuild:
   added the bti package (version 007) to the tree
-
