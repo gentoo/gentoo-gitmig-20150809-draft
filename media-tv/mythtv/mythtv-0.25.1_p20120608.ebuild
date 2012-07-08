@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1.ebuild,v 1.11 2012/07/08 22:29:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120608.ebuild,v 1.1 2012/07/08 22:29:21 cardoe Exp $
 
 EAPI=4
 
-inherit flag-o-matic multilib eutils python user
-
 PYTHON_DEPEND="python? 2"
+BACKPORTS="61e7a0e946"
+MY_P=${P%_p*}
+
+inherit flag-o-matic multilib eutils python user
 
 #MYTHTV_VERSION="v${PV}-15-g${MYTHTV_SREV}"
 #MYTHTV_BRANCH="fixes/0.25"
@@ -15,7 +17,8 @@ PYTHON_DEPEND="python? 2"
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org"
-SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/mythtv-0.25.1.tar.bz2"
+SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/mythtv-0.25.1.tar.bz2
+	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
@@ -108,11 +111,13 @@ src_prepare() {
 #		-e "s#\${BRANCH}#${MYTHTV_BRANCH}#g" \
 #		-i "${S}"/version.sh
 
+	[[ -n ${BACKPORTS} ]] && \
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
+			epatch
+
 	# Perl bits need to go into vender_perl and not site_perl
 	sed -e "s:pure_install:pure_install INSTALLDIRS=vendor:" \
 		-i "${S}"/bindings/perl/Makefile
-
-	epatch "${FILESDIR}/fixLdconfSandbox.${PV}.patch"
 
 	epatch_user
 }

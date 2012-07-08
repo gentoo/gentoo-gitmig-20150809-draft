@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.353 2012/06/30 05:05:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.354 2012/07/08 22:29:21 cardoe Exp $
+
+*mythtv-0.25.1_p20120608 (08 Jul 2012)
+
+  08 Jul 2012; Doug Goldstein <cardoe@gentoo.org> mythtv-0.25.1.ebuild,
+  +mythtv-0.25.1_p20120608.ebuild, +files/runmythfe-r1:
+  Add latest upstream patches. Fix issue where the runmythfe script called old
+  arguments.
 
   30 Jun 2012; Doug Goldstein <cardoe@gentoo.org> files/mythbackend.init:
   Fix typo in the init script
