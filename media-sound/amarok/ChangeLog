@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.427 2012/07/03 10:43:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.428 2012/07/08 13:53:38 jmbsvicetto Exp $
+
+  08 Jul 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.4.3-r1.ebuild, amarok-2.5.0-r3.ebuild:
+  [media-sound/amarok] Fix media-libs/liblastfm dependency - bug 423391.
 
   03 Jul 2012; Johannes Huber <johu@gentoo.org> amarok-2.5.0-r3.ebuild:
   Stable for x86, wrt bug #418321
@@ -1994,4 +1998,3 @@
   Initial revision.
   
   Submitted by: Okrain Genady <mafteah@mafteah.co.il>
-

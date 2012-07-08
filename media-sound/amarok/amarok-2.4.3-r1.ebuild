@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.3-r1.ebuild,v 1.5 2012/05/04 13:54:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.3-r1.ebuild,v 1.6 2012/07/08 13:53:38 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ COMMONDEPEND="
 		$(add_kdebase_dep kdemultimedia-kioslaves)
 	)
 	ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
-	lastfm? ( >=media-libs/liblastfm-0.3.0 )
+	lastfm? ( =media-libs/liblastfm-0.3* )
 	mp3tunes? (
 		dev-libs/glib:2
 		dev-libs/libxml2

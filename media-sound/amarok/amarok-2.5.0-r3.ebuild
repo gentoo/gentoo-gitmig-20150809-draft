@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0-r3.ebuild,v 1.3 2012/07/03 10:43:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.5.0-r3.ebuild,v 1.4 2012/07/08 13:53:38 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ COMMONDEPEND="
 			)
 	)
 	ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
-	lastfm? ( >=media-libs/liblastfm-0.3.0 )
+	lastfm? ( =media-libs/liblastfm-0.3* )
 	mp3tunes? (
 		dev-libs/glib:2
 		dev-libs/libxml2
