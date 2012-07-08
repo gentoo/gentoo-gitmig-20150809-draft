@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.625 2012/07/03 13:16:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.626 2012/07/08 13:09:49 blueness Exp $
+
+  08 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-2.6.32-r95.ebuild, hardened-sources-2.6.32-r110.ebuild,
+  hardened-sources-2.6.32-r111.ebuild, hardened-sources-2.6.32-r112.ebuild,
+  hardened-sources-2.6.32-r113.ebuild, hardened-sources-3.2.11.ebuild,
+  hardened-sources-3.2.20.ebuild, hardened-sources-3.2.20-r1.ebuild,
+  hardened-sources-3.2.21.ebuild, hardened-sources-3.2.21-r1.ebuild,
+  hardened-sources-3.2.21-r2.ebuild, hardened-sources-3.4.2.ebuild,
+  hardened-sources-3.4.2-r1.ebuild, hardened-sources-3.4.3.ebuild,
+  hardened-sources-3.4.3-r1.ebuild, hardened-sources-3.4.4.ebuild,
+  hardened-sources-3.4.4-r1.ebuild:
+  Consolidate pkg_postinst() message about gradm version
 
   03 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   hardened-sources-3.4.2-r1.ebuild:

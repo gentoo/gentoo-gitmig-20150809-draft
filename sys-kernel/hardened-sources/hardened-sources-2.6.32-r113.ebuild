@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.32-r113.ebuild,v 1.1 2012/06/25 22:07:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.32-r113.ebuild,v 1.2 2012/07/08 13:09:49 blueness Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ RDEPEND=">=sys-devel/gcc-4.5"
 pkg_postinst() {
 	kernel-2_pkg_postinst
 
-	local GRADM_COMPAT="sys-apps/gradm-2.9.1"
+	local GRADM_COMPAT="sys-apps/gradm-2.9.1*"
 
 	ewarn
 	ewarn "Hardened Gentoo provides three different predefined grsecurity level:"
