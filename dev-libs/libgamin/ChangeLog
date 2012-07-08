@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgamin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.31 2012/04/30 14:29:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.32 2012/07/08 11:47:14 pacho Exp $
+
+*libgamin-0.1.10-r3 (08 Jul 2012)
+
+  08 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/libgamin-0.1.10-deadlock.patch, +libgamin-0.1.10-r3.ebuild:
+  Fix deadlock, bug #420353 by Michael Boone.
 
   30 Apr 2012; Fabian Groffen <grobian@gentoo.org> libgamin-0.1.10-r2.ebuild:
   Fix for Prefix, add (Open)Solaris patch, bug #413415
@@ -125,4 +131,3 @@
   +libgamin-0.1.10.ebuild, +metadata.xml:
   New ebuild split off gamin. Initial ebuild inspired by Pacho Ramos, closes
   bug #217861.
-
