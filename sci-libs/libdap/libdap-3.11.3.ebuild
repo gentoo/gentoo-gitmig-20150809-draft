@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.11.3.ebuild,v 1.2 2012/05/24 20:09:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.11.3.ebuild,v 1.3 2012/07/08 17:58:37 jlec Exp $
 
 EAPI=4
 
-inherit base
+inherit autotools-utils
 
 DESCRIPTION="Implementation of a C++ SDK for DAP 2.0 and 3.2"
 HOMEPAGE="http://opendap.org/"
@@ -13,7 +13,7 @@ SRC_URI="http://www.opendap.org/pub/source/${P}.tar.gz"
 LICENSE="|| ( LGPL-2.1 URI )"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
-IUSE="doc test"
+IUSE="doc static-libs test"
 
 RDEPEND="
 	dev-util/cppunit
@@ -33,14 +33,11 @@ RESTRICT="test"
 # needs http connection
 # FAIL: MIMEUtilTest
 
-src_configure() {
-	econf \
-		--disable-static
-}
+PATCHES=( "${FILESDIR}"/${P}-gcc-4.7.patch )
 
 src_compile() {
-	emake
-	use doc && emake docs
+	autotools-utils_src_compile
+	use doc && autotools-utils_src_compile docs
 }
 
 src_test() {
@@ -50,8 +47,6 @@ src_test() {
 }
 
 src_install() {
-	default
-	use doc && dohtml docs/html/*
-
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	use doc && HTML_DOCS=("${AUTOTOOLS_BUILD_DIR}/docs/html/")
+	autotools-utils_src_install
 }
