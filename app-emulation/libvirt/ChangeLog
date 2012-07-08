@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.194 2012/07/04 16:54:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.195 2012/07/08 04:12:16 cardoe Exp $
+
+  07 Jul 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.13.ebuild,
+  metadata.xml:
+  Add support for the rados block device
 
   04 Jul 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.13.ebuild:
   Fix the libnl depend to match how 0.9.13 and newer behave. bug #424701

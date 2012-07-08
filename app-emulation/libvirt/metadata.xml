@@ -22,6 +22,9 @@
       Allow using real disk partitions as pool for disk image storage, using
       <pkg>sys-block/parted</pkg> to create, resize and delete them.
     </flag>
+	<flag name='rbd'>
+	  Enable rados block device support via <pkg>sys-cluster/ceph</pkg>
+	</flag>
 
     <!-- Virtualisation backends -->
     <flag name='lxc'>
