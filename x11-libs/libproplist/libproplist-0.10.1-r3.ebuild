@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libproplist/libproplist-0.10.1-r3.ebuild,v 1.1 2012/06/14 15:43:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libproplist/libproplist-0.10.1-r3.ebuild,v 1.2 2012/07/08 16:23:36 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.windowmaker.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64 alpha ia64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}

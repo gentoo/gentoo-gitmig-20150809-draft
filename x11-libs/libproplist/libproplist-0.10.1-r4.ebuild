@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libproplist/libproplist-0.10.1-r4.ebuild,v 1.2 2012/06/14 19:33:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libproplist/libproplist-0.10.1-r4.ebuild,v 1.3 2012/07/08 16:23:36 armin76 Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="static-libs"
 
 DOCS=( AUTHORS ChangeLog README TODO )
