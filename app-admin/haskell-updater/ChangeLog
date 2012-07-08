@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.29 2012/04/09 18:32:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.30 2012/07/08 18:13:13 slyfox Exp $
+
+*haskell-updater-1.2.0.6 (08 Jul 2012)
+
+  08 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/haskell-updater-1.2.0.5-ghc-7.5.patch, +haskell-updater-1.2.0.6.ebuild:
+  Version bump. With new '--list-only' and '--quiet' options requested by Martin
+  von Gagern in bug #407301
 
 *haskell-updater-1.2.0.5-r1 (09 Apr 2012)
 
@@ -141,4 +148,3 @@
   22 Jul 2009; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
   +haskell-updater-0.9.0.0-r2.ebuild:
   Initial import.
-
