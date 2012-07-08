@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.80 2011/11/28 11:53:38 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.81 2012/07/08 19:39:26 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nail-12.4-r2.ebuild:
   x86 stable wrt bug #391529
