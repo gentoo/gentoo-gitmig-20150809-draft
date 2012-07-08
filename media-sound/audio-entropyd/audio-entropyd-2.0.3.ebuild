@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-2.0.3.ebuild,v 1.6 2012/06/07 18:46:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-2.0.3.ebuild,v 1.7 2012/07/08 11:06:00 angelos Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -22,7 +22,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.1-uclibc.patch" \
 		"${FILESDIR}/${PN}-2.0.1-ldflags.patch"
 	sed -i -e "s:^OPT_FLAGS=.*:OPT_FLAGS=${CFLAGS}:" \
-		-e "s: -g::" Makefile || die
+		-e "/^WARNFLAGS/s: -g::" Makefile || die
 }
 
 src_compile() {
