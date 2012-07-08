@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50160001.eblit,v 1.1 2012/06/05 17:52:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50160001.eblit,v 1.2 2012/07/08 09:43:42 grobian Exp $
 
 myconf() {
 	# the myconf array is declared in src_configure
@@ -82,8 +82,9 @@ eblit-perl-src_configure() {
 		local llib
 		local paths=""
 		echo "int main() {}" > "${T}"/t.c
-		# need to ensure dirs contain compatible libs, bug #358875
-		for ldir in /lib /usr/lib /lib64 /lib/64 /usr/lib64 /usr/lib/64 /lib32 /usr/lib32 ; do
+		# need to ensure dirs contain compatible libs,
+		# bugs #358875, #400839
+		for ldir in /lib/*-linux-gnu /usr/lib/*-linux-gnu /lib64 /lib/64 /usr/lib64 /usr/lib/64 /lib32 /usr/lib32 /lib /usr/lib ; do
 			[[ -d ${ldir} ]] || continue
 			# find a random lib from here
 			llib=( ${ldir}/*$(get_libname) )
