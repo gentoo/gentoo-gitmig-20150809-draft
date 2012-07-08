@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-aacenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.29 2012/06/07 22:22:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.30 2012/07/08 15:21:44 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> vo-aacenc-0.1.2.ebuild:
+  alpha/ia64/sparc stable wrt #419109
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> vo-aacenc-0.1.2.ebuild:
   Marking vo-aacenc-0.1.2 ppc for bug 419109
