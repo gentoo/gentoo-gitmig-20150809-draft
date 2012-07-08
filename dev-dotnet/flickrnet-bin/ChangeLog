@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/flickrnet-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/ChangeLog,v 1.9 2011/06/13 22:19:27 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/ChangeLog,v 1.10 2012/07/08 19:37:55 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
   13 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   flickrnet-bin-2.2-r1.ebuild:
@@ -40,4 +43,3 @@
   Initial import of a flicrnet binary install; this is needed for the Flickr
   Exporter of f-spot. Since MonoDevelop 2.0 cannot handle the VS2k3 project
   used by the sources, until 2.2 the binary version will be used.
-
