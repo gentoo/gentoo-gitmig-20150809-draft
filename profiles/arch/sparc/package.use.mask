@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.107 2012/06/30 12:56:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.108 2012/07/08 17:41:51 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
+# x11-libs/qt-webkit doesn't seem to work
+dev-python/PyQt4 webkit
+x11-libs/qt-assistant webkit
 
 # Pacho Ramos <pacho@gentoo.org> (30 Jun 2012)
 # Missing keywords for connman
