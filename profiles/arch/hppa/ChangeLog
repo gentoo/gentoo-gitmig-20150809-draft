@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.161 2012/07/08 15:55:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.162 2012/07/08 16:00:55 jer Exp $
+
+  08 Jul 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=devil for graphviz instead.
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=nvtt for media-libs/devil (bug #419621).
