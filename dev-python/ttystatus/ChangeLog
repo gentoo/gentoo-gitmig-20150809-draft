@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ttystatus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ChangeLog,v 1.2 2012/07/04 23:39:51 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ChangeLog,v 1.3 2012/07/08 23:43:13 mschiff Exp $
+
+*ttystatus-0.19 (08 Jul 2012)
+
+  08 Jul 2012; Marc Schiffbauer <mschiff@gentoo.org> +ttystatus-0.19.ebuild:
+  Version bump.
 
   04 Jul 2012; Marc Schiffbauer <mschiff@gentoo.org> ttystatus-0.18.ebuild:
   Restrict test for now
