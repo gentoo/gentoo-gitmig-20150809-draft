@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pychecker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.56 2012/06/08 12:08:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.57 2012/07/08 15:32:10 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> pychecker-0.8.19.ebuild:
+  alpha/ia64/sparc stable wrt #414881
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pychecker-0.8.19.ebuild:
   x86 stable wrt bug #414881
