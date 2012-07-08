@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.1.4.ebuild,v 1.4 2012/06/12 11:51:05 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.1.4.ebuild,v 1.5 2012/07/08 16:38:52 jer Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18"
@@ -18,7 +18,7 @@ DESCRIPTION="Executable feature scenarios"
 HOMEPAGE="https://github.com/cucumber/cucumber/wikis"
 LICENSE="Ruby"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 SLOT="0"
 IUSE="examples"
 
