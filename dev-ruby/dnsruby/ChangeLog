@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dnsruby
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/ChangeLog,v 1.4 2011/11/27 14:37:54 mschiff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/ChangeLog,v 1.5 2012/07/08 07:51:02 graaff Exp $
+
+  08 Jul 2012; Hans de Graaff <graaff@gentoo.org> -dnsruby-1.52.ebuild:
+  Remove old version.
 
 *dnsruby-1.53 (27 Nov 2011)
 
