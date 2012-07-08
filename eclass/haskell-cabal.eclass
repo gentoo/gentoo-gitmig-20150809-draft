@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.32 2012/04/19 17:33:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.33 2012/07/08 19:16:46 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -352,7 +352,7 @@ cabal-pkg() {
 # You can also put a space separated list, eg CABAL_CORE_LIB_GHC_PV="6.6 6.6.1".
 cabal-is-dummy-lib() {
 	for version in ${CABAL_CORE_LIB_GHC_PV[*]}; do
-		[[ "$(ghc-version)" == "$version" ]] && return 0
+		[[ "$(ghc-version)" == ${version} ]] && return 0
 	done
 	return 1
 }
@@ -461,6 +461,25 @@ cabal_src_install() {
 	dodir ${ghc_confdir_with_prefix#${EPREFIX}}
 	local conf_file="${D}/$(ghc-confdir)/$(ghc-localpkgconf)"
 	[[ -e $conf_file ]] || echo '[]' > "$conf_file" || die
+
+	# make sure installed packages do not destroy ghc's
+	# bundled packages
+	local initial_pkg_db=${ROOT}/$(ghc-libdir)/package.conf.d.initial
+	if [[ -e ${initial_pkg_db} ]]; then
+		local checked_pkg
+		for checked_pkg in $(ghc-listpkg "${conf_file}")
+		do
+			local initial_pkg
+			for initial_pkg in $(ghc-listpkg "${initial_pkg_db}"); do
+				if [[ ${checked_pkg} = ${initial_pkg} ]]; then
+					eerror "Package ${checked_pkg} is shipped with $(ghc-version)."
+					eerror "Ebuild author forgot CABAL_CORE_LIB_GHC_PV entry."
+					eerror "Found in ${initial_pkg_db}."
+					die
+				fi
+			done
+		done
+	fi
 }
 
 haskell-cabal_src_install() {

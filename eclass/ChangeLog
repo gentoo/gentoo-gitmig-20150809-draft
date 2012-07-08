@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.337 2012/07/08 12:38:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.338 2012/07/08 19:16:46 slyfox Exp $
+
+  08 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
+  Allow wildcards in CABAL_CORE_LIB_GHC_PV. Guard against breakage of
+  ghc-shipped libraries.
 
   08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> ruby-ng.eclass:
   Add a function to wrap around testrb-2 as well.
