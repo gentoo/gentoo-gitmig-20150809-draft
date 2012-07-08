@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lomoco
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.13 2011/04/05 11:28:04 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.14 2012/07/08 19:42:15 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
 *lomoco-1.0-r6 (05 Apr 2011)
 
@@ -66,4 +69,3 @@
   20 Apr 2006; Benedikt Boehm <hollow@gentoo.org> +metadata.xml,
   +lomoco-1.0.ebuild:
   initial version, thanks to Ruud Althuizen <ruud@il.fontys.nl>, fixes #117622
-
