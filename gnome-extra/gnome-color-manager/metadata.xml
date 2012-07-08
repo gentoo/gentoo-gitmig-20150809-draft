@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-    	<email>flameeyes@gentoo.org</email>
-    	<name>Diego Elio Pettenò</name>
-	</maintainer>
 	<herd>gnome</herd>
 	<use>
 		<flag name="clutter">Use <pkg>media-libs/clutter</pkg> to render color

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-color-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.20 2012/07/02 22:26:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.21 2012/07/08 19:39:01 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
   02 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -gnome-color-manager-3.4.0.ebuild, gnome-color-manager-3.4.2.ebuild:
@@ -114,4 +117,3 @@
   +gnome-color-manager-2.32.0.ebuild, +metadata.xml:
   Initial import of gnome-color-manager; thanks to Stephan Ritscher and Gilles
   Dartiguelongue. Closes bug #291666.
-
