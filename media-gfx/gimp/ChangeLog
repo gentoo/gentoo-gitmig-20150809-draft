@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.374 2012/06/20 22:34:00 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.375 2012/07/08 22:57:28 sping Exp $
+
+*gimp-2.6.12-r2 (08 Jul 2012)
+
+  08 Jul 2012; Sebastian Pipping <sping@gentoo.org> +gimp-2.6.12-r2.ebuild,
+  +files/gimp-2.6.12-CVE-2012-2763.patch:
+  Add backport of patch to CVE-2012-2763 by mancha
 
   20 Jun 2012; Sebastian Pipping <sping@gentoo.org> gimp-2.8.0-r1.ebuild:
   Make use of --disable-silent-rules configure parameter to make build logs
