@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.95 2012/06/07 22:18:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.96 2012/07/08 17:21:45 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> faac-1.28-r3.ebuild:
+  alpha/ia64/sh/sparc stable wrt #419077
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> faac-1.28-r3.ebuild:
   Marking faac-1.28-r3 ppc for bug 419077
