@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.2 2012/07/03 14:41:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.3 2012/07/08 03:25:54 cardoe Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty +curl debug fdt ncurses \
-opengl pulseaudio qemu-ifup rbd sasl sdl smartcard spice static test
+opengl pulseaudio rbd sasl sdl smartcard spice static test
 +threads tls usbredir vde +vhost-net xattr xen"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
@@ -75,7 +75,6 @@ RDEPEND="
 	ncurses? ( sys-libs/ncurses )
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
-	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( static? ( >=media-libs/libsdl-1.2.11[static-libs,X] )
@@ -307,12 +306,6 @@ src_install() {
 		insinto /lib/udev/rules.d/
 		doins kvm/scripts/65-kvm.rules || die
 
-		if use qemu-ifup; then
-			insinto /etc/qemu/
-			insopts -m0755
-			doins kvm/scripts/qemu-ifup || die
-		fi
-
 		if use qemu_softmmu_targets_x86_64 ; then
 			dobin "${FILESDIR}"/qemu-kvm
 			ewarn "The depreciated '/usr/bin/kvm' symlink is no longer installed"
@@ -365,6 +358,4 @@ pkg_postinst() {
 		elog "The nss USE flag was renamed to smartcard, so adjust your USE flags."
 	fi
 
-	use qemu-ifup && \
-	ewarn "qemu-ifup is deprecated, be prepared for it to disappear next release"
 }
