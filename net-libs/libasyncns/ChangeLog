@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libasyncns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.32 2012/06/17 17:30:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.33 2012/07/08 19:40:58 flameeyes Exp $
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
 
   17 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> -libasyncns-0.7.ebuild,
   -libasyncns-0.8-r1.ebuild, libasyncns-0.8-r2.ebuild:
@@ -120,4 +123,3 @@
 
   29 Dec 2007; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml:
   Initial import of Lennart's libasyncns library, optionally used by PulseAudio.
-
