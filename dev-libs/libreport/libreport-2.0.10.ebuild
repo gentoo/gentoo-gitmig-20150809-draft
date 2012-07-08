@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.7.ebuild,v 1.7 2012/06/06 03:37:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.10.ebuild,v 1.1 2012/07/08 11:13:25 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -13,7 +13,7 @@ SRC_URI="https://fedorahosted.org/released/abrt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.21:2
@@ -23,6 +23,7 @@ RDEPEND=">=dev-libs/glib-2.21:2
 	dev-libs/libxml2
 	dev-libs/xmlrpc-c
 	gnome-base/gnome-keyring
+	net-libs/libproxy
 	net-misc/curl[ssl]
 	sys-apps/dbus
 	x11-libs/gtk+:2"
@@ -45,17 +46,14 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Replace redhat-specific defaults with gentoo ones
-	epatch "${FILESDIR}/${PN}-2.0.7-gentoo.patch"
+	# Replace redhat- and fedora-specific defaults with gentoo ones
+	epatch "${FILESDIR}/${PN}-2.0.9-gentoo.patch"
 
 	# Disable bugzilla plugin for now (requires bugs.gentoo.org infra support)
-	epatch "${FILESDIR}/${PN}-2.0.7-no-bugzilla.patch"
+	epatch "${FILESDIR}/${PN}-2.0.9-no-bugzilla.patch"
 
 	# Modify uploader_event so that the gui recognizes it
 	epatch "${FILESDIR}/${PN}-2.0.7-uploader_event-syntax.patch"
-
-	# https://bugzilla.redhat.com/show_bug.cgi?id=751833, in next release
-	epatch "${FILESDIR}/${P}-multiple-tabs.patch"
 
 	# -Werror should not be used by default
 	sed -e "s/-Werror\( \|$\)//" \
@@ -64,8 +62,7 @@ src_prepare() {
 		   src/lib/Makefile.* src/plugins/Makefile.* \
 		   src/report-python/Makefile.* || die "sed failed"
 
-	# disable pyc compiling
-	echo '#!/bin/sh' > py-compile
+	python_clean_py-compile_files
 
 	mkdir m4
 	eautoreconf
