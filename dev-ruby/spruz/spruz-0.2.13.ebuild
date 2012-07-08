@@ -1,12 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spruz/spruz-0.2.11.ebuild,v 1.5 2012/05/01 18:24:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spruz/spruz-0.2.13.ebuild,v 1.1 2012/07/08 12:53:45 flameeyes Exp $
 
-EAPI=2
-USE_RUBY="ruby18 ree18 jruby"
+EAPI=4
+
+USE_RUBY="ruby18 ruby19 ree18 jruby"
+
+RUBY_FAKEGEM_RECIPE_TEST="none"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
+
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
@@ -18,7 +23,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
-ruby_add_bdepend "test? ( virtual/ruby-test-unit ) "
+ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.5.1-r1 )"
 
 all_ruby_prepare() {
 	# sdoc is not available for Gentoo yet, use rdoc instead
@@ -28,5 +33,5 @@ all_ruby_prepare() {
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib -S testrb tests/* || die
+	ruby-ng_testrb-2 -Ilib tests/*_test.rb
 }
