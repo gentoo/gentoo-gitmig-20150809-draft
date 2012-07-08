@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.184 2012/07/08 12:46:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.185 2012/07/08 12:49:53 blueness Exp $
+
+  08 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  gradm-2.9.0.201202232055.ebuild, -gradm-2.9.201202232055.ebuild,
+  -files/gradm-2.9.201202232055.patch:
+  Remove 2.9.201202232055 and stabilize its replacement 2.9.0.201202232055
 
 *gradm-2.9.0.201202232055 (08 Jul 2012)
 
