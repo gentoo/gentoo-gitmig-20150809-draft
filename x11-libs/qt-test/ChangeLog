@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.114 2012/07/08 14:58:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.115 2012/07/08 18:03:50 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> qt-test-4.8.1.ebuild,
+  qt-test-4.8.2.ebuild:
+  sparc stable, add ~sparc
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> qt-test-4.8.2.ebuild:
   Stable for HPPA (bug #424625).
