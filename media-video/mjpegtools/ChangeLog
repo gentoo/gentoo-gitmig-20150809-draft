@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.171 2012/05/17 15:23:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.172 2012/07/08 12:30:17 hwoarang Exp $
+
+  08 Jul 2012; Markos Chandras <hwoarang@gentoo.org> mjpegtools-2.0.0-r2.ebuild:
+  Stable on amd64 wrt bug #425232
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> mjpegtools-2.0.0-r2.ebuild:
   keyword ~amd64-fbsd
