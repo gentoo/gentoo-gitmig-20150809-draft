@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1-r1.ebuild,v 1.2 2012/05/31 23:35:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1-r1.ebuild,v 1.3 2012/07/08 04:00:09 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -21,7 +21,7 @@ else
 	${BACKPORTS:+
 		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -30,9 +30,9 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty +curl debug fdt ncurses \
-opengl pulseaudio qemu-ifup rbd sasl sdl smartcard spice static test
-+threads tls usbredir vde +vhost-net xattr xen"
+IUSE="+aio alsa bluetooth brltty +curl debug fdt kernel_linux \
+kernel_FreeBSD ncurses opengl pulseaudio qemu-ifup rbd sasl sdl \
+smartcard spice static test +threads tls usbredir vde +vhost-net xattr xen"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
@@ -61,7 +61,6 @@ RDEPEND="
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	sys-apps/pciutils
-	>=sys-apps/util-linux-2.16.0
 	virtual/jpeg
 	amd64? ( sys-apps/seabios
 		sys-apps/vgabios )
@@ -73,6 +72,7 @@ RDEPEND="
 	brltty? ( app-accessibility/brltty )
 	curl? ( >=net-misc/curl-7.15.4 )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
+	kernel_linux? ( >=sys-apps/util-linux-2.16.0 )
 	ncurses? ( sys-libs/ncurses )
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -96,7 +96,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-text/texi2html
 	virtual/pkgconfig
-	>=sys-kernel/linux-headers-2.6.35
+	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
 	test? ( dev-libs/check )"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
@@ -136,10 +136,10 @@ pkg_pretend() {
 		eerror "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
 	fi
 
-	if kernel_is lt 2 6 25; then
+	if use kernel_linux && kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
 		eerror "Either upgrade your kernel"
-	else
+	elif use kernel_linux; then
 		if ! linux_config_exists; then
 			eerror "Unable to check your kernel for KVM support"
 		else
@@ -201,6 +201,9 @@ src_prepare() {
 	# Quick fix for the bad version number
 	epatch "${FILESDIR}"/${P}-VERSION.patch
 
+	# Patch the use of sys/sysctl.h on FreeBSD
+	epatch "${FILESDIR}"/${P}-freebsd-sysctl-header.patch
+
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
@@ -250,6 +253,9 @@ src_configure() {
 	use pulseaudio && audio_opts="pa ${audio_opts}"
 	use sdl && audio_opts="sdl ${audio_opts}"
 
+	# conditionally making UUID work on Linux only is wrong
+	# but the Gentoo/FreeBSD guys need to figure out what
+	# provides libuuid on their platform
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--disable-darwin-user \
@@ -257,13 +263,8 @@ src_configure() {
 		--disable-libiscsi \
 		--disable-strip \
 		--disable-werror \
-		--enable-kvm \
-		--enable-kvm-device-assignment \
-		--enable-kvm-pit \
 		--enable-pie \
-		--enable-nptl \
 		--enable-tcg-interpreter \
-		--enable-uuid \
 		--enable-vnc-jpeg \
 		--enable-vnc-png \
 		--python=python2 \
@@ -272,6 +273,11 @@ src_configure() {
 		$(use_enable brltty brlapi) \
 		$(use_enable curl) \
 		$(use_enable fdt) \
+		$(use_enable kernel_linux kvm) \
+		$(use_enable kernel_linux kvm-device-assignment) \
+		$(use_enable kernel_linux kvm-pit) \
+		$(use_enable kernel_linux nptl) \
+		$(use_enable kernel_linux uuid) \
 		$(use_enable ncurses curses) \
 		$(use_enable opengl) \
 		$(use_enable rbd) \
@@ -299,6 +305,11 @@ src_configure() {
 		# the kvm project has its own support for threaded IO
 		# which is always on and works
 		# --enable-io-thread \
+
+		# FreeBSD's kernel does not support QEMU assigning/grabbing
+		# host USB devices yet
+		use kernel_FreeBSD && \
+			sed -E -e "s|^(HOST_USB=)bsd|\1stub|" -i "${S}"/config-host.mak
 }
 
 src_install() {
