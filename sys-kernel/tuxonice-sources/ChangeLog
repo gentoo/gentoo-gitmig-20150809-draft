@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.143 2012/06/24 22:01:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.144 2012/07/08 12:11:20 pacho Exp $
+
+*tuxonice-sources-3.0.36 (08 Jul 2012)
+
+  08 Jul 2012; Pacho Ramos <pacho@gentoo.org> +tuxonice-sources-3.0.36.ebuild:
+  Version bump.
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   tuxonice-sources-3.0.35.ebuild:
@@ -1608,4 +1613,3 @@
   +files/linux-2.6.12-vesafb-tng-suspend2.patch, +metadata.xml,
   +suspend2-sources-2.6.12.ebuild:
   Initial import.
-
