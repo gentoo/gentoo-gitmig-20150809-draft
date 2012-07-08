@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/amphetamine-0.8.10.ebuild,v 1.9 2010/01/07 21:47:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/amphetamine-0.8.10.ebuild,v 1.10 2012/07/08 00:20:49 tristan Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs games
+inherit eutils games
 
 DESCRIPTION="a cool Jump'n Run game offering some unique visual effects"
 HOMEPAGE="http://homepage.hispeed.ch/loehrer/amph/amph.html"
@@ -18,18 +18,13 @@ IUSE=""
 DEPEND="media-libs/libsdl[audio,video]
 	x11-libs/libXpm"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-64bit.patch
-	sed -i \
-		-e "/^INSTALL_DIR /s:=.*:= ${GAMES_DATADIR}/${PN}:" \
-		-e "/^CFLAGS /s:$: ${CFLAGS}:" \
-		-e "/^CXXFLAGS /s:-O9.*:${CXXFLAGS}:" \
-		-e "/^DEPENDFLAGS /s:-g ::" \
-		-e "/^LINKER /s:$: ${LDFLAGS}:" \
-		-e "s:gcc:$(tc-getCC):" \
-		-e "s:g++:$(tc-getCXX):" \
-		Makefile \
-		|| die "sed failed"
+PATCHES=(
+	"${FILESDIR}"/${P}-build.patch
+	"${FILESDIR}"/${P}-64bit.patch
+)
+
+src_compile() {
+	emake INSTALL_DIR="${GAMES_DATADIR}"/${PN} || die
 }
 
 src_install() {

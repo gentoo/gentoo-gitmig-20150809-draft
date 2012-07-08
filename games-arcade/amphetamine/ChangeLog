@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/amphetamine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/ChangeLog,v 1.8 2010/01/07 21:47:36 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/ChangeLog,v 1.9 2012/07/08 00:20:49 tristan Exp $
+
+  08 Jul 2012; Tristan Heaven <tristan@gentoo.org> amphetamine-0.8.10.ebuild,
+  +files/amphetamine-0.8.10-build.patch:
+  Fix makefile with a patch instead of sed, bug #424213
 
   07 Jan 2010; Joseph Jezak <josejx@gentoo.org> amphetamine-0.8.10.ebuild:
   Marked ppc stable for bug #294564.
