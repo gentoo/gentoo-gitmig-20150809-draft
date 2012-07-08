@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.51 2012/06/08 11:43:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.52 2012/07/08 15:23:05 armin76 Exp $
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> eselect-rails-0.16.ebuild,
+  eselect-rails-0.18.ebuild:
+  Drop ia64/sparc keywords
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   eselect-rails-0.18.ebuild:
