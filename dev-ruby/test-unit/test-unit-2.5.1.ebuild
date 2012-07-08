@@ -1,16 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.5.0.ebuild,v 1.1 2012/06/10 05:59:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.5.1.ebuild,v 1.1 2012/07/08 11:15:16 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="TODO README.textile"
-
-# Disable default binwraps
-RUBY_FAKEGEM_BINWRAP=""
 
 inherit ruby-fakegem
 
@@ -19,9 +16,7 @@ ruby_add_bdepend "doc? ( dev-ruby/yard )"
 # jruby. Since we build documentation with the main ruby implementation
 # only we skip the dependency for jruby in this roundabout way, assuming
 # that jruby won't be the main ruby.
-USE_RUBY=ruby18 ruby_add_bdepend "ruby_targets_ruby18 doc" "( dev-ruby/redcloth )"
-USE_RUBY=ruby19 ruby_add_bdepend "ruby_targets_ruby19 doc" "( dev-ruby/redcloth )"
-USE_RUBY=ree18 ruby_add_bdepend "ruby_targets_ree18 doc" "( dev-ruby/redcloth )"
+USE_RUBY="${USE_RUBY/jruby/}" ruby_add_bdepend "doc? ( dev-ruby/redcloth )"
 
 DESCRIPTION="An improved version of the Test::Unit framework from Ruby 1.8"
 HOMEPAGE="http://test-unit.rubyforge.org/"
@@ -45,15 +40,7 @@ each_ruby_test() {
 	# rake audit || die "rake audit failed"
 	local rubyflags
 
-	[[ $(basename ${RUBY}) == jruby ]] && rubyflags="-X+O"
+	[[ ${RUBY} == */jruby ]] && rubyflags="-X+O"
 
 	${RUBY} ${rubyflags} test/run-test.rb || die "testsuite failed"
-}
-
-all_ruby_install() {
-	all_fakegem_install
-
-	# Create a testrb2 wrapper similarly to the rdoc2 wrapper for
-	# rdoc-2* series.
-	ruby_fakegem_binwrapper testrb /usr/bin/testrb-2
 }
