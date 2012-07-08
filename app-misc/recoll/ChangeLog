@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/recoll
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.7 2012/06/16 16:56:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.8 2012/07/08 18:02:16 hwoarang Exp $
+
+*recoll-1.17.3 (08 Jul 2012)
+
+  08 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +recoll-1.17.3.ebuild,
+  -recoll-1.16.1.ebuild:
+  Version bump. Fixes bug #425266
 
   16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> recoll-1.16.1.ebuild,
   recoll-1.16.2.ebuild, metadata.xml:
@@ -36,4 +42,3 @@
   +metadata.xml:
   Initial commit. Ebuild based on the one attached by Israel G. Lugo
   <israel.lugo@lugosys.com>. Bug #171271
-

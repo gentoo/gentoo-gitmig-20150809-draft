@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.16.1.ebuild,v 1.2 2012/06/16 16:56:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.17.3.ebuild,v 1.1 2012/07/08 18:02:16 hwoarang Exp $
 
 EAPI="4"
 
@@ -53,7 +53,7 @@ RDEPEND="
 	info? ( sys-apps/texinfo )
 	"
 
-REQUIRED_USE="^^ ( fam inotify ( !fam !inotify ) ) session? ( || ( fam inotify ) )"
+REQUIRED_USE="^^ ( fam inotify ) session? ( || ( fam inotify ) )"
 
 pkg_pretend() {
 	if use inotify; then
