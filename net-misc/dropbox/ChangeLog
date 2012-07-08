@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.21 2012/05/29 08:33:02 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.22 2012/07/08 20:40:59 naota Exp $
+
+  08 Jul 2012; Naohiro Aota <naota@gentoo.org> dropbox-1.2.51-r2.ebuild,
+  dropbox-1.4.3.ebuild, dropbox-1.4.7.ebuild:
+  Patch ELF to prevent preserve lib detection. #419405
 
 *dropbox-1.4.7 (29 May 2012)
 
@@ -102,4 +106,3 @@
   +metadata.xml:
   New ebuild net-misc/dropbox. Based on a ebuild written by
   piotr.karbowski@gmail.com
-

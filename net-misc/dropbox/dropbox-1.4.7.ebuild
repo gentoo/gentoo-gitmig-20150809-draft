@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.4.7.ebuild,v 1.1 2012/05/29 08:33:02 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.4.7.ebuild,v 1.2 2012/07/08 20:40:59 naota Exp $
 
 EAPI="4"
 
@@ -21,7 +21,8 @@ QA_DT_HASH="opt/${PN}/.*"
 QA_EXECSTACK_x86="opt/dropbox/_ctypes.so"
 QA_EXECSTACK_amd64="opt/dropbox/_ctypes.so"
 
-DEPEND="x11-themes/hicolor-icon-theme"
+DEPEND="dev-util/patchelf"
+
 # Be sure to have GLIBCXX_3.4.9, #393125
 RDEPEND="
 	app-arch/bzip2
@@ -32,6 +33,7 @@ RDEPEND="
 	net-misc/wget
 	>=sys-devel/gcc-4.2.0
 	sys-libs/zlib
+	x11-themes/hicolor-icon-theme
 "
 
 src_unpack() {
@@ -43,6 +45,7 @@ src_unpack() {
 	if ! use librsync-bundled; then
 		rm -vf librsync.so.1 || die
 	fi
+	patchelf --set-rpath '$ORIGIN' _librsync.so || die
 	pax-mark cm "${S}/src/dropbox"
 	cd "${WORKDIR}"
 }
