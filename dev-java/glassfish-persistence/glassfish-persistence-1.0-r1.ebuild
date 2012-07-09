@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-persistence/glassfish-persistence-1.0-r1.ebuild,v 1.1 2012/06/10 08:23:21 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-persistence/glassfish-persistence-1.0-r1.ebuild,v 1.2 2012/07/09 13:46:51 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.java.net/javaee5/fcs_branch/promoted/source/glassfish-9
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="
