@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.62 2012/07/09 04:27:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.63 2012/07/09 11:37:11 johu Exp $
+
+  09 Jul 2012; Johannes Huber <johu@gentoo.org> -qt-multimedia-4.6.3.ebuild:
+  Drop Qt-4.6.3
 
   09 Jul 2012; Joseph Jezak <josejx@gentoo.org> qt-multimedia-4.8.2.ebuild:
   Marked ppc/ppc64 for bug #424625.
