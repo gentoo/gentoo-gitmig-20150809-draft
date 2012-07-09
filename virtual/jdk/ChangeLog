@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.48 2012/07/09 17:52:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.49 2012/07/09 20:43:47 ago Exp $
+
+  09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> jdk-1.6.0-r1.ebuild:
+  Stable for amd64, wrt bug #425456
 
   09 Jul 2012; Johannes Huber <johu@gentoo.org> jdk-1.6.0-r1.ebuild:
   Stable for x86, wrt bug #425456
