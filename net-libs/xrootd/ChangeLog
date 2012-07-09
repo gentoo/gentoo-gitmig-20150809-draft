@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xrootd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.6 2012/07/09 06:20:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.7 2012/07/09 16:27:42 bicatali Exp $
+
+*xrootd-3.2.2 (09 Jul 2012)
+
+  09 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +xrootd-3.2.2.ebuild:
+  Version bump
 
   09 Jul 2012; Justin Lecher <jlec@gentoo.org> -xrootd-3.1.0.ebuild,
   -xrootd-3.1.1.ebuild, xrootd-3.2.1.ebuild, metadata.xml:
@@ -49,4 +54,3 @@
   Another note: all daemons MUST use the same config (-c
   /etc/xrootd/your._config), that's why there is only one conf.d file
   for all four daemons.
-
