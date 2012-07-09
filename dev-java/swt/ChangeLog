@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.143 2012/06/01 06:45:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.144 2012/07/09 18:33:43 sera Exp $
+
+*swt-4.2 (09 Jul 2012)
+
+  09 Jul 2012; Ralph Sennhauser <sera@gentoo.org> +swt-4.2.ebuild,
+  +files/swt-4.2-as-needed-and-flag-fixes.patch, +files/swt-4.2-manifest:
+  Version bump. Thanks to Carlos Silva <r3pek@r3pek.org> for the ebuild.
+  #424455
 
   01 Jun 2012; Jeff Horelick <jdhore@gentoo.org> swt-3.7.2.ebuild:
   marked x86 per bug 418043
