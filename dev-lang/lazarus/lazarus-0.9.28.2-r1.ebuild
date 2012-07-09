@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.28.2-r1.ebuild,v 1.2 2011/03/29 07:58:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.28.2-r1.ebuild,v 1.3 2012/07/09 21:22:32 ulm Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ RESTRICT="strip" #269221
 FPCVER="2.4.0"
 
 SLOT="0" # Note: Slotting Lazarus needs slotting fpc, see DEPEND.
-LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-linking-exception"
+LICENSE="GPL-2 LGPL-2.1-with-linking-exception"
 KEYWORDS="~amd64 ~ppc ~x86"
 DESCRIPTION="Lazarus IDE is a feature rich visual programming environment emulating Delphi."
 HOMEPAGE="http://www.lazarus.freepascal.org/"

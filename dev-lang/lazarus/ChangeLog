@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lazarus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.33 2011/03/29 07:58:55 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.34 2012/07/09 21:22:32 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> lazarus-0.9.26-r4.ebuild,
+  lazarus-0.9.28.2-r1.ebuild:
+  Update LICENSE, bug 425140.
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> lazarus-0.9.26-r4.ebuild,
   lazarus-0.9.28.2-r1.ebuild:
@@ -168,4 +172,3 @@
   +lazarus-0.9.6.ebuild:
   Initial import into the tree. Closes bug #87486. Thanks to expose for the
   ebuild!
-
