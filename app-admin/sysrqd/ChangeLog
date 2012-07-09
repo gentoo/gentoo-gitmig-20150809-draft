@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysrqd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/ChangeLog,v 1.6 2012/03/11 12:02:27 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/ChangeLog,v 1.7 2012/07/09 18:43:27 wschlich Exp $
+
+  09 Jul 2012; Wolfram Schlich <wschlich@gentoo.org> -sysrqd-9.ebuild,
+  -files/sysrqd-9-config.patch, -sysrqd-12.ebuild,
+  -files/sysrqd-12-config.patch, sysrqd-14.ebuild:
+  removed old versions, updated HOMEPAGE wrt bug #407803
 
 *sysrqd-14 (11 Mar 2012)
 

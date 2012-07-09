@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/sysrqd-14.ebuild,v 1.1 2012/03/11 12:02:27 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/sysrqd-14.ebuild,v 1.2 2012/07/09 18:43:27 wschlich Exp $
 
 inherit eutils toolchain-funcs
 
 IUSE=""
 DESCRIPTION="daemon providing access to the kernel sysrq functions via network"
-HOMEPAGE="http://julien.danjou.info/sysrqd.html"
+HOMEPAGE="http://julien.danjou.info/projects/sysrqd"
 #SRC_URI="http://julien.danjou.info/${PN}/${P}.tar.gz"
 SRC_URI="http://dev.gentoo.org/~wschlich/src/${CATEGORY}/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
