@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libbtbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.5 2012/07/06 21:15:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.6 2012/07/09 19:02:02 zerochaos Exp $
+
+*libbtbb-0.8-r1 (09 Jul 2012)
+
+  09 Jul 2012; Rick Farina <zerochaos@gentoo.org>
+  +files/wireshark-1.8-btbb.patch, +libbtbb-0.8-r1.ebuild, libbtbb-9999.ebuild:
+  add wireshark patches for bluetooth baseband support
 
   06 Jul 2012; Rick Farina <zerochaos@gentoo.org> libbtbb-9999.ebuild:
   fixing missing SRC_URI in live conditional
