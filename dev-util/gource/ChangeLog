@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gource
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.20 2012/05/12 19:25:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.21 2012/07/09 09:39:10 flameeyes Exp $
+
+  09 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Reorder metadata to help auto-filing.
 
   12 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> -gource-0.31.ebuild,
   -gource-0.32.ebuild, -gource-0.35.ebuild, -gource-0.37.ebuild,
@@ -109,4 +112,3 @@
   build system (written by me, merged upstream), to keep in line with QA
   policies. Also thanks to the indipendent writer Stanislav Cymbalov in bug
   #297074.
-
