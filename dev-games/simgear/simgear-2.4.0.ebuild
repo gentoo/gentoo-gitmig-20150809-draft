@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.4.0.ebuild,v 1.3 2012/04/06 10:48:32 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.4.0.ebuild,v 1.4 2012/07/09 15:08:17 xmw Exp $
 
 EAPI=4
 
-inherit autotools-utils
+inherit autotools-utils eutils
 
 DESCRIPTION="Development library for simulation games"
 HOMEPAGE="http://www.simgear.org/"
@@ -17,17 +17,19 @@ IUSE="debug"
 
 RESTRICT="test"
 
-RDEPEND="
-	>=dev-games/openscenegraph-3.0.1
+RDEPEND=">=dev-games/openscenegraph-3.0.1
 	>=dev-libs/boost-1.37
 	dev-vcs/subversion
 	media-libs/freealut
 	media-libs/openal
-	>=media-libs/plib-1.8.5
-"
+	>=media-libs/plib-1.8.5"
 DEPEND="${RDEPEND}"
 
 DOCS=(AUTHORS NEWS TODO)
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-boost148.patch
+}
 
 src_configure() {
 	myeconfargs=(
