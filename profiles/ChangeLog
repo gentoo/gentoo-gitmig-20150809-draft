@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6760 2012/07/09 09:54:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6761 2012/07/09 10:38:08 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Unmask google-perftools.
 
   09 Jul 2012; Tim Harder <radhermit@gentoo.org> package.mask:
   Unmask =media-gfx/luminance-hdr-2.3.0.
