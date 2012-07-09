@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.3 2012/06/03 14:23:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.4 2012/07/09 05:48:42 xmw Exp $
 
 EAPI=4
 
@@ -19,6 +19,7 @@ RDEPEND="app-crypt/qca
 	app-crypt/qca-ossl
 	sys-auth/libfprint
 	sys-auth/polkit-qt
+	sys-libs/pam
 	x11-libs/libfakekey
 	x11-libs/qt-core:4
 	!sys-auth/thinkfinger"
