@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.108 2012/07/08 17:41:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.109 2012/07/09 14:21:59 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
 # x11-libs/qt-webkit doesn't seem to work
 dev-python/PyQt4 webkit
 x11-libs/qt-assistant webkit
+x11-libs/qt-declarative webkit
 
 # Pacho Ramos <pacho@gentoo.org> (30 Jun 2012)
 # Missing keywords for connman
@@ -126,10 +127,6 @@ mail-client/evolution connman
 # Raúl Porcel <armin76@gentoo.org> (5 Dec 2010)
 # Mask doc-pdf because of Java dependencies (bug #347259)
 net-analyzer/wireshark doc-pdf
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (07 Nov 2010)
-# x11-libs/qt-declarative is not keyworded.
-dev-python/PyQt4 declarative
 
 # Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
 # MKL not available on this arch

@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.98 2012/07/06 07:42:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.99 2012/07/09 14:21:16 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jun 2012)
 # x11-libs/qt-webkit doesn't seem to work
 dev-python/PyQt4 webkit
 x11-libs/qt-assistant webkit
+x11-libs/qt-declarative webkit
 net-irc/kvirc webkit
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
@@ -98,10 +99,6 @@ sys-apps/smartmontools caps
 net-analyzer/wireshark doc-pdf
 # legacy mask
 www-client/elinks javascript
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (07 Nov 2010)
-# x11-libs/qt-declarative is not keyworded.
-dev-python/PyQt4 declarative
 
 # Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
 # MKL not available on this arch
