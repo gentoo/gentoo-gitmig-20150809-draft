@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.7-r3.ebuild,v 1.2 2012/06/26 04:59:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.7-r3.ebuild,v 1.3 2012/07/09 20:40:04 swift Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
@@ -88,6 +88,10 @@ src_prepare() {
 		# Make PYTHON_LDFLAGS replaceable during running `make`.
 		sed -e "/^AM_LDFLAGS =/s/@PYTHON_LDFLAGS@/\$(PYTHON_LDFLAGS)/" -i ${dir}/Makefile.am || die "sed failed"
 	done
+
+	# temporary work around bug #424581 until automake-1.12 is stable (then
+	# depend on it). Need to use MKDIR_P in the mean time for 1.12+.
+	has_version ">=sys-devel/automake-1.12.1" && { find . -name 'Makefile.*' -exec sed -i -e 's:mkdir_p:MKDIR_P:g' {} +  || die; }
 
 	eautoreconf
 
