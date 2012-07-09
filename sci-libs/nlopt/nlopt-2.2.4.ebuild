@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.8 2012/04/04 08:07:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.4.ebuild,v 1.9 2012/07/09 17:14:28 bicatali Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://ab-initio.mit.edu/nlopt/"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 MIT"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="cxx guile octave python static-libs"
 
@@ -61,13 +61,13 @@ src_compile() {
 		python_copy_sources swig
 		compilation() {
 			autotools-utils_src_compile \
-				PYTHON_CPPFLAGS="-I$(python_get_includedir)" \
-				PYTHON_LDFLAGS="$(python_get_library -l)" \
-				PYTHON_SITE_PKG="$(python_get_sitedir)" \
-				PYTHON_VERSION="$(python_get_version)" \
-				PYTHON_INCLUDES="$(python_get_includedir)" \
-				pythondir="$(python_get_sitedir)" \
-				pyexecdir="$(python_get_sitedir)"
+				PYTHON_CPPFLAGS="-I${EPREFIX}$(python_get_includedir)" \
+				PYTHON_LDFLAGS="${EPREFIX}$(python_get_library -l)" \
+				PYTHON_SITE_PKG="${EPREFIX}$(python_get_sitedir)" \
+				PYTHON_VERSION="${EPREFIX}$(python_get_version)" \
+				PYTHON_INCLUDES="${EPREFIX}$(python_get_includedir)" \
+				pythondir="${EPREFIX}$(python_get_sitedir)" \
+				pyexecdir="${EPREFIX}$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir swig compilation
 	fi
@@ -79,8 +79,8 @@ src_install() {
 		installation() {
 			rm *.la
 			emake DESTDIR=${D} install \
-				pyexecdir="$(python_get_sitedir)" \
-				pythondir="$(python_get_sitedir)"
+				pyexecdir="${EPREFIX}$(python_get_sitedir)" \
+				pythondir="${EPREFIX}$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir swig installation
 		python_clean_installation_image

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/nlopt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.16 2012/04/04 08:07:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.17 2012/07/09 17:14:28 bicatali Exp $
+
+  09 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> nlopt-2.2.4.ebuild:
+  keyword amd64-linux and x86-linux
 
   04 Apr 2012; Justin Lecher <jlec@gentoo.org> nlopt-2.2.4.ebuild:
   Correct handling of PYABI things, #405255
