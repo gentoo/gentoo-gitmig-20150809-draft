@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xrootd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.5 2012/07/08 22:43:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.6 2012/07/09 06:20:15 jlec Exp $
+
+  09 Jul 2012; Justin Lecher <jlec@gentoo.org> -xrootd-3.1.0.ebuild,
+  -xrootd-3.1.1.ebuild, xrootd-3.2.1.ebuild, metadata.xml:
+  Cleaned old, add missing eclass
 
   08 Jul 2012; Jeff Horelick <jdhore@gentoo.org> xrootd-3.2.1.ebuild:
   marked x86 per bug 425054

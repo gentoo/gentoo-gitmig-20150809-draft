@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.2.1.ebuild,v 1.3 2012/07/08 22:43:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.2.1.ebuild,v 1.4 2012/07/09 06:20:15 jlec Exp $
 
 EAPI=4
 
-inherit cmake-utils eutils
+inherit cmake-utils eutils user
 
 DURI="http://xrootd.slac.stanford.edu/doc/prod"
 
