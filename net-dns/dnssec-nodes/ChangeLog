@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnssec-nodes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-nodes/ChangeLog,v 1.3 2012/06/23 22:28:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-nodes/ChangeLog,v 1.4 2012/07/09 10:55:03 xmw Exp $
+
+  09 Jul 2012; Michael Weber <xmw@gentoo.org> -dnssec-nodes-1.12-r1.ebuild:
+  Drop old
 
 *dnssec-nodes-1.13 (23 Jun 2012)
 
@@ -19,4 +22,3 @@
   22 May 2012; Michael Weber <xmw@gentoo.org> +dnssec-nodes-1.12.ebuild,
   +metadata.xml:
   Initial import
-
