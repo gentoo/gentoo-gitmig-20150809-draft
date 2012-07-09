@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.120 2012/07/08 14:57:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.121 2012/07/09 04:29:06 josejx Exp $
+
+  09 Jul 2012; Joseph Jezak <josejx@gentoo.org> qt-phonon-4.8.2.ebuild:
+  Marked ppc/ppc64 for bug #424625.
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> qt-phonon-4.8.2.ebuild:
   Stable for HPPA (bug #424625).

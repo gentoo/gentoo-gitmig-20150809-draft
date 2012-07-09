@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.115 2012/07/08 18:03:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.116 2012/07/09 04:32:34 josejx Exp $
+
+  09 Jul 2012; Joseph Jezak <josejx@gentoo.org> qt-test-4.8.2.ebuild:
+  Marked ppc/ppc64 for bug #424625.
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> qt-test-4.8.1.ebuild,
   qt-test-4.8.2.ebuild:

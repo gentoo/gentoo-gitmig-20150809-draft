@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-demo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.95 2012/07/06 05:22:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/ChangeLog,v 1.96 2012/07/09 04:26:13 josejx Exp $
+
+  09 Jul 2012; Joseph Jezak <josejx@gentoo.org> qt-demo-4.8.2.ebuild:
+  Marked ppc/ppc64 for bug #424625.
 
   06 Jul 2012; Michael Weber <xmw@gentoo.org> qt-demo-4.8.1-r1.ebuild:
   ppc stable (bug 414241)
