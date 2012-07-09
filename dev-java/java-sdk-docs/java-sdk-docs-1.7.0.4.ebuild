@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.7.0.4.ebuild,v 1.1 2012/05/22 19:47:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.7.0.4.ebuild,v 1.2 2012/07/09 07:12:15 jdhore Exp $
 
 ORIG_NAME="jdk-7u4-apidocs.zip"
 SRC_URI="${ORIG_NAME}"
@@ -9,7 +9,7 @@ DESCRIPTION="Oracle's documentation bundle (including API) for Java SE"
 HOMEPAGE="http://download.oracle.com/javase/7/docs/"
 LICENSE="oracle-java-documentation-7"
 SLOT="1.7"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
