@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.39.0.ebuild,v 1.1 2012/07/09 00:11:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.39.0.ebuild,v 1.2 2012/07/09 00:24:15 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
-EAPI="2"
-
+EAPI=4
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Toolbox of 217 utilities for testing Ethernet/IP networks"
@@ -23,11 +22,13 @@ IUSE="doc"
 
 RDEPEND=">=net-libs/libnet-1.1.1"
 
-DEPEND="net-libs/libpcap
+DEPEND="
+	${RDEPEND}
+	net-libs/libpcap
 	~net-libs/netwib-${PV}
-	${RDEPEND}"
+"
 
-S="${WORKDIR}/${P}-src/src"
+S=${WORKDIR}/${P}-src/src
 
 src_prepare() {
 	sed -i \
@@ -50,7 +51,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "install failed"
+	default
 	dodoc ../README.TXT
 	if use doc;
 	then
