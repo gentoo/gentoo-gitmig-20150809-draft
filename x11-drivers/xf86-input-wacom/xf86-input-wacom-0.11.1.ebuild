@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.11.1.ebuild,v 1.4 2012/03/03 16:28:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.11.1.ebuild,v 1.5 2012/07/09 18:37:12 ikelos Exp $
 
 EAPI=4
 
@@ -21,7 +21,8 @@ RDEPEND="!x11-drivers/linuxwacom
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXi
-	x11-libs/libXrandr"
+	x11-libs/libXrandr
+	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
 	x11-proto/randrproto"
 
