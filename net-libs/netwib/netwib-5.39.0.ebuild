@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.39.0.ebuild,v 1.1 2012/07/09 00:11:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.39.0.ebuild,v 1.2 2012/07/09 00:27:49 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
-EAPI="2"
-
+EAPI=4
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols"
@@ -21,11 +20,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="doc"
 
-DEPEND="net-libs/libpcap
-	>=net-libs/libnet-1.1.1"
+DEPEND="
+	>=net-libs/libnet-1.1.1
+	net-libs/libpcap
+"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${P}-src/src"
+S=${WORKDIR}/${P}-src/src
 
 src_prepare() {
 	sed -i \
@@ -36,7 +37,7 @@ src_prepare() {
 		-e "s:=ranlib:=$(tc-getRANLIB):" \
 		-e "s:=gcc:=$(tc-getCC):" \
 		-e "s:-O2:${CFLAGS}:" \
-		config.dat
+		config.dat || die
 }
 
 src_configure() {
@@ -44,7 +45,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	default
 	dodoc ../README.TXT
 	if use doc; then
 		mkdir "${D}"/usr/share/doc/${PF}/html
