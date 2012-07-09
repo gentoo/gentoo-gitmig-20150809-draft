@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/oosuite-0.39.ebuild,v 1.1 2012/07/09 19:14:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/oosuite-0.39.ebuild,v 1.2 2012/07/09 19:33:27 bicatali Exp $
 
 EAPI=4
 
@@ -38,14 +38,13 @@ DEPEND="app-arch/unzip
 S="${WORKDIR}/PythonPackages"
 
 src_prepare() {
-	#epatch "${FILESDIR}"/${PN}-0.37-no-init-msg.patch
 	OO_DIRS="DerApproximator FuncDesigner OpenOpt SpaceFuncs"
 	find . -name "*COPYING*" -delete
 	# move all examples and tests to ease installation in proper directory
 	mkdir "${WORKDIR}/examples"
 	local d e
 	for d in ${OO_DIRS}; do
-			mkdir "${WORKDIR}/examples/${d}"
+		mkdir "${WORKDIR}/examples/${d}"
 		for e in $(find ${d} -type d -name examples -or -name tests -or -name doc); do
 			mv ${e} "${WORKDIR}/examples/${d}/" || die
 		done
