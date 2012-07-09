@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/qwriter-0.1.9.ebuild,v 1.4 2012/05/21 19:57:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/qwriter-0.1.9.ebuild,v 1.5 2012/07/09 17:56:05 hwoarang Exp $
 
 EAPI="2"
 LANGS="ru"
@@ -28,6 +28,8 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	sed -i "s:languages:/usr/share/${PN}/languages:" src/MainWindow.cpp \
 		|| die "failed to fix translation path"
+	# gcc-4.7. Bug #425252
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 	qt4-r2_src_prepare
 }
 
