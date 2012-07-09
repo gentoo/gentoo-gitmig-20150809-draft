@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scikits_statsmodels
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/ChangeLog,v 1.7 2012/06/21 18:57:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/ChangeLog,v 1.8 2012/07/09 16:52:37 bicatali Exp $
+
+*scikits_statsmodels-0.4.3 (09 Jul 2012)
+
+  09 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +scikits_statsmodels-0.4.3.ebuild, -scikits_statsmodels-0.3.1.ebuild:
+  Version bump. Keyword amd64-linux, x86-linux
 
   21 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
   scikits_statsmodels-0.4.0.ebuild:
@@ -49,4 +55,3 @@
   26 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
   +scikits_statsmodels-0.2.0.ebuild, +metadata.xml:
   Initial import of scikits.statsmodels
-
