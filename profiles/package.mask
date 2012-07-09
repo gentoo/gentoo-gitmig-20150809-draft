@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13941 2012/07/09 00:04:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13942 2012/07/09 08:48:20 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -369,15 +369,6 @@ dev-perl/XML-Sablot
 # Depends on Devel-DProf, removed from perl-5.16.
 # Use dev-perl/Devel-NYTProf instead
 dev-perl/Devel-Profiler
-
-# Bernard Cafarelli <voyageur@gentoo.org> (08 Jun 2012)
-# Masked for removal in 30 days, bug #417357
-# Dead upstream (last release in 2006), buggy
-# Use gnustep-apps/projectcenter instead
-gnustep-apps/projectmanager
-gnustep-apps/keyarcher
-gnustep-apps/plconv
-gnustep-libs/wizardkit
 
 # Patrick Lauer <patrick@gentoo.org> (06 Jun 2012)
 # Temporarily mask nginx >=1.3 see #411937

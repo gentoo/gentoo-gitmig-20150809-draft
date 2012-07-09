@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6758 2012/07/08 19:48:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6759 2012/07/09 08:48:20 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Remove mask on gnustep-apps/projectmanager and dependencies after last rites,
+  bug #417357
 
   08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Downgrade netkit-tftp masking to non-removal.
