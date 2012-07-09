@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>media-tv</herd>
-	<maintainer>
-		<email>a3li@gentoo.org</email>
-		<name>Alex Legler</name>
-		<description>Please CC on bugs</description>
-	</maintainer>
 	<use>
 		<flag name="alsa">
 			Enables an EXPERIMENTAL ALSA patch by the Ubuntu maintainers.
