@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.13 2012/04/24 05:54:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.14 2012/07/09 14:06:28 ranger Exp $
+
+  09 Jul 2012; Brent Baude <ranger@gentoo.org> memphis-0.2.3.ebuild:
+  Marking memphis-0.2.3 ~ppc for bug 388367
 
   24 Apr 2012; Justin Lecher <jlec@gentoo.org> memphis-0.2.3.ebuild:
   Run eautoreconf when patching configure.ac, #412287
