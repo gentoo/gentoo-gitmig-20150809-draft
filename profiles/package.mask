@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13945 2012/07/09 11:07:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13946 2012/07/09 12:04:33 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -283,27 +283,6 @@ app-shells/pdksh
 # http://vbellur.wordpress.com/2012/05/31/upgrading-to-glusterfs-3-3/
 # *BEFORE* upgrading
 >=sys-cluster/glusterfs-3.3.0
-
-# Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
-# Mask old Qt ebuilds with several security vulnerabilities,
-# bugs #335730, #335734, #382171. Yes, this means no more stable Qt on ia64,
-# and no more Qt on alpha and sparc.
-<x11-libs/qt-assistant-4.7.3
-<x11-libs/qt-core-4.7.3
-<x11-libs/qt-dbus-4.7.3
-<x11-libs/qt-demo-4.7.3
-<x11-libs/qt-gui-4.7.3
-<x11-libs/qt-multimedia-4.7.3
-<x11-libs/qt-opengl-4.7.3
-<x11-libs/qt-phonon-4.7.3
-<x11-libs/qt-qt3support-4.7.3
-<x11-libs/qt-script-4.7.3
-<x11-libs/qt-sql-4.7.3
-<x11-libs/qt-svg-4.7.3
-<x11-libs/qt-test-4.7.3
-<x11-libs/qt-webkit-4.7.3
-<x11-libs/qt-xmlpatterns-4.7.3
-dev-embedded/qvfb
 
 # Michael Weber <xmw@gentoo.org> (13 Jun 2012)
 # Mask beta versions for testing
