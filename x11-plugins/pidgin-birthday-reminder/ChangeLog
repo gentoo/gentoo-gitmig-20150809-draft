@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-birthday-reminder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-birthday-reminder/ChangeLog,v 1.3 2012/07/09 15:26:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-birthday-reminder/ChangeLog,v 1.4 2012/07/09 17:44:46 johu Exp $
+
+  09 Jul 2012; Johannes Huber <johu@gentoo.org>
+  pidgin-birthday-reminder-1.7.ebuild:
+  Stable for x86, wrt bug #425334
 
   09 Jul 2012; Julian Ospald <hasufell@gentoo.org>
   pidgin-birthday-reminder-1.7.ebuild:

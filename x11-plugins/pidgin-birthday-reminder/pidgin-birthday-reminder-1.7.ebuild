@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-birthday-reminder/pidgin-birthday-reminder-1.7.ebuild,v 1.3 2012/07/09 15:26:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-birthday-reminder/pidgin-birthday-reminder-1.7.ebuild,v 1.4 2012/07/09 17:44:46 johu Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 RDEPEND="net-im/pidgin[gtk]"
