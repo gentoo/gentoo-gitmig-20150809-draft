@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/mx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/ChangeLog,v 1.6 2012/05/21 19:10:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/ChangeLog,v 1.7 2012/07/09 14:31:47 ranger Exp $
+
+  09 Jul 2012; Brent Baude <ranger@gentoo.org> mx-1.4.2.ebuild:
+  Marking mx-1.4.2 ~ppc for bug 379649
 
   21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> mx-1.4.2.ebuild:
   Need eutils for epatch.
