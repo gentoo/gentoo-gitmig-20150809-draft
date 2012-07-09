@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13942 2012/07/09 08:48:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13943 2012/07/09 09:54:19 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -86,10 +86,6 @@ dev-python/sexy-python
 # bug 424263 423047
 # dead on upstream, fails on gcc-4.7
 =media-plugins/vdr-cdda-0.1.0-r1
-
-# Tim Harder <radhermit@gentoo.org> (30 Jun 2012)
-# Mask development releases
-=media-gfx/luminance-hdr-2.3.0*
 
 # Richard Yao <ryao@gentoo.org> (29 Jun 2012)
 # Patch introduced regressions
