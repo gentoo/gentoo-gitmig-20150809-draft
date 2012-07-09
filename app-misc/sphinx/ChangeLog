@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.45 2012/06/17 16:47:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.46 2012/07/09 05:35:57 graaff Exp $
+
+  09 Jul 2012; Hans de Graaff <graaff@gentoo.org> -sphinx-0.9.9-r2.ebuild,
+  -sphinx-1.10_beta-r1.ebuild, -sphinx-2.0.3.ebuild:
+  Remove old versions.
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> sphinx-2.0.4.ebuild:
   Add ~alpha/~ia64/~sparc wrt #412475
