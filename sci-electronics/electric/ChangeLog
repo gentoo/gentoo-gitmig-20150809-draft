@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/electric
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.40 2010/12/11 21:41:33 rafaelmartins Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.41 2012/07/09 14:09:30 xmw Exp $
+
+*electric-9.02 (09 Jul 2012)
+
+  09 Jul 2012; Michael Weber <xmw@gentoo.org> +electric-9.02.ebuild:
+  Version bump (thanks euscan)
 
 *electric-9.00 (11 Dec 2010)
 
