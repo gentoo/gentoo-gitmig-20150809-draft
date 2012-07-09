@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/thc-ipv6
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thc-ipv6/ChangeLog,v 1.5 2012/03/21 18:57:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thc-ipv6/ChangeLog,v 1.6 2012/07/09 12:17:14 xmw Exp $
+
+*thc-ipv6-1.9 (09 Jul 2012)
+
+  09 Jul 2012; Michael Weber <xmw@gentoo.org>
+  +files/thc-ipv6-1.9-Makefile.patch, +thc-ipv6-1.9.ebuild,
+  -thc-ipv6-1.4.ebuild, -thc-ipv6-1.6.ebuild:
+  Version bump (bug 425400, by Khayyam), drop old.
 
 *thc-ipv6-1.8 (21 Mar 2012)
 
@@ -31,4 +38,3 @@
   +metadata.xml:
   Initial import, thanks to Christian Neukirchen <chneukirchen@gmail.com>
   for the Makefile.
-
