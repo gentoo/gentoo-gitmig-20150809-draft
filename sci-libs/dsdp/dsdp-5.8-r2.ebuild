@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8-r2.ebuild,v 1.2 2012/05/04 08:22:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8-r2.ebuild,v 1.3 2012/07/09 17:51:33 bicatali Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.mcs.anl.gov/hs/software/DSDP//${MYP}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~ppc-macos ~x86-linux ~x86-macos ~x64-macos"
 IUSE="doc examples"
 
 RDEPEND="virtual/lapack"
@@ -24,18 +24,21 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MYP}"
 
 make_shared_lib() {
-	local soname=$(basename "${1%.a}").so.$(get_major_version)
+	local soname=$(basename "${1%.a}")$(get_libname $(get_major_version))
 	einfo "Making ${soname}"
 	${2:-$(tc-getCC)} ${LDFLAGS}  \
 		-shared -Wl,-soname="${soname}" \
+		$([[ ${CHOST} == *-darwin* ]] && echo "-Wl,-install_name -Wl,${EPREFIX}/usr/$(get_libdir)/${soname}") \
 		-Wl,--whole-archive "${1}" -Wl,--no-whole-archive \
 		-o $(dirname "${1}")/"${soname}" \
 		-lm $(pkg-config --libs blas lapack) || return 1
+
 }
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-readsdpa.patch \
+		"${FILESDIR}"/${P}-malloc.patch \
 		"${FILESDIR}"/${P}-gold.patch
 	# to do proper parallel compilation
 	find . -name Makefile -exec \
@@ -61,8 +64,10 @@ src_test() {
 }
 
 src_install() {
-	dolib.so lib/lib${PN}.so.$(get_major_version)
-	dosym lib${PN}.so.$(get_major_version) /usr/$(get_libdir)/lib${PN}.so
+	dolib.so lib/lib${PN}$(get_libname $(get_major_version))
+	dosym lib${PN}$(get_libname $(get_major_version)) \
+		/usr/$(get_libdir)/lib${PN}$(get_libname)
+
 
 	insinto /usr/include
 	doins include/*.h src/sdp/*.h
