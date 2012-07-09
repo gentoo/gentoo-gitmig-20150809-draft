@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.39.0.ebuild,v 1.1 2012/07/09 00:11:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.39.0.ebuild,v 1.2 2012/07/09 00:34:01 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
-EAPI="2"
+EAPI=4
 
 DESCRIPTION="Tcl/tk interface to netwox (Toolbox of 222 utilities for testing Ethernet/IP networks)"
 HOMEPAGE="
@@ -19,13 +19,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="doc"
 
-DEPEND="~net-analyzer/netwox-${PV}
+DEPEND="
+	~net-analyzer/netwox-${PV}
 	>=dev-lang/tk-8
-	|| ( x11-terms/xterm
+	|| (
+		kde-base/konsole
 		x11-terms/eterm
-		x11-terms/rxvt
 		x11-terms/gnome-terminal
-		kde-base/konsole )"
+		x11-terms/rxvt
+		x11-terms/xterm
+	)
+"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-src/src"
@@ -42,7 +46,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	default
 	dodoc ../README.TXT
 	if use doc;
 	then

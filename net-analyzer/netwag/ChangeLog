@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.24 2012/07/09 00:11:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.25 2012/07/09 00:34:01 jer Exp $
+
+  09 Jul 2012; Jeroen Roovers <jer@gentoo.org> netwag-5.39.0.ebuild:
+  Clean up.
 
 *netwag-5.39.0 (09 Jul 2012)
 
