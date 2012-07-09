@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.291 2012/07/09 13:46:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.292 2012/07/09 13:50:05 ago Exp $
+
+  09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> kmail-4.8.3-r1.ebuild:
+  Stable for x86, wrt bug #425388
 
   09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> kmail-4.8.3-r1.ebuild:
   Stable for amd64, wrt bug #425388
