@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libchamplain
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.27 2012/05/05 08:02:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.28 2012/07/09 14:08:33 ranger Exp $
+
+  09 Jul 2012; Brent Baude <ranger@gentoo.org> libchamplain-0.12.1.ebuild:
+  Marking libchamplain-0.12.1 ~ppc for bug 388367
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libchamplain-0.6.0.ebuild,
   libchamplain-0.8.3.ebuild, libchamplain-0.10.1.ebuild,
