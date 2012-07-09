@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.49 2012/06/18 18:10:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.50 2012/07/09 03:14:07 mr_bones_ Exp $
+
+*cegui-0.7.7 (09 Jul 2012)
+
+  09 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> +cegui-0.7.7.ebuild:
+  version bump (bug #424599)
 
   18 Jun 2012; Julian Ospald <hasufell@gentoo.org> cegui-0.7.6-r1.ebuild:
   stable for x86 wrt bug #412675
