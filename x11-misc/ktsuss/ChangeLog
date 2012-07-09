@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ktsuss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.14 2012/06/02 13:41:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.15 2012/07/09 06:36:28 jdhore Exp $
+
+  09 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ktsuss-2.ebuild:
+  x86 stable wrt bug 423913
 
   02 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ktsuss-2.ebuild:
   Fix HOMEPAGE wrt bug #416283 by df.
@@ -13,4 +16,3 @@
   29 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +ktsuss-2.ebuild,
   +metadata.xml:
   Initial commit. Bug #401123. Thanks to Hypnos <hypnos75@gmail.com>
-
