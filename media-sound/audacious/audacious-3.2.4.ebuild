@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.4.ebuild,v 1.2 2012/07/05 17:48:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.4.ebuild,v 1.3 2012/07/09 02:35:09 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils
@@ -39,7 +39,7 @@ src_configure() {
 	# Building without D-Bus is *unsupported* and a USE-flag
 	# will not be added due to the bug reports that will result.
 	# Bugs #197894, #199069, #207330, #208606
-	# Disable gtk+:3 till Audacious 3.3 
+	# Disable gtk+:3 till Audacious 3.3
 	econf \
 		--enable-dbus \
 		--disable-gtk3 \
