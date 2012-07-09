@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/oosuite-0.37.ebuild,v 1.1 2012/01/07 20:39:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/oosuite-0.39.ebuild,v 1.1 2012/07/09 19:14:39 bicatali Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="http://openopt.org/images/${MYPID}/${MYPN}.zip -> ${MYPN}-${PV}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples minimal tk"
 
 RDEPEND="dev-python/numpy
@@ -38,10 +38,10 @@ DEPEND="app-arch/unzip
 S="${WORKDIR}/PythonPackages"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-no-init-msg.patch
+	#epatch "${FILESDIR}"/${PN}-0.37-no-init-msg.patch
 	OO_DIRS="DerApproximator FuncDesigner OpenOpt SpaceFuncs"
 	find . -name "*COPYING*" -delete
-	# move all examples and tests away to ease installation in proper directory
+	# move all examples and tests to ease installation in proper directory
 	mkdir "${WORKDIR}/examples"
 	local d e
 	for d in ${OO_DIRS}; do
