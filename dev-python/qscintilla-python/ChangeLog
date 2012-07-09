@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.87 2012/06/27 13:42:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.88 2012/07/09 14:28:03 armin76 Exp $
+
+  09 Jul 2012; Raúl Porcel <armin76@gentoo.org>
+  qscintilla-python-2.6.1.ebuild:
+  alpha/ia64/sparc stable wrt #412929
 
 *qscintilla-python-2.6.2 (27 Jun 2012)
 
