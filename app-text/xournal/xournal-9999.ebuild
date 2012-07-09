@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-9999.ebuild,v 1.2 2012/07/05 22:53:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-9999.ebuild,v 1.3 2012/07/09 02:34:32 mr_bones_ Exp $
 
 EAPI=4
 
@@ -55,7 +55,7 @@ src_prepare() {
 	if ! use vanilla && [[ "${PV}" != "9999" ]]; then
 		epatch "${WORKDIR}"/${PN}-${PVR}-gentoo.patch
 	fi
-	if ! use vanilla; then 
+	if ! use vanilla; then
 		sed -e "s:n       http:n       Gentoo release ${PVR}\\\\n       http:" -i "${S}"/src/xo-interface.c
 	fi
 	eautoreconf
