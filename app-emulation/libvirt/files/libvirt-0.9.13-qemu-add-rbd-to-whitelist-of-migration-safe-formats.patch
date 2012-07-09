@@ -19,20 +19,6 @@ Signed-off-by: Josh Durgin <josh.durgin@inktank.com>
  src/qemu/qemu_migration.c |    3 +++
  3 files changed, 6 insertions(+), 2 deletions(-)
 
-diff --git a/.mailmap b/.mailmap
-index 65e2c10..a6744ac 100644
---- a/.mailmap
-+++ b/.mailmap
-@@ -28,7 +28,8 @@
- <supriyak@linux.vnet.ibm.com> <supriyak@in.ibm.com>
- <neil@aldur.co.uk> <neil@brightbox.co.uk>
- <stefanb@us.ibm.com> <stefanb@linux.vnet.ibm.com>
--<josh.durgin@dreamhost.com> <joshd@hq.newdream.net>
-+<josh.durgin@inktank.com> <joshd@hq.newdream.net>
-+<josh.durgin@inktank.com> <josh.durgin@dreamhost.com>
- 
- # Name consolidation:
- # Preferred author spelling <preferred email>
 diff --git a/AUTHORS b/AUTHORS
 index 375db24..0e179a9 100644
 --- a/AUTHORS
