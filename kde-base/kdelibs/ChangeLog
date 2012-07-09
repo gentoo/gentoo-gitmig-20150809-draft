@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.852 2012/07/05 19:56:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.853 2012/07/09 16:35:10 johu Exp $
+
+  09 Jul 2012; Johannes Huber <johu@gentoo.org> -kdelibs-4.8.4.ebuild,
+  kdelibs-4.8.4-r1.ebuild:
+  dd new optional runtime dependency on app-misc/media-player-info controlled
+  via udev useflag, wrt bug #417783.
 
 *kdelibs-4.8.4-r1 (05 Jul 2012)
 
