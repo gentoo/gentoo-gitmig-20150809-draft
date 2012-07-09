@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.42 2012/07/09 07:33:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.43 2012/07/09 15:55:31 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -313,7 +313,6 @@ src_install() {
 
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
 	newdoc pc-bios/README README.pc-bios || die
-
 
 	if use doc; then
 		dohtml qemu-doc.html qemu-tech.html || die
