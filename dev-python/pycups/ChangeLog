@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.56 2012/07/08 15:13:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.57 2012/07/09 11:54:46 jer Exp $
+
+  09 Jul 2012; Jeroen Roovers <jer@gentoo.org> pycups-1.9.61.ebuild:
+  Stable for HPPA (bug #418905).
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> pycups-1.9.61.ebuild:
   alpha/ia64/sh/sparc stable wrt #418905
