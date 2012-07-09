@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.183 2012/07/09 11:34:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.184 2012/07/09 12:15:03 johu Exp $
+
+  09 Jul 2012; Johannes Huber <johu@gentoo.org> -files/blacklist_ssl.patch,
+  -files/qt-4.6-nolibx11.patch, -files/qt-4.6-nox11r6.patch:
+  Remove old.
 
   09 Jul 2012; Johannes Huber <johu@gentoo.org> -qt-core-4.6.3-r1.ebuild:
   Drop Qt-4.6.3

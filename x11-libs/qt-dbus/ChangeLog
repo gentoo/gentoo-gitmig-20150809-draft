@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.123 2012/07/09 11:35:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.124 2012/07/09 12:16:37 johu Exp $
+
+  09 Jul 2012; Johannes Huber <johu@gentoo.org> -files/qt-4.6-nolibx11.patch:
+  Remove old.
 
   09 Jul 2012; Johannes Huber <johu@gentoo.org> -qt-dbus-4.6.3.ebuild:
   Drop Qt-4.6.3
