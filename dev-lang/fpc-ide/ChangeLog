@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/fpc-ide
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.16 2010/01/16 10:38:28 truedfx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.17 2012/07/09 21:33:09 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> fpc-ide-2.2.0.ebuild,
+  fpc-ide-2.2.2.ebuild, fpc-ide-2.2.4.ebuild, fpc-ide-2.4.0.ebuild:
+  Update LICENSE, bug 425140.
 
 *fpc-ide-2.4.0 (16 Jan 2010)
 
@@ -70,4 +74,3 @@
   +fpc-ide-2.0.0_rc2.ebuild:
   Initial import into the tree. Final closure of bug #87337. Thanks to
   exposure for the ebuilds.
-

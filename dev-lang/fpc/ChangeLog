@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.57 2012/01/03 06:09:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.58 2012/07/09 21:29:15 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> fpc-2.2.0-r1.ebuild,
+  fpc-2.2.0.ebuild, fpc-2.2.2-r1.ebuild, fpc-2.2.4-r2.ebuild, fpc-2.4.0.ebuild,
+  fpc-2.4.4.ebuild, fpc-2.6.0.ebuild:
+  Update LICENSE, bug 425140.
 
 *fpc-2.6.0 (03 Jan 2012)
 

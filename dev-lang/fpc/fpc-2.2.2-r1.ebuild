@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.2.2-r1.ebuild,v 1.1 2009/03/14 17:29:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.2.2-r1.ebuild,v 1.2 2012/07/09 21:29:15 ulm Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/freepascal/fpcbuild-${PV}.tar.gz
 	doc? ( mirror://sourceforge/freepascal/fpc-${PV}-doc-pdf.zip )"
 
 SLOT="0"
-LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-FPC"
+LICENSE="GPL-2 LGPL-2.1-with-linking-exception"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc source"
 

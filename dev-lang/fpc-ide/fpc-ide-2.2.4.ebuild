@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/fpc-ide-2.2.4.ebuild,v 1.3 2009/06/25 20:37:52 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/fpc-ide-2.2.4.ebuild,v 1.4 2012/07/09 21:33:09 ulm Exp $
 
 S="${WORKDIR}/fpcbuild-${PV}/fpcsrc/ide"
 
@@ -9,7 +9,7 @@ DESCRIPTION="Free Pascal Compiler Integrated Development Environment"
 SRC_URI="mirror://sourceforge/freepascal/fpcbuild-${PV}.tar.gz"
 
 SLOT="0"
-LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-FPC"
+LICENSE="GPL-2 LGPL-2.1-with-linking-exception"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
