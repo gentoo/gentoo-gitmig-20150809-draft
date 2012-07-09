@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.11.ebuild,v 1.6 2012/06/14 06:50:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.11-r1.ebuild,v 1.1 2012/07/09 09:42:05 polynomial-c Exp $
 
 EAPI="4"
 
@@ -43,8 +43,8 @@ pkg_setup() {
 		eerror "Either you select ldap USE flag or remove edirectory"
 		die "edirectory needs ldap"
 	fi
-	enewgroup radiusd
-	enewuser radiusd -1 -1 /var/log/radius radiusd
+	enewgroup radius
+	enewuser radius -1 -1 /var/log/radius radius
 }
 
 src_prepare() {
