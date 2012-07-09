@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.5.ebuild,v 1.1 2012/07/06 16:25:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.6.ebuild,v 1.1 2012/07/09 14:01:46 polynomial-c Exp $
 
 EAPI=4
 

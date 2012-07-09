@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.286 2012/07/06 16:25:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.287 2012/07/09 14:01:44 polynomial-c Exp $
+
+*pidgin-2.10.6 (09 Jul 2012)
+
+  09 Jul 2012; Lars Wendler <polynomial-c@gentoo.org> -pidgin-2.10.5.ebuild,
+  +pidgin-2.10.6.ebuild:
+  non-maintainer commit: Version bump. Removed "old".
 
 *pidgin-2.10.5 (06 Jul 2012)
 
