@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/procheck-3.5.4-r1.ebuild,v 1.5 2012/06/12 11:28:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/procheck-3.5.4-r1.ebuild,v 1.6 2012/07/09 19:01:10 johu Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="procheck"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 RDEPEND="
