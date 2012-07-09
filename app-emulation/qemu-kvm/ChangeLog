@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.128 2012/07/08 22:57:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.129 2012/07/09 07:28:46 jlec Exp $
+
+  09 Jul 2012; Justin Lecher <jlec@gentoo.org> qemu-kvm-1.1.0.ebuild:
+  Remove unnessecary die's
 
   08 Jul 2012; Doug Goldstein <cardoe@gentoo.org> +files/65-kvm.rules,
   qemu-kvm-1.1.0.ebuild, qemu-kvm-9999.ebuild:
@@ -634,4 +637,3 @@
   22 Nov 2009; Doug Goldstein <cardoe@gentoo.org> +qemu-kvm-0.11.0.ebuild,
   +files/qemu-0.11.0-mips64-user-fix.patch, +metadata.xml:
   add initial ebuild based on qemu-0.11.0
-
