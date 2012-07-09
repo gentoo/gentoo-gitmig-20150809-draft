@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.174 2012/07/09 11:58:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.175 2012/07/09 16:35:27 billie Exp $
+
+  09 Jul 2012; Daniel Pielmeier <billie@gentoo.org> mjpegtools-2.0.0-r1.ebuild,
+  mjpegtools-2.0.0-r2.ebuild:
+  Fix typo in pkg_pretend message.
 
   09 Jul 2012; Jeroen Roovers <jer@gentoo.org> mjpegtools-2.0.0-r2.ebuild:
   Stable for HPPA (bug #425232).
