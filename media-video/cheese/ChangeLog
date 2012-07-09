@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.58 2012/05/24 08:04:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.59 2012/07/09 14:54:12 ranger Exp $
+
+  09 Jul 2012; Brent Baude <ranger@gentoo.org> cheese-3.2.2.ebuild:
+  Marking cheese-3.2.2 ~ppc for bug 379649
 
 *cheese-3.4.2 (24 May 2012)
 
