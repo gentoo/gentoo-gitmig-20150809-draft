@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3-r2.ebuild,v 1.1 2012/05/24 05:56:47 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.4.ebuild,v 1.1 2012/07/09 10:37:22 ultrabug Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -25,13 +25,14 @@ SRC_URI="http://projects.unbit.it/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="apache2 +caps +carbon cgi debug erlang graylog2 json ldap lua +nagios perl +pcre php python rrdtool rsyslog ruby spooler sqlite syslog +xml yaml zeromq"
+IUSE="apache2 +caps +carbon cgi debug erlang gevent graylog2 json ldap lua +nagios perl +pcre php python rrdtool rsyslog ruby spooler sqlite syslog +xml yaml zeromq"
 REQUIRED_USE="|| ( cgi erlang lua perl php python ruby )"
 
 # util-linux is required for libuuid when requesting zeromq support
 CDEPEND="caps? ( sys-libs/libcap )
 	json? ( dev-libs/jansson )
 	erlang? ( dev-lang/erlang )
+	gevent? ( >=dev-python/gevent-1.0_beta2 )
 	graylog2? ( sys-libs/zlib )
 	ldap? ( net-nds/openldap )
 	lua? ( dev-lang/lua )
@@ -78,7 +79,7 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}/1.1.2-threaded-php.patch" \
-		"${FILESDIR}/${PV}-pyerl.patch"
+		"${FILESDIR}/1.2.3-pyerl.patch"
 
 	sed -i \
 		-e "s|'-O2', ||" \
@@ -195,6 +196,10 @@ src_compile() {
 	if use python ; then
 		for a in ${PYTHON_ABIS} ; do
 			python${a} uwsgiconfig.py --plugin plugins/python gentoo python${a/.} || die "building plugin for python-${a} failed"
+
+			if use gevent ; then
+				python${a} uwsgiconfig.py --plugin plugins/gevent gentoo gevent${a/.} || die "building plugin for gevent-support in python-${a} failed"
+			fi
 			if use erlang ; then
 				python${a} uwsgiconfig.py --plugin plugins/pyerl gentoo pyerl${a/.} || die "building plugin for erlang-support in python failed"
 			fi
@@ -285,6 +290,7 @@ pkg_postinst() {
 	if use python ; then
 		for a in ${PYTHON_ABIS} ; do
 			elog "  '--plugins python${a/.}' for python-${a}"
+			use gevent && elog "  '--plugins python${a/.},gevent${a/.}' for gevent support in python-${a}"
 			use erlang && elog "  '--plugins python${a/.},erlang,pyerl${a/.}' for erlang support in python-${a}"
 		done
 	fi
