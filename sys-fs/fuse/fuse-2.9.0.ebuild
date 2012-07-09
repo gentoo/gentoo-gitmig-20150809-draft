@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.0.ebuild,v 1.1 2012/04/21 05:55:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.0.ebuild,v 1.2 2012/07/09 22:17:05 sping Exp $
 
 EAPI=4
 inherit libtool linux-info
@@ -31,9 +31,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# fix building with glibc-2.14 #370411
-	sed -i '1i#define _GNU_SOURCE' util/fusermount.c || die
-
 	elibtoolize
 }
 
