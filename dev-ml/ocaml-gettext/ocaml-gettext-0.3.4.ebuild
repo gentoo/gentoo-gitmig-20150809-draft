@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-gettext/ocaml-gettext-0.3.4.ebuild,v 1.1 2012/07/05 01:56:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-gettext/ocaml-gettext-0.3.4.ebuild,v 1.2 2012/07/09 21:03:48 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Provides support for internationalization of OCaml program"
 HOMEPAGE="http://forge.ocamlcore.org/projects/ocaml-gettext"
 SRC_URI="http://forge.ocamlcore.org/frs/download.php/676/${P}.tar.gz"
 
-LICENSE="LGPL-2.1-linking-exception"
+LICENSE="LGPL-2.1-with-linking-exception"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="doc test"

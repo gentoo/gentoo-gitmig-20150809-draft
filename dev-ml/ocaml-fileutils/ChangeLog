@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-fileutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ChangeLog,v 1.7 2012/07/04 21:26:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ChangeLog,v 1.8 2012/07/09 20:59:12 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> ocaml-fileutils-0.4.4.ebuild:
+  Update LICENSE, bug 425140.
 
   04 Jul 2012; Alexis Ballier <aballier@gentoo.org>
   -ocaml-fileutils-0.4.3.ebuild:
@@ -36,4 +39,3 @@
   +ocaml-fileutils-0.4.2.ebuild, +metadata.xml:
   Initial import, ebuild by Vladimir Ivanov, bug #355755, with modifications
   and simplifications by me
-

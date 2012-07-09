@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/oasis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/ChangeLog,v 1.6 2012/06/29 23:27:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/ChangeLog,v 1.7 2012/07/09 20:56:49 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> oasis-0.3.0.ebuild,
+  oasis-0.3.0_rc6.ebuild:
+  Update LICENSE, bug 425140.
 
 *oasis-0.3.0 (29 Jun 2012)
 
@@ -29,4 +33,3 @@
   +metadata.xml:
   initial import, based on ebuild by Vladimir Ivanov in bug #355767 and
   converted to oasis.eclass
-

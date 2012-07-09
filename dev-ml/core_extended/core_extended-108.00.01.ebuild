@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-108.00.01.ebuild,v 1.3 2012/07/03 17:38:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-108.00.01.ebuild,v 1.4 2012/07/09 20:53:35 ulm Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ DESCRIPTION="Jane Street's alternative to the standard library"
 HOMEPAGE="http://www.janestreet.com/ocaml"
 SRC_URI="http://bitbucket.org/yminsky/ocaml-core/downloads/${P}.tar.gz"
 
-LICENSE="LGPL-2.1-linking-exception"
+LICENSE="LGPL-2.1-with-linking-exception"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"

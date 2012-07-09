@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ANSITerminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ANSITerminal/ChangeLog,v 1.4 2012/05/05 14:19:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ANSITerminal/ChangeLog,v 1.5 2012/07/09 20:48:06 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> ANSITerminal-0.6.ebuild:
+  Update LICENSE, bug 425140.
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> -ANSITerminal-0.3.ebuild:
   remove old
@@ -20,4 +23,3 @@
   +ANSITerminal-0.3.ebuild:
   initial import, thanks to Bardur Arantsson
   <bugs-gentoo.org@scientician.net>, bug #96384
-

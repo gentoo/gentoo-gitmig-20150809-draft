@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lwt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.17 2012/03/27 21:38:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.18 2012/07/09 20:55:40 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> lwt-2.3.2.ebuild:
+  Update LICENSE, bug 425140.
 
   27 Mar 2012; Alexis Ballier <aballier@gentoo.org> lwt-2.3.2.ebuild:
   convert to oasis.eclass
@@ -79,4 +82,3 @@
   02 Sep 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +lwt-1.1.0.ebuild:
   Initial import. Split out of ocsigen. Thanks to Pierre Clairambault.
-

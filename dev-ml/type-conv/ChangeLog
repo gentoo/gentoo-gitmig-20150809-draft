@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/type-conv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/ChangeLog,v 1.17 2012/06/30 15:02:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/ChangeLog,v 1.18 2012/07/09 21:08:47 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> type-conv-108.00.01.ebuild,
+  type-conv-3.0.4.ebuild, type-conv-3.0.5.ebuild:
+  Update LICENSE, bug 425140.
 
 *type-conv-108.00.01 (30 Jun 2012)
 
@@ -80,4 +84,3 @@
   +metadata.xml:
   Initial import, ebuild by Guillaume Horel <guillaume.horel@gmail.com>, bug
   #281275
-

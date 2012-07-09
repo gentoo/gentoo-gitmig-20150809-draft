@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/batteries
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/batteries/ChangeLog,v 1.3 2012/05/18 17:05:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/batteries/ChangeLog,v 1.4 2012/07/09 20:49:37 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> batteries-1.4.2.ebuild:
+  Update LICENSE, bug 425140.
 
   18 May 2012; Alexis Ballier <aballier@gentoo.org> -batteries-1.4.1.ebuild:
   remove old
@@ -16,4 +19,3 @@
   +metadata.xml:
   initial import, ebuild by various people in bug #325941 and converted to
   oasis.eclass
-
