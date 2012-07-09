@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ttf2pk2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pk2/ChangeLog,v 1.9 2012/07/05 14:01:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pk2/ChangeLog,v 1.10 2012/07/09 08:14:40 naota Exp $
+
+  09 Jul 2012; Naohiro Aota <naota@gentoo.org> ttf2pk2-1.5_p20120525.ebuild:
+  Add ~x86-fbsd. #417685
 
   05 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   ttf2pk2-1.5_p20120525.ebuild:
@@ -35,4 +38,3 @@
   +ttf2pk2-1.5_p20120525.ebuild, +metadata.xml:
   initial import, ebuild by me, a freetype2 based ttf2pk, so that we can drop
   freetype:1, yay
-
