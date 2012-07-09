@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.221 2012/07/09 20:04:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.222 2012/07/09 20:27:05 dilfridge Exp $
+
+*digikam-2.7.0 (09 Jul 2012)
+
+  09 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> +digikam-2.7.0.ebuild:
+  Version bump
 
   09 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> digikam-2.5.0.ebuild,
   digikam-2.6.0.ebuild:
