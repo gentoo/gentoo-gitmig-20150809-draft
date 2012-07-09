@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/netwib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.40 2011/03/02 15:49:05 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.41 2012/07/09 00:11:02 jer Exp $
+
+*netwib-5.39.0 (09 Jul 2012)
+
+  09 Jul 2012; Jeroen Roovers <jer@gentoo.org> +netwib-5.39.0.ebuild:
+  Version bump.
 
   02 Mar 2011; Jeroen Roovers <jer@gentoo.org> netwib-5.38.0.ebuild:
   Readd old homepage.
