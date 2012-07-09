@@ -1,6 +1,9 @@
 # ChangeLog for app-text/t1utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.69 2012/07/08 16:01:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.70 2012/07/09 13:45:01 aballier Exp $
+
+  09 Jul 2012; Alexis Ballier <aballier@gentoo.org> -t1utils-1.36.ebuild:
+  remove old
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> t1utils-1.37.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #418659
