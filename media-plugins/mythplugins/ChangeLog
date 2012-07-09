@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/mythplugins
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.1 2012/07/09 00:05:18 cardoe Exp $
+
+*mythplugins-0.25.1 (08 Jul 2012)
+
+  08 Jul 2012; Doug Goldstein <cardoe@gentoo.org> +mythplugins-0.25.1.ebuild,
+  +metadata.xml:
+  Initial version of MythPlugins, which combines all the plugins into one
+  ebuild to match how upstream ships their tarball of everything combined.
+
