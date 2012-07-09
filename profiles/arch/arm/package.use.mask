@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.79 2012/07/04 07:32:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.80 2012/07/09 19:38:17 zerochaos Exp $
+
+# Rick Farina <zerochaos@gentoo.org> (09 July 2012)
+# limited testing of net-libs/libbtbb is all this mask is needed for                   
+net-analyzer/wireshark -btbb
 
 # Chí-Thanh Christopher Nguyen <chithanh@gentoo.org> (02 Jun 2012)
 # Mask udis86 flag for llvm, which is of limited use outside x86/amd64.

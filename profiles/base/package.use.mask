@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.368 2012/07/05 21:10:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.369 2012/07/09 19:38:17 zerochaos Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Rick Farina <zerochaos@gentoo.org> (09 July 2012)
+# libbtbb currently only tested on amd64/x86/arm, hopefully this won't always be needed
+net-analyzer/wireshark btbb
 
 # Rick Farina <zerochaos@gentoo.org> (05 July 2012)
 # cuda is available on x86/amd64 only
