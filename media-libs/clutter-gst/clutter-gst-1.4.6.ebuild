@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.4.6.ebuild,v 1.5 2012/04/29 15:58:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.4.6.ebuild,v 1.6 2012/07/09 14:29:41 ranger Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ inherit autotools python gnome2 clutter gnome.org
 DESCRIPTION="GStreamer Integration library for Clutter"
 
 SLOT="1.0"
-KEYWORDS="~alpha amd64 x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE="doc examples +introspection"
 
 RDEPEND="

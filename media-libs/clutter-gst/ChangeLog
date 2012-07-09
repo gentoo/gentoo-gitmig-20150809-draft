@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter-gst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.28 2012/07/03 07:30:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.29 2012/07/09 14:29:41 ranger Exp $
+
+  09 Jul 2012; Brent Baude <ranger@gentoo.org> clutter-gst-1.4.6.ebuild:
+  Marking clutter-gst-1.4.6 ~ppc for bug 379649
 
 *clutter-gst-1.6.0 (03 Jul 2012)
 
