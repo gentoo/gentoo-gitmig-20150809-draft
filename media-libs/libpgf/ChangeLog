@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libpgf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.11 2012/05/13 13:51:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.12 2012/07/09 20:01:56 dilfridge Exp $
+
+*libpgf-6.12.27 (09 Jul 2012)
+
+  09 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libpgf-6.12.27.ebuild:
+  Version bump, see bug 424563. Thanks to Francesco Riosa!
 
   13 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -libpgf-6.09.44-r1.ebuild, -files/libpgf-6.09.44-pkg.patch,
