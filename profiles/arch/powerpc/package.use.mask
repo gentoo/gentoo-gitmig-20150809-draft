@@ -1,7 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.129 2012/07/04 07:36:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.130 2012/07/09 11:32:27 johu Exp $
 
+# Johannes Huber <johu@gentoo.org> (9 Jul 2012)
+# x11-libs/qt-openvg not keyworded correctly.
+# ppc/ppc64 team please validate.
+=x11-libs/qt-demo-4.8* openvg
 
 # Davide Pesavento <pesa@gentoo.org> (22 Jun 2012)
 # gtk-engines-qtcurve-1.6.4 is stable on ppc{,64} but firefox isn't
