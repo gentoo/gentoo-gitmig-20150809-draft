@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0.ebuild,v 1.1 2012/07/06 00:57:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0.ebuild,v 1.2 2012/07/09 10:49:06 flameeyes Exp $
 
 EAPI=4
 
@@ -38,10 +38,14 @@ pkg_setup() {
 	makeopts="${makeopts} dist_doc_DATA= "
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${MY_P}+glibc-2.16.patch"
+}
+
 src_configure() {
 	use largepages && append-cppflags -DTCMALLOC_LARGE_PAGES
 
-	append-flags -fno-strict-aliasing
+	append-flags -fno-strict-aliasing -fno-omit-frame-pointer
 
 	econf \
 		--disable-static \
