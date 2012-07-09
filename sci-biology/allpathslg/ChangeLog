@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/allpathslg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.7 2012/05/29 02:51:11 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.8 2012/07/09 17:55:40 jlec Exp $
+
+*allpathslg-42337 (09 Jul 2012)
+
+  09 Jul 2012; Justin Lecher <jlec@gentoo.org> +allpathslg-42337.ebuild:
+  Version bump, fix compilation errors with gcc-4.7, #425472
 
 *allpathslg-41839 (29 May 2012)
 
