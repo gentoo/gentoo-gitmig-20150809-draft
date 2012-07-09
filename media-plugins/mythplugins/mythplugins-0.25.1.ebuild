@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.25.1.ebuild,v 1.1 2012/07/09 00:05:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.25.1.ebuild,v 1.2 2012/07/09 00:07:23 cardoe Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ DEPEND="!media-plugins/mytharchive
 	!media-plugins/mythnetvision
 	!media-plugins/mythnews
 	!media-plugins/mythweather
-	=media-tv/mythtv-${MY_P}*[python]
+	=media-tv/mythtv-${PV}*[python]
 	mytharchive? (
 		app-cdr/dvd+rw-tools
 		dev-python/imaging
@@ -44,7 +44,7 @@ DEPEND="!media-plugins/mytharchive
 	)
 	mythgallery? (
 		media-libs/tiff
-		exif? ( >media-libs/exif-0.6.9 )
+		exif? ( >media-libs/libexif-0.6.9 )
 		opengl? ( virtual/opengl )
 		raw? ( media-gfx/dcraw )
 	)
