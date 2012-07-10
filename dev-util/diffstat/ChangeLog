@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.124 2012/06/28 12:53:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.125 2012/07/10 13:32:31 hattya Exp $
+
+  10 Jul 2012; Akinori Hattori <hattya@gentoo.org> diffstat-1.55.ebuild:
+  ia64 stable wrt bug #418951
 
   28 Jun 2012; Brent Baude <ranger@gentoo.org> diffstat-1.55.ebuild:
   Marking diffstat-1.55 ppc for bug 418951
