@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.8 2012/06/01 04:12:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-9999.ebuild,v 1.9 2012/07/10 19:19:25 ssuominen Exp $
 
 EAPI=4
-LANGS="en es kk lt pt_BR ru"
+LANGS="en es eu kk lt pt_BR ru"
 
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
 
