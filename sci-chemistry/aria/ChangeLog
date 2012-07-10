@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.14 2012/07/10 06:58:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.15 2012/07/10 07:14:24 jlec Exp $
+
+  10 Jul 2012; Justin Lecher <jlec@gentoo.org> -aria-2.3.1.ebuild,
+  -aria-2.3.2.ebuild, -aria-2.3.2-r1.ebuild, -aria-2.3.2-r2.ebuild:
+  Drop old
 
   10 Jul 2012; Jeff Horelick <jdhore@gentoo.org> aria-2.3.2-r3.ebuild:
   marked x86 per bug 419885
