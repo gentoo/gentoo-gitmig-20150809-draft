@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-mozc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ChangeLog,v 1.32 2012/06/13 11:55:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ChangeLog,v 1.33 2012/07/10 07:32:25 naota Exp $
+
+  10 Jul 2012; Naohiro Aota <naota@gentoo.org> ibus-mozc-1.5.1090.102.ebuild:
+  Support MAKEOPTS=-j (without a number) #425144 Suggested-By: Tomoh K.
 
 *ibus-mozc-1.5.1090.102 (13 Jun 2012)
 
@@ -180,4 +183,3 @@
   +ibus-mozc-0.11.365.102.ebuild,
   +files/ibus-mozc-0.11.365.102-gentoo.patch, +metadata.xml:
   Initial import.
-

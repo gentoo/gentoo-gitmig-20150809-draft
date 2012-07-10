@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.5.1090.102.ebuild,v 1.1 2012/06/13 11:55:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.5.1090.102.ebuild,v 1.2 2012/07/10 07:32:25 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
-inherit elisp-common eutils multilib python toolchain-funcs
+inherit elisp-common eutils multilib multiprocessing python toolchain-funcs
 
 DESCRIPTION="The Mozc engine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/mozc/"
@@ -73,8 +73,9 @@ src_configure() {
 src_compile() {
 	tc-export CC CXX AR AS RANLIB LD
 
-	local myjobs=`expr match "${MAKEOPTS}" '.*\(-j[0-9]*\)'`
-	test -z "${myjobs}" && myjobs="-j1"
+	local my_makeopts=$(makeopts_jobs)
+	# This is for a safety. -j without a number, makeopts_jobs returns 999.
+	local myjobs=-j${my_makeopts/999/1}
 
 	local mytarget="server/server.gyp:mozc_server"
 	use emacs && mytarget="${mytarget} unix/emacs/emacs.gyp:mozc_emacs_helper"
