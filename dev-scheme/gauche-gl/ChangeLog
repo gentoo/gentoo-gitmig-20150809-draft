@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-gl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/ChangeLog,v 1.22 2011/08/13 10:27:18 hattya Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/ChangeLog,v 1.23 2012/07/10 12:28:42 hattya Exp $
+
+  10 Jul 2012; Akinori Hattori <hattya@gentoo.org> gauche-gl-0.5.1.ebuild:
+  x86 stable
 
   13 Aug 2011; Akinori Hattori <hattya@gentoo.org> gauche-gl-0.5.ebuild:
   update to EAPI 4.
