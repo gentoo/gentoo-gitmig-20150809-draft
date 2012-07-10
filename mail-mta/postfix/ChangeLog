@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.370 2012/07/10 17:48:08 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.371 2012/07/10 17:51:43 eras Exp $
+
+*postfix-2.10_pre20120630 (10 Jul 2012)
+
+  10 Jul 2012; Eray Aslan <eras@gentoo.org> -postfix-2.10_pre20120627.ebuild,
+  +postfix-2.10_pre20120630.ebuild:
+  Version bump
 
   10 Jul 2012; Eray Aslan <eras@gentoo.org> postfix-2.9.3.ebuild:
   Enable vda USE flag
