@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.67 2012/07/10 18:03:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.68 2012/07/10 18:56:54 jlec Exp $
+
+  10 Jul 2012; Justin Lecher <jlec@gentoo.org> -mathomatic-12.8.8.ebuild,
+  -mathomatic-12.9.1.ebuild, -mathomatic-15.8.2.ebuild, metadata.xml:
+  Cleaned old
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> mathomatic-15.8.5.ebuild:
   Marking mathomatic-15.8.5 ppc for bug 425060
