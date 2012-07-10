@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.417 2012/07/09 14:06:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.418 2012/07/10 14:04:53 jer Exp $
+
+  10 Jul 2012; Jeroen Roovers <jer@gentoo.org> eix-0.26.0.ebuild:
+  Marked ~hppa (bug #425494).
 
 *eix-0.26.0 (09 Jul 2012)
 
