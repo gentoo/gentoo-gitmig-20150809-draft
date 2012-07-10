@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/atool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.43 2012/07/09 11:51:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/atool/ChangeLog,v 1.44 2012/07/10 17:47:55 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> atool-0.39.0.ebuild:
+  Marking atool-0.39.0 ppc for bug 418505
 
   09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> atool-0.39.0.ebuild:
   Stable for amd64, wrt bug #418505
