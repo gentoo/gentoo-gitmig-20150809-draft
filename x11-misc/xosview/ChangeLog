@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.50 2012/07/03 16:41:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.51 2012/07/10 19:17:07 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> xosview-1.9.3.ebuild:
+  Marking xosview-1.9.3 ppc64 for bug 422391
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> xosview-1.9.3.ebuild:
   Marking xosview-1.9.3 ppc for bug 422391
