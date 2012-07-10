@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.172 2012/07/10 19:12:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.173 2012/07/10 19:19:37 jlec Exp $
+
+  10 Jul 2012; Justin Lecher <jlec@gentoo.org> -screen-4.0.3-r4.ebuild,
+  metadata.xml:
+  Cleaned old
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> screen-4.0.3-r5.ebuild:
   Marking screen-4.0.3-r5 ppc64 for bug 423775
