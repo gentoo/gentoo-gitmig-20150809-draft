@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.6 2012/07/10 05:25:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.7 2012/07/10 05:30:34 cardoe Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ fftw +hls ieee1394 jack lcd lirc perl pulseaudio python raop vaapi \
 vdpau xmltv xvid ${IUSE_INPUT_DEVICES}"
 
 SDEPEND="
+	>=media-libs/freetype-2.0
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXinerama
@@ -102,7 +103,6 @@ RDEPEND="${SDEPEND}
 	media-fonts/corefonts
 	media-fonts/dejavu
 	media-fonts/liberation-fonts
-	>=media-libs/freetype-2.0
 	x11-apps/xinit
 	autostart? (
 		net-dialup/mingetty
