@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.100 2012/07/03 16:18:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.101 2012/07/10 19:00:43 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> yaml-0.810.0.ebuild:
+  Marking yaml-0.810.0 ppc64 for bug 423227
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> yaml-0.810.0.ebuild:
   Marking yaml-0.810.0 ppc for bug 423227
