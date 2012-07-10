@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.4.0.ebuild,v 1.5 2012/05/02 21:02:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.4.0.ebuild,v 1.6 2012/07/10 21:06:40 mr_bones_ Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
-inherit wxwidgets games
+inherit wxwidgets flag-o-matic games
 
 DESCRIPTION="utilities for the SCUMM game engine"
 HOMEPAGE="http://scummvm.sourceforge.net/"
@@ -22,6 +22,7 @@ RDEPEND="png? ( media-libs/libpng )
 	vorbis? ( media-libs/libvorbis )
 	iconv? ( virtual/libiconv media-libs/freetype:2 )
 	sys-libs/zlib
+	>=dev-libs/boost-1.32
 	x11-libs/wxGTK:2.8"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -37,6 +38,20 @@ src_prepare() {
 	sed -ri \
 		-e '/^(CC|CXX)\b/d' \
 		Makefile || die
+
+	local boost_ver=$(best_version ">=dev-libs/boost-1.32")
+
+    boost_ver=${boost_ver/*boost-/}
+    boost_ver=${boost_ver%.*}
+    boost_ver=${boost_ver/./_}
+
+    einfo "Using boost version ${boost_ver}"
+    append-cxxflags \
+        -I/usr/include/boost-${boost_ver}
+    append-ldflags \
+        -L/usr/$(get_libdir)/boost-${boost_ver}
+    export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
+    export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
 }
 
 src_configure() {
