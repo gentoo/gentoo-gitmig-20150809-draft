@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/probe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/ChangeLog,v 1.17 2012/06/13 06:24:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/ChangeLog,v 1.18 2012/07/10 17:59:09 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> probe-2.12.110413.ebuild:
+  Marking probe-2.12.110413 ppc for bug 419869
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> probe-2.12.110413.ebuild:
   marked x86 per bug 419869
