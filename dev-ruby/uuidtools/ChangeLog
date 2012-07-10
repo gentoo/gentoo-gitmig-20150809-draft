@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/uuidtools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.24 2011/03/08 17:51:34 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.25 2012/07/10 08:31:50 flameeyes Exp $
+
+  10 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/uuidtools-2.1.2-macaddress.patch, uuidtools-2.1.2.ebuild:
+  Add patch to fix tests when network information is restricted (bug #425430).
 
   08 Mar 2011; Hans de Graaff <graaff@gentoo.org> -uuidtools-1.0.7.ebuild,
   -uuidtools-2.1.1-r2.ebuild:
@@ -113,4 +117,3 @@
   03 Nov 2008; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +uuidtools-1.0.4.ebuild:
   Add uuidtools ebuild (if you want to know, my blog uses it.
-
