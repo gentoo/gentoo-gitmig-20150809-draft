@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.3.ebuild,v 1.4 2012/07/07 12:35:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.3.ebuild,v 1.5 2012/07/10 17:48:08 eras Exp $
 
 EAPI=4
 
@@ -56,8 +56,7 @@ RDEPEND="${DEPEND}
 	!net-mail/fastforward"
 
 # vda patch is broken in 2.9
-REQUIRED_USE="ldap-bind? ( ldap sasl )
-	!vda"
+REQUIRED_USE="ldap-bind? ( ldap sasl )"
 
 S="${WORKDIR}/${MY_SRC}"
 
