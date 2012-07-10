@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-service-wrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/ChangeLog,v 1.13 2012/05/13 08:47:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/ChangeLog,v 1.14 2012/07/10 16:11:08 johu Exp $
+
+  10 Jul 2012; Johannes Huber <johu@gentoo.org>
+  java-service-wrapper-3.5.14-r1.ebuild:
+  Stable for x86, wrt bug #425628
 
   13 May 2012; Ralph Sennhauser <sera@gentoo.org>
   java-service-wrapper-3.5.14-r1.ebuild:
