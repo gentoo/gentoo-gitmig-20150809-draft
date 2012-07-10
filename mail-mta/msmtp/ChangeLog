@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.131 2012/07/03 16:17:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.132 2012/07/10 18:58:30 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> msmtp-1.4.28.ebuild:
+  Marking msmtp-1.4.28 ppc64 for bug 423891
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> msmtp-1.4.28.ebuild:
   Marking msmtp-1.4.28 ppc for bug 423891
