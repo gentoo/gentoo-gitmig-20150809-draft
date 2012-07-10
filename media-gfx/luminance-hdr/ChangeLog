@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/luminance-hdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.20 2012/07/09 09:52:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.21 2012/07/10 18:57:06 flameeyes Exp $
+
+  10 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  luminance-hdr-2.3.0.ebuild:
+  Fix dependency over fftw. Thanks to Karl-Johan Karlsson in bug #425646.
 
   09 Jul 2012; Tim Harder <radhermit@gentoo.org>
   -luminance-hdr-2.3.0_beta1.ebuild:
@@ -176,4 +180,3 @@
   17 Dec 2007; Markus Meier <maekke@gentoo.org> +metadata.xml,
   +qtpfsgui-1.9.0.ebuild:
   initial import of qtpfsgui, bug #179887 (and bug #162080)
-

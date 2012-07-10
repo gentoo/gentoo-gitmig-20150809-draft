@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.0.ebuild,v 1.1 2012/07/09 09:51:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.0.ebuild,v 1.2 2012/07/10 18:57:06 flameeyes Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ DEPEND="
 	>=media-libs/libraw-0.13.4
 	>=media-libs/openexr-1.2.2-r2
 	>=media-libs/tiff-3.8.2-r2
-	sci-libs/fftw:3.0
+	sci-libs/fftw:3.0[threads]
 	sci-libs/gsl
 	virtual/jpeg
 	x11-libs/qt-core:4
