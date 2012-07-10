@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-ps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.5 2012/06/15 12:23:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.6 2012/07/10 19:59:41 ago Exp $
+
+  10 Jul 2012; Agostino Sarubbo <ago@gentoo.org> zathura-ps-0.2.0.ebuild:
+  Stable for amd64, wrt bug #425674
 
 *zathura-ps-0.2.0 (15 Jun 2012)
 
