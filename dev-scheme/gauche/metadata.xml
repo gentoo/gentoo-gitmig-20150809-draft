@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>scheme</herd>
+  <herd>scheme</herd>
   <maintainer>
     <email>hattya@gentoo.org</email>
   </maintainer>
-
   <longdescription>
     Gauche is an R5RS Scheme implementation developed to be a handy script
     interpreter, which allows programmers and system administrators to write
