@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/wfmath
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.19 2011/11/11 09:18:33 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.20 2012/07/10 16:50:56 mr_bones_ Exp $
+
+*wfmath-1.0.0 (10 Jul 2012)
+
+  10 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> +wfmath-1.0.0.ebuild:
+  version bump
 
   11 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wfmath-0.3.11.ebuild:
   x86 stable wrt bug #389263
