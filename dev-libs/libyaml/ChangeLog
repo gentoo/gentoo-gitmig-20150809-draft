@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libyaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.25 2012/07/01 15:40:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.26 2012/07/10 18:01:29 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> libyaml-0.1.4.ebuild:
+  Marking libyaml-0.1.4 ppc for bug 421611
 
   01 Jul 2012; Akinori Hattori <hattya@gentoo.org> libyaml-0.1.4.ebuild:
   ia64 stable wrt bug #421611.
