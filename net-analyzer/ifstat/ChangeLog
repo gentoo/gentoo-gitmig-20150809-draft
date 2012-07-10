@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ifstat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.23 2011/03/20 18:35:07 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.24 2012/07/10 16:26:03 jer Exp $
+
+*ifstat-1.1-r1 (10 Jul 2012)
+
+  10 Jul 2012; Jeroen Roovers <jer@gentoo.org> +ifstat-1.1-r1.ebuild,
+  +files/ifstat-1.1-make.patch:
+  Bring the ebuild into the 2010s.
 
   20 Mar 2011; Raúl Porcel <armin76@gentoo.org> ifstat-1.1.ebuild:
   Add ~alpha
