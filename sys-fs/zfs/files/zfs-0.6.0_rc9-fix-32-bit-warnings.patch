@@ -1,0 +1,43 @@
+From 99aa2c28b1c96de2feee9a8edcbbe101100029c2 Mon Sep 17 00:00:00 2001
+From: Richard Yao <ryao@cs.stonybrook.edu>
+Date: Mon, 9 Jul 2012 19:41:28 -0400
+Subject: [PATCH] Use ULL suffix in constants
+
+The lack of the ULL suffix causes warnings such as the following on
+32-bit systems:
+
+In function 'zfsctl_is_snapdir':
+zfs-0.6.0//module/zfs/zfs_ctldir.c:151: warning: integer constant is too
+large for 'long' type
+
+We add the ULL suffix to fix that.
+
+This closes issue #813.
+
+Signed-off-by: Richard Yao <ryao@cs.stonybrook.edu>
+---
+ include/sys/zfs_ctldir.h |    8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/include/sys/zfs_ctldir.h b/include/sys/zfs_ctldir.h
+index e598529..0a3c142 100644
+--- a/include/sys/zfs_ctldir.h
++++ b/include/sys/zfs_ctldir.h
+@@ -103,10 +103,10 @@ extern int zfsctl_shares_lookup(struct inode *dip, char *name,
+  * However, they should be as large as possible to avoid conflicts
+  * with the objects which are assigned monotonically by the dmu.
+  */
+-#define	ZFSCTL_INO_ROOT		0x0000FFFFFFFFFFFF
+-#define	ZFSCTL_INO_SHARES	0x0000FFFFFFFFFFFE
+-#define	ZFSCTL_INO_SNAPDIR	0x0000FFFFFFFFFFFD
+-#define	ZFSCTL_INO_SNAPDIRS	0x0000FFFFFFFFFFFC
++#define	ZFSCTL_INO_ROOT		0x0000FFFFFFFFFFFFULL
++#define	ZFSCTL_INO_SHARES	0x0000FFFFFFFFFFFEULL
++#define	ZFSCTL_INO_SNAPDIR	0x0000FFFFFFFFFFFDULL
++#define	ZFSCTL_INO_SNAPDIRS	0x0000FFFFFFFFFFFCULL
+ 
+ #define	ZFSCTL_EXPIRE_SNAPSHOT	300
+ 
+-- 
+1.7.10
+
