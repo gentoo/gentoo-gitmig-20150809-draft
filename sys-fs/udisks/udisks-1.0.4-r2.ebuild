@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.11 2012/06/29 16:14:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.12 2012/07/10 15:55:36 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info
@@ -39,6 +39,7 @@ pkg_setup() {
 	if use amd64 || use arm || use ppc || use ppc64 || use x86; then
 		CONFIG_CHECK="~!IDE" #319829
 		CONFIG_CHECK+=" ~USB_SUSPEND" #331065
+		CONFIG_CHECK+=" ~NLS_UTF8" #425562
 		linux-info_pkg_setup
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.94 2012/06/29 16:14:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.95 2012/07/10 15:55:36 ssuominen Exp $
+
+  10 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r2.ebuild,
+  udisks-1.98.0.ebuild:
+  Warn users if CONFIG_NLS_UTF8=y is missing wrt #425562 by Karl Tomlinson
 
   29 Jun 2012; Jeroen Roovers <jer@gentoo.org> udisks-1.0.4-r1.ebuild,
   udisks-1.0.4-r2.ebuild:
