@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kid3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.67 2012/07/10 20:03:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.68 2012/07/10 20:05:43 johu Exp $
+
+  10 Jul 2012; Johannes Huber <johu@gentoo.org>
+  -files/kid3-2.0.1-mp4v2-1.9.1_p479.patch, -kid3-2.0.1.ebuild:
+  Remove old.
 
   10 Jul 2012; Agostino Sarubbo <ago@gentoo.org> kid3-2.1.ebuild:
   Stable for amd64, wrt bug #425518
@@ -269,4 +273,3 @@
 
   26 Apr 2004; Dominik Stadler <centic@gentoo.org> :
   Add new ebuild for kid3, see Bug 23014.
-
