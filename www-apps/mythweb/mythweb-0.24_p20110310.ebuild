@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.24_p20110310.ebuild,v 1.1 2011/12/18 04:22:54 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.24_p20110310.ebuild,v 1.2 2012/07/10 04:38:34 cardoe Exp $
 
 EAPI=2
 
@@ -19,6 +19,7 @@ RDEPEND="dev-lang/php[json,mysql,session,posix]
 	|| ( <dev-lang/php-5.3[spl,pcre] >=dev-lang/php-5.3 )
 	dev-perl/DBI
 	dev-perl/DBD-mysql
+	dev-perl/HTTP-Date
 	dev-perl/Net-UPnP"
 
 DEPEND="${RDEPEND}
