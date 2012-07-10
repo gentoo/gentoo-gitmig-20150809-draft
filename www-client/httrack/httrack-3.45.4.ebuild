@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.45.4.ebuild,v 1.2 2012/06/22 20:48:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/httrack-3.45.4.ebuild,v 1.3 2012/07/10 18:30:30 sping Exp $
 
 EAPI="4"
 
@@ -24,13 +24,12 @@ DOCS=( AUTHORS README greetings.txt history.txt )
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.44.1+zlib-1.2.5.1.patch
 
-	sed -i \
-		"/^HelpHtml.*dir/s:${PN}:${PF}:" \
-		"${S}"/html/Makefile.in || die
-
 	# https://bugs.gentoo.org/show_bug.cgi?id=421499
 	epatch "${FILESDIR}"/${P}-parallel.patch
 	epatch "${FILESDIR}"/${P}-install-once.patch
+
+	epatch "${FILESDIR}"/${P}-htmldir.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch
 	eautoreconf
 }
 
@@ -42,5 +41,5 @@ src_configure() {
 
 src_install() {
 	default
-	rm -rf "${ED}"/usr/share/doc/"${PN}" || die
+	find "${ED}" -type f -name '*.la' -delete || die
 }

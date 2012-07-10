@@ -1,6 +1,10 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.38 2012/06/22 20:48:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.39 2012/07/10 18:30:30 sping Exp $
+
+  10 Jul 2012; Sebastian Pipping <sping@gentoo.org> httrack-3.45.4.ebuild,
+  +files/httrack-3.45.4-cflags.patch, +files/httrack-3.45.4-htmldir.patch:
+  Fix QA issues (bug #425712)
 
   22 Jun 2012; Sebastian Pipping <sping@gentoo.org> httrack-3.45.4.ebuild,
   +files/httrack-3.45.4-install-once.patch,
