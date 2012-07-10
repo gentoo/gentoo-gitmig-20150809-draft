@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.1.0.1.ebuild,v 1.2 2012/07/10 13:56:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.1.1.3.ebuild,v 1.1 2012/07/10 13:56:11 voyageur Exp $
 
 EAPI=4
 inherit eutils multilib user
 
 DESCRIPTION="The X2Go server"
 HOMEPAGE="http://www.x2go.org"
-SRC_URI="http://code.x2go.org/releases/source/${PN}/${P/-/_}.tar.gz"
+SRC_URI="http://code.x2go.org/releases/source/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,8 +23,6 @@ RDEPEND="dev-perl/Config-Simple
 	fuse? ( sys-fs/sshfs-fuse )
 	postgres? ( dev-perl/DBD-Pg )
 	sqlite? ( dev-perl/DBD-SQLite )"
-
-S=${WORKDIR}/${P/-/_}
 
 pkg_setup() {
 	enewuser x2gouser -1 -1 /var/lib/x2go
@@ -49,9 +47,14 @@ src_install() {
 
 pkg_postinst() {
 	if use sqlite ; then
-		elog "To create the initial database, run:"
+		elog "To use sqlite and create the initial database, run:"
 		elog " # x2godbadmin --createdb"
 	fi
+	if use postgres ; then
+		elog "To use a PostgreSQL databse, more information is availabe here:"
+		elog "http://www.x2go.org/doku.php/wiki:advanced:multi-node:x2goserver-pgsql"
+	fi
+
 	elog "For password authentication, you need to enable PasswordAuthentication"
 	elog "in /etc/ssh/sshd_config (disabled by default in Gentoo)"
 	elog "An init script was installed for x2gocleansessions"
