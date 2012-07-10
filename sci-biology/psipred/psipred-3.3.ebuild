@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.2.1.ebuild,v 1.2 2012/07/10 20:30:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.3.ebuild,v 1.1 2012/07/10 20:30:58 jlec Exp $
 
 EAPI=4
 
 inherit eutils prefix toolchain-funcs versionator
 
-MY_P="${PN}$(delete_all_version_separators)"
+#MY_P="${PN}$(delete_all_version_separators)"
+MY_P="${PN}${PV}"
 
 DESCRIPTION="Protein Secondary Structure Prediction"
 HOMEPAGE="http://bioinf.cs.ucl.ac.uk/psipred/"
@@ -24,7 +25,7 @@ RDEPEND="
 	sci-biology/ncbi-tools++"
 DEPEND=""
 
-S="${WORKDIR}"
+S="${WORKDIR}"/${PN}
 
 src_prepare() {
 	rm -f bin/*
@@ -33,6 +34,7 @@ src_prepare() {
 		"${FILESDIR}"/3.1-path.patch \
 		"${FILESDIR}"/3.2-fgets.patch
 	eprefixify runpsipred*
+	emake -C src clean
 }
 
 src_compile() {
