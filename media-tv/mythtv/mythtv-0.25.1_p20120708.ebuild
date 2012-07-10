@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.3 2012/07/09 14:48:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.4 2012/07/10 04:14:43 cardoe Exp $
 
 EAPI=4
 
@@ -218,7 +218,10 @@ src_install() {
 	insinto /usr/share/mythtv/contrib
 	doins -r contrib/*
 
-	newbin "${FILESDIR}"/runmythfe-r1 runmythfe
+	# Install our mythfrontend wrapper which is similar to Mythbuntu's
+	mv "${ED}/usr/bin/mythfrontend" "${ED}/usr/bin/mythfrontend.real"
+	newbin "${FILESDIR}"/mythfrontend.wrapper mythfrontend
+	newconfd "${FILESDIR}"/mythfrontend.conf mythfrontend
 
 	if use autostart; then
 		dodir /etc/env.d/
@@ -226,7 +229,7 @@ src_install() {
 
 		insinto /home/mythtv
 		newins "${FILESDIR}"/bash_profile .bash_profile
-		newins "${FILESDIR}"/xinitrc .xinitrc
+		newins "${FILESDIR}"/xinitrc-r1 .xinitrc
 	fi
 
 	for file in `find "${ED}" -type f -name \*.py`; do chmod a+x "${file}"; done
