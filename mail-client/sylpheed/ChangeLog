@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.311 2012/07/03 20:03:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.312 2012/07/10 18:54:06 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> sylpheed-3.1.4.ebuild:
+  Marking sylpheed-3.1.4 ppc64 for bug 424403
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> sylpheed-3.1.4.ebuild:
   Stable for HPPA (bug #424403).
