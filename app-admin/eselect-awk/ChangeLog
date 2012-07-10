@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-awk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.6 2012/07/09 08:28:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.7 2012/07/10 13:59:24 hattya Exp $
+
+  10 Jul 2012; Akinori Hattori <hattya@gentoo.org> eselect-awk-0.2.ebuild:
+  keyword ~ia64 wrt bug #419559
 
   09 Jul 2012; Naohiro Aota <naota@gentoo.org> eselect-awk-0.2.ebuild:
   Add ~x86-fbsd. #419559
