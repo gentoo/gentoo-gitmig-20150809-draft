@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.10 2012/07/10 18:36:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.11 2012/07/10 23:46:39 cardoe Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.linux-kvm.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty +curl debug doc fdt kernel_linux \
+IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt kernel_linux \
 kernel_FreeBSD ncurses opengl pulseaudio python rbd sasl sdl \
 smartcard spice static tci tls usbredir vde +vhost-net virtfs xattr xen xfs"
 
@@ -54,6 +54,7 @@ REQUIRED_USE="static? ( !alsa !pulseaudio )
 	x86? ( qemu_softmmu_targets_x86_64 )
 	virtfs? ( xattr )"
 
+# Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
 RDEPEND="
 	!app-emulation/kqemu
 	!app-emulation/qemu
@@ -70,6 +71,7 @@ RDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
 	brltty? ( app-accessibility/brltty )
+	caps? ( sys-libs/libcap-ng )
 	curl? ( >=net-misc/curl-7.15.4 )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	kernel_linux? ( >=sys-apps/util-linux-2.16.0 )
@@ -91,6 +93,7 @@ RDEPEND="
 	tls? ( net-libs/gnutls )
 	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
+	virtfs? ( sys-libs/libcap )
 	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen-tools )
 	xfs? ( sys-fs/xfsprogs )"
@@ -156,10 +159,6 @@ pkg_pretend() {
 
 			use python && CONFIG_CHECK+=" ~DEBUG_FS"
 			ERROR_DEBUG_FS="debugFS support required for kvm_stat"
-
-			if use virtfs; then
-				CONFIG_CHECK+=" ~NET_9P ~NET_9P_VIRTIO ~9P_FS ~9P_FS_POSIX_ACL"
-			fi
 
 			# Now do the actual checks setup above
 			check_extra_config
@@ -250,6 +249,7 @@ src_configure() {
 		$(use_enable aio linux-aio) \
 		$(use_enable bluetooth bluez) \
 		$(use_enable brltty brlapi) \
+		$(use_enable caps cap-ng) \
 		$(use_enable curl) \
 		$(use_enable debug debug-info) \
 		$(use_enable debug debug-mon) \
