@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-2.1.ebuild,v 1.3 2012/07/09 19:24:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-2.1.ebuild,v 1.4 2012/07/10 20:03:21 ago Exp $
 
 EAPI=4
 KDE_LINGUAS="cs de es et fi fr it nl pl ru sr sr@ijekavian sr@ijekavianlatin sr@Latn tr zh_TW"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="chroma flac mp3 mp4 +taglib vorbis"
 
 RDEPEND="
