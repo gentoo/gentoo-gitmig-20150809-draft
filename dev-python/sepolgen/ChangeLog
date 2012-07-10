@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.21 2012/06/26 05:00:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.22 2012/07/10 19:59:29 swift Exp $
+
+*sepolgen-1.1.5-r3 (10 Jul 2012)
+
+  10 Jul 2012; <swift@gentoo.org> +sepolgen-1.1.5-r3.ebuild:
+  Support refpolicy style audit2allow (#417199)
 
   26 Jun 2012; Mike Gilbert <floppym@gentoo.org> sepolgen-1.1.5.ebuild:
   Restrict pypy.
