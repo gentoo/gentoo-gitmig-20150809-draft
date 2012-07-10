@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.100 2012/07/10 05:30:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.101 2012/07/10 19:11:14 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> x11vnc-0.9.13.ebuild:
+  Marking x11vnc-0.9.13 ppc64 for bug 381699
 
   10 Jul 2012; Michael Weber <xmw@gentoo.org> x11vnc-0.9.13.ebuild:
   ppc stable (bug 381699)
