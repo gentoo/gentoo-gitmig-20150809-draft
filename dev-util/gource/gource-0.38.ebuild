@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38.ebuild,v 1.3 2012/05/12 19:25:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38.ebuild,v 1.4 2012/07/10 09:56:31 flameeyes Exp $
 
 EAPI=2
 
-inherit autotools flag-o-matic versionator
+inherit eutils autotools flag-o-matic versionator
 
 MY_P=${P/_p/-}
 MY_P=${MY_P/_/-}
@@ -48,6 +48,7 @@ case ${PV} in
 esac
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}+boost-1.50.patch"
 	eautoreconf
 }
 

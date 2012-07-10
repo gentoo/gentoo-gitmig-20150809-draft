@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gource
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.21 2012/07/09 09:39:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.22 2012/07/10 09:56:31 flameeyes Exp $
+
+  10 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/gource-0.38+boost-1.50.patch, gource-0.38.ebuild:
+  Add patch to fix building with boost 1.50, mixing one fix from upstream and
+  one upstreamed. Thanks Enrico for finding the fix. Closes bug #425460.
 
   09 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Reorder metadata to help auto-filing.
