@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.26 2012/07/08 15:10:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.27 2012/07/10 18:00:21 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> cifs-utils-5.4.ebuild:
+  Marking cifs-utils-5.4 ppc for bug 420895
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> cifs-utils-5.4.ebuild:
   Stable for HPPA (bug #420895).
