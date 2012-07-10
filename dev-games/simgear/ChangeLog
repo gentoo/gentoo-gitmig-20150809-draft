@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/simgear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.50 2012/07/09 15:08:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.51 2012/07/10 04:52:20 xmw Exp $
+
+  10 Jul 2012; Michael Weber <xmw@gentoo.org> simgear-2.4.0.ebuild:
+  ppc stable (bug 405665)
 
   09 Jul 2012; Michael Weber <xmw@gentoo.org>
   +files/simgear-2.4.0-boost148.patch, simgear-2.4.0.ebuild:
