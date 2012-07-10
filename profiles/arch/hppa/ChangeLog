@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.162 2012/07/08 16:00:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.163 2012/07/10 14:03:52 jer Exp $
+
+  10 Jul 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=clang for app-portage/eix (bug #425494).
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=devil for graphviz instead.

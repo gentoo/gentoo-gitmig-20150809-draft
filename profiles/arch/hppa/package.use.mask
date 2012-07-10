@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.111 2012/07/08 16:00:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.112 2012/07/10 14:03:52 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (10 Jul 2012)
+# USE=clang needs sys-devel/llvm which has not been ported
+app-portage/eix clang
 
 # Jeroen Roovers <jer@gentoo.org> (8 Jul 2012)
 # media-libs/devil has not been fully tested on HPPA
