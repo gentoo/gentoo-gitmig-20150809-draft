@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.300-r1.ebuild,v 1.1 2012/07/10 19:30:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.300-r1.ebuild,v 1.2 2012/07/10 21:18:46 bicatali Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -9,7 +9,7 @@ DESCRIPTION="C and Fortran library for manipulating FITS files"
 HOMEPAGE="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html"
 SRC_URI="http://dev.gentoo.org/~bicatali/distfiles/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="doc examples fortran static-libs +tools threads"
