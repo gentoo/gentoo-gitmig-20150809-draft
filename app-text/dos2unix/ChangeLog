@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.97 2012/07/08 08:32:11 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.98 2012/07/10 19:07:29 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> dos2unix-6.0.ebuild:
+  Marking dos2unix-6.0 ppc64 for bug 421999
 
   08 Jul 2012; Akinori Hattori <hattya@gentoo.org> dos2unix-6.0.ebuild:
   ia64 stable wrt bug #421999
