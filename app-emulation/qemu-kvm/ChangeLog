@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.130 2012/07/09 07:33:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.131 2012/07/10 10:46:33 flameeyes Exp $
+
+  10 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> qemu-kvm-1.1.0.ebuild,
+  qemu-kvm-9999.ebuild:
+  Fix typos that caused spurious warnings. Thanks to Juergen Rose for reporting
+  bug #425298.
 
   09 Jul 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.0.ebuild,
   qemu-kvm-9999.ebuild:

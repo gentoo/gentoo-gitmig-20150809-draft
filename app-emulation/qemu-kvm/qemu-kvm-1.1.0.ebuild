@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.8 2012/07/09 07:33:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.9 2012/07/10 10:46:33 flameeyes Exp $
 
 EAPI="4"
 
@@ -153,7 +153,7 @@ pkg_pretend() {
 				CONFIG_CHECK+=" ~KVM_AMD ~KVM_INTEL"
 			fi
 
-			use python && CONFIG_CHECK+="~DEBUG_FS"
+			use python && CONFIG_CHECK+=" ~DEBUG_FS"
 			ERROR_DEBUG_FS="debugFS support required for kvm_stat"
 
 			# Now do the actual checks setup above
