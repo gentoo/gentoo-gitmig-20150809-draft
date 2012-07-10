@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.2.0_beta3.ebuild,v 1.1 2012/06/02 22:12:10 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.2.0.ebuild,v 1.1 2012/07/10 08:44:37 jdhore Exp $
 EAPI=4
-MY_PV=4.2.b3
+
 DESCRIPTION="RAR compressor/uncompressor"
 HOMEPAGE="http://www.rarsoft.com/"
-URI_x86="http://www.rarlab.com/rar/rarlinux-${MY_PV}.tar.gz"
-URI_amd64="http://www.rarlab.com/rar/rarlinux-x64-${MY_PV}.tar.gz"
-URI_w64="http://www.rarlab.com/rar/winrar-x64-${MY_PV//.}.exe"
+URI_x86="http://www.rarlab.com/rar/rarlinux-${PV}.tar.gz"
+URI_amd64="http://www.rarlab.com/rar/rarlinux-x64-${PV}.tar.gz"
+URI_w64="http://www.rarlab.com/rar/winrar-x64-${PV//.}.exe"
 SRC_URI="x86? ( ${URI_x86} )
 	amd64? ( ${URI_amd64} )
 	all_sfx? (
