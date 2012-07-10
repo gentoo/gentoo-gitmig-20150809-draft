@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/omake
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.22 2010/11/20 17:28:45 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.23 2012/07/10 22:30:37 johu Exp $
+
+  10 Jul 2012; Johannes Huber <johu@gentoo.org> omake-0.9.8.6.0_rc1.ebuild:
+  Stable for x86, wrt bug #425742
 
 *omake-0.9.8.6.0_rc1 (20 Nov 2010)
 

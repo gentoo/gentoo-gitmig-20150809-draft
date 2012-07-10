@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.6.0_rc1.ebuild,v 1.1 2010/11/20 17:28:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.6.0_rc1.ebuild,v 1.2 2012/07/10 22:30:37 johu Exp $
 
 EAPI=2
 inherit toolchain-funcs multilib versionator eutils
@@ -13,7 +13,7 @@ SRC_URI="http://omake.metaprl.org/downloads/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc fam ncurses +ocamlopt readline"
 DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 	ncurses? ( >=sys-libs/ncurses-5.3 )
