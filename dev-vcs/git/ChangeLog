@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.142 2012/07/08 08:30:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.143 2012/07/10 13:19:16 hattya Exp $
+
+  10 Jul 2012; Akinori Hattori <hattya@gentoo.org> git-1.7.8.6.ebuild:
+  ia64 stable wrt bug #418381
 
   08 Jul 2012; Michael Weber <xmw@gentoo.org> git-1.7.8.6.ebuild:
   ppc stable (bug 418381)
