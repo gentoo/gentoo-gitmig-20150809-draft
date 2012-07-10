@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.358 2012/07/09 19:39:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.359 2012/07/10 15:07:22 jer Exp $
+
+  10 Jul 2012; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.0.ebuild,
+  metadata.xml:
+  Revert the USE=btbb addition (bug #425652).
 
   09 Jul 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml,
   wireshark-1.8.0.ebuild:
