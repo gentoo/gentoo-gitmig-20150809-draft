@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.43 2012/02/26 01:44:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.44 2012/07/10 18:02:37 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> vienna-rna-1.8.5.ebuild:
+  Marking vienna-rna-1.8.5 ppc for bug 393867
 
   26 Feb 2012; Patrick Lauer <patrick@gentoo.org> vienna-rna-1.8.4-r1.ebuild,
   vienna-rna-1.8.5.ebuild:

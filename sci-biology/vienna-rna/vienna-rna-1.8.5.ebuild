@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.5.ebuild,v 1.8 2012/02/26 01:44:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.5.ebuild,v 1.9 2012/07/10 18:02:37 ranger Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.tbi.univie.ac.at/~ivo/RNA/ViennaRNA-${PV}.tar.gz"
 LICENSE="vienna-rna"
 SLOT="0"
 IUSE="python static-libs"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 DEPEND="
 	dev-lang/perl
