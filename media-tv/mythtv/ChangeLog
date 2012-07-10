@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.359 2012/07/10 04:24:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.360 2012/07/10 05:25:38 cardoe Exp $
+
+  09 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.25.1_p20120708.ebuild, metadata.xml:
+  Numerous updates to support all the features and notes in the 0.25 release
+  notes.
 
   09 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.25.1_p20120708.ebuild:

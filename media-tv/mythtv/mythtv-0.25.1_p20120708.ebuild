@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.5 2012/07/10 04:24:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.6 2012/07/10 05:25:38 cardoe Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="python? 2"
+PYTHON_DEPEND="python? 2:2.6"
 BACKPORTS="61e7a0e946"
 MY_P=${P%_p*}
 
@@ -25,11 +25,10 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE_INPUT_DEVICES="input_devices_joystick"
 IUSE="alsa altivec libass autostart bluray cec crystalhd debug dvb dvd \
-ieee1394 jack lcd lirc perl pulseaudio python xvmc vaapi vdpau \
-${IUSE_INPUT_DEVICES}"
+fftw +hls ieee1394 jack lcd lirc perl pulseaudio python raop vaapi \
+vdpau xmltv xvid ${IUSE_INPUT_DEVICES}"
 
 SDEPEND="
-	>=media-sound/lame-3.93.1
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXinerama
@@ -47,28 +46,54 @@ SDEPEND="
 	virtual/opengl
 	virtual/glu
 	alsa? ( >=media-libs/alsa-lib-1.0.24 )
+	bluray? (
+		dev-libs/libcdio
+		>=dev-libs/libxml2-2.6.0
+		media-libs/libbluray
+	)
 	cec? ( dev-libs/libcec )
-	dvb? ( media-libs/libdvb virtual/linuxtv-dvb-headers )
-	ieee1394? (	>=sys-libs/libraw1394-1.2.0
-			>=sys-libs/libavc1394-0.5.3
-			>=media-libs/libiec61883-1.0.0 )
+	dvb? (
+		media-libs/libdvb
+		virtual/linuxtv-dvb-headers
+	)
+	dvd? ( dev-libs/libcdio )
+	fftw? ( sci-libs/fftw:3.0 )
+	hls? (
+		media-libs/faac
+		media-libs/libvpx
+		>=media-libs/x264-0.0.20110426
+		>=media-sound/lame-3.93.1
+	)
+	ieee1394? (
+		>=sys-libs/libraw1394-1.2.0
+		>=sys-libs/libavc1394-0.5.3
+		>=media-libs/libiec61883-1.0.0
+	)
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	libass? ( >=media-libs/libass-0.9.11 )
 	lirc? ( app-misc/lirc )
-	perl? (	dev-perl/DBD-mysql
+	perl? (
+		dev-perl/DBD-mysql
 		dev-perl/Net-UPnP
 		dev-perl/LWP-Protocol-https
 		dev-perl/HTTP-Message
 		dev-perl/IO-Socket-INET6
-		>=dev-perl/libwww-perl-5 )
+		>=dev-perl/libwww-perl-5
+	)
 	pulseaudio? ( media-sound/pulseaudio )
-	python? (	dev-python/mysql-python
-			dev-python/lxml
-			dev-python/urlgrabber )
+	python? (
+		dev-python/mysql-python
+		dev-python/lxml
+		dev-python/urlgrabber
+	)
+	raop? (
+		dev-libs/openssl
+		net-dns/avahi[mdnsresponder-compat]
+	)
 	vaapi? ( x11-libs/libva )
 	vdpau? ( x11-libs/libvdpau )
-	xvmc? ( x11-libs/libXvMC )
+	xvid? ( >=media-libs/xvid-1.1.0 )
 	!media-tv/mythtv-bindings
 	!x11-themes/mythtv-themes
 	"
@@ -76,14 +101,16 @@ SDEPEND="
 RDEPEND="${SDEPEND}
 	media-fonts/corefonts
 	media-fonts/dejavu
+	media-fonts/liberation-fonts
 	>=media-libs/freetype-2.0
 	x11-apps/xinit
-	|| ( >=net-misc/wget-1.12-r3 >=media-tv/xmltv-0.5.43 )
-	autostart? (	net-dialup/mingetty
-			x11-wm/evilwm
-			x11-apps/xset )
-	bluray? ( media-libs/libbluray )
+	autostart? (
+		net-dialup/mingetty
+		x11-wm/evilwm
+		x11-apps/xset
+	)
 	dvd? ( media-libs/libdvdcss )
+	xmltv? ( >=media-tv/xmltv-0.5.43 )
 	"
 
 DEPEND="${SDEPEND}
@@ -141,10 +168,20 @@ src_configure() {
 	myconf="${myconf} $(use_enable dvb)"
 	myconf="${myconf} $(use_enable ieee1394 firewire)"
 	myconf="${myconf} $(use_enable lirc)"
+	myconf="${myconf} $(use_enable xvid libxvid)"
 	myconf="${myconf} --dvb-path=/usr/include"
 	myconf="${myconf} --enable-xrandr"
 	myconf="${myconf} --enable-xv"
 	myconf="${myconf} --enable-x11"
+	myconf="${myconf} --enable-nonfree"
+	use cec || myconf="${myconf} --disable-libcec"
+
+	if use hls; then
+		myconf="${myconf} --enable-libmp3lame"
+		myconf="${myconf} --enable-libx264"
+		myconf="${myconf} --enable-libvpx"
+		myconf="${myconf} --enable-libfaac"
+	fi
 
 	if use perl && use python; then
 		myconf="${myconf} --with-bindings=perl,python"
@@ -233,9 +270,16 @@ src_install() {
 		newins "${FILESDIR}"/xinitrc-r1 .xinitrc
 	fi
 
-	for file in `find "${ED}" -type f -name \*.py`; do chmod a+x "${file}"; done
-	for file in `find "${ED}" -type f -name \*.sh`; do chmod a+x "${file}"; done
-	for file in `find "${ED}" -type f -name \*.pl`; do chmod a+x "${file}"; done
+	# Make Python files executable and ensure they are executed by Python 2
+	for file in `find "${ED}" -type f -name \*.py`; do
+		fperms 0755 "${file}"
+		python_convert_shebangs 2 "${file}"
+	done
+
+	# Make shell & perl scripts executable
+	for file in `find "${ED}" -type f -name \*.sh -o -type f -name \*.pl`; do
+		fperms 0755 "${file}"
+	done
 }
 
 pkg_preinst() {
