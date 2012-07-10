@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.101 2012/06/26 05:02:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.102 2012/07/10 20:01:25 swift Exp $
+
+*policycoreutils-2.1.10-r4 (10 Jul 2012)
+
+  10 Jul 2012; <swift@gentoo.org> +policycoreutils-2.1.10-r4.ebuild:
+  Support refpolicy style audit2allow (#417199)
 
   26 Jun 2012; Mike Gilbert <floppym@gentoo.org>
   policycoreutils-2.1.10-r1.ebuild, policycoreutils-2.1.10-r3.ebuild,
