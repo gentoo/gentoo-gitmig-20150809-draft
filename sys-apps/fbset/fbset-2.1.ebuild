@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.34 2012/01/31 16:12:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.35 2012/07/10 08:50:50 flameeyes Exp $
 
-inherit toolchain-funcs flag-o-matic
+inherit toolchain-funcs flag-o-matic eutils
 
 DESCRIPTION="A utility to set the framebuffer videomode"
 HOMEPAGE="http://users.telenet.be/geertu/Linux/fbdev/"
@@ -20,15 +20,12 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i \
-		-e "/^CC =/s:gcc:$(tc-getCC):" \
-		-e "/^CC =/s:-O2:${CFLAGS}:" \
-		-e 's/^modes.tab.c/modes.tab.h modes.tab.c/' \
-		Makefile || die "sed Makefile failed"
+	epatch "${FILESDIR}/${P}-build.patch"
 }
 
 src_compile() {
 	use static && append-ldflags -static
+	tc-export CC
 	emake || die "emake failed"
 }
 
