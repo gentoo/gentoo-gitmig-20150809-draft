@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.9 2012/07/10 10:46:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.10 2012/07/10 18:36:05 cardoe Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty +curl debug doc fdt kernel_linux \
 kernel_FreeBSD ncurses opengl pulseaudio python rbd sasl sdl \
-smartcard spice static tci tls usbredir vde +vhost-net xattr xen xfs"
+smartcard spice static tci tls usbredir vde +vhost-net virtfs xattr xen xfs"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb"
@@ -51,7 +51,8 @@ done
 
 REQUIRED_USE="static? ( !alsa !pulseaudio )
 	amd64? ( qemu_softmmu_targets_x86_64 )
-	x86? ( qemu_softmmu_targets_x86_64 )"
+	x86? ( qemu_softmmu_targets_x86_64 )
+	virtfs? ( xattr )"
 
 RDEPEND="
 	!app-emulation/kqemu
@@ -155,6 +156,10 @@ pkg_pretend() {
 
 			use python && CONFIG_CHECK+=" ~DEBUG_FS"
 			ERROR_DEBUG_FS="debugFS support required for kvm_stat"
+
+			if use virtfs; then
+				CONFIG_CHECK+=" ~NET_9P ~NET_9P_VIRTIO ~9P_FS ~9P_FS_POSIX_ACL"
+			fi
 
 			# Now do the actual checks setup above
 			check_extra_config
@@ -268,8 +273,8 @@ src_configure() {
 		$(use_enable usbredir usb-redir) \
 		$(use_enable vde) \
 		$(use_enable vhost-net) \
+		$(use_enable virtfs) \
 		$(use_enable xattr attr) \
-		$(use_enable xattr virtfs) \
 		$(use_enable xen) \
 		$(use_enable xfs xfsctl) \
 		--audio-drv-list="${audio_opts}" \
