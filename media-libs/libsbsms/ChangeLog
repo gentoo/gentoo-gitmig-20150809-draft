@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsbsms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsbsms/ChangeLog,v 1.1 2012/06/30 04:02:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsbsms/ChangeLog,v 1.2 2012/07/10 22:06:45 radhermit Exp $
+
+*libsbsms-2.0.1 (10 Jul 2012)
+
+  10 Jul 2012; Tim Harder <radhermit@gentoo.org> +libsbsms-2.0.1.ebuild:
+  Version bump (bug #425550).
 
 *libsbsms-2.0.0 (30 Jun 2012)
 
