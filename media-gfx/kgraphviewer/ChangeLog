@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kgraphviewer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgraphviewer/ChangeLog,v 1.7 2011/10/28 23:59:28 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgraphviewer/ChangeLog,v 1.8 2012/07/10 16:32:16 kensington Exp $
+
+  10 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/kgraphviewer-2.1.1-boost-1.50.patch, kgraphviewer-2.1.1.ebuild:
+  Fix build with boost-1.50, wrt bug #425478.
 
   28 Oct 2011; Jonathan Callen <abcd@gentoo.org> kgraphviewer-2.1.1.ebuild:
   Bump to EAPI=4; set KDE_HANDBOOK
@@ -37,4 +41,3 @@
   28 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   +kgraphviewer-2.0.2.ebuild:
   Initial commit wrt #135245.
-

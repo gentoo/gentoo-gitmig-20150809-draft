@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgraphviewer/kgraphviewer-2.1.1.ebuild,v 1.2 2011/10/28 23:59:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgraphviewer/kgraphviewer-2.1.1.ebuild,v 1.3 2012/07/10 16:32:16 kensington Exp $
 
 EAPI=4
 
@@ -26,3 +26,5 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.38
 "
+
+PATCHES=( "${FILESDIR}/${P}-boost-1.50.patch" )
