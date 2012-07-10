@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.25 2012/07/09 11:48:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.26 2012/07/10 17:50:06 ranger Exp $
+
+  10 Jul 2012; Brent Baude <ranger@gentoo.org> mac-3.99.4.5.7-r1.ebuild:
+  Marking mac-3.99.4.5.7-r1 ppc for bug 425228
 
   09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> mac-3.99.4.5.7-r1.ebuild:
   Stable for amd64, wrt bug #425228
