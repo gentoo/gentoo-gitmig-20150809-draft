@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/clipper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.20 2012/07/10 18:04:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.21 2012/07/10 18:55:01 jlec Exp $
+
+  10 Jul 2012; Justin Lecher <jlec@gentoo.org> -clipper-20100511.ebuild:
+  Cleaned old
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> clipper-20100511-r1.ebuild:
   Marking clipper-20100511-r1 ppc for bug 421645
