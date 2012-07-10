@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.20 2012/07/10 00:26:07 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc9-r2.ebuild,v 1.1 2012/07/10 00:26:07 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"

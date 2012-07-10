@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.21 2012/06/25 17:54:06 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.22 2012/07/10 00:26:07 ryao Exp $
+
+*spl-0.6.0_rc9-r2 (10 Jul 2012)
+
+  10 Jul 2012; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch,
+  +spl-0.6.0_rc9-r2.ebuild, spl-9999.ebuild:
+  Make KM_SLEEP an alias of KM_PUSHPAGE like it is in FreeBSD
 
 *spl-0.6.0_rc9-r1 (25 Jun 2012)
 
