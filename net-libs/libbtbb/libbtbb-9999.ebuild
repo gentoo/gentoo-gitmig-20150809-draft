@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.5 2012/07/09 19:02:02 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.6 2012/07/11 21:42:13 zerochaos Exp $
 
 EAPI=4
 
@@ -24,8 +24,6 @@ SLOT="0"
 IUSE=""
 
 src_install() {
-	insinto /usr/share/${PN}
-	doins -r wireshark
 	dodir /usr/$(get_libdir)
 	dodir /usr/include
 	emake LDCONFIG=true DESTDIR="${D}" INSTALL_DIR="${ED}/usr/$(get_libdir)" INCLUDE_DIR="${ED}/usr/include" install
