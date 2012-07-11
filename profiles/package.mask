@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13949 2012/07/10 16:54:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13950 2012/07/11 12:24:42 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,9 +31,11 @@
 
 #--- END OF EXAMPLES ---
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (10 Jul 2012)
-# Fails to unlock the screen for some gnome-shell users, bug #425070
-=gnome-extra/gnome-screensaver-3.4.2
+# Tony Vroon <chainsaw@gentoo.org> (11 Jul 2012)
+# This segfaults repeatedly in actual use for me, and I can not in good 
+# conscience allow this to surprise others. Unmask only to help trace 
+# where the fault is, not to run on live systems.
+=net-misc/asterisk-10.6.0
 
 # Mike Gilbert <floppym@gentoo.org> (09 Jul 2012)
 # Dev channel releases are only for people who are developers or want more
