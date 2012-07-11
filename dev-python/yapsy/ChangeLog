@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/yapsy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/ChangeLog,v 1.1 2012/06/21 11:14:55 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/ChangeLog,v 1.2 2012/07/11 10:20:47 xmw Exp $
+
+  11 Jul 2012; Michael Weber <xmw@gentoo.org> yapsy-1.9.ebuild:
+  disabling test-suite for now (bug 423107 by flameeyes)
 
 *yapsy-1.9 (21 Jun 2012)
 
   21 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +metadata.xml,
   +yapsy-1.9.ebuild:
   Add dev-python/yapsy, bug 421833. Thanks to Pinkbyte
-

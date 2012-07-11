@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/yapsy-1.9.ebuild,v 1.1 2012/06/21 11:14:55 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/yapsy-1.9.ebuild,v 1.2 2012/07/11 10:20:47 xmw Exp $
 
 EAPI="4"
 
-DISTUTILS_SRC_TEST="setup.py"
+#bug 423107
+#DISTUTILS_SRC_TEST="setup.py"
 
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2"
