@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libestr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.9 2012/06/02 16:52:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.10 2012/07/11 19:19:54 hwoarang Exp $
+
+*libestr-0.1.3 (11 Jul 2012)
+
+  11 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +libestr-0.1.3.ebuild:
+  Version bump
 
   02 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> -libestr-0.1.0.ebuild,
   -libestr-0.1.1.ebuild:
@@ -35,4 +40,3 @@
 
   22 Feb 2011; Markos Chandras <hwoarang@gentoo.org> +libestr-0.1.0.ebuild:
   Initial commit. Thanks to Marcin Mirosław <bug@mejor.pl>. Bug #348694
-
