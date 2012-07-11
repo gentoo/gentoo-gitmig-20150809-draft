@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.109 2012/07/09 14:21:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.110 2012/07/11 14:08:16 pesa Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
 # x11-libs/qt-webkit doesn't seem to work
@@ -143,10 +143,6 @@ sci-libs/gdal ecwj2k
 
 # uses games-board/ggz-gtk-client
 games-strategy/freeciv ggz
-
-# Ben de Groot <yngwin@gentoo.org> (18 Jan 2010)
-# newer qt-webkit is not keyworded (bug #235685)
->=dev-python/PyQt4-4.7.2 webkit
 
 # Raúl Porcel <armin76@gentoo.org> (02 Mar 2010)
 # needs dev-python/mako which depends on
