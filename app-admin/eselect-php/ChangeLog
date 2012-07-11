@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.36 2012/07/10 06:55:28 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.37 2012/07/11 00:36:28 blueness Exp $
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  eselect-php-0.6.7.ebuild:
+  Keyword ~mips, works on true multilib systems, bugs #425486
 
   10 Jul 2012; Ole Markus With <olemarkus@gentoo.org> eselect-php-0.6.7.ebuild:
   Moved eselect-php file to devspace
