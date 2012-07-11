@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.32 2012/02/05 06:15:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.33 2012/07/11 17:29:07 mr_bones_ Exp $
+
+  11 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  quake3-bin-1.32c-r1.ebuild:
+  gpl for init script bug #425942
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> quake3-bin-1.32c.ebuild,
   quake3-bin-1.32c-r1.ebuild:
