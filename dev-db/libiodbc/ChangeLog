@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.56 2012/05/09 16:29:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.57 2012/07/11 23:02:36 blueness Exp $
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  libiodbc-3.52.7-r1.ebuild:
+  Keyword ~mips
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> libiodbc-3.52.7-r1.ebuild:
   keyword ~amd64-fbsd
