@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/esh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.24 2012/05/10 15:20:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.25 2012/07/11 18:54:56 ulm Exp $
+
+*esh-0.8.5-r2 (11 Jul 2012)
+
+  11 Jul 2012; Ulrich Müller <ulm@gentoo.org> +esh-0.8.5-r2.ebuild:
+  Don't install dysfunctional esh-mode.el for Emacs, bug 425780.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -esh-0.8.5.ebuild:
   Remove old
