@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/ZendFramework
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.15 2012/07/11 00:20:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.16 2012/07/11 16:38:02 jer Exp $
+
+  11 Jul 2012; Jeroen Roovers <jer@gentoo.org> ZendFramework-1.11.12.ebuild:
+  Stable for HPPA (bug #425452).
 
   11 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ZendFramework-1.11.12.ebuild:
   marked x86 per bug 425452
