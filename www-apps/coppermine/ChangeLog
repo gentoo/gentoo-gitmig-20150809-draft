@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.32 2012/06/22 22:17:54 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.33 2012/07/11 20:18:47 mabi Exp $
+
+  11 Jul 2012; Matti Bickel <mabi@gentoo.org> -coppermine-1.4.27.ebuild:
+  remove old
 
   22 Jun 2012; Matti Bickel <mabi@gentoo.org> coppermine-1.5.20.ebuild:
   drop additional dep on imagemagick (also solves bug #314383)
@@ -146,4 +149,3 @@
   +files/postinstall-en.txt, +coppermine-1.3.3.ebuild:
   Initial version; thanks to Sune Kloppenborg Jeppesen <jaervosz@gentoo.org>;
   see bug #68396
-
