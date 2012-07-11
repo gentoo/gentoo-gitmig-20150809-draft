@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libproplist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libproplist/ChangeLog,v 1.3 2012/07/08 16:23:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libproplist/ChangeLog,v 1.4 2012/07/11 15:08:32 kensington Exp $
+
+  11 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  -libproplist-0.10.1-r3.ebuild:
+  Remove old.
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> libproplist-0.10.1-r3.ebuild,
   libproplist-0.10.1-r4.ebuild:
