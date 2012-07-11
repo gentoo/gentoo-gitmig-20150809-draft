@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.110 2012/07/11 14:08:16 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.111 2012/07/11 14:10:26 pesa Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
 # x11-libs/qt-webkit doesn't seem to work
@@ -169,10 +169,6 @@ media-libs/libxspf doc
 # Romain Perier <mrpouet@gentoo.org> (18 Oct. 2009)
 # >=networkmanager-0.7.0 is not keyworded.
 gnome-base/gnome-applets networkmanager
-
-# Raúl Porcel <armin76@gentoo.org> (09 Jun 2009)
-# Needs qt-assistant
-dev-python/PyQt4 assistant
 
 # Raúl Porcel <armin76@gentoo.org>
 # Depends on dev-java/fop which requires java...
