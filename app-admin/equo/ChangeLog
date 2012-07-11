@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/equo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/ChangeLog,v 1.19 2012/03/23 14:18:21 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/ChangeLog,v 1.20 2012/07/11 18:30:41 lxnay Exp $
+
+*equo-1.0_rc124 (11 Jul 2012)
+
+  11 Jul 2012; Fabio Erculiani <lxnay@gentoo.org> +equo-1.0_rc124.ebuild:
+  version bump
 
 *equo-1.0_rc90 (23 Mar 2012)
 
