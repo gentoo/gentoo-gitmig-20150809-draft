@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/svrcore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/svrcore/ChangeLog,v 1.2 2012/05/21 18:59:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/svrcore/ChangeLog,v 1.3 2012/07/11 18:15:41 lxnay Exp $
+
+  11 Jul 2012; Fabio Erculiani <lxnay@gentoo.org> svrcore-4.0.4.ebuild:
+  amd64 and x86 stable, as per bug #420131
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> svrcore-4.0.4.ebuild:
   Add missing inheritance of eutils.eclass

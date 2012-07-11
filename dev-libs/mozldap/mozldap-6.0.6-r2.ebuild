@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r2.ebuild,v 1.2 2012/05/04 18:35:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r2.ebuild,v 1.3 2012/07/11 18:16:29 lxnay Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/directory/c-sdk/releases/v${PV}/s
 
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ipv6 debug +sasl"
 
 COMMON_DEPEND=">=dev-libs/nss-3.11.4
