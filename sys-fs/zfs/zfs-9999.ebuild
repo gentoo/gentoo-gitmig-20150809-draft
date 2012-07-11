@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.27 2012/07/01 13:03:28 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.28 2012/07/11 13:20:31 ryao Exp $
 
 EAPI="4"
 
@@ -24,9 +24,9 @@ fi
 DESCRIPTION="Native ZFS for Linux"
 HOMEPAGE="http://zfsonlinux.org/"
 
-LICENSE="CDDL GPL-2 MIT"
+LICENSE="BSD-2 CDDL MIT"
 SLOT="0"
-IUSE="bash-completion custom-cflags debug dracut +rootfs test test-suite static-libs"
+IUSE="custom-cflags debug dracut +rootfs test test-suite static-libs"
 
 DEPEND="
 	=sys-kernel/spl-${PV}*
@@ -64,7 +64,9 @@ pkg_setup() {
 		MODULES
 		ZLIB_DEFLATE
 		ZLIB_INFLATE"
-	use rootfs && CONFIG_CHECK="${CONFIG_CHECK} DEVTMPFS"
+	use rootfs && \
+		CONFIG_CHECK="${CONFIG_CHECK} BLK_DEV_INITRD
+			DEVTMPFS"
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 	check_extra_config
 }
@@ -77,13 +79,18 @@ src_prepare() {
 
 	if [ ${PV} != "9999" ]
 	then
+		# Fix build issues
 		epatch "${FILESDIR}/${P}-hardened-support.patch"
+		epatch "${FILESDIR}/${P}-linux-3.5-support.patch"
+		epatch "${FILESDIR}/${P}-fix-32-bit-warnings.patch"
 
 		# Fix various deadlocks
-		epatch "${FILESDIR}/${P}-use-pushpage.patch"
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-1-of-3.patch"
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-2-of-3.patch"
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-3-of-3.patch"
+
+		#Miscellaneous
+		epatch "${FILESDIR}/${P}-bsd-init.patch"
 	fi
 
 	autotools-utils_src_prepare

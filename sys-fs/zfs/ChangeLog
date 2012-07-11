@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.35 2012/07/10 00:31:39 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.36 2012/07/11 13:20:31 ryao Exp $
+
+*zfs-0.6.0_rc9-r5 (11 Jul 2012)
+
+  11 Jul 2012; Richard Yao <ryao@gentoo.org>
+  +files/zfs-0.6.0_rc9-bsd-init.patch,
+  +files/zfs-0.6.0_rc9-linux-3.5-support.patch, +zfs-0.6.0_rc9-r5.ebuild,
+  -files/zfs-0.6.0_rc9-range-lock-caller-allocate.patch,
+  -files/zfs-0.6.0_rc9-use-pushpage.patch, -zfs-0.6.0_rc9-r3.ebuild,
+  -zfs-0.6.0_rc9-r4.ebuild, -zfs-0.6.0_rc9.ebuild, zfs-9999.ebuild:
+  Linux 3.5 support, Change LICENSE variable and remove patch that had been
+  mistakenly reintroduced in -r4 and caused regressions
 
 *zfs-0.6.0_rc9-r4 (10 Jul 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9-r3.ebuild,v 1.4 2012/07/01 13:03:28 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9-r5.ebuild,v 1.1 2012/07/11 13:20:31 ryao Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ fi
 DESCRIPTION="Native ZFS for Linux"
 HOMEPAGE="http://zfsonlinux.org/"
 
-LICENSE="CDDL GPL-2 MIT"
+LICENSE="BSD-2 CDDL MIT"
 SLOT="0"
 IUSE="custom-cflags debug dracut +rootfs test test-suite static-libs"
 
@@ -79,14 +79,18 @@ src_prepare() {
 
 	if [ ${PV} != "9999" ]
 	then
+		# Fix build issues
 		epatch "${FILESDIR}/${P}-hardened-support.patch"
+		epatch "${FILESDIR}/${P}-linux-3.5-support.patch"
+		epatch "${FILESDIR}/${P}-fix-32-bit-warnings.patch"
 
 		# Fix various deadlocks
-		epatch "${FILESDIR}/${P}-use-pushpage.patch"
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-1-of-3.patch"
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-2-of-3.patch"
 		epatch "${FILESDIR}/${P}-remove-pfmalloc-3-of-3.patch"
-		epatch "${FILESDIR}/${P}-range-lock-caller-allocate.patch"
+
+		#Miscellaneous
+		epatch "${FILESDIR}/${P}-bsd-init.patch"
 	fi
 
 	autotools-utils_src_prepare
