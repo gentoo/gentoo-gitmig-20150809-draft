@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.338 2012/07/07 14:05:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.339 2012/07/11 23:53:39 blueness Exp $
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> tor-0.2.2.35.ebuild,
+  tor-0.2.2.35-r1.ebuild, tor-0.2.2.36.ebuild, tor-0.2.2.37.ebuild,
+  tor-0.2.3.18_rc.ebuild, tor-0.2.3.19_rc.ebuild:
+  Add GPL-2 for init scripts, bug #426098
 
 *tor-0.2.3.19_rc (07 Jul 2012)
 

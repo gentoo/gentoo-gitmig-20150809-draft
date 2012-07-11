@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.35.ebuild,v 1.8 2012/05/21 21:37:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.35.ebuild,v 1.9 2012/07/11 23:53:39 blueness Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Anonymizing overlay network for TCP"
 HOMEPAGE="http://www.torproject.org/"
 SRC_URI="http://www.torproject.org/dist/${PN}-${PV}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc tor-hardening +transparent-proxy threads"
