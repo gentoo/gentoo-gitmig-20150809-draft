@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.167 2012/04/26 20:39:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.168 2012/07/11 20:55:06 radhermit Exp $
+
+*swig-2.0.7 (11 Jul 2012)
+
+  11 Jul 2012; Tim Harder <radhermit@gentoo.org> +swig-2.0.7.ebuild:
+  Version bump (bug #417751). Update to EAPI 4.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> swig-2.0.4-r1.ebuild:
   keyword ~amd64-fbsd
