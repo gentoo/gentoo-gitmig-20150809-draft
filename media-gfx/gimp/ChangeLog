@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.375 2012/07/08 22:57:28 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.376 2012/07/11 02:09:14 jdhore Exp $
+
+  11 Jul 2012; Jeff Horelick <jdhore@gentoo.org> gimp-2.6.12-r2.ebuild:
+  marked x86 per bug 418425
 
 *gimp-2.6.12-r2 (08 Jul 2012)
 
