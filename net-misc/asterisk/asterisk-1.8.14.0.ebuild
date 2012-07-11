@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.13.1.ebuild,v 1.4 2012/07/11 08:29:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.14.0.ebuild,v 1.1 2012/07/11 08:29:27 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -13,14 +13,14 @@ SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.t
 	 mirror://gentoo/gentoo-asterisk-patchset-1.13.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE_VOICEMAIL_STORAGE="
 	+voicemail_storage_file
 	voicemail_storage_odbc
 	voicemail_storage_imap
 "
-IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex sqlite sqlite3 srtp static syslog usb vorbis"
+IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex sqlite sqlite3 srtp static syslog vorbis"
 
 IUSE_EXPAND="VOICEMAIL_STORAGE"
 
@@ -69,8 +69,6 @@ RDEPEND="dev-libs/popt
 	sqlite? ( dev-db/sqlite:0 )
 	sqlite3? ( dev-db/sqlite:3 )
 	srtp? ( net-libs/libsrtp )
-	usb? ( virtual/libusb:0
-		media-libs/alsa-lib )
 	vorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
@@ -185,7 +183,6 @@ src_configure() {
 	use_select sqlite3		{cdr,cel}_sqlite3_custom
 	use_select srtp			res_srtp
 	use_select syslog		cdr_syslog
-	use_select usb			chan_usbradio
 	use_select vorbis		format_ogg_vorbis
 
 	# Voicemail storage ...

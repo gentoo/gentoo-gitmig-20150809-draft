@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.404 2012/07/09 01:27:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.405 2012/07/11 08:29:27 chainsaw Exp $
+
+*asterisk-10.6.0 (11 Jul 2012)
+*asterisk-1.8.14.0 (11 Jul 2012)
+
+  11 Jul 2012; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.13.1.ebuild,
+  +asterisk-1.8.14.0.ebuild, +asterisk-10.6.0.ebuild:
+  Bugfix release on the 1.8 & 10 branches which drops chan_usbradio support.
+  Amend SRC_URI as per Jaco Kroon in bug #425754. This fixes, among other
+  things, a potential crash in mp3_read, a sip_pvt reference leak and
+  overoptimisation for local channel chains. Adds voicemail storage backend
+  selection support to 10.6.0, also by Jaco Kroon and first introduced for 1.8
+  ebuilds. Distro patchset unchanged.
 
   09 Jul 2012; Jeff Horelick <jdhore@gentoo.org> -asterisk-1.8.12.1.ebuild:
   Remove old wrt bug 425050
