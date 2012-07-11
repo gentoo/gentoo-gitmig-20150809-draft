@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.135 2012/06/30 15:15:25 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.136 2012/07/11 20:03:29 ranger Exp $
+
+  11 Jul 2012; Brent Baude <ranger@gentoo.org> pixman-0.26.0.ebuild:
+  Marking pixman-0.26.0 ppc64 stable for bug 419473
 
 *pixman-0.26.2 (30 Jun 2012)
 
