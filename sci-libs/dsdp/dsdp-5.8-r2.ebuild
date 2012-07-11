@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8-r2.ebuild,v 1.3 2012/07/09 17:51:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8-r2.ebuild,v 1.4 2012/07/11 02:31:52 mr_bones_ Exp $
 
 EAPI=4
 
@@ -67,7 +67,6 @@ src_install() {
 	dolib.so lib/lib${PN}$(get_libname $(get_major_version))
 	dosym lib${PN}$(get_libname $(get_major_version)) \
 		/usr/$(get_libdir)/lib${PN}$(get_libname)
-
 
 	insinto /usr/include
 	doins include/*.h src/sdp/*.h
