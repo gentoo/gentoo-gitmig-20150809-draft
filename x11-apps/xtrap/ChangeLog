@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xtrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtrap/ChangeLog,v 1.27 2012/06/28 14:38:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtrap/ChangeLog,v 1.28 2012/07/11 19:33:40 ranger Exp $
+
+  11 Jul 2012; Brent Baude <ranger@gentoo.org> xtrap-1.0.2-r1.ebuild:
+  Marking xtrap-1.0.2-r1 ppc64 stable for bug 419473
 
   28 Jun 2012; Jeroen Roovers <jer@gentoo.org> xtrap-1.0.2-r1.ebuild:
   Stable for HPPA (bug #419473).
