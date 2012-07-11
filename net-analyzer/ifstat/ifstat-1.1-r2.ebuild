@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1-r1.ebuild,v 1.1 2012/07/10 16:26:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1-r2.ebuild,v 1.1 2012/07/11 01:50:49 jer Exp $
 
 EAPI=4
-inherit eutils
+inherit autotools eutils
 
 IUSE="snmp"
 
@@ -22,8 +22,9 @@ DOCS=( HISTORY README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make.patch
+	eautoreconf
 }
 
 src_configure() {
-	econf $(use_enable snmp)
+	econf $(use_with snmp)
 }

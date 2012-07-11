@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ifstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.24 2012/07/10 16:26:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.25 2012/07/11 01:50:49 jer Exp $
+
+*ifstat-1.1-r2 (11 Jul 2012)
+
+  11 Jul 2012; Jeroen Roovers <jer@gentoo.org> -ifstat-1.1-r1.ebuild,
+  +ifstat-1.1-r2.ebuild, files/ifstat-1.1-make.patch:
+  Make USE=snmp fatal when net-snmp is not installed, and make an unreadable
+  /proc/net/dev non-fatal in any case (bug #425608).
 
 *ifstat-1.1-r1 (10 Jul 2012)
 
