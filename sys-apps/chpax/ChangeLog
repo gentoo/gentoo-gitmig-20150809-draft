@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.37 2012/06/08 13:56:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.38 2012/07/11 23:41:18 blueness Exp $
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> chpax-0.7.ebuild:
+  Add GPL-2 for init scripts, bug #426138
 
   08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer from metadata as talked with him.

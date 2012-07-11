@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.16 2010/10/08 01:46:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.17 2012/07/11 23:41:18 blueness Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Manages various PaX related flags for ELF32, ELF64, and a.out binar
 HOMEPAGE="http://pax.grsecurity.net/"
 SRC_URI="http://pax.grsecurity.net/${P}.tar.gz"
 
-LICENSE="public-domain"
+LICENSE="public-domain GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE=""
