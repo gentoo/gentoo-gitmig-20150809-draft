@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.36 2012/07/11 13:20:31 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.37 2012/07/11 19:39:31 ryao Exp $
+
+  11 Jul 2012; Richard Yao <ryao@gentoo.org> files/zfs-0.6.0_rc9-bsd-init.patch:
+  Fix CVS keyword substitution in patch file
 
 *zfs-0.6.0_rc9-r5 (11 Jul 2012)
 
